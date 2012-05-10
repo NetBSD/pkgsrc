@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1490 2012/05/10 13:26:19 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.1491 2012/05/10 19:01:09 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2363,3 +2363,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mergeant to 0.66nb20 [dholland 2012-05-10]
 	Updated security/ruby-simple_oauth to 0.1.8 [obache 2012-05-10]
 	Updated mail/dovecot2 to 2.1.6 [ghen 2012-05-10]
+	Updated net/tacacs-shrubbery to 4.0.4.25 [schwarz 2012-05-10]
