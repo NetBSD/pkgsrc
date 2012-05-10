@@ -1,0 +1,15 @@
+$NetBSD: patch-goffice_math_go-regression_h,v 1.1 2012/05/10 07:28:17 dholland Exp $
+
+Fix build with latest glib2.
+
+--- goffice/math/go-regression.h~	2008-07-08 09:54:59.000000000 +0000
++++ goffice/math/go-regression.h
+@@ -1,7 +1,7 @@
+ #ifndef GO_UTILS_REGRESSION_H
+ #define GO_UTILS_REGRESSION_H
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-gtkhotkey_gtk-hotkey-error_h,v 1.1 2012/05/10 07:31:02 dholland Exp $
+
+Fix build with latest glib2.
+
+--- gtkhotkey/gtk-hotkey-error.h~	2009-10-16 21:23:33.000000000 +0000
++++ gtkhotkey/gtk-hotkey-error.h
+@@ -23,7 +23,7 @@
+ #ifndef __GTK_HOTKEY_ERROR_H__
+ #define __GTK_HOTKEY_ERROR_H__
+ 
+-#include <glib/gquark.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
