@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.7 2012/05/10 20:53:30 dholland Exp $
+$NetBSD: distinfo,v 1.8 2012/05/10 20:54:54 dholland Exp $
 
 SHA1 (ue400dev.zip) = edbb0261cdaa1803d9f7dc7debfd4a9df3a668eb
 RMD160 (ue400dev.zip) = 75bc1b1e11035ed24d33ec4c6afad43880d5985f
 Size (ue400dev.zip) = 1179949 bytes
-SHA1 (patch-aa) = 2e81eaf2d4b09baf8a54daa675d85d9bae68fb4b
+SHA1 (patch-aa) = f576f207dc6c55a21664b50c821d8e8280406a70
 SHA1 (patch-ab) = bef63275aa8a88b12ce47fd568059360e1e972c8
 SHA1 (patch-ac) = beeba5d9686f6009248437f3eb0fd10e8b72057b
 SHA1 (patch-ad) = 493eb3bf0c24d91d55f532029a0aa5d2ad5abe44
-SHA1 (patch-ae) = 40998fe8f82a65cbfdabc849ee68a04aac9ef821
-SHA1 (patch-af) = 80050d29e3f3e43116f86ea9a4d93c68d9500556
+SHA1 (patch-ae) = 1651a3dea366cb93beff5965baa11b0d80637c7f
+SHA1 (patch-af) = 6f65e648db55b4402d532f63532707ce883f7300
 SHA1 (patch-ag) = 2f6e1bd24888f02083fba88d73bdcc5672cb3aab
 SHA1 (patch-h_ebind_h) = fd262c8559f86a923c4ca4d6ee237229c21e15c3
 SHA1 (patch-h_eproto_h) = 20abd7755c63292cc87197a4de31d69491f973a8
