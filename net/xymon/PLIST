@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/28 18:26:19 gendalia Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/10 21:58:38 spz Exp $
 libexec/xymon/ackinfo.cgi
 libexec/xymon/acknowledge.cgi
 libexec/xymon/appfeed.cgi
@@ -68,7 +68,7 @@ libexec/xymon/trimhistory
 libexec/xymon/useradm.cgi
 libexec/xymon/xymon
 libexec/xymon/xymon-mailack
-libexec/xymon/xymon-snmpcollect
+${PLIST.snmp}libexec/xymon/xymon-snmpcollect
 libexec/xymon/xymon.sh
 libexec/xymon/xymoncfg
 libexec/xymon/xymoncgimsg.cgi
