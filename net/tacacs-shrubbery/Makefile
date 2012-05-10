@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/01/24 08:46:03 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/10 19:01:08 schwarz Exp $
 #
 
-DISTNAME=	tacacs+-F4.0.4.22
+DISTNAME=	tacacs+-F4.0.4.25
 PKGNAME=	${DISTNAME:S,-F,-,}
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.shrubbery.net/pub/tac_plus/
@@ -35,10 +35,6 @@ BUILD_DEFS+=		VARBASE
 
 .if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=		-Duint16_t=u_int16_t -Duint32_t=u_int32_t
-.endif
-
-.if exists(/usr/include/pam/pam_appl.h) # MacOS X prior to 10.6
-CPPFLAGS+=		-DPAM-PAM
 .endif
 
 INSTALLATION_DIRS=	lib sbin ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \

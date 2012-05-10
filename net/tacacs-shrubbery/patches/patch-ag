@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.1.1.1 2011/11/30 23:47:29 pettai Exp $
+$NetBSD: patch-ag,v 1.2 2012/05/10 19:01:09 schwarz Exp $
 
 Older implementations of skeychallenge() only have three arguments.
 
---- skey_fn.c.orig	2009-03-17 19:40:29.000000000 +0100
-+++ skey_fn.c	2009-04-19 12:33:05.000000000 +0200
+--- skey_fn.c.orig	2012-05-06 23:33:13.000000000 +0200
++++ skey_fn.c	2012-05-06 23:33:48.000000000 +0200
 @@ -164,7 +164,11 @@
  		return(1);
  	    }
@@ -15,5 +15,5 @@ Older implementations of skeychallenge() only have three arguments.
 +#endif
 +                                                            ) == 0) {
  		char buf[256];
- 		sprintf(buf, "%s\nS/Key challenge: ", skeyprompt);
+ 		snprintf(buf, sizeof(buf), "%s\nS/Key challenge: ", skeyprompt);
  		data->server_msg = tac_strdup(buf);
