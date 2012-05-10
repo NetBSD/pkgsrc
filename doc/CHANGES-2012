@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1487 2012/05/10 07:17:36 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1488 2012/05/10 07:43:40 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/goffice0.6 to 0.6.6nb16 [dholland 2012-05-10]
 	Updated emulators/gpsim to 0.21.11nb11 [dholland 2012-05-10]
 	Updated emulators/gpsim-devel to 20050905nb15 [dholland 2012-05-10]
+	Updated databases/mergeant to 0.66nb20 [dholland 2012-05-10]
