@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2011/12/19 15:52:18 wiz Exp $
+$NetBSD: distinfo,v 1.11 2012/05/10 06:52:52 dholland Exp $
 
 SHA1 (gpsim-0.21.11.tar.gz) = 05337560a6b48a9afb7a3f4be1ba606709f6b30a
 RMD160 (gpsim-0.21.11.tar.gz) = 36001180948fc2394043d8283dc1dd028ee4f922
 Size (gpsim-0.21.11.tar.gz) = 1218332 bytes
 SHA1 (patch-aa) = 0d102952cb8dbe7faaf50416a2d9bec24683c300
-SHA1 (patch-ab) = 14cae18eeb413e9bc911e1fcf0213d318bf88a1a
+SHA1 (patch-ab) = c67d244af2a89d679083f8b4245a7be4debf82f4
 SHA1 (patch-ac) = 1c2cf1059db73c385817199bb35672f4f2246a67
 SHA1 (patch-ad) = f172ec71e2c2ef6bb798da79e1f73c063ff27d5b
 SHA1 (patch-ae) = 5185e3cbea6d5e036020f1de9636907efe54c851
@@ -19,6 +19,7 @@ SHA1 (patch-gui_gui__stack.cc) = badf2fbda9f2f8a1f0005dab5bde4adf814aafe4
 SHA1 (patch-gui_gui__symbols.cc) = 2f36fb615029823065214a030b309ca4f36336cc
 SHA1 (patch-gui_settings__exdbm.cc) = 957854ab58bde81857a2729120a710346f89ecf6
 SHA1 (patch-modules_binary__indicator.cc) = a666710d4d93077c57163176428075416483719e
+SHA1 (patch-src_bitlog_h) = 406cfb4e4c3a8733e69fc0d9cf6692b61f9ac534
 SHA1 (patch-src_cmd__manager.h) = 1fda88495f6c4ff8a244787f19e64558f86675e0
 SHA1 (patch-src_modules.cc) = bc01b99a564051bce16c5d010635691a2b651c72
 SHA1 (patch-src_operator.cc) = 303dd4744aabc3a42fa97db3d3bebc3994c80e8a
