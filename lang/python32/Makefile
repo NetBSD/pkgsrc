@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/06 13:12:09 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/10 09:07:19 sbd Exp $
 
 .include "dist.mk"
 
@@ -42,6 +42,8 @@ PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 .elif ${OPSYS} == "HPUX"
 PY_PLATNAME=	hp-ux11
+.elif ${OPSYS} == "Linux"
+PY_PLATNAME=	linux2
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
