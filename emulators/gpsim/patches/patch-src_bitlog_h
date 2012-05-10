@@ -1,0 +1,15 @@
+$NetBSD: patch-src_bitlog_h,v 1.1 2012/05/10 06:52:52 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/bitlog.h~	2005-09-03 03:03:48.000000000 +0000
++++ src/bitlog.h
+@@ -25,7 +25,7 @@ class Cycle_Counter;
+ 
+ // include the absolute minimum portion of GLIB to get the definitions
+ // for guint64, etc.
+-#include <glibconfig.h>
++#include <glib.h>
+ 
+ /**********************************************************************
+  * boolean event logging

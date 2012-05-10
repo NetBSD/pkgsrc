@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2011/12/19 15:52:20 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2012/05/10 06:52:52 dholland Exp $
+
+- Use standard includes.
+- Deal with const-ness of dlerror()'s return value like gpsim-devel.
+- Fix build with latest glib2.
 
 --- src/os_dependent.cc.orig	2005-08-25 21:57:41.000000000 +0000
 +++ src/os_dependent.cc
@@ -10,18 +14,26 @@ $NetBSD: patch-ab,v 1.6 2011/12/19 15:52:20 wiz Exp $
  
  #include <iostream>
  #include <iomanip>
-@@ -37,6 +38,10 @@ Boston, MA 02111-1307, USA.  */
+@@ -37,14 +38,16 @@ Boston, MA 02111-1307, USA.  */
  #include "exports.h"
  #include "modules.h"
  
 +#if defined(__DragonFly__)
-+#include <glib/gstrfuncs.h>
-+#include <glib/gmem.h>
++#include <glib.h>
 +#endif
  #ifndef _WIN32
  #include <dlfcn.h>
  #define STRICMP strcasecmp
-@@ -348,7 +353,9 @@ unsigned long get_error() {
+ #else
+ #define G_PLATFORM_WIN32
+ #define G_OS_WIN32
+-#include <glib/gmem.h>
+-#include <glib/gwin32.h>
++#include <glib.h>
+ #include <direct.h>
+ #include <windows.h>
+ 
+@@ -348,7 +351,9 @@ unsigned long get_error() {
  }
  
  char * get_error_message() {
@@ -32,7 +44,7 @@ $NetBSD: patch-ab,v 1.6 2011/12/19 15:52:20 wiz Exp $
    return dlerror();
  #else
    return g_win32_error_message(GetLastError());
-@@ -357,7 +364,7 @@ char * get_error_message() {
+@@ -357,7 +362,7 @@ char * get_error_message() {
  
  void free_error_message(char * pszError)
  {
