@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2012/04/27 12:31:50 obache Exp $
+# $NetBSD: Makefile,v 1.38 2012/05/10 17:46:34 dholland Exp $
 #
 
-DISTNAME=	f-spot-0.6.2
-PKGREVISION=	15
+DISTNAME=	f-spot-0.8.2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,24 +18,26 @@ USE_TOOLS+=	gmake intltool pkg-config bash:run msgfmt
 
 MAKE_JOBS_SAFE=	no
 
-.include "../../mk/bsd.prefs.mk"
-.for platform in ${LP64PLATFORMS}
-.  if ${MACHINE_PLATFORM:M${platform}}
-CONFIGURE_ENV+=	EXTRACSDEFINES=-define:LONG_IS_64BITS
-.  endif
-.endfor
+#.include "../../mk/bsd.prefs.mk"
+#.for platform in ${LP64PLATFORMS}
+#.  if ${MACHINE_PLATFORM:M${platform}}
+#CONFIGURE_ENV+=	EXTRACSDEFINES=-define:LONG_IS_64BITS
+#.  endif
+#.endfor
 
 PKGCONFIG_OVERRIDE+=	f-spot.pc.in
 
 REPLACE_BASH+=	icon-theme-installer
-REPLACE_BASH+=	src/f-spot.in
+REPLACE_BASH+=	src/Clients/MainApp/f-spot.in
 REPLACE_BASH+=	tools/f-spot-import
 
 SUBST_CLASSES+=			fix-x11
 SUBST_STAGE.fix-x11=		post-patch
 SUBST_MESSAGE.fix-x11=		Fixing libX11 references
-SUBST_FILES.fix-x11=		src/FSpot.Utils.dll.config
-SUBST_FILES.fix-x11+=		src/f-spot.exe.config.in
+SUBST_FILES.fix-x11=		src/Core/FSpot.Utils/FSpot.Utils.dll.config.in
+SUBST_FILES.fix-x11+=		src/Core/FSpot.Utils/FSpot.Utils.dll.config
+SUBST_FILES.fix-x11+=		build/DllMapVerifier.cs
+SUBST_FILES.fix-x11+=		lib/Hyena/build/DllMapVerifier.cs
 SUBST_SED.fix-x11=		-e 's,libX11.so.6,${X11BASE}/lib/libX11.so,'
 
 GCONF_SCHEMAS=	f-spot.schemas
