@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1486 2012/05/10 01:58:16 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1487 2012/05/10 07:17:36 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2357,3 +2357,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-CAM-PDF to 1.57 [rhaen 2012-05-09]
 	Updated fonts/tex-bbold-type1 to 2011nb1 [minskim 2012-05-09]
 	Updated sysutils/fscd to 1.0.1 [jdf 2012-05-09]
+	Updated misc/goffice0.6 to 0.6.6nb16 [dholland 2012-05-10]
+	Updated emulators/gpsim to 0.21.11nb11 [dholland 2012-05-10]
+	Updated emulators/gpsim-devel to 20050905nb15 [dholland 2012-05-10]
