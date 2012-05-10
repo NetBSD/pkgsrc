@@ -1,0 +1,173 @@
+$NetBSD: patch-src_main_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- remove unused extern declaration
+- silence initialization warning seen with gcc 4.1
+- silence gcc parenthesization warning
+
+--- src/main.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/main.c
+@@ -88,9 +88,9 @@ extern unsigned int _stklen = 10000;
+ int emacs(argc, argv)
+ #else
+ #if	XVT
+-called_main(argc, argv)
++int called_main(argc, argv)
+ #else
+-main(argc, argv)
++int main(argc, argv)
+ #endif
+ #endif
+ 
+@@ -98,7 +98,7 @@ int argc;			/* # of arguments */
+ char *argv[];			/* argument strings */
+ 
+ {
+-	register int status;
++	register int status = EXIT_FAILURE;
+ 
+ #if HANDLE_WINCH
+ 	signal(SIGWINCH,winch_changed);
+@@ -244,7 +244,6 @@ int firstflag;			/* is this the first ti
+ 	int cryptflag;		/* encrypting on the way in? */
+ 	char ekey[NPAT];	/* startup encryption key */
+ #endif
+-	NOSHARE CONST extern char *pathname[];	/* startup file path/name array */
+ 
+ 	viewflag = FALSE;	/* view mode defaults off in command line */
+ 	gotoflag = FALSE;	/* set to off to begin with */
+@@ -461,7 +460,7 @@ static int PASCAL NEAR getbasekey()
+ 	invented the "recursive-edit" function.
+ */
+ 
+-PASCAL NEAR editloop()
++int PASCAL NEAR editloop()
+ 
+ {
+ 	register int c;		/* command character */
+@@ -596,7 +595,7 @@ loop:
+ 		n = 4;			/* with argument of 4 */
+ 		mflag = 0;		/* that can be discarded. */
+ 		mlwrite("Arg: 4");
+-		while ((c = GETBASEKEY()) >= '0' && c <= '9' ||
++		while (((c = GETBASEKEY()) >= '0' && c <= '9') ||
+ 			c == reptc || c == '-') {
+ 			if (c == reptc)
+ 				if ((n > 0) == ((n * 4) > 0))
+@@ -710,7 +709,7 @@ char bname[];			/* name of buffer to ini
+  * look at it. Return the status of command.
+  */
+ 
+-PASCAL NEAR execute(c, f, n)
++int PASCAL NEAR execute(c, f, n)
+ 
+ int c;					/* key to execute */
+ int f;					/* prefix argument flag */
+@@ -876,7 +875,7 @@ has changed do a write on that buffer an
+ exit.
+ */
+ 
+-PASCAL NEAR quickexit(f, n)
++int PASCAL NEAR quickexit(f, n)
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -915,7 +914,7 @@ int f, n;				/* prefix flag and argument
+  * has been changed and not written out. Normally bound to "C-X C-C".
+  */
+ 
+-PASCAL NEAR quit(f, n)
++int PASCAL NEAR quit(f, n)
+ 
+ int f, n;				/* prefix flag and argument */
+ {
+@@ -943,7 +942,7 @@ int f, n;				/* prefix flag and argument
+ 	return(status);
+ 	}
+ 
+-PASCAL NEAR meexit(status)
++int PASCAL NEAR meexit(status)
+ int status;				/* return status of emacs */
+ 	{
+ 	eexitflag = TRUE;	/* flag a program exit */
+@@ -960,7 +959,7 @@ int status;				/* return status of emacs
+  * return.
+  */
+ 
+-PASCAL NEAR ctlxlp(f, n)
++int PASCAL NEAR ctlxlp(f, n)
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -983,7 +982,7 @@ int f, n;				/* prefix flag and argument
+  * routine. Set up the variables and return to the caller.
+  */
+ 
+-PASCAL NEAR ctlxrp(f, n)
++int PASCAL NEAR ctlxrp(f, n)
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -1007,7 +1006,7 @@ int f, n;				/* prefix flag and argument
+  * command gets an error. Return TRUE if all ok, else FALSE.
+  */
+ 
+-PASCAL NEAR ctlxe(f, n)
++int PASCAL NEAR ctlxe(f, n)
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -1031,7 +1030,7 @@ int f, n;				/* prefix flag and argument
+  * Sometimes called as a routine, to do general aborting of stuff.
+  */
+ 
+-PASCAL NEAR ctrlg(f, n)
++int PASCAL NEAR ctrlg(f, n)
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -1046,7 +1045,7 @@ int f, n;				/* prefix flag and argument
+ /* tell the user that this command is illegal while we are in
+    VIEW (read-only) mode				*/
+ 
+-PASCAL NEAR rdonly()
++int PASCAL NEAR rdonly()
+ 
+ {
+ 	TTbeep();
+@@ -1055,7 +1054,7 @@ PASCAL NEAR rdonly()
+ 	return(FALSE);
+ }
+ 
+-PASCAL NEAR resterr()
++int PASCAL NEAR resterr()
+ 
+ {
+ 	TTbeep();
+@@ -1072,7 +1071,7 @@ int n, f;	/* yes, these are default and 
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR meta(f, n)	/* set META prefixing pending */
++int PASCAL NEAR meta(f, n)	/* set META prefixing pending */
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -1083,7 +1082,7 @@ int f, n;				/* prefix flag and argument
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR cex(f, n)	/* set ^X prefixing pending */
++int PASCAL NEAR cex(f, n)	/* set ^X prefixing pending */
+ 
+ int f, n;				/* prefix flag and argument */
+ 
+@@ -1106,7 +1105,7 @@ int PASCAL NEAR unarg()	/* dummy functio
+ char *PASCAL NEAR bytecopy(dst, src, maxlen)
+ 
+ char *dst;				/* destination of copied string */
+-char *src;				/* source */
++CONST char *src;			/* source */
+ int maxlen;				/* maximum length */
+ 
+ {

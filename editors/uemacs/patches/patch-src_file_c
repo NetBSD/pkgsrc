@@ -1,0 +1,179 @@
+$NetBSD: patch-src_file_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- use standard headers
+- don't use implicit int
+- const correctness required by existing const declarations
+- silence initialize warning seen with gcc 4.1
+
+--- src/file.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/file.c
+@@ -7,6 +7,7 @@
+ */
+ 
+ #include	<stdio.h>
++#include	<unistd.h>
+ #include	"estruct.h"
+ #include	"eproto.h"
+ #include	"edef.h"
+@@ -23,7 +24,7 @@
+  * "read a file into the current buffer" code.
+  * Bound to "C-X C-R".
+  */
+-PASCAL NEAR fileread(f, n)
++int PASCAL NEAR fileread(f, n)
+ 
+ int f, n;	/* defualt and numeric arguments (unused) */
+ 
+@@ -46,7 +47,7 @@ int f, n;	/* defualt and numeric argumen
+  * "insert a file into the current buffer" code.
+  * Bound to "C-X C-I".
+  */
+-PASCAL NEAR insfile(f, n)
++int PASCAL NEAR insfile(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -55,6 +56,9 @@ int f,n;	/* prefix flag and argument */
+ 	char *fname;	/* file name */
+ 	LINE *curline;
+ 
++	/* required by gcc 4.1 */
++	curline = NULL;
++
+ 	if (restflag)		/* don't allow this command if restricted */
+ 		return(resterr());
+ 	if (curbp->b_mode&MDVIEW)      /* don't allow this command if  */
+@@ -89,7 +93,7 @@ int f,n;	/* prefix flag and argument */
+  * text, and switch to the new buffer.
+  * Bound to C-X C-F.
+  */
+-PASCAL NEAR filefind(f, n)
++int PASCAL NEAR filefind(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -105,7 +109,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(getfile(fname, TRUE));
+ }
+ 
+-PASCAL NEAR viewfile(f, n)	/* visit a file in VIEW mode */
++int PASCAL NEAR viewfile(f, n)	/* visit a file in VIEW mode */
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -128,7 +132,7 @@ int f,n;	/* prefix flag and argument */
+ }
+ 
+ #if	CRYPT
+-PASCAL NEAR resetkey()	/* reset the encryption key if needed */
++int PASCAL NEAR resetkey()	/* reset the encryption key if needed */
+ 
+ {
+ 	register int s; /* return status */
+@@ -161,9 +165,9 @@ PASCAL NEAR resetkey()	/* reset the encr
+ }
+ #endif
+ 
+-PASCAL NEAR getfile(fname, lockfl)
++int PASCAL NEAR getfile(fname, lockfl)
+ 
+-char fname[];		/* file name to find */
++CONST char fname[];		/* file name to find */
+ int lockfl;		/* check the file for locks? */
+ 
+ {
+@@ -252,9 +256,9 @@ int lockfl;		/* check the file for locks
+ 	and before it is read. 
+ */
+ 
+-PASCAL NEAR readin(fname, lockfl)
++int PASCAL NEAR readin(fname, lockfl)
+ 
+-char	fname[];	/* name of file to read */
++CONST char	fname[];	/* name of file to read */
+ int	lockfl;		/* check for file locks? */
+ 
+ {
+@@ -386,15 +390,15 @@ out:
+  * Returns a pointer into fname indicating the end of the file path; i.e.,
+  * 1 character BEYOND the path name.
+  */
+-char *PASCAL NEAR makename(bname, fname)
++CONST char *PASCAL NEAR makename(bname, fname)
+ 
+ char *bname;
+-char *fname;
++CONST char *fname;
+ 
+ {
+-	register char *cp1;
++	register CONST char *cp1;
+ 	register char *cp2;
+-	register char *pathp;
++	register CONST char *pathp;
+ 
+ #if     AOSVS | MV_UX
+         resolve_full_pathname(fname, fname);
+@@ -480,7 +484,7 @@ char *name;	/* name to check on */
+  * and ^X^A for appending.
+  */
+ 
+-PASCAL NEAR filewrite(f, n)
++int PASCAL NEAR filewrite(f, n)
+ 
+ int f, n;	/* emacs arguments */
+ 
+@@ -503,7 +507,7 @@ int f, n;	/* emacs arguments */
+ 	return(s);
+ }
+ 
+-PASCAL NEAR fileapp(f, n)	/* append file */
++int PASCAL NEAR fileapp(f, n)	/* append file */
+ 
+ int f, n;	/* emacs arguments */
+ 
+@@ -532,7 +536,7 @@ int f, n;	/* emacs arguments */
+  * name for the buffer. Bound to "C-X C-S". May
+  * get called by "C-Z".
+  */
+-PASCAL NEAR filesave(f, n)
++int PASCAL NEAR filesave(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -588,7 +592,7 @@ int f,n;	/* prefix flag and argument */
+  * a user specifyable routine (in $writehook) can be run.
+  */
+ 
+-PASCAL NEAR writeout(fn, mode)
++int PASCAL NEAR writeout(fn, mode)
+ 
+ char *fn;	/* name of file to write current buffer to */
+ char *mode;	/* mode to open file (w = write a = append) */
+@@ -719,7 +723,7 @@ char *mode;	/* mode to open file (w = wr
+  * prompt if you wish.
+  */
+ 
+-PASCAL NEAR filename(f, n)
++int PASCAL NEAR filename(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -747,7 +751,7 @@ int f,n;	/* prefix flag and argument */
+  * buffer, Called by insert file command. Return the final
+  * status of the read.
+  */
+-PASCAL NEAR ifile(fname)
++int PASCAL NEAR ifile(fname)
+ char	fname[];
+ {
+ 	register LINE *lp0;
+@@ -859,7 +863,7 @@ out:
+ 			names of all the files in a given directory
+ */
+ 
+-PASCAL NEAR showfiles(f, n)
++int PASCAL NEAR showfiles(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 

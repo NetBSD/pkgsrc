@@ -1,0 +1,194 @@
+$NetBSD: patch-src_window_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- return values from non-void functions
+  (arguably these should be made void, but that causes complications)
+
+--- src/window.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/window.c
+@@ -15,7 +15,7 @@
+  * bottom. If it is 0 the window is centered (this is what the standard
+  * redisplay code does). With no argument it defaults to 0. Bound to M-!.
+  */
+-PASCAL NEAR reposition(f, n)
++int PASCAL NEAR reposition(f, n)
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -31,7 +31,7 @@ int f, n;	/* prefix flag and argument */
+  * Refresh the screen. With no argument, it just does the refresh. With an
+  * argument it recenters "." in the current window. Bound to "C-L".
+  */
+-PASCAL NEAR refresh(f, n)
++int PASCAL NEAR refresh(f, n)
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -54,7 +54,7 @@ int f, n;	/* prefix flag and argument */
+  * with an argument this command finds the <n>th window from the top
+  *
+  */
+-PASCAL NEAR nextwind(f, n)
++int PASCAL NEAR nextwind(f, n)
+ 
+ int f, n;	/* default flag and numeric argument */
+ 
+@@ -101,7 +101,7 @@ int f, n;	/* default flag and numeric ar
+  * current window. There arn't any errors, although the command does not do a
+  * lot if there is 1 window.
+  */
+-PASCAL NEAR prevwind(f, n)
++int PASCAL NEAR prevwind(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -135,7 +135,7 @@ int f,n;	/* prefix flag and argument */
+  * a new dot. We share the code by having "move down" just be an interface to
+  * "move up". Magic. Bound to "C-X C-N".
+  */
+-PASCAL NEAR mvdnwind(f, n)
++int PASCAL NEAR mvdnwind(f, n)
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -150,7 +150,7 @@ int f, n;	/* prefix flag and argument */
+  * (this command does not really move "."; it moves the frame). Bound to
+  * "C-X C-P".
+  */
+-PASCAL NEAR mvupwind(f, n)
++int PASCAL NEAR mvupwind(f, n)
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -197,7 +197,7 @@ int f, n;	/* prefix flag and argument */
+  * the buffer structures right if the distruction of a window makes a buffer
+  * become undisplayed.
+  */
+-PASCAL NEAR onlywind(f, n)
++int PASCAL NEAR onlywind(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -253,7 +253,7 @@ int f,n;	/* prefix flag and argument */
+  * or, if it is the top window, the window below. Bound to C-X 0.
+  */
+ 
+-PASCAL NEAR delwind(f,n)
++int PASCAL NEAR delwind(f,n)
+ 
+ int f, n;	/* arguments are ignored for this command */
+ 
+@@ -340,7 +340,7 @@ window.  Bound to "C-X 2". 
+ 
+ */
+ 
+-PASCAL NEAR splitwind(f, n)
++int PASCAL NEAR splitwind(f, n)
+ 
+ int f, n;	/* default flag and numeric argument */
+ 
+@@ -432,7 +432,7 @@ int f, n;	/* default flag and numeric ar
+  * all the hard work. You don't just set "force reframe" because dot would
+  * move. Bound to "C-X Z".
+  */
+-PASCAL NEAR enlargewind(f, n)
++int PASCAL NEAR enlargewind(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -483,7 +483,7 @@ int f,n;	/* prefix flag and argument */
+  * window descriptions. Ask the redisplay to do all the hard work. Bound to
+  * "C-X C-Z".
+  */
+-PASCAL NEAR shrinkwind(f, n)
++int PASCAL NEAR shrinkwind(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -531,7 +531,7 @@ int f,n;	/* prefix flag and argument */
+ 
+ /*	Resize the current window to the requested size */
+ 
+-PASCAL NEAR resize(f, n)
++int PASCAL NEAR resize(f, n)
+ 
+ int f, n;	/* default flag and numeric argument */
+ 
+@@ -617,7 +617,7 @@ setwin: wp = wheadp;
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR nextup(f, n)	/* scroll the next window up (back) a page */
++int PASCAL NEAR nextup(f, n)	/* scroll the next window up (back) a page */
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -625,9 +625,10 @@ int f, n;	/* prefix flag and argument */
+ 	nextwind(FALSE, 1);
+ 	backpage(f, n);
+ 	prevwind(FALSE, 1);
++	return 0;
+ }
+ 
+-PASCAL NEAR nextdown(f, n)	/* scroll the next window down (forward) a page */
++int PASCAL NEAR nextdown(f, n)	/* scroll the next window down (forward) a page */
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -635,9 +636,10 @@ int f, n;	/* prefix flag and argument */
+ 	nextwind(FALSE, 1);
+ 	forwpage(f, n);
+ 	prevwind(FALSE, 1);
++	return 0;
+ }
+ 
+-PASCAL NEAR savewnd(f, n)	/* save ptr to current window */
++int PASCAL NEAR savewnd(f, n)	/* save ptr to current window */
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -646,7 +648,7 @@ int f, n;	/* prefix flag and argument */
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR restwnd(f, n)	/* restore the saved screen */
++int PASCAL NEAR restwnd(f, n)	/* restore the saved screen */
+ 
+ int f, n;	/* prefix flag and argument */
+ 
+@@ -670,7 +672,7 @@ int f, n;	/* prefix flag and argument */
+ 	return(FALSE);
+ }
+ 
+-PASCAL NEAR newsize(f, n)	/* resize the screen, re-writing the screen */
++int PASCAL NEAR newsize(f, n)	/* resize the screen, re-writing the screen */
+ 
+ int f;	/* default flag */
+ int n;	/* numeric argument */
+@@ -772,7 +774,7 @@ int n;	/* numeric argument */
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR newwidth(f, n)	/* resize the screen, re-writing the screen */
++int PASCAL NEAR newwidth(f, n)	/* resize the screen, re-writing the screen */
+ 
+ int f;	/* default flag */
+ int n;	/* numeric argument */
+@@ -811,7 +813,7 @@ int n;	/* numeric argument */
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR new_col_org(f, n)	/* reposition the screen, re-writing the screen */
++int PASCAL NEAR new_col_org(f, n)	/* reposition the screen, re-writing the screen */
+ 
+ int f;	/* default flag */
+ int n;	/* numeric argument */
+@@ -838,7 +840,7 @@ int n;	/* numeric argument */
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR new_row_org(f, n)	/* reposition the screen, re-writing the screen */
++int PASCAL NEAR new_row_org(f, n)	/* reposition the screen, re-writing the screen */
+ 
+ int f;	/* default flag */
+ int n;	/* numeric argument */

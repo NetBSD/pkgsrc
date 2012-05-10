@@ -1,8 +1,26 @@
-$NetBSD: patch-ag,v 1.2 2000/03/23 22:08:52 tron Exp $
+$NetBSD: patch-ag,v 1.3 2012/05/10 20:53:30 dholland Exp $
 
---- src/unix.c.orig	Sat Nov 13 14:57:12 1999
-+++ src/unix.c	Sat Nov 13 15:04:45 1999
-@@ -816,9 +816,19 @@
+- needs term.h for termcap
+- get terminal size from termcap only if LINES and COLUMNS aren't set
+  in the environment
+- return values from non-void functions
+  (arguably these should be made void but it causes complications)
+- don't use implicit int
+- add missing conditionals around conditionally-used declaration
+- remove unused variables
+- use correct type signature for signal handler
+
+--- src/unix.c.orig	1995-11-18 21:36:58.000000000 +0000
++++ src/unix.c
+@@ -123,6 +123,7 @@ int scnothing()
+ #include <curses.h>			/* Curses screen output		*/
+ #undef WINDOW				/* Oh no!			*/
+ #endif /* CURSES */
++#include <term.h>
+ 
+ /** Completion include files **/
+ /** Directory accessing: Try and figure this out... if you can! **/
+@@ -816,9 +817,19 @@ int scopen()
  		exit(1);
  	}
  
@@ -13,15 +31,76 @@ $NetBSD: patch-ag,v 1.2 2000/03/23 22:08:52 tron Exp $
 +	 * If LINES and/or COLUMNS are set in the environment then use those
 +	 * values, otherwise get them from termcap.
 +	 */
-+	if ((cp = getenv("LINES")) == NULL || sscanf(cp, "%d",
++	if ((cp = getenv("LINES")) == NULL || sscanf(cp, "%hd",
 +	    &term.t_nrow) != 1)
 +		term.t_nrow = tgetnum("li");
 +	term.t_nrow -= 1;
 +
-+	if ((cp = getenv("COLUMNS")) == NULL || sscanf(cp, "%d",
++	if ((cp = getenv("COLUMNS")) == NULL || sscanf(cp, "%hd",
 +	    &term.t_ncol) != 1)
 +		term.t_ncol = tgetnum("co");
 +
  	if (term.t_nrow < 3 || term.t_ncol < 3) {
  		puts("Screen size is too small!");
  		exit(1);
+@@ -956,6 +967,7 @@ int sckopen()
+ 	dis_ufk();
+ #endif
+ #endif
++	return 0;
+ }
+ 
+ /* close keyboard -hm */
+@@ -968,6 +980,7 @@ int sckclose()
+ 	dis_sfk();
+ #endif
+ #endif
++	return 0;
+ }
+ 
+ /** Move cursor **/
+@@ -1063,7 +1076,7 @@ int state;				/* New state			*/
+ }
+ 
+ /** Beep **/
+-scbeep()
++int scbeep()
+ {
+ #if TERMCAP || TERMIOS
+ #if !NOISY
+@@ -1085,7 +1098,9 @@ scbeep()
+ }
+ 
+ #if COLOR
++#if USG || AUX
+ static char cmap[8] = { 0, 4, 2, 6, 1, 5, 3, 7 };
++#endif
+ 
+ /** Set foreground color **/
+ int scfcol(color)
+@@ -1553,7 +1568,6 @@ char *fspec;				/* Filename specificatio
+ /** Get next filename from pattern **/
+ char *getnfile()
+ {
+-	int index;
+ 	struct DIRENTRY * dp;
+ 	struct stat fstat;
+ 
+@@ -1706,15 +1720,15 @@ char *name;	/* name of directory to dele
+ /*
+  * Window size changes handled via signals.
+  */
+-void winch_changed()
++void winch_changed(int sig)
+ {
++	(void)sig;
+ 	signal(SIGWINCH,winch_changed);
+ 	winch_flag = 1;
+ }
+ 
+ void winch_new_size()
+ {
+-	EWINDOW *wp;
+ 	struct winsize win;
+   
+ 	winch_flag=0;

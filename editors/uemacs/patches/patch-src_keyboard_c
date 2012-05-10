@@ -1,0 +1,47 @@
+$NetBSD: patch-src_keyboard_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't mix signed and unsigned char pointers
+- silence initialization warning seen with gcc 4.1
+
+--- src/keyboard.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/keyboard.c
+@@ -393,16 +393,19 @@ KEYENT *node;
+  *  fn  - Resulting keycode
+  */
+ #if PROTO
+-int PASCAL NEAR addkey(unsigned char * seq, int fn)
++int PASCAL NEAR addkey(char * seq, int fn)
+ #else
+ int PASCAL NEAR addkey( seq, fn)
+-unsigned char * seq;
++char * seq;
+ int fn;
+ #endif
+ {
+ 	int first;
+ 	KEYENT *cur, *nxtcur;
+ 
++	/* required by gcc 4.1 */
++	cur = NULL;
++
+ 	/* Skip on null sequences or single character sequences. */
+ 	if (seq == NULL || strlen(seq) < 2)
+ 		return FALSE;
+@@ -419,7 +422,7 @@ int fn;
+ 		while (*seq) {
+ 
+ 			/* Do we match current character */
+-			if (*seq == cur->ch) {
++			if ((unsigned char)*seq == cur->ch) {
+ 
+ 				/* Advance to next level */
+ 				seq++;
+@@ -447,7 +450,7 @@ int fn;
+ 
+ 	/* If first character in sequence is inserted, add to prefix table */
+ 	if (first)
+-		keyseq[*seq] = 1;
++		keyseq[(unsigned char)*seq] = 1;
+ 
+ 	/* If characters are left over, insert them into list */
+ 	for (first = 1; *seq; first = 0) {

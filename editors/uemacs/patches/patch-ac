@@ -1,18 +1,178 @@
-$NetBSD: patch-ac,v 1.2 2000/03/23 22:08:52 tron Exp $
+$NetBSD: patch-ac,v 1.3 2012/05/10 20:53:30 dholland Exp $
 
---- src/bind.c.orig	Sun Nov 19 03:09:20 1995
-+++ src/bind.c	Wed Mar 25 15:00:37 1998
-@@ -634,7 +634,8 @@
- 	register char *sp;	/* pointer into path spec */
+- use standard headers
+- avoid implicit int
+- look in $PREFIX/share/uemacs for data files
+- const correctness required by existing const declarations
+- suppress false initialization warning seen with gcc 4.1
+
+--- src/bind.c.orig	1995-11-19 08:09:20.000000000 +0000
++++ src/bind.c
+@@ -5,13 +5,14 @@
+ 								*/
+ 
+ #include	<stdio.h>
++#include	<string.h>
+ #include	"estruct.h"
+ #include	"eproto.h"
+ #include	"edef.h"
+ #include	"elang.h"
+ #include	"epath.h"
+ 
+-PASCAL NEAR help(f, n)	/* give me some help!!!!
++PASCAL NEAR int help(f, n)	/* give me some help!!!!
+ 		   bring up a fake buffer and read the help file
+ 		   into it with view mode			*/
+ 
+@@ -19,7 +20,10 @@ int f,n;	/* prefix flag and argument */
+ 
+ {
+ 	register BUFFER *bp;	/* buffer pointer to help */
+-	char *fname;		/* file name of help file */
++	CONST char *fname;		/* file name of help file */
++
++	/* required by gcc 4.1 */
++	fname = NULL;
+ 
+ 	/* first check if we are already here */
+ 	bp = bfind("emacs.hlp", FALSE, BFINVS);
+@@ -51,7 +55,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR deskey(f, n)	/* describe the command for a certain key */
++PASCAL NEAR int deskey(f, n)	/* describe the command for a certain key */
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -81,7 +85,7 @@ int f,n;	/* prefix flag and argument */
+ 
+ /* bindtokey:	add a new key to the key binding table		*/
+ 
+-PASCAL NEAR bindtokey(f, n)
++PASCAL NEAR int bindtokey(f, n)
+ 
+ int f, n;	/* command arguments [IGNORED] */
+ 
+@@ -180,7 +184,7 @@ int f, n;	/* command arguments [IGNORED]
+ 
+ /* macrotokey:	Bind a key to a macro in the key binding table */
+ 
+-PASCAL NEAR macrotokey(f, n)
++PASCAL NEAR int macrotokey(f, n)
+ 
+ int f, n;	/* command arguments [IGNORED] */
+ 
+@@ -258,7 +262,7 @@ int f, n;	/* command arguments [IGNORED]
+ 
+ /* unbindkey:	delete a key from the key binding table */
+ 
+-PASCAL NEAR unbindkey(f, n)
++PASCAL NEAR int unbindkey(f, n)
+ 
+ int f, n;	/* command arguments [IGNORED] */
+ 
+@@ -286,7 +290,7 @@ int f, n;	/* command arguments [IGNORED]
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR unbindchar(c)
++PASCAL NEAR int unbindchar(c)
+ 
+ int c;		/* command key to unbind */
+ 
+@@ -359,7 +363,7 @@ BUFFER *bp;	/* buffer to unbind all keys
+ 	   into it with view mode
+ */
+ 
+-PASCAL NEAR desbind(f, n)
++PASCAL NEAR int desbind(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -367,7 +371,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(buildlist(TRUE, ""));
+ }
+ 
+-PASCAL NEAR apro(f, n)	/* Apropos (List functions that match a substring) */
++PASCAL NEAR int apro(f, n)	/* Apropos (List functions that match a substring) */
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -383,7 +387,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(buildlist(FALSE, mstring));
+ }
+ 
+-PASCAL NEAR buildlist(type, mstring)  /* build a binding list (limited or full) */
++PASCAL NEAR int buildlist(type, mstring)  /* build a binding list (limited or full) */
+ 
+ int type;	/* true = full list,   false = partial list */
+ char *mstring;	/* match string if a partial list */
+@@ -519,7 +523,7 @@ bfail:		/* and on to the next buffer */
+ 	return(TRUE);
+ }
+ 
+-PASCAL NEAR strinc(source, sub) /* does source include sub? */
++PASCAL NEAR int strinc(source, sub) /* does source include sub? */
+ 
+ char *source;	/* string to search in */
+ char *sub;	/* substring to look for */
+@@ -579,12 +583,12 @@ int mflag;	/* going for a meta sequence?
+ 
+ /* execute the startup file */
+ 
+-PASCAL NEAR startup(sfname)
++PASCAL NEAR int startup(sfname)
+ 
+ char *sfname;	/* name of startup file (null if default) */
+ 
+ {
+-	char *fname;	/* resulting file name to execute */
++	CONST char *fname;	/* resulting file name to execute */
+ 	char name[NSTRING];	/* name with extention */
+ 
+ 	/* look up the startup file */
+@@ -623,29 +627,31 @@ char *sfname;	/* name of startup file (n
+ 			directories in table from EPATH.H
+ */
+ 
+-char *PASCAL NEAR flook(fname, hflag)
++CONST char *PASCAL NEAR flook(fname, hflag)
+ 
+-char *fname;	/* base file name to search for */
++CONST char *fname;	/* base file name to search for */
+ int hflag;	/* Look in the HOME environment variable first? */
+ 
+ {
+ 	register char *home;	/* path to home directory */
+ 	register char *path;	/* environmental PATH variable */
+-	register char *sp;	/* pointer into path spec */
++	register CONST char *sp1;	/* pointer into path spec */
++	register char *sp2;	/* pointer into path spec */
  	register int i; 	/* index */
  	static char fspec[NFILEN];	/* full path spec to search */
 -
 +        char patha[NFILEN];
 +        
  	/* if we have an absolute path.. check only there! */
- 	sp = fname;
- 	while (*sp) {
-@@ -689,9 +690,11 @@
+-	sp = fname;
+-	while (*sp) {
+-		if (*sp == ':' || *sp == '\\' || *sp == '/') {
++	sp1 = fname;
++	while (*sp1) {
++		if (*sp1 == ':' || *sp1 == '\\' || *sp1 == '/') {
+ 			if (ffropen(fname) == FIOSUC) {
+ 				ffclose();
+ 				return(fname);
+ 			} else
+ 				return(NULL);
+ 		}
+-		++sp;
++		++sp1;
+ 	}
+ 
+ #if	ENVFUNC
+@@ -689,25 +695,27 @@ int hflag;	/* Look in the HOME environme
  #if OS2
  	path = getenv("DPATH");
  #else
@@ -25,3 +185,55 @@ $NetBSD: patch-ac,v 1.2 2000/03/23 22:08:52 tron Exp $
  	if (path != NULL)
  		while (*path) {
  
+ 			/* build next possible file spec */
+-			sp = fspec;
++			sp2 = fspec;
+ #if	TOS
+ 			while (*path && (*path != PATHCHR) && (*path != ','))
+ #else
+ 			while (*path && (*path != PATHCHR))
+ #endif
+-				*sp++ = *path++;
++				*sp2++ = *path++;
+ 
+ 			/* add a terminating dir separator if we need it */
+-			if ((sp != fspec) && (*(sp-1) != DIRSEPCHAR))
+-				*sp++ = DIRSEPCHAR;
+-			*sp = 0;
++			if ((sp2 != fspec) && (*(sp2-1) != DIRSEPCHAR))
++				*sp2++ = DIRSEPCHAR;
++			*sp2 = 0;
+ 			strcat(fspec, fname);
+ 
+ 			/* and try it out */
+@@ -918,12 +926,13 @@ int index;	/* index of name to fetch out
+ 	the ^A form.
+ */
+ 
+-unsigned int PASCAL NEAR stock(keyname)
++unsigned int PASCAL NEAR stock(keyname_c)
+ 
+-unsigned char *keyname;	/* name of key to translate to Command key form */
++char *keyname_c;	/* name of key to translate to Command key form */
+ 
+ {
+ 	register unsigned int c;	/* key sequence to return */
++	unsigned char *keyname = (unsigned char *)keyname_c;
+ 
+ 	/* parse it up */
+ 	c = 0;
+@@ -990,12 +999,12 @@ unsigned char *keyname;	/* name of key t
+ 	return(c);
+ }
+ 
+-char *PASCAL NEAR transbind(skey)	/* string key name to binding name.... */
++CONST char *PASCAL NEAR transbind(skey)	/* string key name to binding name.... */
+ 
+ char *skey;	/* name of key to get binding for */
+ 
+ {
+-	char *bindname;
++	CONST char *bindname;
+ 
+ 	bindname = getfname(getbind(stock(skey)));
+ 	if (bindname == NULL)
