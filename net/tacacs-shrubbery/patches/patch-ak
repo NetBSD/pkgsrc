@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.1.1.1 2011/11/30 23:47:29 pettai Exp $
+$NetBSD: patch-ak,v 1.2 2012/05/10 19:01:09 schwarz Exp $
 
-Don't mess with CPPFLAGS and LDFLAGS as pkgsrc handle them
+Don't mess with CPPFLAGS and LDFLAGS as pkgsrc handles them
 
---- configure.orig	2011-11-30 18:01:46.000000000 +0100
-+++ configure	2011-11-30 18:01:54.000000000 +0100
-@@ -3262,8 +3262,8 @@
+--- configure.orig	2012-05-06 23:37:04.000000000 +0200
++++ configure	2012-05-06 23:37:14.000000000 +0200
+@@ -3145,8 +3145,8 @@
  	# XXX: not sure if /usr/local is necessary.
  	# XXX: linux libwrap needs -lnsl. configure should check for
  	#      existence of libnsl instead of hard-coding
@@ -15,7 +15,7 @@ Don't mess with CPPFLAGS and LDFLAGS as pkgsrc handle them
  	LIBS="-lnsl -lcrypt $LIBS"; export LIBS
          $as_echo "#define LINUX 1" >>confdefs.h
  
-@@ -3271,15 +3271,15 @@
+@@ -3154,15 +3154,15 @@
  	# XXX: does linux need glibc: -DGLIBC
      ;;
      *mips* )
