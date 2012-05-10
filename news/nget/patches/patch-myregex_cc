@@ -1,0 +1,16 @@
+$NetBSD: patch-myregex_cc,v 1.1 2012/05/10 02:04:36 dholland Exp $
+
+Use standard headers.
+
+--- myregex.cc~	2004-05-29 23:00:06.000000000 +0000
++++ myregex.cc
+@@ -19,7 +19,8 @@
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif
+-#include <stdlib.h>
++#include <cstring>
++#include <cstdlib>
+ #include "myregex.h"
+ 
+ 
