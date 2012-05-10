@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/03/03 00:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/05/10 07:10:43 dholland Exp $
 #
 
 DISTNAME=	gpsim-20050905
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	emulators
 MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
 
@@ -29,6 +29,7 @@ CONFLICTS=	eXdbm-[0-9]* gpsim-[0-9]*
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2+extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
