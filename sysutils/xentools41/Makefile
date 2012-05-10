@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/03/09 12:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/05/10 16:07:36 abs Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -54,6 +54,7 @@ MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		BASH_COMPLETION_DIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 MAKE_ENV+=		VARBASE=${VARBASE}
+MAKE_ENV+=		XEN_CONFIG_DIR=${PKG_SYSCONFDIR}
 
 #MAKE_ENV+=		INSTALL_DIR=${BSD_INSTALL_DATA_DIR}
 #MAKE_ENV+=		INSTALL_DATA=${BSD_INSTALL_DATA}
