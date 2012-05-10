@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2012/05/06 05:29:53 dholland Exp $
+$NetBSD: distinfo,v 1.33 2012/05/10 21:45:05 dholland Exp $
 
 SHA1 (libgda-3.0.1.tar.bz2) = 78c9054c4c40463020b8f62da72fca909dd9df03
 RMD160 (libgda-3.0.1.tar.bz2) = a9a1f71cc3a6faf8086bf3044b8de91dfc3f3032
@@ -11,6 +11,7 @@ SHA1 (patch-libgda_gda-column_c) = a290e71510d5f1171522a3a435dc3bcac2a13d30
 SHA1 (patch-libgda_gda-column_h) = 6ef0873737eca8ff005b739ea7c6a050044e9fa8
 SHA1 (patch-libgda_gda-command_c) = 9f8a27830fad60d4cb74dc9ab1e6ee1aba0483ce
 SHA1 (patch-libgda_gda-command_h) = ddcc2ca38c982e0f39c99cd5349a9da296e50254
+SHA1 (patch-libgda_gda-config_c) = 3813caaa6d76763c56c0fd985413d0e31fbacabe
 SHA1 (patch-libgda_gda-config_h) = 61afb51e75057b445ad9f6c0eb3b33fb470343f3
 SHA1 (patch-libgda_gda-data-model-array_c) = 8ca31d1cf8c18212e593d27fa23e5d1f4968a6d0
 SHA1 (patch-libgda_gda-data-model-filter-sql_c) = 748ad56779a532609a886652d7df922dc86c2d0a
@@ -28,4 +29,19 @@ SHA1 (patch-libgda_gda-util_c) = c8101c12d5db7d5e495db917e1688535c247100b
 SHA1 (patch-libgda_gda-util_h) = 507592a437ce2139af54a6fa5130a6e74550866b
 SHA1 (patch-libgda_gda-value_c) = f7ed4a4344971f0d3e9f6e5941333a3b0faa71bc
 SHA1 (patch-libgda_gda-value_h) = 7e9446931123ca90b0af9e3545fccc3306553132
+SHA1 (patch-providers_bdb_gda-bdb_h) = fc35534d84152430894e44f5644dcba0bd83160e
+SHA1 (patch-providers_freetds_gda-freetds-message_h) = 907a4636feba5b957163a847957794f2b5090e1c
+SHA1 (patch-providers_freetds_gda-freetds-types_h) = 8ffbf12c386a2915c5f25f82ff155bbc9b77b2a8
+SHA1 (patch-providers_freetds_gda-freetds_h) = 77ba0cb68d35ac4bf5c320ad474680c2e140a9bd
+SHA1 (patch-providers_ibmdb2_gda-ibmdb2-types_h) = 7e6be20fa6beb34d5d290ed54cde24b6152ac27b
+SHA1 (patch-providers_ibmdb2_gda-ibmdb2_h) = e35345f91ab9360606b4af030b2c8a14d1d9d6df
+SHA1 (patch-providers_ldap_gda-ldap_h) = 4934f09d918a81df194ba79d5c0a15c35e395fd4
+SHA1 (patch-providers_mdb_gda-mdb-provider_c) = 0de942475f271f29925ff4bd47c3a04f975bdd12
+SHA1 (patch-providers_mdb_gda-mdb_h) = 26396365c95a2407d996424c996627e21c09724f
+SHA1 (patch-providers_msql_gda-msql_h) = bd23fc1a4b38f8a1943ebf7a755cd93dcaa9c418
+SHA1 (patch-providers_mysql_gda-mysql_h) = 3098a669e9ce524e47f2325e6a5bb884dd2f2349
+SHA1 (patch-providers_odbc_gda-odbc_h) = 40784619e6979db452c4698100567d81d2a885d9
+SHA1 (patch-providers_oracle_gda-oracle_h) = 44cb1d383dc893ac76dc2a659fc3b81662080d24
+SHA1 (patch-providers_postgres_gda-postgres_h) = d2bc4acdf979175f25cdde4f1c73bfb9f9f1a67f
 SHA1 (patch-providers_sqlite_gda-sqlite_h) = a4bf8c7f6da3a25fa2bd2b9c390cafbe655b586f
+SHA1 (patch-providers_sybase_gda-sybase_h) = a7d1657500479c31d928fabda2372d713bdbc08a
