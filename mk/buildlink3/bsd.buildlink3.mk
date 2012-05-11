@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.212 2012/04/23 07:42:13 sbd Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.213 2012/05/11 11:09:42 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -902,6 +902,10 @@ _BLNK_PHYSICAL_PATH.${_var_}!=						\
 MAKEVARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 .endfor
 
+#
+# Add any package specified transformations (l:, etc.)
+#
+_BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 # Transform all references to the physical paths to some important
 # directories into their given names.
 #
@@ -1011,10 +1015,6 @@ _BLNK_TRANSFORM+=	untransform:sub-mangle:${LOCALBASE}:${_BLNK_MANGLE_DIR.${LOCAL
 .if defined(USE_X11) && ${X11_TYPE} != "modular"
 _BLNK_TRANSFORM+=	untransform:sub-mangle:${X11BASE}:${_BLNK_MANGLE_DIR.${X11BASE}}
 .endif
-#
-# Add any package specified transformations (l:, etc.)
-#
-_BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 #
 # Explicitly remove everything else that's an absolute path, since we've
 # already protected the ones we care about.
