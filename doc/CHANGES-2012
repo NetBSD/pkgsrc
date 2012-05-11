@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1496 2012/05/11 12:51:39 sno Exp $
+$NetBSD: CHANGES-2012,v 1.1497 2012/05/11 12:55:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/php-orangehrm to 2.7 [ryoon 2012-05-11]
 	Updated devel/p5-IO-AIO to 4.15 [sno 2012-05-11]
 	Updated devel/p5-App-Cmd to 0.318 [sno 2012-05-11]
+	Updated devel/p5-Capture-Tiny to 0.18 [sno 2012-05-11]
