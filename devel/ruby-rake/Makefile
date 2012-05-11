@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/17 13:57:59 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/11 10:01:58 sbd Exp $
 
 DISTNAME=	rake-0.9.2.2
 CATEGORIES=	devel
@@ -38,7 +38,7 @@ RAKE_SPEC=	${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 
 # rake.1.gz has one extra byte at EOF.
 pre-configure:
-	cd ${WRKSRC}/doc && (gzip -d rake.1.gz 2>/dev/null || ${TRUE})
+	cd ${WRKSRC}/doc && (gzip -dc rake.1.gz >rake.1 2>/dev/null || ${TRUE})
 	cd ${WRKSRC}; ${CHMOD} -x ${FIX_PERM}
 	cd ${WRKSRC}/bin && ${MV} rake ${RAKEBIN}
 
