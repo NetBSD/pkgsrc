@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/22 11:58:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/05/11 11:15:12 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/LICENSE-Apache-Basho
@@ -12,6 +12,7 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/LICENSE-MPL-RabbitMQ
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/credit_flow.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/delegate.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/delegate_sup.beam
+lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/dtree.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/file_handle_cache.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/gatherer.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/gen_server2.beam
@@ -25,6 +26,7 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/mirrored_supervisor.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/mirrored_supervisor_tests.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/mnesia_sync.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/pg2_fixed.beam
+lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/pmon.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/priority_queue.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit.app
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit.beam
@@ -55,6 +57,7 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_connection_sup.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_control.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_ctl_usage.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_direct.beam
+lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_disk_monitor.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_error_logger.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_error_logger_file_h.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_event.beam
@@ -124,13 +127,8 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/worker_pool_sup.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/worker_pool_worker.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/gm_specs.hrl
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit.hrl
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_auth_backend_spec.hrl
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_auth_mechanism_spec.hrl
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_backing_queue_spec.hrl
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_exchange_type_spec.hrl
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_framing.hrl
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_msg_store.hrl
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_msg_store_index.hrl
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/README
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/amqp_client-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/eldap-0.0.0-git.ez
@@ -140,6 +138,7 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_auth_backend_ldap
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_auth_mechanism_ssl-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_consistent_hash_exchange-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_federation-0.0.0.ez
+lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_federation_management-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_jsonrpc-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_jsonrpc_channel-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins/rabbitmq_jsonrpc_channel_examples-0.0.0.ez
