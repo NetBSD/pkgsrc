@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1499 2012/05/11 13:10:01 abs Exp $
+$NetBSD: CHANGES-2012,v 1.1500 2012/05/11 13:26:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2373,3 +2373,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-PPIx-Regexp to 0.026 [sno 2012-05-11]
 	Updated lang/sun-jre6 to 6.0.32 [abs 2012-05-11]
 	Updated lang/sun-jdk6 to 6.0.32 [abs 2012-05-11]
+	Updated devel/p5-Perl-Critic to 1.117 [sno 2012-05-11]
