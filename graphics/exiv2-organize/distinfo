@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/11/07 12:28:54 drochner Exp $
+$NetBSD: distinfo,v 1.9 2012/05/11 13:58:57 drochner Exp $
 
-SHA1 (exiv2-0.22.tar.gz) = 35211d853a986fe1b008fca14db090726e8dcce3
-RMD160 (exiv2-0.22.tar.gz) = 068f3bc72e48a58bf3a3dfa2feeb8379557a34e7
-Size (exiv2-0.22.tar.gz) = 3482572 bytes
+SHA1 (exiv2-0.23.tar.gz) = 5f342bf642477526f41add11d6ee7787cdcd639f
+RMD160 (exiv2-0.23.tar.gz) = ac58f8b5df70ee56c49d387f0666e5e2578d942e
+Size (exiv2-0.23.tar.gz) = 3524381 bytes
 SHA1 (patch-contrib_organize_Makefile) = de74227211b79e49126178f27391831507c2948f
 SHA1 (patch-contrib_organize_organize.cpp) = ba7803e5ead1ac37003c668b0cc5a15be743a1f9
