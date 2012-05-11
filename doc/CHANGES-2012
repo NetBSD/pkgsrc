@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1493 2012/05/11 09:40:34 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1494 2012/05/11 10:42:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/tacacs-shrubbery to 4.0.4.25 [schwarz 2012-05-10]
 	Updated mail/thunderbird to 12.0.1 [ryoon 2012-05-11]
 	Updated www/opera to 11.64 [obache 2012-05-11]
+	Updated misc/php-orangehrm to 2.7 [ryoon 2012-05-11]
