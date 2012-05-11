@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1492 2012/05/11 08:26:21 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1493 2012/05/11 09:40:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2365,3 +2365,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/dovecot2 to 2.1.6 [ghen 2012-05-10]
 	Updated net/tacacs-shrubbery to 4.0.4.25 [schwarz 2012-05-10]
 	Updated mail/thunderbird to 12.0.1 [ryoon 2012-05-11]
+	Updated www/opera to 11.64 [obache 2012-05-11]
