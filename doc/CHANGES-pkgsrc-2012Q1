@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.32 2012/05/11 10:29:26 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.33 2012/05/11 14:57:30 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -140,9 +140,9 @@ devel/guile-gnome: build fix
 Pullup ticket #3773 - requested by joerg
 graphics/digikam-kde3: packaging fix
 Pullup ticket #3774 - requested by taca
-lang/php53 security update
+lang/php53: security update
 Pullup ticket #3775 - requested by dholland
-lang/pfe builde fix
+lang/pfe: build fix
 Pullup ticket #3776 - requested by sbd
 x11/xorg-cf-files: portability fix
 Pullup ticket #3777 - requested by dholland
@@ -152,5 +152,8 @@ multimedia/adobe-flash-plugin11: security update
 Pullup ticket #3779 - requested by obache
 multimedia/adobe-flash-plugin10.1: security update
 Pullup ticket #3780 - requested by obache
-www/opera security update
-
+www/opera: security update
+Pullup ticket #3781 - requested by ryoon
+misc/php-orangehrm: security update
+Pullup ticket #3782 - requested by taca
+security/openssl: security update
