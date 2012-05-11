@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.37 2012/03/28 05:00:36 obache Exp $
+$NetBSD: distinfo,v 1.37.2.1 2012/05/11 10:27:48 sbd Exp $
 
-SHA1 (opera-11.62-1347.amd64.freebsd.tar.xz) = c08de2ffefa82073b3676c25d9ce6271131a0f42
-RMD160 (opera-11.62-1347.amd64.freebsd.tar.xz) = 73778da4571ddaa578427e53b50a5e09729a4a7c
-Size (opera-11.62-1347.amd64.freebsd.tar.xz) = 12097500 bytes
-SHA1 (opera-11.62-1347.i386.freebsd.tar.xz) = 9b0d113d2baaa03e398ef94495da4ea7a2a0a84b
-RMD160 (opera-11.62-1347.i386.freebsd.tar.xz) = 064af004ced3751a0ad2cf2885490f9e511ade7a
-Size (opera-11.62-1347.i386.freebsd.tar.xz) = 11529504 bytes
-SHA1 (opera-11.62-1347.i386.linux.tar.xz) = 6bfb8a2768a51e4189337e0a40e9fcb0fcbf44ba
-RMD160 (opera-11.62-1347.i386.linux.tar.xz) = 2ad8c94e2deafad2a540bf119cbbce560807f6c7
-Size (opera-11.62-1347.i386.linux.tar.xz) = 11496852 bytes
-SHA1 (opera-11.62-1347.x86_64.linux.tar.xz) = d943d07027ba0f40e6f7f964f14918a04169601a
-RMD160 (opera-11.62-1347.x86_64.linux.tar.xz) = f7413539de20f2178b3558acdfb95555016a2070
-Size (opera-11.62-1347.x86_64.linux.tar.xz) = 12322128 bytes
+SHA1 (opera-11.64-1403.amd64.freebsd.tar.xz) = fba4ead9ea4f98f22139bab1140e76432aa05b98
+RMD160 (opera-11.64-1403.amd64.freebsd.tar.xz) = 3624667ac081169b1499883f76d468d3be7079bd
+Size (opera-11.64-1403.amd64.freebsd.tar.xz) = 12108252 bytes
+SHA1 (opera-11.64-1403.i386.freebsd.tar.xz) = 67c1cdea983ae6885083fe63baa81e67cc99184d
+RMD160 (opera-11.64-1403.i386.freebsd.tar.xz) = 2e8e5916d61f668a53c30f59102cab5b07f5be18
+Size (opera-11.64-1403.i386.freebsd.tar.xz) = 11544224 bytes
+SHA1 (opera-11.64-1403.i386.linux.tar.xz) = a44e47d9c0fdd5f080ec100892d7b88bad0489c1
+RMD160 (opera-11.64-1403.i386.linux.tar.xz) = c48adf8df95c6ec8fb663b351f06857d421357f1
+Size (opera-11.64-1403.i386.linux.tar.xz) = 11506732 bytes
+SHA1 (opera-11.64-1403.x86_64.linux.tar.xz) = 671e38684fb35995dd5b3834d40101e0c42850e1
+RMD160 (opera-11.64-1403.x86_64.linux.tar.xz) = f6ae59b84b7e10ed72a87a2f16d95dc81fea46f0
+Size (opera-11.64-1403.x86_64.linux.tar.xz) = 12322044 bytes
