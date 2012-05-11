@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/12/12 17:39:09 ryoon Exp $
+$NetBSD: MESSAGE,v 1.1.1.1.4.1 2012/05/11 14:45:51 tron Exp $
 
 To use OrangeHRM, you will need to perform the following steps.
 
@@ -23,6 +23,7 @@ To use OrangeHRM, you will need to perform the following steps.
 4. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=mysql.so
+	extension=mysqli.so
 	extension=pdo.so
 	extension=pdo_mysql.so
 
