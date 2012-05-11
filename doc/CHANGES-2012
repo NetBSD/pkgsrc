@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1495 2012/05/11 11:31:55 sno Exp $
+$NetBSD: CHANGES-2012,v 1.1496 2012/05/11 12:51:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2368,3 +2368,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/opera to 11.64 [obache 2012-05-11]
 	Updated misc/php-orangehrm to 2.7 [ryoon 2012-05-11]
 	Updated devel/p5-IO-AIO to 4.15 [sno 2012-05-11]
+	Updated devel/p5-App-Cmd to 0.318 [sno 2012-05-11]
