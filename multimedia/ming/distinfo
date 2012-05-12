@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/02/15 05:37:29 obache Exp $
+$NetBSD: distinfo,v 1.9 2012/05/12 06:36:39 obache Exp $
 
-SHA1 (ming-0.4.3.tar.gz) = bbdef489b5446f3bc4060d6b808287b0f7f03f37
-RMD160 (ming-0.4.3.tar.gz) = a11501d0b49dde332c68c1ff11612fa8ab05cc66
-Size (ming-0.4.3.tar.gz) = 14920165 bytes
+SHA1 (ming-0.4.4.tar.gz) = 125a9ba6fffeaf230deefb5a9e73d496a640e539
+RMD160 (ming-0.4.4.tar.gz) = b2c7530aef4feca90d698b39b746ff5cb5da7af7
+Size (ming-0.4.4.tar.gz) = 14816668 bytes
 SHA1 (patch-ae) = 614e322330d2d2ab1e0ef1beadf1395014ecd880
-SHA1 (patch-ai) = 838baf040f24e53139d9ade21f586b1e18f60da8
-SHA1 (patch-aj) = ce8e48f24d3f8bef4993d65be14a8eab749cc4be
-SHA1 (patch-ak) = ec8f6ccf7a43f28cb1d9255b49c7b6368ddeebc3
+SHA1 (patch-test_actionscript_ActionScriptTest.c) = 730ef68fb3e7714da2783d396809b8f8ca5e1bf7
