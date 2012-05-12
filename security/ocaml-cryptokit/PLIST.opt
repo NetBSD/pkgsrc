@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.opt,v 1.1.1.1 2012/05/12 17:53:40 wiz Exp $
+lib/ocaml/site-lib/cryptokit/cryptokit.a
+lib/ocaml/site-lib/cryptokit/cryptokit.cmxa
+lib/ocaml/site-lib/cryptokit/cryptokit.cmxs
