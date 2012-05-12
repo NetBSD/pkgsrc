@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2012/04/15 22:01:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.47 2012/05/12 10:12:32 obache Exp $
 # used by lang/php5/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php5-extensions/Makefile
@@ -24,7 +24,7 @@
 # PKGREVSION.
 #
 
-.if !defined(DISTNAME)
+.if !defined(DISTNAME) && !defined(PECL_VERSION)
 DISTNAME=		php-${PHP_BASE_VERS}
 DIST_SUBDIR=		${DISTNAME}
 .endif
