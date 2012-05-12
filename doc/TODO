@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11073 2012/05/12 05:46:27 adam Exp $
+$NetBSD: TODO,v 1.11074 2012/05/12 07:51:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.4.4
 	o audacity-2.0
 	o autoconvert-0.3.16
-	o autogen-5.15
+	o autogen-5.16
 	o avcheck-0.91
 	o avidemux-2.5.6
 	o avl-2.0.2a
@@ -444,6 +444,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cairo-gobject-1.12.0
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o calibre-0.8.51
 	o calligra-2.4.1 [koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
@@ -547,7 +548,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elm-me-2.5plalpha28
+	o elm-me-2.5plalpha29
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
@@ -660,6 +661,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
+	o gauche-0.9.3
 	o gawk-4.0.1
 	o gbdfed-1.6
 	o gcin-1.5.5
@@ -684,7 +686,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gl-7.8.2 [pkgrc-wip]
-	o glade-3.12.0
+	o glade-3.12.1
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
 	o gle-4.2.4
@@ -751,7 +753,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.35
+	o gtkwave-3.3.36
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -785,6 +787,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o httptunnel-3.3
 	o hugin-2011.4.0
 	o hylafax-6.0.5
+	o hypermail-2.3.0 [pkg/46440]
 	o ical-2.3.2
 	o icdprog-0.5
 	o iceauth-1.0.5
@@ -797,7 +800,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imake-1.0.5
 	o imapfilter-2.5.2
 	o imapsync-1.452
-	o imp-5.0.20
+	o imp-5.0.21
 	o ingo-2.0.7
 	o inputproto-2.2
 	o inspircd-1.2.1
@@ -893,6 +896,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcdio-0.83
 	o libchamplain08-0.12.1
 	o libdbusmenu-qt-0.9.2
+	o libdrm-2.4.34
 	o libextractor-0.6.3
 	o libffi-3.0.11
 	o libflash-0.4.13
@@ -965,7 +969,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.8.3
+	o mathomatic-15.8.4
 	o mc-4.8.1.3
 	o mdocml-1.12.1
 	o mediawiki-1.18.1
@@ -973,7 +977,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
-	o mined-2012.21
+	o mined-2012.22
 	o minicom-2.6
 	o minivmac-3.2.3
 	o miredo-1.2.4
@@ -994,12 +998,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mousetweaks-3.4.1
 	o mp3diags-1.1.19
 	o mpeg4ip-1.6.1
-	o mpg123-1.14.0
+	o mpg123-1.14.1
 	o mpich-1.4.1p1
 	o mpop-1.0.27
 	o mserv-devel-0.41
 	o msmtp-1.4.28
-	o mu-0.9.8.3
+	o mu-0.9.8.4
 	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1032,7 +1036,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nulib2-220
-	o nut-17.7
+	o nut-17.8
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1046,15 +1050,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
 	o opendkim-2.5.0
-	o opengrok-0.11
+	o opengrok-0.11.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmpi-1.5.5
 	o openmsx-0.8.2
+	o openoffice-3.4
 	o openoffice3-3.3
 	o openssh-6.0p1
 	o openssl-1.0.0d [pkg/44717]
-	o openssl-1.0.1b
+	o openssl-1.0.1c
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
@@ -1063,6 +1068,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Gtk2-1.223
 	o p5-Net-SNMP-5.7.1
 	o p5-PerlMagick-6.7.6.6
+	o p5-Search-Xapian-1.2.10.0
 	o p5-cairo-1.082
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
@@ -1121,7 +1127,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.0 [pkg/42941]
 	o ptlib-2.8.3
 	o puf-1.0.0
-	o pulseaudio-1.0
+	o pulseaudio-2.0
 	o puppet-2.7.6
 	o puzzle-9173
 	o puzzles-9505
@@ -1259,7 +1265,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sudo-1.8.4p4
 	o supertuxkart-0.7.3
 	o swfdec-gnome-2.30.1
-	o sympa-6.1.9
+	o sympa-6.1.10
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
@@ -1285,7 +1291,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.3.3
 	o tfmxplay-1.1.6
-	o tig-0.18
+	o tig-1.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.18
@@ -1346,7 +1352,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vmips-1.4
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
-	o vttest-20111210
+	o vttest-20120506
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
@@ -1378,6 +1384,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11perf-1.5.4
 	o x264-devel-20120421
 	o xanalyser-1.30
+	o xapian-1.2.10
 	o xaric-0.13.2
 	o xauth-1.0.7
 	o xbacklight-1.1.2
@@ -1504,7 +1511,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-278
+	o xterm-279
 	o xtraceroute-0.9.1
 	o xtrans-1.2.7
 	o xtu-1.3
