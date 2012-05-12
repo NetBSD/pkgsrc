@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1512 2012/05/12 17:54:30 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1513 2012/05/12 20:16:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/colorit version 1.12.0 [cheusov 2012-05-12]
 	Updated x11/pixman to 0.24.4 [wiz 2012-05-12]
 	Added security/ocaml-cryptokit version 1.5 [wiz 2012-05-12]
+	Updated www/p5-HTML-Template to 2.9.1 [wiz 2012-05-12]
