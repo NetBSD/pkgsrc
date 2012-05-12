@@ -1,0 +1,16 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+mark "^E:.*$"                   fg_ltred  col_normal
+mark "Could not connect to"     fg_ltred  col_normal
+mark "Failed to fetch"          fg_ltred  col_normal
+
+mark "Preparing to replace"     fg_yellow col_normal
+
+mark "Unpacking"      fg_yellow col_normal
+mark "Setting up"     fg_yellow col_normal
+mark "Setting up"     fg_yellow col_normal
+
+mark "[[:alpha:]][[:alnum:]]+ [[:digit:]][[:alnum:].-]+"  fg_white col_normal

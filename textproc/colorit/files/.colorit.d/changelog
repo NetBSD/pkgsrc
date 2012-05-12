@@ -1,0 +1,10 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+mark "^[[:alnum:]].*$"  fg_white col_normal
+mark "^[[:space:]]--.*" fg_yellow col_normal
+mark "_[[:alnum:]]+_"   fg_yellow col_normal
+mark "^[*][[:space:]]"  fg_white  col_normal
+mark "^--------------+" fg_white  col_normal
