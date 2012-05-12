@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/05/12 15:15:35 cheusov Exp $
+
+How to use example files:
+- cp -Rp ${PREFIX}/share/examples/colorit/.colorit.d ~
+- cp ${PREFIX}/share/examples/colorit/colorit_* ~
+- echo '. ~/colorit_aliases' >> ~/.shrc
+
+===========================================================================
