@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/05/12 06:37:28 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/12 08:58:30 obache Exp $
 #
 
 .include "../../multimedia/ming/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		multimedia
 
 MAINTAINER=		obache@NetBSD.org
-HOMEPAGE=		http://ming.sourceforge.net/
+HOMEPAGE=		http://www.libming.org/
 COMMENT=		Python bindings for Ming library
 LICENSE=		gnu-lgpl-v2.1
 
