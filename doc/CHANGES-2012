@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1508 2012/05/12 08:49:54 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1509 2012/05/12 09:59:13 gson Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2383,3 +2383,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql90-client to 9.0.7nb1 [sbd 2012-05-12]
 	Updated databases/postgresql91-client to 9.1.3nb1 [sbd 2012-05-12]
 	Updated multimedia/php-ming to 0.4.4 [obache 2012-05-12]
+	Updated emulators/qemu to 0.15.1nb5 [gson 2012-05-12]
