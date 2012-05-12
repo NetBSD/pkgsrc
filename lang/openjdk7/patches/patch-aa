@@ -1,17 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2011/08/21 22:57:55 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2012/05/12 21:01:47 marino Exp $
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2011-08-11 12:31:36.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2012-05-12 08:57:44.793207000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -131,7 +131,7 @@
+@@ -131,8 +131,11 @@
  # include <inttypes.h>
  # include <sys/ioctl.h>
  
 -#if defined(__FreeBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  # include <elf.h>
++#if !defined(EM_ALPHA)
++#define EM_ALPHA 0x9026
++#endif
  #endif
  
-@@ -2039,7 +2039,9 @@ void * os::dll_load(const char *filename
+ #ifdef __APPLE__
+@@ -2039,7 +2042,9 @@ void * os::dll_load(const char *filename
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
@@ -21,7 +25,7 @@ $NetBSD: patch-aa,v 1.4 2011/08/21 22:57:55 tnn Exp $
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -3559,7 +3561,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -3559,7 +3564,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -30,7 +34,7 @@ $NetBSD: patch-aa,v 1.4 2011/08/21 22:57:55 tnn Exp $
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
  #elif defined(__APPLE__) || defined(__NetBSD__)
    struct sched_param sp;
-@@ -3587,7 +3589,7 @@ OSReturn os::get_native_priority(const T
+@@ -3587,7 +3592,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;
