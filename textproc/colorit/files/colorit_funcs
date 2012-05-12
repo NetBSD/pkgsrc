@@ -4,20 +4,20 @@
 #        alias make=colored_make
 #        ...
 
-: ${PROG_COLORIT=colorit}
+: ${PROG_COLORIT:=colorit}
 
-: ${PROG_MAKE=make}
-: ${PROG_GMAKE=gmake}
-: ${PROG_BMAKE=bmake}
-: ${PROG_MKCMAKE=mkcmake}
-: ${PROG_GPP=g++}
-: ${PROG_GCC=gcc}
-: ${CVS_PATCH=cvs_patch}
-: ${CVS_WDIFF=cvs_wdiff}
-: ${PROG_DIFF=diff}
-: ${PROG_LS=ls}
-: ${PROG_APT_GET=apt-get}
-: ${PROG_NIH=nih}
+: ${PROG_MAKE:=make}
+: ${PROG_GMAKE:=gmake}
+: ${PROG_BMAKE:=bmake}
+: ${PROG_MKCMAKE:=mkcmake}
+: ${PROG_GPP:=g++}
+: ${PROG_GCC:=gcc}
+: ${CVS_PATCH:=cvs_patch}
+: ${CVS_WDIFF:=cvs_wdiff}
+: ${PROG_DIFF:=diff}
+: ${PROG_LS:=ls}
+: ${PROG_APT_GET:=apt-get}
+: ${PROG_NIH:=nih}
 
 : ${COLORIT_ROOT=${HOME}/.colorit.d}
 
