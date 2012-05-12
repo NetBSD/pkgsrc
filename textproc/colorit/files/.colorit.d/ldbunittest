@@ -1,0 +1,40 @@
+#
+# COLORING OF LDB UNIT TEST OUTPUT
+#
+# Instructions:
+#
+# 1) place this file in your home directory 
+# 2) add the below code to your ~/.alias file
+#
+# if test -f ~/.colorit.d/ldbunittest; then
+#
+# 	UNIT_TEST_PROG=`which run_ldb_unit_test.rb`
+#	
+# 	function run_ldb_unit_test.rb (){
+# 		if test -t 2; then
+# 			"$UNIT_TEST_PROG" "$@" 3>&1 2>&1 1>&3 | colorit -P - -c ~/.colorit.d/ldbunittest 3>&1 2>&1 1>&3
+# 			awk "BEGIN {exit ${PIPESTATUS[0]}}"
+# 		else
+# 			"$UNIT_TEST_PROG" "$@"
+# 		fi
+# 	}
+#	
+# fi
+#
+
+
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+mark "^case_(start|end)"                     fg_white col_normal
+mark "^(input|etalon|actual)(_(start|end))?" fg_yellow  col_normal
+mark "^(source file|description|state|id)"   fg_green   col_normal
+
+mark "\tFAILED$"          fg_red   col_normal
+mark "^Failures: [1-9].*" fg_red   col_normal
+mark "^Tests:.+"          fg_red   col_normal
+
+mark "\tSUCCESS$"         fg_green col_normal
+mark "^Failures: 0"       fg_green col_normal

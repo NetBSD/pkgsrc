@@ -1,0 +1,51 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+# ICCc error messages
+mark "[[:digit:]]+ of .*$"    fg_red    col_normal
+
+mark "warning.*: "              fg_yellow    col_normal
+
+mark "^[^ :]* "                 fg_white     col_normal
+mark " no$"               fg_white     col_normal
+
+mark "warning: "                fg_yellow    col_normal
+mark "line [0-9]+: warning.*$"  fg_yellow    col_normal
+
+mark "^b?yacc: .*never reduced"  fg_yellow    col_normal
+mark "^b?yacc: .*conflicts."     fg_ltred     col_normal
+mark "^b?yacc: .*is untyped"     fg_ltred     col_normal
+
+mark "^[^.]*[.]y contains .*useless.*$" fg_yellow    col_normal
+mark "^byacc: 2 rules never reduced"    fg_yellow    col_normal
+
+
+mark "syntax error"               fg_ltred     col_normal
+mark "error:"                     fg_ltred     col_normal
+mark "No such file or directory"  fg_ltred     col_normal
+mark "command not found"          fg_ltred     col_normal
+mark "No rule to make target"     fg_ltred     col_normal
+mark "no such directory"          fg_ltred     col_normal
+mark "no such file"               fg_ltred     col_normal
+mark "failed"                     fg_ltred     col_normal
+mark "FAILED"                     fg_ltred     col_normal
+mark "invalid"                    fg_ltred     col_normal
+
+mark "undefined reference to"     fg_ltred     col_normal
+mark "^conflicts:"                fg_ltred     col_normal
+
+mark "No input files"             fg_ltred     col_normal
+mark "undefined reference to"     fg_ltred     col_normal
+mark "^conflicts:.*$"             fg_ltred     col_normal
+mark "^byacc:.*conflicts"         fg_ltred     col_normal
+mark "^byacc:.*undefined"         fg_ltred     col_normal
+mark "too few arguments"          fg_ltred     col_normal
+mark "Aborted"                    fg_ltred     col_normal
+mark "[(]core dumped[)]"          fg_ltred     col_normal
+
+mark "^[^ ]*:[[:digit:]]+: " fg_ltblue    col_normal
+mark "^[^()]+[(][^()]+[)]:"  fg_ltblue    col_normal
+
+mark "^[^ :]* "              fg_white     col_normal

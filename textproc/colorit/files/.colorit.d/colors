@@ -1,0 +1,33 @@
+define(`fg_black',    `\033[0;30m')
+define(`fg_red',      `\033[0;31m')
+define(`fg_green',    `\033[0;32m')
+define(`fg_brown',    `\033[0;33m')
+define(`fg_blue',     `\033[0;34m')
+define(`fg_purple',   `\033[0;35m')
+define(`fg_cyan',     `\033[0;36m')
+define(`fg_licyan',   `\033[0;37m')
+
+define(`fg_gray',     `\033[1;30m')
+define(`fg_ltred',    `\033[1;31m')
+define(`fg_ltgreen',  `\033[1;32m')
+define(`fg_yellow',   `\033[1;33m')
+define(`fg_ltblue',   `\033[1;34m')
+define(`fg_ltpurple', `\033[1;35m')
+define(`fg_ltcyan',   `\033[1;36m')
+define(`fg_white',    `\033[1;37m')
+
+define(`bg_black',  `\033[0;40m')
+define(`bg_red',    `\033[0;41m')
+define(`bg_green',  `\033[0;42m')
+define(`bg_yellow', `\033[0;43m')
+define(`bg_blue',   `\033[0;44m')
+define(`bg_purple', `\033[0;45m')
+define(`bg_cyan',   `\033[0;46m')
+define(`bg_white',  `\033[0;47m')
+
+define(`col_underline', `\033[04m')
+define(`col_brighten',  `\033[01m')
+
+define(`col_normal', `\033[1;0m')
+
+#define(`fg_white', `\033[1m')

@@ -1,0 +1,22 @@
+# source this file from .shrc, .kshrc, .bashrc etc. in order to
+# make utilities colorful
+
+# coloured utils
+if true; then
+    . ~/colorit_funcs
+
+    alias cvs_diff=colored_cvs_diff
+    alias cvs_wdiff=colored_cvs_wdiff
+    alias cvs_patch=colored_cvs_patch
+    alias diff=colored_diff
+    alias ls=colored_ls
+    alias g++=colored_gpp
+    alias gcc=colored_gcc
+    alias mkcmake=colored_mkcmake
+    alias make=colored_make
+    alias gmake=colored_gmake
+    alias bmake=colored_bmake
+    alias apt-get=colored_apt_get
+else
+    alias cvs_diff='cvs diff'
+fi

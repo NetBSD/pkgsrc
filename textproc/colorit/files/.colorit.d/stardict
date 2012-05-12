@@ -1,0 +1,22 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+# color by permission
+define(color_by_permission, ``
+mark "(^$1.*[0-9][0-9]:?[0-9][0-9][[:space:]]+)([^[:space:]]+)" $2 col_normal
+'')
+
+color_by_permission(...x......, fg_cyan)
+
+# color by extension
+define(color_by_extension, ``
+mark "([[:space:]][^[:space:]]+[.]$1[[:space:]]*$)" $2 col_normal
+'')
+
+# archives
+color_by_extension(ar,  fg_red)
+
+############################################################
+mark "<b>[^<>]*</b>" fg_white col_normal
