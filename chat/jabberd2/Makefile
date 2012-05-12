@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2012/04/27 12:31:35 obache Exp $
+# $NetBSD: Makefile,v 1.71 2012/05/12 05:44:45 adam Exp $
 
-DISTNAME=	jabberd-2.2.14
-PKGREVISION=	2
+DISTNAME=	jabberd-2.2.16
 CATEGORIES=	chat
-MASTER_SITES=	http://codex.xiaoka.com/pub/jabberd2/releases/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://github.com/downloads/Jabberd2/jabberd2/
+FETCH_USING=	curl
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://jabberd2.xiaoka.com/
@@ -17,7 +16,7 @@ CONFLICTS=		jabberd-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-pipe
@@ -125,6 +124,7 @@ post-install:
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../net/udns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
