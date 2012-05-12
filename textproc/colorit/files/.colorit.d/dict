@@ -1,0 +1,38 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+mark "From.*" fg_white col_normal
+mark "^ +_[IVXLC]+" fg_white col_normal
+mark "^ +[0-9]+[.>]" fg_white col_normal
+mark "^ +[0-9]+[:]" fg_green col_normal
+mark "_[^ ]+[.]"    fg_ltblue col_normal
+
+mark [{][^{}]+[}] fg_yellow col_normal
+mark ^[[:space:]][0-9][0-9]?[:).] col_brighten fg_cyan
+mark NAME               fg_white col_normal
+mark SYNOPSIS           fg_white col_normal
+mark "([[:upper:]]+ )?DESCRIPTION"        fg_white col_normal
+mark RETURN.*VALUE      fg_white col_normal
+mark ERRORS             fg_white col_normal
+mark APPLICATION.*USAGE fg_white col_normal
+mark SEE.*ALSO          fg_white col_normal
+mark EXAMPLES           fg_white col_normal
+mark DERIVATION         fg_white col_normal
+mark FUTURE.DIRECTIONS  fg_white col_normal
+mark OPTIONS            fg_white col_normal
+mark OPERANDS           fg_white col_normal
+mark "INPUT FILES"      fg_white col_normal
+mark "OUTPUT FILES"     fg_white col_normal
+mark "ENVIRONMENT VARIABLES" fg_white col_normal
+mark HISTFILE                fg_white col_normal
+mark STDIN                   fg_white col_normal
+mark STDOUT                  fg_white col_normal
+mark STDERR                  fg_white col_normal
+mark " ENV( |$)"             fg_white col_normal
+mark "ASYNCHRONOUS EVENTS"   fg_white col_normal
+
+mark w?(void|long|char|unsigned|int)([[:space:]_]).*; fg_cyan col_normal
+
+mark `ine bg_` `fg_green+ +<green>` `</green>+ +col_normal`
