@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1506 2012/05/12 07:18:43 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1507 2012/05/12 07:50:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2379,6 +2379,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/jabberd2 to 2.2.16 [adam 2012-05-12]
 	Updated multimedia/ming to 0.4.4 [obache 2012-05-12]
 	Updated multimedia/py-ming to 0.4.4 [obache 2012-05-12]
-	Updated devel/man-pages to 3.41 [wiz 2012-05-12]
+	Added devel/man-pages version 3.41 [wiz 2012-05-12]
 	Updated databases/postgresql90-client to 9.0.7nb1 [sbd 2012-05-12]
 	Updated databases/postgresql91-client to 9.1.3nb1 [sbd 2012-05-12]
