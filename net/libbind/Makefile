@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/12 04:39:16 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/12 07:37:51 wiz Exp $
 #
 
 DISTNAME=	libbind-6.0
@@ -12,6 +12,8 @@ COMMENT=	ISC Standard Resolver Library
 LICENSE=	isc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		man-pages-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
