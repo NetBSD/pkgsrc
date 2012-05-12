@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11072 2012/05/08 20:32:58 wiz Exp $
+$NetBSD: TODO,v 1.11073 2012/05/12 05:46:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
-	o jabberd2-2.2.16
 	o jamvm-1.5.4 [pkg/45604]
 	o java-db3-3.87
 	o javacc-5.0
