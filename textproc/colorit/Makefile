@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/12 15:15:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/12 17:20:47 cheusov Exp $
 
 .include "../../textproc/dict-server/Makefile.common"
 
@@ -28,6 +28,7 @@ do-install:
 	${INSTALL_SCRIPT} colorit ${DESTDIR}${PREFIX}/bin; \
 	${INSTALL_MAN} colorit.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
 	cp ${.CURDIR}/files/colorit_* ${DESTDIR}${EGDIR}/; \
-	cp -R ${.CURDIR}/files/.colorit.d ${DESTDIR}${EGDIR}/
+	cp -R ${.CURDIR}/files/.colorit.d ${DESTDIR}${EGDIR}/; \
+	rm -rf ${DESTDIR}${EGDIR}/.colorit.d/CVS
 
 .include "../../mk/bsd.pkg.mk"
