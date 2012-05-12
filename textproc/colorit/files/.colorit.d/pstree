@@ -1,0 +1,7 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+mark "^[^_]*$" fg_white    col_normal
+mark "_.*$" fg_ltblue      col_normal

@@ -1,0 +1,7 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+mark "[(][(][^()]*[)][)]"          fg_white col_normal
+mark "[)][)][^()]+_[JNL][^()]+[(][(]"    fg_red   col_normal

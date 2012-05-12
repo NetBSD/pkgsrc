@@ -1,0 +1,17 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+# for unified output format
+mark "^Index:.*$"       fg_white col_normal
+mark "^==============+" fg_white col_normal
+mark "^[-][-][-].*$"    fg_white col_normal
+mark "^[+][+][+].*$"    fg_white col_normal
+mark "^[+].*$"          fg_green col_normal
+mark "^[-].*$"          fg_red   col_normal
+
+# for default output format
+mark "^[>].*$"           fg_green col_normal
+mark "^[<].*$"           fg_red   col_normal
+mark "^[0-9].*$"         fg_white   col_normal

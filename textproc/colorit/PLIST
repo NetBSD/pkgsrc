@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/12 15:15:35 cheusov Exp $
+bin/colorit
+man/man1/colorit.1
+share/examples/colorit/.colorit.d/aptget
+share/examples/colorit/.colorit.d/changelog
+share/examples/colorit/.colorit.d/colors
+share/examples/colorit/.colorit.d/configure
+share/examples/colorit/.colorit.d/dict
+share/examples/colorit/.colorit.d/diff
+share/examples/colorit/.colorit.d/gcc
+share/examples/colorit/.colorit.d/ldbunittest
+share/examples/colorit/.colorit.d/ls
+share/examples/colorit/.colorit.d/make
+share/examples/colorit/.colorit.d/patch
+share/examples/colorit/.colorit.d/ps
+share/examples/colorit/.colorit.d/pstree
+share/examples/colorit/.colorit.d/stardict
+share/examples/colorit/.colorit.d/ts
+share/examples/colorit/.colorit.d/wdiff
+share/examples/colorit/colorit_aliases
+share/examples/colorit/colorit_funcs
