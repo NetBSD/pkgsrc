@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/12 07:16:47 wiz Exp $
+
+SHA1 (man-pages-3.41.tar.xz) = 61926b4b561abd9a67c620c7e15c7642216acb42
+RMD160 (man-pages-3.41.tar.xz) = d1de94957ff4ddc2d4e7c40f177c2e1e792f8dfc
+Size (man-pages-3.41.tar.xz) = 1090072 bytes
+SHA1 (patch-Makefile) = de0ce7e3d86c4a1dc55ce423b52f58dd92adcbad
