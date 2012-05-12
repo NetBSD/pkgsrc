@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.25 2012/01/27 01:55:27 obache Exp $
+# $NetBSD: ext.mk,v 1.26 2012/05/12 08:23:34 obache Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -24,6 +24,7 @@ HOMEPAGE?=		http://pecl.php.net/package/${MODNAME}
 .include "${PHPPKGSRCDIR}/Makefile.common"
 
 PKGMODNAME?=		${MODNAME:S/-/_/}
+PHPSETUPSUBDIR?=	#empty
 MODULESDIR?=		${WRKSRC}/modules
 PLIST_SUBST+=		MODNAME=${PKGMODNAME}
 
@@ -49,7 +50,7 @@ PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-${PECL_VERSION}
 MASTER_SITES?=		http://pecl.php.net/get/
 PECL_DISTNAME?=		${MODNAME}-${PECL_VERSION}
 DISTNAME=		${PECL_DISTNAME}
-DIST_SUBDIR=		php-${MODNAME}
+DIST_SUBDIR?=		php-${MODNAME}
 EXTRACT_SUFX?=		.tgz
 .endif
 
@@ -89,7 +90,7 @@ pre-configure:	phpize-module
 phpize-module:
 	@cookie=${WRKDIR}/.phpize_module_done;				\
 	if [ ! -f $${cookie} ]; then					\
-		cd ${WRKSRC} && 					\
+		cd ${WRKSRC}/${PHPSETUPSUBDIR} &&			\
 		${SETENV}						\
 			AUTOCONF=${TOOLS_DIR:Q}/bin/autoconf		\
 			AUTOHEADER=${TOOLS_DIR:Q}/bin/autoheader	\
