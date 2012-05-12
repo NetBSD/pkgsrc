@@ -1,0 +1,178 @@
+# Shell functions for generating colored output
+# usage: alias ls=colored_ls
+#        alias diff=colored_diff
+#        alias make=colored_make
+#        ...
+
+: ${PROG_COLORIT=colorit}
+
+: ${PROG_MAKE=make}
+: ${PROG_GMAKE=gmake}
+: ${PROG_BMAKE=bmake}
+: ${PROG_MKCMAKE=mkcmake}
+: ${PROG_GPP=g++}
+: ${PROG_GCC=gcc}
+: ${CVS_PATCH=cvs_patch}
+: ${CVS_WDIFF=cvs_wdiff}
+: ${PROG_DIFF=diff}
+: ${PROG_LS=ls}
+: ${PROG_APT_GET=apt-get}
+: ${PROG_NIH=nih}
+
+: ${COLORIT_ROOT=${HOME}/.colorit.d}
+
+colored_make (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/make; then
+	"$PROG_MAKE" "$@" 3>&1 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/make 3>&1 2>&1 1>&3
+
+	__pipe_status_first
+    else
+	"$PROG_MAKE" "$@"
+    fi
+}
+
+colored_gmake (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/make; then
+	"$PROG_GMAKE" "$@" 3>&1 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/make 3>&1 2>&1 1>&3
+
+	__pipe_status_first
+    else
+	"$PROG_GMAKE" "$@"
+    fi
+}
+
+colored_bmake (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/make; then
+	"$PROG_BMAKE" "$@" 3>&1 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/make 3>&1 2>&1 1>&3
+
+	__pipe_status_first
+    else
+	"$PROG_BMAKE" "$@"
+    fi
+}
+
+colored_mkcmake (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/make; then
+	"$PROG_MKCMAKE" "$@" 3>&1 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/make 3>&1 2>&1 1>&3
+
+	__pipe_status_first
+    else
+	"$PROG_MKCMAKE" "$@"
+    fi
+}
+
+colored_gpp (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/gcc; then
+	"$PROG_GPP" "$@" 3>&1 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/gcc 3>&1 2>&1 1>&3
+
+	__pipe_status_first
+    else
+	"$PROG_GPP" "$@"
+    fi
+}
+
+colored_gcc (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/gcc; then
+	"$PROG_GCC" "$@" 3>&1 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/gcc 3>&1 2>&1 1>&3
+
+	__pipe_status_first
+    else
+	"$PROG_GCC" "$@"
+    fi
+}
+
+colored_cvs_diff (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/diff; then
+	cvs diff "$@" |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/diff
+
+	__pipe_status_first
+    else
+	cvs diff "$@"
+    fi
+}
+
+colored_cvs_patch (){
+    if test -t 1; then
+	"$CVS_PATCH" "$@" |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/diff
+
+	__pipe_status_first
+    else
+	"$CVS_PATCH" "$@"
+    fi
+}
+
+colored_cvs_wdiff (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/wdiff; then
+	"$CVS_WDIFF" "$@" |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/wdiff
+
+	__pipe_status_first
+    else
+	"$CVS_WDIFF" "$@"
+    fi
+}
+
+colored_diff (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/diff; then
+	"$PROG_DIFF" -u --exclude '.#*' --exclude '*~' --exclude CVS "$@" |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/diff
+
+	__pipe_status_first
+    else
+	"$PROG_DIFF" -u --exclude '.#*' --exclude '*~' --exclude CVS "$@"
+    fi
+}
+
+colored_ls (){
+    if test -t 1 -a -f ${COLORIT_ROOT}/ls; then
+	"$PROG_LS" "$@" |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/ls
+
+	__pipe_status_first
+    else
+	"$PROG_LS" "$@"
+    fi
+}
+
+colored_apt_get (){
+    if test "_$USER" != "_root"; then
+	PREF=sudo
+    fi
+
+    if test -t 1 -a -f ${COLORIT_ROOT}/aptget; then
+	$PREF "$PROG_APT_GET" "$@" 3>&2 2>&1 1>&3 |
+	${PROG_COLORIT} -P - -c ${COLORIT_ROOT}/aptget 3>&2 2>&1 1>&3
+    else
+	$PREF "$PROG_APT_GET" "$@"
+    fi
+
+    unset PREF
+}
+
+colored_configure (){
+    if test -r ./config; then
+	__configure=./config
+    elif test -r ./configure; then
+	__configure=./configure
+    else
+	echo "cannot find ./config or ./configure"
+	return 1
+    fi
+
+    if test -t 1 -a -f ${COLORIT_ROOT}/configure; then
+	sh "$__configure" "$@" |
+	${PROG_COLORIT} -P - -c ~/.colorit.d/configure
+
+	__pipe_status_first
+    else
+	sh "$__configure" "$@"
+    fi
+}

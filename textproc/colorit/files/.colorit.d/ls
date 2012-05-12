@@ -1,0 +1,64 @@
+include(HOME/.colorit.d/colors)
+
+changequote([[, ]])
+changequote([[``]], [['']])
+
+# color by permission
+define(color_by_permission, ``
+mark "(^$1.*[0-9][0-9]:?[0-9][0-9][[:space:]]+)([^[:space:]]+)" $2 col_normal
+'')
+
+# d---------
+color_by_permission(d........., fg_white)
+
+# s---------
+color_by_permission(s........., fg_purple)
+
+# l--------- i.e. symbolic link
+color_by_permission(l........., fg_green)
+
+# [bc]---------
+color_by_permission(b........., fg_red)
+color_by_permission(c........., fg_red)
+
+# ---x------ i.e. executables
+color_by_permission(...x......, fg_cyan)
+
+# color by extension
+define(color_by_extension, ``
+mark "([[:space:]][^[:space:]]+[.]$1[[:space:]]*$)" $2 col_normal
+'')
+
+# archives
+color_by_extension(ar,  fg_red)
+color_by_extension(tar, fg_red)
+color_by_extension(gz,  fg_red)
+color_by_extension(bz2, fg_red)
+color_by_extension(tbz, fg_red)
+color_by_extension(tgz, fg_red)
+
+color_by_extension(rpm, fg_red)
+color_by_extension(deb, fg_red)
+
+color_by_extension(arj, fg_red)
+color_by_extension(taz, fg_red)
+color_by_extension(lzh, fg_red)
+color_by_extension(zip, fg_red)
+color_by_extension(z,   fg_red)
+color_by_extension(Z,   fg_red)
+
+# Windows executables
+color_by_extension(cmd,   fg_ltgreen)
+color_by_extension(exe,   fg_ltgreen)
+color_by_extension(com,   fg_ltgreen)
+color_by_extension(bat,   fg_ltgreen)
+
+# pictures and video
+color_by_extension(jpg,   fg_brown)
+color_by_extension(gif,   fg_brown)
+color_by_extension(bmp,   fg_brown)
+color_by_extension(png,   fg_brown)
+color_by_extension(xbm,   fg_brown)
+color_by_extension(xpm,   fg_brown)
+color_by_extension(tif,   fg_brown)
+color_by_extension(xwd,   fg_brown)
