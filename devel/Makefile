@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1592 2012/05/08 09:37:52 imil Exp $
+# $NetBSD: Makefile,v 1.1593 2012/05/12 07:17:21 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -436,6 +436,7 @@ SUBDIR+=	mad-flute
 SUBDIR+=	makedepend
 SUBDIR+=	makedepf90
 SUBDIR+=	maketool
+SUBDIR+=	man-pages
 SUBDIR+=	mantis
 SUBDIR+=	matio
 SUBDIR+=	mdds
