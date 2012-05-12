@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2011/11/28 19:33:13 marino Exp $
+# $NetBSD: Makefile,v 1.55 2012/05/12 07:37:51 wiz Exp $
 #
 
 DISTNAME=		krb4-1.2.2
@@ -13,6 +13,7 @@ COMMENT=		Kerberos IV distribution from KTH
 
 CONFLICTS+=		arla-[0-9]*
 CONFLICTS+=		libdes-[0-9]*
+CONFLICTS=		man-pages-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
