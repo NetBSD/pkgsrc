@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/06/16 07:56:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/05/12 05:44:45 adam Exp $
 bin/bdbdump.pl
 bin/c2s
 bin/jabberd
@@ -6,6 +6,7 @@ bin/pipe-auth.pl
 bin/router
 bin/s2s
 bin/sm
+bin/tests
 lib/jabberd/authreg_anon.la
 ${PLIST.db}lib/jabberd/authreg_db.la
 ${PLIST.ldap}lib/jabberd/authreg_ldap.la
@@ -15,6 +16,7 @@ ${PLIST.pam}lib/jabberd/authreg_pam.la
 ${PLIST.pgsql}lib/jabberd/authreg_pgsql.la
 ${PLIST.sqlite}lib/jabberd/authreg_sqlite.la
 lib/jabberd/authreg_pipe.la
+lib/jabberd/libstorage.la
 lib/jabberd/mod_active.la
 lib/jabberd/mod_amp.la
 lib/jabberd/mod_announce.la
