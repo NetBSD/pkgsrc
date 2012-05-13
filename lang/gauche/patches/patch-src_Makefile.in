@@ -1,0 +1,34 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/05/13 06:08:10 enami Exp $
+
+commit 809ed95496ff1d753f34161f28f549248124bb63
+Author: Shiro Kawai <shiro@acm.org>
+Date:   Sat May 12 14:47:15 2012 -1000
+
+    build fix when DESTDIR is used
+
+--- src/Makefile.in.orig	2012-05-10 03:26:35.000000000 +0000
++++ src/Makefile.in
+@@ -415,10 +415,12 @@ INSTALL_DIRS = $(DESTDIR)$(HEADER_INSTAL
+ @CROSS_COMPILING_no@GAUCHE_INSTALL = ./gosh -ftest $(srcdir)/gauche-install.in
+ @CROSS_COMPILING_yes@GAUCHE_INSTALL = gosh $(srcdir)/gauche-install.in
+ 
+-install : install-core install-aux
++install : all install-dirs install-aux install-core
+ 
+-install-core : all relink
++install-dirs : 
+ 	$(MKINSTDIR) $(INSTALL_DIRS)
++
++install-core : relink
+ 	$(INSTALL)        $(INSTALL_LIBS) $(DESTDIR)$(LIB_INSTALL_DIR)
+ 	$(INSTALL)        $(INSTALL_LIBS) $(DESTDIR)$(ARCH_INSTALL_DIR)
+ 	$(INSTALL) -m 555 $(INSTALL_BINS) $(DESTDIR)$(BIN_INSTALL_DIR)
+@@ -429,7 +431,7 @@ install-core : all relink
+ 	$(INSTALL) $(srcdir)/gauche-init.scm $(DESTDIR)$(SCM_INSTALL_DIR)
+ 	$(POSTINSTALL)
+ 
+-install-aux : install-core
++install-aux :
+ 	$(GAUCHE_INSTALL) -m 444 -S $(srcdir) $(INSTALL_HEADERS) $(DESTDIR)$(HEADER_INSTALL_DIR)
+ 	$(GAUCHE_INSTALL) -m 444 -S $(srcdir) $(INSTALL_SUBHEADERS) $(DESTDIR)$(HEADER_INSTALL_DIR)/gauche
+ 	$(GAUCHE_INSTALL) -m 444 -S $(srcdir) $(INSTALL_SCMS) $(DESTDIR)$(SCM_INSTALL_DIR)
