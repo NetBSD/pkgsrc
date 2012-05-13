@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2012/05/13 06:08:10 enami Exp $
+@comment $NetBSD: PLIST,v 1.28 2012/05/13 08:22:48 enami Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -34,6 +34,7 @@ lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/os--windows.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/parser--peg.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rfc--md5.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rfc--sha.so
+lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rfc--tls.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rfc--zlib.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/srfi-1.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/srfi-13.so
@@ -65,6 +66,7 @@ lib/gauche-0.9/${PKGVERSION}/include/gauche/class.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/code.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/collection.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/config.h
+lib/gauche-0.9/${PKGVERSION}/include/gauche/config_threads.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/exception.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/extend.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/extern.h
@@ -96,6 +98,7 @@ lib/gauche-0.9/${PKGVERSION}/include/gauche/vm.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/vminsn.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/weak.h
 lib/gauche-0.9/${PKGVERSION}/include/gauche/win-compat.h
+lib/gauche-0.9/${PKGVERSION}/include/gauche/wthread.h
 lib/gauche-0.9/${PKGVERSION}/include/gc.h
 lib/gauche-0.9/${PKGVERSION}/include/gc_allocator.h
 lib/gauche-0.9/${PKGVERSION}/include/gc_config_macros.h
@@ -164,6 +167,7 @@ share/gauche-0.9/${PKGVERSION}/lib/gauche/hook.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/interactive.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/interactive/info.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/interpolate.scm
+share/gauche-0.9/${PKGVERSION}/lib/gauche/lazy.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/let-opt.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/libutil.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/listener.scm
@@ -202,6 +206,7 @@ share/gauche-0.9/${PKGVERSION}/lib/gauche/singleton.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/sortutil.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/stringutil.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/syslog.scm
+share/gauche-0.9/${PKGVERSION}/lib/gauche/sysutil.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/termios.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/test.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/threads.scm
@@ -236,6 +241,7 @@ share/gauche-0.9/${PKGVERSION}/lib/rfc/mime.scm
 share/gauche-0.9/${PKGVERSION}/lib/rfc/quoted-printable.scm
 share/gauche-0.9/${PKGVERSION}/lib/rfc/sha.scm
 share/gauche-0.9/${PKGVERSION}/lib/rfc/sha1.scm
+share/gauche-0.9/${PKGVERSION}/lib/rfc/tls.scm
 share/gauche-0.9/${PKGVERSION}/lib/rfc/uri.scm
 share/gauche-0.9/${PKGVERSION}/lib/rfc/zlib.scm
 share/gauche-0.9/${PKGVERSION}/lib/slib.scm
