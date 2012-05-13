@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2012/05/13 14:47:10 bsiegert Exp $
+# $NetBSD: hacks.mk,v 1.5 2012/05/13 17:51:10 bsiegert Exp $
 
 .if !defined(XULRUNNER_HACKS_MK)
 XULRUNNER_HACKS_MK=	defined
@@ -13,7 +13,7 @@ BUILDLINK_TRANSFORM+=	rm:-march=[-_A-Za-z0-9]*
 SUBST_CLASSES+=		opt-hack
 SUBST_STAGE.opt-hack=	post-patch
 SUBST_MESSAGE.opt-hack=	Working around optimizer bug.
-SUBST_FILES.opt-hack=	gfx/skia/Makefile.in
+SUBST_FILES.opt-hack=	${MOZILLA_DIR}gfx/skia/Makefile.in
 SUBST_SED.opt-hack=	-e '/SkBlitRow_opts_SSE2/s/-msse2/-msse2 -O0/'
 .endif
 
