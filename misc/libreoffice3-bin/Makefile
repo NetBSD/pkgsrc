@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/25 17:53:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2012/05/13 11:28:07 ryoon Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -21,7 +21,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
 OO_BASEVER=		3.5
-OO_RELEASE=		3.5.2
+OO_RELEASE=		3.5.3
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -91,6 +91,6 @@ do-install:
 
 post-install:
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/oosplash
-	${BINPATCHDIR}/bin/binpatch file=${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/oosplash size=18856 offset=15183 compare=76657273696F6E00 skip=0 replace=637075696E666f
+	${BINPATCHDIR}/bin/binpatch file=${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/oosplash size=18860 offset=15359 compare=76657273696F6E00 skip=0 replace=637075696E666f
 
 .include "../../mk/bsd.pkg.mk"
