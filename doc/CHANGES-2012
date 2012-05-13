@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1516 2012/05/13 07:54:43 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1517 2012/05/13 08:46:09 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/netatalk to 2.2.1nb5 [dholland 2012-05-12]
 	Updated lang/gauche to 0.9.3.2 [enami 2012-05-13]
 	Added www/gwt version 2.4.0 [ryoon 2012-05-13]
+	Added sysutils/conky version 1.9.0 [imil 2012-05-13]
