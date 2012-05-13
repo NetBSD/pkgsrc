@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.16 2012/05/09 06:52:51 taca Exp $
+# $NetBSD: Makefile.php,v 1.17 2012/05/13 16:11:19 taca Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 
@@ -14,9 +14,6 @@ BUILD_DEFS+=		VARBASE
 PLIST_VARS+=		suhosin
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
-
-PHP_EXTENSION_DIR=	lib/php/20090630
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
