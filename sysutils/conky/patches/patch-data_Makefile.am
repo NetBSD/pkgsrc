@@ -1,0 +1,15 @@
+$NetBSD: patch-data_Makefile.am,v 1.1.1.1 2012/05/13 08:42:20 imil Exp $
+
+Install config into example directory.
+
+--- data/Makefile.am.orig	2010-10-20 00:32:27.000000000 +0000
++++ data/Makefile.am
+@@ -25,7 +25,7 @@
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #
+ 
+-configdir = ${sysconfdir}/conky
++configdir = ${prefix}/share/examples/conky
+ dist_config_DATA = conky.conf conky_no_x11.conf
+ 
+ # vi:set ts=4 sw=4 noet ai nocindent syntax=automake:

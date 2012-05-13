@@ -1,0 +1,19 @@
+$NetBSD: patch-src_Makefile.am,v 1.1.1.1 2012/05/13 08:42:20 imil Exp $
+
+Enable NetBSD as a suitable platform.
+
+--- src/Makefile.am.orig	2012-05-03 21:08:27.000000000 +0000
++++ src/Makefile.am
+@@ -119,9 +119,9 @@ endif
+ if BUILD_FREEBSD
+ optional_sources += $(freebsd)
+ endif
+-#if BUILD_NETBSD
+-#optional_sources += $(netbsd)
+-#endif
++if BUILD_NETBSD
++optional_sources += $(netbsd)
++endif
+ if BUILD_OPENBSD
+ optional_sources += $(openbsd)
+ endif
