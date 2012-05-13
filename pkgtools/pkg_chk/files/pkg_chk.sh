@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.65 2009/07/22 21:56:13 sketch Exp $
+# $Id: pkg_chk.sh,v 1.66 2012/05/13 13:43:59 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -369,14 +369,8 @@ pkgdir2pkgname()
     done
     }
 
-pkgdirs_from_conf()
+determine_tags()
     {
-    CONF=$1; shift
-    LIST="$*"
-    if [ ! -r $CONF ];then
-	fatal "Unable to read PKGCHK_CONF '$CONF'"
-    fi
-
     # Determine list of tags
     #
     if [ "$PKGSRCDIR" = NONE ]; then
@@ -388,7 +382,7 @@ pkgdirs_from_conf()
     fi
 
     TAGS="$(hostname | ${SED} -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
-    if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
+    if [ -f /usr/X11R7/lib/libX11.a -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
     if [ -n "$PKGCHK_TAGS" ];then
@@ -418,6 +412,16 @@ pkgdirs_from_conf()
 	fi
     fi
     verbose "set   TAGS=$opt_D"
+    }
+
+pkgdirs_from_conf()
+    {
+    CONF=$1; shift
+    LIST="$*"
+    if [ ! -r $CONF ];then
+	fatal "Unable to read PKGCHK_CONF '$CONF'"
+    fi
+
 
     # Extract list of valid pkgdirs (skip any 'alreadyset' in $LIST)
     #
@@ -847,6 +851,8 @@ if [ -n "$opt_b" -a -z "$opt_s" ] ; then
 	    fi;;
     esac
 fi
+
+determine_tags
 
 if [ -n "$opt_g" ]; then
     verbose "Write $PKGCHK_CONF based on installed packages"
