@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/05/07 21:45:25 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/05/13 14:21:55 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -44,6 +44,7 @@ share/mikutter/core/addon/settings/settings.rb
 share/mikutter/core/addon/settings/test_listener.rb
 share/mikutter/core/addon/shortcutkey.rb
 share/mikutter/core/addon/smartthread.rb
+share/mikutter/core/addon/streaming/filter.rb
 share/mikutter/core/addon/streaming/parma_streamer.rb
 share/mikutter/core/addon/streaming/streamer.rb
 share/mikutter/core/addon/streaming/streamer_error.rb
