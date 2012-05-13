@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/13 15:59:33 hans Exp $
 bin/sysinfo
 man/man1/sysinfo.1
 man/man5/sysinfo.cf.5
@@ -19,4 +19,4 @@ libdata/sysinfo/conf/sunos.cf
 libdata/sysinfo/conf/sunos_4.cf
 libdata/sysinfo/conf/sunos_5.cf
 libdata/sysinfo/conf/sunos_5.ddb
-sysinfo/libexec/sparc-sunos-5.6/sysinfo
+sysinfo/libexec/${MACHINE_ARCH}-sunos-${OS_VERSION}/sysinfo
