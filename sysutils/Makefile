@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2012/05/03 21:37:42 jdf Exp $
+# $NetBSD: Makefile,v 1.540 2012/05/13 08:44:14 imil Exp $
 #
 
 COMMENT=	System utilities
@@ -54,6 +54,7 @@ SUBDIR+=	checkpassword
 SUBDIR+=	checkpassword-pam
 SUBDIR+=	checkperms
 SUBDIR+=	clex
+SUBDIR+=	conky
 SUBDIR+=	consolekit
 SUBDIR+=	coreutils
 SUBDIR+=	cpmtools
