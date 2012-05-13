@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.44 2011/02/21 16:21:17 taca Exp $
+# $NetBSD: Makefile.php,v 1.45 2012/05/13 16:08:37 taca Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -13,9 +13,6 @@ BUILD_DEFS+=		VARBASE
 PLIST_VARS+=		suhosin
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
-
-PHP_EXTENSION_DIR=	lib/php/20040412
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,7 +54,7 @@ SUBST_MESSAGE.ini=	Fixing default ini files.
 
 .if !empty(PKG_OPTIONS:Msuhosin)
 SUHOSIN_PHPVER=		5.2.16
-. if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS} && (${SUHOSIN_PHPVER} != "5.2.16" || ${PHP_BASE_VERS} != "5.2.17")
+. if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS} && ${PHP_BASE_VERS} != "5.2.17"
 PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
 PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
 PKG_FAIL_REASON+=	"an updated patch is released or temporarily"
