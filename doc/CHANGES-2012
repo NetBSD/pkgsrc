@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1521 2012/05/13 13:47:31 abs Exp $
+$NetBSD: CHANGES-2012,v 1.1522 2012/05/13 14:22:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2399,3 +2399,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql55-client to 5.5.24 [taca 2012-05-13]
 	Updated databases/mysql55-server to 5.5.24 [taca 2012-05-13]
 	Updated pkgtools/pkg_chk to 2.0.1 [abs 2012-05-13]
+	Updated net/mikutter to 0.1.1.790 [obache 2012-05-13]
