@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1514 2012/05/13 06:10:17 enami Exp $
+$NetBSD: CHANGES-2012,v 1.1515 2012/05/13 07:00:34 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2364,6 +2364,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ruby-simple_oauth to 0.1.8 [obache 2012-05-10]
 	Updated mail/dovecot2 to 2.1.6 [ghen 2012-05-10]
 	Updated net/tacacs-shrubbery to 4.0.4.25 [schwarz 2012-05-10]
+	Updated editors/uemacs to 4.0nb2 [dholland 2012-05-10]
 	Updated mail/thunderbird to 12.0.1 [ryoon 2012-05-11]
 	Updated www/opera to 11.64 [obache 2012-05-11]
 	Updated misc/php-orangehrm to 2.7 [ryoon 2012-05-11]
@@ -2388,4 +2389,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/pixman to 0.24.4 [wiz 2012-05-12]
 	Added security/ocaml-cryptokit version 1.5 [wiz 2012-05-12]
 	Updated www/p5-HTML-Template to 2.9.1 [wiz 2012-05-12]
+	Updated net/netatalk to 2.2.1nb5 [dholland 2012-05-12]
 	Updated lang/gauche to 0.9.3.2 [enami 2012-05-13]
