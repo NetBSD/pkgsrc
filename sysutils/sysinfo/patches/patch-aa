@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/21 11:18:04 agc Exp $
+$NetBSD: patch-aa,v 1.2 2012/05/13 15:59:33 hans Exp $
 
 Don't override PREFIX in the main Makefile, and place the
 configuration files, and the executable binary, in the correct
@@ -15,7 +15,7 @@ directory, according to hier(7).
  
  #
  # The bin directory that user's will run the program from.
-@@ -36,13 +36,13 @@
+@@ -36,13 +36,13 @@ BIN 		= ${PREFIX}/bin
  # Directory containing sysinfo.cf configuration files
  #
  #CONFDIR		= /usr/local/lib/${PROG}
@@ -31,3 +31,76 @@ directory, according to hier(7).
  
  #
  # Man sections and directories
+@@ -82,7 +82,7 @@ INSTALLOPTS 	= $(INSTALLMODE) $(INSTALLO
+ # The install.sh script from the sysinfo distribution should work fine 
+ # on most systems.
+ #
+-INSTALLPROG	= sh ./install.sh
++INSTALLPROG	= install
+ 
+ ###########################################################################
+ #
+@@ -251,15 +251,15 @@ install: $(LIBDIR) $(BIN) metasysinfo
+ 	@if [ ! -z "$(LIBDIR)" ]; then \
+ 		RTPLATFORM=`${BUILDINFO} -rtplatform`; \
+ 		build/mkdirhier $(LIBDIR)/$${RTPLATFORM}; \
+-		echo "$(INSTALLPROG) -c -m 555 $(INSTALLOWN) metasysinfo $(BIN)/$(PROG)"; \
+-		$(INSTALLPROG) -c -m 555 $(INSTALLOWN) metasysinfo $(BIN)/$(PROG); \
+-		echo "$(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} $(LIBDIR)/$${RTPLATFORM}/${PROG}"; \
+-		$(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} $(LIBDIR)/$${RTPLATFORM}/${PROG}; \
+-		strip $(LIBDIR)/$${RTPLATFORM}/${PROG}; \
++		echo "$(INSTALLPROG) -c -m 555 $(INSTALLOWN) metasysinfo $(DESTDIR)/$(BIN)/$(PROG)"; \
++		$(INSTALLPROG) -c -m 555 $(INSTALLOWN) metasysinfo $(DESTDIR)/$(BIN)/$(PROG); \
++		echo "$(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} $(DESTDIR)/$(LIBDIR)/$${RTPLATFORM}/${PROG}"; \
++		$(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} $(DESTDIR)/$(LIBDIR)/$${RTPLATFORM}/${PROG}; \
++		strip $(DESTDIR)/$(LIBDIR)/$${RTPLATFORM}/${PROG}; \
+ 	else \
+-		echo $(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} ${BIN}/${PROG}; \
+-		$(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} ${BIN}/${PROG}; \
+-		strip ${BIN}/${PROG}; \
++		echo $(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} $(DESTDIR)/${BIN}/${PROG}; \
++		$(INSTALLPROG) -c ${INSTALLOPTS} ${PROG} $(DESTDIR)/${BIN}/${PROG}; \
++		strip $(DESTDIR)/${BIN}/${PROG}; \
+ 	fi
+ 
+ metasysinfo: metasysinfo.sh
+@@ -269,30 +269,30 @@ metasysinfo: metasysinfo.sh
+ 
+ install.man: $(MANFILES) $(ManDir1) $(ManDir5)
+ 	$(INSTALLPROG) -c -m 444 -o bin -g bin sysinfo.man \
+-		${ManDir1}/${PROG}.${ManSect1}
++		$(DESTDIR)/${ManDir1}/${PROG}.${ManSect1}
+ 	$(INSTALLPROG) -c -m 444 -o bin -g bin sysinfo.cf.man \
+-		${ManDir5}/${PROG}.cf.${ManSect5}
++		$(DESTDIR)/${ManDir5}/${PROG}.cf.${ManSect5}
+ 
+ $(BIN):
+-	build/mkdirhier ${BIN}
++	build/mkdirhier $(DESTDIR)/${BIN}
+ 
+ $(LIBDIR):
+-	build/mkdirhier ${LIBDIR}
++	build/mkdirhier $(DESTDIR)/${LIBDIR}
+ 
+ $(CONFDIR):
+-	build/mkdirhier ${CONFDIR}
++	build/mkdirhier $(DESTDIR)/${CONFDIR}
+ 
+ $(ManDir1):
+-	build/mkdirhier ${ManDir1}
++	build/mkdirhier $(DESTDIR)/${ManDir1}
+ 
+ $(ManDir5):
+-	build/mkdirhier ${ManDir5}
++	build/mkdirhier $(DESTDIR)/${ManDir5}
+ 
+ install.cf: $(CONFDIR)
+ 	@for file in config/*.cf config/*.ddb ; do \
+ 		cf=`echo $$file | sed -e 's;.*/;;'`; \
+-		echo $(INSTALLPROG) -c -m 444 $(INSTALLOWN) $$file $(CONFDIR)/$$cf; \
+-		$(INSTALLPROG) -c -m 444 $(INSTALLOWN) $$file $(CONFDIR)/$$cf; \
++		echo $(INSTALLPROG) -c -m 444 $(INSTALLOWN) $$file $(DESTDIR)/$(CONFDIR)/$$cf; \
++		$(INSTALLPROG) -c -m 444 $(INSTALLOWN) $$file $(DESTDIR)/$(CONFDIR)/$$cf; \
+ 	done
+ 
+ clean:
