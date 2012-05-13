@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/04/12 16:36:00 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/13 15:46:17 wiz Exp $
 # FreeBSD Id: ports/www/dojo/Makefile,v 1.14 2011/08/20 17:27:37 ohauer Exp
 
 DISTNAME=		dojo-release-1.7.2
@@ -11,15 +11,16 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dojotoolkit.org/
 COMMENT=		Open-source DHTML toolkit written in JavaScript
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=		yes
 USE_TOOLS+=		pax
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 REPLACE_BASH+=			dojox/mobile/build/build.sh
-CONFDIR=				${DESTDIR}${PREFIX}/etc/httpd
-WWWDIR=					${DESTDIR}${PREFIX}/share/httpd/dojo
+CONFDIR=				${PREFIX}/etc/httpd
+WWWDIR=					${PREFIX}/share/httpd/dojo
 INSTALLATION_DIRS+=		${WWWDIR} ${CONFDIR}
 
 SUBST_CLASSES+=			dojo
@@ -36,10 +37,10 @@ post-extract:
 	${CP} ${FILESDIR}/dojo.conf.in ${WRKSRC}/dojo.conf
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -wr dijit ${WWWDIR}/
-	cd ${WRKSRC} && ${PAX} -wr dojo ${WWWDIR}/
-	cd ${WRKSRC} && ${PAX} -wr dojox ${WWWDIR}/
-	${INSTALL_DATA} ${WRKSRC}/dojo.conf ${CONFDIR}/
+	cd ${WRKSRC} && ${PAX} -wr dijit ${DESTDIR}${WWWDIR}/
+	cd ${WRKSRC} && ${PAX} -wr dojo ${DESTDIR}${WWWDIR}/
+	cd ${WRKSRC} && ${PAX} -wr dojox ${DESTDIR}${WWWDIR}/
+	${INSTALL_DATA} ${WRKSRC}/dojo.conf ${DESTDIR}${CONFDIR}/
 
 .include "../../www/apache22/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
