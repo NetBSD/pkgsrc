@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.29 2011/05/04 10:01:02 obache Exp $
+# $NetBSD: extension.mk,v 1.30 2012/05/13 12:54:54 obache Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -50,4 +50,10 @@ INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
 
 .if defined(PY_PATCHPLIST)
 PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
+.endif
+
+# prepare Python>=32 bytecode file location change
+.if empty(_PYTHON_VERSION:M2?) && ${_PYTHON_VERSION} != "31"
+PLIST_AWK+=	-f ${PKGSRCDIR}/lang/python/plist-python.awk
+PLIST_AWK_ENV+=	PYTHON_SOABI="cpython-${_PYTHON_VERSION}"
 .endif
