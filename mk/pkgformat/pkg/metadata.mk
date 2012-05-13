@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.2 2011/12/13 16:35:48 joerg Exp $
+# $NetBSD: metadata.mk,v 1.3 2012/05/13 08:20:11 obache Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -66,7 +66,7 @@ ${_BUILD_INFO_FILE}: plist
 	ELF)								\
 		libs=`${AWK} '/\/lib.*\.so(\.[0-9]+)*$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
-			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
+			requires=`(${PKGSRC_SETENV} ${LDD_ENV:U} $$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
 		fi;							\
 		linklibs=`${AWK} '/.*\.so(\.[0-9]+)*$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
 		for i in $$linklibs; do					\
