@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2010/06/15 23:10:44 pettai Exp $
+# $NetBSD: Makefile,v 1.37 2012/05/13 15:23:33 wiz Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -16,8 +18,6 @@ CONFLICTS+=	courier-auth-[0-9]*
 CONFLICTS+=	courier-authldap-[0-9]*
 CONFLICTS+=	courier-authmysql-[0-9]*
 CONFLICTS+=	courier-authpgsql-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 LIBTOOLIZE_PLIST=	yes
