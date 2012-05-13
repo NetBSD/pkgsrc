@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.9 2010/07/11 17:41:01 joerg Exp $
+# $NetBSD: wbm.mk,v 1.10 2012/05/13 08:10:12 sbd Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -90,7 +90,7 @@ INSTALLATION_DIRS+=	${WBM_DIR} ${WBM_EGDIR}
 wbm-install:
 	${CP} -R ${WBMSRC} ${DESTDIR}${WBM_DIR}/.
 	${PERL5} ${WEBMIN_DIR}/copyconfig.pl				\
-		${WEBMIN_OSTYPE_cmd:sh:Q} ${WEBMIN_OSVERSION_cmd:sh:Q}	\
+		${WEBMIN_OSTYPE_cmd:sh:Q} ${WEBMIN_OSVERSION_cmd:sh:Q:S/^$/''/}\
 		${DESTDIR}${WBM_DIR} ${DESTDIR}${WBM_EGDIR} ${WBM_NAME}
 
 do-configure: wbm-configure
