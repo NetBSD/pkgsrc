@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1520 2012/05/13 13:06:48 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1521 2012/05/13 13:47:31 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql51-server to 5.1.63 [taca 2012-05-13]
 	Updated databases/mysql55-client to 5.5.24 [taca 2012-05-13]
 	Updated databases/mysql55-server to 5.5.24 [taca 2012-05-13]
+	Updated pkgtools/pkg_chk to 2.0.1 [abs 2012-05-13]
