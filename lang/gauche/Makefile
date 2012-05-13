@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/05/13 06:08:10 enami Exp $
+# $NetBSD: Makefile,v 1.60 2012/05/13 08:56:28 obache Exp $
 #
 
 DISTNAME=	Gauche-0.9.3.2
@@ -26,9 +26,9 @@ CONFIGURE_ARGS+=	--with-slib=${SLIB_PREFIX}/share/slib
 CONFIGURE_ARGS+=	--enable-threads=pthreads
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 
-CHECK_BUILTIN.iconv:=	no
-.include "../../converters/libiconv/builtin.mk"
 CHECK_BUILTIN.iconv:=	yes
+.include "../../converters/libiconv/builtin.mk"
+CHECK_BUILTIN.iconv:=	no
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
 CONFIGURE_ARGS+=	--with-iconv-lib=${BUILDLINK_LIBNAME.iconv}
