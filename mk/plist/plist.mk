@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.41 2012/03/04 08:03:56 tron Exp $
+# $NetBSD: plist.mk,v 1.42 2012/05/13 12:39:47 obache Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -16,6 +16,10 @@
 #	automatic variable is named PLIST.var.  If PLIST.var is defined,
 #	then in the PLIST generation, the ${PLIST.var} symbol is replaced
 #	with the empty string, or "@comment " otherwise.
+#
+#    PLIST_AWK_ENV holds the shell environment passed to PLIST_AWK.
+#
+#    PLIST_AWK is the awk script that does post-processing of the PLIST.
 #
 #    PLIST_SRC is the list of source files from which the PLIST file of
 #	the binary package will be generated. By default, its value is
@@ -43,6 +47,8 @@ _PKG_VARS.plist=	PLIST_SUBST PLIST_VARS PLIST_SRC GENERATE_PLIST
 _SYS_VARS.plist=	PLIST_TYPE PLIST
 
 PLIST_VARS?=		# empty
+PLIST_AWK?=		# empty
+PLIST_AWK_ENV?=		# empty
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PLIST_TYPE?=	dynamic
@@ -133,6 +139,7 @@ _PLIST_AWK_ENV+=	MANZ=${_MANZ:Q}
 _PLIST_AWK_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
 _PLIST_AWK_ENV+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
 _PLIST_AWK_ENV+=	TEST=${TOOLS_TEST:Q}
+_PLIST_AWK_ENV+=	${PLIST_AWK_ENV}
 
 # PLIST_SUBST contains package-settable "${variable}" to "value"
 # substitutions for PLISTs
@@ -183,6 +190,7 @@ _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-locale.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-info.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-man.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-libtool.awk
+_PLIST_AWK+=		${PLIST_AWK}
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-default.awk
 
 _PLIST_INFO_AWK+=	-f ${.CURDIR}/../../mk/plist/plist-functions.awk
