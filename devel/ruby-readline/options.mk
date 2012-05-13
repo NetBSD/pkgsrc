@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/04/29 16:43:49 taca Exp $
+# $NetBSD: options.mk,v 1.3 2012/05/13 08:37:03 sbd Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ruby
@@ -18,9 +18,16 @@ PKG_SUGGESTED_OPTIONS=	ruby-build-ri-db
 PKG_SUGGESTED_OPTIONS+=	readline
 .endif
 
+.include "../../mk/bsd.options.mk"
+
 .if !empty(PKG_OPTIONS:Mreadline)
 USE_BUILTIN.readline=	no
 CONFIGURE_ARGS+=	--disable-libedit
 .else
+CHECK_BUILTIN.readline:=	yes
+.  include "../../devel/readline/builtin.mk"
+CHECK_BUILTIN.readline:=	no
+.  if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS]) 
 CONFIGURE_ARGS+=	--enable-libedit
+.  endif
 .endif
