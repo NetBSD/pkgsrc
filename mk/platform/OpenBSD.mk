@@ -1,8 +1,11 @@
-# $NetBSD: OpenBSD.mk,v 1.34 2012/05/04 11:46:02 obache Exp $
+# $NetBSD: OpenBSD.mk,v 1.35 2012/05/13 08:20:11 obache Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
 ECHO_N?=	${ECHO} -n
+LDD?=		/usr/bin/ldd
+LDD_ENV?=	LD_TRACE_LOADED_OBJECTS_FMT1='\t-l%o => %p\n' \
+		LD_TRACE_LOADED_OBJECTS_FMT2=
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
