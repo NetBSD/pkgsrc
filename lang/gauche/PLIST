@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/09/16 07:49:25 enami Exp $
+@comment $NetBSD: PLIST,v 1.27 2012/05/13 06:08:10 enami Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -11,7 +11,6 @@ lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/crypt--bcrypt.so
 ${PLIST.gdbm}lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/dbm--gdbm.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/dbm--ndbm.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/file--util.so
-lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche--auxsys.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche--charconv.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche--collection.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche--fcntl.so
@@ -109,7 +108,7 @@ lib/gauche-0.9/${PKGVERSION}/include/gc_typed.h
 lib/gauche-0.9/${PKGVERSION}/include/gc_version.h
 lib/libgauche-0.9.so
 lib/libgauche-0.9.so.0
-lib/libgauche-0.9.so.0.2
+lib/libgauche-0.9.so.0.3
 man/man1/gauche-cesconv.1
 man/man1/gauche-config.1
 man/man1/gauche-install.1
@@ -139,7 +138,6 @@ share/gauche-0.9/${PKGVERSION}/lib/file/filter.scm
 share/gauche-0.9/${PKGVERSION}/lib/file/util.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche-init.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/array.scm
-share/gauche-0.9/${PKGVERSION}/lib/gauche/auxsys.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/cise.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/literal.scm
