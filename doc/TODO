@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11075 2012/05/12 17:38:42 wiz Exp $
+$NetBSD: TODO,v 1.11076 2012/05/13 15:24:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o connect-1.96
 	o consolekit-0.4.5
 	o cook-2.31
-	o coreutils-8.16
+	o coreutils-8.17
 	o courier-0.68.1
 	o courier-authlib-0.64.0
 	o covered-0.7.9
@@ -661,7 +661,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.9.3
 	o gawk-4.0.1
 	o gbdfed-1.6
 	o gcin-1.5.5
@@ -751,6 +750,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
+	o gtk3-3.4.3
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.36
@@ -836,7 +836,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdenlive-0.8.2.1
 	o kdevelop-4.3.1
 	o kdrill-6.5
-	o kid3-2.0.1
+	o kid3-2.1
 	o kile-2.1.2
 	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
@@ -942,6 +942,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libusb-1.0
 	o libv4l-0.8.5
 	o libvirt-0.9.9
+	o libvpx-1.1.0
 	o libxcb-1.8.1
 	o libxkbfile-1.0.8
 	o libxklavier-5.2.1
@@ -996,9 +997,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.4.1
-	o mp3diags-1.1.19
+	o mp3diags-1.0.11
 	o mpeg4ip-1.6.1
-	o mpg123-1.14.1
+	o mpg123-1.14.2
 	o mpich-1.4.1p1
 	o mpop-1.0.27
 	o mserv-devel-0.41
@@ -1111,7 +1112,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.18.4
+	o poppler-0.20.0
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
@@ -1140,6 +1141,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.19
 	o py-cups-1.9.60
 	o py-dbus-1.0.0 [needs dbus>=1.4]
+	o py-dbus-1.1.0
 	o py-feedparser-5.1.2
 	o py-game-1.9.1 [needs portmidi]
 	o py-gdata-2.0.17
@@ -1272,6 +1274,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
+	o taglib-1.7.2
 	o taskjuggler-3.2.0
 	o tcl-8.5.11
 	o tcpdpriv-0.9
@@ -1367,7 +1370,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4
-	o wine-devel-1.5.3
+	o wine-devel-1.5.4
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1381,7 +1384,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20120421
+	o x264-devel-20120512
 	o xanalyser-1.30
 	o xapian-1.2.10
 	o xaric-0.13.2
