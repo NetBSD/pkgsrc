@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2012/05/14 07:06:16 dholland Exp $
+$NetBSD: patch-ag,v 1.5 2012/05/14 07:07:41 dholland Exp $
 
 - needs term.h for termcap
 - get terminal size from termcap only if LINES and COLUMNS aren't set
@@ -17,7 +17,7 @@ $NetBSD: patch-ag,v 1.4 2012/05/14 07:06:16 dholland Exp $
  #include <curses.h>			/* Curses screen output		*/
  #undef WINDOW				/* Oh no!			*/
  #endif /* CURSES */
-+#include <term.h>
++#include <termcap.h>
  
  /** Completion include files **/
  /** Directory accessing: Try and figure this out... if you can! **/
