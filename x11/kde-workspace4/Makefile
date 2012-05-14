@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/14 07:03:08 sbd Exp $
 
 DISTNAME=	kde-workspace-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -56,7 +56,7 @@ PY_PATCHPLIST=	yes
 .include "options.mk"
 
 PLIST_VARS+=	utempter noutempter
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" && exists(/usr/include/utempter.h)
 PLIST.utempter=		yes
 .else
 PLIST.noutempter=	yes
