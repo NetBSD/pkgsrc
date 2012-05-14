@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2012/03/31 16:06:56 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2012/05/14 03:12:01 sbd Exp $
 
 SHA1 (hal-0.5.14.tar.bz2) = a6ec098d78112e18e2773afa5f9ed642b00c4c59
 RMD160 (hal-0.5.14.tar.bz2) = 0314dace9512bf49a62bd1556963fc60a6c9caf9
@@ -31,6 +31,19 @@ SHA1 (patch-hald_freebsd_hf-usb2.c) = 9a1a612fe6f81078ea246fb49ec60157b8641e75
 SHA1 (patch-hald_freebsd_hf-volume.c) = 45f27050f2b0ef8825d32d2bbdcac168c8f5b2b5
 SHA1 (patch-hald_freebsd_probing_probe-usb2-device.c) = eb655ef42d02cd2c6a86004c309e20de942f033b
 SHA1 (patch-hald_freebsd_probing_probe-usb2-interface.c) = 8ad0ac33ae366f7f470b2cb751a31bb99b2e6313
+SHA1 (patch-hald_linux_addons_addon-acpi-buttons-toshiba.c) = 82f266ac27c290470adedfe1ba820a0b5a8e1d27
+SHA1 (patch-hald_linux_addons_addon-cpufreq.c) = 1e94d9a00f57fa4197f460953ba540564fa1441c
+SHA1 (patch-hald_linux_addons_addon-dell-backlight.cpp) = 72bd150adff60dfeca4a261ee9387783a5e99262
+SHA1 (patch-hald_linux_addons_addon-generic-backlight.c) = ebf060a72948e4301477eedbbcaaa766d88265b5
+SHA1 (patch-hald_linux_addons_addon-imac-backlight.c) = c594f0dfb2b659faee9f88a0254db3e9180c2b3d
+SHA1 (patch-hald_linux_addons_addon-input.c) = c893c803e2870af97cdcae23f3c6f66e45234888
+SHA1 (patch-hald_linux_addons_addon-ipw-killswitch.c) = d3d8270dddaa132c3fefbc667f315f697c900245
+SHA1 (patch-hald_linux_addons_addon-leds.c) = e56747b39bf5e6e03286fedcb73ef226c0231bbd
+SHA1 (patch-hald_linux_addons_addon-macbookpro-backlight.c) = c508a7b9070c319679b8b8e715d29410957ba41a
+SHA1 (patch-hald_linux_addons_addon-omap-backlight.c) = 72ba398a1d661fb726778bf7df7460735fee988f
+SHA1 (patch-hald_linux_addons_addon-rfkill-killswitch.c) = 800fac10408b65b12cd644b93b8612c8b2970da0
+SHA1 (patch-hald_linux_addons_addon-storage.c) = 9949c8768395295f27aebc792b8b8091e988d2d9
+SHA1 (patch-hald_linux_addons_addon-usb-csr.c) = 34b5be5ff308f9aafcf505b303d36cbc2483d015
 SHA1 (patch-na) = 2786db8149a55dbd5ea11419d789f420bac1993c
 SHA1 (patch-nb) = 1693b7a2faa5bee20a594f0b60b8ff6caea0efdc
 SHA1 (patch-nc) = 32453e49734902749ce24eb4364fc7f531986227
