@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/10/03 00:59:26 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2012/05/14 07:29:50 dholland Exp $
 #
 
 DISTNAME=	jove4.16.0.70
@@ -28,4 +28,5 @@ SUBST_MESSAGE.getline=	Fixing conflict with POSIX getline.
 SUBST_FILES.getline=	insert.c io.c io.h recover.c util.c util.h
 SUBST_SED.getline=	-e 's/getline/get_line/'
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
