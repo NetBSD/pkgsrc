@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/05/10 20:59:41 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/05/14 07:09:31 dholland Exp $
 
 DISTNAME=	ue400dev
 PKGNAME=	uemacs-4.0
@@ -25,4 +25,5 @@ SUBST_SED.paths=	-e s,%%PREFIX%%,${PREFIX},g
 post-extract:
 	${CP} -r ${WRKSRC}/freebsd ${WRKSRC}/netbsd
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
