@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2012/04/28 22:48:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2012/05/14 01:13:07 dholland Exp $
 #
 
 DISTNAME=	# empty
@@ -47,6 +47,8 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
 post-install:
+	${TOUCH} ${TOUCH_FLAGS} \
+		${DESTDIR}${PREFIX}/include/seamonkey/mozilla/throw_gcc.h
 	@${STEP_MSG} "Installing bundled seamonkey extensions."
 	rm -rf ${WRKDIR}/extensions
 	${MKDIR} ${WRKDIR}/extensions
