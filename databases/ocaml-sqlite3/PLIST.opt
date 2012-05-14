@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.opt,v 1.1.1.1 2012/05/14 09:20:39 wiz Exp $
+lib/ocaml/site-lib/sqlite3/sqlite3.a
+lib/ocaml/site-lib/sqlite3/sqlite3.cmx
+lib/ocaml/site-lib/sqlite3/sqlite3.cmxa
+lib/ocaml/site-lib/sqlite3/sqlite3.cmxs
