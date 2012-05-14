@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1.1.1 2012/05/14 09:20:39 wiz Exp $
+
+disable linking to libdl which is not used
+--- configure.ac.orig	2010-12-20 05:13:10.000000000 +0000
++++ configure.ac
+@@ -26,7 +26,7 @@ AC_ARG_WITH(
+ AC_CHECKING(for sqlite3 library)
+ AC_CHECK_LIB(
+   sqlite3, sqlite3_open,,
+-  AC_ERROR([SQLite is required.  See the --with-sqlite3 configure option.]), -ldl)
++  AC_ERROR([SQLite is required.  See the --with-sqlite3 configure option.]))
+ 
+ AC_CHECKING(for Sqlite header files)
+ AC_CHECK_HEADER(sqlite3.h,,
