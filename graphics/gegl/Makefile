@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/05/14 07:52:32 sbd Exp $
+# $NetBSD: Makefile,v 1.31 2012/05/14 10:14:11 sbd Exp $
 
 DISTNAME=	gegl-0.2.0
 CATEGORIES=	graphics
@@ -11,8 +11,6 @@ COMMENT=	Graph based image processing framework
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BUILD_DEPENDS+=		p5-XML-Parser>=2.34nb4:../../textproc/p5-XML-Parser
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
