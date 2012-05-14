@@ -1,0 +1,41 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2012/05/14 09:20:39 wiz Exp $
+
+change install procedure for DESTDIR, and build cmxs for dynamic linking
+--- Makefile.in.orig	2011-03-10 17:47:28.000000000 +0000
++++ Makefile.in
+@@ -37,18 +37,20 @@ test:	bytecode opt
+ 
+ clean:
+ 	@cd test && $(MAKE) clean
+-	rm -f *.o *.cmo *.cmx *.cmi *.so *.cma *.cmxa *.a sqlite3top
++	rm -f *.o *.cmo *.cmx *.cmi *.so *.cma *.cmxa *.cmxs *.a sqlite3top
+ 
+ distclean: clean
+ 	rm -rf autom4te.* config.* META Makefile doc
+ 
+ # install rebuilds sqlite3top to point to the findlib-managed dll and not the
+ # one in .
+-install: sqlite3.cma sqlite3.cmxa sqlite3top
++install: sqlite3.cma sqlite3top
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${OCAML_SITELIBDIR}
+ 	[ -f *.so ] && SO_FILES=*.so; \
+-	ocamlfind install sqlite3 META sqlite3.cmi sqlite3.mli sqlite3.cma *.cmxa *.a *.cmx $$SO_FILES
+-	ocamlfind ocamlmktop -o sqlite3top -package "sqlite3" sqlite3.cma
+-	$(INSTALL) sqlite3top $(bindir)/sqlite3top
++	ocamlfind install -ldconf /dev/null -destdir ${DESTDIR}${OCAML_SITELIBDIR} -optional sqlite3 META sqlite3.cmi sqlite3.mli sqlite3.cma *.cmxa *.cmxs *.a *.cmx $$SO_FILES
++	OCAMLPATH="${DESTDIR}${OCAML_SITELIBDIR}" ocamlfind ocamlmktop -o sqlite3top -package "sqlite3" sqlite3.cma
++	${BSD_INSTALL_SCRIPT_DIR} ${DESTDIR}$(bindir)
++	${BSD_INSTALL_SCRIPT} sqlite3top ${DESTDIR}$(bindir)/sqlite3top
+ 
+ remove: uninstall
+ uninstall:
+@@ -68,6 +70,9 @@ sqlite3.cma: sqlite3.cmo sqlite3_stubs.o
+ sqlite3.cmxa: sqlite3.cmx sqlite3.o sqlite3_stubs.o
+ 	ocamlmklib -o sqlite3 -oc sqlite3_stubs sqlite3.cmx sqlite3_stubs.o -L. $(LDFLAGS) $(LIBS) $(MKLIBFLAGS)
+ 
++sqlite3.cmxs: sqlite3.cmxa
++	ocamlopt -linkall -shared -o sqlite3.cmxs sqlite3.cmxa
++
+ sqlite3.cmo: sqlite3.cmi sqlite3.ml
+ 
+ .SUFFIXES: .ml .mli .cmo .cmi .cmx
