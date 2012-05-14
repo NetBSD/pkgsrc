@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/04/29 12:15:55 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/05/14 05:01:24 sbd Exp $
 
 SHA1 (scim-1.4.13.tar.gz) = dafe08bbdd3faa0324800cb63e44926d71be2e47
 RMD160 (scim-1.4.13.tar.gz) = 411fe876139120b2dc8df97d9b99405fcec70840
@@ -14,4 +14,5 @@ SHA1 (patch-bb) = 69e001995a8caa65b885e438123a7efb0ad9995b
 SHA1 (patch-bc) = 5caafe0a6ca44ccacb5532e26d9c11950ea6c7da
 SHA1 (patch-bd) = 15982bf8a9aee6f6ccd94f186bff20b70b1a93cf
 SHA1 (patch-be) = 85a98134d77038d20544241410ec8130df2ea94c
+SHA1 (patch-configure) = 36d9699ea7f6471b2b4fd3daf6ccde47c8730106
 SHA1 (patch-src_scim__helper__manager__server.cpp) = 3a1130f37c7c93389e2ae7db65af7438bac5de51
