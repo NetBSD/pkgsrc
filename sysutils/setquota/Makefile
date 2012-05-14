@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/08 00:26:32 joerg Exp $
+# $NetBSD: Makefile,v 1.13.26.1 2012/05/14 12:28:56 tron Exp $
 #
 
 DISTNAME=	setquota-0.1
@@ -14,6 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BSD oriented, haven't checked on other environment now
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*
+
+# not portable to netbsd-6 and up quota system
+# (would be easier to rewrite it than to patch it, if there's any interest
+# bug dholland)
+NOT_FOR_PLATFORM=	NetBSD-[6-9]*-*
 
 WRKSRC=		${WRKDIR}/setquota/
 
