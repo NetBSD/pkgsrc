@@ -1,8 +1,20 @@
-$NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
+$NetBSD: patch-af,v 1.4 2012/05/14 07:35:02 dholland Exp $
 
---- src/Unix/sys_unix.cpp.orig	2005-11-24 18:23:43.000000000 +0100
+- need limits.h, or since this is C++, <climits> for INT_MAX, fails on linux
+- add dragonfly to the ifdef circus
+
+--- src/Unix/sys_unix.cpp.orig	2005-11-24 17:23:43.000000000 +0000
 +++ src/Unix/sys_unix.cpp
-@@ -37,7 +37,7 @@
+@@ -18,6 +18,8 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
++#include <climits>
++
+ #include "sysdeps.h"
+ 
+ #include <sys/ioctl.h>
+@@ -37,7 +39,7 @@
  #include <dirent.h>
  #endif
  
@@ -11,7 +23,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  #include <sys/cdio.h>
  #endif
  
-@@ -64,7 +64,7 @@ struct file_handle {
+@@ -64,7 +66,7 @@ struct file_handle {
  
  #if defined(__linux__)
  	int cdrom_cap;		// CD-ROM capability flags (only valid if is_cdrom is true)
@@ -20,7 +32,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	struct ioc_capability cdrom_cap;
  #elif defined(__APPLE__) && defined(__MACH__)
  	char	*ioctl_name;	// For CDs on OS X - a device for special ioctls
-@@ -220,7 +220,7 @@ void SysAddCDROMPrefs(void)
+@@ -220,7 +222,7 @@ void SysAddCDROMPrefs(void)
  	// Until I can convince the other guys that my Darwin code is useful,
  	// we just do nothing (it is safe to have no cdrom device)
    #endif
@@ -29,7 +41,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	PrefsAddString("cdrom", "/dev/cd0c");
  #endif
  }
-@@ -240,7 +240,7 @@ void SysAddSerialPrefs(void)
+@@ -240,7 +242,7 @@ void SysAddSerialPrefs(void)
  		PrefsAddString("seriala", "/dev/tts/0");
  		PrefsAddString("serialb", "/dev/tts/1");
  	}
@@ -38,7 +50,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	PrefsAddString("seriala", "/dev/cuaa0");
  	PrefsAddString("serialb", "/dev/cuaa1");
  #elif defined(__NetBSD__)
-@@ -302,7 +302,7 @@ static bool is_drive_mounted(const char 
+@@ -302,7 +304,7 @@ static bool is_drive_mounted(const char 
  void *Sys_open(const char *name, bool read_only)
  {
  	bool is_file = strncmp(name, "/dev/", 5) != 0;
@@ -47,7 +59,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	                // SCSI                             IDE
  	bool is_cdrom = strncmp(name, "/dev/cd", 7) == 0 || strncmp(name, "/dev/acd", 8) == 0;
  #else
-@@ -351,7 +351,7 @@ void *Sys_open(const char *name, bool re
+@@ -351,7 +353,7 @@ void *Sys_open(const char *name, bool re
  	}
  
  	// Open file/device
@@ -56,7 +68,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	int fd = open(name, (read_only ? O_RDONLY : O_RDWR) | (is_cdrom ? O_NONBLOCK : 0));
  #else
  	int fd = open(name, read_only ? O_RDONLY : O_RDWR);
-@@ -394,7 +394,7 @@ void *Sys_open(const char *name, bool re
+@@ -394,7 +396,7 @@ void *Sys_open(const char *name, bool re
  #else
  					fh->cdrom_cap = 0;
  #endif
@@ -65,7 +77,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  					fh->is_floppy = ((st.st_rdev >> 16) == 2);
  #ifdef CDIOCCAPABILITY
  					if (is_cdrom) {
-@@ -557,7 +557,7 @@ void SysEject(void *arg)
+@@ -557,7 +559,7 @@ void SysEject(void *arg)
  		close(fh->fd);	// Close and reopen so the driver will see the media change
  		fh->fd = open(fh->name, O_RDONLY | O_NONBLOCK);
  	}
@@ -74,7 +86,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	if (fh->is_floppy) {
  		fsync(fh->fd);
  	} else if (fh->is_cdrom) {
-@@ -697,7 +697,7 @@ bool SysIsDiskInserted(void *arg)
+@@ -697,7 +699,7 @@ bool SysIsDiskInserted(void *arg)
  #endif
  		cdrom_tochdr header;
  		return ioctl(fh->fd, CDROMREADTOCHDR, &header) == 0;
@@ -83,7 +95,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  	} else if (fh->is_floppy) {
  		return false;	//!!
  	} else if (fh->is_cdrom) {
-@@ -805,7 +805,7 @@ bool SysCDReadTOC(void *arg, uint8 *toc)
+@@ -805,7 +807,7 @@ bool SysCDReadTOC(void *arg, uint8 *toc)
  		extern	bool	DarwinCDReadTOC(char *name, uint8 *toc);
  
  		return	DarwinCDReadTOC(fh->name, toc);
@@ -92,7 +104,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		uint8 *p = toc + 2;
  
  		// Header
-@@ -916,7 +916,7 @@ bool SysCDGetPosition(void *arg, uint8 *
+@@ -916,7 +918,7 @@ bool SysCDGetPosition(void *arg, uint8 *
  		*pos++ = chan.cdsc_reladdr.msf.second;
  		*pos++ = chan.cdsc_reladdr.msf.frame;
  		return true;
@@ -101,7 +113,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		struct ioc_read_subchannel chan;
  		chan.data_format = CD_MSF_FORMAT;
  		chan.address_format = CD_MSF_FORMAT;
-@@ -968,7 +968,7 @@ bool SysCDPlay(void *arg, uint8 start_m,
+@@ -968,7 +970,7 @@ bool SysCDPlay(void *arg, uint8 start_m,
  		play.cdmsf_sec1 = end_s;
  		play.cdmsf_frame1 = end_f;
  		return ioctl(fh->fd, CDROMPLAYMSF, &play) == 0;
@@ -110,7 +122,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		struct ioc_play_msf play;
  		play.start_m = start_m;
  		play.start_s = start_s;
-@@ -998,7 +998,7 @@ bool SysCDPause(void *arg)
+@@ -998,7 +1000,7 @@ bool SysCDPause(void *arg)
  	if (fh->is_cdrom) {
  #if defined(__linux__)
  		return ioctl(fh->fd, CDROMPAUSE) == 0;
@@ -119,7 +131,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		return ioctl(fh->fd, CDIOCPAUSE) == 0;
  #else
  		return false;
-@@ -1021,7 +1021,7 @@ bool SysCDResume(void *arg)
+@@ -1021,7 +1023,7 @@ bool SysCDResume(void *arg)
  	if (fh->is_cdrom) {
  #if defined(__linux__)
  		return ioctl(fh->fd, CDROMRESUME) == 0;
@@ -128,7 +140,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		return ioctl(fh->fd, CDIOCRESUME) == 0;
  #else
  		return false;
-@@ -1044,7 +1044,7 @@ bool SysCDStop(void *arg, uint8 lead_out
+@@ -1044,7 +1046,7 @@ bool SysCDStop(void *arg, uint8 lead_out
  	if (fh->is_cdrom) {
  #if defined(__linux__)
  		return ioctl(fh->fd, CDROMSTOP) == 0;
@@ -137,7 +149,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		return ioctl(fh->fd, CDIOCSTOP) == 0;
  #else
  		return false;
-@@ -1085,7 +1085,7 @@ void SysCDSetVolume(void *arg, uint8 lef
+@@ -1085,7 +1087,7 @@ void SysCDSetVolume(void *arg, uint8 lef
  		vol.channel0 = vol.channel2 = left;
  		vol.channel1 = vol.channel3 = right;
  		ioctl(fh->fd, CDROMVOLCTRL, &vol);
@@ -146,7 +158,7 @@ $NetBSD: patch-af,v 1.3 2006/05/13 20:52:35 adam Exp $
  		struct ioc_vol vol;
  		vol.vol[0] = vol.vol[2] = left;
  		vol.vol[1] = vol.vol[3] = right;
-@@ -1112,7 +1112,7 @@ void SysCDGetVolume(void *arg, uint8 &le
+@@ -1112,7 +1114,7 @@ void SysCDGetVolume(void *arg, uint8 &le
  		ioctl(fh->fd, CDROMVOLREAD, &vol);
  		left = vol.channel0;
  		right = vol.channel1;
