@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/05/10 04:32:38 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2012/05/14 07:52:32 sbd Exp $
 
 DISTNAME=	gegl-0.2.0
 CATEGORIES=	graphics
@@ -12,9 +12,11 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEPENDS+=		p5-XML-Parser>=2.34nb4:../../textproc/p5-XML-Parser
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:build pkg-config intltool
+USE_TOOLS+=		gmake pkg-config intltool msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-docs
 CONFIGURE_ENV+=		ac_cv_path_ASCIIDOC=no
