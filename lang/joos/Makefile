@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/04/13 05:46:44 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2012/05/14 07:42:35 dholland Exp $
 #
 
 DISTNAME=	joos-0.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_JAVA=	run
-USE_TOOLS+=	pax yacc
+USE_TOOLS+=	pax yacc flex
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/joos
