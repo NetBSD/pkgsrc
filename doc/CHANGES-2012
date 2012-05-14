@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1525 2012/05/14 03:00:10 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1526 2012/05/14 03:57:08 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2403,3 +2403,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/php5 to 5.2.17nb5 [taca 2012-05-13]
 	Updated sysutils/libdevkit-gobject to 003nb4 [dholland 2012-05-14]
 	Updated multimedia/vlc to 1.1.13nb6 [sbd 2012-05-14]
+	Updated x11/libdrm to 2.4.33nb1 [sbd 2012-05-14]
