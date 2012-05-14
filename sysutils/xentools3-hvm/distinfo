@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2009/10/18 21:28:10 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2012/05/14 15:39:52 manu Exp $
 
 SHA1 (xen-3.1.4.tar.gz) = 0d784662776239195df10b3f29d40350f9d0644d
 RMD160 (xen-3.1.4.tar.gz) = c02ad2bd64e6306b127a4f37a8aa370dadc11859
@@ -22,3 +22,5 @@ SHA1 (patch-ck) = d085b0ced66544963441fff5231e06fd9ac03878
 SHA1 (patch-cl) = ad26eee7b315ec512453c73cdc29253e0fa6266f
 SHA1 (patch-cp) = 1f774a6636ce6646fc83bab304e84ce2d8886db5
 SHA1 (patch-cq) = b2fcddf97e92a49828504777232841c8d5e3df16
+SHA1 (patch-python_xen_util_xmlrpcclient.py) = 227db87dee15cfb7bedd67d6c118983b4dae2e34
+SHA1 (patch-python_xen_util_xmlrpclib2.py) = 0fc01ed0511ccff6942453f3592a6939b60ab0c0
