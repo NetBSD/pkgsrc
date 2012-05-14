@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/19 16:40:28 tv Exp $
+# $NetBSD: Makefile,v 1.13 2012/05/14 05:47:09 dholland Exp $
 #
 
 DISTNAME=		jessie-1.0.1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://syzygy.metastatic.org/jessie/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/jessie/
 COMMENT=		GPL implementation of the Java Secure Sockets Extension
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		gnu-crypto>=2.0:../../security/gnu-crypto
 
