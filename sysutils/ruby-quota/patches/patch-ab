@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
+$NetBSD: patch-ab,v 1.9.14.1 2012/05/14 12:26:00 tron Exp $
+
+- fix package's version number
+- remove a debug printout
+- need unistd.h for some things
+- support dragonfly
+- support linux 2.6+ with slightly different API
+- support netbsd-3+ with statvfs
+- support netbsd-6+ with libquota
+- fix solaris code
+- ruby API fixes
+- ...?
 
 --- quota.c.orig	2002-03-30 14:59:12.000000000 +0000
 +++ quota.c
-@@ -5,9 +5,13 @@
+@@ -5,17 +5,25 @@
  
  #include "ruby.h"
  
@@ -18,7 +29,20 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
  # define USE_LINUX_QUOTA
  #endif
  #ifdef HAVE_SYS_FS_UFS_QUOTA_H  /* for Solaris-2.6,7,8 */
-@@ -29,10 +33,16 @@
+ # define USE_SOLARIS_QUOTA
+ #endif
+-#ifdef HAVE_UFS_UFS_QUOTA_H     /* for *BSD */
++#ifdef HAVE_QUOTA_H		/* for NetBSD-6 and up */
++# define USE_NETBSD_QUOTA
++#else
++#ifdef HAVE_UFS_UFS_QUOTA_H     /* for traditional *BSD */
+ # define USE_BSD_QUOTA
+ #endif
++#endif
+ 
+ #ifdef USE_LINUX_QUOTA
+ #ifdef HAVE_LINUX_TYPES_H
+@@ -29,10 +37,16 @@
  #  include <sys/quota.h>
  #endif
  #include <linux/version.h>
@@ -36,7 +60,20 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
  #endif
  #endif
  
-@@ -51,6 +61,12 @@
+@@ -42,6 +56,12 @@
+ #include <sys/fs/ufs_quota.h>
+ #endif
+ 
++#ifdef USE_NETBSD_QUOTA
++#include <sys/types.h>
++#include <sys/mount.h>
++#include <quota.h>
++#endif
++
+ #ifdef USE_BSD_QUOTA
+ #include <sys/types.h>
+ #include <sys/fcntl.h>
+@@ -51,6 +71,12 @@
  #if defined(SYS_UCRED_H)
  # include <sys/ucred.h>  /* required by NetBSD,FreeBSD */
  #endif
@@ -49,7 +86,7 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
  #endif
  
  static VALUE rb_mQuota;
-@@ -144,7 +160,6 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+@@ -144,7 +170,6 @@ rb_quotactl(int cmd, char *dev, VALUE vu
    uid_t uid;
  
    get_uid(vuid, &uid, &is_gid);
@@ -57,7 +94,15 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
    if( is_gid ){
      return quotactl(QCMD(cmd,GRPQUOTA),dev,(qid_t)uid,addr);
    }
-@@ -159,7 +174,11 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+@@ -152,14 +177,18 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+     return quotactl(QCMD(cmd,USRQUOTA),dev,(qid_t)uid,addr);
+   };
+ };
+-#elif defined(USE_BSD_QUOTA) /* for *BSD */
++#elif defined(USE_BSD_QUOTA) /* for traditional *BSD */
+ static int
+ rb_quotactl(int cmd, char *dev, VALUE vuid, caddr_t addr)
+ {
    char *path;
    int is_gid;
    uid_t uid;
@@ -69,7 +114,7 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
    int i, count, ret;
    
    buff = 0;
-@@ -187,12 +206,16 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+@@ -187,12 +216,16 @@ rb_quotactl(int cmd, char *dev, VALUE vu
  static int
  rb_quotactl(int cmd, char *dev, VALUE vuid, caddr_t addr)
  {
@@ -87,7 +132,204 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
    switch( cmd ){
    case Q_QUOTAON:
    case Q_QUOTAOFF:
-@@ -230,12 +253,20 @@ rb_diskquota_get(VALUE dqb, struct dqblk
+@@ -225,17 +258,217 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+ };
+ #endif
+ 
++#ifdef USE_NETBSD_QUOTA
++
++static struct quotahandle *
++rb_quotaopen(char *dev)
++{
++  char *path;
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__DragonFly__)
++  struct statvfs *buff;
++#else
++  struct statfs *buff;
++#endif
++  int i, count;
++
++  buff = 0;
++  path = dev;
++  count = getmntinfo(&buff, MNT_WAIT);
++  for( i=0; i<count; i++ ){
++    if( strcmp(buff[i].f_mntfromname, dev) == 0 ){
++      path = buff[i].f_mntonname;
++      break;
++    };
++  };
++
++  return quota_open(path);
++}
++
++static int
++rb_quotaget(char *dev, VALUE vuid, struct quotaval *blocks, struct quotaval *files)
++{
++  struct quotahandle *qh;
++
++  int is_gid;
++  uid_t uid;
++  int ret;
++  struct quotakey qk;
++
++  get_uid(vuid, &uid, &is_gid);
++  qk.qk_idtype = is_gid ? QUOTA_IDTYPE_GROUP : QUOTA_IDTYPE_USER;
++  qk.qk_id = uid;
++  qk.qk_objtype = QUOTA_OBJTYPE_BLOCKS;
++
++  qh = rb_quotaopen(dev);  
++  if (qh == NULL) {
++    return -1;
++  }
++
++  ret = quota_get(qh, &qk, blocks);
++  if (ret) {
++    quota_close(qh);
++    return -1;
++  }
++
++  qk.qk_objtype = QUOTA_OBJTYPE_FILES;
++  ret = quota_get(qh, &qk, files);
++  if (ret) {
++    quota_close(qh);
++    return -1;
++  }
++
++  quota_close(qh);
++  return 0;
++};
++
++static int
++rb_quotaoff(char *dev)
++{
++  struct quotahandle *qh;
++  int ret1, ret2;
++
++  qh = rb_quotaopen(dev);  
++  if (qh == NULL) {
++    return -1;
++  }
++  ret1 = quota_quotaoff(qh, QUOTA_IDTYPE_USER);
++  ret2 = quota_quotaoff(qh, QUOTA_IDTYPE_GROUP);
++  quota_close(qh);
++  if (ret1 < 0 || ret2 < 0) {
++    return -1;
++  }
++  return 0;
++}
++
++static int
++rb_quotaon(char *dev)
++{
++  struct quotahandle *qh;
++  int ret1, ret2;
++
++  qh = rb_quotaopen(dev);  
++  if (qh == NULL) {
++    return -1;
++  }
++  ret1 = quota_quotaon(qh, QUOTA_IDTYPE_USER);
++  ret2 = quota_quotaon(qh, QUOTA_IDTYPE_GROUP);
++  quota_close(qh);
++  /* fail only if *both* idtypes failed */
++  if (ret1 < 0 && ret2 < 0) {
++    return -1;
++  }
++  return 0;
++}
++
++static int
++rb_quotaput(char *dev, VALUE vuid, const struct quotaval *blocks, const struct quotaval *files)
++{
++  struct quotahandle *qh;
++
++  int is_gid;
++  uid_t uid;
++  int ret;
++  struct quotakey qk;
++
++  get_uid(vuid, &uid, &is_gid);
++  qk.qk_idtype = is_gid ? QUOTA_IDTYPE_GROUP : QUOTA_IDTYPE_USER;
++  qk.qk_id = uid;
++  qk.qk_objtype = QUOTA_OBJTYPE_BLOCKS;
++
++  qh = rb_quotaopen(dev);  
++  if (qh == NULL) {
++    return -1;
++  }
++
++  ret = quota_put(qh, &qk, blocks);
++  if (ret) {
++    quota_close(qh);
++    return -1;
++  }
++
++  qk.qk_objtype = QUOTA_OBJTYPE_FILES;
++  ret = quota_put(qh, &qk, files);
++  if (ret) {
++    quota_close(qh);
++    return -1;
++  }
++
++  quota_close(qh);
++  return 0;
++};
++
++#endif /* USE_NETBSD_QUOTA */
++
++#ifdef USE_NETBSD_QUOTA
++
++void
++rb_diskquota_get(VALUE dqb, struct quotaval *c_blocks, struct quotaval *c_files)
++{
++  VALUE v;
++
++#define GetMemberU(mem) \
++        ((v = rb_struct_getmember(dqb,rb_intern(mem))) == Qnil) ? 0 : (NUM2ULL(v))
++#define GetMemberS(mem) \
++        ((v = rb_struct_getmember(dqb,rb_intern(mem))) == Qnil) ? 0 : (NUM2LL(v))
++
++  c_blocks->qv_hardlimit  = GetMemberU("bhardlimit");
++  c_blocks->qv_softlimit  = GetMemberU("bsoftlimit");
++  c_blocks->qv_usage      = GetMemberU("curblocks");
++  c_blocks->qv_expiretime = GetMemberS("btimelimit");
++  c_blocks->qv_grace      = GetMemberS("bgrace");
++  c_files->qv_hardlimit   = GetMemberU("ihardlimit");
++  c_files->qv_softlimit   = GetMemberU("isoftlimit");
++  c_files->qv_usage       = GetMemberU("curinodes");
++  c_files->qv_expiretime  = GetMemberS("itimelimit");
++  c_files->qv_grace       = GetMemberS("igrace");
++
++#undef GetMemberU
++#undef GetMemberS
++}
++
++VALUE
++rb_diskquota_new(struct quotaval *c_blocks, struct quotaval *c_files)
++{
++  VALUE dqb;
++
++  dqb = rb_struct_new(rb_sDiskQuota,
++		      ULL2NUM(c_blocks->qv_hardlimit),
++		      ULL2NUM(c_blocks->qv_softlimit),
++		      ULL2NUM(c_blocks->qv_usage),
++		      ULL2NUM(c_files->qv_hardlimit),
++		      ULL2NUM(c_files->qv_softlimit),
++		      ULL2NUM(c_files->qv_usage),
++		      LL2NUM(c_blocks->qv_expiretime),
++		      LL2NUM(c_files->qv_expiretime),
++#if 0 /* not yet */
++		      LL2NUM(c_blocks->qv_grace),
++		      LL2NUM(c_files->qv_grace),
++#endif
++		      0);
++  return dqb;
++}
++
++#else /* not USE_NETBSD_QUOTA */
++
+ void
+ rb_diskquota_get(VALUE dqb, struct dqblk * c_dqb)
  {
    VALUE v;
  
@@ -109,7 +351,7 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
    c_dqb->dqb_curblocks  = GetMember("curblocks");
  #endif
    c_dqb->dqb_ihardlimit = GetMember("ihardlimit");
-@@ -271,20 +302,29 @@ rb_diskquota_new(struct dqblk *c_dqb)
+@@ -271,20 +504,29 @@ rb_diskquota_new(struct dqblk *c_dqb)
    VALUE dqb;
  
  #if defined(USE_LINUX_QUOTA)
@@ -143,25 +385,71 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
  #elif defined(USE_BSD_QUOTA)
    dqb = rb_struct_new(rb_sDiskQuota,
  		      UINT2NUM(c_dqb->dqb_bhardlimit),
-@@ -314,7 +354,7 @@ rb_diskquota_new(struct dqblk *c_dqb)
+@@ -296,7 +538,7 @@ rb_diskquota_new(struct dqblk *c_dqb)
+ 		      UINT2NUM(c_dqb->dqb_btime),
+ 		      UINT2NUM(c_dqb->dqb_itime),
+ 		      0);
+-#elif defined(USE_SOLARIS)
++#elif defined(USE_SOLARIS_QUOTA)
+   dqb = rb_struct_new(rb_sDiskQuota,
+ 		      UINT2NUM(c_dqb->dqb_bhardlimit),
+ 		      UINT2NUM(c_dqb->dqb_bsoftlimit),
+@@ -311,18 +553,34 @@ rb_diskquota_new(struct dqblk *c_dqb)
+   return dqb;
+ };
+ 
++#endif /* USE_NETBSD_QUOTA */
++
  static VALUE
  rb_quota_getquota(VALUE self, VALUE dev, VALUE uid)
  {
 -  char *c_dev = STR2CSTR(dev);
 +  char *c_dev = StringValuePtr(dev);
++#ifdef USE_NETBSD_QUOTA
++  struct quotaval c_blocks, c_files;
++#else
    struct dqblk c_dqb;
++#endif
    VALUE dqb = Qnil;
  
-@@ -330,7 +370,7 @@ rb_quota_getquota(VALUE self, VALUE dev,
++#ifdef USE_NETBSD_QUOTA
++  if( rb_quotaget(c_dev, uid, &c_blocks, &c_files) == -1 ){
++    rb_sys_fail("quota_get");
++  };
++#else
+   if( rb_quotactl(Q_GETQUOTA,c_dev,uid,(caddr_t)(&c_dqb)) == -1 ){
+     rb_sys_fail("quotactl");
+   };
++#endif
+ 
++#ifdef USE_NETBSD_QUOTA
++  dqb = rb_diskquota_new(&c_blocks, &c_files);
++#else
+   dqb = rb_diskquota_new(&c_dqb);
++#endif
+ 
+   return dqb;
+ };
+@@ -330,11 +588,17 @@ rb_quota_getquota(VALUE self, VALUE dev,
  VALUE
  rb_quota_quotaoff(VALUE self, VALUE dev)
  {
 -  char *c_dev = STR2CSTR(dev);
 +  char *c_dev = StringValuePtr(dev);
  
++#ifdef USE_NETBSD_QUOTA
++  if( rb_quotaoff(c_dev) == -1 ){
++    rb_sys_fail("quota_quotaoff");
++  };
++#else
    if( rb_quotactl(Q_QUOTAOFF,c_dev,Qnil,NULL) == -1 ){
      rb_sys_fail("quotactl");
-@@ -342,8 +382,8 @@ rb_quota_quotaoff(VALUE self, VALUE dev)
+   };
++#endif
+ 
+   return Qnil;
+ };
+@@ -342,12 +606,20 @@ rb_quota_quotaoff(VALUE self, VALUE dev)
  VALUE
  rb_quota_quotaon(VALUE self, VALUE dev, VALUE quotas)
  {
@@ -170,18 +458,51 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
 +  char *c_dev = StringValuePtr(dev);
 +  char *c_quotas = StringValuePtr(quotas);
  
++#ifdef USE_NETBSD_QUOTA
++  /* ignore the quota file names - they must be placed in /etc/fstab */
++  (void)quotas;
++  if( rb_quotaon(c_dev) == -1 ){
++    rb_sys_fail("quota_quotaon");
++  };
++#else
    if( rb_quotactl(Q_QUOTAON,c_dev,Qnil,(caddr_t)c_quotas) == -1 ){
      rb_sys_fail("quotactl");
-@@ -355,7 +395,7 @@ rb_quota_quotaon(VALUE self, VALUE dev, 
+   };
++#endif
+ 
+   return Qnil;
+ };
+@@ -355,14 +627,28 @@ rb_quota_quotaon(VALUE self, VALUE dev, 
  VALUE
  rb_quota_setquota(VALUE self, VALUE dev, VALUE uid, VALUE dqb)
  {
 -  char *c_dev = STR2CSTR(dev);
 +  char *c_dev = StringValuePtr(dev);
++#ifdef USE_NETBSD_QUOTA
++  struct quotaval c_qvb, c_qvf;
++#else
    struct dqblk c_dqb;
++#endif
  
++#ifdef USE_NETBSD_QUOTA
++  rb_diskquota_get(dqb, &c_qvb, &c_qvf);
++#else
    rb_diskquota_get(dqb, &c_dqb);
-@@ -371,7 +411,7 @@ VALUE
++#endif
+ 
++#ifdef USE_NETBSD_QUOTA
++  if( rb_quotaput(c_dev,uid,&c_qvb, &c_qvf) == -1 ){
++    rb_sys_fail("quota_put");
++  };
++#else
+   if( rb_quotactl(Q_SETQUOTA,c_dev,uid,(caddr_t)(&c_dqb)) == -1 ){
+     rb_sys_fail("quotactl");
+   };
++#endif
+ 
+   return Qnil;
+ };
+@@ -371,7 +657,7 @@ VALUE
  rb_quota_setqlim(VALUE self, VALUE dev, VALUE uid, VALUE dqb)
  {
  #ifdef Q_SETQLIM
@@ -190,7 +511,16 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
    struct dqblk c_dqb;
  
    rb_diskquota_get(dqb, &c_dqb);
-@@ -398,7 +438,7 @@ rb_quota_sync(VALUE self, VALUE dev)
+@@ -392,18 +678,22 @@ rb_quota_setqlim(VALUE self, VALUE dev, 
+ VALUE
+ rb_quota_sync(VALUE self, VALUE dev)
+ {
++#ifdef USE_NETBSD_QUOTA
++  /* nothing */
++#else
+   char *c_dev;
+ 
+   if( dev == Qnil ){
      c_dev = NULL;
    }
    else{
@@ -199,7 +529,13 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
    };
  
    if( rb_quotactl(Q_SYNC,c_dev,Qnil,NULL) == -1 ){ /* uid and addr are ignored */
-@@ -442,7 +482,7 @@ Init_quota()
+     rb_sys_fail("quotactl");
+   };
++#endif /* USE_NETBSD_QUOTA */
+ 
+   return Qnil;
+ };
+@@ -442,7 +732,7 @@ Init_quota()
  				   "curinodes",
  				   "btimelimit",
  				   "itimelimit",
@@ -208,7 +544,7 @@ $NetBSD: patch-ab,v 1.9 2010/09/10 07:58:45 taca Exp $
  
    /* for compatibility */
  #define DQ_ALIAS(a,b) rb_alias(rb_sDiskQuota,rb_intern(#a),rb_intern(#b))
-@@ -454,7 +494,7 @@ Init_quota()
+@@ -454,7 +744,7 @@ Init_quota()
    DQ_ALIAS(fsoftlimit=, isoftlimit=);
    DQ_ALIAS(curfiles=,   curinodes=);
    DQ_ALIAS(ftimelimit=, itimelimit=);
