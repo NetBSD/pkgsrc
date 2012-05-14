@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.33 2012/05/11 14:57:30 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.34 2012/05/14 12:29:23 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -157,3 +157,9 @@ Pullup ticket #3781 - requested by ryoon
 misc/php-orangehrm: security update
 Pullup ticket #3782 - requested by taca
 security/openssl: security update
+Pullup ticket #3783 - requested by dholland
+net/netatalk: quota support fix
+Pullup ticket #3784 - requested by dholland
+sysutils/ruby-quota: build fix
+Pullup ticket #3785 - requested by dholland
+sysutils/setquota: mark as broken for NetBSD 6.0 and newer
