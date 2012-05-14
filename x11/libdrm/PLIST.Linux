@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/05/14 03:56:58 sbd Exp $
+include/libkms/libkms.h
+lib/libkms.la
+lib/pkgconfig/libkms.pc
