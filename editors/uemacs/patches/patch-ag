@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.3 2012/05/10 20:53:30 dholland Exp $
+$NetBSD: patch-ag,v 1.4 2012/05/14 07:06:16 dholland Exp $
 
 - needs term.h for termcap
 - get terminal size from termcap only if LINES and COLUMNS aren't set
@@ -9,6 +9,7 @@ $NetBSD: patch-ag,v 1.3 2012/05/10 20:53:30 dholland Exp $
 - add missing conditionals around conditionally-used declaration
 - remove unused variables
 - use correct type signature for signal handler
+- use time_t for calling time()
 
 --- src/unix.c.orig	1995-11-18 21:36:58.000000000 +0000
 +++ src/unix.c
@@ -78,7 +79,20 @@ $NetBSD: patch-ag,v 1.3 2012/05/10 20:53:30 dholland Exp $
  
  /** Set foreground color **/
  int scfcol(color)
-@@ -1553,7 +1568,6 @@ char *fspec;				/* Filename specificatio
+@@ -1230,11 +1245,9 @@ int bktoshell(f, n)
+ /** Get time of day **/
+ char * timeset()
+ {
+-	long int buf; /* Should be time_t */
++	time_t buf;
+ 	char * sp, * cp;
+ 
+-	char * ctime();
+-
+ 	/* Get system time */
+ 	time(&buf);
+ 
+@@ -1553,7 +1566,6 @@ char *fspec;				/* Filename specificatio
  /** Get next filename from pattern **/
  char *getnfile()
  {
@@ -86,7 +100,7 @@ $NetBSD: patch-ag,v 1.3 2012/05/10 20:53:30 dholland Exp $
  	struct DIRENTRY * dp;
  	struct stat fstat;
  
-@@ -1706,15 +1720,15 @@ char *name;	/* name of directory to dele
+@@ -1706,15 +1718,15 @@ char *name;	/* name of directory to dele
  /*
   * Window size changes handled via signals.
   */
