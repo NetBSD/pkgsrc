@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/02/15 04:22:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/14 23:56:09 schmonz Exp $
 #
 
-DISTNAME=		mr_1.11
+DISTNAME=		mr_1.12
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/mr/}
