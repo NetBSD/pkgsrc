@@ -1,11 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2012/05/14 14:56:51 obache Exp $
-
-SNDDSP_GETODELAY isn't defined on NetBSD-4.x.
-ioctl() takes u_long argument on NetBSD.
-On NetBSD<6.99.7, use third parameter in ioctl instead of varargs.
-stat() system call has been versioned, use latest version when dlopen()ing.
-Try more typical device names.
-SOUND_PCM_* is not available on SunOS.
+$NetBSD: patch-aa,v 1.10 2012/05/14 18:01:45 abs Exp $
 
 --- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
 +++ src/utils/padsp.c
@@ -111,20 +104,26 @@ SOUND_PCM_* is not available on SunOS.
          case SNDCTL_DSP_GETOPTR: {
              count_info *info;
  
-@@ -2317,21 +2345,29 @@ fail:
+@@ -2317,21 +2345,35 @@ fail:
      return ret;
  }
  
 -#ifdef sun
++/* NetBSD < 6 and 6.99.0 - 6.99.6 used a different ioctl() definition */
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 600000000 ||  \
++    (__NetBSD_Version__ > 699000000 && 699000700 < 699000700) )
++# define OLD_NETBSD_IOCTL_CALL
++#endif
++
 +#ifdef __sun
  int ioctl(int fd, int request, ...) {
-+#elif defined(__NetBSD__) && (__NetBSD_Version__ < 699000700)
++#elif defined(OLD_NETBSD_IOCTL_CALL)
 +int ioctl(int fd, u_long request, void *_argp) {
  #else
  int ioctl(int fd, unsigned long request, ...) {
  #endif
      fd_info *i;
-+#if !(defined(__NetBSD__) && (__NetBSD_Version__ < 699000700))
++#if !defined(OLD_NETBSD_IOCTL_CALL)
      va_list args;
 +#endif
      void *argp;
@@ -132,7 +131,7 @@ SOUND_PCM_* is not available on SunOS.
  
      debug(DEBUG_LEVEL_VERBOSE, __FILE__": ioctl()\n");
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 699000700)
++#if defined(OLD_NETBSD_IOCTL_CALL)
 +    argp = _argp;
 +#else
      va_start(args, request);
@@ -142,7 +141,7 @@ SOUND_PCM_* is not available on SunOS.
  
      if (!function_enter()) {
          LOAD_IOCTL_FUNC();
-@@ -2390,6 +2426,8 @@ int access(const char *pathname, int mod
+@@ -2390,6 +2432,8 @@ int access(const char *pathname, int mod
      if (!pathname ||
          (strcmp(pathname, "/dev/dsp") != 0 &&
           strcmp(pathname, "/dev/adsp") != 0 &&
@@ -151,7 +150,7 @@ SOUND_PCM_* is not available on SunOS.
           strcmp(pathname, "/dev/sndstat") != 0 &&
           strcmp(pathname, "/dev/mixer") != 0 )) {
          LOAD_ACCESS_FUNC();
-@@ -2418,6 +2456,8 @@ int stat(const char *pathname, struct st
+@@ -2418,6 +2462,8 @@ int stat(const char *pathname, struct st
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -160,7 +159,7 @@ SOUND_PCM_* is not available on SunOS.
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2475,6 +2515,8 @@ int stat64(const char *pathname, struct 
+@@ -2475,6 +2521,8 @@ int stat64(const char *pathname, struct 
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -169,7 +168,7 @@ SOUND_PCM_* is not available on SunOS.
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2520,6 +2562,8 @@ int open64(const char *filename, int fla
+@@ -2520,6 +2568,8 @@ int open64(const char *filename, int fla
  
      if (!filename ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
@@ -178,7 +177,7 @@ SOUND_PCM_* is not available on SunOS.
            strcmp(filename, "/dev/adsp") != 0 &&
            strcmp(filename, "/dev/sndstat") != 0 &&
            strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2540,6 +2584,8 @@ int __xstat(int ver, const char *pathnam
+@@ -2540,6 +2590,8 @@ int __xstat(int ver, const char *pathnam
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -187,7 +186,7 @@ SOUND_PCM_* is not available on SunOS.
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2563,6 +2609,8 @@ int __xstat64(int ver, const char *pathn
+@@ -2563,6 +2615,8 @@ int __xstat64(int ver, const char *pathn
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -196,7 +195,7 @@ SOUND_PCM_* is not available on SunOS.
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2592,6 +2640,8 @@ FILE* fopen(const char *filename, const 
+@@ -2592,6 +2646,8 @@ FILE* fopen(const char *filename, const 
      if (!filename ||
          !mode ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
@@ -205,7 +204,7 @@ SOUND_PCM_* is not available on SunOS.
            strcmp(filename, "/dev/adsp") != 0 &&
            strcmp(filename, "/dev/sndstat") != 0 &&
            strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2635,6 +2685,8 @@ FILE *fopen64(const char *filename, cons
+@@ -2635,6 +2691,8 @@ FILE *fopen64(const char *filename, cons
      if (!filename ||
          !mode ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
