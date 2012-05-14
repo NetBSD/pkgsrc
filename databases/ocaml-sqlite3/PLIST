@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/14 09:20:39 wiz Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/sqlite3
+bin/sqlite3top
+lib/ocaml/site-lib/sqlite3/META
+lib/ocaml/site-lib/sqlite3/dllsqlite3_stubs.so
+lib/ocaml/site-lib/sqlite3/libsqlite3_stubs.a
+lib/ocaml/site-lib/sqlite3/sqlite3.cma
+lib/ocaml/site-lib/sqlite3/sqlite3.cmi
+lib/ocaml/site-lib/sqlite3/sqlite3.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/sqlite3
