@@ -1,0 +1,24 @@
+$NetBSD: patch-iconmgr_c,v 1.1 2012/05/14 08:08:39 dholland Exp $
+
+- Use standard headers.
+- Don't declare own strcmp.
+
+--- iconmgr.c~	1998-01-08 06:02:45.000000000 +0000
++++ iconmgr.c
+@@ -31,6 +31,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "twm.h"
+ #include "util.h"
+ #include "list.h"
+@@ -43,8 +44,6 @@
+ #include <X11/Xos.h>
+ #include <X11/Xmu/CharSet.h>
+ 
+-int strcmp();
+-
+ int iconmgr_textx = siconify_width+11;
+ WList *Active = NULL;
+ WList *DownIconManager = NULL;
