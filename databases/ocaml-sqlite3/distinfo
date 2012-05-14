@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/14 09:20:39 wiz Exp $
+
+SHA1 (ocaml-sqlite3-1.6.1.tar.gz) = 1f67e2bd80907a755ac5689fc466020f5f2c394c
+RMD160 (ocaml-sqlite3-1.6.1.tar.gz) = dbfdb928041fdb8ccaac8f1d14223124d6bfe8ec
+Size (ocaml-sqlite3-1.6.1.tar.gz) = 59073 bytes
+SHA1 (patch-Makefile.in) = 4c60faa5c9e0e2b5ae55d6fc96d63a12fac369bd
+SHA1 (patch-configure.ac) = 18f762288c41c4e23cfc263108b20339ff9179cb
+SHA1 (patch-sqlite3_stubs.c) = 1ec65d01c5119e36be1431da9d57b49fc25ef4ff
