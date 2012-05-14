@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1528 2012/05/14 14:05:36 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1529 2012/05/14 23:56:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2406,3 +2406,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libdrm to 2.4.33nb1 [sbd 2012-05-14]
 	Added databases/ocaml-sqlite3 version 1.6.1 [wiz 2012-05-14]
 	Updated mail/dovecot2 to 2.1.6nb1 [taca 2012-05-14]
+	Updated devel/mr to 1.12 [schmonz 2012-05-14]
