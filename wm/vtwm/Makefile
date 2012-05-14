@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/06/30 00:07:23 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/05/14 08:09:27 dholland Exp $
 #
 
 DISTNAME=	vtwm-5.4.7
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_IMAKE=	YES
+USE_TOOLS+=	flex
 
 .include "../../audio/rplay/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
