@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.44 2011/12/16 05:21:37 dholland Exp $
+$NetBSD: distinfo,v 1.44.4.1 2012/05/14 12:24:21 tron Exp $
 
 SHA1 (netatalk-2.2.1.tar.bz2) = e588b89eced7769f65e213bc4b1b1e4f8035c8b3
 RMD160 (netatalk-2.2.1.tar.bz2) = bc55a591fe134d3bf05ca442aa5b5246fd766b8c
 Size (netatalk-2.2.1.tar.bz2) = 1227602 bytes
-SHA1 (patch-aa) = 20df0964b4fcb934ba2072e0aa7df3b75ada5e77
+SHA1 (patch-aa) = 060de5d023c3cc4e8d4e126270f2be69cf8a8913
 SHA1 (patch-ac) = 605e87479202cbf093dfbadb25f2972595246d97
 SHA1 (patch-ae) = e114085fbe2abf2fb821f2d2737e877c53e7c151
 SHA1 (patch-af) = 649be7e50210e6e4156aeff74d3fc0effb90f9f2
@@ -17,5 +17,5 @@ SHA1 (patch-ar) = 8c6c6169496b9b2cdec6049d2ee45884d5513d11
 SHA1 (patch-au) = 8505351fee21ac1effa4dc620b8006c572b913c1
 SHA1 (patch-bj) = abbc2809b6b7fe75ec2d2f8f2fa8d6cd9d6de7b0
 SHA1 (patch-bk) = c3fb7c3a42f148171fa99b6121b099dd4998947a
-SHA1 (patch-etc_afpd_quota_c) = 0d0a4d5cb8b8f2a9793096b61c326eecc403587c
-SHA1 (patch-macros_quota-check.m4) = 40d1e404905398be03aad6d472bf42af920c7b20
+SHA1 (patch-etc_afpd_quota_c) = 5005abb6528c0b3160a587fbe9fb285f485e6759
+SHA1 (patch-macros_quota-check.m4) = b1484f83a2a6ba5bd50623ab525d5366bb71abaa

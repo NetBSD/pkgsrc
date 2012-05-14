@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.23 2011/11/29 19:26:28 bouyer Exp $
+$NetBSD: patch-aa,v 1.23.4.1 2012/05/14 12:24:21 tron Exp $
 
 --- configure.orig	2011-09-06 13:41:25.000000000 +0200
 +++ configure	2011-11-29 18:59:56.000000000 +0100
@@ -41760,13 +41760,13 @@ $NetBSD: patch-aa,v 1.23 2011/11/29 19:26:28 bouyer Exp $
  
 +done
  
-+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for getfsquota in -lquota" >&5
-+$as_echo_n "checking for getfsquota in -lquota... " >&6; }
-+if test "${ac_cv_lib_quota_getfsquota+set}" = set; then :
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for quota_open in -lquota" >&5
++$as_echo_n "checking for quota_open in -lquota... " >&6; }
++if test "${ac_cv_lib_quota_quota_open+set}" = set; then :
 +  $as_echo_n "(cached) " >&6
 +else
 +  ac_check_lib_save_LIBS=$LIBS
-+LIBS="-lquota -lprop -lrpcsvc $LIBS"
++LIBS="-lquota -lrpcsvc $LIBS"
 +cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 +/* end confdefs.h.  */
  
@@ -41783,31 +41783,31 @@ $NetBSD: patch-aa,v 1.23 2011/11/29 19:26:28 bouyer Exp $
 +#ifdef __cplusplus
 +extern "C"
 +#endif
-+char getfsquota ();
++char quota_open ();
 +int
 +main ()
 +{
-+return getfsquota ();
++return quota_open ();
 +  ;
 +  return 0;
 +}
 +_ACEOF
 +if ac_fn_c_try_link "$LINENO"; then :
-+  ac_cv_lib_quota_getfsquota=yes
++  ac_cv_lib_quota_quota_open=yes
  else
 -  CFLAGS="-D_U_=\"\" $CFLAGS"
 -  { echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6; }
-+  ac_cv_lib_quota_getfsquota=no
++  ac_cv_lib_quota_quota_open=no
  fi
 +rm -f core conftest.err conftest.$ac_objext \
 +    conftest$ac_exeext conftest.$ac_ext
 +LIBS=$ac_check_lib_save_LIBS
 +fi
-+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_quota_getfsquota" >&5
-+$as_echo "$ac_cv_lib_quota_getfsquota" >&6; }
-+if test "x$ac_cv_lib_quota_getfsquota" = x""yes; then :
-+  QUOTA_LIBS="-lquota -lprop -lrpcsvc"
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_quota_quota_open" >&5
++$as_echo "$ac_cv_lib_quota_quota_open" >&6; }
++if test "x$ac_cv_lib_quota_quota_open" = x""yes; then :
++  QUOTA_LIBS="-lquota -lrpcsvc"
  
 +$as_echo "#define HAVE_LIBQUOTA 1" >>confdefs.h
  
