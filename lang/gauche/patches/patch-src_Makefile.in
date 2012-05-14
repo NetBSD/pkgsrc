@@ -1,4 +1,10 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2012/05/13 06:08:10 enami Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2012/05/14 23:44:57 enami Exp $
+
+commit 0e669ec43bedce845d03c65a3bd1c233673e3fd6
+Author: Shiro Kawai <shiro@acm.org>
+Date:   Sun May 13 22:42:22 2012 -1000
+
+    Make sure install gauche-init.scm with mode 444
 
 commit 809ed95496ff1d753f34161f28f549248124bb63
 Author: Shiro Kawai <shiro@acm.org>
@@ -6,7 +12,7 @@ Date:   Sat May 12 14:47:15 2012 -1000
 
     build fix when DESTDIR is used
 
---- src/Makefile.in.orig	2012-05-10 03:26:35.000000000 +0000
+--- src/Makefile.in.orig	2012-05-11 04:21:29.000000000 +0000
 +++ src/Makefile.in
 @@ -415,10 +415,12 @@ INSTALL_DIRS = $(DESTDIR)$(HEADER_INSTAL
  @CROSS_COMPILING_no@GAUCHE_INSTALL = ./gosh -ftest $(srcdir)/gauche-install.in
@@ -23,8 +29,12 @@ Date:   Sat May 12 14:47:15 2012 -1000
  	$(INSTALL)        $(INSTALL_LIBS) $(DESTDIR)$(LIB_INSTALL_DIR)
  	$(INSTALL)        $(INSTALL_LIBS) $(DESTDIR)$(ARCH_INSTALL_DIR)
  	$(INSTALL) -m 555 $(INSTALL_BINS) $(DESTDIR)$(BIN_INSTALL_DIR)
-@@ -429,7 +431,7 @@ install-core : all relink
- 	$(INSTALL) $(srcdir)/gauche-init.scm $(DESTDIR)$(SCM_INSTALL_DIR)
+@@ -426,10 +428,10 @@ install-core : all relink
+ 	@case `$(GAUCHE_CONFIG) --arch` in *-cygwin*|*-mingw*) \
+ 	  $(INSTALL) $(INSTALL_LIBS) $(DESTDIR)$(BIN_INSTALL_DIR);;\
+ 	esac
+-	$(INSTALL) $(srcdir)/gauche-init.scm $(DESTDIR)$(SCM_INSTALL_DIR)
++	$(INSTALL) -m 444 $(srcdir)/gauche-init.scm $(DESTDIR)$(SCM_INSTALL_DIR)
  	$(POSTINSTALL)
  
 -install-aux : install-core

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2012/05/13 06:08:10 enami Exp $
+$NetBSD: distinfo,v 1.30 2012/05/14 23:44:56 enami Exp $
 
 SHA1 (Gauche-0.9.3.2.tgz) = e2e3f4553674d02a0800c981325de3fef858d9f6
 RMD160 (Gauche-0.9.3.2.tgz) = 5dabfcc8da758d6c5df53b57407c8adf7fb2311e
@@ -6,4 +6,4 @@ Size (Gauche-0.9.3.2.tgz) = 5009978 bytes
 SHA1 (patch-aa) = 44221973454aeb2b4ad1a4c9675f801a64de2806
 SHA1 (patch-af) = 0741e1a047ee7935bffa215a69cc417ba67b81f2
 SHA1 (patch-ag) = ee9946e364d6723b0efe3b260fc5d02ccb04621d
-SHA1 (patch-src_Makefile.in) = ba5944d9000941bec5e1461428151ac026edf1d2
+SHA1 (patch-src_Makefile.in) = 54da3a1776a54c48fa194f302e486fff40537c47
