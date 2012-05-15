@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1532 2012/05/15 15:41:06 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1533 2012/05/15 18:59:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2417,3 +2417,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/pidgin-silc to 2.10.4 [obache 2012-05-15]
 	Updated devel/glib2 to 2.32.3 [adam 2012-05-15]
 	Updated x11/gtk3 to 3.4.3 [adam 2012-05-15]
+	Updated x11/pixman to 0.24.4nb1 [tron 2012-05-15]
