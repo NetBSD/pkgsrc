@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.c,v 1.3 2010/04/20 00:32:23 joerg Exp $	*/
+/*	$NetBSD: hash.c,v 1.4 2012/05/15 16:45:45 christos Exp $	*/
 /*	NetBSD: hash.c,v 1.30 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: hash.c,v 1.3 2010/04/20 00:32:23 joerg Exp $");
+__RCSID("$NetBSD: hash.c,v 1.4 2012/05/15 16:45:45 christos Exp $");
 
 #include <nbcompat/param.h>
 #include <sys/stat.h>
@@ -58,7 +58,9 @@ __RCSID("$NetBSD: hash.c,v 1.3 2010/04/20 00:32:23 joerg Exp $");
 #include "../pwrite.c"
 #endif
 
+#ifndef __UNCONST
 #define __UNCONST(a)	((void *)(size_t)(const void *)(a))
+#endif
 
 static int   alloc_segs(HTAB *, int);
 static int   flush_meta(HTAB *);
