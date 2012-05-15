@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1530 2012/05/15 08:12:25 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1531 2012/05/15 13:09:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2410,3 +2410,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/sqlite3 to 3.7.12 [adam 2012-05-15]
 	Updated databases/sqlite3-docs to 3.7.12 [adam 2012-05-15]
 	Updated databases/sqlite3-tcl to 3.7.12 [adam 2012-05-15]
+	Updated chat/libpurple to 2.10.4 [obache 2012-05-15]
+	Updated chat/finch to 2.10.4 [obache 2012-05-15]
+	Updated chat/pidgin to 2.10.4 [obache 2012-05-15]
+	Updated chat/pidgin-sametime to 2.10.4 [obache 2012-05-15]
+	Updated chat/pidgin-silc to 2.10.4 [obache 2012-05-15]
