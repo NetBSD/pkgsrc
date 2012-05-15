@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11078 2012/05/15 15:41:06 adam Exp $
+$NetBSD: TODO,v 1.11079 2012/05/15 20:43:06 adam Exp $
 
 Suggested new packages
 ======================
@@ -689,11 +689,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
 	o gle-4.2.4
-	o glibmm-2.32.0
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
-	o gmp-5.0.5
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.4.1
