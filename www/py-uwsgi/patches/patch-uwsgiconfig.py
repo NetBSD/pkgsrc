@@ -1,9 +1,18 @@
-$NetBSD: patch-uwsgiconfig.py,v 1.3 2012/01/09 07:08:25 sbd Exp $
+$NetBSD: patch-uwsgiconfig.py,v 1.4 2012/05/15 12:56:38 marino Exp $
 
 Find include/uuid/uuid.h and lib/libuuid.so under the BUILDLINK_DIR.
 
 --- uwsgiconfig.py.orig	2011-09-11 05:54:27.000000000 +0000
 +++ uwsgiconfig.py
+@@ -325,7 +325,7 @@ class uConf(object):
+                 if int(sun_major) >= 5:
+                     if int(sun_minor) >= 10:
+                         event_mode = 'port'
+-            elif uwsgi_os in ('Darwin', 'FreeBSD', 'OpenBSD', 'NetBSD'):
++            elif uwsgi_os in ('Darwin', 'FreeBSD', 'OpenBSD', 'NetBSD', 'DragonFly'):
+                 event_mode = 'kqueue'
+ 
+         if event_mode == 'epoll':
 @@ -443,7 +443,7 @@ class uConf(object):
          has_json = False
          has_uuid = False
