@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 05:47:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/15 11:34:52 shattered Exp $
 bin/aliados
+share/doc/aliados/README
+share/doc/aliados/aliados.doc
