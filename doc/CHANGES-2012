@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1534 2012/05/15 20:19:51 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1535 2012/05/15 20:31:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2419,3 +2419,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk3 to 3.4.3 [adam 2012-05-15]
 	Updated x11/pixman to 0.24.4nb1 [tron 2012-05-15]
 	Updated www/php-owncloud to 3.0.3 [ryoon 2012-05-15]
+	Updated devel/scmgit to 1.7.10.2 [adam 2012-05-15]
+	Updated devel/scmgit-base to 1.7.10.2 [adam 2012-05-15]
+	Updated devel/scmgit-docs to 1.7.10.2 [adam 2012-05-15]
+	Updated www/gitweb to 1.7.10.2 [adam 2012-05-15]
