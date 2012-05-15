@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2012/05/14 18:01:45 abs Exp $
+$NetBSD: patch-aa,v 1.11 2012/05/15 13:20:03 abs Exp $
 
 --- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
 +++ src/utils/padsp.c
@@ -111,7 +111,7 @@ $NetBSD: patch-aa,v 1.10 2012/05/14 18:01:45 abs Exp $
 -#ifdef sun
 +/* NetBSD < 6 and 6.99.0 - 6.99.6 used a different ioctl() definition */
 +#if defined(__NetBSD__) && (__NetBSD_Version__ < 600000000 ||  \
-+    (__NetBSD_Version__ > 699000000 && 699000700 < 699000700) )
++    (__NetBSD_Version__ > 699000000 && __NetBSD_Version__ < 699000700) )
 +# define OLD_NETBSD_IOCTL_CALL
 +#endif
 +
