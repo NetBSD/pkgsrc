@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/04/19 15:39:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/15 20:18:34 ryoon Exp $
 #
 
-DISTNAME=	owncloud-3.0.2
+DISTNAME=	owncloud-3.0.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://owncloud.org/releases/
@@ -36,7 +36,7 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		OC_DIR=${OC_DIR}
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pmp * \
+	cd ${WRKSRC} && pax -rw -pmp * .htaccess \
 		${DESTDIR}${PREFIX}/${OC_DIR}
 
 .include "../../lang/php/phpversion.mk"
