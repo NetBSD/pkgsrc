@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11076 2012/05/13 15:24:55 wiz Exp $
+$NetBSD: TODO,v 1.11077 2012/05/15 13:18:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -1095,7 +1095,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php-jpgraph-3.0.6
 	o phppgadmin-5.0.3
 	o picp-0.6.8
-	o pidgin-2.10.4
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
