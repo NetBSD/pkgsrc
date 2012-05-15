@@ -2,7 +2,7 @@ Aliados is a CP/M 80 emulator that instead of emulate a machine and
 run some variant of CP/M on it, emulates only the microprocessor and
 captures all CP/M system calls to execute it natively.  Actually only
 emulates a small part of CP/M, but with that already can execute many
-programs, such as WordStar, Micrsoft Basic, Mallard Basic, Hi-Tech C,
+programs, such as WordStar, Microsoft Basic, Mallard Basic, Hi-Tech C,
 Turbo Pascal and many others.  Aliados does not need to create disk
 images, it reads and writes in the native filesystem all files that
 match the CP/M name conventions.
