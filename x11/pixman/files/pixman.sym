@@ -1,7 +1,8 @@
+_pixman_addition_overflows_int
+_pixman_multiply_overflows_int
 pixman_add_trapezoids
 pixman_add_traps
 pixman_add_triangles
-pixman_addition_overflows_int
 pixman_blt
 pixman_composite_trapezoids
 pixman_composite_triangles
@@ -62,7 +63,6 @@ pixman_image_unref
 pixman_line_fixed_edge_init
 pixman_malloc_ab
 pixman_malloc_abc
-pixman_multiply_overflows_int
 pixman_rasterize_edges
 pixman_rasterize_edges_accessors
 pixman_rasterize_trapezoid
