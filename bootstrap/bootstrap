@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.174 2012/01/11 01:15:17 riz Exp $
+# $NetBSD: bootstrap,v 1.175 2012/05/15 16:42:43 christos Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -38,6 +38,10 @@ BOOTSTRAP_VERSION=20060721
 # file.
 MAKECONF=/dev/null
 export MAKECONF
+
+# No vulnerability checks since there might be an incompatible checker installed
+NO_PKGTOOLS_REQD_CHECK=yes
+export NO_PKGTOOLS_REQD_CHECK
 
 unprivileged=no
 
