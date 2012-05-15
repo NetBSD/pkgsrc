@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.34 2012/05/14 12:29:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.35 2012/05/15 23:16:01 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -163,3 +163,6 @@ Pullup ticket #3784 - requested by dholland
 sysutils/ruby-quota: build fix
 Pullup ticket #3785 - requested by dholland
 sysutils/setquota: mark as broken for NetBSD 6.0 and newer
+Pullup ticket #3787 - requested by taca
+databases/mysql55-client: security update
+databases/mysql55-server: security update
