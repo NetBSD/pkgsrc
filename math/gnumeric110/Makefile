@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/03/09 12:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/05/15 03:45:22 reed Exp $
 
 DISTNAME=	gnumeric-1.10.17
 PKGREVISION=	4
@@ -39,7 +39,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 #BUILDLINK_API_DEPENDS.libgda+=	libgda>=3.1.1
 #.include "../../databases/libgda/buildlink3.mk"
 #.include "../../databases/libgnomedb/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
+BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.18
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
