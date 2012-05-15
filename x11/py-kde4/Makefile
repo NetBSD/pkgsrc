@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/15 21:58:50 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
+PKGREVISION=	1
 DISTNAME=	pykde4-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
@@ -39,5 +40,7 @@ SUBST_SED.pykdeuic4=	's:/usr/bin/env python$$:${PYTHONBIN}:'
 BUILDLINK_API_DEPENDS.py-sip+=  ${PYPKGPREFIX}-sip>=4.10
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt4-tools=		full
+.include "../../x11/qt4-tools/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
