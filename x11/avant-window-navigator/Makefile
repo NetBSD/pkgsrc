@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/09 12:34:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/15 03:49:52 reed Exp $
 #
 
 DISTNAME=	avant-window-navigator-0.4.0
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# Needed fo launchpad
+# Needed for launchpad
 FETCH_USING=	curl
 
 GNU_CONFIGURE=	yes
