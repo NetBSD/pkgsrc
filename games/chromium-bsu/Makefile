@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/01/28 11:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/16 14:56:45 marino Exp $
 #
 
 DISTNAME=		chromium-bsu-0.9.14
@@ -18,6 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
+LDFLAGS.DragonFly=	-lSDL
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
