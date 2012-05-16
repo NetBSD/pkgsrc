@@ -1,0 +1,12 @@
+$NetBSD: patch-src_kdissert_wscript_build,v 1.1 2012/05/16 22:16:36 marino Exp $
+
+--- src/kdissert/wscript_build.orig	2006-10-14 16:20:49.000000000 +0000
++++ src/kdissert/wscript_build
+@@ -6,6 +6,7 @@ obj = bld.create_obj('kde', 'program')
+ obj.find_sources_in_dirs('. datastruct canvasview gui shell treelistview')
+ obj.uselib = 'QT KDECORE KIO KPARTS KMDI KDEPRINT'
+ obj.target = 'kdissert'
++obj.env.appendValue('LINKFLAGS', ['-lkdeui'])
+ obj.env.appendValue('LINKFLAGS', ['-export-dynamic'])
+ obj.env.appendValue('CPPFLAGS',  ['-trigraphs'])
+ obj.includes = '. datastruct canvasview gui shell treelistview'
