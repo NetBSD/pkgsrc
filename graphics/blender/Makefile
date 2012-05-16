@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/03/15 11:53:28 obache Exp $
+# $NetBSD: Makefile,v 1.79 2012/05/16 13:49:22 marino Exp $
 
 DISTNAME=	blender-2.49b
 PKGREVISION=	9
@@ -20,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 LDFLAGS+=		-lcrypto
+LDFLAGS.DragonFly=	-lX11
 
 .include "options.mk"
 
