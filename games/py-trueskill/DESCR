@@ -1,0 +1,6 @@
+TrueSkill(tm) is a rating system among game players. It has been
+used on Xbox Live to rank and match players. TrueSkill system
+quantizes `TRUE' skill points by a Bayesian inference algorithm.
+
+This project is a Python package which implements TrueSkill(tm)
+rating system.
