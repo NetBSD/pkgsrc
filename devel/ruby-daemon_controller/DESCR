@@ -1,0 +1,2 @@
+daemon_controller is a library for starting and stopping specific daemons
+programmatically in a robust, race-condition-free manner.
