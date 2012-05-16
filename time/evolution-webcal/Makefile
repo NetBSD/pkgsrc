@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/04/27 12:32:05 obache Exp $
+# $NetBSD: Makefile,v 1.55 2012/05/16 18:02:45 marino Exp $
 #
 
 DISTNAME=	evolution-webcal-2.32.0
@@ -19,6 +19,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
 GCONF_SCHEMAS=		evolution-webcal.schemas
+
+LDFLAGS.DragonFly=	-lgthread-2.0
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
