@@ -1,7 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2008/12/16 16:49:52 tron Exp $
+$NetBSD: patch-ad,v 1.3 2012/05/16 17:42:37 tron Exp $
 
---- src/utils/directory.cc.orig	2008-05-07 13:19:11.000000000 +0100
-+++ src/utils/directory.cc	2008-12-16 16:45:58.000000000 +0000
+Fix build under Solaris and DragonFly.
+
+--- src/utils/directory.cc.orig	2012-03-29 14:06:11.000000000 +0100
++++ src/utils/directory.cc	2012-05-14 23:44:08.000000000 +0100
 @@ -38,6 +38,7 @@
  
  #include <algorithm>
@@ -10,7 +12,7 @@ $NetBSD: patch-ad,v 1.2 2008/12/16 16:49:52 tron Exp $
  #include <dirent.h>
  #include <rak/path.h>
  #include <torrent/exceptions.h>
-@@ -63,7 +64,9 @@
+@@ -67,7 +68,9 @@
    if (m_path.empty())
      throw torrent::input_error("Directory::update() tried to open an empty path.");
  
@@ -21,25 +23,3 @@ $NetBSD: patch-ad,v 1.2 2008/12/16 16:49:52 tron Exp $
  
    if (d == NULL)
      return false;
-@@ -73,12 +76,18 @@
-   while ((entry = readdir(d)) != NULL) {
-     if ((flags & update_hide_dot) && entry->d_name[0] == '.')
-       continue;
-+    
-+    std::string full_path = path + '/';
-+    full_path += entry->d_name;
-+    
-+    struct stat sb;
-+    if (stat(full_path.c_str(), &sb))
-+      continue;
- 
-     iterator itr = base_type::insert(end(), value_type());
- 
--    itr->d_fileno = entry->d_fileno;
--    itr->d_reclen = entry->d_reclen;
--    itr->d_type   = entry->d_type;
-+    itr->d_fileno = sb.st_ino;
-+    itr->d_type   = sb.st_mode;
- 
- #ifdef DIRENT_NAMLEN_EXISTS_FOOBAR
-     itr->d_name   = std::string(entry->d_name, entry->d_name + entry->d_namlen);
