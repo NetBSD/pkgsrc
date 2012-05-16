@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/03/03 00:14:07 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/05/16 11:44:44 marino Exp $
 #
 
 DISTNAME=       nspluginwrapper-1.2.2
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--with-x11-prefix=${X11BASE}
 PLUGIN_SUBDIR=		lib/nspluginwrapper/i386/linux
 PLUGIN_INSTDIR=		${PREFIX}/${PLUGIN_SUBDIR}
 PLUGIN_SRCDIR=		${WRKDIR}/usr/${PLUGIN_SUBDIR}
+
+LDFLAGS.DragonFly=	-lgmodule-2.0
 
 SUBST_CLASSES+=		npviewer
 SUBST_STAGE.npviewer=	post-build
