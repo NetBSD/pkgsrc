@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/08/01 05:28:01 hasso Exp $
+$NetBSD: distinfo,v 1.5 2012/05/16 11:27:31 marino Exp $
 
 SHA1 (dega-1.07.tar.gz) = 1401e5af566bc3e7658a4552940219688c082ce8
 RMD160 (dega-1.07.tar.gz) = a20ad5d4ec47b3a8e65e64355557b6018a9dcfc4
 Size (dega-1.07.tar.gz) = 85189 bytes
+SHA1 (patch-Makefile) = 56ea5d81c07ec23f1466c9d8b1ddbfb6eb1a4e37
 SHA1 (patch-aa) = 92f5e498320b751003f2efb79cafa5f7d96ab119
 SHA1 (patch-ab) = ec9f112b62edfa24bb04d37679eb9a903e22e3d0
