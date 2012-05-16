@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/04/27 12:31:38 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/05/16 19:57:56 marino Exp $
 #
 
 DISTNAME=	multisync-gui-0.91.0
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 HAS_CONFIGURE=	yes
 
 REPLACE_PYTHON= waf
+
+LDFLAGS.DragonFly=	-lgthread-2.0
 
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
