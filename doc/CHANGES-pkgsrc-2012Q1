@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.35 2012/05/15 23:16:01 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.36 2012/05/16 12:51:52 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -166,3 +166,8 @@ sysutils/setquota: mark as broken for NetBSD 6.0 and newer
 Pullup ticket #3787 - requested by taca
 databases/mysql55-client: security update
 databases/mysql55-server: security update
+Pullup ticket #3786 - requested by taca
+databases/mysql51-client: security update
+databases/mysql51-server: security update
+Pullup ticket #3788 - requested by taca
+lang/php5: security patch
