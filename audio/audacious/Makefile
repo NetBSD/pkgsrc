@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/03 00:12:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/05/16 13:43:14 marino Exp $
 #
 
 DISTNAME=		audacious-1.5.1
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 LIBS.SunOS+=		-lm -lX11
-LDFLAGS.DragonFly=	-lm -lX11
+LDFLAGS.DragonFly=	-lm -lX11 -lgmodule-2.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
