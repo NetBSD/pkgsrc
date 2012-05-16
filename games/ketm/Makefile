@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2012/05/16 15:16:09 marino Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -18,6 +18,8 @@ BUILD_TARGET=	ketm
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin share/ketm/data
+
+LDFLAGS.DragonFly=	-lm
 
 SUBST_CLASSES+=		ketm
 SUBST_STAGE.ketm=	pre-configure
