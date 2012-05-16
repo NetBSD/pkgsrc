@@ -1266,26 +1266,31 @@ Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
 
 To bootstrap using icc, assuming the default icc installation directory:
 
-env ICCBASE=/opt/intel/cc/10.1.008 ./bootstrap --compiler=icc
+env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+ac_cv___attribute__=yes ./bootstrap
 
 
 Note
 
-For icc 8.0 you must add `LDFLAGS=-static-libcxa' to this.
+icc 8.1 needs the `-i-static' argument instead of -static-libcxa.
 
-For icc 8.1 you must add `LDFLAGS=-i-static' instead.
+icc supports __attribute__, but the GNU configure test uses a nested function,
+which icc does not support. #undef'ing __attribute__ has the unfortunate
+side-effect of breaking many of the Linux header files, which cannot be
+compiled properly without __attribute__. The test must be overridden so that
+__attribute__ is assumed supported by the compiler.
 
-For icc 10.1 neither of these appears to be necessary.
+After bootstrapping, you should set PKGSRC_COMPILER in mk.conf:
 
-Use a value for ICCBASE that corresponds to the directory where icc is
-installed. After bootstrapping, set ICCBASE in mk.conf:
-
-ICCBASE=                /opt/intel/cc/10.1.008
+PKGSRC_COMPILER=        icc
 
 
-The pkgsrc default for ICCBASE is /opt/intel_cc_80. This is the default install
-directory for icc 8.0. If you are using a more recent version, be sure to set
-the correct path explicitly.
+The default installation directory for icc is /opt/intel_cc_80, which is also
+the pkgsrc default. If you have installed it into a different directory, set
+ICCBASE in mk.conf:
+
+ICCBASE=                /opt/icc
+
 
 pkgsrc uses the static linking method of the runtime libraries provided by icc,
 so binaries can be run on other systems which do not have the shared libraries
@@ -5027,7 +5032,7 @@ will call the former the master file in the following paragraphs, which
 describe the variables that can be used to automatically and consistently
 handle files outside the installation prefix:
 
-  * CONF_FILES and SUPPORT_FILES are pairs of master and target files. During
+  * CONF_FILES and REQD_FILES are pairs of master and target files. During
     installation time, the master file is copied to the target one if and only
     if the latter does not exist. Upon deinstallation, the target file is
     removed provided that it was not modified by the installation.
@@ -5036,12 +5041,12 @@ handle files outside the installation prefix:
     to remove any files that may be left after deinstallation (because they
     were not empty), while the former does not.
 
-  * CONF_FILES_PERMS and SUPPORT_FILES_PERMS contain tuples describing master
+  * CONF_FILES_PERMS and REQD_FILES_PERMS contain tuples describing master
     files as well as their target locations. For each of them, it also
     specifies their owner, their group and their numeric permissions, in this
     order. For example:
 
-    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+    REQD_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
 
     The difference between the two is exactly the same as their non-PERMS
     counterparts.
