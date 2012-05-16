@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2012/05/06 21:12:04 dholland Exp $
+# $NetBSD: Makefile,v 1.69 2012/05/16 18:27:12 marino Exp $
 
 DISTNAME=	inkscape-0.48.2
 PKGREVISION=	6
@@ -34,6 +34,8 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
 BUILDLINK_API_DEPENDS.poppler+=		poppler>=0.5.9
 
 UNLIMIT_RESOURCES=	datasize
+
+LDFLAGS.DragonFly=	-lX11
 
 # This is a single SUBST, but it's hefty enough I've put it in its own file.
 .include "glib2-fixes.mk"
