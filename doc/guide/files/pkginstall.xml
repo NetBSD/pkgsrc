@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.16 2009/02/10 14:50:45 joerg Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.17 2012/05/16 16:46:43 wiz Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -144,7 +144,7 @@ installation prefix:</para>
 
   <listitem>
     <para><varname>CONF_FILES</varname> and
-    <varname>SUPPORT_FILES</varname> are pairs of master and target files.
+    <varname>REQD_FILES</varname> are pairs of master and target files.
     During installation time, the master file is copied to the target one
     if and only if the latter does not exist.  Upon deinstallation, the
     target file is removed provided that it was not modified by the
@@ -158,13 +158,13 @@ installation prefix:</para>
 
   <listitem>
     <para><varname>CONF_FILES_PERMS</varname> and
-    <varname>SUPPORT_FILES_PERMS</varname> contain tuples describing master
+    <varname>REQD_FILES_PERMS</varname> contain tuples describing master
     files as well as their target locations.  For each of them, it also
     specifies their owner, their group and their numeric permissions, in
     this order.  For example:</para>
 
 <programlisting>
-SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+REQD_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
 </programlisting>
 
     <para>The difference between the two is exactly the same as their
