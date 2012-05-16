@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/02/15 19:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/05/16 16:08:43 marino Exp $
 #
 
 DISTNAME=		fceu-0.98.13.src
@@ -24,6 +24,8 @@ SUBST_FILES.dsp=	src/drivers/sexyal/drivers/oss.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man6 share/doc/fceu
+
+LDFLAGS.DragonFly=	-lm
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/fceu-sdl.6 \
