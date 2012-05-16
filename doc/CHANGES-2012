@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1539 2012/05/16 14:50:35 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1540 2012/05/16 16:18:46 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2427,3 +2427,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/ruby-daemon_controller version 1.0.0 [fhajny 2012-05-16]
 	Updated chat/pidgin-otr to 3.2.1 [wiz 2012-05-16]
 	Updated security/sudo to 1.7.9p1 [taca 2012-05-16]
+	Added security/p5-AuthCAS version 1.5 [bouyer 2012-05-16]
+	Added textproc/p5-Unicode-LineBreak version 2012.02 [bouyer 2012-05-16]
+	Updated mail/sympa to 6.1.11 [bouyer 2012-05-16]
