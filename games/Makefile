@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.350 2012/03/20 07:22:46 markd Exp $
+# $NetBSD: Makefile,v 1.351 2012/05/16 19:41:07 wiz Exp $
 #
 
 COMMENT=	Games
@@ -209,6 +209,7 @@ SUBDIR+=	powermanga
 SUBDIR+=	powwow
 SUBDIR+=	prboom
 SUBDIR+=	puzzles
+SUBDIR+=	py-trueskill
 SUBDIR+=	pysolfc
 SUBDIR+=	pytraffic
 SUBDIR+=	qnetwalk
