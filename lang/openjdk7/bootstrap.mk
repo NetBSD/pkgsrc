@@ -1,15 +1,15 @@
-# $NetBSD: bootstrap.mk,v 1.6 2012/05/12 21:01:47 marino Exp $
+# $NetBSD: bootstrap.mk,v 1.7 2012/05/16 08:55:45 marino Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[56].*-i386 NetBSD-[56].*-x86_64
-ONLY_FOR_PLATFORM+=	DragonFly-[23].*
+ONLY_FOR_PLATFORM+=	DragonFly-[23].*-*
 
 BOOT.nb5-i386=		bootstrap-jdk7-bin-netbsd-5-i386-20110811.tar.bz2
 BOOT.nb5-amd64=		bootstrap-jdk7-bin-netbsd-5-amd64-20110811.tar.bz2
 BOOT.nb6-i386=		bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2
 BOOT.nb6-amd64=		bootstrap-jdk7-bin-netbsd-6-amd64-20110811.tar.bz2
-BOOT.df213-i386=	bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811.tar.bz2
+BOOT.df213-i386=	bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811A.tar.xz
 # 1.7 partial bootstrap:
-BOOT.df213-amd64=	bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811.tar.bz2
+BOOT.df213-amd64=	bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811A.tar.xz
 BOOT.common-20110811=	bootstrap-jdk7-bin-common-20110811.tar.bz2
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*-i386) || make(distinfo)

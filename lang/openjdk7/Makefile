@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/05/12 21:01:47 marino Exp $
+# $NetBSD: Makefile,v 1.34 2012/05/16 08:55:45 marino Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 OWNER=		tnn@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
 COMMENT=	Open-source implementation of the Java Platform, Standard Edition
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -40,7 +41,7 @@ DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pax unzip:run zip:run
+USE_TOOLS+=		gmake pax unzip:run zip:run patch
 UNLIMIT_RESOURCES=	datasize stacksize
 WRKSRC=			${WRKDIR}/openjdk
 
