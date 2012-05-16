@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/01/13 10:55:08 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/05/16 14:25:36 marino Exp $
 #
 
 DISTNAME=		stratagus-2.1-src
@@ -19,11 +19,18 @@ WRKSRC=			${WRKDIR}/stratagus-040702
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-MAKE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:M*:Q}
+MAKE_ENV+=		X11_LDFLAGS=${X_LDFLAGS:M*:Q}
 
 CONFIGURE_ARGS+=	--with-flac --with-mad
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "DragonFly"
+X_LDFLAGS=	${X11_LDFLAGS} -lX11
+.else
+X_LDFLAGS=	${X11_LDFLAGS}
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stratagus ${DESTDIR}${PREFIX}/bin
