@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/16 19:40:44 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/trueskill/__init__.py
+${PYSITELIB}/trueskill/__init__.pyc
+${PYSITELIB}/trueskill/__init__.pyo
+${PYSITELIB}/trueskill/factorgraph.py
+${PYSITELIB}/trueskill/factorgraph.pyc
+${PYSITELIB}/trueskill/factorgraph.pyo
+${PYSITELIB}/trueskill/mathematics.py
+${PYSITELIB}/trueskill/mathematics.pyc
+${PYSITELIB}/trueskill/mathematics.pyo
+${PYSITELIB}/trueskill/matrix.py
+${PYSITELIB}/trueskill/matrix.pyc
+${PYSITELIB}/trueskill/matrix.pyo
