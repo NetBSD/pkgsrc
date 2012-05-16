@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/01/13 13:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/05/16 20:41:08 marino Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-CONFIGURE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
+CONFIGURE_ENV+=		X11_LDFLAGS=${X_LDFLAGS:Q}
 
 BUILD_TARGET=		glaxium
 
@@ -30,6 +30,13 @@ INSTALLATION_DIRS+=	bin
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			exec_prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "DragonFly"
+X_LDFLAGS=	${X11_LDFLAGS} -lm -lstdc++
+.else
+X_LDFLAGS=	${X11_LDFLAGS}
+.endif
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
