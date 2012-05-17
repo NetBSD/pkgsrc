@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2011/12/06 01:19:15 sbd Exp $
+$NetBSD: distinfo,v 1.21 2012/05/17 20:29:13 christos Exp $
 
 SHA1 (kermit-9.0.302/cku302.tar.gz) = d04c8b5600bc0bb0f163d294881f7a5a0d4395b5
 RMD160 (kermit-9.0.302/cku302.tar.gz) = ef3a71b5a42868c80408ac09662d00b71da0b0c8
@@ -6,6 +6,7 @@ Size (kermit-9.0.302/cku302.tar.gz) = 3122219 bytes
 SHA1 (patch-aa) = fd3a613ce3cd3755a2e3b8baf33df33593713024
 SHA1 (patch-ab) = d27c998f44a1d2b53cb2e893d9ef9e8c14292d3f
 SHA1 (patch-ac) = 62cc9e92f2413a42312d9f6d168ee85664b6aab9
+SHA1 (patch-ad) = 414f61c19185e4a82a8326121c2d9dacfba48077
 SHA1 (patch-ae) = 53384e9cbfe13559d69ab95215a4575f726dc325
 SHA1 (patch-af) = 2a09f9f933d3c1e6860983d8138ac61f33306ef7
 SHA1 (patch-ag) = cae37680ea5af85f4d2c774fe230f73a1f0be48c
