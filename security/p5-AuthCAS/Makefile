@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/16 15:55:23 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/17 10:21:12 wiz Exp $
 
 DISTNAME=	AuthCAS-1.5
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		#
 
-PERL5_PACKLIST= ${PERL5_ARCHLIB}auto/AuthCAS/.packlist
+PERL5_PACKLIST=	auto/AuthCAS/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
