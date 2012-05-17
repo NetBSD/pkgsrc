@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1594 2012/05/16 10:18:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.1595 2012/05/17 05:00:27 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1355,7 +1355,7 @@ SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
-SUBDIR+=	ruby-daemon_control
+SUBDIR+=	ruby-daemon_controller
 SUBDIR+=	ruby-debug
 SUBDIR+=	ruby-debug-base
 SUBDIR+=	ruby-debug-extra
