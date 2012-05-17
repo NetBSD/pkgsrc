@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/05/15 15:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.21 2012/05/17 21:10:37 marino Exp $
 
 DISTNAME=	gtk+-3.4.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
@@ -55,6 +56,12 @@ BUILD_DIRS=		. demos/gtk-demo
 BUILD_DEPENDS+=		grep-[0-9]*:../../textproc/grep
 TOOLS_PATH.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 .endif
+# isnan and isinf are part of libc, not libm on DragonFly
+# conf tests fail detection due to conflicting definitions, just skip them
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ENV+= 	ac_cv_func_isnan=yes
+CONFIGURE_ENV+= 	ac_cv_func_isinf=yes
+.endif
 
 CFLAGS.SunOS+=		-std=gnu99 -D_XOPEN_SOURCE=600
 
@@ -77,7 +84,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.29.14
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.24.1nb2
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.10.1
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.32
 .include "../../devel/gobject-introspection/buildlink3.mk"
 
 .include "options.mk"
