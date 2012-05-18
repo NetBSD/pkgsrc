@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.5 2012/03/19 12:34:18 joerg Exp $
+# $NetBSD: MirBSD.mk,v 1.6 2012/05/18 14:15:17 bsiegert Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -40,6 +40,8 @@ _OPSYS_SHLIB_TYPE=	ELF	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
+
+BUILDLINK_TRANSFORM+=	rm:-ldl	# libdl.a is an empty static library
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
