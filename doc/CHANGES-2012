@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1545 2012/05/17 10:53:01 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1546 2012/05/18 03:03:30 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ikiwiki to 3.20120516 [schmonz 2012-05-17]
 	Updated textproc/p5-Unicode-LineBreak to 2012.02nb1 [wiz 2012-05-17]
 	Updated security/p5-AuthCAS to 1.5nb1 [obache 2012-05-17]
+	Added print/hplip version 3.12.4 [schnoebe 2012-05-18]
