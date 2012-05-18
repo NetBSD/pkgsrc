@@ -1,4 +1,4 @@
-$NetBSD: patch-setup_i18n.py,v 1.1 2012/05/02 09:11:44 obache Exp $
+$NetBSD: patch-setup_i18n.py,v 1.2 2012/05/18 11:12:25 obache Exp $
 
 * fix translations fail
  http://code.google.com/p/ibus/issues/detail?id=1453
@@ -13,7 +13,7 @@ $NetBSD: patch-setup_i18n.py,v 1.1 2012/05/02 09:11:44 obache Exp $
  import gettext
  import os
  
-@@ -30,5 +31,12 @@ N_ = lambda a: a
+@@ -30,5 +31,13 @@ N_ = lambda a: a
  
  def init():
      localedir = os.getenv("IBUS_LOCALEDIR")
@@ -22,6 +22,7 @@ $NetBSD: patch-setup_i18n.py,v 1.1 2012/05/02 09:11:44 obache Exp $
 +    try:
 +        # for non-standard localedir
 +        locale.bindtextdomain(DOMAINNAME, localedir)
++        locale.bind_textdomain_codeset(DOMAINNAME, "UTF-8")
 +    except AttributeError:
 +        pass
      gettext.bindtextdomain(DOMAINNAME, localedir)
