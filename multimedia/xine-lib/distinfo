@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2012/04/01 18:42:02 hans Exp $
+$NetBSD: distinfo,v 1.82 2012/05/18 18:53:31 marino Exp $
 
 SHA1 (xine-lib-1.2.1.tar.bz2) = c86591ff9fb6b073b8d115fa31b5a74a305e8628
 RMD160 (xine-lib-1.2.1.tar.bz2) = eb6dab8418eebf0ee5f210efd085ae09367f624e
@@ -37,3 +37,4 @@ SHA1 (patch-src-post-planar-unsharp.c) = 964ec33c8c3cfcc8783b5fae1093c8fba76ff2a
 SHA1 (patch-src-xine-engine-post.h) = 3b96d1279bbec48b2f3df50a576bfa8ec25f796f
 SHA1 (patch-src_audio__out_Makefile.am) = 5f8ba2ce81a63cb195407c3ce6649007ce15408f
 SHA1 (patch-src_libw32dll_wine_Makefile.am) = 17c717c84531780dc06c3cd5db8f879a560aeb3a
+SHA1 (patch-src_libw32dll_wine_registry.c) = f34685be27dc9ec098f80e78cd24f3e92f12367a
