@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/05/02 09:11:44 obache Exp $
+$NetBSD: distinfo,v 1.6 2012/05/18 11:12:24 obache Exp $
 
 SHA1 (ibus-1.4.1.tar.gz) = 4cc045553885d35a118ec4b44c2694910209509e
 RMD160 (ibus-1.4.1.tar.gz) = 4003fc9392c59ce35048689aa50a941cfd151cff
 Size (ibus-1.4.1.tar.gz) = 1479412 bytes
-SHA1 (patch-setup_i18n.py) = a132bb392b9b50185fe6e8740e4c74243e730fe6
+SHA1 (patch-setup_i18n.py) = 0069b00b83a9348cca73c85adddf554733356544
