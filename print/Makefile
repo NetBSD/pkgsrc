@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.533 2012/05/08 18:42:52 minskim Exp $
+# $NetBSD: Makefile,v 1.534 2012/05/18 03:07:26 schnoebe Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -51,6 +51,7 @@ SUBDIR+=	gtklp
 SUBDIR+=	gutenprint-lib
 SUBDIR+=	gv
 SUBDIR+=	hpijs
+SUBDIR+=	hplip
 SUBDIR+=	html2ps
 SUBDIR+=	if-psprint
 SUBDIR+=	ijs
