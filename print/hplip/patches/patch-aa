@@ -1,0 +1,97 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
+
+# lots of portability changes to configure.in, removing hard-coded paths
+# and pulling in the dynamic library loading modules..
+
+# pushed upstream as https://bugs.launchpad.net/hplip/+bug/726207
+
+--- configure.in.orig	2010-07-19 02:18:37.000000000 +0000
++++ configure.in
+@@ -34,14 +34,15 @@ AC_DISABLE_STATIC
+ # Checks for programs.
+ AC_PROG_CXX
+ AC_PROG_CC
++AM_PROG_CC_C_O
+ AC_PROG_INSTALL
++AC_LIBTOOL_DLOPEN
+ AC_PROG_LIBTOOL
+ 
+ # Checks for required libraries, don't set global -lpthread, -lm, -ljpeg, ... here, set in Makefile.
+ AC_CHECK_LIB([pthread], [pthread_create], [LIBS="$LIBS"], [AC_MSG_ERROR([cannot find libpthread support], 7)])
+ AC_CHECK_LIB([m], [pow], [LIBS="$LIBS"], [AC_MSG_ERROR([cannot find libm math support], 10)])
+ AC_CHECK_LIB([jpeg], [jpeg_set_defaults],[LIBS="$LIBS"], [AC_MSG_ERROR(["cannot find libjpeg support"], 102)])
+-AC_CHECK_LIB([dl], [dlopen], [LIBS="$LIBS" AC_DEFINE([HAVE_LIBDL])], [AC_MSG_ERROR(["cannot find libdl support"], 104)])
+ 
+ # Checks for required header files.
+ AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([cannot find pthread-devel support], 7)])
+@@ -301,25 +302,25 @@ else
+ fi
+ AM_CONDITIONAL(SHADOW_BUILD, test x$shadow_build = xyes)
+ 
+-AC_ARG_WITH(cupsbackenddir, AC_HELP_STRING([--with-cupsbackenddir=DIR], [set cups backend install directory [default=/usr/lib/cups/backend]]),
+-   cupsbackenddir=$withval, cupsbackenddir="/usr/lib/cups/backend")
++AC_ARG_WITH(cupsbackenddir, AC_HELP_STRING([--with-cupsbackenddir=DIR], [set cups backend install directory [default=libdir/cups/backend]]),
++   cupsbackenddir=$withval, cupsbackenddir="$libdir/cups/backend")
+ 
+-AC_ARG_WITH(cupsfilterdir, AC_HELP_STRING([--with-cupsfilterdir=DIR], [set cups filter install directory [default=/usr/lib/cups/filter]]),
+-   cupsfilterdir=$withval, cupsfilterdir="/usr/lib/cups/filter")
++AC_ARG_WITH(cupsfilterdir, AC_HELP_STRING([--with-cupsfilterdir=DIR], [set cups filter install directory [default=libdir/cups/filter]]),
++   cupsfilterdir=$withval, cupsfilterdir="$libdir/cups/filter")
+ 
+-AC_ARG_WITH(icondir, AC_HELP_STRING([--with-icondir=DIR], [set hplip.desktop install directory [default=/usr/share/applications]]),
+-   icondir=$withval, icondir="/usr/share/applications")
++AC_ARG_WITH(icondir, AC_HELP_STRING([--with-icondir=DIR], [set hplip.desktop install directory [default=datadir/applications]]),
++   icondir=$withval, icondir="$datadir/applications")
+ 
+-AC_ARG_WITH(systraydir, AC_HELP_STRING([--with-systraydir=DIR], [set hplip-systray.desktop install directory [default=/etc/xdg/autostart]]),
+-   systraydir=$withval, systraydir="/etc/xdg/autostart")
++AC_ARG_WITH(systraydir, AC_HELP_STRING([--with-systraydir=DIR], [set hplip-systray.desktop install directory [default=sysconfdir/xdg/autostart]]),
++   systraydir=$withval, systraydir="$sysconfdir/xdg/autostart")
+ 
+ AC_ARG_WITH(hpppddir, AC_HELP_STRING([--with-hpppddir=DIR], [set hp ppd install directory [default=datadir/ppd/HP]]),
+    hpppddir=$withval, hpppddir="$datadir/ppd/HP")
+ 
+-if test -f "/usr/share/cups/mime/mime.types"; then 
+-   abs_mimedir="/usr/share/cups/mime/"
++if test -f "$datadir/cups/mime/mime.types"; then 
++   abs_mimedir="$datadir/cups/mime/"
+ else
+-   abs_mimedir="/etc/cups/"
++   abs_mimedir="$sysconfdir/cups/"
+ fi
+ AC_ARG_WITH(mimedir, AC_HELP_STRING([--with-mimedir=DIR], [set cups mime.types location [default=abs_mimedir]]),
+    mimedir=$withval, mimedir="$abs_mimedir")
+@@ -446,12 +447,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
+ 
+ # Determine where the PolicyKit policy file goes
+ if test "$policykit" = "yes"; then
+-   if test -d /usr/share/polkit-1; then
+-      policykit_dir=/usr/share/polkit-1/actions
+-   elif test -d /usr/share/PolicyKit; then
+-      policykit_dir=/usr/share/PolicyKit/policy
++   if test -d "$datadir/polkit-1"; then
++      policykit_dir="$datadir/polkit-1/actions"
++   elif test -d "$datadir/PolicyKit"; then
++      policykit_dir="$datadir/PolicyKit/policy"
+    else
+-      policykit_dir=/usr/share/PolicyKit/policy
++      policykit_dir="$datadir/PolicyKit/policy"
+    fi
+ else
+    policykit_dir=
+@@ -551,6 +552,7 @@ AC_DEFINE_DIR([abs_datadir], [datadir])
+ AC_DEFINE_DIR([abs_sbindir], [sbindir])
+ AC_DEFINE_DIR([abs_hpppddir], [hpppddir])
+ AC_DEFINE_DIR([abs_docdir], [hpdocdir])
++AC_DEFINE_DIR([abs_icondir], [icondir])
+ abs_ppddir=${abs_hpppddir%/*}
+ AC_DEFINE_DIR([abs_drvdir], [drvdir])
+ 
+@@ -558,6 +560,7 @@ AC_SUBST(abs_datadir) 
+ AC_SUBST(abs_sbindir) 
+ AC_SUBST(abs_hpppddir) 
+ AC_SUBST(abs_docdir) 
++AC_SUBST(abs_icondir) 
+ AC_SUBST(abs_ppddir) 
+ AC_SUBST(abs_drvdir) 
+ AC_SUBST(abs_mimedir) 
