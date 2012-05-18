@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/04/30 14:28:57 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2012/05/18 14:38:56 bsiegert Exp $
 #
 
 DISTNAME=	gobject-introspection-1.32.1
@@ -31,7 +31,7 @@ SUBST_FILES.timet=	giscanner/ast.py
 SUBST_FILES.timet+=	tests/scanner/Foo-1.0-expected.gir \
 			tests/scanner/Regress-1.0-expected.gir
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.99*) || !empty(MACHINE_PLATFORM:MNetBSD-[6-9]*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.99*) || !empty(MACHINE_PLATFORM:MNetBSD-[6-9]*) || !empty(MACHINE_PLATFORM:MMirBSD)
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_INT64,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 .else
