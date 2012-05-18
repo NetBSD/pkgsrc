@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.36 2012/05/16 12:51:52 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.37 2012/05/18 16:56:13 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -171,3 +171,5 @@ databases/mysql51-client: security update
 databases/mysql51-server: security update
 Pullup ticket #3788 - requested by taca
 lang/php5: security patch
+Pullup ticket #3789 - requested by wiz
+chat/pidgin-otr: security update
