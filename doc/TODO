@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11080 2012/05/17 09:36:17 wiz Exp $
+$NetBSD: TODO,v 1.11081 2012/05/18 09:20:49 he Exp $
 
 Suggested new packages
 ======================
@@ -1083,7 +1083,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o parallel-20120422
 	o pari-2.5.1
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-4.1.0
+	o parrot-4.4.0
 	o patch-2.6.1
 	o patchutils-0.3.2
 	o pbzip2-1.1.6
