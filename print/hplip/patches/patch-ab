@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
+
+# reported upstream as https://bugs.launchpad.net/hplip/+bug/726211
+
+--- hplip.conf.in.orig	2010-07-19 02:17:45.000000000 +0000
++++ hplip.conf.in
+@@ -9,7 +9,7 @@ run=/var/run
+ ppd=@abs_hpppddir@
+ ppdbase=@abs_ppddir@
+ doc=@abs_docdir@
+-icon=@icondir@
++icon=@abs_icondir@
+ cupsbackend=@cupsbackenddir@
+ cupsfilter=@cupsfilterdir@
+ drv=@abs_drvdir@

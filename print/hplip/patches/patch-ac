@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
+
+# reported upstream as https://bugs.launchpad.net/hplip/+bug/726210
+
+--- prnt/hpcups/HPCupsFilter.cpp.orig	2010-07-19 02:14:09.000000000 +0000
++++ prnt/hpcups/HPCupsFilter.cpp
+@@ -33,7 +33,6 @@
+ #include <sys/wait.h>
+ #include <sys/utsname.h>
+ #include <time.h>
+-#include <sys/timeb.h>
+ 
+ #define HP_FILE_VERSION_STR    "03.09.08.0"
+ 
+@@ -433,13 +432,13 @@ int HPCupsFilter::StartPrintJob(int  arg
+ 
+     memset(&m_JA, 0, sizeof(JobAttributes));
+     struct    tm       *t;
+-    struct    timeb    tb;
++    struct    timeval  tv;
+     time_t             long_time;
+     time(&long_time);
+     t = localtime(&long_time);
+-    ftime(&tb);
++    gettimeofday(&tv, NULL);
+     strncpy(m_JA.job_start_time, asctime(t), sizeof(m_JA.job_start_time)-1);    // returns Fri Jun  5 08:12:16 2009
+-    snprintf(m_JA.job_start_time+19, sizeof(m_JA.job_start_time) - 20, ":%d %d", tb.millitm, t->tm_year + 1900); // add milliseconds
++    snprintf(m_JA.job_start_time+19, sizeof(m_JA.job_start_time) - 20, ":%d %d", tv.tv_usec / 1000, t->tm_year + 1900); // add milliseconds
+ 
+     getLogLevel();
+     m_JA.job_id = atoi(argv[1]);

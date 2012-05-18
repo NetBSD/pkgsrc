@@ -1,0 +1,92 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
+
+# Conform to autoconf's standard variable usage, making it easier
+# to install on pkgsrc platforms
+
+# reported upstream as https://bugs.launchpad.net/hplip/+bug/726218
+
+--- Makefile.am.orig	2012-04-10 08:35:14.000000000 +0000
++++ Makefile.am
+@@ -91,7 +91,7 @@ hp_mkuri_LDADD = -ldl libhpmud.la
+ hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
+ 
+ # hpmud.rules
+-rulesdir = /etc/udev/rules.d
++rulesdir = $(sysconfdir)/udev/rules.d
+ dist_rules_DATA = data/rules/56-hpmud_support.rules
+ dist_rules_DATA += data/rules/86-hpmud_plugin.rules
+ dist_rules_DATA += data/rules/56-hpmud_add_printer.rules
+@@ -100,11 +100,11 @@ dist_rules_DATA += data/rules/40-hplip.r
+ else
+ dist_rules_DATA += data/rules/55-hpmud.rules
+ endif
+-halpredir = /usr/share/hal/fdi/preprobe/10osvendor
++halpredir = $(datadir)/hal/fdi/preprobe/10osvendor
+ dist_halpre_DATA = data/rules/20-hplip-devices.fdi
+ 
+ # hplip.conf
+-hplip_confdir = /etc/hp
++hplip_confdir = $(sysconfdir)/hp
+ hplip_conf_DATA = hplip.conf
+ 
+ #pstotiff filter
+@@ -112,12 +112,12 @@ pstotiffdir = $(cupsfilterdir)
+ pstotiff_SCRIPTS = fax/filters/pstotiff
+ 
+ # hplip.state
+-hplip_statedir = /var/lib/hp
++hplip_statedir = $(localstatedir)/lib/hp
+ dist_hplip_state_DATA = 
+ #dist_hplip_state_DATA = hplip.state
+ 
+ # Log Files
+-hplip_Logdir=/var/log/hp
++hplip_Logdir=$(localstatedir)/log/hp
+ 
+ if FULL_BUILD
+ 
+@@ -326,9 +326,9 @@ endif
+ 
+ # PolicyKit
+ if POLICYKIT_INSTALL
+-policykit_dbus_etcdir = /etc/dbus-1/system.d
++policykit_dbus_etcdir = $(sysconfdir)/dbus-1/system.d
+ dist_policykit_dbus_etc_DATA = data/policykit/com.hp.hplip.conf
+-policykit_dbus_sharedir = /usr/share/dbus-1/system-services
++policykit_dbus_sharedir = $(datadir)/dbus-1/system-services
+ dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
+ policykit_policydir = $(policykit_dir)
+ dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
+@@ -509,26 +509,22 @@ endif
+ install-dist_hplip_LogDATA:
+ if FULL_BUILD
+ 	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
+-	chgrp "lp" -R $(DESTDIR)$(hplip_Logdir)
+-	chmod 774 $(DESTDIR)$(hplip_Logdir)
+ endif	#FULL_BUILD
+ if HPLIP_BUILD
+ 	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
+-	chgrp "lp" -R $(DESTDIR)$(hplip_Logdir)
+-	chmod 774 $(DESTDIR)$(hplip_Logdir)
+ endif	#FULL_BUILD
+ 
+ install-data-hook:
+ if HPLIP_BUILD
+ #	   If scanner build, add hpaio entry to sane dll.conf.
+ 	if [ "$(scan_build)" = "yes" ]; then \
+-	   $(mkinstalldirs) $(DESTDIR)/etc/sane.d; \
+-	   if [ ! -f $(DESTDIR)/etc/sane.d/dll.conf ]; then \
+-		  touch $(DESTDIR)/etc/sane.d/dll.conf; \
++	   $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/sane.d; \
++	   if [ ! -f $(DESTDIR)$(sysconfdir)/sane.d/dll.conf ]; then \
++		  touch $(DESTDIR)$(sysconfdir)/sane.d/dll.conf; \
+ 	   fi; \
+-	   if ! grep ^hpaio $(DESTDIR)/etc/sane.d/dll.conf >/dev/null 2>/dev/null ; then \
+-		  echo "Adding hpaio entry to /etc/sane.d/dll.conf." ; \
+-		  echo hpaio >>$(DESTDIR)/etc/sane.d/dll.conf ; \
++	   if ! grep ^hpaio $(DESTDIR)$(sysconfdir)/sane.d/dll.conf >/dev/null 2>/dev/null ; then \
++		  echo "Adding hpaio entry to $(sysconfdir)/sane.d/dll.conf." ; \
++		  echo hpaio >>$(DESTDIR)$(sysconfdir)/sane.d/dll.conf ; \
+ 	   fi \
+ 	fi
+ if FULL_BUILD
