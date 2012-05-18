@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1548 2012/05/18 09:10:36 he Exp $
+$NetBSD: CHANGES-2012,v 1.1549 2012/05/18 11:12:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/hplip version 3.12.4 [schnoebe 2012-05-18]
 	Updated devel/cvsd to 1.0.23 [schnoebe 2012-08-18]
 	Updated databases/p5-DBD-postgresql to 2.19.2 [he 2012-05-18]
+	Updated inputmethod/ibus to 1.4.1nb2 [obache 2012-05-18]
