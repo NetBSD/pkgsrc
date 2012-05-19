@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/08 15:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/19 15:03:56 marino Exp $
 #
 
 DISTNAME=	UltimaIV
@@ -23,6 +23,12 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+# Despite the fetch message, UltimaIV.zip is no longer available at
+# the indicated site, www.ultimaforver.com
+# http://leaf.dragonflybsd.org/mailarchive/users/2012-05/msg00066.html
+NOT_FOR_PLATFORM+=	DragonFly-*-*
+
 FETCH_MESSAGE+=	"The file ${DISTNAME}${EXTRACT_SUFX} must be downloaded manually from:"
 FETCH_MESSAGE+=	"	${HOMEPAGE}"
 FETCH_MESSAGE+=	"and saved to:"
