@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/01/27 20:12:53 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2012/05/19 15:29:09 marino Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -19,6 +19,10 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+# Despite the fetch message, source is no longer available at Adaptec
+# http://leaf.dragonflybsd.org/mailarchive/users/2012-05/msg00066.html
+NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 BUILD_DEPENDS+=		rpm>=2.5.4:../../misc/rpm
 
