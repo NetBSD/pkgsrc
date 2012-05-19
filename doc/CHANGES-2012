@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1550 2012/05/18 20:57:04 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1551 2012/05/19 10:55:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2441,3 +2441,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DBD-postgresql to 2.19.2 [he 2012-05-18]
 	Updated inputmethod/ibus to 1.4.1nb2 [obache 2012-05-18]
 	Updated www/apache24 to 2.4.2nb1 [ryoon 2012-05-18]
+	Updated pkgtools/pkg_comp to 1.37 [jmmv 2012-05-19]
