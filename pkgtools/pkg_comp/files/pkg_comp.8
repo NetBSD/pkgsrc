@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.36 2012/02/27 22:42:27 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.37 2012/05/19 10:54:39 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd February 27, 2012
+.Dd May 11, 2012
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -234,6 +234,16 @@ Each name must be the full package name, including the tgz suffix.
 Packages are searched inside
 .Pa $REAL_PACKAGES/All .
 Defaults to nothing.
+.It GENERATE_PKG_SUMMARY
+If set to
+.Sq yes ,
+generate a new
+.Pa $REAL_PACKAGES/pkg_summary.gz
+file at the end of every package build by both the
+.Sq auto
+and
+.Sq build
+targets.
 .It LOCALBASE
 Where binary packages get installed.
 Defaults to
