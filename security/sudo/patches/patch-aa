@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.28 2011/09/18 14:18:25 ryoon Exp $
+$NetBSD: patch-aa,v 1.28.6.1 2012/05/19 10:42:03 tron Exp $
 
 * Fix libtools's link option.
 * Prevent to install sudoers files and directory.
 * Use standard instal(8) option instead of shell wrapper.
 * Don't setuid here.
 
---- Makefile.in.orig	2011-08-13 17:29:18 +0000
+--- Makefile.in.orig	2012-02-10 17:52:13.000000000 +0000
 +++ Makefile.in
 @@ -222,7 +222,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
  	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFS) $(OPTIONS) $(srcdir)/sudo_noexec.c
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.28 2011/09/18 14:18:25 ryoon Exp $
  
  # Uncomment the following if you want "make distclean" to clean the parser
  @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h getdate
-@@ -543,43 +543,43 @@ pre-install:
+@@ -545,44 +545,44 @@ pre-install:
  	    ./visudo -c -f $(DESTDIR)$(sudoersdir)/sudoers; \
  	fi
  
@@ -27,9 +27,11 @@ $NetBSD: patch-aa,v 1.28 2011/09/18 14:18:25 ryoon Exp $
  	$(SHELL) $(srcdir)/mkinstalldirs $(DESTDIR)$(sudodir) \
  	    $(DESTDIR)$(visudodir) $(DESTDIR)$(noexecdir) \
 -	    $(DESTDIR)$(sudoersdir) $(DESTDIR)$(docdir) \
-+	    $(DESTDIR)$(docdir) \
- 	    $(DESTDIR)$(mandirsu) $(DESTDIR)$(mandirform)
- 	$(SHELL) $(srcdir)/mkinstalldirs -m 0700 $(DESTDIR)$(timedir)
++	    $(DESTDIR)$(sudoersdir) \
+ 	    $(DESTDIR)$(mandirsu) $(DESTDIR)$(mandirform) \
+ 	    `echo $(DESTDIR)$(timedir)|sed 's,/[^/]*$$,,'`
+-	$(INSTALL) -d -O $(install_uid) -G $(install_gid) -m 0700 $(DESTDIR)$(timedir)
++	$(INSTALL) -d -m 0700 $(DESTDIR)$(timedir)
  
  install-binaries: install-dirs $(PROGS)
 -	$(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 04111 sudo $(DESTDIR)$(sudodir)/sudo
@@ -44,31 +46,31 @@ $NetBSD: patch-aa,v 1.28 2011/09/18 14:18:25 ryoon Exp $
 +	if [ -f sesh ]; then $(INSTALL) sesh $(DESTDIR)$(libexecdir)/sesh; fi
  
  install-noexec: install-dirs libsudo_noexec.la
--	if [ -f .libs/lib$(noexecfile) ]; then $(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -M 0755 .libs/lib$(noexecfile) $(DESTDIR)$(noexecdir)/$(noexecfile); fi
+-	if [ -f .libs/lib$(noexecfile) ]; then $(INSTALL) -b~ -O $(install_uid) -G $(install_gid) -m 0755 .libs/lib$(noexecfile) $(DESTDIR)$(noexecdir)/$(noexecfile); fi
 +	if [ -f .libs/lib$(noexecfile) ]; then $(INSTALL) -m 0755 .libs/lib$(noexecfile) $(DESTDIR)$(noexecdir)/$(noexecfile); fi
  
  install-sudoers: install-dirs
--	$(INSTALL) -d -O $(sudoers_uid) -G $(sudoers_gid) -M 0750 \
-+	$(INSTALL) -d -o $(sudoers_uid) -g $(sudoers_gid) -m 0750 \
+-	$(INSTALL) -d -O $(sudoers_uid) -G $(sudoers_gid) -m 0750 \
++	$(INSTALL) -d -m 0750 \
  	    $(DESTDIR)$(sudoersdir)/sudoers.d
  	test -f $(DESTDIR)$(sudoersdir)/sudoers || \
--	    $(INSTALL) -O $(sudoers_uid) -G $(sudoers_gid) -M $(sudoers_mode) \
-+	    $(INSTALL) -o $(sudoers_uid) -g $(sudoers_gid) -m $(sudoers_mode) \
+-	    $(INSTALL) -O $(sudoers_uid) -G $(sudoers_gid) -m $(sudoers_mode) \
++	    $(INSTALL) -m $(sudoers_mode) \
  		sudoers $(DESTDIR)$(sudoersdir)/sudoers
  
  install-doc: install-dirs ChangeLog
--	(cd $(srcdir) && for f in ChangeLog HISTORY LICENSE NEWS README TROUBLESHOOTING UPGRADE sample.*; do $(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 $$f $(DESTDIR)$(docdir); done)
--	@LDAP@(cd $(srcdir) && for f in README.LDAP schema.* sudoers2ldif; do $(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 $$f $(DESTDIR)$(docdir); done)
--	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
+-	(cd $(srcdir) && for f in ChangeLog HISTORY LICENSE NEWS README TROUBLESHOOTING UPGRADE sample.*; do $(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 $$f $(DESTDIR)$(docdir); done)
+-	@LDAP@(cd $(srcdir) && for f in README.LDAP schema.* sudoers2ldif; do $(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 $$f $(DESTDIR)$(docdir); done)
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
 +	(cd $(srcdir) && for f in ChangeLog HISTORY LICENSE NEWS README TROUBLESHOOTING UPGRADE sample.*; do $(INSTALL) -m 0444 $$f $(DESTDIR)$(docdir); done)
 +	@LDAP@(cd $(srcdir) && for f in README.LDAP schema.* sudoers2ldif; do $(INSTALL) -m 0444 $$f $(DESTDIR)$(docdir); done)
 +	$(INSTALL) -m 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
  	@rm -f $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
  	ln $(DESTDIR)$(mandirsu)/sudo.$(mansectsu) $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
--	@REPLAY@$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoreplay.$(mantype) $(DESTDIR)$(mandirsu)/sudoreplay.$(mansectsu)
--	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
--	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
--	@LDAP@$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoers.ldap.$(mantype) $(DESTDIR)$(mandirform)/sudoers.ldap.$(mansectform)
+-	@REPLAY@$(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 @mansrcdir@/sudoreplay.$(mantype) $(DESTDIR)$(mandirsu)/sudoreplay.$(mansectsu)
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
+-	@LDAP@$(INSTALL) -O $(install_uid) -G $(install_gid) -m 0444 @mansrcdir@/sudoers.ldap.$(mantype) $(DESTDIR)$(mandirform)/sudoers.ldap.$(mansectform)
 +	@REPLAY@$(INSTALL) -m 0444 @mansrcdir@/sudoreplay.$(mantype) $(DESTDIR)$(mandirsu)/sudoreplay.$(mansectsu)
 +	$(INSTALL) -m 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
 +	$(INSTALL) -m 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
