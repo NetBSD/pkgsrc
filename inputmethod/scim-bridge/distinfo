@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/11/13 08:04:46 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/05/19 06:55:03 obache Exp $
 
 SHA1 (scim-bridge-0.4.16.tar.gz) = 6a7a714592dbecc9a1f44794f37319bafe2bdfae
 RMD160 (scim-bridge-0.4.16.tar.gz) = 37aed056fb880358b013f104f08b2e58c3de4188
@@ -8,5 +8,5 @@ SHA1 (patch-ab) = 7c103b3da298e8ed72e84c239a3fc4617a647ce5
 SHA1 (patch-ac) = e7dd5f64e3fcd9cdc03199d041fefb09fce9ff8f
 SHA1 (patch-ad) = cc87a5c24af8c066482d164b2805602ed90e2acb
 SHA1 (patch-ae) = 2e8f264da95760b90d40355202fe21b81e0f12c8
-SHA1 (patch-af) = 3db943f7180838a475d4a0c2fca9c52d6dc3cd43
+SHA1 (patch-af) = ebd541765c9c1b1105f05d6f1254c38bdc442689
 SHA1 (patch-ag) = 45915bc63fd6228fe2033336fe3313f7ce639ef6
