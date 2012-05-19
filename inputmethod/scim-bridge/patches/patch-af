@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2009/11/26 12:30:12 obache Exp $
+$NetBSD: patch-af,v 1.2 2012/05/19 06:55:04 obache Exp $
 
---- agent/scim-bridge-agent-application.cpp.orig	2009-01-18 02:04:20.000000000 +0900
+--- agent/scim-bridge-agent-application.cpp.orig	2009-01-17 17:04:20.000000000 +0000
 +++ agent/scim-bridge-agent-application.cpp
-@@ -60,7 +60,7 @@ int main (int argc, char *argv[])
+@@ -60,12 +60,12 @@ int main (int argc, char *argv[])
          {0, 0, NULL, 0}
      };
  
@@ -11,3 +11,9 @@ $NetBSD: patch-af,v 1.1 2009/11/26 12:30:12 obache Exp $
  
      unsigned int tmp_uint;
  
+     int option = 0;
+-    while (option != EOF) {
++    while (option != -1) {
+         option = getopt_long (argc, argv, short_options, long_options, NULL);
+         switch (option) {
+             case 'v':
