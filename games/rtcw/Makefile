@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/05/19 14:21:59 marino Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/wolf/linux/
+MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/wolf/linux/old/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
