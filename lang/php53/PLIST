@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/20 13:55:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/19 09:51:34 marino Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -236,3 +236,4 @@ share/examples/php/php.ini-development
 share/examples/php/php.ini-production
 share/php/php.gif
 @pkgdir include/php/include
+@pkgdir ${PHPEXTDIR}

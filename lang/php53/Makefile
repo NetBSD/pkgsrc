@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/05/09 06:52:51 taca Exp $
+# $NetBSD: Makefile,v 1.28 2012/05/19 09:51:34 marino Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 CONF_FILES=		${EGDIR}/php.ini-production ${PKG_SYSCONFDIR}/php.ini
-OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
+PLIST_SUBST+=		PHPEXTDIR="${PHP_EXTENSION_DIR}"
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
@@ -36,7 +36,7 @@ SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
 SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
-INSTALLATION_DIRS+=	${CGIDIR} ${EGDIR} share/php
+INSTALLATION_DIRS+=	${CGIDIR} ${EGDIR} share/php ${PHP_EXTENSION_DIR}
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
