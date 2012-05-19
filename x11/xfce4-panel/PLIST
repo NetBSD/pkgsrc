@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/11/29 22:17:31 snj Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/05/19 00:32:39 marino Exp $
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
 include/xfce4/libxfce4panel/libxfce4panel-enum-types.h
@@ -150,3 +150,5 @@ share/xfce4/panel-plugins/showdesktop.desktop
 share/xfce4/panel-plugins/systray.desktop
 share/xfce4/panel-plugins/tasklist.desktop
 share/xfce4/panel-plugins/windowlist.desktop
+@pkgdir libexec/xfce4/panel-plugins
+@pkgdir libexec/xfce4
