@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.40 2012/02/27 22:42:27 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.41 2012/05/19 10:54:40 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -51,7 +51,7 @@ _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
                 NETBSD_RELEASE MAKEROOT_HOOKS MOUNT_HOOKS UMOUNT_HOOKS \
                 SYNC_UMOUNT AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES \
-                REAL_CCACHE LIBKVER_STANDALONE_PREFIX"
+                REAL_CCACHE LIBKVER_STANDALONE_PREFIX GENERATE_PKG_SUMMARY"
 
 _BUILD_RESUME=
 
@@ -126,6 +126,7 @@ env_setdefaults()
     : ${UMOUNT_HOOKS:=}
     : ${SYNC_UMOUNT:=no}
     : ${REAL_CCACHE:=}
+    : ${GENERATE_PKG_SUMMARY:=yes}
 
     if [ -n "${MAKE_PACKAGES}" ]; then
         warn "MAKE_PACKAGES is deprecated; use {AUTO,BUILD}_PACKAGES instead."
@@ -688,6 +689,18 @@ pkg_auto()
     pkg_removeroot
 }
 
+# generate_pkg_summary directory
+#
+#    Generates a pkg_summary.gz file in the specified directory.
+generate_pkg_summary()
+{
+    local directory="${1}"; shift
+
+    echo "PKG_COMP ==> Generating pkg_summary.tgz"
+    for pkg in "${directory}"/*.tgz; do pkg_info -X "${pkg}"; done \
+        | gzip -c >"${directory}"/pkg_summary.gz
+}
+
 # ----------------------------------------------------------------------
 # build target
 # ----------------------------------------------------------------------
@@ -752,6 +765,9 @@ EOF
         for p in $failed; do
             echo "    $p"
         done
+    fi
+    if [ "${GENERATE_PKG_SUMMARY}" = yes ]; then
+        generate_pkg_summary "${REAL_PACKAGES}/All"
     fi
 }
 
