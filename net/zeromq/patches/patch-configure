@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2012/05/20 21:07:25 marino Exp $
+
+--- configure.orig	2011-12-18 23:22:41.000000000 +0000
++++ configure
+@@ -17110,6 +17110,14 @@ $as_echo "#define ZMQ_FORCE_MUTEXES 1" >
+ 
+         fi
+         ;;
++    *dragonfly*)
++        # Define on DragonFly to enable all library features
++        CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
++
++$as_echo "#define ZMQ_HAVE_FREEBSD 1" >>confdefs.h
++$as_echo "#define ZMQ_DRAGONFLY 1" >>confdefs.h
++
++        ;;
+     *freebsd*)
+         # Define on FreeBSD to enable all library features
+         CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
