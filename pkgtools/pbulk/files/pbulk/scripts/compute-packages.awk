@@ -1,7 +1,7 @@
 #!@AWK@ -f
-# $NetBSD: compute-packages.awk,v 1.3 2008/09/14 18:59:02 joerg Exp $
+# $NetBSD: compute-packages.awk,v 1.4 2012/05/20 20:12:02 joerg Exp $
 #
-# Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+# Copyright (c) 2007, 2012 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
 #
 # This code was developed as part of Google's Summer of Code 2007 program.
@@ -70,7 +70,7 @@ BEGIN {
 		split(depends[pkg], depend_list, "[ \t]+")
 		for (dep in depend_list) {
 			cur_dep = depend_list[dep]
-			reverse_depends[cur_dep] = pkg " " cur_dep
+			reverse_depends[cur_dep] = pkg " " reverse_depends[cur_dep]
 		}
 	}
 
