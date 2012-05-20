@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11081 2012/05/18 09:20:49 he Exp $
+$NetBSD: TODO,v 1.11082 2012/05/20 06:43:25 tsutsui Exp $
 
 Suggested new packages
 ======================
@@ -825,7 +825,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
-	o jwm-2.1.0
 	o kadu-0.11.1
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
