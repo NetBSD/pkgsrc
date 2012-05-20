@@ -1,0 +1,13 @@
+$NetBSD: patch-bin_tests_system_Makefile.in,v 1.1 2012/05/20 13:22:40 marino Exp $
+
+--- bin/tests/system/Makefile.in.orig	2012-03-22 19:20:00.000000000 +0000
++++ bin/tests/system/Makefile.in
+@@ -21,7 +21,7 @@ top_srcdir =	@top_srcdir@
+ 
+ @BIND9_MAKE_INCLUDES@
+ 
+-SUBDIRS =	dlzexternal filter-aaaa lwresd rpz tkey tsiggss
++SUBDIRS =	filter-aaaa lwresd rpz tkey tsiggss
+ TARGETS =
+ 
+ @BIND9_MAKE_RULES@
