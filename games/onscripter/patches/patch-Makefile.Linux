@@ -1,34 +1,39 @@
-$NetBSD: patch-Makefile.Linux,v 1.2 2011/04/29 17:02:27 ryoon Exp $
+$NetBSD: patch-Makefile.Linux,v 1.3 2012/05/20 11:47:51 tsutsui Exp $
 
---- Makefile.Linux.orig	2011-04-18 01:51:34.000000000 +0000
+- config with OggVorbis and Lua + fontconfig but without avifile
+- use appropriate pkg-config like tools for incs and libs
+- replace tools definitions with pkgsrc ones
+
+--- Makefile.Linux.orig	2012-05-20 04:51:31.000000000 +0000
 +++ Makefile.Linux
-@@ -8,11 +8,15 @@
+@@ -8,11 +8,16 @@
  #LIBS = `sdl-config --libs` `smpeg-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm
- #DEFS = -DLINUX
+ #DEFS = -DLINUX -DUSE_CDROM 
  
 -INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` -I/usr/include/lua5.1
 +#INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` -I/usr/include/lua5.1
  # with OggVorbis and AVI
 -LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile -llua5.1
 +#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile -llua5.1
- #DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS
--DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
-+#DEFS = -DLINUX -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
+ #DEFS = -DLINUX -DUSE_CDROM -DUSE_AVIFILE -DUSE_OGG_VORBIS
+-DEFS = -DLINUX -DUSE_CDROM -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
++#DEFS = -DLINUX -DUSE_CDROM -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
++
 +# with OggVorbis and Lua + fontconfig
 +INCS = `sdl-config --cflags` `smpeg-config --cflags` `pkg-config --cflags SDL_ttf` `pkg-config --cflags SDL_image` `pkg-config --cflags SDL_mixer` `pkg-config --cflags ogg` `pkg-config --cflags vorbis` `pkg-config --cflags vorbisfile` `pkg-config --cflags lua` `pkg-config --cflags fontconfig`
-+LIBS = `sdl-config --libs` `smpeg-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm `pkg-config --libs ogg` `pkg-config --libs vorbis` `pkg-config --libs vorbisfile` `pkg-config --libs lua` `pkg-config --libs fontconfig`
-+DEFS = -DLINUX -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
++LIBS = `sdl-config --libs` `smpeg-config --libs`  `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm `pkg-config --libs ogg` `pkg-config --libs vorbis` `pkg-config --libs vorbisfile` `pkg-config --libs lua` `pkg-config --libs fontconfig`
++DEFS = -DLINUX -DUSE_CDROM -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
  
  # with Integer OggVorbis and AVI in PDA size
  #LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -lvorbisidec
-@@ -29,11 +33,11 @@ OBJSUFFIX = .o
+@@ -29,11 +34,11 @@ OBJSUFFIX = .o
  .SUFFIXES: $(OBJSUFFIX) .cpp .h
  
  # for GNU g++
 -CC = g++ 
--LD = g++ -o 
+-LD = g++ -o
 +CC = @CXX@
-+LD = @CXX@ -o 
++LD = @CXX@ -o
  
  #CFLAGS = -g -Wall -pipe -c $(INCS) $(DEFS)
 -CFLAGS = -O3 -Wall -fomit-frame-pointer -pipe -c $(INCS) $(DEFS)
@@ -36,7 +41,7 @@ $NetBSD: patch-Makefile.Linux,v 1.2 2011/04/29 17:02:27 ryoon Exp $
  
  # for GCC on PowerPC specfied
  #CC = powerpc-unknown-linux-gnu-g++
-@@ -47,11 +51,12 @@ CFLAGS = -O3 -Wall -fomit-frame-pointer 
+@@ -47,11 +52,12 @@ CFLAGS = -O3 -Wall -fomit-frame-pointer 
  
  #CFLAGS = -O3 -tpp6 -xK -c $(INCS) $(DEFS)
  
