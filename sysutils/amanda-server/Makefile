@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/01/22 21:10:18 hauke Exp $
+# $NetBSD: Makefile,v 1.48 2012/05/20 11:21:34 sbd Exp $
 
 PKGNAME=		amanda-server-${VERS}
 PKGREVISION=		2
@@ -8,7 +8,7 @@ COMMENT=		Server part of Amanda, a network backup system
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-USE_TOOLS+=		awk:run perl:run
+USE_TOOLS+=		awk:run perl:run mail:run
 
 DEPENDS+=               p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
@@ -24,6 +24,7 @@ CONFIGURE_ENV+=		ac_cv_lib_termcap_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
+CONFIGURE_ENV+=		MAILER=${TOOLS_PATH.mail}
 
 # post-install:
 # 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amanda
