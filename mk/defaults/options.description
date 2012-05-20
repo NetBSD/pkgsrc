@@ -157,6 +157,7 @@ floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
+fribidi			Enable BIDI support using fribidi.
 ftp			Enable File Transfer Protocol (FTP) support.
 fts			Enable full-text searching.
 gcc-ada			Build the gcc Ada frontend and libraries.
