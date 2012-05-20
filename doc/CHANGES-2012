@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1556 2012/05/20 11:50:12 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.1557 2012/05/20 13:38:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/SDL_ttf to 2.0.11nb1 [ryoon 2012-05-20]
 	Updated fonts/vlgothic-ttf to 20120325 [ryoon 2012-05-20]
 	Updated games/onscripter to 20120520 [tsutsui 2012-05-20]
+	Updated audio/libaudiofile to 0.3.4 [wiz 2012-05-20]
