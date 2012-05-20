@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/09/22 09:33:41 obache Exp $
+# $NetBSD: options.mk,v 1.5 2012/05/20 06:07:31 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
 PKG_SUPPORTED_OPTIONS=	m17nlib uim xft2
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		m17nlib uim
+PLIST_VARS+=		m17nlib uim xft2
 
 .if !empty(PKG_OPTIONS:Mm17nlib)
 .include "../../devel/m17n-lib/buildlink3.mk"
@@ -23,4 +23,5 @@ LICENSE+=		AND gnu-lgpl-v2
 
 .if !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=	--with-type-engines=xft
+PLIST.xft2=		yes
 .endif

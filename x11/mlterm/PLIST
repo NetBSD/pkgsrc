@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.23 2011/05/11 14:50:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/05/20 06:07:31 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
 bin/mlterm
 lib/libkik.la
 lib/libmkf.la
+lib/libmlterm_core.la
 lib/mkf/libmkf_8bits.la
 lib/mkf/libmkf_jajp.la
 lib/mkf/libmkf_kokr.la
@@ -13,14 +14,15 @@ lib/mlterm/libathena.la
 lib/mlterm/libim-kbd.la
 ${PLIST.m17nlib}lib/mlterm/libim-m17nlib.la
 ${PLIST.uim}lib/mlterm/libim-uim.la
+${PLIST.xft2}lib/mlterm/libtype_xft.la
 lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
 lib/mlterm/libnext.la
 lib/mlterm/libsample.la
 lib/mlterm/libsample2.la
-libexec/mlconfig
-libexec/mlimgloader
-libexec/mlterm-menu
+libexec/mlterm/mlconfig
+libexec/mlterm/mlimgloader
+libexec/mlterm/mlterm-menu
 man/man1/mlclient.1
 man/man1/mlterm.1
 share/examples/mlterm/aafont
