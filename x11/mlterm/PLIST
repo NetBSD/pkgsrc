@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/05/20 06:07:31 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.25 2012/05/20 13:59:30 obache Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -11,9 +11,23 @@ lib/mkf/libmkf_jajp.la
 lib/mkf/libmkf_kokr.la
 lib/mkf/libmkf_zh.la
 lib/mlterm/libathena.la
+${PLIST.ind}lib/mlterm/libctl_iscii.la
 lib/mlterm/libim-kbd.la
 ${PLIST.m17nlib}lib/mlterm/libim-m17nlib.la
 ${PLIST.uim}lib/mlterm/libim-uim.la
+${PLIST.ind}lib/mlterm/libind_assamese.la
+${PLIST.ind}lib/mlterm/libind_bengali.la
+${PLIST.ind}lib/mlterm/libind_gujarati.la
+${PLIST.ind}lib/mlterm/libind_hindi.la
+${PLIST.ind}lib/mlterm/libind_iitkeyb.la
+${PLIST.ind}lib/mlterm/libind_inscript.la
+${PLIST.ind}lib/mlterm/libind_kannada.la
+${PLIST.ind}lib/mlterm/libind_malayalam.la
+${PLIST.ind}lib/mlterm/libind_oriya.la
+${PLIST.ind}lib/mlterm/libind_punjabi.la
+${PLIST.ind}lib/mlterm/libind_roman.la
+${PLIST.ind}lib/mlterm/libind_tamil.la
+${PLIST.ind}lib/mlterm/libind_telugu.la
 ${PLIST.xft2}lib/mlterm/libtype_xft.la
 lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
