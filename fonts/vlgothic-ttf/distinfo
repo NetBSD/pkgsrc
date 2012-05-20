@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2012/03/03 21:57:41 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2012/05/20 10:25:53 ryoon Exp $
 
-SHA1 (VLGothic-20120130.tar.bz2) = 159e8894e17fc5cde5de18d1b4e6e02b9bc6cce6
-RMD160 (VLGothic-20120130.tar.bz2) = d9938583b475e09c87cebb63266968fddb486f02
-Size (VLGothic-20120130.tar.bz2) = 4851009 bytes
+SHA1 (VLGothic-20120325.tar.bz2) = d9e3b6b8fc8b63748dd846c1b74dd1f858f94de4
+RMD160 (VLGothic-20120325.tar.bz2) = 3312ffff7ae27ccff516490b18b82a0066fc1218
+Size (VLGothic-20120325.tar.bz2) = 4804214 bytes
