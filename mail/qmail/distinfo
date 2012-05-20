@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2012/03/12 03:53:55 sbd Exp $
+$NetBSD: distinfo,v 1.22 2012/05/20 08:48:56 marino Exp $
 
 SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
 RMD160 (qmail-1.03.tar.gz) = b851f273f1d365d38efd949b1efcf35768ffa30f
@@ -33,3 +33,4 @@ Size (qmail-smtpd-viruscan-logging.patch) = 2157 bytes
 SHA1 (patch-aa) = 2c8c50889cbc7da8c51bf6d44c0b31f5f0853896
 SHA1 (patch-ab) = 15e6466c655058664cb660e5e12232bf45010814
 SHA1 (patch-hier.c) = 3c3b6c9404ea2a852b89481dc67bf4ae4d869570
+SHA1 (patch-spawn.c) = 8459ddb4aac3ee7c9f5324fd110e744f06f6b5fb
