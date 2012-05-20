@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1553 2012/05/20 06:43:26 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.1554 2012/05/20 10:07:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkg_comp to 1.37 [jmmv 2012-05-19]
 	Updated x11/mlterm to 3.1.2 [tsutsui 2012-05-20]
 	Updated wm/jwm to 2.1.0 [tsutsui 2012-05-20]
+	Updated devel/SDL_ttf to 2.0.11nb1 [ryoon 2012-05-20]
