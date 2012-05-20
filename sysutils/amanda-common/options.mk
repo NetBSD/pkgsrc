@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/05/20 11:13:35 sbd Exp $
+# $NetBSD: options.mk,v 1.3 2012/05/20 11:14:33 sbd Exp $
 
 # Since amanda's ipv6 usage is broken, turn it off by default.
 
@@ -23,4 +23,11 @@ CONFIGURE_ARGS+=        --with-fqdn
 
 .if !empty(PKG_OPTIONS:Mamanda-ssh)
 CONFIGURE_ARGS+=        --with-ssh-security
+
+.  if !exists(/usr/bin/ssh)
+DEPENDS+=		openssh-[0-9]*:../../security/openssh
+FIND_PREFIX:= 		SSHPREFIX=openssh
+.include "../../mk/find-prefix.mk"
+CONFIGURE_ENV+=		ac_cv_path_SSH=${SSHPREFIX}/bin/ssh
+.  endif
 .endif
