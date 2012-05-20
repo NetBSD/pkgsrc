@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2012/05/08 23:44:31 abs Exp $
+$NetBSD: distinfo,v 1.70 2012/05/20 02:02:36 sbd Exp $
 
 SHA1 (firefox-12.0.source.tar.bz2) = 0177185e54b7d63dc36bd5bd5c80ba6afd52e199
 RMD160 (firefox-12.0.source.tar.bz2) = d83eb97543fc09f84b30a46ba8217c17f30bd572
@@ -45,7 +45,7 @@ SHA1 (patch-ipc_chromium_src_base_message__loop.cc) = e13494489a76369638f83b3a06
 SHA1 (patch-ipc_chromium_src_base_platform__file__posix.cc) = f25a4e2d0d97b212e982598a71be6360011c152f
 SHA1 (patch-ipc_chromium_src_base_platform__thread.h) = 16cee55721718669e87de5a59fab923683febbcd
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 0b75eb1324c41b8e00d576f2632f852f593a4eec
-SHA1 (patch-ipc_chromium_src_base_process__util.h) = 66585119cf29e2b69ad8e3093f44afdcf0fde59b
+SHA1 (patch-ipc_chromium_src_base_process__util.h) = 675ad50bf1a09d7928b426fab6e34beeccc541e7
 SHA1 (patch-ipc_chromium_src_base_process__util__bsd.cc) = 7c04ac831689f454e5bb5cde27595ac1f21f08ba
 SHA1 (patch-ipc_chromium_src_base_process__util__posix.cc) = e72765ffa99b21efaa3df7863ce253e3fade28d0
 SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = 54fd1aa5b4d8f7d4fc1ccb8a3437e15b7732b33d
@@ -73,7 +73,7 @@ SHA1 (patch-mi) = 1a031ea9be110822995094c84f77c3c68f5c2a39
 SHA1 (patch-mj) = 197fab0e00256dedc8a5f181ee0d0d6e42d8177f
 SHA1 (patch-mk) = 5020178423260e37aa736f4fa4d5ec46ed48b7ea
 SHA1 (patch-ml) = ffec4dcae4a4e3683eebfc3e8aaafe15fa27443e
-SHA1 (patch-mm) = 59a2c116f74db483cf1f1bbc003da541b5d1ee60
+SHA1 (patch-mm) = a8051b564f82602d0c8324ded959188ec1fd7f3e
 SHA1 (patch-mn) = a59f31b58547657b96a45a2753aab93866940203
 SHA1 (patch-mp) = 18d2490b6bcd4f017cbf2734a920c3830bfe8856
 SHA1 (patch-netwerk_protocol_http_HttpChannelParent.cpp) = d6b370377d5c397eda9b79bf2093066e9af9a35b
