@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/16 19:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/21 06:56:04 dholland Exp $
 #
 
 DISTNAME=	trueskill-0.1.3
@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
