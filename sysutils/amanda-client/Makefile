@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/06/28 10:09:26 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2012/05/21 04:27:09 sbd Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
@@ -12,6 +12,11 @@ PKG_DESTDIR_SUPPORT=	destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		awk:run perl:run
 
+PKG_SUPPORTED_OPTIONS+=		amanda-smb amanda-dump-snap
+
+PKG_OPTIONS_LEGACY_VARS+=	AMANDA_SMB:amanda-smb
+PKG_OPTIONS_LEGACY_VARS+=	AMANDA_DUMP_SNAP:amanda-dump-snap
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 .include "../../sysutils/amanda-common/buildlink3.mk"
@@ -19,7 +24,14 @@ USE_TOOLS+=		awk:run perl:run
 
 CONFIGURE_ARGS+=	--without-server
 
-BUILD_DEFS+=		AMANDA_SMB AMANDA_DUMP_SNAP
+.if !empty(PKG_OPTIONS:Mamanda-smb)
+CONFIGURE_ARGS+=	--with-smbclient
+DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
+.endif
+
+.if !empty(PKG_OPTIONS:Mamanda-dump-snap)
+CONFIGURE_ARGS+=	--with-dump-use-snapshot --with-rundump
+.endif
 
 # Prevent configure script from finding unnecessary libraries.  We'll patch
 # the amrecover Makefile to add the readline libraries as it's the only
@@ -30,14 +42,5 @@ CONFIGURE_ENV+=		ac_cv_lib_termcap_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
-
-.if defined(AMANDA_SMB)
-CONFIGURE_ARGS+=	--with-smbclient
-DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
-.endif
-
-.if defined(AMANDA_DUMP_SNAP)
-CONFIGURE_ARGS+=	--with-dump-use-snapshot --with-rundump
-.endif
 
 .include "../../mk/bsd.pkg.mk"
