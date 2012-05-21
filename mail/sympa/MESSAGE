@@ -1,15 +1,24 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2008/04/27 17:06:40 bouyer Exp $
+$NetBSD: MESSAGE,v 1.3.36.1 2012/05/21 15:51:48 tron Exp $
 
-Run ${SYMPA_BIN}/sympa_wizard.pl -c sympa.conf
-and ${SYMPA_BIN}/sympa_wizard.pl -c wwsympa.conf
-to create default configuration files in ${PKG_SYSCONFDIR}.
-
-Then re-run ${SYMPA_BIN}/sympa_wizard.pl
+Run ${SYMPA_BIN}/sympa_wizard.pl
 for interactive configuration.
 
 If you are upgrading from a previous version please consult
 ${PREFIX}/share/doc/sympa/NEWS
-for incompatible changes, and run '${SYMPA_BIN}/sympa.pl --upgrade'
+for incompatible changes, and run:
+${SYMPA_BIN}/sympa.pl --upgrade
+
+If upgrading from sympa 5.4, you need add the necessary scripts and entries
+to /etc/rc.d/ and /etc/rc.conf to start the bulk daemon.
+Also, note that configuration files sympa.conf and wwsympa.conf have
+moved to ${PKG_SYSCONFDIR}. Move these files before running
+'${SYMPA_BIN}/sympa.pl --upgrade'
+You also need to ajust paths in your httpd.conf file:
+/wws is now ${PREFIX}/sympa/libexec/cgi-bin/wwsympa-wrapper.fcgi
+/static-sympa is now ${SYMPA_VARBASE}/list_data/static_content
+Password encoding has changed; run:
+${SYMPA_BIN}/sympa.pl --md5_encode_password
+to reencode them to the new format.
 
 ===========================================================================
