@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.40 2012/05/21 15:14:21 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.41 2012/05/21 15:52:03 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -185,3 +185,5 @@ Pullup ticket #3794 - requested by bouyer
 textproc/p5-Unicode-LineBreak: new package required for security update
 Pullup ticket #3795 - requested by taca
 textproc/libxml2: security patch
+Pullup ticket #3796 - requested by bouyer
+mail/sympa: security update
