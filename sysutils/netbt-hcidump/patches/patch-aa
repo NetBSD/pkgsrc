@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2012/03/19 12:09:00 plunky Exp $
+$NetBSD: patch-aa,v 1.4 2012/05/21 07:01:32 plunky Exp $
 
---- Makefile.orig	2012-03-19 12:00:46.000000000 +0000
+--- Makefile.orig	2012-05-21 06:50:14.000000000 +0000
 +++ Makefile
 @@ -0,0 +1,4 @@
 +
