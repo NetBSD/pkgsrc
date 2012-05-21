@@ -1,58 +1,58 @@
-$NetBSD: patch-aa,v 1.5 2008/04/27 17:06:40 bouyer Exp $
+$NetBSD: patch-aa,v 1.5.36.1 2012/05/21 15:51:48 tron Exp $
 
---- Makefile.in.orig	2007-12-05 16:37:14.000000000 +0100
-+++ Makefile.in	2008-04-27 15:16:02.000000000 +0200
-@@ -508,7 +508,7 @@
- 	@CVS2CL@
- #endif
+--- Makefile.in.orig	2011-08-25 16:48:08.000000000 +0200
++++ Makefile.in	2012-02-24 20:06:42.000000000 +0100
+@@ -635,35 +635,30 @@
+ 			echo "Creating $(DESTDIR)$$dir"; \
+ 			install -d -m 755 $(DESTDIR)$$dir; \
+ 		fi; \
+-		chown $(USER) $(DESTDIR)$$dir || /bin/true; \
+-		chgrp $(GROUP) $(DESTDIR)$$dir || /bin/true; \
++		chown $(USER) $(DESTDIR)$$dir || true; \
++		chgrp $(GROUP) $(DESTDIR)$$dir || true; \
+ 	done
  
--all:	warning checkperl checkcpan sources wrapper soap_wrapper man locale
-+all:	sources wrapper soap_wrapper man locale
- 
- rpm: build_rh_rpm build_mdk_rpm
- 
-@@ -612,7 +612,7 @@
- 	$(MAKE) PERL='${PERL}' clean) || exit 1; \
- 	done;
- 
--install: importantchanges installdir installsrc installwws installwebtt2 installmailtt2 installlocale installman installscript installsample installconfig installdoc installsoap nextstep
-+install: importantchanges installdir installsrc installwws installwebtt2 installmailtt2 installlocale installman installscript installsample installdoc installsoap nextstep
+ installconfig: installdir
+ 	@echo "Installing basic configuration ..."
+ 	export PERL5LIB=$(DESTDIR)$(modulesdir); \
+-	if [ ! -f  $(DESTDIR)$(confdir)/sympa.conf ]; then \
+-		echo "This looks like your first Sympa installation. The following wizard will assist you to create your first Sympa configuration.";\
+-		if [ ! -d $(DESTDIR)$(confdir) ]; then \
+-			$(INSTALL) -d -m 755 $(DESTDIR)$(confdir); \
+-		fi; \
+-		$(DESTDIR)$(sbindir)/sympa_wizard.pl \
+-			--create sympa.conf \
+-			--target $(DESTDIR)$(confdir)/sympa.conf \
+-			|| /bin/true; \
+-		$(DESTDIR)$(sbindir)/sympa_wizard.pl \
+-			--create wwsympa.conf \
+-			--target $(DESTDIR)$(confdir)/wwsympa.conf \
+-			|| /bin/true; \
++	if [ ! -d $(DESTDIR)$(prefix)/share/examples/sympa ]; then \
++		$(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/examples/sympa; \
+ 	fi; \
+-	if [ ! -f $(DESTDIR)$(sysconfdir)/data_structure.version ]; then \
+-		cd $(DESTDIR)$(sysconfdir); \
+-		echo "# automatically created file" >> data_structure.version; \
+-		echo "# you should not modify it" >> data_structure.version; \
+-		echo $(VERSION) >> data_structure.version; \
+-		chown $(USER) data_structure.version || /bin/true; \
+-		chgrp $(GROUP) data_structure.version || /bin/true; \
+-	fi
++	$(DESTDIR)$(sbindir)/sympa_wizard.pl \
++		--create sympa.conf \
++		--target $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf \
++		|| true; \
++	$(DESTDIR)$(sbindir)/sympa_wizard.pl \
++		--create wwsympa.conf \
++		--target $(DESTDIR)$(prefix)/share/examples/sympa/wwsympa.conf \
++		|| true; \
++	cd $(DESTDIR)$(prefix)/share/examples/sympa; \
++	echo "# automatically created file" >> data_structure.version; \
++	echo "# you should not modify it" >> data_structure.version; \
++	echo $(VERSION) >> data_structure.version; \
++	chown $(USER) data_structure.version || true; \
++	chgrp $(GROUP) data_structure.version || true;
  
  nextstep: 
  	@echo ""
-@@ -751,7 +751,7 @@
- 
- installdir:
- 	@echo "Creating required directories"
--	@for dir in $(DIR) $(EXPL_DIR) $(CONFDIR) $(SAMPLEDIR) $(ETCDIR) $(BINDIR) $(LOCALEDIR) $(DOCDIR) $(DIR)/static_content $(DIR)/static_content/icons ; do \
-+	@for dir in $(DIR) $(EXPL_DIR) $(CONFDIR) $(SAMPLEDIR) $(ETCDIR) $(BINDIR) $(LOCALEDIR) $(DOCDIR) $(DIR)/sympa/static_content $(DIR)/sympa/static_content/icons ; do \
- 		if [ ! -d $(DESTDIR)$$dir ] ; then \
- 			echo "Creating $(DESTDIR)$$dir"; \
- 			mkdir -p $(DESTDIR)$$dir; \
-@@ -760,7 +760,7 @@
- 			chmod 755 $(DESTDIR)$$dir; \
- 		fi \
- 	done
--	@if [ ! -f $(DESTDIR)$(CONFDIR)/sympa.conf ] ; then \
-+	@if  false; then \
- 	echo "First installation : installing conf directories..."; \
- 	for dir in create_list_templates mail_tt2 web_tt2 scenari \
- 	task_models general_task_models; do \
-@@ -783,7 +783,7 @@
- 		$(PERL) ./subst.pl src/etc/README_etc \
- 	) \
- 	fi
--	@if [ ! -f $(DESTDIR)$(CONFDIR)/sympa.conf ] ; then \
-+	@if false; then \
- 	echo "First installation : installing spool directories..."; \
- 	for dir in $(SPOOLDIR) $(SPOOLDIR)/msg $(SPOOLDIR)/digest $(SPOOLDIR)/moderation \
- 	$(SPOOLDIR)/expire $(SPOOLDIR)/auth $(SPOOLDIR)/outgoing $(SPOOLDIR)/tmp \
-@@ -797,7 +797,7 @@
- 		fi \
- 	done \
- 	fi
--	@if [ ! -f $(DESTDIR)$(CONFDIR)/sympa.conf ] ; then \
-+	@if false ; then \
- 	echo "First installation : creating archives and bounce directories..."; \
- 	for dir in bounce arc ; do \
- 		if [ ! -d $(DESTDIR)$(DIR)/$$dir ] ; then \
