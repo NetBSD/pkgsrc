@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.4 2012/03/19 12:09:00 plunky Exp $
+$NetBSD: patch-ak,v 1.5 2012/05/21 07:01:32 plunky Exp $
 
---- src/Makefile.orig	2012-03-19 12:00:46.000000000 +0000
+--- src/Makefile.orig	2012-05-21 06:50:14.000000000 +0000
 +++ src/Makefile
 @@ -0,0 +1,17 @@
 +.PATH: ../parser ../lib
@@ -14,7 +14,7 @@ $NetBSD: patch-ak,v 1.4 2012/03/19 12:09:00 plunky Exp $
 +	bluetooth.c hci_lib.c						\
 +	att.c avctp.c avdtp.c avrcp.c bnep.c bpa.c capi.c cmtp.c	\
 +	csr.c ericsson.c hci.c hcrp.c hidp.c l2cap.c lmp.c obex.c	\
-+	parser.c ppp.c rfcomm.c sdp.c smp.c tcpip.c
++	parser.c ppp.c rfcomm.c sap.c sdp.c smp.c tcpip.c
 +
 +CPPFLAGS+=	-I..
 +LDADD+=		-lbluetooth

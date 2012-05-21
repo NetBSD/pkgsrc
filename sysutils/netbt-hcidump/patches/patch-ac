@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2012/03/19 12:09:00 plunky Exp $
+$NetBSD: patch-ac,v 1.4 2012/05/21 07:01:32 plunky Exp $
 
 --- lib/hci.h.orig	2012-02-29 18:23:20.000000000 +0000
 +++ lib/hci.h
@@ -10,7 +10,21 @@ $NetBSD: patch-ac,v 1.3 2012/03/19 12:09:00 plunky Exp $
  /* HCI dev events */
  #define HCI_DEV_REG	1
  #define HCI_DEV_UNREG	2
-@@ -107,6 +108,7 @@ enum {
+@@ -55,11 +56,13 @@ extern "C" {
+ #define HCI_RS232	4
+ #define HCI_PCI		5
+ #define HCI_SDIO	6
++#endif
+ 
+ /* HCI controller types */
+ #define HCI_BREDR	0x00
+ #define HCI_AMP		0x01
+ 
++#if 0
+ /* HCI device flags */
+ enum {
+ 	HCI_UP,
+@@ -107,6 +110,7 @@ enum {
  #define HCIUNBLOCKADDR	_IOW('H', 231, int)
  
  #define HCIINQUIRY	_IOR('H', 240, int)
@@ -18,7 +32,7 @@ $NetBSD: patch-ac,v 1.3 2012/03/19 12:09:00 plunky Exp $
  
  #ifndef __NO_HCI_DEFS
  
-@@ -2262,6 +2264,7 @@ typedef struct {
+@@ -2262,6 +2266,7 @@ typedef struct {
  
  #endif /* _NO_HCI_DEFS */
  
@@ -26,7 +40,7 @@ $NetBSD: patch-ac,v 1.3 2012/03/19 12:09:00 plunky Exp $
  /* HCI Socket options */
  #define HCI_DATA_DIR	1
  #define HCI_FILTER	2
-@@ -2374,6 +2377,12 @@ struct hci_inquiry_req {
+@@ -2374,6 +2379,12 @@ struct hci_inquiry_req {
  	uint8_t  num_rsp;
  };
  #define IREQ_CACHE_FLUSH 0x0001
