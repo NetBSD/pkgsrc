@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2012/05/21 15:51:27 marino Exp $
+lib/yaws/priv/lib/yaws_sendfile_drv.so
