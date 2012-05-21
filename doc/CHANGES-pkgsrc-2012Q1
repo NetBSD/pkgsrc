@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.39 2012/05/21 09:49:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.40 2012/05/21 15:14:21 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -179,3 +179,9 @@ Pullup ticket #3791 - requested by he
 databases/p5-DBD-postgresql: security update
 Pullup ticket #3792 - requested by joerg
 pkgtools/pbulk: bug fix update
+Pullup ticket #3793 - requested by bouyer
+security/p5-AuthCAS: new package required for security update
+Pullup ticket #3794 - requested by bouyer
+textproc/p5-Unicode-LineBreak: new package required for security update
+Pullup ticket #3795 - requested by taca
+textproc/libxml2: security patch
