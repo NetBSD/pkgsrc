@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2004/09/26 20:13:34 seb Exp $
+$NetBSD: patch-ac,v 1.2.64.1 2012/05/21 15:51:48 tron Exp $
 
---- src/etc/script/Makefile.orig	2003-05-12 09:32:42.000000000 +0000
-+++ src/etc/script/Makefile
-@@ -30,7 +30,7 @@ SCRIPTDIR	=	$(SBINDIR)
+--- src/etc/script/Makefile.in.orig	2012-02-09 16:02:29.000000000 +0100
++++ src/etc/script/Makefile.in	2011-08-25 16:48:08.000000000 +0200
+@@ -355,7 +355,7 @@
  
- all:	
+ info-am:
  
--install: makedir installsrc installsubstsrc installinit
-+install: makedir installsrc installsubstsrc
+-install-data-am: install-initSCRIPTS install-scriptSCRIPTS
++install-data-am: install-scriptSCRIPTS
  
- clean:
- 	rm -rf $(DESTDIR)$(SCRIPTDIR)
+ install-exec-am:
+ 

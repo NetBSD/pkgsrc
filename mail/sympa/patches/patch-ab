@@ -1,69 +1,74 @@
-$NetBSD: patch-ab,v 1.4 2008/04/27 17:06:40 bouyer Exp $
+$NetBSD: patch-ab,v 1.4.36.1 2012/05/21 15:51:48 tron Exp $
 
---- check_perl_modules.pl.orig	2008-03-27 17:41:49.000000000 +0100
-+++ check_perl_modules.pl	2008-04-27 14:20:25.000000000 +0200
-@@ -180,69 +180,7 @@
+--- src/sympa_wizard.pl.in.orig	2012-02-08 18:02:11.000000000 +0100
++++ src/sympa_wizard.pl.in	2012-02-08 18:02:42.000000000 +0100
+@@ -662,72 +662,5 @@
  # Install a CPAN module
  ##----------------------
  sub install_module {
--    my ($module, $options) = @_;
+-#    my ($module, $options, $opt_features) = @_;
+-  my ($module, $options, $cpan_modules) = @_;
 -
 -    my $default = $options->{'default'};
 -
 -    unless ($ENV{'FTP_PASSIVE'} eq 1) {
--	$ENV{'FTP_PASSIVE'} = 1;
--	print "Setting FTP Passive mode\n";
+-        $ENV{'FTP_PASSIVE'} = 1;
+-        print "Setting FTP Passive mode\n";
 -    }
 -
 -    ## This is required on RedHat 9 for DBD::mysql installation
 -    my $lang = $ENV{'LANG'};
 -    $ENV{'LANG'} = 'C' if ($ENV{'LANG'} =~ /UTF\-8/);
 -
--    unless ($> == 0) {
--	print "\#\# You need root privileges to install $module module. \#\#\n";
--	print "\#\# Press the Enter key to continue checking modules. \#\#\n";
--	my $t = <STDIN>;
--	return undef;
+-    unless ($EUID == 0) {
+-        print "\#\# You need root privileges to install $module module. \#\#\n";
+-        print "\#\# Press the Enter key to continue checking modules. \#\#\n";
+-        my $t = <STDIN>;
+-        return undef;
 -    }
 -
 -    unless ($options->{'force'}) {
--	printf "Description: %s\n", $opt_features{$module};
--	print "Install module $module ? [$default]";
--	my $answer = <STDIN>; chomp $answer;
--	$answer ||= $default;
--	return unless ($answer =~ /^y$/i);
+-        printf "-> Usage of this module: %s\n", $cpan_modules->{$module}{usage} if ($cpan_modules->{$module}{usage});
+-        printf "-> Prerequisites: %s\n", $cpan_modules->{$module}{prerequisites} if ($cpan_modules->{$module}{prerequisites});
+-	printf "-> Install module $module ? [$default]";
+-        my $answer = <STDIN>; chomp $answer;
+-        $answer ||= $default;
+-        return unless ($answer =~ /^y$/i);
 -    }
--    
--    $CPAN::Config->{'inactivity_timeout'} = 4;
--    $CPAN::Config->{'colorize_output'} = 1;
+-
+-  $CPAN::Config->{'inactivity_timeout'} = 0; ## disable timeout to prevent timeout during modules installation 
+-  $CPAN::Config->{'colorize_output'} = 1; 
+-  $CPAN::Config->{'build_requires_install_policy'} = 'yes';  ## automatically installed prerequisites without asking
+-  $CPAN::Config->{'prerequisites_policy'} = 'follow'; ## build prerequisites automatically
+-  $CPAN::Config->{'load_module_verbosity'} = 'none';  ## minimum verbosity during module loading
+-  $CPAN::Config->{'tar_verbosity'} = 'none';  ## minimum verbosity with tar command
 -
 -    #CPAN::Shell->clean($module) if ($options->{'force'});
 -
 -    CPAN::Shell->make($module);
--    
+-
 -    if ($options->{'force'}) {
--	CPAN::Shell->force('test', $module);
--      }else {
--	  CPAN::Shell->test($module);
--      }
--    
+-        CPAN::Shell->force('test', $module);
+-    }else {
+-        CPAN::Shell->test($module);
+-    }
 -
 -    CPAN::Shell->install($module); ## Could use CPAN::Shell->force('install') if make test failed
 -
 -    ## Check if module has been successfuly installed
--    unless (&test_module($module) == 1) {
+-    unless (eval "require $module") {
 -
--	## Prevent recusive calls if already in force mode
--	if ($options->{'force'}) {
--	    print  "Installation of $module still FAILED. You should download the tar.gz from http://search.cpan.org and install it manually.";
--	    my $answer = <STDIN>;
--	}else {
--	    print  "Installation of $module FAILED. Do you want to force the installation of this module? (y/N) ";
--	    my $answer = <STDIN>; chomp $answer;
--	    if ($answer =~ /^y/i) {
--		&install_module($module, {'force' => 1});
--	    }
--	}
+-        ## Prevent recusive calls if already in force mode
+-        if ($options->{'force'}) {
+-            print  "Installation of $module still FAILED. You should download the tar.gz from http://search.cpan.org and install it manually.";
+-            my $answer = <STDIN>;
+-        }else {
+-            print  "Installation of $module FAILED. Do you want to force the installation of this module? (y/N) ";
+-            my $answer = <STDIN>; chomp $answer;
+-            if ($answer =~ /^y/i) {
+-                install_module($module, {'force' => 1}, $cpan_modules);
+-            }
+-        }
 -    }
 -
 -    ## Restore lang
@@ -71,5 +76,3 @@ $NetBSD: patch-ab,v 1.4 2008/04/27 17:06:40 bouyer Exp $
 -
 +	1;
  }
- 
- ###--------------------------
