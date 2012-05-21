@@ -1,0 +1,14 @@
+$NetBSD: patch-sbin_config.guess,v 1.1 2012/05/21 07:20:42 marino Exp $
+
+--- sbin/config.guess.orig	2012-05-21 07:04:19.000000000 +0000
++++ sbin/config.guess
+@@ -759,6 +759,9 @@ EOF
+ 	rm -f $dummy.c && rmdir $tmpdir
+ 	echo ${UNAME_MACHINE}-unknown-freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`${LIBC:+-$LIBC}
+ 	exit 0 ;;
++    *:DragonFly:*:*)
++	echo ${UNAME_MACHINE}-unknown-dragonfly`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`${LIBC:+-$LIBC}
++	exit 0 ;;    
+     i*:CYGWIN*:*)
+ 	echo ${UNAME_MACHINE}-pc-cygwin
+ 	exit 0 ;;
