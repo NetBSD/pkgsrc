@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.38 2012/05/19 10:52:37 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.39 2012/05/21 09:49:10 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -177,3 +177,5 @@ Pullup ticket #3790 - requested by taca
 security/sudo: security update
 Pullup ticket #3791 - requested by he
 databases/p5-DBD-postgresql: security update
+Pullup ticket #3792 - requested by joerg
+pkgtools/pbulk: bug fix update
