@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2012/05/21 12:49:54 marino Exp $
+lib/libe16_hack.la
