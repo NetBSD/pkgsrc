@@ -1,7 +1,7 @@
-$NetBSD: patch-threads.c,v 1.1 2012/04/03 09:08:33 obache Exp $
+$NetBSD: patch-threads.c,v 1.1.2.1 2012/05/21 15:13:36 tron Exp $
 
-* Treat OpenBSD and MirBSD sam as Linux to avoid linked with libpthreead.
-* NetBSD<4.99.36 lack of pthread_equal() stub function in libc.
+* Treat OpenBSD and MirBSD same as Linux to avoid linking with libpthread.
+* NetBSD<4.99.36 and FreeBSD<7.0 lack pthread_equal() stub function in libc.
 
 --- threads.c.orig	2010-10-15 17:28:30.000000000 +0000
 +++ threads.c
@@ -28,10 +28,10 @@ $NetBSD: patch-threads.c,v 1.1 2012/04/03 09:08:33 obache Exp $
  #endif
  #endif /* linux */
  #endif /* __GNUC__ */
-+#if defined(__NetBSD__) && __NetBSD_Version__ < 499003600
++#if (defined(__NetBSD__) && __NetBSD_Version__ < 499003600) || (defined(__FreeBSD__) && __FreeBSD_version < 700000)
 +extern int pthread_equal ()
 +	   __attribute((weak));
-+#endif /* NetBSD-4 */
++#endif /* NetBSD-4, FreeBSD-6 */
  #endif /* HAVE_PTHREAD_H */
  
  /*
