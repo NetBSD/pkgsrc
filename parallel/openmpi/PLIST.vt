@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.vt,v 1.3 2010/12/16 21:00:53 asau Exp $
+@comment $NetBSD: PLIST.vt,v 1.4 2012/05/21 16:08:51 marino Exp $
 bin/mpiCC-vt
 bin/mpic++-vt
 bin/mpicc-vt
@@ -56,6 +56,7 @@ include/vampirtrace/vt_user_marker.inc
 include/vampirtrace/vt_user_region.h
 include/vampirtrace/vt_user_region.inc
 include/vampirtrace/vt_wrap_pthread.h
+${PLIST.vtlwraph}include/vampirtrace/vt_libwrap.h
 lib/libotf.la
 lib/libvt-hyb.la
 lib/libvt-mpi.la
