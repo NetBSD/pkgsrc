@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2008/04/27 17:06:40 bouyer Exp $
+$NetBSD: patch-af,v 1.2.36.1 2012/05/21 15:51:48 tron Exp $
 
---- src/Language.pm.orig	2008-04-27 17:43:28.000000000 +0200
-+++ src/Language.pm	2008-04-27 17:43:47.000000000 +0200
-@@ -162,7 +162,7 @@
+--- src/lib/Language.pm.orig	2012-02-08 18:03:43.000000000 +0100
++++ src/lib/Language.pm	2012-02-08 18:04:12.000000000 +0100
+@@ -164,7 +164,7 @@
      ## Set Locale::Messages context
      my $locale_dashless = $locale.'.utf-8';
      $locale_dashless =~ s/-//g;
