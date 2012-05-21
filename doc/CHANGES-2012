@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1558 2012/05/20 19:24:05 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.1559 2012/05/21 07:02:13 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2449,3 +2449,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/onscripter to 20120520 [tsutsui 2012-05-20]
 	Updated audio/libaudiofile to 0.3.4 [wiz 2012-05-20]
 	Updated mail/getmail to 4.27.0 [schmonz 2012-05-20]
+	Updated sysutils/netbt-hcidump to 2.4 [plunky 2012-05-21]
