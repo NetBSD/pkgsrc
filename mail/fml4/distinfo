@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/23 16:55:02 taca Exp $
+$NetBSD: distinfo,v 1.2 2012/05/21 07:20:41 marino Exp $
 
 SHA1 (fml-4.0-stable-20040215.tar.gz) = b7f958deacc50a0173928b7c43df52b5869d9491
 RMD160 (fml-4.0-stable-20040215.tar.gz) = 40eb43d2631a5e6d6769b8cfdf35e4a980ff0391
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 17e5d1d97e5a085b8b5da67e00730ce92b959fbf
 SHA1 (patch-ae) = 467a8bacfb0a6d41ceb1d8f52fc4bfc0ae2fc565
 SHA1 (patch-af) = 9e7fa7c70b4f3353a5c33d0ded2eeae86d9a5c65
 SHA1 (patch-ag) = 5a7a8a3d32e1a290e29cefa67aec584c21206d0c
+SHA1 (patch-sbin_config.guess) = 686f469995a368310471ee3207407729c537bc82
