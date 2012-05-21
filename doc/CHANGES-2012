@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1560 2012/05/21 12:23:26 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1561 2012/05/21 14:39:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2451,3 +2451,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/getmail to 4.27.0 [schmonz 2012-05-20]
 	Updated sysutils/netbt-hcidump to 2.4 [plunky 2012-05-21]
 	Updated textproc/libxml2 to 2.7.8nb10 [taca 2012-05-21]
+	Updated mail/postfix to 2.8.11 [taca 2012-05-21]
