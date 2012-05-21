@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/05/21 14:55:10 marino Exp $
 bin/xblast
 bin/xbsndsrv
 man/man6/xblast.6
@@ -2627,7 +2627,7 @@ share/xblast/level/random_field.xal
 share/xblast/level/rapiddeath.xal
 share/xblast/level/raymasters.xal
 share/xblast/level/reconstruction.xal
-share/xblast/level/reconstructîon2.xal
+share/xblast/level/reconstruction2.xal
 share/xblast/level/reincocloned.xal
 share/xblast/level/remembernokicking.xal
 share/xblast/level/remote_quest.xal
