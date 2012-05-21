@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/04/15 15:20:52 brook Exp $
+# $NetBSD: Makefile,v 1.8 2012/05/21 14:57:31 marino Exp $
 
 CATEGORIES=	math
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,5 +14,6 @@ R_PKGVER=	0.4-3
 
 USE_LANGUAGES=	fortran c
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
