@@ -1,0 +1,15 @@
+$NetBSD: patch-bin_tests_system_Makefile.in,v 1.2.2.2 2012/05/22 09:29:13 tron Exp $
+
+Build fix for DragonFly while linking of driver.so.
+
+--- bin/tests/system/Makefile.in.orig	2012-03-22 19:20:00.000000000 +0000
++++ bin/tests/system/Makefile.in
+@@ -21,7 +21,7 @@ top_srcdir =	@top_srcdir@
+ 
+ @BIND9_MAKE_INCLUDES@
+ 
+-SUBDIRS =	dlzexternal filter-aaaa lwresd rpz tkey tsiggss
++SUBDIRS =	filter-aaaa lwresd rpz tkey tsiggss
+ TARGETS =
+ 
+ @BIND9_MAKE_RULES@

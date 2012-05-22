@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.1.1.1 2011/03/04 03:52:15 taca Exp $
+# $NetBSD: named9.sh,v 1.1.1.1.10.1 2012/05/22 09:29:13 tron Exp $
 #
 
 # PROVIDE: named
@@ -47,6 +47,14 @@ named_precmd()
 	if [ -f /etc/localtime ]; then
 		@CMP@ -s /etc/localtime "${named_chrootdir}/etc/localtime" || \
 		    @CP@ -p /etc/localtime "${named_chrootdir}/etc/localtime"
+	fi
+
+	if [ -f /usr/lib/engines/libgost.so ]; then
+		if [ ! -d ${named_chrootdir}/usr/lib/engines ]; then
+			@MKDIR@ ${named_chrootdir}/usr/lib/engines
+		fi
+		@CMP@ -s /usr/lib/engines/libgost.so "${named_chrootdir}/usr/lib/engines/libgost.so" || \
+		    @CP@ -p /usr/lib/engines/libgost.so "${named_chrootdir}/usr/lib/engines/libgost.so"
 	fi
 
        	if [ ! -d ${named_chrootdir}@VARBASE@/run/named ]; then 
