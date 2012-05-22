@@ -1,8 +1,27 @@
-$NetBSD: patch-ak,v 1.3 2010/01/15 19:18:42 tnn Exp $
+$NetBSD: patch-ak,v 1.4 2012/05/22 05:57:50 joerg Exp $
 
---- jdk/make/common/Defs-bsd.gmk.orig	2010-01-11 16:46:18.000000000 +0000
+--- jdk/make/common/Defs-bsd.gmk.orig	2012-05-06 14:17:19.000000000 +0000
 +++ jdk/make/common/Defs-bsd.gmk
-@@ -339,6 +339,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
+@@ -230,8 +230,7 @@ ifeq ($(OS_VENDOR), Apple)
+   LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=-Xlinker -rpath -Xlinker @loader_path/%)
+   LDFLAGS_COMMON += -Xlinker -install_name -Xlinker @rpath/$(@F)
+ else
+-  LDFLAGS_COMMON += -Xlinker -z -Xlinker origin -Xlinker -rpath -Xlinker \$$ORIGIN
+-  LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=-Xlinker -z -Xlinker origin -Xlinker -rpath -Xlinker \$$ORIGIN/%)
++  LDFLAGS_COMMON += -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}/server -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}
+ endif
+ 
+ #
+@@ -299,7 +298,7 @@ VM_NAME         = server
+ ifeq ($(OS_VENDOR),Apple)
+ JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
+ else
+-JVMLIB          = -Xlinker -rpath -Xlinker $(LIBDIR)/$(LIBARCH)/$(VM_NAME) -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
++JVMLIB          = -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH} -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
+ endif
+ JAVALIB         = -ljava $(JVMLIB)
+ 
+@@ -365,6 +364,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
    SYSTEM_ZLIB = true
  endif
  
