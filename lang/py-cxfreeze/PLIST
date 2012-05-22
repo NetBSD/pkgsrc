@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2011/01/11 11:39:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/22 08:28:47 obache Exp $
 bin/cxfreeze${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cx_Freeze/__init__.py
 ${PYSITELIB}/cx_Freeze/__init__.pyc
 ${PYSITELIB}/cx_Freeze/__init__.pyo
@@ -29,6 +30,8 @@ ${PYSITELIB}/cx_Freeze/main.pyc
 ${PYSITELIB}/cx_Freeze/main.pyo
 ${PYSITELIB}/cx_Freeze/samples/PyQt4/PyQt4app.py
 ${PYSITELIB}/cx_Freeze/samples/PyQt4/setup.py
+${PYSITELIB}/cx_Freeze/samples/Tkinter/SimpleTkApp.py
+${PYSITELIB}/cx_Freeze/samples/Tkinter/setup.py
 ${PYSITELIB}/cx_Freeze/samples/advanced/advanced_1.py
 ${PYSITELIB}/cx_Freeze/samples/advanced/advanced_2.py
 ${PYSITELIB}/cx_Freeze/samples/advanced/modules/testfreeze_1.py

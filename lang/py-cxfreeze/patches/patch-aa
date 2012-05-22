@@ -1,8 +1,34 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/15 10:45:57 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2012/05/22 08:28:47 obache Exp $
 
---- setup.py.orig	2010-07-19 19:00:21.000000000 +0000
+--- setup.py.orig	2011-03-19 17:27:27.000000000 +0000
 +++ setup.py
-@@ -238,7 +238,7 @@ setup(name = "cx_Freeze",
+@@ -61,6 +61,7 @@ class build_ext(distutils.command.build_
+         fileName = os.path.splitext(self.get_ext_filename(ext.name))[0]
+         fullName = os.path.join(self.build_lib, fileName)
+         libraryDirs = ext.library_dirs or []
++        runtimeLibraryDirs = ext.runtime_library_dirs or []
+         libraries = self.get_libraries(ext)
+         extraArgs = ext.extra_link_args or []
+         if sys.platform != "win32":
+@@ -78,6 +79,8 @@ class build_ext(distutils.command.build_
+                     extraArgs.extend(vars["BASEMODLIBS"].split())
+                 if vars["LOCALMODLIBS"]:
+                     extraArgs.extend(vars["LOCALMODLIBS"].split())
++            else:
++                runtimeLibraryDirs.append(sys.prefix + "/lib")
+             extraArgs.append("-s")
+         elif ext.name.find("Win32GUI") > 0 \
+                 and self.compiler.compiler_type == "mingw32":
+@@ -85,7 +88,7 @@ class build_ext(distutils.command.build_
+         self.compiler.link_executable(objects, fullName,
+                 libraries = libraries,
+                 library_dirs = libraryDirs,
+-                runtime_library_dirs = ext.runtime_library_dirs,
++                runtime_library_dirs = runtimeLibraryDirs,
+                 extra_postargs = extraArgs,
+                 debug = self.debug)
+ 
+@@ -238,7 +241,7 @@ setup(name = "cx_Freeze",
          maintainer="Anthony Tuininga",
          maintainer_email="anthony.tuininga@gmail.com",
          url = "http://cx-freeze.sourceforge.net",
