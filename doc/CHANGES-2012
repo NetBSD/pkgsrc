@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1562 2012/05/22 03:35:48 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1563 2012/05/22 08:29:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2456,3 +2456,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind98 to 9.8.3 [taca 2012-05-22]
 	Updated net/bind97 to 9.7.6 [taca 2012-05-22]
 	Updated net/bind96 to 9.6.3.1.ESV.7 [taca 2012-05-22]
+	Updated lang/py-cxfreeze to 4.2.3 [obache 2012-05-22]
