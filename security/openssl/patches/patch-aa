@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.24 2010/08/18 11:20:56 wiz Exp $
+$NetBSD: patch-aa,v 1.25 2012/05/22 06:00:11 joerg Exp $
 
---- config.orig	2010-03-09 17:08:24.000000000 +0000
+--- config.orig	2011-07-15 19:59:31.000000000 +0000
 +++ config
 @@ -49,6 +49,7 @@ done
  # First get uname entries that we use below
@@ -21,16 +21,14 @@ $NetBSD: patch-aa,v 1.24 2010/08/18 11:20:56 wiz Exp $
      Linux:[2-9].*)
  	echo "${MACHINE}-whatever-linux2"; exit 0
  	;;
-@@ -210,12 +215,16 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+@@ -210,12 +215,12 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "${MACHINE}-whatever-freebsd"; exit 0
  	;;
  
+-    NetBSD:*:*:*386*)
+-        echo "`(/usr/sbin/sysctl -n hw.model || /sbin/sysctl -n hw.model) | sed 's,.*\(.\)86-class.*,i\186,'`-whatever-netbsd"; exit 0
 +    DragonFly:*)
 +	echo "${MACHINE}-whatever-dragonfly"; exit 0
-+	;;
-+
-     NetBSD:*:*:*386*)
-         echo "`(/usr/sbin/sysctl -n hw.model || /sbin/sysctl -n hw.model) | sed 's,.*\(.\)86-class.*,i\186,'`-whatever-netbsd"; exit 0
  	;;
  
      NetBSD:*)
@@ -39,7 +37,7 @@ $NetBSD: patch-aa,v 1.24 2010/08/18 11:20:56 wiz Exp $
  	;;
  
      OpenBSD:*)
-@@ -661,13 +670,18 @@ case "$GUESSOS" in
+@@ -661,13 +666,18 @@ case "$GUESSOS" in
  	;;
    *-*-sunos4)		OUT="sunos-$CC" ;;
  
@@ -60,7 +58,7 @@ $NetBSD: patch-aa,v 1.24 2010/08/18 11:20:56 wiz Exp $
  			if [ -L /usr/lib/libc.so ]; then	# [Free|Net]BSD
  			    libc=/usr/lib/libc.so
  			else					# OpenBSD
-@@ -680,6 +694,8 @@ case "$GUESSOS" in
+@@ -680,6 +690,8 @@ case "$GUESSOS" in
  			esac ;;
    *-*-*bsd*)		OUT="BSD-generic32" ;;
  
