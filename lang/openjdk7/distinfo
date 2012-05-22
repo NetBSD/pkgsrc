@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2012/05/16 08:55:45 marino Exp $
+$NetBSD: distinfo,v 1.16 2012/05/22 05:57:50 joerg Exp $
 
 SHA1 (openjdk7/61e08e67b176.tar.bz2) = 3db5488f3c0ea1b9c83a74632d300d8717c9b478
 RMD160 (openjdk7/61e08e67b176.tar.bz2) = c0dd67a6ae982f09b3675c164b5decab4f7e140f
@@ -55,7 +55,7 @@ SHA1 (openjdk7/rhino1_7R3.zip) = 81f39d6e24529d62b23a6a92a1a09af95495d7c1
 RMD160 (openjdk7/rhino1_7R3.zip) = 3fdc3e1540d0fa35ba7dec1bf34a70b0d41cedd0
 Size (openjdk7/rhino1_7R3.zip) = 4651597 bytes
 SHA1 (patch-aa) = 1d0363634b55fd51bb89dc414760aed79e26d021
-SHA1 (patch-ab) = ff032cf67ea66d93d7faad7f5ea40373fd4f6f01
+SHA1 (patch-ab) = 5d6ccee7e3a1a06cfb109cb892be08c7fff1ff8f
 SHA1 (patch-ac) = c845134b3f7912b69c7773ca939f70d2dcd78fec
 SHA1 (patch-ad) = ab68ff2db078628069c925287c119c4cac6657f3
 SHA1 (patch-ae) = d3aa3e2522cfee59cfb69c7d92e511560fca78c2
@@ -64,7 +64,7 @@ SHA1 (patch-ag) = 6287960055a79d05dc193e31d29ffc0158b33cdd
 SHA1 (patch-ah) = 2632580f92b27506c33df8714ed163ef3ed9844f
 SHA1 (patch-ai) = 6d6c394c3de7578754b901686b88142cbc524ef7
 SHA1 (patch-aj) = bd12ccefa0044f4686b800a61989909c286cd96a
-SHA1 (patch-ak) = 5803f43746463db843108b2104a222690614d5b6
+SHA1 (patch-ak) = 70b8c1fb6193174ac798106e3344e6287ce8c1bf
 SHA1 (patch-al) = abd6cb67266ebfed437379f10ed79fcf747543b5
 SHA1 (patch-am) = 6caa02c10d0f231a26a16888cb4401f25d184986
 SHA1 (patch-an) = b0636c22521d9727ad79df6914c9ce8c7c70b362
