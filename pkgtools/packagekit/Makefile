@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/04/27 12:32:01 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/05/22 11:02:50 marino Exp $
 #
 
 DISTNAME=	PackageKit-0.4.0
@@ -20,6 +20,10 @@ USE_LANGUAGES=	c c++
 
 BUILD_DEFS+=	VARBASE
 BUILD_DEFS+=	PKG_SYSCONFBASE
+
+PKCACHEDIR=	${VARBASE}/cache/PackageKit/downloads
+PKLOGDIR=	${VARBASE}/log/PackageKit
+PKETCDIR=	${LOCALBASE}/etc/PackageKit
 
 EGDIR=		${PREFIX}/share/examples/packagekit
 CONF_FILES=	${EGDIR}/CommandNotFound.conf \
@@ -51,6 +55,10 @@ REPLACE_PYTHON=	backends/test/helpers/PackageKitDbusTest.py	\
 		lib/python/packagekit/client.py		\
 		lib/python/packagekit/filter.py		\
 		lib/python/packagekit/misc.py
+
+OWN_DIRS+=	${PKCACHEDIR}
+OWN_DIRS+=	${PKLOGDIR}
+OWN_DIRS+=	${PKETCDIR}
 
 post-extract:
 	cp -r ${FILESDIR}/backends-pkgsrc ${WRKSRC}/backends/pkgsrc
