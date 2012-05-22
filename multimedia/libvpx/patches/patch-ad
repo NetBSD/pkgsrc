@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.6 2012/03/05 21:16:09 adam Exp $
+$NetBSD: patch-ad,v 1.7 2012/05/22 20:42:58 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
 
---- build/make/configure.sh.orig	2012-01-27 18:36:39.000000000 +0000
+--- build/make/configure.sh.orig	2012-05-08 23:14:00.000000000 +0000
 +++ build/make/configure.sh
-@@ -573,7 +573,7 @@ process_common_toolchain() {
+@@ -596,7 +596,7 @@ process_common_toolchain() {
                  [ -z "$tgt_isa" ] && tgt_isa=x86
                  tgt_os=win32
                  ;;
@@ -14,17 +14,17 @@ Add another SDK path on Mac OS X.
                  tgt_os=linux
                  ;;
              *solaris2.10)
-@@ -628,6 +628,9 @@ process_common_toolchain() {
-     if [ -d "/Developer/SDKs/MacOSX10.7.sdk" ]; then
-         osx_sdk_dir="/Developer/SDKs/MacOSX10.7.sdk"
-     fi
-+    if [ -d "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk" ]; then
-+        osx_sdk_dir="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
-+    fi
- 
-     case ${toolchain} in
-         *-darwin8-*)
-@@ -1019,10 +1019,29 @@ EOF
+@@ -656,6 +656,9 @@ process_common_toolchain() {
+                     if [ -d "${OSX_SDK_ROOTS}/${v}" ]; then
+                         osx_sdk_dir="${OSX_SDK_ROOTS}/${v}"
+                     fi
++		    if [ -d "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk" ]; then
++		    osx_sdk_dir="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
++		    fi
+                 done
+             fi
+             ;;
+@@ -1082,10 +1085,29 @@ EOF
          case ${toolchain} in
              *-win*);;
              *-android-gcc);;
