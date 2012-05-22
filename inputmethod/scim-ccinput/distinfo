@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 11:51:49 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/05/22 11:58:36 obache Exp $
 
 SHA1 (scim-ccinput-0.3.1.tar.bz2) = 7c6842e85bf2c2b4c9a2a69d54069c71e09d6250
 RMD160 (scim-ccinput-0.3.1.tar.bz2) = e85a186e70c392089133ca13f5b97012e0d4a26c
 Size (scim-ccinput-0.3.1.tar.bz2) = 1426327 bytes
 SHA1 (patch-aa) = 4cd6f6cf6553aef0af449df8a83ce33f93274c28
 SHA1 (patch-ab) = 95b190ccb60f42a81486c415624dea6483929dff
-SHA1 (patch-ac) = a9689b42c637b107a02c6d6fb79aca5f918aec2e
+SHA1 (patch-ac) = 9ceadb06a8b290dbc69935451c7c840cf783ac31
