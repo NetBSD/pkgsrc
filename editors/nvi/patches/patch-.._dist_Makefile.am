@@ -1,0 +1,38 @@
+$NetBSD: patch-.._dist_Makefile.am,v 1.1 2012/05/22 05:55:59 joerg Exp $
+
+--- ../dist/Makefile.am.orig	2012-05-21 13:09:39.000000000 +0000
++++ ../dist/Makefile.am
+@@ -242,7 +242,7 @@ vi_motif_LDADD = @MOTIFLIBS@ @LIBOBJS@
+ vi_motif_CFLAGS = @XINCS@
+ 
+ VI=-DVI=\"$(bindir)/`echo vi-ipc | sed '$(transform)'`\"
+-CFLAGS=	$(OPTFLAG)
++CFLAGS=	@CFLAGS@
+ AM_CPPFLAGS=	 -D__REGEX_PRIVATE -I. -I$(visrcdir)/include $(VI)
+ PERL=	@vi_cv_path_perl@
+ PERLLIB=@vi_cv_perllib@
+@@ -283,24 +283,7 @@ install-data-local: install_common
+ 	@[ -d $(DESTDIR)$(mandir) ] || \
+ 	    ($(mkdir) $(DESTDIR)$(mandir) && \
+ 	     $(chmod) $(dmode) $(DESTDIR)$(mandir))
+-	@[ -d $(DESTDIR)$(mandir)/cat1 ] || \
+-	    ($(mkdir) $(DESTDIR)$(mandir)/cat1 && \
+-	     $(chmod) $(dmode) $(DESTDIR)$(mandir)/cat1)
+ 	@echo "Installing man pages: $(DESTDIR)$(mandir) ..."
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(rm) -f `echo vi.0 | sed '$(transform)'`
+-	@$(cp) $(visrcdir)/docs/vi.man/vi.0 \
+-	    $(DESTDIR)$(mandir)/cat1/`echo vi.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(chmod) $(fmode) `echo vi.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(rm) -f `echo ex.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(rm) -f `echo view.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && $(ln) \
+-	    `echo vi.0 | sed '$(transform)'` `echo ex.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && $(ln) \
+-	    `echo vi.0 | sed '$(transform)'` `echo view.0 | sed '$(transform)'`
+ 	@[ -d $(DESTDIR)$(mandir)/man1 ] || \
+ 	    ($(mkdir) $(DESTDIR)$(mandir)/man1 && \
+ 	     $(chmod) $(dmode) $(DESTDIR)$(mandir)/man1)
