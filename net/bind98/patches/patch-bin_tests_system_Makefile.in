@@ -1,4 +1,6 @@
-$NetBSD: patch-bin_tests_system_Makefile.in,v 1.1 2012/05/20 13:22:40 marino Exp $
+$NetBSD: patch-bin_tests_system_Makefile.in,v 1.2 2012/05/22 03:32:31 taca Exp $
+
+Build fix for DragonFly while linking of driver.so.
 
 --- bin/tests/system/Makefile.in.orig	2012-03-22 19:20:00.000000000 +0000
 +++ bin/tests/system/Makefile.in
