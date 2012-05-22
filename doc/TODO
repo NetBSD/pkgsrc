@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11086 2012/05/22 20:43:34 ryoon Exp $
+$NetBSD: TODO,v 1.11087 2012/05/22 22:26:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -645,7 +645,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fontsproto-2.1.2
 	o fotoxx-12.05
 	o fox-1.6.41
-	o freeciv-2.3.1
+	o freeciv-2.3.2
 	o freefont-20120503
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -666,6 +666,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gawk-4.0.1
 	o gbdfed-1.6
 	o gbrainy-2.13
+	o gcal-3.6.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
@@ -773,7 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
-	o haproxy-1.4.20
+	o haproxy-1.4.21
 	o haskell-mode-1.45
 	o hdf-4.2.7p1
 	o help2man-1.40.9
@@ -966,6 +967,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o makedepend-1.0.4
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.146
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
@@ -974,6 +976,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mdocml-1.12.1
 	o mediawiki-1.18.1
 	o mergeant-0.67
+	o mess-0.146
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
@@ -1030,6 +1033,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nginx-1.3.0
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
+	o nmap-6.0
 	o nmh-1.4
 	o notification-daemon-0.7.0
 	o ns-3.13
@@ -1073,6 +1077,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-PerlMagick-6.7.6.6
 	o p5-Search-Xapian-1.2.10.0
 	o p5-cairo-1.082
+	o p5-glib2-1.260
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
@@ -1163,6 +1168,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qemu-1.0.1 [wip]
 	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
+	o qt4-4.8.2
 	o quilt-0.60
 	o qvplay-0.95
 	o radiance-3.7.2
