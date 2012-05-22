@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2011/01/11 15:14:20 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2012/05/22 09:43:33 obache Exp $
 
 --- configure.py.orig	2010-12-23 17:40:28.000000000 +0000
 +++ configure.py
@@ -20,12 +20,3 @@ $NetBSD: patch-aa,v 1.4 2011/01/11 15:14:20 drochner Exp $
          "sip_inc_dir":      opts.sipincdir,
          "sip_mod_dir":      opts.sipmoddir,
          "default_bin_dir":  plat_bin_dir,
-@@ -289,7 +289,7 @@ def create_makefiles(macros):
-     sipconfig.ParentMakefile(
-         configuration=cfg,
-         subdirs=["sipgen", "siplib"],
--        installs=(["sipconfig.py", os.path.join(src_dir, "sipdistutils.py")],
-+        installs=(["sipconfig.py", "sipconfig.pyc", os.path.join(src_dir, "sipdistutils.py")],
-                 cfg.sip_mod_dir)
-     ).generate()
- 
