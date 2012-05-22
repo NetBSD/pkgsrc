@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.41 2012/05/21 15:52:03 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.42 2012/05/22 11:59:28 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -187,3 +187,11 @@ Pullup ticket #3795 - requested by taca
 textproc/libxml2: security patch
 Pullup ticket #3796 - requested by bouyer
 mail/sympa: security update
+Pullup ticket #3797 - requested by taca
+net/bind99/: security update
+Pullup ticket #3798 - requested by taca
+net/bind98: security update
+Pullup ticket #3799 - requested by taca
+net/bind97: security update
+Pullup ticket #3800 - requested by taca
+net/bind96: security update
