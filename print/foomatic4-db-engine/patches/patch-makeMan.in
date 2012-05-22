@@ -1,0 +1,13 @@
+$NetBSD: patch-makeMan.in,v 1.1 2012/05/22 15:46:55 marino Exp $
+
+--- makeMan.in.orig	2011-07-25 09:51:20.000000000 +0000
++++ makeMan.in
+@@ -31,8 +31,6 @@ foreach my $file (@files)
+ 	$append = "discard\n";
+ 	next unless -f $file and $file =~ /^(.*\.[1-9])\.in$/;
+ 	my ($man) = $1;
+-	next unless ((`file $file` =~ m/\b[ntg]roff\b/) or
+-		     (`file $file` =~ m/\[nt\]roff/));
+ 	print STDERR "MATCHED\n" if $VERBOSE;
+ 	$append = '';
+ 	open IN, "<$file" or (warn "Can't read input file $file!" and next FILE);
