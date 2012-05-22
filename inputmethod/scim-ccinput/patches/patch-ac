@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/11/24 11:51:49 obache Exp $
+$NetBSD: patch-ac,v 1.2 2012/05/22 11:58:36 obache Exp $
 
 --- scim/SetupUI/scim_ccin_imengine_setup.cpp.orig	2005-06-03 04:22:17.000000000 +0000
 +++ scim/SetupUI/scim_ccin_imengine_setup.cpp
-@@ -41,6 +41,7 @@
+@@ -32,6 +32,7 @@
+ 
+ #include <stdio.h>
+ #include <iostream>
++#include <cstring>
+ 
+ #ifndef INPUT_METHOD_NAME 
+   #define INPUT_METHOD_NAME "ccinput"
+@@ -41,6 +42,7 @@
      #define SCIM_ICONDIR "/usr/share/scim/icons"
  #endif
  
