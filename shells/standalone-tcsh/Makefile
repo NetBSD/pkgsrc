@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/04/08 22:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/05/22 08:46:53 marino Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -8,6 +8,11 @@ PKGNAME=		standalone-${DISTNAME}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
+
+# DragonFly already has native /bin/tcsh
+# This package is not restricted to ${LOCALBASE} and will replace system tcsh
+# Instead, see shells/tcsh which installs at ${LOCALBASE}/bin/tcsh
+NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 .include "../../shells/tcsh/Makefile"
 
