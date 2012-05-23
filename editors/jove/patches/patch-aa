@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2003/09/22 14:10:16 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2012/05/23 04:43:17 dholland Exp $
 
---- Makefile.orig	2003-04-06 07:18:03.000000000 +0200
+- configure for pkgsrc
+- honor PKGMANDIR
+
+--- Makefile.orig	2005-09-30 22:14:41.000000000 +0000
 +++ Makefile
-@@ -21,8 +21,8 @@ SHELL = /bin/sh
+@@ -21,12 +21,12 @@ SHELL = /bin/sh
  # If they don't exist, this makefile will try to create the directories
  # LIBDIR and SHAREDIR.  All others must already exist.
  
@@ -13,6 +16,11 @@ $NetBSD: patch-aa,v 1.3 2003/09/22 14:10:16 jmmv Exp $
  LIBDIR = $(JOVEHOME)/lib/jove
  BINDIR = $(JOVEHOME)/bin
  XEXT=
+-MANDIR = $(JOVEHOME)/man/man$(MANEXT)
++MANDIR = $(JOVEHOME)/$(PKGMANDIR)/man$(MANEXT)
+ MANEXT = 1
+ 
+ # TMPDIR is where the tmp files get stored, usually /tmp, /var/tmp, or
 @@ -38,11 +38,11 @@ MANEXT = 1
  # (in case the system startup salvages tempfiles by moving them,
  # which is probably a good idea).
@@ -46,7 +54,7 @@ $NetBSD: patch-aa,v 1.3 2003/09/22 14:10:16 jmmv Exp $
  #TINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 644
  #CYGWIN32: TINSTALL=install $(INSTALLFLAGS) -c -m 644
  
-@@ -146,7 +146,7 @@ SYSDEFS = -DBSDPOSIX
+@@ -146,7 +146,7 @@ SYSDEFS = -DBSDPOSIX_STDC
  # On DEC OSF/1 and Digital UNIX VV4.0, add -std1 to enable ANSI C features
  # and perhaps -g3 for more debugging info with optimization.
  
