@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/05/23 06:05:39 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/23 16:46:15 dholland Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 # The "offical" master site has lost the pub/Games directory.
 #MASTER_SITES=		ftp://ftp.cis.ksu.edu/pub/Games/Moria/source/
@@ -16,7 +16,7 @@ COMMENT=		Rogue-like game with a different sense of scale than Rogue
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/umoria
-MAKE_FLAGS+=		CURSES=-lncurses
+MAKE_FLAGS+=		CURSES=-lncurses VARBASE=${VARBASE}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
