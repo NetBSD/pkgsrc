@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/05/14 07:42:35 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2012/05/23 06:53:32 dholland Exp $
 #
 
 DISTNAME=	joos-0.2
+PKGREVISION=	1
 CATEGORIES=	lang java
 MASTER_SITES=	# ftp://netbsd.stevens-tech.edu/pub/NetBSD/packages/distfiles/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_JAVA=	run
-USE_TOOLS+=	pax yacc flex
+USE_TOOLS+=	pax yacc flex csh:run
+
+REPLACE_CSH+=	Bin/dejava
+REPLACE_CSH+=	Bin/jappletviewer
+REPLACE_CSH+=	Bin/jasmin
+REPLACE_CSH+=	Bin/jjasmin
+REPLACE_CSH+=	Bin/jjava
+REPLACE_CSH+=	Bin/jjavac
+REPLACE_CSH+=	Bin/jjavap
+REPLACE_CSH+=	Bin/joosc
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/joos
