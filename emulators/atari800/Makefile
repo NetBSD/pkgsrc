@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2011/01/13 13:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/05/23 05:03:56 dholland Exp $
 
 DISTNAME=	atari800-2.1.0
 PKGREVISION=	2
@@ -41,4 +41,5 @@ post-install:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
