@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.6 2011/05/02 21:23:01 adam Exp $
+$NetBSD: patch-ad,v 1.7 2012/05/23 17:48:54 marino Exp $
 
 --- dlls/iphlpapi/ipstats.c.orig	2010-12-10 22:33:07.000000000 +0300
-+++ dlls/iphlpapi/ipstats.c	2010-12-22 00:38:30.000000000 +0300
++++ dlls/iphlpapi/ipstats.c
 @@ -27,6 +27,10 @@
  #include <string.h>
  #include <errno.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.6 2011/05/02 21:23:01 adam Exp $
  #ifdef HAVE_ALIAS_H
  #include <alias.h>
  #endif
-@@ -489,7 +493,7 @@
+@@ -489,7 +493,7 @@ DWORD WINAPI GetIcmpStatistics(PMIB_ICMP
          }
          if (kc) kstat_close( kc );
      }
@@ -22,25 +22,29 @@ $NetBSD: patch-ad,v 1.6 2011/05/02 21:23:01 adam Exp $
      {
          int mib[] = {CTL_NET, PF_INET, IPPROTO_ICMP, ICMPCTL_STATS};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
-@@ -655,7 +659,7 @@
+@@ -655,7 +659,9 @@ DWORD WINAPI GetIpStatistics(PMIB_IPSTAT
          }
          if (kc) kstat_close( kc );
      }
 -#elif defined(HAVE_SYS_SYSCTL_H) && defined(IPCTL_STATS)
-+#elif defined(HAVE_SYS_SYSCTL_H) && defined(IPCTL_STATS) && !defined(__NetBSD__)
++#elif defined(HAVE_SYS_SYSCTL_H) && defined(IPCTL_STATS) \
++  && !defined(__NetBSD__) \
++  && !defined(__DragonFly__)
      {
          int mib[] = {CTL_NET, PF_INET, IPPROTO_IP, IPCTL_STATS};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
-@@ -804,7 +808,7 @@
+@@ -804,7 +810,9 @@ DWORD WINAPI GetTcpStatistics(PMIB_TCPST
          }
          if (kc) kstat_close( kc );
      }
 -#elif defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS)
-+#elif defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS) && !defined(__NetBSD__)
++#elif defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS) \
++  && !defined(__NetBSD__) \
++  && !defined(__DragonFly__)
      {
  #ifndef TCPTV_MIN  /* got removed in Mac OS X for some reason */
  #define TCPTV_MIN 2
-@@ -915,7 +919,7 @@
+@@ -915,7 +923,7 @@ DWORD WINAPI GetUdpStatistics(PMIB_UDPST
          }
          if (kc) kstat_close( kc );
      }
@@ -49,7 +53,7 @@ $NetBSD: patch-ad,v 1.6 2011/05/02 21:23:01 adam Exp $
      {
          int mib[] = {CTL_NET, PF_INET, IPPROTO_UDP, UDPCTL_STATS};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
-@@ -1347,7 +1351,7 @@
+@@ -1347,7 +1355,7 @@ DWORD WINAPI AllocateAndGetIpNetTableFro
          }
          else ret = ERROR_NOT_SUPPORTED;
      }
