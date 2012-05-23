@@ -1,0 +1,13 @@
+$NetBSD: patch-src_menuitem_cpp,v 1.1 2012/05/23 06:35:17 dholland Exp $
+
+Add missing header, fails on Linux.
+
+--- src/menuitem.cpp~	2005-08-22 05:36:37.000000000 +0000
++++ src/menuitem.cpp
+@@ -3,4 +3,6 @@
+  */
+ 
++#include <cstdio>
++
+ #include "vc6.h" // Fixes things if you're using VC6, does nothing if otherwise
+ 
