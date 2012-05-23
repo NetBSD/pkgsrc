@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2012/05/15 09:20:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.19 2012/05/23 17:27:19 reed Exp $
 #
 # used by devel/glib2/Makefile
 # used by sysutils/gio-fam/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/glib/${PKGVERSION_NOREV:R}/ \
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://developer.gnome.org/doc/API/2.0/glib/glib.html
+HOMEPAGE=	http://developer.gnome.org/glib/
 COMMENT=	# empty; redefined in Makefile
 LICENSE=	gnu-lgpl-v2
 
