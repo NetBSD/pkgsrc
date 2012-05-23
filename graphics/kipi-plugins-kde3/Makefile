@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/03/19 23:05:28 markd Exp $
+# $NetBSD: Makefile,v 1.20 2012/05/23 02:53:52 dholland Exp $
 
 DISTNAME=	kipi-plugins-0.1.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +28,7 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.7.0
 .include "../../audio/libgpod/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.4
+BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.4<4.0
 .include "../../graphics/libkdcraw-kde3/buildlink3.mk"
 .include "../../graphics/libkexiv2-kde3/buildlink3.mk"
 .include "../../graphics/libkipi-kde3/buildlink3.mk"
