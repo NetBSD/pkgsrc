@@ -1,0 +1,14 @@
+$NetBSD: patch-functions_c,v 1.1 2012/05/23 06:37:50 dholland Exp $
+
+Don't declare own strchr().
+
+--- functions.c~	2005-01-12 20:25:45.000000000 +0000
++++ functions.c
+@@ -636,7 +636,6 @@ else {
+ 
+ 	if( hash == 1708 ) { /* $htmldisplay( var1, .. varN ) - convert embedded HTML problem chars (<,>,&) 
+ 			      * to their html esc sequences for all variables given */
+-		char *strchr();
+ 		for( i = 0; i < nargs; i++ ) {
+         		stat = TDH_getvalue( tok, arg[i], TDH_dat, TDH_recid );
+ 			if( strchr( tok, '&' ) != NULL ) GL_substitute( "&", "&amp;", tok );
