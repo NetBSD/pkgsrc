@@ -1266,31 +1266,26 @@ Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
 
 To bootstrap using icc, assuming the default icc installation directory:
 
-env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-ac_cv___attribute__=yes ./bootstrap
+env ICCBASE=/opt/intel/cc/10.1.008 ./bootstrap --compiler=icc
 
 
 Note
 
-icc 8.1 needs the `-i-static' argument instead of -static-libcxa.
+For icc 8.0 you must add `LDFLAGS=-static-libcxa' to this.
 
-icc supports __attribute__, but the GNU configure test uses a nested function,
-which icc does not support. #undef'ing __attribute__ has the unfortunate
-side-effect of breaking many of the Linux header files, which cannot be
-compiled properly without __attribute__. The test must be overridden so that
-__attribute__ is assumed supported by the compiler.
+For icc 8.1 you must add `LDFLAGS=-i-static' instead.
 
-After bootstrapping, you should set PKGSRC_COMPILER in mk.conf:
+For icc 10.1 neither of these appears to be necessary.
 
-PKGSRC_COMPILER=        icc
+Use a value for ICCBASE that corresponds to the directory where icc is
+installed. After bootstrapping, set ICCBASE in mk.conf:
+
+ICCBASE=                /opt/intel/cc/10.1.008
 
 
-The default installation directory for icc is /opt/intel_cc_80, which is also
-the pkgsrc default. If you have installed it into a different directory, set
-ICCBASE in mk.conf:
-
-ICCBASE=                /opt/icc
-
+The pkgsrc default for ICCBASE is /opt/intel_cc_80. This is the default install
+directory for icc 8.0. If you are using a more recent version, be sure to set
+the correct path explicitly.
 
 pkgsrc uses the static linking method of the runtime libraries provided by icc,
 so binaries can be run on other systems which do not have the shared libraries
@@ -6790,12 +6785,13 @@ option is used.
 19.1.10. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
-advisories/pkg-vulnerabilities, and after committing that file, use make upload
-in the same directory to update the file on ftp.NetBSD.org.
+advisories/pkg-vulnerabilities, and after committing that file, ask
+pkgsrc-security@NetBSD.org to update the file on ftp.NetBSD.org.
 
 After fixing the vulnerability by a patch, its PKGREVISION should be increased
 (this is of course not necessary if the problem is fixed by using a newer
-release of the software).
+release of the software), and the pattern in the pkg-vulnerabilities file must
+be updated.
 
 Also, if the fix should be applied to the stable pkgsrc branch, be sure to
 submit a pullup request!
