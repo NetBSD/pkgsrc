@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/18 16:57:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/05/23 03:02:26 dholland Exp $
 bin/spl-config
 bin/splrun
 bin/webspld
@@ -17,6 +17,7 @@ lib/spl_modules/mod_encode_xml.so
 lib/spl_modules/mod_environ.so
 lib/spl_modules/mod_file.so
 lib/spl_modules/mod_format_ini.splb
+lib/spl_modules/mod_format_xml.so
 @comment lib/spl_modules/mod_gl.so
 lib/spl_modules/mod_prime.so
 lib/spl_modules/mod_sql.so
