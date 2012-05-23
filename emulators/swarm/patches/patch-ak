@@ -1,8 +1,19 @@
-$NetBSD: patch-ak,v 1.1 2005/12/09 12:10:09 joerg Exp $
+$NetBSD: patch-ak,v 1.2 2012/05/23 05:19:40 dholland Exp $
 
---- bin/scripts/arch.orig	2005-12-09 11:57:36.000000000 +0000
+- teach it about linux on x86_64
+- support dragonfly by using the freebsd config
+
+--- bin/scripts/arch.orig	2001-04-17 14:04:10.000000000 +0000
 +++ bin/scripts/arch
-@@ -183,7 +183,7 @@ Linux)		case "$machine" in
+@@ -161,6 +161,7 @@ Linux)		case "$machine" in
+ 		alpha)		arch=$machine; bin=${machine}_linux;;
+ 		i[3456]86)	arch=ix86; machine=$arch; bin=${machine}_linux;;
+ 		sparc)		arch=$machine; bin=${machine}_linux;;
++		x86_64)		arch=$machine; bin=${machine}_linux;;
+ 		*)		echo 1>&2 "Unknown $system machine $machine"; exit 3;;
+ 		esac
+ 		# work out Linux version. On RedHat we check for /etc/redhat-release
+@@ -183,7 +184,7 @@ Linux)		case "$machine" in
  		kbin=$bin
  		k_version=$version;;
  
