@@ -1,5 +1,10 @@
-# $NetBSD: Makefile.common,v 1.10 2012/03/12 12:07:40 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.11 2012/05/23 04:47:13 dholland Exp $
 #
+
+# used by:
+#   editors/jed/Makefile
+#   editors/xjed/Makefile
+
 DISTNAME=		jed-0.99-16
 CATEGORIES=		editors
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/jed/v0.99/ \
