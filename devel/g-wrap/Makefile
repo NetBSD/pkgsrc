@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2012/04/22 20:30:11 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2012/05/23 23:11:56 gdt Exp $
 
 DISTNAME=	g-wrap-1.9.14
 PKGREVISION=	2
@@ -11,8 +11,8 @@ COMMENT=	Tool for generating guile wrappers for C code
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# not sure
-#MAKE_JOBS_SAFE=	no
+# standard.c ends up malformed with MAKE_JOBS=4
+MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	guile-lib>=0.1.2:../../devel/guile-lib
 
