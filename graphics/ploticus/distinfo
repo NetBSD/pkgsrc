@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2011/04/03 11:58:22 wiz Exp $
+$NetBSD: distinfo,v 1.13 2012/05/23 06:37:50 dholland Exp $
 
 SHA1 (pl231src.tar.gz) = 9b7219acb31231efcf1200ad586e526814ae8283
 RMD160 (pl231src.tar.gz) = 379e6c3d2d6482cda2a76726c439b4e6f5395b1f
@@ -9,4 +9,5 @@ SHA1 (patch-ba) = 69043093a1a77e14b776e3166eb874a508ae11d7
 SHA1 (patch-bb) = cd27de0c5c9d20d7909e0e3b7c0d8d0c662b232f
 SHA1 (patch-bc) = eafd9ec5a0c7856a208df17a0a45e547239b66ac
 SHA1 (patch-bd) = 7f269658b3eefdc26b36b395f657168dac8c25f4
+SHA1 (patch-functions_c) = 2dc6235796e95cd8e8de8131ee424290df9a8e0a
 SHA1 (patch-gd__png.c) = cf5cd60d4ce7e8dbd95b40c2684e5f784075682c
