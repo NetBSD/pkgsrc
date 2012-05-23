@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/23 12:51:27 abs Exp $
+
+SHA1 (edt_1.9.tgz) = c9cffb91a4c933c719a2f49095f1621a31cb733a
+RMD160 (edt_1.9.tgz) = dc16f53c2b4928c7dad3e75e99f1b361348cba90
+Size (edt_1.9.tgz) = 45510 bytes
+SHA1 (patch-edt__1.9.c) = b618ce48fc4cf193a6f7b578649fb95458ed2751
