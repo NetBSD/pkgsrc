@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2012/05/22 09:43:33 obache Exp $
+$NetBSD: patch-aa,v 1.6 2012/05/23 13:26:49 obache Exp $
 
---- configure.py.orig	2010-12-23 17:40:28.000000000 +0000
+--- configure.py.orig	2012-02-10 10:03:04.000000000 +0000
 +++ configure.py
-@@ -208,7 +208,7 @@ def set_platform_directories():
+@@ -19,6 +19,7 @@ import sys
+ import os
+ import glob
+ import optparse
++import imp
+ from distutils import sysconfig
+ 
+ import siputils
+@@ -211,7 +212,7 @@ def set_platform_directories():
  
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
@@ -11,7 +19,7 @@ $NetBSD: patch-aa,v 1.5 2012/05/22 09:43:33 obache Exp $
  
  
  def patch_files():
-@@ -254,7 +254,7 @@ def create_config(module, template, macr
+@@ -264,7 +265,7 @@ def create_config(module, template, macr
          "sip_version":      sip_version,
          "sip_version_str":  sip_version_str,
          "platform":         opts.platform,
@@ -20,3 +28,25 @@ $NetBSD: patch-aa,v 1.5 2012/05/22 09:43:33 obache Exp $
          "sip_inc_dir":      opts.sipincdir,
          "sip_mod_dir":      opts.sipmoddir,
          "default_bin_dir":  plat_bin_dir,
+@@ -297,11 +298,19 @@ def create_makefiles(macros):
+ 
+     sipconfig.inform("Creating top level Makefile...")
+ 
++    pyc_file = "sipconfig.pyc"
++    pyc_dir = cfg.sip_mod_dir
++    try:
++        pyc_file = imp.cache_from_source("sipconfig.py")
++        pyc_dir = os.path.join(cfg.sip_mod_dir, "__pycache__")
++    except AttributeError:
++        pass
++
+     sipconfig.ParentMakefile(
+         configuration=cfg,
+         subdirs=["sipgen", "siplib"],
+-        installs=(["sipconfig.py", os.path.join(src_dir, "sipdistutils.py")],
+-                cfg.sip_mod_dir)
++        installs=[(["sipconfig.py", os.path.join(src_dir, "sipdistutils.py")],
++                cfg.sip_mod_dir), ([pyc_file], pyc_dir)]
+     ).generate()
+ 
+     sipconfig.inform("Creating sip code generator Makefile...")
