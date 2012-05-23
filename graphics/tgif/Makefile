@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2011/07/12 19:04:00 drochner Exp $
+# $NetBSD: Makefile,v 1.63 2012/05/23 06:48:41 dholland Exp $
 #
 
 DISTNAME=		tgif-4.2.5
@@ -29,6 +29,7 @@ post-patch::
 
 .if ${OPSYS} == "Linux"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .endif 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
