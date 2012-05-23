@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1567 2012/05/23 07:20:50 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1568 2012/05/23 10:06:50 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/greed to 3.4nb1 [dholland 2012-05-23]
 	Updated games/moria to 5.5.2nb2 [dholland 2012-05-23]
 	Updated lang/joos to 0.2nb1 [dholland 2012-05-23]
+	Updated net/ldns to 1.6.13 [pettai 2012-05-23]
