@@ -1,33 +1,264 @@
-$NetBSD: patch-ab,v 1.2 2007/05/15 13:28:22 obache Exp $
+$NetBSD: patch-ab,v 1.3 2012/05/23 05:58:17 dholland Exp $
+
+- use standard headers
+- don't declare own strchr, getenv, time, tgetent
+- use random, not lrand48
+- work around broken definition of COLOR_PAIR on netbsd <= 3.x
+- don't use implicit int
+- use ctype.h correctly
+- avoid nasal demons by passing a matching callback function to tputs
+- fix an uninitialized variable bug caught by gcc
 
 --- greed.c.orig	2002-07-30 22:03:43.000000000 +0000
 +++ greed.c
-@@ -68,8 +68,10 @@ static char *version = "Greed v" RELEASE
- #include <sys/types.h>
+@@ -47,38 +47,36 @@
  
- #include <io.h>
--#include <stdlib.h>
- #endif
+ static char *version = "Greed v" RELEASE;
+ 
+-#ifdef MSDOS
+-#define NOTBSD
+-#endif
+ #include <ctype.h>
+-#include <curses.h>
+ #include <signal.h>
+-#ifndef MSDOS
+-#include <pwd.h>
+-#endif
+-#ifdef NOTBSD
+ #include <fcntl.h>
 +#include <stdlib.h>
 +#include <string.h>
 +#include <time.h>
++
++#ifdef MSDOS
++#include <sys/types.h>
++#include <io.h>
+ #else
+-#include <sys/file.h>
++#include <pwd.h>
++#include <termcap.h>
++#include <unistd.h>
+ #endif
++
++#include <curses.h>
+ #ifdef A_COLOR
+ #include <ctype.h>
+ #endif
+-#ifdef MSDOS
+-#include <sys/types.h>
+ 
+-#include <io.h>
+-#include <stdlib.h>
++#ifdef MSDOS
++#define NOTBSD
+ #endif
  
  #ifdef NOTBSD
  #ifndef crmode
-@@ -200,7 +202,6 @@ int argc;
+ #define crmode cbreak
+ #endif
+-#ifndef MSDOS
+-#define random lrand48			/* use high quality random routines */
+-#define srandom srand48
+-#else
++#ifdef MSDOS
+ #define random rand
+ #define srandom srand
+ #define ESC 27
+@@ -105,22 +103,21 @@ struct score {				/* changing stuff in t
+ int allmoves = 0, score = 1, grid[22][79], y, x, havebotmsg = 0;
+ char *cmdname;
+ WINDOW *helpwin = NULL;
+-#ifndef MSDOS
+-extern long random();
+-#endif
+-void topscores();
+ 
+ #ifdef MSDOS
+ char scorepath [_MAX_PATH];
+ #endif
+ 
++void topscores(int);
++int othermove(int, int);
++
+ /* botmsg() writes "msg" at the middle of the bottom line of the screen. *
+  * Boolean "backcur" specifies whether to put cursor back on the grid or *
+  * leave it on the bottom line (e.g. for questions).                     */
+ 
+ void botmsg(msg, backcur)
+ register char *msg;
+-register backcur;
++register int backcur;
+ {
+ 	mvaddstr(23, 40, msg);
+ 	clrtoeol();
+@@ -134,7 +131,7 @@ register backcur;
+  * current score) and quits; otherwise, simply returns to the game.         */
+ 
+ void quit() {
+-	register ch;
++	register int ch;
+ #ifdef NOTBSD
+ 	void (*osig)() = signal(SIGINT, SIG_IGN);	/* save old signal */
+ #else
+@@ -195,16 +192,14 @@ void showscore() {
+ 
+ void showmoves();
+ 
+-main(argc, argv)
++int main(argc, argv)
+ int argc;
  char *argv[];
  {
- 	register val = 1;
+-	register val = 1;
 -	extern long time();
++	register int val = 1;
  	int attribs[9];
  #ifdef A_COLOR
  	char *colors;
-@@ -276,7 +277,7 @@ char *argv[];
+-	extern char *getenv(), *strchr();
+ #endif
+ 
+ 	cmdname = argv[0];			/* save the command name */
+@@ -274,10 +269,10 @@ char *argv[];
+ 				if (strchr(cnames, *cp) != (char *) NULL)
+ 					if (*cp != ' ') {
  						init_pair(cp-colors+1,
- 							strchr(cnames, tolower(*cp))-cnames,
+-							strchr(cnames, tolower(*cp))-cnames,
++							strchr(cnames, tolower((unsigned char)*cp))-cnames,
  							COLOR_BLACK);
 -						attribs[cp-colors]=COLOR_PAIR(cp-colors+1);
+-						if (isupper(*cp))
 +						attribs[cp-colors]=COLOR_PAIR((cp-colors+1));
- 						if (isupper(*cp))
++						if (isupper((unsigned char)*cp))
  							attribs[cp-colors] |= A_BOLD;
  					}
+ 			if (*cp == ':')
+@@ -292,7 +287,7 @@ char *argv[];
+ 		for (x=0; x < 79; x++)		/* print numbers out */
+ #ifdef A_COLOR
+ 			if (has_colors()) {
+-				register newval = rnd(9);
++				register int newval = rnd(9);
+ 
+ 				attron(attribs[newval - 1]);
+ 				mvaddch(y, x, (grid[y][x] = newval) + '0');
+@@ -331,11 +326,11 @@ char *argv[];
+ /* tunnel() does the main game work.  Returns 1 if everything's okay, 0 if *
+  * user "died", and -1 if user specified and confirmed 'q' (fast quit).    */
+ 
+-tunnel(cmd, attribs)
++int tunnel(cmd, attribs)
+ register chtype cmd;
+ int * attribs;
+ {
+-	register dy, dx, distance;
++	register int dy, dx, distance;
+ 	void help();
+ 
+ 	switch (cmd) {				/* process user command */
+@@ -396,7 +391,7 @@ int * attribs;
+ 		grid[y+dy][x+dx] : 0;
+ 
+ 	{
+-		register j = y, i = x, d = distance;
++		register int j = y, i = x, d = distance;
+ 
+ 		do {				/* process move for validity */
+ 			j += dy;
+@@ -450,10 +445,10 @@ int * attribs;
+  * direction variables that tell othermove() they are already no good, and to *
+  * not process them.  I don't know if this is efficient, but it works!        */
+ 
+-othermove(bady, badx)
+-register bady, badx;
++int othermove(bady, badx)
++register int bady, badx;
+ {
+-	register dy = -1, dx;
++	register int dy = -1, dx;
+ 
+ 	for (; dy <= 1; dy++)
+ 		for (dx = -1; dx <= 1; dx++)
+@@ -462,7 +457,7 @@ register bady, badx;
+ 					/* don't do 0,0 or bad coordinates */
+ 				continue;
+ 			else {
+-				register j=y, i=x, d=grid[y+dy][x+dx];
++				register int j=y, i=x, d=grid[y+dy][x+dx];
+ 
+ 				if (!d) continue;
+ 				do {		/* "walk" the path, checking */
+@@ -481,15 +476,15 @@ register bady, badx;
+ /* moves instead.  "on" tells showmoves() whether to add or remove moves.     */
+ 
+ void showmoves(on, attribs)
+-register on;
++register int on;
+ int * attribs;
+ {
+-	register dy = -1, dx;
++	register int dy = -1, dx;
+ 
+ 	for (; dy <= 1; dy++) {
+ 		if (y+dy < 0 || y+dy >= 22) continue;
+ 		for (dx = -1; dx <= 1; dx++) {
+-			register j=y, i=x, d=grid[y+dy][x+dx];
++			register int j=y, i=x, d=grid[y+dy][x+dx];
+ 
+ 			if (!d) continue;
+ 			do {
+@@ -499,7 +494,7 @@ int * attribs;
+ 				    || i >= 79 || !grid[j][i]) break;
+ 			} while (--d);
+ 			if (!d) {
+-				register j=y, i=x, d=grid[y+dy][x+dx];
++				register int j=y, i=x, d=grid[y+dy][x+dx];
+ 
+ 				/* The next section chooses inverse-video    *
+ 				 * or not, and then "walks" chosen valid     *
+@@ -529,8 +524,8 @@ int * attribs;
+ 
+ /* doputc() simply prints out a character to stdout, used by tputs() */
+ 
+-char doputc(c)
+-register char c;
++int doputc(c)
++register int c;
+ {
+ 	return(fputc(c, stdout));
+ }
+@@ -542,18 +537,19 @@ register char c;
+ void topscores(newscore)
+ register int newscore;
+ {
+-	register fd, count = 1;
++	register int fd, count = 1;
+ 	static char termbuf[BUFSIZ];
+ 	char *tptr = (char *) malloc(16), *boldon, *boldoff;
+ 	struct score *toplist = (struct score *) malloc(FILESIZE);
+ 	register struct score *ptrtmp, *eof = &toplist[MAXSCORE], *new = NULL;
+-	extern char *getenv(), *tgetstr();
+ #ifndef MSDOS
+ 	void lockit();
+ #else
+ 	char user_name[100];
+ #endif
+ 
++	boldon = boldoff = NULL;
++
+ 	(void) signal(SIGINT, SIG_IGN);		/* Catch all signals, so high */
+ #ifndef MSDOS
+ 	(void) signal(SIGQUIT, SIG_IGN);	/* score file doesn't get     */
+@@ -665,9 +661,9 @@ register int newscore;
+ 
+ #ifndef MSDOS
+ void lockit(on)
+-register on;
++register int on;
+ {
+-	register fd, x = 1;
++	register int fd, x = 1;
+ 
+ 	if (on) {
+ 		while ((fd = creat(LOCKPATH, 0)) == -1) {
