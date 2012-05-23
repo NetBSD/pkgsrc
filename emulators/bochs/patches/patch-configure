@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.3 2012/05/23 05:08:00 dholland Exp $
+
+Treat Linux 3.x like 2.6.
+
+--- configure~	2012-01-06 18:51:12.000000000 +0000
++++ configure
+@@ -22005,6 +22005,10 @@ $as_echo "$as_me: Linux detected as host
+ 	  		PCIDEV_MODULE_MAKE_ALL="all-kernel26"
+ 			KERNEL_MODULE_SUFFIX="ko"
+ 		;;
++		3*)
++	  		PCIDEV_MODULE_MAKE_ALL="all-kernel26"
++			KERNEL_MODULE_SUFFIX="ko"
++		;;
+ 		*)
+                         as_fn_error "Linux kernel 2.4 or 2.6 is required for PCI host device mapping" "$LINENO" 5
+ 		;;
