@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:54:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/05/23 05:03:26 dholland Exp $
 bin/aranym
+${PLIST.aratapif}bin/aratapif
 man/man1/aranym-jit.1
 man/man1/aranym-mmu.1
 man/man1/aranym.1
+${PLIST.aratapif}man/man1/aratapif.1
 share/aranym/arabridge
 share/aranym/atari/hostfs/README
 share/aranym/atari/hostfs/bdconfig.sys
