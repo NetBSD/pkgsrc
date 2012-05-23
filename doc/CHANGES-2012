@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1573 2012/05/23 15:18:16 asau Exp $
+$NetBSD: CHANGES-2012,v 1.1574 2012/05/23 16:46:40 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2472,3 +2472,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/clang to 3.1 [adam 2012-05-23]
 	Added editors/edt version 1.9 [abs 2012-05-23]
 	Updated lang/sbcl to 1.0.57 [asau 2012-05-23]
+	Updated games/moria to 5.5.2nb3 [dholland 2012-05-23]
