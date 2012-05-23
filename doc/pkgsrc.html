@@ -1406,32 +1406,25 @@ PKGSRC_COMPILER=        mipspro
 <p>To bootstrap using icc, assuming the default icc installation
       directory:</p>
 <pre class="programlisting">
-env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-ac_cv___attribute__=yes ./bootstrap
+env ICCBASE=/opt/intel/cc/10.1.008 ./bootstrap --compiler=icc
       </pre>
 <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>icc 8.1 needs the `-i-static' argument instead of -static-libcxa.</p>
+<p>For icc 8.0 you must add `LDFLAGS=-static-libcxa' to this.</p>
+<p>For icc 8.1 you must add `LDFLAGS=-i-static' instead.</p>
+<p>For icc 10.1 neither of these appears to be necessary.</p>
 </div>
-<p>icc supports __attribute__, but the GNU configure test uses a nested
-      function, which icc does not support. #undef'ing __attribute__ has the
-      unfortunate side-effect of breaking many of the Linux header files, which
-      cannot be compiled properly without __attribute__. The test must be
-      overridden so that __attribute__ is assumed supported by the
-      compiler.</p>
-<p>After bootstrapping, you should set <code class="varname">PKGSRC_COMPILER</code>
-      in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
+<p>Use a value for ICCBASE that corresponds to the directory
+      where icc is installed. After bootstrapping, set
+      <code class="varname">ICCBASE</code> in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
 <pre class="programlisting">
-PKGSRC_COMPILER=        icc
+ICCBASE=                /opt/intel/cc/10.1.008
       </pre>
-<p>The default installation directory for icc is
-      <code class="filename">/opt/intel_cc_80</code>, which
-      is also the pkgsrc default. If you have installed it into a different
-      directory, set <code class="varname">ICCBASE</code> in
-      <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
-<pre class="programlisting">
-ICCBASE=                /opt/icc
-      </pre>
+<p>The pkgsrc default for <code class="varname">ICCBASE</code> is
+      <code class="filename">/opt/intel_cc_80</code>. This is the default
+      install directory for icc 8.0. If you are using a more recent
+      version, be sure to set the correct path explicitly.
+      </p>
 <p>pkgsrc uses the static linking method of the runtime libraries
       provided by icc, so binaries can be run on other systems which do not
       have the shared libraries installed.</p>
@@ -7552,7 +7545,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229295927"></a><dl>
+<a name="id1168229300084"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7569,7 +7562,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168229295930"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229300088"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7579,7 +7572,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168229295939"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229300097"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7590,7 +7583,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168229295947"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229300105"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8075,12 +8068,13 @@ CONFLICTS=      Xaw3d-[0-9]*
 <a name="security-handling"></a>19.1.10. Handling packages with security problems</h3></div></div></div>
 <p>When a vulnerability is found, this should be noted in
     <code class="filename">localsrc/security/advisories/pkg-vulnerabilities</code>,
-    and after committing that file, use <span class="command"><strong>make upload</strong></span>
-    in the same directory to update the file on ftp.NetBSD.org.</p>
+    and after committing that file, ask pkgsrc-security@NetBSD.org to
+    update the file on ftp.NetBSD.org.</p>
 <p>After fixing the vulnerability by a patch, its
-    <code class="varname">PKGREVISION</code> should be increased (this
-    is of course not necessary if the problem is fixed by using
-    a newer release of the software).</p>
+    <code class="varname">PKGREVISION</code> should be increased (this is of
+    course not necessary if the problem is fixed by using a newer
+    release of the software), and the pattern in the
+    pkg-vulnerabilities file must be updated.</p>
 <p>Also, if the fix should be applied to the stable pkgsrc
     branch, be sure to submit a pullup request!</p>
 <p>Binary packages already on ftp.NetBSD.org will be handled
@@ -9565,7 +9559,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229300237"></a><dl>
+<a name="id1168229287017"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9608,7 +9602,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168229300241"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229287020"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9624,7 +9618,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168229300274"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229287053"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9642,7 +9636,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168229300345"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229287125"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9660,7 +9654,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168229300379"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229287159"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9673,7 +9667,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168229300398"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229287177"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9689,7 +9683,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168229300424"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229287204"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9713,7 +9707,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168229300560"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229287339"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9738,7 +9732,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168229300590"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229287370"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9786,7 +9780,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168229300713"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229287425"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
