@@ -1,0 +1,10 @@
+$NetBSD: patch-Makefile,v 1.1 2012/05/23 06:29:58 dholland Exp $
+
+--- Makefile~	2006-08-27 15:36:17.000000000 +0000
++++ Makefile
+@@ -6,4 +6,4 @@ SRCS=		${PROG}.c
+ LIBS+=		-lcurses
+ 
+ all:
+-	${CC} ${SRCS} -o ${PROG} ${LIBS}
++	${CC} ${LDFLAGS} ${SRCS} -o ${PROG} ${LIBS}
