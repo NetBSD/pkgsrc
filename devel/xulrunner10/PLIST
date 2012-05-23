@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/29 16:30:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/23 21:06:02 markd Exp $
 bin/xulrunner10
 ${PLIST.jit}include/xulrunner10/Allocator.h
 ${PLIST.jit}include/xulrunner10/Assembler.h
@@ -2885,6 +2885,7 @@ lib/xulrunner10/components/TelemetryPing.manifest
 lib/xulrunner10/components/addonManager.js
 lib/xulrunner10/components/amContentHandler.js
 lib/xulrunner10/components/amWebInstallListener.js
+${PLIST.gnome}lib/xulrunner10/components/components.manifest
 lib/xulrunner10/components/contentAreaDropListener.js
 lib/xulrunner10/components/contentAreaDropListener.manifest
 lib/xulrunner10/components/contentSecurityPolicy.js
@@ -2894,6 +2895,9 @@ lib/xulrunner10/components/extensions.manifest
 lib/xulrunner10/components/interfaces.manifest
 lib/xulrunner10/components/jsconsole-clhandler.js
 lib/xulrunner10/components/jsconsole-clhandler.manifest
+${PLIST.gnome}lib/xulrunner10/components/libdbusservice.so
+${PLIST.gnome}lib/xulrunner10/components/libmozgnome.so
+${PLIST.gnome}lib/xulrunner10/components/libnkgnomevfs.so
 lib/xulrunner10/components/messageWakeupService.js
 lib/xulrunner10/components/messageWakeupService.manifest
 lib/xulrunner10/components/nsBadCertHandler.js
