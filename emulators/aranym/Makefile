@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/04/15 02:05:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2012/05/23 05:03:26 dholland Exp $
 #
 
 DISTNAME=			aranym_0.9.13.orig
 PKGNAME=			${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=			1
 CATEGORIES=			emulators
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=aranym/}
 SITES.emutos-512k-0.8.6.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
@@ -15,7 +16,7 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 AUTOCONF_REQD=		2..50
 
@@ -51,6 +52,14 @@ CONFIGURE_ARGS+=	--enable-nfpci
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--enable-jit-compiler
 CONFIGURE_ARGS+=	--enable-jit-fpu
+.endif
+
+# This appears if it thinks it can use tun/tap interfaces.
+# (While NetBSD has these, the configure test rejects it.)
+PLIST_VARS+=		aratapif
+.if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
+	!empty(MACHINE_PLATFORM:MDarwin-*-*)
+PLIST.aratapif=		yes
 .endif
 
 INSTALLATION_DIRS+=	${EMUTOS_DOC_DIR} ${EMUTOS_ROM_DIR}
