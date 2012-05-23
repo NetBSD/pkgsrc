@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/11/27 19:33:55 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/05/23 04:28:29 dholland Exp $
 
 SHA1 (sidplay-2.0.9.tar.gz) = 2e4589cc59b3d2d37f38b98d7a0a0ba37b82da7a
 RMD160 (sidplay-2.0.9.tar.gz) = 9d7d2cbcb472ab413093e85827de2c7099782e47
 Size (sidplay-2.0.9.tar.gz) = 362140 bytes
 SHA1 (patch-aa) = 12e236e42f2cbf311e5d9ed7b25c262089f57a27
+SHA1 (patch-src_args_cpp) = 85898b44fd5ece2a327b76a6ad29032ead088a47
 SHA1 (patch-src_audio_wav_WavFile.cpp) = a7ef72b68eb3a86bf01537e9da4fba7d44dd280e
