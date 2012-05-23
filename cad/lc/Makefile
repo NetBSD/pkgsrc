@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2009/05/19 08:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/05/23 12:50:04 marino Exp $
 
 DISTNAME=	lc	# overridden below
-PKGNAME=	lc-2.10
-PKGREVISION=	2
+PKGNAME=	lc-${LCVER}
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	http://lc.cray.com/download/
 
@@ -19,8 +19,9 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	destdir
 
+LCVER=			2.10
 DIST_SUBDIR=		${PKGNAME_NOREV}
-WRKSRC=			${WRKDIR}/lc2.10
+WRKSRC= 		${WRKDIR}/lc${LCVER}
 BUILD_DIRS=		# empty
 
 EMUL_PLATFORMS=		irix-mipsel irix-mipsel64
@@ -58,8 +59,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lc ${DESTDIR}${PREFIX}/bin/lc
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcplot ${DESTDIR}${PREFIX}/bin/lcplot
 	if test -f ${WRKSRC}/bin/spice ; then ${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${DESTDIR}${PREFIX}/bin/lcspice ; fi
-	cd ${DESTDIR}${PREFIX}/share && ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz
-	${CHMOD} -R ugo+rX ${DESTDIR}${PREFIX}/share/lc2.10
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/lc2.10
+	# remove cat pages after extraction but before installation
+	cd ${DESTDIR}${PREFIX}/share && \
+	  ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz && \
+	  ${RM} -rf lc${LCVER}/man
+	${CHMOD} -R ugo+rX ${DESTDIR}${PREFIX}/share/lc${LCVER}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/lc${LCVER}
 
 .include "../../mk/bsd.pkg.mk"
