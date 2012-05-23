@@ -1,0 +1,27 @@
+$NetBSD: patch-glkterm_gtfref_c,v 1.1 2012/05/23 05:38:41 dholland Exp $
+
+Patch out insecure temporary file code that appears to be unreachable.
+
+--- glkterm/gtfref.c~	2008-03-16 01:07:17.000000000 +0000
++++ glkterm/gtfref.c
+@@ -99,7 +99,8 @@ frefid_t glk_fileref_create_temp(glui32 
+ {
+     char *filename;
+     fileref_t *fref;
+-    
++
++#if 0 /* insecure */
+     /* This is a pretty good way to do this on Unix systems. On Macs,
+         it's pretty bad, but this library won't be used on the Mac 
+         -- I hope. I have no idea about the DOS/Windows world. */
+@@ -113,6 +114,10 @@ frefid_t glk_fileref_create_temp(glui32 
+     }
+     
+     return fref;
++#else
++    gli_strict_warning("fileref_create_temp: operation not allowed.");
++    return NULL;
++#endif
+ }
+ 
+ frefid_t glk_fileref_create_from_fileref(glui32 usage, frefid_t oldfref,
