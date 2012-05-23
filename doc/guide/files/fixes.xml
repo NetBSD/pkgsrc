@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.106 2011/11/28 23:42:58 minskim Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.107 2012/05/23 20:15:48 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -484,13 +484,14 @@ CONFLICTS=      Xaw3d-[0-9]*
 
     <para>When a vulnerability is found, this should be noted in
     <filename>localsrc/security/advisories/pkg-vulnerabilities</filename>,
-    and after committing that file, use <command>make upload</command>
-    in the same directory to update the file on ftp.NetBSD.org.</para>
+    and after committing that file, ask pkgsrc-security@NetBSD.org to
+    update the file on ftp.NetBSD.org.</para>
 
     <para>After fixing the vulnerability by a patch, its
-    <varname>PKGREVISION</varname> should be increased (this
-    is of course not necessary if the problem is fixed by using
-    a newer release of the software).</para>
+    <varname>PKGREVISION</varname> should be increased (this is of
+    course not necessary if the problem is fixed by using a newer
+    release of the software), and the pattern in the
+    pkg-vulnerabilities file must be updated.</para>
 
     <para>Also, if the fix should be applied to the stable pkgsrc
     branch, be sure to submit a pullup request!</para>
