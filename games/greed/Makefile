@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/29 23:08:08 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/23 05:58:17 dholland Exp $
 #
 
 DISTNAME=		greed-3.4
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.catb.org/~esr/greed/
 
