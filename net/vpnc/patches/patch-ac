@@ -1,17 +1,18 @@
-$NetBSD: patch-ac,v 1.10 2011/04/14 21:42:42 hans Exp $
+$NetBSD: patch-ac,v 1.11 2012/05/23 16:07:51 hauke Exp $
 
---- vpnc-script.in.orig	2008-11-19 21:55:51.000000000 +0100
-+++ vpnc-script.in	2011-04-14 23:33:24.877879829 +0200
+--- vpnc-script.in.orig	2008-11-19 20:55:51.000000000 +0000
++++ vpnc-script.in
 @@ -48,29 +48,36 @@ PATH=/sbin:/usr/sbin:$PATH
  
  OS="`uname -s`"
  
 -DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
 -RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
-+STATEDIR=@VARBASE@/run/vpnc
+-FULL_SCRIPTNAME=@PREFIX@/sbin/vpnc
++STATEDIR=/var/run/vpnc
 +DEFAULT_ROUTE_FILE=$STATEDIR/defaultroute
 +RESOLV_CONF_BACKUP=$STATEDIR/resolv.conf-backup
- FULL_SCRIPTNAME=@PREFIX@/sbin/vpnc
++FULL_SCRIPTNAME=/usr/pkg/sbin/vpnc
  SCRIPTNAME=`basename $FULL_SCRIPTNAME`
  
  # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
@@ -94,7 +95,7 @@ $NetBSD: patch-ac,v 1.10 2011/04/14 21:42:42 hans Exp $
 +		for network in $TARGET_NETWORKS ; do
 +			eval CISCO_SPLIT_INC_${i}_ADDR=`echo $network | cut -f1 -d/`
 +			eval CISCO_SPLIT_INC_${i}_MASKLEN=`echo $network | cut -f2 -d/`
-+			eval CISCO_SPLIT_INC_${i}_MASK=$( perl -e '$ARGV[0]=~s,.*/,,;$m=(2**$ARGV[0]-1)<<(32-$ARGV[0]);printf "%d.%d.%d.%d\n", $m>>24 & 0xff, $m>>16 & 0xff, $m>>8 & 0xff, $m & 0xff;' $network )
++			eval CISCO_SPLIT_INC_${i}_MASK=$( @PERL5@ -e '$ARGV[0]=~s,.*/,,;$m=(2**$ARGV[0]-1)<<(32-$ARGV[0]);printf "%d.%d.%d.%d\n", $m>>24 & 0xff, $m>>16 & 0xff, $m>>8 & 0xff, $m & 0xff;' $network )
 +			eval CISCO_SPLIT_INC_${i}_PROTOCOL=0
 +			eval CISCO_SPLIT_INC_${i}_SPORT=0
 +			eval CISCO_SPLIT_INC_${i}_DPORT=0
