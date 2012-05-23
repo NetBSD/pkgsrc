@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/22 19:44:54 he Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/23 09:53:12 pettai Exp $
 bin/ldns-config
 include/ldns/buffer.h
 include/ldns/common.h
@@ -7,6 +7,7 @@ include/ldns/dnssec.h
 include/ldns/dnssec_sign.h
 include/ldns/dnssec_verify.h
 include/ldns/dnssec_zone.h
+include/ldns/duration.h
 include/ldns/error.h
 include/ldns/higher.h
 include/ldns/host2str.h
