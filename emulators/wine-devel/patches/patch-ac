@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2011/05/02 21:23:01 adam Exp $
+$NetBSD: patch-ac,v 1.4 2012/05/23 17:48:54 marino Exp $
 
 --- dlls/ntdll/directory.c.orig	2010-06-18 17:36:58.000000000 +0000
 +++ dlls/ntdll/directory.c
-@@ -128,6 +128,20 @@ static inline int getdents64( int fd, ch
+@@ -129,6 +129,20 @@ static inline int getdents64( int fd, ch
  #endif  /* linux */
  
  #define IS_OPTION_TRUE(ch) ((ch) == 'y' || (ch) == 'Y' || (ch) == 't' || (ch) == 'T' || (ch) == '1')
@@ -23,3 +23,63 @@ $NetBSD: patch-ac,v 1.3 2011/05/02 21:23:01 adam Exp $
  #define IS_SEPARATOR(ch)   ((ch) == '\\' || (ch) == '/')
  
  #define INVALID_NT_CHARS   '*','?','<','>','|','"'
+@@ -313,7 +327,8 @@ static char *get_default_com_device( int
+         strcpy( ret, "/dev/ttyS0" );
+         ret[strlen(ret) - 1] = '0' + num - 1;
+     }
+-#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
++   || defined(__DragonFly__)
+     ret = RtlAllocateHeap( GetProcessHeap(), 0, sizeof("/dev/cuad0") );
+     if (ret)
+     {
+@@ -486,7 +501,8 @@ static char *parse_mount_entries( FILE *
+ }
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
++ || defined(__DragonFly__)
+ #include <fstab.h>
+ static char *parse_mount_entries( FILE *f, dev_t dev, ino_t ino )
+ {
+@@ -587,7 +603,8 @@ static char *get_default_drive_device( c
+     }
+     RtlLeaveCriticalSection( &dir_section );
+ 
+-#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__ )
++#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__ ) \
++   || defined(__DragonFly__)
+     char *device = NULL;
+     int fd, res = -1;
+     struct stat st;
+@@ -920,7 +937,8 @@ static int get_dir_case_sensitivity_attr
+  */
+ static BOOLEAN get_dir_case_sensitivity_stat( const char *dir )
+ {
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
++ || defined(__DragonFly__)
+     struct statfs stfs;
+ 
+     if (statfs( dir, &stfs ) == -1) return FALSE;
+@@ -1667,6 +1685,9 @@ static int read_directory_getdirentries(
+                                          BOOLEAN single_entry, const UNICODE_STRING *mask,
+                                          BOOLEAN restart_scan, FILE_INFORMATION_CLASS class )
+ {
++#ifdef __DragonFly__
++#define d_reclen d_namlen
++#endif
+     long restart_pos;
+     ULONG_PTR restart_info_pos = 0;
+     size_t size, initial_size = length;
+@@ -1799,6 +1820,9 @@ done:
+     return res;
+ }
+ 
++#ifdef __DragonFly__
++#undef d_reclen
++#endif
+ #ifdef _DARWIN_FEATURE_64_BIT_INODE
+ #undef getdirentries
+ #undef dirent
