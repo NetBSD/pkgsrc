@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11090 2012/05/23 10:09:45 pettai Exp $
+$NetBSD: TODO,v 1.11091 2012/05/23 13:15:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nulib2-220
-	o nut-17.8
+	o nut-17.9
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1086,7 +1086,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pam-passwdqc-1.2.2
 	o pan-0.137
 	o paprefs-0.9.8
-	o parallel-20120422
+	o parallel-20120522
 	o pari-2.5.1
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-4.4.0
@@ -1426,7 +1426,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xev-1.2.0
 	o xextproto-7.2.1
 	o xeyes-1.1.1
-	o xf86-input-vmmouse-12.8.0
+	o xf86-input-vmmouse-12.9.0
 	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.4
 	o xf86-video-ark-0.7.4
