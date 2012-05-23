@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.42 2012/05/22 11:59:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.43 2012/05/23 17:58:15 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -195,3 +195,5 @@ Pullup ticket #3799 - requested by taca
 net/bind97: security update
 Pullup ticket #3800 - requested by taca
 net/bind96: security update
+Pullup ticket #3802 - requested by reed
+x11/slock: security update
