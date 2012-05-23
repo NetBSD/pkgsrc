@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/08/16 15:33:01 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2012/05/23 06:08:59 dholland Exp $
 
 --- sys/agi_file.h.orig	2003-08-11 15:40:12.000000000 +0200
 +++ sys/agi_file.h	2003-08-11 15:40:56.000000000 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/08/16 15:33:01 drochner Exp $
  #ifdef RAD_LINUX
  #include <sys/types.h>
  #include <dirent.h>
-+#include <sys/syslimits.h>
++#include <limits.h>
  #else
  #include <io.h>
  #endif
