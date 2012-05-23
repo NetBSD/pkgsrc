@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1571 2012/05/23 11:03:42 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1572 2012/05/23 12:53:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2470,3 +2470,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/softhsm to 1.3.3 [pettai 2012-05-23]
 	Updated security/opendnssec to 1.3.8 [pettai 2012-05-23]
 	Updated lang/clang to 3.1 [adam 2012-05-23]
+	Added editors/edt version 1.9 [abs 2012-05-23]
