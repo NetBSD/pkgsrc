@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:35:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/05/23 12:50:04 marino Exp $
 bin/lc
 bin/lcplot
 ${PLIST.lcspice}bin/lcspice
@@ -8,8 +8,6 @@ share/lc2.10/app-defaults/Lcplot
 share/lc2.10/index.html
 share/lc2.10/install.html
 share/lc2.10/lc.gif
-share/lc2.10/man/cat1/lc.1
-share/lc2.10/man/cat1/lcplot.1
 share/lc2.10/models/README
 share/lc2.10/models/champ/README
 share/lc2.10/models/champ/champ.gif
