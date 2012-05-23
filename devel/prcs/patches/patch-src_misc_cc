@@ -1,0 +1,15 @@
+$NetBSD: patch-src_misc_cc,v 1.1 2012/05/23 04:39:29 dholland Exp $
+
+Don't launder const; fixes build with recent glibc.
+
+--- src/misc.cc~	2004-05-10 00:40:56.000000000 +0000
++++ src/misc.cc
+@@ -251,7 +251,7 @@ bool weird_pathname(const char* N)
+ 
+ const char* strip_leading_path(const char* P)
+ {
+-    char* s = strrchr(P, '/');
++    const char* s = strrchr(P, '/');
+ 
+     if ( s == '\0' )
+         return P;
