@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2011/12/12 09:07:22 pettai Exp $
+$NetBSD: patch-aa,v 1.5 2012/05/23 10:09:21 pettai Exp $
 
-Install conf files in exampledir
-
---- conf/Makefile.in.orig	2010-11-17 09:07:35.000000000 +0000
+--- conf/Makefile.in.orig	2012-05-09 18:50:03.000000000 +0000
 +++ conf/Makefile.in
-@@ -277,6 +277,7 @@ sharedstatedir = @sharedstatedir@
+@@ -302,6 +302,7 @@ sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  subdirs = @subdirs@
  sysconfdir = @sysconfdir@/opendnssec
@@ -12,7 +10,7 @@ Install conf files in exampledir
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -530,19 +531,19 @@ regress: $(RNG)
+@@ -563,19 +564,19 @@ regress: $(RNG)
  		(echo "kasp.xml built")
  
  install-data-hook:
@@ -42,6 +40,6 @@ Install conf files in exampledir
 +	test -f ${DESTDIR}${EGDIR}/kasp.xml || \
 +		${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}
 +	${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
