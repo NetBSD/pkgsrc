@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2010/06/25 22:12:31 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2012/05/23 06:05:39 dholland Exp $
 
---- unix/Makefile.orig	Fri Jul 22 08:37:08 1994
+- configure for pkgsrc
+- honor PREFIX, PKGMANDIR, VARBASE, CFLAGS, LDFLAGS
+
+--- unix/Makefile.orig	1994-07-21 22:37:08.000000000 +0000
 +++ unix/Makefile
 @@ -3,15 +3,18 @@
  # LIBDIR must be the same directory defined in config.h
@@ -12,8 +15,8 @@ $NetBSD: patch-aa,v 1.3 2010/06/25 22:12:31 joerg Exp $
 -GROUP = grad
 +BINDIR = ${PREFIX}/bin
 +LIBDIR = ${PREFIX}/share/games/moria
-+MANDIR = ${PREFIX}/man/man6
-+SCOREFILE = /var/games/moria.scores
++MANDIR = ${PREFIX}/${PKGMANDIR}/man6
++SCOREFILE = ${VARBASE}/games/moria.scores
 +
 +GROUP = games
  
@@ -26,7 +29,16 @@ $NetBSD: patch-aa,v 1.3 2010/06/25 22:12:31 joerg Exp $
  
  # For BSD Systems
  CURSES = -lcurses -ltermcap
-@@ -45,6 +48,8 @@
+@@ -24,7 +27,7 @@ CURSES = -lcurses -ltermcap
+ # config.h if you use this.
+ #LFLAGS = -lbsd
+ # Normal systems don't require anything here.
+-LFLAGS = 
++LFLAGS = $(LDFLAGS)
+ 
+ CC = cc
+ 
+@@ -45,6 +48,8 @@ OBJS = main.o misc1.o misc2.o misc3.o mi
  LIBFILES = hours news origcmds.hlp owizcmds.hlp roglcmds.hlp rwizcmds.hlp \
  	version.hlp welcome.hlp
  
@@ -35,7 +47,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/25 22:12:31 joerg Exp $
  moria : $(OBJS)
  	$(CC) -o moria $(CFLAGS) $(OBJS) $(CURSES) $(LFLAGS)
  
-@@ -57,22 +62,16 @@
+@@ -57,22 +62,16 @@ lintout2 : $(SRCS)
  TAGS : $(SRCS)
  	ctags -x $(SRCS) > TAGS
  
