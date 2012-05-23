@@ -1,0 +1,15 @@
+$NetBSD: patch-src_stk_input_stk__joy_h,v 1.1 2012/05/23 06:26:11 dholland Exp $
+
+Use valid C.
+
+--- src/stk/input/stk_joy.h~	2001-07-15 21:26:18.000000000 +0000
++++ src/stk/input/stk_joy.h
+@@ -14,7 +14,7 @@
+ #include <linux/joystick.h>
+ # if JS_VERSION >= 0x010000
+ #    define LINUX_JOYSTICK_NEW
+-# elif
++# else
+ #    define LINUX_JOYSTICK_OLD
+ # endif
+ #endif
