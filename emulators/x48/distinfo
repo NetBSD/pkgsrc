@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/04/22 22:04:24 dholland Exp $
+$NetBSD: distinfo,v 1.6 2012/05/23 05:22:37 dholland Exp $
 
 SHA1 (x48_041.tar.gz) = 7b166ab4a7570b0617a0d8d01d0938b6ae372ab6
 RMD160 (x48_041.tar.gz) = e41b32bd2b38c4163e4a1aae0776048b0c372637
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = ee5784614db4bf00c047e819aaa0f272d3bf9bce
 SHA1 (patch-ad) = c1f98b7672fe96ab8e203081dfedd6cf96075cfa
 SHA1 (patch-ae) = 29ec4f1495ab23d520883eebd51356b394c7143f
 SHA1 (patch-af) = 60adc15ae8c20528892cbcaa029a3dd206a7edca
+SHA1 (patch-src_timer_c) = 976debb83985bad55ca8b25dfe256370e59e3ac8
