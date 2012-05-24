@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xenguest.sh,v 1.2 2011/11/22 09:15:58 sborrill Exp $
+# $NetBSD: xenguest.sh,v 1.3 2012/05/24 09:44:18 sborrill Exp $
 #
 # PROVIDE: xenguest
 # REQUIRE: DAEMON
@@ -42,7 +42,7 @@ xenguest_precmd()
 		os_minorver="${os_uname#*.}"
 		os_minorver="${os_minorver%%.*}"
 
-		mkdir -p =@VARBASE@/cache
+		mkdir -p @VARBASE@/cache
 		cat << EOF > $XE_LINUX_DISTRIBUTION_CACHE
 os_distro="$os_distro"
 os_uname="$os_uname"
