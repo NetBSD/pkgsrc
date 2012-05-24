@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2012/05/03 09:55:32 obache Exp $
+# $NetBSD: Makefile,v 1.55 2012/05/24 19:54:44 ryoon Exp $
 
 DISTNAME=	kterm-6.2.0
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
@@ -10,7 +10,7 @@ PATCH_SITES=	${MASTER_SITE_LOCAL}
 PATCHFILES=	kterm-6.2.0-termios-wd0.2.patch2 \
 		kterm-6.2.0-scroll-wd0.2.patch \
 		kterm-6.2.0.NFS-xauth.patch \
-		kterm-6.2.0.ext06.patch.gz
+		kterm-6.2.0.ext05.patch.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
