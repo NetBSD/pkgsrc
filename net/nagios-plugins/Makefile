@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/01/16 22:09:59 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/05/24 15:20:25 marino Exp $
 #
 
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -42,6 +42,8 @@ CPPFLAGS_LFS!=		getconf LFS_CFLAGS
 MAKE_ENV+=		CPPFLAGS_LFS=${CPPFLAGS_LFS:Q}
 .endif
 LIBS.SunOS+=	-lm
+
+DEPENDS+=	nagios-base-*:../../net/nagios-base
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
