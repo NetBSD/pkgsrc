@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.213 2012/05/11 11:09:42 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.214 2012/05/24 07:27:27 sbd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -828,10 +828,10 @@ _BLNK_PASSTHRU_RPATHDIRS+=	${X11BASE}/lib
 #
 _BLNK_PASSTHRU_RPATHDIRS+=	${BUILDLINK_PASSTHRU_RPATHDIRS}
 #
-# Strip out /usr/lib as it's always automatically in the runtime library
-# search path.
+# Strip out /usr/lib (and /usr/lib${LIBABISUFFIX}}) as it's always 
+# automatically in the runtime library search path.
 #
-_BLNK_PASSTHRU_RPATHDIRS:=	${_BLNK_PASSTHRU_RPATHDIRS:N/usr/lib}
+_BLNK_PASSTHRU_RPATHDIRS:=	${_BLNK_PASSTHRU_RPATHDIRS:N/usr/lib:N/usr/lib${LIBABISUFFIX}}
 
 _BLNK_MANGLE_DIRS=	# empty
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_DIR}
