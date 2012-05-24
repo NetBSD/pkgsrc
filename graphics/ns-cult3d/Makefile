@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/25 21:42:21 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/24 19:42:22 marino Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -10,7 +10,9 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.cult3d.com/
 COMMENT=	Netscape plugin for cult 3d files
 
-NOT_FOR_PLATFORM=	Interix-*-*
+# http://leaf.dragonflybsd.org/mailarchive/users/2012-05/msg00066.html
+NOT_FOR_PLATFORM+=	DragonFly-*-*
+NOT_FOR_PLATFORM+=	Interix-*-*
 ONLY_FOR_PLATFORM=	*-*-i386
 
 PKG_DESTDIR_SUPPORT=	user-destdir
