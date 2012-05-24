@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2012/02/17 14:11:23 hans Exp $
+# $NetBSD: Makefile.common,v 1.32 2012/05/24 08:07:33 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -10,7 +10,7 @@
 
 DISTNAME=	qt-everywhere-opensource-src-${QTVERSION}
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.qt.nokia.com/qt/source/
+MASTER_SITES=	http://releases.qt-project.org/qt4/source/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

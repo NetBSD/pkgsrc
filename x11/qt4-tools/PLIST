@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/04/09 09:12:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/05/24 08:07:33 adam Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -330,10 +330,8 @@ qt4/mkspecs/features/win32/windows.prf
 qt4/mkspecs/features/yacc.prf
 qt4/mkspecs/freebsd-g++/qmake.conf
 qt4/mkspecs/freebsd-g++/qplatformdefs.h
-qt4/mkspecs/freebsd-g++34/qmake.conf
-qt4/mkspecs/freebsd-g++34/qplatformdefs.h
-qt4/mkspecs/freebsd-g++40/qmake.conf
-qt4/mkspecs/freebsd-g++40/qplatformdefs.h
+qt4/mkspecs/freebsd-g++46/qmake.conf
+qt4/mkspecs/freebsd-g++46/qplatformdefs.h
 qt4/mkspecs/freebsd-icc/qmake.conf
 qt4/mkspecs/freebsd-icc/qplatformdefs.h
 qt4/mkspecs/hpux-acc-64/qmake.conf
@@ -364,6 +362,8 @@ qt4/mkspecs/irix-g++-64/qmake.conf
 qt4/mkspecs/irix-g++-64/qplatformdefs.h
 qt4/mkspecs/irix-g++/qmake.conf
 qt4/mkspecs/irix-g++/qplatformdefs.h
+qt4/mkspecs/linux-arm-gnueabi-g++/qmake.conf
+qt4/mkspecs/linux-arm-gnueabi-g++/qplatformdefs.h
 qt4/mkspecs/linux-cxx/qmake.conf
 qt4/mkspecs/linux-cxx/qplatformdefs.h
 qt4/mkspecs/linux-ecc-64/qmake.conf
@@ -543,6 +543,10 @@ qt4/mkspecs/unixware-cc/qmake.conf
 qt4/mkspecs/unixware-cc/qplatformdefs.h
 qt4/mkspecs/unixware-g++/qmake.conf
 qt4/mkspecs/unixware-g++/qplatformdefs.h
+qt4/mkspecs/unsupported/blackberry-armv7le-qcc/qmake.conf
+qt4/mkspecs/unsupported/blackberry-armv7le-qcc/qplatformdefs.h
+qt4/mkspecs/unsupported/blackberry-x86-qcc/qmake.conf
+qt4/mkspecs/unsupported/blackberry-x86-qcc/qplatformdefs.h
 qt4/mkspecs/unsupported/linux-armcc/qmake.conf
 qt4/mkspecs/unsupported/linux-armcc/qplatformdefs.h
 qt4/mkspecs/unsupported/linux-clang/qmake.conf
