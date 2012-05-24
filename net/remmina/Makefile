@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/15 17:06:51 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/24 21:25:45 marino Exp $
 
 DISTNAME=	remmina-0.9.3
 CATEGORIES=	net
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 DEPENDS+=	rdesktop>=1.6.0:../../net/rdesktop
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	intltool perl pkg-config gmake
+USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
