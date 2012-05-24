@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2011/12/15 15:19:35 drochner Exp $
+# $NetBSD: Makefile,v 1.55 2012/05/24 13:10:20 wiz Exp $
 
 DISTNAME=	neon-0.29.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webdav.org/neon/
 
@@ -23,6 +24,14 @@ PKGCONFIG_OVERRIDE=	neon.pc.in
 TEST_TARGET=		check
 #selftest needs perl
 USE_TOOLS+=		perl
+
+post-build:
+	cd ${WRKSRC}/doc/man && \
+	for i in ne_*3; do \
+		if grep -q '^.so ' $$i >/dev/null; then \
+			sed -e "s_.so _.so man3/_" $$i > $$i.new && mv $$i.new $$i; \
+		fi; \
+	done
 
 .include "options.mk"
 
