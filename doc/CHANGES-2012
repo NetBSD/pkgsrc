@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1578 2012/05/24 13:10:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1579 2012/05/24 15:22:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-tiff to 4.8.2 [adam 2012-05-24]
 	Updated lang/objc to 3.2.10 [asau 2012-05-24]
 	Updated www/neon to 0.29.6nb1 [wiz 2012-05-24]
+	Updated mail/milter-manager to 1.8.3 [obache 2012-05-24]
