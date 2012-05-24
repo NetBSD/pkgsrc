@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2012/05/04 06:58:04 sbd Exp $
+# $NetBSD: Makefile,v 1.15 2012/05/24 09:14:58 asau Exp $
 
-DISTNAME=	objc-3.2.6
+DISTNAME=	objc-3.2.10
 CATEGORIES=	lang
 MASTER_SITES=	http://users.pandora.be/stes/
 DISTFILES=	${DIST_BS}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
@@ -11,7 +11,7 @@ COMMENT=	Portable Object Compiler
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_BS=	objc-bootstrap-3.1.33
+DIST_BS=	objc-bootstrap-3.2.8
 WRKSRC_BS=	${WRKDIR}/${DIST_BS}
 
 MAKE_JOBS_SAFE=		no
