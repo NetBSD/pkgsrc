@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/03/03 00:13:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/05/24 23:07:29 marino Exp $
 #
 
 DISTNAME=	gwaei-3.0.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl gmake pkg-config intltool
+USE_TOOLS+=		perl gmake pkg-config intltool msgfmt
 
 PLIST_SRC=		PLIST
 
