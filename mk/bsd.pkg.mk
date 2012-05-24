@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1980 2012/03/05 07:17:15 sbd Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1981 2012/05/24 11:34:15 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -152,7 +152,7 @@ ${_var_}+=	${${_var_}.*}
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 
 # To sanitise environment set PKGSRC_SETENV=${SETENV} -i
-PKGSRC_SETENV=	${SETENV}
+PKGSRC_SETENV?=	${SETENV}
 
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:M*:Q}
