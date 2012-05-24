@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/05/09 05:38:18 dholland Exp $
+$NetBSD: distinfo,v 1.4 2012/05/24 18:54:16 marino Exp $
 
 SHA1 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 1d47598fb0f956ce1a0c6b1afb462e8d6beeb1ed
 RMD160 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 60213dd583da6034d5c4f7766b0a7dbafe57100c
@@ -6,7 +6,8 @@ Size (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 17873523 bytes
 SHA1 (patch-backend_wbprivate_workbench_stdafx_h) = 3bfeffdbbf7b8c3922ba514c436cb5a6f92c614b
 SHA1 (patch-backend_windows_wbprivate_wr_src_stdafx_h) = a42d1c33c627dd52e73f6841d759be5922950984
 SHA1 (patch-frontend_linux_linux_utilities_toolbar_manager.cpp) = cc2ecf41802836c1ce799ebdff26ad89b70f3459
-SHA1 (patch-library_base_international_file.cpp) = 55a6910d63b29db1ba8ea6d17bc7c42ac8897162
+SHA1 (patch-library_base_file_utilities.cpp) = af34c32bec2e194b9e8e96c264dd7b036c380978
+SHA1 (patch-library_base_international_file.cpp) = 702e1465cbe2eec2b21d5b308e9c1184edb5c03b
 SHA1 (patch-library_canvas_src_mdc__canvas__view__printing_cpp) = 5c3e6c6f63421aa7aa5972a38e4f5b6d87aba71f
 SHA1 (patch-library_canvas_src_mdc__canvas__view_h) = 932e1e744ba0663afa0af3d618808fa9448b058a
 SHA1 (patch-library_canvas_src_stdafx_h) = 2e10af126271958857bdb77ca400d5e2d7e9a9ce
