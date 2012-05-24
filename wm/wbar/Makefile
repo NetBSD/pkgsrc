@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:14:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/24 23:41:14 marino Exp $
 #
 
 DISTNAME=	wbar-2.2.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake gsed:build intltool pkg-config
+USE_TOOLS+=	gmake gsed:build intltool pkg-config msgfmt
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 PKG_SYSCONFSUBDIR=	wbar
