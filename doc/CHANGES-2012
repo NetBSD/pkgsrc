@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1575 2012/05/23 17:10:50 reed Exp $
+$NetBSD: CHANGES-2012,v 1.1576 2012/05/24 08:09:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2474,3 +2474,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/sbcl to 1.0.57 [asau 2012-05-23]
 	Updated games/moria to 5.5.2nb3 [dholland 2012-05-23]
 	Updated x11/slock to 1.0 [reed 2012-05-23]
+	Updated x11/qt4 to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-libs to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-tools to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-docs to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-mng to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-mysql to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-pgsql to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-qdbus to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-sqlite3 to 4.8.2 [adam 2012-05-24]
+	Updated x11/qt4-tiff to 4.8.2 [adam 2012-05-24]
