@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2012/05/16 19:41:07 wiz Exp $
+# $NetBSD: Makefile,v 1.352 2012/05/25 20:40:08 wiz Exp $
 #
 
 COMMENT=	Games
@@ -267,7 +267,6 @@ SUBDIR+=	tuxmath
 SUBDIR+=	tuxracer
 SUBDIR+=	tyrquake
 SUBDIR+=	ufoai
-SUBDIR+=	ultima4-data
 SUBDIR+=	urban
 SUBDIR+=	velena
 SUBDIR+=	vms-empire
