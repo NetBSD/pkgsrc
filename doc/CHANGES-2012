@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1584 2012/05/25 08:28:23 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1585 2012/05/25 11:23:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/pngcrush to 1.7.28 [adam 2012-05-25]
 	Updated net/haproxy to 1.4.21 [morr 2012-05-25]
 	Updated security/py-crypto to 2.6 [wiz 2012-05-25]
+	Updated net/py-foolscap to 0.6.3 [gdt 2012-05-25]
