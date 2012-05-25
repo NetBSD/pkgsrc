@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1587 2012/05/25 19:54:22 he Exp $
+$NetBSD: CHANGES-2012,v 1.1588 2012/05/25 20:02:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2495,3 +2495,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/py-foolscap to 0.6.3 [gdt 2012-05-25]
 	Updated shells/ast-ksh to 20120229 [asau 2012-05-25]
 	Updated graphics/gdk-pixbuf to 0.22.0nb17 [he 2012-05-25]
+	Updated shells/tcsh to 6.18.01nb1 [he 2012-05-25]
