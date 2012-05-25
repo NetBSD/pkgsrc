@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1588 2012/05/25 20:02:10 he Exp $
+$NetBSD: CHANGES-2012,v 1.1589 2012/05/25 20:05:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2496,3 +2496,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/ast-ksh to 20120229 [asau 2012-05-25]
 	Updated graphics/gdk-pixbuf to 0.22.0nb17 [he 2012-05-25]
 	Updated shells/tcsh to 6.18.01nb1 [he 2012-05-25]
+	Updated databases/sqlite3 to 3.7.12.1 [adam 2012-05-25]
+	Updated databases/sqlite3-docs to 3.7.12.1 [adam 2012-05-25]
+	Updated databases/sqlite3-tcl to 3.7.12.1 [adam 2012-05-25]
