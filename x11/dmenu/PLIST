@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/22 12:59:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/25 21:00:26 reed Exp $
 bin/dmenu
 bin/dmenu_run
-bin/lsx
+bin/stest
 man/man1/dmenu.1
-man/man1/lsx.1
+man/man1/stest.1
