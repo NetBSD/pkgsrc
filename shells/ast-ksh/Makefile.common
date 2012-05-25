@@ -1,13 +1,11 @@
-# $NetBSD: Makefile.common,v 1.28 2012/05/04 16:51:18 joerg Exp $
+# $NetBSD: Makefile.common,v 1.29 2012/05/25 17:08:46 asau Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
-PKGREVISION=	1
 CATEGORIES=	shells
-MASTER_SITES=	http://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
-		ftp://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
-		http://pkgs.fedoraproject.org/repo/pkgs/ksh/ast-ksh.2006-02-14.tgz/76a13bdb10a35b5ff67208cf9042a8bf/ \
-		http://pkgs.fedoraproject.org/repo/pkgs/ksh/INIT.2006-02-14.tgz/375ede1f75db451f645a140ec41b9216/
+# originally at http://www2.research.att.com/~gsf/download/tgz/
+# but it requires authentication
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	INIT.${ASTKSH_VERSION}.tgz ast-ksh.${ASTKSH_VERSION}.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,8 +13,6 @@ HOMEPAGE=	http://www.kornshell.com/
 COMMENT=	Official AT&T release of KornShell 93
 
 NOT_FOR_PLATFORM=	Interix-*-* # taking nearly a day to build and crash!
-
-BROKEN=		Hangs during build
 
 CONFLICTS=	static-ast-ksh-[0-9]*
 KSH93_MAKEFLAGS=
@@ -27,7 +23,7 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
-ASTKSH_VERSION=	2006-02-14
+ASTKSH_VERSION=	2012-02-29
 
 WRKSRC=		${WRKDIR}
 MAKE_FLAGS+=	CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
