@@ -1,0 +1,35 @@
+$NetBSD: patch-ao,v 1.1.2.2 2012/05/25 15:31:58 tron Exp $
+
+Add fix for http://secunia.com/advisories/49125/, taken from
+http://bugzilla-attachments.gnome.org/attachment.cgi?id=212053.
+
+--- gdk-pixbuf/io-xbm.c.orig	2001-01-21 04:13:40.000000000 +0000
++++ gdk-pixbuf/io-xbm.c
+@@ -177,10 +177,16 @@ read_bitmap_file_data (FILE *fstream,
+ 				type++;
+ 			}
+ 
+-			if (!strcmp ("width", type))
++			if (!strcmp ("width", type)) {
++				if (value <= 0)
++					RETURN (FALSE);
+ 				ww = (unsigned int) value;
+-			if (!strcmp ("height", type))
++			}
++			if (!strcmp ("height", type)) {
++				if (value <= 0)
++					RETURN (FALSE);
+ 				hh = (unsigned int) value;
++			}
+ 			if (!strcmp ("hot", type)) {
+ 				if (type-- == name_and_type
+ 				    || type-- == name_and_type)
+@@ -221,6 +227,8 @@ read_bitmap_file_data (FILE *fstream,
+ 		bytes_per_line = (ww+7)/8 + padding;
+ 
+ 		size = bytes_per_line * hh;
++		if (size / bytes_per_line != hh) /* overflow */
++			RETURN (FALSE);
+ 		bits = g_malloc (size);
+ 
+ 		if (version10p) {
