@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/03/15 11:53:27 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/05/25 11:25:56 gdt Exp $
 #
 
 VERSION=	1.9.1
 DISTNAME=	allmydata-tahoe-${VERSION}
 EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/
 #for beta, add
@@ -38,7 +38,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # Included egg setuptools_trial, not used.
 # Included egg setuptools_darcs, used (no package yet).
-DEPENDS+=	${PYPKGPREFIX}-foolscap-[0-9]*:../../net/py-foolscap
+DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.6.3:../../net/py-foolscap
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
