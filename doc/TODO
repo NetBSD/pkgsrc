@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11096 2012/05/24 15:22:53 obache Exp $
+$NetBSD: TODO,v 1.11097 2012/05/25 08:20:27 morr Exp $
 
 Suggested new packages
 ======================
@@ -778,7 +778,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
-	o haproxy-1.4.21
 	o haskell-mode-1.45
 	o hdf-4.2.7p1
 	o help2man-1.40.9
