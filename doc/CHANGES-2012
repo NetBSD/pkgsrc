@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1583 2012/05/25 08:20:27 morr Exp $
+$NetBSD: CHANGES-2012,v 1.1584 2012/05/25 08:28:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2491,3 +2491,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/kterm to 6.2.0nb21 [ryoon 2012-05-24]
 	Updated graphics/pngcrush to 1.7.28 [adam 2012-05-25]
 	Updated net/haproxy to 1.4.21 [morr 2012-05-25]
+	Updated security/py-crypto to 2.6 [wiz 2012-05-25]
