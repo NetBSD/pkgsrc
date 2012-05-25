@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2012/05/25 00:18:46 marino Exp $
+
+--- configure.orig	2005-06-27 11:51:57.000000000 +0000
++++ configure
+@@ -5519,7 +5519,7 @@ echo "${ECHO_T}no" >&6
+   exit 1
+ fi
+ gentoo_lt_version="1.5.10"
+-gentoo_ltmain_version=`grep '^[:space:]*VERSION=' $ltmain | sed -e 's|^[:space:]*VERSION=||'`
++gentoo_ltmain_version=`grep '^[[:space:]]*VERSION=' $ltmain | sed -e 's|^[[:space:]]*VERSION=||'`
+ if test "$gentoo_lt_version" != "$gentoo_ltmain_version"; then
+   echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
