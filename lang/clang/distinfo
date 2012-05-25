@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2012/05/23 11:02:41 adam Exp $
+$NetBSD: distinfo,v 1.11 2012/05/25 09:06:52 marino Exp $
 
 SHA1 (clang-3.1.src.tar.gz) = 19f33b187a50d22fda2a6f9ed989699a9a9efd62
 RMD160 (clang-3.1.src.tar.gz) = 5ae09d3d69d4f1e50e07f6bf3474da96e6a84feb
@@ -9,3 +9,4 @@ Size (llvm-3.1.src.tar.gz) = 11077429 bytes
 SHA1 (patch-ab) = 140ac84d513cf20c9eb30a9e8e2f6b87bdd074fe
 SHA1 (patch-ac) = 252f6a1f2cb79fed19668310c72d1079b47eca3c
 SHA1 (patch-ad) = 4cd7223d1660a4e8d81b33b6c99efbb680664164
+SHA1 (patch-projects_sample_autoconf_config.sub) = 7e8449c46ed0c3e5530235d33a35f7f4e083d0b0
