@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1589 2012/05/25 20:05:49 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1590 2012/05/25 20:40:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2499,3 +2499,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/sqlite3 to 3.7.12.1 [adam 2012-05-25]
 	Updated databases/sqlite3-docs to 3.7.12.1 [adam 2012-05-25]
 	Updated databases/sqlite3-tcl to 3.7.12.1 [adam 2012-05-25]
+	Removed games/ultima4-data [wiz 2012-05-25]
