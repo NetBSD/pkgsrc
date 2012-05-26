@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2007/12/02 09:38:50 rillig Exp $
+$NetBSD: distinfo,v 1.6 2012/05/26 14:27:20 christos Exp $
 
-SHA1 (dpkg_1.13.25.tar.gz) = d943167eac6abde6bc88a628389b26bb7a84c3b7
-RMD160 (dpkg_1.13.25.tar.gz) = a4a58cd34839d0d70e8c231e1db548dbd9568806
-Size (dpkg_1.13.25.tar.gz) = 3384618 bytes
-SHA1 (patch-ad) = 95c64b2d0c6872b75151f2e8ca4c3d0a3206b6a0
-SHA1 (patch-af) = 2b7245e7c335d738197fc92284e901a43fa1d8a8
-SHA1 (patch-ag) = bbba4a85ff03f4aafd902cf61586a7e614bc1c36
+SHA1 (dpkg_1.16.3.tar.bz2) = b82a62c1b5e85adcc947f28a264ef7b7ee8580ca
+RMD160 (dpkg_1.16.3.tar.bz2) = 7175a4394a48c4a2158cb0f9b0be93c37e74cf11
+Size (dpkg_1.16.3.tar.bz2) = 5599915 bytes
+SHA1 (patch-aa) = 0d037973cd36788bc94cf9d3aac3b08dc978bd7b
