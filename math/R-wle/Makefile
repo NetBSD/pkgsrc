@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/15 16:03:42 brook Exp $
+# $NetBSD: Makefile,v 1.8 2012/05/26 14:38:38 marino Exp $
 #
 
 CATEGORIES=	math
@@ -16,6 +16,7 @@ USE_LANGUAGES+=	c fortran
 
 DEPENDS+=	R-circular>=0.4.3:../../math/R-circular
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../math/R/Makefile.extension"
 .include "../../math/blas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
