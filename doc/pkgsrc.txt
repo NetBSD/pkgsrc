@@ -6539,14 +6539,34 @@ the other. The free licenses are added to the default ACCEPTABLE_LICENSES
 variable. The user can override the default by setting the ACCEPTABLE_LICENSES
 variable with "=" instead of "+=". The licenses accepted by default are:
 
-    public-domain
-    gnu-gpl-v2 gnu-lgpl-v2
-    gnu-gpl-v3 gnu-lgpl-v3
-    original-bsd modified-bsd
-    x11
-    apache-2.0
-    cddl-1.0
-    open-font-license
+        public-domain unlicense
+        gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
+        gnu-gpl-v1
+        gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
+        gnu-gpl-v3 gnu-lgpl-v3
+        original-bsd modified-bsd 2-clause-bsd
+        x11 mit miros
+        apache-1.1 apache-2.0
+        artistic artistic-2.0
+        cddl-1.0
+        cpl-1.0
+        open-font-license
+        mpl-1.0 mpl-1.1 mpl-2.0
+        php png-license
+        postgresql-license
+        zlib
+        zpl
+        python-software-foundation
+        ipafont
+        ibm-public-license-1.0
+        isc
+        boost-license
+        mplusfont
+        cc-by-sa-v3.0
+        lppl-1.3c
+        lucent
+        epl-v1.0
+        info-zip
 
 
 The license tag mechanism is intended to address copyright-related issues
@@ -6648,6 +6668,11 @@ variables that can be set to note these restrictions:
     Distfiles may not made available via FTP at no charge. In this case, set
     this variable to ${RESTRICTED}. If this variable is set, the distfile(s)
     will not be mirrored on ftp.NetBSD.org.
+
+Please note that packages will to be removed from pkgsrc when the distfiles are
+not distributable and cannot be obtained for a period of one full quarter
+branch. Packages with manual / interactive fetch must have a maintainer and it
+is his/her responsibility to ensure this.
 
 19.1.6. Handling dependencies
 
