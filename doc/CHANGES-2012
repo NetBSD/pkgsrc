@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1591 2012/05/25 21:01:39 reed Exp $
+$NetBSD: CHANGES-2012,v 1.1592 2012/05/26 08:07:13 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/sqlite3-tcl to 3.7.12.1 [adam 2012-05-25]
 	Removed games/ultima4-data [wiz 2012-05-25]
 	Updated x11/dmenu to 4.5 [reed 2012-05-25]
+	Updated www/p5-Mojolicious to 2.96 [mspo 2012-05-26]
