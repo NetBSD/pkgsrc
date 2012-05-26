@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/23 09:53:19 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/05/26 11:48:01 ghen Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
@@ -40,6 +40,7 @@ include/dovecot/sieve/sieve-plugins.h
 include/dovecot/sieve/sieve-result.h
 include/dovecot/sieve/sieve-runtime-trace.h
 include/dovecot/sieve/sieve-runtime.h
+include/dovecot/sieve/sieve-script-file.h
 include/dovecot/sieve/sieve-script-private.h
 include/dovecot/sieve/sieve-script.h
 include/dovecot/sieve/sieve-settings.h
@@ -60,7 +61,6 @@ man/man1/sieve-test.1
 man/man1/sievec.1
 man/man1/sieved.1
 man/man7/pigeonhole.7
-share/doc/dovecot/sieve/spamtest-virustest.txt
-share/doc/dovecot/sieve/vacation.txt
+share/doc/dovecot/sieve/script-location-dict.txt
 share/examples/dovecot/conf.d/20-managesieve.conf
 share/examples/dovecot/conf.d/90-sieve.conf
