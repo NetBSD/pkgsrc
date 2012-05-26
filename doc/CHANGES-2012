@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1595 2012/05/26 15:09:11 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.1596 2012/05/26 15:16:57 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Mojolicious to 2.96 [mspo 2012-05-26]
 	Updated mail/dovecot2-pigeonhole to 0.3.1 [ghen 2012-05-26]
 	Updated misc/dpkg to 1.16.3 [christos 2012-05-26]
+	Updated shells/tcsh to 6.18.01nb2 [he 2012-05-26]
