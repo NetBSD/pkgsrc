@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/15 17:27:13 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/26 01:38:25 marino Exp $
 
 DISTNAME=	remmina-plugins-0.9.2
 CATEGORIES=	net
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 DEPENDS+=	rdesktop>=1.6.0:../../net/rdesktop
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	intltool perl pkg-config gmake
+USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
 
 .include "../../x11/libxkbfile/buildlink3.mk"
 
