@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1593 2012/05/26 11:48:30 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.1594 2012/05/26 14:29:15 christos Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2503,3 +2503,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/dmenu to 4.5 [reed 2012-05-25]
 	Updated www/p5-Mojolicious to 2.96 [mspo 2012-05-26]
 	Updated mail/dovecot2-pigeonhole to 0.3.1 [ghen 2012-05-26]
+	Updated misc/dkpg to 1.16.3 [christos 2012-05-26]
