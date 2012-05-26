@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2004/04/03 17:01:03 taca Exp $
+$NetBSD: patch-ad,v 1.4 2012/05/26 15:52:41 ryoon Exp $
 
---- main.c.orig	2004-04-03 11:26:03.000000000 +0900
+--- main.c.orig	2012-05-26 01:55:25.000000000 +0000
 +++ main.c
-@@ -1247,6 +1247,8 @@ char **argv;
+@@ -1310,6 +1310,8 @@ char **argv;
  	d_tio.c_cc[VQUIT] = CQUIT;		/* '^\'	*/
      	d_tio.c_cc[VEOF] = CEOF;		/* '^D'	*/
  	d_tio.c_cc[VEOL] = CEOL;		/* '^@'	*/
@@ -11,3 +11,16 @@ $NetBSD: patch-ad,v 1.3 2004/04/03 17:01:03 taca Exp $
  #ifdef VSWTCH
  	d_tio.c_cc[VSWTCH] = CSWTCH;            /* usually '^Z' */
  #endif
+@@ -1617,10 +1619,12 @@ char **argv;
+ 		case 'e': case 'E': case 'x': case 'X':
+ 		    term->flags |= EUC_KANJI;
+ 		    update_eucmode();
++		    make_unicode_map();
+ 		    break;
+ 		case 's': case 'S': case 'm': case 'M':
+ 		    term->flags |= SJIS_KANJI;
+ 		    update_sjismode();
++		    make_unicode_map();
+ 		    break;
+ 	        case 'u': case 'U':
+ 		    term->flags |= UTF8_KANJI;
