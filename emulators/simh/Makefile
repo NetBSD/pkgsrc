@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/05/04 09:38:23 hans Exp $
+# $NetBSD: Makefile,v 1.35 2012/05/26 02:46:02 obache Exp $
 #
 
 DISTNAME=	simhv39-0
@@ -6,7 +6,6 @@ PKGNAME=	simh-3.9.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
