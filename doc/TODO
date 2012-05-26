@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11098 2012/05/25 17:10:02 asau Exp $
+$NetBSD: TODO,v 1.11099 2012/05/26 16:52:06 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1149,7 +1149,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cups-1.9.60
 	o py-dbus-1.0.0 [needs dbus>=1.4]
 	o py-dbus-1.1.0
-	o py-feedparser-5.1.2
 	o py-game-1.9.1 [needs portmidi]
 	o py-gdata-2.0.17
 	o py-gnosis-1.2.2
