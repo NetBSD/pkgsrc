@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/05/24 19:54:44 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2012/05/26 15:52:41 ryoon Exp $
 
 SHA1 (kterm-6.2.0-scroll-wd0.2.patch) = 384d938d3cfea48ae31426c918be6b8df59eb1de
 RMD160 (kterm-6.2.0-scroll-wd0.2.patch) = e2ea4285def5c4ec8b88d36a20a328cc1082a469
@@ -9,9 +9,9 @@ Size (kterm-6.2.0-termios-wd0.2.patch2) = 7785 bytes
 SHA1 (kterm-6.2.0.NFS-xauth.patch) = 940298d2ae3f45d4b2c80f29687c90a09d9a6cb0
 RMD160 (kterm-6.2.0.NFS-xauth.patch) = dd4aa490abeea768e74b97baba6ea29f79299328
 Size (kterm-6.2.0.NFS-xauth.patch) = 4137 bytes
-SHA1 (kterm-6.2.0.ext05.patch.gz) = 025b1413341024b1c1e121365b9684d0318c397e
-RMD160 (kterm-6.2.0.ext05.patch.gz) = 64be59f79c5755b23805d9f1a1e0f6a458f825ea
-Size (kterm-6.2.0.ext05.patch.gz) = 74741 bytes
+SHA1 (kterm-6.2.0.ext06.patch.gz) = aa7e4b7c96fd39f0b7a247734ca3992d3faa0243
+RMD160 (kterm-6.2.0.ext06.patch.gz) = 3486869425a85496714ef98493f32188fffcfe38
+Size (kterm-6.2.0.ext06.patch.gz) = 78729 bytes
 SHA1 (kterm-6.2.0.tar.gz) = 23b612254e9f7c9f5e233a4bcacc651887a3f7ee
 RMD160 (kterm-6.2.0.tar.gz) = d23c755f119b5602a3c6f6ac97e27e10c43a8bfe
 Size (kterm-6.2.0.tar.gz) = 200448 bytes
@@ -19,5 +19,5 @@ SHA1 (patch-KTerm.ad) = 7fccdb89f586e4db634a2efc9a919a6525982964
 SHA1 (patch-aa) = 6afc18d4c35f86077e00d3444d8ba6953463f073
 SHA1 (patch-ab) = 011b1fc5033f61784e57030c78f6cca5a82722d1
 SHA1 (patch-ac) = 926a43c2bb1b78cd87dae39b10800a1e7cdfe0ce
-SHA1 (patch-ad) = d85043a7b7a31f50ff92fe574fb4649f57d7bb66
+SHA1 (patch-ad) = 1c561043ac178f792ed8e61a9944f0f8b06248d3
 SHA1 (patch-ae) = 52a2e974fee9330465f3036267bb99fd8df40f67
