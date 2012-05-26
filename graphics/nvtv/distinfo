@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2009/03/13 12:48:51 hasso Exp $
+$NetBSD: distinfo,v 1.5 2012/05/26 10:13:29 shattered Exp $
 
 SHA1 (nvtv-0.4.7.tar.gz) = 5ea23e4bfcdf91766ec4600a90866a3ccede252b
 RMD160 (nvtv-0.4.7.tar.gz) = 866128297f30b36758e8dadfd04a562515bfc8e3
 Size (nvtv-0.4.7.tar.gz) = 419564 bytes
 SHA1 (patch-aa) = 5427ad734597a76f4dbd65d17d95604f0df88d1e
-SHA1 (patch-ab) = 672fce1536dc7070f7b44d999c5da0a75b4d4c4c
+SHA1 (patch-ab) = 6b4e77864b7f42a6e95020a62d31ad4d569ac6d9
 SHA1 (patch-ac) = af493d9f8209203b50379f93146ba6504eb39829
+SHA1 (patch-ad) = ba6d7653d90f5b0b4fa54a4f4eb106a0e7954f88

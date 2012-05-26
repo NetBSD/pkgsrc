@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.3 2012/05/26 10:13:29 shattered Exp $
+
+PR 34032
+
+--- src/nvtv.c.orig	2004-04-20 14:55:17.000000000 +0000
++++ src/nvtv.c
+@@ -172,6 +172,10 @@ static OptIntDecl opt_set_list [] = {
+   {"ChromaBandwidth", min:   0, max:100, SET_FIELD(chroma_bandwidth)},
+   {"Sharpness",       min:   0, max:100, SET_FIELD(sharpness)},
+   {"CrossColor",      min:   0, max:100, SET_FIELD(cross_color)},
++  {"TVPositionX",     min:-100, max:100, SET_FIELD(tv_hoffset)},
++  {"TVPositionY",     min:-100, max:100, SET_FIELD(tv_voffset)},
++  {"MonitorPositionX",     min:-100, max:100, SET_FIELD(mon_hoffset)},
++  {"MonitorPositionY",     min:-100, max:100, SET_FIELD(mon_voffset)},
+   {NULL}
+ };
+ 
