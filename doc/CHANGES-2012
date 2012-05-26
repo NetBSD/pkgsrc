@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1597 2012/05/26 15:54:02 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1598 2012/05/26 16:52:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2506,3 +2506,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/dpkg to 1.16.3 [christos 2012-05-26]
 	Updated shells/tcsh to 6.18.01nb2 [he 2012-05-26]
 	Updated x11/kterm to 6.2.0nb22 [ryoon 2012-05-26]
+	Updated textproc/py-feedparser to 5.1.2 [schmonz 2012-05-26]
