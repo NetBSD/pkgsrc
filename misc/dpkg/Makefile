@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:44:08 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/05/26 14:27:20 christos Exp $
 #
 
-DISTNAME=	dpkg_1.13.25
-PKGNAME=	dpkg-1.13.25
-PKGREVISION=	1
+DISTNAME=	dpkg_1.16.3
+PKGNAME=	dpkg-1.16.3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wiki.debian.org/Teams/Dpkg
@@ -14,6 +14,7 @@ COMMENT=	Package maintenance system for Debian
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		po4a>=0:../../textproc/po4a
+BUILD_DEPENDS+=		gtar>=1.26:../../archivers/gtar
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_DEFS+=	VARBASE
@@ -27,8 +28,7 @@ USE_NCURSES=		yes	# needs tigetstr()
 REPLACE_PERL=		scripts/*.pl
 
 CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--with-start-stop-daemon=no
-CONFIGURE_ARGS+=	--with-sgml-doc=no
+CONFIGURE_ARGS+=	--disable-start-stop-daemon
 CONFIGURE_ARGS+=	--with-admindir=${VARBASE}/db/dpkg
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 
@@ -37,9 +37,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-linker-optimisations=no
 .endif
-
-post-extract:
-	cd ${FILESDIR} && cp obstack.* ${WRKSRC}/lib/
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
