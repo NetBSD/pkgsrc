@@ -1,29 +1,29 @@
-$NetBSD: patch-aa,v 1.9 2010/05/28 13:21:26 tsutsui Exp $
+$NetBSD: patch-aa,v 1.10 2012/05/26 08:50:53 obache Exp $
 
---- makefile.orig	2008-11-19 12:53:48.000000000 +0000
+--- makefile.orig	2012-04-23 07:28:04.000000000 +0000
 +++ makefile
-@@ -5,17 +5,17 @@
-   #Unix Environments
-   ifneq (,$(findstring solaris,$(OSTYPE)))
-     OS_CCDEFS = -lm -lsocket -lnsl -lrt -lpthread -D_GNU_SOURCE
-+  else ifneq (,$(findstring darwin,$(OSTYPE)))
-+    OS_CCDEFS = -D_GNU_SOURCE
-+  else ifneq (,$(findstring linux,$(OSTYPE)))
-+    OS_CCDEFS = -lrt -lm -D_GNU_SOURCE
-   else
--    ifneq (,$(findstring darwin,$(OSTYPE)))
--      OS_CCDEFS = -D_GNU_SOURCE
--    else
--      OS_CCDEFS = -lrt -lm -D_GNU_SOURCE
--    endif
-+    OS_CCDEFS = -lm -D_GNU_SOURCE
+@@ -72,8 +72,8 @@ ifeq ($(WIN32),)  #*nix Environments (&&
+     endif
+     OS_LDFLAGS = -lm
+   else # Non-Android Builds
+-    INCPATH:=/usr/include
+-    LIBPATH:=/usr/lib
++    INCPATH:=${BUILDLINK_DIR}/include /usr/include
++    LIBPATH:=${BUILDLINK_DIR}/lib /usr/lib
+     OS_CCDEFS = -D_GNU_SOURCE
+     GCC_OPTIMIZERS_CMD = $(GCC) -v --help 2>&1
+     GCC_WARNINGS_CMD = $(GCC) -v --help 2>&1
+@@ -141,11 +141,11 @@ ifeq ($(WIN32),)  #*nix Environments (&&
    endif
--  CC = gcc -std=c99 -U__STRICT_ANSI__ -g $(OS_CCDEFS) -I .
-+  CC = gcc -std=c99 -U__STRICT_ANSI__ -g -O2 $(OS_CCDEFS) -I .
-   ifeq ($(USE_NETWORK),)
-   else
--    NETWORK_OPT = -DUSE_NETWORK -isystem /usr/local/include /usr/local/lib/libpcap.a
-+    NETWORK_OPT = -DUSE_NETWORK -lpcap
+   ifneq (,$(call find_lib,pthread))
+     ifneq (,$(call find_include,pthread))
+-      OS_CCDEFS += -DUSE_READER_THREAD
++      OS_CCDEFS += -DUSE_READER_THREAD ${PTHREAD_CFLAGS}
+       ifeq (,$(NOASYNCH))
+         OS_CCDEFS += -DSIM_ASYNCH_IO 
+       endif
+-      OS_LDFLAGS += -lpthread
++      OS_LDFLAGS += ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+       $(info using libpthread: $(call find_lib,pthread) $(call find_include,pthread))
+     endif
    endif
- else
-   #Win32 Environments
