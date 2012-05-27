@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+# $NetBSD: INSTALL,v 1.2 2012/05/27 12:16:15 obache Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -142,7 +142,7 @@ POST-INSTALL)
 
 	# Make /etc/mtab usable for Linux programs.
 	${RM} -f ${EMULDIR}/etc/mtab
-	${LN} -fs ${EMULDIR}/proc/mounts ${EMULDIR}/etc/mtab
+	${LN} -fs ../proc/mounts ${EMULDIR}/etc/mtab
 
 	# Run any actions that require root privileges.
 	${TEST} ! -x ./+ROOT_ACTIONS ||
