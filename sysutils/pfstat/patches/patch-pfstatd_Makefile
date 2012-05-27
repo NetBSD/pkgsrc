@@ -1,0 +1,21 @@
+$NetBSD: patch-pfstatd_Makefile,v 1.1 2012/05/27 20:46:14 dholland Exp $
+
+Don't use .PATH: ${.CURDIR}/.. as it causes erratic behavior.
+(For example, because ../pfstatd exists, make may latch onto that
+as the path for "pfstatd" instead of the pfstatd executable.)
+
+--- pfstatd/Makefile~	2007-01-11 16:01:58.000000000 +0000
++++ pfstatd/Makefile
+@@ -3,8 +3,11 @@
+ PROG=	pfstatd
+ SRCS=	pfstatd.c pf.c
+ MAN=	pfstatd.8
+-.PATH: ${.CURDIR}/..
++#.PATH: ${.CURDIR}/..
+ CFLAGS+=	-Wall
+ CFLAGS+=	-I${.CURDIR}/..
+ 
+ .include <bsd.prog.mk>
++
++pf.c: ../pf.c
++	cp ../pf.c pf.c
