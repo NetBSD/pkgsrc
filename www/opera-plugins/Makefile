@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/03/09 14:19:52 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/05/27 13:20:28 obache Exp $
 
 DISTNAME=	opera-plugins-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,13 +11,12 @@ HOMEPAGE=	http://www.opera.com/
 COMMENT=	Plugins for the Opera browser
 
 DEPENDS+=	opera>=11.61:../../www/opera
-DEPENDS+=	ns-flash>=5.0.47:../../multimedia/ns-flash
+DEPENDS+=	{adobe-flash-plugin-[0-9]*,ns-flash>=5.0.47}:../../multimedia/adobe-flash-plugin
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	motif
-EMUL_REQD=		suse>=7.3
+EMUL_REQD=		suse>=10.0
 
 NO_BUILD=	YES
 PLIST_SRC=	${WRKDIR}/PLIST
