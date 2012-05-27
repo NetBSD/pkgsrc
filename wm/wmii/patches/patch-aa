@@ -1,21 +1,25 @@
-$NetBSD: patch-aa,v 1.7 2010/02/12 20:42:33 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2012/05/27 18:13:59 marino Exp $
 
---- config.mk.orig	2007-11-16 14:59:15.000000000 +0100
+--- config.mk.orig	2007-11-16 13:59:15.000000000 +0000
 +++ config.mk
-@@ -1,10 +1,9 @@
+@@ -1,12 +1,11 @@
  # Customize below to fit your system
  
  # paths
 -PREFIX = /usr/local
 -BIN = ${PREFIX}/bin
-+BIN = ${DESTDIR}${PREFIX}/bin
 -MAN = ${PREFIX}/share/man
 -ETC = ${PREFIX}/etc
+-LIBDIR = ${PREFIX}/lib
+-INCLUDE = ${PREFIX}/include
++BIN = ${DESTDIR}${PREFIX}/bin
 +MAN = ${DESTDIR}${PREFIX}/${PKGMANDIR}
 +ETC = ${DESTDIR}${PKG_SYSCONFBASE}
- LIBDIR = ${PREFIX}/lib
- INCLUDE = ${PREFIX}/include
++LIBDIR = ${DESTDIR}${PREFIX}/lib
++INCLUDE = ${DESTDIR}${PREFIX}/include
  
+ # Includes and libs
+ INCPATH = .:${ROOT}/include:${INCLUDE}:/usr/include
 @@ -14,8 +13,8 @@ LIBS = -L/usr/lib -lc -L${ROOT}/lib
  
  # Flags
@@ -27,3 +31,13 @@ $NetBSD: patch-aa,v 1.7 2010/02/12 20:42:33 joerg Exp $
  STATIC = -static
  MKDEP = cpp -M
  
+@@ -32,8 +31,7 @@ P9PATHS = ${PLAN9}:"'$${HOME}/plan9'":/u
+ INCX11 = -I/usr/X11R6/include
+ LIBX11 = -L/usr/X11R6/lib -lX11
+ LIBICONV = # Leave blank if your libc includes iconv (glibc does)
+-LIBIXP = ${ROOT}/libixp/libixp.a
+-LIBIXP = ${LIBDIR}/libixp.a
++LIBIXP = ${PREFIX}/lib/libixp.a
+ 
+ # Solaris
+ #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
