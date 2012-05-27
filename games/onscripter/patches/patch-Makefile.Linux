@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.Linux,v 1.4 2012/05/27 17:08:44 tsutsui Exp $
+$NetBSD: patch-Makefile.Linux,v 1.5 2012/05/27 17:40:38 tsutsui Exp $
 
 - use appropriate pkg-config metainfo for INCS and LIBS definitions
 - disable avifile (that is not in pkgsrc) support
@@ -17,7 +17,23 @@ $NetBSD: patch-Makefile.Linux,v 1.4 2012/05/27 17:08:44 tsutsui Exp $
  
  # recommended: smpeg
  DEFS += -DUSE_SMPEG
-@@ -42,16 +42,16 @@ LIBS += -logg -lvorbis -lvorbisfile
+@@ -28,11 +28,13 @@ LIBS += `smpeg-config --libs`
+ 
+ # recommended: fontconfig (to get default font)
+ DEFS += -DUSE_FONTCONFIG
+-LIBS += -lfontconfig
++INCS += `pkg-config --cflags fontconfig`
++LIBS += `pkg-config --libs fontconfig`
+ 
+ # recommended: OggVorbis 
+ DEFS += -DUSE_OGG_VORBIS
+-LIBS += -logg -lvorbis -lvorbisfile
++INCS += `pkg-config --cflags ogg` `pkg-config --cflags vorbis` `pkg-config --cflags vorbisfile`
++LIBS += `pkg-config --libs ogg` `pkg-config --libs vorbis` `pkg-config --libs vorbisfile`
+ 
+ # optional: Integer OggVorbis
+ #DEFS += -DUSE_OGG_VORBIS -DINTEGER_OGG_VORBIS
+@@ -42,16 +44,16 @@ LIBS += -logg -lvorbis -lvorbisfile
  DEFS += -DUSE_CDROM
  
  # optional: avifile
@@ -41,7 +57,7 @@ $NetBSD: patch-Makefile.Linux,v 1.4 2012/05/27 17:08:44 tsutsui Exp $
  EXT_OBJS += LUAHandler$(OBJSUFFIX)
  
  # optional: force screen width for PDA
-@@ -62,11 +62,11 @@ EXT_OBJS += LUAHandler$(OBJSUFFIX)
+@@ -62,11 +64,11 @@ EXT_OBJS += LUAHandler$(OBJSUFFIX)
  
  
  # for GNU g++
@@ -56,7 +72,7 @@ $NetBSD: patch-Makefile.Linux,v 1.4 2012/05/27 17:08:44 tsutsui Exp $
  
  # for GCC on PowerPC specfied
  #CC = powerpc-unknown-linux-gnu-g++
-@@ -80,6 +80,6 @@ CFLAGS = -O3 -Wall -fomit-frame-pointer 
+@@ -80,6 +82,6 @@ CFLAGS = -O3 -Wall -fomit-frame-pointer 
  
  #CFLAGS = -O3 -tpp6 -xK -c $(INCS) $(DEFS)
  
