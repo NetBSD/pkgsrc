@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.15.2.2 2012/05/27 13:15:37 spz Exp $
+
+Fix problem with Meta-<key> no longer being recognized,
+patch from christos@.
+
+--- ed.inputl.c.orig	2010-12-22 17:26:04.000000000 +0000
++++ ed.inputl.c
+@@ -683,7 +683,7 @@ GetNextCommand(KEYCMD *cmdnum, Char *ch)
+ #ifdef DSPMBYTE
+ 	     _enable_mbdisp &&
+ #else
+-	     MB_CUR_MAX == 1 &&
++	     MB_LEN_MAX == 1 &&
+ #endif
+ 	     !adrof(STRnokanji) && (*ch & META)) {
+ 	    MetaNext = 0;
