@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.20 2011/09/08 20:17:15 abs Exp $
+# $NetBSD: build.mk,v 1.21 2012/05/27 14:32:29 cheusov Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -91,6 +91,26 @@ ${_COOKIE.build}:
 .else
 ${_COOKIE.build}: real-build
 .endif
+
+######################################################################
+### rebuild (PUBLIC)
+######################################################################
+### rebuild is a special target to re-run the build target.
+###
+
+.PHONY: rebuild
+rebuild: build-clean
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} build
+
+######################################################################
+### build-clean (PRIVATE)
+######################################################################
+### build-clean removes the state files for the "build" and
+### later phases so that the "build" target may be re-invoked.
+###
+.PHONY: build-clean
+build-clean: install-clean _package-clean
+	${RUN} ${RM} -f ${_COOKIE.build}
 
 ######################################################################
 ### real-build (PRIVATE)

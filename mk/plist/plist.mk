@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.42 2012/05/13 12:39:47 obache Exp $
+# $NetBSD: plist.mk,v 1.43 2012/05/27 14:32:28 cheusov Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -292,3 +292,13 @@ INFO_FILES_cmd=								\
 	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |	\
 	${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
 .endif
+
+######################################################################
+### plist-clean (PRIVATE)
+######################################################################
+### plist-clean removes the files for the "plist"
+### so that the "plist" target may be re-invoked.
+###
+.PHONY: plist-clean
+plist-clean:
+	${RUN} ${RM} -f ${PLIST} ${_PLIST_NOKEYWORDS} ${_DEPENDS_PLIST}
