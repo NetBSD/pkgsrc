@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2012/03/22 16:54:25 adam Exp $
+$NetBSD: patch-aa,v 1.12.2.1 2012/05/27 13:15:37 spz Exp $
+
+Use LDFLAGS and BSD_INSTALL_*.
 
 --- Makefile.in.orig	2011-02-05 17:35:31.000000000 +0000
 +++ Makefile.in
