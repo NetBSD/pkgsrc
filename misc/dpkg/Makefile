@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2012/05/26 14:27:20 christos Exp $
+# $NetBSD: Makefile,v 1.23 2012/05/27 20:53:42 dholland Exp $
 #
 
 DISTNAME=	dpkg_1.16.3
 PKGNAME=	dpkg-1.16.3
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,10 +23,13 @@ BUILD_DEFS+=	VARBASE
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt perl
+USE_TOOLS+=		gmake msgfmt perl:run
 USE_NCURSES=		yes	# needs tigetstr()
 
 REPLACE_PERL=		scripts/*.pl
+REPLACE_PERL+=		dselect/methods/ftp/install
+REPLACE_PERL+=		dselect/methods/ftp/setup
+REPLACE_PERL+=		dselect/methods/ftp/update
 
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--disable-start-stop-daemon
