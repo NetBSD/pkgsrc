@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.44 2012/05/25 15:34:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.45 2012/05/27 13:33:44 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -199,3 +199,11 @@ Pullup ticket #3802 - requested by reed
 x11/slock: security update
 Pullup ticket #3803 - requested by he
 graphics/gdk-pixbuf: security patch
+Pullup ticket #3801 - requested by tron
+net/wireshark: security update
+Pullup ticket #3804 - requested by he
+shells/tcsh: bugfix
+Pullup ticket #3805 - requested by schmonz
+textproc/py-feedparser: security update
+Pullup ticket #3806 - requested by morr
+net/haproxy: security update
