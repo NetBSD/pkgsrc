@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1599 2012/05/27 09:10:10 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1600 2012/05/27 12:16:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2508,3 +2508,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/kterm to 6.2.0nb22 [ryoon 2012-05-26]
 	Updated textproc/py-feedparser to 5.1.2 [schmonz 2012-05-26]
 	Updated emulators/suse121_libxml2 to 12.1nb1 [obache 2012-05-27]
+	Updated emulators/suse121_base to 12.1nb2 [obache 2012-05-27]
