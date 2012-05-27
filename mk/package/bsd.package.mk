@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.14 2010/03/08 13:51:24 joerg Exp $
+# $NetBSD: bsd.package.mk,v 1.15 2012/05/27 14:32:28 cheusov Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -38,6 +38,16 @@ repackage: package-eat-cookie package
 .PHONY: package-clean
 package-clean: package-eat-cookie
 	${RUN} ${RM} -f ${PKGFILE}
+
+######################################################################
+### _package-clean (PRIVATE)
+######################################################################
+### _package-clean removes the state files for the "_package-clean" and
+### later phases so that the "test" target may be re-invoked.
+###
+.PHONY: _package-clean
+_package-clean: package-eat-cookie plist-clean check-files-clean
+	${RUN} ${RM} -rf ${DESTDIR}
 
 ######################################################################
 ### package-eat-cookie (PRIVATE)
