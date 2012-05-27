@@ -1,33 +1,48 @@
-$NetBSD: patch-Makefile.Linux,v 1.3 2012/05/20 11:47:51 tsutsui Exp $
+$NetBSD: patch-Makefile.Linux,v 1.4 2012/05/27 17:08:44 tsutsui Exp $
 
-- config with OggVorbis and Lua + fontconfig but without avifile
-- use appropriate pkg-config like tools for incs and libs
+- use appropriate pkg-config metainfo for INCS and LIBS definitions
+- disable avifile (that is not in pkgsrc) support
 - replace tools definitions with pkgsrc ones
 
---- Makefile.Linux.orig	2012-05-20 04:51:31.000000000 +0000
+--- Makefile.Linux.orig	2012-05-27 05:49:49.000000000 +0000
 +++ Makefile.Linux
-@@ -8,11 +8,16 @@
- #LIBS = `sdl-config --libs` `smpeg-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm
- #DEFS = -DLINUX -DUSE_CDROM 
+@@ -18,8 +18,8 @@ EXT_OBJS = 
  
--INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` -I/usr/include/lua5.1
-+#INCS = `sdl-config --cflags` `smpeg-config --cflags` `avifile-config --cflags` -I/usr/include/lua5.1
- # with OggVorbis and AVI
--LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile -llua5.1
-+#LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -logg -lvorbis -lvorbisfile -llua5.1
- #DEFS = -DLINUX -DUSE_CDROM -DUSE_AVIFILE -DUSE_OGG_VORBIS
--DEFS = -DLINUX -DUSE_CDROM -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
-+#DEFS = -DLINUX -DUSE_CDROM -DUSE_AVIFILE -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
-+
-+# with OggVorbis and Lua + fontconfig
-+INCS = `sdl-config --cflags` `smpeg-config --cflags` `pkg-config --cflags SDL_ttf` `pkg-config --cflags SDL_image` `pkg-config --cflags SDL_mixer` `pkg-config --cflags ogg` `pkg-config --cflags vorbis` `pkg-config --cflags vorbisfile` `pkg-config --cflags lua` `pkg-config --cflags fontconfig`
-+LIBS = `sdl-config --libs` `smpeg-config --libs`  `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm `pkg-config --libs ogg` `pkg-config --libs vorbis` `pkg-config --libs vorbisfile` `pkg-config --libs lua` `pkg-config --libs fontconfig`
-+DEFS = -DLINUX -DUSE_CDROM -DUSE_OGG_VORBIS -DUSE_LUA -DUSE_FONTCONFIG
+ # mandatory: SDL, SDL_ttf, SDL_image, SDL_mixer, bzip2, libjpeg
+ DEFS = -DLINUX
+-INCS = `sdl-config --cflags`
+-LIBS = `sdl-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm
++INCS = `sdl-config --cflags` `pkg-config --cflags SDL_ttf` `pkg-config --cflags SDL_image` `pkg-config --cflags SDL_mixer`
++LIBS = `sdl-config --libs` `pkg-config --libs SDL_ttf` `pkg-config --libs SDL_image` `pkg-config --libs SDL_mixer` -lbz2 -ljpeg -lm
  
- # with Integer OggVorbis and AVI in PDA size
- #LIBS = `sdl-config --libs` `smpeg-config --libs` `avifile-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -ljpeg -lm -lvorbisidec
-@@ -29,11 +34,11 @@ OBJSUFFIX = .o
- .SUFFIXES: $(OBJSUFFIX) .cpp .h
+ # recommended: smpeg
+ DEFS += -DUSE_SMPEG
+@@ -42,16 +42,16 @@ LIBS += -logg -lvorbis -lvorbisfile
+ DEFS += -DUSE_CDROM
+ 
+ # optional: avifile
+-DEFS += -DUSE_AVIFILE
+-INCS += `avifile-config --cflags`
+-LIBS += `avifile-config --libs`
+-TARGET += simple_aviplay$(EXESUFFIX)
+-EXT_OBJS += AVIWrapper$(OBJSUFFIX)
++#DEFS += -DUSE_AVIFILE
++#INCS += `avifile-config --cflags`
++#LIBS += `avifile-config --libs`
++#TARGET += simple_aviplay$(EXESUFFIX)
++#EXT_OBJS += AVIWrapper$(OBJSUFFIX)
+ 
+ # optional: lua
+ DEFS += -DUSE_LUA
+-INCS += -I/usr/include/lua5.1
+-LIBS += -llua5.1
++INCS += `pkg-config --cflags lua`
++LIBS += `pkg-config --libs lua`
+ EXT_OBJS += LUAHandler$(OBJSUFFIX)
+ 
+ # optional: force screen width for PDA
+@@ -62,11 +62,11 @@ EXT_OBJS += LUAHandler$(OBJSUFFIX)
+ 
  
  # for GNU g++
 -CC = g++ 
@@ -41,20 +56,11 @@ $NetBSD: patch-Makefile.Linux,v 1.3 2012/05/20 11:47:51 tsutsui Exp $
  
  # for GCC on PowerPC specfied
  #CC = powerpc-unknown-linux-gnu-g++
-@@ -47,11 +52,12 @@ CFLAGS = -O3 -Wall -fomit-frame-pointer 
+@@ -80,6 +80,6 @@ CFLAGS = -O3 -Wall -fomit-frame-pointer 
  
  #CFLAGS = -O3 -tpp6 -xK -c $(INCS) $(DEFS)
  
 -RM = rm -f
 +RM = @RM@
- 
--#TARGET = onscripter$(EXESUFFIX) sardec$(EXESUFFIX) nsadec$(EXESUFFIX) sarconv$(EXESUFFIX) nsaconv$(EXESUFFIX)
--TARGET = onscripter$(EXESUFFIX) sardec$(EXESUFFIX) nsadec$(EXESUFFIX) sarconv$(EXESUFFIX) nsaconv$(EXESUFFIX) simple_aviplay$(EXESUFFIX)
-+TARGET = onscripter$(EXESUFFIX) sardec$(EXESUFFIX) nsadec$(EXESUFFIX) sarconv$(EXESUFFIX) nsaconv$(EXESUFFIX)
-+#TARGET = onscripter$(EXESUFFIX) sardec$(EXESUFFIX) nsadec$(EXESUFFIX) sarconv$(EXESUFFIX) nsaconv$(EXESUFFIX) simple_aviplay$(EXESUFFIX)
- #EXT_OBJS = AVIWrapper$(OBJSUFFIX)
--EXT_OBJS = AVIWrapper$(OBJSUFFIX) LUAHandler$(OBJSUFFIX)
-+#EXT_OBJS = AVIWrapper$(OBJSUFFIX) LUAHandler$(OBJSUFFIX)
-+EXT_OBJS = LUAHandler$(OBJSUFFIX)
  
  include Makefile.onscripter
