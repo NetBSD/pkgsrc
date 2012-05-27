@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/04/15 11:27:04 obache Exp $
+$NetBSD: distinfo,v 1.7 2012/05/27 20:46:14 dholland Exp $
 
 SHA1 (pfstat-2.5.tar.gz) = fdc6acae98ac2c102dedd2c82104c66d1c0af3ee
 RMD160 (pfstat-2.5.tar.gz) = bba652d4f27b41554422410e924a421a1a0fe2a0
@@ -9,3 +9,4 @@ SHA1 (patch-ab) = 24ab0271e0302e03f3b00feb9e4b20f97f932435
 SHA1 (patch-ac) = 451e8a66d108dab39277f7d8d93150150f822879
 SHA1 (patch-ad) = 35350590919a13e4cb1cb44f1d5b2f6846699c56
 SHA1 (patch-ae) = 7a538480b79752b763c0c72945ff80bdbdb00a31
+SHA1 (patch-pfstatd_Makefile) = bbcb7738a83e93cfb7053bf5cd09a3da0af5e1ea
