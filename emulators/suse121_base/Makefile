@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2012/03/22 11:49:19 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/27 12:16:15 obache Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
-RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-534.107.1.${SUSE_ARCH}
-RPMPKGS+=	bash-4.2-1.8.1.${SUSE_ARCH}
+RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-534.113.1.${SUSE_ARCH}
+RPMUPDPKGS+=	bash-4.2-1.11.1.${SUSE_ARCH}
 RPMPKGS+=	coreutils-8.14-3.1.2.${SUSE_ARCH}
 RPMPKGS+=	cyrus-sasl-2.1.23-20.1.2.${SUSE_ARCH}
 RPMPKGS+=	findutils-4.4.2-17.1.2.${SUSE_ARCH}
 RPMPKGS+=	gdbm-1.8.3-388.1.3.${SUSE_ARCH}
-RPMUPDPKGS+=	glibc-2.14.1-14.25.1.${SUSE_ARCH}
+RPMUPDPKGS+=	glibc-2.14.1-14.27.1.${SUSE_ARCH}
 RPMPKGS+=	keyutils-1.5.3-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libFLAC8-1.2.1-88.1.2.${SUSE_ARCH}
 RPMPKGS+=	libacl1-2.2.51-4.1.4.${SUSE_ARCH}
@@ -22,7 +22,7 @@ RPMPKGS+=	libncurses5-5.8-5.1.4.${SUSE_ARCH}
 RPMPKGS+=	libncurses6-5.8-5.1.4.${SUSE_ARCH}
 RPMPKGS+=	libogg0-1.2.2-8.1.2.${SUSE_ARCH}
 RPMPKGS+=	libpcre0-8.13-2.1.2.${SUSE_ARCH}
-RPMPKGS+=	libreadline6-6.2-1.8.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libreadline6-6.2-1.11.1.${SUSE_ARCH}
 RPMPKGS+=	libselinux1-2.0.91-14.1.12.${SUSE_ARCH}
 RPMPKGS+=	libsndfile-1.0.25-6.1.2.${SUSE_ARCH}
 RPMPKGS+=	libspeex1-1.1.999_1.2rc1-12.1.2.${SUSE_ARCH}
