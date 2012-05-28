@@ -1,23 +1,16 @@
-$NetBSD: distinfo,v 1.21 2011/10/25 19:38:09 spz Exp $
+$NetBSD: distinfo,v 1.21.4.1 2012/05/28 10:51:00 tron Exp $
 
-SHA1 (rt-3.8.10.tar.gz) = 98678a4ce4dbdfb13ceeeb88236d49bd0f5562c7
-RMD160 (rt-3.8.10.tar.gz) = 779ba2e04e87d20f30b03a9e7348c23b09062038
-Size (rt-3.8.10.tar.gz) = 5642566 bytes
+SHA1 (rt-3.8.12.tar.gz) = aa657de2fd687c51f31216df6dc1f639a0bc1f7c
+RMD160 (rt-3.8.12.tar.gz) = fa6b251aa1c7851a35243181c3b802a668c1e0ba
+Size (rt-3.8.12.tar.gz) = 5730029 bytes
 SHA1 (patch-aa) = 6f78710f4460a25c75afbdf7128c0fe34914927c
 SHA1 (patch-ab) = ee455dd683c84d3a745a29a132e28903ba03144d
 SHA1 (patch-lib_RT.pm) = f72c6cb6f94acf1296076423d26d7efa4ed78293
-SHA1 (patch-lib_RT_Action_CreateTickets.pm) = d9cac2c0b9125835edf303b203e067ce087e90d7
 SHA1 (patch-lib_RT_CustomFieldValues_External.pm) = 4404ca98c9e50687323892df1aa95c8b5a6dedd9
 SHA1 (patch-lib_RT_Interface_Email.pm) = 60d0c2c46ac3dc8172bdf16bbf43099b7dd87542
 SHA1 (patch-lib_RT_Interface_Email_Auth_GnuPG.pm) = c78c1894a0c058082784a3790fc87684d6a4431c
-SHA1 (patch-lib_RT_Ticket__Overlay.pm) = e39ef54a28f08d34ebf7c7bc3d410e8c1064177e
-SHA1 (patch-lib_RT_Transaction__Overlay.pm) = aad3ea7fb62798e63cee20e82b6cc8e4f11a3f44
 SHA1 (patch-sbin_rt-attributes-viewer) = e1c963800b76282cda4ca46e006f30d9abfc29c9
 SHA1 (patch-sbin_rt-attributes-viewer.in) = 99a15cca9a394b5743edc3929f43593f1384c8da
-SHA1 (patch-share_html_Admin_CustomFields_Modify.html) = ab8109ff5b2c39f02dc0058d00bc9c4264b58bc7
 SHA1 (patch-share_html_Helpers_CalPopup.html) = 3920ac6448d1d21c7ff32ef67344b19aa53616a4
-SHA1 (patch-share_html_Search_Bulk.html) = a08fa8cfbe641ae4d174117167c4f4be97f9151f
-SHA1 (patch-share_html_Search_Elements_SelectChartType) = 0aa993c9f909634da4e65e37dd59afd6531dde01
-SHA1 (patch-share_html_Ticket_Elements_PreviewScrips) = caaccc926bb92d9e7a4fd24bfc6b47263c5dd028
 SHA1 (patch-t_approval_admincc.t) = 4fddf5fa844d15e8698e00fe6863daaafa661315
 SHA1 (patch-t_approval_basic.t) = 209303cc34370518a2600e28570627e1dc7e698b
