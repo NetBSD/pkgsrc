@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2011/03/05 22:48:07 tonio Exp $
+$NetBSD: patch-ac,v 1.6 2012/05/28 22:55:05 tonio Exp $
 
 Make sure to honor destdir
 
---- src/plugins/Makefile.in.orig	2011-01-16 08:17:23.000000000 +0000
+--- src/plugins/Makefile.in.orig	2012-02-26 07:12:48.000000000 +0000
 +++ src/plugins/Makefile.in
-@@ -759,8 +759,8 @@ uninstall-am:
+@@ -778,8 +778,8 @@ uninstall-am:
  # install plugin header
  
  install-data-hook:
 -	$(INSTALL) -d $(includedir)/$(PACKAGE)
--	$(INSTALL_DATA) weechat-plugin.h $(includedir)/$(PACKAGE)
+-	$(INSTALL_DATA) $(abs_top_srcdir)/src/plugins/weechat-plugin.h $(includedir)/$(PACKAGE)
 +	$(INSTALL_DATA_DIR) -d ${DESTDIR}$(includedir)/$(PACKAGE)
-+	$(INSTALL_DATA) weechat-plugin.h ${DESTDIR}$(includedir)/$(PACKAGE)
++	$(INSTALL_DATA) $(abs_top_srcdir)/src/plugins/weechat-plugin.h ${DESTDIR}$(includedir)/$(PACKAGE)
  
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
+ # uninstall plugin header
+ 
