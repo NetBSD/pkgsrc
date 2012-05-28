@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.45 2012/05/27 13:33:44 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.46 2012/05/28 09:57:24 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -207,3 +207,5 @@ Pullup ticket #3805 - requested by schmonz
 textproc/py-feedparser: security update
 Pullup ticket #3806 - requested by morr
 net/haproxy: security update
+Pullup ticket #3809 - requested by schmonz
+www/ikiwiki: security update
