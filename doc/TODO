@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11099 2012/05/26 16:52:06 schmonz Exp $
+$NetBSD: TODO,v 1.11100 2012/05/28 09:03:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1146,7 +1146,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-TTFQuery-1.0.0
 	o py-beautifulsoup-4.0.4
 	o py-checker-0.8.19
-	o py-cups-1.9.60
 	o py-dbus-1.0.0 [needs dbus>=1.4]
 	o py-dbus-1.1.0
 	o py-game-1.9.1 [needs portmidi]
