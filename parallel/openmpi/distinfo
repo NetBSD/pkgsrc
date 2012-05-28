@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2011/08/27 19:32:55 asau Exp $
+$NetBSD: distinfo,v 1.9 2012/05/28 18:38:18 asau Exp $
 
-SHA1 (openmpi-1.5.4.tar.bz2) = 81f7736a83b2134ba20c2e5c380b4d267cfd9d9c
-RMD160 (openmpi-1.5.4.tar.bz2) = 6e172309b102cf6382b4b516d07e0133466485b3
-Size (openmpi-1.5.4.tar.bz2) = 7629620 bytes
-SHA1 (patch-aa) = 90f74e14eb686cd68bf29ea28cfb9818984f6408
+SHA1 (openmpi-1.5.5.tar.bz2) = 206e555f6d376443f2342f721d944e67dd1a04ef
+RMD160 (openmpi-1.5.5.tar.bz2) = 6e7648ec0fa553c16b40f886b397d11863039eb2
+Size (openmpi-1.5.5.tar.bz2) = 10055601 bytes
+SHA1 (patch-aa) = 6fa20775c6e2abae7c9a2ae858dbb941652beab8
 SHA1 (patch-ai) = 650906ec3701cc7bac6b7f916c87506ccb885341
 SHA1 (patch-aj) = dc85e6c9eb6db0eb40bb896a11c223afeda63c2f
 SHA1 (patch-ak) = f6ea4220d51dd0c84ac2067d695c265f00904a0f
+SHA1 (patch-ompi_contrib_vt_vt_extlib_otf_tools_otfprofile_clustering.cpp) = b2baee86e9787fec7d16073cbb63ece4e83c2333
