@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/04/08 19:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/05/28 09:02:55 wiz Exp $
 
 DISTNAME=	pycups-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-cups-${VERSION}
-VERSION=	1.9.47
-PKGREVISION=	3
+VERSION=	1.9.61
 CATEGORIES=	print python
 MASTER_SITES=	http://cyberelk.net/tim/data/pycups/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://cyberelk.net/tim/software/pycups/
 COMMENT=	Python bindings for the CUPS API
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CFLAGS+=	-DVERSION=\"${VERSION}\"
