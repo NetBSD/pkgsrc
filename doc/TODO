@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11102 2012/05/28 13:34:42 adam Exp $
+$NetBSD: TODO,v 1.11103 2012/05/28 22:55:49 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1377,7 +1377,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.580 [security]
 	o websvn-2.3.2
-	o weechat-0.3.7
 	o wesnoth-1.10.3
 	o whohas-0.29
 	o windowlab-1.40
