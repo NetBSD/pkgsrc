@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/08/27 19:32:55 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/05/28 18:38:17 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -89,14 +89,14 @@ lib/openmpi/mca_coll_sm.la
 lib/openmpi/mca_coll_sync.la
 lib/openmpi/mca_coll_tuned.la
 lib/openmpi/mca_crs_none.la
-lib/openmpi/mca_debugger_mpir.la
-lib/openmpi/mca_debugger_mpirx.la
 lib/openmpi/mca_dpm_orte.la
 lib/openmpi/mca_errmgr_default.la
 lib/openmpi/mca_ess_env.la
 lib/openmpi/mca_ess_hnp.la
 lib/openmpi/mca_ess_singleton.la
 lib/openmpi/mca_ess_slave.la
+lib/openmpi/mca_ess_slurm.la
+lib/openmpi/mca_ess_slurmd.la
 lib/openmpi/mca_ess_tool.la
 lib/openmpi/mca_filem_rsh.la
 lib/openmpi/mca_grpcomm_bad.la
@@ -107,6 +107,7 @@ lib/openmpi/mca_iof_hnp.la
 lib/openmpi/mca_iof_orted.la
 lib/openmpi/mca_iof_tool.la
 lib/openmpi/mca_maffinity_first_use.la
+lib/openmpi/mca_maffinity_hwloc.la
 lib/openmpi/mca_mpool_fake.la
 lib/openmpi/mca_mpool_rdma.la
 lib/openmpi/mca_mpool_sm.la
@@ -118,7 +119,7 @@ lib/openmpi/mca_osc_pt2pt.la
 lib/openmpi/mca_osc_rdma.la
 lib/openmpi/mca_paffinity_hwloc.la
 lib/openmpi/mca_plm_rsh.la
-lib/openmpi/mca_plm_rshd.la
+lib/openmpi/mca_plm_slurm.la
 lib/openmpi/mca_pml_bfo.la
 lib/openmpi/mca_pml_cm.la
 lib/openmpi/mca_pml_csum.la
@@ -126,6 +127,8 @@ lib/openmpi/mca_pml_ob1.la
 lib/openmpi/mca_pml_v.la
 lib/openmpi/mca_pubsub_orte.la
 lib/openmpi/mca_ras_cm.la
+lib/openmpi/mca_ras_gridengine.la
+lib/openmpi/mca_ras_slurm.la
 lib/openmpi/mca_rcache_vma.la
 lib/openmpi/mca_rmaps_load_balance.la
 lib/openmpi/mca_rmaps_rank_file.la
@@ -142,6 +145,8 @@ lib/openmpi/mca_routed_direct.la
 lib/openmpi/mca_routed_linear.la
 lib/openmpi/mca_routed_radix.la
 lib/openmpi/mca_routed_slave.la
+lib/openmpi/mca_shmem_mmap.la
+lib/openmpi/mca_shmem_sysv.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
 lib/pkgconfig/ompi-c.pc
@@ -524,7 +529,10 @@ share/openmpi/help-oob-tcp.txt
 share/openmpi/help-opal-carto-file.txt
 share/openmpi/help-opal-crs-base.txt
 share/openmpi/help-opal-crs-none.txt
+share/openmpi/help-opal-maffinity-hwloc.txt
 share/openmpi/help-opal-runtime.txt
+share/openmpi/help-opal-shmem-mmap.txt
+share/openmpi/help-opal-shmem-sysv.txt
 share/openmpi/help-opal-util.txt
 share/openmpi/help-opal-wrapper.txt
 share/openmpi/help-orte-clean.txt
@@ -548,8 +556,10 @@ share/openmpi/help-orted.txt
 share/openmpi/help-orterun.txt
 share/openmpi/help-plm-base.txt
 share/openmpi/help-plm-rsh.txt
-share/openmpi/help-plm-rshd.txt
+share/openmpi/help-plm-slurm.txt
 share/openmpi/help-ras-base.txt
+share/openmpi/help-ras-gridengine.txt
+share/openmpi/help-ras-slurm.txt
 share/openmpi/help-regex.txt
 share/openmpi/help-rmaps_rank_file.txt
 share/openmpi/help-rmcast-base.txt
