@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1604 2012/05/28 09:03:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1605 2012/05/28 13:34:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2513,3 +2513,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/onscripter to 20120527 [tsutsui 2012-05-27]
 	Updated devel/apache-ant to 1.8.4 [tonio 2012-05-28]
 	Updated print/py-cups to 1.9.61 [wiz 2012-05-28]
+	Updated devel/scmgit to 1.7.10.3 [adam 2012-05-28]
+	Updated devel/scmgit-base to 1.7.10.3 [adam 2012-05-28]
+	Updated devel/scmgit-docs to 1.7.10.3 [adam 2012-05-28]
+	Updated www/gitweb to 1.7.10.3 [adam 2012-05-28]
