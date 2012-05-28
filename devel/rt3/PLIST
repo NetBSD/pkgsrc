@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/04/16 09:41:19 spz Exp $
+@comment $NetBSD: PLIST,v 1.20.8.1 2012/05/28 10:50:59 tron Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -330,6 +330,7 @@ share/rt3/etc/upgrade/3.8.4/content
 share/rt3/etc/upgrade/3.8.6/content
 share/rt3/etc/upgrade/3.8.8/content
 share/rt3/etc/upgrade/3.8.9/content
+share/rt3/etc/upgrade/3.8.12/content
 share/rt3/etc/vulnerable-passwords
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html
@@ -468,6 +469,7 @@ share/rt3/html/Download/CustomFieldValue/dhandler
 share/rt3/html/Download/Tabular/dhandler
 share/rt3/html/Elements/BevelBoxRaisedEnd
 share/rt3/html/Elements/BevelBoxRaisedStart
+share/rt3/html/Elements/CSRF
 share/rt3/html/Elements/Callback
 share/rt3/html/Elements/Checkbox
 share/rt3/html/Elements/CollectionAsTable/Header
@@ -1023,11 +1025,6 @@ share/rt3/html/NoAuth/images/empty_star.gif
 share/rt3/html/NoAuth/images/favicon.png
 share/rt3/html/NoAuth/images/star.gif
 share/rt3/html/NoAuth/images/test.png
-share/rt3/html/NoAuth/js/IE7/IE7.js
-share/rt3/html/NoAuth/js/IE7/IE8.js
-share/rt3/html/NoAuth/js/IE7/blank.gif
-share/rt3/html/NoAuth/js/IE7/ie7-recalc.js
-share/rt3/html/NoAuth/js/IE7/ie7-squish.js
 share/rt3/html/NoAuth/js/ahah.js
 share/rt3/html/NoAuth/js/autohandler
 share/rt3/html/NoAuth/js/cascaded.js
@@ -1212,3 +1209,4 @@ share/rt3/html/autohandler
 share/rt3/html/dhandler
 share/rt3/html/index.html
 share/rt3/html/l
+share/rt3/html/l_unsafe
