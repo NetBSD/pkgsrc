@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.6 2011/03/05 22:48:07 tonio Exp $
+$NetBSD: patch-ab,v 1.7 2012/05/28 22:55:05 tonio Exp $
 
---- src/gui/curses/gui-curses.h.orig	2011-01-01 13:52:16.000000000 +0000
+--- src/gui/curses/gui-curses.h.orig	2012-01-08 09:13:53.000000000 +0000
 +++ src/gui/curses/gui-curses.h
-@@ -21,6 +21,8 @@
- #define __WEECHAT_GUI_CURSES_H 1
+@@ -23,6 +23,8 @@
+ #include <time.h>
  
  #ifdef HAVE_NCURSESW_CURSES_H
 +#include <ncursesw/curses.h>
