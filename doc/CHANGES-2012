@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1602 2012/05/27 17:10:22 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.1603 2012/05/28 08:10:58 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2511,3 +2511,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_base to 12.1nb2 [obache 2012-05-27]
 	Updated www/opera-plugins to 1.0nb3 [obache 2012-05-27]
 	Updated games/onscripter to 20120527 [tsutsui 2012-05-27]
+	Updated devel/apache-ant to 1.8.4 [tonio 2012-05-28]
