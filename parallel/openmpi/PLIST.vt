@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.vt,v 1.4 2012/05/21 16:08:51 marino Exp $
+@comment $NetBSD: PLIST.vt,v 1.5 2012/05/28 18:38:18 asau Exp $
 bin/mpiCC-vt
 bin/mpic++-vt
 bin/mpicc-vt
@@ -12,7 +12,9 @@ bin/otfdecompress
 bin/otfdump
 bin/otfinfo
 bin/otfmerge
+bin/otfmerge-mpi
 bin/otfprofile
+bin/otfprofile-mpi
 bin/otfshrink
 bin/vtCC
 bin/vtc++
@@ -21,17 +23,27 @@ bin/vtcxx
 bin/vtf77
 bin/vtf90
 bin/vtfilter
+bin/vtfilter-mpi
+bin/vtfiltergen
+bin/vtfiltergen-mpi
+bin/vtrun
 bin/vtunify
 bin/vtunify-mpi
 bin/vtwrapper
 etc/vt-java-default-filter.spec
+etc/vt-setup-config.dtd
+etc/vt-setup-config.xml
+include/vampirtrace/OTFAUX_MsgMatching.h
+include/vampirtrace/OTFAUX_Thumbnail.h
 include/vampirtrace/OTF_CopyHandler.h
+include/vampirtrace/OTF_CopyHandler_stream.h
 include/vampirtrace/OTF_Definitions.h
 include/vampirtrace/OTF_Errno.h
 include/vampirtrace/OTF_File.h
 include/vampirtrace/OTF_FileManager.h
 include/vampirtrace/OTF_Filenames.h
 include/vampirtrace/OTF_HandlerArray.h
+include/vampirtrace/OTF_KeyValue.h
 include/vampirtrace/OTF_MasterControl.h
 include/vampirtrace/OTF_RBuffer.h
 include/vampirtrace/OTF_RStream.h
@@ -43,6 +55,8 @@ include/vampirtrace/OTF_Writer.h
 include/vampirtrace/OTF_inttypes.h
 include/vampirtrace/OTF_inttypes_unix.h
 include/vampirtrace/otf.h
+include/vampirtrace/otfaux.h
+include/vampirtrace/vt_inttypes.h
 include/vampirtrace/vt_user.h
 include/vampirtrace/vt_user.inc
 include/vampirtrace/vt_user_comment.h
@@ -53,12 +67,16 @@ include/vampirtrace/vt_user_count.h
 include/vampirtrace/vt_user_count.inc
 include/vampirtrace/vt_user_marker.h
 include/vampirtrace/vt_user_marker.inc
+include/vampirtrace/vt_user_message.h
+include/vampirtrace/vt_user_message.inc
 include/vampirtrace/vt_user_region.h
 include/vampirtrace/vt_user_region.inc
 include/vampirtrace/vt_wrap_pthread.h
 ${PLIST.vtlwraph}include/vampirtrace/vt_libwrap.h
 lib/libotf.la
+lib/libotfaux.la
 lib/libvt-hyb.la
+lib/libvt-mpi-unify.la
 lib/libvt-mpi.la
 lib/libvt-mt.la
 lib/libvt.la
@@ -77,6 +95,8 @@ share/vampirtrace/doc/UserManual.html
 share/vampirtrace/doc/UserManual.pdf
 share/vampirtrace/doc/otf/ChangeLog
 share/vampirtrace/doc/otf/LICENSE
+share/vampirtrace/doc/otf/otfprofile.pdf
+share/vampirtrace/doc/otf/otfprofile_clustering.pdf
 share/vampirtrace/doc/otf/otftools.pdf
 share/vampirtrace/doc/otf/specification.pdf
 share/vampirtrace/libtool
