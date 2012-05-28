@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2011/03/05 22:48:07 tonio Exp $
+$NetBSD: patch-aa,v 1.5 2012/05/28 22:55:05 tonio Exp $
 
---- po/Makefile.in.in.orig	2007-10-31 17:28:48.000000000 +0000
+--- po/Makefile.in.in.orig	2011-10-10 15:42:58.000000000 +0000
 +++ po/Makefile.in.in
 @@ -30,7 +30,7 @@ gettextsrcdir = $(datadir)/gettext/po
  

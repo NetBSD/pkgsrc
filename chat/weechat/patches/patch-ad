@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.4 2011/03/05 22:48:07 tonio Exp $
+$NetBSD: patch-ad,v 1.5 2012/05/28 22:55:05 tonio Exp $
 
 Solaris build
 
---- src/gui/curses/gui-curses-window.c.orig	2011-01-01 13:52:16.000000000 +0000
+--- src/gui/curses/gui-curses-window.c.orig	2012-01-28 14:02:25.000000000 +0000
 +++ src/gui/curses/gui-curses-window.c
-@@ -29,6 +29,8 @@
- #include <string.h>
+@@ -31,6 +31,8 @@
+ #include <ctype.h>
  #include <stdarg.h>
  #include <libgen.h>
 +#include <unistd.h>
