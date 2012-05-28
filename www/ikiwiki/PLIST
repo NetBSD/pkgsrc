@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2012/03/20 12:01:15 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.35.2.1 2012/05/28 09:55:47 spz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -429,6 +429,7 @@ share/ikiwiki/templates/feedlink.tmpl
 share/ikiwiki/templates/googleform.tmpl
 share/ikiwiki/templates/inlinepage.tmpl
 share/ikiwiki/templates/microblog.tmpl
+share/ikiwiki/templates/notifyemail.tmpl
 share/ikiwiki/templates/openid-selector.tmpl
 share/ikiwiki/templates/page.tmpl
 share/ikiwiki/templates/passwordmail.tmpl
