@@ -1,12 +1,15 @@
-$NetBSD: patch-ab,v 1.5 2004/02/04 13:35:52 markd Exp $
+$NetBSD: patch-ab,v 1.5.70.1 2012/05/28 22:46:40 tron Exp $
 
---- artsc/artsdsp.c.orig	2003-07-17 07:18:09.000000000 +1200
+--- artsc/artsdsp.c.orig	2007-10-08 09:47:09.000000000 +0000
 +++ artsc/artsdsp.c
-@@ -133,6 +133,14 @@ int munmap(void *start, size_t length);
+@@ -133,6 +133,17 @@ int munmap(void *start, size_t length);
  
  static void artsdsp_doinit()
  {
-+# ifdef RTLD_NEXT
++# if defined(__NetBSD__) && !defined(OPEN_SOUND_SYSTEM)
++#  define OPEN_GLOBAL()		handle = dlopen(NULL, DL_LAZY)
++#  define CLOSE_GLOBAL()	(void)dlclose(handle)
++# elif defined(RTLD_NEXT)
 +#  define OPEN_GLOBAL()		handle = RTLD_NEXT;
 +#  define CLOSE_GLOBAL()	;
 +# else
@@ -17,7 +20,7 @@ $NetBSD: patch-ab,v 1.5 2004/02/04 13:35:52 markd Exp $
  	const char *env;
  	artsdsp_init = 1;
  
-@@ -145,15 +153,31 @@ static void artsdsp_doinit()
+@@ -145,15 +156,17 @@ static void artsdsp_doinit()
  	mmapemu = env && !strcmp(env,"1");
  
  	/* resolve original symbols */
@@ -30,19 +33,6 @@ $NetBSD: patch-ab,v 1.5 2004/02/04 13:35:52 markd Exp $
 -	orig_munmap = (orig_munmap_ptr)dlsym(RTLD_NEXT,"munmap");
 -	orig_fopen = (orig_fopen_ptr)dlsym(RTLD_NEXT,"fopen");
 -	orig_access = (orig_access_ptr)dlsym(RTLD_NEXT,"access");
-+#if defined(__NetBSD__) && !defined(OPEN_SOUND_SYSTEM)
-+ 	handle = dlopen(NULL, DL_LAZY);
-+	orig_open = (orig_open_ptr)dlsym(handle,"open");
-+	orig_close = (orig_close_ptr)dlsym(handle,"close");
-+	orig_write = (orig_write_ptr)dlsym(handle,"write");
-+	orig_read = (orig_read_ptr)dlsym(handle,"read");
-+	orig_ioctl = (orig_ioctl_ptr)dlsym(handle,"ioctl");
-+	orig_mmap = (orig_mmap_ptr)dlsym(handle,"mmap");
-+	orig_munmap = (orig_munmap_ptr)dlsym(handle,"munmap");
-+	orig_fopen = (orig_fopen_ptr)dlsym(handle,"fopen");
-+	orig_access = (orig_access_ptr)dlsym(handle,"access");
-+ 	(void) dlclose(handle);
-+#else
 + 	OPEN_GLOBAL();
 +	orig_open = (orig_open_ptr)dlsym(handle,"open");
 +	orig_close = (orig_close_ptr)dlsym(handle,"close");
@@ -54,15 +44,23 @@ $NetBSD: patch-ab,v 1.5 2004/02/04 13:35:52 markd Exp $
 +	orig_fopen = (orig_fopen_ptr)dlsym(handle,"fopen");
 +	orig_access = (orig_access_ptr)dlsym(handle,"access");
 + 	CLOSE_GLOBAL();
-+#endif
  }
  
  static void 
-@@ -258,10 +282,15 @@ int open (const char *pathname, int flag
+@@ -258,10 +271,24 @@ int open (const char *pathname, int flag
    return sndfd;
  }
  
-+#if defined(__NetBSD__) && !defined(OPEN_SOUND_SYSTEM)
++/* NetBSD < 6 and 6.99.0 - 6.99.6 used a different ioctl() definition */
++#if defined(__NetBSD__)
++# include <sys/param.h>
++# if __NetBSD_Version__ < 600000000 || \
++  (__NetBSD_Version__ > 699000000 && __NetBSD_Version__ < 699000700)
++#  define OLD_NETBSD_IOCTL_CALL
++# endif
++#endif
++
++#if defined(OLD_NETBSD_IOCTL_CALL) && !defined(OPEN_SOUND_SYSTEM)
 +int _oss_ioctl (int fd, unsigned long request, void *argp)
 +#else
  int ioctl (int fd, ioctl_request_t request, ...)
@@ -70,11 +68,11 @@ $NetBSD: patch-ab,v 1.5 2004/02/04 13:35:52 markd Exp $
  {
    int space, size, latency, odelay;
  
-+#if !defined(__NetBSD__) || defined(OPEN_SOUND_SYSTEM)
++#if !defined(OLD_NETBSD_IOCTL_CALL) || defined(OPEN_SOUND_SYSTEM)
    /*
     * FreeBSD needs ioctl with varargs. However I have no idea how to "forward"
     * the variable args ioctl to the orig_ioctl routine. So I expect the ioctl
-@@ -273,6 +302,7 @@ int ioctl (int fd, ioctl_request_t reque
+@@ -273,6 +300,7 @@ int ioctl (int fd, ioctl_request_t reque
    va_start(args,request);
    argp = va_arg(args, void *);
    va_end(args);
