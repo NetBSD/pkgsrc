@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2006/06/05 19:04:32 minskim Exp $
-bin/${GNU_PROGRAM_PREFIX}cpio
+@comment $NetBSD: PLIST,v 1.9 2012/05/29 20:37:08 cheusov Exp $
+bin/gcpio
+gnu/bin/cpio
 info/cpio.info
-libexec/${GNU_PROGRAM_PREFIX}rmt
-man/man1/${GNU_PROGRAM_PREFIX}cpio.1
-man/man1/${GNU_PROGRAM_PREFIX}mt.1
+libexec/grmt
+man/man1/gcpio.1
+man/man1/gmt.1
 share/locale/da/LC_MESSAGES/cpio.mo
 share/locale/de/LC_MESSAGES/cpio.mo
 share/locale/es/LC_MESSAGES/cpio.mo
