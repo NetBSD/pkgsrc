@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2012/04/09 23:00:48 wiz Exp $
+$NetBSD: distinfo,v 1.21 2012/05/29 14:14:29 wiz Exp $
 
-SHA1 (pan-0.136.tar.bz2) = 05c5b3577ea7445d74b0be0ec91dfabe18c6717f
-RMD160 (pan-0.136.tar.bz2) = 1a168c8736427e1fd7894f484996f0180ac87ad3
-Size (pan-0.136.tar.bz2) = 1509412 bytes
-SHA1 (patch-pan_gui_e-cte-dialog.c) = a13a5bd87188aed6add39a2b8e16df0a02a11482
+SHA1 (pan-0.137.tar.bz2) = 372f1f6406e2fcd9ce413774730975560f546fcf
+RMD160 (pan-0.137.tar.bz2) = 1b79bc1123d871ba6b44fac79f40f87541f315de
+Size (pan-0.137.tar.bz2) = 1510668 bytes
 SHA1 (patch-pan_usenet-utils_mime-utils.cc) = 3e807f25924907744fcffc6a857d9b8f55449243
