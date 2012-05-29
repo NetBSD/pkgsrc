@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2012/03/15 14:18:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.74 2012/05/29 22:52:04 cheusov Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
+PKGREVISION=	1
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
@@ -22,39 +23,20 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 gnu/bin gnu/libexec
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(GNU_PROGRAM_PREFIX) && ${GNU_PROGRAM_PREFIX} != ""
-GTAR_PROGRAM_PREFIX?=	${GNU_PROGRAM_PREFIX}
-.else
-GTAR_PROGRAM_PREFIX?=	g
-.endif
-
-.if ${GTAR_PROGRAM_PREFIX} == "" && \
-    (!defined(NBPAX_PROGRAM_PREFIX) || ${NBPAX_PROGRAM_PREFIX} == "")
-# pax installs a "tar" also
-CONFLICTS+=		pax-[0-9]*
-.else
-CONFIGURE_ARGS+=	--program-prefix=${GTAR_PROGRAM_PREFIX:Q}
-.endif
+CONFIGURE_ARGS+=	--program-prefix=g
 
 # lie to configure about gettext -- it does not need GNU gettext
 CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl=yes
 # allow configure to run as root
 CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
 
-PLIST_SUBST+=		GTAR_PROGRAM_PREFIX=${GTAR_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-BUILD_DEFS+=		GTAR_PROGRAM_PREFIX
 PLIST_VARS+=		gtar rmt
 
 TEST_TARGET=		check
-
-.if ${GTAR_PROGRAM_PREFIX} != "g"
-PLIST.gtar=		yes
-.endif
 
 # don't include rmt if gtar won't build it
 .if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin"
@@ -68,10 +50,11 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 
 post-install:
 	${INSTALL_MAN} ${FILESDIR}/gtar.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${GTAR_PROGRAM_PREFIX}tar.1
-.if ${GTAR_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${GTAR_PROGRAM_PREFIX}tar ${DESTDIR}${PREFIX}/bin/"gtar"
-.endif
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gtar.1
+	${LN} -sf ../../bin/gtar ${DESTDIR}${PREFIX}/gnu/bin/tar
+	if ${TEST} -n ${PLIST.rmt:Q}; then \
+		${LN} -sf ../../libexec/grmt ${DESTDIR}${PREFIX}/gnu/libexec/rmt; \
+	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

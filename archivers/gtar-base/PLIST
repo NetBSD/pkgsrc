@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2010/12/12 13:10:39 wiz Exp $
-bin/${GTAR_PROGRAM_PREFIX}tar
-${PLIST.gtar}bin/gtar
-${PLIST.rmt}libexec/${GTAR_PROGRAM_PREFIX}rmt
-man/man1/${GTAR_PROGRAM_PREFIX}tar.1
+@comment $NetBSD: PLIST,v 1.15 2012/05/29 22:52:04 cheusov Exp $
+bin/gtar
+gnu/bin/tar
+${PLIST.rmt}gnu/libexec/rmt
+${PLIST.rmt}libexec/grmt
+man/man1/gtar.1
 share/locale/bg/LC_MESSAGES/tar.mo
 share/locale/ca/LC_MESSAGES/tar.mo
 share/locale/cs/LC_MESSAGES/tar.mo
