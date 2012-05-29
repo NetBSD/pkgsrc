@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1632 2012/05/29 14:43:20 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1633 2012/05/29 14:45:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boehm-gc to 7.2b [wiz 2012-05-29]
 	Updated textproc/rasqal to 0.9.29 [wiz 2012-05-29]
 	Updated devel/libidn to 1.25 [wiz 2012-05-29]
+	Added devel/ocaml-react version 0.9.3 [wiz 2012-05-29]
