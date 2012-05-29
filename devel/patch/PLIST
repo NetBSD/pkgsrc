@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:00 jlam Exp $
-bin/${GNU_PROGRAM_PREFIX}patch
-${PLIST.gpatch}bin/gpatch
-man/man1/${GNU_PROGRAM_PREFIX}patch.1
+@comment $NetBSD: PLIST,v 1.6 2012/05/29 21:19:30 cheusov Exp $
+bin/gpatch
+gnu/bin/patch
+man/man1/gpatch.1
