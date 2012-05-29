@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/08 05:02:59 jlam Exp $
-bin/${GNU_PROGRAM_PREFIX}time
+@comment $NetBSD: PLIST,v 1.3 2012/05/29 22:20:40 cheusov Exp $
+bin/gtime
+gnu/bin/time
 info/time.info
