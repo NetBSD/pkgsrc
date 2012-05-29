@@ -1,0 +1,15 @@
+MusicBrainz is a user-maintained community music metadatabase.
+Music metadata is information such as the artist name, the release
+title, and the list of tracks that appear on a release. MusicBrainz
+collects this information about recordings and makes it available
+to the public. All of the data in MusicBrainz is user contributed
+and user maintained.
+
+This library is an interface to the MusicBrainz database. It is
+aimed at developers of media players, CD rippers, taggers and other
+applications requiring music metadata. The service's architecture
+follows the REST design principles. Interaction with the web service
+is done using HTTP and all content is served in a simple but flexible
+XML format.
+
+This package contains version 5 of the library.
