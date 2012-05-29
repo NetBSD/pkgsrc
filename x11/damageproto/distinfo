@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/08/29 15:24:36 wiz Exp $
+$NetBSD: distinfo,v 1.4 2012/05/29 15:06:54 wiz Exp $
 
-SHA1 (damageproto-1.2.0.tar.bz2) = ffe177a6ae2cf023d41e015aa6ece2b191cb8a8a
-RMD160 (damageproto-1.2.0.tar.bz2) = d8010f3a6652e3e0d560af5b6911d85e88cac6fa
-Size (damageproto-1.2.0.tar.bz2) = 53133 bytes
+SHA1 (damageproto-1.2.1.tar.bz2) = bd0f0f4dc8f37eaabd9279d10fe2889710507358
+RMD160 (damageproto-1.2.1.tar.bz2) = 3354e2f38d443818ff7cd40fd19d72e8fd183043
+Size (damageproto-1.2.1.tar.bz2) = 98392 bytes
