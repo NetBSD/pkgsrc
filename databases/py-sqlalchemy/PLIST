@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/01 15:43:41 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/29 13:22:28 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -316,18 +316,12 @@ ${PYSITELIB}/sqlalchemy/test/__init__.pyo
 ${PYSITELIB}/sqlalchemy/test/assertsql.py
 ${PYSITELIB}/sqlalchemy/test/assertsql.pyc
 ${PYSITELIB}/sqlalchemy/test/assertsql.pyo
-${PYSITELIB}/sqlalchemy/test/config.py
-${PYSITELIB}/sqlalchemy/test/config.pyc
-${PYSITELIB}/sqlalchemy/test/config.pyo
 ${PYSITELIB}/sqlalchemy/test/engines.py
 ${PYSITELIB}/sqlalchemy/test/engines.pyc
 ${PYSITELIB}/sqlalchemy/test/engines.pyo
 ${PYSITELIB}/sqlalchemy/test/entities.py
 ${PYSITELIB}/sqlalchemy/test/entities.pyc
 ${PYSITELIB}/sqlalchemy/test/entities.pyo
-${PYSITELIB}/sqlalchemy/test/noseplugin.py
-${PYSITELIB}/sqlalchemy/test/noseplugin.pyc
-${PYSITELIB}/sqlalchemy/test/noseplugin.pyo
 ${PYSITELIB}/sqlalchemy/test/orm.py
 ${PYSITELIB}/sqlalchemy/test/orm.pyc
 ${PYSITELIB}/sqlalchemy/test/orm.pyo
@@ -358,3 +352,12 @@ ${PYSITELIB}/sqlalchemy/types.pyo
 ${PYSITELIB}/sqlalchemy/util.py
 ${PYSITELIB}/sqlalchemy/util.pyc
 ${PYSITELIB}/sqlalchemy/util.pyo
+${PYSITELIB}/sqlalchemy_nose/__init__.py
+${PYSITELIB}/sqlalchemy_nose/__init__.pyc
+${PYSITELIB}/sqlalchemy_nose/__init__.pyo
+${PYSITELIB}/sqlalchemy_nose/config.py
+${PYSITELIB}/sqlalchemy_nose/config.pyc
+${PYSITELIB}/sqlalchemy_nose/config.pyo
+${PYSITELIB}/sqlalchemy_nose/noseplugin.py
+${PYSITELIB}/sqlalchemy_nose/noseplugin.pyc
+${PYSITELIB}/sqlalchemy_nose/noseplugin.pyo
