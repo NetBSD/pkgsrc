@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.18 2012/01/28 14:41:15 wiz Exp $
+$NetBSD: patch-aa,v 1.19 2012/05/29 14:58:05 wiz Exp $
 
---- configure.orig	2012-01-23 15:32:37.000000000 +0000
+--- configure.orig	2012-05-22 21:46:41.000000000 +0000
 +++ configure
-@@ -15614,7 +15614,7 @@ squeeze() {
+@@ -15698,7 +15698,7 @@ squeeze() {
  
  
        #
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.18 2012/01/28 14:41:15 wiz Exp $
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -20090,15 +20090,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -20377,15 +20377,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
             LIBS="$LIBS $gss_libs"
          elif test "$GSSAPI_ROOT" != "yes"; then
             LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
@@ -30,24 +30,24 @@ $NetBSD: patch-aa,v 1.18 2012/01/28 14:41:15 wiz Exp $
    fi
  else
    CPPFLAGS="$save_CPPFLAGS"
-@@ -23346,15 +23346,15 @@ if test "${enable_versioned_symbols+set}
+@@ -23598,15 +23598,15 @@ $as_echo "$as_me: WARNING: You need an l
  $as_echo "yes" >&6; }
-     if test "x$OPENSSL_ENABLED" = "x1"; then
-       versioned_symbols_flavour="OPENSSL_"
--    elif test "x$GNUTLS_ENABLED" == "x1"; then
-+    elif test "x$GNUTLS_ENABLED" = "x1"; then
-       versioned_symbols_flavour="GNUTLS_"
--    elif test "x$NSS_ENABLED" == "x1"; then
-+    elif test "x$NSS_ENABLED" = "x1"; then
-       versioned_symbols_flavour="NSS_"
--    elif test "x$POLARSSL_ENABLED" == "x1"; then
-+    elif test "x$POLARSSL_ENABLED" = "x1"; then
-       versioned_symbols_flavour="POLARSSL_"
--    elif test "x$CYASSL_ENABLED" == "x1"; then
-+    elif test "x$CYASSL_ENABLED" = "x1"; then
-       versioned_symbols_flavour="CYASSL_"
--    elif test "x$AXTLS_ENABLED" == "x1"; then
-+    elif test "x$AXTLS_ENABLED" = "x1"; then
-       versioned_symbols_flavour="AXTLS_"
-     else
-       versioned_symbols_flavour=""
+         if test "x$OPENSSL_ENABLED" = "x1"; then
+           versioned_symbols_flavour="OPENSSL_"
+-        elif test "x$GNUTLS_ENABLED" == "x1"; then
++        elif test "x$GNUTLS_ENABLED" = "x1"; then
+           versioned_symbols_flavour="GNUTLS_"
+-        elif test "x$NSS_ENABLED" == "x1"; then
++        elif test "x$NSS_ENABLED" = "x1"; then
+           versioned_symbols_flavour="NSS_"
+-        elif test "x$POLARSSL_ENABLED" == "x1"; then
++        elif test "x$POLARSSL_ENABLED" = "x1"; then
+           versioned_symbols_flavour="POLARSSL_"
+-        elif test "x$CYASSL_ENABLED" == "x1"; then
++        elif test "x$CYASSL_ENABLED" = "x1"; then
+           versioned_symbols_flavour="CYASSL_"
+-        elif test "x$AXTLS_ENABLED" == "x1"; then
++        elif test "x$AXTLS_ENABLED" = "x1"; then
+           versioned_symbols_flavour="AXTLS_"
+         else
+           versioned_symbols_flavour=""
