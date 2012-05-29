@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/05/23 13:26:49 obache Exp $
+# $NetBSD: Makefile,v 1.32 2012/05/29 10:57:16 jdc Exp $
 
 DISTNAME=	sip-4.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -50,6 +50,12 @@ CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared -mimpure-text"
 CONFIGURE_ARGS+=	LFLAGS_SHLIB="-shared"
 .  endif
 .endif
+
+# Hack: gcc on sparc64 miscompiles sipgen/parser.c at -O2
+.if ${MACHINE_ARCH} == "sparc64" && !empty(CC_VERSION:Mgcc*)
+BUILDLINK_TRANSFORM+=	rm:-O2
+.endif
+
 
 SUBST_CLASSES+=		pyversfx
 SUBST_STAGE.pyversfx=	pre-configure
