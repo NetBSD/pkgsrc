@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11124 2012/05/29 15:07:05 wiz Exp $
+$NetBSD: TODO,v 1.11125 2012/05/29 15:08:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -441,10 +441,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o byacc-20120115
 	o c4-1.10 [schmonz]
-	o cabextract-1.4
 	o cacti-0.8.8a [pkg/46399]
 	o cairo-1.12.2
-	o cairo-gobject-1.12.0
+	o cairo-gobject-1.12.2
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.8.53
@@ -494,7 +493,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o csound5-5.13
 	o ctwm-3.8.1
-	o cups-1.5.3
+	o cups-1.6.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.23
 	o cwm-5.1
@@ -756,7 +755,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview-2.10.3
 	o gtkwave-3.3.36
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -1138,8 +1136,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-TTFQuery-1.0.0
 	o py-beautifulsoup-4.0.4
 	o py-checker-0.8.19
-	o py-dbus-1.0.0 [needs dbus>=1.4]
-	o py-dbus-1.1.0
+	o py-dbus-1.1.0 [needs dbus>=1.4]
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
@@ -1150,7 +1147,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-sybase-0.37
 	o py-urwid-1.0.1
 	o py-xcbgen-1.7.1
-	o python-3.2
 	o qbrew-0.3.9
 	o qemu-1.0.1 [wip]
 	o qiv-2.2.4 [pkg/46167]
