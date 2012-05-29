@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1595 2012/05/17 05:00:27 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1596 2012/05/29 14:45:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -479,6 +479,7 @@ SUBDIR+=	nspr-reference
 SUBDIR+=	nss
 SUBDIR+=	ocaml-findlib
 SUBDIR+=	ocaml-lwt
+SUBDIR+=	ocaml-react
 SUBDIR+=	ode
 SUBDIR+=	ogre
 SUBDIR+=	omake
