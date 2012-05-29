@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.10 2012/04/08 02:14:34 dholland Exp $
-bin/${GNU_PROGRAM_PREFIX}cmp
-bin/${GNU_PROGRAM_PREFIX}diff
-bin/${GNU_PROGRAM_PREFIX}diff3
-bin/${GNU_PROGRAM_PREFIX}sdiff
+@comment $NetBSD: PLIST,v 1.11 2012/05/29 21:01:25 cheusov Exp $
+bin/gcmp
+bin/gdiff
+bin/gdiff3
+bin/gsdiff
+gnu/bin/cmp
+gnu/bin/diff
+gnu/bin/diff3
+gnu/bin/sdiff
 info/diffutils.info
-man/man1/${GNU_PROGRAM_PREFIX}cmp.1
-man/man1/${GNU_PROGRAM_PREFIX}diff.1
-man/man1/${GNU_PROGRAM_PREFIX}diff3.1
-man/man1/${GNU_PROGRAM_PREFIX}sdiff.1
+man/man1/gcmp.1
+man/man1/gdiff.1
+man/man1/gdiff3.1
+man/man1/gsdiff.1
 share/locale/ca/LC_MESSAGES/diffutils.mo
 share/locale/cs/LC_MESSAGES/diffutils.mo
 share/locale/da/LC_MESSAGES/diffutils.mo
