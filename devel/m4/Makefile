@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2012/01/31 01:00:13 christos Exp $
+# $NetBSD: Makefile,v 1.67 2012/05/29 21:44:45 cheusov Exp $
 
 DISTNAME=	m4-1.4.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=m4/}
 
@@ -18,29 +18,18 @@ INFO_FILES=		yes
 
 TEST_TARGET=		check
 
+CONFIGURE_ARGS+=	--program-prefix=g
+
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
-.endif
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-
-PLIST_VARS+=		gm4
-
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-PLIST.gm4=		yes
-.endif
 
 .if ${LOWER_OPSYS} == "aix"
 CFLAGS+=	-D_LINUX_SOURCE_COMPAT
 .endif
 
+INSTALLATION_DIRS+=	share/examples/m4 gnu/bin
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/m4
 	${INSTALL_DATA} ${WRKSRC}/examples/*.m4 ${DESTDIR}${PREFIX}/share/examples/m4
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${GNU_PROGRAM_PREFIX}m4 ${DESTDIR}${PREFIX}/bin/gm4
-.endif
+	${LN} -sf ../../bin/gm4 ${DESTDIR}${PREFIX}/gnu/bin/m4
 
 .include "../../mk/bsd.pkg.mk"
