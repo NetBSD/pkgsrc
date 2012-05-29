@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/29 18:33:34 cheusov Exp $
 
 DISTNAME=	units-1.86
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=units/}
 
@@ -11,16 +11,21 @@ COMMENT=	GNU Units - a calculator capable of performing unit conversions
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+LICENSE=	gnu-gpl-v2
+
 INFO_FILES=	YES
 
 GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS=		--program-prefix=${GNU_PROGRAM_PREFIX}
+CONFIGURE_ARGS=		--program-prefix=g
 
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+INSTALLATION_DIRS=	gnu/bin
+
+post-install:
+	set -e; cd ${DESTDIR}${PREFIX}/gnu/bin; \
+	ln -s ../../bin/gunits units
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
