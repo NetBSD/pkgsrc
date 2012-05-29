@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/05/28 22:55:05 tonio Exp $
+# $NetBSD: Makefile,v 1.31 2012/05/29 00:32:27 dholland Exp $
 #
 
 DISTNAME=	weechat-0.3.7
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.weechat.org/files/src/
 
@@ -26,5 +27,6 @@ LIBS.SunOS+=		-lnsl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
