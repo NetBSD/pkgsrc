@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/08 12:16:43 tnn Exp $
-bin/${GNU_PROGRAM_PREFIX}egrep
-bin/${GNU_PROGRAM_PREFIX}fgrep
-bin/${GNU_PROGRAM_PREFIX}grep
+@comment $NetBSD: PLIST,v 1.8 2012/05/29 22:10:24 cheusov Exp $
+bin/gegrep
+bin/gfgrep
+bin/ggrep
+gnu/bin/egrep
+gnu/bin/fgrep
+gnu/bin/grep
 info/grep.info
-man/man1/${GNU_PROGRAM_PREFIX}egrep.1
-man/man1/${GNU_PROGRAM_PREFIX}fgrep.1
-man/man1/${GNU_PROGRAM_PREFIX}grep.1
+man/man1/gegrep.1
+man/man1/gfgrep.1
+man/man1/ggrep.1
 share/locale/af/LC_MESSAGES/grep.mo
 share/locale/be/LC_MESSAGES/grep.mo
 share/locale/bg/LC_MESSAGES/grep.mo
