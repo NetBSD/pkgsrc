@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/08/29 15:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/29 15:06:54 wiz Exp $
 #
 
-DISTNAME=		damageproto-1.2.0
+DISTNAME=		damageproto-1.2.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	damageproto.pc.in
-USE_LANGUAGES=		# empty
+# for configure
+USE_LANGUAGES=		c
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
