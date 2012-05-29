@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.14 2009/11/10 23:31:36 asau Exp $
+$NetBSD: patch-ac,v 1.15 2012/05/29 03:01:15 enami Exp $
 
 --- dyn_load.c.orig	2007-12-19 02:37:12.000000000 +0300
 +++ dyn_load.c	2009-11-11 01:54:26.000000000 +0300
@@ -31,7 +31,7 @@ $NetBSD: patch-ac,v 1.14 2009/11/10 23:31:36 asau Exp $
                  break;
              }
          }
-+#endif /* !(defined(NETBSD) && __NetBSD_Version__ >= 599001900) */
++#endif /* !(defined(NETBSD) && defined(RTLD_DI_LINKMAP)) */
      }
      return cachedResult;
  }
