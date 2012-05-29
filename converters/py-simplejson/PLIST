@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2012/02/15 22:18:15 gls Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.8 2012/05/29 13:19:42 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/simplejson/__init__.py
 ${PYSITELIB}/simplejson/__init__.pyc
 ${PYSITELIB}/simplejson/__init__.pyo
@@ -56,6 +52,9 @@ ${PYSITELIB}/simplejson/tests/test_float.pyo
 ${PYSITELIB}/simplejson/tests/test_indent.py
 ${PYSITELIB}/simplejson/tests/test_indent.pyc
 ${PYSITELIB}/simplejson/tests/test_indent.pyo
+${PYSITELIB}/simplejson/tests/test_namedtuple.py
+${PYSITELIB}/simplejson/tests/test_namedtuple.pyc
+${PYSITELIB}/simplejson/tests/test_namedtuple.pyo
 ${PYSITELIB}/simplejson/tests/test_pass1.py
 ${PYSITELIB}/simplejson/tests/test_pass1.pyc
 ${PYSITELIB}/simplejson/tests/test_pass1.pyo
@@ -77,6 +76,9 @@ ${PYSITELIB}/simplejson/tests/test_separators.pyo
 ${PYSITELIB}/simplejson/tests/test_speedups.py
 ${PYSITELIB}/simplejson/tests/test_speedups.pyc
 ${PYSITELIB}/simplejson/tests/test_speedups.pyo
+${PYSITELIB}/simplejson/tests/test_tuple.py
+${PYSITELIB}/simplejson/tests/test_tuple.pyc
+${PYSITELIB}/simplejson/tests/test_tuple.pyo
 ${PYSITELIB}/simplejson/tests/test_unicode.py
 ${PYSITELIB}/simplejson/tests/test_unicode.pyc
 ${PYSITELIB}/simplejson/tests/test_unicode.pyo
