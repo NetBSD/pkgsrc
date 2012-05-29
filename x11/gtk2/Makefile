@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2012/03/10 10:56:12 obache Exp $
+# $NetBSD: Makefile,v 1.231 2012/05/29 22:58:52 cheusov Exp $
 
 DISTNAME=	gtk+-2.24.10
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--disable-visibility
 # which do not have it.
 .if ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=		grep-[0-9]*:../../textproc/grep
-TOOLS_PATH.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+TOOLS_PATH.grep=	${LOCALBASE}/bin/ggrep
 .endif
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
