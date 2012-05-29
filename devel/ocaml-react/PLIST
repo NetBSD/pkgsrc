@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/29 14:45:14 wiz Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/react
+lib/ocaml/site-lib/react/META
+lib/ocaml/site-lib/react/react.cmi
+lib/ocaml/site-lib/react/react.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/react
