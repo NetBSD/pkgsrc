@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11108 2012/05/29 13:37:53 wiz Exp $
+$NetBSD: TODO,v 1.11109 2012/05/29 13:40:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ffmpeg-20120507.0.10.3
 	o ffmpeg-20120527.0.11
 	o ffplay-20120527.0.11
-	o fftw-3.3.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
