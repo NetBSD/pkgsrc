@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2011/07/09 10:32:17 tron Exp $
+# $NetBSD: Makefile,v 1.33 2012/05/29 21:19:30 cheusov Exp $
 
 DISTNAME=	patch-2.5.9
+PKGREVISION=	1
 CATEGORIES=	devel
 # We keep an uncompressed tar archive of the sources on
 # ${MASTER_SITE_LOCAL} so that we won't need gzcat to extract the
@@ -23,20 +24,12 @@ GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
-.endif
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-
-PLIST_VARS+=		gpatch
-
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-PLIST.gpatch=		yes
-.endif
+CONFIGURE_ARGS+=	--program-prefix=g
 
 INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin \
 			man1dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+INSTALLATION_DIRS=	gnu/bin
 
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
@@ -47,9 +40,7 @@ do-patch:
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
 
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
 post-install:
-	${LN} -sf ${GNU_PROGRAM_PREFIX}patch ${DESTDIR}${PREFIX}/bin/gpatch
-.endif
+	${LN} -sf ../../bin/gpatch ${DESTDIR}${PREFIX}/gnu/bin/patch
 
 .include "../../mk/bsd.pkg.mk"
