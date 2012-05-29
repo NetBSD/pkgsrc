@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11123 2012/05/29 15:01:57 wiz Exp $
+$NetBSD: TODO,v 1.11124 2012/05/29 15:07:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cvsd-1.0.23
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
-	o damageproto-1.2.1
 	o dansguardian-2.10.0.3
 	o dante-1.3.2
 	o dap-3.7
@@ -542,7 +541,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.9
 	o egtk-0.3.6.2
-	o eigen2-2.0.17
 	o eigen3-3.0.5
 	o ejabberd-2.1.11
 	o ekiga-3.2.7
