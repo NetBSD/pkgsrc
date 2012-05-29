@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:48:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/05/29 14:35:41 wiz Exp $
 include/gc.h
+include/gc/cord.h
 include/gc/gc.h
 include/gc/gc_allocator.h
 include/gc/gc_amiga_redirects.h
@@ -31,6 +32,7 @@ share/doc/gc/README.amiga
 share/doc/gc/README.arm.cross
 share/doc/gc/README.autoconf
 share/doc/gc/README.changes
+share/doc/gc/README.cmake
 share/doc/gc/README.contributors
 share/doc/gc/README.cords
 share/doc/gc/README.darwin
