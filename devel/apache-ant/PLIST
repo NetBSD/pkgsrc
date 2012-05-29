@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/03/12 16:02:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13.2.1 2012/05/29 12:48:53 tron Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -1466,7 +1466,10 @@ share/doc/java/ant/api/overview-frame.html
 share/doc/java/ant/api/overview-summary.html
 share/doc/java/ant/api/overview-tree.html
 share/doc/java/ant/api/package-list
-share/doc/java/ant/api/resources/inherit.gif
+share/doc/java/ant/api/resources/background.gif
+share/doc/java/ant/api/resources/tab.gif
+share/doc/java/ant/api/resources/titlebar.gif
+share/doc/java/ant/api/resources/titlebar_end.gif
 share/doc/java/ant/api/serialized-form.html
 share/doc/java/ant/api/stylesheet.css
 share/doc/java/ant/base_task_classes.html
