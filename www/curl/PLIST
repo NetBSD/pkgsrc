@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2012/01/28 14:41:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2012/05/29 14:58:05 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -14,6 +14,7 @@ lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
 man/man1/curl.1
+man/man1/mk-ca-bundle.1
 man/man3/curl_easy_cleanup.3
 man/man3/curl_easy_duphandle.3
 man/man3/curl_easy_escape.3
