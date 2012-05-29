@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.9 2008/02/23 05:16:34 obache Exp $
+$NetBSD: patch-al,v 1.10 2012/05/29 20:23:12 joerg Exp $
 
 --- src/Configure.orig	2008-02-23 04:22:55.000000000 +0000
 +++ src/Configure
@@ -17,7 +17,7 @@ $NetBSD: patch-al,v 1.9 2008/02/23 05:16:34 obache Exp $
      *-openbsd*)
  	OS='OpenBSD'
  	DBM_LIB=""
-@@ -1111,6 +1119,14 @@ if [ "x$using_shlib" = "x1" ] ; then
+@@ -1111,15 +1119,19 @@ if [ "x$using_shlib" = "x1" ] ; then
  	    esac
  	    LDFLAGS_MOD_SHLIB=$LDFLAGS_SHLIB
  	    ;;
@@ -30,5 +30,17 @@ $NetBSD: patch-al,v 1.9 2008/02/23 05:16:34 obache Exp $
 +	    SHLIB_SUFFIX_DEPTH=2
 +	    ;;
  	*-netbsd*)
++	    LD_SHLIB="cc"
  	    CFLAGS_SHLIB="-fPIC -DPIC"
- 	    if echo __ELF__ | ${CC} -E - | grep -q __ELF__; then
+-	    if echo __ELF__ | ${CC} -E - | grep -q __ELF__; then
+-		LDFLAGS_SHLIB="-Bshareable"
+-		LDFLAGS_SHLIB_EXPORT=""
+-	    else
+-		LDFLAGS_SHLIB="-shared"
+-		LDFLAGS_SHLIB_EXPORT="-Wl,-E"
+-	    fi
++	    LDFLAGS_SHLIB="-shared"
++	    LDFLAGS_SHLIB_EXPORT="-Wl,-E"
+ 	    LDFLAGS_MOD_SHLIB=$LDFLAGS_SHLIB
+ 	    SHLIB_SUFFIX_DEPTH=2
+ 	    ;;
