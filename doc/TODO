@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11110 2012/05/29 13:56:45 wiz Exp $
+$NetBSD: TODO,v 1.11111 2012/05/29 14:02:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -995,7 +995,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mksh-40f
 	o mkvtoolnix-5.6.0
-	o mldonkey-3.1.2
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
 	o modular-xorg-server-1.12.1
