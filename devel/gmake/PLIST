@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:42:59 jlam Exp $
-bin/${GNU_PROGRAM_PREFIX}make
-${PLIST.gmake}bin/gmake
+@comment $NetBSD: PLIST,v 1.10 2012/05/29 21:37:03 cheusov Exp $
+bin/gmake
+gnu/bin/make
 info/make.info
-man/man1/${GNU_PROGRAM_PREFIX}make.1
+man/man1/gmake.1
