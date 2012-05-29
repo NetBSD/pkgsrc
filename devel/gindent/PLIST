@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2009/07/18 19:32:38 wiz Exp $
-bin/${GNU_PROGRAM_PREFIX}indent
-bin/${GNU_PROGRAM_PREFIX}texinfo2man
+@comment $NetBSD: PLIST,v 1.11 2012/05/29 21:07:33 cheusov Exp $
+bin/gindent
+bin/gtexinfo2man
+gnu/bin/indent
+gnu/bin/texinfo2man
 info/indent.info
-man/man1/${GNU_PROGRAM_PREFIX}indent.1
+man/man1/gindent.1
 share/doc/indent/indent.html
 share/locale/ca/LC_MESSAGES/indent.mo
 share/locale/da/LC_MESSAGES/indent.mo
