@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1610 2012/05/29 12:20:26 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1611 2012/05/29 12:22:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2525,3 +2525,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/weechat to 0.3.7 [tonio 2012-05-28]
 	Updated chat/weechat to 0.3.7nb1 [dholland 2012-05-29]
 	Updated pkgtools/gnome-packagekit to 0.4.0nb14 [obache 2012-05-29]
+	Updated textproc/groonga to 2.0.3 [obache 2012-05-29]
