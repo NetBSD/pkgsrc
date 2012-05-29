@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/29 16:38:01 asau Exp $
+
+SHA1 (arpack96.tar.gz) = 3f91de2b39b484bc8365f8048c9eb109e0306e1c
+RMD160 (arpack96.tar.gz) = 3d1c1c307223961506066f895b7ab291861e73fe
+Size (arpack96.tar.gz) = 636865 bytes
+SHA1 (patch.tar.gz) = 9fc6db4180d516d834d959a5f079e63f174f98fa
+RMD160 (patch.tar.gz) = 4ccda2de8dc04c9ecb0ea722f230f5dd5c981154
+Size (patch.tar.gz) = 226473 bytes
+SHA1 (patch-ARmake.inc) = f3e11d5ef8f11c8c253a487baec5e0b18aa07a8c
+SHA1 (patch-UTIL_second.f) = 6a9d03f815b6d73669e637f5bfae6e8d38df90fd
