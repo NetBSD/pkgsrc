@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11115 2012/05/29 14:16:33 wiz Exp $
+$NetBSD: TODO,v 1.11116 2012/05/29 14:18:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1127,7 +1127,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o postfix-2.9.2
 	o powwow-1.2.16
 	o prboom-2.5.0.8
-	o printproto-1.0.5
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.10
