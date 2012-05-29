@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.56 2012/03/28 20:40:38 wiz Exp $
+$NetBSD: distinfo,v 1.57 2012/05/29 14:02:00 wiz Exp $
 
-SHA1 (mldonkey-3.1.0.tar.bz2) = 9479c61ab067b01c76cbc11e41477f00a17f5d41
-RMD160 (mldonkey-3.1.0.tar.bz2) = 69c2bf1937bb2a782166a3b08d87e4537ec03eea
-Size (mldonkey-3.1.0.tar.bz2) = 2820081 bytes
-SHA1 (patch-Makefile) = 2ba1d230021ffe2ba0875cb5a0c4ac654d6f7956
-SHA1 (patch-src_utils_lib_CryptoPP.cc) = e60fa91e0ef423e0f46ceaa3ce822c6b22153847
-SHA1 (patch-src_utils_lib_CryptoPP.h) = 2d575d8a9b91b419f7791aafc1e0d2de1b8277ba
+SHA1 (mldonkey-3.1.2.tar.bz2) = be8c261e2fbd365dd3866af15a854b074fbc59c1
+RMD160 (mldonkey-3.1.2.tar.bz2) = 5039f7a25ad575e2bb6bea616fa13e01268b596b
+Size (mldonkey-3.1.2.tar.bz2) = 2844260 bytes
