@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1608 2012/05/28 22:55:49 tonio Exp $
+$NetBSD: CHANGES-2012,v 1.1609 2012/05/29 02:54:11 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2511,6 +2511,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_base to 12.1nb2 [obache 2012-05-27]
 	Updated www/opera-plugins to 1.0nb3 [obache 2012-05-27]
 	Updated games/onscripter to 20120527 [tsutsui 2012-05-27]
+	Updated graphics/cairo to 1.10.2nb5 [dholland 2012-05-27]
+	Updated www/ies4linux to 2.99.0.1nb5 [dholland 2012-05-27]
+	Updated misc/dpkg to 1.16.3nb1 [dholland 2012-05-27]
 	Updated devel/apache-ant to 1.8.4 [tonio 2012-05-28]
 	Updated print/py-cups to 1.9.61 [wiz 2012-05-28]
 	Updated devel/scmgit to 1.7.10.3 [adam 2012-05-28]
@@ -2520,3 +2523,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated parallel/openmpi to 1.5.5 [asau 2012-05-28]
 	Updated pkgtools/pkgin to 0.6.0 [imil 2012-05-28]
 	Updated chat/weechat to 0.3.7 [tonio 2012-05-28]
+	Updated chat/weechat to 0.3.7nb1 [dholland 2012-05-29]
