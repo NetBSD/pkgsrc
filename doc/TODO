@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11118 2012/05/29 14:22:36 wiz Exp $
+$NetBSD: TODO,v 1.11119 2012/05/29 14:35:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,7 +433,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o blender-2.63a
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o boehm-gc-7.2b
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
