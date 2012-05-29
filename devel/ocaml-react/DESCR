@@ -1,0 +1,3 @@
+React is an OCaml module for functional reactive programming (FRP).
+It provides support to program with time varying values: declarative events
+and signals.
