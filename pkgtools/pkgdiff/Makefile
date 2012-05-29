@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2011/08/23 21:47:18 abs Exp $
+# $NetBSD: Makefile,v 1.76 2012/05/29 22:58:52 cheusov Exp $
 #
 
 DISTNAME=	pkgdiff-1.3
@@ -28,7 +28,7 @@ BUILD_DEFS+=	MANINSTALL
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1"
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
-DIFF?=		${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
+DIFF?=		${PREFIX}/bin/gdiff
 .else
 DIFF?=		diff
 .endif
