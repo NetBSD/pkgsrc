@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/19 18:59:20 marino Exp $
-bin/${GNU_PROGRAM_PREFIX}shar
-bin/${GNU_PROGRAM_PREFIX}unshar
+@comment $NetBSD: PLIST,v 1.9 2012/05/29 20:52:55 cheusov Exp $
+bin/gshar
+bin/gunshar
+gnu/bin/shar
+gnu/bin/unshar
 info/sharutils.info
-man/man1/${GNU_PROGRAM_PREFIX}shar.1
-man/man1/${GNU_PROGRAM_PREFIX}unshar.1
+man/man1/gshar.1
+man/man1/gunshar.1
 share/locale/bg/LC_MESSAGES/sharutils.mo
 share/locale/ca/LC_MESSAGES/sharutils.mo
 share/locale/cs/LC_MESSAGES/sharutils.mo
