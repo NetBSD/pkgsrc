@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/12/02 14:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/29 14:20:37 wiz Exp $
 #
 
-DISTNAME=		makedepend-1.0.3
+DISTNAME=		makedepend-1.0.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
