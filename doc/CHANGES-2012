@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1629 2012/05/29 14:22:36 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1630 2012/05/29 14:35:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2544,3 +2544,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/printproto to 1.0.5 [wiz 2012-05-29]
 	Updated devel/makedepend to 1.0.4 [wiz 2012-05-29]
 	Updated devel/imake to 1.0.5 [wiz 2012-05-29]
+	Updated devel/boehm-gc to 7.2b [wiz 2012-05-29]
