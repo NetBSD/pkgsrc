@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1622 2012/05/29 14:02:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1623 2012/05/29 14:02:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2537,3 +2537,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/fftwf to 3.3.2 [wiz 2012-05-29]
 	Updated audio/sfxr to 1.2.1 [wiz 2012-05-29]
 	Updated net/mldonkey to 3.1.2 [wiz 2012-05-29]
+	Updated net/mldonkey-gui to 3.1.2 [wiz 2012-05-29]
