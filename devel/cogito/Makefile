@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/06/19 19:34:52 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/29 22:58:53 cheusov Exp $
 #
 
 DISTNAME=		cogito-0.18.2
@@ -40,7 +40,7 @@ REPLACE_PERL+=		cg-Xfollowrenames
 .if ${OPSYS} == "SunOS"
 
 DEPENDS+=	findutils>=4.1:../../sysutils/findutils
-TOOLS_PLATFORM.xargs=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}xargs
+TOOLS_PLATFORM.xargs=	${LOCALBASE}/bin/gxargs
 
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/11/22 09:32:24 ahoka Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/29 22:58:53 cheusov Exp $
 #
 
 DISTNAME=	quilt-0.48
@@ -15,14 +15,13 @@ DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 DEPENDS+=	patch>=2.4:../../devel/patch
 
-BUILD_DEFS+=	GNU_PROGRAM_PREFIX
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash:run gettext-tools gmake msgfmt perl:run
 
-CONFIGURE_ARGS+=	--with-cp=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}cp
-CONFIGURE_ARGS+=	--with-date=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}date
-CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
-CONFIGURE_ARGS+=	--with-sed=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}sed
+CONFIGURE_ARGS+=	--with-cp=${PREFIX}/bin/gcp
+CONFIGURE_ARGS+=	--with-date=${PREFIX}/bin/gdate
+CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
+CONFIGURE_ARGS+=	--with-sed=${PREFIX}/bin/gsed
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 CONFIGURE_ARGS+=	--without-rpmbuild
 CONFIGURE_ARGS+=	--without-getopt
