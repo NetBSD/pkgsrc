@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2012/04/06 12:55:23 marino Exp $
+# $NetBSD: Makefile,v 1.86 2012/05/29 22:58:52 cheusov Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 PKGREVISION=	18
@@ -23,7 +23,7 @@ SUBST_CLASSES+=		tarexe
 SUBST_STAGE.tarexe=	pre-configure
 SUBST_MESSAGE.tarexe=	Use GNU tar in ark
 SUBST_FILES.tarexe=	ark/ark.kcfg
-SUBST_SED.tarexe=	-e 's:<default>tar</default>:<default>${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar</default>:'
+SUBST_SED.tarexe=	-e 's:<default>tar</default>:<default>${PREFIX.gtar}/bin/gtar</default>:'
 
 .include "../../mk/bsd.prefs.mk"
 

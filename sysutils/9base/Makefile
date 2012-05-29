@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/10/27 09:58:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2012/05/29 22:58:52 cheusov Exp $
 #
 
 DISTNAME=	9base-6
+PKGREVISION=	1
 PKGNAME=	9base-20100604
 CATEGORIES=	sysutils shells
 MASTER_SITES=	http://dl.suckless.org/tools/
@@ -32,12 +33,6 @@ LDFLAGS+= -static
 #XXX see http://gnats.netbsd.org/43228
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*)
 BUILDLINK_TRANSFORM+=	rm:-static
-.endif
-
-.if ${GNU_PROGRAM_PREFIX} == ""
-CONFLICTS+=		coreutils-[0-9]*
-CONFLICTS+=		grep-[0-9]*
-CONFLICTS+=		gsed-[0-9]*
 .endif
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} \
