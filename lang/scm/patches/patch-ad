@@ -1,13 +1,77 @@
-$NetBSD: patch-ad,v 1.1 2006/02/19 17:50:11 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2012/05/29 20:50:35 asau Exp $
 
---- findexec.c.orig	2006-02-08 17:53:00.000000000 +0000
-+++ findexec.c
-@@ -78,7 +78,7 @@ Wed Feb 21 23:06:35 1996  Aubrey Jaffer
+Pull common standard definitions in one place.
+
+--- findexec.c.orig	2002-06-02 08:54:47.000000000 +0400
++++ findexec.c	2012-05-30 00:44:57.000000000 +0400
+@@ -41,68 +41,22 @@
+ # ifndef PLAN9
+ #  include <sys/file.h>
+ #  include <sys/param.h>
+-# endif
+-# ifdef linux
+-#  include <stdlib.h>
++#  include <sys/types.h>
+ #  include <sys/stat.h>
+-#  include <unistd.h>     /* for X_OK define */
+-# endif
+-# ifdef __SVR4
+ #  include <string.h>
+ #  include <stdlib.h>
+-#  include <sys/stat.h>
+ #  include <unistd.h>     /* for X_OK define */
+-# else
+-#  ifdef __sgi__
+-#   include <string.h>
+-#   include <stdlib.h>
+-#   include <sys/stat.h>
+-#   include <unistd.h>     /* for X_OK define */
+-#  else
++# endif
+ #   ifdef PLAN9
+ #    include <u.h>
+ #    include <libc.h>
+ #    define getcwd getwd
+ #    define MAXPATHLEN 256 	/* arbitrary? */
+ #    define X_OK AEXEC
+-#   else
+-#    include <strings.h>
+ #   endif
+-#  endif
+-# endif
+-# ifdef __amigaos__
+-#  include <stdlib.h>
+-#  include <sys/stat.h>
+-#  include <unistd.h>
+-# endif
  # ifndef __STDC__
  #  define const /**/
  # endif
 -# ifdef __FreeBSD__
-+# if defined(__FreeBSD__) || defined(__DragonFly__)
- /* This might be same for 44bsd derived system. */
- #  include <sys/types.h>
- #  include <sys/stat.h>
+-/* This might be same for 44bsd derived system. */
+-#  include <sys/types.h>
+-#  include <sys/stat.h>
+-# endif
+-# ifdef __NetBSD__
+-#  include <stdlib.h>
+-#  include <unistd.h>
+-# endif
+-# ifdef __OpenBSD__
+-/* This might be same for 44bsd derived system. */
+-#  include <stdlib.h>
+-#  include <unistd.h>
+-#  include <sys/types.h>
+-#  include <sys/stat.h>
+-# endif
+-# ifdef __alpha
+-#  include <string.h>
+-#  include <stdlib.h>
+-#  include <sys/types.h>
+-#  include <sys/stat.h>
+-# endif
+-# ifdef GO32
+-#  include <sys/stat.h>
+-# endif
+ 
+ # ifndef DEFAULT_PATH
+ #  define DEFAULT_PATH ".:~/bin::/usr/local/bin:/usr/new:/usr/ucb:/usr/bin:/bin:/usr/hosts"
