@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.48 2012/05/28 22:46:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.49 2012/05/29 12:49:17 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -215,3 +215,5 @@ Pullup ticket #3808 - requested by spz
 devel/rt3: security update
 Pullup ticket #3811 - requested by abs
 audio/arts: build fix
+Pullup ticket #3812 - requested by gls
+devel/apache-ant: security update
