@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2012/04/27 12:31:34 obache Exp $
+# $NetBSD: Makefile,v 1.93 2012/05/29 13:51:28 wiz Exp $
 #
 
 DISTNAME=	rhythmbox-0.12.8
@@ -29,7 +29,6 @@ GCONF_SCHEMAS=		rhythmbox.schemas
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
-BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 .include "../../audio/libmusicbrainz/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
