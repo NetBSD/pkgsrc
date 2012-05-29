@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/02/23 07:57:55 asau Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/05/29 13:23:49 asau Exp $
 bin/mathomatic
 share/applications/mathomatic.desktop
 share/doc/mathomatic/AUTHORS
@@ -7,10 +7,15 @@ share/doc/mathomatic/NEWS
 share/doc/mathomatic/README.txt
 share/doc/mathomatic/VERSION
 share/doc/mathomatic/examples/README.txt
+share/doc/mathomatic/examples/compile.limits
+share/doc/mathomatic/examples/compile.roots
 share/doc/mathomatic/examples/fact.c
 share/doc/mathomatic/examples/fact.py
 share/doc/mathomatic/examples/factorial
 share/doc/mathomatic/examples/intfact.c
+share/doc/mathomatic/examples/limits.c
+share/doc/mathomatic/examples/roots.c
+share/doc/mathomatic/examples/testprimes
 share/doc/mathomatic/html/README.txt
 share/doc/mathomatic/html/am.html
 share/doc/mathomatic/html/doc.css
@@ -59,6 +64,7 @@ share/doc/mathomatic/tests/fraction.in
 share/doc/mathomatic/tests/heart.in
 share/doc/mathomatic/tests/heron.in
 share/doc/mathomatic/tests/how_limit_works.in
+share/doc/mathomatic/tests/hypertrig.in
 share/doc/mathomatic/tests/limits.in
 share/doc/mathomatic/tests/linear.in
 share/doc/mathomatic/tests/pie.in
@@ -76,5 +82,6 @@ share/doc/mathomatic/tests/test2.in
 share/doc/mathomatic/tests/test3.in
 share/doc/mathomatic/tests/test6.in
 share/doc/mathomatic/tests/trig
+share/doc/mathomatic/tests/trig.in
 share/pixmaps/mathomatic.png
 share/pixmaps/mathomatic.xpm
