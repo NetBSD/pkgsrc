@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1641 2012/05/29 18:19:43 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.1642 2012/05/29 20:37:30 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2556,3 +2556,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libexttextcat to 3.3.0 [wiz 2012-05-29]
 	Updated sysutils/coreutils to 8.13nb1 [cheusov 2012-05-29]
 	Updated misc/gnuls to 8.13nb1 [cheusov 2012-05-29]
+	Updated archivers/gcpio to 2.6nb9 [cheusov 2012-05-29]
