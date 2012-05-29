@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11125 2012/05/29 15:08:02 wiz Exp $
+$NetBSD: TODO,v 1.11126 2012/05/29 15:34:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -895,7 +895,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libchamplain08-0.12.1
 	o libdrm-2.4.34
 	o libextractor-0.6.3
-	o libexttextcat-3.3.0
 	o libffi-3.0.11
 	o libflash-0.4.13
 	o libfolks-0.7.0
