@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4392 2011/05/05 21:44:41 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4393 2012/05/29 15:07:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -5761,6 +5761,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated audio/libcanberra to 0.26 [adam 2010-11-28]
 	Added devel/ldpc version 20060208 [agc 2010-11-28]
 	Added net/modpcap version 0.0.5 [agc 2010-11-28]
+	Updated sysutils/gnome-system-monitor to 2.28.2 [drochner 2011-11-28]
 	Updated lang/pcc-current to 101129 [he 2010-11-29]
 	Updated net/unbound to 1.4.6nb1 [ghen 2010-11-29]
 	Updated sysutils/radmind to 1.14.0 [hauke 2010-11-29]
