@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/19 04:56:17 obache Exp $
-bin/${GNU_PROGRAM_PREFIX}units
+@comment $NetBSD: PLIST,v 1.2 2012/05/29 18:33:34 cheusov Exp $
+bin/gunits
+gnu/bin/units
 info/units.info
-man/man1/${GNU_PROGRAM_PREFIX}units.1
+man/man1/gunits.1
 share/units.dat
