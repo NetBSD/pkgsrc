@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/05/17 21:10:37 marino Exp $
+# $NetBSD: Makefile,v 1.22 2012/05/29 22:23:27 cheusov Exp $
 
 DISTNAME=	gtk+-3.4.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -54,7 +54,7 @@ BUILD_DIRS=		. demos/gtk-demo
 # which do not have it.
 .if ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=		grep-[0-9]*:../../textproc/grep
-TOOLS_PATH.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
+TOOLS_PATH.grep=	${LOCALBASE}/bin/ggrep
 .endif
 # isnan and isinf are part of libc, not libm on DragonFly
 # conf tests fail detection due to conflicting definitions, just skip them
