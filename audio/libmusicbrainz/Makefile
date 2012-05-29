@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2010/11/30 19:30:20 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2012/05/29 13:35:17 wiz Exp $
 
 DISTNAME=	libmusicbrainz-3.0.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://musicbrainz.org/doc/libmusicbrainz
-COMMENT=	MusicBrainz (user-maintained community music metadatabase) library
+COMMENT=	MusicBrainz (user-maintained community music metadatabase) library v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
