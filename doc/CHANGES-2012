@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1628 2012/05/29 14:20:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1629 2012/05/29 14:22:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2543,3 +2543,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gawk to 4.0.1 [wiz 2012-05-29]
 	Updated x11/printproto to 1.0.5 [wiz 2012-05-29]
 	Updated devel/makedepend to 1.0.4 [wiz 2012-05-29]
+	Updated devel/imake to 1.0.5 [wiz 2012-05-29]
