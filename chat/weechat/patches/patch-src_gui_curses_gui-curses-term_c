@@ -1,0 +1,18 @@
+$NetBSD: patch-src_gui_curses_gui-curses-term_c,v 1.1 2012/05/29 00:32:27 dholland Exp $
+
+Workaround for build failure on early NetBSD 6.99.* and prerelease 6.0
+(PR 46492)
+
+--- src/gui/curses/gui-curses-term.c~	2012-01-08 10:28:06.000000000 +0000
++++ src/gui/curses/gui-curses-term.c
+@@ -28,6 +28,10 @@
+ #ifdef HAVE_NCURSESW_CURSES_H
+ #include <ncursesw/term.h>
+ #else
++#ifdef __NetBSD__
++/* workaround for build failure on early 6.99.* and prerelease 6.0 */
++#include <sys/cdefs.h>
++#endif
+ #include <term.h>
+ #endif
+ 
