@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1654 2012/05/29 23:11:30 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.1655 2012/05/29 23:12:01 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2569,3 +2569,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/gsed to 4.2.1nb3 [cheusov 2012-05-29]
 	Updated archivers/gtar-base to 1.26nb1 [cheusov 2012-05-29]
 	Updated devel/patch to 2.5.9nb1 [cheusov 2012-05-29]
+	Updated archivers/pax to 20080110nb1 [cheusov 2012-05-29]
