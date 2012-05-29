@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11109 2012/05/29 13:40:25 wiz Exp $
+$NetBSD: TODO,v 1.11110 2012/05/29 13:56:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1228,7 +1228,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ser-0.9.6
 	o sessreg-1.0.7
 	o setxkbmap-1.3.0
-	o sfxr-1.2.1
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
