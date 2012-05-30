@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.248 2012/04/13 02:25:06 sbd Exp $
+# $NetBSD: replace.mk,v 1.249 2012/05/30 12:02:28 cheusov Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -359,7 +359,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.find=
 TOOLS_DEPENDS.find?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_CREATE+=			find
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.find=findutils
-TOOLS_PATH.find=		${TOOLS_PREFIX.find}/bin/${GNU_PROGRAM_PREFIX}find
+TOOLS_PATH.find=		${TOOLS_PREFIX.find}/bin/gfind
 .  endif
 .endif
 
@@ -397,7 +397,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gawk=
 TOOLS_DEPENDS.gawk?=		gawk>=3.1.1:../../lang/gawk
 TOOLS_CREATE+=			gawk
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gawk=gawk
-TOOLS_PATH.gawk=		${TOOLS_PREFIX.gawk}/bin/${GNU_PROGRAM_PREFIX}awk
+TOOLS_PATH.gawk=		${TOOLS_PREFIX.gawk}/bin/gawk
 .  endif
 TOOLS_ALIASES.gawk=		awk
 .endif
@@ -447,7 +447,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gsed=
 TOOLS_DEPENDS.gsed?=		gsed>=3.0.2:../../textproc/gsed
 TOOLS_CREATE+=			gsed
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gsed=gsed
-TOOLS_PATH.gsed=		${TOOLS_PREFIX.gsed}/bin/${GNU_PROGRAM_PREFIX}sed
+TOOLS_PATH.gsed=		${TOOLS_PREFIX.gsed}/bin/gsed
 .  endif
 TOOLS_ALIASES.gsed=		sed
 .endif
@@ -459,13 +459,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 TOOLS_DEPENDS.gtar?=		gtar-base>=1.13.25:../../archivers/gtar-base
 TOOLS_CREATE+=			gtar
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gtar=gtar-base
-.    if defined(GTAR_PROGRAM_PREFIX)
-TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/${GTAR_PROGRAM_PREFIX}tar
-.    elif defined(GNU_PROGRAM_PREFIX) && ${GNU_PROGRAM_PREFIX} != ""
-TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar
-.    else
 TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/gtar
-.    endif
 .  endif
 .endif
 
@@ -838,7 +832,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.xargs=
 TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_CREATE+=			xargs
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xargs=findutils
-TOOLS_PATH.xargs=		${TOOLS_PREFIX.xargs}/bin/${GNU_PROGRAM_PREFIX}xargs
+TOOLS_PATH.xargs=		${TOOLS_PREFIX.xargs}/bin/gxargs
 TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 .  endif
 .endif
@@ -926,7 +920,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 TOOLS_DEPENDS.${_t_}?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=coreutils
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
 .    endif
 .  endif
 .endfor
@@ -941,7 +935,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.[=
 TOOLS_DEPENDS.[?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=		[
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.[=coreutils
-TOOLS_PATH.[=		${TOOLS_PREFIX.[}/bin/${GNU_PROGRAM_PREFIX}[
+TOOLS_PATH.[=		${TOOLS_PREFIX.[}/bin/g[
 .  endif
 .endif
 
@@ -960,7 +954,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=grep
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
 .    endif
 .  endif
 .endfor
@@ -1029,7 +1023,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=diffutils
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
 .    endif
 .  endif
 .endfor
