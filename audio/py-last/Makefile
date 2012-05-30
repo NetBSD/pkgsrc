@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/30 13:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/30 15:52:08 dholland Exp $
 #
 
 DISTNAME=	pylast-0.5.11
@@ -14,6 +14,7 @@ LICENSE=	apache-2.0
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
