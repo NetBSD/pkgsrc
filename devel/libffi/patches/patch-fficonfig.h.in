@@ -1,0 +1,14 @@
+$NetBSD: patch-fficonfig.h.in,v 1.1 2012/05/30 09:13:16 jperkin Exp $
+
+--- fficonfig.h.in.orig	Wed May 30 08:53:33 2012
++++ fficonfig.h.in	Wed May 30 08:54:03 2012
+@@ -46,6 +46,9 @@
+ /* Define if your assembler supports PC relative relocs. */
+ #undef HAVE_AS_X86_PCREL
+ 
++/* Define if your assembler supports unwind section type. */
++#undef HAVE_AS_X86_64_UNWIND_SECTION_TYPE
++
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
+ 
