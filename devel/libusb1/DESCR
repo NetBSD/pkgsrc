@@ -1,0 +1,4 @@
+libusb is a library for USB device access from Linux, Mac OS X,
+OpenBSD, NetBSD, and Windows userspace.
+
+This package contains major version 1 of the library.
