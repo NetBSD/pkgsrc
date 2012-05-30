@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1663 2012/05/30 11:53:35 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.1664 2012/05/30 13:41:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/py-Unidecode version 0.04.9 [wiz 2012-05-30]
 	Added math/py-munkres version 1.0.5.4 [wiz 2012-05-30]
 	Updated mail/dovecot2 to 2.1.7 [ghen 2012-05-30]
+	Updated devel/ocaml-lwt to 2.3.2 [wiz 2012-05-30]
