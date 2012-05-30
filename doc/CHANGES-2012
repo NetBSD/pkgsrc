@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1668 2012/05/30 14:54:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1669 2012/05/30 15:29:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/libusb1 version 1.0.9 [wiz 2012-05-30]
 	Updated devel/libusb to 0.1.12nb3 [wiz 2012-05-30]
 	Updated net/Radicale to 0.6.4nb2 [wiz 2012-05-30]
+	Added devel/libusbx version 1.0.11 [wiz 2012-05-30]
