@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11127 2012/05/29 20:53:11 cheusov Exp $
+$NetBSD: TODO,v 1.11128 2012/05/30 02:53:15 enami Exp $
 
 Suggested new packages
 ======================
@@ -662,7 +662,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.9.3.3
 	o gbdfed-1.6
 	o gcal-3.6.2
 	o gcin-1.5.5
