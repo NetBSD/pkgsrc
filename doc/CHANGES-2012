@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1666 2012/05/30 14:12:08 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1667 2012/05/30 14:13:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ocaml-lwt to 2.3.2 [wiz 2012-05-30]
 	Added audio/py-last version 0.5.11 [wiz 2012-05-30]
 	Added devel/libusb1 version 1.0.9 [wiz 2012-05-30]
+	Updated devel/libusb to 0.1.12nb3 [wiz 2012-05-30]
