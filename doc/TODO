@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11128 2012/05/30 02:53:15 enami Exp $
+$NetBSD: TODO,v 1.11129 2012/05/30 06:54:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -740,7 +740,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grep-2.12
 	o grhino-0.16.1
 	o groff-1.21
-	o gsasl-1.8.0
 	o gss-1.0.2
 	o gssdp-0.10.0
 	o gst123-0.3.1
