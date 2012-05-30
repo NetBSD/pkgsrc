@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/04/07 17:32:40 dholland Exp $
+# $NetBSD: Makefile,v 1.34 2012/05/30 11:58:52 cheusov Exp $
 #
 
 DISTNAME=	ArX-2.2.4
@@ -17,7 +17,6 @@ DEPENDS+=	patch-[0-9]*:../../devel/patch
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 
-BUILD_DEFS+=	GNU_PROGRAM_PREFIX
 EVAL_PREFIX+=	PREFIX.diffutils=diffutils
 EVAL_PREFIX+=	PREFIX.gtar-base=gtar-base
 
@@ -25,9 +24,9 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	ARXDIFF=${PREFIX.diffutils}/bin/${GNU_PROGRAM_PREFIX}diff
-CONFIGURE_ARGS+=	ARXPATCH=${PREFIX.diffutils}/bin/${GNU_PROGRAM_PREFIX}patch
-CONFIGURE_ARGS+=	ARXTAR=${PREFIX.gtar-base}/bin/${GNU_PROGRAM_PREFIX}tar
+CONFIGURE_ARGS+=	ARXDIFF=${PREFIX.diffutils}/bin/gdiff
+CONFIGURE_ARGS+=	ARXPATCH=${PREFIX.diffutils}/bin/gpatch
+CONFIGURE_ARGS+=	ARXTAR=${PREFIX.gtar-base}/bin/gtar
 CONFIGURE_ARGS+=	ARXPKGCONFIG=${PKG_CONFIG:Q}
 # XXX Python is needed for build only; this is handled by devel/scons
 CONFIGURE_ARGS+=	ARXPYTHON=${TRUE:Q}

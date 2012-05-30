@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/11/26 04:39:51 sbd Exp $
+# $NetBSD: Makefile,v 1.39 2012/05/30 11:55:54 cheusov Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -33,10 +33,10 @@ OVERRIDE_DIRDEPTH=	3
 CONFIGURE_DIRS=		src/=build
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
-CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff3
-CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
-CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
+CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/gdiff
+CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/gdiff3
+CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/gpatch
+CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/gtar
 
 DOCDIR=			${PREFIX}/share/doc/tla
 
