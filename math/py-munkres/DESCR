@@ -1,0 +1,10 @@
+The Munkres module provides an implementation of the Munkres
+algorithm (also called the Hungarian algorithm or the Kuhn-Munkres
+algorithm), useful for solving the Assignment Problem.
+
+Assignment Problem: Let C be an nxn matrix representing the costs
+of each of n workers to perform any of n jobs. The assignment
+problem is to assign jobs to workers in a way that minimizes the
+total cost. Since each worker can perform only one job and each
+job can be assigned to only one worker the assignments represent
+an independent set of the matrix C.
