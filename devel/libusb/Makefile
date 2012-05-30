@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/05/30 14:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/05/30 15:48:21 wiz Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	3
@@ -23,5 +23,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 ONLY_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*-*
 
 TEST_TARGET=		check
+
+CONFLICTS=		libusb-compat-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
