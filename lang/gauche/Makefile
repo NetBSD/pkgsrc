@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.60 2012/05/13 08:56:28 obache Exp $
+# $NetBSD: Makefile,v 1.61 2012/05/30 02:50:11 enami Exp $
 #
 
-DISTNAME=	Gauche-0.9.3.2
+DISTNAME=	Gauche-0.9.3.3
 #PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	uebayasi@NetBSD.org
+MAINTAINER=	enami@NetBSD.org
 HOMEPAGE=	http://practical-scheme.net/gauche/
 COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
