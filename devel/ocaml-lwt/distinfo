@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/01/30 19:10:25 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/05/30 13:40:59 wiz Exp $
 
-SHA1 (lwt-1.1.0.tar.gz) = 838d99ce53accb4d0a393c4dd0f757d130a6bc2c
-RMD160 (lwt-1.1.0.tar.gz) = e7359a29af3c91ac006dfb3fc1150264aa27927b
-Size (lwt-1.1.0.tar.gz) = 32844 bytes
-SHA1 (patch-aa) = 69047b997d80e4d2177f62c581f19c4365326319
+SHA1 (lwt-2.3.2.tar.gz) = 5d1cb1a5180283708fb93d44e911acafdf6be850
+RMD160 (lwt-2.3.2.tar.gz) = 69243c2989493e90a043d7d541371e78c536fb44
+Size (lwt-2.3.2.tar.gz) = 474410 bytes
+SHA1 (patch-myocamlbuild.ml) = e61b63a9de55097efe6f557bb8346f4a155f9535
+SHA1 (patch-setup.ml) = 1fbb8e5cc4bdc2e6087c7300abe42b51a0eaba4d
