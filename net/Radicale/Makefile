@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/30 14:54:38 wiz Exp $
 #
 
 DISTNAME=	Radicale-0.6.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www time
 MASTER_SITES=	http://pypi.python.org/packages/source/R/Radicale/
 
@@ -15,10 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
