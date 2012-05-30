@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/30 14:10:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/30 15:28:59 wiz Exp $
 #
 
 DISTNAME=	libusb-1.0.9
@@ -19,5 +19,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libusb-1.0.pc.in
+
+CONFLICTS=	libusbx-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
