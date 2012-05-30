@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/01/24 22:24:34 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/05/30 20:33:26 cheusov Exp $
 
-SHA1 (dash-0.5.5.1.tar.gz) = fd73f0a34477eaf8bacc36beee75d94551954a61
-RMD160 (dash-0.5.5.1.tar.gz) = 8831123af32ab699314edbca18350e7ec778df77
-Size (dash-0.5.5.1.tar.gz) = 208094 bytes
+SHA1 (dash-0.5.7.tar.gz) = a3ebc16f2e2c7ae8adf64e5e62ae3dcb631717c6
+RMD160 (dash-0.5.7.tar.gz) = 1878942f8ab5723ccfb2eded34169606b4cec475
+Size (dash-0.5.7.tar.gz) = 223794 bytes
 SHA1 (patch-src_dash.1) = f4c82d255c0615def061ed49e3be9f170e7cd467
