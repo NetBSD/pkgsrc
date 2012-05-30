@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2011/04/05 05:55:29 uebayasi Exp $
+$NetBSD: distinfo,v 1.24 2012/05/30 06:42:34 wiz Exp $
 
 SHA1 (w3m-0.5.3.tar.gz) = 444b6c8cf7094ee95f8e9de96b37f814b9d83237
 RMD160 (w3m-0.5.3.tar.gz) = 6a0153bc53f7c107c700404262ce1b4d02e6dd91
 Size (w3m-0.5.3.tar.gz) = 2202328 bytes
 SHA1 (patch-aa) = 2de78a6db9bd483416895b393935ccadab879932
-SHA1 (patch-ab) = 2d60d7a2946f13a185591c0b927cf0f8b5ea351b
+SHA1 (patch-ab) = e1264e0b5e0dc2a1aaf7cc1e6067afd556792dd4
 SHA1 (patch-ac) = 37c6c78a208c50876641aa90164cc46106403260
 SHA1 (patch-ak) = ac0ee99d5ab49c431cfa496d0d2d509efd6b06fa
 SHA1 (patch-al) = 8b393004eed249449151d1f2b9252fcb1b55922d
