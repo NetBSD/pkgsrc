@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/30 14:10:23 wiz Exp $
+include/libusb-1.0/libusb.h
+lib/libusb-1.0.la
+lib/pkgconfig/libusb-1.0.pc
