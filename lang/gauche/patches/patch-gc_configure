@@ -1,0 +1,45 @@
+$NetBSD: patch-gc_configure,v 1.1 2012/05/30 02:50:11 enami Exp $
+
+Copied from devel/boehm-gc/patches/patch-ab.
+
+--- gc/configure.orig	2012-05-28 16:01:24.000000000 +0000
++++ gc/configure
+@@ -5228,7 +5228,7 @@ $as_echo "#define DARWIN_DONT_PARSE_STAC
+ 
+ fi
+ 
+-if test "$GCC" == yes; then
++if test "$GCC" = yes; then
+   # Disable aliasing optimization unless forced to.
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether gcc supports -fno-strict-aliasing" >&5
+ $as_echo_n "checking whether gcc supports -fno-strict-aliasing... " >&6; }
+@@ -5436,8 +5436,8 @@ esac
+ $as_echo "$enable_shared" >&6; }
+ 
+ # Compile with GC_DLL defined unless building static libraries.
+-if test "${enable_shared}" == yes; then
+-  if test "${enable_static}" == no; then
++if test "${enable_shared}" = yes; then
++  if test "${enable_static}" = no; then
+     $as_echo "#define GC_DLL 1" >>confdefs.h
+ 
+     # FIXME: Also pass -fvisibility=hidden option if GCC v4+ and not Win32.
+@@ -5491,6 +5491,9 @@ $as_echo "#define SOLARIS25_PROC_VDB_BUG
+  sparc*-*-openbsd*)
+     machdep="mach_dep.lo sparc_mach_dep.lo"
+     ;;
++ sparc64-*-netbsd*)
++    machdep="mach_dep.lo sparc_mach_dep.lo"
++    ;;
+  sparc-sun-solaris2.3)
+     machdep="mach_dep.lo sparc_mach_dep.lo"
+ 
+@@ -16422,7 +16425,7 @@ $as_echo "#define SMALL_CONFIG 1" >>conf
+ 
+ fi
+ 
+-if test "$enable_gc_debug" == "no"; then
++if test "$enable_gc_debug" = "no"; then
+ 
+ $as_echo "#define NO_DEBUGGING 1" >>confdefs.h
+ 
