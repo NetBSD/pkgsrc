@@ -1,4 +1,11 @@
-$NetBSD: patch-aa,v 1.11 2012/05/15 13:20:03 abs Exp $
+$NetBSD: patch-aa,v 1.12 2012/05/30 23:47:49 obache Exp $
+
+SNDDSP_GETODELAY isn't defined on NetBSD-4.x.
+ioctl() takes u_long argument on NetBSD.
+On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
+stat() system call has been versioned, use latest version when dlopen()ing.
+Try more typical device names.
+SOUND_PCM_* is not available on SunOS.
 
 --- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
 +++ src/utils/padsp.c
