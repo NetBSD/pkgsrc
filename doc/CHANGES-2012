@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1664 2012/05/30 13:41:09 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1665 2012/05/30 13:51:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2580,3 +2580,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added math/py-munkres version 1.0.5.4 [wiz 2012-05-30]
 	Updated mail/dovecot2 to 2.1.7 [ghen 2012-05-30]
 	Updated devel/ocaml-lwt to 2.3.2 [wiz 2012-05-30]
+	Added audio/py-last version 0.5.11 [wiz 2012-05-30]
