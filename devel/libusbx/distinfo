@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/30 15:28:29 wiz Exp $
+
+SHA1 (libusbx-1.0.11.tar.bz2) = 8ad4cbc47eb9380663ce46ee74e50c1f098beb47
+RMD160 (libusbx-1.0.11.tar.bz2) = 8f4ebe82366df9a386edfb36417915006f18e94e
+Size (libusbx-1.0.11.tar.bz2) = 398126 bytes

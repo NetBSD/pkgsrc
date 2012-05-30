@@ -1,0 +1,14 @@
+libusbx is a library that provides generic access to USB devices.
+As a library, it is meant to be used by developers, to facilitate
+the development of applications that communicate with USB hardware.
+
+It is portable: Using a single cross-platform API, it provides
+access to USB devices on Linux, OS X, Windows and OpenBSD.
+
+It is user-mode: No special privilege or elevation is required for
+the application to communicate with a device.
+
+It is version-agnostic: All versions of the USB protocol, from 1.0
+to 3.0 (latest), are supported.
+
+libusbx is a fork of libusb.
