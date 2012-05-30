@@ -1,1 +1,3 @@
 libusb provides a library for application access to USB devices.
+
+This package contains version 0 of the library.
