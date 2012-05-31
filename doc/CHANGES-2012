@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1688 2012/05/31 16:59:26 imil Exp $
+$NetBSD: CHANGES-2012,v 1.1689 2012/05/31 23:44:54 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2603,3 +2603,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/php53 to 5.3.13nb1 [taca 2012-05-31]
 	Added devel/p5-Test-DistManifest version 1.012 [imil 2012-05-31]
 	Added security/clusterssh version 4.01.01 [imil 2012-05-31]
+	Updated lang/focal to 0nb1 [dholland 2012-05-31]
