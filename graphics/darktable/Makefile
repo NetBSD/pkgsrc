@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/05/05 19:18:33 jakllsch Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/31 12:45:33 drochner Exp $
 
 DISTNAME=	darktable-1.0.3
 CATEGORIES=	graphics
@@ -41,7 +41,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
 .if ${MACHINE_ARCH} == "i386"
 # SSE alignment issues
 GCC_REQD=	4.2
-CFLAGS+=	-mstackrealign
+CFLAGS+=	-mstackrealign -msse2
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -84,4 +84,5 @@ pre-configure:
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
