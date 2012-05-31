@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.81 2011/08/18 09:22:02 taca Exp $
+$NetBSD: distinfo,v 1.82 2012/05/31 11:58:37 imil Exp $
 
-SHA1 (openssh-5.8p1-hpn13v11.diff.gz) = ea61ab71605ee867eebc1a92875a3ea5369e2d28
-RMD160 (openssh-5.8p1-hpn13v11.diff.gz) = 45fbb8e2db2f829f2749cd745ed6a0542adb1c45
-Size (openssh-5.8p1-hpn13v11.diff.gz) = 22993 bytes
 SHA1 (openssh-5.8p2.tar.gz) = 64798328d310e4f06c9f01228107520adbc8b3e5
 RMD160 (openssh-5.8p2.tar.gz) = f70cdb10983c389b1d6e52da522b9ff8256f1aff
 Size (openssh-5.8p2.tar.gz) = 1115475 bytes
+SHA1 (openssh-lpk-5.8p2-0.3.14.patch.gz) = 9eab90211363e6ea74e250d072cf14b69516bc0e
+RMD160 (openssh-lpk-5.8p2-0.3.14.patch.gz) = ca008e5c8c1f43be334f6e4e598d79d0153e94e5
+Size (openssh-lpk-5.8p2-0.3.14.patch.gz) = 18656 bytes
 SHA1 (patch-aa) = 59a39e53367983145e11150018a7f6f185df7bd5
 SHA1 (patch-ab) = 45ae7e91a00fc6d3fdb6cd6b91950d7aae58a55f
 SHA1 (patch-ac) = 7cd1129633649327f4f44cecc10b617c5cd34ec3
