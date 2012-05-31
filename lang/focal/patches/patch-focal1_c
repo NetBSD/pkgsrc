@@ -1,0 +1,24 @@
+$NetBSD: patch-focal1_c,v 1.1 2012/05/31 23:37:57 dholland Exp $
+
+- don't use implicit int
+
+--- focal1.c~	1995-04-17 13:03:45.000000000 +0000
++++ focal1.c
+@@ -146,7 +146,7 @@ term()
+ struct	sym *
+ lookup(id, type, subs)
+ char *id;
+-register type;
++register int type;
+ int	subs;
+ {
+ 	register struct sym *sp;
+@@ -167,7 +167,7 @@ int	subs;
+ struct sym *
+ getsym()
+ {
+-	register c;
++	register int c;
+ 	char id[NID];
+ 	register char *cp;
+ 	register struct sym *sp;
