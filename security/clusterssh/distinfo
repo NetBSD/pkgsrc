@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/31 16:54:10 imil Exp $
+
+SHA1 (App-ClusterSSH-4.01_01.tar.gz) = 2481f5ccd8f6d47025999313ac28440618303e6f
+RMD160 (App-ClusterSSH-4.01_01.tar.gz) = 17b05de9f25a5297b4c32f2139b93e932ec9a897
+Size (App-ClusterSSH-4.01_01.tar.gz) = 85995 bytes
