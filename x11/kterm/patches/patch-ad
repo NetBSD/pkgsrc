@@ -1,6 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2012/05/26 15:52:41 ryoon Exp $
+$NetBSD: patch-ad,v 1.5 2012/05/31 13:05:27 obache Exp $
 
---- main.c.orig	2012-05-26 01:55:25.000000000 +0000
+* Add missing initialization of VMIN and VTIME member of termio's c_cc array
+  as xterm(1) do.
+* Fix copy & paste segfault with ext06 patches.
+
+--- main.c.orig	2012-05-31 12:41:16.000000000 +0000
 +++ main.c
 @@ -1310,6 +1310,8 @@ char **argv;
  	d_tio.c_cc[VQUIT] = CQUIT;		/* '^\'	*/
@@ -11,16 +15,19 @@ $NetBSD: patch-ad,v 1.4 2012/05/26 15:52:41 ryoon Exp $
  #ifdef VSWTCH
  	d_tio.c_cc[VSWTCH] = CSWTCH;            /* usually '^Z' */
  #endif
-@@ -1617,10 +1619,12 @@ char **argv;
+@@ -1612,6 +1614,7 @@ char **argv;
+ 	    update_reversevideo();
+ 	}
+ #ifdef KTERM_KANJIMODE
++	make_unicode_map();
+ 	if (term->misc.k_m) {
+ 	    switch (term->misc.k_m[0]) {
  		case 'e': case 'E': case 'x': case 'X':
- 		    term->flags |= EUC_KANJI;
- 		    update_eucmode();
-+		    make_unicode_map();
- 		    break;
- 		case 's': case 'S': case 'm': case 'M':
- 		    term->flags |= SJIS_KANJI;
- 		    update_sjismode();
-+		    make_unicode_map();
- 		    break;
+@@ -1625,7 +1628,6 @@ char **argv;
  	        case 'u': case 'U':
  		    term->flags |= UTF8_KANJI;
+ 		    update_utf8mode();
+-		    make_unicode_map();
+ 		    break;
+ 		default:
+ 		    break;
