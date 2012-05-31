@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2012/05/29 14:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2012/05/31 10:44:30 fhajny Exp $
 
 DISTNAME=	gawk-4.0.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.xz
@@ -41,6 +42,12 @@ CONFIGURE_ARGS+=	--enable-portals
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
 CFLAGS+=	-Dvm_region=vm_region_64
 .endif
+
+INSTALLATION_DIRS+=	gnu/bin gnu/man/man1
+
+post-install:
+	${LN} -s ../../bin/gawk ${DESTDIR}${PREFIX}/gnu/bin/awk
+	${LN} -s ../../../man/man1/gawk.1 ${DESTDIR}${PREFIX}/gnu/man/man1/awk.1
 
 BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.10.36
 
