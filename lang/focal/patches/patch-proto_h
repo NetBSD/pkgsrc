@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2012/05/31 23:37:57 dholland Exp $
+$NetBSD: patch-proto_h,v 1.1 2012/05/31 23:42:01 dholland Exp $
 
 - avoid symbol name conflict with getline()
 
