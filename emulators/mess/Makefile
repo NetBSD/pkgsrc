@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/03/08 17:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/05/31 16:52:27 shattered Exp $
 #
 
 DISTNAME=		mess0145s
 PKGNAME=		${DISTNAME:S/0/-0./:S/s$//}
+PKGREVISION=		1
 MASTER_SITES=		http://www.mess.org/_media/downloads:
 
 COMMENT=		Multi Emulator Super System
@@ -20,7 +21,7 @@ do-install:
 # ignored: messtest
 # remaining tools are installed with mame
 	set -e; \
-	for prg in castool floptool imgtool mess; \
+	for prg in castool chdman floptool imgtool mess unidasm; \
 	do \
 		${INSTALL_PROGRAM} ${WRKSRC}/"$$prg" ${DESTDIR}${PREFIX}/bin; \
 	done
