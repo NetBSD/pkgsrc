@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/05/31 23:40:06 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2012/05/31 23:43:23 dholland Exp $
 #
 
 DISTNAME=		focal
 PKGNAME=		focal81-0
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://home.scarlet.be/~be042720/44/
 
