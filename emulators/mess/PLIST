@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2012/05/31 16:52:27 shattered Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/05/31 21:37:09 shattered Exp $
 bin/castool
-bin/chdman
 bin/floptool
 bin/imgtool
 bin/mess
-bin/unidasm
 share/doc/mess/credits.htm
 share/doc/mess/faq.htm
 share/doc/mess/howto.htm
