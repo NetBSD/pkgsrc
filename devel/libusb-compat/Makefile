@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/30 15:42:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/31 11:58:12 wiz Exp $
 
 DISTNAME=	libusb-compat-0.1.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/libusb-compat-0.1/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,5 +20,5 @@ PKGCONFIG_OVERRIDE+=	libusb.pc.in
 
 CONFLICTS=		libusb-[0-9]*
 
-.include "../../devel/libusbx/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
