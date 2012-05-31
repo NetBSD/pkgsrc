@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1672 2012/05/30 22:49:09 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.1673 2012/05/31 08:29:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2588,3 +2588,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/libusb-compat version 0.1.4 [wiz 2012-05-30]
 	Updated shells/dash to 0.5.7 [cheusov 2012-05-30]
 	Updated devel/lutok to 0.2 [jmmv 2012-05-30]
+	Updated security/p5-Digest-CRC to 0.18 [sno 2012-05-31]
