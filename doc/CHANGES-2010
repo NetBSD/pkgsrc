@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4393 2012/05/29 15:07:54 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4394 2012/05/31 08:23:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -3745,6 +3745,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated www/typo3 to 4.4.2 [taca 2010-08-10]
 	Updated www/geeklog to 1.7.0 [taca 2010-08-10]
 	Updated chat/irssi-icb to 0.14nb18 [sketch 2010-08-10]
+	Added math/py-gmpy version 1.12 [drochner 2010-08-10]
 	Updated inputmethod/ibus-skk to 0.0.10nb1 [obache 2010-08-11]
 	Updated math/newmat to 11 [asau 2010-08-11]
 	Updated math/muparser to 132 [asau 2010-08-11]
