@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2010/04/29 00:22:02 dholland Exp $
+$NetBSD: distinfo,v 1.5 2012/05/31 23:37:57 dholland Exp $
 
 SHA1 (focal.tar.gz) = 704d1411365085fb47ff25c1a77ae1f8e7fa601e
 RMD160 (focal.tar.gz) = 6b06cc08b2761035c315ae13b80d64a5e7a6004b
 Size (focal.tar.gz) = 12561 bytes
-SHA1 (patch-aa) = 632a2ff83f744865a154712ce31092e1435af6f2
-SHA1 (patch-ab) = b2795472241ef1d1cc554e7c13bf35dc4b39b330
-SHA1 (patch-ac) = 17d1d5e2895d45c76782dfa79b97f583efa5346d
+SHA1 (patch-aa) = 9e761e135665dad02b8cc700d80bf4eba69a0e7d
+SHA1 (patch-ab) = b4f0c53188dc67fa890da6093d5d5431df3b7efc
+SHA1 (patch-ac) = b56fe36efbcb15f6a5454943a40871683d0c1e0a
+SHA1 (patch-focal1_c) = 3957cde40ea86a218aea8411623d4bd033df9dbe
+SHA1 (patch-focal3_c) = 1624c53612707f71f628a74bf6bc186bfff0f96b

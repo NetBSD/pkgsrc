@@ -1,7 +1,20 @@
-$NetBSD: patch-ab,v 1.2 2010/04/29 00:22:02 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2012/05/31 23:37:57 dholland Exp $
+
+- use ctype.h functions correctly
+- avoid symbol name conflict with getline()
+- the name in struct dirent is null-terminated, don't try to bound it
 
 --- focal2.c.orig	1995-04-17 13:03:46.000000000 +0000
 +++ focal2.c
+@@ -49,7 +49,7 @@ void library()
+ 	c = getnb();
+ 	if (c!='c' && c!='s' && c!='l' && c!='d')
+ 		diag("Bad library command");
+-	while (isalpha(*ctp))
++	while (isalpha((unsigned char)*ctp))
+ 		++ctp;
+ 	while ((d = *ctp)==' ' || d=='\t')
+ 		++ctp;
 @@ -71,7 +71,7 @@ void library()
  		}
  		line = NULL;
@@ -16,7 +29,7 @@ $NetBSD: patch-ab,v 1.2 2010/04/29 00:22:02 dholland Exp $
  			    ||  strcmp(de->d_name, "..") == 0)
  				continue;
 -			printf("%.*s\n", de->d_reclen, de->d_name);
-+			printf("%.*s\n", de->d_namlen, de->d_name);
++			printf("%s\n", de->d_name);
  		}
  		closedir(dp);
  #else
