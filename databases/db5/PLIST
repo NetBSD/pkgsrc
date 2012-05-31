@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/18 13:46:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/05/31 09:37:20 adam Exp $
 bin/db5_archive
 bin/db5_checkpoint
 bin/db5_deadlock
@@ -3837,9 +3837,9 @@ share/doc/db5/csharp/scripts/SplitScreen.js
 share/doc/db5/csharp/scripts/highlight.js
 share/doc/db5/csharp/scripts/script_feedBack.js
 share/doc/db5/csharp/scripts/script_manifold.js
+share/doc/db5/csharp/styles/Presentation.css
 share/doc/db5/csharp/styles/Whidbey/presentation.css
 share/doc/db5/csharp/styles/highlight.css
-share/doc/db5/csharp/styles/presentation.css
 share/doc/db5/gsg/C/BerkeleyDB-Core-C-GSG.pdf
 share/doc/db5/gsg/C/CoreCursorUsage.html
 share/doc/db5/gsg/C/CoreDBAdmin.html
@@ -4257,6 +4257,7 @@ share/doc/db5/installation/changelog_5_0.html
 share/doc/db5/installation/changelog_5_1.html
 share/doc/db5/installation/changelog_5_2.html
 share/doc/db5/installation/changelog_5_3.html
+share/doc/db5/installation/cross_compile_unix.html
 share/doc/db5/installation/debug.html
 share/doc/db5/installation/debug_compile.html
 share/doc/db5/installation/debug_printlog.html
