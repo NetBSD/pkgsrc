@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1679 2012/05/31 09:10:38 sno Exp $
+$NetBSD: CHANGES-2012,v 1.1680 2012/05/31 09:17:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2595,3 +2595,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/p5-Net-OpenSSH to 0.57 [sno 2012-05-31]
 	Updated net/p5-Net-SNMP to 6.0.1 [sno 2012-05-31]
 	Updated sysutils/p5-File-Remove to 1.52 [sno 2012-05-31]
+	Updated sysutils/p5-Linux-Inotify2 to 1.2.2 [sno 2012-05-31]
