@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2011/08/14 14:14:46 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/05/31 09:07:07 sno Exp $
 #
 
-DISTNAME=	Net-SNMP-5.2.0
-PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+DISTNAME=	Net-SNMP-v6.0.1
+PKGNAME=	p5-${DISTNAME:S/v6/6/}
 SVR4_PKGNAME=	p5nsn
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -11,13 +10,16 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-SNMP/
 COMMENT=	Perl5 module for SNMP queries
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Crypt-DES>=2.03:../../security/p5-Crypt-DES
+DEPENDS+=	p5-Crypt-Rijndael>=1.02:../../security/p5-Crypt-Rijndael
 DEPENDS+=	p5-Digest-MD5>=2.11:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-SHA1>=1.02:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Digest-HMAC>=1.00:../../security/p5-Digest-HMAC
+DEPENDS+=	p5-Socket6>=0.23:../../net/p5-Socket6
 
 USE_LANGUAGES=		# none
 
