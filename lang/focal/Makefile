@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2012/05/31 23:40:06 dholland Exp $
 #
 
 DISTNAME=		focal
@@ -19,8 +19,8 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/focal ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${FOCALDOCDIR}
-	for i in focal.doc queens.foc sieve.foc; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${FOCALDOCDIR}; \
-	done
+.for i in focal.doc queens.foc sieve.foc
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${FOCALDOCDIR}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
