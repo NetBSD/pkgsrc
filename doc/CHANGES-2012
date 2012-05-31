@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1675 2012/05/31 08:46:23 sno Exp $
+$NetBSD: CHANGES-2012,v 1.1676 2012/05/31 08:50:12 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2591,3 +2591,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/p5-Digest-CRC to 0.18 [sno 2012-05-31]
 	Updated security/p5-Digest-MD5-File to 0.08 [sno 2012-05-31]
 	Updated security/p5-Net-SSLeay to 1.48 [sno 2012-05-31]
+	Updated security/p5-IO-Socket-SSL to 1.74 [sno 2012-05-31]
