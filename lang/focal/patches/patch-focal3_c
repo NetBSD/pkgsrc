@@ -1,0 +1,66 @@
+$NetBSD: patch-focal3_c,v 1.1 2012/05/31 23:37:57 dholland Exp $
+
+- don't use implicit int
+- use ctype.h functions correctly
+- fix accidental use of bitwise or in logical comparison
+- return characters 0..255 from getnb() to avoid incorrect calls to
+ctype.h functions elsewhere
+
+--- focal3.c~	1995-04-17 13:03:47.000000000 +0000
++++ focal3.c
+@@ -29,9 +29,9 @@ FILE *fp;
+  */
+ void getlno(lnop, c)
+ register struct lno *lnop;
+-register c;
++register int c;
+ {
+-	register gn, ln;
++	register int gn, ln;
+ 	static char badlno[] = "Bad line or group number";
+ 
+ 	if (c < 0)
+@@ -42,7 +42,7 @@ register c;
+ 		return;
+ 	}
+ 	if (c=='A' || c=='a') {
+-		while (isalpha(*ctp))
++		while (isalpha((unsigned char)*ctp))
+ 			++ctp;
+ 		lnop->ln_type = LN_ALL;
+ 		return;
+@@ -64,7 +64,7 @@ register c;
+ 		lnop->ln_type = LN_GRP;
+ 		return;
+ 	}
+-	if (ln<1 | ln>99)
++	if (ln<1 || ln>99)
+ 		diag(badlno);
+ 	lnop->ln_gno = gn;
+ 	lnop->ln_lno = ln;
+@@ -78,9 +78,9 @@ register c;
+  * Return the number read.
+  */
+ int getnum(c)
+-register c;
++register int c;
+ {
+-	register n;
++	register int n;
+ 
+ 	n = 0;
+ 	while (isdigit(c)) {
+@@ -152,11 +152,11 @@ char *s;
+  */
+ int getnb()
+ {
+-	register c;
++	register int c;
+ 
+ 	while ((c = *ctp++)==' ' || c=='\t')
+ 		;
+-	return (c);
++	return ((int)(unsigned char)c);
+ }
+ /*
+  * drand48
