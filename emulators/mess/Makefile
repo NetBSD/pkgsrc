@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/05/31 16:52:27 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2012/05/31 21:37:09 shattered Exp $
 #
 
 DISTNAME=		mess0145s
 PKGNAME=		${DISTNAME:S/0/-0./:S/s$//}
-PKGREVISION=		1
+PKGREVISION=		2
 MASTER_SITES=		http://www.mess.org/_media/downloads:
 
 COMMENT=		Multi Emulator Super System
