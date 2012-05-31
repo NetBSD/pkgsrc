@@ -1,4 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2010/04/29 00:22:02 dholland Exp $
+$NetBSD: patch-aa,v 1.3 2012/05/31 23:37:57 dholland Exp $
+
+- place a big comment within a comment (just within a false ifdef is
+not sufficient)
+- do not use gets()
+- use ctype.h functions correctly
+- avoid symbol conflict with getline()
+- don't use implicit int
 
 --- focal0.c.orig	1995-04-17 13:03:43.000000000 +0000
 +++ focal0.c
@@ -18,7 +25,59 @@ $NetBSD: patch-aa,v 1.2 2010/04/29 00:22:02 dholland Exp $
  
  #include	"focal.h"
  #ifdef	vms
-@@ -649,7 +651,7 @@ register int	c;
+@@ -66,6 +68,24 @@ int	intflag;			/* Interrupt flag */
+ 
+ struct	sym	*sym[N_HASH + 1];	/* Symbol table */
+ 
++static char *
++dogets(char *buf, size_t len)
++{
++	char *ret;
++
++	ret = fgets(buf, len, stdin);
++	if (ret != NULL) {
++		len = strlen(buf);
++		if (len > 0 && buf[len-1] == '\n') {
++			buf[--len] = '\0';
++		}
++		if (len > 0 && buf[len-1] == '\r') {
++			buf[--len] = '\0';
++		}
++	}
++	return ret;
++}
++
+ int main()
+ {
+ 	register int	c;
+@@ -86,7 +106,7 @@ int main()
+ 	catchcc();
+ 	for (;;) {
+ 		putchar('*');
+-		if (gets(cbuf) == NULL) {
++		if (dogets(cbuf, sizeof(cbuf)) == NULL) {
+ 			putchar('\n');
+ 			break;
+ 		}
+@@ -205,7 +225,7 @@ loop:
+ 			popdo();
+ 		goto loop;
+ 	}
+-	while (isalpha(*ctp))
++	while (isalpha((unsigned char)*ctp))
+ 		++ctp;
+ 	if (isupper(c))
+ 		c = tolower(c);
+@@ -427,7 +447,7 @@ void ask()
+ 		--ctp;
+ 		sp = getsym();
+ 		printf(": ");
+-		if (gets(abuf) == NULL) {
++		if (dogets(abuf, sizeof(abuf)) == NULL) {
+ 			putchar('\n');
+ 			diag("EOF in ask");
+ 		}
+@@ -649,11 +669,11 @@ register int	c;
  }
  
  
@@ -27,3 +86,26 @@ $NetBSD: patch-aa,v 1.2 2010/04/29 00:22:02 dholland Exp $
  register char *cp;
  register FILE *fp;
  {
+-	register c;
++	register int c;
+ 
+ 	while ((c=getc(fp))!=EOF && c!='\n')
+ 		*cp++ = c;
+@@ -667,7 +687,7 @@ register FILE *fp;
+ void type()
+ {
+ 	register char *fmt;
+-	register c;
++	register int c;
+ static	char fmtb[20];
+ static	int ifmtb = 1;
+ 	int x, y;
+@@ -724,7 +744,7 @@ FILE *fp;
+ {
+ 	struct lno lno;
+ 	register struct line *lp;
+-	register tgroup, lgroup;
++	register int tgroup, lgroup;
+ 
+ 	if (lnop == NULL) {
+ 		lno.ln_type = LN_ALL;
