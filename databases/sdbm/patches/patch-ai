@@ -1,15 +1,17 @@
-$NetBSD: patch-ai,v 1.2 2012/04/16 04:01:10 dholland Exp $
+$NetBSD: patch-ai,v 1.3 2012/05/31 22:58:56 dholland Exp $
 
 Use standard headers.
 
 --- dbd.c	2008/08/12 12:19:22	1.1
 +++ dbd.c	2008/08/12 12:19:53
-@@ -3,6 +3,8 @@
+@@ -3,6 +3,9 @@
   */
  
  #include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
- #include <sys/file.h>
++#include <unistd.h>
++#include <fcntl.h>
+-#include <sys/file.h>
  #include "sdbm.h"
  
