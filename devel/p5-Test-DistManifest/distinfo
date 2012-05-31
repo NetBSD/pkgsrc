@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/31 16:44:52 imil Exp $
+
+SHA1 (Test-DistManifest-1.012.tar.gz) = c3d10eed41566da2b8923b973cd5b7d147dbf5fb
+RMD160 (Test-DistManifest-1.012.tar.gz) = ca84d9b4aa201c2520fd2f8651e357c1847fb069
+Size (Test-DistManifest-1.012.tar.gz) = 17700 bytes
