@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/08/10 08:41:48 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/31 09:21:26 sno Exp $
 
-DISTNAME=	Contextual-Return-0.003001
-PKGNAME=	p5-${DISTNAME:S/003001/003.001/}
-PKGREVISION=	1
+DISTNAME=	Contextual-Return-0.004003
+PKGNAME=	p5-${DISTNAME:S/004003/004.003/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCONWAY/}
 
