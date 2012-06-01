@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2011/02/05 07:57:15 adam Exp $
+$NetBSD: patch-ac,v 1.8 2012/06/01 20:23:11 drochner Exp $
 
---- configure.orig	2011-01-09 21:01:51.000000000 +0000
+--- configure.orig	2012-02-19 01:43:51.000000000 +0000
 +++ configure
-@@ -7156,7 +7156,7 @@ fi
+@@ -7450,7 +7450,7 @@ fi
  
  ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
  
@@ -11,7 +11,16 @@ $NetBSD: patch-ac,v 1.7 2011/02/05 07:57:15 adam Exp $
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking GNU compiler version" >&5
  $as_echo_n "checking GNU compiler version... " >&6; }
  
-@@ -8147,11 +8147,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
+@@ -7578,7 +7578,7 @@ cat >>confdefs.h <<_ACEOF
+ #define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
+ _ACEOF
+ 
+-ALL_LINGUAS="am ar az be bg bn br ca ca@valencia cs da de dz el en_AU en_CA en_GB en_US@piglatin eo es_MX es et eu fa fi fr ga gl he hr hu hy id it ja km ko lt mk mn nb ne nl nn pa pl pt_BR pt ro ru rw sk sl sq sr@latin sr sv te_IN th tr uk vi zh_CN zh_TW"
++ALL_LINGUAS="am ar az be bg bn br ca ca@valencia cs da de dz el en_AU en_CA en_GB en_US@piglatin eo es_MX es et eu fa fi ga gl he hr hu hy id it ja km ko lt mk mn nb ne nl nn pa pl pt_BR pt ro ru rw sk sl sq sr@latin sr sv te_IN th tr uk vi zh_CN zh_TW"
+ 
+    for ac_header in locale.h
+ do :
+@@ -8445,11 +8445,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -25,11 +34,25 @@ $NetBSD: patch-ac,v 1.7 2011/02/05 07:57:15 adam Exp $
    ;
    return 0;
  }
-@@ -10785,7 +10785,7 @@ $as_echo "#define HAVE_CAIRO_PDF 1" >>co
+@@ -9620,11 +9620,11 @@ fi
+ 
+ 
+ if test "x$with_python" = "xyes"; then
+-    checkPYTHON_CFLAGS=`python -c "import distutils.sysconfig ; print '-I%s' % distutils.sysconfig.get_config_var('INCLUDEPY')" 2>/dev/null`
++    checkPYTHON_CFLAGS=`${PYTHON} -c "import distutils.sysconfig ; print '-I%s' % distutils.sysconfig.get_config_var('INCLUDEPY')" 2>/dev/null`
+     if test "$?" -gt "0"; then
+         with_python="no"
+     else
+-        checkPYTHON_LIBS=`python -c "import distutils.sysconfig ; print '%s/%s %s' % (distutils.sysconfig.get_config_var('LIBPL'),distutils.sysconfig.get_config_var('LDLIBRARY'),distutils.sysconfig.get_config_var('LIBS'))" 2>/dev/null`
++        checkPYTHON_LIBS=`${PYTHON} -c "import distutils.sysconfig ; print '%s/%s %s' % (distutils.sysconfig.get_config_var('LIBPL'),distutils.sysconfig.get_config_var('LDLIBRARY'),distutils.sysconfig.get_config_var('LIBS'))" 2>/dev/null`
+         if test "$?" -gt "0"; then
+             with_python="no"
+         else
+@@ -11095,7 +11095,7 @@ $as_echo "#define HAVE_CAIRO_PDF 1" >>co
  
  fi
  
--INKSCAPE_LIBS="$INKSCAPE_LIBS -lpng -lz -lX11 -lxml2 -ldl"
+-INKSCAPE_LIBS="$INKSCAPE_LIBS -lpng -lz -lxml2 -ldl"
 +INKSCAPE_LIBS="$INKSCAPE_LIBS -lpng -lz -lxml2"
  if test "x$openmp_ok" = "xyes"; then
  	INKSCAPE_LIBS="$INKSCAPE_LIBS -lgomp"

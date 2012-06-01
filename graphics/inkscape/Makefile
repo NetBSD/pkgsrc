@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2012/05/16 18:27:12 marino Exp $
+# $NetBSD: Makefile,v 1.70 2012/06/01 20:23:10 drochner Exp $
 
-DISTNAME=	inkscape-0.48.2
-PKGREVISION=	6
+DISTNAME=	inkscape-0.48.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +25,7 @@ USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		MSGFMT=${TOOLS_DIR}/bin/msgfmt
 CONFIGURE_ENV+=		GMSGFMT=${TOOLS_DIR}/bin/msgfmt
+CONFIGURE_ARGS+=	--with-python
 
 REPLACE_PERL+=		share/extensions/*.p[lm]
 REPLACE_PERL+=		share/extensions/svg_dropshadow
@@ -36,9 +36,6 @@ BUILDLINK_API_DEPENDS.poppler+=		poppler>=0.5.9
 UNLIMIT_RESOURCES=	datasize
 
 LDFLAGS.DragonFly=	-lX11
-
-# This is a single SUBST, but it's hefty enough I've put it in its own file.
-.include "glib2-fixes.mk"
 
 SUBST_CLASSES+= pypath
 SUBST_STAGE.pypath= pre-configure
