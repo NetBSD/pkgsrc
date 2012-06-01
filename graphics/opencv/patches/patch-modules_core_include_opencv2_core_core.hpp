@@ -1,6 +1,7 @@
-$NetBSD: patch-modules_core_include_opencv2_core_core.hpp,v 1.1 2012/04/03 18:57:22 adam Exp $
+$NetBSD: patch-modules_core_include_opencv2_core_core.hpp,v 1.2 2012/06/01 21:24:57 wiz Exp $
 
 Fix building on Mac OS X, where MIN and MAX got redefined by Obj-C headers.
+http://code.opencv.org/issues/2011
 
 --- modules/core/include/opencv2/core/core.hpp.orig	2012-04-03 17:44:46.000000000 +0000
 +++ modules/core/include/opencv2/core/core.hpp
