@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/11/14 14:24:14 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/06/01 20:19:16 drochner Exp $
 #
 
-DISTNAME=		libXfont-1.4.4
+DISTNAME=		libXfont-1.4.5
 CATEGORIES=		x11 devel fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
