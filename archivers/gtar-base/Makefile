@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2012/05/29 22:52:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.75 2012/06/01 16:43:14 cheusov Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
@@ -23,7 +23,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 gnu/bin gnu/libexec
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 gnu/bin gnu/libexec gnu/man/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,13 +48,16 @@ PLIST.rmt=		yes
 CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 .endif
 
+SYMLINKS		= bin/gtar gnu/bin/tar \
+			man/man1/gtar.1 gnu/man/man1/tar.1 \
+			libexec/grmt gnu/libexec/rmt
+
 post-install:
 	${INSTALL_MAN} ${FILESDIR}/gtar.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gtar.1
-	${LN} -sf ../../bin/gtar ${DESTDIR}${PREFIX}/gnu/bin/tar
-	if ${TEST} -n ${PLIST.rmt:Q}; then \
-		${LN} -sf ../../libexec/grmt ${DESTDIR}${PREFIX}/gnu/libexec/rmt; \
-	fi
+.for o n in ${SYMLINKS}
+	${LN} -sf ${PREFIX}/${o} ${DESTDIR}${PREFIX}/${n}
+.endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
