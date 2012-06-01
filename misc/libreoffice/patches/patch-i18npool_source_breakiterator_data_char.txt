@@ -1,0 +1,15 @@
+$NetBSD: patch-i18npool_source_breakiterator_data_char.txt,v 1.1.1.1 2012/06/01 06:12:14 wiz Exp $
+
+Fix an issue with icu > 4.8
+https://bugs.gentoo.org/show_bug.cgi?id=410307
+
+--- i18npool/source/breakiterator/data/char.txt.orig	2012-04-24 14:08:03.000000000 +0000
++++ i18npool/source/breakiterator/data/char.txt
+@@ -16,7 +16,6 @@
+ $CR          = [\p{Grapheme_Cluster_Break = CR}];
+ $LF          = [\p{Grapheme_Cluster_Break = LF}];
+ $Control     = [\p{Grapheme_Cluster_Break = Control}];
+-$Prepend     = [\p{Grapheme_Cluster_Break = Prepend}];
+ $Extend      = [\p{Grapheme_Cluster_Break = Extend}];
+ $SpacingMark = [\p{Grapheme_Cluster_Break = SpacingMark}];
+ # True Indic wants to move by syllables. Break up SpacingMark. This based on Unicode 6.0 data
