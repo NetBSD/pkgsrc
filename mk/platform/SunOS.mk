@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.43 2012/03/19 12:34:18 joerg Exp $
+# $NetBSD: SunOS.mk,v 1.44 2012/06/01 09:47:49 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -26,7 +26,11 @@ ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
+.if exists(/usr/openwin/include/X11/X.h)
 X11_TYPE?=		native
+.else
+X11_TYPE?=		modular
+.endif
 .if ${X11_TYPE} == native
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 .else
