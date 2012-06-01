@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/23 21:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/01 15:39:26 wiz Exp $
 #
 
 DISTNAME=	notion-3-2012042300-src
@@ -63,5 +63,7 @@ post-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
