@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2012/06/01 20:53:56 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2012/06/01 21:24:57 wiz Exp $
 
 Handle DragonFly like NetBSD and FreeBSD.
+http://code.opencv.org/issues/2010
 
 --- CMakeLists.txt.orig	2012-05-31 14:06:56.000000000 +0000
 +++ CMakeLists.txt
