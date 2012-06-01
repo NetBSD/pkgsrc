@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1690 2012/06/01 01:18:42 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1691 2012/06/01 06:12:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2607,3 +2607,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/cone to 0.84nb2 [dholland 2012-06-01]
 	Updated audio/amarok to 2.5.0nb2 [dholland 2012-06-01]
 	Updated emulators/mess to 0.145nb3 [dholland 2012-06-01]
+	Added misc/libreoffice version 3.5.4.2 [wiz 2012-06-01]
