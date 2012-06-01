@@ -1,9 +1,18 @@
-@comment $NetBSD: PLIST,v 1.19 2011/02/05 07:57:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/06/01 20:23:10 drochner Exp $
 bin/inkscape
 bin/inkview
-man/fr/man1/inkscape.1
+man/el/man1/inkscape.el.1
+man/fr/man1/inkscape.fr.1
+man/ja/man1/inkscape.ja.1
 man/man1/inkscape.1
+man/man1/inkscape.el.1
+man/man1/inkscape.fr.1
+man/man1/inkscape.ja.1
+man/man1/inkscape.sk.1
+man/man1/inkscape.zh_TW.1
 man/man1/inkview.1
+man/sk/man1/inkscape.ja.1
+man/zh_TW/man1/inkscape.zh_TW.1
 share/applications/inkscape.desktop
 share/icons/hicolor/16x16/apps/inkscape.png
 share/icons/hicolor/22x22/apps/inkscape.png
@@ -419,6 +428,7 @@ share/inkscape/extensions/txt2svg.pl
 share/inkscape/extensions/uniconv-ext.py
 share/inkscape/extensions/uniconv_output.py
 share/inkscape/extensions/voronoi.py
+share/inkscape/extensions/voronoi2svg.py
 share/inkscape/extensions/web-set-att.inx
 share/inkscape/extensions/web-set-att.py
 share/inkscape/extensions/web-transmit-att.inx
@@ -796,7 +806,6 @@ share/locale/et/LC_MESSAGES/inkscape.mo
 share/locale/eu/LC_MESSAGES/inkscape.mo
 share/locale/fa/LC_MESSAGES/inkscape.mo
 share/locale/fi/LC_MESSAGES/inkscape.mo
-share/locale/fr/LC_MESSAGES/inkscape.mo
 share/locale/ga/LC_MESSAGES/inkscape.mo
 share/locale/gl/LC_MESSAGES/inkscape.mo
 share/locale/he/LC_MESSAGES/inkscape.mo
