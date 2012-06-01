@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/05/29 21:19:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.34 2012/06/01 16:32:41 cheusov Exp $
 
 DISTNAME=	patch-2.5.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 # We keep an uncompressed tar archive of the sources on
 # ${MASTER_SITE_LOCAL} so that we won't need gzcat to extract the
@@ -20,7 +20,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--program-prefix=g
 INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin \
 			man1dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-INSTALLATION_DIRS=	gnu/bin
+INSTALLATION_DIRS=	gnu/bin gnu/man/man1
 
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
@@ -40,7 +40,11 @@ do-patch:
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
 
+SYMLINKS	= bin/gpatch gnu/bin/patch \
+		man/man1/gpatch.1 gnu/man/man1/patch.1
 post-install:
-	${LN} -sf ../../bin/gpatch ${DESTDIR}${PREFIX}/gnu/bin/patch
+.for o n in ${SYMLINKS}
+	${LN} -sf ${PREFIX}/${o} ${DESTDIR}${PREFIX}/${n}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
