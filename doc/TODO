@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11132 2012/05/31 15:59:15 taca Exp $
+$NetBSD: TODO,v 1.11133 2012/06/01 12:30:05 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1349,7 +1349,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-1.1.1
 	o webalizer-2.23.05
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.580 [security]
