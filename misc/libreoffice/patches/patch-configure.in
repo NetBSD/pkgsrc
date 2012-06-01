@@ -1,0 +1,57 @@
+$NetBSD: patch-configure.in,v 1.1.1.1 2012/06/01 06:12:14 wiz Exp $
+
+Fix a few configure and portability issues
+Force the installation into a single directory in /usr/pkg
+
+--- configure.in.orig	2012-03-27 16:22:01.000000000 +0000
++++ configure.in
+@@ -5717,7 +5717,9 @@ if test "$with_system_mdds" = "yes"; the
+         [AC_MSG_ERROR(mdds/mixed_type_matrix.hpp not found. install mdds >= 0.4.0)], [])
+     CPPFLAGS="$save_CPPFLAGS"
+     save_CXXFLAGS="$CXXFLAGS"
++    save_LIBS="$LIBS"
+     CXXFLAGS="$CXXFLAGS $MDDS_CPPFLAGS"
++    LIBS=""
+     AC_MSG_CHECKING([for correct signature of ::mdds::flat_segment_tree])
+     AC_RUN_IFELSE([AC_LANG_SOURCE([[#include <mdds/flat_segment_tree.hpp>
+ 
+@@ -5735,6 +5737,7 @@ if test "$with_system_mdds" = "yes"; the
+     else
+         AC_MSG_ERROR([no, install mdds >= 0.5.0])
+     fi
++    LIBS="$save_LIBS"
+     CXXFLAGS=$save_CXXFLAGS
+     AC_LANG_POP([C++])
+ else
+@@ -6196,11 +6199,11 @@ if test "$with_system_icu" = "yes"; then
+         if test -z "$SYSTEM_GENBRK"; then
+             AC_MSG_ERROR([\'genbrk\' not found in \$PATH, install the icu development tool \'genbrk\'])
+         fi
+-        AC_PATH_PROG(SYSTEM_GENCCODE, genccode, [], [$PATH:/usr/sbin:/sbin:/usr/local/sbin])
++        AC_PATH_PROG(SYSTEM_GENCCODE, genccode, [], [$PATH:/usr/sbin:/sbin:@LOCALBASE@/sbin])
+         if test -z "$SYSTEM_GENCCODE"; then
+             AC_MSG_ERROR([\'genccode\' not found in \$PATH, install the icu development tool \'genccode\'])
+         fi
+-        AC_PATH_PROG(SYSTEM_GENCMN, gencmn, [], [$PATH:/usr/sbin:/sbin:/usr/local/sbin])
++        AC_PATH_PROG(SYSTEM_GENCMN, gencmn, [], [$PATH:/usr/sbin:/sbin:@LOCALBASE@/sbin])
+         if test -z "$SYSTEM_GENCMN"; then
+             AC_MSG_ERROR([\'gencmn\' not found in \$PATH, install the icu development tool \'gencmn\'])
+         fi
+@@ -8910,7 +8913,7 @@ dnl        this should be unified into u
+ 
+ AC_MSG_CHECKING([whether to use the system libjpeg])
+ 
+-if test "$SYSTEM_JPEG" == "YES"; then
++if test "$SYSTEM_JPEG" = "YES"; then
+     SYSTEM_LIBJPEG=YES
+     AC_MSG_RESULT([yes])
+ else
+@@ -9489,7 +9492,7 @@ AC_MSG_RESULT([$DOCDIR])
+ AC_SUBST(DOCDIR)
+ 
+ AC_MSG_CHECKING([for install dir])
+-INSTALLDIR="$LIBDIR/$INSTALLDIRNAME"
++INSTALLDIR="$PREFIXDIR"
+ AC_MSG_RESULT([$INSTALLDIR])
+ AC_SUBST(INSTALLDIR)
+ 
