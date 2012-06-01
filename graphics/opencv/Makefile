@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/06/01 20:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/06/01 20:54:52 wiz Exp $
 
 DISTNAME=	OpenCV-2.4.1
 PKGNAME=	${DISTNAME:S/OpenCV/opencv/:S/a$//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	anthony.mallet@laas.fr
-HOMEPAGE=	http://opencv.willowgarage.com/
+HOMEPAGE=	http://code.opencv.org/projects/OpenCV/wiki/WikiStart
 COMMENT=	Library for computer vision problems
 LICENSE=	modified-bsd
 
