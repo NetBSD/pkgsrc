@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2012/05/29 22:10:24 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/01 19:47:46 cheusov Exp $
 bin/gegrep
 bin/gfgrep
 bin/ggrep
 gnu/bin/egrep
 gnu/bin/fgrep
 gnu/bin/grep
+gnu/man/man1/egrep.1
+gnu/man/man1/fgrep.1
+gnu/man/man1/grep.1
 info/grep.info
 man/man1/gegrep.1
 man/man1/gfgrep.1
