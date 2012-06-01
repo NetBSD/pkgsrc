@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1701 2012/06/01 20:55:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1702 2012/06/01 22:00:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2621,3 +2621,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/inkscape to 0.48.3.1 [drochner 2012-06-01]
 	Updated databases/gramps3 to 3.3.2 [drochner 2012-06-01]
 	Updated graphics/opencv to 2.4.1 [wiz 2012-06-01]
+	Updated graphics/gimp-liquid-rescale to 0.7.1 [wiz 2012-06-01]
