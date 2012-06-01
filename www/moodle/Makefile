@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9.2.1 2012/04/26 10:06:52 tron Exp $
+# $NetBSD: Makefile,v 1.9.2.2 2012/06/01 12:12:26 tron Exp $
 
-DISTNAME=	moodle-2.1.5
+DISTNAME=	moodle-2.1.6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moodle/}
 EXTRACT_SUFX=	.tgz
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://www.moodle.org/
 COMMENT=	Course management system based on social constructionism
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
@@ -43,15 +43,16 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 CONF_FILES=		${PREFIX}/${EGDIR}/moodle.conf \
 			${PKG_SYSCONFDIR}/moodle.conf
+OWN_DIRS_PERMS+=	${MOODLEDATADIR} ${APACHE_USER} ${APACHE_GROUP} 0750
 
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
-SUBST_CLASSES+=			bash
-SUBST_MESSAGE.bash=		Replacing /bin/bash with ${SH}
-SUBST_STAGE.bash=		post-patch
-SUBST_FILES.bash=		lib/editor/tinymce/extra/tools/download_langs.sh
-SUBST_SED.bash=			-e "s,/bin/bash,${SH},g"
+SUBST_CLASSES+=		bash
+SUBST_MESSAGE.bash=	Replacing /bin/bash with ${SH}
+SUBST_STAGE.bash=	post-patch
+SUBST_FILES.bash=	lib/editor/tinymce/extra/tools/download_langs.sh
+SUBST_SED.bash=		-e "s,/bin/bash,${SH},g"
 
 SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
@@ -69,9 +70,16 @@ SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli
 SUBST_FILES.php+=	admin/mailout-debugger.php admin/process_email.php
 SUBST_FILES.php+=	auth/ldap/cli/sync_users.php auth/cas/cli/sync_users.php auth/db/cli/sync_users.php
 SUBST_FILES.php+=	enrol/ldap/cli/sync.php enrol/database/cli/sync.php enrol/category/cli/sync.php
-SUBST_FILES.php+=	lib/pear/PHP/runsniffer lib/spikephpcoverage/src/cli/instrument.php
+SUBST_FILES.php+=	lib/pear/PHP/runsniffer
+SUBST_FILES.php+=	local/qeupgradehelper/cli/convert.php
 SUBST_FILES.php+=	mod/chat/chatd.php
 SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
+
+SUBST_CLASSES+=		php2
+SUBST_MESSAGE.php2=	Fixing the path of php.
+SUBST_STAGE.php2=	post-patch
+SUBST_FILES.php2+=	lib/spikephpcoverage/src/cli/instrument.php
+SUBST_SED.php2=		-e "s,/bin/php,${PREFIX}/bin/php,g"
 
 SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
