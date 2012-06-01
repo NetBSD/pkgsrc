@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2012/04/28 14:17:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2012/06/01 20:21:03 drochner Exp $
 bin/midori
 include/midori-0.4/extensions/external-download-manager.h
 include/midori-0.4/extensions/history-list.h
@@ -50,6 +50,7 @@ share/icons/hicolor/scalable/categories/extension.svg
 share/icons/hicolor/scalable/status/news-feed.svg
 share/locale/ar/LC_MESSAGES/midori.mo
 share/locale/ast/LC_MESSAGES/midori.mo
+share/locale/be/LC_MESSAGES/midori.mo
 share/locale/ca/LC_MESSAGES/midori.mo
 share/locale/cs/LC_MESSAGES/midori.mo
 share/locale/da/LC_MESSAGES/midori.mo
@@ -59,6 +60,7 @@ share/locale/en_GB/LC_MESSAGES/midori.mo
 share/locale/eo/LC_MESSAGES/midori.mo
 share/locale/es/LC_MESSAGES/midori.mo
 share/locale/et/LC_MESSAGES/midori.mo
+share/locale/eu/LC_MESSAGES/midori.mo
 share/locale/fi/LC_MESSAGES/midori.mo
 share/locale/fr/LC_MESSAGES/midori.mo
 share/locale/gl/LC_MESSAGES/midori.mo
@@ -93,7 +95,7 @@ share/midori/res/autosuggestcontrol.js
 share/midori/res/close.png
 share/midori/res/error.html
 share/midori/res/logo-shade.png
-share/midori/res/speeddial-head-0.4.5.html
+share/midori/res/speeddial-head-0.4.6.html
 share/vala/vapi/external-download-manager.deps
 share/vala/vapi/external-download-manager.vapi
 share/vala/vapi/history-list.deps
