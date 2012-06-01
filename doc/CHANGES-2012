@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1699 2012/06/01 20:00:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1700 2012/06/01 20:29:16 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2616,3 +2616,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated geography/geos to 3.3.4 [gdt 2012-06-01]
 	Updated emulators/mame to 0.146 [wiz 2012-06-01]
 	Updated emulators/mess to 0.146 [wiz 2012-06-01]
+	Updated x11/libXfont to 1.4.5 [drochner 2012-06-01]
+	Updated www/midori to 0.4.6 [drochner 2012-06-01]
+	Updated graphics/inkscape to 0.48.3.1 [drochner 2012-06-01]
+	Updated databases/gramps3 to 3.3.2 [drochner 2012-06-01]
