@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2012/04/15 03:49:00 markd Exp $
+# $NetBSD: Makefile,v 1.23 2012/06/01 20:53:56 wiz Exp $
 
-DISTNAME=	OpenCV-2.3.1a
+DISTNAME=	OpenCV-2.4.1
 PKGNAME=	${DISTNAME:S/OpenCV/opencv/:S/a$//}
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
@@ -27,12 +27,10 @@ REPLACE_PYTHON+=	samples/python/*.py
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
 
+# includes configure output and paths to gmake etc.
+CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.so*
+
 .include "options.mk"
-
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/opencv2/core/*.orig
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
