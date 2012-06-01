@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2007/02/15 14:34:20 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2012/06/01 20:23:11 drochner Exp $
 
---- src/inkview.cpp.orig	2007-02-13 14:01:14.000000000 +0000
+--- src/inkview.cpp.orig	2012-02-14 03:22:17.000000000 +0000
 +++ src/inkview.cpp
 @@ -31,13 +31,10 @@
  # include "config.h"
@@ -15,5 +15,5 @@ $NetBSD: patch-aa,v 1.10 2007/02/15 14:34:20 joerg Exp $
  #include <locale.h>
 +#include <unistd.h>
  
- #include <glib/gmem.h>
+ #include <glib.h>
  #include <libnr/nr-macros.h>
