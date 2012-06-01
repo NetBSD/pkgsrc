@@ -1,0 +1,31 @@
+$NetBSD: patch-i18npool_source_breakiterator_data_char_in.txt,v 1.1.1.1 2012/06/01 06:12:14 wiz Exp $
+
+Fix an issue with ICU > 4.8
+https://bugs.gentoo.org/show_bug.cgi?id=410307
+
+--- i18npool/source/breakiterator/data/char_in.txt.orig	2012-04-24 14:08:03.000000000 +0000
++++ i18npool/source/breakiterator/data/char_in.txt
+@@ -15,7 +15,6 @@
+ $CR          = [\p{Grapheme_Cluster_Break = CR}];
+ $LF          = [\p{Grapheme_Cluster_Break = LF}];
+ $Control     = [\p{Grapheme_Cluster_Break = Control}];
+-$Prepend     = [\p{Grapheme_Cluster_Break = Prepend}];
+ $Extend      = [\p{Grapheme_Cluster_Break = Extend}];
+ $SpacingMark = [\p{Grapheme_Cluster_Break = SpacingMark}];
+ $BengaliLetter = [\u0985-\u09B9 \u09CE \u09DC-\u09E1 \u09F0-\u09F1];
+@@ -72,7 +71,6 @@ $L ($L | $V | $LV | $LVT);
+ [^$Control $CR $LF] $Extend;
+ 
+ [^$Control $CR $LF] $SpacingMark;
+-$Prepend [^$Control $CR $LF];
+ 
+ 
+ ## -------------------------------------------------
+@@ -94,7 +92,6 @@ $T ($LVT | $T);
+ 
+ $Extend      [^$Control $CR $LF];
+ $SpacingMark [^$Control $CR $LF];
+-[^$Control $CR $LF] $Prepend;
+ 
+ 
+ ## -------------------------------------------------

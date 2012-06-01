@@ -1,0 +1,15 @@
+$NetBSD: patch-set_soenv.in,v 1.1.1.1 2012/06/01 06:12:14 wiz Exp $
+
+Force the use of LD_LIBRARY_PATH to work around runpath issues
+when shared libraries are moved around by the build process
+
+--- set_soenv.in.orig	2011-08-23 13:05:22.000000000 +0000
++++ set_soenv.in
+@@ -1493,6 +1493,7 @@ ToFile( "ASM_PATH",          $ASM_PATH,
+ ToFile( "ML_EXE",            "@ML_EXE@",         "e" );
+ ToFile( "FRAMEWORKSHOME",    $FRAMEWORKSHOME,    "e" );
+ ToFile( "Empty",             $empty,             "n" );
++ToFile( "LD_LIBRARY_PATH",   "@LIBPATH@",        "e" );
+ 
+ #
+ # Writing the platform independent constant values to file.
