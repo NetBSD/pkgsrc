@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11133 2012/06/01 12:30:05 gdt Exp $
+$NetBSD: TODO,v 1.11134 2012/06/01 15:31:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,6 +401,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aspell-faroese-0.4.0
 	o aspell-norwegian-2.0.10
 	o astyle-1.15.3
+	o asymptote-2.16
 	o at-spi-2.4.0
 	o aterm-1.0.1
 	o atk-2.4.0
@@ -448,7 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cairo-gobject-1.12.2
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.53
+	o calibre-0.8.54
 	o calligra-2.4.2 [koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
@@ -914,6 +915,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
 	o libmemcached-1.0.8
+	o libmicrohttpd-0.9.20
 	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
@@ -929,6 +931,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh-0.5.2 [www.libssh.org]
 	o libssh2-1.4.2
 	o libstree-0.4.3pre2 [pkg/43748]
+	o libtasn1-2.13
 	o libtcl-nothread-8.5.1
 	o libthrift-0.8.0
 	o libtool-2.4.2
@@ -942,7 +945,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxml2-2.8.0
 	o licq-1.3.8
 	o liferea-1.8.5
-	o lighttpd-1.4.30
+	o lighttpd-1.4.31
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o listres-1.0.3
@@ -1125,7 +1128,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pulseaudio-2.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9534
+	o puzzles-9544
 	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
