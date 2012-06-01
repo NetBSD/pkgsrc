@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1696 2012/06/01 14:29:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1697 2012/06/01 14:33:14 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2613,3 +2613,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-sequel to 3.35.0 [taca 2012-06-01]
 	Updated devel/ZenTest to 4.8.0 [taca 2012-06-01]
 	Updated devel/hoe to 3.0.6 [taca 2012-06-01]
+	Updated geography/geos to 3.3.4 [gdt 2012-06-01]
