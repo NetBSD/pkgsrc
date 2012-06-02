@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/17 16:27:40 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/02 01:05:21 taca Exp $
 
-DISTNAME=	sprockets-2.0.3
-PKGREVISION=	1
+DISTNAME=	sprockets-2.0.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
