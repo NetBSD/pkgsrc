@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1745 2012/06/02 13:52:23 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1746 2012/06/02 14:21:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2717,3 +2717,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/mediawiki to 1.19.0 [obache 2012-06-02]
 	Updated math/py-networkx to 1.6 [obache 2012-06-02]
 	Updated math/py-gmpy to 1.15 [obache 2012-06-02]
+	Updated net/p5-Net-Server to 2.002 [obache 2012-06-02]
