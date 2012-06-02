@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2012/03/09 12:34:18 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2012/06/02 07:10:53 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.8.4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gnumeric/
 COMMENT=		Spreadsheet program from the GNOME project (development version)
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -22,6 +23,8 @@ CONFIGURE_ARGS+=	--without-gnome
 PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
+
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
