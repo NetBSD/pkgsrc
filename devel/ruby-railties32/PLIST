@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 06:51:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/02 01:42:13 taca Exp $
 bin/rails
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -426,6 +426,7 @@ ${GEM_LIBDIR}/lib/rails/generators/rails/plugin_new/templates/test/integration/n
 ${GEM_LIBDIR}/lib/rails/generators/rails/plugin_new/templates/test/test_helper.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/resource/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/resource/resource_generator.rb
+${GEM_LIBDIR}/lib/rails/generators/rails/resource_route/resource_route_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/scaffold/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/scaffold/scaffold_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/scaffold/templates/scaffold.css
