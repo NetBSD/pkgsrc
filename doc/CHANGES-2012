@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1733 2012/06/02 12:00:27 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.1734 2012/06/02 12:00:47 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/findutils to 4.2.33nb3 [cheusov 2012-06-02]
 	Updated time/gnutime to 1.7nb1 [cheusov 2012-06-02]
 	Updated editors/ed to 1.1nb2 [cheusov 2012-06-02]
+	Updated devel/m4 to 1.4.16nb3 [cheusov 2012-06-02]
