@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2012/05/29 21:01:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.28 2012/06/02 08:18:35 cheusov Exp $
 #
 
 DISTNAME=		diffutils-3.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
 
@@ -25,16 +25,13 @@ CONFIGURE_ENV+=	gt_cv_func_gnugettext1_libintl=yes
 CONFIGURE_ENV+=	ac_cv_sys_xsi_stack_overflow_heuristic=no
 .endif
 
-PROGS=	cmp diff diff3 sdiff
-
-INSTALLATION_DIRS+=	gnu/bin
+AUTO_MKDIRS=		yes
 
 post-install:
-	set -e; \
-	cd ${DESTDIR}${PREFIX}/gnu/bin; \
-	for p in ${PROGS}; do \
-	   ln -f -s "../../bin/g$${p}" "$${p}"; \
-	done
+.for f in cmp diff diff3 sdiff
+	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1
+.endfor
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
