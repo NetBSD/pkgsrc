@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2012/01/08 12:35:45 ryoon Exp $
+$NetBSD: patch-aa,v 1.9 2012/06/02 04:13:04 obache Exp $
 
 --- Makefile.orig	2012-01-04 08:47:11.000000000 +0000
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.8 2012/01/08 12:35:45 ryoon Exp $
  LOCALESDIR = $(SHAREDIR)/locales
  DOCDIR = $(PREFIX)/share/doc/fotoxx
 -MANDIR = $(PREFIX)/share/man/man1
-+MANDIR = $(PREFIX)/man/man1
++MANDIR = $(PREFIX)/${PKGMANDIR}/man1
  MENUFILE = $(PREFIX)/share/applications/kornelix-fotoxx.desktop
  
  CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-2.0`
