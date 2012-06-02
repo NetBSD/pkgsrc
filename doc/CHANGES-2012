@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1711 2012/06/02 01:07:08 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1712 2012/06/02 01:15:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2646,3 +2646,12 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/ruby-facter to 1.6.9 [taca 2012-06-02]
 	Updated misc/ruby-sprockets20 to 2.0.4 [taca 2012-06-02]
 	Updated misc/ruby-sprockets21 to 2.1.3 [taca 2012-06-02]
+	Updated textproc/ruby-json-pure to 1.7.3 [taca 2012-06-02]
+	Updated textproc/ruby-json to 1.7.3 [taca 2012-06-02]
+	Updated textproc/ruby-fastercsv to 1.5.5 [taca 2012-06-02]
+	Updated textproc/ruby-haml to 3.1.6 [taca 2012-06-02]
+	Updated textproc/ruby-kramdown to 0.13.6 [taca 2012-06-02]
+	Updated textproc/ruby-multi_json to 1.3.6 [taca 2012-06-02]
+	Updated textproc/ruby-nokogiri to 1.5.3 [taca 2012-06-02]
+	Updated textproc/ruby-rdtool to 0.6.34 [taca 2012-06-02]
+	Updated textproc/ruby-stringex to 1.4.0 [taca 2012-06-02]
