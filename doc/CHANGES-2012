@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1739 2012/06/02 12:02:19 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.1740 2012/06/02 12:02:35 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2711,3 +2711,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/diffutils to 3.2nb2 [cheusov 2012-06-02]
 	Updated archivers/gsharutils to 4.11.1nb2 [cheusov 2012-06-02]
 	Updated archivers/gcpio to 2.6nb10 [cheusov 2012-06-02]
+	Updated misc/gnuls to 8.13nb2 [cheusov 2012-06-02]
