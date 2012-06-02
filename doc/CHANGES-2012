@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1731 2012/06/02 11:59:49 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.1732 2012/06/02 12:00:07 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2703,3 +2703,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/gsed to 4.2.1nb4 [cheusov 2012-06-02]
 	Updated textproc/grep to 2.5.3nb3 [cheusov 2012-06-02]
 	Updated sysutils/findutils to 4.2.33nb3 [cheusov 2012-06-02]
+	Updated time/gnutime to 1.7nb1 [cheusov 2012-06-02]
