@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11139 2012/06/02 00:06:49 taca Exp $
+$NetBSD: TODO,v 1.11140 2012/06/02 09:29:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -410,6 +410,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacity-2.0
 	o autoconvert-0.3.16
 	o autogen-5.16
+	o automake-1.12.1
 	o avcheck-0.91
 	o avidemux-2.5.6
 	o avl-2.0.2a
@@ -644,7 +645,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontconfig-2.9.0
 	o fontsproto-2.1.2
-	o fotoxx-12.05
+	o fotoxx-12.06.1
 	o fox-1.6.41
 	o freeciv-2.3.2
 	o freefont-20120503
@@ -747,7 +748,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gssdp-0.10.0
 	o gst123-0.3.1
 	o gtexinfo-4.13a
-	o gthumb-2.14.4
+	o gthumb-3.0.1
 	o gthumb-3.0.1
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
@@ -863,9 +864,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libICE-1.0.8
 	o libSM-1.2.1
 	o libX11-1.4.4 [pkg/46183]
+	o libX11-1.5.0
 	o libXScrnSaver-1.2.2
 	o libXau-1.0.7
-	o libXaw-1.0.10
+	o libXaw-1.0.11
 	o libXcomposite-0.4.3
 	o libXcursor-1.1.13
 	o libXdmcp-1.1.1
@@ -915,6 +917,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmcs-0.7.2
 	o libmemcached-1.0.8
 	o libmicrohttpd-0.9.20
+	o libmikmod-3.2.0
 	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
@@ -1038,7 +1041,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o obexftp-0.23
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o octave-3.6.1
+	o octave-3.6.2
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
@@ -1125,7 +1128,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pulseaudio-2.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9544
+	o puzzles-9549
 	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1243,7 +1246,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stalin-0.11
 	o star-1.5.1
 	o statist-1.3.0
-	o stella-3.6.1
+	o stella-3.7
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.0
