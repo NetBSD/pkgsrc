@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1710 2012/06/02 01:03:04 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1711 2012/06/02 01:07:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2644,3 +2644,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/ruby-pdf-reader to 1.1.1 [taca 2012-06-02]
 	Updated security/ruby-net-ssh to 2.5.2 [taca 2012-06-02]
 	Updated sysutils/ruby-facter to 1.6.9 [taca 2012-06-02]
+	Updated misc/ruby-sprockets20 to 2.0.4 [taca 2012-06-02]
+	Updated misc/ruby-sprockets21 to 2.1.3 [taca 2012-06-02]
