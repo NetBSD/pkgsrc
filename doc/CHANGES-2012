@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1702 2012/06/01 22:00:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1703 2012/06/02 00:36:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2622,3 +2622,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/gramps3 to 3.3.2 [drochner 2012-06-01]
 	Updated graphics/opencv to 2.4.1 [wiz 2012-06-01]
 	Updated graphics/gimp-liquid-rescale to 0.7.1 [wiz 2012-06-01]
+	Updated databases/ruby-sequel to 3.36.0 [taca 2012-06-02]
+	Updated devel/ZenTest to 4.8.1 [taca 2012-06-02]
