@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/20 13:38:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/02 00:45:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/features/README.markdown
+${GEM_LIBDIR}/features/README.md
 ${GEM_LIBDIR}/features/Scope.md
 ${GEM_LIBDIR}/features/Upgrade.md
 ${GEM_LIBDIR}/features/argument_matchers/README.md
@@ -52,6 +52,7 @@ ${GEM_LIBDIR}/lib/rspec/mocks/proxy.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/serialization.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/space.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/standalone.rb
+${GEM_LIBDIR}/lib/rspec/mocks/test_double.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/version.rb
 ${GEM_LIBDIR}/lib/spec/mocks.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/and_yield_spec.rb
@@ -94,6 +95,7 @@ ${GEM_LIBDIR}/spec/rspec/mocks/stub_chain_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_implementation_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stubbed_message_expectations_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/test_double_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/to_ary_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/twice_counts_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks_spec.rb
