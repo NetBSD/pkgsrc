@@ -163,9 +163,9 @@ fts			Enable full-text searching.
 gcc-ada			Build the gcc Ada frontend and libraries.
 gcc-c++			Build the gcc C++ frontend and libraries.
 gcc-fortran		Build the gcc Fortran frontend and libraries.
+gcc-go			Build the gcc Go frontend and libraries.
 gcc-inplace-math	Build math libs inplace instead of depending on them.
 gcc-java		Build the gcc Java frontend, tools and libraries.
-gcc-go			Build the gcc Go frontend and libraries.
 gcc-multilib		Build libraries for multiple ABI's.
 gcc-objc		Build the gcc Objective-C frontend and libraries.
 gcc-objc++		Build the gcc Objective-C++ frontend and libraries.
@@ -455,6 +455,7 @@ postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
+psiconv			Enable psiconv support (for PSION 5 file formats).
 pstack			Enable pstack backtrace library.
 psycopg1		Enable psycopg 1.1.x support.
 psycopg2		Enable psycopg 2.x support.
