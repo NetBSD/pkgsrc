@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/09/12 06:50:00 dholland Exp $
+$NetBSD: distinfo,v 1.9 2012/06/02 20:00:49 dholland Exp $
 
 SHA1 (xcdplayer-2.2.tar.Z) = e518f2df9fcc5e21e1123fe6f5b1193f232b76ef
 RMD160 (xcdplayer-2.2.tar.Z) = ba34fe8092aa96d6370320b20fa46b0b0d043176
@@ -14,7 +14,7 @@ SHA1 (patch-ah) = 51a6170c10456469ba2fc31d4b74993fb053f25a
 SHA1 (patch-ai) = 1bf094380473d4a88c61378ff6172a90df510541
 SHA1 (patch-aj) = da8f0dccc7f0678bf9d2e820008813156ea25182
 SHA1 (patch-ak) = 60f93385ab2eb0347a40e5516ec925117ce94b9d
-SHA1 (patch-al) = 822369ea9ca9b0ff9a92ebd303dc976570395bde
+SHA1 (patch-al) = 1a05b5669ef64f4363ccfa877b0c350d374144e9
 SHA1 (patch-am) = 16347fa0157de6ecca0c8c6c946cbb3a1c406ecb
 SHA1 (patch-cdrom__sgi_c) = bb958cc315bc3ad822da54ffdd00975037f46ef0
 SHA1 (patch-cdrom__sun_c) = 23149cbe48011a53219f90098de1eb4d487a3ab0
