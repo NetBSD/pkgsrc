@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1724 2012/06/02 07:19:52 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1725 2012/06/02 11:17:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_46 to 4.6.9 [taca 2012-06-02]
 	Added www/typo3_47 version 4.7.1 [taca 2012-06-02]
 	Added emulators/xnp2 version 0.83pl20120302 [obache 2012-06-02]
+	Updated geography/mapserver to 5.6.8 [obache 2012-06-02]
