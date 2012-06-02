@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2012/04/11 12:10:01 drochner Exp $
+# $NetBSD: Makefile,v 1.54 2012/06/02 19:35:47 dholland Exp $
 
 DISTNAME=	stellarium-0.11.2
 CATEGORIES=	misc
@@ -23,6 +23,11 @@ SUBST_MESSAGE.mac=	Disabling Mac OS X paths.
 SUBST_FILES.mac=	src/core/StelFileMgr.cpp
 SUBST_STAGE.mac=	pre-configure
 SUBST_SED.mac=		-e 's,Q_OS_MAC,Q_XX_MAC,'
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-5*)
+BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-parameter
+BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
+.endif
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
