@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/10 17:59:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/02 13:52:06 obache Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gmpy.so
 share/doc/py-gmpy${PYVERSSUFFIX}/gmpydoc.txt

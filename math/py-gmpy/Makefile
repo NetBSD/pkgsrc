@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2011/12/03 00:02:15 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/02 13:52:06 obache Exp $
 #
 
-DISTNAME=	gmpy-1.12
+DISTNAME=	gmpy-1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	http://gmpy.googlecode.com/files/
 EXTRACT_SUFX=	.zip
-EXTRACT_SUFX=	.zip
-# XXX: all text file are DOS style.
-# XXX: if future version install binary file,
-# XXX: please consider to use another method.
-EXTRACT_OPTS_ZIP=	-aaqo
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/gmpy
@@ -24,7 +19,6 @@ PYTHON_VERSIONS_INCLUDE_3X=	yes
 USE_LANGUAGES=	c
 BUILD_TARGET= gmpy.so
 
-PYDISTUTILSPKG= yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/test
@@ -41,5 +35,5 @@ post-install:
 
 BUILDLINK_API_DEPENDS.gmp+=		gmp>=4.2.1
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
