@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/03/03 00:13:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/06/02 04:06:34 obache Exp $
 #
 
 DISTNAME=	fotoxx-12.01.2
@@ -20,6 +20,7 @@ DEPENDS+=	gimp-ufraw-[0-9]*:../../graphics/gimp-ufraw
 #WRKSRC=		${WRKDIR}/fotoxx
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pkg-config
+TOOLS_NOOP+=	xdg-desktop-menu
 
 BUILD_TARGET=	fotoxx
 INSTALL_TARGET=	install
