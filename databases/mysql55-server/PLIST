@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/05/13 13:05:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/06/02 22:28:00 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -677,6 +677,7 @@ share/mysql/test/r/blackhole.result
 share/mysql/test/r/blackhole_plugin.result
 share/mysql/test/r/bool.result
 share/mysql/test/r/bootstrap.result
+share/mysql/test/r/bug12427262.result
 share/mysql/test/r/bug13633383.result
 share/mysql/test/r/bug39022.result
 share/mysql/test/r/bug46080.result
@@ -2910,8 +2911,10 @@ share/mysql/test/suite/innodb/r/innodb_bug11754376.result
 share/mysql/test/suite/innodb/r/innodb_bug11766634.result
 share/mysql/test/suite/innodb/r/innodb_bug12400341.result
 share/mysql/test/suite/innodb/r/innodb_bug12661768.result
+share/mysql/test/suite/innodb/r/innodb_bug12902967.result
 share/mysql/test/suite/innodb/r/innodb_bug13510739.result
 share/mysql/test/suite/innodb/r/innodb_bug13635833.result
+share/mysql/test/suite/innodb/r/innodb_bug14007649.result
 share/mysql/test/suite/innodb/r/innodb_bug21704.result
 share/mysql/test/suite/innodb/r/innodb_bug30423.result
 share/mysql/test/suite/innodb/r/innodb_bug30919.result
@@ -3019,8 +3022,10 @@ share/mysql/test/suite/innodb/t/innodb_bug11766634.test
 share/mysql/test/suite/innodb/t/innodb_bug12400341-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug12400341.test
 share/mysql/test/suite/innodb/t/innodb_bug12661768.test
+share/mysql/test/suite/innodb/t/innodb_bug12902967.test
 share/mysql/test/suite/innodb/t/innodb_bug13510739.test
 share/mysql/test/suite/innodb/t/innodb_bug13635833.test
+share/mysql/test/suite/innodb/t/innodb_bug14007649.test
 share/mysql/test/suite/innodb/t/innodb_bug21704.test
 share/mysql/test/suite/innodb/t/innodb_bug30423.test
 share/mysql/test/suite/innodb/t/innodb_bug30919-master.opt
@@ -3816,6 +3821,7 @@ share/mysql/test/suite/rpl/r/rpl_alter_db.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_11932.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_bug33029.result
+share/mysql/test/suite/rpl/r/rpl_auto_increment_bug45679.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_update_failure.result
 share/mysql/test/suite/rpl/r/rpl_begin_commit_rollback.result
 share/mysql/test/suite/rpl/r/rpl_binlog_corruption.result
@@ -3943,6 +3949,7 @@ share/mysql/test/suite/rpl/r/rpl_not_null_innodb.result
 share/mysql/test/suite/rpl/r/rpl_not_null_myisam.result
 share/mysql/test/suite/rpl/r/rpl_optimize.result
 share/mysql/test/suite/rpl/r/rpl_packet.result
+share/mysql/test/suite/rpl/r/rpl_parallel_show_binlog_events_purge_logs.result
 share/mysql/test/suite/rpl/r/rpl_plugin_load.result
 share/mysql/test/suite/rpl/r/rpl_ps.result
 share/mysql/test/suite/rpl/r/rpl_rbr_to_sbr.result
@@ -4118,6 +4125,7 @@ share/mysql/test/suite/rpl/t/rpl_auto_increment-master.opt
 share/mysql/test/suite/rpl/t/rpl_auto_increment.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_11932.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_bug33029.test
+share/mysql/test/suite/rpl/t/rpl_auto_increment_bug45679.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_update_failure.test
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback-master.opt
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback-slave.opt
@@ -4304,6 +4312,7 @@ share/mysql/test/suite/rpl/t/rpl_optimize.test
 share/mysql/test/suite/rpl/t/rpl_packet-master.opt
 share/mysql/test/suite/rpl/t/rpl_packet-slave.opt
 share/mysql/test/suite/rpl/t/rpl_packet.test
+share/mysql/test/suite/rpl/t/rpl_parallel_show_binlog_events_purge_logs.test
 share/mysql/test/suite/rpl/t/rpl_plugin_load-master.opt
 share/mysql/test/suite/rpl/t/rpl_plugin_load-slave.opt
 share/mysql/test/suite/rpl/t/rpl_plugin_load.test
@@ -4322,6 +4331,7 @@ share/mysql/test/suite/rpl/t/rpl_replicate_ignore_db-slave.opt
 share/mysql/test/suite/rpl/t/rpl_replicate_ignore_db.test
 share/mysql/test/suite/rpl/t/rpl_report-slave.opt
 share/mysql/test/suite/rpl/t/rpl_report.test
+share/mysql/test/suite/rpl/t/rpl_report_port-master.opt
 share/mysql/test/suite/rpl/t/rpl_report_port.test
 share/mysql/test/suite/rpl/t/rpl_rewrt_db-slave.opt
 share/mysql/test/suite/rpl/t/rpl_rewrt_db.test
@@ -5559,6 +5569,7 @@ share/mysql/test/t/blackhole_plugin.test
 share/mysql/test/t/bool.test
 share/mysql/test/t/bootstrap-master.opt
 share/mysql/test/t/bootstrap.test
+share/mysql/test/t/bug12427262.test
 share/mysql/test/t/bug13633383.test
 share/mysql/test/t/bug39022.test
 share/mysql/test/t/bug46080-master.opt
