@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2012/04/27 12:31:47 obache Exp $
+# $NetBSD: Makefile,v 1.59 2012/06/02 18:33:32 dholland Exp $
 
 DISTNAME=	kmymoney2-1.0.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=  .tar.bz2
@@ -46,4 +46,5 @@ REPLACE_PERL+=	admin/fixuifiles
 BUILDLINK_ABI_DEPENDS.qt3-libs+=	qt3-libs>=3.3.8nb9
 .endif
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
