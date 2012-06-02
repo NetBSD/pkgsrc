@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2012/04/15 22:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/06/02 04:34:01 taca Exp $
 
-DISTNAME=	Mail_Mime-1.8.3
+DISTNAME=	Mail_Mime-1.8.4
 CATEGORIES+=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
