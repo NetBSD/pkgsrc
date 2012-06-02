@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/06/02 14:29:42 bsiegert Exp $
+
+SHA1 (BSD-arc4random-1.50.tar.gz) = d7472ce6306572965f041d37437b8be3446294da
+RMD160 (BSD-arc4random-1.50.tar.gz) = 794d4f799e769b7d11ccc79ba733c190868df664
+Size (BSD-arc4random-1.50.tar.gz) = 14432 bytes
