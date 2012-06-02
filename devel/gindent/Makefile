@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2012/05/29 21:07:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.50 2012/06/02 08:05:59 cheusov Exp $
 #
 
 DISTNAME=	indent-2.2.9
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=indent/}
 
@@ -21,11 +21,12 @@ USE_PKGLOCALEDIR=	yes
 INFO_FILES=		yes
 MAKE_JOBS_SAFE=		no
 
-INSTALLATION_DIRS+=	gnu/bin
+AUTO_MKDIRS=		yes
 
 post-install:
-	ln -s ${PREFIX}/bin/gindent      ${DESTDIR}${PREFIX}/gnu/bin/indent
-	ln -s ${PREFIX}/bin/gtexinfo2man ${DESTDIR}${PREFIX}/gnu/bin/texinfo2man
+	${LN} -sf ${PREFIX}/bin/gindent ${DESTDIR}${PREFIX}/gnu/bin/indent
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gindent.1 ${DESTDIR}${PREFIX}/gnu/man/man1/indent.1
+	${LN} -sf ${PREFIX}/bin/gtexinfo2man ${DESTDIR}${PREFIX}/gnu/bin/texinfo2man
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
