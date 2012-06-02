@@ -1,0 +1,17 @@
+$NetBSD: patch-utils_datetime_cpp,v 1.1 2012/06/02 20:06:30 dholland Exp $
+
+tv_sec isn't necessarily time_t.
+
+--- utils/datetime.cpp~	2012-02-13 23:06:33.000000000 +0000
++++ utils/datetime.cpp
+@@ -273,7 +273,9 @@ std::string
+ datetime::timestamp::strftime(const std::string& format) const
+ {
+     ::tm timedata;
+-    if (::gmtime_r(&_pimpl->data.tv_sec, &timedata) == NULL)
++    ::time_t tmp;
++    tmp = _pimpl->data.tv_sec;
++    if (::gmtime_r(&tmp, &timedata) == NULL)
+         UNREACHABLE_MSG("gmtime_r(3) did not accept the value returned by "
+                         "gettimeofday(2)");
+ 

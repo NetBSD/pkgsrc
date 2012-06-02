@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/05/24 16:47:11 marino Exp $
+$NetBSD: distinfo,v 1.6 2012/06/02 20:06:30 dholland Exp $
 
 SHA1 (kyua-cli-0.3.tar.gz) = 445f054c739a8786439b8debfb6fb48df13349f9
 RMD160 (kyua-cli-0.3.tar.gz) = 214b6b947f947d7f5a42894278dcf909ccefe14d
 Size (kyua-cli-0.3.tar.gz) = 563041 bytes
+SHA1 (patch-utils_datetime_cpp) = 034d80169762d23a63fa04bc91f9a7b6e808d06f
 SHA1 (patch-utils_process_children.cpp) = 3ae9842ba2869693fc98458b9e18c14f06d2b265
 SHA1 (patch-utils_process_systembuf_test.cpp) = 8c7610cdb93145d1ec1eb36acb68749377059060
