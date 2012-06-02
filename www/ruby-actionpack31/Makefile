@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/18 05:38:57 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/02 01:34:21 taca Exp $
 
 DISTNAME=	actionpack-${RUBY_RAILS_VERSION}
 CATEGORIES=	www
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.3.5<1.4:../../www/ruby-rack13
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-cache>=1.1<2:../../www/ruby-rack-cache
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-test>=0.6.1<0.7:../../www/ruby-rack-test
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-mount>=0.8.2<0.9:../../www/ruby-rack-mount
-DEPENDS+=	${RUBY_PKGPREFIX}-sprockets>=2.0.3<2.1:../../misc/ruby-sprockets20
+DEPENDS+=	${RUBY_PKGPREFIX}-sprockets>=2.0.4<2.1:../../misc/ruby-sprockets20
 DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0<2.8:../../www/ruby-erubis
 
 RUBY_RAILS_SUPPORTED=	31
