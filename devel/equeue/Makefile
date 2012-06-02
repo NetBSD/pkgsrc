@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/04 09:49:04 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/02 19:28:05 dholland Exp $
 
 DISTNAME=		equeue-2.1.4
 CATEGORIES=		devel
@@ -18,6 +18,7 @@ HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 BUILD_TARGET=		all opt
 PLIST_SRC=		PLIST.opt PLIST
+BUILD_ENV+=		PACKAGES=
 
 INSTALLATION_DIRS+=	lib/ocaml/site-lib
 
