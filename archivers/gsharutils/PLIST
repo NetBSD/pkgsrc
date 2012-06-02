@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2012/05/29 20:52:55 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/06/02 08:26:45 cheusov Exp $
 bin/gshar
 bin/gunshar
 gnu/bin/shar
 gnu/bin/unshar
+gnu/man/man1/shar.1
+gnu/man/man1/unshar.1
 info/sharutils.info
 man/man1/gshar.1
 man/man1/gunshar.1

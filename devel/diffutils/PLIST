@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/05/29 21:01:25 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/06/02 08:18:35 cheusov Exp $
 bin/gcmp
 bin/gdiff
 bin/gdiff3
@@ -7,6 +7,10 @@ gnu/bin/cmp
 gnu/bin/diff
 gnu/bin/diff3
 gnu/bin/sdiff
+gnu/man/man1/cmp.1
+gnu/man/man1/diff.1
+gnu/man/man1/diff3.1
+gnu/man/man1/sdiff.1
 info/diffutils.info
 man/man1/gcmp.1
 man/man1/gdiff.1
