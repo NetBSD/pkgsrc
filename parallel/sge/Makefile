@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/04/18 21:05:30 markd Exp $
+# $NetBSD: Makefile,v 1.47 2012/06/02 20:16:09 dholland Exp $
 #
 
 DISTNAME=		sge-8.0.0d
@@ -12,12 +12,10 @@ HOMEPAGE=		https://arc.liv.ac.uk/trac/SGE
 COMMENT=		Son of Grid Engine distributed resource management system
 LICENSE=		sun-iss AND 2-clause-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2
 
-BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake csh perl:run
 
 MANINSTALL=		maninstall catinstall
 
@@ -38,7 +36,7 @@ PKG_USERS_VARS+=	SGE_USER
 
 EVAL_PREFIX+=	PKGSRC_SSL_PREFIX=openssl
 
-AIMK=	${SETENV} ${MAKE_ENV} tcsh -fb ${WRKSRC}/source/aimk
+AIMK=	${SETENV} ${MAKE_ENV} ${CSH} -fb ${WRKSRC}/source/aimk
 
 CONFIG_GUESS_OVERRIDE=	source/3rdparty/qmake/config.guess \
 		source/3rdparty/qtcsh/config.guess
