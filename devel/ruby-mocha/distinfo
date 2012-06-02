@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2012/04/28 15:55:03 taca Exp $
+$NetBSD: distinfo,v 1.11 2012/06/02 00:40:05 taca Exp $
 
-SHA1 (mocha-0.11.3.gem) = bb2daa794aa488c8c51c8106247e5ccaeae61e02
-RMD160 (mocha-0.11.3.gem) = 7f16324f26a39bf4890d6b957fe56d0324478538
-Size (mocha-0.11.3.gem) = 178176 bytes
+SHA1 (mocha-0.11.4.gem) = 9890bf985e62e92c7b2fdf61771f0f6f451a80e8
+RMD160 (mocha-0.11.4.gem) = 9d316ce200f56483829d14f30f420364151e1add
+Size (mocha-0.11.4.gem) = 75776 bytes
