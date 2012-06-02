@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 08:08:14 taca Exp $
-${GEM_HOME}/cache/fastercsv-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.4 2012/06/02 01:10:12 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -17,7 +17,6 @@ ${GEM_LIBDIR}/examples/purchase.csv
 ${GEM_LIBDIR}/examples/shortcut_interface.rb
 ${GEM_LIBDIR}/lib/faster_csv.rb
 ${GEM_LIBDIR}/lib/fastercsv.rb
-${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/line_endings.gz
 ${GEM_LIBDIR}/test/tc_csv_parsing.rb
 ${GEM_LIBDIR}/test/tc_csv_writing.rb
@@ -32,4 +31,4 @@ ${GEM_LIBDIR}/test/tc_speed.rb
 ${GEM_LIBDIR}/test/tc_table.rb
 ${GEM_LIBDIR}/test/test_data.csv
 ${GEM_LIBDIR}/test/ts_all.rb
-${GEM_HOME}/specifications/fastercsv-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
