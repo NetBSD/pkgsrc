@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/04/29 05:42:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/06/02 01:09:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -17,11 +17,11 @@ ${GEM_LIBDIR}/data/index.html
 ${GEM_LIBDIR}/data/prototype.js
 ${GEM_LIBDIR}/diagrams/.keep
 ${GEM_LIBDIR}/ext/json/ext/fbuffer/fbuffer.h
+${GEM_LIBDIR}/ext/json/ext/generator/depend
 ${GEM_LIBDIR}/ext/json/ext/generator/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.c
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.h
-${GEM_LIBDIR}/ext/json/ext/json/ext/generator.${RUBY_DLEXT}
-${GEM_LIBDIR}/ext/json/ext/json/ext/parser.${RUBY_DLEXT}
+${GEM_LIBDIR}/ext/json/ext/parser/depend
 ${GEM_LIBDIR}/ext/json/ext/parser/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.c
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.h
@@ -60,6 +60,8 @@ ${GEM_LIBDIR}/lib/json/add/time.rb
 ${GEM_LIBDIR}/lib/json/common.rb
 ${GEM_LIBDIR}/lib/json/ext.rb
 ${GEM_LIBDIR}/lib/json/ext/.keep
+${GEM_LIBDIR}/lib/json/ext/generator.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/json/ext/parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/json/generic_object.rb
 ${GEM_LIBDIR}/lib/json/pure.rb
 ${GEM_LIBDIR}/lib/json/pure/generator.rb
