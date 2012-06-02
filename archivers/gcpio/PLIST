@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2012/05/29 20:37:08 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/06/02 08:38:13 cheusov Exp $
 bin/gcpio
 gnu/bin/cpio
+gnu/man/man1/cpio.1
+gnu/man/man1/mt.1
 info/cpio.info
 libexec/grmt
 man/man1/gcpio.1
