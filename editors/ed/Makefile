@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/05/29 21:51:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/02 07:10:57 cheusov Exp $
 
 DISTNAME=		ed-1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GNU:=ed/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,10 +21,12 @@ CONFIGURE_ARGS+=	--program-prefix=g
 
 INSTALL_TARGET=		install install-man
 
-INSTALLATION_DIRS=	gnu/bin
+AUTO_MKDIRS=		yes
 
 post-install:
-	ln -s ../../bin/ged  ${DESTDIR}${PREFIX}/gnu/bin/ed
-	ln -s ../../bin/gred ${DESTDIR}${PREFIX}/gnu/bin/red
+.for f in ed red
+	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
