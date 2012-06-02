@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/05/08 16:08:53 hans Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/02 02:23:33 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_FULL}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 DIST_SUBDIR=	ruby193-base-201202170
@@ -87,13 +88,6 @@ PLIST.io=	yes
 #
 .if ${OPSYS} == "DragonFly" && ${OS_VERSION} == "1.8.0"
 CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
-.endif
-
-#
-# work around for getaddrinfo(3)
-#
-.if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.[6-9])
-CONFIGURE_ARGS+=	--enable-wide-getaddrinfo
 .endif
 
 #
