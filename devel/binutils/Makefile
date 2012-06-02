@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2011/11/01 20:47:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.42 2012/06/02 11:54:38 cheusov Exp $
 
 DISTNAME=	binutils-2.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
@@ -26,16 +26,15 @@ MAKEFLAGS+=		TEXINFO_LOCALE=no
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
 CONFIGURE_ARGS+=	--disable-werror # pkg/45541
-GNU_PROGRAM_PREFIX?=	gnu-
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+CONFIGURE_ARGS+=	--program-prefix=g
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
 PLIST_SRC=	${PKGDIR}/PLIST.common
 PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
 
 INFO_FILES=	yes
+
+INSTALLATION_DIRS=	gnu/bin gnu/man/man1
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
@@ -56,6 +55,7 @@ CFLAGS+=	-Wno-unused-value -Wno-format-security \
 #
 post-configure:
 .for f in ld/ldver.texi ld/ld.1 gas/doc/gasver.texi gas/doc/as.1
+	set -e; \
 	if [ -f ${WRKSRC}/${f} ]; then					\
 		touch ${WRKSRC}/${f};					\
 	fi
@@ -65,5 +65,15 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && find ${MACHINE_GNU_PLATFORM}/lib/ldscripts -type f -print	\
 		| sort -r						\
 		> ${WRKDIR}/PLIST_DYNAMIC
+.for f in addr2line ar as c++filt dlltool gprof ld nlmconv nm objcopy objdump ranlib \
+          readelf size strings strip windres
+	set -e; \
+	if ${TEST} -f ${DESTDIR}${PREFIX}/bin/g${f:Q}; then \
+	   ${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}; \
+	fi
+	if ${TEST} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/g${f:Q}.1; then \
+	   ${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1; \
+	fi
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
