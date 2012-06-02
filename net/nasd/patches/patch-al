@@ -1,14 +1,21 @@
-$NetBSD: patch-al,v 1.1.1.1 2005/05/04 08:56:50 agc Exp $
+$NetBSD: patch-al,v 1.2 2012/06/02 23:34:56 dholland Exp $
 
-Index: config/NASD.tmpl
-===================================================================
-RCS file: /usr/cvsroot/nasd/nasd-1.3/config/NASD.tmpl,v
-retrieving revision 1.1.1.1
-retrieving revision 1.3
-diff -u -r1.1.1.1 -r1.3
---- config/NASD.tmpl	21 Mar 2005 08:52:02 -0000	1.1.1.1
-+++ config/NASD.tmpl	21 Mar 2005 22:36:25 -0000	1.3
-@@ -167,7 +167,7 @@
+- have rpcgen use cpp on the path (thus picking up the tool wrapper)
+- use -traditional with cpp, or gcc 4.4(?) and up fail
+- add explicit netbsd support
+- add pthread options
+
+--- config/NASD.tmpl.orig	2005-03-21 08:52:02.000000000 +0000
++++ config/NASD.tmpl
+@@ -94,6 +94,7 @@ CRYPT_COMMONLIB=$(THE_TOP)/common/crypto
+  * nasd_rpcgen binary
+  */
+ NASD_RPCGEN_BIN=$(THE_TOP)/rpcgen/nasd_rpcgen
++NASD_RPCGEN_ARGS=-C 'cpp -traditional'
+ NASD_RPCGEN_INCLUDES=-I$(THE_TOP)/include
+ 
+ /* may be overridden by local Imakefiles */
+@@ -167,7 +168,7 @@ DEFINES = -D__LANGUAGE_C__ $(NASD_CFGDEF
   */
  #define NASD_MakeSubdirs(_dirs_) NamedTargetSubdirs(all,_dirs_,"Making",PassCDebugFlags,all)
  #else /* AIXArchitecture && (NASD_OSMajorVersion == 4) */
@@ -17,7 +24,7 @@ diff -u -r1.1.1.1 -r1.3
  /*
   * The XFree86 NamedTargetSubdirs macro was written by
   * some weeder who just didn't grasp the beauty of
-@@ -188,7 +188,7 @@
+@@ -188,7 +189,7 @@ name:: @@\
  			exit $$status; \ @@\
  		fi \ @@\
  	done
@@ -26,7 +33,7 @@ diff -u -r1.1.1.1 -r1.3
  /*
   * Everything else
   */
-@@ -407,7 +407,7 @@
+@@ -407,7 +408,7 @@ Makefiles makefiles::
  PULLINSYMS = -include ${NASD_KMOD_INCDIR}/nasd/nasd_linux_common_syms.ver.h
  
  .c.o:
@@ -35,7 +42,7 @@ diff -u -r1.1.1.1 -r1.3
  
  #ifndef NASD_OverrideCOTarget
  #define NASD_OverrideCOTarget
-@@ -432,7 +432,7 @@
+@@ -432,7 +433,7 @@ filenamebase.o: filenamebase.c @@\
  program: objects deplibs @@\
  	RemoveTargetProgram($@) @@\
  	RemoveTargetProgram(a.out) @@\
@@ -44,7 +51,79 @@ diff -u -r1.1.1.1 -r1.3
  	$(MV) a.out $@ @@\
  @@\
  clean:: @@\
-@@ -821,7 +821,8 @@
+@@ -592,7 +593,7 @@ depend:: idlfn headerfn @@\
+ @@\
+ idlfn:: rpcfn $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	$(RM) idlfn tmp.idlfn @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -i tmp.idlfn rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -i tmp.idlfn rpcfn @@\
+ 	$(MV) tmp.idlfn idlfn @@\
+ @@\
+ headerfn:: idlfn @@\
+@@ -682,7 +683,7 @@ depend:: headerfn @@\
+ @@\
+ headerfn:: rpcfn $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	$(RM) headerfn tmp.headerfn @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -h tmp.headerfn rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -h tmp.headerfn rpcfn @@\
+ 	$(MV) tmp.headerfn headerfn @@\
+ @@\
+ clean:: @@\
+@@ -699,7 +700,7 @@ depend:: serverfn.c @@\
+ serverfn.c:: rpcfn $(NASD_RPCGEN_BIN) $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	@echo Generating serverfn.c @@\
+ 	@$(RM) serverfn.c tmp.serverfn.c @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -B nasd/nasd_error.h -B nasd/nasd_types.h -B headerfn1 -B headerfn2 -y tmp.serverfn.c rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -B nasd/nasd_error.h -B nasd/nasd_types.h -B headerfn1 -B headerfn2 -y tmp.serverfn.c rpcfn @@\
+ 	$(MV) tmp.serverfn.c serverfn.c @@\
+ 	@echo Generated serverfn.c @@\
+ @@\
+@@ -716,7 +717,7 @@ depend:: serverfn.h @@\
+ serverfn.h:: rpcfn $(NASD_RPCGEN_BIN) $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	@echo Generating serverfn.h @@\
+ 	@$(RM) serverfn.h tmp.serverfn.h @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -Y tmp.serverfn.h -B nasd/nasd_error.h -B nasd/nasd_types.h rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -Y tmp.serverfn.h -B nasd/nasd_error.h -B nasd/nasd_types.h rpcfn @@\
+ 	$(MV) tmp.serverfn.h serverfn.h @@\
+ 	@echo Generated serverfn.h @@\
+ @@\
+@@ -731,7 +732,7 @@ depend:: clientfn.c @@\
+ clientfn.c:: rpcfn $(NASD_RPCGEN_BIN) $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	@echo Generating clientfn.c @@\
+ 	@$(RM) clientfn.c tmp.clientfn.c @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -B nasd/nasd_error.h -B nasd/nasd_types.h -B nasd/nasd_marshall.h -B headerfn1 -B headerfn2 -x tmp.clientfn.c rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -B nasd/nasd_error.h -B nasd/nasd_types.h -B nasd/nasd_marshall.h -B headerfn1 -B headerfn2 -x tmp.clientfn.c rpcfn @@\
+ 	$(MV) tmp.clientfn.c clientfn.c @@\
+ 	@echo Generated clientfn.c @@\
+ @@\
+@@ -748,7 +749,7 @@ depend:: clientfn.h @@\
+ clientfn.h:: rpcfn $(NASD_RPCGEN_BIN) $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	@echo Generating clientfn.h @@\
+ 	@$(RM) clientfn.h tmp.clientfn.h @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -X tmp.clientfn.h -B nasd/nasd_error.h -B nasd/nasd_types.h rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -X tmp.clientfn.h -B nasd/nasd_error.h -B nasd/nasd_types.h rpcfn @@\
+ 	$(MV) tmp.clientfn.h clientfn.h @@\
+ 	@echo Generated clientfn.h @@\
+ @@\
+@@ -765,7 +766,7 @@ depend:: marshallfn @@\
+ marshallfn:: rpcfn $(NASD_RPCGEN_BIN) $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	@echo Generating marshallfn @@\
+ 	@$(RM) marshallfn tmp.marshallfn @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -M tmp.marshallfn -P nasd_ -B headerfn rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -M tmp.marshallfn -P nasd_ -B headerfn rpcfn @@\
+ 	$(MV) tmp.marshallfn marshallfn @@\
+ 	@echo Generated marshallfn @@\
+ @@\
+@@ -783,7 +784,7 @@ depend:: marshallfn @@\
+ marshallfn:: rpcfn $(NASD_RPCGEN_BIN) $(THE_TOP)/include/nasd/nasd_options.h @@\
+ 	@echo Generating marshallfn @@\
+ 	@$(RM) marshallfn tmp.marshallfn @@\
+-	$(NASD_RPCGEN_BIN) -S_t -I$(THE_TOP)/include -e tmp.marshallfn -P nasd_ -B headerfn rpcfn @@\
++	$(NASD_RPCGEN_BIN) $(NASD_RPCGEN_ARGS) -S_t -I$(THE_TOP)/include -e tmp.marshallfn -P nasd_ -B headerfn rpcfn @@\
+ 	$(MV) tmp.marshallfn marshallfn @@\
+ 	@echo Generated marshallfn @@\
+ @@\
+@@ -821,7 +822,8 @@ sayconfig::
  	NASD_SayVar(NASD_RPC_PACKAGE_DEFINES)
  	NASD_SayVar(NASD_CMU_PDLDEFINES)
  

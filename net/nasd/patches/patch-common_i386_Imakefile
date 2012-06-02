@@ -1,0 +1,16 @@
+$NetBSD: patch-common_i386_Imakefile,v 1.1 2012/06/02 23:34:56 dholland Exp $
+
+Treat x86_64 like i386, as half the build system already does, and
+hope it works.
+
+--- common/i386/Imakefile~	2005-03-21 08:52:02.000000000 +0000
++++ common/i386/Imakefile
+@@ -25,7 +25,7 @@
+ 
+ #include "NASD.tmpl"
+ 
+-#if defined(i386Architecture)
++#if defined(i386Architecture) || defined(__amd64__) || defined(__x86_64__)
+ 
+ SRCS = \
+ 	nasd_rpcc.c

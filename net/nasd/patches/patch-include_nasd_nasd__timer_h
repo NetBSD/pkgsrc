@@ -1,0 +1,42 @@
+$NetBSD: patch-include_nasd_nasd__timer_h,v 1.1 2012/06/02 23:34:56 dholland Exp $
+
+Handle x86_64 like i386.
+
+--- include/nasd/nasd_timer.h~	2005-03-21 08:52:03.000000000 +0000
++++ include/nasd/nasd_timer.h
+@@ -33,7 +33,7 @@
+ 
+ #define NASD_TM_INTERVALS 60
+ 
+-#if defined(SOLARIS) && !defined(i386)
++#if defined(SOLARIS) && !defined(i386) && !defined(__x86_64__)
+ #include <nasd/generic/nasd_generic_timer.h>
+ #define NASD_TIMERS_DEFINED
+ #endif /* SOLARIS && !i386 */
+@@ -127,7 +127,7 @@ struct nasd_delaycounter_s {
+ 
+ #endif /* DEC_OSF */
+ 
+-#ifdef i386
++#if defined(i386) || defined(__x86_64__)
+ 
+ #include <asm/delay.h>
+ 
+@@ -237,7 +237,7 @@ struct nasd_delaycounter_s {
+ /*
+  * Performance counters
+  */
+-#if defined(DEC_OSF) || defined(i386)
++#if defined(DEC_OSF) || defined(i386) || defined(__x86_64__)
+ typedef struct nasd_timer_s           nasd_timer_t;
+ typedef struct nasd_multitimer_s      nasd_multitimer_t;
+ typedef struct nasd_timer_interval_s  nasd_timer_interval_t;
+@@ -261,7 +261,7 @@ extern nasd_uint32 NASD_rpcc();
+ #define NASD_RPCC() NASD_rpcc()
+ #define NASD_TICKS nasd_ctimer_ticks
+ 
+-#ifdef i386
++#if defined(i386) || defined(__x86_64__)
+ extern void NASD_rpcc_int64(nasd_uint32 *high, nasd_uint32 *low);
+ #endif /* i386 */
+ 
