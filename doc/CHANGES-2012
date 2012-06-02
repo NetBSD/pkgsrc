@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1712 2012/06/02 01:15:43 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1713 2012/06/02 01:20:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2655,3 +2655,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-nokogiri to 1.5.3 [taca 2012-06-02]
 	Updated textproc/ruby-rdtool to 0.6.34 [taca 2012-06-02]
 	Updated textproc/ruby-stringex to 1.4.0 [taca 2012-06-02]
+	Updated www/ruby-csspool to 3.0.1 [taca 2012-06-02]
+	Updated www/ruby-mechanize to 2.5.1 [taca 2012-06-02]
+	Updated www/ruby-net-http-digest_auth to 1.2.1 [taca 2012-06-02]
+	Updated www/ruby-raindrops to 0.9.0 [taca 2012-06-02]
+	Updated www/ruby-sass to 3.1.19 [taca 2012-06-02]
