@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2012/05/29 21:07:33 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/06/02 08:05:59 cheusov Exp $
 bin/gindent
 bin/gtexinfo2man
 gnu/bin/indent
 gnu/bin/texinfo2man
+gnu/man/man1/indent.1
 info/indent.info
 man/man1/gindent.1
 share/doc/indent/indent.html
