@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/20 13:37:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/02 00:45:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/features/README.markdown
+${GEM_LIBDIR}/features/README.md
 ${GEM_LIBDIR}/features/Upgrade.md
 ${GEM_LIBDIR}/features/built_in_matchers/README.md
 ${GEM_LIBDIR}/features/built_in_matchers/be.feature
 ${GEM_LIBDIR}/features/built_in_matchers/be_within.feature
 ${GEM_LIBDIR}/features/built_in_matchers/cover.feature
+${GEM_LIBDIR}/features/built_in_matchers/end_with.feature
 ${GEM_LIBDIR}/features/built_in_matchers/equality.feature
 ${GEM_LIBDIR}/features/built_in_matchers/exist.feature
 ${GEM_LIBDIR}/features/built_in_matchers/expect_change.feature
@@ -22,8 +23,10 @@ ${GEM_LIBDIR}/features/built_in_matchers/operators.feature
 ${GEM_LIBDIR}/features/built_in_matchers/predicates.feature
 ${GEM_LIBDIR}/features/built_in_matchers/respond_to.feature
 ${GEM_LIBDIR}/features/built_in_matchers/satisfy.feature
+${GEM_LIBDIR}/features/built_in_matchers/start_with.feature
 ${GEM_LIBDIR}/features/built_in_matchers/throw_symbol.feature
 ${GEM_LIBDIR}/features/built_in_matchers/types.feature
+${GEM_LIBDIR}/features/built_in_matchers/yield.feature
 ${GEM_LIBDIR}/features/custom_matchers/access_running_example.feature
 ${GEM_LIBDIR}/features/custom_matchers/define_diffable_matcher.feature
 ${GEM_LIBDIR}/features/custom_matchers/define_matcher.feature
@@ -70,7 +73,9 @@ ${GEM_LIBDIR}/lib/rspec/matchers/built_in/match_array.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/raise_error.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/respond_to.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/satisfy.rb
+${GEM_LIBDIR}/lib/rspec/matchers/built_in/start_and_end_with.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/built_in/throw_symbol.rb
+${GEM_LIBDIR}/lib/rspec/matchers/built_in/yield.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/compatibility.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/dsl.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/extensions/instance_eval_with_args.rb
@@ -110,7 +115,9 @@ ${GEM_LIBDIR}/spec/rspec/matchers/operator_matcher_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/raise_error_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/respond_to_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/satisfy_spec.rb
+${GEM_LIBDIR}/spec/rspec/matchers/start_with_end_with_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/throw_symbol_spec.rb
+${GEM_LIBDIR}/spec/rspec/matchers/yield_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/classes.rb
 ${GEM_LIBDIR}/spec/support/matchers.rb
