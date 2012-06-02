@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/29 16:01:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/02 01:19:59 taca Exp $
 bin/sass
 bin/sass-convert
 bin/scss
@@ -40,7 +40,6 @@ ${GEM_LIBDIR}/lib/sass/plugin.rb
 ${GEM_LIBDIR}/lib/sass/plugin/compiler.rb
 ${GEM_LIBDIR}/lib/sass/plugin/configuration.rb
 ${GEM_LIBDIR}/lib/sass/plugin/generic.rb
-${GEM_LIBDIR}/lib/sass/plugin/listener.rb
 ${GEM_LIBDIR}/lib/sass/plugin/merb.rb
 ${GEM_LIBDIR}/lib/sass/plugin/rack.rb
 ${GEM_LIBDIR}/lib/sass/plugin/rails.rb
@@ -106,6 +105,7 @@ ${GEM_LIBDIR}/lib/sass/tree/visitors/check_nesting.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/convert.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/cssize.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/deep_copy.rb
+${GEM_LIBDIR}/lib/sass/tree/visitors/extend.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/perform.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/set_options.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/to_css.rb
