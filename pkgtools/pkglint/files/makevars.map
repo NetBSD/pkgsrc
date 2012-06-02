@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.219 2012/03/10 11:00:24 cheusov Exp $
+# $NetBSD: makevars.map,v 1.220 2012/06/02 12:24:55 cheusov Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -361,7 +361,6 @@ GNU_ARCH		{ mips }
 GNU_CONFIGURE		Yes [c:s,m:s]
 GNU_CONFIGURE_MANDIR	Pathname [m:s,c:s]
 GNU_CONFIGURE_PREFIX	Pathname [m:s]
-GNU_PROGRAM_PREFIX	Identifier [$user]
 HAS_CONFIGURE		Yes [m:s,c:s]
 HEADER_TEMPLATES	List of Pathname [$package_list]
 HOMEPAGE		URL [$package]
