@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/12/15 16:01:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/02 01:10:50 taca Exp $
 bin/haml
 bin/html2haml
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/haml/filters.rb
 ${GEM_LIBDIR}/lib/haml/helpers.rb
 ${GEM_LIBDIR}/lib/haml/helpers/action_view_extensions.rb
 ${GEM_LIBDIR}/lib/haml/helpers/action_view_mods.rb
+${GEM_LIBDIR}/lib/haml/helpers/rails_323_textarea_fix.rb
 ${GEM_LIBDIR}/lib/haml/helpers/xss_mods.rb
 ${GEM_LIBDIR}/lib/haml/html.rb
 ${GEM_LIBDIR}/lib/haml/html/erb.rb
@@ -55,6 +56,8 @@ ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.0.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.0.x.lock
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.1.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.1.x.lock
+${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.2.x
+${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.2.x.lock
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-xss-2.3.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-xss-2.3.x.lock
 ${GEM_LIBDIR}/test/haml/engine_test.rb
