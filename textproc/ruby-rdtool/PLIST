@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2012/04/29 14:33:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/06/02 01:13:40 taca Exp $
 bin/rd2
 bin/rdswap.rb
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING.txt
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/HISTORY
+${GEM_LIBDIR}/LGPL-2.1
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.html
 ${GEM_LIBDIR}/README.ja.html
@@ -25,6 +26,7 @@ ${GEM_LIBDIR}/lib/rd/document-struct.rb
 ${GEM_LIBDIR}/lib/rd/dot.rd2rc
 ${GEM_LIBDIR}/lib/rd/element.rb
 ${GEM_LIBDIR}/lib/rd/filter.rb
+${GEM_LIBDIR}/lib/rd/head-filter.rb
 ${GEM_LIBDIR}/lib/rd/inline-element.rb
 ${GEM_LIBDIR}/lib/rd/labeled-element.rb
 ${GEM_LIBDIR}/lib/rd/list.rb
@@ -34,9 +36,12 @@ ${GEM_LIBDIR}/lib/rd/output-format-visitor.rb
 ${GEM_LIBDIR}/lib/rd/package.rb
 ${GEM_LIBDIR}/lib/rd/parser-util.rb
 ${GEM_LIBDIR}/lib/rd/post-install
+${GEM_LIBDIR}/lib/rd/pre-setup.rb
 ${GEM_LIBDIR}/lib/rd/rbl-file.rb
 ${GEM_LIBDIR}/lib/rd/rbl-suite.rb
 ${GEM_LIBDIR}/lib/rd/rd-struct.rb
+${GEM_LIBDIR}/lib/rd/rd2html-ext-lib.rb
+${GEM_LIBDIR}/lib/rd/rd2html-ext-opt.rb
 ${GEM_LIBDIR}/lib/rd/rd2html-lib.rb
 ${GEM_LIBDIR}/lib/rd/rd2html-opt.rb
 ${GEM_LIBDIR}/lib/rd/rd2man-lib.rb
