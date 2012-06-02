@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/01/02 04:19:44 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/02 05:53:14 obache Exp $
 #
 
-DISTNAME=	splint-3.1.2
-VERSION=	3.1.2
+DISTNAME=	splint-3.1.2.src
+PKGNAME=	${DISTNAME:S/.src$//}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.splint.org/downloads/
-DISTFILES=	${DISTNAME}.src.tgz
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lclint.cs.virginia.edu/
@@ -17,6 +17,8 @@ MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake lex
 GNU_CONFIGURE=	YES
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/splint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
