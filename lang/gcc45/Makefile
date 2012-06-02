@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/13 11:10:09 hans Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/02 11:55:50 cheusov Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -76,7 +76,7 @@ CONFIGURE_ARGS+=	--enable-threads=posix
 .if ${OPSYS} == "NetBSD"
 .include "../../devel/binutils/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
+CONFIGURE_ARGS+=	--with-ld=${PREFIX}/gnu/bin/ld
 CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
