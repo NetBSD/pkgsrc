@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/17 16:51:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/06/02 01:13:00 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
@@ -9,8 +9,12 @@ ${GEM_LIBDIR}/C_CODING_STYLE.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.ja.rdoc
 ${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/ROADMAP.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/STANDARD_RESPONSES.md
+${GEM_LIBDIR}/Y_U_NO_GEMSPEC.md
 ${GEM_LIBDIR}/bin/nokogiri
+${GEM_LIBDIR}/build_all
 ${GEM_LIBDIR}/ext/nokogiri/depend
 ${GEM_LIBDIR}/ext/nokogiri/extconf.rb
 ${GEM_LIBDIR}/ext/nokogiri/html_document.c
@@ -143,7 +147,6 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
-${GEM_LIBDIR}/nokogiri_help_responses.md
 ${GEM_LIBDIR}/tasks/cross_compile.rb
 ${GEM_LIBDIR}/tasks/nokogiri.org.rb
 ${GEM_LIBDIR}/tasks/test.rb
@@ -173,7 +176,9 @@ ${GEM_LIBDIR}/test/files/staff.dtd
 ${GEM_LIBDIR}/test/files/staff.xml
 ${GEM_LIBDIR}/test/files/staff.xslt
 ${GEM_LIBDIR}/test/files/tlm.html
+${GEM_LIBDIR}/test/files/to_be_xincluded.xml
 ${GEM_LIBDIR}/test/files/valid_bar.xml
+${GEM_LIBDIR}/test/files/xinclude.xml
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser.rb
 ${GEM_LIBDIR}/test/html/sax/test_parser_context.rb
@@ -232,4 +237,5 @@ ${GEM_LIBDIR}/test/xml/test_xinclude.rb
 ${GEM_LIBDIR}/test/xml/test_xpath.rb
 ${GEM_LIBDIR}/test/xslt/test_custom_functions.rb
 ${GEM_LIBDIR}/test/xslt/test_exception_handling.rb
+${GEM_LIBDIR}/test_all
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
