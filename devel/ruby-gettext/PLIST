@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/03/12 15:41:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/06/02 00:37:25 taca Exp $
 bin/rgettext
 bin/rmsgfmt
 bin/rmsgmerge
@@ -664,8 +664,6 @@ ${GEM_LIBDIR}/samples/po/zh_TW/hello_noop.po
 ${GEM_LIBDIR}/samples/po/zh_TW/hello_plural.po
 ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po
 ${GEM_LIBDIR}/src/poparser.ry
-${GEM_LIBDIR}/test/README
-${GEM_LIBDIR}/test/Rakefile
 ${GEM_LIBDIR}/test/locale/cr/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/da/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/da/LC_MESSAGES/plural_error.mo
@@ -674,6 +672,8 @@ ${GEM_LIBDIR}/test/locale/fr/LC_MESSAGES/plural_error.mo
 ${GEM_LIBDIR}/test/locale/fr/LC_MESSAGES/test1.mo
 ${GEM_LIBDIR}/test/locale/fr/LC_MESSAGES/test2.mo
 ${GEM_LIBDIR}/test/locale/ir/LC_MESSAGES/plural.mo
+${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/backslash.mo
+${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/non_ascii.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/npgettext.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/nsgettext.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/pgettext.mo
@@ -698,6 +698,8 @@ ${GEM_LIBDIR}/test/po/fr/plural_error.po
 ${GEM_LIBDIR}/test/po/fr/test1.po
 ${GEM_LIBDIR}/test/po/fr/test2.po
 ${GEM_LIBDIR}/test/po/ir/plural.po
+${GEM_LIBDIR}/test/po/ja/backslash.po
+${GEM_LIBDIR}/test/po/ja/non_ascii.po
 ${GEM_LIBDIR}/test/po/ja/npgettext.po
 ${GEM_LIBDIR}/test/po/ja/nsgettext.po
 ${GEM_LIBDIR}/test/po/ja/pgettext.po
@@ -714,9 +716,17 @@ ${GEM_LIBDIR}/test/po/li/plural.po
 ${GEM_LIBDIR}/test/po/li/plural_error.po
 ${GEM_LIBDIR}/test/po/po/plural.po
 ${GEM_LIBDIR}/test/po/sl/plural.po
+${GEM_LIBDIR}/test/pot/backslash.pot
+${GEM_LIBDIR}/test/pot/non_ascii.pot
+${GEM_LIBDIR}/test/pot/npgettext.pot
+${GEM_LIBDIR}/test/pot/nsgettext.pot
+${GEM_LIBDIR}/test/pot/pgettext.pot
+${GEM_LIBDIR}/test/pot/sgettext.pot
+${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test_class_info.rb
 ${GEM_LIBDIR}/test/test_gettext.rb
 ${GEM_LIBDIR}/test/test_locale_path.rb
+${GEM_LIBDIR}/test/test_mofile.rb
 ${GEM_LIBDIR}/test/test_parser.rb
 ${GEM_LIBDIR}/test/test_po_generation.rb
 ${GEM_LIBDIR}/test/test_pomessage.rb
@@ -726,6 +736,7 @@ ${GEM_LIBDIR}/test/test_textdomain_multi.rb
 ${GEM_LIBDIR}/test/test_textdomain_toplevel.rb
 ${GEM_LIBDIR}/test/test_thread.rb
 ${GEM_LIBDIR}/test/testlib/N_.rb
+${GEM_LIBDIR}/test/testlib/backslash.rb
 ${GEM_LIBDIR}/test/testlib/erb.rhtml
 ${GEM_LIBDIR}/test/testlib/erb.rxml
 ${GEM_LIBDIR}/test/testlib/gettext.rb
@@ -733,6 +744,7 @@ ${GEM_LIBDIR}/test/testlib/gladeparser.glade
 ${GEM_LIBDIR}/test/testlib/helper.rb
 ${GEM_LIBDIR}/test/testlib/multi_textdomain.rb
 ${GEM_LIBDIR}/test/testlib/ngettext.rb
+${GEM_LIBDIR}/test/testlib/non_ascii.rb
 ${GEM_LIBDIR}/test/testlib/npgettext.rb
 ${GEM_LIBDIR}/test/testlib/nsgettext.rb
 ${GEM_LIBDIR}/test/testlib/pgettext.rb
