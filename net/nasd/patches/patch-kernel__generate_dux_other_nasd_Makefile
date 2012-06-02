@@ -1,0 +1,15 @@
+$NetBSD: patch-kernel__generate_dux_other_nasd_Makefile,v 1.1 2012/06/02 23:34:56 dholland Exp $
+
+Set cpp and use -traditional when invoking nasd_rpcgen.
+
+--- kernel_generate/dux/other/nasd/Makefile~	2005-03-21 08:52:03.000000000 +0000
++++ kernel_generate/dux/other/nasd/Makefile
+@@ -61,7 +61,7 @@ IGROUP  = bin
+ IOWNER  = bin
+ 
+ NASD_RPCGEN_BIN = ../../../../../bin/nasd_rpcgen
+-NASD_RPCGEN = ${NASD_RPCGEN_BIN} -S_t
++NASD_RPCGEN = ${NASD_RPCGEN_BIN} -S_t -C 'cpp -traditional'
+ NASD_RPCGEN_INCLUDES = -I${MAKETOP}kernel/nasd/kernel_generate/dux -I${MAKETOP}kernel/nasd/kernel_generate/dux/other
+ 
+ NASD_OPTIONS_H=${MAKETOP}kernel/nasd/include/nasd/nasd_options.h
