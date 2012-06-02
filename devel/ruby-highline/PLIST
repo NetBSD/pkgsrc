@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/17 14:37:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/02 00:39:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/AUTHORS
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/INSTALL
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/doc/.cvsignore
@@ -21,13 +21,14 @@ ${GEM_LIBDIR}/examples/page_and_wrap.rb
 ${GEM_LIBDIR}/examples/password.rb
 ${GEM_LIBDIR}/examples/trapping_eof.rb
 ${GEM_LIBDIR}/examples/using_readline.rb
-${GEM_LIBDIR}/lib/highline.rb
 ${GEM_LIBDIR}/highline.gemspec
+${GEM_LIBDIR}/lib/highline.rb
 ${GEM_LIBDIR}/lib/highline/color_scheme.rb
 ${GEM_LIBDIR}/lib/highline/compatibility.rb
 ${GEM_LIBDIR}/lib/highline/import.rb
 ${GEM_LIBDIR}/lib/highline/menu.rb
 ${GEM_LIBDIR}/lib/highline/question.rb
+${GEM_LIBDIR}/lib/highline/simulate.rb
 ${GEM_LIBDIR}/lib/highline/string_extensions.rb
 ${GEM_LIBDIR}/lib/highline/style.rb
 ${GEM_LIBDIR}/lib/highline/system_extensions.rb
