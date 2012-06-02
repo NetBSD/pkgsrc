@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1746 2012/06/02 14:21:38 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1747 2012/06/02 14:29:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2718,3 +2718,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/py-networkx to 1.6 [obache 2012-06-02]
 	Updated math/py-gmpy to 1.15 [obache 2012-06-02]
 	Updated net/p5-Net-Server to 2.002 [obache 2012-06-02]
+	Updated net/pear-Net_LDAP2 to 2.0.12 [obache 2012-06-02]
