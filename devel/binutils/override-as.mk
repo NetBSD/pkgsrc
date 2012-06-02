@@ -1,14 +1,10 @@
-# $NetBSD: override-as.mk,v 1.2 2009/06/13 06:46:41 rillig Exp $
+# $NetBSD: override-as.mk,v 1.3 2012/06/02 11:54:38 cheusov Exp $
 
 # This Makefile fragment can be included by packages that wish to
 # override the default selection of as(1) and use the one from devel/binutils
 # instead.
 
-GNU_PREFIX_CMD= ${PKG_INFO} -Q GNU_PROGRAM_PREFIX binutils 2>/dev/null \
-		|| { cd ${BUILDLINK_PKGSRCDIR.binutils} \
-		&& ${MAKE} ${MAKEFLAGS} show-var VARNAME=GNU_PROGRAM_PREFIX; }
-
-PKG_AS=		${PREFIX}/bin/${:!${GNU_PREFIX_CMD}!}as
+PKG_AS=		${PREFIX}/bin/gnu/as
 
 .include "../../mk/compiler.mk"
 
