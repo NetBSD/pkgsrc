@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/04/29 16:11:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/02 01:18:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/examples/rubyforge.rb
 ${GEM_LIBDIR}/examples/spider.rb
 ${GEM_LIBDIR}/examples/wikipedia_links_to_philosophy.rb
 ${GEM_LIBDIR}/lib/mechanize.rb
+${GEM_LIBDIR}/lib/mechanize/chunked_termination_error.rb
 ${GEM_LIBDIR}/lib/mechanize/content_type_error.rb
 ${GEM_LIBDIR}/lib/mechanize/cookie.rb
 ${GEM_LIBDIR}/lib/mechanize/cookie_jar.rb
@@ -69,6 +70,34 @@ ${GEM_LIBDIR}/lib/mechanize/response_code_error.rb
 ${GEM_LIBDIR}/lib/mechanize/response_read_error.rb
 ${GEM_LIBDIR}/lib/mechanize/robots_disallowed_error.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/.document
+${GEM_LIBDIR}/lib/mechanize/test_case/bad_chunking_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/basic_auth_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/content_type_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/digest_auth_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/file_upload_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/form_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/gzip_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/header_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/http_refresh_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/infinite_redirect_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/infinite_refresh_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/many_cookies_as_string_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/many_cookies_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/modified_since_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/ntlm_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/one_cookie_no_spaces_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/one_cookie_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/quoted_value_cookie_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/redirect_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/referer_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/refresh_with_empty_url.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/refresh_without_url.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/response_code_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/send_cookies_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/server.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/servlets.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/verb_servlet.rb
 ${GEM_LIBDIR}/lib/mechanize/unauthorized_error.rb
 ${GEM_LIBDIR}/lib/mechanize/unsupported_scheme_error.rb
 ${GEM_LIBDIR}/lib/mechanize/util.rb
@@ -131,6 +160,7 @@ ${GEM_LIBDIR}/test/test_mechanize_download.rb
 ${GEM_LIBDIR}/test/test_mechanize_file.rb
 ${GEM_LIBDIR}/test/test_mechanize_file_connection.rb
 ${GEM_LIBDIR}/test/test_mechanize_file_request.rb
+${GEM_LIBDIR}/test/test_mechanize_file_response.rb
 ${GEM_LIBDIR}/test/test_mechanize_file_saver.rb
 ${GEM_LIBDIR}/test/test_mechanize_form.rb
 ${GEM_LIBDIR}/test/test_mechanize_form_check_box.rb
