@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/04/29 14:20:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/06/02 01:02:01 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -37,8 +37,12 @@ ${GEM_LIBDIR}/lib/facter/kernel.rb
 ${GEM_LIBDIR}/lib/facter/kernelmajversion.rb
 ${GEM_LIBDIR}/lib/facter/kernelrelease.rb
 ${GEM_LIBDIR}/lib/facter/kernelversion.rb
-${GEM_LIBDIR}/lib/facter/lsb.rb
+${GEM_LIBDIR}/lib/facter/lsbdistcodename.rb
+${GEM_LIBDIR}/lib/facter/lsbdistdescription.rb
+${GEM_LIBDIR}/lib/facter/lsbdistid.rb
+${GEM_LIBDIR}/lib/facter/lsbdistrelease.rb
 ${GEM_LIBDIR}/lib/facter/lsbmajdistrelease.rb
+${GEM_LIBDIR}/lib/facter/lsbrelease.rb
 ${GEM_LIBDIR}/lib/facter/macaddress.rb
 ${GEM_LIBDIR}/lib/facter/macosx.rb
 ${GEM_LIBDIR}/lib/facter/manufacturer.rb
@@ -191,7 +195,12 @@ ${GEM_LIBDIR}/spec/unit/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/id_spec.rb
 ${GEM_LIBDIR}/spec/unit/interfaces_spec.rb
 ${GEM_LIBDIR}/spec/unit/ipaddress6_spec.rb
+${GEM_LIBDIR}/spec/unit/lsbdistcodename_spec.rb
+${GEM_LIBDIR}/spec/unit/lsbdistdescription_spec.rb
+${GEM_LIBDIR}/spec/unit/lsbdistid_spec.rb
+${GEM_LIBDIR}/spec/unit/lsbdistrelease_spec.rb
 ${GEM_LIBDIR}/spec/unit/lsbmajdistrelease_spec.rb
+${GEM_LIBDIR}/spec/unit/lsbrelease_spec.rb
 ${GEM_LIBDIR}/spec/unit/macaddress_spec.rb
 ${GEM_LIBDIR}/spec/unit/memory_spec.rb
 ${GEM_LIBDIR}/spec/unit/operatingsystem_spec.rb
