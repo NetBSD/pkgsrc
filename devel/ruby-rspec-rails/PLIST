@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/20 13:42:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/02 00:48:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -135,6 +135,7 @@ ${GEM_LIBDIR}/spec/rspec/rails/matchers/render_template_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/route_to_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/mocks/mock_model_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/mocks/stub_model_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/setup_and_teardown_adapter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/view_rendering_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/ar_classes.rb
