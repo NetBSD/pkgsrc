@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2012/05/29 21:51:15 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/02 07:10:57 cheusov Exp $
 bin/ged
 bin/gred
 gnu/bin/ed
 gnu/bin/red
+gnu/man/man1/ed.1
+gnu/man/man1/red.1
 info/ged.info
 man/man1/ged.1
 man/man1/gred.1
