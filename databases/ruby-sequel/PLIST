@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/06/01 14:23:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/06/02 00:35:15 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/doc/dataset_filtering.rdoc
 ${GEM_LIBDIR}/doc/mass_assignment.rdoc
 ${GEM_LIBDIR}/doc/migration.rdoc
 ${GEM_LIBDIR}/doc/model_hooks.rdoc
+${GEM_LIBDIR}/doc/object_model.rdoc
 ${GEM_LIBDIR}/doc/opening_databases.rdoc
 ${GEM_LIBDIR}/doc/prepared_statements.rdoc
 ${GEM_LIBDIR}/doc/querying.rdoc
@@ -67,6 +68,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.32.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.33.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.34.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.35.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.36.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
@@ -90,6 +92,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/dbi.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/do.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/do/mysql.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/do/postgres.rb
+${GEM_LIBDIR}/lib/sequel/adapters/jdbc/progress.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/do/sqlite.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/firebird.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/ibmdb.rb
@@ -179,6 +182,8 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_array_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_hstore.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_hstore_ops.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_inet.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_json.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_statement_cache.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
@@ -213,6 +218,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/composition.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dataset_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/defaults_setter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dirty.rb
+${GEM_LIBDIR}/lib/sequel/plugins/eager_each.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/force_encoding.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/hook_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/identity_map.rb
@@ -288,6 +294,7 @@ ${GEM_LIBDIR}/spec/extensions/core_extensions_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
+${GEM_LIBDIR}/spec/extensions/eager_each_spec.rb
 ${GEM_LIBDIR}/spec/extensions/force_encoding_spec.rb
 ${GEM_LIBDIR}/spec/extensions/hook_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/identity_map_spec.rb
@@ -311,6 +318,8 @@ ${GEM_LIBDIR}/spec/extensions/pg_array_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_auto_parameterize_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_hstore_ops_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_hstore_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_inet_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_json_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_statement_cache_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_safe_spec.rb
