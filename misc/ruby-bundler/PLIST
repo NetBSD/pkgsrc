@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/17 16:13:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/02 00:56:53 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -101,6 +101,7 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/shell/html.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/task.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/util.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/version.rb
+${GEM_LIBDIR}/lib/bundler/vendored_persistent.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_thor.rb
 ${GEM_LIBDIR}/lib/bundler/version.rb
 ${GEM_LIBDIR}/lib/bundler/vlad.rb
