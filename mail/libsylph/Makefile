@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/03/03 00:12:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/02 04:28:45 taca Exp $
 #
 
-DISTNAME=	libsylph-0.3.0
-PKGREVISION=	5
+DISTNAME=	libsylph-1.1.0
 CATEGORIES=	mail
-MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/libsylph/alpha/
+MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/libsylph/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
