@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/17 15:17:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/02 00:51:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rvmrc
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Appraisals
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -38,6 +38,10 @@ ${GEM_LIBDIR}/features/test_unit_groups_and_filters_complex.feature
 ${GEM_LIBDIR}/features/test_unit_groups_using_filter_class.feature
 ${GEM_LIBDIR}/features/test_unit_without_simplecov.feature
 ${GEM_LIBDIR}/features/unicode_compatiblity.feature
+${GEM_LIBDIR}/gemfiles/multi_json-legacy.gemfile
+${GEM_LIBDIR}/gemfiles/multi_json-legacy.gemfile.lock
+${GEM_LIBDIR}/gemfiles/multi_json-new.gemfile
+${GEM_LIBDIR}/gemfiles/multi_json-new.gemfile.lock
 ${GEM_LIBDIR}/lib/simplecov.rb
 ${GEM_LIBDIR}/lib/simplecov/adapters.rb
 ${GEM_LIBDIR}/lib/simplecov/command_guesser.rb
@@ -80,10 +84,11 @@ ${GEM_LIBDIR}/test/fixtures/frameworks/rspec_bad.rb
 ${GEM_LIBDIR}/test/fixtures/frameworks/rspec_good.rb
 ${GEM_LIBDIR}/test/fixtures/frameworks/testunit_bad.rb
 ${GEM_LIBDIR}/test/fixtures/frameworks/testunit_good.rb
+${GEM_LIBDIR}/test/fixtures/iso-8859.rb
 ${GEM_LIBDIR}/test/fixtures/resultset1.rb
 ${GEM_LIBDIR}/test/fixtures/resultset2.rb
-${GEM_LIBDIR}/test/fixtures/utf-8.rb
 ${GEM_LIBDIR}/test/fixtures/sample.rb
+${GEM_LIBDIR}/test/fixtures/utf-8.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/shoulda_macros.rb
 ${GEM_LIBDIR}/test/test_1_8_fallbacks.rb
