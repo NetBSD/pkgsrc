@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/01/22 20:14:03 abs Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/02 18:54:32 dholland Exp $
 
 DISTNAME=	Task-Plack-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -38,8 +38,8 @@ DEPENDS+= p5-Plack-Handler-SCGI>=0.02:../../www/p5-Plack-Handler-SCGI
 DEPENDS+= p5-Plack-Middleware-Auth-Digest>=0.03:../../www/p5-Plack-Middleware-Auth-Digest
 DEPENDS+= p5-Plack-Middleware-ConsoleLogger>=0.02:../../www/p5-Plack-Middleware-ConsoleLogger
 DEPENDS+= p5-Plack-Middleware-Debug>=0.09:../../www/p5-Plack-Middleware-Debug
-DEPENDS+= p5-Plack-Middleware-Deflater>=.0.3:../../www/p5-Plack-Middleware-Deflater
-DEPENDS+= p5-Plack-Middleware-File-Sass>=.0.1:../../www/p5-Plack-Middleware-File-Sass
+DEPENDS+= p5-Plack-Middleware-Deflater>=0.3:../../www/p5-Plack-Middleware-Deflater
+DEPENDS+= p5-Plack-Middleware-File-Sass>=0.1:../../www/p5-Plack-Middleware-File-Sass
 DEPENDS+= p5-Plack-Middleware-Header>=0.03:../../www/p5-Plack-Middleware-Header
 DEPENDS+= p5-Plack-Middleware-JSConcat>=0.29:../../www/p5-Plack-Middleware-JSConcat
 DEPENDS+= p5-Plack-Middleware-ReverseProxy>=0.06:../../www/p5-Plack-Middleware-ReverseProxy
