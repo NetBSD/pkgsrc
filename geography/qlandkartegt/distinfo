@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/01/28 13:51:57 jkunz Exp $
+$NetBSD: distinfo,v 1.7 2012/06/02 16:34:19 drochner Exp $
 
-SHA1 (qlandkartegt-1.3.2.tar.gz) = 38f2204a94b8f0c47e1ae5d693c2384586aea1fb
-RMD160 (qlandkartegt-1.3.2.tar.gz) = 062c4fa1bddf95319493e2deb225018cf5e21c0d
-Size (qlandkartegt-1.3.2.tar.gz) = 4549942 bytes
+SHA1 (qlandkartegt-1.4.2.tar.gz) = 42506faeffe5d6ada0d38861a9f6dce87e1e2211
+RMD160 (qlandkartegt-1.4.2.tar.gz) = 00847079547f81718fcc45c87a6691862b4d1ff8
+Size (qlandkartegt-1.4.2.tar.gz) = 6347471 bytes
 SHA1 (patch-aa) = e81de01cd6227b6b486eeee244c31ee486363d6a
 SHA1 (patch-ab) = 86ca39903638df9aa5dd904cf1d071dd851ca2b7

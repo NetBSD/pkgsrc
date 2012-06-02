@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2012/01/28 13:51:57 jkunz Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/02 16:34:19 drochner Exp $
+bin/cache2gtiff
+bin/map2gcm
+bin/map2rmap
 bin/qlandkartegt
+man/man1/qlandkartegt.1
+share/applications/qlandkartegt.desktop
+share/pixmaps/qlandkartegt.png
+share/qlandkartegt/translations/qlandkartegt_cs.qm
 share/qlandkartegt/translations/qlandkartegt_de.qm
 share/qlandkartegt/translations/qlandkartegt_es_ES.qm
 share/qlandkartegt/translations/qlandkartegt_fr.qm
 share/qlandkartegt/translations/qlandkartegt_it_IT.qm
-share/qlandkartegt/translations/qlandkartegt_nl_NL.qm
+share/qlandkartegt/translations/qlandkartegt_nl.qm
 share/qlandkartegt/translations/qlandkartegt_ru.qm
-share/applications/qlandkartegt.desktop
-man/man1/qlandkartegt.1
-share/pixmaps/qlandkartegt.png
