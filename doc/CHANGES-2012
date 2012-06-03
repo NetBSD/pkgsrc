@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1789 2012/06/03 17:55:25 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1790 2012/06/03 17:55:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2762,3 +2762,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated wm/twm to 1.0.7 [wiz 2012-06-03]
 	Updated x11/appres to 1.0.3 [wiz 2012-06-03]
 	Updated x11/beforelight to 1.0.4 [wiz 2012-06-03]
+	Updated x11/bitmap to 1.0.6 [wiz 2012-06-03]

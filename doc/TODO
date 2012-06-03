@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11183 2012/06/03 17:55:25 wiz Exp $
+$NetBSD: TODO,v 1.11184 2012/06/03 17:55:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -430,7 +430,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o binutils-2.22 [wip]
 	o bioperl-1.5.0
 	o bitlbee-3.0.5
-	o bitmap-1.0.6
 	o blender-2.63a
 	o blur6ex-0.3.462
 	o bmon-2.1.0
