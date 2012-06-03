@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11221 2012/06/03 18:33:52 wiz Exp $
+$NetBSD: TODO,v 1.11222 2012/06/03 18:34:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -553,7 +553,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o emerillon-0.1.90
 	o enca-1.13
-	o encodings-1.0.4
 	o enlightenment-1.0.9
 	o eog-3.4.0
 	o eog-plugins-3.4.1
