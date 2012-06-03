@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/11/09 18:01:19 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/03 18:34:10 wiz Exp $
 #
 
-DISTNAME=		encodings-1.0.3
+DISTNAME=		encodings-1.0.4
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
