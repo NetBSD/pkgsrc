@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2010,v 1.4394 2012/05/31 08:23:17 wiz Exp $
+$NetBSD: CHANGES-2010,v 1.4395 2012/06/03 18:44:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2010:
 
@@ -85,6 +85,7 @@ Changes to the packages collection and infrastructure in 2010:
 	Updated games/rftg to 0.6.0 [wiz 2010-01-15]
 	Updated security/pam_ssh_agent_auth to 0.9.2 [agc 2010-01-15]
 	Updated math/nickle to 2.69 [tnn 2010-01-15]
+	Updated x11/xf86dgaproto to 2.1 [tnn 2010-01-15]
 	Updated mail/sendmail to 8.14.4 [jnemeth 2010-01-16]
 	Updated mail/libmilter to 8.14.4 [jnemeth 2010-01-16]
 	Updated devel/libthai to 0.1.13 [obache 2010-01-16]
