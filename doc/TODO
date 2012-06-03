@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11227 2012/06/03 18:37:25 wiz Exp $
+$NetBSD: TODO,v 1.11228 2012/06/03 18:38:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1122,7 +1122,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o recordproto-1.14.2
 	o remind-3.1.12
 	o rendercheck-1.4
-	o renderproto-0.11.1
 	o rep-gtk-0.90.8
 	o resize_image-0.7
 	o resourceproto-1.2.0
