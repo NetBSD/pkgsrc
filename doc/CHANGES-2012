@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1760 2012/06/03 17:28:02 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1761 2012/06/03 17:28:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2733,3 +2733,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libXau to 1.0.7 [wiz 2012-06-03]
 	Updated x11/libXdmcp to 1.1.1 [wiz 2012-06-03]
 	Updated x11/xcb-proto to 1.7.1 [wiz 2012-06-03]
+	Updated x11/py-xcbgen to 1.7.1 [wiz 2012-06-03]
