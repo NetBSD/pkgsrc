@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/10 19:07:49 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/06/03 18:37:16 wiz Exp $
 
-SHA1 (kbproto-1.0.5.tar.bz2) = d95fada09399568c434729b436e1a09503e15b7a
-RMD160 (kbproto-1.0.5.tar.bz2) = 76f97a2a2e40328bd91a7a9de4030ceac788fb6e
-Size (kbproto-1.0.5.tar.bz2) = 111270 bytes
+SHA1 (kbproto-1.0.6.tar.bz2) = a2cc82357c22a1f4d6243017982c32703c95575c
+RMD160 (kbproto-1.0.6.tar.bz2) = e46be5686436cb2ffbf006ad853df2077141a5f5
+Size (kbproto-1.0.6.tar.bz2) = 256988 bytes
