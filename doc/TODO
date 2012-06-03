@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11184 2012/06/03 17:55:52 wiz Exp $
+$NetBSD: TODO,v 1.11185 2012/06/03 17:57:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eclipse-3.2.0
 	o ed-1.6
 	o ede-2.0
-	o editres-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.9
 	o egtk-0.3.6.2
