@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11235 2012/06/03 19:41:05 wiz Exp $
+$NetBSD: TODO,v 1.11236 2012/06/03 19:41:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o coccigrep-1.8
 	o colorize-0.3.4
 	o colortail-0.3.3
-	o compositeproto-0.4.2
 	o cone-0.87
 	o connect-1.96
 	o consolekit-0.4.5

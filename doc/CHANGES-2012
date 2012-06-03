@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1840 2012/06/03 19:41:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1841 2012/06/03 19:41:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2815,3 +2815,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xf86vidmodeproto to 2.3.1 [wiz 2012-06-03]
 	Updated x11/xtrans to 1.2.7 [wiz 2012-06-03]
 	Updated x11/applewmproto to 1.4.2 [wiz 2012-06-03]
+	Updated x11/compositeproto to 0.4.2 [wiz 2012-06-03]
