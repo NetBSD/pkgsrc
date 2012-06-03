@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2012/04/03 09:08:33 obache Exp $
+$NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
 
---- configure.orig	2010-11-04 17:28:14.000000000 +0000
+--- configure.orig	2012-05-23 08:56:30.000000000 +0000
 +++ configure
-@@ -11414,7 +11414,7 @@ else
-   esac
- fi
- 
-- if test -z "$VERSION_SCRIPT_FLAGS"; then
-+ if test \! -z "$VERSION_SCRIPT_FLAGS"; then
-   USE_VERSION_SCRIPT_TRUE=
-   USE_VERSION_SCRIPT_FALSE='#'
- else
-@@ -13364,7 +13364,7 @@ fi
+@@ -14088,7 +14088,7 @@ fi
  fi
  
  
@@ -20,15 +11,15 @@ $NetBSD: patch-ab,v 1.23 2012/04/03 09:08:33 obache Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
-@@ -13815,13 +13815,13 @@ else
+@@ -14553,13 +14553,13 @@ else
          if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
-         ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
- if test "x$ac_cv_header_pthread_h" = x""yes; then :
+             ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
+ if test "x$ac_cv_header_pthread_h" = xyes; then :
 -  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in -lpthread" >&5
 -$as_echo_n "checking for pthread_join in -lpthread... " >&6; }
 +  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
 +$as_echo_n "checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
- if test "${ac_cv_lib_pthread_pthread_join+set}" = set; then :
+ if ${ac_cv_lib_pthread_pthread_join+:} false; then :
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -37,16 +28,16 @@ $NetBSD: patch-ab,v 1.23 2012/04/03 09:08:33 obache Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -13853,7 +13853,7 @@ fi
+@@ -14591,7 +14591,7 @@ fi
  $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
- if test "x$ac_cv_lib_pthread_pthread_join" = x""yes; then :
+ if test "x$ac_cv_lib_pthread_pthread_join" = xyes; then :
  
--	       THREAD_LIBS="-lpthread"
-+	       THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+-                THREAD_LIBS="-lpthread"
++                THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  
  $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
  
-@@ -13879,7 +13879,7 @@ fi
+@@ -14613,12 +14613,12 @@ fi
         *beos*) WITH_THREADS="1"
  	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
         ;;
@@ -55,7 +46,13 @@ $NetBSD: patch-ab,v 1.23 2012/04/03 09:08:33 obache Exp $
             if test "${GCC}" = "yes" ; then
  	       GCC_VERSION=`${CC} --version | head -1 | awk '{print $3}'`
  	       GCC_MAJOR=`echo ${GCC_VERSION} | sed 's+\..*++'`
-@@ -13901,6 +13901,10 @@ fi
+ 	       GCC_MEDIUM=`echo ${GCC_VERSION} | sed 's+[0-9]*\.++' | sed 's+\..*++'`
+-	       if test "${THREAD_LIBS}" = "-lpthread" ; then
++	       if test "${THREAD_LIBS}" = "${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" ; then
+ 	           if expr ${GCC_MEDIUM} \> 2 \& ${GCC_MAJOR} = 3 > /dev/null
+ 		   then
+ 		       THREAD_LIBS=""
+@@ -14635,6 +14635,10 @@ fi
  	       fi
  	   fi
         ;;
@@ -66,18 +63,14 @@ $NetBSD: patch-ab,v 1.23 2012/04/03 09:08:33 obache Exp $
      esac
      if test "$WITH_THREADS" = "1" ; then
  	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
-@@ -14582,10 +14586,10 @@ $as_echo "#define snprintf _snprintf" >>
+@@ -15310,10 +15314,6 @@ case "$host" in
  
- $as_echo "#define vsnprintf _vsnprintf" >>confdefs.h
+ $as_echo "#define _WINSOCKAPI_ 1" >>confdefs.h
  
 - if test "${PYTHON}" != ""
 - then
--   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython${PYTHON_VERSION//./}"
+-   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython$(echo ${PYTHON_VERSION} | tr -d .)"
 - fi
-+# if test "${PYTHON}" != ""
-+# then
-+#   WIN32_EXTRA_PYTHON_LIBADD="-L${pythondir}/../../libs -lpython${PYTHON_VERSION//./}"
-+# fi
   ;;
   *-*-cygwin*)
   CYGWIN_EXTRA_LDFLAGS="-no-undefined"
