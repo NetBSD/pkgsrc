@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/11/09 19:10:34 tnn Exp $
+$NetBSD: distinfo,v 1.4 2012/06/03 18:10:39 wiz Exp $
 
-SHA1 (xclock-1.0.4.tar.bz2) = 1987cafb3163c6b68bc7ecfbe143c8cd373d64bb
-RMD160 (xclock-1.0.4.tar.bz2) = a53a05a4cbf7b301da8d96ad09d58ae2d6d4543d
-Size (xclock-1.0.4.tar.bz2) = 128766 bytes
+SHA1 (xclock-1.0.6.tar.bz2) = 993817c9e3cc2baaaebe52b29fa2ad26e58b124d
+RMD160 (xclock-1.0.6.tar.bz2) = ebdba0264b66bee85a73d1ee41bc6f7f5ff3edd0
+Size (xclock-1.0.6.tar.bz2) = 156817 bytes
