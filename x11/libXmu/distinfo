@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/01/15 18:40:25 tnn Exp $
+$NetBSD: distinfo,v 1.5 2012/06/03 17:34:50 wiz Exp $
 
-SHA1 (libXmu-1.0.5.tar.bz2) = e7ff5960f2374852b941f909cdbdeafe7d29322f
-RMD160 (libXmu-1.0.5.tar.bz2) = 3d07f6ca5dc5ddb571dd25e35253dba3baff834b
-Size (libXmu-1.0.5.tar.bz2) = 323286 bytes
+SHA1 (libXmu-1.1.1.tar.bz2) = 3e280aa927d78c05f94db6c7ae606f7ad132b495
+RMD160 (libXmu-1.1.1.tar.bz2) = 9b04624ee16ebd10c07b9554771e18d16d77374f
+Size (libXmu-1.1.1.tar.bz2) = 383473 bytes
