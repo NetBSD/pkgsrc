@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1770 2012/06/03 17:38:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1771 2012/06/03 17:38:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2743,3 +2743,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libXpm to 3.5.10 [wiz 2012-06-03]
 	Updated x11/libXaw to 1.0.11 [wiz 2012-06-03]
 	Updated x11/libXfixes to 5.0 [wiz 2012-06-03]
+	Updated x11/libXcomposite to 0.4.3 [wiz 2012-06-03]
