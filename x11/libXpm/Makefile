@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/04/22 13:45:13 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/06/03 17:35:38 wiz Exp $
 #
 
-DISTNAME=		libXpm-3.5.8
-PKGREVISION=		1
+DISTNAME=		libXpm-3.5.10
 CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
