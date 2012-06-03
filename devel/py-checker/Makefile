@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2011/10/15 11:59:13 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/06/03 22:32:59 wiz Exp $
 
-DISTNAME=	pychecker-0.8.14
+DISTNAME=	pychecker-0.8.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pychecker/}
 
@@ -16,7 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-EGG_NAME=	PyChecker-${PKGVERSION_NOREV}
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/pychecker ${DESTDIR}${PREFIX}/bin/pychecker${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
