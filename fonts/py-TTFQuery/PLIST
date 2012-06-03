@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/06/03 22:59:03 wiz Exp $
+bin/ttffamily${PYVERSSUFFIX}
+bin/ttffiles${PYVERSSUFFIX}
+bin/ttfgroups${PYVERSSUFFIX}
+bin/ttfmetadata${PYVERSSUFFIX}
 ${PYSITELIB}/ttfquery/__init__.py
 ${PYSITELIB}/ttfquery/__init__.pyc
 ${PYSITELIB}/ttfquery/__init__.pyo
@@ -8,15 +12,9 @@ ${PYSITELIB}/ttfquery/_scriptregistry.pyo
 ${PYSITELIB}/ttfquery/describe.py
 ${PYSITELIB}/ttfquery/describe.pyc
 ${PYSITELIB}/ttfquery/describe.pyo
-${PYSITELIB}/ttfquery/family_query.py
-${PYSITELIB}/ttfquery/family_query.pyc
-${PYSITELIB}/ttfquery/family_query.pyo
 ${PYSITELIB}/ttfquery/findsystem.py
 ${PYSITELIB}/ttfquery/findsystem.pyc
 ${PYSITELIB}/ttfquery/findsystem.pyo
-${PYSITELIB}/ttfquery/font_family_groups.py
-${PYSITELIB}/ttfquery/font_family_groups.pyc
-${PYSITELIB}/ttfquery/font_family_groups.pyo
 ${PYSITELIB}/ttfquery/glyph.py
 ${PYSITELIB}/ttfquery/glyph.pyc
 ${PYSITELIB}/ttfquery/glyph.pyo
@@ -26,9 +24,15 @@ ${PYSITELIB}/ttfquery/glyphquery.pyo
 ${PYSITELIB}/ttfquery/guessdescription.py
 ${PYSITELIB}/ttfquery/guessdescription.pyc
 ${PYSITELIB}/ttfquery/guessdescription.pyo
-${PYSITELIB}/ttfquery/metadata_query.py
-${PYSITELIB}/ttfquery/metadata_query.pyc
-${PYSITELIB}/ttfquery/metadata_query.pyo
+${PYSITELIB}/ttfquery/ttffamily.py
+${PYSITELIB}/ttfquery/ttffamily.pyc
+${PYSITELIB}/ttfquery/ttffamily.pyo
 ${PYSITELIB}/ttfquery/ttffiles.py
 ${PYSITELIB}/ttfquery/ttffiles.pyc
 ${PYSITELIB}/ttfquery/ttffiles.pyo
+${PYSITELIB}/ttfquery/ttfgroups.py
+${PYSITELIB}/ttfquery/ttfgroups.pyc
+${PYSITELIB}/ttfquery/ttfgroups.pyo
+${PYSITELIB}/ttfquery/ttfmetadata.py
+${PYSITELIB}/ttfquery/ttfmetadata.pyc
+${PYSITELIB}/ttfquery/ttfmetadata.pyo
