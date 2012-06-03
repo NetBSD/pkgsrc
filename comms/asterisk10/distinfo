@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2012/05/04 16:06:13 joerg Exp $
+$NetBSD: distinfo,v 1.12 2012/06/03 23:34:45 jnemeth Exp $
 
-SHA1 (asterisk-10.4.0/asterisk-10.4.0.tar.gz) = c39ef62f03368663fd00c81138c9f4efc1c496fa
-RMD160 (asterisk-10.4.0/asterisk-10.4.0.tar.gz) = dd767c256773cc2a6c33a3c270d6213f64b04358
-Size (asterisk-10.4.0/asterisk-10.4.0.tar.gz) = 25021672 bytes
-SHA1 (asterisk-10.4.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-10.4.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-10.4.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (asterisk-10.4.2/asterisk-10.4.2.tar.gz) = f22be09eb4ba2643b8d4d9baef593959bfa6b98e
+RMD160 (asterisk-10.4.2/asterisk-10.4.2.tar.gz) = 4f973347c24ad9d9cfd3dbf698890ccd93c90f67
+Size (asterisk-10.4.2/asterisk-10.4.2.tar.gz) = 25009922 bytes
+SHA1 (asterisk-10.4.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-10.4.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-10.4.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
 SHA1 (patch-Makefile) = 900252eff84bda22d2cbe09e0f22505531284cbb
 SHA1 (patch-apps_app__dial.c) = 2109ed50406dedc90a300981a3a7500b1397ff3a
 SHA1 (patch-apps_app__followme.c) = a0a507986ec9722337d46fdaaac0a79d23a634e4
