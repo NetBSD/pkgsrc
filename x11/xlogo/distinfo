@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 19:48:23 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/06/03 18:18:49 wiz Exp $
 
-SHA1 (xlogo-1.0.2.tar.bz2) = 79f0370e1944194cb6dcce9c4efd144be69e8657
-RMD160 (xlogo-1.0.2.tar.bz2) = 94b5ae0539eb378ea76fe3d5353c24e2ff82d55a
-Size (xlogo-1.0.2.tar.bz2) = 111909 bytes
+SHA1 (xlogo-1.0.4.tar.bz2) = 8087ca621c48506b26bb2cf3219a957b31537267
+RMD160 (xlogo-1.0.4.tar.bz2) = 025f1446e2cdf749a7ec85c5486b6fa7de4053e1
+Size (xlogo-1.0.4.tar.bz2) = 125967 bytes
