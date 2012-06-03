@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/08/26 11:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/03 17:31:50 wiz Exp $
 #
 
-DISTNAME=		libXScrnSaver-1.2.0
+DISTNAME=		libXScrnSaver-1.2.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
