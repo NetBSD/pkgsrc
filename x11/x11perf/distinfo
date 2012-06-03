@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/09 19:23:21 tnn Exp $
+$NetBSD: distinfo,v 1.3 2012/06/03 18:02:24 wiz Exp $
 
-SHA1 (x11perf-1.5.1.tar.bz2) = d1f85da3df5b216b64c1735d109380214787222d
-RMD160 (x11perf-1.5.1.tar.bz2) = 38dc74fca4c3f3a87aad1b41d3ca2db7405e3675
-Size (x11perf-1.5.1.tar.bz2) = 151356 bytes
+SHA1 (x11perf-1.5.4.tar.bz2) = d820e95ee6698e7036d4823f5ac5669b79acea86
+RMD160 (x11perf-1.5.4.tar.bz2) = 43333d9f90833aeb03546f5c9d8b7c1b1eb7e1e2
+Size (x11perf-1.5.4.tar.bz2) = 167655 bytes
