@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.8 2008/06/02 08:20:05 dholland Exp $
+$NetBSD: patch-ac,v 1.9 2012/06/03 21:44:59 wiz Exp $
 
---- configure.orig	2004-01-21 12:43:52.000000000 -0500
-+++ configure	2008-06-02 04:18:48.000000000 -0400
-@@ -5741,6 +5741,7 @@
+--- configure.orig	2012-06-01 13:15:40.000000000 +0000
++++ configure
+@@ -11829,6 +11829,7 @@ $as_echo "libraries $x_libraries, header
  fi
  
  
 +if false ; then
  # Check if makeinfo support html output. If it doesn't, pretend it's missing
  # rather than failing rebuilding the documentation.
- echo $ac_n "checking if makeinfo supports html output""... $ac_c" 1>&6
-@@ -5763,6 +5764,7 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if makeinfo supports html output" >&5
+@@ -11851,6 +11852,7 @@ then
  else
  	MAKEINFO="$MAKEINFO --no-split"
  fi
@@ -18,12 +18,3 @@ $NetBSD: patch-ac,v 1.8 2008/06/02 08:20:05 dholland Exp $
  
  # ====================
  # Check for libraries.
-@@ -7743,7 +7745,7 @@
- 	# systems, libaudiofile, libasound on Linux)
- 	if test $libmikmod_dynload != no
- 	then
--		ESD_LIBS="`echo $ESD_LIBS|sed -e 's/-lesd//'|sed -e 's/-lasound//'|sed -e 's/-laudiofile//'|sed -e 's/-lossaudio//'`"
-+		ESD_LIBS="`echo $ESD_LIBS|sed -e 's/-lesd//g'|sed -e 's/-lasound//g'|sed -e 's/-laudiofile//g'|sed -e 's/-lossaudio//g'`"
- 	fi
- 	LIBRARY_LIB="$ESD_LIBS $LIBRARY_LIB"
- fi
