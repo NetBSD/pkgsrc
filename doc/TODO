@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11202 2012/06/03 18:17:00 wiz Exp $
+$NetBSD: TODO,v 1.11203 2012/06/03 18:17:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1408,7 +1408,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
 	o xkeyboard-config-2.6
-	o xkill-1.0.3
 	o xli-2006.11.10
 	o xload-1.1.1
 	o xlog-2.0.5
