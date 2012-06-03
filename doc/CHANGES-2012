@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1757 2012/06/03 17:24:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1758 2012/06/03 17:25:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2730,3 +2730,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libFS to 1.0.4 [wiz 2012-06-03]
 	Updated x11/libICE to 1.0.8 [wiz 2012-06-03]
 	Updated x11/libSM to 1.2.1 [wiz 2012-06-03]
+	Updated x11/libXau to 1.0.7 [wiz 2012-06-03]
