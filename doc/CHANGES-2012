@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1795 2012/06/03 18:01:01 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1796 2012/06/03 18:01:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2768,3 +2768,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ico to 1.0.3 [wiz 2012-06-03]
 	Updated x11/listres to 1.0.3 [wiz 2012-06-03]
 	Updated x11/luit to 1.1.1 [wiz 2012-06-03]
+	Updated x11/setxkbmap to 1.3.0 [wiz 2012-06-03]
