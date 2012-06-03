@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/10 19:22:42 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/06/03 18:09:52 wiz Exp $
 
-SHA1 (xcalc-1.0.3.tar.bz2) = 0871efa12f0b28228457b898c3487bc8723d1ea8
-RMD160 (xcalc-1.0.3.tar.bz2) = 337080ba6b4691c67f70217a61d8b432e6df313c
-Size (xcalc-1.0.3.tar.bz2) = 120230 bytes
+SHA1 (xcalc-1.0.4.1.tar.bz2) = 2206fc4bf3719c43fa13a6c64a37b40607d8e5e2
+RMD160 (xcalc-1.0.4.1.tar.bz2) = dafded5f4462f4af12d8a9d7b547c654105d7445
+Size (xcalc-1.0.4.1.tar.bz2) = 124184 bytes
