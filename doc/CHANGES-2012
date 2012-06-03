@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1860 2012/06/03 22:03:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1861 2012/06/03 22:18:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2836,3 +2836,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/libmikmod to 3.2.0 [wiz 2012-06-03]
 	Updated misc/py-anki to 1.2.11 [wiz 2012-06-03]
 	Updated print/mupdf to 1.0 [wiz 2012-06-03]
+	Updated textproc/libxml2 to 2.8.0 [wiz 2012-06-03]
