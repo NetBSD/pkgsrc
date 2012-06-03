@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1858 2012/06/03 21:45:19 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1859 2012/06/03 21:47:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2834,3 +2834,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/py-beautifulsoup4 version 4.1.0 [wiz 2012-06-03]
 	Updated security/libtasn1 to 2.13 [wiz 2012-06-03]
 	Updated audio/libmikmod to 3.2.0 [wiz 2012-06-03]
+	Updated misc/py-anki to 1.2.11 [wiz 2012-06-03]
