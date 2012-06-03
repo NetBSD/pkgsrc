@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/07/22 12:56:46 wiz Exp $
+$NetBSD: distinfo,v 1.6 2012/06/03 18:38:01 wiz Exp $
 
-SHA1 (renderproto-0.11.tar.bz2) = d30cf508b1a1b5f0deb1c6db41ba2f4e57680637
-RMD160 (renderproto-0.11.tar.bz2) = 40bed4558e84eb0629b5253f2b9439405ab9f8c0
-Size (renderproto-0.11.tar.bz2) = 66112 bytes
-SHA1 (patch-aa) = a174093860f2f2a709a9415c2ee9cb4b68d3f08d
+SHA1 (renderproto-0.11.1.tar.bz2) = 7ae9868a358859fe539482b02414aa15c2d8b1e4
+RMD160 (renderproto-0.11.1.tar.bz2) = ec176a258b707fa560f8f0190e31fed6478fec74
+Size (renderproto-0.11.1.tar.bz2) = 105741 bytes
+SHA1 (patch-aa) = 932af57551cbde10f0402b2704fe4967842e95c9

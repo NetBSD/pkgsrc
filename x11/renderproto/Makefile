@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/07/22 12:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/03 18:38:01 wiz Exp $
 #
 
-DISTNAME=		renderproto-0.11
+DISTNAME=		renderproto-0.11.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,6 @@ CONFLICTS+=		renderext-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/renderproto.pc.in
-USE_LANGUAGES=		# none, not even C
+USE_LANGUAGES=		c
 
 .include "../../mk/bsd.pkg.mk"
