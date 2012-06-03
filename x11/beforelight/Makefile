@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/09/24 13:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/03 17:55:03 wiz Exp $
 #
 
-DISTNAME=		beforelight-1.0.3
-PKGREVISION=		1
+DISTNAME=		beforelight-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
