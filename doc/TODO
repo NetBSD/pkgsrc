@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11248 2012/06/03 21:10:36 wiz Exp $
+$NetBSD: TODO,v 1.11249 2012/06/03 21:15:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1095,7 +1095,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-gobject-3.2.2
 	o py-karaoke-0.7.3
-	o py-libanki-1.2.11
 	o py-moin-1.9.4
 	o py-mxDateTime-3.2.0
 	o py-simplejson-2.5.2
