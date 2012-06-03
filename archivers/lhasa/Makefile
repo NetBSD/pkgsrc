@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/05/08 06:13:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/03 10:20:04 wiz Exp $
 #
 
-DISTNAME=	lhasa-0.0.5
+DISTNAME=	lhasa-0.0.7
 CATEGORIES=	archivers
 MASTER_SITES=	http://cloud.github.com/downloads/fragglet/lhasa/
 
@@ -17,5 +17,7 @@ USE_LIBTOOL=	yes
 TEST_TARGET=	check
 
 CONFLICTS=	lha-[0-9]*
+
+PKGCONFIG_OVERRIDE=  liblhasa.pc.in
 
 .include "../../mk/bsd.pkg.mk"
