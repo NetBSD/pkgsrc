@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/01/15 18:08:11 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/06/03 18:40:43 wiz Exp $
 include/X11/Xtrans/Xtrans.c
 include/X11/Xtrans/Xtrans.h
 include/X11/Xtrans/Xtransint.h
@@ -8,5 +8,5 @@ include/X11/Xtrans/Xtranstli.c
 include/X11/Xtrans/Xtransutil.c
 include/X11/Xtrans/transport.c
 share/aclocal/xtrans.m4
+share/doc/xtrans/xtrans.xml
 share/pkgconfig/xtrans.pc
-@pkgdir share/doc/xtrans
