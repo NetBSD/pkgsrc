@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/12 18:03:25 joerg Exp $
+$NetBSD: distinfo,v 1.2 2012/06/03 18:14:03 wiz Exp $
 
-SHA1 (xfontsel-1.0.2.tar.bz2) = c492444a3bada3e44bc0319cfd85a89cd7770b84
-RMD160 (xfontsel-1.0.2.tar.bz2) = 82135208df98fda997714365be35d94ee60db2cb
-Size (xfontsel-1.0.2.tar.bz2) = 106540 bytes
+SHA1 (xfontsel-1.0.4.tar.bz2) = 8e3da9d050ad71531bfeb98d5f1071c7b392b3bd
+RMD160 (xfontsel-1.0.4.tar.bz2) = 9fbb2092540e26f0a0f67104cf3e40aef95aaef3
+Size (xfontsel-1.0.4.tar.bz2) = 136256 bytes
