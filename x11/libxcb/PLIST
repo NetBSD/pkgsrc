@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/15 12:24:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/06/03 17:29:41 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -21,6 +21,7 @@ include/xcb/xf86dri.h
 include/xcb/xfixes.h
 include/xcb/xinerama.h
 include/xcb/xinput.h
+include/xcb/xkb.h
 include/xcb/xprint.h
 include/xcb/xproto.h
 include/xcb/xselinux.h
