@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/06/03 09:33:48 shattered Exp $
+
+chdman, jedutil, ldresample, ldverify, romcmd and unidasm utilities are
+installed by the emulators/mame package.
+
+===========================================================================
