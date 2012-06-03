@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/05/05 22:22:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/06/03 21:14:43 wiz Exp $
 # used by misc/py-libanki/Makefile
 
-DISTNAME=	anki-1.2.9
+DISTNAME=	anki-1.2.11
 CATEGORIES=	x11
 MASTER_SITES=	http://anki.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
