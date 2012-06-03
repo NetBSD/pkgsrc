@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/09/10 18:56:04 joerg Exp $
+$NetBSD: distinfo,v 1.5 2012/06/03 17:38:55 wiz Exp $
 
-SHA1 (libXrender-0.9.6.tar.bz2) = 65bd96dc17da6b064f95109da02d9c9d14cb06dc
-RMD160 (libXrender-0.9.6.tar.bz2) = 4eb2ac0762dd533c7254b43361b21812ca12d50f
-Size (libXrender-0.9.6.tar.bz2) = 258249 bytes
+SHA1 (libXrender-0.9.7.tar.bz2) = 6e4d75d8316d5217324258f555eba3a5d383feb2
+RMD160 (libXrender-0.9.7.tar.bz2) = 2641fde5d38b158e56e78382c36906b313a3c525
+Size (libXrender-0.9.7.tar.bz2) = 281098 bytes
