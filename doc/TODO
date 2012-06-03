@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11146 2012/06/03 13:47:08 wiz Exp $
+$NetBSD: TODO,v 1.11147 2012/06/03 17:21:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libffi-3.0.11
 	o libflash-0.4.13
 	o libfolks-0.7.0
-	o libfontenc-1.1.1
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
