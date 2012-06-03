@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1829 2012/06/03 18:34:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1830 2012/06/03 18:35:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2804,3 +2804,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xwud to 1.0.4 [wiz 2012-06-03]
 	Updated fonts/encodings to 1.0.4 [wiz 2012-06-03]
 	Updated fonts/mkfontdir to 1.0.7 [wiz 2012-06-03]
+	Updated fonts/font-alias to 1.0.3 [wiz 2012-06-03]
