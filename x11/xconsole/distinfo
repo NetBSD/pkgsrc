@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/11/23 12:04:03 bjs Exp $
+$NetBSD: distinfo,v 1.3 2012/06/03 18:11:17 wiz Exp $
 
-SHA1 (xconsole-1.0.3.tar.bz2) = 31408b28b67fe74f3d21c98cc2cada03ff9cefab
-RMD160 (xconsole-1.0.3.tar.bz2) = c497c7df959d073db33c3e603a411cca3584337c
-Size (xconsole-1.0.3.tar.bz2) = 98733 bytes
+SHA1 (xconsole-1.0.4.tar.bz2) = 195299d4948ba4c62e961ddd0bd4572283244715
+RMD160 (xconsole-1.0.4.tar.bz2) = 831da269cb68aad84610ec70084f38c11ddadda3
+Size (xconsole-1.0.4.tar.bz2) = 115082 bytes
