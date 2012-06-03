@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11174 2012/06/03 17:47:01 wiz Exp $
+$NetBSD: TODO,v 1.11175 2012/06/03 17:47:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -863,7 +863,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libX11-1.4.4 [pkg/46183]
 	o libX11-1.5.0
 	o libXi-1.6.1
-	o libXvMC-1.0.7
 	o libXxf86dga-1.1.3
 	o libXxf86misc-1.0.3
 	o libXxf86vm-1.1.2
