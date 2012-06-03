@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/04/24 03:50:58 bjs Exp $
+$NetBSD: distinfo,v 1.4 2012/06/03 17:52:45 wiz Exp $
 
-SHA1 (twm-1.0.4.tar.bz2) = 7456e90f19e4747e1785f596b93f692d68a9f079
-RMD160 (twm-1.0.4.tar.bz2) = 41c13e8930fb3be385d20ea74a7f1acd59d68379
-Size (twm-1.0.4.tar.bz2) = 241944 bytes
+SHA1 (twm-1.0.7.tar.bz2) = ff535ef8e676f9ca876a6166858798c7fe70d446
+RMD160 (twm-1.0.7.tar.bz2) = a928bc59cac6bd23f0ae78102c2a721c98b41d02
+Size (twm-1.0.7.tar.bz2) = 272483 bytes
