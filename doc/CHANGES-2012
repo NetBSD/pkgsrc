@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1833 2012/06/03 18:37:24 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1834 2012/06/03 18:38:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2808,3 +2808,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/bigreqsproto to 1.1.2 [wiz 2012-06-03]
 	Updated x11/glproto to 1.4.15 [wiz 2012-06-03]
 	Updated x11/kbproto to 1.0.6 [wiz 2012-06-03]
+	Updated x11/renderproto to 0.11.1 [wiz 2012-06-03]
