@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11217 2012/06/03 18:29:36 wiz Exp $
+$NetBSD: TODO,v 1.11218 2012/06/03 18:30:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1440,7 +1440,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
-	o xvinfo-1.1.1
 	o xvkbd-3.3
 	o xwd-1.0.5
 	o xwininfo-1.1.2
