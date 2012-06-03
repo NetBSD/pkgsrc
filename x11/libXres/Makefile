@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/01/15 18:35:10 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/03 17:45:32 wiz Exp $
 #
 
-DISTNAME=		libXres-1.0.4
+DISTNAME=		libXres-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
