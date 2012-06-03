@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/11/09 19:35:45 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/03 17:57:21 wiz Exp $
 #
 
-DISTNAME=		iceauth-1.0.3
+DISTNAME=		iceauth-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
