@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 21:21:34 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/06/03 18:35:22 wiz Exp $
 
-SHA1 (font-alias-1.0.2.tar.bz2) = 9a0e97d974349e3a943b0ab77015f115f15d34c3
-RMD160 (font-alias-1.0.2.tar.bz2) = dd812f1ca374abf1b5e1741b1b89b174972060bb
-Size (font-alias-1.0.2.tar.bz2) = 93678 bytes
+SHA1 (font-alias-1.0.3.tar.bz2) = 96b0aa38f88a54ef32ab85d3eef6f29b0437f70d
+RMD160 (font-alias-1.0.3.tar.bz2) = 8fe5576ba106f912f81b77468759935cc50a0b62
+Size (font-alias-1.0.3.tar.bz2) = 102537 bytes
