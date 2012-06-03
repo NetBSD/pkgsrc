@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11192 2012/06/03 18:08:29 wiz Exp $
+$NetBSD: TODO,v 1.11193 2012/06/03 18:08:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1335,7 +1335,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xanalyser-1.30
 	o xapian-1.2.10
 	o xaric-0.13.2
-	o xbacklight-1.1.2
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xbitmaps-1.1.1
