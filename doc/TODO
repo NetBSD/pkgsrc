@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11251 2012/06/03 21:31:34 wiz Exp $
+$NetBSD: TODO,v 1.11252 2012/06/03 21:33:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -889,7 +889,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh-0.5.2 [www.libssh.org]
 	o libssh2-1.4.2
 	o libstree-0.4.3pre2 [pkg/43748]
-	o libtasn1-2.13
 	o libtcl-nothread-8.5.1
 	o libthrift-0.8.0
 	o libtool-2.4.2
