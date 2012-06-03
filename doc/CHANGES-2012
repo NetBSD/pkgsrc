@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1865 2012/06/03 22:50:06 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1866 2012/06/03 22:59:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2841,3 +2841,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-checker to 0.8.19 [wiz 2012-06-03]
 	Updated audio/py-karaoke to 0.7.5 [wiz 2012-06-03]
 	Updated www/py-moin to 1.9.4 [wiz 2012-06-03]
+	Updated fonts/py-TTFQuery to 1.0.5 [wiz 2012-06-03]
