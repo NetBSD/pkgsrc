@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11153 2012/06/03 17:26:12 wiz Exp $
+$NetBSD: TODO,v 1.11154 2012/06/03 17:28:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1378,7 +1378,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbitmaps-1.1.1
 	o xboard-4.5.3
 	o xcalc-1.0.4.1
-	o xcb-proto-1.7.1
 	o xcb-util-0.3.9 [NOT binary compatible to 0.3.6, so perhaps wait with update -- wiz 20110524]
 	o xcircuit-3.6.85
 	o xclock-1.0.6
