@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2010/09/10 19:01:46 joerg Exp $
+$NetBSD: distinfo,v 1.10 2012/06/03 17:33:41 wiz Exp $
 
-SHA1 (libXt-1.0.8.tar.bz2) = d5e3dfba90a12169771399b3e2ccae07243489c9
-RMD160 (libXt-1.0.8.tar.bz2) = 4c7d6d2268368d1577ca63fb99066149b6c60c2f
-Size (libXt-1.0.8.tar.bz2) = 536406 bytes
+SHA1 (libXt-1.1.3.tar.bz2) = 2cef068bc4d7170e31b89b5c06aeaf4451a7699a
+RMD160 (libXt-1.1.3.tar.bz2) = d1cffd17864ea0081437a07ea78dcaa8316a5fa0
+Size (libXt-1.1.3.tar.bz2) = 734679 bytes
