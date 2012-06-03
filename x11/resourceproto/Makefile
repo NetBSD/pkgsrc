@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/08/26 12:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/03 19:55:10 wiz Exp $
 #
 
-DISTNAME=		resourceproto-1.1.0
+DISTNAME=		resourceproto-1.2.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,6 @@ CONFLICTS+=		resourceext-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	resourceproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		c
 
 .include "../../mk/bsd.pkg.mk"
