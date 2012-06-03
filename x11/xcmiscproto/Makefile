@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/08/29 15:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/03 18:38:41 wiz Exp $
 #
 
-DISTNAME=		xcmiscproto-1.2.0
+DISTNAME=		xcmiscproto-1.2.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,6 @@ CONFLICTS+=		xextensions-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xcmiscproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		c
 
 .include "../../mk/bsd.pkg.mk"
