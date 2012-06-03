@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11223 2012/06/03 18:34:47 wiz Exp $
+$NetBSD: TODO,v 1.11224 2012/06/03 18:35:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-adobe-utopia-100dpi-1.0.4 [pkg/45537]
 	o font-adobe-utopia-75dpi-1.0.4 [pkg/45537]
 	o font-adobe-utopia-type1-1.0.4 [pkg/45537]
-	o font-alias-1.0.3
 	o font-arabic-misc-1.0.3 [pkg/45549]
 	o font-bh-100dpi-1.0.3 [pkg/45549]
 	o font-bh-75dpi-1.0.3 [pkg/45549]
