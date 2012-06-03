@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/03/24 13:31:58 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2012/06/03 22:03:24 wiz Exp $
 #
 
-DISTNAME=	mupdf-0.9-source
-PKGNAME=	mupdf-0.9
+DISTNAME=	mupdf-1.0-source
+PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	http://ccxvii.net/mupdf/download/ \
 		http://ccxvii.net/mupdf/download/archive/
@@ -12,7 +12,6 @@ HOMEPAGE=	http://mupdf.com/
 COMMENT=	Lightweight PDF viewer and toolkit
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/mupdf-0.9
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config gmake
@@ -21,11 +20,8 @@ USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
-LDFLAGS=	-Wl,-rpath,${X11BASE}/lib
+LDFLAGS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-
-pre-build:
-	${MV} ${WRKSRC}/apps/pdfinfo.c ${WRKSRC}/apps/mupdf-pdfinfo.c
 
 post-build:
 	sed -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/mupdf.pc > ${WRKSRC}/mupdf.pc
