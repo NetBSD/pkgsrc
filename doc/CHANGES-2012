@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1820 2012/06/03 18:25:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1821 2012/06/03 18:26:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xrandr to 1.3.5 [wiz 2012-06-03]
 	Updated x11/xrefresh to 1.0.4 [wiz 2012-06-03]
 	Updated x11/xset to 1.2.2 [wiz 2012-06-03]
+	Updated x11/xsetroot to 1.1.0 [wiz 2012-06-03]
