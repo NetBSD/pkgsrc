@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/12/25 00:14:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/03 17:41:04 wiz Exp $
 #
 
-DISTNAME=		libXevie-1.0.2
+DISTNAME=		libXevie-1.0.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
