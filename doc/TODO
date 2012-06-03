@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11237 2012/06/03 19:44:56 wiz Exp $
+$NetBSD: TODO,v 1.11238 2012/06/03 19:48:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -790,7 +790,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imapsync-1.452
 	o imp-5.0.21
 	o ingo-2.0.8
-	o inputproto-2.2
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
