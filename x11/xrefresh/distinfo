@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/09 18:23:44 tnn Exp $
+$NetBSD: distinfo,v 1.3 2012/06/03 18:25:01 wiz Exp $
 
-SHA1 (xrefresh-1.0.3.tar.bz2) = 3f34ceca9509f47e60ddfe14a98225eaffeba705
-RMD160 (xrefresh-1.0.3.tar.bz2) = 040e272d3e6a1ce00b1c79a65de542b6721352a3
-Size (xrefresh-1.0.3.tar.bz2) = 96931 bytes
+SHA1 (xrefresh-1.0.4.tar.bz2) = 5e85ee14ea9a357c1d4372bbc068a8d452a134aa
+RMD160 (xrefresh-1.0.4.tar.bz2) = 707de5cfee30f69948b058b4fa71efabeaa454ed
+Size (xrefresh-1.0.4.tar.bz2) = 105912 bytes
