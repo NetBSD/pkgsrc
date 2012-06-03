@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2009/04/08 13:06:22 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2012/06/03 17:28:24 wiz Exp $
 
---- Makefile.in.orig	2009-04-08 14:37:08.000000000 +0200
+--- Makefile.in.orig	2012-03-23 15:24:26.000000000 +0000
 +++ Makefile.in
-@@ -158,7 +158,7 @@ target_alias = @target_alias@
+@@ -215,7 +215,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  xcbincludedir = @xcbincludedir@
@@ -10,8 +10,8 @@ $NetBSD: patch-ae,v 1.1 2009/04/08 13:06:22 drochner Exp $
 +SUBDIRS = xcbgen
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = xcb-proto.pc
- EXTRA_DIST = doc xcb-proto.pc.in
-@@ -547,7 +547,7 @@ info: info-recursive
+ EXTRA_DIST = doc xcb-proto.pc.in autogen.sh
+@@ -661,7 +661,7 @@ info: info-recursive
  
  info-am:
  
