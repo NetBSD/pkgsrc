@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11255 2012/06/03 22:03:33 wiz Exp $
+$NetBSD: TODO,v 1.11256 2012/06/03 22:18:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -896,7 +896,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libv4l-0.8.5
 	o libvirt-0.9.9
 	o libxklavier-5.2.1
-	o libxml2-2.8.0
 	o licq-1.3.8
 	o liferea-1.8.5
 	o lighttpd-1.4.31
