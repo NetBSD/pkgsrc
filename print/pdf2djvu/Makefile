@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/02 19:38:56 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/03 09:31:31 obache Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.12
@@ -23,6 +23,7 @@ USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext gsed:run
 TOOLS_DEPENDS.gsed=	gsed>=4.2:../../textproc/gsed
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
+.include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-5*)
 BUILDLINK_TRANSFORM+=	rm:-Werror=overloaded-virtual
 .endif
