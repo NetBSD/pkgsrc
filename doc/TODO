@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11254 2012/06/03 21:47:05 wiz Exp $
+$NetBSD: TODO,v 1.11255 2012/06/03 22:03:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
-	o mupdf-1.0
 	o muse-0.9.2
 	o nano-2.2.6
 	o nap-1.5.3
