@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1855 2012/06/03 21:18:41 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1856 2012/06/03 21:31:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/libmicrohttpd to 0.9.20 [wiz 2012-06-03]
 	Updated misc/py-libanki to 1.2.11 [wiz 2012-06-03]
 	Updated devel/automake to 1.12.1 [wiz 2012-06-03]
+	Added www/py-beautifulsoup4 version 4.1.0 [wiz 2012-06-03]
