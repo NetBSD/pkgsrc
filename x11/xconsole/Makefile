@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/09/24 13:14:16 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/03 18:11:16 wiz Exp $
 #
 
-DISTNAME=	xconsole-1.0.3
-PKGREVISION=	1
+DISTNAME=	xconsole-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
