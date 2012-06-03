@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1861 2012/06/03 22:18:46 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1862 2012/06/03 22:24:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2837,3 +2837,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/py-anki to 1.2.11 [wiz 2012-06-03]
 	Updated print/mupdf to 1.0 [wiz 2012-06-03]
 	Updated textproc/libxml2 to 2.8.0 [wiz 2012-06-03]
+	Updated converters/py-simplejson to 2.5.2 [wiz 2012-06-03]
