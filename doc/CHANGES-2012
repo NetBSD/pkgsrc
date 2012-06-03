@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1825 2012/06/03 18:32:44 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1826 2012/06/03 18:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2800,3 +2800,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xterm to 279 [wiz 2012-06-03]
 	Updated x11/xvinfo to 1.1.1 [wiz 2012-06-03]
 	Updated x11/xwininfo to 1.1.2 [wiz 2012-06-03]
+	Updated x11/xwd to 1.0.5 [wiz 2012-06-03]
