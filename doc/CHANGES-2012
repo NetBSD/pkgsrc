@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1869 2012/06/03 23:35:11 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.1870 2012/06/03 23:49:19 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2721,6 +2721,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/pear-Net_LDAP2 to 2.0.12 [obache 2012-06-02]
 	Added security/p5-BSD-arc4random version 1.50 [bsiegert 2012-06-02]
 	Updated net/pear-SOAP to 0.13.0 [taca 2012-06-02]
+	Updated finance/kmymoney2 to 1.0.5nb8 [dholland 2012-06-02]
 	Updated databases/mysql55-client to 5.5.25 [adam 2012-06-03]
 	Updated databases/mysql55-server to 5.5.25 [adam 2012-06-03]
 	Updated archivers/lhasa to 0.0.7 [wiz 2012-06-03]
@@ -2838,6 +2839,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/mupdf to 1.0 [wiz 2012-06-03]
 	Updated textproc/libxml2 to 2.8.0 [wiz 2012-06-03]
 	Updated converters/py-simplejson to 2.5.2 [wiz 2012-06-03]
+	Updated databases/libgda to 3.0.1nb5 [dholland 2012-06-03]
 	Updated devel/py-checker to 0.8.19 [wiz 2012-06-03]
 	Updated audio/py-karaoke to 0.7.5 [wiz 2012-06-03]
 	Updated www/py-moin to 1.9.4 [wiz 2012-06-03]
