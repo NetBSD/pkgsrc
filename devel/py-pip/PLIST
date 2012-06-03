@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/23 21:39:32 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/03 13:18:58 obache Exp $
 bin/pip
 bin/pip-${PYVERSSUFFIX}
-${PYSITELIB}/pip-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pip-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pip-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pip-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/pip-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/pip-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pip/__init__.py
 ${PYSITELIB}/pip/__init__.pyc
 ${PYSITELIB}/pip/__init__.pyo
@@ -73,6 +73,9 @@ ${PYSITELIB}/pip/req.pyo
 ${PYSITELIB}/pip/runner.py
 ${PYSITELIB}/pip/runner.pyc
 ${PYSITELIB}/pip/runner.pyo
+${PYSITELIB}/pip/status_codes.py
+${PYSITELIB}/pip/status_codes.pyc
+${PYSITELIB}/pip/status_codes.pyo
 ${PYSITELIB}/pip/util.py
 ${PYSITELIB}/pip/util.pyc
 ${PYSITELIB}/pip/util.pyo
@@ -91,6 +94,3 @@ ${PYSITELIB}/pip/vcs/mercurial.pyo
 ${PYSITELIB}/pip/vcs/subversion.py
 ${PYSITELIB}/pip/vcs/subversion.pyc
 ${PYSITELIB}/pip/vcs/subversion.pyo
-${PYSITELIB}/pip/venv.py
-${PYSITELIB}/pip/venv.pyc
-${PYSITELIB}/pip/venv.pyo
