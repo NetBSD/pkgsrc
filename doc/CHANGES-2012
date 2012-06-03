@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1792 2012/06/03 17:57:30 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1793 2012/06/03 17:58:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2765,3 +2765,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/bitmap to 1.0.6 [wiz 2012-06-03]
 	Updated x11/editres to 1.0.5 [wiz 2012-06-03]
 	Updated x11/iceauth to 1.0.5 [wiz 2012-06-03]
+	Updated x11/ico to 1.0.3 [wiz 2012-06-03]
