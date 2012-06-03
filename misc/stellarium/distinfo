@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/04/11 12:10:01 drochner Exp $
+$NetBSD: distinfo,v 1.23 2012/06/03 10:08:37 wiz Exp $
 
 SHA1 (stellarium-0.11.2.tar.gz) = ed77c612b53d74dc2264b1be05f19d05950a1771
 RMD160 (stellarium-0.11.2.tar.gz) = b36bb6d709c4c67e1483630523b8c423622eea20
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = e7e1042cb674462f43fbb7c6ad5b023e62b54a59
 SHA1 (patch-ac) = e9436d4f9f34127f176931dda4665ddc5d6f8bfa
 SHA1 (patch-ad) = 5e4912f60fd74a868933e4afe27a67ddb73514a8
 SHA1 (patch-ae) = b1b4d821dd71e9ef7cd8c9263b12331d6f369916
-SHA1 (patch-src_core_modules_Skybright.cpp) = 9e5649bb5f764e426554c328c31a3b34838879e3
+SHA1 (patch-src_core_modules_Skybright.cpp) = 13d35ea979af856333b6c014d79ad8f555f8fc6e
