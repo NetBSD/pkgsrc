@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11253 2012/06/03 21:45:19 wiz Exp $
+$NetBSD: TODO,v 1.11254 2012/06/03 21:47:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1083,7 +1083,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
-	o py-anki-1.2.11
 	o py-checker-0.8.19
 	o py-dbus-1.1.0 [needs dbus>=1.4]
 	o py-game-1.9.1 [needs portmidi]
