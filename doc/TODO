@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11200 2012/06/03 18:14:58 wiz Exp $
+$NetBSD: TODO,v 1.11201 2012/06/03 18:15:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1400,7 +1400,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
 	o xfstt-1.8 [pkg/45478]
-	o xgamma-1.0.5
 	o xhippo-3.5
 	o xhost-1.0.5
 	o xineramaproto-1.2.1
