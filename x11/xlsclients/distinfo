@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/09/15 04:00:38 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/06/03 18:20:27 wiz Exp $
 
-SHA1 (xlsclients-1.1.0.tar.bz2) = 1961ee982f98d270c9069eaf84790c6b9dcdc851
-RMD160 (xlsclients-1.1.0.tar.bz2) = ef0cb54ed84e77ea6013235582f65fcdf288f97d
-Size (xlsclients-1.1.0.tar.bz2) = 107784 bytes
+SHA1 (xlsclients-1.1.2.tar.bz2) = c4051429c190444ae9ba327f0ad776a74eb7b27b
+RMD160 (xlsclients-1.1.2.tar.bz2) = d084896124d564a30b342f09f42ca5a7434f57cb
+Size (xlsclients-1.1.2.tar.bz2) = 114703 bytes
 SHA1 (patch-aa) = 0685af3492ac834cc83e3f72e39b510b6419bff0
