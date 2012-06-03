@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/01/15 18:26:41 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/03 17:48:03 wiz Exp $
 #
 
-DISTNAME=		libXxf86dga-1.1.1
+DISTNAME=		libXxf86dga-1.1.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
