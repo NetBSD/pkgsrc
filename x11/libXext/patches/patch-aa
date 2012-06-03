@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2010/04/09 08:50:17 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2012/06/03 17:30:58 wiz Exp $
 
---- include/X11/extensions/dpms.h.orig	2009-10-16 21:26:30.000000000 +0000
+--- include/X11/extensions/dpms.h.orig	2012-03-08 03:54:58.000000000 +0000
 +++ include/X11/extensions/dpms.h
-@@ -31,10 +31,18 @@ Equipment Corporation.
+@@ -29,10 +29,18 @@ Equipment Corporation.
  #ifndef _X11_EXTENSIONS_DPMS_H
  #define _X11_EXTENSIONS_DPMS_H 1
  
@@ -18,6 +18,6 @@ $NetBSD: patch-aa,v 1.4 2010/04/09 08:50:17 tnn Exp $
 +typedef struct _XDisplay Display;
 +#endif
 +
+ #ifndef DPMS_SERVER
  _XFUNCPROTOBEGIN
  
- extern Bool DPMSQueryExtension(Display *, int *, int *);
