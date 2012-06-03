@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11236 2012/06/03 19:41:45 wiz Exp $
+$NetBSD: TODO,v 1.11237 2012/06/03 19:44:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -635,7 +635,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3 [pkg/45549]
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontconfig-2.9.0
-	o fontsproto-2.1.2
 	o fotoxx-12.06.1
 	o fox-1.6.41
 	o freeciv-2.3.2
