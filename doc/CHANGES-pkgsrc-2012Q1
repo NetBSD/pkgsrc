@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.50 2012/06/01 12:30:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.51 2012/06/03 19:31:56 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -221,3 +221,5 @@ Pullup ticket #3814 - requested by obache
 www/moodle:: security update
 Pullup ticket #3815 - requested by dholland
 graphics/cairo: build fix
+Pullup ticket #3816 - requested by obache
+geography/mapserver: security update
