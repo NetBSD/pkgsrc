@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1867 2012/06/03 23:04:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1868 2012/06/03 23:34:56 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-moin to 1.9.4 [wiz 2012-06-03]
 	Updated fonts/py-TTFQuery to 1.0.5 [wiz 2012-06-03]
 	Updated time/py-mxDateTime to 3.2.4 [wiz 2012-06-03]
+	Updated comms/asterisk10 to 10.4.2 [jnemeth 2012-06-03]
