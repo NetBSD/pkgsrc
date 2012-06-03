@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1847 2012/06/03 19:56:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1848 2012/06/03 19:57:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2822,3 +2822,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/recordproto to 1.14.2 [wiz 2012-06-03]
 	Updated x11/resourceproto to 1.2.0 [wiz 2012-06-03]
 	Updated x11/scrnsaverproto to 1.2.2 [wiz 2012-06-03]
+	Updated x11/xineramaproto to 1.2.1 [wiz 2012-06-03]
