@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1815 2012/06/03 18:22:28 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1816 2012/06/03 18:23:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2790,3 +2790,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xlsfonts to 1.0.4 [wiz 2012-06-03]
 	Updated x11/xmag to 1.0.4 [wiz 2012-06-03]
 	Updated x11/xman to 1.1.2 [wiz 2012-06-03]
+	Updated x11/xmodmap to 1.0.7 [wiz 2012-06-03]
