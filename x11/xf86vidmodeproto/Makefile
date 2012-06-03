@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/01/15 18:20:47 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/03 18:40:01 wiz Exp $
 #
 
-DISTNAME=		xf86vidmodeproto-2.3
+DISTNAME=		xf86vidmodeproto-2.3.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
