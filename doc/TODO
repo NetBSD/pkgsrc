@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11231 2012/06/03 18:39:49 wiz Exp $
+$NetBSD: TODO,v 1.11232 2012/06/03 18:40:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1381,7 +1381,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xf86dgaproto-2.1
-	o xf86vidmodeproto-2.3.1
 	o xfce-4.10
 	o xfce4-4.8
 	o xfce4-volman-0.3.80
