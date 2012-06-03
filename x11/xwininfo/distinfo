@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/11/09 18:08:30 tnn Exp $
+$NetBSD: distinfo,v 1.5 2012/06/03 18:32:35 wiz Exp $
 
-SHA1 (xwininfo-1.0.5.tar.bz2) = 9730db0d1bd75b8bc5bc399f56cab9f5aee3bcfc
-RMD160 (xwininfo-1.0.5.tar.bz2) = ea40ae6f9e4fde1e932e6513ee7ad6e4e54c28a0
-Size (xwininfo-1.0.5.tar.bz2) = 109834 bytes
+SHA1 (xwininfo-1.1.2.tar.bz2) = c90b3c289f95474aa8eb6cf1bf4caf3b9dbf82d3
+RMD160 (xwininfo-1.1.2.tar.bz2) = 21b9e4964abbc2f0cb673d39dadbe363f70a62c9
+Size (xwininfo-1.1.2.tar.bz2) = 135415 bytes
