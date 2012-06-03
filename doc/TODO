@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11159 2012/06/03 17:33:06 abs Exp $
+$NetBSD: TODO,v 1.11160 2012/06/03 17:33:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -875,7 +875,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXrandr-1.3.2
 	o libXrender-0.9.7
 	o libXres-1.0.6
-	o libXt-1.1.3
 	o libXtst-1.2.1
 	o libXv-1.0.7
 	o libXvMC-1.0.7
