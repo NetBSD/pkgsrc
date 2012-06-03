@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2012/03/19 19:08:37 bsiegert Exp $
+$NetBSD: patch-aa,v 1.8 2012/06/03 19:57:33 wiz Exp $
 
---- Xos_r.h.in.orig	2010-08-10 14:18:54.000000000 +0000
+--- Xos_r.h.in.orig	2012-03-16 06:11:44.000000000 +0000
 +++ Xos_r.h.in
 @@ -73,13 +73,7 @@ in this Software without prior written a
  # include <X11/Xfuncs.h>
