@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/01/11 11:59:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/03 23:04:22 wiz Exp $
 ${PYSITELIB}/mx/BeeBase/BeeBase.py
 ${PYSITELIB}/mx/BeeBase/BeeBase.pyc
 ${PYSITELIB}/mx/BeeBase/BeeBase.pyo
@@ -117,6 +117,9 @@ ${PYSITELIB}/mx/DateTime/mxDateTime/mxh.h
 ${PYSITELIB}/mx/DateTime/mxDateTime/test.py
 ${PYSITELIB}/mx/DateTime/mxDateTime/test.pyc
 ${PYSITELIB}/mx/DateTime/mxDateTime/test.pyo
+${PYSITELIB}/mx/DateTime/mxDateTime/testabsdatetime.py
+${PYSITELIB}/mx/DateTime/mxDateTime/testabsdatetime.pyc
+${PYSITELIB}/mx/DateTime/mxDateTime/testabsdatetime.pyo
 ${PYSITELIB}/mx/DateTime/mxDateTime/testcmp.py
 ${PYSITELIB}/mx/DateTime/mxDateTime/testcmp.pyc
 ${PYSITELIB}/mx/DateTime/mxDateTime/testcmp.pyo
@@ -138,6 +141,9 @@ ${PYSITELIB}/mx/DateTime/mxDateTime/testrichard.pyo
 ${PYSITELIB}/mx/DateTime/mxDateTime/testroundoff.py
 ${PYSITELIB}/mx/DateTime/mxDateTime/testroundoff.pyc
 ${PYSITELIB}/mx/DateTime/mxDateTime/testroundoff.pyo
+${PYSITELIB}/mx/DateTime/mxDateTime/testslotops.py
+${PYSITELIB}/mx/DateTime/mxDateTime/testslotops.pyc
+${PYSITELIB}/mx/DateTime/mxDateTime/testslotops.pyo
 ${PYSITELIB}/mx/DateTime/mxDateTime/teststrftime.py
 ${PYSITELIB}/mx/DateTime/mxDateTime/teststrftime.pyc
 ${PYSITELIB}/mx/DateTime/mxDateTime/teststrftime.pyo
@@ -150,16 +156,6 @@ ${PYSITELIB}/mx/DateTime/mxDateTime/testticks.pyo
 ${PYSITELIB}/mx/DateTime/timegm.py
 ${PYSITELIB}/mx/DateTime/timegm.pyc
 ${PYSITELIB}/mx/DateTime/timegm.pyo
-${PYSITELIB}/mx/Doc/eGenix-mx-Extensions.html
-${PYSITELIB}/mx/Doc/mxBeeBase.pdf
-${PYSITELIB}/mx/Doc/mxDateTime.pdf
-${PYSITELIB}/mx/Doc/mxProxy.pdf
-${PYSITELIB}/mx/Doc/mxQueue.pdf
-${PYSITELIB}/mx/Doc/mxStack.pdf
-${PYSITELIB}/mx/Doc/mxTextTools.pdf
-${PYSITELIB}/mx/Doc/mxTools.pdf
-${PYSITELIB}/mx/Doc/mxUID.pdf
-${PYSITELIB}/mx/Doc/mxURL.pdf
 ${PYSITELIB}/mx/LICENSE
 ${PYSITELIB}/mx/Log.py
 ${PYSITELIB}/mx/Log.pyc
@@ -180,6 +176,9 @@ ${PYSITELIB}/mx/Misc/ConfigFile.pyo
 ${PYSITELIB}/mx/Misc/Cookie.py
 ${PYSITELIB}/mx/Misc/Cookie.pyc
 ${PYSITELIB}/mx/Misc/Cookie.pyo
+${PYSITELIB}/mx/Misc/Daemon.py
+${PYSITELIB}/mx/Misc/Daemon.pyc
+${PYSITELIB}/mx/Misc/Daemon.pyo
 ${PYSITELIB}/mx/Misc/ExitFunctions.py
 ${PYSITELIB}/mx/Misc/ExitFunctions.pyc
 ${PYSITELIB}/mx/Misc/ExitFunctions.pyo
