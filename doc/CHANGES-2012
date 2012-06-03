@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1764 2012/06/03 17:31:59 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1765 2012/06/03 17:33:06 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2737,3 +2737,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libxcb to 1.8.1 [wiz 2012-06-03]
 	Updated x11/libXext to 1.3.1 [wiz 2012-06-03]
 	Updated x11/libXScrnSaver to 1.2.2 [wiz 2012-06-03]
+	Updated chat/naim to 0.11.8.3.2 [abs 2012-06-03]
