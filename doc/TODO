@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11185 2012/06/03 17:57:13 wiz Exp $
+$NetBSD: TODO,v 1.11186 2012/06/03 17:57:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -788,7 +788,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hypermail-2.3.0 [pkg/46440]
 	o ical-2.3.2
 	o icdprog-0.5
-	o iceauth-1.0.5
 	o icewm-1.3.7
 	o ico-1.0.3
 	o idutils-4.6
