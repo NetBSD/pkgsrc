@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/04/09 08:36:30 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/03 19:56:10 wiz Exp $
 #
 
-DISTNAME=		xineramaproto-1.2
+DISTNAME=		xineramaproto-1.2.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
