@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1838 2012/06/03 18:40:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1839 2012/06/03 18:40:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2813,3 +2813,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xextproto to 7.2.1 [wiz 2012-06-03]
 	Updated x11/xf86driproto to 2.1.1 [wiz 2012-06-03]
 	Updated x11/xf86vidmodeproto to 2.3.1 [wiz 2012-06-03]
+	Updated x11/xtrans to 1.2.7 [wiz 2012-06-03]
