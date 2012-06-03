@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/11/09 18:04:53 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/03 18:33:43 wiz Exp $
 #
 
-DISTNAME=	xwud-1.0.2
+DISTNAME=	xwud-1.0.4
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
