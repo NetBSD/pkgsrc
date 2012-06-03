@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/08/29 15:23:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/03 18:36:16 wiz Exp $
 #
 
-DISTNAME=		bigreqsproto-1.1.0
+DISTNAME=		bigreqsproto-1.1.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,6 @@ CONFLICTS+=		xextensions-[0-9]*
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/bigreqsproto.pc.in
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=		c
 
 .include "../../mk/bsd.pkg.mk"
