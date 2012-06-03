@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/05/29 13:19:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/03 22:24:20 wiz Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/simplejson/__init__.py
 ${PYSITELIB}/simplejson/__init__.pyc
@@ -19,6 +19,9 @@ ${PYSITELIB}/simplejson/scanner.pyo
 ${PYSITELIB}/simplejson/tests/__init__.py
 ${PYSITELIB}/simplejson/tests/__init__.pyc
 ${PYSITELIB}/simplejson/tests/__init__.pyo
+${PYSITELIB}/simplejson/tests/test_bigint_as_string.py
+${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyc
+${PYSITELIB}/simplejson/tests/test_bigint_as_string.pyo
 ${PYSITELIB}/simplejson/tests/test_check_circular.py
 ${PYSITELIB}/simplejson/tests/test_check_circular.pyc
 ${PYSITELIB}/simplejson/tests/test_check_circular.pyo
@@ -52,6 +55,9 @@ ${PYSITELIB}/simplejson/tests/test_float.pyo
 ${PYSITELIB}/simplejson/tests/test_indent.py
 ${PYSITELIB}/simplejson/tests/test_indent.pyc
 ${PYSITELIB}/simplejson/tests/test_indent.pyo
+${PYSITELIB}/simplejson/tests/test_item_sort_key.py
+${PYSITELIB}/simplejson/tests/test_item_sort_key.pyc
+${PYSITELIB}/simplejson/tests/test_item_sort_key.pyo
 ${PYSITELIB}/simplejson/tests/test_namedtuple.py
 ${PYSITELIB}/simplejson/tests/test_namedtuple.pyc
 ${PYSITELIB}/simplejson/tests/test_namedtuple.pyo
