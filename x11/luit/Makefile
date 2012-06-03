@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/09/10 19:15:54 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/03 18:00:47 wiz Exp $
 #
 
-DISTNAME=		luit-1.0.5
+DISTNAME=		luit-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
