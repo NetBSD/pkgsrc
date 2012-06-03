@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11178 2012/06/03 17:49:17 wiz Exp $
+$NetBSD: TODO,v 1.11179 2012/06/03 17:50:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -915,7 +915,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libv4l-0.8.5
 	o libvirt-0.9.9
 	o libvisio-0.0.17
-	o libxkbfile-1.0.8
 	o libxklavier-5.2.1
 	o libxml2-2.8.0
 	o licq-1.3.8
