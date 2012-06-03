@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2010/09/10 20:07:29 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2012/06/03 19:57:33 wiz Exp $
 
---- configure.ac.orig	2010-08-10 14:19:17.000000000 +0000
+
+--- configure.ac.orig	2012-03-16 06:11:44.000000000 +0000
 +++ configure.ac
-@@ -11,6 +11,7 @@ XORG_DEFAULT_OPTIONS
+@@ -17,6 +17,7 @@ XORG_CHECK_SGML_DOCTOOLS(1.8)
  
  AC_CONFIG_HEADER([do-not-use-config.h])
  AC_CONFIG_HEADER([Xfuncproto.h])
@@ -10,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2010/09/10 20:07:29 joerg Exp $
  
  AC_CANONICAL_HOST
  
-@@ -203,6 +204,14 @@ if test "x$WIDEPROTO" = xno; then
+@@ -209,6 +210,14 @@ if test "x$WIDEPROTO" = xno; then
  	AC_DEFINE(NARROWPROTO, [], [Narrow prototypes])
  fi
  
@@ -24,4 +25,4 @@ $NetBSD: patch-ab,v 1.4 2010/09/10 20:07:29 joerg Exp $
 +AC_CHECK_FUNC(ttyname_r, [AC_DEFINE(_XOS_R_H_MTSAFE_UNISTDAPI,[],[Assume has ttyname_r and friends from unistd.h])],)
  
  AC_OUTPUT([Makefile
-            Xpoll.h
+            specs/Makefile
