@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/09/10 18:46:08 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/03 17:37:56 wiz Exp $
 #
 
-DISTNAME=		libXfixes-4.0.5
+DISTNAME=		libXfixes-5.0
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
