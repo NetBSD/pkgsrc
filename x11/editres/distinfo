@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/09 19:41:44 tnn Exp $
+$NetBSD: distinfo,v 1.3 2012/06/03 17:56:45 wiz Exp $
 
-SHA1 (editres-1.0.4.tar.bz2) = 5f84cf0592ed2e1c8430c907db36b7e70905fa78
-RMD160 (editres-1.0.4.tar.bz2) = 4c8530b753e344d758687c77fb8fba762303505d
-Size (editres-1.0.4.tar.bz2) = 136331 bytes
+SHA1 (editres-1.0.5.tar.bz2) = a1a8af23afde85bada5472da1ac029a384dedae4
+RMD160 (editres-1.0.5.tar.bz2) = 142d0ccf40adecfdf9e2952cbf5afd2cfd305254
+Size (editres-1.0.5.tar.bz2) = 145578 bytes
