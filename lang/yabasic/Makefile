@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2010/02/04 01:33:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/04 11:30:21 obache Exp $
 
-DISTNAME=		yabasic-2.722
-PKGREVISION=		3
+DISTNAME=		yabasic-2.763
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 
 MAINTAINER=		david@silicium.ath.cx
 HOMEPAGE=		http://www.yabasic.de/
 COMMENT=		Yet another Basic for Unix and Windows
+LICENSE=		artistic OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
 INSTALLATION_DIRS+=	share/doc/html/yabasic
+
+TEST_TARGET=		check
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/yabasic.htm \
