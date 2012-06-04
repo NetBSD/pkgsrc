@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11263 2012/06/04 11:30:35 obache Exp $
+$NetBSD: TODO,v 1.11264 2012/06/04 12:05:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -1029,8 +1029,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
-	o pear-Auth_SASL-1.0.6 [pkg/46533]
-	o pear-DB-1.7.14 [pkg/46534]
 	o pen-0.17.3
 	o perl-5.16.0
 	o pessulus-2.30.3 [GNOME 2.28]
