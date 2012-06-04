@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/06/03 09:31:32 obache Exp $
+# $NetBSD: Makefile,v 1.56 2012/06/04 17:40:43 drochner Exp $
 
 DISTNAME=	stellarium-0.11.2
 CATEGORIES=	misc
@@ -12,7 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt perl pod2man
+USE_TOOLS+=		msgfmt perl pod2man
 
 CMAKE_ARGS+= -D FreeType2_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CMAKE_ARGS+= -D FreeType2_LIBRARIES:PATH=${BUILDLINK_PREFIX.freetype2}/lib
@@ -30,7 +30,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-parameter
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
