@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/04 14:28:15 wiz Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/text
+lib/ocaml/site-lib/text/META
+lib/ocaml/site-lib/text/dlltext-bigarray.so
+lib/ocaml/site-lib/text/dlltext.so
+lib/ocaml/site-lib/text/encoding.cmi
+lib/ocaml/site-lib/text/encoding.mli
+lib/ocaml/site-lib/text/encoding_bigarray.cmi
+lib/ocaml/site-lib/text/encoding_bigarray.mli
+${PLIST.opt}lib/ocaml/site-lib/text/libtext-bigarray.a
+${PLIST.opt}lib/ocaml/site-lib/text/libtext.a
+${PLIST.opt}lib/ocaml/site-lib/text/text-bigarray.a
+lib/ocaml/site-lib/text/text-bigarray.cma
+${PLIST.opt}lib/ocaml/site-lib/text/text-bigarray.cmxa
+${PLIST.opt}lib/ocaml/site-lib/text/text.a
+lib/ocaml/site-lib/text/text.cma
+lib/ocaml/site-lib/text/text.cmi
+${PLIST.opt}lib/ocaml/site-lib/text/text.cmxa
+lib/ocaml/site-lib/text/text.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/text
