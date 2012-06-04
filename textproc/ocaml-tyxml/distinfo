@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/06/04 13:13:15 wiz Exp $
+
+SHA1 (tyxml-2.1.tar.gz) = 0e10c566fe7d3334a7d290adc4b00d89cb356caa
+RMD160 (tyxml-2.1.tar.gz) = 47c12dc0d175eaf191a284361c5fb06b917f32e4
+Size (tyxml-2.1.tar.gz) = 103875 bytes
+SHA1 (patch-Makefile) = b272c7b9adec929c5f79085cf58ce0b4d02a870c
