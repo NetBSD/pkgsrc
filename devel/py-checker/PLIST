@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2012/06/03 22:32:59 wiz Exp $
-bin/pychecker2.7
+@comment $NetBSD: PLIST,v 1.8 2012/06/04 06:39:02 dholland Exp $
+bin/pychecker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pychecker/COPYRIGHT
 ${PYSITELIB}/pychecker/ChangeLog
