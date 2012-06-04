@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/04 13:21:50 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/04 13:31:23 obache Exp $
 #
 
 DISTNAME=	protobuf-2.4.1
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++ c
 
 PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
