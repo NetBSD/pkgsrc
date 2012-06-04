@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1871 2012/06/03 23:56:58 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1872 2012/06/04 00:13:51 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2854,3 +2854,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/goffice0.6 to 0.6.6nb17 [dholland 2012-06-04]
 	Updated net/linc to 1.1.1nb10 [dholland 2012-06-04]
 	Updated print/libgnomecups to 0.2.3nb9 [dholland 2012-06-04]
+	Updated mail/claws-mail to 3.7.10nb5 [dholland 2012-06-04]
