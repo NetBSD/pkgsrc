@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1600 2012/05/31 16:47:34 imil Exp $
+# $NetBSD: Makefile,v 1.1601 2012/06/04 09:57:42 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -214,6 +214,7 @@ SUBDIR+=	gcvs
 SUBDIR+=	gdb
 SUBDIR+=	gdb6
 SUBDIR+=	gdbada
+SUBDIR+=	gdbus-codegen
 SUBDIR+=	gdl
 SUBDIR+=	geany
 SUBDIR+=	generate
