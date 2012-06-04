@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1882 2012/06/04 15:23:19 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1883 2012/06/04 16:15:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind96 to 9.6.3.1.ESV.7pl1 [taca 2012-06-04]
 	Added textproc/ocaml-text version 0.5 [wiz 2012-06-04]
 	Updated databases/ruby-dm-types to 1.2.1nb2 [taca 2012-06-04]
+	Updated fonts/umefont-ttf to 0.440 [ryoon 2012-06-04]
