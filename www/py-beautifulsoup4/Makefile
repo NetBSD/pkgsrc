@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/04 04:01:47 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/04 06:36:35 dholland Exp $
 #
 
 DISTNAME=	beautifulsoup4-4.1.0
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 # cannot enable this until py-lxml supports it
 # (otherwise pbulk fails during indexing)
 #PYTHON_VERSIONS_INCLUDE_3X=	yes
+# multiple syntax errors during install
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 do-test:
 	cd ${WRKSRC} &&  ${PYTHONBIN} -m unittest discover -s bs4
