@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11264 2012/06/04 12:05:44 obache Exp $
+$NetBSD: TODO,v 1.11265 2012/06/04 12:16:33 obache Exp $
 
 Suggested new packages
 ======================
@@ -1241,7 +1241,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o txt2html-2.51
-	o txt2man-1.5.6 [pkg/46535]
 	o uae-0.8.29
 	o ubs-0.20
 	o ucblogo-5.5
