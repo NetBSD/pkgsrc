@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1601 2012/06/04 09:57:42 drochner Exp $
+# $NetBSD: Makefile,v 1.1602 2012/06/04 13:24:29 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1252,6 +1252,7 @@ SUBDIR+=	pmccabe
 SUBDIR+=	poco
 SUBDIR+=	popt
 SUBDIR+=	prcs
+SUBDIR+=	protobuf
 SUBDIR+=	pstreams
 SUBDIR+=	psvn
 SUBDIR+=	pth
