@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2012/01/13 10:54:47 obache Exp $
+# $NetBSD: Makefile,v 1.45 2012/06/04 09:29:54 wiz Exp $
 
 DISTNAME=	mikmod-3.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://mikmod.raphnet.net/files/
 

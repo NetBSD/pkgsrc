@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2012/01/13 10:54:50 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/06/04 09:29:55 wiz Exp $
 #
 
 DISTNAME=		xmms-mad-0.5.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmms-mad/}
 

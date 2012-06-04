@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2012/05/07 01:53:15 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/06/04 09:29:55 wiz Exp $
 
 BUILDLINK_TREE+=	xmms
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmms
 XMMS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmms+=	xmms>=1.2.7nb10
-BUILDLINK_ABI_DEPENDS.xmms+=	xmms>=1.2.11nb3
+BUILDLINK_ABI_DEPENDS.xmms+=	xmms>=1.2.11nb4
 BUILDLINK_PKGSRCDIR.xmms?=	../../audio/xmms
 
 PTHREAD_OPTS+=	require

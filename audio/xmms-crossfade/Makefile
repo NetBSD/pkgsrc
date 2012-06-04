@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2012/01/13 10:54:49 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/06/04 09:29:55 wiz Exp $
 #
 
 DISTNAME=		xmms-crossfade-0.2.9
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		audio
 MASTER_SITES=		http://www.eisenlohr.org/xmms-crossfade/
 

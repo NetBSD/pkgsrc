@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/01/13 10:54:51 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/04 09:29:56 wiz Exp $
 #
 
 DISTNAME=	xmms-wma-1.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tar.bz2

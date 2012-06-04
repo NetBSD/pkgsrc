@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/01/13 10:54:50 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/04 09:29:55 wiz Exp $
 #
 
 DISTNAME=	xmms-mac-0.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	# http://bsd.cenkes.org/myports/
 
