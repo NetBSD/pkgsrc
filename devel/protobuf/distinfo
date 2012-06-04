@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/06/04 13:21:50 obache Exp $
+
+SHA1 (protobuf-2.4.1.tar.gz) = efc84249525007b1e3105084ea27e3273f7cbfb0
+RMD160 (protobuf-2.4.1.tar.gz) = 58769f8737b6ac3bd62250230852fefb9dc7d8b2
+Size (protobuf-2.4.1.tar.gz) = 1935301 bytes
