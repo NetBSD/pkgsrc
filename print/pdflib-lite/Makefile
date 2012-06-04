@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/08 11:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/04 17:00:14 gdt Exp $
 
 DISTNAME=	PDFlib-Lite-7.0.5
 PKGNAME=	pdflib-lite-7.0.5
@@ -16,6 +16,10 @@ CONFLICTS+=	pdflib-[0-9]*
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-java=no
+CONFIGURE_ARGS+=	--with-perl=no
+CONFIGURE_ARGS+=	--with-py=no
+CONFIGURE_ARGS+=	--with-ruby=no
 CONFIGURE_ARGS+=	--with-tcl=no
 
 DOCDIR=		${PREFIX}/share/doc/pdflib
