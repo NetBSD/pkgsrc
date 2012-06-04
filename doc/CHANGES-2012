@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1880 2012/06/04 13:31:00 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1881 2012/06/04 14:28:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind98 to 9.8.3pl1 [taca 2012-06-04]
 	Updated net/bind97 to 9.7.6pl1 [taca 2012-06-04]
 	Updated net/bind96 to 9.6.3.1.ESV.7pl1 [taca 2012-06-04]
+	Added textproc/ocaml-text version 0.5 [wiz 2012-06-04]
