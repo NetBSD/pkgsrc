@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11262 2012/06/03 23:04:33 wiz Exp $
+$NetBSD: TODO,v 1.11263 2012/06/04 11:30:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -1406,7 +1406,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwpe-1.5.30a
 	o xye-0.12.1
 	o xzip-182
-	o yabasic-2.763 [pkg/46532]
 	o yafc-1.1
 	o yaz-4.1.7
 	o yodl-2.14.3
