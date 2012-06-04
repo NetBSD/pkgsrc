@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1872 2012/06/04 00:13:51 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1873 2012/06/04 11:30:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2855,3 +2855,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/linc to 1.1.1nb10 [dholland 2012-06-04]
 	Updated print/libgnomecups to 0.2.3nb9 [dholland 2012-06-04]
 	Updated mail/claws-mail to 3.7.10nb5 [dholland 2012-06-04]
+	Updated lang/yabasic to 2.763 [obache 2012-06-04]
