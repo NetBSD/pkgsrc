@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1885 2012/06/05 01:39:59 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.1886 2012/06/05 06:46:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2871,3 +2871,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/umefont-ttf to 0.440 [ryoon 2012-06-04]
 	Updated comms/asterisk18 to 1.8.13.0 [jnemeth 2012-06-05]
 	Updated comms/asterisk10 to 10.5.0 [jnemeth 2012-06-05]
+	Added x11/transset version 1.0.0 [wiz 2012-06-05]
