@@ -1,17 +1,26 @@
-# $NetBSD: Makefile,v 1.17 2012/06/03 16:05:44 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2012/06/05 23:17:32 gdt Exp $
 
 DISTNAME=	geos-3.3.4
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2
 
-# NOTE: geos uses -release for versioning lib/libgeos.la, and seems to
-# change the shlib name (not just the version, but the *name*) on
-# every release.  If this continues, a recursive revbump is required
-# on every update.
+# geos has two libraries:
+#   geos_c (C), which follows normal versioning rules
+#   geos (C++), which uses -release, and changes on every release
 
-# This has been reported as a bug to the upstream mailinglist:
-# http://lists.osgeo.org/pipermail/geos-devel/2012-June/005860.html
+# According to the geos project, the C++ interface should not be
+# directly used and other packages should not link against it.  This
+# is currently underdocumented:
+#   http://trac.osgeo.org/geos/ticket/553
+#   http://lists.osgeo.org/pipermail/geos-devel/2012-June/005860.html
+
+# Therefore, pkgsrc will perform a recursive revbump when the geos_c
+# shlib version changes, and will generally ignore geos shlib name
+# changes.  The following packages incorrectly (from the geos
+# viewpoint) link directly against -lgeos and should be revbumped on
+# every update (and fixed not to use -lgeos):
+#   geography/gdail-lib
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://geos.refractions.net/
