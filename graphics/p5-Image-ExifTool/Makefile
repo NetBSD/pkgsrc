@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/04/22 10:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/06/05 22:43:24 gdt Exp $
 
 DISTNAME=	Image-ExifTool-${VERSION}
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Author requests that we package only "production" versions.
-VERSION=	8.85
+VERSION=	8.90
 
 PERL5_PACKLIST=	auto/Image/ExifTool/.packlist
 
