@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/03/12 15:38:04 taca Exp $
+# $NetBSD: Makefile,v 1.40 2012/06/05 17:56:10 jym Exp $
 
 DISTNAME=	roundcubemail-0.7.2-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
@@ -25,7 +25,7 @@ USE_TOOLS+=		pax
 NO_BUILD=		yes
 
 INSTALLATION_DIRS=	${RCDIR}/plugins ${RCDIR}/program ${RCDIR}/skins
-INSTALLATION_DIRS+=	${EGDIR}/SQL ${DOCDIR} ${RCDIR}/bin
+INSTALLATION_DIRS+=	${RCDIR}/bin ${RCDIR}/SQL ${DOCDIR} ${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -42,7 +42,7 @@ BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
 RCDIR=			${PREFIX}/share/roundcube
 EGDIR=			${PREFIX}/share/examples/roundcube
 DOCDIR=			${PREFIX}/share/doc/roundcube
-PAX_DIRS=		plugins program skins installer bin
+PAX_DIRS=		plugins program skins installer
 
 CONF_PLUGINS=		acl additional_message_headers enigma help \
 			jqueryui managesieve newmail_notifier password \
@@ -101,25 +101,26 @@ pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
-		${DESTDIR}${EGDIR}/roundcube.conf
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${DESTDIR}${EGDIR}/SQL/
-
 	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DESTDIR}${RCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${RCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${RCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${DESTDIR}${RCDIR}/SQL/
 
+	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
+		${DESTDIR}${EGDIR}/roundcube.conf
 	${INSTALL_DATA} ${WRKSRC}/config/mimetypes.php \
 		${DESTDIR}${EGDIR}/mimetypes.php
 	${INSTALL_DATA} ${WRKSRC}/config/db.inc.php.dist \
 		${DESTDIR}${EGDIR}/db.inc.php.dist
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \
 		${DESTDIR}${EGDIR}/main.inc.php.dist
+
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sh ${DESTDIR}${RCDIR}/bin/
 
 .for i in ${PAX_DIRS}
 	cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${RCDIR}/${i}
