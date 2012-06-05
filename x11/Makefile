@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.647 2012/03/20 05:09:43 markd Exp $
+# $NetBSD: Makefile,v 1.648 2012/06/05 06:46:05 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -359,6 +359,7 @@ SUBDIR+=	tk
 SUBDIR+=	tk-BWidget
 SUBDIR+=	tk-Tix
 SUBDIR+=	tkinfo
+SUBDIR+=	transset
 SUBDIR+=	transset-df
 SUBDIR+=	trapproto
 SUBDIR+=	tzosdclock
