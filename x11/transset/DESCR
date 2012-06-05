@@ -1,0 +1,10 @@
+transset is an utility for setting opacity property.
+
+Features:
+
+ * select window by clicking (as transset)
+ * select actual focused X11 window
+ * select window by pointing
+ * select by window name or id
+ * force toggle
+ * increase or decrease opacity
