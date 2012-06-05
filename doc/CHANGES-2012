@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1888 2012/06/05 18:13:05 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1889 2012/06/05 18:50:06 jym Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/xulrunner to 13.0 [ryoon 2012-06-05]
 	Updated www/firefox to 13.0 [ryoon 2012-06-05]
 	Updated www/firefox-l10n to 13.0 [ryoon 2012-06-05]
+	Updated mail/roundcube to 0.7.2nb1 [jym 2012-06-05]
