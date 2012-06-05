@@ -1,22 +1,21 @@
-$NetBSD: distinfo,v 1.30 2012/06/03 22:58:51 jnemeth Exp $
+$NetBSD: distinfo,v 1.31 2012/06/05 00:15:34 jnemeth Exp $
 
-SHA1 (asterisk-1.8.12.2/asterisk-1.8.12.2.tar.gz) = 90e43dcd7e8543e56cad03e8020f4df825c51f32
-RMD160 (asterisk-1.8.12.2/asterisk-1.8.12.2.tar.gz) = 346b67918bcc27199044168d683028cb8f81ff3b
-Size (asterisk-1.8.12.2/asterisk-1.8.12.2.tar.gz) = 25089098 bytes
-SHA1 (asterisk-1.8.12.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-1.8.12.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-1.8.12.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
-SHA1 (patch-aa) = 496565e1e567c42ab6ba8f996c506f52cb9c8cfe
+SHA1 (asterisk-1.8.13.0/asterisk-1.8.13.0.tar.gz) = 9c45a16d99a5ea1d73e88b3556d9ee5b2afa594b
+RMD160 (asterisk-1.8.13.0/asterisk-1.8.13.0.tar.gz) = f1ce05e56a61e3b4215dd7b9fc3f8331bf70486b
+Size (asterisk-1.8.13.0/asterisk-1.8.13.0.tar.gz) = 25059587 bytes
+SHA1 (asterisk-1.8.13.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-1.8.13.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-1.8.13.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (patch-aa) = d8a67b0fd3781bb2d38b08563c69e490ab42a3e8
 SHA1 (patch-af) = 19786616bb606c38f769ec85f2e4d118573659ab
-SHA1 (patch-ag) = c71c61350cefbbe53eefa99245ca7712753f22d5
 SHA1 (patch-ai) = e92edab5c1ff323478f41d0b0783102ed527fe39
 SHA1 (patch-ak) = f8d5de733807bc6c0701886a3095901d6815a8bd
 SHA1 (patch-al) = b2a1134786d7c3b118ee8c47892f91dd2a4c783a
 SHA1 (patch-am) = 5f9cbf47ec1cb66758492a5ed1bf843006eae9b7
 SHA1 (patch-an) = 93a5df66fd6459fb76e9191dc3bf37b9ee5483b5
 SHA1 (patch-ao) = aa95464a8bd4a417f313541b465142d2e4c3ee47
-SHA1 (patch-ap) = ed22f6483191f429389c0d3198d30c63b96d4df6
-SHA1 (patch-aq) = 4b7a13e605fc5933d5d87b797a40479e206f42d3
+SHA1 (patch-ap) = 0e2015f6765ca1672d3335a5aba94cdff57136f5
+SHA1 (patch-aq) = 866706ae195a70020679e549c7304c1bcd1fa1b2
 SHA1 (patch-ar) = da8e614e68e476ce32c66fed5ee9dcb8c5f9a060
 SHA1 (patch-as) = b2e1aadf49f20506243ab40796f15aab12d95bad
 SHA1 (patch-at) = df318d7b492121ff6f766b0e6ea73415293e96f0
