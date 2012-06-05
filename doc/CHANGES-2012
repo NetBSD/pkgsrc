@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1883 2012/06/04 16:15:33 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1884 2012/06/05 00:15:44 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/ocaml-text version 0.5 [wiz 2012-06-04]
 	Updated databases/ruby-dm-types to 1.2.1nb2 [taca 2012-06-04]
 	Updated fonts/umefont-ttf to 0.440 [ryoon 2012-06-04]
+	Updated comms/asterisk18 to 1.8.13.0 [jnemeth 2012-06-05]
