@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2012/06/03 22:58:50 jnemeth Exp $
+# $NetBSD: Makefile,v 1.36 2012/06/05 00:15:34 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-1.8.12.2
+DISTNAME=	asterisk-1.8.13.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -175,10 +175,8 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	queues.conf res_config_mysql.conf res_config_sqlite.conf	\
 	res_curl.conf res_fax.conf res_ldap.conf res_odbc.conf		\
 	res_pgsql.conf res_pktccops.conf res_snmp.conf			\
-	res_stun_monitor.conf rpt.conf rtp.conf say.conf sip.conf	\
-	sip_notify.conf skinny.conf sla.conf smdi.conf telcordia-1.adsi	\
-	udptl.conf unistim.conf usbradio.conf users.conf voicemail.conf	\
-	vpb.conf
+	res_stun_monitor.conf rtp.conf say.conf sip.conf udptl.conf	\
+	unistim.conf users.conf voicemail.conf vpb.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
 .endfor
 
