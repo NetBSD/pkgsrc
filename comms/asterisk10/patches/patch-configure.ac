@@ -1,8 +1,17 @@
-$NetBSD: patch-configure.ac,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-configure.ac,v 1.2 2012/06/05 01:39:45 jnemeth Exp $
 
---- configure.ac.orig	2011-10-06 22:58:40.000000000 +0000
+--- configure.ac.orig	2012-04-12 15:01:13.000000000 +0000
 +++ configure.ac
-@@ -1051,6 +1051,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
+@@ -1004,7 +1004,7 @@ if $(${CC} -march=native -S -o /dev/null
+ 	fi
+ else
+ 	AC_MSG_RESULT(no)
+-	AST_NATIVE_ARCH=
++	AST_NATIVE_ARCH=0
+ fi
+ AC_SUBST(AST_NATIVE_ARCH)
+ 
+@@ -1084,6 +1084,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
  AC_CHECK_HEADER([libkern/OSAtomic.h],
                  [AC_DEFINE_UNQUOTED([HAVE_OSX_ATOMICS], 1, [Define to 1 if OSX atomic operations are supported.])])
  

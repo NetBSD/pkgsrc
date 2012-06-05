@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/06/03 23:34:45 jnemeth Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/05 01:39:44 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-10.4.2
+DISTNAME=	asterisk-10.5.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -89,7 +89,7 @@ MAKE_FLAGS+=		WRKSRC=${WRKSRC}
 MAKE_FLAGS+=		LDOPTS=${LDFLAGS:M*:Q}
 MAKE_FLAGS+=		HTTP_DOCSDIR=${PREFIX}/share/httpd/htdocs
 MAKE_FLAGS+=		HTTP_CGIDIR=${PREFIX}/libexec/cgi-bin
-MAKE_FLAGS+=		OPTIMIZE=
+MAKE_FLAGS+=		OPTIMIZE=-O3
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 BUILDLINK_TRANSFORM+=	rm:-march=i386
@@ -179,10 +179,10 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	oss.conf phone.conf phoneprov.conf queuerules.conf queues.conf	\
 	res_config_mysql.conf res_config_sqlite.conf res_curl.conf	\
 	res_fax.conf res_ldap.conf res_odbc.conf res_pgsql.conf		\
-	res_pktccops.conf res_snmp.conf res_stun_monitor.conf rpt.conf	\
-	rtp.conf say.conf sip.conf sip_notify.conf skinny.conf sla.conf	\
-	smdi.conf telcordia-1.adsi udptl.conf unistim.conf		\
-	usbradio.conf users.conf voicemail.conf vpb.conf
+	res_pktccops.conf res_snmp.conf res_stun_monitor.conf rtp.conf	\
+	say.conf sip.conf sip_notify.conf skinny.conf sla.conf		\
+	smdi.conf telcordia-1.adsi udptl.conf unistim.conf users.conf	\
+	voicemail.conf vpb.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
 .endfor
 
