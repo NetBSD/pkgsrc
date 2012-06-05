@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/06/01 06:12:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/06/05 21:53:42 wiz Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -42,9 +42,11 @@ Size (libreoffice/libreoffice-help-3.5.4.2.tar.xz) = 1857756 bytes
 SHA1 (patch-configure.in) = 32df5a0994e4424fda15c7fb78ef9e8f5e406cad
 SHA1 (patch-i18npool_source_breakiterator_data_char.txt) = b290516019fb431e9b1ea5c5ced29aaa596cf44b
 SHA1 (patch-i18npool_source_breakiterator_data_char_in.txt) = 028988f143ec67bf71f602b784dc8b5929492ca8
+SHA1 (patch-lingucomponent_source_languageguessing_simpleguesser.cxx) = 3dc51fa1cd0381a7d607107dbbaaa017e50a228a
 SHA1 (patch-lotuswordpro_Module_lotuswordpro.mk) = 15f65e86c7b47f2113b68561a9a361ca69405000
 SHA1 (patch-sc_Module_sc.mk) = 615e2cfd132fbb8eb4b5272f36f95b2881e27959
 SHA1 (patch-sd_Module_sd.mk) = c1c49ed37086d868c44e600bf1d1784ae2973276
 SHA1 (patch-set_soenv.in) = 754a82444bab39d5d51f2a033da153479f33d2ae
+SHA1 (patch-solenv_inc_unxgcc.mk) = 1bebcc32475b6592a97384410c1036ab647eacec
 SHA1 (patch-sw_Module_sw.mk) = 48ca89a9a318dea3975d42869994dc89e0449c6e
 SHA1 (patch-writerfilter_Module_writerfilter.mk) = 1eb3caa50258be5f8b5e2bb19e5f5d039b5eb7a0
