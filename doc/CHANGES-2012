@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1890 2012/06/05 21:53:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1891 2012/06/05 22:43:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox-l10n to 13.0 [ryoon 2012-06-05]
 	Updated mail/roundcube to 0.7.2nb1 [jym 2012-06-05]
 	Updated misc/libreoffice to 3.5.4.2nb1 [wiz 2012-06-05]
+	Updated graphics/p5-Image-ExifTool to 8.90 [gdt 2012-06-05]
