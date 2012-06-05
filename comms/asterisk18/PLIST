@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/04/07 20:10:45 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/06/05 00:15:34 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -2772,7 +2772,6 @@ share/examples/asterisk/res_pgsql.conf
 share/examples/asterisk/res_pktccops.conf
 share/examples/asterisk/res_snmp.conf
 share/examples/asterisk/res_stun_monitor.conf
-share/examples/asterisk/rpt.conf
 share/examples/asterisk/rtp.conf
 share/examples/asterisk/say.conf
 share/examples/asterisk/sip.conf
@@ -2783,7 +2782,6 @@ share/examples/asterisk/smdi.conf
 share/examples/asterisk/telcordia-1.adsi
 share/examples/asterisk/udptl.conf
 share/examples/asterisk/unistim.conf
-share/examples/asterisk/usbradio.conf
 share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
