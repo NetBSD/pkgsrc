@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1887 2012/06/05 07:01:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1888 2012/06/05 18:13:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2873,3 +2873,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk10 to 10.5.0 [jnemeth 2012-06-05]
 	Added x11/transset version 1.0.0 [wiz 2012-06-05]
 	Removed x11/transset-df successor x11/transset [wiz 2012-06-05]
+	Updated devel/xulrunner to 13.0 [ryoon 2012-06-05]
+	Updated www/firefox to 13.0 [ryoon 2012-06-05]
+	Updated www/firefox-l10n to 13.0 [ryoon 2012-06-05]
