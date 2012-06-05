@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.51 2012/06/03 19:31:56 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.52 2012/06/05 08:28:51 sbd Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -223,3 +223,11 @@ Pullup ticket #3815 - requested by dholland
 graphics/cairo: build fix
 Pullup ticket #3816 - requested by obache
 geography/mapserver: security update
+Pullup ticket #3817 - requested by taca
+net/bind99 security update
+Pullup ticket #3818 - requested by taca
+net/bind98 security update
+Pullup ticket #3819 - requested by taca
+net/bind97 security update
+Pullup ticket #3820 - requested by taca
+net/bind96 security update
