@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2011/08/06 17:15:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2012/06/06 07:20:35 wiz Exp $
 bin/bison
 info/bison.info
 lib/liby.a
@@ -19,6 +19,7 @@ share/bison/lalr1.java
 share/bison/location.cc
 share/bison/m4sugar/foreach.m4
 share/bison/m4sugar/m4sugar.m4
+share/bison/stack.hh
 share/bison/xslt/bison.xsl
 share/bison/xslt/xml2dot.xsl
 share/bison/xslt/xml2text.xsl
@@ -32,6 +33,7 @@ share/locale/de/LC_MESSAGES/bison.mo
 share/locale/el/LC_MESSAGES/bison-runtime.mo
 share/locale/el/LC_MESSAGES/bison.mo
 share/locale/eo/LC_MESSAGES/bison-runtime.mo
+share/locale/eo/LC_MESSAGES/bison.mo
 share/locale/es/LC_MESSAGES/bison-runtime.mo
 share/locale/es/LC_MESSAGES/bison.mo
 share/locale/et/LC_MESSAGES/bison-runtime.mo
@@ -72,6 +74,7 @@ share/locale/ro/LC_MESSAGES/bison.mo
 share/locale/ru/LC_MESSAGES/bison-runtime.mo
 share/locale/ru/LC_MESSAGES/bison.mo
 share/locale/sl/LC_MESSAGES/bison-runtime.mo
+share/locale/sr/LC_MESSAGES/bison-runtime.mo
 share/locale/sv/LC_MESSAGES/bison-runtime.mo
 share/locale/sv/LC_MESSAGES/bison.mo
 share/locale/th/LC_MESSAGES/bison-runtime.mo
@@ -82,5 +85,6 @@ share/locale/uk/LC_MESSAGES/bison.mo
 share/locale/vi/LC_MESSAGES/bison-runtime.mo
 share/locale/vi/LC_MESSAGES/bison.mo
 share/locale/zh_CN/LC_MESSAGES/bison-runtime.mo
+share/locale/zh_CN/LC_MESSAGES/bison.mo
 share/locale/zh_TW/LC_MESSAGES/bison-runtime.mo
 share/locale/zh_TW/LC_MESSAGES/bison.mo

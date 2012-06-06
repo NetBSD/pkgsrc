@@ -1,14 +1,13 @@
-$NetBSD: patch-lib_isnan.c,v 1.2 2012/04/07 15:14:04 schwarz Exp $
+$NetBSD: patch-lib_isnan.c,v 1.3 2012/06/06 07:20:36 wiz Exp $
 
---- lib/isnan.c.orig	2011-04-16 21:08:41.000000000 +0200
-+++ lib/isnan.c	2012-04-06 16:16:04.995001524 +0200
-@@ -118,7 +118,8 @@
-   /* Be careful to not do any floating-point operation on x, such as x == x,
+--- lib/isnan.c.orig	2012-03-30 07:18:32.000000000 +0000
++++ lib/isnan.c
+@@ -119,7 +119,7 @@ FUNC (DOUBLE x)
       because x may be a signaling NaN.  */
- #  if defined __TINYC__ || defined __SUNPRO_C || defined __DECC \
--      || (defined __sgi && !defined __GNUC__) || defined __ICC
-+      || (defined __sgi && !defined __GNUC__) || defined __ICC \
-+      || defined __vax__
-   /* The Sun C 5.0, Intel ICC 10.0, and Compaq (ex-DEC) 6.4 compilers don't
-      recognize the initializers as constant expressions.  The latter compiler
-      also fails when constant-folding 0.0 / 0.0 even when constant-folding is
+ #  if defined __SUNPRO_C || defined __ICC || defined _MSC_VER \
+       || defined __DECC || defined __TINYC__ \
+-      || (defined __sgi && !defined __GNUC__)
++      || (defined __sgi && !defined __GNUC__) || defined __vax__
+   /* The Sun C 5.0, Intel ICC 10.0, Microsoft Visual C/C++ 9.0, Compaq (ex-DEC)
+      6.4, and TinyCC compilers don't recognize the initializers as constant
+      expressions.  The Compaq compiler also fails when constant-folding

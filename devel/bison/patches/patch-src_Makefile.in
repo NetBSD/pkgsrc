@@ -1,0 +1,19 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/06/06 07:20:36 wiz Exp $
+
+Do not install a yacc executable.
+
+--- src/Makefile.in.orig	2012-06-06 07:16:43.000000000 +0000
++++ src/Makefile.in
+@@ -1899,9 +1899,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ 
+ yacc:
+-	$(AM_V_GEN)echo '#! /bin/sh' >$@
+-	$(AM_V_at)echo "exec '$(bindir)/bison' -y "'"$$@"' >>$@
+-	$(AM_V_at)chmod a+x $@
++#	$(AM_V_GEN)echo '#! /bin/sh' >$@
++#	$(AM_V_at)echo "exec '$(bindir)/bison' -y "'"$$@"' >>$@
++#	$(AM_V_at)chmod a+x $@
+ 
+ # The following rule is not designed to be portable,
+ # and relies on tools that not everyone has.
