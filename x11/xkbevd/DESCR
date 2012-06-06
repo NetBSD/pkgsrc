@@ -1,0 +1,8 @@
+This command is very raw and is therefore only partially implemented;
+we present it here as a rough prototype for developers, not as a
+general purpose tool for end users.
+
+The xkbevd event daemon listens for specified XKB events and executes
+requested commands if they occur.   The configuration file consists
+of a list of event specification/action pairs and/or variable
+definitions.
