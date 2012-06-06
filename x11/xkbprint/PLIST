@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2012/06/06 09:41:07 wiz Exp $
+bin/xkbprint
+man/man1/xkbprint.1
