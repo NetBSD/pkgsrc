@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2012/06/06 09:27:19 wiz Exp $
+bin/viewres
+lib/X11/app-defaults/Viewres
+lib/X11/app-defaults/Viewres-color
+man/man1/viewres.1
