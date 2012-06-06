@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11265 2012/06/04 12:16:33 obache Exp $
+$NetBSD: TODO,v 1.11266 2012/06/06 07:48:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -312,10 +312,10 @@ Suggested new packages
 	xf86-video-suncg6, xf86-video-sunffb, xf86-video-sunleo,
 	xf86-video-suntcx, xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-voodoo, xf86-video-xgi, xf86-video-xgixp, xf86dga,
-	xgc, xkbevd, xkbprint, xkbutils, xlsatoms, xorg-sgml-doctools,
+	xgc, xkbevd, xkbprint, xkbutils, xlsatoms,
 	xpr, xpyb, mkcomposecache, xscope, xf86-video-qxl, input_calibrator,
 	xf86-input-elographics, xditview, proxymngr, rstart, showfont,
-	xdbedizzy, xfindproxy, xfwp, xorg-docs, xts, libXaw3d, lndir,
+	xdbedizzy, xfindproxy, xfwp, xts, libXaw3d, lndir,
 	xcb-util-image, xcb-util-keysyms, xcb-util-wm
 
 
