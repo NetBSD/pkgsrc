@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/06/01 20:53:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/06/06 13:56:48 adam Exp $
 bin/opencv_createsamples
 bin/opencv_haartraining
 bin/opencv_performance
@@ -215,6 +215,5 @@ share/OpenCV/haarcascades/haarcascade_profileface.xml
 share/OpenCV/haarcascades/haarcascade_righteye_2splits.xml
 share/OpenCV/haarcascades/haarcascade_upperbody.xml
 share/OpenCV/lbpcascades/lbpcascade_frontalface.xml
-@pkgdir share/opencv/haarcascades
 @pkgdir share/doc/opencv/ref/pics
 @pkgdir share/doc/opencv/papers

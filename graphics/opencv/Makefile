@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2012/06/01 20:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/06/06 13:56:48 adam Exp $
 
 DISTNAME=	OpenCV-2.4.1
 PKGNAME=	${DISTNAME:S/OpenCV/opencv/:S/a$//}
+PKGREVISION=	1
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,8 +19,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
-INSTALLATION_DIRS+=	share/doc/opencv/papers share/doc/opencv/ref/pics \
-			share/opencv/haarcascades
+
+INSTALLATION_DIRS+=	share/doc/opencv/papers
+INSTALLATION_DIRS+=	share/doc/opencv/ref/pics
+INSTALLATION_DIRS+=	share/OpenCV/haarcascades
 
 PKGCONFIG_OVERRIDE+=	opencv.pc.cmake.in
 
@@ -28,12 +31,13 @@ REPLACE_PYTHON+=	samples/python/*.py
 WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
 
 # includes configure output and paths to gmake etc.
-CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.so*
+CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
