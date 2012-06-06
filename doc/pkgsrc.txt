@@ -376,7 +376,7 @@ II. The pkgsrc developer's guide
         21.1. Submitting binary packages
         21.2. Submitting source packages (for non-NetBSD-developers)
         21.3. General notes when adding, updating, or removing packages
-        21.4. Committing: Importing a package into CVS
+        21.4. Committing: Adding a package to CVS
         21.5. Updating a package to a newer version
         21.6. Renaming a package in pkgsrc
         21.7. Moving a package in pkgsrc
@@ -3339,7 +3339,7 @@ Table of Contents
     21.1. Submitting binary packages
     21.2. Submitting source packages (for non-NetBSD-developers)
     21.3. General notes when adding, updating, or removing packages
-    21.4. Committing: Importing a package into CVS
+    21.4. Committing: Adding a package to CVS
     21.5. Updating a package to a newer version
     21.6. Renaming a package in pkgsrc
     21.7. Moving a package in pkgsrc
@@ -7818,7 +7818,7 @@ Table of Contents
 21.1. Submitting binary packages
 21.2. Submitting source packages (for non-NetBSD-developers)
 21.3. General notes when adding, updating, or removing packages
-21.4. Committing: Importing a package into CVS
+21.4. Committing: Adding a package to CVS
 21.5. Updating a package to a newer version
 21.6. Renaming a package in pkgsrc
 21.7. Moving a package in pkgsrc
@@ -7884,27 +7884,33 @@ changes-entry-commit! If you are not using a checkout directly from
 cvs.NetBSD.org, but e.g. a local copy of the repository, you can set
 USE_NETBSD_REPO=yes. This makes the cvs commands use the main repository.
 
-21.4. Committing: Importing a package into CVS
+21.4. Committing: Adding a package to CVS
 
 This section is only of interest for pkgsrc developers with write access to the
-pkgsrc repository. Please remember that cvs imports files relative to the
-current working directory, and that the pathname that you give the cvs import
-command is so that it knows where to place the files in the repository. Newly
-created packages should be imported with a vendor tag of "TNF" and a release
-tag of "pkgsrc-base", e.g:
+pkgsrc repository.
 
-$ cd .../pkgsrc/category/pkgname
-$ cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+When the package is finished, "cvs add" the files. Start by adding the
+directory and then files in the directory. Don't forget to add the new package
+to the category's Makefile. Make sure you don't forget any files; you can check
+by running "cvs status". An example:
 
-Remember to move the directory from which you imported out of the way, or cvs
-will complain the next time you "cvs update" your source tree. Also don't
-forget to add the new package to the category's Makefile.
+$ cd .../pkgsrc/category
+$ cvs add pkgname
+$ cd pkgname
+$ cvs add DESCR Makefile PLIST distinfo buildlink3.mk patches
+$ cvs add patches/p*
+$ cvs status | less
+$ cd ..
+$ vi Makefile # add SUBDIRS+=pkgname line
+$ cvs commit Makefile pkgname
 
 The commit message of the initial import should include part of the DESCR file,
 so people reading the mailing lists know what the package is/does.
 
-For new packages, "cvs import" is preferred to "cvs add" because the former
-gets everything with a single command, and provides a consistent tag.
+Also mention the new package in pkgsrc/doc/CHANGES-20xx.
+
+Previously, "cvs import" was suggested, but it was much easier to get wrong
+than "cvs add".
 
 21.5. Updating a package to a newer version
 
