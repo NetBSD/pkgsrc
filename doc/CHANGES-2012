@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1903 2012/06/06 15:57:21 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1904 2012/06/06 16:01:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2893,3 +2893,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox10 to 10.0.5 [ryoon 2012-06-06]
 	Updated www/firefox10-l10n to 10.0.5 [ryoon 2012-06-06]
 	Updated www/contao211-translations to 201206040 [taca 2012-06-06]
+	Updated net/isc-dhcp4 to 4.2.4 [taca 2012-06-06]
+	Updated net/isc-dhclient4 to 4.2.4 [taca 2012-06-06]
+	Updated net/isc-dhcpd4 to 4.2.4 [taca 2012-06-06]
+	Updated net/isc-dhcrelay4 to 4.2.4 [taca 2012-06-06]
