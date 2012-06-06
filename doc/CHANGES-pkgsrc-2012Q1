@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.52 2012/06/05 08:28:51 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.53 2012/06/06 20:48:12 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -231,3 +231,14 @@ Pullup ticket #3819 - requested by taca
 net/bind97 security update
 Pullup ticket #3820 - requested by taca
 net/bind96 security update
+Pullup ticket #3821 - requested by tron
+audio/xcdplayer: build fix
+Pullup ticket #3822 - requested by tron
+misc/stellarium/Makefile: build fix
+print/pdf2djvu/Makefile: build fix
+Pullup ticket #3823 - requested by dholland
+net/nasd: build fix
+Pullup ticket #3824 - requested by dholland
+www/p5-Task-Plack: build fix
+Pullup ticket #3825 - requested by dholland
+x11/xvidtune: build fix
