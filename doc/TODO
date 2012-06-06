@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11270 2012/06/06 09:44:41 wiz Exp $
+$NetBSD: TODO,v 1.11271 2012/06/06 14:27:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nas-1.9.3 [pkg/45449]
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nawk-20071023
-	o ncview-1.93b
+	o ncview-2.1.1
 	o ne-2.01
 	o nessus-4.4.1
 	o net-snmp-5.7.1
@@ -1248,7 +1248,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uae-0.8.29
 	o ubs-0.20
 	o ucblogo-5.5
-	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
+	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
