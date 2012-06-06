@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1894 2012/06/06 07:40:36 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1895 2012/06/06 07:45:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2882,3 +2882,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated meta-pkgs/modular-xorg-apps to 1.6 [wiz 2012-06-06]
 	Updated devel/bison to 2.5.1 [wiz 2012-06-06]
 	Added misc/xorg-docs version 1.7 [wiz 2012-06-06]
+	Added misc/xorg-sgml-doctools version 1.11 [wiz 2012-06-06]
