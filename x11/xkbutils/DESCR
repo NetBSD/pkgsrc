@@ -1,0 +1,7 @@
+xkbutils is a collection of small utilities utilizing the XKeyboard (XKB)
+extension to the X11 protocol.
+
+It includes:
+ xkbbell  - generate XKB bell events
+ xkbvleds - display the state of LEDs on an XKB keyboard in a window
+ xkbwatch - reports changes in the XKB keyboard state

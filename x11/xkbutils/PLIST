@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/06/06 09:32:44 wiz Exp $
+bin/xkbbell
+bin/xkbvleds
+bin/xkbwatch
+man/man1/xkbbell.1
+man/man1/xkbvleds.1
+man/man1/xkbwatch.1
