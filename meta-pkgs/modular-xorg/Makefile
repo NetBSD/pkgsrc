@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/26 23:27:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/06 07:47:22 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-1.0
+PKGNAME=	modular-xorg-1.1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=/}
 DISTFILES=	# empty
@@ -17,5 +17,6 @@ DEPENDS+=	modular-xorg-drivers>=1.4:../../meta-pkgs/modular-xorg-drivers
 DEPENDS+=	modular-xorg-apps>=1.5:../../meta-pkgs/modular-xorg-apps
 DEPENDS+=	modular-xorg-fonts>=1.1:../../meta-pkgs/modular-xorg-fonts
 DEPENDS+=	modular-xorg-server>=1.6.5:../../x11/modular-xorg-server
+DEPENDS+=	xorg-docs-[0-9]*:../../misc/xorg-docs
 
 .include "../../mk/bsd.pkg.mk"
