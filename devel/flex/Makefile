@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/06/06 13:27:05 obache Exp $
 
 DISTNAME=		flex-2.5.35
 CATEGORIES=		lang
@@ -12,7 +12,7 @@ COMMENT=		Fast clone of lex(1), the lexical scanner generator
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		bison gm4:run makeinfo
+USE_TOOLS+=		gm4:run makeinfo
 MAKE_JOBS_SAFE=		no
 TEST_TARGET=		check
 INFO_FILES=		yes
