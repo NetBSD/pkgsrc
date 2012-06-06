@@ -390,7 +390,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-binary-packages">21.1. Submitting binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-your-package">21.2. Submitting source packages (for non-NetBSD-developers)</a></span></dt>
 <dt><span class="sect1"><a href="#general-notes-for-changes">21.3. General notes when adding, updating, or removing packages</a></span></dt>
-<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Importing a package into CVS</a></span></dt>
+<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Adding a package to CVS</a></span></dt>
 <dt><span class="sect1"><a href="#updating-package">21.5. Updating a package to a newer version</a></span></dt>
 <dt><span class="sect1"><a href="#renaming-package">21.6. Renaming a package in pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#moving-package">21.7. Moving a package in pkgsrc</a></span></dt>
@@ -3799,7 +3799,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#submitting-binary-packages">21.1. Submitting binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-your-package">21.2. Submitting source packages (for non-NetBSD-developers)</a></span></dt>
 <dt><span class="sect1"><a href="#general-notes-for-changes">21.3. General notes when adding, updating, or removing packages</a></span></dt>
-<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Importing a package into CVS</a></span></dt>
+<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Adding a package to CVS</a></span></dt>
 <dt><span class="sect1"><a href="#updating-package">21.5. Updating a package to a newer version</a></span></dt>
 <dt><span class="sect1"><a href="#renaming-package">21.6. Renaming a package in pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#moving-package">21.7. Moving a package in pkgsrc</a></span></dt>
@@ -7545,7 +7545,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229300869"></a><dl>
+<a name="id1168229312850"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7562,7 +7562,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168229300873"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229312854"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7572,7 +7572,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168229300882"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229312862"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7583,7 +7583,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168229300890"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229312871"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9373,7 +9373,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 <dt><span class="sect1"><a href="#submitting-binary-packages">21.1. Submitting binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#submitting-your-package">21.2. Submitting source packages (for non-NetBSD-developers)</a></span></dt>
 <dt><span class="sect1"><a href="#general-notes-for-changes">21.3. General notes when adding, updating, or removing packages</a></span></dt>
-<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Importing a package into CVS</a></span></dt>
+<dt><span class="sect1"><a href="#committing-importing">21.4. Committing: Adding a package to CVS</a></span></dt>
 <dt><span class="sect1"><a href="#updating-package">21.5. Updating a package to a newer version</a></span></dt>
 <dt><span class="sect1"><a href="#renaming-package">21.6. Renaming a package in pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#moving-package">21.7. Moving a package in pkgsrc</a></span></dt>
@@ -9459,31 +9459,34 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
   makes the cvs commands use the main repository.
   </p>
 </div>
-<div class="sect1" title="21.4. Committing: Importing a package into CVS">
+<div class="sect1" title="21.4. Committing: Adding a package to CVS">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="committing-importing"></a>21.4. Committing: Importing a package into CVS</h2></div></div></div>
+<a name="committing-importing"></a>21.4. Committing: Adding a package to CVS</h2></div></div></div>
 <p>This section is only of interest for pkgsrc developers with write
-  access to the pkgsrc repository. Please remember that cvs
-  imports files relative to the current working directory, and that
-  the pathname that you
-  give the <span class="command"><strong>cvs import</strong></span> command is so that it knows where
-  to place the files in the repository.  Newly created packages should be
-  imported with a vendor tag of <span class="quote">&#8220;<span class="quote">TNF</span>&#8221;</span> and a release tag of
-  <span class="quote">&#8220;<span class="quote">pkgsrc-base</span>&#8221;</span>, e.g:</p>
+  access to the pkgsrc repository.</p>
+<p>When the package is finished, <span class="quote">&#8220;<span class="quote">cvs add</span>&#8221;</span> the files.
+Start by adding the directory and then files in the directory. Don't
+forget to add the new package to the category's
+<code class="filename">Makefile</code>. Make sure you don't forget any files;
+you can check by running <span class="quote">&#8220;<span class="quote">cvs status</span>&#8221;</span>. An example:</p>
 <pre class="programlisting">
-<code class="prompt">$</code> cd .../pkgsrc/category/pkgname
-<code class="prompt">$</code> cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+<code class="prompt">$</code> cd .../pkgsrc/category
+<code class="prompt">$</code> cvs add pkgname
+<code class="prompt">$</code> cd pkgname
+<code class="prompt">$</code> cvs add DESCR Makefile PLIST distinfo buildlink3.mk patches
+<code class="prompt">$</code> cvs add patches/p*
+<code class="prompt">$</code> cvs status | less
+<code class="prompt">$</code> cd ..
+<code class="prompt">$</code> vi Makefile # add SUBDIRS+=pkgname line
+<code class="prompt">$</code> cvs commit Makefile pkgname
 </pre>
-<p>Remember to move the directory from which you imported out of
-  the way, or cvs will complain the next time you <span class="quote">&#8220;<span class="quote">cvs
-  update</span>&#8221;</span> your source tree.  Also don't forget to add the new
-  package to the category's <code class="filename">Makefile</code>.</p>
 <p>The commit message of the initial import should include part of the
   <code class="filename">DESCR</code> file, so people reading the mailing lists know
   what the package is/does.</p>
-<p>For new packages, <span class="quote">&#8220;<span class="quote">cvs import</span>&#8221;</span> is preferred to <span class="quote">&#8220;<span class="quote">cvs
-  add</span>&#8221;</span> because the former gets everything with a single command,
-  and provides a consistent tag.</p>
+<p>Also mention the new package in
+<code class="filename">pkgsrc/doc/CHANGES-20xx</code>.</p>
+<p>Previously, <span class="quote">&#8220;<span class="quote">cvs import</span>&#8221;</span> was suggested, but it was
+much easier to get wrong than <span class="quote">&#8220;<span class="quote">cvs add</span>&#8221;</span>.</p>
 </div>
 <div class="sect1" title="21.5. Updating a package to a newer version">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -9584,7 +9587,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229287770"></a><dl>
+<a name="id1168229299847"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9627,7 +9630,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168229287773"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229299850"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9643,7 +9646,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168229287806"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229299884"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9661,7 +9664,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168229287878"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229299921"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9679,7 +9682,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168229287912"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229299956"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9692,7 +9695,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168229287930"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229299974"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9708,7 +9711,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168229287957"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229300000"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9732,7 +9735,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168229288092"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229300067"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9757,7 +9760,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168229288123"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229300167"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9805,7 +9808,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168229288178"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229300220"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
