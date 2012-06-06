@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/03 17:21:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/06 22:19:57 wiz Exp $
 #
 
 DISTNAME=		libfontenc-1.1.1
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	fontenc.pc.in
 GNU_CONFIGURE=		yes
+
+.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
