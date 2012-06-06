@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.3 2012/06/06 07:39:55 wiz Exp $
+man/man7/Consortium.7
+man/man7/Standards.7
+man/man7/X.7
+man/man7/XOrgFoundation.7
+man/man7/XProjectTeam.7
+man/man7/Xsecurity.7
+share/doc/xorg-docs/License.xml
+share/doc/xorg-docs/MAINTAINERS
+share/doc/xorg-docs/README.xml
+share/doc/xorg-docs/ReleaseNotes.xml
+share/doc/xorg-docs/Versions.xml
+share/doc/xorg-docs/Xserver/XACE-Spec.xml
+share/doc/xorg-docs/Xserver/analysis.xml
+share/doc/xorg-docs/Xserver/appgroup.xml
+share/doc/xorg-docs/Xserver/secint.xml
+share/doc/xorg-docs/ctext/ctext.xml
+share/doc/xorg-docs/fonts/fonts.xml
+share/doc/xorg-docs/graphics/dps.xml
+share/doc/xorg-docs/icccm/icccm.xml
+share/doc/xorg-docs/input/XKB-Config.xml
+share/doc/xorg-docs/input/XKB-Enhancing.xml
+share/doc/xorg-docs/platforms/Darwin.xml
+share/doc/xorg-docs/platforms/Solaris.xml
+share/doc/xorg-docs/xext/lbxalg.xml
+share/doc/xorg-docs/xlfd/xlfd.xml
