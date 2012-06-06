@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2012/03/03 12:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2012/06/06 23:14:10 asau Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	2
@@ -92,6 +92,7 @@ post-build:
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
