@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/04/15 03:49:00 markd Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/06 13:56:48 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opencv
 PKG_SUPPORTED_OPTIONS=	python
@@ -17,5 +17,4 @@ CMAKE_ARGS+=	-D BUILD_NEW_PYTHON_SUPPORT=OFF
 .endif
 
 # FIXME: should be option.mk'ed instead
-CMAKE_ARGS+=    -D WITH_OPENEXR:BOOL=OFF
 CMAKE_ARGS+=	-D BUILD_DOXYGEN_DOCS=OFF
