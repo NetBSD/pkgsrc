@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/05/11 11:12:41 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2012/06/06 14:17:11 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.9.1
@@ -33,6 +33,11 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,-R${WRKSRC}/qpy/QtDeclarative
 BUILDLINK_TRANSFORM+=	rm:-Wl,-R${WRKSRC}/qpy/QtDesigner
 BUILDLINK_TRANSFORM+=	rm:-Wl,-R${WRKSRC}/qpy/QtGui
 BUILDLINK_TRANSFORM+=	rm:-Wl,-R${WRKSRC}/qpy/QtOpenGL
+BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath,${WRKSRC}/qpy/QtCore
+BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath,${WRKSRC}/qpy/QtDeclarative
+BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath,${WRKSRC}/qpy/QtDesigner
+BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath,${WRKSRC}/qpy/QtGui
+BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath,${WRKSRC}/qpy/QtOpenGL
 
 # This is a hack. CPPFLAGS and CXXFLAGS from the environment are ignored,
 # however, so I don't know a better way to fix it.
