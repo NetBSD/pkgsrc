@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2012/06/06 09:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.651 2012/06/06 09:32:44 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -500,6 +500,7 @@ SUBDIR+=	xkbcomp
 SUBDIR+=	xkbd
 SUBDIR+=	xkbdata
 SUBDIR+=	xkbset
+SUBDIR+=	xkbutils
 SUBDIR+=	xkeyboard-config
 SUBDIR+=	xkeycaps
 SUBDIR+=	xkill
