@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.24 2009/09/17 18:01:18 kano Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.25 2012/06/06 07:39:07 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -95,33 +95,35 @@
 </sect1>
 
 <sect1 id="committing-importing">
-<title>Committing: Importing a package into CVS</title>
+<title>Committing: Adding a package to CVS</title>
 <para>This section is only of interest for pkgsrc developers with write
-  access to the pkgsrc repository. Please remember that cvs
-  imports files relative to the current working directory, and that
-  the pathname that you
-  give the <command>cvs import</command> command is so that it knows where
-  to place the files in the repository.  Newly created packages should be
-  imported with a vendor tag of <quote>TNF</quote> and a release tag of
-  <quote>pkgsrc-base</quote>, e.g:</para>
-
+  access to the pkgsrc repository.</para>
+<para>When the package is finished, <quote>cvs add</quote> the files.
+Start by adding the directory and then files in the directory. Don't
+forget to add the new package to the category's
+<filename>Makefile</filename>. Make sure you don't forget any files;
+you can check by running <quote>cvs status</quote>. An example:</para>
 <programlisting>
-&uprompt; cd .../pkgsrc/category/pkgname
-&uprompt; cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+&uprompt; cd .../pkgsrc/category
+&uprompt; cvs add pkgname
+&uprompt; cd pkgname
+&uprompt; cvs add DESCR Makefile PLIST distinfo buildlink3.mk patches
+&uprompt; cvs add patches/p*
+&uprompt; cvs status | less
+&uprompt; cd ..
+&uprompt; vi Makefile # add SUBDIRS+=pkgname line
+&uprompt; cvs commit Makefile pkgname
 </programlisting>
-
-<para>Remember to move the directory from which you imported out of
-  the way, or cvs will complain the next time you <quote>cvs
-  update</quote> your source tree.  Also don't forget to add the new
-  package to the category's <filename>Makefile</filename>.</para>
 
 <para>The commit message of the initial import should include part of the
   <filename>DESCR</filename> file, so people reading the mailing lists know
   what the package is/does.</para>
 
-<para>For new packages, <quote>cvs import</quote> is preferred to <quote>cvs
-  add</quote> because the former gets everything with a single command,
-  and provides a consistent tag.</para>
+<para>Also mention the new package in
+<filename>pkgsrc/doc/CHANGES-20xx</filename>.</para>
+
+<para>Previously, <quote>cvs import</quote> was suggested, but it was
+much easier to get wrong than <quote>cvs add</quote>.</para>
 </sect1>
 
 <sect1 id="updating-package">
