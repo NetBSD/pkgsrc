@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/16 04:00:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2012/06/06 17:40:14 tron Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.12
@@ -21,6 +21,11 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++ c
 USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext gsed:run
 TOOLS_DEPENDS.gsed=	gsed>=4.2:../../textproc/gsed
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-5*)
+BUILDLINK_TRANSFORM+=	rm:-Werror=overloaded-virtual
+.endif
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
