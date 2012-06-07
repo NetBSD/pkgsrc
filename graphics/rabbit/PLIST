@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/02/01 12:57:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.21 2012/06/07 11:56:28 obache Exp $
 bin/rabbirack
 bin/rabbirc
 bin/rabbit
@@ -270,6 +270,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/edge-info-toolkit/edge-info-toolkit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/edge-info-toolkit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword/emphasize-keyword.rb
 ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/enishi-green/enishi-green.rb
+${RUBY_VENDORLIB}/rabbit/theme/enishi-green/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/entry.rb
 ${RUBY_VENDORLIB}/rabbit/theme/footer-comment/footer-comment.rb
 ${RUBY_VENDORLIB}/rabbit/theme/footer-comment/property.rb
