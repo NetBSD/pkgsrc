@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2012/04/18 20:51:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2012/06/07 13:48:18 ryoon Exp $
 #
 
-DISTNAME=	nspr-4.9
-PKGNAME=	nspr-4.9.3 # some resaon
-PKGREVISION=	1
-NSPR_RELEASE=	4.9.0
+DISTNAME=	nspr-${NSPR_RELEASE}
+PKGNAME=	nspr-4.9.3.1 # some reason
+NSPR_RELEASE=	4.9.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v4.9/src/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/projects/nspr/index.html
