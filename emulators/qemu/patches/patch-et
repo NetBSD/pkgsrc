@@ -1,15 +1,18 @@
-$NetBSD: patch-et,v 1.3 2011/08/22 12:00:34 ryoon Exp $
+$NetBSD: patch-et,v 1.4 2012/06/07 21:23:46 ryoon Exp $
 
---- Makefile.orig	2011-08-08 18:28:42 +0000
+--- Makefile.orig	2012-06-01 09:13:13.000000000 +0000
 +++ Makefile
-@@ -261,8 +261,8 @@ ifdef CONFIG_POSIX
- endif
+@@ -288,9 +288,10 @@ install-datadir:
+ install-confdir:
+ 	$(INSTALL_DIR) "$(DESTDIR)$(qemu_confdir)"
  
- install-sysconfig:
--	$(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)/qemu"
--	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(sysconfdir)/qemu"
+-install-sysconfig: install-datadir install-confdir
+-	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(qemu_confdir)"
+-	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/cpus-x86_64.conf "$(DESTDIR)$(qemu_datadir)"
++install-sysconfig:
 +	$(INSTALL_DIR) "$(DESTDIR)$(egdir)"
 +	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(egdir)"
++	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/cpus-x86_64.conf "$(DESTDIR)$(egdir)"
  
- install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig
+ install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig install-datadir
  	$(INSTALL_DIR) "$(DESTDIR)$(bindir)"
