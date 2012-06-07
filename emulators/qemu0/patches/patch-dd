@@ -1,0 +1,66 @@
+$NetBSD: patch-dd,v 1.1 2012/06/07 21:35:37 ryoon Exp $
+
+Remove confsuffix from sysconfdir so that our PKG_SYSCONFSUBDIR setting
+works.
+
+Install man pages into ${PREFIX}/man, not ${PREFIX}/share/man.
+
+Handle arm and armeb case on NetBSD.
+XXX: it looks mips is always treated as big endian.
+
+--- configure.orig	2011-08-08 18:28:42 +0000
++++ configure
+@@ -141,13 +141,13 @@ bigendian="no"
+ mingw32="no"
+ EXESUF=""
+ prefix="/usr/local"
+-mandir="\${prefix}/share/man"
++mandir="\${prefix}/man"
+ datadir="\${prefix}/share/qemu"
+ docdir="\${prefix}/share/doc/qemu"
+ bindir="\${prefix}/bin"
+ libdir="\${prefix}/lib"
+ sysconfdir="\${prefix}/etc"
+-confsuffix="/qemu"
++confsuffix=""
+ slirp="yes"
+ fmod_lib=""
+ fmod_inc=""
+@@ -281,12 +281,18 @@ elif check_define __s390__ ; then
+   else
+     cpu="s390"
+   fi
++elif check_define __arm__ ; then
++  if check_define __ARMEL__ ; then
++    cpu="arm"
++  elif check_define __ARMEB__ ; then
++    cpu="armeb"
++  fi
+ else
+   cpu=`uname -m`
+ fi
+ 
+ case "$cpu" in
+-  alpha|cris|ia64|lm32|m68k|microblaze|ppc|ppc64|sparc64|unicore32)
++  alpha|arm|armeb|cris|ia64|lm32|m68k|microblaze|ppc|ppc64|sparc64|unicore32)
+     cpu="$cpu"
+   ;;
+   i386|i486|i586|i686|i86pc|BePC)
+@@ -1152,7 +1158,7 @@ else
+ 
+ # if cross compiling, cannot launch a program, so make a static guess
+ case "$cpu" in
+-  armv4b|hppa|m68k|mips|mips64|ppc|ppc64|s390|s390x|sparc|sparc64)
++  armeb|armv4b|hppa|m68k|mips|mips64|ppc|ppc64|s390|s390x|sparc|sparc64)
+     bigendian=yes
+   ;;
+ esac
+@@ -2730,7 +2736,7 @@ case "$cpu" in
+   i386|x86_64|alpha|cris|hppa|ia64|lm32|m68k|microblaze|mips|mips64|ppc|ppc64|s390|s390x|sparc|sparc64|unicore32)
+     ARCH=$cpu
+   ;;
+-  armv4b|armv4l)
++  arm|armeb|armv4b|armv4l)
+     ARCH=arm
+   ;;
+ esac

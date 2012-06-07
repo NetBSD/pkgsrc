@@ -1,0 +1,170 @@
+$NetBSD: patch-ao,v 1.1 2012/06/07 21:35:37 ryoon Exp $
+
+--- audio/mixeng.c.orig	2011-08-08 18:28:42 +0000
++++ audio/mixeng.c
+@@ -143,56 +143,64 @@
+ #undef IN_T
+ #undef SHIFT
+ 
++/*
++ * Work around ugly XX_t #defines in NetBSD 2.x,
++ * fixed as typedefs in NetBSD 3.x. Two macros needed to
++ * get CPP defines expanded properly. - HF
++ */
++#define _NBglue(x,y,z) x ## y ## z
++#define NBglue(x,y,z) _NBglue(x,y,z)
++
+ t_sample *mixeng_conv[2][2][2][3] = {
+     {
+         {
+             {
+-                conv_natural_uint8_t_to_mono,
+-                conv_natural_uint16_t_to_mono,
+-                conv_natural_uint32_t_to_mono
++                NBglue(conv_natural_, uint8_t, _to_mono),
++                NBglue(conv_natural_, uint16_t, _to_mono),
++                NBglue(conv_natural_, uint32_t, _to_mono)
+             },
+             {
+-                conv_natural_uint8_t_to_mono,
+-                conv_swap_uint16_t_to_mono,
+-                conv_swap_uint32_t_to_mono,
++                NBglue(conv_natural_, uint8_t, _to_mono),
++                NBglue(conv_swap_, uint16_t, _to_mono),
++                NBglue(conv_swap_, uint32_t, _to_mono),
+             }
+         },
+         {
+             {
+-                conv_natural_int8_t_to_mono,
+-                conv_natural_int16_t_to_mono,
+-                conv_natural_int32_t_to_mono
++                NBglue(conv_natural_, int8_t, _to_mono),
++                NBglue(conv_natural_, int16_t, _to_mono),
++                NBglue(conv_natural_, int32_t, _to_mono)
+             },
+             {
+-                conv_natural_int8_t_to_mono,
+-                conv_swap_int16_t_to_mono,
+-                conv_swap_int32_t_to_mono
++                NBglue(conv_natural_, int8_t, _to_mono),
++                NBglue(conv_swap_, int16_t, _to_mono),
++                NBglue(conv_swap_, int32_t, _to_mono)
+             }
+         }
+     },
+     {
+         {
+             {
+-                conv_natural_uint8_t_to_stereo,
+-                conv_natural_uint16_t_to_stereo,
+-                conv_natural_uint32_t_to_stereo
++                NBglue(conv_natural_, uint8_t, _to_stereo),
++                NBglue(conv_natural_, uint16_t, _to_stereo),
++                NBglue(conv_natural_, uint32_t, _to_stereo)
+             },
+             {
+-                conv_natural_uint8_t_to_stereo,
+-                conv_swap_uint16_t_to_stereo,
+-                conv_swap_uint32_t_to_stereo
++                NBglue(conv_natural_, uint8_t, _to_stereo),
++                NBglue(conv_swap_, uint16_t, _to_stereo),
++                NBglue(conv_swap_, uint32_t, _to_stereo)
+             }
+         },
+         {
+             {
+-                conv_natural_int8_t_to_stereo,
+-                conv_natural_int16_t_to_stereo,
+-                conv_natural_int32_t_to_stereo
++                NBglue(conv_natural_, int8_t, _to_stereo),
++                NBglue(conv_natural_, int16_t, _to_stereo),
++                NBglue(conv_natural_, int32_t, _to_stereo)
+             },
+             {
+-                conv_natural_int8_t_to_stereo,
+-                conv_swap_int16_t_to_stereo,
+-                conv_swap_int32_t_to_stereo,
++                NBglue(conv_natural_, int8_t, _to_stereo),
++                NBglue(conv_swap_, int16_t, _to_stereo),
++                NBglue(conv_swap_, int32_t, _to_stereo),
+             }
+         }
+     }
+@@ -202,52 +210,52 @@ f_sample *mixeng_clip[2][2][2][3] = {
+     {
+         {
+             {
+-                clip_natural_uint8_t_from_mono,
+-                clip_natural_uint16_t_from_mono,
+-                clip_natural_uint32_t_from_mono
++                NBglue(clip_natural_, uint8_t, _from_mono),
++                NBglue(clip_natural_, uint16_t, _from_mono),
++                NBglue(clip_natural_, uint32_t, _from_mono)
+             },
+             {
+-                clip_natural_uint8_t_from_mono,
+-                clip_swap_uint16_t_from_mono,
+-                clip_swap_uint32_t_from_mono
++                NBglue(clip_natural_, uint8_t, _from_mono),
++                NBglue(clip_swap_, uint16_t, _from_mono),
++                NBglue(clip_swap_, uint32_t, _from_mono)
+             }
+         },
+         {
+             {
+-                clip_natural_int8_t_from_mono,
+-                clip_natural_int16_t_from_mono,
+-                clip_natural_int32_t_from_mono
++                NBglue(clip_natural_, int8_t, _from_mono),
++                NBglue(clip_natural_, int16_t, _from_mono),
++                NBglue(clip_natural_, int32_t, _from_mono)
+             },
+             {
+-                clip_natural_int8_t_from_mono,
+-                clip_swap_int16_t_from_mono,
+-                clip_swap_int32_t_from_mono
++                NBglue(clip_natural_, int8_t, _from_mono),
++                NBglue(clip_swap_, int16_t, _from_mono),
++                NBglue(clip_swap_, int32_t, _from_mono)
+             }
+         }
+     },
+     {
+         {
+             {
+-                clip_natural_uint8_t_from_stereo,
+-                clip_natural_uint16_t_from_stereo,
+-                clip_natural_uint32_t_from_stereo
++                NBglue(clip_natural_, uint8_t, _from_stereo),
++                NBglue(clip_natural_, uint16_t, _from_stereo),
++                NBglue(clip_natural_, uint32_t, _from_stereo)
+             },
+             {
+-                clip_natural_uint8_t_from_stereo,
+-                clip_swap_uint16_t_from_stereo,
+-                clip_swap_uint32_t_from_stereo
++                NBglue(clip_natural_, uint8_t, _from_stereo),
++                NBglue(clip_swap_, uint16_t, _from_stereo),
++                NBglue(clip_swap_, uint32_t, _from_stereo)
+             }
+         },
+         {
+             {
+-                clip_natural_int8_t_from_stereo,
+-                clip_natural_int16_t_from_stereo,
+-                clip_natural_int32_t_from_stereo
++                NBglue(clip_natural_, int8_t, _from_stereo),
++                NBglue(clip_natural_, int16_t, _from_stereo),
++                NBglue(clip_natural_, int32_t, _from_stereo)
+             },
+             {
+-                clip_natural_int8_t_from_stereo,
+-                clip_swap_int16_t_from_stereo,
+-                clip_swap_int32_t_from_stereo
++                NBglue(clip_natural_, int8_t, _from_stereo),
++                NBglue(clip_swap_, int16_t, _from_stereo),
++                NBglue(clip_swap_, int32_t, _from_stereo)
+             }
+         }
+     }

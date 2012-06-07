@@ -1,0 +1,16 @@
+$NetBSD: patch-ef,v 1.1 2012/06/07 21:35:37 ryoon Exp $
+
+Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
+(PR lib/43832: ssp causes common names to be defines)
+
+--- audio/audio.c.orig	2011-08-08 18:28:42 +0000
++++ audio/audio.c
+@@ -1162,7 +1162,7 @@ int AUD_read (SWVoiceIn *sw, void *buf, 
+         return 0;
+     }
+ 
+-    bytes = sw->hw->pcm_ops->read (sw, buf, size);
++    bytes = (*sw->hw->pcm_ops->read)(sw, buf, size);
+     return bytes;
+ }
+ 
