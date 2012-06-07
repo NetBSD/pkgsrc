@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1909 2012/06/07 15:57:38 asau Exp $
+$NetBSD: CHANGES-2012,v 1.1910 2012/06/07 16:52:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2903,3 +2903,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/nspr to 4.9.3.1 [ryoon 2012-06-07]
 	Updated devel/nss to 3.13.5 [ryoon 2012-06-07]
 	Updated benchmarks/iozone to 3.408 [asau 2012-06-07]
+	Updated net/quagga to 0.99.21 [gdt 2012-06-07]
