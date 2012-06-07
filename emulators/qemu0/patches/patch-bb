@@ -1,0 +1,21 @@
+$NetBSD: patch-bb,v 1.1 2012/06/07 21:35:37 ryoon Exp $
+
+* fix build on NetBSD/4.0.1.
+
+--- scripts/signrom.sh.orig	2011-08-08 18:28:42.000000000 +0000
++++ scripts/signrom.sh
+@@ -26,12 +26,12 @@ test "$1" -a "$2" || exit 1
+ sum=0
+ 
+ # find out the file size
+-x=`dd if="$1" bs=1 count=1 skip=2 2>/dev/null | od -t u1 -A n`
++x=`dd if="$1" bs=1 count=1 skip=2 2>/dev/null | od -t u1 | sed -e 's/^[0-9]* *//' -e 's/^00*\([0-9]\)/\1/'`
+ #size=`expr $x \* 512 - 1`
+ size=$(( $x * 512 - 1 ))
+ 
+ # now get the checksum
+-nums=`od -A n -t u1 -v -N $size "$1"`
++nums=`od -t u1 -v "$1" | sed -e 's/^[0-9]* *//' -e 's/^00*\([0-9]\)/\1/' -e 's/ 00*\([0-9]\)/ \1/g'`
+ for i in ${nums}; do
+     # add each byte's value to sum
+     sum=`expr \( $sum + $i \) % 256`
