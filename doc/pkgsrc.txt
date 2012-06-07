@@ -7900,9 +7900,10 @@ $ cd pkgname
 $ cvs add DESCR Makefile PLIST distinfo buildlink3.mk patches
 $ cvs add patches/p*
 $ cvs status | less
+$ cvs commit
 $ cd ..
 $ vi Makefile # add SUBDIRS+=pkgname line
-$ cvs commit Makefile pkgname
+$ cvs commit Makefile
 
 The commit message of the initial import should include part of the DESCR file,
 so people reading the mailing lists know what the package is/does.
