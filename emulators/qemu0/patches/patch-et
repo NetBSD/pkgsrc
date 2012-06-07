@@ -1,0 +1,15 @@
+$NetBSD: patch-et,v 1.1 2012/06/07 21:35:37 ryoon Exp $
+
+--- Makefile.orig	2011-08-08 18:28:42 +0000
++++ Makefile
+@@ -261,8 +261,8 @@ ifdef CONFIG_POSIX
+ endif
+ 
+ install-sysconfig:
+-	$(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)/qemu"
+-	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(sysconfdir)/qemu"
++	$(INSTALL_DIR) "$(DESTDIR)$(egdir)"
++	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(egdir)"
+ 
+ install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig
+ 	$(INSTALL_DIR) "$(DESTDIR)$(bindir)"

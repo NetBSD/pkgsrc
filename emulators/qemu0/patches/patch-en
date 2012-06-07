@@ -1,0 +1,13 @@
+$NetBSD: patch-en,v 1.1 2012/06/07 21:35:37 ryoon Exp $
+
+--- tcg/arm/tcg-target.h.orig	2011-08-08 18:28:42 +0000
++++ tcg/arm/tcg-target.h
+@@ -83,7 +83,7 @@ enum {
+ static inline void flush_icache_range(unsigned long start, unsigned long stop)
+ {
+ #if QEMU_GNUC_PREREQ(4, 1)
+-    __builtin___clear_cache((char *) start, (char *) stop);
++    __clear_cache((char *) start, (char *) stop); /* declared in exec-all.h */
+ #else
+     register unsigned long _beg __asm ("a1") = start;
+     register unsigned long _end __asm ("a2") = stop;
