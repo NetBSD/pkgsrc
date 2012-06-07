@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2012/06/02 07:21:24 obache Exp $
+# $NetBSD: Makefile,v 1.199 2012/06/07 21:36:18 ryoon Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -100,6 +100,7 @@ SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
 SUBDIR+=	pearpc
 SUBDIR+=	qemu
+SUBDIR+=	qemu0
 SUBDIR+=	raine
 #SUBDIR+=	sap	# only contains a Makefile.common
 SUBDIR+=	simh
