@@ -1,10 +1,10 @@
-$NetBSD: patch-hw_ppc__newworld.c,v 1.1 2011/08/22 12:00:34 ryoon Exp $
+$NetBSD: patch-hw_ppc__newworld.c,v 1.2 2012/06/07 21:23:46 ryoon Exp $
 
 Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
 
---- hw/ppc_newworld.c.orig	2011-08-08 18:28:42 +0000
+--- hw/ppc_newworld.c.orig	2012-06-01 09:13:13.000000000 +0000
 +++ hw/ppc_newworld.c
-@@ -120,7 +120,7 @@ static uint64_t translate_kernel_address
+@@ -116,7 +116,7 @@ static uint64_t translate_kernel_address
      return (addr & 0x0fffffff) + KERNEL_LOAD_ADDR;
  }
  
@@ -13,7 +13,7 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
  {
      return (addr + TARGET_PAGE_SIZE - 1) & TARGET_PAGE_MASK;
  }
-@@ -225,7 +225,7 @@ static void ppc_core99_init (ram_addr_t 
+@@ -231,7 +231,7 @@ static void ppc_core99_init (ram_addr_t 
          }
          /* load initrd */
          if (initrd_filename) {
@@ -22,7 +22,7 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
              initrd_size = load_image_targphys(initrd_filename, initrd_base,
                                                ram_size - initrd_base);
              if (initrd_size < 0) {
-@@ -233,11 +233,11 @@ static void ppc_core99_init (ram_addr_t 
+@@ -239,11 +239,11 @@ static void ppc_core99_init (ram_addr_t 
                           initrd_filename);
                  exit(1);
              }

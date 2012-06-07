@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2012/05/12 09:56:51 gson Exp $
+# $NetBSD: Makefile,v 1.91 2012/06/07 21:23:45 ryoon Exp $
 
-DISTNAME=		qemu-0.15.1
-PKGREVISION=		5
+DISTNAME=		qemu-1.1.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qemu.org/
@@ -25,14 +25,17 @@ BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
 			${PKG_SYSCONFDIR}/target-x86_64.conf
+CONF_FILES+=		${EGDIR}//cpus-x86_64.conf \
+			${PKG_SYSCONFDIR}/cpus-x86_64.conf
 EGDIR=			${PREFIX}/share/examples/qemu
 INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
 PKG_SYSCONFSUBDIR=	qemu
@@ -51,6 +54,8 @@ SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			hw/es1370.c \
 			hw/gus.c \
 			hw/hda-audio.c \
+			hw/lm4549.c \
+			hw/lm4549.h \
 			hw/marvell_88w8618_audio.c \
 			hw/milkymist-ac97.c \
 			hw/mips_fulong2e.c \
@@ -62,7 +67,9 @@ SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			hw/sb16.c \
 			hw/spitz.c \
 			hw/tsc210x.c \
+			hw/usb/dev-audio.c \
 			hw/wm8750.c \
+			hw/z2.c \
 			ui/vnc.h
 SUBST_SED.qaudio=	-e s,audio.h\",qaudio.h\",g
 SUBST_MESSAGE.qaudio=	Fixing audio.h confusion
@@ -120,8 +127,6 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
