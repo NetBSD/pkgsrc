@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.19 2012/01/24 23:45:00 marino Exp $
+$NetBSD: distinfo,v 1.20 2012/06/07 15:57:20 asau Exp $
 
-SHA1 (iozone3_397.tar) = 6095a38542286376f6eb2a203f253dc4c31ddeda
-RMD160 (iozone3_397.tar) = b87e1732206eae0762d1e6bd552b33af8bdc045a
-Size (iozone3_397.tar) = 1679360 bytes
+SHA1 (iozone3_408.tar) = 3dc56a251949151d12fc033f179cb6852abc71de
+RMD160 (iozone3_408.tar) = c9caa3f02f0404d3b4a3a7c7fad040439bfff8f1
+Size (iozone3_408.tar) = 1822720 bytes
 SHA1 (patch-aa) = e209a364cdeca38c3995fbaebde3758bdd74e582
-SHA1 (patch-ab) = 934e83868b1b23e951034484b2017b2cf4289441
+SHA1 (patch-ab) = 8af7a97fb4c8bfc39320b03b1b5c63acff5a3be7
 SHA1 (patch-ac) = a7df47dca37d33e2658b27c4888294ad541fd1b2
-SHA1 (patch-iozone_visualizer.pl) = cd5cd6ed4892bfae3ed7c48088ccdf5c9a5a53ee
-SHA1 (patch-report.pl) = 9101f79c78a55ca60993723923dd79dd51720490
