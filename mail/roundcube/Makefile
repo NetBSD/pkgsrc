@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/06/05 18:48:02 jym Exp $
+# $NetBSD: Makefile,v 1.42 2012/06/07 13:51:03 fhajny Exp $
 
 DISTNAME=	roundcubemail-0.7.2-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
@@ -134,7 +134,7 @@ do-install:
 
 .for f in ${CONF_PLUGINS}
 	${MKDIR} ${DESTDIR}${EGDIR}/plugins/${f}
-	test -f ${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php ] ||
+	test -f ${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php || \
 		${MV} ${DESTDIR}${RCDIR}/plugins/${f}/config.inc.php.dist \
 			${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php
 .endfor
