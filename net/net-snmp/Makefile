@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2012/05/17 12:56:17 spz Exp $
+# $NetBSD: Makefile,v 1.90 2012/06/08 13:13:35 fhajny Exp $
 
 DISTNAME=	net-snmp-5.6.1.1
 PKGREVISION=	3
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR}
 .if !empty(NET_SNMP_MIBDIRS)
 CONFIGURE_ARGS+=	--with-mibdirs=${NET_SNMP_MIBDIRS:Q}
 .endif
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-mib-modules="smux host ucd-snmp/diskio"
 .else
 CONFIGURE_ARGS+=	--with-mib-modules="smux host"
