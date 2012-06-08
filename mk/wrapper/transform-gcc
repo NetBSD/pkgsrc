@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.26 2012/03/07 12:55:53 he Exp $
+# $NetBSD: transform-gcc,v 1.27 2012/06/08 11:39:44 obache Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -145,6 +145,11 @@ case $arg in
 -kPIC			) transform_to "-fPIC" ;;
 -mt			) transform_to "-threads" ;;
 -64			) transform_to "-m64" ;;
+
+# Ignore SunPRO flags to prevent it from being recognized as a entry point
+# option for `ld'.
+-errwarn=*		|\
+-errwarn		) transform_discard_with_warning ;;
 
 # Unknown options.
 -*			) transform_pass_with_warning ;;
