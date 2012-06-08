@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2012/02/28 20:05:05 pettai Exp $
+# $NetBSD: Makefile,v 1.21 2012/06/08 21:52:00 pettai Exp $
 
-DISTNAME=	unbound-1.4.16
+DISTNAME=	unbound-1.4.17
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
