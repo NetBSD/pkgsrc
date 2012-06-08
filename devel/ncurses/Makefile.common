@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2011/04/06 14:02:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2012/06/08 13:21:10 fhajny Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -48,6 +48,10 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 .endif
 
 .if ${OPSYS} == "SunOS"
+.include "../../mk/compiler.mk"
+. if !empty(CC_VERSION:Mgcc-4.[6-9].*)
+BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE_EXTENDED
+. endif
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
 TERMINFODIR=	share/lib/terminfo
 .else
