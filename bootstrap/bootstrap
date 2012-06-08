@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.175 2012/05/15 16:42:43 christos Exp $
+# $NetBSD: bootstrap,v 1.176 2012/06/08 12:15:29 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -665,9 +665,6 @@ QNX)
 	machine_arch=`uname -p | sed -e 's/x86/i386/'`
 	;;
 SunOS)
-	if [ -d "/usr/xpg4/bin" ]; then
-		overpath="/usr/xpg4/bin:$overpath"
-	fi
 	root_group=root
 	need_bsd_install=yes
 	if [ -x "/usr/gnu/bin/awk" ]; then
@@ -682,8 +679,9 @@ SunOS)
 	fi
 	need_ksh=yes
 	set_opsys=no
-	groupsprog="/usr/xpg4/bin/id -gn"
-	whoamiprog="/usr/xpg4/bin/id -un"
+	idprog="/usr/xpg4/bin/id"
+	groupsprog="${idprog} -gn"
+	whoamiprog="${idprog} -un"
 	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
 	check_compiler=yes
 	;;
