@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2010/01/15 18:50:32 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2012/06/08 11:50:14 obache Exp $
 
---- src/Makefile.in.orig	2009-10-17 21:46:20.000000000 +0000
+--- src/Makefile.in.orig	2012-06-02 03:31:49.000000000 +0000
 +++ src/Makefile.in
-@@ -1431,7 +1431,6 @@ install-dvi-am:
+@@ -1375,7 +1375,6 @@ install-dvi-am:
  
  install-exec-am: install-libLTLIBRARIES
  	@$(NORMAL_INSTALL)
