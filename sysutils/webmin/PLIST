@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:16:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/06/08 16:05:11 joerg Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -68,27 +68,6 @@ share/webmin/Webmin/Time.pm
 share/webmin/Webmin/TitleList.pm
 share/webmin/Webmin/Upload.pm
 share/webmin/Webmin/User.pm
-share/webmin/acl/Authen-SolarisRBAC-0.1.tar.gz
-share/webmin/acl/Authen-SolarisRBAC-0.1/Changes
-share/webmin/acl/Authen-SolarisRBAC-0.1/MANIFEST
-share/webmin/acl/Authen-SolarisRBAC-0.1/Makefile
-share/webmin/acl/Authen-SolarisRBAC-0.1/Makefile.PL
-share/webmin/acl/Authen-SolarisRBAC-0.1/Makefile.old
-share/webmin/acl/Authen-SolarisRBAC-0.1/SolarisRBAC.bs
-share/webmin/acl/Authen-SolarisRBAC-0.1/SolarisRBAC.c
-share/webmin/acl/Authen-SolarisRBAC-0.1/SolarisRBAC.o
-share/webmin/acl/Authen-SolarisRBAC-0.1/SolarisRBAC.pm
-share/webmin/acl/Authen-SolarisRBAC-0.1/SolarisRBAC.xs
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch/auto/Authen/SolarisRBAC/.exists
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch/auto/Authen/SolarisRBAC/SolarisRBAC.bs
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch/auto/Authen/SolarisRBAC/SolarisRBAC.so
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/Authen/.exists
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/Authen/SolarisRBAC.pm
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/auto/Authen/SolarisRBAC/.exists
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/man3/.exists
-share/webmin/acl/Authen-SolarisRBAC-0.1/blib/man3/Authen::SolarisRBAC.3
-share/webmin/acl/Authen-SolarisRBAC-0.1/pm_to_blib
-share/webmin/acl/Authen-SolarisRBAC-0.1/test.pl
 share/webmin/acl/CHANGELOG
 share/webmin/acl/acl-lib.pl
 share/webmin/acl/acl_security.pl
