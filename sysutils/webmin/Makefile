@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2011/06/20 23:49:36 schnoebe Exp $
+# $NetBSD: Makefile,v 1.30 2012/06/08 16:05:11 joerg Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
@@ -72,6 +72,7 @@ post-extract:
 	${CP} ${FILESDIR}/init_config-dragonfly ${WRKSRC}/init/config-dragonfly
 	${CP} ${FILESDIR}/man_config-dragonfly ${WRKSRC}/man/config-dragonfly
 	${CP} ${FILESDIR}/proc_config-dragonfly ${WRKSRC}/proc/config-dragonfly
+	${RM} -r ${WRKSRC}/acl/Authen-SolarisRBAC-0.1*
 
 pre-configure:
 	cd ${WRKSRC} &&							\
