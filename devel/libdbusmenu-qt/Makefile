@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/29 15:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/09 22:54:47 markd Exp $
 #
 
 DISTNAME=	libdbusmenu-qt-0.9.2
@@ -18,6 +18,9 @@ FETCH_USING=	curl
 USE_LANGUAGES=  c c++
 USE_CMAKE=      yes
 CMAKE_ARGS+=	-DWITH_DOC=OFF
+
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 PKGCONFIG_OVERRIDE+=	dbusmenu-qt.pc.in
 
