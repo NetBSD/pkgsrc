@@ -1,7 +1,19 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/02/11 08:27:09 obache Exp $
+$NetBSD: patch-ac,v 1.2 2012/06/09 06:28:58 dholland Exp $
 
---- imap/Makefile.in.orig	2009-03-30 16:04:56.000000000 +0000
+- fix MAKE_JOBS issue
+- fix thread handling
+
+--- imap/Makefile.in.orig	2011-10-04 19:59:14.000000000 +0000
 +++ imap/Makefile.in
+@@ -124,7 +124,7 @@ BUILTSOURCES = imap_err.c imap_err.h pus
+ 	lmtpstats.c lmtpstats.h xversion.h mupdate_err.c mupdate_err.h \
+ 	nntp_err.c nntp_err.h
+ 
+-all: xversion $(BUILTSOURCES) $(PROGS) $(SUIDPROGS)
++all: xversion $(BUILTSOURCES) .WAIT $(PROGS) $(SUIDPROGS)
+ 
+ pure: imapd.pure lmtpd.pure mupdate.pure
+ 
 @@ -182,6 +182,9 @@ mupdate_err.c: mupdate_err.et
  
  mupdate_err.h: mupdate_err.c
