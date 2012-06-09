@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/03/03 00:14:27 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/06/09 11:45:39 adam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,11 +32,12 @@ WRKSRC_FILES=		courier/courier.c config.guess config.sub	\
 			configure depcomp install-sh ltmain.sh missing	\
 			sysconftool
 WRKSRC_FILES+=		Makefile.in courier.spec.in courier.lpspec.in	\
-			dbobj.h.in dbobj.config.in courier.sysvinit.in
+			dbobj.h.in dbobj.config.in courier.service.in	\
+			courier.sysvinit.in
 
 # These are subdirectories containing libraries used by couriertcpd.
-WRKSRC_SUBDIRS=		bdbobj numlib soxwrap md5 random128 rfc1035	\
-			liblock waitlib tcpd
+WRKSRC_SUBDIRS=		bdbobj numlib soxwrap md5 random128 unicode	\
+			rfc822 rfc1035 liblock waitlib tcpd
 
 EXTRACT_ELEMENTS=	${WRKSRC_FILES:S/^/${DISTNAME}\//}
 EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}

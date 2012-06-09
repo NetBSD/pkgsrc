@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2010/06/15 23:01:23 pettai Exp $
+$NetBSD: patch-ab,v 1.7 2012/06/09 11:45:38 adam Exp $
 
 --- courier/configure.orig	2007-11-24 03:26:42.000000000 +0000
 +++ courier/configure
-@@ -18398,9 +18398,9 @@ done
+@@ -16102,9 +16102,9 @@ done
  
  if test "$testmode" = "0"
  then

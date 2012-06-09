@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2012/03/03 00:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/06/09 11:45:38 adam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -50,7 +49,6 @@ CONFIGURE_ARGS+=	--with-transport=${COURIER_TRANSPORTS:M*:Q}
 # This argument is actually here just to make the "webmail" configure
 # script work.  The value is not actually used since in reality, we are
 # using the sqwebmail package to provide the Courier webmail component.
-#
 CONFIGURE_ARGS+=	--enable-mimetypes=/nonexistent
 
 INSTALL_DIRS=		webadmin courier
@@ -78,7 +76,7 @@ SUBST_STAGE.courier=	pre-configure
 
 SUBST_CLASSES+=		perms
 SUBST_FILES.perms=	courier/perms.sh.in
-SUBST_SED.perms+=	-e "s,@REAL_ROOT_USER@,"${REAL_ROOT_USER}",g"	\
+SUBST_SED.perms=	-e "s,@REAL_ROOT_USER@,"${REAL_ROOT_USER}",g"	\
 			-e "s,@ROOT_USER@,"${ROOT_USER}",g"		\
 			-e "s,@ROOT_GROUP@,"${ROOT_GROUP}",g"
 SUBST_STAGE.perms=	pre-configure
