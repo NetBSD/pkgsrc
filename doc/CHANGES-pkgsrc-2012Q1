@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.53 2012/06/06 20:48:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.54 2012/06/09 13:34:28 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -242,3 +242,9 @@ Pullup ticket #3824 - requested by dholland
 www/p5-Task-Plack: build fix
 Pullup ticket #3825 - requested by dholland
 x11/xvidtune: build fix
+Pullup ticket #3828 - requested by dholland
+devel/ruby-posix-spawn: correct list of supported platforms
+Pullup ticket #3829 - requested by dholland
+finance/kmymoney2: build fix
+Pullup ticket #3830 - requested by obache
+audio/pulseaudio: build fix
