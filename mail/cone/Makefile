@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2012/06/01 00:09:50 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2012/06/09 11:51:36 adam Exp $
 
-DISTNAME=	cone-0.84
-PKGREVISION=	2
+DISTNAME=	cone-0.90
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.courier-mta.org/cone/
 COMMENT=	Console newsreader and emailer
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--with-certdb=${SSLCERTS}
 # variables that were meant for the builder to use.  Fix that by
 # overriding the special ac_cv_* configure cache variables as a last
 # resort.
-#
 CONFIGURE_ENV+=		ac_cv_path_OPENSSL=${TOOLS_TRUE}
 CONFIGURE_ENV+=		ac_cv_path_REHASH=${TOOLS_TRUE}
 
