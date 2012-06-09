@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11275 2012/06/09 17:20:58 wiz Exp $
+$NetBSD: TODO,v 1.11276 2012/06/09 18:35:35 asau Exp $
 
 Suggested new packages
 ======================
@@ -1298,8 +1298,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.29
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
-	o wine-1.4
-	o wine-devel-1.5.6
+	o wine-1.4 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wine-devel-1.5.6 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
