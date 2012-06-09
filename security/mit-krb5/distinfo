@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.33 2012/02/26 13:14:19 adam Exp $
+$NetBSD: distinfo,v 1.33.2.1 2012/06/09 15:34:08 tron Exp $
 
-SHA1 (2011-006-patch-r18.txt) = 30b66b6c5dce537d66874ac58e622b3f6e992ac6
-RMD160 (2011-006-patch-r18.txt) = 829a6d2dc876190996e90e0a6a43e2d018cbaaa5
-Size (2011-006-patch-r18.txt) = 2908 bytes
 SHA1 (krb5-1.8.6-signed.tar) = 0a1356c6680578f683b6ffd33044f6f02d69b315
 RMD160 (krb5-1.8.6-signed.tar) = 3faad0306482f99c1467d045767090d298a20ce4
 Size (krb5-1.8.6-signed.tar) = 11950080 bytes
@@ -22,4 +19,5 @@ SHA1 (patch-ch) = 0e36012b43c498b8920f204bab2ba9a68f8c851a
 SHA1 (patch-ci) = 4e310f0a4dfe27cf94d0e63d623590691b6c5970
 SHA1 (patch-cj) = 78342f649f8e9d3a3b5a4f83e65b6c46f589586b
 SHA1 (patch-ck) = 87b7704ca9de02880ef8b3dbb097e87d0252bd4b
+SHA1 (patch-lib_kadm5_srv_svr__principal.c) = fd8f677ece32ae5ca1b5d66932e79115eb4d982d
 SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = a1e46ca9256aea4facc1d41841b1707b044a69e7
