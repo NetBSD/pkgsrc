@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1915 2012/06/08 21:58:56 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.1916 2012/06/09 06:32:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2779,7 +2779,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xdpyinfo to 1.2.0 [wiz 2012-06-03]
 	Updated x11/xev to 1.2.0 [wiz 2012-06-03]
 	Updated x11/xeyes to 1.1.1 [wiz 2012-06-03]
-	Updated x11/xfontsel to 1.0.4 [wiz 2012-06-03]
 	Updated x11/xfontsel to 1.0.4 [wiz 2012-06-03]
 	Updated x11/xgamma to 1.0.5 [wiz 2012-06-03]
 	Updated x11/xhost to 1.0.5 [wiz 2012-06-03]
