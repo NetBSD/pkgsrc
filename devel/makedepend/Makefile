@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/29 14:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/09 07:00:46 obache Exp $
 #
 
 DISTNAME=		makedepend-1.0.4
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../x11/xproto/buildlink3.mk"
 
