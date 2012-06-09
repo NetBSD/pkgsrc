@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2007/11/13 18:02:15 jlam Exp $
+$NetBSD: patch-af,v 1.2 2012/06/09 11:51:36 adam Exp $
 
---- libmail/mail.H.orig	Wed Jun 23 00:55:25 2004
+--- libmail/mail.H.orig	2011-04-04 11:58:20.000000000 +0000
 +++ libmail/mail.H
-@@ -11,10 +11,10 @@
+@@ -10,10 +10,10 @@
  #include <time.h>
  #include <string>
  
