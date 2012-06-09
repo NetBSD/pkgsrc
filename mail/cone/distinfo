@@ -1,18 +1,13 @@
-$NetBSD: distinfo,v 1.5 2011/11/22 18:12:35 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/06/09 11:51:36 adam Exp $
 
-SHA1 (cone-0.84.tar.bz2) = 507962bd666c4435e66f7653670c9aee360fd771
-RMD160 (cone-0.84.tar.bz2) = 88a76c71807269daa7094206a39ce566726c0b23
-Size (cone-0.84.tar.bz2) = 4077181 bytes
-SHA1 (patch-aa) = 379e4875619bda6d7094f906e2cba34f19d879fe
-SHA1 (patch-ab) = 2475c6644d894d1bdbf60977cdc5f96f36e72dde
-SHA1 (patch-ac) = 2a6a8ad9c8cc6773b219bfbefabc11eac31f6cb3
-SHA1 (patch-ad) = 578dde2e725ca4e1b332ad2e9135446534aa3184
-SHA1 (patch-ae) = f11842f29aadd91aaab74dff8583d6b62c06673d
-SHA1 (patch-af) = e78186b709c4eae63b5b05e5bf57dcc6a2967613
-SHA1 (patch-libmail-maildir.C) = 82962f71d9cfc4e6e124504bf2bbacde8487baf4
-SHA1 (patch-libmail-mbox.C) = 964e0901341d2ebdd1ac1fef2349d0565f5df188
-SHA1 (patch-libmail-mboxadd.C) = 614c95af75eba90c29868dc78f220df0fe9cdc77
-SHA1 (patch-libmail-mboxfolder.C) = 1ad0bc2ecfde93b941204501afa241f56e572dd0
-SHA1 (patch-libmail-mboxgetmessage.C) = fde73c28f91efbd9ca86e17f0980edd3d7994178
-SHA1 (patch-libmail-mboxread.C) = dea06e218ccbf683102d4c05a8ec8a4c64d96f4b
-SHA1 (patch-libmail-tmpaccount.C) = 5333f86f4ee37fb1b146048d37d70c7647b127ba
+SHA1 (cone-0.90.tar.bz2) = 51614269ed0b8c091de4573bacefe5f394a08311
+RMD160 (cone-0.90.tar.bz2) = 2b2a924d8726535654c74c9d98d7e444aff9fd5e
+Size (cone-0.90.tar.bz2) = 3906323 bytes
+SHA1 (patch-af) = f2018ee08526ee9e0c9c93e6ff5f83b948fd7067
+SHA1 (patch-libmail-maildir.C) = 724c16cb897667792cbfb769b7c7e81b803a1bd5
+SHA1 (patch-libmail-mbox.C) = 02cb2a96fe1915f61126436439ae7842f882b512
+SHA1 (patch-libmail-mboxadd.C) = 8731fb947d48256a061d68d2630573323d5ec797
+SHA1 (patch-libmail-mboxfolder.C) = c2c6d87bb76ab8805549c7cd72a5670633079725
+SHA1 (patch-libmail-mboxgetmessage.C) = a46d7ee0962e89721ff75b43adcf5316aa5bda28
+SHA1 (patch-libmail-mboxread.C) = 940eab3b9040d9362f816d9af4d9bcc305701ae6
+SHA1 (patch-libmail-tmpaccount.C) = dbd3d7bde51e9c94b3258fcb2fca6b9077f9ad12
