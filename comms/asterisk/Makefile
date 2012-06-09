@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2011/08/07 02:40:32 jnemeth Exp $
+# $NetBSD: Makefile,v 1.73 2012/06/09 18:44:51 dholland Exp $
 
 DISTNAME=	asterisk-1.2.37
 PKGREVISION=	3
@@ -79,6 +79,7 @@ CONF_FILES+=	${ASTEXAMPLEDIR}/${f:Q} ${ASTETCDIR}/${f:Q}
 .endfor
 
 MAKE_ENV+=		VARBASE=${VARBASE}
+MAKE_ENV+=		PKGSRC_RPATH=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 MAKE_FLAGS+=		INSTALL_PREFIX=${PREFIX}
 
 # if we put all the files in $CONF_FILES, the message is _way_ too long.

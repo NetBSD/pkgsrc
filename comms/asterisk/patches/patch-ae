@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2012/06/09 08:29:41 dholland Exp $
+$NetBSD: patch-ae,v 1.6 2012/06/09 18:44:51 dholland Exp $
 
 --- apps/Makefile.orig	2006-04-30 06:38:22.000000000 -0700
 +++ apps/Makefile
@@ -25,7 +25,7 @@ $NetBSD: patch-ae,v 1.5 2012/06/09 08:29:41 dholland Exp $
  
 -CURLLIBS=$(shell $(CROSS_COMPILE_BIN)curl-config --libs)
 -ifneq ($(shell if [[ 0x`$(CROSS_COMPILE_BIN)curl-config --vernum` -ge 0x70907 ]]; then echo "OK" ; fi),)
-+CURLLIBS=$(shell $(PREFIX)/bin/curl-config --libs)
++CURLLIBS=$(PKGSRC_RPATH) $(shell $(PREFIX)/bin/curl-config --libs)
 +ifneq (OK,)
    ifneq (${CURLLIBS},)
      APPS+=app_curl.so
