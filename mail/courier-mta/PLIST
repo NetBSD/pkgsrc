@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/11/05 14:12:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/09 11:45:38 adam Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -171,7 +171,6 @@ share/doc/courier/courierfilter.html
 share/doc/courier/courierldapaliasd.html
 share/doc/courier/couriermlm.html
 share/doc/courier/courierperlfilter.html
-share/doc/courier/cvs.html
 share/doc/courier/documentation.html
 share/doc/courier/dot-courier.html
 share/doc/courier/dot-forward.html
@@ -222,10 +221,6 @@ share/examples/courier/locallowercase
 share/examples/courier/maildrop
 share/examples/courier/maildropfilter
 share/examples/courier/mailer.conf
-share/examples/courier/rfcerr2045.txt
-share/examples/courier/rfcerr2046.txt
-share/examples/courier/rfcerr2047.txt
-share/examples/courier/rfcerrheader.txt
 share/examples/courier/smtpaccess/default
 share/examples/courier/webmlmrc.dist
 share/examples/rc.d/courier
