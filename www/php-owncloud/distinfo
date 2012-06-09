@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/05/15 20:18:34 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2012/06/09 14:24:05 ryoon Exp $
 
-SHA1 (owncloud-3.0.3.tar.bz2) = 749c69ea78204ec172b08838bf3a397e0921ffe4
-RMD160 (owncloud-3.0.3.tar.bz2) = 3a266db6b8b66649cdd49b1c57dceca7f15e6d51
-Size (owncloud-3.0.3.tar.bz2) = 2608784 bytes
+SHA1 (owncloud-4.0.1.tar.bz2) = 9664f9893c7523a766edf579fbbb663741d302a7
+RMD160 (owncloud-4.0.1.tar.bz2) = b7aca14381dd0f96a27898e261a8805b1c733d5a
+Size (owncloud-4.0.1.tar.bz2) = 4560307 bytes
