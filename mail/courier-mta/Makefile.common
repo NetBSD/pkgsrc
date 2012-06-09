@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2010/11/10 10:40:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2012/06/09 11:45:38 adam Exp $
 #
 # used by mail/courier-imap/Makefile
 # used by mail/courier-maildir/Makefile
@@ -6,7 +6,7 @@
 # used by mail/sqwebmail/Makefile
 # used by net/couriertcpd/Makefile
 
-COURIER_VERSION=	0.65.2
+COURIER_VERSION=	0.68.1
 LICENSE=		gnu-gpl-v3
 
 .include "../../mk/bsd.prefs.mk"
@@ -34,7 +34,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${COURIER_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
 CONFIGURE_ARGS+=	--disable-root-check
 CONFIGURE_ARGS+=	--enable-unicode
 CONFIGURE_ARGS+=	--enable-utf7-folder-encoding

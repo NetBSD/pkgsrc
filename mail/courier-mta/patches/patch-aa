@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
+$NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
 
---- courier/Makefile.in.orig	2007-11-23 22:26:43.000000000 -0500
+--- courier/Makefile.in.orig	2011-04-04 13:07:49.000000000 +0000
 +++ courier/Makefile.in
-@@ -47,16 +47,16 @@ build_triplet = @build@
+@@ -46,16 +46,16 @@ build_triplet = @build@
  host_triplet = @host@
  target_triplet = @target@
  pkglibexec_PROGRAMS = aliasexp$(EXEEXT) aliascombine$(EXEEXT) \
@@ -24,10 +24,10 @@ $NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
  	@EXTRASBIN@ $(am__empty)
  cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT) @EXTRACMDLIB@
  subdir = .
-@@ -477,29 +477,26 @@ BUILT_SOURCES = prefix.h exec_prefix.h s
+@@ -473,29 +473,26 @@ DISTCLEANFILES = uidgid
+ BUILT_SOURCES = prefix.h exec_prefix.h sysconfdir.h localstatedir.h \
+ 	libexecdir.h bindir.h sbindir.h datadir.h filtersocketdir.h \
  	uidgid.h configargs.h sort.h webmlmdhandlerslist.H
- RFCERRTXTIN = rfcerrheader.txt
- RFCERRTXTNOIN = rfcerr2045.txt rfcerr2046.txt rfcerr2047.txt
 -extrapkglib = makedatprog courierpop3login pcpd
 +extrapkglib = 
  webmaildir = $(libexecdir)/courier/webmail
@@ -51,8 +51,8 @@ $NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
 +sysconf_DATA = \
  	courierd.dist @LDAPALIASRC@ \
 -	imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
--	quotawarnmsg.example $(RFCERRTXTNOIN) $(RFCERRTXTIN) webmlmrc.dist
-+	$(RFCERRTXTNOIN) $(RFCERRTXTIN) webmlmrc.dist
+-	quotawarnmsg.example webmlmrc.dist
++	webmlmrc.dist
  
  databindir = $(datadir)
 -databin_SCRIPTS = courierctl.start makedat makealiases makehosteddomains \
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
  
  mlmdatadir = $(datadir)/couriermlm
  mlmdata_DATA = \
-@@ -555,7 +552,7 @@ mlmdata_DATA = \
+@@ -551,7 +548,7 @@ mlmdata_DATA = \
  	webmlmsublist.tmpl.html \
  	webmlm.tmpl.html
  
@@ -70,7 +70,7 @@ $NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
  cmdlibdir = @libexecdir@/courier
  
  # Subdirectories
-@@ -1896,6 +1893,12 @@ couriertls$(EXEEXT): ../tcpd/couriertls$
+@@ -1890,6 +1887,12 @@ couriertls$(EXEEXT): ../tcpd/couriertls$
  courierpop3login$(EXEEXT): ../imap/pop3login$(EXEEXT)
  	cp -f ../imap/pop3login$(EXEEXT) courierpop3login$(EXEEXT)
  
@@ -83,7 +83,7 @@ $NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
  sort.h:
  	echo '#define SORT "$(SORT)"' >sort.h
  
-@@ -2051,39 +2054,21 @@ dist-hook:
+@@ -2045,39 +2048,21 @@ dist-hook:
  
  install-exec-hook:
  	for d in $(bindir) $(sbindir) $(libexecdir) $(libexecdir)/courier \
@@ -125,7 +125,7 @@ $NetBSD: patch-aa,v 1.6 2010/06/15 23:01:23 pettai Exp $
  	test -f $(DESTDIR)$(sysconfdir)/enablefiltering && exit 0; \
  		echo esmtp >$(DESTDIR)$(sysconfdir)/enablefiltering
  	test -f $(DESTDIR)$(sysconfdir)/aliases/system && exit 0; \
-@@ -2095,10 +2080,6 @@ install-data-hook:
+@@ -2089,10 +2074,6 @@ install-data-hook:
  	rm -f $(DESTDIR)$(bindir)/rmail
  	$(LN_S) sendmail $(DESTDIR)$(bindir)/rmail
  	-$(mkinstalldirs) $(DESTDIR)@mandir@/man8
