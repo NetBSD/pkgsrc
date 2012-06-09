@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.7 2007/09/22 04:42:03 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.8 2012/06/09 11:45:38 adam Exp $
 
 # Convenience definition used below for a file or directory owned by the
 # courier user and group.
@@ -58,10 +58,8 @@ OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/smtpaccess	${COURIER_OWNED} 0755
 CONF_FILES_PERMS+=	${EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}	\
 							${COURIER_OWNED} 0640
 .endfor
-.for _file_ in		courierd.dist enablefiltering locallowercase	\
-			maildrop maildropfilter rfcerr2045.txt		\
-			rfcerr2046.txt rfcerr2047.txt rfcerrheader.txt	\
-			smtpaccess/default webmlmrc.dist
+.for _file_ in		courierd.dist enablefiltering locallowercase maildrop \
+			maildropfilter smtpaccess/default webmlmrc.dist
 CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
 			${PKG_SYSCONFDIR}/${_file_:S/.dist$//}		\
 							${COURIER_FILE_PERMS}

@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.5 2008/02/19 18:45:24 jlam Exp $
+$NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
 
---- courier/perms.sh.in.orig	2007-07-01 11:36:31.000000000 -0400
+--- courier/perms.sh.in.orig	2011-04-04 13:01:21.000000000 +0000
 +++ courier/perms.sh.in
-@@ -11,119 +11,41 @@ exec_prefix="@exec_prefix@"
+@@ -10,115 +10,41 @@ exec_prefix="@exec_prefix@"
  datarootdir="@datarootdir@"
  
  PERMS="
@@ -37,10 +37,6 @@ $NetBSD: patch-aj,v 1.5 2008/02/19 18:45:24 jlam Exp $
 -@sysconfdir@/webmail.authpam	644	config
 -@sysconfdir@/webmlmrc.dist	644	config
 -@sysconfdir@/quotawarnmsg.example	444
--@sysconfdir@/rfcerrheader.txt	444	config
--@sysconfdir@/rfcerr2045.txt	444	config
--@sysconfdir@/rfcerr2046.txt	444	config
--@sysconfdir@/rfcerr2047.txt	444	config
 -
 -@libexecdir@		755	x	bin	bin
  @libexecdir@/courier	755	x	bin	bin
@@ -122,7 +118,7 @@ $NetBSD: patch-aj,v 1.5 2008/02/19 18:45:24 jlam Exp $
  @datadir@/couriermlm		755
  
  @datadir@/couriermlm/adminrequest.tmpl	644
-@@ -191,11 +113,20 @@ do
+@@ -186,11 +112,20 @@ do
  	if test "$USER" = ""
  	then
  		USER="@mailuser@"
@@ -143,7 +139,7 @@ $NetBSD: patch-aj,v 1.5 2008/02/19 18:45:24 jlam Exp $
  	fi
  
  	case $FILE in
-@@ -216,26 +147,7 @@ do
+@@ -211,26 +146,7 @@ do
  	echo $FILE $MODE $USER $GROUP $SPECIAL
  done
  
