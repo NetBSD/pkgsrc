@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/02/21 15:50:29 jlam Exp $
+# $NetBSD: options.mk,v 1.11 2012/06/09 11:45:38 adam Exp $
 
 # Global and legacy options
 
@@ -9,7 +9,6 @@ PKG_SUGGESTED_OPTIONS=	courier-dsn courier-esmtp courier-local inet6
 
 .include "../../mk/bsd.options.mk"
 
-######################################################################
 ###
 ### delivery sender notification mail transport
 ###
@@ -26,7 +25,6 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
 .  endfor
 .endif
 
-######################################################################
 ###
 ### ESMTP mail transport
 ###
@@ -52,7 +50,6 @@ CONF_FILES_PERMS+=	${EGDIR}/esmtpauthclient			\
 				${COURIER_USER} ${COURIER_GROUP} 0600
 .endif
 
-######################################################################
 ###
 ### fax mail transport
 ###
@@ -77,7 +74,6 @@ CONF_FILES_PERMS+=	${EGDIR}/faxrc.dist ${PKG_SYSCONFDIR}/faxrc	\
 				${COURIER_USER} ${COURIER_GROUP} 0640
 .endif
 
-######################################################################
 ###
 ### local mail tranport
 ###
@@ -90,7 +86,6 @@ CONF_FILES_PERMS+=	${EGDIR}/module.local				\
 				${COURIER_FILE_PERMS}
 .endif
 
-######################################################################
 ###
 ### UUCP mail transport
 ###
@@ -112,7 +107,6 @@ PKG_FAIL_REASON+=	"[courier/options.mk] No mail transports specified."
 .endif
 
 
-######################################################################
 ###
 ### IPv6 support (used by Courier ESMTP client)
 ###
@@ -122,7 +116,6 @@ CONFIGURE_ARGS+=	--with-ipv6
 CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
-######################################################################
 ###
 ### LDAP alias lookup support
 ###
@@ -141,7 +134,6 @@ FILES_SUBST+=		COURIERLDAPALIASD=
 CONFIGURE_ARGS+=	--without-ldapaliasd
 .endif
 
-######################################################################
 ###
 ### Support using the GNU TLS tools for creating certificates; otherwise,
 ### default to using OpenSSL.

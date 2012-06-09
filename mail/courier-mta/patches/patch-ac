@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2010/06/15 23:01:23 pettai Exp $
+$NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
 
 --- courier/doc/Makefile.in.orig	2007-11-17 19:48:53.000000000 -0500
 +++ courier/doc/Makefile.in
@@ -98,7 +98,7 @@ $NetBSD: patch-ac,v 1.6 2010/06/15 23:01:23 pettai Exp $
  	$(man1dir)/rmail.1 $(man1dir)/dotforward.1 \
  	$(man8dir)/makesmtpaccess-msa.8 \
  	$(man8dir)/esmtpd-msa.8
-@@ -1215,8 +1186,7 @@ preline.1: preline.1.in
+@@ -1216,8 +1187,7 @@ preline.1: preline.1.in
  
  install-man-extra:
  	cd $(DESTDIR)$(man8dir) ; \
