@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1916 2012/06/09 06:32:05 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1917 2012/06/09 06:52:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2823,7 +2823,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/resourceproto to 1.2.0 [wiz 2012-06-03]
 	Updated x11/scrnsaverproto to 1.2.2 [wiz 2012-06-03]
 	Updated x11/xineramaproto to 1.2.1 [wiz 2012-06-03]
-	Updated x11/xproto to 7.0.23 [wiz 2012-06-03]
 	Updated x11/xproto to 7.0.23 [wiz 2012-06-03]
 	Updated devel/mercurial to 2.2.2 [wiz 2012-06-03]
 	Updated textproc/libexttextcat to 3.3.1 [wiz 2012-06-03]
