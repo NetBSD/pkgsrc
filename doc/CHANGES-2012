@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1919 2012/06/09 09:41:16 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1920 2012/06/09 12:40:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2910,3 +2910,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/validns to 0.5 [pettai 2012-06-08]
 	Updated net/mikutter to 0.1.1.799 [obache 2012-06-09]
 	Updated databases/py-postgresql to 4.0nb2 [wiz 2012-06-09]
+        Updated mail/courier-maildir to 0.68.1 [adam 2012-06-09]
+        Updated net/couriertcpd to 0.68.1 [adam 2012-06-09]
+        Updated mail/courier-mta to 0.68.1 [adam 2012-06-09]
+        Updated security/courier-authlib to 0.64.0 [adam 2012-06-09]
+        Updated mail/courier-imap to 4.10.0 [adam 2012-06-09]
+        Updated mail/maildrop to 2.5.5 [adam 2012-06-09]
+        Updated mail/cone to 0.90 [adam 2012-06-09]
+        Updated mail/sqwebmail to 5.5.3 [adam 2012-06-09]
