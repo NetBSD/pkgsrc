@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2012/03/03 00:14:26 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2012/06/09 11:48:25 adam Exp $
 
-DISTNAME=	courier-imap-4.8.1
-PKGREVISION=	1
+DISTNAME=	courier-imap-4.10.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,15 +22,13 @@ USE_LIBTOOL=		yes
 
 .include "../../mail/courier-mta/Makefile.common"
 
-CONFIGURE_ENV+=		CERTTOOL=${COURIER_CERTTOOL:Q}
-CONFIGURE_ENV+=		OPENSSL=${COURIER_OPENSSL:Q}
-
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
-
 CONFIGURE_ARGS+=	--with-mailuser=${REAL_ROOT_USER}
 CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR}/tmp
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
+CONFIGURE_ENV+=		CERTTOOL=${COURIER_CERTTOOL:Q}
+CONFIGURE_ENV+=		OPENSSL=${COURIER_OPENSSL:Q}
 
 # The rfc1035 and tcpd bits are built and installed by net/couriertcpd.
 # However, we still need to build in these directories because there
@@ -39,7 +36,6 @@ CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 # imap code.  We configure without IPv6 support because those necessary
 # convenience libraries don't have any IPv6 code, and we want to avoid
 # breakage due to IPv6 mis-detection.
-#
 CONFIGURE_ARGS+=	--without-ipv6
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR:Q}
