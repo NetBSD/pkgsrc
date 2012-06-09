@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1918 2012/06/09 07:21:35 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1919 2012/06/09 09:41:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/unbound to 1.4.17 [pettai 2012-06-08]
 	Updated security/validns to 0.5 [pettai 2012-06-08]
 	Updated net/mikutter to 0.1.1.799 [obache 2012-06-09]
+	Updated databases/py-postgresql to 4.0nb2 [wiz 2012-06-09]
