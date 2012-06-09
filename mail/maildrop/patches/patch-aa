@@ -1,20 +1,22 @@
-$NetBSD: patch-aa,v 1.8 2010/06/15 23:14:47 pettai Exp $
+$NetBSD: patch-aa,v 1.9 2012/06/09 11:50:20 adam Exp $
 
---- Makefile.in.orig	2010-05-30 23:36:17.000000000 +0200
-+++ Makefile.in	2010-06-13 12:28:00.000000000 +0200
-@@ -294,16 +294,14 @@
+--- Makefile.in.orig	2011-12-03 21:26:32.000000000 +0000
++++ Makefile.in
+@@ -295,17 +295,15 @@ EXTRA_DIST = README.html INSTALL.html UP
  	maildroptips.txt COPYING.GPL manpage.css pgpkeys.txt
  
  scriptdir = $(pkgdatadir)/scripts
 -DELIVERQUOTAHTMLSOURCE = maildirquota.html deliverquota.html
 -DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
 -DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
--MAILDROPHTML = lockmail.html maildirmake.html maildropex.html \
+-MAILDROPHTML = lockmail.html maildiracl.html maildirkw.html \
+-	maildirmake.html maildropex.html \
 -	maildir.html \
-+DELIVERQUOTAHTMLSOURCE = 
-+DELIVERQUOTAHTML = 
-+DELIVERQUOTAMAN = 
-+MAILDROPHTML = lockmail.html maildropex.html \
++DELIVERQUOTAHTMLSOURCE =
++DELIVERQUOTAHTML =
++DELIVERQUOTAMAN =
++MAILDROPHTML = lockmail.html \
++	maildropex.html \
  	maildropfilter.html maildropgdbm.html maildrop.html mailbot.html \
  	makemime.html reformail.html reformime.html
  
@@ -24,7 +26,7 @@ $NetBSD: patch-aa,v 1.8 2010/06/15 23:14:47 pettai Exp $
  	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1
  
  EXTRA_LTLIBRARIES = librfc822.la librfc2045.la
-@@ -1140,12 +1138,8 @@
+@@ -1143,12 +1141,8 @@ uninstall-man: uninstall-man1 uninstall-
  #  Create a soft link from bindir/deliverquota to libdir/bin/deliverquota
  
  install-deliverquota:
@@ -37,7 +39,7 @@ $NetBSD: patch-aa,v 1.8 2010/06/15 23:14:47 pettai Exp $
  
  install-data-local: install-man install-deliverquota install-maildrop
  
-@@ -1173,23 +1167,24 @@
+@@ -1176,23 +1170,24 @@ install-maildrop:
  		$(INSTALL_PROGRAM) maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	$(INSTALL_PROGRAM) liblock/lockmail $(DESTDIR)$(bindir)/lockmail
