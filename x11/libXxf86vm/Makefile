@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/03 17:49:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/09 07:00:49 obache Exp $
 #
 
 DISTNAME=		libXxf86vm-1.1.2
@@ -25,6 +25,8 @@ CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
+
+.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

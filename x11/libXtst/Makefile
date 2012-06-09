@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/03 17:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/09 07:00:48 obache Exp $
 #
 
 DISTNAME=		libXtst-1.2.1
@@ -19,6 +19,8 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xtst.pc.in
 
 CONFIGURE_ENV+=		ac_cv_path_XMLTO=	# empty
+
+.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../x11/inputproto/buildlink3.mk"
 BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.99.1

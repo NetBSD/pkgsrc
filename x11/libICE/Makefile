@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/03 17:23:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/09 07:00:46 obache Exp $
 #
 
 DISTNAME=		libICE-1.0.8
@@ -20,6 +20,8 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	ice.pc.in
 
 .include "options.mk"
+
+.include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
