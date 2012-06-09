@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1920 2012/06/09 12:40:07 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1921 2012/06/09 14:25:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2012:
         Updated mail/maildrop to 2.5.5 [adam 2012-06-09]
         Updated mail/cone to 0.90 [adam 2012-06-09]
         Updated mail/sqwebmail to 5.5.3 [adam 2012-06-09]
+	Updated www/php-owncloud to 4.0.1 [ryoon 2012-06-09]
