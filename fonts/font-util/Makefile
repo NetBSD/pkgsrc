@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/09/09 18:54:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/10 15:27:41 wiz Exp $
 #
 
-DISTNAME=		font-util-1.1.1
+DISTNAME=		font-util-1.3.0
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
