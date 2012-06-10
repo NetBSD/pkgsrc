@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11280 2012/06/10 16:32:22 wiz Exp $
+$NetBSD: TODO,v 1.11281 2012/06/10 16:40:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1148,7 +1148,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
-	o sessreg-1.0.7
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
