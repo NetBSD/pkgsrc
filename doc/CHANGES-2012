@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1925 2012/06/10 15:27:51 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1926 2012/06/10 16:12:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added editors/medit version 1.1.0 [obache 2012-06-10]
 	Updated x11/xbitmaps to 1.1.1 [wiz 2012-06-10]
 	Updated fonts/font-util to 1.3.0 [wiz 2012-06-10]
+	Updated fonts/fontconfig to 2.9.0 [wiz 2012-06-10]
