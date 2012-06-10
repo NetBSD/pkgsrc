@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.19 2009/07/18 13:20:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/06/10 16:12:47 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
 bin/fc-match
+bin/fc-pattern
 bin/fc-query
 bin/fc-scan
 include/fontconfig/fcfreetype.h
@@ -14,6 +15,7 @@ man/man1/fc-cache.1
 man/man1/fc-cat.1
 man/man1/fc-list.1
 man/man1/fc-match.1
+man/man1/fc-pattern.1
 man/man1/fc-query.1
 man/man1/fc-scan.1
 man/man3/FcAtomicCreate.3
@@ -38,6 +40,7 @@ man/man3/FcCharSetCopy.3
 man/man3/FcCharSetCount.3
 man/man3/FcCharSetCoverage.3
 man/man3/FcCharSetCreate.3
+man/man3/FcCharSetDelChar.3
 man/man3/FcCharSetDestroy.3
 man/man3/FcCharSetEqual.3
 man/man3/FcCharSetFirstPage.3
@@ -120,11 +123,14 @@ man/man3/FcLangSetCompare.3
 man/man3/FcLangSetContains.3
 man/man3/FcLangSetCopy.3
 man/man3/FcLangSetCreate.3
+man/man3/FcLangSetDel.3
 man/man3/FcLangSetDestroy.3
 man/man3/FcLangSetEqual.3
 man/man3/FcLangSetGetLangs.3
 man/man3/FcLangSetHasLang.3
 man/man3/FcLangSetHash.3
+man/man3/FcLangSetSubtract.3
+man/man3/FcLangSetUnion.3
 man/man3/FcMatrixCopy.3
 man/man3/FcMatrixEqual.3
 man/man3/FcMatrixInit.3
@@ -219,6 +225,7 @@ share/doc/fontconfig/fontconfig-devel/fccharsetcopy.html
 share/doc/fontconfig/fontconfig-devel/fccharsetcount.html
 share/doc/fontconfig/fontconfig-devel/fccharsetcoverage.html
 share/doc/fontconfig/fontconfig-devel/fccharsetcreate.html
+share/doc/fontconfig/fontconfig-devel/fccharsetdelchar.html
 share/doc/fontconfig/fontconfig-devel/fccharsetdestroy.html
 share/doc/fontconfig/fontconfig-devel/fccharsetequal.html
 share/doc/fontconfig/fontconfig-devel/fccharsetfirstpage.html
@@ -301,11 +308,14 @@ share/doc/fontconfig/fontconfig-devel/fclangsetcompare.html
 share/doc/fontconfig/fontconfig-devel/fclangsetcontains.html
 share/doc/fontconfig/fontconfig-devel/fclangsetcopy.html
 share/doc/fontconfig/fontconfig-devel/fclangsetcreate.html
+share/doc/fontconfig/fontconfig-devel/fclangsetdel.html
 share/doc/fontconfig/fontconfig-devel/fclangsetdestroy.html
 share/doc/fontconfig/fontconfig-devel/fclangsetequal.html
 share/doc/fontconfig/fontconfig-devel/fclangsetgetlangs.html
 share/doc/fontconfig/fontconfig-devel/fclangsethash.html
 share/doc/fontconfig/fontconfig-devel/fclangsethaslang.html
+share/doc/fontconfig/fontconfig-devel/fclangsetsubtract.html
+share/doc/fontconfig/fontconfig-devel/fclangsetunion.html
 share/doc/fontconfig/fontconfig-devel/fcmatrixcopy.html
 share/doc/fontconfig/fontconfig-devel/fcmatrixequal.html
 share/doc/fontconfig/fontconfig-devel/fcmatrixinit.html
@@ -375,8 +385,7 @@ share/doc/fontconfig/fontconfig-devel/fcvaluedestroy.html
 share/doc/fontconfig/fontconfig-devel/fcvalueequal.html
 share/doc/fontconfig/fontconfig-devel/fcvalueprint.html
 share/doc/fontconfig/fontconfig-devel/fcvaluesave.html
-share/doc/fontconfig/fontconfig-devel/ln12.html
-share/doc/fontconfig/fontconfig-devel/t1.html
+share/doc/fontconfig/fontconfig-devel/index.html
 share/doc/fontconfig/fontconfig-devel/x102.html
 share/doc/fontconfig/fontconfig-devel/x19.html
 share/doc/fontconfig/fontconfig-devel/x31.html
@@ -390,6 +399,9 @@ share/examples/fontconfig/conf.avail/10-sub-pixel-rgb.conf
 share/examples/fontconfig/conf.avail/10-sub-pixel-vbgr.conf
 share/examples/fontconfig/conf.avail/10-sub-pixel-vrgb.conf
 share/examples/fontconfig/conf.avail/10-unhinted.conf
+share/examples/fontconfig/conf.avail/11-lcdfilter-default.conf
+share/examples/fontconfig/conf.avail/11-lcdfilter-legacy.conf
+share/examples/fontconfig/conf.avail/11-lcdfilter-light.conf
 share/examples/fontconfig/conf.avail/20-fix-globaladvance.conf
 share/examples/fontconfig/conf.avail/20-unhint-small-vera.conf
 share/examples/fontconfig/conf.avail/25-unhint-nonlatin.conf
