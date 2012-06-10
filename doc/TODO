@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11279 2012/06/10 16:12:57 wiz Exp $
+$NetBSD: TODO,v 1.11280 2012/06/10 16:32:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -850,7 +850,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.8.0
 	o libcdio-0.83
 	o libchamplain08-0.12.1
-	o libdrm-2.4.35
 	o libextractor-0.6.3
 	o libffi-3.0.11
 	o libflash-0.4.13
