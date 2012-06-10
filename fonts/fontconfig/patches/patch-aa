@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2009/07/18 13:20:01 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2012/06/10 16:12:47 wiz Exp $
 
---- Makefile.in.orig	2009-06-24 19:05:28.000000000 +0000
+--- Makefile.in.orig	2012-03-10 17:30:13.000000000 +0000
 +++ Makefile.in
-@@ -299,7 +299,7 @@ target_alias = @target_alias@
- top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
--SUBDIRS = fontconfig fc-case fc-lang fc-glyphname fc-arch src \
-+SUBDIRS = fontconfig fc-case fc-lang fc-glyphname src \
- 	fc-cache fc-cat fc-list fc-match fc-query fc-scan conf.d $(DOCSRC) test
- 
- EXTRA_DIST = fontconfig.pc.in fonts.conf.in fonts.dtd \
-@@ -316,10 +316,11 @@ MAINTAINERCLEANFILES = $(srcdir)/aclocal
+@@ -319,10 +319,11 @@ MAINTAINERCLEANFILES = $(srcdir)/aclocal
  	-type f -name Makefile.in -print` $(srcdir)/ChangeLog
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = fontconfig.pc
@@ -24,7 +15,7 @@ $NetBSD: patch-aa,v 1.13 2009/07/18 13:20:01 wiz Exp $
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
-@@ -896,7 +897,8 @@ fonts.conf: fonts.conf.in Makefile
+@@ -900,7 +901,8 @@ fonts.conf: fonts.conf.in Makefile
  	mv $@.tmp $@
  
  install-data-local: fonts.conf

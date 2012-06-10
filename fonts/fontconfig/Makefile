@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2011/11/09 03:20:06 christos Exp $
+# $NetBSD: Makefile,v 1.75 2012/06/10 16:12:46 wiz Exp $
 
-DISTNAME=	fontconfig-2.8.0
-PKGREVISION=	3
+DISTNAME=	fontconfig-2.9.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -27,7 +26,6 @@ CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE:Q}/cache/fontconfig
-CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ENV+=		HASDOCBOOK=no
 
@@ -47,7 +45,11 @@ CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
 CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.avail
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
+CONF_FILES+=	${EGDIR}/conf.avail/11-lcdfilter-default.conf ${PKG_SYSCONFDIR}/conf.avail/11-lcdfilter-default.conf
+CONF_FILES+=	${EGDIR}/conf.avail/11-lcdfilter-legacy.conf ${PKG_SYSCONFDIR}/conf.avail/11-lcdfilter-legacy.conf
+CONF_FILES+=	${EGDIR}/conf.avail/11-lcdfilter-light.conf ${PKG_SYSCONFDIR}/conf.avail/11-lcdfilter-light.conf
 CONF_FILES+=	${EGDIR}/conf.d/20-fix-globaladvance.conf ${PKG_SYSCONFDIR}/conf.d/20-fix-globaladvance.conf
 CONF_FILES+=	${EGDIR}/conf.d/20-unhint-small-vera.conf ${PKG_SYSCONFDIR}/conf.d/20-unhint-small-vera.conf
 CONF_FILES+=	${EGDIR}/conf.d/30-metric-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-metric-aliases.conf
@@ -75,9 +77,6 @@ TEST_TARGET=	check
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
-
-pre-configure:
-	${ECHO} '#define FC_ARCHITECTURE "@host_cpu@"' > ${WRKSRC}/fc-arch/fcarch.h.in
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf \
