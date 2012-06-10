@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/05/14 03:56:58 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2012/06/10 16:32:13 wiz Exp $
 #
 
-DISTNAME=		libdrm-2.4.33
-PKGREVISION=		1
+DISTNAME=		libdrm-2.4.35
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -40,7 +39,6 @@ CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
 . endif
 .endif
 
-CONFIGURE_ARGS+=	--enable-nouveau-experimental-api
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/05/08 20:32:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/06/10 16:32:13 wiz Exp $
 include/libdrm/drm.h
 include/libdrm/drm_fourcc.h
 include/libdrm/drm_mode.h
@@ -9,8 +9,8 @@ include/libdrm/intel_bufmgr.h
 include/libdrm/intel_debug.h
 include/libdrm/mach64_drm.h
 include/libdrm/mga_drm.h
+include/libdrm/nouveau.h
 include/libdrm/nouveau_drm.h
-include/libdrm/nouveau_drmif.h
 include/libdrm/r128_drm.h
 include/libdrm/r600_pci_ids.h
 include/libdrm/radeon_bo.h
@@ -24,16 +24,6 @@ include/libdrm/radeon_surface.h
 include/libdrm/savage_drm.h
 include/libdrm/sis_drm.h
 include/libdrm/via_drm.h
-include/nouveau/nouveau_bo.h
-include/nouveau/nouveau_channel.h
-include/nouveau/nouveau_device.h
-include/nouveau/nouveau_grobj.h
-include/nouveau/nouveau_notifier.h
-include/nouveau/nouveau_pushbuf.h
-include/nouveau/nouveau_reloc.h
-include/nouveau/nouveau_resource.h
-include/nouveau/nv04_pushbuf.h
-include/nouveau/nvc0_pushbuf.h
 include/xf86drm.h
 include/xf86drmMode.h
 lib/libdrm.la
