@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/06/10 12:50:33 obache Exp $
+
+SHA1 (medit-1.1.0.tar.bz2) = d5df19871dc617f89ff02334205d69683032681e
+RMD160 (medit-1.1.0.tar.bz2) = db517a029aaf07a8b81c556e131763c63ccb2d89
+Size (medit-1.1.0.tar.bz2) = 1698094 bytes
+SHA1 (patch-moo_mooutils_mooutils-fs.c) = 34381d77d50202619ca56e5cbbe3c1bb7df3e628
