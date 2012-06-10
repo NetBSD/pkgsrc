@@ -1,6 +1,7 @@
-$NetBSD: patch-sessreg.c,v 1.1 2012/06/10 16:40:24 wiz Exp $
+$NetBSD: patch-sessreg.c,v 1.2 2012/06/10 16:46:01 wiz Exp $
 
 Make sure file name defines exist on NetBSD.
+https://bugs.freedesktop.org/show_bug.cgi?id=50940
 
 --- sessreg.c.orig	2011-09-26 23:01:11.000000000 +0000
 +++ sessreg.c
