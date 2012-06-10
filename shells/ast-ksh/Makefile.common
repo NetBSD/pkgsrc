@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2012/05/25 17:08:46 asau Exp $
+# $NetBSD: Makefile.common,v 1.30 2012/06/10 08:50:03 obache Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -11,17 +11,12 @@ DISTFILES=	INIT.${ASTKSH_VERSION}.tgz ast-ksh.${ASTKSH_VERSION}.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kornshell.com/
 COMMENT=	Official AT&T release of KornShell 93
+LICENSE=	epl-v1.0
 
 NOT_FOR_PLATFORM=	Interix-*-* # taking nearly a day to build and crash!
 
 CONFLICTS=	static-ast-ksh-[0-9]*
 KSH93_MAKEFLAGS=
-
-RESTRICTED=	Terms for redistribution are not yet clear.
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
 
 ASTKSH_VERSION=	2012-02-29
 
