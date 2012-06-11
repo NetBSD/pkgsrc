@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/01/28 23:04:53 christos Exp $
+# $NetBSD: Makefile,v 1.18 2012/06/11 13:00:14 fhajny Exp $
 
 DISTNAME=	tmux-1.6
 CATEGORIES=	misc
@@ -13,6 +13,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TERMINFO=	yes
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
+    !empty(CC_VERSION:Mgcc-4.[6-9].*)
+BUILDLINK_TRANSFORM+=   rename:-D_XPG4_2:-D_XPG6
+.endif
 
 .include "../../devel/libevent/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1b
