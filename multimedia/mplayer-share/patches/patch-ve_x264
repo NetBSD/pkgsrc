@@ -1,8 +1,8 @@
-$NetBSD: patch-ve_x264,v 1.1 2009/10/18 22:22:10 ahoka Exp $
+$NetBSD: patch-ve_x264,v 1.2 2012/06/11 13:41:13 wiz Exp $
 
---- libmpcodecs/ve_x264.c.orig	2009-09-23 14:26:44.000000000 +0200
+--- libmpcodecs/ve_x264.c.orig	2011-04-28 13:45:16.000000000 +0000
 +++ libmpcodecs/ve_x264.c
-@@ -198,8 +198,13 @@ static int control(struct vf_instance_s*
+@@ -204,8 +204,13 @@ static int control(struct vf_instance *v
      h264_module_t *mod=(h264_module_t*)vf->priv;
      switch(request){
          case VFCTRL_FLUSH_FRAMES:

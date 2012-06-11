@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.6 2009/10/19 00:13:07 ahoka Exp $
+$NetBSD: patch-sub_osd.c,v 1.1 2012/06/11 13:41:13 wiz Exp $
 
---- libvo/osd.c.orig	2009-04-08 22:21:21.000000000 +0200
-+++ libvo/osd.c
+--- sub/osd.c.orig	2010-10-27 17:53:24.000000000 +0000
++++ sub/osd.c
 @@ -29,6 +29,11 @@
  #include <inttypes.h>
  #include "cpudetect.h"

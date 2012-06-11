@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.2 2009/10/18 22:22:10 ahoka Exp $
+$NetBSD: patch-an,v 1.3 2012/06/11 13:41:13 wiz Exp $
 
---- stream/vcd_read_fbsd.h.orig	2008-03-10 20:28:42.000000000 +0100
+--- stream/vcd_read_fbsd.h.orig	2011-05-07 21:32:50.000000000 +0000
 +++ stream/vcd_read_fbsd.h
-@@ -41,9 +41,8 @@ typedef struct mp_vcd_priv_st {
+@@ -63,9 +63,8 @@ typedef struct mp_vcd_priv_st {
    vcd_tocentry entry;
  #ifdef VCD_NETBSD
    struct cd_toc_entry entry_data;
@@ -13,7 +13,7 @@ $NetBSD: patch-an,v 1.2 2009/10/18 22:22:10 ahoka Exp $
    struct ioc_toc_header tochdr;
  } mp_vcd_priv_t;
  
-@@ -209,8 +208,8 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+@@ -236,8 +235,8 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
    sc.cmd[9] = 1 << 4; // user data only
    sc.cmd[10] = 0;     // no subchannel
    sc.cmdlen = 12;
@@ -24,15 +24,14 @@ $NetBSD: patch-an,v 1.2 2009/10/18 22:22:10 ahoka Exp $
    sc.senselen = sizeof(sc.sense);
    sc.flags = SCCMD_READ;
    sc.timeout = 10000;
-@@ -227,9 +226,9 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+@@ -254,9 +253,9 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
  #else
    if (pread(vcd->fd,&vcd->buf,VCD_SECTOR_SIZE,vcd_get_msf(vcd)*VCD_SECTOR_SIZE)
       != VCD_SECTOR_SIZE) return 0;  // EOF?
--
--  memcpy(mem,vcd->buf.data,VCD_SECTOR_DATA);
- #endif
-+  
-+  memcpy(mem,vcd->buf.data,VCD_SECTOR_DATA);
++#endif
+ 
+   memcpy(mem,vcd->buf.data,VCD_SECTOR_DATA);
+-#endif
    vcd_inc_msf(vcd);
    return VCD_SECTOR_DATA;
  }
