@@ -1,0 +1,17 @@
+$NetBSD: patch-build_config_SunOS-GCC,v 1.1 2012/06/11 12:40:32 fhajny Exp $
+
+_XOPEN_SOURCE=600 or higher is needed on SunOS and GCC>=4.6.
+--- build/config/SunOS-GCC.orig	2010-12-16 05:43:24.000000000 +0000
++++ build/config/SunOS-GCC
+@@ -63,9 +63,9 @@ RELEASEOPT_LINK = -O2
+ #
+ # System Specific Flags
+ #
+-SYSFLAGS = -D_XOPEN_SOURCE=500 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE
++SYSFLAGS = -D_XOPEN_SOURCE=600 -D_REENTRANT -D_THREAD_SAFE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE
+ 
+ #
+ # System Specific Libraries
+ #
+-SYSLIBS  = -lpthread -ldl -lrt
++SYSLIBS  = -lpthread -ldl -lrt -lxnet -lsocket -lnsl -lresolv -ldl

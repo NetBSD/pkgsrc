@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/10/17 02:10:31 schnoebe Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/06/11 12:40:31 fhajny Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -37,5 +37,20 @@ CONFIGURE_ARGS+=	--config=FreeBSD
 .if ${OPSYS} == "NetBSD"
 # NetBSD doesn't have fenv.h. We should add one.
 CONFIGURE_ARGS+=	--no-fpenvironment
-CONFIGURE_ARGS+=	--no-shaedmemory
+CONFIGURE_ARGS+=	--no-sharedmemory
+.endif
+
+.if ${OPSYS} == "SunOS"
+.include "../../mk/compiler.mk"
+. if ${PKGSRC_COMPILER} == "sunpro"
+CONFIGURE_ARGS+=	--config=SunOS-SunStudio
+. elif ${PKGSRC_COMPILER} == "gcc"
+CONFIGURE_ARGS+=	--config=SunOS-GCC
+.  if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
+      !empty(CC_VERSION:Mgcc-4.[6-9].*)
+USE_LANGUAGES=		c c++ c99
+.  endif
+. else
+CONFIGURE_ARGS+=	--config=SunOS
+. endif
 .endif
