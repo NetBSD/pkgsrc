@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2010/11/08 13:59:11 adam Exp $
+$NetBSD: patch-ab,v 1.16 2012/06/11 11:41:25 adam Exp $
 
---- OS/Makefile-Default.orig	2009-10-16 07:30:54.000000000 +0000
+--- OS/Makefile-Default.orig	2012-05-31 00:40:15.000000000 +0000
 +++ OS/Makefile-Default
-@@ -73,7 +73,7 @@ PERL_COMMAND=/usr/bin/perl
+@@ -71,7 +71,7 @@ PERL_COMMAND=/usr/bin/perl
  
  # CC contains the name of the C compiler to be used.
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.15 2010/11/08 13:59:11 adam Exp $
  
  
  # CFLAGS contains flags to be passed to the compiler. Nothing is defaulted
-@@ -86,7 +86,7 @@ CC=gcc
+@@ -84,7 +84,7 @@ CC=gcc
  # here; instead each OS-dependent Makefile contains a default setting if one
  # is needed.
  
