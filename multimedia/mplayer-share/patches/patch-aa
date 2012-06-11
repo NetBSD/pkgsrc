@@ -1,4 +1,12 @@
-$NetBSD: patch-aa,v 1.28 2012/06/11 13:41:12 wiz Exp $
+$NetBSD: patch-aa,v 1.29 2012/06/11 21:55:34 wiz Exp $
+
+o Handle properly sh3 ports on NetBSD.
+o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
+  (please see also kern/25076).
+o Fix a bug which broke the detection of a lot of X11 libraries.
+o Add necessary libs for aalib support even if the aa option is turned on with
+  --enable-aa.
+o Add support for dvb capture on NetBSD.
 
 --- configure.orig	2012-05-22 18:01:51.000000000 +0000
 +++ configure
@@ -110,16 +118,3 @@ $NetBSD: patch-aa,v 1.28 2012/06/11 13:41:12 wiz Exp $
  
  if darwin; then
  
-@@ -5338,7 +5364,12 @@ echocheck "IVTV TV-Out (pre linux-2.6.24
- if test "$_ivtv" = auto ; then
-   cat > $TMPC << EOF
- #include <sys/time.h>
-+#ifdef __linux__
- #include <linux/videodev2.h>
-+#elif defined(__NetBSD__) || defined(__OpenBSD__)
-+#include <sys/types.h>
-+#include <sys/videoio.h>
-+#endif
- #include <linux/ivtv.h>
- #include <sys/ioctl.h>
- int main(void) {
