@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2012/03/03 07:21:42 sbd Exp $
+# $NetBSD: Makefile,v 1.98 2012/06/11 13:41:13 wiz Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,18 +9,18 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	13
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
 		ftp://ftp1.mplayerhq.hu/MPlayer/skins/		\
 		ftp://ftp2.mplayerhq.hu/MPlayer/skins/		\
 		http://ftp5.mplayerhq.hu/MPlayer/skins/		\
-		ftp://ftp5.mplayerhq.hu/MPlayer/skins/		\
+		ftp://ftp5.mplayerhq.hu/MPlayer/skins/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/mplayer-share/Makefile.common"
+SKIN_EXTRACT_SUFX=	.tar.bz2
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
@@ -28,32 +28,30 @@ BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 
 COMMENT=	Fast, cross-platform movie player with GTK2+ interface
 
-SKINS +=	AlienMind-1.2${EXTRACT_SUFX}			\
-		Blue-1.7${EXTRACT_SUFX}				\
-		BlueHeart-1.5${EXTRACT_SUFX}			\
-		CornerMP-1.2${EXTRACT_SUFX}			\
-		CornerMP-aqua-1.4${EXTRACT_SUFX}		\
-		Cyrus-1.2${EXTRACT_SUFX}			\
-		MidnightLove-1.6${EXTRACT_SUFX}			\
-		WMP6-2.2${EXTRACT_SUFX}				\
-		avifile-1.6${EXTRACT_SUFX}			\
-		gnome-1.1${EXTRACT_SUFX}			\
-		hayraphon-1.0${EXTRACT_SUFX}			\
-		hwswskin-1.1${EXTRACT_SUFX}			\
-		mentalic-1.2${EXTRACT_SUFX}			\
-		neutron-1.5${EXTRACT_SUFX}			\
-		phony-1.1${EXTRACT_SUFX}			\
-		plastic-1.2${EXTRACT_SUFX}			\
-		proton-1.2${EXTRACT_SUFX}			\
-		slim-1.2${EXTRACT_SUFX}				\
-		xanim-1.6${EXTRACT_SUFX}			\
-		xine-lcd-1.2${EXTRACT_SUFX}
+SKINS+=		AlienMind-1.2${SKIN_EXTRACT_SUFX}		\
+		Blue-1.7${SKIN_EXTRACT_SUFX}			\
+		BlueHeart-1.5${SKIN_EXTRACT_SUFX}		\
+		CornerMP-1.2${SKIN_EXTRACT_SUFX}		\
+		CornerMP-aqua-1.4${SKIN_EXTRACT_SUFX}		\
+		Cyrus-1.2${SKIN_EXTRACT_SUFX}			\
+		MidnightLove-1.6${SKIN_EXTRACT_SUFX}		\
+		WMP6-2.2${SKIN_EXTRACT_SUFX}			\
+		avifile-1.6${SKIN_EXTRACT_SUFX}			\
+		gnome-1.1${SKIN_EXTRACT_SUFX}			\
+		hayraphon-1.0${SKIN_EXTRACT_SUFX}		\
+		hwswskin-1.1${SKIN_EXTRACT_SUFX}		\
+		mentalic-1.2${SKIN_EXTRACT_SUFX}		\
+		neutron-1.5${SKIN_EXTRACT_SUFX}			\
+		phony-1.1${SKIN_EXTRACT_SUFX}			\
+		plastic-1.2${SKIN_EXTRACT_SUFX}			\
+		proton-1.2${SKIN_EXTRACT_SUFX}			\
+		slim-1.2${SKIN_EXTRACT_SUFX}			\
+		xanim-1.6${SKIN_EXTRACT_SUFX}			\
+		xine-lcd-1.2${SKIN_EXTRACT_SUFX}
 
-.if !defined(SITES_AlienMind-1.2.tar.bz2)
-.  for skin in ${SKINS}
+.for skin in ${SKINS}
 SITES.${skin}= ${SKIN_SITES}
-.  endfor
-.endif
+.endfor
 
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
