@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1930 2012/06/11 04:37:02 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.1931 2012/06/11 06:50:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2932,3 +2932,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libdrm to 2.4.35 [wiz 2012-06-10]
 	Updated x11/sessreg to 1.0.7 [wiz 2012-06-10]
 	Updated ham/hamlib to 1.2.15.1 [gdt 2012-06-11]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.20 [obache 2012-06-11]
