@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.321 2012/03/19 12:34:15 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.322 2012/06/11 09:36:02 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -260,8 +260,11 @@ SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "sun4"
 MACHINE_ARCH=		sparc
 SPARC_TARGET_ARCH?=	sparcv7
-.  elif ${MACHINE_ARCH} == "i86pc" || ${MACHINE_ARCH} == "i86xpv"
-MACHINE_ARCH=		i386
+.  elif ${MACHINE_ARCH} == "i86pc" || ${MACHINE_ARCH} == "i86xpv" || ${MACHINE_ARCH} == "i386"
+LOWER_ARCH.32=		i386
+LOWER_ARCH.64=		x86_64
+LOWER_ARCH=		${LOWER_ARCH.${ABI}}
+MACHINE_ARCH=		${LOWER_ARCH}
 .  elif ${MACHINE_ARCH} == "unknown"
 .    if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -p
