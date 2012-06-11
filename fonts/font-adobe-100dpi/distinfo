@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/09 02:17:43 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/06/11 23:23:28 mef Exp $
 
-SHA1 (font-adobe-100dpi-1.0.1.tar.bz2) = 814baccf5cf6c6545b7e8f3bbbad377be369042d
-RMD160 (font-adobe-100dpi-1.0.1.tar.bz2) = b6819bb299937d8aadd5fc0e245323bdff6f1e82
-Size (font-adobe-100dpi-1.0.1.tar.bz2) = 1119575 bytes
+SHA1 (font-adobe-100dpi-1.0.3.tar.bz2) = 53311cbd604f18bd9570727105a4222473d363e3
+RMD160 (font-adobe-100dpi-1.0.3.tar.bz2) = 365326528b430a164ce201cb3f69b67098d588bc
+Size (font-adobe-100dpi-1.0.3.tar.bz2) = 1113104 bytes
