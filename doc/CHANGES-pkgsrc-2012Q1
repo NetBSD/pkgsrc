@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.55 2012/06/09 15:34:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.56 2012/06/11 09:52:09 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -250,3 +250,7 @@ Pullup ticket #3830 - requested by obache
 audio/pulseaudio: build fix
 Pullup ticket #3831 - requested by tez
 security/mit-krb5: security patch
+Pullup ticket #3832 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
+Pullup ticket #3833 - requested by obache
+multimedia/adobe-flash-plugin11: security update
