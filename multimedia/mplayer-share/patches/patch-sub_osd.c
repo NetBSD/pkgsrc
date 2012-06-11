@@ -1,4 +1,6 @@
-$NetBSD: patch-sub_osd.c,v 1.1 2012/06/11 13:41:13 wiz Exp $
+$NetBSD: patch-sub_osd.c,v 1.2 2012/06/11 21:55:34 wiz Exp $
+
+XXX: OS X support
 
 --- sub/osd.c.orig	2010-10-27 17:53:24.000000000 +0000
 +++ sub/osd.c

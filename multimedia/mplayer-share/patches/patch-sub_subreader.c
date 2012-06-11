@@ -1,4 +1,7 @@
-$NetBSD: patch-sub_subreader.c,v 1.1 2012/06/11 13:41:13 wiz Exp $
+$NetBSD: patch-sub_subreader.c,v 1.2 2012/06/11 21:55:34 wiz Exp $
+
+Call isspace(3) with unsigned char, instead of char, to handle
+non-ASCII characters properly.
 
 --- sub/subreader.c.orig	2012-05-21 19:17:55.000000000 +0000
 +++ sub/subreader.c
