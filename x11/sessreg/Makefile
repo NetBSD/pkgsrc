@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/06/10 16:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/11 06:09:22 obache Exp $
 
 DISTNAME=	sessreg-1.0.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,5 +27,5 @@ CONFIGURE_ARGS+=--localstatedir=${VARBASE:Q}
 #.endif
 
 
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
