@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.44 2011/03/09 16:34:02 drochner Exp $
+# $NetBSD: options.mk,v 1.45 2012/06/11 13:41:12 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -13,6 +13,12 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 # Define PKG_SUPPORTED_OPTIONS based on the current package and system.
 # -------------------------------------------------------------------------
 
+# Note: It is a good practice that all PKG_SUPPORTED_OPTIONS are
+# enabled or disabled with --enable-option or --disable-option.
+# It is better to add missing libs via EXTRA_LIBS, when it is possible,
+# instead of patching the configure script in order to make the update of
+# the packages easier.
+
 # Options supported by both mplayer* or mencoder*.
 
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
@@ -21,9 +27,8 @@ PKG_SUPPORTED_OPTIONS+= dvdread dvdnav
 PKG_SUPPORTED_OPTIONS+=	oss
 .endif
 
-PKG_OPTIONS_OPTIONAL_GROUPS=	faadgroup
-PKG_OPTIONS_GROUP.faadgroup=	faad mplayer-internal-faad
-PKG_SUGGESTED_OPTIONS+=		mplayer-internal-faad
+PKG_SUPPORTED_OPTIONS+= 	faad
+PKG_SUGGESTED_OPTIONS+=		faad
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
@@ -50,6 +55,7 @@ PKG_SUPPORTED_OPTIONS+=	mlib
 PKG_SUPPORTED_OPTIONS+=	vidix
 .endif
 
+# TODO: v4l2 option probably could be supported on Linux and OpenBSD too
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
 PKG_SUPPORTED_OPTIONS+=	v4l2
 PKG_SUGGESTED_OPTIONS+=	v4l2
@@ -79,13 +85,13 @@ PKG_SUPPORTED_OPTIONS+= xvid
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.for _o_ in aalib arts cdparanoia dv esound gif jpeg \
+.for o in aalib arts cdparanoia dv esound gif jpeg \
 	    dvdread dvdnav \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
 	    nas oss pulseaudio png sdl theora vorbis x264 xvid vdpau
-.  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
-PKG_SUGGESTED_OPTIONS+=	${_o_}
+.  if !empty(PKG_SUPPORTED_OPTIONS:M${o})
+PKG_SUGGESTED_OPTIONS+=	${o}
 .  endif
 .endfor
 .if ${OPSYS} == "Linux"
@@ -104,7 +110,10 @@ EXTRA_LIBS=
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Maalib)
+CONFIGURE_ARGS+=	--enable-aa
 .  include "../../graphics/aalib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-aa
 .endif
 
 .if !empty(PKG_OPTIONS:Marts)
@@ -118,6 +127,8 @@ CONFIGURE_ARGS+=	--disable-arts
 .if !empty(PKG_OPTIONS:Mcaca)
 CONFIGURE_ARGS+=	--enable-caca
 .  include "../../graphics/libcaca/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-caca
 .endif
 
 .if !empty(PKG_OPTIONS:Mcdparanoia)
@@ -175,18 +186,18 @@ CONFIGURE_ARGS+=	--disable-esd
 .endif
 
 .if !empty(PKG_OPTIONS:Mfaac)
+CONFIGURE_ARGS+=	--enable-faac
+EXTRA_LIBS+=		-lfaac
 .  include "../../audio/faac/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-faac
 .endif
 
-.if empty(PKG_OPTIONS:Mfaad) && empty(PKG_OPTIONS:Mmplayer-internal-faad)
-CONFIGURE_ARGS+=	--disable-faad-internal
-.elif !empty(PKG_OPTIONS:Mfaad)
+.if !empty(PKG_OPTIONS:Mfaad)
 CONFIGURE_ARGS+=	--enable-faad
 .  include "../../audio/faad2/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--enable-faad-internal
+CONFIGURE_ARGS+=	--disable-faad
 .endif
 
 .if !empty(PKG_OPTIONS:Mggi)
@@ -211,10 +222,10 @@ CONFIGURE_ARGS+=	--disable-jpeg
 .endif
 
 .if !empty(PKG_OPTIONS:Mlame)
-#CONFIGURE_ARGS+=	--enable-toolame
+CONFIGURE_ARGS+=	--enable-mp3lame
 .  include "../../audio/lame/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-toolame
+CONFIGURE_ARGS+=	--disable-mp3lame
 .endif
 
 .if !empty(PKG_OPTIONS:Mmad)
@@ -237,10 +248,7 @@ CONFIGURE_ARGS+=	--disable-menu
 .endif
 
 .if !empty(PKG_OPTIONS:Mmplayer-real)
-EVAL_PREFIX+=		PREFIX.realplayer-codecs=realplayer-codecs
-PREFIX.realplayer-codecs_DEFAULT=	${LOCALBASE}
 CONFIGURE_ARGS+=	--enable-real
-#CONFIGURE_ARGS+=	--realcodecsdir="${PREFIX.realplayer-codecs}/lib/RealPlayer8-Codecs"
 DEPENDS+=		realplayer-codecs>=8nb2:../../multimedia/realplayer-codecs
 .else
 CONFIGURE_ARGS+=	--disable-real
@@ -253,10 +261,7 @@ CONFIGURE_ARGS+=	--disable-runtime-cpudetection
 .endif
 
 .if !empty(PKG_OPTIONS:Mmplayer-win32)
-EVAL_PREFIX+=		PREFIX.win32-codecs=win32-codecs
-PREFIX.win32-codecs_DEFAULT=	${LOCALBASE}
 CONFIGURE_ARGS+=	--enable-win32dll
-#CONFIGURE_ARGS+=	--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
 DEPENDS+=		win32-codecs>=011227:../../multimedia/win32-codecs
 .else
 CONFIGURE_ARGS+=	--disable-win32dll
@@ -304,9 +309,7 @@ CONFIGURE_ARGS+=	--enable-theora
 CONFIGURE_ARGS+=	--disable-theora
 .endif
 
-.if !empty(PKG_OPTIONS:Mv4l2)
-CONFIGURE_ARGS+=	--enable-tv-v4l2
-.else
+.if empty(PKG_OPTIONS:Mv4l2)
 CONFIGURE_ARGS+=	--disable-tv-v4l2
 .endif
 
@@ -322,6 +325,8 @@ CONFIGURE_ARGS+=	--disable-libvorbis
 .endif
 
 .if !empty(PKG_OPTIONS:Mx264)
+CONFIGURE_ARGS+=	--enable-x264
+EXTRA_LIBS+=		-lx264
 .  include "../../multimedia/x264-devel/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-x264
@@ -344,6 +349,7 @@ CONFIGURE_ARGS+=	--disable-ssse3
 .endif
 
 .if !empty(PKG_OPTIONS:Mvdpau)
+CONFIGURE_ARGS+=	--enable-vdpau
 .  include "../../multimedia/libvdpau/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-vdpau

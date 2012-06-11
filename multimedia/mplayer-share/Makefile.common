@@ -1,21 +1,17 @@
-# $NetBSD: Makefile.common,v 1.50 2012/05/04 16:29:14 joerg Exp $
+# $NetBSD: Makefile.common,v 1.51 2012/06/11 13:41:12 wiz Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
 
-MPLAYER_SNAPSHOT_DATE=	2010-09-13
-MPLAYER_VERSION=	1.0rc${MPLAYER_SNAPSHOT_DATE:S/-//g}
+MPLAYER_VERSION=	1.1
 
-DISTNAME=		mplayer-${MPLAYER_SNAPSHOT_DATE:S/-//g}
+DISTNAME=		MPlayer-${MPLAYER_VERSION}
 
 CATEGORIES?=		multimedia
 
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=commondistfiles/}
+MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/
 
-EXTRACT_SUFX=		.tar.bz2
 DIST_SUBDIR=		mplayer
-
-WRKSRC=			${WRKDIR}/mplayer-export-${MPLAYER_SNAPSHOT_DATE}
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
@@ -41,21 +37,21 @@ HAS_CONFIGURE=		YES
 
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
+CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			#--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
-			--with-extralibdir="${LOCALBASE}/lib" \
+			--with-extralibdir=${LOCALBASE}/lib \
 			--disable-dvdread-internal --disable-smb
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
 # TMPDIR to ${WRKDIR}
-CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
+CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
 # The configure script misdetects endianness on mipseb
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
-CONFIGURE_ARGS+=        --enable-big-endian
+CONFIGURE_ARGS+=	--enable-big-endian
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm)
@@ -70,13 +66,7 @@ SUBST_SED.arm_bswap=		-e s,\"arm/bswap.h\",\"arm/avbswap.h\",g
 SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
 
 # autodetect code enables these options on NetBSD/arm but it should not
-CONFIGURE_ARGS+=        --disable-armv5te --disable-armv6 --disable-armv6t2
-.endif
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-no-integrated-as
+CONFIGURE_ARGS+=	--disable-armv5te --disable-armv6 --disable-armv6t2
 .endif
 
 .include "../../multimedia/mplayer-share/options.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.5 2011/10/18 16:04:36 drochner Exp $
+$NetBSD: patch-sub_subreader.c,v 1.1 2012/06/11 13:41:13 wiz Exp $
 
---- subreader.c.orig	2010-09-11 11:11:10.000000000 +0000
-+++ subreader.c
-@@ -92,10 +92,10 @@ static int eol(char p) {
+--- sub/subreader.c.orig	2012-05-21 19:17:55.000000000 +0000
++++ sub/subreader.c
+@@ -94,10 +94,10 @@ static int eol(char p) {
  /* Remove leading and trailing space */
  static void trail_space(char *s) {
  	int i = 0;
@@ -15,16 +15,7 @@ $NetBSD: patch-ah,v 1.5 2011/10/18 16:04:36 drochner Exp $
  }
  
  static char *stristr(const char *haystack, const char *needle) {
-@@ -171,6 +171,8 @@ static subtitle *sub_read_line_sami(stre
- 	    break;
- 
- 	case 3: /* get all text until '<' appears */
-+	    if (p - text >= LINE_LEN)
-+		sami_add_line(current, text, &p);
- 	    if (*s == '\0') break;
- 	    else if (!strncasecmp (s, "<br>", 4)) {
-                 sami_add_line(current, text, &p);
-@@ -723,7 +725,7 @@ static subtitle *sub_read_line_pjs(strea
+@@ -742,7 +742,7 @@ static subtitle *sub_read_line_pjs(strea
      if (!stream_read_line (st, line, LINE_LEN, utf16))
  	return NULL;
      /* skip spaces */
@@ -33,17 +24,17 @@ $NetBSD: patch-ah,v 1.5 2011/10/18 16:04:36 drochner Exp $
      /* allow empty lines at the end of the file */
      if (*s==0)
  	return NULL;
-@@ -776,7 +778,7 @@ static subtitle *sub_read_line_mpsub(str
+@@ -795,7 +795,7 @@ static subtitle *sub_read_line_mpsub(str
  			else return current;
  		}
  		p=line;
 -		while (isspace(*p)) p++;
-+		while (isspace(*(unsigned char*)p)) p++;
++		while (isspace((unsigned char)*p)) p++;
  		if (eol(*p) && num > 0) return current;
  		if (eol(*p)) return NULL;
  
-@@ -1822,18 +1824,18 @@ char * strreplace( char * in,char * what
- static void strcpy_trim(char *d, char *s)
+@@ -1830,18 +1830,18 @@ char * strreplace( char * in,char * what
+ static void strcpy_trim(char *d, const char *s)
  {
      // skip leading whitespace
 -    while (*s && isspace(*s)) {
@@ -64,8 +55,8 @@ $NetBSD: patch-ah,v 1.5 2011/10/18 16:04:36 drochner Exp $
  	    s++;
  	}
  	if (*s == 0) break;
-@@ -1872,7 +1874,7 @@ static void strcpy_get_ext(char *d, char
- static int whiteonly(char *s)
+@@ -1885,7 +1885,7 @@ static void strcpy_get_ext(char *d, cons
+ static int whiteonly(const char *s)
  {
      while (*s) {
 -	if (!isspace(*s)) return 0;
