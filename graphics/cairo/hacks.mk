@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2012/05/27 18:21:44 dholland Exp $
+# $NetBSD: hacks.mk,v 1.4 2012/06/11 12:48:44 obache Exp $
 
 .if !defined(CAIRO_HACKS_MK)
 CAIRO_HACKS_MK=	defined
@@ -45,7 +45,8 @@ CONFIGURE_ENV+=	ac_cv_prog_CC=gcc-4.2
 # old enough that nobody's going to care.
 #
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*) && \
-    empty(MACHINE_PLATFORM:MNetBSD-5.99.*)
+    empty(MACHINE_PLATFORM:MNetBSD-5.99.*) && \
+    ${X11_TYPE} == "native"
 SUBST_CLASSES+=		pixman
 SUBST_STAGE.pixman=	post-build
 SUBST_MESSAGE.pixman=	Hacking pixman into cairo.pc for the "pixman problem".
