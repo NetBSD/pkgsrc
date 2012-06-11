@@ -1,4 +1,6 @@
-$NetBSD: patch-stream_dvbin.h,v 1.1 2011/07/09 15:51:52 jmcneill Exp $
+$NetBSD: patch-stream_dvbin.h,v 1.2 2012/06/11 21:55:34 wiz Exp $
+
+Add support for dvb capture on NetBSD.
 
 --- stream/dvbin.h.orig	2010-06-21 14:39:24.000000000 +0000
 +++ stream/dvbin.h
