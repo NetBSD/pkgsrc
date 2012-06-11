@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/01/07 23:02:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.26 2012/06/11 13:11:11 fhajny Exp $
 
 DISTNAME=	ejabberd-2.1.10
 CATEGORIES=	chat
@@ -52,11 +52,11 @@ PKG_SYSCONFSUBDIR=	ejabberd
 
 .include "../../mk/bsd.prefs.mk"
 
-EJABBERD_USER=		ejabberd
-EJABBERD_GROUP=		ejabberd
-EJABBERD_PIDDIR=	${VARBASE}/run/ejabberd
-EJABBERD_LOGDIR=	${VARBASE}/log/ejabberd
-EJABBERD_DB=		${VARBASE}/spool/ejabberd
+EJABBERD_USER?=		ejabberd
+EJABBERD_GROUP?=	ejabberd
+EJABBERD_PIDDIR?=	${VARBASE}/run/ejabberd
+EJABBERD_LOGDIR?=	${VARBASE}/log/ejabberd
+EJABBERD_DB?=		${VARBASE}/spool/ejabberd
 EJABBERD_EXDIR=		share/examples/ejabberd
 
 OWN_DIRS+=		${EJABBERD_PIDDIR}
