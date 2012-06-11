@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.23 2011/11/29 19:26:28 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/06/11 13:19:20 fhajny Exp $
+${PLIST.ea}bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
 bin/aecho
@@ -162,15 +163,16 @@ man/man8/timelord.8
 share/aclocal/netatalk.m4
 share/examples/netatalk/AppleVolumes.default
 share/examples/netatalk/AppleVolumes.system
+share/examples/netatalk/afp_ldap.conf
 share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
 ${PLIST.pam}share/examples/netatalk/netatalk.pam
 share/examples/netatalk/papd.conf
-share/examples/rc.d/afpd
-share/examples/rc.d/atalkd
-share/examples/rc.d/cnid_metad
-share/examples/rc.d/papd
-share/examples/rc.d/timelord
+${PLIST.rcd}share/examples/rc.d/afpd
+${PLIST.rcd}share/examples/rc.d/atalkd
+${PLIST.rcd}share/examples/rc.d/cnid_metad
+${PLIST.rcd}share/examples/rc.d/papd
+${PLIST.rcd}share/examples/rc.d/timelord
 share/netatalk/pagecount.ps
 @pkgdir libexec/psffilters
