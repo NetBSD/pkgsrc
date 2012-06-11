@@ -51,6 +51,7 @@ bugzilla-imagemagick	Compress .BMPs to save space.
 bugzilla-patchviewer	Enable patchviewer support.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2.
+caca			Enable libcaca support.
 cairo			Enable cairo support.
 canna			Use Canna as Japanese conversion program.
 cares			Use the c-ares library for asynchronous name resolution.
@@ -111,6 +112,7 @@ dspam-verbose-debug	Enable verbose debugging support.
 dspam-virtualusers	Enable support for virtual users.
 dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
+dvdnav			Enable libdvdnav support to navigate DVDs.
 dvdread			Enable reproduction of DVDs.
 dvi			Enable device independent file format (mostly TeX) support.
 eb			Enable EB dictionary library support.
@@ -389,9 +391,11 @@ mpg123-altivec		Enable altivec optimized dithering code.
 mpg123-fifo		Enable FIFO support for the mpg123 control interface.
 mpg123-with-fpu		Enable generic fpu code.
 mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow).
+mplayer-default-cflags	Enable default optimized CFLAGS.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
+mplayer-ssse3		Enable SSSE3 support.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
 mstats			Enable memory statistics.
@@ -592,12 +596,14 @@ unrealircd-ziplinks	Compress data before transmitting it between servers.
 upnp			Enable support for UPnP.
 uucp			Enable support for uucp.
 uulib			Enable support for uulib.
+v4l2			Enable V4L2 (Video4Linux2) support.
 vdpau			Enable support for VDPAU.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
 vice-ethernet		Enable Ethernet cartridge support.
 vice-fullscreen		Enable full-screen support.
 vice-hwscaling		Enable hardware-assisted screen scaling.
+vidix			Enable VIDIX (Video Interface for *niX support).
 viewvc-php		Use php to colorize .php and .inc files.
 vorbis			Enable Ogg Vorbis support.
 w3m			Use and enable support for the w3m browser.
