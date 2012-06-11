@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1933 2012/06/11 07:07:26 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1934 2012/06/11 13:42:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2935,3 +2935,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.20 [obache 2012-06-11]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.236 [obache 2012-06-11]
 	Updated graphics/pngcrush to 1.7.29 [adam 2012-06-11]
+	Updated multimedia/mplayer-share to 1.1 [wiz 2012-06-11]
+	Updated multimedia/mplayer to 1.1 [wiz 2012-06-11]
+	Updated multimedia/mencoder to 1.1 [wiz 2012-06-11]
+	Updated multimedia/gmplayer to 1.1 [wiz 2012-06-11]
