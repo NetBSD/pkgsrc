@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1935 2012/06/11 16:22:31 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1936 2012/06/11 23:44:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2942,3 +2942,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/sqlite3 to 3.7.13 [adam 2012-06-11]
 	Updated databases/sqlite3-docs to 3.7.13 [adam 2012-06-11]
 	Updated databases/sqlite3-tcl to 3.7.13 [adam 2012-06-11]
+	Updated fonts/font-adobe-100dpi to 1.0.3 [mef 2012-06-11]
+	Updated fonts/font-adobe-75dpi to 1.0.3 [mef 2012-06-11]
+	Updated fonts/font-adobe-utopia-100dpi to 1.0.4 [mef 2012-06-11]
+	Updated fonts/font-adobe-utopia-75dpi to 1.0.4 [mef 2012-06-11]
+	Updated fonts/font-adobe-utopia-type1 to 1.0.4 [mef 2012-06-11]
