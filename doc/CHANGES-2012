@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1928 2012/06/10 16:40:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1929 2012/06/11 00:18:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/fontconfig to 2.9.0 [wiz 2012-06-10]
 	Updated x11/libdrm to 2.4.35 [wiz 2012-06-10]
 	Updated x11/sessreg to 1.0.7 [wiz 2012-06-10]
+	Updated ham/hamlib to 1.2.15.1 [gdt 2012-06-11]
