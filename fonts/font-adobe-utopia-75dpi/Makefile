@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/09/09 17:59:36 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/11 23:23:28 mef Exp $
 #
 
-DISTNAME=		font-adobe-utopia-75dpi-1.0.2
+DISTNAME=		font-adobe-utopia-75dpi-1.0.4
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
