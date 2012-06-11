@@ -1,12 +1,11 @@
-$NetBSD: patch-ac,v 1.1 2003/07/24 06:40:55 jmc Exp $
+$NetBSD: patch-ac,v 1.2 2012/06/11 00:17:58 gdt Exp $
 
---- rpcrig/rpcrigd.c.orig	Mon Dec 16 22:06:54 2002
-+++ rpcrig/rpcrigd.c	Thu Jul 24 00:55:52 2003
-@@ -45,7 +45,12 @@
+--- rpcrig/rpcrigd.c.orig	2012-01-08 02:53:57.000000000 +0000
++++ rpcrig/rpcrigd.c
+@@ -43,6 +43,12 @@
  
  #include <hamlib/rig.h>
  
--
 +#ifdef __NetBSD__
 +#include <sys/param.h>
 +#if (__NetBSD_Version__ < 106210000)
@@ -14,5 +13,5 @@ $NetBSD: patch-ac,v 1.1 2003/07/24 06:40:55 jmc Exp $
 +#endif
 +#endif
  
- /* 
-  * Prototypes
+ 
+ /*
