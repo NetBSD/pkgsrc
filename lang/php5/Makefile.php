@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.45 2012/05/13 16:08:37 taca Exp $
+# $NetBSD: Makefile.php,v 1.46 2012/06/12 15:45:57 wiz Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts suhosin
-PKG_SUGGESTED_OPTIONS+=	ssl
+PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 
 SUBST_CLASSES+=		ini
 SUBST_STAGE.ini=	post-patch
