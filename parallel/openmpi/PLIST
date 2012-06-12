@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/05/28 18:38:17 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/06/12 23:36:31 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -95,8 +95,6 @@ lib/openmpi/mca_ess_env.la
 lib/openmpi/mca_ess_hnp.la
 lib/openmpi/mca_ess_singleton.la
 lib/openmpi/mca_ess_slave.la
-lib/openmpi/mca_ess_slurm.la
-lib/openmpi/mca_ess_slurmd.la
 lib/openmpi/mca_ess_tool.la
 lib/openmpi/mca_filem_rsh.la
 lib/openmpi/mca_grpcomm_bad.la
@@ -119,7 +117,6 @@ lib/openmpi/mca_osc_pt2pt.la
 lib/openmpi/mca_osc_rdma.la
 lib/openmpi/mca_paffinity_hwloc.la
 lib/openmpi/mca_plm_rsh.la
-lib/openmpi/mca_plm_slurm.la
 lib/openmpi/mca_pml_bfo.la
 lib/openmpi/mca_pml_cm.la
 lib/openmpi/mca_pml_csum.la
@@ -127,8 +124,6 @@ lib/openmpi/mca_pml_ob1.la
 lib/openmpi/mca_pml_v.la
 lib/openmpi/mca_pubsub_orte.la
 lib/openmpi/mca_ras_cm.la
-lib/openmpi/mca_ras_gridengine.la
-lib/openmpi/mca_ras_slurm.la
 lib/openmpi/mca_rcache_vma.la
 lib/openmpi/mca_rmaps_load_balance.la
 lib/openmpi/mca_rmaps_rank_file.la
@@ -556,10 +551,7 @@ share/openmpi/help-orted.txt
 share/openmpi/help-orterun.txt
 share/openmpi/help-plm-base.txt
 share/openmpi/help-plm-rsh.txt
-share/openmpi/help-plm-slurm.txt
 share/openmpi/help-ras-base.txt
-share/openmpi/help-ras-gridengine.txt
-share/openmpi/help-ras-slurm.txt
 share/openmpi/help-regex.txt
 share/openmpi/help-rmaps_rank_file.txt
 share/openmpi/help-rmcast-base.txt
