@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2012/03/03 00:12:03 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2012/06/12 19:17:30 prlw1 Exp $
 
-DISTNAME=		atk-2.2.0
-PKGREVISION=		3
+DISTNAME=		atk-2.4.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/2.4/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -25,7 +24,7 @@ PKGCONFIG_OVERRIDE=	atk.pc.in
 UNLIMIT_RESOURCES=	stacksize
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.5.7
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.2
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
