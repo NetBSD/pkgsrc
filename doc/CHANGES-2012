@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1946 2012/06/12 19:18:01 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.1947 2012/06/12 19:39:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2985,3 +2985,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/xenkernel41 to 4.1.2nb1 [bouyer 2012-06-12]
 	Updated devel/at-spi2-core to 2.5.2 [prlw1 2012-06-12]
 	Updated devel/atk to 2.4.0 [prlw1 2012-06-12]
+	Updated mail/thunderbird to 13.0 [ryoon 2012-06-12]
