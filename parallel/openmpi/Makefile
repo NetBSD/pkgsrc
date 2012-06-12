@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/05/28 18:38:17 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/12 23:36:30 asau Exp $
 
-DISTNAME=	openmpi-1.5.5
+DISTNAME=	openmpi-1.6
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.5/downloads/
+MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
@@ -25,7 +25,10 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
 CONFIGURE_ARGS+=	--disable-mpi-f90
+CONFIGURE_ARGS+=	--without-sge
+CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
+CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
@@ -34,13 +37,6 @@ CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 BUILDLINK_TRANSFORM=	rm:-fopenmp
 
 USE_TOOLS+=		perl:run
-
-PLIST_VARS+=		vtlwraph
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "DragonFly"
-PLIST.vtlwraph= 	yes
-.endif
-
 
 .include "options.mk"
 
@@ -53,5 +49,7 @@ TEST_TARGET=	check
 # pre-configure:	replace-interpreter
 # 	cd $(WRKSRC) && $(BASH) autogen.sh
 
+LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
+.include "../../devel/libltdl/convenience.mk" # for "test" target to work
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
