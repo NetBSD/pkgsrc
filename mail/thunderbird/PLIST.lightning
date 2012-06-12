@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST.lightning,v 1.9 2012/04/28 16:56:58 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.10 2012/06/12 19:37:48 ryoon Exp $
+include/thunderbird/calBaseCID.h
 include/thunderbird/calIAlarm.h
 include/thunderbird/calIAlarmService.h
 include/thunderbird/calIAttachment.h
 include/thunderbird/calIAttendee.h
-include/thunderbird/calBaseCID.h
 include/thunderbird/calICalDavCalendar.h
 include/thunderbird/calICalendar.h
+include/thunderbird/calICalendarACLManager.h
 include/thunderbird/calICalendarManager.h
 include/thunderbird/calICalendarProvider.h
 include/thunderbird/calICalendarSearchProvider.h
@@ -256,7 +257,16 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calenda
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/calendar-unifinder.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/calendar-views.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/checkbox-images.png
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-daypicker.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-management.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-task-tree.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-task-view.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-unifinder.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-views.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/dialogs/calendar-alarm-dialog.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/dialogs/calendar-event-dialog.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/today-pane.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/widgets/calendar-widgets.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/datetimepickers/datetimepickers.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/day-box-item-image.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/daypicker-background.png
@@ -277,6 +287,8 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calenda
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/nav-arrow.svg
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/nav-today-hov.svg
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/nav-today.svg
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation-hov.svg
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation.svg
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/default/calendar-alarm-dialog.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/default/calendar-event-dialog.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/default/calendar-event-summary-dialog.png
@@ -289,8 +301,10 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightni
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-calendar-creation.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-calendar-properties.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-calendar-properties.xul
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-menus.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-migration.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-standalone.xul
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-toolbar.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-utils.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-widgets.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-widgets.xml
@@ -304,6 +318,7 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightni
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/suite-overlay-sidebar.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/suite-overlay-sidebar.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/accountCentral.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/common/imip.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/imip.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/lightning-toolbar.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/lightning-widgets.css
@@ -314,6 +329,8 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/cal
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calCompositeCalendar.manifest
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDavCalendar.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDavCalendar.manifest
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDefaultACLManager.js
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDefaultACLManager.manifest
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calICSCalendar.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calICSCalendar.manifest
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calImportExportModule.js
@@ -354,16 +371,13 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calSto
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageUpgrade.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/timezones.sqlite
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation-hov.svg
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation.svg
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-menus.xul
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-toolbar.xul
 share/idl/thunderbird/calIAlarm.idl
 share/idl/thunderbird/calIAlarmService.idl
 share/idl/thunderbird/calIAttachment.idl
 share/idl/thunderbird/calIAttendee.idl
 share/idl/thunderbird/calICalDavCalendar.idl
 share/idl/thunderbird/calICalendar.idl
+share/idl/thunderbird/calICalendarACLManager.idl
 share/idl/thunderbird/calICalendarManager.idl
 share/idl/thunderbird/calICalendarProvider.idl
 share/idl/thunderbird/calICalendarSearchProvider.idl
@@ -407,7 +421,3 @@ share/idl/thunderbird/calIWcapErrors.idl
 share/idl/thunderbird/calIWcapSession.idl
 share/idl/thunderbird/calIWeekInfoService.idl
 share/idl/thunderbird/calInternalInterfaces.idl
-include/thunderbird/calICalendarACLManager.h
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDefaultACLManager.js
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDefaultACLManager.manifest
-share/idl/thunderbird/calICalendarACLManager.idl
