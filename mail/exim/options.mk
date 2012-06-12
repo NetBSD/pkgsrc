@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2010/09/17 12:01:37 adam Exp $
+# $NetBSD: options.mk,v 1.19 2012/06/12 15:45:57 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -13,7 +13,7 @@ PKG_SUPPORTED_OPTIONS+=	readline
 PKG_SUGGESTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
 PKG_SUGGESTED_OPTIONS+=	exim-appendfile-mbx exim-content-scan
 PKG_SUGGESTED_OPTIONS+=	exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
-PKG_SUGGESTED_OPTIONS+=	exim-tls
+PKG_SUGGESTED_OPTIONS+=	exim-tls inet6
 
 .include "../../mk/bsd.options.mk"
 

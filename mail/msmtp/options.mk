@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2011/12/02 12:33:53 ryoon Exp $
+# $NetBSD: options.mk,v 1.13 2012/06/12 15:45:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 
 PKG_SUPPORTED_OPTIONS=	gnome-keyring gsasl idn inet6 scripts
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
 
