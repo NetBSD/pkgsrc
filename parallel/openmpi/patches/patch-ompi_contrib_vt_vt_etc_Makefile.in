@@ -1,0 +1,50 @@
+$NetBSD: patch-ompi_contrib_vt_vt_etc_Makefile.in,v 1.1 2012/06/12 23:36:31 asau Exp $
+
+--- ompi/contrib/vt/vt/etc/Makefile.in.orig	2012-05-10 15:12:24.000000000 +0000
++++ ompi/contrib/vt/vt/etc/Makefile.in
+@@ -461,6 +461,7 @@ vtsysconf_DATA = \
+ 	vt-java-default-filter.spec
+ 
+ vtsysconfdir = $(sysconfdir)
++vtsysconfexampledir = $(pkgdatadir)/examples
+ EXTRA_DIST = $(vtsysconf_DATA)
+ all: all-am
+ 
+@@ -503,22 +504,22 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-vtsysconfDATA: $(vtsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(vtsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(vtsysconfdir)"
+-	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfdir)" || list=; \
++	test -z "$(vtsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(vtsysconfexampledir)"
++	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfexampledir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(vtsysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(vtsysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(vtsysconfexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(vtsysconfexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-vtsysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfdir)" || list=; \
++	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfexampledir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+-	dir='$(DESTDIR)$(vtsysconfdir)'; $(am__uninstall_files_from_dir)
++	dir='$(DESTDIR)$(vtsysconfexampledir)'; $(am__uninstall_files_from_dir)
+ tags: TAGS
+ TAGS:
+ 
+@@ -560,7 +561,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(vtsysconfdir)"; do \
++	for dir in "$(DESTDIR)$(vtsysconfexampledir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
