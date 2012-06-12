@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1938 2012/06/12 13:37:13 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1939 2012/06/12 13:41:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2977,3 +2977,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/font-winitzki-cyrillic to 1.0.3 [mef 2012-06-12]
 	Updated fonts/font-xfree86-type1 to 1.0.4 [mef 2012-06-12]
 	Updated graphics/py-blockdiag to 1.1.6 [obache 2012-06-12]
+	Updated graphics/py-actdiag to 0.3.3 [obache 2012-06-12]
