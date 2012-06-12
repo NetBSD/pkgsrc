@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/05/31 18:18:34 ghen Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:45:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-client
 PKG_SUPPORTED_OPTIONS=	kerberos sasl slp inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

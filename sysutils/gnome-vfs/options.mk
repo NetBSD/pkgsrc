@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2009/11/12 00:13:26 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:03 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
 PKG_SUPPORTED_OPTIONS=	fam gssapi hal inet6 avahi
-PKG_SUGGESTED_OPTIONS=	fam hal
+PKG_SUGGESTED_OPTIONS=	fam hal inet6
 
 .include "../../mk/bsd.prefs.mk"
 

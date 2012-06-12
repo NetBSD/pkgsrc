@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/06/04 00:13:51 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2012/06/12 15:45:57 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
@@ -34,7 +34,7 @@ CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.claws-mail
 PKG_SUPPORTED_OPTIONS=	claws-mail-jpilot ldap inet6
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

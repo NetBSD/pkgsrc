@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2007/04/26 06:26:27 jnemeth Exp $
+# $NetBSD: options.mk,v 1.18 2012/06/12 15:45:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
-PKG_SUGGESTED_OPTIONS=	tcpwrappers
+PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers
 
 PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls
 

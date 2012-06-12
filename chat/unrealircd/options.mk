@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/06/13 23:15:33 adrianp Exp $
+# $NetBSD: options.mk,v 1.11 2012/06/12 15:45:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
@@ -11,7 +11,7 @@ PKG_SUPPORTED_OPTIONS+=	unrealircd-chroot unrealircd-prefixaq
 PKG_SUPPORTED_OPTIONS+=	unrealircd-showlistmodes unrealircd-topicisnuhost
 PKG_SUPPORTED_OPTIONS+=	unrealircd-shunnotices unrealircd-operoverride-verify
 PKG_SUPPORTED_OPTIONS+=	unrealircd-no-operoverride unrealircd-disableusermod
-PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes unrealircd-hub \
+PKG_SUGGESTED_OPTIONS=	inet6 unrealircd-showlistmodes unrealircd-hub \
 			unrealircd-prefixaq
 
 .include "../../mk/bsd.options.mk"

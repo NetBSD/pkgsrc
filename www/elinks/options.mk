@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2012/01/09 14:53:31 drochner Exp $
+# $NetBSD: options.mk,v 1.14 2012/06/12 15:46:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp javascript finger gopher
@@ -11,7 +11,7 @@ PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_OPTIONAL_GROUPS=	malloc
 PKG_SUGGESTED_OPTIONS=	ssl javascript elinks-html-highlight elinks-exmode
-PKG_SUGGESTED_OPTIONS+=	expat boehm-gc
+PKG_SUGGESTED_OPTIONS+=	expat boehm-gc inet6
 
 PKG_OPTIONS_LEGACY_OPTS+= spidermonkey:javascript
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/11/01 14:47:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2012/06/12 15:45:57 wiz Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -36,6 +36,7 @@ SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cucipop
 PKG_SUPPORTED_OPTIONS=	db inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"

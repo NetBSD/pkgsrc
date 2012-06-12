@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/03/17 22:09:52 zafer Exp $
+# $NetBSD: Makefile,v 1.34 2012/06/12 15:46:02 wiz Exp $
 
 DISTNAME=	trafshow-5.2.3
 CATEGORIES=	net
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.trafshow
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

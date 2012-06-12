@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2011/04/17 09:02:17 obache Exp $
+# $NetBSD: Makefile.common,v 1.27 2012/06/12 15:45:54 wiz Exp $
 #
 # used by audio/bmp/Makefile
 # used by audio/bmp-esound/Makefile
@@ -46,6 +46,7 @@ PKGCONFIG_OVERRIDE+=	bmp.pc
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bmp
 PKG_SUPPORTED_OPTIONS=	gnome inet6 xmms-eq
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"

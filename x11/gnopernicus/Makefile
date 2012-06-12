@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2012/03/03 00:14:09 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2012/06/12 15:46:05 wiz Exp $
 #
 
 DISTNAME=		gnopernicus-1.1.1
@@ -40,6 +40,7 @@ INSTALL_MAKE_FLAGS+=	translationdir=${EGDIR}/translation_tables
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnopernicus
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

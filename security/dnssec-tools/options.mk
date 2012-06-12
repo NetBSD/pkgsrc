@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/07/22 21:08:26 pettai Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:03 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.dnssec-tools
 PKG_SUPPORTED_OPTIONS=		inet6 dlv
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=		inet6
 
 .include "../../mk/bsd.options.mk"
 

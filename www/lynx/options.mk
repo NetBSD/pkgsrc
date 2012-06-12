@@ -1,14 +1,15 @@
-# $NetBSD: options.mk,v 1.12 2010/02/25 18:50:21 drochner Exp $
+# $NetBSD: options.mk,v 1.13 2012/06/12 15:46:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
-PKG_SUGGESTED_OPTIONS=	curses
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	socksproxy
 PKG_OPTIONS_GROUP.socksproxy=	socks5 socks4
 
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
 PKG_OPTIONS_GROUP.screen=	ncurses ncursesw slang curses
+
+PKG_SUGGESTED_OPTIONS=	curses inet6
 
 .include "../../mk/bsd.options.mk"
 

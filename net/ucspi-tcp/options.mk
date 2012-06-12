@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2011/06/09 01:47:13 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2012/06/12 15:46:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-tcp
 PKG_SUPPORTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
-PKG_SUGGESTED_OPTIONS+=	ucspi-tcp-nodefaultrbl
+PKG_SUGGESTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
 
 .include "../../mk/bsd.options.mk"
 

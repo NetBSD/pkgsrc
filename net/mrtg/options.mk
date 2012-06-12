@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2011/08/06 11:52:16 tron Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mrtg
 PKG_SUPPORTED_OPTIONS=	inet6 mrtg-snmpv3
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/11/24 15:02:18 jmcneill Exp $
+# $NetBSD: options.mk,v 1.3 2012/06/12 15:46:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-applets
-PKG_SUPPORTED_OPTIONS=	inet6 hal
-PKG_SUGGESTED_OPTIONS+=	hal
+PKG_SUPPORTED_OPTIONS=	hal inet6
+PKG_SUGGESTED_OPTIONS+=	hal inet6
 
 .include "../../mk/bsd.options.mk"
 
