@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2012/03/04 07:45:02 tron Exp $
+# $NetBSD: Makefile,v 1.61 2012/06/12 15:46:02 wiz Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -22,6 +22,7 @@ BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.knews
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2007/10/09 20:21:29 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:01 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.socat
 PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

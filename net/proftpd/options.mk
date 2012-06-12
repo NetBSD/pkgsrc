@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.10 2011/01/12 07:31:00 adam Exp $
+# $NetBSD: options.mk,v 1.11 2012/06/12 15:46:01 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
-PKG_SUGGESTED_OPTIONS=	pam inet6
 PKG_SUPPORTED_OPTIONS=	pam inet6 wrap tls quota ldap proftpd-readme ban
 PKG_OPTIONS_OPTIONAL_GROUPS+=	sql
 PKG_OPTIONS_GROUP.sql=		mysql pgsql
+PKG_SUGGESTED_OPTIONS=	pam inet6
 
 .include "../../mk/bsd.options.mk"
 
