@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11284 2012/06/12 02:55:23 mef Exp $
+$NetBSD: TODO,v 1.11285 2012/06/12 19:18:02 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-2.16
 	o at-spi-2.4.0
 	o aterm-1.0.1
-	o atk-2.4.0
 	o attica-0.3.0
 	o audacious-plugins-2.4.4
 	o audacity-2.0
