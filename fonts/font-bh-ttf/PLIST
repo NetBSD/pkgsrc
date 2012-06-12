@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/09 18:13:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/06/12 02:10:23 mef Exp $
+etc/fonts/conf.avail/42-luxi-mono.conf
+etc/fonts/conf.d/42-luxi-mono.conf
+share/doc/font-bh-ttf/COPYING
 share/fonts/X11/TTF/luximb.ttf
 share/fonts/X11/TTF/luximbi.ttf
 share/fonts/X11/TTF/luximr.ttf
@@ -11,4 +14,3 @@ share/fonts/X11/TTF/luxisb.ttf
 share/fonts/X11/TTF/luxisbi.ttf
 share/fonts/X11/TTF/luxisr.ttf
 share/fonts/X11/TTF/luxisri.ttf
-share/doc/font-bh-ttf/COPYING
