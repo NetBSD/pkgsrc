@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11283 2012/06/11 23:44:00 mef Exp $
+$NetBSD: TODO,v 1.11284 2012/06/12 02:55:23 mef Exp $
 
 Suggested new packages
 ======================
@@ -598,34 +598,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fltk-1.3.0 [pkgsrc-wip]
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.2
-	o font-arabic-misc-1.0.3 [pkg/45549]
-	o font-bh-100dpi-1.0.3 [pkg/45549]
-	o font-bh-75dpi-1.0.3 [pkg/45549]
-	o font-bh-lucidatypewriter-100dpi-1.0.3 [pkg/45549]
-	o font-bh-lucidatypewriter-75dpi-1.0.3 [pkg/45549]
-	o font-bh-ttf-1.0.3 [pkg/45549]
-	o font-bh-type1-1.0.3 [pkg/45549]
-	o font-bitstream-100dpi-1.0.3 [pkg/45549]
-	o font-bitstream-75dpi-1.0.3 [pkg/45549]
-	o font-bitstream-type1-1.0.3 [pkg/45549]
-	o font-cronyx-cyrillic-1.0.3 [pkg/45549]
-	o font-cursor-misc-1.0.3 [pkg/45549]
-	o font-daewoo-misc-1.0.3 [pkg/45549]
-	o font-dec-misc-1.0.3 [pkg/45549]
-	o font-ibm-type1-1.0.3 [pkg/45549]
-	o font-isas-misc-1.0.3 [pkg/45549]
-	o font-jis-misc-1.0.3 [pkg/45549]
-	o font-micro-misc-1.0.3 [pkg/45549]
-	o font-misc-cyrillic-1.0.3 [pkg/45549]
-	o font-misc-ethiopic-1.0.3 [pkg/45549]
-	o font-misc-meltho-1.0.3 [pkg/45549]
-	o font-misc-misc-1.1.2 [pkg/45549]
-	o font-mutt-misc-1.0.3 [pkg/45549]
-	o font-screen-cyrillic-1.0.4 [pkg/45549]
-	o font-sony-misc-1.0.3 [pkg/45549]
-	o font-sun-misc-1.0.3 [pkg/45549]
-	o font-winitzki-cyrillic-1.0.3 [pkg/45549]
-	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fotoxx-12.06.1
 	o fox-1.6.41
 	o freeciv-2.3.2
