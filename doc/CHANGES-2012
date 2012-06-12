@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1947 2012/06/12 19:39:26 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1948 2012/06/12 23:06:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2986,3 +2986,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/at-spi2-core to 2.5.2 [prlw1 2012-06-12]
 	Updated devel/atk to 2.4.0 [prlw1 2012-06-12]
 	Updated mail/thunderbird to 13.0 [ryoon 2012-06-12]
+	Updated mail/thunderbird-l10n to 13.0 [ryoon 2012-06-12]
