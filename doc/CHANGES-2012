@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1944 2012/06/12 15:59:34 bouyer Exp $
+$NetBSD: CHANGES-2012,v 1.1945 2012/06/12 17:17:17 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2983,3 +2983,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gdk-pixbuf2 to 2.26.1nb2 [taca 2012-06-12]
 	Updated www/contao211-translations to 201206070 [taca 2012-06-12]
 	Updated sysutils/xenkernel41 to 4.1.2nb1 [bouyer 2012-06-12]
+	Updated devel/at-spi2-core to 2.5.2 [prlw1 2012-06-12]
