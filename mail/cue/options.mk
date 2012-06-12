@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2009/12/15 13:11:18 taca Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:45:57 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cue
 PKG_SUPPORTED_OPTIONS=	canna idea inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

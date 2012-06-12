@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2010/07/08 18:37:03 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vino
 PKG_SUPPORTED_OPTIONS+=	avahi inet6 telepathy
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

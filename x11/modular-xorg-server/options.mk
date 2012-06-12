@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2009/10/22 20:12:25 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2012/06/12 15:46:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug
-PKG_SUGGESTED_OPTIONS=	dri
+PKG_SUGGESTED_OPTIONS=	dri inet6
 
 .include "../../mk/bsd.options.mk"
 

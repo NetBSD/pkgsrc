@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2007/09/07 22:07:31 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:45:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.solid-pop3d
 PKG_SUPPORTED_OPTIONS=	inet6
 PKG_SUPPORTED_OPTIONS+=	solid-pop3d-aliases
 PKG_SUPPORTED_OPTIONS+=	solid-pop3d-apop
 PKG_SUPPORTED_OPTIONS+=	solid-pop3d-standalone
+PKG_SUGGESTED_OPTIONS=	inet6
 
 PKG_OPTIONS_LEGACY_VARS+=	SPOP3D_ENABLE_ALIASES:solid-pop3d-aliases
 PKG_OPTIONS_LEGACY_VARS+=	SPOP3D_ENABLE_APOP:solid-pop3d-apop

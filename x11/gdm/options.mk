@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2008/11/22 17:35:15 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
-PKG_SUPPORTED_OPTIONS=	inet6 pam consolekit
-PKG_SUGGESTED_OPTIONS=	consolekit
+PKG_SUPPORTED_OPTIONS=	consolekit inet6 pam
+PKG_SUGGESTED_OPTIONS=	consolekit inet6
 
 .include "../../mk/bsd.options.mk"
 

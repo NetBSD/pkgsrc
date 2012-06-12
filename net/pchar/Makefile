@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2010/01/17 12:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/06/12 15:46:01 wiz Exp $
 
 DISTNAME=		pchar-1.5
 PKGREVISION=		2
@@ -16,6 +16,7 @@ USE_LANGUAGES=		c c++
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pchar
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

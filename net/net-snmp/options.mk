@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2011/06/24 09:46:10 adam Exp $
+# $NetBSD: options.mk,v 1.14 2012/06/12 15:46:00 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem perl
@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS=		perl
 .if ${OPSYS} != "SunOS"
 # net-snmp doesn't do IPv6 on Solaris
 PKG_SUPPORTED_OPTIONS+=		inet6
+PKG_SUGGESTED_OPTIONS+=		inet6
 .endif
 
 .include "../../mk/bsd.options.mk"

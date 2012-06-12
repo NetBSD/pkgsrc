@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.12 2010/07/26 06:52:52 dholland Exp $
+# $NetBSD: options.mk,v 1.13 2012/06/12 15:46:02 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
 PKG_OPTIONS_OPTIONAL_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
-PKG_SUGGESTED_OPTIONS=		curses
+PKG_SUGGESTED_OPTIONS=		curses inet6
 # untested
 #PKG_SUPPORTED_OPTIONS+=	socks
 

@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2010/03/24 21:41:10 heinz Exp $
+# $NetBSD: options.mk,v 1.10 2012/06/12 15:45:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
-PKG_SUPPORTED_OPTIONS=	inet6
-PKG_SUPPORTED_OPTIONS+=	ssl
+PKG_SUPPORTED_OPTIONS=	inet6 ssl
 
 #
 # Default options

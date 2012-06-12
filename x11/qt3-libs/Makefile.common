@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.74 2011/07/21 17:07:11 joerg Exp $
+# $NetBSD: Makefile.common,v 1.75 2012/06/12 15:46:05 wiz Exp $
 # used by x11/qt3-docs/Makefile
 # used by x11/qt3-libs/Makefile
 # used by x11/qt3-tools/Makefile
@@ -89,6 +89,7 @@ CONFIGURE_ARGS+=	-no-xinerama
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt3
 PKG_SUPPORTED_OPTIONS=	cups debug
 PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

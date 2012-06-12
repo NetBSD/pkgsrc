@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2009/09/08 08:40:26 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ntp4
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=	inet6

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2011/08/15 01:56:33 schnoebe Exp $
+# $NetBSD: options.mk,v 1.9 2012/06/12 15:45:56 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sane-backends
 PKG_SUPPORTED_OPTIONS=		inet6 snmp
-PKG_SUGGESTED_OPTIONS=		#defined
+PKG_SUGGESTED_OPTIONS=		inet6
 
 .include "../../mk/bsd.options.mk"
 

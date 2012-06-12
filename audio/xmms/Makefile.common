@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2011/04/17 09:13:13 obache Exp $
+# $NetBSD: Makefile.common,v 1.31 2012/06/12 15:45:54 wiz Exp $
 #
 # used by audio/xmms/Makefile
 # used by audio/xmms-esound/Makefile
@@ -34,6 +34,7 @@ PTHREAD_OPTS+=		require
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 
