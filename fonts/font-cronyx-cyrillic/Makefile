@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/10 05:48:08 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/12 02:10:24 mef Exp $
 #
 
-DISTNAME=	font-cronyx-cyrillic-1.0.1
+DISTNAME=	font-cronyx-cyrillic-1.0.3
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=	.tar.bz2

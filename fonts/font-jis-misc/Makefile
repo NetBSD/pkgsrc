@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/09/09 18:39:33 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/12 02:10:24 mef Exp $
 #
 
-DISTNAME=		font-jis-misc-1.0.1
+DISTNAME=		font-jis-misc-1.0.3
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
