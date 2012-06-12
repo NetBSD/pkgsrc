@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/08/06 20:43:44 adam Exp $
+# $NetBSD: Makefile,v 1.42 2012/06/12 15:45:56 wiz Exp $
 
 DISTNAME=	perl-ldap-0.4001
 PKGNAME=	p5-${DISTNAME:S/4001/40.01/}
@@ -24,8 +24,10 @@ DEPENDS+=	p5-XML-SAX-Writer-[0-9]*:../../textproc/p5-XML-SAX-Writer
 
 MAKE_PARAMS+=	--skip	# skip CPAN auto installation of modules
 
-PKG_SUPPORTED_OPTIONS=	sasl inet6
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-perl-ldap
+PKG_SUPPORTED_OPTIONS=	sasl inet6
+PKG_SUGGESTED_OPTIONS=	inet6
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msasl)

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2010/08/21 12:04:52 obache Exp $
+# $NetBSD: options.mk,v 1.3 2012/06/12 15:46:01 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tcpdump
 PKG_SUPPORTED_OPTIONS=	inet6 ssl libsmi
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
 
