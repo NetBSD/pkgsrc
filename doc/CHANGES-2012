@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1948 2012/06/12 23:06:32 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1949 2012/06/12 23:37:05 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2987,3 +2987,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/atk to 2.4.0 [prlw1 2012-06-12]
 	Updated mail/thunderbird to 13.0 [ryoon 2012-06-12]
 	Updated mail/thunderbird-l10n to 13.0 [ryoon 2012-06-12]
+	Updated parallel/openmpi to 1.6 [asau 2012-06-12]
