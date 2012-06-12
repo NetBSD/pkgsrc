@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1943 2012/06/12 14:56:20 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1944 2012/06/12 15:59:34 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211 to 2.11.4 [taca 2012-06-12]
 	Updated graphics/gdk-pixbuf2 to 2.26.1nb2 [taca 2012-06-12]
 	Updated www/contao211-translations to 201206070 [taca 2012-06-12]
+	Updated sysutils/xenkernel41 to 4.1.2nb1 [bouyer 2012-06-12]
