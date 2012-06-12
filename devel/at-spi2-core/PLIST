@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/10 17:25:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/12 17:16:13 prlw1 Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
@@ -29,6 +29,7 @@ include/at-spi-2.0/atspi/atspi-text.h
 include/at-spi-2.0/atspi/atspi-types.h
 include/at-spi-2.0/atspi/atspi-value.h
 include/at-spi-2.0/atspi/atspi.h
+lib/girepository-1.0/Atspi-2.0.typelib
 lib/libatspi.la
 lib/pkgconfig/atspi-2.pc
 libexec/at-spi-bus-launcher
@@ -37,6 +38,7 @@ share/dbus-1/services/org.a11y.Bus.service
 share/dbus-1/services/org.a11y.atspi.Registry.service
 share/examples/at-spi2-core/at-spi2/accessibility.conf
 share/examples/at-spi2-core/xdg/autostart/at-spi-dbus-bus.desktop
+share/gir-1.0/Atspi-2.0.gir
 share/gtk-doc/html/libatspi/AtspiAccessible.html
 share/gtk-doc/html/libatspi/AtspiDeviceListener.html
 share/gtk-doc/html/libatspi/AtspiEventListener.html
@@ -90,6 +92,7 @@ share/locale/en_CA/LC_MESSAGES/at-spi2-core.mo
 share/locale/en_GB/LC_MESSAGES/at-spi2-core.mo
 share/locale/eo/LC_MESSAGES/at-spi2-core.mo
 share/locale/es/LC_MESSAGES/at-spi2-core.mo
+share/locale/et/LC_MESSAGES/at-spi2-core.mo
 share/locale/eu/LC_MESSAGES/at-spi2-core.mo
 share/locale/fa/LC_MESSAGES/at-spi2-core.mo
 share/locale/fi/LC_MESSAGES/at-spi2-core.mo
@@ -102,10 +105,12 @@ share/locale/hu/LC_MESSAGES/at-spi2-core.mo
 share/locale/id/LC_MESSAGES/at-spi2-core.mo
 share/locale/it/LC_MESSAGES/at-spi2-core.mo
 share/locale/ja/LC_MESSAGES/at-spi2-core.mo
+share/locale/km/LC_MESSAGES/at-spi2-core.mo
 share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
 share/locale/lt/LC_MESSAGES/at-spi2-core.mo
 share/locale/lv/LC_MESSAGES/at-spi2-core.mo
+share/locale/ml/LC_MESSAGES/at-spi2-core.mo
 share/locale/mr/LC_MESSAGES/at-spi2-core.mo
 share/locale/ms/LC_MESSAGES/at-spi2-core.mo
 share/locale/nb/LC_MESSAGES/at-spi2-core.mo
@@ -127,6 +132,7 @@ share/locale/te/LC_MESSAGES/at-spi2-core.mo
 share/locale/tr/LC_MESSAGES/at-spi2-core.mo
 share/locale/ug/LC_MESSAGES/at-spi2-core.mo
 share/locale/uk/LC_MESSAGES/at-spi2-core.mo
+share/locale/uz@cyrillic/LC_MESSAGES/at-spi2-core.mo
 share/locale/vi/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-core.mo
