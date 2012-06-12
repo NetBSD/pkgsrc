@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1936 2012/06/11 23:44:00 mef Exp $
+$NetBSD: CHANGES-2012,v 1.1937 2012/06/12 02:55:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2947,3 +2947,32 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/font-adobe-utopia-100dpi to 1.0.4 [mef 2012-06-11]
 	Updated fonts/font-adobe-utopia-75dpi to 1.0.4 [mef 2012-06-11]
 	Updated fonts/font-adobe-utopia-type1 to 1.0.4 [mef 2012-06-11]
+	Updated fonts/font-arabic-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bh-100dpi to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bh-75dpi to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bh-lucidatypewriter-100dpi to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bh-lucidatypewriter-75dpi to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bh-ttf to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bh-type1 to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bitstream-100dpi to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bitstream-75dpi to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-bitstream-type1 to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-cronyx-cyrillic to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-cursor-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-daewoo-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-dec-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-ibm-type1 to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-isas-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-jis-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-micro-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-misc-cyrillic to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-misc-ethiopic to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-misc-meltho to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-misc-misc to 1.1.2 [mef 2012-06-12]
+	Updated fonts/font-mutt-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-schumacher-misc to 1.1.2 [mef 2012-06-12]
+	Updated fonts/font-screen-cyrillic to 1.0.4 [mef 2012-06-12]
+	Updated fonts/font-sony-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-sun-misc to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-winitzki-cyrillic to 1.0.3 [mef 2012-06-12]
+	Updated fonts/font-xfree86-type1 to 1.0.4 [mef 2012-06-12]
