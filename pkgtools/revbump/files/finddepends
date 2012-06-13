@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.5 2006/07/11 12:52:14 wiz Exp $
+# $NetBSD: finddepends,v 1.6 2012/06/13 11:39:33 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 #
@@ -111,7 +111,7 @@ push(@makefiles, @optionfiles);
 
 for $makefile (@makefiles) {
 #    print "* reading $makefile\n";
-    open OUT, $makefile or die "can't open $bl3";
+    open OUT, $makefile or die "can't open $makefile";
     $content = "";
     while (<OUT>) {
 	chomp($_);
