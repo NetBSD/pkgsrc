@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/06/13 08:15:13 mef Exp $
+# $NetBSD: Makefile,v 1.33 2012/06/13 08:23:26 mef Exp $
 #
 
 DISTNAME=		xfstt-1.9
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/xfstt.1x \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xfstt.1
 	cd ${WRKSRC} && (					\
-	    ${INSTALL_DATA} doc/FAQ CHANGES TODO THANKS		\
+	    ${INSTALL_DATA} doc/FAQ TODO THANKS		\
 		${DESTDIR}${PREFIX}/share/doc/xfstt/ ;		\
 	    ${INSTALL_DATA} doc/examples/font.properties	\
 		 ${DESTDIR}${PREFIX}/share/examples/xfstt/	\
