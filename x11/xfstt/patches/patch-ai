@@ -1,8 +1,11 @@
-$NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
+$NetBSD: patch-ai,v 1.2 2012/06/13 08:15:14 mef Exp $
 
---- libfstt/raster_hints.cc.orig	Sat Feb 14 22:10:14 2004
-+++ libfstt/raster_hints.cc	Sat Feb 14 22:39:52 2004
-@@ -123,7 +123,7 @@
+Convert varargs-macros to old-style macros, to make the package
+compile when using gcc 2.95.
+
+--- libfstt/raster_hints.cc.orig	2012-03-03 00:33:23.000000000 +0900
++++ libfstt/raster_hints.cc	2012-06-13 11:53:44.000000000 +0900
+@@ -121,7 +121,7 @@
  		int val = cvtTab->nextVal();
  		// (ld 2048 = 11) - (SHIFT = 6) = 5
  		cvt[i] = ((val * scale + 32) >> 6) << xxexp;
@@ -11,7 +14,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	}
  
  	if (ttFont->prepTable == 0)
-@@ -198,13 +198,13 @@
+@@ -196,13 +196,13 @@
  		y -= gs.round_phase - gs.round_thold;
  		y &= -gs.round_period;
  		y += gs.round_phase;
@@ -27,7 +30,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	}
  	if (y < 0) return 0;
-@@ -214,8 +214,8 @@
+@@ -212,8 +212,8 @@
  inline int
  GraphicsState::absNewMeasure(int dx11D6, int dy11D6)
  {
@@ -38,7 +41,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	int dist = dx11D6 * p_vec_x + dy11D6 * p_vec_y + 0x2000;
  	dist >>= 14;
-@@ -225,8 +225,8 @@
+@@ -223,8 +223,8 @@
  inline int
  GraphicsState::absOldMeasure(int dx11D6, int dy11D6)
  {
@@ -49,8 +52,8 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	int dist = dx11D6 * dp_vec_x + dy11D6 * dp_vec_y + 0x2000;
  	dist >>= 14;
-@@ -237,7 +237,7 @@
- Rasterizer::newMeasure(const point& p2, const point& p1)
+@@ -235,7 +235,7 @@
+ Rasterizer::newMeasure(const Point &p2, const Point &p1)
  {
  	int dist = gs.absNewMeasure(p2.xnow - p1.xnow, p2.ynow - p1.ynow);
 -	debug("\nnewMeasure p[%d]-p[%d] = %f",
@@ -58,8 +61,8 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		 &p2 - p[1], &p1 - p[1], dist / FSHIFT);
  	
  	return dist;
-@@ -247,7 +247,7 @@
- Rasterizer::oldMeasure(const point& p2, const point& p1)
+@@ -245,7 +245,7 @@
+ Rasterizer::oldMeasure(const Point &p2, const Point &p1)
  {
  	int dist = gs.absOldMeasure(p2.xold - p1.xold, p2.yold - p1.yold);
 -	debug("\noldMeasure p[%d]-p[%d] = %f",
@@ -67,7 +70,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		 &p2 - p[1], &p1 - p[1], dist / FSHIFT);
  	return dist;
  }
-@@ -271,9 +271,9 @@
+@@ -269,9 +269,9 @@
  		vx = 0;
  		vy = 0;
  	}
@@ -80,7 +83,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  }
  
  void
-@@ -295,22 +295,22 @@
+@@ -293,22 +293,22 @@
  		vx = 0;
  		vy = 0;
  	}
@@ -93,7 +96,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  }
  
  inline void
- GraphicsState::movePoint(point& pp, int len11D6)
+ GraphicsState::movePoint(Point &pp, int len11D6)
  {
 -	debug("\nmovePoint by %f", len11D6 / FSHIFT);
 -	debug("\t(%d %d)", pp.xnow, pp.ynow);
@@ -109,7 +112,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  }
  
  void
-@@ -350,7 +350,7 @@
+@@ -348,7 +348,7 @@
  	assert(stack >= stackbase);
  
  	int opc = f->readUByte();
@@ -118,7 +121,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	switch (opc) {
  
  	// pushing onto the stack
-@@ -363,11 +363,11 @@
+@@ -361,11 +361,11 @@
  	case PUSHB04: case PUSHB05:
  	case PUSHB06: case PUSHB07:
  		m = opc - (PUSHB00 - 1);
@@ -132,7 +135,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			if ((m & 7) == 0)
  				debug("\n>\t\t");
  		}
-@@ -381,10 +381,10 @@
+@@ -379,10 +379,10 @@
  	case PUSHW04: case PUSHW05:
  	case PUSHW06: case PUSHW07:
  		m = opc - (PUSHW00 - 1);
@@ -145,7 +148,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			if ((m & 7) == 0)
  				debug("\n>\t\t");
  		}
-@@ -396,12 +396,12 @@
+@@ -394,12 +394,12 @@
  		m = *stack;
  		assert(m >= 0 && m < sizeStor);
  		*stack = stor[m];
@@ -160,7 +163,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		assert(n >= 0 && n < sizeStor);
  		stor[n] = m;
  		break;
-@@ -413,7 +413,7 @@
+@@ -411,7 +411,7 @@
  		n = *(stack--);
  		assert(n >= 0 && n < sizeCvt);
  		cvt[n] = m;
@@ -169,7 +172,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	case WCVTF:
  		m = *(stack--);
-@@ -421,13 +421,13 @@
+@@ -419,13 +419,13 @@
  		assert(n >= 0 && n < sizeCvt);
  		//XXX: how does one scale a scalar with the ((xx,xy),(yx,yy)) matrix???
  		cvt[n] = ((m * (xx + yy) + 32) >> 6) << xxexp;
@@ -185,7 +188,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  
  	// accessing the graphics state
-@@ -493,7 +493,7 @@
+@@ -491,7 +491,7 @@
  	case SDPVTL0:
  		m = *(stack--);
  		n = *(stack--);
@@ -194,7 +197,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		oldLine2vector(gs.zp1[n], gs.zp2[m], gs.dp_vec_x, gs.dp_vec_y);
  		newLine2vector(gs.zp1[n], gs.zp2[m], gs.p_vec_x, gs.p_vec_y);
  		gs.recalc();
-@@ -501,7 +501,7 @@
+@@ -499,7 +499,7 @@
  	case SDPVTL1:
  		m = *(stack--);
  		n = *(stack--);
@@ -203,7 +206,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		oldLine2vector(gs.zp1[n], gs.zp2[m], gs.dp_vec_y, gs.dp_vec_x);
  		gs.dp_vec_x = -gs.dp_vec_x;
  		newLine2vector(gs.zp1[n], gs.zp2[m], gs.p_vec_y, gs.p_vec_x);
-@@ -511,7 +511,7 @@
+@@ -509,7 +509,7 @@
  	case SPVTL0:
  		m = *(stack--);
  		n = *(stack--);
@@ -212,7 +215,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		newLine2vector(gs.zp1[n], gs.zp2[m], gs.p_vec_x, gs.p_vec_y);
  		gs.dp_vec_x = gs.p_vec_x;
  		gs.dp_vec_y = gs.p_vec_y;
-@@ -520,7 +520,7 @@
+@@ -518,7 +518,7 @@
  	case SPVTL1:
  		m = *(stack--);
  		n = *(stack--);
@@ -221,7 +224,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		newLine2vector(gs.zp1[n], gs.zp2[m], gs.p_vec_y, gs.p_vec_x);
  		gs.dp_vec_y = gs.p_vec_y = -gs.p_vec_y;
  		gs.dp_vec_x = gs.p_vec_x;
-@@ -529,14 +529,14 @@
+@@ -527,14 +527,14 @@
  	case SFVTL0:
  		m = *(stack--);
  		n = *(stack--);
@@ -238,7 +241,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		newLine2vector(gs.zp1[n], gs.zp2[m], gs.f_vec_y, gs.f_vec_x);
  		gs.f_vec_y = -gs.f_vec_y;
  		gs.recalc();
-@@ -550,58 +550,58 @@
+@@ -548,58 +548,58 @@
  	case SPVFS:
  		gs.dp_vec_y = gs.p_vec_y = *(stack--);
  		gs.dp_vec_x = gs.p_vec_x = *(stack--);
@@ -308,7 +311,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		assert(m >= 0 && m <= 1);
  		gs.zp2 = gs.zp1 = gs.zp0 = p[m];
  		break;
-@@ -631,7 +631,7 @@
+@@ -629,7 +629,7 @@
  		break;
  	case SROUND:
  		m = *(stack--);
@@ -317,7 +320,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		gs.round_state = ROUND_SUPER;
  		n = (m >> 6) & 3;
  		gs.round_period = 0x20 << n;
-@@ -643,12 +643,12 @@
+@@ -641,12 +641,12 @@
  			gs.round_thold = (gs.round_period >> 3) * (m - 4);
  		else
  			gs.round_thold = gs.round_period - 1;
@@ -332,7 +335,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		gs.round_state = ROUND_SUPER45;
  		gs.round_period = 1444 >> (7 - ((m >> 6) & 3));
  		gs.round_phase = (gs.round_period * (m & 0x30)) >> 6;
-@@ -657,21 +657,21 @@
+@@ -655,21 +655,21 @@
  			gs.round_thold = (gs.round_period * (m - 4)) >> 3;
  		else
  			gs.round_thold = gs.round_period - 1;
@@ -358,7 +361,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		if (gs.instr_control == 1)
  			if (m && grid_fitting >= 0)
  				grid_fitting = -grid_fitting;
-@@ -685,24 +685,24 @@
+@@ -683,24 +683,24 @@
  		if (m & 0x0800 && mppem > (m & 0xff))	gs.dropout_control = 0;
  		if (m & 0x1000 && (xy || yx))		gs.dropout_control = 0;
  		if (m & 0x2000 && xx == yy)		gs.dropout_control = 0;
@@ -388,7 +391,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	case FLIPON:
  		gs.auto_flip = 1;
-@@ -715,37 +715,37 @@
+@@ -713,37 +713,37 @@
  	case SANGW:
  		// angle_weight is obsolete!
  		m = *(stack--);
@@ -434,7 +437,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		pp = &gs.zp2[n];
  		if (gs.zp2 == p[1]) {
  			int i = gs.absNewMeasure(pp->xnow, pp->ynow);
-@@ -758,15 +758,15 @@
+@@ -756,15 +756,15 @@
  	case MD0:
  		m = *(stack--);
  		n = *stack;
@@ -454,7 +457,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		*stack = oldMeasure(gs.zp0[n], gs.zp1[m]); // Thanks David
  		break;
  	case MPPEM:
-@@ -775,11 +775,11 @@
+@@ -773,11 +773,11 @@
  		if (m < 0)
  			m = -m;
  		*(++stack) = m;
@@ -468,7 +471,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  
  	// outline manipulation
-@@ -787,7 +787,7 @@
+@@ -785,7 +785,7 @@
  	case FLIPPT:
  		for (m = gs.loop; --m >= 0;) {
  			n = *(stack--);
@@ -477,7 +480,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			gs.zp1[n].flags ^= ON_CURVE;
  		}
  		gs.loop = 1;
-@@ -795,7 +795,7 @@
+@@ -793,7 +793,7 @@
  	case FLIPRGON:
  		m = *(stack--);
  		n = *(stack--);
@@ -486,7 +489,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		pp = &gs.zp1[n];
  		for (m -= n-1; --m >= 0; ++pp)
  			pp->flags |= ON_CURVE;
-@@ -803,7 +803,7 @@
+@@ -801,7 +801,7 @@
  	case FLIPRGOFF:
  		m = *(stack--);
  		n = *(stack--);
@@ -495,7 +498,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		pp = &gs.zp1[n];
  		for (m -= n-1; --m >= 0; ++pp)
  			pp->flags &= ~ON_CURVE;
-@@ -814,8 +814,8 @@
+@@ -812,8 +812,8 @@
  		n = gs.absNewMeasure(pp->xnow - pp->xold, pp->ynow - pp->yold);
  		for (m = gs.loop; --m >= 0;) {
  			int i = *(stack--);
@@ -506,7 +509,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			gs.movePoint(gs.zp2[i], n);
  		}
  		gs.loop = 1;
-@@ -826,14 +826,14 @@
+@@ -824,14 +824,14 @@
  		m = *(stack--);
  		assert(m >= 0 && m < sizeContours);
  		pp = (opc & 1) ? &gs.zp0[gs.rp1] : &gs.zp1[gs.rp2];
@@ -523,7 +526,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			gs.movePoint(gs.zp2[i], n);
  		}
  		}
-@@ -841,32 +841,32 @@
+@@ -839,32 +839,32 @@
  	case SHZ0:
  	case SHZ1:
  		m = *(stack--);
@@ -533,7 +536,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		pp = (opc & 1) ? &gs.zp0[gs.rp1] : &gs.zp1[gs.rp2];
  		n = gs.absNewMeasure(pp->xnow - pp->xold, pp->ynow - pp->yold);
  		assert(m >= 0 && m <= 1);
- 		for (point *pp1 = p[m], *pp2 = pp1 + nPoints[m]; pp1 < pp2; ++pp1) {
+ 		for (Point *pp1 = p[m], *pp2 = pp1 + nPoints[m]; pp1 < pp2; ++pp1) {
  			if (pp1 == pp) continue;
 -			debug("\nSHZ p[%d] by %f", pp1 - p[m], n / FSHIFT);
 -			debug("\t(%d %d) -> ", pp1->xnow, pp1->ynow);
@@ -564,7 +567,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		}
  		gs.loop = 1;
  		break;
-@@ -876,8 +876,8 @@
+@@ -874,8 +874,8 @@
  		n = *(stack--);
  		gs.rp2 = n;
  		gs.rp1 = gs.rp0;
@@ -575,7 +578,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		      gs.zp0 == p[1], gs.rp0);
  		if (gs.zp1 == p[1]) {
  			int i = newMeasure(p[1][n], gs.zp0[gs.rp0]);
-@@ -895,9 +895,9 @@
+@@ -893,9 +893,9 @@
  	case MDAP0:
  	case MDAP1:
  		gs.rp0 = gs.rp1 = *(stack--);
@@ -587,7 +590,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		pp->flags |= gs.flags;
  		if (opc & 1) {
  #if 0 // XXX
-@@ -905,11 +905,11 @@
+@@ -903,11 +903,11 @@
  				pp->xnow = round(pp->xnow);
  			if (gs.f_vec_y)
  				pp->ynow = round(pp->ynow);
@@ -601,7 +604,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  #endif
  		}
  		break;
-@@ -917,10 +917,10 @@
+@@ -915,10 +915,10 @@
  	case MIAP1:
  		m = *(stack--);
  		gs.rp0 = gs.rp1 = *(stack--);
@@ -615,7 +618,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		if (gs.zp0 != p[0]) {
  			pp = &p[1][gs.rp0];
  			int i = gs.absNewMeasure(pp->xnow, pp->ynow);
-@@ -929,7 +929,7 @@
+@@ -927,7 +927,7 @@
  					m = i;
  				m = round(m);
  			}
@@ -624,7 +627,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			gs.movePoint(gs.zp0[gs.rp0], m - i);
  		} else {	// magic in the twilight zone
  			pp = &p[0][gs.rp0];
-@@ -959,18 +959,18 @@
+@@ -957,18 +957,18 @@
  	case MDRP1E: case MDRP1F:
  		gs.rp2 = *(stack--);
  		gs.rp1 = gs.rp0;
@@ -645,11 +648,11 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			gs.rp0 = gs.rp2;
 -		debug("\nmdrp1.wanted = %d", n);
 +		debug1("\nmdrp1.wanted = %d", n);
- 		if (opc & 0x08)
+ 		if (opc & 0x08) {
  			if (n >= 0) {
  				if (n < +gs.min_distance)
-@@ -981,7 +981,7 @@
- 			}
+@@ -980,7 +980,7 @@
+ 		}
  		if (opc & 0x04)
  			n = round(n);
 -		debug("\nmdrp2.wanted = %d", n);
@@ -657,7 +660,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		// XXX: ignore black/gray/white for now
  		gs.movePoint(gs.zp1[gs.rp2], n - m);
  		break;
-@@ -1005,10 +1005,10 @@
+@@ -1004,10 +1004,10 @@
  		m = *(stack--);
  		gs.rp2 = *(stack--);
  		pp = &gs.zp1[gs.rp2];
@@ -670,7 +673,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		if (((m >= 0)? +m : -m) < +gs.swidth_cut_in)
  			m = (m >= 0) ? +gs.swidth_value : -gs.swidth_value;
  
-@@ -1016,7 +1016,7 @@
+@@ -1015,7 +1015,7 @@
  
  		if ((n^m) < 0 && gs.auto_flip) {
  			m = -m;
@@ -679,7 +682,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		}
  		if (opc & 0x04) {
  			if (((m>n) ? m - n : n - m) >= +gs.cvt_cut_in)
-@@ -1041,7 +1041,7 @@
+@@ -1040,7 +1040,7 @@
  	case ALIGNRP:
  		for (m = gs.loop; --m >= 0;) {
  			int n = *(stack--);
@@ -688,7 +691,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			int i = newMeasure(gs.zp0[gs.rp0], gs.zp1[n]);
  			gs.movePoint(gs.zp1[n], i);
  		}
-@@ -1051,7 +1051,7 @@
+@@ -1050,7 +1050,7 @@
  		{
  		m = *(stack--);
  		n = *(stack--);
@@ -697,8 +700,8 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		int i = newMeasure(gs.zp0[m], gs.zp1[n]) >> 1;
  		gs.movePoint(gs.zp0[m], -i);
  		gs.movePoint(gs.zp1[n], +i);
-@@ -1065,9 +1065,9 @@
- 		point* pp4 = &gs.zp0[*(stack--)];
+@@ -1064,9 +1064,9 @@
+ 		Point *pp4 = &gs.zp0[*(stack--)];
  		m = *(stack--);
  
 -		debug("ISECT p[%d] ", m);
@@ -710,7 +713,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  		int f1 = (pp1->xnow - pp3->xnow) * (pp4->ynow - pp3->ynow) -
  			 (pp1->ynow - pp3->ynow) * (pp4->xnow - pp3->xnow);
-@@ -1087,7 +1087,7 @@
+@@ -1086,7 +1086,7 @@
  				    MULDIV(f1, pp2->ynow - pp1->ynow, f2);
  		}
  
@@ -719,7 +722,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		}
  		break;
  	case AA:
-@@ -1097,9 +1097,9 @@
+@@ -1096,9 +1096,9 @@
  	case IP:
  		for (m = gs.loop; --m >= 0;) {
  			int n = *(stack--);
@@ -732,7 +735,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			interpolate(gs.zp2[n], gs.zp1[gs.rp2], gs.zp0[gs.rp1]);
  			debug("\n");
  		}
-@@ -1108,13 +1108,13 @@
+@@ -1107,13 +1107,13 @@
  	case UTP:
  		m = *(stack--);
  		gs.zp0[m].flags &= ~(X_TOUCHED | Y_TOUCHED);
@@ -742,22 +745,22 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	case IUP0:
  		pp = p[1];
  		for (m = 0; m < nEndPoints; ++m) {
- 			point* last = p[1] + endPoints[m];
+ 			Point *last = p[1] + endPoints[m];
 -			debug("IUP0 p[%d .. %d]", pp - p[1], last - p[1]);
 +			debug2("IUP0 p[%d .. %d]", pp - p[1], last - p[1]);
  			doIUP0(pp, last);
  			pp = last + 1;
  		}
-@@ -1123,7 +1123,7 @@
+@@ -1122,7 +1122,7 @@
  		pp = p[1];
  		for (m = 0; m < nEndPoints; ++m) {
- 			point* last = p[1] + endPoints[m];
+ 			Point *last = p[1] + endPoints[m];
 -			debug("IUP1 p[%d .. %d]", pp - p[1], last - p[1]);
 +			debug2("IUP1 p[%d .. %d]", pp - p[1], last - p[1]);
  			doIUP1(pp, last);
  			pp = last + 1;
  		}
-@@ -1138,11 +1138,11 @@
+@@ -1137,11 +1137,11 @@
  		n = 0;
  deltap_label:
  		m = *(stack--);
@@ -772,7 +775,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			stack -= m << 1;
  			break;
  		}
-@@ -1150,8 +1150,8 @@
+@@ -1149,8 +1149,8 @@
  		while (--m >= 0) {
  			int pno = *(stack--);
  			int arg = *(stack--);
@@ -783,7 +786,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			if (n > (arg & 0xf0))
  				break;
  			if (n == (arg & 0xf0)) {
-@@ -1159,7 +1159,7 @@
+@@ -1158,7 +1158,7 @@
  				if (arg >= 0)
  					++arg;
  				arg <<= (SHIFT - gs.delta_shift);
@@ -792,7 +795,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  				      arg / FSHIFT,
  				      gs.zp0[pno].xnow, gs.zp0[pno].ynow);
  #if 0
-@@ -1169,7 +1169,7 @@
+@@ -1168,7 +1168,7 @@
  				gs.zp0[pno].ynow += (arg * gs.f_vec_y) >> 14;
  				gs.zp0[pno].flags |= gs.flags;
  #endif
@@ -801,7 +804,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  				      gs.zp0[pno].xnow, gs.zp0[pno].ynow);
  			}
  		}
-@@ -1198,8 +1198,8 @@
+@@ -1197,8 +1197,8 @@
  		n = 0;
  deltac_label:
  		m = *(stack--);
@@ -812,7 +815,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		n += mppem - gs.delta_base;
  		if (n < 0 || n > 15) {
  			stack -= m << 1;
-@@ -1209,7 +1209,7 @@
+@@ -1208,7 +1208,7 @@
  		while (--m >= 0) {
  			int cno = *(stack--);
  			int arg = *(stack--);
@@ -821,7 +824,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      cno, arg, n >> 4);
  			if (n > (arg & 0xf0))
  				break;
-@@ -1217,10 +1217,10 @@
+@@ -1216,10 +1216,10 @@
  				arg = (arg & 15) - 8;
  				if (arg >= 0) ++arg;
  				arg <<= SHIFT - gs.delta_shift;
@@ -834,7 +837,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			}
  		}
  #ifndef DEBUG
-@@ -1230,8 +1230,8 @@
+@@ -1229,8 +1229,8 @@
  		while (--m >= 0) {
  			int cno = *(stack--);
  			int arg = *(stack--);
@@ -845,7 +848,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		};
  #endif
  		break;
-@@ -1241,7 +1241,7 @@
+@@ -1240,7 +1240,7 @@
  	case DUP:
  		m = *stack;
  		*(++stack) = m;
@@ -854,7 +857,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	case POP:
  		debug("POP");
-@@ -1260,20 +1260,20 @@
+@@ -1259,20 +1259,20 @@
  	case DEPTH:
  		m = stack - stackbase;
  		*(++stack) = m;
@@ -878,7 +881,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		for (; --m > 0; ++stack)
  			stack[0] = stack[1];
  		*stack = n;
-@@ -1283,15 +1283,15 @@
+@@ -1282,15 +1282,15 @@
  		*(stack - 0) = *(stack - 2);
  		*(stack - 2) = *(stack - 1);
  		*(stack - 1) = m;
@@ -897,7 +900,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		if (!m)
  			skipHints(f);
  		break;
-@@ -1305,7 +1305,7 @@
+@@ -1304,7 +1304,7 @@
  		break;
  	case JROT:
  		m = *(stack--);
@@ -906,7 +909,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		if (m)
  			goto jump_relative;
  		debug("not taken");
-@@ -1313,7 +1313,7 @@
+@@ -1312,7 +1312,7 @@
  		break;
  	case JROF:
  		m = *(stack--);
@@ -915,7 +918,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		if (!m)
  			goto jump_relative;
  		debug("not taken");
-@@ -1322,81 +1322,81 @@
+@@ -1321,81 +1321,81 @@
  	case JMPR:
  jump_relative:
  		m = *(stack--);
@@ -1011,7 +1014,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	case DIV:
  		m = *(stack--);
-@@ -1405,46 +1405,46 @@
+@@ -1404,46 +1404,46 @@
  			*stack = (n << SHIFT) / m;
  		else
  			*stack = (n >= 0) ? 0x7ffffff : -0x7ffffff;
@@ -1066,7 +1069,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	case ROUND00: case ROUND01:
  	case ROUND02: case ROUND03:
-@@ -1452,7 +1452,7 @@
+@@ -1451,7 +1451,7 @@
  		m = *stack;
  		// XXX: ignore black/gray/white for now
  		*stack = round(m);
@@ -1075,7 +1078,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		break;
  	case NROUND00: case NROUND01:
  	case NROUND02: case NROUND03:
-@@ -1460,11 +1460,11 @@
+@@ -1459,11 +1459,11 @@
  		m = *stack;
  		// XXX: ignore black/gray/white for now
  		*stack = m;
@@ -1089,7 +1092,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		assert(m >= 0 && m < sizeFDefs);
  		fdefs[m].f = f;
  		fdefs[m].offset = f->tell();
-@@ -1476,7 +1476,7 @@
+@@ -1475,7 +1475,7 @@
  		return;
  	case IDEF:
  		m = *(stack--);
@@ -1098,7 +1101,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		assert(m >= 0 && m < sizeIDefs);
  		idefs[m].f = f;
  		idefs[m].offset = f->tell();
-@@ -1486,7 +1486,7 @@
+@@ -1485,7 +1485,7 @@
  	case CALL:
  		{
  		m = *(stack--);
@@ -1107,7 +1110,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		assert(m >= 0 && m < sizeFDefs);
  
  		int ofs = f->tell();
-@@ -1500,7 +1500,7 @@
+@@ -1499,7 +1499,7 @@
  		{
  		m = *(stack--);
  		n = *(stack--);
@@ -1116,7 +1119,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  		int ofs = f->tell();
  		FDefs* fd = &fdefs[m];
-@@ -1524,19 +1524,19 @@
+@@ -1523,19 +1523,19 @@
  		if (m & GLYPH_STRETCHED)
  			if (xx != yy)
  				*stack |= IS_STRETCHED;
@@ -1139,7 +1142,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			f->seekAbsolute(ofs);
  		}
  
-@@ -1578,7 +1578,7 @@
+@@ -1574,7 +1574,7 @@
  	debug("\nskipping...");
  	for (int depth = 0;;) {
  		int opc = f->readUByte();
@@ -1148,7 +1151,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  		switch (opc) {
  		case NPUSHB:
  			opc = f->readUByte() + PUSHB00 - 1;
-@@ -1642,7 +1642,7 @@
+@@ -1637,7 +1637,7 @@
  		dist = MULDIV(doldp1, dnew21, dold21) - dnewp1;
  	}
  
@@ -1157,7 +1160,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	gs.movePoint(pp, dist);
  }
  
-@@ -1653,11 +1653,11 @@
+@@ -1647,11 +1647,11 @@
  	int dold21 = p2->yold - p1->yold;
  	int doldp1 = pp->yold - p1->yold;
  
@@ -1172,7 +1175,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	if ((dold21 ^ doldp1) < 0 || doldp1 == 0)
  		pp->ynow = pp->yold + p1->ynow - p1->yold;
-@@ -1666,11 +1666,11 @@
+@@ -1660,11 +1660,11 @@
  		pp->ynow = pp->yold + p2->ynow - p2->yold;
  	else {
  		int dnew21 = p2->ynow - p1->ynow;
@@ -1185,8 +1188,8 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
 +	debug2(" -> %d %d\n", pp->xnow, pp->ynow);
  }
  
- 
-@@ -1680,11 +1680,11 @@
+ void
+@@ -1673,11 +1673,11 @@
  	int dold21 = p2->xold - p1->xold;
  	int doldp1 = pp->xold - p1->xold;
  
@@ -1201,7 +1204,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	if ((dold21 ^ doldp1) < 0 || doldp1 == 0)
  		pp->xnow = pp->xold + p1->xnow - p1->xold;
-@@ -1693,11 +1693,11 @@
+@@ -1686,11 +1686,11 @@
  		pp->xnow = pp->xold + p2->xnow - p2->xold;
  	else {
  		int dnew21 = p2->xnow - p1->xnow;
@@ -1214,4 +1217,4 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 22:27:30 kristerw Exp $
 +	debug2(" -> %d %d\n", pp->xnow, pp->ynow);
  }
  
- 
+ void

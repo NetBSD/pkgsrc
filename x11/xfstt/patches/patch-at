@@ -1,8 +1,11 @@
-$NetBSD: patch-at,v 1.1 2004/02/14 22:27:30 kristerw Exp $
+$NetBSD: patch-at,v 1.2 2012/06/13 08:15:15 mef Exp $
 
---- libfstt/ttfont.cc.orig	Thu Aug  7 08:20:44 2003
-+++ libfstt/ttfont.cc	Sat Feb 14 23:17:22 2004
-@@ -37,7 +37,7 @@
+Convert varargs-macros to old-style macros, to make the package
+compile when using gcc 2.95.
+
+--- libfstt/ttfont.cc.orig	2010-10-04 23:22:48.000000000 +0900
++++ libfstt/ttfont.cc	2011-10-17 13:02:01.000000000 +0900
+@@ -35,7 +35,7 @@
  	ebdtTable(0), eblcTable(0),
  	mortTable(0), vheaTable(0)
  {
@@ -11,7 +14,7 @@ $NetBSD: patch-at,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	if (openError())
  		return;
-@@ -296,7 +296,7 @@
+@@ -286,7 +286,7 @@
  		maxWidth = headTable->xmax - headTable->xmin;
  		maxWidth += headTable->emUnits >> 5;	// +3%
  		maxWidth = maxWidth * mppemx / headTable->emUnits;
@@ -20,7 +23,7 @@ $NetBSD: patch-at,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	}
  
  	return maxWidth;
-@@ -317,7 +317,7 @@
+@@ -307,7 +307,7 @@
  		// XXX: 	width = getMaxWidth(mppemx):
  		width += headTable->emUnits >> 5;	// +3%
  		width = width * mppemx / headTable->emUnits;
@@ -29,26 +32,26 @@ $NetBSD: patch-at,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	}
  
  	return width;
-@@ -352,7 +352,7 @@
- 	U8 *headTable = 0;
+@@ -343,7 +343,7 @@
+ 	uint8_t *headTable = 0;
  	int nTables = (buf[4] << 8) + buf[5];
  
 -	debug("nTables = %d\n", nTables);
 +	debug1("nTables = %d\n", nTables);
  
  	for (int i = 0; i < nTables; ++i) {
- 		U8 *b = &buf[12 + i * 16];
-@@ -361,24 +361,24 @@
+ 		uint8_t *b = &buf[12 + i * 16];
+@@ -352,24 +352,24 @@
  		int length = (b[12] << 24) + (b[13] << 16) + (b[14] << 8) + b[15];
  		int check = checksum(buf + offset, length);
  
 -		debug("offset = %08X, length = %08X\n", offset, length);
 +		debug2("offset = %08X, length = %08X\n", offset, length);
  
- 		b[4] = (U8)(check >> 24);
- 		b[5] = (U8)(check >> 16);
- 		b[6] = (U8)(check >> 8);
- 		b[7] = (U8)check;
+ 		b[4] = (uint8_t)(check >> 24);
+ 		b[5] = (uint8_t)(check >> 16);
+ 		b[6] = (uint8_t)(check >> 8);
+ 		b[7] = (uint8_t)check;
  
 -		debug("checksum[%d] = %08X\n", i, check);
 +		debug2("checksum[%d] = %08X\n", i, check);
@@ -65,19 +68,11 @@ $NetBSD: patch-at,v 1.1 2004/02/14 22:27:30 kristerw Exp $
 -	debug("csAdjust = %08X\n", check);
 +	debug1("csAdjust = %08X\n", check);
  
- 	headTable[8] = (U8)(check >> 24);
- 	headTable[9] = (U8)(check >> 16);
-@@ -458,14 +458,14 @@
- 	xlfd += "-normal-" + strSubFamily + '-';
+ 	headTable[8] = (uint8_t)(check >> 24);
+ 	headTable[9] = (uint8_t)(check >> 16);
+@@ -437,7 +437,7 @@
  
- 	for (i = xlfd.begin(); i < xlfd.end(); i++)
--		*i = std::tolower(*i);
-+		*i = tolower(*i);
- 
- 	if (p_strFamily)
- 		delete p_strFamily;
- 	if (p_strSubFamily)
- 		delete p_strSubFamily;
+ 	std::transform(xlfd.begin(), xlfd.end(), xlfd.begin(), char_tolower);
  
 -	debug("xlfd = \"%s\"\n", xlfd.c_str());
 +	debug1("xlfd = \"%s\"\n", xlfd.c_str());

@@ -1,8 +1,11 @@
-$NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
+$NetBSD: patch-af,v 1.2 2012/06/13 08:15:14 mef Exp $
 
---- src/xfstt.cc.orig	Thu Aug  7 08:31:47 2003
-+++ src/xfstt.cc	Sat Feb 14 23:04:55 2004
-@@ -397,7 +397,7 @@
+Convert varargs-macros to old-style macros, to make the package
+compile when using gcc 2.95.
+
+--- src/xfstt.cc.orig	2012-03-21 02:23:17.000000000 +0900
++++ src/xfstt.cc	2012-06-13 11:47:32.000000000 +0900
+@@ -436,7 +436,7 @@
  	} else
  		mapIndex = 0;
  
@@ -11,7 +14,7 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	*buf0 = buf - buf0;
  	return *buf0 + 1;
-@@ -451,7 +451,7 @@
+@@ -495,7 +495,7 @@
  	strncpy(buf, (char *)&fn, sizeof(fn));
  	strncpy(buf + sizeof(fn), fontName, ttfn->nameLen);
  	buf[fn.nameLen] = 0;
@@ -20,16 +23,16 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	return fn.nameLen + 1;
  }
-@@ -464,7 +464,7 @@
+@@ -509,7 +509,7 @@
  		if (fid == xfs->fid)
  			return xfs;
  
 -	debug("fid = %ld not found!\n", fid);
 +	debug1("fid = %ld not found!\n", fid);
  
- 	if (sd) {
- 		fsError reply;
-@@ -482,7 +482,7 @@
+ 	return 0;
+ }
+@@ -529,7 +529,7 @@
  openFont(TTFont *ttFont, FontParams *fp, Rasterizer *raster,
  	 int fid, Encoding *encoding)
  {
@@ -37,8 +40,8 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
 +	debug3("point %d, pixel %d, res %d\n",
  	      fp->point[0], fp->pixel[0], fp->resolution[0]);
  
- 	if (!ttFont || ttFont->badFont())
-@@ -536,7 +536,7 @@
+ 	if (!ttFont)
+@@ -587,7 +587,7 @@
  		fp->point[3] = (fp->pixel[3] * 72 + 36) / fp->resolution[1];
  	}
  
@@ -47,7 +50,7 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	      fp->resolution[0]);
  
  	// init rasterizer
-@@ -576,7 +576,7 @@
+@@ -630,7 +630,7 @@
  		return 0;
  
  	// parse attributes
@@ -56,27 +59,36 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	      fp->point[0], fp->pixel[0], fp->resolution[0]);
  
  	int m_index = 0, p_index = 0, r_index = 0;
-@@ -701,8 +701,8 @@
+@@ -769,8 +769,8 @@
  	if (!encoding)
  		encoding = encodings[0];
  
--	debug("\nopenXLFD(\"%s\"), %s\n", xlfdName, encoding->strName);
+-	debug("\nopenXLFD(\"%s\"), %s\n", xlfdName, encoding->Name.c_str());
 -	debug("size %d, resx %d, resy %d\n",
-+	debug2("\nopenXLFD(\"%s\"), %s\n", xlfdName, encoding->strName);
++	debug2("\nopenXLFD(\"%s\"), %s\n", xlfdName, encoding->Name.c_str());
 +	debug3("size %d, resx %d, resy %d\n",
  	      fp->point[0], fp->resolution[0], fp->resolution[1]);
  
  	TTFNdata* ttfn = (TTFNdata *)(infoBase + sizeof(TTFNheader));
-@@ -876,7 +876,7 @@
- 		sd = accept(sd_unix, (struct sockaddr *)&s_unix, &saLength);
- 	else if (!noTCP && FD_ISSET(sd_inet, &sdlist))
- 		sd = accept(sd_inet, (struct sockaddr *)&s_inet, &saLength);
--	debug("accept(saLength = %d) = %d\n", saLength, sd);
-+	debug2("accept(saLength = %d) = %d\n", saLength, sd);
+@@ -1047,7 +1047,7 @@
+ 			conn.sd_max = conn.sd_list[n];
+ 	}
+ 
+-	debug("connection setup (sockets = %d)\n", conn.sd_list_used);
++	debug1("connection setup (sockets = %d)\n", conn.sd_list_used);
+ 
+ 	return 0;
+ }
+@@ -1074,7 +1074,7 @@
+ 		}
+ 	}
+ 
+-	debug("accept(%d) = %d\n", conn.sd_list[n], sd);
++	debug2("accept(%d) = %d\n", conn.sd_list[n], sd);
  
  	return sd;
  }
-@@ -901,9 +901,9 @@
+@@ -1097,9 +1097,9 @@
  		return 0;
  	}
  
@@ -86,60 +98,84 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
 -	debug("version %d.%d\n", req->major_version, req->minor_version);
 +	debug2("version %d.%d\n", req->major_version, req->minor_version);
  
- 	if ((req->byteOrder == 'l' && (*(U32 *)req & 0xff) != 'l')
- 	    || (req->byteOrder == 'B' && ((*(U32 *)req >> 24) & 0xff) != 'B')) {
-@@ -955,7 +955,7 @@
+ 	if ((req->byteOrder == 'l' && (*(uint32_t *)req & 0xff) != 'l') ||
+ 	    (req->byteOrder == 'B' && ((*(uint32_t *)req >> 24) & 0xff) != 'B'))
+@@ -1150,7 +1150,7 @@
  
- 	register U8 *p, *end = fe->bitmaps + fe->bmplen;
+ 	register uint8_t *p, *end = fe->bitmaps + fe->bmplen;
  	if ((fe->bmpFormat ^ hint) & BitmapFormatMaskByte) {
 -		debug("slpswap SLP=%d\n", LOGSLP);
 +		debug1("slpswap SLP=%d\n", LOGSLP);
  		p = fe->bitmaps;
  		switch (LOGSLP) {
  		case 3:
-@@ -987,7 +987,7 @@
+@@ -1182,7 +1182,7 @@
  	}
  
- 	if ((format != LOGSLP) && (hint & BitmapFormatByteOrderMask == 0)) {
+ 	if ((format != LOGSLP) && ((hint & BitmapFormatByteOrderMask) == 0)) {
 -		debug("fmtswap SLP=%d -> fmt=%d\n", LOGSLP, format);
 +		debug2("fmtswap SLP=%d -> fmt=%d\n", LOGSLP, format);
  		p = fe->bitmaps;
  		if (LOGSLP == 3 && format == 4) {
  			for (; p < end; p += 2)
-@@ -1045,7 +1045,7 @@
- check_length(int sd, int seqno, fsReq *req, int expected_size)
- {
- 	if (req->length < (expected_size >> 2)) {
+@@ -1246,7 +1246,7 @@
+ 	int size = client.req.length << 2;
+ 
+ 	if (size < expected_size) {
 -		debug("packet size mismatch: %d received bytes, "
 +		debug2("packet size mismatch: %d received bytes, "
- 		      "%d expected bytes\n", req->length << 2, expected_size);
- 		send_fserror(sd, seqno);
+ 		      "%d expected bytes\n", size, expected_size);
+ 		fs_client_error(client, FSBadLength);
  		return 0;
-@@ -1080,7 +1080,7 @@
- 		fsReq *fsreq = (fsReq *)buf;
- 		int length = fsreq->length << 2;
- 		if (length > MAXREQSIZE) {
+@@ -1277,14 +1277,14 @@
+ #ifdef DEBUG
+ 		debug("===STARTREQ=========== %d\n", l);
+ 		for (i = 0; i < sz_fsReq; ++i)
+-			debug("%02X ", client.buf[i]);
++			debug1("%02X ", client.buf[i]);
+ 		debug("\n");
+ 		sync();
+ #endif
+ 
+ 		int size = client.req.length << 2;
+ 		if (size > MAXREQSIZE) {
 -			debug("too much data: %d bytes (max=%d)\n",
 +			debug2("too much data: %d bytes (max=%d)\n",
- 			      length, MAXREQSIZE);
- 			send_fserror(sd, seqno);
+ 			      size, MAXREQSIZE);
+ 			fs_client_error(client, FSBadLength);
  			break;
-@@ -1182,12 +1182,12 @@
+@@ -1298,13 +1298,13 @@
+ 
+ #ifdef DEBUG
+ 		for (i = sz_fsReq; i < size; ++i) {
+-			debug("%02X ", client.buf[i]);
++			debug1("%02X ", client.buf[i]);
+ 			if ((i & 3) == 3)
+ 				debug(" ");
+ 			if ((i & 15) == (15 - sz_fsReq))
+ 				debug("\n");
+ 		}
+-		debug("\n===ENDREQ============= %d\n", size);
++		debug1("\n===ENDREQ============= %d\n", size);
+ 		sync();
+ #endif
+ 
+@@ -1382,12 +1382,12 @@
  			{
- 			fsSetEventMaskReq *req = (fsSetEventMaskReq *)buf;
- 			event_mask = req->event_mask;
--			debug("FS_SetEventMask %04X\n", event_mask);
-+			debug1("FS_SetEventMask %04X\n", event_mask);
+ 			fsSetEventMaskReq *req = (fsSetEventMaskReq *)client.buf;
+ 			client.event_mask = req->event_mask;
+-			debug("FS_SetEventMask %04X\n", client.event_mask);
++			debug1("FS_SetEventMask %04X\n", client.event_mask);
  			}
  			break;
  
  		case FS_GetEventMask:
--			debug("FS_GetEventMask = %04X\n", event_mask);
-+			debug1("FS_GetEventMask = %04X\n", event_mask);
+-			debug("FS_GetEventMask = %04X\n", client.event_mask);
++			debug1("FS_GetEventMask = %04X\n", client.event_mask);
  			{
  			fsGetEventMaskReply reply;
  			reply.type = FS_Reply;
-@@ -1241,7 +1241,7 @@
+@@ -1441,7 +1441,7 @@
  
  			fsResolution *res = (fsResolution *)(req + 1);
  
@@ -148,7 +184,7 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			for (; --numres >= 0; ++res) {
  				if (!defaultres) {
  					fp0.resolution[0] = res->x_resolution;
-@@ -1250,7 +1250,7 @@
+@@ -1450,7 +1450,7 @@
  				res->point_size /= 10;
  				fp0.point[0] = fp0.point[1] = res->point_size;
  				fp0.point[2] = fp0.point[3] = 0;
@@ -157,7 +193,7 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  				      res->x_resolution, res->y_resolution,
  				      res->point_size / 10);
  			}
-@@ -1289,7 +1289,7 @@
+@@ -1489,7 +1489,7 @@
  				break;
  
  			pattern[req->nbytes] = 0;
@@ -166,35 +202,26 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      pattern, req->maxNames);
  
  			fsListFontsReply reply;
-@@ -1323,7 +1323,7 @@
+@@ -1523,7 +1523,7 @@
  				buf += len;
  				++reply.nFonts;
  			}
 -			debug("Found %ld fonts\n", reply.nFonts);
 +			debug1("Found %ld fonts\n", reply.nFonts);
- 			reply.length = (sizeof(reply) + (buf - replybuf)
+ 			reply.length = (sizeof(reply) + (buf - client.replybuf)
  				       + 3) >> 2;
  
-@@ -1358,7 +1358,7 @@
- 			error.sequenceNumber = seqno;
- 			error.length = sizeof(error) >> 2;
- 
--			debug(" fsError size = %u bytes, %u ints\n",
-+			debug2(" fsError size = %u bytes, %u ints\n",
- 			      sizeof(error), error.length);
- 			write(sd, (void *)&error, sizeof(error));
- #endif
-@@ -1370,7 +1370,7 @@
- 			fsOpenBitmapFontReq *req = (fsOpenBitmapFontReq *)buf;
+@@ -1562,7 +1562,7 @@
+ 			fsOpenBitmapFontReq *req = (fsOpenBitmapFontReq *)client.buf;
  			char *fontName = (char *)(req + 1) + 1;
- 			fontName[*(U8 *)(req + 1)] = 0;
+ 			fontName[*(uint8_t *)(req + 1)] = 0;
 -			debug("FS_OpenBitmapFont \"%s\"", fontName);
 +			debug1("FS_OpenBitmapFont \"%s\"", fontName);
  
  			raster->format = (req->format_hint >> 8) & 3;
  			if (req->format_hint & 0x0c)
-@@ -1399,7 +1399,7 @@
- 				write(sd, (void *)&reply, sizeof(reply));
+@@ -1585,7 +1585,7 @@
+ 				fs_client_error(client, FSBadName);
  				debug(" not found\n");
  			}
 -			debug("fhint = %04lX, fmask = %04lX, fid = %ld\n",
@@ -202,18 +229,18 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      req->format_hint, req->format_mask, req->fid);
  			}
  			break;
-@@ -1407,7 +1407,7 @@
+@@ -1593,7 +1593,7 @@
  		case FS_QueryXInfo:
  			{
- 			fsQueryXInfoReq *req = (fsQueryXInfoReq *)buf;
+ 			fsQueryXInfoReq *req = (fsQueryXInfoReq *)client.buf;
 -			debug("FS_QueryXInfo fid = %ld\n", req->id);
 +			debug1("FS_QueryXInfo fid = %ld\n", req->id);
  
  			struct {
  				fsQueryXInfoReply s1;
-@@ -1439,10 +1439,10 @@
+@@ -1625,10 +1625,10 @@
  			reply.s1.font_hdr_char_range_max_char_low
- 				= (U8)fi->lastChar;
+ 				= (uint8_t)fi->lastChar;
  
 -			debug("minchar = 0x%02X%02X, ",
 +			debug2("minchar = 0x%02X%02X, ",
@@ -224,7 +251,7 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      reply.s1.font_hdr_char_range_max_char_high,
  			      reply.s1.font_hdr_char_range_max_char_low);
  
-@@ -1466,11 +1466,11 @@
+@@ -1652,11 +1652,11 @@
  			reply.s1.font_header_font_ascent = fe->yWinAscent;
  			reply.s1.font_header_font_descent = fe->yWinDescent;
  
@@ -239,9 +266,9 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      fe->xAdvanceMin, fe->xAdvanceMax);
  
  			// we need to have some property data, otherwise
-@@ -1494,10 +1494,10 @@
+@@ -1680,10 +1680,10 @@
  			{
- 			fsQueryXExtents16Req *req = (fsQueryXExtents16Req *)buf;
+ 			fsQueryXExtents16Req *req = (fsQueryXExtents16Req *)client.buf;
  
 -			debug("FS_QueryXExtents%s fid = %ld, ",
 +			debug2("FS_QueryXExtents%s fid = %ld, ",
@@ -252,18 +279,32 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      req->range, req->num_ranges);
  
  			int item_size = (req->reqType == FS_QueryXExtents8)
-@@ -1535,7 +1535,7 @@
+@@ -1722,7 +1722,7 @@
  				for (; nranges > 0; nranges -= 2, ptr += 2) {
  					ptr[0] = ntohs(ptr[0]);
  					ptr[1] = ntohs(ptr[1]);
 -					debug("rg %d..%d\n",ptr[0],ptr[1]);
 +					debug2("rg %d..%d\n",ptr[0],ptr[1]);
- 					for (U16 j = ptr[0]; j <= ptr[1]; ++j)
+ 					for (uint16_t j = ptr[0]; j <= ptr[1]; ++j)
  						(ext++)->left = j;
  				}
-@@ -1591,9 +1591,9 @@
+@@ -1762,10 +1762,10 @@
+ 				}
+ 
+ #if DEBUG & 2
+-				debug("GM[%3d = %3d] = ", ch, glyphNo);
+-				debug("(l= %d, r= %d, ",
++				debug1("GM[%3d = %3d] = ", ch, glyphNo);
++				debug2("(l= %d, r= %d, ",
+ 				      ext->left, ext->right);
+-				debug("w= %d, a= %d, d= %d);\n",
++				debug3("w= %d, a= %d, d= %d);\n",
+ 				      ext->width, ext->ascent, ext->descent);
+ #endif
+ 			}
+@@ -1780,9 +1780,9 @@
  			{
- 			fsQueryXBitmaps16Req *req = (fsQueryXBitmaps16Req *)buf;
+ 			fsQueryXBitmaps16Req *req = (fsQueryXBitmaps16Req *)client.buf;
  
 -			debug("FS_QueryXBitmaps16 fid = %ld, fmt = %04lX\n",
 +			debug2("FS_QueryXBitmaps16 fid = %ld, fmt = %04lX\n",
@@ -273,30 +314,39 @@ $NetBSD: patch-af,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  			      req->range, req->num_ranges);
  
  			int item_size = (req->reqType == FS_QueryXExtents8)
-@@ -1633,7 +1633,7 @@
+@@ -1823,7 +1823,7 @@
  				for (; nranges > 0; nranges -= 2, ptr += 2) {
  					ptr[0] = ntohs(ptr[0]);
  					ptr[1] = ntohs(ptr[1]);
 -					debug("rg %d..%d\n",ptr[0],ptr[1]);
 +					debug2("rg %d..%d\n",ptr[0],ptr[1]);
- 					for (U16 j = ptr[0]; j <= ptr[1]; ++j)
+ 					for (uint16_t j = ptr[0]; j <= ptr[1]; ++j)
  						(ofs++)->position = j;
  				}
-@@ -1713,7 +1713,7 @@
+@@ -1868,7 +1868,7 @@
+ 				ofs->position = ci->tmpofs;
+ 
+ #if DEBUG & 2
+-				debug("OFS[%3d = %3d] = %ld\n",
++				debug2("OFS[%3d = %3d] = %ld\n",
+ 				      ch, glyphNo, ofs->position);
+ #endif
+ 			}
+@@ -1905,7 +1905,7 @@
  		case FS_CloseFont:
  			{
- 			fsCloseReq *req = (fsCloseReq *)buf;
+ 			fsCloseReq *req = (fsCloseReq *)client.buf;
 -			debug("FS_CloseFont fid = %ld\n", req->id);
 +			debug1("FS_CloseFont fid = %ld\n", req->id);
  
- 			XFSFont *xfs = findFont(req->id, sd, seqno);
+ 			XFSFont *xfs = fs_find_font(req->id, client);
  			if (xfs) {
-@@ -1725,7 +1725,7 @@
+@@ -1917,7 +1917,7 @@
  			break;
  
  		default:
--			debug("Unknown FS request 0x%02X !\n", fsreq->reqType);
-+			debug1("Unknown FS request 0x%02X !\n", fsreq->reqType);
- 			{
- 			fsRequestError reply;
- 			reply.type = FS_Error;
+-			debug("Unknown FS request 0x%02X !\n", client.req.reqType);
++			debug1("Unknown FS request 0x%02X !\n", client.req.reqType);
+ 			fs_client_error(client, FSBadRequest);
+ 			break;
+ 		}
