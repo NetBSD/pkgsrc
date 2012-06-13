@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:01 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2012/06/13 14:45:19 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quagga
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -7,9 +7,6 @@ PKG_SUPPORTED_OPTIONS+=	quagga-vtysh
 PKG_SUGGESTED_OPTIONS=	inet6
 PKG_SUGGESTED_OPTIONS+=	quagga-ospf-opaque-lsa
 PKG_SUGGESTED_OPTIONS+=	quagga-vtysh
-
-PKG_OPTIONS_LEGACY_VARS+=	USE_ZEBRA_OSPF_OPAQUELSA:quagga-ospf-opaque-lsa
-PKG_OPTIONS_LEGACY_VARS+=	USE_ZEBRA_VTYSH:quagga-vtysh
 
 .include "../../mk/bsd.options.mk"
 
