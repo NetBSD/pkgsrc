@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2012/01/09 14:53:31 drochner Exp $
+# $NetBSD: options.mk,v 1.9 2012/06/13 11:33:30 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 PKG_SUPPORTED_OPTIONS=	charset gnutls python lua wide-curses perl ruby
-PKG_SUGGESTED_OPTIONS=	charset
+PKG_SUGGESTED_OPTIONS=	charset gnutls
 
 .include "../../mk/bsd.options.mk"
 
