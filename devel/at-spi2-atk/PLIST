@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/10 17:28:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/13 11:49:37 prlw1 Exp $
 lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
-lib/gtk-2.0/modules/libatk-bridge.la
 lib/gtk-3.0/modules/libatk-bridge.la
 share/glib-2.0/schemas/org.a11y.atspi.gschema.xml
 share/locale/an/LC_MESSAGES/at-spi2-atk.mo
@@ -37,10 +36,12 @@ share/locale/hu/LC_MESSAGES/at-spi2-atk.mo
 share/locale/id/LC_MESSAGES/at-spi2-atk.mo
 share/locale/it/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ja/LC_MESSAGES/at-spi2-atk.mo
+share/locale/km/LC_MESSAGES/at-spi2-atk.mo
 share/locale/kn/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ko/LC_MESSAGES/at-spi2-atk.mo
 share/locale/lt/LC_MESSAGES/at-spi2-atk.mo
 share/locale/lv/LC_MESSAGES/at-spi2-atk.mo
+share/locale/ml/LC_MESSAGES/at-spi2-atk.mo
 share/locale/mr/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ms/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nb/LC_MESSAGES/at-spi2-atk.mo
@@ -65,6 +66,7 @@ share/locale/th/LC_MESSAGES/at-spi2-atk.mo
 share/locale/tr/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ug/LC_MESSAGES/at-spi2-atk.mo
 share/locale/uk/LC_MESSAGES/at-spi2-atk.mo
+share/locale/uz@cyrillic/LC_MESSAGES/at-spi2-atk.mo
 share/locale/vi/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-atk.mo
