@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2012/06/13 07:18:19 obache Exp $
+# $NetBSD: Makefile,v 1.87 2012/06/13 12:38:35 obache Exp $
 
 DISTNAME=	netatalk-2.2.1
 PKGREVISION=	5
@@ -79,6 +79,7 @@ PLIST_VARS+=		acl
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX" || ${OPSYS} == "IRIX" || \
 	${OPSYS} == "AIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "Linux"
 PLIST.acl=		yes
+CONF_FILES+=	${EGDIR}/afp_ldap.conf ${PKG_SYSCONFDIR}/afp_ldap.conf
 .endif
 
 .include "options.mk"
