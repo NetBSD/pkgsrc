@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/18 02:45:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/06/13 14:41:03 taca Exp $
 bin/kramdown
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -41,6 +41,7 @@ ${GEM_LIBDIR}/lib/kramdown/converter/base.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/html.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/kramdown.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/latex.rb
+${GEM_LIBDIR}/lib/kramdown/converter/remove_html_tags.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/toc.rb
 ${GEM_LIBDIR}/lib/kramdown/document.rb
 ${GEM_LIBDIR}/lib/kramdown/element.rb
@@ -131,6 +132,9 @@ ${GEM_LIBDIR}/test/testcases/block/05_blockquote/with_code_blocks.html
 ${GEM_LIBDIR}/test/testcases/block/05_blockquote/with_code_blocks.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/error.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/error.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/lazy.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/lazy.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/no_newline_at_end.html
@@ -311,11 +315,13 @@ ${GEM_LIBDIR}/test/testcases/block/14_table/table_with_footnote.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.text
 ${GEM_LIBDIR}/test/testcases/block/16_toc/no_toc.html
-${GEM_LIBDIR}/test/testcases/block/16_toc/no_toc.options
 ${GEM_LIBDIR}/test/testcases/block/16_toc/no_toc.text
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.html
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.options
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.text
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.html
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.options
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.text
 ${GEM_LIBDIR}/test/testcases/encoding.html
 ${GEM_LIBDIR}/test/testcases/encoding.text
 ${GEM_LIBDIR}/test/testcases/span/01_link/empty.html
