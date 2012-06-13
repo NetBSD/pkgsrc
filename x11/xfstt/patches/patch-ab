@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2004/01/01 20:06:11 salo Exp $
+$NetBSD: patch-ab,v 1.5 2012/06/13 08:15:14 mef Exp $
+
+Remove unnecessary comment.
 
 --- doc/examples/font.properties.orig	2003-04-07 05:59:16.000000000 +0200
 +++ doc/examples/font.properties	2004-01-01 20:46:52.000000000 +0100

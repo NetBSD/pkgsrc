@@ -1,4 +1,7 @@
-$NetBSD: patch-ap,v 1.1 2004/02/14 22:27:30 kristerw Exp $
+$NetBSD: patch-ap,v 1.2 2012/06/13 08:15:15 mef Exp $
+
+Convert varargs-macros to old-style macros, to make the package
+compile when using gcc 2.95.
 
 --- libfstt/table_hdmx.cc.orig	Sat Feb 14 22:56:47 2004
 +++ libfstt/table_hdmx.cc	Sat Feb 14 22:57:11 2004

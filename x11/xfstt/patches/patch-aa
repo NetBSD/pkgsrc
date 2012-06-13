@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2004/01/25 20:46:19 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2012/06/13 08:15:14 mef Exp $
+
+Convert hardcoded PATH to @PREFIX@
 
 --- doc/FAQ.orig	2003-08-07 08:59:03.000000000 +0200
 +++ doc/FAQ	2004-01-01 20:44:46.000000000 +0100

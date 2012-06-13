@@ -1,8 +1,11 @@
-$NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
+$NetBSD: patch-aj,v 1.2 2012/06/13 08:15:14 mef Exp $
 
---- libfstt/raster_scale.cc.orig	Sat Feb 14 22:41:45 2004
-+++ libfstt/raster_scale.cc	Sat Feb 14 22:48:38 2004
-@@ -102,8 +102,8 @@
+Convert varargs-macros to old-style macros, to make the package
+compile when using gcc 2.95.
+
+--- libfstt/raster_scale.cc.orig	2010-10-04 23:22:48.000000000 +0900
++++ libfstt/raster_scale.cc	2011-10-17 12:43:12.000000000 +0900
+@@ -103,8 +103,8 @@
  void
  Rasterizer::setPointSize(int _xx, int _xy, int _yx, int _yy, int xres, int yres)
  {
@@ -13,7 +16,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	if (!(_xx | _xy) || !(_yx | _yy))
  		_xx = _yy = 12;
-@@ -135,9 +135,9 @@
+@@ -136,9 +136,9 @@
  		xx >>= 1; xy >>= 1;
  		yx >>= 1; yy >>= 1;
  	}
@@ -26,7 +29,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	if (ttFont)
  		applyTransformation();
-@@ -153,7 +153,7 @@
+@@ -154,7 +154,7 @@
  Rasterizer::applyTransformation()
  {
  	int emUnits = ttFont->getEmUnits();
@@ -35,7 +38,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	for (; emUnits > 2048 && xxexp > 0; --xxexp)
  		emUnits >>= 1;
-@@ -168,11 +168,11 @@
+@@ -169,11 +169,11 @@
  
  	mppem = (mppemx + mppemy) >> 1;
  
@@ -51,17 +54,17 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	if (grid_fitting)
  		calcCVT();
-@@ -265,7 +265,7 @@
- int
- Rasterizer::putChar8Bitmap(char c, U8 *bmp, U8 *endbmp, GlyphMetrics *gm)
+@@ -267,7 +267,7 @@
+ Rasterizer::putChar8Bitmap(char c, uint8_t *bmp, uint8_t *endbmp,
+                            GlyphMetrics *gm)
  {
 -	debug("charNo8 = %d", c);
 +	debug1("charNo8 = %d", c);
  	int glyphNo = ttFont->getGlyphNo8(c);
  	return putGlyphBitmap(glyphNo, bmp, endbmp, gm);
  }
-@@ -275,7 +275,7 @@
- Rasterizer::putChar16Bitmap(int c, U8 *bmp, U8 *endbmp, GlyphMetrics *gm)
+@@ -278,7 +278,7 @@
+                             GlyphMetrics *gm)
  {
  	int glyphNo = ttFont->getGlyphNo16(c);
 -	debug("charNo16 = %d", c);
@@ -69,16 +72,16 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	return putGlyphBitmap(glyphNo, bmp, endbmp, gm);
  }
  
-@@ -283,7 +283,7 @@
- int
- Rasterizer::putGlyphBitmap(int glyphNo, U8 *bmp, U8 *endbmp, GlyphMetrics *gm)
+@@ -287,7 +287,7 @@
+ Rasterizer::putGlyphBitmap(int glyphNo, uint8_t *bmp, uint8_t *endbmp,
+                            GlyphMetrics *gm)
  {
 -	debug("\n=============== glyphNo %d ==================\n", glyphNo);
 +	debug1("\n=============== glyphNo %d ==================\n", glyphNo);
  
  	GlyphTable *g = ttFont->glyphTable;
  	g->setupGlyph(ttFont->points, ttFont->endPoints);
-@@ -374,8 +374,8 @@
+@@ -378,8 +378,8 @@
  			gm->xAdvance = hdmx;
  	}
  
@@ -89,7 +92,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	drawGlyph(bmp, endbmp);
  
-@@ -400,7 +400,7 @@
+@@ -404,7 +404,7 @@
  	int val = xmin - lsb;
  	pp->xold = scaleX(val, 0);
  	pp->yold = scaleY(0, val);
@@ -98,7 +101,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  	pp->xnow = (pp->xold + 32) & -64;
  	pp->ynow = (pp->yold + 32) & -64;
  #if 0
-@@ -408,7 +408,7 @@
+@@ -412,7 +412,7 @@
  	val = pp->xnow = pp->ynow = 0;
  	pp->xold = pp->yold = 0;
  #endif
@@ -107,9 +110,9 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
  
  	// prepare phantom point 1
  	val += advanceWidth;
-@@ -456,12 +456,12 @@
+@@ -457,12 +457,12 @@
  	debug("\n=== grid fitted outline ===\n");
- 	point *pp = p[1];
+ 	Point *pp = p[1];
  	for (int i = 0, j = 0; i < nPoints[1] + 2; ++i, ++pp) {
 -		debug("p[%d]\t%6d %6d  ", i, pp->xold, pp->yold);
 -		debug("-> %6d %6d", pp->xnow, pp->ynow);
@@ -122,5 +125,5 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 22:27:30 kristerw Exp $
 -		debug(" %c", (pp->flags & ON_CURVE) ? '*' : ' ');
 +		debug1(" %c", (pp->flags & ON_CURVE) ? '*' : ' ');
  
- #ifdef WIN32
- 		debug("  (%6d %6d)", pp->xgoal, pp->ygoal);
+ 		debug("\n");
+ 		if (i == endPoints[j]) {
