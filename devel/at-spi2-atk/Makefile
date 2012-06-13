@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/03/03 00:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/13 11:49:37 prlw1 Exp $
 #
 
-DISTNAME=	at-spi2-atk-2.3.5
-PKGREVISION=	1
+DISTNAME=	at-spi2-atk-2.5.2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-atk/2.3/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-atk/2.5/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
@@ -18,8 +17,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=     gmake intltool msgfmt pkg-config
 USE_LIBTOOL=	yes
 USE_PKGLOCALEDIR=	yes
-
-CONFLICTS=	at-spi-[0-9]*
 
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.1.5
 .include "../../devel/atk/buildlink3.mk"
