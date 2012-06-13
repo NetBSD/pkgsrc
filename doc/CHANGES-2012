@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1957 2012/06/13 15:21:24 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1958 2012/06/13 15:37:26 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3005,3 +3005,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/ruby-actionmailer32 to 3.2.6 [taca 2012-06-13]
 	Updated devel/ruby-railties32 to 3.2.6 [taca 2012-06-13]
 	Updated www/ruby-rails32 to 3.2.6 [taca 2012-06-13]
+	Updated pkgtools/pkg_alternatives to 1.6 [jperkin 2012-06-13]
