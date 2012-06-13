@@ -1,6 +1,6 @@
 #!__SH__
 #
-# $NetBSD: wrapper.sh,v 1.1.1.1 2005/01/25 13:00:46 jmmv Exp $
+# $NetBSD: wrapper.sh,v 1.2 2012/06/13 15:35:32 jperkin Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -39,19 +39,19 @@ if [ ! -f __DB_FILE__ ]; then
     exit 1
 fi
 
-if [ $(id -un) = __ROOT_USER__ ]; then
+if [ $(__ID__ -un) = __ROOT_USER__ ]; then
     userfile=
 else
     userfile=~/.pkg_alternatives/${wrapper}
 fi
 alternatives=$(cat ${userfile} __CONF_FILE__ __DB_FILE__ 2>/dev/null | \
-               grep -v "^#" | tr ' ' '¬')
+               grep -v "^#" | sed -e 's# #__dE/lImIt/Er__#g')
 
 found=
 for a in ${alternatives}; do
-    prog=$(echo ${a} | cut -d '¬' -f 1)
+    prog=${a%%__dE/lImIt/Er__*}
     if [ -x ${prog} ]; then
-        found=$(echo ${a} | tr '¬' ' ')
+        found=$(echo ${a} | sed -e 's#__dE/lImIt/Er__# #g')
 	break
     fi
 done
