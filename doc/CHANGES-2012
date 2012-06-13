@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1956 2012/06/13 14:45:32 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1957 2012/06/13 15:21:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2997,3 +2997,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-nokogiri to 1.5.4 [taca 2012-06-13]
 	Updated textproc/ruby-rdtool to 0.6.37 [taca 2012-06-13]
 	Updated www/ruby-net-http-persistent to 2.7 [taca 2012-06-13]
+	Updated devel/ruby-activesupport32 to 3.2.6 [taca 2012-06-13]
+	Updated devel/ruby-activemodel32 to 3.2.6 [taca 2012-06-13]
+	Updated www/ruby-actionpack32 to 3.2.6 [taca 2012-06-13]
+	Updated databases/ruby-activerecord32 to 3.2.6 [taca 2012-06-13]
+	Updated www/ruby-activeresource32 to 3.2.6 [taca 2012-06-13]
+	Updated mail/ruby-actionmailer32 to 3.2.6 [taca 2012-06-13]
+	Updated devel/ruby-railties32 to 3.2.6 [taca 2012-06-13]
+	Updated www/ruby-rails32 to 3.2.6 [taca 2012-06-13]
