@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2012/06/02 01:13:40 taca Exp $
+# $NetBSD: Makefile,v 1.33 2012/06/13 14:43:24 taca Exp $
 
-DISTNAME=	rdtool-0.6.34
+DISTNAME=	rdtool-0.6.37
 CATEGORIES=	textproc ruby
 
 MAINTAINER=	taca@NetBSD.org
