@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/02/19 20:40:23 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/13 15:28:23 jperkin Exp $
 #
 
 DISTNAME=	pkg_alternatives-1.5
@@ -30,7 +30,7 @@ CONF_FILES=		${EGDIR}/filter.conf ${PKG_SYSCONFDIR}/filter.conf
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
 SUBST_MESSAGE.vars=	Configuring sources.
-SUBST_FILES.vars=	*
+SUBST_FILES.vars=	pkg_alternatives.8 pkg_alternatives.sh
 SUBST_SED.vars=		-e 's|@CONFDIR@|${PKG_SYSCONFDIR}|g'
 SUBST_SED.vars+=	-e 's|@DATADIR@|${DATADIR}|g'
 SUBST_SED.vars+=	-e 's|@DBDIR@|${DBDIR}|g'
