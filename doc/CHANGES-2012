@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1951 2012/06/13 11:34:09 abs Exp $
+$NetBSD: CHANGES-2012,v 1.1952 2012/06/13 11:50:03 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated parallel/openmpi to 1.6 [asau 2012-06-12]
 	Updated x11/xfstt to 1.9 [mef 2012-06-13]
 	Updated chat/weechat to 0.3.8 [abs 2012-06-13]
+	Updated devel/at-spi2-atk to 2.5.2 [prlw1 2012-06-13]
