@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1949 2012/06/12 23:37:05 asau Exp $
+$NetBSD: CHANGES-2012,v 1.1950 2012/06/13 08:29:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2988,3 +2988,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird to 13.0 [ryoon 2012-06-12]
 	Updated mail/thunderbird-l10n to 13.0 [ryoon 2012-06-12]
 	Updated parallel/openmpi to 1.6 [asau 2012-06-12]
+	Updated x11/xfstt to 1.9 [mef 2012-06-13]
