@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkg_alternatives.sh,v 1.6 2007/01/15 02:50:06 rillig Exp $
+# $NetBSD: pkg_alternatives.sh,v 1.7 2012/06/13 15:35:32 jperkin Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -56,9 +56,9 @@ action_auto_package() {
     validate_package ${1}
     pkg=${PKG_DBDIR}/${1}*/+ALTERNATIVES
 
-    set -- $(cat ${pkg} | tr ' ' '¬')
+    set -- $(cat ${pkg} | sed -e 's# #__dE/lImIt/Er__#g')
     while [ ${#} -gt 0 ]; do
-        action_auto_wrapper $(echo ${1} | cut -d '¬' -f 1)
+        action_auto_wrapper ${1%%__dE/lImIt/Er__*}
         shift
     done
 }
@@ -161,9 +161,9 @@ action_manual_package() {
     validate_package ${1}
     pkg=${PKG_DBDIR}/${1}*/+ALTERNATIVES
 
-    set -- $(cat ${pkg} | tr ' ' '¬')
+    set -- $(cat ${pkg} | sed -e 's# #__dE/lImIt/Er__#g')
     while [ ${#} -gt 0 ]; do
-        action_manual_wrapper $(echo ${1} | tr '¬' ' ')
+        action_manual_wrapper $(echo ${1} | sed -e 's#__dE/lImIt/Er__# #g')
         shift
     done
 }
@@ -231,9 +231,9 @@ action_rebuild_wrapper() {
 action_register_package() {
     validate_args register ${#} -eq 1
 
-    set -- $(cat ${1} | tr ' ' '¬')
+    set -- $(cat ${1} | sed -e 's# #__dE/lImIt/Er__#g')
     while [ ${#} -gt 0 ]; do
-        action_register_wrapper $(echo ${1} | tr '¬' ' ')
+        action_register_wrapper $(echo ${1} | sed -e 's#__dE/lImIt/Er__# #g')
         shift
     done
 }
@@ -276,7 +276,8 @@ action_register_wrapper() {
     if [ ! -f ${wabs} ]; then
         info "creating wrapper \`${wbase}'"
         mkdir_p ${wabs%/*}
-        sed -e "s|__SH__|@SH@|g" \
+        sed -e "s|__ID__|@ID@|g" \
+            -e "s|__SH__|@SH@|g" \
             -e "s|__CONF_FILE__|${sysconf}|g" \
             -e "s|__CREATOR__|${Prog_Name}|g" \
             -e "s|__DB_FILE__|${dbconf}|g" \
@@ -308,9 +309,9 @@ action_status_package() {
     validate_package ${1}
     pkg=${PKG_DBDIR}/${1}*/+ALTERNATIVES
 
-    set -- $(cat ${pkg} | tr ' ' '¬')
+    set -- $(cat ${pkg} | sed -e 's# #__dE/lImIt/Er__#g')
     while [ ${#} -gt 0 ]; do
-        action_status_wrapper $(echo ${1} | cut -d '¬' -f 1)
+        action_status_wrapper ${1%%__dE/lImIt/Er__*}
         shift
     done
 }
@@ -330,15 +331,15 @@ action_status_wrapper() {
     sysconf=${Conf_Dir}/${wbase}
     userconf=~/.pkg_alternatives${Prefix}/${wbase}
 
-    [ $(id -un) = @ROOT_USER@ ] && userconf=
+    [ $(@ID@ -un) = @ROOT_USER@ ] && userconf=
     alts=$(cat ${userconf} ${sysconf} ${dbconf} 2>/dev/null | grep -v '^#' | \
-           tr ' ' '¬')
+           sed -e 's# #__dE/lImIt/Er__#g')
 
     found=
     for a in ${alts}; do
-        prog=$(echo ${a} | cut -d '¬' -f 1)
+        prog=${a%%__dE/lImIt/Er__*}
         if [ -x ${prog} ]; then
-            found=$(echo ${a} | tr '¬' ' ')
+            found=$(echo ${a} | sed -e 's#__dE/lImIt/Er__# #g')
             break
         fi
     done
@@ -348,7 +349,7 @@ action_status_wrapper() {
 
     echo "\`${wbase}' points to \`${found}'"
     for a in $(echo ${alts} | tr ' ' '\n' | sort | uniq); do
-        echo "    candidate: $(echo ${a} | tr '¬' ' ')"
+        echo "    candidate: $(echo ${a} | sed -e 's#__dE/lImIt/Er__# #g')"
     done
 }
 
@@ -362,9 +363,9 @@ action_status_wrapper() {
 action_unregister_package() {
     validate_args unregister ${#} -eq 1
 
-    set -- $(cat ${1} | tr ' ' '¬')
+    set -- $(cat ${1} | sed -e 's# #__dE/lImIt/Er__#g')
     while [ ${#} -gt 0 ]; do
-        action_unregister_wrapper $(echo ${1} | tr '¬' ' ')
+        action_unregister_wrapper $(echo ${1} | sed -e 's#__dE/lImIt/Er__# #g')
         shift
     done
 }
@@ -431,24 +432,24 @@ filter() {
     [ ! -f @CONFDIR@/filter.conf ] && return 0
 
     if [ ${Filter_Read} = no ]; then
-        Filter=$(cat @CONFDIR@/filter.conf | grep -v '^#' | tr ' ' '¬')
+        Filter=$(cat @CONFDIR@/filter.conf | grep -v '^#' | sed -e 's# #__dE/lImIt/Er__#g')
         Filter_Read=yes
     fi
 
     [ -z "${Filter}" ] && return 0
 
     for f in ${Filter}; do
-        what=$(echo ${f} | cut -d '¬' -f 1)
+        what=${f%%__dE/lImIt/Er__*}
         case ${what} in
             accept)
-                name=$(echo ${f} | cut -d '¬' -f 2- | tr '¬' ' ')
+                name=$(echo ${f#*__dE/lImIt/Er__} | sed -e 's#__dE/lImIt/Er__# #g')
                 if echo ${1} | grep "${name}" >/dev/null; then
                     info "filter accepts \`${1}'"
                     return 0
                 fi
                 ;;
             ignore)
-                name=$(echo ${f} | cut -d '¬' -f 2- | tr '¬' ' ')
+                name=$(echo ${f#*__dE/lImIt/Er__} | sed -e 's#__dE/lImIt/Er__# #g')
                 if echo ${1} | grep "${name}" >/dev/null; then
                     info "filter ignores \`${1}'"
                     return 1
@@ -472,7 +473,7 @@ filter() {
 # personal directory.
 #
 get_my_config() {
-    if [ $(id -un) = @ROOT_USER@ ]; then
+    if [ $(@ID@ -un) = @ROOT_USER@ ]; then
         echo ${Conf_Dir}
     else
         echo ~/.pkg_alternatives${Prefix}
