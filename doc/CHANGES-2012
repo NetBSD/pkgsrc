@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1959 2012/06/13 23:28:04 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.1960 2012/06/13 23:39:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3007,3 +3007,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rails32 to 3.2.6 [taca 2012-06-13]
 	Updated pkgtools/pkg_alternatives to 1.6 [jperkin 2012-06-13]
 	Updated print/gutenprint-lib to 5.2.8 [gdt 2012-06-13]
+	Updated emulators/suse121_libxml2 to 12.1nb2 [obache 2012-06-13]
