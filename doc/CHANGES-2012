@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1955 2012/06/13 14:41:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1956 2012/06/13 14:45:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2994,3 +2994,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/pear-Mail_Mime to 1.8.5 [taca 2012-06-13]
 	Updated devel/ruby-test-unit to 2.5.0 [taca 2012-06-13]
 	Updated textproc/ruby-kramdown to 0.13.7 [taca 2012-06-13]
+	Updated textproc/ruby-nokogiri to 1.5.4 [taca 2012-06-13]
+	Updated textproc/ruby-rdtool to 0.6.37 [taca 2012-06-13]
+	Updated www/ruby-net-http-persistent to 2.7 [taca 2012-06-13]
