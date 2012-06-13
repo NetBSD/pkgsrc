@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/06/13 15:28:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2012/06/13 15:35:32 jperkin Exp $
 #
 
-DISTNAME=	pkg_alternatives-1.5
+DISTNAME=	pkg_alternatives-1.6
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -38,6 +38,7 @@ SUBST_SED.vars+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
 SUBST_SED.vars+=	-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'
 SUBST_SED.vars+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.vars+=	-e 's|@ROOT_USER@|${REAL_ROOT_USER}|g'
+SUBST_SED.vars+=	-e 's|@ID@|${ID}|g'
 SUBST_SED.vars+=	-e 's|@SH@|${SH}|g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
