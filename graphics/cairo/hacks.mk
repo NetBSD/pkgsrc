@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2012/06/11 12:48:44 obache Exp $
+# $NetBSD: hacks.mk,v 1.5 2012/06/14 19:53:07 bsiegert Exp $
 
 .if !defined(CAIRO_HACKS_MK)
 CAIRO_HACKS_MK=	defined
@@ -13,6 +13,11 @@ _BAD_GCC_BUILD!=	${CC} --version | (${GREP} -c 'i686-apple-darwin11-llvm-gcc-4\.
 PKG_HACKS+=	llvm-link
 CONFIGURE_ENV+=	ac_cv_prog_CC=gcc-4.2
 .  endif
+.endif
+
+# Workaround so that pthread is found on MirBSD
+.if ${OPSYS} == "MirBSD"
+PTHREAD_CFLAGS=-fhonour-copts
 .endif
 
 #
