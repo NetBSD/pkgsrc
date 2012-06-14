@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/05/07 01:53:49 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2012/06/14 07:43:09 sbd Exp $
 
 BUILDLINK_TREE+=	libassetml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libassetml
 LIBASSETML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libassetml+=	libassetml>=1.2.1
-BUILDLINK_ABI_DEPENDS.libassetml+=	libassetml>=1.2.1nb4
+BUILDLINK_ABI_DEPENDS.libassetml+=	libassetml>=1.2.1nb5
 BUILDLINK_PKGSRCDIR.libassetml?=	../../multimedia/libassetml
 
 .include "../../devel/glib2/buildlink3.mk"
