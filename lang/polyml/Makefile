@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/03/22 20:48:43 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/14 22:23:36 sbd Exp $
 
 DISTNAME=	polyml.5.4.1
 PKGNAME=	polyml-5.4.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=polyml/}
 
@@ -22,4 +23,5 @@ TEST_TARGET=	tests
 .include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
