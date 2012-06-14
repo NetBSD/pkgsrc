@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/11/20 05:40:27 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/06/14 08:26:14 asau Exp $
 
 DISTNAME=	cln-1.3.2
 PKGREVISION=	1
@@ -20,6 +20,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	cln.pc.in
 INFO_FILES=		yes
+TEST_TARGET=		check
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
