@@ -1,8 +1,16 @@
-$NetBSD: patch-mm,v 1.7 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mm,v 1.8 2012/06/14 11:27:34 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2012-04-23 06:28:23.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2012-06-05 05:54:26.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -549,6 +549,24 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -119,6 +119,7 @@ STATIC_LIBS += ipdlunittest_s
+ endif
+ 
+ ifeq (Linux,$(OS_ARCH))
++EXTRA_DSO_LDOPTS += -lnssutil3
+ ifneq (Android,$(OS_TARGET))
+ OS_LIBS += -lrt
+ endif
+@@ -520,6 +521,24 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
  endif
  
@@ -25,5 +33,5 @@ $NetBSD: patch-mm,v 1.7 2012/04/28 22:48:06 ryoon Exp $
 +endif
 +
  ifeq ($(OS_ARCH),WINNT)
- OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32 shlwapi psapi ws2_32 dbghelp rasapi32 rasdlg)
- ifneq (,$(MOZ_DEBUG)$(NS_TRACE_MALLOC))
+ OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 version winspool comdlg32 imm32 msimg32 shlwapi psapi ws2_32 dbghelp rasapi32 rasdlg iphlpapi uxtheme setupapi t2embed secur32)
+ ifdef MOZ_CRASHREPORTER
