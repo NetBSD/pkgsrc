@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2012/03/03 00:12:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2012/06/14 07:43:34 sbd Exp $
 
 BUILDLINK_TREE+=	wv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wv
 WV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wv+=	wv>=1.0.0
-BUILDLINK_ABI_DEPENDS.wv+=	wv>=1.2.9nb5
+BUILDLINK_ABI_DEPENDS.wv+=	wv>=1.2.9nb6
 BUILDLINK_PKGSRCDIR.wv?=	../../converters/wv
 
 .include "../../converters/libiconv/buildlink3.mk"
