@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/04/22 13:43:31 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/06/14 09:59:12 jperkin Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -18,6 +18,14 @@ MAKE_ENV+=	VERSION=${PKGVERSION:Q}
 USE_TOOLS+=	gmake gtar pax
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
+
+.include "../../mk/bsd.prefs.mk"
+
+# Native Solaris pax cannot handle cpio archives produced by rpm2cpio.pl, cpio
+# can but it is not a tool.
+.if ${OPSYS} == "SunOS"
+TOOLS_PLATFORM.pax=
+.endif
 
 # Might as well make this a general scheme for .src.rpm files... - HF
 do-extract:
