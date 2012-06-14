@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1967 2012/06/14 12:58:23 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.1968 2012/06/14 12:58:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3016,3 +3016,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit to 1.7.10.4 [gdt 2012-06-14]
 	Updated devel/scmgit-base to 1.7.10.4 [gdt 2012-06-14]
 	Updated devel/scmgit-docs to 1.7.10.4 [gdt 2012-06-14]
+	Updated www/gitweb to 1.7.10.4 [gdt 2012-06-14]
