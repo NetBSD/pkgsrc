@@ -1,11 +1,11 @@
-$NetBSD: patch-ay,v 1.5 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-ay,v 1.6 2012/06/14 11:27:34 ryoon Exp $
 
---- mozilla/browser/app/nsBrowserApp.cpp.orig	2012-04-23 06:27:23.000000000 +0000
+--- mozilla/browser/app/nsBrowserApp.cpp.orig	2012-06-05 05:54:06.000000000 +0000
 +++ mozilla/browser/app/nsBrowserApp.cpp
-@@ -53,6 +53,30 @@
- #include <stdio.h>
- #include <stdarg.h>
- #include <string.h>
+@@ -47,6 +47,31 @@
+ #include <sys/resource.h>
+ #endif
+ 
 +#include <sys/resource.h>
 +
 +#ifdef __NetBSD__
@@ -30,10 +30,11 @@ $NetBSD: patch-ay,v 1.5 2012/04/28 22:48:06 ryoon Exp $
 +		fprintf(stderr, "warning: setrlimit failed\n");
 +}
 +#endif
- 
- #include "plstr.h"
- #include "prprf.h"
-@@ -215,6 +239,9 @@ int main(int argc, char* argv[])
++
+ #ifdef XP_MACOSX
+ #include "MacQuirks.h"
+ #endif
+@@ -197,6 +222,9 @@ int main(int argc, char* argv[])
  #ifdef XP_MACOSX
    TriggerQuirks();
  #endif
