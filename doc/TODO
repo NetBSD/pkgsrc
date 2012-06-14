@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11292 2012/06/14 15:42:01 wiz Exp $
+$NetBSD: TODO,v 1.11293 2012/06/14 15:51:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -623,6 +623,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gbdfed-1.6
 	o gcal-3.6.2
+	o gcc47-4.7.1
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
@@ -1270,6 +1271,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
+	o wordpress-3.4
 	o worker-2.19.2
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9h
