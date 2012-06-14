@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/06/14 09:59:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2012/06/14 11:17:24 obache Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -10,29 +10,15 @@ EXTRACT_SUFX=	-1.src.rpm
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line tool to manage X server's font path
 
-BUILD_DEPENDS+=	rpm2cpio>=1.1:../../converters/rpm2cpio
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	VERSION=${PKGVERSION:Q}
-USE_TOOLS+=	gmake gtar pax
+USE_TOOLS+=	gmake tar gzcat
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
-.include "../../mk/bsd.prefs.mk"
-
-# Native Solaris pax cannot handle cpio archives produced by rpm2cpio.pl, cpio
-# can but it is not a tool.
-.if ${OPSYS} == "SunOS"
-TOOLS_PLATFORM.pax=
-.endif
-
-# Might as well make this a general scheme for .src.rpm files... - HF
-do-extract:
-		cd ${WRKDIR} ; \
-		${PREFIX}/bin/rpm2cpio.pl ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
-		| pax -r ; \
-		${GTAR} zxf ${DISTNAME}.tar.gz
+post-extract:
+		${RUN}cd ${WRKDIR};${EXTRACTOR} ${DISTNAME}.tar.gz
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/chkfontpath ${DESTDIR}${PREFIX}/bin
