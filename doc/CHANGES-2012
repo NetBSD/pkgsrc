@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1962 2012/06/14 07:39:47 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1963 2012/06/14 11:29:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3011,3 +3011,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/sun-jre6 to 6.0.33 [obache 2012-06-13]
 	Updated lang/sun-jdk6 to 6.0.33 [obache 2012-06-13]
 	Updated textproc/libxml2 to 2.8.0nb2 [sbd 2012-06-14]
+	Updated www/seamonkey to 2.10 [ryoon 2012-06-14]
