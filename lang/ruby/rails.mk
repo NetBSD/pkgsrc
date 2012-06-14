@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.22 2012/06/14 15:03:14 taca Exp $
+# $NetBSD: rails.mk,v 1.23 2012/06/14 15:11:58 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -21,6 +21,12 @@ _RUBY_RAILS_MK=	# defined
 #	Possible values: 3 31 32
 #	Default: (empty)
 #
+# RUBY_RAILS_STRICT_DEP
+#	Strict dependency to Ruby on Rails component packages.
+#
+#	Possible value: yes no
+#	Default: no
+#
 # === Defined variables ===
 #
 # RUBY_RAILS
@@ -39,9 +45,10 @@ RUBY_RAILS32_VERSION?=	3.2.6
 RUBY_RAILS_SUPPORTED?=	# defined
 RUBY_RAILS_DEFAULT?=	3
 
+RUBY_RAILS_STRICT_DEP?=	no
+
 .if !empty(RUBY_RAILS_SUPPORTED) && ${RUBY_RAILS_SUPPORTED:[\#]} == 1
 RUBY_RAILS=			${RUBY_RAILS_SUPPORTED}
-_RUBY_RAILS_DEPENDS_EXACT=	yes
 .endif
 
 .if empty(RUBY_RAILS)
@@ -74,14 +81,18 @@ RUBY_RAILS_VERSION:=	${RUBY_RAILS32_VERSION}
 .endif
 
 #
-# If _RUBY_RAILS_DEPENDS_EXACT is defined, match exact version.
-# Otherwise allow greater minor version.
+# Components of Ruby's version.
 #
 _RAILS_MAJOR=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 _RAILS_MINOR=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
 _RAILS_TEENY=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
 
-.if !empty(_RUBY_RAILS_DEPENDS_EXACT)
+#
+# If RUBY_RAILS_STRICT_DEP is defined, match exact current Ruby no Rails
+# version.
+# Otherwise allow greater minor version.
+
+.if !empty(RUBY_RAILS_STRICT_DEP:M[yY][eE][sS])
 _RAILS_NEXT!=	${EXPR} ${_RAILS_TEENY} + 1
 _RAILS_DEP=	\
 	>=${RUBY_RAILS_VERSION}<${_RAILS_MAJOR}.${_RAILS_MINOR}.${_RAILS_NEXT}
