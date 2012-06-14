@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/06/14 11:17:24 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/06/14 11:18:03 obache Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	-1.src.rpm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line tool to manage X server's font path
+LICENSE=	gnu-gpl-v2 # or later
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
