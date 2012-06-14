@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2012/03/03 00:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2012/06/14 07:44:32 sbd Exp $
 #
 
 DISTNAME=	xlog-2.0.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	ham
 MASTER_SITES=	http://download.savannah.gnu.org/releases/xlog/
 

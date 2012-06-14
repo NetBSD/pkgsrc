@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2012/05/07 01:53:48 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/06/14 07:43:39 sbd Exp $
 
 BUILDLINK_TREE+=	gst-plugins0.10-bad
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins0.10-bad
 GST_PLUGINS0.10_BAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins0.10-bad+=	gst-plugins0.10-bad>=0.10.3
-BUILDLINK_ABI_DEPENDS.gst-plugins0.10-bad+=	gst-plugins0.10-bad>=0.10.23nb1
+BUILDLINK_ABI_DEPENDS.gst-plugins0.10-bad+=	gst-plugins0.10-bad>=0.10.23nb2
 BUILDLINK_PKGSRCDIR.gst-plugins0.10-bad?= ../../multimedia/gst-plugins0.10-bad
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"

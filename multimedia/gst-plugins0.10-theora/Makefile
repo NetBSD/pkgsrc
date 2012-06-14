@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/05/18 09:49:02 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/14 07:45:17 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	theora
 GST_PLUGINS0.10_DIRS=	ext/theora
 GST_PLUGINS0.10_FLAGS=	theora
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

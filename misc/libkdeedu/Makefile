@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/03/20 08:55:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/14 07:43:34 sbd Exp $
 
 DISTNAME=	libkdeedu-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Common library for KDE educational apps
 

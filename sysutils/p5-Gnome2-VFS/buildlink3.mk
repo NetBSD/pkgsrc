@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:54:00 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2012/06/14 07:43:36 sbd Exp $
 
 BUILDLINK_TREE+=	p5-Gnome2-VFS
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-Gnome2-VFS
 P5_GNOME2_VFS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-Gnome2-VFS+=	p5-Gnome2-VFS>=1.081
-BUILDLINK_ABI_DEPENDS.p5-Gnome2-VFS+=	p5-Gnome2-VFS>=1.081nb10
+BUILDLINK_ABI_DEPENDS.p5-Gnome2-VFS+=	p5-Gnome2-VFS>=1.081nb11
 BUILDLINK_PKGSRCDIR.p5-Gnome2-VFS?=	../../sysutils/p5-Gnome2-VFS
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"

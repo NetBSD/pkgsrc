@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/10/12 19:46:42 hans Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/14 07:45:37 sbd Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-dblink-/}
+PKGREVISION=	1
 COMMENT=	dblink module for remote database connections
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 22:55:06 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/14 07:44:09 sbd Exp $
 
 DISTNAME=		kile-2.0.2
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 EXTRACT_SUFX=		.tar.bz2

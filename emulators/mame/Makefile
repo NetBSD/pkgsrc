@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/06/01 19:42:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/14 07:45:15 sbd Exp $
 #
 
 DISTNAME=		mame0146s
 PKGNAME=		${DISTNAME:S/0/-0./:S/s$//}
+PKGREVISION=		1
 MASTER_SITES=		http://mamedev.org/downloader.php?file=releases/
 
 COMMENT=		Multiple Arcade Machine Emulator

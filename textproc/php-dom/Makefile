@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:44:51 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/14 07:45:20 sbd Exp $
 
 MODNAME=		dom
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES+=		textproc
 COMMENT=		PHP5 extension for DOM support
 

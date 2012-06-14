@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/26 09:26:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/14 07:44:29 sbd Exp $
 
 DISTNAME=	kgpg-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	security
 COMMENT=	KDE encryption tool
 

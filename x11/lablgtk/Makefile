@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2012/04/27 12:32:08 obache Exp $
+# $NetBSD: Makefile,v 1.60 2012/06/14 07:43:28 sbd Exp $
 #
 
 DISTNAME=	lablgtk-2.14.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 

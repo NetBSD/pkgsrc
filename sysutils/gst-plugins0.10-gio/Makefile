@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:13:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/14 07:45:16 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	gio
 GST_PLUGINS0.10_DIRS=	ext/gio
 GST_PLUGINS0.10_FLAGS=	gio experimental
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
