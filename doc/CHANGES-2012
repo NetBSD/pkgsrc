@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1977 2012/06/14 22:30:28 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1978 2012/06/14 22:37:43 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/kdepimlibs4 to 4.8.2nb2 [sbd 2012-06-14]
 	Updated lang/polyml to 5.4.1nb1 [sbd 2012-06-14]
 	Updated sysutils/coreutils to 8.13nb3 [sbd 2012-06-14]
+	Updated emulators/aranym to 0.9.13nb2 [sbd 2012-06-14]
