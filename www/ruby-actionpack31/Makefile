@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/02 01:34:21 taca Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/14 14:54:45 taca Exp $
 
 DISTNAME=	actionpack-${RUBY_RAILS_VERSION}
 CATEGORIES=	www
@@ -21,6 +21,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sprockets>=2.0.4<2.1:../../misc/ruby-sprockets20
 DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0<2.8:../../www/ruby-erubis
 
 RUBY_RAILS_SUPPORTED=	31
+RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
