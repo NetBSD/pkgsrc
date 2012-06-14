@@ -1,34 +1,8 @@
-$NetBSD: patch-mk,v 1.6 2012/06/14 11:27:34 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_config_rules.mk,v 1.1 2012/06/14 11:27:34 ryoon Exp $
 
-Treat DragonFly like FreeBSD.
-
---- mozilla/config/rules.mk.orig	2012-06-05 05:54:07.000000000 +0000
-+++ mozilla/config/rules.mk
-@@ -588,6 +588,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
- endif
- endif
- 
-+ifeq ($(OS_ARCH),DragonFly)
-+ifdef IS_COMPONENT
-+EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
-+endif
-+endif
-+
- ifeq ($(OS_ARCH),NetBSD)
- ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
- ifeq ($(MODULE),layout)
-@@ -597,6 +603,10 @@ endif
- endif
- endif
- 
-+ifeq ($(OS_ARCH),NetBSD)
-+EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/xulrunner
-+endif
-+
- #
- # HP-UXBeOS specific section: for COMPONENTS only, add -Bsymbolic flag
- # which uses internal symbols first
-@@ -1479,7 +1489,7 @@ $(XPIDL_GEN_DIR)/%.h: %.idl $(XPIDL_DEPS
+--- mozilla/js/src/config/rules.mk.orig	2012-06-05 05:54:14.000000000 +0000
++++ mozilla/js/src/config/rules.mk
+@@ -1479,7 +1479,7 @@ $(XPIDL_GEN_DIR)/%.h: %.idl $(XPIDL_DEPS
  	$(PYTHON_PATH) \
  	  -I$(topsrcdir)/other-licenses/ply \
  	  -I$(topsrcdir)/xpcom/idl-parser \
@@ -37,7 +11,7 @@ Treat DragonFly like FreeBSD.
  	@if test -n "$(findstring $*.h, $(EXPORTS))"; \
  	  then echo "*** WARNING: file $*.h generated from $*.idl overrides $(srcdir)/$*.h"; else true; fi
  
-@@ -1492,7 +1502,7 @@ $(XPIDL_GEN_DIR)/%.xpt: %.idl $(XPIDL_DE
+@@ -1492,7 +1492,7 @@ $(XPIDL_GEN_DIR)/%.xpt: %.idl $(XPIDL_DE
  	  -I$(topsrcdir)/other-licenses/ply \
  	  -I$(topsrcdir)/xpcom/idl-parser \
  	  -I$(topsrcdir)/xpcom/typelib/xpt/tools \
