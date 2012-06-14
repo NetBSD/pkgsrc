@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/04/13 23:10:39 hans Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/14 07:45:25 sbd Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
 PKGNAME=        phraseanet-indexer-${VERS}
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 EXTRACT_ELEMENTS=	${DISTNAME}/bin/src/phraseanet_indexer

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2012/03/03 00:14:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/14 07:44:18 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	cairo
 GST_PLUGINS0.10_DIRS=	ext/cairo
 GST_PLUGINS0.10_FLAGS=	cairo
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
