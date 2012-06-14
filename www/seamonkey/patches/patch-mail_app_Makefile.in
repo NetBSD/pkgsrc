@@ -1,10 +1,10 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.2 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.3 2012/06/14 11:27:34 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2012-04-23 06:20:50.000000000 +0000
+--- mail/app/Makefile.in.orig	2012-06-05 05:50:26.000000000 +0000
 +++ mail/app/Makefile.in
-@@ -103,6 +103,10 @@ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
- TK_LIBS := -framework Cocoa $(TK_LIBS)
- endif
+@@ -96,6 +96,10 @@ LOCAL_INCLUDES += \
+ DEFINES += -DXPCOM_GLUE
+ STL_FLAGS=
  
 +ifeq ($(OS_ARCH),NetBSD)
 +LIBS += -lossaudio
