@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/06/02 01:02:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/06/14 15:16:07 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -84,6 +84,7 @@ ${GEM_LIBDIR}/lib/facter/util/plist.rb
 ${GEM_LIBDIR}/lib/facter/util/plist/generator.rb
 ${GEM_LIBDIR}/lib/facter/util/plist/parser.rb
 ${GEM_LIBDIR}/lib/facter/util/processor.rb
+${GEM_LIBDIR}/lib/facter/util/registry.rb
 ${GEM_LIBDIR}/lib/facter/util/resolution.rb
 ${GEM_LIBDIR}/lib/facter/util/uptime.rb
 ${GEM_LIBDIR}/lib/facter/util/values.rb
@@ -184,13 +185,16 @@ ${GEM_LIBDIR}/spec/integration/facter_spec.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec/files.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec/fixtures.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec/matchers.rb
+${GEM_LIBDIR}/spec/puppetlabs_spec/verbose.rb
 ${GEM_LIBDIR}/spec/puppetlabs_spec_helper.rb
+${GEM_LIBDIR}/spec/shared_contexts/platform.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unit/architecture_spec.rb
 ${GEM_LIBDIR}/spec/unit/domain_spec.rb
 ${GEM_LIBDIR}/spec/unit/ec2_spec.rb
 ${GEM_LIBDIR}/spec/unit/facter_spec.rb
 ${GEM_LIBDIR}/spec/unit/hardwareisa_spec.rb
+${GEM_LIBDIR}/spec/unit/hardwaremodel_spec.rb
 ${GEM_LIBDIR}/spec/unit/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/id_spec.rb
 ${GEM_LIBDIR}/spec/unit/interfaces_spec.rb
@@ -221,6 +225,7 @@ ${GEM_LIBDIR}/spec/unit/util/macaddress_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/macosx_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/manufacturer_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/processor_spec.rb
+${GEM_LIBDIR}/spec/unit/util/registry_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/resolution_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/uptime_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/virtual_spec.rb
