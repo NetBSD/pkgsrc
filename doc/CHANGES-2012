@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1974 2012/06/14 15:44:52 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1975 2012/06/14 22:09:23 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3038,3 +3038,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/ruby-facter to 1.6.10 [taca 2012-06-14]
 	Updated graphics/png to 1.5.11 [wiz 2012-06-14]
 	Updated www/contao211-translations to 201206130 [taca 2012-06-14]
+	Updated misc/kdepimlibs4 to 4.8.2nb2 [sbd 2012-06-14]
