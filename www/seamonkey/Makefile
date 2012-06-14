@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.72 2012/06/14 07:44:01 sbd Exp $
+# $NetBSD: Makefile,v 1.73 2012/06/14 11:27:33 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.9
-PKGREVISION=	1
+SM_VER=		2.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
-DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
+DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2 \
+		lightning-1.5.source.tar.bz2
+SITES.lightning-1.5.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/1.5/source/}
+EXTRACT_DIR.lightning-1.5.source.tar.bz2=	${WRKSRC}/lightning
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
@@ -19,6 +21,7 @@ WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
+USE_TOOLS+=	unzip
 
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
@@ -27,8 +30,6 @@ CONFIGURE_ARGS+=	--enable-application=suite
 
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
 
-LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/seamonkey
-
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || \
@@ -36,6 +37,11 @@ LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/seamonkey
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 .endif
+
+post-extract:
+	cd ${WRKSRC} && ${RM} -r calendar
+	${CP} -r ${EXTRACT_DIR.lightning-1.5.source.tar.bz2}/comm-release/calendar ${WRKSRC}
+	${RM} -r ${EXTRACT_DIR.lightning-1.5.source.tar.bz2}
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
