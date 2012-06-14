@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/03 17:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/14 08:31:00 dholland Exp $
 
 DISTNAME=	twm-1.0.7
 CATEGORIES=	x11 wm
@@ -12,7 +12,7 @@ COMMENT=	Tom's Window Manager
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config yacc
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
