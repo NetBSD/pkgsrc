@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11291 2012/06/14 14:48:32 hauke Exp $
+$NetBSD: TODO,v 1.11292 2012/06/14 15:42:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -323,6 +323,7 @@ Suggested package updates
 =========================
 For possible perl packages updates, see http://www.pkgbox.org/p2c/
 
+	o 
 	o CSP-0.34
 	o Canna-3.7p3
 	o Chinput-3.0.1
@@ -331,7 +332,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.7.3
+	o ImageMagick-6.7.7.6
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -346,7 +347,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.6.14
+	o abcm2ps-6.6.17
 	o abcmidi-20120604
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.4.1
@@ -403,7 +404,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-2.16
 	o at-spi-2.4.0
 	o aterm-1.0.1
-	o attica-0.3.0
+	o attica-0.4.0
 	o audacious-plugins-2.4.4
 	o audacity-2.0
 	o autoconvert-0.3.16
@@ -447,6 +448,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o calibre-0.8.55
 	o calligra-2.4.2 [koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o catdoc-0.94.3
 	o cc65-2.13.3
 	o cddbd-1.5.2
 	o cdialog-1.1.20120215
@@ -500,7 +502,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dasher-4.11
 	o dasm-2.20.11
 	o dbench-4.0
-	o dbus-1.4.20
+	o dbus-1.6.0
 	o dbus-glib-0.98 [wants dbus>1.2.16]
 	o dcc-1.3.141
 	o dconf-0.7.1
@@ -510,7 +512,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o dgen-1.30
 	o dhid-5.3
-	o diffpdf-2.0.0
+	o diffpdf-2.1.1
 	o diffstat-1.55
 	o digikam-2.6.0
 	o dinotrace-9.3e
@@ -519,14 +521,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnsmasq-2.62
 	o doclifter-2.7
 	o dos2unix-6.0
-	o doxygen-1.8.1
+	o doxygen-1.8.1.1
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2012.055
 	o dspam-3.10.0
 	o dvdstyler-2.2
-	o dvtm-0.7
+	o dvtm-0.7 [pkg/46585]
 	o easymenu-0.7.2p1
 	o echinus-0.4.9
 	o eclipse-3.2.0
@@ -544,12 +546,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elm-me-2.5plalpha29
+	o emacs-24.1
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
 	o enca-1.13
 	o enlightenment-1.0.9
-	o eog-3.4.0
+	o eog-3.4.2
 	o eog-plugins-3.4.1
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
@@ -707,7 +710,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.36
+	o gtkwave-3.3.37
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -715,12 +718,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o gupnp-0.16.1
 	o gupnp-igd-0.2.1
-	o gutenprint-5.2.7
 	o gv-3.7.3
 	o gvfs-1.6.7
 	o gwaei-3.4.3
 	o gworkspace-0.9.1
-	o gxine-0.5.906
+	o gxine-0.5.907
 	o gzip-1.4
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
@@ -863,6 +865,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liferea-1.8.5
 	o lighttpd-1.4.31
 	o lincvs-2.1.4 [now called CrossVC]
+	o links-2.7pre1
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
@@ -882,6 +885,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mc-4.8.1.3
 	o mdocml-1.12.1
+	o memtester-4.3.0
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
@@ -973,7 +977,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p0f-3.00b
 	o p5-App-cpanminus-1.5013 [pkg/46549]
 	o p5-Gtk2-1.223
-	o p5-PerlMagick-6.7.7.3
+	o p5-PerlMagick-6.7.7.6
 	o p5-Search-Xapian-1.2.10.0
 	o p5-cairo-1.082
 	o p5-glib2-1.260
@@ -1033,25 +1037,28 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.10
-	o psmisc-22.15
+	o psmisc-22.17
 	o ptlib-2.8.0 [pkg/42941]
 	o ptlib-2.8.3
 	o puf-1.0.0
 	o pulseaudio-2.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9558
+	o puzzles-9561
 	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-creole-1.0.4 [pkg/46593]
 	o py-dbus-1.1.0 [needs dbus>=1.4]
+	o py-docutils-0.9 [pkg/46573]
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gobject-3.2.2
 	o py-ldap-2.4.10
+	o py-libxml2-2.8.0
 	o py-pyutil-1.9.3 [pkg/46551]
 	o py-setuptools_trial-0.5.12 [pkg/46550]
 	o py-sybase-0.37
@@ -1144,7 +1151,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stalin-0.11
 	o star-1.5.1
 	o statist-1.3.0
-	o stella-3.7.1
+	o stella-3.7.2
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.0
@@ -1198,6 +1205,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tomboy-1.4.2 [GNOME 2.32]
 	o tomboy-1.10.2
 	o top-3.8beta1
+	o tor-0.2.2.37
 	o totem-3.4.1
 	o totem-pl-parser-3.4.1
 	o tpasm-1.2
@@ -1215,6 +1223,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
+	o uim-1.8.1 [pkg/465959]
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
 	o units-88 [pkg/43742]
@@ -1228,7 +1237,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vera-1.17
 	o vfu-4.09
 	o vicq-0.4.2
-	o viewvc-1.1.13
+	o viewvc-1.1.14
 	o vifm-0.7.3
 	o vile-9.8
 	o vim-7.3
@@ -1330,6 +1339,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
+	o xine-1.2.2
+	o xine-lib-1.1.21
 	o xinput-1.6.0
 	o xjman-0.7
 	o xkbset-0.5
