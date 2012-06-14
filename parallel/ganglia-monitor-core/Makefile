@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/06/14 07:44:39 sbd Exp $
+# $NetBSD: Makefile,v 1.38 2012/06/14 07:56:47 sbd Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -14,6 +14,7 @@ COMMENT=		Ganglia cluster monitor, monitoring daemon
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+SET_LIBDIR=		yes
 
 CONFIGURE_ARGS+=	--with-gmetad
 USE_LIBTOOL=		yes
