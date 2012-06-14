@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/03/03 00:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/14 07:44:18 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	wavpack
 GST_PLUGINS0.10_DIRS=	ext/wavpack
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

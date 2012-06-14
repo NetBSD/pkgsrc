@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2012/03/03 00:14:25 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/14 07:44:18 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	png
 GST_PLUGINS0.10_DIRS=	ext/libpng
 GST_PLUGINS0.10_FLAGS=	libpng
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

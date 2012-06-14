@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2012/06/03 22:33:50 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2012/06/14 07:43:17 sbd Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=		5
+PKGREVISION=		6
 
 .include "options.mk"
 

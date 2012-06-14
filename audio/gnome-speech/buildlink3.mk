@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2012/03/03 00:12:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2012/06/14 07:43:26 sbd Exp $
 
 BUILDLINK_TREE+=	gnome-speech
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-speech
 GNOME_SPEECH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-speech+=	gnome-speech>=0.3.2
-BUILDLINK_ABI_DEPENDS.gnome-speech+=	gnome-speech>=0.4.25nb4
+BUILDLINK_ABI_DEPENDS.gnome-speech+=	gnome-speech>=0.4.25nb5
 BUILDLINK_PKGSRCDIR.gnome-speech?=	../../audio/gnome-speech
 
 .include "../../devel/gettext-lib/buildlink3.mk"
