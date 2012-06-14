@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1973 2012/06/14 15:40:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1974 2012/06/14 15:44:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3037,3 +3037,4 @@ Changes to the packages collection and infrastructure in 2012:
 	updated www/ruby-rails31 to 3.1.6 [taca 2012-06-14]
 	Updated sysutils/ruby-facter to 1.6.10 [taca 2012-06-14]
 	Updated graphics/png to 1.5.11 [wiz 2012-06-14]
+	Updated www/contao211-translations to 201206130 [taca 2012-06-14]
