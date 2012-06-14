@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2012/04/08 19:08:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/06/14 07:44:03 sbd Exp $
 #
 
 EGG_NAME=	Sonata-1.6.2.1
 DISTNAME=	${EGG_NAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/sonata/
 EXTRACT_SUFX=	.tar.bz2

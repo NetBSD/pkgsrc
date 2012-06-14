@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/21 12:55:41 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/14 07:44:21 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	rtmp
 GST_PLUGINS0.10_DIRS=	ext/rtmp
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

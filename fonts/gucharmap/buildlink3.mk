@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2012/05/07 01:53:30 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2012/06/14 07:43:35 sbd Exp $
 
 BUILDLINK_TREE+=	gucharmap
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gucharmap
 GUCHARMAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gucharmap+=	gucharmap>=2.24.1
-BUILDLINK_ABI_DEPENDS.gucharmap+=	gucharmap>=2.32.1nb5
+BUILDLINK_ABI_DEPENDS.gucharmap+=	gucharmap>=2.32.1nb6
 BUILDLINK_PKGSRCDIR.gucharmap?=	../../fonts/gucharmap
 
 .include "../../devel/gettext-lib/buildlink3.mk"
