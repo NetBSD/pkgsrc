@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2012/05/23 05:03:26 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2012/06/14 22:37:34 sbd Exp $
 #
 
 DISTNAME=			aranym_0.9.13.orig
 PKGNAME=			${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=			1
+PKGREVISION=			2
 CATEGORIES=			emulators
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=aranym/}
 SITES.emutos-512k-0.8.6.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
@@ -77,4 +77,5 @@ post-install:
 	${INSTALL_DATA} ${EMUTOS_WRKSRC}/doc/status.txt ${DESTDIR}${EMUTOS_DOC_DIR}
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
