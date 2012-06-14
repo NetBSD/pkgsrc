@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/05/18 09:48:59 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/14 07:45:16 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	cdparanoia
 GST_PLUGINS0.10_DIRS=	ext/cdparanoia
 GST_PLUGINS0.10_FLAGS=	cdparanoia
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
