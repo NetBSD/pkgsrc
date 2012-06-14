@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.6 2012/04/27 04:27:16 sbd Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.7 2012/06/14 01:05:37 obache Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -354,6 +354,7 @@ java/sun-6/lib/zi/America/Cayman
 java/sun-6/lib/zi/America/Chicago
 java/sun-6/lib/zi/America/Chihuahua
 java/sun-6/lib/zi/America/Costa_Rica
+java/sun-6/lib/zi/America/Creston
 java/sun-6/lib/zi/America/Cuiaba
 java/sun-6/lib/zi/America/Curacao
 java/sun-6/lib/zi/America/Danmarkshavn
