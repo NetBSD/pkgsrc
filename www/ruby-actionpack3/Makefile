@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/02 01:28:24 taca Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/14 14:49:17 taca Exp $
 
 DISTNAME=	actionpack-${RUBY_RAILS3_VERSION}
 CATEGORIES=	www
@@ -20,6 +20,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-tzinfo>=0.3.23<0.4:../../time/ruby-tzinfo
 DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.6.6<2.7:../../www/ruby-erubis26
 
 RUBY_RAILS_SUPPORTED=	3
+RUBY_RAILS_STRICT_DEP=	yes
 
 OVERRIDE_GEMSPEC+=	builder>=2.1.2
 
