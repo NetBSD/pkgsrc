@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.175 2012/02/06 12:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2012/06/14 07:45:22 sbd Exp $
 
 DISTNAME=	netpbm-10.35.80
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz

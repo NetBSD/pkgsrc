@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/03/03 00:14:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/14 07:44:17 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	dvdread
 GST_PLUGINS0.10_DIRS=	ext/dvdread
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

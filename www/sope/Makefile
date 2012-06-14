@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/04/07 17:36:40 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2012/06/14 07:45:31 sbd Exp $
 #
 
 DISTNAME=		sope-4.5.4-nevermind-r878
 PKGNAME=		sope-4.5.4
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		www gnustep
 MASTER_SITES=		http://download.opengroupware.org/nightly/sources/releases/
 

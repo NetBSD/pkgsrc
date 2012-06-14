@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 20:53:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/14 07:43:33 sbd Exp $
 #
 
 PKGNAME=	libkface-2.5.0
 DISTNAME=	digikam-2.5.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

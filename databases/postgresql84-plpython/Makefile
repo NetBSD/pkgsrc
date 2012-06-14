@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/03/15 11:53:22 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/14 07:45:37 sbd Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-plpython-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	PL/Python procedural language for the PostgreSQL backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir

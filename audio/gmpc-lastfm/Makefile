@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:12:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/14 07:45:21 sbd Exp $
 #
 
 DISTNAME=	gmpc-last-fm-0.20.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/0.20.0/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/04/27 12:31:36 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/06/14 07:44:13 sbd Exp $
 
 VERSION=	1.2.1
-PKGREVISION=	18
+PKGREVISION=	19
 DISTNAME=	pidgin-latex-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	chat print

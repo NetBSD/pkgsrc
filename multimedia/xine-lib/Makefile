@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.99 2012/04/04 17:05:24 hans Exp $
+# $NetBSD: Makefile,v 1.100 2012/06/14 07:44:38 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
+PKGREVISION=		1
 COMMENT=		Multimedia player library
 
 CONFLICTS+=		xine-xcb-[0-9]*

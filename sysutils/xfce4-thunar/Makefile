@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/05/19 00:35:57 marino Exp $
+# $NetBSD: Makefile,v 1.24 2012/06/14 07:43:35 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	1.0.1
 
 DISTNAME=	Thunar-${XFCE4_VERSION}
 PKGNAME=	xfce4-thunar-${XFCE4_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 COMMENT=	Xfce file manager
 
