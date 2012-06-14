@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1964 2012/06/14 11:30:03 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1965 2012/06/14 12:57:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3013,3 +3013,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libxml2 to 2.8.0nb2 [sbd 2012-06-14]
 	Updated www/seamonkey to 2.10 [ryoon 2012-06-14]
 	Updated www/seamonkey-l10n to 2.10 [ryoon 2012-06-14]
+	Updated devel/scmgit to 1.7.10.4 [gdt 2012-06-14]
