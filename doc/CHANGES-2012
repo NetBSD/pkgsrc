@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1961 2012/06/14 01:07:38 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1962 2012/06/14 07:39:47 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3010,3 +3010,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_libxml2 to 12.1nb2 [obache 2012-06-13]
 	Updated lang/sun-jre6 to 6.0.33 [obache 2012-06-13]
 	Updated lang/sun-jdk6 to 6.0.33 [obache 2012-06-13]
+	Updated textproc/libxml2 to 2.8.0nb2 [sbd 2012-06-14]
