@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2012/06/03 22:18:33 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2012/06/14 07:39:36 sbd Exp $
 
 DISTNAME=	libxml2-2.8.0
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/
@@ -43,6 +44,7 @@ SUBST_SED.cat=	-e "s,@@SGML_DEFAULT_CATALOG@@,${SGML_DEFAULT_CATALOG},g"
 SUBST_SED.cat+=	-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
