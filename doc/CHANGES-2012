@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1981 2012/06/15 00:32:36 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1982 2012/06/15 06:06:59 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3045,3 +3045,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/vigor to 0.016nb4 [sbd 2012-06-14]
 	Updated editors/vigor to 0.016nb5 [sbd 2012-06-15]
 	Updated lang/gawk to 4.0.1nb2 [sbd 2012-06-15]
+	Updated comms/asterisk10 to 10.5.1 [jnemeth 2012-06-15]
