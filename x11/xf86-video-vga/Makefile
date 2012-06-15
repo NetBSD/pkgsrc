@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/09/14 11:03:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/15 23:06:08 dholland Exp $
 #
 
 DISTNAME=	xf86-video-vga-4.1.0
@@ -11,11 +11,11 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg generic VGA video driver
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=    yes
-GNU_CONFIGURE=  yes
-USE_TOOLS+=     autoconf autoheader automake autoreconf pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoconf autoheader automake autoreconf pkg-config
 
 BUILD_DEPENDS+=	xorg-util-macros>=1.2.0:../../devel/xorg-util-macros
 

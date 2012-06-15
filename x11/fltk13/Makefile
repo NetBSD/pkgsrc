@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/01 16:35:12 is Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/15 23:06:02 dholland Exp $
 
 DISTNAME=	fltk-1.3.0-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -16,7 +16,7 @@ COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-CONFLICTS=      fltk-1.[012].*
+CONFLICTS=		fltk-1.[012].*
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
