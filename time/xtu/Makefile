@@ -1,26 +1,27 @@
-# $NetBSD: Makefile,v 1.10 2011/11/28 00:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/15 14:05:24 wiz Exp $
 #
 
-DISTNAME=	xtu-1.2
-PKGREVISION=	1
+DISTNAME=	xtu-1.3
 CATEGORIES=	time
-MASTER_SITES=	http://core.de/~coto/projects/xtu/
+MASTER_SITES=	http://coto.marsrakete.de/projects/xtu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://core.de/~coto/projects/xtu/
+HOMEPAGE=	http://coto.marsrakete.de/projects/xtu/
 COMMENT=	Small configurable X11 analog clock
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC} && ${CC} *.c -o xtu -I${X11BASE}/include ${X11_LDFLAGS} -lX11 -lXext
+	cd ${WRKSRC} && ${CC} -DUSE_XPM *.c -o xtu -I${X11BASE}/include ${X11_LDFLAGS} -lXpm -lX11 -lXext
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xtu ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/xtu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
