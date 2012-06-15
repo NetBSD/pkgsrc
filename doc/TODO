@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11293 2012/06/14 15:51:34 wiz Exp $
+$NetBSD: TODO,v 1.11294 2012/06/15 00:41:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -323,7 +323,6 @@ Suggested package updates
 =========================
 For possible perl packages updates, see http://www.pkgbox.org/p2c/
 
-	o 
 	o CSP-0.34
 	o Canna-3.7p3
 	o Chinput-3.0.1
