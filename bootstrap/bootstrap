@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.176 2012/06/08 12:15:29 jperkin Exp $
+# $NetBSD: bootstrap,v 1.177 2012/06/15 09:54:41 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -677,7 +677,12 @@ SunOS)
 	else
 		need_sed=yes
 	fi
-	need_ksh=yes
+	if [ "`uname -r`" = "5.11" ]; then
+		bootstrap_sh=${SH:-/bin/ksh}
+		bootstrap_sh_set=set
+	else
+		need_ksh=yes
+	fi
 	set_opsys=no
 	idprog="/usr/xpg4/bin/id"
 	groupsprog="${idprog} -gn"
