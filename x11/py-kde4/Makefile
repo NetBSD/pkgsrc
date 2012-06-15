@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/14 22:09:30 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/15 23:06:04 dholland Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 PKGREVISION=	3
@@ -37,7 +37,7 @@ SUBST_SED.pykdeuic4=	's:/usr/bin/env python$$:${PYTHONBIN}:'
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../security/polkit-qt/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-sip+=  ${PYPKGPREFIX}-sip>=4.10
+BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.10
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=		full

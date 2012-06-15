@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2012/03/11 10:37:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/06/15 23:06:04 dholland Exp $
 
 BUILDLINK_TREE+=	startup-notification
 
@@ -11,19 +11,19 @@ BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5
 BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.8nb1
 .else
-.if ${OPSYS} == "NetBSD"
-.if !empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6789].*)
+.  if ${OPSYS} == "NetBSD"
+.    if !empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6789].*)
 BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5
 BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.8nb1
-.else
+.    else
 BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification010
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5<0.12
 BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.8nb1<0.12
-.endif
-.else #!NetBSD
+.    endif
+.  else #!NetBSD
 BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification
-.endif
+.  endif
 .endif
 
 .include "../../x11/libSM/buildlink3.mk"

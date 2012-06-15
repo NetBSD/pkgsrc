@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/19 18:12:21 tron Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/15 23:06:06 dholland Exp $
 #
 
 DISTNAME=	xf86-video-openchrome-0.2.904
@@ -11,14 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openchrome.org/
 COMMENT=	Modular Xorg OpenChrome driver for VIA UniChrome video chipsets
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=    yes
-GNU_CONFIGURE=  yes
-USE_TOOLS+=     pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
-CONFIGURE_ARGS+= --enable-maintainer-mode
-CONFIGURE_ARGS+= --enable-dri
+CONFIGURE_ARGS+=	--enable-maintainer-mode
+CONFIGURE_ARGS+=	--enable-dri
 
 .include "../../mk/bsd.prefs.mk"
 

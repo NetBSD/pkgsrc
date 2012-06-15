@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2012/06/14 07:45:10 sbd Exp $
+# $NetBSD: Makefile,v 1.96 2012/06/15 23:06:08 dholland Exp $
 
 .include "Makefile.common"
 PKGREVISION=2
@@ -10,16 +10,16 @@ CONFIGURE_ARGS+=	--with-mesa
 CONFIGURE_ARGS+=	--without-ttf
 XPM_ENV=	no_xpm= xpm_includes=${BUILDLINK_PREFIX.libXpm}/include xpm_libraries=${BUILDLINK_PREFIX.libXpm}/lib
 CONFIGURE_ENV+=	ac_cv_path_xpm=${XPM_ENV:Q}
-OPENGL_ENV= 	no_opengl= ac_opengl_includes=${BUILDLINK_PREFIX.MesaLib}/include ac_opengl_libraries=${BUILDLINK_PREFIX.MesaLib}/lib
+OPENGL_ENV=	no_opengl= ac_opengl_includes=${BUILDLINK_PREFIX.MesaLib}/include ac_opengl_libraries=${BUILDLINK_PREFIX.MesaLib}/lib
 CONFIGURE_ENV+=	ac_cv_path_opengl=${OPENGL_ENV:Q}
-MESA_ENV= 	no_mesa= ac_mesa_includes=${BUILDLINK_PREFIX.MesaLib}/include ac_mesa_libraries=${BUILDLINK_PREFIX.MesaLib}/lib
+MESA_ENV=	no_mesa= ac_mesa_includes=${BUILDLINK_PREFIX.MesaLib}/include ac_mesa_libraries=${BUILDLINK_PREFIX.MesaLib}/lib
 CONFIGURE_ENV+=	ac_cv_path_mesa=${MESA_ENV:Q}
 #BUILDLINK_TRANSFORM+=	l:MesaGL:GL
 #BUILDLINK_TRANSFORM+=	l:MesaGLU:GLU
 XEXT_ENV=	no_ext= ac_ext_includes=${BUILDLINK_PREFIX.xextproto}/include ac_ext_libraries=${BUILDLINK_PREFIX.libXext}/lib
 CONFIGURE_ENV+=	ac_cv_path_ext=${XEXT_ENV:Q}
 
-PLIST_SUBST+=    LITE=""
+PLIST_SUBST+=	LITE=""
 
 USE_TOOLS+=	pkg-config
 

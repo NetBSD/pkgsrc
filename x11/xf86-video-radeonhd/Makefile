@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/09/14 11:03:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/06/15 23:06:06 dholland Exp $
 
 DISTNAME=	xf86-video-radeonhd-1.3.0
 PKGREVISION=	2
@@ -10,11 +10,11 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://wiki.x.org/wiki/radeonhd
 COMMENT=	Modular X.org driver for Radeon HD series
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-USE_TOOLS+=     gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ENV+=	ac_cv_file___src_AtomBios_includes_atombios_h=yes
 CONFIGURE_ENV+=	ac_cv_file___src_AtomBios_includes_Decoder_h=yes

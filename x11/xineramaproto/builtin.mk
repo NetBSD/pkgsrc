@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2008/10/05 21:36:34 cube Exp $
+# $NetBSD: builtin.mk,v 1.4 2012/06/15 23:06:08 dholland Exp $
 
 BUILTIN_PKG:=	xineramaproto
 
@@ -31,7 +31,7 @@ MAKEVARS+=	IS_BUILTIN.xineramaproto
 BUILTIN_VERSION.xineramaproto!= ${SED} -n -e 's/Version: //p' ${PC_XINERAMAPROTO}
 BUILTIN_PKG.xineramaproto= xineramaproto-${BUILTIN_VERSION.xineramaproto}
 .endif
-MAKEVARS+=      BUILTIN_PKG.xineramaproto
+MAKEVARS+=	BUILTIN_PKG.xineramaproto
 
 ###
 ### Determine whether we should use the built-in implementation if it

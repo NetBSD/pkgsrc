@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/02/06 12:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/06/15 23:06:04 dholland Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	16
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+= --enable-menubar --enable-graphics --enable-next-scroll
 CONFIGURE_ARGS+= --enable-half-shadow
 CONFIGURE_ARGS+= --with-xpm-library=${BUILDLINK_PREFIX.libXpm}
 
-INSTALLATION_DIRS+=  share/WindowMaker/Icons
+INSTALLATION_DIRS+=	share/WindowMaker/Icons
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/wterm.tiff \

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2010/06/16 16:27:47 drochner Exp $
+# $NetBSD: options.mk,v 1.12 2012/06/15 23:06:08 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xterm
 PKG_SUPPORTED_OPTIONS=		debug pcre freetype luit
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+= --disable-freetype
 ###     within libc's namespace, so we should have no problems.
 ###
 .if !empty(PKG_OPTIONS:Mpcre)
-CONFIGURE_ARGS+= --with-pcre
-CONFIGURE_ENV+=  ac_cv_lib_pcreposix_pcreposix_regcomp=yes
+CONFIGURE_ARGS+=	--with-pcre
+CONFIGURE_ENV+=		ac_cv_lib_pcreposix_pcreposix_regcomp=yes
 .  include "../../devel/pcre/buildlink3.mk"
 .endif
 
