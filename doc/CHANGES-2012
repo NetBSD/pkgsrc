@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1979 2012/06/14 22:50:24 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1980 2012/06/15 00:03:58 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3043,3 +3043,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/coreutils to 8.13nb3 [sbd 2012-06-14]
 	Updated emulators/aranym to 0.9.13nb2 [sbd 2012-06-14]
 	Updated editors/vigor to 0.016nb4 [sbd 2012-06-14]
+	Updated editors/vigor to 0.016nb5 [sbd 2012-06-15]
