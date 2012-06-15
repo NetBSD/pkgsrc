@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2012/06/14 22:50:14 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/06/15 00:03:48 sbd Exp $
 #
 
 DISTNAME=	vigor-0.016
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vigor/}
 
@@ -25,18 +25,28 @@ CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
 CONFIGURE_ARGS+=--with-x
 #		--enable-perlinterp \
 #		--disable-curses \
-#		--disable-db \
 #		--disable-re
 USE_TOOLS+=	sh
 BUILD_DIRS=	${CONFIGURE_DIRS}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+CHECK_BUILTIN.db1:=	yes
+.include "../../mk/db1.builtin.mk"
+CHECK_BUILTIN.db1:=	no
+
+.if empty(IS_BUILTIN.db1:Myes)
+CONFIGURE_ARGS+=	--disable-db
+.else
 SUBST_CLASSES+=		db185
 SUBST_STAGE.db185=	post-extract
 SUBST_MESSAGE.db185=	Using db_185.h instead of db.h
 SUBST_FILES.db185=	common/common.h
 SUBST_SED.db185=	-e '/^\#include <db\.h>/s/db\.h/db_185.h/'
+
+BDB_ACCEPTED=		db1
+.include "../../mk/bdb.buildlink3.mk"
+.endif
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
@@ -48,6 +58,5 @@ post-patch:
 	${RM} -f ${WRKSRC}/include/sys/queue.h
 .endif
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
