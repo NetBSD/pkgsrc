@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2012/06/14 22:30:19 sbd Exp $
+# $NetBSD: Makefile,v 1.57 2012/06/15 11:32:57 sbd Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
-PKGREVISION=	3
+PKGREVISION=	4
+
+CONFIGURE_ARGS+=	--without-gmp
 
 CONFLICTS=	fileutils-[0-9]* gnuls-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
@@ -59,7 +61,6 @@ post-install:
 #MESSAGE_SUBST+=	OPSYS=${OPSYS:Q}
 #.endif
 
-.include "../../devel/gmp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
