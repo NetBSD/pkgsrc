@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/03/20 21:12:51 asau Exp $
+# $NetBSD: options.mk,v 1.2 2012/06/15 09:20:28 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.polyml
-PKG_SUPPORTED_OPTIONS=	motif x11
+PKG_SUPPORTED_OPTIONS=	motif x11 gmp
 PKG_SUGGESTED_OPTIONS=	motif x11
 
 .include "../../mk/bsd.options.mk"
@@ -17,4 +17,11 @@ CONFIGURE_ARGS+=	--with-x
 
 .if !empty(PKG_OPTIONS:Mmotif)
 .include "../../mk/motif.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgmp)
+CONFIGURE_ARGS+=	--with-gmp=yes
+.include "../../devel/gmp/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-gmp=no
 .endif
