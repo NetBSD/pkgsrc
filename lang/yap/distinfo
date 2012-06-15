@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2011/07/09 21:15:48 asau Exp $
+$NetBSD: distinfo,v 1.13 2012/06/15 18:53:30 joerg Exp $
 
 SHA1 (yap-6.2.1.tar.gz) = e6076a501aaee9e8a6a484a34308c32ca1193a95
 RMD160 (yap-6.2.1.tar.gz) = 702a72a1e02e1a8e107f2b0888ae7c26132ae417
@@ -9,3 +9,5 @@ SHA1 (patch-ae) = cf4a79ccd0c34e42ca3d8a108619a9974288cde6
 SHA1 (patch-af) = a042950ee63fac0f5863c3caa3f7c07227c46b4b
 SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
 SHA1 (patch-aj) = 61a53b4ef921270544edc79ddcb0f816824fd3ce
+SHA1 (patch-packages_swi-minisat2_C_Solver.C) = 1f4ec1fa258d61906d59d8a236d40653d16f0cd3
+SHA1 (patch-packages_swi-minisat2_C_SolverTypes.h) = 37b7ba75614340d09c9d82d5f29e66cbdfbded94
