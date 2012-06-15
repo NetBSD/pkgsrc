@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1985 2012/06/15 13:40:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1986 2012/06/15 13:55:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/coreutils to 8.13nb4 [sbd 2012-06-15]
 	Added databases/ruby-mysql2 version 0.3.11 [taca 2012-06-15]
 	Updated news/pan to 0.138 [wiz 2012-06-15]
+	Updated math/ruby-spreadsheet to 0.7.2 [taca 2012-06-15]
