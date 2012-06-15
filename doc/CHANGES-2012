@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1983 2012/06/15 11:33:07 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1984 2012/06/15 11:40:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gawk to 4.0.1nb2 [sbd 2012-06-15]
 	Updated comms/asterisk10 to 10.5.1 [jnemeth 2012-06-15]
 	Updated sysutils/coreutils to 8.13nb4 [sbd 2012-06-15]
+	Added databases/ruby-mysql2 version 0.3.11 [taca 2012-06-15]
