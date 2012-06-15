@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/05/31 10:44:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.49 2012/06/15 00:29:27 sbd Exp $
 
 DISTNAME=	gawk-4.0.1
 PKGREVISION=	1
@@ -30,14 +30,7 @@ CPPFLAGS.OSF1+=		-D_OSF_SOURCE
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gawk
-PKG_SUPPORTED_OPTIONS=	portals
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mportals)
-CONFIGURE_ARGS+=	--enable-portals
-.endif
+.include "options.mk"
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
 CFLAGS+=	-Dvm_region=vm_region_64
