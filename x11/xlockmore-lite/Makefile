@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/02/18 23:50:33 elric Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/15 23:06:08 dholland Exp $
 
 .include "../../x11/xlockmore/Makefile.common"
 
@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--without-esound
 CONFIGURE_ARGS+=	--without-gtk2
 CONFIGURE_ARGS+=	--without-gtk
 
-PLIST_SUBST+=    LITE="@comment Not in lite version: "
+PLIST_SUBST+=	LITE="@comment Not in lite version: "
 
 .include "../../mk/bsd.pkg.mk"

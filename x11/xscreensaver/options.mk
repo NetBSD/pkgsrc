@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2011/03/06 16:04:33 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2012/06/15 23:06:08 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
 PKG_SUPPORTED_OPTIONS=	pam webcollage opengl
@@ -10,10 +10,10 @@ PKG_SUGGESTED_OPTIONS=	opengl
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--without-shadow
-.if ${OPSYS} == "NetBSD"
+.  if ${OPSYS} == "NetBSD"
 # needed to read shadow passwords
 DEPENDS+=	pam-pwauth_suid-*:../../security/pam-pwauth_suid
-.endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-pam
 # configure should figure out

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/09/14 11:03:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/15 23:06:05 dholland Exp $
 #
 
 DISTNAME=	xf86-video-ark-0.7.1
@@ -11,11 +11,11 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ARK Logic video driver
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=    yes
-GNU_CONFIGURE=  yes
-USE_TOOLS+=     pkg-config
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
