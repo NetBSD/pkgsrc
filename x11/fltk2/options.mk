@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/03/18 11:09:33 abs Exp $
+# $NetBSD: options.mk,v 1.4 2012/06/15 23:06:02 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk2
 PKG_SUPPORTED_OPTIONS=	opengl
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=    opengl
+PLIST_VARS+=	opengl
 .if !empty(PKG_OPTIONS:Mopengl)
 PLIST.opengl=	yes
 .include "../../graphics/MesaLib/buildlink3.mk"

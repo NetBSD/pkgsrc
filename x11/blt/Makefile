@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/03 12:46:26 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/06/15 23:06:02 dholland Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -31,9 +31,9 @@ INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[56]*)
+.  if empty(OS_VERSION:M1.[56]*)
 .include "../../mk/pthread.buildlink3.mk"
-.endif
+.  endif
 .endif
 
 .include "../../lang/tcl/buildlink3.mk"
