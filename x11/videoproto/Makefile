@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/10 19:19:06 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/15 23:06:04 dholland Exp $
 #
 
 DISTNAME=		videoproto-2.3.1
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKGCONFIG_OVERRIDE+=	videoproto.pc.in
 GNU_CONFIGURE=		yes
 
-BUILDLINK_DEPMETHOD.libX11?=        build # uses headers
+BUILDLINK_DEPMETHOD.libX11?=	build # uses headers
 .include "../../x11/libX11/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
