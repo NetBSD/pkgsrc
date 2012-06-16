@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2013 2012/06/16 20:47:01 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.2014 2012/06/16 21:07:52 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3165,3 +3165,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ykclient to 2.8 [pettai 2012-06-16]
 	Updated security/ykpers to 1.6.4 [pettai 2012-06-16]
 	Updated security/pam-yubico to 2.12 [pettai 2012-06-16]
+	Added editors/emacs24 version 24.1 [dholland 2012-06-16]
+	Added editors/emacs24-nox11 version 24.1 [dholland 2012-06-16]
