@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/06/14 07:43:49 sbd Exp $
+# $NetBSD: Makefile,v 1.40 2012/06/16 22:06:02 dholland Exp $
 #
 
 DISTNAME=	f-spot-0.8.2
@@ -62,6 +62,7 @@ GCONF_SCHEMAS=	f-spot.schemas
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
+.include "../../security/gnome-keyring-sharp/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
