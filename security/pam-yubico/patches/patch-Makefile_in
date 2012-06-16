@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile_in,v 1.1 2012/06/16 23:21:14 dholland Exp $
+
+Fix MAKE_JOBS build.
+
+--- Makefile.in~	2012-02-10 12:40:35.000000000 +0000
++++ Makefile.in
+@@ -921,7 +921,7 @@ check-am: all-am
+ 	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
+ 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS
+ check: check-am
+-all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(MANS) $(HEADERS)
++all-am: Makefile $(LTLIBRARIES) .WAIT $(PROGRAMS) $(MANS) $(HEADERS)
+ install-binPROGRAMS: install-libLTLIBRARIES
+ 
+ installdirs:
