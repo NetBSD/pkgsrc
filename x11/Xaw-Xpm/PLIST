@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/06/16 03:15:30 dholland Exp $
 include/X11/Xaw3d/AllWidgets.h
 include/X11/Xaw3d/AsciiSink.h
 include/X11/Xaw3d/AsciiSinkP.h
@@ -23,12 +23,12 @@ include/X11/Xaw3d/Layout.h
 include/X11/Xaw3d/LayoutP.h
 include/X11/Xaw3d/List.h
 include/X11/Xaw3d/ListP.h
-include/X11/Xaw3d/MenuButton.h
 include/X11/Xaw3d/MenuButtoP.h
-include/X11/Xaw3d/MultiSrc.h
-include/X11/Xaw3d/MultiSrcP.h
+include/X11/Xaw3d/MenuButton.h
 include/X11/Xaw3d/MultiSink.h
 include/X11/Xaw3d/MultiSinkP.h
+include/X11/Xaw3d/MultiSrc.h
+include/X11/Xaw3d/MultiSrcP.h
 include/X11/Xaw3d/Paned.h
 include/X11/Xaw3d/PanedP.h
 include/X11/Xaw3d/Panner.h
@@ -41,19 +41,19 @@ include/X11/Xaw3d/Reports.h
 include/X11/Xaw3d/Scrollbar.h
 include/X11/Xaw3d/ScrollbarP.h
 include/X11/Xaw3d/Simple.h
-include/X11/Xaw3d/SimpleP.h
-include/X11/Xaw3d/SimpleMenu.h
 include/X11/Xaw3d/SimpleMenP.h
+include/X11/Xaw3d/SimpleMenu.h
+include/X11/Xaw3d/SimpleP.h
 include/X11/Xaw3d/Sme.h
-include/X11/Xaw3d/SmeP.h
 include/X11/Xaw3d/SmeBSB.h
 include/X11/Xaw3d/SmeBSBP.h
 include/X11/Xaw3d/SmeLine.h
 include/X11/Xaw3d/SmeLineP.h
+include/X11/Xaw3d/SmeP.h
 include/X11/Xaw3d/SmeThreeD.h
 include/X11/Xaw3d/SmeThreeDP.h
-include/X11/Xaw3d/StripChart.h
 include/X11/Xaw3d/StripCharP.h
+include/X11/Xaw3d/StripChart.h
 include/X11/Xaw3d/Template.c
 include/X11/Xaw3d/Template.h
 include/X11/Xaw3d/TemplateP.h
