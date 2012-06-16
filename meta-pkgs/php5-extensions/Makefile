@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/06/16 05:41:03 taca Exp $
+# $NetBSD: Makefile,v 1.29 2012/06/16 09:31:10 dholland Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_BASE_VERS}
 PKGREVISION=	3
@@ -45,7 +45,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../datab
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pdo_sqlite
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-posix
-DEPENDS+=	${PHP_PKG_PREFIX}-pspell>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-pspell
+#DEPENDS+=	${PHP_PKG_PREFIX}-pspell>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-pspell
 DEPENDS+=	${PHP_PKG_PREFIX}-shmop>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-shmop
 DEPENDS+=	${PHP_PKG_PREFIX}-snmp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-snmp
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-soap
