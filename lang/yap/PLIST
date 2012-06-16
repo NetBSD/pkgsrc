@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/07/08 11:40:27 asau Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/06/16 19:34:49 asau Exp $
 bin/yap
 include/Yap/Atoms.h
 include/Yap/Regs.h
@@ -124,6 +124,7 @@ share/Yap/INDEX.pl
 share/Yap/aggregate.pl
 share/Yap/apply.yap
 share/Yap/apply_macros.yap
+share/Yap/aproblog.yap
 share/Yap/arg.yap
 share/Yap/assoc.yap
 share/Yap/atts.yap
@@ -357,9 +358,13 @@ share/Yap/plunit.pl
 share/Yap/prandom.yap
 share/Yap/problog.yap
 share/Yap/problog/ad_converter.yap
+share/Yap/problog/bdd.yap
+share/Yap/problog/completion.yap
+share/Yap/problog/discrete.yap
 share/Yap/problog/extlists.yap
 share/Yap/problog/flags.yap
 share/Yap/problog/gflags.yap
+share/Yap/problog/grounder.yap
 share/Yap/problog/hash_table.yap
 share/Yap/problog/intervals.yap
 share/Yap/problog/logger.yap
@@ -378,6 +383,8 @@ share/Yap/problog/utils_learning.yap
 share/Yap/problog/variable_elimination.yap
 share/Yap/problog/variables.yap
 share/Yap/problog/version_control.yap
+share/Yap/problog_examples/aProbLog_examples.pl
+share/Yap/problog_examples/alarm.pl
 share/Yap/problog_examples/graph.pl
 share/Yap/problog_examples/graph_tabled.pl
 share/Yap/problog_examples/learn_graph.pl
@@ -385,6 +392,7 @@ share/Yap/problog_examples/office.pl
 share/Yap/problog_examples/viralmarketing.pl
 share/Yap/problog_examples/viralmarketing_tabled.pl
 share/Yap/problog_learning.yap
+share/Yap/problog_lfi.yap
 share/Yap/process.pl
 share/Yap/prolog_server.pl
 share/Yap/prolog_source.pl
