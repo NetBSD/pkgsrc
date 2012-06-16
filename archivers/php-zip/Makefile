@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/02/22 07:36:07 taca Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/16 02:49:39 taca Exp $
 
 MODNAME=		zip
 PKGREVISION=		2
@@ -13,9 +13,9 @@ CONFIGURE_ARGS+=	--enable-zip
 CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
 USE_PHP_EXT_PATCHES=	yes
 
-# Remove these PKGNAME tweak after PHP 5.2.14 release
+# Remove these PKGNAME tweak after PHP 5.2.18 release (after support of php52)
 .include "../../lang/php/phpversion.mk"
-.if ${PKG_PHP_VERSION} == "5"
+.if ${PHP_BASE_VERS} == "5.2.17"
 PKGNAME:=		${PHP_PKG_PREFIX}-${MODNAME}-${PHP_BASE_VERS}.1.8.11
 .endif
 
