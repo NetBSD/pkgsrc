@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/01/08 00:33:34 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2012/06/16 04:30:22 dholland Exp $
 
 DISTNAME=		xdm3d-1.0
 PKGREVISION=		5
@@ -57,7 +57,7 @@ do-install:
 	${SED} "$$sedexpr" ${PKGDIR}/PLIST > ${PLIST_SRC}
 	@if [ -r ${XDMDIR}/chooser ]; then				\
 		${INSTALL_PROGRAM} ${XDMDIR}/chooser ${DESTDIR}${PREFIX}/share/xdm3d;		\
-	elif [ -r ${X11BASE}/libexec/cooser ]; then			\
+	elif [ -r ${X11BASE}/libexec/chooser ]; then			\
 		${INSTALL_PROGRAM} ${X11BASE}/libexec/chooser ${DESTDIR}${PREFIX}/share/xdm3d;	\
 	else								\
 		${INSTALL_PROGRAM} ${WRKSRC}/chooser ${DESTDIR}${PREFIX}/share/xdm3d;		\
