@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/06/16 21:59:41 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/16 22:06:34 pettai Exp $
 #
 
 DISTNAME=	pam_tacplus-1.3.6
 PKGNAME=        ${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tacplus/}
 
@@ -22,4 +23,5 @@ SUBST_STAGE.egdir=	post-patch
 SUBST_FILES.egdir=	Makefile.in
 SUBST_SED.egdir=	-e "s,@EGDIR@,${EGDIR},"
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
