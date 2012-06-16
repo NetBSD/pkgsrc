@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/21 19:39:41 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/16 05:27:43 taca Exp $
 #
 
 DISTNAME=		gallery-2.3.2-full
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PHP_VERSIONS_ACCEPTED=	53
+PHP_VERSIONS_ACCEPTED=	53 54
 
 DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.0.4:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-gettext>=5.0.4:../../devel/php-gettext
