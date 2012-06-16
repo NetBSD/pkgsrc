@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1996 2012/06/16 05:47:04 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1997 2012/06/16 06:48:11 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3063,3 +3063,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated meta-pkgs/php5-extensions to 5.2.17nb3 [taca 2012-06-16]
 	Updated meta-pkgs/php53-extensions to 5.3.14nb3 [taca 2012-06-16]
 	Added meta-pkgs/php54-extensions version 5.4.4 [taca 2012-06-16]
+	Updated graphics/gri to 2.12.23nb1 [dholland 2012-06-16]
