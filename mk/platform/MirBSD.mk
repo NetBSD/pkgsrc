@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.6 2012/05/18 14:15:17 bsiegert Exp $
+# $NetBSD: MirBSD.mk,v 1.7 2012/06/16 20:13:06 bsiegert Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -10,9 +10,9 @@ RSH?=		/usr/bin/false	# not delivered with MirOS any more
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 
-USERADD?=	${LOCALBASE}/sbin/useradd
-GROUPADD?=	${LOCALBASE}/sbin/groupadd
-_USER_DEPENDS=	user>=20000313:../../sysutils/user	#XXX make this work
+#USERADD?=	${LOCALBASE}/sbin/useradd
+#GROUPADD?=	${LOCALBASE}/sbin/groupadd
+#_USER_DEPENDS=	user>=20000313:../../sysutils/user	#XXX make this work
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
