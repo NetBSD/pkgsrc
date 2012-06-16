@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/06/16 18:55:30 pettai Exp $
+
+--- bdb/dbstubs.c.orig	2002-10-01 02:10:14.000000000 +0200
++++ bdb/dbstubs.c
+@@ -22,7 +22,7 @@
+ 
+ #include <sys/types.h>
+ #include <limits.h>
+-#include <db.h>
++#include <db46/db.h>
+ /* O_CREAT and others are not defined in db.h */
+ #include <fcntl.h>
+ 
