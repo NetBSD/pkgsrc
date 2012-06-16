@@ -1,0 +1,46 @@
+$NetBSD: patch-efence_c,v 1.1 2012/06/16 07:46:55 dholland Exp $
+
+Add memory barriers for gcc around recursive calls to malloc and free
+with "internalUse" set to 1. gcc fervently believes that malloc and
+free do not interact with anything else, and so it freely reorders code
+around calls to malloc. This causes internalUse to not be set to 1
+during the recursive call, which results in an infinite recursion.
+
+Compare patch-bm in editors/emacs20.
+
+--- efence.c~	2002-02-19 22:10:46.000000000 +0000
++++ efence.c
+@@ -377,7 +377,16 @@ allocateMoreSlots(void)
+ 	noAllocationListProtection = 1;
+ 	internalUse = 1;
+ 
++#ifdef __GNUC__
++	__asm __volatile("":::"memory");
++#endif
++
+ 	newAllocation = malloc(newSize);
++
++#ifdef __GNUC__
++	__asm __volatile("":::"memory");
++#endif
++
+ 	memcpy(newAllocation, allocationList, allocationListSize);
+ 	memset(&(((char *)newAllocation)[allocationListSize]), 0, bytesPerPage);
+ 
+@@ -386,8 +395,16 @@ allocateMoreSlots(void)
+ 	slotCount += slotsPerPage;
+ 	unUsedSlots += slotsPerPage;
+ 
++#ifdef __GNUC__
++	__asm __volatile("":::"memory");
++#endif
++
+ 	free(oldAllocation);
+ 
++#ifdef __GNUC__
++	__asm __volatile("":::"memory");
++#endif
++
+ 	/*
+ 	 * Keep access to the allocation list open at this point, because
+ 	 * I am returning to memalign(), which needs that access.

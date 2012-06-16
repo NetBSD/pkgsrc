@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/11/13 21:08:56 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/16 07:46:55 dholland Exp $
 
 DISTNAME=		electric-fence_2.1.13-0.1
 PKGNAME=		electric-fence-2.1.13.0.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://perens.com/works/software/ElectricFence/
 
