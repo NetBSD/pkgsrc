@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2011/07/13 20:51:41 plunky Exp $
+# $NetBSD: Makefile,v 1.29 2012/06/16 19:28:19 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.15
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://people.freebsd.org/~emax/obexapp/
 
@@ -38,7 +39,10 @@ USE_BSD_MAKEFILE=	yes
 .if (${OPSYS} == "NetBSD" && \
     (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*)))
 MAKE_ENV+=	HAVE_LIBSDP=no
+RCD_SDPD=	bluetooth
 .endif
+
+FILES_SUBST+=	RCD_SDPD=${RCD_SDPD:Usdpd}
 
 # because the directory name conflicts with the rc.d script
 post-extract:
