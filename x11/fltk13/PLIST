@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/01 16:35:12 is Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/16 03:15:30 dholland Exp $
 bin/fltk-config
 bin/fluid
 include/FL/Enumerations.H
@@ -131,8 +131,6 @@ include/FL/Fl_Output.H
 ${PLIST.cs}include/FL/Fl_Output.h
 include/FL/Fl_Overlay_Window.H
 ${PLIST.cs}include/FL/Fl_Overlay_Window.h
-include/FL/Fl_Plugin.H
-${PLIST.cs}include/FL/Fl_Plugin.h
 include/FL/Fl_PNG_Image.H
 ${PLIST.cs}include/FL/Fl_PNG_Image.h
 include/FL/Fl_PNM_Image.H
@@ -143,6 +141,8 @@ include/FL/Fl_Paged_Device.H
 ${PLIST.cs}include/FL/Fl_Paged_Device.h
 include/FL/Fl_Pixmap.H
 ${PLIST.cs}include/FL/Fl_Pixmap.h
+include/FL/Fl_Plugin.H
+${PLIST.cs}include/FL/Fl_Plugin.h
 include/FL/Fl_Positioner.H
 ${PLIST.cs}include/FL/Fl_Positioner.h
 include/FL/Fl_PostScript.H
@@ -243,6 +243,7 @@ include/FL/Fl_XBM_Image.H
 ${PLIST.cs}include/FL/Fl_XBM_Image.h
 include/FL/Fl_XPM_Image.H
 ${PLIST.cs}include/FL/Fl_XPM_Image.h
+include/FL/Xutf8.h
 include/FL/dirent.h
 include/FL/filename.H
 ${PLIST.cs}include/FL/filename.h
@@ -277,7 +278,6 @@ include/FL/win32.H
 ${PLIST.cs}include/FL/win32.h
 include/FL/x.H
 ${PLIST.cs}include/FL/x.h
-include/FL/Xutf8.h
 ${PLIST.cs}include/Fl
 lib/libfltk.la
 lib/libfltk_forms.la
