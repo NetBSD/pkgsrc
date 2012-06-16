@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11295 2012/06/15 14:05:34 wiz Exp $
+$NetBSD: TODO,v 1.11296 2012/06/16 03:16:16 dholland Exp $
 
 Suggested new packages
 ======================
@@ -596,7 +596,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flashplayer-0.4.13
 	o flightgear-2.6
 	o flpsed-0.4.4
-	o fltk-1.3.0 [pkgsrc-wip]
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.2
 	o fotoxx-12.06.1
