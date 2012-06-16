@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/16 02:54:11 taca Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/16 22:34:23 dholland Exp $
 
 MODNAME=		sqlite
 CATEGORIES+=		databases
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		php-sqlite-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	52 53
+PHP_VERSIONS_ACCEPTED=	53
 
 .include "../../lang/php/phpversion.mk"
 
