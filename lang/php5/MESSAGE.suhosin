@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.suhosin,v 1.1 2009/02/17 23:18:55 adrianp Exp $
-
-As you have chosen to install the Suhosin patch you may also want to
-install the Suhosin extension which can be found in security/php-suhosin.
-
-===========================================================================
