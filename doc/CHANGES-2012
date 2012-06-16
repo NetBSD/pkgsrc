@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2000 2012/06/16 12:38:18 markd Exp $
+$NetBSD: CHANGES-2012,v 1.2001 2012/06/16 15:19:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3148,3 +3148,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/kdelibs4 to 4.8.4 [markd 2012-06-16]
 	Updated x11/konsole to 4.8.4 [markd 2012-06-16]
 	Updated x11/py-kde4 to 4.8.4 [markd 2012-06-16]
+	Removed meta-pkgs/php5-extensions [taca 2012-06-16]
+	Removed databases/php-dbase [taca 2012-06-16]
+	Removed security/php-mhash [taca 2012-06-16]
+	Removed sysutils/php-fileinfo [taca 2012-06-16]
+	Removed lang/php5 [taca 2012-06-16]
