@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/04/15 05:54:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/06/16 04:45:39 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -603,6 +603,7 @@ include/KDE/KRandomSequence
 include/KDE/KRatingWidget
 include/KDE/KRecentDocument
 include/KDE/KRecentFilesAction
+include/KDE/KRecursiveFilterProxyModel
 include/KDE/KRemoteEncoding
 include/KDE/KReplace
 include/KDE/KReplaceDialog
@@ -1905,6 +1906,10 @@ include/threadweaver/ThreadWeaver.h
 include/threadweaver/WeaverInterface.h
 include/threadweaver/WeaverObserver.h
 include/threadweaver/threadweaver_export.h
+lib/cmake/KDeclarative/KDeclarativeConfig.cmake
+lib/cmake/KDeclarative/KDeclarativeConfigVersion.cmake
+lib/cmake/KDeclarative/KDeclarativeLibraryTargets-relwithdebinfo.cmake
+lib/cmake/KDeclarative/KDeclarativeLibraryTargets.cmake
 lib/kde4/emoticonstheme_adium.so
 lib/kde4/emoticonstheme_kde.so
 lib/kde4/emoticonstheme_pidgin.so

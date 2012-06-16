@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/19 21:40:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/06/16 04:45:29 markd Exp $
 bin/bomber
 bin/bovo
 bin/granatier
@@ -394,6 +394,9 @@ share/doc/kde/HTML/en/kollision/index.docbook
 share/doc/kde/HTML/en/konquest/common
 share/doc/kde/HTML/en/konquest/index.cache.bz2
 share/doc/kde/HTML/en/konquest/index.docbook
+share/doc/kde/HTML/en/konquest/ingame_window.png
+share/doc/kde/HTML/en/konquest/main_game_window.png
+share/doc/kde/HTML/en/konquest/new_game_settings.png
 share/doc/kde/HTML/en/kpat/clubs.png
 share/doc/kde/HTML/en/kpat/common
 share/doc/kde/HTML/en/kpat/diamonds.png
