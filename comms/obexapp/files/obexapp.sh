@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: obexapp.sh,v 1.2 2010/12/01 19:28:27 plunky Exp $
+# $NetBSD: obexapp.sh,v 1.3 2012/06/16 19:28:19 plunky Exp $
 #
 # PROVIDE: obexapp
-# REQUIRE: sdpd
+# REQUIRE: @RCD_SDPD@
 #
 
 # variables used:
