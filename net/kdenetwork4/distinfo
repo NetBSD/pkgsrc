@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2012/04/15 05:54:58 markd Exp $
+$NetBSD: distinfo,v 1.20 2012/06/16 04:45:37 markd Exp $
 
-SHA1 (kdenetwork-4.8.2.tar.xz) = a899a9ef1637612a5ec14bb3ff950f3ed565d60e
-RMD160 (kdenetwork-4.8.2.tar.xz) = d48800c6b6d894f551b2ac9d54e31e6277ef7b99
-Size (kdenetwork-4.8.2.tar.xz) = 9092180 bytes
+SHA1 (kdenetwork-4.8.4.tar.xz) = b3926c5cd929cec209421c2f1cb8659cc1c82458
+RMD160 (kdenetwork-4.8.4.tar.xz) = 593ebaa7821ffa9921817ab7ac651040f0d8d44b
+Size (kdenetwork-4.8.4.tar.xz) = 9268552 bytes
 SHA1 (patch-aa) = 0359cd86501c57197242c398d63c1fc77c60a4d0
 SHA1 (patch-ab) = 0743b3b6c994623c507b8bcd52ee01dad31cf56f
 SHA1 (patch-ae) = 765d48550d2d8b7a59a1593a669b0909fef3bd96

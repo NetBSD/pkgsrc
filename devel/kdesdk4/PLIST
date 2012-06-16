@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/04/15 05:54:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/06/16 04:45:28 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -590,10 +590,14 @@ share/doc/kde/HTML/en/kompare/settings-view1.png
 share/doc/kde/HTML/en/kompare/settings-view2.png
 share/doc/kde/HTML/en/kompare/undock.png
 share/doc/kde/HTML/en/lokalize/common
+share/doc/kde/HTML/en/lokalize/configure_shortcuts.png
+share/doc/kde/HTML/en/lokalize/configure_toolbar.png
+share/doc/kde/HTML/en/lokalize/default_editor_lokalize.png
 share/doc/kde/HTML/en/lokalize/glossary.png
 share/doc/kde/HTML/en/lokalize/index.cache.bz2
 share/doc/kde/HTML/en/lokalize/index.docbook
 share/doc/kde/HTML/en/lokalize/original-diff.png
+share/doc/kde/HTML/en/lokalize/project_overview.png
 share/doc/kde/HTML/en/lokalize/sync.png
 share/doc/kde/HTML/en/lokalize/tmview.png
 share/doc/kde/HTML/en/okteta/common

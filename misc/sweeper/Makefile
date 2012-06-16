@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 07:44:48 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/16 04:45:34 markd Exp $
 
 DISTNAME=	sweeper-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	KDE system cleaner
 

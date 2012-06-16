@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/15 05:54:57 markd Exp $
+$NetBSD: distinfo,v 1.3 2012/06/16 04:45:35 markd Exp $
 
-SHA1 (kremotecontrol-4.8.2.tar.xz) = 2269320a9a33a29511c14c7e6c46bff22474076a
-RMD160 (kremotecontrol-4.8.2.tar.xz) = 3a2deb5d80e5d1ab41c1daa0df49ff64fef97f32
-Size (kremotecontrol-4.8.2.tar.xz) = 1080256 bytes
+SHA1 (kremotecontrol-4.8.4.tar.xz) = 2c967b6d5738d3947401d9055f0956dfd16b2ec2
+RMD160 (kremotecontrol-4.8.4.tar.xz) = 5b286f95bc83ae183d19105e0ffd3889d3cc9224
+Size (kremotecontrol-4.8.4.tar.xz) = 1084088 bytes
