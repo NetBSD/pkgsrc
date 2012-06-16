@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/06/15 23:06:04 dholland Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/06/16 03:21:22 dholland Exp $
 #
 # Paths for Qt headers and library
 #
@@ -9,7 +9,7 @@ QTLIB=$(QTDIR)/lib
 MOC=$(QTDIR)/bin/moc
 
 #
-# Paths for Qwt headers and library 
+# Paths for Qwt headers and library
 # 	QWTDIR is set autometically
 #
 QWTINC = $(QWTDIR)/include
