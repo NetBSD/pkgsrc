@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2019 2012/06/16 22:29:06 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2020 2012/06/16 22:55:53 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3172,3 +3172,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/gnome-keyring-sharp version 1.0.0nb1 [dholland 2012-06-16]
 	Updated security/pam-krb5 to 4.6 [pettai 2012-06-16]
 	Updated multimedia/gmplayer to 1.1nb1 [wiz 2012-06-16]
+	Updated security/zkt to 1.1.0 [pettai 2012-06-16]
