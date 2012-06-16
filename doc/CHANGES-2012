@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1992 2012/06/16 04:04:14 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1993 2012/06/16 05:23:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3059,3 +3059,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated filesystems/glusterfs to 3.2.7 [manu 2012-06-16]
 	Updated www/moodle to 2.1.6nb1 [taca 2012-06-16]
 	Updated x11/xpns to 1.0nb4 [dholland 2012-06-16]
+	Added lang/php54 version 5.4.4 [taca 2012-06-16]
