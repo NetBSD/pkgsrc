@@ -1,7 +1,26 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:25 wiz Exp $
+$NetBSD: distinfo,v 1.4 2012/06/16 04:00:53 dholland Exp $
 
 SHA1 (pns_source.tar.Z) = 2fab75ecdcddba9250a836740821202d8b19f5b8
 RMD160 (pns_source.tar.Z) = 0f55bf6c830f179dd0d20e32884159ab2f8fea1d
 Size (pns_source.tar.Z) = 256925 bytes
-SHA1 (patch-aa) = 65b4aadd67e2d0211e8f5c1b14f49061404a272d
-SHA1 (patch-ab) = f32b75e6be49c02eb6e5e196c718a573570de6e3
+SHA1 (patch-aa) = b8be29ee29c4c3cf7b7c8e4d3d5572b1dd3b29db
+SHA1 (patch-ab) = 7069667e197b66dfb36a34d4c1468df646d2a8e0
+SHA1 (patch-celldel_c) = bacd0943af1e921624d92cb84cf99f9eb11d5f5b
+SHA1 (patch-cellein_c) = b6b0600277eb3daba0a4aec2ab5bec42bcde2ced
+SHA1 (patch-cellget_c) = 638ea2bda48b7e8d0ae8d12156cdc218f6434924
+SHA1 (patch-cellmisc_c) = daaa396703e1ff13ae39c91893cae6122275a8f5
+SHA1 (patch-cellorg_c) = 63d896ebea88078de378ae8f35779c32276e5c06
+SHA1 (patch-cellrefr_c) = 4349f32f29f64dc53e2b5d12b64141980795e9fb
+SHA1 (patch-filekaio_c) = 92ef6420060a9f81f73584e6ecfc3a30d1dd11f5
+SHA1 (patch-filesteio_c) = 482fc6a7eadbb53962a72045bfb8510ec7321f0b
+SHA1 (patch-filetraio_c) = 5648f5cdb9749dba9c8fa6044345c57f32aebf0e
+SHA1 (patch-hadelmisc_c) = ae7b49b1b62b7397bc6d4903956d7696982a2b8c
+SHA1 (patch-hakasete_c) = 29a5796a38864f62e99f6f303c51da6f7c262f0d
+SHA1 (patch-halook_c) = bf6f0916edf872be522fe916629e4aaa643948fa
+SHA1 (patch-harefreshx_c) = d6c915f9c5fec26a3e0a6af8a075083067632fea
+SHA1 (patch-hi_c) = d3223a1f4959fab578313c79dab782be3d06beaa
+SHA1 (patch-kaio_c) = e88a88faa60c0c36be49de48986bb648c26f4dab
+SHA1 (patch-simbreak_c) = efb548e9e69f27ed085645c7ce755e69228d75b7
+SHA1 (patch-simget_c) = 6d4ffb1dbacb86bf3527e13e743abc6690223602
+SHA1 (patch-steio_c) = 4d01d2f4a8f1b62cd6be68100441ff57349defa2
+SHA1 (patch-traio_c) = ce4cb8626412893889d75f36c29704686812f3d8
