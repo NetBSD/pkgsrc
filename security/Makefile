@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.436 2012/06/02 14:32:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.437 2012/06/16 15:08:56 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -272,7 +272,6 @@ SUBDIR+=	pgp5
 SUBDIR+=	pgpdump
 SUBDIR+=	pgpenvelope
 SUBDIR+=	php-mcrypt
-SUBDIR+=	php-mhash
 SUBDIR+=	php-suhosin
 SUBDIR+=	pinentry
 SUBDIR+=	pinentry-gtk
