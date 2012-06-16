@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/14 10:30:02 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/16 05:28:07 taca Exp $
 #
 
 DISTNAME=	owncloud-4.0.1
@@ -21,6 +21,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.2.0:../../databases/php-pdo_sqlite
+
 .include "options.mk"
 
 WRKSRC=		${WRKDIR}/owncloud
