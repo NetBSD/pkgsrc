@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2000/09/03 14:56:28 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2012/06/16 04:00:54 dholland Exp $
+
+Configure for pkgsrc.
+
 --- makefile.orig	Wed Jul 14 04:05:14 1993
 +++ makefile	Tue Apr 25 21:02:22 2000
 @@ -7,19 +7,19 @@

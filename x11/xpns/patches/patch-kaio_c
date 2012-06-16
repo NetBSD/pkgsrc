@@ -1,0 +1,14 @@
+$NetBSD: patch-kaio_c,v 1.1 2012/06/16 04:00:54 dholland Exp $
+
+Use standard headers.
+
+--- kaio.c~	1993-07-14 11:02:15.000000000 +0000
++++ kaio.c
+@@ -10,6 +10,7 @@
+ ** DATUM : 14.03.93
+ **									
+ *************************************************************************/
++#include <stdlib.h>
+ #include	"kaio.h"
+ #include	"ka.h"
+ #include	"netsize.h"
