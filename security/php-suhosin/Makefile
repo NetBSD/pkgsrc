@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/16 02:59:48 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/16 22:34:23 dholland Exp $
 #
 
 MODNAME=		suhosin
@@ -15,7 +15,7 @@ COMMENT=		Advanced protection system for PHP installations
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # There is no patch for PHP 5.4 yet(?). 
-PHP_VERSIONS_ACCEPTED=	52 53
+PHP_VERSIONS_ACCEPTED=	53
 
 CONFIGURE_ARGS=		--enable-${MODNAME}
 
