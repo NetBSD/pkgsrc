@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/16 03:15:33 dholland Exp $
 bin/xmascot
-lib/X11/ja_JP.eucJP/app-defaults/XMascot
 lib/X11/app-defaults/XMascot
+lib/X11/ja_JP.eucJP/app-defaults/XMascot
 lib/X11/xmascot/aquarius.gif
 lib/X11/xmascot/aries.gif
 lib/X11/xmascot/canser.gif
