@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/02/07 06:42:56 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/06/16 04:00:53 dholland Exp $
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 cad
 MASTER_SITES=	http://robotics.ee.uwa.edu.au/pns/ftp/
 EXTRACT_SUFX=	.tar.Z
@@ -14,12 +14,13 @@ COMMENT=	Petri-Net Simulator for Xwindows
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-USE_X11BASE=	yes
 MAKE_FILE=	makefile
 BUILD_TARGET=	pns
 
-USE_TOOLS+=	csh:run
-REPLACE_CSH=	xpns
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	xpns
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
 
 INSTALLATION_DIRS=	bin lib/xpns share/doc/xpns
 
@@ -31,4 +32,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.net ${DESTDIR}${PREFIX}/share/doc/xpns/
 
 .include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

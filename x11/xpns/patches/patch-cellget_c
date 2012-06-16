@@ -1,0 +1,14 @@
+$NetBSD: patch-cellget_c,v 1.1 2012/06/16 04:00:54 dholland Exp $
+
+Use standard headers.
+
+--- cellget.c~	1993-07-14 11:02:14.000000000 +0000
++++ cellget.c
+@@ -16,6 +16,7 @@
+ 
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ 
+ static OBJECT	*pSte, *pTra, *pK;
