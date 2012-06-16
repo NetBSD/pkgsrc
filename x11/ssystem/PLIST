@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:06:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/16 03:15:31 dholland Exp $
 bin/ssystem
 share/doc/ssystem/LICENSE
 share/doc/ssystem/README
-share/ssystem/hires/README
-share/ssystem/ssystem.conf
-share/ssystem/stars.dat
-share/ssystem/vsop87.dat
 share/ssystem/asteroid.jpg
 share/ssystem/callisto.jpg
 share/ssystem/charon.jpg
@@ -14,6 +10,7 @@ share/ssystem/earth.jpg
 share/ssystem/earthcld.jpg
 share/ssystem/europa.jpg
 share/ssystem/ganymede.jpg
+share/ssystem/hires/README
 share/ssystem/io.jpg
 share/ssystem/jupiter.jpg
 share/ssystem/mars.jpg
@@ -25,9 +22,12 @@ share/ssystem/rhea.jpg
 share/ssystem/satrings.jpg
 share/ssystem/saturn.jpg
 share/ssystem/splash.jpg
+share/ssystem/ssystem.conf
+share/ssystem/stars.dat
 share/ssystem/sun.jpg
 share/ssystem/tethys.jpg
 share/ssystem/titan.jpg
 share/ssystem/triton.jpg
 share/ssystem/uranus.jpg
 share/ssystem/venus.jpg
+share/ssystem/vsop87.dat
