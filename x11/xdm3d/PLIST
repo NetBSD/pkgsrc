@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:06:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/16 03:15:32 dholland Exp $
 bin/xdm3d
 share/xdm3d/GiveConsole
 share/xdm3d/TakeConsole
 share/xdm3d/Xaccess
+share/xdm3d/Xresources
 share/xdm3d/Xservers
 share/xdm3d/Xsession
 share/xdm3d/Xsetup
 share/xdm3d/Xsetup_0
 share/xdm3d/chooser
 share/xdm3d/xdm-config
-share/xdm3d/Xresources
 @pkgdir share/xdm3d/authdir
 @unexec ${RM} -rf %D/share/xdm3d
