@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/05/03 07:02:57 taca Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/16 03:04:24 taca Exp $
 
 DISTNAME=	drupal-7.14
 CATEGORIES=	www
@@ -11,11 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../lang/php/phpversion.mk"
-
-.if ${PKG_PHP_VERSION} == "5"
-DEPENDS+=	php>=5.2.0<5.3:../../lang/php5
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
@@ -85,4 +80,5 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX}/${DRUPAL} \
 		\( -name '*.jpg' -o -name '*.png' \) | ${XARGS} ${CHMOD} 0644
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
