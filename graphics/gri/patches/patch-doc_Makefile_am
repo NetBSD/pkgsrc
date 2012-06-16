@@ -1,0 +1,83 @@
+$NetBSD: patch-doc_Makefile_am,v 1.1 2012/06/16 06:47:25 dholland Exp $
+
+- configure paths for pkgsrc; throw away OS-dependent path logic
+- use the right mkdir -p
+
+This patch needs to match patch-ac.
+
+--- doc/Makefile.am.orig	2010-06-08 12:00:57.000000000 +0000
++++ doc/Makefile.am
+@@ -4,43 +4,11 @@
+               VPATH = @srcdir@
+       info_TEXINFOS = gri.texi
+     PACKAGE_VERSION = @PACKAGE_VERSION@
+-if OS_IS_LINUX_REDHAT
+-            MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-           INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-            DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri-${PACKAGE_VERSION}
+-           HTML_DIR = $(DOC_DIR)/html
+-       EXAMPLES_DIR = $(DOC_DIR)/examples
+-else
+-if OS_IS_LINUX_DEBIAN
+-            MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-           INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-            DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri
+-           HTML_DIR = $(DOC_DIR)/html
+-       EXAMPLES_DIR = $(DOC_DIR)/examples
+-else
+-if OS_IS_FINK
+-            MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-           INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-            DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri-${PACKAGE_VERSION}
+-           HTML_DIR = $(DOC_DIR)/html
+-       EXAMPLES_DIR = $(DOC_DIR)/examples
+-else
+-if OS_IS_FREEBSD
+-            MAN_DIR = $(DESTDIR)$(prefix)/man/man1
+-           INFO_DIR = $(DESTDIR)$(prefix)/info
++            MAN_DIR = $(DESTDIR)$(prefix)/${PKGMANDIR}/man1
++           INFO_DIR = $(DESTDIR)$(prefix)/${PKGINFODIR}
+             DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri
+-           HTML_DIR = $(DOC_DIR)/html
++           HTML_DIR = $(DESTDIR)$(prefix)/share/doc/gri/html
+        EXAMPLES_DIR = $(DESTDIR)$(prefix)/share/examples/gri
+-else
+-            MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-           INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-            DOC_DIR = $(DESTDIR)$(prefix)/share/gri/doc
+-           HTML_DIR = $(DOC_DIR)/html
+-       EXAMPLES_DIR = $(DOC_DIR)/examples
+-endif
+-endif
+-endif
+-endif
+                  RM = rm -f
+ #           REFCARD = refcard
+ #       CMD_REFCARD = cmdrefcard
+@@ -111,7 +79,7 @@ html-install:
+ 	$(INSTALL_DATA) $(srcdir)/examples/*.gri      $(EXAMPLES_DIR)
+ 	$(INSTALL_DATA) $(srcdir)/examples/e*.ps      $(EXAMPLES_DIR)
+ 	$(INSTALL_SCRIPT) $(srcdir)/examples/FEM.pl  $(EXAMPLES_DIR)
+-	(cd $(HTML_DIR); rm -rf examples ; ln -sf ../examples)
++	(cd $(HTML_DIR); rm -rf examples ; ln -sf ../../../examples/gri examples)
+ 
+ # Sun Jun  8 11:40:52 UTC 2003  [Dan Kelley]
+ # This is commented-out because it's not used.  Later it will be deleted.
+@@ -196,7 +164,7 @@ if !OS_IS_LINUX_REDHAT
+ 	$(INSTALL_DATA) refcard.ps                       $(DOC_DIR)
+ 	$(INSTALL_DATA) cmdrefcard.ps                    $(DOC_DIR)
+ endif
+-	mkdir -m 755 -p                                    $(MAN_DIR)
++	$(MKDIR_P)                                       $(MAN_DIR)
+ 	cat $(srcdir)/../doc/$(gri_manpage_name) | sed -e s,VERSION,${PACKAGE_VERSION}, > tmp
+ 	$(INSTALL_DATA)    tmp                             $(MAN_DIR)/gri.1
+ 	$(RM) tmp
+@@ -204,7 +172,7 @@ endif
+ #	they are supposed to go, at least on linux/redhat systems [2003-jun-8 Dan Kelley]
+ 	$(INSTALL_DATA) $(srcdir)/../doc/gri_merge.1-skel  $(MAN_DIR)/gri_merge.1
+ 	$(INSTALL_DATA) $(srcdir)/../doc/gri_unpage.1-skel $(MAN_DIR)/gri_unpage.1
+-	mkdir -m 755 -p                                    $(INFO_DIR)
++	$(MKDIR_P)                                         $(INFO_DIR)
+ 	echo "INSTALLING INTO INFO_DIR WHICH IS [$(INFO_DIR)]"
+ if !OS_IS_FINK
+ 	$(INSTALL_DATA)    $(srcdir)/../doc/gri.info*      $(INFO_DIR)
