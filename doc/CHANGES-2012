@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2001 2012/06/16 15:19:55 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2002 2012/06/16 15:48:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3153,3 +3153,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed security/php-mhash [taca 2012-06-16]
 	Removed sysutils/php-fileinfo [taca 2012-06-16]
 	Removed lang/php5 [taca 2012-06-16]
+	Updated devel/ruby-fast_gettext to 0.6.8 [taca 2012-06-16]
