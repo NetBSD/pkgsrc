@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/22 15:23:25 taca Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/16 02:52:03 taca Exp $
 
 DISTNAME=	MDB2_Driver_sqlite-1.5.0b3
 CATEGORIES=	databases
@@ -8,6 +8,8 @@ HOMEPAGE=	http://pear.php.net/package/MDB2_Driver_sqlite
 COMMENT=	Sqlite MDB2 driver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PHP_VERSIONS_ACCEPTED=	52 53
 
 DEPENDS+=       ${PHP_PKG_PREFIX}-sqlite-[0-9]*:../../databases/php-sqlite
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.5:../../databases/pear-MDB2
