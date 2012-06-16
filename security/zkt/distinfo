@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/03/12 16:46:05 pettai Exp $
+$NetBSD: distinfo,v 1.3 2012/06/16 22:55:26 pettai Exp $
 
-SHA1 (zkt-1.0.tar.gz) = c4ecf607854943dab9cb05478b5b4a09cfec0acc
-RMD160 (zkt-1.0.tar.gz) = 9a52acd41ac136907f0050bd4258fb2040e40adc
-Size (zkt-1.0.tar.gz) = 331260 bytes
+SHA1 (zkt-1.1.0.tar.gz) = 3adbeba2547f971259c3e07fa4b8166daa3bf353
+RMD160 (zkt-1.1.0.tar.gz) = 35629aa8bd31bc061f60f14abe3bf94b19041b4b
+Size (zkt-1.1.0.tar.gz) = 343811 bytes
