@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST.stats,v 1.4 2012/02/23 17:45:32 pettai Exp $
+@comment $NetBSD: PLIST.stats,v 1.5 2012/06/16 20:20:15 pettai Exp $
+bin/opendkim-spam
 bin/opendkim-stats
 man/man1/opendkim-spam.1
 man/man8/opendkim-stats.8
