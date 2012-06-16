@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/04/15 05:54:57 markd Exp $
+$NetBSD: distinfo,v 1.4 2012/06/16 04:45:31 markd Exp $
 
-SHA1 (ksaneplugin-4.8.2.tar.xz) = 04a75bc260f0780a9c9dcbdd6b75418168ad5631
-RMD160 (ksaneplugin-4.8.2.tar.xz) = 5aa88b32d2383d22be6d1e2848b36415cec4578f
-Size (ksaneplugin-4.8.2.tar.xz) = 13272 bytes
+SHA1 (ksaneplugin-4.8.4.tar.xz) = b7a3204ef27f04bffca0fd77d84bd46b236687b7
+RMD160 (ksaneplugin-4.8.4.tar.xz) = 738fb97cc2526dda34e9960a4130f25adc33220f
+Size (ksaneplugin-4.8.4.tar.xz) = 13668 bytes

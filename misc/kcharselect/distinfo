@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/15 05:54:55 markd Exp $
+$NetBSD: distinfo,v 1.3 2012/06/16 04:45:33 markd Exp $
 
-SHA1 (kcharselect-4.8.2.tar.xz) = 527d28bf3bb22d38665a006ab835ff6d75f592a4
-RMD160 (kcharselect-4.8.2.tar.xz) = c7e1eabba950178b2a447d9990acaf252d49961c
-Size (kcharselect-4.8.2.tar.xz) = 86196 bytes
+SHA1 (kcharselect-4.8.4.tar.xz) = 0e00a25ca3c813ab335cd12ff0ec4b1f22c8076c
+RMD160 (kcharselect-4.8.4.tar.xz) = 1523d2803f25590996c6f50aafd72b703ea0c67f
+Size (kcharselect-4.8.4.tar.xz) = 86828 bytes

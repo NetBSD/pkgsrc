@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/04/15 05:55:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/06/16 04:45:39 markd Exp $
 man/nl/man1/adddebug.1
 man/nl/man1/ark.1
 man/nl/man1/cheatmake.1
@@ -330,6 +330,9 @@ share/doc/kde/HTML/nl/kcontrol/joystick/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kamera/common
 share/doc/kde/HTML/nl/kcontrol/kamera/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kamera/index.docbook
+share/doc/kde/HTML/nl/kcontrol/kcm_ssl/common
+share/doc/kde/HTML/nl/kcontrol/kcm_ssl/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/kcm_ssl/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kcmaccess/common
 share/doc/kde/HTML/nl/kcontrol/kcmaccess/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kcmaccess/index.docbook
@@ -363,6 +366,9 @@ share/doc/kde/HTML/nl/kcontrol/keys/index.docbook
 share/doc/kde/HTML/nl/kcontrol/kgamma/common
 share/doc/kde/HTML/nl/kcontrol/kgamma/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/kgamma/index.docbook
+share/doc/kde/HTML/nl/kcontrol/khotkeys/common
+share/doc/kde/HTML/nl/kcontrol/khotkeys/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/khotkeys/index.docbook
 share/doc/kde/HTML/nl/kcontrol/khtml-adblock/common
 share/doc/kde/HTML/nl/kcontrol/khtml-adblock/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/khtml-adblock/index.docbook
@@ -404,6 +410,9 @@ share/doc/kde/HTML/nl/kcontrol/language/index.docbook
 share/doc/kde/HTML/nl/kcontrol/mouse/common
 share/doc/kde/HTML/nl/kcontrol/mouse/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/mouse/index.docbook
+share/doc/kde/HTML/nl/kcontrol/multiplemonitors/common
+share/doc/kde/HTML/nl/kcontrol/multiplemonitors/index.cache.bz2
+share/doc/kde/HTML/nl/kcontrol/multiplemonitors/index.docbook
 share/doc/kde/HTML/nl/kcontrol/nepomuk/common
 share/doc/kde/HTML/nl/kcontrol/nepomuk/index.cache.bz2
 share/doc/kde/HTML/nl/kcontrol/nepomuk/index.docbook
@@ -1161,6 +1170,9 @@ share/doc/kde/HTML/nl/step/tutorials.docbook
 share/doc/kde/HTML/nl/sweeper/common
 share/doc/kde/HTML/nl/sweeper/index.cache.bz2
 share/doc/kde/HTML/nl/sweeper/index.docbook
+share/doc/kde/HTML/nl/system-config-printer-kde/common
+share/doc/kde/HTML/nl/system-config-printer-kde/index.cache.bz2
+share/doc/kde/HTML/nl/system-config-printer-kde/index.docbook
 share/doc/kde/HTML/nl/systemsettings/common
 share/doc/kde/HTML/nl/systemsettings/index.cache.bz2
 share/doc/kde/HTML/nl/systemsettings/index.docbook

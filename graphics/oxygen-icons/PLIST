@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/04/15 05:54:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/06/16 04:45:29 markd Exp $
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
 share/icons/oxygen/128x128/actions/appointment-new.png
@@ -135,6 +135,7 @@ share/icons/oxygen/128x128/apps/knewsticker.png
 share/icons/oxygen/128x128/apps/knotes.png
 share/icons/oxygen/128x128/apps/kolf.png
 share/icons/oxygen/128x128/apps/konqueror.png
+share/icons/oxygen/128x128/apps/kontact-import-wizard.png
 share/icons/oxygen/128x128/apps/kontact.png
 share/icons/oxygen/128x128/apps/konversation.png
 share/icons/oxygen/128x128/apps/korgac.png
@@ -3246,6 +3247,7 @@ share/icons/oxygen/256x256/apps/kig.png
 share/icons/oxygen/256x256/apps/kivio.png
 share/icons/oxygen/256x256/apps/kmail2.png
 share/icons/oxygen/256x256/apps/konqueror.png
+share/icons/oxygen/256x256/apps/kontact-import-wizard.png
 share/icons/oxygen/256x256/apps/korgac.png
 share/icons/oxygen/256x256/apps/kplato.png
 share/icons/oxygen/256x256/apps/kpresenter.png
@@ -6220,6 +6222,7 @@ share/icons/oxygen/64x64/apps/knewsticker.png
 share/icons/oxygen/64x64/apps/knotes.png
 share/icons/oxygen/64x64/apps/kolf.png
 share/icons/oxygen/64x64/apps/konqueror.png
+share/icons/oxygen/64x64/apps/kontact-import-wizard.png
 share/icons/oxygen/64x64/apps/kontact.png
 share/icons/oxygen/64x64/apps/konversation.png
 share/icons/oxygen/64x64/apps/korgac.png
