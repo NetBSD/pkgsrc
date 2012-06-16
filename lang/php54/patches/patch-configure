@@ -1,0 +1,54 @@
+$NetBSD: patch-configure,v 1.1 2012/06/16 05:21:55 taca Exp $
+
+--- configure.orig	2012-05-03 17:11:27.000000000 +0000
++++ configure
+@@ -23334,7 +23334,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -25333,7 +25333,7 @@ $as_echo "yes" >&6; }
+     PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
+ 
+ 
+-    for header_file in ext/sqlite3/libsqlite/sqlite3.h; do
++    for header_file; do
+ 
+ 
+   unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
+@@ -36571,7 +36571,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -51090,7 +51090,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -105056,12 +105056,7 @@ old_CC=$CC
+ if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
+   CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
+   INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
+-  cat >meta_ccld<<EOF
+-#! /bin/sh
+-exec $CC $ac_cv_pthreads_cflags \$@
+-EOF
+-  CC="$abs_builddir/meta_ccld"
+-  chmod +x meta_ccld
++  CPPFLAGS="$CPPFLAGS $ac_cv_pthreads_cflags"
+ fi
+ 
+ if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
