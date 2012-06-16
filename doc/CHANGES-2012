@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1998 2012/06/16 07:47:20 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1999 2012/06/16 12:28:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3065,3 +3065,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Added meta-pkgs/php54-extensions version 5.4.4 [taca 2012-06-16]
 	Updated graphics/gri to 2.12.23nb1 [dholland 2012-06-16]
 	Updated devel/electric-fence to 2.1.13.0.1nb1 [dholland 2012-06-16]
+	Removed www/contao210-translations [taca 2012-06-16]
+	Removed www/contao210-example [taca 2012-06-16]
+	Removed www/contao210 [taca 2012-06-16]
