@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.translations,v 1.2 2012/03/22 14:59:38 taca Exp $
+# $NetBSD: Makefile.translations,v 1.3 2012/06/16 13:20:01 taca Exp $
 #
-#used by www/contao210-translations/Makefile
+#used by www/contao211-translations/Makefile
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
@@ -19,17 +19,19 @@ DEPENDS+=	contao${CT_VER}>=${CT_PKGVER}:../../www/contao${CT_VER}
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+PLIST_SRC=	${WRKDIR}/PLIST
 
 INSTALL_TEMPLATES?=	${.CURDIR}/../../www/contao/INSTALL.translations
-SEPARATED_MODULES?=	development dfGallery glossary memberlist pun_bridge
 
 pre-install:
+	${RM} -f ${WRKSRC}/system/modules/backend/languages/*/tl_task.php
 	${FIND} ${WRKSRC}/system/modules \
 		\( -name "*.orig*" -o -name tl_flash.php \) -exec ${RM} -f {} \;
-.for d in ${SEPARATED_MODULES}
-	${RM} -fr ${WRKSRC}/system/modules/${d}
-.endfor
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${CT_WEBDIR}
+	${SED} -e 1q PLIST.master > ${PLIST_SRC}
+	for lang in ${CT_LANGUAGES}; do \
+		${SED} -e 1d -e "s|@lang@|$${lang}|" PLIST.master; \
+	done | ${SORT} >> ${PLIST_SRC}
