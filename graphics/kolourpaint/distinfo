@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/04/15 05:54:56 markd Exp $
+$NetBSD: distinfo,v 1.4 2012/06/16 04:45:30 markd Exp $
 
-SHA1 (kolourpaint-4.8.2.tar.xz) = 1a51dce10d29f5694216d99cb7c9b0964181fe50
-RMD160 (kolourpaint-4.8.2.tar.xz) = 87d8a47f3d240bbdbddc2d63fc58acd03cb6e875
-Size (kolourpaint-4.8.2.tar.xz) = 1181128 bytes
+SHA1 (kolourpaint-4.8.4.tar.xz) = 1dc706ed29339df9fcc68ee606588941319bbf09
+RMD160 (kolourpaint-4.8.4.tar.xz) = e6dc8533c2f79fa20efb6f876161b4fc63d1a52e
+Size (kolourpaint-4.8.4.tar.xz) = 1193560 bytes
