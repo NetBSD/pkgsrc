@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/05/31 12:12:54 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/06/16 03:05:44 taca Exp $
 
 DISTNAME=	moodle-2.1.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moodle/}
 EXTRACT_SUFX=	.tgz
@@ -19,7 +20,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.2.0:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.2.0:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=2.0.0:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
 
 EGDIR=			share/examples/moodle
