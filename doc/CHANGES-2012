@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2014 2012/06/16 21:07:52 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2015 2012/06/16 21:26:48 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3167,3 +3167,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/pam-yubico to 2.12 [pettai 2012-06-16]
 	Added editors/emacs24 version 24.1 [dholland 2012-06-16]
 	Added editors/emacs24-nox11 version 24.1 [dholland 2012-06-16]
+	Updated security/dnssec-tools to 1.12.2 [pettai 2012-06-16]
