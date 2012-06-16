@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_stdio_fgetline_c,v 1.1 2012/06/16 08:55:55 dholland Exp $
+
+Fix symbol name conflict with POSIX getline().
+
+--- lib/stdio/fgetline.c~	2000-12-03 11:19:29.000000000 +0000
++++ lib/stdio/fgetline.c
+@@ -64,7 +64,7 @@ fgetline(f, buf, len)
+ }
+ 
+ EXPORT int
+-getline(buf, len)
++get_line(buf, len)
+ 	char	*buf;
+ 	int	len;
+ {
