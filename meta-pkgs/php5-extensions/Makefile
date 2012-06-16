@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/04/15 22:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/06/16 05:33:16 taca Exp $
 
 DISTNAME=	php-extensions-${PHP_BASE_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,68 +10,61 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.php.net/
 COMMENT=	"meta-package" for the PHP 5.2 HTML-embedded scripting language
 
-# base PHP 5.2.x package
-DEPENDS+=	php>=${PHP_BASE_VERS}<5.3:../../lang/php5
-DEPENDS+=	${APACHE_PKG_PREFIX}-php5>=${PHP_BASE_VERS}<5.3:../../www/ap-php
-
-# extensions buildable with both PHP 5.2 and PHP 5.3
-DEPENDS+=	php5-apc>=${PHP_BASE_VERS}<5.3:../../www/php-apc
-DEPENDS+=	php5-bcmath>=${PHP_BASE_VERS}<5.3:../../math/php-bcmath
-DEPENDS+=	php5-bz2>=${PHP_BASE_VERS}<5.3:../../archivers/php-bz2
-DEPENDS+=	php5-calendar>=${PHP_BASE_VERS}<5.3:../../time/php-calendar
-DEPENDS+=	php5-curl>=${PHP_BASE_VERS}<5.3:../../www/php-curl
-DEPENDS+=	php5-dba>=${PHP_BASE_VERS}<5.3:../../databases/php-dba
-DEPENDS+=	php5-dom>=${PHP_BASE_VERS}<5.3:../../textproc/php-dom
-DEPENDS+=	php5-eaccelerator>=${PHP_BASE_VERS}<5.3:../../www/php-eaccelerator
-DEPENDS+=	php5-exif>=${PHP_BASE_VERS}<5.3:../../graphics/php-exif
-DEPENDS+=	php5-enchant>=${PHP_BASE_VERS}<5.3:../../textproc/php-enchant
-DEPENDS+=	php5-ftp>=${PHP_BASE_VERS}<5.3:../../net/php-ftp
-DEPENDS+=	php5-gd>=${PHP_BASE_VERS}<5.3:../../graphics/php-gd
-DEPENDS+=	php5-gettext>=${PHP_BASE_VERS}<5.3:../../devel/php-gettext
-DEPENDS+=	php5-gmp>=${PHP_BASE_VERS}<5.3:../../devel/php-gmp
-DEPENDS+=	php5-iconv>=${PHP_BASE_VERS}<5.3:../../converters/php-iconv
-DEPENDS+=	php5-imap>=${PHP_BASE_VERS}<5.3:../../mail/php-imap
-DEPENDS+=	php5-intl>=${PHP_BASE_VERS}<5.3:../../textproc/php-intl
-DEPENDS+=	php5-json>=${PHP_BASE_VERS}<5.3:../../textproc/php-json
-DEPENDS+=	php5-ldap>=${PHP_BASE_VERS}<5.3:../../databases/php-ldap
-DEPENDS+=	php5-mbstring>=${PHP_BASE_VERS}<5.3:../../converters/php-mbstring
-DEPENDS+=	php5-mcrypt>=${PHP_BASE_VERS}<5.3:../../security/php-mcrypt
-DEPENDS+=	php5-mssql>=${PHP_BASE_VERS}<5.3:../../databases/php-mssql
-DEPENDS+=	php5-mysql>=${PHP_BASE_VERS}<5.3:../../databases/php-mysql
-DEPENDS+=	php5-mysqli>=${PHP_BASE_VERS}<5.3:../../databases/php-mysqli
+DEPENDS+=	php>=${PHP_BASE_VERS}<${NEXT_VERS}:${PHPPKGSRCDIR}
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}<${NEXT_VERS}:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=${PHP_BASE_VERS}<${NEXT_VERS}:../../math/php-bcmath
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_BASE_VERS}<${NEXT_VERS}:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=${PHP_BASE_VERS}<${NEXT_VERS}:../../time/php-calendar
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}<${NEXT_VERS}:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-dba>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-dba
+DEPENDS+=	${PHP_PKG_PREFIX}-dbase>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-dbase
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}<${NEXT_VERS}:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-ftp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-ftp
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}<${NEXT_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-gmp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-gmp
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}<${NEXT_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../mail/php-imap
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}<${NEXT_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}<${NEXT_VERS}:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-mhash>=${PHP_BASE_VERS}<${NEXT_VERS}:../../security/php-mhash
+DEPENDS+=	${PHP_PKG_PREFIX}-ming>=${PHP_BASE_VERS}<${NEXT_VERS}:../../multimedia/php-ming
+DEPENDS+=	${PHP_PKG_PREFIX}-mssql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-mssql
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-mysqli
 # broken
-# DEPENDS+=	php5-odbc>=${PHP_BASE_VERS}<5.3:../../databases/php-odbc
-DEPENDS+=	php5-pcntl>=${PHP_BASE_VERS}<5.3:../../devel/php-pcntl
-DEPENDS+=	php5-pdflib>=${PHP_BASE_VERS}<5.3:../../print/php-pdflib
-DEPENDS+=	php5-pdo>=${PHP_BASE_VERS}<5.3:../../databases/php-pdo
-DEPENDS+=	php5-pdo_dblib>=${PHP_BASE_VERS}<5.3:../../databases/php-pdo_dblib
-DEPENDS+=	php5-pdo_mysql>=${PHP_BASE_VERS}<5.3:../../databases/php-pdo_mysql
-DEPENDS+=	php5-pdo_pgsql>=${PHP_BASE_VERS}<5.3:../../databases/php-pdo_pgsql
-DEPENDS+=	php5-pdo_sqlite>=${PHP_BASE_VERS}<5.3:../../databases/php-pdo_sqlite
-DEPENDS+=	php5-pgsql>=${PHP_BASE_VERS}<5.3:../../databases/php-pgsql
-DEPENDS+=	php5-posix>=${PHP_BASE_VERS}<5.3:../../devel/php-posix
-DEPENDS+=	php5-shmop>=${PHP_BASE_VERS}<5.3:../../devel/php-shmop
-DEPENDS+=	php5-snmp>=${PHP_BASE_VERS}<5.3:../../net/php-snmp
-DEPENDS+=	php5-soap>=${PHP_BASE_VERS}<5.3:../../net/php-soap
-DEPENDS+=	php5-sockets>=${PHP_BASE_VERS}<5.3:../../net/php-sockets
-DEPENDS+=	php5-sqlite>=${PHP_BASE_VERS}<5.3:../../databases/php-sqlite
-DEPENDS+=	php5-sysvmsg>=${PHP_BASE_VERS}<5.3:../../devel/php-sysvmsg
-DEPENDS+=	php5-sysvsem>=${PHP_BASE_VERS}<5.3:../../devel/php-sysvsem
-DEPENDS+=	php5-sysvshm>=${PHP_BASE_VERS}<5.3:../../devel/php-sysvshm
-DEPENDS+=	php5-tidy>=${PHP_BASE_VERS}<5.3:../../www/php-tidy
-DEPENDS+=	php5-wddx>=${PHP_BASE_VERS}<5.3:../../textproc/php-wddx
-DEPENDS+=	php5-xsl>=${PHP_BASE_VERS}<5.3:../../textproc/php-xsl
-DEPENDS+=	php5-xmlrpc>=${PHP_BASE_VERS}<5.3:../../net/php-xmlrpc
-DEPENDS+=	php5-zip>=${PHP_BASE_VERS}<5.3:../../archivers/php-zip
-DEPENDS+=	php5-zlib>=${PHP_BASE_VERS}<5.3:../../archivers/php-zlib
+# DEPENDS+=	${PHP_PKG_PREFIX}-odbc>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-odbc
+DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-pcntl
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_dblib>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pdo_dblib
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pdo_pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pdo_sqlite
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-posix
+DEPENDS+=	${PHP_PKG_PREFIX}-pspell>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-pspell
+DEPENDS+=	${PHP_PKG_PREFIX}-shmop>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-shmop
+DEPENDS+=	${PHP_PKG_PREFIX}-snmp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-snmp
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-sqlite>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-sqlite
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvmsg>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-sysvmsg
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-sysvsem
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvshm>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-sysvshm
+DEPENDS+=	${PHP_PKG_PREFIX}-tidy>=${PHP_BASE_VERS}<${NEXT_VERS}:../../www/php-tidy
+DEPENDS+=	${PHP_PKG_PREFIX}-wddx>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-wddx
+DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=${PHP_BASE_VERS}<${NEXT_VERS}:../../net/php-xmlrpc
+DEPENDS+=	${PHP_PKG_PREFIX}-xsl>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-xsl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}<${NEXT_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}<${NEXT_VERS}:../../archivers/php-zlib
 
-# PHP 5.2.x only extensions
-DEPENDS+=	php5-dbase>=${PHP_BASE_VERS}<5.3:../../databases/php-dbase
-DEPENDS+=	php5-dbx>=${PHP_BASE_VERS}<5.3:../../databases/php-dbx
-DEPENDS+=	php5-mhash>=${PHP_BASE_VERS}<5.3:../../security/php-mhash
+NEXT_VERS=		5.3
+PHP_VERSION_REQD=	52
+META_PACKAGE=		yes
 
-META_PACKAGE=	yes
-
-.include "../../lang/php5/Makefile.common"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
