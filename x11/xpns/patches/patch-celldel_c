@@ -1,0 +1,14 @@
+$NetBSD: patch-celldel_c,v 1.1 2012/06/16 04:00:54 dholland Exp $
+
+Use standard headers.
+
+--- celldel.c~	1993-07-14 11:02:14.000000000 +0000
++++ celldel.c
+@@ -17,6 +17,7 @@
+ #include	"cellrefr.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ 
+ #define CellOListToRList( v)   do {					\
