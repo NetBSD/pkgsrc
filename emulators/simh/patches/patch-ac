@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2010/05/28 13:21:26 tsutsui Exp $
+$NetBSD: patch-ac,v 1.7 2012/06/16 14:58:36 abs Exp $
 
---- sim_console.c.orig	2008-11-20 04:50:44.000000000 +0000
+--- sim_console.c.orig	2012-03-18 08:40:08.000000000 +0000
 +++ sim_console.c
-@@ -429,7 +429,7 @@
+@@ -430,7 +430,7 @@ for (i = 0; i < sec; i++) {             
      if (tmxr_poll_conn (&sim_con_tmxr) >= 0) {          /* poll connect */
          sim_con_ldsc.rcve = 1;                          /* rcv enabled */
          if (i) {                                        /* if delayed */
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.6 2010/05/28 13:21:26 tsutsui Exp $
              fflush (stdout);
              }
          return SCPE_OK;                                 /* ready to proceed */
-@@ -438,7 +438,7 @@
+@@ -439,7 +439,7 @@ for (i = 0; i < sec; i++) {             
      if ((c == SCPE_STOP) || stop_cpu)
          return SCPE_STOP;
      if ((i % 10) == 0) {                                /* Status every 10 sec */
