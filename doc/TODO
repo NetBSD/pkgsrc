@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11296 2012/06/16 03:16:16 dholland Exp $
+$NetBSD: TODO,v 1.11297 2012/06/16 04:02:57 dholland Exp $
 
 Suggested new packages
 ======================
@@ -521,7 +521,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doclifter-2.7
 	o dos2unix-6.0
 	o doxygen-1.8.1.1
-	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2012.055
