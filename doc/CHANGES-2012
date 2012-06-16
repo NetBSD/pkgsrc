@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2005 2012/06/16 16:06:29 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2006 2012/06/16 18:34:49 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3157,3 +3157,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-gettext_i18n_rails to 0.6.5 [taca 2012-06-16]
 	Added devel/ruby-parseconfig version 0.5.2 [taca 2012-06-16]
 	Updated devel/php-mode to 1.5.0 [taca 2012-06-16]
+	Updated pkgtools/pkg_summary-utils to 0.58.1 [cheusov 2012-06-16]
