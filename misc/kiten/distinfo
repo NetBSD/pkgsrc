@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/15 05:54:52 markd Exp $
+$NetBSD: distinfo,v 1.3 2012/06/16 04:45:33 markd Exp $
 
-SHA1 (kiten-4.8.2.tar.xz) = db608b5550281e8ca0097e3c4ed15abe6018a002
-RMD160 (kiten-4.8.2.tar.xz) = 7cead162f7e3a56649c352619b521a7d27a5c348
-Size (kiten-4.8.2.tar.xz) = 12036740 bytes
+SHA1 (kiten-4.8.4.tar.xz) = f7b5f9b6cbbda37c539f1ffce9bd905f0be3658e
+RMD160 (kiten-4.8.4.tar.xz) = de8f2403916c25ec1eb36dbe5f2195c0802a2894
+Size (kiten-4.8.4.tar.xz) = 12039428 bytes
