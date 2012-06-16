@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/03/20 16:27:40 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/16 22:15:23 pettai Exp $
 #
 
-DISTNAME=	pam-krb5-4.5
+DISTNAME=	pam-krb5-4.6
 CATEGORIES=	security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
