@@ -1,4 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2012/03/07 16:29:45 adam Exp $
+$NetBSD: patch-ac,v 1.5 2012/06/16 06:47:25 dholland Exp $
+
+- configure paths for pkgsrc; throw away OS-dependent path logic
+- use the right mkdir -p
+
+This patch needs to match patch-doc_Makefile_am.
 
 --- doc/Makefile.in.orig	2011-07-06 14:09:14.000000000 +0000
 +++ doc/Makefile.in
