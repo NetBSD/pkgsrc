@@ -1,0 +1,80 @@
+# $NetBSD: Makefile.common,v 1.1 2012/06/16 21:03:41 dholland Exp $
+#
+# used by editors/emacs24/Makefile
+# used by editors/emacs24-nox11/Makefile
+
+DISTNAME=	emacs-${EMACS_VERSION}
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+COMMENT=	GNU editing macros (editor)
+LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
+MAKE_JOBS_SAFE=		no
+
+CONFLICTS+=	emacs-nox11-[0-9]*
+
+GNU_CONFIGURE=	yes
+INFO_FILES=	yes
+USE_TOOLS+=	gmake makeinfo gzip
+
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
+
+SETGIDGAME=	yes
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		GAMEDATAMODE
+PLIST_SRC+=		../../editors/emacs24/PLIST
+
+.include "../../editors/emacs24/version.mk"
+
+BUILD_TARGET=		bootstrap
+EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
+PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
+
+REPLACE_PERL=		lib-src/grep-changelog
+CHECK_INTERPRETER_SKIP=	bin/grep-changelog
+
+MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+
+SPECIAL_PERMS+=		libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}/update-game-score ${SETGID_GAMES_PERMS}
+
+# build PATH in the dumped emacs is not a problem
+CHECK_WRKREF_SKIP+=	bin/emacs
+CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "Darwin")
+# Disable address randomization to fix build with Xcode 4.1.  This is from
+# upstream bug #8395.  Details in:
+# http://lists.gnu.org/archive/html/emacs-bug-tracker/2011-07/msg00445.html
+CFLAGS+=		-fno-pie
+.endif
+
+.if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)
+CPPFLAGS+=	-DTERMINFO
+.elif ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
+.include "../../mk/curses.buildlink3.mk"
+.else
+.include "../../mk/termcap.buildlink3.mk"
+.endif
+
+.include "../../mk/oss.buildlink3.mk"
+
+post-extract:
+	cp ${.CURDIR}/../../editors/emacs/files/site-init.el ${WRKSRC}/lisp
+	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
+	${CHMOD} -R go-w ${WRKSRC}
+	${CHMOD} ugo+rx ${WRKSRC}/leim/ja-dic ${WRKSRC}/leim/quail

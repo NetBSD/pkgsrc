@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2012/06/16 21:03:42 dholland Exp $
+
+Add DrgonFly
+
+--- configure.in.orig	2012-06-09 13:15:01.000000000 +0900
++++ configure.in	2012-06-09 13:18:11.000000000 +0900
+@@ -469,6 +469,14 @@
+       vax-*)       machine=vax ;;
+     esac
+   ;;
++  ## DragonFly ports
++  *-*-dragonfly*)
++    opsys=dragonfly
++    case "${canonical}" in
++      i[3456]86-*-dragonfly*)     machine=intel386 ;;
++      amd64-*-dragonfly*|x86_64-*-dragonfly*) machine=amdx86-64 ;;
++    esac
++  ;;
+ 
+   ## OpenBSD ports
+   *-*-openbsd* )
