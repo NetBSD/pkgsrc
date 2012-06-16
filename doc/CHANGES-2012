@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1988 2012/06/15 14:05:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1989 2012/06/16 01:28:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3052,3 +3052,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/ruby-spreadsheet to 0.7.2 [taca 2012-06-15]
 	Updated www/ruby-journey to 1.0.4 [taca 2012-06-15]
 	Updated time/xtu to 1.3 [wiz 2012-06-15]
+	Updated lang/php53 to 5.3.14 [taca 2012-06-16]
