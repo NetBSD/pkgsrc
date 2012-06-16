@@ -1,0 +1,15 @@
+$NetBSD: patch-sformat_diskfmt_c,v 1.1 2012/06/16 08:55:55 dholland Exp $
+
+Fix symbol name conflict with POSIX getline().
+
+--- sformat/diskfmt.c	Sat Jun 16 04:48:53 2012 -0400
++++ sformat/diskfmt.c	Sat Jun 16 04:50:37 2012 -0400
+@@ -1014,7 +1014,7 @@
+ 	}
+ 
+ 	printf("Enter filename for database prototype [proto.dat]: ");flush();
+-	(void)getline(name, sizeof(name));
++	(void)get_line(name, sizeof(name));
+ 	if (name[0] == '\0')
+ 		strcpy(name, "proto.dat");
+ 	if (streql(name, "-"))

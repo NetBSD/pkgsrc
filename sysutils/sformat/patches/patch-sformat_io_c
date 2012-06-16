@@ -1,0 +1,33 @@
+$NetBSD: patch-sformat_io_c,v 1.1 2012/06/16 08:55:55 dholland Exp $
+
+Fix symbol name conflict with POSIX getline().
+
+--- sformat/io.c	Sat Jun 16 04:48:53 2012 -0400
++++ sformat/io.c	Sat Jun 16 04:50:37 2012 -0400
+@@ -245,7 +245,7 @@
+ 		(*prt)(s, *lp, mini, maxi, dp);
+ 		flush();
+ 		line[0] = '\0';
+-		if (getline(line, 80) == EOF)
++		if (get_line(line, 80) == EOF)
+ 			exit(EX_BAD);
+ 
+ 		linep = skipwhite(line);
+@@ -332,7 +332,7 @@
+ 	printf("%r", form, args);
+ 	va_end(args);
+ 	flush();
+-	if (getline(okbuf, sizeof(okbuf)) == EOF)
++	if (get_line(okbuf, sizeof(okbuf)) == EOF)
+ 		exit(EX_BAD);
+ 	if (okbuf[0] == '?') {
+ 		printf("Enter 'y', 'Y', 'yes' or 'YES' if you agree with the previous asked question.\n");
+@@ -412,7 +412,7 @@
+ 		printf("%s [%s]:", s, csp->s_name);
+ 		flush();
+ 		line[0] = '\0';
+-		if (getline(line, 80) == EOF)
++		if (get_line(line, 80) == EOF)
+ 			exit(EX_BAD);
+ 
+ 		linep = skipwhite(line);

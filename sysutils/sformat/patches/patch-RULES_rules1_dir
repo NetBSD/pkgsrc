@@ -1,0 +1,15 @@
+$NetBSD: patch-RULES_rules1_dir,v 1.1 2012/06/16 08:55:55 dholland Exp $
+
+Makefiles should stop on error.
+
+--- RULES/rules1.dir~	2000-12-01 16:13:17.000000000 +0000
++++ RULES/rules1.dir
+@@ -32,7 +32,7 @@ $(ALLTARGETS):
+ 		(								\
+ 		echo "	==> MAKING \"$@\" ON SUBDIRECTORY \"$(CURDIR)/$$DIR\"";\
+ 		if [ -d ./$$DIR -a -r ./$$DIR/Makefile ] ; then			\
+-			cd ./$$DIR;$(MAKE) $(MAKEMACS) XARCH=$(XARCH) DIRNAME=$(CURDIR)/$$DIR $@;		\
++			cd ./$$DIR;$(MAKE) $(MAKEMACS) XARCH=$(XARCH) DIRNAME=$(CURDIR)/$$DIR $@ || exit 1;	\
+ 		else								\
+ 			echo "NOTICE: Partial source ($(CURDIR)/$$DIR) missing";\
+ 		fi								\
