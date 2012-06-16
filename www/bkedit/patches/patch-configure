@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2012/06/16 09:04:02 dholland Exp $
+
+The libxml2 version test in this thing believes that checking that
+version A.B.C is at least D.E.F is to be done by checking A >= D, B >=
+E, *and* C >= F. Therefore, it believes that the most recent libxml2
+update, which is 2.8.0, is less than its minimum requirement 2.4.1.
+
+Rather than trying to repair this curious logic, just patch the test
+to always succeed, as pkgsrc always provides a suitable libxml2.
+
+--- configure~	2003-11-29 13:14:14.000000000 +0000
++++ configure
+@@ -236,7 +236,7 @@ xml2_major_version=`$XML2_CONFIG --versi
+ xml2_minor_version=`$XML2_CONFIG --version | sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\2/'`
+ xml2_micro_version=`$XML2_CONFIG --version | sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\3/'`
+ 
+-XML2_VERSION="no"
++XML2_VERSION="yes"
+ if [ $xml2_major_version -ge $maj ]; then
+ 	if [ $xml2_minor_version -ge $min ]; then
+ 		if [ $xml2_micro_version -ge $mic ]; then
