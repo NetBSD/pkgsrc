@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.15 2011/03/23 15:15:20 minskim Exp $
+# $NetBSD: modules.mk,v 1.16 2012/06/16 21:04:56 dholland Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -41,7 +41,7 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs24,
+#			emacs25, emacs24, emacs24nox,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
@@ -63,12 +63,12 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs24,
+#			emacs25, emacs24, emacs24nox,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
-#			emacs24,
+#			emacs25, emacs24, emacs24nox,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
@@ -134,7 +134,7 @@
 #		Description:
 #			Emacs major version.
 #		Possible values:
-#			20, 21, 22, 23, 24, <integers more than that in the future>
+#			20, 21, 22, 23, 24, 25, <integers more than that in the future>
 #
 #	EMACS_VERSION_MINOR
 #		Description:
@@ -180,10 +180,10 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs23,emacs23nox,emacs22,emacs22nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs25,emacs24,emacs24nox,emacs23,emacs23nox,emacs22,emacs22nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs23,emacs23nox,emacs22,emacs22nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs25,emacs24,emacs24nox,emacs23,emacs23nox,emacs22,emacs22nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
@@ -223,7 +223,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs22 emacs22nox emacs23 emacs23nox \
-	emacs24 \
+	emacs24 emacs24nox emacs25 \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -234,7 +234,9 @@ _EMACS_PKGDIR_MAP= \
 	emacs22nox@../../editors/emacs22-nox11 \
 	emacs23@../../editors/emacs \
 	emacs23nox@../../editors/emacs-nox11 \
-	emacs24@../../editors/emacs-snapshot \
+	emacs24@../../editors/emacs24 \
+	emacs24nox@../../editors/emacs24-nox11 \
+	emacs25@../../editors/emacs-snapshot \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
@@ -343,7 +345,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
-.  if empty(EMACS_TYPE:Memacs24)
+.  if empty(EMACS_TYPE:Memacs25)
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
 .  else
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
