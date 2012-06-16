@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2012/06/16 21:03:42 dholland Exp $
+
+Add DragonFly
+
+--- configure.orig	2012-06-01 15:21:49.000000000 +0900
++++ configure	2012-06-09 13:19:56.000000000 +0900
+@@ -4476,6 +4476,15 @@
+     esac
+   ;;
+ 
++  ## DragonFly ports
++  *-*-dragonfly*)
++    opsys=dragonfly
++    case "${canonical}" in
++      i[3456]86-*-dragonfly*)     machine=intel386 ;;
++      amd64-*-dragonfly*|x86_64-*-dragonfly*) machine=amdx86-64 ;;
++    esac
++  ;;
++
+   ## OpenBSD ports
+   *-*-openbsd* )
+     opsys=openbsd
