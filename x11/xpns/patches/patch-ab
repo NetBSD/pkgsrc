@@ -1,15 +1,19 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:18:29 agc Exp $
+$NetBSD: patch-ab,v 1.3 2012/06/16 04:00:54 dholland Exp $
+
+- don't use csh (no reason to)
+- provide correct paths
 
 --- xpns.orig	Tue Apr  8 11:27:14 1997
 +++ xpns	Tue Apr  8 11:29:05 1997
-@@ -1,6 +1,7 @@
+@@ -1,6 +1,8 @@
 -#!/bin/tcsh
 -setenv XAPPLRESDIR $PWD/
 -pns
-+#!/bin/csh
-+setenv XAPPLRESDIR /usr/X11R6/lib/xpns/
++#!/bin/sh
 +# Note pns will dump core if environment is not correct
-+/usr/X11R6/lib/xpns/pns
++XAPPLRESDIR=@PREFIX@/lib/xpns/
++export XAPPLRESDIR
++@PREFIX@/lib/xpns/pns
  
  
  

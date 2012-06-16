@@ -1,0 +1,29 @@
+$NetBSD: patch-simget_c,v 1.1 2012/06/16 04:00:54 dholland Exp $
+
+- fix broken RAND_MAX
+- since the code calls random() here, be sure to call srandom() to
+  initialize. Calling srand() too should be harmless.
+
+
+--- simget.c~	1993-07-14 11:02:09.000000000 +0000
++++ simget.c
+@@ -19,8 +19,9 @@
+ 
+ #include <stdio.h>
+ 
+-
+-#define RAND_MAX  ((1<<31)-1)
++#ifndef RAND_MAX
++#define RAND_MAX  ((1UL<<31)-1)
++#endif
+ 
+ 
+ /*************************************************************************
+@@ -32,6 +33,7 @@ void SimGetInit()
+   unsigned int e;
+   
+   srand( 17);
++  srandom( 17);
+ }
+ 
+ 
