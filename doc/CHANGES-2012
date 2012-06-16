@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1991 2012/06/16 03:11:31 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1992 2012/06/16 04:04:14 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2896,6 +2896,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/isc-dhcpd4 to 4.2.4 [taca 2012-06-06]
 	Updated net/isc-dhcrelay4 to 4.2.4 [taca 2012-06-06]
 	Updated graphics/gdk-pixbuf2 to 2.26.1nb1 [ryoon 2012-06-06]
+	Updated print/libgxps to 0.2.2nb1 [dholland 2012-06-06]
+	Updated x11/viewres to 1.0.3nb1 [dholland 2012-06-07]
 	Updated devel/kyua-cli to 0.4 [jmmv 2012-06-06]
 	Updated graphics/rabbit to 1.0.7 [obache 2012-06-07]
 	Updated devel/nspr to 4.9.3.1 [ryoon 2012-06-07]
@@ -2919,6 +2921,7 @@ Changes to the packages collection and infrastructure in 2012:
         Updated mail/cone to 0.90 [adam 2012-06-09]
         Updated mail/sqwebmail to 5.5.3 [adam 2012-06-09]
 	Updated www/php-owncloud to 4.0.1 [ryoon 2012-06-09]
+	Updated misc/openoffice3 to 3.1.1nb26 [dholland 2012-06-09]
 	Updated textproc/mecab to 0.994 [obache 2012-06-09]
 	Updated textproc/mecab-base to 0.994 [obache 2012-06-09]
 	Updated textproc/java-mecab to 0.994 [obache 2012-06-09]
@@ -3055,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/php53 to 5.3.14 [taca 2012-06-16]
 	Updated filesystems/glusterfs to 3.2.7 [manu 2012-06-16]
 	Updated www/moodle to 2.1.6nb1 [taca 2012-06-16]
+	Updated x11/xpns to 1.0nb4 [dholland 2012-06-16]
