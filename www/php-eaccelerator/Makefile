@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/15 22:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/16 03:06:19 taca Exp $
 
 MODNAME=	eaccelerator
 PECL_VERSION=	0.9.6.1
@@ -14,6 +14,8 @@ COMMENT=	PHP accelerator, optimizer, encoder and dynamic content cache
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PHP_VERSIONS_ACCEPTED=	52 53
 
 CONFLICTS=		php-eaccelator-[0-9]*
 
