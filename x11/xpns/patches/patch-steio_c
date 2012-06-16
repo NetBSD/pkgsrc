@@ -1,0 +1,14 @@
+$NetBSD: patch-steio_c,v 1.1 2012/06/16 04:00:54 dholland Exp $
+
+Ues standard headers.
+
+--- steio.c~	1993-07-14 11:02:15.000000000 +0000
++++ steio.c
+@@ -15,6 +15,7 @@
+ #include	"celltype.h"
+ #include	"netsize.h"
+ #include	<stdio.h>
++#include <stdlib.h>
+ 
+ 
+ #define DEFAULT_STEN_X_DISP	-HA_STE_RAD
