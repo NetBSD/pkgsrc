@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/06/16 03:15:32 dholland Exp $
 bin/fireload_cpu
 bin/fireload_file
 bin/wmfire
-share/doc/wmfire/README
 share/doc/wmfire/AUTHORS
 share/doc/wmfire/COPYING
 share/doc/wmfire/CREDITS
 share/doc/wmfire/INSTALL
+share/doc/wmfire/README

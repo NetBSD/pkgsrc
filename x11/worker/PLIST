@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/06/16 03:15:32 dholland Exp $
 bin/worker
+man/fr/man1/worker.1
+man/it/man1/worker.1
+man/man1/worker.1
+share/pixmaps/WorkerIcon.xpm
+share/pixmaps/WorkerIcon16.xpm
+share/pixmaps/WorkerIcon32.xpm
+share/pixmaps/WorkerIcon48.xpm
 share/worker/catalogs/deutsch.catalog
 share/worker/catalogs/deutsch.catalog.coms
 share/worker/catalogs/deutsch.catalog.coms.utf8
@@ -53,10 +60,3 @@ share/worker/scripts/cd2wav.sh
 share/worker/scripts/displaywrapper_worker
 share/worker/scripts/xeditor
 share/worker/scripts/xliwrapper_worker
-share/pixmaps/WorkerIcon.xpm
-share/pixmaps/WorkerIcon16.xpm
-share/pixmaps/WorkerIcon32.xpm
-share/pixmaps/WorkerIcon48.xpm
-man/fr/man1/worker.1
-man/it/man1/worker.1
-man/man1/worker.1

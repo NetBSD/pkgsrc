@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:25:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/06/16 03:15:31 dholland Exp $
 bin/mwm
 bin/uil
 bin/xmbind
@@ -283,7 +283,6 @@ man/man1/xmbind.1
 man/man3/ApplicationShell.3
 man/man3/Composite.3
 man/man3/Constraint.3
-man/man3/XCore.3
 man/man3/MrmCloseHierarchy.3
 man/man3/MrmFetchBitmapLiteral.3
 man/man3/MrmFetchColorLiteral.3
@@ -299,10 +298,8 @@ man/man3/MrmOpenHierarchyPerDisplay.3
 man/man3/MrmRegisterClass.3
 man/man3/MrmRegisterNames.3
 man/man3/MrmRegisterNamesInHierarchy.3
-man/man3/XObject.3
 man/man3/OverrideShell.3
 man/man3/RectObj.3
-man/man3/XShell.3
 man/man3/TopLevelShell.3
 man/man3/TransientShell.3
 man/man3/Uil.3
@@ -310,6 +307,9 @@ man/man3/UilDumpSymbolTable.3
 man/man3/VendorShell.3
 man/man3/VirtualBindings.3
 man/man3/WMShell.3
+man/man3/XCore.3
+man/man3/XObject.3
+man/man3/XShell.3
 man/man3/XmActivateProtocol.3
 man/man3/XmActivateWMProtocol.3
 man/man3/XmAddProtocolCallback.3
@@ -375,9 +375,8 @@ man/man3/XmCreateBulletinBoardDialog.3
 man/man3/XmCreateButtonBox.3
 man/man3/XmCreateCascadeButton.3
 man/man3/XmCreateCascadeButtonGadget.3
-man/man3/XmCreateDropDown.3
-man/man3/XmCreateComboBox.3
 man/man3/XmCreateCombinationBox2.3
+man/man3/XmCreateComboBox.3
 man/man3/XmCreateCommand.3
 man/man3/XmCreateCommandDialog.3
 man/man3/XmCreateContainer.3
@@ -385,6 +384,7 @@ man/man3/XmCreateDialogShell.3
 man/man3/XmCreateDragIcon.3
 man/man3/XmCreateDrawingArea.3
 man/man3/XmCreateDrawnButton.3
+man/man3/XmCreateDropDown.3
 man/man3/XmCreateDropDownComboBox.3
 man/man3/XmCreateDropDownList.3
 man/man3/XmCreateErrorDialog.3
@@ -451,11 +451,11 @@ man/man3/XmCvtXmStringToCT.3
 man/man3/XmDataField.3
 man/man3/XmDataFieldCopy.3
 man/man3/XmDataFieldCut.3
-man/man3/XmDataFieldPaste.3
 man/man3/XmDataFieldGetSelection.3
 man/man3/XmDataFieldGetSelectionPosition.3
 man/man3/XmDataFieldGetString.3
 man/man3/XmDataFieldGetStringWcs.3
+man/man3/XmDataFieldPaste.3
 man/man3/XmDataFieldSetAddMode.3
 man/man3/XmDataFieldSetEditable.3
 man/man3/XmDataFieldSetHighlight.3
@@ -493,18 +493,6 @@ man/man3/XmDropSiteUpdate.3
 man/man3/XmDropTransfer.3
 man/man3/XmDropTransferAdd.3
 man/man3/XmDropTransferStart.3
-man/man3/XmMultiList.3
-man/man3/XmMultiListDeselectItems.3
-man/man3/XmMultiListDeselectRow.3
-man/man3/XmMultiListGetSelectedRowArray.3
-man/man3/XmMultiListGetSelectedRows.3
-man/man3/XmMultiListMakeRowVisible.3
-man/man3/XmMultiListSelectAllItems.3
-man/man3/XmMultiListSelectItems.3
-man/man3/XmMultiListSelectRow.3
-man/man3/XmMultiListToggleRow.3
-man/man3/XmMultiListUnselectAllItems.3
-man/man3/XmMultiListUnselectItem.3
 man/man3/XmExt18List.3
 man/man3/XmFileSelectionBox.3
 man/man3/XmFileSelectionBoxGetChild.3
@@ -576,8 +564,8 @@ man/man3/XmLabelGadget.3
 man/man3/XmList.3
 man/man3/XmListAddItem.3
 man/man3/XmListAddItems.3
-man/man3/XmListAddItemsUnselected.3
 man/man3/XmListAddItemUnselected.3
+man/man3/XmListAddItemsUnselected.3
 man/man3/XmListDeleteAllItems.3
 man/man3/XmListDeleteItem.3
 man/man3/XmListDeleteItems.3
@@ -621,6 +609,18 @@ man/man3/XmMenuPosition.3
 man/man3/XmMenuShell.3
 man/man3/XmMessageBox.3
 man/man3/XmMessageBoxGetChild.3
+man/man3/XmMultiList.3
+man/man3/XmMultiListDeselectItems.3
+man/man3/XmMultiListDeselectRow.3
+man/man3/XmMultiListGetSelectedRowArray.3
+man/man3/XmMultiListGetSelectedRows.3
+man/man3/XmMultiListMakeRowVisible.3
+man/man3/XmMultiListSelectAllItems.3
+man/man3/XmMultiListSelectItems.3
+man/man3/XmMultiListSelectRow.3
+man/man3/XmMultiListToggleRow.3
+man/man3/XmMultiListUnselectAllItems.3
+man/man3/XmMultiListUnselectItem.3
 man/man3/XmNotebook.3
 man/man3/XmNotebookGetPageInfo.3
 man/man3/XmObjectAtPoint.3
@@ -687,9 +687,9 @@ man/man3/XmScreen.3
 man/man3/XmScrollBar.3
 man/man3/XmScrollBarGetValues.3
 man/man3/XmScrollBarSetValues.3
+man/man3/XmScrollVisible.3
 man/man3/XmScrolledWindow.3
 man/man3/XmScrolledWindowSetAreas.3
-man/man3/XmScrollVisible.3
 man/man3/XmSelectionBox.3
 man/man3/XmSelectionBoxGetChild.3
 man/man3/XmSeparator.3
@@ -839,8 +839,8 @@ man/man3/XmTextInsert.3
 man/man3/XmTextInsertWcs.3
 man/man3/XmTextPaste.3
 man/man3/XmTextPasteLink.3
-man/man3/XmTextPosition.3
 man/man3/XmTextPosToXY.3
+man/man3/XmTextPosition.3
 man/man3/XmTextRemove.3
 man/man3/XmTextReplace.3
 man/man3/XmTextReplaceWcs.3
@@ -909,8 +909,8 @@ man/man3/XmVaCreateManagedCascadeButton.3
 man/man3/XmVaCreateManagedCascadeButtonGadget.3
 man/man3/XmVaCreateManagedColorSelector.3
 man/man3/XmVaCreateManagedColumn.3
-man/man3/XmVaCreateManagedComboBox.3
 man/man3/XmVaCreateManagedCombinationBox2.3
+man/man3/XmVaCreateManagedComboBox.3
 man/man3/XmVaCreateManagedCommand.3
 man/man3/XmVaCreateManagedContainer.3
 man/man3/XmVaCreateManagedDataField.3

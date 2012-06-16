@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/06/16 03:15:33 dholland Exp $
+bin/xpns
 lib/xpns/pns
 lib/xpns/pns.hlp
 lib/xpns/pns.shell
-bin/xpns
 share/doc/xpns/a.net
 share/doc/xpns/a1.net
 share/doc/xpns/add.net
