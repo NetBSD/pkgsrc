@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/06/16 05:28:07 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/06/16 09:37:21 dholland Exp $
 #
 
 DISTNAME=	owncloud-4.0.1
@@ -14,6 +14,11 @@ COMMENT=	Web services under your control
 LICENSE=	gnu-agpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# php-sqlite referenced by default in options.mk does not support
+# php54, so mark this incompatible so pbulk stops croaking.
+# XXX: someone please fix this correctly
+PHP_VERSIONS_ACCEPTED=	52 53
 
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
