@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2008 2012/06/16 19:35:11 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2009 2012/06/16 20:20:55 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkg_summary-utils to 0.58.1 [cheusov 2012-06-16]
 	Added security/sks version 1.1.2 [pettai 2012-06-16]
 	Updated lang/yap to 6.2.2 [asau 2012-06-16]
+	Updated mail/opendkim to 2.5.2 [pettai 2012-06-16]
