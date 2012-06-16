@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2012/06/11 13:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2012/06/16 05:18:22 dholland Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -73,8 +73,7 @@ do-install:
 	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${skin} |	\
 	  ${GTAR} xCmf ${DESTDIR}${PREFIX}/share/mplayer/Skin -
 .endfor
-	${CHMOD} -R a+r ${DESTDIR}${PREFIX}/share/mplayer/Skin
-	${CHMOD} a+rx ${DESTDIR}${PREFIX}/share/mplayer/Skin/*
+	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/mplayer/Skin
 	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/Skin/default
 	${LN} -s Blue ${DESTDIR}${PREFIX}/share/mplayer/Skin/default
 	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/.svn
