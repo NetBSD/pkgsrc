@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2012/06/16 05:18:22 dholland Exp $
+# $NetBSD: Makefile,v 1.100 2012/06/16 22:28:56 wiz Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,6 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
+PKGREVISION=	1
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -63,21 +64,20 @@ CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
 CONFIGURE_ARGS+=	--enable-xvmc
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/mplayer/skins
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin/gmplayer
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mplayer/Skin
 .for skin in ${SKINS}
 	@${ECHO_MSG} "Installing skin ${skin}..."
 	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${skin} |	\
-	  ${GTAR} xCmf ${DESTDIR}${PREFIX}/share/mplayer/Skin -
+	  ${GTAR} xCmf ${DESTDIR}${PREFIX}/share/mplayer/skins -
 .endfor
-	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/mplayer/Skin
-	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/Skin/default
-	${LN} -s Blue ${DESTDIR}${PREFIX}/share/mplayer/Skin/default
-	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/.svn
-	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
+	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/mplayer/skins
+	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/skins/default
+	${LN} -s Blue ${DESTDIR}${PREFIX}/share/mplayer/skins/default
+	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/skins/Blue/.svn
+	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/skins/Blue/icons/.svn
 
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
