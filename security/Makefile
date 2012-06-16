@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.438 2012/06/16 18:59:13 pettai Exp $
+# $NetBSD: Makefile,v 1.439 2012/06/16 22:01:17 dholland Exp $
 #
 
 COMMENT=	Security tools
@@ -69,6 +69,7 @@ SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnome-keyring-manager
+SUBDIR+=	gnome-keyring-sharp
 SUBDIR+=	gnu-crypto
 SUBDIR+=	gnupg
 SUBDIR+=	gnupg-pkcs11-scd
