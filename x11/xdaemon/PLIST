@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/06 20:44:50 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/16 03:15:32 dholland Exp $
 bin/xdaemon
 bin/xdaemon2
 bin/xnetbsd-flag
@@ -12,11 +12,11 @@ share/xteddy/pixmaps/xdaemon_bw.xbm
 share/xteddy/pixmaps/xdaemon_color.xpm
 share/xteddy/pixmaps/xdaemon_icon.xbm
 share/xteddy/pixmaps/xdaemon_mask.xbm
-share/xteddy/pixmaps/xnetbsd-flag_bw.xbm
-share/xteddy/pixmaps/xnetbsd-flag_color.xpm
-share/xteddy/pixmaps/xnetbsd-flag_icon.xbm
-share/xteddy/pixmaps/xnetbsd-flag_mask.xbm
 share/xteddy/pixmaps/xnetbsd-flag2_bw.xbm
 share/xteddy/pixmaps/xnetbsd-flag2_color.xpm
 share/xteddy/pixmaps/xnetbsd-flag2_icon.xbm
 share/xteddy/pixmaps/xnetbsd-flag2_mask.xbm
+share/xteddy/pixmaps/xnetbsd-flag_bw.xbm
+share/xteddy/pixmaps/xnetbsd-flag_color.xpm
+share/xteddy/pixmaps/xnetbsd-flag_icon.xbm
+share/xteddy/pixmaps/xnetbsd-flag_mask.xbm
