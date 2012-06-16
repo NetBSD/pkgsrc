@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/13 15:30:07 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/16 20:38:51 pettai Exp $
 #
 
-DISTNAME=	ykpers-1.6.3
+DISTNAME=	ykpers-1.6.4
 CATEGORIES=	security
 MASTER_SITES=	http://yubikey-personalization.googlecode.com/files/
 
