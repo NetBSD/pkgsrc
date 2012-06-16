@@ -1,0 +1,9 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/06/16 18:55:30 pettai Exp $
+
+--- bdb/Makefile.orig	2011-02-18 10:14:32.000000000 +0000
++++ bdb/Makefile
+@@ -15,3 +15,3 @@
+ 
+-CINCLUDES=-I`ocamlc -where` $(BDBINCLUDE)
++CINCLUDES=-I${PREFIX}/lib/ocaml $(BDBINCLUDE)
+ CC=gcc
