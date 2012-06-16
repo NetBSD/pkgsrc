@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/28 15:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/16 02:55:32 taca Exp $
 #
 
 DISTNAME=	awl-${LIBAWL_VERSION}
@@ -16,9 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PKG_PHP_VERSION} == "5"
-DEPENDS+=       php>=5.2.0<5.3:../../lang/php5
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 
@@ -26,13 +23,13 @@ INSTALLATION_DIRS=	${LIBAWLDIR} ${LIBAWLDIR}/inc ${LIBAWLDIR}/dba
 
 do-install:
 	cd ${WRKSRC}/dba;					\
-       	for f in *; do						\
+	for f in *; do						\
 		${INSTALL_DATA} "$$f"				\
 		    ${DESTDIR}${PREFIX}/${LIBAWLDIR}/dba;	\
 	done;
 
 	cd ${WRKSRC}/inc;					\
-       	for f in *; do						\
+	for f in *; do						\
 		${INSTALL_DATA} "$$f"				\
 		    ${DESTDIR}${PREFIX}/${LIBAWLDIR}/inc;	\
 	done;
