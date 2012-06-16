@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/06/16 03:15:33 dholland Exp $
 bin/xteddy
 man/man1/xteddy.1
-share/xteddy/pixmaps/xteddy_bw.xbm
-share/xteddy/pixmaps/xteddy_color.xpm
-share/xteddy/pixmaps/xteddy_icon.xbm
-share/xteddy/pixmaps/xteddy_mask.xbm
-share/xteddy/pixmaps/xpenguin_bw.xbm
-share/xteddy/pixmaps/xpenguin_color.xpm
-share/xteddy/pixmaps/xpenguin_icon.xbm
-share/xteddy/pixmaps/xpenguin_mask.xbm
 share/xteddy/pixmaps/teddy_bw.xbm
 share/xteddy/pixmaps/teddy_color.xpm
 share/xteddy/pixmaps/teddy_icon.xbm
 share/xteddy/pixmaps/teddy_mask.xbm
+share/xteddy/pixmaps/xpenguin_bw.xbm
+share/xteddy/pixmaps/xpenguin_color.xpm
+share/xteddy/pixmaps/xpenguin_icon.xbm
+share/xteddy/pixmaps/xpenguin_mask.xbm
+share/xteddy/pixmaps/xteddy_bw.xbm
+share/xteddy/pixmaps/xteddy_color.xpm
+share/xteddy/pixmaps/xteddy_icon.xbm
+share/xteddy/pixmaps/xteddy_mask.xbm
