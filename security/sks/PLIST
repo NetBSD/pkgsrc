@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/16 18:55:30 pettai Exp $
+bin/sks
+bin/sks_add_mail
+bin/sks_build.sh
+man/man8/sks.8
