@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/12 10:12:36 dsainty Exp $
+$NetBSD: distinfo,v 1.2 2012/06/16 16:05:53 taca Exp $
 
-SHA1 (php-mode-1.4.0.tar.gz) = a869f3c2349f779d8efbbdf9162379c17d4fb62b
-RMD160 (php-mode-1.4.0.tar.gz) = 6c9cebbf8ec3c0bbb6662b9a7f971937502c957a
-Size (php-mode-1.4.0.tar.gz) = 35672 bytes
+SHA1 (php-mode-1.5.0.tar.gz) = e559396eb0e4e47c1de8022612e820ee3e86892e
+RMD160 (php-mode-1.5.0.tar.gz) = 012155b894cb8eedf83aa5f7a061c2377bb574c5
+Size (php-mode-1.5.0.tar.gz) = 42687 bytes
