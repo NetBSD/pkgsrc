@@ -1,0 +1,24 @@
+$NetBSD: patch-sformat_makelabel_c,v 1.1 2012/06/16 08:55:55 dholland Exp $
+
+Fix symbol name conflict with POSIX getline().
+
+--- sformat/makelabel.c	Sat Jun 16 04:48:53 2012 -0400
++++ sformat/makelabel.c	Sat Jun 16 04:50:37 2012 -0400
+@@ -284,7 +284,7 @@
+ 	if (yes("Label: <%s> change ? ", labelbuf)) {
+ 		printf("Enter disk label: "); flush();
+ 		tty_insert(labelbuf);
+-		(void)getline(lbuf, sizeof(lbuf));
++		(void)get_line(lbuf, sizeof(lbuf));
+ 		strcpy(labelbuf, lbuf);
+ 		
+ 	}
+@@ -296,7 +296,7 @@
+ 	if (yes("Volume Name: <%s> change ? ", lbuf)) {
+ 		printf("Enter volume name: "); flush();
+ 		tty_insert(lbuf);
+-		(void)getline(lbuf, LEN_DKL_VVOL+1);
++		(void)get_line(lbuf, LEN_DKL_VVOL+1);
+ 		strncpy(lp->dkl_vtoc.v_volume, lbuf, LEN_DKL_VVOL);
+ 	}
+ #endif
