@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/06/16 15:58:26 taca Exp $
+
+SHA1 (parseconfig-0.5.2.gem) = c94a60f0de9a6b5efb0727216d0a33f28df5f2f3
+RMD160 (parseconfig-0.5.2.gem) = 46d51fbb96ab1b9b5e319f52e0b6c926cd8d04d6
+Size (parseconfig-0.5.2.gem) = 8192 bytes
