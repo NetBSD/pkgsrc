@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2012/05/04 09:38:23 hans Exp $
+$NetBSD: patch-ab,v 1.8 2012/06/16 14:58:36 abs Exp $
 
---- sim_ether.c.orig	2012-03-30 16:30:26.000000000 +0200
-+++ sim_ether.c	2012-05-03 23:31:13.438944514 +0200
+--- sim_ether.c.orig	2012-03-30 15:30:26.000000000 +0000
++++ sim_ether.c
 @@ -806,6 +806,8 @@ void eth_show_dev (FILE* st, ETH_DEV* de
  #include <sys/ioctl.h> 
  #include <net/if.h> 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2012/05/26 08:50:53 obache Exp $
-#
+# $NetBSD: Makefile,v 1.37 2012/06/16 14:58:35 abs Exp $
 
 DISTNAME=	simhv39-0
 PKGNAME=	simh-3.9.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
@@ -23,6 +23,11 @@ WRKSRC=			${WRKDIR}
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_TRANSFORM+=	rm:-O2
+.endif
+
+# Needed for PDP11/pdp11_dc.c on gcc 4.1.3
+.if (${MACHINE_ARCH} == "vax")
+CFLAGS+=	-fforce-addr
 .endif
 
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
