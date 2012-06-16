@@ -1,0 +1,16 @@
+$NetBSD: patch-cf,v 1.1 2012/06/16 01:47:34 manu Exp $
+
+Strip "-o stuff" from volfile_loc
+--- xlators/mount/fuse/utils/mount.glusterfs.in.orig	2012-06-16 03:23:37.000000000 +0200
++++ xlators/mount/fuse/utils/mount.glusterfs.in	2012-06-16 03:25:02.000000000 +0200
+@@ -191,9 +191,9 @@
+     log_server=$(echo "$options" | sed -n 's/.*log-server=\([^,]*\).*/\1/p');
+ 
+     log_server_port=$(echo "$options" | sed -n 's/.*log-server-port=\([^,]*\).*/\1/p');
+ 
+-    volfile_loc="$1";
++    volfile_loc=$(echo "$@" | sed -n 's/-o[ ]*\([^ ]*\)//p'|awk '{print $1}');
+ 
+     [ -r "$volfile_loc" ] || {
+ 	server_ip=$(echo "$volfile_loc" | sed -n 's/\([^\:]*\).*/\1/p');
+         test_str=$(echo "$volfile_loc" | sed -n 's/.*:\([^ ]*\).*/\1/p');
