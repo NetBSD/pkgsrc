@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/16 18:55:30 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/16 23:45:39 dholland Exp $
 #
 
 DISTNAME=	sks-1.1.2
@@ -12,6 +12,8 @@ COMMENT=	Self Replicating PGP Key Server
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10.2
 BUILDLINK_API_DEPENDS.db4+=	db4>=4.6.0
