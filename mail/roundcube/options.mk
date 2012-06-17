@@ -1,14 +1,18 @@
-# $NetBSD: options.mk,v 1.5 2010/03/16 16:02:21 taca Exp $
+# $NetBSD: options.mk,v 1.6 2012/06/17 15:17:15 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite
+PKG_OPTIONS_GROUP.db=		mysql pgsql
 
 PKG_SUPPORTED_OPTIONS=		iconv ldap multibyte mcrypt sockets gd
 # Following the recommendations in INSTALL the iconv, multibyte, gd and
 # mcrypt PHP extensions are all 'recommended' requirements
 PKG_SUGGESTED_OPTIONS=		mysql iconv multibyte mcrypt sockets gd
+
+.if ${PKG_PHP_VERSION} == "53"
+PKG_OPTIONS_GROUP.db+=		sqlite
+.endif
 
 .include "../../mk/bsd.options.mk"
 
