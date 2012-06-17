@@ -1,21 +1,12 @@
-# $NetBSD: hacks.mk,v 1.1 2009/09/13 16:12:18 tron Exp $
+# $NetBSD: hacks.mk,v 1.2 2012/06/17 00:22:10 tron Exp $
 
-.if !defined(SCUMMVM_HACKS_MK)
-SCUMMVM_HACKS_MK=	defined
+### [Sun 17 Jun 2012 00:21:30 UTC : tron]
+### G++ 4.2.1 (Based on Apple Inc. build 5658) as shipped with
+### Mac OS X Lion crashes with a segmentation fault while compiling
+### "engines/queen/journal.cpp". Disabling the optimizer prevents
+### the crash.
 
-.include "../../mk/bsd.fast.prefs.mk"
-
-# scummvm used an API that no longer exists under Mac OS X Snow Leopard.
-# Work around that by using the Leopard SDK which is part of Xcode tools.
-
-XCODE_LEOPARD_SDK=	/Developer/SDKs/MacOSX10.5.sdk
-
-.if !empty(MACHINE_PLATFORM:MDarwin-??.*-*) && \
-    exists(/Developer/SDKs/MacOSX10.5.sdk)
-PKG_HACKS+=	scummvm-snow-leopard
-
-CFLAGS+=	-mmacosx-version-min=10.5 -isysroot ${XCODE_LEOPARD_SDK}
-LDFLAGS+=	-mmacosx-version-min=10.5 -Wl,-syslibroot,${XCODE_LEOPARD_SDK}
+.if !empty(MACHINE_PLATFORM:MDarwin-11.*-i386)
+PKG_HACKS+=		macosx-lion-compiler-hang
+BUILDLINK_TRANSFORM+=	rm:-O2
 .endif
-
-.endif	# SCUMMVM_HACKS_MK
