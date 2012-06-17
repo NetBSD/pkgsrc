@@ -1,4 +1,12 @@
-$NetBSD: CHANGES-2012,v 1.2020 2012/06/16 22:55:53 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.2021 2012/06/17 00:07:53 agc Exp $
+
+*****************************************************************************
+PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
+NEW PACKAGES.
+
+IF YOU'D LIKE TO UPDATE A PACKAGE, PLEASE MAKE SURE THAT YOU HAVE PERMISSION
+IN ADVANCE FROM A PKGSRC PMC REPRESENTATIVE: (gdt@, wiz@, schmonz@, agc@)
+*****************************************************************************
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3173,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/pam-krb5 to 4.6 [pettai 2012-06-16]
 	Updated multimedia/gmplayer to 1.1nb1 [wiz 2012-06-16]
 	Updated security/zkt to 1.1.0 [pettai 2012-06-16]
+	mk/bsd.pkg.mk: STARTED FREEZE FOR PKGSRC-2012Q2 BRANCH [agc 2012-06-16]
