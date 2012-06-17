@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2012/05/29 22:58:53 cheusov Exp $
+# $NetBSD: Makefile,v 1.47 2012/06/17 10:21:39 sbd Exp $
 
 DISTNAME=		pax-20080110
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		archivers
 MASTER_SITES=		# empty
 DISTFILES=		# empty
