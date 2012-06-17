@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11301 2012/06/16 21:08:06 dholland Exp $
+$NetBSD: TODO,v 1.11302 2012/06/17 12:10:39 hauke Exp $
 
 Suggested new packages
 ======================
@@ -1200,7 +1200,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tomboy-1.4.2 [GNOME 2.32]
 	o tomboy-1.10.2
 	o top-3.8beta1
-	o tor-0.2.2.37
 	o totem-3.4.1
 	o totem-pl-parser-3.4.1
 	o tpasm-1.2
