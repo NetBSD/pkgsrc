@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/10 19:01:08 schwarz Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/18 06:12:02 dholland Exp $
 #
 
 DISTNAME=	tacacs+-F4.0.4.25
@@ -22,7 +22,7 @@ MAKE_JOBS_SAFE=	no
 .include "options.mk"
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	bison perl
+USE_TOOLS+=	bison flex perl
 USE_LIBTOOL=    yes
 USE_LANGUAGES=	c c++
 USE_FEATURES+=	snprintf
