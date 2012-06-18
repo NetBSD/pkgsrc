@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/06/13 11:33:30 abs Exp $
+# $NetBSD: Makefile,v 1.33 2012/06/18 00:32:07 dholland Exp $
 
 DISTNAME=	weechat-0.3.8
 CATEGORIES=	chat
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tcl --disable-guile --disable-aspell
