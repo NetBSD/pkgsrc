@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2010/01/29 23:08:08 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2012/06/18 04:55:38 dholland Exp $
+
+- configure paths for pkgsrc
+- honor pkgsrc LDFLAGS
+- DESTDIR support
+- don't attempt to randomly blow things away on the system
 
 --- Makefile.orig	2002-07-30 22:04:21.000000000 +0000
 +++ Makefile
@@ -19,9 +24,18 @@ $NetBSD: patch-aa,v 1.3 2010/01/29 23:08:08 joerg Exp $
  TERMLIB = -lncurses
  CC = gcc
  
-@@ -39,7 +40,7 @@ greed.6: greed.xml
+@@ -32,14 +33,14 @@ CC = gcc
+ #TERMLIB = scurses.lib
  
- install: greed.6 uninstall
+ greed: greed.c
+-	cc -DSCOREFILE=\"$(SFILE)\" -D$(SYSDEF) -DRELEASE=\"$(VERS)\" -o greed greed.c $(CFLAGS) $(TERMLIB)
++	cc -DSCOREFILE=\"$(SFILE)\" -D$(SYSDEF) -DRELEASE=\"$(VERS)\" -o greed greed.c $(CFLAGS) $(LDFLAGS) $(TERMLIB)
+ 
+ greed.6: greed.xml
+ 	xmlto man greed.xml
+ 
+-install: greed.6 uninstall
++install: greed.6
  	cp greed $(BIN)
 -	cp greed.6 /usr/share/man/man6/greed.6
 +	cp greed.6 ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man6
