@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2024 2012/06/18 01:46:33 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2025 2012/06/18 03:29:20 dholland Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/rabbit to 1.0.8 [obache 2012-06-17]
 	Updated net/tor to 0.2.2.37 [hauke 2012-06-17]
 	Updated benchmarks/dhrystone to 2.1nb1 [dholland 2012-06-18]
+	Updated devel/sfslite to 1.2.7nb1 [dholland 2012-06-18]
