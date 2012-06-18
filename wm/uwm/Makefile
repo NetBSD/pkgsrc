@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/07 19:32:25 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/18 06:19:19 dholland Exp $
 
 DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/X.V11R3/clients/uwm
 USE_IMAKE=	yes
-USE_TOOLS+=	yacc
+USE_TOOLS+=	lex yacc
 
 post-patch:
 	if [ ! -f ${WRKSRC}/uwm.man.src ]; then			\
