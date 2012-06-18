@@ -1,0 +1,24 @@
+$NetBSD: patch-async_rwfd_c,v 1.1 2012/06/18 03:28:55 dholland Exp $
+
+Avoid strict-aliasing warnings on Linux.
+
+--- async/rwfd.c~	2009-02-12 13:20:42.000000000 +0000
++++ async/rwfd.c
+@@ -51,7 +51,7 @@ writevfd (int fd, const struct iovec *io
+   cmh->cmsg_level = SOL_SOCKET;
+   cmh->cmsg_type = SCM_RIGHTS;
+   cmh->cmsg_len = CMSG_LEN(sizeof(int));
+-  *(int *)CMSG_DATA(cmh) = wfd;
++  memcpy(CMSG_DATA(cmh), &wfd, sizeof(int));
+ #else /* !HAVE_CMSGHDR */
+   mh.msg_accrights = (char *) fdp;
+   mh.msg_accrightslen = sizeof (fdp);
+@@ -110,7 +110,7 @@ readvfd (int fd, const struct iovec *iov
+ 	      errno = EAGAIN;
+ 	  }
+ 	  if (cmh->cmsg_type == SCM_RIGHTS) {
+-	      *rfdp = (*(int *)CMSG_DATA(cmh));
++	      memcpy(rfdp, CMSG_DATA(cmh), sizeof(int));
+ 	  }
+       }
+ #else /* !HAVE_CMSGHDR */

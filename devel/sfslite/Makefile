@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/07 07:25:54 agc Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/18 03:28:55 dholland Exp $
 
 DISTNAME=	sfslite-1.2.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
