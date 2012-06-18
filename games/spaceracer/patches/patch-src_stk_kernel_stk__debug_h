@@ -1,0 +1,15 @@
+$NetBSD: patch-src_stk_kernel_stk__debug_h,v 1.1 2012/06/18 04:14:30 dholland Exp $
+
+Use valid C.
+
+--- src/stk/kernel/stk_debug.h~	2001-07-15 21:26:19.000000000 +0000
++++ src/stk/kernel/stk_debug.h
+@@ -14,7 +14,7 @@
+ 
+ // The information msg
+ #ifndef DEBUG
+-#define STK_INFORMATION (msg)
++#define STK_INFORMATION(msg)
+ #else
+ #define STK_INFORMATION(msg)        \
+      printf("Information %s %d\n",__FILE__,__LINE__); \
