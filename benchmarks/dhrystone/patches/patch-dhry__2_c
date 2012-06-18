@@ -1,0 +1,15 @@
+$NetBSD: patch-dhry__2_c,v 1.1 2012/06/18 01:46:07 dholland Exp $
+
+- use standard headers
+
+--- dhry_2.c~	1988-07-12 19:35:10.000000000 +0000
++++ dhry_2.c
+@@ -15,6 +15,8 @@
+  ****************************************************************************
+  */
+ 
++#include <string.h>
++
+ #include "dhry.h"
+ 
+ #ifndef REG
