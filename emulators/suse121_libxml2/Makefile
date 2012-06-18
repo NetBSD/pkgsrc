@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 13:38:49 obache Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2012/06/18 22:23:18 tron Exp $
 
 DISTNAME=	suse_libxml2-${SUSE_VERSION}
+PKGREVISION=	2
 CATEGORIES=	emulators
-RPMUPDPKGS+=	libxml2-2.7.8+git20110708-3.3.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libxml2-2.7.8+git20110708-3.8.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for libxml2
