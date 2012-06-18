@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2008/07/09 05:02:06 bjs Exp $
+$NetBSD: distinfo,v 1.7 2012/06/18 03:39:00 dholland Exp $
 
 SHA1 (spiff-1.0.tar.gz) = 09803fa6f946c3639bb2c7ac5b5644860ebed643
 RMD160 (spiff-1.0.tar.gz) = ff651435946dd8889b9a01a598f3933e3e50c614
 Size (spiff-1.0.tar.gz) = 48291 bytes
-SHA1 (patch-aa) = c9ec15c551084c221bbe3d7729fb515ee65dd513
+SHA1 (patch-aa) = 0a32ca2e2fd838cc21eca476111fe81a3f545181
 SHA1 (patch-ab) = 265a62ded94e73b42f8f46180613ff6e5de90399
 SHA1 (patch-ac) = d88280626b3d1621377d38037a52e79e6e35bb1a
 SHA1 (patch-ad) = 86d90bf42e1735f20fc8538522638f1b5af92d60
