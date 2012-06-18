@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/05/28 13:33:20 adam Exp $
+# $NetBSD: Makefile,v 1.48 2012/06/18 20:50:39 gdt Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
@@ -13,6 +13,10 @@ DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
 # for git-send-email
 DEPENDS+=		p5-MIME-Base64>=3.13:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Authen-SASL>=1.0:../../security/p5-Authen-SASL
+# PR pkg/46109 points out that other modules are missing as well, including:
+# Email::Valid
+# Mail::Address
+# Net::SMTP::SSL
 
 USE_LANGUAGES=		c99
 USE_TOOLS+=		perl:run sh:run msgfmt
