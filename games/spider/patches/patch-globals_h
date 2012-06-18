@@ -1,0 +1,24 @@
+$NetBSD: patch-globals_h,v 1.1 2012/06/18 04:19:09 dholland Exp $
+
+- use standard headers
+- don't provide own malloc declarations
+
+--- globals.h~	1991-09-28 17:46:20.000000000 +0000
++++ globals.h
+@@ -10,6 +10,8 @@
+  *
+  */
+ 
++#include <stdlib.h>
++
+ /*
+  * spider global variables
+  */
+@@ -95,7 +97,3 @@ void	do_expand();
+ #ifdef XAW
+ Bool	can_get_help_files();
+ #endif
+-
+-extern char	*malloc();
+-extern char	*calloc();
+-extern char	*realloc();
