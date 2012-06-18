@@ -1,0 +1,62 @@
+$NetBSD: patch-main_c,v 1.1 2012/06/18 04:45:47 dholland Exp $
+
+- use gettimeofday() rather than ftime(), which is very obsolete
+- don't truncate time_t (or worse, time_t * 1000) to int
+
+Note that because all times used elsewhere are relative, we can get
+away with subtracting off the start time like this. We could also
+probably get away with truncating to int, except that (a) it's untidy,
+(b) likely to attract attention from program checkers, and (c) can
+result in formally undefined behavior if we happen to be running
+across one of the moments where the milliseconds value passes through
+signed overflow.
+
+--- main.c~	2003-02-05 06:02:40.000000000 +0000
++++ main.c
+@@ -15,18 +15,25 @@
+ #include "protos.h"
+ 
+ 
+-/* get_ms() returns the milliseconds elapsed since midnight,
+-   January 1, 1970. */
++/* get_ms() returns the milliseconds elapsed since an arbitrary epoch
++   determined at program startup. */
+ 
+-#include <sys/timeb.h>
+-BOOL ftime_ok = FALSE;  /* does ftime return milliseconds? */
++#include <sys/time.h>
++BOOL gettimeofday_ok = FALSE;  /* are we getting better than just seconds? */
+ int get_ms()
+ {
+-	struct timeb timebuffer;
+-	ftime(&timebuffer);
+-	if (timebuffer.millitm != 0)
+-		ftime_ok = TRUE;
+-	return (timebuffer.time * 1000) + timebuffer.millitm;
++	static BOOL initialized = 0;
++	static time_t epoch;
++	struct timeval timebuffer;
++	gettimeofday(&timebuffer, NULL);
++	if (!initialized) {
++		epoch = timebuffer.tv_sec;
++		initialized = 1;
++	}
++	timebuffer.tv_sec -= epoch;
++	if (timebuffer.tv_usec != 0)
++		gettimeofday_ok = TRUE;
++	return (timebuffer.tv_sec * 1000) + timebuffer.tv_usec / 1000;
+ }
+ 
+ 
+@@ -496,9 +503,9 @@ void bench()
+ 	printf("\n");
+ 	printf("Nodes: %d\n", nodes);
+ 	printf("Best time: %d ms\n", t[0]);
+-	if (!ftime_ok) {
++	if (!gettimeofday_ok) {
+ 		printf("\n");
+-		printf("Your compiler's ftime() function is apparently only accurate\n");
++		printf("Your compiler's gettimeofday() function is apparently only accurate\n");
+ 		printf("to the second. Please change the get_ms() function in main.c\n");
+ 		printf("to make it more accurate.\n");
+ 		printf("\n");
