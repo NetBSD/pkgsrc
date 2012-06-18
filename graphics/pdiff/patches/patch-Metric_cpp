@@ -1,0 +1,15 @@
+$NetBSD: patch-Metric_cpp,v 1.1 2012/06/18 05:41:00 dholland Exp $
+
+Use standard headers.
+
+--- Metric.cpp~	2007-03-16 06:17:17.000000000 +0000
++++ Metric.cpp
+@@ -14,6 +14,8 @@ You should have received a copy of the G
+ if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+ 
++#include <cstdio>
++
+ #include "Metric.h"
+ #include "CompareArgs.h"
+ #include "RGBAImage.h"
