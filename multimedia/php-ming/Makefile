@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/05/12 11:32:39 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/18 15:15:48 taca Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
@@ -23,12 +23,6 @@ CONFIGURE_DIRS=		${PHPSETUPSUBDIR}
 # missing in 0.4.4 release tarball.
 post-extract:
 		${CP} ${FILESDIR}/config.m4 ${WRKSRC}/${PHPSETUPSUBDIR}
-
-# to avoid downgrade version
-.include "../../lang/php/phpversion.mk"
-.if ${PKG_PHP_VERSION} == "5" || ${PKG_PHP_VERSION} == "52"
-PECL_LEGACY_VERSION_SCHEME=	yes
-.endif
 
 .include "../../lang/php/ext.mk"
 .include "../../multimedia/ming/buildlink3.mk"
