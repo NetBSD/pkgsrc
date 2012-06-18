@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/03 00:13:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/06/18 01:02:22 dholland Exp $
 #
 
 DISTNAME=	grig-0.7.2
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
