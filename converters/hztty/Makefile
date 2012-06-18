@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2012/06/18 02:09:21 dholland Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if ${OPSYS} == "Interix"
 BUILD_TARGET=	svr4
+.elif ${OPSYS} == "Linux"
+BUILD_TARGET=	linux
 .else
 BUILD_TARGET=	bsd
 .endif
