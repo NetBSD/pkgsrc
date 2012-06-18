@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 23:12:03 agc Exp $
+$NetBSD: distinfo,v 1.5 2012/06/18 04:45:47 dholland Exp $
 
 SHA1 (tscp181.zip) = 61ebac540a4e9f3067d6682a4b6dfc5fa8993790
 RMD160 (tscp181.zip) = 98a2bc6a3c25a5a75f72448db9939cc71a4f90d8
 Size (tscp181.zip) = 77019 bytes
+SHA1 (patch-main_c) = a353573c80d2b4fae530faddac69385d0cddefc9
