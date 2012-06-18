@@ -1,8 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/05/19 01:10:17 heinz Exp $
+$NetBSD: patch-aa,v 1.2 2012/06/18 04:24:07 dholland Exp $
 
---- Makefile.orig	2005-07-25 03:13:53.000000000 +0200
+- configure for pkgsrc (XXX: could be done more tidily)
+- honor pkgsrc's LDFLAGS and LIBS
+- DESTDIR support
+
+--- Makefile.orig	2005-07-25 01:13:53.000000000 +0000
 +++ Makefile
-@@ -7,6 +7,16 @@
+@@ -7,11 +7,21 @@
  OWN=-o bin
  GRP=-g operator
  
@@ -19,6 +23,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/05/19 01:10:17 heinz Exp $
  # Minix requires compilation flags for a clean compile
  sudoku: sudoku.c
  	if [ -x /usr/bin/uname -a `/usr/bin/uname` = Minix ] ; then \
+ 	DEFS="-D_MINIX -D_POSIX_SOURCE" ; fi ; \
+-	$(CC) -o sudoku $$DEFS sudoku.c -lcurses
++	$(CC) $(LDFLAGS) -o sudoku $$DEFS sudoku.c -lcurses $(LIBS)
+ 
+ clean:
+ 	rm -f sudoku
 @@ -19,16 +29,16 @@ clean:
  # Simple support for alternate systems
  install: sudoku sudoku.6
