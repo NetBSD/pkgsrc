@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2027 2012/06/18 10:13:03 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2028 2012/06/18 17:38:06 gdt Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3188,3 +3188,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/sfslite to 1.2.7nb1 [dholland 2012-06-18]
 	Updated games/tscp to 1.81nb3 [dholland 2012-06-18]
 	Updated net/mikutter to 0.1.1.810 [obache 2012-06-18]
+	Updated devel/scmgit-base to 1.7.10.5 [gdt 2012-06-18]
+	Updated devel/scmgit-docs to 1.7.10.5 [gdt 2012-06-18]
+	Updated devel/scmgit to 1.7.10.5 [gdt 2012-06-18]
+	Updated www/gitweb to 1.7.10.5 [gdt 2012-06-18]
