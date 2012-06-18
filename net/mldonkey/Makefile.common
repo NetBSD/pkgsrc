@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2012/05/29 14:02:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.44 2012/06/18 15:17:12 wiz Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -19,6 +19,7 @@ PATCHDIR=	${.CURDIR}/../../net/mldonkey/patches
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl
+MAKE_JOBS_SAFE=		no
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
