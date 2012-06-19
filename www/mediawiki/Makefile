@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/06/02 12:30:56 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/06/19 11:55:25 wiz Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 VER=			1.19
-PVER=			0
+PVER=			1
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -64,7 +64,7 @@ do-install:
 	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
 	  ${DESTDIR}${MEDIAWIKI}/{} \; -exec ${CHOWN} \
 	  ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MEDIAWIKI}/{} \;
-	cd ${WRKSRC} && ${FIND} . \! -type d \! -name '*.orig' \
+	cd ${WRKSRC} && ${FIND} . \! -type d \! -name '.git*' \
 	  -exec ${INSTALL_DATA} {} ${DESTDIR}${MEDIAWIKI}/{} \; \
 	  -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
 	  ${DESTDIR}${MEDIAWIKI}/{} \;
