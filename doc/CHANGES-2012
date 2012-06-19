@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2029 2012/06/19 11:55:35 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2030 2012/06/19 13:42:00 jperkin Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3193,3 +3193,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit to 1.7.10.5 [gdt 2012-06-18]
 	Updated www/gitweb to 1.7.10.5 [gdt 2012-06-18]
 	Updated www/mediawiki to 1.19.1 [wiz 2012-06-19]
+	Updated pkgtools/pbulk to 0.50 [jperkin 2012-06-19]
