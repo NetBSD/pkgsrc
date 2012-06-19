@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2012/06/02 12:30:56 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/06/19 11:55:25 wiz Exp $
 share/examples/mediawiki/mediawiki.conf
-share/mediawiki/.gitignore
-share/mediawiki/.gitreview
 share/mediawiki/COPYING
 share/mediawiki/CREDITS
 share/mediawiki/FAQ
@@ -37,7 +35,6 @@ share/mediawiki/docs/export-0.6.xsd
 share/mediawiki/docs/export-demo.xml
 share/mediawiki/docs/globals.txt
 share/mediawiki/docs/hooks.txt
-share/mediawiki/docs/html/.gitignore
 share/mediawiki/docs/html/README
 share/mediawiki/docs/language.txt
 share/mediawiki/docs/linkcache.txt
@@ -57,8 +54,6 @@ share/mediawiki/docs/uidesign/mediawiki.action.history.diff.html
 share/mediawiki/docs/uidesign/monospace.html
 share/mediawiki/docs/uidesign/table-layout.html
 share/mediawiki/docs/upload.txt
-share/mediawiki/extensions/.gitignore
-share/mediawiki/extensions/ConfirmEdit/.gitreview
 share/mediawiki/extensions/ConfirmEdit/Asirra.class.php
 share/mediawiki/extensions/ConfirmEdit/Asirra.i18n.php
 share/mediawiki/extensions/ConfirmEdit/Asirra.php
@@ -84,7 +79,6 @@ share/mediawiki/extensions/ConfirmEdit/ReCaptcha.php
 share/mediawiki/extensions/ConfirmEdit/captcha.py
 share/mediawiki/extensions/ConfirmEdit/ext.confirmedit.asirra.js
 share/mediawiki/extensions/ConfirmEdit/recaptchalib.php
-share/mediawiki/extensions/Gadgets/.gitreview
 share/mediawiki/extensions/Gadgets/ApiQueryGadgetCategories.php
 share/mediawiki/extensions/Gadgets/ApiQueryGadgets.php
 share/mediawiki/extensions/Gadgets/Gadgets.alias.php
@@ -95,7 +89,6 @@ share/mediawiki/extensions/Gadgets/Gadgets_tests.php
 share/mediawiki/extensions/Gadgets/README
 share/mediawiki/extensions/Gadgets/SpecialGadgets.php
 share/mediawiki/extensions/Gadgets/install.settings
-share/mediawiki/extensions/Nuke/.gitreview
 share/mediawiki/extensions/Nuke/COPYING
 share/mediawiki/extensions/Nuke/INSTALL
 share/mediawiki/extensions/Nuke/Nuke.alias.php
@@ -106,7 +99,6 @@ share/mediawiki/extensions/Nuke/README
 share/mediawiki/extensions/Nuke/RELEASE-NOTES
 share/mediawiki/extensions/Nuke/SpecialNuke.php
 share/mediawiki/extensions/Nuke/ext.nuke.js
-share/mediawiki/extensions/ParserFunctions/.gitreview
 share/mediawiki/extensions/ParserFunctions/COPYING
 share/mediawiki/extensions/ParserFunctions/Convert.php
 share/mediawiki/extensions/ParserFunctions/Expr.php
@@ -121,7 +113,6 @@ share/mediawiki/extensions/ParserFunctions/funcsParserTests.txt
 share/mediawiki/extensions/ParserFunctions/stringFunctionTests.txt
 share/mediawiki/extensions/ParserFunctions/testExpr.php
 share/mediawiki/extensions/README
-share/mediawiki/extensions/Renameuser/.gitreview
 share/mediawiki/extensions/Renameuser/RenameUserJob.php
 share/mediawiki/extensions/Renameuser/Renameuser.alias.php
 share/mediawiki/extensions/Renameuser/Renameuser.i18n.php
@@ -129,7 +120,6 @@ share/mediawiki/extensions/Renameuser/Renameuser.php
 share/mediawiki/extensions/Renameuser/Renameuser_body.php
 share/mediawiki/extensions/Renameuser/SpecialRenameuser.php
 share/mediawiki/extensions/Renameuser/renameUserCleanup.php
-share/mediawiki/extensions/Vector/.gitreview
 share/mediawiki/extensions/Vector/README
 share/mediawiki/extensions/Vector/Vector.hooks.php
 share/mediawiki/extensions/Vector/Vector.i18n.php
@@ -152,7 +142,6 @@ share/mediawiki/extensions/Vector/modules/images/edit.png
 share/mediawiki/extensions/Vector/modules/images/open.png
 share/mediawiki/extensions/Vector/modules/images/portal-break.png
 share/mediawiki/extensions/Vector/switchExperimentPrefs.php
-share/mediawiki/extensions/WikiEditor/.gitreview
 share/mediawiki/extensions/WikiEditor/README
 share/mediawiki/extensions/WikiEditor/WikiEditor.hooks.php
 share/mediawiki/extensions/WikiEditor/WikiEditor.i18n.php
