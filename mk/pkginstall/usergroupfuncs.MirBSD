@@ -1,0 +1,150 @@
+# $NetBSD: usergroupfuncs.MirBSD,v 1.1 2012/06/19 05:43:24 bsiegert Exp $
+#
+# Platform-specific adduser and addgroup functionality.
+
+# group_exists group [groupid]
+#	Returns 0 if $group exists and has gid $groupid
+#	Returns 1 if neither $group nor $groupid exist
+#	Returns 2 if $group or $groupid exist but don't match
+#	Returns 3 for all errors
+#
+group_exists()
+{
+	_group="$1"; _groupid="$2"
+	${TEST} -n "$_group" || return 3
+
+	if ${TEST} -n "$_groupid"; then
+		${AWK} -F : "BEGIN { rv=1 }; \$1 == \"$_group\" { if (\$3 == $_groupid) rv=0; else rv=2 }; END { exit rv }" /etc/group
+	else
+		${AWK} -F : "\$1 == \"$_group\" || \$3 == \"$_group\" { found=1 }; END { if (!found) exit 1 }" /etc/group
+	fi
+}
+
+# user_exists user [userid]
+#	Returns 0 if $user exists and has uid $userid
+#	Returns 1 if neither $user nor $userid exist
+#	Returns 2 if $user or $userid exist but don't match
+#	Returns 3 for all errors
+#
+user_exists()
+{
+	_user="$1"; _userid="$2"
+	${TEST} -n "$_user" || return 3
+
+	if ${TEST} -n "$_userid"; then
+		${AWK} -F : "BEGIN { rv=1 }; \$1 == \"$_user\" { if (\$3 == $_userid) rv=0; else rv=2 }; END { exit rv }" /etc/passwd
+	else
+		${AWK} -F : "\$1 == \"$_user\" || \$3 == \"$_user\" { found=1 }; END { if (!found) exit 1 }" /etc/passwd
+	fi
+}
+
+# first_free_uid
+#	prints the lowest free uid
+first_free_uid()
+{
+	integer uid=700
+	while :; do
+		user_exists $uid
+		if (( $? == 1 )); then
+			break
+		fi
+		let uid++
+	done
+	${ECHO} $uid
+}
+
+# first_free_gid
+#	prints the lowest free gid
+first_free_gid()
+{
+	integer gid=700
+	while :; do
+		group_exists $gid
+		if (( $? == 1 )); then
+			break
+		fi
+		let gid++
+	done
+	${ECHO} $gid
+}
+
+# adduser user group [userid] [descr] [home] [shell]
+adduser()
+{
+	user="$1"; group="$2"; userid="$3"
+	descr="$4"; home="$5" shell="$6"
+	#${TEST} $# -eq 6 || return 1
+	${TEST} -n "$user" || return 2
+	${TEST} -n "$group" || return 2
+
+	case $user in
+	${PKGNAME%-[0-9]*})	descr_dflt="pkgsrc -- $user user" ;;
+	*)			descr_dflt="pkgsrc -- ${PKGNAME%-[0-9]*} $user user" ;;
+	esac
+	: ${descr:="$descr_dflt"}
+	: ${home:="@PKG_USER_HOME@"}
+	: ${shell:="@PKG_USER_SHELL@"}
+
+	if ${TEST} "$group" -gt 0; then
+		# numerical gid
+		gid=$group
+	else
+		if group_exists "$group"; then
+			gid=$(awk -F : "\$1 == \"$group\" { print \$3 }" /etc/group)
+		else
+			gid=$(first_free_gid)
+			addgroup "$group" $gid
+		fi
+	fi
+	if ${TEST} -z "$userid"; then
+		userid=$(first_free_uid)
+	fi
+
+	${ECHO} "${PKGNAME}: Creating user \`\`$user'' ($userid)"
+	set -e
+	P=$(mktemp /etc/pwd.tmp.XXXXXXXXXX)
+	trap 'rm -f $P; exit 1' 1 2 3 5 13 15
+	${CHOWN} root:wheel $P
+	${CHMOD} 600 $P
+	${ECHO} "$user:*:$userid:$gid::0:0:$descr:$home:$shell" >>$P
+	${CAT} /etc/master.passwd >>$P
+	${SORT} -t: -nk3 -o $P $P
+	${MV} /etc/master.passwd /etc/master.passwd.bak
+	${MV} $P /etc/master.passwd
+	${CHOWN} root:wheel /etc/master.passwd
+	${CHMOD} 600 /etc/master.passwd
+	${RM} -f /etc/master.passwd.bak
+	pwd_mkdb -p /etc/master.passwd
+	set +e
+
+	return 0
+}
+
+# addgroup group [groupid]
+addgroup()
+{
+	group="$1"; groupid="$2"
+	${TEST} $# -gt 1 || return 1
+	${TEST} -n "$group" || return 2
+	
+	if ${TEST} -z "$groupid"; then
+		groupid=$(first_free_gid)
+	fi
+
+	${ECHO} "${PKGNAME}: Creating group \`\`$group'' ($groupid)"
+	set -e
+	T=$(mktemp /etc/pwd.tmp.XXXXXXXXXX)
+	trap 'rm -f $T; exit 1' 1 2 3 5 13 15
+	${ECHO} "$group:*:$groupid:" >$T
+	${CHOWN} root:wheel $T
+	${CHMOD} 644 $T
+	${CAT} /etc/group >>$T
+	${SORT} -t: -nk3 -uo $T $T
+	${MV} /etc/group /etc/group.bak
+	${MV} $T /etc/group
+	${RM} -f /etc/group.bak
+	pwd_mkdb -p /etc/master.passwd
+	set +e
+
+	return 0
+}
