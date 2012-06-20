@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2031 2012/06/19 20:17:46 bouyer Exp $
+$NetBSD: CHANGES-2012,v 1.2032 2012/06/20 21:07:24 wiz Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/mediawiki to 1.19.1 [wiz 2012-06-19]
 	Updated pkgtools/pbulk to 0.50 [jperkin 2012-06-19]
 	Updated sysutils/xenkernel41 to 4.1.2nb2 [bouyer 2012-06-12]
+	Updated graphics/tiff to 4.0.2 [wiz 2012-06-20]
