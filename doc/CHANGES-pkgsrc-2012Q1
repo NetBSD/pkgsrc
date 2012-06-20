@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.58 2012/06/18 22:24:00 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.59 2012/06/20 17:54:54 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -260,3 +260,5 @@ Pullup ticket #3835 - requested by dholland
 devel/electric-fence: build fix
 Pullup ticket #3836 - requested by obache
 emulators/suse121_libxml2: security update
+Pullup ticket #3837 - requested by bouyer
+sysutils/xenkernel41: security patch
