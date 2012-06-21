@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/01/11 17:01:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2012/06/21 21:08:11 schmonz Exp $
 #
 
-DISTNAME=		memtester-4.2.2
+DISTNAME=		memtester-4.3.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}old-versions/
 
