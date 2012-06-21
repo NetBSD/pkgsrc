@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2033 2012/06/20 23:27:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2034 2012/06/21 12:46:35 pettai Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3197,3 +3197,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/xenkernel41 to 4.1.2nb2 [bouyer 2012-06-12]
 	Updated graphics/tiff to 4.0.2 [wiz 2012-06-20]
 	Updated textproc/mdoclint to 1.16 [wiz 2012-06-20]
+	Updated security/opendnssec to 1.3.9 [pettai 2012-06-21]
