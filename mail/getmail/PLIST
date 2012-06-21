@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/04/08 20:21:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/06/21 20:52:56 schmonz Exp $
 bin/getmail
 bin/getmail_fetch
 bin/getmail_maildir
@@ -51,6 +51,9 @@ ${PYSITELIB}/getmailcore/exceptions.pyo
 ${PYSITELIB}/getmailcore/filters.py
 ${PYSITELIB}/getmailcore/filters.pyc
 ${PYSITELIB}/getmailcore/filters.pyo
+${PYSITELIB}/getmailcore/imap_utf7.py
+${PYSITELIB}/getmailcore/imap_utf7.pyc
+${PYSITELIB}/getmailcore/imap_utf7.pyo
 ${PYSITELIB}/getmailcore/logging.py
 ${PYSITELIB}/getmailcore/logging.pyc
 ${PYSITELIB}/getmailcore/logging.pyo
