@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/15 22:59:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/21 05:26:01 dholland Exp $
 #
 
 PKGNAME=	dvb-apps-20110713
@@ -13,6 +13,10 @@ HOMEPAGE=	http://linuxtv.org/
 COMMENT=	Digital Video Broadcasting (DVB) applications
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# netbsd-5 does not have dev/dtv/dtvio.h or its associated functionality.
+# (allow 5.99.* as relatively recent 5.99 may still be in use and should work)
+NOT_FOR_PLATFORM+=	NetBSD-5.[0-8]*
 
 USE_TOOLS+=	gmake perl
 
