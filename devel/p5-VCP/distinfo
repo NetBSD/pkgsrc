@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/02 01:53:35 jlam Exp $
+$NetBSD: distinfo,v 1.2 2012/06/21 09:12:44 obache Exp $
 
 SHA1 (VCP-autrijus-snapshot-0.9-20050110.tar.gz) = ecbf8322e17fb5b4ee236b1de0d0116602cfd0a1
 RMD160 (VCP-autrijus-snapshot-0.9-20050110.tar.gz) = c88ac4470bc5a711b01755d0a5ee62b1d162353f
 Size (VCP-autrijus-snapshot-0.9-20050110.tar.gz) = 318457 bytes
+SHA1 (patch-Makefile.PL) = 503d8b95f07d83bb4d12b1c3c3a5bd86d2595a84
