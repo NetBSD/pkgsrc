@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/02/20 14:58:45 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/21 05:35:03 dholland Exp $
 #
 
 DISTNAME=		mod_rpaf-0.5
@@ -16,6 +16,9 @@ CONFLICTS=		ap-rpaf-[0-9]*
 
 APACHE_MODULE=		yes
 INSTALLATION_DIRS=	share/doc
+
+# does not compile with apache24
+PKG_APACHE_ACCEPTED=	apache13 apache2 apache22
 
 .include "../../mk/apache.mk"
 
