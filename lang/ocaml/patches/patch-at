@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.26 2012/03/12 12:28:04 fhajny Exp $
+$NetBSD: patch-at,v 1.27 2012/06/22 11:39:45 sbd Exp $
 
 . Include CFLAGS in bytecccompopts and LDFLAGS in bytecclinkopts.
 . Add cases for dragonfly support.
@@ -14,6 +14,7 @@ $NetBSD: patch-at,v 1.26 2012/03/12 12:28:04 fhajny Exp $
 . Enable suport for x86_64-DragonFly
 . Enable profiling and native dynamic loading for all DragonFly platforms
 . Add pkgsrc X11 checks in case X11 support is enabled in the future
+. When linking with X11 add an rpath to X11 libdir.
 . Fix SunOS linker and as args
 
 --- configure.orig	2011-07-04 21:15:01.000000000 +0000
@@ -167,7 +168,21 @@ $NetBSD: patch-at,v 1.26 2012/03/12 12:28:04 fhajny Exp $
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1402,31 +1420,8 @@ dbm_include="not found"
+@@ -1368,11 +1386,8 @@ do
+     if test $dir = /usr/lib; then
+       x11_link="-lX11"
+     else
+-      x11_libs="-L$dir"
+-      case "$host" in
+-        *-*-*bsd*) x11_link="-R$dir -L$dir -lX11";;
+-        *) x11_link="-L$dir -lX11";;
+-      esac
++      x11_libs="-L$dir ${COMPILER_RPATH_FLAG}$dir"
++      x11_link="-L$dir ${COMPILER_RPATH_FLAG}$dir -lX11"
+     fi
+     break
+   fi
+@@ -1402,31 +1417,8 @@ dbm_include="not found"
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -201,7 +216,7 @@ $NetBSD: patch-at,v 1.26 2012/03/12 12:28:04 fhajny Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1436,8 +1431,8 @@ else
+@@ -1436,8 +1428,8 @@ else
    else
      dbm_include="-I$dbm_include"
    fi
