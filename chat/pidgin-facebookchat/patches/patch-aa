@@ -1,17 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2011/10/05 09:23:44 obache Exp $
+$NetBSD: patch-aa,v 1.4 2012/06/22 13:46:30 obache Exp $
 
 * not to build&install redundant plugins.
 * pidin>=2.7.9 contains facebook.png.
+* honor CFLAGS and LDFLAGS.
 
 --- Makefile.orig	2010-10-08 11:35:45.000000000 +0000
 +++ Makefile
-@@ -1,5 +1,5 @@
- #Customisable stuff here
--LINUX32_COMPILER = i686-pc-linux-gnu-gcc
-+LINUX32_COMPILER = ${CC}
- LINUX64_COMPILER = x86_64-pc-linux-gnu-gcc
- WIN32_COMPILER = /usr/bin/i586-mingw32-gcc
- WIN32_WINDRES = i586-mingw32-windres
 @@ -52,16 +52,10 @@ FACEBOOK_SOURCES = \
  #Standard stuff here
  .PHONY:	all clean install sourcepackage
@@ -30,3 +24,12 @@ $NetBSD: patch-aa,v 1.3 2011/10/05 09:23:44 obache Exp $
  
  installers:	pidgin-facebookchat.exe pidgin-facebookchat.deb pidgin-facebookchat.tar.bz2
  
+@@ -73,7 +67,7 @@ libfacebook.macport.so: ${FACEBOOK_SOURC
+ 	${MACPORT_COMPILER} ${MACPORT_CFLAGS} -Wall -I. -g -O2 -pipe ${FACEBOOK_SOURCES} -o libfacebook.macport.so -shared
+ 
+ libfacebook.so:	${FACEBOOK_SOURCES}
+-	${LINUX32_COMPILER} ${LIBPURPLE_CFLAGS} -Wall ${GLIB_CFLAGS} -I. -g -O2 -pipe ${FACEBOOK_SOURCES} -o libfacebook.so -shared -fPIC -DPIC
++	${CC} ${CFLAGS} ${LIBPURPLE_CFLAGS} -Wall ${LDFLAGS} ${GLIB_CFLAGS} -I.  ${FACEBOOK_SOURCES} -o libfacebook.so -shared -fPIC -DPIC
+ 
+ libfacebookxmpp.so:	libfbxmpp.c ${FACEBOOK_SOURCES}
+ 	${LINUX32_COMPILER} ${LIBPURPLE_CFLAGS} -Wall ${GLIB_CFLAGS} -I. -g -O2 -pipe libfbxmpp.c ${FACEBOOK_SOURCES} -o libfacebookxmpp.so -shared -fPIC -DPIC -I$(PIDGIN_DIR)/libpurple/protocols/jabber/ -lxml2 -I/usr/include/libxml2
