@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2012/03/04 09:06:46 asau Exp $
+# $NetBSD: Makefile.common,v 1.33 2012/06/22 11:36:10 sbd Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		BDB_LIBS=${BDB_LIBS:Q}
+CONFIGURE_ENV+=		BDB_LIBS=${BDB_LINK:Q}
 CONFIGURE_ENV+=		BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-libs ${LDFLAGS:Q}
@@ -35,6 +35,11 @@ INSTALL_UNSTRIPPED=	yes
 .endif
 
 .include "../../mk/bdb.buildlink3.mk"
+
+BDB_LINK=	${BDB_LIBS}
+.if empty(BDBBASE:M/usr)
+BDB_LINK+=	-L${BDBBASE}/lib ${COMPILER_RPATH_FLAG}${BDBBASE}/lib
+.endif
 
 post-extract: cp-power-bsd cp-gnu-config
 
