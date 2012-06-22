@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/05/03 12:20:19 hans Exp $
+$NetBSD: distinfo,v 1.6 2012/06/22 03:52:26 marino Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -18,3 +18,4 @@ SHA1 (patch-libgo_Makefile.in) = c06e3f0deb9f906d2c158262cffdc3fb7af95602
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
 SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 94879703659b960c7b61122b4b4173e01cec1afc
