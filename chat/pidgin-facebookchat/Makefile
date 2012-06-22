@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2012/06/14 07:44:14 sbd Exp $
+# $NetBSD: Makefile,v 1.25 2012/06/22 13:46:30 obache Exp $
 
 DISTNAME=	pidgin-facebookchat-source-1.69
 PKGNAME=	${DISTNAME:S/-source-/-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	http://pidgin-facebookchat.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +32,7 @@ INSTALLATION_DIRS+=	lib/purple-2
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.7.6
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
