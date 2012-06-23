@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2010/04/15 08:13:34 dholland Exp $
+$NetBSD: distinfo,v 1.6 2012/06/23 21:57:21 dholland Exp $
 
 SHA1 (elm-2.4ME+93.tar.gz) = 2ce3cee8eb7af9b73e11fb99b901357b1bd5cd4d
 RMD160 (elm-2.4ME+93.tar.gz) = 46b36b2fdc78924ffbbced66c93defa431508e29
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = 22f5b0219ada56c90cd26b47e9f5beac3af00c4a
 SHA1 (patch-ab) = 6445b6573934c9497c15050917da6738e883c576
 SHA1 (patch-ac) = c76cbb5adc548bdc68fc860063e5280ff90d7e59
 SHA1 (patch-ad) = 73875671aa53548e1cbe1bfae56acb4792ee4b24
-SHA1 (patch-ae) = 600dbb380442dcbaef51c69d81847b400538bf0f
+SHA1 (patch-ae) = d8b63984cf2bc367e311904f6d98e2b8790d3592
 SHA1 (patch-bb) = ba9a5645f5dbc66723e8a6b21666b4009fe31f66
 SHA1 (patch-bv) = dc11b6ef449d041ff63055924686d2da2138088f
 SHA1 (patch-ca) = df5ea5f20ffc2c26f8ba2cd5d3a341fbd0ec6f54
