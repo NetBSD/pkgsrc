@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2012/05/03 12:20:19 hans Exp $
+$NetBSD: patch-configure,v 1.2 2012/06/23 22:13:02 marino Exp $
 
---- configure.orig	2011-03-16 18:27:36.000000000 +0000
+--- configure.orig	2012-02-02 10:20:32.000000000 +0000
 +++ configure
-@@ -5279,9 +5279,11 @@ if test "x$with_mpfr_lib" != x; then
+@@ -5191,9 +5191,11 @@ if test "x$with_mpfr_lib" != x; then
    gmplibs="-L$with_mpfr_lib $gmplibs"
  fi
  if test "x$with_mpfr$with_mpfr_include$with_mpfr_lib" = x && test -d ${srcdir}/mpfr; then

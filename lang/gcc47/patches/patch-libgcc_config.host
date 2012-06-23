@@ -1,0 +1,47 @@
+$NetBSD: patch-libgcc_config.host,v 1.1 2012/06/23 22:13:02 marino Exp $
+
+--- libgcc/config.host.orig	2012-02-20 21:19:55.000000000 +0000
++++ libgcc/config.host
+@@ -174,6 +174,11 @@ case ${host} in
+   tmake_file="$tmake_file t-darwin ${cpu_type}/t-darwin t-libgcc-pic t-slibgcc-darwin"
+   extra_parts="crt3.o crttms.o crttme.o"
+   ;;
++*-*-dragonfly*)
++  tmake_file="$tmake_file t-crtstuff-pic t-libgcc-pic t-eh-dw2-dip"
++  tmake_file="$tmake_file t-slibgcc t-slibgcc-gld t-slibgcc-elf-ver"
++  extra_parts="crtbegin.o crtend.o crtbeginS.o crtendS.o"
++  ;;
+ *-*-freebsd*)
+   # This is the generic ELF configuration of FreeBSD.  Later
+   # machine-specific sections may refine and add to this
+@@ -267,6 +272,7 @@ esac
+ 
+ case ${host} in
+ *-*-darwin* | *-*-freebsd* | *-*-netbsd* | *-*-openbsd* | *-*-solaris2* | \
++  *-*-dragonfly* | \
+   alpha*-dec-osf5.1*)
+   enable_execute_stack=enable-execute-stack-mprotect.c
+   ;;
+@@ -523,6 +529,14 @@ i[34567]86-*-elf*)
+ x86_64-*-elf*)
+ 	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
+ 	;;
++i[34567]86-*-dragonfly*)
++	tmake_file="${tmake_file} i386/t-dragonfly i386/t-crtstuff"
++	md_unwind_header=i386/dragonfly-unwind.h
++	;;
++x86_64-*-dragonfly*)
++	tmake_file="${tmake_file} i386/t-dragonfly i386/t-crtstuff"
++	md_unwind_header=i386/dragonfly-unwind.h
++	;;
+ i[34567]86-*-freebsd*)
+ 	tmake_file="${tmake_file} i386/t-freebsd i386/t-crtstuff"
+ 	;;
+@@ -1156,6 +1170,7 @@ i[34567]86-*-darwin* | x86_64-*-darwin*
+   i[34567]86-*-gnu* | \
+   i[34567]86-*-solaris2* | x86_64-*-solaris2.1[0-9]* | \
+   i[34567]86-*-cygwin* | i[34567]86-*-mingw* | x86_64-*-mingw* | \
++  i[34567]86-*-dragonfly* | x86_64-*-dragonfly* | \
+   i[34567]86-*-freebsd* | x86_64-*-freebsd*)
+   	tmake_file="${tmake_file} t-softfp-tf"
+ 	if test "${host_address}" = 32; then
