@@ -1,0 +1,39 @@
+$NetBSD: patch-membench_c,v 1.1 2012/06/23 18:33:39 dholland Exp $
+
+Use strerror(), not sys_errlist[].
+
+--- membench.c~	2000-07-31 17:23:27.000000000 +0000
++++ membench.c
+@@ -34,14 +34,6 @@
+ #include <string.h>
+ #include <time.h>
+ 
+-#if defined HPUX || defined _AIX
+-extern char *sys_errlist[];
+-#endif
+-#ifdef SunOS
+-extern char *_sys_errlist[];
+-#define sys_errlist _sys_errlist
+-#endif
+-
+ #ifdef SunOS
+ extern		sigjmp_buf	env;
+ #else
+@@ -109,7 +101,7 @@ int membench()
+   double dlt;
+   if ( pipe(sv) == -1 )
+     {
+-      fprintf(stderr,"****  membench: pipe: %s\n",sys_errlist[errno]);
++      fprintf(stderr,"****  membench: pipe: %s\n", strerror(errno));
+       MEMflag=0;
+       return 0;
+     }
+@@ -149,7 +141,7 @@ int membench()
+   child_pid[child_number]=fork();
+   if ( child_pid[child_number] == -1 )
+     {
+-      fprintf(stderr,"****  membench: fork: %s\n",sys_errlist[errno]);
++      fprintf(stderr,"****  membench: fork: %s\n", strerror(errno));
+       MEMflag=0;
+       return 0;
+     }

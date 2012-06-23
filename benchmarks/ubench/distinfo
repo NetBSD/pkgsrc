@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/03 05:57:45 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2012/06/23 18:33:37 dholland Exp $
 
 SHA1 (ubench-0.32.tar.gz) = 749ae490c95b9fe95753b47b5711cbeb9bdb3a29
 RMD160 (ubench-0.32.tar.gz) = 33a2e7b869af1e7c81eb2211b3ee4946e97933d2
 Size (ubench-0.32.tar.gz) = 9341 bytes
 SHA1 (patch-aa) = 07a31eccb56a50b6a5261a6db7b4d37bdc57a3a6
+SHA1 (patch-cpubench_c) = 45a7ea8e8773d7d1fdd3152716bb64b7ce6acfe2
+SHA1 (patch-diskbench_c) = 8b6db9abafe6afacd7cd919683e0cd6530897d0a
+SHA1 (patch-membench_c) = 2db9657a837e00d3a1b50528836fc644aa3dcb7a
+SHA1 (patch-ubench_c) = ef27fa5cf4280d6eb19330943a15890d8f57935f
