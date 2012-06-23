@@ -1,18 +1,24 @@
-$NetBSD: patch-Makefile,v 1.1 2011/11/14 23:52:26 dholland Exp $
+$NetBSD: patch-Makefile,v 1.2 2012/06/23 22:52:35 dholland Exp $
 
-Honor PKGMANDIR.
+ - Honor PKGMANDIR.
+ - Honor pkgsrc LIBS.
 
---- Makefile~	2000-12-17 17:08:52.000000000 +0000
+--- Makefile.orig	2000-12-17 17:08:52.000000000 +0000
 +++ Makefile
-@@ -7,6 +7,7 @@ SHELL		= /bin/sh
+@@ -7,9 +7,11 @@ SHELL		= /bin/sh
  CFLAGS		= -O2 -Wall # -g -DDEBUG
  LDFLAGS		= # -g
  DEST		= /usr/local
 +PKGMANDIR	= man
  OBJS		= ywho.o xdr.o
  SRCS		= ywho.c xdr.c
- LIBS		= -lrpcsvc #-lsocket -lnsl
-@@ -37,12 +38,12 @@ depend:		
+-LIBS		= -lrpcsvc #-lsocket -lnsl
++LIBS		= -lrpcsvc $(EXTRA_LIBS)
++EXTRA_LIBS	= #-lsocket -lnsl
+ 
+ all:		ywho
+ 
+@@ -37,12 +39,12 @@ depend:		
  
  install.man:	
  		rm -f \
