@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/06/02 02:21:15 taca Exp $
+# $NetBSD: Makefile,v 1.24 2012/06/23 07:30:24 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -119,7 +119,9 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 
 REPLACE_RUBY_DIRS=	bin ext lib sample
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${RUBY_ARCHINC} ${RUBY_ARCHLIB} \
-			${RUBY_DOC}/irb ${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
+			${RUBY_DOC}/irb ${RUBY_DOC}/ripper \
+			${RUBY_DOC}/stringio ${RUBY_EG}/bigdecimal \
+			${RUBY_EG}/pty
 EMPTY_DIRS=		generator/template markup/simple_markup
 
 pre-configure:
