@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/02/11 22:17:36 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/23 22:43:59 dholland Exp $
 
 DISTNAME=	netpipes-4.2-export
 PKGNAME=	${DISTNAME:S/-export//}
@@ -15,12 +15,13 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	tbl
 
 LIBS.SunOS+=	-lsocket -lnsl
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}
 
 post-build:
-	cd ${WRKSRC}; for f in faucet.1 hose.1; do			\
-		${TBL} $$f > $$f.new; ${MV} -f $$f.new $$f;		\
-	done
+.for f in faucet.1 hose.1
+	cd ${WRKSRC} && ${TBL} ${f} > ${f}.new && ${MV} -f ${f}.new ${f}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
