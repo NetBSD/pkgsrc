@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/01 00:17:09 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/23 23:07:20 dholland Exp $
 #
 
 DISTNAME=	arirang-1.6
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	sbin share/arirang
 
 LIBS.SunOS+=		-lsocket -lnsl
+MAKE_ENV+=		LIBS=${LIBS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arirang ${DESTDIR}${PREFIX}/sbin
