@@ -1,0 +1,40 @@
+$NetBSD: patch-diskbench_c,v 1.1 2012/06/23 18:33:38 dholland Exp $
+
+Use strerror(), not sys_errlist[].
+
+--- diskbench.c~	2000-07-31 17:24:10.000000000 +0000
++++ diskbench.c
+@@ -33,15 +33,6 @@
+ #include <string.h>
+ #include <time.h>
+ 
+-#if defined HPUX || defined _AIX
+-extern char *sys_errlist[];
+-#endif
+-
+-#ifdef SunOS
+-extern char *_sys_errlist[];
+-#define sys_errlist _sys_errlist;
+-#endif
+-
+ #ifdef SunOS
+ extern		sigjmp_buf	env;
+ #else
+@@ -110,7 +101,7 @@ int diskbench()
+   double dlt;
+   if ( pipe(sv) == -1 )
+     {
+-      fprintf(stderr,"****  diskbench: pipe: %s\n",sys_errlist[errno]);
++      fprintf(stderr,"****  diskbench: pipe: %s\n", strerror(errno));
+       DISKflag=0;
+       return 0;
+     }
+@@ -150,7 +141,7 @@ int diskbench()
+   child_pid[child_number]=fork();
+   if ( child_pid[child_number] == -1 )
+     {
+-      fprintf(stderr,"****  diskbench: fork: %s\n",sys_errlist[errno]);
++      fprintf(stderr,"****  diskbench: fork: %s\n", strerror(errno));
+       DISKflag=0;
+       return 0;
+     }
