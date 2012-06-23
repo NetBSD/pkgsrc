@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/10 16:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/23 19:23:32 dholland Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -24,6 +24,8 @@ INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/${PKGBASE}
 
 # Has problems finding shared libs on some platforms...
 CFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
+
+LIBS.SunOS+=	-lsocket -lnsl
 
 pre-build:
 	if [ -L ${WRKSRC}/src/vars ]; then ${RM} ${WRKSRC}/src/vars; fi
