@@ -1,13 +1,66 @@
-$NetBSD: patch-af,v 1.1 2001/04/12 21:06:45 jtb Exp $
+$NetBSD: patch-af,v 1.2 2012/06/23 21:17:17 dholland Exp $
 
---- portable.h.orig	Thu Apr 12 20:13:29 2001
+- use standard headers
+- remove own declarations of standard/system things
+- use intptr_t rather than stuffing pointers into int
+
+--- portable.h.orig	1996-01-21 22:15:51.000000000 +0000
 +++ portable.h
-@@ -94,7 +94,7 @@
+@@ -35,9 +35,11 @@ For additional information about UMB Sch
+ */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <ctype.h>
+ #include <errno.h>
+ #include <string.h>
++#include <stdint.h>
+ #include <math.h>
+ 
+ /* Machine dependencies */
+@@ -60,11 +62,7 @@ For additional information about UMB Sch
+ /* Processors (eg the Alpha) having 64-bit addresses require special casting
+    in the architecture module.  */
+ 
+-#if defined(__alpha__)
+-typedef long int Integral_Pointer;
+-#else
+-typedef int Integral_Pointer;
+-#endif
++typedef intptr_t Integral_Pointer;
+ 
+ 
+ /* NEGATIVE_ADDRESSES is defined to be 1 iff memory addresses have a 1 in the 
+@@ -83,27 +81,29 @@ typedef int Integral_Pointer;
+ /* The following declarations ought not to be necessary for C environments
+    that support the ANSI C Standard. */
+ 
++#if 0
+ extern void * malloc( /* size_t size */ );
+ extern void   free( /* char *ptr */ );
+ extern char * getenv( /* const char *name */ );
+ extern int    system( /* const char command */ );
+ extern void   exit( /* int status */ );
+ extern int    abs( /* int x */ );
++#endif
+ 
+ /* IF YOUR ENVIRONMENT HAS (any standard ANSI C library ought to have)
     a float.h defns file then replace the definition of DBL_MIN with
     an #include <float.h>                                                 */
  
 -#define DBL_MIN 10e-307
 +/* #define DBL_MIN 10e-307 */
  
- #ifdef sun
+-#ifdef sun
++#if 0
  extern int    fclose( /* FILE *stream */ );
+ extern int    ungetc( /* int c, FILE *stream */ );
+ extern int    fprintf( /* FILE *stream, const char *format, ...  */ );
+ extern int    _filbuf(), _flsbuf(); /* Yes, I know; talk to Sun! */
+ #endif
+ 
+-#ifdef sun386
++#if 0
+ extern int    sprintf( /* char *s,      const char *format, ...  */ );
+ extern char * memcpy( /* void *dest, const void *src, size_t len */ );
+ #endif
