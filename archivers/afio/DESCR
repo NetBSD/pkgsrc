@@ -3,3 +3,6 @@ input data corruption.  Supports multi-volume archives during
 interactive operation.  Afio can make compressed archives that are
 much safer than compressed tar or cpio archives.  Afio is best used as
 an `archive engine' in a backup script.
+
+The package's license may require formal disclosure that the software
+has been patched.
