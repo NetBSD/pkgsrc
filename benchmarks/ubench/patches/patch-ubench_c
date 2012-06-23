@@ -1,0 +1,30 @@
+$NetBSD: patch-ubench_c,v 1.1 2012/06/23 18:33:39 dholland Exp $
+
+Use strerror(), not sys_errlist[].
+
+--- ubench.c~	2000-05-29 03:07:21.000000000 +0000
++++ ubench.c
+@@ -29,14 +29,6 @@
+ #include <sys/utsname.h>
+ #include <limits.h>
+ 
+-#if defined HPUX || defined _AIX
+-extern char *sys_errlist[];
+-#endif
+-#ifdef SunOS
+-extern char *_sys_errlist[];
+-#define sys_errlist _sys_errlist
+-#endif
+-
+ int	cpubench();
+ int	membench();
+ #ifdef  DISKNETYES
+@@ -138,7 +130,7 @@ prgs: switch ( argc[i][s] )
+   signalSetup();
+   print_version();
+   if ( uname(&utsbuf) == -1 )
+-    fprintf(stderr,"****  ubench: uname: %s\n",sys_errlist[errno]);
++    fprintf(stderr,"****  ubench: uname: %s\n", strerror(errno));
+   else
+     {
+ #if defined HPUX

@@ -1,0 +1,49 @@
+$NetBSD: patch-cpubench_c,v 1.1 2012/06/23 18:33:38 dholland Exp $
+
+Use standard headers.
+Use strerror(), not sys_errlist[].
+
+--- cpubench.c~	2000-05-29 03:21:13.000000000 +0000
++++ cpubench.c
+@@ -25,6 +25,8 @@
+ #include <sys/types.h>
+ #include <sys/times.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <signal.h>
+ #include <setjmp.h>
+@@ -33,14 +35,6 @@
+ #include <math.h>
+ #include <time.h>
+ 
+-#if defined HPUX || defined _AIX
+-extern char *sys_errlist[];
+-#endif
+-#ifdef SunOS
+-extern char *_sys_errlist[];
+-#define sys_errlist _sys_errlist
+-#endif
+-
+ #ifdef SunOS
+ extern		sigjmp_buf	env;
+ #else
+@@ -121,7 +115,7 @@ int cpubench()
+   double dlt;
+   if ( pipe(sv) == -1 )
+     {
+-      fprintf(stderr,"****  cpubench: pipe: %s\n",sys_errlist[errno]);
++      fprintf(stderr,"****  cpubench: pipe: %s\n", strerror(errno));
+       CPUflag=0;
+       return 0;
+     }
+@@ -162,7 +156,7 @@ int cpubench()
+   child_pid[child_number]=fork();
+   if ( child_pid[child_number] == -1 )
+     {
+-      fprintf(stderr,"****  cpubench: fork: %s\n",sys_errlist[errno]);
++      fprintf(stderr,"****  cpubench: fork: %s\n", strerror(errno));
+       CPUflag=0;
+       return 0;
+     }
