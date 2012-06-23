@@ -1,9 +1,43 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:29 agc Exp $
+$NetBSD: patch-ab,v 1.3 2012/06/23 21:45:24 dholland Exp $
 
---- coolmail.c.orig	Thu Jul 16 05:09:10 1998
-+++ coolmail.c	Thu Jul 16 05:11:28 1998
-@@ -36,3 +36,3 @@
+- use standard headers
+- use /var/mail as the default mail dir (XXX: shouldn't this be fed in
+  from pkgsrc somewhere?)
+- use getlogin(), not cuserid().
+
+--- coolmail.c.orig	1996-01-11 17:57:24.000000000 +0000
++++ coolmail.c
+@@ -18,6 +18,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <math.h>
+ #include <assert.h>
+ #include <signal.h>
+@@ -34,7 +35,7 @@
+ #include "render1.h"
+ #include "mailbox.h"
  
 -#define DEFAULT_MAIL_DIR  "/var/spool/mail/"
 +#define DEFAULT_MAIL_DIR  "/var/mail/"
  #define DEFAULT_COMMAND   "xterm -n Elm -e mail\0"
+ #define DEFAULT_INTERVAL  30
+ #define DEFAULT_FRAMES    15
+@@ -96,7 +97,6 @@ void cool_usage(void);
+ int main(int argc, char *argv[])
+ {
+    int reason;
+-   char username[L_cuserid];
+ 
+    /* Quickly scan for the -h option -- if it is present don't do anything
+     * but print out some help and exit. */
+@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
+       return(0);
+ 
+    /* Get the username and use it to create a default mailfile name */
+-   strcat(mailfile_str, cuserid(username));
++   strcat(mailfile_str, getlogin());
+ 
+    /* Initialize the renderer */
+    rend_init(&argc, argv, (float)150.0);
