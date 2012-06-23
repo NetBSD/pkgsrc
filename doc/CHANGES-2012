@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2039 2012/06/22 13:46:53 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2040 2012/06/23 08:02:37 tsutsui Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3203,3 +3203,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ocaml to 3.12.1nb1 [sbd 2012-06-22]
 	Updated x11/ocaml-graphics to 3.12.1nb6 [sbd 2012-06-22]
 	Updated chat/pidgin-facebookchat to 1.69nb8 [obache 2012-06-22]
+	Updated games/onscripter to 20120531 [tsutsui 2012-06-23]
