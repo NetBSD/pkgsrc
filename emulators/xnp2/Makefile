@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/02 07:19:33 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/23 10:12:02 tsutsui Exp $
 
-SNAPSHOTDATE=		20120302
+SNAPSHOTDATE=		20120618
 DISTNAME=		xnp2-${SNAPSHOTDATE}
 PKGNAME=		xnp2-0.83pl${SNAPSHOTDATE}
 CATEGORIES=		emulators
