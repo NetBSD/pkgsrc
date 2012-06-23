@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2012/06/23 04:50:07 schnoebe Exp $
 
 # lots of portability changes to configure.in, removing hard-coded paths
 # and pulling in the dynamic library loading modules..
 
 # pushed upstream as https://bugs.launchpad.net/hplip/+bug/726207
 
---- configure.in.orig	2010-07-19 02:18:37.000000000 +0000
+--- configure.in.orig	2012-06-05 09:32:41.000000000 +0000
 +++ configure.in
 @@ -34,14 +34,15 @@ AC_DISABLE_STATIC
  # Checks for programs.
@@ -24,9 +24,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
  
  # Checks for required header files.
  AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([cannot find pthread-devel support], 7)])
-@@ -301,25 +302,25 @@ else
+@@ -324,25 +325,25 @@ else
  fi
- AM_CONDITIONAL(SHADOW_BUILD, test x$shadow_build = xyes)
+ AM_CONDITIONAL(LIBUSB01_BUILD, test x$libusb01_build = xyes)
  
 -AC_ARG_WITH(cupsbackenddir, AC_HELP_STRING([--with-cupsbackenddir=DIR], [set cups backend install directory [default=/usr/lib/cups/backend]]),
 -   cupsbackenddir=$withval, cupsbackenddir="/usr/lib/cups/backend")
@@ -57,11 +57,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
 +   abs_mimedir="$datadir/cups/mime/"
  else
 -   abs_mimedir="/etc/cups/"
-+   abs_mimedir="$sysconfdir/cups/"
++   abs_mimedir="$sysconfdir/etc/cups/"
  fi
  AC_ARG_WITH(mimedir, AC_HELP_STRING([--with-mimedir=DIR], [set cups mime.types location [default=abs_mimedir]]),
     mimedir=$withval, mimedir="$abs_mimedir")
-@@ -446,12 +447,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
+@@ -469,12 +470,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
  
  # Determine where the PolicyKit policy file goes
  if test "$policykit" = "yes"; then
@@ -79,7 +79,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
     fi
  else
     policykit_dir=
-@@ -551,6 +552,7 @@ AC_DEFINE_DIR([abs_datadir], [datadir])
+@@ -579,6 +580,7 @@ AC_DEFINE_DIR([abs_datadir], [datadir])
  AC_DEFINE_DIR([abs_sbindir], [sbindir])
  AC_DEFINE_DIR([abs_hpppddir], [hpppddir])
  AC_DEFINE_DIR([abs_docdir], [hpdocdir])
@@ -87,7 +87,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
  abs_ppddir=${abs_hpppddir%/*}
  AC_DEFINE_DIR([abs_drvdir], [drvdir])
  
-@@ -558,6 +560,7 @@ AC_SUBST(abs_datadir) 
+@@ -586,6 +588,7 @@ AC_SUBST(abs_datadir) 
  AC_SUBST(abs_sbindir) 
  AC_SUBST(abs_hpppddir) 
  AC_SUBST(abs_docdir) 
