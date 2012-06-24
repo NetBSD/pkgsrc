@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/09/10 13:20:59 taca Exp $
+# $NetBSD: Makefile,v 1.15 2012/06/24 07:42:45 jperkin Exp $
 
 DISTNAME=	webunit-${VERSION}
 PKGREVISION=	3
@@ -23,6 +23,8 @@ VERSION=	20040429++
 
 CONFIGURE_ARGS=	--site-ruby=${PREFIX}/${RUBY_VENDORLIB} \
 		--so-dir=${PREFIX}/${RUBY_VENDORARCHLIB}
+
+INSTALLATION_DIRS+=	${RUBY_DOC}/webunit ${RUBY_EG}/webunit
 
 pre-patch:
 	cd ${WRKSRC}/lib; \
