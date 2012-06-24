@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/06/16 20:45:42 drochner Exp $
+$NetBSD: distinfo,v 1.4 2012/06/24 01:49:14 dholland Exp $
 
 SHA1 (extrema-4.4.4.tar.gz) = eff38eb3c36aa9acc3ad471ea57f2037c66e1842
 RMD160 (extrema-4.4.4.tar.gz) = 4ce6dcacca51ac18deb770cd9c0f7f77d0458ccd
 Size (extrema-4.4.4.tar.gz) = 6404330 bytes
+SHA1 (patch-src_Graphics_GRA__thiessenTriangulation_h) = ede808bc2f19f3aafb31310eb04aa5317ad9b471
