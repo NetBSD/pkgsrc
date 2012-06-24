@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.27 2012/06/22 11:39:45 sbd Exp $
+$NetBSD: patch-at,v 1.28 2012/06/24 08:27:31 sbd Exp $
 
 . Include CFLAGS in bytecccompopts and LDFLAGS in bytecclinkopts.
 . Add cases for dragonfly support.
@@ -16,6 +16,7 @@ $NetBSD: patch-at,v 1.27 2012/06/22 11:39:45 sbd Exp $
 . Add pkgsrc X11 checks in case X11 support is enabled in the future
 . When linking with X11 add an rpath to X11 libdir.
 . Fix SunOS linker and as args
+. On Linux libieee can only appear once on the linker command line.
 
 --- configure.orig	2011-07-04 21:15:01.000000000 +0000
 +++ configure
@@ -227,3 +228,13 @@ $NetBSD: patch-at,v 1.27 2012/06/22 11:39:45 sbd Exp $
    fi
    otherlibraries="$otherlibraries dbm"
  fi
+@@ -1500,6 +1492,9 @@ if test $has_tk = true; then
+   fi
+ fi
+ 
++case "$host" in
++  *-*-linux*) tk_libs=`echo $tk_libs | sed -e's,-lieee,,'`;;
++esac
+ tkauxlibs="$mathlib $dllib"
+ tcllib=''
+ tklib=''
