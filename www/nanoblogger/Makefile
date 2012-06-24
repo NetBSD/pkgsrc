@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/05 15:49:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/24 07:40:01 jperkin Exp $
 #
 
 DISTNAME=	nanoblogger-3.4.2
@@ -27,7 +27,7 @@ SUBST_SED.fix-paths+=		-e 's,NB_BASE_DIR=`dirname $$0`,NB_BASE_DIR=${PREFIX}/sha
 
 REPLACE_BASH=	nb
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/nanoblogger
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/nb ${DESTDIR}${PREFIX}/bin
