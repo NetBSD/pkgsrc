@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11308 2012/06/24 02:51:12 obache Exp $
+$NetBSD: TODO,v 1.11309 2012/06/24 18:23:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.7.7
+	o ImageMagick-6.7.7.8
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -445,7 +445,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cairo-gobject-1.12.2
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.56
+	o calibre-0.8.57
 	o calligra-2.4.2 [koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
@@ -457,6 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdlabelgen-4.2.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
+	o cfengine-3.3.4
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.4.2
@@ -497,7 +498,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dansguardian-2.10.0.3
 	o dante-1.3.2
 	o dap-3.7
-	o dar-2.4.5
+	o dar-2.4.6
 	o darcs-2.4
 	o dasher-4.11
 	o dasm-2.20.11
@@ -512,6 +513,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o defendguin-0.0.11
 	o dejagnu-1.5
 	o delegate-9.9.7
+	o denemo-0.9.4
 	o dgen-1.30
 	o dhid-5.3
 	o diffpdf-2.1.1
@@ -729,6 +731,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hanzim-3.4
 	o haskell-mode-1.45
 	o hdf-4.2.7p1
+	o hdf5-1.8.9
 	o help2man-1.40.10 [pkg/46548]
 	o hesiod-3.1.0
 	o heyu-2.9.0
@@ -859,6 +862,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-info-2.4.2
 	o libv4l-0.8.5
 	o libvirt-0.9.9
+	o libvisio-0.0.18
 	o libxklavier-5.2.1
 	o licq-1.3.8
 	o liferea-1.8.6
@@ -985,7 +989,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pam-passwdqc-1.2.2
 	o pango-1.30.1
 	o paprefs-0.9.8
-	o parallel-20120522
+	o parallel-20120622
 	o pari-2.5.1
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-4.4.0
@@ -1059,12 +1063,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ldap-2.4.10
 	o py-libxml2-2.8.0
 	o py-pyutil-1.9.3 [pkg/46551]
+	o py-qt4-4.9.3
 	o py-setuptools_trial-0.5.12 [pkg/46550]
+	o py-sip-4.13.3
 	o py-sybase-0.37
 	o py-urwid-1.0.1
 	o qbrew-0.3.9
 	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
+	o qt4-qscintilla-2.6.2
 	o quilt-0.60
 	o qvplay-0.95
 	o radiance-3.7.2
@@ -1230,14 +1237,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.17.1
+	o vala-0.17.2
 	o valgrind-3.7.0
 	o vbetool-1.1
 	o vera-1.17
 	o vfu-4.09
 	o vicq-0.4.2
-	o viewvc-1.1.14
-	o vifm-0.7.3
+	o viewvc-1.1.15
+	o vifm-0.7.3a
 	o vile-9.8
 	o vim-7.3
 	o vinagre-3.4.2
@@ -1264,7 +1271,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wine-1.4.1
-	o wine-devel-1.5.6 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wine-devel-1.5.7 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wireshark-1.8.0
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1359,7 +1367,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmp-3.5.0
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorp-1.8.4
+	o xorp-1.8.5
 	o xosview-1.9.3
 	o xpaint-2.9.9
 	o xpr-1.0.4 [unpackaged]
