@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2041 2012/06/23 10:14:27 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.2042 2012/06/24 00:03:03 schnoebe Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/pidgin-facebookchat to 1.69nb8 [obache 2012-06-22]
 	Updated games/onscripter to 20120531 [tsutsui 2012-06-23]
 	Updated emulators/xnp2 to 0.83pl20120618 [tsutsui 2012-06-23]
+	Updated print/hplip to 3.12.6 [schnoebe 2012-06-23]
