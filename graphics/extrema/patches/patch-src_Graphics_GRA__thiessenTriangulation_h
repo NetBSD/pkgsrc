@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Graphics_GRA__thiessenTriangulation_h,v 1.1 2012/06/24 01:49:14 dholland Exp $
+
+- this file uses size_t without including a definition of it, leading
+to build failure on Solaris.
+
+--- src/Graphics/GRA_thiessenTriangulation.h~	2009-11-05 21:03:01.000000000 +0000
++++ src/Graphics/GRA_thiessenTriangulation.h
+@@ -18,6 +18,7 @@ Foundation, Inc., 51 Franklin Street, Fi
+ #ifndef GRA_THIESSENTRIANGULATION
+ #define GRA_THIESSENTRIANGULATION
+ 
++#include <cstddef>
+ #include <vector>
+ 
+ class GRA_thiessenTriangulation
