@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/22 15:33:43 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/24 07:36:17 jperkin Exp $
 #
 
 .include "../../textproc/docbook-xsl/Makefile.common"
@@ -11,6 +11,8 @@ DEPENDS+= \
 	docbook-xsl>=${DISTNAME:S/docbook-xsl-//}:../../textproc/docbook-xsl
 
 REPLACE_RUBY+=	epub/bin/dbtoepub
+
+INSTALLATION_DIRS+=	${XSLDIR}
 
 do-install:
 	${ECHO} "${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}/epub"
