@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.example,v 1.6 2012/06/16 13:11:22 taca Exp $
+# $NetBSD: Makefile.example,v 1.7 2012/06/25 08:57:10 jperkin Exp $
 #
 # used by www/contao211-example/Makefile
 #
@@ -32,7 +32,7 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/${f}
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
 
-INSTALLATION_DIRS+=	${CT_WEBDIR}/templates
+INSTALLATION_DIRS+=	${CT_EGDIR} ${CT_WEBDIR}/templates
 
 do-install:
 	cd ${WRKSRC}; \

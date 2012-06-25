@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/06/16 03:04:23 taca Exp $
+# $NetBSD: Makefile,v 1.37 2012/06/25 09:00:26 jperkin Exp $
 
 DISTNAME=	drupal-6.26
 CATEGORIES=	www
@@ -53,6 +53,9 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 
 INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites/all \
 			share/doc/drupal share/examples/drupal
+.for i in ${PAX_DIRS}
+INSTALLATION_DIRS+=	${DRUPAL}/${i}
+.endfor
 
 .include "options.mk"
 
