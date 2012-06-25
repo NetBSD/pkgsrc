@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2012/06/14 07:43:42 sbd Exp $
+# $NetBSD: Makefile,v 1.100 2012/06/25 11:29:13 joerg Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 PKGREVISION=	19
@@ -30,6 +30,12 @@ SUBST_SED.kpdf+=	-e 's:/usr/X11R6:${X11BASE}:g'
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# OpenEXR uses exceptions in the header files
+BUILDLINK_TRANSFORM+=	rm:-fno-exceptions
+.endif
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
