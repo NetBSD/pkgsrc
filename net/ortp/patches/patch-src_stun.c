@@ -1,10 +1,19 @@
-$NetBSD: patch-src_stun.c,v 1.1 2012/03/10 22:07:25 markd Exp $
+$NetBSD: patch-src_stun.c,v 1.2 2012/06/25 11:49:10 joerg Exp $
 
 Fix build with gcc 4.6
 
---- src/stun.c.orig	2012-02-13 09:03:33.121945876 +0000
+--- src/stun.c.orig	2009-06-16 10:49:48.000000000 +0000
 +++ src/stun.c
-@@ -1984,7 +1984,6 @@ stunSendTest( Socket myFd, StunAddress4
+@@ -398,7 +398,7 @@ stunParseMessage( char* buf, unsigned in
+    char* body;
+    unsigned int size;
+ 	 ortp_debug("stun: Received stun message: %i bytes\n", bufLen);
+-   memset(msg, 0, sizeof(msg));
++   memset(msg, 0, sizeof(*msg));
+ 	
+    if (sizeof(StunMsgHdr) > bufLen)
+    {
+@@ -1984,7 +1984,6 @@ stunSendTest( Socket myFd, StunAddress4 
  	
     bool_t changePort=FALSE;
     bool_t changeIP=FALSE;
@@ -12,7 +21,7 @@ Fix build with gcc 4.6
  
     StunMessage req;
     char buf[STUN_MAX_MESSAGE_SIZE];
-@@ -2007,7 +2006,6 @@ stunSendTest( Socket myFd, StunAddress4
+@@ -2007,7 +2006,6 @@ stunSendTest( Socket myFd, StunAddress4 
           changeIP=TRUE;
           break;
        case 5:
@@ -20,7 +29,7 @@ Fix build with gcc 4.6
           break;
        default:
           ortp_error("stun: Test %i is unkown\n", testNum);
-@@ -2153,7 +2151,7 @@ stunNatType( StunAddress4 *dest,
+@@ -2153,7 +2151,7 @@ stunNatType( StunAddress4 *dest, 
  
     bool_t respTestI=FALSE;
     bool_t isNat=TRUE;
@@ -29,7 +38,7 @@ Fix build with gcc 4.6
     StunAddress4 testImappedAddr;
     bool_t respTestI2=FALSE; 
     bool_t mappedIpSame = TRUE;
-@@ -2336,8 +2334,8 @@ stunNatType( StunAddress4 *dest,
+@@ -2336,8 +2334,8 @@ stunNatType( StunAddress4 *dest, 
                          if ( !respTestI )
                          {
  									
