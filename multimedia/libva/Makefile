@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/03 08:22:12 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/25 11:51:27 joerg Exp $
 #
 
 # libva-1.0.7+ needs libdrm-2.4.23
@@ -35,6 +35,7 @@ PKGCONFIG_OVERRIDE+=	libva.pc.in
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
