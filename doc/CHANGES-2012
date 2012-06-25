@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2043 2012/06/24 02:03:56 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2044 2012/06/25 10:17:03 sbd Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/xnp2 to 0.83pl20120618 [tsutsui 2012-06-23]
 	Updated print/hplip to 3.12.6 [schnoebe 2012-06-23]
 	Updated graphics/GraphicsMagick to 1.3.16 [obache 2012-06-24]
+	Updated emulators/qemu to 1.1.0nb1 [sbd 2012-06-25]
