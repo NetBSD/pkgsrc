@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2012/06/25 10:07:21 sbd Exp $
+
+--- configure.orig	2012-06-01 09:13:13.000000000 +0000
++++ configure
+@@ -2854,6 +2854,9 @@ if test "$debug" = "no" ; then
+   CFLAGS="-O2 $CFLAGS"
+ fi
+ 
++# hw/usb/hcd_ehci.c will not compile with -O3 optimization.
++CFLAGS=`echo "$CFLAGS" | sed -e 's,-O3,,'`
++
+ # Consult white-list to determine whether to enable werror
+ # by default.  Only enable by default for git builds
+ z_version=`cut -f3 -d. $source_path/VERSION`
