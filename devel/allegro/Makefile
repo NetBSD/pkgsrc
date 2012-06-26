@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/04/19 21:03:15 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2012/06/26 09:57:27 sbd Exp $
 #
 
 DISTNAME=	allegro-4.4.2
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config makeinfo
 USE_LANGUAGES=	c c++
 
 INFO_FILES=	yes
+CMAKE_ARGS+=	-DINFODIR=${PKGINFODIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
