@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/03 18:18:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/06/26 10:01:59 sbd Exp $
 #
 
 DISTNAME=	xload-1.1.1
@@ -13,7 +13,7 @@ COMMENT=	System load average display for X
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config xgettext
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
