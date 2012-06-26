@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/06 07:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/26 10:41:44 jperkin Exp $
 #
 
 DISTNAME=		xorg-docs-1.7
@@ -16,5 +16,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xmlto=no
 CONFIGURE_ARGS+=	--with-xsltproc=no
 CONFIGURE_ARGS+=	--with-fop=no
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		MISC_MAN_SUFFIX=7
+.endif
 
 .include "../../mk/bsd.pkg.mk"
