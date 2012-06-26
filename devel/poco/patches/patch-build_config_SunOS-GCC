@@ -1,9 +1,28 @@
-$NetBSD: patch-build_config_SunOS-GCC,v 1.1 2012/06/11 12:40:32 fhajny Exp $
+$NetBSD: patch-build_config_SunOS-GCC,v 1.2 2012/06/26 12:33:43 fhajny Exp $
 
 _XOPEN_SOURCE=600 or higher is needed on SunOS and GCC>=4.6.
---- build/config/SunOS-GCC.orig	2010-12-16 05:43:24.000000000 +0000
+Fix missing rpath on SunOS.
+--- build/config/SunOS-GCC.orig	2011-09-24 08:06:59.000000000 +0000
 +++ build/config/SunOS-GCC
-@@ -63,9 +63,9 @@ RELEASEOPT_LINK = -O2
+@@ -21,6 +21,8 @@ LINK    = $(CXX)
+ LIB     = ar -cr
+ RANLIB  = ranlib
+ SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
++SHLIBFLAGS = $(LDFLAGS) -Wl,-R$(POCO_PREFIX)/lib \
++                $(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
+ SHLIBLN = $(POCO_BASE)/build/script/shlibln
+ STRIP   = strip
+ DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
+@@ -52,7 +54,7 @@ STATICOPT_CXX   =
+ STATICOPT_LINK  = -static
+ SHAREDOPT_CC    = -fPIC
+ SHAREDOPT_CXX   = -fPIC
+-SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH)
++SHAREDOPT_LINK  = -Wl,-R$(POCO_PREFIX)/lib -L$(LIBPATH)
+ DEBUGOPT_CC     = -g -D_DEBUG
+ DEBUGOPT_CXX    = -g -D_DEBUG
+ DEBUGOPT_LINK   = -g
+@@ -63,9 +65,9 @@ RELEASEOPT_LINK = -O2
  #
  # System Specific Flags
  #
