@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.120 2012/04/25 16:28:18 hans Exp $
+# $NetBSD: gcc.mk,v 1.121 2012/06/26 15:48:53 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -607,16 +607,7 @@ _COMPILER_STRIP_VARS+=	${_GCC_VARS}
 IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
-.if ${OPSYS} == "SunOS"
-_COMPILER_ABI_FLAG.64=  -m64
-.endif
-
-.if ${OPSYS} == "Darwin"
-_COMPILER_ABI_FLAG.32=  -m32
-_COMPILER_ABI_FLAG.64=  -m64
-.endif
-
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 _COMPILER_ABI_FLAG.32=  -m32
 _COMPILER_ABI_FLAG.64=  -m64
 .endif
