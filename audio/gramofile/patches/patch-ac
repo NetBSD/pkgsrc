@@ -1,10 +1,16 @@
-$NetBSD: patch-ac,v 1.4 2012/02/15 21:37:48 hans Exp $
+$NetBSD: patch-ac,v 1.5 2012/06/27 22:23:42 sbd Exp $
 
 Use fixed size fields
 
---- fmtheaders.h.orig	2000-03-28 22:07:26.000000000 +0100
-+++ fmtheaders.h	2004-11-29 09:12:19.000000000 +0000
-@@ -7,16 +7,16 @@
+--- fmtheaders.h.orig	2000-03-28 21:07:26.000000000 +0000
++++ fmtheaders.h
+@@ -2,21 +2,22 @@
+ #define _FMTHEADERS_H	1
+ 
+ #include <sys/types.h>
++#include <stdint.h>
+ 
+ /* Definitions for .VOC files */
  
  #define VOC_MAGIC	"Creative Voice File\032"
  
@@ -27,7 +33,7 @@ Use fixed size fields
    }
  vochead;
  
-@@ -36,7 +36,7 @@ blockT1;
+@@ -36,7 +37,7 @@ blockT1;
  
  typedef struct blockT8
    {
@@ -36,7 +42,7 @@ Use fixed size fields
      u_char PackMethod;
      u_char VoiceMode;
    }
-@@ -44,10 +44,10 @@ blockT8;
+@@ -44,10 +45,10 @@ blockT8;
  
  typedef struct blockT9
    {
@@ -49,7 +55,7 @@ Use fixed size fields
      u_char reserved[4];
    }
  blockT9;
-@@ -62,21 +62,21 @@ blockT9;
+@@ -62,21 +63,21 @@ blockT9;
   */
  typedef struct wavhead
    {
