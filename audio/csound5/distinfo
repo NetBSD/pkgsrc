@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2012/02/07 21:17:49 sbd Exp $
+$NetBSD: distinfo,v 1.9 2012/06/27 21:26:28 sbd Exp $
 
 SHA1 (Csound5.01_src.tar.gz) = b387da9b6c24961397e89ddcedd1229cdfebffe7
 RMD160 (Csound5.01_src.tar.gz) = 24652f8f650464d886f6d537ae991654f475ad4a
 Size (Csound5.01_src.tar.gz) = 2031426 bytes
-SHA1 (patch-ac) = 686530ade67f637ccbd0286fa689af920773cd13
+SHA1 (patch-ac) = fc7e0d3c32f7fc117c5ea40bda7b0a7e9f9def7b
 SHA1 (patch-ad) = 343b5767584cf4ddfbc7664e3234577fe22ff03a
 SHA1 (patch-ae) = 705d56ce7a03cd10763542a9ec71b393474c0595
 SHA1 (patch-af) = 4444b8efe47a401e01718c21197c2b6e19ec548c
