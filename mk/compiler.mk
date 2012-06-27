@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.75 2012/04/13 03:03:36 sbd Exp $
+# $NetBSD: compiler.mk,v 1.76 2012/06/27 13:36:08 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -129,6 +129,15 @@ _COMPILER_STRIP_VARS=	# empty
 
 .if !defined(PKG_CPP)
 PKG_CPP:=${CPP}
+.endif
+
+# Ensure the Solaris linker is used by default.
+.if ${OPSYS} == "SunOS"
+.  if exists(/usr/ccs/bin/ld)
+PKG_LD?=       /usr/ccs/bin/ld
+.  elif exists(/usr/bin/ld)
+PKG_LD?=       /usr/bin/ld
+.  endif
 .endif
 
 # Strip the leading paths from the toolchain variables since we manipulate
