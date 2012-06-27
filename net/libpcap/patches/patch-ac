@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2011/02/11 12:11:26 adam Exp $
+$NetBSD: patch-ac,v 1.7 2012/06/27 10:53:40 fhajny Exp $
 
 --- Makefile.in.orig	2010-04-05 17:54:05.000000000 +0000
 +++ Makefile.in
@@ -49,7 +49,7 @@ $NetBSD: patch-ac,v 1.6 2011/02/11 12:11:26 adam Exp $
 -	ar rc $@ $(OBJ) $(ADDLARCHIVEOBJS)
 -	$(RANLIB) $@
 +libpcap.la: $(OBJ)
-+	${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib ${LDFLAGS} $(OBJ) -o libpcap.la
++	${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib ${LDFLAGS} $(OBJ) $(LIBS) -o libpcap.la
  
  shared: libpcap.$(DYEXT)
  
