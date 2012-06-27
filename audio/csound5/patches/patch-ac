@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2012/02/07 21:17:49 sbd Exp $
+$NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
 
 --- SConstruct.orig	2006-03-15 15:22:43.000000000 +0000
 +++ SConstruct
@@ -22,6 +22,21 @@ $NetBSD: patch-ac,v 1.5 2012/02/07 21:17:49 sbd Exp $
  
  customCPPPATH = commonEnvironment['customCPPPATH']
  commonEnvironment.Prepend(CPPPATH = customCPPPATH)
+@@ -285,11 +289,11 @@ if commonEnvironment['MSVC'] == '0':
+ 
+ if getPlatform() == 'linux':
+     commonEnvironment.Append(CCFLAGS = "-DLINUX")
+-    commonEnvironment.Append(CPPPATH = '/usr/local/include')
+-    commonEnvironment.Append(CPPPATH = '/usr/include')
+-    commonEnvironment.Append(CPPPATH = '/usr/X11R6/include')
+     commonEnvironment.Append(CCFLAGS = "-DPIPES")
+     commonEnvironment.Append(LINKFLAGS = ['-Wl,-Bdynamic'])
++    commonEnvironment.Append(CCFLAGS = Split(os.environ['CFLAGS']))
++    commonEnvironment.Append(CXXFLAGS = Split(os.environ['CXXFLAGS']))
++    commonEnvironment.Append(LINKFLAGS = Split(os.environ['LDFLAGS']))
+ elif getPlatform() == 'darwin':
+     commonEnvironment.Append(CCFLAGS = "-DMACOSX")
+     commonEnvironment.Append(CPPPATH = '/usr/local/include')
 @@ -335,6 +339,15 @@ elif getPlatform() == 'mingw':
      pythonLinkFlags = []
      pythonLibraryPath = []
@@ -47,7 +62,7 @@ $NetBSD: patch-ac,v 1.5 2012/02/07 21:17:49 sbd Exp $
      csoundLibraryName += '64'
  # flags for linking with the Csound library
  libCsoundLinkFlags = []
-@@ -526,6 +539,12 @@ if commonEnvironment['buildRelease'] != 
+@@ -526,6 +539,12 @@ if commonEnvironment['buildRelease'] !=
              tmp += '64'
          s = '-DCS_DEFAULT_PLUGINDIR=\\"%s\\"' % tmp
          csoundLibraryEnvironment.Append(CPPFLAGS = [s])
@@ -116,7 +131,7 @@ $NetBSD: patch-ac,v 1.5 2012/02/07 21:17:49 sbd Exp $
      makePlugin(widgetsEnvironment, 'widgets',
                 ['InOut/FL_graph.cpp', 'InOut/winFLTK.c', 'InOut/widgets.cpp'])
  
-@@ -1060,7 +1099,11 @@ if not (commonEnvironment['useALSA'] == 
+@@ -1060,7 +1099,11 @@ if not (commonEnvironment['useALSA'] ==
  else:
      print "CONFIGURATION DECISION: Building ALSA plugin."
      alsaEnvironment = pluginEnvironment.Copy()
