@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2011/03/29 21:19:19 asau Exp $
+# $NetBSD: Makefile,v 1.29 2012/06/27 14:07:55 asau Exp $
 
 DISTNAME=		gforth-0.7.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
 MASTER_SITES+=		http://www.complang.tuwien.ac.at/forth/gforth/
@@ -30,6 +30,7 @@ TEST_TARGET=		check
 # Make sure elisp will be installed even if no emacs installed.
 CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
 CFLAGS+=		-Dunix
+BUILDLINK_TRANSFORM+=	rm:-m486 # let it build with contemporary GCC
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
 			mandir=${PREFIX:Q}/${PKGMANDIR:Q}
