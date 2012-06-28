@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/06/14 07:43:51 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/06/28 11:13:06 obache Exp $
 #
 
 DISTNAME=	gnome-power-manager-2.24.4
@@ -36,6 +36,9 @@ BUILDLINK_TRANSFORM+=   rm:-lresolv
 .if ${PKGSRC_COMPILER:Mclang}
 CFLAGS+=	-Wno-tautological-compare
 .endif
+
+# using deprecated g_atexit in glib2.
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
