@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_tobjstrm_cc,v 1.1 2012/06/28 03:16:07 dholland Exp $
+
+- Use intptr_t to deal with pointer-sized values.
+
+--- lib/tobjstrm.cc~	2012-06-28 02:28:23.000000000 +0000
++++ lib/tobjstrm.cc
+@@ -41,7 +41,7 @@ extern "C" {
+ 
+ const uchar nullStringLen = UCHAR_MAX;
+ 
+-TStreamableClass::TStreamableClass(const char *n, BUILDER b, int d ) :
++TStreamableClass::TStreamableClass(const char *n, BUILDER b, intptr_t d ) :
+     name( n ),
+     build( b ),
+     delta( d )
