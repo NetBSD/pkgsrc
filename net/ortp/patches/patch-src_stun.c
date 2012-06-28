@@ -1,6 +1,9 @@
-$NetBSD: patch-src_stun.c,v 1.2 2012/06/25 11:49:10 joerg Exp $
+$NetBSD: patch-src_stun.c,v 1.3 2012/06/28 04:50:12 dholland Exp $
 
-Fix build with gcc 4.6
+- Fix a wrong memset call.
+- Always seed with /dev/random on NetBSD instead of relying on a
+configure test.
+- Fix build with gcc 4.6
 
 --- src/stun.c.orig	2009-06-16 10:49:48.000000000 +0000
 +++ src/stun.c
@@ -13,6 +16,15 @@ Fix build with gcc 4.6
  	
     if (sizeof(StunMsgHdr) > bufLen)
     {
+@@ -1185,7 +1185,7 @@ stunRand(void)
+ 	read(fd,&tick,sizeof(tick));
+ 	closesocket(fd);
+       }
+-#elif defined(__linux) || defined(HAVE_DEV_RANDOM) 
++#elif defined(__linux) || defined(__NetBSD__) || defined(HAVE_DEV_RANDOM) 
+       {
+  	fd_set fdSet;
+ 	int maxFd=0;
 @@ -1984,7 +1984,6 @@ stunSendTest( Socket myFd, StunAddress4 
  	
     bool_t changePort=FALSE;
