@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2048 2012/06/28 07:32:46 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.2049 2012/06/28 18:32:41 schmonz Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3216,3 +3216,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/kdesdk3 to 3.5.10nb28 [sbd 2012-06-26]
 	Updated devel/ecore to 1.1.0nb1 [sbd 2012-06-26]
 	Updated audio/hydrogen to 0.9.4.2nb5 [sbd 2012-06-28]
+	Updated mail/getmail to 4.30.2 [schmonz 2012-06-28]
