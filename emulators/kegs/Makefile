@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/23 19:23:32 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/28 03:23:37 dholland Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -38,7 +38,7 @@ pre-build:
 	Darwin*) ${LN} -s ${WRKSRC}/src/vars_mac ${WRKSRC}/src/vars; break;;	\
 	HPUX*) ${LN} -s ${WRKSRC}/src/vars_hp ${WRKSRC}/src/vars; break;;	\
 	*_i386) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/src/vars_x86linux ${WRKSRC}/src/vars; break;;\
-	*_ppc) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/src/vars_linuxppc ${WRKSRC}/src/vars; break;;\
+	*_ppc|*_powerpc) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/src/vars_linuxppc ${WRKSRC}/src/vars; break;;\
 	*_amd64|*_ia64|*_x86_64) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/src/vars_x86linux ${WRKSRC}/src/vars; break;;\
 	*_mips|*_m68k) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/src/vars_linuxppc ${WRKSRC}/src/vars; break;;\
 	*) ${ECHO} Your platform is not recognized. ;;			\
