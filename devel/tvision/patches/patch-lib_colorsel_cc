@@ -1,0 +1,61 @@
+$NetBSD: patch-lib_colorsel_cc,v 1.1 2012/06/28 05:35:33 dholland Exp $
+
+Silence gcc pointer cast warnings. These have been checked to be
+harmless.
+
+--- lib/colorsel.cc~	2001-07-26 07:59:18.000000000 +0000
++++ lib/colorsel.cc
+@@ -210,9 +210,9 @@ void TColorSelector::handleEvent( TEvent
+ 		 * SS: some non-portable code changed.
+ 		 */
+                 if( selType == csBackground )
+-                    color = (int)event.message.infoPtr >> 4;
++                    color = (int)(intptr_t)event.message.infoPtr >> 4;
+                 else
+-                    color = (int)event.message.infoPtr & 0x0F;
++                    color = (int)(intptr_t)event.message.infoPtr & 0x0F;
+                 drawView();
+                 return ;
+                 }
+@@ -278,7 +278,7 @@ void TMonoSelector::handleEvent( TEvent&
+ 	/*
+ 	 * SS: some non-portable code changed.
+ 	 */
+-        value = (int)event.message.infoPtr;
++        value = (int)(intptr_t)event.message.infoPtr;
+         drawView();
+         }
+ }
+@@ -357,12 +357,12 @@ void TColorDisplay::handleEvent( TEvent&
+ 		/*
+ 		 * SS: some non-portable code changed.
+ 		 */
+-                *color = (*color & 0x0F) | (((int)event.message.infoPtr << 4) & 0xF0);
++                *color = (*color & 0x0F) | (((int)(intptr_t)event.message.infoPtr << 4) & 0xF0);
+                 drawView();
+                 break;
+ 
+             case cmColorForegroundChanged:
+-                *color = (*color & 0xF0) | ((int)event.message.infoPtr & 0x0F);
++                *color = (*color & 0xF0) | ((int)(intptr_t)event.message.infoPtr & 0x0F);
+                 drawView();
+             }
+ }
+@@ -507,7 +507,7 @@ void TColorGroupList::handleEvent(TEvent
+ 	/*
+ 	 * SS: some non-portable code changed.
+ 	 */
+-        setGroupIndex(focused, (int)ev.message.infoPtr);
++        setGroupIndex(focused, (int)(intptr_t)ev.message.infoPtr);
+ }
+ 
+ void TColorGroupList::setGroupIndex(uchar groupNum, uchar itemNum)
+@@ -810,7 +810,7 @@ void TColorDialog::handleEvent( TEvent& 
+ 	/*
+ 	 * SS: some non-portable code changed.
+ 	 */
+-        display->setColor( (uchar *)&pal->data[(int)event.message.infoPtr] );
++        display->setColor( (uchar *)&pal->data[(int)(intptr_t)event.message.infoPtr] );
+ }
+ 
+ ushort TColorDialog::dataSize()
