@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/06/27 14:07:55 asau Exp $
+# $NetBSD: Makefile,v 1.30 2012/06/28 05:41:11 dholland Exp $
 
 DISTNAME=		gforth-0.7.0
 PKGREVISION=		3
@@ -12,6 +12,7 @@ COMMENT=		Fast interpreter for the Forth language
 LICENSE=		gnu-gpl-v3
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k *-*-powerpc *-*-sparc
+ONLY_FOR_PLATFORM+=	*-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INFO_FILES=		yes
