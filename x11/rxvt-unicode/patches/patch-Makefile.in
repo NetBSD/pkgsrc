@@ -1,76 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/06/26 20:14:31 riastradh Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2012/06/28 18:24:08 riastradh Exp $
 
-Mark phony targets as such.  Upstream rejected:
+Mark the `install' target as phony so that the file named `INSTALL'
+will not confuse make on case-insensitive file systems such as HFS+ on
+Mac OS X.  Upstream rejected:
 
 http://lists.schmorp.de/pipermail/rxvt-unicode/2010q2/001185.html
 
 --- Makefile.in.orig	2011-12-28 02:31:26.000000000 +0000
 +++ Makefile.in
-@@ -24,6 +24,7 @@ VERNAME = rxvt-unicode-$(VERSION)
- srcdir =	@srcdir@
- VPATH =		@srcdir@
- 
-+.PHONY: first_rule dummy
- first_rule: all
- dummy:
- 
-@@ -33,14 +34,17 @@ RECURSIVE_TARGETS = all allbin alldoc ta
+@@ -33,6 +33,8 @@ RECURSIVE_TARGETS = all allbin alldoc ta
  
  #-------------------------------------------------------------------------
  
-+.PHONY: $(RECURSIVE_TARGETS)
++.PHONY: install
++
  $(RECURSIVE_TARGETS):
  	@for I in $(subdirs); do (cd $$I; $(MAKE) $@) || exit 1; done
  
-+.PHONY: distclean realclean
- distclean realclean: distclean-local
- 
- #
- # entry points for other programs
- #
-+.PHONY: rxvt
- rxvt:
- 	(cd src; $(MAKE))
- 
-@@ -55,18 +59,23 @@ config.status:
- config.h.in: configure.ac aclocal.m4 libev/libev.m4 libptytty/ptytty.m4
- 	cd $(srcdir); ./autogen.sh
- 
-+.PHONY: check
- check: all
- 	echo "no tests"
- 
-+.PHONY: Makefiles
- Makefiles:
- 	$(SHELL) config.status
- 
-+.PHONY: cleandir
- cleandir: realclean
- 
-+.PHONY: distclean-local
- distclean-local:
- 	rm -f config.cache config.h config.log config.status
- 	rm -f Makefile
- 
-+.PHONY: distdir
- distdir:
- 	cd doc && $(MAKE) distdepend
- 	cd src && $(MAKE) depend
-@@ -74,14 +83,17 @@ distdir:
- 	mkdir $(VERNAME)
- 	rsync -aR --copy-unsafe-links `cat MANIFEST` $(VERNAME)/.
- 
-+.PHONY: tar.gz
- tar.gz: distdir
- 	tar cvf - $(VERNAME) | gzip -vf9 > $(VERNAME).tar.gz
- 	rm -rf $(VERNAME)
- 
-+.PHONY: tar.bz2
- tar.bz2: distdir
- 	tar cvf - $(VERNAME) | bzip2 -vf9 > $(VERNAME).tar.bz2
- 	rm -rf $(VERNAME)
- 
-+.PHONY: dist
- dist: tar.bz2
- 
- # ------------------------------------------------------------------------
