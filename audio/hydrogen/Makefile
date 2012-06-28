@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/03/03 00:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/06/28 03:23:43 sbd Exp $
 
 DISTNAME=	hydrogen-0.9.4.2
 PKGREVISION=	4
@@ -29,6 +29,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libSM/buildlink3.mk"
