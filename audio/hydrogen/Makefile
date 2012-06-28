@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/06/28 03:23:43 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/06/28 07:32:36 sbd Exp $
 
 DISTNAME=	hydrogen-0.9.4.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hydrogen/}
 
@@ -19,7 +19,15 @@ BUILD_DEPENDS+=		scons>=0.98:../../devel/scons
 BUILD_DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
 
 MAKE_ENV+=	QTDIR=${PREFIX}/qt4 PATH=$$PATH:${PREFIX}/qt4/bin
-SCONS_ARGS=	libarchive=1 jack=0 lrdf=0 alsa=0 QTDIR=${QTDIR}
+SCONS_ARGS=	libarchive=1 jack=0 lrdf=0 QTDIR=${QTDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+SCONS_ARGS+=	alsa=1
+.else
+SCONS_ARGS+=	alsa=0
+.endif
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons DESTDIR=${DESTDIR} prefix=${PREFIX} ${SCONS_ARGS}
@@ -27,9 +35,11 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons DESTDIR=${DESTDIR} prefix=${PREFIX} ${SCONS_ARGS} install
 
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../archivers/libarchive/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libSM/buildlink3.mk"
