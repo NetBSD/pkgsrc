@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/06/28 05:41:11 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2012/06/28 07:44:39 dholland Exp $
 
 DISTNAME=		gforth-0.7.0
 PKGREVISION=		3
@@ -20,7 +20,7 @@ INFO_FILES=		yes
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake aclocal
+USE_TOOLS+=		autoconf automake aclocal m4
 USE_TOOLS+=		makeinfo gzip
 USE_TOOLS+=		perl:build
 
