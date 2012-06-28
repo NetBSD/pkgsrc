@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/01/27 18:53:59 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/28 05:04:27 dholland Exp $
 
 DISTNAME=	fixelfprot-20040714
 CATEGORIES=	sysutils
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-powerpc
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	sbin
 
 do-extract:
 	${CP} ${FILESDIR}/fixelfprot.c ${WRKSRC}
