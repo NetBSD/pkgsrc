@@ -1,0 +1,14 @@
+$NetBSD: patch-tutorial_load_cc,v 1.1 2012/06/28 03:16:07 dholland Exp $
+
+- Use standard headers.
+
+--- tutorial/load.cc~	2012-06-28 02:28:23.000000000 +0000
++++ tutorial/load.cc
+@@ -22,6 +22,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <time.h>
++#include <cstring>
+ 
+ #include <fstream>
+ 
