@@ -1,69 +1,15 @@
-$NetBSD: patch-ac,v 1.2 2012/06/26 20:10:49 riastradh Exp $
+$NetBSD: patch-ac,v 1.3 2012/06/28 18:24:08 riastradh Exp $
 
 Undo upstream revision 1.45, which was done in the name of simplification.
 
-Mark phony targets as such.  Upstream rejected:
-
-http://lists.schmorp.de/pipermail/rxvt-unicode/2010q2/001186.html
-
 --- doc/Makefile.in.orig	2011-12-28 02:31:26.000000000 +0000
 +++ doc/Makefile.in
-@@ -22,6 +22,7 @@ INSTALL_DATA = @INSTALL@ -m 644
- srcdir =	@srcdir@
- VPATH =		@srcdir@
- 
-+.PHONY: first_rule dummy
- first_rule: all
- dummy:
- 
-@@ -35,6 +36,7 @@ SEDREPLACE = -e 's%@@RXVT_VERSION@@%$(VE
- 
- POD2MAN = pod2man -n @@RXVT_NAME@@ -r @@RXVT_VERSION@@ -q\" -c "RXVT-UNICODE"
- 
-+.PHONY: all
- all:
- 	sed $(SEDREPLACE) < $(srcdir)/rxvt.1.man.in  >rxvt.1.man
- 	sed $(SEDREPLACE) < $(srcdir)/rxvtc.1.man.in >rxvtc.1.man
-@@ -74,25 +76,32 @@ rxvtperl.3.pod: ../src/urxvt.pm
- $(srcdir)/etc/rxvt-unicode.termcap: $(srcdir)/etc/rxvt-unicode.terminfo
- 	tic -C $< >$@
- 
-+.PHONY: tags allbin
- tags allbin:
- 
-+.PHONY: alldoc
- alldoc: rxvt.1.man.in rxvt.7.man.in rxvtc.1.man.in rxvtd.1.man.in rxvtperl.3.man.in \
- 	../README.configure ../README.FAQ \
- 	$(srcdir)/etc/rxvt-unicode.termcap
- 
-+.PHONY: clean
- clean:
- 	rm -f rxvt.1.man rxvt.7.man rxvtc.1.man rxvtd.1.man rxvtperl.3.man
- 
-+.PHONY: distclean
- distclean: clean
- 	rm -f Makefile
- 
-+.PHONY: realclean
- realclean: distclean
- 	rm -f rxvt.1.man.in rxvt.7.man.in rxvtc.1.man.in rxvtd.1.man.in rxvtperl.3.man.in
- 	rm -f ../README.configure ../README.FAQ
- 	rm -f $(srcdir)/etc/rxvt-unicode.termcap
- 
-+.PHONY: cleandir
- cleandir: realclean
- 
-+.PHONY: install
- install: all
- 	$(INSTALL) -d $(DESTDIR)$(man1dir)
- 	$(INSTALL) -d $(DESTDIR)$(man7dir)
-@@ -102,7 +111,8 @@ install: all
+@@ -102,7 +102,7 @@ install: all
  	$(INSTALL_DATA) rxvt.7.man  $(DESTDIR)$(man7dir)/$(RXVTNAME).$(man7ext)
  @IF_PERL@	$(INSTALL) -d $(DESTDIR)$(man3dir)
  @IF_PERL@	$(INSTALL_DATA) rxvtperl.3.man $(DESTDIR)$(man3dir)/$(RXVTNAME)perl.$(man3ext)
 -	@TIC@ $(srcdir)/etc/rxvt-unicode.terminfo
 +	if test -x "@TIC@"; then if test -n "@TIC@"; then @TIC@ $(srcdir)/etc/rxvt-unicode.terminfo; fi; fi
  
-+.PHONY: distdepend
  distdepend: alldoc
  
