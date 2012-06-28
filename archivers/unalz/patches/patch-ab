@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.11 2012/06/27 08:04:18 sbd Exp $
+$NetBSD: patch-ab,v 1.12 2012/06/28 05:21:19 sbd Exp $
 
 * Use system/buildlinked headers.
 * The correct type for get_crc_table with zlib 1.2.7 is z_crc_t*
@@ -13,12 +13,15 @@ $NetBSD: patch-ab,v 1.11 2012/06/27 08:04:18 sbd Exp $
  #include "UnAlz.h"
  
  // utime 함수 처리
-@@ -1891,7 +1891,7 @@ void CUnAlz::DecryptingData(int nSize, B
+@@ -1891,7 +1891,11 @@ void CUnAlz::DecryptingData(int nSize, B
  ////////////////////////////////////////////////////////////////////////////////////////////////////
  UINT32 CUnAlz::CRC32(UINT32 l, BYTE c)
  {
--	const unsigned long *CRC_TABLE = get_crc_table();
++#if ZLIB_VERNUM >= 0x1270
 +	const z_crc_t *CRC_TABLE = get_crc_table();
++#else
+ 	const unsigned long *CRC_TABLE = get_crc_table();
++#endif
  	return CRC_TABLE[(l ^ c) & 0xff] ^ (l >> 8);
  }
  
