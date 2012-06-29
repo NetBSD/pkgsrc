@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2050 2012/06/29 10:41:28 morr Exp $
+$NetBSD: CHANGES-2012,v 1.2051 2012/06/29 14:50:26 taca Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3218,3 +3218,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/hydrogen to 0.9.4.2nb5 [sbd 2012-06-28]
 	Updated mail/getmail to 4.30.2 [schmonz 2012-06-28]
 	Updated www/wordpress to 3.4.1 [morr 2012-06-29]
+	Updated security/f-prot-antivirus6-fs-bin to 6.2.1 [taca 2012-06-29]
+	Updated security/f-prot-antivirus6-ms-bin to 6.2.1 [taca 2012-06-29]
+	Updated security/f-prot-antivirus6-ws-bin to 6.2.1 [taca 2012-06-29]
