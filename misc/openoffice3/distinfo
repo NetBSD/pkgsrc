@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2011/11/24 14:13:26 mrg Exp $
+$NetBSD: distinfo,v 1.33 2012/06/29 12:36:39 joerg Exp $
 
 SHA1 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 3b4d0d312a1bed9bdb1bbdfb172fa7361533b498
 RMD160 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 8caa064f836e531035fd551cf2d7288ca5188da0
@@ -50,21 +50,21 @@ SHA1 (patch-bk) = 5a5c03a0c965edb32e95ad342f330e2b0eaf3d9c
 SHA1 (patch-bl) = 28beb128f19199a1a86965d2e2b6d42a2565224c
 SHA1 (patch-bm) = 0f7367782155c1d0f0459912aac69a1c759ad7fa
 SHA1 (patch-bn) = 6f21ecf499135b5b47ed191eca79848b4c404447
-SHA1 (patch-bo) = 3e4bcccd0a7cea535e443d750039fa844380f8bc
 SHA1 (patch-bq) = 2321d806bff054932f249a8b9445d790aa9eafbe
 SHA1 (patch-bs) = bea7e5fddee7056558747a6801816e2955dd0657
 SHA1 (patch-bv) = b254cdb889bf5335aafe2b35982fc5cf370207cb
 SHA1 (patch-bw) = 223963fe59b71468420a697d8ea27c153b9f37ce
 SHA1 (patch-bx) = 157878e1fb4297f118ed0bbf06009506666fbc1c
 SHA1 (patch-by) = 1612b765467e51ca7498497d38a0bb6ac694f9a6
-SHA1 (patch-ch) = caa598140bcb78ec61bc33d44c5873da84e1628a
+SHA1 (patch-ch) = 1e456a34ebcf8639aa1a976e8c5fd05d1ef3ef5c
 SHA1 (patch-ci) = 4743cee1c391e04a53bd83f6ae7e58e737d08d1e
 SHA1 (patch-cj) = 45ff359ec795e5ef5c692e954d88912c74017162
 SHA1 (patch-ck) = 01925efa75759b3b8efda3ab109b0f6481f45a7f
 SHA1 (patch-cn) = d129e69d8ce9303e46f0b486e495d09c1e446444
+SHA1 (patch-configmgr_source_treemgr_templateimpl.hxx) = d34ed7ddfcd879072993f84e44b32e52c961dffe
 SHA1 (patch-cp) = 35151ba658859c9d116ccdf44ec372c9e66435b1
 SHA1 (patch-cq) = 6691fd7fa330db000ec5a9319bf9030b83aa593d
-SHA1 (patch-cs) = 3f4f360870ad22b1fb88a2ca9f7907e03010ac79
+SHA1 (patch-cs) = 49b457e23f9edca560abee0acfbbe5ea64b5ea1a
 SHA1 (patch-ct) = a06c5cbc543acecb4f18e858cd844302bbdb50b4
 SHA1 (patch-cu) = b930fd94413c2bdf23ea94b074e3bb5e93784009
 SHA1 (patch-cv) = 2e14a54d369a255ee39fcec7d4f1d2b11a8f4d2e
@@ -100,3 +100,11 @@ SHA1 (patch-gb) = 70c11692129ef17cf47afa8dbff25e5e41719599
 SHA1 (patch-gc) = 51c00c2fbb64c299d528c072fe68e1f9786a0fff
 SHA1 (patch-ha) = 174125037d080b5bb61c1565520d72556cd3a7e5
 SHA1 (patch-hb) = 31de8d81c05d974d58599d8ff20bd60101b4a143
+SHA1 (patch-oox_inc_oox_drawingml_chart_modelbase.hxx) = 024a3611dc6e676b0e9621623217054c70c4b930
+SHA1 (patch-oox_inc_oox_helper_containerhelper.hxx) = 3859f9c72b2fad37a5bcd9318af2198f8856878d
+SHA1 (patch-soltools_inc_st__list.hxx) = cd76c1beaed94cbb2af63cc84d1296162677d054
+SHA1 (patch-toolkit_source_awt_vclxdialog.cxx) = d1643bd9dab32f195dc9107fe2bcc92ebed9ba06
+SHA1 (patch-toolkit_source_awt_vclxscroller.cxx) = 95701209a9cbeab61178c845ca3956307d4362f0
+SHA1 (patch-toolkit_source_awt_vclxsplitter.cxx) = 5a03124e1484dc632c8497e9da26244e76f8b9ba
+SHA1 (patch-toolkit_source_awt_vclxtabcontrol.cxx) = 3ec76db3b3a1a7ae0378ddc5bdd3c0e0c424f48c
+SHA1 (patch-xml2cmp_source_support_list.hxx) = 011838b8052a671e6c68f8c85a8f746a92383ea2
