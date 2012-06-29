@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2051 2012/06/29 14:50:26 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2052 2012/06/29 14:56:54 taca Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
@@ -3221,3 +3221,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/f-prot-antivirus6-fs-bin to 6.2.1 [taca 2012-06-29]
 	Updated security/f-prot-antivirus6-ms-bin to 6.2.1 [taca 2012-06-29]
 	Updated security/f-prot-antivirus6-ws-bin to 6.2.1 [taca 2012-06-29]
+	Updated mail/sylpheed to 3.2.0 [taca 2012-06-29]
