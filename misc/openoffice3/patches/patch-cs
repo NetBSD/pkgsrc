@@ -1,7 +1,7 @@
-$NetBSD: patch-cs,v 1.3 2008/10/18 01:05:08 hira Exp $
+$NetBSD: patch-cs,v 1.4 2012/06/29 12:36:39 joerg Exp $
 
---- solenv/inc/unxbsdx3.mk.orig	2007-10-13 00:24:19.000000000 +0900
-+++ solenv/inc/unxbsdx3.mk	2008-10-16 19:28:56.000000000 +0900
+--- solenv/inc/unxbsdx3.mk.orig	2012-06-22 21:21:26.000000000 +0000
++++ solenv/inc/unxbsdx3.mk
 @@ -0,0 +1,178 @@
 +#
 +# mk file for NetBSD/amd64 with gcc 3.4.x and higher.
@@ -112,7 +112,7 @@ $NetBSD: patch-cs,v 1.3 2008/10/18 01:05:08 hira Exp $
 +
 +# default linker flags
 +LINKFLAGSDEFS*=-Wl,-z,defs
-+LINKFLAGSRUNPATH*=-Wl,-rpath,\''$$ORIGIN'\'
++LINKFLAGSRUNPATH*=-Wl,-rpath,${PREFIX}/lib
 +LINKFLAGS=-Wl,-z,combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
 +
 +# linker flags for linking applications
