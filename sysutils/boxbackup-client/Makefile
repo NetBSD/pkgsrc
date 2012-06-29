@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/07 12:04:34 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/29 12:39:17 joerg Exp $
 #
 
 DISTNAME=	boxbackup-0.11.1
@@ -23,6 +23,13 @@ REPLACE_PERL+=	bin/bbackupd/bbackupd-config
 
 INSTALLATION_DIRS+=	bin
 #INSTALL_TARGET= install-backup-client
+
+.include "../../mk/bsd.prefs.mk"
+
+# for backtrace
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LIBS+=  -lexecinfo
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/parcels/boxbackup*-backup-client-*/bbackupctl ${DESTDIR}${PREFIX}/bin
