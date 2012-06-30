@@ -1,0 +1,15 @@
+$NetBSD: patch-src_inets_c,v 1.1 2012/06/30 07:05:09 dholland Exp $
+
+Fix build with gcc 4.5.
+
+--- src/inets.c~	2009-01-13 04:44:08.000000000 +0000
++++ src/inets.c
+@@ -183,7 +183,7 @@ int addrIsWildcard(PCStr(addr)){
+ 
+ #define RESOLVERS_SIZ	512
+ 
+-extern struct { defQStr(resolv_errmsg); } resolv_errmsg;
++extern struct resolv_thingy { defQStr(resolv_errmsg); } resolv_errmsg;
+ 
+ int CTX_defSockOpts(DGC*,PCStr(name),PCStr(spec),int neg);
+ static scanListFunc conf1(PCStr(conf))
