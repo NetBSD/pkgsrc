@@ -1,0 +1,15 @@
+$NetBSD: patch-src_delegated_c,v 1.1 2012/06/30 07:05:09 dholland Exp $
+
+Fix build with gcc 4.5.
+
+--- src/delegated.c~	2009-01-10 09:28:09.000000000 +0000
++++ src/delegated.c
+@@ -9917,7 +9917,7 @@ void mainProcTitle(Connection *Conn)
+ }
+ 
+ #define PSTITLE_END "--"
+-extern struct { defQStr(p); } pstitle_area;
++extern struct pstitle_thingy { defQStr(p); } pstitle_area;
+ extern int   pstitle_size;
+ extern int   pstitle_lengmax;
+ extern int   pstitle_leng; /* length of original arguments */

@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.12 2009/02/24 03:24:15 rh Exp $
+$NetBSD: distinfo,v 1.13 2012/06/30 07:05:08 dholland Exp $
 
 SHA1 (delegate9.9.1.tar.gz) = 828615b83b22fb36925d065239de61492a937e8f
 RMD160 (delegate9.9.1.tar.gz) = a8a114fd310e3e25e2e234574d7c8ff1e5d0c1d7
 Size (delegate9.9.1.tar.gz) = 1944670 bytes
+SHA1 (patch-rary_pstitle_c) = 3b30e698749b5ed6a9cc197b0ab6a1e013de2673
+SHA1 (patch-resolvy_resconf_c) = d090d26542a3197fb48514652f3b421b6282a6cc
+SHA1 (patch-resolvy_resolv_c) = d903447c60f1c79b7bc596cba9d3c8070298a1e2
+SHA1 (patch-src_delegated_c) = d0355e6c7c700e9c0fc894fec3eb403f626a1758
+SHA1 (patch-src_inets_c) = 3664facb1bfaa88a76fc74186bae45184b41115c
