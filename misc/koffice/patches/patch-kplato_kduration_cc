@@ -1,0 +1,15 @@
+$NetBSD: patch-kplato_kduration_cc,v 1.1 2012/06/30 08:30:35 dholland Exp $
+
+Use valid C++.
+
+--- kplato/kptduration.cc~	2007-05-30 21:43:39.000000000 +0000
++++ kplato/kptduration.cc
+@@ -187,7 +187,7 @@ QString Duration::toString(Format format
+     return result;
+ }
+ 
+-Duration::Duration Duration::fromString(const QString &s, Format format, bool *ok) {
++Duration Duration::fromString(const QString &s, Format format, bool *ok) {
+     if (ok) *ok = false;
+     QRegExp matcher;
+     Duration tmp;
