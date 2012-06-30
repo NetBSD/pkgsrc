@@ -1,0 +1,15 @@
+$NetBSD: patch-kword_KWView_cpp,v 1.1 2012/06/30 08:30:35 dholland Exp $
+
+Fix C++ dialect.
+
+--- kword/KWView.cpp~	2007-05-30 21:34:52.000000000 +0000
++++ kword/KWView.cpp
+@@ -595,7 +595,7 @@ void KWView::setupActions()
+                         actionCollection(), "edit_sldatabase" );
+ 
+ 
+-    (void) new KWMailMergeLabelAction::KWMailMergeLabelAction( i18n("Drag Mail Merge Variable"), 0,
++    (void) new KWMailMergeLabelAction( i18n("Drag Mail Merge Variable"), 0,
+                     this, SLOT(editMailMergeDataBase()), actionCollection(), "mailmerge_draglabel" );
+ 
+ //    (void) new KWMailMergeComboAction::KWMailMergeComboAction(i18n("Insert Mailmerge Var"),0,this,SLOT(JWJWJW()),actionCollection(),"mailmerge_varchooser");
