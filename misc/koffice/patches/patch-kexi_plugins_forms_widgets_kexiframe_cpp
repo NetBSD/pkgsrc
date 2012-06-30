@@ -1,0 +1,12 @@
+$NetBSD: patch-kexi_plugins_forms_widgets_kexiframe_cpp,v 1.1 2012/06/30 08:29:59 dholland Exp $
+
+Upstream patch from: https://bugs.kde.org/show_bug.cgi?id=149906
+
+--- kexi/plugins/forms/widgets/kexiframe.cpp.orig
++++ kexi/plugins/forms/widgets/kexiframe.cpp
+@@ -75,3 +75,5 @@
+ #define SuperClassName QFrame
+ #include "kexiframeutils_p.cpp"
+ #include "kexiframe.moc"
++#undef ClassName
++#undef SuperClassName
