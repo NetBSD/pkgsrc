@@ -1,0 +1,15 @@
+$NetBSD: patch-kspread_plugins_scripting_kspreadcore_krs__cell_h,v 1.1 2012/06/30 08:29:59 dholland Exp $
+
+Upstream patch from: https://bugs.kde.org/show_bug.cgi?id=149906
+
+--- kspread/plugins/scripting/kspreadcore/krs_cell.h.orig	2008-08-22 19:45:44.000000000 -0400
++++ kspread/plugins/scripting/kspreadcore/krs_cell.h	2008-08-22 19:45:44.000000000 -0400
+@@ -135,7 +135,7 @@
+ 		* will be handled as string else we try to parse the
+ 		* string to the expected value.
+ 		*/
+-		bool setText(const QString& text, bool asString = false);
++		bool setText(const QString& text);
+ 
+ 		/**
+ 		* Return the textcolor as RGB-value in the format "#RRGGBB".

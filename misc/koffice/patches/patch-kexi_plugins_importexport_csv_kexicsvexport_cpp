@@ -1,0 +1,12 @@
+$NetBSD: patch-kexi_plugins_importexport_csv_kexicsvexport_cpp,v 1.1 2012/06/30 08:29:59 dholland Exp $
+
+Upstream patch from: https://bugs.kde.org/show_bug.cgi?id=149906
+
+--- kexi/plugins/importexport/csv/kexicsvexport.cpp.orig
++++ kexi/plugins/importexport/csv/kexicsvexport.cpp
+@@ -269,3 +269,5 @@
+ 	}
+ 	return true;
+ }
++
++#undef _ERR

@@ -1,0 +1,24 @@
+$NetBSD: patch-kspread_plugins_scripting_kspreadcore_krs__cell_cpp,v 1.1 2012/06/30 08:29:59 dholland Exp $
+
+Upstream patch from: https://bugs.kde.org/show_bug.cgi?id=149906
+
+--- kspread/plugins/scripting/kspreadcore/krs_cell.cpp.orig	2008-08-22 19:45:44.000000000 -0400
++++ kspread/plugins/scripting/kspreadcore/krs_cell.cpp	2008-08-22 19:45:44.000000000 -0400
+@@ -174,7 +174,7 @@
+ 	return m_cell->text();
+ }
+ 
+-bool Cell::setText(const QString& text, bool asString) {
++bool Cell::setText(const QString& text) {
+ 
+ 	//FIXME: there is some problem with asString parameter, when it's set
+ 	//to true KSpread says: ASSERT: "f" in Dependencies.cpp (621)
+@@ -189,7 +189,7 @@
+ 	KSpread::DataManipulator *dm = new KSpread::DataManipulator ();
+ 	dm->setSheet (m_sheet);
+ 	dm->setValue (text);
+-	dm->setParsing (!asString);
++	dm->setParsing (true);
+ 	dm->add (QPoint (m_col, m_row));
+ 	dm->execute ();
+ 
