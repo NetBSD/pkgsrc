@@ -1,0 +1,6 @@
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.1 2012/06/30 23:41:17 agc Exp $
+
+Changes to the packages collection and infrastructure on the
+pkgsrc-2012Q2 branch:
+
+Created pkgsrc-2012Q2 branch [agc Sat Jun 30 23:26:00 UTC 2012]
