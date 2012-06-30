@@ -1,0 +1,23 @@
+$NetBSD: patch-lib_kwmf_kwmf_cc,v 1.1 2012/06/30 08:29:59 dholland Exp $
+
+Upstream patch from: https://bugs.kde.org/show_bug.cgi?id=149906
+
+--- lib/kwmf/kwmf.cc.orig
++++ lib/kwmf/kwmf.cc
+@@ -29,6 +29,7 @@
+ #include <qfile.h>
+ #include <qpointarray.h>
+ #include <kwmf.h>
++#include <wmfstruct.h>
+ #include <qrect.h>
+ 
+ #define PI (3.14159265358979323846)
+@@ -430,7 +431,7 @@
+         S32 reserved;
+         S16 checksum;
+     };
+-    #define APMHEADER_KEY 0x9AC6CDD7L
++    // #define APMHEADER_KEY 0x9AC6CDD7L
+ 
+     WmfPlaceableHeader pheader;
+     WmfEnhMetaHeader eheader;
