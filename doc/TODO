@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11319 2012/07/01 15:48:05 wiz Exp $
+$NetBSD: TODO,v 1.11320 2012/07/01 15:51:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1083,7 +1083,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o radiance-3.7.2
 	o raine-0.51.8
 	o rapidsvn-0.12
-	o raptor2-2.0.8
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8.1
