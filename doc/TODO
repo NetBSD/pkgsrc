@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11322 2012/07/01 15:54:24 wiz Exp $
+$NetBSD: TODO,v 1.11323 2012/07/01 17:02:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1089,7 +1089,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rendercheck-1.4
 	o rep-gtk-0.90.8
 	o resize_image-0.7
-	o rgb-1.0.4
 	o rhythmbox-0.13.3
 	o riece-7.0.1 [pkg/43970]
 	o rio500-0.8.1
