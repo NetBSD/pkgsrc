@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11324 2012/07/01 17:36:47 wiz Exp $
+$NetBSD: TODO,v 1.11325 2012/07/01 17:42:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1381,7 +1381,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xscope-1.3.1 [unpackaged]
 	o xsd-3.3.0
 	o xsoldier-1.4
-	o xterm-281
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
