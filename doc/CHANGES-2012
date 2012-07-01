@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2057 2012/07/01 07:23:12 plunky Exp $
+$NetBSD: CHANGES-2012,v 1.2058 2012/07/01 08:02:20 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3219,3 +3219,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ikiwiki to 3.20120629 [schmonz 2012-07-01]
 	Added audio/py-audiotools version 2.18 [jakllsch 2012-07-01]
 	Updated misc/zyGrib to 5.1.4 [plunky 2012-07-01]
+	Updated math/mathomatic to 16.0.0 [asau 2012-07-01]
