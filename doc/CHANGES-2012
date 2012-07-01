@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2062 2012/07/01 14:13:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2063 2012/07/01 14:26:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3224,3 +3224,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/py-simplejson to 2.6.0 [wiz 2012-07-01]
 	Updated devel/boehm-gc to 7.2c [wiz 2012-07-01]
 	Updated games/gbrainy to 2.14 [wiz 2012-07-01]
+	Updated textproc/py-libxml2 to 2.8.0 [wiz 2012-07-01]
