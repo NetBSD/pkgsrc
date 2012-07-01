@@ -1,0 +1,15 @@
+$NetBSD: patch-src_gselector_cpp,v 1.1.2.2 2012/07/01 18:19:59 tron Exp $
+
+Add upstream change to fix build failure with latest glibmm.
+
+--- src/gselector.cpp.orig	2009-12-07 21:43:35.000000000 +0000
++++ src/gselector.cpp
+@@ -16,6 +16,8 @@
+  * Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+ 
++#include <glibmm/main.h>
++
+ #include "gselector.hpp"
+ 
+ namespace
