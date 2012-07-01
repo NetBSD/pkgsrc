@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/06/14 07:43:57 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/07/01 19:05:25 dholland Exp $
 #
 
 DISTNAME=	gnome-volume-manager-2.24.1
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-volume-manager/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,5 +36,6 @@ GCONF_SCHEMAS+=		gnome-volume-manager.schemas
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

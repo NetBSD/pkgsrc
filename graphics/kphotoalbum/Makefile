@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2012/06/14 07:44:08 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/07/01 19:05:19 dholland Exp $
 #
 
 DISTNAME=		kphotoalbum-3.1.1
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		graphics
 MASTER_SITES=		http://ktown.kde.org/kphotoalbum/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -30,4 +30,5 @@ USE_TOOLS+=		msgfmt pkg-config
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

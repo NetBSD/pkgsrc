@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/06/14 07:44:12 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/07/01 19:05:22 dholland Exp $
 #
 
 DISTNAME=	kaffeine-0.8.3
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kaffeine/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,6 +42,7 @@ SUBST_MESSAGE.path=	Fixing hardcoded paths.
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

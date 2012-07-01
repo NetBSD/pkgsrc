@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2012/06/14 07:44:55 sbd Exp $
+# $NetBSD: Makefile,v 1.38 2012/07/01 19:05:19 dholland Exp $
 
 DISTNAME=		kbarcode-2.0.7
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kbarcode/}
 
@@ -28,4 +28,5 @@ BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.3.0
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

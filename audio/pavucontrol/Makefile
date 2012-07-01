@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/06/14 07:44:02 sbd Exp $
+# $NetBSD: Makefile,v 1.19 2012/07/01 19:05:12 dholland Exp $
 #
 
 DISTNAME=	pavucontrol-0.9.10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pavucontrol/
 
@@ -24,6 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../devel/gconfmm/buildlink3.mk"
 .include "../../devel/libglademm/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

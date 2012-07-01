@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 07:44:09 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/01 19:05:16 dholland Exp $
 
 DISTNAME=		kile-2.0.2
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,4 +31,5 @@ REPLACE_PERL=		src/kile1.6_upd.pl \
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/kdegraphics3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

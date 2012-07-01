@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2012/06/14 07:43:54 sbd Exp $
+# $NetBSD: Makefile,v 1.40 2012/07/01 19:05:24 dholland Exp $
 #
 
 DISTNAME=	gpass-0.4.4
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpass/}
 
@@ -21,5 +21,6 @@ USE_PKGLOCALEDIR=	YES
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

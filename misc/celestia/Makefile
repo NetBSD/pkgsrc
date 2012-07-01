@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/06/14 07:44:01 sbd Exp $
+# $NetBSD: Makefile,v 1.37 2012/07/01 19:05:20 dholland Exp $
 
 DISTNAME=	celestia-1.4.1
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=celestia/}
 
@@ -55,4 +55,5 @@ post-install:
 .include "../../lang/lua/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

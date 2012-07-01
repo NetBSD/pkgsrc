@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2012/06/14 07:43:57 sbd Exp $
+# $NetBSD: Makefile,v 1.76 2012/07/01 19:05:13 dholland Exp $
 #
 
 DISTNAME=	gossip-0.10.2
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gossip/0.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -44,4 +44,5 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

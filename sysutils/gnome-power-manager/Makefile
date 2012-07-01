@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/06/28 11:13:06 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/07/01 19:05:25 dholland Exp $
 #
 
 DISTNAME=	gnome-power-manager-2.24.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-power-manager/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -47,6 +47,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../security/policykit-gnome/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

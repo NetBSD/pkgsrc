@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2012/03/03 00:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2012/07/01 19:05:14 dholland Exp $
 #
 
 DISTNAME=		jpilot-1.6.0
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		comms
 MASTER_SITES=		http://www.jpilot.org/older/
 
@@ -50,4 +50,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/*.1 ${DESTDIR}${MAN1DIR}
 	${TOUCH} ${DESTDIR}${PLUGINSDIR}/.directory
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

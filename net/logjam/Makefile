@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/06/14 07:44:35 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2012/07/01 19:05:24 dholland Exp $
 #
 
 DISTNAME=	logjam-4.5.3
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	net
 MASTER_SITES=	http://logjam.danga.com/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,4 +25,5 @@ USE_TOOLS+=		perl pkg-config intltool msgfmt
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2012/06/14 07:43:55 sbd Exp $
+# $NetBSD: Makefile,v 1.60 2012/07/01 19:05:18 dholland Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.11
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtetrinet/0.7/}
 
@@ -36,4 +36,5 @@ GCONF_SCHEMAS=		gtetrinet.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

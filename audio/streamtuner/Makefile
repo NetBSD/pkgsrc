@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2012/06/14 07:44:07 sbd Exp $
+# $NetBSD: Makefile,v 1.55 2012/07/01 19:05:13 dholland Exp $
 #
 
 DISTNAME=	streamtuner-0.99.99
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	audio www
 MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/
 
@@ -29,5 +29,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
