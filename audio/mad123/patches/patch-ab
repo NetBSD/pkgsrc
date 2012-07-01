@@ -1,20 +1,19 @@
-$NetBSD: patch-ab,v 1.4 2012/06/28 08:18:43 sbd Exp $
+$NetBSD: patch-ab,v 1.5 2012/07/01 03:25:51 sbd Exp $
 
 --- audio_dev.c.orig	2004-09-22 09:23:43.000000000 +0000
 +++ audio_dev.c
-@@ -22,7 +22,11 @@
+@@ -22,7 +22,10 @@
  #include <sys/types.h>
  #include <sys/param.h>
  #include <sys/fcntl.h>
 +#ifndef __linux__
  #include <sys/filio.h>
-+#else
-+#include <stdint.h>
 +#endif
++#include <stdint.h>
  #include <sys/ioctl.h>
  #include <sys/mman.h>
  #include <sys/wait.h>
-@@ -35,6 +39,10 @@
+@@ -35,6 +38,10 @@
  #include <unistd.h>
  #include <mad.h>
  
@@ -25,7 +24,7 @@ $NetBSD: patch-ab,v 1.4 2012/06/28 08:18:43 sbd Exp $
  #include "audio_dev.h"
  
  #if (BYTE_ORDER == BIG_ENDIAN)
-@@ -43,6 +51,10 @@
+@@ -43,6 +50,10 @@
  #undef WORDS_BIGENDIAN
  #endif
  
@@ -36,7 +35,7 @@ $NetBSD: patch-ab,v 1.4 2012/06/28 08:18:43 sbd Exp $
  #define PCM_BUFFSIZE	((sizeof(((struct mad_pcm *)0)->samples) / \
  			    sizeof(mad_fixed_t)) * 2)
  struct pcm_data {
-@@ -58,7 +70,7 @@ struct pcm_data {
+@@ -58,7 +69,7 @@ struct pcm_data {
  #define PCM_LOW_WATER   32
  struct pcm_buffer {
  	volatile int	pb_command;
@@ -45,7 +44,7 @@ $NetBSD: patch-ab,v 1.4 2012/06/28 08:18:43 sbd Exp $
  	int		pb_rate;
  	int		pb_nchannels;
  	volatile int	pb_purge;
-@@ -74,7 +86,7 @@ struct audio_dev_ctx {
+@@ -74,7 +85,7 @@ struct audio_dev_ctx {
  	int		ac_paused;
  	int		ac_peerread;
  	int		ac_peerwrite;
@@ -54,7 +53,7 @@ $NetBSD: patch-ab,v 1.4 2012/06/28 08:18:43 sbd Exp $
  	void		(*ac_readcallback)(void *);
  	void		*ac_cbarg;
  	struct pcm_buffer *ac_pcm;
-@@ -97,8 +109,12 @@ static void	audio_convert_dither(unsigne
+@@ -97,8 +108,12 @@ static void	audio_convert_dither(unsigne
  
  
  static const struct audio_dev_backend *audio_dev_backends[] = {
@@ -67,7 +66,7 @@ $NetBSD: patch-ab,v 1.4 2012/06/28 08:18:43 sbd Exp $
  #ifndef NOARTS
  	&audio_dev_arts,
  #endif
-@@ -326,7 +342,7 @@ audio_dev_output(struct audio_dev_ctx *a
+@@ -326,7 +341,7 @@ audio_dev_output(struct audio_dev_ctx *a
  	pd->pd_len = len;
  
  	written /= pd->pd_nchannels;
