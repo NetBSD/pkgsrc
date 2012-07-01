@@ -1,0 +1,25 @@
+$NetBSD: patch-src_xfmedia_xine_c,v 1.1.2.2 2012/07/01 22:20:28 tron Exp $
+
+Remove references to xine_trick_mode(), which was removed from xine_lib.
+(This code is not used in xfmedia.)
+
+--- src/xfmedia-xine.c~	2006-11-27 07:21:23.000000000 +0000
++++ src/xfmedia-xine.c
+@@ -1450,17 +1450,6 @@ xfmedia_xine_play(XfmediaXine *xfx, gint
+ }
+ 
+ gboolean
+-xfmedia_xine_trick_mode(XfmediaXine * xfx, gint mode, gint value)
+-{
+-
+-    g_return_val_if_fail(xfx != NULL, 0);
+-    g_return_val_if_fail(XFMEDIA_IS_XINE(xfx), 0);
+-    g_return_val_if_fail(xfx->priv->stream != NULL, 0);
+-
+-    return xine_trick_mode(xfx->priv->stream, mode, value);
+-}
+-
+-gboolean
+ xfmedia_xine_get_pos_length(XfmediaXine *xfx, gint *pos_stream,
+     gint *pos_time, gint *length_time)
+ {
