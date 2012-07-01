@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/14 14:49:06 plunky Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/07/01 07:21:35 plunky Exp $
 bin/zyGrib
 share/zyGrib/colors/colors_binary.txt
 share/zyGrib/colors/colors_cape_jkg.txt
@@ -18,6 +18,8 @@ share/zyGrib/gis/cities_10k-more.txt.gz
 share/zyGrib/gis/cities_3k-10k.txt.gz
 share/zyGrib/gis/countries_en.txt.gz
 share/zyGrib/gis/countries_fr.txt.gz
+share/zyGrib/gis/states_en.txt.gz
+share/zyGrib/gis/stations_metar.txt.gz
 share/zyGrib/img/1leftarrow.png
 share/zyGrib/img/1rightarrow.png
 share/zyGrib/img/2leftarrow.png
@@ -31,6 +33,7 @@ share/zyGrib/img/drapeau_cz.png
 share/zyGrib/img/drapeau_de.png
 share/zyGrib/img/drapeau_en.png
 share/zyGrib/img/drapeau_es.png
+share/zyGrib/img/drapeau_fi.png
 share/zyGrib/img/drapeau_fr.png
 share/zyGrib/img/drapeau_it.png
 share/zyGrib/img/drapeau_nl.png
@@ -90,6 +93,8 @@ share/zyGrib/tr/zyGrib_de.qm
 share/zyGrib/tr/zyGrib_de.ts
 share/zyGrib/tr/zyGrib_es.qm
 share/zyGrib/tr/zyGrib_es.ts
+share/zyGrib/tr/zyGrib_fi.qm
+share/zyGrib/tr/zyGrib_fi.ts
 share/zyGrib/tr/zyGrib_fr.qm
 share/zyGrib/tr/zyGrib_fr.ts
 share/zyGrib/tr/zyGrib_it.qm
