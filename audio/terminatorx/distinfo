@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/11/24 20:34:34 marino Exp $
+$NetBSD: distinfo,v 1.8 2012/07/01 09:42:20 sbd Exp $
 
 SHA1 (terminatorX-3.82.tar.bz2) = 8d492fc759ffb77c2549190081077e12f765233f
 RMD160 (terminatorX-3.82.tar.bz2) = b70c688101844a07eddcd3e090cd6e805e93f066
@@ -12,4 +12,5 @@ SHA1 (patch-af) = 7129f695f1c7e79800d123b4a3d5db7a8f6c3f5d
 SHA1 (patch-ag) = 53094ee9beb48478ee4ea3c375422c858fc2fc81
 SHA1 (patch-ah) = f2d7ca4631b177840b88d82d614e11ba779b4ef5
 SHA1 (patch-ai) = 7fe25f7b29fcb807b00bee363337f163f0171813
+SHA1 (patch-src_tX__midiin.cc) = 4e5b34e5c99ecc6a5c750cc2e5c9fe700b1871fb
 SHA1 (patch-src_tx__dial_c) = b2c6824b1c103d3f86943d6040e741aab6158cb9
