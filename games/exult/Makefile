@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/06/18 03:59:09 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2012/07/01 19:05:17 dholland Exp $
 #
 
 DISTNAME=		exult-1.2
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=exult/}
 
@@ -23,4 +23,5 @@ GNU_CONFIGURE=		yes
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

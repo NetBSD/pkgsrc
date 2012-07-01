@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/03/03 00:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/07/01 19:05:11 dholland Exp $
 
 DISTNAME=		gqmpeg-0.91.1
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 
@@ -34,5 +34,6 @@ LDFLAGS.DragonFly=	-lm -lX11
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"

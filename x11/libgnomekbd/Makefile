@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2012/06/14 07:43:23 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2012/07/01 19:05:28 dholland Exp $
 #
 
 DISTNAME=	libgnomekbd-2.32.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomekbd/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,4 +29,5 @@ PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=4.0
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

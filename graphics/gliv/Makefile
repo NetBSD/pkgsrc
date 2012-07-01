@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/03/03 00:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/07/01 19:05:18 dholland Exp $
 
 DISTNAME=	gliv-1.9.6
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	http://guichaz.free.fr/gliv/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,4 +26,5 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

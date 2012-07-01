@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/06/14 07:45:02 sbd Exp $
+# $NetBSD: Makefile,v 1.15 2012/07/01 19:05:23 dholland Exp $
 #
 
 DISTNAME=	kmplayer-0.10.0c
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://kmplayer.kde.org/pkgs/
 EXTRACT_SUFX=	.tar.bz2
@@ -42,4 +42,5 @@ SUBST_SED.desktop=	-e 's|@PREFIX@|${PREFIX}|g'
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
