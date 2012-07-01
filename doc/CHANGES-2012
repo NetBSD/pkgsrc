@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2056 2012/07/01 01:57:15 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.2057 2012/07/01 07:23:12 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3218,3 +3218,4 @@ Changes to the packages collection and infrastructure in 2012:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q2 branch [agc 2012-06-30]
 	Updated www/ikiwiki to 3.20120629 [schmonz 2012-07-01]
 	Added audio/py-audiotools version 2.18 [jakllsch 2012-07-01]
+	Updated misc/zyGrib to 5.1.4 [plunky 2012-07-01]
