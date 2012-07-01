@@ -1,11 +1,9 @@
-$NetBSD: CHANGES-2012,v 1.2052 2012/06/29 14:56:54 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2052.2.1 2012/07/01 00:32:04 agc Exp $
 
 *****************************************************************************
-PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE CHANGES AND
-NEW PACKAGES.
-
-IF YOU'D LIKE TO UPDATE A PACKAGE, PLEASE MAKE SURE THAT YOU HAVE PERMISSION
-IN ADVANCE FROM A PKGSRC PMC REPRESENTATIVE: (gdt@, wiz@, schmonz@, agc@)
+PLEASE NOTE THAT THIS FILE IS ON THE PKGSRC-2012Q2 BRANCH, AND ONLY
+PKGSRC RELEASE ENGINEERING CAN COMMIT FILES TO THIS BRANCH.  IT MAY
+NOT BE WHAT YOU MEANT TO DO.
 *****************************************************************************
 
 Changes to the packages collection and infrastructure in 2012:
@@ -3222,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/f-prot-antivirus6-ms-bin to 6.2.1 [taca 2012-06-29]
 	Updated security/f-prot-antivirus6-ws-bin to 6.2.1 [taca 2012-06-29]
 	Updated mail/sylpheed to 3.2.0 [taca 2012-06-29]
+	Updated sysutils/p5-Sys-Filesystem to 1.30nb3 [dholland 2012-06-30]
