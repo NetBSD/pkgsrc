@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/06/14 07:45:36 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/01 19:42:07 morr Exp $
 
 PKGNAME=	${DISTNAME:C/-/90-plperl-/}
-PKGREVISION=	1
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
