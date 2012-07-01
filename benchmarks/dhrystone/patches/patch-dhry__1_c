@@ -1,4 +1,4 @@
-$NetBSD: patch-dhry__1_c,v 1.1 2012/06/18 01:46:07 dholland Exp $
+$NetBSD: patch-dhry__1_c,v 1.2 2012/07/01 09:51:13 sbd Exp $
 
 - use standard headers
 - don't declare own malloc
@@ -6,17 +6,18 @@ $NetBSD: patch-dhry__1_c,v 1.1 2012/06/18 01:46:07 dholland Exp $
 
 --- dhry_1.c.orig	1988-07-12 19:35:10.000000000 +0000
 +++ dhry_1.c
-@@ -15,6 +15,9 @@
+@@ -15,6 +15,10 @@
   ****************************************************************************
   */
  
 +#include <stdlib.h>
 +#include <string.h>
++#include <time.h>
 +
  #include "dhry.h"
  
  /* Global Variables: */
-@@ -28,7 +31,6 @@ char            Ch_1_Glob,
+@@ -28,7 +32,6 @@ char            Ch_1_Glob,
  int             Arr_1_Glob [50];
  int             Arr_2_Glob [50] [50];
  
@@ -24,7 +25,7 @@ $NetBSD: patch-dhry__1_c,v 1.1 2012/06/18 01:46:07 dholland Exp $
  Enumeration     Func_1 ();
    /* forward declaration necessary since Enumeration may not simply be int */
  
-@@ -221,7 +223,7 @@ main ()
+@@ -221,7 +224,7 @@ main ()
    printf ("Arr_2_Glob[8][7]:    %d\n", Arr_2_Glob[8][7]);
    printf ("        should be:   Number_Of_Runs + 10\n");
    printf ("Ptr_Glob->\n");
@@ -33,7 +34,7 @@ $NetBSD: patch-dhry__1_c,v 1.1 2012/06/18 01:46:07 dholland Exp $
    printf ("        should be:   (implementation-dependent)\n");
    printf ("  Discr:             %d\n", Ptr_Glob->Discr);
    printf ("        should be:   %d\n", 0);
-@@ -232,7 +234,7 @@ main ()
+@@ -232,7 +235,7 @@ main ()
    printf ("  Str_Comp:          %s\n", Ptr_Glob->variant.var_1.Str_Comp);
    printf ("        should be:   DHRYSTONE PROGRAM, SOME STRING\n");
    printf ("Next_Ptr_Glob->\n");
