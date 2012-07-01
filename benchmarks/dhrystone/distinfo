@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/07/01 09:51:13 sbd Exp $
+$NetBSD: distinfo,v 1.6 2012/07/01 09:56:13 sbd Exp $
 
 SHA1 (dhry2.1.tar.Z) = 7b99b90dc191aac1b08fbfc256ffc0fc650ab373
 RMD160 (dhry2.1.tar.Z) = f4fe0e2bbeacab3e4ce800ac9befef2ff1b47013
 Size (dhry2.1.tar.Z) = 32681 bytes
 SHA1 (patch-aa) = f43b8165845ff6670160d8458cc2c6a2b779f628
-SHA1 (patch-dhry__1_c) = d2a311c1ee016a4398d7d19f12c01b45dc0599ed
+SHA1 (patch-dhry__1_c) = 604950d273d74a1a9c6c98e269815a01becde3aa
 SHA1 (patch-dhry__2_c) = 3e6caecd550c4e0f188fb7eeb6c9eda60a468a17
