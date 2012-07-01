@@ -1,6 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.1 2012/06/30 23:41:17 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.2 2012/07/01 22:21:42 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
 
 Created pkgsrc-2012Q2 branch [agc Sat Jun 30 23:26:00 UTC 2012]
+
+Pullup ticket #3838 - requested by dholland
+games/wesnoth: build fix
+Pullup ticket #3839 - requested by dholland
+editors/gobby: build fix
+Pullup ticket #3840 - requested by dholland
+multimedia/xfmedia: build fix
