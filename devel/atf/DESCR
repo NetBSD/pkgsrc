@@ -13,3 +13,7 @@ in special, encourages end users to run them often: they do not need to
 have source trees around nor any other development tools installed to be
 able to certify that a given piece of software works on their machine as
 advertised.
+
+This package provides the deprecated atf-run and atf-report tools; please
+use kyua-cli package instead.  If you need the ATF libraries only (not the
+tools), you can install the atf-libs package instead.
