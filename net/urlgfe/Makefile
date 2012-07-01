@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/03/03 00:13:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/07/01 19:05:24 dholland Exp $
 #
 
 DISTNAME=		urlgfe-1.0.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=urlget/}
 
@@ -20,4 +20,5 @@ USE_TOOLS+=		pkg-config
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
