@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2012/06/14 07:44:10 sbd Exp $
+# $NetBSD: Makefile,v 1.54 2012/07/01 19:05:20 dholland Exp $
 
 DISTNAME=	kdeaccessibility-${_KDE_VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	misc
 COMMENT=	Accessibility support for the KDE integrated X11 desktop
 
@@ -19,4 +19,5 @@ USE_TOOLS+=		pkg-config
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

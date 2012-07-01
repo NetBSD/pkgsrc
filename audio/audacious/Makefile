@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/06/14 07:43:10 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/07/01 19:05:10 dholland Exp $
 #
 
 DISTNAME=		audacious-1.5.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tbz2
@@ -43,6 +43,7 @@ LDFLAGS.DragonFly=	-lm -lX11 -lgmodule-2.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

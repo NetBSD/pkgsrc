@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/02/28 14:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/07/01 19:05:19 dholland Exp $
 #
 
 DISTNAME=	fldigi-3.03
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/fldigi-distro/
 
@@ -26,5 +26,6 @@ CONFIGURE_ENV+=		STRIP=${STRIP}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

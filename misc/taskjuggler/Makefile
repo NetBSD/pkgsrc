@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2012/06/14 07:44:09 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/07/01 19:05:22 dholland Exp $
 #
 
 DISTNAME=	taskjuggler-2.4.3
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	http://www.taskjuggler.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -41,4 +41,5 @@ pre-build:
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../misc/kdepim3/buildlink3.mk" # for libkcal
 .include "../../x11/qt3/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.134 2012/06/14 07:43:54 sbd Exp $
+# $NetBSD: Makefile,v 1.135 2012/07/01 19:05:28 dholland Exp $
 #
 
 DISTNAME=		gnome-session-2.26.2
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.26/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -66,4 +66,5 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.1
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

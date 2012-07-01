@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/06/14 07:43:47 sbd Exp $
+# $NetBSD: Makefile,v 1.24 2012/07/01 19:05:17 dholland Exp $
 #
 
 DISTNAME=		atomix-2.14.0
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atomix/2.14/}
 
@@ -24,4 +24,5 @@ LDFLAGS.DragonFly=	-lm
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
