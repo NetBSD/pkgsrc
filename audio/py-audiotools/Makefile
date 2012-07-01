@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/01 01:56:16 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/01 03:52:54 dholland Exp $
 #
 
 DISTNAME=	audiotools-2.18
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
+
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/python
