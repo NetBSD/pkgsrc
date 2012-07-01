@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2012/06/03 20:12:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/07/01 14:05:07 wiz Exp $
 bin/vsd2raw
+bin/vsd2text
 bin/vsd2xhtml
 include/libvisio-0.0/libvisio/VSDStringVector.h
 include/libvisio-0.0/libvisio/VisioDocument.h
@@ -304,6 +305,7 @@ share/doc/libvisio/html/functions_vars_0x69.html
 share/doc/libvisio/html/functions_vars_0x6b.html
 share/doc/libvisio/html/functions_vars_0x6c.html
 share/doc/libvisio/html/functions_vars_0x6d.html
+share/doc/libvisio/html/functions_vars_0x6e.html
 share/doc/libvisio/html/functions_vars_0x6f.html
 share/doc/libvisio/html/functions_vars_0x70.html
 share/doc/libvisio/html/functions_vars_0x72.html
@@ -347,6 +349,8 @@ share/doc/libvisio/html/structlibvisio_1_1VSDXCharStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXCharStyle.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXFillStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXFillStyle.html
+share/doc/libvisio/html/structlibvisio_1_1VSDXFont-members.html
+share/doc/libvisio/html/structlibvisio_1_1VSDXFont.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXLineStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXLineStyle.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXParaStyle-members.html
