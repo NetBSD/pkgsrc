@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2012/03/14 14:49:06 plunky Exp $
+# $NetBSD: Makefile,v 1.28 2012/07/01 07:21:35 plunky Exp $
 #
 
-DISTNAME=	zyGrib-5.1.3
+DISTNAME=	zyGrib-5.1.4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz
@@ -54,6 +54,8 @@ INSTALL_FILES+=	gis/cities_10k-more.txt.gz
 INSTALL_FILES+=	gis/cities_3k-10k.txt.gz
 INSTALL_FILES+=	gis/countries_en.txt.gz
 INSTALL_FILES+=	gis/countries_fr.txt.gz
+INSTALL_FILES+=	gis/states_en.txt.gz
+INSTALL_FILES+=	gis/stations_metar.txt.gz
 INSTALL_FILES+=	img/1leftarrow.png
 INSTALL_FILES+=	img/1rightarrow.png
 INSTALL_FILES+=	img/2leftarrow.png
@@ -67,6 +69,7 @@ INSTALL_FILES+=	img/drapeau_cz.png
 INSTALL_FILES+=	img/drapeau_de.png
 INSTALL_FILES+=	img/drapeau_en.png
 INSTALL_FILES+=	img/drapeau_es.png
+INSTALL_FILES+=	img/drapeau_fi.png
 INSTALL_FILES+=	img/drapeau_fr.png
 INSTALL_FILES+=	img/drapeau_it.png
 INSTALL_FILES+=	img/drapeau_nl.png
@@ -126,6 +129,8 @@ INSTALL_FILES+=	tr/zyGrib_de.qm
 INSTALL_FILES+=	tr/zyGrib_de.ts
 INSTALL_FILES+=	tr/zyGrib_es.qm
 INSTALL_FILES+=	tr/zyGrib_es.ts
+INSTALL_FILES+=	tr/zyGrib_fi.qm
+INSTALL_FILES+=	tr/zyGrib_fi.ts
 INSTALL_FILES+=	tr/zyGrib_fr.qm
 INSTALL_FILES+=	tr/zyGrib_fr.ts
 INSTALL_FILES+=	tr/zyGrib_it.qm
