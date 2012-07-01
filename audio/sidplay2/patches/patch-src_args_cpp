@@ -1,23 +1,15 @@
-$NetBSD: patch-src_args_cpp,v 1.1 2012/05/23 04:28:29 dholland Exp $]
+$NetBSD: patch-src_args_cpp,v 1.2 2012/07/01 09:24:45 sbd Exp $]
 
-Don't launder const. Fixes build with recent glibc.
+Cast away the const in a strstr call.
 
---- src/args.cpp~	2004-05-05 23:49:20.000000000 +0000
+--- src/args.cpp.orig	2004-05-05 23:49:20.000000000 +0000
 +++ src/args.cpp
-@@ -110,8 +110,14 @@ bool ConsolePlayer::parseTime (const cha
-     else
-     {   // Read in MM:SS format
-         int val;
--        *sep = '\0';
--        val  = atoi (str);
-+	char *tmp;
-+	size_t len;
-+	len = sep - str;
-+	tmp = new char[len + 1];
-+	memcpy(tmp, str, len);
-+	tmp[len] = 0;
-+        val  = atoi (tmp);
-+	delete []tmp;
-         if (val < 0 || val > 99)
-             return false;
-         _time = (uint_least32_t) val * 60;
+@@ -102,7 +102,7 @@ bool ConsolePlayer::parseTime (const cha
+     if (*str == '\0')
+         return false;
+ 
+-    sep = strstr (str, ":");
++    sep = (char*) strstr (str, ":");
+     if (!sep)
+     {   // User gave seconds
+         _time = atoi (str);
