@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2058 2012/07/01 08:02:20 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2059 2012/07/01 14:05:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3220,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added audio/py-audiotools version 2.18 [jakllsch 2012-07-01]
 	Updated misc/zyGrib to 5.1.4 [plunky 2012-07-01]
 	Updated math/mathomatic to 16.0.0 [asau 2012-07-01]
+	Updated converters/libvisio to 0.0.18 [wiz 2012-07-01]
