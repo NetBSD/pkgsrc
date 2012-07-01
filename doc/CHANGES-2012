@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2060 2012/07/01 14:06:07 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2061 2012/07/01 14:09:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3222,3 +3222,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/mathomatic to 16.0.0 [asau 2012-07-01]
 	Updated converters/libvisio to 0.0.18 [wiz 2012-07-01]
 	Updated converters/py-simplejson to 2.6.0 [wiz 2012-07-01]
+	Updated devel/boehm-gc to 7.2c [wiz 2012-07-01]
