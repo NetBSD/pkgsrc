@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/07/01 01:56:16 jakllsch Exp $
+
+SHA1 (audiotools-2.18.tar.gz) = d080dd2e470dc711a89777833a92d83fc2cb6614
+RMD160 (audiotools-2.18.tar.gz) = c503bf49dec30c7d0e1c535483aa5afe84140695
+Size (audiotools-2.18.tar.gz) = 6450713 bytes
