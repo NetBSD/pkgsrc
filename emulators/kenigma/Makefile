@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/06/14 07:44:13 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/07/01 19:05:17 dholland Exp $
 
 DISTNAME=	28107-kenigma-1.2.1
 PKGNAME=	kenigma-1.2.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	emulators security
 MASTER_SITES=	http://www.kde-apps.org/content/files/
 
@@ -39,4 +39,5 @@ do-install:
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../x11/kdebindings-ruby/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

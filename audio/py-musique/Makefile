@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2012/06/14 07:44:03 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/07/01 19:05:13 dholland Exp $
 #
 
 DISTNAME=	pymusique-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	audio
 MASTER_SITES=	http://www.pyronecrophilia.com/content/pymusique/
 
@@ -30,4 +30,5 @@ PYDISTUTILSPKG= yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

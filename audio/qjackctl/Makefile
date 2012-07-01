@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/03/03 00:12:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/07/01 19:05:13 dholland Exp $
 #
 
 DISTNAME=	qjackctl-0.3.3
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qjackctl/}
 
@@ -26,4 +26,5 @@ CONFIGURE_ARGS+=	--without-alsa
 .include "../../audio/jack/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

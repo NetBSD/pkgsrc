@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2011/11/01 06:01:14 sbd Exp $
+# $NetBSD: Makefile,v 1.39 2012/07/01 19:05:17 dholland Exp $
 #
 
 DISTNAME=		crimson-0.5.2
 PKGNAME=		${DISTNAME:S/crimson/crimsonfields/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://crimson.seul.org/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -29,4 +29,5 @@ CONFIGURE_ARGS+=	--enable-comet
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

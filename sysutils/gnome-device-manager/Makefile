@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/06/14 07:43:56 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2012/07/01 19:05:25 dholland Exp $
 #
 
 DISTNAME=	gnome-device-manager-0.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +24,7 @@ USE_LIBTOOL=		YES
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

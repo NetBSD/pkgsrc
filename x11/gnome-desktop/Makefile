@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2012/06/14 07:45:11 sbd Exp $
+# $NetBSD: Makefile,v 1.112 2012/07/01 19:05:27 dholland Exp $
 #
 
 DISTNAME=		gnome-desktop-2.32.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.32/}
 EXTRACT_SUFX=		.tar.bz2
@@ -40,6 +40,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.3
 BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.2
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # gnome-about needs py-gnome2-desktop at runtime, which needs us, so
 # we have a circular dependency. To work around this, just depend on
 # Python and hope that py-gnome2-desktop gets the same version.

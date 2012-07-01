@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/06/14 07:45:14 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2012/07/01 19:05:26 dholland Exp $
 #
 
 DISTNAME=	libgksu-2.0.7
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.debian.org/~kov/gksu/
 
@@ -37,4 +37,5 @@ SUBST_FILES.xauth=	libgksu/gksu-run-helper.c libgksu/libgksu.c
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

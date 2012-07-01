@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2012/06/14 07:43:51 sbd Exp $
+# $NetBSD: Makefile,v 1.79 2012/07/01 19:05:13 dholland Exp $
 
 DISTNAME=	gnomeicu-0.99.12
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	chat gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomeicu/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,5 +39,6 @@ GCONF_SCHEMAS=		gnomeicu.schemas
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"

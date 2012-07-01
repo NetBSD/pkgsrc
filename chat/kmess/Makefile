@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2012/06/14 07:44:56 sbd Exp $
+# $NetBSD: Makefile,v 1.50 2012/07/01 19:05:13 dholland Exp $
 #
 
 DISTNAME=	kmess-1.4.3
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	chat kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmess/}
 
@@ -27,5 +27,6 @@ MAKE_FLAGS+=		KPHONEDIR=${PREFIX}/include
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

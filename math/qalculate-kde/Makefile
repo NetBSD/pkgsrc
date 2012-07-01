@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/06/14 07:45:05 sbd Exp $
+# $NetBSD: Makefile,v 1.34 2012/07/01 19:05:20 dholland Exp $
 
 DISTNAME=	qalculate-kde-0.9.5
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -27,4 +27,5 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

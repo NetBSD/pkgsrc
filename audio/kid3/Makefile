@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/06/14 07:45:02 sbd Exp $
+# $NetBSD: Makefile,v 1.31 2012/07/01 19:05:12 dholland Exp $
 #
 
 DISTNAME=		kid3-1.6
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		kde audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
 
@@ -28,6 +28,7 @@ CHECK_PORTABILITY_SKIP+=	make_qtonly.sh
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/libmp4v2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
