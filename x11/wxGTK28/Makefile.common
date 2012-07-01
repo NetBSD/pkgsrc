@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2012/03/12 10:39:13 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.13 2012/07/01 01:32:21 dholland Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--enable-mediactrl
 DOCDIR=			${PREFIX}/share/doc/wxGTK
 PKGLOCALEDIR=		share
 
-CONFIGURE_DIRS=	${WRKSRC}/build-non-unicode ${WRKSRC}/build-unicode
+CONFIGURE_DIRS=	build-non-unicode build-unicode
 
 INSTALL_MAKE_FLAGS+=	LN_S="ln -fs"
 
@@ -57,9 +57,9 @@ SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
 
 pre-configure:
 	mkdir ${WRKSRC}/build-non-unicode ${WRKSRC}/build-unicode
-	printf '#!%s\n../configure --enable-unicode "$$@"' ${SH:Q} \
+	printf '#!%s\n../configure --enable-unicode "$$@"' ${SH} \
 	    > ${WRKSRC}/build-unicode/configure
-	printf '#!%s\n../configure --disable-unicode "$$@"' ${SH:Q} \
+	printf '#!%s\n../configure --disable-unicode "$$@"' ${SH} \
 	    > ${WRKSRC}/build-non-unicode/configure
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"

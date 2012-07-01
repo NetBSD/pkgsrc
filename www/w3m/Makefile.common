@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2012/03/11 04:56:36 markd Exp $
+# $NetBSD: Makefile.common,v 1.58 2012/07/01 01:32:37 dholland Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake	# Needed for some combinations of options...
 USE_TOOLS+=	msgfmt
-USE_PKGLOCALEDIR=       yes
+USE_PKGLOCALEDIR=	yes
 
 W3M_VERS=	0.5.3
 
@@ -48,26 +48,27 @@ CONFIGURE_ARGS+=	--enable-unicode
 CONFIGURE_ARGS+=	--with-browser=
 CONFIGURE_ARGS+=	--with-termlib
 CONFIGURE_ARGS+=	--with-editor=vi
-CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc:Q}
+CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
 CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD:Q}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-SUBST_CLASSES+=		man-ja fh
+SUBST_CLASSES+=		man-ja
 SUBST_MESSAGE.man-ja=	Fixing the path to Japanese manual pages.
 SUBST_STAGE.man-ja=	post-patch
 SUBST_FILES.man-ja=	Makefile.in config.h.dist
 SUBST_SED.man-ja=	-e 's|/ja/|/ja_JP.eucJP/|g'
 
+SUBST_CLASSES+=		fh
 SUBST_MESSAGE.fh=	Rename file_handle.
 SUBST_STAGE.fh=		post-patch
 SUBST_FILES.fh=		istream.*
 SUBST_SED.fh=		-e 's/file_handle/file_handle_rofl/g'
 
 post-extract:
-	cd ${WRKSRC}/doc; ${RM} -fr CVS
-	cd ${WRKSRC}/doc-jp; ${RM} -fr CVS
-	cd ${WRKSRC}; ${RM} -fr gc
+	cd ${WRKSRC}/doc && ${RM} -fr CVS
+	cd ${WRKSRC}/doc-jp && ${RM} -fr CVS
+	cd ${WRKSRC} && ${RM} -fr gc
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
@@ -75,7 +76,7 @@ INSTALL_TARGET=		install install-helpfile
 
 post-install:
 	# Use pax to discard uid/gid.  Exclude manuals (*.1).
-	cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
+	set -e; cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
 	    ( cd ${DESTDIR}${PREFIX}/${DOCDIR}; pax -r )
 
 .include "../../devel/boehm-gc/buildlink3.mk"
