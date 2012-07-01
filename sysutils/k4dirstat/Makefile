@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 07:44:52 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/01 19:05:26 dholland Exp $
 
 DISTNAME=	k4dirstat-2.7.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bitbucket.org/jeromerobert/k4dirstat/get/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,5 +25,6 @@ FETCH_USING=	curl
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kde-baseapps4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"

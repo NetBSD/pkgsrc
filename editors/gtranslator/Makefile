@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2012/06/14 07:43:50 sbd Exp $
+# $NetBSD: Makefile,v 1.45 2012/07/01 19:05:16 dholland Exp $
 
 DISTNAME=	gtranslator-1.1.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/1.1/}
 
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-debug
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"

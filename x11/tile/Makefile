@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/07/22 09:01:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/01 19:05:29 dholland Exp $
 #
 
 DISTNAME=		tile_0.7.3
 PKGNAME=		tile-0.7.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 # cvs only has 0.7.1 and mentions "cvs server loss"...
 MASTER_SITES=		http://www.unixdev.net/downloads/tile/0.7.3/
@@ -21,4 +21,5 @@ INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
