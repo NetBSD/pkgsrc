@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 14:40:41 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/01 19:30:24 morr Exp $
 #
 
 PGSQL_VERSION=	84
-PKGREVISION=	1
 
 .include "../../databases/postgresql-uuid/Makefile.common"
