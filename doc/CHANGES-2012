@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2071 2012/07/01 17:36:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2072 2012/07/01 17:42:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3236,3 +3236,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/pciutils to 3.1.10 [wiz 2012-07-01]
 	Updated x11/rgb to 1.0.4 [wiz 2012-07-01]
 	Updated graphics/jhead to 2.96 [wiz 2012-07-01]
+	Updated x11/xterm to 281 [wiz 2012-07-01]
