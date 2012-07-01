@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2064 2012/07/01 14:31:43 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.2065 2012/07/01 15:30:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3226,3 +3226,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/gbrainy to 2.14 [wiz 2012-07-01]
 	Updated textproc/py-libxml2 to 2.8.0 [wiz 2012-07-01]
 	Updated www/p5-Mojolicious to 3.01 [mspo 2012-07-01]
+	Added devel/atf-libs version 0.15 [jmmv 2012-07-01]
+	Updated devel/atf to 0.15nb1 [jmmv 2012-07-01]
+	Updated devel/lutok to 0.2nb1 [jmmv 2012-07-01]
+	Updated devel/kyua-cli to 0.4nb1 [jmmv 2012-07-01]
