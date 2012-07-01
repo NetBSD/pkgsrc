@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2012/04/22 16:00:38 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2012/07/01 15:49:14 wiz Exp $
 
---- Makefile.orig	2012-01-14 14:07:55.000000000 +0000
+--- Makefile.orig	2012-06-25 12:45:14.000000000 +0000
 +++ Makefile
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.6 2012/04/22 16:00:38 wiz Exp $
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.1.9
- DATE=2012-01-14
+ VERSION=3.1.10
+ DATE=2012-06-25
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
