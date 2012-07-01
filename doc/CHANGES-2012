@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2072 2012/07/01 17:42:39 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2073 2012/07/01 19:24:58 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/rgb to 1.0.4 [wiz 2012-07-01]
 	Updated graphics/jhead to 2.96 [wiz 2012-07-01]
 	Updated x11/xterm to 281 [wiz 2012-07-01]
+	Updated security/py-ssh to 1.7.14 [gls 2012-07-01]
