@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2067 2012/07/01 15:51:09 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2068 2012/07/01 15:53:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/kyua-cli to 0.4nb1 [jmmv 2012-07-01]
 	Updated x11/libdrm to 2.4.37 [wiz 2012-07-01]
 	Updated textproc/raptor2 to 2.0.8 [wiz 2012-07-01]
+	Updated www/links to 2.7 [wiz 2012-07-01]

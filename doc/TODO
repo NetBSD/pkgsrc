@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11320 2012/07/01 15:51:10 wiz Exp $
+$NetBSD: TODO,v 1.11321 2012/07/01 15:54:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -873,7 +873,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liferea-1.8.6
 	o lighttpd-1.4.31
 	o lincvs-2.1.4 [now called CrossVC]
-	o links-2.7
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
