@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/02 05:54:24 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/01 01:33:39 dholland Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 VER=		4.7.1
 NO_BUILD=	yes
-USE_TOOLS=	pax
+USE_TOOLS+=	pax
 
 TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
@@ -37,15 +37,15 @@ REPLACE.sh.old=		/bin/bash
 REPLACE.sh.new=		/bin/sh
 REPLACE_FILES.sh=	typo3/contrib/flowplayer/flowplayer.captions/example/flvtool2-cuepoints.sh
 
-TYPO3DATADIR=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
+TYPO3DATADIRS=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
 		typo3conf typo3conf/ext typo3conf/l10n typo3temp uploads \
 		uploads/media uploads/pics uploads/tf
 
 BUILD_DEFS+=	APACHE_GROUP
 
-FILES_SUBST+=	TYPO3DIR=${TYPO3DIR:Q} SITEDIR=${SITEDIR:Q}
-PLIST_SUBST+=	EGDIR=${EGDIR:Q} SITEDIR=${SITEDIR:Q} \
-		TYPO3DIR=${TYPO3DIR:Q} TYPO3NAME=${TYPO3NAME:Q}
+FILES_SUBST+=	TYPO3DIR=${TYPO3DIR} SITEDIR=${SITEDIR}
+PLIST_SUBST+=	EGDIR=${EGDIR} SITEDIR=${SITEDIR} \
+		TYPO3DIR=${TYPO3DIR} TYPO3NAME=${TYPO3NAME:Q}
 
 EGDIR=		share/examples/typo3
 
@@ -55,7 +55,7 @@ CONF_FILES_PERMS+=	${EGDIR}/localconf.php \
 			${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php \
 			${REAL_ROOT_USER} ${APACHE_GROUP} 0660
 
-.for d in ${TYPO3DATADIR}
+.for d in ${TYPO3DATADIRS}
 OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR}/${d} ${REAL_ROOT_USER} \
 	${APACHE_GROUP} 0770
 CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
@@ -64,9 +64,9 @@ CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/README
 SUBST_FILES.conf+=	${WRKSRC}/t3lib/config_default.php
-SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
-SUBST_SED.conf+=        -e 's|@TYPO3DIR@|${TYPO3DIR:Q}|g'
-SUBST_SED.conf+=        -e 's|@SITEDIR@|${SITEDIR:Q}|g'
+SUBST_SED.conf+=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_SED.conf+=	-e 's|@TYPO3DIR@|${TYPO3DIR}|g'
+SUBST_SED.conf+=	-e 's|@SITEDIR@|${SITEDIR}|g'
 SUBST_STAGE.conf=	post-configure
 
 PRINT_PLIST_AWK+=	/^${EGDIR:S|/|\\/|g}/ \
@@ -87,12 +87,12 @@ post-extract:
 	${CP} ${FILESDIR}/README ${WRKDIR}
 
 pre-install:
-	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
 
 do-install:
-	cd ${WRKSRC}; \
+	cd ${WRKSRC} && \
 	    pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
-	cd ${WRKDIR}/${SITESRC}; \
+	cd ${WRKDIR}/${SITESRC} && \
 		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
 	${RM} -f ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php
 	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/localconf.php \
