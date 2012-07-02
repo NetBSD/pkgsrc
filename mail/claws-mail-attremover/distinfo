@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/05/17 17:58:14 drochner Exp $
+$NetBSD: distinfo,v 1.8 2012/07/02 19:08:43 drochner Exp $
 
-SHA1 (att_remover-1.0.12.tar.gz) = 72f0e2791cf3876042d0b77e8c0da3226a238f8a
-RMD160 (att_remover-1.0.12.tar.gz) = 63fb672f2b21f222bce3e75a3fd350c62488c9a5
-Size (att_remover-1.0.12.tar.gz) = 292767 bytes
+SHA1 (att_remover-1.0.14.tar.gz) = efc739a40c8dced9fe853f2faf77c19e89e9a3ad
+RMD160 (att_remover-1.0.14.tar.gz) = 4999d859462deacd50645eb9096fb264b89ecbb9
+Size (att_remover-1.0.14.tar.gz) = 318353 bytes
