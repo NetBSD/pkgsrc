@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/04/02 09:57:17 reinoud Exp $
+# $NetBSD: Makefile,v 1.5 2012/07/02 13:37:40 adam Exp $
 #
 
 PKGNAME=	cgal-3.9
 DISTNAME=	CGAL-3.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/29125/
 
