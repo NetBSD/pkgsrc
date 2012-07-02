@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/15 11:43:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/07/02 06:16:23 adam Exp $
 bin/lzcat
 bin/lzcmp
 bin/lzdiff
@@ -69,8 +69,13 @@ share/doc/xz/NEWS
 share/doc/xz/README
 share/doc/xz/THANKS
 share/doc/xz/TODO
-share/doc/xz/examples/xz_pipe_comp.c
-share/doc/xz/examples/xz_pipe_decomp.c
+share/doc/xz/examples/00_README.txt
+share/doc/xz/examples/01_compress_easy.c
+share/doc/xz/examples/02_decompress.c
+share/doc/xz/examples/03_compress_custom.c
+share/doc/xz/examples/Makefile
+share/doc/xz/examples_old/xz_pipe_comp.c
+share/doc/xz/examples_old/xz_pipe_decomp.c
 share/doc/xz/faq.txt
 share/doc/xz/history.txt
 share/doc/xz/lzma-file-format.txt
