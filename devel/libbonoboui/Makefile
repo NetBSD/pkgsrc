@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2012/07/01 19:05:16 dholland Exp $
+# $NetBSD: Makefile,v 1.90 2012/07/02 10:33:09 drochner Exp $
 #
 
 DISTNAME=	libbonoboui-2.24.4
-PKGREVISION=	11
+PKGREVISION=	10
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -41,5 +41,4 @@ BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.7
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
