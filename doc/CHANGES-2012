@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2083 2012/07/02 17:24:18 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2084 2012/07/02 17:47:41 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xorg-cf-files to 1.0.4nb5 [jperkin 2012-07-02]
 	Updated devel/libtool-base to 2.2.6bnb7 [jperkin 2012-07-02]
 	Updated graphics/py-matplotlib to 1.1.1 [prlw1 2012-07-02]
+	Added benchmarks/filebench version 1.4.9.1 [asau 2012-07-02]
