@@ -1,25 +1,12 @@
-$NetBSD: patch-ag,v 1.6 2011/09/12 17:43:05 drochner Exp $
+$NetBSD: patch-ag,v 1.7 2012/07/02 19:07:50 drochner Exp $
 
---- src/common/ssl.c.orig	2011-08-27 06:58:15.000000000 +0000
+--- src/common/ssl.c.orig	2012-03-31 15:29:18.000000000 +0000
 +++ src/common/ssl.c
-@@ -29,8 +29,10 @@
+@@ -29,6 +29,7 @@
  #include <glib/gi18n.h>
  #include <errno.h>
  #include <pthread.h>
-+#ifdef HAVE_LIBGCRYPT
++#include <gnutls/gnutls.h>
+ 
+ #if GNUTLS_VERSION_NUMBER <= 0x020b00
  #include <gcrypt.h>
- GCRY_THREAD_OPTION_PTHREAD_IMPL;
-+#endif
- 
- #include "claws.h"
- #include "utils.h"
-@@ -153,7 +155,9 @@ const gchar *claws_ssl_get_cert_dir(void
- 
- void ssl_init(void)
- {
-+#ifdef HAVE_LIBGCRYPT
- 	gcry_control (GCRYCTL_SET_THREAD_CBS, &gcry_threads_pthread);
-+#endif
- #ifdef HAVE_LIBETPAN
- 	mailstream_gnutls_init_not_required();
- #endif	
