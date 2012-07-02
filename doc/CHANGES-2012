@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2080 2012/07/02 15:58:11 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.2081 2012/07/02 16:07:52 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3299,3 +3299,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/clamav to 0.97.5 [adam 2012-07-02]
 	Removed www/thy [drochner 2012-07-02]
 	Updated x11/xorg-cf-files to 1.0.4nb5 [jperkin 2012-07-02]
+	Updated devel/libtool-base to 2.2.6bnb7 [jperkin 2012-07-02]
