@@ -1,0 +1,10 @@
+Filebench is a file system and storage benchmark that allows
+to generate a high variety of workloads. It employs extensive
+Workload Model Language (WML) for detailed workload specification.
+
+Features
+
+ * Extensive Workload Model Language (WML) for workload specification
+ * Includes popular pre-defined workloads: webserver, fileserver,
+   varmail, etc.
+ * Reports throughput and latency histograms
