@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/09/12 17:43:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/07/02 19:08:45 drochner Exp $
 lib/claws-mail/plugins/tnef_parse.la
 share/locale/ca/LC_MESSAGES/tnef_parse.mo
 share/locale/cs/LC_MESSAGES/tnef_parse.mo
@@ -6,7 +6,7 @@ share/locale/es/LC_MESSAGES/tnef_parse.mo
 share/locale/fi/LC_MESSAGES/tnef_parse.mo
 share/locale/fr/LC_MESSAGES/tnef_parse.mo
 share/locale/hu/LC_MESSAGES/tnef_parse.mo
-share/locale/id/LC_MESSAGES/tnef_parse.mo
+share/locale/id_ID/LC_MESSAGES/tnef_parse.mo
 share/locale/it/LC_MESSAGES/tnef_parse.mo
 share/locale/ja/LC_MESSAGES/tnef_parse.mo
 share/locale/lt/LC_MESSAGES/tnef_parse.mo
