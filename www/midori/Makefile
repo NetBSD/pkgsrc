@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/06/14 07:44:19 sbd Exp $
+# $NetBSD: Makefile,v 1.45 2012/07/02 16:24:34 drochner Exp $
 
 DISTNAME=	midori-0.4.6
 PKGREVISION=	1
@@ -75,5 +75,5 @@ BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala014/buildlink3.mk"
+.include "../../lang/vala016/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
