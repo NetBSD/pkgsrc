@@ -1,0 +1,41 @@
+$NetBSD: patch-configure.ac,v 1.1.1.1 2012/07/02 17:43:16 asau Exp $
+
+--- configure.ac.orig	2011-09-06 17:17:45.000000000 +0000
++++ configure.ac
+@@ -31,7 +31,7 @@ AC_CHECK_HEADERS([netdb.h])
+ AC_CHECK_HEADERS([netinet/in.h])
+ AC_CHECK_HEADERS([stddef.h])
+ AC_CHECK_HEADERS([math.h])
+-if test "$ac_cv_header_math_h" == no
++if test "$ac_cv_header_math_h" = no
+ then
+ 	AC_MSG_ERROR([The math.h header is missing! If you use OpenIndiana b148, install "header-math" package.])
+ fi
+@@ -212,6 +212,9 @@ AC_CHECK_FILE(
+ 	[AC_DEFINE(HAVE_PROC_STAT, 1, [Checking if you have /proc/stat])]
+ )
+ 
++AC_CHECK_HEADERS([asm/unistd.h],
++	[AC_DEFINE(HAVE_ASM_UNISTD_H, 1, [Checking if you have <asm/unistd.h>])])
++
+ # this checks if stat file is present ins /proc/<pid> directory. This file is
+ # used to get per thread per operation CPU usage statistics on Linux
+ # distributions. To facilitate this check,we are checking if stat file exists
+@@ -469,6 +472,17 @@ AC_TRY_COMPILE([
+   ], AC_MSG_RESULT(no)
+ )
+ 
++AC_MSG_CHECKING(gettid)
++AC_TRY_COMPILE([
++#include <asm/unistd.h>
++],
++[ int nr_gettid = __NR_gettid;
++],[
++    AC_DEFINE(HAVE_GETTID,1,[ Define if have gettid])
++    AC_MSG_RESULT(yes)
++  ], AC_MSG_RESULT(no)
++)
++
+ ####
+ #### Check for structure members
+ ####
