@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2076 2012/07/02 07:02:11 tron Exp $
+$NetBSD: CHANGES-2012,v 1.2077 2012/07/02 07:18:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3288,3 +3288,12 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql91-server to 9.1.4 [morr 2012-07-01]
 	Updated databases/postgresql91-upgrade to 9.1.4 [morr 2012-07-01]
 	Updated net/libtorrent to 0.13.2nb1 [tron 2012-07-02]
+	Updated archivers/xz to 5.0.4 [adam 2012-07-02]
+	Updated devel/boost-jam to 1.50.0 [adam 2012-07-02]
+	Updated devel/boost-headers to 1.50.0 [adam 2012-07-02]
+	Updated devel/boost-libs to 1.50.0 [adam 2012-07-02]
+	Updated devel/boost-docs to 1.50.0 [adam 2012-07-02]
+	Updated devel/boost-build to 1.50.0 [adam 2012-07-02]
+	Updated devel/boost-python to 1.50.0 [adam 2012-07-02]
+	Updated meta-pkgs/boost to 1.50.0 [adam 2012-07-02]
+	Updated security/clamav to 0.97.5 [adam 2012-07-02]
