@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/21 12:49:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/02 19:02:04 drochner Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -427,6 +427,7 @@ share/locale/fi/LC_MESSAGES/vlc.mo
 share/locale/fr/LC_MESSAGES/vlc.mo
 share/locale/fur/LC_MESSAGES/vlc.mo
 share/locale/ga/LC_MESSAGES/vlc.mo
+share/locale/gd/LC_MESSAGES/vlc.mo
 share/locale/gl/LC_MESSAGES/vlc.mo
 share/locale/he/LC_MESSAGES/vlc.mo
 share/locale/hi/LC_MESSAGES/vlc.mo
