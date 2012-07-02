@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2082 2012/07/02 17:20:40 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2083 2012/07/02 17:24:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -629,6 +629,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk2 to 2.24.10 [drochner 2012-02-09]
 	Updated math/py-numpy to 1.4.1nb3 [obache 2012-02-09]
 	Updated textproc/libcroco to 0.6.4 [drochner 2012-02-09]
+	Added math/gcalctool-gtk3 version 6.2.0 [prlw1 2012-02-09]
 	Added print/tex-texdoc version 2011 [minskim 2012-02-09]
 	Added print/tex-texdoc-doc version 2011 [minskim 2012-02-09]
 	Updated print/texlive-tetex to 2011nb1 [minskim 2012-02-09]
@@ -639,6 +640,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Shell-Perl to 0.0022 [hiramatsu 2012-02-10]
 	Updated www/privoxy to 3.0.19 [mjl 2012-02-10]
 	Updated devel/gobject-introspection to 1.30.0 [drochner 2012-02-10]
+	Added devel/at-spi2-core version 2.3.2 [prlw1 2012-02-10]
+	Added devel/at-spi2-atk version 2.3.2 [prlw1 2012-02-10]
+	Added textproc/itstool version 1.1.2 [prlw1 2012-02-10]
+	Added textproc/yelp-xsl version 3.3.2 [prlw1 2012-02-10]
 	Updated converters/bibtex2html to 1.97 [minskim 2012-02-10]
 	Updated print/tex-moreverb to 2.3a [minskim 2012-02-10]
 	Updated print/tex-moreverb-doc to 2.3a [minskim 2012-02-10]
@@ -666,6 +671,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Template-Extract to 0.41nb5 [minskim 2012-02-12]
 	Updated www/p5-Template-Generate to 0.04nb11 [minskim 2012-02-12]
 	Updated graphics/ImageMagick to 6.7.5.5 [drochner 2012-02-13]
+	Added misc/yelp3 version 3.2.1 [prlw1 2012-02-13]
 	Updated devel/p5-Parse-ErrorString-Perl to 0.15 [hiramatsu 2012-02-13]
 	Added devel/p5-CPAN-Perl-Releases version 0.42 [hiramatsu 2012-02-13]
 	Updated x11/xlockmore to 5.38 [drochner 2012-02-13]
