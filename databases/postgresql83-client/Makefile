@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2012/06/14 07:45:39 sbd Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2012/07/02 23:06:55 tron Exp $
 
 PKGNAME=	${DISTNAME:C/-/83-client-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database client programs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
