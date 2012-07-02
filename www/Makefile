@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.886 2012/06/16 12:26:58 taca Exp $
+# $NetBSD: Makefile,v 1.887 2012/07/02 16:00:52 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -668,7 +668,6 @@ SUBDIR+=	thoth
 SUBDIR+=	thoth-delicious
 SUBDIR+=	thoth-flickr
 SUBDIR+=	thttpd
-SUBDIR+=	thy
 SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
 SUBDIR+=	trac
