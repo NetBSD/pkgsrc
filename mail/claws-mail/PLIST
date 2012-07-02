@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/09/12 17:43:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/07/02 19:07:50 drochner Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -12,6 +12,7 @@ include/claws-mail/addrcustomattr.h
 include/claws-mail/addrdefs.h
 include/claws-mail/addrduplicates.h
 include/claws-mail/addressadd.h
+include/claws-mail/addressbook-dbus.h
 include/claws-mail/addressbook.h
 include/claws-mail/addressbook_foldersel.h
 include/claws-mail/addressitem.h
@@ -93,12 +94,14 @@ include/claws-mail/gtk/combobox.h
 include/claws-mail/gtk/description_window.h
 include/claws-mail/gtk/filesel.h
 include/claws-mail/gtk/foldersort.h
+include/claws-mail/gtk/gdkkeysyms-new.h
 include/claws-mail/gtk/gtkaspell.h
 include/claws-mail/gtk/gtkcmclist.h
 include/claws-mail/gtk/gtkcmctree.h
 include/claws-mail/gtk/gtkcmoptionmenu.h
 include/claws-mail/gtk/gtksctree.h
 include/claws-mail/gtk/gtkshruler.h
+include/claws-mail/gtk/gtkunit.h
 include/claws-mail/gtk/gtkutils.h
 include/claws-mail/gtk/gtkvscrollbutton.h
 include/claws-mail/gtk/headers.h
@@ -228,7 +231,7 @@ share/locale/es/LC_MESSAGES/claws-mail.mo
 share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
 share/locale/hu/LC_MESSAGES/claws-mail.mo
-share/locale/id/LC_MESSAGES/claws-mail.mo
+share/locale/id_ID/LC_MESSAGES/claws-mail.mo
 share/locale/it/LC_MESSAGES/claws-mail.mo
 share/locale/ja/LC_MESSAGES/claws-mail.mo
 share/locale/lt/LC_MESSAGES/claws-mail.mo
@@ -241,3 +244,4 @@ share/locale/sk/LC_MESSAGES/claws-mail.mo
 share/locale/sv/LC_MESSAGES/claws-mail.mo
 share/locale/uk/LC_MESSAGES/claws-mail.mo
 share/locale/zh_CN/LC_MESSAGES/claws-mail.mo
+share/locale/zh_TW/LC_MESSAGES/claws-mail.mo
