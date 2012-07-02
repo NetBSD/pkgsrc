@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.19 2012/02/13 12:08:11 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.20 2012/07/02 16:08:29 drochner Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -103,6 +103,8 @@ share/doc/libgphoto2/NEWS
 share/doc/libgphoto2/README
 share/doc/libgphoto2/README.packaging
 share/doc/libgphoto2/camlibs/README.9050
+share/doc/libgphoto2/camlibs/README.9051
+share/doc/libgphoto2/camlibs/README.9052
 share/doc/libgphoto2/camlibs/README.905C
 share/doc/libgphoto2/camlibs/README.913C
 share/doc/libgphoto2/camlibs/README.913D
