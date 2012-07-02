@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11330 2012/07/02 13:49:54 wiz Exp $
+$NetBSD: TODO,v 1.11331 2012/07/02 19:24:50 drochner Exp $
 
 Suggested new packages
 ======================
@@ -696,7 +696,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
-	o gnutls-3.0.20
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -1361,7 +1360,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
 	o xine-1.2.2
-	o xine-lib-1.1.21
 	o xinput-1.6.0
 	o xjman-0.7
 	o xkbset-0.5

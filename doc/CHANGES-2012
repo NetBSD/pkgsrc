@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2084 2012/07/02 17:47:41 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2085 2012/07/02 19:24:49 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3306,5 +3306,15 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/thy [drochner 2012-07-02]
 	Updated x11/xorg-cf-files to 1.0.4nb5 [jperkin 2012-07-02]
 	Updated devel/libtool-base to 2.2.6bnb7 [jperkin 2012-07-02]
+	Updated devel/libgphoto2 to 2.4.14 [drochner 2012-07-02]
+	Updated graphics/gphoto2 to 2.4.14 [drochner 2012-07-02]
+	Updated lang/vala016 to 0.16.1 [drochner 2012-07-02]
+	Updated multimedia/xine-lib to 1.2.2 [drochner 2012-07-02]
+	Updated security/gnutls to 2.12.20 [drochner 2012-07-02]
+	Updated graphics/freetype2 to 2.4.10 [drochner 2012-07-02]
+	Updated security/libassuan2 to 2.0.3 [drochner 2012-07-02]
 	Updated graphics/py-matplotlib to 1.1.1 [prlw1 2012-07-02]
 	Added benchmarks/filebench version 1.4.9.1 [asau 2012-07-02]
+	Updated security/gnutls to 3.0.20 [drochner 2012-07-02]
+	Updated multimedia/vlc2 to 2.0.2 [drochner 2012-07-02]
+	Updated mail/claws-mail to 3.8.1 [drochner 2012-07-02]
