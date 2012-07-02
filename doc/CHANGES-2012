@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2081 2012/07/02 16:07:52 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.2082 2012/07/02 17:20:40 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3300,3 +3300,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/thy [drochner 2012-07-02]
 	Updated x11/xorg-cf-files to 1.0.4nb5 [jperkin 2012-07-02]
 	Updated devel/libtool-base to 2.2.6bnb7 [jperkin 2012-07-02]
+	Updated graphics/py-matplotlib to 1.1.1 [prlw1 2012-07-02]
