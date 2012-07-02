@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2077 2012/07/02 07:18:03 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2078 2012/07/02 15:44:42 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3297,3 +3297,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boost-python to 1.50.0 [adam 2012-07-02]
 	Updated meta-pkgs/boost to 1.50.0 [adam 2012-07-02]
 	Updated security/clamav to 0.97.5 [adam 2012-07-02]
+	Removed www/thy [drochner 2012-07-02]
