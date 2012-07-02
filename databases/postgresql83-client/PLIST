@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/03/05 14:12:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.20.4.1 2012/07/02 23:06:55 tron Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -1302,6 +1302,7 @@ share/doc/postgresql/html/release-8-3-15.html
 share/doc/postgresql/html/release-8-3-16.html
 share/doc/postgresql/html/release-8-3-17.html
 share/doc/postgresql/html/release-8-3-18.html
+share/doc/postgresql/html/release-8-3-19.html
 share/doc/postgresql/html/release-8-3-2.html
 share/doc/postgresql/html/release-8-3-3.html
 share/doc/postgresql/html/release-8-3-4.html
