@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.323 2012/06/14 21:57:37 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.324 2012/07/02 15:49:41 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -73,6 +73,11 @@ UNAME=echo Unknown
 OPSYS:=			${:!${UNAME} -s!:S/-//g:S/\///g}
 MAKEFLAGS+=		OPSYS=${OPSYS:Q}
 .endif
+
+# OS_VARIANT is used to differentiate operating systems which have a common
+# basis but offer contrasting environments, for example Linux distributions
+# or illumos forks.
+OS_VARIANT?=		# empty
 
 # The _CMD indirection allows code below to modify these values
 # without executing the commands at all.  Later, recursed make
@@ -275,6 +280,10 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
 LOWER_OPSYS_VERSUFFIX=	2.${OS_VERSION:C/5.//}
+_UNAME_V!=		${UNAME} -v
+.  if !empty(_UNAME_V:Mjoyent_*)
+OS_VARIANT=		SmartOS
+.  endif
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS:=		${OPSYS:tl}
