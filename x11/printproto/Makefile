@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/26 10:37:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/02 16:03:46 joerg Exp $
 #
 
 DISTNAME=		printproto-1.0.5
@@ -17,12 +17,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	printproto.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		MISC_MAN_SUFFIX=7
-.endif
 
 .include "../../x11/xproto/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
