@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/09/12 17:43:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/07/02 19:08:42 drochner Exp $
 include/claws-mail/plugins/archive/archiver.h
 include/claws-mail/plugins/archive/archiver_prefs.h
 lib/claws-mail/plugins/archive.la
@@ -8,7 +8,7 @@ share/locale/es/LC_MESSAGES/archive.mo
 share/locale/fi/LC_MESSAGES/archive.mo
 share/locale/fr/LC_MESSAGES/archive.mo
 share/locale/hu/LC_MESSAGES/archive.mo
-share/locale/id/LC_MESSAGES/archive.mo
+share/locale/id_ID/LC_MESSAGES/archive.mo
 share/locale/it/LC_MESSAGES/archive.mo
 share/locale/ja/LC_MESSAGES/archive.mo
 share/locale/lt/LC_MESSAGES/archive.mo

@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2011/09/12 17:43:06 drochner Exp $
-include/notification_plugin/gtkhotkey/eggaccelerators.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-error.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-info.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-key-file-registry.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-listener.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-marshal.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-registry.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-utils.h
-include/notification_plugin/gtkhotkey/gtk-hotkey-x11-listener.h
-include/notification_plugin/gtkhotkey/gtkhotkey.h
-include/notification_plugin/gtkhotkey/tomboykeybinder.h
+@comment $NetBSD: PLIST,v 1.8 2012/07/02 19:08:44 drochner Exp $
+include/claws-mail/plugins/notification_plugin/gtkhotkey/eggaccelerators.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-error.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-info.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-key-file-registry.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-listener.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-marshal.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-registry.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-utils.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtk-hotkey-x11-listener.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/gtkhotkey.h
+include/claws-mail/plugins/notification_plugin/gtkhotkey/tomboykeybinder.h
 lib/claws-mail/plugins/notification_plugin.la
 share/locale/ca/LC_MESSAGES/notification_plugin.mo
 share/locale/cs/LC_MESSAGES/notification_plugin.mo
@@ -17,7 +17,7 @@ share/locale/es/LC_MESSAGES/notification_plugin.mo
 share/locale/fi/LC_MESSAGES/notification_plugin.mo
 share/locale/fr/LC_MESSAGES/notification_plugin.mo
 share/locale/hu/LC_MESSAGES/notification_plugin.mo
-share/locale/id/LC_MESSAGES/notification_plugin.mo
+share/locale/id_ID/LC_MESSAGES/notification_plugin.mo
 share/locale/it/LC_MESSAGES/notification_plugin.mo
 share/locale/ja/LC_MESSAGES/notification_plugin.mo
 share/locale/lt/LC_MESSAGES/notification_plugin.mo
