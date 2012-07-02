@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2012/05/07 01:53:38 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2012/07/02 13:37:39 adam Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnuradio-core
 GNURADIO_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.0.4
-BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.3.0nb5
+BUILDLINK_ABI_DEPENDS.gnuradio-core+=	gnuradio-core>=3.3.0nb6
 BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 BUILDLINK_CPPFLAGS.gnuradio-core+=    -I${BUILDLINK_PREFIX.gnuradio-core}/include/gnuradio
 
