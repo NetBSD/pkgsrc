@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/03/09 12:34:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/07/02 13:37:39 adam Exp $
 
 PKGNAME=	gnuradio-usrp-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	USRP bindings for GNU Radio
 
 PKG_DESTDIR_SUPPORT=	user-destdir

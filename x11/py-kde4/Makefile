@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/06/16 04:45:39 markd Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/02 13:37:42 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 DISTNAME=	pykde4-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
 
