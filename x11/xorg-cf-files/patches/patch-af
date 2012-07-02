@@ -1,40 +1,38 @@
-$NetBSD: patch-af,v 1.3 2012/02/15 15:25:15 hans Exp $
-
-Use ginstall on Solaris 11, /usr/ucb/install has been removed.
+$NetBSD: patch-af,v 1.4 2012/07/02 15:55:03 jperkin Exp $
 
 Run-time path fix for Solaris for the X client libraries.  Without this
 patch, libraries such as libXext.so will not contain a run-time link path
 to /usr/pkg/xorg/lib, causing run time link failures or possibly linking
 with other (non-Pkgsrc) X libraries on the system!
 
-Use pkgsrc CC, CXX and CFLAGS.
+Disable Solaris64bitSubdir, at least until multi-arch is supported.
 
---- sun.cf.orig	2005-12-03 18:20:48.000000000 +0100
-+++ sun.cf
-@@ -429,7 +429,9 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
- #   define XawI18nDefines    -DHAS_WCHAR_H -DHAS_ISW_FUNCS
+Use pkgsrc CC, CXX, CFLAGS and INSTALL.
+
+--- sun.cf.orig	Fri Oct 16 21:45:42 2009
++++ sun.cf	Tue Jun 26 09:27:13 2012
+@@ -430,7 +430,7 @@
  #  endif
  # endif
--# if OSMinorVersion > 3
-+# if OSMinorVersion >= 11
-+#  define InstallCmd	    /usr/bin/ginstall
-+# elif OSMinorVersion > 3 
- #  define InstallCmd	    /usr/ucb/install
+ # if OSMinorVersion > 3
+-#  define InstallCmd	    /usr/ucb/install
++#  define InstallCmd	    @@INSTALL@@
  # endif
  #ifndef LargefileDefines
-@@ -669,29 +671,29 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ # if (OSMajorVersion > 5) || (OSMajorVersion == 5 && OSMinorVersion >= 6)
+@@ -669,19 +669,19 @@
  # endif
  # if HasGcc2
  #  ifndef CcCmd
 -#   define CcCmd gcc
 +#   define CcCmd @@PKGSRC_CC@@
-+#  endif
+ #  endif
 +#  ifndef CppCmd
 +#   define CppCmd @@PKGSRC_CPP@@
 +#  endif
 +#  ifndef CplusplusCmd
 +#   define CplusplusCmd @@PKGSRC_CXX@@
- #  endif
++#  endif
  #  ifndef AsCmd
  #   define AsCmd CcCmd -c -x assembler
  #  endif
@@ -50,6 +48,7 @@ Use pkgsrc CC, CXX and CFLAGS.
  #  endif
  #  if !defined(SharedLibraryLoadFlags) && !defined(SharedLibraryLdCmd)
  #   if OSMajorVersion == 5 && OSMinorVersion > 6 && defined(i386Architecture)
+@@ -688,10 +688,10 @@
      /* This is to work around what appears to be a PIC bug in some gcc/egcs
         versions that shows up with the Solaris 7/x86 <ctype.h>. */
  #    define SharedLibraryLdCmd $(LD)
@@ -62,3 +61,12 @@ Use pkgsrc CC, CXX and CFLAGS.
  #   endif
  #  endif
  # else
+@@ -840,7 +840,7 @@
+ # endif
+ #endif
+ 
+-#ifdef Solaris64bitSubdir
++#ifdef NotYetSolaris64bitSubdir
+ # define LibDirName Concat3(lib,/,Solaris64bitSubdir)
+ #endif
+ 
