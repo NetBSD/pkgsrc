@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/04/17 17:17:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/07/02 17:19:05 prlw1 Exp $
 ${PYSITELIB}/matplotlib/__init__.py
 ${PYSITELIB}/matplotlib/__init__.pyc
 ${PYSITELIB}/matplotlib/__init__.pyo
@@ -530,6 +530,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/formatter_ticker_005.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/hexbin_extent.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/hexbin_extent.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/hexbin_extent.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/hist_log.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/hist_log.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/hist_log.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/imshow.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/imshow.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/imshow.svg
@@ -1484,6 +1487,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping_diamond.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping_diamond.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping_diamond.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping_with_nans.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping_with_nans.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/clipping_with_nans.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/fft_peaks.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/fft_peaks.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/fft_peaks.svg
@@ -1502,6 +1508,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_simplification/simplify_curve
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_spines/spines_axes_positions.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_spines/spines_axes_positions.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_spines/spines_axes_positions.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_text/antialiased.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_text/font_styles.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_text/font_styles.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_text/font_styles.svg
@@ -1526,6 +1533,8 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_tightlayout/tight_layout5.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_tightlayout/tight_layout6.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_tightlayout/tight_layout6.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_tightlayout/tight_layout6.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_ttconv/truetype-conversion.pdf
+${PYSITELIB}/matplotlib/tests/mpltest.ttf
 ${PYSITELIB}/matplotlib/tests/test_agg.py
 ${PYSITELIB}/matplotlib/tests/test_agg.pyc
 ${PYSITELIB}/matplotlib/tests/test_agg.pyo
@@ -1586,6 +1595,12 @@ ${PYSITELIB}/matplotlib/tests/test_tightlayout.pyo
 ${PYSITELIB}/matplotlib/tests/test_transforms.py
 ${PYSITELIB}/matplotlib/tests/test_transforms.pyc
 ${PYSITELIB}/matplotlib/tests/test_transforms.pyo
+${PYSITELIB}/matplotlib/tests/test_triangulation.py
+${PYSITELIB}/matplotlib/tests/test_triangulation.pyc
+${PYSITELIB}/matplotlib/tests/test_triangulation.pyo
+${PYSITELIB}/matplotlib/tests/test_ttconv.py
+${PYSITELIB}/matplotlib/tests/test_ttconv.pyc
+${PYSITELIB}/matplotlib/tests/test_ttconv.pyo
 ${PYSITELIB}/matplotlib/texmanager.py
 ${PYSITELIB}/matplotlib/texmanager.pyc
 ${PYSITELIB}/matplotlib/texmanager.pyo
