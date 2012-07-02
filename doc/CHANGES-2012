@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2075 2012/07/01 20:22:44 morr Exp $
+$NetBSD: CHANGES-2012,v 1.2076 2012/07/02 07:02:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3287,3 +3287,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql91-replicationtools to 9.1.4 [morr 2012-07-01]
 	Updated databases/postgresql91-server to 9.1.4 [morr 2012-07-01]
 	Updated databases/postgresql91-upgrade to 9.1.4 [morr 2012-07-01]
+	Updated net/libtorrent to 0.13.2nb1 [tron 2012-07-02]
