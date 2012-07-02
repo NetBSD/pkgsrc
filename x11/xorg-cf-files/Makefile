@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/04/30 07:26:08 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/07/02 15:55:03 jperkin Exp $
 #
 
 DISTNAME=		xorg-cf-files-1.0.4
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,20 @@ USE_TOOLS+=		pkg-config
 
 DARWIN_USE_QUARTZ?=	1
 
+# SmartOS puts compiler tools in /usr/bin and does not come with lex/yacc.
+.if ${OS_VARIANT} == "SmartOS"
+DEPENDS+=		byacc-[0-9]*:../../devel/byacc
+DEPENDS+=		flex-[0-9]*:../../devel/flex
+SUBST_CLASSES+=		fixpaths
+SUBST_STAGE.fixpaths=	post-patch
+SUBST_MESSAGE.fixpaths=	Fixing compiler tool paths
+SUBST_FILES.fixpaths=	svr4.cf
+SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/ar,/usr/bin/ar,g'
+SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/ld,/usr/bin/ld,g'
+SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/lex,${PREFIX}/bin/flex,g'
+SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/yacc,${PREFIX}/bin/yacc,g'
+.endif
+
 post-extract:
 	${CP} ${FILESDIR}/host.def ${WRKSRC}
 	${CP} ${FILESDIR}/xorgsite.def ${WRKSRC}
@@ -32,6 +46,7 @@ pre-configure:
 		-e "s|@@PKGSRC_CXX@@|${CXX}|g"		\
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g"	\
 		-e "s|@@DARWIN_USE_QUARTZ@@|${DARWIN_USE_QUARTZ}|g"	\
+		-e "s|@@INSTALL@@|${INSTALL}|g"	\
 		${WRKSRC}/${sys}.cf.before > ${WRKSRC}/${sys}.cf
 .endfor
 	${SED} -e "s|@PREFIX@|${PREFIX}|g"		\
