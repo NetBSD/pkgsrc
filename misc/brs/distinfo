@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.5 2008/06/20 01:09:25 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/07/03 17:39:53 joerg Exp $
 
 SHA1 (brs.4.00.l1.tar.gz) = 12406ad5738caeb828e0773a45290ed5e098940a
 RMD160 (brs.4.00.l1.tar.gz) = 1445c754ffd16cbb00cb27003b748a46c7aadbe0
 Size (brs.4.00.l1.tar.gz) = 2651253 bytes
-SHA1 (patch-aa) = 054c845a340e5e28e627a02d589ff66c0ba2349d
-SHA1 (patch-ab) = 392a451cea87ba91f9a4316dc07c278dc86635b9
-SHA1 (patch-ac) = d00c82994c076dd7fc2eadbaf144fdd79a65152a
-SHA1 (patch-ad) = 40cafb5c0d4a20a83dfc88821bfe97aaefff7507
+SHA1 (patch-aa) = 8d224d526a5b8a8712b03fc2b06e1882cff9d321
+SHA1 (patch-ab) = fa5cfa52605b7b3f6b50f30c5405cb2106b2bd11
+SHA1 (patch-ac) = 1b6aca04c879d5e5011f36d8cfd0f59379c339f5
+SHA1 (patch-ad) = 33cac111acad1f727aee01bf50ec5893f21fe60e
+SHA1 (patch-bible.c) = 631c58cb6bcf5be81de7f601b3decbb374842c4c
+SHA1 (patch-brl.c) = 04a185efd0675a105a9d7c8602af8477d5d69eb2
