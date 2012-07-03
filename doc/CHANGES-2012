@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2091 2012/07/03 19:24:57 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2092 2012/07/03 19:33:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3324,3 +3324,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gst123 to 0.3.1 [ryoon 2012-07-03]
 	Updated graphics/pngcrush to 1.7.31 [adam 2012-07-03]
 	Updated textproc/icu to 49.1.2 [adam 2012-07-03]
+	Updated biology/gnome-chemistry-utils to 0.12.12 [ryoon 2012-07-03]
