@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/08 08:53:19 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2012/07/03 17:39:53 joerg Exp $
 
---- bible.1.orig	Mon Dec 12 20:05:28 1994
+--- bible.1.orig	1994-12-12 19:05:28.000000000 +0000
 +++ bible.1
+@@ -96,7 +96,7 @@ kilobytes.
+ .I Bible\^
+ normally searches for the text data file first in the current directory,
+ and then in 
+-.BR /usr/local/lib .
++.BR /usr/pkg/libdata/brs .
+ The 
+ .B \-p
+ option may be used to change the search path.
 @@ -314,17 +314,17 @@ and
  Miscellaneous program control commands:
  
@@ -24,3 +33,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/07/08 08:53:19 wiz Exp $
  Stop writing to a file.
  .TP
  .B \>, \<
+@@ -369,9 +369,9 @@ whole book as one might hope.  Similarly
+ results in a range of Matthew 1:1 to Revelation 1:1, instead of extending
+ all the way to Revelation 22:21.
+ .SH FILES
+-/usr/local/lib/bible.data
++/usr/pkg/libdata/brs/bible.data
+ .br
+-/usr/local/lib/bible.data.conc
++/usr/pkg/libdata/brs/bible.data.conc
+ .SH SEE ALSO
+ Rev3:20
+ .SH AUTHOR
