@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/02/06 17:35:05 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/07/03 18:08:58 joerg Exp $
 
 SHA1 (digikam-0.9.6.tar.bz2) = e63148a13c40e87957eeb8b17dc8047dffa2a1a5
 RMD160 (digikam-0.9.6.tar.bz2) = 3abc8d6d7dc4a95473b00eacc8800c044b110215
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 59fb7af989b7e32978444d1d2e13493e821cc10e
 SHA1 (patch-ae) = 8f19dd6698647434bb20f222ef25024473a7ff2d
 SHA1 (patch-af) = d34710baea502e96cd8254164157ef68a4ef276f
 SHA1 (patch-ag) = 3dc532aa36451f7df8d10aa35149db767b295d8c
+SHA1 (patch-digikam_digikam_albummanager.cpp) = 49df2695fd8aae3b13257efaf07af96adac6a638
