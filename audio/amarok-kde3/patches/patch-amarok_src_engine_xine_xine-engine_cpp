@@ -1,8 +1,8 @@
-$NetBSD: patch-amarok_src_engine_xine_xine-engine_cpp,v 1.1 2012/04/07 23:20:42 dholland Exp $
+$NetBSD: patch-amarok_src_engine_xine_xine-engine_cpp,v 1.2 2012/07/03 18:21:48 joerg Exp $
 
 Fix build with newer xine-lib.
 
---- amarok/src/engine/xine/xine-engine.cpp~	2008-08-13 21:21:51.000000000 +0000
+--- amarok/src/engine/xine/xine-engine.cpp.orig	2008-08-13 21:21:51.000000000 +0000
 +++ amarok/src/engine/xine/xine-engine.cpp
 @@ -1131,7 +1131,7 @@ bool XineEngine::metaDataForUrl(const KU
  
@@ -13,3 +13,12 @@ Fix build with newer xine-lib.
      int num;
      int i = 0;
  
+@@ -1244,7 +1244,7 @@ Fader::run()
+         elapsedUs += stepSizeUs;
+ 
+         // get volume (amarok main * equalizer preamp)
+-        float vol = Engine::Base::makeVolumeLogarithmic( m_engine->m_volume ) * m_engine->m_preamp;
++        float vol = XineEngine::makeVolumeLogarithmic( m_engine->m_volume ) * m_engine->m_preamp;
+ 
+         // compute the mix factor as the percentage of time spent since fade begun
+         float mix = (elapsedUs / 1000.0) / (float)m_fadeLength;
