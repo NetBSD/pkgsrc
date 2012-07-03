@@ -1,28 +1,29 @@
-$NetBSD: distinfo,v 1.20 2011/11/25 22:08:29 joerg Exp $
+$NetBSD: distinfo,v 1.21 2012/07/03 17:40:35 joerg Exp $
 
 SHA1 (celestia-1.4.1.tar.gz) = 37863498c43d3078b41027706bfa033bccd949a9
 RMD160 (celestia-1.4.1.tar.gz) = c66c2540e329613dace12e5b12b2dae2a4c679e0
 Size (celestia-1.4.1.tar.gz) = 23966886 bytes
 SHA1 (patch-aa) = 04bfea9e2a83a4c9fbd3917e378b5812699ccbe9
 SHA1 (patch-ab) = dae3c86ab56b5f9db11f6fc09184ebb4f7b1ec31
-SHA1 (patch-ac) = 22e1ed46c832f97a4f2f20b5b6d6255469ea6b90
+SHA1 (patch-ac) = 481e726b978b636f3574d5a842c274804b808369
 SHA1 (patch-ad) = 175d8df4eb58aa24c548ba14dee5c5ae1f240e41
-SHA1 (patch-ae) = a7ac58087cc366119f4ac5b193b49dc87ecc261c
+SHA1 (patch-ae) = bb8e66ba94ff1305ded59f5740a4937c78c0f06b
 SHA1 (patch-af) = 124f115719badb0d057cc324ac0455253e25022d
 SHA1 (patch-ag) = e5300a702a92f3f35f07b34726d80cd825c1a759
 SHA1 (patch-ah) = 0c4a61b1906095e258cdcc61c54d4174620986af
 SHA1 (patch-ai) = d5abfae0b4c4395572f22b6fdd1e7ad7bda4032f
-SHA1 (patch-aj) = 1ef7a10260a3b1476392c4cae17081ab0e7771b4
-SHA1 (patch-ak) = 20506d8b2f7c8c9ff778e0844dc999b0e497d644
-SHA1 (patch-al) = f998727c986145d3f298295bed1760221a686245
-SHA1 (patch-am) = 34a83573294e6ca41d817a19aef3e7d3e4f14945
+SHA1 (patch-aj) = 7ce19f00912b1d56e1641b6c7c07910931709865
+SHA1 (patch-ak) = 8218d30082883dee4be13f5da3eabf74ebd949ec
+SHA1 (patch-al) = 1fff49adf00c67dfd99bd79700336fd3d6186e63
+SHA1 (patch-am) = 6cfa8ebc978ec35203613f26c3606ed1fb787b60
 SHA1 (patch-an) = 089ecfe539186f20191595c79bcf84cb37daffef
 SHA1 (patch-ao) = ed7be1b0ac2d6a1bbf1c9ef8e66816124a7e8a99
 SHA1 (patch-ap) = 768ada9965afdbcfa8f797a9627ad90cb0b920b0
 SHA1 (patch-aq) = fdc7b7f0ff04672f93af144f41e09751b4de0c1a
-SHA1 (patch-src_celengine_console.cpp) = 2b813ef144bb98ef35fb9d19489373d9af8eb384
-SHA1 (patch-src_celengine_galaxy.cpp) = 2da22768d9a015361d9c5c601f82d91a03cb6daf
-SHA1 (patch-src_celengine_stardb.cpp) = ac31a0cba37f5b5d446624a40faffd4e55cea0f4
-SHA1 (patch-src_celestia_eclipsefinder.cpp) = 676cd48a631097619a2abfd78ae6bd235869a75d
-SHA1 (patch-src_celestia_url.cpp) = b06360d001c2738ead2494dcb05e2cec092ed5dc
-SHA1 (patch-src_celmath_mathlib.h) = 11f402fb9ccb9d0dc8f3f887d854b753e3318a17
+SHA1 (patch-src_celengine_console.cpp) = c837f465aa4c8ad67211d883af6157bcfa89dc55
+SHA1 (patch-src_celengine_galaxy.cpp) = 26cff89cb98757a1ea4f5d2727bacf76b82179cb
+SHA1 (patch-src_celengine_stardb.cpp) = 43d1998fcdd0116db43267b334533ec5fa3dfc72
+SHA1 (patch-src_celengine_vecgl.h) = fbb6982731fdb7bd3561a091fe8c4910b55a4071
+SHA1 (patch-src_celestia_eclipsefinder.cpp) = 0ee3adf6dcf8393b8dbb708fad9d09d6fe9aaf5a
+SHA1 (patch-src_celestia_url.cpp) = 895af96b6476d528e7e87ec1fc7e81d41ff94ec0
+SHA1 (patch-src_celmath_mathlib.h) = 0a0ba369cc1a0593f36bad23cec1ba9200f3737e
