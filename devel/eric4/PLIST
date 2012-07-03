@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/02/21 20:26:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/03 18:17:04 drochner Exp $
 bin/eric4
 bin/eric4_api
 bin/eric4_compare
@@ -539,6 +539,7 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.Config
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.SvnBlameDialog.html
+${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsPySvn.SvnConst.html
@@ -572,6 +573,7 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.C
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.SvnBlameDialog.html
+${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html
@@ -777,6 +779,7 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.Config.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.DeleteFilesConfirmationDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.DiffDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.EmailDialog.html
+${PYSITELIB}/eric4/Documentation/Source/eric4.UI.ErrorLogDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.FindFileDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.FindFileNameDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.UI.Info.html
@@ -1452,6 +1455,8 @@ ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/ProjectHelper.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.pyc
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnChangeListsDialog.py
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnChangeListsDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.py
@@ -1508,6 +1513,8 @@ ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnUtilities.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/SvnUtilities.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnBlameDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnBlameDialog.pyc
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnChangeListsDialog.py
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnChangeListsDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnCommandDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnCommandDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsPySvn/Ui_SvnCommitDialog.py
@@ -1572,6 +1579,8 @@ ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/ProjectHelper.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/ProjectHelper.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.pyc
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.py
@@ -1618,6 +1627,8 @@ ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnUtilities.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/SvnUtilities.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnBlameDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnBlameDialog.pyc
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnChangeListsDialog.py
+${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnChangeListsDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnCommandDialog.py
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnCommandDialog.pyc
 ${PYSITELIB}/eric4/Plugins/VcsPlugins/vcsSubversion/Ui_SvnCommitDialog.py
@@ -2355,6 +2366,10 @@ ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_mapping.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_mapping.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_phpbuiltins.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_phpbuiltins.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_postgres_builtins.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_postgres_builtins.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_scilab_builtins.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_scilab_builtins.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_vimbuiltins.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/_vimbuiltins.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/agile.py
@@ -2367,14 +2382,22 @@ ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/dotnet.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/dotnet.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/functional.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/functional.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/hdl.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/hdl.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/jvm.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/jvm.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/math.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/math.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/other.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/other.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/parsers.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/parsers.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/shell.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/shell.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/special.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/special.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/sql.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/sql.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/templates.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/templates.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/lexers/text.py
@@ -2417,6 +2440,8 @@ ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/pastie.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/pastie.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/perldoc.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/perldoc.pyc
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/rrt.py
+${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/rrt.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/tango.py
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/tango.pyc
 ${PYSITELIB}/eric4/ThirdParty/Pygments/pygments/styles/trac.py
@@ -2473,6 +2498,8 @@ ${PYSITELIB}/eric4/UI/DiffDialog.py
 ${PYSITELIB}/eric4/UI/DiffDialog.pyc
 ${PYSITELIB}/eric4/UI/EmailDialog.py
 ${PYSITELIB}/eric4/UI/EmailDialog.pyc
+${PYSITELIB}/eric4/UI/ErrorLogDialog.py
+${PYSITELIB}/eric4/UI/ErrorLogDialog.pyc
 ${PYSITELIB}/eric4/UI/FindFileDialog.py
 ${PYSITELIB}/eric4/UI/FindFileDialog.pyc
 ${PYSITELIB}/eric4/UI/FindFileNameDialog.py
@@ -2495,6 +2522,8 @@ ${PYSITELIB}/eric4/UI/Ui_DiffDialog.py
 ${PYSITELIB}/eric4/UI/Ui_DiffDialog.pyc
 ${PYSITELIB}/eric4/UI/Ui_EmailDialog.py
 ${PYSITELIB}/eric4/UI/Ui_EmailDialog.pyc
+${PYSITELIB}/eric4/UI/Ui_ErrorLogDialog.py
+${PYSITELIB}/eric4/UI/Ui_ErrorLogDialog.pyc
 ${PYSITELIB}/eric4/UI/Ui_FindFileDialog.py
 ${PYSITELIB}/eric4/UI/Ui_FindFileDialog.pyc
 ${PYSITELIB}/eric4/UI/Ui_FindFileNameDialog.py
@@ -2933,6 +2962,7 @@ ${PYSITELIB}/eric4/icons/default/unittestProject.png
 ${PYSITELIB}/eric4/icons/default/unittestRestart.png
 ${PYSITELIB}/eric4/icons/default/unittestScript.png
 ${PYSITELIB}/eric4/icons/default/vcsAdd.png
+${PYSITELIB}/eric4/icons/default/vcsChangeLists.png
 ${PYSITELIB}/eric4/icons/default/vcsCheckout.png
 ${PYSITELIB}/eric4/icons/default/vcsCommit.png
 ${PYSITELIB}/eric4/icons/default/vcsDiff.png
