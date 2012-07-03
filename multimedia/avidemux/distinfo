@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2011/02/17 09:20:17 markd Exp $
+$NetBSD: distinfo,v 1.22 2012/07/03 17:38:31 joerg Exp $
 
 SHA1 (avidemux_2.5.4.tar.gz) = 83d6f6d87442ce4fc4e4806735ec27ef5e90364c
 RMD160 (avidemux_2.5.4.tar.gz) = e20454a558210d5f7ab1418ae4013b618d1001d9
@@ -7,6 +7,11 @@ SHA1 (patch-CMakeLists.txt) = e86945a4cf51ae9275f94d2545be4ec3ed711b88
 SHA1 (patch-ab) = 2fb71f3eb3d04503ef6b34bb960a891ba3afa64f
 SHA1 (patch-addons_avsfilter_CMakeLists.txt) = f6b08d7e62f26fdb5a2ab32dd6002303b76e4111
 SHA1 (patch-as) = 391b9f173aaa329ec879cc0ac5a9a2a0ad48a924
+SHA1 (patch-avidemux_ADM__coreImage_src_ADM__vidFieldASM.cpp) = 54a6bb29553c0c039617e57aef39d9d32e25683a
+SHA1 (patch-avidemux_ADM__coreImage_src_ADM__vidFieldBlend.cpp) = 91c6741ad967e65a91f7f2e439453d44894e37df
+SHA1 (patch-avidemux_ADM__coreUI_include_DIA__factory.h) = 1aa53bdb0519122e63ac8fbcb76ca389cc97d6ba
+SHA1 (patch-avidemux_ADM__core_include_ADM__mangle.h) = 54d580839fb5c1007379692e5e33979f72eedcbf
+SHA1 (patch-avidemux_ADM__userInterfaces_ADM__GTK_ADM__toolkit__gtk_jogshuttle.c) = d9fb28f3db0978cff3e90746aa9efcef0084daa3
 SHA1 (patch-avidemux_ADM_core_src_ADM_cpuCap.cpp) = c344cf9707c2e8dc9f03b6379f749997bf01b22b
 SHA1 (patch-avidemux_ADM_core_src_ADM_crashdump.cpp) = cdbd0419a100601b0c8f125228b2e3bf1c42fd14
 SHA1 (patch-avidemux_ADM_userInterfaces_ADM_render_GUI_sdlRender.cpp) = 334fb6c2195b0e9e294ea461aa88ab9bd4828c53
