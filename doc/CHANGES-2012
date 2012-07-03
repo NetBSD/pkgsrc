@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2089 2012/07/03 11:35:21 mef Exp $
+$NetBSD: CHANGES-2012,v 1.2090 2012/07/03 19:18:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3321,3 +3321,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/algol68g to 2.4.1 [asau 2012-07-03]
 	Updated misc/libreoffice3-bin to 3.5.4 [ryoon 2012-07-03]
 	Updated devel/doxygen to 1.8.1.1 [mef 2012-07-03]
+	Updated multimedia/gst123 to 0.3.1 [ryoon 2012-07-03]
