@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2006/10/10 20:13:48 rillig Exp $
+$NetBSD: distinfo,v 1.4 2012/07/03 18:19:53 joerg Exp $
 
 SHA1 (lmms-0.2.0.tar.bz2) = 410647c860d140769ed1c56bb8a794cb2594658b
 RMD160 (lmms-0.2.0.tar.bz2) = c3e44e018303ed40d048542a8f66fbb785ea11f2
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = f9be78b4c606e80c8b0bad78fafbd8ee07f2e65e
 SHA1 (patch-ad) = b62e49823415530354a01c43fc588338212aaf68
 SHA1 (patch-ae) = de50ed87888b74a0d3ed0158dda3291af54595c9
 SHA1 (patch-af) = c269ade81ba2e9951df18a9a04e2978572376e74
+SHA1 (patch-src_tracks_instrument__track.cpp) = 9b1b3df91bd306d5f7d8d7a24b03fe6d2ec13afa
