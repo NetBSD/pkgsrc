@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.54 2012/07/03 12:05:40 jperkin Exp $
+# $NetBSD: mksandbox,v 1.55 2012/07/03 12:14:13 jperkin Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -320,8 +320,8 @@ done
 if [ "$need_src" = "yes" ]; then
 	echo "Mount $src from $sandbox"
 	$mkdirprog $sandbox/usr/src
-	$mountprog $mountflags -r $src $sandbox/usr/src
-	echo "$src /usr/src ro \\" >> $sandbox_script
+	$mountprog $mountflags -r $mounthost$src $sandbox/usr/src
+	echo "$mounthost$src /usr/src ro \\" >> $sandbox_script
 fi
 
 echo "Mount $pkgsrc from $sandbox"
@@ -332,8 +332,8 @@ echo "$mounthost$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
 if [ "$need_xsrc" = "yes" ]; then
 	echo "Mount $xsrc from $sandbox"
 	$mkdirprog $sandbox/usr/xsrc
-	$mountprog $mountflags -r $xsrc $sandbox/usr/xsrc
-	echo "$xsrc /usr/xsrc ro \\" >> $sandbox_script
+	$mountprog $mountflags -r $mounthost$xsrc $sandbox/usr/xsrc
+	echo "$mounthost$xsrc /usr/xsrc ro \\" >> $sandbox_script
 fi
 
 echo "Mounting $packages and $distfiles from $sandbox"
@@ -347,8 +347,8 @@ echo "$mounthost$distfiles $distfiles rw \\" >> $sandbox_script
 if [ -n "$localpatches" ] && [ -d "$localpatches" ]; then
 	echo "Mounting $localpatches from $sandbox"
 	$mkdirprog $sandbox/$localpatches
-	$mountprog $mountflags $localpatches $sandbox/$localpatches
-	echo "$localpatches $localpatches rw \\" >> $sandbox_script
+	$mountprog $mountflags $mounthost$localpatches $sandbox/$localpatches
+	echo "$mounthost$localpatches $localpatches rw \\" >> $sandbox_script
 fi
 
 cat >> $sandbox_script <<EOS
