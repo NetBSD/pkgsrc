@@ -1,5 +1,16 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/03 17:53:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/07/03 17:42:05 joerg Exp $
 
 SHA1 (openfst-1.1.tar.gz) = b070f84a981dfadc4c049f505bd3406a43dfa55d
 RMD160 (openfst-1.1.tar.gz) = 45657bb11f91ffdce5261ff6f4c103c164cc161b
 Size (openfst-1.1.tar.gz) = 513404 bytes
+SHA1 (patch-src_include_fst_cache.h) = 6a29b49f07b61a0ed9d9e2349805b836c45a25bc
+SHA1 (patch-src_include_fst_compact-fst.h) = f1a2b9ec65d3c8be4d0574c96fa5e5a52c9e680c
+SHA1 (patch-src_include_fst_compose.h) = 4fb25482929aecf37e69d9b6c23491f5512554f8
+SHA1 (patch-src_include_fst_const-fst.h) = 758b60a5238f9f6f4a1a5a05c5abc41d81faa3a2
+SHA1 (patch-src_include_fst_determinize.h) = 825ad312b52933d981a1ea8dd7103da90b1f3e80
+SHA1 (patch-src_include_fst_difference.h) = e66c128b621d1be4f9b7501d969cd2097f32aa04
+SHA1 (patch-src_include_fst_factor-weight.h) = 88229131e6de6daf950f85db32b1dbcbf4507733
+SHA1 (patch-src_include_fst_map.h) = 7c46539d7b72f1f24ea275bfff1678bbb64f932c
+SHA1 (patch-src_include_fst_replace.h) = 87604a022040f3f825eede69c36917b37b515cda
+SHA1 (patch-src_include_fst_synchronize.h) = 8a43aab991bf48f1e656d4e47dea8f0326d12773
+SHA1 (patch-src_include_fst_vector-fst.h) = 51178b6757e89e5c18807ec8521223dacaeb6c16
