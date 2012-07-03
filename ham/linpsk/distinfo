@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/12/14 18:28:59 marino Exp $
+$NetBSD: distinfo,v 1.8 2012/07/03 18:06:38 joerg Exp $
 
 SHA1 (linpsk-0.8.1.tar.gz) = d55d8c793ecd3a4395603ebdd8e795f1dc4d20f9
 RMD160 (linpsk-0.8.1.tar.gz) = 975bbdfc0b63e516f1d5fdfe6baf10fa12899219
@@ -7,6 +7,6 @@ SHA1 (patch-aa) = 7b0f37ecca00fc87badb99036ea66ce47c6b0bd5
 SHA1 (patch-ab) = 0cc21222e30d9122657e5c373b19af15c39eb883
 SHA1 (patch-ac) = 5be307963474f6879490185b47bed6e50dd51ffe
 SHA1 (patch-ad) = d9a62afada11b17730e4457e73fef7e21b8bee62
-SHA1 (patch-af) = b7800c5111a2d85d60ab64b69687e2da8e03ab88
+SHA1 (patch-af) = 785bf818f14b1e733321a8e6cc0f998883cffe4a
 SHA1 (patch-ag) = 490d53c18ec1cb3961e7d49ec8f551c386bcec6a
 SHA1 (patch-ai) = 192112a67a4ad8d70d4f71fbb1390a1fb26d7496
