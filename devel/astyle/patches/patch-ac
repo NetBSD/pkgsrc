@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2011/11/24 14:14:15 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2012/07/03 18:17:26 joerg Exp $
 
 --- astyle_main.cpp.orig	2001-01-20 17:02:14.000000000 +0000
 +++ astyle_main.cpp
@@ -20,3 +20,12 @@ $NetBSD: patch-ac,v 1.2 2011/11/24 14:14:15 joerg Exp $
  
  template<class ITER>
  bool parseOptions(ASFormatter &formatter,
+@@ -650,7 +652,7 @@ void printHelpAndExit()
+     exit(1);
+ }
+ 
+-main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+     ASFormatter formatter;
+     vector<string> fileNameVector;
