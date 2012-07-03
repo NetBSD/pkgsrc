@@ -1,27 +1,23 @@
-$NetBSD: patch-ab,v 1.11 2008/11/11 00:44:12 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2012/07/03 11:31:35 mef Exp $
 
---- Makefile.in.orig	2008-10-04 13:49:57.000000000 +0000
-+++ Makefile.in
-@@ -55,23 +55,23 @@ DATE=$(shell date "+%B %Y")
+Convert $(INSTTOOL) to pkgsrc style Variables
+
+--- Makefile.in.orig	2012-02-21 06:00:49.000000000 +0900
++++ Makefile.in	2012-06-23 11:59:42.000000000 +0900
+@@ -47,19 +47,19 @@
  MAN1DIR = man/man1
  
  install: doxywizard_install 
 -	$(INSTTOOL) -d $(DESTDIR)/$(INSTALL)/bin
 -	$(INSTTOOL) -m 755 bin/doxygen    $(DESTDIR)/$(INSTALL)/bin
--	$(INSTTOOL) -m 755 bin/doxytag    $(DESTDIR)/$(INSTALL)/bin
 -	$(INSTTOOL) -d $(DESTDIR)/$(INSTALL)/$(MAN1DIR)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(INSTALL)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)/$(INSTALL)/bin
 +	$(BSD_INSTALL_PROGRAM) -m 755 bin/doxygen    $(DESTDIR)/$(INSTALL)/bin
-+	$(BSD_INSTALL_PROGRAM) -m 755 bin/doxytag    $(DESTDIR)/$(INSTALL)/bin
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)/$(INSTALL)/$(MAN1DIR)
  	cat doc/doxygen.1    | sed -e "s/DATE/$(DATE)/g" -e "s/VERSION/$(VERSION)/g" > doxygen.1 
 -	$(INSTTOOL) -m 644 doxygen.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxygen.1
 +	$(BSD_INSTALL_MAN) doxygen.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxygen.1
  	rm doxygen.1
- 	cat doc/doxytag.1    | sed -e "s/DATE/$(DATE)/g" -e "s/VERSION/$(VERSION)/g" > doxytag.1
--	$(INSTTOOL) -m 644 doxytag.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxytag.1
-+	$(BSD_INSTALL_MAN) doxytag.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxytag.1
- 	rm doxytag.1
  
  install_docs: 
 -	$(INSTTOOL) -d $(DESTDIR)/$(DOCDIR)
