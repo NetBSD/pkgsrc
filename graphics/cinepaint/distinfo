@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2011/11/23 23:30:30 joerg Exp $
+$NetBSD: distinfo,v 1.16 2012/07/03 18:08:21 joerg Exp $
 
 SHA1 (cinepaint-0.22-1.tar.gz) = 717580b9b8b1044d76f1f0e4330e1c8104e2a206
 RMD160 (cinepaint-0.22-1.tar.gz) = 1f8e06486ed5e74ad483abec305d4fcef0538572
@@ -11,6 +11,8 @@ SHA1 (patch-ae) = 37d0b131dc19406add4bde0af5affbcec7f5930d
 SHA1 (patch-af) = 2e6f01e2b246570f1e8fda375a2f1e779d4c47da
 SHA1 (patch-ag) = 0ee39b21c552311dcaa63d801c6f2dc9c858270b
 SHA1 (patch-ah) = 3415f2b6f775a7b66b9d443cab94757b3b378928
+SHA1 (patch-app_gradient.c) = 9b6d38f1d3a5c417b3f69f4107637ec1ec33da0c
+SHA1 (patch-app_layers__dialog.c) = a9c4459edc83bd7e3faf1c90d9f4cff5d5e69a19
 SHA1 (patch-plug-ins_bracketing__to__hdr_br__core_ResponseSolver.hpp) = e5e457d8f8ceb0ae3b4b965cbc740969b4ed81d4
 SHA1 (patch-plug-ins_bracketing__to__hdr_br__core_br__Image.cpp) = a369c351d8bb05e79afa6c19592fbc148143d985
 SHA1 (patch-plug-ins_icc__examin_icc__examin_icc__oyranos.h) = a5a72d106b655f79932b0d2d032136a32acbeafb
