@@ -1,10 +1,13 @@
-$NetBSD: patch-ak,v 1.1 2006/06/14 12:37:53 markd Exp $
+$NetBSD: patch-ak,v 1.2 2012/07/03 17:40:36 joerg Exp $
 
---- src/celestia/Makefile.in.orig	2006-06-13 00:08:44.000000000 +1200
+--- src/celestia/Makefile.in.orig	2006-02-15 21:53:43.000000000 +0000
 +++ src/celestia/Makefile.in
-@@ -300,7 +300,7 @@ INCLUDES = -I..
+@@ -298,9 +298,9 @@ SUBDIRS = res $(am__append_1) $(am__appe
+ bin_PROGRAMS = celestia
+ INCLUDES = -I..
  
- localedir = $(datadir)/locale
+-localedir = $(datadir)/locale
++localedir = /usr/pkg/share/locale
  @ENABLE_KDE_TRUE@celestiaKDELIBS = $(LIB_QT) $(LIB_KDECORE) $(LIB_KDEUI) $(LIB_KFILE) \
 -@ENABLE_KDE_TRUE@                  $(LIBSOCKET) kde/libkdegui.a
 +@ENABLE_KDE_TRUE@                  $(LIBSOCKET) $(LIBINTL) kde/libkdegui.a

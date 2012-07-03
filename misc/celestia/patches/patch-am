@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2006/12/12 19:31:37 joerg Exp $
+$NetBSD: patch-am,v 1.2 2012/07/03 17:40:36 joerg Exp $
 
---- src/celutil/unixdirectory.cpp.orig	2006-12-12 16:52:18.000000000 +0000
+--- src/celutil/unixdirectory.cpp.orig	2005-03-05 13:56:14.000000000 +0000
 +++ src/celutil/unixdirectory.cpp
 @@ -7,11 +7,19 @@
  // as published by the Free Software Foundation; either version 2
