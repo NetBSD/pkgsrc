@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 14:52:15 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/03 22:00:41 asau Exp $
 bin/sacct
 bin/sacctmgr
 bin/salloc
@@ -41,6 +41,7 @@ lib/slurm/job_submit_defaults.la
 lib/slurm/job_submit_logging.la
 lib/slurm/job_submit_partition.la
 lib/slurm/jobacct_gather_aix.la
+lib/slurm/jobacct_gather_cgroup.la
 lib/slurm/jobacct_gather_linux.la
 lib/slurm/jobacct_gather_none.la
 lib/slurm/jobcomp_filetxt.la
@@ -54,6 +55,7 @@ lib/slurm/mpi_mpichmx.la
 lib/slurm/mpi_mvapich.la
 lib/slurm/mpi_none.la
 lib/slurm/mpi_openmpi.la
+lib/slurm/mpi_pmi2.la
 lib/slurm/preempt_none.la
 lib/slurm/preempt_partition_prio.la
 lib/slurm/preempt_qos.la
@@ -257,6 +259,7 @@ share/doc/${PKGNAME}/html/authplugins.html
 share/doc/${PKGNAME}/html/big_sys.html
 share/doc/${PKGNAME}/html/bluegene.html
 share/doc/${PKGNAME}/html/bull.jpg
+share/doc/${PKGNAME}/html/cgroups.html
 share/doc/${PKGNAME}/html/checkpoint_blcr.html
 share/doc/${PKGNAME}/html/checkpoint_plugins.html
 share/doc/${PKGNAME}/html/coding_style.pdf
