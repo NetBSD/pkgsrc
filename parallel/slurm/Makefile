@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/07/03 14:09:11 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/03 22:00:41 asau Exp $
 
-DISTNAME=	slurm-2.4.0-0.pre4
-PKGNAME=	slurm-2.4.0pre4
+DISTNAME=	slurm-2.4.1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
