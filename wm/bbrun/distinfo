@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 18:43:53 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/07/03 17:28:30 joerg Exp $
 
 SHA1 (bbrun-1.3.tar.gz) = 719af622334f6c3186f07da7c9246a8b05381f6c
 RMD160 (bbrun-1.3.tar.gz) = 7a26b279e5fce1e3476978bd4f4764272a065bb1
 Size (bbrun-1.3.tar.gz) = 19423 bytes
+SHA1 (patch-.._wmgeneral_list.h) = 8c9d1e5e1b2fd18d6afcdc3740077c72f0e033b0
