@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.7 2010/06/02 12:58:59 adam Exp $
+$NetBSD: patch-ab,v 1.8 2012/07/03 18:08:21 drochner Exp $
 
---- configure.orig	2010-06-01 13:01:01.000000000 +0000
+--- configure.orig	2011-07-12 08:59:08.000000000 +0000
 +++ configure
 @@ -18447,7 +18447,7 @@ rm -f core conftest.err conftest.$ac_obj
      3)
      { echo "$as_me:$LINENO: result: version 3.x or above" >&5
  echo "${ECHO_T}version 3.x or above" >&6; }
--    for lib in db-4.8 db-4.7 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4 db-3.2 db-3 db3 db; do
+-    for lib in db-5.1 db-5.0 db-4.8 db-4.7 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4 db-3.2 db-3 db3 db; do
 +    for lib in db5 db4 db3 db; do
        if test "x$DBLINKED" = "x0"; then
          { echo "$as_me:$LINENO: checking for db_create() in -l$lib" >&5
