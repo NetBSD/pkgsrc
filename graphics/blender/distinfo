@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2011/04/01 11:31:56 wiz Exp $
+$NetBSD: distinfo,v 1.31 2012/07/03 18:10:03 joerg Exp $
 
 SHA1 (blender-2.49b.tar.gz) = 43f71e7de4efe79c518d45f4b5a04e03c28d5fc5
 RMD160 (blender-2.49b.tar.gz) = 5b641de7b41af5e4186c9721b66eddc6870f9fbc
@@ -12,4 +12,7 @@ SHA1 (patch-aj) = 59c935bc84101e3a57af5231d6f1153897bbbb03
 SHA1 (patch-ak) = 98c93b7ee12e60aff0d8890cd1cdc7213515d270
 SHA1 (patch-al) = 8589d359484351766bfb99e58debf075bebbfd66
 SHA1 (patch-am) = 6da69ace1e9da706124621f6721fd4d4f804cc6f
+SHA1 (patch-extern_solid_include_MT_Quaternion.h) = 7dda79b1ec874268f7cf38d846e7ad30aa8c2d88
+SHA1 (patch-intern_elbeem_intern_ntl__vector3dim.h) = 3aabccfa0040e43829841270f32e0263bfa236f1
+SHA1 (patch-intern_elbeem_intern_utilities.h) = 3d5a158b0c2fdaddc5897a3e8aa41a090c3a514c
 SHA1 (patch-source_blender_python_BPY__interface.c) = 9cc72c2fea93e9bfdf9b2f9cc147be90c044d53d
