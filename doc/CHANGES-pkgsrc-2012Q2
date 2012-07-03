@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.3 2012/07/02 23:08:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.4 2012/07/03 23:26:12 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -19,3 +19,32 @@ databases/postgresql83-pltcl: security update
 databases/postgresql83-server: security update
 databases/postgresql83-uuid: security update
 databases/postgresql83: security update
+Pullup ticket #3843 - requested by morr
+databases/postgresql84-adminpack: security update
+databases/postgresql84-client: security update
+databases/postgresql84-dblink: security update
+databases/postgresql84-pgcrypto: security update
+databases/postgresql84-plperl: security update
+databases/postgresql84-plpython: security update
+databases/postgresql84-pltcl: security update
+databases/postgresql84-server: security update
+databases/postgresql84-uuid: security update
+databases/postgresql84: security update
+Pullup ticket #3844 - requested by morr
+databases/postgresql91: security update
+databases/postgresql91-adminpack: security update
+databases/postgresql91-client: security update
+databases/postgresql91-datatypes: security update
+databases/postgresql91-dblink: security update
+databases/postgresql91-docs: security update
+databases/postgresql91-fuzzystrmatch: security update
+databases/postgresql91-monitoring: security update
+databases/postgresql91-pgcrypto: security update
+databases/postgresql91-plperl: security update
+databases/postgresql91-plpython: security update
+databases/postgresql91-pltcl: security update
+databases/postgresql91-replicationtools: security update
+databases/postgresql91-server: security update
+databases/postgresql91-upgrade: security update
+Pullup ticket #3846 - requested by joerg
+mk: improve shared library check
