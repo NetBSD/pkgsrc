@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.20 2012/05/29 21:53:55 joerg Exp $
+# $NetBSD: check-shlibs.mk,v 1.20.2.1 2012/07/03 23:24:23 tron Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -44,7 +44,7 @@ CHECK_SHLIBS_ELF_ENV=	PLATFORM_RPATH=${_OPSYS_SYSTEM_RPATH:Q}
 CHECK_SHLIBS_ELF_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
 CHECK_SHLIBS_ELF_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
 CHECK_SHLIBS_ELF_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
-CHECK_SHLIBS_ELF_ENV+=	DEPENDS_FILE=${_RDEPENDS_FILE:Q}
+CHECK_SHLIBS_ELF_ENV+=	DEPENDS_FILE=${_RRDEPENDS_FILE:Q}
 .  if ${_USE_DESTDIR} != "no"
 CHECK_SHLIBS_ELF_ENV+=	DESTDIR=${DESTDIR:Q}
 .  endif
