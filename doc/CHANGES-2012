@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2085 2012/07/02 19:24:49 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2086 2012/07/03 08:20:39 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3318,3 +3318,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/gnutls to 3.0.20 [drochner 2012-07-02]
 	Updated multimedia/vlc2 to 2.0.2 [drochner 2012-07-02]
 	Updated mail/claws-mail to 3.8.1 [drochner 2012-07-02]
+	Updated lang/algol68g to 2.4.1 [asau 2012-07-03]
