@@ -1,60 +1,87 @@
-$NetBSD: patch-ac,v 1.1 2004/07/10 21:13:31 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2012/07/03 17:39:53 joerg Exp $
 
---- tsl.c.orig	1994-12-12 04:55:31.000000000 +0100
+--- tsl.c.orig	1994-12-12 03:55:31.000000000 +0000
 +++ tsl.c
-@@ -95,7 +95,7 @@
- \*----------------------------------------------------------------------*/
- 
+@@ -97,3 +97,5 @@
  #include <stdio.h>
 -#include <varargs.h>
 +#include <stdarg.h>
++#include <stdlib.h>
++#include <string.h>
  /* #include <search.h> */
- #include "tsl.h"
+@@ -111,4 +113,2 @@ static char rcs_ident[]="@(#)$Header: ts
  
-@@ -145,7 +145,8 @@ int tsl_maxbuffusage=0x100000;	/* Max bu
+-char *malloc();
+-char *strtok();
  
+@@ -123,2 +123,5 @@ file_ptr_t *tsl_wtable=NULL;	/* Table of
  
++tsl_textread( long start, long vsize, char *vb );
++cmp_decompress( char *inb, char *outb, int insize );
++
+ /* buffer structures.
+@@ -147,3 +150,4 @@ int tsl_maxbuffusage=0x100000;	/* Max bu
  
 -tsl_error( fatal, va_alist )
 +void
 +tsl_error(int fatal, ...)
  /*----------------------------------------------------------------------
- |   NAME:
- |       tsl_error
-@@ -154,21 +155,16 @@ tsl_error( fatal, va_alist )
- |       Report an error specific to the TSL library.
- |       
+@@ -156,4 +160,2 @@ tsl_error( fatal, va_alist )
  |       fatal	 TRUE if the error should cause an exit.
 -|       va_alist Variable argument list for printing the error
 -|       	 report.
  |
- |   HISTORY:
- |       890904 cc Created.
- |
+@@ -163,5 +165,2 @@ tsl_error( fatal, va_alist )
  \*----------------------------------------------------------------------*/
 -
 -int fatal;
 -va_dcl
  {
-     va_list ap;
-     char *format;
+@@ -170,3 +169,3 @@ va_dcl
  
 -    va_start(ap);
 +    va_start(ap, fatal);
  
-     format = va_arg(ap, char *);
-     vfprintf(stderr, format, ap);
-@@ -626,11 +622,11 @@ int  memlimit;
-     if (tsl_maxbuffs < 1) tsl_maxbuffs = 1;
-     tsl_firstbuffer.next = &tsl_lastbuffer;
+@@ -182,3 +181,3 @@ va_dcl
+ 
+-tsl_scan_concordance( target, sbuf, range_start, range_end )
++tsl_scan_concordance( char *target, ref_t *sbuf, ref_t range_start, ref_t range_end )
+ /*----------------------------------------------------------------------
+@@ -205,6 +204,2 @@ tsl_scan_concordance( target, sbuf, rang
+ 
+-char *target;
+-ref_t *sbuf;
+-ref_t range_start;
+-ref_t range_end;
+ {
+@@ -322,3 +317,3 @@ ref_t range_end;
+ 
+-int tsl_gettext( vn, vc, vb, vbsize )
++int tsl_gettext( int vn, int vc, char *vb, int vbsize )
+ /*----------------------------------------------------------------------
+@@ -341,5 +336,2 @@ int tsl_gettext( vn, vc, vb, vbsize )
+ 
+-int vn, vc;
+-char *vb;
+-int vbsize;
+ {
+@@ -384,3 +376,3 @@ int vn, vc;
+ 
+-tsl_textread( start, vsize, vb )
++tsl_textread( long start, long vsize, char *vb )
+ /*----------------------------------------------------------------------
+@@ -407,4 +399,2 @@ tsl_textread( start, vsize, vb )
+ 
+-long start, vsize;
+-char *vb;
+ {
+@@ -628,3 +618,3 @@ int  memlimit;
      tsl_firstbuffer.prev = NULL;
 -    tsl_firstbuffer.win  = NULL;
 +    tsl_firstbuffer.win  = 0;
      tsl_firstbuffer.bufferp = NULL;
-     tsl_lastbuffer.prev = &tsl_firstbuffer;
+@@ -632,3 +622,3 @@ int  memlimit;
      tsl_lastbuffer.next = NULL;
 -    tsl_lastbuffer.win  = NULL;
 +    tsl_lastbuffer.win  = 0;
      tsl_lastbuffer.bufferp = NULL;
- 
-     /* Global buffer for compressed text.  Much bigger than needed. :-) */
