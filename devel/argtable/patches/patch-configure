@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2012/07/03 18:16:35 joerg Exp $
+
+--- configure.orig	2012-07-03 10:24:16.000000000 +0000
++++ configure
+@@ -766,7 +766,7 @@ cross_compiling=$ac_cv_prog_cxx_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 768 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:772: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cxx_works=yes
