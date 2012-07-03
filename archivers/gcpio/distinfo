@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2011/09/12 04:34:29 dholland Exp $
+$NetBSD: distinfo,v 1.13 2012/07/03 18:22:08 joerg Exp $
 
 SHA1 (cpio-2.6.tar.gz) = 5a4ea156519909994fe05933dc823abcf07e3e21
 RMD160 (cpio-2.6.tar.gz) = 8246bdd08ab8727f9a8042d33ddfe3a6332476b8
@@ -16,4 +16,4 @@ SHA1 (patch-an) = 943fe81aba7846bd8349cc2e31ab9525e019e99f
 SHA1 (patch-ao) = 53c7b6bc1e00a0203665e12807b3388204f838c3
 SHA1 (patch-ap) = cf1ca21394e4e437e64fc83837e08b0aba26d41e
 SHA1 (patch-aq) = d1536000401bbe2d1d32833f5871242e3ba1ddf6
-SHA1 (patch-lib_argp_fmtstream_h) = 6f21a19b5ea5d2cd1d3ebe6d6740780c39655763
+SHA1 (patch-lib_argp_fmtstream_h) = 10e997a11d06cafd66e9644f69db61fef62097a9
