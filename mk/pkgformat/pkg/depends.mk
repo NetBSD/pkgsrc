@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: depends.mk,v 1.1.6.1 2012/07/03 23:24:24 tron Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -21,8 +21,13 @@
 #
 # "pkg" is the match for "pattern" used to fulfill the dependency.
 #
+# ${_RRDEPENDS_FILE} is like ${_RPDENDS_FILE}, but all build dependencies
+# are dropped, if they are dependencies of one of the full dependencies.
+#
 _DEPENDS_FILE=	${WRKDIR}/.depends
 _RDEPENDS_FILE=	${WRKDIR}/.rdepends
+
+_RRDEPENDS_FILE=${WRKDIR}/.rrdepends
 
 _FULL_DEPENDS_CMD=	\
 	${AWK} '$$1 == "full" { print $$3; }' < ${_RDEPENDS_FILE}
@@ -31,6 +36,11 @@ _REDUCE_DEPENDS_CMD=	${PKGSRC_SETENV} CAT=${CAT:Q}				\
 				PKG_ADMIN=${PKG_ADMIN_CMD:Q}		\
 				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
 			${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-depends.awk
+
+_REDUCE_RESOLVED_DEPENDS_CMD=${PKGSRC_SETENV} CAT=${CAT:Q}		\
+				PKG_INFO=${PKG_INFO_CMD:Q}		\
+			${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-resolved-depends.awk \
+				< ${_RDEPENDS_FILE}
 
 _pkgformat-show-depends: .PHONY
 	@case ${VARNAME:Q}"" in						\
@@ -114,6 +124,9 @@ ${_DEPENDS_FILE}:
 ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
 	${RUN} ${_RESOLVE_DEPENDS_CMD} > ${.TARGET}
 
+${_RRDEPENDS_FILE}: ${_RDEPENDS_FILE}
+	${RUN} ${_REDUCE_RESOLVED_DEPENDS_CMD} > ${.TARGET}
+
 # _pkgformat-install-dependencies:
 #	Installs any missing dependencies.
 #
@@ -129,7 +142,7 @@ _pkgformat-install-dependencies: .PHONY ${_DEPENDS_FILE}
 # _pkgformat-post-install-dependencies:
 #	Targets after installing all dependencies.
 #
-_pkgformat-post-install-dependencies: .PHONY ${_RDEPENDS_FILE}
+_pkgformat-post-install-dependencies: .PHONY ${_RDEPENDS_FILE} ${_RRDEPENDS_FILE}
 
 ######################################################################
 ### pkg_install-depends (PUBLIC, pkgsrc/mk/depends/depends.mk)
