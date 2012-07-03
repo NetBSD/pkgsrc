@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2012/07/03 18:18:20 joerg Exp $
+
+--- configure.orig	2012-07-03 10:07:01.000000000 +0000
++++ configure
+@@ -4367,9 +4367,9 @@ fi
+ 
+ 
+ hold_cflags=$CFLAGS
+-CFLAGS="$CFLAGS -export-dynamic"
+-{ echo "$as_me:$LINENO: checking if we need the -export-dynamic flag" >&5
+-echo $ECHO_N "checking if we need the -export-dynamic flag... $ECHO_C" >&6; }
++CFLAGS="$CFLAGS -Wl,--export-dynamic"
++{ echo "$as_me:$LINENO: checking if we need the -Wl,--export-dynamic flag" >&5
++echo $ECHO_N "checking if we need the -Wl,--export-dynamic flag... $ECHO_C" >&6; }
+ if test "${ac_cv_export_dynamic+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
