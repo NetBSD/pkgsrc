@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/07/03 17:30:41 joerg Exp $
+
+--- src/Makefile.in.orig	2012-07-03 14:26:11.000000000 +0000
++++ src/Makefile.in
+@@ -221,7 +221,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-cairo_clock_LDFLAGS = -Wl, --export-dynamic
++cairo_clock_LDFLAGS = -Wl,--export-dynamic
+ cairo_clock_LDADD = \
+ 	$(GLIB_LIBS)	\
+ 	$(GTK_LIBS)	\
