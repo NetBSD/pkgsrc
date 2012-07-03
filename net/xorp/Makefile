@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2010/01/17 12:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/07/03 17:36:10 joerg Exp $
 #
 
 DISTNAME=		xorp-1.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://www.xorp.org/releases/1.6/
 
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake flex
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 
 # The xorp people insist on their own PREFIX.
@@ -24,6 +24,12 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/xorp
 
 # Test target require bash and python (really it, not python2.4 and so on).
 TEST_TARGET=		check
+
+pre-build:
+	cd ${WRKSRC}/policy && ${MAKE} lex
+	cd ${WRKSRC}/policy/backend && ${MAKE} lex
+	cd ${WRKSRC}/policy/test && ${MAKE} lex
+	cd ${WRKSRC}/rtrmgr && ${MAKE} lex
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
