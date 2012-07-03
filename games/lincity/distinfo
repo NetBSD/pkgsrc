@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 23:12:00 agc Exp $
+$NetBSD: distinfo,v 1.8 2012/07/03 18:41:20 joerg Exp $
 
 SHA1 (lincity-1.12.1.tar.gz) = 280375273f6e741d707dc8e11fdedb160d230c95
 RMD160 (lincity-1.12.1.tar.gz) = 5b0a3bfa77372577ac3d9cc42e6a806f27a52ef3
 Size (lincity-1.12.1.tar.gz) = 795709 bytes
+SHA1 (patch-pixmap.c) = 6d9064ba0d427ddd78d1b304748d47b7d8a168d7
+SHA1 (patch-pixmap.h) = 44fc362939408a206dd47a514c070f235a15db02
