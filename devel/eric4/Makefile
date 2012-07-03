@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/03/21 18:42:07 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2012/07/03 18:17:04 drochner Exp $
 #
 
-VERS=			4.5.1
+VERS=			4.5.4
 DISTNAME=		eric4-${VERS}
 CATEGORIES=		devel
 MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
