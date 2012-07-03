@@ -1,28 +1,28 @@
-$NetBSD: patch-aa,v 1.5 2012/02/16 20:12:12 hans Exp $
+$NetBSD: patch-aa,v 1.6 2012/07/03 18:13:07 drochner Exp $
 
---- configure.py.orig	2011-08-02 11:18:51.000000000 +0200
-+++ configure.py	2011-10-11 16:36:11.233813486 +0200
-@@ -355,7 +355,7 @@ class ConfigurePyQt4:
+--- configure.py.orig	2012-06-20 18:18:11.000000000 +0000
++++ configure.py
+@@ -358,7 +358,7 @@ class ConfigurePyQt4:
          pyqt_modules.append("QtCore")
  
          check_module("QtGui", "qwidget.h", "new QWidget()")
--        check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")")
-+        check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")", extra_libs=["QtCore"])
-         check_module("QtMultimedia", "QAudioDeviceInfo",
+-        if qt_version < 0x050000: check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")")
++        if qt_version < 0x050000: check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")", extra_libs=["QtCore"])
+         if qt_version < 0x050000: check_module("QtMultimedia", "QAudioDeviceInfo",
                  "new QAudioDeviceInfo()")
-         check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
-@@ -372,8 +372,8 @@ class ConfigurePyQt4:
-         check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
-         check_module("QtXml", "qdom.h", "new QDomDocument()")
-         check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
--        check_module("phonon", "phonon/videowidget.h",
+         if qt_version < 0x050000: check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
+@@ -377,8 +377,8 @@ class ConfigurePyQt4:
+         if qt_version < 0x050000: check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
+         if qt_version < 0x050000: check_module("QtXml", "qdom.h", "new QDomDocument()")
+         if qt_version < 0x050000: check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
+-        if qt_version < 0x050000: check_module("phonon", "phonon/videowidget.h",
 -                "new Phonon::VideoWidget()")
-+#        check_module("phonon", "phonon/videowidget.h",
++#        if qt_version < 0x050000: check_module("phonon", "phonon/videowidget.h",
 +#                "new Phonon::VideoWidget()")
-         check_module("QtAssistant", "qassistantclient.h",
+         if qt_version < 0x050000: check_module("QtAssistant", "qassistantclient.h",
                  "new QAssistantClient(\"foo\")", extra_lib_dirs=ass_lib_dirs,
                  extra_libs=ass_libs)
-@@ -1981,11 +1981,7 @@ int main(int, char **)
+@@ -2046,11 +2046,7 @@ int main(int argc, char **argv)
  
      out << QLibraryInfo::licensee() << '\\n';
  
