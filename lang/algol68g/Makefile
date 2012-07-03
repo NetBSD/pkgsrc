@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/12/17 10:15:48 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/03 08:20:25 asau Exp $
 #
 
-DISTNAME=	algol68g-2.3.1
-PKGREVISION=	1
+DISTNAME=	algol68g-2.4.1
 CATEGORIES=	lang
 MASTER_SITES=	http://jmvdveer.home.xs4all.nl/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	olafs@cs.ru.nl
 HOMEPAGE=	http://jmvdveer.home.xs4all.nl/algol.html
@@ -14,11 +12,17 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--docdir=$(PREFIX)/share/doc/$(PKGBASE)
+# Since it ignores configure flag currently, override it through make argument:
+INSTALL_MAKE_FLAGS=	docdir=$(PREFIX)/share/doc/$(PKGBASE)
+
+TEST_TARGET=	check
 
 .include "options.mk"
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
