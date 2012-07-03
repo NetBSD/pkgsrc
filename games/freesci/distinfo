@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2007/04/05 20:47:10 dillo Exp $
+$NetBSD: distinfo,v 1.6 2012/07/03 18:41:58 joerg Exp $
 
 SHA1 (freesci-0.3.5.tar.gz) = 4773fa34df8d4108a5116eca4626a4ce32a62b1f
 RMD160 (freesci-0.3.5.tar.gz) = 2d306102a09cb9b6c0327a88938d39f049dfc0e6
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = b1d01703301dffb233e1c300a8717785b224c3e9
 SHA1 (patch-ad) = f413de3289ac2a424d5ee35de62a78a5dcef7e35
 SHA1 (patch-ae) = 137ec032ad33e647ea4ecf80955ad8916e8dd383
 SHA1 (patch-af) = a2897fcf2d3526797c3cef3ce9003b071d2125be
+SHA1 (patch-src_engine_klists.c) = 3ebfdc1c39643586491482dc688831786e06bfd3
+SHA1 (patch-src_sound_fmopl.c) = 6b6562317d7dfe84e085564dd6351c25cf427630
