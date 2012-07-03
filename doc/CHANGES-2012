@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2093 2012/07/03 19:41:17 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2094 2012/07/03 19:56:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3326,3 +3326,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/icu to 49.1.2 [adam 2012-07-03]
 	Updated biology/gnome-chemistry-utils to 0.12.12 [ryoon 2012-07-03]
 	Updated net/aria2 to 1.15.1 [ryoon 2012-07-03]
+	Updated fonts/umefont-ttf to 0.441 [ryoon 2012-07-03]
