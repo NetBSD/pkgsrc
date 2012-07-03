@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2004/08/16 11:54:20 salo Exp $
+$NetBSD: patch-ad,v 1.2 2012/07/03 17:39:53 joerg Exp $
 
---- compresslib.c.orig	1989-09-15 05:34:02.000000000 +0200
-+++ compresslib.c	2004-08-16 10:01:20.000000000 +0200
+--- compresslib.c.orig	1989-09-15 03:34:02.000000000 +0000
++++ compresslib.c
+@@ -43,7 +43,7 @@
+ |
+ \*----------------------------------------------------------------------*/
+ 
+-
++#include <string.h>
+ 
+ #define	min(a,b)	((a>b) ? b : a)
+ 
 @@ -112,7 +112,7 @@
  #ifdef PBITS		/* Preferred BITS for this memory size */
  # ifndef BITS
@@ -11,3 +20,23 @@ $NetBSD: patch-ad,v 1.1 2004/08/16 11:54:20 salo Exp $
  #endif /* PBITS */
  
  #if BITS == 16
+@@ -360,7 +360,7 @@ char_type *inb;
+ 
+ 
+ 
+-cmp_decompress( inb, outb, insize )
++cmp_decompress( char_type *inb, char_type *outb, int insize )
+ /*----------------------------------------------------------------------
+ |   NAME:
+ |       cmp_decompress
+@@ -392,10 +392,6 @@ cmp_decompress( inb, outb, insize )
+ |       	worked from stdin to stdout.
+ |
+ \*----------------------------------------------------------------------*/
+-
+-char_type *inb;
+-char_type *outb;
+-int insize;
+ {
+     register char_type *stackp;
+     register int finchar;
