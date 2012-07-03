@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.53 2012/01/15 13:34:28 ryoon Exp $
+# $NetBSD: mksandbox,v 1.54 2012/07/03 12:05:40 jperkin Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -51,7 +51,7 @@ sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /va
 
 usage()
 {
-	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--without-x] [--verbose] sandbox-dir"
+	echo "Usage: mksandbox [--mounthost=host] [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--without-x] [--verbose] sandbox-dir"
 	exit 1
 }
 
@@ -75,10 +75,13 @@ Darwin)
 	gtarprog=/usr/bin/gnutar
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
-	mountflags="-t null"
+	mountflags="-t nfs"
+	mounthost="localhost"
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
+	sandboxEmptyDirs="$sandboxEmptyDirs /var/root"
+	sandboxMountDirs="$sandboxMountDirs /usr/llvm-gcc-4.2 /System/Library /Library"
 	;;
 FreeBSD)
 	bmakeprog=bmake
@@ -165,6 +168,7 @@ esac
 
 while [ $# -gt 0 ]; do
 	case "$1" in
+	--mounthost=*)	mounthost=`echo $1 | $sedprog -e 's|^--mounthost=||'` ;;
 	--pkgsrc=*)	pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
 	--src=*)	src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
 	--xsrc=*)	xsrc=`echo $1 | $sedprog -e 's|^--xsrc=||'` ;;
@@ -186,6 +190,10 @@ fi
 
 if [ `$idprog -u` -ne 0 ]; then
 	err "You must be root to run this script."
+fi
+
+if [ -n "$mounthost" ]; then
+	mounthost="$mounthost:"
 fi
 
 if [ ! -d $pkgsrc ]; then
@@ -214,6 +222,8 @@ test -d "$localpatches" || echo "WARNING: LOCALPATCHES directory does not exist 
 $mkdirprog $sandbox
 cat > $sandbox_script <<EOS
 #! /bin/sh -
+mounthost=$mounthost
+opsys=$opsys
 sandbox=$sandbox
 
 r3() {
@@ -241,6 +251,9 @@ echo "Make and populate $sandbox/dev"
 $mkdirprog $sandbox/dev
 
 case "$opsys" in
+Darwin|FreeBSD)
+	$mountprog -t devfs devfs $sandbox/dev
+	;;
 SunOS)
 	/usr/sbin/devfsadm -r $sandbox
 	if [ -f /usr/ucblib/ucblinks.awk -a -x /usr/ucb/ucblinks ]; then
@@ -249,9 +262,6 @@ SunOS)
 	;;
 Linux)
 	$mountprog $mountflags /dev $sandbox/dev
-	;;
-FreeBSD)
-	$mountprog -t devfs devfs $sandbox/dev
 	;;
 *)
 	$cpprog /dev/MAKEDEV* $sandbox/dev
@@ -282,8 +292,8 @@ for d in $sandboxMountDirs; do
 	*X11*)	test "$with_x" = "yes" || continue ;;
 	esac
 	$mkdirprog $sandbox$d;
-	$mountprog $mountflags -r $d $sandbox$d;
-	echo "$d $d ro \\" >> $sandbox_script
+	$mountprog $mountflags -r $mounthost$d $sandbox$d;
+	echo "$mounthost$d $d ro \\" >> $sandbox_script
 done
 
 echo "Making /tmp in $sandbox"
@@ -316,8 +326,8 @@ fi
 
 echo "Mount $pkgsrc from $sandbox"
 $mkdirprog $sandbox/usr/pkgsrc
-$mountprog $mountflags $pkgsrc $sandbox/usr/pkgsrc
-echo "$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
+$mountprog $mountflags $mounthost$pkgsrc $sandbox/usr/pkgsrc
+echo "$mounthost$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
 
 if [ "$need_xsrc" = "yes" ]; then
 	echo "Mount $xsrc from $sandbox"
@@ -329,10 +339,10 @@ fi
 echo "Mounting $packages and $distfiles from $sandbox"
 $mkdirprog $sandbox/$packages $sandbox/$distfiles
 $mkdirprog $packages $distfiles
-$mountprog $mountflags $packages $sandbox/$packages
-$mountprog $mountflags $distfiles $sandbox/$distfiles
-echo "$packages $packages rw \\" >> $sandbox_script
-echo "$distfiles $distfiles rw \\" >> $sandbox_script
+$mountprog $mountflags $mounthost$packages $sandbox/$packages
+$mountprog $mountflags $mounthost$distfiles $sandbox/$distfiles
+echo "$mounthost$packages $packages rw \\" >> $sandbox_script
+echo "$mounthost$distfiles $distfiles rw \\" >> $sandbox_script
 
 if [ -n "$localpatches" ] && [ -d "$localpatches" ]; then
 	echo "Mounting $localpatches from $sandbox"
@@ -344,7 +354,7 @@ fi
 cat >> $sandbox_script <<EOS
 "
 case x\$1 in
-	xmount)
+xmount)
 	set dummy \$fses
 	shift
 	while [ \$# -ge 3 ]; do
@@ -352,12 +362,20 @@ case x\$1 in
 		mntpoint=\$1; shift
 		rwro=\$1; shift
 		case \$rwro in
-			ro) mount $mountflags -r \$fs \$sandbox/\$mntpoint || exit 1 ;;
-			rw) mount $mountflags \$fs \$sandbox/\$mntpoint || exit 1 ;;
+			ro) $mountprog $mountflags -r \$fs \$sandbox/\$mntpoint || exit 1 ;;
+			rw) $mountprog $mountflags \$fs \$sandbox/\$mntpoint || exit 1 ;;
 		esac
 	done
+	case \$opsys in
+	Darwin|FreeBSD)
+		$mountprog -t devfs devfs \$sandbox/dev
+		;;
+	Linux)
+		$mountprog $mountflags /dev \$sandbox/dev
+		;;
+	esac
 	;;
-	xumount)
+xumount)
 	set dummy \`r3 \$fses\`
 	shift
 	while [ \$# -ge 3 ]; do
@@ -366,8 +384,13 @@ case x\$1 in
 		dummy=\$1; shift
 		umount \$sandbox/\$mntpoint
 	done
+	case \$opsys in
+	Darwin|FreeBSD|Linux)
+		umount \$sandbox/dev
+		;;
+	esac
 	;;
-	xchroot)
+xchroot)
 	case x\$2 in
 	x)	rootshell=/bin/ksh ;;
 	*)	rootshell="\$2" ;;
@@ -379,7 +402,7 @@ case x\$1 in
 	ENV=/etc/shrc chroot \$sandbox /tmp/\`basename \$script\`
 	rm -f \$script
 	;;
-	*)
+*)
 	if [ \$# -eq 0 ]; then
 		set dummy /bin/sh
 		shift
@@ -392,6 +415,10 @@ EOS
 chmod +x $sandbox_script
 
 case $opsys in
+Darwin)
+	$cpprog /var/run/resolv.conf $sandbox/var/run/resolv.conf
+	$cpprog /mach_kernel $sandbox/mach_kernel
+	;;
 SunOS)
 	$cpprog /etc/mnttab $sandbox/etc/mnttab
 	;;
