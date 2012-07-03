@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/04/08 19:40:36 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2012/07/03 19:17:05 ryoon Exp $
 
-SHA1 (gst123-0.3.0.tar.bz2) = 44f0a5f2ab738f2da2b12b91f8e4f1e6bff82e85
-RMD160 (gst123-0.3.0.tar.bz2) = b7121b0ba1ea2b82b43c28af510f822ea30f0572
-Size (gst123-0.3.0.tar.bz2) = 109193 bytes
+SHA1 (gst123-0.3.1.tar.bz2) = 7b14ed8e16d6c61d5dfce610a9dafe0c26a923e4
+RMD160 (gst123-0.3.1.tar.bz2) = 022a5725806ef4b991f8941cc27f5534bf425d5a
+Size (gst123-0.3.1.tar.bz2) = 110925 bytes
