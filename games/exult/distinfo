@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/12/21 16:58:15 dholland Exp $
+$NetBSD: distinfo,v 1.7 2012/07/03 18:42:31 joerg Exp $
 
 SHA1 (exult-1.2.tar.gz) = 81f9d3d428c80990b8e970a4dee5c85a7236dace
 RMD160 (exult-1.2.tar.gz) = 339231edf84507f05115ab3189875cb15be9c04f
@@ -42,3 +42,4 @@ SHA1 (patch-usecode_ucmachine.cc) = 01db5ff3f6d9c23271dfbd15c50e1c78d9af28a1
 SHA1 (patch-usecode_ucxt_head2data.cc) = 1bb92845f2c7b2368ca6849031e0c9d35affc7e5
 SHA1 (patch-usecode_ucxt_include_ops.h) = aca520d3b8d0d72ae918935f11f164ca0e633a81
 SHA1 (patch-usecode_useval.h) = 101dfb391a00bd99bbdacd4f71f6b22b9c38a214
+SHA1 (patch-vec.h) = 368d369fada797f90ea22919c1410f5b726eae0c
