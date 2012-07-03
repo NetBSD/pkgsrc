@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/03/04 22:27:08 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/07/03 18:43:37 joerg Exp $
 
 SHA1 (frozen-bubble-2.2.0.tar.bz2) = df5a8c839a76fd662777925b2eb80fcb8adf3fa6
 RMD160 (frozen-bubble-2.2.0.tar.bz2) = 1bbe0163c28421c497979c85a98f64a98174c780
@@ -6,3 +6,4 @@ Size (frozen-bubble-2.2.0.tar.bz2) = 20585572 bytes
 SHA1 (patch-aa) = ba588d24ab8cac1a96cc17ca04bbc259e6dc369b
 SHA1 (patch-ab) = c39aa9be7566305116f4f5209409daee69e828a8
 SHA1 (patch-ac) = 111db5d2a5e8f7463bc7b4457d0a76303afbda54
+SHA1 (patch-c__stuff_fb__c__stuff.xs) = 96f5bbf4790ad9663b84dc6165f88323bf3b5cfd
