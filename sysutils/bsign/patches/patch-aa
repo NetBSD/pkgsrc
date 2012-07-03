@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2012/03/01 16:21:12 hans Exp $
+$NetBSD: patch-aa,v 1.4 2012/07/03 17:32:00 joerg Exp $
 
---- Makefile.in	2007/01/17 23:05:04	1.1
-+++ Makefile.in	2007/01/17 23:10:33
+--- Makefile.in.orig	2002-01-27 20:56:56.000000000 +0000
++++ Makefile.in
 @@ -51,7 +51,8 @@ RELEASE_PATH=${HOME}/release
  
  CC=@CC@
