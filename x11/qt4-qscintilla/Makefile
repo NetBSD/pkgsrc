@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/03/03 00:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/07/03 18:13:52 drochner Exp $
 #
 
-DISTNAME=	QScintilla-gpl-2.6.1
+DISTNAME=	QScintilla-gpl-2.6.2
 PKGNAME=	qt4-${DISTNAME:tl:S/-gpl-/-/}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/QScintilla2/
 
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/Qt4
+WRKSRC=		${WRKDIR}/${DISTNAME}/Qt4Qt5
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
