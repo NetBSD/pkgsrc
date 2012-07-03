@@ -1,0 +1,25 @@
+$NetBSD: patch-dic_phono_Imakefile,v 1.1 2012/07/03 17:44:39 joerg Exp $
+
+--- dic/phono/Imakefile.orig	2012-06-17 06:10:27.000000000 +0000
++++ dic/phono/Imakefile
+@@ -54,16 +54,16 @@ AllTarget($(ROMKANA_TABLES))
+ 
+ #ifdef __EMX__
+ .kpdef.kp:
+-	$(FORCPP) -7 < $< | $(CPP) $(ROMAJI_DIC_DEF) | $(FORCPP) -8 | $(KPDIC) > $@
++	$(FORCPP) -7 < $< | tee ${.TARGET}.before | ${AWK} -f dic-phono-filter.awk | tee ${.TARGET}.after |$(FORCPP) -8 | $(KPDIC) > $@
+ 
+ .kpdef.cbp:
+-	$(FORCPP) -7 < $< | $(CPP) $(ROMAJI_DIC_DEF) | $(FORCPP) -8 | $(KPDIC) > $@
++	$(FORCPP) -7 < $< | tee ${.TARGET}.before | ${AWK} -f dic-phono-filter.awk  | tee ${.TARGET}.after | $(FORCPP) -8 | $(KPDIC) > $@
+ #else
+ .kpdef.kp:
+-	$(FORCPP) -7 < $< | $(CPP) $(ROMAJI_DIC_DEF) | $(FORCPP) -8 | $(KPDIC) > `basename $< '.kpdef'`.kp
++	$(FORCPP) -7 < $< | tee ${.TARGET}.before | ${AWK} -f dic-phono-filter.awk  | tee ${.TARGET}.after | $(FORCPP) -8 | $(KPDIC) > `basename $< '.kpdef'`.kp
+ 
+ .kpdef.cbp:
+-	$(FORCPP) -7 < $< | $(CPP) $(ROMAJI_DIC_DEF) | $(FORCPP) -8 | $(KPDIC) > `basename $< '.kpdef'`.cbp
++	$(FORCPP) -7 < $< | tee ${.TARGET}.before | ${AWK} -f dic-phono-filter.awk  | tee ${.TARGET}.after | $(FORCPP) -8 | $(KPDIC) > `basename $< '.kpdef'`.cbp
+ #endif
+ 
+ MakeDirectories(install,$(DICDIR))
