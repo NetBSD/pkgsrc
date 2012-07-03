@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/03 00:13:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/07/03 18:36:56 schwarz Exp $
 #
 
 DISTNAME=	KeePassX-0.2.2
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://keepassx.sourceforge.net/
 COMMENT=	Password manager or safe
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
