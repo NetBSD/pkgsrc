@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.109 2012/06/15 23:06:08 dholland Exp $
+# $NetBSD: Makefile.common,v 1.110 2012/07/03 18:34:05 drochner Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
@@ -6,7 +6,7 @@
 # When updating the package,
 # please check kdeartwork3 -- it installs some extra
 # files depending on which screensavers it finds.
-DISTNAME=		xscreensaver-5.15
+DISTNAME=		xscreensaver-5.17
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE}
 

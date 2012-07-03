@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1 2012/07/03 18:34:05 drochner Exp $
+
+--- hacks/glx/Makefile.in.orig	2012-07-02 17:27:00.000000000 +0000
++++ hacks/glx/Makefile.in
+@@ -1832,7 +1832,6 @@ klein.o: $(HACK_SRC)/xlockmore.h
+ lament.o: ../../config.h
+ lament.o: $(HACK_SRC)/fps.h
+ lament.o: $(srcdir)/gltrackball.h
+-lament.o: $(HACK_SRC)/images/lament.xpm
+ lament.o: $(srcdir)/jwzgles.h
+ lament.o: $(srcdir)/normals.h
+ lament.o: $(srcdir)/rotator.h
