@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/25 08:58:38 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/07/03 18:18:20 joerg Exp $
 
 DISTNAME=	anope-1.7.21
 CATEGORIES=	chat
@@ -63,6 +63,11 @@ SUBST_SED.utils+=	-e "s|ln|${LN}|g"
 SUBST_MESSAGE.utils=	Fixing hardcoded utilities.
 
 .include "../../mk/pthread.buildlink3.mk"
+
+# for backtrace
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LDFLAGS+=  -lexecinfo
+.endif
 
 INSTALLATION_DIRS+=	share/doc/anope share/examples/anope lib/anope/modules
 
