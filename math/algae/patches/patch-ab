@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/12/21 17:56:10 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2012/07/03 17:42:48 joerg Exp $
 
---- configure.orig
+--- configure.orig	2003-12-17 03:15:18.000000000 +0000
 +++ configure
-@@ -1318,7 +1318,7 @@
+@@ -1331,7 +1331,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  LIBS="$LIBS -lm"
  f77_compile='${F77-f77} $FFLAGS -c conftest.f 1>&5 2>&5'
  f77_make='make F77="${F77-f77}" FFLAGS="$FFLAGS" -f conftest.mak conftest.o 1>&5 2>&5'
@@ -11,7 +11,19 @@ $NetBSD: patch-ab,v 1.4 2005/12/21 17:56:10 joerg Exp $
  
  # The next two don't include LDFLAGS, because some loser f77 compilers
  # (like on hp) do their own thing with the -L option.
-@@ -4378,60 +4378,12 @@
+@@ -2561,9 +2561,9 @@ echo $ECHO_N "checking for support of AN
+ cat > conftest.$ac_ext <<EOF
+ #line 2562 "configure"
+ #include "confdefs.h"
+-int main(int argc, char *argv);
++int main(int argc, char **argv);
+ int t(void);
+-int main(int argc, char *argv) { return t(); }
++int main(int argc, char **argv) { return t(); }
+ int t(void) { return 0; }
+ EOF
+ if eval $ac_compile; then
+@@ -4435,60 +4435,12 @@ echo "${ECHO_T}\"T\" becomes \"$f77_sym\
  
  
  #---------------------------------------------------------------------
