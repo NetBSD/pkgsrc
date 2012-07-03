@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/11/25 21:50:31 joerg Exp $
+$NetBSD: distinfo,v 1.8 2012/07/03 18:44:45 joerg Exp $
 
 SHA1 (battleball.21.src.tar.gz) = 5bc651d513d378d449c117488ef54af5f3381072
 RMD160 (battleball.21.src.tar.gz) = 8bc3ad8767c274135bc3f9d8bf95d8b6518c3542
@@ -14,6 +14,7 @@ SHA1 (patch-ah) = 9d65a69ce553dbb4f749e68b19f63ed8822c4afb
 SHA1 (patch-ai) = 6a281ab5775b768df0554600c0329f7b24564c45
 SHA1 (patch-bb_bbgfxtarget.C) = 2e70faa565da1766abeb1f0dcce6458067c90816
 SHA1 (patch-bb_gob.h) = 978fe42cc2e5f174d3a0820aaaf3f7fb3216e8e6
+SHA1 (patch-bb_main.C) = f6cd1c07fa90a671f1a674db93b44af4aee23447
 SHA1 (patch-bb_player.C) = 5772874c77a94e0ceb5eab39e6d3a64c2756ae32
 SHA1 (patch-lib3d_ang3d.h) = 79ad88d4d7d7b9125ca7fd9de812f7fdaf708212
 SHA1 (patch-lib3d_dimension.C) = a1c91280a35322ebc27cdf55f244da2a1d21bf3b
