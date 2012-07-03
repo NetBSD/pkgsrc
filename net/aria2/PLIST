@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.13 2011/07/14 06:00:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/07/03 19:39:47 ryoon Exp $
 bin/aria2c
 man/man1/aria2c.1
 man/ru/man1/aria2c.1
 share/doc/aria2/README
-share/doc/aria2/README.asciidoc
 share/doc/aria2/README.html
-share/doc/aria2/aria2c.1.asciidoc
-share/doc/aria2/aria2c.1.html
+share/doc/aria2/README.rst
 share/doc/aria2/bash_completion/README.txt
 share/doc/aria2/bash_completion/aria2c
-share/doc/aria2/ru/aria2c.1.asciidoc
-share/doc/aria2/ru/aria2c.1.html
 share/doc/aria2/xmlrpc/README.txt
 share/doc/aria2/xmlrpc/aria2mon
 share/doc/aria2/xmlrpc/aria2rpc
