@@ -1,7 +1,7 @@
-$NetBSD: patch-common_unicode_platform.h,v 1.1 2012/04/26 18:12:37 martin Exp $
+$NetBSD: patch-common_unicode_platform.h,v 1.2 2012/07/03 18:37:26 adam Exp $
 
---- common/unicode/platform.h.orig	2012-04-26 19:49:36.000000000 +0200
-+++ common/unicode/platform.h	2012-04-26 19:53:33.000000000 +0200
+--- common/unicode/platform.h.orig	2012-06-01 14:52:38.000000000 +0000
++++ common/unicode/platform.h
 @@ -131,7 +131,8 @@
  #   include <android/api-level.h>
  #elif defined(linux) || defined(__linux__) || defined(__linux)
@@ -23,6 +23,6 @@ $NetBSD: patch-common_unicode_platform.h,v 1.1 2012/04/26 18:12:37 martin Exp $
 +#else
 +#   define U_IS_BIG_ENDIAN 1
 +#endif
- #elif U_PLATFORM == U_PF_OS390 || U_PLATFORM == U_PF_OS400
+ #elif U_PLATFORM == U_PF_OS390 || U_PLATFORM == U_PF_OS400 || defined(__s390__) || defined(__s390x__)
      /* These platforms do not appear to predefine any endianness macros. */
  #   define U_IS_BIG_ENDIAN 1
