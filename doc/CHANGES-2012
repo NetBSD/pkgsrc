@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2086 2012/07/03 08:20:39 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2087 2012/07/03 11:27:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3319,3 +3319,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/vlc2 to 2.0.2 [drochner 2012-07-02]
 	Updated mail/claws-mail to 3.8.1 [drochner 2012-07-02]
 	Updated lang/algol68g to 2.4.1 [asau 2012-07-03]
+	Updated misc/libreoffice3-bin to 3.5.4 [ryoon 2012-07-03]
