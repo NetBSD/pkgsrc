@@ -1,14 +1,14 @@
-$NetBSD: patch-aj,v 1.1 2010/11/19 19:21:38 tez Exp $
+$NetBSD: patch-aj,v 1.2 2012/07/03 11:31:35 mef Exp $
 
 make build honor LDFLAGS
 
---- src/doxygen.pro.in.orig	2010-11-15 15:39:11.071338100 -0600
-+++ src/doxygen.pro.in	2010-11-15 15:39:52.485412900 -0600
+--- src/doxygen.pro.in.orig	2012-01-30 00:12:55.000000000 +0900
++++ src/doxygen.pro.in	2012-06-23 11:56:35.000000000 +0900
 @@ -19,6 +19,7 @@
  HEADERS      =	doxygen.h 
  SOURCES      =	main.cpp 
- unix:LIBS                  += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 
+ unix:LIBS                  += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 -lpthread
 +unix:TMAKE_LFLAGS          += $(LDFLAGS)
  win32:INCLUDEPATH          += .
- win32-mingw:LIBS           += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 
+ win32-mingw:LIBS           += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 -lpthread
  win32-msvc:LIBS            += qtools.lib md5.lib doxygen.lib doxycfg.lib shell32.lib iconv.lib
