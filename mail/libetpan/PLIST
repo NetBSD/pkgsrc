@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/05/17 17:54:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/07/03 18:08:20 drochner Exp $
 bin/libetpan-config
 include/libetpan.h
 include/libetpan/acl.h
@@ -116,6 +116,10 @@ include/libetpan/mhdriver_types.h
 include/libetpan/mhstorage.h
 include/libetpan/mime_message_driver.h
 include/libetpan/mmapstring.h
+include/libetpan/namespace.h
+include/libetpan/namespace_parser.h
+include/libetpan/namespace_sender.h
+include/libetpan/namespace_types.h
 include/libetpan/newsfeed.h
 include/libetpan/newsfeed_item.h
 include/libetpan/newsfeed_item_enclosure.h
@@ -142,4 +146,5 @@ include/libetpan/quota_sender.h
 include/libetpan/quota_types.h
 include/libetpan/uidplus.h
 include/libetpan/uidplus_types.h
+include/libetpan/xlist.h
 lib/libetpan.la
