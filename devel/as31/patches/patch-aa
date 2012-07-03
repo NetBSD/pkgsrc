@@ -1,7 +1,92 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/08 13:30:04 bjh21 Exp $
---- emitter.c	Sat Jul  8 11:55:42 2000
-+++ emitter.c	Sun May 28 14:19:50 2000
-@@ -394,32 +394,47 @@
+$NetBSD: patch-aa,v 1.2 2012/07/03 18:13:26 joerg Exp $
+
+--- emitter.c.orig	2012-07-03 10:49:15.000000000 +0000
++++ emitter.c
+@@ -19,6 +19,8 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ /* ----------------------------------------------------------------------
+  * DECLARE your own open(), close(), addr(), and byte() routines here.
+@@ -30,6 +32,8 @@ static int open2(), close2(), addr2(), b
+ static int open3(), close3(), addr3(), byte3();
+ static int open4(), close4(), addr4(), byte4();
+ 
++void dumpline(unsigned long, unsigned char *, int);
++
+ /* ----------------------------------------------------------------------
+  * ADD an entry to this table to register your
+  * output format routines. Give your object format
+@@ -67,8 +71,8 @@ emitusage()
+ 	fprintf(stderr, ".\n");
+ }
+ 
+-emitopen(file,ftype,arg)
+-char *file,*ftype,*arg;
++void
++emitopen(char *file, char *ftype, char *arg)
+ {
+ 	int i;
+ 	if( ftype ) {
+@@ -94,14 +98,12 @@ emitclose()
+ 	(*formtab[format].e_close)();
+ }
+ 
+-emitaddr(a)
+-unsigned long int a;
++void emitaddr(unsigned long a)
+ {
+ 	(*formtab[format].e_addr)(a);
+ }
+ 
+-emitbyte(b)
+-int b;
++void emitbyte(int b)
+ {
+ 	(*formtab[format].e_byte)(b);
+ }
+@@ -180,9 +182,9 @@ unsigned char b;
+ 		if( pos != -666 ) fprintf(fout,"\n");
+ 		newaddr = 0;
+ 		pos = 15;
+-		fprintf(fout,"%06x: ",addr+offset);
++		fprintf(fout,"%06lx: ",addr+offset);
+ 	} else if( pos == 15 ) {
+-		fprintf(fout,"%06x: ",addr+offset);
++		fprintf(fout,"%06lx: ",addr+offset);
+ 	}
+ 
+ 	fprintf(fout,"%02x ", b&0xff );
+@@ -225,7 +227,7 @@ unsigned long int a;
+ static byte2(b)
+ unsigned char b;
+ {
+-	fprintf(fout,"%04x: %02x\n", addr, b&0xff );
++	fprintf(fout,"%04lx: %02x\n", addr, b&0xff );
+ 	addr += 1;
+ }
+ 
+@@ -283,6 +285,7 @@ unsigned char b;
+ 	addr += 1;
+ }
+ 
++void
+ dumpline(a,b,len)
+ unsigned long a;
+ unsigned char *b;
+@@ -292,7 +295,7 @@ int len;
+ 
+ 	if(len <= 0 ) return;
+ 
+-	fprintf(fout,"%04x: ",a);
++	fprintf(fout,"%04lx: ",a);
+ 
+ 	for(i=0; i<8; i++ ) {
+ 		if( i <= len )
+@@ -394,32 +397,47 @@ static byte4(b)
  	}
  }
  
