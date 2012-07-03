@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2011/12/03 20:17:47 cheusov Exp $
+$NetBSD: distinfo,v 1.12 2012/07/03 18:46:16 joerg Exp $
 
 SHA1 (asc/asc-source-1.16.4.0.tar.bz2) = 338081823943e08848325e6f2126e5c533517ae9
 RMD160 (asc/asc-source-1.16.4.0.tar.bz2) = a4de675628875cc36f30b39d1fb1ef3ac879e369
@@ -14,6 +14,9 @@ RMD160 (asc/time_to_strike.mp3) = a402a00e490f7aca0871b52165d63f3bde3b3bff
 Size (asc/time_to_strike.mp3) = 3242969 bytes
 SHA1 (patch-source_ASCStringHelpers.h) = 21caf558907c4eaafe88d714520b014a1c19f57b
 SHA1 (patch-source_Property.cpp) = a8a8e154f8aa5a884cb9fe0e74c806dcaf3020b2
+SHA1 (patch-source_errors.h) = 5d288a390984a5ab673609e3487feb5ab1ee6a8a
+SHA1 (patch-source_gui.cpp) = 3611c053b08fa175bf89b79b9cd0a4d5202affc8
+SHA1 (patch-source_gui.h) = 7e94c8fb53148da05177614fe79e9448693a54b8
 SHA1 (patch-source_password.cpp) = fa56110a045e111f772f09b9e9998d84a76e7d5a
 SHA1 (patch-source_strtmesg.cpp) = 3aa86f7e739983294a86c9ab5a8c0c4a6007c449
 SHA1 (patch-source_tools_lib_errorout.cpp) = 9ccfa2d4447a3606fe72c9a60e79881fdfc1b080
