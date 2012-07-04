@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/03/03 14:01:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.9.4.1 2012/07/04 07:46:10 tron Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.so
@@ -166,6 +166,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Chihuahua
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Coral_Harbour
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Cordoba
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Costa_Rica
+${PG_SUBPREFIX}share/postgresql/timezone/America/Creston
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Cuiaba
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Curacao
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Danmarkshavn
