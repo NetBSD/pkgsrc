@@ -1,5 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/07/04 08:58:09 adam Exp $
 bin/sndfile-resample
 include/samplerate.h
 lib/libsamplerate.la
 lib/pkgconfig/samplerate.pc
+share/doc/libsamplerate0-dev/html/SRC.css
+share/doc/libsamplerate0-dev/html/SRC.png
+share/doc/libsamplerate0-dev/html/api.html
+share/doc/libsamplerate0-dev/html/api_callback.html
+share/doc/libsamplerate0-dev/html/api_full.html
+share/doc/libsamplerate0-dev/html/api_misc.html
+share/doc/libsamplerate0-dev/html/api_simple.html
+share/doc/libsamplerate0-dev/html/download.html
+share/doc/libsamplerate0-dev/html/faq.html
+share/doc/libsamplerate0-dev/html/history.html
+share/doc/libsamplerate0-dev/html/index.html
+share/doc/libsamplerate0-dev/html/license.html
+share/doc/libsamplerate0-dev/html/lists.html
+share/doc/libsamplerate0-dev/html/quality.html
+share/doc/libsamplerate0-dev/html/win32.html
