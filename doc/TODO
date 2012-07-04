@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11336 2012/07/04 08:26:50 roy Exp $
+$NetBSD: TODO,v 1.11337 2012/07/04 18:34:39 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -1064,7 +1064,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
-	o py-gobject-3.2.2
 	o py-ldap-2.4.10
 	o py-pyutil-1.9.3 [pkg/46551]
 	o py-qt4-4.9.4
