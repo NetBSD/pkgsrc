@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2098 2012/07/04 09:28:33 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2099 2012/07/04 17:44:43 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_libtiff to 12.1nb2 [obache 2012-07-04]
 	Updated net/dnsmasq to 2.62 [roy 2012-07-04]
 	Updated audio/sox to 14.4.0 [adam 2012-07-04]
+	Updated devel/at-spi2-core to 2.5.3 [prlw1 2012-07-04]
