@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2101 2012/07/04 18:31:42 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2102 2012/07/04 18:35:50 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3333,4 +3333,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/sox to 14.4.0 [adam 2012-07-04]
 	Updated devel/at-spi2-core to 2.5.3 [prlw1 2012-07-04]
 	Updated devel/at-spi2-atk to 2.5.3 [prlw1 2012-07-04]
-	Updated devel/py-gobject3 to 3.2.2 [prlw1 2012-07-04]
+	Added devel/py-gobject3 version 3.2.2 [prlw1 2012-07-04]
