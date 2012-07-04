@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/04 20:15:46 drochner Exp $
+lib/libpoppler.la
+lib/pkgconfig/poppler-splash.pc
+lib/pkgconfig/poppler.pc
+share/doc/poppler/README
+share/doc/poppler/README-XPDF
