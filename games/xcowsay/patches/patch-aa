@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2012/07/04 18:04:44 drochner Exp $
+
+--- src/xcowsayd.c.orig	2010-09-27 20:27:52.000000000 +0000
++++ src/xcowsayd.c
+@@ -141,8 +141,10 @@ static gpointer cow_display_thread(gpoin
+       display_cow(debug, mess, false, mode);
+       gdk_threads_leave();
+ 
++      g_mutex_lock(display_lock);
+       g_cond_wait(display_complete, display_lock);
+-      
++      g_mutex_unlock(display_lock);
++
+       request_complete();
+    }
+    
+@@ -266,7 +268,9 @@ void run_cowsay_daemon(bool debug, int a
+ 
+    debug_msg("Cowsay daemon starting...\n");
+    for (;;) {
++      gdk_threads_enter();
+       gtk_main();
++      gdk_threads_leave();
+       g_cond_signal(display_complete);
+    }
+ 

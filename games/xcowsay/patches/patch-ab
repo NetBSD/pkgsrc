@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2012/07/04 18:04:44 drochner Exp $
+
+--- src/xcowsay.c.orig	2010-11-06 15:32:35.000000000 +0000
++++ src/xcowsay.c
+@@ -252,7 +252,7 @@ int main(int argc, char **argv)
+    parse_config_file();
+    
+    int c, index = 0, failure = 0;
+-   const char *spec = "hvld:rt:f:";
++   const char *spec = "hvld:r:t:f:";
+    const char *dream_file = NULL;
+    while ((c = getopt_long(argc, argv, spec, long_options, &index)) != -1) {
+       switch (c) {
