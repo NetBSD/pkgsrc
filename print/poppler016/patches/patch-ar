@@ -1,0 +1,22 @@
+$NetBSD: patch-ar,v 1.1 2012/07/04 20:15:46 drochner Exp $
+
+--- cpp/Makefile.in.orig	2011-06-27 18:45:13.000000000 +0000
++++ cpp/Makefile.in
+@@ -79,7 +79,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ libpoppler_cpp_la_DEPENDENCIES =  \
+-	$(top_builddir)/poppler/libpoppler.la $(am__DEPENDENCIES_1)
++	$(prefix)/lib/libpoppler.la $(am__DEPENDENCIES_1)
+ am_libpoppler_cpp_la_OBJECTS = libpoppler_cpp_la-poppler-document.lo \
+ 	libpoppler_cpp_la-poppler-embedded-file.lo \
+ 	libpoppler_cpp_la-poppler-font.lo \
+@@ -430,7 +430,7 @@ libpoppler_cpp_la_CXXFLAGS = \
+ 	-Dpoppler_cpp_EXPORTS
+ 
+ libpoppler_cpp_la_LIBADD = \
+-	$(top_builddir)/poppler/libpoppler.la	\
++	$(prefix)/lib/libpoppler.la	\
+ 	$(LIBICONV)
+ 
+ libpoppler_cpp_la_LDFLAGS = -version-info 2:0:2 @create_shared_lib@ @auto_import_flags@
