@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.55 2011/11/01 06:02:27 sbd Exp $
+# $NetBSD: Makefile,v 1.56 2012/07/04 20:25:16 drochner Exp $
 #
-
-PKGREVISION=		1
 
 .include "../../print/poppler/Makefile.common"
 
@@ -23,8 +21,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-splash-output
 # Don't build the cairo graphics backend.
 CONFIGURE_ARGS+=	--disable-cairo-output
-# Don't compile poppler qt wrapper.
-CONFIGURE_ARGS+=	--disable-poppler-qt
 # Don't compile GTK+ test program.
 CONFIGURE_ARGS+=	--disable-gtk-test
 # Don't compile GLib wrapper which also needs gtk2
