@@ -1,0 +1,24 @@
+Tool to check and undelete partitions.
+
+Supported filesystems:
+- BeFS ( BeOS )
+- BSD disklabel ( FreeBSD/OpenBSD/NetBSD )
+- CramFS (Compressed File System)
+- DOS/Windows FAT12, FAT16 and FAT32
+- HFS, Hierarchical File System
+- JFS, IBM's Journaled File System
+- Linux Ext2 and Ext3
+- Linux Raid
+- Linux Swap (versions 1 and 2)
+- LVM and LVM2, Linux Logical Volume Manager
+- Netware NSS
+- NTFS ( Windows NT/2K/XP/2003 )
+- ReiserFS 3.5 and 3.6
+- UFS (Sun/BSD/...)
+- XFS, SGI's Journaled File System
+
+Known to work on:
+* DOS/Win9x/NT4/2k/XP/2k3
+* GNU/Linux
+* FreeBSD, NetBSD, OpenBSD
+* Sun Solaris (minimal support)

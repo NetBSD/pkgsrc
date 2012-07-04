@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/04 17:58:31 drochner Exp $
+bin/fidentify
+bin/photorec
+bin/testdisk
+man/man8/fidentify.8
+man/man8/photorec.8
+man/man8/testdisk.8
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/THANKS
+@pkgdir share/doc/${PKGNAME}/html
