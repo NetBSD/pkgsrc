@@ -1,26 +1,33 @@
-$NetBSD: patch-ab,v 1.13 2011/01/31 16:55:29 drochner Exp $
+$NetBSD: patch-ab,v 1.14 2012/07/04 20:25:16 drochner Exp $
 
---- utils/Makefile.in.orig	2011-01-27 19:32:04.000000000 +0000
+--- utils/Makefile.in.orig	2012-06-10 18:45:33.000000000 +0000
 +++ utils/Makefile.in
-@@ -55,7 +55,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -59,7 +59,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  	$(top_builddir)/poppler/poppler-config.h
  CONFIG_CLEAN_FILES =
  CONFIG_CLEAN_VPATH_FILES =
 -@BUILD_SPLASH_OUTPUT_TRUE@am__EXEEXT_1 = pdftoppm$(EXEEXT)
 +am__EXEEXT_1 = pdftoppm$(EXEEXT)
- @BUILD_ABIWORD_OUTPUT_TRUE@am__EXEEXT_2 = pdftoabw$(EXEEXT)
+ @BUILD_CAIRO_OUTPUT_TRUE@am__EXEEXT_2 = pdftocairo$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  PROGRAMS = $(bin_PROGRAMS)
-@@ -64,7 +64,7 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
+@@ -68,7 +68,7 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
+ pdfdetach_OBJECTS = $(am_pdfdetach_OBJECTS)
+ pdfdetach_LDADD = $(LDADD)
+ am__DEPENDENCIES_1 =
+-pdfdetach_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
++pdfdetach_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
+ 	$(am__DEPENDENCIES_1)
+ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+@@ -76,30 +76,30 @@ am__v_lt_0 = --silent
+ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT) $(am__objects_1)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
- am__DEPENDENCIES_1 =
 -pdffonts_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdffonts_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- AM_V_lt = $(am__v_lt_$(V))
- am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
-@@ -73,19 +73,19 @@ am_pdfimages_OBJECTS = pdfimages.$(OBJEX
+ am_pdfimages_OBJECTS = pdfimages.$(OBJEXT) ImageOutputDev.$(OBJEXT) \
  	$(am__objects_1)
  pdfimages_OBJECTS = $(am_pdfimages_OBJECTS)
  pdfimages_LDADD = $(LDADD)
@@ -34,22 +41,31 @@ $NetBSD: patch-ab,v 1.13 2011/01/31 16:55:29 drochner Exp $
 -pdfinfo_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdfinfo_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- am__pdftoabw_SOURCES_DIST = pdftoabw.cc parseargs.cc parseargs.h
- @BUILD_ABIWORD_OUTPUT_TRUE@am_pdftoabw_OBJECTS = pdftoabw.$(OBJEXT) \
- @BUILD_ABIWORD_OUTPUT_TRUE@	$(am__objects_1)
- pdftoabw_OBJECTS = $(am_pdftoabw_OBJECTS)
+ am_pdfseparate_OBJECTS = pdfseparate.$(OBJEXT) $(am__objects_1)
+ pdfseparate_OBJECTS = $(am_pdfseparate_OBJECTS)
+ pdfseparate_LDADD = $(LDADD)
+-pdfseparate_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
++pdfseparate_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
+ 	$(am__DEPENDENCIES_1)
+ am__pdftocairo_SOURCES_DIST = pdftocairo.cc parseargs.cc parseargs.h
+ @BUILD_CAIRO_OUTPUT_TRUE@am_pdftocairo_OBJECTS = pdftocairo.$(OBJEXT) \
+ @BUILD_CAIRO_OUTPUT_TRUE@	$(am__objects_1)
+ pdftocairo_OBJECTS = $(am_pdftocairo_OBJECTS)
 -am__DEPENDENCIES_2 = $(top_builddir)/poppler/libpoppler.la \
 +am__DEPENDENCIES_2 = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_DEPENDENCIES =  \
- @BUILD_ABIWORD_OUTPUT_TRUE@	$(am__DEPENDENCIES_2) \
-@@ -94,25 +94,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
- 	HtmlLinks.$(OBJEXT) HtmlOutputDev.$(OBJEXT) $(am__objects_1)
+ @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__DEPENDENCIES_3 =  \
+ @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@	$(am__DEPENDENCIES_1)
+@@ -113,33 +113,33 @@ am_pdftohtml_OBJECTS = pdftohtml-pdftoht
+ 	pdftohtml-HtmlOutputDev.$(OBJEXT) $(am__objects_2)
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
 -pdftohtml_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdftohtml_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
+ pdftohtml_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(pdftohtml_CXXFLAGS) \
+ 	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
  am__pdftoppm_SOURCES_DIST = pdftoppm.cc parseargs.cc parseargs.h
 -@BUILD_SPLASH_OUTPUT_TRUE@am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT) \
 -@BUILD_SPLASH_OUTPUT_TRUE@	$(am__objects_1)
@@ -73,9 +89,15 @@ $NetBSD: patch-ab,v 1.13 2011/01/31 16:55:29 drochner Exp $
 -pdftotext_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdftotext_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
+ am_pdfunite_OBJECTS = pdfunite.$(OBJEXT) $(am__objects_1)
+ pdfunite_OBJECTS = $(am_pdfunite_OBJECTS)
+ pdfunite_LDADD = $(LDADD)
+-pdfunite_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
++pdfunite_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
+ 	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -389,12 +389,12 @@ top_build_prefix = @top_build_prefix@
+@@ -425,12 +425,12 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  win32_libs = @win32_libs@
@@ -93,8 +115,8 @@ $NetBSD: patch-ab,v 1.13 2011/01/31 16:55:29 drochner Exp $
  INCLUDES = \
  	-I$(top_srcdir)				\
  	-I$(top_srcdir)/goo			\
-@@ -405,9 +405,10 @@ INCLUDES = \
- 	$(ABIWORD_CFLAGS)
+@@ -441,9 +441,10 @@ INCLUDES = \
+ 	$(PDFTOCAIRO_CFLAGS)
  
  LDADD = \
 -	$(top_builddir)/poppler/libpoppler.la	\
@@ -104,5 +126,5 @@ $NetBSD: patch-ab,v 1.13 2011/01/31 16:55:29 drochner Exp $
 +	$(FONTCONFIG_LIBS) \
 +	$(PTHREAD_STUBLIB)
  
- @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_SOURCES = \
- @BUILD_ABIWORD_OUTPUT_TRUE@	pdftoabw.cc				\
+ @BUILD_CAIRO_OUTPUT_TRUE@pdftocairo_SOURCES = \
+ @BUILD_CAIRO_OUTPUT_TRUE@	pdftocairo.cc				\
