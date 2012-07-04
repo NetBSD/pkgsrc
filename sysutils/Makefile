@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.541 2012/06/16 15:10:48 taca Exp $
+# $NetBSD: Makefile,v 1.542 2012/07/04 17:59:21 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -388,6 +388,7 @@ SUBDIR+=	system-tools-backends
 SUBDIR+=	tarsnap
 SUBDIR+=	tcx
 SUBDIR+=	tdir
+SUBDIR+=	testdisk
 SUBDIR+=	tits
 SUBDIR+=	tkcron
 SUBDIR+=	tkdesk
