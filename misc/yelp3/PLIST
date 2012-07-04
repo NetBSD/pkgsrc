@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/13 12:40:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/04 19:59:07 drochner Exp $
 bin/gnome-help
 bin/yelp
 include/libyelp/yelp-bookmarks.h
@@ -140,6 +140,7 @@ share/locale/zh_CN/LC_MESSAGES/yelp.mo
 share/locale/zh_HK/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 share/locale/zu/LC_MESSAGES/yelp.mo
+share/yelp-xsl/xslt/common/domains/yelp.xml
 share/yelp/dtd/catalog
 share/yelp/dtd/docbookx.dtd
 share/yelp/dtd/isoamsa.ent
@@ -175,7 +176,6 @@ share/yelp/icons/hicolor/scalable/status/yelp-page-task-symbolic.svg
 share/yelp/icons/hicolor/scalable/status/yelp-page-tip-symbolic.svg
 share/yelp/icons/hicolor/scalable/status/yelp-page-ui-symbolic.svg
 share/yelp/icons/hicolor/scalable/status/yelp-page-video-symbolic.svg
-share/yelp/js/jquery-ui-1.8.custom.min.js
 share/yelp/xslt/db2html.xsl
 share/yelp/xslt/info2html.xsl
 share/yelp/xslt/mal2html.xsl
