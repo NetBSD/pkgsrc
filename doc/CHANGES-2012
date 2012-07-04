@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2095 2012/07/03 22:01:10 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2096 2012/07/04 07:44:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/aria2 to 1.15.1 [ryoon 2012-07-03]
 	Updated fonts/umefont-ttf to 0.441 [ryoon 2012-07-03]
 	Updated parallel/slurm to 2.4.1 [asau 2012-07-03]
+	Updated emulators/suse121_libtiff to 12.1nb2 [obache 2012-07-04]
