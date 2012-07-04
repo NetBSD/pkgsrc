@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.4 2012/07/03 23:26:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.5 2012/07/04 07:46:43 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -48,3 +48,20 @@ databases/postgresql91-server: security update
 databases/postgresql91-upgrade: security update
 Pullup ticket #3846 - requested by joerg
 mk: improve shared library check
+Pullup ticket #3847 - requested by morr
+databases/postgresql90: security update
+databases/postgresql90-adminpack: security update
+databases/postgresql90-client: security update
+databases/postgresql90-datatypes: security update
+databases/postgresql90-dblink: security update
+databases/postgresql90-docs: security update
+databases/postgresql90-fuzzystrmatch: security update
+databases/postgresql90-monitoring: security update
+databases/postgresql90-pgcrypto: security update
+databases/postgresql90-plperl: security update
+databases/postgresql90-plpython: security update
+databases/postgresql90-pltcl: security update
+databases/postgresql90-replicationtools: security update
+databases/postgresql90-server: security update
+databases/postgresql90-upgrade: security update
+databases/postgresql90-uuid: security update
