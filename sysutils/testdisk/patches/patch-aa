@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2012/07/04 17:58:31 drochner Exp $
+
+--- src/intrfn.h.orig	2010-10-18 06:25:15.000000000 +0000
++++ src/intrfn.h
+@@ -39,6 +39,8 @@ extern "C" {
+ #include <curses.h>
+ #endif
+ 
++#include <stdarg.h>
++
+ void aff_copy(WINDOW *window);
+ void aff_copy_short(WINDOW *window);
+ void aff_part(WINDOW *window, const unsigned int newline, const disk_t *disk_car, const partition_t *partition);
