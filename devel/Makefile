@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1605 2012/07/04 18:31:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1606 2012/07/04 18:41:20 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -1268,6 +1268,7 @@ SUBDIR+=	py-Pyro
 SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-argparse
 SUBDIR+=	py-at-spi
+SUBDIR+=	py-at-spi2
 SUBDIR+=	py-babel
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-slave
