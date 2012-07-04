@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2010/07/14 17:04:23 drochner Exp $
+$NetBSD: patch-aa,v 1.11 2012/07/04 20:25:16 drochner Exp $
 
---- glib/Makefile.in.orig	2010-07-08 18:57:56.000000000 +0000
+--- glib/Makefile.in.orig	2011-10-26 12:40:03.000000000 +0000
 +++ glib/Makefile.in
-@@ -82,7 +82,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+@@ -84,7 +84,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  libpoppler_glib_la_DEPENDENCIES =  \
@@ -10,17 +10,8 @@ $NetBSD: patch-aa,v 1.10 2010/07/14 17:04:23 drochner Exp $
 +	$(prefix)/lib/libpoppler.la \
  	$(top_builddir)/poppler/libpoppler-cairo.la \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
- 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-@@ -105,7 +105,7 @@ am__test_poppler_glib_SOURCES_DIST = tes
- @BUILD_WITH_GDK_TRUE@	test-poppler-glib.$(OBJEXT)
- test_poppler_glib_OBJECTS = $(am_test_poppler_glib_OBJECTS)
- @BUILD_WITH_GDK_TRUE@test_poppler_glib_DEPENDENCIES =  \
--@BUILD_WITH_GDK_TRUE@	$(top_builddir)/poppler/libpoppler.la \
-+@BUILD_WITH_GDK_TRUE@	$(prefix)/lib/libpoppler.la \
- @BUILD_WITH_GDK_TRUE@	libpoppler-glib.la $(am__DEPENDENCIES_1) \
- @BUILD_WITH_GDK_TRUE@	$(am__DEPENDENCIES_1) \
- @BUILD_WITH_GDK_TRUE@	$(am__DEPENDENCIES_1)
-@@ -438,7 +438,7 @@ libpoppler_glib_la_SOURCES = \
+ 	$(am__DEPENDENCIES_1)
+@@ -435,7 +435,7 @@ libpoppler_glib_la_SOURCES = \
  	poppler-private.h
  
  libpoppler_glib_la_LIBADD = \
@@ -28,13 +19,4 @@ $NetBSD: patch-aa,v 1.10 2010/07/14 17:04:23 drochner Exp $
 +	$(prefix)/lib/libpoppler.la		\
  	$(top_builddir)/poppler/libpoppler-cairo.la	\
  	$(POPPLER_GLIB_LIBS)				\
- 	$(GDK_LIBS)					\
-@@ -450,7 +450,7 @@ libpoppler_glib_la_LDFLAGS = -version-in
- @BUILD_WITH_GDK_TRUE@       test-poppler-glib.cc
- 
- @BUILD_WITH_GDK_TRUE@test_poppler_glib_LDADD = \
--@BUILD_WITH_GDK_TRUE@	$(top_builddir)/poppler/libpoppler.la	\
-+@BUILD_WITH_GDK_TRUE@	$(prefix)/lib/libpoppler.la	\
- @BUILD_WITH_GDK_TRUE@	libpoppler-glib.la			\
- @BUILD_WITH_GDK_TRUE@	$(POPPLER_GLIB_LIBS)			\
- @BUILD_WITH_GDK_TRUE@	$(GDK_LIBS)				\
+ 	$(FREETYPE_LIBS)				\
