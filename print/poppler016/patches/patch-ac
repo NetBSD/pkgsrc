@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2012/07/04 20:15:46 drochner Exp $
+
+Fix build with Sun Studio C++.
+
+--- goo/gstrtod.cc.orig	Wed Sep  9 23:22:31 2009
++++ goo/gstrtod.cc	Sat Jan  9 21:24:38 2010
+@@ -27,6 +27,10 @@
+ #include <cstdlib>
+ #include <cstring>
+ 
++#if defined(sun) && !defined(__GNUC__)
++using namespace std;
++#endif
++
+ #define ascii_isspace(c) \
+   (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t' || c == '\v')
+ #define ascii_isdigit(c) \
