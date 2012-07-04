@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.3 2012/07/04 20:30:22 drochner Exp $
+
+--- texk/web2c/pdftexdir/pdftosrc.cc.orig	2012-06-24 13:48:08.000000000 +0000
++++ texk/web2c/pdftexdir/pdftosrc.cc
+@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
+         exit(1);
+     }
+     if (extract_xref_table) {
+-        int size = xref->getSize();
++        int size = xref->getNumObjects();
+         int i;
+         for (i = 0; i < size; i++) {
+             if (xref->getEntry(i)->offset == 0xffffffff)
