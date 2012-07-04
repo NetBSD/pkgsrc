@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/02 13:37:41 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/04 12:43:36 obache Exp $
 
 VER=			3.5.4.2
 DISTNAME=		libreoffice-${VER}
@@ -6,7 +6,6 @@ PKGNAME=		libreoffice-${VER:S/-//g}
 PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.4/ \
-		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
 MAINTAINER=		ftigeot@wolfpond.org
@@ -44,6 +43,7 @@ EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
+SITES.${md}=		http://dev-www.libreoffice.org/src/
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
