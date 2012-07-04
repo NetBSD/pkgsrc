@@ -1,15 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/01 19:11:39 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/04 20:26:58 drochner Exp $
+bin/pdfdetach
 bin/pdffonts
 bin/pdfimages
 bin/pdfinfo
+bin/pdfseparate
 bin/pdftohtml
 bin/pdftoppm
 bin/pdftops
 bin/pdftotext
+bin/pdfunite
+man/man1/pdfdetach.1
 man/man1/pdffonts.1
 man/man1/pdfimages.1
 man/man1/pdfinfo.1
+man/man1/pdfseparate.1
 man/man1/pdftohtml.1
 man/man1/pdftoppm.1
 man/man1/pdftops.1
 man/man1/pdftotext.1
+man/man1/pdfunite.1

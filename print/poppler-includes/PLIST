@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/01/31 16:58:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/07/04 20:26:58 drochner Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BuiltinFont.h
@@ -66,6 +66,7 @@ include/poppler/UnicodeDecompTables.h
 include/poppler/UnicodeMap.h
 include/poppler/UnicodeMapTables.h
 include/poppler/UnicodeTypeTable.h
+include/poppler/ViewerPreferences.h
 include/poppler/XRef.h
 include/poppler/XpdfPluginAPI.h
 include/poppler/goo/FixedPoint.h
@@ -78,6 +79,7 @@ include/poppler/goo/GooTimer.h
 include/poppler/goo/ImgWriter.h
 include/poppler/goo/JpegWriter.h
 include/poppler/goo/PNGWriter.h
+include/poppler/goo/TiffWriter.h
 include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
 include/poppler/goo/gstrtod.h
