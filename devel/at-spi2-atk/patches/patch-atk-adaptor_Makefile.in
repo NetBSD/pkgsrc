@@ -1,17 +1,17 @@
-$NetBSD: patch-atk-adaptor_Makefile.in,v 1.1 2012/06/13 11:49:37 prlw1 Exp $
+$NetBSD: patch-atk-adaptor_Makefile.in,v 1.2 2012/07/04 17:45:57 prlw1 Exp $
 
 Don't install lib/gtk-2.0/modules/libatk-bridge.la so that
 we don't conflict with at-spi. (Reasonable to assume that
 at-spi2 goes with gtk3, at-spi with gtk2.)
 
---- atk-adaptor/Makefile.in.orig	2012-02-06 23:09:55.000000000 +0000
+--- atk-adaptor/Makefile.in.orig	2012-06-25 23:11:54.000000000 +0000
 +++ atk-adaptor/Makefile.in
-@@ -252,7 +252,7 @@ target_alias = @target_alias@
+@@ -357,7 +357,7 @@ target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
--SUBDIRS = adaptors gtk-2.0 gtk-3.0
-+SUBDIRS = adaptors gtk-3.0
- EXTRA_DIST = Makefile.include
- all: all-recursive
- 
+-SUBDIRS = adaptors . gtk-2.0 gtk-3.0
++SUBDIRS = adaptors . gtk-3.0
+ lib_LTLIBRARIES = libatk-bridge-2.0.la
+ libatk_bridge_2_0_la_CFLAGS = \
+ 	$(DBUS_CFLAGS)    \
