@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2012/03/03 00:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/07/04 20:26:58 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-qt4-${POPPLER_VERS}
-PKGREVISION=		4
 
 COMMENT=		PDF rendering library (QT4 wrapper)
 MAINTAINER=		reed@reedmedia.net
@@ -14,6 +13,7 @@ CONFIGURE_ARGS+=	--disable-cairo-output
 CONFIGURE_ARGS+=	--enable-poppler-qt4
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
+CONFIGURE_ENV+=		MOCQT4=${QTDIR}/bin/moc
 
 BUILDLINK_API_DEPENDS.poppler+= poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
