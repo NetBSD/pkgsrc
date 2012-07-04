@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2012/04/08 19:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/07/04 18:31:10 prlw1 Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.28.6
-PKGREVISION=		3
+PKGREVISION=		4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -30,11 +30,11 @@ REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
 
 BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION_NOREV}
 
+CONFIGURE_ARGS+=	--disable-introspection
+
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=0.9.5
-.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
