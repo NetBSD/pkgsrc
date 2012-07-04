@@ -1,8 +1,19 @@
-$NetBSD: patch-am,v 1.4 2011/02/05 07:57:15 adam Exp $
+$NetBSD: patch-am,v 1.5 2012/07/04 20:33:15 drochner Exp $
 
---- src/extension/internal/pdfinput/svg-builder.cpp.orig	2010-07-13 03:48:40.000000000 +0000
+--- src/extension/internal/pdfinput/svg-builder.cpp.orig	2011-07-08 18:25:09.000000000 +0000
 +++ src/extension/internal/pdfinput/svg-builder.cpp
-@@ -1443,7 +1443,7 @@ Inkscape::XML::Node *SvgBuilder::_create
+@@ -961,9 +961,7 @@ void SvgBuilder::updateFont(GfxState *st
+     _font_style = sp_repr_css_attr_new();
+     GfxFont *font = state->getFont();
+     // Store original name
+-    if (font->getOrigName()) {
+-        _font_specification = font->getOrigName()->getCString();
+-    } else if (font->getName()) {
++    if (font->getName()) {
+         _font_specification = font->getName()->getCString();
+     } else {
+         _font_specification = (char*) "Arial";
+@@ -1443,7 +1441,7 @@ Inkscape::XML::Node *SvgBuilder::_create
          return NULL;
      }
      // Set error handler

@@ -1,0 +1,501 @@
+$NetBSD: patch-ar,v 1.1 2012/07/04 20:33:15 drochner Exp $
+
+--- src/extension/internal/pdfinput/pdf-parser.cpp.orig	2012-06-24 14:38:28.000000000 +0000
++++ src/extension/internal/pdfinput/pdf-parser.cpp
+@@ -11,6 +11,7 @@
+ #ifdef HAVE_CONFIG_H
+ # include <config.h>
+ #endif
++#define POPPLER_NEW_COLOR_SPACE_API 1
+ 
+ #ifdef HAVE_POPPLER
+ 
+@@ -367,14 +368,14 @@ void PdfParser::parse(Object *obj, GBool
+     for (i = 0; i < obj->arrayGetLength(); ++i) {
+       obj->arrayGet(i, &obj2);
+       if (!obj2.isStream()) {
+-	error(-1, const_cast<char*>("Weird page contents"));
++	error(errInternal, -1, const_cast<char*>("Weird page contents"));
+ 	obj2.free();
+ 	return;
+       }
+       obj2.free();
+     }
+   } else if (!obj->isStream()) {
+-    error(-1, const_cast<char*>("Weird page contents"));
++    error(errInternal, -1, const_cast<char*>("Weird page contents"));
+     return;
+   }
+   parser = new Parser(xref, new Lexer(xref, obj), gFalse);
+@@ -419,7 +420,7 @@ void PdfParser::go(GBool topLevel) {
+ 
+     // too many arguments - something is wrong
+     } else {
+-      error(getPos(), const_cast<char*>("Too many args in content stream"));
++      error(errInternal, getPos(), const_cast<char*>("Too many args in content stream"));
+       if (printCommands) {
+ 	printf("throwing away arg: ");
+ 	obj.print(stdout);
+@@ -436,7 +437,7 @@ void PdfParser::go(GBool topLevel) {
+ 
+   // args at end with no command
+   if (numArgs > 0) {
+-    error(getPos(), const_cast<char*>("Leftover args in content stream"));
++    error(errInternal, getPos(), const_cast<char*>("Leftover args in content stream"));
+     if (printCommands) {
+       printf("%d leftovers:", numArgs);
+       for (i = 0; i < numArgs; ++i) {
+@@ -502,7 +503,7 @@ void PdfParser::execOp(Object *cmd, Obje
+   name = cmd->getCmd();
+   if (!(op = findOp(name))) {
+     if (ignoreUndef == 0)
+-      error(getPos(), const_cast<char*>("Unknown operator '%s'"), name);
++      error(errInternal, getPos(), const_cast<char*>("Unknown operator '%s'"), name);
+     return;
+   }
+ 
+@@ -510,26 +511,26 @@ void PdfParser::execOp(Object *cmd, Obje
+   argPtr = args;
+   if (op->numArgs >= 0) {
+     if (numArgs < op->numArgs) {
+-      error(getPos(), const_cast<char*>("Too few (%d) args to '%s' operator"), numArgs, name);
++      error(errInternal, getPos(), const_cast<char*>("Too few (%d) args to '%s' operator"), numArgs, name);
+       return;
+     }
+     if (numArgs > op->numArgs) {
+ #if 0
+-      error(getPos(), "Too many (%d) args to '%s' operator", numArgs, name);
++      error(errInternal, getPos(), "Too many (%d) args to '%s' operator", numArgs, name);
+ #endif
+       argPtr += numArgs - op->numArgs;
+       numArgs = op->numArgs;
+     }
+   } else {
+     if (numArgs > -op->numArgs) {
+-      error(getPos(), const_cast<char*>("Too many (%d) args to '%s' operator"),
++      error(errInternal, getPos(), const_cast<char*>("Too many (%d) args to '%s' operator"),
+ 	    numArgs, name);
+       return;
+     }
+   }
+   for (i = 0; i < numArgs; ++i) {
+     if (!checkArg(&argPtr[i], op->tchk[i])) {
+-      error(getPos(), const_cast<char*>("Arg #%d to '%s' operator is wrong type (%s)"),
++      error(errInternal, getPos(), const_cast<char*>("Arg #%d to '%s' operator is wrong type (%s)"),
+ 	    i, name, argPtr[i].getTypeName());
+       return;
+     }
+@@ -690,7 +691,7 @@ void PdfParser::opSetExtGState(Object ar
+     return;
+   }
+   if (!obj1.isDict()) {
+-    error(getPos(), const_cast<char*>("ExtGState '%s' is wrong type"), args[0].getName());
++    error(errInternal, getPos(), const_cast<char*>("ExtGState '%s' is wrong type"), args[0].getName());
+     obj1.free();
+     return;
+   }
+@@ -705,7 +706,7 @@ void PdfParser::opSetExtGState(Object ar
+     if (state->parseBlendMode(&obj2, &mode)) {
+       state->setBlendMode(mode);
+     } else {
+-      error(getPos(), const_cast<char*>("Invalid blend mode in ExtGState"));
++      error(errInternal, getPos(), const_cast<char*>("Invalid blend mode in ExtGState"));
+     }
+   }
+   obj2.free();
+@@ -764,7 +765,7 @@ void PdfParser::opSetExtGState(Object ar
+       state->setTransfer(funcs);
+     }
+   } else if (!obj2.isNull()) {
+-    error(getPos(), const_cast<char*>("Invalid transfer function in ExtGState"));
++    error(errInternal, getPos(), const_cast<char*>("Invalid transfer function in ExtGState"));
+   }
+   obj2.free();
+ 
+@@ -784,7 +785,7 @@ void PdfParser::opSetExtGState(Object ar
+ 	funcs[0] = Function::parse(&obj3);
+ 	if (funcs[0]->getInputSize() != 1 ||
+ 	    funcs[0]->getOutputSize() != 1) {
+-	  error(getPos(),
++	  error(errInternal, getPos(),
+ 		const_cast<char*>("Invalid transfer function in soft mask in ExtGState"));
+ 	  delete funcs[0];
+ 	  funcs[0] = NULL;
+@@ -840,15 +841,15 @@ void PdfParser::opSetExtGState(Object ar
+ 	    delete funcs[0];
+ 	  }
+ 	} else {
+-	  error(getPos(), const_cast<char*>("Invalid soft mask in ExtGState - missing group"));
++	  error(errInternal, getPos(), const_cast<char*>("Invalid soft mask in ExtGState - missing group"));
+ 	}
+ 	obj4.free();
+       } else {
+-	error(getPos(), const_cast<char*>("Invalid soft mask in ExtGState - missing group"));
++	error(errInternal, getPos(), const_cast<char*>("Invalid soft mask in ExtGState - missing group"));
+       }
+       obj3.free();
+     } else if (!obj2.isNull()) {
+-      error(getPos(), const_cast<char*>("Invalid soft mask in ExtGState"));
++      error(errInternal, getPos(), const_cast<char*>("Invalid soft mask in ExtGState"));
+     }
+   }
+   obj2.free();
+@@ -876,7 +877,7 @@ void PdfParser::doSoftMask(Object *str, 
+   // check form type
+   dict->lookup(const_cast<char*>("FormType"), &obj1);
+   if (!(obj1.isNull() || (obj1.isInt() && obj1.getInt() == 1))) {
+-    error(getPos(), const_cast<char*>("Unknown form type"));
++    error(errInternal, getPos(), const_cast<char*>("Unknown form type"));
+   }
+   obj1.free();
+ 
+@@ -884,7 +885,7 @@ void PdfParser::doSoftMask(Object *str, 
+   dict->lookup(const_cast<char*>("BBox"), &obj1);
+   if (!obj1.isArray()) {
+     obj1.free();
+-    error(getPos(), const_cast<char*>("Bad form bounding box"));
++    error(errInternal, getPos(), const_cast<char*>("Bad form bounding box"));
+     return;
+   }
+   for (i = 0; i < 4; ++i) {
+@@ -1032,7 +1033,7 @@ void PdfParser::opSetFillColorSpace(Obje
+     state->setFillColor(&color);
+     builder->updateStyle(state);
+   } else {
+-    error(getPos(), const_cast<char*>("Bad color space (fill)"));
++    error(errInternal, getPos(), const_cast<char*>("Bad color space (fill)"));
+   }
+ }
+ 
+@@ -1063,7 +1064,7 @@ void PdfParser::opSetStrokeColorSpace(Ob
+     state->setStrokeColor(&color);
+     builder->updateStyle(state);
+   } else {
+-    error(getPos(), const_cast<char*>("Bad color space (stroke)"));
++    error(errInternal, getPos(), const_cast<char*>("Bad color space (stroke)"));
+   }
+ }
+ 
+@@ -1072,7 +1073,7 @@ void PdfParser::opSetFillColor(Object ar
+   int i;
+ 
+   if (numArgs != state->getFillColorSpace()->getNComps()) {
+-    error(getPos(), const_cast<char*>("Incorrect number of arguments in 'sc' command"));
++    error(errInternal, getPos(), const_cast<char*>("Incorrect number of arguments in 'sc' command"));
+     return;
+   }
+   state->setFillPattern(NULL);
+@@ -1088,7 +1089,7 @@ void PdfParser::opSetStrokeColor(Object 
+   int i;
+ 
+   if (numArgs != state->getStrokeColorSpace()->getNComps()) {
+-    error(getPos(), const_cast<char*>("Incorrect number of arguments in 'SC' command"));
++    error(errInternal, getPos(), const_cast<char*>("Incorrect number of arguments in 'SC' command"));
+     return;
+   }
+   state->setStrokePattern(NULL);
+@@ -1109,7 +1110,7 @@ void PdfParser::opSetFillColorN(Object a
+       if (!((GfxPatternColorSpace *)state->getFillColorSpace())->getUnder() ||
+ 	  numArgs - 1 != ((GfxPatternColorSpace *)state->getFillColorSpace())
+ 	                     ->getUnder()->getNComps()) {
+-	error(getPos(), const_cast<char*>("Incorrect number of arguments in 'scn' command"));
++	error(errInternal, getPos(), const_cast<char*>("Incorrect number of arguments in 'scn' command"));
+ 	return;
+       }
+       for (i = 0; i < numArgs - 1 && i < gfxColorMaxComps; ++i) {
+@@ -1136,7 +1137,7 @@ void PdfParser::opSetFillColorN(Object a
+ 
+   } else {
+     if (numArgs != state->getFillColorSpace()->getNComps()) {
+-      error(getPos(), const_cast<char*>("Incorrect number of arguments in 'scn' command"));
++      error(errInternal, getPos(), const_cast<char*>("Incorrect number of arguments in 'scn' command"));
+       return;
+     }
+     state->setFillPattern(NULL);
+@@ -1161,7 +1162,7 @@ void PdfParser::opSetStrokeColorN(Object
+ 	       ->getUnder() ||
+ 	  numArgs - 1 != ((GfxPatternColorSpace *)state->getStrokeColorSpace())
+ 	                     ->getUnder()->getNComps()) {
+-	error(getPos(), const_cast<char*>("Incorrect number of arguments in 'SCN' command"));
++	error(errInternal, getPos(), const_cast<char*>("Incorrect number of arguments in 'SCN' command"));
+ 	return;
+       }
+       for (i = 0; i < numArgs - 1 && i < gfxColorMaxComps; ++i) {
+@@ -1188,7 +1189,7 @@ void PdfParser::opSetStrokeColorN(Object
+ 
+   } else {
+     if (numArgs != state->getStrokeColorSpace()->getNComps()) {
+-      error(getPos(), const_cast<char*>("Incorrect number of arguments in 'SCN' command"));
++      error(errInternal, getPos(), const_cast<char*>("Incorrect number of arguments in 'SCN' command"));
+       return;
+     }
+     state->setStrokePattern(NULL);
+@@ -1212,7 +1213,7 @@ void PdfParser::opMoveTo(Object args[], 
+ 
+ void PdfParser::opLineTo(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    error(getPos(), const_cast<char*>("No current point in lineto"));
++    error(errInternal, getPos(), const_cast<char*>("No current point in lineto"));
+     return;
+   }
+   state->lineTo(args[0].getNum(), args[1].getNum());
+@@ -1222,7 +1223,7 @@ void PdfParser::opCurveTo(Object args[],
+   double x1, y1, x2, y2, x3, y3;
+ 
+   if (!state->isCurPt()) {
+-    error(getPos(), const_cast<char*>("No current point in curveto"));
++    error(errInternal, getPos(), const_cast<char*>("No current point in curveto"));
+     return;
+   }
+   x1 = args[0].getNum();
+@@ -1238,7 +1239,7 @@ void PdfParser::opCurveTo1(Object args[]
+   double x1, y1, x2, y2, x3, y3;
+ 
+   if (!state->isCurPt()) {
+-    error(getPos(), const_cast<char*>("No current point in curveto1"));
++    error(errInternal, getPos(), const_cast<char*>("No current point in curveto1"));
+     return;
+   }
+   x1 = state->getCurX();
+@@ -1254,7 +1255,7 @@ void PdfParser::opCurveTo2(Object args[]
+   double x1, y1, x2, y2, x3, y3;
+ 
+   if (!state->isCurPt()) {
+-    error(getPos(), const_cast<char*>("No current point in curveto2"));
++    error(errInternal, getPos(), const_cast<char*>("No current point in curveto2"));
+     return;
+   }
+   x1 = args[0].getNum();
+@@ -1282,7 +1283,7 @@ void PdfParser::opRectangle(Object args[
+ 
+ void PdfParser::opClosePath(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    error(getPos(), const_cast<char*>("No current point in closepath"));
++    error(errInternal, getPos(), const_cast<char*>("No current point in closepath"));
+     return;
+   }
+   state->closePath();
+@@ -1298,7 +1299,7 @@ void PdfParser::opEndPath(Object args[],
+ 
+ void PdfParser::opStroke(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in stroke"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in stroke"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1314,7 +1315,7 @@ void PdfParser::opStroke(Object args[], 
+ 
+ void PdfParser::opCloseStroke(Object * /*args[]*/, int /*numArgs*/) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in closepath/stroke"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in closepath/stroke"));
+     return;
+   }
+   state->closePath();
+@@ -1331,7 +1332,7 @@ void PdfParser::opCloseStroke(Object * /
+ 
+ void PdfParser::opFill(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in fill"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in fill"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1347,7 +1348,7 @@ void PdfParser::opFill(Object args[], in
+ 
+ void PdfParser::opEOFill(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in eofill"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in eofill"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1363,7 +1364,7 @@ void PdfParser::opEOFill(Object args[], 
+ 
+ void PdfParser::opFillStroke(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in fill/stroke"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in fill/stroke"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1376,7 +1377,7 @@ void PdfParser::opFillStroke(Object args
+ 
+ void PdfParser::opCloseFillStroke(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in closepath/fill/stroke"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in closepath/fill/stroke"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1388,7 +1389,7 @@ void PdfParser::opCloseFillStroke(Object
+ 
+ void PdfParser::opEOFillStroke(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in eofill/stroke"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in eofill/stroke"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1399,7 +1400,7 @@ void PdfParser::opEOFillStroke(Object ar
+ 
+ void PdfParser::opCloseEOFillStroke(Object args[], int numArgs) {
+   if (!state->isCurPt()) {
+-    //error(getPos(), const_cast<char*>("No path in closepath/eofill/stroke"));
++    //error(errInternal, getPos(), const_cast<char*>("No path in closepath/eofill/stroke"));
+     return;
+   }
+   if (state->isPath()) {
+@@ -1440,7 +1441,7 @@ void PdfParser::doPatternFillFallback(GB
+     doShadingPatternFillFallback((GfxShadingPattern *)pattern, gFalse, eoFill);
+     break;
+   default:
+-    error(getPos(), const_cast<char*>("Unimplemented pattern type (%d) in fill"),
++    error(errInternal, getPos(), const_cast<char*>("Unimplemented pattern type (%d) in fill"),
+ 	  pattern->getType());
+     break;
+   }
+@@ -1459,7 +1460,7 @@ void PdfParser::doPatternStrokeFallback(
+     doShadingPatternFillFallback((GfxShadingPattern *)pattern, gTrue, gFalse);
+     break;
+   default:
+-    error(getPos(), const_cast<char*>("Unimplemented pattern type (%d) in stroke"),
++    error(errInternal, getPos(), const_cast<char*>("Unimplemented pattern type (%d) in stroke"),
+ 	  pattern->getType());
+     break;
+   }
+@@ -2156,7 +2157,7 @@ void PdfParser::opTextNextLine(Object ar
+ 
+ void PdfParser::opShowText(Object args[], int numArgs) {
+   if (!state->getFont()) {
+-    error(getPos(), const_cast<char*>("No font in show"));
++    error(errInternal, getPos(), const_cast<char*>("No font in show"));
+     return;
+   }
+   if (fontChanged) {
+@@ -2170,7 +2171,7 @@ void PdfParser::opMoveShowText(Object ar
+   double tx, ty;
+ 
+   if (!state->getFont()) {
+-    error(getPos(), const_cast<char*>("No font in move/show"));
++    error(errInternal, getPos(), const_cast<char*>("No font in move/show"));
+     return;
+   }
+   if (fontChanged) {
+@@ -2188,7 +2189,7 @@ void PdfParser::opMoveSetShowText(Object
+   double tx, ty;
+ 
+   if (!state->getFont()) {
+-    error(getPos(), const_cast<char*>("No font in move/set/show"));
++    error(errInternal, getPos(), const_cast<char*>("No font in move/set/show"));
+     return;
+   }
+   if (fontChanged) {
+@@ -2211,7 +2212,7 @@ void PdfParser::opShowSpaceText(Object a
+   int i;
+ 
+   if (!state->getFont()) {
+-    error(getPos(), const_cast<char*>("No font in show/space"));
++    error(errInternal, getPos(), const_cast<char*>("No font in show/space"));
+     return;
+   }
+   if (fontChanged) {
+@@ -2236,7 +2237,7 @@ void PdfParser::opShowSpaceText(Object a
+     } else if (obj.isString()) {
+       doShowText(obj.getString());
+     } else {
+-      error(getPos(), const_cast<char*>("Element of show/space array must be number or string"));
++      error(errInternal, getPos(), const_cast<char*>("Element of show/space array must be number or string"));
+     }
+     obj.free();
+   }
+@@ -2334,7 +2335,7 @@ void PdfParser::doShowText(GooString *s)
+ 	if (charProc.isStream()) {
+ 	  //parse(&charProc, gFalse); // TODO: parse into SVG font
+ 	} else {
+-	  error(getPos(), const_cast<char*>("Missing or bad Type3 CharProc entry"));
++	  error(errInternal, getPos(), const_cast<char*>("Missing or bad Type3 CharProc entry"));
+ 	}
+ 	//out->endType3Char(state);
+ 	if (resDict) {
+@@ -2410,7 +2411,7 @@ void PdfParser::opXObject(Object args[],
+     return;
+   }
+   if (!obj1.isStream()) {
+-    error(getPos(), const_cast<char*>("XObject '%s' is wrong type"), name);
++    error(errInternal, getPos(), const_cast<char*>("XObject '%s' is wrong type"), name);
+     obj1.free();
+     return;
+   }
+@@ -2426,9 +2427,9 @@ void PdfParser::opXObject(Object args[],
+ /*    out->psXObject(obj1.getStream(),
+     		   obj3.isStream() ? obj3.getStream() : (Stream *)NULL);*/
+   } else if (obj2.isName()) {
+-    error(getPos(), const_cast<char*>("Unknown XObject subtype '%s'"), obj2.getName());
++    error(errInternal, getPos(), const_cast<char*>("Unknown XObject subtype '%s'"), obj2.getName());
+   } else {
+-    error(getPos(), const_cast<char*>("XObject subtype is missing or wrong type"));
++    error(errInternal, getPos(), const_cast<char*>("XObject subtype is missing or wrong type"));
+   }
+   obj2.free();
+   obj1.free();
+@@ -2758,7 +2759,7 @@ void PdfParser::doImage(Object *ref, Str
+  err2:
+   obj1.free();
+  err1:
+-  error(getPos(), const_cast<char*>("Bad image parameters"));
++  error(errInternal, getPos(), const_cast<char*>("Bad image parameters"));
+ }
+ 
+ void PdfParser::doForm(Object *str) {
+@@ -2783,7 +2784,7 @@ void PdfParser::doForm(Object *str) {
+   // check form type
+   dict->lookup(const_cast<char*>("FormType"), &obj1);
+   if (!(obj1.isNull() || (obj1.isInt() && obj1.getInt() == 1))) {
+-    error(getPos(), const_cast<char*>("Unknown form type"));
++    error(errInternal, getPos(), const_cast<char*>("Unknown form type"));
+   }
+   obj1.free();
+ 
+@@ -2791,7 +2792,7 @@ void PdfParser::doForm(Object *str) {
+   dict->lookup(const_cast<char*>("BBox"), &bboxObj);
+   if (!bboxObj.isArray()) {
+     bboxObj.free();
+-    error(getPos(), const_cast<char*>("Bad form bounding box"));
++    error(errInternal, getPos(), const_cast<char*>("Bad form bounding box"));
+     return;
+   }
+   for (i = 0; i < 4; ++i) {
+@@ -2990,7 +2991,7 @@ Stream *PdfParser::buildImageStream() {
+   parser->getObj(&obj);
+   while (!obj.isCmd(const_cast<char*>("ID")) && !obj.isEOF()) {
+     if (!obj.isName()) {
+-      error(getPos(), const_cast<char*>("Inline image dictionary key must be a name object"));
++      error(errInternal, getPos(), const_cast<char*>("Inline image dictionary key must be a name object"));
+       obj.free();
+     } else {
+       key = copyString(obj.getName());
+@@ -3005,7 +3006,7 @@ Stream *PdfParser::buildImageStream() {
+     parser->getObj(&obj);
+   }
+   if (obj.isEOF()) {
+-    error(getPos(), const_cast<char*>("End of file in inline image"));
++    error(errInternal, getPos(), const_cast<char*>("End of file in inline image"));
+     obj.free();
+     dict.free();
+     return NULL;
+@@ -3020,11 +3021,11 @@ Stream *PdfParser::buildImageStream() {
+ }
+ 
+ void PdfParser::opImageData(Object args[], int numArgs) {
+-  error(getPos(), const_cast<char*>("Internal: got 'ID' operator"));
++  error(errInternal, getPos(), const_cast<char*>("Internal: got 'ID' operator"));
+ }
+ 
+ void PdfParser::opEndImage(Object args[], int numArgs) {
+-  error(getPos(), const_cast<char*>("Internal: got 'EI' operator"));
++  error(errInternal, getPos(), const_cast<char*>("Internal: got 'EI' operator"));
+ }
+ 
+ //------------------------------------------------------------------------
