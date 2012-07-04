@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2012/07/04 20:15:46 drochner Exp $
+
+--- cpp/tests/Makefile.in.orig	2011-06-27 18:45:14.000000000 +0000
++++ cpp/tests/Makefile.in
+@@ -300,7 +300,7 @@ INCLUDES = \
+ 	-I$(top_srcdir)/cpp
+ 
+ LDADDS = \
+-	$(top_builddir)/poppler/libpoppler.la	\
++	$(prefix)/lib/libpoppler.la	\
+ 	$(top_builddir)/cpp/libpoppler-cpp.la
+ 
+ poppler_dump_SOURCES = \
