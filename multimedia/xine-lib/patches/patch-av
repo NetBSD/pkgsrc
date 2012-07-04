@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.10 2012/07/02 16:27:11 drochner Exp $
+$NetBSD: patch-av,v 1.11 2012/07/04 11:05:30 drochner Exp $
 
 --- src/post/deinterlace/plugins/greedy2frame_template_sse2.c.orig	2012-06-26 15:57:44.000000000 +0000
 +++ src/post/deinterlace/plugins/greedy2frame_template_sse2.c
@@ -35,8 +35,8 @@ $NetBSD: patch-av,v 1.10 2012/07/02 16:27:11 drochner Exp $
  
 -            "prefetcht0  64(%q5,%3)		\n\t"
 -            "prefetcht0  64(%q5,%4)		\n\t"
++            "prefetcht0  64(%q4,%2)		\n\t"
 +            "prefetcht0  64(%q4,%3)		\n\t"
-+            "prefetcht0  64(%q4,%4)		\n\t"
            :
 -          : "r" (M1), "m" (GreedyTwoFrameThreshold128),
 +          : "m" (GreedyTwoFrameThreshold128),
