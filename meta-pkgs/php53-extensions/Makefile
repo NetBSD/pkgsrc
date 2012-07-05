@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/16 05:44:03 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/05 09:48:49 cheusov Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_BASE_VERS}
 PKGREVISION=	3
@@ -63,7 +63,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}<${NEXT_VERS}:../../archivers/p
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}<${NEXT_VERS}:../../archivers/php-zlib
 
 NEXT_VERS=		5.4
-PHP_VERSION_REQD=	53
+PHP_VERSIONS_ACCEPTED=	53
 META_PACKAGE=		yes
 
 .include "../../lang/php/phpversion.mk"
