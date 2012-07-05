@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:13:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/05 15:44:07 drochner Exp $
 #
 
 DISTNAME=	openvas-plugins-1.0.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/539/
 

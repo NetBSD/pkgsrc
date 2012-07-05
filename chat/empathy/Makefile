@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2012/06/14 07:43:11 sbd Exp $
+# $NetBSD: Makefile,v 1.38 2012/07/05 15:44:06 drochner Exp $
 
 DISTNAME=	empathy-2.34.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	chat gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.34/}
 
