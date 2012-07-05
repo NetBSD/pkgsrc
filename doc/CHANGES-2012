@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2135 2012/07/05 16:40:29 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2136 2012/07/05 16:49:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3370,3 +3370,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added converters/p5-JSON-PP version 2.27200 [sno 2012-07-05]
 	Updated devel/p5-Parse-CPAN-Meta to 1.4404 [sno 2012-07-05]
 	Updated devel/p5-CPAN-Meta to 2.120921 [sno 2012-07-05]
+	Updated databases/p5-DBI to 1.622 [sno 2012-07-05]
