@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2115 2012/07/05 12:53:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2116 2012/07/05 12:55:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Role-Identifiable version 0.005 [sno 2012-07-05]
 	Added devel/p5-Config-MVP version 2.200002 [sno 2012-07-05]
 	Updated www/apache24 to 2.4.2nb2 [ryoon 2012-07-05]
+	Updated devel/p5-File-ShareDir-Install to 0.04 [sno 2012-07-05]
