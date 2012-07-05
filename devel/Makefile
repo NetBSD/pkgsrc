@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1617 2012/07/05 14:11:55 sno Exp $
+# $NetBSD: Makefile,v 1.1618 2012/07/05 14:27:48 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -945,6 +945,7 @@ SUBDIR+=	p5-MooseX-Types-Common
 SUBDIR+=	p5-MooseX-Types-JSON
 SUBDIR+=	p5-MooseX-Types-LoadableClass
 SUBDIR+=	p5-MooseX-Types-Path-Class
+SUBDIR+=	p5-MooseX-Types-Perl
 SUBDIR+=	p5-MooseX-Types-Structured
 SUBDIR+=	p5-MooseX-Types-URI
 SUBDIR+=	p5-Mouse
