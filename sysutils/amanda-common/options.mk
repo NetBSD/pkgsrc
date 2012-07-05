@@ -1,13 +1,18 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:03 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2012/07/05 06:57:45 sbd Exp $
 
 # Since amanda's ipv6 usage is broken, turn it off by default.
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
+# Common options.
 PKG_SUPPORTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh
 PKG_SUGGESTED_OPTIONS+=	inet6 amanda-ssh
+# Client options.
+PKG_SUPPORTED_OPTIONS+=	amanda-smb amanda-dump-snap
 
 PKG_OPTIONS_LEGACY_VARS+=	AMANDA_FQDN:amanda-fqdn
 PKG_OPTIONS_LEGACY_VARS+=	AMANDA_SSH:amanda-ssh
+PKG_OPTIONS_LEGACY_VARS+=	AMANDA_SMB:amanda-smb
+PKG_OPTIONS_LEGACY_VARS+=	AMANDA_DUMP_SNAP:amanda-dump-snap
 
 .include "../../mk/bsd.options.mk"
 
