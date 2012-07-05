@@ -1,0 +1,3 @@
+Sub::Exporter::GlobExporter allows the glob-exporting package to be
+subclassed, for for the subclass to choose to re-use the same glob
+when exporting or to export a new one.
