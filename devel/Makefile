@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1607 2012/07/05 09:06:28 sno Exp $
+# $NetBSD: Makefile,v 1.1608 2012/07/05 09:29:39 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -555,6 +555,7 @@ SUBDIR+=	p5-CPAN-Meta-Requirements
 SUBDIR+=	p5-CPAN-Meta-YAML
 SUBDIR+=	p5-CPAN-Perl-Releases
 SUBDIR+=	p5-CPAN-Reporter
+SUBDIR+=	p5-CPAN-Uploader
 SUBDIR+=	p5-Cache
 SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Cache-FastMmap
