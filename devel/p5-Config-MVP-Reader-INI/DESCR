@@ -1,0 +1,1 @@
+Config::MVP::Reader::INI reads .ini files containing MVP-style configuration.
