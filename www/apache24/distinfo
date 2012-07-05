@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/07/05 12:50:44 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2012/07/05 13:11:24 ryoon Exp $
 
 SHA1 (httpd-2.4.2.tar.bz2) = 8d391db515edfb6623c0c7c6ce5c1b2e1f7c64c2
 RMD160 (httpd-2.4.2.tar.bz2) = 1b97ab44075bea0f398f507dacb5f719a87b720b
@@ -13,5 +13,5 @@ SHA1 (patch-ai) = 867ac81fd14b1bd6af048ec57390d915956e9568
 SHA1 (patch-al) = 02d9ade5aac4270182063d5ad413970c832ee911
 SHA1 (patch-am) = f14b260ffad2c7e8d26e5b614d4aeaf8506e195b
 SHA1 (patch-aw) = 43cd64df886853ef7b75b91ed20183f329fcc9df
-SHA1 (patch-modules_ssl_ssl__private.h) = 67bb0ec17c4e29cd855467e3cc135bf6a44eb458
+SHA1 (patch-modules_ssl_ssl__private.h) = 7629d447c4030493e1cc3352da448c310962d45e
 SHA1 (patch-server_core__filters.c) = 331672c9a65691229518f31dcdae64382b392287
