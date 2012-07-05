@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2139 2012/07/05 18:31:15 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.2140 2012/07/05 19:19:59 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3374,3 +3374,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Config-MVP-Reader-INI version 2.101461 [sno 2012-07-05]
 	Added devel/p5-Dist-Zilla version 4.300020 [sno 2012-07-05]
 	Updated mail/qmHandle to 1.3.2 [schmonz 2012-07-05]
+	Updated math/octave to 3.6.2 [asau 2012-07-05]
