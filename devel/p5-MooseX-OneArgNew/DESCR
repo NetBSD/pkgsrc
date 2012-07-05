@@ -1,0 +1,12 @@
+MooseX::OneArgNew lets your constructor take a single argument, which
+will be translated into the value for a one-entry hashref. It is a
+parameterized role with two parameters:
+
+type
+    The Moose type that the single argument must be for the one-arg form
+    to work. This should be an existing type, and may be either a string
+    type or a MooseX::Type.
+
+init_arg
+    This is the string that will be used as the key for the hashref
+    constructed from the one-arg call to new.
