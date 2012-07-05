@@ -1,0 +1,11 @@
+The scanner will extract loosely your distribution prerequisites from your
+files.
+
+The extraction may not be perfect but tries to do its best. It will
+currently find the following prereqs:
+    * plain lines beginning with use or require in your perl modules and
+      scripts, including minimum perl version
+    * regular inheritance declared with the base and parent pragmata
+    * Moose inheritance declared with the extends keyword
+    * Moose roles included with the with keyword
+    * OO namespace aliasing using the aliased module
