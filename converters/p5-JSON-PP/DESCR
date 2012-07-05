@@ -1,0 +1,6 @@
+This module is JSON::XS compatible pure Perl module. (Perl 5.8 or later
+is recommended).  JSON::XS is the fastest and most proper JSON module on
+CPAN. It is written by Marc Lehmann in C, so must be compiled and
+installed in the used environment.
+
+JSON::PP is a pure-Perl module and has compatibility to JSON::XS.
