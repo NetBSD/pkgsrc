@@ -1,0 +1,2 @@
+MooseX::Types::Perl provides Moose types for checking things (mostly
+strings) against syntax that is, or is a reasonable subset of, Perl syntax.
