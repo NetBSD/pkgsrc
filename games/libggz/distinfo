@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/25 23:09:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/07/05 10:33:06 drochner Exp $
 
 SHA1 (libggz-0.0.14.1.tar.gz) = 8a602e60606c89fd13ad93bb84a8be466fd457ef
 RMD160 (libggz-0.0.14.1.tar.gz) = 5136aba62a4e988d97451b00193c10189f7265f2
 Size (libggz-0.0.14.1.tar.gz) = 477382 bytes
+SHA1 (patch-aa) = 58afba0306d2609d7426c18e581caf25accf49a3
