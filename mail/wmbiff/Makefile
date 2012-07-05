@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/07/03 10:16:20 tron Exp $
+# $NetBSD: Makefile,v 1.46 2012/07/05 10:30:58 drochner Exp $
 
 DISTNAME=	wmbiff-0.4.26
 PKGREVISION=	15
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wmbiff/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/wmbiff/
 COMMENT=	xbuffy like "mail-checker" for WindowMaker
-
-BROKEN=		wmbiff doesn't build with GnuTLS 3.0.
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
