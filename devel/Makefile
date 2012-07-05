@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1613 2012/07/05 12:57:07 sno Exp $
+# $NetBSD: Makefile,v 1.1614 2012/07/05 13:09:24 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -793,6 +793,7 @@ SUBDIR+=	p5-Hash-Case
 SUBDIR+=	p5-Hash-FieldHash
 SUBDIR+=	p5-Hash-Flatten
 SUBDIR+=	p5-Hash-Merge
+SUBDIR+=	p5-Hash-Merge-Simple
 SUBDIR+=	p5-Hash-MoreUtils
 SUBDIR+=	p5-Hash-MultiValue
 SUBDIR+=	p5-Hash-Util-FieldHash-Compat
