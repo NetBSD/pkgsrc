@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/05/21 04:27:09 sbd Exp $
+# $NetBSD: Makefile,v 1.50 2012/07/05 06:57:44 sbd Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
@@ -11,11 +11,6 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		awk:run perl:run
-
-PKG_SUPPORTED_OPTIONS+=		amanda-smb amanda-dump-snap
-
-PKG_OPTIONS_LEGACY_VARS+=	AMANDA_SMB:amanda-smb
-PKG_OPTIONS_LEGACY_VARS+=	AMANDA_DUMP_SNAP:amanda-dump-snap
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
