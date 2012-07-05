@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2107 2012/07/05 09:06:28 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2108 2012/07/05 09:28:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/libgnome-keyring to 3.4.1 [drochner 2012-07-04]
 	Updated print/poppler to 0.20.1 [drochner 2012-07-04]
 	Added devel/p5-CPAN-Meta-Requirements version 2.122 [sno 2012-07-05]
+	Added devel/p5-CPAN-Uploader version 0.103001 [sno 2012-07-05]
