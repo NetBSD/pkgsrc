@@ -1,0 +1,6 @@
+String::Formatter is a tool for building sprintf-like formatting routines.
+It supports named or positional formatting, custom conversions, fixed
+string interpolation, and simple width-matching out of the box. It is easy
+to alter its behavior to write new kinds of format string expanders. For
+most cases, it should be easy to build all sorts of formatters out of the
+options built into String::Formatter.
