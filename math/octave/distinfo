@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.32 2012/03/23 22:32:59 christos Exp $
+$NetBSD: distinfo,v 1.33 2012/07/05 19:18:29 asau Exp $
 
-SHA1 (octave-3.4.3.tar.bz2) = fe622c28a38f8730c59e46211bc7b18e7f51a679
-RMD160 (octave-3.4.3.tar.bz2) = d6f43fca9097b40f163c140db853d8ac1383ab39
-Size (octave-3.4.3.tar.bz2) = 15085117 bytes
+SHA1 (octave-3.6.2.tar.bz2) = 145fef0122268086727a60e1c33e29d56fd546d7
+RMD160 (octave-3.6.2.tar.bz2) = 1bf26b238d2bba461c5902d091088533c733439b
+Size (octave-3.6.2.tar.bz2) = 15418829 bytes
 SHA1 (patch-fflush-fpos_t.c) = 24ed7f95f8431b59bc5ee0dfb0e6624b8029f512
 SHA1 (patch-fseeko-fpos_t.c) = ca846a014f9adfd47f7bbcf6557bf26a53f4a8e9
-SHA1 (patch-libcruft_arpack_util_second.f) = 47d7e33f7fd3c74c737935c6ecac88fee350519f
 SHA1 (patch-libgnu_string.in.h) = 4af39b76faa3ac90454a9d664919b7a6cd45fa9d
 SHA1 (patch-liboctave_oct-time.cc) = 40c21f509b6c95942e6ba43c52494d1d707ed515
 SHA1 (patch-src_oct-conf.h.in) = d3fa5166db289fbd9eba355911341e891fb6d822

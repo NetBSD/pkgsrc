@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/12/24 23:46:02 asau Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/07/05 19:18:29 asau Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -88,6 +88,7 @@ include/${PKGNAME}/octave/boolNDArray.h
 include/${PKGNAME}/octave/boolSparse.h
 include/${PKGNAME}/octave/bsxfun-decl.h
 include/${PKGNAME}/octave/bsxfun-defs.cc
+include/${PKGNAME}/octave/bsxfun.h
 include/${PKGNAME}/octave/builtins.h
 include/${PKGNAME}/octave/byte-swap.h
 include/${PKGNAME}/octave/c-file-ptr-stream.h
@@ -106,6 +107,7 @@ include/${PKGNAME}/octave/dNDArray.h
 include/${PKGNAME}/octave/dRowVector.h
 include/${PKGNAME}/octave/dSparse.h
 include/${PKGNAME}/octave/data-conv.h
+include/${PKGNAME}/octave/data.h
 include/${PKGNAME}/octave/dbleAEPBAL.h
 include/${PKGNAME}/octave/dbleCHOL.h
 include/${PKGNAME}/octave/dbleGEPBAL.h
@@ -628,6 +630,7 @@ include/${PKGNAME}/octave/ov-intx.h
 include/${PKGNAME}/octave/ov-lazy-idx.h
 include/${PKGNAME}/octave/ov-mex-fcn.h
 include/${PKGNAME}/octave/ov-null-mat.h
+include/${PKGNAME}/octave/ov-oncleanup.h
 include/${PKGNAME}/octave/ov-perm.h
 include/${PKGNAME}/octave/ov-range.h
 include/${PKGNAME}/octave/ov-re-diag.h
@@ -650,6 +653,7 @@ include/${PKGNAME}/octave/pathlen.h
 include/${PKGNAME}/octave/pathsearch.h
 include/${PKGNAME}/octave/pr-output.h
 include/${PKGNAME}/octave/procstream.h
+include/${PKGNAME}/octave/profiler.h
 include/${PKGNAME}/octave/pt-all.h
 include/${PKGNAME}/octave/pt-arg-list.h
 include/${PKGNAME}/octave/pt-assign.h
@@ -682,9 +686,10 @@ include/${PKGNAME}/octave/quit.h
 include/${PKGNAME}/octave/randgamma.h
 include/${PKGNAME}/octave/randmtzig.h
 include/${PKGNAME}/octave/randpoisson.h
-include/${PKGNAME}/octave/regex-match.h
+include/${PKGNAME}/octave/regexp.h
 include/${PKGNAME}/octave/sighandlers.h
 include/${PKGNAME}/octave/siglist.h
+include/${PKGNAME}/octave/singleton-cleanup.h
 include/${PKGNAME}/octave/smx-bm-sbm.h
 include/${PKGNAME}/octave/smx-cm-scm.h
 include/${PKGNAME}/octave/smx-cm-sm.h
@@ -760,6 +765,7 @@ include/${PKGNAME}/octave/zfstream.h
 info/OctaveFAQ.info
 info/liboctave.info
 info/octave.info
+lib/charset.alias
 lib/octave/${PKGVERSION}/__contourc__.a
 lib/octave/${PKGVERSION}/__delaunayn__.a
 lib/octave/${PKGVERSION}/__dispatch__.a
@@ -767,6 +773,7 @@ lib/octave/${PKGVERSION}/__dsearchn__.a
 lib/octave/${PKGVERSION}/__fltk_uigetfile__.a
 lib/octave/${PKGVERSION}/__glpk__.a
 lib/octave/${PKGVERSION}/__init_fltk__.a
+lib/octave/${PKGVERSION}/__init_gnuplot__.a
 lib/octave/${PKGVERSION}/__lin_interpn__.a
 lib/octave/${PKGVERSION}/__magick_read__.a
 lib/octave/${PKGVERSION}/__pchip_deriv__.a
@@ -829,6 +836,7 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__dsearchn__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__fltk_uigetfile__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__glpk__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_fltk__.oct
+lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_gnuplot__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__lin_interpn__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__magick_read__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__pchip_deriv__.oct
@@ -880,7 +888,6 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/max.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/md5sum.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/mgorth.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/nproc.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/onCleanup.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/pinv.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad.oct
@@ -904,7 +911,6 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/tril.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/tsearch.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/typecast.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/urlwrite.oct
-lib/octave/${PKGVERSION}/onCleanup.a
 lib/octave/${PKGVERSION}/pinv.a
 lib/octave/${PKGVERSION}/qr.a
 lib/octave/${PKGVERSION}/quad.a
@@ -963,60 +969,35 @@ share/octave/${PKGVERSION}/m/audio/saveaudio.m
 share/octave/${PKGVERSION}/m/audio/setaudio.m
 share/octave/${PKGVERSION}/m/audio/wavread.m
 share/octave/${PKGVERSION}/m/audio/wavwrite.m
+share/octave/${PKGVERSION}/m/deprecated/__error_text__.m
 share/octave/${PKGVERSION}/m/deprecated/autocor.m
 share/octave/${PKGVERSION}/m/deprecated/autocov.m
 share/octave/${PKGVERSION}/m/deprecated/betai.m
 share/octave/${PKGVERSION}/m/deprecated/cellidx.m
 share/octave/${PKGVERSION}/m/deprecated/clg.m
-share/octave/${PKGVERSION}/m/deprecated/complement.m
+share/octave/${PKGVERSION}/m/deprecated/cor.m
+share/octave/${PKGVERSION}/m/deprecated/corrcoef.m
 share/octave/${PKGVERSION}/m/deprecated/cquad.m
-share/octave/${PKGVERSION}/m/deprecated/create_set.m
+share/octave/${PKGVERSION}/m/deprecated/cut.m
 share/octave/${PKGVERSION}/m/deprecated/dispatch.m
-share/octave/${PKGVERSION}/m/deprecated/dmult.m
+share/octave/${PKGVERSION}/m/deprecated/error_text.m
 share/octave/${PKGVERSION}/m/deprecated/fstat.m
 share/octave/${PKGVERSION}/m/deprecated/gammai.m
 share/octave/${PKGVERSION}/m/deprecated/glpkmex.m
 share/octave/${PKGVERSION}/m/deprecated/intwarning.m
 share/octave/${PKGVERSION}/m/deprecated/is_duplicate_entry.m
 share/octave/${PKGVERSION}/m/deprecated/is_global.m
-share/octave/${PKGVERSION}/m/deprecated/iscommand.m
-share/octave/${PKGVERSION}/m/deprecated/israwcommand.m
 share/octave/${PKGVERSION}/m/deprecated/isstr.m
 share/octave/${PKGVERSION}/m/deprecated/krylovb.m
-share/octave/${PKGVERSION}/m/deprecated/lchol.m
-share/octave/${PKGVERSION}/m/deprecated/loadimage.m
-share/octave/${PKGVERSION}/m/deprecated/mark_as_command.m
-share/octave/${PKGVERSION}/m/deprecated/mark_as_rawcommand.m
 share/octave/${PKGVERSION}/m/deprecated/perror.m
+share/octave/${PKGVERSION}/m/deprecated/polyderiv.m
 share/octave/${PKGVERSION}/m/deprecated/replot.m
 share/octave/${PKGVERSION}/m/deprecated/saveimage.m
 share/octave/${PKGVERSION}/m/deprecated/setstr.m
-share/octave/${PKGVERSION}/m/deprecated/spatan2.m
-share/octave/${PKGVERSION}/m/deprecated/spchol.m
-share/octave/${PKGVERSION}/m/deprecated/spchol2inv.m
-share/octave/${PKGVERSION}/m/deprecated/spcholinv.m
-share/octave/${PKGVERSION}/m/deprecated/spcumprod.m
-share/octave/${PKGVERSION}/m/deprecated/spcumsum.m
-share/octave/${PKGVERSION}/m/deprecated/spdet.m
-share/octave/${PKGVERSION}/m/deprecated/spdiag.m
-share/octave/${PKGVERSION}/m/deprecated/spfind.m
-share/octave/${PKGVERSION}/m/deprecated/sphcat.m
-share/octave/${PKGVERSION}/m/deprecated/spinv.m
-share/octave/${PKGVERSION}/m/deprecated/spkron.m
-share/octave/${PKGVERSION}/m/deprecated/splchol.m
-share/octave/${PKGVERSION}/m/deprecated/split.m
-share/octave/${PKGVERSION}/m/deprecated/splu.m
-share/octave/${PKGVERSION}/m/deprecated/spmax.m
-share/octave/${PKGVERSION}/m/deprecated/spmin.m
-share/octave/${PKGVERSION}/m/deprecated/spprod.m
-share/octave/${PKGVERSION}/m/deprecated/spqr.m
-share/octave/${PKGVERSION}/m/deprecated/spsum.m
-share/octave/${PKGVERSION}/m/deprecated/spsumsq.m
-share/octave/${PKGVERSION}/m/deprecated/spvcat.m
-share/octave/${PKGVERSION}/m/deprecated/str2mat.m
+share/octave/${PKGVERSION}/m/deprecated/shell_cmd.m
 share/octave/${PKGVERSION}/m/deprecated/strerror.m
-share/octave/${PKGVERSION}/m/deprecated/unmark_command.m
-share/octave/${PKGVERSION}/m/deprecated/unmark_rawcommand.m
+share/octave/${PKGVERSION}/m/deprecated/studentize.m
+share/octave/${PKGVERSION}/m/deprecated/sylvester_matrix.m
 share/octave/${PKGVERSION}/m/deprecated/values.m
 share/octave/${PKGVERSION}/m/deprecated/weibcdf.m
 share/octave/${PKGVERSION}/m/deprecated/weibinv.m
@@ -1041,7 +1022,6 @@ share/octave/${PKGVERSION}/m/elfun/coth.m
 share/octave/${PKGVERSION}/m/elfun/csc.m
 share/octave/${PKGVERSION}/m/elfun/cscd.m
 share/octave/${PKGVERSION}/m/elfun/csch.m
-share/octave/${PKGVERSION}/m/elfun/lcm.m
 share/octave/${PKGVERSION}/m/elfun/sec.m
 share/octave/${PKGVERSION}/m/elfun/secd.m
 share/octave/${PKGVERSION}/m/elfun/sech.m
@@ -1049,7 +1029,6 @@ share/octave/${PKGVERSION}/m/elfun/sind.m
 share/octave/${PKGVERSION}/m/elfun/tand.m
 share/octave/${PKGVERSION}/m/general/accumarray.m
 share/octave/${PKGVERSION}/m/general/accumdim.m
-share/octave/${PKGVERSION}/m/general/arrayfun.m
 share/octave/${PKGVERSION}/m/general/bicubic.m
 share/octave/${PKGVERSION}/m/general/bitcmp.m
 share/octave/${PKGVERSION}/m/general/bitget.m
@@ -1096,8 +1075,10 @@ share/octave/${PKGVERSION}/m/general/isvector.m
 share/octave/${PKGVERSION}/m/general/loadobj.m
 share/octave/${PKGVERSION}/m/general/logspace.m
 share/octave/${PKGVERSION}/m/general/nargchk.m
+share/octave/${PKGVERSION}/m/general/narginchk.m
 share/octave/${PKGVERSION}/m/general/nargoutchk.m
 share/octave/${PKGVERSION}/m/general/nextpow2.m
+share/octave/${PKGVERSION}/m/general/nthargout.m
 share/octave/${PKGVERSION}/m/general/num2str.m
 share/octave/${PKGVERSION}/m/general/pol2cart.m
 share/octave/${PKGVERSION}/m/general/polyarea.m
@@ -1105,6 +1086,9 @@ share/octave/${PKGVERSION}/m/general/postpad.m
 share/octave/${PKGVERSION}/m/general/prepad.m
 share/octave/${PKGVERSION}/m/general/private/__isequal__.m
 share/octave/${PKGVERSION}/m/general/private/__splinen__.m
+share/octave/${PKGVERSION}/m/general/profexplore.m
+share/octave/${PKGVERSION}/m/general/profile.m
+share/octave/${PKGVERSION}/m/general/profshow.m
 share/octave/${PKGVERSION}/m/general/quadgk.m
 share/octave/${PKGVERSION}/m/general/quadl.m
 share/octave/${PKGVERSION}/m/general/quadv.m
@@ -1133,14 +1117,10 @@ share/octave/${PKGVERSION}/m/geometry/griddata3.m
 share/octave/${PKGVERSION}/m/geometry/griddatan.m
 share/octave/${PKGVERSION}/m/geometry/inpolygon.m
 share/octave/${PKGVERSION}/m/geometry/rectint.m
-share/octave/${PKGVERSION}/m/geometry/trimesh.m
-share/octave/${PKGVERSION}/m/geometry/triplot.m
-share/octave/${PKGVERSION}/m/geometry/trisurf.m
 share/octave/${PKGVERSION}/m/geometry/tsearchn.m
 share/octave/${PKGVERSION}/m/geometry/voronoi.m
 share/octave/${PKGVERSION}/m/geometry/voronoin.m
 share/octave/${PKGVERSION}/m/help/__makeinfo__.m
-share/octave/${PKGVERSION}/m/help/__strip_html_tags__.m
 share/octave/${PKGVERSION}/m/help/doc.m
 share/octave/${PKGVERSION}/m/help/gen_doc_cache.m
 share/octave/${PKGVERSION}/m/help/get_first_help_sentence.m
@@ -1148,7 +1128,9 @@ share/octave/${PKGVERSION}/m/help/help.m
 share/octave/${PKGVERSION}/m/help/lookfor.m
 share/octave/${PKGVERSION}/m/help/print_usage.m
 share/octave/${PKGVERSION}/m/help/private/__additional_help_message__.m
+share/octave/${PKGVERSION}/m/help/private/__strip_html_tags__.m
 share/octave/${PKGVERSION}/m/help/type.m
+share/octave/${PKGVERSION}/m/help/unimplemented.m
 share/octave/${PKGVERSION}/m/help/which.m
 share/octave/${PKGVERSION}/m/image/autumn.m
 share/octave/${PKGVERSION}/m/image/bone.m
@@ -1200,7 +1182,6 @@ share/octave/${PKGVERSION}/m/linear-algebra/condest.m
 share/octave/${PKGVERSION}/m/linear-algebra/cross.m
 share/octave/${PKGVERSION}/m/linear-algebra/duplication_matrix.m
 share/octave/${PKGVERSION}/m/linear-algebra/expm.m
-share/octave/${PKGVERSION}/m/linear-algebra/gmres.m
 share/octave/${PKGVERSION}/m/linear-algebra/housh.m
 share/octave/${PKGVERSION}/m/linear-algebra/isdefinite.m
 share/octave/${PKGVERSION}/m/linear-algebra/ishermitian.m
@@ -1234,6 +1215,7 @@ share/octave/${PKGVERSION}/m/miscellaneous/dir.m
 share/octave/${PKGVERSION}/m/miscellaneous/dos.m
 share/octave/${PKGVERSION}/m/miscellaneous/dump_prefs.m
 share/octave/${PKGVERSION}/m/miscellaneous/edit.m
+share/octave/${PKGVERSION}/m/miscellaneous/fact.m
 share/octave/${PKGVERSION}/m/miscellaneous/fileattrib.m
 share/octave/${PKGVERSION}/m/miscellaneous/fileparts.m
 share/octave/${PKGVERSION}/m/miscellaneous/fullfile.m
@@ -1265,6 +1247,8 @@ share/octave/${PKGVERSION}/m/miscellaneous/paren.m
 share/octave/${PKGVERSION}/m/miscellaneous/parseparams.m
 share/octave/${PKGVERSION}/m/miscellaneous/perl.m
 share/octave/${PKGVERSION}/m/miscellaneous/private/__xzip__.m
+share/octave/${PKGVERSION}/m/miscellaneous/python.m
+share/octave/${PKGVERSION}/m/miscellaneous/recycle.m
 share/octave/${PKGVERSION}/m/miscellaneous/rmappdata.m
 share/octave/${PKGVERSION}/m/miscellaneous/run.m
 share/octave/${PKGVERSION}/m/miscellaneous/semicolon.m
@@ -1276,11 +1260,11 @@ share/octave/${PKGVERSION}/m/miscellaneous/symvar.m
 share/octave/${PKGVERSION}/m/miscellaneous/tar.m
 share/octave/${PKGVERSION}/m/miscellaneous/tempdir.m
 share/octave/${PKGVERSION}/m/miscellaneous/tempname.m
-share/octave/${PKGVERSION}/m/miscellaneous/unimplemented.m
 share/octave/${PKGVERSION}/m/miscellaneous/unix.m
 share/octave/${PKGVERSION}/m/miscellaneous/unpack.m
 share/octave/${PKGVERSION}/m/miscellaneous/untar.m
 share/octave/${PKGVERSION}/m/miscellaneous/unzip.m
+share/octave/${PKGVERSION}/m/miscellaneous/usejava.m
 share/octave/${PKGVERSION}/m/miscellaneous/ver.m
 share/octave/${PKGVERSION}/m/miscellaneous/version.m
 share/octave/${PKGVERSION}/m/miscellaneous/warning_ids.m
@@ -1306,23 +1290,8 @@ share/octave/${PKGVERSION}/m/path/pathdef.m
 share/octave/${PKGVERSION}/m/path/savepath.m
 share/octave/${PKGVERSION}/m/pkg/pkg.m
 share/octave/${PKGVERSION}/m/pkg/private/get_forge_pkg.m
-share/octave/${PKGVERSION}/m/plot/__fltk_ginput__.m
-share/octave/${PKGVERSION}/m/plot/__fltk_print__.m
 share/octave/${PKGVERSION}/m/plot/__gnuplot_drawnow__.m
-share/octave/${PKGVERSION}/m/plot/__gnuplot_get_var__.m
-share/octave/${PKGVERSION}/m/plot/__gnuplot_ginput__.m
-share/octave/${PKGVERSION}/m/plot/__gnuplot_has_feature__.m
-share/octave/${PKGVERSION}/m/plot/__gnuplot_open_stream__.m
-share/octave/${PKGVERSION}/m/plot/__gnuplot_print__.m
-share/octave/${PKGVERSION}/m/plot/__gnuplot_version__.m
-share/octave/${PKGVERSION}/m/plot/__go_close_all__.m
-share/octave/${PKGVERSION}/m/plot/__go_draw_axes__.m
-share/octave/${PKGVERSION}/m/plot/__go_draw_figure__.m
-share/octave/${PKGVERSION}/m/plot/__marching_cube__.m
-share/octave/${PKGVERSION}/m/plot/__next_line_color__.m
-share/octave/${PKGVERSION}/m/plot/__next_line_style__.m
 share/octave/${PKGVERSION}/m/plot/__plt_get_axis_arg__.m
-share/octave/${PKGVERSION}/m/plot/__print_parse_opts__.m
 share/octave/${PKGVERSION}/m/plot/allchild.m
 share/octave/${PKGVERSION}/m/plot/ancestor.m
 share/octave/${PKGVERSION}/m/plot/area.m
@@ -1375,6 +1344,8 @@ share/octave/${PKGVERSION}/m/plot/gnuplot_binary.m
 share/octave/${PKGVERSION}/m/plot/graphics_toolkit.m
 share/octave/${PKGVERSION}/m/plot/grid.m
 share/octave/${PKGVERSION}/m/plot/gtext.m
+share/octave/${PKGVERSION}/m/plot/guidata.m
+share/octave/${PKGVERSION}/m/plot/guihandles.m
 share/octave/${PKGVERSION}/m/plot/hggroup.m
 share/octave/${PKGVERSION}/m/plot/hidden.m
 share/octave/${PKGVERSION}/m/plot/hist.m
@@ -1424,20 +1395,40 @@ share/octave/${PKGVERSION}/m/plot/private/__default_plot_options__.m
 share/octave/${PKGVERSION}/m/plot/private/__errcomm__.m
 share/octave/${PKGVERSION}/m/plot/private/__errplot__.m
 share/octave/${PKGVERSION}/m/plot/private/__ezplot__.m
+share/octave/${PKGVERSION}/m/plot/private/__file_filter__.m
 share/octave/${PKGVERSION}/m/plot/private/__fltk_file_filter__.m
+share/octave/${PKGVERSION}/m/plot/private/__fltk_ginput__.m
+share/octave/${PKGVERSION}/m/plot/private/__fltk_print__.m
 share/octave/${PKGVERSION}/m/plot/private/__getlegenddata__.m
 share/octave/${PKGVERSION}/m/plot/private/__ghostscript__.m
+share/octave/${PKGVERSION}/m/plot/private/__gnuplot_get_var__.m
+share/octave/${PKGVERSION}/m/plot/private/__gnuplot_ginput__.m
+share/octave/${PKGVERSION}/m/plot/private/__gnuplot_has_feature__.m
 share/octave/${PKGVERSION}/m/plot/private/__gnuplot_has_terminal__.m
+share/octave/${PKGVERSION}/m/plot/private/__gnuplot_open_stream__.m
+share/octave/${PKGVERSION}/m/plot/private/__gnuplot_print__.m
+share/octave/${PKGVERSION}/m/plot/private/__gnuplot_version__.m
+share/octave/${PKGVERSION}/m/plot/private/__go_draw_axes__.m
+share/octave/${PKGVERSION}/m/plot/private/__go_draw_figure__.m
 share/octave/${PKGVERSION}/m/plot/private/__interp_cube__.m
+share/octave/${PKGVERSION}/m/plot/private/__is_function__.m
 share/octave/${PKGVERSION}/m/plot/private/__line__.m
+share/octave/${PKGVERSION}/m/plot/private/__marching_cube__.m
+share/octave/${PKGVERSION}/m/plot/private/__next_line_color__.m
+share/octave/${PKGVERSION}/m/plot/private/__next_line_style__.m
 share/octave/${PKGVERSION}/m/plot/private/__patch__.m
 share/octave/${PKGVERSION}/m/plot/private/__pie__.m
 share/octave/${PKGVERSION}/m/plot/private/__plt__.m
 share/octave/${PKGVERSION}/m/plot/private/__pltopt__.m
+share/octave/${PKGVERSION}/m/plot/private/__print_parse_opts__.m
 share/octave/${PKGVERSION}/m/plot/private/__quiver__.m
 share/octave/${PKGVERSION}/m/plot/private/__scatter__.m
 share/octave/${PKGVERSION}/m/plot/private/__stem__.m
 share/octave/${PKGVERSION}/m/plot/private/__tight_eps_bbox__.m
+share/octave/${PKGVERSION}/m/plot/private/__uigetdir_fltk__.m
+share/octave/${PKGVERSION}/m/plot/private/__uigetfile_fltk__.m
+share/octave/${PKGVERSION}/m/plot/private/__uiobject_split_args__.m
+share/octave/${PKGVERSION}/m/plot/private/__uiputfile_fltk__.m
 share/octave/${PKGVERSION}/m/plot/quiver.m
 share/octave/${PKGVERSION}/m/plot/quiver3.m
 share/octave/${PKGVERSION}/m/plot/rectangle.m
@@ -1470,11 +1461,23 @@ share/octave/${PKGVERSION}/m/plot/surfl.m
 share/octave/${PKGVERSION}/m/plot/surfnorm.m
 share/octave/${PKGVERSION}/m/plot/text.m
 share/octave/${PKGVERSION}/m/plot/title.m
+share/octave/${PKGVERSION}/m/plot/trimesh.m
+share/octave/${PKGVERSION}/m/plot/triplot.m
+share/octave/${PKGVERSION}/m/plot/trisurf.m
+share/octave/${PKGVERSION}/m/plot/uicontextmenu.m
+share/octave/${PKGVERSION}/m/plot/uicontrol.m
 share/octave/${PKGVERSION}/m/plot/uigetdir.m
 share/octave/${PKGVERSION}/m/plot/uigetfile.m
 share/octave/${PKGVERSION}/m/plot/uimenu.m
+share/octave/${PKGVERSION}/m/plot/uipanel.m
+share/octave/${PKGVERSION}/m/plot/uipushtool.m
 share/octave/${PKGVERSION}/m/plot/uiputfile.m
+share/octave/${PKGVERSION}/m/plot/uiresume.m
+share/octave/${PKGVERSION}/m/plot/uitoggletool.m
+share/octave/${PKGVERSION}/m/plot/uitoolbar.m
+share/octave/${PKGVERSION}/m/plot/uiwait.m
 share/octave/${PKGVERSION}/m/plot/view.m
+share/octave/${PKGVERSION}/m/plot/waitbar.m
 share/octave/${PKGVERSION}/m/plot/waitforbuttonpress.m
 share/octave/${PKGVERSION}/m/plot/whitebg.m
 share/octave/${PKGVERSION}/m/plot/xlabel.m
@@ -1492,7 +1495,6 @@ share/octave/${PKGVERSION}/m/polynomial/pchip.m
 share/octave/${PKGVERSION}/m/polynomial/poly.m
 share/octave/${PKGVERSION}/m/polynomial/polyaffine.m
 share/octave/${PKGVERSION}/m/polynomial/polyder.m
-share/octave/${PKGVERSION}/m/polynomial/polyderiv.m
 share/octave/${PKGVERSION}/m/polynomial/polyfit.m
 share/octave/${PKGVERSION}/m/polynomial/polygcd.m
 share/octave/${PKGVERSION}/m/polynomial/polyint.m
@@ -1508,6 +1510,14 @@ share/octave/${PKGVERSION}/m/polynomial/residue.m
 share/octave/${PKGVERSION}/m/polynomial/roots.m
 share/octave/${PKGVERSION}/m/polynomial/spline.m
 share/octave/${PKGVERSION}/m/polynomial/unmkpp.m
+share/octave/${PKGVERSION}/m/prefs/addpref.m
+share/octave/${PKGVERSION}/m/prefs/getpref.m
+share/octave/${PKGVERSION}/m/prefs/ispref.m
+share/octave/${PKGVERSION}/m/prefs/private/loadprefs.m
+share/octave/${PKGVERSION}/m/prefs/private/prefsfile.m
+share/octave/${PKGVERSION}/m/prefs/private/saveprefs.m
+share/octave/${PKGVERSION}/m/prefs/rmpref.m
+share/octave/${PKGVERSION}/m/prefs/setpref.m
 share/octave/${PKGVERSION}/m/set/intersect.m
 share/octave/${PKGVERSION}/m/set/ismember.m
 share/octave/${PKGVERSION}/m/set/powerset.m
@@ -1552,14 +1562,17 @@ share/octave/${PKGVERSION}/m/signal/stft.m
 share/octave/${PKGVERSION}/m/signal/synthesis.m
 share/octave/${PKGVERSION}/m/signal/unwrap.m
 share/octave/${PKGVERSION}/m/signal/yulewalker.m
+share/octave/${PKGVERSION}/m/sparse/bicg.m
 share/octave/${PKGVERSION}/m/sparse/bicgstab.m
 share/octave/${PKGVERSION}/m/sparse/cgs.m
 share/octave/${PKGVERSION}/m/sparse/colperm.m
 share/octave/${PKGVERSION}/m/sparse/etreeplot.m
+share/octave/${PKGVERSION}/m/sparse/gmres.m
 share/octave/${PKGVERSION}/m/sparse/gplot.m
 share/octave/${PKGVERSION}/m/sparse/nonzeros.m
 share/octave/${PKGVERSION}/m/sparse/pcg.m
 share/octave/${PKGVERSION}/m/sparse/pcr.m
+share/octave/${PKGVERSION}/m/sparse/private/__sprand_impl__.m
 share/octave/${PKGVERSION}/m/sparse/spaugment.m
 share/octave/${PKGVERSION}/m/sparse/spconvert.m
 share/octave/${PKGVERSION}/m/sparse/spdiags.m
@@ -1580,6 +1593,7 @@ share/octave/${PKGVERSION}/m/specfun/betaln.m
 share/octave/${PKGVERSION}/m/specfun/factor.m
 share/octave/${PKGVERSION}/m/specfun/factorial.m
 share/octave/${PKGVERSION}/m/specfun/isprime.m
+share/octave/${PKGVERSION}/m/specfun/lcm.m
 share/octave/${PKGVERSION}/m/specfun/legendre.m
 share/octave/${PKGVERSION}/m/specfun/nchoosek.m
 share/octave/${PKGVERSION}/m/specfun/nthroot.m
@@ -1596,7 +1610,6 @@ share/octave/${PKGVERSION}/m/special-matrix/invhilb.m
 share/octave/${PKGVERSION}/m/special-matrix/magic.m
 share/octave/${PKGVERSION}/m/special-matrix/pascal.m
 share/octave/${PKGVERSION}/m/special-matrix/rosser.m
-share/octave/${PKGVERSION}/m/special-matrix/sylvester_matrix.m
 share/octave/${PKGVERSION}/m/special-matrix/toeplitz.m
 share/octave/${PKGVERSION}/m/special-matrix/vander.m
 share/octave/${PKGVERSION}/m/special-matrix/wilkinson.m
@@ -1605,10 +1618,8 @@ share/octave/${PKGVERSION}/m/startup/inputrc
 share/octave/${PKGVERSION}/m/startup/octaverc
 share/octave/${PKGVERSION}/m/statistics/base/center.m
 share/octave/${PKGVERSION}/m/statistics/base/cloglog.m
-share/octave/${PKGVERSION}/m/statistics/base/cor.m
-share/octave/${PKGVERSION}/m/statistics/base/corrcoef.m
+share/octave/${PKGVERSION}/m/statistics/base/corr.m
 share/octave/${PKGVERSION}/m/statistics/base/cov.m
-share/octave/${PKGVERSION}/m/statistics/base/cut.m
 share/octave/${PKGVERSION}/m/statistics/base/gls.m
 share/octave/${PKGVERSION}/m/statistics/base/histc.m
 share/octave/${PKGVERSION}/m/statistics/base/iqr.m
@@ -1635,9 +1646,9 @@ share/octave/${PKGVERSION}/m/statistics/base/skewness.m
 share/octave/${PKGVERSION}/m/statistics/base/spearman.m
 share/octave/${PKGVERSION}/m/statistics/base/statistics.m
 share/octave/${PKGVERSION}/m/statistics/base/std.m
-share/octave/${PKGVERSION}/m/statistics/base/studentize.m
 share/octave/${PKGVERSION}/m/statistics/base/table.m
 share/octave/${PKGVERSION}/m/statistics/base/var.m
+share/octave/${PKGVERSION}/m/statistics/base/zscore.m
 share/octave/${PKGVERSION}/m/statistics/distributions/betacdf.m
 share/octave/${PKGVERSION}/m/statistics/distributions/betainv.m
 share/octave/${PKGVERSION}/m/statistics/distributions/betapdf.m
@@ -1808,12 +1819,12 @@ share/octave/${PKGVERSION}/m/time/is_leap_year.m
 share/octave/${PKGVERSION}/m/time/now.m
 share/octave/${PKGVERSION}/m/time/weekday.m
 share/octave/site/m/startup/octaverc
-@pkgdir share/octave/site/api-v45+/m
+@pkgdir share/octave/site/api-v48+/m
 @pkgdir share/octave/${PKGVERSION}/site/m
 @pkgdir share/octave/${PKGVERSION}/doc
 @pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/api-v45+/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v48+/site/exec/${MACHINE_GNU_PLATFORM}
 @pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
 @pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/site/oct/api-v45+/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v48+/${MACHINE_GNU_PLATFORM}
 @pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
