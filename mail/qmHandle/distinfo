@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/06/01 15:25:04 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2012/07/05 18:31:08 schmonz Exp $
 
-SHA1 (qmhandle-1.2.3.tar.gz) = ed3583bece97bc3a80d8e934af5c397a1cfbbc7e
-RMD160 (qmhandle-1.2.3.tar.gz) = 8a736b329bd00af1a0778d1995053762491d330c
-Size (qmhandle-1.2.3.tar.gz) = 13653 bytes
+SHA1 (qmhandle-1.3.2.tar.gz) = eb6222fee3b07144182737f6ffab2625ad0ebb7f
+RMD160 (qmhandle-1.3.2.tar.gz) = fea8f069fe8e9ce3ee8c7504a7ae93f4121c7749
+Size (qmhandle-1.3.2.tar.gz) = 15423 bytes
