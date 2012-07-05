@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2113 2012/07/05 11:58:47 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2114 2012/07/05 12:37:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3347,3 +3347,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-String-Errf version 0.006 [sno 2012-07-05]
 	Added devel/p5-Role-HasMessage version 0.005 [sno 2012-07-05]
 	Added devel/p5-Role-Identifiable version 0.005 [sno 2012-07-05]
+	Added devel/p5-Config-MVP version 2.200002 [sno 2012-07-05]
