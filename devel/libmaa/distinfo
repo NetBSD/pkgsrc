@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/10/22 10:01:00 cheusov Exp $
+$NetBSD: distinfo,v 1.5 2012/07/05 18:47:37 joerg Exp $
 
 SHA1 (libmaa-1.3.1.tar.gz) = b14ae76ea2c39b42e1b269e1ea5b156d9c3cdc9b
 RMD160 (libmaa-1.3.1.tar.gz) = 49230793034a2ec5b0b4756d8e7eb2fdd94c3c15
 Size (libmaa-1.3.1.tar.gz) = 287084 bytes
+SHA1 (patch-debug.c) = e42d7702dab5463882e24b049d4f98a9e009429c
+SHA1 (patch-flags.c) = 04b054ed652f16d31cf60ada860f56a4984b9e34
+SHA1 (patch-maa.h) = b49a58a9b394db4065202294ec2c17f734a19588
