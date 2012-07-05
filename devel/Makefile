@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1621 2012/07/05 15:56:26 sno Exp $
+# $NetBSD: Makefile,v 1.1622 2012/07/05 17:11:37 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -628,6 +628,7 @@ SUBDIR+=	p5-Config-Grammar
 SUBDIR+=	p5-Config-INI
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Config-MVP
+SUBDIR+=	p5-Config-MVP-Reader-INI
 SUBDIR+=	p5-Config-Properties
 SUBDIR+=	p5-Config-Std
 SUBDIR+=	p5-Config-Tiny
