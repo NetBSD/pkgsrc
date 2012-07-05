@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/07/05 16:11:44 sno Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/05 16:36:45 sno Exp $
 
 DISTNAME=	CPAN-Meta-Requirements-2.122
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/CPAN-Meta-Requirements/
 COMMENT=	Set of version requirements for a CPAN dist
 LICENSE=	${PERL5_LICENSE}
 
-CONFLICTS+=	p5-CPAN-Meta<=2.120921
+CONFLICTS+=	p5-CPAN-Meta<2.120921
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
