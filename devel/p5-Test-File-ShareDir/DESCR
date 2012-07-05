@@ -1,0 +1,2 @@
+Test::File::ShareDir helps testing modules by mocking a ShareDir as
+delivered by File::ShareDir.
