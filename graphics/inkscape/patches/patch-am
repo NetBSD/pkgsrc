@@ -1,4 +1,7 @@
-$NetBSD: patch-am,v 1.5 2012/07/04 20:33:15 drochner Exp $
+$NetBSD: patch-am,v 1.6 2012/07/05 10:23:31 wiz Exp $
+
+First chunk: Fix build with poppler-0.20.
+Second chunk: Fix build with png-1.5.
 
 --- src/extension/internal/pdfinput/svg-builder.cpp.orig	2011-07-08 18:25:09.000000000 +0000
 +++ src/extension/internal/pdfinput/svg-builder.cpp
