@@ -1,0 +1,5 @@
+Sub::Exporter::ForMethods provides helper routines for using Sub::Exporter
+to build methods.
+
+It distinguish from pure Sub::Exporter by getting methods which will not
+be removed by namespace::autoclean.
