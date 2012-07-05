@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2129 2012/07/05 15:17:21 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2130 2012/07/05 15:35:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3364,3 +3364,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Perl-PrereqScanner version 1.013 [sno 2012-07-05]
 	Updated lang/ecl to 12.2.1 [asau 2012-07-05]
 	Added textproc/p5-Pod-Eventual version 0.093.330 [sno 2012-07-05]
+	Added devel/p5-Sub-Exporter-ForMethods version 0.100050 [sno 2012-07-05]
