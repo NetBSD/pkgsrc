@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2109 2012/07/05 09:52:09 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2110 2012/07/05 11:04:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-CPAN-Meta-Requirements version 2.122 [sno 2012-07-05]
 	Added devel/p5-CPAN-Uploader version 0.103001 [sno 2012-07-05]
 	Added devel/p5-MooseX-OneArgNew version 0.002 [sno 2012-07-05]
+	Added textproc/p5-String-Formatter version 0.102082 [sno 2012-07-05]
