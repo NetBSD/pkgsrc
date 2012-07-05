@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1606 2012/07/04 18:41:20 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1607 2012/07/05 09:06:28 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -551,6 +551,7 @@ SUBDIR+=	p5-CPAN-DistnameInfo
 SUBDIR+=	p5-CPAN-FindDependencies
 SUBDIR+=	p5-CPAN-Inject
 SUBDIR+=	p5-CPAN-Meta
+SUBDIR+=	p5-CPAN-Meta-Requirements
 SUBDIR+=	p5-CPAN-Meta-YAML
 SUBDIR+=	p5-CPAN-Perl-Releases
 SUBDIR+=	p5-CPAN-Reporter
