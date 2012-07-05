@@ -1,0 +1,3 @@
+A class that includes Role::HasMessage is promising to provide a message
+method that returns a string summarizing the message or event represented
+by the object. It does not provide any actual behavior.
