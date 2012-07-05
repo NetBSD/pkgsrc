@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2108 2012/07/05 09:28:56 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2109 2012/07/05 09:52:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3342,3 +3342,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/poppler to 0.20.1 [drochner 2012-07-04]
 	Added devel/p5-CPAN-Meta-Requirements version 2.122 [sno 2012-07-05]
 	Added devel/p5-CPAN-Uploader version 0.103001 [sno 2012-07-05]
+	Added devel/p5-MooseX-OneArgNew version 0.002 [sno 2012-07-05]
