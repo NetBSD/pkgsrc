@@ -1,0 +1,14 @@
+$NetBSD: patch-bb,v 1.1 2012/07/05 15:42:56 drochner Exp $
+
+make this build with gnutls-3
+
+--- prelude-admin/server.c.orig	2009-05-12 07:49:42.000000000 +0000
++++ prelude-admin/server.c
+@@ -39,7 +39,6 @@
+ 
+ #include <gcrypt.h>
+ #include <gnutls/gnutls.h>
+-#include <gnutls/extra.h>
+ 
+ #include "prelude-client.h"
+ #include "prelude-error.h"

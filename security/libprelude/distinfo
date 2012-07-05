@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2011/07/08 11:47:28 drochner Exp $
+$NetBSD: distinfo,v 1.34 2012/07/05 15:42:55 drochner Exp $
 
 SHA1 (libprelude-0.9.24.1.tar.gz) = b8c0c43efb33f3da741feac59b7a5482adf56282
 RMD160 (libprelude-0.9.24.1.tar.gz) = 0a2688cf5c44e834c07eaba36d333155b2ca226d
@@ -15,3 +15,5 @@ SHA1 (patch-aj) = e4019c1a71ecdf33540d603ba2e0ba09bd2b6f7b
 SHA1 (patch-ak) = d5ba7700db11bee688d56e1b92f3663e6637237d
 SHA1 (patch-al) = a3c150d76c91e33703d9ee05cd32e5d6f7b1264a
 SHA1 (patch-am) = 5581c999105a5d3b616e090afc105781e66eb888
+SHA1 (patch-ba) = adb9d29439df7f6f75396914e2f7f9732983eecf
+SHA1 (patch-bb) = 42ddad73912f8a5dd0deab11a710c5dcf32af322
