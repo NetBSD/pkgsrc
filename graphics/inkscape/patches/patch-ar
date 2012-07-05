@@ -1,4 +1,6 @@
-$NetBSD: patch-ar,v 1.1 2012/07/04 20:33:15 drochner Exp $
+$NetBSD: patch-ar,v 1.2 2012/07/05 10:23:31 wiz Exp $
+
+Fix build with poppler-0.20.
 
 --- src/extension/internal/pdfinput/pdf-parser.cpp.orig	2012-06-24 14:38:28.000000000 +0000
 +++ src/extension/internal/pdfinput/pdf-parser.cpp
