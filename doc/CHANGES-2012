@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2123 2012/07/05 14:07:11 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2124 2012/07/05 14:11:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3356,3 +3356,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Sub-Exporter-GlobExporter version 0.002 [sno 2012-07-05]
 	Updated devel/p5-Sub-Exporter to 0.984 [sno 2012-07-05]
 	Updated devel/p5-Log-Dispatch to 2.32 [sno 2012-07-05]
+	Added devel/p5-Log-Dispatchouli version 2.005 [sno 2012-07-05]
