@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2118 2012/07/05 13:08:35 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2119 2012/07/05 13:26:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3351,3 +3351,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/apache24 to 2.4.2nb2 [ryoon 2012-07-05]
 	Added devel/p5-File-ShareDir-Install version 0.04 [sno 2012-07-05]
 	Added devel/p5-Hash-Merge-Simple version 0.051 [sno 2012-07-05]
+	Added devel/p5-Log-Dispatch-Array version 1.001 [sno 2012-07-05]
