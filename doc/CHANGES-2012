@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2120 2012/07/05 13:43:08 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2121 2012/07/05 13:55:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3353,3 +3353,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Hash-Merge-Simple version 0.051 [sno 2012-07-05]
 	Added devel/p5-Log-Dispatch-Array version 1.001 [sno 2012-07-05]
 	Added textproc/p5-String-Flogger version 1.101242 [sno 2012-07-05]
+	Added devel/p5-Sub-Exporter-GlobExporter version 0.002 [sno 2012-07-05]
