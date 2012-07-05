@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2140 2012/07/05 19:19:59 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2141 2012/07/05 21:46:17 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3375,3 +3375,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Dist-Zilla version 4.300020 [sno 2012-07-05]
 	Updated mail/qmHandle to 1.3.2 [schmonz 2012-07-05]
 	Updated math/octave to 3.6.2 [asau 2012-07-05]
+	Updated pkgtools/pkg_summary-utils to 0.58.2 [cheusov 2012-07-05]
