@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/05/30 06:52:58 adam Exp $
+# $NetBSD: Makefile,v 1.35 2012/07/05 15:44:07 drochner Exp $
 
 DISTNAME=	gsasl-1.8.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNU:=gsasl/}
 
