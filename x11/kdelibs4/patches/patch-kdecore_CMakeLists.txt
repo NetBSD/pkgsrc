@@ -1,0 +1,16 @@
+$NetBSD: patch-kdecore_CMakeLists.txt,v 1.1 2012/07/05 18:48:33 joerg Exp $
+
+--- kdecore/CMakeLists.txt.orig	2012-07-05 12:21:26.000000000 +0000
++++ kdecore/CMakeLists.txt
+@@ -384,8 +384,9 @@ if(NOT WIN32)
+     set(kdecore_LIB_SRCS ${kdecore_LIB_SRCS} util/kshareddatacache.cpp)
+     set(kdecore_OPTIONAL_LIBS ${kdecore_OPTIONAL_LIBS} ${CMAKE_THREAD_LIBS_INIT})
+ 
+-    set_source_files_properties(util/kshareddatacache.cpp
+-        PROPERTIES COMPILE_FLAGS ${KDE4_ENABLE_EXCEPTIONS})
++    if (KDE4_ENABLE_EXCEPTIONS)
++      set_source_files_properties(util/kshareddatacache.cpp PROPERTIES COMPILE_FLAGS ${KDE4_ENABLE_EXCEPTIONS})
++    endif (KDE4_ENABLE_EXCEPTIONS)
+ else(NOT WIN32)
+     set(kdecore_LIB_SRCS ${kdecore_LIB_SRCS} util/kshareddatacache_win.cpp)
+     set(kdecore_LIB_SRCS ${kdecore_LIB_SRCS} io/kdirwatch_win.cpp)
