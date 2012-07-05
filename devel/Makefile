@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1622 2012/07/05 17:11:37 sno Exp $
+# $NetBSD: Makefile,v 1.1623 2012/07/05 17:14:44 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -705,6 +705,7 @@ SUBDIR+=	p5-Devel-TraceUse
 SUBDIR+=	p5-Devel-ebug
 SUBDIR+=	p5-Dir-Self
 SUBDIR+=	p5-Dist-CheckConflicts
+SUBDIR+=	p5-Dist-Zilla
 SUBDIR+=	p5-EV
 SUBDIR+=	p5-Error
 SUBDIR+=	p5-Eval-Closure

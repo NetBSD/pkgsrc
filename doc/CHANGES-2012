@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2137 2012/07/05 17:11:05 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2138 2012/07/05 17:14:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3372,3 +3372,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-CPAN-Meta to 2.120921 [sno 2012-07-05]
 	Updated databases/p5-DBI to 1.622 [sno 2012-07-05]
 	Added devel/p5-Config-MVP-Reader-INI version 2.101461 [sno 2012-07-05]
+	Added devel/p5-Dist-Zilla version 4.300020 [sno 2012-07-05]
