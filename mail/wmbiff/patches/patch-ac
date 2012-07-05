@@ -1,7 +1,25 @@
-$NetBSD: patch-ac,v 1.6 2005/09/06 15:49:35 adam Exp $
+$NetBSD: patch-ac,v 1.7 2012/07/05 10:30:58 drochner Exp $
 
 --- wmbiff/tlsComm.c.orig	2004-10-11 00:29:47.000000000 +0000
 +++ wmbiff/tlsComm.c
+@@ -385,7 +385,7 @@ int
+ tls_check_certificate(struct connection_state *scs,
+ 					  const char *remote_hostname)
+ {
+-	int certstat;
++	int verify_ret, certstat;
+ 	const gnutls_datum *cert_list;
+ 	int cert_list_size = 0;
+ 	gnutls_x509_crt cert;
+@@ -394,7 +394,7 @@ tls_check_certificate(struct connection_
+ 		bad_certificate(scs, "Unable to get certificate from peer.\n");
+ 		return;					/* bad_cert will exit if -skip-certificate-check was not given */
+ 	}
+-	certstat = gnutls_certificate_verify_peers(scs->tls_state);
++	verify_ret = gnutls_certificate_verify_peers2(scs->tls_state, &certstat);
+ 	if (certstat == GNUTLS_E_NO_CERTIFICATE_FOUND) {
+ 		bad_certificate(scs, "server presented no certificate.\n");
+ #ifdef GNUTLS_CERT_CORRUPTED
 @@ -412,10 +412,12 @@ tls_check_certificate(struct connection_
  							"server's certificate is invalid or not X.509.\n"
  							"there may be a problem with the certificate stored in your certfile\n");
