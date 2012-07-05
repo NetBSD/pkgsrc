@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2124 2012/07/05 14:11:21 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2125 2012/07/05 14:25:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3357,3 +3357,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Sub-Exporter to 0.984 [sno 2012-07-05]
 	Updated devel/p5-Log-Dispatch to 2.32 [sno 2012-07-05]
 	Added devel/p5-Log-Dispatchouli version 2.005 [sno 2012-07-05]
+	Updated www/typo3_45 to 4.5.17 [taca 2012-07-05]
+	Updated www/typo3_46 to 4.6.10 [taca 2012-07-05]
+	Updated www/typo3_47 to 4.7.2 [taca 2012-07-05]
