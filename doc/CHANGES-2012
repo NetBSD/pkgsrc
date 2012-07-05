@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2127 2012/07/05 14:42:40 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2128 2012/07/05 14:53:00 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3362,3 +3362,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_47 to 4.7.2 [taca 2012-07-05]
 	Added devel/p5-MooseX-Types-Perl version 0.101341 [sno 2012-07-05]
 	Added devel/p5-Perl-PrereqScanner version 1.013 [sno 2012-07-05]
+	Updated lang/ecl to 12.2.1 [asau 2012-07-05]
