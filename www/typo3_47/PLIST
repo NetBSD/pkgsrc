@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/02 05:54:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/05 14:24:01 taca Exp $
 ${EGDIR}/localconf.php
+${TYPO3DIR}/${TYPO3NAME}/.travis.yml
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
