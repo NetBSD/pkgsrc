@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2011/03/04 14:46:32 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2012/07/05 14:51:47 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		threads unicode ffi clx
@@ -28,10 +28,14 @@ PLIST_SRC+=		PLIST.threads
 .if !empty(PKG_OPTIONS:Municode)
 CONFIGURE_ARGS+=	--enable-unicode
 PLIST_SRC+=		PLIST.unicode
+.else
+CONFIGURE_ARGS+=	--disable-unicode
 .endif
 
 .if !empty(PKG_OPTIONS:Mffi)
 .include "../../devel/libffi/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-dffi=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mclx)
