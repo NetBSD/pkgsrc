@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2105 2012/07/04 20:35:26 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2106 2012/07/05 09:04:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/gcalctool-gtk3 to 6.4.2.1 [drochner 2012-07-04]
 	Updated security/libgnome-keyring to 3.4.1 [drochner 2012-07-04]
 	Updated print/poppler to 0.20.1 [drochner 2012-07-04]
+	Updated devel/p5-CPAN-Meta-Requirements to 2.122 [sno 2012-07-05]
