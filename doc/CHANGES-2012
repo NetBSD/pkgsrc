@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2131 2012/07/05 15:55:52 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2132 2012/07/05 16:18:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3366,3 +3366,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Pod-Eventual version 0.093.330 [sno 2012-07-05]
 	Added devel/p5-Sub-Exporter-ForMethods version 0.100050 [sno 2012-07-05]
 	Added devel/p5-Test-File-ShareDir version 0.3.1 [sno 2012-07-05]
+	Updated devel/p5-Module-CoreList to 2.68 [sno 2012-07-05]
