@@ -1,0 +1,2 @@
+String::Errf provides errf, a simple string formatter that works something
+like sprintf. It is implemented using String::Formatter and Sub::Exporter.
