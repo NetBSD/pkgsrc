@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2111 2012/07/05 11:17:01 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2112 2012/07/05 11:51:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3345,3 +3345,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-MooseX-OneArgNew version 0.002 [sno 2012-07-05]
 	Added textproc/p5-String-Formatter version 0.102082 [sno 2012-07-05]
 	Added textproc/p5-String-Errf version 0.006 [sno 2012-07-05]
+	Added devel/p5-Role-HasMessage version 0.005 [sno 2012-07-05]
