@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1609 2012/07/05 09:52:53 sno Exp $
+# $NetBSD: Makefile,v 1.1610 2012/07/05 11:52:11 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -1032,6 +1032,7 @@ SUBDIR+=	p5-Regexp-MatchContext
 SUBDIR+=	p5-Regexp-Parser
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-Return-Value
+SUBDIR+=	p5-Role-HasMessage
 SUBDIR+=	p5-Rose-Object
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-SUPER
