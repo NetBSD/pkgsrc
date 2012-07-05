@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.6 2012/07/04 12:09:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.7 2012/07/05 23:47:57 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -67,3 +67,6 @@ databases/postgresql90-upgrade: security update
 databases/postgresql90-uuid: security update
 Pullup ticket #3848 - requested by obache
 emulators/suse121_libtiff: security update
+Pullup ticket #3849 - requested by cheusov
+meta-pkgs/php53-extensions: build fix
+meta-pkgs/php54-extensions: build fix
