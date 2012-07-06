@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2011/11/16 09:40:42 sno Exp $
+$NetBSD: distinfo,v 1.17 2012/07/06 14:13:54 sno Exp $
 
-SHA1 (Storable-2.30.tar.gz) = 1247957ea67a113adb814a18adfe0a7ecf825bb1
-RMD160 (Storable-2.30.tar.gz) = 980d908819cbebd0622b81ca48841200c593f635
-Size (Storable-2.30.tar.gz) = 181079 bytes
+SHA1 (Storable-2.35.tar.gz) = ea458d038f9a3f9f78d83131a5c7003c024cbfc7
+RMD160 (Storable-2.35.tar.gz) = 2a6ef80fe9dc3d08f2222d42b8707b052c2653bd
+Size (Storable-2.35.tar.gz) = 180796 bytes
