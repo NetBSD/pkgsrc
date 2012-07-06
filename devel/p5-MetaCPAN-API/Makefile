@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/03/22 15:43:25 sno Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/06 10:53:08 sno Exp $
 
-DISTNAME=	MetaCPAN-API-0.42
+DISTNAME=	MetaCPAN-API-0.43
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
