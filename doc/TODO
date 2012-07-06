@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11340 2012/07/06 09:29:27 wiz Exp $
+$NetBSD: TODO,v 1.11341 2012/07/06 23:33:16 asau Exp $
 
 Suggested new packages
 ======================
@@ -1105,7 +1105,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.3
 	o sakura-3.0.0
-	o samba-3.6.6
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
