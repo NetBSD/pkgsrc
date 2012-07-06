@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.249 2012/05/30 12:02:28 cheusov Exp $
+# $NetBSD: replace.mk,v 1.250 2012/07/06 14:08:50 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -672,7 +672,7 @@ TOOLS_PATH.pax=			${TOOLS_PREFIX.pax}/bin/${NBPAX_PROGRAM_PREFIX}pax
 .  if !empty(PKGPATH:Mdevel/pkg-config)
 MAKEFLAGS+=			TOOLS_IGNORE.pkg-config=
 .  elif !empty(_TOOLS_USE_PKGSRC.pkg-config:M[yY][eE][sS])
-TOOLS_DEPENDS.pkg-config?=	pkg-config>=0.19:../../devel/pkg-config
+TOOLS_DEPENDS.pkg-config?=	pkg-config>=0.25:../../devel/pkg-config
 TOOLS_CREATE+=			pkg-config
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pkg-config=pkg-config
 TOOLS_PATH.pkg-config=		${TOOLS_PREFIX.pkg-config}/bin/pkg-config
