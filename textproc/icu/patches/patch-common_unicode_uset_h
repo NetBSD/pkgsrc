@@ -1,0 +1,15 @@
+$NetBSD: patch-common_unicode_uset_h,v 1.1 2012/07/06 04:54:25 dholland Exp $
+
+Declare functions with prototypes. (Otherwise some client packages break.)
+
+--- common/unicode/uset.h.orig	2012-06-01 14:52:36.000000000 +0000
++++ common/unicode/uset.h
+@@ -251,7 +251,7 @@ typedef struct USerializedSet {
+  * @stable ICU 4.2
+  */
+ U_STABLE USet* U_EXPORT2
+-uset_openEmpty();
++uset_openEmpty(void);
+ 
+ /**
+  * Creates a USet object that contains the range of characters
