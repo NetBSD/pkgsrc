@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2182 2012/07/06 13:19:23 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2183 2012/07/06 13:22:23 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3417,3 +3417,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-Filter to 1.45 [sno 2012-07-06]
 	Updated textproc/p5-Convert-ASN1 to 0.26 [sno 2012-07-06]
 	Updated security/p5-IO-Socket-SSL to 1.76 [sno 2012-07-06]
+	Updated security/p5-Digest-MD5 to 2.52 [sno 2012-07-06]
