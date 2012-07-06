@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2145 2012/07/06 08:50:11 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2146 2012/07/06 08:52:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3380,3 +3380,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DBD-CSV to 0.35 [sno 2012-07-06]
 	Updated databases/p5-DBD-SQLite to 1.37 [sno 2012-07-06]
 	Updated devel/p5-Compress-Raw-Zlib to 2.054 [sno 2012-07-06]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.052 [sno 2012-07-06]
