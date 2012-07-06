@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2142 2012/07/06 08:26:40 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2143 2012/07/06 08:30:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/octave to 3.6.2 [asau 2012-07-05]
 	Updated pkgtools/pkg_summary-utils to 0.58.2 [cheusov 2012-07-05]
 	Updated textproc/p5-Text-CSV_XS to 0.90 [sno 2012-07-06]
+	Updated databases/p5-DBD-CSV to 0.35 [sno 2012-07-06]
