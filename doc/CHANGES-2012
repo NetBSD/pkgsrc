@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2161 2012/07/06 10:50:01 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2162 2012/07/06 10:53:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3396,3 +3396,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-File-pushd to 1.002 [sno 2012-07-06]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.091 [sno 2012-07-06]
 	Updated devel/p5-Git-CPAN-Patch to 0.8.0 [sno 2012-07-06]
+	Updated devel/p5-MetaCPAN-API to 0.43 [sno 2012-07-06]
