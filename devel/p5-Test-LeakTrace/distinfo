@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/08/01 21:10:34 sno Exp $
+$NetBSD: distinfo,v 1.4 2012/07/06 13:58:15 sno Exp $
 
-SHA1 (Test-LeakTrace-0.13.tar.gz) = 0d30ab9cb876d47ba6d9c0fb99a6a6693332d871
-RMD160 (Test-LeakTrace-0.13.tar.gz) = 47894f69c130e6d3479793e9d9b0ed68ea5ff660
-Size (Test-LeakTrace-0.13.tar.gz) = 49022 bytes
+SHA1 (Test-LeakTrace-0.14.tar.gz) = edfb968237a9cd452100fc72f22f56123a9d8e04
+RMD160 (Test-LeakTrace-0.14.tar.gz) = 565e2098ce7ae5044e06a2113dd440cf4fd27ce9
+Size (Test-LeakTrace-0.14.tar.gz) = 49651 bytes
