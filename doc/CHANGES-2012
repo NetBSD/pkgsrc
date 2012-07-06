@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2194 2012/07/06 15:05:30 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.2195 2012/07/06 19:52:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3429,3 +3429,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Storable to 2.35 [sno 2012-07-06]
 	Updated devel/p5-Class-Method-Modifiers to 1.09 [sno 2012-07-06]
 	Updated mail/getmail to 4.31.0 [schmonz 2012-07-06]
+	Updated comms/asterisk18 to 1.8.13.1 [jnemeth 2012-07-06]
