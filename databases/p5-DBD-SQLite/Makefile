@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.30 2012/04/27 12:31:39 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/07/06 08:43:21 sno Exp $
 
-DISTNAME=	DBD-SQLite-1.35
+DISTNAME=	DBD-SQLite-1.37
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5dsl
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DBD-SQLite/
-COMMENT=	Perl DBI/DBD driver for sqlite databases
+COMMENT=	Perl DBI/DBD driver for sqlite databases (self contained)
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
