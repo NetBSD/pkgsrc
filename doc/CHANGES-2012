@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2188 2012/07/06 14:01:06 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2189 2012/07/06 14:05:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3423,3 +3423,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Test-Warn to 0.24 [sno 2012-07-06]
 	Updated devel/p5-Test-LeakTrace to 0.14 [sno 2012-07-06]
 	Updated devel/p5-Test-Deep to 0.110 [sno 2012-07-06]
+	Updated devel/p5-Test-CPAN-Meta-YAML to 0.20 [sno 2012-07-06]
