@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2174 2012/07/06 12:31:16 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2175 2012/07/06 12:37:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3409,3 +3409,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/p5-DateTime-Format-Strptime to 1.5200 [sno 2012-07-06]
 	Updated textproc/p5-YAML to 0.81 [sno 2012-07-06]
 	Added textproc/p5-XML-SAX-Base version 1.08 [sno 2012-07-06]
+	Updated textproc/p5-XML-SAX to 0.99 [sno 2012-07-06]
