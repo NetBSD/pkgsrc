@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2012/03/22 13:22:57 sno Exp $
+# $NetBSD: Makefile,v 1.23 2012/07/06 10:21:17 sno Exp $
 
-DISTNAME=	Error-0.17017
+DISTNAME=	Error-0.17018
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5err
 CATEGORIES=	devel perl5
