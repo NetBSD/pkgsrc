@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2009/08/16 18:21:04 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2012/07/06 12:37:33 sno Exp $
 
-SHA1 (XML-SAX-0.96.tar.gz) = ae050fcd129d247855bf480c1e44cdc2db823e9e
-RMD160 (XML-SAX-0.96.tar.gz) = 9b230c84fdad560d99e8fc616e6c58921bb1e2f4
-Size (XML-SAX-0.96.tar.gz) = 62775 bytes
+SHA1 (XML-SAX-0.99.tar.gz) = 9685c417627d75ae18ab0be3b1562608ee093d5c
+RMD160 (XML-SAX-0.99.tar.gz) = 2e787c5e66da37b99da239df541a3bf5b1c1be4f
+Size (XML-SAX-0.99.tar.gz) = 46703 bytes
 SHA1 (patch-aa) = d474262178b0a36da51ed0cdfd56e75272f25d71
 SHA1 (patch-ab) = a1850ba4918732f58da4fb53b2cf07104182b96b
