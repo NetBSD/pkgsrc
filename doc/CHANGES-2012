@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2177 2012/07/06 12:49:15 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2178 2012/07/06 12:55:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3412,3 +3412,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-XML-SAX to 0.99 [sno 2012-07-06]
 	Updated textproc/p5-XML-LibXML to 2.00.01 [sno 2012-07-06]
 	Updated textproc/p5-XML-Simple to 2.20 [sno 2012-07-06]
+	Updated textproc/p5-Regexp-Common to 2011121001 [sno 2012-07-06]
