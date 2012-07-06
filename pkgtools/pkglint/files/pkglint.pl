@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.832 2012/04/08 04:42:39 sbd Exp $
+# $NetBSD: pkglint.pl,v 1.833 2012/07/06 09:29:01 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2511,9 +2511,9 @@ sub resolve_relative_path($$) {
 	$relpath =~ s,\$\{PKGSRCDIR\},$cur_pkgsrcdir,;
 	$relpath =~ s,\$\{\.CURDIR\},.,;
 	$relpath =~ s,\$\{\.PARSEDIR\},.,;
-	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
+	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php53,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse100,;
-	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python26,;
+	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python27,;
 	$relpath =~ s,\$\{FILESDIR\},$filesdir, if defined($filesdir);
 	if ($adjust_depth && $relpath =~ m"^\.\./\.\./([^.].*)$") {
 		$relpath = "${cur_pkgsrcdir}/$1";
