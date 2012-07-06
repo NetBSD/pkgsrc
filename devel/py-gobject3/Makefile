@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/04 18:31:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/06 04:36:07 dholland Exp $
 #
 
 DISTNAME=		pygobject-3.2.2
@@ -19,6 +19,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 PKGCONFIG_OVERRIDE+=	pygobject-3.2.pc.in
 PY_PATCHPLIST=		yes
