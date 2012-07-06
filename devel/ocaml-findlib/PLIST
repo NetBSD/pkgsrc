@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/21 15:27:31 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/06 09:22:04 wiz Exp $
 bin/ocamlfind
 bin/safe_camlp4
 lib/ocaml/site-lib/bigarray/META
@@ -7,7 +7,9 @@ lib/ocaml/site-lib/dbm/META
 lib/ocaml/site-lib/dynlink/META
 lib/ocaml/site-lib/findlib/META
 lib/ocaml/site-lib/findlib/Makefile.config
+${PLIST.opt}lib/ocaml/site-lib/findlib/findlib.a
 lib/ocaml/site-lib/findlib/findlib.cma
+${PLIST.opt}lib/ocaml/site-lib/findlib/findlib.cmxa
 lib/ocaml/site-lib/findlib/findlib.cmi
 lib/ocaml/site-lib/findlib/findlib.mli
 lib/ocaml/site-lib/findlib/findlib_top.cma
