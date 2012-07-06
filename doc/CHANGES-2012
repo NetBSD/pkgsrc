@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2156 2012/07/06 10:18:01 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2157 2012/07/06 10:21:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3391,3 +3391,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ocamlnet to 3.5.1 [wiz 2012-07-06]
 	Updated devel/p5-Devel-GlobalDestruction to 0.06 [sno 2012-07-06]
 	Updated devel/p5-Devel-Trace to 0.12 [sno 2012-07-06]
+	Updated devel/p5-Error to 0.17018 [sno 2012-07-06]
