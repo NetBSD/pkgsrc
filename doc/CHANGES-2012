@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2192 2012/07/06 14:14:04 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2193 2012/07/06 14:18:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3427,3 +3427,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-System-Command to 1.07 [sno 2012-07-06]
 	Updated devel/p5-SUPER to 1.20120705 [sno 2012-07-06]
 	Updated devel/p5-Storable to 2.35 [sno 2012-07-06]
+	Updated devel/p5-Class-Method-Modifiers to 1.09 [sno 2012-07-06]
