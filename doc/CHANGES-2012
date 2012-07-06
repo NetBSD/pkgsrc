@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2165 2012/07/06 11:14:42 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2166 2012/07/06 11:23:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3400,3 +3400,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Method-Signatures to 20120523 [sno 2012-07-06]
 	Updated devel/p5-Module-Build to 0.40010 [sno 2012-07-06]
 	Updated devel/p5-Module-Install to 1.06 [sno 2012-07-06]
+	Updated devel/p5-Module-ScanDeps to 1.08 [sno 2012-07-06]
