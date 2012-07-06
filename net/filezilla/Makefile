@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/07/02 19:23:29 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2012/07/06 15:37:23 drochner Exp $
 #
 
 VERSION=	3.5.0
@@ -14,7 +14,6 @@ HOMEPAGE=	http://filezilla-project.org/
 COMMENT=	FTP, FTPS and SFTP client with intuitive GUI
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	gnutls>=2.8.3:../../security/gnutls
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
