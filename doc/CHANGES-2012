@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2196 2012/07/06 20:18:26 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2197 2012/07/06 21:10:58 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3432,3 +3432,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.13.1 [jnemeth 2012-07-06]
 	Updated databases/mysql55-client to 5.5.25a [adam 2012-07-06]
 	Updated databases/mysql55-server to 5.5.25a [adam 2012-07-06]
+	Updated comms/asterisk10 to 10.5.2 [jnemeth 2012-07-06]
