@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2171 2012/07/06 11:53:46 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2172 2012/07/06 12:00:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3406,3 +3406,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Sub-Install to 0.926 [sno 2012-07-06]
 	Updated devel/p5-Sub-Uplevel to 0.2400 [sno 2012-07-06]
 	Updated time/p5-DateTime to 0.7600 [sno 2012-07-06]
+	Updated time/p5-DateTime-Format-Strptime to 1.5200 [sno 2012-07-06]
