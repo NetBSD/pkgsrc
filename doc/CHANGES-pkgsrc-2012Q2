@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.7 2012/07/05 23:47:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.8 2012/07/06 06:34:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -70,3 +70,9 @@ emulators/suse121_libtiff: security update
 Pullup ticket #3849 - requested by cheusov
 meta-pkgs/php53-extensions: build fix
 meta-pkgs/php54-extensions: build fix
+Pullup ticket #3850 - requested by taca
+www/typo3_45: security update
+Pullup ticket #3851 - requested by taca
+www/typo3_46: security update
+Pullup ticket #3852 - requested by taca
+www/typo3_4: security update
