@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_info.1,v 1.30 2010/02/27 21:02:01 wiz Exp $
+.\" $NetBSD: pkg_info.1,v 1.31 2012/07/06 08:15:57 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_info.1
 .\"
-.Dd February 27, 2010
+.Dd July 6, 2012
 .Dt PKG_INFO 1
 .Os
 .Sh NAME
@@ -121,7 +121,8 @@ package name using the package database.
 This can be used to query information on a per-file basis, e.g. in
 conjunction with the
 .Fl e
-flag to find out which package a file belongs to.
+flag to find out which package a file belongs to:
+.Dl pkg_info -Fe /path/to/file
 .It Fl f
 Show the packing list instructions for each package.
 .It Fl I
