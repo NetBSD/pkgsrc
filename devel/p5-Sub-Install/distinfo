@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/01/21 00:11:00 he Exp $
+$NetBSD: distinfo,v 1.3 2012/07/06 11:32:01 sno Exp $
 
-SHA1 (Sub-Install-0.925.tar.gz) = 628624a2ca52e22f18cbcd2851ab5c9b31c92da1
-RMD160 (Sub-Install-0.925.tar.gz) = 1a29c281d1c7cf83f47b85e708f449d4e24547dd
-Size (Sub-Install-0.925.tar.gz) = 14432 bytes
+SHA1 (Sub-Install-0.926.tar.gz) = 7a7731ef3a7e51f77c5ffc2eeb857398748887d1
+RMD160 (Sub-Install-0.926.tar.gz) = b438897a8cc05d006e3756bbbeb236630fce9dc2
+Size (Sub-Install-0.926.tar.gz) = 15065 bytes
