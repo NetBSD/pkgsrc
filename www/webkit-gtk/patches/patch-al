@@ -1,8 +1,17 @@
-$NetBSD: patch-al,v 1.1 2012/04/28 14:12:16 drochner Exp $
+$NetBSD: patch-al,v 1.2 2012/07/06 14:03:50 drochner Exp $
 
---- GNUmakefile.in.orig	2012-04-26 18:01:39.000000000 +0000
+--- GNUmakefile.in.orig	2012-04-24 05:17:27.000000000 +0000
 +++ GNUmakefile.in
-@@ -74082,7 +74082,7 @@ install-data-local:
+@@ -74042,6 +74042,8 @@ doc-maintainer-clean-local: clean
+ 	-@rmdir Documentation
+ 
+ install-data-local:
++
++xinstall-data-local:
+ 	@installfiles=`echo ./Documentation/webkitgtk/html/*`; \
+ 	if test "$$installfiles" = './Documentation/webkitgtk/html/*'; \
+ 	then echo 1>&2 'No documentation to install' ; \
+@@ -74082,7 +74084,7 @@ install-data-local:
  @ENABLE_WEBKIT2_TRUE@	      $${installdir}/webkit2gtk-$(DOC_MODULE_VERSION).devhelp2; \
  @ENABLE_WEBKIT2_TRUE@	  fi; \
  @ENABLE_WEBKIT2_TRUE@	fi
