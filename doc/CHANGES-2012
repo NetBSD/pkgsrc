@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2159 2012/07/06 10:37:51 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2160 2012/07/06 10:41:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Error to 0.17018 [sno 2012-07-06]
 	Updated devel/p5-ExtUtils-PkgConfig to 1.13 [sno 2012-07-06]
 	Updated devel/p5-File-pushd to 1.002 [sno 2012-07-06]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.091 [sno 2012-07-06]
