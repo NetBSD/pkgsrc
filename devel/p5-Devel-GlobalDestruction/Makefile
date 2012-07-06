@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/05/30 10:53:48 sno Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/06 10:06:55 sno Exp $
 
-DISTNAME=	Devel-GlobalDestruction-0.05
+DISTNAME=	Devel-GlobalDestruction-0.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5 net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
