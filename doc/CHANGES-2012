@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2153 2012/07/06 09:29:12 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2154 2012/07/06 09:29:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3388,3 +3388,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Class-Load to 0.19 [sno 2012-07-06]
 	Updated devel/p5-Perl-Tidy to 20120701 [sno 2012-07-06]
 	Updated pkgtools/pkglint to 4.110 [obache 2012-07-06]
+	Updated net/ocamlnet to 3.5.1 [wiz 2012-07-06]
