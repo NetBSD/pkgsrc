@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/05/08 18:43:46 minskim Exp $
+# $NetBSD: Makefile,v 1.57 2012/07/06 16:22:55 joerg Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -217,6 +217,8 @@ CHECK_INTERPRETER_SKIP+=share/texmf-dist/doc/generic/ruhyphen/reduce-patt \
 			share/texmf-dist/doc/generic/ruhyphen/sorthyph
 REPLACE_SH+=	doc/latex/bibunits/bibtexall doc/latex/multibib/bibtexall
 USE_TOOLS+=	sh:run pax
+
+INSTALLATION_DIRS+=	share/texmf-dist
 
 TEX_MAP_FILES+=		antp.map
 TEX_MAP_FILES+=		cork-antt.map
