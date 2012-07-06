@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/09/12 19:37:02 sno Exp $
+$NetBSD: distinfo,v 1.3 2012/07/06 14:10:23 sno Exp $
 
-SHA1 (SUPER-1.17.tar.gz) = e72761c682dc9eb4ac11e3648906bbd9d2e5f60f
-RMD160 (SUPER-1.17.tar.gz) = 3935eb618333921a850e0b08425f3f1d48ea4d54
-Size (SUPER-1.17.tar.gz) = 8096 bytes
+SHA1 (SUPER-1.20120705.tar.gz) = ba951ef5fcf21f7d21943319e156336376ef90ef
+RMD160 (SUPER-1.20120705.tar.gz) = 4fabe0d5108e19114574dc8dc042f8159d1028b4
+Size (SUPER-1.20120705.tar.gz) = 14341 bytes
