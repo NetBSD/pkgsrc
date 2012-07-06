@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2012/07/06 15:09:44 drochner Exp $
+
+fix build with gnutls-3
+
+--- Source/GSSocketStream.m.orig	2010-05-29 09:09:53.000000000 +0000
++++ Source/GSSocketStream.m
+@@ -529,7 +529,6 @@ static gnutls_anon_client_credentials_t 
+   
+   /* Set transport layer to use our low level stream code.
+    */
+-  gnutls_transport_set_lowat (session, 0);
+   gnutls_transport_set_pull_function (session, GSTLSPull);
+   gnutls_transport_set_push_function (session, GSTLSPush);
+   gnutls_transport_set_ptr (session, (gnutls_transport_ptr_t)self);
