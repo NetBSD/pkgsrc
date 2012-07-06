@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/07/04 19:59:07 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/06 04:34:42 dholland Exp $
 #
 
 DISTNAME=		yelp-3.4.2
+PKGREVISION=		1
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/3.4/}
 EXTRACT_SUFX=		.tar.xz
@@ -17,6 +18,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+DEPENDS+=		itstool-[0-9]*:../../textproc/itstool/buildlink3.mk
 
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 
