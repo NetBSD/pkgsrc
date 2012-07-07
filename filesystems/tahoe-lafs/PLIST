@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/09 00:30:12 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/07 00:34:18 gdt Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -345,6 +345,9 @@ ${PYSITELIB}/allmydata/test/test_encodingutil.pyo
 ${PYSITELIB}/allmydata/test/test_filenode.py
 ${PYSITELIB}/allmydata/test/test_filenode.pyc
 ${PYSITELIB}/allmydata/test/test_filenode.pyo
+${PYSITELIB}/allmydata/test/test_ftp.py
+${PYSITELIB}/allmydata/test/test_ftp.pyc
+${PYSITELIB}/allmydata/test/test_ftp.pyo
 ${PYSITELIB}/allmydata/test/test_hashtree.py
 ${PYSITELIB}/allmydata/test/test_hashtree.pyc
 ${PYSITELIB}/allmydata/test/test_hashtree.pyo
@@ -375,9 +378,6 @@ ${PYSITELIB}/allmydata/test/test_mutable.pyo
 ${PYSITELIB}/allmydata/test/test_netstring.py
 ${PYSITELIB}/allmydata/test/test_netstring.pyc
 ${PYSITELIB}/allmydata/test/test_netstring.pyo
-${PYSITELIB}/allmydata/test/test_nevow.py
-${PYSITELIB}/allmydata/test/test_nevow.pyc
-${PYSITELIB}/allmydata/test/test_nevow.pyo
 ${PYSITELIB}/allmydata/test/test_no_network.py
 ${PYSITELIB}/allmydata/test/test_no_network.pyc
 ${PYSITELIB}/allmydata/test/test_no_network.pyo
@@ -553,7 +553,6 @@ ${PYSITELIB}/allmydata/web/directory.pyo
 ${PYSITELIB}/allmydata/web/directory.xhtml
 ${PYSITELIB}/allmydata/web/download-status-timeline.xhtml
 ${PYSITELIB}/allmydata/web/download-status.xhtml
-${PYSITELIB}/allmydata/web/download_status_timeline.js
 ${PYSITELIB}/allmydata/web/filenode.py
 ${PYSITELIB}/allmydata/web/filenode.pyc
 ${PYSITELIB}/allmydata/web/filenode.pyo
@@ -566,14 +565,12 @@ ${PYSITELIB}/allmydata/web/introducer.xhtml
 ${PYSITELIB}/allmydata/web/introweb.py
 ${PYSITELIB}/allmydata/web/introweb.pyc
 ${PYSITELIB}/allmydata/web/introweb.pyo
-${PYSITELIB}/allmydata/web/jquery-1.6.1.min.js
 ${PYSITELIB}/allmydata/web/literal-check-results.xhtml
 ${PYSITELIB}/allmydata/web/manifest.xhtml
 ${PYSITELIB}/allmydata/web/map-update-status.xhtml
 ${PYSITELIB}/allmydata/web/operations.py
 ${PYSITELIB}/allmydata/web/operations.pyc
 ${PYSITELIB}/allmydata/web/operations.pyo
-${PYSITELIB}/allmydata/web/protovis-3.3.1.min.js
 ${PYSITELIB}/allmydata/web/provisioning.xhtml
 ${PYSITELIB}/allmydata/web/publish-status.xhtml
 ${PYSITELIB}/allmydata/web/reliability.py
@@ -585,6 +582,12 @@ ${PYSITELIB}/allmydata/web/retrieve-status.xhtml
 ${PYSITELIB}/allmydata/web/root.py
 ${PYSITELIB}/allmydata/web/root.pyc
 ${PYSITELIB}/allmydata/web/root.pyo
+${PYSITELIB}/allmydata/web/static/d3-2.4.6.min.js
+${PYSITELIB}/allmydata/web/static/d3-2.4.6.time.min.js
+${PYSITELIB}/allmydata/web/static/download_status_timeline.js
+${PYSITELIB}/allmydata/web/static/icon.png
+${PYSITELIB}/allmydata/web/static/jquery-1.6.1.min.js
+${PYSITELIB}/allmydata/web/static/tahoe.css
 ${PYSITELIB}/allmydata/web/statistics.xhtml
 ${PYSITELIB}/allmydata/web/status.py
 ${PYSITELIB}/allmydata/web/status.pyc
@@ -594,7 +597,6 @@ ${PYSITELIB}/allmydata/web/storage.py
 ${PYSITELIB}/allmydata/web/storage.pyc
 ${PYSITELIB}/allmydata/web/storage.pyo
 ${PYSITELIB}/allmydata/web/storage_status.xhtml
-${PYSITELIB}/allmydata/web/tahoe.css
 ${PYSITELIB}/allmydata/web/unlinked.py
 ${PYSITELIB}/allmydata/web/unlinked.pyc
 ${PYSITELIB}/allmydata/web/unlinked.pyo

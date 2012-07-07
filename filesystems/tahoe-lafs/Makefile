@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/05/25 11:25:56 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2012/07/07 00:34:18 gdt Exp $
 #
 
-VERSION=	1.9.1
+VERSION=	1.9.2
 DISTNAME=	allmydata-tahoe-${VERSION}
 EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/
 #for beta, add
@@ -22,6 +21,7 @@ USE_TOOLS=	gmake
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# $WRKDIR/Makefile has 'python' hardcoded; this works after hand-patching
 TEST_TARGET=	test
 
 # TODO
