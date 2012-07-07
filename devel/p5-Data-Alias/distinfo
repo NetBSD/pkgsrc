@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/01/31 07:59:27 sno Exp $
+$NetBSD: distinfo,v 1.5 2012/07/07 11:39:01 wiz Exp $
 
-SHA1 (Data-Alias-1.16.tar.gz) = dbc0c765802e13094dafdd3d51af632c06c5f943
-RMD160 (Data-Alias-1.16.tar.gz) = a21036bc4073460035af5c7d71a72b160e152f4a
-Size (Data-Alias-1.16.tar.gz) = 64820 bytes
+SHA1 (Autodia-2.14.tar.gz) = c9d5fe213452d87d4e5ba0f5067ec330df4a74ff
+RMD160 (Autodia-2.14.tar.gz) = 9cbd7e99350155f2da41fe5db52ebd778bdb1899
+Size (Autodia-2.14.tar.gz) = 78070 bytes
