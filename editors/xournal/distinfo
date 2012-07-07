@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/01 10:46:31 asau Exp $
+$NetBSD: distinfo,v 1.2 2012/07/07 20:33:09 wiz Exp $
 
-SHA1 (xournal-0.4.5.tar.gz) = 390cb275774469ed1b04b7268dd625bd456c895e
-RMD160 (xournal-0.4.5.tar.gz) = a4228e6874482bd381c59cd8e3db1100361c1d40
-Size (xournal-0.4.5.tar.gz) = 425062 bytes
+SHA1 (xournal-0.4.7.tar.gz) = d2556bf21bef2df99bef0a6d1cb251d5e0f12d3f
+RMD160 (xournal-0.4.7.tar.gz) = 7735e37ba07c57fb89231a2a27cf6357490af699
+Size (xournal-0.4.7.tar.gz) = 553391 bytes
