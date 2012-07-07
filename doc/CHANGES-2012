@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2199 2012/07/06 23:33:16 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2200 2012/07/07 08:00:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3435,3 +3435,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk10 to 10.5.2 [jnemeth 2012-07-06]
 	Updated mail/getmail to 4.32.0 [schmonz 2012-07-06]
 	Updated net/samba to 3.6.6 [asau 2012-07-06]
+	Updated devel/pcre to 8.31 [wiz 2012-07-07]
