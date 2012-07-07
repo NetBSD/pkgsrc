@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/06/03 19:33:33 gls Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/07/07 15:50:19 adam Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -78,7 +78,7 @@ lib/transcode/filter_normalize.la
 lib/transcode/filter_null.la
 lib/transcode/filter_pp.la
 ${PLIST.dv}lib/transcode/filter_preview.la
-lib/transcode/filter_pv.la
+${PLIST.x11}lib/transcode/filter_pv.la
 lib/transcode/filter_resample.la
 lib/transcode/filter_skip.la
 lib/transcode/filter_slowmo.la
@@ -87,7 +87,7 @@ lib/transcode/filter_smartdeinter.la
 lib/transcode/filter_smartyuv.la
 lib/transcode/filter_smooth.la
 lib/transcode/filter_stabilize.la
-lib/transcode/filter_subtitler.la
+${PLIST.x11}lib/transcode/filter_subtitler.la
 lib/transcode/filter_testframe.la
 ${PLIST.freetype2}lib/transcode/filter_text.la
 ${PLIST.i386}lib/transcode/filter_tomsmocomp.la
@@ -113,7 +113,7 @@ lib/transcode/import_mpeg2.la
 lib/transcode/import_mplayer.la
 lib/transcode/import_null.la
 lib/transcode/import_ogg.la
-lib/transcode/import_oss.la
+${PLIST.oss}lib/transcode/import_oss.la
 lib/transcode/import_pvn.la
 lib/transcode/import_raw.la
 lib/transcode/import_vag.la
@@ -122,7 +122,7 @@ lib/transcode/import_vob.la
 lib/transcode/import_x11.la
 lib/transcode/import_xml.la
 lib/transcode/import_xvid.la
-lib/transcode/import_yuv4mpeg.la
+${PLIST.mjpegtools}lib/transcode/import_yuv4mpeg.la
 lib/transcode/parse_csv.awk
 lib/transcode/xvid4.cfg
 man/man1/avifix.1
