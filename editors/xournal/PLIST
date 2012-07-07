@@ -1,7 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/01 10:46:31 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/07 20:33:09 wiz Exp $
 bin/xournal
 share/locale/ca/LC_MESSAGES/xournal.mo
+share/locale/cs/LC_MESSAGES/xournal.mo
+share/locale/de/LC_MESSAGES/xournal.mo
+share/locale/es/LC_MESSAGES/xournal.mo
 share/locale/fr/LC_MESSAGES/xournal.mo
+share/locale/it/LC_MESSAGES/xournal.mo
+share/locale/nl/LC_MESSAGES/xournal.mo
+share/locale/pt_BR/LC_MESSAGES/xournal.mo
+share/xournal/html-doc/manual.html
+share/xournal/html-doc/pixmaps
+share/xournal/html-doc/screenshot.png
 share/xournal/pixmaps/black.png
 share/xournal/pixmaps/blue.png
 share/xournal/pixmaps/default-pen.png
@@ -32,6 +41,3 @@ share/xournal/pixmaps/xoj.svg
 share/xournal/pixmaps/xournal.png
 share/xournal/pixmaps/xournal.svg
 share/xournal/pixmaps/yellow.png
-share/xournal/html-doc/manual.html
-share/xournal/html-doc/screenshot.png
-share/xournal/html-doc/pixmaps
