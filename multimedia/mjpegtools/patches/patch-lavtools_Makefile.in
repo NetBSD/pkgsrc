@@ -1,0 +1,14 @@
+$NetBSD: patch-lavtools_Makefile.in,v 1.1 2012/07/07 15:49:01 adam Exp $
+
+Linking against X11 out of the blue is not clean, especially on Mac OS X
+
+--- lavtools/Makefile.in.orig	2012-07-07 13:01:12.000000000 +0000
++++ lavtools/Makefile.in
+@@ -42,7 +42,6 @@ host_triplet = @host@
+ @HAVE_V4L_TRUE@am__append_2 = liblavrec.la
+ @HAVE_V4L_OR_SDL_TRUE@am__append_3 = liblavplay.la
+ @HAVE_V4L_TRUE@am__append_4 = ${X_LIBS} 
+-@HAVE_SDL_TRUE@am__append_5 = -lX11
+ bin_PROGRAMS = mjpeg_simd_helper$(EXEEXT) lav2wav$(EXEEXT) \
+ 	lav2yuv$(EXEEXT) lavaddwav$(EXEEXT) lavtrans$(EXEEXT) \
+ 	ypipe$(EXEEXT) yuv2lav$(EXEEXT) transist.flt$(EXEEXT) \

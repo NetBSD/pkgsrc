@@ -1,13 +1,8 @@
-$NetBSD: distinfo,v 1.25 2012/01/23 08:09:36 joerg Exp $
+$NetBSD: distinfo,v 1.26 2012/07/07 15:49:00 adam Exp $
 
-SHA1 (mjpegtools-1.9.0.tar.gz) = 1701233354c7ea86b5b7808c4dd5d03a71118e48
-RMD160 (mjpegtools-1.9.0.tar.gz) = 79e0eb4bce468bb8f12da336e29abe8fab390a5f
-Size (mjpegtools-1.9.0.tar.gz) = 1718063 bytes
-SHA1 (patch-aa) = 64c2bd92b206060fbaa95a932f0ea18aec17b127
-SHA1 (patch-ab) = 5fc460db1593afb1f99422003db86e6b7cfc8eb9
-SHA1 (patch-ac) = 79a5324816b8fe7c371c29e4291ccee92a35e99f
-SHA1 (patch-ad) = 2a6f33fdc9c240d1c5c1172710db7ed95b1fc5a8
-SHA1 (patch-ae) = 98bfbaccd8dc79582a32ffbc8dba7b6c039c0373
-SHA1 (patch-af) = db90227d0732220123e5900049cf5f3e961432a2
-SHA1 (patch-lavtools_jpegutils.c) = b81357746465a782ae89bd41c26eaa5a5b4cd07d
-SHA1 (patch-y4mdenoise_Region2D.hh) = 9e2fe647f04be0c20ab23ae9200bc736a71b2bcd
+SHA1 (mjpegtools-2.0.0.tar.gz) = f411e8573d446711dbe8455a6ae9257e1afe1e70
+RMD160 (mjpegtools-2.0.0.tar.gz) = 454e23bedb2bd592912a546d0621b5c3662c3bb2
+Size (mjpegtools-2.0.0.tar.gz) = 1749671 bytes
+SHA1 (patch-aa) = 0c46a6a6d5f7e5103cdcc51e03f9d109900cb37b
+SHA1 (patch-lavtools_Makefile.in) = 1f67844db005e16e4ba2bfc5d5fca552ca9a4aff
+SHA1 (patch-y4mdenoise_MotionSearcher.hh) = 005783ee930add3897041778a9d3b3817e18cce2
