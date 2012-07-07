@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2201 2012/07/07 10:38:06 he Exp $
+$NetBSD: CHANGES-2012,v 1.2202 2012/07/07 10:47:21 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3437,3 +3437,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/getmail to 4.32.0 [schmonz 2012-07-06]
 	Updated net/samba to 3.6.6 [asau 2012-07-06]
 	Updated devel/pcre to 8.31 [wiz 2012-07-07]
+	Updated lang/parrot to 4.3.0 [he 2012-07-07]
