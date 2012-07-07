@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2011/03/06 16:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2012/07/07 15:49:00 adam Exp $
 
-DISTNAME=	mjpegtools-1.9.0
-PKGREVISION=	6
+DISTNAME=	mjpegtools-2.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -16,25 +15,26 @@ CONFLICTS+=		mplex-[0-9]*
 DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_TOOLS+=		gmake
-USE_TOOLS+=		bash:run pkg-config
-
 USE_LANGUAGES=		c c++
-
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	# empty
-PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
-INFO_FILES=		yes
-
+USE_TOOLS+=		bash:run gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libquicktime
 CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
+SHLIBTOOL_OVERRIDE=	# empty
+PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
+INFO_FILES=		yes
+
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == Darwin
+.if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-sdltest
+CONFIGURE_ENV+=		mjt_cv_extern___progname=no
+.else
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .endif
 
 BUILDLINK_TRANSFORM+=	rm:-laudio
@@ -43,9 +43,7 @@ BUILDLINK_TRANSFORM+=	rm:-laudio
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/libXxf86dga/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
