@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/07/07 20:19:39 abs Exp $
+bin/wargames
+bin/wopr
