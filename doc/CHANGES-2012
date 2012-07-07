@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2207 2012/07/07 20:33:20 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2208 2012/07/07 21:39:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3443,3 +3443,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/mjpegtools to 2.0.0 [adam 2012-07-07]
 	Added games/wargames version 1.01 [abs 2012-07-07]
 	Updated editors/xournal to 0.4.7 [wiz 2012-07-07]
+	Updated devel/mercurial to 2.2.3 [wiz 2012-07-07]
