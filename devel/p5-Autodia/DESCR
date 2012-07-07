@@ -1,0 +1,19 @@
+AutoDia is an open-source, auto-documentation and auto-diagramming 
+system allowing you to automatically generate Images, XML, HTML or Dia files.
+
+It has been written to make GNOME Dia and any Diagram Application that 
+can use similar XML more powerful. I hope to make Dia more popular than
+the commercial equivilents because of the ability to vastly extend it in
+this way.
+
+AutoDia's design goals have been good Object Orientation such as
+plenty of abstraction, use of inheritance, extensability, robustness
+and elegance. Speed and security are not concerns as this application is
+designed to generate xml for documents in a batch processing manner, not
+an interactive manner, and is a single user application for use from the
+console.
+
+AutoDia has been previously known as autodial. The output file is still 
+called autodia.out.dia by default. The executable files are now called
+autodia.pl and autodia_java.pl, the only difference being an additional
+section near the start of the latter to enable INLINE::Java.
