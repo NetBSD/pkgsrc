@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.8 2012/07/06 06:34:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.9 2012/07/07 18:00:43 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -76,3 +76,5 @@ Pullup ticket #3851 - requested by taca
 www/typo3_46: security update
 Pullup ticket #3852 - requested by taca
 www/typo3_4: security update
+Pullup ticket #3853 - requested by ryoon
+www/apache24: bug fix
