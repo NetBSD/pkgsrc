@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1623 2012/07/05 17:14:44 sno Exp $
+# $NetBSD: Makefile,v 1.1624 2012/07/07 11:39:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -531,6 +531,7 @@ SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-Attribute-Lexical
 SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-AutoXS-Header
+SUBDIR+=	p5-Autodia
 SUBDIR+=	p5-B-Compiling
 SUBDIR+=	p5-B-Hooks-EndOfScope
 SUBDIR+=	p5-B-Hooks-OP-Annotation
