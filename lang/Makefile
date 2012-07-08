@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.322 2012/06/16 15:14:22 taca Exp $
+# $NetBSD: Makefile,v 1.323 2012/07/08 19:32:41 marino Exp $
 #
 
 COMMENT=	Programming languages
@@ -49,6 +49,7 @@ SUBDIR+=	gambc
 SUBDIR+=	gauche
 SUBDIR+=	gawk
 SUBDIR+=	gcc
+SUBDIR+=	gcc-aux
 SUBDIR+=	gcc3
 SUBDIR+=	gcc3-ada
 SUBDIR+=	gcc3-c
