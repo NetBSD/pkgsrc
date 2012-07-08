@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2210 2012/07/08 09:52:21 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2211 2012/07/08 09:56:19 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3446,3 +3446,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mercurial to 2.2.3 [wiz 2012-07-07]
 	Updated print/xfce4-print to 4.6.1nb9 [sbd 2012-07-08]
 	Updated audio/timidity to 2.14.0 [wiz 2012-07-08]
+	Updated security/sks to 1.1.2nb1 [sbd 2012-07-08]
