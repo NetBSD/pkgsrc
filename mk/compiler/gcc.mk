@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.121 2012/06/26 15:48:53 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.122 2012/07/08 19:57:10 marino Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -50,9 +50,11 @@ _SYS_VARS.gcc=	CC_VERSION CC_VERSION_STRING LANGUAGES.gcc
 _DEF_VARS.gcc=	\
 	CCPATH CPPPATH CXXPATH \
 	F77PATH FCPATH \
+	ADAPATH GMKPATH GLKPATH GDBPATH CHPPATH GLSPATH GNTPATH PRPPATH \
 	IMAKEOPTS \
 	LDFLAGS \
 	PKG_CC PKG_CPP PKG_CXX PKG_FC \
+	PKG_ADA PKG_GMK PKG_GLK PKG_GDB PKG_CHP PKG_GLK PKG_GNT PKG_PRP \
 	_CC _COMPILER_RPATH_FLAG _COMPILER_STRIP_VARS \
 	_GCCBINDIR _GCC_ARCHDIR _GCC_BIN_PREFIX _GCC_CC \
 	_GCC_CPP _GCC_CXX _GCC_DEPENDENCY _GCC_DEPENDS \
@@ -61,6 +63,7 @@ _DEF_VARS.gcc=	\
 	_GCC_PREFIX _GCC_REQD _GCC_STRICTEST_REQD _GCC_SUBPREFIX \
 	_GCC_TEST_DEPENDS _GCC_NEEDS_A_FORTRAN _GCC_VARS _GCC_VERSION \
 	_GCC_VERSION_STRING \
+	_GCC_ADA _GCC_GMK _GCC_GLK _GCC_GDB _GCC_CHP _GCC_GLS _GCC_GNT _GCC_PRP \
 	_IGNORE_GCC _IGNORE_GCC3CXX _IGNORE_GCC3F77 _IGNORE_GCC3OBJC \
 	_IS_BUILTIN_GCC \
 	_LANGUAGES.gcc \
@@ -80,6 +83,12 @@ GCC_REQD+=	2.8.0
 # gcc2 doesn't support c99 and amd64
 .if !empty(USE_LANGUAGES:Mc99) || ${MACHINE_ARCH} == "x86_64"
 GCC_REQD+=	3.0
+.endif
+
+# Only one compiler defined here supports Ada: lang/gcc-aux
+# If the Ada language is requested, force lang/gcc-aux to be selected
+.if !empty(USE_LANGUAGES:Mada)
+GCC_REQD+=	20120614
 .endif
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
@@ -110,6 +119,9 @@ _GCC46_PATTERNS= 4.6 4.6.*
 
 # _GCC46_PATTERNS matches N s.t. 4.7 <= N.
 _GCC47_PATTERNS= 4.[7-9] 4.[7-9].* 4.[1-9][0-9]* [4-9]*
+
+# _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
+_GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
 
 # _CC is the full path to the compiler named by ${CC} if it can be found.
 .if !defined(_CC)
@@ -233,10 +245,16 @@ _NEED_GCC46=	yes
 _NEED_GCC47=	yes
 .  endif
 .endfor
+.for _pattern_ in ${_GCC_AUX_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+_NEED_GCC_AUX=	yes
+_NEED_NEWER_GCC=NO
+.  endif
+.endfor
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
     !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GCC44:M[nN][oO]) && \
     !empty(_NEED_GCC45:M[nN][oO]) && !empty(_NEED_GCC46:M[nN][oO]) && \
-    !empty(_NEED_GCC47:M[nN][oO])
+    !empty(_NEED_GCC47:M[nN][oO]) && !empty(_NEED_GCC_AUX:M[nN][oO])
 _NEED_GCC47=	yes
 .endif
 
@@ -256,6 +274,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 .elif !empty(_NEED_GCC47:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
+.elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
 .endif
 _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
@@ -402,6 +422,26 @@ _GCC_DEPENDENCY=	gcc47>=${_GCC_REQD}:../../lang/gcc47
         !empty(_LANGUAGES.gcc:Mgo) || \
         !empty(_LANGUAGES.gcc:Mobjc) || \
         !empty(_LANGUAGES.gcc:Mobj-c++)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
+#
+# We require Ada-capable compiler in the lang/gcc-aux directory.
+#
+_GCC_PKGBASE=		gcc-aux
+.  if !empty(PKGPATH:Mlang/gcc-aux)
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc-aux
+_GCC_DEPENDENCY=	gcc-aux>=${_GCC_REQD}:../../lang/gcc-aux
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mada) || \
+        !empty(_LANGUAGES.gcc:Mobjc)
 _USE_GCC_SHLIB?=	yes
 .    endif
 .  endif
@@ -599,6 +639,49 @@ FCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran
 F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran
 PKG_FC:=	${_GCC_FC}
 PKGSRC_FORTRAN?=	gfortran
+.endif
+.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}ada)
+_GCC_VARS+=	ADA GMK GLK GBD CHP PRP GLS GNT
+_GCC_ADA=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}ada
+_GCC_GMK=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatmake
+_GCC_GLK=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatlink
+_GCC_GBD=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatbind
+_GCC_CHP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatchop
+_GCC_PRP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatprep
+_GCC_GLS=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatls
+_GCC_GNT=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnat
+_ALIASES.ADA=	ada
+_ALIASES.GMK=	gnatmake
+_ALIASES.GLK=	gnatlink
+_ALIASES.GBD=	gnatbind
+_ALIASES.CHP=	gnatchop
+_ALIASES.PRP=	gnatprep
+_ALIASES.GLS=	gnatls
+_ALIASES.GNT=	gnat
+ADAPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}ada
+GMKPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatmake
+GLKPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatlink
+GBDPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatbind
+CHPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatchop
+PRPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatprep
+GLSPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatls
+GNTPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnat
+PKG_ADA:=	${_GCC_ADA}
+PKG_GMK:=	${_GCC_GMK}
+PKG_GLK:=	${_GCC_GLK}
+PKG_GBD:=	${_GCC_GBD}
+PKG_CHP:=	${_GCC_CHP}
+PKG_PRP:=	${_GCC_PRP}
+PKG_GLS:=	${_GCC_GLS}
+PKG_GNT:=	${_GCC_GNT}
+PKGSRC_ADA?=	ada
+PKGSRC_GMK?=	gnatmake
+PKGSRC_GLK?=	gnatlink
+PKGSRC_GBD?=	gnatbind
+PKGSRC_CHP?=	gnatchop
+PKGSRC_PRP?=	gnatprep
+PKGSRC_GLS?=	gnatls
+PKGSRC_GNT?=	gnat
 .endif
 _COMPILER_STRIP_VARS+=	${_GCC_VARS}
 
