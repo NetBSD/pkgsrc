@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2216 2012/07/08 12:34:01 mef Exp $
+$NetBSD: CHANGES-2012,v 1.2217 2012/07/08 12:45:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3451,4 +3451,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated news/nget to 0.27.1nb4 [sbd 2012-07-08]
 	Updated news/nn to 6.7.3nb1 [sbd 2012-07-08]
 	Updated net/mikutter to 0.1.1.814 [obache 2012-07-08]
-	Updated x11/kdelibdocs3 to 3.5.10nb13 [makoto 2012-07-08]
+	Updated x11/kdelibdocs3 to 3.5.10nb13 [mef 2012-07-08]
