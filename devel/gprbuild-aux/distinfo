@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.2 2011/10/04 21:38:21 marino Exp $
+$NetBSD: distinfo,v 1.3 2012/07/08 20:08:42 marino Exp $
 
-SHA1 (gprbuild-aux-20101120.tar.bz2) = 84629d790c4f9479fdce6ec6e6f732fa60089afb
-RMD160 (gprbuild-aux-20101120.tar.bz2) = 560185e9733af77c4a6e9c37e510765e30b438ad
-Size (gprbuild-aux-20101120.tar.bz2) = 1470482 bytes
-SHA1 (patch-aa) = 1fe9a3055551696ad5b090b661a2ed3a3b66ddee
-SHA1 (patch-ab) = cbc34ed39826b55bc1ac41fa21fffc50f1f7cdd1
+SHA1 (gprbuild-gpl-2012-src.tgz) = 08fabf7ee1d49c00ef20c271239df1d64f56da11
+RMD160 (gprbuild-gpl-2012-src.tgz) = f1f1ef5e6de2faff5765eeeee4ddb382a00c911e
+Size (gprbuild-gpl-2012-src.tgz) = 2159669 bytes
+SHA1 (patch-Makefile.in) = 730c4b7a0a6b7f89b6f0639dbd91417c9d02789e
+SHA1 (patch-gprbuild.gpr) = abb482bc9dc2de967ad4a2e0bfa6fc562490bd0a
+SHA1 (patch-share_gprconfig_compilers.xml) = d64a8e27372bbc1abbbf1b5d44a6b2bb4671036b
+SHA1 (patch-share_gprconfig_gnat.xml) = 5e0ddcec2d46cbf0486556889845e10fab441ad8
+SHA1 (patch-share_gprconfig_linker.xml) = ad99b1d6f0d9199ca202f1dea2f7d0c8ffa5c3d3
+SHA1 (patch-share_gprconfig_targetset.xml) = 2bc382633eec715381fdfb5ac8e82edf026af5ad
+SHA1 (patch-src_gprlib.adb) = 9c3cf8116800ea6bd2741fa0da522e9886b7bcf1
