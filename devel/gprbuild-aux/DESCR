@@ -6,7 +6,3 @@ Ada, Assembler, C, C++, and Fortran.  Easily extendable by users to cover
 new toolchains and languages it is primarily aimed at projects of all sizes
 organized into subsystems and libraries and is particularly well suited for
 compiled languages.
-
-GPRbuild-AUX is a customized version of GPRbuild that exists solely for the
-use with the GNAT AUX compiler, and not with the FSF or GPL versions of the
-GNAT compiler.
