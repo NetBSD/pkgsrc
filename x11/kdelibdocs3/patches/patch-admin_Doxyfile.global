@@ -1,0 +1,50 @@
+$NetBSD: patch-admin_Doxyfile.global,v 1.1 2012/07/08 12:33:39 mef Exp $
+
+To avoid following messages:
+warning: Tag `USE_WINDOWS_ENCODING' at line 2 of file kdefx/Doxyfile has become obsolete.
+warning: Tag `HTML_ALIGN_MEMBERS' at line 85 of file kdefx/Doxyfile has become obsolete.
+warning: Tag `MAX_DOT_GRAPH_WIDTH' at line 154 of file kdefx/Doxyfile has become obsolete.
+warning: Tag `MAX_DOT_GRAPH_HEIGHT' at line 155 of file kdefx/Doxyfile has become obsolete.
+warning: Tag `HTML_ALIGN_MEMBERS' at line 174 of file kdefx/Doxyfile has become obsolete.
+warning: Tag `DETAILS_AT_TOP' at line 181 of file kdefx/Doxyfile has become obsolete.
+
+--- admin/Doxyfile.global.orig	2008-08-20 05:28:39.000000000 +0900
++++ admin/Doxyfile.global	2012-07-08 08:46:26.000000000 +0900
+@@ -1,5 +1,4 @@
+ OUTPUT_LANGUAGE        = English
+-USE_WINDOWS_ENCODING   = NO
+ BRIEF_MEMBER_DESC      = NO
+ REPEAT_BRIEF           = YES
+ ABBREVIATE_BRIEF       = 
+@@ -82,7 +81,6 @@
+ HTML_HEADER            = ../apidocs/common/header.html
+ HTML_FOOTER            = ../apidocs/common/footer.html
+ HTML_STYLESHEET        = ../apidocs/common/doxygen.css
+-HTML_ALIGN_MEMBERS     = YES
+ GENERATE_HTMLHELP      = NO
+ CHM_FILE               = 
+ HHC_LOCATION           = 
+@@ -151,8 +149,6 @@
+ DOT_IMAGE_FORMAT       = png
+ DOT_PATH               = 
+ DOTFILE_DIRS           = 
+-MAX_DOT_GRAPH_WIDTH    = 800
+-MAX_DOT_GRAPH_HEIGHT   = 1024
+ MAX_DOT_GRAPH_DEPTH    = 0
+ GENERATE_LEGEND        = YES
+ DOT_CLEANUP            = YES
+@@ -171,14 +167,12 @@
+ 	"authors=\xrefitem authors \"Author(s)\" \"Authors\"" \
+ 	"FIXME=\xrefitem fixme \"Fixme\" \"Fixme\""
+ 
+-HTML_ALIGN_MEMBERS     = YES
+ REFERENCED_BY_RELATION = NO
+ REFERENCES_RELATION    = NO
+ VERBATIM_HEADERS       = NO
+ GENERATE_HTML          = YES
+ SOURCE_BROWSER         = YES
+ GENERATE_AUTOGEN_DEF   = NO
+-DETAILS_AT_TOP         = YES
+ SORT_MEMBER_DOCS       = YES
+ GENERATE_TODOLIST      = YES
+ IGNORE_PREFIX          = K
