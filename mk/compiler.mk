@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.76 2012/06/27 13:36:08 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.77 2012/07/08 19:57:10 marino Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -42,8 +42,8 @@
 # USE_LANGUAGES
 #	Lists the languages used in the source code of the package,
 #	and is used to determine the correct compilers to install.
-#	Valid values are: c, c99, c++, fortran, fortran77, java, objc.
-#	The default is "c".
+#	Valid values are: c, c99, c++, fortran, fortran77, java, objc,
+#	obj-c++, and ada.  The default is "c".
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
@@ -163,10 +163,12 @@ _WRAP_EXTRA_ARGS.LD+=	${_LINKER_ABI_FLAG.${ABI}}
 _FAIL_WRAPPER.CC=	${WRKDIR}/.compiler/bin/c-fail-wrapper
 _FAIL_WRAPPER.CXX=	${WRKDIR}/.compiler/bin/c++-fail-wrapper
 _FAIL_WRAPPER.FC=	${WRKDIR}/.compiler/bin/fortran-fail-wrapper
+_FAIL_WRAPPER.ADA=	${WRKDIR}/.compiler/bin/ada-fail-wrapper
 
 ${_FAIL_WRAPPER.CC}: fail-wrapper
 ${_FAIL_WRAPPER.CXX}: fail-wrapper
 ${_FAIL_WRAPPER.FC}: fail-wrapper
+${_FAIL_WRAPPER.ADA}: fail-wrapper
 
 .PHONY: fail-wrapper
 fail-wrapper: .USE
@@ -184,7 +186,7 @@ fail-wrapper: .USE
 	${ECHO} 'exit 1'
 	${RUN}${CHMOD} +x ${.TARGET}
 
-.if empty(USE_LANGUAGES:Mc) && empty(USE_LANGUAGES:Mobjc)
+.if empty(USE_LANGUAGES:Mc) && empty(USE_LANGUAGES:Mobjc) && empty(USE_LANGUAGES:Mobjc-c++)
 PKG_CC:=		${_FAIL_WRAPPER.CC}
 ALL_ENV+=		CPP=${CPP:Q}
 override-tools: ${_FAIL_WRAPPER.CC}
@@ -197,6 +199,10 @@ override-tools: ${_FAIL_WRAPPER.CXX}
 .if empty(USE_LANGUAGES:Mfortran) && empty(USE_LANGUAGES:Mfortran77)
 PKG_FC:=		${_FAIL_WRAPPER.FC}
 override-tools: ${_FAIL_WRAPPER.FC}
+.endif
+.if empty(USE_LANGUAGES:Mada)
+PKG_ADA:=		${_FAIL_WRAPPER.ADA}
+override-tools: ${_FAIL_WRAPPER.ADA}
 .endif
 
 .endif	# BSD_COMPILER_MK
