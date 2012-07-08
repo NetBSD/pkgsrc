@@ -1,4 +1,4 @@
 TiMidity is a MIDI to WAVE converter using Gravis
-Ultrasound-compatible patch files to generate digital audio data from
-General MIDI files.  The data can be stored in a file for processing,
-or played in real time through an audio device.
+Ultrasound-compatible patch files or Soundfonts to generate digital
+audio data from General MIDI files.  The data can be stored in a
+file for processing, or played in real time through an audio device.
