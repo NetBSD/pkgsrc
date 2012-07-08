@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2006/10/27 17:20:52 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2012/07/08 09:51:31 wiz Exp $
 
   To use this program, you'll have to install one of the following:
 	* pkgsrc/audio/eawpatches
