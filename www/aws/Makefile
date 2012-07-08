@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/03/16 04:31:15 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/08 20:14:28 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 		http://dragonlace.mirrors.ada.cx/src/
@@ -16,12 +16,31 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 AWS_VERSION=		2.10.0.1
 USE_TOOLS+=		gmake makeinfo sed gawk
+USE_LANGUAGES=  	c ada c++ fortran
+
+# Note: c++ and fortran aren't used, but gprconfig probes for them.
+# When that happens, pkgsrc wrapper emits a warning message which causes
+# gprconfig to crash due to output text not matching expected regexp
+# Adding c++ and fortran to USE_LANGUAGES avoids this issue.
 
 PYTHON_VERSIONS_ACCEPTED=	26 27
 
 .include "options.mk"
 
 MAKE_ENV+=	ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+
+# Link options were added for the aws library
+# "-R" option disables all rpaths except adalib and compiler libs.  This is
+#      done because by default the rpaths will points at the WRKOBJDIR because
+#      it doesn't support the concept of DESTDIR.
+# "-Wl,-R" adds a second rpath string.
+# -Wl,-rpath is a better choice, but synonym -Wl,-R works on all BSD and SunOS
+SUBST_CLASSES+= 	rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_MESSAGE.rpath=	Adjust rpaths of shared libraries
+SUBST_FILES.rpath=	src/src.gpr include/include.gpr
+SUBST_SED.rpath=	-e "s,@ADDITIONAL_RPATH@,${ADDITIONAL_RPATH},"
+ADDITIONAL_RPATH=	${PREFIX}/lib:${PREFIX}/lib/aws/native/relocatable
 
 GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
 GENERATE_PLIST+= ${FIND} bin/aws_password;
@@ -42,14 +61,8 @@ GENERATE_PLIST+= ${FIND} share/gps/plug-ins/aws.xml;
 GENERATE_PLIST+= ${FIND} share/gps/plug-ins/aws_api.xml;
 GENERATE_PLIST+= ${FIND} share/gps/plug-ins/wsdl2aws.xml;
 
-post-wrapper:
-	# We disable at least the wrapper binaries on all GNAT AUX to
-	# avoid potential linkage problems
-	${RM} ${WRKDIR}/.wrapper/bin/*
-
 do-configure:
-	cd ${WRKSRC} && ${SETENV} CC=gnatgcc \
-	${GMAKE} setup ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${GMAKE} setup ${CONFIGURE_ARGS}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} build build_doc
@@ -64,7 +77,6 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/gnatpython/buildlink3.mk"
-.include "../../lang/gnat-aux/buildlink3.mk"
 .include "../../textproc/xmlada/buildlink3.mk"
 .include "../../devel/gprbuild-aux/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
