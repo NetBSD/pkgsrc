@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/03/03 00:12:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/07/08 07:45:25 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGNAME=	xfce4-print-${XFCE4_VERSION}
 DISTNAME=	xfprint-${XFCE4_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print
 COMMENT=	Xfce print dialog
 
@@ -20,11 +20,6 @@ MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/C ${PREFIX}/share/xfce4/doc/C/images
 MAKE_DIRS+=	${PREFIX}/share/xfce4/doc/fr ${PREFIX}/share/xfce4/doc/fr/images
 
 .include "options.mk"
-
-PLIST_VARS+=	bsdlpr
-.if ${OPSYS} != "SunOS"
-PLIST.bsdlpr=	yes
-.endif
 
 .include "../../devel/xfconf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
