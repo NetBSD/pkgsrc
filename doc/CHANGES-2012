@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2211 2012/07/08 09:56:19 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.2212 2012/07/08 10:00:32 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3447,3 +3447,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/xfce4-print to 4.6.1nb9 [sbd 2012-07-08]
 	Updated audio/timidity to 2.14.0 [wiz 2012-07-08]
 	Updated security/sks to 1.1.2nb1 [sbd 2012-07-08]
+	Updated graphics/tgif to 4.2.5nb1 [sbd 2012-07-08]
