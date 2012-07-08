@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/05/16 17:56:48 marino Exp $
+$NetBSD: distinfo,v 1.7 2012/07/08 20:23:50 marino Exp $
 
 SHA1 (gps-5.0.1.tar.bz2) = 5fc7fba2d80b2b405c60b0a4ecc6c4d2792a3829
 RMD160 (gps-5.0.1.tar.bz2) = 17d90cd493cca50a70ebb4118b69ebba759b964a
@@ -6,6 +6,7 @@ Size (gps-5.0.1.tar.bz2) = 9303980 bytes
 SHA1 (patch-aa) = 4a590aa2a38797548a44e3974f3534aa36138ab0
 SHA1 (patch-ab) = 59c13a902436f3953a467b914e8b3c01443263c6
 SHA1 (patch-ac) = 4c350aa10b82aef2baaf29465ffec30942ed6c0d
+SHA1 (patch-ada__module_core_src_ada__semantic__tree-generics.adb) = 2992967f3aa4fce3eb85cd67033d8f4f96c768eb
 SHA1 (patch-ae) = 30d8f07a0115ddd6820f907806eaf41360297f67
 SHA1 (patch-af) = b54e4b5076bbdcb67953856d668c9e9bde72f3ea
 SHA1 (patch-ak) = 415e7a0017ce22fa28657dcafabc6ebc7c151582
@@ -14,3 +15,6 @@ SHA1 (patch-am) = bb0257d86161abd39d9d8a952a0a20d921d401dc
 SHA1 (patch-an) = 9a12bfd2950fe4fc06a72f5970ff125cdddb6f82
 SHA1 (patch-distrib_gnat__switches_awk) = d3e3ad94662fa3a8a32237e0cd630d071f153267
 SHA1 (patch-gps_gps.gpr) = 2f6dd86b6588fcade4618bf5189894b092f4a9d8
+SHA1 (patch-prj_editor_src_gpr__creation.adb) = 2b1a19e491468e4a5190d52aa8eb3d93e3dcc8c1
+SHA1 (patch-refactoring_core_src_refactoring-services.adb) = 6753f334182696e38aa31c298d5bf9a957ce83b8
+SHA1 (patch-toolchains_editor_core_src_toolchains-parsers.ads) = a8443c4204cf23757b42d3330e52b46b80d52ec3
