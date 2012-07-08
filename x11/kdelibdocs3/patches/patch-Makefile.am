@@ -1,0 +1,34 @@
+$NetBSD: patch-Makefile.am,v 1.1 2012/07/08 12:33:39 mef Exp $
+
+Removing doxytag related lines (Doxytag dropped this command 
+at least since 1.8.1.1)
+
+--- Makefile.am.orig	2008-08-21 01:05:01.000000000 +0900
++++ Makefile.am	2012-07-08 01:13:07.000000000 +0900
+@@ -94,14 +94,12 @@
+ include admin/Doxyfile.am
+ include admin/deps.am
+ 
+-apidox-am-toplevel-yes: apidox-am-toplevel-kdelibs
++apidox-am-toplevel-yes: 
+ 
+-apidox-am-toplevel-kdelibs: $(top_builddir)/apidocs/qt/qt.tag
+-
+-$(top_builddir)/apidocs/qt/qt.tag:
+-	@echo "*** Creating a tag file for the Qt library:"; \
+-	$(mkinstalldirs) $(top_builddir)/apidocs/qt; \
+-	doxytag -t $(top_builddir)/apidocs/qt/qt.tag $(QTDOCDIR)
++# $(top_builddir)/apidocs/qt/qt.tag:
++# 	@echo "*** Creating a tag file for the Qt library:"; \
++# 	$(mkinstalldirs) $(top_builddir)/apidocs/qt; \
++# 	doxytag -t $(top_builddir)/apidocs/qt/qt.tag $(QTDOCDIR)
+ 
+ install-data-local: install-apidox-kdelibs
+ 
+@@ -113,5 +111,5 @@
+ 		$(INSTALL_DATA) $(top_builddir)/apidocs/qt/qt.tag $(DESTDIR)$(kde_htmldir)/en/$(PACKAGE)-apidocs/qt; \
+ 	fi
+ 
+-.PHONY: install-apidox-kdelibs apidox-am-toplevel-kdelibs apidox-am-toplevel-yes qtmessages
++.PHONY: install-apidox-kdelibs  apidox-am-toplevel-yes qtmessages
+ SUBDIRS=$(TOPSUBDIRS)
