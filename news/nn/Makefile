@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2012/04/07 22:49:54 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2012/07/08 10:16:32 sbd Exp $
 
 DISTNAME=	nn-6.7.3
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-6.7/
 EXTRACT_SUFX=	.tar.Z
@@ -63,4 +64,5 @@ SUBST_SED.fix-dest=	-e 's,${PREFIX},${DESTDIR}${PREFIX},'
 SUBST_FILES.fix-dest=	inst
 
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
