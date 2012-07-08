@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/05/06 17:55:52 marino Exp $
+$NetBSD: distinfo,v 1.5 2012/07/08 20:18:59 marino Exp $
 
 SHA1 (gtkada-2.22.tar.bz2) = 99cce5b7847b6c497aef8f388250034df462cfa6
 RMD160 (gtkada-2.22.tar.bz2) = f12409882e31213eae2817309193025eec9bf20b
@@ -8,9 +8,9 @@ RMD160 (gtkada-rm-2.22.tar.bz2) = 455767367be496a42e87589902b7752d74303ec0
 Size (gtkada-rm-2.22.tar.bz2) = 3263320 bytes
 SHA1 (patch-aa) = 341bac6befb2ba9647cd6820057630d417e47d42
 SHA1 (patch-ab) = 420a0e809b1f7e82cd1b7212ed2840ade4def6c2
-SHA1 (patch-ac) = e013efafab5f68ce282f9ce38577fa018c05ff00
+SHA1 (patch-ac) = 3470d003563b82d228f9819f308c3d86bef4d842
 SHA1 (patch-ad) = 09803810177e1e9ff0957773362f7cd44589665b
-SHA1 (patch-ae) = 7ef44d33bda6c8deb126d8457f4b36415ff256a6
+SHA1 (patch-ae) = 8c72682d361b9162cfbc8807fe36d117de656a4b
 SHA1 (patch-af) = ab8b28cfe1d04b51207aaf666e547732bbd3b03d
 SHA1 (patch-ag) = cbd147b8a193642b7d8e2b706b45c2002b8cdc99
 SHA1 (patch-ah) = 9539f2e735550ccedbc769bf66fe979f333e5851

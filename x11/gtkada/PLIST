@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/06/16 03:15:31 dholland Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/07/08 20:18:59 marino Exp $
 bin/gate
 bin/gate-in.exe
 bin/gtkada-config
@@ -552,7 +552,6 @@ include/gtkada/pango-tabs.adb
 include/gtkada/pango-tabs.ads
 include/gtkada/pango.ads
 lib/gnat/gtkada.gpr
-lib/gnat/gtkada/IGNORE.ME
 lib/gtkada/relocatable/cairo-font_face.ali
 lib/gtkada/relocatable/cairo-font_options.ali
 lib/gtkada/relocatable/cairo-image_surface.ali
@@ -2457,3 +2456,4 @@ share/examples/gtkada/user_data/Makefile
 share/examples/gtkada/user_data/README
 share/examples/gtkada/user_data/test_handlers.adb
 share/gps/plug-ins/gtkada.xml
+@pkgdir lib/gnat/gtkada

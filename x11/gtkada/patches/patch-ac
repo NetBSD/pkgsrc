@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2011/02/03 18:57:15 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2012/07/08 20:19:00 marino Exp $
 
 --- src/tools/Makefile.in.orig	2011-01-19 22:51:22.000000000 +0100
 +++ src/tools/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2011/02/03 18:57:15 drochner Exp $
  GTKADA_CONFIG = gtkada-config
  
 -GNATMAKELDFLAGS = -largs -L../lib-obj -lgtkada $(GTK_LIBS)
-+GNATMAKELDFLAGS = -largs -shared-libgcc -L../lib-obj -lgtkada $(GTK_LIBS)
++GNATMAKELDFLAGS = -largs -shared-libgcc -lgnat -L../lib-obj -lgtkada $(GTK_LIBS)
  
  OBJ_DIR=obj
  include ../Makefile.common
