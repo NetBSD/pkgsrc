@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/07/08 12:33:39 mef Exp $
+
+Removing doxytag related lines (Doxytag dropped this command 
+at least since 1.8.1.1)
+
+--- Makefile.in.orig	2008-08-21 01:05:55.000000000 +0900
++++ Makefile.in	2012-07-08 01:14:00.000000000 +0900
+@@ -1100,14 +1100,13 @@
+ $(top_srcdir)/Makefile.am.in:
+ $(CONF_FILES):
+ 
+-apidox-am-toplevel-yes: apidox-am-toplevel-kdelibs
+ 
+-apidox-am-toplevel-kdelibs: $(top_builddir)/apidocs/qt/qt.tag
++# apidox-am-toplevel-kdelibs: $(top_builddir)/apidocs/qt/qt.tag
+ 
+-$(top_builddir)/apidocs/qt/qt.tag:
+-	@echo "*** Creating a tag file for the Qt library:"; \
+-	$(mkinstalldirs) $(top_builddir)/apidocs/qt; \
+-	doxytag -t $(top_builddir)/apidocs/qt/qt.tag $(QTDOCDIR)
++#$(top_builddir)/apidocs/qt/qt.tag:
++#	@echo "*** Creating a tag file for the Qt library:"; \
++#	$(mkinstalldirs) $(top_builddir)/apidocs/qt; \
++#	doxytag -t $(top_builddir)/apidocs/qt/qt.tag $(QTDOCDIR)
+ 
+ install-data-local: install-apidox-kdelibs
+ 
