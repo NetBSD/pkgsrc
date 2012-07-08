@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2012/07/08 21:54:04 wiz Exp $
+$NetBSD: distinfo,v 1.22 2012/07/08 23:03:17 wiz Exp $
 
 SHA1 (librsvg-2.36.1.tar.xz) = 1084015373e90ff8fccbae4b27ee778bbdf14d40
 RMD160 (librsvg-2.36.1.tar.xz) = 373e2f2a72a79097c47ce0e75701e784673c2ee7
 Size (librsvg-2.36.1.tar.xz) = 506184 bytes
 SHA1 (patch-ab) = 44985e1c02f925769f394007f924b8d6ec8151d5
-SHA1 (patch-rsvg-image.h) = a7265377d9173d494ce7610561da8598d6ae63d2
+SHA1 (patch-rsvg-io.c) = 1bcb7164dda065eb2e231818dd9c5df8b98e49a5
