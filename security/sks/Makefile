@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/06/16 23:45:39 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/08 09:56:09 sbd Exp $
 #
 
 DISTNAME=	sks-1.1.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://sks-keyserver.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
@@ -41,4 +42,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sks_build.sh ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/sks.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
