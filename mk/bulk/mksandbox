@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.55 2012/07/03 12:14:13 jperkin Exp $
+# $NetBSD: mksandbox,v 1.56 2012/07/08 21:25:44 jperkin Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -45,6 +45,7 @@ xsrc=/usr/xsrc
 with_x=yes
 
 kernel=""
+sandboxWriteDirs=""
 sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R7 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
 sandboxEmptyDirs="/var/run /var/log /var/spool/lock /var/spool/mqueue"
 sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /var/log/lastlog /var/log/lastlogx"
@@ -74,6 +75,7 @@ Darwin)
 	cpprog=/bin/cp
 	gtarprog=/usr/bin/gnutar
 	idprog=/usr/bin/id
+	kernel=/mach_kernel
 	mkdirprog="/bin/mkdir -p"
 	mountflags="-t nfs"
 	mounthost="localhost"
@@ -81,7 +83,8 @@ Darwin)
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
 	sandboxEmptyDirs="$sandboxEmptyDirs /var/root"
-	sandboxMountDirs="$sandboxMountDirs /usr/llvm-gcc-4.2 /System/Library /Library"
+	sandboxMountDirs="$sandboxMountDirs /usr/llvm-gcc-4.2 /usr/X11 /System/Library /Library"
+	sandboxWriteDirs="$sandboxWriteDirs /Library/Server/Mail/Data"
 	;;
 FreeBSD)
 	bmakeprog=bmake
@@ -295,6 +298,12 @@ for d in $sandboxMountDirs; do
 	$mountprog $mountflags -r $mounthost$d $sandbox$d;
 	echo "$mounthost$d $d ro \\" >> $sandbox_script
 done
+for d in $sandboxWriteDirs; do
+	test -d $d || continue;
+	$mkdirprog $sandbox$d;
+	$mountprog $mountflags $mounthost$d $sandbox$d;
+	echo "$mounthost$d $d rw \\" >> $sandbox_script
+done
 
 echo "Making /tmp in $sandbox"
 $mkdirprog $sandbox/tmp $sandbox/var/tmp
@@ -417,7 +426,6 @@ chmod +x $sandbox_script
 case $opsys in
 Darwin)
 	$cpprog /var/run/resolv.conf $sandbox/var/run/resolv.conf
-	$cpprog /mach_kernel $sandbox/mach_kernel
 	;;
 SunOS)
 	$cpprog /etc/mnttab $sandbox/etc/mnttab
