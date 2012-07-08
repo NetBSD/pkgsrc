@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2208 2012/07/07 21:39:56 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2209 2012/07/08 07:45:36 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3444,3 +3444,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added games/wargames version 1.01 [abs 2012-07-07]
 	Updated editors/xournal to 0.4.7 [wiz 2012-07-07]
 	Updated devel/mercurial to 2.2.3 [wiz 2012-07-07]
+	Updated print/xfce4-print to 4.6.1nb9 [sbd 2012-07-08]
