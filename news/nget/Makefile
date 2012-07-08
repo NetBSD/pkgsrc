@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/03/03 00:13:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/07/08 10:11:44 sbd Exp $
 #
 
 DISTNAME=		nget-0.27.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nget/}
 
@@ -36,4 +36,5 @@ post-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
