@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.55 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.56 2012/07/09 15:44:06 wiz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -203,8 +203,19 @@ _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME:Q}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL:Q}
 
+USE_GAMESGROUP?=	no
+SETGIDGAME?=            ${USE_GAMESGROUP}
 # If USE_GAMESGROUP == yes, then we need the "games" group.
 # SETGIDGAME is a deprecated alias for USE_GAMESGROUP.
+#
+# If USE_GAMESGROUP is set, GAMES_GROUP, GAMEMODE, SETGID_GAMES_PERMS,
+# etc. variables can be used to install setgid games and their data
+# files.
+#
+# SETGIDGAME is a deprecated alternative variable with the same
+# purpose but a murky history and unclear semantics; it is being
+# phased out because it conflicts with a like-named build variable in
+# the NetBSD base system.
 #
 # For now we also create the "games" user; this should not be used and
 # should be removed at some point.
