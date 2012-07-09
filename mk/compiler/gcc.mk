@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.122 2012/07/08 19:57:10 marino Exp $
+# $NetBSD: gcc.mk,v 1.123 2012/07/09 07:42:17 sbd Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -240,11 +240,13 @@ _NEED_GCC46?=	no
 _NEED_GCC46=	yes
 .  endif
 .endfor
+_NEED_GCC47?=	no
 .for _pattern_ in ${_GCC47_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
 _NEED_GCC47=	yes
 .  endif
 .endfor
+_NEED_GCC_AUX?=	no
 .for _pattern_ in ${_GCC_AUX_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
 _NEED_GCC_AUX=	yes
