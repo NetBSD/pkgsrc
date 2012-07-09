@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/09 14:12:20 minskim Exp $
+share/texmf-dist/doc/luatex/luaotfload/NEWS
+share/texmf-dist/doc/luatex/luaotfload/README
+share/texmf-dist/doc/luatex/luaotfload/luaotfload.pdf
