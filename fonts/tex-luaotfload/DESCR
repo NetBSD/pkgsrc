@@ -1,0 +1,3 @@
+The package adopts the TrueType/OpenType Font loader code
+provided in ConTeXt, and adapts it to use in Plain TeX and
+LaTeX.
