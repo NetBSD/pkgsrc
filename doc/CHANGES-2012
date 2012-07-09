@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2223 2012/07/09 09:55:38 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2224 2012/07/09 10:10:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3458,3 +3458,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/xetex to 0.9997.5nb3 [minskim 2012-07-09]
 	Updated converters/dos2unix to 6.0 [ryoon 2012-07-09]
 	Updated audio/abcmidi to 20120704 [ryoon 2012-07-09]
+	Updated mail/msmtp to 1.4.28 [ryoon 2012-07-09]
