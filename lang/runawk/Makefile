@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/03/09 18:58:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/09 12:31:48 cheusov Exp $
 #
 
 DISTNAME=	runawk-1.4.0
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
@@ -19,23 +20,18 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c
 TEST_TARGET=		test
 
-SUBST_CLASSES+=	runawk
+SUBST_CLASSES+=		runawk
 SUBST_SED.runawk=	-e "s,/usr/bin/env runawk,${PREFIX}/bin/runawk,"
 SUBST_FILES.runawk=	a_getopt/alt_getopt
 SUBST_STAGE.runawk=	pre-build
 SUBST_MESSAGE.runawk=	Fixing path to runawk.
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	AWK_PROG=${AWK:Q}
-.endif
 
 EGDIR=		${PREFIX}/share/examples/runawk
 
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	EGDIR=${EGDIR}
 MAKE_ENV+=	SUBPRJ_DFLT='runawk modules a_getopt doc examples'
+MAKE_ENV+=	AWK_PROG=${AWK:Q}
 
 .include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
