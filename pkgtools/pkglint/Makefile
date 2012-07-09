@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.402 2012/07/06 09:29:00 obache Exp $
+# $NetBSD: Makefile,v 1.403 2012/07/09 17:37:48 wiz Exp $
 #
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
 # After updating, please re-set the CVS tag to HEAD.
-DISTNAME=	pkglint-4.110
+DISTNAME=	pkglint-4.111
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -42,6 +42,7 @@ SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${DISTNAME:S/pkglint-//}\|g
 SUBST_SED.pkglint+=	-e s\|@MAKE@\|${MAKE:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@PERL@\|${PERL5:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX}/share/pkglint\|g
+#SUBST_SED.pkglint+=	-e s\|@DATADIR@\|/usr/pkgsrc/pkgtools/pkglint/files\|g
 
 # Note: This target is only intended for use by the pkglint author.
 .PHONY: quick-install
