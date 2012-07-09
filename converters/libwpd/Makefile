@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/08/01 04:05:00 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2012/07/09 19:17:15 joerg Exp $
 
 DISTNAME=	libwpd-0.9.2
 PKGREVISION=	1
@@ -19,5 +19,11 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libwpd-0.9.pc.in libwpd-stream-0.9.pc.in
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 .include "../../mk/bsd.pkg.mk"
