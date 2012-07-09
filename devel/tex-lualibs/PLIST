@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/09 13:52:47 minskim Exp $
+share/texmf-dist/tex/luatex/lualibs/lualibs-aux.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-boolean.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-dimen.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-dir.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-file.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-io.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-lpeg.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-math.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-md5.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-number.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-os.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-set.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-string.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-table.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-unicode.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-url.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-utils.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs.lua
