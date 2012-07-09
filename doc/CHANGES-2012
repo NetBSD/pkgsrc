@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2234 2012/07/09 18:05:44 bsiegert Exp $
+$NetBSD: CHANGES-2012,v 1.2235 2012/07/09 18:14:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3479,3 +3479,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-xetex to 2011nb1 [minskim 2012-07-09]
 	Updated pkgtools/pkglint to 4.111 [wiz 2012-07-09]
 	Updated devel/automake to 1.12.2 [bsiegert 2012-07-09]
+	Updated pkgtools/pkglint to 4.112 [wiz 2012-07-09]
