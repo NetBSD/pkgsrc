@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.44 2012/07/09 17:36:59 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.45 2012/07/09 22:11:00 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -161,16 +161,16 @@ Warn if Makefile variables are not in the preferred order.
 Warn if a variable is used or defined outside its specified scope.
 The available permissions are:
 .Bl -tag -width 3n -compact
-.It a
+.It append
 append something using +=
-.It d
+.It default
 set a default value using ?=
-.It s
-set a variable using :=, =, !=
-.It p
+.It preprocess
 use a variable during preprocessing
-.It u
+.It runtime
 use a variable at runtime
+.It set
+set a variable using :=, =, !=
 .El
 A
 .Sq \&?
