@@ -1,0 +1,4 @@
+Lualibs is a collection of Lua modules useful for general
+programming. The bundle is based on lua modules shipped with
+ConTeXt, and are made available in this bundle for use
+independent of ConTeXt.
