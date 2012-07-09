@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/12/14 20:27:10 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/09 14:52:53 minskim Exp $
 
 DISTNAME=	xetex
 PKGNAME=	tex-${DISTNAME}-2011
+PKGREVISION=	1
 TEXLIVE_REV=	24091
 
 MAINTAINER=	minskim@NetBSD.org
@@ -12,6 +13,7 @@ DEPENDS+=	tex-latex>=2010:../../print/tex-latex
 DEPENDS+=	tex-latexconfig>=2010.20663:../../print/tex-latexconfig
 DEPENDS+=	tex-plain>=3.141592653nb2:../../print/tex-plain
 DEPENDS+=	tex-xetexconfig>=2010:../../print/tex-xetexconfig
+DEPENDS+=	tex-xetex-def-[0-9]*:../../print/tex-xetex-def
 DEPENDS+=	xetex>=0.9995.3nb1:../../print/xetex
 
 INSTALLATION_DIRS+=	bin
