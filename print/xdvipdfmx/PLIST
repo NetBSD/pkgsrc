@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/09 01:21:27 minskim Exp $
+bin/xdvipdfmx
