@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2219 2012/07/08 21:23:17 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2220 2012/07/09 01:22:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3454,3 +3454,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/kdelibdocs3 to 3.5.10nb13 [mef 2012-07-08]
 	Added lang/gcc-aux version 20120614 [marino 2012-07-06]
 	Updated time/p5-Time-HiRes to 1.9724nb1 [wiz 2012-07-08]
+	Added print/xdvipdfmx version 0.7.8.20110705 [minskim 2012-07-09]
