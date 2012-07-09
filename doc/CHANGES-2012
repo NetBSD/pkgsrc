@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2221 2012/07/09 01:52:13 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.2222 2012/07/09 09:40:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/p5-Time-HiRes to 1.9724nb1 [wiz 2012-07-08]
 	Added print/xdvipdfmx version 0.7.8.20110705 [minskim 2012-07-09]
 	Updated print/xetex to 0.9997.5nb3 [minskim 2012-07-09]
+	Updated converters/dos2unix to 6.0 [ryoon 2012-07-09]
