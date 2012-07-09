@@ -1,13 +1,13 @@
-.\"	$NetBSD: pkglint.1,v 1.43 2006/10/22 05:26:41 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.44 2012/07/09 17:36:59 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
-.\" Roland Illig <rillig@NetBSD.org>, 2005, 2006.
+w.\" Thomas Klausner <rillig@NetBSD.org>, 2012.
 .\"
-.Dd July 27, 2006
+.Dd July 9, 2012
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -159,6 +159,22 @@ for whatever reason.
 Warn if Makefile variables are not in the preferred order.
 .It Cm [no-]perm
 Warn if a variable is used or defined outside its specified scope.
+The available permissions are:
+.Bl -tag -width 3n -compact
+.It a
+append something using +=
+.It d
+set a default value using ?=
+.It s
+set a variable using :=, =, !=
+.It p
+use a variable during preprocessing
+.It u
+use a variable at runtime
+.El
+A
+.Sq \&?
+means that it is not yet clear which permissions are allowed and which aren't.
 .It Cm [no-]plist-depr
 Warn if deprecated pathnames are used in
 .Pa PLIST
