@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2012/05/08 18:29:45 minskim Exp $
+# $NetBSD: Makefile,v 1.222 2012/07/09 14:13:15 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -236,6 +236,8 @@ SUBDIR+=	tex-lh
 SUBDIR+=	tex-lh-doc
 SUBDIR+=	tex-lm
 SUBDIR+=	tex-lm-doc
+SUBDIR+=	tex-luaotfload
+SUBDIR+=	tex-luaotfload-doc
 SUBDIR+=	tex-ly1
 SUBDIR+=	tex-ly1-doc
 SUBDIR+=	tex-manfnt
