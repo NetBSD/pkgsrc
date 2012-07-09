@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/03/28 07:57:47 wiz Exp $
+$NetBSD: distinfo,v 1.8 2012/07/09 19:06:54 joerg Exp $
 
 SHA1 (nucleo-0.7.5.tar.bz2) = 9a32d7dd1c6ad6348efa6bdc691cb46207a148c0
 RMD160 (nucleo-0.7.5.tar.bz2) = e997d319a425434b9aa32cc472d33e0d68917f8c
@@ -17,3 +17,5 @@ SHA1 (patch-ak) = b88dcb5d6cbc7e23a9b299c6e41e8e605f0bb96f
 SHA1 (patch-al) = 6684c1b1a3b85defaed2a7457fe4ef1f7c79c117
 SHA1 (patch-am) = 1abd0f40ffe2c9ea42fde983bc784d3a10d1ec02
 SHA1 (patch-an) = 775fef088e569f020c3e1d50cf0eb3627de60315
+SHA1 (patch-nucleo_network_xmpp_XmppConnection.H) = e93697fa6dc5ea1ba24142c88d452108cdacb955
+SHA1 (patch-nucleo_network_xmpp_XmppConnection.cxx) = 065d5bae6467d29a624b1c4d6950e7dba63b3cc1
