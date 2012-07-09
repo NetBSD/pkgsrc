@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2010/06/13 22:44:03 wiz Exp $
+$NetBSD: distinfo,v 1.8 2012/07/09 19:16:33 joerg Exp $
 
 SHA1 (DevIL-1.7.8.tar.gz) = bc27e3e830ba666a3af03548789700d10561fcb1
 RMD160 (DevIL-1.7.8.tar.gz) = a3cdb14fcca5e75ada240a53cbdc3e749a759da5
@@ -7,3 +7,5 @@ SHA1 (patch-aa) = 2784234ee79ada44f04219c5f49d5ea2c9e6bf4c
 SHA1 (patch-ab) = 995f402fa98cbfe96d43b98f6c409e484a53bf09
 SHA1 (patch-ac) = b540afa8baca5bb5e71edc63291ce49eb2fafd23
 SHA1 (patch-ad) = c8885607457c9af2d89dcf2d9e163fd224e0fa35
+SHA1 (patch-include_IL_il.h) = 553b2fbbd930ff6bab4b5bc790d13ebcccbfffba
+SHA1 (patch-lib_Makefile.in) = a2ae8d1a97f2cbd9c46b2f5923be06839dd6c64f
