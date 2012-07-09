@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.220 2012/06/02 12:24:55 cheusov Exp $
+# $NetBSD: makevars.map,v 1.221 2012/07/09 17:36:30 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -113,7 +113,7 @@ PKG_FC				ShellCommand [$user]
 IMAKE				ShellCommand [$user]
 IMAKEOPTS			List of ShellWord [$user]
 PRE_ROOT_CMD			ShellCommand [$user]
-SETGIDGAME			YesNo [$user]
+USE_GAMESGROUP			YesNo [$user]
 SU_CMD				ShellCommand [$user]
 SU_CMD_PATH_APPEND		Pathlist [$user]
 FATAL_OBJECT_FMT_SKEW		YesNo [$user]
@@ -351,9 +351,9 @@ FILES_SUBST_SED		List of ShellWord
 FIX_RPATH		List of Varname [$package_list]
 FONTS_DIRS.*		List of Pathname [m:as,c:a]
 GAMEDATAMODE		FileMode [$system]
-GAMEGRP			UserGroupName [$system]
+GAMES_GROUP		UserGroupName [$system]
 GAMEMODE		FileMode [$system]
-GAMEOWN			UserGroupName [$system]
+GAMES_USER		UserGroupName [$system]
 GCC_REQD		List of Version [$package_list]
 GENERATE_PLIST		List of ShellWord [$package_list]
 # ^^ List of Shellcommand, terminated with a semicolon
