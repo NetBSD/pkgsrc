@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/06/25 11:26:28 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/07/09 12:15:08 mef Exp $
 
 SHA1 (qof-0.7.5.tar.gz) = 9d7453fca0910c401180b8c8eda7443442633803
 RMD160 (qof-0.7.5.tar.gz) = 3e0ab118c2c5c1d760f2a9445183e77659f692c7
 Size (qof-0.7.5.tar.gz) = 906010 bytes
 SHA1 (patch-aa) = 1e9abeff6dd6fdb50092c104219576fb8d080d1f
+SHA1 (patch-doc_doxygen.cfg.in) = dea92ea9d2414ded8d1272f2939125a1380fb057
 SHA1 (patch-qof_qofmath128.h) = daaf1989791a7cc2743cfe655696246809dbd35f
