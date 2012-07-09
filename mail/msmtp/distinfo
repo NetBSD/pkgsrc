@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2012/01/08 00:00:09 obache Exp $
+$NetBSD: distinfo,v 1.24 2012/07/09 10:09:48 ryoon Exp $
 
-SHA1 (msmtp-1.4.27.tar.bz2) = e335745133b4729fe84c49f836b4d2fa9281e040
-RMD160 (msmtp-1.4.27.tar.bz2) = f648e9cee802f54872294b847f275ed9f8a236b0
-Size (msmtp-1.4.27.tar.bz2) = 301918 bytes
+SHA1 (msmtp-1.4.28.tar.bz2) = 3fd44b30e8f4ae071b2a5a205d6007f3465fa970
+RMD160 (msmtp-1.4.28.tar.bz2) = 651ed02e05d4966fe24b0367abb7d5cf1cf3cf12
+Size (msmtp-1.4.28.tar.bz2) = 302778 bytes
 SHA1 (patch-src_Makefile.in) = 373e20c6c683f8a0ef243f8ee9a75ec9838cd495
