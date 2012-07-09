@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/03/21 22:32:34 markd Exp $
+# $NetBSD: Makefile,v 1.10 2012/07/09 01:51:34 minskim Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xetex-0.9997.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.tug.org/xetex/
 COMMENT=	TeX system with Unicode and modern font technologies
 
 CONFLICTS+=	web2c<=7.5.7
+DEPENDS+=	xdvipdfmx-[0-9]*:../../print/xdvipdfmx
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/graphite ${DISTNAME}/libs/icu \
@@ -53,6 +54,14 @@ CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}/libs/graphite \
 		${WRKDIR}/${DISTNAME}/libs/xpdf \
 		${WRKDIR}/${DISTNAME}/libs/obsdcompat \
 		${WRKDIR}/${DISTNAME}/texk/web2c
+
+EVAL_PREFIX+=	XDVIPDFMX_PREFIX=xdvipdfmx
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Setting paths to commands.
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	xetexdir/XeTeX_ext.c
+SUBST_SED.paths=	-e 's,@XDVIPDFMX@,${XDVIPDFMX_PREFIX}/bin/xdvipdfmx,g'
 
 INSTALLATION_DIRS+=	bin
 
