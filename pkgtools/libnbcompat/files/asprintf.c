@@ -1,4 +1,4 @@
-/* $NetBSD: asprintf.c,v 1.2 2007/07/20 00:10:06 tnn Exp $ */
+/* $NetBSD: asprintf.c,v 1.2.44.1 2012/07/09 08:34:52 tron Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -56,6 +56,7 @@ vasprintf(char **ret, const char *fmt, va_list ap)
 	char *buf, *new_buf;
 	size_t len;
 	int retval;
+	va_list ap2;
 
 	len = 128;
 	buf = malloc(len);
@@ -64,10 +65,21 @@ vasprintf(char **ret, const char *fmt, va_list ap)
 		return -1;
 	}
 
+#if defined(HAVE_VA_COPY)
+	va_copy(ap2, ap);
+#define	my_va_end(ap2)	va_end(ap2)
+#elif defined(HAVE___BUILTIN_VA_COPY)
+	__builtin_va_copy(ap2, ap);
+#define	my_va_end(ap2)	__builtin_va_end(ap2)
+#else
+	ap2 = ap;
+#define	my_va_end(ap2)	do {} while (0)
+#endif
 	retval = vsnprintf(buf, len, fmt, ap);
 	if (retval < 0) {
 		free(buf);
 		*ret = NULL;
+		va_end(ap2);
 		return -1;
 	}
 
@@ -77,6 +89,7 @@ vasprintf(char **ret, const char *fmt, va_list ap)
 			*ret = buf;
 		else
 			*ret = new_buf;
+		my_va_end(ap2);
 		return retval;
 	}
 
@@ -85,9 +98,11 @@ vasprintf(char **ret, const char *fmt, va_list ap)
 	buf = malloc(len);
 	if (buf == NULL) {
 		*ret = NULL;
+		my_va_end(ap2);
 		return -1;
 	}
-	retval = vsnprintf(buf, len, fmt, ap);
+	retval = vsnprintf(buf, len, fmt, ap2);
+	my_va_end(ap2);
 	if (retval != len - 1) {
 		free(buf);
 		*ret = NULL;

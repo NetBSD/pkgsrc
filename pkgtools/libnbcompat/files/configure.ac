@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.78 2011/12/28 19:19:31 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.78.6.1 2012/07/09 08:34:53 tron Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20080605], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20120702], [joerg@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -76,6 +76,30 @@ AC_CHECK_FUNC(regexec, [:], [
 	AC_LIBOBJ(regerror)
 	AC_LIBOBJ(regexec)
 	AC_LIBOBJ(regfree)
+])
+
+AC_MSG_TRY_LINK([for va_copy], pkg_cv_have_va_copy, [
+#include <stdarg.h>
+], [
+	va_list ap, ap2;
+	va_copy(ap2, ap);
+	return 0;
+],	AC_DEFINE(HAVE_VA_COPY)
+	AH_TEMPLATE([HAVE_VA_COPY], [
+		Define to 1 if the `va_copy' function is supported.
+	]), [:]
+])
+
+AC_MSG_TRY_LINK([for __builtin_va_copy], pkg_cv_have___builtin_va_copy, [
+#include <stdarg.h>
+], [
+	va_list ap, ap2;
+	__builtin_va_copy(ap2, ap);
+	return 0;
+],	AC_DEFINE(HAVE___BUILTIN_VA_COPY)
+	AH_TEMPLATE([HAVE___BUILTIN_VA_COPY], [
+		Define to 1 if the `__builtin_va_copy' function is supported.
+	]), [:]
 ])
 
 AC_CHECK_HEADERS([md5.h], [

@@ -508,6 +508,9 @@
 /* Define to 1 if you have the <utime.h> header file. */
 #undef HAVE_UTIME_H
 
+/* Define to 1 if the `va_copy' function is supported. */
+#undef HAVE_VA_COPY
+
 /* Define to 1 if you have the `vfork' function. */
 #undef HAVE_VFORK
 
@@ -540,6 +543,9 @@
 
 /* define if your compiler has __attribute__ */
 #undef HAVE___ATTRIBUTE__
+
+/* Define to 1 if the `__builtin_va_copy' function is supported. */
+#undef HAVE___BUILTIN_VA_COPY
 
 /* Define to the address where bug reports for this package should be sent. */
 #undef PACKAGE_BUGREPORT
