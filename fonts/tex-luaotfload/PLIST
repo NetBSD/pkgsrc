@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/09 14:11:51 minskim Exp $
+bin/mkluatexfontdb
+share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload.sty
+share/texmf-dist/tex/luatex/luaotfload/otfl-blacklist.cnf
+share/texmf-dist/tex/luatex/luaotfload/otfl-data-con.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-cid.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-clr.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-def.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-dum.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-ini.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-map.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-nms.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-ota.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-otb.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-otc.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-otd.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-otf.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-oti.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-otn.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-ott.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-tfm.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-font-xtx.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-luat-dum.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-luat-ovr.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-node-dum.lua
+share/texmf-dist/tex/luatex/luaotfload/otfl-node-inj.lua
