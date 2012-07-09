@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.221 2012/07/09 17:36:30 wiz Exp $
+# $NetBSD: makevars.map,v 1.222 2012/07/09 17:47:37 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -88,6 +88,7 @@ DISTDIR				Pathname [$user]
 DIST_PATH			Pathlist [$user]
 DEFAULT_VIEW			Unchecked [$user]
 FETCH_CMD			ShellCommand [$user]
+FETCH_USING			{ curl custom fetch ftp manual wget } [$user]
 FETCH_RESUME_ARGS		List of ShellWord [$user]
 FETCH_OUTPUT_ARGS		List of ShellWord [$user]
 LIBTOOLIZE_PLIST		YesNo [$user]
