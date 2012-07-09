@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2231 2012/07/09 14:32:25 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2232 2012/07/09 14:53:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3476,3 +3476,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-docs to 1.7.11.1 [adam 2012-07-09]
 	Updated devel/scmgit to 1.7.11.1 [adam 2012-07-09]
 	Updated www/gitweb to 1.7.11.1 [adam 2012-07-09]
+	Updated print/tex-xetex to 2011nb1 [minskim 2012-07-09]
