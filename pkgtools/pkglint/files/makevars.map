@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.222 2012/07/09 17:47:37 wiz Exp $
+# $NetBSD: makevars.map,v 1.223 2012/07/09 21:57:16 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -114,7 +114,7 @@ PKG_FC				ShellCommand [$user]
 IMAKE				ShellCommand [$user]
 IMAKEOPTS			List of ShellWord [$user]
 PRE_ROOT_CMD			ShellCommand [$user]
-USE_GAMESGROUP			YesNo [$user]
+USE_GAMESGROUP			YesNo [$package]
 SU_CMD				ShellCommand [$user]
 SU_CMD_PATH_APPEND		Pathlist [$user]
 FATAL_OBJECT_FMT_SKEW		YesNo [$user]
