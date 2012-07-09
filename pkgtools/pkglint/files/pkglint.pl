@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.833 2012/07/06 09:29:01 obache Exp $
+# $NetBSD: pkglint.pl,v 1.834 2012/07/09 17:37:30 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -248,7 +248,7 @@ sub print_summary_and_exit($) {
 
 	if (!$quiet) {
 		if ($errors != 0 || $warnings != 0) {
-			print("$errors errors and $warnings warnings found.\n");
+			print("$errors errors and $warnings warnings found." . ($explain_flag ? "" : " (Use -e for more details.)") . "\n");
 		} else {
 			print "looks fine.\n";
 		}
@@ -2042,7 +2042,7 @@ sub load_tool_names() {
 	# Some user-defined variables do not influence the binary
 	# package at all and therefore do not have to be added to
 	# BUILD_DEFS.
-	foreach my $bdvar (qw(DISTDIR FETCH_CMD FETCH_OUTPUT_ARGS GAMEOWN GAMEGRP GAMEDIRMODE)) {
+	foreach my $bdvar (qw(DISTDIR FETCH_CMD FETCH_OUTPUT_ARGS GAMES_USER GAMES_GROUP GAMEDATAMODE GAMEOWN GAMEGRP GAMEDIRMODE)) {
 		$system_build_defs->{$bdvar} = true;
 	}
 	#$system_build_defs->{"PACKAGES"} = true;
