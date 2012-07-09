@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/12/23 11:44:25 dsainty Exp $
+# $NetBSD: Makefile,v 1.47 2012/07/09 19:18:23 joerg Exp $
 
 DISTNAME=	ekg-1.7
 PKGREVISION=	5
@@ -28,6 +28,11 @@ CONFIGURE_ARGS+=	--without-debug
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 CONFIGURE_ARGS+=	--with-pthread
+.endif
+
+# for backtrace
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LIBS+=	-lexecinfo
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
