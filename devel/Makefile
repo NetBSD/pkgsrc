@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1625 2012/07/09 13:54:36 minskim Exp $
+# $NetBSD: Makefile,v 1.1626 2012/07/09 14:07:19 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1541,6 +1541,8 @@ SUBDIR+=	tex-l3packages
 SUBDIR+=	tex-l3packages-doc
 SUBDIR+=	tex-lualibs
 SUBDIR+=	tex-lualibs-doc
+SUBDIR+=	tex-luatexbase
+SUBDIR+=	tex-luatexbase-doc
 SUBDIR+=	tex-multido
 SUBDIR+=	tex-multido-doc
 SUBDIR+=	tex-pst-uml

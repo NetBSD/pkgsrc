@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2227 2012/07/09 13:54:36 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.2228 2012/07/09 14:07:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3465,4 +3465,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/tidy to 20091027nb1 [mef 2012-07-09]
 	Updated converters/libcdr to 0.0.6nb1 [mef 2012-07-09]
 	Added devel/tex-lualibs version 0.95 [minskim 2012-07-09]
-	Added devel/tex-lualibs-doc version to 0.95 [minskim 2012-07-09]
+	Added devel/tex-lualibs-doc version 0.95 [minskim 2012-07-09]
+	Added devel/tex-luatexbase version 0.31 [minskim 2012-07-09]
+	Added devel/tex-luatexbase-doc version 0.31 [minskim 2012-07-09]
