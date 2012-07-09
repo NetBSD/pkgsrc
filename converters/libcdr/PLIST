@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/22 17:47:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/09 12:15:09 mef Exp $
 bin/cdr2raw
 bin/cdr2xhtml
 bin/cmx2raw
@@ -56,6 +56,8 @@ share/doc/libcdr/html/CMXParser_8cpp.html
 share/doc/libcdr/html/CMXParser_8h.html
 share/doc/libcdr/html/CMXParser_8h_source.html
 share/doc/libcdr/html/annotated.html
+share/doc/libcdr/html/bc_s.png
+share/doc/libcdr/html/bdwn.png
 share/doc/libcdr/html/classes.html
 share/doc/libcdr/html/classlibcdr_1_1CDRArcToElement-members.html
 share/doc/libcdr/html/classlibcdr_1_1CDRArcToElement.html
@@ -150,10 +152,14 @@ share/doc/libcdr/html/classlibcdr_1_1CMXParser-members.html
 share/doc/libcdr/html/classlibcdr_1_1CMXParser.html
 share/doc/libcdr/html/classlibcdr_1_1EndOfStreamException.html
 share/doc/libcdr/html/classlibcdr_1_1GenericException.html
+share/doc/libcdr/html/closed.png
+share/doc/libcdr/html/dir_000000.html
+share/doc/libcdr/html/dir_000001.html
 share/doc/libcdr/html/doxygen.css
 share/doc/libcdr/html/doxygen.png
 share/doc/libcdr/html/files.html
 share/doc/libcdr/html/ftv2blank.png
+share/doc/libcdr/html/ftv2cl.png
 share/doc/libcdr/html/ftv2doc.png
 share/doc/libcdr/html/ftv2folderclosed.png
 share/doc/libcdr/html/ftv2folderopen.png
@@ -161,9 +167,12 @@ share/doc/libcdr/html/ftv2lastnode.png
 share/doc/libcdr/html/ftv2link.png
 share/doc/libcdr/html/ftv2mlastnode.png
 share/doc/libcdr/html/ftv2mnode.png
+share/doc/libcdr/html/ftv2mo.png
 share/doc/libcdr/html/ftv2node.png
+share/doc/libcdr/html/ftv2ns.png
 share/doc/libcdr/html/ftv2plastnode.png
 share/doc/libcdr/html/ftv2pnode.png
+share/doc/libcdr/html/ftv2splitbar.png
 share/doc/libcdr/html/ftv2vertline.png
 share/doc/libcdr/html/functions.html
 share/doc/libcdr/html/functions_0x61.html
@@ -213,11 +222,15 @@ share/doc/libcdr/html/libcdr_8h_source.html
 share/doc/libcdr/html/libcdr__utils_8cpp.html
 share/doc/libcdr/html/libcdr__utils_8h.html
 share/doc/libcdr/html/libcdr__utils_8h_source.html
-share/doc/libcdr/html/main.html
 share/doc/libcdr/html/namespacelibcdr.html
 share/doc/libcdr/html/namespacemembers.html
 share/doc/libcdr/html/namespacemembers_func.html
 share/doc/libcdr/html/namespaces.html
+share/doc/libcdr/html/nav_f.png
+share/doc/libcdr/html/nav_g.png
+share/doc/libcdr/html/nav_h.png
+share/doc/libcdr/html/navtree.css
+share/doc/libcdr/html/open.png
 share/doc/libcdr/html/structlibcdr_1_1CDRColor-members.html
 share/doc/libcdr/html/structlibcdr_1_1CDRColor.html
 share/doc/libcdr/html/structlibcdr_1_1CDRFillStyle-members.html
@@ -240,5 +253,8 @@ share/doc/libcdr/html/structlibcdr_1_1CDRSplineData-members.html
 share/doc/libcdr/html/structlibcdr_1_1CDRSplineData.html
 share/doc/libcdr/html/structlibcdr_1_1CDRTransform-members.html
 share/doc/libcdr/html/structlibcdr_1_1CDRTransform.html
+share/doc/libcdr/html/tab_a.png
+share/doc/libcdr/html/tab_b.png
+share/doc/libcdr/html/tab_h.png
+share/doc/libcdr/html/tab_s.png
 share/doc/libcdr/html/tabs.css
-share/doc/libcdr/html/tree.html
