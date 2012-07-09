@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/09 14:05:52 minskim Exp $
+share/texmf-dist/tex/luatex/luatexbase/attr.lua
+share/texmf-dist/tex/luatex/luatexbase/cctb.lua
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-attr.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-cctb.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-compat.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-loader.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-mcb.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-modutils.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-regs.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase.loader.lua
+share/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+share/texmf-dist/tex/luatex/luatexbase/mcb.lua
+share/texmf-dist/tex/luatex/luatexbase/modutils.lua
