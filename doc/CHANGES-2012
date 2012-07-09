@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2228 2012/07/09 14:07:19 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.2229 2012/07/09 14:13:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3468,3 +3468,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/tex-lualibs-doc version 0.95 [minskim 2012-07-09]
 	Added devel/tex-luatexbase version 0.31 [minskim 2012-07-09]
 	Added devel/tex-luatexbase-doc version 0.31 [minskim 2012-07-09]
+	Added fonts/tex-luaotfload version 1.26 [minskim 2012-07-09]
+	Added fonts/tex-luaotfload-doc version 1.26 [minskim 2012-07-09]
