@@ -1,0 +1,36 @@
+$NetBSD: patch-doc_doxygen.cfg.in,v 1.1 2012/07/09 12:15:08 mef Exp $
+
+Remove obsolete syntax at recent doxygen (1.8.1.1)
+
+--- doc/doxygen.cfg.in.orig	2007-12-25 09:52:32.000000000 +0900
++++ doc/doxygen.cfg.in	2012-07-09 10:32:04.000000000 +0900
+@@ -151,7 +151,8 @@
+ # If set to NO, the detailed description appears after the member 
+ # documentation.
+ 
+-DETAILS_AT_TOP         = YES
++# (obsolete syntax)
++# DETAILS_AT_TOP         = YES
+ 
+ # If the INHERIT_DOCS tag is set to YES (the default) then an undocumented 
+ # member inherits the documentation from any documented member that it 
+@@ -390,7 +391,8 @@
+ # then setting the SHOW_DIRECTORIES tag to YES will show the directory hierarchy 
+ # in the documentation. The default is NO.
+ 
+-SHOW_DIRECTORIES       = NO
++# (obsolete syntax)
++# SHOW_DIRECTORIES       = NO
+ 
+ # The FILE_VERSION_FILTER tag can be used to specify a program or script that 
+ # doxygen should invoke to get the current version for each file (typically from the 
+@@ -694,7 +696,8 @@
+ # files or namespaces will be aligned in HTML using tables. If set to 
+ # NO a bullet list will be used.
+ 
+-HTML_ALIGN_MEMBERS     = YES
++# (obsolete syntax)
++# HTML_ALIGN_MEMBERS     = YES
+ 
+ # If the GENERATE_HTMLHELP tag is set to YES, additional index files 
+ # will be generated that can be used as input for tools like the 
