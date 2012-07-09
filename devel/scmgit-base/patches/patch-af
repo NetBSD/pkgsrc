@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2012/02/06 13:11:35 adam Exp $
+$NetBSD: patch-af,v 1.7 2012/07/09 14:30:50 adam Exp $
 
 --- Documentation/Makefile.orig	2010-10-22 03:49:16.000000000 +0000
 +++ Documentation/Makefile
-@@ -177,16 +177,16 @@ pdf: user-manual.pdf
+@@ -187,16 +187,16 @@ pdf: user-manual.pdf
  install: install-man
  
  install-man: man
