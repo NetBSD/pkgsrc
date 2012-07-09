@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.108 2012/05/26 22:13:25 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.109 2012/07/09 15:48:13 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1312,16 +1312,13 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     a score file that allows all users on the system to record their
     highscores.  In order for this to work, the binaries need to be
     installed setgid and the score files owned by the appropriate
-    group and/or owner (traditionally the "games" user/group).  The
+    group and/or owner (traditionally the "games" user/group).  Set
+    <varname>USE_GAMESGROUP</varname> to yes to support this. The
     following variables, documented in more detail in
     <filename>mk/defaults/mk.conf</filename>, control this
-    behaviour: <varname>SETGIDGAME</varname>,
-    <varname>GAMEDATAMODE</varname>, <varname>GAMEGRP</varname>,
-    <varname>GAMEMODE</varname>, <varname>GAMEOWN</varname>.</para>
-
-    <para>Note that per default, setgid installation of games is
-    disabled;  setting <varname>SETGIDGAME=YES</varname> will set all
-    the other variables accordingly.</para>
+    behaviour: <varname>GAMEDATAMODE</varname>,
+    <varname>GAMEDIRMODE</varname>, <varname>GAMES_GROUP</varname>,
+    <varname>GAMEMODE</varname>, <varname>GAME_USER</varname>.</para>
 
     <para>A package should therefore never hard code file ownership or
     access permissions but rely on <varname>INSTALL_GAME</varname> and
