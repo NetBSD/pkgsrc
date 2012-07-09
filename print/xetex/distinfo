@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2012/03/22 09:05:46 tron Exp $
+$NetBSD: distinfo,v 1.8 2012/07/09 01:51:34 minskim Exp $
 
 SHA1 (texlive-20110705-source.tar.xz) = 7a47cfe847801c86c98da8ade181baf97339f6e4
 RMD160 (texlive-20110705-source.tar.xz) = fbcad494cc4717a0238ab2624f259270fce9332b
 Size (texlive-20110705-source.tar.xz) = 131207904 bytes
 SHA1 (patch-texk_web2c_xetexdir_xetex.ch) = 7165868d56f2e23f60f3f80fbb69769784f61f53
+SHA1 (patch-xetexdir_XeTeX__ext.c) = 0776f085c3d37c20de42e889e2a996d9d76ce1af
