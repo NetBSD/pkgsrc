@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2011/03/17 17:58:04 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/09 14:29:22 minskim Exp $
 
 DISTNAME=	fontspec
-PKGNAME=	tex-${DISTNAME}-2.1f
-TEXLIVE_REV=	21527
+PKGNAME=	tex-${DISTNAME}-2.2b
+TEXLIVE_REV=	26230
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Advanced font selection in XeLaTeX and LuaLaTeX
+LICENSE=	lppl-1.3c
 
-DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-euenc-[0-9]*:../../fonts/tex-euenc
+DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
+DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
-DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
+DEPENDS+=	tex-xunicode-[0-9]*:../../print/tex-xunicode
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
