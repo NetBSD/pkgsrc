@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2230 2012/07/09 14:30:19 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.2231 2012/07/09 14:32:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3472,3 +3472,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/tex-luaotfload-doc version 1.26 [minskim 2012-07-09]
 	Updated fonts/tex-fontspec to 2.2b [minskim 2012-07-09]
 	Updated fonts/tex-fontspec-doc to 2.2b [minskim 2012-07-09]
+	Updated devel/scmgit-base to 1.7.11.1 [adam 2012-07-09]
+	Updated devel/scmgit-docs to 1.7.11.1 [adam 2012-07-09]
+	Updated devel/scmgit to 1.7.11.1 [adam 2012-07-09]
+	Updated www/gitweb to 1.7.11.1 [adam 2012-07-09]
