@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2012/07/08 21:23:08 wiz Exp $
+$NetBSD: distinfo,v 1.20 2012/07/09 06:33:34 wiz Exp $
 
 SHA1 (Time-HiRes-1.9724.tar.gz) = 4ea94de4f2ab886d7fdd4c61e7cbd7d48c72f2e3
 RMD160 (Time-HiRes-1.9724.tar.gz) = d02ccf5f32bc52ff4cfdb87abe756c444b8aa5d1
 Size (Time-HiRes-1.9724.tar.gz) = 88066 bytes
-SHA1 (patch-HiRes.xs) = b098f561bc46ba92750dc9980a17521c1d665245
+SHA1 (patch-HiRes.xs) = 2181d98a9b35ac232549f4bd5cc0f25edccbe237
