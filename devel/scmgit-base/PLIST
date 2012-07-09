@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2012/05/06 18:08:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2012/07/09 14:30:49 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -47,6 +47,7 @@ libexec/git-core/git-cherry-pick
 ${PLIST.gui}libexec/git-core/git-citool
 libexec/git-core/git-clean
 libexec/git-core/git-clone
+libexec/git-core/git-column
 libexec/git-core/git-commit
 libexec/git-core/git-commit-tree
 libexec/git-core/git-config
@@ -115,6 +116,7 @@ libexec/git-core/git-mktree
 libexec/git-core/git-mv
 libexec/git-core/git-name-rev
 libexec/git-core/git-notes
+libexec/git-core/git-p4
 libexec/git-core/git-pack-objects
 libexec/git-core/git-pack-redundant
 libexec/git-core/git-pack-refs
@@ -283,7 +285,9 @@ ${PLIST.gui}share/gitk/lib/msgs/sv.msg
 share/locale/da/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
+share/locale/it/LC_MESSAGES/git.mo
 share/locale/nl/LC_MESSAGES/git.mo
 share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
+share/locale/vi/LC_MESSAGES/git.mo
 share/locale/zh_CN/LC_MESSAGES/git.mo
