@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2008/04/03 22:33:00 tonnerre Exp $
+$NetBSD: distinfo,v 1.22 2012/07/09 19:06:21 joerg Exp $
 
 SHA1 (rxvt-2.7.10.tar.bz2) = 16eae23c3227e28e5e7a53a58eaa3226affe65f9
 RMD160 (rxvt-2.7.10.tar.bz2) = 83fab8df589e2413ba820d04bafb069e6af8c445
@@ -11,8 +11,8 @@ SHA1 (patch-ae) = 76221e9b3cd35a0f40fb6128e0bf9d74d232d907
 SHA1 (patch-af) = 6a4f5cf91bc449f7ecef51695be278074e603c8b
 SHA1 (patch-ag) = 11019ed97892c8bd8834c56433573719892336c4
 SHA1 (patch-ah) = 5e6fcf6b4b4fe1111b97d0b916501ab5855a755a
-SHA1 (patch-ai) = 0f3e800efc5b87243208de9fb9fafe9abde73201
 SHA1 (patch-aj) = 43ca25f034e6160f3a3dabbf1488df31cdecf95b
-SHA1 (patch-ak) = 960d0bd263a6b8776df93603dc5322b685a6afae
+SHA1 (patch-ak) = 83f7ffcf91d671bd8e75e5c063fd1336c0e08ed6
 SHA1 (patch-al) = 7107ec12205d0a5011a5828f8d30fbd577de41b7
 SHA1 (patch-am) = db69ba3b6754454613aa4aec61c1b033d7e013ae
+SHA1 (patch-src_rxvt.h) = 86db6ffc24f1133771b6e94275a9edab07b97437
