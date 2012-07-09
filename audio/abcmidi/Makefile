@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/04/27 18:40:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2012/07/09 09:54:30 ryoon Exp $
 #
 
 DISTNAME=	abcMIDI-${ABCMIDIVER}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://abc.sourceforge.net/abcMIDI/
 COMMENT=	Music utilities for abc
 LICENSE=	gnu-gpl-v2
 
-ABCMIDIVER=	2012-04-15
+ABCMIDIVER=	2012-07-04
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
