@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/09 05:52:14 marino Exp $
 lib/florist/ada_streams.ads
 lib/florist/ada_streams.ali
 lib/florist/ada_task_identification.ads
 lib/florist/ada_task_identification.ali
 lib/florist/deps.adb
 lib/florist/deps.ads
-lib/florist/deps5c.adb
-lib/florist/deps5c.ads
 lib/florist/deps_no_thread.adb
-lib/florist/gnatprep.adb
-lib/florist/gnatprep.ads
 lib/florist/posix-asynchronous_io.adb
 lib/florist/posix-asynchronous_io.ads
 lib/florist/posix-asynchronous_io.ali
@@ -29,8 +25,6 @@ lib/florist/posix-configurable_system_limits.adb
 lib/florist/posix-configurable_system_limits.ads
 lib/florist/posix-configurable_system_limits.ali
 lib/florist/posix-error_codes.ads
-lib/florist/posix-event_management.adb
-lib/florist/posix-event_management.ads
 lib/florist/posix-file_locking.adb
 lib/florist/posix-file_locking.ads
 lib/florist/posix-file_locking.ali
@@ -106,19 +100,15 @@ lib/florist/posix-shared_memory_objects.ali
 lib/florist/posix-signals.adb
 lib/florist/posix-signals.ads
 lib/florist/posix-signals.ali
-lib/florist/posix-sockets-internet.adb
-lib/florist/posix-sockets-internet.ads
-lib/florist/posix-sockets-iso.ads
-lib/florist/posix-sockets-local.adb
-lib/florist/posix-sockets-local.ads
-lib/florist/posix-sockets.adb
-lib/florist/posix-sockets.ads
 lib/florist/posix-supplement_to_ada_io.adb
 lib/florist/posix-supplement_to_ada_io.ads
 lib/florist/posix-supplement_to_ada_io.ali
 lib/florist/posix-terminal_functions.adb
 lib/florist/posix-terminal_functions.ads
 lib/florist/posix-terminal_functions.ali
+lib/florist/posix-timers-extensions.adb
+lib/florist/posix-timers-extensions.ads
+lib/florist/posix-timers-extensions.ali
 lib/florist/posix-timers.adb
 lib/florist/posix-timers.ads
 lib/florist/posix-timers.ali
@@ -128,12 +118,6 @@ lib/florist/posix-unsafe_process_primitives.ali
 lib/florist/posix-user_database.adb
 lib/florist/posix-user_database.ads
 lib/florist/posix-user_database.ali
-lib/florist/posix-xti-internet.adb
-lib/florist/posix-xti-internet.ads
-lib/florist/posix-xti-iso.ads
-lib/florist/posix-xti-mosi.ads
-lib/florist/posix-xti.adb
-lib/florist/posix-xti.ads
 lib/florist/posix.adb
 lib/florist/posix.ads
 lib/florist/posix.ali
@@ -206,4 +190,5 @@ lib/florist/posix_unsafe_process_primitives.ali
 lib/florist/posix_user_database.ads
 lib/florist/posix_user_database.ali
 lib/florist/system_storage_elements.ads
+lib/gnat/florist.gpr
 lib/libflorist.a
