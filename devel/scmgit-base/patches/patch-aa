@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2012/03/09 17:02:14 adam Exp $
+$NetBSD: patch-aa,v 1.17 2012/07/09 14:30:50 adam Exp $
 
---- Makefile.orig	2012-03-05 22:42:15.000000000 +0000
+--- Makefile.orig	2012-06-21 21:55:43.000000000 +0000
 +++ Makefile
-@@ -307,8 +307,6 @@ endif
+@@ -318,8 +318,6 @@ endif
  
  CFLAGS = -g -O2 -Wall
  LDFLAGS =
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.16 2012/03/09 17:02:14 adam Exp $
  STRIP ?= strip
  
  # Among the variables below, these:
-@@ -343,13 +341,9 @@ pathsep = :
+@@ -354,13 +352,9 @@ pathsep = :
  
  export prefix bindir sharedir sysconfdir gitwebdir localedir
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.16 2012/03/09 17:02:14 adam Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -936,9 +929,10 @@ ifeq ($(uname_S),Darwin)
+@@ -992,9 +986,10 @@ ifeq ($(uname_S),Darwin)
  	HAVE_DEV_TTY = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.16 2012/03/09 17:02:14 adam Exp $
  	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
  	NO_STRCASESTR = YesPlease
  	NO_MEMMEM = YesPlease
-@@ -980,8 +974,6 @@ ifeq ($(uname_S),SunOS)
+@@ -1036,8 +1031,6 @@ ifeq ($(uname_S),SunOS)
  		NO_STRTOUMAX = YesPlease
  		GIT_TEST_CMP = cmp
  	endif
@@ -46,8 +46,8 @@ $NetBSD: patch-aa,v 1.16 2012/03/09 17:02:14 adam Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -1843,8 +1835,8 @@ DEFAULT_PAGER_CQ_SQ = $(subst ','\'',$(D
- BASIC_CFLAGS += -DDEFAULT_PAGER='$(DEFAULT_PAGER_CQ_SQ)'
+@@ -1915,8 +1908,8 @@ SHELL_PATH_CQ_SQ = $(subst ','\'',$(SHEL
+ BASIC_CFLAGS += -DSHELL_PATH='$(SHELL_PATH_CQ_SQ)'
  endif
  
 -ALL_CFLAGS += $(BASIC_CFLAGS)
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.16 2012/03/09 17:02:14 adam Exp $
  
  export DIFF TAR INSTALL DESTDIR SHELL_PATH
  
-@@ -2464,7 +2456,6 @@ ifndef NO_GETTEXT
+@@ -2563,7 +2556,6 @@ ifndef NO_GETTEXT
  endif
  ifndef NO_PERL
  	$(MAKE) -C perl prefix='$(prefix_SQ)' DESTDIR='$(DESTDIR_SQ)' install
