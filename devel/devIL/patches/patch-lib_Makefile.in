@@ -1,0 +1,13 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2012/07/09 19:16:33 joerg Exp $
+
+--- lib/Makefile.in.orig	2012-07-06 12:25:06.000000000 +0000
++++ lib/Makefile.in
+@@ -352,7 +352,7 @@ AM_LDFLAGS = -version-info @DEVIL_LTVERS
+ AM_CFLAGS = $(GENERAL_CFLAGS)
+ libIL_la_CPPFLAGS = -I $(il_include) -I $(all_include)
+ libIL_la_CFLAGS = $(AM_CFLAGS) @IL_CFLAGS@
+-libIL_la_CXXFLAGS = $(AM_CFLAGS) @IL_CFLAGS@
++libIL_la_CXXFLAGS = @IL_CFLAGS@
+ libIL_la_SOURCES = $(il_src)/il_alloc.c $(il_src)/il_doom.c \
+ 	$(il_src)/il_stack.c $(il_src)/il_pcx.c $(il_src)/il_rle.c \
+ 	$(il_src)/il_bits.c $(il_src)/il_endian.c $(il_src)/il_exr.cpp \
