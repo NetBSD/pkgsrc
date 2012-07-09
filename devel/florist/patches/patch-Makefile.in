@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/07/09 05:52:14 marino Exp $
+
+--- Makefile.in.orig	2012-05-10 13:32:06.000000000 +0000
++++ Makefile.in
+@@ -187,8 +187,9 @@ distclean:
+ 
+ # install floristlib
+ install:
+-	mkdir -p $(PREFIX)/lib/gnat
+-	cp -pr floristlib $(PREFIX)/floristlib
+-	cp -p florist.gpr $(PREFIX)/lib/gnat
++	mkdir -p $(DESTDIR)$(PREFIX)/lib/gnat $(DESTDIR)$(PREFIX)/lib/florist
++	cp -pr floristlib/* $(DESTDIR)$(PREFIX)/lib/florist
++	mv $(DESTDIR)$(PREFIX)/lib/florist/libflorist.a $(DESTDIR)$(PREFIX)/lib/
++	cp -p florist.gpr $(DESTDIR)$(PREFIX)/lib/gnat
+ 
+ .PHONY: install clean distclean regen
