@@ -1,0 +1,3 @@
+The extensions provided by xdvipdfmx provide support for the Extended DVI
+(.xdv) format used by xetex, including support for platform-native fonts
+and the xetex graphics primitives, as well as Unicode/OpenType text.
