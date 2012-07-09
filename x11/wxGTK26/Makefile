@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/03 00:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/07/09 19:05:29 joerg Exp $
 #
 
 .include "Makefile.common"
@@ -22,6 +22,11 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DESTDIR}${DOCDIR}/LICENSE
+
+# for backtrace
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LIBS+=	-lexecinfo
+.endif
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
