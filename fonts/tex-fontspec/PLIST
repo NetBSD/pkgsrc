@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/19 14:21:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/07/09 14:29:22 minskim Exp $
+share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 share/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 share/texmf-dist/tex/latex/fontspec/fontspec.cfg
 share/texmf-dist/tex/latex/fontspec/fontspec.lua
 share/texmf-dist/tex/latex/fontspec/fontspec.sty
