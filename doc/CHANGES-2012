@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2225 2012/07/09 12:34:32 mef Exp $
+$NetBSD: CHANGES-2012,v 1.2226 2012/07/09 12:35:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3461,6 +3461,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/msmtp to 1.4.28 [ryoon 2012-07-09]
 	Updated ham/gnuradio-core-docs to 3.3.0nb11 [mef 2012-07-09]
 	Updated ham/usrp-docs to 3.3.0nb6 [mef 2012-07-09]
-	Updated devel/qofto 0.7.5nb11 [mef 2012-07-09]
+	Updated devel/qof to 0.7.5nb11 [mef 2012-07-09]
 	Updated www/tidy to 20091027nb1 [mef 2012-07-09]
 	Updated converters/libcdr to 0.0.6nb1 [mef 2012-07-09]
