@@ -4,4 +4,3 @@
 #define _XOPEN_SOURCE_EXTENDED 1
 #define _REENTRANT
 #define _P1003_1B_VISIBLE
-#include <sys/featuretest.h>
