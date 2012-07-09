@@ -1,0 +1,10 @@
+The bundle provides basic facilities for LuaTeX macro
+programmers, mostly resource allocation and convenience
+packages. Provided are: - luatexbase-attr: attribute
+allocation; - luatexbase-cctb: catcode table allocation; -
+luatexbase-compat: compatibility helpers; - luatexbase-loader:
+Lua module loading; - luatexbase-modutils: Lua module
+declaration; - luatexbase-mcb: callbacks extension; and -
+luatexbase-regs: allocation of registers and the like. In
+addition, the (unadorned) luatexbase package loads all the
+above in one fell swoop.
