@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.62 2009/07/22 09:14:15 wiz Exp $
+# $NetBSD: deprecated.map,v 1.63 2012/07/09 17:36:30 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -152,3 +152,8 @@ INSTALLATION_DIRS_FROM_PLIST	Use AUTO_MKDIRS instead.
 # April 2009
 NO_PACKAGE		It doesn't exist anymore.
 NO_MTREE		You can just remove it.
+
+# July 2012
+SETGIDGAME		Use USE_GAMESGROUP instead.
+GAMEGRP			Use GAMES_GROUP instead.
+GAMEOWN			Use GAMES_USER instead.
