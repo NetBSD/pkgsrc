@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/04 19:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/09 19:17:15 joerg Exp $
 
 DISTNAME=	libwpg-0.2.0
 CATEGORIES=	converters graphics
@@ -20,6 +20,12 @@ CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libwpg-0.2.pc.in
 
 REPLACE_PERL=		src/conv/svg/wpg2svgbatch.pl
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
