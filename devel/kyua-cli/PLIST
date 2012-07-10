@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/06/07 01:13:58 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/10 22:09:32 jmmv Exp $
 bin/kyua
 info/kyua-cli.info
 man/man1/kyua.1
@@ -12,7 +12,6 @@ share/kyua-cli/lua/init.lua
 share/kyua-cli/lua/kyuafile_1.lua
 share/kyua-cli/misc/context.html
 share/kyua-cli/misc/index.html
-share/kyua-cli/misc/kyuaify.sh
 share/kyua-cli/misc/report.css
 share/kyua-cli/misc/test_result.html
 share/kyua-cli/store/schema.sql
@@ -149,6 +148,8 @@ ${TESTS}tests/kyua-cli/utils/sqlite/database_test
 ${TESTS}tests/kyua-cli/utils/sqlite/exceptions_test
 ${TESTS}tests/kyua-cli/utils/sqlite/statement_test
 ${TESTS}tests/kyua-cli/utils/sqlite/transaction_test
+${TESTS}tests/kyua-cli/utils/stacktrace_helper
+${TESTS}tests/kyua-cli/utils/stacktrace_test
 ${TESTS}tests/kyua-cli/utils/stream_test
 ${TESTS}tests/kyua-cli/utils/text/Kyuafile
 ${TESTS}tests/kyua-cli/utils/text/exceptions_test

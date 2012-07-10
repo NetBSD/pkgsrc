@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/07/01 15:29:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/10 22:09:32 jmmv Exp $
 #
 
-DISTNAME=	kyua-cli-0.4
-PKGREVISION=	1
+DISTNAME=	kyua-cli-0.5
 CATEGORIES=	devel
 MASTER_SITES=	http://kyua.googlecode.com/files/
 
@@ -34,7 +33,6 @@ PKG_SYSCONFSUBDIR=	kyua
 .if $(PKG_OPTIONS:Mtests)
 CONFIGURE_ARGS+=	--with-atf
 PLIST_SUBST+=		TESTS=
-BUILDLINK_API_DEPENDS.atf-libs+=	atf-libs>=0.15
 .  include "../../devel/atf-libs/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-atf
