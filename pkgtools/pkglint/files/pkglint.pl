@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.837 2012/07/09 22:11:00 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.838 2012/07/10 09:39:27 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -8014,7 +8014,7 @@ sub checkfile($) {
 	} elsif ($fname =~ m"(?:^|/)patches/[^/]*$") {
 		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.");
 
-	} elsif ($basename =~ m"^(?:.*\.mk|Makefile.*)$") {
+	} elsif ($basename =~ m"^(?:.*\.mk|Makefile.*)$" and not $fname =~ m,files/, and not $fname =~ m,patches/,) {
 		$opt_check_mk and checkfile_mk($fname);
 
 	} elsif ($basename =~ m"^PLIST") {
@@ -8345,6 +8345,8 @@ sub checkdir_package() {
 	foreach my $fname (@files) {
 		if (($fname =~ m"^((?:.*/)?Makefile\..*|.*\.mk)$")
 		&& (not $fname =~ m"patch-")
+		&& (not $fname =~ m"${pkgdir}/")
+		&& (not $fname =~ m"${filesdir}/")
 		&& (defined(my $lines = load_lines($fname, true)))) {
 			parselines_mk($lines);
 			determine_used_variables($lines);
