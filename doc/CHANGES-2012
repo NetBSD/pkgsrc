@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2236 2012/07/10 03:07:18 mef Exp $
+$NetBSD: CHANGES-2012,v 1.2237 2012/07/10 06:54:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3481,3 +3481,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/automake to 1.12.2 [bsiegert 2012-07-09]
 	Updated pkgtools/pkglint to 4.112 [wiz 2012-07-09]
 	Updated x11/libX11 to 1.5.0 [mef 2012-07-10]
+	Updated www/tidy to 20091027nb2 [tron 2012-07-10]
