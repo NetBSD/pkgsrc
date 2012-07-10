@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/12/14 19:33:40 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/07/10 22:34:38 minskim Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -8,6 +8,7 @@ bin/dvicopy
 bin/dvitomp
 bin/dvitype
 bin/eptex
+bin/euptex
 bin/gftodvi
 bin/gftopk
 bin/gftype
@@ -48,9 +49,15 @@ bin/tex
 bin/tftopl
 bin/tie
 bin/ttf2afm
+bin/upbibtex
+bin/updvitype
+bin/uppltotf
+bin/uptex
+bin/uptftopl
 bin/vftovp
 bin/vptovf
 bin/weave
+bin/wovp2ovf
 info/web2c.info
 man/man1/aleph.1
 man/man1/bibtex.1
