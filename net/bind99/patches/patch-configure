@@ -1,11 +1,20 @@
-$NetBSD: patch-configure,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+$NetBSD: patch-configure,v 1.2 2012/07/10 10:23:03 sbd Exp $
 
 * Add DragonFly support.
 * Link proper postgresql library.
+* Use separate @LIBREADLINE@ AC_SUBST.
 
---- configure.orig	2012-01-30 10:09:37.000000000 +0000
+--- configure.orig	2012-06-01 15:29:52.000000000 +0000
 +++ configure
-@@ -22166,6 +22166,8 @@ case $host in
+@@ -1341,6 +1341,7 @@ LWRES_PLATFORM_NEEDVSNPRINTF
+ ISC_PLATFORM_NEEDVSNPRINTF
+ LWRES_PLATFORM_NEEDSPRINTF
+ ISC_PLATFORM_NEEDSPRINTF
++LIBREADLINE
+ ISC_PLATFORM_NEEDSTRLCAT
+ ISC_PLATFORM_NEEDSTRLCPY
+ GENRANDOMLIB
+@@ -22166,6 +22167,8 @@ case $host in
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=true ;;
@@ -14,7 +23,70 @@ $NetBSD: patch-configure,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
  *-bsdi[234]*)
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
-@@ -27148,7 +27150,7 @@ $as_echo "no" >&6; }
+@@ -24800,23 +24803,47 @@ no)	;;
+ 	then
+ 		readline=-lreadline
+ 	fi
+-	saved_LIBS="$LIBS"
+-	LIBS="$LIBS $readline"
+-	for ac_func in readline
+-do :
+-  ac_fn_c_check_func "$LINENO" "readline" "ac_cv_func_readline"
+-if test "x$ac_cv_func_readline" = x""yes; then :
+-  cat >>confdefs.h <<_ACEOF
+-#define HAVE_READLINE 1
+-_ACEOF
++	as_ac_Lib=`$as_echo "ac_cv_lib_$readline''_readline" | $as_tr_sh`
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for readline in $readline" >&5
++$as_echo_n "checking for readline in $readline... " >&6; }
++if eval \${$as_ac_Lib+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="$readline  $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
+ 
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char readline ();
++int
++main ()
++{
++return readline ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"; then :
++  eval "$as_ac_Lib=yes"
++else
++  eval "$as_ac_Lib=no"
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++eval ac_res=\$$as_ac_Lib
++              { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
++$as_echo "$ac_res" >&6; }
++if eval test \"x\$"$as_ac_Lib"\" = x"yes"; then :
++  LIBREADLINE=-lreadline
+ fi
+-done
+-
+-	if test "$ac_cv_func_readline" = "no"
+-	then
+-		LIBS="$saved_LIBS"
+-	fi
+         ;;
+ esac
+ 
+@@ -27148,7 +27175,7 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then
