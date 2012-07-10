@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2242 2012/07/10 10:53:36 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2243 2012/07/10 13:21:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3487,3 +3487,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind99 to 9.9.1pl1nb2 [sbd 2012-07-10]
 	Updated pkgtools/pkglint to 4.115 [wiz 2012-07-10]
 	Updated pkgtools/pkglint to 4.116 [wiz 2012-07-10]
+	Updated www/php-owncloud to 4.0.4 [ryoon 2012-07-10]
