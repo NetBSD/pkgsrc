@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.838 2012/07/10 09:39:27 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.839 2012/07/10 10:27:23 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1337,7 +1337,7 @@ use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:.*_)?(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
 use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
-use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
+use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*)(\s*):\s*([^#]*?)(?:\s*#.*)?$";
 use constant regex_mk_include	=> qr"^\.\s*(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$";
 use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>\s*(?:#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
@@ -3227,11 +3227,12 @@ sub parseline_mk($) {
 		defined($comment) and $line->set("comment", $comment);
 
 	} elsif ($text =~ regex_mk_dependency) {
-		my ($targets, $sources, $comment) = ($1, $2, $3);
+		my ($targets, $whitespace, $sources, $comment) = ($1, $2, $3, $4);
 
 		$line->set("is_dependency", true);
 		$line->set("targets", $targets);
 		$line->set("sources", $sources);
+		$line->log_warning("Space before colon in dependency line: " . $line->to_string()) if ($whitespace);
 		defined($comment) and $line->set("comment", $comment);
 
 	} elsif ($text =~ regex_rcs_conflict) {
@@ -6292,7 +6293,7 @@ sub checklines_mk($) {
 			}
 
 		} elsif ($text =~ regex_mk_dependency) {
-			my ($targets, $dependencies) = ($1, $2);
+			my ($targets, $whitespace, $dependencies, $comment) = ($1, $2, $3, $4);
 
 			$opt_debug_misc and $line->log_debug("targets=${targets}, dependencies=${dependencies}");
 			$mkctx_target = $targets;
