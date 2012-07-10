@@ -1,20 +1,20 @@
-$NetBSD: patch-ac,v 1.11 2011/09/15 19:50:14 bsiegert Exp $
+$NetBSD: patch-ac,v 1.12 2012/07/10 03:03:01 mef Exp $
 
 See patch-aa.
 
---- configure.orig	Wed Jul 27 08:46:21 2011
-+++ configure
-@@ -14431,43 +14431,18 @@ $as_echo "#define XUSE_MTSAFE_API 1" >>c
+--- configure.orig	2012-06-02 15:37:31.000000000 +0900
++++ configure	2012-06-28 19:20:03.000000000 +0900
+@@ -19942,43 +19942,18 @@
  	;;
  esac
  
 -{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_self in -lc" >&5
 -$as_echo_n "checking for pthread_self in -lc... " >&6; }
--if test "${ac_cv_lib_c_pthread_self+set}" = set; then :
+-if ${ac_cv_lib_c_pthread_self+:} false; then :
 -  $as_echo_n "(cached) " >&6
 +ac_fn_c_check_decl "$LINENO" "pthread_self" "ac_cv_have_decl_pthread_self" "#include <pthread.h>
 +"
-+if test "x$ac_cv_have_decl_pthread_self" = x""yes; then :
++if test "x$ac_cv_have_decl_pthread_self" = xyes; then :
 +  ac_have_decl=1
  else
 -  ac_check_lib_save_LIBS=$LIBS
@@ -52,13 +52,13 @@ See patch-aa.
 -fi
 -{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_c_pthread_self" >&5
 -$as_echo "$ac_cv_lib_c_pthread_self" >&6; }
--if test "x$ac_cv_lib_c_pthread_self" = x""yes; then :
+-if test "x$ac_cv_lib_c_pthread_self" = xyes; then :
 +if test $ac_have_decl = 1; then :
    thrstubs="no"
  else
    thrstubs="yes"
-@@ -14487,12 +14462,12 @@ if test x$xthreads = xyes ; then
-     linux*|openbsd*|gnu*|k*bsd*-gnu)
+@@ -19999,12 +19974,12 @@
+     linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
 -	XTHREAD_CFLAGS="-D_POSIX_THREAD_SAFE_FUNCTIONS"
@@ -68,8 +68,8 @@ See patch-aa.
      freebsd*)
          XTHREAD_CFLAGS="-D_THREAD_SAFE"
          XTHREADLIB="-pthread" ;;
--    dragonfly*)
-+    dragonfly*|mirbsd*)
+-    dragonfly*|openbsd*)
++    dragonfly*|openbsd*|mirbsd*)
          XTHREADLIB="-pthread" ;;
      solaris*)
  	XTHREAD_CFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS" ;;
