@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2240 2012/07/10 10:23:12 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.2241 2012/07/10 10:27:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3485,3 +3485,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/smtpfeed to 1.20 [mef 2012-07-10]
 	Updated pkgtools/pkglint to 4.114 [wiz 2012-07-10]
 	Updated net/bind99 to 9.9.1pl1nb2 [sbd 2012-07-10]
+	Updated pkgtools/pkglint to 4.115 [wiz 2012-07-10]
