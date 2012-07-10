@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2238 2012/07/10 09:11:00 mef Exp $
+$NetBSD: CHANGES-2012,v 1.2239 2012/07/10 09:39:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libX11 to 1.5.0 [mef 2012-07-10]
 	Updated www/tidy to 20091027nb2 [tron 2012-07-10]
 	Updated mail/smtpfeed to 1.20 [mef 2012-07-10]
+	Updated pkgtools/pkglint to 4.114 [wiz 2012-07-10]
