@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/07/05 10:23:23 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/07/10 22:35:10 minskim Exp $
 
 SHA1 (luatex-beta-0.70.1.tar.bz2) = 063bd698daab38ac6b04b45c820a15a0423aaab5
 RMD160 (luatex-beta-0.70.1.tar.bz2) = dfa3710bb48ba5d73ae5e41746d7c1a3a965f619
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 738c8bd631db36671d2c4eb48a360b7a16186c64
 SHA1 (patch-ab) = ee8ad45e980e655702925a164ee0ce6dd1689366
 SHA1 (patch-ac) = 23d6c26c4ded11267f05730119c250a831cd53ff
 SHA1 (patch-ad) = 8147f70d64516a08cbca5cd79d92b00894c702ed
+SHA1 (patch-texk_web2c_luatexdir_luatex.c) = 2b5e37e3c0fa1d42fc5782eec562bbc0040d1404
