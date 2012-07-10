@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+# $NetBSD: options.mk,v 1.2 2012/07/10 07:52:46 sbd Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind99
 PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	inet6 threads mysql pgsql ldap dlz-filesystem
 
+PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none") || \
@@ -74,6 +75,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ### pthreads support (also see magic above)
 ###
 .if !empty(PKG_OPTIONS:Mthreads)
+PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
