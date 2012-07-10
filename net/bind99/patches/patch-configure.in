@@ -1,0 +1,34 @@
+$NetBSD: patch-configure.in,v 1.1 2012/07/10 10:23:03 sbd Exp $
+
+Use separate @LIBREADLINE@ AC_SUBST.
+
+--- configure.in.orig	2012-06-01 15:29:52.000000000 +0000
++++ configure.in
+@@ -2223,23 +2223,18 @@ AC_SUBST(ISC_PLATFORM_NEEDSTRLCAT)
+ 
+ AC_ARG_WITH(readline,
+         [  --with-readline[=LIBSPEC]    specify readline library [default -lreadline]],
+-        readline="$withval", readline="-lreadline")
++        readline="$withval", readline="readline")
+ case "$readline" in
+ no)	;;
+ *)
+ 	if test "x$readline" = "xyes"
+ 	then
+-		readline=-lreadline
+-	fi
+-	saved_LIBS="$LIBS"
+-	LIBS="$LIBS $readline"
+-	AC_CHECK_FUNCS(readline)
+-	if test "$ac_cv_func_readline" = "no" 
+-	then
+-		LIBS="$saved_LIBS"
++		readline=readline
+ 	fi
++	AC_CHECK_LIB($readline, [readline], LIBREADLINE=-lreadline)
+         ;;
+ esac
++AC_SUBST(LIBREADLINE)
+ 
+ 
+ ISC_PRINT_OBJS=
