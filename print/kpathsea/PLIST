@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/13 04:06:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/07/10 22:32:13 minskim Exp $
 bin/kpseaccess
 bin/kpsereadlink
 bin/kpsestat
@@ -27,14 +27,11 @@ include/kpathsea/c-unistd.h
 include/kpathsea/cnf.h
 include/kpathsea/concatn.h
 include/kpathsea/config.h
-include/kpathsea/db.h
 include/kpathsea/debug.h
-include/kpathsea/default.h
 include/kpathsea/expand.h
-include/kpathsea/fn.h
-include/kpathsea/fontmap.h
 include/kpathsea/getopt.h
 include/kpathsea/hash.h
+include/kpathsea/knj.h
 include/kpathsea/kpathsea.h
 include/kpathsea/lib.h
 include/kpathsea/line.h
@@ -45,7 +42,6 @@ include/kpathsea/pathsearch.h
 include/kpathsea/proginit.h
 include/kpathsea/progname.h
 include/kpathsea/readable.h
-include/kpathsea/recorder.h
 include/kpathsea/str-list.h
 include/kpathsea/str-llist.h
 include/kpathsea/systypes.h
@@ -53,14 +49,10 @@ include/kpathsea/tex-file.h
 include/kpathsea/tex-glyph.h
 include/kpathsea/tex-hush.h
 include/kpathsea/tex-make.h
-include/kpathsea/tilde.h
-include/kpathsea/truncate.h
 include/kpathsea/types.h
 include/kpathsea/variable.h
 include/kpathsea/version.h
 include/kpathsea/win32lib.h
-include/kpathsea/xopendir.h
-include/kpathsea/xstat.h
 info/kpathsea.info
 lib/libkpathsea.la
 man/man1/kpseaccess.1
