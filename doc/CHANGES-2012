@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2244 2012/07/10 22:14:29 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.2245 2012/07/10 22:35:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3492,3 +3492,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/atf to 0.16 [jmmv 2012-07-10]
 	Updated devel/kyua-cli to 0.5 [jmmv 2012-07-10]
 	Added devel/kyua-atf-compat version 0.1 [jmmv 2012-07-10]
+	Updated print/kpathsea to 6.1.0 [minskim 2012-07-10]
+	Updated print/ptexenc to 1.3.0 [minskim 2012-07-10]
+	Updated print/web2c to 2012 [minskim 2012-07-10]
