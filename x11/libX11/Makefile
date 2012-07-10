@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2011/09/18 11:55:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2012/07/10 03:03:01 mef Exp $
 #
 
-DISTNAME=		libX11-1.3.5
+DISTNAME=		libX11-1.5.0
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -38,6 +38,8 @@ MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
 CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 CPPFLAGS.MirBSD+=	-pthread
 LDFLAGS.MirBSD+=	-pthread
+
+BUILDLINK_API_DEPENDS.libxcb+=libxcb>=1.8.1
 
 .include "../../mk/compiler.mk"
 
