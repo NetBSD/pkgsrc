@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2012/07/01 15:27:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2012/07/10 22:02:59 jmmv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+COMMENT:=	${COMMENT} - Runtime tools (deprecated; use kyua-cli)
 
-COMMENT:=	${COMMENT} - Runtime tools (deprecated)
+CONFIGURE_ARGS+=	--enable-tools
 
 XML_ENTRIES=	public "-//NetBSD//DTD ATF Tests Results 0.1//EN" \
 		${PREFIX}/share/xml/atf/tests-results.dtd
