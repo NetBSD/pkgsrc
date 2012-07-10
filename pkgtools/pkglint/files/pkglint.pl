@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.839 2012/07/10 10:27:23 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.840 2012/07/10 10:53:05 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1332,7 +1332,7 @@ my (@options) = (
 
 use constant regex_dependency_gt => qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d])+)>=(\d[^-]*)$";
 use constant regex_dependency_wildcard
-				=> qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d\[])+)-(?:\[0-9\]|\d[^-]*)$";
+				=> qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d\[])+)-(?:\[0-9\]\*|\d[^-]*)$";
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:.*_)?(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
 use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
@@ -3150,6 +3150,7 @@ sub parse_licenses($) {
 	my ($licenses) = @_;
 
 	# XXX: this is clearly cheating
+	$licenses =~ s,\${PERL5_LICENSE},gnu-gpl-v2 OR artistic,g;
 	$licenses =~ s,[()]|AND|OR,,g;
 	my @licenses = split(/\s+/, $licenses);
 	return \@licenses;
