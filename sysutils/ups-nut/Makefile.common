@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2011/07/29 15:11:40 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.4 2012/07/10 09:37:20 wiz Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
 # used by sysutils/ups-nut-usb/Makefile
-# used by sysutils/p5-ups-nut/Makefile
+# used by sysutils/p5-UPS-Nut/Makefile
 
 DISTNAME=		nut-2.6.1
 CATEGORIES=		sysutils
