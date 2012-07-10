@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2011/09/15 19:50:14 bsiegert Exp $
+$NetBSD: patch-aa,v 1.10 2012/07/10 03:03:01 mef Exp $
 
 Include pthread.h as thread stubs might be macros like on NetBSD.
 
@@ -7,9 +7,9 @@ Define conditional for cross-compiling support.
 Also, don't look for keysmydef.h, as this could break cross
 builds (from GIT).
 
---- configure.ac.orig	Wed Aug 11 23:23:48 2010
-+++ configure.ac
-@@ -315,7 +315,7 @@ xyes)
+--- configure.ac.orig	2012-06-02 15:37:17.000000000 +0900
++++ configure.ac	2012-06-28 19:14:45.000000000 +0900
+@@ -277,7 +277,7 @@
  	;;
  esac
  
@@ -17,9 +17,9 @@ builds (from GIT).
 +AC_CHECK_DECLS([pthread_self], [thrstubs="no"], [thrstubs="yes"], [[#include <pthread.h>]])
  AM_CONDITIONAL(THRSTUBS, test x$thrstubs = xyes)
  
- dnl XXX incomplete, please fill this in
-@@ -324,12 +324,12 @@ if test x$xthreads = xyes ; then
-     linux*|openbsd*|gnu*|k*bsd*-gnu)
+ # XXX incomplete, please fill this in
+@@ -286,12 +286,12 @@
+     linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
 -	XTHREAD_CFLAGS="-D_POSIX_THREAD_SAFE_FUNCTIONS"
@@ -29,8 +29,8 @@ builds (from GIT).
      freebsd*)
          XTHREAD_CFLAGS="-D_THREAD_SAFE"
          XTHREADLIB="-pthread" ;;
--    dragonfly*)
-+    dragonfly*|mirbsd*)
+-    dragonfly*|openbsd*)
++    dragonfly*|openbsd*|mirbsd*)
          XTHREADLIB="-pthread" ;;
      solaris*)
  	XTHREAD_CFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS" ;;
