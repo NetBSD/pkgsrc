@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.7 2006/07/23 15:00:41 taca Exp $
+$NetBSD: distinfo,v 1.8 2012/07/10 09:09:11 mef Exp $
 
-SHA1 (smtpfeed-1.18.tar.gz) = c5875be954a12035658c57dfca0d032609e4e057
-RMD160 (smtpfeed-1.18.tar.gz) = cb477e5e3de9cb422aa2a3b612486ad819c8f8bf
-Size (smtpfeed-1.18.tar.gz) = 140293 bytes
+SHA1 (smtpfeed-1.20.tar.gz) = f055984526865200339557e5fa809f968decbcfd
+RMD160 (smtpfeed-1.20.tar.gz) = aa3c586f2c5b2907caa0d7a50257c4e5273cc25d
+Size (smtpfeed-1.20.tar.gz) = 141144 bytes
 SHA1 (patch-aa) = e0ba34dd816d349ecedbc2a76cef9e70b396c655
 SHA1 (patch-ac) = d5b33823fa1ad9910ec97719f47c4265acf1dccc
 SHA1 (patch-ad) = 4ecd4ae9ba72997ed617158862e8801a9977472a
-SHA1 (patch-ae) = 33f2fc505db76c9fcb5e0b62b34797256c95db6b
+SHA1 (patch-ae) = 7e97d0bcfb76221a1b0d4a2264eba8169ce8687c
 SHA1 (patch-af) = 2fd2dfa124a0ab842b739e85998e4b4a32e5eb71
 SHA1 (patch-ag) = a0956209ee563f73f3398d0fc0ee69cb57240cd5
 SHA1 (patch-ah) = d53b829ff765b7d555a6dda743a9496497679aa7
 SHA1 (patch-ai) = 2e29b595c1a946ea68186886a80bd5371b697e4e
 SHA1 (patch-aj) = f26af3988350e0df29fa7e97ea7c308ac6699125
 SHA1 (patch-ak) = 206286eb6872876fc4b67a6ad413229124b8bb80
-SHA1 (patch-al) = 6b8fbaf7a4882e6f179627b4e42ee5bf2e3964c3
+SHA1 (patch-al) = 9a4674777b1a7fef6f29c6e5aa1b7e04c1eb2f87
 SHA1 (patch-am) = 63c35492d1cd9f01e9de901b7816e6f5d3e28c91
