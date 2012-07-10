@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.11 2012/07/09 08:35:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.12 2012/07/10 23:07:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -82,3 +82,7 @@ Pullup ticket #3854 - requested by prlw1
 devel/at-spi2-atk: security update
 Pullup ticket #3855 - requested by joerg
 pkgtools/libnbcompat: portability fix
+Pullup ticket #3856 - requested by bsiegert
+audio/libaudiofile: build fix
+Pullup ticket #3857 - requested by bsiegert
+devel/automake: security update
