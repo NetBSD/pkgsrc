@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/09/10 20:28:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/07/10 03:03:01 mef Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -132,6 +132,7 @@ man/man3/XCloseIM.3
 man/man3/XCloseOM.3
 man/man3/XColor.3
 man/man3/XColormapEvent.3
+man/man3/XCompose.3
 man/man3/XConfigureEvent.3
 man/man3/XConfigureRequestEvent.3
 man/man3/XConfigureWindow.3
@@ -232,7 +233,7 @@ man/man3/XFreeFontNames.3
 man/man3/XFreeFontPath.3
 man/man3/XFreeFontSet.3
 man/man3/XFreeGC.3
-man/man3/XFreeModifierMap.3
+man/man3/XFreeModifiermap.3
 man/man3/XFreePixmap.3
 man/man3/XFreeStringList.3
 man/man3/XGCValues.3
@@ -835,7 +836,6 @@ man/man3/XwcTextPropertyToTextList.3
 man/man5/Compose.5
 man/man5/XCompose.5
 share/X11/XErrorDB
-share/X11/XKeysymDB
 share/X11/locale/C/Compose
 share/X11/locale/C/XI18N_OBJS
 share/X11/locale/C/XLC_LOCALE
