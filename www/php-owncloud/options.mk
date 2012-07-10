@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/06/17 18:27:19 gdt Exp $
+# $NetBSD: options.mk,v 1.3 2012/07/10 13:20:19 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-owncloud
 
@@ -17,7 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
 .elif !empty(PKG_OPTIONS:Msqlite)
 
 # php-sqlite provides sqlite2
-DEPENDS+=	${PHP_PKG_PREFIX}-sqlite>=5.2.0:../../databases/php-sqlite
+#DEPENDS+=	${PHP_PKG_PREFIX}-sqlite>=5.2.0:../../databases/php-sqlite
 
 # php-pdo_sqlite provides sqlite3.  An owncloud instance that was
 # installed as version 2 and upgraded to 3 and then 4

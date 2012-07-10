@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/06/09 14:24:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/07/10 13:20:19 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -542,6 +542,7 @@ share/owncloud/3rdparty/when/When.php
 share/owncloud/AUTHORS
 share/owncloud/COPYING-AGPL
 share/owncloud/COPYING-README
+share/owncloud/Changelog
 share/owncloud/README
 share/owncloud/apps/admin_dependencies_chk/appinfo/app.php
 share/owncloud/apps/admin_dependencies_chk/appinfo/info.xml
@@ -643,6 +644,7 @@ share/owncloud/apps/calendar/l10n/es.php
 share/owncloud/apps/calendar/l10n/et_EE.php
 share/owncloud/apps/calendar/l10n/eu.php
 share/owncloud/apps/calendar/l10n/fa.php
+share/owncloud/apps/calendar/l10n/fi_FI.php
 share/owncloud/apps/calendar/l10n/fr.php
 share/owncloud/apps/calendar/l10n/gl.php
 share/owncloud/apps/calendar/l10n/he.php
@@ -728,6 +730,7 @@ share/owncloud/apps/contacts/ajax/loadphoto.php
 share/owncloud/apps/contacts/ajax/oc_photo.php
 share/owncloud/apps/contacts/ajax/savecrop.php
 share/owncloud/apps/contacts/ajax/saveproperty.php
+share/owncloud/apps/contacts/ajax/selectaddressbook.php
 share/owncloud/apps/contacts/ajax/updateaddressbook.php
 share/owncloud/apps/contacts/ajax/uploadimport.php
 share/owncloud/apps/contacts/ajax/uploadphoto.php
@@ -774,6 +777,7 @@ share/owncloud/apps/contacts/l10n/es.php
 share/owncloud/apps/contacts/l10n/et_EE.php
 share/owncloud/apps/contacts/l10n/eu.php
 share/owncloud/apps/contacts/l10n/fa.php
+share/owncloud/apps/contacts/l10n/fi_FI.php
 share/owncloud/apps/contacts/l10n/fr.php
 share/owncloud/apps/contacts/l10n/gl.php
 share/owncloud/apps/contacts/l10n/he.php
@@ -828,6 +832,7 @@ share/owncloud/apps/contacts/templates/part.editaddressbook.php
 share/owncloud/apps/contacts/templates/part.import.php
 share/owncloud/apps/contacts/templates/part.importaddressbook.php
 share/owncloud/apps/contacts/templates/part.no_contacts.php
+share/owncloud/apps/contacts/templates/part.selectaddressbook.php
 share/owncloud/apps/contacts/templates/settings.php
 share/owncloud/apps/contacts/thumbnail.php
 share/owncloud/apps/external/ajax/setsites.php
@@ -884,6 +889,7 @@ share/owncloud/apps/files/l10n/es.php
 share/owncloud/apps/files/l10n/et_EE.php
 share/owncloud/apps/files/l10n/eu.php
 share/owncloud/apps/files/l10n/fa.php
+share/owncloud/apps/files/l10n/fi_FI.php
 share/owncloud/apps/files/l10n/fr.php
 share/owncloud/apps/files/l10n/gl.php
 share/owncloud/apps/files/l10n/he.php
@@ -940,9 +946,11 @@ share/owncloud/apps/files_encryption/lib/cryptstream.php
 share/owncloud/apps/files_encryption/lib/proxy.php
 share/owncloud/apps/files_encryption/settings.php
 share/owncloud/apps/files_encryption/templates/settings.php
+share/owncloud/apps/files_encryption/tests/binary
 share/owncloud/apps/files_encryption/tests/encryption.php
 share/owncloud/apps/files_encryption/tests/proxy.php
 share/owncloud/apps/files_encryption/tests/stream.php
+share/owncloud/apps/files_encryption/tests/zeros
 share/owncloud/apps/files_external/appinfo/app.php
 share/owncloud/apps/files_external/appinfo/info.xml
 share/owncloud/apps/files_external/appinfo/version
@@ -1429,6 +1437,7 @@ share/owncloud/apps/gallery/ajax/thumbnail.php
 share/owncloud/apps/gallery/appinfo/app.php
 share/owncloud/apps/gallery/appinfo/database.xml
 share/owncloud/apps/gallery/appinfo/info.xml
+share/owncloud/apps/gallery/appinfo/update.php
 share/owncloud/apps/gallery/appinfo/version
 share/owncloud/apps/gallery/css/sharing.css
 share/owncloud/apps/gallery/css/styles.css
@@ -1438,8 +1447,8 @@ share/owncloud/apps/gallery/img/loading.gif
 share/owncloud/apps/gallery/img/rename.png
 share/owncloud/apps/gallery/img/share.png
 share/owncloud/apps/gallery/index.php
-share/owncloud/apps/gallery/js/album_cover.js
 share/owncloud/apps/gallery/js/albums.js
+share/owncloud/apps/gallery/js/pictures.js
 share/owncloud/apps/gallery/js/scanner.js
 share/owncloud/apps/gallery/js/sharing.js
 share/owncloud/apps/gallery/l10n/ar.php
@@ -1453,13 +1462,17 @@ share/owncloud/apps/gallery/l10n/es.php
 share/owncloud/apps/gallery/l10n/et_EE.php
 share/owncloud/apps/gallery/l10n/eu.php
 share/owncloud/apps/gallery/l10n/fa.php
+share/owncloud/apps/gallery/l10n/fi_FI.php
 share/owncloud/apps/gallery/l10n/fr.php
 share/owncloud/apps/gallery/l10n/gl.php
+share/owncloud/apps/gallery/l10n/hr.php
 share/owncloud/apps/gallery/l10n/hu_HU.php
 share/owncloud/apps/gallery/l10n/ia.php
+share/owncloud/apps/gallery/l10n/id.php
 share/owncloud/apps/gallery/l10n/it.php
 share/owncloud/apps/gallery/l10n/ja_JP.php
 share/owncloud/apps/gallery/l10n/ko.php
+share/owncloud/apps/gallery/l10n/lb.php
 share/owncloud/apps/gallery/l10n/lt_LT.php
 share/owncloud/apps/gallery/l10n/mk.php
 share/owncloud/apps/gallery/l10n/ms_MY.php
@@ -1483,9 +1496,12 @@ share/owncloud/apps/gallery/l10n/zh_TW.php
 share/owncloud/apps/gallery/lib/album.php
 share/owncloud/apps/gallery/lib/hooks_handlers.php
 share/owncloud/apps/gallery/lib/images_utils.php
+share/owncloud/apps/gallery/lib/managers.php
 share/owncloud/apps/gallery/lib/photo.php
 share/owncloud/apps/gallery/lib/scanner.php
 share/owncloud/apps/gallery/lib/sharing.php
+share/owncloud/apps/gallery/lib/tiles.php
+share/owncloud/apps/gallery/lib/tiles_test.php
 share/owncloud/apps/gallery/sharing.php
 share/owncloud/apps/gallery/templates/index.php
 share/owncloud/apps/gallery/templates/view_album.php
@@ -1527,6 +1543,7 @@ share/owncloud/apps/media/l10n/es.php
 share/owncloud/apps/media/l10n/et_EE.php
 share/owncloud/apps/media/l10n/eu.php
 share/owncloud/apps/media/l10n/fa.php
+share/owncloud/apps/media/l10n/fi_FI.php
 share/owncloud/apps/media/l10n/fr.php
 share/owncloud/apps/media/l10n/gl.php
 share/owncloud/apps/media/l10n/he.php
@@ -1620,14 +1637,12 @@ share/owncloud/apps/user_ldap/settings.php
 share/owncloud/apps/user_ldap/templates/settings.php
 share/owncloud/apps/user_ldap/tests/group_ldap.php
 share/owncloud/apps/user_ldap/user_ldap.php
-share/owncloud/apps/user_migrate/admin.php
 share/owncloud/apps/user_migrate/ajax/export.php
 share/owncloud/apps/user_migrate/appinfo/app.php
 share/owncloud/apps/user_migrate/appinfo/info.xml
 share/owncloud/apps/user_migrate/appinfo/version
 share/owncloud/apps/user_migrate/js/export.js
 share/owncloud/apps/user_migrate/settings.php
-share/owncloud/apps/user_migrate/templates/admin.php
 share/owncloud/apps/user_migrate/templates/settings.php
 share/owncloud/apps/user_openid/appinfo/app.php
 share/owncloud/apps/user_openid/appinfo/info.xml
@@ -2370,6 +2385,7 @@ share/owncloud/settings/l10n/es.php
 share/owncloud/settings/l10n/et_EE.php
 share/owncloud/settings/l10n/eu.php
 share/owncloud/settings/l10n/fa.php
+share/owncloud/settings/l10n/fi_FI.php
 share/owncloud/settings/l10n/fr.php
 share/owncloud/settings/l10n/gl.php
 share/owncloud/settings/l10n/he.php
