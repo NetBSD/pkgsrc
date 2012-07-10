@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
+$NetBSD: patch-al,v 1.2 2012/07/10 09:09:11 mef Exp $
 
---- smtp.c.orig	2002-02-23 19:20:05.000000000 +0900
-+++ smtp.c
+--- smtp.c.orig	2003-08-21 16:04:44.000000000 +0900
++++ smtp.c	2012-06-28 18:47:24.000000000 +0900
 @@ -49,32 +49,42 @@
  static	int FirstRead, FirstWrite;
  static	int Terminate, NewTransCheck, NeedTrimDomain, MoreFreeSlot;
@@ -82,7 +82,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
 -				log(LOG_INFO,
 +				mylog(LOG_INFO,
  					"recipients/transaction changed to 1");
- 				cnf.rcpts_trans == 1;
+ 				cnf.rcpts_trans = 1;
  			}
 @@ -207,15 +217,53 @@
  	resource_usage("finalstatus done");
@@ -145,7 +145,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  	time_t tout;
  	char *name;
  } state_tbl[] = {
-@@ -356,13 +404,13 @@
+@@ -357,13 +405,13 @@
  		if (rcptp->domain == NULL)
  		{
  			rcptp->stat = RCPT_DONE;
@@ -161,7 +161,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			continue;
  		}
  	}
-@@ -375,7 +423,7 @@
+@@ -376,7 +424,7 @@
  		if (domp->rcpt_top == NULL)
  			continue;
  		if (cnf.debug & DEBUG_TRANS)
@@ -170,7 +170,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		if (wdomp == NULL)
  			env.work_domain = domp;
  		else
-@@ -395,7 +443,7 @@
+@@ -396,7 +444,7 @@
  		{
  			/* all recipients had been processed */
  			if (cnf.debug & DEBUG_CONNECT)
@@ -179,7 +179,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			all_done = 1;
  			for (i = 0; i < cnf.sd_max; i++)
  			{
-@@ -424,7 +472,7 @@
+@@ -425,7 +473,7 @@
  			}
  
  			if (cnf.debug & DEBUG_TRANS)
@@ -188,7 +188,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				in_use, max_sock, sti.minsock);
  
  			if (in_use > (max_sock - sti.minsock))
-@@ -439,7 +487,7 @@
+@@ -440,7 +488,7 @@
  					if (connwork[i].host->state != STAT_SENT)
  						continue;
  					if (cnf.debug & DEBUG_CONNECT)
@@ -197,7 +197,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  						connwork[i].seq,
  						connwork[i].socket);
  					smtp_quit_s(&connwork[i]);
-@@ -458,7 +506,7 @@
+@@ -459,7 +507,7 @@
  				if (!connwork[i].reuse)
  					break;
  				if (cnf.debug & DEBUG_CONNECT)
@@ -206,7 +206,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					connwork[i].seq,
  					connwork[i].socket);
  				smtp_quit_s(&connwork[i]);
-@@ -479,7 +527,7 @@
+@@ -480,7 +528,7 @@
  			}
  #if 1
  			if (cnf.debug & DEBUG_TRANS)
@@ -215,7 +215,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				num_trans, num_sock);
  #endif
  			if (new_transaction() < 0)
-@@ -514,7 +562,7 @@
+@@ -515,7 +563,7 @@
  		if (all_done && fds < 0)
  		{
  			if (cnf.debug & DEBUG_CONNECT)
@@ -224,7 +224,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  #if 0
  			dump_internal();
  #endif
-@@ -523,7 +571,7 @@
+@@ -524,7 +572,7 @@
  
  		if (fds < 0)	/* XXX */
  		{
@@ -233,7 +233,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			if (bad_state++ > 5)
  			{
  				markstatus(env.rcpt_list, SMTP_TEMPFAIL(51),
-@@ -561,12 +609,12 @@
+@@ -562,12 +610,12 @@
  		{
  			/* time up */
  			forced_terminate();
@@ -248,7 +248,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				rc, fds, errno);
  			sleep(1);
  		}
-@@ -594,7 +642,7 @@
+@@ -595,7 +643,7 @@
  	{ 
  #if 1
  		if (cnf.debug & DEBUG_TRANS)
@@ -257,7 +257,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  #endif
  		/* first time for the domain? */
  #if 1
-@@ -615,7 +663,7 @@
+@@ -616,7 +664,7 @@
  		      || domp->curmx->host->addr == NULL))))
  		{
  			if (domp->curmx->host == NULL)
@@ -266,7 +266,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					domp->curmx->name, domp->name);
  			else
  			{
-@@ -697,7 +745,7 @@
+@@ -698,7 +746,7 @@
  	}
  #if 1
  	if (cnf.debug & DEBUG_TRANS)
@@ -275,7 +275,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  #endif
  	NewTransCheck = 0;
  	return -1;	/* no new transaction */
-@@ -721,7 +769,7 @@
+@@ -722,7 +770,7 @@
  
  		snprintf(msgbuf, sizeof(msgbuf),
  			"No address known for %s", conn->host->name);
@@ -284,7 +284,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  
  		rcode = SMTP_TEMPFAIL(52);
  		if (cnf.absentAok)
-@@ -798,7 +846,7 @@
+@@ -799,7 +847,7 @@
  			/* timeout! */
  			sti.ntimeout++;
  			if (cnf.debug & DEBUG_CONNECT)
@@ -293,7 +293,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->socket, STATE(st));
  			if (st == STAT_DTERMSENT)
  			{
-@@ -814,7 +862,7 @@
+@@ -815,7 +863,7 @@
  		if (FD_ISSET(conn->socket, w_fds))
  		{
  			if (cnf.debug & DEBUG_EVENT)
@@ -302,7 +302,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, STATE(st));
  			if (state_tbl[st].send != NULL)
  			{
-@@ -825,14 +873,14 @@
+@@ -826,14 +874,14 @@
  			if (conn->host == NULL)
  			{
  				if (cnf.debug & DEBUG_EVENT)
@@ -319,7 +319,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, conn->socket, STATE(st),
  					STATE(conn->host->state));
  			}
-@@ -841,7 +889,7 @@
+@@ -842,7 +890,7 @@
  		if (FD_ISSET(conn->socket, r_fds))
  		{
  			if (cnf.debug & DEBUG_EVENT)
@@ -328,7 +328,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, STATE(st));
  			if (state_tbl[st].recv != NULL)
  			{
-@@ -852,14 +900,14 @@
+@@ -853,14 +901,14 @@
  			if (conn->host == NULL)
  			{
  				if (cnf.debug & DEBUG_EVENT)
@@ -345,7 +345,16 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, conn->socket, STATE(st),
  					STATE(conn->host->state));
  			}
-@@ -1041,7 +1089,7 @@
+@@ -885,7 +933,7 @@
+ 	if (rcptp == NULL)
+ 	{
+ 		if (cnf.debug & DEBUG_TRANS)
+-		log(LOG_DEBUG, "markstatus: rcptp is NULL");
++		mylog(LOG_DEBUG, "markstatus: rcptp is NULL");
+ 		return;
+ 	}
+ 
+@@ -1047,7 +1095,7 @@
  		{
  			/* buffer may be full */
  			strcat(addrbuf+addrlen, ",(more...)");
@@ -354,7 +363,16 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				sti.nsent, sti.ndeferred, sti.nnsfailed,
  				sti.nsmtpfailed, sti.nrcpt, hostname,
  				addrbuf, proto, delay, rcode,
-@@ -1066,7 +1114,7 @@
+@@ -1069,7 +1117,7 @@
+ 			{
+ 				rcptp->stat = RCPT_RETRY;
+ 				if (cnf.debug & DEBUG_TRANS)
+-				log(LOG_DEBUG, "tempfail; retry: %s",
++				mylog(LOG_DEBUG, "tempfail; retry: %s",
+ 					rcptp->address);
+ 			}
+ 			else if (!Terminate && mxp != NULL
+@@ -1079,7 +1127,7 @@
  			{
  				rcptp->stat = RCPT_RETRY;
  				if (cnf.debug & DEBUG_TRANS)
@@ -363,7 +381,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					rcptp->address);
  			}
  			else
-@@ -1074,7 +1122,7 @@
+@@ -1087,7 +1135,7 @@
  				sti.ndeferred++;
  				rcptp->stat = RCPT_DONE;
  				if (cnf.debug & DEBUG_TRANS)
@@ -372,7 +390,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					rcptp->address);
  			}
  		}
-@@ -1103,7 +1151,7 @@
+@@ -1116,7 +1164,7 @@
  	}
  	if (addrlen > 0)
  	{
@@ -381,7 +399,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			sti.nsent, sti.ndeferred, sti.nnsfailed,
  			sti.nsmtpfailed, sti.nrcpt, hostname,
  			addrbuf, proto, delay, rcode,
-@@ -1143,7 +1191,7 @@
+@@ -1156,7 +1204,7 @@
  
  #if 1
  	if (cnf.debug & DEBUG_TRANS)
@@ -390,7 +408,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		num_trans, num_sock, max_sock, sti.minsock);
  #endif
  	if (num_trans > (max_sock - sti.minsock))
-@@ -1158,7 +1206,7 @@
+@@ -1171,7 +1219,7 @@
  
  #if 1
  	if (cnf.debug & DEBUG_TRANS)
@@ -399,7 +417,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  #endif
  
  	if (rcptp->domain->curmx->host->state == STAT_SENT)
-@@ -1170,7 +1218,7 @@
+@@ -1183,7 +1231,7 @@
  				break;
  		}
  		if (cnf.debug & DEBUG_TRANS)
@@ -408,7 +426,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  	}
  	else
  	{
-@@ -1190,7 +1238,7 @@
+@@ -1203,7 +1251,7 @@
  	{
  #if 0
  		if (cnf.debug & DEBUG_TRANS)
@@ -417,7 +435,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  #endif
  		/* sleep (1); */
  		return NULL;	/* XXX socket slot is full */
-@@ -1199,7 +1247,7 @@
+@@ -1212,7 +1260,7 @@
  	sti.ntrans++;
  
  	if (cnf.debug & DEBUG_TRANS)
@@ -426,7 +444,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		sti.ntrans, rcptp->address, i);
  
  	/* initialize transaction */
-@@ -1230,7 +1278,7 @@
+@@ -1246,7 +1294,7 @@
  		domp = mxp->domain;
  		if (domp == NULL)
  		{
@@ -435,7 +453,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				mxp->name);
  			goto next_domain;
  		}
-@@ -1253,7 +1301,7 @@
+@@ -1269,7 +1317,7 @@
  				if (rcpts + 1 > cnf.rcpts_trans)
  #else
  				if (cnf.debug & DEBUG_TRANS)
@@ -444,7 +462,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					rcptp2->domain->name,
  					rcptp2->domain->rcpts,
  					rcpts);
-@@ -1266,7 +1314,7 @@
+@@ -1282,7 +1330,7 @@
  				}
  				rcpts++;
  				if (cnf.debug & DEBUG_TRANS)
@@ -453,7 +471,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					sti.ntrans, rcptp2->address);
  				rcptp2->stat = RCPT_WORK;
  				rcptp2->chain = NULL;
-@@ -1306,7 +1354,7 @@
+@@ -1323,7 +1371,7 @@
  #endif
  
  	if (cnf.debug & DEBUG_TRANS)
@@ -462,7 +480,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  
  	NewTransCheck = 1;		/* do not skip new_transaction() */
  	env.work_dom_ptr = NULL;	/* retry from the top of list */
-@@ -1369,7 +1417,7 @@
+@@ -1388,7 +1436,7 @@
  			if (domp->curmx != NULL)
  			{
  				if (cnf.debug & DEBUG_TRANS)
@@ -471,7 +489,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, domp->curmx->name);
  			}
  		}
-@@ -1410,7 +1458,7 @@
+@@ -1429,7 +1477,7 @@
  	num_trans--;
  }
  
@@ -480,7 +498,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  trim_rcpts(domp)
  struct domain *domp;
  {
-@@ -1427,7 +1475,7 @@
+@@ -1446,7 +1494,7 @@
  		{
  			/* remove recipient from working chain */
  			if (cnf.debug & DEBUG_TRANS)
@@ -489,7 +507,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				rcptp->address);
  			if (rcptp == domp->rcpt_top)
  			{
-@@ -1449,7 +1497,7 @@
+@@ -1469,7 +1517,7 @@
  		NeedTrimDomain = 1;
  }
  
@@ -498,7 +516,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  trim_domain()
  {
  	struct domain *domp, *domtmp;
-@@ -1463,7 +1511,7 @@
+@@ -1483,7 +1531,7 @@
  		{
  			/* remove from working domain chain */
  			if (cnf.debug & DEBUG_TRANS)
@@ -507,7 +525,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				domp->name);
  			if (domp == env.work_domain)
  			{
-@@ -1490,7 +1538,7 @@
+@@ -1510,7 +1558,7 @@
  	return 0;
  }
  
@@ -516,7 +534,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  forced_terminate()
  {
  	struct recipient *rcptp;
-@@ -1518,7 +1566,7 @@
+@@ -1538,7 +1586,7 @@
  
  	if (conn->host == NULL)
  	{
@@ -525,7 +543,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		return -1;
  	}
  
-@@ -1532,7 +1580,7 @@
+@@ -1552,7 +1600,7 @@
  	}
  
  	if (cnf.debug & DEBUG_CONNECT)
@@ -534,7 +552,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		conn->seq, conn->host->name);
  
  	bzero((char *)&rsin, sizeof(rsin));
-@@ -1569,7 +1617,7 @@
+@@ -1589,7 +1637,7 @@
  			socksize = sizeof(struct sockaddr_in);
  
  			if (cnf.debug & DEBUG_CONNECT)
@@ -543,7 +561,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				inet_ntoa(rsin.in.sin_addr), cnf.dst_port);
  			found = 1;
  			break;
-@@ -1599,7 +1647,7 @@
+@@ -1619,7 +1667,7 @@
  
  				inet_ntop(AF_INET6, &rsin.in6.sin6_addr,
  					buf, sizeof(buf));
@@ -552,7 +570,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, buf, cnf.dst_port);
  			}
  			found = 1;
-@@ -1637,7 +1685,7 @@
+@@ -1657,7 +1705,7 @@
  
  	if (sd > MAX_SOCK)
  	{
@@ -561,7 +579,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, sd);
  		close(sd);
  		if (max_sock > MAX_SOCK)
-@@ -1650,7 +1698,7 @@
+@@ -1670,7 +1718,7 @@
  
  	if (sd < 0){
  		/* no more socket resource */
@@ -570,7 +588,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->host->name, smtpstrerror(errno), sti.maxsock,
  			max_sock, num_sock, sti.minsock);
  		if (max_sock > NOFILE)
-@@ -1669,14 +1717,14 @@
+@@ -1689,14 +1737,14 @@
  	}
  
  	if (cnf.debug & DEBUG_CONNECT)
@@ -587,7 +605,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, sd, conn->host->name,
  				smtpstrerror(errno));
  		/* ignore error */
-@@ -1741,7 +1789,7 @@
+@@ -1761,7 +1809,7 @@
  				    case AF_INET:
  					bcopy(addrp->address,
  						&lsin.in.sin_addr, addrp->len);
@@ -596,7 +614,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  						"using %s as source IP address",
  						inet_ntoa(lsin.in.sin_addr));
  					break;
-@@ -1753,7 +1801,7 @@
+@@ -1773,7 +1821,7 @@
  
  					inet_ntop(AF_INET6, &lsin.in6.sin6_addr,
  						buf, sizeof(buf));
@@ -605,7 +623,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					break;
  #endif
  				}
-@@ -1771,7 +1819,7 @@
+@@ -1791,7 +1839,7 @@
  				p = NULL;
  		}
  		if (!found)
@@ -614,7 +632,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  	}
  	if (!found)
  	{
-@@ -1820,7 +1868,7 @@
+@@ -1840,7 +1888,7 @@
  	{
  		if (bind(sd, (struct sockaddr *)&lsin, socksize) < 0)
  		{
@@ -623,7 +641,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, sd, conn->host->name,
  				smtpstrerror(errno));
  			conn->host->state = STAT_FAIL;
-@@ -1837,7 +1885,7 @@
+@@ -1857,7 +1905,7 @@
  
  	if (ioctl (sd, FIONBIO, &res) < 0)
  	{
@@ -632,7 +650,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, sd, conn->host->name, smtpstrerror(errno));
  		conn->host->state = STAT_FAIL;
  		close (sd);
-@@ -1848,7 +1896,7 @@
+@@ -1868,7 +1916,7 @@
  #else
  	if ((res = fcntl(sd, F_GETFL, 0)) == -1)
  	{
@@ -641,7 +659,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, sd, conn->host->name, smtpstrerror(errno));
  		conn->host->state = STAT_FAIL;
  		close (sd);
-@@ -1863,7 +1911,7 @@
+@@ -1883,7 +1931,7 @@
  # endif
  	if (fcntl(sd, F_SETFL, res) == -1)
  	{
@@ -650,7 +668,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, sd, conn->host->name, smtpstrerror(errno));
  		conn->host->state = STAT_FAIL;
  		close (sd);
-@@ -1879,7 +1927,7 @@
+@@ -1899,7 +1947,7 @@
  	 && errno != EINPROGRESS && errno != EINTR)	/* XXX */
  	{
  		alarm(0);
@@ -659,7 +677,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, sd, conn->host->name, smtpstrerror(errno));
  		conn->host->current->stat = EX_TEMPFAIL;
  		close (sd);
-@@ -1911,7 +1959,7 @@
+@@ -1931,7 +1979,7 @@
  		}
  		sti.minsock = sd;
  		if (cnf.debug & DEBUG_CONNECT)
@@ -668,7 +686,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  	}
  	num_sock++;
  	return 0;
-@@ -1931,11 +1979,11 @@
+@@ -1951,11 +1999,11 @@
  {
  	SockAddr cin;
  	int len = sizeof(SockAddr);
@@ -682,7 +700,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, conn->socket, conn->host->name,
  			smtpstrerror(errno));
  		if (conn->host->current != NULL) /* XXX for safe access */
-@@ -1984,7 +2032,7 @@
+@@ -2004,7 +2052,7 @@
  	conn->outlen = 0;
  	if (conn->inbuf == NULL || conn->outbuf == NULL)
  	{
@@ -691,7 +709,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		if (conn->host->current != NULL) /* XXX for safe access */
  		{
  			conn->host->current->stat = EX_TEMPFAIL;
-@@ -2028,7 +2076,7 @@
+@@ -2048,7 +2096,7 @@
  			if (n == 0)
  			{
  				if (cnf.debug & DEBUG_CONNECT)
@@ -700,7 +718,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, conn->socket);
  				errno = E_SF_IO;
  				return -1;
-@@ -2046,7 +2094,7 @@
+@@ -2066,7 +2114,7 @@
  #endif
  				return 0;
  			  default:
@@ -709,7 +727,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, conn->socket,
  					conn->host->name, n, errno);
  				return n;
-@@ -2112,7 +2160,7 @@
+@@ -2132,7 +2180,7 @@
  			if (n == 0)
  			{
  				if (cnf.debug & DEBUG_CONNECT)
@@ -718,7 +736,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					"%d/%d: closed by foreign host (%s)",
  					conn->seq, conn->socket,
  					conn->host->name);
-@@ -2132,7 +2180,7 @@
+@@ -2152,7 +2200,7 @@
  #endif
  				return 0;
  			  default:
@@ -727,7 +745,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					"%d/%d: write failed for %s: ret=%d, errno=%d",
  					conn->seq, conn->socket,
  					conn->host->name, n, errno);
-@@ -2167,7 +2215,7 @@
+@@ -2187,7 +2235,7 @@
  			if (n == 0)
  			{
  				if (cnf.debug & DEBUG_CONNECT)
@@ -736,7 +754,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					"%d/%d: closed by foreign host (%s)",
  					conn->seq, conn->socket,
  					conn->host->name);
-@@ -2185,7 +2233,7 @@
+@@ -2205,7 +2253,7 @@
  #endif
  				return size;
  			  default:
@@ -745,7 +763,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					"%d/%d: write failed for %s: ret=%d, errno=%d",
  					conn->seq, conn->socket,
  					conn->host->name, n, errno);
-@@ -2236,7 +2284,7 @@
+@@ -2256,7 +2304,7 @@
  static int
  smtp_get_reply(conn, func, firstline, size, rest)
  struct connection *conn;
@@ -754,7 +772,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  char firstline[];
  int size;
  int *rest;
-@@ -2281,7 +2329,7 @@
+@@ -2301,7 +2349,7 @@
  			cbuf[--len] = '\0';
  		}
  		if (cnf.debug & DEBUG_SMTP)
@@ -763,7 +781,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  		if (func != NULL)
  			(*func)(conn, cbuf);
  		if (!isdigit(cbuf[0]) || !isdigit(cbuf[1]) || !isdigit(cbuf[2])
-@@ -2338,7 +2386,7 @@
+@@ -2358,7 +2406,7 @@
  	int len = strlen(buf);
  
  	if (cnf.debug & DEBUG_SMTP)
@@ -772,7 +790,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  	if (len + 2 < size)
  	{
  		strcat(buf, CRLF);
-@@ -2412,7 +2460,7 @@
+@@ -2432,7 +2480,7 @@
  {
  	char buf[MAXLINE];
  	int rcode, savestate;
@@ -781,7 +799,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  
  	errno = 0;
  	savestate = conn->host->state;
-@@ -2453,7 +2501,7 @@
+@@ -2473,7 +2521,7 @@
  			errmsg = "Unexpected Error";
  			break;
  		}
@@ -790,7 +808,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			conn->seq, conn->socket, conn->host->name,
  			smtpstrerror(errno), STATE(savestate));
  		if (conn->host->current != NULL) /* XXX for safe access */
-@@ -2600,7 +2648,7 @@
+@@ -2620,7 +2668,7 @@
  	{
  		if (errno > 0)
  		{
@@ -799,7 +817,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, smtpstrerror(errno),
  				conn->host->name, STATE(savestate));
  		}
-@@ -2854,7 +2902,7 @@
+@@ -2876,7 +2924,7 @@
  	{
  		if (errno > 0)
  		{
@@ -808,7 +826,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, conn->host->name,
  				smtpstrerror(errno), STATE(savestate));
  		}
-@@ -3032,7 +3080,7 @@
+@@ -3056,7 +3104,7 @@
  	{
  		if (errno > 0)
  		{
@@ -817,7 +835,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, conn->host->name,
  				smtpstrerror(errno), STATE(savestate));
  		}
-@@ -3149,7 +3197,7 @@
+@@ -3208,7 +3256,7 @@
  	{
  		if (errno > 0)
  		{
@@ -826,7 +844,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, conn->host->name,
  				smtpstrerror(errno), STATE(savestate));
  		}
-@@ -3229,7 +3277,7 @@
+@@ -3323,7 +3371,7 @@
  		len = strlen(altbuf);
  		rcode = smtp_write(conn, altbuf, len, 0);
  		if (rcode != len)	/* XXX */
@@ -835,7 +853,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			    "Header of sent message will be corrupted: %s",
  			    altbuf);
  	}
-@@ -3301,7 +3349,7 @@
+@@ -3395,7 +3443,7 @@
  		return 0;
  
  	if (cnf.debug & DEBUG_CONNECT)
@@ -844,7 +862,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  
  	/* check possibility of reuse connection */
  	for (rmxp = conn->host->mx_ref; rmxp != NULL; rmxp = rmxp->mx_ref)
-@@ -3323,7 +3371,7 @@
+@@ -3417,7 +3465,7 @@
  			}
  		}
  		if (cnf.debug & DEBUG_CONNECT)
@@ -853,7 +871,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  
  		if (reused == 0)
  			continue;
-@@ -3335,7 +3383,7 @@
+@@ -3429,7 +3477,7 @@
  			if (mxp == rmxp)
  			{
  				if (cnf.debug & DEBUG_CONNECT)
@@ -862,7 +880,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  					conn->seq, conn->socket,
  					conn->host->name);
  				return 1;
-@@ -3361,7 +3409,7 @@
+@@ -3455,7 +3503,7 @@
  	{
  		if (errno > 0)
  		{
@@ -871,7 +889,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, conn->host->name,
  				smtpstrerror(errno), STATE(savestate));
  		}
-@@ -3453,7 +3501,7 @@
+@@ -3552,7 +3600,7 @@
  	{
  		if (errno > 0)
  		{
@@ -880,7 +898,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, conn->host->name,
  				smtpstrerror(errno), STATE(savestate));
  		}
-@@ -3528,7 +3576,7 @@
+@@ -3629,7 +3677,7 @@
  	{
  		if (errno > 0)
  		{
@@ -889,7 +907,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				conn->seq, conn->socket, conn->host->name,
  				smtpstrerror(errno), STATE(savestate));
  		}
-@@ -3588,7 +3636,7 @@
+@@ -3691,7 +3739,7 @@
  			markstatus(conn->rcpt, SMTP_TEMPFAIL(52),
  				newstr(buf), 1);
  		else
@@ -898,7 +916,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			    conn->host->name);
  		if (conn->host->current != NULL) /* XXX for safe access */
  			conn->host->current = conn->host->current->next;
-@@ -3614,7 +3662,7 @@
+@@ -3717,7 +3765,7 @@
  		{
  			conn->host->state = STAT_CLOSED;
  			conn->host->current->stat = EX_TEMPFAIL;
@@ -907,7 +925,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  			    conn->host->name);
  		}
  		else
-@@ -3641,17 +3689,17 @@
+@@ -3744,17 +3792,17 @@
  	struct recipient *rcptp;
  	int i;
  
@@ -928,7 +946,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				rcptp->address,
  				(rcptp->domain->curmx == NULL)?"none":
  				rcptp->domain->curmx->name,
-@@ -3660,18 +3708,18 @@
+@@ -3763,18 +3811,18 @@
  			break;
  		    case RCPT_RETRY:
  			if (rcptp->domain->curmx != NULL)
@@ -950,7 +968,7 @@ $NetBSD: patch-al,v 1.1 2006/07/23 15:00:41 taca Exp $
  				rcptp->address, rcptp->result);
  			break;
  		}
-@@ -3681,12 +3729,12 @@
+@@ -3784,12 +3832,12 @@
  	{
  		if (connwork[i].host == NULL)
  			continue;
