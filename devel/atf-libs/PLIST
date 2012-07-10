@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/01 15:27:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/10 22:02:59 jmmv Exp $
 bin/atf-sh
 include/atf-c++.hpp
 include/atf-c++/build.hpp
@@ -58,6 +58,7 @@ tests/atf/atf-c++/macros_hpp_test.cpp
 tests/atf/atf-c++/macros_test
 tests/atf/atf-c++/pkg_config_test
 tests/atf/atf-c++/tests_test
+tests/atf/atf-c++/unused_test.cpp
 tests/atf/atf-c++/utils_test
 tests/atf/atf-c/Atffile
 tests/atf/atf-c/Kyuafile
@@ -84,6 +85,7 @@ tests/atf/atf-c/macros_test
 tests/atf/atf-c/pkg_config_test
 tests/atf/atf-c/tc_test
 tests/atf/atf-c/tp_test
+tests/atf/atf-c/unused_test.c
 tests/atf/atf-c/utils_test
 tests/atf/atf-sh/Atffile
 tests/atf/atf-sh/Kyuafile
