@@ -1,0 +1,15 @@
+$NetBSD: patch-contrib_dlz_config.dlz.in,v 1.1 2012/07/10 10:18:55 sbd Exp $
+
+* Link proper postgresql library.
+
+--- contrib/dlz/config.dlz.in.orig	2012-06-01 15:29:52.000000000 +0000
++++ contrib/dlz/config.dlz.in
+@@ -105,7 +105,7 @@ case "$use_dlz_postgres" in
+ 	*)
+ 		DLZ_ADD_DRIVER(POSTGRES, dlz_postgres_driver,
+ 				[-I$use_dlz_postgres],
+-				[-L$use_dlz_postgres_lib -lpq])
++				[-L${PREFIX}/lib -lpq])
+ 
+ 		AC_MSG_RESULT(
+ [using PostgreSQL from $use_dlz_postgres_lib and $use_dlz_postgres])
