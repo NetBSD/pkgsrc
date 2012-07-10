@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2243 2012/07/10 13:21:50 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2244 2012/07/10 22:14:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3488,3 +3488,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkglint to 4.115 [wiz 2012-07-10]
 	Updated pkgtools/pkglint to 4.116 [wiz 2012-07-10]
 	Updated www/php-owncloud to 4.0.4 [ryoon 2012-07-10]
+	Updated devel/atf-libs to 0.16 [jmmv 2012-07-10]
+	Updated devel/atf to 0.16 [jmmv 2012-07-10]
+	Updated devel/kyua-cli to 0.5 [jmmv 2012-07-10]
+	Added devel/kyua-atf-compat version 0.1 [jmmv 2012-07-10]
