@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/10 22:13:48 jmmv Exp $
+bin/atf-report
+bin/atf-run
+bin/atf2kyua
+man/man1/atf-report.1
+man/man1/atf-run.1
+man/man1/atf2kyua.1
+share/doc/kyua-atf-compat/AUTHORS
+share/doc/kyua-atf-compat/COPYING
+share/doc/kyua-atf-compat/NEWS
+share/doc/kyua-atf-compat/README
+share/kyua-atf-compat/lib.subr
+share/kyua-atf-compat/tests_lib.subr
+${TESTS}tests/kyua-atf-compat/Kyuafile
+${TESTS}tests/kyua-atf-compat/atf-report_test
+${TESTS}tests/kyua-atf-compat/atf-run_test
+${TESTS}tests/kyua-atf-compat/atf2kyua_test
+${TESTS}tests/kyua-atf-compat/helpers
