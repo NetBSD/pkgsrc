@@ -1,0 +1,54 @@
+$NetBSD: patch-Makefile,v 1.1 2012/07/11 10:40:47 wiz Exp $
+
+Change makefile to conform to pkgsrc pkginstall framework
+--- Makefile.orig	2012-05-30 10:40:45.000000000 +0000
++++ Makefile
+@@ -66,34 +66,22 @@ install.byte: install.META.byte install.
+ install.opt: install.META.opt install.files
+ 
+ install.files:
+-	 ## Command pipe
+-	$(INSTALL) -m 755 -d $(dir $(TEMPROOT)$(COMMANDPIPE))
+-	[ -p $(TEMPROOT)$(COMMANDPIPE) ] || \
+-	 { mkfifo $(TEMPROOT)$(COMMANDPIPE); \
+-	   $(CHMOD) 660 $(TEMPROOT)$(COMMANDPIPE); \
+-	   $(CHOWN) -R $(OCSIGENUSER):$(OCSIGENGROUP) $(TEMPROOT)$(COMMANDPIPE); }
+ 	 ## Configuration files
+ 	$(INSTALL) -m 755 -d $(TEMPROOT)$(CONFIGDIR)/conf.d
+ 	${INSTALL} -m 644 ${PROJECTNAME}.conf.sample $(TEMPROOT)$(CONFIGDIR)/
+ 	[ -f $(TEMPROOT)$(CONFIGDIR)/$(PROJECTNAME).conf ] || \
+ 	  { $(INSTALL) -m 644 $(PROJECTNAME).conf.sample \
+                 $(TEMPROOT)$(CONFIGDIR)/$(PROJECTNAME).conf;  }
+-	-mv $(TEMPROOT)$(CONFIGDIR)/mime.types $(TEMPROOT)$(CONFIGDIR)/mime.types.old
+ 	 ## Log directory
+ 	$(INSTALL) -m 644 src/files/mime.types $(TEMPROOT)$(CONFIGDIR)
+-	$(INSTALL) -d -m 755 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
+-	  $(TEMPROOT)$(LOGDIR)
++	$(INSTALL) -d -m 755 $(TEMPROOT)$(LOGDIR)
+ 	 ## Static files
+-	$(INSTALL) -d -m 755 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
+-	  $(TEMPROOT)$(STATICPAGESDIR)
+-	$(INSTALL) -d -m 750 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
+-	  $(TEMPROOT)$(DATADIR)
+-	$(INSTALL) -m 644 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
+-	  local/var/www/*.html $(TEMPROOT)$(STATICPAGESDIR)
+-	$(INSTALL) -d -m 755 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
+-	  $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
+-	$(INSTALL) -m 644 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
+-	  local/var/www/ocsigenstuff/*.png local/var/www/ocsigenstuff/*.css \
++	$(INSTALL) -d -m 755 $(TEMPROOT)$(STATICPAGESDIR)
++	$(INSTALL) -d -m 750 $(TEMPROOT)$(DATADIR)
++	$(INSTALL) -m 644 local/var/www/*.html $(TEMPROOT)$(STATICPAGESDIR)
++	$(INSTALL) -d -m 755 $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
++	$(INSTALL) -m 644 local/var/www/ocsigenstuff/*.png \
++		local/var/www/ocsigenstuff/*.css \
+ 	  $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
+ 	$(INSTALL) -d -m 755 $(TEMPROOT)$(MANDIR)
+ 	$(INSTALL) -m 644 src/files/${PROJECTNAME}.1 $(TEMPROOT)$(MANDIR)
+@@ -152,4 +140,4 @@ dist:
+ 
+ .PHONY: depend
+ depend:
+-	${MAKE} -C src depend
+\ No newline at end of file
++	${MAKE} -C src depend

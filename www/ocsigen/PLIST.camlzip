@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.camlzip,v 1.1 2012/07/11 10:40:46 wiz Exp $
+lib/ocaml/site-lib/ocsigenserver/extensions/deflatemod.cmo
+${OPT}lib/ocaml/site-lib/ocsigenserver/extensions/deflatemod.cmx
+${OPT}lib/ocaml/site-lib/ocsigenserver/extensions/deflatemod.cmxs
+lib/ocaml/site-lib/ocsigenserver/extensions/deflatemod.o
