@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2254 2012/07/11 15:35:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2255 2012/07/11 15:42:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/teTeX3-texmf to 3.0nb37 [minskim 2012-07-11]
 	Added devel/ocaml-deriving-ocsigen version 0.3c [wiz 2012-07-11]
 	Added devel/js_of_ocaml version 1.2 [wiz 2012-07-11]
+	Updated databases/ipa_sdb to 1.1.1 [wiz 2012-07-11]
