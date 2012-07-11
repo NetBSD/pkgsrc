@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2250 2012/07/11 10:40:57 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2251 2012/07/11 12:58:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3500,3 +3500,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-glib2 to 1.260 [wiz 2012-07-11]
 	Updated x11/p5-gtk2 to 1.243 [wiz 2012-07-11]
 	Updated www/ocsigen to 2.1 [wiz 2012-07-11]
+	Added print/tex-xtab version 2.3f [minskim 2012-07-11]
+	Added print/tex-xtab-doc version 2.3f [minskim 2012-07-11]
