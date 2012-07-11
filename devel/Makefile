@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1627 2012/07/10 22:13:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.1628 2012/07/11 15:35:57 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -291,6 +291,7 @@ SUBDIR+=	javadeps
 SUBDIR+=	jenkins
 SUBDIR+=	jflex
 SUBDIR+=	js2-mode
+SUBDIR+=	js_of_ocaml
 SUBDIR+=	kdbg
 SUBDIR+=	kdesdk3
 SUBDIR+=	kdesdk4
@@ -483,6 +484,7 @@ SUBDIR+=	nsis
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
 SUBDIR+=	nss
+SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-findlib
 SUBDIR+=	ocaml-lwt
 SUBDIR+=	ocaml-react
