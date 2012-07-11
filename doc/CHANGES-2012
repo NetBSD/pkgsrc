@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2252 2012/07/11 13:00:23 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.2253 2012/07/11 15:34:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3503,3 +3503,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-xtab version 2.3f [minskim 2012-07-11]
 	Added print/tex-xtab-doc version 2.3f [minskim 2012-07-11]
 	Updated print/teTeX3-texmf to 3.0nb37 [minskim 2012-07-11]
+	Added devel/ocaml-deriving-ocsigen version 0.3c [wiz 2012-07-11]
