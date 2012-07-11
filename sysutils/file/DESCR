@@ -4,6 +4,7 @@ magic number tests, and language tests.
 
 This package also includes the magic number recognition libraries.
 
-This version is the standard "file" command for Linux, *BSD, and other
-systems. This is Ian Darwin's file(1) command. It is maintained
-by Christos Zoulas.
+This implementation of file(1) is the standard "file" command for
+Linux, *BSD, and other systems.  It (as well as the magic file)
+was originally written by Ian Darwin and is now maintained by a
+group of developers lead by Christos Zoulas.
