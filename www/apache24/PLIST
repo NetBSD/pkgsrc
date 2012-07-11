@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/18 11:27:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/07/11 19:09:18 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -160,6 +160,7 @@ lib/httpd/mod_speling.so
 lib/httpd/mod_ssl.so
 lib/httpd/mod_status.so
 lib/httpd/mod_substitute.so
+${PLIST.suexec}lib/httpd/mod_suexec.so
 lib/httpd/mod_unique_id.so
 lib/httpd/mod_unixd.so
 lib/httpd/mod_userdir.so
