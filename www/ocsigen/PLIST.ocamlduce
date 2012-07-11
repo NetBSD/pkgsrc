@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.ocamlduce,v 1.1.1.1 2007/04/10 20:24:43 tonio Exp $
-lib/ocaml/site-lib/ocsigen/ocsigenduce.cma
-lib/ocaml/site-lib/ocsigen/ocsigenduce.cmi
-lib/ocaml/site-lib/ocsigen/xhtml1_strict.cmi
-share/examples/ocsigen/exampleduce.cmo
