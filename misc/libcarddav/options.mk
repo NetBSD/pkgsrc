@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/07/11 09:25:22 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2012/07/11 14:47:23 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libcarddav
 PKG_SUPPORTED_OPTIONS=	doc
@@ -13,8 +13,8 @@ PLIST_VARS+=	doc
 BUILD_DEPENDS+=		doxygen>=1.8.1.1:../../devel/doxygen
 BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
 BUILD_DEPENDS+=		tex-tocloft-[0-9]*:../../print/tex-tocloft
-# only xtab.sty is necessary from following
-BUILD_DEPENDS+=		teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
+BUILD_DEPENDS+=		tex-xtab-[0-9]*:../../print/tex-xtab
+BUILD_DEPENDS+=		tex-multirow-[0-9]*:../../print/tex-multirow
 CONFIGURE_ARGS+=	--enable-doc
 PLIST.doc=		yes
 .else
