@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2249 2012/07/11 09:45:17 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2250 2012/07/11 10:40:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3499,3 +3499,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/openjpeg to 1.5.0nb1 [wiz 2012-07-11]
 	Updated devel/p5-glib2 to 1.260 [wiz 2012-07-11]
 	Updated x11/p5-gtk2 to 1.243 [wiz 2012-07-11]
+	Updated www/ocsigen to 2.1 [wiz 2012-07-11]
