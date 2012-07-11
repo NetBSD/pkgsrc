@@ -57,6 +57,7 @@ bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2.
 caca			Enable libcaca support.
 cairo			Enable cairo support.
+camlzip			Enable camlzip support (for zip/gz/jar).
 canna			Use Canna as Japanese conversion program.
 cares			Use the c-ares library for asynchronous name resolution.
 catalog-mysql		Store Bacula catalog in MySQL database.
@@ -427,7 +428,6 @@ nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
-ocamlduce		Enable OcamlDuce support.
 octave			Enable Octave support.
 odbc			Enable ODBC support.
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
