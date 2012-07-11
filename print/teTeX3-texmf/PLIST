@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2012/05/08 18:43:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.34 2012/07/11 12:59:59 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2842,8 +2842,6 @@ share/texmf-dist/doc/latex/was/gensymb.dvi
 share/texmf-dist/doc/latex/was/icomma.dvi
 share/texmf-dist/doc/latex/was/readme.1st
 share/texmf-dist/doc/latex/was/upgreek.dvi
-share/texmf-dist/doc/latex/xtab/README
-share/texmf-dist/doc/latex/xtab/xtab.dvi
 share/texmf-dist/doc/latex/yfonts/frktest.tex
 share/texmf-dist/doc/latex/yfonts/liesmich
 share/texmf-dist/doc/latex/yfonts/readme
@@ -6611,7 +6609,6 @@ share/texmf-dist/tex/latex/was/fixmath.sty
 share/texmf-dist/tex/latex/was/gensymb.sty
 share/texmf-dist/tex/latex/was/icomma.sty
 share/texmf-dist/tex/latex/was/upgreek.sty
-share/texmf-dist/tex/latex/xtab/xtab.sty
 share/texmf-dist/tex/latex/yfonts/yfonts.sty
 share/texmf-dist/tex/mex/base/mex.tex
 share/texmf-dist/tex/mex/base/mex1.tex

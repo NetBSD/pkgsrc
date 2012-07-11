@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2012/07/06 16:22:55 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2012/07/11 12:59:59 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -192,6 +192,7 @@ DEPENDS+=	tex-vruler-[0-9]*:../../print/tex-vruler
 DEPENDS+=	tex-wrapfig-[0-9]*:../../print/tex-wrapfig
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 DEPENDS+=	tex-xypic-[0-9]*:../../graphics/tex-xypic
 
 EXTRACT_ELEMENTS+=	aliases
@@ -329,7 +330,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/ty*
 	rm -rf ${WRKSRC}/doc/latex/wasysym
 	rm -rf ${WRKSRC}/doc/latex/wrapfig
-	rm -rf ${WRKSRC}/doc/latex/xcolor
+	rm -rf ${WRKSRC}/doc/latex/x*
 	rm -rf ${WRKSRC}/doc/programs
 	rm -rf ${WRKSRC}/doc/m[a-j]*
 	rm -rf ${WRKSRC}/doc/pdftex
@@ -541,7 +542,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/wasysym
 	rm -rf ${WRKSRC}/tex/latex/wrapfig
 	rm -rf ${WRKSRC}/tex/latex/xcolor
-	rm -rf ${WRKSRC}/tex/latex/xk*
+	rm -rf ${WRKSRC}/tex/latex/x*
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
 	rm -f ${WRKSRC}/tex/plain/base/[c-gmp-z]*
 	rm -f ${WRKSRC}/tex/plain/base/letter*
