@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11348 2012/07/10 09:10:59 mef Exp $
+$NetBSD: TODO,v 1.11349 2012/07/11 09:34:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -986,7 +986,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o p5-PerlMagick-6.7.7.7
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.082
-	o p5-glib2-1.260
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1

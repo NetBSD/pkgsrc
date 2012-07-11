@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2247 2012/07/11 09:09:07 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2248 2012/07/11 09:34:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3497,3 +3497,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/web2c to 2012 [minskim 2012-07-10]
 	Updated graphics/png to 1.5.12 [wiz 2012-07-11]
 	Updated graphics/openjpeg to 1.5.0nb1 [wiz 2012-07-11]
+	Updated devel/p5-glib2 to 1.260 [wiz 2012-07-11]
