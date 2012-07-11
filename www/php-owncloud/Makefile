@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/07/10 13:20:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2012/07/11 12:14:59 ryoon Exp $
 #
 
 DISTNAME=	owncloud-4.0.4
@@ -18,7 +18,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-xml>=5.3.0:../../textproc/php-xml
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
 
 .include "options.mk"
