@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2011/12/07 04:34:07 hiramatsu Exp $
+$NetBSD: distinfo,v 1.14 2012/07/11 15:38:35 wen Exp $
 
-SHA1 (Mail-IMAPClient-3.30.tar.gz) = c8f43e53bc77eb28c34829065d1a768bfb6d9004
-RMD160 (Mail-IMAPClient-3.30.tar.gz) = 8b50c91c3724ad6dd6e64af9ca003ef238893823
-Size (Mail-IMAPClient-3.30.tar.gz) = 183267 bytes
+SHA1 (Mail-IMAPClient-3.31.tar.gz) = 11b066d5899590d64c24f674feee9e2ff6fd1bcc
+RMD160 (Mail-IMAPClient-3.31.tar.gz) = 31a1e16a92cd1fe99ea99481e2f9471d00e245ce
+Size (Mail-IMAPClient-3.31.tar.gz) = 183647 bytes
