@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile,v 1.1 2012/07/11 10:40:47 wiz Exp $
+
+patch to make destdir work
+--- src/Makefile.orig	2011-04-22 15:57:48.000000000 +0000
++++ src/Makefile
+@@ -117,6 +117,7 @@ raw_install:
+ 	$(OCAMLFIND) install $(PROJECTNAME) \
+ 	   -destdir $(TEMPROOT)$(LIBDIR) \
+ 	   -patch-version ${VERSION} \
++           -ldconf /dev/null \
+ 	   ${INTF} $(INSTALL_IMPL) $(DOC) files/META
+ 	 # Extensions
+ 	$(INSTALL) -m 755 -d $(TEMPROOT)${LIBDIR}/${PROJECTNAME}/extensions/
