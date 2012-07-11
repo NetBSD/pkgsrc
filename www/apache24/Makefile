@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/07/05 12:50:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/11 19:09:18 ryoon Exp $
 
 DISTNAME=	httpd-2.4.2
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
 		http://archive.apache.org/dist/httpd/ \
@@ -57,7 +57,7 @@ FIND_PREFIX:=	APRDIR=apr
 
 # LDAP support
 PLIST_VARS+=		ldap
-.if exists(${APRDIR}/lib/apr-util-1/apr_ldap.la) || !empty(PKG_OPTIONS:Mapache-shared-modules)
+.if exists(${APRDIR}/lib/apr-util-1/apr_ldap.la)
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
 PLIST.ldap=		yes
 .endif
@@ -146,11 +146,9 @@ SUBST_SED.abs_srcdir=		-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
 
 REPLACE_PERL=		docs/cgi-examples/printenv
 
-.if !empty(PKG_OPTIONS:Mapache-shared-modules)
 .  include "../../devel/zlib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
-.endif
 
 post-extract:
 	${TOUCH} ${WRKSRC}/build/libtool
