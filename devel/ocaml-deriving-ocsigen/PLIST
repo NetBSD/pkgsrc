@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/11 15:33:51 wiz Exp $
+lib/ocaml/site-lib/deriving-ocsigen/META
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving.a
+lib/ocaml/site-lib/deriving-ocsigen/deriving.cma
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving.cmxa
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving.cmxs
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Bounded.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Bounded.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Bounded.mli
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Dump.cmi
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Dump.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Dump.mli
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Enum.cmi
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Enum.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Enum.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Eq.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Eq.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Eq.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Functor.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Functor.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Functor.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Pickle.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Pickle.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Pickle.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Show.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Show.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Show.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Typeable.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_Typeable.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_Typeable.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_dynmap.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_dynmap.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_dynmap.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_interned.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_interned.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_interned.mli
+lib/ocaml/site-lib/deriving-ocsigen/deriving_monad.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_monad.cmx
+lib/ocaml/site-lib/deriving-ocsigen/deriving_monad.mli
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_num.a
+lib/ocaml/site-lib/deriving-ocsigen/deriving_num.cma
+lib/ocaml/site-lib/deriving-ocsigen/deriving_num.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_num.cmx
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_num.cmxa
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/deriving_num.cmxs
+lib/ocaml/site-lib/deriving-ocsigen/deriving_num.mli
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving.a
+lib/ocaml/site-lib/deriving-ocsigen/pa_deriving.cma
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving.cmxa
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving.cmxs
+lib/ocaml/site-lib/deriving-ocsigen/pa_deriving_common.cmi
+${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving_common.cmx
+@comment ${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving_tc.a
+@comment lib/ocaml/site-lib/deriving-ocsigen/pa_deriving_tc.cma
+@comment ${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving_tc.cmxa
+@comment ${PLIST.opt}lib/ocaml/site-lib/deriving-ocsigen/pa_deriving_tc.cmxs
