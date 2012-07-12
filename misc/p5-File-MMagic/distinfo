@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/10/11 03:55:33 taca Exp $
+$NetBSD: distinfo,v 1.10 2012/07/12 13:51:04 wen Exp $
 
-SHA1 (File-MMagic-1.27.tar.gz) = cf4fdd9b0b468b81ad59f744de3d11b98094ef30
-RMD160 (File-MMagic-1.27.tar.gz) = 8406a265ba35b8904e28e4f19ab401cd7d55740d
-Size (File-MMagic-1.27.tar.gz) = 21332 bytes
+SHA1 (File-MMagic-1.29.tar.gz) = e86aafdb397f4e40b5d59db4e561e9316e703322
+RMD160 (File-MMagic-1.29.tar.gz) = 2b4be151cbeae0006be6adb7c0e340cf2c7c39b0
+Size (File-MMagic-1.29.tar.gz) = 22295 bytes
