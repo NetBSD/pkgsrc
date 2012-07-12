@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11350 2012/07/11 10:40:57 wiz Exp $
+$NetBSD: TODO,v 1.11351 2012/07/12 13:23:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.15
+	o TeXmacs-1.0.7.16
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
@@ -529,12 +529,13 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o dialog-1.1.20120706
 	o diffpdf-2.1.1
 	o diffstat-1.55
-	o digikam-2.6.0
+	o digikam-2.7.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
 	o doclifter-2.8
 	o dri-7.8.2 [wip]
+	o dri2proto-2.8
 	o drivel-3.0.3
 	o dropbear-2012.055
 	o dspam-3.10.0
@@ -548,7 +549,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.9
 	o egtk-0.3.6.2
-	o eigen3-3.1
+	o eigen3-3.0.6
 	o ejabberd-2.1.11
 	o ekiga-3.2.7
 	o electric-9.02
@@ -661,6 +662,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o global-6.2 [pkg/45925]
 	o global-6.2.4
 	o glom-1.14.2 [GNOME 2.26]
+	o glproto-1.4.16
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.4.1
@@ -719,7 +721,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o gtk-vnc-0.4.3
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.37
+	o gtkwave-3.3.38
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -831,7 +833,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o libextractor-0.6.3
 	o libffi-3.0.11
 	o libflash-0.4.13
-	o libfolks-0.7.2.1
+	o libfolks-0.7.2.2
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
@@ -905,11 +907,11 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-40f
-	o mkvtoolnix-5.6.0
+	o mkvtoolnix-5.7.0
 	o mnemosyne-2.0
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
-	o modular-xorg-server-1.12.2
+	o modular-xorg-server-1.12.3
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.11.2
@@ -918,6 +920,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o mousetweaks-3.4.2
 	o mp3diags-1.0.11
 	o mpeg4ip-1.6.1
+	o mpfr-3.1.1
 	o mpg123-1.14.2
 	o mpich-1.4.1p1
 	o mpop-1.0.27
@@ -963,6 +966,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
+	o opencv-2.4.2
 	o opendkim-2.6.2
 	o opengrok-0.11.1
 	o openh323-1.19.1
@@ -1028,6 +1032,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.20.2
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
@@ -1070,6 +1075,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.8
+	o randrproto-1.4.0
 	o rapidsvn-0.12
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
@@ -1186,6 +1192,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o teem-1.10.0
 	o tesseract-3.01
 	o tetrinetx-1.40c
+	o texlive-2012
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.3.4
 	o tfmxplay-1.1.6
