@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2266 2012/07/12 21:13:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2267 2012/07/12 23:57:15 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3517,3 +3517,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/Transmission-gui to 2.60 [wiz 2012-07-12]
 	Updated news/pan to 0.139 [wiz 2012-07-12]
 	Updated misc/dialog to 1.1.20120706 [wiz 2012-07-12]
+	Added sysutils/dc-tools version 1.00 [abs 2012-07-12]
