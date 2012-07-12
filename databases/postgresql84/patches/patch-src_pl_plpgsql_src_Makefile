@@ -1,0 +1,13 @@
+$NetBSD: patch-src_pl_plpgsql_src_Makefile,v 1.1 2012/07/12 18:57:27 marino Exp $
+
+--- src/pl/plpgsql/src/Makefile.orig	2012-05-31 23:11:47.000000000 +0000
++++ src/pl/plpgsql/src/Makefile
+@@ -15,7 +15,7 @@ NAME= plpgsql
+ 
+ override CPPFLAGS := -I$(srcdir) $(CPPFLAGS)
+ SHLIB_LINK = $(filter -lintl, $(LIBS))
+-rpath =
++rpath = $(COMPILER_RPATH_FLAG)$(libdir)
+ 
+ OBJS = pl_gram.o pl_handler.o pl_comp.o pl_exec.o pl_funcs.o
+ 
