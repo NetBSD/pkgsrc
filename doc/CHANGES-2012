@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2264 2012/07/12 18:30:16 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2265 2012/07/12 21:11:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3515,3 +3515,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-uwsgi to 1.2.4 [roy 2012-07-12]
 	Updated net/Transmission to 2.60 [wiz 2012-07-12]
 	Updated net/Transmission-gui to 2.60 [wiz 2012-07-12]
+	Updated news/pan to 0.139 [wiz 2012-07-12]
