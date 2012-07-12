@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/07/12 23:55:55 abs Exp $
+bin/dc-burn-netbsd
+bin/dc-makeip
+bin/dc-scramble
+share/dc-tools/IP.TMPL
+share/dc-tools/ip.txt
+share/dc-tools/ip_slave/1IPLOAD.BIN
+share/dc-tools/ip_slave/IP.BIN
+share/dc-tools/serial_slave/IP.BIN
+share/doc/dc-tools.README

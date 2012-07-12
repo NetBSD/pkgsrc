@@ -1,0 +1,17 @@
+Contents: some Dreamcast tools from Marcus Comstedt http://mc.pp.se/dc/sw.html
+and a dc-burn-netbsd script to build and burn a bootable NetBSD/dreamcast CD
+
+dc-burn-netbsd
+    Script to download a given NetBSD/dreamcast version and burn a bootable CD
+
+dc-makeip (IP creator)
+    Utility for creating IP.BIN from a textual representation of IP0000.BIN
+
+dc-scramble (1ST_READ.BIN scrambler)
+    Utility to "scramble" binary files to match bootloader requirements
+
+share/dc-tools/ip_slave/ (IP upload slave)
+    Dreamcast binary to upload and run software over ethernet
+
+share/dc-tools/serial_slave/ (Serial upload slave)
+    Dreamcast binary to upload and run software over the serial port
