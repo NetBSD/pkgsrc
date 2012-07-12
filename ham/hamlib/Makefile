@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2012/06/11 00:17:58 gdt Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2012/07/12 00:38:18 gdt Exp $
 #
 
 DISTNAME=	hamlib-1.2.15.1
-#PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://hamlib.sourceforge.net/
 COMMENT=	API for digital communications equipment
 
@@ -26,6 +25,8 @@ CONFIGURE_ARGS+=--without-tcl-binding \
 # The configure script is broken. It even requires a Python interpreter
 # when none is needed.
 CONFIGURE_ENV+=	PYTHON=/nonexistent
+
+TEST_TARGET=	check
 
 INSTALLATION_DIRS=	include/hamlib
 
