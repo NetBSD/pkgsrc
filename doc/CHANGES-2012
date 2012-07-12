@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2259 2012/07/12 14:17:00 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2260 2012/07/12 14:19:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/glproto to 1.4.16 [wiz 2012-07-12]
 	Updated x11/dri2proto to 2.8 [wiz 2012-07-12]
 	Updated x11/randrproto to 1.4.0 [wiz 2012-07-12]
+	Updated textproc/hunspell-de to 20120607 [wiz 2012-07-12]
