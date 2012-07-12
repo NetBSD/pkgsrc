@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/06/23 22:13:02 marino Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/12 13:47:23 marino Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
 
 DISTNAME=		gcc-${GCC_DIST_VERSION}
 PKGNAME=		${GCC_PKGNAME}-${GCC_DIST_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,6 +1,6 @@
-$NetBSD: patch-gcc_config_i386_dragonfly.h,v 1.1 2012/06/23 22:13:02 marino Exp $
+$NetBSD: patch-gcc_config_i386_dragonfly.h,v 1.2 2012/07/12 13:47:23 marino Exp $
 
---- gcc/config/i386/dragonfly.h.orig	2012-06-22 10:35:29.000000000 +0000
+--- gcc/config/i386/dragonfly.h.orig	2012-07-12 12:01:10.000000000 +0000
 +++ gcc/config/i386/dragonfly.h
 @@ -0,0 +1,101 @@
 +/* Definitions for Intel 386 running DragonFly with ELF format
@@ -88,10 +88,10 @@ $NetBSD: patch-gcc_config_i386_dragonfly.h,v 1.1 2012/06/23 22:13:02 marino Exp 
 +#undef  DEFAULT_PCC_STRUCT_RETURN
 +#define DEFAULT_PCC_STRUCT_RETURN 0
 +
-+/* DragonFly sets the rounding precision of the FPU to 53 bits, but GNAT
-+   resets it to full precision.  */
++/* DragonFly sets the rounding precision of the FPU to 53 bits.  Let the
++   compiler get the contents of <float.h> and std::numeric_limits correct.  */
 +#undef TARGET_96_ROUND_53_LONG_DOUBLE
-+#define TARGET_96_ROUND_53_LONG_DOUBLE 0
++#define TARGET_96_ROUND_53_LONG_DOUBLE (!TARGET_64BIT)
 +
 +/* Put all *tf routines in libgcc.  */
 +#undef LIBGCC2_HAS_TF_MODE
