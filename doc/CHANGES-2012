@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2262 2012/07/12 16:25:06 roy Exp $
+$NetBSD: CHANGES-2012,v 1.2263 2012/07/12 18:30:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3513,3 +3513,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/hunspell-de to 20120607 [wiz 2012-07-12]
 	Updated devel/glib2 to 2.32.3nb2 [jperkin 2012-07-12]
 	Updated www/py-uwsgi to 1.2.4 [roy 2012-07-12]
+	Updated net/Transmission to 2.60 [wiz 2012-07-12]
