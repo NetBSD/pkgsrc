@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2261 2012/07/12 14:43:57 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.2262 2012/07/12 16:25:06 roy Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3512,3 +3512,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/randrproto to 1.4.0 [wiz 2012-07-12]
 	Updated textproc/hunspell-de to 20120607 [wiz 2012-07-12]
 	Updated devel/glib2 to 2.32.3nb2 [jperkin 2012-07-12]
+	Updated www/py-uwsgi to 1.2.4 [roy 2012-07-12]
