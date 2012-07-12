@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/09 22:34:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/12 16:21:53 roy Exp $
 bin/uwsgi-${PYVERSSUFFIX}
+${PYSITELIB}/uWSGI-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/uWSGI-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/uWSGI-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/uWSGI-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/uwsgidecorators.py
+${PYSITELIB}/uwsgidecorators.pyc
+${PYSITELIB}/uwsgidecorators.pyo
