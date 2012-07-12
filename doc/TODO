@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11353 2012/07/12 14:16:34 wiz Exp $
+$NetBSD: TODO,v 1.11354 2012/07/12 14:17:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1073,7 +1073,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o qvplay-0.95
 	o radiance-3.7.2
 	o raine-0.51.8
-	o randrproto-1.4.0
 	o rapidsvn-0.12
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
