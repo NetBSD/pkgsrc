@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2012/07/12 16:31:26 asau Exp $
+# $NetBSD: Makefile,v 1.405 2012/07/12 17:21:13 asau Exp $
 #
 
 COMMENT=	Databases
@@ -244,6 +244,7 @@ SUBDIR+=	postgresql84
 SUBDIR+=	postgresql84-adminpack
 SUBDIR+=	postgresql84-client
 SUBDIR+=	postgresql84-dblink
+SUBDIR+=	postgresql84-pgbench
 SUBDIR+=	postgresql84-pgcrypto
 SUBDIR+=	postgresql84-plperl
 SUBDIR+=	postgresql84-plpython
