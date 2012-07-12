@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/07/12 23:55:55 abs Exp $
+
+SHA1 (dc-tools/abs0-dc-burn-netbsd-1.0-0-gf333dc8) = f8e78c095780b910f7e05e2672f41e6a1ed838dd
+RMD160 (dc-tools/abs0-dc-burn-netbsd-1.0-0-gf333dc8) = a0ca265f50c78c211ec249734f2e62a902a7909f
+Size (dc-tools/abs0-dc-burn-netbsd-1.0-0-gf333dc8) = 3146 bytes
+SHA1 (dc-tools/ip_slave.tar.gz) = 573e0c410037715652d60a133a90b17fff279405
+RMD160 (dc-tools/ip_slave.tar.gz) = 408603e6265bff935764c68f2bf4b0ebc6bd7088
+Size (dc-tools/ip_slave.tar.gz) = 23008 bytes
+SHA1 (dc-tools/makeip.tar.gz) = a7f2742b8f9ad6c0d412696afff7c8c775fafbad
+RMD160 (dc-tools/makeip.tar.gz) = 218bd7138fe7af45aa0cea522cd81370c395c2de
+Size (dc-tools/makeip.tar.gz) = 10482 bytes
+SHA1 (dc-tools/scramble.c) = d90525a7d352cf5059de0056fd3bbf87f64d05bc
+RMD160 (dc-tools/scramble.c) = 2c3cd8448aadb1b02e504f1d5bc14a744020b836
+Size (dc-tools/scramble.c) = 4963 bytes
+SHA1 (dc-tools/serial_slave.tar.gz) = 56e77360d5f6dd0336a11fe9f117655afe9a8792
+RMD160 (dc-tools/serial_slave.tar.gz) = a5e06803ccb5bee7f6d76fa0619e90473358ae2a
+Size (dc-tools/serial_slave.tar.gz) = 9524 bytes
