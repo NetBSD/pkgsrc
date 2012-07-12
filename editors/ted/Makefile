@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/03/03 00:13:01 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2012/07/12 17:10:21 marino Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -38,6 +38,7 @@ CONFIGURE_ENV+=	ac_zlib_includes="${BUILDLINK_PREFIX.zlib}/include"
 CONFIGURE_ENV+=	ac_zlib_libraries="${BUILDLINK_PREFIX.zlib}/lib"
 
 LDFLAGS.SunOS+=	-liconv
+LDFLAGS.DragonFly+=	-lXft -lfontconfig
 
 MAKE_FLAGS+=	CONFIGURE_OPTIONS=--x-libraries=${X11BASE}/lib\ --with-MOTIF
 
