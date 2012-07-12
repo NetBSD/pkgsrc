@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11351 2012/07/12 13:23:10 wiz Exp $
+$NetBSD: TODO,v 1.11352 2012/07/12 14:16:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -662,7 +662,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o global-6.2 [pkg/45925]
 	o global-6.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glproto-1.4.16
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.4.1
