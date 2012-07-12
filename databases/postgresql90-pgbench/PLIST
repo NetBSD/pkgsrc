@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/07/12 16:29:33 asau Exp $
+bin/pgbench
