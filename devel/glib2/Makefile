@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.207 2012/07/11 23:07:06 marino Exp $
+# $NetBSD: Makefile,v 1.208 2012/07/12 14:43:25 jperkin Exp $
 
 .include "Makefile.common"
 .include "options.mk"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		devel
 
@@ -46,10 +46,11 @@ CPPFLAGS.SunOS+=	-DBSD_COMP
 
 .if ${OBJECT_FMT} == "ELF"
 . if ${OPSYS} == "SunOS"
-.  if ${MACHINE_ARCH} == "i386"
-# _ILP32 Solaris machines emit "Large files are not supported by libelf" from
-# /usr/include/libelf when _FILE_OFFSET_BITS=64, the value configure will set by itself
-CONFIGURE_ARGS+=	ac_cv_sys_file_offset_bits=32
+.  if ${ABI} == 32
+# Solaris libelf in 32-bit mode does not support largefile.  We patch files
+# individually to force _FILE_OFFSET_BITS=32 but need to turn back on -lelf
+# after configure disabled it.
+CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
 .  endif
 . else
 .include "../../devel/libelf/buildlink3.mk"
