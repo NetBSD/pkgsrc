@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/16 22:16:43 abs Exp $
+$NetBSD: distinfo,v 1.2 2012/07/12 18:29:46 wiz Exp $
 
-SHA1 (transmission-2.42.tar.bz2) = 744068c76f68c141d2aada689bc49a5b56cd618b
-RMD160 (transmission-2.42.tar.bz2) = 83f380f0b4f63e52c129c906dc8e8e4649e04c5c
-Size (transmission-2.42.tar.bz2) = 3846260 bytes
-SHA1 (patch-aa) = 9a97eb880af17dceeb0ed826b8e508c4ae59102e
+SHA1 (transmission-2.60.tar.bz2) = 1dfc64ff56f954d37b3cca4aa067f067e0fa9744
+RMD160 (transmission-2.60.tar.bz2) = 861eaafe5d455a3c3760ee502a99669315a4500f
+Size (transmission-2.60.tar.bz2) = 4226444 bytes
+SHA1 (patch-aa) = 75d6df8cf8105dbb55ec3a4ed967036c28cfae3c
 SHA1 (patch-ab) = 96174f474e3301f9062eaa17fafe3cd5c26a5243
 SHA1 (patch-ac) = 75e0d1fbfc5bb895b17fa22d8d09d6257e798847
-SHA1 (patch-ad) = 4d5003f68bcff3f41de6a134f07b1e98ea68cdd9
-SHA1 (patch-ae) = 0b3ce1c74a21151c234b58c94da655da16fd38c2
-SHA1 (patch-af) = 79a2c23670a17cd99c17f254c437e4a54aed0caf
+SHA1 (patch-ae) = e4a5cc16b9fc211fcd12bc38251e1d7df5b7f846
+SHA1 (patch-qt_qtr.pro) = 9dcf0a36110357d71138fc1325484e2b5ea7c8d4
