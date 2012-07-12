@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.405 2012/07/12 17:21:13 asau Exp $
+# $NetBSD: Makefile,v 1.406 2012/07/12 18:12:48 asau Exp $
 #
 
 COMMENT=	Databases
@@ -235,6 +235,7 @@ SUBDIR+=	postgresql-postgis
 SUBDIR+=	postgresql83
 SUBDIR+=	postgresql83-adminpack
 SUBDIR+=	postgresql83-client
+SUBDIR+=	postgresql83-pgbench
 SUBDIR+=	postgresql83-plperl
 SUBDIR+=	postgresql83-plpython
 SUBDIR+=	postgresql83-pltcl
