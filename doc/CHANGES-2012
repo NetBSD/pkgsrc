@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2272 2012/07/13 13:34:44 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2273 2012/07/13 13:40:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3508,6 +3508,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/p5-Mail-IMAPClient to 3.31 [wen 2012-07-11]
 	Updated databases/ipa_sdb to 1.1.1 [wiz 2012-07-11]
 	Updated www/apache24 to 2.4.2nb3 [ryoon 2012-07-11]
+	Updated misc/p5-File-MMagic to 1.29 [wen 2012-07-12]
 	Updated x11/glproto to 1.4.16 [wiz 2012-07-12]
 	Updated x11/dri2proto to 2.8 [wiz 2012-07-12]
 	Updated x11/randrproto to 1.4.0 [wiz 2012-07-12]
