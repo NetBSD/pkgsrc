@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2277 2012/07/13 14:23:26 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2278 2012/07/13 14:23:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3528,3 +3528,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/py-networkx to 1.7 [wen 2012-07-13]
 	Updated print/xetex to 0.9998 [minskim 2012-07-13]
 	Added x11/xcb-util036 version 0.3.6 [wiz 2012-07-13]
+	Updated x11/xcb-util to 0.3.9 [wiz 2012-07-13]
