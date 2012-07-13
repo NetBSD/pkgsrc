@@ -1,8 +1,12 @@
-# $NetBSD: gcc.mk,v 1.123 2012/07/09 07:42:17 sbd Exp $
+# $NetBSD: gcc.mk,v 1.124 2012/07/13 16:11:29 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
 # User-settable variables:
+#
+# GCCBASE
+#	If using a native GCC and the compiler is not in $PATH then
+#	this should be set to the base installation directory.
 #
 # USE_NATIVE_GCC
 #	When set to "yes", the native gcc is used, no matter which
@@ -126,7 +130,10 @@ _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
 # _CC is the full path to the compiler named by ${CC} if it can be found.
 .if !defined(_CC)
 _CC:=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.  for _dir_ in ${PATH:C/\:/ /g}
+.  if !empty(GCCBASE) && exists(${GCCBASE}/bin)
+_EXTRA_CC_DIRS=	${GCCBASE}/bin
+.  endif
+.  for _dir_ in ${_EXTRA_CC_DIRS} ${PATH:C/\:/ /g}
 .    if empty(_CC:M/*)
 .      if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
 _CC:=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
