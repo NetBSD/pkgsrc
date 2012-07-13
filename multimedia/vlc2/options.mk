@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/02/21 12:49:43 drochner Exp $
+# $NetBSD: options.mk,v 1.2 2012/07/13 14:22:59 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad hal skins sdl pulseaudio x11
@@ -110,7 +110,7 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xcb-util036/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
