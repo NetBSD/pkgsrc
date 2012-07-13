@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/05/31 21:29:40 mlelstv Exp $
+# $NetBSD: Makefile,v 1.17 2012/07/13 15:14:42 wiz Exp $
 #
 
-DISTNAME=		libXi-1.4.3
-PKGREVISION=		1
+DISTNAME=		libXi-1.6.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,8 +32,8 @@ SUBST_SED.sosubdir=	-e 's|\.so X|.so manlibmansuffix/X|'
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
-BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.0
-BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.3
+BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.2
+BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.5
 BUILDLINK_API_DEPENDS.libXext+=		libXext>=1.1
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.3
 BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.13
