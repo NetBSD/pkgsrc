@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/07/09 01:21:27 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/13 13:44:49 minskim Exp $
 
-DISTNAME=	texlive-20110705-source
+DISTNAME=	texlive-20120701-source
 PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
 CATEGORIES=	print converters
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	mishka@NetBSD.org
