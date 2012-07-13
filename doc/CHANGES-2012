@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2269 2012/07/13 07:48:06 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2270 2012/07/13 13:16:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3520,3 +3520,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/dc-tools version 1.00 [abs 2012-07-12]
 	Updated textproc/p5-Text-Format to 0.56 [sno 2012-07-13]
 	Updated devel/p5-version to 0.9900 [sno 2012-07-13]
+	Updated devel/ruby-ole to 1.2.11.4 [obache 2012-07-13]
