@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/12/16 15:00:33 adam Exp $
+$NetBSD: distinfo,v 1.8 2012/07/13 16:43:34 adam Exp $
 
-SHA1 (exif-0.6.20.tar.bz2) = b12777ad6327389764570e42afdae66384421cd3
-RMD160 (exif-0.6.20.tar.bz2) = 820d3c1a15c1f84e7ab33aa8e00e8877bfbb7256
-Size (exif-0.6.20.tar.bz2) = 353284 bytes
+SHA1 (exif-0.6.21.tar.bz2) = 74652e3d04d0faf9ab856949d7463988f0394db8
+RMD160 (exif-0.6.21.tar.bz2) = cede7716029fd17a26323bc9587d27b51e11e803
+Size (exif-0.6.21.tar.bz2) = 387531 bytes
