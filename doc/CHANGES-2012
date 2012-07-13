@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2282 2012/07/13 18:17:03 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2283 2012/07/13 18:46:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/exif to 0.6.21 [adam 2012-07-13]
 	Updated misc/libreoffice3-bin to 3.5.5 [ryoon 2012-07-13]
 	Updated graphics/opencv to 2.4.2 [prlw1 2012-07-13]
+	Updated devel/jenkins to 1.447.2 [ryoon 2012-07-13]
