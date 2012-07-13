@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/05/27 21:53:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/07/13 18:41:45 ryoon Exp $
 share/jenkins/ColorFormatter.class
 share/jenkins/JNLPMain.class
 share/jenkins/LogFileOutputStream$1.class
@@ -83,7 +83,7 @@ share/jenkins/WEB-INF/lib/libpam4j-1.4.jar
 share/jenkins/WEB-INF/lib/libzfs-0.5.jar
 share/jenkins/WEB-INF/lib/localizer-1.10.jar
 share/jenkins/WEB-INF/lib/log4j-1.2.9.jar
-share/jenkins/WEB-INF/lib/mail-1.4.jar
+share/jenkins/WEB-INF/lib/mail-1.4.4.jar
 share/jenkins/WEB-INF/lib/memory-monitor-1.7.jar
 share/jenkins/WEB-INF/lib/mina-core-2.0.2.jar
 share/jenkins/WEB-INF/lib/oro-2.0.8.jar
