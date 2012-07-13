@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2273 2012/07/13 13:40:29 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2274 2012/07/13 13:45:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-version to 0.9900 [sno 2012-07-13]
 	Updated devel/ruby-ole to 1.2.11.4 [obache 2012-07-13]
 	Updated math/ruby-spreadsheet to 0.7.3 [obache 2012-07-13]
+	Updated print/xdvipdfmx to 0.7.8.20120701 [minskim 2012-07-13]
