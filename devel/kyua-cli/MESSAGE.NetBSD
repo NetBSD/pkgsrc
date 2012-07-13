@@ -1,13 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2011/09/29 19:15:09 jmmv Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2012/07/13 01:37:11 jmmv Exp $
 
 You are encouraged to run the NetBSD system-wide test suite that lives in
-/usr/tests with Kyua (and report any regressions that you encounter).
+/usr/tests with Kyua (and report any regressions that you encounter).  To
+do so, please follow the instructions in:
 
-To do so, you will first need to generate new Kyuafiles into the test suite
-tree because Kyua does not use Atffiles and the NetBSD build system does
-not yet install Kyuafiles.  The process is automated and is described in:
-
-	http://code.google.com/p/kyua/wiki/HowtoRunNetBSDTests
+	http://wiki.NetBSD.org/kyua/
 
 ===========================================================================
