@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/13 13:04:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/13 13:15:40 obache Exp $
 bin/oletool${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -6,7 +6,6 @@ ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/oletool
-${GEM_LIBDIR}/data/propids.yaml
 ${GEM_LIBDIR}/lib/ole/base.rb
 ${GEM_LIBDIR}/lib/ole/file_system.rb
 ${GEM_LIBDIR}/lib/ole/ranges_io.rb
