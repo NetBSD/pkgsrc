@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2267 2012/07/12 23:57:15 abs Exp $
+$NetBSD: CHANGES-2012,v 1.2268 2012/07/13 07:46:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated news/pan to 0.139 [wiz 2012-07-12]
 	Updated misc/dialog to 1.1.20120706 [wiz 2012-07-12]
 	Added sysutils/dc-tools version 1.00 [abs 2012-07-12]
+	Updated textproc/p5-Text-Format to 0.56 [sno 2012-07-13]
