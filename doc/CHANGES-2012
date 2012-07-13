@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2270 2012/07/13 13:16:30 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2271 2012/07/13 13:21:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3521,3 +3521,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-Text-Format to 0.56 [sno 2012-07-13]
 	Updated devel/p5-version to 0.9900 [sno 2012-07-13]
 	Updated devel/ruby-ole to 1.2.11.4 [obache 2012-07-13]
+	Updated math/ruby-spreadsheet to 0.7.3 [obache 2012-07-13]
