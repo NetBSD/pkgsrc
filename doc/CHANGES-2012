@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2278 2012/07/13 14:23:42 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2279 2012/07/13 15:14:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3529,3 +3529,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/xetex to 0.9998 [minskim 2012-07-13]
 	Added x11/xcb-util036 version 0.3.6 [wiz 2012-07-13]
 	Updated x11/xcb-util to 0.3.9 [wiz 2012-07-13]
+	Updated x11/libXi to 1.6.1 [wiz 2012-07-13]
