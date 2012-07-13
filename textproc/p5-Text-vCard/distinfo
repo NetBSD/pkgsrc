@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/03/01 13:39:41 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/07/13 18:45:33 kleink Exp $
 
-SHA1 (Text-vCard-2.10.tar.gz) = 228a001c966da78ad8132ea1e61b313245723572
-RMD160 (Text-vCard-2.10.tar.gz) = 3dab0e58dc528f043bd37965822c8b1ff97118cb
-Size (Text-vCard-2.10.tar.gz) = 17937 bytes
+SHA1 (Text-vCard-2.11.tar.gz) = 199347ec43671b6be008f84aa3549ace0172dbbf
+RMD160 (Text-vCard-2.11.tar.gz) = 74e870b55f1fe765f8bdd0a9df27f661b6ee2a54
+Size (Text-vCard-2.11.tar.gz) = 18970 bytes
