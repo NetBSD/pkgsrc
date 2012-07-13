@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.13 2012/01/11 01:15:17 riz Exp $
+$NetBSD: README.Solaris,v 1.14 2012/07/13 16:12:41 jperkin Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -48,8 +48,16 @@ for building all packages.
 See http://www.NetBSD.org/docs/software/packages.html for
 binary kits and initial packages, including gcc.
 
+If the gcc installation is not in your $PATH you will need to pass
+additional flags to bootstrap, for example:
+
+	env CC=/opt/gcc-4.6.3/bin/gcc \
+	    GCCBASE=/opt/gcc-4.6.3 \
+	    ./bootstrap --abi=64
+
 It is recommended that an external gcc be used only for bootstrapping,
-then remove gcc and install the pkgsrc binary package.
+and that you set USE_PKGSRC_GCC=yes in mk.conf so that the appropriate
+pkgsrc gcc is installed and used.
 
 Binary packages of gcc can be found through
 http://www.sunfreeware.com/
