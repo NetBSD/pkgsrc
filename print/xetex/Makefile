@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/07/09 01:51:34 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2012/07/13 14:13:59 minskim Exp $
 
-DISTNAME=	texlive-20110705-source
-PKGNAME=	xetex-0.9997.5
-PKGREVISION=	3
+DISTNAME=	texlive-20120701-source
+PKGNAME=	xetex-0.9998
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -29,9 +28,11 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/texk/web2c
 
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--disable-luatex --disable-mf --disable-mf-nowin \
-			--disable-mp --disable-ptex --disable-eptex \
+			--disable-mp \
+			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \
 			--enable-web2c --enable-xetex
+CONFIGURE_ARGS+=	--with-system-poppler
 CONFIGURE_ARGS+= \
 	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
 	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
@@ -78,6 +79,8 @@ CONFIGURE_ENV+=	kpse_cv_have_Carbon=no
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xetex ${DESTDIR}${PREFIX}/bin
