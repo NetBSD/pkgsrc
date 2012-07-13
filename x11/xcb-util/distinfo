@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/08/26 12:17:28 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/07/13 14:21:58 wiz Exp $
 
-SHA1 (xcb-util-0.3.6.tar.bz2) = 8585a421c077382937d181b921263fac2e448d31
-RMD160 (xcb-util-0.3.6.tar.bz2) = 853e53493c67d56a4ce368cc6b9512c247fc840f
-Size (xcb-util-0.3.6.tar.bz2) = 293408 bytes
+SHA1 (xcb-util-0.3.9.tar.bz2) = 02060d8e2e70838fc41cd3a27c7f2909090d8c20
+RMD160 (xcb-util-0.3.9.tar.bz2) = 949b2d8666914185b106c2d0bafb4c625cd450c6
+Size (xcb-util-0.3.9.tar.bz2) = 287855 bytes
