@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11357 2012/07/12 21:13:29 wiz Exp $
+$NetBSD: TODO,v 1.11358 2012/07/13 13:54:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o catdoc-0.94.3
 	o cc65-2.13.3
 	o cddbd-1.5.2
-	o cdialog-1.1.20120706
 	o cdif-1.19
 	o cdk-5.0.20120323
 	o cdlabelgen-4.2.0
@@ -533,6 +532,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
 	o doclifter-2.8
+	o doxygen-1.8.1.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2012.055
@@ -825,7 +825,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o libcares-1.8.0
 	o libcdio-0.83
 	o libchamplain08-0.12.1
-	o libdrm-2.6.37
+	o libexif-0.6.21
 	o libextractor-0.6.3
 	o libffi-3.0.11
 	o libflash-0.4.13
@@ -963,7 +963,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
 	o opencv-2.4.2
-	o opendkim-2.6.2
+	o opendkim-2.6.3
 	o opengrok-0.11.1
 	o openh323-1.19.1
 	o openldap-client-2.4.31
@@ -981,10 +981,15 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o otpCalc-0.97
 	o p0f-3.00b
 	o p5-App-cpanminus-1.5013 [pkg/46549]
+	o p5-GStreamer-0.17
+	o p5-GTop-0.18
 	o p5-Gtk2-1.223
 	o p5-PerlMagick-6.7.7.7
 	o p5-Search-Xapian-1.2.12
-	o p5-cairo-1.082
+	o p5-cairo-1.100
+	o p5-clutter-1.110
+	o p5-glib2-1.261
+	o p5-gtk2-1.244
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
@@ -1234,6 +1239,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o valgrind-3.7.0
 	o vbetool-1.1
 	o vera-1.17
+	o veusz-1.16
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.15
