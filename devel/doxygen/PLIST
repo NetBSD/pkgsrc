@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/07/03 11:31:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/07/13 07:23:42 mef Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
@@ -353,8 +353,10 @@ ${PLIST.latex}share/doc/doxygen/examples/docstring.py
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/annotated.html
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/bc_s.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/bdwn.png
-${PLIST.latex}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
-${PLIST.latex}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
+${PLIST.ci}${PLIST.latex}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class-members.html
+${PLIST.ci}${PLIST.latex}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class.html
+${PLIST.cs}${PLIST.latex}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
+${PLIST.cs}${PLIST.latex}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/classes.html
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/closed.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/docstring_8py.html
@@ -978,8 +980,10 @@ ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/annotated.html
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/bc_s.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/bdwn.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classes.html
-${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
-${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
+${PLIST.ci}${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class-members.html
+${PLIST.ci}${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class.html
+${PLIST.cs}${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
+${PLIST.cs}${PLIST.latex}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/closed.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/doxygen.css
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/doxygen.png
