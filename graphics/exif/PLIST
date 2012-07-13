@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2010/12/16 15:00:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/07/13 16:43:34 adam Exp $
 bin/exif
 man/man1/exif.1
+share/locale/cs/LC_MESSAGES/exif.mo
 share/locale/da/LC_MESSAGES/exif.mo
 share/locale/de/LC_MESSAGES/exif.mo
 share/locale/es/LC_MESSAGES/exif.mo
 share/locale/fi/LC_MESSAGES/exif.mo
 share/locale/fr/LC_MESSAGES/exif.mo
 share/locale/gl/LC_MESSAGES/exif.mo
+share/locale/hr/LC_MESSAGES/exif.mo
 share/locale/id/LC_MESSAGES/exif.mo
 share/locale/is/LC_MESSAGES/exif.mo
 share/locale/it/LC_MESSAGES/exif.mo
@@ -15,6 +17,7 @@ share/locale/nl/LC_MESSAGES/exif.mo
 share/locale/pl/LC_MESSAGES/exif.mo
 share/locale/ro/LC_MESSAGES/exif.mo
 share/locale/sk/LC_MESSAGES/exif.mo
+share/locale/sr/LC_MESSAGES/exif.mo
 share/locale/sv/LC_MESSAGES/exif.mo
 share/locale/vi/LC_MESSAGES/exif.mo
 share/locale/zh_CN/LC_MESSAGES/exif.mo
