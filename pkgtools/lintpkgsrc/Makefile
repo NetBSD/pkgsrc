@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/05/08 23:11:48 sbd Exp $
-#
+# $NetBSD: Makefile,v 1.7 2012/07/13 21:12:07 abs Exp $
 
-DISTNAME=	lintpkgsrc-4.83
+DISTNAME=	lintpkgsrc-4.84
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -17,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl:run
 
-FILESDIR=	${.CURDIR}/../../pkgtools/pkglint/files
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
@@ -35,7 +33,7 @@ SUBST_SED.lp+=	-e s\|@PREFIX@\|${PREFIX}\|g
 SUBST_SED.lp+=	-e s\|@MAKE@\|${MAKE:Q}\|g
 SUBST_SED.lp+=	-e s\|@PERL@\|${PERL5:Q}\|g
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
