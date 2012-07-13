@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.177 2012/06/15 09:54:41 jperkin Exp $
+# $NetBSD: bootstrap,v 1.178 2012/07/13 16:12:41 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -866,6 +866,9 @@ sunpro)
 	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
 	;;
 esac
+if [ -n "$GCCBASE" ]; then
+	echo "GCCBASE=		$GCCBASE" >> ${TARGET_MKCONF}
+fi
 if [ -n "$SUNWSPROBASE" ]; then
 	echo "SUNWSPROBASE=		$SUNWSPROBASE" >> ${TARGET_MKCONF}
 fi
