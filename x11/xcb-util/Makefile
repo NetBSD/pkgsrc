@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/02/28 14:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/13 14:21:58 wiz Exp $
 #
 
-DISTNAME=	xcb-util-0.3.6
+DISTNAME=	xcb-util-0.3.9
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,15 +16,10 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake gm4
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE+=	atom/xcb-atom.pc.in
-PKGCONFIG_OVERRIDE+=	aux/xcb-aux.pc.in
-PKGCONFIG_OVERRIDE+=	event/xcb-event.pc.in
-PKGCONFIG_OVERRIDE+=	icccm/xcb-icccm.pc.in
-PKGCONFIG_OVERRIDE+=	image/xcb-image.pc.in
-PKGCONFIG_OVERRIDE+=	keysyms/xcb-keysyms.pc.in
-PKGCONFIG_OVERRIDE+=	property/xcb-property.pc.in
-PKGCONFIG_OVERRIDE+=	renderutil/xcb-renderutil.pc.in
-PKGCONFIG_OVERRIDE+=	reply/xcb-reply.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-util.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-atom.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-event.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-aux.pc.in
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
