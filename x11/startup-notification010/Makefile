@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/02 11:31:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/13 14:22:59 wiz Exp $
 
 DISTNAME=		startup-notification-0.10
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		http://www.freedesktop.org/software/startup-notification/releases/
-PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freedesktop.org/wiki/Software/startup-notification
@@ -32,5 +32,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xcb-util036/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
