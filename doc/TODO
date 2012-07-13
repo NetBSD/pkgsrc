@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11361 2012/07/13 16:44:32 adam Exp $
+$NetBSD: TODO,v 1.11362 2012/07/13 18:17:03 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
-	o opencv-2.4.2
 	o opendkim-2.6.3
 	o opengrok-0.11.1
 	o openh323-1.19.1
