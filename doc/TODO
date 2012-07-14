@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11364 2012/07/14 17:10:19 wiz Exp $
+$NetBSD: TODO,v 1.11365 2012/07/14 20:49:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o pingus-0.7.4
 	o pioneers-14.1
 	o pircbot-1.4.6
-	o pixman-0.26.2
 	o pkg-config-0.26 [wip]
 	o pks-0.9.6
 	o planner-0.14.6
