@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2292 2012/07/14 22:29:06 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2293 2012/07/14 23:42:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3555,3 +3555,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed misc/jitterbug [dholland 2012-07-14]
 	Removed wm/obconf [dholland 2012-07-14]
 	Removed www/sope successor devel/SOPE [dholland 2012-07-14]
+	Updated sysutils/libpciaccess to 0.13.1 [wiz 2012-07-14]
