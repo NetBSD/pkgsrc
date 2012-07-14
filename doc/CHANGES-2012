@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2284 2012/07/13 18:48:21 kleink Exp $
+$NetBSD: CHANGES-2012,v 1.2285 2012/07/14 17:10:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/opencv to 2.4.2 [prlw1 2012-07-13]
 	Updated devel/jenkins to 1.447.2 [ryoon 2012-07-13]
 	Updated textproc/p5-Text-vCard to 2.11 [kleink 2012-07-13]
+	Updated x11/xkeyboard-config to 2.6 [wiz 2012-07-14]
