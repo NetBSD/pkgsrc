@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11362 2012/07/13 18:17:03 prlw1 Exp $
+$NetBSD: TODO,v 1.11363 2012/07/14 12:15:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o cairo-gobject-1.12.2
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.59
+	o calibre-0.8.60
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
@@ -960,7 +960,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
-	o opendkim-2.6.3
+	o opendkim-2.6.4
 	o opengrok-0.11.1
 	o openh323-1.19.1
 	o openldap-client-2.4.31
@@ -1064,8 +1064,9 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o py-pyutil-1.9.3 [pkg/46551]
 	o py-setuptools_trial-0.5.12 [pkg/46550]
 	o py-sybase-0.37
-	o py-urwid-1.0.1
+	o py-urwid-1.0.2
 	o qbrew-0.3.9
+	o qemu-1.1.1
 	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
 	o quilt-0.60
