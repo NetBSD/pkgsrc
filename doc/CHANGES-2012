@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2290 2012/07/14 21:24:02 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2291 2012/07/14 22:01:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3543,3 +3543,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/Symbola-ttf version 702 [wiz 2012-07-14]
 	Added fonts/TextFonts-ttf version 20111217 [wiz 2012-07-14]
 	Updated security/ocaml-ssl to 0.4.6 [wiz 2012-07-14]
+	Added textproc/py-empy version 3.3 [wiz 2012-07-14]
