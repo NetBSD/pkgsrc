@@ -1,14 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/07/14 21:23:49 wiz Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/ssl
 lib/ocaml/site-lib/ssl/META
-lib/ocaml/site-lib/ssl/dllssl_stubs.so
-lib/ocaml/site-lib/ssl/dllssl_threads_stubs.so
 lib/ocaml/site-lib/ssl/libssl_stubs.a
 lib/ocaml/site-lib/ssl/libssl_threads_stubs.a
+${PLIST.opt}lib/ocaml/site-lib/ssl/ssl.a
 lib/ocaml/site-lib/ssl/ssl.cma
 lib/ocaml/site-lib/ssl/ssl.cmi
+${PLIST.opt}lib/ocaml/site-lib/ssl/ssl.cmx
+${PLIST.opt}lib/ocaml/site-lib/ssl/ssl.cmxa
 lib/ocaml/site-lib/ssl/ssl.mli
+${PLIST.opt}lib/ocaml/site-lib/ssl/ssl_threads.a
 lib/ocaml/site-lib/ssl/ssl_threads.cma
 lib/ocaml/site-lib/ssl/ssl_threads.cmi
+${PLIST.opt}lib/ocaml/site-lib/ssl/ssl_threads.cmx
+${PLIST.opt}lib/ocaml/site-lib/ssl/ssl_threads.cmxa
 lib/ocaml/site-lib/ssl/ssl_threads.mli
+lib/ocaml/site-lib/ssl/dllssl_stubs.so
+lib/ocaml/site-lib/ssl/dllssl_threads_stubs.so
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/ssl
