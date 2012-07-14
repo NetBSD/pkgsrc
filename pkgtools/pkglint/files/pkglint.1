@@ -1,13 +1,13 @@
-.\"	$NetBSD: pkglint.1,v 1.45 2012/07/09 22:11:00 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.46 2012/07/14 20:32:37 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
-w.\" Thomas Klausner <rillig@NetBSD.org>, 2012.
+.\" Thomas Klausner <wiz@NetBSD.org>, 2012.
 .\"
-.Dd July 9, 2012
+.Dd July 14, 2012
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -171,6 +171,8 @@ use a variable during preprocessing
 use a variable at runtime
 .It set
 set a variable using :=, =, !=
+.It unknown
+permissions for this variable currently not known
 .El
 A
 .Sq \&?

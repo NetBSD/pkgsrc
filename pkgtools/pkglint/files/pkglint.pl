@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.840 2012/07/10 10:53:05 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.841 2012/07/14 20:32:37 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4742,6 +4742,16 @@ sub checkline_mk_shellcmd($$) {
 	checkline_mk_shelltext($line, $shellcmd);
 }
 
+sub expand_permission($) {
+    my ($perm) = @_;
+    my %fullperm = ( "a" => "append", "d" => "default", "p" => "preprocess", "s" => "set", "t" => "runtime", "?" => "unknown" );
+    return $fullperm{$perm};
+#    for my $element (split(/,/, $perm)) {
+#	my ($location, $permission) = split(/:/, $element);
+#	return "-- $location == $permission -- ";
+#    }
+}
+
 sub checkline_mk_vardef($$$) {
 	my ($line, $varname, $op) = @_;
 
@@ -4762,9 +4772,8 @@ sub checkline_mk_vardef($$$) {
 
 	my $perms = get_variable_perms($line, $varname);
 	my $needed = { "=" => "s", "!=" => "s", "?=" => "d", "+=" => "a", ":=" => "s" }->{$op};
-	my %full = ( "a" => "append", "d" => "default", "p" => "preprocess", "s" => "set", "t" => "runtime" );
 	if (index($perms, $needed) == -1) {
-		$line->log_warning("Permission [$full{$needed}] requested for ${varname}, but only [$full{$perms}] is allowed.");
+		$line->log_warning("Permission [" . expand_permission($needed) . "] requested for ${varname}, but only [" . expand_permission($perms) . "] is allowed.");
 		$line->explain_warning(
 "The available permissions are:",
 "\tappend\t\tappend something using +=",
