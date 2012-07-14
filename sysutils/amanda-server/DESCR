@@ -1,4 +1,6 @@
-This is a release of Amanda, the Advanced Maryland Automatic
-Network Disk Archiver.  Amanda is a backup system designed to
-archive many computers on a network to a single large-capacity
-tape drive.
+AMANDA, the Advanced Maryland Automatic Network Disk Archiver, is a
+backup system that allows the administrator of a LAN to set up a single
+master backup server to back up multiple hosts to a single large capacity
+tape or disk drive. Amanda uses native tools (such as GNUtar, dump) for
+backup and can back up a large number of workstations running multiple
+versions of Unix/Mac OS X/Linux/Windows.
