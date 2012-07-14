@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2010/02/01 22:44:23 snj Exp $
-
-SHA1 (obconf-2.0.3.orig/obconf-2.0.3.tar.gz) = 40c22a2b0e884016592558b9119afcafcac674ec
-RMD160 (obconf-2.0.3.orig/obconf-2.0.3.tar.gz) = 6d6d48c16e78bc8ac48382719e692505845c6286
-Size (obconf-2.0.3.orig/obconf-2.0.3.tar.gz) = 267589 bytes
-SHA1 (patch-aa) = 0de087b762e8f545fa361f480a0e2e30e0ac40ee
-SHA1 (patch-ab) = cf618bda78bbf1a926a734250092f5bfa75cd178
