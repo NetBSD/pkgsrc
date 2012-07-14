@@ -1,4 +1,7 @@
-$NetBSD: patch-af,v 1.11 2012/07/14 20:49:30 wiz Exp $
+$NetBSD: patch-af,v 1.12 2012/07/14 20:57:59 wiz Exp $
+
+Use correct pthread options on NetBSD and MirBSD.
+https://bugs.freedesktop.org/show_bug.cgi?id=52101
 
 --- pixman/pixman-compiler.h.orig	2012-06-29 18:25:17.000000000 +0000
 +++ pixman/pixman-compiler.h
