@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2289 2012/07/14 21:18:57 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2290 2012/07/14 21:24:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3541,3 +3541,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkglint to 4.117 [wiz 2012-07-14]
 	Updated x11/pixman to 0.26.2 [wiz 2012-07-14]
 	Added fonts/Symbola-ttf version 702 [wiz 2012-07-14]
+	Added fonts/TextFonts-ttf version 20111217 [wiz 2012-07-14]
+	Updated security/ocaml-ssl to 0.4.6 [wiz 2012-07-14]
