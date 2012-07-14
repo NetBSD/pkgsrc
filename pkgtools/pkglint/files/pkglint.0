@@ -1,4 +1,4 @@
-PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
+PKGLINT(1)                  General Commands Manual                 PKGLINT(1)
 
 NNAAMMEE
      ppkkgglliinntt -- static analyzer for pkgsrc packages
@@ -9,6 +9,7 @@ SSYYNNOOPPSSIISS
 DDEESSCCRRIIPPTTIIOONN
      ppkkgglliinntt attempts to detect features of the named pkgsrc packages that are
      likely to be bugs, or that are simply deprecated.
+
 
    OOppttiioonnss
      --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
@@ -31,9 +32,9 @@ DDEESSCCRRIIPPTTIIOONN
      --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
                          warnings, see below.
 
-     --ee|----eexxppllaaiinn        Print further explanations for diagnostics.  Some-
-                         times the reasons for diagnostics are not obvious and
-                         need further explanation.
+     --ee|----eexxppllaaiinn        Print further explanations for diagnostics.
+                         Sometimes the reasons for diagnostics are not obvious
+                         and need further explanation.
 
      --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
                          Use a format for the diagnostics that is understood
@@ -136,13 +137,27 @@ DDEESSCCRRIIPPTTIIOONN
                          order.
 
      [[nnoo--]]ppeerrmm           Warn if a variable is used or defined outside its
-                         specified scope.
+                         specified scope.  The available permissions are:
+                         append
+                              append something using +=
+                         default
+                              set a default value using ?=
+                         preprocess
+                              use a variable during preprocessing
+                         runtime
+                              use a variable at runtime
+                         set  set a variable using :=, =, !=
+                         unknown
+                              permissions for this variable currently not
+                              known
+                         A `?' means that it is not yet clear which
+                         permissions are allowed and which aren't.
 
      [[nnoo--]]pplliisstt--ddeepprr     Warn if deprecated pathnames are used in _P_L_I_S_T files.
                          This warning is disabled by default.
 
-     [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted alpha-
-                         betically.  This warning is disabled by default.
+     [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted
+                         alphabetically.  This warning is disabled by default.
 
      [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
                          in shell programs and shell variables themselves.
@@ -159,11 +174,11 @@ DDEESSCCRRIIPPTTIIOONN
                          ordered in the way it is described the pkgsrc guide.
 
    OOtthheerr aarrgguummeennttss
-           _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
-                               ted, the current directory is checked.
+           _d_i_r _._._.             The pkgsrc directories to be checked.  If
+                               omitted, the current directory is checked.
 
 FFIILLEESS
-     pkgsrc/mk/*  Files from the pkgsrc infrastructure.
+     _p_k_g_s_r_c_/_m_k_/_*  Files from the pkgsrc infrastructure.
 
 EEXXAAMMPPLLEESS
      ppkkgglliinntt --CCnnoonnee,,ppaattcchheess ..
@@ -195,4 +210,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 3.0                       July 27, 2006                      NetBSD 3.0
+NetBSD 6.99.8                    July 14, 2012                   NetBSD 6.99.8
