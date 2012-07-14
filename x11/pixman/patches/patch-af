@@ -1,17 +1,8 @@
-$NetBSD: patch-af,v 1.10 2011/12/31 15:37:55 bsiegert Exp $
+$NetBSD: patch-af,v 1.11 2012/07/14 20:49:30 wiz Exp $
 
---- pixman/pixman-compiler.h.orig	Mon Jul  4 20:22:16 2011
+--- pixman/pixman-compiler.h.orig	2012-06-29 18:25:17.000000000 +0000
 +++ pixman/pixman-compiler.h
-@@ -82,7 +82,7 @@
- #   define PIXMAN_GET_THREAD_LOCAL(name)				\
-     (&name)
- 
--#elif defined(TOOLCHAIN_SUPPORTS__THREAD)
-+#elif defined(TOOLCHAIN_SUPPORTS__THREAD) && !defined(__NetBSD__)
- 
- #   define PIXMAN_DEFINE_THREAD_LOCAL(type, name)			\
-     static __thread type name
-@@ -149,7 +149,7 @@
+@@ -164,7 +164,7 @@
  #   define PIXMAN_GET_THREAD_LOCAL(name)				\
      (&name)
  
