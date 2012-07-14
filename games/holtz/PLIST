@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/14 19:50:27 wiz Exp $
+bin/holtz
+bin/relax
+share/holtz/help/help_en.zip
+share/holtz/skins/dvonn50.zip
+share/holtz/skins/dvonn60.zip
+share/holtz/skins/dvonn70.zip
+share/holtz/skins/hex100.zip
+share/holtz/skins/hex50.zip
+share/holtz/skins/hex60.zip
+share/holtz/skins/hex70.zip
+share/holtz/skins/purist50.zip
+share/holtz/skins/relax60.zip
+share/holtz/skins/relax60_rotated.zip
+share/holtz/skins/zertz60.zip
+share/holtz/skins/zertz70.zip
+share/holtz/skins/zertz80.zip
+share/holtz/sounds/beep.wav
+share/locale/holtz-hotkey.mo
+share/locale/holtz.mo
