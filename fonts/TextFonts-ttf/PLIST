@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/14 21:18:26 wiz Exp $
+lib/X11/fonts/TTF/Alexander.ttf
+lib/X11/fonts/TTF/Alfios_B.ttf
+lib/X11/fonts/TTF/Alfios_I.ttf
+lib/X11/fonts/TTF/Alfios_J.ttf
+lib/X11/fonts/TTF/Alfios_R.ttf
+lib/X11/fonts/TTF/Anaktoria.ttf
+lib/X11/fonts/TTF/Aroania_B.ttf
+lib/X11/fonts/TTF/Aroania_R.ttf
+lib/X11/fonts/TTF/Atavyros.ttf
+lib/X11/fonts/TTF/Avdira_B.ttf
+lib/X11/fonts/TTF/Avdira_I.ttf
+lib/X11/fonts/TTF/Avdira_J.ttf
+lib/X11/fonts/TTF/Avdira_R.ttf
+share/doc/TextFonts-ttf/TextFonts.pdf
