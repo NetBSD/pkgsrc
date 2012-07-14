@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2012/06/02 02:14:39 taca Exp $
+# $NetBSD: hacks.mk,v 1.4 2012/07/14 03:35:48 tsutsui Exp $
 
 .if !defined(RUBY193_BASE_HACKS_MK)
 RUBY19_BASE_HACKS_MK=	defined
@@ -15,6 +15,13 @@ RUBY19_BASE_HACKS_MK=	defined
 .  if !empty(CC_VERSION:Mgcc-3.3.*)
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
+.  endif
+### ruby193 binary built on NetBSD/sparc64 with gcc 4.5.1 and the default -O2
+### dumps core during generating RDocs.
+### Using -O1 works around.
+.  if !empty(CC_VERSION:Mgcc-4.5.*)
+PKG_HACKS+=		optimisation
+BUILDLINK_TRANSFORM+=	rename:-O2:-O1
 .  endif
 .endif
 
