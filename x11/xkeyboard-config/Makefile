@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:45:16 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/07/14 17:10:00 wiz Exp $
 #
 
-DISTNAME=		xkeyboard-config-2.0
-PKGREVISION=		1
+DISTNAME=		xkeyboard-config-2.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +20,7 @@ MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 PKGCONFIG_OVERRIDE+=	xkeyboard-config.pc.in
 
 BUILD_DEFS+=		VARBASE
@@ -29,9 +28,7 @@ BUILD_DEFS+=		XKBCOMPDIR
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${XKBBASE:Q}
-### In pkgsrc, we do this with INSTALL/DEINSTALL scripts.
-###
-CONFIGURE_ARGS+=	--disable-xkbcomp-symlink
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 ###
 REPLACE_SH=		rules/merge.sh
 ###
@@ -60,4 +57,8 @@ OWN_DIRS+=		${XKBCOMPDIR}
 BUILDLINK_DEPMETHOD.gettext=	build	# for the configure only
 .include "../../devel/gettext-lib/buildlink3.mk"
 
+BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.4.3
+.include "../../x11/libX11/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xproto+=	xproto>=7.0.20
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
