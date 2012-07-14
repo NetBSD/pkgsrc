@@ -1,9 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2010/02/14 19:16:25 joerg Exp $
+$NetBSD: patch-src_Makefile,v 1.1 2012/07/14 21:23:49 wiz Exp $
 
---- src/Makefile.in.orig	2010-01-30 19:40:05.000000000 +0000
+Fix ocamlfind installation procedure w/r/t DESTDIR
+--- src/Makefile.in.orig	2011-03-01 07:57:16.000000000 +0000
 +++ src/Makefile.in
-@@ -50,7 +50,8 @@ byte: byte-code-library
- opt: native-code-library
+@@ -53,7 +53,8 @@ opt: native-code-library
+ native-code-library: byte-code-library
  
  install:
 -	$(OCAMLFIND) install $(OCAMLFIND_INSTFLAGS) $(RESULT) META $(LIBINSTALL_FILES)

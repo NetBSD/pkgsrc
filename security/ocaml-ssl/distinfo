@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/02/14 19:16:25 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/07/14 21:23:49 wiz Exp $
 
-SHA1 (ocaml-ssl-0.4.2.tar.gz) = ec6362b681aa5498143ec0c4ddd77fbbe745a2aa
-RMD160 (ocaml-ssl-0.4.2.tar.gz) = ba5b4106d19e0b3d50e9a19d705ef18a5b20948c
-Size (ocaml-ssl-0.4.2.tar.gz) = 109090 bytes
-SHA1 (patch-aa) = 5a1b4b6282b083f0d86bfa0448cef75602c64785
+SHA1 (ocaml-ssl-0.4.6.tar.gz) = e42e9518a982ef559f249a22e1fe37cddc45360f
+RMD160 (ocaml-ssl-0.4.6.tar.gz) = 9d2fe7275debb969693d6e679230ac05a1bbf3d6
+Size (ocaml-ssl-0.4.6.tar.gz) = 118798 bytes
+SHA1 (patch-src_Makefile) = fa5e74f567aff37d8e25fd93ef2db7fdd5b0b17a
