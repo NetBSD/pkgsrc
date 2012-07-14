@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2012/06/05 18:09:21 ryoon Exp $
+$NetBSD: distinfo,v 1.72 2012/07/14 21:19:48 ryoon Exp $
 
 SHA1 (firefox-13.0.source.tar.bz2) = f90608874a54883b9fbb90b8d6dd3dc75a305572
 RMD160 (firefox-13.0.source.tar.bz2) = 8dbb9ef17fb5a47f3ae53ae9626e7668116111c7
@@ -58,6 +58,7 @@ SHA1 (patch-ipc_chromium_src_chrome_common_transport__dib.h) = e61c724196bd2d2c8
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 0e22486a1df8f5a726f675cd6055f8a455d16d9d
 SHA1 (patch-js_src_config_rules.mk) = 7840a67f38d9568c5c6b94a0543b87e694e47ff7
 SHA1 (patch-js_src_jscpucfg.h) = 79829d8e9fa2c3dcba07d1d90a6cf1f635791d97
+SHA1 (patch-js_src_jsgc.cpp) = 3ee765a5bdbc50f6d3e73d8c5a4ad202cb1e9453
 SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = aec956a2cb35ce4dffb87fded52b8436781dab85
 SHA1 (patch-js_src_yarr_pcre_pcre.h) = cf86b885ac222854a62c6ab98dad338bd76cd7d1
 SHA1 (patch-js_xpconnect_src_Makefile.in) = 2e72f3c67257d599737e1607d35979d7c1959021
