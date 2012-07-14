@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.630 2012/07/06 12:31:55 sno Exp $
+# $NetBSD: Makefile,v 1.631 2012/07/14 21:59:50 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -509,6 +509,7 @@ SUBDIR+=	py-creole
 SUBDIR+=	py-cssutils
 SUBDIR+=	py-docutils
 SUBDIR+=	py-elementtree
+SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
 SUBDIR+=	py-expat
 SUBDIR+=	py-feedparser
