@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:30 joerg Exp $
-bin/arx
-man/man1/arx.1
-share/doc/arx/ArX.html
-share/doc/arx/ArX.pdf
-share/doc/arx/ArX001.png
-share/doc/arx/ArX002.png
-share/doc/arx/ArX003.png
-share/doc/arx/ArX004.png
