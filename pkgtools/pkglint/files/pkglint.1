@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.46 2012/07/14 20:32:37 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.47 2012/07/14 20:33:27 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -9,6 +9,7 @@
 .\"
 .Dd July 14, 2012
 .Dt PKGLINT 1
+.Os
 .Sh NAME
 .Nm pkglint
 .Nd static analyzer for pkgsrc packages
@@ -74,7 +75,6 @@ line.
 For all diagnostics having file and line number information, show the
 source code along with the diagnostics.
 .El
-.Pp
 .\" =======================================================================
 .Ss Checks
 .Bl -tag -width 18n
@@ -105,7 +105,6 @@ Check Makefile fragments besides buildlink3.
 .It Cm [no-]patches
 Check the pkgsrc specific patch files.
 .El
-.Pp
 .\" =======================================================================
 .Ss Debugging Options
 .Bl -tag -width 18n
@@ -139,7 +138,6 @@ Additional information about the variable types.
 .It Cm [no-]varuse
 Information about the contexts in which variables are used.
 .El
-.Pp
 .\" =======================================================================
 .Ss Warnings
 .Bl -tag -width 18n
@@ -202,7 +200,6 @@ Warn if the variables in a package
 .Pa Makefile Ns
 s are not ordered in the way it is described the pkgsrc guide.
 .El
-.Pp
 .\" =======================================================================
 .Ss Other arguments
 .Bl -tag -width 18n -offset indent
