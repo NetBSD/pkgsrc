@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
+$NetBSD: patch-ac,v 1.11 2012/07/14 23:42:13 wiz Exp $
 
---- src/netbsd_pci.c.orig	2009-02-17 00:10:20.000000000 +0000
+Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
+
+--- src/netbsd_pci.c.orig	2012-04-09 17:02:57.000000000 +0000
 +++ src/netbsd_pci.c
 @@ -1,6 +1,7 @@
  /*
@@ -10,7 +12,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
   *
   * Permission to use, copy, modify, and distribute this software for any
   * purpose with or without fee is hereby granted, provided that the above
-@@ -20,12 +21,26 @@
+@@ -20,8 +21,13 @@
  #include <sys/mman.h>
  #include <sys/types.h>
  
@@ -19,30 +21,17 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +#ifdef HAVE_MTRR
  #include <machine/sysarch.h>
  #include <machine/mtrr.h>
-+#ifdef _X86_SYSARCH_L
-+#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)((mr), (num))
-+#else
-+#ifdef __i386__
-+#define netbsd_set_mtrr(mr, num)	i386_set_mtrr((mr), (num))
-+#endif
-+#ifdef __amd64__
-+#define netbsd_set_mtrr(mr, num)	x86_64_set_mtrr((mr), (num))
-+#endif
-+#endif
++#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)(mr, num)
 +#endif
  
-+#include <dev/pci/pcidevs.h>
  #include <dev/pci/pciio.h>
  #include <dev/pci/pcireg.h>
--#include <dev/pci/pcidevs.h>
- 
- #include <errno.h>
- #include <fcntl.h>
-@@ -35,126 +50,162 @@
+@@ -35,126 +41,152 @@
  #include <unistd.h>
  
  
 +#include <pci.h>
++#include <dev/wscons/wsconsio.h>
 +
  #include "pciaccess.h"
  #include "pciaccess_private.h"
@@ -158,37 +147,25 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +	struct mtrr m;
 +	int n = 1;
 +#endif
-+	int prot, fd, ret = 0;
++	int prot, ret = 0;
  
--	if ((fd = open("/dev/mem", O_RDWR)) == -1)
+-	if ((fd = open("/dev/mem", O_RDWR | O_CLOEXEC)) == -1)
 -		return errno;
 +	prot = PROT_READ;
  
  	if (map->flags & PCI_DEV_MAP_FLAG_WRITABLE)
  		prot |= PROT_WRITE;
-+	map->memory = mmap(NULL, (size_t)map->size, prot, MAP_SHARED,
-+	    buses[dev->domain].fd, (off_t)map->base);
-+	if (map->memory == MAP_FAILED) {
-+		fd = open("/dev/mem", O_RDWR);
-+		if (fd == -1)
-+			return errno;
-+		map->memory = mmap(NULL, map->size, prot, MAP_SHARED, fd,
-+		    (off_t)map->base);
-+		if (map->memory == MAP_FAILED) {
-+			ret = errno;
-+			close(fd);
-+			return ret;
-+		}
-+		close(fd);
-+        }
- 
+-
 -	map->memory = mmap(NULL, map->size, prot, MAP_SHARED,
 -	    fd, map->base);
--	if (map->memory == MAP_FAILED)
--		return errno;
++	map->memory = mmap(NULL, (size_t)map->size, prot, MAP_SHARED,
++	    buses[dev->domain].fd, (off_t)map->base);
+ 	if (map->memory == MAP_FAILED)
+ 		return errno;
+ 
 +#ifdef HAVE_MTRR
 +	memset(&m, 0, sizeof(m));
- 
++
  	/* No need to set an MTRR if it's the default mode. */
  	if ((map->flags & PCI_DEV_MAP_FLAG_CACHABLE) ||
  	    (map->flags & PCI_DEV_MAP_FLAG_WRITE_COMBINE)) {
@@ -265,7 +242,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  
  	return pci_device_generic_unmap_range(dev, map);
  }
-@@ -163,25 +214,23 @@ static int
+@@ -163,25 +195,23 @@ static int
  pci_device_netbsd_read(struct pci_device *dev, void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_read)
  {
@@ -300,7 +277,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  
  		offset += toread;
  		data = (char *)data + toread;
-@@ -196,25 +245,23 @@ static int
+@@ -196,25 +226,23 @@ static int
  pci_device_netbsd_write(struct pci_device *dev, const void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_written)
  {
@@ -321,7 +298,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +		reg = (u_int)offset;
 +		memcpy(&val, data, 4);
  
--		if (ioctl(pcifd, PCI_IOC_BDF_CFGWRITE, &io) == -1) 
+-		if (ioctl(pcifd, PCI_IOC_BDF_CFGWRITE, &io) == -1)
 +		if ((pcibus_conf_write(buses[dev->domain].fd,
 +		    (unsigned int)dev->bus, (unsigned int)dev->dev,
 +		    (unsigned int)dev->func, reg, val)) == -1)
@@ -333,7 +310,47 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  		size -= 4;
  		*bytes_written += 4;
  	}
-@@ -225,7 +272,11 @@ pci_device_netbsd_write(struct pci_devic
+@@ -222,10 +250,51 @@ pci_device_netbsd_write(struct pci_devic
+ 	return 0;
+ }
+ 
++static int
++pci_device_netbsd_boot_vga(struct pci_device *dev)
++{
++	int ret;
++	struct wsdisplayio_bus_id busid;
++	int fd;
++
++	fd = open("/dev/ttyE0", O_RDONLY);
++	if (fd == -1) {
++		fprintf(stderr, "failed to open /dev/ttyE0: %s\n",
++		    strerror(errno));
++		return 0;
++	}
++
++	ret = ioctl(fd, WSDISPLAYIO_GET_BUSID, &busid);
++	close(fd);
++	if (ret == -1) {
++		fprintf(stderr, "ioctl WSDISPLAYIO_GET_BUSID failed: %s\n",
++		    strerror(errno));
++		return 0;
++	}
++
++	if (busid.bus_type != WSDISPLAYIO_BUS_PCI)
++		return 0;
++
++	if (busid.ubus.pci.domain != dev->domain)
++		return 0;
++	if (busid.ubus.pci.bus != dev->bus)
++		return 0;
++	if (busid.ubus.pci.device != dev->dev)
++		return 0;
++	if (busid.ubus.pci.function != dev->func)
++		return 0;
++
++	return 1;
++}
++
  static void
  pci_system_netbsd_destroy(void)
  {
@@ -346,7 +363,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  	free(pci_sys);
  	pci_sys = NULL;
  }
-@@ -233,17 +284,34 @@ pci_system_netbsd_destroy(void)
+@@ -233,17 +302,34 @@ pci_system_netbsd_destroy(void)
  static int
  pci_device_netbsd_probe(struct pci_device *device)
  {
@@ -384,7 +401,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  	if (err)
  		return err;
  
-@@ -254,16 +322,16 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -254,16 +340,16 @@ pci_device_netbsd_probe(struct pci_devic
  	region = device->regions;
  	for (bar = PCI_MAPREG_START; bar < PCI_MAPREG_END;
  	     bar += sizeof(uint32_t), region++) {
@@ -405,7 +422,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  
  		if (PCI_MAPREG_TYPE(reg) == PCI_MAPREG_TYPE_IO) {
  			region->is_IO = 1;
-@@ -286,66 +354,188 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -286,66 +372,185 @@ pci_device_netbsd_probe(struct pci_devic
  
  				bar += sizeof(uint32_t);
  
@@ -473,7 +490,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +    pciaddr_t rom_base;
 +    size_t rom_size;
 +    uint32_t bios_val, command_val;
-+    int pci_rom, memfd;
++    int pci_rom;
 +
 +    if (((priv->base.device_class >> 16) & 0xff) != PCI_CLASS_DISPLAY ||
 +	((priv->base.device_class >> 8) & 0xff) != PCI_SUBCLASS_DISPLAY_VGA)
@@ -519,23 +536,19 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +	}
 +    }
 +
-+    fprintf(stderr, "Using rom_base = 0x%lx (pci_rom=%d)\n", (long)rom_base,
-+	pci_rom);
-+    memfd = open("/dev/mem", O_RDONLY);
-+    if (memfd == -1)
-+	return errno;
++    fprintf(stderr, "Using rom_base = 0x%lx 0x%lx (pci_rom=%d)\n", 
++        (long)rom_base, (long)rom_size, pci_rom);
 +
-+    bios = mmap(NULL, rom_size, PROT_READ, MAP_SHARED, memfd, (off_t)rom_base);
++    bios = mmap(NULL, rom_size, PROT_READ, MAP_SHARED, buses[dev->domain].fd, 
++        (off_t)rom_base);
 +    if (bios == MAP_FAILED) {
 +	int serrno = errno;
-+	close(memfd);
 +	return serrno;
 +    }
 +
 +    memcpy(buffer, bios, rom_size);
 +
 +    munmap(bios, rom_size);
-+    close(memfd);
 +
 +    if (pci_rom) {
 +	if ((command_val & PCI_COMMAND_MEM_ENABLE) == 0) {
@@ -575,7 +588,8 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +	.unmap_range = pci_device_netbsd_unmap_range,
 +	.read = pci_device_netbsd_read,
 +	.write = pci_device_netbsd_write,
-+	.fill_capabilities = pci_fill_capabilities_generic
++	.fill_capabilities = pci_fill_capabilities_generic,
++	.boot_vga = pci_device_netbsd_boot_vga,
  };
  
  int
@@ -586,7 +600,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
 +	int bus, dev, func, ndevs, nfuncs, domain, pcifd;
  	uint32_t reg;
 -
--	pcifd = open("/dev/pci0", O_RDWR);
+-	pcifd = open("/dev/pci0", O_RDWR | O_CLOEXEC);
 -	if (pcifd == -1)
 -		return ENXIO;
 +	char netbsd_devname[32];
@@ -622,7 +636,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  				    &reg) != 0)
  					continue;
  				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
-@@ -355,37 +545,43 @@ pci_system_netbsd_create(void)
+@@ -355,37 +560,43 @@ pci_system_netbsd_create(void)
  				ndevs++;
  			}
  		}
@@ -675,7 +689,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/09 15:26:16 taca Exp $
  					continue;
  
  				device->base.device_class =
-@@ -393,8 +589,8 @@ pci_system_netbsd_create(void)
+@@ -393,8 +604,8 @@ pci_system_netbsd_create(void)
  				    PCI_SUBCLASS(reg) << 8;
  				device->base.revision = PCI_REVISION(reg);
  
