@@ -1,0 +1,13 @@
+$NetBSD: patch-ja,v 1.4 2012/07/15 14:30:36 alnsn Exp $
+Add missing #include <cstddef> for ptrdiff_t.
+
+--- include/qmap.h.orig	2007-02-02 14:01:05.000000000 +0000
++++ include/qmap.h
+@@ -47,6 +47,7 @@
+ #endif // QT_H
+ 
+ #ifndef QT_NO_STL
++#include <cstddef>
+ #include <iterator>
+ #include <map>
+ #endif

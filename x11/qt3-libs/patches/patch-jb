@@ -1,0 +1,13 @@
+$NetBSD: patch-jb,v 1.1 2012/07/15 14:30:36 alnsn Exp $
+Add missing #include <cstddef> for ptrdiff_t.
+
+--- include/qvaluelist.h.orig	2007-02-02 14:01:04.000000000 +0000
++++ include/qvaluelist.h
+@@ -45,6 +45,7 @@
+ #endif // QT_H
+ 
+ #ifndef QT_NO_STL
++#include <cstddef>
+ #include <iterator>
+ #include <list>
+ #endif
