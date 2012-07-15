@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/07/03 18:20:51 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2012/07/15 14:12:43 marino Exp $
 #
 
 DISTNAME=		audacious-1.5.1
@@ -38,7 +38,7 @@ LIBS+=  -lexecinfo
 .endif
 
 LIBS.SunOS+=		-lm -lX11
-LDFLAGS.DragonFly=	-lm -lX11 -lgmodule-2.0
+LDFLAGS.DragonFly=	-lm -lX11 -lICE -lgmodule-2.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
