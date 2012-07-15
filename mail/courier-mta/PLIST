@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/06/09 11:45:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/07/15 10:02:14 marino Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -212,6 +212,7 @@ share/doc/courier/status.html
 share/doc/courier/structures.html
 share/doc/courier/style.css
 share/doc/courier/submit.html
+share/doc/courier/svn.html
 share/doc/courier/testmxlookup.html
 share/doc/courier/webmlmd.html
 share/examples/courier/aliases/system
