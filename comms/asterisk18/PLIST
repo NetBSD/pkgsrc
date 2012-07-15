@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/06/05 00:15:34 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/07/15 09:00:00 marino Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -224,6 +224,7 @@ lib/asterisk/modules/chan_iax2.so
 ${PLIST.jabber}lib/asterisk/modules/chan_jingle.so
 lib/asterisk/modules/chan_local.so
 lib/asterisk/modules/chan_multicast_rtp.so
+${PLIST.mgcp}lib/asterisk/modules/chan_mgcp.so
 lib/asterisk/modules/chan_oss.so
 lib/asterisk/modules/chan_sip.so
 lib/asterisk/modules/chan_skinny.so
