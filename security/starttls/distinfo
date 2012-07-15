@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/18 16:09:12 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/07/15 11:12:21 cheusov Exp $
 
 SHA1 (starttls-0.10.tar.gz) = bf2074d047474ef33f5da9924f6fd52a119dc578
 RMD160 (starttls-0.10.tar.gz) = ad9c3bc690dd1bf11f4f173edf05b2f2eaff1275
 Size (starttls-0.10.tar.gz) = 67295 bytes
+SHA1 (patch-starttls.c) = 205d45e4f4d46c15f0ace549cfd962209cc2a81f
