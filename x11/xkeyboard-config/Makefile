@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/07/14 17:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/07/15 02:49:43 dholland Exp $
 #
 
 DISTNAME=		xkeyboard-config-2.6
@@ -29,6 +29,7 @@ BUILD_DEFS+=		XKBCOMPDIR
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${XKBBASE:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+CONFIGURE_ARGS+=	--without-xsltproc
 ###
 REPLACE_SH=		rules/merge.sh
 ###
