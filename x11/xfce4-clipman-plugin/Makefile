@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/03/03 00:12:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/07/15 08:23:00 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.8.0
 
 DISTNAME=	xfce4-clipman-plugin-${XFCE4_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-clipman-plugin/
 COMMENT=	Xfce clipboard plugin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/06/14 07:44:07 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/07/15 08:22:52 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 
 PKGNAME=	${DISTNAME:S/totem/totem-browser-plugin/}
-PKGREVISION=	15
+PKGREVISION=	16
 
 # override Makefile.common
 PLIST_SRC=      ${.CURDIR}/PLIST
