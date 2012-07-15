@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.11 2012/07/14 23:42:13 wiz Exp $
+$NetBSD: patch-ac,v 1.12 2012/07/15 08:12:42 wiz Exp $
 
 Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
+Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
 
 --- src/netbsd_pci.c.orig	2012-04-09 17:02:57.000000000 +0000
 +++ src/netbsd_pci.c
@@ -310,10 +311,11 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
  		size -= 4;
  		*bytes_written += 4;
  	}
-@@ -222,10 +250,51 @@ pci_device_netbsd_write(struct pci_devic
+@@ -222,10 +250,53 @@ pci_device_netbsd_write(struct pci_devic
  	return 0;
  }
  
++#if defined(WSDISPLAYIO_GET_BUSID)
 +static int
 +pci_device_netbsd_boot_vga(struct pci_device *dev)
 +{
@@ -350,6 +352,7 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
 +
 +	return 1;
 +}
++#endif
 +
  static void
  pci_system_netbsd_destroy(void)
@@ -363,7 +366,7 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
  	free(pci_sys);
  	pci_sys = NULL;
  }
-@@ -233,17 +302,34 @@ pci_system_netbsd_destroy(void)
+@@ -233,17 +304,34 @@ pci_system_netbsd_destroy(void)
  static int
  pci_device_netbsd_probe(struct pci_device *device)
  {
@@ -401,7 +404,7 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
  	if (err)
  		return err;
  
-@@ -254,16 +340,16 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -254,16 +342,16 @@ pci_device_netbsd_probe(struct pci_devic
  	region = device->regions;
  	for (bar = PCI_MAPREG_START; bar < PCI_MAPREG_END;
  	     bar += sizeof(uint32_t), region++) {
@@ -422,7 +425,7 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
  
  		if (PCI_MAPREG_TYPE(reg) == PCI_MAPREG_TYPE_IO) {
  			region->is_IO = 1;
-@@ -286,66 +372,185 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -286,66 +374,189 @@ pci_device_netbsd_probe(struct pci_devic
  
  				bar += sizeof(uint32_t);
  
@@ -589,7 +592,11 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
 +	.read = pci_device_netbsd_read,
 +	.write = pci_device_netbsd_write,
 +	.fill_capabilities = pci_fill_capabilities_generic,
++#if defined(WSDISPLAYIO_GET_BUSID)
 +	.boot_vga = pci_device_netbsd_boot_vga,
++#else
++	.boot_vga = NULL
++#endif
  };
  
  int
@@ -636,7 +643,7 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
  				    &reg) != 0)
  					continue;
  				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
-@@ -355,37 +560,43 @@ pci_system_netbsd_create(void)
+@@ -355,37 +566,43 @@ pci_system_netbsd_create(void)
  				ndevs++;
  			}
  		}
@@ -689,7 +696,7 @@ Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
  					continue;
  
  				device->base.device_class =
-@@ -393,8 +604,8 @@ pci_system_netbsd_create(void)
+@@ -393,8 +610,8 @@ pci_system_netbsd_create(void)
  				    PCI_SUBCLASS(reg) << 8;
  				device->base.revision = PCI_REVISION(reg);
  
