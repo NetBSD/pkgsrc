@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/04 10:10:01 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/15 00:28:09 marino Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	gdbus-codegen utility
 
 NOT_FOR_PLATFORM=	HPUX-*-* OSF1-*-*
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 
 BUILD_DIRS=		gio/gdbus-2.0/codegen
 INSTALL_DIRS=		${BUILD_DIRS}
