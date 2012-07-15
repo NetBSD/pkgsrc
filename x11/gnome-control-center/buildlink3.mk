@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2012/06/14 07:43:22 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2012/07/15 08:22:59 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-control-center
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-control-center
 GNOME_CONTROL_CENTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-control-center+=	gnome-control-center>=2.20.0.1
-BUILDLINK_ABI_DEPENDS.gnome-control-center+=	gnome-control-center>=2.32.1nb12
+BUILDLINK_ABI_DEPENDS.gnome-control-center+=	gnome-control-center>=2.32.1nb13
 BUILDLINK_PKGSRCDIR.gnome-control-center?=	../../x11/gnome-control-center
 
 .include "../../sysutils/gnome-menus/buildlink3.mk"
