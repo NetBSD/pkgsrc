@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/09 09:39:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/15 09:45:25 marino Exp $
 #
 
 DISTNAME=	dos2unix-6.0
@@ -16,7 +16,7 @@ CONFLICTS=	unix2dos-[0-9]*
 
 USE_TOOLS+=	gmake msgfmt xgettext perl
 
-BUILD_MAKE_FLAGS+=	LDFLAGS_EXTRA+=-lintl
+BUILD_MAKE_FLAGS+=	LDFLAGS_EXTRA+="${COMPILER_RPATH_FLAG}${PREFIX}/lib -lintl"
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
