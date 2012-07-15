@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.27 2012/05/06 09:01:10 tron Exp $
+@comment $NetBSD: PLIST,v 1.28 2012/07/15 13:02:32 tron Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
 share/doc/phpmyadmin/LICENSE
 share/doc/phpmyadmin/README
-share/doc/phpmyadmin/RELEASE-DATE-3.5.1
+share/doc/phpmyadmin/RELEASE-DATE-${DIST_VERSION}
 share/examples/phpmyadmin/apache.conf
 share/examples/phpmyadmin/config.inc.php
 share/phpmyadmin/Documentation.html
@@ -161,7 +161,7 @@ share/phpmyadmin/js/tbl_gis_visualization.js
 share/phpmyadmin/js/tbl_relation.js
 share/phpmyadmin/js/tbl_select.js
 share/phpmyadmin/js/tbl_structure.js
-share/phpmyadmin/js/tbl_zoom_plot.js
+share/phpmyadmin/js/tbl_zoom_plot_jqplot.js
 share/phpmyadmin/js/update-location.js
 share/phpmyadmin/libraries/Advisor.class.php
 share/phpmyadmin/libraries/Config.class.php
