@@ -1,16 +1,44 @@
-$NetBSD: patch-ac,v 1.4 2011/03/11 20:27:42 gdt Exp $
+$NetBSD: patch-ac,v 1.5 2012/07/15 17:39:17 marino Exp $
 
 Added experimental code to support mounting on NetBSD >= 4.99.24. The
 magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
 
 --- coda-src/venus/worker.cc.orig	2008-10-06 16:52:22.000000000 +0000
 +++ coda-src/venus/worker.cc
-@@ -403,11 +403,19 @@ void VFSMount()
+@@ -53,6 +53,10 @@ extern "C" {
+ #include <sys/param.h>
+ #endif
+ 
++#ifdef  __DragonFly__
++#include <sys/param.h>
++#endif
++
+ #ifdef __linux__
+ #if !defined(__GLIBC__) || __GLIBC__ < 2
+ #include <linux/fs.h>
+@@ -84,6 +88,10 @@ extern "C" {
+ #define __BSD44__
+ #endif
+ 
++#if defined(__DragonFly__)
++#define __BSD44__
++#endif
++
+ /* interfaces */
+ /* from vicedep */
+ #include <venusioctl.h>
+@@ -403,11 +411,26 @@ void VFSMount()
  	    error = nmount(md, 6, 0);
  	}
  #endif
 -			
 +
++#if defined(__DragonFly__)
++	if (error < 0)
++	    error = mount("coda", venusRoot, 0, (void *)kernDevice);
++	if (error < 0)
++	    error = mount("cfs", venusRoot, 0, (void *)kernDevice);
++#else
 +#if defined(__NetBSD__) && defined(__NetBSD_Prereq__) && __NetBSD_Prereq__(4,99,24)
 +	if (error < 0)
 +	    error = mount("coda", venusRoot, 0, (void *)kernDevice, 256);
@@ -21,6 +49,7 @@ magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
  	    error = mount("coda", venusRoot, 0, kernDevice);
  	if (error < 0)
  	    error = mount("cfs", venusRoot, 0, kernDevice);
++#endif
 +#endif
 +
  #if defined(__FreeBSD__) && !defined(__FreeBSD_version)

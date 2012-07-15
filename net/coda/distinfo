@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.7 2012/03/05 11:27:52 gdt Exp $
+$NetBSD: distinfo,v 1.8 2012/07/15 17:39:17 marino Exp $
 
 SHA1 (coda-6.9.5.tar.gz) = 248af27c506f5c3be4c4e53f821c9c904580fe60
 RMD160 (coda-6.9.5.tar.gz) = 9ef0643aacc7d1352ef253af00d4c7e6ad9e1f78
 Size (coda-6.9.5.tar.gz) = 1723098 bytes
-SHA1 (patch-ac) = b9f9fd68c633e09717252562b06238b87df1a6b7
+SHA1 (patch-ac) = 1084fe8c5dc26500bb13fdb492d1613e1e112f6e
 SHA1 (patch-ad) = adfee7c5d7de913ee3b898a13bf7acfeac52b765
 SHA1 (patch-coda-src_dir_dirbody.c) = 3e3524a4a03ce359956ae00d9b24d1aa3292c752
+SHA1 (patch-coda-src_kerndep_pioctl.h) = d6e477b14e76492de0a800d07d83dad06aac1aa3
+SHA1 (patch-coda-src_resolution_rename.cc) = c2de0d308470965decf3159278340d9a3f066a02
+SHA1 (patch-coda-src_venus_venusrecov.cc) = 25e1e10aed36569aa7c336876c98bda648e4b7e2
+SHA1 (patch-config.h.in) = 38e4118aa34c4f415b5fd4d8b7867af2d716ea83
