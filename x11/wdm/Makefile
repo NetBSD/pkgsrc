@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/02/06 12:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2012/07/15 17:37:04 marino Exp $
 
 DISTNAME=		wdm-1.28
 PKGREVISION=		9
@@ -14,7 +14,7 @@ USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-LDFLAGS.DragonFly=	-lintl
+LDFLAGS.DragonFly=	-lintl -lfontconfig
 
 CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
