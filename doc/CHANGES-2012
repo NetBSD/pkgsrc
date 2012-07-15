@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2295 2012/07/15 07:51:12 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.2296 2012/07/15 13:02:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3558,3 +3558,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/libpciaccess to 0.13.1 [wiz 2012-07-14]
 	Updated comms/asterisk18 to 1.8.14.0 [jnemeth 2012-07-15]
 	Updated comms/asterisk10 to 10.6.0 [jnemeth 2012-07-15]
+	Updated databases/phpmyadmin to 3.5.2 [tron 2012-07-15]
