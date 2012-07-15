@@ -1,0 +1,14 @@
+$NetBSD: patch-config.h.in,v 1.1 2012/07/15 17:39:17 marino Exp $
+
+--- config.h.in.orig	2012-07-15 02:11:57.000000000 +0000
++++ config.h.in
+@@ -1,5 +1,9 @@
+ /* config.h.in.  Generated from configure.ac by autoheader.  */
+ 
++#ifdef __DragonFly__
++#define MAXNAMLEN 255
++#endif
++
+ /* offsetof works with offsetof(type,member) */
+ #undef CODA_OFFSETOF_OFFSETOF
+ 
