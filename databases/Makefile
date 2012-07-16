@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.406 2012/07/12 18:12:48 asau Exp $
+# $NetBSD: Makefile,v 1.407 2012/07/16 15:42:19 asau Exp $
 #
 
 COMMENT=	Databases
@@ -230,12 +230,12 @@ SUBDIR+=	poco-data
 SUBDIR+=	poco-data-mysql
 SUBDIR+=	poco-data-odbc
 SUBDIR+=	poco-data-sqlite
+SUBDIR+=	postgresql-pgbench
 SUBDIR+=	postgresql-postgis
 #SUBDIR+=	postgresql-uuid	# just contains files for postgresql*-uuid
 SUBDIR+=	postgresql83
 SUBDIR+=	postgresql83-adminpack
 SUBDIR+=	postgresql83-client
-SUBDIR+=	postgresql83-pgbench
 SUBDIR+=	postgresql83-plperl
 SUBDIR+=	postgresql83-plpython
 SUBDIR+=	postgresql83-pltcl
@@ -245,7 +245,6 @@ SUBDIR+=	postgresql84
 SUBDIR+=	postgresql84-adminpack
 SUBDIR+=	postgresql84-client
 SUBDIR+=	postgresql84-dblink
-SUBDIR+=	postgresql84-pgbench
 SUBDIR+=	postgresql84-pgcrypto
 SUBDIR+=	postgresql84-plperl
 SUBDIR+=	postgresql84-plpython
@@ -260,7 +259,6 @@ SUBDIR+=	postgresql90-dblink
 SUBDIR+=	postgresql90-docs
 SUBDIR+=	postgresql90-fuzzystrmatch
 SUBDIR+=	postgresql90-monitoring
-SUBDIR+=	postgresql90-pgbench
 SUBDIR+=	postgresql90-pgcrypto
 SUBDIR+=	postgresql90-plperl
 SUBDIR+=	postgresql90-plpython
@@ -277,7 +275,6 @@ SUBDIR+=	postgresql91-dblink
 SUBDIR+=	postgresql91-docs
 SUBDIR+=	postgresql91-fuzzystrmatch
 SUBDIR+=	postgresql91-monitoring
-SUBDIR+=	postgresql91-pgbench
 SUBDIR+=	postgresql91-pgcrypto
 SUBDIR+=	postgresql91-plperl
 SUBDIR+=	postgresql91-plpython
