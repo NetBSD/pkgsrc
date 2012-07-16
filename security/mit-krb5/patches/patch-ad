@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2011/03/22 23:31:04 tez Exp $
+$NetBSD: patch-ad,v 1.6 2012/07/16 19:12:33 adam Exp $
 
 Add --enable-pkgsrc-libtool option
 
---- config/lib.in.orig	2010-12-12 17:13:42.864774300 -0600
-+++ config/lib.in	2010-12-12 17:24:08.783385600 -0600
-@@ -29,8 +29,9 @@
+--- config/lib.in.orig	2012-05-31 23:49:44.000000000 +0000
++++ config/lib.in
+@@ -29,8 +29,9 @@ LIBPREFIX=lib
  # STOBJLISTS=dir1/OBJS.ST dir2/OBJS.ST etc...
  SHOBJLISTS=$(STOBJLISTS:.ST=.SH)
  PFOBJLISTS=$(STOBJLISTS:.ST=.PF)
@@ -15,7 +15,7 @@ Add --enable-pkgsrc-libtool option
  
  # Gets invoked as $(PARSE_OBJLISTS) list-of-OBJS.*-files
  PARSE_OBJLISTS= set -x && $(PERL) -p -e 'BEGIN { $$SIG{__WARN__} = sub {die @_} }; $$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
-@@ -99,6 +100,21 @@
+@@ -101,6 +102,21 @@ lib$(LIBBASE)$(PFLIBEXT): $(PFOBJLISTS)
  	set -x; objlist=`$(PARSE_OBJLISTS) $(PFOBJLISTS)` && $(AR) cq $@ $$objlist
  	$(RANLIB) $@
  
@@ -37,7 +37,7 @@ Add --enable-pkgsrc-libtool option
  $(TOPLIBD)/lib$(LIBBASE)$(STLIBEXT): lib$(LIBBASE)$(STLIBEXT)
  	$(RM) $@
  	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIBBASE)$(STLIBEXT) .)
-@@ -124,6 +140,7 @@
+@@ -128,6 +144,7 @@ clean-libs:
  	$(RM) lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) lib$(LIBBASE)$(PFLIBEXT)
@@ -45,7 +45,7 @@ Add --enable-pkgsrc-libtool option
  	$(RM) binutils.versions osf1.exports darwin.exports hpux10.exports
  
  clean-liblinks:
-@@ -132,6 +149,7 @@
+@@ -136,6 +153,7 @@ clean-liblinks:
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(PFLIBEXT)
@@ -53,7 +53,7 @@ Add --enable-pkgsrc-libtool option
  
  install-libs: $(LIBINSTLIST)
  install-static:
-@@ -152,6 +170,9 @@
+@@ -156,6 +174,9 @@ install-profiled:
  	$(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)
  	$(INSTALL_DATA) lib$(LIBBASE)$(PFLIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
  	$(RANLIB) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)

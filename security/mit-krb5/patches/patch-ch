@@ -1,4 +1,4 @@
-$NetBSD: patch-ch,v 1.1 2011/03/22 23:31:05 tez Exp $
+$NetBSD: patch-ch,v 1.2 2012/07/16 19:12:33 adam Exp $
 
 Add --enable-pkgsrc-libtool option
 
@@ -24,7 +24,7 @@ Add --enable-pkgsrc-libtool option
  
  SRCS= \
  	$(srcdir)/kdb_xdr.c \
-@@ -59,7 +59,7 @@
+@@ -58,7 +58,7 @@
  	$(srcdir)/db2_exp.c \
  	$(srcdir)/lockout.c
  

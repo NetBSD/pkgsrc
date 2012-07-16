@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/02/26 13:14:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/07/16 19:12:33 adam Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -9,6 +9,7 @@ bin/klist
 bin/kpasswd
 bin/krb5-config
 bin/ksu
+bin/kswitch
 bin/ktutil
 bin/kvno
 bin/sclient
@@ -42,14 +43,19 @@ include/kadm5/chpass_util_strings.h
 include/kadm5/kadm_err.h
 include/kdb.h
 include/krb5.h
+include/krb5/kadm5_hook_plugin.h
 include/krb5/krb5.h
 include/krb5/locate_plugin.h
+include/krb5/plugin.h
+include/krb5/preauth_plugin.h
+include/krb5/pwqual_plugin.h
 include/profile.h
+include/verto-module.h
+include/verto.h
 info/krb5-admin.info
 info/krb5-install.info
 info/krb5-user.info
 lib/krb5/plugins/kdb/libdb2.la
-lib/krb5/plugins/preauth/libencrypted_challenge.la
 lib/krb5/plugins/preauth/libpkinit.la
 lib/libcom_err.la
 lib/libgssapi_krb5.la
@@ -62,6 +68,8 @@ lib/libkadm5srv_mit.la
 lib/libkdb5.la
 lib/libkrb5.la
 lib/libkrb5support.la
+lib/libverto-k5ev.la
+lib/libverto.la
 man/man1/compile_et.1
 man/man1/k5srvutil.1
 man/man1/kadmin.1
@@ -73,10 +81,14 @@ man/man1/kpasswd.1
 man/man1/krb5-config.1
 man/man1/krb5-send-pr.1
 man/man1/ksu.1
+man/man1/kswitch.1
 man/man1/ktutil.1
 man/man1/kvno.1
 man/man1/sclient.1
+man/man5/.k5identity.5
 man/man5/.k5login.5
+man/man5/k5identity.5
+man/man5/k5login.5
 man/man5/kdc.conf.5
 man/man5/krb5.conf.5
 man/man8/kadmin.local.8
@@ -107,3 +119,4 @@ share/examples/krb5/services.append
 share/examples/rc.d/kadmind
 share/examples/rc.d/kdc
 share/gnats/mit
+share/locale/en_US/LC_MESSAGES/mit-krb5.mo

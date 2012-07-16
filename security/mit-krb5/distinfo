@@ -1,23 +1,22 @@
-$NetBSD: distinfo,v 1.34 2012/06/06 18:17:46 tez Exp $
+$NetBSD: distinfo,v 1.35 2012/07/16 19:12:33 adam Exp $
 
-SHA1 (krb5-1.8.6-signed.tar) = 0a1356c6680578f683b6ffd33044f6f02d69b315
-RMD160 (krb5-1.8.6-signed.tar) = 3faad0306482f99c1467d045767090d298a20ce4
-Size (krb5-1.8.6-signed.tar) = 11950080 bytes
-SHA1 (patch-aa) = cd8cdc594bc872d641ceaba0aa0d91b5f1caf2ae
-SHA1 (patch-ad) = 49a9429d163adb872b1c97ade8ed0e13d8eec3cb
+SHA1 (krb5-1.10.2-signed.tar) = 8b6e2c5bf0c65aacd368b3698add7888f2a7332d
+RMD160 (krb5-1.10.2-signed.tar) = 7d8c4a04389695082fd5c95767e49ca560ad953c
+Size (krb5-1.10.2-signed.tar) = 11520000 bytes
+SHA1 (patch-aa) = 941848a1773dfbe51dff3134d4b8504a850a958d
+SHA1 (patch-ad) = b56a7218007560470179dd811c84b8c690c966ac
 SHA1 (patch-ae) = c7395b9de5baf6612b8787fad55dbc051a680bfd
-SHA1 (patch-af) = 245b6dea2eff9da9911ac6eabf2ebdbe7fdac305
-SHA1 (patch-ag) = f8daf2dd247365d506e117cb49c5d0f50e9822ed
-SHA1 (patch-ah) = 922542765f73dc25c464715c29c8d63c9cd9c718
+SHA1 (patch-af) = 1edab3a5f7eb6a7c5dc287e94ae4401c389dbabf
+SHA1 (patch-ag) = 48c0ce35324f5757134c1c5da666bb0cb7a3aaa6
+SHA1 (patch-ah) = 4e40f36e8969974b3c2f68b2e3636921133c57ba
 SHA1 (patch-aj) = 8a00ca30db3c9c3c9a2f7506cdc4c5b20f7f42c6
-SHA1 (patch-ak) = 9ba29870084dfcd3f6f66e801b42d6577cda004a
-SHA1 (patch-al) = 8660b932c999d5b3ac63be27fc1013cceff368b9
-SHA1 (patch-ce) = 72ec322894facfd75a010f82372cfa9ef96afb5f
-SHA1 (patch-cf) = 651f223a5c3dff566d0b5c5279d47538576c5979
-SHA1 (patch-cg) = 8c89dd960ebbe444534a849827c78f077cce499b
-SHA1 (patch-ch) = 0e36012b43c498b8920f204bab2ba9a68f8c851a
+SHA1 (patch-ak) = 19d9b15048a5920ee15c82b33da50c40cf400e46
+SHA1 (patch-al) = 7445639b82eadf9b1feb1448c1654fa6ddc937aa
+SHA1 (patch-cf) = 806b089d3b12ea9a17c6caab59cbdeb6ec17bbc3
+SHA1 (patch-cg) = 30b1e8943b0cbe67f37bac6883f4bdd82776e6d1
+SHA1 (patch-ch) = 0f7f45aeb52907b52a2b143c3a2e36a7656c68c5
 SHA1 (patch-ci) = 4e310f0a4dfe27cf94d0e63d623590691b6c5970
 SHA1 (patch-cj) = 78342f649f8e9d3a3b5a4f83e65b6c46f589586b
-SHA1 (patch-ck) = 87b7704ca9de02880ef8b3dbb097e87d0252bd4b
-SHA1 (patch-lib_kadm5_srv_svr__principal.c) = fd8f677ece32ae5ca1b5d66932e79115eb4d982d
+SHA1 (patch-ck) = 37bfef80329f8ae0fb35c35e70032a0040ba5591
 SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = a1e46ca9256aea4facc1d41841b1707b044a69e7
+SHA1 (patch-util_k5ev_verto-k5ev.c) = e8f78ec46543793b284c321a6b7362af9f527489

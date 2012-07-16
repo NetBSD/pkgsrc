@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.6 2011/03/22 23:31:04 tez Exp $
+$NetBSD: patch-ag,v 1.7 2012/07/16 19:12:33 adam Exp $
 
 Add --enable-pkgsrc-libtool option
 
---- config/shlib.conf.orig	Mon Feb  8 14:55:48 2010
-+++ config/shlib.conf	Thu Jan  6 15:14:39 2011
-@@ -22,6 +22,7 @@
+--- config/shlib.conf.orig	2012-05-31 23:49:44.000000000 +0000
++++ config/shlib.conf
+@@ -22,6 +22,7 @@ SHLIBVEXT=.so.v-nobuild
  SHLIBSEXT=.so.s-nobuild
  # Most systems support profiled libraries.
  PFLIBEXT=_p.a
@@ -12,7 +12,7 @@ Add --enable-pkgsrc-libtool option
  # Most systems install shared libs as mode 644, etc. while hpux wants 755
  INSTALL_SHLIB='$(INSTALL_DATA)'
  # Most systems use the same objects for shared libraries and dynamically
-@@ -37,6 +38,7 @@
+@@ -37,6 +38,7 @@ use_linker_fini_option=no
  STOBJEXT=.o
  SHOBJEXT=.so
  PFOBJEXT=.po
@@ -20,7 +20,7 @@ Add --enable-pkgsrc-libtool option
  # Default for systems w/o shared libraries
  CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
  CXX_LINK_STATIC='$(CXX) $(PROG_LIBPATH) $(CXXFLAGS) $(LDFLAGS)'
-@@ -281,7 +283,7 @@
+@@ -287,7 +289,7 @@ mips-*-netbsd*)
  	PROFFLAGS=-pg
  	;;
  
@@ -29,7 +29,7 @@ Add --enable-pkgsrc-libtool option
  	PICFLAGS=-fPIC
  	SHLIBVEXT='.so.$(LIBMAJOR).$(LIBMINOR)'
  	SHLIBEXT=.so
-@@ -358,7 +360,7 @@
+@@ -367,7 +369,7 @@ mips-*-netbsd*)
  	for lib in libkrb5support.1.1.dylib libkadm5srv.5.1.dylib libkdb5.4.0.dylib; do
  	    LDCOMBINE_TAIL="$LDCOMBINE_TAIL -dylib_file \"\$(KRB5_LIBDIR)/$lib\":\$(TOPLIBD)/$lib"
  	done
@@ -38,7 +38,7 @@ Add --enable-pkgsrc-libtool option
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) -dynamic $(CFLAGS) $(LDFLAGS)'
  	CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
  	CXX_LINK_SHARED='$(CXX) $(PROG_LIBPATH) -dynamic $(CXXFLAGS) $(LDFLAGS)'
-@@ -473,7 +475,7 @@
+@@ -486,7 +488,7 @@ mips-*-netbsd*)
  	# Assume initialization always delayed.
  	INIT_FINI_PREP="wl=${wl_prefix}; "'i=1; initfini=; for f in . $(LIBFINIFUNC); do if test $$f != .; then initfini="$$initfini $${wl}-binitfini::$$f:$$i"; else :; fi; i=`expr $$i + 1`; done'
  	use_linker_fini_option=yes
@@ -47,7 +47,7 @@ Add --enable-pkgsrc-libtool option
  	RPATH_TAIL=:/usr/lib:/lib
  	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH):'"$RPATH_TAIL"
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
-@@ -509,8 +511,8 @@
+@@ -523,8 +525,8 @@ mips-*-netbsd*)
  	# Assume initialization always delayed.
  	INIT_FINI_PREP="wl=${wl_prefix}; "'i=1; initfini=; for f in . $(LIBFINIFUNC); do if test $$f != .; then initfini="$$initfini $${wl}-binitfini::$$f:$$i"; else :; fi; i=`expr $$i + 1`; done'
  	use_linker_fini_option=yes
@@ -58,7 +58,7 @@ Add --enable-pkgsrc-libtool option
  	RPATH_TAIL=:/usr/lib:/lib
  	PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH):'"$RPATH_TAIL"
  	CC_LINK_SHARED='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
-@@ -524,8 +526,14 @@
+@@ -539,8 +541,14 @@ esac
  
  if test "${MAKE_SHLIB_COMMAND}" = "x" ; then
    if test "${INIT_FINI_PREP}" != ":"; then
