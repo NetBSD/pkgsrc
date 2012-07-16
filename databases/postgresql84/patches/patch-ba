@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2011/09/11 10:53:31 marino Exp $
+$NetBSD: patch-ba,v 1.2 2012/07/16 21:17:11 asau Exp $
 
---- src/Makefile.shlib.orig	2011-07-15 20:03:13.383961000 +0000
+--- src/Makefile.shlib.orig	2012-05-31 23:11:47.000000000 +0000
 +++ src/Makefile.shlib
-@@ -175,6 +175,13 @@ ifeq ($(PORTNAME), bsdi)
+@@ -175,19 +175,20 @@ ifeq ($(PORTNAME), bsdi)
    endif
  endif
  
@@ -15,4 +15,17 @@ $NetBSD: patch-ba,v 1.1 2011/09/11 10:53:31 marino Exp $
 +
  ifeq ($(PORTNAME), freebsd)
    ifdef ELF_SYSTEM
-     ifdef SO_MAJOR_VERSION
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+-    endif
+     LINK.shared		= $(COMPILER) -shared
+     ifdef soname
+       LINK.shared	+= -Wl,-x,-soname,$(soname)
+     endif
+   else
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+-    endif
+     LINK.shared		= $(LD) -x -Bshareable -Bforcearchive
+   endif
+ endif

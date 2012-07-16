@@ -1,10 +1,26 @@
-$NetBSD: patch-src_Makefile.shlib,v 1.1.1.1 2011/09/15 08:27:39 adam Exp $
+$NetBSD: patch-src_Makefile.shlib,v 1.2 2012/07/16 21:17:12 asau Exp $
 
-Properly define the linker on DragonFly BSD.
-
---- src/Makefile.shlib.orig	2011-01-28 02:21:31 +0000
+--- src/Makefile.shlib.orig	2012-05-31 23:07:09.000000000 +0000
 +++ src/Makefile.shlib
-@@ -198,6 +198,17 @@ ifeq ($(PORTNAME), netbsd)
+@@ -172,17 +172,11 @@ endif
+ 
+ ifeq ($(PORTNAME), freebsd)
+   ifdef ELF_SYSTEM
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+-    endif
+     LINK.shared		= $(COMPILER) -shared
+     ifdef soname
+       LINK.shared	+= -Wl,-x,-soname,$(soname)
+     endif
+   else
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+-    endif
+     LINK.shared		= $(LD) -x -Bshareable -Bforcearchive
+   endif
+ endif
+@@ -198,6 +192,17 @@ ifeq ($(PORTNAME), netbsd)
    endif
  endif
  

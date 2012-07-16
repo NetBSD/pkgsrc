@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/07/01 19:49:24 morr Exp $
+$NetBSD: distinfo,v 1.7 2012/07/16 21:17:12 asau Exp $
 
 SHA1 (postgresql-9.1.4.tar.bz2) = c75fd5696af02a275a104260eac8b3a4abe35682
 RMD160 (postgresql-9.1.4.tar.bz2) = ff08ad702c7ffc0172b3f66aa4819d4865f0e77b
@@ -7,7 +7,7 @@ SHA1 (patch-config_perl.m4) = c7e5aaff1c47d2e33df7692a412ef984c77ffcc0
 SHA1 (patch-configure) = dab79533dac06a79a5aa8439d6b15830d8d2fba7
 SHA1 (patch-contrib_dblink_Makefile) = 4960ad57d42465fae203870548e4c53f8a32ce04
 SHA1 (patch-contrib_dblink_dblink.c) = 4d7c40d107d4c13c63ef2908d9a02be319863657
-SHA1 (patch-src_Makefile.shlib) = 39c9d8fa983658fd609a7879cbe46c95aabb8011
+SHA1 (patch-src_Makefile.shlib) = 2370e3c4260ba7f947b0c15b9bdc43e4820e01a4
 SHA1 (patch-src_backend_Makefile) = 76ddd3015d93b19cdd6000eaffc4f53cbd4965b5
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_GNUmakefile) = 2b7448d6dd8550e2ea61f40728a2780068b93d07
