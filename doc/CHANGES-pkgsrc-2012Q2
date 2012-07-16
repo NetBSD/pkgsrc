@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.14 2012/07/13 09:05:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.15 2012/07/16 07:31:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -90,3 +90,5 @@ Pullup ticket #3858 - requested by wiz
 graphics/png: security update
 Pullup ticket #3859 - requested by wiz
 graphics/openjpeg: security patch
+Pullup ticket #3860 - requested by cheusov
+graphics/librsvg: build fix
