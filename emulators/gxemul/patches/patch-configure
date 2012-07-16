@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2012/07/16 00:19:14 abs Exp $
+
+Fix the check to pickup mkstemp() on at least NetBSD
+
+--- configure.orig	2012-07-15 22:26:52.000000000 +0000
++++ configure
+@@ -705,7 +705,8 @@ rm -f _tests.cc _tests.o _tests
+ #  mkstemp missing?
+ printf "checking for mkstemp... "
+ printf "#include <unistd.h>
+-int main(int argc, char *argv[]) { int x; char *y = \"abc\";
++#include <stdlib.h>
++int main(int argc, char *argv[]) { int x; char y[4] = \"abc\";
+ x = mkstemp(y); return 0;}\n" > _tests.cc
+ $CXX $CXXFLAGS _tests.cc -o _tests 2> /dev/null
+ if [ ! -x _tests ]; then
