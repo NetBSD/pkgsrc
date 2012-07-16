@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2296 2012/07/15 13:02:54 tron Exp $
+$NetBSD: CHANGES-2012,v 1.2297 2012/07/16 19:14:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.14.0 [jnemeth 2012-07-15]
 	Updated comms/asterisk10 to 10.6.0 [jnemeth 2012-07-15]
 	Updated databases/phpmyadmin to 3.5.2 [tron 2012-07-15]
+	Updated security/mit-krb5 to 1.10.2 [adam 2012-02-26]
