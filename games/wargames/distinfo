@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/07/07 20:19:39 abs Exp $
+$NetBSD: distinfo,v 1.2 2012/07/16 20:47:03 abs Exp $
 
-SHA1 (abs0-wargames-1.01-0-gcb24609.tar.gz) = daa40cd8aa3d9c2a80d064adb678f1ce4b2d6470
-RMD160 (abs0-wargames-1.01-0-gcb24609.tar.gz) = 9c8e394b62b7b22a917ef91df73774e18ac55944
-Size (abs0-wargames-1.01-0-gcb24609.tar.gz) = 6303 bytes
+SHA1 (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = b24d6c44393f35e0ee5dd143a4ad2f2f3c45bddd
+RMD160 (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = 6cc1b7832f7f0d16c57b5abec380e1bc68a35fc3
+Size (abs0-wargames-1.02-0-g0e9f20e.tar.gz) = 6293 bytes
