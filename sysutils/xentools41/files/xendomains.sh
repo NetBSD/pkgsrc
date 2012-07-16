@@ -50,8 +50,10 @@ xendomains_start()
 			cmdline=`printf "${xendomains_prehook}" $domain`
 			cmd="${cmdline%% *}"
 			if [ -x "$cmd" ]; then
-				$cmdline || echo "Pre-hook \`\`$cmdline'' failed... skipping $domain."
-				continue
+				if ! $cmdline; then
+					echo "Pre-hook \`\`$cmdline'' failed... skipping $domain."
+					continue
+				fi
 			fi
 		fi
 
