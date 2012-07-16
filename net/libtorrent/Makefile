@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2012/05/16 17:42:37 tron Exp $
+# $NetBSD: Makefile,v 1.44.2.1 2012/07/16 08:10:49 sbd Exp $
 
 DISTNAME=	libtorrent-0.13.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -42,6 +43,10 @@ CONFIGURE_ARGS+=	--with-kqueue
 .if !empty(CC_VERSION:Mgcc-4.*)
 CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
 		-fno-inline -fforce-addr
+.endif
+
+.if !empty(CC_VERSION:Mgcc-*) && !empty(MACHINE_ARCH:Mi?86)
+CXXFLAGS+=	-march=i486
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
