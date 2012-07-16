@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2012/07/08 12:33:39 mef Exp $
+# $NetBSD: Makefile,v 1.68 2012/07/16 20:35:52 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		doxygen>=1.8.1.1:../../devel/doxygen
 BUILD_DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 BUILD_DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
-
-USE_TOOLS+=		gmake
 
 BUILD_TARGET=		apidox
 INSTALL_TARGET=		install-data-local
