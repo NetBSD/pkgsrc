@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/07/15 11:50:53 marino Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/07/16 19:34:27 marino Exp $
 
 BUILDLINK_TREE+= gcc-aux
 
@@ -12,6 +12,9 @@ BUILDLINK_PKGSRCDIR.gcc-aux?= ../../lang/gcc-aux
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/mpcomplex/buildlink3.mk"
+
+pkgbase := gcc-aux
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.gcc-aux:Mnls)
 .include "../../devel/gettext-lib/buildlink3.mk"
