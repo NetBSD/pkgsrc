@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.4 2011/03/22 23:31:04 tez Exp $
+$NetBSD: patch-af,v 1.5 2012/07/16 19:12:33 adam Exp $
 
 Add --enable-pkgsrc-libtool option
 Use $(ROOT_USER) in place of root
 
---- config/pre.in.orig	2010-01-21 16:49:01.000000000 -0600
-+++ config/pre.in	2010-12-12 17:39:24.427787200 -0600
-@@ -170,6 +170,7 @@
+--- config/pre.in.orig	2012-05-31 23:49:44.000000000 +0000
++++ config/pre.in
+@@ -172,6 +172,7 @@ PTHREAD_LIBS = @PTHREAD_LIBS@
  THREAD_LINKOPTS = $(PTHREAD_CFLAGS) $(PTHREAD_LIBS)
  CPPFLAGS = @CPPFLAGS@
  DEFS = @DEFS@
@@ -13,7 +13,7 @@ Use $(ROOT_USER) in place of root
  CC = @CC@
  CXX = @CXX@
  LD = $(PURE) @LD@
-@@ -183,11 +184,12 @@
+@@ -185,11 +186,12 @@ LIBS = @LIBS@
  
  INSTALL=@INSTALL@
  INSTALL_STRIP=
@@ -29,7 +29,7 @@ Use $(ROOT_USER) in place of root
  ## This is needed because autoconf will sometimes define @exec_prefix@ to be
  ## ${prefix}.
  prefix=@prefix@
-@@ -313,6 +315,10 @@
+@@ -320,6 +322,10 @@ PROG_RPATH_FLAGS=@PROG_RPATH_FLAGS@
  # depending on whether we're building with shared libraries.
  DEPLIBEXT=@DEPLIBEXT@
  
@@ -40,7 +40,7 @@ Use $(ROOT_USER) in place of root
  KDB5_PLUGIN_DEPLIBS = @KDB5_PLUGIN_DEPLIBS@
  KDB5_PLUGIN_LIBS = @KDB5_PLUGIN_LIBS@
  
-@@ -329,12 +335,12 @@
+@@ -337,12 +343,12 @@ COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_er
  SUPPORT_LIBNAME=krb5support
  SUPPORT_DEPLIB	= $(TOPLIBD)/lib$(SUPPORT_LIBNAME)$(DEPLIBEXT)
  
@@ -56,16 +56,16 @@ Use $(ROOT_USER) in place of root
  
  KRB5_BASE_DEPLIBS	= $(KRB5_DEPLIB) $(CRYPTO_DEPLIB) $(COM_ERR_DEPLIB) $(SUPPORT_DEPLIB)
  KDB5_DEPLIBS		= $(KDB5_DEPLIB) $(KDB5_PLUGIN_DEPLIBS)
-@@ -364,7 +370,7 @@
+@@ -384,7 +390,7 @@ RL_LIBS		= @RL_LIBS@
  
  SS_LIB		= $(SS_LIB-@SS_VERSION@)
  SS_LIB-sys	= @SS_LIB@
--SS_LIB-k5	= $(TOPLIBD)/libss.a
-+SS_LIB-k5	= $(TOPLIBD)/libss$(DEPSTLIBEXT)
+-SS_LIB-k5	= $(TOPLIBD)/libss.a $(RL_LIBS)
++SS_LIB-k5	= $(TOPLIBD)/libss$(DEPSTLIBEXT) $(RL_LIBS)
  KDB5_LIB	= -lkdb5 $(KDB5_PLUGIN_LIBS)
  
- DL_LIB		= @DL_LIB@
-@@ -509,6 +515,9 @@
+ VERTO_DEPLIB	= $(VERTO_DEPLIB-@VERTO_VERSION@)
+@@ -552,6 +558,9 @@ MAKE_DYNOBJ_COMMAND=@MAKE_DYNOBJ_COMMAND
  DYNOBJ_EXPDEPS=@DYNOBJ_EXPDEPS@
  DYNOBJ_EXPFLAGS=@DYNOBJ_EXPFLAGS@
  
@@ -75,7 +75,7 @@ Use $(ROOT_USER) in place of root
  # File with symbol names to be exported, both functions and data,
  # currently not distinguished.
  SHLIB_EXPORT_FILE=$(srcdir)/$(LIBPREFIX)$(LIBBASE).exports
-@@ -530,6 +539,7 @@
+@@ -573,6 +582,7 @@ SHLIB_RPATH_FLAGS=@SHLIB_RPATH_FLAGS@
  # flags for explicit libraries depending on this one,
  # e.g. "$(SHLIB_RPATH_FLAGS) $(SHLIB_SHLIB_DIRFLAGS) $(SHLIB_EXPLIBS)"
  SHLIB_EXPFLAGS=@SHLIB_EXPFLAGS@
@@ -83,7 +83,7 @@ Use $(ROOT_USER) in place of root
  
  ## Parameters to be set by configure for use in libobj.in:
  
-@@ -541,10 +551,15 @@
+@@ -584,10 +594,15 @@ OBJLISTS=@OBJLISTS@
  # the suffix substitution will break on some platforms!
  SHLIBOBJS=$(STLIBOBJS:.o=@SHOBJEXT@)
  PFLIBOBJS=$(STLIBOBJS:.o=@PFOBJEXT@)
