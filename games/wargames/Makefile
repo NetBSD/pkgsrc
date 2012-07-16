@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/07 20:19:39 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/16 20:47:03 abs Exp $
 
-VERSION=	1.01
-DISTNAME=	abs0-wargames-${VERSION}-0-gcb24609
+VERSION=	1.02
+DISTNAME=	abs0-wargames-${VERSION}-0-g0e9f20e
 PKGNAME=	wargames-${VERSION}
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/abs0/wargames/tarball/${VERSION}/
