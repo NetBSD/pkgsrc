@@ -1,12 +1,12 @@
-$NetBSD: patch-cg,v 1.1 2011/03/22 23:31:05 tez Exp $
+$NetBSD: patch-cg,v 1.2 2012/07/16 19:12:33 adam Exp $
 
-add two files that need to be generated and otherwise are not
+Add two files that need to be generated and otherwise are not
 
---- lib/kdb/Makefile.in.orig	2010-12-23 11:35:38.448878800 -0600
-+++ lib/kdb/Makefile.in	2010-12-23 11:40:32.324026100 -0600
-@@ -57,7 +57,7 @@
- clean-unix:: clean-liblinks clean-libs clean-libobjs
- 	$(RM) adb_err.c adb_err.h
+--- lib/kdb/Makefile.in.orig	2012-05-31 23:49:44.000000000 +0000
++++ lib/kdb/Makefile.in
+@@ -62,7 +62,7 @@ clean-unix:: clean-liblinks clean-libs c
+ check-pytests:: t_stringattr
+ 	$(RUNPYTEST) $(srcdir)/t_stringattr.py $(PYTESTFLAGS)
  
 -generate-files-mac: darwin.exports
 +generate-files-mac: darwin.exports adb_err.h adb_err.c

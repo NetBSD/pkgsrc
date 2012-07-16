@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2012/06/06 18:17:46 tez Exp $
+# $NetBSD: Makefile,v 1.58 2012/07/16 19:12:33 adam Exp $
 
-DISTNAME=	krb5-1.8.6
+DISTNAME=	krb5-1.10.2
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.8/
+MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 
@@ -27,6 +26,7 @@ BUILD_TARGET=	generate-files-mac all
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gmake m4 perl yacc
 MAKE_PROGRAM=		gmake

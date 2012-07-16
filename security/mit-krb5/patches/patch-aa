@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2011/03/22 23:31:04 tez Exp $
+$NetBSD: patch-aa,v 1.4 2012/07/16 19:12:33 adam Exp $
 
 Don't make sunpro warnings into errors (warnings are seen in gcc too)
 Add --enable-pkgsrc-libtool option
 
---- aclocal.m4.orig	2009-11-22 11:00:45.000000000 -0600
-+++ aclocal.m4	2011-01-07 17:00:12.222547100 -0600
-@@ -620,7 +620,7 @@
+--- aclocal.m4.orig	2012-05-31 23:49:44.000000000 +0000
++++ aclocal.m4
+@@ -611,7 +611,7 @@ else
      # works, but it also means that declaration-in-code warnings won't
      # be issued.
      # -v -fd -errwarn=E_DECLARATION_IN_CODE ...
@@ -14,7 +14,7 @@ Add --enable-pkgsrc-libtool option
      WARN_CXXFLAGS="-errtags=yes +w +w2 -xport64"
    fi
  fi
-@@ -1090,6 +1090,9 @@
+@@ -1038,6 +1038,9 @@ AC_SUBST(SHLIBVEXT)
  AC_SUBST(SHLIBSEXT)
  AC_SUBST(DEPLIBEXT)
  AC_SUBST(PFLIBEXT)
@@ -24,7 +24,7 @@ Add --enable-pkgsrc-libtool option
  AC_SUBST(LIBINSTLIST)
  AC_SUBST(DYNOBJEXT)
  AC_SUBST(MAKE_DYNOBJ_COMMAND)
-@@ -1106,6 +1109,7 @@
+@@ -1054,6 +1057,7 @@ AC_SUBST(OBJLISTS)
  AC_SUBST(STOBJEXT)
  AC_SUBST(SHOBJEXT)
  AC_SUBST(PFOBJEXT)
@@ -32,7 +32,7 @@ Add --enable-pkgsrc-libtool option
  AC_SUBST(PICFLAGS)
  AC_SUBST(PROFFLAGS)])
  
-@@ -1214,11 +1218,42 @@
+@@ -1168,11 +1172,42 @@ else
  	KDB5_PLUGIN_DEPLIBS=
  	KDB5_PLUGIN_LIBS=
  fi
