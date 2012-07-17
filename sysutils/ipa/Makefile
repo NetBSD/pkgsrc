@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/11/23 07:51:54 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/07/17 21:00:34 asau Exp $
 #
 
-DISTNAME=	ipa-2.1.1
+DISTNAME=	ipa-2.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ipa-system/}
 EXTRACT_SUFX=	.tar.bz2
