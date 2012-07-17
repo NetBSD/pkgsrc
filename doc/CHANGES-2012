@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2301 2012/07/17 19:25:30 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2302 2012/07/17 21:08:22 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk10 to 10.6.1 [jnemeth 2012-07-17]
 	Updated comms/asterisk18 to 1.8.14.1 [jnemeth 2012-07-17]
 	Updated pkgtools/pkglint to 4.119 [wiz 2012-07-17]
+	Updated sysutils/ipa to 2.1.2 [asau 2012-07-17]
