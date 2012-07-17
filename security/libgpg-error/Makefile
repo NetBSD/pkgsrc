@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/07/17 16:01:10 marino Exp $
 
 DISTNAME=	libgpg-error-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/ \
@@ -32,6 +32,16 @@ MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		nawk
 .else
 USE_TOOLS+=		gawk
+.endif
+
+# On Dragonfly i386, Pkgsrc libintl segfaults on bindtextdomain function
+# while locking a thread.  Until that's resolved, stop libgpg-error from
+# using NLS which invokes that function during initialization.
+PLIST_VARS+=	nls
+.if ${OPSYS} == "DragonFly" && ${MACHINE} == "i386"
+CONFIGURE_ARGS+=	--disable-nls
+.else
+PLIST.nls=	yes
 .endif
 
 TEST_TARGET=		check
