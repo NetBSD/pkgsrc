@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2012/02/15 20:04:30 hans Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/07/17 21:26:47 cheusov Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
-DISTNAME=	aumix-2.8
+DISTNAME=	aumix-2.9.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/} \
 		http://jpj.net/~trevor/aumix/ \
@@ -26,7 +26,6 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-own-labels
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--without-gtk1
 CONFIGURE_ARGS+=	--without-gtk
 
 LIBS.SunOS+=		-lintl
