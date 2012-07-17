@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/18 16:09:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/17 18:08:02 cheusov Exp $
 bin/starttls
-${EMACS_LISPPREFIX}/starttls.el
-${EMACS_LISPPREFIX}/starttls.elc
