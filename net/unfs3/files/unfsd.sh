@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# 	$NetBSD: unfsd.sh,v 1.1 2008/01/30 09:39:13 tnn Exp $
+# 	$NetBSD: unfsd.sh,v 1.2 2012/07/18 20:00:45 cheusov Exp $
 #
 # PROVIDE: unfsd
 # REQUIRE: DAEMON rpcbind
@@ -15,6 +15,7 @@ rcvar="${name}"
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 command_args="-i ${pidfile}"
+extra_commands="reload"
 
 load_rc_config $name
 load_rc_config_var rpcbind rpcbind
