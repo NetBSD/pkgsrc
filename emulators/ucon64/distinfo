@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/05/10 22:11:20 dholland Exp $
+$NetBSD: distinfo,v 1.6 2012/07/18 22:10:21 marino Exp $
 
 SHA1 (ucon64-2.0.0-src.tar.gz) = 8782bbc2bf5760fafe3fa4cd02b67991d984a973
 RMD160 (ucon64-2.0.0-src.tar.gz) = c28921cfae1a010db917b96be542c089690b374c
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = 25f5311844511674d5e64efe7c35cf86dacc34a9
 SHA1 (patch-ac) = 9c7febe59e1c8e6959f56e34ced83a31fa54c294
 SHA1 (patch-ad) = c41895de15bc2a48bf5de1535f03d070ade79ea3
 SHA1 (patch-ae) = bfb38ecec2408deaaef881fa33943e2c45bccd4d
-SHA1 (patch-af) = 84476b894a34bb1d7074526340eaa97fcbcfd0aa
+SHA1 (patch-af) = 2f53d87dd40dfdfd90580161444d956df32207df
