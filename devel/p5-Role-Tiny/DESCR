@@ -1,0 +1,17 @@
+Role::Tiny is a minimalist role composition tool.
+
+ROLE COMPOSITION
+
+Role composition can be thought of as much more clever and meaningful
+multiple inheritance. The basics of this implementation of roles is:
+
+    * If a method is already defined on a class, that method will not be
+      composed in from the role.
+    * If a method that the role "requires" to be implemented is not
+      implemented, role application will fail loudly.
+
+Unlike Class::C3, where the last class inherited from "wins," role
+composition is the other way around, where the class wins. If multiple
+roles are applied in a single call (single with statement), then if any
+of their provided methods clash, an exception is raised unless the class
+provides a method since this conflict indicates a potential problem.
