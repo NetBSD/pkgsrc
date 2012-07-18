@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2012/04/27 12:32:02 obache Exp $
+# $NetBSD: Makefile,v 1.91 2012/07/18 09:48:10 jperkin Exp $
 
 DISTNAME=	heimdal-1.5.2
 PKGREVISION=	2
@@ -86,6 +86,10 @@ pre-configure:
 	cd ${WRKSRC}/doc/doxyout/hcrypto && \
 	${GREP} -e /hcrypto_ -e /page_ manpages > manpages.new && \
 	mv manpages.new manpages
+
+# Avoid 'cat: cannot open ./localefiles: No such file or directory'
+pre-build:
+	${TOUCH} ${WRKSRC}/po/localefiles
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
