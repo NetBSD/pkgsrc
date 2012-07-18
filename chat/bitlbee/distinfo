@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.28 2011/11/18 21:06:19 tonio Exp $
+$NetBSD: distinfo,v 1.29 2012/07/18 09:56:02 marino Exp $
 
 SHA1 (bitlbee-3.0.3.tar.gz) = 4140eb7aaa2c6a39fa059d19f8fbaec0d7a1ebff
 RMD160 (bitlbee-3.0.3.tar.gz) = 4b537871eef1bb5b6839105bc7bc9f2567e5b8e1
 Size (bitlbee-3.0.3.tar.gz) = 676417 bytes
 SHA1 (patch-lib_http__client.c) = 9659b12ee2ad796cab9ac4fa9b29067677df63fe
+SHA1 (patch-lib_ssl__gnutls.c) = 48c888182d162c72be03d19f653b67771ac1db88
