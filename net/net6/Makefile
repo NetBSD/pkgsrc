@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 13:42:43 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/07/18 10:22:23 marino Exp $
 #
 
 DISTNAME=	net6-1.3.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://releases.0x539.de/net6/
 
