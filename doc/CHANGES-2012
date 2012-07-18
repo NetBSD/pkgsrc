@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2306 2012/07/18 08:41:29 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2307 2012/07/18 09:03:55 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Role-Tiny version 1.001004 [sno 2012-07-18]
 	Updated devel/p5-Moo to 0.091014 [sno 2012-07-18]
 	Updated devel/p5-Moose to 2.0603 [sno 2012-07-18]
+	Updated databases/phppgadmin to 5.0.4 [asau 2012-07-18]
