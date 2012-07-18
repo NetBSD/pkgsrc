@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/03/29 20:32:34 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/07/18 21:55:40 marino Exp $
 
 SHA1 (VisualBoyAdvance-src-1.7.2.tar.gz) = 04d82406079563fd17cda07f72488185e9152f51
 RMD160 (VisualBoyAdvance-src-1.7.2.tar.gz) = 44f94a4f270f2cda25879681c52892f6978caf99
@@ -9,4 +9,4 @@ SHA1 (patch-ac) = 33158335dc12f335471d10962b4552082b589d25
 SHA1 (patch-ad) = b61c4053bbed582db5df2039c20b436e1d9e1ff1
 SHA1 (patch-ae) = b7e08365abd77b5c0f3473b4ce091b747298dfc8
 SHA1 (patch-af) = a3db22d606c34388f20ee29d9e8a1259346d105a
-SHA1 (patch-ag) = bd304939c7f104e6114a5078f4347b37761a1ede
+SHA1 (patch-ag) = 35913566125b1d1ed8ed3a514664cd7167ed2c22
