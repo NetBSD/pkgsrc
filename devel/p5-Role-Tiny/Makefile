@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/18 07:54:13 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/18 08:06:03 sno Exp $
 
 DISTNAME=	Role-Tiny-1.001004
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Role-Tiny/
 COMMENT=	Roles. Like a nouvelle cuisine portion size slice of Moose.
 LICENSE=	${PERL5_LICENSE}
+
+CONFLICTS+=	p5-Moo<0.009014
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
