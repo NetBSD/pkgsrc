@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2011/02/08 23:09:17 asau Exp $
+$NetBSD: distinfo,v 1.12 2012/07/18 09:03:37 asau Exp $
 
-SHA1 (phpPgAdmin-5.0.2.tar.bz2) = 14fc59074e23ea57697ccd9c031936f853838bba
-RMD160 (phpPgAdmin-5.0.2.tar.bz2) = 13373330d2d118dff6243db49edc8ab3eef31ab8
-Size (phpPgAdmin-5.0.2.tar.bz2) = 776276 bytes
+SHA1 (phpPgAdmin-5.0.4.tar.bz2) = fb8cad25b33de7c777f1c69287e7f264a9e22b5f
+RMD160 (phpPgAdmin-5.0.4.tar.bz2) = d3cad1238e9c89b7e20b5032cf932cd6e15a9b8d
+Size (phpPgAdmin-5.0.4.tar.bz2) = 778547 bytes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/04/15 22:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/07/18 09:03:37 asau Exp $
 
-DISTNAME=	phpPgAdmin-5.0.2
+DISTNAME=	phpPgAdmin-5.0.4
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
-PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,10 +19,12 @@ MESSAGE_SUBST+=	EGDIR=${EGDIR}
 NO_BUILD=	YES
 
 PHPPGBASE=	${PREFIX}/share/phppgadmin
-PHPPGHIER=	conf help sql xloadtree \
-		libraries/adodb/drivers libraries/adodb/lang \
-		classes/database classes/plugins lang/recoded \
-		images/themes/default themes/default
+PHPPGHIER=	conf classes/database classes/plugins help \
+		images/themes/cappuccino images/themes/default \
+		js lang/recoded \
+		libraries/adodb/drivers libraries/adodb/lang libraries/js \
+		sql themes/cappuccino themes/default themes/gotar \
+		xloadtree
 
 EGDIR=		${PREFIX}/share/examples/phppgadmin
 DOCDIR=		${PREFIX}/share/doc/phppgadmin
@@ -57,10 +58,15 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/classes/*.* ${DESTDIR}${PHPPGBASE}/classes
 	${INSTALL_SCRIPT} ${WRKSRC}/classes/database/* \
 		${DESTDIR}${PHPPGBASE}/classes/database
+	${INSTALL_SCRIPT} ${WRKSRC}/classes/plugins/* \
+		${DESTDIR}${PHPPGBASE}/classes/plugins
 	${INSTALL_SCRIPT} ${WRKSRC}/help/* ${DESTDIR}${PHPPGBASE}/help
-	${INSTALL_SCRIPT} ${WRKSRC}/sql/* ${DESTDIR}${PHPPGBASE}/sql
+	${INSTALL_DATA} ${WRKSRC}/images/themes/cappuccino/*.png \
+		${DESTDIR}${PHPPGBASE}/images/themes/cappuccino
 	${INSTALL_DATA} ${WRKSRC}/images/themes/default/*.png \
 		${DESTDIR}${PHPPGBASE}/images/themes/default
+	${INSTALL_DATA} ${WRKSRC}/js/*.js \
+		${DESTDIR}${PHPPGBASE}/js
 	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.* ${DESTDIR}${PHPPGBASE}/lang
 	${INSTALL_SCRIPT} ${WRKSRC}/lang/recoded/*.* ${DESTDIR}${PHPPGBASE}/lang/recoded
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/*.php ${DESTDIR}${PHPPGBASE}/libraries
@@ -70,10 +76,22 @@ do-install:
 		${DESTDIR}${PHPPGBASE}/libraries/adodb
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/adodb/drivers/* \
 		${DESTDIR}${PHPPGBASE}/libraries/adodb/drivers
-	${INSTALL_DATA} ${WRKSRC}/themes/default/global.css \
-		${DESTDIR}${PHPPGBASE}/themes/default
+	${INSTALL_SCRIPT} ${WRKSRC}/libraries/adodb/lang/* \
+		${DESTDIR}${PHPPGBASE}/libraries/adodb/lang
+	${INSTALL_DATA} ${WRKSRC}/libraries/js/*.js \
+		${DESTDIR}${PHPPGBASE}/libraries/js
+	${INSTALL_DATA} ${WRKSRC}/sql/* ${DESTDIR}${PHPPGBASE}/sql
+
+	${INSTALL_DATA} ${WRKSRC}/themes/global.css \
+		${DESTDIR}${PHPPGBASE}/themes
+	${INSTALL_SCRIPT} ${WRKSRC}/themes/*.php \
+		${DESTDIR}${PHPPGBASE}/themes
+	for theme in cappuccino default gotar; do \
+		${INSTALL_DATA} ${WRKSRC}/themes/$$theme/global.css \
+			${DESTDIR}${PHPPGBASE}/themes/$$theme; done
 	${INSTALL_DATA} ${WRKSRC}/xloadtree/*.* \
 		${DESTDIR}${PHPPGBASE}/xloadtree
+
 	${INSTALL_DATA} ${WRKSRC}/conf/config.inc.php-dist ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/apache.conf ${DESTDIR}${EGDIR}
 
