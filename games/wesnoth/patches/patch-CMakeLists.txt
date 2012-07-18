@@ -1,0 +1,38 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/07/18 06:37:41 adam Exp $
+
+Don't look for X11 on Mac OS X
+Fix MANDIR
+
+--- CMakeLists.txt.orig	2012-05-01 21:08:26.000000000 +0000
++++ CMakeLists.txt
+@@ -27,7 +27,9 @@ find_package(Gettext)
+ # src/gettext.cpp since it includes libintl.h)
+ find_package(Libintl REQUIRED)
+ 
++if(NOT APPLE)
+ find_package(X11)
++endif(NOT APPLE)
+ 
+ if(NOT MSVC)
+ 	#needed to get some SDL defines in... (as of rev31694 -D_GNU_SOURCE=1 is required!)
+@@ -55,7 +57,7 @@ include(SearchForStuff)
+ set(BINDIR "bin" CACHE STRING "Where to install binaries")
+ set(DATAROOTDIR "${CMAKE_INSTALL_PREFIX}/share" CACHE STRING "Sets the root of data directories to a non-default location")
+ set(DOCDIR "${DATAROOTDIR}/doc/wesnoth" CACHE STRING "Sets the doc directory to a non-default location.")
+-set(MANDIR "${DATAROOTDIR}/man" CACHE STRING "Where to install manpages")
++set(MANDIR "man" CACHE STRING "Where to install manpages")
+ set(DATADIRNAME "wesnoth" CACHE STRING "change the name of the directory for the read-only architecture-independent game data")
+ set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}" CACHE STRING "change the dir where binaries are placed right at compile time")
+ set(LOCALEDIR "translations" CACHE STRING "change the name of the locale data directory to a non-default name")
+@@ -307,11 +309,6 @@ install(FILES l10n-track DESTINATION ${D
+ # uninstall
+ #
+ 
+-configure_file(
+-	"${CMAKE_MODULE_PATH}/uninstall.cmake.in"
+-	"${CMAKE_CURRENT_BINARY_DIR}/uninstall.cmake"
+-	IMMEDIATE @ONLY
+-)
+ 
+ add_custom_target(uninstall
+ 	"${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/uninstall.cmake"
