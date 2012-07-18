@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/01/24 09:11:13 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2012/07/18 11:52:28 gdt Exp $
 #
 
 DISTNAME=	suck-4.3.2
@@ -6,8 +6,9 @@ PKGREVISION=	7
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/news/transport/}
 
-MAINTAINER=	drankin@bohemians.lexington.ky.us
-HOMEPAGE=	http://home.comcast.net/~bobyetman/
+MAINTAINER=	pkgsrc-users@netbsd.org
+#failed 20120718
+#HOMEPAGE=	http://home.comcast.net/~bobyetman/
 COMMENT=	Feed a local news server without a dedicated newsfeed
 
 PKG_DESTDIR_SUPPORT=	user-destdir
