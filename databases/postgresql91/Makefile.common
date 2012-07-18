@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2012/07/01 19:49:24 morr Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/07/18 10:19:32 jperkin Exp $
 #
 # used by databases/postgresql91-adminpack/Makefile
 # used by databases/postgresql91-client/Makefile
@@ -68,6 +68,12 @@ CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--without-zlib
+
+# sys/ucred.h shouldn't be included on Solaris, causes conflicts between
+# procfs and largefile.
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		ac_cv_header_sys_ucred_h=no
+.endif
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
