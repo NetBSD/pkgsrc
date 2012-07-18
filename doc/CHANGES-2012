@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2308 2012/07/18 09:12:32 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2309 2012/07/18 09:18:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3571,3 +3571,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Moose to 2.0603 [sno 2012-07-18]
 	Updated databases/phppgadmin to 5.0.4 [asau 2012-07-18]
 	Updated devel/p5-Data-Visitor to 0.28 [sno 2012-07-18]
+	Updated devel/p5-Moose-Autobox to 0.12 [sno 2012-07-18]
