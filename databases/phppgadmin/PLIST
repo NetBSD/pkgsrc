@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/02/08 23:09:17 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/07/18 09:03:37 asau Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -30,6 +30,8 @@ share/phppgadmin/classes/database/Postgres81.php
 share/phppgadmin/classes/database/Postgres82.php
 share/phppgadmin/classes/database/Postgres83.php
 share/phppgadmin/classes/database/Postgres84.php
+share/phppgadmin/classes/plugins/Plugin.php
+share/phppgadmin/classes/plugins/Slony.php
 share/phppgadmin/colproperties.php
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
@@ -52,6 +54,13 @@ share/phppgadmin/help/PostgresDoc83.php
 share/phppgadmin/help/PostgresDoc84.php
 share/phppgadmin/help/PostgresDoc90.php
 share/phppgadmin/history.php
+share/phppgadmin/images/themes/cappuccino/Lminus.png
+share/phppgadmin/images/themes/cappuccino/Lplus.png
+share/phppgadmin/images/themes/cappuccino/Tminus.png
+share/phppgadmin/images/themes/cappuccino/Tplus.png
+share/phppgadmin/images/themes/cappuccino/inputbckg.png
+share/phppgadmin/images/themes/cappuccino/openListe.png
+share/phppgadmin/images/themes/cappuccino/title.png
 share/phppgadmin/images/themes/default/AddArguments.png
 share/phppgadmin/images/themes/default/Admin.png
 share/phppgadmin/images/themes/default/Aggregate.png
@@ -191,6 +200,9 @@ share/phppgadmin/indexes.js
 share/phppgadmin/indexes.php
 share/phppgadmin/info.php
 share/phppgadmin/intro.php
+share/phppgadmin/js/ac_insert_row.js
+share/phppgadmin/js/database.js
+share/phppgadmin/js/display.js
 share/phppgadmin/lang/afrikaans.php
 share/phppgadmin/lang/arabic.php
 share/phppgadmin/lang/catalan.php
@@ -267,6 +279,29 @@ share/phppgadmin/libraries/adodb/drivers/adodb-postgres.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres64.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres7.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres8.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-ar.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-bg.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-bgutf8.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-ca.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-cn.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-cz.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-da.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-de.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-en.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-es.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-esperanto.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-fa.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-fr.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-hu.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-it.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-nl.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-pl.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-pt-br.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-ro.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-ru1251.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-sv.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb-uk1251.inc.php
+share/phppgadmin/libraries/adodb/lang/adodb_th.inc.php
 share/phppgadmin/libraries/adodb/license.txt
 share/phppgadmin/libraries/adodb/readme.txt
 share/phppgadmin/libraries/adodb/toexport.inc.php
@@ -274,6 +309,7 @@ share/phppgadmin/libraries/adodb/tohtml.inc.php
 share/phppgadmin/libraries/decorator.inc.php
 share/phppgadmin/libraries/errorhandler.inc.php
 share/phppgadmin/libraries/highlight.php
+share/phppgadmin/libraries/js/jquery.js
 share/phppgadmin/libraries/lib.inc.php
 share/phppgadmin/links.js
 share/phppgadmin/login.php
@@ -298,7 +334,11 @@ share/phppgadmin/tables.js
 share/phppgadmin/tables.php
 share/phppgadmin/tablespaces.php
 share/phppgadmin/tblproperties.php
+share/phppgadmin/themes/cappuccino/global.css
 share/phppgadmin/themes/default/global.css
+share/phppgadmin/themes/global.css
+share/phppgadmin/themes/gotar/global.css
+share/phppgadmin/themes/themes.php
 share/phppgadmin/triggers.php
 share/phppgadmin/types.php
 share/phppgadmin/users.php
@@ -306,6 +346,4 @@ share/phppgadmin/viewproperties.php
 share/phppgadmin/views.php
 share/phppgadmin/xloadtree/xloadtree2.js
 share/phppgadmin/xloadtree/xtree2.js
-@pkgdir share/phppgadmin/libraries/adodb/lang
 @pkgdir share/phppgadmin/conf
-@pkgdir share/phppgadmin/classes/plugins
