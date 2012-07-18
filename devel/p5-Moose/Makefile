@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2012/02/19 22:50:14 abs Exp $
+# $NetBSD: Makefile,v 1.56 2012/07/18 08:41:17 sno Exp $
 
-DISTNAME=	Moose-2.0402
-PKGREVISION=	1
+DISTNAME=	Moose-2.0603
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -20,12 +19,12 @@ DEPENDS+=	p5-Eval-Closure>=0.04:../../devel/p5-Eval-Closure #XXX
 DEPENDS+=	p5-List-MoreUtils>=0.28:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-MRO-Compat>=0.05:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Package-DeprecationManager>=0.11:../../devel/p5-Package-DeprecationManager
-DEPENDS+=	p5-Package-Stash>=0.21:../../devel/p5-Package-Stash
-DEPENDS+=	p5-Package-Stash-XS>=0.18:../../devel/p5-Package-Stash-XS
+DEPENDS+=	p5-Package-Stash>=0.32:../../devel/p5-Package-Stash
+DEPENDS+=	p5-Package-Stash-XS>=0.24:../../devel/p5-Package-Stash-XS
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Exporter>=0.980:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Name>=0.05:../../devel/p5-Sub-Name
-DEPENDS+=	p5-Task-Weaken>=0:../../devel/p5-Task-Weaken
+DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
 # Note: Moose can take advantage of PartialDump, but as PartialDump depends
 # on Moose, we cannot add it to DEPENDS
@@ -33,7 +32,7 @@ DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
 BUILD_DEPENDS+= p5-Test-Fatal>=0.05:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+= p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
 
-CONFLICTS+=	p5-Class-MOP>=0
+CONFLICTS+=	p5-Class-MOP-[0-9]*
 
 # t/200_examples/002_example_Moose_POOP.t
 BUILD_DEPENDS+= p5-DBM-Deep-[0-9]*:../../databases/p5-DBM-Deep
@@ -62,7 +61,20 @@ BUILD_DEPENDS+= p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 # t/300_immutable/013_immutable_roundtrip.t
 # t/030_roles/019_build.t
 # t/000_recipes/moose_cookbook_extending_recipe2.t
+
+# other documented develop dependencies
+BUILD_DEPENDS+=	p5-Algorithm-C3-[0-9]*:../../devel/p5-Algorithm-C3
+BUILD_DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
+BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+BUILD_DEPENDS+=	p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
+BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
+# missing Test::DependentModules>=0.13
+BUILD_DEPENDS+=	p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
+BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
 BUILD_DEPENDS+= p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+# missing Test::Spelling
+BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 #BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage # xt/author/pod_coverage.t
 #BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod # xt/author/pod.t
 #BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
