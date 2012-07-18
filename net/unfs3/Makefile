@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/12/21 17:13:48 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/18 20:00:45 cheusov Exp $
 #
 
 DISTNAME=	unfs3-0.9.22
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unfs3/}
 
