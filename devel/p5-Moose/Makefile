@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2012/07/18 08:41:17 sno Exp $
+# $NetBSD: Makefile,v 1.57 2012/07/18 08:52:45 sno Exp $
 
 DISTNAME=	Moose-2.0603
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -64,7 +65,8 @@ BUILD_DEPENDS+= p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 # other documented develop dependencies
 BUILD_DEPENDS+=	p5-Algorithm-C3-[0-9]*:../../devel/p5-Algorithm-C3
-BUILD_DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
+# devel/p5-Data-Visitor depends on devel/p5-Moose
+# BUILD_DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
 BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 BUILD_DEPENDS+=	p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
 BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
