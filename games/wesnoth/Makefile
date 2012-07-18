@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2012/07/02 13:37:37 adam Exp $
+# $NetBSD: Makefile,v 1.76 2012/07/18 06:37:40 adam Exp $
 
-DISTNAME=	wesnoth-1.8.6
-PKGREVISION=	7
+DISTNAME=	wesnoth-1.10.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,37 +14,43 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#USE_CMAKE=		yes
+USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf autoheader automake pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+USE_TOOLS+=		perl:run msgfmt
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
 REPLACE_PERL+=		utils/wesnothd.pl
-USE_TOOLS+=		perl:run msgfmt
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	cmake/FindFriBiDi.cmake
+SUBST_MESSAGE.prefix=	Fixing search path.
+SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-build
-SUBST_FILES.python+=	data/tools/expand-terrain-macros.py
-SUBST_FILES.python+=	data/tools/scoutDefault.py
-SUBST_FILES.python+=	data/tools/wesnoth/wescamp.py
-SUBST_FILES.python+=	data/tools/wesnoth/wmldata.py
-SUBST_FILES.python+=	data/tools/wesnoth/wmlparser.py
-SUBST_FILES.python+=	utils/ai_test/ai_test.py
-SUBST_FILES.python+=	utils/mediawiki.py
-SUBST_FILES.python+=	utils/pofix.py
-SUBST_FILES.python+=	utils/test_libsvn.py
-SUBST_FILES.python+=	utils/unused_functions.py
-SUBST_FILES.python+=	utils/wiki_grabber.py
+SUBST_FILES.python+=	data/tools/*.py
+SUBST_FILES.python+=	data/tools/wesnoth/*.py
+SUBST_FILES.python+=	data/tools/wml*
+SUBST_FILES.python+=	data/tools/about_cfg_to_wiki
+SUBST_FILES.python+=	data/tools/extractbindings
+SUBST_FILES.python+=	data/tools/imgcheck
+SUBST_FILES.python+=	data/tools/journeylifter
+SUBST_FILES.python+=	data/tools/trackplacer
+SUBST_FILES.python+=	data/tools/wesnoth_addon_manager
+SUBST_FILES.python+=	data/tools/unit_tree/TeamColorizer
+SUBST_FILES.python+=	data/tools/unit_tree/overview.py
+SUBST_FILES.python+=	utils/ai_test/*.py
+SUBST_FILES.python+=	utils/*.py
 SUBST_MESSAGE.python=	Fixing path to python.
-# Best we can do without pulling in a python dependency.
-SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.6,'
-SUBST_SED.python+=	-e 's,/bin/env.*python,${PREFIX}/bin/python2.6,'
-SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.6,'
+# Best we can do without pulling in Python dependency
+SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.7,'
+SUBST_SED.python+=	-e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.7,'
+SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.7,'
 
 REPLACE_RUBY=		data/tools/terrain2wiki.rb
 .include "../../lang/ruby/replace.mk"
@@ -58,9 +63,12 @@ REPLACE_SH+=		data/tools/castle-cutter/mk-all-castles.sh
 USE_TOOLS+=		gmake
 .endif
 
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal -I m4; autoheader; automake -a --foreign -i; autoconf
+PLIST_VARS+=		icons
+
+.if ${OPSYS} != "Darwin"
+PLIST.icons=		yes
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.endif
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 .include "../../audio/SDL_mixer/buildlink3.mk"
@@ -78,5 +86,4 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.14.8
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
