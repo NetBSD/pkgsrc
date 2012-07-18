@@ -1,11 +1,11 @@
-$NetBSD: patch-storage_src_Makefile.in,v 1.1 2012/04/26 13:30:30 ryoon Exp $
+$NetBSD: patch-storage_src_Makefile.in,v 1.2 2012/07/18 16:10:06 ryoon Exp $
 
 * Support jemalloc on *BSD
 
---- storage/src/Makefile.in.orig	2012-04-04 04:25:45.000000000 +0000
+--- storage/src/Makefile.in.orig	2012-07-04 16:04:12.000000000 +0000
 +++ storage/src/Makefile.in
-@@ -55,6 +55,22 @@ ifeq ($(OS_ARCH),Linux)
- DEFINES += -DXP_LINUX
+@@ -67,6 +67,22 @@ DEFINES += -DMOZ_STORAGE_MEMORY
+ endif
  endif
  
 +ifeq ($(OS_ARCH),DragonFly)
