@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2010/01/07 08:38:43 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/07/18 23:23:20 marino Exp $
 
 DISTNAME=	fMSX351
 PKGNAME=	fmsx-3.5.1
+PKGREVISION=	1
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://fms.komkon.org/fMSX/
 EXTRACT_SUFX=	.zip
