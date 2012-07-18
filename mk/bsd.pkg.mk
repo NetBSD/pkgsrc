@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1981 2012/05/24 11:34:15 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1982 2012/07/18 12:29:12 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -601,11 +601,9 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 #	The additional flags that are passed to the make process.
 #
 
-# XXX: Shouldn't the $${PATH} be ${PATH} here? This may be related to
-# PR 34470.
 _ROOT_CMD=	cd ${.CURDIR} &&					\
 		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV}				\
-			PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}		\
+			PATH=${_PATH_ORIG:Q}:${SU_CMD_PATH_APPEND:Q}	\
 		${MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes		\
 			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\
 			su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}
