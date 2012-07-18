@@ -1,4 +1,8 @@
-$NetBSD: patch-src_netsys_netsys__c.c,v 1.1 2012/07/17 17:45:23 marino Exp $
+$NetBSD: patch-src_netsys_netsys__c.c,v 1.2 2012/07/18 21:56:05 wiz Exp $
+
+DragonFly doesn't define AT_SYMLINK_FOLLOW.  The added patch will
+appropriately disable linkat support.
+https://sourceforge.net/tracker/?func=detail&aid=3545170&group_id=19774&atid=319774
 
 --- src/netsys/netsys_c.c.orig	2012-02-29 18:02:52.000000000 +0000
 +++ src/netsys/netsys_c.c
