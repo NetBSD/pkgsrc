@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2303 2012/07/18 06:38:28 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2304 2012/07/18 07:54:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3566,3 +3566,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkglint to 4.119 [wiz 2012-07-17]
 	Updated sysutils/ipa to 2.1.2 [asau 2012-07-17]
 	Updated games/wesnoth to 1.10.3 [adam 2012-07-18]
+	Added devel/p5-Role-Tiny version 1.001004 [sno 2012-07-18]
