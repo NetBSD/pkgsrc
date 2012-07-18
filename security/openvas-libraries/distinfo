@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2011/01/01 12:13:10 obache Exp $
+$NetBSD: distinfo,v 1.4 2012/07/18 09:52:44 marino Exp $
 
 SHA1 (openvas-libraries-2.0.0.tar.gz) = e3b5614e8fa4721ad93a9eb483f4f0a23242d84b
 RMD160 (openvas-libraries-2.0.0.tar.gz) = c7365d81289bca625ae984fceab901ced0626ce0
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 16d1e43ec3f098b86019e54e189a4b66a87d8b64
 SHA1 (patch-ah) = 097d76cced6ef5f5b909e1b9ab9fb9e0815b876a
 SHA1 (patch-ai) = a60270be1eccc5bfc2b8bd36ed969f498a9c1e05
 SHA1 (patch-aj) = ab833a1146f2e9962d9ecdeda0c84a722ff49eb6
+SHA1 (patch-libopenvas_network.c) = b9946bd479bc9053bb7ca9f98b73c42a910f96e3
