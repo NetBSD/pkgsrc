@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2310 2012/07/18 12:11:05 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2311 2012/07/18 16:12:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3576,3 +3576,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-docs to 1.7.11.2 [adam 2012-07-18]
 	Updated devel/scmgit to 1.7.11.2 [adam 2012-07-18]
 	Updated www/gitweb to 1.7.11.2 [adam 2012-07-18]
+	Updated devel/xulrunner to 14.0.1 [ryoon 2012-07-18]
+	Updated www/firefox to 14.0.1 [ryoon 2012-07-18]
