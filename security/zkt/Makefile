@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/16 22:55:25 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2012/07/18 20:44:38 marino Exp $
 #
 
 DISTNAME=	zkt-1.1.0
@@ -17,6 +17,17 @@ CONFIGURE_ARGS+=	--enable-configpath=${PKG_SYSCONFDIR}/zkt
 #CONFIGURE_ARGS+=	--enable-configpath=/var/chroot/named/etc
 
 INSTALLATION_DIRS=	sbin share/doc/zkt ${PKGMANDIR}/man8 etc/zkt
+
+# NetBSD has bind in base, util path=/usr/sbin
+# DragonFly uses pkgsrc bind, so the util path must be explicitly defined
+# Without any global bind package to point to, pick the latest one and
+# hope one of the other 3 bind packages isn't already installed because
+# this one will fail to build due to conflict in that case.
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--enable-bind_util_path=${PREFIX}/sbin
+.include "../../net/bind99/buildlink3.mk"
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zkt-conf \
