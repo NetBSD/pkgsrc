@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2309 2012/07/18 09:18:40 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2310 2012/07/18 12:11:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3572,3 +3572,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/phppgadmin to 5.0.4 [asau 2012-07-18]
 	Updated devel/p5-Data-Visitor to 0.28 [sno 2012-07-18]
 	Updated devel/p5-Moose-Autobox to 0.12 [sno 2012-07-18]
+	Updated devel/scmgit-base to 1.7.11.2 [adam 2012-07-18]
+	Updated devel/scmgit-docs to 1.7.11.2 [adam 2012-07-18]
+	Updated devel/scmgit to 1.7.11.2 [adam 2012-07-18]
+	Updated www/gitweb to 1.7.11.2 [adam 2012-07-18]
