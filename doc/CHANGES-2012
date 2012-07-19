@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2315 2012/07/19 17:34:47 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2316 2012/07/19 17:54:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3582,3 +3582,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/squid31 to 3.1.20 [adam 2012-07-18]
 	Updated www/firefox-l10n to 14.0.1 [ryoon 2012-07-19]
 	Updated www/seamonkey to 2.11 [ryoon 2012-07-19]
+	Updated www/seamonkey-l10n to 2.11 [ryoon 2012-07-19]
