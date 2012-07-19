@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/06/12 22:47:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/07/19 18:14:51 ryoon Exp $
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/alerts/notificationNames.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/autoconfig/autoconfig.properties
@@ -55,6 +55,7 @@ lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global-region/region.properties
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/about.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/aboutRights.dtd
@@ -207,6 +208,7 @@ lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/cloudfile/addAccountDialog.dtd
@@ -426,6 +428,7 @@ lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global-region/region.properties
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/about.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/aboutRights.dtd
@@ -578,6 +581,7 @@ lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/chat.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/cloudfile/addAccountDialog.dtd
@@ -797,6 +801,7 @@ lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/l
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global-region/region.properties
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/about.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutRights.dtd
@@ -949,6 +954,7 @@ lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/l
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/chat.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/cloudfile/addAccountDialog.dtd
@@ -1168,6 +1174,7 @@ lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global-region/region.properties
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/about.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/aboutRights.dtd
@@ -1320,6 +1327,7 @@ lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/chat.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/cloudfile/addAccountDialog.dtd
@@ -1539,6 +1547,7 @@ lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global-region/region.properties
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/about.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/aboutRights.dtd
@@ -1691,6 +1700,7 @@ lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/cloudfile/addAccountDialog.dtd
@@ -1910,6 +1920,7 @@ lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global-region/region.properties
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/about.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/aboutRights.dtd
@@ -2062,6 +2073,7 @@ lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/chat.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/cloudfile/addAccountDialog.dtd
@@ -2281,6 +2293,7 @@ lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global-region/region.properties
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/about.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/aboutRights.dtd
@@ -2433,6 +2446,7 @@ lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/chat.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/cloudfile/addAccountDialog.dtd
@@ -2652,6 +2666,7 @@ lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global-region/region.properties
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/about.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/aboutRights.dtd
@@ -2804,6 +2819,7 @@ lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/chat.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/cloudfile/addAccountDialog.dtd
@@ -3023,6 +3039,7 @@ lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global-region/region.properties
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/about.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/aboutRights.dtd
@@ -3175,6 +3192,7 @@ lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/chat.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/cloudfile/addAccountDialog.dtd
@@ -3394,6 +3412,7 @@ lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/l
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global-region/region.properties
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/about.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutRights.dtd
@@ -3546,6 +3565,7 @@ lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/l
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/chat.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/cloudfile/addAccountDialog.dtd
@@ -3765,6 +3785,7 @@ lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/l
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global-region/region.properties
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/about.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/aboutRights.dtd
@@ -3917,6 +3938,7 @@ lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/l
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/chat.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/cloudfile/addAccountDialog.dtd
@@ -4136,6 +4158,7 @@ lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/l
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global-region/region.properties
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/about.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutRights.dtd
@@ -4288,6 +4311,7 @@ lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/l
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/chat.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/cloudfile/addAccountDialog.dtd
@@ -4507,6 +4531,7 @@ lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/l
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global-region/region.properties
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/about.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutRights.dtd
@@ -4659,6 +4684,7 @@ lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/l
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/chat.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/cloudfile/addAccountDialog.dtd
@@ -4878,6 +4904,7 @@ lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global-region/region.properties
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/about.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/aboutRights.dtd
@@ -5030,6 +5057,7 @@ lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/chat.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/cloudfile/addAccountDialog.dtd
@@ -5249,6 +5277,7 @@ lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global-region/region.properties
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/about.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/aboutRights.dtd
@@ -5401,6 +5430,7 @@ lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/chat.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/cloudfile/addAccountDialog.dtd
@@ -5620,6 +5650,7 @@ lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global-region/region.properties
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/about.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/aboutRights.dtd
@@ -5772,6 +5803,7 @@ lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/chat.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/cloudfile/addAccountDialog.dtd
@@ -5991,6 +6023,7 @@ lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global-region/region.properties
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/about.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/aboutRights.dtd
@@ -6143,6 +6176,7 @@ lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/chat.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/cloudfile/addAccountDialog.dtd
@@ -6362,6 +6396,7 @@ lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/l
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global-region/region.properties
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/about.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutRights.dtd
@@ -6514,6 +6549,7 @@ lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/l
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/chat.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/cloudfile/addAccountDialog.dtd
@@ -6733,6 +6769,7 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/l
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global-region/region.properties
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/about.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutRights.dtd
@@ -6885,6 +6922,7 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/l
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/cloudfile/addAccountDialog.dtd
@@ -7104,6 +7142,7 @@ lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global-region/region.properties
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/about.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/aboutRights.dtd
@@ -7256,6 +7295,7 @@ lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/chat.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/cloudfile/addAccountDialog.dtd
@@ -7475,6 +7515,7 @@ lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global-region/region.properties
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/about.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/aboutRights.dtd
@@ -7627,6 +7668,7 @@ lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/chat.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/cloudfile/addAccountDialog.dtd
@@ -7846,6 +7888,7 @@ lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global-region/region.properties
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/about.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/aboutRights.dtd
@@ -7998,6 +8041,7 @@ lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/chat.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/cloudfile/addAccountDialog.dtd
@@ -8217,6 +8261,7 @@ lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global-region/region.properties
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/about.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/aboutRights.dtd
@@ -8369,6 +8414,7 @@ lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/chat.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/cloudfile/addAccountDialog.dtd
@@ -8588,6 +8634,7 @@ lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global-region/region.properties
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/about.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/aboutRights.dtd
@@ -8740,6 +8787,7 @@ lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/chat.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/cloudfile/addAccountDialog.dtd
@@ -8959,6 +9007,7 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global-region/region.properties
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/about.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/aboutRights.dtd
@@ -9111,6 +9160,7 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/cloudfile/addAccountDialog.dtd
@@ -9330,6 +9380,7 @@ lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global-region/region.properties
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/about.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/aboutRights.dtd
@@ -9482,6 +9533,7 @@ lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/cloudfile/addAccountDialog.dtd
@@ -9701,6 +9753,7 @@ lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global-region/region.properties
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/about.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/aboutRights.dtd
@@ -9853,6 +9906,7 @@ lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/chat.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/cloudfile/addAccountDialog.dtd
@@ -10072,6 +10126,7 @@ lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/l
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global-region/region.properties
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/about.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutRights.dtd
@@ -10224,6 +10279,7 @@ lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/l
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/chat.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/cloudfile/addAccountDialog.dtd
@@ -10443,6 +10499,7 @@ lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global-region/region.properties
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/about.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/aboutRights.dtd
@@ -10595,6 +10652,7 @@ lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/chat.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/cloudfile/addAccountDialog.dtd
@@ -10814,6 +10872,7 @@ lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/l
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global-region/region.properties
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/about.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutRights.dtd
@@ -10966,6 +11025,7 @@ lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/l
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/chat.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/cloudfile/addAccountDialog.dtd
@@ -11185,6 +11245,7 @@ lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/l
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global-region/region.properties
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/about.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutRights.dtd
@@ -11337,6 +11398,7 @@ lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/l
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/chat.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/cloudfile/addAccountDialog.dtd
@@ -11556,6 +11618,7 @@ lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/l
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global-region/region.properties
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/about.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutRights.dtd
@@ -11708,6 +11771,7 @@ lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/l
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/chat.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/cloudfile/addAccountDialog.dtd
@@ -11927,6 +11991,7 @@ lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global-region/region.properties
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/about.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/aboutRights.dtd
@@ -12079,6 +12144,7 @@ lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/chat.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/cloudfile/addAccountDialog.dtd
@@ -12298,6 +12364,7 @@ lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global-region/region.properties
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/about.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/aboutRights.dtd
@@ -12450,6 +12517,7 @@ lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/cloudfile/addAccountDialog.dtd
@@ -12669,6 +12737,7 @@ lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global-region/region.properties
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/about.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/aboutRights.dtd
@@ -12821,6 +12890,7 @@ lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/chat.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/cloudfile/addAccountDialog.dtd
@@ -13040,6 +13110,7 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global-region/region.properties
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/about.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/aboutRights.dtd
@@ -13192,6 +13263,7 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/chat.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/cloudfile/addAccountDialog.dtd
@@ -13411,6 +13483,7 @@ lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global-region/region.properties
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/about.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/aboutRights.dtd
@@ -13563,6 +13636,7 @@ lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/chat.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/cloudfile/addAccountDialog.dtd
@@ -13782,6 +13856,7 @@ lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global-region/region.properties
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/about.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/aboutRights.dtd
@@ -13934,6 +14009,7 @@ lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/chat.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/cloudfile/addAccountDialog.dtd
@@ -14153,6 +14229,7 @@ lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/l
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global-region/region.properties
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/about.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutRights.dtd
@@ -14305,6 +14382,7 @@ lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/l
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/chat.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/cloudfile/addAccountDialog.dtd
@@ -14524,6 +14602,7 @@ lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/l
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global-region/region.properties
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/about.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutRights.dtd
@@ -14676,6 +14755,7 @@ lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/l
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/chat.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/cloudfile/addAccountDialog.dtd
@@ -14895,6 +14975,7 @@ lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global-region/region.properties
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/about.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/aboutRights.dtd
@@ -15047,6 +15128,7 @@ lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/chat.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/cloudfile/addAccountDialog.dtd
@@ -15266,6 +15348,7 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global-region/region.properties
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/about.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/aboutRights.dtd
@@ -15418,6 +15501,7 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/chat.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/cloudfile/addAccountDialog.dtd
@@ -15637,6 +15721,7 @@ lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global-region/region.properties
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/about.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/aboutRights.dtd
@@ -15789,6 +15874,7 @@ lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/chat.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/cloudfile/addAccountDialog.dtd
@@ -16008,6 +16094,7 @@ lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/l
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global-region/region.properties
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/about.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutRights.dtd
@@ -16160,6 +16247,7 @@ lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/l
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/chat.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/cloudfile/addAccountDialog.dtd
@@ -16379,6 +16467,7 @@ lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/l
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global-platform/win/intl.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global-platform/win/platformKeys.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global-region/region.properties
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/AccessFu.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/about.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutAbout.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutRights.dtd
@@ -16531,6 +16620,7 @@ lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/l
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/chat.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/chat.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/cloudfile/Dropbox/management.dtd
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/cloudfile/Dropbox/settings.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/cloudfile/addAccountDialog.dtd
