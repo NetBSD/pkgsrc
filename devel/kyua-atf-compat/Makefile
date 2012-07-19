@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/10 22:13:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/19 18:30:18 jmmv Exp $
 #
 
 DISTNAME=	kyua-atf-compat-0.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://kyua.googlecode.com/files/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/kyua/
 COMMENT=	Kyua (automated testing framework) - ATF compatibility tools
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
 DEPENDS=	kyua-cli>=0.5:../../devel/kyua-cli
 

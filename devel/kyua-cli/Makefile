@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/10 22:09:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/19 18:30:18 jmmv Exp $
 #
 
 DISTNAME=	kyua-cli-0.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://kyua.googlecode.com/files/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/kyua/
 COMMENT=	Kyua (automated testing framework) - Command line interface
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
