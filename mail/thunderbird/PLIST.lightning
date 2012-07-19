@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.10 2012/06/12 19:37:48 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.11 2012/07/19 17:57:30 ryoon Exp $
 include/thunderbird/calBaseCID.h
 include/thunderbird/calIAlarm.h
 include/thunderbird/calIAlarmService.h
@@ -363,6 +363,7 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/install.rdf
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calAlarmUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calAuthUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calHashedArray.jsm
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calItemUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calIteratorUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calItipUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calPrintUtils.jsm
