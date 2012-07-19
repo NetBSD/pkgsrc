@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2313 2012/07/18 19:04:57 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2314 2012/07/19 17:24:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3580,3 +3580,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox to 14.0.1 [ryoon 2012-07-18]
 	Updated print/tex-texlive.infra to 2012 [minskim 2012-07-18]
 	Updated www/squid31 to 3.1.20 [adam 2012-07-18]
+	Updated www/firefox-l10n to 14.0.1 [ryoon 2012-07-19]
