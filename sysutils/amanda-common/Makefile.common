@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2012/05/20 11:13:35 sbd Exp $
+# $NetBSD: Makefile.common,v 1.31 2012/07/19 07:30:55 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -12,7 +12,7 @@ MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.amanda.org/
-LICENSE=		modified-bsd # basically equivalent
+LICENSE=		modified-bsd AND gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
