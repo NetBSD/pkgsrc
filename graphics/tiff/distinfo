@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.56 2012/06/20 21:07:14 wiz Exp $
+$NetBSD: distinfo,v 1.57 2012/07/19 21:41:45 wiz Exp $
 
 SHA1 (tiff-4.0.2.tar.gz) = d84b7b33a6cfb3d15ca386c8c16b05047f8b5352
 RMD160 (tiff-4.0.2.tar.gz) = 520c5a6d17d1b0c3957e3889b66eadce0accf53f
 Size (tiff-4.0.2.tar.gz) = 2022814 bytes
 SHA1 (patch-configure) = 0e86c6d69783333c03d6241e1824f68602f3c732
+SHA1 (patch-tools_tiff2pdf.c) = bb2099fce1907e27ff646cf5f33ff3d275e5515a
