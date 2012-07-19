@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/01 15:29:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/19 18:30:18 jmmv Exp $
 #
 
 DISTNAME=	lutok-0.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://lutok.googlecode.com/files/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/kyua/
 COMMENT=	Lightweight C++ API for Lua
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
