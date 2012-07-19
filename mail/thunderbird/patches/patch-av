@@ -1,9 +1,9 @@
-$NetBSD: patch-av,v 1.5 2012/04/28 16:56:58 ryoon Exp $
+$NetBSD: patch-av,v 1.6 2012/07/19 17:57:30 ryoon Exp $
 
---- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-04-20 22:40:27.000000000 +0000
+--- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-07-12 15:25:19.000000000 +0000
 +++ mozilla/xulrunner/app/nsXULRunnerApp.cpp
-@@ -37,6 +37,27 @@
- 
+@@ -39,6 +39,27 @@
+ #include "nsXPCOMGlue.h"
  #include <stdio.h>
  #include <stdlib.h>
 +#include <sys/resource.h>
@@ -29,12 +29,12 @@ $NetBSD: patch-av,v 1.5 2012/04/28 16:56:58 ryoon Exp $
 +}
  #ifdef XP_WIN
  #include <windows.h>
- #endif
-@@ -274,6 +295,7 @@ private:
+ #define snprintf _snprintf
+@@ -284,6 +305,7 @@ private:
  
  int main(int argc, char* argv[])
  {
 +  netbsd_fixrlimit();
-   if (argc > 1 && (IsArg(argv[1], "h") ||
-                    IsArg(argv[1], "help") ||
-                    IsArg(argv[1], "?")))
+   char exePath[MAXPATHLEN];
+   nsresult rv = mozilla::BinaryPath::Get(argv[0], exePath);
+   if (NS_FAILED(rv)) {
