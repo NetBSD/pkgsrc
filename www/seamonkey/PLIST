@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.27 2012/06/14 11:27:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2012/07/19 17:33:28 ryoon Exp $
 bin/seamonkey
+include/seamonkey/ARIAGridAccessibleWrap.h
 include/seamonkey/AtkSocketAccessible.h
+include/seamonkey/BasicImplData.h
 include/seamonkey/BasicLayers.h
+include/seamonkey/BasicTiledThebesLayer.h
 include/seamonkey/CheckedInt.h
+include/seamonkey/CustomQS_Canvas.h
 include/seamonkey/CustomQS_Canvas2D.h
 include/seamonkey/CustomQS_WebGL.h
 include/seamonkey/DictionaryHelpers.h
-include/seamonkey/EGLUtils.h
 include/seamonkey/EventTracer.h
+include/seamonkey/FileBlockCache.h
 include/seamonkey/ForceDiscreteGPUHelperCGL.h
 include/seamonkey/FrameLayerBuilder.h
 include/seamonkey/FramePropertyTable.h
@@ -16,6 +20,7 @@ include/seamonkey/GLContextProvider.h
 include/seamonkey/GLContextProviderImpl.h
 include/seamonkey/GLContextSymbols.h
 include/seamonkey/GLDefs.h
+include/seamonkey/GLLibraryLoader.h
 include/seamonkey/GLXLibrary.h
 include/seamonkey/GfxInfoCollector.h
 include/seamonkey/IJSDebugger.h
@@ -39,6 +44,7 @@ include/seamonkey/SVGAttrValueWrapper.h
 include/seamonkey/TabMessageUtils.h
 include/seamonkey/VideoFrameContainer.h
 include/seamonkey/VideoUtils.h
+include/seamonkey/WebGLContext.h
 include/seamonkey/a11yGeneric.h
 include/seamonkey/amIInstallTrigger.h
 include/seamonkey/amIWebInstallListener.h
@@ -59,6 +65,7 @@ include/seamonkey/expat_external.h
 include/seamonkey/extIApplication.h
 include/seamonkey/ftpCore.h
 include/seamonkey/gc/Barrier.h
+include/seamonkey/gc/Root.h
 include/seamonkey/gc/Statistics.h
 include/seamonkey/gfx2DGlue.h
 include/seamonkey/gfx3DMatrix.h
@@ -94,6 +101,7 @@ include/seamonkey/gfxPointH3D.h
 include/seamonkey/gfxQuad.h
 include/seamonkey/gfxQuaternion.h
 include/seamonkey/gfxRect.h
+include/seamonkey/gfxReusableSurfaceWrapper.h
 include/seamonkey/gfxSharedImageSurface.h
 include/seamonkey/gfxSkipChars.h
 include/seamonkey/gfxTeeSurface.h
@@ -137,6 +145,8 @@ include/seamonkey/inIFlasher.h
 include/seamonkey/inISearchObserver.h
 include/seamonkey/inISearchProcess.h
 include/seamonkey/jArray.h
+${PLIST.jemalloc}include/seamonkey/jemalloc.h
+${PLIST.jemalloc}include/seamonkey/jemalloc_types.h
 include/seamonkey/js-config.h
 include/seamonkey/js.msg
 include/seamonkey/js/HashTable.h
@@ -148,6 +158,7 @@ include/seamonkey/js/Vector.h
 include/seamonkey/jsalloc.h
 include/seamonkey/jsapi.h
 include/seamonkey/jsatom.h
+include/seamonkey/jsatom.tbl
 include/seamonkey/jscell.h
 include/seamonkey/jsclass.h
 include/seamonkey/jsclist.h
@@ -167,13 +178,11 @@ include/seamonkey/jsproto.tbl
 include/seamonkey/jsproxy.h
 include/seamonkey/jsprvtd.h
 include/seamonkey/jspubtd.h
-include/seamonkey/jstypedarray.h
 include/seamonkey/jstypes.h
 include/seamonkey/jsutil.h
 include/seamonkey/jsval.h
 include/seamonkey/jsversion.h
 include/seamonkey/jswrapper.h
-include/seamonkey/jsxdrapi.h
 include/seamonkey/mar.h
 include/seamonkey/mar_cmdline.h
 include/seamonkey/mdb.h
@@ -199,7 +208,6 @@ include/seamonkey/mozIAsyncLivemarks.h
 include/seamonkey/mozIJSSubScriptLoader.h
 include/seamonkey/mozIPersonalDictionary.h
 include/seamonkey/mozIPlacesAutoComplete.h
-include/seamonkey/mozISanitizingSerializer.h
 include/seamonkey/mozISpellCheckingEngine.h
 include/seamonkey/mozISpellI18NManager.h
 include/seamonkey/mozISpellI18NUtil.h
@@ -244,6 +252,7 @@ include/seamonkey/mozilla/CondVar.h
 include/seamonkey/mozilla/DeadlockDetector.h
 include/seamonkey/mozilla/FileLocation.h
 include/seamonkey/mozilla/FileUtils.h
+include/seamonkey/mozilla/FloatingPoint.h
 include/seamonkey/mozilla/FunctionTimer.h
 include/seamonkey/mozilla/GenericFactory.h
 include/seamonkey/mozilla/GuardObjects.h
@@ -278,6 +287,7 @@ include/seamonkey/mozilla/RangedPtr.h
 include/seamonkey/mozilla/ReentrantMonitor.h
 include/seamonkey/mozilla/RefPtr.h
 include/seamonkey/mozilla/SSE.h
+include/seamonkey/mozilla/Scoped.h
 include/seamonkey/mozilla/ServiceList.h
 include/seamonkey/mozilla/Services.h
 include/seamonkey/mozilla/StackWalk.h
@@ -319,7 +329,9 @@ include/seamonkey/mozilla/dom/Element.h
 include/seamonkey/mozilla/dom/ExternalHelperAppChild.h
 include/seamonkey/mozilla/dom/ExternalHelperAppParent.h
 include/seamonkey/mozilla/dom/FromParser.h
+include/seamonkey/mozilla/dom/ImageData.h
 include/seamonkey/mozilla/dom/Link.h
+include/seamonkey/mozilla/dom/ScreenOrientation.h
 include/seamonkey/mozilla/dom/StorageChild.h
 include/seamonkey/mozilla/dom/StorageParent.h
 include/seamonkey/mozilla/dom/StructuredCloneTags.h
@@ -328,6 +340,17 @@ include/seamonkey/mozilla/dom/TabMessageUtils.h
 include/seamonkey/mozilla/dom/TabParent.h
 include/seamonkey/mozilla/dom/battery/Constants.h
 include/seamonkey/mozilla/dom/battery/Types.h
+include/seamonkey/mozilla/dom/bindings/Common.h
+include/seamonkey/mozilla/dom/bindings/DOMJSClass.h
+include/seamonkey/mozilla/dom/bindings/EventListenerBinding.h
+include/seamonkey/mozilla/dom/bindings/EventTargetBinding.h
+include/seamonkey/mozilla/dom/bindings/FunctionBinding.h
+include/seamonkey/mozilla/dom/bindings/Nullable.h
+include/seamonkey/mozilla/dom/bindings/PrototypeList.h
+include/seamonkey/mozilla/dom/bindings/Utils.h
+include/seamonkey/mozilla/dom/bindings/XMLHttpRequestBinding.h
+include/seamonkey/mozilla/dom/bindings/XMLHttpRequestEventTargetBinding.h
+include/seamonkey/mozilla/dom/bindings/XMLHttpRequestUploadBinding.h
 include/seamonkey/mozilla/dom/indexedDB/FileInfo.h
 include/seamonkey/mozilla/dom/indexedDB/FileManager.h
 include/seamonkey/mozilla/dom/indexedDB/IDBCursor.h
@@ -357,6 +380,13 @@ include/seamonkey/mozilla/dom/sms/SmsRequestManager.h
 include/seamonkey/mozilla/dom/sms/SmsServicesFactory.h
 include/seamonkey/mozilla/dom/sms/Types.h
 include/seamonkey/mozilla/dom/workers/Workers.h
+include/seamonkey/mozilla/dom/workers/bindings/DOMBindingBase.h
+include/seamonkey/mozilla/dom/workers/bindings/EventListenerManager.h
+include/seamonkey/mozilla/dom/workers/bindings/EventTarget.h
+include/seamonkey/mozilla/dom/workers/bindings/WorkerFeature.h
+include/seamonkey/mozilla/dom/workers/bindings/XMLHttpRequest.h
+include/seamonkey/mozilla/dom/workers/bindings/XMLHttpRequestEventTarget.h
+include/seamonkey/mozilla/dom/workers/bindings/XMLHttpRequestUpload.h
 include/seamonkey/mozilla/gfx/2D.h
 include/seamonkey/mozilla/gfx/BaseMargin.h
 include/seamonkey/mozilla/gfx/BasePoint.h
@@ -406,6 +436,7 @@ include/seamonkey/mozilla/jsipc/ObjectWrapperParent.h
 include/seamonkey/mozilla/layers/CompositorChild.h
 include/seamonkey/mozilla/layers/CompositorCocoaWidgetHelper.h
 include/seamonkey/mozilla/layers/CompositorParent.h
+include/seamonkey/mozilla/layers/RenderTrace.h
 include/seamonkey/mozilla/layers/ShadowLayerUtilsX11.h
 include/seamonkey/mozilla/layers/ShadowLayers.h
 include/seamonkey/mozilla/layers/ShadowLayersChild.h
@@ -488,8 +519,6 @@ include/seamonkey/npruntime.h
 include/seamonkey/nptypes.h
 include/seamonkey/nsAHtml5TreeBuilderState.h
 include/seamonkey/nsAHtml5TreeOpSink.h
-include/seamonkey/nsARIAGridAccessibleWrap.h
-include/seamonkey/nsARIAMap.h
 include/seamonkey/nsASocketHandler.h
 include/seamonkey/nsAString.h
 include/seamonkey/nsAXPCNativeCallContext.h
@@ -567,6 +596,7 @@ include/seamonkey/nsChannelProperties.h
 include/seamonkey/nsCharSeparatedTokenizer.h
 include/seamonkey/nsCharTraits.h
 include/seamonkey/nsCharsetAlias.h
+include/seamonkey/nsCharsetSource.h
 include/seamonkey/nsCheapSets.h
 include/seamonkey/nsClassHashtable.h
 include/seamonkey/nsClientRect.h
@@ -619,7 +649,7 @@ include/seamonkey/nsDeprecatedOperationList.h
 include/seamonkey/nsDeque.h
 include/seamonkey/nsDetectionConfident.h
 include/seamonkey/nsDeviceContext.h
-include/seamonkey/nsDeviceMotion.h
+include/seamonkey/nsDeviceSensors.h
 include/seamonkey/nsDirectoryService.h
 include/seamonkey/nsDirectoryServiceAtomList.h
 include/seamonkey/nsDirectoryServiceDefs.h
@@ -677,7 +707,6 @@ include/seamonkey/nsGridRowLeafLayout.h
 include/seamonkey/nsHTMLAudioElement.h
 include/seamonkey/nsHTMLCanvasElement.h
 include/seamonkey/nsHTMLDNSPrefetch.h
-include/seamonkey/nsHTMLFormControlAccessible.h
 include/seamonkey/nsHTMLImageAccessibleWrap.h
 include/seamonkey/nsHTMLMediaElement.h
 include/seamonkey/nsHTMLParts.h
@@ -1023,7 +1052,6 @@ include/seamonkey/nsIDOMEvent.h
 include/seamonkey/nsIDOMEventListener.h
 include/seamonkey/nsIDOMEventTarget.h
 include/seamonkey/nsIDOMFile.h
-include/seamonkey/nsIDOMFileException.h
 include/seamonkey/nsIDOMFileList.h
 include/seamonkey/nsIDOMFileReader.h
 include/seamonkey/nsIDOMFontFace.h
@@ -1031,12 +1059,10 @@ include/seamonkey/nsIDOMFontFaceList.h
 include/seamonkey/nsIDOMFormData.h
 include/seamonkey/nsIDOMGeoGeolocation.h
 include/seamonkey/nsIDOMGeoPosition.h
-include/seamonkey/nsIDOMGeoPositionAddress.h
 include/seamonkey/nsIDOMGeoPositionCallback.h
 include/seamonkey/nsIDOMGeoPositionCoords.h
 include/seamonkey/nsIDOMGeoPositionError.h
 include/seamonkey/nsIDOMGeoPositionErrorCallback.h
-include/seamonkey/nsIDOMGeoPositionOptions.h
 include/seamonkey/nsIDOMGetSVGDocument.h
 include/seamonkey/nsIDOMGlobalPropertyInitializer.h
 include/seamonkey/nsIDOMHTMLAnchorElement.h
@@ -1120,6 +1146,7 @@ include/seamonkey/nsIDOMMediaQueryList.h
 include/seamonkey/nsIDOMMessageEvent.h
 include/seamonkey/nsIDOMMimeType.h
 include/seamonkey/nsIDOMMimeTypeArray.h
+include/seamonkey/nsIDOMMobileConnection.h
 include/seamonkey/nsIDOMModalContentWindow.h
 include/seamonkey/nsIDOMMouseEvent.h
 include/seamonkey/nsIDOMMouseScrollEvent.h
@@ -1128,8 +1155,8 @@ include/seamonkey/nsIDOMMozCSSKeyframeRule.h
 include/seamonkey/nsIDOMMozCSSKeyframesRule.h
 include/seamonkey/nsIDOMMozTouchEvent.h
 include/seamonkey/nsIDOMMutationEvent.h
+include/seamonkey/nsIDOMMutationObserver.h
 include/seamonkey/nsIDOMNSEditableElement.h
-include/seamonkey/nsIDOMNSElement.h
 include/seamonkey/nsIDOMNSEvent.h
 include/seamonkey/nsIDOMNSRGBAColor.h
 include/seamonkey/nsIDOMNSXPathExpression.h
@@ -1254,6 +1281,7 @@ include/seamonkey/nsIDOMScreen.h
 include/seamonkey/nsIDOMScriptObjectFactory.h
 include/seamonkey/nsIDOMScrollAreaEvent.h
 include/seamonkey/nsIDOMSerializer.h
+include/seamonkey/nsIDOMSettingsManager.h
 include/seamonkey/nsIDOMSimpleGestureEvent.h
 include/seamonkey/nsIDOMSmartCardEvent.h
 include/seamonkey/nsIDOMSmsCursor.h
@@ -1267,7 +1295,6 @@ include/seamonkey/nsIDOMStorageEvent.h
 include/seamonkey/nsIDOMStorageEventObsolete.h
 include/seamonkey/nsIDOMStorageIndexedDB.h
 include/seamonkey/nsIDOMStorageItem.h
-include/seamonkey/nsIDOMStorageList.h
 include/seamonkey/nsIDOMStorageManager.h
 include/seamonkey/nsIDOMStorageObsolete.h
 include/seamonkey/nsIDOMStyleSheet.h
@@ -1321,7 +1348,7 @@ include/seamonkey/nsIDateTimeFormat.h
 include/seamonkey/nsIDebug.h
 include/seamonkey/nsIDebug2.h
 include/seamonkey/nsIDeviceContextSpec.h
-include/seamonkey/nsIDeviceMotion.h
+include/seamonkey/nsIDeviceSensors.h
 include/seamonkey/nsIDialogCreator.h
 include/seamonkey/nsIDialogParamBlock.h
 include/seamonkey/nsIDirIndex.h
@@ -1475,7 +1502,6 @@ include/seamonkey/nsIID.h
 include/seamonkey/nsIIDBCursor.h
 include/seamonkey/nsIIDBCursorWithValue.h
 include/seamonkey/nsIIDBDatabase.h
-include/seamonkey/nsIIDBDatabaseException.h
 include/seamonkey/nsIIDBFactory.h
 include/seamonkey/nsIIDBIndex.h
 include/seamonkey/nsIIDBKeyRange.h
@@ -1613,6 +1639,7 @@ include/seamonkey/nsIMimeHeaders.h
 include/seamonkey/nsIMimeMiscStatus.h
 include/seamonkey/nsIMimeObjectClassAccess.h
 include/seamonkey/nsIMimeStreamConverter.h
+include/seamonkey/nsIMobileConnectionProvider.h
 include/seamonkey/nsIModule.h
 include/seamonkey/nsIMovemailIncomingServer.h
 include/seamonkey/nsIMovemailService.h
@@ -1701,7 +1728,6 @@ include/seamonkey/nsIMultiplexInputStream.h
 include/seamonkey/nsIMutable.h
 include/seamonkey/nsIMutableArray.h
 include/seamonkey/nsIMutationObserver.h
-include/seamonkey/nsIMutationObserver2.h
 include/seamonkey/nsINIParser.h
 include/seamonkey/nsINNTPArticleList.h
 include/seamonkey/nsINNTPNewsgroupList.h
@@ -2083,6 +2109,12 @@ include/seamonkey/nsIUpdateService.h
 include/seamonkey/nsIUpdateTimerManager.h
 include/seamonkey/nsIUploadChannel.h
 include/seamonkey/nsIUploadChannel2.h
+include/seamonkey/nsIUrlClassifierDBService.h
+include/seamonkey/nsIUrlClassifierHashCompleter.h
+include/seamonkey/nsIUrlClassifierPrefixSet.h
+include/seamonkey/nsIUrlClassifierStreamUpdater.h
+include/seamonkey/nsIUrlClassifierUtils.h
+include/seamonkey/nsIUrlListManager.h
 include/seamonkey/nsIUrlListener.h
 include/seamonkey/nsIUserCertPicker.h
 include/seamonkey/nsIUserInfo.h
@@ -2376,6 +2408,7 @@ include/seamonkey/nsSupportsArray.h
 include/seamonkey/nsSupportsPrimitives.h
 include/seamonkey/nsTArray-inl.h
 include/seamonkey/nsTArray.h
+include/seamonkey/nsTArrayHelpers.h
 include/seamonkey/nsTDependentString.h
 include/seamonkey/nsTDependentSubstring.h
 include/seamonkey/nsTHashtable.h
@@ -2622,7 +2655,9 @@ lib/seamonkey-sdk/sdk/bin/header.py
 lib/seamonkey-sdk/sdk/bin/ply/__init__.py
 lib/seamonkey-sdk/sdk/bin/ply/lex.py
 lib/seamonkey-sdk/sdk/bin/ply/yacc.py
+lib/seamonkey-sdk/sdk/bin/run-mozilla.sh
 lib/seamonkey-sdk/sdk/bin/typelib.py
+lib/seamonkey-sdk/sdk/bin/xpcshell
 lib/seamonkey-sdk/sdk/bin/xpidl.py
 lib/seamonkey-sdk/sdk/bin/xpidllex.py
 lib/seamonkey-sdk/sdk/bin/xpidlyacc.py
@@ -2646,6 +2681,7 @@ lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark-folder
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark-folder-dis.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark-folder-open.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark-item-dis.png
+lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark-item-updated.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark-item.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmark.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmarks.css
@@ -2655,7 +2691,6 @@ lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmarksToolba
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/bookmarksToolbar.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/editBookmarkOverlay.css
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/livemark-folder.png
-lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/livemark-item.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/query.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/toolbarDropMarker.png
 lib/seamonkey/chrome/classic/skin/classic/communicator/bookmarks/unsortedBookmarks.png
@@ -3678,6 +3713,7 @@ lib/seamonkey/chrome/en-US/locale/en-US/global-platform/win/accessible.propertie
 lib/seamonkey/chrome/en-US/locale/en-US/global-platform/win/intl.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global-platform/win/platformKeys.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global-region/region.properties
+lib/seamonkey/chrome/en-US/locale/en-US/global/AccessFu.properties
 lib/seamonkey/chrome/en-US/locale/en-US/global/about.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutAbout.dtd
 lib/seamonkey/chrome/en-US/locale/en-US/global/aboutRights.dtd
@@ -3977,12 +4013,9 @@ lib/seamonkey/chrome/icons/default/ablistWindow48.png
 lib/seamonkey/chrome/icons/default/addressbookWindow.png
 lib/seamonkey/chrome/icons/default/addressbookWindow16.png
 lib/seamonkey/chrome/icons/default/addressbookWindow48.png
-lib/seamonkey/chrome/icons/default/bmPropsWindow.png
-lib/seamonkey/chrome/icons/default/bmPropsWindow16.png
-lib/seamonkey/chrome/icons/default/bmPropsWindow48.png
-lib/seamonkey/chrome/icons/default/bookmark-window.png
-lib/seamonkey/chrome/icons/default/bookmark-window16.png
-lib/seamonkey/chrome/icons/default/bookmark-window48.png
+lib/seamonkey/chrome/icons/default/bookmarkproperties.png
+lib/seamonkey/chrome/icons/default/bookmarkproperties16.png
+lib/seamonkey/chrome/icons/default/bookmarkproperties48.png
 lib/seamonkey/chrome/icons/default/default.png
 lib/seamonkey/chrome/icons/default/default16.png
 lib/seamonkey/chrome/icons/default/default48.png
@@ -4010,6 +4043,9 @@ lib/seamonkey/chrome/icons/default/messengerWindow48.png
 lib/seamonkey/chrome/icons/default/msgcomposeWindow.png
 lib/seamonkey/chrome/icons/default/msgcomposeWindow16.png
 lib/seamonkey/chrome/icons/default/msgcomposeWindow48.png
+lib/seamonkey/chrome/icons/default/places.png
+lib/seamonkey/chrome/icons/default/places16.png
+lib/seamonkey/chrome/icons/default/places48.png
 lib/seamonkey/chrome/icons/default/seamonkey.png
 lib/seamonkey/chrome/icons/default/venkman-window.png
 lib/seamonkey/chrome/icons/default/venkman-window16.png
@@ -4326,6 +4362,7 @@ lib/seamonkey/chrome/toolkit/content/global/aboutRights-unbranded.xhtml
 lib/seamonkey/chrome/toolkit/content/global/aboutRights.xhtml
 lib/seamonkey/chrome/toolkit/content/global/aboutSupport.js
 lib/seamonkey/chrome/toolkit/content/global/aboutSupport.xhtml
+lib/seamonkey/chrome/toolkit/content/global/accessibility/AccessFu.css
 lib/seamonkey/chrome/toolkit/content/global/alerts/alert.js
 lib/seamonkey/chrome/toolkit/content/global/alerts/alert.xul
 lib/seamonkey/chrome/toolkit/content/global/appPicker.js
@@ -4393,6 +4430,7 @@ lib/seamonkey/chrome/toolkit/content/global/customizeToolbar.js
 lib/seamonkey/chrome/toolkit/content/global/customizeToolbar.xul
 lib/seamonkey/chrome/toolkit/content/global/devtools/dbg-browser-actors.js
 lib/seamonkey/chrome/toolkit/content/global/devtools/dbg-script-actors.js
+lib/seamonkey/chrome/toolkit/content/global/devtools/dbg-server.js
 lib/seamonkey/chrome/toolkit/content/global/devtools/dbg-transport.js
 lib/seamonkey/chrome/toolkit/content/global/dialogOverlay.js
 lib/seamonkey/chrome/toolkit/content/global/dialogOverlay.xul
@@ -4552,6 +4590,8 @@ lib/seamonkey/chrome/toolkit/res/quirk.css
 lib/seamonkey/chrome/toolkit/res/ua.css
 lib/seamonkey/chrome/toolkit/res/viewsource.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/Filepicker.png
+lib/seamonkey/chrome/toolkit/skin/classic/global/TopLevelImageDocument.css
+lib/seamonkey/chrome/toolkit/skin/classic/global/TopLevelVideoDocument.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/about.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/aboutCache.css
 lib/seamonkey/chrome/toolkit/skin/classic/global/aboutCacheEntry.css
@@ -4782,6 +4822,7 @@ lib/seamonkey/chrome/toolkit/skin/classic/mozapps/passwordmgr/key-64.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/passwordmgr/key.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/places/defaultFavicon.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginBlocked.png
+lib/seamonkey/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginClickToPlay.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginCrashed.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginDisabled.png
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginDownload.png
@@ -4804,6 +4845,7 @@ lib/seamonkey/chrome/toolkit/skin/classic/mozapps/update/updates.css
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/viewsource/viewsource.css
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallConfirm.css
 lib/seamonkey/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallItemGeneric.png
+lib/seamonkey/components/BrowserElementAPI.js
 lib/seamonkey/components/ConsoleAPI.js
 lib/seamonkey/components/ContactManager.js
 lib/seamonkey/components/FeedConverter.js
@@ -4812,9 +4854,11 @@ lib/seamonkey/components/FeedWriter.js
 lib/seamonkey/components/GPSDGeolocationProvider.js
 lib/seamonkey/components/NetworkGeolocationProvider.js
 lib/seamonkey/components/PlacesCategoriesStarter.js
+lib/seamonkey/components/SettingsManager.js
 lib/seamonkey/components/TelemetryPing.js
 lib/seamonkey/components/Weave.js
 lib/seamonkey/components/WebContentConverter.js
+lib/seamonkey/components/Webapps.js
 lib/seamonkey/components/addonManager.js
 lib/seamonkey/components/amContentHandler.js
 lib/seamonkey/components/amWebInstallListener.js
@@ -4879,6 +4923,9 @@ lib/seamonkey/components/nsURLFormatter.js
 lib/seamonkey/components/nsUpdateService.js
 lib/seamonkey/components/nsUpdateServiceStub.js
 lib/seamonkey/components/nsUpdateTimerManager.js
+lib/seamonkey/components/nsUrlClassifierHashCompleter.js
+lib/seamonkey/components/nsUrlClassifierLib.js
+lib/seamonkey/components/nsUrlClassifierListManager.js
 lib/seamonkey/components/nsWebHandlerApp.js
 lib/seamonkey/components/offlineStartup.js
 lib/seamonkey/components/smileApplication.js
@@ -4907,8 +4954,6 @@ lib/seamonkey/dependentlibs.list
 lib/seamonkey/dictionaries/en-US.aff
 lib/seamonkey/dictionaries/en-US.dic
 lib/seamonkey/extensions/inspector@mozilla.org/chrome.manifest
-lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.xpm
-lib/seamonkey/extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain16.xpm
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/content/inspector/Flasher.js
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/content/inspector/ViewerRegistry.js
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/content/inspector/commandOverlay.xul
@@ -5033,6 +5078,29 @@ lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspec
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspector/viewers/styleRules.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspector/viewers/stylesheets.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/de/inspector/viewers/xblBindings.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/editing.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/inspector.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/inspector.properties
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/prefs.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/tasksOverlay.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewer-registry.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEvent.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEvents.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEvents.properties
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleEventsHandlerHelpDialog.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleProps.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleProps.properties
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleRelations.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleTree.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/accessibleTreeEvalJSDialog.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/boxModel.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/computedStyle.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/dom.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/domNode.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/jsObject.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/styleRules.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/stylesheets.dtd
+lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/el/inspector/viewers/xblBindings.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/en-GB/inspector/editing.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/en-GB/inspector/inspector.dtd
 lib/seamonkey/extensions/inspector@mozilla.org/chrome/inspector/locale/en-GB/inspector/inspector.properties
@@ -5234,6 +5302,7 @@ lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/com
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark-folder-dis.gif
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark-folder-open.gif
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark-item-dis.gif
+lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark-item-updated.gif
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark-item.gif
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark-item.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmark.png
@@ -5244,7 +5313,6 @@ lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/com
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/bookmarksToolbar.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/editBookmarkOverlay.css
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/livemark-folder.png
-lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/livemark-item.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/query.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/tagContainerIcon.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/communicator/bookmarks/toolbarDropMarker.png
@@ -5801,6 +5869,7 @@ lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/moz
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/passwordmgr/key-64.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/passwordmgr/key.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/plugins/contentPluginBlocked.png
+lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/plugins/contentPluginClickToPlay.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/plugins/contentPluginCrashed.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/plugins/contentPluginDisabled.png
 lib/seamonkey/extensions/modern@themes.mozilla.org/chrome/modern/skin/modern/mozapps/plugins/contentPluginDownload.png
@@ -6179,6 +6248,7 @@ lib/seamonkey/modules/AddonLogging.jsm
 lib/seamonkey/modules/AddonManager.jsm
 lib/seamonkey/modules/AddonRepository.jsm
 lib/seamonkey/modules/AddonUpdateChecker.jsm
+lib/seamonkey/modules/BookmarkHTMLUtils.jsm
 lib/seamonkey/modules/CSPUtils.jsm
 lib/seamonkey/modules/CertUtils.jsm
 lib/seamonkey/modules/ChromeManifestParser.jsm
@@ -6218,6 +6288,10 @@ lib/seamonkey/modules/Webapps.jsm
 lib/seamonkey/modules/WindowDraggingUtils.jsm
 lib/seamonkey/modules/XPCOMUtils.jsm
 lib/seamonkey/modules/XPIProvider.jsm
+lib/seamonkey/modules/accessibility/AccessFu.jsm
+lib/seamonkey/modules/accessibility/Presenters.jsm
+lib/seamonkey/modules/accessibility/UtteranceGenerator.jsm
+lib/seamonkey/modules/accessibility/VirtualCursorController.jsm
 lib/seamonkey/modules/ctypes.jsm
 lib/seamonkey/modules/debug.js
 lib/seamonkey/modules/devtools/dbg-client.jsm
@@ -6257,9 +6331,16 @@ lib/seamonkey/modules/mailServices.js
 lib/seamonkey/modules/mailnewsMigrator.js
 lib/seamonkey/modules/nsFormAutoCompleteResult.jsm
 lib/seamonkey/modules/reflect.jsm
+lib/seamonkey/modules/services-common/async.js
+lib/seamonkey/modules/services-common/log4moz.js
+lib/seamonkey/modules/services-common/observers.js
+lib/seamonkey/modules/services-common/preferences.js
+lib/seamonkey/modules/services-common/rest.js
+lib/seamonkey/modules/services-common/stringbundle.js
+lib/seamonkey/modules/services-common/tokenserverclient.js
+lib/seamonkey/modules/services-common/utils.js
 lib/seamonkey/modules/services-crypto/WeaveCrypto.js
 lib/seamonkey/modules/services-sync/addonsreconciler.js
-lib/seamonkey/modules/services-sync/async.js
 lib/seamonkey/modules/services-sync/constants.js
 lib/seamonkey/modules/services-sync/engines.js
 lib/seamonkey/modules/services-sync/engines/addons.js
@@ -6271,12 +6352,9 @@ lib/seamonkey/modules/services-sync/engines/history.js
 lib/seamonkey/modules/services-sync/engines/passwords.js
 lib/seamonkey/modules/services-sync/engines/prefs.js
 lib/seamonkey/modules/services-sync/engines/tabs.js
-lib/seamonkey/modules/services-sync/ext/Observers.js
-lib/seamonkey/modules/services-sync/ext/Preferences.js
-lib/seamonkey/modules/services-sync/ext/StringBundle.js
 lib/seamonkey/modules/services-sync/identity.js
 lib/seamonkey/modules/services-sync/jpakeclient.js
-lib/seamonkey/modules/services-sync/log4moz.js
+lib/seamonkey/modules/services-sync/keys.js
 lib/seamonkey/modules/services-sync/main.js
 lib/seamonkey/modules/services-sync/notifications.js
 lib/seamonkey/modules/services-sync/policies.js
@@ -6676,7 +6754,6 @@ share/idl/seamonkey/nsIDOMEvent.idl
 share/idl/seamonkey/nsIDOMEventListener.idl
 share/idl/seamonkey/nsIDOMEventTarget.idl
 share/idl/seamonkey/nsIDOMFile.idl
-share/idl/seamonkey/nsIDOMFileException.idl
 share/idl/seamonkey/nsIDOMFileList.idl
 share/idl/seamonkey/nsIDOMFileReader.idl
 share/idl/seamonkey/nsIDOMFontFace.idl
@@ -6684,12 +6761,10 @@ share/idl/seamonkey/nsIDOMFontFaceList.idl
 share/idl/seamonkey/nsIDOMFormData.idl
 share/idl/seamonkey/nsIDOMGeoGeolocation.idl
 share/idl/seamonkey/nsIDOMGeoPosition.idl
-share/idl/seamonkey/nsIDOMGeoPositionAddress.idl
 share/idl/seamonkey/nsIDOMGeoPositionCallback.idl
 share/idl/seamonkey/nsIDOMGeoPositionCoords.idl
 share/idl/seamonkey/nsIDOMGeoPositionError.idl
 share/idl/seamonkey/nsIDOMGeoPositionErrorCallback.idl
-share/idl/seamonkey/nsIDOMGeoPositionOptions.idl
 share/idl/seamonkey/nsIDOMGetSVGDocument.idl
 share/idl/seamonkey/nsIDOMGlobalPropertyInitializer.idl
 share/idl/seamonkey/nsIDOMHTMLAnchorElement.idl
@@ -6773,6 +6848,7 @@ share/idl/seamonkey/nsIDOMMediaQueryList.idl
 share/idl/seamonkey/nsIDOMMessageEvent.idl
 share/idl/seamonkey/nsIDOMMimeType.idl
 share/idl/seamonkey/nsIDOMMimeTypeArray.idl
+share/idl/seamonkey/nsIDOMMobileConnection.idl
 share/idl/seamonkey/nsIDOMModalContentWindow.idl
 share/idl/seamonkey/nsIDOMMouseEvent.idl
 share/idl/seamonkey/nsIDOMMouseScrollEvent.idl
@@ -6781,8 +6857,8 @@ share/idl/seamonkey/nsIDOMMozCSSKeyframeRule.idl
 share/idl/seamonkey/nsIDOMMozCSSKeyframesRule.idl
 share/idl/seamonkey/nsIDOMMozTouchEvent.idl
 share/idl/seamonkey/nsIDOMMutationEvent.idl
+share/idl/seamonkey/nsIDOMMutationObserver.idl
 share/idl/seamonkey/nsIDOMNSEditableElement.idl
-share/idl/seamonkey/nsIDOMNSElement.idl
 share/idl/seamonkey/nsIDOMNSEvent.idl
 share/idl/seamonkey/nsIDOMNSRGBAColor.idl
 share/idl/seamonkey/nsIDOMNSXPathExpression.idl
@@ -6906,6 +6982,7 @@ share/idl/seamonkey/nsIDOMSVGZoomEvent.idl
 share/idl/seamonkey/nsIDOMScreen.idl
 share/idl/seamonkey/nsIDOMScrollAreaEvent.idl
 share/idl/seamonkey/nsIDOMSerializer.idl
+share/idl/seamonkey/nsIDOMSettingsManager.idl
 share/idl/seamonkey/nsIDOMSimpleGestureEvent.idl
 share/idl/seamonkey/nsIDOMSmartCardEvent.idl
 share/idl/seamonkey/nsIDOMSmsCursor.idl
@@ -6919,7 +6996,6 @@ share/idl/seamonkey/nsIDOMStorageEvent.idl
 share/idl/seamonkey/nsIDOMStorageEventObsolete.idl
 share/idl/seamonkey/nsIDOMStorageIndexedDB.idl
 share/idl/seamonkey/nsIDOMStorageItem.idl
-share/idl/seamonkey/nsIDOMStorageList.idl
 share/idl/seamonkey/nsIDOMStorageManager.idl
 share/idl/seamonkey/nsIDOMStorageObsolete.idl
 share/idl/seamonkey/nsIDOMStyleSheet.idl
@@ -6970,7 +7046,7 @@ share/idl/seamonkey/nsIDOMXULTreeElement.idl
 share/idl/seamonkey/nsIDataSignatureVerifier.idl
 share/idl/seamonkey/nsIDebug.idl
 share/idl/seamonkey/nsIDebug2.idl
-share/idl/seamonkey/nsIDeviceMotion.idl
+share/idl/seamonkey/nsIDeviceSensors.idl
 share/idl/seamonkey/nsIDialogCreator.idl
 share/idl/seamonkey/nsIDialogParamBlock.idl
 share/idl/seamonkey/nsIDirIndex.idl
@@ -7106,7 +7182,6 @@ share/idl/seamonkey/nsIHttpProtocolHandler.idl
 share/idl/seamonkey/nsIIDBCursor.idl
 share/idl/seamonkey/nsIIDBCursorWithValue.idl
 share/idl/seamonkey/nsIIDBDatabase.idl
-share/idl/seamonkey/nsIIDBDatabaseException.idl
 share/idl/seamonkey/nsIIDBFactory.idl
 share/idl/seamonkey/nsIIDBIndex.idl
 share/idl/seamonkey/nsIIDBKeyRange.idl
@@ -7227,6 +7302,7 @@ share/idl/seamonkey/nsIMimeEmitter.idl
 share/idl/seamonkey/nsIMimeHeaders.idl
 share/idl/seamonkey/nsIMimeMiscStatus.idl
 share/idl/seamonkey/nsIMimeStreamConverter.idl
+share/idl/seamonkey/nsIMobileConnectionProvider.idl
 share/idl/seamonkey/nsIModule.idl
 share/idl/seamonkey/nsIMovemailIncomingServer.idl
 share/idl/seamonkey/nsIMovemailService.idl
@@ -7628,6 +7704,12 @@ share/idl/seamonkey/nsIUpdateService.idl
 share/idl/seamonkey/nsIUpdateTimerManager.idl
 share/idl/seamonkey/nsIUploadChannel.idl
 share/idl/seamonkey/nsIUploadChannel2.idl
+share/idl/seamonkey/nsIUrlClassifierDBService.idl
+share/idl/seamonkey/nsIUrlClassifierHashCompleter.idl
+share/idl/seamonkey/nsIUrlClassifierPrefixSet.idl
+share/idl/seamonkey/nsIUrlClassifierStreamUpdater.idl
+share/idl/seamonkey/nsIUrlClassifierUtils.idl
+share/idl/seamonkey/nsIUrlListManager.idl
 share/idl/seamonkey/nsIUrlListener.idl
 share/idl/seamonkey/nsIUserCertPicker.idl
 share/idl/seamonkey/nsIUserInfo.idl
