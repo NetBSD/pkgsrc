@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2006/01/27 17:33:55 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2012/07/20 09:58:36 adam Exp $
 
---- hosts_access.c.orig	2006-01-27 17:22:24.000000000 +0000
+--- hosts_access.c.orig	2003-12-25 00:49:56.000000000 +0000
 +++ hosts_access.c
 @@ -34,9 +34,6 @@ static char sccsid[] = "@(#) hosts_acces
  #include <setjmp.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-ag,v 1.1 2006/01/27 17:33:55 joerg Exp $
  #ifndef	INADDR_NONE
  #define	INADDR_NONE	(-1)		/* XXX should be 0xffffffff */
  #endif
-@@ -389,7 +386,7 @@ static void ipv6_mask(in6p, maskbits)
+@@ -405,7 +402,7 @@ static void ipv6_mask(in6p, maskbits)
  struct in6_addr *in6p;
  int maskbits;
  {
@@ -21,7 +21,7 @@ $NetBSD: patch-ag,v 1.1 2006/01/27 17:33:55 joerg Exp $
  
      if (maskbits < 0 || maskbits >= IPV6_ABITS)
  	return;
-@@ -400,7 +397,7 @@ int maskbits;
+@@ -416,7 +413,7 @@ int maskbits;
      if (maskbits != 0)
  	*p++ &= 0xff << (8 - maskbits);
  
