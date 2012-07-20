@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/11 15:35:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/20 20:08:25 wiz Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/js_of_ocaml
 bin/js_of_ocaml
 lib/ocaml/site-lib/js_of_ocaml/META
@@ -37,6 +37,8 @@ lib/ocaml/site-lib/js_of_ocaml/json.mli
 ${PLIST.opt}lib/ocaml/site-lib/js_of_ocaml/libjs_of_ocaml.a
 lib/ocaml/site-lib/js_of_ocaml/lwt_js.cmi
 lib/ocaml/site-lib/js_of_ocaml/lwt_js.mli
+lib/ocaml/site-lib/js_of_ocaml/lwt_js_events.cmi
+lib/ocaml/site-lib/js_of_ocaml/lwt_js_events.mli
 lib/ocaml/site-lib/js_of_ocaml/pa_deriving_Json.cmo
 lib/ocaml/site-lib/js_of_ocaml/pa_js.cmo
 lib/ocaml/site-lib/js_of_ocaml/regexp.cmi
