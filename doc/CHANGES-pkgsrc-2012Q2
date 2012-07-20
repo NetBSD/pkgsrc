@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.17 2012/07/18 17:56:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.18 2012/07/20 08:07:33 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -96,3 +96,5 @@ Pullup ticket #3841 - requested by tron
 net/libtorrent build fix
 Pullup ticket #3861 - requested by spz
 shells/bash: security patch
+Pullup ticket #3862 - requested by wiz
+graphics/tiff security update
