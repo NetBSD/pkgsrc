@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2327 2012/07/20 16:29:00 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2328 2012/07/20 20:08:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3596,3 +3596,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/awstats to 7.1 [adam 2012-07-20]
 	Updated editors/vile to 9.8 [marino 2012-07-20]
 	Updated net/nsd to 3.2.12 [wiz 2012-07-20]
+	Updated devel/js_of_ocaml to 1.2nb1 [wiz 2012-07-20]
