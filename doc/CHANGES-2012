@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2324 2012/07/20 14:01:45 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.2325 2012/07/20 14:11:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3593,3 +3593,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/smartmontools to 5.40nb1 [taca 2012-07-20]
 	Updated devel/py-pyutil to 1.9.3 [gdt 2012-07-20]
 	Updated devel/py-setuptools_trial to 0.5.12 [gdt 2012-07-20]
+	Updated www/awstats to 7.1 [adam 2012-07-20]
