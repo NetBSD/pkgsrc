@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/06/16 22:34:23 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2012/07/20 12:30:36 taca Exp $
 
 MODNAME=		sqlite
 CATEGORIES+=		databases
@@ -11,12 +11,6 @@ CONFLICTS=		php-sqlite-[0-9]*
 PHP_VERSIONS_ACCEPTED=	53
 
 .include "../../lang/php/phpversion.mk"
-
-# Remove these PKGNAME tweak after PHP 5.2.18 (or end of supporting php52)
-# *AND* after PHP 5.3.14 release
-.if ${PHP_BASE_VERS} == "5.2.17" || ${PHP_BASE_VERS} == "5.3.14"
-PKGNAME=		${PHP_PKG_PREFIX}-${MODNAME}-${PHP_BASE_VERS}.1.0.3
-.endif
 
 CONFIGURE_ARGS+=	--with-${PKGMODNAME}=shared,${BUILDLINK_PREFIX.sqlite}
 CONFIGURE_ENV+=		PHP_PDO=no
