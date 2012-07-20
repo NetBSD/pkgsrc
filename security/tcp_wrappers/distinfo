@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.16 2007/02/03 18:48:49 schwarz Exp $
+$NetBSD: distinfo,v 1.17 2012/07/20 09:58:36 adam Exp $
 
-SHA1 (tcp_wrappers_7.6-ipv6.1.tar.gz) = d0b70d4f0c0ac0375d8283a18ec2b6d602f82fde
-RMD160 (tcp_wrappers_7.6-ipv6.1.tar.gz) = 948f5ac4ede3999273399b641474ca26fd967b70
-Size (tcp_wrappers_7.6-ipv6.1.tar.gz) = 144708 bytes
-SHA1 (patch-aa) = 4de36854d13cb9b007ac92164becaa59848f1202
-SHA1 (patch-ab) = e6b485b21623395a6ca6b1ce0054d3dc5c9b2232
+SHA1 (tcp_wrappers_7.6-ipv6.4.tar.gz) = e82e269337223a001118e5084b05c6c53fe53dc5
+RMD160 (tcp_wrappers_7.6-ipv6.4.tar.gz) = 7bc5617c0e2833dd60c2fdc681f4890df5a9ac4b
+Size (tcp_wrappers_7.6-ipv6.4.tar.gz) = 138700 bytes
+SHA1 (patch-aa) = 6bc6f0523b4e8c31a4b02af948f285e800d5c59b
+SHA1 (patch-ab) = b05733e5e615bd3009045ecef4d4e988c8df6236
 SHA1 (patch-ac) = a9cd493a470782e8f6bdd38fde6c746fb1e371c0
-SHA1 (patch-ad) = 45eff3bffb787ccdfee00df34d947aac32f07262
-SHA1 (patch-ae) = feddad07e9661c220a5be279fcf2cec87eb1b6b2
 SHA1 (patch-af) = 1bf946174b027880014e64aa9b84dcfa5ca951a0
-SHA1 (patch-ag) = a7aba77230e870ff2695fb681c0b3c5bfc80fa1a
+SHA1 (patch-ag) = a2c88d1db9b3ec127f7a0889dcb4329ea3eb06a3
 SHA1 (patch-ah) = fa829052d466a4597c1cec528ab02c9d2ea98a60
 SHA1 (patch-ai) = f5a675f8fd1cc7e4e735dc8a9804f1dcf8d276bc
 SHA1 (patch-aj) = 6332edd3e464d0f68bfa10dc6724346d0bc05f1f
+SHA1 (patch-fix_options.c) = ce49ff5b4b1e26eb7634e61fa33ad4697917fbcb
