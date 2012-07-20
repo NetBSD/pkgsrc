@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2322 2012/07/20 12:31:26 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2323 2012/07/20 12:35:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/tcp_wrappers to 7.6.4 [adam 2012-07-20]
 	Updated lang/php53 to 5.3.15 [taca 2012-07-20]
 	Updated lang/php54 to 5.4.5 [taca 2012-07-20]
+	Updated sysutils/smartmontools to 5.40nb1 [taca 2012-07-20]
