@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2321 2012/07/20 10:02:37 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2322 2012/07/20 12:31:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3588,3 +3588,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/tiff to 4.0.2nb1 [wiz 2012-07-19]
 	Added net/mosh version 1.2.2 [agc 2012-07-19]
 	Updated security/tcp_wrappers to 7.6.4 [adam 2012-07-20]
+	Updated lang/php53 to 5.3.15 [taca 2012-07-20]
+	Updated lang/php54 to 5.4.5 [taca 2012-07-20]
