@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2052.2.2 2012/07/20 00:41:31 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.2052.2.3 2012/07/20 09:26:50 tron Exp $
 
 *****************************************************************************
 PLEASE NOTE THAT THIS FILE IS ON THE PKGSRC-2012Q2 BRANCH, AND ONLY
@@ -3221,4 +3221,3 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/f-prot-antivirus6-ws-bin to 6.2.1 [taca 2012-06-29]
 	Updated mail/sylpheed to 3.2.0 [taca 2012-06-29]
 	Updated sysutils/p5-Sys-Filesystem to 1.30nb3 [dholland 2012-06-30]
-	Updated devel/py-pyutil to 1.9.3 [gdt 2012-07-20]
