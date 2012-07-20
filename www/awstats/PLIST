@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/05/27 15:02:03 hauke Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/07/20 14:11:04 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -541,7 +541,9 @@ awstats/icon/mime/archive.png
 awstats/icon/mime/audio.png
 awstats/icon/mime/crystal.png
 awstats/icon/mime/css.png
+awstats/icon/mime/csv.png
 awstats/icon/mime/doc.png
+awstats/icon/mime/document.png
 awstats/icon/mime/dotnet.png
 awstats/icon/mime/encrypt.png
 awstats/icon/mime/flash.png
@@ -567,6 +569,7 @@ awstats/icon/mime/rar.png
 awstats/icon/mime/readme.txt
 awstats/icon/mime/real.png
 awstats/icon/mime/rss.png
+awstats/icon/mime/runtime.png
 awstats/icon/mime/script.png
 awstats/icon/mime/svg.png
 awstats/icon/mime/text.png
@@ -575,6 +578,7 @@ awstats/icon/mime/unknown.png
 awstats/icon/mime/video.png
 awstats/icon/mime/wmv.png
 awstats/icon/mime/xls.png
+awstats/icon/mime/xsl.png
 awstats/icon/os/aix.png
 awstats/icon/os/amigaos.png
 awstats/icon/os/apple.png
