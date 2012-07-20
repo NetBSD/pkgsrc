@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/07/20 03:15:29 agc Exp $
+
+make sure we get the defs in place before checking for them
+
+--- src/crypto/ocb.cc	2012/07/13 15:38:18	1.1
++++ src/crypto/ocb.cc	2012/07/13 15:39:01
+@@ -21,6 +21,8 @@
+ / Comments are welcome: Ted Krovetz <ted@krovetz.net> - Dedicated to Laurel K
+ /------------------------------------------------------------------------- */
+ 
++#include "config.h"
++
+ /* ----------------------------------------------------------------------- */
+ /* Usage notes                                                             */
+ /* ----------------------------------------------------------------------- */
+@@ -97,6 +99,7 @@
+ 	#define restrict __restrict__      /* No "restrict" in GCC ansi C mode */
+ #endif
+ 
++#ifndef bswap64
+ #if _MSC_VER
+ 	#define bswap64(x) _byteswap_uint64(x)
+ #elif HAVE_DECL___BUILTIN_BSWAP64
+@@ -114,6 +117,7 @@
+ 		return out.u64;
+ 	}
+ #endif
++#endif
+ 
+ #if _MSC_VER
+ 	static inline unsigned ntz(unsigned x) {_BitScanForward(&x,x);return x;}
