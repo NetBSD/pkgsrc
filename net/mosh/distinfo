@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/07/20 03:15:29 agc Exp $
+
+SHA1 (mosh-1.2.2.tar.gz) = f0227800298d80e9f1353db3b29a807de833d7d2
+RMD160 (mosh-1.2.2.tar.gz) = e04d4ade101418351ad57710419accc6c0a040a6
+Size (mosh-1.2.2.tar.gz) = 282734 bytes
+SHA1 (patch-aa) = e3a612ed02127797aa27e5418b8fe4d6e61cab0a
+SHA1 (patch-ab) = 2fda1837d43aa54a903ab72de226ff0f5c5350cd

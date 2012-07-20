@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/07/20 03:15:29 agc Exp $
+bin/mosh
+bin/mosh-client
+bin/mosh-server
+man/man1/mosh-client.1
+man/man1/mosh-server.1
+man/man1/mosh.1
