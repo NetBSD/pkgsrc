@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2326 2012/07/20 14:42:29 marino Exp $
+$NetBSD: CHANGES-2012,v 1.2327 2012/07/20 16:29:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3595,3 +3595,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-setuptools_trial to 0.5.12 [gdt 2012-07-20]
 	Updated www/awstats to 7.1 [adam 2012-07-20]
 	Updated editors/vile to 9.8 [marino 2012-07-20]
+	Updated net/nsd to 3.2.12 [wiz 2012-07-20]
