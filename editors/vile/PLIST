@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:50:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/07/20 14:38:51 marino Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -26,6 +26,7 @@ libexec/vile/vile-ecl-filt
 libexec/vile/vile-esql-filt
 libexec/vile/vile-est-filt
 libexec/vile/vile-fdl-filt
+libexec/vile/vile-hs-filt
 libexec/vile/vile-html-filt
 libexec/vile/vile-imake-filt
 libexec/vile/vile-info-filt
@@ -38,6 +39,7 @@ libexec/vile/vile-lisp-filt
 libexec/vile/vile-lua-filt
 libexec/vile/vile-m4-filt
 libexec/vile/vile-mail-filt
+libexec/vile/vile-mailcap-filt
 libexec/vile/vile-make-filt
 libexec/vile/vile-manfilt
 libexec/vile/vile-mcrl-filt
@@ -57,6 +59,7 @@ libexec/vile/vile-rpm-filt
 libexec/vile/vile-rtf-filt
 libexec/vile/vile-ruby-filt
 libexec/vile/vile-sccs-filt
+libexec/vile/vile-scheme-filt
 libexec/vile/vile-sed-filt
 libexec/vile/vile-sh-filt
 libexec/vile/vile-sml-filt
@@ -73,6 +76,7 @@ libexec/vile/vile-vile-filt
 libexec/vile/vile-vlog-filt
 libexec/vile/vile-wbt-filt
 libexec/vile/vile-xml-filt
+libexec/vile/vile-xq-filt
 libexec/vile/vile-xres-filt
 libexec/vile/vile-xs-filt
 libexec/vile/vile-yacc-filt
@@ -84,6 +88,7 @@ share/examples/vile/pictmode.rc
 share/examples/vile/spell.rc
 share/examples/vile/visvile.rc
 share/vile/ada.keywords
+share/vile/ant.keywords
 share/vile/as.keywords
 share/vile/as386.keywords
 share/vile/asm.keywords
@@ -121,6 +126,7 @@ share/vile/est.keywords
 share/vile/fdl.keywords
 share/vile/filters.rc
 share/vile/gnugpg.rc
+share/vile/hs.keywords
 share/vile/html.keywords
 share/vile/imake.keywords
 share/vile/ini.keywords
@@ -134,11 +140,14 @@ share/vile/loaderrs.rc
 share/vile/lua.keywords
 share/vile/m4.keywords
 share/vile/mail.keywords
+share/vile/mailcap.keywords
 share/vile/make.keywords
 share/vile/manpage.rc
 share/vile/mcrl.keywords
 share/vile/midl.keywords
 share/vile/modes.rc
+share/vile/mvn.keywords
+share/vile/objc.keywords
 share/vile/nr.keywords
 share/vile/nsis.keywords
 share/vile/palettes.rc
@@ -171,6 +180,7 @@ share/vile/perl/winops.pm
 share/vile/php.keywords
 share/vile/pictmode.rc
 share/vile/pot.keywords
+share/vile/prolog.keywords
 share/vile/ps.keywords
 share/vile/py.keywords
 share/vile/rb.keywords
@@ -197,6 +207,8 @@ share/vile/tex.keywords
 share/vile/texi.keywords
 share/vile/ti.keywords
 share/vile/vb.keywords
+share/vile/vb6.keywords
+share/vile/vbs.keywords
 share/vile/vile.hlp
 share/vile/vile.keywords
 share/vile/vileinit.rc
@@ -206,6 +218,8 @@ share/vile/vlog.keywords
 share/vile/wbt.keywords
 share/vile/which.rc
 share/vile/xml.keywords
+share/vile/xq.keywords
 share/vile/xres.keywords
 share/vile/xs.keywords
+share/vile/xsl.keywords
 share/vile/yacc.keywords

@@ -1,0 +1,15 @@
+$NetBSD: patch-filters_makefile.in,v 1.1 2012/07/20 14:38:51 marino Exp $
+
+Carryover from vile 0.97, patch-ab
+
+--- filters/makefile.in.orig	2012-07-20 00:50:45.000000000 +0000
++++ filters/makefile.in
+@@ -48,7 +48,7 @@ bindir		= @bindir@
+ libdir		= @libdir@
+ 
+ filters_bindir	= @filters_bindir@
+-datadir		= @datadir@/vile
++datadir		= @datadir@
+ 
+ #### End of system configuration section. ####
+ 
