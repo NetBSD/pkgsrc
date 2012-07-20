@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2007/02/03 18:48:50 schwarz Exp $
+$NetBSD: patch-aa,v 1.11 2012/07/20 09:58:36 adam Exp $
 
---- Makefile.orig	2000-08-21 19:59:52.000000000 +0200
-+++ Makefile	2006-01-22 22:46:17.000000000 +0100
-@@ -44,7 +44,7 @@
+--- Makefile.orig	2003-04-16 14:25:03.000000000 +0000
++++ Makefile
+@@ -44,7 +44,7 @@ what:
  #REAL_DAEMON_DIR=/usr/etc
  #
  # SysV.4 Solaris 2.x OSF AIX
@@ -11,16 +11,7 @@ $NetBSD: patch-aa,v 1.10 2007/02/03 18:48:50 schwarz Exp $
  #
  # BSD 4.4
  #REAL_DAEMON_DIR=/usr/libexec
-@@ -144,7 +144,7 @@
- linux:
- 	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
- 	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ=setenv.o \
--	NETGROUP= TLI= EXTRA_CFLAGS="-DBROKEN_SO_LINGER" all
-+	NETGROUP= TLI= EXTRA_CFLAGS="-DBROKEN_SO_LINGER -DSYS_ERRLIST_DEFINED" all
- 
- # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
- hpux hpux8 hpux9 hpux10:
-@@ -602,7 +602,7 @@
+@@ -603,7 +603,7 @@ ACCESS	= -DHOSTS_ACCESS
  # look for access control information. Watch out for the quotes and
  # backslashes when you make changes.
  
@@ -29,7 +20,7 @@ $NetBSD: patch-aa,v 1.10 2007/02/03 18:48:50 schwarz Exp $
  
  ####################################################
  # Optional: dealing with host name/address conflicts
-@@ -669,9 +669,9 @@
+@@ -670,9 +670,9 @@ HOSTNAME= -DALWAYS_HOSTNAME
  # Protection against weird shells or weird make programs.
  
  SHELL	= /bin/sh
@@ -41,7 +32,7 @@ $NetBSD: patch-aa,v 1.10 2007/02/03 18:48:50 schwarz Exp $
  	$(BUGS) $(SYSTYPE) $(AUTH) $(UMASK) \
  	-DREAL_DAEMON_DIR=\"$(REAL_DAEMON_DIR)\" $(STYLE) $(KILL_OPT) \
  	-DSEVERITY=$(SEVERITY) -DRFC931_TIMEOUT=$(RFC931_TIMEOUT) \
-@@ -696,7 +696,7 @@
+@@ -697,7 +697,7 @@ KIT	= README miscd.c tcpd.c fromhost.c h
  	refuse.c tcpdchk.8 setenv.c inetcf.c inetcf.h scaffold.c \
  	scaffold.h tcpdmatch.8 README.NIS
  
@@ -50,7 +41,7 @@ $NetBSD: patch-aa,v 1.10 2007/02/03 18:48:50 schwarz Exp $
  
  all other: config-check tcpd tcpdmatch try-from safe_finger tcpdchk
  
-@@ -713,31 +713,29 @@
+@@ -714,31 +714,29 @@ config-check:
  cflags: config-check
  
  $(LIB):	$(LIB_OBJ)
