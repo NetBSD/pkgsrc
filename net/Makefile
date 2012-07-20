@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.921 2012/05/10 05:00:10 jnemeth Exp $
+# $NetBSD: Makefile,v 1.922 2012/07/20 03:16:20 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -272,6 +272,7 @@ SUBDIR+=	modpcap
 SUBDIR+=	mono-nat
 SUBDIR+=	monotorrent
 SUBDIR+=	monsoon
+SUBDIR+=	mosh
 SUBDIR+=	mouse-pppoe
 SUBDIR+=	mping
 SUBDIR+=	mppe-lkm
