@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2012/02/13 22:34:38 gls Exp $
+$NetBSD: distinfo,v 1.31 2012/07/20 14:11:04 adam Exp $
 
-SHA1 (awstats-7.0/awstats-7.0.tar.gz) = 733fa7d6a540f4a54f52c69a5f271c789472b0b7
-RMD160 (awstats-7.0/awstats-7.0.tar.gz) = 0bd46afbd3159cf5f3e517b37a43b7d0852fc2a3
-Size (awstats-7.0/awstats-7.0.tar.gz) = 1254327 bytes
+SHA1 (awstats-7.1/awstats-7.1.tar.gz) = edabc12bc44a701cd7bb0516002f9e016a5aaac0
+RMD160 (awstats-7.1/awstats-7.1.tar.gz) = bff81df6b8e54a77aacca03a74b7c4e3711e8663
+Size (awstats-7.1/awstats-7.1.tar.gz) = 1256030 bytes
 SHA1 (patch-aa) = fcbd1e95612891e31f996bbfc4ebb88ddb29eac7
 SHA1 (patch-ab) = 9ae474058a1803c1132b36448c1a6987c58e8823
 SHA1 (patch-ad) = 9c08fff3fcc3871a08c73c9509fbeb5baca06c09
