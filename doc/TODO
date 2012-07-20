@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11314.2.1 2012/07/20 00:41:31 gdt Exp $
+$NetBSD: TODO,v 1.11314.2.2 2012/07/20 09:26:50 tron Exp $
 
 Suggested new packages
 ======================
@@ -1071,6 +1071,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gobject-3.2.2
 	o py-ldap-2.4.10
 	o py-libxml2-2.8.0
+	o py-pyutil-1.9.3 [pkg/46551]
 	o py-qt4-4.9.3
 	o py-setuptools_trial-0.5.12 [pkg/46550]
 	o py-sip-4.13.3
