@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/12 20:10:42 gls Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/07/20 00:41:11 gdt Exp $
 bin/lines
 bin/randcookie
 bin/randfile
@@ -227,6 +227,9 @@ ${PYSITELIB}/pyutil/test/out_of_shape/test_zlibutil.pyo
 ${PYSITELIB}/pyutil/testutil.py
 ${PYSITELIB}/pyutil/testutil.pyc
 ${PYSITELIB}/pyutil/testutil.pyo
+${PYSITELIB}/pyutil/time_comparisons.py
+${PYSITELIB}/pyutil/time_comparisons.pyc
+${PYSITELIB}/pyutil/time_comparisons.pyo
 ${PYSITELIB}/pyutil/time_format.py
 ${PYSITELIB}/pyutil/time_format.pyc
 ${PYSITELIB}/pyutil/time_format.pyo
