@@ -1,0 +1,3 @@
+This is the modular Xorg application meta-package for installing the
+various header prototypes for compiling programs against modular
+Xorg libraries.
