@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2012/06/16 15:04:08 taca Exp $
+# $NetBSD: Makefile,v 1.67 2012/07/21 10:04:10 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -26,6 +26,7 @@ SUBDIR+=	modular-xorg-apps
 SUBDIR+=	modular-xorg-drivers
 SUBDIR+=	modular-xorg-fonts
 SUBDIR+=	modular-xorg-libs
+SUBDIR+=	modular-xorg-protos
 SUBDIR+=	mono-gnome-bindings
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
