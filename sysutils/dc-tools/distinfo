@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/07/12 23:55:55 abs Exp $
+$NetBSD: distinfo,v 1.2 2012/07/21 21:43:55 abs Exp $
 
-SHA1 (dc-tools/abs0-dc-burn-netbsd-1.0-0-gf333dc8) = f8e78c095780b910f7e05e2672f41e6a1ed838dd
-RMD160 (dc-tools/abs0-dc-burn-netbsd-1.0-0-gf333dc8) = a0ca265f50c78c211ec249734f2e62a902a7909f
-Size (dc-tools/abs0-dc-burn-netbsd-1.0-0-gf333dc8) = 3146 bytes
+SHA1 (dc-tools/abs0-dc-burn-netbsd-1.1-0-gb9d0f1d) = a430c305cf81bce8c3dfd38e41612a837a17e050
+RMD160 (dc-tools/abs0-dc-burn-netbsd-1.1-0-gb9d0f1d) = 07e1ee4b370ab067f559190a75db57767cf73dee
+Size (dc-tools/abs0-dc-burn-netbsd-1.1-0-gb9d0f1d) = 3952 bytes
 SHA1 (dc-tools/ip_slave.tar.gz) = 573e0c410037715652d60a133a90b17fff279405
 RMD160 (dc-tools/ip_slave.tar.gz) = 408603e6265bff935764c68f2bf4b0ebc6bd7088
 Size (dc-tools/ip_slave.tar.gz) = 23008 bytes
