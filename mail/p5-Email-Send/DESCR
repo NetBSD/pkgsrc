@@ -13,5 +13,3 @@ will by dynamically loaded. Mailers are named either relative to the
 mailer, "Email::Send" first tries to load "Email::Send::IO". If that fails, an
 attempt is made to load "IO". If that final attempt fails, "Email::Send" will
 throw an exception.
-
-WWW: http://search.cpan.org/dist/Email-Send/
