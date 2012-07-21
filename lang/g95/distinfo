@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/05/08 02:59:16 sbd Exp $
+$NetBSD: distinfo,v 1.10 2012/07/21 22:01:17 dholland Exp $
 
 SHA1 (g95-0.92/g95_source.tgz) = e6320fc80d8e388aad1fdbde53b2414353692b76
 RMD160 (g95-0.92/g95_source.tgz) = ac00c4cdd6dc0b90ef865040ff338b7f2d9296d1
@@ -17,3 +17,4 @@ SHA1 (patch-.._gcc-4.0.3_gcc_ginclude_stddef.h) = 5e18b132d36ca02dcfed0569297e7a
 SHA1 (patch-ab) = 7275d8df3ba1621f3d496c386df999295f36f974
 SHA1 (patch-ac) = cc6811bb7ef29d9388a40851c403f8768b6f9e48
 SHA1 (patch-libf95.a-0.92_configure) = d17fc9fa66228489cfa5e49c23d4cfd32a91bfae
+SHA1 (patch-libf95.a-0.92_io_atof.c) = cd45d03e68573fdadb8c9a217e7dc1eab0db8314
