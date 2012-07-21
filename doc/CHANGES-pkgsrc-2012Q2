@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.18 2012/07/20 08:07:33 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.19 2012/07/21 20:18:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -98,3 +98,9 @@ Pullup ticket #3861 - requested by spz
 shells/bash: security patch
 Pullup ticket #3862 - requested by wiz
 graphics/tiff security update
+Pullup ticket #3863 - requested by ryoon
+www/seamonkey: security update
+Pullup ticket #3864 - requested by ryoon
+www/seamonkey-l10n: sync with seamonkey package
+Pullup ticket #3865 - requested by wiz
+net/nsd: security update
