@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/07/12 23:59:46 abs Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/21 21:43:55 abs Exp $
 
-DISTNAME=	dc-tools-1.00nb1
+DISTNAME=	dc-tools-1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mc.pp.se/dc/files/ \
-		https://github.com/abs0/dc-burn-netbsd/tarball/1.0
+		https://github.com/abs0/dc-burn-netbsd/tarball/1.1
 DIST_SUBDIR=	dc-tools
 DISTFILES=	makeip.tar.gz scramble.c ip_slave.tar.gz serial_slave.tar.gz \
 		${DCBURN_DISTFILE}
@@ -19,8 +19,7 @@ DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
 
 FETCH_USING=	curl	# For github
 
-DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.0-0-gf333dc8
-
+DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.1-0-gb9d0f1d
 # The filenames in the _slave.tar.gz files overlap
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DIST_SUBDIR}/scramble.c ${WRKSRC} && \
 	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/makeip.tar.gz && \
