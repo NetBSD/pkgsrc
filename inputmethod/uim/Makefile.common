@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2012/02/18 11:46:14 obache Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/07/22 06:15:22 obache Exp $
 #
 # used by inputmethod/uim/Makefile
 # used by inputmethod/uim-elisp/Makefile
 
-UIM_VERSION=		1.7.3
+UIM_VERSION=		1.8.1
 DISTNAME=		uim-${UIM_VERSION}
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://uim.googlecode.com/files/

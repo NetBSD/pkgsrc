@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2012/02/18 11:46:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/07/22 06:15:22 obache Exp $
 ${PLIST.qt3}bin/uim-chardict-qt
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
@@ -36,11 +36,12 @@ include/uim/uim-scm-abbrev.h
 include/uim/uim-scm.h
 include/uim/uim-util.h
 include/uim/uim.h
+include/uim/version.h
 ${PLIST.gnome}lib/bonobo/servers/GNOME_UimApplet.server
 ${PLIST.gtk}lib/gtk-2.0/2.10.0/immodules/im-uim.la
 ${PLIST.gtk3}lib/gtk-3.0/3.0.0/immodules/im-uim.la
 ${PLIST.kde3}lib/kde3/uim_panelapplet.la
-${PLIST.kde}lib/kde4/uim_panelapplet.la
+${PLIST.kde}lib/kde4/plasma_applet_uim.so
 lib/libuim-custom.la
 lib/libuim-scm.la
 lib/libuim.la
@@ -65,6 +66,8 @@ lib/uim/plugin/libuim-socket.la
 ${PLIST.wnn}lib/uim/plugin/libuim-wnn.la
 ${PLIST.gtk}libexec/uim-candwin-gtk
 ${PLIST.gtk3}libexec/uim-candwin-gtk3
+${PLIST.gtk}libexec/uim-candwin-horizontal-gtk
+${PLIST.gtk3}libexec/uim-candwin-horizontal-gtk3
 ${PLIST.qt3}libexec/uim-candwin-qt
 ${PLIST.qt}libexec/uim-candwin-qt4
 ${PLIST.gtk}libexec/uim-candwin-tbl-gtk
@@ -88,25 +91,28 @@ share/doc/uim/UIM-SH
 ${PLIST.fep}share/doc/uim/uim-fep/README
 ${PLIST.fep}share/doc/uim/uim-fep/README.ja
 ${PLIST.kde3}share/kde/apps/kicker/applets/uimapplet.desktop
-${PLIST.kde}share/kde4/apps/kicker/applets/uimapplet.desktop
+${PLIST.kde}share/kde4/services/plasma-applet-uim.desktop
 share/locale/fr/LC_MESSAGES/uim.mo
 share/locale/ja/LC_MESSAGES/uim.mo
-${PLIST.qt3}share/locale/ja/LC_MESSAGES/uim-chardict-qt.mo
-${PLIST.qt}share/locale/ja/LC_MESSAGES/uim-chardict-qt4.mo
 share/locale/ko/LC_MESSAGES/uim.mo
 share/uim/action.scm
 share/uim/ajax-ime-custom.scm
 share/uim/ajax-ime-key-custom.scm
 share/uim/ajax-ime.scm
+share/uim/annotation-custom.scm
 share/uim/annotation-dict.scm
 share/uim/annotation-eb.scm
 share/uim/annotation-filter.scm
+share/uim/annotation-osx-dcs.scm
 share/uim/annotation.scm
 share/uim/anthy-custom.scm
 share/uim/anthy-key-custom.scm
 share/uim/anthy-utf8-custom.scm
 share/uim/anthy-utf8.scm
 share/uim/anthy.scm
+share/uim/baidu-olime-jp-custom.scm
+share/uim/baidu-olime-jp-key-custom.scm
+share/uim/baidu-olime-jp.scm
 share/uim/byeoru-custom.scm
 share/uim/byeoru-data/byeoru-dict
 share/uim/byeoru-key-custom.scm
@@ -135,6 +141,9 @@ share/uim/generic-custom.scm
 share/uim/generic-key-custom.scm
 share/uim/generic-predict.scm
 share/uim/generic.scm
+share/uim/google-cgiapi-jp-custom.scm
+share/uim/google-cgiapi-jp-key-custom.scm
+share/uim/google-cgiapi-jp.scm
 share/uim/hangul.scm
 share/uim/hangul2.scm
 share/uim/hangul3.scm
@@ -158,6 +167,8 @@ share/uim/japanese-custom.scm
 share/uim/japanese-kana.scm
 share/uim/japanese-kzik.scm
 share/uim/japanese.scm
+share/uim/json-parser-expanded.scm
+share/uim/json.scm
 share/uim/key.scm
 share/uim/latin.scm
 share/uim/lazy-load.scm
@@ -176,6 +187,7 @@ share/uim/loader.scm
 share/uim/lolevel.scm
 share/uim/look-custom.scm
 share/uim/look.scm
+share/uim/m17nlib-custom.scm
 share/uim/m17nlib.scm
 share/uim/mana-custom.scm
 share/uim/mana-key-custom.scm
@@ -184,11 +196,14 @@ share/uim/match.scm
 share/uim/ng-action.scm
 share/uim/ng-key.scm
 share/uim/openssl.scm
+share/uim/packrat.scm
 share/uim/pinyin-big5.scm
 share/uim/pixmaps/ajax-ime.png
 share/uim/pixmaps/ajax-ime.svg
 share/uim/pixmaps/anthy.png
 ${PLIST.anthy}share/uim/pixmaps/anthy-utf8.png
+share/uim/pixmaps/baidu-olime-jp.png
+share/uim/pixmaps/baidu-olime-jp.svg
 share/uim/pixmaps/byeoru.png
 share/uim/pixmaps/byeoru.svg
 share/uim/pixmaps/canna.png
@@ -202,6 +217,8 @@ share/uim/pixmaps/direct_input_dark_background.png
 share/uim/pixmaps/direct_input_dark_background.svg
 share/uim/pixmaps/elatin.png
 share/uim/pixmaps/elatin.svg
+share/uim/pixmaps/google-cgiapi-jp.png
+share/uim/pixmaps/google-cgiapi-jp.svg
 share/uim/pixmaps/hangul2.png
 share/uim/pixmaps/hangul2.svg
 share/uim/pixmaps/hangul3.png
@@ -391,6 +408,7 @@ share/uim/tutcode-editor.scm
 share/uim/tutcode-key-custom.scm
 share/uim/tutcode-kigou-rule.scm
 share/uim/tutcode-kigoudic.scm
+share/uim/tutcode-rule-custom.scm
 share/uim/tutcode-rule.scm
 share/uim/tutcode.scm
 share/uim/uim-help.scm

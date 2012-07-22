@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.25 2012/02/18 11:46:14 obache Exp $
+# $NetBSD: options.mk,v 1.26 2012/07/22 06:15:22 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
-PKG_SUGGESTED_OPTIONS=	anthy gtk uim-fep xim
+PKG_SUGGESTED_OPTIONS=	anthy expat gtk prime uim-fep xim
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,6 +24,7 @@ PLIST_VARS+=		helperdata uim-dict-gtk uim-dict-gtk3 uim-dict-helperdata fep
 PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 kde kde3 m17nlib openssl qt qt3 sqlite wnn xim
 
 .if !empty(PKG_OPTIONS:Mxim)
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
