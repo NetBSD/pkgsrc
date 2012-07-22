@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2337 2012/07/22 10:07:37 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2338 2012/07/22 12:08:25 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3621,3 +3621,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.1.4 [obache 2012-07-22]
 	Updated x11/ruby-gnome2-vte to 1.1.4 [obache 2012-07-22]
 	Updated shells/zsh to 5.0.0 [ryoon 2012-07-22]
+	Updated textproc/dictem to 1.0.3 [cheusov 2012-07-22]
