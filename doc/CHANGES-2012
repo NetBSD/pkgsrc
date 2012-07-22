@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2341 2012/07/22 12:38:51 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2342 2012/07/22 13:01:56 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3625,3 +3625,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-twitter-stream to 0.1.16 [obache 2012-07-22]
 	Updated graphics/rabbit to 1.0.9 [obache 2012-07-22]
 	Updated security/ruby-simple_oauth to 0.1.9 [obache 2012-07-22]
+	Updated lang/runawk to 1.4.1 [cheusov 2012-07-22]
