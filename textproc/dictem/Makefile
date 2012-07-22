@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/10/09 10:02:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/22 11:02:40 cheusov Exp $
 
-DISTNAME=		dictem-1.0.2
+DISTNAME=		dictem-1.0.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dictem/} \
                         http://www.mova.org/~cheusov/pub/dictem/
@@ -10,14 +9,14 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dictem/} \
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://freshmeat.net/projects/dictem/
 COMMENT=		Dictionary client (RFC-2229) for [X]Emacs
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		dict-client>=1.9.14:../../textproc/dict-client
-#MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 SRCS=			dictem.el
-DOCS=			README NEWS COPYING ChangeLog
+DOCS=			README NEWS COPYING # ChangeLog
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EMACS_LISPPREFIX}
 
