@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2340 2012/07/22 12:27:50 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2341 2012/07/22 12:38:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3624,3 +3624,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/dictem to 1.0.3 [cheusov 2012-07-22]
 	Updated net/ruby-twitter-stream to 0.1.16 [obache 2012-07-22]
 	Updated graphics/rabbit to 1.0.9 [obache 2012-07-22]
+	Updated security/ruby-simple_oauth to 0.1.9 [obache 2012-07-22]
