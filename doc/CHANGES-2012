@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2345 2012/07/22 15:33:14 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2346 2012/07/22 15:33:47 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3629,3 +3629,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mk-configure to 0.23.0 [cheusov 2012-07-22]
 	Updated inputmethod/libskk to 0.0.13 [obache 2012-07-22]
 	Updated textproc/dict-client to 1.12.1 [cheusov 2012-07-22]
+	Updated textproc/dict-server to 1.12.1 [cheusov 2012-07-22]
