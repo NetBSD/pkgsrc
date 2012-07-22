@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.4 2012/07/22 10:03:40 ryoon Exp $
+
+--- Config/defs.mk.in.orig	2011-04-19 15:05:00.000000000 +0000
++++ Config/defs.mk.in
+@@ -81,6 +81,7 @@ TEXI2PDF	= @TEXI2PDF@
+ 
+ # install utility
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT  = @INSTALL_SCRIPT@
+ INSTALL_DATA    = @INSTALL_DATA@
+ 
+ # variables used in determining what to install
