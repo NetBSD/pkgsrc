@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.93 2012/06/14 22:17:17 zafer Exp $
+# $NetBSD: sites.mk,v 1.94 2012/07/22 20:39:47 jperkin Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -19,8 +19,7 @@ MASTER_SITE_GNU+=       \
 	ftp://mirrors.kernel.org/gnu/ \
 	ftp://ftp.sunet.se/pub/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
-	http://gd.tuwien.ac.at/gnu/gnusrc/ \
-	ftp://ftp.chg.ru/pub/gnu/
+	http://gd.tuwien.ac.at/gnu/gnusrc/
 
 MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/
@@ -55,7 +54,6 @@ MASTER_SITE_TEX_CTAN+= \
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
-	ftp://ftp.chg.ru/pub/Linux/sunsite/ \
 	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/ \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/ \
 	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
@@ -71,7 +69,6 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
 	ftp://ftp.dti.ad.jp/pub/X/gnome/ \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
-	ftp://ftp.chg.ru/pub/X11/gnome/ \
 	ftp://ftp.dit.upm.es/linux/gnome/
 
 MASTER_SITE_KDE+=	\
