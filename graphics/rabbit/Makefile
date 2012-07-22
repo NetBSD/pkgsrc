@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/06/17 08:53:28 obache Exp $
+# $NetBSD: Makefile,v 1.37 2012/07/22 12:27:40 obache Exp $
 #
 
-DISTNAME=	rabbit-1.0.8
+DISTNAME=	rabbit-1.0.9
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rabbit-shockers.org/download/
 
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2 # or later
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=1.1.4:../../devel/ruby-gnome2-gio
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=0.90.3:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg-[0-9]*:../../graphics/ruby-gnome2-rsvg
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-poppler-[0-9]*:../../print/ruby-gnome2-poppler
