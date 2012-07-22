@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.56 2010/05/07 12:02:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.57 2012/07/22 10:03:40 ryoon Exp $
 
 .include "../../shells/zsh/Makefile.common"
-PKGREVISION=	2
 
-ZSH_VERSION=	4.2.7
+ZSH_VERSION=	5.0.0
 ZSH_MAINTAINER=	uebayasi@NetBSD.org
+
+USE_TOOLS+=	env
+
+CONFIGURE_ARGS+=	--disable-gdbm
 
 SUBST_CLASSES+=	prefix-fixup
 SUBST_STAGE.prefix-fixup=	pre-configure
@@ -16,8 +19,10 @@ SUBST_FILES.prefix-fixup= \
 	Functions/Calendar/calendar_add \
 	Functions/Misc/run-help \
 	Functions/Misc/checkmail \
+	Functions/Misc/sticky-note \
 	Functions/Misc/zcalc \
 	Functions/Misc/zkbd \
+	Functions/Misc/zed \
 	Functions/Example/cat
 SUBST_SED.prefix-fixup= \
 	-e 's|^\#\!/bin/env|\#\!${TOOLS_PATH.env}|g' \

@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.4 2012/07/22 10:03:40 ryoon Exp $
+
+--- Makefile.in.orig	2009-03-14 18:27:05.000000000 +0000
++++ Makefile.in
+@@ -87,6 +87,7 @@ install.fns:
+ 	  scriptdir="$(scriptdir)" \
+ 	  FUNCTIONS_SUBDIRS="$(FUNCTIONS_SUBDIRS)" \
+ 	  INSTALL_DATA="$(INSTALL_DATA)" \
++	  INSTALL_SCRIPT="$(INSTALL_SCRIPT)" \
+ 	  INSTALL_PROGRAM="$(INSTALL_PROGRAM)" \
+ 	  DESTDIR="$(DESTDIR)" VERSION="$(VERSION)" \
+ 	  $(SHELL) $(sdir_top)/Config/installfns.sh || exit 1; \
