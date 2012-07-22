@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/03/09 18:56:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/22 13:00:41 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.22.0
+DISTNAME=	mk-configure-0.23.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -26,6 +26,8 @@ AUTO_MKDIRS=		yes
 
 PKGDOCDIR=		share/doc/mk-configure
 EGDIR=			share/examples/mk-configure
+
+#TEST_TARGET=		test
 
 post-install:
 .for i in ${DOC_FILES}
