@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.224 2012/07/15 11:08:19 marino Exp $
+# $NetBSD: makevars.map,v 1.225 2012/07/22 01:01:41 dholland Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -302,10 +302,10 @@ EMACS_PKGNAME_PREFIX	Identifier [$system]
 # ^^ or the empty string.
 EMACS_TYPE		{ emacs xemacs } [$system]
 EMACS_USE_LEIM		Yes
-EMACS_VERSIONS_ACCEPTED	List of { emacs24 emacs23 emacs23nox emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:s]
+EMACS_VERSIONS_ACCEPTED	List of { emacs24 emacs24nox emacs23 emacs23nox emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:s]
 EMACS_VERSION_MAJOR	Integer [$system]
 EMACS_VERSION_MINOR	Integer [$system]
-EMACS_VERSION_REQD	List of { emacs24 emacs23 emacs23nox emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:as]
+EMACS_VERSION_REQD	List of { emacs24 emacs24nox emacs23 emacs23nox emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:as]
 EMULDIR			Pathname [$system]
 EMULSUBDIR		Pathname [$system]
 OPSYS_EMULDIR		Pathname [$system]
