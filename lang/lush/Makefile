@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/13 10:55:16 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/22 01:08:23 dholland Exp $
 
 DISTNAME=	lush-1.2.1
 PKGREVISION=	2
@@ -18,7 +18,7 @@ USE_GNU_READLINE=	yes # rl_getc, rl_basic_quote_characters, rl_insert_close
 
 CONFIGURE_ARGS+=	--without-bfd
 
-WRKSRC=		$(WRKDIR)/lush
+WRKSRC=		${WRKDIR}/lush
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/lush/lsh/libc/*.lsh.orig
