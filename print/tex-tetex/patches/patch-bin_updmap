@@ -1,74 +1,63 @@
-$NetBSD: patch-bin_updmap,v 1.1 2011/11/06 08:43:28 minskim Exp $
+$NetBSD: patch-bin_updmap,v 1.2 2012/07/22 20:24:42 minskim Exp $
 
---- bin/updmap.orig	2011-06-17 23:45:54.000000000 +0000
+--- bin/updmap.orig	2012-06-10 22:43:00.000000000 +0000
 +++ bin/updmap
-@@ -8,7 +8,7 @@
+@@ -23,7 +23,7 @@ my $TEXMFROOT;
  
  BEGIN {
    $^W=1;
--  chomp($TEXMFROOT = `kpsewhich -var-value=TEXMFROOT`);
-+  chomp($TEXMFROOT = `@KPSEWHICH@ -var-value=TEXMFROOT`);
-   unshift (@INC, "$TEXMFROOT/tlpkg");
+-  $TEXMFROOT = `kpsewhich -var-value=TEXMFROOT`;
++  $TEXMFROOT = `@KPSEWHICH@ -var-value=TEXMFROOT`;
+   if ($?) {
+     print STDERR "updmap: Cannot find TEXMFROOT, aborting!\n";
+     exit 1;
+@@ -50,9 +50,9 @@ use TeXLive::TLUtils qw(mkdirhier mktexu
+ # this function checks by itself whether it is running on windows or not
+ reset_root_home();
+ 
+-chomp(my $TEXMFMAIN = `kpsewhich --var-value=TEXMFMAIN`);
+-chomp(my $TEXMFVAR = `kpsewhich -var-value=TEXMFVAR`);
+-chomp(my $TEXMFCONFIG = `kpsewhich -var-value=TEXMFCONFIG`);
++chomp(my $TEXMFMAIN = `@KPSEWHICH@ --var-value=TEXMFMAIN`);
++chomp(my $TEXMFVAR = `@KPSEWHICH@ -var-value=TEXMFVAR`);
++chomp(my $TEXMFCONFIG = `@KPSEWHICH@ -var-value=TEXMFCONFIG`);
+ 
+ # make sure that on windows *everything* is in lower case for comparison
+ if (win32()) {
+@@ -213,15 +213,15 @@ sub main {
+     # in the list is the one where changes will be written to.
+     ($changes_config_file) = @{$opts{'cnffile'}};
+   } else {
+-    my @all_files = `kpsewhich -all updmap.cfg`;
++    my @all_files = `@KPSEWHICH@ -all updmap.cfg`;
+     chomp(@all_files);
+     my @used_files;
+     for my $f (@all_files) {
+       push @used_files, (win32() ? lc($f) : $f);
+     }
+     #
+-    chomp(my $TEXMFLOCAL =`kpsewhich --var-value=TEXMFLOCAL`);
+-    chomp(my $TEXMFHOME =`kpsewhich --var-value=TEXMFHOME`);
++    chomp(my $TEXMFLOCAL =`@KPSEWHICH@ --var-value=TEXMFLOCAL`);
++    chomp(my $TEXMFHOME =`@KPSEWHICH@ --var-value=TEXMFHOME`);
+     if (win32()) {
+       $TEXMFLOCAL = lc($TEXMFLOCAL);
+       $TEXMFHOME = lc($TEXMFHOME);
+@@ -1140,7 +1140,7 @@ sub mkMaps {
+ 
+ sub locateMap {
+   my $map = shift;
+-  my $ret = `kpsewhich --format=map $map`;
++  my $ret = `@KPSEWHICH@ --format=map $map`;
+   chomp($ret);
+   return $ret;
  }
- 
-@@ -453,7 +453,7 @@ sub locateWeb2c {
-   my @files = @_;
-   return @files if ($#files < 0);
- 
--  @files = split (/\n/, `kpsewhich --format="web2c files" @files`);
-+  @files = split (/\n/, `@KPSEWHICH@ --format="web2c files" @files`);
-   if (wantarray) {
-     return @files;
+@@ -1788,7 +1788,7 @@ sub read_map_files {
+     $alldata->{'maps'}{$m}{'status'} = 'enabled';
    }
-@@ -470,7 +470,7 @@ sub locateMap {
-   my @maps = @_;
-   return @maps if ($#maps < 0);
- 
--  my @files = `kpsewhich --format=map @maps`;
-+  my @files = `@KPSEWHICH@ --format=map @maps`;
-   chomp @files;
- 
+   @maps = sort_uniq(@maps);
+-  my @fullpath = `kpsewhich --format=map @maps`;
++  my @fullpath = `@KPSEWHICH@ --format=map @maps`;
+   chomp @fullpath;
    foreach my $map (@maps) {
-@@ -672,7 +672,7 @@ sub setupOutputDir {
-     my $tf;
-     # Try TEXMFVAR tree. Use it if variable is set and $rel can
-     # be written.
--    chomp($tf = `kpsewhich --var-value=TEXMFVAR`);
-+    chomp($tf = `@KPSEWHICH@ --var-value=TEXMFVAR`);
-     if ($tf) {
-       &mkdirhier("$tf/$rel");
-       if (! -w "$tf/$rel") {
-@@ -697,13 +697,13 @@ sub setupDestDir {
- #
- sub setupCfgFile {
-   if (! $cnfFile) {
--    my $tf = `kpsewhich --var-value=TEXMFCONFIG`;
-+    my $tf = `@KPSEWHICH@ --var-value=TEXMFCONFIG`;
-     chomp($tf);
-     if ($tf && ! -f "$tf/web2c/$cnfFileShort") {
-       &mkdirhier("$tf/web2c") if (! -d "$tf/web2c");
-       if (-d "$tf/web2c" && -w "$tf/web2c") {
-         unlink "$tf/web2c/$cnfFileShort";
--        my $original_cfg=`kpsewhich updmap.cfg`;
-+        my $original_cfg=`@KPSEWHICH@ updmap.cfg`;
-         chomp($original_cfg);
-         print("copy $original_cfg => $tf/web2c/$cnfFileShort\n") if !$quiet;
-         $newcnf="$tf/web2c/$cnfFileShort";
-@@ -839,7 +839,7 @@ sub mkMaps {
-   $cache=1;
- 
-   if (! $dry_run) {
--    my $TEXMFVAR = `kpsewhich --var-value=TEXMFVAR`;
-+    my $TEXMFVAR = `@KPSEWHICH@ --var-value=TEXMFVAR`;
-     chomp($TEXMFVAR);
-     $logfile = "$TEXMFVAR/web2c/updmap.log";
-     mkdirhier "$TEXMFVAR/web2c";
-@@ -1072,7 +1072,7 @@ sub initVars {
-   $cnfFile = "";
-   $cnfFileShort = "updmap.cfg";
-   $outputdir = "";
--  chomp($TEXMFMAIN =`kpsewhich --var-value=TEXMFMAIN`);
-+  chomp($TEXMFMAIN =`@KPSEWHICH@ --var-value=TEXMFMAIN`);
- 
-   @psADOBE = (
-        's/ URWGothicL-Demi / AvantGarde-Demi /',
+     my ($ff) = grep /\/$map(\.map)?$/, @fullpath;
