@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2008/08/17 06:45:48 dholland Exp $
+$NetBSD: patch-ac,v 1.2 2012/07/22 01:08:24 dholland Exp $
+
+Fix handling of user home directory in runtime.
 
 --- lsh/libc/shell.lsh~	2005-03-08 15:14:44.000000000 -0500
 +++ lsh/libc/shell.lsh	2008-08-17 02:40:12.000000000 -0400
