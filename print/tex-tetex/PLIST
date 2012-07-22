@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/06 08:43:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/22 20:24:42 minskim Exp $
 bin/updmap
 bin/updmap-sys
+share/texmf-dist/web2c/updmap.cfg
 share/texmf/dvips/tetex/config.builtin35
 share/texmf/dvips/tetex/config.dfaxhigh
 share/texmf/dvips/tetex/config.dfaxlo

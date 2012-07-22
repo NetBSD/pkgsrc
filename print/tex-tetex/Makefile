@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/03/04 01:01:43 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2012/07/22 20:24:42 minskim Exp $
 
 DISTNAME=	tetex
-PKGNAME=	tex-${DISTNAME}-3.0.25424
-TEXLIVE_REV=	25424
+PKGNAME=	tex-${DISTNAME}-3.0.26894
+TEXLIVE_REV=	26894
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for updmap
@@ -27,10 +27,11 @@ REPLACE_SH=	bin/updmap-sys
 PKG_SYSCONFSUBDIR=	texmf
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
-CONF_FILES+=	${PREFIX}/share/texmf/web2c/updmap.cfg \
+CONF_FILES+=	${PREFIX}/share/texmf-dist/web2c/updmap.cfg \
 		${PKG_SYSCONFDIR}/web2c/updmap.cfg
 
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
+TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} \
+			${PREFIX}/share/texmf ${PREFIX}/share/texmf-dist
 
 .include "../../print/texlive/package.mk"
 
