@@ -1,0 +1,14 @@
+$NetBSD: patch-libiberty_Makefile.in,v 1.1 2012/07/23 12:24:34 jperkin Exp $
+
+Disable multilib.
+
+--- libiberty/Makefile.in.orig	2011-07-22 14:37:58.000000000 +0000
++++ libiberty/Makefile.in
+@@ -350,7 +350,6 @@ install-strip: install
+ # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the
+ # default multilib, so we have to take CFLAGS into account as well,
+ # since it will be passed the multilib flags.
+-MULTIOSDIR = `$(CC) $(CFLAGS) -print-multi-os-directory`
+ install_to_libdir: all
+ 	${mkinstalldirs} $(DESTDIR)$(libdir)/$(MULTIOSDIR)
+ 	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n

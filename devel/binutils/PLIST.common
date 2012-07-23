@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST.common,v 1.16 2012/06/02 11:54:38 cheusov Exp $
+@comment $NetBSD: PLIST.common,v 1.17 2012/07/23 12:24:34 jperkin Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
+${MACHINE_GNU_PLATFORM}/bin/ld.bfd
 ${MACHINE_GNU_PLATFORM}/bin/nm
+${MACHINE_GNU_PLATFORM}/bin/objcopy
 ${MACHINE_GNU_PLATFORM}/bin/objdump
 ${MACHINE_GNU_PLATFORM}/bin/ranlib
 ${MACHINE_GNU_PLATFORM}/bin/strip
@@ -11,7 +13,9 @@ bin/gar
 bin/gas
 bin/gc++filt
 ${PLIST.gprof}bin/ggprof
+bin/gelfedit
 bin/gld
+bin/gld.bfd
 bin/gnm
 bin/gobjcopy
 bin/gobjdump
@@ -25,7 +29,9 @@ gnu/bin/ar
 gnu/bin/as
 gnu/bin/c++filt
 ${PLIST.gprof}gnu/bin/gprof
+gnu/bin/elfedit
 gnu/bin/ld
+gnu/bin/ld.bfd
 gnu/bin/nm
 gnu/bin/objcopy
 gnu/bin/objdump
@@ -41,6 +47,7 @@ gnu/man/man1/c++filt.1
 gnu/man/man1/dlltool.1
 ${PLIST.gprof}gnu/man/man1/gprof.1
 gnu/man/man1/ld.1
+gnu/man/man1/elfedit.1
 gnu/man/man1/nlmconv.1
 gnu/man/man1/nm.1
 gnu/man/man1/objcopy.1
@@ -50,6 +57,7 @@ gnu/man/man1/readelf.1
 gnu/man/man1/size.1
 gnu/man/man1/strings.1
 gnu/man/man1/strip.1
+gnu/man/man1/windmc.1
 gnu/man/man1/windres.1
 include/ansidecl.h
 include/bfd.h
@@ -71,6 +79,7 @@ man/man1/gc++filt.1
 man/man1/gdlltool.1
 ${PLIST.gprof}man/man1/ggprof.1
 man/man1/gld.1
+man/man1/gelfedit.1
 man/man1/gnlmconv.1
 man/man1/gnm.1
 man/man1/gobjcopy.1
@@ -80,7 +89,11 @@ man/man1/greadelf.1
 man/man1/gsize.1
 man/man1/gstrings.1
 man/man1/gstrip.1
+man/man1/gwindmc.1
 man/man1/gwindres.1
+share/locale/bg/LC_MESSAGES/binutils.mo
+${PLIST.gprof}share/locale/bg/LC_MESSAGES/gprof.mo
+share/locale/bg/LC_MESSAGES/ld.mo
 share/locale/da/LC_MESSAGES/bfd.mo
 share/locale/da/LC_MESSAGES/binutils.mo
 ${PLIST.gprof}share/locale/da/LC_MESSAGES/gprof.mo
@@ -88,13 +101,18 @@ share/locale/da/LC_MESSAGES/ld.mo
 share/locale/da/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/de/LC_MESSAGES/gprof.mo
 share/locale/de/LC_MESSAGES/opcodes.mo
+${PLIST.gprof}share/locale/eo/LC_MESSAGES/gprof.mo
 share/locale/es/LC_MESSAGES/bfd.mo
 share/locale/es/LC_MESSAGES/binutils.mo
 share/locale/es/LC_MESSAGES/gas.mo
 ${PLIST.gprof}share/locale/es/LC_MESSAGES/gprof.mo
 share/locale/es/LC_MESSAGES/ld.mo
 share/locale/es/LC_MESSAGES/opcodes.mo
+share/locale/fi/LC_MESSAGES/bfd.mo
 share/locale/fi/LC_MESSAGES/binutils.mo
+share/locale/fi/LC_MESSAGES/gas.mo
+${PLIST.gprof}share/locale/fi/LC_MESSAGES/gprof.mo
+share/locale/fi/LC_MESSAGES/ld.mo
 share/locale/fi/LC_MESSAGES/opcodes.mo
 share/locale/fr/LC_MESSAGES/bfd.mo
 share/locale/fr/LC_MESSAGES/binutils.mo
@@ -103,22 +121,35 @@ ${PLIST.gprof}share/locale/fr/LC_MESSAGES/gprof.mo
 share/locale/fr/LC_MESSAGES/ld.mo
 share/locale/fr/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/ga/LC_MESSAGES/gprof.mo
+share/locale/ga/LC_MESSAGES/ld.mo
 share/locale/ga/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/id/LC_MESSAGES/gprof.mo
+share/locale/id/LC_MESSAGES/bfd.mo
+share/locale/id/LC_MESSAGES/binutils.mo
+share/locale/id/LC_MESSAGES/gas.mo
+share/locale/id/LC_MESSAGES/ld.mo
 share/locale/id/LC_MESSAGES/opcodes.mo
 share/locale/ja/LC_MESSAGES/bfd.mo
 share/locale/ja/LC_MESSAGES/binutils.mo
+share/locale/ja/LC_MESSAGES/ld.mo
+${PLIST.gprof}share/locale/ms/LC_MESSAGES/gprof.mo
+${PLIST.gprof}share/locale/nl/LC_MESSAGES/gprof.mo
 share/locale/nl/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/pt_BR/LC_MESSAGES/gprof.mo
 share/locale/pt_BR/LC_MESSAGES/opcodes.mo
 share/locale/ro/LC_MESSAGES/bfd.mo
 share/locale/ro/LC_MESSAGES/binutils.mo
+${PLIST.gprof}share/locale/ro/LC_MESSAGES/gprof.mo
 share/locale/ro/LC_MESSAGES/opcodes.mo
+share/locale/ru/LC_MESSAGES/bfd.mo
 share/locale/ru/LC_MESSAGES/binutils.mo
+share/locale/ru/LC_MESSAGES/gas.mo
+${PLIST.gprof}share/locale/ru/LC_MESSAGES/gprof.mo
 share/locale/rw/LC_MESSAGES/bfd.mo
 share/locale/rw/LC_MESSAGES/binutils.mo
 share/locale/rw/LC_MESSAGES/gas.mo
 ${PLIST.gprof}share/locale/rw/LC_MESSAGES/gprof.mo
+share/locale/sk/LC_MESSAGES/binutils.mo
 share/locale/sv/LC_MESSAGES/bfd.mo
 share/locale/sv/LC_MESSAGES/binutils.mo
 ${PLIST.gprof}share/locale/sv/LC_MESSAGES/gprof.mo
@@ -130,6 +161,7 @@ share/locale/tr/LC_MESSAGES/gas.mo
 ${PLIST.gprof}share/locale/tr/LC_MESSAGES/gprof.mo
 share/locale/tr/LC_MESSAGES/ld.mo
 share/locale/tr/LC_MESSAGES/opcodes.mo
+share/locale/uk/LC_MESSAGES/binutils.mo
 share/locale/vi/LC_MESSAGES/bfd.mo
 share/locale/vi/LC_MESSAGES/binutils.mo
 share/locale/vi/LC_MESSAGES/ld.mo
@@ -140,3 +172,4 @@ share/locale/zh_CN/LC_MESSAGES/ld.mo
 share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/vi/LC_MESSAGES/gprof.mo
 share/locale/zh_TW/LC_MESSAGES/binutils.mo
+share/locale/zh_TW/LC_MESSAGES/ld.mo

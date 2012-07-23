@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/08/22 08:51:46 wiz Exp $
+$NetBSD: distinfo,v 1.11 2012/07/23 12:24:34 jperkin Exp $
 
-SHA1 (binutils-2.17.tar.gz) = a9ac9ac4e918568b297033cdc44a38beef8f9f6a
-RMD160 (binutils-2.17.tar.gz) = bc5e8b23457f0e2e91f70b93eff00134e2d50434
-Size (binutils-2.17.tar.gz) = 18196360 bytes
-SHA1 (patch-aa) = dd97a5afea4b5ae07863301426b71acc61b9a4b6
-SHA1 (patch-ab) = 9d8a52de59f73cce90a1e8fff5d20849724ceb26
-SHA1 (patch-ac) = 8165e2adb19eca4ec9b6e7fd3b52c6614910fa65
-SHA1 (patch-ad) = 4aa005a473d1c4af052eaee84b98b1c0aff90bf1
-SHA1 (patch-ae) = 8aa22782397a59c17801c791dddaefdf757d824e
-SHA1 (patch-af) = f4566c63dd8e7267d96ea65527fd2593b210c241
-SHA1 (patch-gas_app.c) = c7fb59d4c2d9450618818d7e9f5d6e7e8efdbda3
+SHA1 (binutils-2.22.tar.bz2) = 65b304a0b9a53a686ce50a01173d1f40f8efe404
+RMD160 (binutils-2.22.tar.bz2) = 34cebe4cdca9480d5dc6f6b00b052c48c8ac30dc
+Size (binutils-2.22.tar.bz2) = 19973532 bytes
+SHA1 (patch-aa) = 1a127f82c807cbd1ac6fee073c618f3fb48667f6
+SHA1 (patch-configure.ac) = 7bd7b90e57d850705286f2cc6464ecc45e0657c0
+SHA1 (patch-libiberty_Makefile.in) = 380a24a9b6b583002a7cf7b2490e3373e50c6282
