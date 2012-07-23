@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.19 2012/07/21 20:18:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.20 2012/07/23 18:25:02 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -104,3 +104,53 @@ Pullup ticket #3864 - requested by ryoon
 www/seamonkey-l10n: sync with seamonkey package
 Pullup ticket #3865 - requested by wiz
 net/nsd: security update
+Pullup ticket #3866 - requested by taca
+archivers/php-bz2: security update
+archivers/php-zip: security update
+archivers/php-zlib: security update
+converters/php-iconv: security update
+converters/php-mbstring: security update
+databases/php-dba: security update
+databases/php-ldap: security update
+databases/php-mssql: security update
+databases/php-mysql: security update
+databases/php-mysqli: security update
+databases/php-pdo: security update
+databases/php-pdo_dblib: security update
+databases/php-pdo_mysql: security update
+databases/php-pdo_pgsql: security update
+databases/php-pdo_sqlite: security update
+databases/php-pgsql: security update
+databases/php-sqlite: security update
+devel/php-gettext: security update
+devel/php-gmp: security update
+devel/php-pcntl: security update
+devel/php-posix: security update
+devel/php-shmop: security update
+devel/php-sysvmsg: security update
+devel/php-sysvsem: security update
+devel/php-sysvshm: security update
+graphics/php-exif: security update
+graphics/php-gd: security update
+lang/php53: security update
+lang/php54: security update
+mail/php-imap: security update
+math/php-bcmath: security update
+net/php-ftp: security update
+net/php-snmp: security update
+net/php-soap: security update
+net/php-sockets: security update
+net/php-xmlrpc: security update
+security/php-mcrypt: security update
+textproc/php-dom: security update
+textproc/php-enchant: security update
+textproc/php-intl: security update
+textproc/php-json: security update
+textproc/php-pspell: security update
+textproc/php-wddx: security update
+textproc/php-xsl: security update
+time/php-calendar: security update
+www/ap-php: security update
+www/php-curl: security update
+www/php-fpm: security update
+www/php-tidy: security update
