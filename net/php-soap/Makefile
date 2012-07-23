@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 07:45:30 sbd Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2012/07/23 18:24:34 tron Exp $
 
 MODNAME=		soap
-PKGREVISION=		1
 CATEGORIES+=		net
 COMMENT=		PHP5 extension for SOAP functions
 
