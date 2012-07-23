@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.6 2010/01/29 19:59:47 minskim Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.7 2012/07/23 19:17:40 jperkin Exp $
 #
 # Delete format files.
 #
@@ -62,7 +62,7 @@ DEINSTALL)
 			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$format.log
 		done
 	done
-	@FIND@ -d @VARBASE@/lib/texmf -type d -empty -exec @RMDIR@ {} \;
+	@FIND@ @VARBASE@/lib/texmf -depth -type d -exec @RMDIR@ {} \; 2>/dev/null
 	@MKTEXLSR@ @VARBASE@/lib/texmf
         ;;
 *)
