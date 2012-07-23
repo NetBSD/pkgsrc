@@ -1,9 +1,11 @@
-$NetBSD: patch-aj,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+$NetBSD: patch-aj,v 1.1.1.1.20.1 2012/07/23 18:24:34 tron Exp $
+
+Use proper shbang line.
 
 --- run-tests.php.orig	2010-01-03 09:23:27.000000000 +0000
 +++ run-tests.php
 @@ -1,4 +1,4 @@
--#!/usr/bin/php
+-#!/usr/bin/env php
 +#!@PREFIX@/bin/php
  <?php
  /*
