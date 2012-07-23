@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2350 2012/07/23 11:18:42 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2351 2012/07/23 12:25:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-tetex to 3.0.26894 [minskim 2012-07-22]
 	Updated print/tex-tetex-doc to 3.0.26894 [minskim 2012-07-22]
 	Updated emulators/qemu to 1.1.1.1 [ryoon 2012-07-23]
+	Updated devel/binutils to 2.22 [jperkin 2012-07-23]
