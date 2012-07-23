@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2012/06/07 21:23:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.29 2012/07/23 11:17:54 ryoon Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -53,6 +53,7 @@ man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
+share/doc/qemu/qmp-commands.txt
 share/examples/qemu/cpus-x86_64.conf
 share/examples/qemu/target-x86_64.conf
 share/qemu/bamboo.dtb
