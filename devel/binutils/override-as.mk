@@ -1,4 +1,4 @@
-# $NetBSD: override-as.mk,v 1.4 2012/06/16 22:22:54 wiz Exp $
+# $NetBSD: override-as.mk,v 1.5 2012/07/23 12:24:34 jperkin Exp $
 
 # This Makefile fragment can be included by packages that wish to
 # override the default selection of as(1) and use the one from devel/binutils
@@ -20,4 +20,5 @@ ${SPECS_AS}:
 
 _WRAP_EXTRA_ARGS.CC+=	-specs ${SPECS_AS}
 _WRAP_EXTRA_ARGS.CXX+=	-specs ${SPECS_AS}
+
 .endif
