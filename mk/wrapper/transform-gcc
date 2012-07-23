@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.27 2012/06/08 11:39:44 obache Exp $
+# $NetBSD: transform-gcc,v 1.28 2012/07/23 11:58:41 jperkin Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -17,6 +17,10 @@ case $arg in
 -V			|\
 -v			|\
 --version		) transform_pass ;;
+
+# We occasionally override specs to force particular options.
+-specs=*		|\
+-specs			) transform_pass ;;
 
 # GCC extensions.
 -			|\
