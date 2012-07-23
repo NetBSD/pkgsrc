@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2011/09/21 13:10:25 adam Exp $
+# $NetBSD: Makefile,v 1.26.8.1 2012/07/23 18:24:35 tron Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_BASE_VERS}
-PKGREVISION=		1
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
