@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2012/07/23 21:56:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.30 2012/07/23 22:20:16 jnemeth Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.rpm
@@ -41,7 +41,7 @@ FETCH_MESSAGE=								\
 	"from"								\
 	"    ${DOWNLOAD}"
 
-INSTALLATION_DIRS=	etc/rc.d sbin lib/dpt
+INSTALLATION_DIRS=	etc/rc.d sbin lib/dpt man/man8
 
 do-extract:
 	${MKDIR} ${WRKSRC}
