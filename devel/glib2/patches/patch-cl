@@ -1,6 +1,6 @@
-$NetBSD: patch-cl,v 1.7 2012/05/22 20:40:08 jmmv Exp $
+$NetBSD: patch-cl,v 1.8 2012/07/24 18:23:38 drochner Exp $
 
---- gio/Makefile.am.orig	2012-05-01 00:08:03.000000000 +0000
+--- gio/Makefile.am.orig	2012-07-14 20:33:13.000000000 +0000
 +++ gio/Makefile.am
 @@ -2,7 +2,7 @@ include $(top_srcdir)/Makefile.decl
  
@@ -15,11 +15,11 @@ $NetBSD: patch-cl,v 1.7 2012/05/22 20:40:08 jmmv Exp $
  	$(top_builddir)/glib/libglib-2.0.la 		\
  	$(top_builddir)/gobject/libgobject-2.0.la
  
--completiondir = $(sysconfdir)/bash_completion.d
+-completiondir = $(datadir)/bash-completion/completions
 -completion_DATA = \
--	gdbus-bash-completion.sh		\
--	gsettings-bash-completion.sh		\
--	gresource-bash-completion.sh
+-	completion/gdbus				\
+-	completion/gsettings				\
+-	completion/gresource
 -EXTRA_DIST += $(completion_DATA)
 -
  # ------------------------------------------------------------------------
