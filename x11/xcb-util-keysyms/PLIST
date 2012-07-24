@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/24 18:02:07 drochner Exp $
+include/xcb/xcb_keysyms.h
+lib/libxcb-keysyms.la
+lib/pkgconfig/xcb-keysyms.pc
