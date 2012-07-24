@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2354 2012/07/23 22:20:30 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.2355 2012/07/24 08:25:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit to 1.7.11.3 [adam 2012-07-23]
 	Updated www/gitweb to 1.7.11.3 [adam 2012-07-23]
 	Updated sysutils/storage-manager to 3.14nb2 [jnemeth 2012-07-23]
+	Updated www/p5-HTML-Form to 6.03 [sno 2012-07-24]
