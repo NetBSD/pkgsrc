@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1.1.1 2011/03/11 14:19:12 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2012/07/24 18:16:31 drochner Exp $
 
---- configure.orig	2010-07-22 08:56:13.000000000 +0000
+--- configure.orig	2012-07-09 14:33:36.000000000 +0000
 +++ configure
-@@ -5489,7 +5489,7 @@ $as_echo "yes" >&6; }
+@@ -5647,7 +5647,7 @@ $as_echo "yes" >&6; }
  
  $as_echo "#define USE_ICONV 1" >>confdefs.h
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ba,v 1.1.1.1 2011/03/11 14:19:12 drochner Exp $
  
  else
  
+@@ -6807,7 +6807,7 @@ case "$enable_qt" in
+     yes)
+ 
+ if test -z $TMBUILDENV; then #QT has he install dir hard coded in library so we need to fix it manually for relocatable environment
+-	if test "$QT_LDFLAGS" == ""; then
++	if test "$QT_LDFLAGS" = ""; then
+ 	if test -r "/c/Qt"; then
+ 		MOC="`which moc`"
+ 		qt_bin="`dirname $MOC`"
