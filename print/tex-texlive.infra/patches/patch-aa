@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2012/07/24 09:24:22 jperkin Exp $
+
+Fix path to kpsewhich.
+
+--- tlpkg/TeXLive/TLPaper.pm.orig	2012-07-24 09:02:54.548061239 +0000
++++ tlpkg/TeXLive/TLPaper.pm	2012-07-24 09:03:19.975273864 +0000
+@@ -222,7 +222,7 @@
+   
+   my $cmd;
+   for my $filename (@filenames) {
+-    $cmd = qq!kpsewhich --progname=$progname --format="$format" $filename!;
++    $cmd = qq!@KPSEWHICH@ --progname=$progname --format="$format" $filename!;
+     chomp($ret = `$cmd`);
+     if ($ret) {
+       debug("paper file for $progname ($format) $filename: $ret\n");
