@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 2012/07/24 09:24:22 jperkin Exp $
+
+Fix paths to kpsewhich.
+
+--- tlpkg/TeXLive/TLUtils.pm.orig	2012-07-24 09:03:04.471178595 +0000
++++ tlpkg/TeXLive/TLUtils.pm	2012-07-24 09:03:27.491955121 +0000
+@@ -1609,7 +1609,7 @@
+   }
+   my $cmd = $keyval{'cmd'};
+ 
+-  my $texdir = `kpsewhich -var-value=SELFAUTOPARENT`;
++  my $texdir = `@KPSEWHICH@ -var-value=SELFAUTOPARENT`;
+   chomp($texdir);
+   my $texdir_bsl = conv_to_w32_path($texdir);
+   $cmd =~ s!^("?)TEXDIR/!$1$texdir/!g;
+@@ -1684,7 +1684,7 @@
+   if (win32() && defined($keyval{'filew32'})) {
+     $file = $keyval{'filew32'};
+   }
+-  my $texdir = `kpsewhich -var-value=SELFAUTOPARENT`;
++  my $texdir = `@KPSEWHICH@ -var-value=SELFAUTOPARENT`;
+   chomp($texdir);
+   my @syscmd;
+   if ($file =~ m/\.pl$/i) {
+@@ -1759,7 +1759,7 @@
+ 
+   &log("postaction $how shortcut for " . $tlpobj->name . "\n");
+   if ($how eq "install") {
+-    my $texdir = `kpsewhich -var-value=SELFAUTOPARENT`;
++    my $texdir = `@KPSEWHICH@ -var-value=SELFAUTOPARENT`;
+     chomp($texdir);
+     my $texdir_bsl = conv_to_w32_path($texdir);
+     $icon =~ s!^TEXDIR/!$texdir/!;
+@@ -3863,7 +3863,7 @@
+       }
+       my $delim= (&win32)? ';' : ':';
+       my $TEXMFDBS;
+-      chomp($TEXMFDBS=`kpsewhich --show-path="ls-R"`);
++      chomp($TEXMFDBS=`@KPSEWHICH@ --show-path="ls-R"`);
+ 
+       my @texmfdbs=split ($delim, "$TEXMFDBS");
+       my %dbs;
