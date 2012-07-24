@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2362 2012/07/24 16:24:23 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2363 2012/07/24 18:41:55 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3650,3 +3650,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_gtk2 to 12.1nb2 [obache 2012-07-24]
 	Updated www/p5-WWW-Mechanize to 1.72nb1 [sno 2012-07-24]
 	Updated lang/ruby18-base to 1.8.7.370 [taca 2012-07-24]
+	Updated net/wireshark to 1.6.9 [drochner 2012-07-24]
+	Updated editors/TeXmacs-devel to 1.0.7.16 [drochner 2012-07-24]
+	Updated devel/glib2 to 2.32.4 [drochner 2012-07-24]
+	Updated x11/gtk2 to 2.24.11 [drochner 2012-07-24]
+	Updated print/poppler to 0.20.2 [drochner 2012-07-24]
+	Updated security/gnutls to 3.0.21 [drochner 2012-07-24]
