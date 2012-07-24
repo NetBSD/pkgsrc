@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2011/08/07 08:47:37 tron Exp $
+# $NetBSD: Makefile,v 1.29 2012/07/24 08:38:53 sno Exp $
 
-DISTNAME=		HTML-Tree-4.2
+DISTNAME=		HTML-Tree-5.02
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5htr
 CATEGORIES=		www perl5
@@ -13,12 +13,19 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-HTML-Parser>=3.46:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Tagset>=3.02:../../www/p5-HTML-Tagset
+# recommended, but result in circular dependency
+#DEPENDS+=		p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
+# recommended
+DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+# Build dependencies Encode, Test::More and base are in Perl5 core ...
+BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+PERL5_MODULE_TYPE=	Module::Build
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTML/Tree/.packlist
 
