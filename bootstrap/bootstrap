@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.178 2012/07/13 16:12:41 jperkin Exp $
+# $NetBSD: bootstrap,v 1.179 2012/07/24 13:18:00 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -678,8 +678,16 @@ SunOS)
 		need_sed=yes
 	fi
 	if [ "`uname -r`" = "5.11" ]; then
-		bootstrap_sh=${SH:-/bin/ksh}
-		bootstrap_sh_set=set
+		case "`uname -v`" in
+		joyent_*)
+			bootstrap_sh=${SH:-/usr/bin/bash}
+			bootstrap_sh_set=set
+			;;
+		*)
+			bootstrap_sh=${SH:-/bin/ksh}
+			bootstrap_sh_set=set
+			;;
+		esac
 	else
 		need_ksh=yes
 	fi
