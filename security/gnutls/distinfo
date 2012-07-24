@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.86 2012/07/02 18:53:02 drochner Exp $
+$NetBSD: distinfo,v 1.87 2012/07/24 18:34:06 drochner Exp $
 
-SHA1 (gnutls-3.0.20.tar.xz) = 0c65f6a1e669c0fe85ddb2d645078b3bce9d1518
-RMD160 (gnutls-3.0.20.tar.xz) = a775877a7dec4e10a5612dc0ebb71d59f78ead39
-Size (gnutls-3.0.20.tar.xz) = 4426520 bytes
+SHA1 (gnutls-3.0.21.tar.xz) = 3a64b3b2587803c9e53d54ee9a44bff2b2780a38
+RMD160 (gnutls-3.0.21.tar.xz) = 570ac40632b7ba50183118d556ae42a8e685baad
+Size (gnutls-3.0.21.tar.xz) = 4664124 bytes
 SHA1 (patch-ae) = 71fbbeb43ac1689fca6fec7f8348d8534c1dc38a
 SHA1 (patch-lib_nettle_egd.c) = b7e9769e8c620519c43ca7b7481a558e9d389c68
