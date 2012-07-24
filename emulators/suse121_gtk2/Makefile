@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/03/22 11:50:39 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/24 10:02:27 obache Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 RPMPKGS+=	libcairo2-1.10.2-14.1.3.${SUSE_ARCH}
 RPMPKGS+=	dbus-1-1.5.8-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	dbus-1-glib-0.98-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	gconf2-3.2.0-2.2.2.${SUSE_ARCH}
-RPMPKGS+=	gdk-pixbuf-query-loaders-2.24.0-2.1.3.${SUSE_ARCH}
+RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.24.0-2.4.1.${SUSE_ARCH}
 RPMPKGS+=	gio-branding-upstream-2.30.1-2.1.2.noarch
 RPMPKGS+=	glib2-tools-2.30.1-2.1.2.${SUSE_ARCH}
 RPMUPDPKGS+=	gtk2-tools-2.24.7-2.5.1.${SUSE_ARCH}
@@ -15,7 +15,7 @@ RPMPKGS+=	pango-tools-1.29.4-2.1.3.${SUSE_ARCH}
 RPMPKGS+=	libIDL-2-0-0.8.14-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	libatk-1_0-0-2.2.0-2.1.3.${SUSE_ARCH}
 RPMPKGS+=	libffi46-4.6.2_20111026-1.1.2.${SUSE_ARCH}
-RPMPKGS+=	libgdk_pixbuf-2_0-0-2.24.0-2.1.3.${SUSE_ARCH}
+RPMUPDPKGS+=	libgdk_pixbuf-2_0-0-2.24.0-2.4.1.${SUSE_ARCH}
 RPMPKGS+=	libgio-2_0-0-2.30.1-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libglib-2_0-0-2.30.1-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libgmodule-2_0-0-2.30.1-2.1.2.${SUSE_ARCH}
