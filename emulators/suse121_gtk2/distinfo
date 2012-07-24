@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/03/22 11:50:39 obache Exp $
+$NetBSD: distinfo,v 1.3 2012/07/24 10:02:27 obache Exp $
 
 SHA1 (suse121/dbus-1-1.5.8-2.1.2.i586.rpm) = d9f937cfbd2a5f51ba4b03d59867e2d9940559b4
 RMD160 (suse121/dbus-1-1.5.8-2.1.2.i586.rpm) = b6fb9ef869e38a536dbe1ec71a2f2c29cc7abfff
@@ -18,12 +18,12 @@ Size (suse121/gconf2-3.2.0-2.2.2.i586.rpm) = 438345 bytes
 SHA1 (suse121/gconf2-3.2.0-2.2.2.x86_64.rpm) = 617588ef65e2a2e3400d5b06d3c808db341551db
 RMD160 (suse121/gconf2-3.2.0-2.2.2.x86_64.rpm) = f16bcb625f9238a0bbc5d76c384ddd8119ad04b5
 Size (suse121/gconf2-3.2.0-2.2.2.x86_64.rpm) = 439184 bytes
-SHA1 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.1.3.i586.rpm) = b35db97babe249c297f4edc0bb720316d74073ae
-RMD160 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.1.3.i586.rpm) = aec02c5b8e0861c6e6833db799a6d7623b0d76ca
-Size (suse121/gdk-pixbuf-query-loaders-2.24.0-2.1.3.i586.rpm) = 14396 bytes
-SHA1 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.1.3.x86_64.rpm) = 40d3f5b8638b87745477a2f2870f0bd9839ea0bc
-RMD160 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.1.3.x86_64.rpm) = 6eef3aa68347d9f839cee8a9d29878a879152d23
-Size (suse121/gdk-pixbuf-query-loaders-2.24.0-2.1.3.x86_64.rpm) = 14554 bytes
+SHA1 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.4.1.i586.rpm) = df47b22cf7b59542f50555903ddd7118d4377467
+RMD160 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.4.1.i586.rpm) = 300db7fb53077d80df90c757ba0e9da66abc39f0
+Size (suse121/gdk-pixbuf-query-loaders-2.24.0-2.4.1.i586.rpm) = 14570 bytes
+SHA1 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.4.1.x86_64.rpm) = 3f71efe7fcc13d796ef6e9ccf32b5d9f5f662bbe
+RMD160 (suse121/gdk-pixbuf-query-loaders-2.24.0-2.4.1.x86_64.rpm) = 6087c98c0b2bfe5357a063368aab3c96492610b1
+Size (suse121/gdk-pixbuf-query-loaders-2.24.0-2.4.1.x86_64.rpm) = 14731 bytes
 SHA1 (suse121/gio-branding-upstream-2.30.1-2.1.2.noarch.rpm) = c7eb96fb3d14da5630a2033e8c7e618dbd8e1e73
 RMD160 (suse121/gio-branding-upstream-2.30.1-2.1.2.noarch.rpm) = 4a9329f67a64bc12adbbc7de9fe373edd1bef2fa
 Size (suse121/gio-branding-upstream-2.30.1-2.1.2.noarch.rpm) = 68730 bytes
@@ -63,12 +63,12 @@ Size (suse121/libffi46-4.6.2_20111026-1.1.2.i586.rpm) = 18684 bytes
 SHA1 (suse121/libffi46-4.6.2_20111026-1.1.2.x86_64.rpm) = d9b46c3e2198ff47c9e21ac6ebf3e772d83c200b
 RMD160 (suse121/libffi46-4.6.2_20111026-1.1.2.x86_64.rpm) = c8433a8c000c7390bfa6e1d442173442c4b96a70
 Size (suse121/libffi46-4.6.2_20111026-1.1.2.x86_64.rpm) = 21364 bytes
-SHA1 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.1.3.i586.rpm) = d49c9833debe2282073134405c7b9c38c4cc6b5a
-RMD160 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.1.3.i586.rpm) = d8541537098b1df6ad044448b7f66e4ff4ac5399
-Size (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.1.3.i586.rpm) = 173364 bytes
-SHA1 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.1.3.x86_64.rpm) = c38333f2e41689498680508a8981a671c86b4009
-RMD160 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.1.3.x86_64.rpm) = e9320bead9f79b6ddeb84894f03d463c085f5be6
-Size (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.1.3.x86_64.rpm) = 177404 bytes
+SHA1 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.4.1.i586.rpm) = 2e4d49e0992943015f3499a677c83533d26becd2
+RMD160 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.4.1.i586.rpm) = cd86128939f3d6fe4eb7a8beb9759df207af3f18
+Size (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.4.1.i586.rpm) = 173577 bytes
+SHA1 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.4.1.x86_64.rpm) = 2b3858d000d66c810040030cb5f379ed06f3c299
+RMD160 (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.4.1.x86_64.rpm) = eb34b07f20cb926cee01288efc6fcfacfbd7dfda
+Size (suse121/libgdk_pixbuf-2_0-0-2.24.0-2.4.1.x86_64.rpm) = 177541 bytes
 SHA1 (suse121/libgio-2_0-0-2.30.1-2.1.2.i586.rpm) = 91f536876f7aedde84a598404a07e1243a800ca5
 RMD160 (suse121/libgio-2_0-0-2.30.1-2.1.2.i586.rpm) = e7da02fae0404c3f194c0f85e4ec8433b719027e
 Size (suse121/libgio-2_0-0-2.30.1-2.1.2.i586.rpm) = 458691 bytes
