@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2361 2012/07/24 14:11:45 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2362 2012/07/24 16:24:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3649,3 +3649,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_base to 12.1nb3 [obache 2012-07-24]
 	Updated emulators/suse121_gtk2 to 12.1nb2 [obache 2012-07-24]
 	Updated www/p5-WWW-Mechanize to 1.72nb1 [sno 2012-07-24]
+	Updated lang/ruby18-base to 1.8.7.370 [taca 2012-07-24]
