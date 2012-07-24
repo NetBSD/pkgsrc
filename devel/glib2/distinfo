@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.175 2012/07/12 14:43:25 jperkin Exp $
+$NetBSD: distinfo,v 1.176 2012/07/24 18:23:38 drochner Exp $
 
-SHA1 (glib-2.32.3.tar.xz) = 429355327aaf69d2c21cbefcb20c61db94e0acec
-RMD160 (glib-2.32.3.tar.xz) = 204ddce09d6622926c7b2d51b995f503ec18673e
-Size (glib-2.32.3.tar.xz) = 6164984 bytes
+SHA1 (glib-2.32.4.tar.xz) = 5b6481cbb34f560e8ea78887200b6b7f5448dcb4
+RMD160 (glib-2.32.4.tar.xz) = 9ed87203d42b9432842ddbc0d5b1bd0cab61ae13
+Size (glib-2.32.4.tar.xz) = 6178556 bytes
 SHA1 (glib-gio-kqueue-2.32.1-v1.patch) = 4498e11396bc33ac48a5b7c27056914f66951a32
 RMD160 (glib-gio-kqueue-2.32.1-v1.patch) = 6d2a8eb014822c7734c6cd7a733d51fa4ca810d4
 Size (glib-gio-kqueue-2.32.1-v1.patch) = 100340 bytes
@@ -34,7 +34,7 @@ SHA1 (patch-cg) = be18840e9c56bf1c2c4c2759dfc73097d463923a
 SHA1 (patch-ci) = fcf75fc77bfcdaee8911f759d63978cd627d6ebb
 SHA1 (patch-cj) = e9d10c82a30049b358003b93585280ea26e12e22
 SHA1 (patch-ck) = 324116cc6fb8dbce8ce8d20f5b237fc469a55cd2
-SHA1 (patch-cl) = 9c34ff58a44f2c8bf328807d1d1261765045028d
+SHA1 (patch-cl) = 973e0fa003d9200cf07bb0a6a07fa5b3e2b4cb68
 SHA1 (patch-cm) = 7f14ab327d021537714f876fbfbd4b0350d98a6e
 SHA1 (patch-cn) = 7a2f42fc1199bfc3fd2ccbd2ed1c56a7f6c0028f
 SHA1 (patch-co) = 146d7102970bd92beff382b7b8f0bb681e0b8520
