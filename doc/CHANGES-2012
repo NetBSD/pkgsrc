@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2358 2012/07/24 09:25:51 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.2359 2012/07/24 09:59:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTML-Tree to 5.02 [sno 2012-07-24]
 	Updated www/p5-WWW-Mechanize to 1.72 [sno 2012-07-24]
 	Updated print/tex-texlive.infra to 2012nb1 [jperkin 2012-07-24]
+	Updated emulators/suse121_base to 12.1nb3 [obache 2012-07-24]
