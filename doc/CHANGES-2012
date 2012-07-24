@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2363 2012/07/24 18:41:55 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2364 2012/07/24 19:48:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3656,3 +3656,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk2 to 2.24.11 [drochner 2012-07-24]
 	Updated print/poppler to 0.20.2 [drochner 2012-07-24]
 	Updated security/gnutls to 3.0.21 [drochner 2012-07-24]
+	Updated audio/timidity to 2.14.0nb1 [jperkin 2012-07-24]
