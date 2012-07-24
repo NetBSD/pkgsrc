@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.14 2009/06/16 15:25:31 joerg Exp $
+# $NetBSD: Makefile.extension,v 1.15 2012/07/24 21:26:27 mishka Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -24,7 +24,7 @@ INSTALLATION_DIRS=	${R_LIB}
 do-build:
 
 do-install:
-	R_LIBS= ${LOCALBASE}/bin/R CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKDIR}/${R_PKGNAME}
+	LC_ALL=C R_LIBS= ${LOCALBASE}/bin/R CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKDIR}/${R_PKGNAME}
 
 R_LIB=			lib/R/library
 R_INST_DIRS?=		${R_PKGNAME}
