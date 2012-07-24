@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2011/03/11 14:19:12 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2012/07/24 18:16:31 drochner Exp $
 
---- plugins/python/progs/init-python.scm.orig	Mon Jul  4 13:16:13 2005
-+++ plugins/python/progs/init-python.scm	Mon Jul 18 00:53:48 2005
-@@ -13,7 +13,7 @@
- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+--- plugins/python/progs/init-python.scm.orig	2012-03-16 20:11:46.000000000 +0000
++++ plugins/python/progs/init-python.scm
+@@ -27,7 +27,7 @@
+ 
  
  (plugin-configure python
 -  (:require (url-exists-in-path? "python"))
