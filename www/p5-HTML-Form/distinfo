@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/10 12:41:12 spz Exp $
+$NetBSD: distinfo,v 1.2 2012/07/24 08:24:55 sno Exp $
 
-SHA1 (HTML-Form-6.00.tar.gz) = 45fe6121ea15fbc3fad4ab6851d2dbf1c72971d1
-RMD160 (HTML-Form-6.00.tar.gz) = 268e696bb925ce5c34d47050ed352a233a42aa05
-Size (HTML-Form-6.00.tar.gz) = 23074 bytes
+SHA1 (HTML-Form-6.03.tar.gz) = 4b501ae3a5682a1efb1a8a34b19882244e6ecef1
+RMD160 (HTML-Form-6.03.tar.gz) = ea6d13703b4f01941bdee48e7b675fca451a42da
+Size (HTML-Form-6.03.tar.gz) = 23522 bytes
