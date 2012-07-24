@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2012/07/15 08:23:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2012/07/24 12:09:07 obache Exp $
 
 BUILDLINK_TREE+=	startup-notification
 
@@ -23,6 +23,8 @@ BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.10nb2<0.12
 .    endif
 .  else #!NetBSD
 BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification
+BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5
+BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.12nb2
 .  endif
 .endif
 
