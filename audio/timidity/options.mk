@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/07/08 09:52:05 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2012/07/24 19:47:43 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.timidity
 PKG_SUPPORTED_OPTIONS=	x11 gtk
@@ -30,7 +30,12 @@ WITH_XAWLIB=--with-xawlib=xaw3d
 WITH_XAWLIB=--with-xawlib=neXtaw
 .endif
 
-CONFIGURE_ARGS+=	--enable-xaw --enable-xdnd --with-xaw-resource-prefix="${PREFIX}/lib/X11/" ${WITH_XAWLIB}
+CONFIGURE_ARGS+=	--enable-xaw --enable-xdnd
+CONFIGURE_ARGS+=	--with-xaw-resource-prefix="${PREFIX}/lib/X11/"
+CONFIGURE_ARGS+=	${WITH_XAWLIB}
+
+# This lets the trace use non-core fonts, but this wouldn't match the core
+# font used by Xaw
 #CONFIGURE_ARGS+=	--enable-xft
 
 .include "../../mk/xaw.buildlink3.mk"
