@@ -1,8 +1,17 @@
-$NetBSD: patch-configure,v 1.1 2012/06/16 05:21:55 taca Exp $
+$NetBSD: patch-configure,v 1.2 2012/07/25 13:01:05 fhajny Exp $
 
---- configure.orig	2012-05-03 17:11:27.000000000 +0000
+--- configure.orig	2012-06-13 06:08:07.000000000 +0000
 +++ configure
-@@ -23334,7 +23334,7 @@ fi
+@@ -20528,7 +20528,7 @@ _ACEOF
+   cat>>Makefile.objects<<EOF
+ 
+ $ac_bdir$ac_hdrobj: $abs_srcdir/$ac_provsrc
+-	dtrace -h -C -s $ac_srcdir$ac_provsrc -o \$@ && \$(SED) -ibak 's,PHP_,DTRACE_,g' \$@
++	dtrace -h -C -s $ac_srcdir$ac_provsrc -o \$@ && \$(SED) 's,PHP_,DTRACE_,g' \$@ > \$@.tmp && mv \$@.tmp \$@
+ 
+ \$(PHP_DTRACE_OBJS): $ac_bdir$ac_hdrobj
+ 
+@@ -23313,7 +23313,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -11,7 +20,7 @@ $NetBSD: patch-configure,v 1.1 2012/06/16 05:21:55 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -25333,7 +25333,7 @@ $as_echo "yes" >&6; }
+@@ -25312,7 +25312,7 @@ $as_echo "yes" >&6; }
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -20,7 +29,7 @@ $NetBSD: patch-configure,v 1.1 2012/06/16 05:21:55 taca Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -36571,7 +36571,7 @@ fi
+@@ -36556,7 +36556,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -38,7 +47,7 @@ $NetBSD: patch-configure,v 1.1 2012/06/16 05:21:55 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -105056,12 +105056,7 @@ old_CC=$CC
+@@ -105147,12 +105147,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
