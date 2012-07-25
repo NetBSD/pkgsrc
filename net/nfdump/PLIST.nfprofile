@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.nfprofile,v 1.1 2007/09/12 07:33:32 seb Exp $
+@comment $NetBSD: PLIST.nfprofile,v 1.2 2012/07/25 21:19:30 tez Exp $
 bin/nfprofile
-man/man1/nfprofile.1
