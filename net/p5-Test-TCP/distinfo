@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/10/07 11:36:56 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2012/07/25 15:39:31 wen Exp $
 
-SHA1 (Test-TCP-1.13.tar.gz) = a3efede487bb6901e82d360ab4f8bdd37081e416
-RMD160 (Test-TCP-1.13.tar.gz) = 927f56a9b79bc4388fefaf06a47fefaf94fc9caa
-Size (Test-TCP-1.13.tar.gz) = 24818 bytes
+SHA1 (Test-TCP-1.16.tar.gz) = 0453b12186a8cfa58e1e190cda38a79040a4eee8
+RMD160 (Test-TCP-1.16.tar.gz) = 2e410fa5790ed098d64ae3662849f9c45cadf5ae
+Size (Test-TCP-1.16.tar.gz) = 26703 bytes
