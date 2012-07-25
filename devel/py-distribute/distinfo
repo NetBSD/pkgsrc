@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/07/25 19:05:52 drochner Exp $
+
+SHA1 (distribute-0.6.28.tar.gz) = 709bd97d46050d69865d4b588c7707768dfe6711
+RMD160 (distribute-0.6.28.tar.gz) = 6f484adca518fc59ef736bccf63d24ca3e94ecfc
+Size (distribute-0.6.28.tar.gz) = 627530 bytes
+SHA1 (patch-aa) = f71c01fc59d71e731c4e239790acb7968e29e7d9
