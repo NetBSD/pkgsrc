@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2012/07/25 21:19:30 tez Exp $
+
+find ftlib.h where the net/flow-tools package puts it
+
+--- configure.orig	2012-03-11 11:07:20.000000000 +0000
++++ configure
+@@ -4448,13 +4448,13 @@ else
+ fi
+ 
+ if test -d "$WHERE_FTPATH"; then
+-	if test ! -f "$WHERE_FTPATH/include/ftlib.h"; then
++	if test ! -f "$WHERE_FTPATH/include/flow-tools/ftlib.h"; then
+ 		as_fn_error $? "ftlib.h file not found in flow-tools directory '$WHERE_FTPATH'. Use --with-ftpath=PATH" "$LINENO" 5
+ 	fi
+ 	if test ! -f "$WHERE_FTPATH/lib/libft.a"; then
+ 		as_fn_error $? "libft.a not found in flow-tools directory '$WHERE_FTPATH'. Build flow tools first" "$LINENO" 5
+ 	fi
+-	FT_INCLUDES="-I$WHERE_FTPATH/include -I$WHERE_FTPATH/lib"
++	FT_INCLUDES="-I$WHERE_FTPATH/include/flow-tools"
+ 	FT_LDFLAGS="-L$WHERE_FTPATH/lib"
+ else
+ 	as_fn_error $? "flow-tools directory '$WHERE_FTPATH' does not exists. Use --with-ftpath=PATH" "$LINENO" 5
