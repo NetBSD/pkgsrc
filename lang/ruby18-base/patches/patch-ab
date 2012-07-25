@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2010/09/10 03:29:00 taca Exp $
+$NetBSD: patch-ab,v 1.15 2012/07/25 20:25:50 bsiegert Exp $
 
-* Adding Interix support.
+* Adding Interix and MirBSD support.
 
---- configure.orig	2010-06-23 05:38:48.000000000 +0000
+--- configure.orig	Fri Jun 29 13:18:00 2012
 +++ configure
 @@ -6212,6 +6212,9 @@ bsdi*)          LIBS="-lm $LIBS"
  		$as_echo "#define BROKEN_SETREGID 1" >>confdefs.h
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.14 2010/09/10 03:29:00 taca Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether -lxpg4 has to be linked" >&5
  $as_echo_n "checking whether -lxpg4 has to be linked... " >&6; }
-@@ -10196,6 +10199,13 @@ fi
+@@ -10212,6 +10215,13 @@ fi
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -28,7 +28,25 @@ $NetBSD: patch-ab,v 1.14 2010/09/10 03:29:00 taca Exp $
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
  			LIBPATHFLAG=" -L%1\$-s"
-@@ -10724,6 +10734,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -10224,7 +10234,7 @@ fi
+ 			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
+ 			fi
+ 			rb_cv_dlopen=yes ;;
+-	openbsd*) 	: ${LDSHARED="\$(CC) -shared ${CCDLFLAGS}"}
++	openbsd*|mirbsd*) 	: ${LDSHARED="\$(CC) -shared ${CCDLFLAGS}"}
+ 			if test "$rb_cv_binary_elf" = yes; then
+ 			    LDFLAGS="$LDFLAGS -Wl,-E"
+ 			fi
+@@ -10704,7 +10714,7 @@ if test "$enable_shared" = 'yes'; then
+ 	   LIBRUBY_ALIASES=""
+ 	fi
+  	;;
+-    openbsd*)
++    openbsd*|mirbsd*)
+ 	SOLIBS='$(LIBS)'
+ 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
+ 	;;
+@@ -10740,6 +10750,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -43,7 +61,7 @@ $NetBSD: patch-ab,v 1.14 2010/09/10 03:29:00 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
  	;;
-@@ -10733,6 +10751,7 @@ if test "$enable_shared" = 'yes'; then
+@@ -10749,6 +10767,7 @@ if test "$enable_shared" = 'yes'; then
  fi
  if test "$enable_rpath" = yes; then
      LIBRUBYARG_SHARED="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBYARG_SHARED"
