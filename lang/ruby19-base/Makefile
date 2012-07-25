@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/06/23 07:30:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2012/07/25 19:27:09 bsiegert Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -45,6 +45,11 @@ LIBS.SunOS+=	-lm
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	OBJCOPY=:
+.endif
+
+.if ${OPSYS} == "MirBSD"
+# if present, an unsupported sysconf call is used
+CONFIGURE_ENV+=	ac_cv_func_getgrnam_r=no
 .endif
 
 # Ruby build process depends on config.status's content
