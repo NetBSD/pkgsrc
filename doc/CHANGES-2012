@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2369 2012/07/25 12:21:03 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.2370 2012/07/25 14:42:18 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3666,3 +3666,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/parrot to 4.4.0 [he 2012-07-25]
 	Added sysutils/sysbuild version 2.0 [jmmv 2012-07-25]
 	Added sysutils/sysbuild-user version 1.0 [jmmv 2012-07-25]
+	Updated graphics/netpbm to 10.35.80nb3 [jperkin 2012-07-25]
