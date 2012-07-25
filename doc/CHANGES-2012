@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2365 2012/07/25 01:04:20 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2366 2012/07/25 10:25:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3661,3 +3661,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/isc-dhclient4 to 4.2.4p1 [taca 2012-07-25]
 	Updated net/isc-dhcp4 to 4.2.4p1 [taca 2012-07-25]
 	Updated net/isc-dhcrelay4 to 4.2.4p1 [taca 2012-07-25]
+	Added www/p5-LWPx-TimedHTTP version 1.8 [sno 2012-07-25]
