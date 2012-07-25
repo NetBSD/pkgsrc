@@ -1,0 +1,350 @@
+.\" Copyright 2012 Google Inc.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions are
+.\" met:
+.\"
+.\" * Redistributions of source code must retain the above copyright
+.\"   notice, this list of conditions and the following disclaimer.
+.\" * Redistributions in binary form must reproduce the above copyright
+.\"   notice, this list of conditions and the following disclaimer in the
+.\"   documentation and/or other materials provided with the distribution.
+.\" * Neither the name of Google Inc. nor the names of its contributors
+.\"   may be used to endorse or promote products derived from this software
+.\"   without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+.\" "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+.\" LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+.\" A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+.\" OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+.\" SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+.\" LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+.\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.Dd July 25, 2012
+.Dt SYSBUILD 1
+.Os
+.Sh NAME
+.Nm sysbuild
+.Nd performs fully automatic builds of NetBSD
+.Sh SYNOPSIS
+.Nm
+.Op Fl c Ar config_name
+.Op Fl o Ar variable=value
+build
+.Op Fl f
+.Op Ar build_targets
+.Nm
+.Op Fl c Ar config_name
+.Op Fl o Ar variable=value
+config
+.Nm
+.Op Fl c Ar config_name
+.Op Fl o Ar variable=value
+fetch
+.Sh DESCRIPTION
+.Nm
+is a utility to build NetBSD releases in a fully automated manner.
+The process is made unattended by relying on a configuration file that
+prespecifies the location of all build components and the desired goals of
+the build.
+If you want to plug
+.Nm
+into
+.Xr cron 8 ,
+please take a look to
+.Xr sysbuild4cron 1
+now.
+.Pp
+.Nm
+can be seen as a simple wrapper over
+.Xr cvs 1
+and the
+.Nm build.sh
+script that ships with the NetBSD source tree.
+.Nm
+provides the following additional features:
+.Bl -bullet
+.It
+Automatically fetch or update the NetBSD source trees (both src and xsrc)
+before performing a build.
+.It
+Preconfigure the way
+.Nm build.sh
+is invoked by storing all relevant details in a configuration file.
+.It
+Perform builds for a variety of platforms with a single invocation.
+.It
+Trivially set up periodic
+.Nx
+rebuilds by adding a single line to your
+.Xr crontab 5 .
+.El
+.Pp
+As you can see in the
+.Sx SYNOPSIS
+section,
+.Nm
+provides a subcommand-interface: the tool has several modes of operation,
+and the particular mode to use for a given run is selected by the first
+non-option argument in the command line.
+.Pp
+The following options apply to all commands:
+.Bl -tag -width XXXX
+.It Fl c Ar config_name
+Specifies the configuration file to use.
+.Pp
+If
+.Ar config_name
+includes any directory separator (aka, one or more slashes) or the
+.Sq .conf
+suffix, then this specifies the path of the configuration file to load.
+.Pp
+.If
+.Ar config_name
+is a plain name without any directory components nor extension, then this
+specifies the name of the configuration.
+.Nm
+will first look for a configuration file in
+.Pa ~/.sysbuild/<config_name>.conf
+and, if not found, will use
+.Pa @SYSBUILD_ETCDIR@/<config_name>.conf .
+Any of the two files must exist, or else
+.Nm
+will exit with an error.
+.It Fl o Ar variable=value
+Applies an override to the loaded configuration.
+.Pp
+The
+.Ar variable
+part of the argument must be any of the recognized configuration variables
+described in
+.Sx Configuration file
+below.
+The
+.Ar value ,
+if not empty, specifies the value to set the configuration variable to.
+If
+.Ar value
+is empty, then the configuration variable is unset.
+.El
+.Ss The build command
+The build command provides the main functionality of
+.Nm .
+It performs the following steps:
+.Bl -ordered
+.It
+If
+.Va UPDATE_SOURCES
+is true, the fetch command is invoked first.
+See
+.Sx The fetch command
+for more details.
+.It
+For every machine type listed in
+.Va MACHINES ,
+issues a
+.Nm build.sh
+call for that particular machine using the rest of the settings defined in
+the configuration file.
+The targets passed to the
+.Nm build.sh
+script are those defined in the
+.Va BUILD_TARGETS
+variable, or the arguments passed through the command line if any.
+.El
+.Pp
+The following options apply only to the build command:
+.Bl -tag -width XXXX
+.It Fl f
+Enables fast mode, which skips updating the source trees and performs
+update builds.
+This is a shorthand for these generic flags:
+.Fl o Ar INCREMENTAL_BUILD=true
+.Fl o Ar UPDATE_SOURCES=false .
+.El
+.Ss The config command
+The config command dumps the loaded configuration to the standard output.
+The format of the output is not a script, so it cannot be fed back into
+.Nm .
+The purpose of this command is to aid in debugging the configuration of the
+tool before performing any builds, particularly when the configuration
+files use shell logic to determine the value of any variables.
+.Ss The fetch command
+The fetch command downloads or updates the
+.Nx
+source trees, which include src and, optionally, xsrc.
+.Pp
+If the modules do not exist yet in the locations specified by
+.Va SRCDIR
+and
+.Va XSRCDIR ,
+this performs an initial CVS checkout of the trees.
+If the modules exist, this performs a CVS update.
+.Pp
+The
+.Va CVSROOT
+and
+.Va CVSTAG
+variables are used to determine where to get the sources from and whether a
+particular tag is desired.
+.Pp
+The major use of this subcommand is the following.
+Consider that you wish to use the standard locations of
+.Pa /usr/src
+and
+.Pa /usr/xsrc
+for your source trees, and that you would like to keep these owned by root
+while, at the same time, you run your NetBSD builds as an unprivileged user.
+In this situation, you can use the
+.Sq fetch
+command as root only, set
+.Va UPDATE_SOURCES
+to
+.Sq false
+in your user configuration files, and do your builds as another user.
+.Ss Configuration file
+Configuration files for
+.Nm
+are plain shell scripts that define a set of recognized variables.
+.Pp
+As scripts, they can perform any magic they desire to deduce the value of
+the configuration variables.
+For example, the default configuration file shipped with
+.Nm
+automatically deduces the value of the
+.Va NJOBS
+variable by looking at how many CPUs are available in the system.
+.Pp
+The following variables configure the source trees:
+.Bl -tag -width INCREMENTAL_BUILD
+.It Va CVSROOT
+Location of the CVS root from which to check out or update the src and xsrc
+modules.
+.Pp
+Default:
+.Sq :ext:anoncvs@anoncvs.NetBSD.org:/cvsroot
+.It Va CVSTAG
+CVS tag to use during checkouts or updates of the src and xsrc modules.
+.Pp
+Default: not defined.
+.It Va SRCDIR
+Path to the src module.
+If you want
+.Nm
+to perform an update of this directory before every build, you will need
+write access to it.
+Otherwise, you can use a read-only directory.
+.Pp
+Default:
+.Pa /usr/src .
+.It Va UPDATE_SOURCES
+Whether to perform an update of the source tree before every build or not.
+.Pp
+Default:
+.Sq true .
+.It Va XSRCDIR
+Path to the xsrc module.
+If you want
+.Nm
+to perform an update of this directory before every build, you will need
+write access to it.
+Otherwise, you can use a read-only directory.
+.Pp
+Defining this variable causes
+.Nm
+to build the X Window System as part of the build of NetBSD.
+.Pp
+Default: not defined.
+.El
+.Pp
+The following variables configure the location of the build files:
+.Bl -tag -width INCREMENTAL_BUILD
+.It Va BUILD_ROOT
+Path to the directory in which to place build files.
+These include the obj tree, the destdir and the cross-build tools generated
+by the
+.Nm build.sh
+script.
+The contents of this directory are sorted by machine type so that it can be
+shared across builds for different machines.
+.Pp
+Default:
+.Pa ~/sysbuild/ .
+.It Va RELEASEDIR
+Path to the directory that will contain the build products (aka the release
+files).
+The contents of this directory are sorted by machine type so that it can be
+shared across builds for different machines.
+.Pp
+Default:
+.Pa ~/sysbuild/release .
+.El
+.Pp
+The following variables configure the build process:
+.Bl -tag -width INCREMENTAL_BUILD
+.It Va BUILD_TARGETS
+Whitespace-separated list of targets to pass to
+.Nm build.sh
+during builds.
+.Pp
+Default:
+.Sq release .
+.It Va INCREMENTAL_BUILD
+Whether to perform update builds or not.
+An update build reuses existing obj, destdir and tools trees.
+.Pp
+Of special note is that
+.Nm
+will take care of pruning files likely to cause breakage during update
+builds before performing the build itself.
+As an example, this includes deleting all the modules from
+.Pa destdir/stand/<platform>/ .
+.Pp
+Default:
+.Sq false .
+.It Va MACHINES
+Whitespace-separated list of machine types to build for.
+.Pp
+Default: the name of the host machine type.
+.It Va NJOBS
+Number of parallel jobs to use during the build.
+If not set, disables parallel builds (which, due to
+.Nm make 1
+semantics, is not the same as setting this to 1).
+.Pp
+Default: not defined.
+.El
+.Sh FILES
+.Bl -tag -width XXXX
+.It Pa @SYSBUILD_ETCDIR@/
+Directory containing all system-wide configuration files.
+.It Pa @SYSBUILD_ETCDIR@/default.conf
+Default configuration file to load if the user does not have a
+corresponding
+.Pa ~/.sysbuild/default.conf
+file and the
+.Fl c
+flag is not provided.
+.It Pa ~/.sysbuild/
+Directory containing all user-specific configuration files.
+.It Pa ~/.sysbuild/default.conf
+Default configuration file to load when the
+.Fl c
+flag is not provided.
+.El
+.Sh SEE ALSO
+.Xr cvs 1 ,
+.Xr sysbuild4cron 1 ,
+.Xr hier 7 and
+.Pa /usr/src/BUILDING .
+.Sh AUTHORS
+The
+.Nm
+utility was developed by
+.An Julio Merino
+.Aq jmmv@NetBSD.org .
