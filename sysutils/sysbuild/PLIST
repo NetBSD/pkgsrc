@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.4 2012/07/25 12:18:22 jmmv Exp $
+bin/sysbuild
+bin/sysbuild4cron
+man/man1/sysbuild.1
+man/man1/sysbuild4cron.1
+share/examples/sysbuild/default.conf
+${TESTS}tests/sysbuild/Kyuafile
+${TESTS}tests/sysbuild/config_test
+${TESTS}tests/sysbuild/cvs_test
+${TESTS}tests/sysbuild/sysbuild_test
+${TESTS}tests/sysbuild/sysbuild4cron_test
+${TESTS}tests/sysbuild/utils_test
