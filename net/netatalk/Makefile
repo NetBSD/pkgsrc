@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2012/06/13 12:38:35 obache Exp $
+# $NetBSD: Makefile,v 1.88 2012/07/25 11:33:49 fhajny Exp $
 
 DISTNAME=	netatalk-2.2.1
 PKGREVISION=	5
@@ -52,6 +52,7 @@ CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-ldap=no
+CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
