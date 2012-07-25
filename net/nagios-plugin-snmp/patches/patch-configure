@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2012/07/25 12:07:32 fhajny Exp $
+
+Only build 64bit when MACHINE_ARCH=x86_64, on SunOS.
+--- configure.orig	2010-07-27 20:48:13.000000000 +0000
++++ configure
+@@ -18068,7 +18068,7 @@ elif test "$ac_cv_uname_s" = "SunOS"; th
+         ac_cv_ps_cols=9
+         { echo "$as_me:$LINENO: result: using nagios-plugins internal ps command (pst3) for solaris" >&5
+ echo "${ECHO_T}using nagios-plugins internal ps command (pst3) for solaris" >&6; }
+-	if test `isainfo -b` = 64 ; then
++	if test "$MACHINE_ARCH" = "x86_64" ; then
+ 		pst3_use_64bit=1
+ 		{ echo "$as_me:$LINENO: using 64bit pst3" >&5
+ echo "$as_me: using 64bit pst3" >&6;}
