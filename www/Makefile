@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.888 2012/07/15 02:35:21 dholland Exp $
+# $NetBSD: Makefile,v 1.889 2012/07/25 10:26:23 sno Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -442,6 +442,7 @@ SUBDIR+=	p5-LWP-Online
 SUBDIR+=	p5-LWP-Protocol-https
 SUBDIR+=	p5-LWP-UserAgent-Determined
 SUBDIR+=	p5-LWPx-ParanoidAgent
+SUBDIR+=	p5-LWPx-TimedHTTP
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-Mojolicious
 SUBDIR+=	p5-Net-FastCGI
