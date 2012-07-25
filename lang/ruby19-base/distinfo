@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2012/06/02 02:21:15 taca Exp $
+$NetBSD: distinfo,v 1.14 2012/07/25 19:27:09 bsiegert Exp $
 
 SHA1 (ruby-1.9.2-p320.tar.bz2) = f4892311ea4ca2a6c979c9fd3a03c8e473998315
 RMD160 (ruby-1.9.2-p320.tar.bz2) = b4fb13b26cd048d983d127b2c8ec28e82df3a8a2
 Size (ruby-1.9.2-p320.tar.bz2) = 8981382 bytes
-SHA1 (patch-aa) = b54c275b76302feaceadde71d0deec1749c50254
-SHA1 (patch-ab) = 8924a50b312b9b660f4460a65d4887e17ebb1976
+SHA1 (patch-aa) = ea17efe65b449592d1779a043aa8a8c35a8fddd8
+SHA1 (patch-ab) = 3da629cde334b47f18226a01778986a328a291a9
 SHA1 (patch-ac) = c076c99eb886842dc5ac546e1105b7ef2a3edd68
 SHA1 (patch-ad) = 872b9457ff410ccae7e8929fe994a0d1d4d80bb1
 SHA1 (patch-ae) = 5fffd09450e9f6fc4c47d3bdacaf2f4acb48f5b1
