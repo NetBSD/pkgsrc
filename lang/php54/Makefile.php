@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2012/06/16 05:21:55 taca Exp $
+# $NetBSD: Makefile.php,v 1.2 2012/07/25 13:01:05 fhajny Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
 
@@ -11,7 +11,7 @@ USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 BUILD_DEFS+=		VARBASE
-PLIST_VARS+=		suhosin
+PLIST_VARS+=		suhosin dtrace
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
@@ -44,8 +44,12 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts # suhosin
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline # suhosin
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl
+
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
+PKG_SUPPORTED_OPTIONS+=	dtrace
+.endif
 
 #SUBST_CLASSES+=		ini
 #SUBST_STAGE.ini=	post-patch
@@ -93,6 +97,21 @@ CONFIGURE_ARGS+=	--without-openssl
 
 .if !empty(PKG_OPTIONS:Mmaintainer-zts)
 CONFIGURE_ARGS+=	--enable-maintainer-zts
+.endif
+
+.if !empty(PKG_OPTIONS:Mreadline)
+.include "../../devel/readline/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+.else
+CONFIGURE_ARGS+=	--without-readline
+.endif
+
+.if !empty(PKG_OPTIONS:Mdtrace)
+PLIST.dtrace=		yes
+CONFIGURE_ARGS+=	--enable-dtrace
+
+# See https://bugs.php.net/bug.php?id=61268
+INSTALL_MAKE_FLAGS+=	-r
 .endif
 
 DL_AUTO_VARS=		yes
