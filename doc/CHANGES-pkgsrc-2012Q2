@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.20 2012/07/23 18:25:02 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.21 2012/07/25 10:31:21 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -154,3 +154,11 @@ www/ap-php: security update
 www/php-curl: security update
 www/php-fpm: security update
 www/php-tidy: security update
+Pullup ticket #3870 - requested by spz
+net/bind98 security update
+Pullup ticket #3871 - requested by spz
+net/bind99 security update
+Pullup ticket #3872 - requested by spz
+net/bind97 security update
+Pullup ticket #3873 - requested by spz
+net/bind96 security update
