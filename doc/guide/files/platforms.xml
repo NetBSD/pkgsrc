@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.72 2012/07/25 21:20:51 tez Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.73 2012/07/25 21:24:44 tez Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
