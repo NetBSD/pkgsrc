@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.24 2012/05/12 21:53:20 dholland Exp $
+$NetBSD: patch-aa,v 1.25 2012/07/25 11:33:49 fhajny Exp $
 
 --- configure.orig	2011-09-06 13:41:25.000000000 +0200
 +++ configure	2011-11-29 18:59:56.000000000 +0100
@@ -45692,7 +45692,7 @@ $NetBSD: patch-aa,v 1.24 2012/05/12 21:53:20 dholland Exp $
 +	   # check for isainfo, if not found it has to be a 32 bit kernel (<=2.6)
 +	   if test -x /usr/bin/isainfo; then
 +		# check for 64 bit platform
-+		if isainfo -kv | grep '^64-bit'; then
++		if test "$MACHINE_ARCH" = "x86_64"; then
 +			COMPILE_64BIT_KMODULE=yes
 +		fi
 +	   fi
