@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
+$NetBSD: patch-aa,v 1.41 2012/07/25 14:42:03 jperkin Exp $
 
 --- Makefile.config.in.orig	2008-12-07 01:58:20.000000000 +0000
-+++ Makefile.config.in
-@@ -24,7 +24,7 @@ DEFAULT_TARGET = nonmerge
++++ Makefile.config.in	2012-07-25 14:32:55.129209505 +0000
+@@ -24,7 +24,7 @@
  # and skip it on those systems unless you want to debug it and fix it.
  # OpenBSD:
  #BUILD_FIASCO = N
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  
  # The following are commands for the build process to use.  These values
  # do not get built into anything.
-@@ -33,7 +33,7 @@ BUILD_FIASCO = Y
+@@ -33,7 +33,7 @@
  #CC = gcc
  # Note that 'cc' is usually an alias for whatever is the main compiler
  # on a system, e.g. the GNU Compiler on Linux.
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  
  # The linker.
  LD = $(CC)
-@@ -100,7 +100,7 @@ CFLAGS_FOR_BUILD = $(CFLAGS)
+@@ -100,7 +100,7 @@
  
  # MAKE is set automatically by Make to what was used to invoke Make.
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  #Solaris:
  #INSTALL = /usr/ucb/install
  #Tru64:
-@@ -112,7 +112,7 @@ INSTALL = $(SRCDIR)/buildtools/install.s
+@@ -112,7 +112,7 @@
  
  # STRIPFLAG is the option you pass to the above install program to make it
  # strip unnecessary information out of binaries.
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # If you don't want to strip the binaries, just leave it null:
  #STRIPFLAG = 
  
-@@ -131,13 +131,15 @@ MANPAGE_FORMAT = nroff
+@@ -131,13 +131,15 @@
  AR = ar
  RANLIB = ranlib
  # IRIX, SCO don't have Ranlib:
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # Solaris:
  # LEX = flex -e
  # Windows Mingw:
-@@ -228,7 +230,7 @@ EXE =
+@@ -228,7 +230,7 @@
  
  # Here, $(SONAME) resolves to the soname for the shared library being created.
  # The following are gcc options.  This works on GNU libc systems.
@@ -65,14 +65,10 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # You need -nostart instead of -shared on BeOS.  Though the BeOS compiler is
  # ostensibly gcc, it has the -nostart option, which is not mentioned in gcc
  # documentation and doesn't exist in at least one non-BeOS installation.
-@@ -261,6 +263,19 @@ LDRELOC = NONE
+@@ -261,6 +263,15 @@
  #LDRELOC = ld --reloc
  #LDRELOC = ld -r
  
-+ifeq ($(OPSYS),SunOS)
-+LDSHLIB = -Wl,-B,dynamic,-G,-h,$(SONAME) 
-+endif
-+
 +ifeq ($(OPSYS),Darwin)
 +LDSHLIB = -dynamiclib -install_name $(PREFIX)/lib/libnetpbm.$(MAJ).dylib \
 +	-compatibility_version $(MAJ) -current_version $(MAJ).$(MIN)
@@ -85,7 +81,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  
  # On older systems, you have to make shared libraries out of position
  # independent code, so you need -fpic or fPIC here.  (The rule is: if
-@@ -283,11 +298,23 @@ LDRELOC = NONE
+@@ -283,11 +294,23 @@
  CFLAGS_SHLIB = 
  # Gcc:
  #CFLAGS_SHLIB = -fpic
@@ -110,7 +106,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # SHLIB_CLIB is the link option to include the C library in a shared library,
  # normally "-lc".  On typical systems, this serves no purpose.  On some,
  # though, it causes information about which C library to use to be recorded
-@@ -356,8 +383,8 @@ TIFFHDR_DIR =
+@@ -356,8 +379,8 @@
  #TIFFLIB = libtiff.so
  #TIFFHDR_DIR = /usr/include/libtiff
  #NetBSD:
@@ -121,7 +117,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # OSF, Tru64:
  #TIFFLIB = /usr/local1/DEC/lib/libtiff.so
  #TIFFHDR_DIR = /usr/local1/DEC/include
-@@ -387,8 +414,8 @@ JPEGHDR_DIR =
+@@ -387,8 +410,8 @@
  #JPEGLIB = libjpeg.so
  #JPEGHDR_DIR = /usr/include/jpeg
  # Netbsd:
@@ -132,7 +128,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # OSF, Tru64:
  #JPEGLIB = /usr/local1/DEC/libjpeg.so
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -415,12 +442,12 @@ JPEGHDR_DIR =
+@@ -415,12 +438,12 @@
  
  PNGLIB = NONE
  PNGHDR_DIR =
@@ -148,7 +144,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # OSF/Tru64:
  #PNGLIB = /usr/local1/DEC/lib/libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -432,8 +459,8 @@ PNGVER = 
+@@ -432,8 +455,8 @@
  #
  # If you have 'libpng-config' (see above), these are irrelevant.
  
@@ -159,7 +155,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  #ZLIB = libz.so
  
  # The JBIG lossless image compression library (aka JBIG-KIT):
-@@ -442,8 +469,8 @@ JBIGLIB = $(BUILDDIR)/converter/other/jb
+@@ -442,8 +465,8 @@
  JBIGHDR_DIR = $(SRCDIR)/converter/other/jbig
  
  # The Jasper JPEG-2000 image compression library (aka JasPer):
@@ -170,7 +166,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # JASPERDEPLIBS is the libraries (-l options or file names) on which
  # The Jasper library depends -- i.e. what you have to link into any
  # executable that links in the Jasper library.
-@@ -488,7 +515,7 @@ OMIT_NETWORK =
+@@ -488,7 +511,7 @@
  # built into the standard C library, so this can be null.  This is irrelevant
  # if OMIT_NETWORK is "y".
  
@@ -179,7 +175,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # Solaris, SunOS:
  #NETWORKLD = -lsocket -lnsl
  # SCO:
-@@ -542,7 +569,7 @@ SUFFIXMANUALS5 = 5
+@@ -542,7 +565,7 @@
  #Netpbm library functions.  The value is used only in make file tests.
  # "unixshared" means a unix-style shared library, typically named like 
  # libxyz.so.2.3
@@ -188,7 +184,7 @@ $NetBSD: patch-aa,v 1.40 2010/02/19 18:25:44 drochner Exp $
  # "unixstatic" means a unix-style static library, (like libxyz.a)
  #NETPBMLIBTYPE = unixstatic
  # "dll" means a Windows DLL shared library
-@@ -553,7 +580,7 @@ NETPBMLIBTYPE = unixshared
+@@ -553,7 +576,7 @@
  #NETPBMLIBSUFFIX is the suffix used on whatever kind of library is 
  #selected above.  All this is used for is to construct library names.
  #The make files never examine the actual value.
