@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.82 2012/07/24 16:23:37 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.83 2012/07/25 14:26:57 bsiegert Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -326,7 +326,7 @@ RUBY_SHLIBVER=		${RUBY_VER}
 .else
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
 .endif
-.elif ${OPSYS} == "OpenBSD"
+.elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
 .elif ${OPSYS} == "Darwin"
 RUBY_SHLIB=		${RUBY_VER}.${RUBY_SHLIBVER}.${RUBY_SLEXT}

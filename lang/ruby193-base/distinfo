@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2012/06/02 02:23:33 taca Exp $
+$NetBSD: distinfo,v 1.8 2012/07/25 14:26:57 bsiegert Exp $
 
 SHA1 (ruby193-base-201202170/ruby-1.9.3-p194.tar.bz2) = afb497dc10ea3d83ecbe3ccd9ed45fba1457721c
 RMD160 (ruby193-base-201202170/ruby-1.9.3-p194.tar.bz2) = bca45d750cfd8523e838903c8693749652960d60
 Size (ruby193-base-201202170/ruby-1.9.3-p194.tar.bz2) = 9841223 bytes
-SHA1 (patch-configure) = 3045588df7baca5e100363eaef64567d6a59d527
-SHA1 (patch-configure.in) = c6671d30e11dfb2d5e4b253b6f3e53cf32af0152
+SHA1 (patch-configure) = 3ab88504dda0c244b6c58dc42778d9a63f1e4d23
+SHA1 (patch-configure.in) = f743324dda92bd4c490a7214f4822b4cc9a4c5dc
 SHA1 (patch-defs_default__gems) = fb24111736f1a76a05e853aa068024dbdd24e5a5
 SHA1 (patch-lib_mkmf.rb) = a4547a4bcbf1f533e264578c455ef1c7e6c9aa74
 SHA1 (patch-lib_rdoc_ri_driver.rb) = acb4cb022893eb8dea2adf7564f5e5e1a0f1e9c8
