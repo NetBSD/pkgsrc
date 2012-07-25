@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2379 2012/07/25 20:16:05 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2380 2012/07/25 21:20:50 tez Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3675,3 +3675,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/foo2zjs version 20120516 [imil 2012-07-25]
 	Updated textproc/xmlrpc-c to 1.16.42 [adam 2012-07-25]
 	Updated graphics/pngcrush to 1.7.33 [adam 2012-07-25]
+	Updated net/nfdump to 1.6.6 [tez 2012-07-25]

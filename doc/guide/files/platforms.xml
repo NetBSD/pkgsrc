@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.71 2012/05/13 05:36:28 dholland Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.72 2012/07/25 21:20:51 tez Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -459,8 +459,8 @@ ICCBASE=                /opt/intel/cc/10.1.008
     <sect2 id="solaris">
       <title>Solaris</title>
 
-      <para>Solaris 2.6 through 9 are supported on both x86 and sparc.
-      You will need a working C compiler. Both gcc 2.95.3 and
+      <para>Solaris 2.6 through 10 are supported on both x86 and sparc.
+      You will need a working C compiler. Both gcc 4.5.3 and
       Sun WorkShop 5 have been tested.</para>
 
       <para>The following packages are required on Solaris 8 for the bootstrap
@@ -490,7 +490,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
 
 	<para>It is recommended that an external gcc be used only for bootstrapping,
 	then either build gcc from
-	<filename role="pkg">lang/gcc</filename> or install a binary gcc
+	<filename role="pkg">lang/gcc46</filename> or install a binary gcc
 	package, then remove gcc used during bootstrapping.</para>
 
 	<para>Binary packages of gcc can be found through <ulink
