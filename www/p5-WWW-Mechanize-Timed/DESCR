@@ -1,0 +1,2 @@
+This module is a subclass of WWW::Mechanize that times each stage of the
+HTTP request.
