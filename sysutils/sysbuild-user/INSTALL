@@ -1,0 +1,23 @@
+#! /bin/sh
+
+EGDIR="@EGDIR@"
+SYSBUILD_HOME="@SYSBUILD_HOME@"
+SYSBUILD_USER="@SYSBUILD_USER@"
+
+case "${STAGE}" in
+    POST-INSTALL)
+        if [ ! -e "${SYSBUILD_HOME}/.sysbuild/default.conf" ]; then
+            echo "${PKGNAME}: Installing default configuration file"
+	    ${MKDIR} -p "${SYSBUILD_HOME}/.sysbuild"
+            ( cd "${SYSBUILD_HOME}/.sysbuild" && ln -s ../default.conf . )
+        fi
+
+        if crontab -u "${SYSBUILD_USER}" -l >/dev/null 2>/dev/null; then
+            echo "${PKGNAME}: ${SYSBUILD_USER} already has a crontab;" \
+	    	"not installing"
+        else
+            echo "${PKGNAME}: Installing default crontab for ${SYSBUILD_USER}"
+            crontab -u "${SYSBUILD_USER}" "${EGDIR}/crontab"
+        fi
+        ;;
+esac
