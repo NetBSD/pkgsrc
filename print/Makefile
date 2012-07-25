@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2012/07/11 12:58:56 minskim Exp $
+# $NetBSD: Makefile,v 1.538 2012/07/25 17:19:37 imil Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -38,6 +38,7 @@ SUBDIR+=	evince
 SUBDIR+=	evince-nautilus
 SUBDIR+=	evince3
 SUBDIR+=	flpsed
+SUBDIR+=	foo2zjs
 SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-filters-cups
 SUBDIR+=	foomatic-ppds
