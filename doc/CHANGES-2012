@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2377 2012/07/25 17:26:22 imil Exp $
+$NetBSD: CHANGES-2012,v 1.2378 2012/07/25 20:09:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3673,3 +3673,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/p5-Test-TCP to 1.16 [wen 2012-07-25]
 	Updated textproc/xmlrpc-c to 1.16.41nb1 [jperkin 2012-07-25]
 	Added print/foo2zjs version 20120516 [imil 2012-07-25]
+	Updated textproc/xmlrpc-c to 1.16.42 [adam 2012-07-25]
