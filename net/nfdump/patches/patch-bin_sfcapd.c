@@ -1,28 +1,32 @@
-$NetBSD: patch-af,v 1.2 2007/09/12 07:33:42 seb Exp $
+$NetBSD: patch-bin_sfcapd.c,v 1.1 2012/07/25 21:19:30 tez Exp $
 
---- sfcapd.c.orig	2007-08-24 12:32:34.000000000 +0000
-+++ sfcapd.c
-@@ -63,6 +63,7 @@
+use PATH_MAX instead of MAXPATHLEN if available
+
+--- bin/sfcapd.c.orig	2011-12-29 15:24:14.000000000 +0000
++++ bin/sfcapd.c
+@@ -61,6 +61,7 @@
  #include <sys/mman.h>
  #include <string.h>
  #include <dirent.h>
 +#include <limits.h>
  
- #if 0
+ #ifdef PCAP
  #include "pcap_reader.h"
-@@ -626,7 +627,11 @@ int main(int argc, char **argv) {
+@@ -666,7 +667,12 @@ int main(int argc, char **argv) {
   
- char	*bindhost, *filter, *datadir, pidstr[32], *lauch_process;
- char	*userid, *groupid, *checkptr, *listenport, *mcastgroup;
+ char	*bindhost, *filter, *datadir, pidstr[32], *launch_process;
+ char	*userid, *groupid, *checkptr, *listenport, *mcastgroup, *extension_tags;
+-char	*Ident, *pcap_file, pidfile[MAXPATHLEN];
++char	*Ident, *pcap_file;
 +#ifdef PATH_MAX
-+char	pidfile[PATH_MAX];
++char pidfile[PATH_MAX];
 +#else
- char	pidfile[MAXPATHLEN];
++char pidfile[MAXPATHLEN];
 +#endif
  struct stat fstat;
  srecord_t	*commbuff;
- dirstat_t 	*dirstat;
-@@ -712,18 +717,21 @@ char	c;
+ packet_function_t receive_packet;
+@@ -777,18 +783,21 @@ int	c;
  				break;
  			case 'P':
  				if ( optarg[0] == '/' ) { 	// absolute path given

@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.sflow,v 1.1.1.1 2007/07/29 21:33:42 seb Exp $
+@comment $NetBSD: PLIST.sflow,v 1.2 2012/07/25 21:19:30 tez Exp $
 bin/sfcapd
-man/man1/sfcapd.1
