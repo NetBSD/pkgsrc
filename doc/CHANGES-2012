@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2370 2012/07/25 14:42:18 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.2371 2012/07/25 14:46:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/sysbuild version 2.0 [jmmv 2012-07-25]
 	Added sysutils/sysbuild-user version 1.0 [jmmv 2012-07-25]
 	Updated graphics/netpbm to 10.35.80nb3 [jperkin 2012-07-25]
+	Updated databases/p5-Data-Table to 1.65 [wen 2012-07-25]
