@@ -5,5 +5,6 @@ nfdump     - netflow dump
 nfprofile  - netflow profiler - optional tool
 nfreplay   - netflow replay
 nfexpire   - expire old netflow data
+nfanon     - netflow anonymisation
 ft2nfdump  - read flow-tools format - optional tool
 sfcapd     - sflow collector daemon - optional tool
