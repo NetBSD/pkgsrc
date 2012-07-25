@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2368 2012/07/25 11:41:54 he Exp $
+$NetBSD: CHANGES-2012,v 1.2369 2012/07/25 12:21:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3664,3 +3664,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/p5-LWPx-TimedHTTP version 1.8 [sno 2012-07-25]
 	Added www/p5-WWW-Mechanize-Timed version 0.44 [sno 2012-07-25]
 	Updated lang/parrot to 4.4.0 [he 2012-07-25]
+	Added sysutils/sysbuild version 2.0 [jmmv 2012-07-25]
+	Added sysutils/sysbuild-user version 1.0 [jmmv 2012-07-25]
