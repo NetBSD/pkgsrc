@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2012/03/08 10:11:23 he Exp $
+@comment $NetBSD: PLIST,v 1.31 2012/07/25 11:41:19 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -548,7 +548,7 @@ share/doc/parrot/${PKGVERSION}/DONORS.pod
 share/doc/parrot/${PKGVERSION}/LICENSE
 share/doc/parrot/${PKGVERSION}/PBC_COMPAT
 share/doc/parrot/${PKGVERSION}/PLATFORMS
-share/doc/parrot/${PKGVERSION}/README
+share/doc/parrot/${PKGVERSION}/README.pod
 share/doc/parrot/${PKGVERSION}/README_cygwin.pod
 share/doc/parrot/${PKGVERSION}/README_win32.pod
 share/doc/parrot/${PKGVERSION}/RESPONSIBLE_PARTIES
