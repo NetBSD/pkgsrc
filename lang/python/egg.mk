@@ -1,8 +1,9 @@
-# $NetBSD: egg.mk,v 1.13 2011/12/16 12:57:17 gdt Exp $
+# $NetBSD: egg.mk,v 1.14 2012/07/25 19:07:49 drochner Exp $
 #
 # Common logic to handle Python Eggs
 #
 .include "../../mk/bsd.fast.prefs.mk"
+.include "../../lang/python/pyversion.mk"
 
 # This file should be included to package python "distributions" which
 # use setuptools to create an egg.  Some distributions use distutils,
@@ -35,7 +36,11 @@ _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 _PYSETUPTOOLSINSTALLARGS+=	--root=/
 .endif
 
+.if ${_PYTHON_VERSION} == "31" || ${_PYTHON_VERSION} == "32"
+DEPENDS+=	${PYPKGPREFIX}-distribute-[0-9]*:../../devel/py-distribute
+.else
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c9:../../devel/py-setuptools
+.endif
 
 INSTALLATION_DIRS+=	${PYSITELIB}
 
