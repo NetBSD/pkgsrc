@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2373 2012/07/25 15:35:27 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2374 2012/07/25 15:41:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3670,3 +3670,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-Data-Table to 1.65 [wen 2012-07-25]
 	Updated www/p5-HTTP-Lite to 2.4 [wen 2012-07-25]
 	Updated devel/p5-Test-SharedFork to 0.20 [wen 2012-07-25]
+	Updated net/p5-Test-TCP to 1.16 [wen 2012-07-25]
