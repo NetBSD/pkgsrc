@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.22 2012/07/25 13:34:00 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.23 2012/07/25 14:02:16 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -164,3 +164,9 @@ Pullup ticket #3873 - requested by spz
 net/bind96 security update
 Pullup ticket #3874 - requested by taca
 lang/php: fix PHP version numbers in dependencies after recent update
+Pullup ticket #3867 - requested by obache
+emulators/suse121_base: security update
+Pullup ticket #3868 - requested by obache
+emulators/suse121_gtk2: security update
+Pullup ticket #3869 - requested by taca
+net/isc-dhcp4: security update
