@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2012/05/24 08:07:33 adam Exp $
+$NetBSD: distinfo,v 1.76 2012/07/25 11:40:50 fhajny Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.2.tar.gz) = e1e2edef1d63ed677d6534d32800c2e1f7ad0e73
 RMD160 (qt-everywhere-opensource-src-4.8.2.tar.gz) = 6a15077aee1e84076380787127b80c7bb97ebe86
@@ -43,6 +43,7 @@ SHA1 (patch-src-tools-mocmain.cpp-QTBUG-22829) = 79ffa61f856d657be054d1ea2fcab3a
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = cbce2e10307d26163a76266c0ceee315a609d63d
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp) = bfe38ea1e26fef02dd78e40c95c000cb0cc32a04
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_MathExtras.h) = 68152f0077ec5bcce1b3774aaac64af5fd9e491e
+SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_StringImpl.h) = d5460bede6b3662df4d9dbec5826db98c6ef4f61
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = 10bfe59d623db5047e2a4c678ee79a217ea8b7ec
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_features.pri) = d0053dd2732604908fcec294b2a833aeb6d93f40
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 0377066bd28d5eae02e8fcf200da4360c286ad84
