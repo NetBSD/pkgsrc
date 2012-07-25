@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2012/05/04 11:18:22 adam Exp $
+$NetBSD: distinfo,v 1.24 2012/07/25 15:49:34 jperkin Exp $
 
 SHA1 (xmlrpc-c-1.16.41.tgz) = aee10abad995ff745d10223b7335c374a931aa1f
 RMD160 (xmlrpc-c-1.16.41.tgz) = ad03272881d55c2e648f93c1c76ba4c4f9f804a2
@@ -10,6 +10,7 @@ SHA1 (patch-ae) = 52f826d292869be44886881c48aa7707a4af2df3
 SHA1 (patch-ai) = e7b981f07d4691bbd63bfa80b34b3e1c050c3ad2
 SHA1 (patch-aj) = e3ca062349eb7c50cf3d3dc1370744987a0f3bde
 SHA1 (patch-ak) = 2d0528260b203965e5237f5ca7f9464215283f5c
+SHA1 (patch-config.mk.in) = 48c5ead1c6ed9993259188eaac8c2df9c89d2c74
 SHA1 (patch-examples_cpp_Makefile) = 3c2ca9b50a587c6a6395aec292ca643605158171
 SHA1 (patch-lib_curl__transport_curlmulti.c) = 1cea4c43b1ed3dcf73827afc14d7bb9267371121
 SHA1 (patch-lib_curl__transport_curltransaction.c) = 1dcf46c0dd1dd8e7fdfbb6c81e00b326f6d0b1f9
