@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/07/25 12:20:08 jmmv Exp $
+
+A new system user has been set up to perform daily rebuilds of NetBSD for
+the current platform.  Please take the time to review the following file:
+
+	${SYSBUILD_HOME}/default.conf
+
+And make sure that the installed cron job runs at appropriate times:
+
+	crontab -u ${SYSBUILD_USER} -e
+
+Lastly, remember that you can trigger manual sysbuild operations by doing:
+
+	su - ${SYSBUILD_USER} ${PREFIX}/bin/sysbuild <arguments>
+
+===========================================================================

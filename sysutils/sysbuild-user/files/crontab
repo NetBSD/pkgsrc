@@ -1,0 +1,8 @@
+# $NetBSD: crontab,v 1.1 2012/07/25 12:20:08 jmmv Exp $
+# crontab(5) file for the unprivileged sysbuild user.
+
+PATH=@PREFIX@/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+SHELL=/bin/sh
+
+# Cheatsheet: minute hour day-of-month month day-of-week(0,7=Sun)
+@daily @PREFIX@/bin/sysbuild4cron -l "${HOME}/log" -- build
