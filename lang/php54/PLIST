@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/06/16 05:21:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/25 13:01:05 fhajny Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -25,6 +25,7 @@ include/php/Zend/zend_config.nw.h
 include/php/Zend/zend_config.w32.h
 include/php/Zend/zend_constants.h
 include/php/Zend/zend_dtrace.h
+${PLIST.dtrace}include/php/Zend/zend_dtrace_gen.h
 include/php/Zend/zend_dynamic_array.h
 include/php/Zend/zend_errors.h
 include/php/Zend/zend_exceptions.h
