@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/07/21 21:43:55 abs Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/26 22:15:08 abs Exp $
 
-DISTNAME=	dc-tools-1.1
+DISTNAME=	dc-tools-1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mc.pp.se/dc/files/ \
-		https://github.com/abs0/dc-burn-netbsd/tarball/1.1
+		https://github.com/abs0/dc-burn-netbsd/tarball/1.2
 DIST_SUBDIR=	dc-tools
 DISTFILES=	makeip.tar.gz scramble.c ip_slave.tar.gz serial_slave.tar.gz \
 		${DCBURN_DISTFILE}
@@ -13,13 +13,14 @@ HOMEPAGE=	http://mc.pp.se/dc/sw.html
 COMMENT=	Marcus Comstedt's tools for generating Dreamcast bootable CDs
 #LICENSE=	# TODO: (see mk/license.mk)
 
+DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.2-0-gfd56cbb
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
 
 FETCH_USING=	curl	# For github
 
-DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.1-0-gb9d0f1d
 # The filenames in the _slave.tar.gz files overlap
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DIST_SUBDIR}/scramble.c ${WRKSRC} && \
 	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/makeip.tar.gz && \
@@ -60,5 +61,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/dc-tools/ip_slave
 	${INSTALL_DATA} ${WRKSRC}/serial/IP.BIN \
 		${DESTDIR}${PREFIX}/share/dc-tools/serial_slave
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
