@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/26 22:15:08 abs Exp $
+# $NetBSD: Makefile,v 1.5 2012/07/26 22:19:24 abs Exp $
 
 DISTNAME=	dc-tools-1.2
 CATEGORIES=	sysutils
@@ -10,7 +10,7 @@ DISTFILES=	makeip.tar.gz scramble.c ip_slave.tar.gz serial_slave.tar.gz \
 
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://mc.pp.se/dc/sw.html
-COMMENT=	Marcus Comstedt's tools for generating Dreamcast bootable CDs
+COMMENT=	Dreamcast bootable CDs tools (mainly from Marcus Comstedt)
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.2-0-gfd56cbb
