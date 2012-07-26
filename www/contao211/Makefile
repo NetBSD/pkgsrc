@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/05 12:44:08 taca Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2012/07/26 09:44:11 tron Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
@@ -82,6 +82,7 @@ pre-install:
 	cd ${WRKSRC}; ${RM} -rf music_academy.css \
 		templates/music_academy.sql tl_files/music_academy
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC}/plugins/tinyMCE -type f -exec ${CHMOD} -x {} \;
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
