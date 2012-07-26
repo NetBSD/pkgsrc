@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2383 2012/07/26 03:11:33 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2384 2012/07/26 11:01:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3680,3 +3680,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211 to 2.11.5 [taca 2012-07-26]
 	Updated www/contao211-example to 2.11.5 [taca 2012-07-26]
 	Updated www/contao211-translations to 201207250 [taca 2012-07-26]
+	Updated graphics/ilmbase to 1.0.2nb2 [bsiegert 2012-07-26]
