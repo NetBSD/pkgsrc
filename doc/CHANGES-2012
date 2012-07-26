@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2382 2012/07/26 03:07:36 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2383 2012/07/26 03:11:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3679,3 +3679,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Dancer to 1.3097 [wen 2012-07-26]
 	Updated www/contao211 to 2.11.5 [taca 2012-07-26]
 	Updated www/contao211-example to 2.11.5 [taca 2012-07-26]
+	Updated www/contao211-translations to 201207250 [taca 2012-07-26]
