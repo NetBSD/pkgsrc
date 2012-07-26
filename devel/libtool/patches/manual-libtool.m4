@@ -1,6 +1,6 @@
-$NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
+$NetBSD: manual-libtool.m4,v 1.33 2012/07/26 12:04:04 bsiegert Exp $
 
---- libltdl/m4/libtool.m4.orig	2009-11-16 13:11:59.000000000 +0000
+--- libltdl/m4/libtool.m4.orig	Mon Nov 16 13:11:35 2009
 +++ libltdl/m4/libtool.m4
 @@ -118,7 +118,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
@@ -14,7 +14,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
  ])
  
  
-@@ -1527,13 +1530,20 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
+@@ -1527,6 +1530,13 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -28,6 +28,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
    amigaos*)
      # On AmigaOS with pdksh, this test takes hours, literally.
      # So we just punt and use a minimum line length of 8192.
+@@ -1533,7 +1543,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -64,7 +65,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -2327,13 +2336,24 @@ freebsd* | dragonfly*)
+@@ -2327,7 +2336,7 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -73,6 +74,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
+@@ -2334,6 +2343,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -242,11 +244,11 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
-+      ;;
+       ;;
 +    *mint*)
 +      # FreeMiNT does not support shared libraries at all
 +      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
-       ;;
++      ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
        _LT_TAGVAR(lt_prog_compiler_pic, $1)=
@@ -269,7 +271,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -3888,9 +3967,17 @@ m4_if([$1], [CXX], [
+@@ -3888,11 +3967,19 @@ m4_if([$1], [CXX], [
        ;;
  
      darwin* | rhapsody*)
@@ -279,15 +281,17 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
        # Common symbols not allowed in MH_DYLIB files
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
 +      _LT_TAGVAR(lt_prog_compiler_static, $1)=''
-+      ;;
-+
+       ;;
+ 
 +    haiku*)
 +      # PIC is the default for Haiku.
 +      # The "-static" flag exists, but is broken.
 +      _LT_TAGVAR(lt_prog_compiler_static, $1)=
-       ;;
- 
++      ;;
++
      hpux*)
+       # PIC is the default for 64-bit PA HP-UX, but not for 32-bit
+       # PA HP-UX.  On IA64 HP-UX, PIC is the default but the pic flag
 @@ -3912,6 +3999,13 @@ m4_if([$1], [CXX], [
        # Instead, we relocate shared libraries at runtime.
        ;;
@@ -302,7 +306,23 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -4110,6 +4204,9 @@ m4_if([$1], [CXX], [
+@@ -4035,6 +4129,15 @@ m4_if([$1], [CXX], [
+       esac
+       ;;
+ 
++    mirbsd*)
++      case $cc_basename in
++      # pkgsrc f77 is f2c, which uses gcc underneath.
++      f77*)
++	_LT_TAGVAR(lt_prog_compiler_wl, $1)='-Wl,'
++	;;
++      esac
++      ;;
++
+     newsos6)
+       _LT_TAGVAR(lt_prog_compiler_pic, $1)='-KPIC'
+       _LT_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
+@@ -4110,6 +4213,9 @@ m4_if([$1], [CXX], [
  ])
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -312,7 +332,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -4343,6 +4440,11 @@ _LT_EOF
+@@ -4343,6 +4449,11 @@ _LT_EOF
        fi
        ;;
  
@@ -324,7 +344,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
      interix[[3-9]]*)
        _LT_TAGVAR(hardcode_direct, $1)=no
        _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
-@@ -4429,7 +4531,7 @@ _LT_EOF
+@@ -4429,7 +4540,7 @@ _LT_EOF
        ;;
  
      netbsd*)
@@ -333,7 +353,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
  	_LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
        else
-@@ -4735,6 +4837,11 @@ _LT_EOF
+@@ -4735,6 +4846,11 @@ _LT_EOF
        _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
        ;;
  
@@ -345,7 +365,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
      hpux9*)
        if test "$GCC" = yes; then
  	_LT_TAGVAR(archive_cmds, $1)='$RM $output_objdir/$soname~$CC -shared -fPIC ${wl}+b ${wl}$install_libdir -o $output_objdir/$soname $libobjs $deplibs $compiler_flags~test $output_objdir/$soname = $lib || mv $output_objdir/$soname $lib'
-@@ -4841,6 +4948,20 @@ _LT_EOF
+@@ -4841,6 +4957,20 @@ _LT_EOF
        _LT_TAGVAR(link_all_deplibs, $1)=yes
        ;;
  
@@ -366,7 +386,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
  	_LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
-@@ -4861,6 +4982,8 @@ _LT_EOF
+@@ -4861,6 +4991,8 @@ _LT_EOF
        ;;
  
      *nto* | *qnx*)
@@ -375,7 +395,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
        ;;
  
      openbsd*)
-@@ -5318,9 +5441,7 @@ m4_defun([_LT_PROG_CXX],
+@@ -5318,9 +5450,7 @@ m4_defun([_LT_PROG_CXX],
  [
  pushdef([AC_MSG_ERROR], [_lt_caught_CXX_error=yes])
  AC_PROG_CXX
@@ -386,7 +406,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -5993,6 +6114,22 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -5993,6 +6123,22 @@ if test "$_lt_caught_CXX_error" != yes; 
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -409,7 +429,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6008,18 +6145,37 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -6008,18 +6154,37 @@ if test "$_lt_caught_CXX_error" != yes; 
  
        netbsd*)
          if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
@@ -451,7 +471,7 @@ $NetBSD: manual-libtool.m4,v 1.32 2011/05/14 16:49:45 bsiegert Exp $
  	;;
  
        openbsd2*)
-@@ -6481,6 +6637,11 @@ $RM -f confest.$objext
+@@ -6481,6 +6646,11 @@ $RM -f confest.$objext
  # PORTME: override above test on systems where it is broken
  m4_if([$1], [CXX],
  [case $host_os in
