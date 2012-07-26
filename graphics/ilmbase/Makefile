@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/01/03 07:58:43 dsainty Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/26 10:58:46 bsiegert Exp $
 
 DISTNAME=	ilmbase-1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
 
