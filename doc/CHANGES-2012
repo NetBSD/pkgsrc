@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2386 2012/07/26 21:09:43 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2387 2012/07/26 22:30:00 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3683,3 +3683,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/ilmbase to 1.0.2nb2 [bsiegert 2012-07-26]
 	Updated devel/libtool-base to 2.2.6bnb8 [bsiegert 2012-07-26]
 	Updated lang/ecl to 12.7.1 [asau 2012-07-26]
+	Updated sysutils/dc-tools to 1.2 [abs 2012-07-26]
+	Updated sysutils/dc-tools to 1.3 [abs 2012-07-26]
