@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.179 2012/07/24 13:18:00 jperkin Exp $
+# $NetBSD: bootstrap,v 1.180 2012/07/26 13:00:48 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -64,6 +64,7 @@ usage="Usage: $0 "'
     [ --mk-fragment <mk.conf> ]
     [ --pkgdbdir <pkgdbdir> ]
     [ --pkgmandir <pkgmandir> ]
+    [ --prefer-pkgsrc <list|yes|no> ]
     [ --prefix <prefix> ]
     [ --preserve-path ]
     [ --quiet ]
@@ -390,12 +391,15 @@ while [ $# -gt 0 ]; do
 	--abi=*)	abi=`get_optarg "$1"` ;;
 	--abi)		abi="$2"; shift ;;
 	--unprivileged | --ignore-user-check) unprivileged=yes ;;
+	--prefer-pkgsrc=*)
+			prefer_pkgsrc=`get_optarg "$1"` ;;
+	--prefer-pkgsrc)
+			prefer_pkgsrc="$2"; shift ;;
 	--preserve-path) preserve_path=yes ;;
 	--mk-fragment=*)
 			mk_fragment=`get_optarg "$1"` ;;
 	--mk-fragment)
 			mk_fragment="$2"; shift ;;
-
 	--binary-kit=*)
 			binary_kit=`get_optarg "$1"` ;;
 	--binary-kit)
@@ -897,6 +901,11 @@ fi
 echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${TARGET_MKCONF}
 echo "PKGMANDIR=		$pkgmandir" >> ${TARGET_MKCONF}
 echo "" >> ${TARGET_MKCONF}
+
+if [ -n "$prefer_pkgsrc" ]; then
+	echo "PREFER_PKGSRC=		$prefer_pkgsrc" >> ${TARGET_MKCONF}
+	echo "" >> ${TARGET_MKCONF}
+fi
 
 BOOTSTRAP_MKCONF=${wrkdir}/mk.conf
 cp ${TARGET_MKCONF} ${BOOTSTRAP_MKCONF}
