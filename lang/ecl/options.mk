@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2012/07/26 21:09:29 asau Exp $
+# $NetBSD: options.mk,v 1.8 2012/07/26 22:58:33 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
-PKG_SUPPORTED_OPTIONS+=		threads unicode ffi clx
+PKG_SUPPORTED_OPTIONS+=		debug threads unicode ffi clx
 PKG_SUGGESTED_OPTIONS+=		# empty
 # Unicode support proved to break Axioms.
 # Threads are off, since threaded ECL requires threads support
@@ -11,8 +11,12 @@ PKG_SUGGESTED_OPTIONS+=		# empty
 
 PLIST_SRC=	PLIST	# default value
 
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
+
 .if !empty(PKG_OPTIONS:Mthreads)
-CONFIGURE_ARGS+=	--enable-threads --enable-debug
+CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ENV+=		THREAD_CFLAGS=${PTHREAD_CFLAGS:Q}
 CONFIGURE_ENV+=		THREAD_LDLAGS=${BUILDLINK_LDLAGS.pthread:Q}
 CONFIGURE_ENV+=		THREAD_LIBS=${BUILDLINK_LIBS.pthread:Q}
