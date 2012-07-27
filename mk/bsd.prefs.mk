@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.324 2012/07/02 15:49:41 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.325 2012/07/27 09:44:31 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -260,13 +260,13 @@ LOWER_OPSYS_VERSUFFIX?=	${OS_VERSION}
 LOWER_VENDOR?=		hp
 
 .elif ${OPSYS} == "SunOS"
+ABI?=			32
 .  if ${MACHINE_ARCH} == "sparc"
 SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "sun4"
 MACHINE_ARCH=		sparc
 SPARC_TARGET_ARCH?=	sparcv7
 .  elif ${MACHINE_ARCH} == "i86pc" || ${MACHINE_ARCH} == "i86xpv" || ${MACHINE_ARCH} == "i386"
-ABI?=			32
 LOWER_ARCH.32=		i386
 LOWER_ARCH.64=		x86_64
 LOWER_ARCH=		${LOWER_ARCH.${ABI}}
