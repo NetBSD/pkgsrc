@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11374 2012/07/24 18:41:55 drochner Exp $
+$NetBSD: TODO,v 1.11375 2012/07/27 19:29:46 drochner Exp $
 
 Suggested new packages
 ======================
@@ -940,7 +940,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
 	o nmap-6.0
-	o nmh-1.4
 	o notification-daemon-0.7.0
 	o ns-3.13
 	o ns-plugger-common-5.1.3
