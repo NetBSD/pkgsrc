@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.842 2012/07/17 19:24:46 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.843 2012/07/27 20:54:02 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5000,7 +5000,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			checkline_relative_pkgdir($line, $relpath);
 
 			if ($pkg eq "msgfmt" || $pkg eq "gettext") {
-				$line->log_warning("Please use BUILD_USES_MSGFMT=yes instead of this dependency.");
+				$line->log_warning("Please use USE_TOOLS+=msgfmt instead of this dependency.");
 
 			} elsif ($pkg =~ m"^perl\d+") {
 				$line->log_warning("Please use USE_TOOLS+=perl:run instead of this dependency.");
