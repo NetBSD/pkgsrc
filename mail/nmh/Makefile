@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.75 2012/01/24 09:11:07 sbd Exp $
+# $NetBSD: Makefile,v 1.76 2012/07/27 19:28:57 drochner Exp $
 
-DISTNAME=		nmh-1.3
-PKGREVISION=		4
+DISTNAME=		nmh-1.5
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
 COMMENT=		Cleaned up MH mailer suite
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -98,10 +98,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 post-install:
-	for f in `${GREP} '^${DOCDIR}/' ${PKGDIR}/PLIST`; do \
-	    ${INSTALL_DATA} ${WRKSRC}/docs/`${BASENAME} $$f` \
-		${DESTDIR}${PREFIX}/${DOCDIR}; \
-	done
 	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist \
 	    ${DESTDIR}${EGDIR}/mhn.defaults
 

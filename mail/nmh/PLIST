@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:38 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/07/27 19:28:58 drochner Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -6,9 +6,11 @@ bin/comp
 bin/dist
 bin/flist
 bin/flists
+bin/fnext
 bin/folder
 bin/folders
 bin/forw
+bin/fprev
 bin/inc
 bin/install-mh
 bin/mark
@@ -22,6 +24,7 @@ bin/mhshow
 bin/mhstore
 bin/msgchk
 bin/msh
+bin/new
 bin/next
 bin/packf
 bin/pick
@@ -36,6 +39,7 @@ bin/send
 bin/sendfiles
 bin/show
 bin/sortm
+bin/unseen
 bin/whatnow
 bin/whom
 libexec/nmh/ap
@@ -59,9 +63,11 @@ man/man1/comp.1
 man/man1/dist.1
 man/man1/flist.1
 man/man1/flists.1
+man/man1/fnext.1
 man/man1/folder.1
 man/man1/folders.1
 man/man1/forw.1
+man/man1/fprev.1
 man/man1/inc.1
 man/man1/install-mh.1
 man/man1/mark.1
@@ -77,6 +83,7 @@ man/man1/mhshow.1
 man/man1/mhstore.1
 man/man1/msgchk.1
 man/man1/msh.1
+man/man1/new.1
 man/man1/next.1
 man/man1/nmh.1
 man/man1/packf.1
@@ -97,6 +104,7 @@ man/man1/sendfiles.1
 man/man1/show.1
 man/man1/slocal.1
 man/man1/sortm.1
+man/man1/unseen.1
 man/man1/whatnow.1
 man/man1/whom.1
 man/man5/mh-alias.5
@@ -116,12 +124,26 @@ man/man8/post.8
 share/doc/nmh/COMPLETION-BASH
 share/doc/nmh/COMPLETION-TCSH
 share/doc/nmh/COMPLETION-ZSH
+share/doc/nmh/COPYRIGHT
 share/doc/nmh/DIFFERENCES
 share/doc/nmh/FAQ
+share/doc/nmh/INSTALL
 share/doc/nmh/MAIL.FILTERING
+share/doc/nmh/MAILING-LISTS
+share/doc/nmh/NEWS
+share/doc/nmh/README
 share/doc/nmh/README-ATTACHMENTS
 share/doc/nmh/README-HOOKS
+share/doc/nmh/README-components
+share/doc/nmh/README.SASL
 share/doc/nmh/README.about
+share/doc/nmh/README.developers
+share/doc/nmh/README.manpages
+share/doc/nmh/TODO
+share/doc/nmh/VERSION
+share/doc/nmh/contrib/build_nmh
+share/doc/nmh/contrib/nmh.spec
+share/doc/nmh/contrib/replyfilter
 share/examples/nmh/MailAliases
 share/examples/nmh/components
 share/examples/nmh/digestcomps
