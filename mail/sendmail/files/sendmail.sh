@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sendmail.sh,v 1.1 2006/06/06 22:03:36 adrianp Exp $
+# $NetBSD: sendmail.sh,v 1.2 2012/07/27 17:46:01 jnemeth Exp $
 #
 
 # PROVIDE: mail
@@ -17,6 +17,8 @@ command="/usr/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 required_files="/etc/mail/sendmail.cf"
 start_precmd="sendmail_precmd"
+extra_commands="reload"
+
 makemap="@PREFIX@/sbin/makemap"
 newaliases="@PREFIX@/bin/newaliases"
 smbin="@PREFIX@/libexec/sendmail/sendmail"
