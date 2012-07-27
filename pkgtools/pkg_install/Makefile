@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2012/03/01 21:40:00 joerg Exp $
+# $NetBSD: Makefile,v 1.186 2012/07/27 14:26:36 jperkin Exp $
 
 # Notes to package maintainers:
 #
@@ -122,6 +122,12 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
+# Until we support pkgsrc openssl at bootstrap time, disable it completely
+# if asked to avoid the builtin.
+.if empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
+LIBARCHIVE_CONFIGURE_ARGS=	--without-openssl
+.endif
+
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs://p' -e 's/^Libs.private://p' \
     ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
 LIBS+=		${LIBARCHIVE_LIBS:sh}
@@ -176,7 +182,8 @@ pre-configure:
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
 		./configure --disable-shared --disable-bsdtar		\
 		--disable-bsdcpio --without-expat --without-xml2	\
-		--disable-dependency-tracking
+		--disable-dependency-tracking				\
+		${LIBARCHIVE_CONFIGURE_ARGS}
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
 	cd ${WRKDIR}/libfetch && ${SETENV} ${MAKE_ENV} ${BSD_MAKE_ENV}	\
