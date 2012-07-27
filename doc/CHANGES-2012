@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2390 2012/07/27 16:09:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2391 2012/07/27 19:29:45 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/moodle to 2.1.7 [wen 2012-07-26]
 	Updated net/istgt to 20120726 [sborrill 2012-07-27]
 	Updated emulators/b-em to 2.1anb1 [wiz 2012-07-27]
+	Updated mail/nmh to 1.5 [drochner 2012-07-27]
