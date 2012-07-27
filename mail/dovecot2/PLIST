@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/04/23 17:43:15 ghen Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/07/27 19:37:57 drochner Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -521,7 +521,6 @@ share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
-share/doc/dovecot/wiki/HowTo.F5SLBTLSOffload.txt
 share/doc/dovecot/wiki/HowTo.ImapcProxy.txt
 share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
 share/doc/dovecot/wiki/HowTo.PopRelay.txt
@@ -599,6 +598,7 @@ share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.SpamtestVirustest.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Vacation.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extdata.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extprograms.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Pipe.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Troubleshooting.txt
