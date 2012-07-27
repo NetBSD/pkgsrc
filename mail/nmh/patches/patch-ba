@@ -1,0 +1,10 @@
+$NetBSD: patch-ba,v 1.7 2012/07/27 19:29:01 drochner Exp $
+
+see http://lists.nongnu.org/archive/html/nmh-workers/2012-07/msg00044.html
+
+--- etc/rcvdistcomps.orig	2010-12-02 21:15:50.000000000 +0000
++++ etc/rcvdistcomps
+@@ -1,2 +1,3 @@
++%(void(localmbox))%(void(width))%(putaddr Resent-From: )
+ %(lit)%(formataddr{addresses})\
+ %<(nonnull)%(void(width))%(putaddr Resent-To: )\n%>
