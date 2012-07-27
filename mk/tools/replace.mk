@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.250 2012/07/06 14:08:50 wiz Exp $
+# $NetBSD: replace.mk,v 1.251 2012/07/27 10:48:36 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -328,6 +328,16 @@ TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
 TOOLS_CREATE+=			csh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.csh=tcsh
 TOOLS_PATH.csh=			${TOOLS_PREFIX.csh}/bin/tcsh
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.curl) && !empty(_USE_TOOLS:Mcurl)
+.  if !empty(PKGPATH:Mwww/curl)
+MAKEFLAGS+=			TOOLS_IGNORE.curl=
+.  elif !empty(_TOOLS_USE_PKGSRC.curl:M[yY][eE][sS])
+TOOLS_DEPENDS.curl?=		curl-[0-9]*:../../www/curl
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.curl=curl
+TOOLS_PATH.curl=		${TOOLS_PREFIX.curl}/bin/curl
 .  endif
 .endif
 
