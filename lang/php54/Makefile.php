@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.3 2012/07/27 00:16:47 obache Exp $
+# $NetBSD: Makefile.php,v 1.4 2012/07/27 00:21:03 obache Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
 
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-regex=system
 
 CONFIGURE_ARGS+=	--without-mysql
-CONFIGURE_ARGS+=	--without-sqlite
 #CONFIGURE_ARGS+=	--without-sqlite3
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-pear
