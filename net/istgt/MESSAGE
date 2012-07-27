@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/07/27 13:08:54 sborrill Exp $
+
+Version 20120726 and later include support for SIGHUP to reload settings
+with some limitations:
+- The parameters other than PG, IG, and LU are not reloaded by SIGHUP.
+- PG and IG mapped to LU can't be deleted by SIGHUP.
+- If you delete an active LU, all connections of the LU are closed by
+  SIGHUP.
+- Can't modify LU by SIGHUP.
+- Updating IG is not affected until the next login.
+
+===========================================================================
