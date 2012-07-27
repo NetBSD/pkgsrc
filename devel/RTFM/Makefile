@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:17 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/27 20:22:13 morr Exp $
 #
 
-DISTNAME=	RTFM-2.0.4
-PKGREVISION=	3
+DISTNAME=	RTFM-2.4.4
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -35,10 +34,10 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_HTML_DIR}
 	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
 		pax -rw ${DESTDIR}${RT_HTML_DIR}
-	@${ECHO} "=> Locales"
-	${INSTALL_DATA_DIR} ${DESTDIR}${RT_I18N_DIR}
-	cd ${WRKSRC}/po && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
-		pax -rw ${DESTDIR}${RT_I18N_DIR}
+#	@${ECHO} "=> Locales"
+#	${INSTALL_DATA_DIR} ${DESTDIR}${RT_I18N_DIR}
+#	cd ${WRKSRC}/po && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
+#		pax -rw ${DESTDIR}${RT_I18N_DIR}
 	@${ECHO} "=> Database Schemas"
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/RTFM
 	for file in acl.Oracle acl.Pg acl.mysql schema.Oracle schema.Pg schema.mysql;	\
