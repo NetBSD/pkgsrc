@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.124 2012/07/13 16:11:29 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.125 2012/07/27 10:34:00 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -144,17 +144,14 @@ MAKEFLAGS+=	_CC=${_CC:Q}
 .endif
 
 .if !defined(_GCC_VERSION)
-# FIXME: ALL_ENV is not set at this point, so LC_ALL must be set
-# explicitly. In the show-all and show-var targets, it appears
-# nevertheless because "References to undefined variables are not
-# expanded" when using the := operator.
-.  if defined(SETENV)
+#
+# FIXME: Ideally we'd use PKGSRC_SETENV here, but not enough of the tools
+# infrastructure is loaded for SETENV to be defined when mk/compiler.mk is
+# included first.  LC_ALL is required here for similar reasons, as ALL_ENV
+# is not defined at this stage.
+#
 _GCC_VERSION_STRING!=	\
-	( ${PKGSRC_SETENV} ${ALL_ENV} LC_ALL=C ${_CC} -v 2>&1 | ${GREP} 'gcc version') 2>/dev/null || ${ECHO} 0
-.  else
-_GCC_VERSION_STRING!=	\
-	( ${_CC} -v 2>&1 | ${GREP} 'gcc version') 2>/dev/null || ${ECHO} 0
-.  endif
+	( env LC_ALL=C ${_CC} -v 2>&1 | ${GREP} 'gcc version') 2>/dev/null || ${ECHO} 0
 .  if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
 .  elif !empty(_GCC_VERSION_STRING:Mgcc*)
