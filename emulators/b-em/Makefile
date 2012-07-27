@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/02/20 15:45:19 reinoud Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/27 16:08:52 wiz Exp $
 #
 
 DISTNAME=	B-emv2.1aLinux
 PKGNAME=	b-em-2.1a
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://b-em.bbcmicro.com/
 
@@ -43,5 +44,7 @@ do-install:
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
