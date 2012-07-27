@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.45 2012/05/18 20:45:15 jperkin Exp $
+# $NetBSD: tools.Darwin.mk,v 1.46 2012/07/27 14:38:26 jperkin Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -26,6 +26,9 @@ TOOLS_PLATFORM.chown?=		/usr/sbin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
 TOOLS_PLATFORM.csh?=		/bin/tcsh
+.if exists(/usr/bin/curl)
+TOOLS_PLATFORM.curl?=		/usr/bin/curl
+.endif
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
