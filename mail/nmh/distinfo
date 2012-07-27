@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.14 2008/08/08 23:48:01 epg Exp $
+$NetBSD: distinfo,v 1.15 2012/07/27 19:28:58 drochner Exp $
 
-SHA1 (nmh-1.3.tar.gz) = 65b52b7db727c391cae7af60ee0b888cbdc2718a
-RMD160 (nmh-1.3.tar.gz) = a862789cc8edb28c0fc3295bd12787440797da92
-Size (nmh-1.3.tar.gz) = 847614 bytes
-SHA1 (patch-ac) = 81a2ebcabd8206256a1319f6a4820f5d9e25ac2b
-SHA1 (patch-af) = c5ddd4c9d4b941584a89d9986d33bdb54d28e6fd
-SHA1 (patch-ay) = e65fcea8b8cf7c6ca89a2279763d0fe21bcd4cde
-SHA1 (patch-ca) = b37804e0701ca8c144754a7aa6226f30df98c597
-SHA1 (patch-cd) = 058fdb8530ce8bdbd08779c90e675c071c7f834e
+SHA1 (nmh-1.5.tar.gz) = 9d8c034206f793d6d796b514c9a8242422f0d4f7
+RMD160 (nmh-1.5.tar.gz) = 12c6aae9c02c5895593e4d5bff95a061c71b623c
+Size (nmh-1.5.tar.gz) = 935919 bytes
+SHA1 (patch-ba) = 380baae827368e97b03691b5bf2fd2c83123209a
+SHA1 (patch-bb) = 8ff2a2b8a7a79e0b38b7d8a2cb0266dccd66af7e
+SHA1 (patch-ca) = 756dfb664a6fb51f8fe5024f2fef13c9d9175acb
+SHA1 (patch-cd) = 9ce049cc2861d13b89fe38259921640d5733924e
