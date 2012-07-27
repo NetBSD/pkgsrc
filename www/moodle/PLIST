@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/05/31 12:12:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/07/27 12:44:21 wen Exp $
 share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
@@ -1448,6 +1448,8 @@ share/moodle/install/lang/ca/install.php
 share/moodle/install/lang/ca/langconfig.php
 share/moodle/install/lang/ca/moodle.php
 share/moodle/install/lang/ca_valencia/admin.php
+share/moodle/install/lang/ca_valencia/error.php
+share/moodle/install/lang/ca_valencia/install.php
 share/moodle/install/lang/ca_valencia/langconfig.php
 share/moodle/install/lang/ckb/langconfig.php
 share/moodle/install/lang/cs/admin.php
@@ -1501,7 +1503,11 @@ share/moodle/install/lang/es/langconfig.php
 share/moodle/install/lang/es/moodle.php
 share/moodle/install/lang/es_ar/langconfig.php
 share/moodle/install/lang/es_es/langconfig.php
+share/moodle/install/lang/es_mx/admin.php
+share/moodle/install/lang/es_mx/error.php
+share/moodle/install/lang/es_mx/install.php
 share/moodle/install/lang/es_mx/langconfig.php
+share/moodle/install/lang/es_mx/moodle.php
 share/moodle/install/lang/et/admin.php
 share/moodle/install/lang/et/error.php
 share/moodle/install/lang/et/install.php
