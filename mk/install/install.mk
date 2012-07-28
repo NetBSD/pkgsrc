@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.63 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: install.mk,v 1.64 2012/07/28 21:33:48 reed Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -29,7 +29,7 @@
 #	This option is not supported by all packages.
 #
 # STRIP_DEBUG
-#	If set to "yes", call ${STRI} -g to remove debug information
+#	If set to "yes", call ${STRIP} -g to remove debug information
 #	from all files. The symbol tables are still preserved.
 #
 # Keywords: strip unstripped
