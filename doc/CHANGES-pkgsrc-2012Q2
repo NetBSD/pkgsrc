@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.25 2012/07/27 05:47:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.26 2012/07/28 13:33:41 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -174,3 +174,7 @@ Pullup ticket #3875 - requested by taca
 www/contao211: security update
 Pullup ticket #3876 - requested by drochner
 net/wireshark: security update
+Pullup ticket #3878 - requested by wen
+www/moodle: security update
+Pullup ticket #3880 - requested by bsiegert
+mk/tools: fix build problems under MirBSD
