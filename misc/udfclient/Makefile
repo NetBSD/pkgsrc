@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2010/02/04 17:19:34 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2012/07/28 22:36:08 reed Exp $
 #
 
-DISTNAME=		UDFclient.0.7.1
-PKGNAME=		udfclient-0.7.1
-#PKGREVISION=		1
+DISTNAME=		UDFclient.0.7.5
+PKGNAME=		udfclient-0.7.5
 CATEGORIES=		misc
 MASTER_SITES=		http://www.13thmonkey.org/udfclient/releases/
 EXTRACT_SUFX=		.tgz
