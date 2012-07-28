@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/27 21:46:51 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2012/07/28 21:32:33 reed Exp $
 #
 
 DISTNAME=	alpine-2.00
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/alpine/
 COMMENT=	Program for Internet News and E-mail
+LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
