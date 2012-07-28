@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/04 20:10:25 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/28 21:48:17 reed Exp $
 #
 
 DISTNAME=	libgnome-keyring-3.4.1
@@ -22,5 +22,6 @@ PKGCONFIG_OVERRIDE+=	library/gnome-keyring-1.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dbus+=    dbus>=1.2.1
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
