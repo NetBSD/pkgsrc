@@ -1,2 +1,5 @@
-Default icon theme called hicolor, from freedesktop.org.
-Note: this package does not provide any icon images.
+The default icon theme called hicolor, from freedesktop.org.  This
+is the fallback icon theme as defined by the Icon Theme Specification.
+Note: this package does not provide any icon images.  Third-party
+applications (such as provided by other pkgsrc packages) may install
+their icons in this "hicolor" directory hierarchy.
