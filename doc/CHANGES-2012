@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2396 2012/07/28 15:14:18 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2397 2012/07/28 18:01:25 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3694,3 +3694,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/pngcrush to 1.7.34 [adam 2012-07-28]
 	Updated net/Transmission to 2.61 [wiz 2012-07-28]
 	Updated net/Transmission-gui to 2.61 [wiz 2012-07-28]
+	Updated devel/at-spi2-core to 2.5.4 [prlw1 2012-07-28]
