@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:02 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/28 21:23:17 reed Exp $
 #
 
 DISTNAME=	rlog-1.3.7
@@ -8,7 +8,7 @@ MASTER_SITES=	http://arg0.net/vgough/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arg0.net/wiki/rlog
+HOMEPAGE=	http://www.arg0.net/rlog
 COMMENT=	C++ logging library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
