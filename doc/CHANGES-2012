@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2399 2012/07/28 18:09:15 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2400 2012/07/28 22:37:06 reed Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3697,3 +3697,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/at-spi2-core to 2.5.4 [prlw1 2012-07-28]
 	Updated devel/at-spi2-atk to 2.5.4 [prlw1 2012-07-28]
 	Updated devel/py-at-spi2 to 2.5.4 [prlw1 2012-07-28]
+	Updated misc/udfclient to 0.7.5 [reed 2012-07-28]
