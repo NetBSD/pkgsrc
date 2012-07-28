@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2395 2012/07/28 15:13:59 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2396 2012/07/28 15:14:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3693,3 +3693,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/medit to 1.1.1 [obache 2012-07-28]
 	Updated graphics/pngcrush to 1.7.34 [adam 2012-07-28]
 	Updated net/Transmission to 2.61 [wiz 2012-07-28]
+	Updated net/Transmission-gui to 2.61 [wiz 2012-07-28]
