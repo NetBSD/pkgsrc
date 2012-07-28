@@ -18,7 +18,7 @@ described in "Dynamic Configuration of IPv4 Link-Local Addresses"
 
 Requirement 2 is met by sending DNS-like queries via Multicast (mDNS).
 
-Requirement 3 is met by DNS Service Dicsovery (DNS-SD).
+Requirement 3 is met by DNS Service Discovery (DNS-SD).
 
 Self-assigned link-local address capability has been available since
 1998, when it first appeared in Windows '98 and in Mac OS 8.5.
