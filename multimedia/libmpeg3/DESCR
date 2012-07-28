@@ -10,3 +10,8 @@ Libmpeg3 decodes
                     MPEG-1 Video
                     IFO files
                     VOB files
+
+This package provides tools to concatenate video files, split
+elementary streams into chunks of bytes, dump information or extract
+audio to a 24 bit pcm file, and create a table of contents for a
+DVD or mpeg stream.
