@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2393 2012/07/28 08:39:50 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2394 2012/07/28 10:58:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/nmh to 1.5 [drochner 2012-07-27]
 	Updated mail/dovecot2 to 2.1.8 [drochner 2012-07-27]
 	Updated editors/medit to 1.1.1 [obache 2012-07-28]
+	Updated graphics/pngcrush to 1.7.34 [adam 2012-07-28]
