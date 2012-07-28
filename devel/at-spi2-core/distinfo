@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/07/04 17:44:18 prlw1 Exp $
+$NetBSD: distinfo,v 1.5 2012/07/28 18:00:57 prlw1 Exp $
 
-SHA1 (at-spi2-core-2.5.3.tar.xz) = b853111d56c6878bb516f0b648cbb5bcfeaa4cb1
-RMD160 (at-spi2-core-2.5.3.tar.xz) = 998661ed96d0be3ddcbb4184647797c371005163
-Size (at-spi2-core-2.5.3.tar.xz) = 441760 bytes
-SHA1 (patch-registryd_deviceeventcontroller.c) = 4508919688a227d78445fca65971bf5ef0aa2c06
+SHA1 (at-spi2-core-2.5.4.tar.xz) = 3b0a9db2d17899a0fb536493c38fab6da4b95757
+RMD160 (at-spi2-core-2.5.4.tar.xz) = f665572ddd47e740217323f679d759ce3d8832ad
+Size (at-spi2-core-2.5.4.tar.xz) = 442384 bytes
