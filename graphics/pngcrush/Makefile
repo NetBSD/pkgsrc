@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2012/07/25 20:14:01 adam Exp $
+# $NetBSD: Makefile,v 1.60 2012/07/28 10:57:40 adam Exp $
 
-DISTNAME=	pngcrush-1.7.33-nolib
+DISTNAME=	pngcrush-1.7.34-nolib
 PKGNAME=	${DISTNAME:C/-nolib//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmt/}
