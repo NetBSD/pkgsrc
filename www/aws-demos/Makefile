@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/08 20:16:13 marino Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/28 23:43:56 dholland Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -77,7 +77,7 @@ do-build:
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/share/examples/aws/demos
 .for dd in ${DEMO_DIRS}
-	${FIND} ${WRKSRC}/demos/${dd} -type f -perm -0001 \
+	${FIND} ${WRKSRC}/demos/${dd} -type f -perm -0100 \
 	-exec ${INSTALL} {} ${DESTDIR}${PREFIX}/share/examples/aws/demos/ \;
 .endfor
 
