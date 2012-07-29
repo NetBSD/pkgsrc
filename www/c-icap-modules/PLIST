@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
-${PLIST.clamav}lib/c_icap/srv_clamav.la
+@comment $NetBSD: PLIST,v 1.2 2012/07/29 10:11:18 adam Exp $
+${PLIST.clamav}lib/c_icap/virus_scan.la
+bin/c-icap-mods-sguardDB
 lib/c_icap/srv_url_check.la
-${PLIST.clamav}share/c-icap/srv_clamav.conf.default
+${PLIST.clamav}share/c-icap/virus_scan.conf.default
+man/man8/c-icap-mods-sguardDB.8
 share/c-icap/srv_url_check.conf.default
+share/c_icap/templates/srv_url_check/en/DENY
+${PLIST.clamav}share/c_icap/templates/virus_scan/en/VIRUS_FOUND
+${PLIST.clamav}share/c_icap/templates/virus_scan/en/VIR_MODE_HEAD
+${PLIST.clamav}share/c_icap/templates/virus_scan/en/VIR_MODE_PROGRESS
+${PLIST.clamav}share/c_icap/templates/virus_scan/en/VIR_MODE_TAIL
+${PLIST.clamav}share/c_icap/templates/virus_scan/en/VIR_MODE_VIRUS_FOUND
