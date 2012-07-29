@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/09/01 07:57:30 adam Exp $
+$NetBSD: distinfo,v 1.3 2012/07/29 10:13:18 adam Exp $
 
-SHA1 (squidclamav-6.4.tar.gz) = 8953c45572a08d36d2d5b86eb7cb88062c179f8a
-RMD160 (squidclamav-6.4.tar.gz) = 5aa714479aa84db2cd959acab630998f2d46e0ac
-Size (squidclamav-6.4.tar.gz) = 840856 bytes
+SHA1 (squidclamav-6.8.tar.gz) = 03b20cb75b02ed168cb000caea703cff320f4188
+RMD160 (squidclamav-6.8.tar.gz) = 0871ec9e6cc20629704025b59bf38c42a4a501e4
+Size (squidclamav-6.8.tar.gz) = 840634 bytes
 SHA1 (patch-etc_Makefile.in) = 23a87a5ee484ab7ef7c50a5716f436b83f7e7449
