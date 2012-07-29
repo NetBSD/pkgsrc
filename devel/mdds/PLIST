@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/06 10:53:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/07/29 20:02:15 wiz Exp $
+include/mdds/default_deleter.hpp
 include/mdds/flat_segment_tree.hpp
 include/mdds/flat_segment_tree_def.inl
 include/mdds/flat_segment_tree_itr.hpp
@@ -10,8 +11,15 @@ include/mdds/mixed_type_matrix_element.hpp
 include/mdds/mixed_type_matrix_flag_storage.hpp
 include/mdds/mixed_type_matrix_storage.hpp
 include/mdds/mixed_type_matrix_storage_filled_linear.inl
-include/mdds/mixed_type_matrix_storage_filled_nested_array.inl
 include/mdds/mixed_type_matrix_storage_sparse.inl
+include/mdds/multi_type_matrix.hpp
+include/mdds/multi_type_matrix_def.inl
+include/mdds/multi_type_vector.hpp
+include/mdds/multi_type_vector_def.inl
+include/mdds/multi_type_vector_itr.hpp
+include/mdds/multi_type_vector_macro.hpp
+include/mdds/multi_type_vector_trait.hpp
+include/mdds/multi_type_vector_types.hpp
 include/mdds/node.hpp
 include/mdds/point_quad_tree.hpp
 include/mdds/quad_node.hpp
