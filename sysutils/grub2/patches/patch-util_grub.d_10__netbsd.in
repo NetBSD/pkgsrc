@@ -1,0 +1,33 @@
+$NetBSD: patch-util_grub.d_10__netbsd.in,v 1.1 2012/07/29 21:44:13 gsutre Exp $
+
+Make sure that /netbsd is the main boot menu entry.
+Fix indentation for filesystem module.
+
+--- util/grub.d/10_netbsd.in.orig	2012-07-25 13:23:50.000000000 +0000
++++ util/grub.d/10_netbsd.in
+@@ -74,13 +74,13 @@ netbsd_load_fs_module ()
+   fi
+ 
+   kmodule_rel=$(make_system_path_relative_to_its_root "$kmodule") || return
+-  prepare_grub_to_access_device $(${grub_probe} -t device "${kmodule}") | sed -e 's,^,	,'
++  prepare_grub_to_access_device $(${grub_probe} -t device "${kmodule}") | sed -e 's,^,	,' | sed "s/^/$submenu_indentation/"
+   case "${loader}" in
+     knetbsd)
+-      printf "\tknetbsd_module_elf %s\n" "${kmodule_rel}"
++      printf "\tknetbsd_module_elf %s\n" "${kmodule_rel}" | sed "s/^/$submenu_indentation/"
+       ;;
+     multiboot)
+-      printf "\tmodule %s\n" "${kmodule_rel}"
++      printf "\tmodule %s\n" "${kmodule_rel}" | sed "s/^/$submenu_indentation/"
+       ;;
+   esac
+ }
+@@ -147,7 +147,7 @@ pattern="^ELF[^,]*executable.*statically
+ submenu_indentation=""
+ 
+ is_first_entry=true
+-for k in $(ls -t /netbsd*) ; do
++for k in /netbsd $(ls -t /netbsd?* 2>/dev/null) ; do
+   if ! grub_file_is_not_garbage "$k" ; then
+     continue
+   fi

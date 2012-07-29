@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2012/07/29 21:44:13 gsutre Exp $
+
+Strengthen the test for working -nostdinc -isystem.  Otherwise,
+configure believes that -nostdinc -isystem works with gcc44, which
+makes the build fail afterwards (for a file including stddef.h).
+
+--- configure.orig	2012-06-26 11:59:16.000000000 +0000
++++ configure
+@@ -21169,6 +21169,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdarg.h>
++#include <stddef.h>
+ int va_arg_func (int fixed, va_list args);
+ int
+ main (void)
