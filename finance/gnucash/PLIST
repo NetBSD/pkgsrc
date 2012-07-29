@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2012/03/02 15:15:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2012/07/29 19:59:49 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -94,6 +94,7 @@ include/gnucash/gnc-entry-quickfill.h
 include/gnucash/gnc-euro.h
 include/gnucash/gnc-event.h
 include/gnucash/gnc-exp-parser.h
+include/gnucash/gnc-features.h
 include/gnucash/gnc-file.h
 include/gnucash/gnc-frequency.h
 include/gnucash/gnc-general-search.h
@@ -608,6 +609,8 @@ share/gnucash/accounts/sk/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/sv_SE/bas_2012.gnucash-xea
+share/gnucash/accounts/sv_SE/swedish_small_business.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_carloan.gnucash-xea
