@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2012/07/18 06:37:40 adam Exp $
+# $NetBSD: Makefile,v 1.77 2012/07/29 16:31:26 wiz Exp $
 
 DISTNAME=	wesnoth-1.10.3
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,32 +32,27 @@ SUBST_FILES.prefix=	cmake/FindFriBiDi.cmake
 SUBST_MESSAGE.prefix=	Fixing search path.
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	post-build
-SUBST_FILES.python+=	data/tools/*.py
-SUBST_FILES.python+=	data/tools/wesnoth/*.py
-SUBST_FILES.python+=	data/tools/wml*
-SUBST_FILES.python+=	data/tools/about_cfg_to_wiki
-SUBST_FILES.python+=	data/tools/extractbindings
-SUBST_FILES.python+=	data/tools/imgcheck
-SUBST_FILES.python+=	data/tools/journeylifter
-SUBST_FILES.python+=	data/tools/trackplacer
-SUBST_FILES.python+=	data/tools/wesnoth_addon_manager
-SUBST_FILES.python+=	data/tools/unit_tree/TeamColorizer
-SUBST_FILES.python+=	data/tools/unit_tree/overview.py
-SUBST_FILES.python+=	utils/ai_test/*.py
-SUBST_FILES.python+=	utils/*.py
-SUBST_MESSAGE.python=	Fixing path to python.
-# Best we can do without pulling in Python dependency
-SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.7,'
-SUBST_SED.python+=	-e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.7,'
-SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.7,'
+REPLACE_PYTHON+=	data/tools/*.py
+REPLACE_PYTHON+=	data/tools/wesnoth/*.py
+REPLACE_PYTHON+=	data/tools/wml*
+REPLACE_PYTHON+=	data/tools/about_cfg_to_wiki
+REPLACE_PYTHON+=	data/tools/extractbindings
+REPLACE_PYTHON+=	data/tools/imgcheck
+REPLACE_PYTHON+=	data/tools/journeylifter
+REPLACE_PYTHON+=	data/tools/trackplacer
+REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager
+REPLACE_PYTHON+=	data/tools/unit_tree/TeamColorizer
+REPLACE_PYTHON+=	data/tools/unit_tree/overview.py
+REPLACE_PYTHON+=	utils/ai_test/*.py
+REPLACE_PYTHON+=	utils/*.py
 
 REPLACE_RUBY=		data/tools/terrain2wiki.rb
 .include "../../lang/ruby/replace.mk"
 
 REPLACE_SH+=		data/tools/castle-cutter/mk-castle.sh
 REPLACE_SH+=		data/tools/castle-cutter/mk-all-castles.sh
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.*)
@@ -85,5 +81,6 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.14.8
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
