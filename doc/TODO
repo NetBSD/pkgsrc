@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11379 2012/07/29 19:26:04 wiz Exp $
+$NetBSD: TODO,v 1.11380 2012/07/29 19:42:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -606,7 +606,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o findutils-4.5.10
 	o fisg-0.3.12
 	o flashplayer-0.4.13
-	o flex-2.5.36
 	o flightgear-2.6
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
