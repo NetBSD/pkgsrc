@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2012/07/29 11:26:54 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/07/29 16:02:45 fhajny Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -56,3 +56,5 @@ MAKE_ENV+=		XOPEN_SOURCE=500
 CONFIGURE_ARGS+=	--config=SunOS
 . endif
 .endif
+
+MAKE_FLAGS+=		POCO_BASE=${WRKSRC}
