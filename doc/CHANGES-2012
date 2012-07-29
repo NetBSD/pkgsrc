@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2415 2012/07/29 21:47:26 abs Exp $
+$NetBSD: CHANGES-2012,v 1.2416 2012/07/29 22:01:25 gsutre Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3722,3 +3722,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/mpfr to 3.1.1 [wiz 2012-07-29]
 	Updated x11/libXrandr to 1.4.0 [wiz 2012-07-29]
 	Updated sysutils/dc-tools to 1.4 [abs 2012-07-29]
+	Added sysutils/grub2 version 2.00 [gsutre 2012-07-29]
