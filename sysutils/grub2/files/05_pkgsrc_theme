@@ -1,0 +1,8 @@
+#! /bin/sh -e
+
+# Comment these lines or remove this file for default GRUB menu colors, or
+# change them to suit your taste...
+cat << EOF
+set menu_color_normal=light-gray/brown
+set menu_color_highlight=yellow/brown
+EOF
