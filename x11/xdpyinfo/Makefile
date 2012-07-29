@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/06/03 18:11:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/29 19:48:35 wiz Exp $
 #
 
-DISTNAME=	xdpyinfo-1.2.0
+DISTNAME=	xdpyinfo-1.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
