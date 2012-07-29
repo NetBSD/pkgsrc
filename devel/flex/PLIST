@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/21 18:26:05 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/29 19:42:21 wiz Exp $
 bin/flex
 bin/flex++
 include/FlexLexer.h
@@ -6,10 +6,19 @@ info/flex.info
 lib/libfl.a
 lib/libfl_pic.a
 man/man1/flex.1
+share/doc/flex/AUTHORS
+share/doc/flex/COPYING
+share/doc/flex/NEWS
+share/doc/flex/ONEWS
+share/doc/flex/README
+share/doc/flex/README.cvs
+share/doc/flex/TODO
+share/doc/flex/flex.pdf
 share/locale/ca/LC_MESSAGES/flex.mo
 share/locale/da/LC_MESSAGES/flex.mo
 share/locale/de/LC_MESSAGES/flex.mo
 share/locale/es/LC_MESSAGES/flex.mo
+share/locale/fi/LC_MESSAGES/flex.mo
 share/locale/fr/LC_MESSAGES/flex.mo
 share/locale/ga/LC_MESSAGES/flex.mo
 share/locale/ko/LC_MESSAGES/flex.mo
