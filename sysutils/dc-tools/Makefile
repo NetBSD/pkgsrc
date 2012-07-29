@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/07/26 22:29:09 abs Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/29 21:45:39 abs Exp $
 
 DISTNAME=	dc-tools-1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mc.pp.se/dc/files/ \
-		https://github.com/abs0/dc-burn-netbsd/tarball/1.3
+		https://github.com/abs0/dc-burn-netbsd/tarball/1.4
 DIST_SUBDIR=	dc-tools
 DISTFILES=	makeip.tar.gz scramble.c ip_slave.tar.gz serial_slave.tar.gz \
 		${DCBURN_DISTFILE}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://mc.pp.se/dc/sw.html
 COMMENT=	Dreamcast bootable CDs tools (mainly from Marcus Comstedt)
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.3-0-g906a692
+DCBURN_DISTFILE=abs0-dc-burn-netbsd-1.4-0-g1004515
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -42,6 +42,12 @@ WRKSRC=${WRKDIR}
 USE_TOOLS+=	tar
 
 INSTALLATION_DIRS=bin share/dc-tools/serial_slave share/dc-tools/ip_slave share/doc
+
+RESTRICTED=		makeip contains PRODUCED BY OR UNDER LICENSE FROM SEGA ENTERPRISES, LTD data
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o dc-makeip makeip.c
