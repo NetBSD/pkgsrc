@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2012/07/24 18:40:42 drochner Exp $
+$NetBSD: distinfo,v 1.8 2012/07/29 17:37:57 marino Exp $
 
 SHA1 (vlc-2.0.3.tar.xz) = 9f161d997eae613bc6431bcb2459e1aefad8d529
 RMD160 (vlc-2.0.3.tar.xz) = 7d4498c21676a9221ef0b632cb454584c9986e16
@@ -9,7 +9,9 @@ SHA1 (patch-as) = b53b074b2791d7bf69d5f09c7c32d873608f3086
 SHA1 (patch-at) = bf48ded3571358d6b718af47b28804c3155d84ef
 SHA1 (patch-au) = 5ea53969efefe3d9a6e3121b5453b573c633124b
 SHA1 (patch-av) = c82b711947ea4bdca9b011e36af6c87d9b6f62a6
+SHA1 (patch-modules_access_directory.c) = e36df1da5b788e12e9fc7d94663dd69d86fe4f7a
 SHA1 (patch-modules_access_rtp_Modules.am) = 14aea82ffab2fcfa5b0916ac2e86363d1efdcbf3
 SHA1 (patch-modules_audio__output_pulse.c) = 941ee669e62c9d757fc096c74a2aec58cf265b15
+SHA1 (patch-modules_misc_gnutls.c) = 7ab9df9f8b31ea7a7c8e302876d0e6c4e6882c30
 SHA1 (patch-skins-aa) = 9477b095b3e0a1120397c6c9f7102a50c1a63d2b
 SHA1 (patch-skins-ab) = bf8b3e33db5389dbf04dfedf1d2f1d120afed66a
