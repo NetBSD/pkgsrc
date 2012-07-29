@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/06 14:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/07/29 16:02:45 fhajny Exp $
 #
 
 PKGNAME=	poco-data-mysql-${POCO_VERSION}
@@ -16,10 +16,8 @@ CONFIGURE_ARGS+=	--no-samples
 
 USE_TOOLS+=	pax
 
+BUILD_DIRS=		${WRKSRC}/Data/MySQL
 INSTALLATION_DIRS=	include/Poco/Data/MySQL lib
-
-do-build:
-	cd ${WRKSRC} && ${TOOLS_GMAKE} POCO_BASE=${WRKSRC} -C Data/MySQL
 
 do-install:
 	# using the same logic as Poco's Makefile install target.
