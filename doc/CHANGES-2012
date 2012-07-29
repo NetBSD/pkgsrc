@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2401 2012/07/29 10:15:46 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2402 2012/07/29 16:31:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3708,3 +3708,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/c-icap to 0.2.1 [adam 2012-07-29]
 	Updated www/c-icap-modules to 0.2.1 [adam 2012-07-29]
 	Updated www/squidclamav to 6.8 [adam 2012-07-29]
+	Updated games/wesnoth to 1.10.3nb1 [wiz 2012-07-29]
