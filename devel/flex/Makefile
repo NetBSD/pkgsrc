@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.34 2012/06/06 13:27:05 obache Exp $
+# $NetBSD: Makefile,v 1.35 2012/07/29 19:42:21 wiz Exp $
 
-DISTNAME=		flex-2.5.35
+DISTNAME=		flex-2.5.36
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flex/}
-PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://flex.sourceforge.net/
 COMMENT=		Fast clone of lex(1), the lexical scanner generator
+
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
+BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,9 +32,6 @@ CFLAGS+=		-D_LINUX_SOURCE_COMPAT
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake	# bmake has problems with the test suite
 #.endif
-
-post-install:
-	cd ${DESTDIR:Q}${PREFIX:Q}/bin && ln -s flex flex++
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
