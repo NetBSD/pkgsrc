@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2410 2012/07/29 20:21:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2411 2012/07/29 20:22:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mdds to 0.6.0 [wiz 2012-07-29]
 	Updated converters/libvisio to 0.0.19 [wiz 2012-07-29]
 	Updated graphics/darktable to 1.0.5 [wiz 2012-07-29]
+	Updated www/libmicrohttpd to 0.9.21 [wiz 2012-07-29]
