@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2409 2012/07/29 20:06:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2410 2012/07/29 20:21:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3716,3 +3716,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated finance/gnucash to 2.4.11 [wiz 2012-07-29]
 	Updated devel/mdds to 0.6.0 [wiz 2012-07-29]
 	Updated converters/libvisio to 0.0.19 [wiz 2012-07-29]
+	Updated graphics/darktable to 1.0.5 [wiz 2012-07-29]
