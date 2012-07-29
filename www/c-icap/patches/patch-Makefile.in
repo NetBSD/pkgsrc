@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/05/11 04:29:18 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2012/07/29 10:11:17 adam Exp $
 
 Handle configuration files.
 
 --- Makefile.in.orig	2011-03-28 19:22:39.000000000 +0000
 +++ Makefile.in
-@@ -1560,11 +1560,9 @@ doc:
+@@ -1581,11 +1581,9 @@ doc:
  	$(DOXYGEN) c-icap.dox
  
  install-data-local:

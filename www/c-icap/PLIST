@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/11 04:29:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/29 10:11:17 adam Exp $
 bin/c-icap
 bin/c-icap-client
 bin/c-icap-config
@@ -7,6 +7,7 @@ ${PLIST.bdb}bin/c-icap-mkbdb
 bin/c-icap-stretch
 include/c_icap/access.h
 include/c_icap/acl.h
+include/c_icap/array.h
 include/c_icap/body.h
 include/c_icap/c-icap-conf.h
 include/c_icap/c-icap.h
@@ -40,6 +41,7 @@ lib/c_icap/dnsbl_tables.la
 ${PLIST.ldap}lib/c_icap/ldap_module.la
 ${PLIST.perl}lib/c_icap/perl_handler.la
 lib/c_icap/srv_echo.la
+lib/c_icap/srv_ex206.la
 lib/c_icap/sys_logger.la
 lib/libicapapi.la
 man/man8/c-icap-client.8
