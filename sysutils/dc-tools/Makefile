@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/07/29 21:45:39 abs Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/29 21:46:45 abs Exp $
 
-DISTNAME=	dc-tools-1.3
+DISTNAME=	dc-tools-1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mc.pp.se/dc/files/ \
 		https://github.com/abs0/dc-burn-netbsd/tarball/1.4
