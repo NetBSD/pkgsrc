@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
+$NetBSD: patch-configure,v 1.2 2012/07/29 10:11:18 adam Exp $
 
 Detect Berkeley DB.
 
 --- configure.orig	2011-05-05 13:16:38.000000000 +0000
 +++ configure
-@@ -11053,11 +11053,11 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -11318,11 +11318,11 @@ rm -f core conftest.err conftest.$ac_obj
  #  Save old CFLAGS/LDFLAGS
       OLDCFLAGS=$CFLAGS
       OLDLDFLAGS=$LDFLAGS
@@ -13,12 +13,12 @@ Detect Berkeley DB.
          if test -d $libdbpath/include/db$DBVER; then
             echo -n "checking for Berleley DB under $libdbpath/include/db$DBVER and $libdbpath/lib/db$DBVER... "
             CFLAGS="-I$libdbpath/include/db$DBVER $OLDCFLAGS"
--           LDFLAGS="-L $libdbpath/lib/db$DBVER -ldb $OLDLDFLAGS"
-+           LDFLAGS="-L $libdbpath/lib -ldb$DBVER $OLDLDFLAGS"
+-           LDFLAGS="-L$libdbpath/lib/db$DBVER -ldb $OLDLDFLAGS"
++           LDFLAGS="-L$libdbpath/lib -ldb$DBVER $OLDLDFLAGS"
             cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -11071,7 +11071,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -11336,7 +11336,7 @@ rm -f core conftest.err conftest.$ac_obj
  
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :

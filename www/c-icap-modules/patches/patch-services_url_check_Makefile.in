@@ -1,11 +1,11 @@
-$NetBSD: patch-services_url_check_Makefile.in,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
+$NetBSD: patch-services_url_check_Makefile.in,v 1.2 2012/07/29 10:11:18 adam Exp $
 
-Remove unwanted linker flag.
-Handle configuration files.
+Remove unwanted linker flag
+Handle configuration files
 
 --- services/url_check/Makefile.in.orig	2011-05-05 13:19:55.000000000 +0000
 +++ services/url_check/Makefile.in
-@@ -34,7 +34,7 @@ PRE_UNINSTALL = :
+@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
@@ -13,14 +13,23 @@ Handle configuration files.
 +@USEBDB_TRUE@am__append_1 = @BDB_ADD_LDFLAG@
  @USEBDB_TRUE@am__append_2 = @BDB_ADD_FLAG@
  @USEBDB_TRUE@am__append_3 = sguardDB.c
- subdir = services/url_check
-@@ -554,8 +554,7 @@ uninstall-am: uninstall-cicapmoduleLTLIB
- 
+ @USEBDB_TRUE@bin_PROGRAMS = c-icap-mods-sguardDB$(EXEEXT)
+@@ -263,7 +263,7 @@ SUFFIXES = .8.in .8
+ man_MANS = $(manpages)
+ TMPLS = templates/en/DENY
+ @USEBDB_TRUE@c_icap_mods_sguardDB_SOURCES = sguardDB.c
+-@USEBDB_TRUE@c_icap_mods_sguardDB_LDADD = @UTILITIES_LIBADD@ @BDB_ADD_LDFLAG@ -ldb
++@USEBDB_TRUE@c_icap_mods_sguardDB_LDADD = @UTILITIES_LIBADD@ @BDB_ADD_LDFLAG@
+ @USEBDB_TRUE@c_icap_mods_sguardDB_CFLAGS = @BDB_ADD_FLAG@ -DBUILD_SGUARD_TOOL
+ EXTRA_DIST = sguardDB.h url_check_body.h makefile.w32 srv_url_check.def srv_url_check.conf $(TMPLS) $(manpages_src)
+ all: all-am
+@@ -720,8 +720,7 @@ uninstall-man: uninstall-man8
+ 	$(do_subst) < $< > $@
  
  install-data-local:
 -	$(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf.default
 -	if test ! -f $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; then $(INSTALL) srv_url_check.conf $(DESTDIR)$(CONFIGDIR)/srv_url_check.conf; fi
 +	$(INSTALL) srv_url_check.conf $(DESTDIR)$(datadir)/c-icap/srv_url_check.conf.default
+ 	$(mkinstalldirs) $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en
+ 	$(INSTALL) $(TMPLS) $(DESTDIR)$(cicapdatadir)/templates/srv_url_check/en/
  
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
