@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2400 2012/07/28 22:37:06 reed Exp $
+$NetBSD: CHANGES-2012,v 1.2401 2012/07/29 10:15:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3698,3 +3698,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/at-spi2-atk to 2.5.4 [prlw1 2012-07-28]
 	Updated devel/py-at-spi2 to 2.5.4 [prlw1 2012-07-28]
 	Updated misc/udfclient to 0.7.5 [reed 2012-07-28]
+	Updated databases/openldap to 2.4.31 [adam 2012-07-29]
+	Updated databases/openldap-client to 2.4.31 [adam 2012-07-29]
+	Updated databases/openldap-server to 2.4.31 [adam 2012-07-29]
+	Updated databases/openldap-doc to 2.4.31 [adam 2012-07-29]
+	Updated databases/openldap-cloak to 2.4.31 [adam 2012-07-29]
+	Updated databases/openldap-nops to 2.4.31 [adam 2012-07-29]
+	Updated databases/openldap-smbk5pwd to 2.4.31 [adam 2012-07-29]
+	Updated www/c-icap to 0.2.1 [adam 2012-07-29]
+	Updated www/c-icap-modules to 0.2.1 [adam 2012-07-29]
+	Updated www/squidclamav to 6.8 [adam 2012-07-29]
