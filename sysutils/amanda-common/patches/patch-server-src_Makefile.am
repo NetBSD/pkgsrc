@@ -1,0 +1,32 @@
+$NetBSD: patch-server-src_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Link with installed librarys from amanda-common.
+
+--- server-src/Makefile.am.orig	2012-02-21 11:36:46.000000000 +0000
++++ server-src/Makefile.am
+@@ -78,10 +78,10 @@ INSTALLPERMS_exec = \
+ # routines, and second to pick up any references in the other libraries.
+ ###
+ 
+-LDADD = ../common-src/libamanda.la   \
++LDADD = -lamanda   \
+ 	libamserver.la               \
+ 	../device-src/libamdevice.la     \
+-	../common-src/libamanda.la
++	-lamanda
+ 
+ libamserver_la_SOURCES=	amindex.c	\
+ 			diskfile.c	driverio.c	cmdline.c  \
+@@ -91,10 +91,10 @@ libamserver_la_SOURCES=	amindex.c	\
+ 
+ libamserver_la_LDFLAGS= -release $(VERSION) $(AS_NEEDED_FLAGS)
+ libamserver_la_LIBADD= ../device-src/libamdevice.la \
+-		       ../common-src/libamanda.la
++		       -lamanda
+ 
+ amindexd_LDADD = $(LDADD) \
+-	../amandad-src/libamandad.la
++	-lamandad
+ 
+ # there are used for testing only:
+ TEST_PROGS = diskfile infofile

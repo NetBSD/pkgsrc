@@ -1,0 +1,84 @@
+$NetBSD: patch-perl_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Link with installed librarys from amanda-common.
+
+--- perl/Makefile.am.orig	2012-02-21 11:36:47.000000000 +0000
++++ perl/Makefile.am
+@@ -135,9 +135,9 @@ libDevicedir = $(amperldir)/auto/Amanda/
+ libDevice_LTLIBRARIES = libDevice.la
+ libDevice_la_SOURCES = Amanda/Device.c $(AMGLUE_SWG)
+ libDevice_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libDevice_la_LIBADD = amglue/libamglue.la \
++libDevice_la_LIBADD = -lamglue \
+ 	$(top_builddir)/device-src/libamdevice.la \
+-	$(top_builddir)/common-src/libamanda.la
++	-lamanda
+ Amanda_DATA += Amanda/Device.pm
+ MAINTAINERCLEANFILES += Amanda/Device.c Amanda/Device.pm
+ endif
+@@ -149,9 +149,9 @@ libLogfiledir = $(amperldir)/auto/Amanda
+ libLogfile_LTLIBRARIES = libLogfile.la
+ libLogfile_la_SOURCES = Amanda/Logfile.c $(AMGLUE_SWG)
+ libLogfile_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libLogfile_la_LIBADD = amglue/libamglue.la \
++libLogfile_la_LIBADD = -lamglue \
+ 	$(top_builddir)/server-src/libamserver.la \
+-	$(top_builddir)/common-src/libamanda.la
++	-lamanda
+ Amanda_DATA += Amanda/Logfile.pm
+ MAINTAINERCLEANFILES += Amanda/Logfile.c Amanda/Logfile.pm
+ endif
+@@ -163,9 +163,9 @@ libCmdlinedir = $(amperldir)/auto/Amanda
+ libCmdline_LTLIBRARIES = libCmdline.la
+ libCmdline_la_SOURCES = Amanda/Cmdline.c $(AMGLUE_SWG)
+ libCmdline_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libCmdline_la_LIBADD = amglue/libamglue.la \
++libCmdline_la_LIBADD = -lamglue \
+ 	$(top_builddir)/server-src/libamserver.la \
+-	$(top_builddir)/common-src/libamanda.la
++	-lamanda
+ Amanda_DATA += Amanda/Cmdline.pm
+ MAINTAINERCLEANFILES += Amanda/Cmdline.c Amanda/Cmdline.pm
+ endif
+@@ -177,9 +177,9 @@ libTapelistdir = $(amperldir)/auto/Amand
+ libTapelist_LTLIBRARIES = libTapelist.la
+ libTapelist_la_SOURCES = Amanda/Tapelist.c $(AMGLUE_SWG)
+ libTapelist_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libTapelist_la_LIBADD = amglue/libamglue.la \
++libTapelist_la_LIBADD = -lamglue \
+ 	$(top_builddir)/server-src/libamserver.la \
+-	$(top_builddir)/common-src/libamanda.la
++	-lamanda
+ Amanda_DATA += Amanda/Tapelist.pm
+ MAINTAINERCLEANFILES += Amanda/Tapelist.c Amanda/Tapelist.pm
+ endif
+@@ -191,9 +191,9 @@ libDisklistdir = $(amperldir)/auto/Amand
+ libDisklist_LTLIBRARIES = libDisklist.la
+ libDisklist_la_SOURCES = Amanda/Disklist.c $(AMGLUE_SWG)
+ libDisklist_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libDisklist_la_LIBADD = amglue/libamglue.la \
++libDisklist_la_LIBADD = -lamglue \
+ 	$(top_builddir)/server-src/libamserver.la \
+-	$(top_builddir)/common-src/libamanda.la
++	-lamanda
+ Amanda_DATA += Amanda/Disklist.pm
+ MAINTAINERCLEANFILES += Amanda/Disklist.c Amanda/Disklist.pm
+ endif
+@@ -359,7 +359,7 @@ libXferServerdir = $(amperldir)/auto/Ama
+ libXferServer_LTLIBRARIES = libXferServer.la
+ libXferServer_la_SOURCES = Amanda/XferServer.c $(AMGLUE_SWG)
+ libXferServer_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libXferServer_la_LIBADD = amglue/libamglue.la \
++libXferServer_la_LIBADD = -lamglue \
+ 	$(top_builddir)/server-src/libamserver.la
+ Amanda_DATA += Amanda/XferServer.pm
+ MAINTAINERCLEANFILES += Amanda/XferServer.c Amanda/XferServer.pm
+@@ -502,7 +502,7 @@ libApplicationdir = $(amperldir)/auto/Am
+ libApplication_LTLIBRARIES = libApplication.la
+ libApplication_la_SOURCES = Amanda/Application.c $(AMGLUE_SWG)
+ libApplication_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
+-libApplication_la_LIBADD = amglue/libamglue.la \
++libApplication_la_LIBADD = -lamglue \
+ 	$(top_builddir)/client-src/libamclient.la
+ Amanda_DATA += Amanda/Application.pm
+ MAINTAINERCLEANFILES += Amanda/Application.c Amanda/Application.pm
