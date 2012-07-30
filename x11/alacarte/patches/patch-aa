@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/12/15 19:57:42 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2012/07/30 01:30:10 dholland Exp $
+
+Configure paths for pkgsrc.
 
 --- Alacarte/util.py.orig	2006-11-23 23:07:31.000000000 +0100
 +++ Alacarte/util.py
