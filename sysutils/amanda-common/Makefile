@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/07/30 06:57:21 sbd Exp $
+# $NetBSD: Makefile,v 1.51 2012/07/30 07:00:12 sbd Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 SVR4_PKGNAME=		amaco
@@ -8,12 +8,9 @@ COMMENT=		Common libraries and binaries for Amanda
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 
-.if ${OPSYS} == "NetBSD"
-CPPFLAGS=		# empty
-.elif ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 CPPFLAGS+=		-D_LARGEFILE64_SOURCE
 .endif
 
@@ -35,7 +32,6 @@ PKG_SHELL.${AMANDA_USER}=	${SH}
 
 OWN_DIRS_PERMS=		${AMANDA_VAR} ${AMANDA_USER} ${AMANDA_GROUP} 0700
 OWN_DIRS_PERMS+=	${AMANDA_VAR}/gnutar-lists  ${AMANDA_USER} ${AMANDA_GROUP} 0700
-BUILD_DEFS+=		AMANDA_VAR
 
 INSTALL_MAKE_FLAGS+=	SETUID_GROUP=${ROOT_GROUP}
 

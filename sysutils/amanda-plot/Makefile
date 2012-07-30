@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/07/30 06:57:22 sbd Exp $
+# $NetBSD: Makefile,v 1.28 2012/07/30 07:00:12 sbd Exp $
 #
 
 PKGNAME=		amanda-plot-${AMANDA_VERSION}
@@ -12,8 +12,6 @@ PKG_DESTDIR_SUPPORT=	destdir
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-server-${AMANDA_VERSION}{,nb[0-9]*}:../../sysutils/amanda-server
 
-
-.include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-client

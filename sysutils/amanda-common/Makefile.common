@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2012/07/30 06:57:21 sbd Exp $
+# $NetBSD: Makefile.common,v 1.33 2012/07/30 07:00:12 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -31,24 +31,23 @@ AMANDA_VAR?=		${VARBASE}/amanda
 
 PKG_GROUPS_VARS+=	AMANDA_GROUP
 PKG_USERS_VARS+=	AMANDA_USER
-BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR VARBASE
+BUILD_DEFS+=		AMANDA_TMP AMANDA_USER AMANDA_GROUP AMANDA_VAR VARBASE
 
 USE_LIBTOOL=		yes
-
 USE_TOOLS+=		gzip:run gtar:run
-CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
-CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
+CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
+CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
+CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR:Q}/gnutar-lists
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP:Q}
 CONFIGURE_ARGS+=	--with-owner=${REAL_ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-mmap
 CONFIGURE_ARGS+=	--with-amandahosts
-CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
-CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
-CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../sysutils/amanda-common/options.mk"
