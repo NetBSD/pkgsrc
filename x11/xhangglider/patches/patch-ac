@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/08/05 03:51:18 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2012/07/30 03:04:32 dholland Exp $
+
+Configure paths for pkgsrc.
 
 --- def.h.orig	Thu Aug  5 05:27:25 1999
 +++ def.h	Thu Aug  5 05:27:37 1999

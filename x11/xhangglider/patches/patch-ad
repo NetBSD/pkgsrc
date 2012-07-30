@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/08/05 03:51:18 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2012/07/30 03:04:32 dholland Exp $
+
+Configure paths for pkgsrc.
 
 --- init.c.orig	Thu Aug  5 05:27:57 1999
 +++ init.c	Thu Aug  5 05:28:17 1999
