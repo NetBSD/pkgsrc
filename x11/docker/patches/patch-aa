@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/01/17 19:00:14 ahoka Exp $
+$NetBSD: patch-aa,v 1.3 2012/07/30 02:04:23 dholland Exp $
+
+Configure for pkgsrc. Honor LDFLAGS so rpaths work.
 
 --- Makefile.orig	2002-11-20 11:20:49.000000000 +0100
 +++ Makefile
@@ -7,13 +9,13 @@ $NetBSD: patch-aa,v 1.2 2009/01/17 19:00:14 ahoka Exp $
  
  # Change this PREFIX to where you want docker to be installed
 -PREFIX=/usr/local
-+PREFIX?=/usr/local
++#PREFIX=/usr/local
  # Change this XLIBPATH to point to your X11 development package's installation
 -XLIBPATH=/usr/X11R6/lib
 -
 -# Sets some flags for stricter compiling
 -CFLAGS=-pedantic -Wall -W -O
-+XLIBPATH?=/usr/X11R6/lib
++#XLIBPATH=/usr/X11R6/lib
  
  #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
  #                                                                 #
