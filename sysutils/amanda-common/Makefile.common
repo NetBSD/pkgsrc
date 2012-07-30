@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2012/07/30 07:02:17 sbd Exp $
+# $NetBSD: Makefile.common,v 1.35 2012/07/30 07:03:04 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -25,7 +25,7 @@ AMANDA_GROUP?=		sysadmin
 AMANDA_GROUP?=		operator
 .endif
 
-AMANDA_USER?=		backup
+AMANDA_USER?=		amandabackup
 AMANDA_TMP?=		/tmp/amanda
 AMANDA_VAR?=		${VARBASE}/amanda
 
