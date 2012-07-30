@@ -1,15 +1,14 @@
-$NetBSD: patch-ag,v 1.2 2005/12/05 20:51:20 rillig Exp $
+$NetBSD: patch-ag,v 1.3 2012/07/30 02:53:57 dholland Exp $
 
---- lib/errmsg.c.orig	2005-07-22 18:01:01.000000000 +0000
+Don't try to declare own errno.
+
+--- lib/errmsg.c.orig	2002-05-30 17:23:26.000000000 +0000
 +++ lib/errmsg.c
-@@ -51,7 +51,10 @@
+@@ -51,7 +51,6 @@ char *id_errm = "$Id: errmsg.c,v 0.80 19
  
  #include "forms.h"
  #include "ulib.h"
-+
-+#ifndef errno
- extern int errno;		/* system error no            */
-+#endif
+-extern int errno;		/* system error no            */
  
  #ifdef DONT_HAVE_STRERROR
  extern char *sys_errlist[];

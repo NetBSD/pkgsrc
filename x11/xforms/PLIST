@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/03 04:17:37 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/07/30 02:53:57 dholland Exp $
 bin/fd2ps
 bin/fdesign
 include/X11/flimage.h
@@ -11,5 +11,5 @@ lib/libforms.a
 lib/libforms.so
 lib/libforms.so.1
 lib/libforms.so.${PKGVERSION}
-${IMAKE_MAN_DIR}/fd2ps.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/fdesign.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/fd2ps.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/fdesign.${IMAKE_MAN_SUFFIX}

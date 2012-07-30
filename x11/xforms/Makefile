@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2012/02/16 20:28:21 hans Exp $
+# $NetBSD: Makefile,v 1.68 2012/07/30 02:53:57 dholland Exp $
 #
 
 DISTNAME=	xforms-1.0
@@ -15,9 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_IMAKE=	YES
 
 MAKE_JOBS_SAFE=	no
-MAKE_ENV=	DEPEND_DEFINES=${CPPFLAGS:M*:Q}
+MAKE_ENV+=	DEPEND_DEFINES=${CPPFLAGS:M*:Q}
 MAKE_FLAGS+=	MANPATH=${PREFIX}/${PKGMANDIR}
-SCRIPTS_ENV=	DEPEND_DEFINES="${CPPFLAGS}"
+SCRIPTS_ENV+=	DEPEND_DEFINES=${CPPFLAGS:Q}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
