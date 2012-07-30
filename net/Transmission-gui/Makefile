@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/03 00:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2012/07/30 22:12:18 tron Exp $
 
 PKGNAME=		${DISTNAME:C:t:T:C:-:-gui-:}
 
@@ -6,11 +6,9 @@ USE_LANGUAGES+=		c c++
 MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
 
-CONFIGURE_ARGS+=	--disable-cli --disable-daemon
+CONFIGURE_ARGS+=	--disable-cli --disable-daemon --with-gtk
 
 .include "../../net/Transmission/Makefile.common"
-
-PKGREVISION=		2
 
 post-build:
 	cd ${WRKSRC}/qt && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake qtr.pro
@@ -26,7 +24,7 @@ do-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 
