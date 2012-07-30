@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2004/05/23 18:31:27 danw Exp $
+$NetBSD: patch-aa,v 1.4 2012/07/30 04:08:53 dholland Exp $
+
+- use standard headers
+- don't need to provide bcopy or strdup
 
 --- lirec/li_recognizer.c.orig	Mon Jun 12 18:20:13 2000
 +++ lirec/li_recognizer.c
@@ -28,7 +31,7 @@ $NetBSD: patch-aa,v 1.3 2004/05/23 18:31:27 danw Exp $
  
  /*#include <assert.h>*/
 -#include <values.h>
-+#include <sys/param.h>
++#include <limits.h>
 +#define MAXINT	INT_MAX
  #include <sys/time.h>
  
