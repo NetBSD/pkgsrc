@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/06 15:50:37 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/30 03:36:32 dholland Exp $
 bin/xmtg
 bin/xmx
 bin/xmxinit
@@ -8,5 +8,5 @@ lib/libXmc.so
 lib/libXmc.so.2
 lib/libXmc.so.2.0
 lib/libXmc_d.a
-${IMAKE_MAN_DIR}/xmxinit.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xmx.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xmxinit.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/xmx.${IMAKE_MAN_SUFFIX}
