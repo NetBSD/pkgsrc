@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/07/30 07:00:12 sbd Exp $
+# $NetBSD: Makefile,v 1.53 2012/07/30 07:00:50 sbd Exp $
 #
 
 PKGNAME=		amanda-client-${AMANDA_VERSION}
@@ -12,7 +12,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 USE_TOOLS+=		awk:run perl:run
 
 .include "../../sysutils/amanda-common/Makefile.common"
-CONFIGURE_ARGS+=	--without-server
+CONFIGURE_ARGS+=	--without-server --without-gnuplot
 
 .if !empty(PKG_OPTIONS:Mamanda-smb)
 CONFIGURE_ARGS+=	--with-smbclient
