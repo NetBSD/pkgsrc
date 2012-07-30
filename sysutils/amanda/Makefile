@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2009/02/24 14:53:08 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2012/07/30 06:57:21 sbd Exp $
 #
 
-# XXX get this from ../../sysutils/amanda-common/Makefile.common
-VERSION=2.5.2p1
+.include	"../../sysutils/amanda-common/version.mk"
 
-DISTNAME=	amanda-${VERSION}
+DISTNAME=	amanda-${AMANDA_VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 
@@ -17,8 +16,8 @@ META_PACKAGE=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	amanda-client-${VERSION}{,nb[0-9]*}:../../sysutils/amanda-client
-DEPENDS+=	amanda-server-${VERSION}{,nb[0-9]*}:../../sysutils/amanda-server
-DEPENDS+=	amanda-plot-${VERSION}{,nb[0-9]*}:../../sysutils/amanda-plot
+DEPENDS+=	amanda-client-${AMANDA_VERSION}{,nb[0-9]*}:../../sysutils/amanda-client
+DEPENDS+=	amanda-server-${AMANDA_VERSION}{,nb[0-9]*}:../../sysutils/amanda-server
+DEPENDS+=	amanda-plot-${AMANDA_VERSION}{,nb[0-9]*}:../../sysutils/amanda-plot
 
 .include "../../mk/bsd.pkg.mk"

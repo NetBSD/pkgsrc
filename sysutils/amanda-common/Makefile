@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2009/12/22 20:58:54 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2012/07/30 06:57:21 sbd Exp $
 
-PKGNAME=		amanda-common-${VERS}
+PKGNAME=		amanda-common-${AMANDA_VERSION}
 SVR4_PKGNAME=		amaco
 PKGREVISION=		2
 
