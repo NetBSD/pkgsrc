@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/07/30 07:02:17 sbd Exp $
+# $NetBSD: Makefile,v 1.55 2012/07/30 07:03:04 sbd Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 SVR4_PKGNAME=		amaco
@@ -27,8 +27,9 @@ CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
 PKG_GROUPS=		${AMANDA_GROUP}
 PKG_USERS=		${AMANDA_USER}:${AMANDA_GROUP}
 
-PKG_GECOS.${AMANDA_USER}=	Amanda pseudo-user
+PKG_GECOS.${AMANDA_USER}=	Amanda backup user
 PKG_SHELL.${AMANDA_USER}=	${SH}
+PKG_HOME.${AMANDA_USER}=	${AMANDA_VAR}
 
 OWN_DIRS_PERMS=		${AMANDA_VAR} ${AMANDA_USER} ${AMANDA_GROUP} 0750
 OWN_DIRS_PERMS+=	${AMANDA_VAR}/gnutar-lists ${AMANDA_USER} ${AMANDA_GROUP} 0750
