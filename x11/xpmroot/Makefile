@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2010/09/28 13:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2012/07/30 03:59:06 dholland Exp $
 #
 
 DISTNAME=	fvwm-${PKG_VERSION}
@@ -17,22 +17,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_VERSION=	2.4.20
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
+BUILD_DIRS=	libs utils
 
 MAKE_ENV+=	VERSION=${PKG_VERSION:Q}
 CONFIGURE_ARGS+=	--without-extras --disable-dmalloc --without-gnome
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/man1
-
-do-build:
-	(cd ${WRKSRC:Q}/libs && \
-		env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all)
-	(cd ${WRKSRC:Q}/utils && \
-		env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xpmroot)
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/utils/xpmroot ${DESTDIR}${PREFIX:Q}/bin
-	${INSTALL_MAN} ${WRKSRC:Q}/utils/xpmroot.1 \
-		${DESTDIR}${PREFIX:Q}/${PKGMANDIR:Q}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/utils/xpmroot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/utils/xpmroot.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
