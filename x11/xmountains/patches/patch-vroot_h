@@ -1,0 +1,15 @@
+$NetBSD: patch-vroot_h,v 1.1 2012/07/30 03:33:12 dholland Exp $
+
+- use standard headers
+
+--- vroot.h~	2004-05-05 08:21:06.000000000 +0000
++++ vroot.h
+@@ -76,6 +76,8 @@ static const char vroot_rcsid[] =
+ #include <X11/Xatom.h>
+ #include <X11/Xlib.h>
+ 
++#include <stdlib.h>
++
+ static Window
+ #ifdef __STDC__ /* ANSIfication added by jwz, to avoid superfluous warnings. */
+ VirtualRootWindowOfScreen(Screen *screen)

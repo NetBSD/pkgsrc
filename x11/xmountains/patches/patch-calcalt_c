@@ -1,0 +1,14 @@
+$NetBSD: patch-calcalt_c,v 1.1 2012/07/30 03:33:12 dholland Exp $
+
+- use standard headers
+
+--- calcalt.c~	2004-05-05 08:30:35.000000000 +0000
++++ calcalt.c
+@@ -17,6 +17,7 @@
+  * be notices by the bottom (long length scale) level.
+  */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <math.h>
+ #include "crinkle.h"
+ 

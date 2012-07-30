@@ -1,0 +1,20 @@
+$NetBSD: patch-X__graphics_c,v 1.1 2012/07/30 03:33:12 dholland Exp $
+
+- use standard headers
+- fix adjoining unsightly spacing
+
+--- X_graphics.c~	2004-05-05 08:30:24.000000000 +0000
++++ X_graphics.c
+@@ -1,7 +1,9 @@
+ #include <stdio.h>
+-#include<X11/Xlib.h>
+-#include<X11/Xutil.h>
+-#include<X11/Xatom.h>
++#include <stdlib.h>
++#include <string.h>
++#include <X11/Xlib.h>
++#include <X11/Xutil.h>
++#include <X11/Xatom.h>
+ # define VROOT /* always do this */
+ #ifdef VROOT
+ #include"vroot.h"

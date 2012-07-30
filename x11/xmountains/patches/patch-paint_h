@@ -1,0 +1,24 @@
+$NetBSD: patch-paint_h,v 1.1 2012/07/30 03:33:12 dholland Exp $
+
+- declare a couple of external functions properly
+
+--- paint.h~	2004-05-05 08:30:35.000000000 +0000
++++ paint.h
+@@ -66,6 +66,8 @@ Col *makemap(Height *a, Height *b, Heigh
+ Col *camera(Height *a, Height *b, Height *shadow);
+ Col *mirror(Height *a, Height *b, Height *shadow);
+ int project( int x , Height y );
++void init_parameters(void);
++void finish_artist(void);
+ #else
+ void set_clut();
+ Height *extract();
+@@ -75,6 +77,8 @@ Col *makemap();
+ Col *camera();
+ Col *mirror();
+ int project();
++void init_parameters();
++void finish_artist();
+ #endif
+ 
+ 
