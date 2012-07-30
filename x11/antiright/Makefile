@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/03 00:14:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/07/30 01:38:19 dholland Exp $
 #
 
 DISTNAME=	antiright-3.4
@@ -39,7 +39,7 @@ TOOLS_DEPENDS.pkg-config=	pkg-config>=0.20:../../devel/pkg-config
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 INSTALL_MAKE_FLAGS+=		PREFIX=${DESTDIR}${PREFIX} \
-				mandir=${DESTDIR}${PREFIX}/${PKGMANDIR} \
+				mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../x11/vte/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
