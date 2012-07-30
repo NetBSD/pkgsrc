@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/07/30 06:57:22 sbd Exp $
+# $NetBSD: Makefile,v 1.50 2012/07/30 07:00:13 sbd Exp $
 
 PKGNAME=		amanda-server-${AMANDA_VERSION}
 PKGREVISION=		2
@@ -8,14 +8,11 @@ COMMENT=		Server part of Amanda, a network backup system
 
 PKG_DESTDIR_SUPPORT=	destdir
 
+.include "../../sysutils/amanda-common/Makefile.common"
+
 USE_TOOLS+=		awk:run perl:run mail:run
 
 DEPENDS+=               p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../sysutils/amanda-common/Makefile.common"
-
-CONFIGURE_ARGS+=	--without-client
 
 # Prevent configure script from finding unnecessary libraries.
 #
@@ -24,26 +21,9 @@ CONFIGURE_ENV+=		ac_cv_lib_termcap_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
-CONFIGURE_ENV+=		MAILER=${TOOLS_PATH.mail}
 
-# post-install:
-# 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amanda
-# 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/amanda
-# 	for i in ${WRKDIR}/${DISTNAME}/docs/* ; do \
-# 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/amanda; \
-# 	done
-# 	for i in ${WRKDIR}/${DISTNAME}/example/8.5x11.ps \
-# 	    ${WRKDIR}/${DISTNAME}/example/DIN-A4.ps \
-# 	    ${WRKDIR}/${DISTNAME}/example/DLT.ps \
-# 	    ${WRKDIR}/${DISTNAME}/example/EXB-8500.ps \
-# 	    ${WRKDIR}/${DISTNAME}/example/HP-DAT.ps \
-# 	    ${WRKDIR}/${DISTNAME}/example/amanda.conf \
-# 	    ${WRKDIR}/${DISTNAME}/example/chg-multi.conf \
-# 	    ${WRKDIR}/${DISTNAME}/example/chg-scsi.conf \
-# 	    ${WRKDIR}/${DISTNAME}/example/config.site \
-# 	    ${WRKDIR}/${DISTNAME}/example/disklist; do \
-# 		${INSTALL_DATA} $$i ${PREFIX}/share/examples/amanda; \
-# 	done
+CONFIGURE_ENV+=		MAILER=${TOOLS_PATH.mail}
+CONFIGURE_ARGS+=	--without-client
 
 PLIST_VARS+=	scsi
 .if ${OPSYS} != "SunOS"
