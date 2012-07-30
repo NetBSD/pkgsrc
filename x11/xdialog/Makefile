@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2012/03/03 12:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/07/30 02:21:31 dholland Exp $
 #
 
 DISTNAME=		Xdialog-2.3.1
 PKGNAME=		${DISTNAME:S/^X/x/}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		x11 misc
 MASTER_SITES=		http://xdialog.free.fr/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xdialog.dyns.net/
 COMMENT=		X11 drop-in replacement for the curses dialog program
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,7 +19,7 @@ USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-DOCDIR=			${PREFIX}/share/doc/html/xdialog
+DOCDIR=			${PREFIX}/share/doc/xdialog
 EGDIR=			${PREFIX}/share/examples/xdialog
 
 CHECK_PORTABILITY_SKIP+=	samples/*
@@ -27,13 +28,12 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 
 post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.png ${DESTDIR}${DOCDIR}
-	for f in Xmessage Xmore buildlist calendar chain checklist	\
+.for f in Xmessage Xmore buildlist calendar chain checklist	\
 		dselect editbox fselect gauge infobox infobox2 inputbox	\
 		logbox logbox2 login menubox msgbox radiolist rangebox	\
-		tailbox textbox timebox treeview yesno;			\
-	do								\
-		${INSTALL_SCRIPT} ${WRKSRC}/samples/$${f} ${DESTDIR}${EGDIR};	\
-	done
+		tailbox textbox timebox treeview yesno
+	${INSTALL_SCRIPT} ${WRKSRC}/samples/${f} ${DESTDIR}${EGDIR}
+.endfor
 
 .include "options.mk"
 
