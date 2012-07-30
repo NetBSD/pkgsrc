@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/07/30 07:00:13 sbd Exp $
+# $NetBSD: Makefile,v 1.51 2012/07/30 07:00:50 sbd Exp $
 
 PKGNAME=		amanda-server-${AMANDA_VERSION}
 PKGREVISION=		2
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
 
 CONFIGURE_ENV+=		MAILER=${TOOLS_PATH.mail}
-CONFIGURE_ARGS+=	--without-client
+CONFIGURE_ARGS+=	--without-client --without-gnuplot
 
 PLIST_VARS+=	scsi
 .if ${OPSYS} != "SunOS"

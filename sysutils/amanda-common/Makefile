@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/07/30 07:00:12 sbd Exp $
+# $NetBSD: Makefile,v 1.52 2012/07/30 07:00:50 sbd Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 SVR4_PKGNAME=		amaco
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CPPFLAGS+=		-D_LARGEFILE64_SOURCE
 .endif
 
-CONFIGURE_ARGS+=	--without-server --without-client
+CONFIGURE_ARGS+=	--without-server --without-client --without-gnuplot
 
 # Prevent configure script from finding unnecessary libraries.
 #
