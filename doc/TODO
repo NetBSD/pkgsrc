@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11391 2012/07/30 01:48:22 dholland Exp $
+$NetBSD: TODO,v 1.11392 2012/07/30 07:22:01 sbd Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o alsa-lib-1.0.25
 	o alsa-plugins-1.0.25
 	o alsa-utils-1.0.25
-	o amanda-3.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amsn-0.98.4
 	o angband-3.2
