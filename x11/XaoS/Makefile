@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/07/29 22:13:56 dholland Exp $
+# $NetBSD: Makefile,v 1.33 2012/07/30 01:19:15 dholland Exp $
 #
 
-DISTNAME=		XaoS-3.4
-PKGREVISION=		3
+DISTNAME=		xaos-3.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
 
@@ -16,9 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-curses-driver=no
-# DGA fails to link somehow, XXX should be fixed
-CONFIGURE_ARGS+=	--with-dga-driver=no
 INFO_FILES=		yes
 
 SUBST_CLASSES+=		paths
@@ -30,6 +26,7 @@ SUBST_SED.paths=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,g'
 INSTALLATION_DIRS=	${PKGINFODIR}
 
 CHECK_PORTABILITY_SKIP+=	help/applehelpconv
+CHECK_PORTABILITY_SKIP+=	help/.svn/text-base/applehelpconv.svn-base
 
 LDFLAGS.SunOS+=		-liconv
 
