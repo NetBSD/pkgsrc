@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2418 2012/07/30 02:22:09 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2419 2012/07/30 07:22:00 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3725,3 +3725,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/grub2 version 2.00 [gsutre 2012-07-29]
 	Updated x11/XaoS to 3.5 [dholland 2012-07-30]
 	Updated x11/xdialog to 2.3.1nb9 [dholland 2012-07-30]
+	Updated sysutils/amanda-common to 3.3.1 [sbd 2012-07-30]
+	Updated sysutils/amanda-client to 3.3.1 [sbd 2012-07-30]
+	Updated sysutils/amanda-server to 3.3.1 [sbd 2012-07-30]
+	Updated sysutils/amanda-plot to 3.3.1 [sbd 2012-07-30]
+	Updated sysutils/amanda to 3.3.1 [sbd 2012-07-30]
