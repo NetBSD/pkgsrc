@@ -1,12 +1,14 @@
-# $NetBSD: Makefile.common,v 1.31 2012/07/19 07:30:55 sbd Exp $
+# $NetBSD: Makefile.common,v 1.32 2012/07/30 06:57:21 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
 # used by sysutils/amanda-server/Makefile
 # used by sysutils/amanda-plot/Makefile
 
-VERS=			2.5.2p1
-DISTNAME?=		amanda-${VERS}
+COMMONDIR=		../../sysutils/amanda-common
+.include		"${COMMONDIR}/version.mk"
+
+DISTNAME=		amanda-${AMANDA_VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
 
