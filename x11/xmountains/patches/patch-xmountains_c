@@ -1,0 +1,54 @@
+$NetBSD: patch-xmountains_c,v 1.1 2012/07/30 03:33:12 dholland Exp $
+
+- use standard headers
+- initialize an uninitialized variable
+- use intptr_t where appropriate
+
+--- xmountains.c~	2004-05-05 08:30:43.000000000 +0000
++++ xmountains.c
+@@ -1,5 +1,9 @@
+ 
++#include <stdint.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
+ #include <signal.h>
+ #include "crinkle.h"
+ #include "paint.h"
+@@ -137,7 +141,7 @@ char **argv;
+   int i,p;
+   int e_events=FALSE;
+   int request_clear=FALSE;
+-  int smooth;
++  int smooth = 0;
+   int snooze=10;
+   int root= 0;
+   unsigned long window_id = 0;
+@@ -415,22 +419,22 @@ char **argv;
+   seed_uni(seed);
+ 
+   init_artist_variables();
+-  if( -1 == (int) signal(SIGINT, finish_prog ))
++  if( -1 == (intptr_t) signal(SIGINT, finish_prog ))
+   {
+     perror(argv[0]);
+     exit(1);
+   }
+-  if( -1 == (int) signal(SIGTERM, finish_prog ))
++  if( -1 == (intptr_t) signal(SIGTERM, finish_prog ))
+   {
+     perror(argv[0]);
+     exit(1);
+   }
+-  if( -1 == (int) signal(SIGHUP, finish_prog ))
++  if( -1 == (intptr_t) signal(SIGHUP, finish_prog ))
+   {
+     perror(argv[0]);
+     exit(1);
+   }
+-  if( -1 == (int) signal(SIGQUIT, finish_prog ))
++  if( -1 == (intptr_t) signal(SIGQUIT, finish_prog ))
+   {
+     perror(argv[0]);
+     exit(1);
