@@ -1,4 +1,9 @@
-$NetBSD: patch-ab,v 1.7 2011/09/08 00:24:43 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2012/07/30 02:53:57 dholland Exp $
+
+- Add image libraries to link. (is this needed?)
+- Honor LDFLAGS so rpaths work.
+- Configure paths for pkgsrc.
+- Use optimization level that actually exists (gcc) or works (clang).
 
 --- demos/Imakefile.orig	2002-11-19 20:50:52.000000000 +0000
 +++ demos/Imakefile

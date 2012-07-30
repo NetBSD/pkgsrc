@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2003/01/12 18:30:56 jschauma Exp $
+$NetBSD: patch-af,v 1.2 2012/07/30 02:53:57 dholland Exp $
+
+Honor pkgsrc LDFLAGS.
 
 --- image/Imakefile.orig	Sun Jan 12 18:16:51 2003
 +++ image/Imakefile	Sun Jan 12 18:17:20 2003
