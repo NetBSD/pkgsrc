@@ -1,13 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2001/01/01 14:30:25 itojun Exp $
+$NetBSD: patch-ac,v 1.2 2012/07/30 04:08:53 dholland Exp $
 
-*** lirec/util.h-	Mon Jan  1 22:47:35 2001
---- lirec/util.h	Mon Jan  1 22:48:37 2001
-***************
-*** 55,57 ****
-  
-! #ifndef unix
-  
---- 55,57 ----
-  
-! #if 0
-  
+Everything pkgsrc builds on counts as "unix", but doesn't necessarily
+pollute the namespace with that by default.
+
+--- lirec/util.h.orig	2000-06-12 22:20:14.000000000 +0000
++++ lirec/util.h
+@@ -53,7 +53,7 @@ char	*tempstring();	/* returns a pointer
+ #	define GRAPHICS		/* only GDEV on unix machines */
+ #endif
+ 
+-#ifndef unix
++#if 0
+ 
+ /* various BSD to lattice C name changes */
+ 
