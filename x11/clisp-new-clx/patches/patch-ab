@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2011/04/20 18:36:17 hans Exp $
+$NetBSD: patch-ab,v 1.2 2012/07/30 01:46:24 dholland Exp $
+
+Get correct CFLAGS from lang/clisp/module.mk.
 
 --- modules/clx/new-clx/Makefile.in.orig	2010-03-24 20:44:56.000000000 +0100
 +++ modules/clx/new-clx/Makefile.in	2011-04-20 16:54:04.545746107 +0200
