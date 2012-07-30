@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2012/02/23 18:39:53 marino Exp $
+$NetBSD: patch-configure,v 1.2 2012/07/30 03:59:06 dholland Exp $
+
+- configure script needs libX11, not just libXt.
 
 --- configure.orig	2012-02-19 15:57:14.638423000 +0000
 +++ configure
