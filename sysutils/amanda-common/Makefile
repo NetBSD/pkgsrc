@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2012/07/30 07:04:29 sbd Exp $
+# $NetBSD: Makefile,v 1.57 2012/07/30 07:21:11 sbd Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 SVR4_PKGNAME=		amaco
-PKGREVISION=		2
 
 COMMENT=		Common libraries and binaries for Amanda
 
@@ -16,14 +15,6 @@ CPPFLAGS+=		-D_LARGEFILE64_SOURCE
 
 CONFIGURE_ARGS+=	--without-server --without-client --without-gnuplot
 
-# Prevent configure script from finding unnecessary libraries.
-#
-CONFIGURE_ENV+=		ac_cv_lib_intl_main=no
-CONFIGURE_ENV+=		ac_cv_lib_termcap_tgetent=no
-CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
-CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
-CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
-
 PKG_GROUPS=		${AMANDA_GROUP}
 PKG_USERS=		${AMANDA_USER}:${AMANDA_GROUP}
 
@@ -31,8 +22,17 @@ PKG_GECOS.${AMANDA_USER}=	Amanda backup user
 PKG_SHELL.${AMANDA_USER}=	${SH}
 PKG_HOME.${AMANDA_USER}=	${AMANDA_VAR}
 
+OWN_DIRS+=		${PKG_SYSCONFDIR}/amanda
 OWN_DIRS_PERMS=		${AMANDA_VAR} ${AMANDA_USER} ${AMANDA_GROUP} 0750
 OWN_DIRS_PERMS+=	${AMANDA_VAR}/gnutar-lists ${AMANDA_USER} ${AMANDA_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/log/amanda ${AMANDA_USER} ${AMANDA_GROUP} 0750
+
+CONF_FILES_PERMS=	${PREFIX}/share/doc/amanda/example/amanda-client.conf \
+			${PKG_SYSCONFDIR}/amanda/amanda-client.conf     \
+			${AMANDA_USER} ${AMANDA_GROUP} 0600
+
+REQD_FILES_PERMS+=	/dev/null ${AMANDA_VAR}/amandates ${AMANDA_USER} ${AMANDA_GROUP} 0640
+
+SPECIAL_PERMS+=		sbin/amservice ${AM_PROG_PERMS}
 
 .include "../../mk/bsd.pkg.mk"

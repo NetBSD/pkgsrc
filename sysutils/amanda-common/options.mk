@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.8 2012/07/30 06:54:45 sbd Exp $
+# $NetBSD: options.mk,v 1.9 2012/07/30 07:21:11 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
 # Common options.
-PKG_SUPPORTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh
-PKG_SUGGESTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh
+PKG_SUPPORTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh kerberos
+PKG_SUGGESTED_OPTIONS+=	inet6 amanda-fqdn amanda-ssh kerberos
 # Client options.
 PKG_SUPPORTED_OPTIONS+=	amanda-smb amanda-dump-snap
 PKG_SUGGESTED_OPTIONS+=	amanda-dump-snap
@@ -34,4 +34,9 @@ FIND_PREFIX:= 		SSHPREFIX=openssh
 .include "../../mk/find-prefix.mk"
 CONFIGURE_ENV+=		ac_cv_path_SSH=${SSHPREFIX}/bin/ssh
 .  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos)
+CONFIGURE_ARGS+=	--with-krb5-security=${KRB5BASE:Q}
+.  include "../../mk/krb5.buildlink3.mk"
 .endif
