@@ -630,6 +630,7 @@ xaw			Enable Xaw support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
 xft2			Enable Xft support.
 xim			Enable X Input Method support.
+xinerama		Enable Xinerama support.
 xjdic-locale		Honor LOCALE env var, instead of requiring ISO-2022-JP.
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
