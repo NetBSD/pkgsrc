@@ -1,10 +1,14 @@
+$NetBSD: patch-aa,v 1.2 2012/07/30 01:43:52 dholland Exp $
+
+Configure paths for pkgsrc.
+
 --- modules/clx/mit-clx/Makefile.orig	2009-08-17 16:02:57.000000000 +0200
 +++ modules/clx/mit-clx/Makefile	2011-04-20 17:53:54.367649126 +0200
 @@ -1,10 +1,10 @@
  # Directories used by "make install":
  srcdir = .
 -prefix = /usr/local
-+prefix = ${DESTDIR}${LOCALBASE}
++prefix = ${DESTDIR}${PREFIX}
  exec_prefix = $(prefix)
  bindir = $(exec_prefix)/bin
  libdir = $(exec_prefix)/lib
