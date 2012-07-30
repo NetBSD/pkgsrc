@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2012/07/30 07:00:50 sbd Exp $
+# $NetBSD: Makefile,v 1.54 2012/07/30 07:04:29 sbd Exp $
 #
 
 PKGNAME=		amanda-client-${AMANDA_VERSION}
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		amacl
 
 COMMENT=		Client part of Amanda, a network backup system
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run perl:run
 
@@ -32,6 +32,11 @@ CONFIGURE_ENV+=		ac_cv_lib_termcap_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
+
+SPECIAL_PERMS+=		libexec/runtar		${AM_PROG_PERMS}
+SPECIAL_PERMS+=		libexec/killpgrp	${AM_PROG_PERMS}
+SPECIAL_PERMS+=		libexec/rundump		${AM_PROG_PERMS}
+SPECIAL_PERMS+=		libexec/calcsize	${AM_PROG_PERMS}
 
 .include "../../sysutils/amanda-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
