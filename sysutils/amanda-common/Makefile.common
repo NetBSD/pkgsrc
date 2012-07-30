@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2012/07/30 07:00:12 sbd Exp $
+# $NetBSD: Makefile.common,v 1.34 2012/07/30 07:02:17 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -43,11 +43,18 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
 CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
 CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR:Q}/gnutar-lists
+CONFIGURE_ARGS+=	--with-debugging=${VARBASE:Q}/log/amanda
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP:Q}
 CONFIGURE_ARGS+=	--with-owner=${REAL_ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-mmap
+CONFIGURE_ARGS+=	--with-index-server=localhost
+CONFIGURE_ARGS+=	--with-tape-server=localhost
+CONFIGURE_ARGS+=	--with-assertions
 CONFIGURE_ARGS+=	--with-amandahosts
+CONFIGURE_ARGS+=	--with-bsd-security
+CONFIGURE_ARGS+=	--with-bsdtcp-security
+CONFIGURE_ARGS+=	--with-bsdudp-security
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
 
 .include "../../sysutils/amanda-common/options.mk"
