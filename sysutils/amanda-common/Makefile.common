@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2012/07/30 07:04:29 sbd Exp $
+# $NetBSD: Makefile.common,v 1.37 2012/07/30 07:21:11 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -14,7 +14,15 @@ MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.amanda.org/
-LICENSE=		modified-bsd AND gnu-gpl-v2
+LICENSE=		modified-bsd AND gnu-gpl-v3
+
+DISTINFO_FILE=		${.CURDIR}/${COMMONDIR}/distinfo
+PATCHDIR=		${.CURDIR}/${COMMONDIR}/patches
+
+CHECK_PORTABILITY_SKIP+=	configure # It gets regend
+CHECK_PORTABILITY_SKIP+=	packaging/deb/amanda-backup-server.postinst
+CHECK_PORTABILITY_SKIP+=	packaging/common/post_inst_functions.sh
+CHECK_PORTABILITY_SKIP+=	packaging/common/test_sh_libs.sh
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,11 +40,15 @@ AMANDA_VAR?=		${VARBASE}/amanda
 PKG_GROUPS_VARS+=	AMANDA_GROUP
 PKG_USERS_VARS+=	AMANDA_USER
 BUILD_DEFS+=		AMANDA_TMP AMANDA_USER AMANDA_GROUP AMANDA_VAR VARBASE
+FILES_SUBST+=		AMANDA_VAR=${AMANDA_VAR:Q}
 
 AM_PROG_PERMS=		${REAL_ROOT_USER} ${AMANDA_GROUP} 4510
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gzip:run gtar:run
+USE_TOOLS+=		gzip:run gtar:run perl:run
+USE_TOOLS+=		gmake pkg-config autoconf automake
+PERL5_CONFIGURE=	no
+AUTO_MKDIRS=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
@@ -45,11 +57,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
 CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
 CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR:Q}/gnutar-lists
+CONFIGURE_ARGS+=	--with-amperldir=${AMPERLDIR:Q}
 CONFIGURE_ARGS+=	--with-debugging=${VARBASE:Q}/log/amanda
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP:Q}
 CONFIGURE_ARGS+=	--with-owner=${REAL_ROOT_USER:Q}
-CONFIGURE_ARGS+=	--with-mmap
 CONFIGURE_ARGS+=	--with-index-server=localhost
 CONFIGURE_ARGS+=	--with-tape-server=localhost
 CONFIGURE_ARGS+=	--with-assertions
@@ -62,4 +74,55 @@ CONFIGURE_ARGS+=	--disable-installperms
 
 INSTALL_MAKE_FLAGS+=	SETUID_GROUP=${ROOT_GROUP}
 
+AMPERLDIR=		${PERLDIR:Q}/${PERL5_SUB_INSTALLVENDORLIB}
+
 .include "../../sysutils/amanda-common/options.mk"
+
+.PHONY: autogen
+pre-configure: autogen
+autogen:
+	${RUN}${_ULIMIT_CMD} cd ${WRKSRC} &&				\
+		${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}		\
+			${CONFIG_SHELL} ./autogen
+
+.PHONY: build-perl
+post-build: build-perl
+build-perl:
+.if defined(PERL5_LIBS) && !empty(PERL5_LIBS)
+	${RUN}${_ULIMIT_CMD} cd ${WRKSRC}/perl &&			\
+		 ${BUILD_MAKE_CMD} ${PERL5_LIBS:@lib@lib${lib}.la@}
+.endif
+
+.if defined(PERL5_MODS) && !empty(PERL5_MODS)
+INSTALLATION_DIRS+= ${PERL5_MODS:H:@_t_@${PERL5_SUB_INSTALLVENDORLIB}/${_t_}@}
+.endif
+.if defined(PERL5_LIBS)  && !empty(PERL5_LIBS)
+INSTALLATION_DIRS+= ${PERL5_LIBS:@_t_@${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/${_t_}@}
+.endif
+
+.PHONY: post-install-extra
+post-install: post-install-extra
+post-install-extra:
+.if defined(PERL5_MODS) && !empty(PERL5_MODS)
+.  for mod in ${PERL5_MODS}
+	${INSTALL_DATA} ${WRKSRC}/perl/${mod}				\
+		${DESTDIR}${PERLDIR}/${PERL5_SUB_INSTALLVENDORLIB}/${mod}
+.  endfor
+.endif
+.if defined(PERL5_LIBS)  && !empty(PERL5_LIBS)
+.  for lib in ${PERL5_LIBS}
+	${RUN}${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
+	  ${WRAPPER_BINDIR}/libtool --mode=install ${INSTALL_LIB}	\
+	    ${WRKSRC}/perl/lib${lib}.la					\
+	    ${DESTDIR}${PERLDIR}/${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/${lib}
+.  endfor
+.endif
+.if defined(MANPAGES) && !empty(MANPAGES)
+.  for manpage in ${MANPAGES}
+	${INSTALL_MAN} ${WRKSRC}/man/${manpage}				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${manpage:E}
+.  endfor
+.endif
+
+.include "../../lang/perl5/module.mk"
+.include "../../devel/glib2/buildlink3.mk"

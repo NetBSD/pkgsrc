@@ -1,11 +1,22 @@
-$NetBSD: distinfo,v 1.9 2008/03/08 01:10:27 gdt Exp $
+$NetBSD: distinfo,v 1.10 2012/07/30 07:21:11 sbd Exp $
 
-SHA1 (amanda-2.5.2p1.tar.gz) = 0969376590a93b2c060dbe9d2573bf335614a4c2
-RMD160 (amanda-2.5.2p1.tar.gz) = 31a81a7c5c0d953a6dffa575a7c3edc14d41f236
-Size (amanda-2.5.2p1.tar.gz) = 1967240 bytes
-SHA1 (patch-ab) = 1b07671b54492c3e4826e09f66ba9f4b1c9e3e55
-SHA1 (patch-ac) = e67098e2fb0a0e85837d124e41fd9d1976675f89
-SHA1 (patch-ad) = 510e650c9e9976323b1d27a7895cee6281b89dcd
-SHA1 (patch-af) = 6f996ef8dacb75cf17a47df73024b91ad137315e
-SHA1 (patch-ag) = 6e79b0e71d37a44b03addae67e361178b537ad8d
-SHA1 (patch-ah) = aecd08fd2a1982ac8ab62aa85979958b73fd038c
+SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
+RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
+Size (amanda-3.3.1.tar.gz) = 4328574 bytes
+SHA1 (patch-Makefile.am) = 005201b7a9b4e875c45362456e100c57fcf700f3
+SHA1 (patch-amandad-src_Makefile.am) = bdff2c06da0ee6c88237c56568fe20c5cefedd7a
+SHA1 (patch-application-src_Makefile.am) = 3a5f256ab7e2439c2e19c4f75234d3a677707cc2
+SHA1 (patch-client-src_Makefile.am) = 641ef76fd1ea413b416704e1e52e25a93a596442
+SHA1 (patch-client-src_sendbackup-dump.c) = aea1aca0bbcdab0c393b012a592cbc5ca458acec
+SHA1 (patch-client-src_sendsize.c) = 32a1627c250b6413e4695a610bba59796c6e7ed6
+SHA1 (patch-common-src_glib-util.c) = 8b62499f6730843fbf9e872adc80978b77b5573f
+SHA1 (patch-common-src_glib-util.h) = 6d5b14acd7a44b17a52ebc697f5354db2a4b04f9
+SHA1 (patch-config_amanda_dumpers.m4) = 3d0cf6133b003de53e05929d2ce04eaa0f614819
+SHA1 (patch-config_amanda_krb5-security.m4) = c82af0e106e49b59994b40f12ed5b1c165a8497f
+SHA1 (patch-config_macro-archive_xsltproc.m4) = 20324db1ce3db016fa89fe39df5a8133c7766693
+SHA1 (patch-device-src_Makefile.am) = 29fd554033ff0ff7b1d98a08306f157ced7324c5
+SHA1 (patch-example_Makefile.am) = 8d2dac1abdc473fbf94489bcb620a42a665fd27a
+SHA1 (patch-oldrecover-src_Makefile.am) = 9127c1523937da3955662cc0b0921d05bca75248
+SHA1 (patch-perl_Makefile.am) = 9b02c19d88a91385fe0bd330cebe5520a40a78af
+SHA1 (patch-recover-src_Makefile.am) = cd2ee55a0b285a33903e6157260cf167a1c79249
+SHA1 (patch-server-src_Makefile.am) = d1a4546a8ae55b86040d423bd1bde7b5de5f03aa
