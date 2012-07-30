@@ -1,0 +1,29 @@
+$NetBSD: patch-client-src_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Link with installed librarys from amanda-common.
+
+--- client-src/Makefile.am.orig	2012-02-21 11:36:41.000000000 +0000
++++ client-src/Makefile.am
+@@ -36,7 +36,7 @@ libamclient_la_SOURCES += findpass.c
+ endif
+ 
+ libamclient_la_LDFLAGS = -release $(VERSION) $(AS_NEEDED_FLAGS)
+-libamclient_la_LIBADD  = ../common-src/libamanda.la
++libamclient_la_LIBADD  = -lamanda
+ 
+ ###
+ # Because libamanda includes routines (e.g. regex) provided by some system
+@@ -45,10 +45,10 @@ libamclient_la_LIBADD  = ../common-src/l
+ # routines, and second to pick up any references in the other libraries.
+ ###
+ 
+-LDADD = ../common-src/libamanda.la \
++LDADD = -lamanda \
+ 	libamclient.la \
+-	../amandad-src/libamandad.la \
+-	../common-src/libamanda.la \
++	-lamandad \
++	-lamanda \
+ 	../gnulib/libgnu.la
+ 
+ # these are used for testing only:
