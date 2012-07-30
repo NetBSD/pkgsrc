@@ -1,13 +1,21 @@
-$NetBSD: patch-ac,v 1.2 2005/06/20 10:58:17 wennmach Exp $
+$NetBSD: patch-ac,v 1.3 2012/07/30 04:23:23 dholland Exp $
 
---- defaults/NetBSD/set.csh.orig	1999-07-28 17:13:06.000000000 +0200
-+++ defaults/NetBSD/set.csh	2005-05-30 15:00:52.000000000 +0200
-@@ -3,6 +3,6 @@
+Configure for pkgsrc.
+
+--- defaults/NetBSD/set.csh.orig	1999-07-28 15:13:06.000000000 +0000
++++ defaults/NetBSD/set.csh
+@@ -1,8 +1,8 @@
+-set CAT = /bin/cat
+-set CC = /usr/bin/cc
++set CAT = cat
++set CC = cc
  set CFLAGS = "-O2 -Wall -Wstrict-prototypes -Wmissing-prototypes -Wformat"
- set INSTALL = "/usr/bin/install -c"
- set STRIP = "/usr/bin/strip"
+-set INSTALL = "/usr/bin/install -c"
+-set STRIP = "/usr/bin/strip"
 -set INCLUDES = "-I/usr/X11R6/include"
 -set LDLIBS = "-lm -L/usr/X11R6/lib -lX11"
++set INSTALL = "false"
++set STRIP = "strip"
 +set INCLUDES = "-I@X11BASE@/include"
 +set LDLIBS = "-lm -L@X11BASE@/lib -Wl,-R@X11BASE@/lib -lX11"
  set MORELIBS = " "

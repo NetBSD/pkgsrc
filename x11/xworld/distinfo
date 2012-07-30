@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.9 2009/02/23 18:32:36 joerg Exp $
+$NetBSD: distinfo,v 1.10 2012/07/30 04:23:23 dholland Exp $
 
 SHA1 (xworld-2.0.tar.gz) = 99217a8f0b63ef8685c5508fbbff4f5d7bb9b9a8
 RMD160 (xworld-2.0.tar.gz) = b139357f529a8df535f82fecd74319b0f82605b3
 Size (xworld-2.0.tar.gz) = 113385 bytes
-SHA1 (patch-aa) = 197faebefac19a2457c0201ca35eb3a2f333c51a
+SHA1 (patch-aa) = bae4e8be7dbe302c11012109a2971e7aadb2a357
 SHA1 (patch-ab) = 60d1591c3c155e9fbf6bac094b20cd6a6df73df0
-SHA1 (patch-ac) = 6907ce3a08c8c8ab3689d7c1956e5d86f6265fbf
+SHA1 (patch-ac) = 9d86f4b5837fc36a6f4124f3b849887586c68af1
 SHA1 (patch-ad) = d243d16ef9d79e82c817ae116b3a9b9cba71a1eb
 SHA1 (patch-ae) = 5abdb1a4a6133fee1f5d3a83625a41c27e07c912
 SHA1 (patch-af) = cf41e600032bea1c3b2cbd5436160b412fad7010
-SHA1 (patch-ag) = b764304482e74438464cebdf8880381074887588
-SHA1 (patch-ah) = ee85c12a0b6d4355a235c6e26679448758067190
-SHA1 (patch-ai) = 2c22ad01c6adb966c7b445d86c1939fa4d8328c9
-SHA1 (patch-aj) = 0d8e63ab485b3cb43750cc34554025ba1316810f
+SHA1 (patch-ag) = 88d5420cc7a463e6e4acb714d080cac6a21e1ade
+SHA1 (patch-ah) = 197774f90d9bcf3f8c8a642287ea7385d27e6413
+SHA1 (patch-ai) = baa09051d09230d7b0371aae7f89451789d32e85
+SHA1 (patch-aj) = 75a7ffa80e2516de08af741b7e8aa5828747f7cc

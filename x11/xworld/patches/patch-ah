@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2006/02/19 01:40:26 schwarz Exp $
+$NetBSD: patch-ah,v 1.2 2012/07/30 04:23:23 dholland Exp $
+
+IRIX 5 hack.
 
 --- compile_world.c.orig	2006-02-19 02:24:33.000000000 +0100
 +++ compile_world.c	2006-02-19 02:26:05.000000000 +0100
