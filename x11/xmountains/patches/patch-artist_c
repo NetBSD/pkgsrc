@@ -1,0 +1,14 @@
+$NetBSD: patch-artist_c,v 1.1 2012/07/30 03:33:12 dholland Exp $
+
+- use standard headers
+
+--- artist.c~	2004-05-05 08:30:35.000000000 +0000
++++ artist.c
+@@ -3,6 +3,7 @@
+  */
+ #include <math.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "paint.h"
+ #include "crinkle.h"
+ 
