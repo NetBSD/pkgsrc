@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2005/06/25 00:40:20 minskim Exp $
+$NetBSD: patch-ag,v 1.2 2012/07/30 04:23:23 dholland Exp $
+
+Cope with spaces in uname output.
 
 --- configure.orig	1999-07-28 11:21:59.000000000 -0500
 +++ configure

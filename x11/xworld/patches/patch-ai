@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2006/02/19 01:40:26 schwarz Exp $
+$NetBSD: patch-ai,v 1.2 2012/07/30 04:23:23 dholland Exp $
+
+IRIX 5 hack.
 
 --- xworld.c.orig	2006-02-19 02:25:25.000000000 +0100
 +++ xworld.c	2006-02-19 02:26:37.000000000 +0100
