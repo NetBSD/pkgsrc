@@ -1,4 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2011/09/08 00:24:43 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2012/07/30 02:53:57 dholland Exp $
+
+- Add image libraries to link. (is this needed?)
+- Honor LDFLAGS so rpaths work.
+- Configure paths for pkgsrc.
+- Use optimization level that actually exists (gcc) or works (clang).
 
 --- fd2ps/Imakefile.orig	2002-10-01 16:40:02.000000000 +0000
 +++ fd2ps/Imakefile
