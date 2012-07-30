@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2008/08/29 16:43:58 sborrill Exp $
+$NetBSD: patch-ac,v 1.3 2012/07/30 02:21:31 dholland Exp $
+
+Configure paths for pkgsrc.
 
 --- doc/Xdialog.man.orig	2008-08-29 15:18:19.000000000 +0100
 +++ doc/Xdialog.man	2008-08-29 15:20:05.000000000 +0100
@@ -10,7 +12,7 @@ $NetBSD: patch-ac,v 1.2 2008/08/29 16:43:58 sborrill Exp $
 +\fI%%mandir%%/man1/Xdialog.1\fP
  .br 
 -\fI%%datadir%%/doc/Xdialog\-%%version%%/*\fP
-+\fI%%datadir%%/doc/html/xdialog/*\fP
++\fI%%datadir%%/doc/xdialog/*\fP
  .br 
 -\fI%%datadir%%/doc/Xdialog\-%%version%%/samples/*\fP
 +\fI%%datadir%%/examples/xdialog/*\fP
@@ -25,7 +27,7 @@ $NetBSD: patch-ac,v 1.2 2008/08/29 16:43:58 sborrill Exp $
 +Sample scripts are available in the \fI%%datadir%%/examples/xdialog\fR directory.
  .br 
 -Full HTML doc with screen shots, examples and FAQ is available in the \fI%%datadir%%/doc/Xdialog\-%%version%%/\fR directory.
-+Full HTML doc with screen shots, examples and FAQ is available in the \fI%%datadir%%/doc/html/xdialog\fR directory.
++Full HTML doc with screen shots, examples and FAQ is available in the \fI%%datadir%%/doc/xdialog\fR directory.
  .SH "AUTHORS"
  .LP 
  Thierry Godefroy <xdialog@free.fr> (from v1.1.0 onwards)
