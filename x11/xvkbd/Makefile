@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/03 09:55:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/30 04:12:46 dholland Exp $
 #
 
 DISTNAME=	xvkbd-3.2
@@ -22,6 +22,7 @@ SUBST_STAGE.xaw=	pre-configure
 SUBST_MESSAGE.xaw=	undefine Xaw3d
 SUBST_FILES.xaw=	Imakefile
 SUBST_SED.xaw=		-e 's,define XAW3D,undef XAW3D,g'
+
 .elif ${XAW_TYPE} == "neXtaw"
 BUILDLINK_TRANSFORM+=	l:Xaw3d:neXtaw
 .endif
