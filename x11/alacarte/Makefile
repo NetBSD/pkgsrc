@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/06/14 07:44:06 sbd Exp $
+# $NetBSD: Makefile,v 1.38 2012/07/30 01:30:10 dholland Exp $
 #
 
 DISTNAME=	alacarte-0.13.1
@@ -22,7 +22,8 @@ PY_PATCHPLIST=	yes
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Alacarte/util.py
-SUBST_SED.paths=	-e "s;@PREFIX@;${PREFIX};g" -e "s;@PKG_SYSCONFBASE@;${PKG_SYSCONFBASE};g"
+SUBST_SED.paths=	-e "s;@PREFIX@;${PREFIX};g"
+SUBST_SED.paths+=	-e "s;@PKG_SYSCONFBASE@;${PKG_SYSCONFBASE};g"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
