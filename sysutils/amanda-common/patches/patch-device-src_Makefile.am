@@ -1,0 +1,26 @@
+$NetBSD: patch-device-src_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Link with installed librarys from amanda-common.
+
+--- device-src/Makefile.am.orig	2012-02-21 11:36:44.000000000 +0000
++++ device-src/Makefile.am
+@@ -43,8 +43,8 @@ libamdevice_la_SOURCES = \
+ 	xfer-dest-taper-splitter.c \
+ 	xfer-source-recovery.c
+ libamdevice_la_LIBADD = \
+-	../common-src/libamanda.la \
+-	../xfer-src/libamxfer.la
++	-lamanda \
++	-lamxfer
+ 
+ if WANT_TAPE_DEVICE
+ libamdevice_la_SOURCES += tape-device.c
+@@ -60,7 +60,7 @@ endif
+ 
+ if WANT_NDMP_DEVICE
+ libamdevice_la_SOURCES += ndmp-device.c
+-libamdevice_la_LIBADD += ../ndmp-src/libndmlib.la
++libamdevice_la_LIBADD += -lndmlib
+ endif
+ 
+ ## automake-style tests

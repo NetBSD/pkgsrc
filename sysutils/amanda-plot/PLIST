@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:52:49 zuntum Exp $
-libexec/amcat.awk
-libexec/amplot.awk
-libexec/amplot.g
-libexec/amplot.gp
-man/man8/amplot.8
+@comment $NetBSD: PLIST,v 1.2 2012/07/30 07:21:11 sbd Exp $
+libexec/amanda/amcat.awk
+libexec/amanda/amplot.awk
+libexec/amanda/amplot.g
+libexec/amanda/amplot.gp
 sbin/amplot
+man/man8/amplot.8

@@ -1,0 +1,27 @@
+$NetBSD: patch-amandad-src_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Don't install amandad by default (it get manualy install in amanda-client).
+
+--- amandad-src/Makefile.am.orig	2012-02-21 11:36:42.000000000 +0000
++++ amandad-src/Makefile.am
+@@ -16,7 +16,7 @@ LINTFLAGS=$(AMLINTFLAGS)
+ 
+ amlib_LTLIBRARIES =       libamandad.la
+ 
+-amlibexec_PROGRAMS =	amandad
++EXTRA_PROGRAMS =	amandad
+ 
+ libamandad_la_SOURCES= amandad_util.c
+ libamandad_la_LDFLAGS = -release $(VERSION) $(AS_NEEDED_FLAGS)
+@@ -31,9 +31,8 @@ noinst_HEADERS  = amandad.h
+ # routines, and second to pick up any references in the other libraries.
+ ###
+ 
+-LDADD = ../common-src/libamanda.la \
+-	libamandad.la \
+-	../common-src/libamanda.la \
++LDADD = -lamanda \
++	-lamandad \
+ 	../gnulib/libgnu.la
+ 
+ lint:

@@ -1,0 +1,20 @@
+$NetBSD: patch-oldrecover-src_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Link with installed librarys from amanda-common.
+
+--- oldrecover-src/Makefile.am.orig	2012-02-21 11:36:41.000000000 +0000
++++ oldrecover-src/Makefile.am
+@@ -24,11 +24,11 @@ sbin_PROGRAMS =		amoldrecover
+ # routines, and second to pick up any references in the other libraries.
+ ###
+ 
+-LDADD = ../common-src/libamanda.la \
++LDADD = -lamanda \
+ 	@LEXLIB@ \
+ 	$(READLINE_LIBS) \
+ 	../client-src/libamclient.la \
+-	../common-src/libamanda.la
++	-lamanda
+ 
+ amoldrecover_CSRC =	amrecover.c					\
+ 			display_commands.c		extract_list.c	\

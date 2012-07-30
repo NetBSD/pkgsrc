@@ -1,0 +1,20 @@
+$NetBSD: patch-application-src_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+Link with installed librarys from amanda-common.
+
+--- application-src/Makefile.am.orig	2012-02-21 11:36:45.000000000 +0000
++++ application-src/Makefile.am
+@@ -42,10 +42,10 @@ applicationdir = $(APPLICATION_DIR)
+ applicationexec_PROGRAMS = amgtar amstar
+ applicationexec_SCRIPTS = $(SCRIPTS_PERL)
+ 
+-LDADD = ../common-src/libamanda.la \
++LDADD = -lamanda \
+ 	../client-src/libamclient.la \
+-	../amandad-src/libamandad.la \
+-	../common-src/libamanda.la \
++	-lamandad \
++	-lamanda \
+ 	../gnulib/libgnu.la
+ 
+ if WANT_SETUID_CLIENT

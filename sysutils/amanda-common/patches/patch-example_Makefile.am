@@ -1,0 +1,13 @@
+$NetBSD: patch-example_Makefile.am,v 1.1 2012/07/30 07:21:11 sbd Exp $
+
+--- example/Makefile.am.orig	2012-02-21 11:36:41.000000000 +0000
++++ example/Makefile.am
+@@ -3,7 +3,7 @@
+ include $(top_srcdir)/config/automake/vars.am
+ include $(top_srcdir)/config/automake/installperms.am
+ 
+-amanda_dir    = $(amdatadir)
++amanda_dir    = $(docdir)
+ templatedir   = $(amanda_dir)/template.d
+ server_exampledir    = $(amanda_dir)/example
+ client_exampledir    = $(amanda_dir)/example

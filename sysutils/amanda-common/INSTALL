@@ -1,0 +1,9 @@
+# $NetBSD: INSTALL,v 1.3 2012/07/30 07:21:11 sbd Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	if ${TEST} ! -f @AMANDA_VAR@/amandates ;then
+		${TOUCH} @AMANDA_VAR@/amandates
+	fi
+	;;
+esac
