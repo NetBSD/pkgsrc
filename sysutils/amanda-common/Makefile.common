@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2012/07/30 07:03:04 sbd Exp $
+# $NetBSD: Makefile.common,v 1.36 2012/07/30 07:04:29 sbd Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -33,6 +33,8 @@ PKG_GROUPS_VARS+=	AMANDA_GROUP
 PKG_USERS_VARS+=	AMANDA_USER
 BUILD_DEFS+=		AMANDA_TMP AMANDA_USER AMANDA_GROUP AMANDA_VAR VARBASE
 
+AM_PROG_PERMS=		${REAL_ROOT_USER} ${AMANDA_GROUP} 4510
+
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gzip:run gtar:run
 
@@ -56,5 +58,8 @@ CONFIGURE_ARGS+=	--with-bsd-security
 CONFIGURE_ARGS+=	--with-bsdtcp-security
 CONFIGURE_ARGS+=	--with-bsdudp-security
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
+CONFIGURE_ARGS+=	--disable-installperms
+
+INSTALL_MAKE_FLAGS+=	SETUID_GROUP=${ROOT_GROUP}
 
 .include "../../sysutils/amanda-common/options.mk"

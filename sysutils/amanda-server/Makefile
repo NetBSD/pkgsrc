@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/07/30 07:00:50 sbd Exp $
+# $NetBSD: Makefile,v 1.52 2012/07/30 07:04:29 sbd Exp $
 
 PKGNAME=		amanda-server-${AMANDA_VERSION}
 PKGREVISION=		2
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		amase
 
 COMMENT=		Server part of Amanda, a network backup system
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/amanda-common/Makefile.common"
 
@@ -29,6 +29,10 @@ PLIST_VARS+=	scsi
 .if ${OPSYS} != "SunOS"
 PLIST.scsi=	yes
 .endif
+
+SPECIAL_PERMS+=		sbin/amcheck		${AM_PROG_PERMS}
+SPECIAL_PERMS+=		libexec/planner		${AM_PROG_PERMS}
+SPECIAL_PERMS+=		libexec/dumper		${AM_PROG_PERMS}
 
 .include "../../sysutils/amanda-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
