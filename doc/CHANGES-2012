@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2417 2012/07/30 01:19:57 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2418 2012/07/30 02:22:09 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3724,3 +3724,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/dc-tools to 1.4 [abs 2012-07-29]
 	Added sysutils/grub2 version 2.00 [gsutre 2012-07-29]
 	Updated x11/XaoS to 3.5 [dholland 2012-07-30]
+	Updated x11/xdialog to 2.3.1nb9 [dholland 2012-07-30]
