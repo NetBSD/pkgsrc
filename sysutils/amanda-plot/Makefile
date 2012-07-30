@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/07/30 07:04:29 sbd Exp $
+# $NetBSD: Makefile,v 1.30 2012/07/30 07:05:54 sbd Exp $
 #
 
 PKGNAME=		amanda-plot-${AMANDA_VERSION}
@@ -14,9 +14,12 @@ DEPENDS+=		amanda-server-${AMANDA_VERSION}{,nb[0-9]*}:../../sysutils/amanda-serv
 
 .include "../../sysutils/amanda-common/Makefile.common"
 
+FIND_PREFIX:=		GNUPLOT_PREFIX=gnuplot
+.include "../../mk/find-prefix.mk"
+
 CONFIGURE_ARGS+=	--without-client
 CONFIGURE_ARGS+=	--without-restore
 CONFIGURE_ARGS+=	--without-amrecover
-CONFIGURE_ENV+=		GNUPLOT="${LOCALBASE}/bin/gnuplot"
+CONFIGURE_ENV+=		GNUPLOT="${GNUPLOT_PREFIX}/bin/gnuplot"
 
 .include "../../mk/bsd.pkg.mk"
