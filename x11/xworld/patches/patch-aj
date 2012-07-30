@@ -1,4 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2009/02/23 18:32:36 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2012/07/30 04:23:23 dholland Exp $
+
+- destdir support
+- use pkgsrc install program
 
 --- Makefile.in.orig	2009-02-23 19:29:15.000000000 +0100
 +++ Makefile.in
