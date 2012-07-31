@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2010/06/21 07:53:14 spz Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/07/31 15:49:37 prlw1 Exp $
 bin/freeciv-gtk2
+bin/freeciv-modpack
+share/applications/freeciv-modpack.desktop
 share/applications/freeciv.desktop
