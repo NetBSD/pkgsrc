@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2442 2012/07/31 15:59:03 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2443 2012/07/31 16:12:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3778,3 +3778,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/freeciv-share to 2.3.2 [prlw1 2012-07-31]
 	Updated games/freeciv-server to 2.3.2 [prlw1 2012-07-31]
 	Updated games/freeciv-client to 2.3.2 [prlw1 2012-07-31]
+	Updated converters/dos2unix to 6.0.1 [ryoon 2012-07-31]
