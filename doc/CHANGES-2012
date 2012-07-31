@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2430 2012/07/31 12:02:17 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2431 2012/07/31 12:32:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3741,3 +3741,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/parrot to 4.5.0 [he 2012-07-31]
 	Updated databases/ruby-dm-core to 1.2.0nb1 [taca 2012-07-31]
 	Updated net/ruby-addressable to 2.3.2 [taca 2012-07-31]
+	Updated devel/ruby-activesupport3 to 3.0.16 [taca 2012-07-31]
+	Updated devel/ruby-activemodel to 3.0.16 [taca 2012-07-31]
+	Updated www/ruby-activeresource3 to 3.0.16 [taca 2012-07-31]
+	Updated www/ruby-actionpack3 to 3.0.16 [taca 2012-07-31]
+	Updated databases/ruby-activerecord3 to 3.0.16 [taca 2012-07-31]
+	Updated mail/ruby-actionmailer3 to 3.0.16 [taca 2012-07-31]
+	Updated devel/ruby-railties to 3.0.16 [taca 2012-07-31]
+	Updated www/ruby-rails3 to 3.0.16 [taca 2012-07-31]
