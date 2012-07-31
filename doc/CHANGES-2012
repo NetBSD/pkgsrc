@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2441 2012/07/31 15:58:31 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2442 2012/07/31 15:59:03 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3777,3 +3777,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/dconf-editor to 0.11.0 [wiz 2012-07-31]
 	Updated games/freeciv-share to 2.3.2 [prlw1 2012-07-31]
 	Updated games/freeciv-server to 2.3.2 [prlw1 2012-07-31]
+	Updated games/freeciv-client to 2.3.2 [prlw1 2012-07-31]
