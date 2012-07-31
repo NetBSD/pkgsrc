@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2425 2012/07/31 00:41:43 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2426 2012/07/31 00:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3736,3 +3736,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/quvi to 0.4.2 [wiz 2012-07-31]
 	Updated net/libquvi to 0.4.1 [wiz 2012-07-31]
 	Updated net/libquvi-scripts to 0.4.7 [wiz 2012-07-31]
+	Updated net/clive to 2.3.3 [wiz 2012-07-31]
