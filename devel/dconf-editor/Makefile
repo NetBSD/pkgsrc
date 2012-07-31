@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2012/06/14 07:45:19 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/31 15:46:20 wiz Exp $
 #
 
-DISTNAME=	dconf-0.5.1
-PKGNAME=	dconf-editor-0.5.1
-PKGREVISION=	5
+DISTNAME=	dconf-0.11.0
+PKGNAME=	dconf-editor-0.11.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.5/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.11/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/dconf
 COMMENT=	Backend for gsettings
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/dconf/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/dconf/patches
@@ -38,6 +37,8 @@ pre-build:
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
