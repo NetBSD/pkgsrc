@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2012/07/31 18:15:14 drochner Exp $
+
+--- Makefile.in.orig	2010-11-11 05:25:32.000000000 +0000
++++ Makefile.in
+@@ -250,7 +250,7 @@ FONT_FILES = \
+ fontdir = @FONTDIR@
+ font_DATA = $(FONT_FILES)
+ actualconfigdir = $(FC_CONFDIR)/conf.d
+-availconfigdir = $(FC_CONFDIR)/conf.avail
++availconfigdir = $(prefix)/share/fontconfig/conf.avail
+ dist_availconfig_DATA = 42-luxi-mono.conf
+ EXTRA_DIST = $(FONT_FILES) COPYRIGHT.BH
+ MAINTAINERCLEANFILES = ChangeLog INSTALL
+@@ -605,10 +605,6 @@ install-data-hook:
+ 	$(MKFONTSCALE) $(DESTDIR)$(fontdir)
+ 	@rm -f $(DESTDIR)$(fontdir)/font.dir
+ 	$(MKFONTDIR) $(DESTDIR)$(fontdir)
+-	mkdir -p $(DESTDIR)$(actualconfigdir)
+-	@rm -f $(DESTDIR)$(actualconfigdir)/$(dist_availconfig_DATA)
+-	ln -s ../conf.avail/$(dist_availconfig_DATA) $(DESTDIR)$(actualconfigdir)
+-	@RUN_FCCACHE@
+ 
+ distuninstallcheck:
+ 	@:
