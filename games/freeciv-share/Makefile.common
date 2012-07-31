@@ -1,22 +1,25 @@
-# $NetBSD: Makefile.common,v 1.38 2010/09/11 14:19:56 adam Exp $
+# $NetBSD: Makefile.common,v 1.39 2012/07/31 15:49:37 prlw1 Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
 # used by games/freeciv-server/Makefile
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.2.2
+FC_VERS=	2.3.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeciv/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeciv.org/
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches

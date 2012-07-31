@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
+$NetBSD: patch-aa,v 1.12 2012/07/31 15:49:37 prlw1 Exp $
 
---- configure.orig	2010-05-23 21:45:26.000000000 +0000
+https://gna.org/bugs/index.php?20002
+
+--- configure.orig	2012-03-31 12:37:54.000000000 +0000
 +++ configure
-@@ -22562,13 +22562,13 @@ $as_echo "yes" >&6; }
+@@ -18894,13 +18894,13 @@ $as_echo "yes" >&6; }
  
  
  
@@ -23,7 +25,7 @@ $NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -22639,13 +22639,13 @@ $as_echo "yes" >&6; }
+@@ -18971,13 +18971,13 @@ $as_echo "yes" >&6; }
  
  
  
@@ -44,7 +46,7 @@ $NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -22712,13 +22712,13 @@ $as_echo "yes" >&6; }
+@@ -19044,13 +19044,13 @@ $as_echo "yes" >&6; }
  
  
  
@@ -65,7 +67,7 @@ $NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -22781,13 +22781,13 @@ $as_echo "yes" >&6; }
+@@ -19113,13 +19113,13 @@ $as_echo "yes" >&6; }
  
  
  
@@ -86,7 +88,7 @@ $NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -22856,13 +22856,13 @@ $as_echo "yes" >&6; }
+@@ -19188,13 +19188,13 @@ $as_echo "yes" >&6; }
  
  
  
@@ -107,7 +109,7 @@ $NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -22928,13 +22928,13 @@ $as_echo "yes" >&6; }
+@@ -19260,13 +19260,13 @@ $as_echo "yes" >&6; }
  
  
  
@@ -128,7 +130,7 @@ $NetBSD: patch-aa,v 1.11 2010/06/21 07:53:14 spz Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -22999,13 +22999,13 @@ $as_echo "yes" >&6; }
+@@ -19331,13 +19331,13 @@ $as_echo "yes" >&6; }
  
  
  
