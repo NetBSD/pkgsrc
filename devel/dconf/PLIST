@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/16 19:47:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/31 15:46:20 wiz Exp $
 bin/dconf
+include/dconf-dbus-1/dconf-dbus-1.h
 include/dconf/dconf-client.h
 include/dconf/dconf-engine.h
 include/dconf/dconf-paths.h
@@ -7,19 +8,22 @@ include/dconf/dconf-readtype.h
 include/dconf/dconf-resetlist.h
 include/dconf/dconf.h
 lib/gio/modules/libdconfsettings.so
+lib/libdconf-dbus-1.so
+lib/libdconf-dbus-1.so.0
+lib/libdconf-dbus-1.so.0.0.0
 lib/libdconf.so
 lib/libdconf.so.0
 lib/libdconf.so.0.0.0
+lib/pkgconfig/dconf-dbus-1.pc
 lib/pkgconfig/dconf.pc
 libexec/dconf-service
+share/bash-completion.d/dconf-bash-completion.sh
 share/dbus-1/services/ca.desrt.dconf.service
-share/dbus-1/system-services/ca.desrt.dconf.service
 share/gtk-doc/html/dconf/DConfClient.html
 share/gtk-doc/html/dconf/annotation-glossary.html
 share/gtk-doc/html/dconf/api-index-full.html
 share/gtk-doc/html/dconf/ch01.html
 share/gtk-doc/html/dconf/dconf-DConf-Paths.html
-share/gtk-doc/html/dconf/dconf.devhelp
 share/gtk-doc/html/dconf/dconf.devhelp2
 share/gtk-doc/html/dconf/home.png
 share/gtk-doc/html/dconf/index.html

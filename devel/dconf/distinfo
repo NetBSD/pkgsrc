@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/01/12 13:52:10 drochner Exp $
+$NetBSD: distinfo,v 1.3 2012/07/31 15:46:20 wiz Exp $
 
-SHA1 (dconf-0.5.1.tar.bz2) = 4e1dab1f744aad0bff1896ac6f288ad6a9dfece8
-RMD160 (dconf-0.5.1.tar.bz2) = ebc02b010a44d78ac48dc1c4426cc723430b3016
-Size (dconf-0.5.1.tar.bz2) = 251287 bytes
-SHA1 (patch-aa) = 4e0ca83a57cae340cb0f661e36a4af4e772ae91b
-SHA1 (patch-ab) = c9878b23be5bf4b2305aae6318026cd081c674ce
-SHA1 (patch-ac) = 44a5e59474a26d42398dcbb099110f917492829a
-SHA1 (patch-ad) = 9e7b4dd33c755225562a6747ade1ce628e2f9125
+SHA1 (dconf-0.11.0.tar.bz2) = d1d81af4901fe20d9e4c7840e4b562ef4a09dabb
+RMD160 (dconf-0.11.0.tar.bz2) = e7d1a63019398bdd2f0b809dec32b43cdf048969
+Size (dconf-0.11.0.tar.bz2) = 211800 bytes
+SHA1 (patch-bin_Makefile.in) = acf5ef1e506461e0968250e8a45e4113b087eee4
+SHA1 (patch-editor_Makefile.in) = 47932981464911411b7a13f97231d7e741ce7f12
