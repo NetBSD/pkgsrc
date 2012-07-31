@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2422 2012/07/30 10:43:26 imil Exp $
+$NetBSD: CHANGES-2012,v 1.2423 2012/07/31 00:37:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3733,3 +3733,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/ImageMagick to 6.7.6.6nb3 [wiz 2012-07-30]
 	Updated graphics/GraphicsMagick to 1.3.16nb1 [wiz 2012-07-30]
 	Updated pkgtools/pkgin to 0.6.2 [imil 2012-07-30]
+	Updated net/quvi to 0.4.2 [wiz 2012-07-31]
