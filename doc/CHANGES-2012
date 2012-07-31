@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2439 2012/07/31 15:46:51 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2440 2012/07/31 15:58:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3775,3 +3775,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-ffi to 1.1.2 [taca 2012-07-31]
 	Updated devel/dconf to 0.11.0 [wiz 2012-07-31]
 	Updated devel/dconf-editor to 0.11.0 [wiz 2012-07-31]
+	Updated games/freeciv-share to 2.3.2 [prlw1 2012-07-31]
