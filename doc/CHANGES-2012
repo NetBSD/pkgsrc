@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2436 2012/07/31 13:51:49 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2437 2012/07/31 13:56:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3771,3 +3771,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-cassandra to 0.13.0 [taca 2012-07-31]
 	Updated databases/ruby-pg to 0.14.0 [taca 2012-07-31]
 	Updated databases/ruby-sequel to 3.37.0 [taca 2012-07-31]
+	Updated devel/ZenTest to 4.8.2 [taca 2012-07-31]
+	Updated devel/ruby-ffi to 1.1.2 [taca 2012-07-31]
