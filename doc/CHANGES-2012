@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2435 2012/07/31 13:22:20 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2436 2012/07/31 13:51:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3767,3 +3767,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rails32 to 3.2.7 [taca 2012-07-31]
 	Updated mail/ruby-mail22 to 2.2.19nb4 [taca 2012-07-31]
 	Updated www/contao211-translations to 201207290 [taca 2012-07-31]
+	Updated archivers/ruby-zip to 0.9.9 [taca 2012-07-31]
+	Updated databases/ruby-cassandra to 0.13.0 [taca 2012-07-31]
+	Updated databases/ruby-pg to 0.14.0 [taca 2012-07-31]
+	Updated databases/ruby-sequel to 3.37.0 [taca 2012-07-31]
