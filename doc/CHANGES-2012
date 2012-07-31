@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2428 2012/07/31 08:22:56 he Exp $
+$NetBSD: CHANGES-2012,v 1.2429 2012/07/31 11:46:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3739,3 +3739,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/clive to 2.3.3 [wiz 2012-07-31]
 	Updated devel/p5-strictures to 1.004001 [wen 2012-07-31]
 	Updated lang/parrot to 4.5.0 [he 2012-07-31]
+	Updated databases/ruby-dm-core to 1.2.0nb1 [taca 2012-07-31]
