@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/02/23 14:18:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/07/31 13:46:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/BSDL
@@ -31,12 +31,20 @@ ${GEM_LIBDIR}/lib/pg_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/sample/async_api.rb
 ${GEM_LIBDIR}/sample/async_copyto.rb
 ${GEM_LIBDIR}/sample/async_mixed.rb
+${GEM_LIBDIR}/sample/check_conn.rb
 ${GEM_LIBDIR}/sample/copyfrom.rb
 ${GEM_LIBDIR}/sample/copyto.rb
 ${GEM_LIBDIR}/sample/cursor.rb
+${GEM_LIBDIR}/sample/disk_usage_report.rb
+${GEM_LIBDIR}/sample/issue-119.rb
 ${GEM_LIBDIR}/sample/losample.rb
+${GEM_LIBDIR}/sample/minimal-testcase.rb
 ${GEM_LIBDIR}/sample/notify_wait.rb
+${GEM_LIBDIR}/sample/pg_statistics.rb
+${GEM_LIBDIR}/sample/replication_monitor.rb
 ${GEM_LIBDIR}/sample/test_binary_values.rb
+${GEM_LIBDIR}/sample/wal_shipper.rb
+${GEM_LIBDIR}/sample/warehouse_partitions.rb
 ${GEM_LIBDIR}/spec/data/expected_trace.out
 ${GEM_LIBDIR}/spec/data/random_binary_data
 ${GEM_LIBDIR}/spec/lib/helpers.rb
