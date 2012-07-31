@@ -1,0 +1,24 @@
+$NetBSD: patch-editor_Makefile.in,v 1.1 2012/07/31 15:46:20 wiz Exp $
+
+Adapt for pkgsrc split of dconf-editor into separate package.
+
+--- editor/Makefile.in.orig	2011-10-26 19:02:16.000000000 +0000
++++ editor/Makefile.in
+@@ -55,7 +55,7 @@ am_dconf_editor_OBJECTS = dconf-editor.$
+ 	dconf-schema.$(OBJEXT) dconf-view.$(OBJEXT)
+ dconf_editor_OBJECTS = $(am_dconf_editor_OBJECTS)
+ am__DEPENDENCIES_1 =
+-dconf_editor_DEPENDENCIES = ../client/libdconf.so.0 \
++dconf_editor_DEPENDENCIES = \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+@@ -225,7 +225,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CFLAGS = $(gtk_CFLAGS) $(gmodule_CFLAGS) $(libxml_CFLAGS) -I$(top_srcdir)/common -I$(top_srcdir)/client -DPKGDATADIR=\"@datadir@/dconf-editor\"
+ AM_VALAFLAGS = --vapidir ../client --pkg gtk+-3.0 --pkg gmodule-2.0 --pkg libxml-2.0 --pkg dconf
+-dconf_editor_LDADD = ../client/libdconf.so.0 $(gtk_LIBS) $(gmodule_LIBS) $(gee_LIBS) $(libxml_LIBS)
++dconf_editor_LDADD = $(prefix)/client/libdconf.so.0 $(gtk_LIBS) $(gmodule_LIBS) $(gee_LIBS) $(libxml_LIBS)
+ dconf_editor_SOURCES = config.vapi dconf-editor.vala dconf-model.vala dconf-schema.vala dconf-view.vala
+ desktopdir = $(datadir)/applications
+ desktop_in_files = dconf-editor.desktop.in.in
