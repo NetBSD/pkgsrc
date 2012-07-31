@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/07/25 11:41:19 he Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/07/31 08:16:06 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -447,7 +447,6 @@ lib/parrot/${PKGVERSION}/tools/build/pmc2c.pl
 lib/parrot/${PKGVERSION}/tools/dev/create_language.pl
 lib/parrot/${PKGVERSION}/tools/dev/gen_makefile.pl
 lib/parrot/${PKGVERSION}/tools/dev/mk_language_shell.pl
-lib/parrot/${PKGVERSION}/tools/dev/pbc_to_exe.pir
 lib/parrot/${PKGVERSION}/tools/dev/pprof2cg.pl
 lib/parrot/${PKGVERSION}/tools/dev/reconfigure.pl
 lib/parrot/${PKGVERSION}/tools/lib/File/Which.pm
@@ -513,13 +512,10 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/IO/Path.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Install.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Manifest.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/PMC.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Attribute.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Dumper.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Emitter.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Library.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/MULTI.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Method.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/Object.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PCCMETHOD.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PCCMETHOD_BITS.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Pmc2c/PMC.pm
