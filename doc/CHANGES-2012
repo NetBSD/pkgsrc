@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2427 2012/07/31 05:39:29 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2428 2012/07/31 08:22:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3738,3 +3738,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/libquvi-scripts to 0.4.7 [wiz 2012-07-31]
 	Updated net/clive to 2.3.3 [wiz 2012-07-31]
 	Updated devel/p5-strictures to 1.004001 [wen 2012-07-31]
+	Updated lang/parrot to 4.5.0 [he 2012-07-31]
