@@ -1,4 +1,6 @@
-$NetBSD: patch-xetexdir_XeTeX__ext.c,v 1.1 2012/07/09 01:51:34 minskim Exp $
+$NetBSD: patch-xetexdir_XeTeX__ext.c,v 1.2 2012/07/31 18:35:47 wiz Exp $
+
+Prepare for patching in absolute pkgsrc path to xdvipdfmx binary.
 
 --- xetexdir/XeTeX_ext.c.orig	2011-02-25 11:49:36.000000000 +0000
 +++ xetexdir/XeTeX_ext.c
