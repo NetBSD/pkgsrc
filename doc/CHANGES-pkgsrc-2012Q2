@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.28 2012/07/30 22:12:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.29 2012/07/31 18:32:45 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -183,3 +183,12 @@ devel/RTFM: security update
 Pullup ticket #3881 - requested by wiz
 net/Transmission: security update
 net/Transmission-gui: security update
+Pullup ticket #3882 - requested by dholland
+graphics/camlimages: build fix
+Pullup ticket #3883 - requested by wiz
+graphics/ImageMagick: security patch
+Pullup ticket #3884 - requested by wiz
+graphics/GraphicsMagick: security patch
+Pullup ticket #3885 - requested by drochner
+sysutils/xenkernel33: security patch
+sysutils/xenkernel41: security patch
