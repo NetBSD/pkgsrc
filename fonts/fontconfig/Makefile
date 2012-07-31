@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2012/06/10 16:12:46 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2012/07/31 18:12:28 drochner Exp $
 
-DISTNAME=	fontconfig-2.9.0
+DISTNAME=	fontconfig-2.10.1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/lib/X11/fonts
 CONFIGURE_ARGS+=	--with-freetype-config=${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
 CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
-CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-baseconfigdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE:Q}/cache/fontconfig
 CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ENV+=		HASDOCBOOK=no
@@ -35,42 +35,37 @@ GSFONTS=	${PREFIX}/share/fonts/urw,${PREFIX}/share/ghostscript/fonts
 .if ${X11BASE} != ${LOCALBASE}
 CONFIGURE_ARGS+=	--with-add-fonts=${X11BASE}/lib/X11/fonts,${GSFONTS}
 .else
-CONFIGURE_ARGS+=	--with-add-fonts=${GSFONTS}
+CONFIGURE_ARGS+=	--with-add-fonts=${LOCALBASE}/share/fonts/X11,${GSFONTS}
 .endif
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
 .endif
 
+SUBST_CLASSES+= prefix
+SUBST_STAGE.prefix=	post-build
+SUBST_FILES.prefix=	conf.d/README
+SUBST_VARS.prefix=	PREFIX
+
 EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
-CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.avail
+CONF_FILES+=	${EGDIR}/conf.d/README ${PKG_SYSCONFDIR}/conf.d/README
+
+TMPLDIR=	${PREFIX}/share/fontconfig/conf.avail
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
-CONF_FILES+=	${EGDIR}/conf.avail/11-lcdfilter-default.conf ${PKG_SYSCONFDIR}/conf.avail/11-lcdfilter-default.conf
-CONF_FILES+=	${EGDIR}/conf.avail/11-lcdfilter-legacy.conf ${PKG_SYSCONFDIR}/conf.avail/11-lcdfilter-legacy.conf
-CONF_FILES+=	${EGDIR}/conf.avail/11-lcdfilter-light.conf ${PKG_SYSCONFDIR}/conf.avail/11-lcdfilter-light.conf
-CONF_FILES+=	${EGDIR}/conf.d/20-fix-globaladvance.conf ${PKG_SYSCONFDIR}/conf.d/20-fix-globaladvance.conf
-CONF_FILES+=	${EGDIR}/conf.d/20-unhint-small-vera.conf ${PKG_SYSCONFDIR}/conf.d/20-unhint-small-vera.conf
-CONF_FILES+=	${EGDIR}/conf.d/30-metric-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-metric-aliases.conf
-CONF_FILES+=	${EGDIR}/conf.d/30-urw-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-urw-aliases.conf
-CONF_FILES+=	${EGDIR}/conf.d/40-nonlatin.conf ${PKG_SYSCONFDIR}/conf.d/40-nonlatin.conf
-CONF_FILES+=	${EGDIR}/conf.d/45-latin.conf ${PKG_SYSCONFDIR}/conf.d/45-latin.conf
-CONF_FILES+=	${EGDIR}/conf.d/49-sansserif.conf ${PKG_SYSCONFDIR}/conf.d/49-sansserif.conf
-CONF_FILES+=	${EGDIR}/conf.d/50-user.conf ${PKG_SYSCONFDIR}/conf.d/50-user.conf
-CONF_FILES+=	${EGDIR}/conf.d/51-local.conf ${PKG_SYSCONFDIR}/conf.d/51-local.conf
-CONF_FILES+=	${EGDIR}/conf.d/60-latin.conf ${PKG_SYSCONFDIR}/conf.d/60-latin.conf
-CONF_FILES+=	${EGDIR}/conf.d/65-fonts-persian.conf ${PKG_SYSCONFDIR}/conf.d/65-fonts-persian.conf
-CONF_FILES+=	${EGDIR}/conf.d/65-nonlatin.conf ${PKG_SYSCONFDIR}/conf.d/65-nonlatin.conf
-CONF_FILES+=	${EGDIR}/conf.d/69-unifont.conf ${PKG_SYSCONFDIR}/conf.d/69-unifont.conf
-CONF_FILES+=	${EGDIR}/conf.d/80-delicious.conf ${PKG_SYSCONFDIR}/conf.d/80-delicious.conf
-CONF_FILES+=	${EGDIR}/conf.d/90-synthetic.conf ${PKG_SYSCONFDIR}/conf.d/90-synthetic.conf
-CONF_FILES+=	${EGDIR}/conf.d/30-pkgsrc-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-pkgsrc-aliases.conf
+# following list from ${WRKSRC}/conf.d/Makefile.am
+FC_STDCONF=	20-unhint-small-vera.conf 30-metric-aliases.conf 30-urw-aliases.conf \
+	40-nonlatin.conf 45-latin.conf 49-sansserif.conf 50-user.conf 51-local.conf \
+	60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
+	80-delicious.conf 90-synthetic.conf
+# pkgsrc addition
+FC_STDCONF+=	30-pkgsrc-aliases.conf
+.for f in ${FC_STDCONF}
+CONF_FILES+=	${TMPLDIR}/${f} ${PKG_SYSCONFDIR}/conf.d/${f}
+.endfor
 
 MAKE_DIRS+=	${VARBASE}/cache
 BUILD_DEFS+=	VARBASE
-
-LIBS+=		${BUILDLINK_LDADD.iconv}
 
 TEST_TARGET=	check
 
@@ -80,9 +75,8 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf \
-		${DESTDIR}${EGDIR}/conf.d
+		${DESTDIR}${TMPLDIR}
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
