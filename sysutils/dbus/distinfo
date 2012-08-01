@@ -1,18 +1,11 @@
-$NetBSD: distinfo,v 1.38 2012/03/30 14:28:29 obache Exp $
+$NetBSD: distinfo,v 1.39 2012/08/01 17:52:21 drochner Exp $
 
-SHA1 (dbus-1.2.4.6permissive.tar.gz) = f71219624885fe2ec1990bb8bdd599e184dd5774
-RMD160 (dbus-1.2.4.6permissive.tar.gz) = 05d1c5fae8ae763a9beb8c7d6f390f3ff54e9c30
-Size (dbus-1.2.4.6permissive.tar.gz) = 1575270 bytes
-SHA1 (patch-CVE-2010-4352-1) = bc83f7a2b56558b6514de8de2d6319ad84f84fce
-SHA1 (patch-CVE-2010-4352-2) = 1427c2c4aea6cd21f5d19aa8fad90b87282b232b
-SHA1 (patch-CVE-2010-4352-3) = d5598dab11bad66c2f586e418a8b409ac5fc67d5
-SHA1 (patch-CVE-2010-4352-4) = 82a43bc19bf4ef73d6e2909dd1c948798585135d
-SHA1 (patch-CVE-2011-2200) = 99e991dd51312fb7181f12c1c5d3b87897e417ac
-SHA1 (patch-aa) = fd7cc2e11e15e13885e882e8de51e17af8a63d70
-SHA1 (patch-ab) = e08250a12e6c04c69278c03078a817159592b3d0
-SHA1 (patch-ac) = 63aab0ffac02a9cb85a80e31bbb1234534db378b
-SHA1 (patch-ag) = 999071b782982c12329025ea8e393bfed940b654
-SHA1 (patch-ai) = a45bd8d29955e9c14a4d8b3f44b42242d70c1cd8
-SHA1 (patch-ak) = 56c0a917e770b8d6ffc37ec7ab8beb631dd8ef72
-SHA1 (patch-al) = fad2f4df4537b2a3e21aaef29138060724ba8286
+SHA1 (dbus-1.6.4.tar.gz) = 17e619f008301592b7f01a60e7cf18e2752b5270
+RMD160 (dbus-1.6.4.tar.gz) = 041ad41c26f38647f3da8d7f0cb548c979521def
+Size (dbus-1.6.4.tar.gz) = 1927446 bytes
+SHA1 (patch-aa) = 0c3d145979e3b2358261c9f7f34701d02eb6ecd4
+SHA1 (patch-ab) = 1edd2dfd566b96a8908af2efa37d905919f07713
+SHA1 (patch-ak) = fcb0cad1b6e306db03d538d4ca65f4a18d4726ab
+SHA1 (patch-al) = 3f9f793b0c1455bf2bf079cc27b841c22f42c276
 SHA1 (patch-am) = 8c794ff8b0981e90243ee20c26ae1ecc72e68de8
+SHA1 (patch-ba) = ceb8e0c424c57410f8c3775087e4cae1b44da4c5

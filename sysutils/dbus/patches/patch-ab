@@ -1,26 +1,17 @@
-$NetBSD: patch-ab,v 1.18 2012/03/30 14:28:29 obache Exp $
+$NetBSD: patch-ab,v 1.19 2012/08/01 17:52:22 drochner Exp $
 
---- dbus/dbus-sysdeps-unix.c.orig	2009-05-05 20:51:37.000000000 +0000
+--- dbus/dbus-sysdeps-unix.c.orig	2012-07-03 18:02:45.000000000 +0000
 +++ dbus/dbus-sysdeps-unix.c
-@@ -23,6 +23,7 @@
+@@ -22,6 +22,8 @@
+  *
   */
  
- #define _GNU_SOURCE 
 +#define _NETBSD_SOURCE
++
+ #include <config.h>
  
  #include "dbus-internals.h"
- #include "dbus-sysdeps.h"
-@@ -35,6 +36,9 @@
- #include "dbus-list.h"
- #include "dbus-credentials.h"
- 
-+#ifdef HAVE_NETBSD_ATOMIC_OPS
-+#include <sys/atomic.h>
-+#endif
- #include <sys/types.h>
- #include <stdlib.h>
- #include <string.h>
-@@ -71,6 +75,10 @@
+@@ -72,6 +74,10 @@
  #include <ucred.h>
  #endif
  
@@ -31,9 +22,9 @@ $NetBSD: patch-ab,v 1.18 2012/03/30 14:28:29 obache Exp $
  #ifdef HAVE_ADT
  #include <bsm/adt.h>
  #endif
-@@ -87,6 +95,32 @@
- #define socklen_t int
- #endif
+@@ -122,6 +128,32 @@
+ 
+ #endif /* Solaris */
  
 +#ifdef LOCAL_PEEREID
 +static dbus_bool_t
@@ -56,7 +47,7 @@ $NetBSD: patch-ab,v 1.18 2012/03/30 14:28:29 obache Exp $
 +    *gid = cred.unp_egid;
 +
 +  _dbus_verbose ("dbus_nb_getpeereid: returning TRUE, pid=%d uid=%d gid=%d\n",
-+		 cred.unp_pid, cred.unp_euid, cred.unp_egid);
++                cred.unp_pid, cred.unp_euid, cred.unp_egid);
 +  return TRUE;
 +}
 +#endif
@@ -64,132 +55,68 @@ $NetBSD: patch-ab,v 1.18 2012/03/30 14:28:29 obache Exp $
  static dbus_bool_t
  _dbus_open_socket (int              *fd_p,
                     int               domain,
-@@ -581,7 +615,7 @@ _dbus_set_local_creds (int fd, dbus_bool
+@@ -969,7 +1001,7 @@ _dbus_set_local_creds (int fd, dbus_bool
  {
    dbus_bool_t retval = TRUE;
  
 -#if defined(HAVE_CMSGCRED)
 +#if defined(HAVE_CMSGCRED) || defined(LOCAL_PEEREID)
-   /* NOOP just to make sure only one codepath is used 
+   /* NOOP just to make sure only one codepath is used
     *      and to prefer CMSGCRED
     */
-@@ -1041,9 +1075,9 @@ write_credentials_byte (int             
-   int bytes_written;
-   char buf[1] = { '\0' };
- #if defined(HAVE_CMSGCRED) 
--  struct {
-+  union {
- 	  struct cmsghdr hdr;
--	  struct cmsgcred cred;
-+	  char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
-   } cmsg;
-   struct iovec iov;
-   struct msghdr msg;
-@@ -1054,10 +1088,10 @@ write_credentials_byte (int             
-   msg.msg_iov = &iov;
-   msg.msg_iovlen = 1;
- 
--  msg.msg_control = &cmsg;
--  msg.msg_controllen = sizeof (cmsg);
-+  msg.msg_control = (caddr_t) &cmsg;
-+  msg.msg_controllen = CMSG_SPACE (sizeof (struct cmsgcred));
-   memset (&cmsg, 0, sizeof (cmsg));
--  cmsg.hdr.cmsg_len = sizeof (cmsg);
-+  cmsg.hdr.cmsg_len = CMSG_LEN (sizeof (struct cmsgcred));
-   cmsg.hdr.cmsg_level = SOL_SOCKET;
-   cmsg.hdr.cmsg_type = SCM_CREDS;
- #endif
-@@ -1129,15 +1163,15 @@ _dbus_read_credentials_socket  (int     
-   dbus_pid_t pid_read;
-   int bytes_read;
-   
--  uid_read = DBUS_UID_UNSET;
--  pid_read = DBUS_PID_UNSET;
--  
- #ifdef HAVE_CMSGCRED 
--  struct {
-+  union {
-     struct cmsghdr hdr;
--    struct cmsgcred cred;
-+    char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
+@@ -1674,6 +1706,11 @@ _dbus_read_credentials_socket  (int     
+     char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
    } cmsg;
  
 +#elif defined(LOCAL_PEEREID)
-+  pid_t sockpid, sockuid, sockgid;
++  pid_t sockpid;
++  uid_t sockuid;
++  gid_t sockgid;
 +
  #elif defined(LOCAL_CREDS)
    struct {
      struct cmsghdr hdr;
-@@ -1145,6 +1179,9 @@ _dbus_read_credentials_socket  (int     
-   } cmsg;
- #endif
- 
-+  uid_read = DBUS_UID_UNSET;
-+  pid_read = DBUS_PID_UNSET;
-+
-   _DBUS_ASSERT_ERROR_IS_CLEAR (error);
-   
-   /* The POSIX spec certainly doesn't promise this, but
-@@ -1170,11 +1207,16 @@ _dbus_read_credentials_socket  (int     
+@@ -1709,10 +1746,15 @@ _dbus_read_credentials_socket  (int     
    msg.msg_iov = &iov;
    msg.msg_iovlen = 1;
  
 -#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
 +#if (defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)) && !defined(LOCAL_PEEREID)
-   memset (&cmsg, 0, sizeof (cmsg));
+   _DBUS_ZERO(cmsg);
 +#ifdef HAVE_CMSGCRED
-+  msg.msg_control = (caddr_t) &cmsg;
-+  msg.msg_controllen = CMSG_SPACE (sizeof (struct cmsgcred));
+   msg.msg_control = (caddr_t) &cmsg;
+   msg.msg_controllen = CMSG_SPACE (sizeof (struct cmsgcred));
 +#else /* defined(LOCAL_CREDS) */
-   msg.msg_control = &cmsg;
-   msg.msg_controllen = sizeof (cmsg);
- #endif
++  msg.msg_control = &cmsg;
++  msg.msg_controllen = sizeof (cmsg);
 +#endif
+ #endif
  
   again:
-   bytes_read = recvmsg (client_fd, &msg, 0);
-@@ -1210,8 +1252,12 @@ _dbus_read_credentials_socket  (int     
+@@ -1749,9 +1791,13 @@ _dbus_read_credentials_socket  (int     
        return FALSE;
      }
  
 -#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
 +#if (defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)) && !defined(LOCAL_PEEREID)
 +#ifdef HAVE_CMSGCRED
-+  if (cmsg.hdr.cmsg_len < CMSG_LEN (sizeof (struct cmsgcred)) || cmsg.hdr.cmsg_type != SCM_CREDS)
+   if (cmsg.hdr.cmsg_len < CMSG_LEN (sizeof (struct cmsgcred))
+ 		  || cmsg.hdr.cmsg_type != SCM_CREDS)
 +#else /* defined(LOCAL_CREDS) */
-   if (cmsg.hdr.cmsg_len < sizeof (cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS)
++  if (cmsg.hdr.cmsg_len < sizeof (cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS)
 +#endif
      {
        dbus_set_error (error, DBUS_ERROR_FAILED,
                        "Message from recvmsg() was not SCM_CREDS");
-@@ -1223,7 +1269,11 @@ _dbus_read_credentials_socket  (int     
- 
-   {
- #ifdef SO_PEERCRED
-+#ifdef __OpenBSD__
-+    struct sockpeercred cr;   
-+#else
-     struct ucred cr;   
-+#endif
-     int cr_len = sizeof (cr);
-     
-     if (getsockopt (client_fd, SOL_SOCKET, SO_PEERCRED, &cr, &cr_len) == 0 &&
-@@ -1238,8 +1288,21 @@ _dbus_read_credentials_socket  (int     
- 		       cr_len, (int) sizeof (cr), _dbus_strerror (errno));
-       }
- #elif defined(HAVE_CMSGCRED)
--    pid_read = cmsg.cred.cmcred_pid;
--    uid_read = cmsg.cred.cmcred_euid;
-+    struct cmsgcred *cred;
-+
-+    cred = (struct cmsgcred *) CMSG_DATA (&cmsg);
-+    pid_read = cred->cmcred_pid;
-+    uid_read = cred->cmcred_euid;
+@@ -1787,6 +1833,16 @@ _dbus_read_credentials_socket  (int     
+     cred = (struct cmsgcred *) CMSG_DATA (&cmsg.hdr);
+     pid_read = cred->cmcred_pid;
+     uid_read = cred->cmcred_euid;
 +#elif defined(LOCAL_PEEREID)
 +    if (dbus_nb_getpeereid(client_fd, &sockpid, &sockuid, &sockgid) == TRUE)
 +      {
-+	pid_read = sockpid;
-+	uid_read = sockuid;
++       pid_read = sockpid;
++       uid_read = sockuid;
 +      }
 +    else
 +      {
@@ -198,66 +125,12 @@ $NetBSD: patch-ab,v 1.18 2012/03/30 14:28:29 obache Exp $
  #elif defined(LOCAL_CREDS)
      pid_read = DBUS_PID_UNSET;
      uid_read = cmsg.cred.sc_uid;
-@@ -1301,7 +1364,7 @@ _dbus_read_credentials_socket  (int     
+@@ -1848,7 +1904,7 @@ _dbus_read_credentials_socket  (int     
        }
      if (ucred != NULL)
        ucred_free (ucred);
 -#else /* !SO_PEERCRED && !HAVE_CMSGCRED && !HAVE_GETPEEREID && !HAVE_GETPEERUCRED */
-+#else /* !SO_PEERCRED && !HAVE_CMSGCRED && !HAVE_GETPEEREID && !HAVE_GETPEERUCRED && !LOCAL_PEEREID*/
++#else /* !SO_PEERCRED && !HAVE_CMSGCRED && !HAVE_GETPEEREID && !HAVE_GETPEERUCRED && !LOCAL_PEEREID */
      _dbus_verbose ("Socket credentials not supported on this OS\n");
  #endif
    }
-@@ -1826,7 +1889,26 @@ _dbus_parse_uid (const DBusString      *
-   return TRUE;
- }
- 
-+#ifdef HAVE_NETBSD_ATOMIC_OPS
-+dbus_int32_t
-+_dbus_atomic_inc (DBusAtomic *atomic)
-+{
-+	register dbus_int32_t old = atomic->value;
- 
-+	atomic_inc_uint((unsigned *)&atomic->value);
-+	return old;
-+}
-+
-+dbus_int32_t
-+_dbus_atomic_dec (DBusAtomic *atomic)
-+{
-+	register dbus_int32_t old = atomic->value;
-+
-+	atomic_dec_uint((unsigned *)&atomic->value);
-+  	return old;
-+}
-+_DBUS_DEFINE_GLOBAL_LOCK (atomic);
-+#else
- _DBUS_DEFINE_GLOBAL_LOCK (atomic);
- 
- #if DBUS_USE_ATOMIC_INT_486_COND
-@@ -1891,6 +1973,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
-   return res;
- #endif
- }
-+#endif /* HAVE_NETBSD_ATOMIC_OPS */
- 
- #ifdef DBUS_BUILD_TESTS
- /** Gets our GID
-@@ -2792,8 +2875,18 @@ int
- _dbus_printf_string_upper_bound (const char *format,
-                                  va_list     args)
- {
-+#if defined(__hpux) || defined(__sgi)
-+/* this code from libnbcompat's vsnprintf */
-+  static FILE *devnull = 0;
-+  if (!devnull) {
-+    devnull = fopen("/dev/null", "w");
-+    if (!devnull) return -1;
-+  }
-+  return vfprintf(devnull, format, args);
-+#else
-   char c;
-   return vsnprintf (&c, 1, format, args);
-+#endif
- }
- 
- /**
