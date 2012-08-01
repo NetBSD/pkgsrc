@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/10/29 13:26:59 marino Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/08/01 17:52:21 drochner Exp $
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
 bin/dbus-launch
@@ -18,6 +18,7 @@ include/dbus-1.0/dbus/dbus-protocol.h
 include/dbus-1.0/dbus/dbus-server.h
 include/dbus-1.0/dbus/dbus-shared.h
 include/dbus-1.0/dbus/dbus-signature.h
+include/dbus-1.0/dbus/dbus-syntax.h
 include/dbus-1.0/dbus/dbus-threads.h
 include/dbus-1.0/dbus/dbus-types.h
 include/dbus-1.0/dbus/dbus.h
@@ -31,6 +32,13 @@ man/man1/dbus-launch.1
 man/man1/dbus-monitor.1
 man/man1/dbus-send.1
 man/man1/dbus-uuidgen.1
+share/doc/dbus/dbus-faq.html
+share/doc/dbus/dbus-specification.html
+share/doc/dbus/dbus-test-plan.html
+share/doc/dbus/dbus-tutorial.html
+share/doc/dbus/diagram.png
+share/doc/dbus/diagram.svg
+share/doc/dbus/system-activation.txt
 share/examples/dbus/session.conf
 share/examples/dbus/system.conf
 share/examples/rc.d/dbus

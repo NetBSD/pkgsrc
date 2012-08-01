@@ -1,35 +1,42 @@
-$NetBSD: patch-aa,v 1.10 2009/01/07 19:11:36 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2012/08/01 17:52:22 drochner Exp $
 
---- bus/Makefile.in.orig	2008-12-18 21:47:13.000000000 +0100
+--- bus/Makefile.in.orig	2012-07-26 16:39:09.000000000 +0000
 +++ bus/Makefile.in
-@@ -415,9 +415,10 @@ target_vendor = @target_vendor@
+@@ -500,7 +500,8 @@ target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -configdir = $(sysconfdir)/dbus-1
 +etcconfigdir = $(sysconfdir)/dbus-1
 +configdir = $(datadir)/examples/@PACKAGE@
- INCLUDES = -I$(top_srcdir) $(DBUS_BUS_CFLAGS) @PIE_CFLAGS@		\
--	-DDBUS_SYSTEM_CONFIG_FILE=\""$(configdir)/system.conf"\"	\
-+	-DDBUS_SYSTEM_CONFIG_FILE=\""$(etcconfigdir)/system.conf"\"	\
- 	-DDAEMON_NAME=\"dbus-daemon\"  -DDBUS_COMPILATION
+ dbus_daemon_execdir = $(DBUS_DAEMONDIR)
+ DBUS_BUS_LIBS = \
+ 	$(XML_LIBS) \
+@@ -519,7 +520,7 @@ DBUS_LAUNCHER_LIBS = \
+ AM_CPPFLAGS = \
+ 	-I$(top_srcdir) \
+ 	$(XML_CFLAGS) \
+-	-DDBUS_SYSTEM_CONFIG_FILE=\""$(configdir)/system.conf"\" \
++	-DDBUS_SYSTEM_CONFIG_FILE=\""$(etcconfigdir)/system.conf"\" \
+ 	-DDBUS_COMPILATION \
+ 	-DDBUS_STATIC_BUILD \
+ 	$(NULL)
+@@ -1510,9 +1511,6 @@ clean-local:
+ 	/bin/rm *.bb *.bbg *.da *.gcov || true
  
- EFENCE = 
-@@ -1294,16 +1295,13 @@ install-data-hook:
- 		chmod 755 $(DESTDIR)$(DBUS_DAEMONDIR); \
- 	fi
- 	$(INSTALL_PROGRAM) dbus-daemon $(DESTDIR)$(DBUS_DAEMONDIR)
+ install-data-hook:
 -	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/run/dbus
 -	$(mkinstalldirs) $(DESTDIR)$(configdir)/system.d
 -	$(mkinstalldirs) $(DESTDIR)$(configdir)/session.d
  	$(mkinstalldirs) $(DESTDIR)$(datadir)/dbus-1/services
  	$(mkinstalldirs) $(DESTDIR)$(datadir)/dbus-1/system-services
- 	$(mkinstalldirs) $(DESTDIR)$(libexecdir)/dbus-1
- 	$(INSTALL_PROGRAM) dbus-daemon-launch-helper $(DESTDIR)$(libexecdir)
- 	if test `id -u` -eq 0; then \
- 		chown root:$(DBUS_USER) $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper; \
--		chmod 4750 $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper; \
-+		chmod 4550 $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper; \
- 	else \
- 		echo "Not installing $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper binary setuid!"; \
- 		echo "You'll need to manually set permissions to root:$(DBUS_USER) and permissions 4750"; \
+ # Install dbus.socket as default implementation of a D-Bus stack.
+@@ -1529,7 +1527,7 @@ install-data-hook:
+ @DBUS_UNIX_TRUE@install-exec-hook:
+ @DBUS_UNIX_TRUE@	if test `id -u` -eq 0; then \
+ @DBUS_UNIX_TRUE@		chown root:$(DBUS_USER) $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper$(EXEEXT); \
+-@DBUS_UNIX_TRUE@		chmod 4750 $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper$(EXEEXT); \
++@DBUS_UNIX_TRUE@		chmod 4550 $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper$(EXEEXT); \
+ @DBUS_UNIX_TRUE@	else \
+ @DBUS_UNIX_TRUE@		echo "Not installing $(DESTDIR)$(libexecdir)/dbus-daemon-launch-helper binary setuid!"; \
+ @DBUS_UNIX_TRUE@		echo "You'll need to manually set permissions to root:$(DBUS_USER) and permissions 4750"; \
