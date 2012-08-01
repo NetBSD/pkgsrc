@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2448 2012/08/01 13:12:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2449 2012/08/01 16:26:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3786,3 +3786,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xscreensaver to 5.19 [drochner 2012-08-01]
 	Updated www/curl to 7.27.0 [drochner 2012-08-01]
 	Updated devel/flex to 2.5.36nb1 [wiz 2012-08-01]
+	Updated www/contao211-translations to 201207310 [taca 2012-08-01]
