@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/08/01 18:01:24 drochner Exp $
+
+SHA1 (dbus-python-1.1.1.tar.gz) = 3c15438a7ec1f0698d50557e3421564564d0e097
+RMD160 (dbus-python-1.1.1.tar.gz) = 8e810a15c417541744df68cb01e5d707488bd6e8
+Size (dbus-python-1.1.1.tar.gz) = 596476 bytes
