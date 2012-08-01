@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.545 2012/07/29 21:47:08 gsutre Exp $
+# $NetBSD: Makefile,v 1.546 2012/08/01 18:02:27 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -67,6 +67,7 @@ SUBDIR+=	daemond
 SUBDIR+=	daemontools
 SUBDIR+=	dbus
 SUBDIR+=	dbus-glib
+SUBDIR+=	dbus-python-common
 SUBDIR+=	dbus-qt3
 SUBDIR+=	dc-tools
 SUBDIR+=	dd_rescue
