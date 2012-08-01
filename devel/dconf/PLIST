@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2012/07/31 15:46:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/01 11:28:59 drochner Exp $
 bin/dconf
 include/dconf-dbus-1/dconf-dbus-1.h
 include/dconf/dconf-client.h
 include/dconf/dconf-engine.h
 include/dconf/dconf-paths.h
-include/dconf/dconf-readtype.h
-include/dconf/dconf-resetlist.h
 include/dconf/dconf.h
 lib/gio/modules/libdconfsettings.so
 lib/libdconf-dbus-1.so
