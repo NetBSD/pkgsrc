@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2012/07/03 18:34:05 drochner Exp $
+# $NetBSD: Makefile,v 1.96 2012/08/01 12:22:14 drochner Exp $
 
 COMMENT=	Screen saver and locker for the X window system
 
@@ -18,8 +18,10 @@ EGDIR=			${PREFIX}/share/examples/xscreensaver
 MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 
 # Remove useless locale files that have no translations in them.
+# use pipes from 5.17, the new version is too slow
 post-extract:
 	cd ${WRKSRC}/po && ${RM} -f ca.po pt_BR.po
+	${CP} ${FILESDIR}/pipes.c ${WRKSRC}/hacks/glx
 
 INSTALLATION_DIRS=	${EGDIR}/pam.d
 
