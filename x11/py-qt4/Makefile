@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/07/03 18:13:07 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2012/08/01 18:17:44 drochner Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.9.4
@@ -26,6 +26,7 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PYTHON_VERSIONS_INCLUDE_3X= yes
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,-R${WRKSRC}/qpy/QtCore
 BUILDLINK_TRANSFORM+=	rm:-Wl,-R${WRKSRC}/qpy/QtDeclarative
@@ -71,7 +72,6 @@ do-configure:
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.include "../../textproc/py-elementtree/buildlink3.mk"
 # needs the QtXmlPatterns fix
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.6.1nb3
 .include "../../x11/qt4-libs/buildlink3.mk"
