@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.843 2012/07/27 20:54:02 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.844 2012/08/01 22:19:01 asau Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4030,12 +4030,13 @@ sub checkline_mk_text($$) {
 		}
 	}
 
-	$rest = $text;
-	while ($rest =~ s/(?:^|[^\$])\$\(([-A-Z0-9a-z_]+)(?::[^\}]+)?\)//) {
-		my ($varname) = ($1);
+	# Don't enforce purely aesthetic changes before more correct behaviour is implemented:
+	# $rest = $text;
+	# while ($rest =~ s/(?:^|[^\$])\$\(([-A-Z0-9a-z_]+)(?::[^\}]+)?\)//) {
+	# 	my ($varname) = ($1);
 
-		$line->log_warning("Please use \${${varname}\} instead of \$(${varname}).");
-	}
+	# 	$line->log_warning("Please use \${${varname}\} instead of \$(${varname}).");
+	# }
 
 }
 
