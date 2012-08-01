@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2012/05/15 13:07:28 obache Exp $
+# $NetBSD: Makefile.common,v 1.39 2012/08/01 15:23:45 drochner Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-sametime/Makefile
 # used by chat/pidgin-silc/Makefile
 
-PIDGIN_VERSION=	2.10.4
+PIDGIN_VERSION=	2.10.6
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ARGS+=	--disable-gtkui
 CONFIGURE_ARGS+=	--disable-consoleui
 CONFIGURE_ARGS+=	--disable-meanwhile
-CONFIGURE_ARGS+=	--disable-farsight
+CONFIGURE_ARGS+=	--disable-farstream
 CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--disable-avahi
 CONFIGURE_ARGS+=	--disable-perl
