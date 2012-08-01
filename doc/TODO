@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11399 2012/08/01 11:47:37 adam Exp $
+$NetBSD: TODO,v 1.11400 2012/08/01 12:29:20 drochner Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o csound5-5.13
 	o ctwm-3.8.1
 	o cups-1.6.1
-	o curl-7.27.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.23
 	o cwm-5.1
