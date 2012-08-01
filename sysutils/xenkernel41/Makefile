@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/27 18:50:34 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/01 12:22:28 asau Exp $
 #
 
 VERSION=	4.1.2
@@ -19,8 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
-
-WRKSRC=		${WRKDIR}/xen-${VERSION}
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
