@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2445 2012/08/01 11:25:58 imil Exp $
+$NetBSD: CHANGES-2012,v 1.2446 2012/08/01 11:47:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3781,3 +3781,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/dos2unix to 6.0.1 [ryoon 2012-07-31]
 	Updated fonts/fontconfig to 2.10.1 [drochner 2012-07-31]
 	Updated pkgtools/pkgin to 0.6.2.2 [imil 2012-08-01]
+	Updated graphics/pngcrush to 1.7.35 [adam 2012-08-01]
