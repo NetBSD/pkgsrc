@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2012/03/03 00:14:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/08/01 11:25:22 fhajny Exp $
 
-DISTNAME=	lighttpd-1.4.29
-PKGREVISION=	4
+DISTNAME=	lighttpd-1.4.31
 CATEGORIES=	www
 MASTER_SITES=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,9 +31,28 @@ CNFS=			${CNFS_cmd:sh}
 CONF_FILES+=		${EGDIR}/${file:Q} ${PKG_SYSCONFDIR}/${file:Q}
 .endfor
 
+BUILD_DEFS+=		VARBASE LIGHTTPD_LOGDIR LIGHTTPD_STATEDIR
+BUILD_DEFS+=		LIGHTTPD_USER LIGHTTPD_GROUP
+
+.include "../../mk/bsd.prefs.mk"
+
+LIGHTTPD_LOGDIR?=	${VARBASE}/log/lighttpd
+LIGHTTPD_STATEDIR?=	${VARBASE}/run
+LIGHTTPD_USER?=		lighttpd
+LIGHTTPD_GROUP?=	lighttpd
+
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${EGDIR}/conf.d ${EGDIR}/vhosts.d
 OWN_DIRS=		${PKG_SYSCONFDIR}/conf.d
 OWN_DIRS+=		${PKG_SYSCONFDIR}/vhosts.d
+OWN_DIRS_PERMS=		${LIGHTTPD_LOGDIR} ${LIGHTTPD_USER} ${LIGHTTPD_GROUP} 0755
+OWN_DIRS+=		${LIGHTTPD_STATEDIR}
+
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Fixing config file paths
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	doc/config/lighttpd.conf
+SUBST_VARS.path=	LIGHTTPD_LOGDIR LIGHTTPD_STATEDIR LIGHTTPD_USER \
+			LIGHTTPD_GROUP PKG_SYSCONFDIR
 
 post-install:
 	set -e; cd ${WRKSRC}/doc;				\
