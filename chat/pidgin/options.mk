@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2011/03/14 12:50:48 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2012/08/01 15:26:54 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
 PKG_SUPPORTED_OPTIONS+=		dbus debug gstreamer gtkspell farsight x11
@@ -19,10 +19,12 @@ PLIST.dbus=		yes
 .if !empty(PKG_OPTIONS:Mfarsight) && !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-vv
 PLIST.vv=		yes
+.else
+CONFIGURE_ARGS+=	--disable-vv
 .endif
 
 .if !empty(PKG_OPTIONS:Mfarsight)
-CONFIGURE_ARGS+=	--enable-farsight
+CONFIGURE_ARGS+=	--enable-farstream
 .  include "../../multimedia/farsight2/buildlink3.mk"
 .endif
 
