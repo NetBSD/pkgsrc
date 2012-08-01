@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2012/07/29 19:42:21 wiz Exp $
+$NetBSD: distinfo,v 1.14 2012/08/01 13:12:36 wiz Exp $
 
 SHA1 (flex-2.5.36.tar.gz) = ba0e59cb23bbaf1ef30b3648981981ae3db1a4d2
 RMD160 (flex-2.5.36.tar.gz) = c94b16dd78ba24626f06224b415ca40b52dc8543
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 938335a9071be62f534bad8e785003318816fd38
 SHA1 (patch-ab) = a459d86dce4f93103efde2dbd353db455b0c5e21
 SHA1 (patch-ac) = 27ac026f8a180b49523933c5d70db0237e8dc095
 SHA1 (patch-ad) = b7fe34269e4425a7b3871278bb6a2b1e754c9045
+SHA1 (patch-doc_Makefile.in) = 553176c39c357173286d0d5d5438c9a3ef240cf3
