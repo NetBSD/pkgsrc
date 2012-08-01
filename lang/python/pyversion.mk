@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.99 2012/05/06 13:18:30 obache Exp $
+# $NetBSD: pyversion.mk,v 1.100 2012/08/01 19:07:20 drochner Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -134,36 +134,43 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 _PYTHON_VERSION=	none
 .endif
 
+PLIST_VARS+=	py2x py3x
+
 .if ${_PYTHON_VERSION} == "32"
 PYPKGSRCDIR=	../../lang/python32
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python32}:${PYPKGSRCDIR}
 PYPACKAGE=	python32
 PYVERSSUFFIX=	3.2
 PYPKGPREFIX=	py32
+PLIST.py3x=	yes
 .elif ${_PYTHON_VERSION} == "31"
 PYPKGSRCDIR=	../../lang/python31
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python31}:${PYPKGSRCDIR}
 PYPACKAGE=	python31
 PYVERSSUFFIX=	3.1
 PYPKGPREFIX=	py31
+PLIST.py3x=	yes
 .elif ${_PYTHON_VERSION} == "27"
 PYPKGSRCDIR=	../../lang/python27
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python27}:${PYPKGSRCDIR}
 PYPACKAGE=	python27
 PYVERSSUFFIX=	2.7
 PYPKGPREFIX=	py27
+PLIST.py2x=	yes
 .elif ${_PYTHON_VERSION} == "26"
 PYPKGSRCDIR=	../../lang/python26
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python26}:${PYPKGSRCDIR}
 PYPACKAGE=	python26
 PYVERSSUFFIX=	2.6
 PYPKGPREFIX=	py26
+PLIST.py2x=	yes
 .elif ${_PYTHON_VERSION} == "25"
 PYPKGSRCDIR=	../../lang/python25
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python25}:${PYPKGSRCDIR}
 PYPACKAGE=	python25
 PYVERSSUFFIX=	2.5
 PYPKGPREFIX=	py25
+PLIST.py2x=	yes
 .else
 PKG_FAIL_REASON+=   "No valid Python version"
 PYPKGPREFIX=
