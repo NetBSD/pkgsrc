@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2012/07/30 18:43:51 imil Exp $
+# $NetBSD: Makefile,v 1.26 2012/08/01 11:15:32 imil Exp $
 #
 
-DISTNAME=		pkgin-0.6.2.1
+DISTNAME=		pkgin-0.6.2.2
 CATEGORIES=		pkgtools
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
