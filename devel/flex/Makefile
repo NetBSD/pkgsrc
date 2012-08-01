@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/07/31 18:16:50 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2012/08/01 13:12:36 wiz Exp $
 
 DISTNAME=		flex-2.5.36
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flex/}
 
@@ -8,10 +9,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://flex.sourceforge.net/
 COMMENT=		Fast clone of lex(1), the lexical scanner generator
 
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
-BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
-BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
-BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+# needed for building flex.pdf, make it an option?
+#BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+#BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
+#BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
+#BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
