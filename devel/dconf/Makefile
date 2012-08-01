@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2012/07/31 15:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/01 11:28:59 drochner Exp $
 #
 # Attention: Update this only together with devel/dconf-editor
 #
 
-DISTNAME=	dconf-0.11.0
+DISTNAME=	dconf-0.12.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.11/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.12/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/dconf
@@ -23,7 +23,7 @@ USE_TOOLS+=	pkg-config gmake
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala/buildlink3.mk"
+.include "../../lang/vala016/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
