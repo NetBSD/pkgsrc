@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/01 12:22:28 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/01 12:28:18 asau Exp $
 #
 
 VERSION=	4.1.2
@@ -37,11 +37,11 @@ XENKERNELDIR=		${PREFIX}/${INSTALLATION_DIRS}
 MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
 do-build:
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} debug=n xen
-	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
+	cd ${WRKSRC}/xen && ${BUILD_MAKE_CMD} debug=n build
+	${CP} ${WRKSRC}/xen/xen.gz ${WRKDIR}/xen.gz
 	cd ${WRKSRC}/xen && ${MAKE_PROGRAM} clean
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} debug=y xen
-	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
+	cd ${WRKSRC}/xen && ${BUILD_MAKE_CMD} debug=y build
+	${CP} ${WRKSRC}/xen/xen.gz ${WRKDIR}/xen-debug.gz
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/xen.gz \
