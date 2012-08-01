@@ -115,6 +115,7 @@ drupal-xmlservices	Enable XML-based services.
 dspam-preferences-extension	Enable preferences extension.
 dspam-verbose-debug	Enable verbose debugging support.
 dspam-virtualusers	Enable support for virtual users.
+dtrace			Enable DTrace support.
 dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
 dvdnav			Enable libdvdnav support to navigate DVDs.
