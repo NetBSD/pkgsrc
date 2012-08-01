@@ -1,0 +1,17 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2012/08/01 13:12:36 wiz Exp $
+
+Do not build and install pdf documentation.
+Too many dependencies for such a low-level package.
+(No configure option available to disable this there.)
+
+--- doc/Makefile.in.orig	2012-08-01 13:08:04.000000000 +0000
++++ doc/Makefile.in
+@@ -217,7 +217,7 @@ top_srcdir = @top_srcdir@
+ help2man = @HELP2MAN@
+ info_TEXINFOS = flex.texi
+ dist_man_MANS = flex.1
+-dist_doc_DATA = flex.pdf
++dist_doc_DATA = 
+ CLEANFILES = \
+ 	flex.hks \
+ 	flex.ops
