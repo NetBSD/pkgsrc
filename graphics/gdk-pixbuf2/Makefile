@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/12 14:54:23 taca Exp $
+# $NetBSD: Makefile,v 1.15 2012/08/01 15:34:14 drochner Exp $
 #
 
 DISTNAME=	gdk-pixbuf-2.26.1
@@ -33,7 +33,6 @@ _BUILDING_GTK2= yes
 post-install:
 	${RM} -f ${DESTDIR}${GDK_PIXBUF_LOADERS_DB}
 
-.include "../../archivers/xz/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
