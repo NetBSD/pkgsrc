@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.67 2012/07/29 17:31:11 abs Exp $
+# $Id: pkg_chk.sh,v 1.68 2012/08/02 09:39:49 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -747,8 +747,7 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a$opt_g$opt_l$opt_p$opt_r$opt_u$opt_N" ];
-then
+if [ -z "$opt_a$opt_g$opt_l$opt_p$opt_r$opt_u$opt_N" ];then
     usage "Must specify at least one of -a, -g, -l, -p, -r, -u or -N";
 fi
 
@@ -871,7 +870,7 @@ fi
 if [ -n "$opt_g" ]; then
     verbose "Write $PKGCHK_CONF based on installed packages"
     generate_conf_from_installed $PKGCHK_CONF
-    exit
+    cleanup_and_exit
 fi
 
 determine_tags
@@ -883,7 +882,7 @@ fi
 
 if [ -n "$opt_p" ] ; then
     pkgdirs_from_conf $PKGCHK_CONF $PKGDIRLIST | tr ' ' '\n'
-    exit
+    cleanup_and_exit
 fi
 
 if [ -n "$opt_a" -o -n "$opt_l" ];then	# Append to PKGDIRLIST based on conf
