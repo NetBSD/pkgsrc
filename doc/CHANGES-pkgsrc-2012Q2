@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.29 2012/07/31 18:32:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.30 2012/08/02 12:14:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -192,3 +192,5 @@ graphics/GraphicsMagick: security patch
 Pullup ticket #3885 - requested by drochner
 sysutils/xenkernel33: security patch
 sysutils/xenkernel41: security patch
+Pullup ticket #3886 - requested by obache
+emulators/suse121_libjpeg: security update
