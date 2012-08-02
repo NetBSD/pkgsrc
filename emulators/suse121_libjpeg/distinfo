@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:38:03 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/08/02 09:03:11 obache Exp $
 
-SHA1 (suse121/libjpeg62-62.0.0-10.1.2.i586.rpm) = a2efa1bd5fdda2d032bb8de7592851565011d1b1
-RMD160 (suse121/libjpeg62-62.0.0-10.1.2.i586.rpm) = 2eb2fb894c3da4979c2953f6f041a5a45e10863f
-Size (suse121/libjpeg62-62.0.0-10.1.2.i586.rpm) = 94134 bytes
-SHA1 (suse121/libjpeg62-62.0.0-10.1.2.x86_64.rpm) = bc4e19102c445dbf025b6be52f189aaa450b6e3f
-RMD160 (suse121/libjpeg62-62.0.0-10.1.2.x86_64.rpm) = 03471e020f193c14802b4433d1eb01a59217a282
-Size (suse121/libjpeg62-62.0.0-10.1.2.x86_64.rpm) = 89575 bytes
+SHA1 (suse121/libjpeg62-62.0.0-10.4.1.i586.rpm) = ae8352d087fc7e43323543b1ab19fe21d1273a33
+RMD160 (suse121/libjpeg62-62.0.0-10.4.1.i586.rpm) = f8f185a99d437e8e1320428a0626a2c7eed05536
+Size (suse121/libjpeg62-62.0.0-10.4.1.i586.rpm) = 94224 bytes
+SHA1 (suse121/libjpeg62-62.0.0-10.4.1.x86_64.rpm) = 3c945cc94edc0ac2ca9f4d9b60e86a6f6037c2b7
+RMD160 (suse121/libjpeg62-62.0.0-10.4.1.x86_64.rpm) = 830c54d4991ae628b2a4df437e34f559fe482431
+Size (suse121/libjpeg62-62.0.0-10.4.1.x86_64.rpm) = 89746 bytes
 SHA1 (suse121/libjpeg8-8.0.2-8.1.2.i586.rpm) = 017c8991ab90ff4ed3b67b31c4a8089dfd7206fd
 RMD160 (suse121/libjpeg8-8.0.2-8.1.2.i586.rpm) = f7e6fb22cc554561df0cb337a48ad5ab929c042b
 Size (suse121/libjpeg8-8.0.2-8.1.2.i586.rpm) = 97311 bytes
