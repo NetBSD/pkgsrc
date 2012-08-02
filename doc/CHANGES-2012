@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2451 2012/08/02 09:04:00 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2452 2012/08/02 09:40:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/py-dbus to 1.1.1 [drochner 2012-08-01]
 	Updated sysutils/dbus to 1.6.4 [drochner 2012-08-01]
 	Updated emulators/suse121_libjpeg to 12.1nb1 [obache 2012-08-02]
+	Updated pkgtools/pkg_chk to 2.0.3 [abs 2012-08-02]
