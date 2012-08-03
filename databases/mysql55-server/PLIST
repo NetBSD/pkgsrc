@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/06/02 22:28:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/08/03 13:46:49 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -459,6 +459,7 @@ share/mysql/test/include/mix2_ucs2.inc
 share/mysql/test/include/mtr_check.sql
 share/mysql/test/include/mtr_warnings.sql
 share/mysql/test/include/mysql_upgrade_preparation.inc
+share/mysql/test/include/mysqlbinlog_have_debug.inc
 share/mysql/test/include/mysqlbinlog_row_engine.inc
 share/mysql/test/include/mysqld--help.inc
 share/mysql/test/include/mysqldump.inc
@@ -4947,6 +4948,7 @@ share/mysql/test/suite/sys_vars/r/slave_allow_batching_basic.result
 share/mysql/test/suite/sys_vars/r/slave_compressed_protocol_basic.result
 share/mysql/test/suite/sys_vars/r/slave_exec_mode_basic.result
 share/mysql/test/suite/sys_vars/r/slave_load_tmpdir_basic.result
+share/mysql/test/suite/sys_vars/r/slave_max_allowed_packet_basic.result
 share/mysql/test/suite/sys_vars/r/slave_net_timeout_basic.result
 share/mysql/test/suite/sys_vars/r/slave_skip_errors_basic.result
 share/mysql/test/suite/sys_vars/r/slave_transaction_retries_basic_32.result
@@ -5451,6 +5453,7 @@ share/mysql/test/suite/sys_vars/t/slave_allow_batching_basic.test
 share/mysql/test/suite/sys_vars/t/slave_compressed_protocol_basic.test
 share/mysql/test/suite/sys_vars/t/slave_exec_mode_basic.test
 share/mysql/test/suite/sys_vars/t/slave_load_tmpdir_basic.test
+share/mysql/test/suite/sys_vars/t/slave_max_allowed_packet_basic.test
 share/mysql/test/suite/sys_vars/t/slave_net_timeout_basic.test
 share/mysql/test/suite/sys_vars/t/slave_skip_errors_basic.test
 share/mysql/test/suite/sys_vars/t/slave_transaction_retries_basic_32.test
