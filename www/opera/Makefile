@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2012/06/14 13:06:27 obache Exp $
+# $NetBSD: Makefile,v 1.97 2012/08/03 13:08:24 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -29,15 +29,15 @@ MASTER_SITE_OPERA+=	ftp://get.opera.com/pub/opera/ \
 USE_LANGUAGES=		# empty
 NO_BUILD=		yes
 
-OPERA_PKG_BUILD=	1467
-OPERA_PKG_VERSION=	12.00
-OPERA_PKG_VERSION_DIR=	1200
+OPERA_PKG_BUILD=	1532
+OPERA_PKG_VERSION=	12.01
+OPERA_PKG_VERSION_DIR=	1201
 
 PLIST_VARS+=		ia32w linux
 
 .if ${EMUL_OPSYS} == "linux"
 EMUL_MODULES.linux=	base x11 fontconfig
-EMUL_REQD=		suse>=10.0
+EMUL_REQD=		suse>=11.3
 OPERA_ARCH.x86_64=	x86_64
 OPERA_OPSYS_SUBDIR=	linux
 .if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
