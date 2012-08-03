@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/07/14 21:53:05 marino Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/03 08:53:57 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -122,17 +122,11 @@ BASELIB=		${PREFIX}/lib
 
 
 
-# testing if gcc-aux, gnatlink, gnatbind and gnatmake are in standard location
-# exists function will NOT expand any variable, so it has to be hard-coded
-.if exists(/usr/pkg/gcc-aux/bin/ada)      || exists(/opt/ipp/pkg/gcc-aux/bin/ada)
-.if exists(/usr/pkg/gcc-aux/bin/gnatbind) || exists(/opt/ipp/pkg/gcc-aux/bin/gnatbind)
-.if exists(/usr/pkg/gcc-aux/bin/gnatlink) || exists(/opt/ipp/pkg/gcc-aux/bin/gnatlink)
-.if exists(/usr/pkg/gcc-aux/bin/gnatmake) || exists(/opt/ipp/pkg/gcc-aux/bin/gnatmake)
-FULL_GNATGCC=${PREFIX}/gcc-aux/bin/ada
-.endif #gnatmake
-.endif #gnatlink
-.endif #gnatbind
-.endif #gnatgcc
+# testing if gcc-aux is already installed - if so, use this compiler along with
+# its gnatlink, gnatbind, and gnatmake rather than the older bootstrap versions
+.if exists(${LOCALBASE}/gcc-aux/bin/ada)
+FULL_GNATGCC=${LOCALBASE}/gcc-aux/bin/ada
+.endif
 
 
 .if ${FULL_GNATGCC} == "NOT SET"
@@ -206,6 +200,14 @@ post-extract:
 	@${PATCH} -d ${WRKSRC} -s -E < ${FILESDIR}/diff-${suffix}
 .endfor
 
+	# Update LINK_SPEC to add gcc-aux lib runpath in every binary
+	@${ECHO} "Configuring LINK_SPEC runpath"
+	@perl -pi -e 's;\@PREFIX\@;${PREFIX};' \
+	  ${WRKSRC}/gcc/config/dragonfly.h \
+	  ${WRKSRC}/gcc/config/i386/freebsd.h \
+	  ${WRKSRC}/gcc/config/i386/netbsd-elf.h
+
+	# Handle static option
 .if !empty(PKG_OPTIONS:Mstatic) || ${OPSYS} == "NetBSD"
 	@${ECHO} "Reconfiguring GCC Makefile to build compiler statically"
 	@${PATCH} -d ${WRKSRC} -s -E < ${FILESDIR}/diff-static-version
