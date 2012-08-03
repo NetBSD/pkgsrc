@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2012/06/05 00:15:35 jnemeth Exp $
+$NetBSD: patch-aa,v 1.6 2012/08/03 08:22:53 jnemeth Exp $
 
---- Makefile.orig	2012-04-12 14:26:06.000000000 +0000
+--- Makefile.orig	2012-06-13 14:27:57.000000000 +0000
 +++ Makefile
 @@ -125,7 +125,7 @@ DEBUG=-g3
  
@@ -39,25 +39,25 @@ $NetBSD: patch-aa,v 1.5 2012/06/05 00:15:35 jnemeth Exp $
  	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig "$(DESTDIR)$(libdir)/pkgconfig";
  # Should static HTTP be installed during make samples or even with its own target ala
  # webvoicemail?  There are portions here that *could* be customized but might also be
-@@ -470,7 +465,7 @@ OLDHEADERS=$(filter-out $(NEWHEADERS) $(
- installdirs:
- 	$(INSTALL) -d "$(DESTDIR)$(MODULES_DIR)"
- 	$(INSTALL) -d "$(DESTDIR)$(ASTSBINDIR)"
--	$(INSTALL) -d "$(DESTDIR)$(ASTETCDIR)"
-+	$(INSTALL) -d "$(DESTDIR)$(ASTEXAMPLEDIR)"
- 	$(INSTALL) -d "$(DESTDIR)$(ASTVARRUNDIR)"
- 	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)"
- 	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/dictate"
-@@ -500,7 +495,7 @@ installdirs:
- 	$(INSTALL) -d "$(DESTDIR)$(AGI_DIR)"
- 	$(INSTALL) -d "$(DESTDIR)$(ASTDBDIR)"
+@@ -466,7 +461,7 @@ update: 
+ 
+ NEWHEADERS=$(notdir $(wildcard include/asterisk/*.h))
+ OLDHEADERS=$(filter-out $(NEWHEADERS) $(notdir $(DESTDIR)$(ASTHEADERDIR)),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
+-INSTALLDIRS="$(ASTLIBDIR)" "$(MODULES_DIR)" "$(ASTSBINDIR)" "$(ASTETCDIR)" "$(ASTVARRUNDIR)" \
++INSTALLDIRS="$(ASTLIBDIR)" "$(MODULES_DIR)" "$(ASTSBINDIR)" "$(ASTEXAMPLEDIR)" "$(ASTVARRUNDIR)" \
+ 	"$(ASTSPOOLDIR)" "$(ASTSPOOLDIR)/dictate" "$(ASTSPOOLDIR)/meetme" \
+ 	"$(ASTSPOOLDIR)/monitor" "$(ASTSPOOLDIR)/system" "$(ASTSPOOLDIR)/tmp" \
+ 	"$(ASTSPOOLDIR)/voicemail" "$(ASTHEADERDIR)" "$(ASTHEADERDIR)/doxygen" \
+@@ -484,7 +479,7 @@ installdirs:
+ 		fi; \
+ 	done
  
 -bininstall: _all installdirs $(SUBDIRS_INSTALL)
 +bininstall: installdirs $(SUBDIRS_INSTALL)
  	$(INSTALL) -m 755 main/asterisk "$(DESTDIR)$(ASTSBINDIR)/"
  	$(LN) -sf asterisk "$(DESTDIR)$(ASTSBINDIR)/rasterisk"
  	$(INSTALL) -m 755 contrib/scripts/astgenkey "$(DESTDIR)$(ASTSBINDIR)/"
-@@ -592,21 +587,21 @@ upgrade: bininstall
+@@ -576,21 +571,21 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -83,7 +83,7 @@ $NetBSD: patch-aa,v 1.5 2012/06/05 00:15:35 jnemeth Exp $
  		if [ -f "$${dst}" ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s "$${dst}" "$$x" ; then \
-@@ -634,9 +629,9 @@ samples: adsi
+@@ -618,9 +613,9 @@ samples: adsi
  			-e 's|^astspooldir.*$$|astspooldir => $(ASTSPOOLDIR)|' \
  			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
  			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
@@ -96,7 +96,7 @@ $NetBSD: patch-aa,v 1.5 2012/06/05 00:15:35 jnemeth Exp $
  	fi ; \
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX"
  	build_tools/make_sample_voicemail "$(DESTDIR)/$(ASTDATADIR)" "$(DESTDIR)/$(ASTSPOOLDIR)"
-@@ -662,7 +657,7 @@ samples: adsi
+@@ -646,7 +641,7 @@ samples: adsi
  webvmail:
  	@[ -d "$(DESTDIR)$(HTTP_DOCSDIR)/" ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d "$(DESTDIR)$(HTTP_CGIDIR)" ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
@@ -105,7 +105,7 @@ $NetBSD: patch-aa,v 1.5 2012/06/05 00:15:35 jnemeth Exp $
  	$(INSTALL) -d "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk"
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/"; \
-@@ -815,7 +810,7 @@ uninstall-all: _uninstall
+@@ -799,7 +794,7 @@ uninstall-all: _uninstall
  	rm -rf "$(DESTDIR)$(ASTVARLIBDIR)"
  	rm -rf "$(DESTDIR)$(ASTDATADIR)"
  	rm -rf "$(DESTDIR)$(ASTSPOOLDIR)"
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.5 2012/06/05 00:15:35 jnemeth Exp $
  	rm -rf "$(DESTDIR)$(ASTLOGDIR)"
  
  menuconfig: menuselect
-@@ -884,6 +879,7 @@ menuselect-tree: $(foreach dir,$(filter-
+@@ -868,6 +863,7 @@ menuselect-tree: $(foreach dir,$(filter-
  	@echo "</menu>" >> $@
  
  .PHONY: menuselect

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.35 2012/07/17 00:29:33 jnemeth Exp $
+$NetBSD: distinfo,v 1.36 2012/08/03 08:22:53 jnemeth Exp $
 
-SHA1 (asterisk-1.8.14.1/asterisk-1.8.14.1.tar.gz) = 2ce12a7f0d414a0048e9d8529746add79e7163bf
-RMD160 (asterisk-1.8.14.1/asterisk-1.8.14.1.tar.gz) = 6fa678c338cf787fda9c02e4c8e644baee6eecad
-Size (asterisk-1.8.14.1/asterisk-1.8.14.1.tar.gz) = 25068289 bytes
-SHA1 (asterisk-1.8.14.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-1.8.14.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-1.8.14.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
-SHA1 (patch-aa) = d8a67b0fd3781bb2d38b08563c69e490ab42a3e8
+SHA1 (asterisk-1.8.15.0/asterisk-1.8.15.0.tar.gz) = 416b611b560cfcf6cab3e8769180493149f67960
+RMD160 (asterisk-1.8.15.0/asterisk-1.8.15.0.tar.gz) = c4409ffc68cbe5d27da0774cb5fa0e68bc29c2d3
+Size (asterisk-1.8.15.0/asterisk-1.8.15.0.tar.gz) = 25083527 bytes
+SHA1 (asterisk-1.8.15.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-1.8.15.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-1.8.15.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (patch-aa) = 832f1c043b15198e0a286094dd0cc1a251bcfed0
 SHA1 (patch-af) = 19786616bb606c38f769ec85f2e4d118573659ab
 SHA1 (patch-ai) = e92edab5c1ff323478f41d0b0783102ed527fe39
 SHA1 (patch-ak) = f8d5de733807bc6c0701886a3095901d6815a8bd
@@ -22,7 +22,7 @@ SHA1 (patch-at) = df318d7b492121ff6f766b0e6ea73415293e96f0
 SHA1 (patch-au) = 773398e719dca34640dcdc190857872da1ad7b4f
 SHA1 (patch-av) = 3424013b5bf22624aa664e972e2b495ab3296cbe
 SHA1 (patch-aw) = 0534acd67ea5da1eee8cf282035ebf4c559278ab
-SHA1 (patch-ax) = 0136483807024ac10f2abb9a9c0e3679b0043add
+SHA1 (patch-ax) = a4f4b0a46e74d74b780d8b96cdecb7e44d9b99f7
 SHA1 (patch-ay) = 777fb4515c2d9f4bc38f3fd32fa5d6b3871e92b6
 SHA1 (patch-az) = 64365b12cb47ec0fba358e4326eda172f96068cf
 SHA1 (patch-ba) = ffb20f4788f2f253e822fb48c68fec04c31b0619
