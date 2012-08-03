@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2459 2012/08/03 13:08:41 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2460 2012/08/03 13:51:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3799,3 +3799,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkg_chk to 2.0.4 [abs 2012-08-03]
 	Updated misc/ruby-launchy to 2.1.1 [taca 2012-08-03]
 	Updated www/opera to 12.01 [obache 2012-08-03]
+	Updated textproc/grep to 2.13 [adam 2012-08-03]
+	Updated databases/mysql55-client to 5.5.27 [adam 2012-08-03]
+	Updated databases/mysql55-server to 5.5.27 [adam 2012-08-03]
