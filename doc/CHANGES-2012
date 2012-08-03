@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2455 2012/08/03 08:52:41 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.2456 2012/08/03 08:54:41 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3795,3 +3795,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/pth to 2.0.7nb3 [jperkin 2012-08-02]
 	Updated emulators/suse121_libpng to 12.1nb3 [obache 2012-08-03]
 	Updated comms/asterisk10 to 10.7.0 [jnemeth 2012-08-03]
+	Updated comms/asterisk18 to 1.8.15.0 [jnemeth 2012-08-03]
