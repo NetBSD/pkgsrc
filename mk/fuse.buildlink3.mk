@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.13 2012/02/28 15:05:07 hans Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.14 2012/08/04 04:00:00 riastradh Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -12,15 +12,16 @@ MK_FUSE_BUILDLINK3_MK=	# defined
 
 .  if ${OPSYS} == "Darwin"
 
-.    if !exists(/usr/local/include/fuse.h)
-PKG_FAIL_REASON+=	"Couldn't find fuse headers; please install MacFUSE."
+.    if !exists(/usr/local/lib/pkgconfig/fuse.pc)
+PKG_FAIL_REASON+=	\
+	"Couldn't find fuse; please install MacFUSE or OSXFUSE."
 .    endif
 
 do-configure-pre-hook: override-fuse-pkgconfig
 
 override-fuse-pkgconfig: override-message-fuse-pkgconfig
 override-message-fuse-pkgconfig:
-	@${STEP_MSG} "Setting up usage of native MacFUSE."
+	@${STEP_MSG} "Setting up usage of native fuse."
 
 override-fuse-pkgconfig:
 	${RUN}						\
@@ -29,6 +30,8 @@ override-fuse-pkgconfig:
 	    ${BUILDLINK_DIR}/lib/pkgconfig/fuse.pc
 
 BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/fuse
+BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/macfuse
+BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/osxfuse
 
 .  elif ${OPSYS} == "Linux"
 
