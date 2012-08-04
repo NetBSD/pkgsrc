@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/08/01 15:43:03 drochner Exp $
+$NetBSD: distinfo,v 1.5 2012/08/04 13:42:21 drochner Exp $
 
 SHA1 (libjpeg-turbo-1.2.1.tar.gz) = a4992e102c6d88146709e8e6ce5896d5d0b5a361
 RMD160 (libjpeg-turbo-1.2.1.tar.gz) = 2298b1a919018695fa4a9851dac3e50443235196
 Size (libjpeg-turbo-1.2.1.tar.gz) = 1755264 bytes
+SHA1 (patch-aa) = c6523f2aae1c440f3a7b572b45f164ae88a14776
 SHA1 (patch-configure) = aa16d166989dafec06ba2c982316f6dfa473df90
