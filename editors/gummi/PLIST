@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/04 14:07:19 drochner Exp $
+bin/gummi
+lib/gummi/latex_dvi.sh
+man/man1/gummi.1
+share/applications/gummi.desktop
+share/gummi/icons/gummi.png
+share/gummi/icons/icon.png
+share/gummi/misc/default.tex
+share/gummi/snippets/snippets.cfg
+share/gummi/snippets/snippets.lang
+share/gummi/ui/gummi.glade
+share/gummi/ui/prefs.glade
+share/gummi/ui/snippets.glade
+share/pixmaps/gummi.png
