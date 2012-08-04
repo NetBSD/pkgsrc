@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 2012/08/04 13:42:22 drochner Exp $
+
+--- Makefile.in.orig	2012-06-29 23:52:27.000000000 +0000
++++ Makefile.in
+@@ -462,11 +462,11 @@ dist_man1_MANS = cjpeg.1 djpeg.1 jpegtra
+ DOCS = install.txt coderules.txt filelist.txt jconfig.txt change.log \
+ 	rdrle.c wrrle.c BUILDING.txt ChangeLog.txt
+ 
+-docdir = $(datadir)/doc
++docdir = $(datadir)/doc/libjpeg-turbo
+ dist_doc_DATA = README README-turbo.txt libjpeg.txt structure.txt usage.txt \
+ 	wizard.txt 
+ 
+-exampledir = $(datadir)/doc
++exampledir = $(datadir)/doc/libjpeg-turbo
+ dist_example_DATA = example.c
+ EXTRA_DIST = win release $(DOCS) testimages CMakeLists.txt \
+ 	sharedlib/CMakeLists.txt cmakescripts libjpeg.map.in doc doxygen.config \
