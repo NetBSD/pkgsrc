@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2012/06/14 19:53:07 bsiegert Exp $
+# $NetBSD: hacks.mk,v 1.6 2012/08/04 04:00:49 riastradh Exp $
 
 .if !defined(CAIRO_HACKS_MK)
 CAIRO_HACKS_MK=	defined
@@ -9,9 +9,9 @@ CAIRO_HACKS_MK=	defined
 ###
 .if ${OPSYS} == "Darwin" && !empty(PKGSRC_COMPILER:Mgcc)
 _BAD_GCC_BUILD!=	${CC} --version | (${GREP} -c 'i686-apple-darwin11-llvm-gcc-4\.2\ .*build\ 5658' || ${TRUE})
-.  if ${_BAD_GCC_BUILD} == "1" && exists(/usr/bin/gcc-4.2)
-PKG_HACKS+=	llvm-link
-CONFIGURE_ENV+=	ac_cv_prog_CC=gcc-4.2
+.  if ${_BAD_GCC_BUILD} == "1"
+PKG_HACKS+=		llvm-lto-hack
+BUILDLINK_TRANSFORM+=	rm:-flto
 .  endif
 .endif
 
