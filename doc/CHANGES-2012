@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2462 2012/08/04 14:09:30 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.2463 2012/08/04 15:02:27 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3804,3 +3804,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql55-server to 5.5.27 [adam 2012-08-03]
 	Updated mail/thunderbird10 to 10.0.6 [ryoon 2012-08-04]
 	Updated www/p5-Mojolicious to 3.20 [mspo 2012-08-04]
+	Updated graphics/libraw to 0.14.7 [drochner 2012-08-04]
+	Updated graphics/shotwell-gtk3 to 0.12.3 [drochner 2012-08-04]
+	Updated games/scummvm to 1.5.0 [drochner 2012-08-04]
+	Updated www/bluefish to 2.2.3 [drochner 2012-08-04]
