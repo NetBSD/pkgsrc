@@ -1,0 +1,4 @@
+Gummi is a LaTeX editor for the Linux platform, written in C/GTK+.
+It was designed with simplicity in mind, but hopes to appeal to both
+novice and more advanced LaTeX writers. Gummi was released as free
+opensource software under the MIT license.
