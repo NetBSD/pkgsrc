@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2012/03/03 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2012/08/04 14:45:34 drochner Exp $
 
-DISTNAME=	scummvm-1.4.1
-PKGREVISION=	1
+DISTNAME=	scummvm-1.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,9 +24,11 @@ UNLIMIT_RESOURCES=	datasize
 
 .include "options.mk"
 
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
