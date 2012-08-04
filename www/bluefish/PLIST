@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2012/03/21 18:37:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/08/04 14:56:36 drochner Exp $
 bin/bluefish
 lib/bluefish/about.la
 lib/bluefish/charmap.la
@@ -79,6 +79,11 @@ share/bluefish/bflib/bflib_xhtml.xml.gz
 share/bluefish/bluefish_splash.png
 share/bluefish/default_accelmap
 share/bluefish/encodings
+share/bluefish/lipsum/__init__.py
+share/bluefish/lipsum/data/dictionary.txt
+share/bluefish/lipsum/data/lipsum.xml
+share/bluefish/lipsum/data/sample.txt
+share/bluefish/lorem-ipsum-generator
 share/bluefish/plugins/htmlbar/ui/htmlbar_menu_ui.xml
 share/bluefish/plugins/zencoding/__init__.py
 share/bluefish/plugins/zencoding/actions/__init__.py
