@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/04 14:31:27 drochner Exp $
+include/libraw/libraw.h
+include/libraw/libraw_alloc.h
+include/libraw/libraw_const.h
+include/libraw/libraw_datastream.h
+include/libraw/libraw_internal.h
+include/libraw/libraw_types.h
+include/libraw/libraw_version.h
+lib/libraw.la
+lib/libraw_r.la
+lib/pkgconfig/libraw.pc
+lib/pkgconfig/libraw_r.pc
+share/doc/libraw/COPYRIGHT
+share/doc/libraw/Changelog.txt
+share/doc/libraw/LICENSE.CDDL
+share/doc/libraw/LICENSE.LGPL
+share/doc/libraw/LICENSE.LibRaw.pdf
