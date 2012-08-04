@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/05/07 17:46:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/08/04 13:47:09 drochner Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
@@ -8,6 +8,7 @@ man/man1/xine-bugreport.1
 man/man1/xine-check.1
 man/man1/xine-remote.1
 man/man1/xine.1
+share/applications/xine.desktop
 share/doc/xine-ui/README.config_en
 share/doc/xine-ui/README.cs.0.Introduction
 share/doc/xine-ui/README.cs.10.Remote_control
@@ -65,10 +66,9 @@ share/locale/uk/LC_MESSAGES/xine-ui.mo
 share/locale/uk/LC_MESSAGES/xitk.mo
 share/mime/packages/xine-ui.xml
 share/pixmaps/xine.xpm
-share/xine/desktop/xine.desktop
 share/xine/oxine/mainmenu
 share/xine/oxine/mediamarks
-share/xine/skins/xine-ui_logo.mpv
+share/xine/skins/xine-ui_logo.png
 share/xine/skins/xine_splash.png
 share/xine/skins/xinetic/BigArrowDown.png
 share/xine/skins/xinetic/BigArrowLeft.png
@@ -132,4 +132,4 @@ share/xine/skins/xinetic/SliderVPad.png
 share/xine/skins/xinetic/SmallArrowDown.png
 share/xine/skins/xinetic/SmallArrowUp.png
 share/xine/skins/xinetic/skinconfig
-share/xine/visuals/default.avi
+share/xine/visuals/default.mpv
