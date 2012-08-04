@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2011/06/15 13:08:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/08/04 14:45:34 drochner Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/doc/scummvm/AUTHORS
 share/doc/scummvm/COPYING
 share/doc/scummvm/COPYING.BSD
+share/doc/scummvm/COPYING.FREEFONT
 share/doc/scummvm/COPYING.LGPL
 share/doc/scummvm/COPYRIGHT
 share/doc/scummvm/NEWS
