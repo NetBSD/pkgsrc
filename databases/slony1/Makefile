@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2011/11/26 11:49:51 adam Exp $
+# $NetBSD: Makefile,v 1.20 2012/08/05 10:02:11 obache Exp $
 
 DISTNAME=	slony1-2.1.0
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://slony.info/downloads/2.1/source/
 EXTRACT_SUFX=	.tar.bz2

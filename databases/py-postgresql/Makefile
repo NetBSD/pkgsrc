@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2012/06/09 09:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2012/08/05 10:02:11 obache Exp $
 
 DISTNAME=		PyGreSQL-4.0
 PKGNAME=		${PYPKGPREFIX}-postgresql-4.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases python
 MASTER_SITES=		http://pygresql.org/files/
 EXTRACT_SUFX=		.tgz
