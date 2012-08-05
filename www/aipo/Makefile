@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/06/24 07:28:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/05 10:02:13 obache Exp $
 #
 
 DISTNAME=	aipo6030ja_linux32
 PKGNAME=	aipo-6.03
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://aipo.googlecode.com/files/
 

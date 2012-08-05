@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2010/02/27 03:35:12 taca Exp $
+# $NetBSD: Makefile,v 1.15 2012/08/05 10:02:10 obache Exp $
 
 MODNAME=		pgsql
+PKGREVISION=		1
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PostgreSQL databases
 
