@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/03/12 19:36:44 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2012/08/05 13:39:04 shattered Exp $
 #
 
 DISTNAME=	libproxy-0.3.1
@@ -20,6 +20,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 PY_PATCHPLIST=	yes
 CHECK_PORTABILITY_SKIP= test.d/*
+USE_LANGUAGES=	c99
+LIBS.SunOS+=	-lnsl -lsocket
 
 PKGCONFIG_OVERRIDE+=	libproxy-1.0.pc.in
 
