@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.29 2012/08/02 05:53:40 obache Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.30 2012/08/05 21:29:46 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -132,7 +132,9 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
 
       <listitem>
 	<para><filename>pgsql.buildlink3.mk</filename> will accept
-	either Postgres 8.3, 8.4, 9.0, or 9.1, whichever is found installed. See
+	any of the Postgres versions in the variable
+	<varname>PGSQL_VERSIONS_ACCEPTED</varname> and default to
+	the version <varname>PGSQL_VERSION_DEFAULT</varname>. See
 	the file for more information.</para>
       </listitem>
 
