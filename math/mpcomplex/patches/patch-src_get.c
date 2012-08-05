@@ -1,11 +1,13 @@
-$NetBSD: patch-src_get.c,v 1.1 2011/10/13 13:22:46 hans Exp $
+$NetBSD: patch-src_get.c,v 1.2 2012/08/05 18:24:56 marino Exp $
 
---- src/get.c.orig	2011-01-26 09:47:17.000000000 +0100
-+++ src/get.c	2011-10-13 01:09:15.618498023 +0200
-@@ -28,6 +28,13 @@ MA 02111-1307, USA. */
+Work around bug in SunOS complex.h to make this build with Sun's gcc
+
+--- src/get_x.c.orig	2011-11-04 18:20:19.000000000 +0000
++++ src/get_x.c
+@@ -35,6 +35,13 @@ along with this program. If not, see htt
  #include "mpc-impl.h"
  
- #if defined _MPC_H_HAVE_COMPLEX
+ #ifdef HAVE_COMPLEX_H
 +
 +#if defined(__sun) && defined(__GNUC__) && defined(_Imaginary_I)
 +#undef I
