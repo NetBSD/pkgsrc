@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/05 10:02:10 obache Exp $
 #
 
 VER=		1.5.3
 DISTNAME=	pgtcl${VER}
 PKGNAME=	pgtclng-${VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases tcl
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/1075/
 
