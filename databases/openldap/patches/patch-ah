@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.8 2012/03/13 19:57:11 adam Exp $
+$NetBSD: patch-ah,v 1.9 2012/08/06 13:33:38 adam Exp $
 
---- libraries/libldap/init.c.orig	2007-09-01 01:13:55.000000000 +0200
+--- libraries/libldap/init.c.orig	2012-07-31 16:39:26.000000000 +0000
 +++ libraries/libldap/init.c
-@@ -636,7 +636,11 @@ void ldap_int_initialize( struct ldapopt
- 
+@@ -643,7 +643,11 @@ void ldap_int_initialize( struct ldapopt
  #if defined(HAVE_TLS) || defined(HAVE_CYRUS_SASL)
  	{
+ 		LDAP_MUTEX_LOCK( &ldap_int_hostname_mutex );
 -		char	*name = ldap_int_hostname;
 +		char	*name;
 +#if defined(LDAP_R_COMPILE)
