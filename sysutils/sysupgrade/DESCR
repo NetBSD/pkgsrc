@@ -1,0 +1,15 @@
+sysupgrade is a script to automate NetBSD system upgrades.  sysupgrade
+works by first fetching distribution sets from a specified site or local
+directory, then by upgrading the system using such distribution sets and
+later by ensuring that the system configuration is up to date.  All the
+process is controlled by a configuration file, and the defaults should
+suit the most common NetBSD upgrades.
+
+sysupgrade can be used to perform upgrades across different system major
+and/or minor versions, and it can also be used to track a stable or
+development branch from the CVS repository.
+
+sysbuild is the perfect companion to sysupgrade in those cases where you
+want to roll your own binaries: both utilities share a very similar
+command-line and configuration interface, and the default configuration
+files provide examples on how to integrate one with the other.

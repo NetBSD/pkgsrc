@@ -1,0 +1,160 @@
+.\" Copyright 2012 Google Inc.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions are
+.\" met:
+.\"
+.\" * Redistributions of source code must retain the above copyright
+.\"   notice, this list of conditions and the following disclaimer.
+.\" * Redistributions in binary form must reproduce the above copyright
+.\"   notice, this list of conditions and the following disclaimer in the
+.\"   documentation and/or other materials provided with the distribution.
+.\" * Neither the name of Google Inc. nor the names of its contributors
+.\"   may be used to endorse or promote products derived from this software
+.\"   without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+.\" "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+.\" LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+.\" A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+.\" OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+.\" SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+.\" LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+.\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.Dd August 6, 2012
+.Dt SYSUPGRADE.CONF 5
+.Os
+.Sh NAME
+.Nm sysupgrade.conf
+.Nd configuration file to control NetBSD system upgrades
+.Sh DESCRIPTION
+Configuration files for
+.Xr sysupgrade 8
+are simple shell scripts that set, or explicitly clear, a collection of known
+configuration variables.
+.Pp
+The following configuration variables are recognized:
+.Bl -tag
+.It Va AUTOCLEAN
+Whether to automatically delete the downloaded files or not as part of the
+.Sq auto
+command.
+.Pp
+If you set
+.Va ETCUPDATE
+to false, you will probably want to disable autocleaning.
+This will let you run the
+.Sq etcupdate
+command on your own at a later stage reusing the same distribution sets used to
+upgrade the system.
+.Pp
+Default: yes.
+.It Va CACHEDIR
+Path to the local directory into which distribution sets are temporarily fetched
+while applying a system upgrade.
+Note that all
+.Nm
+commands that need access to the distribution sets (pretty much all of them)
+will read from this directory.
+If you plan on issuing different upgrade steps at different times, this
+directory should persist across the different executions.
+.Pp
+Default:
+.Pa @SYSUPGRADE_CACHEDIR@
+.It Va DESTDIR
+Path to the root of the system to be upgraded.
+This is prepended to all other paths affected by
+.Xr sysupgrade 8
+and can be used to perform upgrades of non-live systems or for testing
+purposes.
+.Pp
+Default: not set (which means
+.Pa /
+is affected).
+.It Va ETCUPDATE
+Whether to run
+.Xr etcupdate 8
+as part of an automated upgrade.
+You may want to disable this because this is the only interactive step in the
+upgrade process.
+.Pp
+If set to false, the
+.Sq auto
+subcommand will skip this step.
+In this case, you are also recommended to set
+.Va AUTOCLEAN
+to
+.Sq no
+so that you are not required to redownload the distribution files just to run
+.Xr etcupdate 8
+later.
+.Pp
+Default: yes.
+.It Va KERNEL
+Name of the kernel to install.
+There must be a
+.Sq kern-<KERNEL>
+distribution set in the release directory matching this name.
+.Pp
+If this is set to the magic value
+.Sq AUTO ,
+.Xr sysupgrade 8
+will attempt to automatically determine the name of the current kernel by using
+.Xr config 1
+on
+.Pa <DESTDIR>/netbsd .
+If the guessing fails, an error is raised to prevent installing a mismatching
+kernel.
+.Pp
+Default: AUTO.
+.It Va POSTINSTALL_AUTOFIX
+Whitespace-separated list of
+.Xr postinstall 8
+checks that will be unconditionally fixed as part of an upgrade.
+.Pp
+It is recommended that you include
+.Sq obsolete
+in this list at the very least: this check often fails because it is common for
+newer releases to drop existing files, and fixing it should be harmless.
+Note that old shared libraries are never cleaned by this check, so existing
+third-party binaries should not stop working even after auto-fixing this check.
+.Pp
+Default: empty.
+.It Va RELEASEDIR
+Location of the release directory (which must hold a
+.Pa binary/sets/
+subdirectory).
+This can be either a local path or a URL.
+.Pp
+Default: not set.
+.It Va SETS
+Whitespace-separated list of distribution sets to install.
+If this is set to the magic value
+.Sq AUTO ,
+the list of sets is determined from the files in
+.Pa <DESTDIR>/etc/mtree .
+.Pp
+This list should not include any
+.Sq kern-*
+sets as this is automatically handled by the
+.Va KERNEL
+variable.
+.Pp
+The presence of any configuration sets (such as
+.Sq etc
+or
+.Sq xetc )
+in this list enables the etcupdate and postinstall steps in the automated
+upgrade procedure.
+.Pp
+The presence of a modules set enables the modules step in the automated upgrade
+procedure.
+.Pp
+Default: AUTO.
+.El
+.Sh SEE ALSO
+.Xr sysupgrade 8 .

@@ -1,0 +1,299 @@
+# Copyright 2012 Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# * Neither the name of Google Inc. nor the names of its contributors
+#   may be used to endorse or promote products derived from this software
+#   without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# \file config.subr
+# Configuration file processing and queries.
+
+
+# List of valid configuration variables.
+#
+# This is initialized by config_init and should remain unchanged thorough the
+# execution of the program.
+CONFIG_VARS=
+
+
+# List of overrides to apply by config_apply_overrides.
+#
+# The overrides are recorded and applied separately because they need to happen
+# after a configuration file has been loaded.  The contents of this list are
+# words of the form: set:<variable> or unset:<variable>.  For those variables
+# listed in set:, there is a corresponding config_override_var_<variable>
+# variable containing the new value.
+CONFIG_OVERRIDES=
+
+
+# Initializes the configuration module.
+#
+# \param ... List of configuration variables to recognize in configuration files
+#     and user overrides.
+config_init() {
+    CONFIG_VARS="${@}"
+}
+
+
+# Checks if a configuration variable is known.
+#
+# \param var Name of the variable to check.
+#
+# \return True if the variable was registered by config_init, false otherwise.
+config_is_valid() {
+    local var="${1}"; shift
+
+    local known_var
+    for known_var in ${CONFIG_VARS}; do
+        if [ "${known_var}" = "${var}" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+
+# Checks if a configuration variable is defined.
+#
+# \param var The name of the variable to check.
+#
+# \return True if the variable is defined (even if empty), false otherwise.
+config_has() {
+    local var="${1}"; shift
+
+    local is_unset
+    eval is_unset="\${config_var_${var}-yes_this_is_unset}"
+    if [ "${is_unset}" = yes_this_is_unset ]; then
+        return 1
+    else
+        return 0
+    fi
+}
+
+
+# Gets the value of a defined configuration variable.
+#
+# \post The value of the variable is printed to stdout, if any.
+#
+# \post If the variable is not defined, this terminates execution with an error.
+#
+# \param var Name of the configuration variable to query.
+config_get() {
+    local var="${1}"; shift
+
+    if config_has "${var}"; then
+        eval echo "\${config_var_${var}}"
+    else
+        utils_error "Required configuration variable ${var} not set"
+    fi
+}
+
+
+# Gets the value of configuration variable interpreting it as a boolean.
+#
+# \param var The variable to query.
+#
+# \return True if the variable is set to a truth value, false if its value is
+# false or if it is not defined.
+config_get_bool() {
+    local var="${1}"; shift
+
+    if config_has "${var}"; then
+        case "$(config_get "${var}")" in
+            [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee])
+                return 0
+                ;;
+            [Nn][Oo]|[Ff][Aa][Ll][Ss][Ee])
+                return 1
+                ;;
+            *)
+                utils_error "Invalid boolean value in variable ${var}"
+                ;;
+        esac
+    else
+        return 1
+    fi
+}
+
+
+# Gets the value of a configuration variable with a default fallback.
+#
+# \post The value of the variable is printed to stdout, if any.
+#
+# \param var Name of the configuration variable to query.
+# \param default Default value to return if the variable is not defined.
+config_get_default() {
+    local var="${1}"; shift
+    local default="${1}"; shift
+
+    if config_has "${var}"; then
+        config_get "${var}"
+    else
+        echo "${default}"
+    fi
+}
+
+
+# Sets a configuration variable.
+#
+# \post Execution terminates if the variable is not valid.
+#
+# \param var The name of the configuration variable to set.
+# \param value The value to set.
+config_set() {
+    local var="${1}"; shift
+    local value="${1}"; shift
+
+    config_is_valid "${var}" \
+        || utils_usage_error "Unknown configuration variable ${var}"
+    eval "config_var_${var}=\"\${value}\""
+}
+
+
+# Unsets a configuration variable.
+#
+# \param var The name of the configuration variable to unset.
+config_unset() {
+    local var="${1}"; shift
+
+    config_is_valid "${var}" \
+        || utils_usage_error "Unknown configuration variable ${var}"
+    eval unset "config_var_${var}"
+}
+
+
+# Loads a configuration file.
+#
+# \pre config_init should have been called to register the valid configuration
+# variables.  Any non-registered configuration variable found in the file will
+# not be available through any of the functions in this module.
+#
+# \post The configuration module is updated with the values defined in the
+# configuration file.
+#
+# \post Any errors in the processing of the configuration file terminate the
+# execution of the script.
+#
+# \param config_file Path to the file to load.
+config_load() {
+    local config_file="${1}"; shift
+
+    [ -e "${config_file}" ] || utils_error "Configuration file ${config_file}" \
+        "does not exist"
+
+    # User-facing variables.
+    local var
+    for var in ${CONFIG_VARS}; do
+        unset "${var}" || true
+        eval local "${var}"
+    done
+
+    local real_config_file
+    case "${config_file}" in
+        */*) real_config_file="${config_file}" ;;
+        *) real_config_file="./${config_file}" ;;
+    esac
+    ( . "${real_config_file}" ) || utils_error "Failed to load configuration" \
+        "file ${config_file}"
+    . "${real_config_file}"
+
+    for var in ${CONFIG_VARS}; do
+        local value
+        eval value="\${${var}-unset}"
+        [ "${value-unset}" != unset ] || continue
+
+        if [ -n "${value}" ]; then
+            config_set "${var}" "${value}"
+        else
+            unset "config_var_${var}" || true
+        fi
+    done
+
+    config_apply_overrides
+}
+
+
+# Applies recorded overrides to the current configuration.
+#
+# This is just a helper function for config_load and should not be used
+# directly.
+#
+# \post The configuration data in memory is modified according to the data
+# recorded in the overrides.
+#
+# \post The contents of CONFIG_OVERRIDES is cleared.
+config_apply_overrides() {
+    for override in ${CONFIG_OVERRIDES}; do
+        case "${override}" in
+            set:*)
+                local var="$(echo ${override} | cut -d : -f 2)"
+                local value
+                eval value="\"\${config_override_var_${var}}\""
+                config_set "${var}" "${value}"
+                ;;
+            unset:*)
+                local var="$(echo ${override} | cut -d : -f 2)"
+                unset "config_var_${var}" || true
+                ;;
+        esac
+    done
+    CONFIG_OVERRIDES=
+}
+
+
+# Records an override to be applied to the configuration.
+#
+# Overrides are configuration variables set through the command line.  These can
+# be set before loading the configuration file with config_load.
+#
+# \post Any errors in the processing of the configuration override terminate the
+# execution of the script.
+#
+# \param arg An override of the form variable=value.
+config_override() {
+    local arg="${1}"; shift
+
+    case "${arg}" in
+        *=*)
+            ;;
+        *)
+            utils_usage_error "Invalid configuration override" \
+                "${arg}; must be of the form variable=value"
+            ;;
+    esac
+    local var="$(echo "${arg}" | cut -d = -f 1)"
+    local value="$(echo "${arg}" | cut -d = -f 2-)"
+
+    [ -n "${var}" ] || utils_usage_error "Invalid configuration override" \
+        "${arg}; must be of the form variable=value"
+    config_is_valid "${var}" \
+        || utils_usage_error "Unknown configuration variable ${var}"
+
+    if [ -n "${value}" ]; then
+        eval "config_override_var_${var}=\"${value}\""
+        CONFIG_OVERRIDES="${CONFIG_OVERRIDES} set:${var}"
+    else
+        CONFIG_OVERRIDES="${CONFIG_OVERRIDES} unset:${var}"
+    fi
+}

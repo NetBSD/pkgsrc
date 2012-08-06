@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/06 17:06:17 jmmv Exp $
+bin/sysupgrade
+man/man5/sysupgrade.conf.5
+man/man8/sysupgrade.8
+share/examples/sysupgrade/default.conf
+${TESTS}tests/sysupgrade/Kyuafile
+${TESTS}tests/sysupgrade/config_test
+${TESTS}tests/sysupgrade/sysupgrade_test
+${TESTS}tests/sysupgrade/utils_test
