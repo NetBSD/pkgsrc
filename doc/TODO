@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11407 2012/08/04 15:02:27 drochner Exp $
+$NetBSD: TODO,v 1.11408 2012/08/06 13:36:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o opendkim-2.6.7
 	o opengrok-0.11.1
 	o openh323-1.19.1
-	o openldap-2.4.32 [CVE-2012-2668]
 	o openmortal-0.7.1
 	o openmsx-0.8.2
 	o openoffice-3.4
