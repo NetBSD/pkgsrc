@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/07/01 19:30:11 gls Exp $
+# $NetBSD: Makefile,v 1.22 2012/08/06 19:53:50 gls Exp $
 #
 
-VERSION=		1.4.2
+VERSION=		1.4.3
 DISTNAME=		Fabric-${VERSION}
 PKGNAME=		${DISTNAME:S/F/f/}
 CATEGORIES=		sysutils net
