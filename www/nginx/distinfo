@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/04/21 10:32:47 imil Exp $
+$NetBSD: distinfo,v 1.19 2012/08/06 14:31:58 imil Exp $
 
-SHA1 (naxsi-0.45.tgz) = e1f29219fc9f7d3b39c4abfac558816f6046363b
-RMD160 (naxsi-0.45.tgz) = bbb535c3f22c4951263a80a962ea0d8fa2208cbd
-Size (naxsi-0.45.tgz) = 175358 bytes
+SHA1 (naxsi-core-0.48.tgz) = 7391532e7026179c0c9e52e15c5d645259f94fa6
+RMD160 (naxsi-core-0.48.tgz) = 6c1c3934bb35976e7b40b39b26b07bfc6ea3cda0
+Size (naxsi-core-0.48.tgz) = 42816 bytes
 SHA1 (nginx-1.0.15.tar.gz) = e506b301ea849f58f2efb499d77b819fe55eea9a
 RMD160 (nginx-1.0.15.tar.gz) = 99653499916b81fb0f5842755484983606cea5ec
 Size (nginx-1.0.15.tar.gz) = 693025 bytes
