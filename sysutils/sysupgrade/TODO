@@ -1,0 +1,30 @@
+- Deduce the current NetBSD release from /etc/release and the target
+  release from etc.tgz and inform the user about the changes.  This will be
+  necessary if the upgrade process needs to apply specific tweaks depending
+  on the affected NetBSD releases (which is not the case at the moment).
+
+- Ability to automatically deduce the next upgrade target from a collection
+  of directories (e.g. from FTP).  We should be able to tell sysupgrade to
+  follow along 6.0.x, or 6.x, or the daily builds and get it to pick the
+  most recent available build.  Having to manually scan FTP directories to
+  select the correct build is... inconvenient.
+
+- Ensure that the fetched sets belong to the current architecture.  I have
+  bitten once by mistakenly pointing my custom update scripts to the wrong
+  platform directory, rendering the machine unusable as soon as base.tgz
+  was unpacked.
+
+- Download release checksums and validate files against them.  The 'fetch'
+  command should unconditionally download the checksums every time it is
+  run and then deduce whether it needs to redownload (possibly-newer) sets
+  or do nothing.
+
+- Add destdir support to etcupdate(8) and allow the 'etcupdate' command to
+  run when destdir is enabled.
+
+- Maybe sysupgrade should be more interactive by default, letting the user
+  know what exactly is going to happen before doing so (e.g. what will be
+  the new version, where things are being downloaded from, etc.), and
+  providing a "quiet mode" flag instead.  etcupdate is interactive anyway,
+  so adding more interactive steps (as long as they can be disabled) does
+  not seem a big deal.
