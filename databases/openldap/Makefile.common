@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2012/07/29 10:10:16 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2012/08/06 13:33:38 adam Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -6,8 +6,9 @@
 # used by databases/openldap-server/Makefile
 # used by databases/openldap-smbk5pwd/Makefile
 
-# please stick to the "stable" releases as much as possible!
-DISTNAME=	openldap-2.4.31
+.include "../../databases/openldap/Makefile.version"
+
+DISTNAME=	openldap-${OPENLDAP_VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/ \
 		http://www.openldap.org/software/download/OpenLDAP/openldap-release/ \
