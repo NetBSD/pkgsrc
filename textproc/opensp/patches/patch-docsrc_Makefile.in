@@ -1,0 +1,19 @@
+$NetBSD: patch-docsrc_Makefile.in,v 1.1 2012/08/06 16:39:53 jperkin Exp $
+
+Avoid 'failed to load external entity' errors.
+
+--- docsrc/Makefile.in.orig	Mon Aug  6 16:23:22 2012
++++ docsrc/Makefile.in	Mon Aug  6 16:23:38 2012
+@@ -490,10 +490,10 @@
+ 
+ %.html: $(srcdir)/%.xml $(srcdir)/%.dsl
+ #	$(JADE) -v -t sgml -i html -V nochunks -V rootchunk -V "%root-filename%=$*" -V "%html-ext%=.html" -d $(srcdir)/$*.dsl#html $(XMLDCL) $(srcdir)/$*.xml
+-	$(XMLTO) html-nochunks $(srcdir)/$*.xml
++	$(XMLTO) --skip-validation html-nochunks $(srcdir)/$*.xml
+ 
+ %.1: $(srcdir)/%.xml
+-	$(XMLTO) man $<
++	$(XMLTO) --skip-validation man $<
+ 
+ mostlyclean-local:
+ 	-rm -f *.out *.aux *.log *.dvi *.tex
