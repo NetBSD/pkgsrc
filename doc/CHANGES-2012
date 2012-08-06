@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2473 2012/08/06 19:54:09 gls Exp $
+$NetBSD: CHANGES-2012,v 1.2474 2012/08/06 20:05:53 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3824,3 +3824,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-django to 1.4.1 [adam 2012-08-06]
 	Added sysutils/sysupgrade version 1.0 [jmmv 2012-08-06]
 	Updated sysutils/fabric to 1.4.3 [gls 2012-08-06]
+	Updated textproc/asciidoc to 8.6.8 [gls 2012-08-06]
