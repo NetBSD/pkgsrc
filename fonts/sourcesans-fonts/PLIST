@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/06 14:27:49 ryoon Exp $
+share/fonts/sourcesans/SourceSansPro-Black.otf
+share/fonts/sourcesans/SourceSansPro-BlackIt.otf
+share/fonts/sourcesans/SourceSansPro-Bold.otf
+share/fonts/sourcesans/SourceSansPro-BoldIt.otf
+share/fonts/sourcesans/SourceSansPro-ExtraLight.otf
+share/fonts/sourcesans/SourceSansPro-ExtraLightIt.otf
+share/fonts/sourcesans/SourceSansPro-It.otf
+share/fonts/sourcesans/SourceSansPro-Light.otf
+share/fonts/sourcesans/SourceSansPro-LightIt.otf
+share/fonts/sourcesans/SourceSansPro-Regular.otf
+share/fonts/sourcesans/SourceSansPro-Semibold.otf
+share/fonts/sourcesans/SourceSansPro-SemiboldIt.otf
