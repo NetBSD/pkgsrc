@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2471 2012/08/06 15:34:10 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2472 2012/08/06 17:07:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/p5-Math-Random-MT to 1.16 [wen 2012-08-06]
 	Added fonts/sourcesans-fonts version 1.033 [ryoon 2012-08-06]
 	Updated www/py-django to 1.4.1 [adam 2012-08-06]
+	Added sysutils/sysupgrade version 1.0 [jmmv 2012-08-06]
