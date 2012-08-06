@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/25 15:50:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/08/06 13:57:23 mspo Exp $
 include/ares.h
 include/ares_build.h
 include/ares_dns.h
@@ -30,8 +30,10 @@ man/man3/ares_mkquery.3
 man/man3/ares_parse_a_reply.3
 man/man3/ares_parse_aaaa_reply.3
 man/man3/ares_parse_mx_reply.3
+man/man3/ares_parse_naptr_reply.3
 man/man3/ares_parse_ns_reply.3
 man/man3/ares_parse_ptr_reply.3
+man/man3/ares_parse_soa_reply.3
 man/man3/ares_parse_srv_reply.3
 man/man3/ares_parse_txt_reply.3
 man/man3/ares_process.3
