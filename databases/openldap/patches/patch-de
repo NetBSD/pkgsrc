@@ -1,20 +1,20 @@
-$NetBSD: patch-de,v 1.2 2012/03/13 19:57:11 adam Exp $
+$NetBSD: patch-de,v 1.3 2012/08/06 13:33:38 adam Exp $
 
---- contrib/slapd-modules/smbk5pwd/smbk5pwd.c.orig	2009-08-04 17:38:01.000000000 +0200
-+++ contrib/slapd-modules/smbk5pwd/smbk5pwd.c	2009-08-04 22:56:06.000000000 +0200
-@@ -68,9 +68,15 @@
- #ifdef HAVE_GNUTLS
+--- contrib/slapd-modules/smbk5pwd/smbk5pwd.c.orig	2012-07-31 16:39:26.000000000 +0000
++++ contrib/slapd-modules/smbk5pwd/smbk5pwd.c
+@@ -69,8 +69,15 @@ static ObjectClass *oc_krb5KDCEntry;
  #include <gcrypt.h>
  typedef unsigned char DES_cblock[8];
- #else
+ #elif HAVE_OPENSSL
 +#ifdef __NetBSD__
 +#include <des.h>
++#include <md4.h>
 +typedef des_key_schedule DES_key_schedule;
 +typedef des_cblock DES_cblock;
 +#else
  #include <openssl/des.h>
-+#endif
  #include <openssl/md4.h>
++#endif
+ #else
+ #error Unsupported crypto backend.
  #endif
- #include "ldap_utf8.h"
- 
