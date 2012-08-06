@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/04/25 15:50:51 drochner Exp $
+$NetBSD: distinfo,v 1.7 2012/08/06 13:57:23 mspo Exp $
 
-SHA1 (c-ares-1.7.5.tar.gz) = 5f005f16cc6a02aa0ff3b4cd0aae573bc47c9bfe
-RMD160 (c-ares-1.7.5.tar.gz) = bbe0f95ce2d374d14fec0bd5ce5728ada9974235
-Size (c-ares-1.7.5.tar.gz) = 746032 bytes
+SHA1 (c-ares-1.9.1.tar.gz) = fe41e47f300bfd587b7f552a141ad3bf85437b0f
+RMD160 (c-ares-1.9.1.tar.gz) = b75d4039d61a1d41af47bcd54337a31bfaea5b37
+Size (c-ares-1.9.1.tar.gz) = 782945 bytes
