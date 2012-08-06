@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2472 2012/08/06 17:07:30 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.2473 2012/08/06 19:54:09 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3823,3 +3823,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/sourcesans-fonts version 1.033 [ryoon 2012-08-06]
 	Updated www/py-django to 1.4.1 [adam 2012-08-06]
 	Added sysutils/sysupgrade version 1.0 [jmmv 2012-08-06]
+	Updated sysutils/fabric to 1.4.3 [gls 2012-08-06]
