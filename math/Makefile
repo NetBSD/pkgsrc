@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2012/05/30 11:05:49 wiz Exp $
+# $NetBSD: Makefile,v 1.240 2012/08/06 13:47:44 wen Exp $
 
 COMMENT=	Mathematics
 
@@ -175,6 +175,7 @@ SUBDIR+=	p5-Spreadsheet-ReadSXC
 SUBDIR+=	p5-Spreadsheet-WriteExcel
 SUBDIR+=	p5-Spreadsheet-XLSX
 SUBDIR+=	p5-Statistics-Descriptive
+SUBDIR+=	p5-Test-Number-Delta
 SUBDIR+=	pari
 SUBDIR+=	pari-galdata
 SUBDIR+=	pear-Numbers_Roman
