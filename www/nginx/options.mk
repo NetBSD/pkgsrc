@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2012/06/12 15:46:04 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2012/08/06 14:31:58 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache naxsi pcre \
@@ -9,6 +9,12 @@ PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 PLIST_VARS+=		naxsi uwsgi
 
 .include "../../mk/bsd.options.mk"
+
+# documentation says naxsi must be the first module
+.if !empty(PKG_OPTIONS:Mnaxsi)
+PLIST.naxsi=		yes
+CONFIGURE_ARGS+=	--add-module=../${NAXSI}/naxsi_src
+.endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--with-debug
@@ -51,13 +57,8 @@ CONFIGURE_ARGS+=	--with-mail
 CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mnaxsi)
-PLIST.naxsi=		yes
-CONFIGURE_ARGS+=	--add-module=../${NAXSI}/naxsi_src
-.endif
-
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
-NAXSI=			naxsi-0.45
+NAXSI=			naxsi-core-0.48
 NAXSI_DISTFILE=		${NAXSI}.tgz
 SITES.${NAXSI_DISTFILE}=	http://naxsi.googlecode.com/files/
 DISTFILES+=		${NAXSI_DISTFILE}
