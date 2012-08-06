@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2012/06/06 07:20:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/08/06 06:25:02 adam Exp $
 bin/bison
 info/bison.info
 lib/liby.a
@@ -8,6 +8,7 @@ share/bison/README
 share/bison/bison.m4
 share/bison/c++-skel.m4
 share/bison/c++.m4
+share/bison/c-like.m4
 share/bison/c-skel.m4
 share/bison/c.m4
 share/bison/glr.c
