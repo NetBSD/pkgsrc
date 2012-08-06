@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2468 2012/08/06 13:50:52 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2469 2012/08/06 14:06:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3819,3 +3819,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/openldap-nops to 2.4.32 [adam 2012-08-06]
 	Updated databases/openldap-smbk5pwd to 2.4.32 [adam 2012-08-06]
 	Added math/p5-Test-Number-Delta version 1.03 [wen 2012-08-06]
+	Updated math/p5-Math-Random-MT to 1.16 [wen 2012-08-06]
