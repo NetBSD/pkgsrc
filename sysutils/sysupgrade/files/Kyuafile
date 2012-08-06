@@ -1,0 +1,7 @@
+syntax("kyuafile", 1)
+
+test_suite("sysupgrade")
+
+atf_test_program{name="config_test"}
+atf_test_program{name="sysupgrade_test"}
+atf_test_program{name="utils_test"}

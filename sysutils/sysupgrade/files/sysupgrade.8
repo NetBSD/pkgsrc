@@ -1,0 +1,387 @@
+.\" Copyright 2012 Google Inc.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions are
+.\" met:
+.\"
+.\" * Redistributions of source code must retain the above copyright
+.\"   notice, this list of conditions and the following disclaimer.
+.\" * Redistributions in binary form must reproduce the above copyright
+.\"   notice, this list of conditions and the following disclaimer in the
+.\"   documentation and/or other materials provided with the distribution.
+.\" * Neither the name of Google Inc. nor the names of its contributors
+.\"   may be used to endorse or promote products derived from this software
+.\"   without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+.\" "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+.\" LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+.\" A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+.\" OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+.\" SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+.\" LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+.\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.Dd August 6, 2012
+.Dt SYSUPGRADE 8
+.Os
+.Sh NAME
+.Nm sysupgrade
+.Nd upgrades a NetBSD system to a newer version
+.Sh SYNOPSIS
+common_flags ::=
+.Op Fl c Ar config_name
+.Op Fl d Ar destdir
+.Op Fl o Ar variable=value
+.Pp
+.Em Major commands :
+.Pp
+.Nm
+.Op common_flags
+.Ar auto
+.Op Ar releasedir
+.Nm
+.Op common_flags
+.Ar config
+.Op Fl a
+.Pp
+.Em Standalone upgrade steps :
+.Pp
+.Nm
+.Op common_flags
+.Ar clean
+.Nm
+.Op common_flags
+.Ar etcupdate
+.Nm
+.Op common_flags
+.Ar fetch
+.Op Ar releasedir
+.Nm
+.Op common_flags
+.Ar kernel
+.Op Ar kernel_name
+.Nm
+.Op common_flags
+.Ar modules
+.Nm
+.Op common_flags
+.Ar sets
+.Op Ar set1 .. setN
+.Nm
+.Op common_flags
+.Ar postinstall
+.Op Ar arg1 .. argN
+.Sh DESCRIPTION
+.Nm
+is a utility that automates the process of upgrading a possibly-running
+.Nx
+system to a newer release.
+.Pp
+.Nm
+works by first fetching the release sets from a remote site or from a local
+directory, then by upgrading the system using such release sets and finally by
+taking care of bringing the system configuration up to date.
+In other words,
+.Nm
+does nothing special on its own: it is just a utility that automates a highly
+manual process and relies on other tools within the system to perform its job.
+.Pp
+.Nm
+has a subcommand-based interface: every command performs a single step of the
+upgrade procedure, and the
+.Sq auto
+command orchestrates a complete upgrade by invoking the rest of the commands in
+a specific order.
+There are a set of options that apply to all commands (those stated before the
+command name), and every particular command may accept its own options and
+arguments as shown in the synopsis.
+.Pp
+The behavior of
+.Nm
+is defined by a configuration file that specifies how to apply an update to the
+system (see
+.Xr sysupgrade.conf 5 ) .
+For example, the configuration states which distribution sets ought to be
+installed, where they need to be downloaded from, and whether the system
+configuration files should be upgraded.
+.Pp
+The following options apply to all commands:
+.Bl -tag -width XoXvariableXvalueXX
+.It Fl c Ar config_file
+Specifies the configuration file to use.
+.Pp
+Default:
+.Pa @SYSUPGRADE_ETCDIR@/sysupgrade.conf
+.It Fl d Ar destdir
+Pato the the
+.Nx
+system to upgrade.
+.Pp
+This optional flag can be used to upgrade a non-live system or for
+testing/development purposes.
+Note that some steps (particularly
+.Sq etcupdate )
+do not support this feature and thus will never be run if set.
+.Pp
+Default: not set (which means
+.Pa /
+is affected).
+.It Fl o Ar variable=value
+Applies an override to the loaded configuration.
+.Pp
+The
+.Ar variable
+part of the argument must be any of the recognized configuration variables
+described in
+.Xr sysupgrade.conf 5 .
+The
+.Ar value ,
+if not empty, specifies the value to set the configuration variable to.
+If
+.Ar value
+is empty, then the configuration variable is unset.
+.El
+.Ss The auto command
+The auto command is the most important command in
+.Nm ,
+and is probably the one you will find yourself using most frequently.
+This is the command that takes care of upgrading a full
+.Nx
+installation, and it does so by invoking the other commands in the tool in the
+specific order in which they are needed.
+.Pp
+The optional argument
+.Ar releasedir
+points to the release directory or URL to use, overriding the value of
+.Va RELEASEDIR
+in the configuration file (if any).
+If you are tracking daily builds from an FTP site, for example, you will
+probably want to avoid setting
+.Va RELEASEDIR
+in the configuration file and instead pass an URL each time you run this
+command.
+.Pp
+The standard upgrade procedure performed by this command is as follows:
+.Bl -enum
+.It
+.Sq fetch :
+Retrieve distribution sets into the local cache directory.
+.It
+.Sq modules :
+Unpack new kernel modules.
+.It
+.Sq kernel :
+Upgrade kernel.
+.It
+.Sq sets :
+Upgrade system sets, except configuration files.
+.It
+.Sq etcupdate :
+Merge new changes to configuration files.
+This is the only interactive step in the process and can be disabled for this
+reason by setting
+.Va ETCUPDATE
+to false.
+.It
+.Sq postinstall :
+Perform sanity checks and optionally apply unconditional fixes to the upgraded
+system.
+.It
+.Sq clean :
+Remove contents of the cache directory.
+This can be disabled by setting
+.Va AUTOCLEAN
+to false in case you want to keep the downloaded distribution files around.
+.El
+.Ss The clean command
+The clean command removes any distribution sets from the local cache directory.
+.Ss The config command
+The config command dumps the loaded configuration to the standard output.
+The format of the output is not a script, so it cannot be fed back into
+.Nm .
+The purpose of this command is to aid in debugging the configuration of the
+tool before performing any builds, particularly when the configuration
+files use shell logic to determine the value of any variables.
+.Pp
+The following options are accepted:
+.Bl -tag -width XaXX
+.It Fl a
+Process automatic variables such as
+.Va KERNEL
+and
+.Va SETS
+and display their deduced values instead of only showing the literal
+.Sq AUTO .
+.El
+.Ss The etcupdate command
+The etcupdate command invokes
+.Xr etcupdate 8
+to perform an interactive upgrade of the system configuration files in
+.Pa /etc .
+This is the only interactive process in a full system upgrade.
+.Pp
+In order for this command to do anything useful, the list of sets to install as
+specified by the
+.Va SETS
+configuration variable
+.Em must include
+.Sq etc ,
+and may optionally include
+.Sq xetc .
+.Pp
+Note that, due to defficiencies in the
+.Xr etcupdate 8
+utility, this command does not work when
+.Va DESTDIR
+is set.
+.Ss The fetch command
+The fetch command gets a copy of the release sets as pointed to by the
+.Va RELEASEDIR
+variable into a local cache directory, or from the directory indicated by the
+optional argument
+.Ar releasedir .
+.Pp
+If
+.Va RELEASEDIR
+points to a local directory, the utility just creates symlinks within the cache
+directory pointing to the original files.
+Otherwise, if
+.Va RELEASEDIR
+points to a remote FTP or HTTP site, the fetch command will retrieve the
+contents of the release directory into the local cache directory.
+.Pp
+Please note that all the commands that access distribution sets do so by looking
+for such files in the cache directory
+.Em even when the release directory is in a local path .
+This means that, for such commands to work, you must run fetch beforehand.
+.Ss The kernel command
+The kernel command upgrades the kernel to a newer version.
+The kernel to install is determined by the optional argument
+.Ar kernel_name
+if present, or otherwise from the
+.Va KERNEL
+variable.
+The kernel is expected to be found in a
+.Sq kern-<NAME>
+distribution set in the release directory.
+.Pp
+The previous kernel is backed up as
+.Pa <destdir>/onetbsd.
+.Ss The modules command
+The modules command upgrades the kernel modules to a newer version.
+This operation only takes place if the sets to be installed, as specified by the
+.Va SETS
+variable, contains the
+.Sq modules
+set.
+.Ss The sets command
+The sets command upgrades all non-kernel, non-modules and non-configuration sets
+of the system to a newer version.
+In other words, this command installs sets like
+.Sq base
+or
+.Sq tests
+but explicitly skips sets of the forms
+.Sq *etc ,
+.Sq kern-*
+and
+.Sq modules .
+.Pp
+The list of sets to be installed is determined by the optional arguments passed
+to the command or, if none, from the value of the
+.Va SETS
+configuration variable.
+.Ss The postinstall command
+The postinstall command invokes the
+.Xr postinstall 8
+utility to perform checks and fixes on the system after all new files have been
+put in place.
+.Pp
+The
+.Va POSTINSTALL_AUTOFIX
+variable can optionally include a list of
+.Xr postinstall 8
+fixes to be applied to a system unconditionally.
+For example, listing
+.Sq obsolete
+in this variable is usually useful as this check fails often during upgrades and
+is safe to auto-fix.
+.Pp
+Any arguments supplied to the command are passed directly to
+.Xr postinstall 8 ,
+which comes handy in those cases where you have to manually fix a broken test.
+.Sh FILES
+.Bl -tag -width XXXX
+.It Pa @SYSUPGRADE_ETCDIR@/sysupgrade.conf
+Default configuration file.
+.It Pa @SYSUPGRADE_CACHEDIR@
+Location where distribution sets are temporarily stored.
+The
+.Sq fetch
+command writes files into this directory and the
+.Sq clean
+command clears its contents.
+.It Pa /home/sysbuild/release/<machine>
+Standard location of the releases built by the
+.Xr sysbuild 1
+utility.
+.El
+.Sh EXAMPLES AND TROUBLESHOOTING
+The most common way of executing
+.Nm
+is by using the
+.Sq auto
+command and relying in the default configuration file:
+.Bd -literal -offset indent
+$ sysupgrade auto
+.Ed
+.Pp
+If you wish to track minor stable releases, you may want to do something like
+this every time a new release is published:
+.Bd -literal -offset indent
+$ sysupgrade auto \\
+    ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-6.<minor>/$(uname -m)
+.Ed
+.Pp
+If the upgrade process fails due to an aborted FTP or HTTP connection, simply
+rerun
+.Nm
+in
+.Sq auto
+mode and it will resume the download where it left off.
+.Pp
+If the
+.Sq postinstall
+step fails due to broken checks, you can manually resume that stage and complete
+the upgrade by doing:
+.Bd -literal -offset indent
+$ sysupgrade postinstall fix <names of the failed checks>
+$ sysupgrade clean
+.Ed
+.Pp
+If you have decided to run
+.Xr etcupdate 8
+by hand separately from
+.Nm ,
+you could do:
+.Bd -literal -offset indent
+$ sysupgrade -o AUTOCLEAN=no -o ETCUPDATE=no auto
+\&... and later, at your earliest convenience ...
+$ sysupgrade etcupdate
+$ sysupgrade clean
+.Ed
+.Sh SEE ALSO
+.Xr sysbuild 1 ,
+.Xr sysupgrade.conf 5 ,
+.Xr etcupdate 8 ,
+.Xr postinstall 8 .
+.Sh AUTHORS
+The
+.Nm
+utility was developed by
+.An Julio Merino
+.Aq jmmv@NetBSD.org .
