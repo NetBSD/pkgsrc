@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2012/01/08 09:47:42 adam Exp $
+# $NetBSD: Makefile,v 1.63 2012/08/07 16:18:26 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.7
+DISTNAME=	cmake-${CMAKE_API}.8
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cmake.org/files/v2.8/
+MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
 CMAKE_API=	2.8
 
@@ -65,5 +65,4 @@ BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8.4
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/xmlrpc-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
