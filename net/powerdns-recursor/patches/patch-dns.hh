@@ -1,10 +1,17 @@
-$NetBSD: patch-dns.hh,v 1.1 2012/02/28 10:49:28 roy Exp $
+$NetBSD: patch-dns.hh,v 1.2 2012/08/07 23:31:03 marino Exp $
 
 Only attempt to define byte order if unset.
+Add DragonFly support
 
---- dns.hh.orig	2010-09-21 16:22:09.000000000 +0000
+--- dns.hh.orig	2012-08-07 23:18:28.526524000 +0000
 +++ dns.hh
-@@ -181,7 +181,7 @@ enum  {
+@@ -176,12 +176,12 @@ enum  {
+ #ifdef WIN32
+ #define BYTE_ORDER 1
+ #define LITTLE_ENDIAN 1
+-#elif __FreeBSD__ || __APPLE__
++#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+ #include <machine/endian.h>
  #elif __linux__
  # include <endian.h>
  
