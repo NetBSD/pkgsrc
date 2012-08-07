@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2012/04/28 20:55:31 gendalia Exp $
+$NetBSD: patch-ac,v 1.4 2012/08/07 06:51:58 sbd Exp $
 
---- client/Makefile.orig	2011-03-08 17:20:28.000000000 +0000
+--- client/Makefile.orig	2011-12-12 22:15:39.000000000 +0000
 +++ client/Makefile
-@@ -19,6 +19,22 @@ endif
+@@ -19,6 +19,25 @@ endif
  PROGRAMS=xymonlaunch logfetch clientupdate orcaxymon msgcache
  COMMONTOOLS=xymon xymoncmd xymongrep xymoncfg xymondigest
  
@@ -15,6 +15,9 @@ $NetBSD: patch-ac,v 1.3 2012/04/28 20:55:31 gendalia Exp $
 +ifndef INSTALLEXTDIR
 +INSTALLEXTDIR = $(XYMONHOME)/ext
 +endif
++ifndef INSTALLLOCALDIR
++INSTALLLOCALDIR = $(XYMONHOME)/local
++endif
 +ifndef INSTALLTMPDIR
 +INSTALLTMPDIR = $(XYMONHOME)/tmp
 +endif
@@ -25,7 +28,7 @@ $NetBSD: patch-ac,v 1.3 2012/04/28 20:55:31 gendalia Exp $
  all: $(PROGRAMS) $(COMMONTOOLS) xymonclient.cfg clientlaunch.cfg $(EXTRATOOLS)
  
  xymonclient.cfg: xymonclient.cfg.DIST
-@@ -58,28 +74,58 @@ netbsd-meminfo: netbsd-meminfo.c
+@@ -58,28 +77,58 @@ netbsd-meminfo: netbsd-meminfo.c
  
  install:
  	if test ! -d $(INSTALLROOT)$(XYMONHOME)       ; then mkdir -p $(INSTALLROOT)$(XYMONHOME)       ; fi
@@ -76,7 +79,7 @@ $NetBSD: patch-ac,v 1.3 2012/04/28 20:55:31 gendalia Exp $
 +	ln -sf $(INSTALLLOCALDIR) $(INSTALLROOT)$(XYMONHOME)/local
 +endif
 +endif
-+	if test ! -f $(INSTALLROOT)$(INSTALLEXADIR)/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(INSTALLEXADIR) ; fi
++	if test ! -f $(INSTALLROOT)$(INSTALLETCDIR)/localclient.cfg ; then cp localclient.cfg $(INSTALLROOT)$(INSTALLETCDIR) ; fi
 +	if test ! -f $(INSTALLROOT)$(INSTALLLOCALDIR)/README; then cp README-local $(INSTALLROOT)$(INSTALLLOCALDIR)/README ; chmod 644 $(INSTALLROOT)$(INSTALLLOCALDIR)/README; fi
 +	cp -fp runclient.sh $(INSTALLROOT)$(INSTALLBINDIR)
 +	cp -fp $(PROGRAMS) xymonclient*.sh $(COMMONTOOLS) $(EXTRATOOLS) $(INSTALLROOT)$(INSTALLBINDIR)
