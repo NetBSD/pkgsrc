@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2003/06/13 10:55:26 cjep Exp $
---- cda_d/Imakefile.orig	Wed Aug  8 01:15:13 2001
-+++ cda_d/Imakefile	Tue Jun 10 13:29:21 2003
+$NetBSD: patch-ab,v 1.13 2012/08/07 20:18:20 marino Exp $
+
+--- cda_d/Imakefile.orig	2001-08-08 00:15:13.000000000 +0000
++++ cda_d/Imakefile
 @@ -53,7 +53,13 @@
  DEFINES= -DBSDCOMPAT -DUSE_TERMIOS
  #else
@@ -16,7 +17,14 @@ $NetBSD: patch-ab,v 1.12 2003/06/13 10:55:26 cjep Exp $
  #else
  #if defined(__bsdi__)
  .if exists(/usr/include/ncurses.h)
-@@ -127,11 +133,16 @@
+@@ -121,17 +127,22 @@ LOCAL_LIBRARIES=-L/usr/5lib -lcurses
+ LOCAL_LIBRARIES=-lncurses
+ #else
+ #if defined(FreeBSDArchitecture)
+-LOCAL_LIBRARIES=-lncurses -lmytinfo
++LOCAL_LIBRARIES=-lncurses
+ .if exists(/usr/include/camlib.h)
+ LOCAL_LIBRARIES+= -lcam
  .endif
  #else
  #if defined(NetBSDArchitecture)
