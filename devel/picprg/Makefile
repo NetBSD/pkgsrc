@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/07 23:41:23 dsainty Exp $
 #
 
 PKGNAME=		picprg-2.3d
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.finitesite.com/d3jsys/
 COMMENT=		Parallel port PIC programmer
 
 # The programmer makes direct I/O bus accesses via the i386 in/out
-# instructions.  The program has been patches to work on NetBSD only,
+# instructions.  The program has been patched to work on NetBSD only,
 # via the i386_set_ioperm() interface.
 #
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
