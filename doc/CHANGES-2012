@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2481 2012/08/07 16:20:08 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2482 2012/08/07 19:23:19 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3832,3 +3832,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/hamlib to 1.2.15.2 [gdt 2012-08-07]
 	Added lang/konoha version 1.0.0.952 [ryoon 2012-08-07]
 	Updated devel/cmake to 2.8.8 [adam 2012-08-07]
+	Updated sysutils/amtterm to 1.3 [msaitoh 2012-08-08]
