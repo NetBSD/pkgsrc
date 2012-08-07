@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/06/17 02:55:47 dholland Exp $
+# $NetBSD: Makefile,v 1.34 2012/08/07 10:47:48 marino Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -52,10 +52,14 @@ BDB_ACCEPTED=		db1
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "DragonFly"
 .if exists(/usr/include/sys/queue.h)
 # this file obscures the system header
+# (Desired for DragonFly which does not have CIRCLEQ macros)
 post-patch:
 	${RM} -f ${WRKSRC}/include/sys/queue.h
+.endif
 .endif
 
 .include "../../mk/curses.buildlink3.mk"
