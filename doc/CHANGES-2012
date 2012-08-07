@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2476 2012/08/07 06:52:09 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.2477 2012/08/07 08:22:13 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/asciidoc to 8.6.8 [gls 2012-08-06]
 	Updated x11/x3270 to 3.3.12ga11 [gls 2012-08-06]
 	Updated net/xymonclient to 4.3.7nb1 [sbd 2012-08-07]
+	Updated www/nginx to 1.0.15nb1 [imil 2012-08-07]
