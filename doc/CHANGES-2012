@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2478 2012/08/07 10:42:35 imil Exp $
+$NetBSD: CHANGES-2012,v 1.2479 2012/08/07 12:24:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/xymonclient to 4.3.7nb1 [sbd 2012-08-07]
 	Updated www/nginx to 1.0.15nb1 [imil 2012-08-07]
 	Updated www/nginx to 1.2.2 [imil 2012-08-07]
+	Updated ham/hamlib to 1.2.15.2 [gdt 2012-08-07]
