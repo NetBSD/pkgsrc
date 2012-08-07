@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/29 20:05:22 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/08/07 14:54:36 marino Exp $
 #
 PKGNAME=		xjed-0.99.16
 PKGREVISION=		1
@@ -21,7 +21,8 @@ PLIST_SRC+=		${.CURDIR}/PLIST.xjed
 .include "../../mk/bsd.prefs.mk"
 
 # XXX For just now disable grantpt(3) for NetBSD-2.0F and later
-.if ${OPSYS} == "NetBSD"
+# Also for Dragonfly, there's no strops.h header
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ENV+=		ac_cv_func_grantpt=no
 .endif
 
