@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2012/07/15 02:35:21 dholland Exp $
+# $NetBSD: Makefile,v 1.325 2012/08/07 16:07:01 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -90,6 +90,7 @@ SUBDIR+=	kaffe
 SUBDIR+=	kaffe-esound
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
+SUBDIR+=	konoha
 SUBDIR+=	ksi
 SUBDIR+=	librep
 SUBDIR+=	libtcl-nothread
