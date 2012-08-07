@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:50:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/08/07 09:42:35 marino Exp $
+bin/lxvile
+bin/lxvile-fonts
+bin/uxvile
 bin/xshell.sh
 bin/xvile
 bin/xvile-pager
 bin/xvileget
+lib/X11/app-defaults/UXVile
+lib/X11/app-defaults/XVile
 libexec/xvile/atr2ansi
 libexec/xvile/atr2html
 libexec/xvile/atr2text
@@ -27,6 +32,7 @@ libexec/xvile/vile-ecl-filt
 libexec/xvile/vile-esql-filt
 libexec/xvile/vile-est-filt
 libexec/xvile/vile-fdl-filt
+libexec/xvile/vile-hs-filt
 libexec/xvile/vile-html-filt
 libexec/xvile/vile-imake-filt
 libexec/xvile/vile-info-filt
@@ -39,6 +45,7 @@ libexec/xvile/vile-lisp-filt
 libexec/xvile/vile-lua-filt
 libexec/xvile/vile-m4-filt
 libexec/xvile/vile-mail-filt
+libexec/xvile/vile-mailcap-filt
 libexec/xvile/vile-make-filt
 libexec/xvile/vile-manfilt
 libexec/xvile/vile-mcrl-filt
@@ -58,6 +65,7 @@ libexec/xvile/vile-rpm-filt
 libexec/xvile/vile-rtf-filt
 libexec/xvile/vile-ruby-filt
 libexec/xvile/vile-sccs-filt
+libexec/xvile/vile-scheme-filt
 libexec/xvile/vile-sed-filt
 libexec/xvile/vile-sh-filt
 libexec/xvile/vile-sml-filt
@@ -74,6 +82,7 @@ libexec/xvile/vile-vile-filt
 libexec/xvile/vile-vlog-filt
 libexec/xvile/vile-wbt-filt
 libexec/xvile/vile-xml-filt
+libexec/xvile/vile-xq-filt
 libexec/xvile/vile-xres-filt
 libexec/xvile/vile-xs-filt
 libexec/xvile/vile-yacc-filt
@@ -84,7 +93,9 @@ share/examples/xvile/manpage.rc
 share/examples/xvile/pictmode.rc
 share/examples/xvile/spell.rc
 share/examples/xvile/visvile.rc
+share/pixmaps/vile.xpm
 share/xvile/ada.keywords
+share/xvile/ant.keywords
 share/xvile/as.keywords
 share/xvile/as386.keywords
 share/xvile/asm.keywords
@@ -122,6 +133,7 @@ share/xvile/est.keywords
 share/xvile/fdl.keywords
 share/xvile/filters.rc
 share/xvile/gnugpg.rc
+share/xvile/hs.keywords
 share/xvile/html.keywords
 share/xvile/imake.keywords
 share/xvile/ini.keywords
@@ -135,11 +147,14 @@ share/xvile/loaderrs.rc
 share/xvile/lua.keywords
 share/xvile/m4.keywords
 share/xvile/mail.keywords
+share/xvile/mailcap.keywords
 share/xvile/make.keywords
 share/xvile/manpage.rc
 share/xvile/mcrl.keywords
 share/xvile/midl.keywords
 share/xvile/modes.rc
+share/xvile/mvn.keywords
+share/xvile/objc.keywords
 share/xvile/nr.keywords
 share/xvile/nsis.keywords
 share/xvile/palettes.rc
@@ -172,6 +187,7 @@ share/xvile/perl/winops.pm
 share/xvile/php.keywords
 share/xvile/pictmode.rc
 share/xvile/pot.keywords
+share/xvile/prolog.keywords
 share/xvile/ps.keywords
 share/xvile/py.keywords
 share/xvile/rb.keywords
@@ -198,6 +214,8 @@ share/xvile/tex.keywords
 share/xvile/texi.keywords
 share/xvile/ti.keywords
 share/xvile/vb.keywords
+share/xvile/vb6.keywords
+share/xvile/vbs.keywords
 share/xvile/vile.hlp
 share/xvile/vile.keywords
 share/xvile/vileinit.rc
@@ -208,6 +226,8 @@ share/xvile/vlog.keywords
 share/xvile/wbt.keywords
 share/xvile/which.rc
 share/xvile/xml.keywords
+share/xvile/xq.keywords
 share/xvile/xres.keywords
 share/xvile/xs.keywords
+share/xvile/xsl.keywords
 share/xvile/yacc.keywords
