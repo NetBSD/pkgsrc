@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/22 15:37:02 spz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/07 02:36:12 sbd Exp $
 libexec/xymon/client/clientupdate
 libexec/xymon/client/logfetch
 libexec/xymon/client/msgcache
-libexec/xymon/client/${LOWER_OPSYS}-meminfo
+${PLIST.meminfo}libexec/xymon/client/${LOWER_OPSYS}-meminfo
 libexec/xymon/client/orcaxymon
 libexec/xymon/client/runclient.sh
 libexec/xymon/client/xymon
