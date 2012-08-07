@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/08/07 19:20:41 marino Exp $
+
+--- configure.orig	2012-01-20 17:04:39.000000000 +0000
++++ configure
+@@ -4377,6 +4377,10 @@ $as_echo "$bird_cv_sys_linux_version" >&
+ 				;;
+ 		ipv4:freebsd*)	sysdesc=bsd
+ 				;;
++		ipv6:dragonfly*) sysdesc=bsd-v6
++				;;
++		ipv4:dragonfly*) sysdesc=bsd
++				;;
+ 		ipv6:kfreebsd*) sysdesc=bsd-v6
+ 				;;
+ 		ipv4:kfreebsd*) sysdesc=bsd
