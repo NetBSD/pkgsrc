@@ -1,23 +1,24 @@
-$NetBSD: patch-ac,v 1.6 2011/02/22 15:05:34 adam Exp $
+$NetBSD: patch-ac,v 1.7 2012/08/07 16:18:26 adam Exp $
 
---- Modules/FindPythonLibs.cmake.orig	2011-02-15 17:47:27.000000000 +0000
+--- Modules/FindPythonLibs.cmake.orig	2012-04-18 18:10:54.000000000 +0000
 +++ Modules/FindPythonLibs.cmake
-@@ -27,11 +27,17 @@ INCLUDE(CMakeFindFrameworks)
- # Search for the python framework on Apple.
- CMAKE_FIND_FRAMEWORKS(Python)
+@@ -56,11 +56,18 @@ ELSE(PythonLibs_FIND_VERSION)
+     SET(_PYTHON_FIND_OTHER_VERSIONS ${_PYTHON3_VERSIONS} ${_PYTHON2_VERSIONS} ${_PYTHON1_VERSIONS})
+ ENDIF(PythonLibs_FIND_VERSION)
  
++# for pkgsrc: force Python version (set in pyversion.mk)
 +IF(DEFINED PYVERSSUFFIX)
 +  SET(_VERSIONS ${PYVERSSUFFIX})
 +ELSE(DEFINED PYVERSSUFFIX)
-+  SET(_VERSIONS 2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
++  SET(_VERSIONS ${_PYTHON2_VERSIONS} ${_PYTHON3_VERSIONS})
 +ENDIF(DEFINED PYVERSSUFFIX)
 +
  # Set up the versions we know about, in the order we will search. Always add
  # the user supplied additional versions to the front.
- set(_Python_VERSIONS
+ SET(_Python_VERSIONS
    ${Python_ADDITIONAL_VERSIONS}
--  2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
-+  ${_VERSIONS})
+-  ${_PYTHON_FIND_OTHER_VERSIONS}
++  ${_VERSIONS}
+   )
  
- FOREACH(_CURRENT_VERSION ${_Python_VERSIONS})
-   STRING(REPLACE "." "" _CURRENT_VERSION_NO_DOTS ${_CURRENT_VERSION})
+ UNSET(_PYTHON_FIND_OTHER_VERSIONS)

@@ -1,18 +1,18 @@
-$NetBSD: patch-ab,v 1.12 2012/02/16 18:32:25 hans Exp $
+$NetBSD: patch-ab,v 1.13 2012/08/07 16:18:26 adam Exp $
 
---- Modules/FindPythonInterp.cmake.orig	2011-10-04 16:09:24.000000000 +0000
+--- Modules/FindPythonInterp.cmake.orig	2012-04-18 18:10:54.000000000 +0000
 +++ Modules/FindPythonInterp.cmake
-@@ -26,14 +26,20 @@
- # (To distribute this file outside of CMake, substitute the full
- #  License text for the above reference.)
+@@ -60,14 +60,20 @@ endif(PythonInterp_FIND_VERSION)
+ 
+ list(APPEND _Python_NAMES python)
  
 -# Search for the current active python version first
--find_program(PYTHON_EXECUTABLE NAMES python)
+-find_program(PYTHON_EXECUTABLE NAMES ${_Python_NAMES})
 +# for pkgsrc: force Python version (set in pyversion.mk)
 +IF(DEFINED PYVERSSUFFIX)
 +  SET(_VERSIONS ${PYVERSSUFFIX})
 +ELSE(DEFINED PYVERSSUFFIX)
-+  SET(_VERSIONS 2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
++  SET(_VERSIONS ${_PYTHON2_VERSIONS} ${_PYTHON3_VERSIONS})
 +  # Search for the current active python version first
 +  find_program(PYTHON_EXECUTABLE NAMES python)
 +ENDIF(DEFINED PYVERSSUFFIX)
@@ -21,8 +21,8 @@ $NetBSD: patch-ab,v 1.12 2012/02/16 18:32:25 hans Exp $
  # the user supplied additional versions to the front.
  set(_Python_VERSIONS
    ${Python_ADDITIONAL_VERSIONS}
--  2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
-+  ${_VERSIONS})
+-  ${_PYTHON_FIND_OTHER_VERSIONS}
++  ${_VERSIONS}
+   )
  
- # Search for newest python version if python executable isn't found
- if(NOT PYTHON_EXECUTABLE)
+ unset(_PYTHON_FIND_OTHER_VERSIONS)
