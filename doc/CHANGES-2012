@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2480 2012/08/07 16:07:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2481 2012/08/07 16:20:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2918,14 +2918,14 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/validns to 0.5 [pettai 2012-06-08]
 	Updated net/mikutter to 0.1.1.799 [obache 2012-06-09]
 	Updated databases/py-postgresql to 4.0nb2 [wiz 2012-06-09]
-        Updated mail/courier-maildir to 0.68.1 [adam 2012-06-09]
-        Updated net/couriertcpd to 0.68.1 [adam 2012-06-09]
-        Updated mail/courier-mta to 0.68.1 [adam 2012-06-09]
-        Updated security/courier-authlib to 0.64.0 [adam 2012-06-09]
-        Updated mail/courier-imap to 4.10.0 [adam 2012-06-09]
-        Updated mail/maildrop to 2.5.5 [adam 2012-06-09]
-        Updated mail/cone to 0.90 [adam 2012-06-09]
-        Updated mail/sqwebmail to 5.5.3 [adam 2012-06-09]
+	Updated mail/courier-maildir to 0.68.1 [adam 2012-06-09]
+	Updated net/couriertcpd to 0.68.1 [adam 2012-06-09]
+	Updated mail/courier-mta to 0.68.1 [adam 2012-06-09]
+	Updated security/courier-authlib to 0.64.0 [adam 2012-06-09]
+	Updated mail/courier-imap to 4.10.0 [adam 2012-06-09]
+	Updated mail/maildrop to 2.5.5 [adam 2012-06-09]
+	Updated mail/cone to 0.90 [adam 2012-06-09]
+	Updated mail/sqwebmail to 5.5.3 [adam 2012-06-09]
 	Updated www/php-owncloud to 4.0.1 [ryoon 2012-06-09]
 	Updated misc/openoffice3 to 3.1.1nb26 [dholland 2012-06-09]
 	Updated textproc/mecab to 0.994 [obache 2012-06-09]
@@ -3831,3 +3831,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/nginx to 1.2.2 [imil 2012-08-07]
 	Updated ham/hamlib to 1.2.15.2 [gdt 2012-08-07]
 	Added lang/konoha version 1.0.0.952 [ryoon 2012-08-07]
+	Updated devel/cmake to 2.8.8 [adam 2012-08-07]
