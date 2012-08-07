@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/04/28 20:55:31 gendalia Exp $
+# $NetBSD: Makefile,v 1.12 2012/08/07 02:36:12 sbd Exp $
 #
 
 DISTNAME=		xymon-4.3.7
@@ -122,5 +122,10 @@ MAKE_ENV+=		PKGDIR=${PREFIX}
 MAKE_ENV+=		INSTALLROOT=${DESTDIR}
 MAKE_ENV+=		PKGBUILD=y
 MAKE_ENV+=		${TOOLS_ENV}
+
+PLIST_VARS+=		meminfo
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "FreeBSD"
+PLIST.meminfo=		yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
