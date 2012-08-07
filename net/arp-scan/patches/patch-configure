@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2012/08/07 18:21:30 marino Exp $
+
+--- configure.orig	2011-03-01 14:11:09.000000000 +0000
++++ configure
+@@ -6093,7 +6093,7 @@ done
+ esac
+ 
+       ;;
+-   *freebsd* | *darwin* | *openbsd* | *netbsd* )
++   *freebsd* | *darwin* | *openbsd* | *netbsd* | *dragonfly* )
+       { echo "$as_me:$LINENO: Using BPF link layer implementation." >&5
+ echo "$as_me: Using BPF link layer implementation." >&6;};
+ 
