@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2479 2012/08/07 12:24:48 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.2480 2012/08/07 16:07:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3830,3 +3830,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/nginx to 1.0.15nb1 [imil 2012-08-07]
 	Updated www/nginx to 1.2.2 [imil 2012-08-07]
 	Updated ham/hamlib to 1.2.15.2 [gdt 2012-08-07]
+	Added lang/konoha version 1.0.0.952 [ryoon 2012-08-07]
