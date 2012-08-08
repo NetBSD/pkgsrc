@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2495 2012/08/08 12:23:05 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.2496 2012/08/08 12:33:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Devel-GlobalDestruction to 0.08 [wen 2012-08-08]
 	Added textproc/p5-Dist-Zilla-Plugin-PodWeaver version 3.101641 [sno 2012-08-08]
 	Updated mail/getmail to 4.33.0 [schmonz 2012-08-08]
+	Updated devel/p5-Moo to 1.000002 [wen 2012-08-08]
