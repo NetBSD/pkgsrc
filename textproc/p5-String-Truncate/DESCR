@@ -1,0 +1,3 @@
+String::Truncate handles the simple but common problem of long strings and
+finite terminal width by eliding or truncating parts of the string from the
+left, right, middle or both ends, respectively.
