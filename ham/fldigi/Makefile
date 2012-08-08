@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/08/08 00:15:31 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2012/08/08 00:19:11 gdt Exp $
 #
 
 DISTNAME=	fldigi-3.03
 PKGREVISION=	6
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
+LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w1hkj.com/Fldigi.html
