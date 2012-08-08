@@ -1,16 +1,96 @@
-$NetBSD: patch-ad,v 1.1 2006/06/12 16:41:30 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2012/08/08 18:37:07 marino Exp $
 
---- procinfo.c.orig	2006-06-12 16:36:48.000000000 +0000
+Fix LP64 support on FreeBSD/DragonFly (size_t instead of int)
+Add DragonFly support -- kinfo structure is unique on DragonFly
+
+--- procinfo.c.orig	2000-06-06 18:36:47.000000000 +0000
 +++ procinfo.c
-@@ -85,7 +85,11 @@ void get_info(int pid, struct procinfo *
+@@ -65,7 +65,7 @@ void get_info(int pid, struct procinfo *
+ int fill_kinfo(struct kinfo_proc *info, int pid)
+ {
+ 	int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, pid };
+-	int len = sizeof *info;
++	size_t len = sizeof *info;
+ 	if(sysctl(mib, 4, info, &len, 0, 0) == -1) 
+ 		return -1;
+ 	return len?0:-1;
+@@ -83,12 +83,21 @@ void get_info(int pid, struct procinfo *
  	
+ 	if(fill_kinfo(&info, pid) == -1) return;
+ 	
++#ifdef __DragonFly__
++    	p->ppid = info.kp_ppid;
++    	p->tpgid = info.kp_tpgid;
++    	p->euid = info.kp_svuid;
++    	p->stat = info.kp_stat;
++    	strncpy(p->exec_file, info.kp_comm, EXEC_FILE);
++    	p->cterm = info.kp_tdev;
++#else
      	p->ppid = info.kp_eproc.e_ppid;
      	p->tpgid = info.kp_eproc.e_tpgid;
-+#if defined(__DragonFly__)
-+    	p->euid = info.kp_eproc.e_ucred.cr_svuid;
-+#else
      	p->euid = info.kp_eproc.e_pcred.p_svuid;
-+#endif
      	p->stat = info.kp_proc.p_stat;
      	strncpy(p->exec_file, info.kp_proc.p_comm, EXEC_FILE);
      	p->cterm = info.kp_eproc.e_tdev;
++#endif
+ 	p->exec_file[EXEC_FILE] = '\0';
+ }
+ #endif
+@@ -124,7 +133,8 @@ int get_term(char *tty)
+ int get_login_pid(char *tty)
+ {
+ 	int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_TTY, 0};
+-	int len, t, el, i, pid, cndt = -1, l;
++	size_t len;
++	int t, el, i, pid, cndt = -1, l;
+ 	struct kinfo_proc *info;
+ 	struct procinfo p;
+ 	
+@@ -142,6 +152,17 @@ int get_login_pid(char *tty)
+ 	if(sysctl(mib, 4, info, &len, 0, 0) == -1)
+ 		return -1;
+ 	for(i = 0; i < el; i++) {
++#ifdef __DragonFly__
++		if(!(pid = info[i].kp_pid)) continue;
++		get_info(get_ppid(pid), &p);
++		if(p.cterm == -1 || p.cterm != t) {
++			cndt = pid;
++			l = strlen(info[i].kp_comm);
++			if(l > 1 && !strncmp("sh",info[i].kp_comm+l-2,2)) {
++				free(info);
++				return pid;
++			}
++#else
+ 		if(!(pid = info[i].kp_proc.p_pid)) continue;
+ 		get_info(get_ppid(pid), &p);
+ 		if(p.cterm == -1 || p.cterm != t) {
+@@ -157,6 +178,7 @@ int get_login_pid(char *tty)
+ 				free(info);
+ 				return pid;
+ 			}
++#endif
+ 		}
+ 	}
+ 	free(info);
+@@ -169,7 +191,8 @@ int get_login_pid(char *tty)
+ int get_all_info(struct kinfo_proc **info)
+ {
+ 	int mib[3] = { CTL_KERN, KERN_PROC, KERN_PROC_ALL };
+-	int len, el;
++	size_t len;
++	int el;
+ 
+ 	if(sysctl(mib, 3, 0, &len, 0, 0) == -1)
+ 		return 0;
+@@ -239,7 +262,11 @@ char *get_cmdline(int pid)
+ 	bzero(buf, sizeof buf);
+ 	if(fill_kinfo(&info, pid) == -1)
+ 		return "-";
++#ifdef __DragonFly__
++	memcpy(buf, info.kp_comm, sizeof buf - 1);
++#else
+ 	memcpy(buf, info.kp_proc.p_comm, sizeof buf - 1);
++#endif
+ 	if(!full_cmd) return buf;
+ #ifdef HAVE_LIBKVM
+ 	if(!can_use_kvm) return buf;
