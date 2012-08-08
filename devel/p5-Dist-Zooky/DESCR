@@ -1,0 +1,8 @@
+Dist::Zooky is Dist::Zilla's nephew. He has the ability to summon his uncle.
+
+dzooky will try its best to convert a distribution to use Dist::Zilla. It
+supports ExtUtils::MakeMaker, Module::Install and Module::Build based
+distributions, with certain limitations.
+
+Simply execute dzooky in the directory containing the distribution you wish
+to convert to Dist::Zilla.
