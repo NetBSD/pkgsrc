@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2490 2012/08/08 11:45:19 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2491 2012/08/08 12:07:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3840,3 +3840,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-String-Truncate version 1.100600 [sno 2012-08-08]
 	Added textproc/p5-Pod-Elemental version 0.102362 [sno 2012-08-08]
 	Added textproc/p5-Pod-Weaver version 3.101638 [sno 2012-08-08]
+	Added devel/p5-Sub-Exporter-Progressive version 0.001003 [wen 2012-08-08]
