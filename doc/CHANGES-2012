@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2486 2012/08/08 09:21:40 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2487 2012/08/08 09:22:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3836,4 +3836,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/nginx to 1.2.3 [imil 2012-08-08]
 	Updated lang/racket to 5.3 [asau 2012-08-08]
 	Updated lang/racket-textual to 5.3 [asau 2012-08-08]
-	Updated devel/p5-Dist-Zooky to 0.10 [sno 2012-08-08]
+	Added devel/p5-Dist-Zooky version 0.10 [sno 2012-08-08]
