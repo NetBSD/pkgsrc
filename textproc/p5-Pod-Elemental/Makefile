@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/08 10:56:45 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/08 11:43:41 sno Exp $
 
 DISTNAME=	Pod-Elemental-0.102362
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,8 @@ DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Exporter-ForMethods-[0-9]*:../../devel/p5-Sub-Exporter-ForMethods
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILDDEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILDDEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
