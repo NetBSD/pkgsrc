@@ -1,0 +1,13 @@
+Pod::Elemental is a system for treating a Pod (plain old documentation)
+documents as trees of elements. This model may be familiar from many other
+document systems, especially the HTML DOM. Pod::Elemental's document object
+model is much less sophisticated than the HTML DOM, but still makes a lot
+of document transformations easy.
+
+In general, you'll want to read in a Pod document and then perform a number
+of prepackaged transformations on it. The most common of these will be the
+Pod5 transformation, which assumes that the basic meaning of Pod commands
+described in the Perl 5 documentation hold: =begin, =end, and =for commands
+mark regions of the document, leading whitespace marks a verbatim paragraph,
+and so on. The Pod5 transformer also eliminates the need to track elements
+representing vertical whitespace.
