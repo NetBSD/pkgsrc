@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2488 2012/08/08 10:24:24 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2489 2012/08/08 10:57:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3838,3 +3838,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/racket-textual to 5.3 [asau 2012-08-08]
 	Added devel/p5-Dist-Zooky version 0.10 [sno 2012-08-08]
 	Added textproc/p5-String-Truncate version 1.100600 [sno 2012-08-08]
+	Added textproc/p5-Pod-Elemental version 0.102362 [sno 2012-08-08]
