@@ -1,0 +1,3 @@
+This role is to be included in classes that rewrite the documentation of
+a Perl document, stripping out all the Pod, munging it, and replacing it
+into the Perl.
