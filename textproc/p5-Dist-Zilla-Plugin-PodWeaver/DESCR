@@ -1,0 +1,2 @@
+[PodWeaver] is the bridge between Dist::Zilla and Pod::Weaver. It rips
+apart your kinda-Pod and reconstructs it as boring old real Pod.
