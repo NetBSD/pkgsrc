@@ -1,0 +1,5 @@
+Pod::Weaver is a system for building Pod documents from templates.
+It doesn't perform simple text substitution, but instead builds a
+Pod::Elemental::Document. Its plugins sketch out a series of sections
+that will be produced based on an existing Pod document or other
+provided information.
