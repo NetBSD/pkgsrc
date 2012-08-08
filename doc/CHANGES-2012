@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2494 2012/08/08 12:21:24 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2495 2012/08/08 12:23:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Pod-Elemental-PerlMunger version 0.093331 [sno 2012-08-08]
 	Updated devel/p5-Devel-GlobalDestruction to 0.08 [wen 2012-08-08]
 	Added textproc/p5-Dist-Zilla-Plugin-PodWeaver version 3.101641 [sno 2012-08-08]
+	Updated mail/getmail to 4.33.0 [schmonz 2012-08-08]
