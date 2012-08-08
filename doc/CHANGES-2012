@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2492 2012/08/08 12:11:15 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2493 2012/08/08 12:20:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Pod-Weaver version 3.101638 [sno 2012-08-08]
 	Added devel/p5-Sub-Exporter-Progressive version 0.001003 [wen 2012-08-08]
 	Added textproc/p5-Pod-Elemental-PerlMunger version 0.093331 [sno 2012-08-08]
+	Updated devel/p5-Devel-GlobalDestruction to 0.08 [wen 2012-08-08]
