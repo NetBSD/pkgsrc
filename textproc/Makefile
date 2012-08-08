@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.633 2012/08/08 10:57:52 sno Exp $
+# $NetBSD: Makefile,v 1.634 2012/08/08 11:45:53 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -320,6 +320,7 @@ SUBDIR+=	p5-Pod-Spell-CommonMistakes
 SUBDIR+=	p5-Pod-Strip
 SUBDIR+=	p5-Pod-Tests
 SUBDIR+=	p5-Pod-Tree
+SUBDIR+=	p5-Pod-Weaver
 SUBDIR+=	p5-Regexp-Common
 SUBDIR+=	p5-Regexp-Copy
 SUBDIR+=	p5-SGMLS
