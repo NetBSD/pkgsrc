@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/07/22 13:01:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/09 17:09:17 marino Exp $
 #
 
 DISTNAME=	runawk-1.4.1
 CATEGORIES=	lang devel
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
 
@@ -17,6 +18,7 @@ LICENSE=		mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
+USE_TOOLS+=		pod2man
 TEST_TARGET=		test
 
 SUBST_CLASSES+=		runawk
