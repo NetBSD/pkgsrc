@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/04/25 16:36:39 hans Exp $
+# $NetBSD: Makefile,v 1.19 2012/08/09 12:42:16 jperkin Exp $
 #
 
 DISTNAME=	numpy-1.6.1
@@ -43,6 +43,10 @@ PYSETUPBUILDARGS+= --fcompiler=gnu
 # According to http://projects.scipy.org/numpy/ticket/1101,
 # LDFLAGS should either not be set or include -shared.
 LDFLAGS+=		-shared
+
+# This package bypasses the wrappers and calls the compilers directly when
+# linking, so ensure that we pass through requisite options.
+LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 
 # needs devel/py-nose
 #do-test:
