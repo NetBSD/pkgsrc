@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/07/03 18:14:26 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2012/08/09 10:15:28 sbd Exp $
 #
 
 DISTNAME=	QScintilla-gpl-2.6.2
@@ -12,6 +12,8 @@ COMMENT=	QScintilla -- Python bindings --
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	25
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 
