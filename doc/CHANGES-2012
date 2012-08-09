@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2498 2012/08/09 14:13:31 is Exp $
+$NetBSD: CHANGES-2012,v 1.2499 2012/08/09 15:58:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3848,3 +3848,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/mtools to 4.0.17nb1 [is 2012-08-08]
 	Updated devel/p5-Moo to 1.000002 [wen 2012-08-08]
 	Added lang/abcl version 1.0.1 [asau 2012-08-09]
+	Updated mail/thunderbird10 to 10.0.6nb1 [ryoon 2012-08-09]
