@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2012/07/16 19:12:33 adam Exp $
+# $NetBSD: Makefile,v 1.59 2012/08/09 20:15:20 marino Exp $
 
 DISTNAME=	krb5-1.10.2
 PKGNAME=	mit-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar
@@ -28,7 +29,7 @@ CONFLICTS+=	kth-krb4-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gmake m4 perl yacc
+USE_TOOLS+=		autoconf gmake m4 perl yacc msgfmt
 MAKE_PROGRAM=		gmake
 GNU_CONFIGURE=		yes
 
