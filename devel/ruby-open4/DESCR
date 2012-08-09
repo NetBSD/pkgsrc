@@ -1,0 +1,3 @@
+Open4 is a Ruby library to open child process with handles on pid,
+stdin, stdout, and stderr, and manage child processes and their io
+handles easily.
