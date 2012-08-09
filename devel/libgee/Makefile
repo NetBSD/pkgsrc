@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/03/03 00:11:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/08/09 18:54:12 drochner Exp $
 #
 
-DISTNAME=	libgee-0.6.4
-PKGREVISION=	2
+DISTNAME=	libgee-0.6.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/0.6/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,11 +18,14 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=		pkg-config gmake
 
 # to regenerate after patches
-#BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
+#BUILDLINK_DEPMETHOD.vala:= build
+#.include "../../lang/vala016/buildlink3.mk"
 
 PKGCONFIG_OVERRIDE+=	gee-1.0.pc.in
 
 TEST_TARGET=	check
 
+BUILDLINK_DEPMETHOD.gobject-introspection:= build
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
