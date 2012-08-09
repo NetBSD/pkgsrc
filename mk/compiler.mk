@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.78 2012/08/09 12:16:24 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.79 2012/08/09 12:32:41 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -155,7 +155,6 @@ ${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_
 _WRAP_EXTRA_ARGS.CC+=	${_COMPILER_ABI_FLAG.${ABI}}
 _WRAP_EXTRA_ARGS.CXX+=	${_COMPILER_ABI_FLAG.${ABI}}
 _WRAP_EXTRA_ARGS.FC+=	${_COMPILER_ABI_FLAG.${ABI}}
-_WRAP_EXTRA_ARGS.LD+=	${_LINKER_ABI_FLAG.${ABI}}
 .endif
 
 # If the languages are not requested, force them not to be available
