@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2012/08/10 18:01:48 joerg Exp $
 
 SHA1 (mp3asm-0.1.3-1.tar.bz2) = 78d70be0a05f4357175a094d39f88ef74e5ccbfc
 RMD160 (mp3asm-0.1.3-1.tar.bz2) = 6f3be47630afd324d4eacf01b71a1d50d541b44d
 Size (mp3asm-0.1.3-1.tar.bz2) = 46530 bytes
-SHA1 (patch-aa) = 3e4f9ca6f746b5664d77b2342dc9b787e601af83
-SHA1 (patch-ab) = f397eafdfe95040104ec33ea3065d22ba05af6cf
+SHA1 (patch-aa) = 98be6eddd5c8e1eb3843a3b8662bf3d7a1bdc71a
+SHA1 (patch-ab) = 6abc77e75341bb11cbc3ab7fc84d56daf74b5d4c
+SHA1 (patch-src_frame.c) = c7501595e148b65874befa24e72449a625cff707
+SHA1 (patch-src_mp3asm.c) = cf8ca39bc8304db00abf05f74da0e35f1c1ab62f
+SHA1 (patch-src_parse.c) = 575d9c22aa4180adb3075e05c79161ea6d1abf2a
+SHA1 (patch-src_stream.c) = 79fcc0a6b6cca51286de8e35c96b4960f27b22ff
+SHA1 (patch-src_tag.c) = 7d59259f4e6fb3f5a8e2053e92ee5db49547c68a
