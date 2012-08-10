@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/11/01 06:02:41 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/10 16:39:55 marino Exp $
 #
 
 DISTNAME=	cwm-3
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+LDFLAGS.DragonFly+=	-lfontconfig
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
