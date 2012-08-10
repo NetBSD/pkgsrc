@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/05/07 01:22:50 dholland Exp $
+$NetBSD: distinfo,v 1.7 2012/08/10 15:52:12 drochner Exp $
 
-SHA1 (dvdisaster-0.72.3.tar.bz2) = 6ed08f8e52f4b90b39134b0caf9b5f0df221b0da
-RMD160 (dvdisaster-0.72.3.tar.bz2) = 63a2dcd4387bd2bfd4632270a53e4a0dfd5a692e
-Size (dvdisaster-0.72.3.tar.bz2) = 4168126 bytes
+SHA1 (dvdisaster-0.72.4.tar.bz2) = 2b47fb5a5535d90641f24a599cd8ae8ffd86b972
+RMD160 (dvdisaster-0.72.4.tar.bz2) = a134fa0adf04dc2a921acfccf0c10292112a28fa
+Size (dvdisaster-0.72.4.tar.bz2) = 5097738 bytes
 SHA1 (patch-aa) = 97fe33bdc514925041718992b28d75b672b4be0c
-SHA1 (patch-ab) = 5d47ca08389005d11618d6d9953f686312c716bf
-SHA1 (patch-ah) = 0553d0e4eb4fd3ce3e3c28a77e666bbfc3677179
-SHA1 (patch-dvdisaster_h) = 2163361a9eb24da9bb852ebbd4565d41282aea83
-SHA1 (patch-scsi-netbsd.c) = 076a625291bf8d29d6339fb2209d61712ceb6b62
+SHA1 (patch-ah) = 04045e26cba6772d7b46d0bdd927aa97984e8ea0
