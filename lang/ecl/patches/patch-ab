@@ -1,8 +1,25 @@
-$NetBSD: patch-ab,v 1.1 2011/05/14 22:30:44 hans Exp $
+$NetBSD: patch-ab,v 1.2 2012/08/10 08:15:16 marino Exp $
 
---- src/configure.orig	2011-01-16 22:39:59.000000000 +0100
-+++ src/configure	2011-05-15 00:51:26.407635767 +0200
-@@ -4878,10 +4878,12 @@ case "${host_os}" in
+--- src/configure.orig	2012-07-24 16:51:53.000000000 +0000
++++ src/configure
+@@ -4567,6 +4567,16 @@ case "${host_os}" in
+ 		SONAME="${SHAREDPREFIX}ecl.${SHAREDEXT}.SOVERSION"
+ 		SONAME_LDFLAGS="-Wl,-soname,SONAME"
+ 		;;
++	dragonfly*)
++		thehost='dragonfly'
++		THREAD_LIBS='-lpthread'
++		SHARED_LDFLAGS="-shared ${LDFLAGS}"
++		BUNDLE_LDFLAGS="-shared ${LDFLAGS}"
++		ECL_LDRPATH="-Wl,--rpath,~A"
++		clibs=""
++		SONAME="${SHAREDPREFIX}ecl.${SHAREDEXT}.SOVERSION"
++		SONAME_LDFLAGS="-Wl,-soname,SONAME"
++		;;
+ 	freebsd*)
+ 		thehost='freebsd'
+ 		THREAD_LIBS='-lpthread'
+@@ -4606,10 +4616,12 @@ case "${host_os}" in
  		ECL_LDRPATH='-Wl,-R,~A'
  		TCPLIBS='-lsocket -lnsl -lintl'
  		clibs='-ldl'
