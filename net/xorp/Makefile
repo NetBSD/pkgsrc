@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/07/03 17:36:10 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2012/08/10 17:59:45 joerg Exp $
 #
 
 DISTNAME=		xorp-1.6
@@ -30,6 +30,12 @@ pre-build:
 	cd ${WRKSRC}/policy/backend && ${MAKE} lex
 	cd ${WRKSRC}/policy/test && ${MAKE} lex
 	cd ${WRKSRC}/rtrmgr && ${MAKE} lex
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
