@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2012/06/16 21:03:42 dholland Exp $
+$NetBSD: patch-ab,v 1.2 2012/08/10 10:08:14 marino Exp $
 
 Add DragonFly
 
---- configure.orig	2012-06-01 15:21:49.000000000 +0900
-+++ configure	2012-06-09 13:19:56.000000000 +0900
-@@ -4476,6 +4476,15 @@
+--- configure.orig	2012-06-10 07:29:35.000000000 +0000
++++ configure
+@@ -4476,6 +4476,15 @@ case "${canonical}" in
      esac
    ;;
  
@@ -20,3 +20,13 @@ Add DragonFly
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
+@@ -8088,6 +8097,9 @@ case $opsys in
+     LIB_MATH=
+     START_FILES='pre-crt0.o'
+     ;;
++  dragonfly )
++    LIB_STANDARD=-lc
++    ;;
+   freebsd )
+     LIB_STANDARD='-lgcc -lc -lgcc $(CRT_DIR)/crtend.o $(CRT_DIR)/crtn.o'
+     START_FILES='pre-crt0.o $(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o $(CRT_DIR)/crtbegin.o'
