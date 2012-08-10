@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2504 2012/08/10 15:01:55 is Exp $
+$NetBSD: CHANGES-2012,v 1.2505 2012/08/10 16:48:36 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3854,3 +3854,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/sakura to 3.0.4 [ryoon 2012-08-10]
 	Updated lang/basic256 to 0.9.6.71 [ryoon 2012-08-10]
 	Updated sysutils/mtools to 4.0.17nb2 [is 2012-08-10]
+	Updated graphics/gdk-pixbuf2 to 2.26.2 [drochner 2012-08-10]
+	Updated graphics/gthumb to 2.14.4 [drochner 2012-08-10]
+	Updated multimedia/libdvdcss to 1.2.12 [drochner 2012-08-10]
+	Updated sysutils/dvdisaster to 0.72.4 [drochner 2012-08-10]
