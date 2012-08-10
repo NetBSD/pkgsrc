@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11409 2012/08/07 16:20:08 adam Exp $
+$NetBSD: TODO,v 1.11410 2012/08/10 13:54:53 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1096,7 +1096,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o rudiments-0.36.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.4
-	o sakura-3.0.0
 	o sarg-2.2.5
 	o sawfish-1.9.0
 	o saxon-9.2
