@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/23 01:19:00 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2012/08/10 14:20:54 ryoon Exp $
 
-SHA1 (basic256_0.9.6.66.tgz) = 76234f3e38a636d17699af4bbfda6383238162af
-RMD160 (basic256_0.9.6.66.tgz) = ec64861ec287d848d48d924d68caee24fbd031bf
-Size (basic256_0.9.6.66.tgz) = 7644597 bytes
+SHA1 (basic256_0.9.6.71.tgz) = 3a8ee26230d5b14b5f325c3b6e0db511534d785f
+RMD160 (basic256_0.9.6.71.tgz) = 1edd4a2eb153eb9712f8b33e1ff2a64ebf1ba883
+Size (basic256_0.9.6.71.tgz) = 7924162 bytes
