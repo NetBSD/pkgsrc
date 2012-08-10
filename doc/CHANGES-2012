@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2503 2012/08/10 14:21:37 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2504 2012/08/10 15:01:55 is Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3853,3 +3853,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/vte029 version 0.32.2 [ryoon 2012-08-10]
 	Updated x11/sakura to 3.0.4 [ryoon 2012-08-10]
 	Updated lang/basic256 to 0.9.6.71 [ryoon 2012-08-10]
+	Updated sysutils/mtools to 4.0.17nb2 [is 2012-08-10]
