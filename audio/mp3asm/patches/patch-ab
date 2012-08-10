@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/04/28 16:51:05 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2012/08/10 18:01:48 joerg Exp $
 
---- src/utils.c.orig	Sat Aug 18 04:44:09 2001
+--- src/utils.c.orig	2001-08-17 20:44:09.000000000 +0000
 +++ src/utils.c
-@@ -25,6 +25,7 @@
+@@ -25,6 +25,9 @@
  #include "utils.h"
  #include <unistd.h>
  #include <stdio.h>
 +#include <errno.h>
++
++#define log logfile
  
  /*
   * tmalloc: mallocs cleanly
