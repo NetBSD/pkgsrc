@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/10/14 18:06:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/10 13:54:14 ryoon Exp $
 bin/sakura
 man/man1/sakura.1
 share/applications/sakura.desktop
@@ -16,5 +16,6 @@ share/locale/ko/LC_MESSAGES/sakura.mo
 share/locale/pl/LC_MESSAGES/sakura.mo
 share/locale/pt_BR/LC_MESSAGES/sakura.mo
 share/locale/ru/LC_MESSAGES/sakura.mo
+share/locale/uk/LC_MESSAGES/sakura.mo
 share/locale/zh_CN/LC_MESSAGES/sakura.mo
 share/pixmaps/terminal-tango.svg

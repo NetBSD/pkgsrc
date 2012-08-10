@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2012/03/03 00:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/10 13:54:14 ryoon Exp $
 #
 
-DISTNAME=	sakura-2.4.2
-PKGREVISION=	3
+DISTNAME=	sakura-${SAKURA_VER}
+SAKURA_VER=	3.0.4
 CATEGORIES=	x11
-MASTER_SITES=	http://launchpad.net/sakura/trunk/2.4.2/+download/
+MASTER_SITES=	http://launchpad.net/sakura/trunk/${SAKURA_VER}/+download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.pleyades.net/david/projects/sakura
 COMMENT=	Sakura is a terminal emulator based on GTK and VTE that supports tab
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Force using "curl" for fetching the distribution file. It is only available
+# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
+FETCH_USING=	curl
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pod2man xgettext
@@ -27,9 +30,9 @@ SUBST_SED.fix-man-path=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.20.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.16.0
-.include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.vte+=	vte>=0.26
-.include "../../x11/vte/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.0
+.include "../../x11/gtk3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.vte029+=	vte029>=0.28
+.include "../../x11/vte029/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
