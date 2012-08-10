@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.4 2011/03/14 08:06:53 adam Exp $
+$NetBSD: patch-ag,v 1.5 2012/08/10 15:14:54 drochner Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 
---- configure.orig	2010-09-23 04:22:39.000000000 +0000
+--- configure.orig	2012-03-08 04:35:17.000000000 +0000
 +++ configure
-@@ -7119,9 +7119,9 @@ fi
+@@ -8679,9 +8679,9 @@ fi
  
  $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
  
@@ -17,13 +17,12 @@ Same applies to DragonFly.
  if test "x$ac_cv_header_editline_readline_h" = x""yes; then :
    cat >>confdefs.h <<_ACEOF
  #define HAVE_EDITLINE_READLINE_H 1
-@@ -7662,7 +7662,9 @@ else
- 	 if test -d $withval/lib; then
- 	   LDFLAGS="$LDFLAGS -L$withval/lib"
- 	 fi
-+	if test "x$with_x" = xyes; then
- 	 TERMXLIBS="$X_LIBS -lXaw -lXmu -lXt -lXext -lX11"
-+	fi
- 	 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pl_textangle in -lplot" >&5
- $as_echo_n "checking for pl_textangle in -lplot... " >&6; }
- if test "${ac_cv_lib_plot_pl_textangle+set}" = set; then :
+@@ -14772,7 +14774,7 @@ $as_echo "    tek40xx, tek410x, texdraw,
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
+ $as_echo "" >&6; }
+ 
+-if test "$with_bitmap_terminals" == yes; then
++if test "$with_bitmap_terminals" = yes; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result:   dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&5
+ $as_echo "  dot-matrix terminals: yes ( --without-bitmap-terminals to disable)" >&6; }
+ else
