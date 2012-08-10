@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.655 2012/07/24 18:03:08 drochner Exp $
+# $NetBSD: Makefile,v 1.656 2012/08/10 13:46:50 ryoon Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -367,6 +367,7 @@ SUBDIR+=	unicode-screensaver
 SUBDIR+=	videoproto
 SUBDIR+=	viewres
 SUBDIR+=	vte
+SUBDIR+=	vte029
 SUBDIR+=	wdm
 SUBDIR+=	wmavgload
 SUBDIR+=	wmfire
