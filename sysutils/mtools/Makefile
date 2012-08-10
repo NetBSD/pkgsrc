@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49.4.1 2012/08/09 18:07:35 tron Exp $
+# $NetBSD: Makefile,v 1.49.4.2 2012/08/10 16:32:08 tron Exp $
 
 DISTNAME=	mtools-4.0.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mtools.linux.lu/
 EXTRACT_SUFX=	.tar.bz2
