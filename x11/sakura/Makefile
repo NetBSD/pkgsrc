@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/08/10 13:54:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2012/08/10 21:29:58 ryoon Exp $
 #
 
 DISTNAME=	sakura-${SAKURA_VER}
 SAKURA_VER=	3.0.4
 CATEGORIES=	x11
-MASTER_SITES=	http://launchpad.net/sakura/trunk/${SAKURA_VER}/+download/
+MASTER_SITES=	http://launchpadlibrarian.net/103638542/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -13,10 +13,6 @@ COMMENT=	Sakura is a terminal emulator based on GTK and VTE that supports tab
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pod2man xgettext
