@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2012/02/03 15:37:55 drochner Exp $
+$NetBSD: patch-ab,v 1.8 2012/08/10 15:27:29 drochner Exp $
 
 Build eggsmclient-osx.c (required on Mac OS X).
 
---- copy-n-paste/Makefile.in.orig	2012-01-23 20:00:58.000000000 +0000
+--- copy-n-paste/Makefile.in.orig	2012-03-25 18:34:06.000000000 +0000
 +++ copy-n-paste/Makefile.in
 @@ -54,6 +54,7 @@ libeggsmclient_la_DEPENDENCIES = $(am__D
  	$(am__DEPENDENCIES_1)
@@ -11,8 +11,8 @@ Build eggsmclient-osx.c (required on Mac OS X).
 +	libeggsmclient_la-eggsmclient-osx.lo \
  	libeggsmclient_la-eggsmclient-xsmp.lo
  libeggsmclient_la_OBJECTS = $(am_libeggsmclient_la_OBJECTS)
- AM_V_lt = $(am__v_lt_$(V))
-@@ -305,6 +306,7 @@ libeggsmclient_la_SOURCES = eggdesktopfi
+ AM_V_lt = $(am__v_lt_@AM_V@)
+@@ -311,6 +312,7 @@ libeggsmclient_la_SOURCES = eggdesktopfi
  			    eggdesktopfile.c \
  			    eggsmclient.h \
  			    eggsmclient.c \
@@ -20,7 +20,7 @@ Build eggsmclient-osx.c (required on Mac OS X).
  			    eggsmclient-private.h \
  			    eggsmclient-xsmp.c
  
-@@ -361,6 +363,7 @@ distclean-compile:
+@@ -367,6 +369,7 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggdesktopfile.Plo@am__quote@
@@ -28,7 +28,7 @@ Build eggsmclient-osx.c (required on Mac OS X).
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient-xsmp.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient.Plo@am__quote@
  
-@@ -399,6 +402,13 @@ libeggsmclient_la-eggsmclient.lo: eggsmc
+@@ -405,6 +408,13 @@ libeggsmclient_la-eggsmclient.lo: eggsmc
  @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libeggsmclient_la_CFLAGS) $(CFLAGS) -c -o libeggsmclient_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
  

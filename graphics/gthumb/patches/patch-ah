@@ -1,0 +1,76 @@
+$NetBSD: patch-ah,v 1.1 2012/08/10 15:27:29 drochner Exp $
+
+--- configure.orig	2012-03-25 18:34:17.000000000 +0000
++++ configure
+@@ -17473,7 +17473,6 @@ if test -n "$GTHUMB_CFLAGS"; then
+ 	gtk+-2.0 		>= \$GTK_REQUIRED
+ 	gconf-2.0 		>= \$GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ \""; } >&5
+   ($PKG_CONFIG --exists --print-errors "
+@@ -17484,7 +17483,6 @@ if test -n "$GTHUMB_CFLAGS"; then
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ ") 2>&5
+   ac_status=$?
+@@ -17498,7 +17496,6 @@ if test -n "$GTHUMB_CFLAGS"; then
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ " 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+@@ -17520,7 +17517,6 @@ if test -n "$GTHUMB_LIBS"; then
+ 	gtk+-2.0 		>= \$GTK_REQUIRED
+ 	gconf-2.0 		>= \$GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ \""; } >&5
+   ($PKG_CONFIG --exists --print-errors "
+@@ -17531,7 +17527,6 @@ if test -n "$GTHUMB_LIBS"; then
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ ") 2>&5
+   ac_status=$?
+@@ -17545,7 +17540,6 @@ if test -n "$GTHUMB_LIBS"; then
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ " 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+@@ -17576,7 +17570,6 @@ fi
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ " 2>&1`
+         else
+@@ -17588,7 +17581,6 @@ fi
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ " 2>&1`
+         fi
+@@ -17603,7 +17595,6 @@ fi
+ 	gtk+-2.0 		>= $GTK_REQUIRED
+ 	gconf-2.0 		>= $GCONF_REQUIRED
+ 	libpng
+-	zlib
+         ice
+ ) were not met:
+ 
