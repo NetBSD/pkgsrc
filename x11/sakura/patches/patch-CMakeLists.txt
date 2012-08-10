@@ -1,3 +1,5 @@
+$NetBSD: patch-CMakeLists.txt,v 1.2 2012/08/10 13:54:14 ryoon Exp $
+
 --- CMakeLists.txt.orig	2012-01-27 11:52:46.987517960 +0100
 +++ CMakeLists.txt	2012-01-27 11:55:28.028774190 +0100
 @@ -70,5 +70,5 @@ ADD_CUSTOM_TARGET (distclean
