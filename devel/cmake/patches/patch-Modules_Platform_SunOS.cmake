@@ -1,13 +1,13 @@
-$NetBSD: patch-Modules_Platform_SunOS.cmake,v 1.1 2012/02/16 18:32:25 hans Exp $
+$NetBSD: patch-Modules_Platform_SunOS.cmake,v 1.2 2012/08/11 11:10:54 marino Exp $
 
 Don't use gcc to link c++ libraries on SunOS,
 unless we are really using a gcc lacking libstdc++.
 
 See http://public.kitware.com/pipermail/cmake/2011-July/045300.html
 
---- Modules/Platform/SunOS.cmake.orig	2011-10-04 18:09:24.000000000 +0200
-+++ Modules/Platform/SunOS.cmake	2012-01-11 17:50:43.768105308 +0100
-@@ -5,12 +5,20 @@ IF(CMAKE_SYSTEM MATCHES "SunOS-4.*")
+--- Modules/Platform/SunOS.cmake.orig	2012-08-09 18:15:19.000000000 +0000
++++ Modules/Platform/SunOS.cmake
+@@ -7,12 +7,20 @@ IF(CMAKE_SYSTEM MATCHES "SunOS-4.*")
     SET(CMAKE_SHARED_LIBRARY_RUNTIME_C_FLAG_SEP ":")  
  ENDIF(CMAKE_SYSTEM MATCHES "SunOS-4.*")
  
@@ -18,7 +18,7 @@ See http://public.kitware.com/pipermail/cmake/2011-July/045300.html
  IF(CMAKE_COMPILER_IS_GNUCXX)
    IF(CMAKE_COMPILER_IS_GNUCC)
 -    SET(CMAKE_CXX_CREATE_SHARED_LIBRARY
--        "<CMAKE_C_COMPILER> <CMAKE_SHARED_LIBRARY_CXX_FLAGS> <LINK_FLAGS> <CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS>  <CMAKE_SHARED_LIBRARY_SONAME_CXX_FLAG><TARGET_SONAME> -o <TARGET> <OBJECTS> <LINK_LIBRARIES>")
+-        "<CMAKE_C_COMPILER> <CMAKE_SHARED_LIBRARY_CXX_FLAGS> <LINK_FLAGS> <CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS>  <SONAME_FLAG><TARGET_SONAME> -o <TARGET> <OBJECTS> <LINK_LIBRARIES>")
 -  ELSE(CMAKE_COMPILER_IS_GNUCC)
 -    # Take default rule from CMakeDefaultMakeRuleVariables.cmake.
 +    EXECUTE_PROCESS(
