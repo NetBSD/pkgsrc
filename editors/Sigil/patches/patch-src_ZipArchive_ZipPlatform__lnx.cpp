@@ -1,8 +1,8 @@
-$NetBSD: patch-src_ZipArchive_ZipPlatform__lnx.cpp,v 1.1 2011/10/14 09:49:07 ryoon Exp $
+$NetBSD: patch-src_ZipArchive_ZipPlatform__lnx.cpp,v 1.2 2012/08/11 17:34:05 marino Exp $
 
 Add DragonFly support.
 
---- src/ZipArchive/ZipPlatform_lnx.cpp.orig	2011-10-14 18:30:33 +0000
+--- src/ZipArchive/ZipPlatform_lnx.cpp.orig	2012-02-25 10:54:10.000000000 +0000
 +++ src/ZipArchive/ZipPlatform_lnx.cpp
 @@ -16,7 +16,7 @@
  
