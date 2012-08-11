@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.86 2012/05/14 06:06:43 dholland Exp $
+# $NetBSD: java-vm.mk,v 1.87 2012/08/11 14:49:44 marino Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -104,6 +104,8 @@ _PKG_JVM_DEFAULT?=	sun-jdk6
 _PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
 _PKG_JVM_DEFAULT?=	sun-jdk6
+.  elif !empty(MACHINE_PLATFORM:MDragonFly-*-*)
+_PKG_JVM_DEFAULT?=	openjdk7
 .  else
 _PKG_JVM_DEFAULT?=	kaffe
 .  endif
