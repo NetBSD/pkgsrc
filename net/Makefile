@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.922 2012/07/20 03:16:20 agc Exp $
+# $NetBSD: Makefile,v 1.923 2012/08/11 08:44:53 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -659,6 +659,7 @@ SUBDIR+=	walker
 SUBDIR+=	wap-utils
 SUBDIR+=	waste
 SUBDIR+=	wget
+SUBDIR+=	wgetpaste
 SUBDIR+=	whatmask
 SUBDIR+=	whois3
 SUBDIR+=	whoson
