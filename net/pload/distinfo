@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2009/01/04 20:03:21 shattered Exp $
+$NetBSD: distinfo,v 1.9 2012/08/11 17:20:23 marino Exp $
 
 SHA1 (pload-0.9.5.tar.gz) = 52e8ca31ad534cbc131d0bd19ef5ae45b5b37777
 RMD160 (pload-0.9.5.tar.gz) = 48ff961d760430a3a45533f7023b1fefa252ede8
 Size (pload-0.9.5.tar.gz) = 22423 bytes
-SHA1 (patch-aa) = 6a30a15c60e74eeb5312e275b1dac882c86b2420
+SHA1 (patch-aa) = fb3a59555edfcd59b4930990dacc3dcab42cc462
 SHA1 (patch-ab) = 4bf2639b64d20717716c66be85c4fb5cd3b114d5
-SHA1 (patch-ac) = 345ac88bb5d279039ae0169c2b468b22964a0c09
-SHA1 (patch-ad) = 97e7f37561882098b080683237e661f2f5692025
-SHA1 (patch-ae) = d98a346e56d36eb5efd084eef1a95ca6c350c0f5
+SHA1 (patch-ac) = 401f9e56ed6543968b47d7c61eff40f5019b3959
+SHA1 (patch-ad) = 2613c9344a8545af91ff7476b2fc5ea1e473aabe
+SHA1 (patch-ae) = ef7707633af2c331fcc4d61479346089d443e4e3

@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2002/01/29 13:46:54 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2012/08/11 17:20:23 marino Exp $
 
---- configure.orig	Thu Mar  4 08:33:03 1999
+--- configure.orig	2000-02-01 07:11:24.000000000 +0000
 +++ configure
-@@ -60,7 +60,7 @@
+@@ -17,6 +17,9 @@ case $system in
+ 			echo "enabling proc stats reading";
+ 		fi	
+ 		;;
++	DragonFly)
++		os="dragonfly";
++		;;
+ 	FreeBSD)
+ 		os="freebsd";
+ 		;;
+@@ -62,7 +65,7 @@ else
  	# is this proper sed syntax?
  	echo "OBJS=`echo $common_src $sys_src | sed s/'\.c'/'\.o'/g`" >> osdefs.mk
  	
