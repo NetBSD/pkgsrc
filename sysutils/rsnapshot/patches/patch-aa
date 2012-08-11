@@ -1,13 +1,18 @@
-$NetBSD: patch-aa,v 1.4 2006/10/02 19:51:37 abs Exp $
+$NetBSD: patch-aa,v 1.5 2012/08/11 18:30:12 ryoon Exp $
 
---- Makefile.in.orig	2006-05-18 11:19:45.000000000 +0100
+--- Makefile.in.orig	2008-08-31 11:20:08.000000000 +0000
 +++ Makefile.in
-@@ -546,7 +546,7 @@ doc: man html
- man: rsnapshot.1
+@@ -549,11 +549,11 @@ doc: man html
+ man: $(man_MANS)
  rsnapshot.1 : rsnapshot
  	@# perl 5.8 for this
 -	/usr/bin/pod2man -c '' -n 'rsnapshot' -r '' rsnapshot > rsnapshot.1
 +	pod2man -c '' -n 'rsnapshot' -r '' rsnapshot > rsnapshot.1
+ 
+ rsnapshot-diff.1 : rsnapshot-diff
+ 	@# perl 5.8 for this
+-	/usr/bin/pod2man -c '' -n 'rsnapshot-diff' -r '' rsnapshot-diff > rsnapshot-diff.1
++	pod2man -c '' -n 'rsnapshot-diff' -r '' rsnapshot-diff > rsnapshot-diff.1
  
  html: rsnapshot.html
  rsnapshot.html: rsnapshot
