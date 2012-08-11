@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2012/05/03 16:16:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2012/08/11 00:23:03 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -93,6 +93,9 @@ ${PYSITELIB}/hgext/highlight/__init__.pyo
 ${PYSITELIB}/hgext/highlight/highlight.py
 ${PYSITELIB}/hgext/highlight/highlight.pyc
 ${PYSITELIB}/hgext/highlight/highlight.pyo
+${PYSITELIB}/hgext/histedit.py
+${PYSITELIB}/hgext/histedit.pyc
+${PYSITELIB}/hgext/histedit.pyo
 ${PYSITELIB}/hgext/interhg.py
 ${PYSITELIB}/hgext/interhg.pyc
 ${PYSITELIB}/hgext/interhg.pyo
@@ -337,36 +340,18 @@ ${PYSITELIB}/mercurial/hook.pyo
 ${PYSITELIB}/mercurial/httpclient/__init__.py
 ${PYSITELIB}/mercurial/httpclient/__init__.pyc
 ${PYSITELIB}/mercurial/httpclient/__init__.pyo
+${PYSITELIB}/mercurial/httpclient/_readers.py
+${PYSITELIB}/mercurial/httpclient/_readers.pyc
+${PYSITELIB}/mercurial/httpclient/_readers.pyo
 ${PYSITELIB}/mercurial/httpclient/socketutil.py
 ${PYSITELIB}/mercurial/httpclient/socketutil.pyc
 ${PYSITELIB}/mercurial/httpclient/socketutil.pyo
-${PYSITELIB}/mercurial/httpclient/tests/__init__.py
-${PYSITELIB}/mercurial/httpclient/tests/__init__.pyc
-${PYSITELIB}/mercurial/httpclient/tests/__init__.pyo
-${PYSITELIB}/mercurial/httpclient/tests/simple_http_test.py
-${PYSITELIB}/mercurial/httpclient/tests/simple_http_test.pyc
-${PYSITELIB}/mercurial/httpclient/tests/simple_http_test.pyo
-${PYSITELIB}/mercurial/httpclient/tests/test_bogus_responses.py
-${PYSITELIB}/mercurial/httpclient/tests/test_bogus_responses.pyc
-${PYSITELIB}/mercurial/httpclient/tests/test_bogus_responses.pyo
-${PYSITELIB}/mercurial/httpclient/tests/test_chunked_transfer.py
-${PYSITELIB}/mercurial/httpclient/tests/test_chunked_transfer.pyc
-${PYSITELIB}/mercurial/httpclient/tests/test_chunked_transfer.pyo
-${PYSITELIB}/mercurial/httpclient/tests/test_proxy_support.py
-${PYSITELIB}/mercurial/httpclient/tests/test_proxy_support.pyc
-${PYSITELIB}/mercurial/httpclient/tests/test_proxy_support.pyo
-${PYSITELIB}/mercurial/httpclient/tests/test_ssl.py
-${PYSITELIB}/mercurial/httpclient/tests/test_ssl.pyc
-${PYSITELIB}/mercurial/httpclient/tests/test_ssl.pyo
-${PYSITELIB}/mercurial/httpclient/tests/util.py
-${PYSITELIB}/mercurial/httpclient/tests/util.pyc
-${PYSITELIB}/mercurial/httpclient/tests/util.pyo
 ${PYSITELIB}/mercurial/httpconnection.py
 ${PYSITELIB}/mercurial/httpconnection.pyc
 ${PYSITELIB}/mercurial/httpconnection.pyo
-${PYSITELIB}/mercurial/httprepo.py
-${PYSITELIB}/mercurial/httprepo.pyc
-${PYSITELIB}/mercurial/httprepo.pyo
+${PYSITELIB}/mercurial/httppeer.py
+${PYSITELIB}/mercurial/httppeer.pyc
+${PYSITELIB}/mercurial/httppeer.pyo
 ${PYSITELIB}/mercurial/i18n.py
 ${PYSITELIB}/mercurial/i18n.pyc
 ${PYSITELIB}/mercurial/i18n.pyo
@@ -422,6 +407,9 @@ ${PYSITELIB}/mercurial/mpatch.so
 ${PYSITELIB}/mercurial/node.py
 ${PYSITELIB}/mercurial/node.pyc
 ${PYSITELIB}/mercurial/node.pyo
+${PYSITELIB}/mercurial/obsolete.py
+${PYSITELIB}/mercurial/obsolete.pyc
+${PYSITELIB}/mercurial/obsolete.pyo
 ${PYSITELIB}/mercurial/osutil.so
 ${PYSITELIB}/mercurial/parser.py
 ${PYSITELIB}/mercurial/parser.pyc
@@ -430,6 +418,9 @@ ${PYSITELIB}/mercurial/parsers.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
 ${PYSITELIB}/mercurial/patch.pyo
+${PYSITELIB}/mercurial/peer.py
+${PYSITELIB}/mercurial/peer.pyc
+${PYSITELIB}/mercurial/peer.pyo
 ${PYSITELIB}/mercurial/phases.py
 ${PYSITELIB}/mercurial/phases.pyc
 ${PYSITELIB}/mercurial/phases.pyo
@@ -448,9 +439,6 @@ ${PYSITELIB}/mercurial/py3kcompat.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
-${PYSITELIB}/mercurial/repo.py
-${PYSITELIB}/mercurial/repo.pyc
-${PYSITELIB}/mercurial/repo.pyo
 ${PYSITELIB}/mercurial/revlog.py
 ${PYSITELIB}/mercurial/revlog.pyc
 ${PYSITELIB}/mercurial/revlog.pyo
@@ -469,9 +457,9 @@ ${PYSITELIB}/mercurial/similar.pyo
 ${PYSITELIB}/mercurial/simplemerge.py
 ${PYSITELIB}/mercurial/simplemerge.pyc
 ${PYSITELIB}/mercurial/simplemerge.pyo
-${PYSITELIB}/mercurial/sshrepo.py
-${PYSITELIB}/mercurial/sshrepo.pyc
-${PYSITELIB}/mercurial/sshrepo.pyo
+${PYSITELIB}/mercurial/sshpeer.py
+${PYSITELIB}/mercurial/sshpeer.pyc
+${PYSITELIB}/mercurial/sshpeer.pyo
 ${PYSITELIB}/mercurial/sshserver.py
 ${PYSITELIB}/mercurial/sshserver.pyc
 ${PYSITELIB}/mercurial/sshserver.pyo
@@ -521,6 +509,7 @@ ${PYSITELIB}/mercurial/templates/gitweb/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/error.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/fileannotate.tmpl
+${PYSITELIB}/mercurial/templates/gitweb/filecomparison.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/filediff.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/filelog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/filerevision.tmpl
@@ -549,6 +538,7 @@ ${PYSITELIB}/mercurial/templates/monoblue/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/error.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/fileannotate.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/filecomparison.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/filediff.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/filelog.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/filerevision.tmpl
@@ -571,6 +561,7 @@ ${PYSITELIB}/mercurial/templates/paper/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/paper/diffstat.tmpl
 ${PYSITELIB}/mercurial/templates/paper/error.tmpl
 ${PYSITELIB}/mercurial/templates/paper/fileannotate.tmpl
+${PYSITELIB}/mercurial/templates/paper/filecomparison.tmpl
 ${PYSITELIB}/mercurial/templates/paper/filediff.tmpl
 ${PYSITELIB}/mercurial/templates/paper/filelog.tmpl
 ${PYSITELIB}/mercurial/templates/paper/filelogentry.tmpl
@@ -592,6 +583,9 @@ ${PYSITELIB}/mercurial/templates/raw/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/raw/error.tmpl
 ${PYSITELIB}/mercurial/templates/raw/fileannotate.tmpl
 ${PYSITELIB}/mercurial/templates/raw/filediff.tmpl
+${PYSITELIB}/mercurial/templates/raw/graph.tmpl
+${PYSITELIB}/mercurial/templates/raw/graphedge.tmpl
+${PYSITELIB}/mercurial/templates/raw/graphnode.tmpl
 ${PYSITELIB}/mercurial/templates/raw/index.tmpl
 ${PYSITELIB}/mercurial/templates/raw/manifest.tmpl
 ${PYSITELIB}/mercurial/templates/raw/map
