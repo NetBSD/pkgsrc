@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11413 2012/08/11 09:45:21 obache Exp $
+$NetBSD: TODO,v 1.11414 2012/08/11 12:01:36 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1377,7 +1377,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
-	o xvkbd-3.3
 	o xwpe-1.5.30a
 	o xye-0.12.1
 	o xzip-182
