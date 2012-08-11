@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2012/03/15 11:53:36 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/08/11 12:07:16 ryoon Exp $
 
-VERSION_DATE=	2012.01.08b
+VERSION_DATE=	2012.02.27
 DISTNAME=	youtube-dl
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//g}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/rg3/youtube-dl/raw/${VERSION_DATE}/
 EXTRACT_SUFX=	# none
