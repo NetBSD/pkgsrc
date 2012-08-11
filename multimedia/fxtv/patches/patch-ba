@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.3 2011/07/05 03:27:22 dholland Exp $
+$NetBSD: patch-ba,v 1.4 2012/08/11 12:17:21 marino Exp $
 
 Deal with mouse headers.
 Fix illegal C.
@@ -20,7 +20,7 @@ Dragonfly support.
  #  include <machine/mouse.h>
  # endif
 +#elif defined(__DragonFly__)
-+# include <machine/mouse.h>
++# include <sys/mouse.h>
  #else
 +#if HAVE_MOUSE_H
  # include <machine/mouse.h>
