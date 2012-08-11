@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2515 2012/08/11 15:08:48 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2516 2012/08/11 15:17:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/py-carddav to 0.3.4 [wiz 2012-08-11]
 	Updated net/youtube-dl to 20120227 [ryoon 2012-08-11]
 	Updated editors/OmegaT to 2.5.5.01 [ryoon 2012-08-11]
+	Updated editors/zim to 0.56 [ryoon 2012-08-11]
