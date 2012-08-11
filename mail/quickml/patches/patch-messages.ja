@@ -1,0 +1,11 @@
+$NetBSD: patch-messages.ja,v 1.1 2012/08/11 13:51:20 obache Exp $
+
+* specify character coding system with ruby-1.9 way
+
+--- messages.ja.orig	2004-06-07 08:50:58.000000000 +0000
++++ messages.ja
+@@ -1,3 +1,4 @@
++#coding: euc-jp
+ # -*- mode: ruby -*-
+ Messages = {
+   "<%s> was removed from the mailing list:\n<%s>\n" =>
