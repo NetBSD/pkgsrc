@@ -1,3 +1,4 @@
+.\" $NetBSD: sysbuild.1,v 1.3 2012/08/11 19:32:50 wiz Exp $
 .\" Copyright 2012 Google Inc.
 .\" All rights reserved.
 .\"
@@ -48,7 +49,9 @@ config
 fetch
 .Sh DESCRIPTION
 .Nm
-is a utility to build NetBSD releases in a fully automated manner.
+is a utility to build
+.Nx
+releases in a fully automated manner.
 The process is made unattended by relying on a configuration file that
 prespecifies the location of all build components and the desired goals of
 the build.
@@ -65,12 +68,16 @@ can be seen as a simple wrapper over
 .Xr cvs 1
 and the
 .Nm build.sh
-script that ships with the NetBSD source tree.
+script that ships with the
+.Nx
+source tree.
 .Nm
 provides the following additional features:
 .Bl -bullet
 .It
-Automatically fetch or update the NetBSD source trees (both src and xsrc)
+Automatically fetch or update the
+.Nx
+source trees (both src and xsrc)
 before performing a build.
 .It
 Preconfigure the way
@@ -199,7 +206,9 @@ Consider that you wish to use the standard locations of
 and
 .Pa /usr/xsrc
 for your source trees, and that you would like to keep these owned by root
-while, at the same time, you run your NetBSD builds as an unprivileged user.
+while, at the same time, you run your
+.Nx
+builds as an unprivileged user.
 In this situation, you can use the
 .Sq fetch
 command as root only, set
@@ -257,7 +266,8 @@ Otherwise, you can use a read-only directory.
 .Pp
 Defining this variable causes
 .Nm
-to build the X Window System as part of the build of NetBSD.
+to build the X Window System as part of the build of
+.Nx .
 .Pp
 Default: not defined.
 .El
@@ -340,8 +350,8 @@ flag is not provided.
 .Sh SEE ALSO
 .Xr cvs 1 ,
 .Xr sysbuild4cron 1 ,
-.Xr hier 7 and
-.Pa /usr/src/BUILDING .
+.Xr hier 7 ,
+.Pa /usr/src/BUILDING
 .Sh AUTHORS
 The
 .Nm
