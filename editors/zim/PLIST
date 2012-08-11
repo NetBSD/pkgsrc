@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/01 17:03:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/08/11 15:16:32 ryoon Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -30,12 +30,18 @@ ${PYSITELIB}/zim/exporter.pyo
 ${PYSITELIB}/zim/formats/__init__.py
 ${PYSITELIB}/zim/formats/__init__.pyc
 ${PYSITELIB}/zim/formats/__init__.pyo
+${PYSITELIB}/zim/formats/__main__.py
+${PYSITELIB}/zim/formats/__main__.pyc
+${PYSITELIB}/zim/formats/__main__.pyo
 ${PYSITELIB}/zim/formats/html.py
 ${PYSITELIB}/zim/formats/html.pyc
 ${PYSITELIB}/zim/formats/html.pyo
 ${PYSITELIB}/zim/formats/latex.py
 ${PYSITELIB}/zim/formats/latex.pyc
 ${PYSITELIB}/zim/formats/latex.pyo
+${PYSITELIB}/zim/formats/markdown.py
+${PYSITELIB}/zim/formats/markdown.pyc
+${PYSITELIB}/zim/formats/markdown.pyo
 ${PYSITELIB}/zim/formats/plain.py
 ${PYSITELIB}/zim/formats/plain.pyc
 ${PYSITELIB}/zim/formats/plain.pyo
@@ -132,6 +138,9 @@ ${PYSITELIB}/zim/plugins/calendar.pyo
 ${PYSITELIB}/zim/plugins/diagrameditor.py
 ${PYSITELIB}/zim/plugins/diagrameditor.pyc
 ${PYSITELIB}/zim/plugins/diagrameditor.pyo
+${PYSITELIB}/zim/plugins/ditaaeditor.py
+${PYSITELIB}/zim/plugins/ditaaeditor.pyc
+${PYSITELIB}/zim/plugins/ditaaeditor.pyo
 ${PYSITELIB}/zim/plugins/equationeditor.py
 ${PYSITELIB}/zim/plugins/equationeditor.pyc
 ${PYSITELIB}/zim/plugins/equationeditor.pyo
@@ -168,6 +177,9 @@ ${PYSITELIB}/zim/plugins/screenshot.pyo
 ${PYSITELIB}/zim/plugins/spell.py
 ${PYSITELIB}/zim/plugins/spell.pyc
 ${PYSITELIB}/zim/plugins/spell.pyo
+${PYSITELIB}/zim/plugins/tableofcontents.py
+${PYSITELIB}/zim/plugins/tableofcontents.pyc
+${PYSITELIB}/zim/plugins/tableofcontents.pyo
 ${PYSITELIB}/zim/plugins/tags.py
 ${PYSITELIB}/zim/plugins/tags.pyc
 ${PYSITELIB}/zim/plugins/tags.pyo
@@ -183,6 +195,12 @@ ${PYSITELIB}/zim/plugins/versioncontrol/__init__.pyo
 ${PYSITELIB}/zim/plugins/versioncontrol/bzr.py
 ${PYSITELIB}/zim/plugins/versioncontrol/bzr.pyc
 ${PYSITELIB}/zim/plugins/versioncontrol/bzr.pyo
+${PYSITELIB}/zim/plugins/versioncontrol/git.py
+${PYSITELIB}/zim/plugins/versioncontrol/git.pyc
+${PYSITELIB}/zim/plugins/versioncontrol/git.pyo
+${PYSITELIB}/zim/plugins/versioncontrol/hg.py
+${PYSITELIB}/zim/plugins/versioncontrol/hg.pyc
+${PYSITELIB}/zim/plugins/versioncontrol/hg.pyo
 ${PYSITELIB}/zim/search.py
 ${PYSITELIB}/zim/search.pyc
 ${PYSITELIB}/zim/search.pyo
@@ -192,9 +210,6 @@ ${PYSITELIB}/zim/stores/__init__.pyo
 ${PYSITELIB}/zim/stores/files.py
 ${PYSITELIB}/zim/stores/files.pyc
 ${PYSITELIB}/zim/stores/files.pyo
-${PYSITELIB}/zim/stores/gjots.py
-${PYSITELIB}/zim/stores/gjots.pyc
-${PYSITELIB}/zim/stores/gjots.pyo
 ${PYSITELIB}/zim/stores/memory.py
 ${PYSITELIB}/zim/stores/memory.pyc
 ${PYSITELIB}/zim/stores/memory.pyo
@@ -204,6 +219,9 @@ ${PYSITELIB}/zim/stores/xml.pyo
 ${PYSITELIB}/zim/templates.py
 ${PYSITELIB}/zim/templates.pyc
 ${PYSITELIB}/zim/templates.pyo
+${PYSITELIB}/zim/utils.py
+${PYSITELIB}/zim/utils.pyc
+${PYSITELIB}/zim/utils.pyo
 ${PYSITELIB}/zim/www.py
 ${PYSITELIB}/zim/www.pyc
 ${PYSITELIB}/zim/www.pyo
@@ -249,6 +267,7 @@ share/locale/pl/LC_MESSAGES/zim.mo
 share/locale/ru/LC_MESSAGES/zim.mo
 share/locale/sk/LC_MESSAGES/zim.mo
 share/locale/sl/LC_MESSAGES/zim.mo
+share/locale/sr/LC_MESSAGES/zim.mo
 share/locale/sv/LC_MESSAGES/zim.mo
 share/locale/tr/LC_MESSAGES/zim.mo
 share/locale/uk/LC_MESSAGES/zim.mo
@@ -309,6 +328,9 @@ share/zim/manual/Plugins/Automount.txt
 share/zim/manual/Plugins/Calendar.txt
 share/zim/manual/Plugins/Diagram_Editor.txt
 share/zim/manual/Plugins/Diagram_Editor/diagram.png
+share/zim/manual/Plugins/Ditaa_Editor.txt
+share/zim/manual/Plugins/Ditaa_Editor/ditaa.dia
+share/zim/manual/Plugins/Ditaa_Editor/ditaa.png
 share/zim/manual/Plugins/Equation_Editor.txt
 share/zim/manual/Plugins/Equation_Editor/equation_01.png
 share/zim/manual/Plugins/GNU_R_Plot_Editor.txt
@@ -325,6 +347,7 @@ share/zim/manual/Plugins/Insert_Symbol.txt
 share/zim/manual/Plugins/Link_Map.txt
 share/zim/manual/Plugins/Quick_Note.txt
 share/zim/manual/Plugins/Spell_Checker.txt
+share/zim/manual/Plugins/Table_Of_Contents.txt
 share/zim/manual/Plugins/Tags.txt
 share/zim/manual/Plugins/Task_List.txt
 share/zim/manual/Plugins/Tray_Icon.txt
@@ -364,6 +387,7 @@ share/zim/templates/html/SlideShow_(S5).html
 share/zim/templates/latex/Article.tex
 share/zim/templates/latex/Part.tex
 share/zim/templates/latex/Report.tex
+share/zim/templates/markdown/Default.markdown
 share/zim/templates/wiki/Calendar.txt
 share/zim/templates/wiki/Default.txt
 share/zim/urls.list
