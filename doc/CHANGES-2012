@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2510 2012/08/11 09:34:11 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2511 2012/08/11 09:45:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/ruby-stomp version 1.2.5 [imil 2012-08-11]
 	Added net/wgetpaste version 2.20 [obache 2012-08-11]
 	Updated lang/chicken to 4.7.0.6 [asau 2012-08-11]
+	Updated graphics/dcraw to 9.16 [obache 2012-08-11]
