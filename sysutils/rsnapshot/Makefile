@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2010/01/27 19:54:41 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/08/11 18:30:12 ryoon Exp $
 #
 
-DISTNAME=	rsnapshot-1.2.9
+DISTNAME=	rsnapshot-1.3.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.rsnapshot.org/downloads/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.rsnapshot.org/
 COMMENT=	Filesystem snapshot utility
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,9 +26,12 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 CONF_FILES+=	${EGDIR}/rsnapshot.conf.default \
 		${PKG_SYSCONFDIR}/rsnapshot.conf
 
+FIND_PREFIX:=	RSYNCDIR=rsync
+.include "../../mk/find-prefix.mk"
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
-CONFIGURE_ARGS+=	--with-rsync=${LOCALBASE}/bin/rsync
+CONFIGURE_ARGS+=	--with-rsync=${RSYNCDIR}/bin/rsync
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
 
