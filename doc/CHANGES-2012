@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2518 2012/08/11 17:10:12 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.2519 2012/08/11 17:46:16 agc Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3871,3 +3871,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/zim to 0.56 [ryoon 2012-08-11]
 	Added net/zsync version 0.6.2 [agc 2012-08-11]
 	Updated security/google-authenticator to 1.0 [jmmv 2012-08-11]
+	Added security/dhbitty version 20120806 [agc 2012-08-11]
