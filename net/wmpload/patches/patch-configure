@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2012/08/11 17:22:18 marino Exp $
+
+--- configure.orig	2000-02-01 07:49:01.000000000 +0000
++++ configure
+@@ -17,6 +17,9 @@ case $system in
+ 			echo "enabling proc stats reading";
+ 		fi	
+ 		;;
++	DragonFly)
++		os="dragonfly";
++		;;
+ 	FreeBSD)
+ 		os="freebsd";
+ 		;;
