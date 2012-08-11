@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/08/11 15:43:13 agc Exp $
+
+SHA1 (zsync-0.6.2.tar.bz2) = 5e69f084c8adaad6a677b68f7388ae0f9507617a
+RMD160 (zsync-0.6.2.tar.bz2) = 3a7ce9f72cde7960cb3c9ede629bae23fca40153
+Size (zsync-0.6.2.tar.bz2) = 245592 bytes
