@@ -1,0 +1,4 @@
+Based on the excellent TagLib C++ library, which is fast, full-featured
+and mature. In contrast to other bindings, this one wraps the full C++ API,
+not only the minimal C API. This means that all tag data can be accessed,
+e.g. cover art of ID3v2 or custom fields of Ogg Vorbis comments.
