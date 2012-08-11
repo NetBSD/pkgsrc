@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2012/08/11 14:20:55 marino Exp $
 #
 
 DISTNAME=		isakmpd-20030903
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenBSD IKE daemon
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_PLATFORM=	DragonFly-*-*
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
