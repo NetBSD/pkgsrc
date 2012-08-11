@@ -1,0 +1,17 @@
+dhbitty is a small public key encryption program written in C.  It
+uses elliptic curve Diffie-Hellman in the form of Curve25519 to
+establish a shared secret between two users, and uses that secret to
+symmetrically encrypt and authenticate messages.
+
+There are no private key files; only passphrases.  Never lose that
+pesky thing again.
+
+Both the sender and the receiver can decrypt a message.  In fact,
+there is no distinction between sender and receiver.  Both passphrases
+must be strong.
+
+There is no signing.  A similarly useful form of authentication occurs
+using only DH.  dhbitty attempts to be as simple as possible.  It is
+not optimized, but achieves a comfortable speed for most uses.  It
+does not use floating point numbers, or integers longer than 32 bits.
+It does not contain more algorithms than are needed.
