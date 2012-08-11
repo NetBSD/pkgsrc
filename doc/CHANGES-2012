@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2509 2012/08/11 08:44:05 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2510 2012/08/11 09:34:11 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_libxml2 to 12.1nb3 [obache 2012-08-11]
 	Added devel/ruby-stomp version 1.2.5 [imil 2012-08-11]
 	Added net/wgetpaste version 2.20 [obache 2012-08-11]
+	Updated lang/chicken to 4.7.0.6 [asau 2012-08-11]
