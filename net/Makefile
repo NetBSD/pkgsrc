@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.923 2012/08/11 08:44:53 obache Exp $
+# $NetBSD: Makefile,v 1.924 2012/08/11 15:43:57 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -695,5 +695,6 @@ SUBDIR+=	youtube-dl
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
 SUBDIR+=	zeromq
+SUBDIR+=	zsync
 
 .include "../mk/misc/category.mk"
