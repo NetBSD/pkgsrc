@@ -1,52 +1,39 @@
-$NetBSD: patch-quickml-analog.in,v 1.1.1.1 2011/06/19 10:01:53 obache Exp $
+$NetBSD: patch-quickml-analog.in,v 1.2 2012/08/11 13:51:20 obache Exp $
 
+* for ruby-1.9 (use fileutils instead of deprecated ftools)
 * gnuplot>=4.0 support.
 
 --- quickml-analog.in.orig	2004-06-07 08:50:59.000000000 +0000
 +++ quickml-analog.in
-@@ -15,6 +15,7 @@ require 'getoptlong'
- require 'ftools'
+@@ -12,9 +12,10 @@
+ #
+ 
+ require 'getoptlong'
+-require 'ftools'
++require 'fileutils'
  require 'time'
  require 'cgi'
 +require 'open3'
  
  class Array
    def tail (n)
-@@ -395,19 +396,40 @@ class QuickMLPlot
+@@ -395,6 +396,12 @@ class QuickMLPlot
    end
  
    def add_basic (f)
--    f.print '
--    set grid
--    set timefmt "%y%m%d%H"
--    set xdata time
--    set size ratio 0.76
--    set linestyle 1 linetype 1 linewidth 5
--    set linestyle 2 linetype 3 linewidth 5
--    set linestyle 3 linetype 2 linewidth 5
--    set linestyle 4 linetype 4 linewidth 5
--    set linestyle 5 linetype 5 linewidth 5
--    set linestyle 6 linetype 7 linewidth 5
 +    Open3.popen3( "gnuplot" ) { |stdin, stdout, stderr|
 +      stdin.puts "show version"
 +      stdin.close
 +      stderr.read[/[Vv]ersion (\d+\.\d+)/]
 +    }
 +    if ( Float( $1 ) < 4.0 ) then
-+      f.print '
-+      set grid
-+      set timefmt "%y%m%d%H"
-+      set xdata time
-+      set size ratio 0.76
-+      set linestyle 1 linetype 1 linewidth 5
-+      set linestyle 2 linetype 3 linewidth 5
-+      set linestyle 3 linetype 2 linewidth 5
-+      set linestyle 4 linetype 4 linewidth 5
-+      set linestyle 5 linetype 5 linewidth 5
-+      set linestyle 6 linetype 7 linewidth 5
+     f.print '
+     set grid
+     set timefmt "%y%m%d%H"
+@@ -408,6 +415,21 @@ class QuickMLPlot
+     set linestyle 6 linetype 7 linewidth 5
  
--    '.gsub(/^    /, "")
-+      '.gsub(/^    /, "")
+     '.gsub(/^    /, "")
 +    else
 +       f.print '
 +       set grid
