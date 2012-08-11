@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2505 2012/08/10 16:48:36 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2506 2012/08/11 00:23:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3858,3 +3858,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gthumb to 2.14.4 [drochner 2012-08-10]
 	Updated multimedia/libdvdcss to 1.2.12 [drochner 2012-08-10]
 	Updated sysutils/dvdisaster to 0.72.4 [drochner 2012-08-10]
+	Updated devel/mercurial to 2.3 [wiz 2012-08-11]
