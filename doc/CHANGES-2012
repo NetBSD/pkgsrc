@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2519 2012/08/11 17:46:16 agc Exp $
+$NetBSD: CHANGES-2012,v 1.2520 2012/08/11 17:58:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3872,3 +3872,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/zsync version 0.6.2 [agc 2012-08-11]
 	Updated security/google-authenticator to 1.0 [jmmv 2012-08-11]
 	Added security/dhbitty version 20120806 [agc 2012-08-11]
+	Updated print/diffpdf to 2.1.1 [ryoon 2012-08-11]
