@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:40 agc Exp $
+$NetBSD: distinfo,v 1.4 2012/08/11 20:07:16 ryoon Exp $
 
-SHA1 (cdif-1.15) = 14dee0a46a2d6cfa281e822b7e5f60ea10ea7789
-RMD160 (cdif-1.15) = c6f32bed646cd92ee7a78d92af7d924db1992142
-Size (cdif-1.15) = 17571 bytes
+SHA1 (cdif-1.19) = 4b0dac13bd1a288872e1b9bb9af71411fe582cb3
+RMD160 (cdif-1.19) = 1f2d5284286ca80e86f40d392d439381556dda9f
+Size (cdif-1.19) = 19894 bytes
