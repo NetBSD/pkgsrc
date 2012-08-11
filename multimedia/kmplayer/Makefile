@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/06/14 07:44:51 sbd Exp $
+# $NetBSD: Makefile,v 1.65 2012/08/11 17:51:01 marino Exp $
 #
 
 DISTNAME=	kmplayer-0.11.3b
@@ -19,6 +19,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt perl pkg-config
 USE_LANGUAGES=		c c++
+
+LDFLAGS.DragonFly+=	-lgmodule-2.0
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
