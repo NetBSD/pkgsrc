@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2513 2012/08/11 12:04:17 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2514 2012/08/11 12:08:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3866,3 +3866,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/dcraw to 9.16 [obache 2012-08-11]
 	Updated x11/xvkbd to 3.3 [ryoon 2012-08-11]
 	Updated misc/py-carddav to 0.3.4 [wiz 2012-08-11]
+	Updated net/youtube-dl to 20120227 [ryoon 2012-08-11]
