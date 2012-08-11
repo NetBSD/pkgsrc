@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/08/11 17:43:46 agc Exp $
+
+SHA1 (dhbitty.c) = f9b101b6be5c88ae9f9980baa2846f276d324531
+RMD160 (dhbitty.c) = 10ecd79130e23115a192e4b9c575fbf901f78e8f
+Size (dhbitty.c) = 17140 bytes

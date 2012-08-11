@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head><title>dhbitty</title>
+<style type="text/css">
+body {font-family: sans-serif; font-size: 130%;}
+div#updates {font-size: 90%;}
+span.alice {color: #a00;}
+span.bob {color: #00a;}
+span.fn {font-family: serif}
+span.dhb {font-family: serif}
+</style>
+</head>
+<body>
+
+<h1>dhbitty</h1>
+
+<div id="updates">
+<p>2012-08-06: Page created.</p>
+</div>
+
+<div id="content">
+<p><span class="dhb"><b>dhbitty</b></span> is a small public key encryption 
+program written in C. It uses elliptic curve Diffie-Hellman in the form of 
+Curve25519 to establish a shared secret between two users, and uses that secret 
+to symmetrically encrypt and authenticate messages.</p>
+
+<p><span class="dhb">dhbitty</span> differs from most other public key 
+encryption programs in a few significant ways.</p>
+
+<ul>
+<li>There are no private key files; only passphrases. Never lose that pesky 
+thing again.</li>
+<li>Both the sender and the receiver can decrypt a message. In fact, there is 
+no distinction between sender and receiver. Both passphrases must be strong.</li>
+<li>There is no signing. A similarly useful form of authentication occurs using 
+only DH.</li>
+</ul>
+
+<p><span class="dhb">dhbitty</span> attempts to be as simple as possible. It is 
+not optimized, but achieves a comfortable speed for most uses. It does not use 
+floating point numbers, or integers longer than 32 bits. It does not contain 
+more algorithms than are needed.</p>
+
+<p>Download: <a href="http://cipherdev.org/rnd/dhbitty.c">dhbitty.c</a></p>
+
+<p>My <span class="fn">dhbitty.c</span> and this page are in the public 
+domain.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>This is how Alice generates her public key with dhbitty:</p>
+
+<pre>$ <span class="alice">dhbitty generate alice_public_key.txt</span>
+username:passphrase (this is visible!): <span class="alice">alice:Keyfiles be damned!</span>
+Done.</pre>
+
+<p>Bob will do the same thing:</p>
+
+<pre>$ <span class="bob">dhbitty generate bob_public_key.txt</span>
+username:passphrase (this is visible!): <span class="bob">bob:Bob's Spectacular Passphrase</span>
+Done.</pre>
+
+<p>Alice will publish her <span class="fn">alice_public_key.txt</span>, and Bob 
+will publish his <span class="fn">bob_public_key.txt</span>. They can now 
+access each other's public keys. (But they should be careful that Eve cannot 
+surreptitiously replace either public key with her own!)</p>
+
+<p>Alice wants to send files to Bob. She packages them into a 
+<span class="fn">.tar</span> archive (or any other type of archive with 
+timestamps), along with her message. Then she uses dhbitty:</p>
+
+<pre>$ <span class="alice">dhbitty encrypt bob_public_key.txt files_to_bob.tar files_to_bob.tar.dhbt</span>
+username:passphrase (this is visible!): <span class="alice">alice:Keyfiles be damned!</span>
+Done.</pre>
+
+<p>Alice sends <span class="fn">files_to_bob.tar.dhbt</span> to Bob. Bob will 
+use dhbitty to decrypt this archive:</p>
+
+<pre>$ <span class="bob">dhbitty decrypt files_to_bob.tar.dhbt files_to_bob.tar</span>
+username:passphrase (this is visible!): <span class="bob">bob:Bob's Spectacular Passphrase</span>
+This is the public key of file's secondary owner:
+0002f02b318c307bac07f3148a33c975cea04b79a870f0a5c7771cd38cc1986e
+Done.</pre>
+
+<p>Bob can verify that the public key dhbitty just gave him indeed is Alice's 
+public key. He unpacks the now-decrypted archive to access the files Alice sent 
+to him.</p>
+
+<p>In practice, Alice and Bob should use a system like diceware to pick 
+passphrases, in order to be confident of their strength. Seven words picked 
+using diceware is a good choice.</p>
+
+<hr>
+
+<h2>Technical summary</h2>
+
+<p>The key derivation function works like this: T(H(H(input) || S(H(input)))).  
+Here H is a 512-bit hash function built by using the EnRUPT block cipher in the 
+sponge construction. S is an expensive function that compresses 512 bits to 32 
+bits. Finally, T truncates 512 bits to 256 bits. The AT cost of this 
+construction is similar to 2<sup>32</sup> iterations of SHA-1; I'll reserve the 
+details for another document. The return value works directly as a Curve25519 
+private key (after fixing several bits, which is handled within the DH 
+function).</p>
+
+<p>When a file is encrypted, both public keys will be included in the output 
+file, in sorted order.</p>
+
+<p>For symmetric encryption and authentication, an EnRUPT sponge context is 
+initialized for each using the shared secret, a random 128-bit nonce, and a 
+public string ("encrypt" or "authenticate"). The data is encrypted and then 
+authenticated in a single pass.</p>
+
+<p>If on Windows, CryptGenRandom is used for randomness. Otherwise, reading 
+from /dev/urandom is attempted.</p>
+
+<p>This is the file format:</p>
+<ul>
+<li>32 bytes: public key 1</li>
+<li>32 bytes: public key 2</li>
+<li>16 bytes: nonce</li>
+<li>?? bytes: ciphertext</li>
+<li>16 bytes: tag</li>
+</ul>
+
+<hr>
+
+<a href="http://cipherdev.org/">Cipherdev</a>
+
+</div>
+</body>
+</html>
