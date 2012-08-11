@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2008/03/02 09:48:42 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2012/08/11 09:45:11 obache Exp $
 
---- dcraw.c.orig	2008-02-22 16:43:39.000000000 +0100
+--- dcraw.c.orig	2012-07-05 04:40:56.000000000 +0000
 +++ dcraw.c
-@@ -50,6 +50,7 @@
- #include <lcms.h>
+@@ -57,6 +57,7 @@
+ #include <lcms.h>		/* Support color profiles */
  #endif
  #ifdef LOCALEDIR
 +#include <locale.h>

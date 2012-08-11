@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2011/04/22 13:43:42 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/08/11 09:45:11 obache Exp $
 #
 
-DISTNAME=	dcraw-9.04
-PKGREVISION=	1
+DISTNAME=	dcraw-9.16
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/archive/
 
@@ -17,7 +16,7 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 USE_TOOLS+=		msgfmt
 USE_LANGUAGES=		c
 
-LIBS+=		-lm -ljpeg
+LIBS+=		-lm -ljasper -ljpeg
 CFLAGS+=	-DLOCALEDIR=\"${PREFIX}/${PKGLOCALEDIR}/locale\"
 
 DCRAW_MANS=		ca cs da de eo es fr hu it pl pt ru sv zh_CN zh_TW
@@ -66,5 +65,6 @@ do-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
