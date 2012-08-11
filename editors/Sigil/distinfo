@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2012/03/01 15:11:34 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2012/08/11 17:34:04 marino Exp $
 
 SHA1 (Sigil-0.5.3-Code.zip) = e43861b2979f11e2abefedad454623e2685c781f
 RMD160 (Sigil-0.5.3-Code.zip) = cb400fec5b2453a2cd076c1821e2962df7d011c8
 Size (Sigil-0.5.3-Code.zip) = 12843490 bytes
-SHA1 (patch-src_ZipArchive_DirEnumerator.cpp) = 1430a73cb771c77bd15fc32768a3accfd70ee28b
-SHA1 (patch-src_ZipArchive_ZipFile__stl.cpp) = d7db211cfd373a3d4ead90da67d0b9d445baa26f
-SHA1 (patch-src_ZipArchive_ZipPlatform__lnx.cpp) = 9d552417e86c77584b952bc07b06e75eaa02a68d
+SHA1 (patch-src_ZipArchive_DirEnumerator.cpp) = fd3bf1f77a3183e1a4205fba6578fe85b29a30d5
+SHA1 (patch-src_ZipArchive_ZipFile__stl.cpp) = f740a0454237ca45951d8b430cea3cba0ab9e917
+SHA1 (patch-src_ZipArchive_ZipPlatform__lnx.cpp) = 1412523a1a0aaf6446a82fc76b6c630b355983a1
