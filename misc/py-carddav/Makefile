@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/11 12:03:59 wiz Exp $
 #
 
-DISTNAME=	pycarddav0.3.3
+DISTNAME=	pycarddav0.3.4
 PKGNAME=	${DISTNAME:S/pycarddav/${PYPKGPREFIX}-carddav-/}
 CATEGORIES=	misc
-MASTER_SITES=	http://pycarddav.lostpackets.de/download/
+MASTER_SITES=	http://lostpackets.de/pycarddav/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
