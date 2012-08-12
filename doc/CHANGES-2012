@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2539 2012/08/12 16:09:42 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2540 2012/08/12 16:15:34 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-pytz to 2012d [wiz 2012-08-12]
 	Updated converters/py-simplejson to 2.6.1 [wiz 2012-08-12]
 	Updated textproc/py-yaml to 3.10 [wiz 2012-08-12]
+	Added net/ruby-stompserver version 0.9.9 [imil 2012-08-12]
