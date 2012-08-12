@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2525 2012/08/12 09:18:45 imil Exp $
+$NetBSD: CHANGES-2012,v 1.2526 2012/08/12 09:53:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3878,3 +3878,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/cdif to 1.19 [ryoon 2012-08-11]
 	Updated graphics/fotoxx to 12.08 [ryoon 2012-08-12]
 	Added sysutils/mcollective version 2.1.1 [imil 2012-08-12]
+	Updated devel/ruby-activesupport3 to 3.0.17 [taca 2012-08-12]
+	Updated devel/ruby-activemodel to 3.0.17 [taca 2012-08-12]
+	Updated www/ruby-actionpack3 to 3.0.17 [taca 2012-08-12]
+	Updated databases/ruby-activerecord3 to 3.0.17 [taca 2012-08-12]
+	Updated www/ruby-activeresource3 to 3.0.17 [taca 2012-08-12]
+	Updated mail/ruby-actionmailer3 to 3.0.17 [taca 2012-08-12]
+	Updated devel/ruby-railties to 3.0.17 [taca 2012-08-12]
+	Updated www/ruby-rails3 to 3.0.17 [taca 2012-08-12]
