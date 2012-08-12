@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2553 2012/08/12 21:29:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2554 2012/08/12 21:44:18 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3929,3 +3929,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/xcb-util-image version 0.3.9 [wiz 2012-08-12]
 	Added x11/xcb-util-renderutil version 0.3.8 [wiz 2012-08-12]
 	Added x11/xcb-util-wm version 0.3.9 [wiz 2012-08-12]
+	Updated misc/ruby-daemons to 1.1.9 [imil 2012-08-12]
