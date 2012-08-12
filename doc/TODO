@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11422 2012/08/12 11:07:11 ryoon Exp $
+$NetBSD: TODO,v 1.11423 2012/08/12 15:42:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,7 +343,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.8.6
+	o ImageMagick-6.7.8.9
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -458,6 +458,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
 	o cc65-2.13.3
+	o ccache-3.1.8
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdlabelgen-4.2.0
@@ -523,7 +524,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o doclifter-2.9
-	o doxygen-1.8.1.2
+	o doxygen-1.8.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2012.055
@@ -815,6 +816,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o libcares-1.8.0
 	o libcdio-0.83
 	o libchamplain08-0.12.3
+	o libdrm-2.4.38
 	o libextractor-0.6.3
 	o libffi-3.0.11
 	o libflash-0.4.13
@@ -858,6 +860,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o libvirt-0.9.9
 	o libvisio-0.0.19
 	o libxklavier-5.2.1
+	o libyaml-0.1.4
 	o licq-1.3.8
 	o liferea-1.8.6
 	o lincvs-2.1.4 [now called CrossVC]
@@ -900,7 +903,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o modular-xorg-server-1.12.3
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-2.11.2
+	o mono-2.11.3
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.4.2
@@ -933,6 +936,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o ng-1.4.4
 	o nginx-1.3.0
 	o nhc98-1.22 [pkg/45318]
+	o nickle-2.76
 	o nikto-2.0.1
 	o nmap-6.0
 	o notification-daemon-0.7.0
@@ -974,7 +978,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o p5-GTop-0.18
 	o p5-Gtk2-1.223
 	o p5-Perl-Tidy-20120714
-	o p5-PerlMagick-6.7.7.7
+	o p5-PerlMagick-6.7.8.9
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
 	o p5-clutter-1.110
@@ -1009,6 +1013,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o pingus-0.7.4
 	o pioneers-14.1
 	o pircbot-1.4.6
+	o pixman-0.27.2
 	o pkg-config-0.26 [wip]
 	o pkg-config-0.27
 	o pks-0.9.6
@@ -1020,6 +1025,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.20.3
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
@@ -1056,6 +1062,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o py-simplejson-2.6.1
 	o py-sybase-0.37
 	o py-urwid-1.0.2
+	o py-yaml-3.10
 	o qbrew-0.3.9
 	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
@@ -1130,7 +1137,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o smproxy-1.0.3
 	o snd-10.6
 	o snes9x-1.53
-	o snort-2.9.3.0
+	o snort-2.9.3.1
 	o socat-1.7.2.1
 	o solfege-3.20.4
 	o sope-4.6
@@ -1273,7 +1280,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20120804
+	o x264-devel-20120811
 	o xanalyser-1.30
 	o xapian-1.2.12
 	o xaric-0.13.2
