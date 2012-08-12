@@ -1,0 +1,19 @@
+$NetBSD: patch-package_konoha.sql_CMakeLists.txt,v 1.1 2012/08/12 11:24:00 marino Exp $
+
+Konoha automatically detects mysql and tries to support it.
+For one, it breaks during linking.  It must be looking for mysql lib in
+wrong spot.  Secondly, sqlite is already supported and specified in
+the pkgsrc makefile so it's not needed.
+Disable mysql detection until further notice.
+
+--- package/konoha.sql/CMakeLists.txt.orig	2012-03-07 06:52:15.000000000 +0000
++++ package/konoha.sql/CMakeLists.txt
+@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.6)
+ set(CMAKE_BUILD_TYPE ${KONOHA_BUILD_TYPE})
+ 
+ project(sql)
+-find_program(MYSQL_CONFIG NAMES mysql_config)
++find_program(MYSQL_CONFIG NAMES mysql_config__DISABLE_THIS__)
+ 
+ if(MYSQL_CONFIG)
+ 
