@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/07/02 13:37:37 adam Exp $
+# $NetBSD: Makefile,v 1.32 2012/08/12 02:12:51 marino Exp $
 #
 
 DISTNAME=	Sigil-0.5.3-Code
@@ -26,6 +26,14 @@ USE_TOOLS+=	pkg-config
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
 BUILDLINK_TRANSFORM+=	l:zlib:z
+
+SUBST_CLASSES+=		d2u
+SUBST_STAGE.d2u=	post-extract
+SUBST_MESSAGE.d2u=	Removing CR end-of-line markers.
+SUBST_FILES.d2u=	src/ZipArchive/DirEnumerator.cpp
+SUBST_FILES.d2u+=	src/ZipArchive/ZipFile_stl.cpp
+SUBST_FILES.d2u+=	src/ZipArchive/ZipPlatform_lnx.cpp
+SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 .include "../../mk/compiler.mk"
 # GCC 4.4 and above needs this
