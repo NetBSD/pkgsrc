@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2010/09/23 07:07:47 adam Exp $
+$NetBSD: patch-configure,v 1.1 2012/08/12 16:28:06 wiz Exp $
 
 Arbitrary strings should not be passed to "eval".
 
---- configure.orig	2010-05-28 15:55:57.000000000 +0000
+--- configure.orig	2011-08-06 14:17:45.000000000 +0000
 +++ configure
-@@ -11167,7 +11167,7 @@ echo use_indirect_deps=$use_indirect_dep
+@@ -13439,7 +13439,7 @@ echo use_indirect_deps=$use_indirect_dep
  $as_echo_n "checking whether to list both direct and indirect dependencies... " >&6; }
  case $use_indirect_deps in
    auto)
