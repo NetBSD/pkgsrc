@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/02/10 13:08:51 obache Exp $
+$NetBSD: patch-aa,v 1.2 2012/08/12 11:52:26 obache Exp $
 
 --- configure.in.orig	2003-05-28 12:18:18.000000000 +0000
 +++ configure.in

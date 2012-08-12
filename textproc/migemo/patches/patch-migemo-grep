@@ -1,0 +1,18 @@
+$NetBSD: patch-migemo-grep,v 1.1 2012/08/12 11:52:26 obache Exp $
+
+--- migemo-grep.orig	2003-05-27 07:43:07.000000000 +0000
++++ migemo-grep
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env ruby
++#! /usr/bin/env ruby -Ke
+ #
+ # migemo-grep - a simple grep-like tool employing migemo.
+ #
+@@ -9,7 +9,6 @@
+ # You can redistribute it and/or modify it under the terms of 
+ # the GNU General Public License version 2.
+ #
+-$KCODE = "e"
+ 
+ require 'migemo'
+ require 'getoptlong'
