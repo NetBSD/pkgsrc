@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2012/07/27 16:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/12 02:03:15 marino Exp $
 #
 
-DISTNAME=	B-emv2.1aLinux
-PKGNAME=	b-em-2.1a
-PKGREVISION=	1
+DISTNAME=	B-emv2.2Linux
+PKGNAME=	b-em-2.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://b-em.bbcmicro.com/
 
 MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://b-em.bbcmicro.com/
 COMMENT=	Freeware Acorn BBC Micro Emulator with 2nd processors
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,11 +21,16 @@ USE_LANGUAGES=	c c++
 
 BEMDATADIR=	${PREFIX}/share/b-em/
 
-SUBST_CLASSES+=		paths
+SUBST_CLASSES+=		paths d2u
 SUBST_MESSAGE.paths=	Fixing non-existing paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/linux.c src/win.c
 SUBST_SED.paths=	-e 's,@BEMDATADIR@,${BEMDATADIR},g'
+
+SUBST_MESSAGE.d2u=	Removing CR end-of-line markers
+SUBST_STAGE.d2u=	post-extract
+SUBST_FILES.d2u=	src/win.c src/linux.c
+SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 do-install:
 	${INSTALL} -d ${DESTDIR}${PREFIX}/bin
