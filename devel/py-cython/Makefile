@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/12 21:08:46 wiz Exp $
 #
 
-DISTNAME=	Cython-0.13
-PKGNAME=	${PYPKGPREFIX}-cython-0.13
+DISTNAME=	Cython-0.16
+PKGNAME=	${PYPKGPREFIX}-cython-0.16
 CATEGORIES=	lang python
 MASTER_SITES=	http://cython.org/release/
 
@@ -20,6 +20,7 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	cd ${WRKSRC}/bin && ${MV} cython cython${PYVERSSUFFIX}
+	cd ${WRKSRC}/bin && ${MV} cygdb cygdb${PYVERSSUFFIX}
 
 # for test only
 #USE_LANGUAGES+= c++
