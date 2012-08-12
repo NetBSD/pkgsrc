@@ -1,6 +1,7 @@
-$NetBSD: patch-common_pngloader.c,v 1.1 2011/04/03 11:14:14 wiz Exp $
+$NetBSD: patch-common_pngloader.c,v 1.2 2012/08/12 21:41:02 wiz Exp $
 
 Fix build with png-1.5.
+https://sourceforge.net/tracker/?func=detail&aid=3556781&group_id=92651&atid=601520
 
 --- common/pngloader.c.orig	2004-03-17 03:43:53.000000000 +0000
 +++ common/pngloader.c
