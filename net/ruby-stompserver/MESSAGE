@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/08/12 16:13:02 imil Exp $
+
+stompserver is not capable of handling absolute paths from its
+configuration file. By default, everything is installed in
+${STOMPSERVER_WRKDIR}.
+Feel free to modify this variable using your mk.conf file.
+
+===========================================================================
