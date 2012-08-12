@@ -1,34 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/12 17:40:59 wiz Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/calendar
 lib/ocaml/site-lib/calendar/META
-lib/ocaml/site-lib/calendar/calendar.cmi
 lib/ocaml/site-lib/calendar/calendar.mli
+lib/ocaml/site-lib/calendar/calendarLib.a
+${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cma
 lib/ocaml/site-lib/calendar/calendarLib.cmi
 lib/ocaml/site-lib/calendar/calendarLib.cmo
-lib/ocaml/site-lib/calendar/calendar_builder.cmi
+${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cmx
+${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cmxa
+${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.cmxs
+${PLIST.opt}lib/ocaml/site-lib/calendar/calendarLib.o
 lib/ocaml/site-lib/calendar/calendar_builder.mli
-lib/ocaml/site-lib/calendar/calendar_sig.cmi
 lib/ocaml/site-lib/calendar/calendar_sig.mli
-lib/ocaml/site-lib/calendar/date.cmi
 lib/ocaml/site-lib/calendar/date.mli
-lib/ocaml/site-lib/calendar/date_sig.cmi
 lib/ocaml/site-lib/calendar/date_sig.mli
-lib/ocaml/site-lib/calendar/fcalendar.cmi
 lib/ocaml/site-lib/calendar/fcalendar.mli
-lib/ocaml/site-lib/calendar/ftime.cmi
 lib/ocaml/site-lib/calendar/ftime.mli
-lib/ocaml/site-lib/calendar/period.cmi
 lib/ocaml/site-lib/calendar/period.mli
-lib/ocaml/site-lib/calendar/printer.cmi
 lib/ocaml/site-lib/calendar/printer.mli
-lib/ocaml/site-lib/calendar/time.cmi
 lib/ocaml/site-lib/calendar/time.mli
-lib/ocaml/site-lib/calendar/time_Zone.cmi
 lib/ocaml/site-lib/calendar/time_Zone.mli
-lib/ocaml/site-lib/calendar/time_sig.cmi
 lib/ocaml/site-lib/calendar/time_sig.mli
-lib/ocaml/site-lib/calendar/utils.cmi
 lib/ocaml/site-lib/calendar/utils.mli
-lib/ocaml/site-lib/calendar/version.cmi
 lib/ocaml/site-lib/calendar/version.mli
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/calendar
