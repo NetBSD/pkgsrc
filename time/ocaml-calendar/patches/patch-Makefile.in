@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/08/12 17:41:00 wiz Exp $
+
+remove version detection (doesn't work in NetBSD environment) and add destdir
+--- Makefile.in.orig	2010-07-05 07:54:32.000000000 +0000
++++ Makefile.in
+@@ -198,14 +198,7 @@ headers:
+ #########
+ 
+ install: $(LIBS) $(CLIBS) META
+-	@if [ "`sed -n -e 's/version = "\([0-9.+dev]*\)"/\1/p' META`" = "$(VERSION)" ]; then \
+-	  (if test -d `ocamlfind install -help | grep destdir | sed -e "s/.*default: \(.*\))/\1/"`/$(NAME); then $(MAKE) uninstall; fi;\
+-	  $(CAMLFIND) install $(NAME) target/*.cm[ioxa] target/*.cmx[as] $(MLI)  $(CLIBS) META); \
+-	else \
+-	  (echo; echo "Not the good version. Please, do :"; \
+-	   echo "  make clean && make"; \
+-	   echo "next reinstall"; echo) \
+-	fi
++	$(CAMLFIND) install -destdir ${DESTDIR}${CAMLLIB}/site-lib -ldconf /dev/null $(NAME) target/*.cm[ioxa] target/*.cmx[as] $(MLI)  $(CLIBS) META
+ 
+ uninstall:
+ 	$(CAMLFIND) remove $(NAME)
