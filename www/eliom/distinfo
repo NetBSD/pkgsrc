@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2012/08/12 17:47:43 wiz Exp $
+
+SHA1 (eliom-2.2.2.tar.gz) = f0b6bd1824ee59a124d6bae3d10b4a3d891e1ec5
+RMD160 (eliom-2.2.2.tar.gz) = b8e32940187d03b6dac2c0bcc98d0c27f45c6a52
+Size (eliom-2.2.2.tar.gz) = 689737 bytes
+SHA1 (patch-src_Makefile) = 6112c1641804bbe4c98c29e70330ed01a65b8186
+SHA1 (patch-src_client_Makefile) = 85bd44e3fcd035652a16d5d9aeeeb237a6f06692
+SHA1 (patch-src_client_Makefile.filelist) = 76baa0cd13b029a01d4ec04f6b8486b0d9cee334
