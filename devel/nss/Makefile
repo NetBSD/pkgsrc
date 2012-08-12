@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2012/06/07 13:49:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2012/08/12 15:29:16 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
-NSS_RELEASE=		3.13.5
+NSS_RELEASE=		3.13.6
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_13_5_RTM/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_13_6_RTM/src/}
 
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
