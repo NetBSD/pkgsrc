@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/09/16 02:26:45 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/12 11:53:51 obache Exp $
 
 .include "../../textproc/migemo/Makefile.common"
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}migemo-elisp-${MIGEMO_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Elisp for migemo
 
