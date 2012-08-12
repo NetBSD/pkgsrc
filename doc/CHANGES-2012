@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2532 2012/08/12 15:53:53 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2533 2012/08/12 15:56:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3908,3 +3908,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/drupal7 to 7.15 [taca 2012-08-12]
 	Updated www/typo3_45 to 4.5.18 [taca 2012-08-12]
 	Updated www/typo3_46 to 4.6.11 [taca 2012-08-12]
+	Updated misc/libreoffice to 3.5.6.2 [wiz 2012-08-12]
