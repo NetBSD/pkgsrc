@@ -1,28 +1,28 @@
-$NetBSD: patch-ab,v 1.7 2012/01/08 12:35:45 ryoon Exp $
+$NetBSD: patch-ab,v 1.8 2012/08/12 07:20:15 ryoon Exp $
 
---- zfuncs.cc.orig	2012-01-04 08:47:11.000000000 +0000
+--- zfuncs.cc.orig	2012-08-04 11:58:30.000000000 +0000
 +++ zfuncs.cc
 @@ -81,6 +81,7 @@ void zappcrash(cchar *pMess, ... )
  
-    printf("zappcrash: \n %s \n",message);                                  //  output message to stdout
+    printf("*** zappcrash: \n %s \n",message);                              //  output message to stdout
  
-+#ifdef __linux__
++#if defined (__linux__) || (defined (__NetBSD__) && (__NetBSD_Version__ >= 699000000))
     nstack = backtrace(stacklist,nstack);                                   //  get traceback data
     stackents = backtrace_symbols(stacklist,nstack);
  
-@@ -88,6 +89,7 @@ void zappcrash(cchar *pMess, ... )
-       printf(" %s \n",stackents[ii]);
- 
+@@ -90,6 +91,7 @@ void zappcrash(cchar *pMess, ... )
     fid1 = fopen("zappcrash","w");                                          //  text file for backtrace
-+#endif
  
     fprintf(fid1,"zappcrash: \n %s \n",message);                            //  output message to text file
++#endif
     
+    cc = readlink("/proc/self/exe",progexe,300);                            //  get own program path
+    if (cc <= 0) {
 @@ -98,6 +100,7 @@ void zappcrash(cchar *pMess, ... )
     }
     progexe[cc] = 0;
  
-+#ifdef __linux__
++#if defined (__linux__) || (defined (__NetBSD__) && (__NetBSD_Version__ >= 699000000))
     for (ii = 0; ii < nstack; ii++)                                         //  output backtrace to text file
     {
        pfunc = 0;
