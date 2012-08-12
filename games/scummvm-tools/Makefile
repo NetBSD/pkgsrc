@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/04/03 11:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/12 22:00:34 wiz Exp $
 #
 
-DISTNAME=		scummvm-tools-0.9.0
-PKGREVISION=		2
+DISTNAME=		scummvm-tools-1.4.0
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,30 +11,22 @@ HOMEPAGE=		http://scummvm.sourceforge.net/
 COMMENT=		Conversion and compression tools for ScummVM
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=	flac-[0-9]*:../../audio/flac
-DEPENDS+=	lame-[0-9]*:../../audio/lame
-DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/tools-0.9.0
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-INSTALLATION_DIRS=	bin share/doc/scummvm-tools
+INSTALLATION_DIRS=	bin
 
-do-install:
-	for f in compress_kyra compress_queen compress_saga \
-        	compress_scumm_san compress_scumm_sou compress_scumm_bun \
-        	compress_simon compress_sword1 compress_sword2 dekyra \
-        	descumm desword2 encode_dxa extract_kyra extract_loom_tg16 \
-        	extract_mm_c64 extract_mm_nes extract_scumm_mac \
-        	extract_simon1_amiga extract_zak_c64; \
-	do \
-		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin; \
-	done
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/scummvm-tools
-
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
