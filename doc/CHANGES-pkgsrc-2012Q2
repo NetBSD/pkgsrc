@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.35 2012/08/10 16:32:25 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.36 2012/08/12 14:50:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -206,3 +206,33 @@ Pullup ticket #3891 - requested by is
 sysutils/mtools: bug fix patch
 Pullup ticket #3892 - requested by is
 sysutils/mtools: bug fix patch
+Pullup ticket #3893 - requested by obache
+emulators/suse121_libxml2: security update
+Pullup ticket #3894 - requested by taca
+databases/ruby-activerecord3: security update
+devel/ruby-activemodel: security update
+devel/ruby-activesupport3: security update
+devel/ruby-railties: security update
+mail/ruby-actionmailer3: security update
+mail/ruby-mail22/Makefile
+www/ruby-actionpack3: security update
+www/ruby-activeresource3: security update
+www/ruby-rails3: security update
+Pullup ticket #3895 - requested by taca
+databases/ruby-activerecord31: security update
+devel/ruby-activemodel31: security update
+devel/ruby-activesupport31: security update
+devel/ruby-railties31: security update
+mail/ruby-actionmailer31: security update
+www/ruby-actionpack31: security update
+www/ruby-activeresource31: security update
+www/ruby-rails31: security update
+Pullup ticket #3896 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
