@@ -1,4 +1,4 @@
-# $NetBSD: options.translations.mk,v 1.1 2011/08/12 12:46:42 taca Exp $
+# $NetBSD: options.translations.mk,v 1.2 2012/08/12 03:16:51 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.contao${CT_VERS}-translations
 
@@ -16,6 +16,6 @@ CT_LANGUAGES+=	${l:S/^lang-//1}
 .for l in ${CT_LANGUAGES}
 CT_DISTFILES+=	${CT_TRANSLATIONS.${l}}
 SITES.${CT_TRANSLATIONS.${l}}= \
-	http://www.contao.org/download.html?iso=${l}&file=tl_files/languages/${l}/
+	http://www.contao.org/files/languages/${l}/
 PLIST_SRC+=	PLIST.${l}
 .endfor
