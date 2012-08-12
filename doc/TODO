@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11424 2012/08/12 15:56:08 wiz Exp $
+$NetBSD: TODO,v 1.11425 2012/08/12 16:03:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -430,7 +430,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
-	o bdftopcf-1.0.3 [pkg/45536]
 	o benchfft-3.1
 	o bftpd-3.7
 	o biew-6.1.0
