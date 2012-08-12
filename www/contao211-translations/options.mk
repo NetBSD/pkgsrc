@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2012/08/01 16:25:51 taca Exp $
+# $NetBSD: options.mk,v 1.18 2012/08/12 03:16:51 taca Exp $
 
 # Not yet ready for Contao 2.11:
 #	af ar bs ca da gl gn hr id is ku
@@ -47,21 +47,4 @@ CT_TRANSLATIONS.tr=	Contao-Turkish-v14.zip		# 2011/03/24
 CT_TRANSLATIONS.uk=	Contao-Ukrainian-v17.zip	# 2011/07/25
 CT_TRANSLATIONS.zh=	TYPOlight-Chinese-v20.zip	# 2010/01/29
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.contao${CT_VERS}-translations
-
-.for l in ${CT_SUPPORTED_LANGUAGES}
-PKG_SUPPORTED_OPTIONS+=	lang-${l}
-PKG_SUGGESTED_OPTIONS+=	lang-${l}
-.endfor
-
-.include "../../mk/bsd.options.mk"
-
-.for l in ${PKG_OPTIONS:Mlang-*}
-CT_LANGUAGES+=	${l:S/^lang-//1}
-.endfor
-
-.for l in ${CT_LANGUAGES}
-CT_DISTFILES+=	${CT_TRANSLATIONS.${l}}
-SITES.${CT_TRANSLATIONS.${l}}= \
-	http://www.contao.org/download.html?iso=${l}&file=tl_files/languages/${l}/
-.endfor
+.include "../../www/contao/options.translations.mk"
