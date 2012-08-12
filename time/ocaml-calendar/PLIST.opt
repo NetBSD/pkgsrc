@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.opt,v 1.1.1.1 2008/11/01 12:09:44 obache Exp $
-lib/ocaml/site-lib/calendar/calendarLib.cmx
-lib/ocaml/site-lib/calendar/calendarLib.o
