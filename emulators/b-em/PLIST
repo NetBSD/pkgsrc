@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2012/02/20 15:45:19 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/12 02:03:15 marino Exp $
 bin/b-em
 share/b-em/cmos.bin
+share/b-em/cmos350.bin
 share/b-em/cmosa.bin
 share/b-em/cmosc.bin
 share/b-em/ddnoise/35/motor.wav
@@ -42,26 +43,24 @@ share/b-em/discs/cpm4.dsd
 share/b-em/discs/cpm5.dsd
 share/b-em/discs/cpm6.dsd
 share/b-em/discs/cpm7.dsd
-share/b-em/roms/ADFS1-53.rom
-share/b-em/roms/a/BASIC.ROM
-share/b-em/roms/a01/BASIC1.rom
-share/b-em/roms/b/BASIC.ROM
+share/b-em/roms/a/basic.rom
+share/b-em/roms/a01/basic1.rom
 share/b-em/roms/b/DFS-0.9.rom
-share/b-em/roms/b1770/BASIC.ROM
+share/b-em/roms/b/basic.rom
+share/b-em/roms/b1770/basic.rom
 share/b-em/roms/b1770/dfs1770.rom
-share/b-em/roms/b1770/zADFS.ROM
-share/b-em/roms/bp/BASIC.ROM
+share/b-em/roms/b1770/zadfs.rom
+share/b-em/roms/bp/basic.rom
 share/b-em/roms/bp/dfs.rom
-share/b-em/roms/bp/zADFS.ROM
+share/b-em/roms/bp/zadfs.rom
 share/b-em/roms/bpos
-share/b-em/roms/compact/adfs210.rom
-share/b-em/roms/compact/basic48.rom
-share/b-em/roms/compact/basic486.rom
-share/b-em/roms/compact/os51.rom
-share/b-em/roms/compact/utils.rom
+share/b-em/roms/compact/adfs210
+share/b-em/roms/compact/basic48
+share/b-em/roms/compact/os51
+share/b-em/roms/compact/utils
 share/b-em/roms/deos
-share/b-em/roms/master/mos.txt
 share/b-em/roms/master/mos3.20
+share/b-em/roms/master/mos3.50
 share/b-em/roms/os
 share/b-em/roms/os01
 share/b-em/roms/tube/6502Tube.rom
