@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2012/08/12 21:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.659 2012/08/12 21:30:03 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -402,6 +402,7 @@ SUBDIR+=	xcb-util
 SUBDIR+=	xcb-util-image
 SUBDIR+=	xcb-util-keysyms
 SUBDIR+=	xcb-util-renderutil
+SUBDIR+=	xcb-util-wm
 SUBDIR+=	xcb-util036
 SUBDIR+=	xclip
 SUBDIR+=	xclock
