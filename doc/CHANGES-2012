@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2537 2012/08/12 16:07:28 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2538 2012/08/12 16:08:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3913,3 +3913,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/bdftopcf to 1.0.3 [wiz 2012-08-12]
 	Updated net/wget to 1.14 [wiz 2012-08-12]
 	Updated time/py-pytz to 2012d [wiz 2012-08-12]
+	Updated converters/py-simplejson to 2.6.1 [wiz 2012-08-12]
