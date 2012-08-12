@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2531 2012/08/12 15:47:23 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2532 2012/08/12 15:53:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3906,3 +3906,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/nspr to 4.9.3.2 [ryoon 2012-08-12]
 	Updated devel/nss to 3.13.6 [ryoon 2012-08-12]
 	Updated www/drupal7 to 7.15 [taca 2012-08-12]
+	Updated www/typo3_45 to 4.5.18 [taca 2012-08-12]
+	Updated www/typo3_46 to 4.6.11 [taca 2012-08-12]
