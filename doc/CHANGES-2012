@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2548 2012/08/12 19:24:45 tron Exp $
+$NetBSD: CHANGES-2012,v 1.2549 2012/08/12 21:12:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/ocaml-calendar to 2.03.2 [wiz 2012-08-12]
 	Added www/eliom version 2.2.2 [wiz 2012-08-12]
 	Updated net/Radicale to 0.7.1 [tron 2012-08-12]
+	Updated devel/py-cython to 0.16 [wiz 2012-08-12]
