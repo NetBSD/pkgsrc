@@ -1,6 +1,7 @@
-$NetBSD: patch-cimg.cc,v 1.1 2011/04/03 10:35:58 wiz Exp $
+$NetBSD: patch-cimg.cc,v 1.2 2012/08/12 21:38:11 wiz Exp $
 
 Fix build with png-1.5.
+https://sourceforge.net/tracker/?func=detail&aid=3515237&group_id=11164&atid=111164
 
 --- cimg.cc.orig	2007-05-23 18:57:45.000000000 +0000
 +++ cimg.cc
