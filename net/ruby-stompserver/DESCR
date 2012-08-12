@@ -1,0 +1,4 @@
+Stompserver handles basic message queue processing.
+
+It is Stomp messaging server with file/dbm/memory/activerecord based FIFO
+queues, queue monitoring, and basic authentication.
