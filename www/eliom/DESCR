@@ -1,0 +1,4 @@
+Eliom is an OCaml library for the webserver Ocsigen that allows
+for the creation of dynamic webpages. In this way, a website is
+not written as a separate set of pages, but as one integral OCaml
+module.

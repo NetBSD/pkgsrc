@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile,v 1.1 2012/08/12 17:47:43 wiz Exp $
+
+install manpage with proper permissions
+--- src/Makefile.orig	2012-06-11 12:46:54.000000000 +0000
++++ src/Makefile
+@@ -61,7 +61,7 @@ install: install.META install.man
+ 
+ install.man: install.META
+ 	$(INSTALL) -m 755 -d $(TEMPROOT)$(MANDIR)/man1
+-	$(INSTALL) -m 755 files/eliomc.1 $(TEMPROOT)$(MANDIR)/man1
++	$(INSTALL) -m 644 files/eliomc.1 $(TEMPROOT)$(MANDIR)/man1
+ 	ln -sf eliomc.1 $(TEMPROOT)$(MANDIR)/man1/js_of_eliom.1
+ 	ln -sf eliomc.1 $(TEMPROOT)$(MANDIR)/man1/eliomopt.1
+ 	ln -sf eliomc.1 $(TEMPROOT)$(MANDIR)/man1/eliomcp.1
