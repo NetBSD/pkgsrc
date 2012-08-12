@@ -1,18 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/30 14:54:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/12 19:24:31 tron Exp $
 bin/radicale
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/radicale/__init__.py
 ${PYSITELIB}/radicale/__init__.pyc
 ${PYSITELIB}/radicale/__init__.pyo
 ${PYSITELIB}/radicale/__main__.py
 ${PYSITELIB}/radicale/__main__.pyc
 ${PYSITELIB}/radicale/__main__.pyo
+${PYSITELIB}/radicale/acl/IMAP.py
+${PYSITELIB}/radicale/acl/IMAP.pyc
+${PYSITELIB}/radicale/acl/IMAP.pyo
 ${PYSITELIB}/radicale/acl/LDAP.py
 ${PYSITELIB}/radicale/acl/LDAP.pyc
 ${PYSITELIB}/radicale/acl/LDAP.pyo
+${PYSITELIB}/radicale/acl/PAM.py
+${PYSITELIB}/radicale/acl/PAM.pyc
+${PYSITELIB}/radicale/acl/PAM.pyo
 ${PYSITELIB}/radicale/acl/__init__.py
 ${PYSITELIB}/radicale/acl/__init__.pyc
 ${PYSITELIB}/radicale/acl/__init__.pyo
+${PYSITELIB}/radicale/acl/courier.py
+${PYSITELIB}/radicale/acl/courier.pyc
+${PYSITELIB}/radicale/acl/courier.pyo
 ${PYSITELIB}/radicale/acl/htpasswd.py
 ${PYSITELIB}/radicale/acl/htpasswd.pyc
 ${PYSITELIB}/radicale/acl/htpasswd.pyo
@@ -25,6 +33,13 @@ ${PYSITELIB}/radicale/ical.pyo
 ${PYSITELIB}/radicale/log.py
 ${PYSITELIB}/radicale/log.pyc
 ${PYSITELIB}/radicale/log.pyo
+${PYSITELIB}/radicale/storage/__init__.py
+${PYSITELIB}/radicale/storage/__init__.pyc
+${PYSITELIB}/radicale/storage/__init__.pyo
+${PYSITELIB}/radicale/storage/filesystem.py
+${PYSITELIB}/radicale/storage/filesystem.pyc
+${PYSITELIB}/radicale/storage/filesystem.pyo
 ${PYSITELIB}/radicale/xmlutils.py
 ${PYSITELIB}/radicale/xmlutils.pyc
 ${PYSITELIB}/radicale/xmlutils.pyo
+share/examples/radicale/config
