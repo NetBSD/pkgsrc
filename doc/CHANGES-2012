@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2546 2012/08/12 17:41:15 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2547 2012/08/12 17:48:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3922,3 +3922,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/pkg-config to 0.27 [wiz 2012-08-12]
 	Updated print/libspectre to 0.2.7 [wiz 2012-08-12]
 	Updated time/ocaml-calendar to 2.03.2 [wiz 2012-08-12]
+	Added www/eliom version 2.2.2 [wiz 2012-08-12]
