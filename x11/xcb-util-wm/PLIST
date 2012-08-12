@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/12 21:29:36 wiz Exp $
+include/xcb/xcb_ewmh.h
+include/xcb/xcb_icccm.h
+lib/libxcb-ewmh.la
+lib/libxcb-icccm.la
+lib/pkgconfig/xcb-ewmh.pc
+lib/pkgconfig/xcb-icccm.pc
