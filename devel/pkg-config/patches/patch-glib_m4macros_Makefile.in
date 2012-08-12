@@ -1,0 +1,15 @@
+$NetBSD: patch-glib_m4macros_Makefile.in,v 1.1 2012/08/12 16:28:06 wiz Exp $
+
+Do not install glib autoconf macros.
+
+--- glib/m4macros/Makefile.in.orig	2012-06-04 22:23:58.000000000 +0000
++++ glib/m4macros/Makefile.in
+@@ -304,7 +304,7 @@ GTESTER_REPORT = $(top_builddir)/glib/gt
+ # initialize variables for unconditional += appending
+ EXTRA_DIST = $(installed_m4)
+ TEST_PROGS = 
+-installed_m4 = glib-2.0.m4 glib-gettext.m4 gsettings.m4
++installed_m4 = 
+ m4datadir = $(datadir)/aclocal
+ m4data_DATA = $(installed_m4)
+ all: all-am
