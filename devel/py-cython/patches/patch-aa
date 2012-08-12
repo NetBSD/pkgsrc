@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/07/15 17:41:57 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2012/08/12 21:08:46 wiz Exp $
 
---- setup.py.orig	2010-02-02 10:11:17.000000000 +0000
+Avoid conflicts between different python package versions.
+
+--- setup.py.orig	2012-04-21 11:34:22.000000000 +0000
 +++ setup.py
-@@ -68,7 +68,7 @@ if 'setuptools' in sys.modules:
+@@ -90,13 +90,13 @@ if 'setuptools' in sys.modules:
      scripts = []
  else:
      if os.name == "posix":
@@ -10,4 +12,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/07/15 17:41:57 drochner Exp $
 +        scripts = ["bin/cython" + sys.version[0:3]]
      else:
          scripts = ["cython.py"]
+ 
+ if include_debugger:
+     if os.name == "posix":
+-        scripts.append('bin/cygdb')
++        scripts.append('bin/cygdb'  + sys.version[0:3])
+     else:
+         scripts.append('cygdb.py')
  
