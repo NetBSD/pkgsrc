@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2012/07/04 12:43:36 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/12 15:55:55 wiz Exp $
 
-VER=			3.5.4.2
+VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
-PKGREVISION=		3
 CATEGORIES=		misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.4/ \
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.6/ \
+		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
 MAINTAINER=		ftigeot@wolfpond.org
@@ -43,7 +43,6 @@ EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
-SITES.${md}=		http://dev-www.libreoffice.org/src/
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
@@ -58,7 +57,7 @@ EXTRACT_USING=		gtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
-BUILD_DEPENDS+=		cppunit>1.12:../../devel/cppunit
+BUILD_DEPENDS+=		cppunit>=1.12.1:../../devel/cppunit
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		hunspell>=1.2.8:../../textproc/hunspell
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
