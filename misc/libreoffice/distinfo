@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/06/05 21:53:42 wiz Exp $
+$NetBSD: distinfo,v 1.3 2012/08/12 07:09:19 marino Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -47,6 +47,7 @@ SHA1 (patch-lotuswordpro_Module_lotuswordpro.mk) = 15f65e86c7b47f2113b68561a9a36
 SHA1 (patch-sc_Module_sc.mk) = 615e2cfd132fbb8eb4b5272f36f95b2881e27959
 SHA1 (patch-sd_Module_sd.mk) = c1c49ed37086d868c44e600bf1d1784ae2973276
 SHA1 (patch-set_soenv.in) = 754a82444bab39d5d51f2a033da153479f33d2ae
+SHA1 (patch-solenv_gbuild_Module.mk) = 2193f4edf7c2f8ea918191b4d48ab6725f7b6b92
 SHA1 (patch-solenv_inc_unxgcc.mk) = 1bebcc32475b6592a97384410c1036ab647eacec
-SHA1 (patch-sw_Module_sw.mk) = 48ca89a9a318dea3975d42869994dc89e0449c6e
+SHA1 (patch-sw_Module_sw.mk) = 358f7172278267cccfa6a624f49b1047af1a5788
 SHA1 (patch-writerfilter_Module_writerfilter.mk) = 1eb3caa50258be5f8b5e2bb19e5f5d039b5eb7a0
