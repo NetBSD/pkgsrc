@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/07/31 12:55:32 taca Exp $
+$NetBSD: distinfo,v 1.6 2012/08/12 12:40:00 taca Exp $
 
-SHA1 (actionpack-3.2.7.gem) = 8a9d298a5ba4a88fb3c412c31a99f356572c77fd
-RMD160 (actionpack-3.2.7.gem) = 93e2d53b8c5a64f6e7ef5a803c0605bbe1c8f9fc
-Size (actionpack-3.2.7.gem) = 379392 bytes
+SHA1 (actionpack-3.2.8.gem) = ccc63cc2fcb3131b92d45cf5834aa629857d7258
+RMD160 (actionpack-3.2.8.gem) = ec71996e73831ea346d8e060234a7f7a73881908
+Size (actionpack-3.2.8.gem) = 379392 bytes
