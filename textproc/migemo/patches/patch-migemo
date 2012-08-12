@@ -1,0 +1,19 @@
+$NetBSD: patch-migemo,v 1.1 2012/08/12 11:52:26 obache Exp $
+
+--- migemo.orig	2003-05-27 03:01:10.000000000 +0000
++++ migemo
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env ruby
++#! /usr/bin/env ruby -Ke
+ #
+ # migemo - a tool for Japanese incremental search.
+ #
+@@ -10,8 +10,6 @@
+ # the GNU General Public License version 2.
+ #
+ 
+-$KCODE = "e"
+-
+ require 'migemo'
+ require 'getoptlong'
+ require 'thread'
