@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/07/05 14:21:36 taca Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/12 15:51:38 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VER=		4.5.17
+VER=		4.5.18
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 

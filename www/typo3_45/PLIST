@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2012/07/05 14:21:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/08/12 15:51:38 taca Exp $
 ${EGDIR}/localconf.php
-${TYPO3DIR}/${TYPO3NAME}/.travis.yml
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
@@ -221,6 +220,7 @@ ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/tree/tree.js
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/util.js
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/ux/Ext.app.SearchField.js
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/ux/Ext.grid.RowExpander.js
+${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/ux/Ext.ux.DateTimePicker.js
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/ux/Ext.ux.FitToParent.js
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/ux/ext.resizable.js
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/js/extjs/ux/ext.ux.tabclosemenu.js
