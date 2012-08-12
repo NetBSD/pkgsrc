@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11432 2012/08/12 16:34:24 wiz Exp $
+$NetBSD: TODO,v 1.11433 2012/08/12 21:30:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,8 +326,7 @@ Suggested new packages
 	proto: windowswmproto
 	test: xorg-gtest, xts
 	util: gccmakedep, lndir
-	xcb: xcb-demo, xcb-util-image, xcb-util-keysyms,
-	xcb-util-renderutil, xcb-util-wm, xpyb
+	xcb: xcb-demo, xpyb
 	non-xorg: xf86-input-wacom, xinput_calibrator
 
 
