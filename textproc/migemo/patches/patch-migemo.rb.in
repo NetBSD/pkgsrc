@@ -1,0 +1,21 @@
+$NetBSD: patch-migemo.rb.in,v 1.1 2012/08/12 11:52:27 obache Exp $
+
+--- migemo.rb.in.orig	2003-05-28 12:00:52.000000000 +0000
++++ migemo.rb.in
+@@ -14,7 +14,6 @@
+ require 'migemo-dict'
+ require 'migemo-regex'
+ require 'romkan'
+-require 'jcode'
+ include MigemoRegex
+ 
+ class String
+@@ -24,7 +23,7 @@ class String
+   end
+ 
+   def quotemeta
+-    self.gsub(/([^ \w])/, '\\\\\\1')
++    self.gsub(/([[:punct:]])/, '\\\\\\1')
+   end
+ 
+   def first
