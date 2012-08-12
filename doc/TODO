@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11428 2012/08/12 16:08:19 wiz Exp $
+$NetBSD: TODO,v 1.11429 2012/08/12 16:09:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1058,7 +1058,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o py-setuptools_trial-0.5.12 [pkg/46550]
 	o py-sybase-0.37
 	o py-urwid-1.0.2
-	o py-yaml-3.10
 	o qbrew-0.3.9
 	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
