@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/12 21:23:26 wiz Exp $
+include/xcb/xcb_renderutil.h
+lib/libxcb-render-util.la
+lib/pkgconfig/xcb-renderutil.pc
