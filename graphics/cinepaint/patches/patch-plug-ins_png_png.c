@@ -1,6 +1,7 @@
-$NetBSD: patch-plug-ins_png_png.c,v 1.1 2011/04/03 13:47:01 wiz Exp $
+$NetBSD: patch-plug-ins_png_png.c,v 1.2 2012/08/12 22:04:48 wiz Exp $
 
 Fix build with png-1.5.
+https://sourceforge.net/tracker/?func=detail&aid=3255946&group_id=75029&atid=542708
 
 --- plug-ins/png/png.c.orig	2006-11-24 20:52:55.000000000 +0000
 +++ plug-ins/png/png.c
