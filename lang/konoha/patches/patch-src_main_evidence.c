@@ -1,6 +1,7 @@
-$NetBSD: patch-src_main_evidence.c,v 1.1 2012/08/07 16:06:06 ryoon Exp $
+$NetBSD: patch-src_main_evidence.c,v 1.2 2012/08/12 11:24:00 marino Exp $
 
 * Resolve conflict of si_code on NetBSD
+* Don't use K_USING_BSD to load sys/siginfo.h.  Fails for DFly/FreeBSD.
 
 --- src/main/evidence.c.orig	2012-03-07 06:52:15.000000000 +0000
 +++ src/main/evidence.c
@@ -8,7 +9,7 @@ $NetBSD: patch-src_main_evidence.c,v 1.1 2012/08/07 16:06:06 ryoon Exp $
  #include<unistd.h>
  #endif
  
-+#if defined(K_USING_BSD_)
++#if defined(__NetBSD__)
 +#include <sys/siginfo.h>
 +#endif
 +

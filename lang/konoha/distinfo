@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1 2012/08/07 16:06:06 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2012/08/12 11:23:59 marino Exp $
 
 SHA1 (konoha-1.0.0-952.tar.gz) = c4cfdc956bd583f8c3e8e696eeb0316ca78b1389
 RMD160 (konoha-1.0.0-952.tar.gz) = 98eb63382d3877b57606a205ac41cfd3928316b4
 Size (konoha-1.0.0-952.tar.gz) = 5235671 bytes
-SHA1 (patch-include_konoha1_konoha__config.h) = 3ff759fb41f2cea76d92ed091a0e2d78d896ede6
-SHA1 (patch-include_konoha1_konoha__t.h) = a77141b686823aa2dba4a985a6d581ef57dd2df6
-SHA1 (patch-src_main_evidence.c) = c30241d5c7b6ee50253490b480836b74accf34f8
+SHA1 (patch-include_konoha1_konoha__config.h) = 5faf9bb6575ecab19fe78b15959db849ed6943c5
+SHA1 (patch-include_konoha1_konoha__t.h) = b6296dcef752c0c488f9e93def1fb6673d89a9b9
+SHA1 (patch-package_konoha.sql_CMakeLists.txt) = a1a8690f10f40c89feb756eba238f643e136de4d
+SHA1 (patch-src_main_evidence.c) = 58dbce27ac3a3e2a8f8d84d44b68095af13015af
 SHA1 (patch-src_main_os.c) = b939ef713d279c4ab5ba23680dd39e6fb546ebca
 SHA1 (patch-src_main_security.c) = dfbba5ce7ba37f195a8f72e1ae613cbd1288320e
