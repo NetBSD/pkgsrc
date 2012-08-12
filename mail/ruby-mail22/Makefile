@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/06/14 15:14:09 taca Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2012/08/12 14:06:58 tron Exp $
 
 DISTNAME=	mail-2.2.19
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
