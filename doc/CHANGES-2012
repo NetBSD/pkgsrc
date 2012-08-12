@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2534 2012/08/12 16:01:43 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2535 2012/08/12 16:03:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3910,3 +3910,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_46 to 4.6.11 [taca 2012-08-12]
 	Updated misc/libreoffice to 3.5.6.2 [wiz 2012-08-12]
 	Updated devel/cppunit to 1.13.0 [wiz 2012-08-12]
+	Updated fonts/bdftopcf to 1.0.3 [wiz 2012-08-12]
