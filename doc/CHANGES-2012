@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2551 2012/08/12 21:24:36 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2552 2012/08/12 21:26:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3657,6 +3657,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/poppler to 0.20.2 [drochner 2012-07-24]
 	Updated security/gnutls to 3.0.21 [drochner 2012-07-24]
 	Updated audio/timidity to 2.14.0nb1 [jperkin 2012-07-24]
+	Added x11/xcb-util-keysyms version 0.3.9 [drochner 2012-07-24]
 	Updated net/isc-dhcp4 to 4.2.4p1 [taca 2012-07-25]
 	Updated net/isc-dhclient4 to 4.2.4p1 [taca 2012-07-25]
 	Updated net/isc-dhcp4 to 4.2.4p1 [taca 2012-07-25]
