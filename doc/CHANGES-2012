@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2555 2012/08/12 22:00:44 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2556 2012/08/12 23:36:44 jdf Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3931,3 +3931,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/xcb-util-wm version 0.3.9 [wiz 2012-08-12]
 	Updated misc/ruby-daemons to 1.1.9 [imil 2012-08-12]
 	Updated games/scummvm-tools to 1.4.0 [wiz 2012-08-12]
+	Updated devel/fossil to 1.23 [jdf 2012-08-13]
