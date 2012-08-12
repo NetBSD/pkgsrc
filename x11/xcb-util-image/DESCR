@@ -1,0 +1,3 @@
+XCB util-image module provides the following library:
+
+  - image: Port of Xlib's XImage and XShmImage functions.

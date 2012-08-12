@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/12 21:19:06 wiz Exp $
+include/xcb/xcb_bitops.h
+include/xcb/xcb_image.h
+include/xcb/xcb_pixel.h
+lib/libxcb-image.la
+lib/pkgconfig/xcb-image.pc
