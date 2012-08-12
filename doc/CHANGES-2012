@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2542 2012/08/12 16:17:40 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2543 2012/08/12 16:20:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3918,3 +3918,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/ruby-stompserver version 0.9.9 [imil 2012-08-12]
 	Updated mail/postfix to 2.8.12 [taca 2012-08-12]
 	Updated x11/libdrm to 2.4.38 [wiz 2012-08-12]
+	Updated mail/roundcube to 0.7.2nb3 [taca 2012-08-12]
