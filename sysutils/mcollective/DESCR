@@ -1,0 +1,16 @@
+The Marionette Collective aka. mcollective is a framework to build server
+orchestration or parallel job execution systems.
+
+Mcollective's primary use is to programmatically execute actions on clusters of
+servers. In this regard it operates in the same space as tools like Func,
+Fabric or Capistrano.
+
+By not relying on central inventories and tools like SSH, it's not simply a
+fancy SSH "for loop". MCollective uses modern tools like Publish Subscribe
+Middleware and modern philosophies like real time discovery of network
+resources using meta data and not hostnames. Delivering a very scalable and
+very fast parallel execution environment.
+
+The focus is on catering to the needs of enterprises and large deploys.
+Pluggable Authentication, Authorization and Auditing capabilities sets it apart
+from other tools in this space.
