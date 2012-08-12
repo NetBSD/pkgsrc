@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11427 2012/08/12 16:07:28 wiz Exp $
+$NetBSD: TODO,v 1.11428 2012/08/12 16:08:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1056,7 +1056,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o py-ldap-2.4.10
 	o py-pyutil-1.9.3 [pkg/46551]
 	o py-setuptools_trial-0.5.12 [pkg/46550]
-	o py-simplejson-2.6.1
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o py-yaml-3.10
