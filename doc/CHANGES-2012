@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2562 2012/08/13 12:42:25 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2563 2012/08/13 13:10:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3942,3 +3942,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/pdf2djvu to 0.7.13 [drochner 2012-08-13]
 	Updated www/webkit-gtk to 1.8.2 [drochner 2012-08-13]
 	Updated mail/hypermail to 2.3.0 [obache 2012-08-13]
+	Updated x11/evieext to 1.1.1 [wiz 2012-08-13]
