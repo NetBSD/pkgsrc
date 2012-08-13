@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/08/07 06:51:58 sbd Exp $
+$NetBSD: distinfo,v 1.9 2012/08/13 17:28:24 marino Exp $
 
 SHA1 (xymon-4.3.7.tar.gz) = 29339157a1a6155d134ed1ad9985391d43034ee8
 RMD160 (xymon-4.3.7.tar.gz) = 9547eac47a5893f978cace54b5761e9cabe75941
@@ -12,3 +12,4 @@ SHA1 (patch-af) = ae5d0acde8e2cd05527253c41e31a806b04614f6
 SHA1 (patch-ag) = 11f03fba971ef26c2f95104615178a619d9ff159
 SHA1 (patch-client_xymonclient-netbsd.sh) = 10d77fd722ecaaed7170b2ae6d51e6429a96d686
 SHA1 (patch-configure) = 7b71ed7a567124a2aa36d9bf9188209649e88a4d
+SHA1 (patch-lib_sha2.c) = 363b1680bfb70acfd5a4f768fb9688f4511846be
