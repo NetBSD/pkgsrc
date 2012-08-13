@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.51 2012/07/31 13:59:55 prlw1 Exp $
+$NetBSD: distinfo,v 1.52 2012/08/13 12:27:50 drochner Exp $
 
-SHA1 (webkit-1.8.1.tar.xz) = d26543baace03c31aa3de82bc24f06f14c6b3052
-RMD160 (webkit-1.8.1.tar.xz) = ebe10f63e2c514be13c7b61172b11c418d0ca0ff
-Size (webkit-1.8.1.tar.xz) = 7949924 bytes
+SHA1 (webkit-1.8.2.tar.xz) = 138f86894e0a7ed0a41c18c4ac30fcaf961d8d79
+RMD160 (webkit-1.8.2.tar.xz) = e8b3b77143ba8a0711b9ff68872223b7a39af6ce
+Size (webkit-1.8.2.tar.xz) = 8016692 bytes
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = a19c152025d16b32cf6e429483d3885bd8243de8
 SHA1 (patch-Source_JavaScriptCore_wtf_MathExtras.h) = a47cf7e70688d46096930b2029d0970576a11b3c
 SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f056b8f08c68d44e1b9dfd2bcf60cb788b05f38f
