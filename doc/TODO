@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11435 2012/08/13 12:44:31 obache Exp $
+$NetBSD: TODO,v 1.11436 2012/08/13 13:10:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -568,7 +568,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o etm-891
 	o ettercap-0.7.4
 	o eukleides-1.5.4
-	o evieext-1.1.1
 	o evince-3.4.0
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
