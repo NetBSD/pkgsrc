@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/07/31 18:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/13 10:42:18 drochner Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	xetex-0.9998
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 EXTRACT_SUFX=	.tar.xz
@@ -59,7 +60,7 @@ EVAL_PREFIX+=	XDVIPDFMX_PREFIX=xdvipdfmx
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	xetexdir/XeTeX_ext.c
+SUBST_FILES.paths=	texk/web2c/xetexdir/XeTeX_ext.c
 SUBST_SED.paths=	-e 's,@XDVIPDFMX@,${XDVIPDFMX_PREFIX}/bin/xdvipdfmx,g'
 
 INSTALLATION_DIRS+=	bin
