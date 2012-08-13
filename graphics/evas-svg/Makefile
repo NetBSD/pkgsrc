@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/06/14 07:44:35 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/08/13 14:25:40 wiz Exp $
 
 PKGNAME=	evas-svg-${EVAS_VERSION}
 
@@ -8,7 +8,7 @@ EVAS_IMAGE_LOADERS=	svg
 
 .include "../../graphics/evas/Makefile.common"
 
-PKGREVISION=	3
+PKGREVISION=	4
 
 BUILD_DIRS=	src/modules/loaders/svg
 MAKE_FLAGS+=	module_la_LIBADD="\$${EINA_LIBS} \$${evas_image_loader_svg_libs} ${BUILDLINK_PREFIX.evas}/lib/libevas.la" \
