@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.3 2012/08/13 17:24:38 drochner Exp $
+
+--- include/cdio/types.h.orig	2011-10-20 22:38:50.000000000 +0000
++++ include/cdio/types.h
+@@ -169,9 +169,6 @@ typedef uint8_t ubyte;
+ # define GNUC_UNLIKELY(x) (x)
+ #endif
+   
+-#ifndef NULL
+-# define NULL ((void*) 0)
+-#endif
+   
+   /* our own offsetof()-like macro */
+ #define __cd_offsetof(TYPE, MEMBER) ((size_t) &((TYPE *)0)->MEMBER)
