@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2560 2012/08/13 11:50:59 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2561 2012/08/13 12:29:39 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3938,3 +3938,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/emacs to 23.4nb4 [wiz 2012-08-13]
 	Updated devel/pkg-config to 0.27nb1 [tron 2012-08-13]
 	Updated inputmethod/ibus-chewing to 1.4.0 [obache 2012-08-13]
+	Updated print/poppler to 0.20.3 [drochner 2012-08-13]
+	Updated print/pdf2djvu to 0.7.13 [drochner 2012-08-13]
+	Updated www/webkit-gtk to 1.8.2 [drochner 2012-08-13]
