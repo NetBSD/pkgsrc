@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2571 2012/08/13 17:52:07 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2572 2012/08/13 18:43:57 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3953,3 +3953,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/tor to 0.2.2.38 [drochner 2012-08-13]
 	Updated misc/libcdio to 0.83 [drochner 2012-08-13]
 	Updated security/dropbear to 2012.55 [drochner 2012-08-13]
+	Updated net/ruby-stompserver to 1.0.0 [imil 2012-08-13]
