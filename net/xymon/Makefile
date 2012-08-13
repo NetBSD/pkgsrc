@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/06/14 07:44:39 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/08/13 18:47:40 marino Exp $
 #
 
 DISTNAME=		xymon-4.3.7
@@ -193,6 +193,11 @@ MAKE_ENV+=		${TOOLS_ENV}
 
 MENUFILES=		b2t-blue.gif b2t-grey.gif t2b-blue.gif t2b-grey.gif
 MENUFILES+=		xymonmenu-blue.css xymonmenu-grey.css
+
+post-patch:
+	${CP} ${WRKSRC}/build/Makefile.FreeBSD \
+	      ${WRKSRC}/build/Makefile.DragonFly
+
 post-install:
 .for file in ${MENUFILES}
 	chmod 0644 ${DESTDIR}${EXAMPLEDIR}/www/menu/${file}
