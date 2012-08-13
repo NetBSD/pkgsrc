@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2012/02/28 10:57:19 reinoud Exp $
+$NetBSD: distinfo,v 1.3 2012/08/13 22:33:56 marino Exp $
 
 SHA1 (openscad-2011.12.src.tar.gz) = b1379c3a0c5552e2bf00b7a0f2dbf9a55fbf4bd0
 RMD160 (openscad-2011.12.src.tar.gz) = 0f7bf7452f04e0c929ea2a9acffab086e10ed053
 Size (openscad-2011.12.src.tar.gz) = 3247723 bytes
+SHA1 (patch-bison.pri) = 2a6e4fd58e5b75e1f9dbdcafb3a5d581e3d702b6
 SHA1 (patch-eigen2.pri) = ac173f67fd187d7904aada40af44e9e4a5bb2a7b
+SHA1 (patch-flex.pri) = 5d4228e1b4e5ce2584aa898816e25088445b1bdb
 SHA1 (patch-openscad.pro) = 72c9ab9eae1f124f88e741d9ad7c336b2e72eabb
