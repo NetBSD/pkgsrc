@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2012/02/20 01:22:32 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/08/13 06:53:06 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
+PKGREVISION=	1
 
 CONFLICTS+=	emacs-[0-9]*
 
