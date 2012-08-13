@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/08/12 16:13:03 imil Exp $
+$NetBSD: distinfo,v 1.2 2012/08/13 18:43:33 imil Exp $
 
-SHA1 (stompserver-0.9.9.gem) = 99ddf0bac252315d3d9a42372bd111a456467481
-RMD160 (stompserver-0.9.9.gem) = 379796f13e919466171da102d572d82ee957b2f2
-Size (stompserver-0.9.9.gem) = 31232 bytes
-SHA1 (patch-config_stompserver.conf) = 896b6636ab9106dd520ddbb9bf415e9f7fe11c8b
-SHA1 (patch-gemspec) = b1fde5ff7dd735ebf29f04f4f38f4544f1cbccbc
-SHA1 (patch-lib_stomp__server.rb) = 42059b957b3b4ba949e4610a8f9fcf8e352c8e5f
+SHA1 (1c7a275272f14ba3ce9d4c7f27402e659f775498) = 6dd3eee288b782126792205e46b668f6339a31b8
+RMD160 (1c7a275272f14ba3ce9d4c7f27402e659f775498) = e260e05bf123badddd5a07ea7eb7f2e0d16aeb2a
+Size (1c7a275272f14ba3ce9d4c7f27402e659f775498) = 28274 bytes
+SHA1 (patch-config_stompserver.conf) = 42c7a959383921f9f14dca012826708c1278a223
+SHA1 (patch-lib_stomp__server.rb) = 2703617d6f54565be7e440f5000ffe268d707c63
