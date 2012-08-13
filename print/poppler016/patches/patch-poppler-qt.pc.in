@@ -1,0 +1,24 @@
+$NetBSD: patch-poppler-qt.pc.in,v 1.1 2012/08/13 16:15:21 marino Exp $
+
+Remove a dependency to poppler-0.16 in the poppler-qt.pc file so
+that pkg-config --cflags "poppler-qt >= 0.3.1" returns valid information.
+
+Default poppler version is now 0.20.x.
+Since this package explicitely uses 0.16.x, @PC_REQUIRES_PRIVATE@
+introduces a dependency to poppler-0.16.x in the .pc file;
+pkg-config will then print messages such as
+"Package 'poppler-qt' requires 'poppler = 0.16.7' but version of poppler is 0.20.2"
+instead of the required information.
+
+Removing the Requires.private line entirely fixes the issue.
+
+--- poppler-qt.pc.in.orig	2010-12-27 20:44:27.000000000 +0000
++++ poppler-qt.pc.in
+@@ -7,7 +7,6 @@ Name: poppler-qt
+ Description: Qt bindings for poppler
+ Version: @VERSION@
+ Requires: @PC_REQUIRES@
+-@PC_REQUIRES_PRIVATE@
+ 
+ Libs: -L${libdir} -lpoppler-qt
+ Cflags: -I${includedir}/poppler/qt3
