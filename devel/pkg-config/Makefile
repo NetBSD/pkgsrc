@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/08/13 07:50:39 tron Exp $
+# $NetBSD: Makefile,v 1.21 2012/08/13 08:01:54 marino Exp $
 
 DISTNAME=	pkg-config-0.27
 PKGREVISION=	1
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--with-internal-glib
 # needed since it can't use pkg-config to find glib2...
 #CONFIGURE_ARGS+=	GLIB_CFLAGS="-I${BUILDLINK_PREFIX.glib2}/include/glib/glib-2.0 -I${BUILDLINK_PREFIX.glib2}/lib/glib-2.0/include"
