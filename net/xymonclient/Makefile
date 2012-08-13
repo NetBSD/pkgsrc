@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/08/07 06:51:58 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/08/13 17:28:24 marino Exp $
 #
 
 DISTNAME=		xymon-4.3.7
@@ -93,7 +93,7 @@ USE_TOOLS+=	awk:run		cat:run		cp:run
 USE_TOOLS+=	cut:run		date:run	egrep:run
 USE_TOOLS+=	expr:run	find:run	grep:run
 USE_TOOLS+=	head:run	id:run		ls:run
-USE_TOOLS+=	mv:run		rm:run		sed:run
+USE_TOOLS+=	mv:run		rm:run		sed
 USE_TOOLS+=	sort:run	tail:run	touch:run
 USE_TOOLS+=	tr:run		wc:run
 
@@ -128,5 +128,13 @@ PLIST_VARS+=		meminfo
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "FreeBSD"
 PLIST.meminfo=		yes
 .endif
+
+post-patch:
+	${CP} ${WRKSRC}/build/Makefile.FreeBSD \
+	      ${WRKSRC}/build/Makefile.DragonFly
+	# Add dragonfly-meminfo support later (placeholder)
+	${SED} -e 's|freebsd-meminfo|dragonfly-meminfo|' \
+	      ${WRKSRC}/client/xymonclient-freebsd.sh > \
+	      ${WRKSRC}/client/xymonclient-dragonfly.sh
 
 .include "../../mk/bsd.pkg.mk"
