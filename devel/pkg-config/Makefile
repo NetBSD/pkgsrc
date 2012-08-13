@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/08/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/08/13 07:50:39 tron Exp $
 
 DISTNAME=	pkg-config-0.27
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 
@@ -48,6 +49,7 @@ CONFIGURE_ARGS+=	--with-pc-path='$${libdir}/pkgconfig:$${datadir}/pkgconfig:${PK
 BUILDLINK_PASSTHRU_DIRS= /private-dep /public-dep /requires-test
 TEST_TARGET=		check
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 #.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
