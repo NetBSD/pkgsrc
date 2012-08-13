@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_stomp__server.rb,v 1.1 2012/08/12 16:13:03 imil Exp $
+$NetBSD: patch-lib_stomp__server.rb,v 1.2 2012/08/13 18:43:34 imil Exp $
 
 Buggy code made pid relative to logdir
 
---- lib/stomp_server.rb.orig	2012-08-12 15:28:59.000000000 +0000
+--- lib/stomp_server.rb.orig	2012-08-13 12:57:02.000000000 +0000
 +++ lib/stomp_server.rb
 @@ -67,7 +67,7 @@ module StompServer
        opts[:storage] = File.join(opts[:working_dir],opts[:storage])

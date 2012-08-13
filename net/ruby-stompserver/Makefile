@@ -1,16 +1,31 @@
-# $NetBSD: Makefile,v 1.1 2012/08/12 16:13:02 imil Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/13 18:43:33 imil Exp $
 
-DISTNAME=	stompserver-0.9.9
+DISTNAME=	drizztbsd-stompserver-1c7a275
+PKGNAME=	${RUBY_PKGPREFIX}-stompserver-1.0.0
 CATEGORIES=	net
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://stompserver.rubyforge.org/
 COMMENT=	Stomp messaging server
 LICENSE=	mit
+MASTER_SITES=	https://nodeload.github.com/drizztbsd/stompserver/tarball/
+DISTFILES=	1c7a275272f14ba3ce9d4c7f27402e659f775498
+
+# needed for https on github
+FETCH_USING=	curl
+# FETCH_OUTPUT_ARGS does not seem to work, we'll extract ourselves
+USE_TOOLS=	tar
 
 DEPENDS+=	${RUBY_PKGPREFIX}-eventmachine>=0.12.10:../../devel/ruby-eventmachine
 DEPENDS+=	${RUBY_PKGPREFIX}-hoe>=3.0.6:../../devel/hoe
 DEPENDS+=	${RUBY_PKGPREFIX}-daemons>=1.1.8:../../misc/ruby-daemons
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+GEM_BUILD=	rake
+GEM_NAME=	stompserver-1.0.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +50,7 @@ PKG_GECOS.${STOMPSERVER_USER}=stompserver server user
 PKG_HOME.${STOMPSERVER_USER}=${STOMPSERVER_WRKDIR}
 PKG_SHELL.${STOMPSERVER_USER}=${NOLOGIN}
 
-EGDIR=		${DESTDIR}${PREFIX}/share/examples/stompserver
+EGDIR=		${PREFIX}/share/examples/stompserver
 
 ST_ROOT=	${STOMPSERVER_WRKDIR}
 
@@ -78,8 +93,11 @@ FILES_SUBST+=		STOMPSERVER_RCD_PID=${ST_ROOT}/${STOMPSERVER_PIDFILE}
 
 MESSAGE_SUBST+=		STOMPSERVER_WRKDIR=${STOMPSERVER_WRKDIR}
 
+do-extract:
+	${TAR} -zxf ${DISTDIR}/${DISTFILES} -C ${WRKDIR}
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/config/stompserver.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/config/stompserver.conf ${DESTDIR}${EGDIR}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
