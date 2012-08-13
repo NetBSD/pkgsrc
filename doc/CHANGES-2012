@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2567 2012/08/13 14:10:39 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.2568 2012/08/13 14:38:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3947,3 +3947,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/dovecot2 to 2.1.9 [ghen 2012-08-13]
 	Updated net/unbound to 1.4.18 [pettai 2012-08-13]
 	Updated net/drill to 1.6.8 [pettai 2012-08-13]
+	Updated devel/py-cython to 0.16nb1 [wiz 2012-08-13]
