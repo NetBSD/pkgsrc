@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 09:59:22 agc Exp $
+$NetBSD: distinfo,v 1.8 2012/08/13 12:41:10 obache Exp $
 
-SHA1 (hypermail-2.1.8.tar.gz) = acb357832c52c91e43f58d13e20c0599440d3df9
-RMD160 (hypermail-2.1.8.tar.gz) = 377bab9c7028cb684be1bfcbed70ae2ba777255c
-Size (hypermail-2.1.8.tar.gz) = 1238173 bytes
-SHA1 (patch-aa) = c67e4a22cddee828d2c2039f1e4ca2a667ce48b8
-SHA1 (patch-ac) = 0b173d255d0b6b4024ece4ce7fc4ea85ce6c2322
-SHA1 (patch-ad) = ec9220c81d8f8831ac66b1f9d4979523e631ddeb
-SHA1 (patch-ae) = 4e0f1054ead76f8cbff4eaceac926ff664c6a7ff
+SHA1 (hypermail-2.3.0.tar.gz) = 6d06175b6c5aa290b1d26a4daa06b79a8d30adbd
+RMD160 (hypermail-2.3.0.tar.gz) = 65565776556847cd317672d9014d5b4aadd5b34c
+Size (hypermail-2.3.0.tar.gz) = 1280010 bytes
+SHA1 (patch-aa) = 732a169bf1d9b77a9309bf5186e11a78ded404d3
+SHA1 (patch-ac) = 838800f64acfd524156bfa37d32ed9c47b42f020
+SHA1 (patch-ad) = d429ea0077d229ae03f20fe287b2ff84fe3a756c
+SHA1 (patch-ae) = 9ee94990ef630ccf7377a3d7ce7bed3cffa3f895
