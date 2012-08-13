@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/08/29 15:26:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/13 13:10:03 wiz Exp $
 #
 
-DISTNAME=		evieext-1.1.0
+DISTNAME=		evieext-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
