@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2556 2012/08/12 23:36:44 jdf Exp $
+$NetBSD: CHANGES-2012,v 1.2557 2012/08/13 06:42:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3932,3 +3932,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/ruby-daemons to 1.1.9 [imil 2012-08-12]
 	Updated games/scummvm-tools to 1.4.0 [wiz 2012-08-12]
 	Updated devel/fossil to 1.23 [jdf 2012-08-13]
+	Updated editors/emacs24-nox11 to 24.1nb2 [wiz 2012-08-13]
+	Updated editors/emacs24 to 24.1nb2 [wiz 2012-08-13]
