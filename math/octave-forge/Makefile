@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/01/13 13:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/08/14 17:07:57 asau Exp $
 
 DISTNAME=	octave-forge-2006.03.17
 PKGREVISION=	7
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.octave.org/
 COMMENT=	Extensions to Octave
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
