@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2583 2012/08/14 14:26:25 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2584 2012/08/14 15:38:50 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3965,3 +3965,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/py-lockfile version 0.9.1 [imil 2012-08-14]
 	Added devel/py-daemon version 1.5.5 [imil 2012-08-14]
 	Added sysutils/p5-Quota version 1.6.7 [dholland 2012-08-14]
+	Added net/coilmq version 0.6.1 [imil 2012-08-14]
