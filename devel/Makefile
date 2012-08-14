@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1637 2012/08/14 12:10:03 imil Exp $
+# $NetBSD: Makefile,v 1.1638 2012/08/14 12:30:55 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1302,6 +1302,7 @@ SUBDIR+=	py-coverage
 SUBDIR+=	py-curses
 SUBDIR+=	py-cursespanel
 SUBDIR+=	py-cython
+SUBDIR+=	py-daemon
 SUBDIR+=	py-darcsver
 SUBDIR+=	py-decorator
 SUBDIR+=	py-distribute
