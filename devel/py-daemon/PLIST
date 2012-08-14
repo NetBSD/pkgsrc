@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/14 12:29:50 imil Exp $
+${PYSITELIB}/daemon/__init__.py
+${PYSITELIB}/daemon/__init__.pyc
+${PYSITELIB}/daemon/__init__.pyo
+${PYSITELIB}/daemon/daemon.py
+${PYSITELIB}/daemon/daemon.pyc
+${PYSITELIB}/daemon/daemon.pyo
+${PYSITELIB}/daemon/pidlockfile.py
+${PYSITELIB}/daemon/pidlockfile.pyc
+${PYSITELIB}/daemon/pidlockfile.pyo
+${PYSITELIB}/daemon/runner.py
+${PYSITELIB}/daemon/runner.pyc
+${PYSITELIB}/daemon/runner.pyo
+${PYSITELIB}/daemon/version/__init__.py
+${PYSITELIB}/daemon/version/__init__.pyc
+${PYSITELIB}/daemon/version/__init__.pyo
+${PYSITELIB}/daemon/version/version_info.py
+${PYSITELIB}/daemon/version/version_info.pyc
+${PYSITELIB}/daemon/version/version_info.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
