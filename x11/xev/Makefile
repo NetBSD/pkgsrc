@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/09 07:00:49 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/14 09:11:25 wiz Exp $
 #
 
 DISTNAME=	xev-1.2.0
@@ -21,6 +21,7 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
