@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/02 22:02:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/14 09:00:09 obache Exp $
 #
 
 DISTNAME=	yascentur-Ricty-3.2.0-0-gb9d8b9c.tar.gz
@@ -21,6 +21,10 @@ BUILD_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
 BUILD_DEPENDS+=		migu-ttf-20111002:../../fonts/migu-ttf
 BUILD_DEPENDS+=		inconsolata-ttf-[0-9]*:../../fonts/inconsolata-ttf
 
+# LICESE of generated TTF fonts is "ipafont AND open-font-license",
+# but OPEN FONT LICENSE version 1.1 section 5) require to distribute entirely
+# under the license.
+RESTRICTED=		Redistribution not permitted as open-font-license 5)
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
