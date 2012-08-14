@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/08/09 12:42:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2012/08/14 20:19:20 fhajny Exp $
 #
 
 DISTNAME=	numpy-1.6.1
@@ -44,7 +44,7 @@ PYSETUPBUILDARGS+= --fcompiler=gnu
 # LDFLAGS should either not be set or include -shared.
 LDFLAGS+=		-shared
 
-# This package bypasses the wrappers and calls the compilers directly when
+# This package bypasses the wrappers and calls the compilers directly when
 # linking, so ensure that we pass through requisite options.
 LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 
