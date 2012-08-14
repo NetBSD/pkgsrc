@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/11/15 20:26:04 shattered Exp $
+# $NetBSD: Makefile,v 1.30 2012/08/14 17:07:56 asau Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -13,6 +13,8 @@ COMMENT=		Cross-compile environment for iX86 Linux, libc v6
 NOT_FOR_PLATFORM=	*-*-x86_64
 
 BUILD_DEPENDS+=		rpm-[0-9]*:../../misc/rpm
+
+PKG_DESTDIR_SUPPORT=	none
 
 CHECK_SHLIBS_SUPPORTED=	no
 

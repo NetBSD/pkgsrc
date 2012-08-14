@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2012/06/21 05:29:20 dholland Exp $
+# $NetBSD: Makefile,v 1.67 2012/08/14 17:07:57 asau Exp $
 
 DISTNAME=		arla-0.43
 PKGREVISION=		2
@@ -17,6 +17,8 @@ CONFLICTS+=		kth-krb4-[0-9]*
 
 # use net/openafs on netbsd 5+
 NOT_FOR_PLATFORM+=	NetBSD-[5-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 OSVERSION_SPECIFIC=	yes
 INFO_FILES=		yes

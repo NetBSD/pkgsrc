@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2011/04/07 13:17:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2012/08/14 17:07:56 asau Exp $
 # used by devel/cvsup/Makefile
 # used by devel/cvsup-gui/Makefile
 
@@ -12,6 +12,8 @@ COMMENT=	cvsup daemon and client
 
 ONLY_FOR_PLATFORM=	DragonFly-*-i386 FreeBSD-*-i386 Linux-*-i386 \
 			NetBSD-*-i386
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

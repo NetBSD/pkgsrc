@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:59 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/08/14 17:07:57 asau Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -13,6 +13,8 @@ HOMEPAGE=	http://gcc.gnu.org/
 COMMENT=	This is the gcc 3.4 Ada compiler
 
 GCC_VERSION=		3.4.6
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake msgfmt
 HAS_CONFIGURE=		YES
