@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1 2012/08/14 14:24:20 dholland Exp $
+
+Extend hints/bsd.h to define NETBSD_LIBQUOTA and include <quota.h> on
+NetBSD >= 5.99.59.
+
+--- hints/bsd.h.orig	2007-11-24 14:49:43.000000000 +0100
++++ hints/bsd.h	2012-05-14 15:52:47.000000000 +0200
+@@ -9,6 +9,7 @@
+  *           and Jon Schewe <schewe@tcfreenet.org>
+  *   NetBSD mods and merge of *BSD-related hints provided by
+  *           Jaromir Dolecek <jdolecek@NetBSD.org>
++ *   NetBSD libquota mods by David Holland <dholland@netbsd.org>
+  */
+ 
+ /*   See hints/none.h for a complete list of options with explanations */
+@@ -16,7 +17,19 @@
+ #include <sys/param.h>
+ #include <sys/mount.h>
+ #include <fstab.h>
++
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 599004800 && __NetBSD_Version__ < 599005900
++#error "NetBSD 5.99 proplib-based quotas not supported"
++#endif
++
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 599005900) /* NetBSD 5.99.59 */
++#include <quota.h>
++/* struct qblk needed for the way the XS handles NFS quota */
++#include <ufs/ufs/quota1.h>
++#define NETBSD_LIBQUOTA
++#else
+ #include <ufs/ufs/quota.h>
++#endif
+ 
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
+ /* NetBSD 3.0 has no statfs anymore */

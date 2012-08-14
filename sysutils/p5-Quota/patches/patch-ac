@@ -1,0 +1,152 @@
+$NetBSD: patch-ac,v 1.1 2012/08/14 14:24:20 dholland Exp $
+
+Extend Quota.xs to use the new NetBSD 6 libquota interface.
+
+--- Quota.xs.orig	2011-01-02 18:25:40.000000000 +0100
++++ Quota.xs	2012-05-15 12:00:50.000000000 +0200
+@@ -331,6 +331,12 @@
+ 	  struct dqblk dqblk;
+ 	  char *p = NULL;
+ 	  int err;
++	  int pushed = 0;
++#ifdef NETBSD_LIBQUOTA                     
++	  struct quotahandle *qh;
++	  struct quotakey qk;
++	  struct quotaval qv;
++#endif
+ #ifdef USE_IOCTL
+ 	  struct quotactl qp;
+ 	  int fd = -1;
+@@ -411,6 +417,35 @@
+ #endif /* NO_RPC */
+             }
+ 	    else {
++#ifdef NETBSD_LIBQUOTA
++	      err = 0;
++	      qh = quota_open(dev);
++	      if (qh != NULL) {
++		qk.qk_idtype = kind ? QUOTA_IDTYPE_GROUP : QUOTA_IDTYPE_USER;
++		qk.qk_id = uid;
++		qk.qk_objtype = QUOTA_OBJTYPE_BLOCKS;
++		if (quota_get(qh, &qk, &qv) >= 0) {
++		  pushed = 1;
++		  EXTEND(SP, 4);
++		  PUSHs(sv_2mortal(newSViv(Q_DIV(qv.qv_usage))));
++		  PUSHs(sv_2mortal(newSViv(Q_DIV(qv.qv_softlimit))));
++		  PUSHs(sv_2mortal(newSViv(Q_DIV(qv.qv_hardlimit))));
++		  PUSHs(sv_2mortal(newSViv(qv.qv_expiretime)));
++		  qk.qk_objtype = QUOTA_OBJTYPE_FILES;
++		  if (quota_get(qh, &qk, &qv) >= 0) {
++		    EXTEND(SP, 4);
++		    PUSHs(sv_2mortal(newSViv(qv.qv_usage)));
++		    PUSHs(sv_2mortal(newSViv(qv.qv_softlimit)));
++		    PUSHs(sv_2mortal(newSViv(qv.qv_hardlimit)));
++		    PUSHs(sv_2mortal(newSViv(qv.qv_expiretime)));
++		  }
++		  else err = -1;
++		}
++		else err = -1;
++		quota_close(qh);
++	      }
++	      else err = -1;
++#else /* not NETBSD_LIBQUOTA */
+ #ifdef USE_IOCTL
+ 	      qp.op = Q_GETQUOTA;
+ 	      qp.uid = uid;
+@@ -457,8 +492,9 @@
+ #endif /* not Q_CTL_V2 */
+ #endif /* Q_CTL_V3 */
+ #endif /* not USE_IOCTL */
++#endif /* not NETBSD_LIBQUOTA */
+ 	    }
+-	    if(!err) {
++	    if(!err && !pushed) {
+ 	      EXTEND(SP, 8);
+ 	      PUSHs(sv_2mortal(newSViv(Q_DIV(dqblk.QS_BCUR))));
+ 	      PUSHs(sv_2mortal(newSViv(Q_DIV(dqblk.QS_BSOFT))));
+@@ -479,15 +515,21 @@
+ setqlim(dev,uid,bs,bh,fs,fh,timelimflag=0,kind=0)
+ 	char *	dev
+ 	int	uid
+-	long	bs
+-	long	bh
+-	long	fs
+-	long	fh
++	double	bs
++	double	bh
++	double	fs
++	double	fh
+ 	int	timelimflag
+ 	int     kind
+ 	CODE:
+ 	{
++#ifdef NETBSD_LIBQUOTA
++	  struct quotahandle *qh;
++	  struct quotakey qk;
++	  struct quotaval qv;
++#else /* not NETBSD_LIBQUOTA */
+ 	  struct dqblk dqblk;
++#endif /* NETBSD_LIBQUOTA */
+ #ifdef USE_IOCTL
+ 	  struct quotactl qp;
+ 	  int fd;
+@@ -563,6 +605,33 @@
+           else
+ #endif /* HAVE_JFS2 */
+ 	  {
++#ifdef NETBSD_LIBQUOTA
++	    qh = quota_open(dev);
++	    if (qh != NULL) {
++	      qk.qk_idtype = kind ? QUOTA_IDTYPE_GROUP : QUOTA_IDTYPE_USER;
++	      qk.qk_id = uid;
++	      qk.qk_objtype = QUOTA_OBJTYPE_BLOCKS;
++
++	      qv.qv_usage = 0;
++	      qv.qv_hardlimit = Q_MUL(bh);
++	      qv.qv_softlimit = Q_MUL(bs);
++	      qv.qv_expiretime = timelimflag;
++	      qv.qv_grace = 0; /* XXX should be able to manipulate this */
++	      if (quota_put(qh, &qk, &qv) >= 0) {
++	        qk.qk_objtype = QUOTA_OBJTYPE_FILES;
++
++		qv.qv_usage = 0;
++		qv.qv_hardlimit = fh;
++		qv.qv_softlimit = fs;
++		qv.qv_expiretime = timelimflag;
++		qv.qv_grace = 0; /* XXX should be able to manipulate this */
++		if (quota_put(qh, &qk, &qv) >= 0) {
++		  RETVAL = 0;
++		} else RETVAL = -1;
++	      } else RETVAL = -1;
++	      quota_close(qh);
++	    } else RETVAL = -1;
++#else /* not NETBSD_LIBQUOTA */
+             memset(&dqblk, 0, sizeof(dqblk));
+ 	    dqblk.QS_BSOFT = Q_MUL(bs);
+ 	    dqblk.QS_BHARD = Q_MUL(bh);
+@@ -588,6 +657,7 @@
+ #endif
+ #endif
+ #endif
++#endif /* NETBSD_LIBQUOTA */
+ 	  }
+ 	}
+ 	OUTPUT:
+@@ -616,6 +686,9 @@
+ 	}
+ 	else
+ #endif
++#ifdef NETBSD_LIBQUOTA
++	RETVAL = 0;
++#else /* not NETBSD_LIBQUOTA */
+ #ifdef USE_IOCTL
+ 	{
+ 	  struct quotactl qp;
+@@ -698,6 +771,7 @@
+ #endif
+         }
+ #endif
++#endif /* NETBSD_LIBQUOTA */
+ 	OUTPUT:
+ 	RETVAL
+ 
