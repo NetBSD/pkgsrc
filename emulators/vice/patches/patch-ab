@@ -1,11 +1,13 @@
-$NetBSD: patch-ab,v 1.11 2011/04/04 13:42:08 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2012/08/14 18:49:44 marino Exp $
 
 1. dynamic lib support does not depend on the existence of libdl
 2. patch out error message about --without-iconv-base
+3. Use the NetBSD configuration for every OS since the PLIST is
+   hardcoded for that.  Should fix every non-NetBSD platform.
 
---- configure.orig	2011-02-26 19:07:06.000000000 +0100
-+++ configure	2011-02-27 13:56:52.000000000 +0100
-@@ -3381,7 +3381,7 @@
+--- configure.orig	2011-02-26 18:07:06.000000000 +0000
++++ configure
+@@ -3381,7 +3381,7 @@ do
        ;;
    esac
    if test x"$argvalid" = "xno"; then
@@ -14,7 +16,7 @@ $NetBSD: patch-ab,v 1.11 2011/04/04 13:42:08 wiz Exp $
    fi
  done
  
-@@ -10381,13 +10381,13 @@
+@@ -10381,13 +10381,13 @@ fi
  
  
    if test x"$ac_cv_header_dlfcn_h" = "xyes" ; then
@@ -31,7 +33,7 @@ $NetBSD: patch-ab,v 1.11 2011/04/04 13:42:08 wiz Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -10418,7 +10418,7 @@
+@@ -10418,7 +10418,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_dl_dlopen" >&5
  $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
  if test "x$ac_cv_lib_dl_dlopen" = x""yes; then :
@@ -40,3 +42,39 @@ $NetBSD: patch-ab,v 1.11 2011/04/04 13:42:08 wiz Exp $
  
  $as_echo "#define HAVE_DYNLIB_SUPPORT /**/" >>confdefs.h
  
+@@ -19664,34 +19664,12 @@ _ACEOF
+ 
+ 
+ case "$host_os" in
+-  netbsd*)
++  *)
+     VICEDIR="$PREFIX/share/vice";
+      if true; then
+   ALTERNATE_DOCDIR_TRUE=
+   ALTERNATE_DOCDIR_FALSE='#'
+ else
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+-    ;;
+-  freebsd*)
+-    VICEDIR="$PREFIX/lib/vice";
+-     if true; then
+-  ALTERNATE_DOCDIR_TRUE=
+-  ALTERNATE_DOCDIR_FALSE='#'
+-else
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+-    ;;
+-  *)
+-    VICEDIR="$PREFIX/lib/vice";
+-     if false; then
+-  ALTERNATE_DOCDIR_TRUE=
+-  ALTERNATE_DOCDIR_FALSE='#'
+-else
+   ALTERNATE_DOCDIR_TRUE='#'
+   ALTERNATE_DOCDIR_FALSE=
+ fi
