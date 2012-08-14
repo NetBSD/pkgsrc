@@ -1,0 +1,5 @@
+CoilMQ is a simple, configurable STOMP message broker (aka STOMP server)
+written in Python. This project is inspired by the simple design of the Ruby
+stompserver project by Patrick Hurley and Lionel Bouton. The goal of this
+project is to provide a well-tested and well-documented Python implementation
+with a good set of built-in functionality and numerous paths for extensibility.
