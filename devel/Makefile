@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1636 2012/08/14 09:06:40 imil Exp $
+# $NetBSD: Makefile,v 1.1637 2012/08/14 12:10:03 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1320,6 +1320,7 @@ SUBDIR+=	py-ipython012
 SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
+SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-mako
