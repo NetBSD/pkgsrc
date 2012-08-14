@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2573 2012/08/13 20:07:51 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.2574 2012/08/14 03:33:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3955,3 +3955,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/dropbear to 2012.55 [drochner 2012-08-13]
 	Updated net/ruby-stompserver to 1.0.0 [imil 2012-08-13]
 	Updated print/dvipsk to 5.992 [minskim 2012-08-13]
+	Updated devel/nss to 3.13.6nb1 [ryoon 2012-08-14]
