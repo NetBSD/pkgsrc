@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1 2012/08/14 14:24:20 dholland Exp $
+
+Teach Makefile.PL about libquota.
+
+--- Makefile.PL.orig	2011-11-13 16:21:52.000000000 +0100
++++ Makefile.PL	2012-05-14 16:21:37.000000000 +0200
+@@ -33,6 +33,7 @@
+   warn "WARNING: No appropriate hints found for this OS: '$os - see INSTALL'\n";
+ }
+ 
++my $extralibs = "";
+ 
+ # check whether the Andrew File System (AFS) is installed and running
+ 
+@@ -42,7 +43,7 @@
+     $hasafs = '-DAFSQUOTA';
+     $AFSHOME = -d "/usr/afsws" ? "/usr/afsws" : "/usr";
+     $extrainc = "-I$AFSHOME/include -I$AFSHOME/include/afs";
+-    $extralibs = "-L$AFSHOME/lib -L$AFSHOME/lib/afs -lsys -lrx -lrxkad -llwp";
++    $extralibs .= " -L$AFSHOME/lib -L$AFSHOME/lib/afs -lsys -lrx -lrxkad -llwp";
+     $afsquota = "afsquota.o";
+   }
+ }
+@@ -60,6 +61,11 @@
+    # }
+ }
+ 
++# check whether wee are using the NetBSD quota library
++if ( ($os =~ /^NetBSD 6/) or ($os =~ /^NetBSD 5\.99\.(\d\d)/ and $1 >= 59) ) {
++    $extralibs .= " -lquota";
++}
++
+ #-----------------------------------------------------------------------------#
+ 
+ use ExtUtils::MakeMaker;

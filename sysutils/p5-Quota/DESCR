@@ -1,0 +1,7 @@
+The Quota module provides access to file system quotas.
+
+The quotactl system call or ioctl or libquota is used to query or set
+quotas on the local host, or queries are submitted via RPC to a remote
+host. Mount tables can be parsed with getmntent and paths can be
+translated to device files (or whatever the actual quotactl
+implementations needs as argument) of the according file system.
