@@ -1480,8 +1480,8 @@ ICCBASE=                /opt/intel/cc/10.1.008
 <div class="sect2" title="3.3.7. Solaris">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="solaris"></a>3.3.7. Solaris</h3></div></div></div>
-<p>Solaris 2.6 through 9 are supported on both x86 and sparc.
-      You will need a working C compiler. Both gcc 2.95.3 and
+<p>Solaris 2.6 through 10 are supported on both x86 and sparc.
+      You will need a working C compiler. Both gcc 4.5.3 and
       Sun WorkShop 5 have been tested.</p>
 <p>The following packages are required on Solaris 8 for the bootstrap
       process and to build packages.</p>
@@ -1505,7 +1505,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
 	for building all packages.</p>
 <p>It is recommended that an external gcc be used only for bootstrapping,
 	then either build gcc from
-	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/gcc/README.html" target="_top"><code class="filename">lang/gcc</code></a> or install a binary gcc
+	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/gcc46/README.html" target="_top"><code class="filename">lang/gcc46</code></a> or install a binary gcc
 	package, then remove gcc used during bootstrapping.</p>
 <p>Binary packages of gcc can be found through <a class="ulink" href="http://www.sunfreeware.com/" target="_top">http://www.sunfreeware.com/</a>.</p>
 </div>
@@ -3974,10 +3974,11 @@ egg-aware, you only need to include
 <span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/egg.mk</code></span>&#8221;</span>.</p>
 <p>In order to correctly set the path to the Python interpreter, use the
 <code class="varname">REPLACE_PYTHON</code> variable and set it to the list of files
-that must be corrected. For example :
+(paths relative to <code class="varname">WRKSRC</code>) that must be corrected.
+For example :
 </p>
 <pre class="programlisting">
-REPLACE_PYTHON=   ${WRKSRC}/*.py
+REPLACE_PYTHON=   *.py
 </pre>
 </div>
 </div>
@@ -5452,7 +5453,9 @@ BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
 	variables that may be used by packages that use the
 	Open Sound System (OSS) API.</p></li>
 <li class="listitem"><p><code class="filename">pgsql.buildlink3.mk</code> will accept
-	either Postgres 8.0, 8.1, or 8.2, whichever is found installed. See
+	any of the Postgres versions in the variable
+	<code class="varname">PGSQL_VERSIONS_ACCEPTED</code> and default to
+	the version <code class="varname">PGSQL_VERSION_DEFAULT</code>. See
 	the file for more information.</p></li>
 <li class="listitem"><p><code class="filename">pthread.buildlink3.mk</code> uses the value of
 	<code class="varname">PTHREAD_OPTS</code> and checks for native pthreads or adds
@@ -7545,7 +7548,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229300016"></a><dl>
+<a name="id1168229286474"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7562,7 +7565,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168229300020"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229286477"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7572,7 +7575,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168229300028"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229286486"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7583,7 +7586,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168229300037"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229286494"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8815,15 +8818,13 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     a score file that allows all users on the system to record their
     highscores.  In order for this to work, the binaries need to be
     installed setgid and the score files owned by the appropriate
-    group and/or owner (traditionally the "games" user/group).  The
+    group and/or owner (traditionally the "games" user/group).  Set
+    <code class="varname">USE_GAMESGROUP</code> to yes to support this. The
     following variables, documented in more detail in
     <code class="filename">mk/defaults/mk.conf</code>, control this
-    behaviour: <code class="varname">SETGIDGAME</code>,
-    <code class="varname">GAMEDATAMODE</code>, <code class="varname">GAMEGRP</code>,
-    <code class="varname">GAMEMODE</code>, <code class="varname">GAMEOWN</code>.</p>
-<p>Note that per default, setgid installation of games is
-    disabled;  setting <code class="varname">SETGIDGAME=YES</code> will set all
-    the other variables accordingly.</p>
+    behaviour: <code class="varname">GAMEDATAMODE</code>,
+    <code class="varname">GAMEDIRMODE</code>, <code class="varname">GAMES_GROUP</code>,
+    <code class="varname">GAMEMODE</code>, <code class="varname">GAME_USER</code>.</p>
 <p>A package should therefore never hard code file ownership or
     access permissions but rely on <code class="varname">INSTALL_GAME</code> and
     <code class="varname">INSTALL_GAME_DATA</code> to set these
@@ -9588,7 +9589,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229304425"></a><dl>
+<a name="id1168229273404"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9631,7 +9632,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168229304428"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229273408"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9647,7 +9648,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168229287020"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229273476"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9665,7 +9666,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168229287057"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229273512"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9683,7 +9684,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168229287092"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229273547"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9696,7 +9697,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168229287110"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229273565"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9712,7 +9713,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168229287136"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229273591"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9736,7 +9737,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168229287203"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229273658"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9761,7 +9762,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168229287303"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229273758"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9809,7 +9810,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168229287426"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229273881"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
