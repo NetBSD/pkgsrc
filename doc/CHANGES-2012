@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2578 2012/08/14 11:15:14 sborrill Exp $
+$NetBSD: CHANGES-2012,v 1.2579 2012/08/14 11:59:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3960,3 +3960,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/celt to 0.11.3 [wiz 2012-08-14]
 	Added devel/py-stompclient version 0.3.2 [imil 2012-08-14]
 	Updated net/istgt to 20120811 [sborrill 2012-08-14]
+	Updated misc/dvtm to 0.7 [obache 2012-08-14]
+	Updated misc/dvtm to 0.7 [obache 2012-08-14]

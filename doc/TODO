@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11441 2012/08/14 08:37:58 wiz Exp $
+$NetBSD: TODO,v 1.11442 2012/08/14 11:59:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o drivel-3.0.3
 	o dspam-3.10.0
 	o dvdstyler-2.2
-	o dvtm-0.7 [pkg/46585]
 	o dvtm-0.8
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
