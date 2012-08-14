@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.925 2012/08/12 16:14:11 imil Exp $
+# $NetBSD: Makefile,v 1.926 2012/08/14 15:36:16 imil Exp $
 #
 
 COMMENT=	Networking tools
@@ -75,6 +75,7 @@ SUBDIR+=	cmu-dhcpd
 SUBDIR+=	cntlm
 SUBDIR+=	coda
 SUBDIR+=	coherence
+SUBDIR+=	coilmq
 SUBDIR+=	connect
 SUBDIR+=	corkscrew
 SUBDIR+=	couriertcpd
