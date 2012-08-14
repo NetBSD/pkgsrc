@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/12/03 00:44:49 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2012/08/14 07:02:10 wiz Exp $
 
---- tools/Makefile.in.orig	2008-10-09 07:11:34.000000000 -0400
+--- tools/Makefile.in.orig	2011-03-14 22:05:12.000000000 +0000
 +++ tools/Makefile.in
-@@ -213,7 +213,7 @@ noinst_HEADERS = wav_io.h
+@@ -236,7 +236,7 @@ noinst_HEADERS = wav_io.h
  celtenc_SOURCES = celtenc.c wav_io.c skeleton.c
- celtenc_LDADD = $(top_builddir)/libcelt/libcelt.la $(OGG_LIBS)
+ celtenc_LDADD = $(top_builddir)/libcelt/libcelt@LIBCELT_SUFFIX@.la $(OGG_LIBS)
  celtdec_SOURCES = celtdec.c wav_io.c
--celtdec_LDADD = $(top_builddir)/libcelt/libcelt.la $(OGG_LIBS)
-+celtdec_LDADD = $(top_builddir)/libcelt/libcelt.la $(OGG_LIBS) $(LIBOSSAUDIO)
+-celtdec_LDADD = $(top_builddir)/libcelt/libcelt@LIBCELT_SUFFIX@.la $(OGG_LIBS)
++celtdec_LDADD = $(top_builddir)/libcelt/libcelt@LIBCELT_SUFFIX@.la $(OGG_LIBS) $(LIBOSSAUDIO)
  all: all-am
  
  .SUFFIXES:
