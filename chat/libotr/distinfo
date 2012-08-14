@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/08/09 10:06:47 drochner Exp $
+$NetBSD: distinfo,v 1.8 2012/08/14 22:08:09 gdt Exp $
 
-SHA1 (libotr-3.2.0.tar.gz) = e5e10b8ddaf59b0ada6046d156d0431cd2790db9
-RMD160 (libotr-3.2.0.tar.gz) = 937f512415eb3b82d5730b1aafbe5d55f4f153da
-Size (libotr-3.2.0.tar.gz) = 430299 bytes
-SHA1 (patch-CVE-2012-3461-aa) = f1faa1e43da256d44194817aeb59b3e92ddaffb2
-SHA1 (patch-CVE-2012-3461-ab) = 2827193d1cd440700f09cd7312ec9954a81aea11
-SHA1 (patch-CVE-2012-3461-ac) = abbecb337f3a7109b4a41debb2109528c64e22a0
-SHA1 (patch-CVE-2012-3461-ad) = 13edba7d8f16fc122ce2fd4fb2579e7e70056d5a
+SHA1 (libotr-3.2.1.tar.gz) = 898bf00d019f49ca34cd0116dd2e22685c67c394
+RMD160 (libotr-3.2.1.tar.gz) = 07deab0a7f63680e44c3a631666b9b4a21bd66cf
+Size (libotr-3.2.1.tar.gz) = 414684 bytes
