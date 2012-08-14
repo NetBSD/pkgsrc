@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 13:42:03 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/08/14 17:07:56 asau Exp $
 
 DISTNAME=	gdbada-6.3
 PKGREVISION=	3
@@ -12,6 +12,8 @@ COMMENT=	GNAT GDB : An Ada 95 Debugger
 
 # Not yet ported to AMD 64-bit machines or Darwin
 NOT_FOR_PLATFORM=	*-*-x86_64 Darwin-*-* DragonFly-*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/gdb-6.3
 
