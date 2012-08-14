@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/07/27 13:08:54 sborrill Exp $
+$NetBSD: distinfo,v 1.8 2012/08/14 11:14:40 sborrill Exp $
 
-SHA1 (istgt-20120726.tar.gz) = 3eb4d4f38897521e0ca9a58c46d0a2c8725c695f
-RMD160 (istgt-20120726.tar.gz) = b8dfb211198130d2e922c5812ac1a26b7935f3fd
-Size (istgt-20120726.tar.gz) = 263653 bytes
+SHA1 (istgt-20120811.tar.gz) = 70be357d42e191d7c052c5026587a8602547244c
+RMD160 (istgt-20120811.tar.gz) = 1577f43107d4327ec2dc23bc7e43cbe27aa51032
+Size (istgt-20120811.tar.gz) = 269880 bytes
