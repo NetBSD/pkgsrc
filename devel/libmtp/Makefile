@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/02/17 13:52:03 hans Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/14 21:00:46 markd Exp $
 #
 
-DISTNAME=		libmtp-1.0.1
+DISTNAME=		libmtp-1.1.3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmtp/}
 
@@ -27,5 +27,5 @@ LDFLAGS.FreeBSD+=	-liconv
 LDFLAGS.SunOS=		-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
