@@ -1332,8 +1332,8 @@ with the OpenBSD userland tools. There are several steps:
 
 3.3.7. Solaris
 
-Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a
-working C compiler. Both gcc 2.95.3 and Sun WorkShop 5 have been tested.
+Solaris 2.6 through 10 are supported on both x86 and sparc. You will need a
+working C compiler. Both gcc 4.5.3 and Sun WorkShop 5 have been tested.
 
 The following packages are required on Solaris 8 for the bootstrap process and
 to build packages.
@@ -1361,8 +1361,8 @@ It makes life much simpler if you only use the same gcc consistently for
 building all packages.
 
 It is recommended that an external gcc be used only for bootstrapping, then
-either build gcc from lang/gcc or install a binary gcc package, then remove gcc
-used during bootstrapping.
+either build gcc from lang/gcc46 or install a binary gcc package, then remove
+gcc used during bootstrapping.
 
 Binary packages of gcc can be found through http://www.sunfreeware.com/.
 
@@ -3488,10 +3488,10 @@ If the packaged software, either it is an application or a module, is
 egg-aware, you only need to include "../../lang/python/egg.mk".
 
 In order to correctly set the path to the Python interpreter, use the
-REPLACE_PYTHON variable and set it to the list of files that must be corrected.
-For example :
+REPLACE_PYTHON variable and set it to the list of files (paths relative to
+WRKSRC) that must be corrected. For example :
 
-REPLACE_PYTHON=   ${WRKSRC}/*.py
+REPLACE_PYTHON=   *.py
 
 10.2. Examples
 
@@ -4664,8 +4664,9 @@ issues:
   * oss.buildlink3.mk defines several variables that may be used by packages
     that use the Open Sound System (OSS) API.
 
-  * pgsql.buildlink3.mk will accept either Postgres 8.0, 8.1, or 8.2, whichever
-    is found installed. See the file for more information.
+  * pgsql.buildlink3.mk will accept any of the Postgres versions in the
+    variable PGSQL_VERSIONS_ACCEPTED and default to the version
+    PGSQL_VERSION_DEFAULT. See the file for more information.
 
   * pthread.buildlink3.mk uses the value of PTHREAD_OPTS and checks for native
     pthreads or adds a dependency on devel/pth as needed.
@@ -7370,12 +7371,10 @@ gtk-doc is preferred though.)
 Certain packages, most of them in the games category, install a score file that
 allows all users on the system to record their highscores. In order for this to
 work, the binaries need to be installed setgid and the score files owned by the
-appropriate group and/or owner (traditionally the "games" user/group). The
-following variables, documented in more detail in mk/defaults/mk.conf, control
-this behaviour: SETGIDGAME, GAMEDATAMODE, GAMEGRP, GAMEMODE, GAMEOWN.
-
-Note that per default, setgid installation of games is disabled; setting
-SETGIDGAME=YES will set all the other variables accordingly.
+appropriate group and/or owner (traditionally the "games" user/group). Set
+USE_GAMESGROUP to yes to support this. The following variables, documented in
+more detail in mk/defaults/mk.conf, control this behaviour: GAMEDATAMODE,
+GAMEDIRMODE, GAMES_GROUP, GAMEMODE, GAME_USER.
 
 A package should therefore never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
