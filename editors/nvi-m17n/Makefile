@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2011/05/11 04:44:36 obache Exp $
+# $NetBSD: Makefile,v 1.46 2012/08/14 15:24:51 marino Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040608
@@ -50,14 +50,16 @@ ENCODINGS+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 # XXX ignore NetBSD 2.0F and later's grantpt(3) and SysV pty for just now
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 .endif
 
 post-patch:
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || \
-    ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+# DragonFly has no CIRCLEQ_* so it wants the provided <sys/queue.h>
+.if ${OPSYS} == "NetBSD" || \
+    ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "OpenBSD"
 	${RM} -f ${WRKSRC}/include/sys/queue.h
 .endif
 
