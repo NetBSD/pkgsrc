@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/04/22 13:43:17 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/08/14 17:07:56 asau Exp $
 
 DISTNAME=		darcs-2.0.2
 PKGREVISION=		4
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.darcs.net/
 COMMENT=		Distributed revision control system
 
 BUILD_DEPENDS+=		latex2html>=2002.2.1nb3:../../textproc/latex2html
+
+PKG_DESTDIR_SUPPORT=	none
 
 TEX_DEPMETHOD=		build
 USE_TOOLS+=		gmake perl
