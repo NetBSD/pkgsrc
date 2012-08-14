@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.548 2012/08/12 09:17:12 imil Exp $
+# $NetBSD: Makefile,v 1.549 2012/08/14 14:25:25 dholland Exp $
 #
 
 COMMENT=	System utilities
@@ -311,6 +311,7 @@ SUBDIR+=	p5-Linux-Inotify2
 SUBDIR+=	p5-Mac-AppleScript
 SUBDIR+=	p5-Mac-AppleScript-Glue
 SUBDIR+=	p5-Parse-Syslog
+SUBDIR+=	p5-Quota
 SUBDIR+=	p5-SSH-Batch
 SUBDIR+=	p5-Server-Starter
 SUBDIR+=	p5-Sys-CpuLoad
