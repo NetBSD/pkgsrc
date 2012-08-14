@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2582 2012/08/14 12:32:04 imil Exp $
+$NetBSD: CHANGES-2012,v 1.2583 2012/08/14 14:26:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3726,6 +3726,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/grub2 version 2.00 [gsutre 2012-07-29]
 	Updated x11/XaoS to 3.5 [dholland 2012-07-30]
 	Updated x11/xdialog to 2.3.1nb9 [dholland 2012-07-30]
+	Updated x11/xmountains to 2.7nb2 [dholland 2012-07-30]
 	Updated sysutils/amanda-common to 3.3.1 [sbd 2012-07-30]
 	Updated sysutils/amanda-client to 3.3.1 [sbd 2012-07-30]
 	Updated sysutils/amanda-server to 3.3.1 [sbd 2012-07-30]
@@ -3963,3 +3964,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/dvtm to 0.7 [obache 2012-08-14]
 	Added devel/py-lockfile version 0.9.1 [imil 2012-08-14]
 	Added devel/py-daemon version 1.5.5 [imil 2012-08-14]
+	Added sysutils/p5-Quota version 1.6.7 [dholland 2012-08-14]
