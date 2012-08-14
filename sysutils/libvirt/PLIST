@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/26 06:05:00 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/14 13:32:18 asau Exp $
 bin/virsh
 bin/virt-pki-validate
 bin/virt-xml-validate
@@ -28,7 +28,6 @@ share/examples/sasl2/libvirt.conf
 include/libvirt/libvirt-qemu.h
 include/libvirt/libvirt.h
 include/libvirt/virterror.h
-lib/charset.alias
 lib/libvirt-qemu.la
 lib/libvirt.la
 lib/pkgconfig/libvirt.pc
