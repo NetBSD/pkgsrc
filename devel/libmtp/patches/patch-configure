@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2012/08/14 21:00:46 markd Exp $
+
+fix == in test
+
+--- configure.orig	2012-07-25 03:06:53.000000000 +0000
++++ configure
+@@ -12672,7 +12672,7 @@ else
+   ac_enable_doxygen=auto
+ fi
+ 
+-if test "x$ac_enable_doxygen" == "xyes"; then
++if test "x$ac_enable_doxygen" = "xyes"; then
+     # Extract the first word of "doxygen", so it can be a program name with args.
+ set dummy doxygen; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -14125,7 +14125,7 @@ fi
+ # (No need to use AC_SUBST on this default substituted environment variable.)
+ # Only add these additional CFLAGS if we are using GCC. Other C compilers may
+ # not support them.
+-if test x"$GCC" == "xyes" ; then
++if test x"$GCC" = "xyes" ; then
+ 	CFLAGS="$CFLAGS -Wall -Wmissing-prototypes"
+ fi
+ 
