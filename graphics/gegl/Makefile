@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/08/13 14:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/08/14 07:56:41 tron Exp $
 
 DISTNAME=	gegl-0.2.0
 PKGREVISION=	2
@@ -43,6 +43,7 @@ BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.4
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/libcroco/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
