@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/14 12:08:48 imil Exp $
+${PYSITELIB}/lockfile/__init__.py
+${PYSITELIB}/lockfile/__init__.pyc
+${PYSITELIB}/lockfile/__init__.pyo
+${PYSITELIB}/lockfile/linklockfile.py
+${PYSITELIB}/lockfile/linklockfile.pyc
+${PYSITELIB}/lockfile/linklockfile.pyo
+${PYSITELIB}/lockfile/mkdirlockfile.py
+${PYSITELIB}/lockfile/mkdirlockfile.pyc
+${PYSITELIB}/lockfile/mkdirlockfile.pyo
+${PYSITELIB}/lockfile/pidlockfile.py
+${PYSITELIB}/lockfile/pidlockfile.pyc
+${PYSITELIB}/lockfile/pidlockfile.pyo
+${PYSITELIB}/lockfile/sqlitelockfile.py
+${PYSITELIB}/lockfile/sqlitelockfile.pyc
+${PYSITELIB}/lockfile/sqlitelockfile.pyo
