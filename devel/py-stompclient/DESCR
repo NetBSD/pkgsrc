@@ -1,0 +1,7 @@
+stompclient provides a simple and lighweight STOMP client API for Python.
+
+stompclient supports both simplex (publisher-only) and duplex
+(publish-subscribe) communication with STOMP servers. This project started as a
+fork of the stompy project by Benjamin W. Smith) but has evolved into a very
+distinct codebase, which combines a few ideas from stompy with features from
+the Stomper library and CoilMQ broker.
