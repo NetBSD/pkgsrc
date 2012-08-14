@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2012/08/13 14:25:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2012/08/14 08:46:17 wiz Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../textproc/libcroco/buildlink3.mk"
 .endif # LIBRSVG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-librsvg
