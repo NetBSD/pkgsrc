@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/12/07 11:24:27 markd Exp $
+# $NetBSD: Makefile,v 1.18 2012/08/14 17:07:57 asau Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Ada compiler
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../lang/gcc3/language.mk"
 

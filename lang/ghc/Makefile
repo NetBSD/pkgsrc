@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/03/24 19:43:25 asau Exp $
+# $NetBSD: Makefile,v 1.46 2012/08/14 17:07:57 asau Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	2
@@ -17,6 +17,8 @@ SITES.ghc-6.4.2-src.tar.bz2=http://www.haskell.org/ghc/dist/6.4.2/
 SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
 
 ONLY_FOR_PLATFORM= Darwin-*-i386 FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
+
+PKG_DESTDIR_SUPPORT=	none
 
 CHECK_PORTABILITY_SKIP=	distrib/prep-bin-dist-mingw
 
