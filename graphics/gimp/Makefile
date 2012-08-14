@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2012/08/14 08:21:59 tron Exp $
+# $NetBSD: Makefile,v 1.217 2012/08/14 08:46:57 wiz Exp $
 
 DISTNAME=	gimp-2.8.0
 PKGREVISION=	2
@@ -69,7 +69,6 @@ PLIST_VARS+=		remote
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
-.include "../../textproc/libcroco/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 PLIST.remote=	yes
