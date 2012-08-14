@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/14 09:05:22 imil Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/stompclient/__init__.py
+${PYSITELIB}/stompclient/__init__.pyc
+${PYSITELIB}/stompclient/__init__.pyo
+${PYSITELIB}/stompclient/connection.py
+${PYSITELIB}/stompclient/connection.pyc
+${PYSITELIB}/stompclient/connection.pyo
+${PYSITELIB}/stompclient/duplex.py
+${PYSITELIB}/stompclient/duplex.pyc
+${PYSITELIB}/stompclient/duplex.pyo
+${PYSITELIB}/stompclient/exceptions.py
+${PYSITELIB}/stompclient/exceptions.pyc
+${PYSITELIB}/stompclient/exceptions.pyo
+${PYSITELIB}/stompclient/frame.py
+${PYSITELIB}/stompclient/frame.pyc
+${PYSITELIB}/stompclient/frame.pyo
+${PYSITELIB}/stompclient/simplex.py
+${PYSITELIB}/stompclient/simplex.pyc
+${PYSITELIB}/stompclient/simplex.pyo
+${PYSITELIB}/stompclient/util.py
+${PYSITELIB}/stompclient/util.pyc
+${PYSITELIB}/stompclient/util.pyo
