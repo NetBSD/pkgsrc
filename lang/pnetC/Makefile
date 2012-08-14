@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/06/25 09:04:26 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/14 17:07:57 asau Exp $
 #
 
 DISTNAME=	pnetC-0.6.6
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=dotgnu/pnet/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	C language binding for DotGNU Portable .NET
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

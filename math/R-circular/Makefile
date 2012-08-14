@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/21 14:57:31 marino Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/14 17:07:57 asau Exp $
 
 CATEGORIES=	math
 PKGREVISION=	1
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	circular
 R_PKGVER=	0.4-3
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	fortran c
 
