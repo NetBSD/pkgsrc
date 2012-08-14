@@ -1,18 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2010/09/13 04:12:48 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2012/08/14 11:36:25 obache Exp $
 
---- texk/web2c/luatexdir/lua51/luaconf.h.orig	2010-09-09 09:10:53.000000000 +0000
+--- texk/web2c/luatexdir/lua51/luaconf.h.orig	2011-05-19 05:38:38.000000000 +0000
 +++ texk/web2c/luatexdir/lua51/luaconf.h
-@@ -100,7 +100,9 @@
+@@ -100,7 +100,7 @@
  	".\\?.dll;"  LUA_CDIR"?.dll;" LUA_CDIR"loadall.dll"
  
  #else
-+#ifndef LUA_ROOT
- #define LUA_ROOT	"/usr/local/"
-+#endif
+-#define LUA_ROOT	"/usr/local/"
++#define LUA_ROOT	"@PREFIX@/"
  #define LUA_LDIR	LUA_ROOT "share/lua/5.1/"
  #define LUA_CDIR	LUA_ROOT "lib/lua/5.1/"
  #define LUA_PATH_DEFAULT  \
-@@ -189,7 +191,7 @@
+@@ -189,7 +189,7 @@
  #define LUAI_DATA	/* empty */
  
  #elif defined(__GNUC__) && ((__GNUC__*100 + __GNUC_MINOR__) >= 302) && \
