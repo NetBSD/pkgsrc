@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2594 2012/08/15 13:54:46 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2595 2012/08/15 18:12:43 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3978,3 +3978,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_45 to 4.5.19 [taca 2012-08-15]
 	Updated www/typo3_46 to 4.6.12 [taca 2012-08-15]
 	Updated www/typo3_47 to 4.7.4 [taca 2012-08-15]
+	Updated math/py-numpy to 1.6.2 [drochner 2012-08-15]
+	Updated math/muparser to 200.2.2.2 [drochner 2012-08-15]
+	Updated misc/figlet to 2.2.5 [drochner 2012-08-15]
+	Updated security/pinentry to 0.8.2 [drochner 2012-08-15]
