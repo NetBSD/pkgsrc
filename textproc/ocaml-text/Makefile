@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/04 14:28:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/15 08:23:10 wiz Exp $
 #
 
-DISTNAME=	ocaml-text-0.5
+DISTNAME=	ocaml-text-0.6
 CATEGORIES=	textproc
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/641/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/937/
 
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://ocaml-text.forge.ocamlcore.org/
@@ -35,7 +35,6 @@ do-build:
 	cd ${WRKSRC} && ocaml setup.ml -build
 
 pre-install:
-	${RM} -rf ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib/text
 	${MKDIR} ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib
 
 do-install:
