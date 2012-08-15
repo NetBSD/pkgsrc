@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2590 2012/08/15 08:25:08 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2591 2012/08/15 09:27:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3972,3 +3972,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ocaml-lwt to 2.4.0 [wiz 2012-08-15]
 	Updated textproc/ocaml-text to 0.6 [wiz 2012-08-15]
 	Updated security/ocaml-cryptokit to 1.6 [wiz 2012-08-15]
+	Added textproc/py-markdown2 version 2.0.1 [obache 2012-08-15]
