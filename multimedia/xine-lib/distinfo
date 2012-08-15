@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2012/07/04 11:05:29 drochner Exp $
+$NetBSD: distinfo,v 1.85 2012/08/15 18:45:24 jdc Exp $
 
 SHA1 (xine-lib-1.2.2.tar.xz) = a349cbb0b72256bb262377796a022dcf63829b4c
 RMD160 (xine-lib-1.2.2.tar.xz) = 3f11df3fa8a8946bdcc9cdecd6952dc76b834d14
@@ -22,6 +22,9 @@ SHA1 (patch-src-post-audio-stretch.c) = bc083541c410e8b8c2b5c23bc7b2b0ae312272a5
 SHA1 (patch-src-post-audio-upmix.c) = ab01e157b42b8dd99622a17b5a8ecdb464ee694e
 SHA1 (patch-src-post-audio-upmix_mono.c) = 182a73985d6158c5ab2409bc372b302d3385320e
 SHA1 (patch-src-post-audio-volnorm.c) = 49d9bd437d240ddf2a14275d518469313cb29a0c
+SHA1 (patch-src-post-deinterlace-plugins-greedy2frame.c) = 85acf40662602c41e1f475b010534aefbb466a4b
+SHA1 (patch-src-post-deinterlace-plugins-greedy2frame_template.c) = 8cb62659326648cb54fa0219cd12fd02c53d047d
+SHA1 (patch-src-post-deinterlace-plugins-greedy2frame_template_sse2.c) = af9a57b0c5e496836c145d6888ea3149bf501c2f
 SHA1 (patch-src-post-deinterlace-xine_plugin.c) = 132554aa9bdc43fbe9e7dc42fee5916cb60be806
 SHA1 (patch-src-post-goom-mmx.h) = 09b82b9e1fae57afb385daa1cd3bb265fd680a1d
 SHA1 (patch-src-post-mosaico-mosaico.c) = f26e6ccc60c78a499d2bd0fd8f3d4c2f4efffde8
