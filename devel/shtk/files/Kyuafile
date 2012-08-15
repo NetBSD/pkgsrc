@@ -1,0 +1,11 @@
+syntax("kyuafile", 1)
+
+test_suite("shtk")
+
+atf_test_program{name="base_test"}
+atf_test_program{name="cli_test"}
+atf_test_program{name="config_test"}
+atf_test_program{name="cvs_test"}
+atf_test_program{name="list_test"}
+atf_test_program{name="process_test"}
+atf_test_program{name="shtk_test"}
