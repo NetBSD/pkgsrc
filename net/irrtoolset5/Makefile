@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/09/29 20:48:19 spz Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/15 15:30:04 spz Exp $
 #
 
-DISTNAME=		irrtoolset-5.0.0
+VERSION=		5.0.1
+DISTNAME=		irrtoolset-${VERSION}
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.isc.org/isc/IRRToolSet/IRRToolSet-5.0.0/
+MASTER_SITES=		ftp://ftp.isc.org/isc/IRRToolSet/IRRToolSet-${VERSION}/
 
 OWNER=			spz@NetBSD.org
 HOMEPAGE=		http://irrtoolset.isc.org/
