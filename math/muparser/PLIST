@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2010/08/11 20:33:19 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/15 17:38:49 drochner Exp $
 include/muParser.h
 include/muParserBase.h
 include/muParserBytecode.h
 include/muParserCallback.h
-include/muParserComplex.h
 include/muParserDLL.h
 include/muParserDef.h
 include/muParserError.h
 include/muParserFixes.h
 include/muParserInt.h
 include/muParserStack.h
+include/muParserTemplateMagic.h
 include/muParserTest.h
 include/muParserToken.h
 include/muParserTokenReader.h
 lib/libmuparser.so
-lib/libmuparser.so.0
-lib/libmuparser.so.0.0.0
+lib/libmuparser.so.2
+lib/libmuparser.so.2.2.2
 lib/pkgconfig/muparser.pc
