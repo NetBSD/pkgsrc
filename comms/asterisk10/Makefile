@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/08/03 08:52:31 jnemeth Exp $
+# $NetBSD: Makefile,v 1.25 2012/08/15 06:05:33 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -98,6 +98,14 @@ BUILDLINK_TRANSFORM+=	rm:-march=i386
 PLIST_VARS+=	kqueue
 .if exists(/usr/include/sys/event.h)
 PLIST.kqueue=	yes
+.endif
+
+PLIST_VARS+=	mgcp
+# NOSIGPIPE is a temp variable, since PLIST.mgcp MUST remain undefined
+# if the grep fails
+NOSIGPIPE!=	${GREP} SO_NOSIGPIPE /usr/include/sys/socket.h || echo ""
+.if ${NOSIGPIPE} != ""
+PLIST.mgcp= yes
 .endif
 
 .include "options.mk"
