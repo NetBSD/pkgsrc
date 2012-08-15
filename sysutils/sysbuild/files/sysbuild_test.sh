@@ -1,3 +1,4 @@
+#! @ATF_SH@
 # Copyright 2012 Google Inc.
 # All rights reserved.
 #
@@ -88,21 +89,6 @@ create_mock_cvsroot() {
     cvs -d "${repository}" import -m "Import." xsrc VENDOR_TAG release_tag
     cd -
     rm -rf xsrc
-}
-
-
-# Creates a fake id(1) binary for use by the "unprivileged-user" tests.
-create_mock_id() {
-    [ -n "@SYSBUILD_USER@" ] \
-        || atf_skip "Package built without unprivileged-user"
-
-    cat >id <<EOF
-#! /bin/sh
-
-echo @SYSBUILD_USER@
-EOF
-    chmod +x id
-    PATH="$(pwd):${PATH}"
 }
 
 
