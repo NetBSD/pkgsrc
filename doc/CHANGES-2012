@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2593 2012/08/15 11:02:04 he Exp $
+$NetBSD: CHANGES-2012,v 1.2594 2012/08/15 13:54:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3975,3 +3975,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/py-markdown2 version 2.0.1 [obache 2012-08-15]
 	Added net/apollo version 1.4 [imil 2012-08-15]
 	Updated lang/parrot to 4.6.0 [he 2012-08-15]
+	Updated www/typo3_45 to 4.5.19 [taca 2012-08-15]
+	Updated www/typo3_46 to 4.6.12 [taca 2012-08-15]
+	Updated www/typo3_47 to 4.7.4 [taca 2012-08-15]
