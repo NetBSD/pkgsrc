@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11445 2012/08/15 20:28:20 wiz Exp $
+$NetBSD: TODO,v 1.11446 2012/08/15 20:29:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -952,7 +952,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o opengrok-0.11.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
-	o openmsx-0.8.2
+	o openmsx-0.9.0
 	o openoffice-3.4
 	o openoffice3-3.3
 	o openssh-6.0p1
