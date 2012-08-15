@@ -2,8 +2,5 @@ syntax("kyuafile", 1)
 
 test_suite("sysbuild")
 
-atf_test_program{name="config_test"}
-atf_test_program{name="cvs_test"}
 atf_test_program{name="sysbuild_test"}
 atf_test_program{name="sysbuild4cron_test"}
-atf_test_program{name="utils_test"}
