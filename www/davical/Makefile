@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/08/05 10:02:14 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/08/15 20:23:08 wiz Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=1.0.2
-PKGREVISION=	1
+DAVICAL_VERSION=1.1.1
 CATEGORIES=	www
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
 
@@ -25,7 +24,7 @@ BUILD_DEFS=	APACHE_USER APACHE_GROUP PGUSER PGGROUP
 DAVICAL_USER?=	${PGUSER}
 DAVICAL_GROUP?=	${PGGROUP}
 
-USE_TOOLS=	pax msgfmt perl:build
+USE_TOOLS=	gmake pax msgfmt perl:build
 
 PAXDIRS=	htdocs inc dba po scripts
 
@@ -36,7 +35,7 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.51:../../devel/php-libawl
+DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.53:../../devel/php-libawl
 DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
 DEPENDS+=	pwgen>=2.06:../../sysutils/pwgen
 DEPENDS+=	postgresql${PGSQL_VERSION}-client-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-client
@@ -64,8 +63,10 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	scripts/cron-sync-ldap.php
-REPLACE_FILES.php+=	scripts/sync-remote-caldav.php
+REPLACE_FILES.php+=	scripts/export_calendar.php
+REPLACE_FILES.php+=	scripts/load_calendar.php
 REPLACE_FILES.php+=	scripts/refresh-alarms.php
+REPLACE_FILES.php+=	scripts/sync-remote-caldav.php
 REPLACE_FILES.php+=	scripts/tz-update.php
 
 SUBST_CLASSES+=		conf-path

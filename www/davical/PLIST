@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/28 15:50:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/08/15 20:23:08 wiz Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -50,6 +50,7 @@ share/davical/htdocs/davical.css
 share/davical/htdocs/feed.php
 share/davical/htdocs/freebusy.php
 share/davical/htdocs/help.php
+share/davical/htdocs/iSchedule.php
 share/davical/htdocs/images/down.gif
 share/davical/htdocs/images/up.gif
 share/davical/htdocs/index.php
@@ -79,6 +80,7 @@ share/davical/inc/caldav-ACL.php
 share/davical/inc/caldav-BIND.php
 share/davical/inc/caldav-DELETE.php
 share/davical/inc/caldav-DELTICKET.php
+share/davical/inc/caldav-GET-functions.php
 share/davical/inc/caldav-GET.php
 share/davical/inc/caldav-LOCK.php
 share/davical/inc/caldav-MKCOL.php
@@ -113,6 +115,7 @@ share/davical/inc/drivers_rimap.php
 share/davical/inc/drivers_squid_pam.php
 share/davical/inc/external-fetch.php
 share/davical/inc/freebusy-functions.php
+share/davical/inc/iSchedule-POST.php
 share/davical/inc/iSchedule.php
 share/davical/inc/interactive-page.php
 share/davical/inc/log_caldav_action.php
@@ -131,6 +134,7 @@ share/davical/inc/ui/external-browse.php
 share/davical/inc/ui/principal-browse.php
 share/davical/inc/ui/principal-edit.php
 share/davical/inc/vcard.php
+share/davical/inc/vtimezone.php
 share/davical/inc/well-known.php
 share/davical/po/de.po
 share/davical/po/de.values
@@ -170,6 +174,8 @@ share/davical/po/sv.po
 share/davical/po/sv.values
 share/davical/scripts/build-always.sh
 share/davical/scripts/cron-sync-ldap.php
+share/davical/scripts/export_calendar.php
+share/davical/scripts/load_calendar.php
 share/davical/scripts/po/rebuild-translations.sh
 share/davical/scripts/refresh-alarms.php
 share/davical/scripts/sync-remote-caldav.php
@@ -223,6 +229,7 @@ share/doc/davical/api/davical/Resource/WritableCollection.html
 share/doc/davical/api/davical/Resource/_inc---DAVResource.php.html
 share/doc/davical/api/davical/SqlToArray.html
 share/doc/davical/api/davical/VCard.html
+share/doc/davical/api/davical/VTimezone.html
 share/doc/davical/api/davical/_htdocs---SqlToArray.php.html
 share/doc/davical/api/davical/_htdocs---admin.php.html
 share/doc/davical/api/davical/_htdocs---always.php.html
@@ -231,6 +238,7 @@ share/doc/davical/api/davical/_htdocs---dbexec.php.html
 share/doc/davical/api/davical/_htdocs---feed.php.html
 share/doc/davical/api/davical/_htdocs---freebusy.php.html
 share/doc/davical/api/davical/_htdocs---help.php.html
+share/doc/davical/api/davical/_htdocs---iSchedule.php.html
 share/doc/davical/api/davical/_htdocs---index.php.html
 share/doc/davical/api/davical/_htdocs---newfile.php.html
 share/doc/davical/api/davical/_htdocs---setup.php.html
@@ -263,6 +271,7 @@ share/doc/davical/api/davical/_inc---ui---external-browse.php.html
 share/doc/davical/api/davical/_inc---ui---principal-browse.php.html
 share/doc/davical/api/davical/_inc---ui---principal-edit.php.html
 share/doc/davical/api/davical/_inc---vcard.php.html
+share/doc/davical/api/davical/_inc---vtimezone.php.html
 share/doc/davical/api/davical/_inc---well-known.php.html
 share/doc/davical/api/davical/authentication/_inc---auth-functions.php.html
 share/doc/davical/api/davical/caldav/_htdocs---caldav.php.html
@@ -271,6 +280,7 @@ share/doc/davical/api/davical/caldav/_inc---caldav-ACL.php.html
 share/doc/davical/api/davical/caldav/_inc---caldav-BIND.php.html
 share/doc/davical/api/davical/caldav/_inc---caldav-DELETE.php.html
 share/doc/davical/api/davical/caldav/_inc---caldav-DELTICKET.php.html
+share/doc/davical/api/davical/caldav/_inc---caldav-GET-functions.php.html
 share/doc/davical/api/davical/caldav/_inc---caldav-GET.php.html
 share/doc/davical/api/davical/caldav/_inc---caldav-MKCOL.php.html
 share/doc/davical/api/davical/caldav/_inc---caldav-MKTICKET.php.html
@@ -287,6 +297,8 @@ share/doc/davical/api/davical/caldav/_inc---caldav-REPORT-sync-collection.php.ht
 share/doc/davical/api/davical/caldav/_inc---caldav-REPORT.php.html
 share/doc/davical/api/davical/caldav/_inc---schedule-functions.php.html
 share/doc/davical/api/davical/external-bind/_inc---external-fetch.php.html
+share/doc/davical/api/davical/iSchedule-POST/FakeSession.html
+share/doc/davical/api/davical/iSchedule-POST/_inc---iSchedule-POST.php.html
 share/doc/davical/api/davical/iSchedule/_inc---iSchedule.php.html
 share/doc/davical/api/davical/iSchedule/iSchedule.html
 share/doc/davical/api/davical/ldap/_inc---drivers_imap_pam.php.html
