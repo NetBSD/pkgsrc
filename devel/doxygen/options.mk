@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/07/03 11:31:35 mef Exp $
+# $NetBSD: options.mk,v 1.6 2012/08/15 23:25:15 dsainty Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex
@@ -32,6 +32,7 @@ DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
+DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-psnfss>=9.2anb2:../../fonts/tex-psnfss
@@ -40,5 +41,6 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
+DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 
 .endif
