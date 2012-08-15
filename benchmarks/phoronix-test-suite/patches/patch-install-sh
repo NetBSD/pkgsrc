@@ -1,10 +1,17 @@
-$NetBSD: patch-install-sh,v 1.1 2011/12/07 00:23:09 jym Exp $
-Handle pkgsrc hierarchy, especially paths to man pages.
-Do not execute xdg-* during installation, let the shared-mime-info
-and desktop-file-utils update their databases.
+$NetBSD: patch-install-sh,v 1.2 2012/08/15 22:08:16 marino Exp $
+
+* Handle pkgsrc hierarchy, especially paths to man pages.
+* Do not execute xdg-* during installation, let the shared-mime-info
+  and desktop-file-utils update their databases.
+* Change "cp -r <dir>/" to "cp -R <dir>".
+  -r is highly discouraged on BSD systems and they behave differently
+  (e.g. DragonFly copied only the contents of pts-core while NetBSD
+  and other platforms copied pts-core and its contents were one level
+  lower than DragonFly)
+
 --- install-sh.orig	2011-05-17 18:00:59.000000000 +0000
 +++ install-sh
-@@ -50,10 +50,9 @@ rm -rf $DESTDIR$INSTALL_PREFIX/share/doc
+@@ -50,28 +50,27 @@ rm -rf $DESTDIR$INSTALL_PREFIX/share/doc
  mkdir -p $DESTDIR$INSTALL_PREFIX/bin/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/applications/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/
@@ -16,7 +23,11 @@ and desktop-file-utils update their databases.
  
  cp CHANGE-LOG $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
  cp COPYING $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
-@@ -64,8 +63,8 @@ cp -r * $DESTDIR$INSTALL_PREFIX/share/do
+ cp AUTHORS $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
+ 
+ cd documentation/
+-cp -r * $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
++cp -R * $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
  cd ..
  rm -rf $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/man-pages/
  
@@ -27,6 +38,13 @@ and desktop-file-utils update their databases.
  cp pts-core/static/images/phoronix-test-suite.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/phoronix-test-suite.png
  cp pts-core/static/images/openbenchmarking.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/64x64/apps/openbenchmarking.png
  cp pts-core/static/phoronix-test-suite.desktop $DESTDIR$INSTALL_PREFIX/share/applications/
+ 
+ rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts/etc/scripts/package-build-*
+-cp -r pts-core/ $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
++cp -R pts-core $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
+ rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite.desktop
+ 
+ sed 's:PTS_DIR=`pwd`:PTS_DIR='"$INSTALL_PREFIX"'\/share\/phoronix-test-suite:g' phoronix-test-suite > $DESTDIR$INSTALL_PREFIX/bin/phoronix-test-suite
 @@ -79,11 +78,6 @@ chmod +x $DESTDIR$INSTALL_PREFIX/bin/pho
  
  # sed 's:\$url = PTS_PATH . \"documentation\/index.html\";:\$url = \"'"$INSTALL_PREFIX"'\/share\/doc\/packages\/phoronix-test-suite\/index.html\";:g' pts-core/commands/gui_gtk.php > $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/commands/gui_gtk.php
