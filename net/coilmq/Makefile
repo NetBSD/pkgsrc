@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/14 15:35:00 imil Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/15 05:51:56 dholland Exp $
 #
 
 DISTNAME=	CoilMQ-0.6.1
@@ -18,6 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-stompclient>=0.3.2:../../devel/py-stompclient
 DEPENDS+=	${PYPKGPREFIX}-daemon>=1.5.5:../../devel/py-daemon
 
 USE_LANGUAGES=	# none
+
+# py-stompclient does not work on python25
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	python
