@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/07/02 07:02:25 adam Exp $
+# $NetBSD: Makefile,v 1.23 2012/08/15 18:28:20 jdc Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -16,12 +16,9 @@ BJAM_ARGS+=		--without-python
 BJAM_ARGS+=		pch=off
 .endif
 
-.include "../../devel/boost-jam/bjam.mk"
+UNLIMIT_RESOURCES+=	stacksize
 
-# Hack: gcc on sparc64 catches an illegal instruction compiling graphml.o
-.if ${MACHINE_ARCH} == "sparc64" && !empty(CC_VERSION:Mgcc*)
-BUILDLINK_TRANSFORM+=	rename:-O3:-O1
-.endif
+.include "../../devel/boost-jam/bjam.mk"
 
 do-build: bjam-build
 
