@@ -29,6 +29,8 @@
 # \file sysbuild4cron.sh
 # Entry point and main program logic.
 
+shtk_import cli
+
 
 # Paths to installed files.
 #
@@ -85,7 +87,7 @@ sysbuild4cron_main() {
                 ;;
 
             \?)
-                utils_usage_error "Unknown option -${OPTARG}"
+                shtk_cli_usage_error "Unknown option -${OPTARG}"
                 ;;
         esac
     done
@@ -96,11 +98,11 @@ sysbuild4cron_main() {
     if [ ! -d "${logdir}" ]; then
         mkdir -p "$(dirname "${logdir}")" >/dev/null 2>/dev/null || true
         mkdir "${logdir}" \
-            || utils_error "Failed to create directory '${logdir}'"
+            || shtk_cli_error "Failed to create directory '${logdir}'"
     fi
 
     local exit_code=0
-    local logfile="${logdir}/${Utils_ProgName}.$(date +%Y%m%d%H%M%S).log"
+    local logfile="${logdir}/$(shtk_cli_progname).$(date +%Y%m%d%H%M%S).log"
     "${@}" >"${logfile}" 2>&1 \
         || sysbuild4cron_email "${logfile}" "${recipient}" "${@}"
 }
