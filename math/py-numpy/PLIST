@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/04/17 17:24:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/08/15 17:16:37 drochner Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/numpy/__config__.py
@@ -592,11 +592,11 @@ ${PYSITELIB}/numpy/lib/arraysetops.pyo
 ${PYSITELIB}/numpy/lib/arrayterator.py
 ${PYSITELIB}/numpy/lib/arrayterator.pyc
 ${PYSITELIB}/numpy/lib/arrayterator.pyo
-${PYSITELIB}/numpy/lib/benchmarks/benchmark.py
-${PYSITELIB}/numpy/lib/benchmarks/casting.py
-${PYSITELIB}/numpy/lib/benchmarks/creating.py
-${PYSITELIB}/numpy/lib/benchmarks/simpleindex.py
-${PYSITELIB}/numpy/lib/benchmarks/sorting.py
+${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/benchmark.py
+${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/casting.py
+${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/creating.py
+${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/simpleindex.py
+${PLIST.py2x}${PYSITELIB}/numpy/lib/benchmarks/sorting.py
 ${PYSITELIB}/numpy/lib/financial.py
 ${PYSITELIB}/numpy/lib/financial.pyc
 ${PYSITELIB}/numpy/lib/financial.pyo
@@ -918,6 +918,7 @@ ${PYSITELIB}/numpy/polynomial/tests/test_laguerre.py
 ${PYSITELIB}/numpy/polynomial/tests/test_legendre.py
 ${PYSITELIB}/numpy/polynomial/tests/test_polynomial.py
 ${PYSITELIB}/numpy/polynomial/tests/test_polyutils.py
+${PYSITELIB}/numpy/polynomial/tests/test_printing.py
 ${PYSITELIB}/numpy/random/__init__.py
 ${PYSITELIB}/numpy/random/__init__.pyc
 ${PYSITELIB}/numpy/random/__init__.pyo
