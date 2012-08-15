@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/05/30 13:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/08/15 08:21:33 wiz Exp $
 #
 
-DISTNAME=	lwt-2.3.2
+DISTNAME=	lwt-2.4.0
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ocsigen.org/download/
@@ -12,8 +12,7 @@ COMMENT=	Cooperative threading library for OCaml
 LICENSE=	gnu-lgpl-v2.1
 
 BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=3.11.0
-BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-DEPENDS+=	ocaml-react-[0-9]*:../../devel/ocaml-react
+DEPENDS=	ocaml-react-[0-9]*:../../devel/ocaml-react
 
 USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes
@@ -26,17 +25,20 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 AUTO_MKDIRS=		yes
 
-SUBST_CLASSES+=		destdir
-SUBST_STAGE.destdir=	post-configure
-SUBST_MESSAGE.destdir=	Changing install location to DESTDIR
-SUBST_FILES.destdir=	setup.ml
-SUBST_SED.destdir=	-e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
+SUBST_CLASSES+=		libev destdir
+SUBST_STAGE.libev=	post-configure
+SUBST_MESSAGE.libev=	Correcting compiler flags for libev
+SUBST_FILES.libev=	setup.data
+SUBST_SED.libev=	-e 's%"-lev"%"-lev -L${PREFIX}/lib/ev -Wl,-R${PREFIX}/lib/ev"%'
+SUBST_STAGE.destdir=    post-configure
+SUBST_MESSAGE.destdir=  Changing install location to DESTDIR
+SUBST_FILES.destdir=    setup.ml
+SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
 
+PLIST_VARS=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST_SUBST+=	OPT=""
-.else
-PLIST_SUBST+=	OPT="@comment "
+PLIST.opt=		yes
 .endif
 
 do-configure:
@@ -46,11 +48,11 @@ do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ocaml setup.ml -build
 
 do-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/lwt
 	${MKDIR} ${DESTDIR}${PREFIX}/lib/ocaml/site-lib
-	cd ${WRKSRC} && ${MAKE_ENV} ocaml setup.ml -install --destdir ${DESTDIR} --prefix ${PREFIX}
+	cd ${WRKSRC} && ocaml setup.ml -install
 
 .include "options.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
