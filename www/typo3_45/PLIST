@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/08/12 15:51:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/08/15 13:49:25 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -116,6 +116,7 @@ ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_tstemplate.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_userauth.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_userauthgroup.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_xml.php
+${TYPO3DIR}/${TYPO3NAME}/t3lib/codec/class.t3lib_codec_javascriptencoder.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/config_default.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/contextmenu/class.t3lib_contextmenu_abstractcontextmenu.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/contextmenu/class.t3lib_contextmenu_abstractdataprovider.php
