@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2599 2012/08/15 20:25:14 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2600 2012/08/15 20:28:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3986,3 +3986,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/php-libawl to 0.53 [wiz 2012-08-15]
 	Updated www/davical to 1.1.1 [wiz 2012-08-15]
 	Updated devel/automake to 1.12.3 [wiz 2012-08-15]
+	Updated textproc/ispell-german to 20120607 [wiz 2012-08-15]
