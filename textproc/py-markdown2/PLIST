@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/15 09:27:34 obache Exp $
+bin/markdown2
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/markdown2.py
+${PYSITELIB}/markdown2.pyc
+${PYSITELIB}/markdown2.pyo
