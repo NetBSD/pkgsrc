@@ -1,0 +1,94 @@
+# Copyright 2012 Google Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# * Neither the name of Google Inc. nor the names of its contributors
+#   may be used to endorse or promote products derived from this software
+#   without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# \file cli.subr
+# Utilities to implement command-line interfaces.
+
+
+# Directory where the running script lives.
+_Shtk_Cli_DirName="$(dirname "${0}")"
+
+
+# Base name of the running script.
+_Shtk_Cli_ProgName="${0##*/}"
+
+
+# Gets the directory where the current program lives.
+#
+# \post The directory is printed to stdout.
+shtk_cli_dirname() {
+    echo "${_Shtk_Cli_DirName}"
+}
+
+
+# Gets the program name.
+#
+# \post The program name, without any directory components, is printed to
+# stdout.
+shtk_cli_progname() {
+    echo "${_Shtk_Cli_ProgName}"
+}
+
+
+# Prints a runtime error and exits.
+#
+# \param ... The message to print.  Can be provided as multiple words and, in
+#     that case, they are joined together by a single whitespace.
+shtk_cli_error() {
+    echo "${_Shtk_Cli_ProgName}: E: $*" 1>&2
+    exit 1
+}
+
+
+# Prints an informational message.
+#
+# \param ... The message to print.  Can be provided as multiple words and, in
+#     that case, they are joined together by a single whitespace.
+shtk_cli_info() {
+    echo "${_Shtk_Cli_ProgName}: I: $*" 1>&2
+}
+
+
+# Prints a runtime warning.
+#
+# \param ... The message to print.  Can be provided as multiple words and, in
+#     that case, they are joined together by a single whitespace.
+shtk_cli_warning() {
+    echo "${_Shtk_Cli_ProgName}: W: $*" 1>&2
+}
+
+
+# Prints an usage error and exits.
+#
+# \param ... The message to print.  Can be provided as multiple words and, in
+#     that case, they are joined together by a single whitespace.
+shtk_cli_usage_error() {
+    echo "${_Shtk_Cli_ProgName}: E: $*" 1>&2
+    echo "Type 'man ${_Shtk_Cli_ProgName}' for help" 1>&2
+    exit 1
+}
