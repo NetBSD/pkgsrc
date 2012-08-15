@@ -29,6 +29,11 @@
 # \file sysbuild.sh
 # Entry point and main program logic.
 
+shtk_import cli
+shtk_import config
+shtk_import cvs
+shtk_import process
+
 
 # List of valid configuration variables.
 #
@@ -50,14 +55,14 @@ SYSBUILD_CONFIG_VARS="BUILD_ROOT BUILD_TARGETS CVSROOT CVSTAG INCREMENTAL_BUILD
 # him shoot himself in the foot if he so desires.
 sysbuild_set_defaults() {
     # Please remember to update sysbuild(1) if you change any default values.
-    config_set BUILD_ROOT "${HOME}/sysbuild"
-    config_set BUILD_TARGETS "release"
-    config_set CVSROOT ":ext:anoncvs@anoncvs.NetBSD.org:/cvsroot"
-    config_set INCREMENTAL_BUILD "false"
-    config_set MACHINES "$(uname -m)"
-    config_set RELEASEDIR "${HOME}/sysbuild/release"
-    config_set SRCDIR "${HOME}/sysbuild/src"
-    config_set UPDATE_SOURCES "true"
+    shtk_config_set BUILD_ROOT "${HOME}/sysbuild"
+    shtk_config_set BUILD_TARGETS "release"
+    shtk_config_set CVSROOT ":ext:anoncvs@anoncvs.NetBSD.org:/cvsroot"
+    shtk_config_set INCREMENTAL_BUILD "false"
+    shtk_config_set MACHINES "$(uname -m)"
+    shtk_config_set RELEASEDIR "${HOME}/sysbuild/release"
+    shtk_config_set SRCDIR "${HOME}/sysbuild/src"
+    shtk_config_set UPDATE_SOURCES "true"
 }
 
 
@@ -67,22 +72,22 @@ sysbuild_set_defaults() {
 do_one_build() {
     local machine="${1}"; shift
 
-    local basedir="$(config_get BUILD_ROOT)/${machine}"
+    local basedir="$(shtk_config_get BUILD_ROOT)/${machine}"
 
     local jflag=
-    if config_has NJOBS; then
-        jflag="-j$(config_get NJOBS)"
+    if shtk_config_has NJOBS; then
+        jflag="-j$(shtk_config_get NJOBS)"
     fi
 
     local uflag=
-    if config_get_bool INCREMENTAL_BUILD; then
+    if shtk_config_get_bool INCREMENTAL_BUILD; then
         uflag=-u
 
         # Get rid of any possibly-old modules; they are a constant source of
         # update-build problems.
         rm -rf "${basedir}/destdir/stand"/*
     else
-        utils_info "Cleaning up previous build files"
+        shtk_cli_info "Cleaning up previous build files"
         rm -rf "${basedir}/destdir"
         rm -rf "${basedir}/obj"
         rm -rf "${basedir}/tools"
@@ -90,16 +95,16 @@ do_one_build() {
 
     local xflag=
     local Xflag=
-    if config_has XSRCDIR; then
+    if shtk_config_has XSRCDIR; then
         xflag=-x
-        Xflag="-X$(config_get XSRCDIR)"
+        Xflag="-X$(shtk_config_get XSRCDIR)"
     fi
 
-    ( cd "$(config_get SRCDIR)" && utils_run ./build.sh \
+    ( cd "$(shtk_config_get SRCDIR)" && shtk_process_run ./build.sh \
         -D"${basedir}/destdir" \
         -M"${basedir}/obj" \
         -N2 \
-        -R"$(config_get RELEASEDIR)" \
+        -R"$(shtk_config_get RELEASEDIR)" \
         -T"${basedir}/tools" \
         -U \
         ${Xflag} \
@@ -107,7 +112,7 @@ do_one_build() {
         -m"${machine}" \
         ${uflag} \
         ${xflag} \
-        $(config_get BUILD_TARGETS) )
+        $(shtk_config_get BUILD_TARGETS) )
 }
 
 
@@ -118,24 +123,24 @@ sysbuild_build() {
     while getopts ':f' arg "${@}"; do
         case "${arg}" in
             f)  # Convenience flag for a "fast mode".
-                config_set "INCREMENTAL_BUILD" "true"
-                config_set "UPDATE_SOURCES" "false"
+                shtk_config_set "INCREMENTAL_BUILD" "true"
+                shtk_config_set "UPDATE_SOURCES" "false"
                 ;;
 
             \?)
-                utils_usage_error "Unknown option -${OPTARG}"
+                shtk_cli_usage_error "Unknown option -${OPTARG}"
                 ;;
         esac
     done
     shift $((${OPTIND} - 1))
 
-    [ ${#} -eq 0 ] || config_set BUILD_TARGETS "${*}"
+    [ ${#} -eq 0 ] || shtk_config_set BUILD_TARGETS "${*}"
 
-    if config_get_bool UPDATE_SOURCES; then
+    if shtk_config_get_bool UPDATE_SOURCES; then
         sysbuild_fetch
     fi
 
-    for machine in $(config_get MACHINES); do
+    for machine in $(shtk_config_get MACHINES); do
         do_one_build "${machine}"
     done
 }
@@ -145,11 +150,11 @@ sysbuild_build() {
 #
 # \params ... The options and arguments to the command.
 sysbuild_config() {
-    [ ${#} -eq 0 ] || utils_usage_error "config does not take any arguments"
+    [ ${#} -eq 0 ] || shtk_cli_usage_error "config does not take any arguments"
 
     for var in ${SYSBUILD_CONFIG_VARS}; do
-        if config_has "${var}"; then
-            echo "${var} = $(config_get "${var}")"
+        if shtk_config_has "${var}"; then
+            echo "${var} = $(shtk_config_get "${var}")"
         else
             echo "${var} is undefined"
         fi
@@ -161,18 +166,18 @@ sysbuild_config() {
 #
 # \params ... The options and arguments to the command.
 sysbuild_fetch() {
-    [ ${#} -eq 0 ] || utils_usage_error "fetch does not take any arguments"
+    [ ${#} -eq 0 ] || shtk_cli_usage_error "fetch does not take any arguments"
 
-    local cvsroot="$(config_get CVSROOT)"
+    local cvsroot="$(shtk_config_get CVSROOT)"
 
-    utils_info "Updating base source tree"
-    cvs_fetch "${cvsroot}" src "$(config_get_default CVSTAG '')" \
-        "$(config_get SRCDIR)"
+    shtk_cli_info "Updating base source tree"
+    shtk_cvs_fetch "${cvsroot}" src "$(shtk_config_get_default CVSTAG '')" \
+        "$(shtk_config_get SRCDIR)"
 
-    if config_has XSRCDIR; then
-        utils_info "Updating X11 source tree"
-        cvs_fetch "${cvsroot}" xsrc "$(config_get_default CVSTAG '')" \
-            "$(config_get XSRCDIR)"
+    if shtk_config_has XSRCDIR; then
+        shtk_cli_info "Updating X11 source tree"
+        shtk_cvs_fetch "${cvsroot}" xsrc \
+	    "$(shtk_config_get_default CVSTAG '')" "$(shtk_config_get XSRCDIR)"
     fi
 }
 
@@ -201,11 +206,11 @@ sysbuild_config_load() {
                 fi
             done
             [ -n "${config_file}" ] \
-                || utils_usage_error "Cannot locate configuration named" \
+                || shtk_cli_usage_error "Cannot locate configuration named" \
                 "'${config_name}'"
             ;;
     esac
-    config_load "${config_file}"
+    shtk_config_load "${config_file}"
 }
 
 
@@ -217,7 +222,7 @@ sysbuild_config_load() {
 sysbuild_main() {
     local config_name="default"
 
-    config_init ${SYSBUILD_CONFIG_VARS}
+    shtk_config_init ${SYSBUILD_CONFIG_VARS}
 
     while getopts ':c:o:' arg "${@}"; do
         case "${arg}" in
@@ -226,17 +231,17 @@ sysbuild_main() {
                 ;;
 
             o)  # Override for a particular configuration variable.
-                config_override "${OPTARG}"
+                shtk_config_override "${OPTARG}"
                 ;;
 
             \?)
-                utils_usage_error "Unknown option -${OPTARG}"
+                shtk_cli_usage_error "Unknown option -${OPTARG}"
                 ;;
         esac
     done
     shift $((${OPTIND} - 1))
 
-    [ ${#} -ge 1 ] || utils_usage_error "No command specified"
+    [ ${#} -ge 1 ] || shtk_cli_usage_error "No command specified"
 
     local exit_code=0
 
@@ -249,7 +254,7 @@ sysbuild_main() {
             ;;
 
         *)
-            utils_usage_error "Unknown command ${command}"
+            shtk_cli_usage_error "Unknown command ${command}"
             ;;
     esac
 
