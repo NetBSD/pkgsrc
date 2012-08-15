@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/12 17:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/15 08:24:58 wiz Exp $
 #
 
-DISTNAME=	cryptokit-1.5
+DISTNAME=	cryptokit-1.6
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	security
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/639/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/891/
 
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://forge.ocamlcore.org/projects/cryptokit/
 COMMENT=	Cryptographic primitives library for Objective Caml
 LICENSE=	gnu-lgpl-v2 # with static compilation exception
-
-DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,20 +27,16 @@ SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir $
 
 BUILD_TARGET=	build
 
+PLIST_VARS+=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST_SRC+=	PLIST.opt
-post-build:
-	cd ${WRKSRC} && ocamlbuild src/cryptokit.cmxs
-
-post-install:
-	cd ${WRKSRC} && ${INSTALL_LIB} _build/src/cryptokit.cmxs ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib/cryptokit
+PLIST.opt=	yes
 .endif
 
 pre-install:
-	${RM} -rf ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib/cryptokit
 	${MKDIR} ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

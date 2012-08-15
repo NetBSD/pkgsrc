@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/12 17:53:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/08/15 08:24:58 wiz Exp $
 
-SHA1 (cryptokit-1.5.tar.gz) = 63e1ca4918186bcc7f5e7f6566c765261c4abef3
-RMD160 (cryptokit-1.5.tar.gz) = 7e1e179c3970ac8b0cdbac1ef18e9ea79de6526e
-Size (cryptokit-1.5.tar.gz) = 128907 bytes
+SHA1 (cryptokit-1.6.tar.gz) = 470d42baf7088cfbd97f4673d5a982fccfdeb274
+RMD160 (cryptokit-1.6.tar.gz) = 83daed01f9407292e2c3c5294c076b61685987f4
+Size (cryptokit-1.6.tar.gz) = 133031 bytes
