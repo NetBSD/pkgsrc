@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/08/07 06:51:58 sbd Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/08/15 16:04:44 spz Exp $
 libexec/xymon/client/clientupdate
 libexec/xymon/client/local/README
 libexec/xymon/client/logfetch
@@ -10,11 +10,12 @@ libexec/xymon/client/xymon
 libexec/xymon/client/xymoncfg
 libexec/xymon/client/xymonclient-aix.sh
 libexec/xymon/client/xymonclient-darwin.sh
+libexec/xymon/client/xymonclient-dragonfly.sh
 libexec/xymon/client/xymonclient-freebsd.sh
 libexec/xymon/client/xymonclient-hp-ux.sh
 libexec/xymon/client/xymonclient-irix.sh
 libexec/xymon/client/xymonclient-linux.sh
-libexec/xymon/client/xymonclient-${LOWER_OPSYS}.sh
+libexec/xymon/client/xymonclient-netbsd.sh
 libexec/xymon/client/xymonclient-openbsd.sh
 libexec/xymon/client/xymonclient-osf1.sh
 libexec/xymon/client/xymonclient-sco_sv.sh
