@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/11 18:52:49 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/15 15:00:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -50,13 +50,13 @@ ${GEM_LIBDIR}/lib/taglib/mpeg.rb
 ${GEM_LIBDIR}/lib/taglib/ogg.rb
 ${GEM_LIBDIR}/lib/taglib/version.rb
 ${GEM_LIBDIR}/lib/taglib/vorbis.rb
-${GEM_LIBDIR}/lib/taglib_base.so
-${GEM_LIBDIR}/lib/taglib_flac.so
-${GEM_LIBDIR}/lib/taglib_id3v1.so
-${GEM_LIBDIR}/lib/taglib_id3v2.so
-${GEM_LIBDIR}/lib/taglib_mpeg.so
-${GEM_LIBDIR}/lib/taglib_ogg.so
-${GEM_LIBDIR}/lib/taglib_vorbis.so
+${GEM_LIBDIR}/lib/taglib_base.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/taglib_flac.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/taglib_id3v1.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/taglib_id3v2.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/taglib_mpeg.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/taglib_ogg.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/taglib_vorbis.${RUBY_DLEXT}
 ${GEM_LIBDIR}/taglib-ruby.gemspec
 ${GEM_LIBDIR}/tasks/docs_coverage.rake
 ${GEM_LIBDIR}/tasks/ext.rake
