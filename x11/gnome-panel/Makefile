@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2012/08/13 14:25:44 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2012/08/15 12:02:18 obache Exp $
 #
 
 DISTNAME=		gnome-panel-2.32.1
@@ -22,7 +22,8 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	libpanel-applet/libpanelapplet-3.0.pc.in
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 
 # XXX this pkg installs a gio module to ${PREFIX}/lib/gnome-panel/modules
