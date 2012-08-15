@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/12 17:53:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/15 08:24:58 wiz Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/cryptokit
 lib/ocaml/site-lib/cryptokit/META
-lib/ocaml/site-lib/cryptokit/dllcryptokit.so
-lib/ocaml/site-lib/cryptokit/libcryptokit.a
+lib/ocaml/site-lib/cryptokit/dllcryptokit_stubs.so
+lib/ocaml/site-lib/cryptokit/libcryptokit_stubs.a
+${PLIST.opt}lib/ocaml/site-lib/cryptokit/cryptokit.a
 lib/ocaml/site-lib/cryptokit/cryptokit.cma
 lib/ocaml/site-lib/cryptokit/cryptokit.cmi
+${PLIST.opt}lib/ocaml/site-lib/cryptokit/cryptokit.cmx
+${PLIST.opt}lib/ocaml/site-lib/cryptokit/cryptokit.cmxa
+${PLIST.opt}lib/ocaml/site-lib/cryptokit/cryptokit.cmxs
 lib/ocaml/site-lib/cryptokit/cryptokit.mli
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/cryptokit
