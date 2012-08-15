@@ -1,3 +1,6 @@
+Things that sysupgrade could do
+===============================
+
 - Deduce the current NetBSD release from /etc/release and the target
   release from etc.tgz and inform the user about the changes.  This will be
   necessary if the upgrade process needs to apply specific tweaks depending
@@ -28,3 +31,14 @@
   providing a "quiet mode" flag instead.  etcupdate is interactive anyway,
   so adding more interactive steps (as long as they can be disabled) does
   not seem a big deal.
+
+
+Things that sysupgrade will NOT do
+==================================
+
+- Non-trivial rollbacks.  If rollbacks are ever implemented, they should
+  be in the form of file system snapshots OR in the form of syspkgs.
+  Getting sysupgrade to magically store files aside to allow a later
+  rollback is just too fragile and hard to get right: rollbacks will
+  rarely will be necessary, but when they are it's very likely that a
+  tool like this is broken.

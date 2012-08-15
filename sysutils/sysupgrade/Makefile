@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2012/08/06 17:06:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/15 21:21:15 jmmv Exp $
 
-DISTNAME=	sysupgrade-1.0
+DISTNAME=	sysupgrade-1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,8 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		YES
 
-UPGRADE_SUBST+=		-e 's,@SYSUPGRADE_CACHEDIR@,${CACHEDIR},g'
-UPGRADE_SUBST+=		-e 's,@SYSUPGRADE_ETCDIR@,${PKG_SYSCONFDIR},g'
+BUILD_SUBST+=		-e 's,@SYSUPGRADE_CACHEDIR@,${CACHEDIR},g'
+BUILD_SUBST+=		-e 's,@SYSUPGRADE_ETCDIR@,${PKG_SYSCONFDIR},g'
 
 BUILD_DEFS+=		VARBASE
 CACHEDIR=		${VARBASE}/cache/sysupgrade
@@ -32,31 +32,25 @@ PKG_SUGGESTED_OPTIONS=	tests
 .include "../../mk/bsd.options.mk"
 
 .if $(PKG_OPTIONS:Mtests)
-TEST_PROGS=	config_test sysupgrade_test utils_test
-
 PLIST_SUBST+=	TESTS=
 .  include "../../devel/atf-libs/buildlink3.mk"
+
+BUILD_SUBST+=		-e 's,@ATF_SH@,${BUILDLINK_PREFIX.atf-libs}/bin/atf-sh,g'
 
 do-build: build-tests
 build-tests:
 	cp ${FILESDIR}/Kyuafile ${WRKSRC}
-.for file in ${TEST_PROGS}
-	${ECHO} '#! ${BUILDLINK_PREFIX.atf-libs}/bin/atf-sh' \
-	    >${WRKSRC}/${file}
-	${CAT} ${FILESDIR}/*.subr ${FILESDIR}/${file}.sh \
-	    | ${SED} ${UPGRADE_SUBST} >>${WRKSRC}/${file}
-	${CHMOD} +x ${WRKSRC}/${file}
-.endfor
+	sed ${BUILD_SUBST} ${FILESDIR}/sysupgrade_test.sh \
+	    >${WRKSRC}/sysupgrade_test
+	chmod +x ${WRKSRC}/sysupgrade_test
 
 INSTALLATION_DIRS+=	tests/sysupgrade
 
 do-install: install-tests
 install-tests:
 	${INSTALL_DATA} ${WRKSRC}/Kyuafile ${DESTDIR}${PREFIX}/tests/sysupgrade
-.for file in ${TEST_PROGS}
-	${INSTALL_SCRIPT} ${WRKSRC}/${file} \
+	${INSTALL_SCRIPT} ${WRKSRC}/sysupgrade_test \
 	    ${DESTDIR}${PREFIX}/tests/sysupgrade/
-.endfor
 
 do-test:
 	cd ${WRKSRC} && PATH="${WRKSRC}:${PATH}" kyua test
@@ -65,14 +59,11 @@ PLIST_SUBST+=	TESTS=@comment
 .endif
 
 do-build:
-	${ECHO} '#! ${SH}' >${WRKSRC}/sysupgrade
-	${ECHO} 'set -e' >>${WRKSRC}/sysupgrade
-	${CAT} ${FILESDIR}/*.subr ${FILESDIR}/sysupgrade.sh \
-	    | ${SED} ${UPGRADE_SUBST} >>${WRKSRC}/sysupgrade
-	${ECHO} 'sysupgrade_main "$${@}"' >>${WRKSRC}/sysupgrade
-	${CHMOD} +x ${WRKSRC}/sysupgrade
+	sed ${BUILD_SUBST} ${FILESDIR}/sysupgrade.sh \
+	    | ${BUILDLINK_PREFIX.shtk}/bin/shtk build \
+	    -s ${SH} -m sysupgrade_main -o ${WRKSRC}/sysupgrade -
 .for file in sysupgrade.8 sysupgrade.conf.5 default.conf
-	sed ${UPGRADE_SUBST} <${FILESDIR}/${file} >${WRKSRC}/${file}
+	sed ${BUILD_SUBST} <${FILESDIR}/${file} >${WRKSRC}/${file}
 .endfor
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
@@ -86,4 +77,5 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_DATA} ${WRKSRC}/default.conf ${DESTDIR}${EGDIR}
 
+.include "../../devel/shtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
