@@ -1,0 +1,148 @@
+.\" Copyright 2012 Google Inc.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions are
+.\" met:
+.\"
+.\" * Redistributions of source code must retain the above copyright
+.\"   notice, this list of conditions and the following disclaimer.
+.\" * Redistributions in binary form must reproduce the above copyright
+.\"   notice, this list of conditions and the following disclaimer in the
+.\"   documentation and/or other materials provided with the distribution.
+.\" * Neither the name of Google Inc. nor the names of its contributors
+.\"   may be used to endorse or promote products derived from this software
+.\"   without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+.\" "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+.\" LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+.\" A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+.\" OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+.\" SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+.\" LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+.\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.Dd August 15, 2012
+.Dt SHTK 1
+.Os
+.Sh NAME
+.Nm shtk
+.Nd interface to the Shell Toolkit
+.Sh SYNOPSIS
+.Nm
+build
+.Op Fl m Ar main_function
+.Op Fl o Ar output_file
+.Op Fl s Ar shell
+.Op Ar input_file
+.Nm
+version
+.Sh DESCRIPTION
+The Shell Toolkit, or
+.Nm
+for short, is a collection of modules written in
+.Xr sh 1
+that provide common functionality to simplify the implementation of complex
+shell scripts.
+.Pp
+The tool described in this page, also named
+.Nm ,
+is a program that accompanies the Shell Toolkit and provides functionality that
+may be necessary to use the toolkit.
+.Pp
+The interface of
+.Nm
+is that of a program with commands as shown in the synopsis section.
+The following subsections describe the various commands supported by the tool.
+.Ss The build command
+The build command takes a script that uses
+.Nm
+modules and generates an executable script with the necessary boilerplate code
+to be able to locate said modules.
+.Pp
+The
+.Ar input_file
+argument specifies the path to the file to process.
+This file should end with an
+.Sq .sh
+extension, in which case the build command will proceed to generate a binary of
+the same name without any extension.
+If the extension is not present, then the name of the output file must be
+provided by specifying the
+.Fl o
+flag.
+The input file can also be
+.Sq - ,
+in which case the code is read from the standard input.
+.Pp
+The following options are supported:
+.Bl -tag -width XXXX
+.It Fl m Ar main_function
+Name of the function that implements the entry point of the program.
+.Pp
+All scripts that use
+.Nm
+should implement a main function and should avoid placing any code at the top
+level of the file.
+The main function is automatically executed by the generated script.
+If the value of
+.Ar main_function
+is empty, then no call to main is issued which may be necessary if the script
+already has a call to main for whatever reason (e.g. the script also uses
+.Xr atf-sh 1 ) .
+.Pp
+Default:
+.Sq main .
+.It Fl o Ar output_file
+Path to the output file to generate.
+.Pp
+Default: if
+.Ar input_file
+ends in
+.Sq .sh ,
+the output file has the same name as the input file but without the extension.
+Otherwise this flag must be specified.
+.It Fl s Ar shell
+Path to the shell interpreter to write in the shebang line of the file.
+.Pp
+Default:
+.Pa @SHTK_SHELL@ .
+.El
+.Ss The version command
+The version command prints the name of the package and its version to the
+standard output.
+This command always exits successfully.
+.Sh ENVIRONMENT
+.Bl -tag -width XXXX
+.It Va SHTK_MODULESDIR
+Overrides the built-in location of the modules.
+.It Va SHTK_SHELL
+Overrides the built-in location of the default shell interpreter.
+.El
+.Sh FILES
+.Bl -tag -width XXXX
+.It Pa @SHTK_MODULESDIR@/
+Location of the
+.Nm
+modules.
+.El
+.Sh SEE ALSO
+Unfortunately, there currently is no standalone documentation of the
+.Nm .
+The documentation exists, but is in the form of docstrings next to the
+functions they describe.
+Such docstrings document the purpose of the function, the parameters it
+takes, its return value (if any) and any side-effects.
+.Pp
+Please look at the files in
+.Pa @SHTK_MODULESDIR@
+for additional details.
+.Sh AUTHORS
+The
+.Nm
+package was developed by
+.An Julio Merino
+.Aq jmmv@NetBSD.org .

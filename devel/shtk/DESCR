@@ -1,0 +1,10 @@
+The Shell Toolkit, or shtk for short, is a collection of modules written in
+sh(1) that provide common functionality to simplify the implementation of
+complex shell scripts.  These modules provide things like utilities to
+manipulate data types, helpers to expose a common CLI, or higher-level
+abstractions such as the processing of configuration files.
+
+The included shtk(1) utility exposes convenience functionality to let the
+user "build" shell scripts that use shtk.  Build, in this case, just means
+adding common boilerplate code to the initialization of the script to load
+the shtk common code.

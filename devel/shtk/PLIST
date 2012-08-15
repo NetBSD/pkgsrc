@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/15 21:18:13 jmmv Exp $
+bin/shtk
+man/man1/shtk.1
+share/shtk/base.subr
+share/shtk/bootstrap.subr
+share/shtk/cli.subr
+share/shtk/config.subr
+share/shtk/cvs.subr
+share/shtk/list.subr
+share/shtk/process.subr
+${TESTS}tests/shtk/Kyuafile
+${TESTS}tests/shtk/base_test
+${TESTS}tests/shtk/cli_test
+${TESTS}tests/shtk/config_test
+${TESTS}tests/shtk/cvs_test
+${TESTS}tests/shtk/list_test
+${TESTS}tests/shtk/process_test
+${TESTS}tests/shtk/shtk_test
