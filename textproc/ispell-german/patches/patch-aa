@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2008/11/10 18:15:05 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2012/08/15 20:28:05 wiz Exp $
 
---- Makefile.orig	2008-11-06 19:04:26.000000000 +0000
+--- Makefile.orig	2010-01-18 09:07:38.000000000 +0000
 +++ Makefile
-@@ -80,8 +80,8 @@ HUNSPELL_BIN = hunspell
- # we need to make sure we use latin1:
+@@ -81,8 +81,8 @@ HUNSPELL_BIN = hunspell
  HUNSPELL = $(HUNSPELL_BIN) `$(HUNSPELL_BIN) -h 2>&1 | grep -q "hunspell \\-i" && echo "-i latin1"`
+ 
  
 -SQ = sq
 -UNSQ = unsq
