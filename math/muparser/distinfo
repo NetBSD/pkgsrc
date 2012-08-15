@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/12/16 17:16:11 marino Exp $
+$NetBSD: distinfo,v 1.5 2012/08/15 17:38:49 drochner Exp $
 
-SHA1 (muparser_v134.tar.gz) = d6d834d3ba2bd3c316c9b3070369d32701703f78
-RMD160 (muparser_v134.tar.gz) = ee7e0e4ebedde6368d1bfa100da23ac3ce946500
-Size (muparser_v134.tar.gz) = 1013841 bytes
+SHA1 (muparser_v2_2_2.zip) = 830383b1bcfa706be5a6ac8b7ba43f32f16a1497
+RMD160 (muparser_v2_2_2.zip) = efcaea175523b2e7b3e0d2abaf1ee8767d142da3
+Size (muparser_v2_2_2.zip) = 1508675 bytes
 SHA1 (patch-aa) = ce9187280bdaf5c00765723b01412b232fcbe4d7
