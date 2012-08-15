@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2597 2012/08/15 20:21:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2598 2012/08/15 20:23:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/pinentry to 0.8.2 [drochner 2012-08-15]
 	Updated devel/mdds to 0.6.0nb1 [wiz 2012-08-15]
 	Updated devel/php-libawl to 0.53 [wiz 2012-08-15]
+	Updated www/davical to 1.1.1 [wiz 2012-08-15]
