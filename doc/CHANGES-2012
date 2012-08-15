@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2595 2012/08/15 18:12:43 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2596 2012/08/15 18:13:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3982,3 +3982,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/muparser to 200.2.2.2 [drochner 2012-08-15]
 	Updated misc/figlet to 2.2.5 [drochner 2012-08-15]
 	Updated security/pinentry to 0.8.2 [drochner 2012-08-15]
+	Updated devel/mdds to 0.6.0nb1 [wiz 2012-08-15]
