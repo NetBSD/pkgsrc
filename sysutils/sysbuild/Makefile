@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2012/07/25 12:18:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2012/08/15 21:20:14 jmmv Exp $
 
-DISTNAME=	sysbuild-2.0
+DISTNAME=	sysbuild-2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,20 +30,19 @@ PKG_SUGGESTED_OPTIONS=	tests
 .include "../../mk/bsd.options.mk"
 
 .if $(PKG_OPTIONS:Mtests)
-TEST_PROGS=	config_test cvs_test sysbuild_test sysbuild4cron_test utils_test
+TEST_PROGS=	sysbuild_test sysbuild4cron_test
 
 PLIST_SUBST+=	TESTS=
 .  include "../../devel/atf-libs/buildlink3.mk"
+
+BUILD_SUBST+=		-e 's,@ATF_SH@,${BUILDLINK_PREFIX.atf-libs}/bin/atf-sh,g'
 
 do-build: build-tests
 build-tests:
 	cp ${FILESDIR}/Kyuafile ${WRKSRC}
 .for file in ${TEST_PROGS}
-	${ECHO} '#! ${BUILDLINK_PREFIX.atf-libs}/bin/atf-sh' \
-	    >${WRKSRC}/${file}
-	${CAT} ${FILESDIR}/*.subr ${FILESDIR}/${file}.sh \
-	    | ${SED} ${BUILD_SUBST} >>${WRKSRC}/${file}
-	${CHMOD} +x ${WRKSRC}/${file}
+	sed ${BUILD_SUBST} <${FILESDIR}/${file}.sh >${WRKSRC}/${file}
+	chmod +x ${WRKSRC}/${file}
 .endfor
 
 INSTALLATION_DIRS+=	tests/sysbuild
@@ -63,12 +62,9 @@ PLIST_SUBST+=	TESTS=@comment
 
 do-build:
 .for file in sysbuild sysbuild4cron
-	${ECHO} '#! ${SH}' >${WRKSRC}/${file}
-	${ECHO} 'set -e' >>${WRKSRC}/${file}
-	${CAT} ${FILESDIR}/*.subr ${FILESDIR}/${file}.sh \
-	    | ${SED} ${BUILD_SUBST} >>${WRKSRC}/${file}
-	${ECHO} '${file}_main "$${@}"' >>${WRKSRC}/${file}
-	${CHMOD} +x ${WRKSRC}/${file}
+	sed ${BUILD_SUBST} ${FILESDIR}/${file}.sh \
+	    | ${BUILDLINK_PREFIX.shtk}/bin/shtk build \
+	    -s ${SH} -m ${file}_main -o ${WRKSRC}/${file} -
 .endfor
 .for file in sysbuild.1 sysbuild4cron.1 default.conf
 	sed ${BUILD_SUBST} <${FILESDIR}/${file} >${WRKSRC}/${file}
@@ -87,4 +83,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${EGDIR}
 .endfor
 
+.include "../../devel/shtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
