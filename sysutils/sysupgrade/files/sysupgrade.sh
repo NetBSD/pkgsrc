@@ -29,6 +29,11 @@
 # \file sysupgrade.sh
 # Entry point and main program logic.
 
+shtk_import cli
+shtk_import config
+shtk_import list
+shtk_import process
+
 
 # List of valid configuration variables.
 #
@@ -56,11 +61,11 @@ SYSUPGRADE_CONFIG_VARS="AUTOCLEAN CACHEDIR DESTDIR ETCUPDATE KERNEL
 # we let him shoot himself in the foot if he so desires.
 sysupgrade_set_defaults() {
     # Please remember to update sysupgrade(8) if you change any default values.
-    config_set AUTOCLEAN "yes"
-    config_set CACHEDIR "${SYSUPGRADE_CACHEDIR}"
-    config_set ETCUPDATE "yes"
-    config_set KERNEL "AUTO"
-    config_set SETS "AUTO"
+    shtk_config_set AUTOCLEAN "yes"
+    shtk_config_set CACHEDIR "${SYSUPGRADE_CACHEDIR}"
+    shtk_config_set ETCUPDATE "yes"
+    shtk_config_set KERNEL "AUTO"
+    shtk_config_set SETS "AUTO"
 }
 
 
@@ -70,27 +75,27 @@ sysupgrade_set_defaults() {
 # It takes care of performing any required post-processing on the configuration
 # variables, such as expanding the magic AUTO keyword to the actual value.
 sysupgrade_auto_config() {
-    if [ "$(config_get_default KERNEL "")" = "AUTO" ]; then
-        local kernel="$(config_get_default DESTDIR "")/netbsd"
+    if [ "$(shtk_config_get_default KERNEL "")" = "AUTO" ]; then
+        local kernel="$(shtk_config_get_default DESTDIR "")/netbsd"
         if [ -e "${kernel}" ]; then
             local kernel_name="$(config -x "${kernel}" | head -n 1 \
                                  | cut -d \" -f 2)"
-            [ -n "${kernel_name}" ] || utils_error "Failed to determine" \
+            [ -n "${kernel_name}" ] || shtk_cli_error "Failed to determine" \
                 "kernel name; please set KERNEL explicitly"
-            config_set KERNEL "${kernel_name}"
+            shtk_config_set KERNEL "${kernel_name}"
         else
-            config_unset KERNEL
+            shtk_config_unset KERNEL
         fi
     fi
 
-    if [ "$(config_get_default SETS "")" = "AUTO" ]; then
-        local mtree="$(config_get_default DESTDIR "")/etc/mtree/"
+    if [ "$(shtk_config_get_default SETS "")" = "AUTO" ]; then
+        local mtree="$(shtk_config_get_default DESTDIR "")/etc/mtree/"
         if [ -d "${mtree}" ]; then
             local all_sets="$(cd "${mtree}" && echo set.* \
                               | sed -e 's,set\.,,g')"
-            config_set SETS "${all_sets}"
+            shtk_config_set SETS "${all_sets}"
         else
-            config_unset SETS
+            shtk_config_unset SETS
         fi
     fi
 }
@@ -108,19 +113,19 @@ sysupgrade_config() {
                 ;;
 
             \?)
-                utils_usage_error "Unknown option -${OPTARG}"
+                shtk_cli_usage_error "Unknown option -${OPTARG}"
                 ;;
         esac
     done
     shift $((${OPTIND} - 1))
 
-    [ ${#} -eq 0 ] || utils_usage_error "config does not take any arguments"
+    [ ${#} -eq 0 ] || shtk_cli_usage_error "config does not take any arguments"
 
     [ "${eval_auto}" = no ] || sysupgrade_auto_config
 
     for var in ${SYSUPGRADE_CONFIG_VARS}; do
-        if config_has "${var}"; then
-            echo "${var} = $(config_get "${var}")"
+        if shtk_config_has "${var}"; then
+            echo "${var} = $(shtk_config_get "${var}")"
         else
             echo "${var} is undefined"
         fi
@@ -136,7 +141,7 @@ sysupgrade_config() {
 get_set() {
     local set_name="${1}"; shift
 
-    echo "$(config_get CACHEDIR)/${set_name}.tgz"
+    echo "$(shtk_config_get CACHEDIR)/${set_name}.tgz"
 }
 
 
@@ -147,8 +152,8 @@ require_set() {
     local set_name="${1}"; shift
 
     local set_tgz="$(get_set "${set_name}")"
-    [ -f "${set_tgz}" ] || utils_error "Cannot find ${set_name}; did you run" \
-        "'${Utils_ProgName} fetch' first?"
+    [ -f "${set_tgz}" ] || shtk_cli_error "Cannot find ${set_name}; did you run" \
+        "'$(shtk_cli_progname) fetch' first?"
 }
 
 
@@ -163,11 +168,11 @@ extract_set() {
 
     require_set "${set_name}"
 
-    local destdir="$(config_get_default DESTDIR "")"
+    local destdir="$(shtk_config_get_default DESTDIR "")"
     local set_tgz="$(get_set "${set_name}")"
 
-    utils_info "Extracting ${set_name} into ${destdir}/"
-    [ -z "${destdir}" ] || utils_run mkdir -p "${destdir}"
+    shtk_cli_info "Extracting ${set_name} into ${destdir}/"
+    [ -z "${destdir}" ] || shtk_process_run mkdir -p "${destdir}"
     progress -zf "${set_tgz}" tar -xp -C "${destdir}/" -f -
 }
 
@@ -177,15 +182,15 @@ extract_set() {
 # \param releasedir Optional override of the release directory to use.
 sysupgrade_fetch() {
     [ ${#} -lt 2 ] \
-        || utils_usage_error "fetch takes zero or one arguments"
+        || shtk_cli_usage_error "fetch takes zero or one arguments"
 
-    [ -z "${1}" ] || config_set "RELEASEDIR" "${1}"
+    [ -z "${1}" ] || shtk_config_set "RELEASEDIR" "${1}"
 
-    local releasedir="$(config_get RELEASEDIR)"
-    local cachedir="$(config_get CACHEDIR)"
-    local fetch_sets="$(config_get SETS)"
-    if config_has KERNEL; then
-        fetch_sets="${fetch_sets} kern-$(config_get KERNEL)"
+    local releasedir="$(shtk_config_get RELEASEDIR)"
+    local cachedir="$(shtk_config_get CACHEDIR)"
+    local fetch_sets="$(shtk_config_get SETS)"
+    if shtk_config_has KERNEL; then
+        fetch_sets="${fetch_sets} kern-$(shtk_config_get KERNEL)"
     fi
 
     case "${releasedir}" in
@@ -195,13 +200,13 @@ sysupgrade_fetch() {
             for set_name in ${fetch_sets}; do
                 local file="${cachedir}/${set_name}.tgz"
                 if [ -f "${file}" ]; then
-                    utils_warning "Reusing existing ${file}"
+                    shtk_cli_warning "Reusing existing ${file}"
                 else
                     local url="${releasedir}/binary/sets/${set_name}.tgz"
-                    utils_info "Downloading ${url} into ${cachedir}"
+                    shtk_cli_info "Downloading ${url} into ${cachedir}"
                     rm -f "${file}"
                     ftp -R -o"${file}.tmp" "${url}" \
-                        || utils_error "Failed to fetch ${url}"
+                        || shtk_cli_error "Failed to fetch ${url}"
                     mv "${file}.tmp" "${file}"
                 fi
             done
@@ -212,15 +217,15 @@ sysupgrade_fetch() {
 
             for set_name in ${fetch_sets}; do
                 local src="${releasedir}/binary/sets/${set_name}.tgz"
-                utils_info "Linking local ${src} into ${cachedir}"
-                [ -f "${src}" ] || utils_error "Cannot open ${src}"
+                shtk_cli_info "Linking local ${src} into ${cachedir}"
+                [ -f "${src}" ] || shtk_cli_error "Cannot open ${src}"
                 ln -s -f "${src}" "${cachedir}/${set_name}.tgz" \
-                    || utils_error "Failed to link ${src} into ${cachedir}"
+                    || shtk_cli_error "Failed to link ${src} into ${cachedir}"
             done
             ;;
 
         *)
-            utils_error "Don't know how to fetch from ${releasedir}; must" \
+            shtk_cli_error "Don't know how to fetch from ${releasedir}; must" \
                 "be an absolute path or an FTP/HTTP site"
             ;;
     esac
@@ -232,25 +237,25 @@ sysupgrade_fetch() {
 # \param kernel_name Name of the kernel set to use; optional.
 sysupgrade_kernel() {
     [ ${#} -lt 2 ] \
-        || utils_usage_error "kernel takes zero or one arguments"
+        || shtk_cli_usage_error "kernel takes zero or one arguments"
 
     local kernel_name
     if [ -n "${1}" ]; then
         kernel_name="${1}"
-    elif config_has KERNEL; then
-        kernel_name="$(config_get KERNEL)"
+    elif shtk_config_has KERNEL; then
+        kernel_name="$(shtk_config_get KERNEL)"
     else
-        utils_info "Skipping kernel installation (KERNEL not set)"
+        shtk_cli_info "Skipping kernel installation (KERNEL not set)"
         return 0
     fi
 
     require_set "kern-${kernel_name}"
 
-    local destdir="$(config_get_default DESTDIR "")"
-    utils_info "Upgrading kernel using ${kernel_name} in ${destdir}/"
+    local destdir="$(shtk_config_get_default DESTDIR "")"
+    shtk_cli_info "Upgrading kernel using ${kernel_name} in ${destdir}/"
 
     if [ -f "${destdir}/netbsd" ]; then
-        utils_info "Backing up 'netbsd' kernel as 'onetbsd'"
+        shtk_cli_info "Backing up 'netbsd' kernel as 'onetbsd'"
         cp "${destdir}/netbsd" "${destdir}/onetbsd"
     fi
     extract_set "kern-${kernel_name}"
@@ -260,14 +265,14 @@ sysupgrade_kernel() {
 # Installs new kernel modules.
 sysupgrade_modules() {
     [ ${#} -eq 0 ] \
-        || utils_usage_error "modules does not take any arguments"
+        || shtk_cli_usage_error "modules does not take any arguments"
 
-    if ! utils_contains modules $(config_get SETS); then
-        utils_info "Skipping modules installation (modules not in SETS)"
+    if ! shtk_list_contains modules $(shtk_config_get SETS); then
+        shtk_cli_info "Skipping modules installation (modules not in SETS)"
         return 0
     fi
 
-    utils_info "Upgrading kernel modules"
+    shtk_cli_info "Upgrading kernel modules"
 
     extract_set modules
 }
@@ -277,10 +282,10 @@ sysupgrade_modules() {
 #
 # \param ... Names of the sets to extract, to override SETS.
 sysupgrade_sets() {
-    utils_info "Upgrading base system"
+    shtk_cli_info "Upgrading base system"
 
     local sets=
-    for set_name in "${@:-$(config_get SETS)}"; do
+    for set_name in "${@:-$(shtk_config_get SETS)}"; do
         case "${set_name}" in
             *etc) ;;  # Handled by etcupdate.
             kern-*) ;;  # Handled by kernel.
@@ -301,20 +306,20 @@ sysupgrade_sets() {
 
 # Runs etcupdate to install new configuration files.
 sysupgrade_etcupdate() {
-    [ ${#} -eq 0 ] || utils_usage_error "etcupdate does not take any arguments"
+    [ ${#} -eq 0 ] || shtk_cli_usage_error "etcupdate does not take any arguments"
 
-    if config_has DESTDIR; then
-        utils_info "Skipping etcupdate (DESTDIR upgrades not supported)"
+    if shtk_config_has DESTDIR; then
+        shtk_cli_info "Skipping etcupdate (DESTDIR upgrades not supported)"
         return 0
     fi
 
-    local sets="$(utils_filter '*etc' $(config_get SETS))"
+    local sets="$(shtk_list_filter '*etc' $(shtk_config_get SETS))"
     if [ -z "${sets}" ]; then
-        utils_info "Skipping etcupdate (no etc sets in SETS)"
+        shtk_cli_info "Skipping etcupdate (no etc sets in SETS)"
         return 0
     fi
-    if ! utils_contains etc ${sets}; then
-        utils_info "Skipping etcupdate (required etc not in SETS)"
+    if ! shtk_list_contains etc ${sets}; then
+        shtk_cli_info "Skipping etcupdate (required etc not in SETS)"
         return 0
     fi
 
@@ -324,7 +329,7 @@ sysupgrade_etcupdate() {
         sflags="${sflags} -s$(get_set "${set_name}")"
     done
 
-    utils_info "Upgrading /etc interactively"
+    shtk_cli_info "Upgrading /etc interactively"
     etcupdate -a -l ${sflags}
 }
 
@@ -334,13 +339,13 @@ sysupgrade_etcupdate() {
 # \param ... Arguments to pass to postinstall(8).
 sysupgrade_postinstall() {
     local sets=
-    local sets="$(utils_filter '*etc' $(config_get SETS))"
+    local sets="$(shtk_list_filter '*etc' $(shtk_config_get SETS))"
     if [ -z "${sets}" ]; then
-        utils_info "Skipping postinstall (no etc sets in SETS)"
+        shtk_cli_info "Skipping postinstall (no etc sets in SETS)"
         return 0
     fi
-    if ! utils_contains etc ${sets}; then
-        utils_info "Skipping postinstall (required etc not in SETS)"
+    if ! shtk_list_contains etc ${sets}; then
+        shtk_cli_info "Skipping postinstall (required etc not in SETS)"
         return 0
     fi
 
@@ -350,23 +355,23 @@ sysupgrade_postinstall() {
         sflags="${sflags} -s$(get_set "${set_name}")"
     done
 
-    utils_info "Performing postinstall checks"
-    local destdir="$(config_get_default DESTDIR "")"
-    if config_has POSTINSTALL_AUTOFIX; then
+    shtk_cli_info "Performing postinstall checks"
+    local destdir="$(shtk_config_get_default DESTDIR "")"
+    if shtk_config_has POSTINSTALL_AUTOFIX; then
         postinstall "-d${destdir}/" ${sflags} fix \
-            $(config_get POSTINSTALL_AUTOFIX)
+            $(shtk_config_get POSTINSTALL_AUTOFIX)
     fi
     postinstall "-d${destdir}/" ${sflags} "${@:-check}" \
-        || utils_error "Some postinstall(8) checks have failed"
+        || shtk_cli_error "Some postinstall(8) checks have failed"
 }
 
 
 # Cleans up the cache directory.
 sysupgrade_clean() {
-    [ ${#} -eq 0 ] || utils_usage_error "clean does not take any arguments"
+    [ ${#} -eq 0 ] || shtk_cli_usage_error "clean does not take any arguments"
 
-    utils_info "Cleaning downloaded files"
-    rm -f "$(config_get CACHEDIR)"/*.tgz*
+    shtk_cli_info "Cleaning downloaded files"
+    rm -f "$(shtk_config_get CACHEDIR)"/*.tgz*
 }
 
 
@@ -378,23 +383,23 @@ sysupgrade_clean() {
 # \param releasedir Optional override of the release directory to use.
 sysupgrade_auto() {
     [ ${#} -lt 2 ] \
-        || utils_usage_error "auto takes zero or one arguments"
+        || shtk_cli_usage_error "auto takes zero or one arguments"
 
-    [ -z "${1}" ] || config_set "RELEASEDIR" "${1}"
+    [ -z "${1}" ] || shtk_config_set "RELEASEDIR" "${1}"
 
     local stages=
     stages="fetch modules kernel sets"
-    config_get_bool "ETCUPDATE" && stages="${stages} etcupdate"
+    shtk_config_get_bool "ETCUPDATE" && stages="${stages} etcupdate"
     stages="${stages} postinstall"
-    config_get_bool "AUTOCLEAN" && stages="${stages} clean"
+    shtk_config_get_bool "AUTOCLEAN" && stages="${stages} clean"
 
-    utils_info "Starting auto-update with stages: ${stages}"
+    shtk_cli_info "Starting auto-update with stages: ${stages}"
     for stage in ${stages}; do
         sysupgrade_${stage}
     done
 
-    config_get_bool "AUTOCLEAN" || utils_info "Distribution sets not deleted;" \
-        "further ${Utils_ProgName} commands will reuse them"
+    shtk_config_get_bool "AUTOCLEAN" || shtk_cli_info "Distribution sets not deleted;" \
+        "further $(shtk_cli_progname) commands will reuse them"
 }
 
 
@@ -406,7 +411,7 @@ sysupgrade_auto() {
 sysupgrade_main() {
     local config_file="${SYSUPGRADE_ETCDIR}/sysupgrade.conf"
 
-    config_init ${SYSUPGRADE_CONFIG_VARS}
+    shtk_config_init ${SYSUPGRADE_CONFIG_VARS}
 
     while getopts ':c:d:o:' arg "${@}"; do
         case "${arg}" in
@@ -415,21 +420,21 @@ sysupgrade_main() {
                 ;;
 
             d)  # Path to the destdir.
-                config_set DESTDIR "${OPTARG}"
+                shtk_config_set DESTDIR "${OPTARG}"
                 ;;
 
             o)  # Override for a particular configuration variable.
-                config_override "${OPTARG}"
+                shtk_config_override "${OPTARG}"
                 ;;
 
             \?)
-                utils_usage_error "Unknown option -${OPTARG}"
+                shtk_cli_usage_error "Unknown option -${OPTARG}"
                 ;;
         esac
     done
     shift $((${OPTIND} - 1))
 
-    [ ${#} -ge 1 ] || utils_usage_error "No command specified"
+    [ ${#} -ge 1 ] || shtk_cli_usage_error "No command specified"
 
     local exit_code=0
 
@@ -437,7 +442,7 @@ sysupgrade_main() {
     case "${command}" in
         auto|clean|etcupdate|fetch|kernel|modules|sets|postinstall)
             sysupgrade_set_defaults
-            config_load "${config_file}"
+            shtk_config_load "${config_file}"
             sysupgrade_auto_config
             "sysupgrade_$(echo "${command}" | tr - _)" "${@}" \
                 || exit_code="${?}"
@@ -445,13 +450,13 @@ sysupgrade_main() {
 
         config)
             sysupgrade_set_defaults
-            config_load "${config_file}"
+            shtk_config_load "${config_file}"
             "sysupgrade_$(echo "${command}" | tr - _)" "${@}" \
                 || exit_code="${?}"
             ;;
 
         *)
-            utils_usage_error "Unknown command ${command}"
+            shtk_cli_usage_error "Unknown command ${command}"
             ;;
     esac
 
