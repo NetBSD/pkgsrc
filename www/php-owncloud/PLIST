@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/07/10 13:20:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/08/16 16:05:07 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -494,6 +494,7 @@ share/owncloud/3rdparty/simpletest/url.php
 share/owncloud/3rdparty/simpletest/user_agent.php
 share/owncloud/3rdparty/simpletest/web_tester.php
 share/owncloud/3rdparty/simpletest/xml.php
+share/owncloud/3rdparty/smb4php/smb.php
 share/owncloud/3rdparty/timepicker/GPL-LICENSE.txt
 share/owncloud/3rdparty/timepicker/MIT-LICENSE.txt
 share/owncloud/3rdparty/timepicker/css/include/images/ui-bg_diagonals-thick_18_b81900_40x40.png
@@ -542,7 +543,6 @@ share/owncloud/3rdparty/when/When.php
 share/owncloud/AUTHORS
 share/owncloud/COPYING-AGPL
 share/owncloud/COPYING-README
-share/owncloud/Changelog
 share/owncloud/README
 share/owncloud/apps/admin_dependencies_chk/appinfo/app.php
 share/owncloud/apps/admin_dependencies_chk/appinfo/info.xml
@@ -956,11 +956,14 @@ share/owncloud/apps/files_external/appinfo/info.xml
 share/owncloud/apps/files_external/appinfo/version
 share/owncloud/apps/files_external/lib/ftp.php
 share/owncloud/apps/files_external/lib/google.php
+share/owncloud/apps/files_external/lib/smb.php
+share/owncloud/apps/files_external/lib/streamwrapper.php
 share/owncloud/apps/files_external/lib/swift.php
 share/owncloud/apps/files_external/lib/webdav.php
 share/owncloud/apps/files_external/tests/config.php
 share/owncloud/apps/files_external/tests/ftp.php
 share/owncloud/apps/files_external/tests/google.php
+share/owncloud/apps/files_external/tests/smb.php
 share/owncloud/apps/files_external/tests/swift.php
 share/owncloud/apps/files_external/tests/webdav.php
 share/owncloud/apps/files_imageviewer/appinfo/app.php
@@ -1309,11 +1312,13 @@ share/owncloud/apps/files_sharing/ajax/getstatuses.php
 share/owncloud/apps/files_sharing/ajax/setpermissions.php
 share/owncloud/apps/files_sharing/ajax/share.php
 share/owncloud/apps/files_sharing/ajax/toggleresharing.php
+share/owncloud/apps/files_sharing/ajax/togglesharewitheveryone.php
 share/owncloud/apps/files_sharing/ajax/unshare.php
 share/owncloud/apps/files_sharing/ajax/userautocomplete.php
 share/owncloud/apps/files_sharing/appinfo/app.php
 share/owncloud/apps/files_sharing/appinfo/database.xml
 share/owncloud/apps/files_sharing/appinfo/info.xml
+share/owncloud/apps/files_sharing/appinfo/update.php
 share/owncloud/apps/files_sharing/appinfo/version
 share/owncloud/apps/files_sharing/css/sharing.css
 share/owncloud/apps/files_sharing/get.php
@@ -1662,10 +1667,7 @@ share/owncloud/apps/user_webfinger/host-meta.php
 share/owncloud/apps/user_webfinger/webfinger.php
 share/owncloud/config/config.sample.php
 share/owncloud/core/ajax/appconfig.php
-share/owncloud/core/ajax/grouplist.php
 share/owncloud/core/ajax/translations.php
-share/owncloud/core/ajax/userlist.php
-share/owncloud/core/ajax/validateuser.php
 share/owncloud/core/ajax/vcategories/add.php
 share/owncloud/core/ajax/vcategories/delete.php
 share/owncloud/core/ajax/vcategories/edit.php
