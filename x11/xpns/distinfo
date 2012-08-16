@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/06/16 04:00:53 dholland Exp $
+$NetBSD: distinfo,v 1.5 2012/08/16 15:48:21 joerg Exp $
 
 SHA1 (pns_source.tar.Z) = 2fab75ecdcddba9250a836740821202d8b19f5b8
 RMD160 (pns_source.tar.Z) = 0f55bf6c830f179dd0d20e32884159ab2f8fea1d
@@ -14,6 +14,7 @@ SHA1 (patch-cellrefr_c) = 4349f32f29f64dc53e2b5d12b64141980795e9fb
 SHA1 (patch-filekaio_c) = 92ef6420060a9f81f73584e6ecfc3a30d1dd11f5
 SHA1 (patch-filesteio_c) = 482fc6a7eadbb53962a72045bfb8510ec7321f0b
 SHA1 (patch-filetraio_c) = 5648f5cdb9749dba9c8fa6044345c57f32aebf0e
+SHA1 (patch-habreakmisc.c) = b5998f37fb629ebfd51558097dcf2db4f6d0ffa7
 SHA1 (patch-hadelmisc_c) = ae7b49b1b62b7397bc6d4903956d7696982a2b8c
 SHA1 (patch-hakasete_c) = 29a5796a38864f62e99f6f303c51da6f7c262f0d
 SHA1 (patch-halook_c) = bf6f0916edf872be522fe916629e4aaa643948fa
