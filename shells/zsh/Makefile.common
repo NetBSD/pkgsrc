@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2012/07/22 10:03:40 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.66 2012/08/16 13:30:27 wiz Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
 
 USE_TOOLS+=		makeinfo
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 TEXINFO_REQD=		4.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -126,10 +126,10 @@ PLIST.dynamic=	yes
 .undef MANZ
 
 pre-install:
-	@cd ${WRKSRC}/Completion; ${FIND} . -name \*.orig -exec ${RM} \{\} \;
+	cd ${WRKSRC}/Completion; ${FIND} . -name \*.orig -exec ${RM} \{\} \;
 
+INSTALLATION_DIRS+=	share/doc/zsh
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/zsh
 	cd ${WRKSRC}/Etc && ${INSTALL_DATA} BUGS FAQ 	\
 		${DESTDIR}${PREFIX}/share/doc/zsh
 	cd ${WRKSRC} && ${INSTALL_DATA} FEATURES NEWS	\
@@ -143,15 +143,15 @@ post-install:
 do-test: do-su-test
 
 do-su-test:
-	@${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${ECHO_MSG} "*** Warning: This test needs to be run as root"
-	@${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	realtarget="real-su-test";					\
 	action="install";						\
 	${_SU_TARGET}
 
 real-su-test:
-	@${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
-	@cd ${WRKSRC} && ${MAKE} check
-	@cd ${WRKSRC}/Test && ${MAKE} clean
+	cd ${WRKSRC} && ${MAKE} check
+	cd ${WRKSRC}/Test && ${MAKE} clean
