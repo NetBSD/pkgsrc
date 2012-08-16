@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11447 2012/08/16 03:42:02 taca Exp $
+$NetBSD: TODO,v 1.11448 2012/08/16 15:01:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -376,6 +376,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o alsa-lib-1.0.25
 	o alsa-plugins-1.0.25
 	o alsa-utils-1.0.25
+	o amarok-2.6.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amsn-0.98.4
 	o angband-3.2
@@ -461,6 +462,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o cdk-5.0.20120323
 	o cdlabelgen-4.2.0
 	o cdrkit-1.1.10
+	o cdrtools-3.01alpha08
 	o celestia-1.6.0
 	o cfengine-3.3.4
 	o cfitsio-3.310
@@ -598,6 +600,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o flightgear-2.6
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
+	o fluidsynth-1.1.6
 	o fluxbox-1.3.2
 	o fox-1.6.41
 	o freeciv-2.3.2
@@ -938,7 +941,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nulib2-220
-	o nut-17.11
+	o nut-17.12
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o ocaml-4.00.0
@@ -1083,7 +1086,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-1.8.7.370
-	o rudiments-0.36.1
+	o rudiments-0.37
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.4
 	o samba-3.5.17
@@ -1253,7 +1256,7 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wine-devel-1.5.9 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wireshark-1.8.1
+	o wireshark-1.8.2
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
