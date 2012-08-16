@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2012/03/09 12:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/08/16 15:41:27 drochner Exp $
 #
 
-DISTNAME=		veusz-1.14
-PKGREVISION=		4
+DISTNAME=		veusz-1.16
 CATEGORIES=		graphics
 MASTER_SITES=		http://download.gna.org/veusz/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/veusz/
 COMMENT=		Scientific plotting package
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
