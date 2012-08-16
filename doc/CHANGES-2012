@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2602 2012/08/16 11:50:59 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2603 2012/08/16 11:51:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/sysbuild to 2.1 [jmmv 2012-08-15]
 	Updated sysutils/sysupgrade to 1.1 [jmmv 2012-08-15]
 	Updated archivers/ocaml-zip to 1.04 [wiz 2012-08-16]
+	Updated devel/ocaml-react to 0.9.4 [wiz 2012-08-16]
