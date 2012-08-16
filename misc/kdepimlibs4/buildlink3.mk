@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/06/14 22:09:13 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.19.2.1 2012/08/16 20:30:18 spz Exp $
 
 BUILDLINK_TREE+=	kdepimlibs
 
@@ -9,9 +9,13 @@ BUILDLINK_API_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.0.0
 BUILDLINK_ABI_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.8.2nb2
 BUILDLINK_PKGSRCDIR.kdepimlibs?=	../../misc/kdepimlibs4
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.if ${OPSYS} == "Linux"
 .include "../../devel/libuuid/buildlink3.mk"
+.endif
 .include "../../mail/akonadi/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
