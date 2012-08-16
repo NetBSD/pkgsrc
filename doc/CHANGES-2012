@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2607 2012/08/16 15:53:09 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2608 2012/08/16 16:05:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3997,3 +3997,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/cdrtools to 3.01alpha08 [wiz 2012-08-16]
 	Updated audio/fluidsynth to 1.1.6 [wiz 2012-08-16]
 	Updated graphics/veusz to 1.16 [drochner 2012-08-16]
+	Updated www/php-owncloud to 4.0.7 [ryoon 2012-08-16]
