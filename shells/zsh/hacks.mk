@@ -1,3 +1,5 @@
+# $NetBSD: hacks.mk,v 1.3 2012/08/16 13:30:27 wiz Exp $
+
 .if !defined(ZSH_HACKS_MK)
 ZSH_HACKS_MK= defined
 
