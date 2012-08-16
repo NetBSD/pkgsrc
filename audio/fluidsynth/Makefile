@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2012/03/03 00:12:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/08/16 15:16:26 wiz Exp $
 
-DISTNAME=	fluidsynth-1.1.5
-PKGREVISION=	2
+DISTNAME=	fluidsynth-1.1.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluidsynth/}
 
