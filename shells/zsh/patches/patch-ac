@@ -1,4 +1,11 @@
-$NetBSD: patch-ac,v 1.23 2012/07/22 10:03:40 ryoon Exp $
+$NetBSD: patch-ac,v 1.24 2012/08/16 14:19:35 wiz Exp $
+
+All chunks:
+Make this package build on Interix.  Patches provided by Hiramatsu
+Yoshifumi in PR pkg/25946.
+Last chunk only:
+Don't force -Wl,--whole-archive for NetBSD, it breaks the build with
+clang, which doesn't have a reason to disable it again.
 
 --- configure.orig	2011-05-16 15:49:15.000000000 +0000
 +++ configure
