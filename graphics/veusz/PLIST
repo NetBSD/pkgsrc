@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/11/30 10:59:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/08/16 15:41:27 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -98,6 +98,9 @@ ${PYSITELIB}/veusz/document/dataset_histo.pyo
 ${PYSITELIB}/veusz/document/datasets.py
 ${PYSITELIB}/veusz/document/datasets.pyc
 ${PYSITELIB}/veusz/document/datasets.pyo
+${PYSITELIB}/veusz/document/dbusinterface.py
+${PYSITELIB}/veusz/document/dbusinterface.pyc
+${PYSITELIB}/veusz/document/dbusinterface.pyo
 ${PYSITELIB}/veusz/document/doc.py
 ${PYSITELIB}/veusz/document/doc.pyc
 ${PYSITELIB}/veusz/document/doc.pyo
@@ -107,6 +110,12 @@ ${PYSITELIB}/veusz/document/emf_export.pyo
 ${PYSITELIB}/veusz/document/export.py
 ${PYSITELIB}/veusz/document/export.pyc
 ${PYSITELIB}/veusz/document/export.pyo
+${PYSITELIB}/veusz/document/importparams.py
+${PYSITELIB}/veusz/document/importparams.pyc
+${PYSITELIB}/veusz/document/importparams.pyo
+${PYSITELIB}/veusz/document/linked.py
+${PYSITELIB}/veusz/document/linked.pyc
+${PYSITELIB}/veusz/document/linked.pyo
 ${PYSITELIB}/veusz/document/mime.py
 ${PYSITELIB}/veusz/document/mime.pyc
 ${PYSITELIB}/veusz/document/mime.pyo
@@ -139,6 +148,7 @@ ${PYSITELIB}/veusz/embed_remote.pyc
 ${PYSITELIB}/veusz/embed_remote.pyo
 ${PYSITELIB}/veusz/examples/bar_labels.dat
 ${PYSITELIB}/veusz/examples/bar_labels.vsz
+${PYSITELIB}/veusz/examples/bar_options.vsz
 ${PYSITELIB}/veusz/examples/barplots.vsz
 ${PYSITELIB}/veusz/examples/boxplot.vsz
 ${PYSITELIB}/veusz/examples/coloredpoints.vsz
@@ -154,6 +164,7 @@ ${PYSITELIB}/veusz/examples/example_import_1.dat
 ${PYSITELIB}/veusz/examples/example_import_2.dat
 ${PYSITELIB}/veusz/examples/fit.vsz
 ${PYSITELIB}/veusz/examples/functions.vsz
+${PYSITELIB}/veusz/examples/hatching.vsz
 ${PYSITELIB}/veusz/examples/histo.vsz
 ${PYSITELIB}/veusz/examples/inside.vsz
 ${PYSITELIB}/veusz/examples/isolatedaxes.vsz
@@ -162,6 +173,7 @@ ${PYSITELIB}/veusz/examples/labels.vsz
 ${PYSITELIB}/veusz/examples/linked_datasets.vsz
 ${PYSITELIB}/veusz/examples/mandelbrot.vsz
 ${PYSITELIB}/veusz/examples/markerspolygon.vsz
+${PYSITELIB}/veusz/examples/mathml.vsz
 ${PYSITELIB}/veusz/examples/multiaxes.vsz
 ${PYSITELIB}/veusz/examples/multixy.vsz
 ${PYSITELIB}/veusz/examples/polar.vsz
@@ -180,6 +192,8 @@ ${PYSITELIB}/veusz/helpers/__init__.pyc
 ${PYSITELIB}/veusz/helpers/__init__.pyo
 ${PYSITELIB}/veusz/helpers/_nc_cntr.so
 ${PYSITELIB}/veusz/helpers/qtloops.so
+${PYSITELIB}/veusz/helpers/qtmml.so
+${PYSITELIB}/veusz/helpers/recordpaint.so
 ${PYSITELIB}/veusz/plugins/__init__.py
 ${PYSITELIB}/veusz/plugins/__init__.pyc
 ${PYSITELIB}/veusz/plugins/__init__.pyo
@@ -264,6 +278,9 @@ ${PYSITELIB}/veusz/utils/colormap.pyo
 ${PYSITELIB}/veusz/utils/dates.py
 ${PYSITELIB}/veusz/utils/dates.pyc
 ${PYSITELIB}/veusz/utils/dates.pyo
+${PYSITELIB}/veusz/utils/extbrushfilling.py
+${PYSITELIB}/veusz/utils/extbrushfilling.pyc
+${PYSITELIB}/veusz/utils/extbrushfilling.pyo
 ${PYSITELIB}/veusz/utils/fitlm.py
 ${PYSITELIB}/veusz/utils/fitlm.pyc
 ${PYSITELIB}/veusz/utils/fitlm.pyo
@@ -294,6 +311,9 @@ ${PYSITELIB}/veusz/utils/utilfuncs.pyo
 ${PYSITELIB}/veusz/utils/version.py
 ${PYSITELIB}/veusz/utils/version.pyc
 ${PYSITELIB}/veusz/utils/version.pyo
+${PYSITELIB}/veusz/utils/vzdbus.py
+${PYSITELIB}/veusz/utils/vzdbus.pyc
+${PYSITELIB}/veusz/utils/vzdbus.pyo
 ${PYSITELIB}/veusz/veusz_listen.py
 ${PYSITELIB}/veusz/veusz_listen.pyc
 ${PYSITELIB}/veusz/veusz_listen.pyo
@@ -434,6 +454,7 @@ ${PYSITELIB}/veusz/windows/icons/error_box.svg
 ${PYSITELIB}/veusz/windows/icons/error_boxfill.svg
 ${PYSITELIB}/veusz/windows/icons/error_curve.svg
 ${PYSITELIB}/veusz/windows/icons/error_diamond.svg
+${PYSITELIB}/veusz/windows/icons/error_diamondfill.svg
 ${PYSITELIB}/veusz/windows/icons/error_fillhorz.svg
 ${PYSITELIB}/veusz/windows/icons/error_fillvert.svg
 ${PYSITELIB}/veusz/windows/icons/error_linehorz.svg
@@ -506,6 +527,7 @@ ${PYSITELIB}/veusz/windows/icons/veusz-edit-cut.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-edit-prefs.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-pick-data.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-shape-menu.svg
+${PYSITELIB}/veusz/windows/icons/veusz-view-fullscreen.svg
 ${PYSITELIB}/veusz/windows/icons/veusz-zoom-graph.svg
 ${PYSITELIB}/veusz/windows/icons/veusz.png
 ${PYSITELIB}/veusz/windows/icons/veusz.svg
