@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/29 14:45:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/08/16 11:49:30 wiz Exp $
 
-SHA1 (react-0.9.3.tbz) = 949fbf9df877371b8a968d590aa88f43efa05eec
-RMD160 (react-0.9.3.tbz) = 9f0ade798591d7a4da0d32ae1ea56f4baaae2b04
-Size (react-0.9.3.tbz) = 78204 bytes
+SHA1 (react-0.9.4.tbz) = b055d40f43411f8367eeb11f4e87f7d3955d7b2d
+RMD160 (react-0.9.4.tbz) = 64fc6c80cb4ff1c52daa89dda0d774297f900b6c
+Size (react-0.9.4.tbz) = 82964 bytes
