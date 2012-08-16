@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/29 14:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/16 11:49:30 wiz Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
-DISTNAME=	react-0.9.3
+DISTNAME=	react-0.9.4
 CATEGORIES=	devel
 MASTER_SITES=	http://erratique.ch/software/react/releases/
 EXTRACT_SUFX=	.tbz
@@ -25,16 +25,17 @@ SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir $
 
 DEPENDS+=       ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
+PLIST_VARS+=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST_SRC+= 	PLIST.opt
-BUILD_TARGET=	module
-INSTALL_TARGET=	install
-.else
-BUILD_TARGET=	module-byte
-INSTALL_TARGET=	install-byte
+PLIST.opt=	yes
+
+post-build:
+	cd ${WRKSRC} && ocamlbuild src/react.cmxs
+
+post-install:
+	cd ${WRKSRC} && ${INSTALL_LIB} _build/src/react.cmxs ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/react
 .endif
-PLIST_SRC+= PLIST
 
 do-configure:
 	cd ${WRKSRC} && ocaml setup.ml -configure ${CONFIGURE_ARGS}
@@ -43,7 +44,6 @@ do-build:
 	cd ${WRKSRC} && ocaml setup.ml -build
 
 pre-install:
-	${RM} -rf ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib/react
 	${MKDIR} ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib
 
 do-install:
