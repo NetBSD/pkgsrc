@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2012/07/22 10:03:40 ryoon Exp $
+$NetBSD: patch-ab,v 1.14 2012/08/16 14:19:35 wiz Exp $
+
+Make this package build on Interix.  Patches provided by Hiramatsu
+Yoshifumi in PR pkg/25946.
 
 --- Src/zsh.h.orig	2011-05-16 15:49:11.000000000 +0000
 +++ Src/zsh.h
