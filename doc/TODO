@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11450 2012/08/16 15:16:40 wiz Exp $
+$NetBSD: TODO,v 1.11451 2012/08/16 15:53:09 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1225,7 +1225,6 @@ For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
 	o valgrind-3.7.0
 	o vbetool-1.1
 	o vera-1.17
-	o veusz-1.16
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.15
