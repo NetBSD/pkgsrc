@@ -1,6 +1,6 @@
-$NetBSD: patch-Doc_Zsh_builtins.yo,v 1.1 2012/08/17 10:53:10 wiz Exp $
+$NetBSD: patch-Doc_Zsh_builtins.yo,v 1.2 2012/08/17 12:15:37 wiz Exp $
 
-Add support for thread limits.
+Add support for thread limits and socket buffer size.
 From Peter Stephenson <Peter.Stephenson@csr.com> on zsh-workers.
 
 --- Doc/Zsh/builtins.yo.orig	2012-03-13 20:04:40.000000000 +0000
@@ -14,7 +14,7 @@ From Peter Stephenson <Peter.Stephenson@csr.com> on zsh-workers.
  Set or display resource limits of the shell and the processes started by
  the shell.  The value of var(limit) can be a number in the unit specified
  below or one of the values `tt(unlimited)', which removes the limit on the
-@@ -1757,6 +1757,9 @@ When looping over multiple resources, th
+@@ -1757,8 +1757,12 @@ When looping over multiple resources, th
  it detects a badly formed argument.  However, if it fails to set a limit
  for some other reason it will continue trying to set the remaining limits.
  
@@ -23,8 +23,11 @@ From Peter Stephenson <Peter.Stephenson@csr.com> on zsh-workers.
 +
  startsitem()
  sitem(tt(-a))(Lists all of the current resource limits.)
++sitem(tt(-b))(Socket buffer size in bytes LPAR()N.B. not kilobytes+RPAR())
  sitem(tt(-c))(512-byte blocks on the size of core dumps.)
-@@ -1769,7 +1772,8 @@ sitem(tt(-n))(open file descriptors.)
+ sitem(tt(-d))(K-bytes on the size of the data segment.)
+ sitem(tt(-f))(512-byte blocks on the size of files written.)
+@@ -1769,7 +1773,8 @@ sitem(tt(-n))(open file descriptors.)
  sitem(tt(-q))(Bytes in POSIX message queues.)
  sitem(tt(-s))(K-bytes on the size of the stack.)
  sitem(tt(-t))(CPU seconds to be used.)
