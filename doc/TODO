@@ -1,25 +1,24 @@
-$NetBSD: TODO,v 1.11452 2012/08/17 09:10:27 wiz Exp $
+$NetBSD: TODO,v 1.11453 2012/08/17 09:12:00 wiz Exp $
 
 Suggested new packages
 ======================
 
-	any unresolved PRs (if you have commit access)
-	http://www.netbsd.org/Gnats/category/pkg.html
+	Any unresolved PRs (if you have commit access)
+	http://gnats.NetBSD.org/summary/category/pkg.html
 
-	any complete, polished packages in pkgsrc-wip (ditto)
+	Any complete, polished packages in pkgsrc-wip (ditto)
 	http://pkgsrc-wip.sourceforge.net/
 
 	bacula-rescue
-	Scripts used to help create rescue boot cd's for bare metal
-	restores with bacula.  Scripts exist for linux, solaris, and
+	Scripts used to help create rescue boot CDs for bare metal
+	restores with Bacula.  Scripts exist for Linux, Solaris, and
 	FreeBSD.  Hopefully the FreeBSD one could be adapted to create
-	a NetBSD one or perhaps it could be turned into a *BSD script.
+	a NetBSD one, or perhaps it could be turned into a *BSD script.
 	http://www.bacula.org/
 
 	SquirrelMail plugins
 	SquirrelMail has a plugin feature and several plugins exist.
-	(See mail/sq-squirrelspell for an example.)
-	http://www.squirrelmail.org/index.php3?page=15
+	http://www.squirrelmail.org/plugins.php
 
 	p5-CGI-AppToolkit-0.051
 	Perl CGI application toolkit
@@ -27,7 +26,7 @@ Suggested new packages
 
 	info2man
 	http://freshmeat.net/projects/info2man/
-	requires perl, provides info2man and info2pod
+	Requires Perl, provides info2man and info2pod
 
 	moji
 	http://moji.mozdev.org/
@@ -47,7 +46,7 @@ Suggested new packages
 
 	doxywizard
 	QT-based wizard for doxygen documentation generator.
-	See pkgsrc/devel/doxygen
+	See devel/doxygen
 
 	tkfontsel
 	http://ftp.sunet.se/pub/lang/tcl/sorted/graphics/tkfontsel/
@@ -304,7 +303,7 @@ Suggested new packages
 	proxymngr, rstart, showfont, xcmsdb, xdbedizzy, xditview, xedit,
 	xf86dga, xfindproxy, xfsinfo, xfwp, xgc, xlsatoms, xmh,
 	xphelloworld, xpr, xrx, xscope, xstdcmap, xtrap
-        driver: xf86-input-acecad, xf86-input-aiptek,
+	driver: xf86-input-acecad, xf86-input-aiptek,
 	xf86-input-calcomp, xf86-input-citron, xf86-input-digitaledge,
 	xf86-input-dmc, xf86-input-dynapro, xf86-input-elo2300,
 	xf86-input-elographics, xf86-input-evdev, xf86-input-fpit,
@@ -329,10 +328,10 @@ Suggested new packages
 	xcb: xcb-demo, xpyb
 	non-xorg: xf86-input-wacom, xinput_calibrator
 
-
 Suggested package updates
 =========================
-For possible perl packages updates, see http://www.netbsd.org/~wiz/perl.html
+
+For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 
 	o CSP-0.34
 	o Canna-3.7p3
@@ -1385,7 +1384,7 @@ Infrastructure problems which need addressing
 	o Correct and consistent handling of file names containing
 	  white-space and other special characters.
 
-	o bootstrap building of gcc2/gcc3.
+	o Bootstrap building of gcc2/gcc3.
 
 Licenses of packages
 ====================
@@ -1449,9 +1448,9 @@ Suggested pkgsrc enhancements
 Suggested other platform enhancements
 =====================================
 
-	o platform independent bulk build infrastructure
+	o Platform independent bulk build infrastructure
 
-	o update the binary bootstrap kits in
+	o Update the binary bootstrap kits in
 	  ftp.NetBSD.org:/pub/pkgsrc/packages/OS/arch/version-branch/
 
 Suggested cleanups in pkgsrc
