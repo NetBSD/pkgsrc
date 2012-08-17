@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/08/17 12:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2012/08/17 12:22:51 wiz Exp $
 
 .include "../../shells/zsh/Makefile.common"
 
@@ -14,6 +14,7 @@ SUBST_FILES.prefix-fixup= \
 	Misc/globtests \
 	Misc/globtests.ksh \
 	Test/ztst.zsh \
+	Test/runtests.zsh \
 	Util/reporter \
 	Functions/Calendar/calendar_add \
 	Functions/Misc/run-help \
@@ -22,7 +23,8 @@ SUBST_FILES.prefix-fixup= \
 	Functions/Misc/zcalc \
 	Functions/Misc/zkbd \
 	Functions/Misc/zed \
-	Functions/Example/cat
+	Functions/Example/cat \
+	Functions/Example/zless
 SUBST_SED.prefix-fixup= \
 	-e 's|^\#\!/bin/zsh|\#\!${PREFIX}/bin/zsh|g' \
 	-e 's|^\#\! /bin/zsh|\#\! ${PREFIX}/bin/zsh|g' \
