@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2615 2012/08/17 15:39:58 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2616 2012/08/17 15:44:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4006,3 +4006,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/php53 to 5.3.16 [taca 2012-08-17]
 	Updated lang/php54 to 5.4.6 [taca 2012-08-17]
 	Updated www/php-apc to 3.1.12 [taca 2012-08-17]
+	Updated textproc/p5-Pod-Simple to 3.23 [wen 2012-08-17]
