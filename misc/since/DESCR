@@ -1,0 +1,2 @@
+Since is a tail(1) with state - it allows the user to view only
+the lines appended to a file since the last time since was used.
