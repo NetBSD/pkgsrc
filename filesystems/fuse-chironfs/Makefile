@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/08 16:22:44 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/17 13:02:49 marino Exp $
 #
 
 DISTNAME=	chironfs-1.1.1
@@ -14,6 +14,8 @@ COMMENT=	Replicating file system
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+
+LDFLAGS.DragonFly+=	-lpthread
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
