@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/14 06:37:49 bjs Exp $
+$NetBSD: distinfo,v 1.2 2012/08/17 12:56:49 marino Exp $
 
 SHA1 (gstfs-0.1.tar.gz) = f3184e178f2345077bd5dfcaee774f6bef81bcf2
 RMD160 (gstfs-0.1.tar.gz) = 1c41e7ed8b4b47da880999c75c1448aed389287b
 Size (gstfs-0.1.tar.gz) = 7689 bytes
-SHA1 (patch-aa) = 4c6fac24a962b6d303ceafcc45d2ac48c81f9197
+SHA1 (patch-aa) = b5f028bf31f31d8afa2f67e4e4960fc5ee93b66f
 SHA1 (patch-ab) = 2571dc1d44ef5b89f31ae1258c5631fdf60c1d0e
 SHA1 (patch-ac) = dac5ca16b460c1fe347b44de77c6796e0c14e65b
