@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.1 2012/08/17 15:49:36 jperkin Exp $
+
+--- ../ghc-6.4.2/ghc/rts/RtsUtils.c.orig	2012-08-17 14:05:20.740303579 +0000
++++ ../ghc-6.4.2/ghc/rts/RtsUtils.c	2012-08-17 14:06:13.029606465 +0000
+@@ -187,7 +187,11 @@
+     if (now == 0) {
+ 	time(&now);
+ #if HAVE_CTIME_R
++#  ifdef __sun
++	ctime_r(&now, nowstr, sizeof(nowstr));
++#  else
+ 	ctime_r(&now, nowstr);
++#  endif
+ #else
+ 	strcpy(nowstr, ctime(&now));
+ #endif

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2007/03/24 17:57:20 kristerw Exp $
+$NetBSD: patch-af,v 1.8 2012/08/17 15:49:35 jperkin Exp $
 
 --- ../ghc-6.4.2/ghc/rts/package.conf.in.orig	2005-05-20 21:07:55.000000000 +0200
 +++ ../ghc-6.4.2/ghc/rts/package.conf.in	2005-05-20 21:08:58.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.7 2007/03/24 17:57:20 kristerw Exp $
  cc-options:
  
 -ld-options:
-+ld-options: "-Wl","-R@PREFIX@/lib","-L","@PREFIX@/lib",
++ld-options: "-Wl,-R@PREFIX@/lib","-L@PREFIX@/lib",
  #ifdef LEADING_UNDERSCORE
             "-u", "_GHCziBase_Izh_static_info"
           , "-u", "_GHCziBase_Czh_static_info"
