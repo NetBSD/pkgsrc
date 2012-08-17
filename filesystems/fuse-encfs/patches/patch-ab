@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/03/01 00:34:14 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2012/08/17 15:15:27 marino Exp $
 
 --- encfs/encfs.h.orig	2007-03-01 01:04:54.000000000 +0100
 +++ encfs/encfs.h	2007-03-01 01:05:30.000000000 +0100
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/03/01 00:34:14 xtraeme Exp $
  	struct fuse_file_info *info);
  int encfs_write(const char *path, const char *buf, size_t size, off_t offset,
  	struct fuse_file_info *info);
-+#ifndef __NetBSD__
++#if !defined (__NetBSD__) && !defined (__DragonFly__)
  int encfs_statfs(const char *, struct statfs *fst);
 +#else
 +int encfs_statfs(const char *, struct statvfs *fst);
