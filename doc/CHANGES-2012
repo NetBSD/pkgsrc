@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2613 2012/08/17 15:28:01 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2614 2012/08/17 15:37:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4003,3 +4003,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Mojolicious to 3.31 [sno 2012-08-17]
 	Updated shells/zsh to 5.0.0nb2 [wiz 2012-08-17]
 	Updated mail/p5-Mail-IMAPClient to 3.32 [wen 2012-08-17]
+	Updated lang/php53 to 5.3.16 [taca 2012-08-17]
+	Updated lang/php54 to 5.4.6 [taca 2012-08-17]
