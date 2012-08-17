@@ -1,6 +1,7 @@
-$NetBSD: patch-main_main.c,v 1.3 2012/07/25 13:20:30 fhajny Exp $
+$NetBSD: patch-main_main.c,v 1.4 2012/08/17 15:32:31 taca Exp $
 
 Fix fd leak on SunOS (https://bugs.php.net/bug.php?id=47675).
+
 --- main/main.c.orig	2012-06-13 04:54:23.000000000 +0000
 +++ main/main.c
 @@ -2388,7 +2388,7 @@ PHPAPI int php_execute_script(zend_file_
