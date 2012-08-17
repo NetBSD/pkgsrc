@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/08/17 17:45:40 seb Exp $
+
+cleanup cpp args dans adjust/fix Darwin build
+
+--- Makefile.orig	2008-12-22 16:20:05.000000000 +0000
++++ Makefile
+@@ -37,7 +37,7 @@ HDRS= fdm.h array.h fetch.h match.h deli
+ YACC= yacc -d
+ 
+ CC?= cc
+-INCDIRS+= -I. -I- -I/usr/local/include
++INCDIRS+= -I. 
+ .ifdef PROFILE
+ # Don't use ccache
+ CC= /usr/bin/gcc
+@@ -70,7 +70,8 @@ LIBS+= -lpcre
+ .if ${OS} == "Darwin"
+ SRCS+= compat/strtonum.c
+ INCDIRS+= -Icompat -I/usr/local/include/openssl
+-CFLAGS+= -DNO_STRTONUM -DNO_SETRESUID -DNO_SETRESGID -DNO_SETPROCTITLE
++CFLAGS+= -DNO_STRTONUM -DNO_SETRESUID -DNO_SETRESGID -DNO_SETPROCTITLE -DNO_QUEUE_H -DNO_TREE_H
++LIBS+=	-lresolv
+ .endif
+ 
+ # NetBSD
