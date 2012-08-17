@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/07/20 12:30:37 taca Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/17 15:35:24 taca Exp $
 
 MODNAME=		xsl
 CATEGORIES+=		textproc
-COMMENT=		PHP5 extension for XSLT functions
+COMMENT=		PHP extension for XSLT functions
 
 CONFLICTS=	php-xsl-[0-9]*
 
