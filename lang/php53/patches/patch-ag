@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+$NetBSD: patch-ag,v 1.2 2012/08/17 15:32:31 taca Exp $
+
+Use proper shbang line.
 
 --- ext/phar/phar/phar.php.orig	2008-08-01 13:42:56.000000000 +0000
 +++ ext/phar/phar/phar.php
