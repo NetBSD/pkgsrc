@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2612 2012/08/17 12:15:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2613 2012/08/17 15:28:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/zsh to 5.0.0nb1 [wiz 2012-08-17]
 	Updated www/p5-Mojolicious to 3.31 [sno 2012-08-17]
 	Updated shells/zsh to 5.0.0nb2 [wiz 2012-08-17]
+	Updated mail/p5-Mail-IMAPClient to 3.32 [wen 2012-08-17]
