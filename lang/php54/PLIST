@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/07/25 13:01:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/17 15:34:01 taca Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -218,6 +218,7 @@ ${PLIST.suhosin}include/php/main/suhosin_logo.h
 ${PLIST.suhosin}include/php/main/suhosin_patch.h
 include/php/main/win32_internal_function_disabled.h
 include/php/main/win95nt.h
+include/php/sapi/cli/cli.h
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
 lib/php/build/config.guess
