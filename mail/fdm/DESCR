@@ -1,0 +1,13 @@
+fdm is a program to fetch mail and deliver it in various ways depending on a
+user-supplied ruleset. Mail may be fetched from stdin, IMAP or POP3
+servers, or from local maildirs, and filtered based on whether it
+matches a regexp, its size or age, or the output of a shell command.
+It can be rewritten by an external process, dropped, left on the
+server or delivered into maildirs, mboxes, to a file or pipe, or
+any combination.
+
+fdm is designed to be lightweight but powerful, with a compact but
+clear configuration syntax. It is primarily designed for single-user
+uses but may also be configured to deliver mail in a multi-user
+setup. In this case, it uses privilege separation to minimise the
+amount of code running as the root user.
