@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/04/13 23:55:37 obache Exp $
+$NetBSD: distinfo,v 1.3 2012/08/17 15:13:40 marino Exp $
 
 SHA1 (djmount-0.71.tar.gz) = 527d4603d85b7fb86dc97d326b78c97bdcc4d687
 RMD160 (djmount-0.71.tar.gz) = 695e2ea0cd3fe654339f82c5101eb74da739d3f7
 Size (djmount-0.71.tar.gz) = 1159653 bytes
-SHA1 (patch-aa) = 5cc9d72ee0035f51ff968862a54adad055fae7b9
+SHA1 (patch-aa) = e6135ae8c014cf57acc6397dc74bedbaf86f80e4
 SHA1 (patch-djmount_upnp__util.c) = 56247528bb7fbe2964e39893c014c2b4602285b6
 SHA1 (patch-djmount_upnp__util.h) = 72d1b7dbd1544fa4702cf149ded983f625d936e7
