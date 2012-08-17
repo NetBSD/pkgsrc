@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2617 2012/08/17 17:47:44 seb Exp $
+$NetBSD: CHANGES-2012,v 1.2618 2012/08/17 23:08:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4008,3 +4008,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-apc to 3.1.12 [taca 2012-08-17]
 	Updated textproc/p5-Pod-Simple to 3.23 [wen 2012-08-17]
 	Added mail/fdm version 1.6 [seb 2012-08-17]
+	Updated databases/phpmyadmin to 3.5.2.2 [tron 2012-08-17]
