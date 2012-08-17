@@ -1,11 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
+$NetBSD: patch-ab,v 1.2 2012/08/17 12:59:00 marino Exp $
 
---- Makefile	2007/06/08 15:32:49	1.1
-+++ Makefile	2007/06/08 15:34:17
-@@ -1,5 +1,5 @@
+Provide access to CPPFLAGS and LDFLAGS from pkgsrc Makefile
+
+--- Makefile.orig	2007-01-13 22:12:37.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
  CC=g++
 -CFLAGS=-Wall -ansi -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26 -DRLOG_COMPONENT="loggedfs" `xml2-config --cflags`
+-LDFLAGS=-Wall -ansi -lpcre -lfuse -lrlog `xml2-config --libs`
 +CFLAGS=-Wall -ansi -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26 -DRLOG_COMPONENT="loggedfs" `xml2-config --cflags` ${CPPFLAGS}
- LDFLAGS=-Wall -ansi -lpcre -lfuse -lrlog `xml2-config --libs`
++LDFLAGS+=-Wall -ansi -lpcre -lfuse -lrlog `xml2-config --libs`
  srcdir=src
  builddir=build
+ 
