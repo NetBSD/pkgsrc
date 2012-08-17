@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.9 2008/03/17 15:33:10 kristerw Exp $
+$NetBSD: patch-ad,v 1.10 2012/08/17 15:49:35 jperkin Exp $
 
 --- libraries/readline/readline.cabal.orig	2007-12-10 16:20:29.000000000 -0200
 +++ libraries/readline/readline.cabal
@@ -6,4 +6,4 @@ $NetBSD: patch-ad,v 1.9 2008/03/17 15:33:10 kristerw Exp $
    includes:	HsReadline.h
    install-includes:	HsReadline.h HsReadlineConfig.h
    c-sources:	HsReadline_cbits.c
-+  ld-options:    "-Wl","-R@PREFIX@/lib","-L","@PREFIX@/lib"
++  ld-options:    "-Wl,-R@PREFIX@/lib","-L@PREFIX@/lib"
