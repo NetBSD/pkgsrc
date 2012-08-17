@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/07/25 10:16:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/17 15:35:24 taca Exp $
 
 PKGNAME=		${PHP_PKG_PREFIX}-fpm-${PHP_BASE_VERS}
-PKGREVISION=		1
 CATEGORIES=		www
 
 HOMEPAGE=		http://php-fpm.org/
