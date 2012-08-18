@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/24 01:28:10 chs Exp $
-@pkgdir ${EMULSUBDIRSLASH}usr/lib/qt3/etc

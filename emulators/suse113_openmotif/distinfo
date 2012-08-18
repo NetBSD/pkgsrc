@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:28:08 chs Exp $
-
-SHA1 (suse113/i586/openmotif-libs-2.3.2-2.8.i586.rpm) = 11eacdae883452188467b27caffb823dc9c341e3
-RMD160 (suse113/i586/openmotif-libs-2.3.2-2.8.i586.rpm) = abe6a52bf555c1959aa333c161262667122d65e2
-Size (suse113/i586/openmotif-libs-2.3.2-2.8.i586.rpm) = 1128493 bytes
-SHA1 (suse113/x86_64/openmotif-libs-2.3.2-2.8.x86_64.rpm) = a04a1f1380c158053750955c6b53cb029f4f0775
-RMD160 (suse113/x86_64/openmotif-libs-2.3.2-2.8.x86_64.rpm) = 00a6694629f8013f1d03b889f15bdf8e1ee42a94
-Size (suse113/x86_64/openmotif-libs-2.3.2-2.8.x86_64.rpm) = 1130064 bytes

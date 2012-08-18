@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/27 15:46:20 chs Exp $
-
-SHA1 (suse113/i586/libcurl4-7.20.1-3.4.i586.rpm) = db803d461bb1c128ce4cbd18f655d52b7dd77e28
-RMD160 (suse113/i586/libcurl4-7.20.1-3.4.i586.rpm) = c33d94c5d5ed7948cdb85ebbc8713413374eb371
-Size (suse113/i586/libcurl4-7.20.1-3.4.i586.rpm) = 153600 bytes
-SHA1 (suse113/x86_64/libcurl4-7.20.1-3.4.x86_64.rpm) = 19eeeea47d9524e7bb1e9bed26e0f33deeae566f
-RMD160 (suse113/x86_64/libcurl4-7.20.1-3.4.x86_64.rpm) = 10ee8adaa9b331215541bb1e7c5e9ee8631e3c3d
-Size (suse113/x86_64/libcurl4-7.20.1-3.4.x86_64.rpm) = 156687 bytes
