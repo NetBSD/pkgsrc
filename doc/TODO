@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11458 2012/08/18 11:45:08 wiz Exp $
+$NetBSD: TODO,v 1.11459 2012/08/18 11:46:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -496,6 +496,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o csound5-5.13
 	o ctwm-3.8.1
 	o cups-1.6.1
+	o cutter-1.2.1
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
@@ -521,6 +522,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o digikam-2.8.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
+	o dnsmasq-2.63
 	o doclifter-2.9
 	o doxygen-1.8.2
 	o dri-7.8.2 [wip]
@@ -624,7 +626,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
-	o gdb-7.4
+	o gdb-7.5
 	o gdeskcal-1.01
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdl-3.2.0
@@ -789,7 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-4.6.1
-	o knights-2.4.2
+	o knights-2.5.0
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
 	o kronolith-3.0.17
@@ -1031,7 +1033,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-2.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9594
+	o puzzles-9606
 	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1077,7 +1079,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rp-pppoe-3.10
+	o rp-pppoe-3.11
 	o rpm-5.3.6 [rpm5.org]
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1250,7 +1252,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wine-devel-1.5.9 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wine-devel-1.5.11 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wireshark-1.8.2
 	o wmi-11
 	o wml-2.0.11
@@ -1297,7 +1299,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-glint-1.2.8
 	o xf86-video-i128-1.3.6
 	o xf86-video-i740-1.3.4
-	o xf86-video-intel-2.20.3
+	o xf86-video-intel-2.20.4
 	o xf86-video-mach64-6.9.3
 	o xf86-video-mga-1.6.1
 	o xf86-video-neomagic-1.2.7
