@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:28:03 chs Exp $
-
-SHA1 (suse113/i586/libsigc++2-2.2.7-1.5.i586.rpm) = 3bab352877fc79ea3e17a8bfc8492d84138aa96c
-RMD160 (suse113/i586/libsigc++2-2.2.7-1.5.i586.rpm) = 107459184c4973d701ecc03c118cc3f5f1ebf089
-Size (suse113/i586/libsigc++2-2.2.7-1.5.i586.rpm) = 50588 bytes
-SHA1 (suse113/x86_64/libsigc++2-2.2.7-1.5.x86_64.rpm) = 2704a22e1d972f6f978a438059d5d1662837eac3
-RMD160 (suse113/x86_64/libsigc++2-2.2.7-1.5.x86_64.rpm) = 89b8dd27dee8d74e608d45ed13a6a648720cb20d
-Size (suse113/x86_64/libsigc++2-2.2.7-1.5.x86_64.rpm) = 50266 bytes
