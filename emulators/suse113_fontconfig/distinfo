@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:27:55 chs Exp $
-
-SHA1 (suse113/i586/fontconfig-2.8.0-7.1.i586.rpm) = dddf5e9048c50010ebe77cbe0565db2f1d8896ba
-RMD160 (suse113/i586/fontconfig-2.8.0-7.1.i586.rpm) = d22ae1d32446490908d449fbb1cc4b1576c272e3
-Size (suse113/i586/fontconfig-2.8.0-7.1.i586.rpm) = 289374 bytes
-SHA1 (suse113/x86_64/fontconfig-2.8.0-7.1.x86_64.rpm) = 6c860acdacbfc0605a3665c5825f2b96acd2df06   
-RMD160 (suse113/x86_64/fontconfig-2.8.0-7.1.x86_64.rpm) = 7cd85a1a2b3c49c09c1cebb7a75e0d899116d752   
-Size (suse113/x86_64/fontconfig-2.8.0-7.1.x86_64.rpm) = 288962 bytes   

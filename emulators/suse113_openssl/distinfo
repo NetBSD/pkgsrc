@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2012/01/19 15:54:55 chs Exp $
-
-SHA1 (suse113/i586/libopenssl1_0_0-1.0.0-6.13.1.i586.rpm) = ad88568b1c49a6b0e01bc369d5ad1e681390d239
-RMD160 (suse113/i586/libopenssl1_0_0-1.0.0-6.13.1.i586.rpm) = b3b1d7ed352c42a6df1fac88d710c3ad44368665
-Size (suse113/i586/libopenssl1_0_0-1.0.0-6.13.1.i586.rpm) = 741126 bytes
-SHA1 (suse113/x86_64/libopenssl1_0_0-1.0.0-6.13.1.x86_64.rpm) = 211055466042759f46474ebfcec46587dee6f2cd
-RMD160 (suse113/x86_64/libopenssl1_0_0-1.0.0-6.13.1.x86_64.rpm) = 6245dd68f036c222257bae71744fad0d1bf098ae
-Size (suse113/x86_64/libopenssl1_0_0-1.0.0-6.13.1.x86_64.rpm) = 736995 bytes
