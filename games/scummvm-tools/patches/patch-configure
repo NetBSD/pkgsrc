@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2012/08/18 07:42:29 marino Exp $
+
+Add DragonFly support
+
+--- configure.orig	2011-11-03 18:13:41.000000000 +0000
++++ configure
+@@ -886,6 +886,9 @@ case $_host_os in
+ 	android | beos* | bsd* | darwin* | freebsd* | gph-linux | haiku* | hpux* | iphone | irix* | linux* | mint* | netbsd* | openbsd* | solaris* | sunos* | uclinux* | webos)
+ 		_posix=yes
+ 		;;
++	dragonfly*)
++		_posix=yes
++		;;
+ 	os2-emx*)
+ 		_posix=yes	# FIXME: Really???
+ 		;;
