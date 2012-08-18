@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101.2.1 2012/08/08 18:39:21 spz Exp $
+# $NetBSD: Makefile,v 1.101.2.2 2012/08/18 16:33:44 spz Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -28,7 +28,7 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	3.5.2.1
+DIST_VERSION=	3.5.2.2
 DOC_FILES=	ChangeLog Documentation.txt LICENSE README \
 		RELEASE-DATE-${DIST_VERSION}
 
