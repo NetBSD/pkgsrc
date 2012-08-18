@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/07/02 13:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/18 06:58:15 ryoon Exp $
 #
 
-DISTNAME=	LibreCAD-LibreCAD-v1.0.0-0-g22839a7
-PKGNAME=	librecad-1.0.0
-PKGREVISION=	4
+DISTNAME=	LibreCAD-LibreCAD-v1.0.2-0-ga6826ad
+PKGNAME=	librecad-1.0.2
 CATEGORIES=	cad
-MASTER_SITES=	-https://github.com/LibreCAD/LibreCAD/zipball/v1.0.0
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	-https://github.com/LibreCAD/LibreCAD/tarball/v1.0.2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://librecad.org/
@@ -19,11 +17,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
 FETCH_USING=	curl
 
-WRKSRC=		${WRKDIR}/LibreCAD-LibreCAD-2d7f866
+WRKSRC=		${WRKDIR}/LibreCAD-LibreCAD-a5c34b2
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pax
+USE_TOOLS+=	bash pax
 
-REPLACE_SH=	scripts/postprocess-unix.sh
+REPLACE_BASH=	scripts/postprocess-unix.sh
 
 SUBST_CLASSES+=		qtdir
 SUBST_STAGE.qtdir=	pre-configure
@@ -52,6 +50,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${LIBRECADDIR}
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../math/muparser/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../x11/qt4-tools/buildlink3.mk"
