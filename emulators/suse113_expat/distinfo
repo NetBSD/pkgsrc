@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:27:54 chs Exp $
-
-SHA1 (suse113/i586/libexpat1-2.0.1-98.1.i586.rpm) = 36f5fab6449a5677b2a0e9f98896cb120fd6b02d
-RMD160 (suse113/i586/libexpat1-2.0.1-98.1.i586.rpm) = 8edb6885244a94c8b4a46059889d752a7b32991f
-Size (suse113/i586/libexpat1-2.0.1-98.1.i586.rpm) = 59989 bytes
-SHA1 (suse113/x86_64/libexpat1-2.0.1-98.1.x86_64.rpm) = b9c1a46038439768a58cb55bc3a75fc2909b154b   
-RMD160 (suse113/x86_64/libexpat1-2.0.1-98.1.x86_64.rpm) = 6a4406d451b62c35e3aded10e1f8980ffa2cdc7e   
-Size (suse113/x86_64/libexpat1-2.0.1-98.1.x86_64.rpm) = 59205 bytes    

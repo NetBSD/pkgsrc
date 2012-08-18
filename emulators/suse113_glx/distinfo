@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:27:57 chs Exp $
-
-SHA1 (suse113/i586/Mesa-7.8.2-1.3.i586.rpm) = 229ac7f76c7c61a6281620466d2da2c3185093af
-RMD160 (suse113/i586/Mesa-7.8.2-1.3.i586.rpm) = 44f1ea5a70df58eaab0c379242466c44f9d0ddba
-Size (suse113/i586/Mesa-7.8.2-1.3.i586.rpm) = 5046617 bytes
-SHA1 (suse113/x86_64/Mesa-7.8.2-1.3.x86_64.rpm) = 6a10da819e4d88e9f9219362e27d36831ed82b7a  
-RMD160 (suse113/x86_64/Mesa-7.8.2-1.3.x86_64.rpm) = d328fceb8a00be5c4d6969b2e2af6c2faac23f95  
-Size (suse113/x86_64/Mesa-7.8.2-1.3.x86_64.rpm) = 4968300 bytes 

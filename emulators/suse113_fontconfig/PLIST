@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/24 01:27:55 chs Exp $
-${EMULSUBDIRSLASH}etc/fonts/local.conf

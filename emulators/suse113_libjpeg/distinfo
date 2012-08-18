@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:28:01 chs Exp $
-
-SHA1 (suse113/i586/libjpeg8-8.0.1-1.9.i586.rpm) = aa9ba11e518962dcfffc79770b03058430a53c04
-RMD160 (suse113/i586/libjpeg8-8.0.1-1.9.i586.rpm) = b5eae86c4cf65f8dbf8774edb211e7230cb20dd6
-Size (suse113/i586/libjpeg8-8.0.1-1.9.i586.rpm) = 97986 bytes
-SHA1 (suse113/x86_64/libjpeg8-8.0.1-1.9.x86_64.rpm) = f518665424405778a66562ef9224fea6ec6d7d33   
-RMD160 (suse113/x86_64/libjpeg8-8.0.1-1.9.x86_64.rpm) = dfb286cf9842c03bcd931765ec0a22906a0f1720   
-Size (suse113/x86_64/libjpeg8-8.0.1-1.9.x86_64.rpm) = 100194 bytes  
