@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/08/12 21:19:06 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/08/18 08:04:25 marino Exp $
 
 SHA1 (xcb-util-image-0.3.9.tar.bz2) = afeba6230400fe8bec6076fd07bf20a8e412bbb5
 RMD160 (xcb-util-image-0.3.9.tar.bz2) = c666b87e20eaa703697df758e1d0e26aec2d62a4
 Size (xcb-util-image-0.3.9.tar.bz2) = 310947 bytes
+SHA1 (patch-image_xcb__image.c) = d0a956fc8786f03c8cce9d87f748cc02d3a8ac21
