@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/08/15 10:12:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2012/08/18 14:40:12 tron Exp $
 
 DISTNAME=	pkg-config-0.27
 PKGREVISION=	1
@@ -29,6 +29,13 @@ CONFLICTS=		pkgconfig-[0-9]*
 .if ${OPSYS} == "IRIX"
 # configure bails out in subdir after re-parsing the cache
 CONFIGURE_ARGS+=	--cache-file=/dev/null
+.endif
+
+.if ${OPSYS} == "NetBSD"
+post-configure:
+	cd ${WRKSRC}/glib; \
+	${GREP} -v HAVE_DTRACE config.h >config.h.new; \
+	${MV} config.h.new config.h
 .endif
 
 .if ${OPSYS} == "SunOS"
