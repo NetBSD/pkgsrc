@@ -1,9 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/19 21:19:14 dsainty Exp $
+$NetBSD: patch-aa,v 1.2 2012/08/18 13:14:05 dsainty Exp $
 
 GCC 4.1.2 errors on semicolon following namespace block.
 
+ptrdiff_t is not defined here on at least Ubuntu.  But as nothing uses
+this difference_type anyway, just don't bother defining it.
+
 --- libpalm/Block.h.orig	2003-06-20 11:37:47.000000000 +1200
 +++ libpalm/Block.h	2007-02-19 20:55:39.000000000 +1300
+@@ -29,7 +29,7 @@
+ 	typedef value_type& reference;
+ 	typedef const value_type& const_reference;
+ 	typedef size_t size_type;
+-	typedef ptrdiff_t difference_type;
++	//typedef ptrdiff_t difference_type;
+ 
+ 	// STL: reverisible container type definitions
+ #ifdef __GNUG__
 @@ -176,7 +176,7 @@
  	size_type m_size;
      };
