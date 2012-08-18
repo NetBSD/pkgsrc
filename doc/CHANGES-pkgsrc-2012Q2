@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.38 2012/08/16 20:31:58 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.39 2012/08/18 16:35:05 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -244,3 +244,5 @@ editors/emacs-nox11: security patch
 editors/emacs: security patch
 Pullup ticket #3900 - requested by markd
 misc/kdepimlibs4: functionality fix
+Pullup ticket #3901 - requested by tron
+databases/phpmyadmin: security update
