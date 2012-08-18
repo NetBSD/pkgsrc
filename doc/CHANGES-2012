@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2622 2012/08/18 01:38:20 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2623 2012/08/18 06:58:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4013,3 +4013,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/p5-MIME-Lite to 3.029 [wen 2012-08-18]
 	Updated graphics/libwebp to 0.2.0 [ryoon 2012-08-18]
 	Updated graphics/ImageMagick to 6.7.6.6nb4 [ryoon 2012-08-18]
+	Updated cad/librecad to 1.0.2 [ryoon 2012-08-18]
