@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2620 2012/08/18 01:23:13 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2621 2012/08/18 01:35:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/phpmyadmin to 3.5.2.2 [tron 2012-08-17]
 	Added misc/since version 1.1 [seb 2012-08-18]
 	Updated mail/p5-MIME-Lite to 3.029 [wen 2012-08-18]
+	Updated graphics/libwebp to 0.2.0 [ryoon 2012-08-18]
