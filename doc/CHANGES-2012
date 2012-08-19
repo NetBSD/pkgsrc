@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2625 2012/08/18 20:44:54 plunky Exp $
+$NetBSD: CHANGES-2012,v 1.2626 2012/08/19 07:43:18 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4064,3 +4064,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed emulators/suse113_x11 [chs 2012-08-18]
 	Removed meta-pkgs/suse113 [chs 2012-08-18]
 	Updated misc/zyGrib to 6.0.0 [plunky 2012-08-18]
+	Updated net/samba to 3.6.6nb1 [sbd 2012-08-19]
