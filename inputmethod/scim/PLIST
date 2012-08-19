@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/19 08:09:08 obache Exp $
 bin/scim
 bin/scim-config-agent
+bin/scim-im-agent
 bin/scim-setup
 include/scim-1.0/gtk/scimkeyselection.h
 include/scim-1.0/gtk/scimstringview.h
@@ -46,6 +47,8 @@ include/scim-1.0/scim_transaction.h
 include/scim-1.0/scim_types.h
 include/scim-1.0/scim_utility.h
 include/scim-1.0/x11/scim_x11_utils.h
+${PLIST.gtk2}lib/gtk-2.0/2.10.0/immodules/im-scim.la
+${PLIST.gtk3}lib/gtk-3.0/3.0.0/immodules/im-scim.la
 lib/libscim-1.0.la
 lib/libscim-gtkutils-1.0.la
 lib/libscim-x11utils-1.0.la
@@ -67,6 +70,7 @@ lib/scim-1.0/scim-helper-launcher
 lib/scim-1.0/scim-helper-manager
 lib/scim-1.0/scim-launcher
 lib/scim-1.0/scim-panel-gtk
+${PLIST.qt}qt4/plugins/inputmethods/im-scim.la
 share/applications/scim-setup.desktop
 share/control-center-2.0/capplets/scim-setup.desktop
 share/examples/scim/config
