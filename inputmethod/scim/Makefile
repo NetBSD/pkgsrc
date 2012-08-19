@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/05/06 09:18:48 marino Exp $
+# $NetBSD: Makefile,v 1.15 2012/08/19 08:09:08 obache Exp $
 #
 
-DISTNAME=		scim-1.4.13
+DISTNAME=		scim-1.4.14
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
@@ -9,6 +9,8 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.scim-im.org/
 COMMENT=		Smart Common Input Method
 LICENSE=		gnu-lgpl-v2.1
+
+SUPERSEDES+=		scim-bridge-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,10 +30,8 @@ PKGCONFIG_OVERRIDE+=	scim.pc.in
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-gtk-version=2
-# dlopen c++ so module from c gtk2 apps cause some troubles.
-CONFIGURE_ARGS+=	--disable-gtk2-immodule
-CONFIGURE_ARGS+=	--disable-gtk3-immodule
+
+.include "options.mk"
 
 EGDIR=			${PREFIX}/share/examples/scim
 CONF_FILES=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
@@ -47,14 +47,9 @@ PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r=no
 LDFLAGS.SunOS+=		-lsocket -lnsl
 .endif
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+= 	gt_cv_func_gnugettext1_libintl=yes
-.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt=	build
 .include "../../x11/libXt/buildlink3.mk"
