@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2631 2012/08/19 08:34:09 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2632 2012/08/19 09:06:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4070,3 +4070,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated inputmethod/scim to 1.4.14 [obache 2012-08-19]
 	Removed inputmethod/scim-bridge successor inputmethod/scim [obache 2012-08-19]
 	Updated inputmethod/scim-tables to 0.5.11 [obache 2012-08-19]
+	Updated inputmethod/scim-hangul to 0.4.0 [obache 2012-08-19]
