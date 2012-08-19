@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/06/02 10:09:37 obache Exp $
+$NetBSD: distinfo,v 1.3 2012/08/19 08:33:58 obache Exp $
 
-SHA1 (scim-tables-0.5.10.tar.gz) = c6e6fbd9999ceba5cb982349fee8391e16a9c2fe
-RMD160 (scim-tables-0.5.10.tar.gz) = 7925a3cdf70dcfc9af99ce41fb1706eb51f4ba69
-Size (scim-tables-0.5.10.tar.gz) = 8101380 bytes
+SHA1 (scim-tables-0.5.11.tar.gz) = 170ee4d4a7bab2387466637d5756a4f4b469a761
+RMD160 (scim-tables-0.5.11.tar.gz) = 883e2a8b0313a5d0c67accba8d4854da7f701dad
+Size (scim-tables-0.5.11.tar.gz) = 6757581 bytes
