@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2627 2012/08/19 07:44:37 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2628 2012/08/19 07:54:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4066,3 +4066,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/zyGrib to 6.0.0 [plunky 2012-08-18]
 	Updated net/samba to 3.6.6nb1 [sbd 2012-08-19]
 	Updated devel/cutter to 1.2.1 [obache 2012-08-19]
+	Updated www/ruby-httpclient to 2.2.7 [obache 2012-08-19]
