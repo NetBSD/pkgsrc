@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2628 2012/08/19 07:54:23 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2629 2012/08/19 08:09:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/samba to 3.6.6nb1 [sbd 2012-08-19]
 	Updated devel/cutter to 1.2.1 [obache 2012-08-19]
 	Updated www/ruby-httpclient to 2.2.7 [obache 2012-08-19]
+	Updated inputmethod/scim to 1.4.14 [obache 2012-08-19]
