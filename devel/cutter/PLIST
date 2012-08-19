@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/02 05:53:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/08/19 07:44:01 obache Exp $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h
@@ -27,6 +27,7 @@ include/cutter/cutter/cut-helper.h
 include/cutter/cutter/cut-iterated-test.h
 include/cutter/cutter/cut-listener-utils.h
 include/cutter/cutter/cut-listener.h
+include/cutter/cutter/cut-logger.h
 include/cutter/cutter/cut-macros.h
 include/cutter/cutter/cut-main.h
 include/cutter/cutter/cut-module-factory-utils.h
@@ -266,6 +267,7 @@ share/gtk-doc/html/cutter/ja/cut-diff.html
 share/gtk-doc/html/cutter/ja/cut-experimental.xml
 share/gtk-doc/html/cutter/ja/cut-features.xml
 share/gtk-doc/html/cutter/ja/cut-helper.xml
+share/gtk-doc/html/cutter/ja/cut-logger.xml
 share/gtk-doc/html/cutter/ja/cut-multi-process.xml
 share/gtk-doc/html/cutter/ja/cut-string-diff-writer.xml
 share/gtk-doc/html/cutter/ja/cut-test-utils.xml
@@ -393,6 +395,8 @@ share/gtk-doc/html/cutter/ja/soupcut-server.xml
 share/gtk-doc/html/cutter/ja/soupcutter.xml
 share/gtk-doc/html/cutter/ja/start.html
 share/gtk-doc/html/cutter/ja/style.css
+share/gtk-doc/html/cutter/ja/travis-ci-integration.html
+share/gtk-doc/html/cutter/ja/travis-ci.html
 share/gtk-doc/html/cutter/ja/tutorial.html
 share/gtk-doc/html/cutter/ja/up.png
 share/gtk-doc/html/cutter/ja/users.html
@@ -407,6 +411,8 @@ share/gtk-doc/html/cutter/reference.html
 share/gtk-doc/html/cutter/right.png
 share/gtk-doc/html/cutter/start.html
 share/gtk-doc/html/cutter/style.css
+share/gtk-doc/html/cutter/travis-ci-integration.html
+share/gtk-doc/html/cutter/travis-ci.html
 share/gtk-doc/html/cutter/tutorial.html
 share/gtk-doc/html/cutter/up.png
 share/gtk-doc/html/cutter/users.html
