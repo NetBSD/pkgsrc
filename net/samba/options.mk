@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2012/02/01 08:30:39 sbd Exp $
+# $NetBSD: options.mk,v 1.30 2012/08/19 07:28:36 sbd Exp $
 
 # Recommended package options for various setups:
 #
@@ -136,6 +136,7 @@ PLIST.winbind=		yes
 
 # Install the NSS winbind module if it exists.
 PLIST_SUBST+=		NSS_WINBIND=${NSS_WINBIND:Q}
+FILES_SUBST+=		NSS_WINBIND=${NSS_WINBIND:Q}
 NSS_WINBIND=		${NSS_WINBIND_cmd:sh}
 NSS_WINBIND_cmd=	\
 	${TEST} -x ${WRKSRC}/config.status ||				\
@@ -145,6 +146,12 @@ NSS_WINBIND_cmd=	\
 	${AWK} '/^$$/ { print "@comment no NSS winbind module"; exit 0; } \
 		{ sub(".*/", "lib/"); print; }' &&			\
 	${RM} -f config.log
+
+# Install a /usr/lib/${NSS_WINBIND:T} -> ${PREFIX}/${NSS_WINBIND} symlink
+# Unfortunately NSS_WINDIND_cmd can not be used to determine whether the
+# (de)install templates are needed or not.
+INSTALL_TEMPLATES+=	INSTALL.nss_winbind
+DEINSTALL_TEMPLATES+=	DEINSTALL.nss_winbind
 
 .PHONY: samba-nss-winbind-install
 post-install: samba-nss-winbind-install
