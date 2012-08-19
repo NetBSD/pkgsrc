@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:03:45 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/08/19 09:38:52 obache Exp $
 
-SHA1 (scim-pinyin-0.5.91.tar.gz) = 58bea437a211b7af8420057541a38933a41841c7
-RMD160 (scim-pinyin-0.5.91.tar.gz) = dbde7b7871c7baf3656cd4c7000196cf99ae15e2
-Size (scim-pinyin-0.5.91.tar.gz) = 5492055 bytes
+SHA1 (scim-pinyin-0.5.92.tar.gz) = c42b728b7e59c5233a1428e1cedcbc3fa9aceb02
+RMD160 (scim-pinyin-0.5.92.tar.gz) = 284da392c06e30b03468b62950af34dd5d7fc36c
+Size (scim-pinyin-0.5.92.tar.gz) = 4769203 bytes
