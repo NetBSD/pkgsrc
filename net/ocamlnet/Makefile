@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/07/06 09:29:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/08/20 08:11:58 wiz Exp $
 #
 
-DISTNAME=		ocamlnet-3.5.1
+DISTNAME=		ocamlnet-3.6
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -17,7 +17,7 @@ DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-without-nethttpd -without-rpc-auth-dh -disable-gtk2 \
-			-disable-tcl -disable-apache
+			-disable-tcl -disable-apache -enable-pcre
 USE_TOOLS+=		gmake
 BUILD_TARGET=		all
 
