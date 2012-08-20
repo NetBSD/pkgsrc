@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2636 2012/08/20 08:17:47 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2637 2012/08/20 08:35:49 christos Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated inputmethod/scim-pinyin to 0.5.92 [obache 2012-08-19]
 	Updated net/ocamlnet to 3.6 [wiz 2012-08-20]
 	Updated security/mit-krb5 to 1.10.3 [adam 2012-08-20]
+	Updated net/wireshark to 1.8.2 [christos 2012-08-20]
