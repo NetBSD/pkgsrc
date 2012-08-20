@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.21 2011/11/02 07:56:24 tron Exp $
+@comment $NetBSD: PLIST,v 1.22 2012/08/20 08:34:43 christos Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
 bin/editcap
-bin/idl2wrs
 bin/mergecap
 bin/randpkt
 bin/rawshark
@@ -14,21 +13,15 @@ lib/libwireshark.la
 lib/libwiretap.la
 lib/libwsutil.la
 lib/wireshark/plugins/${PKGVERSION}/asn1.la
-lib/wireshark/plugins/${PKGVERSION}/coseventcomm.la
-lib/wireshark/plugins/${PKGVERSION}/cosnaming.la
 lib/wireshark/plugins/${PKGVERSION}/docsis.la
 lib/wireshark/plugins/${PKGVERSION}/ethercat.la
 lib/wireshark/plugins/${PKGVERSION}/gryphon.la
-lib/wireshark/plugins/${PKGVERSION}/interlink.la
 lib/wireshark/plugins/${PKGVERSION}/irda.la
 lib/wireshark/plugins/${PKGVERSION}/m2m.la
 lib/wireshark/plugins/${PKGVERSION}/mate.la
 lib/wireshark/plugins/${PKGVERSION}/opcua.la
-lib/wireshark/plugins/${PKGVERSION}/parlay.la
 lib/wireshark/plugins/${PKGVERSION}/profinet.la
-lib/wireshark/plugins/${PKGVERSION}/sercosiii.la
 lib/wireshark/plugins/${PKGVERSION}/stats_tree.la
-lib/wireshark/plugins/${PKGVERSION}/tango.la
 lib/wireshark/plugins/${PKGVERSION}/unistim.la
 lib/wireshark/plugins/${PKGVERSION}/wimax.la
 lib/wireshark/plugins/${PKGVERSION}/wimaxasncp.la
@@ -36,7 +29,6 @@ man/man1/capinfos.1
 man/man1/dftest.1
 man/man1/dumpcap.1
 man/man1/editcap.1
-man/man1/idl2wrs.1
 man/man1/mergecap.1
 man/man1/randpkt.1
 man/man1/rawshark.1
@@ -92,7 +84,6 @@ share/wireshark/help/faq.txt
 share/wireshark/help/getting_started.txt
 share/wireshark/help/overview.txt
 share/wireshark/help/toc
-share/wireshark/idl2wrs.html
 ${PLIST.lua}share/wireshark/init.lua
 share/wireshark/ipmap.html
 share/wireshark/manuf
@@ -237,7 +228,6 @@ share/wireshark/radius/dictionary.wimax
 share/wireshark/radius/dictionary.wimax.wichorus
 share/wireshark/radius/dictionary.wispr
 share/wireshark/radius/dictionary.xedia
-share/wireshark/radius/dictionary.xylan
 share/wireshark/radius/dictionary.zyxel
 share/wireshark/randpkt.html
 share/wireshark/rawshark.html
