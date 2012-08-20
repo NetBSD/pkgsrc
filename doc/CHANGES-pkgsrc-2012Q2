@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.40 2012/08/20 09:11:22 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.41 2012/08/20 18:56:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -260,3 +260,5 @@ Pullup ticket #3907 - requested by
 www/typo3_46 security update
 Pullup ticket #3908 - requested by 
 www/typo3_47 security update
+Pullup ticket #3909 - requested by wiz
+graphics/gimp: security patch
