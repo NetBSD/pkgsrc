@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/08/18 14:40:12 tron Exp $
+# $NetBSD: Makefile,v 1.24 2012/08/20 04:56:00 dsainty Exp $
 
 DISTNAME=	pkg-config-0.27
 PKGREVISION=	1
@@ -39,9 +39,11 @@ post-configure:
 .endif
 
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--with-libiconv=gnu
 CONFIGURE_ARGS+=	--disable-dtrace
 .endif
+
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
+CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 
 PKGCONFIG_EXTRA_PATHS=	# empty
 
