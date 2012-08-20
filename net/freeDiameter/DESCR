@@ -1,0 +1,10 @@
+freeDiameter is a implementation of the Diameter protocol specified
+in RFC3588. Diameter is a protocol for carrying Authentication,
+Authorization and Accounting information. It is an evolution of
+the widely-deployed RADIUS protocol. freeDiameter also implements
+the changes to the Diameter protocol introduced by the rfc3588bis
+Internet Draft (work in progress).
+
+freeDiameter is open-source and released under a BSD compatible
+license. It is mainly written in the C language, which provides
+excellent performance and small memory footprint.
