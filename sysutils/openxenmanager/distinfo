@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/08/20 11:41:46 ryoon Exp $
+
+SHA1 (openxenmanager_0.r80+dfsg.orig.tar.gz) = 06939402d0c4d1ec3dfe17b410921aaf5c3ae03d
+RMD160 (openxenmanager_0.r80+dfsg.orig.tar.gz) = 0f1e36159d5da0a081864bda556dc7d03212169d
+Size (openxenmanager_0.r80+dfsg.orig.tar.gz) = 405676 bytes
