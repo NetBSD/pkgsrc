@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2012/08/20 08:34:43 christos Exp $
+@comment $NetBSD: PLIST,v 1.23 2012/08/20 12:21:53 tron Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -48,6 +48,7 @@ share/wireshark/diameter/Cisco.xml
 share/wireshark/diameter/Ericsson.xml
 share/wireshark/diameter/TGPPGmb.xml
 share/wireshark/diameter/TGPPRx.xml
+share/wireshark/diameter/TGPPS9.xml
 share/wireshark/diameter/TGPPSh.xml
 share/wireshark/diameter/Vodafone.xml
 share/wireshark/diameter/chargecontrol.xml
@@ -98,6 +99,7 @@ share/wireshark/radius/dictionary.acc
 share/wireshark/radius/dictionary.acme
 share/wireshark/radius/dictionary.airespace
 share/wireshark/radius/dictionary.alcatel
+share/wireshark/radius/dictionary.alcatel-lucent.xylan
 share/wireshark/radius/dictionary.alcatel.esam
 share/wireshark/radius/dictionary.alcatel.sr
 share/wireshark/radius/dictionary.alteon
