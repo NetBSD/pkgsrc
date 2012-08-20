@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4.2.1 2012/07/06 06:29:41 tron Exp $
+@comment $NetBSD: PLIST,v 1.4.2.2 2012/08/20 09:07:02 sbd Exp $
 ${EGDIR}/localconf.php
-${TYPO3DIR}/${TYPO3NAME}/.travis.yml
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
@@ -117,6 +116,7 @@ ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_tstemplate.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_userauth.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_userauthgroup.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/class.t3lib_xml.php
+${TYPO3DIR}/${TYPO3NAME}/t3lib/codec/class.t3lib_codec_javascriptencoder.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/config_default.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/contextmenu/class.t3lib_contextmenu_abstractcontextmenu.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/contextmenu/class.t3lib_contextmenu_abstractdataprovider.php
