@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2639 2012/08/20 11:44:43 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2640 2012/08/20 12:25:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4079,3 +4079,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/gtk-vnc to 0.5.1 [ryoon 2012-08-20]
 	Updated net/vinagre to 3.4.2 [ryoon 2012-08-20]
 	Added sysutils/openxenmanager version 0.0.80 [ryoon 2012-08-20]
+	Added net/freeDiameter version 1.1.2 [wiz 2012-08-20]
