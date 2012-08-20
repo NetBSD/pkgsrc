@@ -163,6 +163,7 @@ firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
 floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
+freediameter-all-extensions	Build all extensions for freeDiameter (except test and debug).
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 fribidi			Enable BIDI support using fribidi.
