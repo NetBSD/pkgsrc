@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.549 2012/08/14 14:25:25 dholland Exp $
+# $NetBSD: Makefile,v 1.550 2012/08/20 11:44:00 ryoon Exp $
 #
 
 COMMENT=	System utilities
@@ -295,6 +295,7 @@ SUBDIR+=	nvnet
 SUBDIR+=	nvramtool
 SUBDIR+=	oak
 SUBDIR+=	open-vm-tools
+SUBDIR+=	openxenmanager
 SUBDIR+=	osname
 SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-Remove
