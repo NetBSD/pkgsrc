@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/08/20 12:17:20 wiz Exp $
+
+SHA1 (freeDiameter/1.1.2.tar.gz) = 2cef81658e3700302a608d92dc1b78a328a0dcec
+RMD160 (freeDiameter/1.1.2.tar.gz) = 1b84b19a08d03f1374f3564496a794458ff3bcfb
+Size (freeDiameter/1.1.2.tar.gz) = 744424 bytes
+SHA1 (patch-libfdcore_config.c) = 75d3e75f00bf93b1ad21821c7c2e7525c9068e31
