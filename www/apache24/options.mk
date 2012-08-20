@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2012/07/11 19:09:18 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2012/08/20 14:14:16 fhajny Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_OPTIONS_REQUIRED_GROUPS=	mpm
 PKG_OPTIONS_GROUP.mpm=		apache-mpm-event apache-mpm-prefork apache-mpm-worker
-PKG_SUPPORTED_OPTIONS=		lua suexec
+PKG_SUPPORTED_OPTIONS=		lua suexec apache-mpm-shared
 PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
 
 .include "../../mk/bsd.options.mk"
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
 #	prefork		non-threaded, pre-forking web server
 #	worker		hybrid multi-threaded multi-process web server
 #
-PLIST_VARS+=		worker prefork
+PLIST_VARS+=		worker prefork mpm-shared
 .if !empty(PKG_OPTIONS:Mapache-mpm-event)
 CONFIGURE_ARGS+=	--with-mpm=event
 PLIST.worker=		yes
@@ -27,7 +27,15 @@ CONFIGURE_ARGS+=	--with-mpm=worker
 PLIST.worker=		yes
 .else
 CONFIGURE_ARGS+=	--with-mpm=prefork
+. if empty(PKG_OPTIONS:Mapache-mpm-shared)
 PLIST.prefork=		yes
+. endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mapache-mpm-shared)
+CONFIGURE_ARGS+=	--enable-mpms-shared='prefork worker event'
+PLIST.mpm-shared=	yes
+PLIST.worker=		yes
 .endif
 
 BUILD_DEFS+=		APACHE_MODULES
