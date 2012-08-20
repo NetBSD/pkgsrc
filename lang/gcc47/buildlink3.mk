@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/08/20 07:19:12 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2012/08/20 07:22:09 sbd Exp $
 
 BUILDLINK_TREE+=	gcc47
 
@@ -33,14 +33,11 @@ BUILDLINK_DEPMETHOD.gcc47?=	build
 
 pkgbase := gcc47
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.gcc47:Mgcc-java) || \
-    !empty(PKG_BUILD_OPTIONS.gcc47:Mgcc-go)
-.include "../../mk/pthread.buildlink3.mk"
-.endif
 .if !empty(PKG_BUILD_OPTIONS.gcc47:Mgcc-java)
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .endif
 
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif # GCC47_BUILDLINK3_MK
 BUILDLINK_TREE+=	-gcc47

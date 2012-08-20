@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/06/23 22:13:02 marino Exp $
+# $NetBSD: options.mk,v 1.8 2012/08/20 07:22:09 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -147,16 +147,11 @@ MAKE_ENV+=		ac_cv_prog_JAR=no
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/java-env.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-go)
 LANGS+=			go
-.endif
-
-.if !empty(PKG_OPTIONS:Mgcc-java) || !empty(PKG_OPTIONS:Mgcc-go)
-.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-fortran)
