@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2009/10/26 11:02:21 drochner Exp $
+$NetBSD: patch-ac,v 1.4 2012/08/20 11:34:59 ryoon Exp $
 
---- plugin/Makefile.in.orig	2009-10-20 20:32:54.000000000 +0200
+--- plugin/Makefile.in.orig	2012-07-12 08:37:47.000000000 +0000
 +++ plugin/Makefile.in
-@@ -489,7 +489,7 @@ target_alias = @target_alias@
+@@ -336,7 +336,7 @@ target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
