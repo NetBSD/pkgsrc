@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11463 2012/08/20 11:37:12 ryoon Exp $
+$NetBSD: TODO,v 1.11464 2012/08/20 21:20:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -412,7 +412,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asymptote-2.16
 	o at-spi-2.4.0
 	o aterm-1.0.1
-	o attica-0.4.0
+	o attica-0.4.1
 	o audacious-plugins-2.4.4
 	o audacity-2.0
 	o autoconvert-0.3.16
@@ -437,6 +437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blender-2.63a
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o boehm-gc-7.2d
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
@@ -484,7 +485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o connect-1.96
 	o consolekit-0.4.5
 	o cook-2.31
-	o coreutils-8.18
+	o coreutils-8.19
 	o covered-0.7.9
 	o covered-current-20090802
 	o cpio-2.9
@@ -696,13 +697,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps3-3.4.0
 	o granulate-0.2
 	o graphviz-2.28.0
+	o grep-2.14
 	o grhino-0.16.1
 	o groff-1.21
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
 	o gssdp-0.10.0
 	o gtexinfo-4.13a
-	o gthumb-3.0.1
+	o gthumb-3.0.2
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
@@ -714,7 +716,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtranslator-1.9.6
 	o guile-2.0.6
 	o guile-gtk-2.0
-	o gupnp-0.16.1
+	o gupnp-0.18.4
+	o gupnp-av-0.10.3
 	o gupnp-igd-0.2.1
 	o gv-3.7.3
 	o gvfs-1.6.7
@@ -910,6 +913,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
+	o mupdf-1.1
 	o muse-0.9.2
 	o mysql-5.1.65
 	o nano-2.2.6
@@ -959,7 +963,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openssh-6.0p1
 	o openssl-1.0.0d [pkg/44717]
 	o openssl-1.0.1c
-	o openttd-1.2.1
+	o openttd-1.2.2
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
@@ -1265,7 +1269,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20120811
+	o x264-devel-20120818
 	o xanalyser-1.30
 	o xapian-1.2.12
 	o xaric-0.13.2
