@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11462 2012/08/19 13:28:05 ryoon Exp $
+$NetBSD: TODO,v 1.11463 2012/08/20 11:37:12 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -706,7 +706,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
-	o gtk-vnc-0.4.3
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.38
@@ -1231,7 +1230,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o viewvc-1.1.15
 	o vifm-0.7.3a
 	o vim-7.3
-	o vinagre-3.4.2
 	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.4.2
 	o visual-regexp-3.1
