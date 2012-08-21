@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2011/09/02 08:06:55 he Exp $
+# $NetBSD: Makefile,v 1.26 2012/08/21 21:54:19 marino Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
 PKGNAME=	tcl-scotty-${DIST_VERS}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.nosuchname.net/scotty/
 COMMENT=	Network management extensions to TCL
 
 LICENSE=	2-clause-bsd
-
-BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.6nb4
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT= destdir
@@ -34,8 +32,6 @@ USE_TOOLS+=	lex yacc
 
 INSTALL_TARGET= tnm-install install-man sinstall
 
-.include "../../lang/tcl/buildlink3.mk"
-
 post-extract:
 	cd ${WRKSRC}/${BUILD_DIRS} && ${RM} -f ../doc/http.n
 	cd ${WRKSRC}/${BUILD_DIRS} && ${RM} -f ../doc/tkined.1
@@ -49,4 +45,5 @@ post-install:
 		sed -e 's:${DESTDIR}/::' <pkgIndex.tcl >pkgIndex.tcl.new; \
 		rm -f pkgIndex.tcl; mv pkgIndex.tcl.new pkgIndex.tcl
 
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
