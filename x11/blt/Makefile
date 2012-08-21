@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2012/06/15 23:06:02 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2012/08/21 22:00:24 marino Exp $
 #
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blt/}
 
