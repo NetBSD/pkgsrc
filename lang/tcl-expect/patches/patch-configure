@@ -1,0 +1,84 @@
+$NetBSD: patch-configure,v 1.1 2012/08/21 21:33:58 marino Exp $
+
+New configure patch, no libtool
+
+--- configure.orig	2010-09-16 20:46:47.000000000 +0000
++++ configure
+@@ -8007,7 +8007,7 @@ fi
+ fi
+ 
+ 	    ;;
+-	OpenBSD-*)
++	OpenBSD-*|MirBSD-*)
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
+ 	    SHLIB_SUFFIX=".so"
+@@ -8099,11 +8099,11 @@ fi
+ 		;;
+ 	    esac
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+-	    TCL_SHLIB_LD_EXTRAS="-soname \$@"
++	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname \$@"
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS=""
+ 	    if test $doRpath = yes; then
+@@ -8899,7 +8899,7 @@ fi
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*) ;;
+ 	    IRIX*) ;;
+-	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*|MirBSD-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    windows) ;;
+@@ -15948,14 +15948,7 @@ fi
+ 
+ PACKAGE_VERSION_NODOTS="`echo $PACKAGE_VERSION | sed -e 's/\.//g'`"
+ 
+-if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-    EXP_LIB_VERSION=$PACKAGE_VERSION
+-else
+-    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
+-fi
+-if test $iunix -eq 1 ; then
+     EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
+-fi
+ 
+ # also remove dots on systems that don't support filenames > 14
+ # (are there systems which support shared libs and restrict filename lengths!?)
+@@ -16021,11 +16014,7 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+ _ACEOF
+ 
+ else
+-    if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-        EXP_LIB_FLAG="-lexpect${EXP_LIB_VERSION}"
+-    else
+-        EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
+-    fi
++    EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
+     EXP_BUILD_LIB_SPEC="-L`pwd` ${EXP_LIB_FLAG}"
+     EXP_LIB_SPEC="-L${libdir} ${EXP_LIB_FLAG}"
+ fi
+@@ -16341,6 +16330,9 @@ rm -f conftest*
+     # substituted. (@@@ Might not be necessary anymore)
+     #--------------------------------------------------------------------
+ 
++    PVNODOTS=`echo ${PACKAGE_VERSION} | tr -d .`
++    SHARED_LIB_SUFFIX=${PVNODOTS}.so
++    UNSHARED_LIB_SUFFIX=${PVNODOTS}.a
+     if test "${TEA_PLATFORM}" = "windows" ; then
+ 	if test "${SHARED_BUILD}" = "1" ; then
+ 	    # We force the unresolved linking of symbols that are really in
+@@ -17176,6 +17170,7 @@ s,@VC_MANIFEST_EMBED_EXE@,$VC_MANIFEST_E
+ s,@TCLSH_PROG@,$TCLSH_PROG,;t t
+ s,@LIBOBJS@,$LIBOBJS,;t t
+ s,@LTLIBOBJS@,$LTLIBOBJS,;t t
++s,@SHLIB_VERSION@,$SHLIB_VERSION,;t t
+ CEOF
+ 
+ _ACEOF
