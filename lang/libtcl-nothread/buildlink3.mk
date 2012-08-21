@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:24:50 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2012/08/21 23:49:22 marino Exp $
 
 BUILDLINK_TREE+=	tclnt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tclnt
 TCLNT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tclnt+=	libtcl-nothread>=8.4.6
-BUILDLINK_ABI_DEPENDS.tclnt+=	libtcl-nothread>=8.4.6nb1
+BUILDLINK_ABI_DEPENDS.tclnt+=	libtcl-nothread>=8.4.6nb2
 BUILDLINK_PKGSRCDIR.tclnt?=	../../lang/libtcl-nothread
 
 BUILDLINK_FILES.tcl=	bin/tclsh*
