@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2647 2012/08/21 18:05:22 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2648 2012/08/21 22:05:25 marino Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4087,3 +4087,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/roundcube to 0.8.1 [taca 2012-08-21]
 	Updated mail/fetchmail to 6.3.21nb1 [tez 2012-08-21]
 	Updated textproc/grep to 2.14 [adam 2012-08-21]
+	Updated lang/tcl to 8.5.12 [marino 2012-08-21]
+	Updated x11/tk to 8.5.12 [marino 2012-08-21]
+	Updated lang/tcl-expect to 5.45 [2012-08-21]
