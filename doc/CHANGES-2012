@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2645 2012/08/21 15:27:04 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2646 2012/08/21 15:51:47 tez Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gimp to 2.8.0nb3 [wiz 2012-08-20]
 	Updated devel/ruby-ffi to 1.1.5 [taca 2012-08-21]
 	Updated mail/roundcube to 0.8.1 [taca 2012-08-21]
+	Updated mail/fetchmail to 6.3.21nb1 tez 2012-08-21]
