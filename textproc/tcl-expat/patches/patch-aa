@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/07/07 20:43:58 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2012/08/21 21:58:14 marino Exp $
+
+libtcl85 is hard-coded in the patch, just like it's predecessor.
 
 --- Makefile.orig	1998-08-25 07:25:20.000000000 +0000
 +++ Makefile
@@ -48,7 +50,7 @@ $NetBSD: patch-aa,v 1.5 2009/07/07 20:43:58 joerg Exp $
 -${OBJS}:
 -	cd expat ; make CC=${CC} SHLIB_CFLAGS=${TCL_SHLIB_CFLAGS}
 +$(LIB):		tclexpat.o
-+	$(TCL_SHLIB_LD) -o ${LIB:.so=.la} ${OBJS:.o=.lo} tclexpat.lo -L${LOCALBASE}/lib -rpath ${PREFIX}/lib -lexpat -ltcl84 -module -avoid-version
++	$(TCL_SHLIB_LD) -o ${LIB:.so=.la} ${OBJS:.o=.lo} tclexpat.lo -L${LOCALBASE}/lib -rpath ${PREFIX}/lib -lexpat -ltcl85 -module -avoid-version
  
  tclexpat.o:	tclexpat.c
 -	$(TCL_CC) $(CFLAGS) -c $(TCL_DEFS) $(TCL_SHLIB_CFLAGS) -I$(TCL_PREFIX)/include -Iexpat/xmlparse tclexpat.c
