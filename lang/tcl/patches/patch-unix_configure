@@ -1,0 +1,168 @@
+$NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
+
+--- unix/configure.orig	2012-07-25 16:45:05.000000000 +0000
++++ unix/configure
+@@ -6630,6 +6630,7 @@ fi
+     # Step 3: set configuration options based on system name and version.
+ 
+     do64bit_ok=no
++    TCL_LIB_SPEC_RPATH=""
+     # default to '{$LIBS}' and set to "" on per-platform necessary basis
+     SHLIB_LD_LIBS='${LIBS}'
+     LDFLAGS_ORIG="$LDFLAGS"
+@@ -7631,7 +7632,7 @@ fi
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	OpenBSD-*)
++	OpenBSD-*|MirBSD-*)
+ 	    arch=`arch -s`
+ 	    case "$arch" in
+ 	    m88k|vax)
+@@ -7749,11 +7750,10 @@ fi
+ 		;;
+ 	    esac
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+-	    TCL_SHLIB_LD_EXTRAS="-soname \$@"
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+@@ -8953,7 +8953,7 @@ fi
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*|MINGW32_*) ;;
+ 	    IRIX*) ;;
+-	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*|MirBSD-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    *) SHLIB_CFLAGS="-fPIC" ;;
+@@ -8984,7 +8984,7 @@ fi
+ 
+ else
+ 
+-            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)"'
++            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)$(SHLIB_VERSION)"'
+ 
+ fi
+ 
+@@ -9018,7 +9018,7 @@ fi
+ else
+ 
+         MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
+-        INSTALL_STUB_LIB='$(INSTALL_LIBRARY) $(STUB_LIB_FILE) "$(LIB_INSTALL_DIR)/$(STUB_LIB_FILE)" ; (cd "$(LIB_INSTALL_DIR)" ; $(RANLIB) $(STUB_LIB_FILE))'
++        INSTALL_STUB_LIB='$(INSTALL_DATA) $(STUB_LIB_FILE) "$(LIB_INSTALL_DIR)/$(STUB_LIB_FILE)" ; (cd "$(LIB_INSTALL_DIR)" ; $(RANLIB) $(STUB_LIB_FILE))'
+ 
+ fi
+ 
+@@ -18893,9 +18893,9 @@ fi
+ #	building libtcl as a shared library instead of a static library.
+ #--------------------------------------------------------------------
+ 
+-TCL_UNSHARED_LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
+-TCL_SHARED_LIB_SUFFIX=${SHARED_LIB_SUFFIX}
+-eval "TCL_LIB_FILE=libtcl${LIB_SUFFIX}"
++TCL_UNSHARED_LIB_SUFFIX=${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}.a
++TCL_SHARED_LIB_SUFFIX=${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}.so
++eval "TCL_LIB_FILE=libtcl${TCL_SHARED_LIB_SUFFIX}"
+ 
+ # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
+ # since on some platforms TCL_LIB_FILE contains shell escapes.
+@@ -19000,11 +19000,7 @@ _ACEOF
+ else
+     # libdir must be a fully qualified path and not ${exec_prefix}/lib
+     eval libdir="$libdir"
+-    if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-        TCL_LIB_FLAG="-ltcl${TCL_VERSION}"
+-    else
+-        TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`"
+-    fi
++    TCL_LIB_FLAG="-ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
+     TCL_BUILD_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_LIB_FLAG}"
+     TCL_LIB_SPEC="-L${libdir} ${TCL_LIB_FLAG}"
+ fi
+@@ -19025,12 +19021,11 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+ 	TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /System/Library/Frameworks"
+     test -z "$TCL_MODULE_PATH"  && \
+ 	TCL_MODULE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl"
+-elif test "$prefix/lib" != "$libdir"; then
+-    TCL_PACKAGE_PATH="${libdir} ${prefix}/lib ${TCL_PACKAGE_PATH}"
+ else
+-    TCL_PACKAGE_PATH="${prefix}/lib ${TCL_PACKAGE_PATH}"
++    TCL_PACKAGE_PATH="${prefix}/lib/tcl ${prefix}/lib"
+ fi
+ 
++
+ #--------------------------------------------------------------------
+ #       The statements below define various symbols relating to Tcl
+ #       stub support.
+@@ -19043,12 +19038,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
+ eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
+ eval "TCL_STUB_LIB_DIR=${libdir}"
+ 
+-if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-    TCL_STUB_LIB_FLAG="-ltclstub${TCL_VERSION}"
+-else
+-    TCL_STUB_LIB_FLAG="-ltclstub`echo ${TCL_VERSION} | tr -d .`"
+-fi
+-
++TCL_STUB_LIB_FLAG="-ltclstub${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
+ TCL_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
+ TCL_STUB_LIB_SPEC="-L${TCL_STUB_LIB_DIR} ${TCL_STUB_LIB_FLAG}"
+ TCL_BUILD_STUB_LIB_PATH="`pwd`/${TCL_STUB_LIB_FILE}"
+@@ -19200,34 +19190,15 @@ fi
+ # Transform confdefs.h into DEFS.
+ # Protect against shell expansion while executing Makefile rules.
+ # Protect against Makefile macro expansion.
+-#
+-# If the first sed substitution is executed (which looks for macros that
+-# take arguments), then we branch to the quote section.  Otherwise,
+-# look for a macro that doesn't take arguments.
+-cat >confdef2opt.sed <<\_ACEOF
+-t clear
+-: clear
+-s,^[	 ]*#[	 ]*define[	 ][	 ]*\([^	 (][^	 (]*([^)]*)\)[	 ]*\(.*\),-D\1=\2,g
+-t quote
+-s,^[	 ]*#[	 ]*define[	 ][	 ]*\([^	 ][^	 ]*\)[	 ]*\(.*\),-D\1=\2,g
+-t quote
+-d
+-: quote
+-s,[	 `~#$^&*(){}\\|;'"<>?],\\&,g
+-s,\[,\\&,g
+-s,\],\\&,g
+-s,\$,$$,g
+-p
+-_ACEOF
+-# We use echo to avoid assuming a particular line-breaking character.
+-# The extra dot is to prevent the shell from consuming trailing
+-# line-breaks from the sub-command output.  A line-break within
+-# single-quotes doesn't work because, if this script is created in a
+-# platform that uses two characters for line-breaks (e.g., DOS), tr
+-# would break.
+-ac_LF_and_DOT=`echo; echo .`
+-DEFS=`sed -n -f confdef2opt.sed confdefs.h | tr "$ac_LF_and_DOT" ' .'`
+-rm -f confdef2opt.sed
++cat > conftest.defs <<\EOF
++s%#define \([A-Za-z_][A-Za-z0-9_]*\) *\(.*\)%-D\1=\2%g
++s%[ 	`~#$^&*(){}\\|;'"<>?]%\\&%g
++s%\[%\\&%g
++s%\]%\\&%g
++s%\$%$$%g
++EOF
++DEFS=`sed -f conftest.defs confdefs.h | tr '\012' ' '`
++rm -f conftest.defs
+ 
+ 
+ 
+@@ -19848,6 +19819,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
+ s,@EXTRA_TCLSH_LIBS@,$EXTRA_TCLSH_LIBS,;t t
+ s,@DLTEST_LD@,$DLTEST_LD,;t t
+ s,@DLTEST_SUFFIX@,$DLTEST_SUFFIX,;t t
++s,@SHLIB_VERSION@,$SHLIB_VERSION,;t t
+ CEOF
+ 
+ _ACEOF

@@ -1,0 +1,147 @@
+$NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
+
+--- unix/Makefile.in.orig	2012-07-25 16:45:05.000000000 +0000
++++ unix/Makefile.in
+@@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
+ MAJOR_VERSION		= @TCL_MAJOR_VERSION@
+ MINOR_VERSION		= @TCL_MINOR_VERSION@
+ PATCH_LEVEL		= @TCL_PATCH_LEVEL@
++SHLIB_VERSION		= .@SHLIB_VERSION@
+ 
+ #--------------------------------------------------------------------------
+ # Things you can change to personalize the Makefile for your own site (you can
+@@ -54,6 +55,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TC
+ 
+ # Directory in which to install the include file tcl.h:
+ INCLUDE_INSTALL_DIR	= $(INSTALL_ROOT)$(includedir)
++UNIX_INCLUDE_INSTALL_DIR    = $(INCLUDE_INSTALL_DIR)/tcl/unix
++GENERIC_INCLUDE_INSTALL_DIR = $(INCLUDE_INSTALL_DIR)/tcl/generic
+ 
+ # Path to the private tcl header dir:
+ PRIVATE_INCLUDE_DIR	= @PRIVATE_INCLUDE_DIR@
+@@ -100,7 +103,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
+ #CFLAGS			= $(CFLAGS_DEBUG)
+ #CFLAGS			= $(CFLAGS_OPTIMIZE)
+ #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
+-CFLAGS			= @CFLAGS_DEFAULT@ @CFLAGS@
++CFLAGS			+= @CFLAGS_DEFAULT@ @CFLAGS@
+ 
+ # Flags to pass to the linker
+ LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
+@@ -193,6 +196,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
+ #BUILD_DLTEST		=
+ 
+ TCL_LIB_FILE		= @TCL_LIB_FILE@
++TCL_LIB_A_FILE		= ${TCL_LIB_FILE:@SHLIB_SUFFIX@=.a}
+ #TCL_LIB_FILE		= libtcl.a
+ 
+ # Generic lib name used in rules that apply to tcl and tk
+@@ -541,7 +545,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
+ 
+ all: binaries libraries doc
+ 
+-binaries: ${LIB_FILE} $(STUB_LIB_FILE) ${TCL_EXE}
++binaries: ${LIB_FILE} $(STUB_LIB_FILE) ${TCL_EXE} ${TCL_LIB_A_FILE}
+ 
+ libraries:
+ 
+@@ -557,6 +561,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+ 	rm -f $@
+ 	@MAKE_STUB_LIB@
+ 
++${TCL_LIB_A_FILE}: ${OBJS}
++	rm -rf $@
++	ar cr $@ ${OBJS}
++	$(RANLIB) $@
++
+ # Make target which outputs the list of the .o contained in the Tcl lib useful
+ # to build a single big shared library containing Tcl and other extensions.
+ # Used for the Tcl Plugin.  -- dl
+@@ -722,9 +731,13 @@ install-binaries: binaries
+ 	    fi
+ 	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
+ 	@@INSTALL_LIB@
+-	@chmod 555 "$(DLL_INSTALL_DIR)"/$(LIB_FILE)
++	@chmod 555 "$(DLL_INSTALL_DIR)"/$(LIB_FILE)$(SHLIB_VERSION)
++	@cd "$(DLL_INSTALL_DIR)" && ln -sf $(LIB_FILE)$(SHLIB_VERSION) $(LIB_FILE)
++	@echo "Installing ${TCL_LIB_A_FILE} to $(DLL_INSTALL_DIR)/"
++	@$(INSTALL_DATA) ${TCL_LIB_A_FILE} $(DLL_INSTALL_DIR)/${TCL_LIB_A_FILE}
+ 	@echo "Installing ${TCL_EXE} as $(BIN_INSTALL_DIR)/tclsh$(VERSION)@EXEEXT@"
+ 	@$(INSTALL_PROGRAM) ${TCL_EXE} "$(BIN_INSTALL_DIR)"/tclsh$(VERSION)@EXEEXT@
++	@cd "$(BIN_INSTALL_DIR)" && ln -sf tclsh$(VERSION)@EXEEXT@ tclsh
+ 	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
+ 	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)"/tclConfig.sh
+ 	@if test "$(STUB_LIB_FILE)" != "" ; then \
+@@ -734,7 +747,8 @@ install-binaries: binaries
+ 	@EXTRA_INSTALL_BINARIES@
+ 
+ install-libraries: libraries $(INSTALL_TZDATA) install-msgs
+-	@for i in "$(INCLUDE_INSTALL_DIR)" "$(SCRIPT_INSTALL_DIR)"; \
++	@for i in "$(INCLUDE_INSTALL_DIR)" "$(SCRIPT_INSTALL_DIR)" \
++		"$(GENERIC_INCLUDE_INSTALL_DIR)" "$(UNIX_INCLUDE_INSTALL_DIR)"; \
+ 	    do \
+ 	    if [ ! -d "$$i" ] ; then \
+ 		echo "Making directory $$i"; \
+@@ -743,7 +757,7 @@ install-libraries: libraries $(INSTALL_T
+ 		else true; \
+ 		fi; \
+ 	    done;
+-	@for i in opt0.4 http1.0 encoding ../tcl8 ../tcl8/8.4  ../tcl8/8.4/platform ../tcl8/8.5; \
++	@for i in opt0.4 http1.0 encoding; \
+ 	    do \
+ 	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
+ 		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
+@@ -756,12 +770,17 @@ install-libraries: libraries $(INSTALL_T
+ 	    chmod +x $(SRC_DIR)/../unix/install-sh; \
+ 	    fi
+ 	@echo "Installing header files";
+-	@for i in $(GENERIC_DIR)/tcl.h $(GENERIC_DIR)/tclDecls.h \
+-		$(GENERIC_DIR)/tclPlatDecls.h \
+-		$(GENERIC_DIR)/tclTomMath.h \
+-		$(GENERIC_DIR)/tclTomMathDecls.h ; \
++	@for i in $(GENERIC_DIR)/*.h ; \
++	    do \
++	    $(INSTALL_DATA) $$i "$(GENERIC_INCLUDE_INSTALL_DIR)"; \
++	    done;
++	@for i in $(UNIX_DIR)/*.h ; \
++	    do \
++	    $(INSTALL_DATA) $$i "$(UNIX_INCLUDE_INSTALL_DIR)"; \
++	    done;
++	@for i in tcl.h tclDecls.h tclPlatDecls.h ; \
+ 	    do \
+-	    $(INSTALL_DATA) $$i "$(INCLUDE_INSTALL_DIR)"; \
++	    cd "$(INCLUDE_INSTALL_DIR)" && ln -sf tcl/generic/$$i $$i; \
+ 	    done;
+ 	@echo "Installing library files to $(SCRIPT_INSTALL_DIR)";
+ 	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex \
+@@ -774,22 +793,24 @@ install-libraries: libraries $(INSTALL_T
+ 	    do \
+ 	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/http1.0; \
+ 	    done;
+-	@echo "Installing package http 2.7.9 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/http-2.7.9.tm;
+ 	@echo "Installing library opt0.4 directory";
+ 	@for i in $(TOP_DIR)/library/opt/*.tcl ; \
+ 	    do \
+ 	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/opt0.4; \
+ 	    done;
+ 	@echo "Installing package msgcat 1.4.5 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/msgcat-1.4.5.tm;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.4/msgcat.tcl;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.4/pkgIndex.tcl;
+ 	@echo "Installing package tcltest 2.3.4 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/tcltest-2.3.4.tm;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/tcltest2.3/tcltest.tcl;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/tcltest2.3/pkgIndex.tcl;
+ 
+ 	@echo "Installing package platform 1.0.10 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/platform.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/platform-1.0.10.tm;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/platform.tcl "$(SCRIPT_INSTALL_DIR)"/platform1.0/platform.tcl;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/platform1.0/pkgIndex.tcl;
+ 	@echo "Installing package platform::shell 1.1.4 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/shell.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/platform/shell-1.1.4.tm;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/shell.tcl "$(SCRIPT_INSTALL_DIR)"/shell1.1/shell.tcl
++	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/shell1.1/pkgIndex.tcl
+ 
+ 	@echo "Installing library encoding directory";
+ 	@for i in $(TOP_DIR)/library/encoding/*.enc ; do \
