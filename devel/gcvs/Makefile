@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2011/04/22 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/08/21 23:49:20 marino Exp $
 
 DISTNAME=		gcvs-1.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvsgui/}
 # extra distfile containing an updated configure script

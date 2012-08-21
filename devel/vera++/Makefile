@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/07/02 13:37:37 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/21 23:49:21 marino Exp $
 #
 
 DISTNAME=	vera++-1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.inspirel.com/vera/files/
 

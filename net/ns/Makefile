@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2009/01/06 04:43:23 minskim Exp $
+# $NetBSD: Makefile,v 1.33 2012/08/21 23:49:24 marino Exp $
 
 DISTNAME=	ns-2.33
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 

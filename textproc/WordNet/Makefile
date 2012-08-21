@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/02/24 16:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/21 23:49:26 marino Exp $
 #
 
 DISTNAME=		WordNet-3.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		http://wordnet.princeton.edu/3.0/ \
 			ftp://ftp.cogsci.princeton.edu/pub/wordnet/3.0/
