@@ -1,0 +1,114 @@
+$NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:32:34 marino Exp $
+
+--- unix/configure.orig	2012-07-25 16:45:53.000000000 +0000
++++ unix/configure
+@@ -4843,10 +4843,10 @@ fi
+     # LDFLAGS_ARCH so they eventually end up in LDFLAGS even if [load]
+     # is disabled by the user. [Bug 1016796]
+     LDFLAGS_ARCH=""
+-    UNSHARED_LIB_SUFFIX=""
+     TCL_TRIM_DOTS='`echo ${VERSION} | tr -d .`'
+     ECHO_VERSION='`echo ${VERSION}`'
+-    TCL_LIB_VERSIONS_OK=ok
++    TCL_LIB_VERSIONS_OK=nodots
++    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+     CFLAGS_DEBUG=-g
+     CFLAGS_OPTIMIZE=-O
+     if test "$GCC" = yes; then
+@@ -5930,7 +5930,7 @@ fi
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+-	    LDFLAGS="$LDFLAGS -export-dynamic"
++	    LDFLAGS=""
+ 	    if test $doRpath = yes; then
+ 
+ 		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+@@ -5945,21 +5945,15 @@ fi
+ 	    	LDFLAGS="$LDFLAGS -pthread"
+ 
+ fi
+-
+-	    case $system in
+-	    FreeBSD-3.*)
+-	    	# FreeBSD-3 doesn't handle version numbers with dots.
+-	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+-	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
+-	    	TCL_LIB_VERSIONS_OK=nodots
+-		;;
+-	    esac
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+-	    TCL_SHLIB_LD_EXTRAS="-soname \$@"
++	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname \$@"
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+@@ -5981,7 +5975,7 @@ fi
+ 	    # Version numbers are dot-stripped by system policy.
+ 	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+-	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	Darwin-*)
+@@ -7190,7 +7184,7 @@ fi
+ 
+ else
+ 
+-            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)"'
++            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)$(SHLIB_VERSION)"'
+ 
+ fi
+ 
+@@ -7224,7 +7218,7 @@ fi
+ else
+ 
+         MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
+-        INSTALL_STUB_LIB='$(INSTALL_LIBRARY) $(STUB_LIB_FILE) "$(LIB_INSTALL_DIR)/$(STUB_LIB_FILE)" ; (cd "$(LIB_INSTALL_DIR)" ; $(RANLIB) $(STUB_LIB_FILE))'
++        INSTALL_STUB_LIB='$(INSTALL_DATA) $(STUB_LIB_FILE) "$(LIB_INSTALL_DIR)/$(STUB_LIB_FILE)" ; (cd "$(LIB_INSTALL_DIR)" ; $(RANLIB) $(STUB_LIB_FILE))'
+ 
+ fi
+ 
+@@ -11383,11 +11377,7 @@ _ACEOF
+ else
+     # libdir must be a fully qualified path and not ${exec_prefix}/lib
+     eval libdir="$libdir"
+-    if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-        TK_LIB_FLAG="-ltk${TK_VERSION}"
+-    else
+-        TK_LIB_FLAG="-ltk`echo ${TK_VERSION} | tr -d .`"
+-    fi
++    TK_LIB_FLAG="-ltk`echo ${TK_VERSION} | tr -d .`"
+     TK_BUILD_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TK_LIB_FLAG}"
+ 	if test "${ac_cv_cygwin}" = "yes" -a "$SHARED_BUILD" = "1"; then
+ 	WISH_BUILD_LIB_SPEC="-L\$(TOP_DIR)/win -ltk${TK_MAJOR_VERSION}${TK_MINOR_VERSION} \${TCL_LIB_SPEC}"
+@@ -11422,11 +11412,7 @@ fi
+ eval "TK_STUB_LIB_FILE=libtkstub${TK_UNSHARED_LIB_SUFFIX}"
+ eval "TK_STUB_LIB_DIR=${libdir}"
+ 
+-if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-    TK_STUB_LIB_FLAG="-ltkstub${TK_VERSION}"
+-else
+-    TK_STUB_LIB_FLAG="-ltkstub`echo ${TK_VERSION} | tr -d .`"
+-fi
++TK_STUB_LIB_FLAG="-ltkstub`echo ${TK_VERSION} | tr -d .`"
+ 
+ TK_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TK_STUB_LIB_FLAG}"
+ TK_STUB_LIB_SPEC="-L${TK_STUB_LIB_DIR} ${TK_STUB_LIB_FLAG}"
+@@ -12246,6 +12232,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
+ s,@REZ@,$REZ,;t t
+ s,@REZ_FLAGS@,$REZ_FLAGS,;t t
+ s,@LTLIBOBJS@,$LTLIBOBJS,;t t
++s,@SHLIB_VERSION@,$SHLIB_VERSION,;t t
+ CEOF
+ 
+ _ACEOF
