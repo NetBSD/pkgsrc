@@ -1,16 +1,24 @@
-# $NetBSD: Makefile.common,v 1.8 2006/05/13 08:58:37 skrll Exp $
+# $NetBSD: Makefile.common,v 1.9 2012/08/21 21:33:58 marino Exp $
 
-DISTNAME=	expect-${EXPECT_VERSION}
-MASTER_SITES=	http://expect.nist.gov/src/
-HOMEPAGE=	http://expect.nist.gov/
+DISTNAME=	expect${EXPECT_FNAME}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expect/}
+HOMEPAGE=	http://expect.sourceforge.net/
 
-EXPECT_VERSION=	5.43.0
-EXTRACT_SUFX=	.tar.bz2
+EXPECT_FNAME=	5.45
+EXPECT_VERSION=	5.45.0
+EXPECT_SONUM=	545
 
-WRKSRC=		${WRKDIR}/expect-5.43
-USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
+
+PLIST_SUBST+=		SONUM=${EXPECT_SONUM}
+PLIST_SUBST+=		BASEVER=${EXPECT_FNAME}
+
+# NetBSD 5.99 strip complains it doesn't recognized the format of
+# the utility scripts and didn't install any of them as a result.
+# Just in case there are other platforms like this, don't install
+# stripped binaries on any platform.
+INSTALL_UNSTRIPPED=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
