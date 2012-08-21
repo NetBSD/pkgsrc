@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2011/09/02 08:06:55 he Exp $
+$NetBSD: patch-ab,v 1.6 2012/08/21 21:54:19 marino Exp $
 
 Put installed files under lib/tcl, so that tcl more easily picks it
 up using e.g. "package require Tnm".
@@ -99,8 +99,9 @@ since that's not used in pkgsrc.
  all: @TARGET@
  
 -scotty: tnm$(SHLIB_SUFFIX) ntping straps scotty.o
+-	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
 +scotty: libtnm$(SHLIB_SUFFIX) ntping straps scotty.o
- 	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
++	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm -rpath ${PREFIX}/lib
  
 -tnm$(SHLIB_SUFFIX): $(TNM_OBJS)
 -	$(SHLIB_LD) $(TNM_OBJS) -o tnm$(SHLIB_SUFFIX) $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS)

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.9 2011/09/02 08:06:55 he Exp $
+$NetBSD: distinfo,v 1.10 2012/08/21 21:54:19 marino Exp $
 
 SHA1 (scotty-2.1.11.tar.gz) = 819011f908c57e4591d6f50e51677c01eb55dc13
 RMD160 (scotty-2.1.11.tar.gz) = 3b4d45f3db73f05b49a46017bf2ffed6d6464b00
 Size (scotty-2.1.11.tar.gz) = 1381059 bytes
 SHA1 (patch-aa) = 6d2b4b522ba802d07c0bc8346330070ae7e0edea
-SHA1 (patch-ab) = a948075a85ace0ab0cd2a0fe10a2a80f15f367dc
+SHA1 (patch-ab) = 1f59223ec7557c6175bb3d5c736752aa70b54fce
 SHA1 (patch-ac) = bf067f64474dc3ed6306caa468f29a040023e165
-SHA1 (patch-ad) = 7823f5deab60b7979c87c3a000ac638bf7bb7924
+SHA1 (patch-ad) = 512d58ca512467b293e1f96d6728e4d5b5839a20
 SHA1 (patch-af) = 0db13ef063f641559c3f7c98480ab99b4877451e
-SHA1 (patch-ag) = 407aa9ab0276a4fe6afd0c522667e0a80008a7be
+SHA1 (patch-ag) = fb115d88369b45f43da1b906ee8aefde9db96ab2
 SHA1 (patch-ah) = 327f9a0dae60ceacc039e288946114e0bbdbebde
