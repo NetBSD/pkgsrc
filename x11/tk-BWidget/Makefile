@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/09/20 10:34:03 plunky Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/21 23:49:27 marino Exp $
 
 DISTNAME=	BWidget-1.9.0
 PKGNAME=	tk-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcllib/}
 
