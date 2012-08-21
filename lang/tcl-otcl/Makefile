@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/02/17 19:49:57 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/08/21 21:45:29 marino Exp $
 
 DISTNAME=	otcl-src-1.13
 PKGNAME=	tcl-${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 
@@ -16,9 +17,14 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
+.include "../../lang/tcl/Makefile.version"
+.include "../../x11/tk/Makefile.version"
+
 CONFIGURE_ARGS+=	V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; ${ECHO} $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
+CONFIGURE_ARGS+=	--with-tcl-ver=${TCL_VERSION}
+CONFIGURE_ARGS+=	--with-tk-ver=${TK_VERSION}
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.tcl}/include/tcl/generic
 
