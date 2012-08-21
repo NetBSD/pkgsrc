@@ -1,0 +1,33 @@
+$NetBSD: patch-tests_pkgMkIndex.test,v 1.1 2012/08/21 21:31:47 marino Exp $
+
+Carried over from TCL 8.4
+
+--- tests/pkgMkIndex.test.orig	2012-07-16 11:57:06.000000000 +0000
++++ tests/pkgMkIndex.test
+@@ -557,7 +557,7 @@ removeFile [file join pkg circ2.tcl]
+ removeFile [file join pkg circ3.tcl]
+ 
+ # Some tests require the existence of one of the DLLs in the dltest directory
+-set x [file join [file dirname [info nameofexecutable]] dltest \
++set x [file join [file dirname [info nameofexecutable]] .. dltest .libs \
+ 	pkga[info sharedlibextension]]
+ set dll "[file tail $x]Required"
+ testConstraint $dll [file exists $x]
+@@ -570,7 +570,7 @@ proc pkga_neq { x } {
+     return [expr {! [pkgq_eq $x]}]
+ }
+ } [file join pkg pkga.tcl]
+-    file copy -force $x $fullPkgPath
++    eval file copy -force [glob "$x*"] $fullPkgPath
+ }
+ testConstraint exec [llength [info commands ::exec]]
+ 
+@@ -596,7 +596,7 @@ test pkgMkIndex-10.2 {package in DLL hid
+ } {0 {}}
+ 
+ if {[testConstraint $dll]} {
+-    file delete -force [file join $fullPkgPath [file tail $x]]
++    eval file delete -force [global [file join $fullPkgPath [file tail "$x*"] ] ]
+     removeFile [file join pkg pkga.tcl]
+ }
+ 
