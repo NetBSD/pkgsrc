@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2011/04/22 13:44:26 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/08/21 23:49:24 marino Exp $
 
 DISTNAME=	ns-allinone-2.29.3
 PKGNAME=	nam-1.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
