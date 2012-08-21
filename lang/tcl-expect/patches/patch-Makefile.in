@@ -1,0 +1,68 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/08/21 21:33:58 marino Exp $
+
+New Makefile.in patch, no libtool
+
+--- Makefile.in.orig	2010-09-30 17:14:07.000000000 +0000
++++ Makefile.in
+@@ -99,7 +99,9 @@ PKG_HEADERS	= @PKG_HEADERS@
+ # configuration options) composed of the named objects.
+ #========================================================================
+ 
++SHLIB_VERSION	= .@SHLIB_VERSION@
+ PKG_LIB_FILE	= @PKG_LIB_FILE@
++PKG_LIB_A_FILE  = ${PKG_LIB_FILE:.so=.a}
+ PKG_STUB_LIB_FILE = @PKG_STUB_LIB_FILE@
+ 
+ lib_BINARIES	= $(PKG_LIB_FILE)
+@@ -121,9 +123,9 @@ includedir	= @includedir@
+ DESTDIR		=
+ 
+ PKG_DIR		= $(PACKAGE_NAME)$(PACKAGE_VERSION)
+-pkgdatadir	= $(datadir)/$(PKG_DIR)
+-pkglibdir	= $(libdir)/$(PKG_DIR)
+-pkgincludedir	= $(includedir)/$(PKG_DIR)
++pkgdatadir	= $(datadir)
++pkglibdir	= $(libdir)
++pkgincludedir	= $(includedir)
+ 
+ top_builddir	= .
+ 
+@@ -214,10 +216,15 @@ all: binaries libraries doc
+ # of the Makefile, in the "BINARIES" variable.
+ #========================================================================
+ 
+-binaries: $(BINARIES) pkgIndex.tcl-hand
++binaries: $(BINARIES) pkgIndex.tcl-hand ${PKG_LIB_A_FILE}
+ 
+ libraries:
+ 
++${PKG_LIB_A_FILE}: ${OBJS}
++	rm -rf $@
++	ar cr $@ ${OBJS}
++	$(RANLIB) $@
++
+ doc:
+ 
+ install: all install-binaries install-libraries install-doc
+@@ -547,6 +554,9 @@ install-lib-binaries:
+ 	    fi; \
+ 	  fi; \
+ 	done
++	mv $(DESTDIR)$(pkglibdir)/$(PKG_LIB_FILE) $(DESTDIR)$(pkglibdir)/$(PKG_LIB_FILE)$(SHLIB_VERSION)
++	cd $(DESTDIR)$(pkglibdir) && ln -fs $(PKG_LIB_FILE)$(SHLIB_VERSION) $(PKG_LIB_FILE)
++	$(INSTALL_DATA) $(PKG_LIB_A_FILE) $(DESTDIR)$(pkglibdir)/$(PKG_LIB_A_FILE)
+ 	@list='$(PKG_TCL_SOURCES)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+ 	    destp=`basename $$p`; \
+@@ -554,9 +564,10 @@ install-lib-binaries:
+ 	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pkglibdir)/$$destp; \
+ 	  fi; \
+ 	done
++	mkdir -p $(DESTDIR)$(pkglibdir)/tcl/expect$(PACKAGE_VERSION)
+ 	@if test "x$(SHARED_BUILD)" = "x1"; then \
+ 	    echo " Install pkgIndex.tcl $(DESTDIR)$(pkglibdir)"; \
+-	    $(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir); \
++	    $(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir)/tcl/expect$(PACKAGE_VERSION); \
+ 	fi
+ 
+ #========================================================================
