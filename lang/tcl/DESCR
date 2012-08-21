@@ -1,8 +1,15 @@
-This package contains Tcl, John Osterhout's Tool Command Language, an
-exceedingly simple language great for general scripting and for
-embedding in other programs.
+Tcl (Tool Command Language) is a very powerful but easy to learn dynamic
+programming language, suitable for a very wide range of uses, including
+web and desktop applications, networking, administration, testing and
+many more. Open source and business-friendly, Tcl is a mature yet
+evolving language that is truly cross platform, easily deployed and
+highly extensible.
 
-The best way to get started with Tcl is to read ``Tcl and the Tk
-Toolkit'' by John K. Ousterhout, Addison-Wesley, ISBN 0-201-63337-X
-or ``Practical Programming in Tcl and Tk'' by Brent B. Welch,
-Prentice Hall PTR, ISBN 0-13-616830-X.
+Tcl/Tk resources:
+  Newsgroup: comp.lang.tcl
+  Wiki: http://wiki.tcl.tk
+  Books:
+   * Practical Programming in Tcl and Tk, 4th Edition
+     ISBN: 0-13-038560-3
+   * Tcl and the Tk Toolkit, 2nd Edition
+     ISBN: 978-0-321-33633-0
