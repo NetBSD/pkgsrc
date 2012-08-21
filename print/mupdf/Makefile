@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/06/03 22:03:24 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/21 19:50:53 drochner Exp $
 #
 
-DISTNAME=	mupdf-1.0-source
+DISTNAME=	mupdf-1.1-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	http://ccxvii.net/mupdf/download/ \
@@ -20,6 +20,7 @@ USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 LDFLAGS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
