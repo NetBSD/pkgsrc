@@ -1,0 +1,23 @@
+$NetBSD: patch-unix_tclConfig.sh.in,v 1.1 2012/08/21 21:31:47 marino Exp $
+
+--- unix/tclConfig.sh.in.orig	2012-07-25 16:45:05.000000000 +0000
++++ unix/tclConfig.sh.in
+@@ -9,6 +9,8 @@
+ #
+ # The information in this file is specific to a single platform.
+ 
++if [ -z "${_TCL_NOTHREAD}" ]; then
++
+ # Tcl's version number.
+ TCL_VERSION='@TCL_VERSION@'
+ TCL_MAJOR_VERSION='@TCL_MAJOR_VERSION@'
+@@ -167,3 +169,9 @@ TCL_STUB_LIB_PATH='@TCL_STUB_LIB_PATH@'
+ 
+ # Flag, 1: we built Tcl with threads enables, 0 we didn't
+ TCL_THREADS=@TCL_THREADS@
++
++else
++
++. @prefix@/lib/tclConfig-nothread.sh
++
++fi
