@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2648 2012/08/21 22:05:25 marino Exp $
+$NetBSD: CHANGES-2012,v 1.2649 2012/08/21 23:44:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4090,3 +4090,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/tcl to 8.5.12 [marino 2012-08-21]
 	Updated x11/tk to 8.5.12 [marino 2012-08-21]
 	Updated lang/tcl-expect to 5.45 [2012-08-21]
+	Updated net/py-foolscap to 0.6.4 [gdt 2012-08-21]
