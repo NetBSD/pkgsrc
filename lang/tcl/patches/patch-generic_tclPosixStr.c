@@ -1,22 +1,24 @@
-$NetBSD: patch-generic_tclPosixStr.c,v 1.1 2011/11/01 20:08:12 bsiegert Exp $
+$NetBSD: patch-generic_tclPosixStr.c,v 1.2 2012/08/21 21:31:47 marino Exp $
 
---- generic/tclPosixStr.c.orig	Mon May 27 10:13:59 2002
+Carried over from TCL 8.4
+
+--- generic/tclPosixStr.c.orig	2012-07-16 11:57:05.000000000 +0000
 +++ generic/tclPosixStr.c
-@@ -339,7 +339,7 @@ Tcl_ErrnoId()
+@@ -335,7 +335,7 @@ Tcl_ErrnoId(void)
  #if defined(EOPNOTSUPP) &&  (!defined(ENOTSUP) || (ENOTSUP != EOPNOTSUPP))
- 	case EOPNOTSUPP: return "EOPNOTSUPP";
+     case EOPNOTSUPP: return "EOPNOTSUPP";
  #endif
--#if defined(EOVERFLOW) && ( !defined(EFBIG) || (EOVERFLOW != EFBIG) ) && ( !defined(EINVAL) || (EOVERFLOW != EINVAL) )
-+#if defined(EOVERFLOW) && ( !defined(EFBIG) || (EOVERFLOW != EFBIG) ) && ( !defined(EINVAL) || (EOVERFLOW != EINVAL) ) && ( !defined(ERANGE) || (EOVERFLOW != ERANGE) )
-         case EOVERFLOW: return "EOVERFLOW";
+-#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL))
++#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL)) && (!defined(ERANGE) || (EOVERFLOW != ERANGE))
+     case EOVERFLOW: return "EOVERFLOW";
  #endif
  #ifdef EPERM
-@@ -789,7 +789,7 @@ Tcl_ErrnoMsg(err)
+@@ -783,7 +783,7 @@ Tcl_ErrnoMsg(
  #if defined(EOPNOTSUPP) &&  (!defined(ENOTSUP) || (ENOTSUP != EOPNOTSUPP))
- 	case EOPNOTSUPP: return "operation not supported on socket";
+     case EOPNOTSUPP: return "operation not supported on socket";
  #endif
--#if defined(EOVERFLOW) && ( !defined(EFBIG) || (EOVERFLOW != EFBIG) ) && ( !defined(EINVAL) || (EOVERFLOW != EINVAL) )
-+#if defined(EOVERFLOW) && ( !defined(EFBIG) || (EOVERFLOW != EFBIG) ) && ( !defined(EINVAL) || (EOVERFLOW != EINVAL) ) && ( !defined(ERANGE) || (EOVERFLOW != ERANGE) )
-         case EOVERFLOW: return "file too big";
+-#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL))
++#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL)) && (!defined(ERANGE) || (EOVERFLOW != ERANGE))
+     case EOVERFLOW: return "file too big";
  #endif
  #ifdef EPERM
