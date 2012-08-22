@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2651 2012/08/22 09:44:31 marino Exp $
+$NetBSD: CHANGES-2012,v 1.2652 2012/08/22 16:55:48 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4095,3 +4095,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/py-foolscap to 0.6.4 [gdt 2012-08-21]
 	Removed lang/tcl-tclX [marino 2012-08-22]
 	Removed lang/tk-tclX [marino 2012-08-22]
+	Updated pkgtools/pkgin to 0.6.2.2nb1 [jperkin 2012-08-22]
