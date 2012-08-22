@@ -1,15 +1,0 @@
-$NetBSD: patch-ak,v 1.1 2006/01/11 21:32:02 joerg Exp $
-
---- ../tk/unix/tkXunixTest.c.orig	2006-01-11 21:18:21.000000000 +0000
-+++ ../tk/unix/tkXunixTest.c
-@@ -29,8 +29,10 @@ Tktest_Init _ANSI_ARGS_((Tcl_Interp *int
-  * Even if matherr is not used on this system, there is a dummy version
-  * in libtcl.
-  */
-+#if !defined(__DragonFly__)
- extern int matherr ();
- int (*tclDummyMathPtr)() = matherr;
-+#endif
- 
- 
- /*
