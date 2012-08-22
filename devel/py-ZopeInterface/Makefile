@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/04/20 15:38:18 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/08/22 11:20:09 drochner Exp $
 
 DISTNAME=	zope.interface-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.i/ZopeI/}
@@ -11,6 +11,8 @@ COMMENT=	The zope.interface package used in Zope 3 and Twisted
 LICENSE=	zpl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCLUDE_3X= yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
