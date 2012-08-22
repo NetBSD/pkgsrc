@@ -1,16 +1,8 @@
-$NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
+$NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
 
 --- unix/configure.orig	2012-07-25 16:45:05.000000000 +0000
 +++ unix/configure
-@@ -6630,6 +6630,7 @@ fi
-     # Step 3: set configuration options based on system name and version.
- 
-     do64bit_ok=no
-+    TCL_LIB_SPEC_RPATH=""
-     # default to '{$LIBS}' and set to "" on per-platform necessary basis
-     SHLIB_LD_LIBS='${LIBS}'
-     LDFLAGS_ORIG="$LDFLAGS"
-@@ -7631,7 +7632,7 @@ fi
+@@ -7631,7 +7631,7 @@ fi
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -19,7 +11,7 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
  	    arch=`arch -s`
  	    case "$arch" in
  	    m88k|vax)
-@@ -7749,11 +7750,10 @@ fi
+@@ -7749,11 +7749,10 @@ fi
  		;;
  	    esac
  	    ;;
@@ -32,7 +24,7 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
-@@ -8953,7 +8953,7 @@ fi
+@@ -8953,7 +8952,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
@@ -41,7 +33,7 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
-@@ -8984,7 +8984,7 @@ fi
+@@ -8984,7 +8983,7 @@ fi
  
  else
  
@@ -50,7 +42,7 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
  
  fi
  
-@@ -9018,7 +9018,7 @@ fi
+@@ -9018,7 +9017,7 @@ fi
  else
  
          MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
@@ -59,7 +51,7 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
  
  fi
  
-@@ -18893,9 +18893,9 @@ fi
+@@ -18893,9 +18892,9 @@ fi
  #	building libtcl as a shared library instead of a static library.
  #--------------------------------------------------------------------
  
@@ -72,7 +64,7 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
  
  # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
  # since on some platforms TCL_LIB_FILE contains shell escapes.
-@@ -19000,11 +19000,7 @@ _ACEOF
+@@ -19000,13 +18999,10 @@ _ACEOF
  else
      # libdir must be a fully qualified path and not ${exec_prefix}/lib
      eval libdir="$libdir"
@@ -83,8 +75,12 @@ $NetBSD: patch-unix_configure,v 1.1 2012/08/21 21:31:47 marino Exp $
 -    fi
 +    TCL_LIB_FLAG="-ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
      TCL_BUILD_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_LIB_FLAG}"
-     TCL_LIB_SPEC="-L${libdir} ${TCL_LIB_FLAG}"
+-    TCL_LIB_SPEC="-L${libdir} ${TCL_LIB_FLAG}"
++    TCL_LIB_SPEC_RPATH="${COMPILER_RPATH_FLAG}${libdir}"
++    TCL_LIB_SPEC="${TCL_LIB_SPEC_RPATH} -L${libdir} ${TCL_LIB_FLAG}"
  fi
+ VERSION='${VERSION}'
+ eval "CFG_TCL_SHARED_LIB_SUFFIX=${TCL_SHARED_LIB_SUFFIX}"
 @@ -19025,12 +19021,11 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
  	TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /System/Library/Frameworks"
      test -z "$TCL_MODULE_PATH"  && \
