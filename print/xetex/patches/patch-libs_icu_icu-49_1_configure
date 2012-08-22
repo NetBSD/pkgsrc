@@ -1,8 +1,9 @@
-$NetBSD: patch-libs_icu_icu-49_1_configure,v 1.1 2012/08/22 19:44:28 dholland Exp $
+$NetBSD: patch-libs_icu_icu-49_1_configure,v 1.2 2012/08/22 19:46:58 dholland Exp $
 
 Disable -ffunction-sections -fdata-sections and accompanying
 --gc-sections on netbsd because --gc-sections doesn't work with the
-netbsd-4 and netbsd-5 linker. See PR 46698 and PR 40401.
+netbsd-4 and netbsd-5 linker. See PR 46698 and PR 40401. Thanks to
+Anthony Mallet for tracking the problem down.
 
 At some point this patch should probably be made less blunt, and/or
 upstream should fix it to test if the options work instead of going by
