@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2650 2012/08/22 03:47:44 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2651 2012/08/22 09:44:31 marino Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4090,5 +4090,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/grep to 2.14 [adam 2012-08-21]
 	Updated lang/tcl to 8.5.12 [marino 2012-08-21]
 	Updated x11/tk to 8.5.12 [marino 2012-08-21]
-	Updated lang/tcl-expect to 5.45 [2012-08-21]
+	Updated lang/tcl-expect to 5.45 [marino 2012-08-21]
+	Removed lang/tk-expect [marino 2012-08-21]
 	Updated net/py-foolscap to 0.6.4 [gdt 2012-08-21]
+	Removed lang/tcl-tclX [marino 2012-08-22]
+	Removed lang/tk-tclX [marino 2012-08-22]
