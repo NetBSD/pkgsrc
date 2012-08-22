@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/08/01 11:15:32 imil Exp $
+# $NetBSD: Makefile,v 1.27 2012/08/22 16:55:27 jperkin Exp $
 #
 
 DISTNAME=		pkgin-0.6.2.2
+PKGREVISION=		1
 CATEGORIES=		pkgtools
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -58,6 +59,7 @@ do-install:
 .	include "../../net/libfetch/buildlink3.mk"
 .endif
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
