@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2009/09/25 11:06:00 spz Exp $
+$NetBSD: patch-ak,v 1.2 2012/08/23 19:00:42 spz Exp $
 
---- perl/INN/Config.pm.in.orig	2009-05-21 22:08:33.000000000 +0200
+--- perl/INN/Config.pm.in.orig	2012-06-15 18:25:36.000000000 +0000
 +++ perl/INN/Config.pm.in
 @@ -20,7 +20,7 @@ our $exec_prefix = "@exec_prefix@";
  
@@ -8,6 +8,6 @@ $NetBSD: patch-ak,v 1.1 2009/09/25 11:06:00 spz Exp $
  my @INNCONFVAR = ();
 -my @values = `${exec_prefix}/bin/innconfval -p`;
 +my @values = `@bindir@/innconfval -p`;
- foreach $line (@values) {
+ foreach my $line (@values) {
    eval 'our '.$line;
    if ($line =~ /^(.*?) = /m) {

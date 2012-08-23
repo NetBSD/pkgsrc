@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2011/09/25 14:00:09 spz Exp $
+# $NetBSD: Makefile,v 1.109 2012/08/23 19:00:41 spz Exp $
 
-DISTNAME=		inn-2.5.2
-PKGREVISION=		4
+DISTNAME=		inn-2.5.3
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -27,6 +26,8 @@ MESSAGE_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 
 PLIST_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 
+PKG_SYSCONFSUBDIR=	inn
+
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
@@ -34,7 +35,7 @@ CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--enable-largefiles				\
 			--bindir=${PREFIX}/${INN_PATHBIN}		\
 			--sbindir=${PREFIX}/${INN_PATHBIN}		\
-			--sysconfdir=${PREFIX}/etc/inn 			\
+			--sysconfdir=${PKG_SYSCONFDIR} 			\
 			--with-openssl=${SSLBASE:Q}			\
 			--with-doc-dir=${PREFIX}/share/doc/inn	 	\
 			--with-control-dir=${PREFIX}/${INN_PATHBIN}/control \
@@ -75,13 +76,11 @@ PKG_GECOS.${INN_USER}=	Internet\ News
 PKG_HOME.${INN_USER}=	${INN_DATA_DIR}
 PKG_SHELL.${INN_USER}=	${SH}
 
-PKG_SYSCONFDIR.inn=	${PREFIX}/etc/inn
 EXAMPLEDIR=		${PREFIX}/share/examples/inn
 INN_DATADIRS=		log log/OLD run tmp db spool http
 INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 			outgoing uniover innfeed
 
-INSTALLATION_DIRS+=	etc/nntp
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${EXAMPLEDIR}
@@ -91,8 +90,7 @@ MAKE_DIRS+=		${PREFIX}/bin
 MAKE_DIRS+=		${PREFIX}/sbin
 MAKE_DIRS+=		${PREFIX}/lib
 
-INN_DIRS+=		${PREFIX}/etc/nntp
-INN_DIRS+=		${PREFIX}/etc/inn
+INN_DIRS+=		${PKG_SYSCONFDIR}
 INN_DIRS+=		${INN_DATA_DIR}
 
 OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}
@@ -115,8 +113,11 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			distrib.pats distributions \
 			expire.ctl incoming.conf inn.conf innfeed.conf \
 			innreport.conf innwatch.ctl \
+			innshellvars.local innshellvars.pl.local \
+			innshellvars.tcl.local \
 			localgroups moderators \
-			motd.news news2mail.cf newsfeeds nnrpd.track \
+			motd.innd motd.nnrpd \
+			news2mail.cf newsfeeds nnrpd.track \
 			nntpsend.ctl nocem.ctl ovdb.conf passwd.nntp \
 			radius.conf readers.conf send-uucp.cf \
 			storage.conf subscriptions
