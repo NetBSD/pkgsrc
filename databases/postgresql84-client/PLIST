@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/07/01 19:30:23 morr Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/08/23 16:56:38 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -1335,6 +1335,7 @@ share/doc/postgresql/html/release-8-3-17.html
 share/doc/postgresql/html/release-8-3-18.html
 share/doc/postgresql/html/release-8-3-19.html
 share/doc/postgresql/html/release-8-3-2.html
+share/doc/postgresql/html/release-8-3-20.html
 share/doc/postgresql/html/release-8-3-3.html
 share/doc/postgresql/html/release-8-3-4.html
 share/doc/postgresql/html/release-8-3-5.html
@@ -1347,6 +1348,7 @@ share/doc/postgresql/html/release-8-4-1.html
 share/doc/postgresql/html/release-8-4-10.html
 share/doc/postgresql/html/release-8-4-11.html
 share/doc/postgresql/html/release-8-4-12.html
+share/doc/postgresql/html/release-8-4-13.html
 share/doc/postgresql/html/release-8-4-2.html
 share/doc/postgresql/html/release-8-4-3.html
 share/doc/postgresql/html/release-8-4-4.html
@@ -1788,11 +1790,17 @@ share/locale/pt_BR/LC_MESSAGES/psql-8.4.mo
 share/locale/ro/LC_MESSAGES/pg_config-8.4.mo
 share/locale/ro/LC_MESSAGES/pg_resetxlog-8.4.mo
 share/locale/ro/LC_MESSAGES/pgscripts-8.4.mo
+share/locale/ru/LC_MESSAGES/ecpg-8.4.mo
+share/locale/ru/LC_MESSAGES/ecpglib6-8.4.mo
 share/locale/ru/LC_MESSAGES/initdb-8.4.mo
 share/locale/ru/LC_MESSAGES/libpq5-8.4.mo
 share/locale/ru/LC_MESSAGES/pg_config-8.4.mo
+share/locale/ru/LC_MESSAGES/pg_controldata-8.4.mo
 share/locale/ru/LC_MESSAGES/pg_ctl-8.4.mo
+share/locale/ru/LC_MESSAGES/pg_dump-8.4.mo
 share/locale/ru/LC_MESSAGES/pg_resetxlog-8.4.mo
+share/locale/ru/LC_MESSAGES/pgscripts-8.4.mo
+share/locale/ru/LC_MESSAGES/psql-8.4.mo
 share/locale/sv/LC_MESSAGES/initdb-8.4.mo
 share/locale/sv/LC_MESSAGES/libpq5-8.4.mo
 share/locale/sv/LC_MESSAGES/pg_config-8.4.mo

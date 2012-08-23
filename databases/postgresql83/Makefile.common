@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2012/07/01 19:19:42 morr Exp $
+# $NetBSD: Makefile.common,v 1.25 2012/08/23 16:56:38 adam Exp $
 #
 # used by databases/postgresql83-adminpack/Makefile
 # used by databases/postgresql83-client/Makefile
@@ -15,7 +15,7 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 
-DISTNAME=	postgresql-8.3.19
+DISTNAME=	postgresql-8.3.20
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
