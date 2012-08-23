@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/08/17 17:45:40 seb Exp $
+$NetBSD: patch-aa,v 1.2 2012/08/23 18:04:12 marino Exp $
 
 cleanup cpp args dans adjust/fix Darwin build
 
@@ -23,3 +23,16 @@ cleanup cpp args dans adjust/fix Darwin build
  .endif
  
  # NetBSD
+@@ -93,9 +94,9 @@ CFLAGS+= -DNO_STRTONUM
+ .endif
+ 
+ PREFIX?= /usr/local
+-INSTALLDIR= install -d
+-INSTALLBIN= install -g bin -o root -m 555
+-INSTALLMAN= install -g bin -o root -m 444
++INSTALLDIR= @INSTALL_PROGRAM_DIR@
++INSTALLBIN= @INSTALL_PROGRAM@
++INSTALLMAN= @INSTALL_MAN@
+ 
+ LDFLAGS+= -L/usr/local/lib
+ .ifdef PROFILE
