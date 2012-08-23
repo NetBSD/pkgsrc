@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
 
 --- unix/Makefile.in.orig	2012-07-25 16:45:05.000000000 +0000
 +++ unix/Makefile.in
@@ -6,7 +6,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
  MINOR_VERSION		= @TCL_MINOR_VERSION@
  PATCH_LEVEL		= @TCL_PATCH_LEVEL@
-+SHLIB_VERSION		= .@SHLIB_VERSION@
++SHLIB_VERSION		= @SHLIB_VERSION@
  
  #--------------------------------------------------------------------------
  # Things you can change to personalize the Makefile for your own site (you can
@@ -57,13 +57,16 @@ $NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  # Make target which outputs the list of the .o contained in the Tcl lib useful
  # to build a single big shared library containing Tcl and other extensions.
  # Used for the Tcl Plugin.  -- dl
-@@ -722,9 +731,13 @@ install-binaries: binaries
+@@ -722,9 +731,16 @@ install-binaries: binaries
  	    fi
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
 -	@chmod 555 "$(DLL_INSTALL_DIR)"/$(LIB_FILE)
-+	@chmod 555 "$(DLL_INSTALL_DIR)"/$(LIB_FILE)$(SHLIB_VERSION)
-+	@cd "$(DLL_INSTALL_DIR)" && ln -sf $(LIB_FILE)$(SHLIB_VERSION) $(LIB_FILE)
++	@cd "$(DLL_INSTALL_DIR)" && if test "$(SHLIB_SUFFIX)" = ".dylib"; then \
++		ln -sf libtcl$(MAJOR_VERSION)$(MINOR_VERSION).$(SHLIB_VERSION)$(SHLIB_SUFFIX) $(LIB_FILE) ; \
++	else \
++		ln -sf libtcl$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_SUFFIX).$(SHLIB_VERSION) $(LIB_FILE) ; \
++	fi
 +	@echo "Installing ${TCL_LIB_A_FILE} to $(DLL_INSTALL_DIR)/"
 +	@$(INSTALL_DATA) ${TCL_LIB_A_FILE} $(DLL_INSTALL_DIR)/${TCL_LIB_A_FILE}
  	@echo "Installing ${TCL_EXE} as $(BIN_INSTALL_DIR)/tclsh$(VERSION)@EXEEXT@"
@@ -72,7 +75,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)"/tclConfig.sh
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -734,7 +747,8 @@ install-binaries: binaries
+@@ -734,7 +750,8 @@ install-binaries: binaries
  	@EXTRA_INSTALL_BINARIES@
  
  install-libraries: libraries $(INSTALL_TZDATA) install-msgs
@@ -82,7 +85,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  	    do \
  	    if [ ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -743,7 +757,7 @@ install-libraries: libraries $(INSTALL_T
+@@ -743,7 +760,7 @@ install-libraries: libraries $(INSTALL_T
  		else true; \
  		fi; \
  	    done;
@@ -91,7 +94,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  	    do \
  	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
-@@ -756,12 +770,17 @@ install-libraries: libraries $(INSTALL_T
+@@ -756,12 +773,17 @@ install-libraries: libraries $(INSTALL_T
  	    chmod +x $(SRC_DIR)/../unix/install-sh; \
  	    fi
  	@echo "Installing header files";
@@ -114,7 +117,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.1 2012/08/21 21:31:47 marino Exp $
  	    done;
  	@echo "Installing library files to $(SCRIPT_INSTALL_DIR)";
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex \
-@@ -774,22 +793,24 @@ install-libraries: libraries $(INSTALL_T
+@@ -774,22 +796,24 @@ install-libraries: libraries $(INSTALL_T
  	    do \
  	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/http1.0; \
  	    done;

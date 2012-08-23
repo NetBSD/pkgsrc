@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
+$NetBSD: patch-unix_configure,v 1.3 2012/08/23 16:14:43 adam Exp $
 
 --- unix/configure.orig	2012-07-25 16:45:05.000000000 +0000
 +++ unix/configure
@@ -24,7 +24,15 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
-@@ -8953,7 +8952,7 @@ fi
+@@ -7779,7 +7778,6 @@ fi
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	Darwin-*)
+-	    CFLAGS_OPTIMIZE="-Os"
+ 	    SHLIB_CFLAGS="-fno-common"
+ 	    # To avoid discrepancies between what headers configure sees during
+ 	    # preprocessing tests and compiling tests, move any -isysroot and
+@@ -8953,7 +8951,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
@@ -33,16 +41,20 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
-@@ -8984,7 +8983,7 @@ fi
+@@ -8984,7 +8982,11 @@ fi
  
  else
  
 -            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)"'
-+            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)$(SHLIB_VERSION)"'
++        if test "${SHLIB_SUFFIX}" = ".dylib" ; then
++            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/libtcl$(MAJOR_VERSION)$(MINOR_VERSION).$(SHLIB_VERSION)$(SHLIB_SUFFIX)"'
++        else
++            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE).$(SHLIB_VERSION)"'
++        fi
  
  fi
  
-@@ -9018,7 +9017,7 @@ fi
+@@ -9018,7 +9020,7 @@ fi
  else
  
          MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
@@ -51,7 +63,7 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  
  fi
  
-@@ -18893,9 +18892,9 @@ fi
+@@ -18893,9 +18895,9 @@ fi
  #	building libtcl as a shared library instead of a static library.
  #--------------------------------------------------------------------
  
@@ -59,12 +71,12 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
 -TCL_SHARED_LIB_SUFFIX=${SHARED_LIB_SUFFIX}
 -eval "TCL_LIB_FILE=libtcl${LIB_SUFFIX}"
 +TCL_UNSHARED_LIB_SUFFIX=${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}.a
-+TCL_SHARED_LIB_SUFFIX=${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}.so
++TCL_SHARED_LIB_SUFFIX=${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}${SHLIB_SUFFIX}
 +eval "TCL_LIB_FILE=libtcl${TCL_SHARED_LIB_SUFFIX}"
  
  # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
  # since on some platforms TCL_LIB_FILE contains shell escapes.
-@@ -19000,13 +18999,10 @@ _ACEOF
+@@ -19000,13 +19002,10 @@ _ACEOF
  else
      # libdir must be a fully qualified path and not ${exec_prefix}/lib
      eval libdir="$libdir"
@@ -81,7 +93,7 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  fi
  VERSION='${VERSION}'
  eval "CFG_TCL_SHARED_LIB_SUFFIX=${TCL_SHARED_LIB_SUFFIX}"
-@@ -19025,12 +19021,11 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+@@ -19025,12 +19024,11 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
  	TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /System/Library/Frameworks"
      test -z "$TCL_MODULE_PATH"  && \
  	TCL_MODULE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl"
@@ -96,7 +108,7 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  #--------------------------------------------------------------------
  #       The statements below define various symbols relating to Tcl
  #       stub support.
-@@ -19043,12 +19038,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
+@@ -19043,12 +19041,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
  eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  eval "TCL_STUB_LIB_DIR=${libdir}"
  
@@ -110,7 +122,7 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  TCL_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
  TCL_STUB_LIB_SPEC="-L${TCL_STUB_LIB_DIR} ${TCL_STUB_LIB_FLAG}"
  TCL_BUILD_STUB_LIB_PATH="`pwd`/${TCL_STUB_LIB_FILE}"
-@@ -19200,34 +19190,15 @@ fi
+@@ -19200,34 +19193,15 @@ fi
  # Transform confdefs.h into DEFS.
  # Protect against shell expansion while executing Makefile rules.
  # Protect against Makefile macro expansion.
@@ -154,7 +166,7 @@ $NetBSD: patch-unix_configure,v 1.2 2012/08/22 22:03:17 marino Exp $
  
  
  
-@@ -19848,6 +19819,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
+@@ -19848,6 +19822,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
  s,@EXTRA_TCLSH_LIBS@,$EXTRA_TCLSH_LIBS,;t t
  s,@DLTEST_LD@,$DLTEST_LD,;t t
  s,@DLTEST_SUFFIX@,$DLTEST_SUFFIX,;t t
