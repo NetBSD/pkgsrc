@@ -306,6 +306,90 @@ EOF
 }
 
 
+atf_test_case build__machine_targets__ok
+build__machine_targets__ok_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+
+    create_mock_binary cvs yes
+    PATH="$(pwd):${PATH}"
+
+    atf_check -o save:stdout -e save:stderr sysbuild \
+        -c /dev/null -o CVSROOT="${MOCK_CVSROOT}" \
+        -o MACHINES="amd64 macppc shark" -o NJOBS=2 build \
+        tools macppc:kernel=/foo/bar shark:sets release
+cat stdout
+    cat >expout <<EOF
+Command: cvs
+Directory: ${HOME}/sysbuild/src/.cvs-checkout
+Arg: -d${MOCK_CVSROOT}
+Arg: -q
+Arg: checkout
+Arg: -P
+Arg: src
+
+Command: build.sh
+Directory: ${HOME}/sysbuild/src
+Arg: -D${HOME}/sysbuild/amd64/destdir
+Arg: -M${HOME}/sysbuild/amd64/obj
+Arg: -N2
+Arg: -R${HOME}/sysbuild/release
+Arg: -T${HOME}/sysbuild/amd64/tools
+Arg: -U
+Arg: -j2
+Arg: -mamd64
+Arg: tools
+Arg: release
+
+Command: build.sh
+Directory: ${HOME}/sysbuild/src
+Arg: -D${HOME}/sysbuild/macppc/destdir
+Arg: -M${HOME}/sysbuild/macppc/obj
+Arg: -N2
+Arg: -R${HOME}/sysbuild/release
+Arg: -T${HOME}/sysbuild/macppc/tools
+Arg: -U
+Arg: -j2
+Arg: -mmacppc
+Arg: tools
+Arg: kernel=/foo/bar
+Arg: release
+
+Command: build.sh
+Directory: ${HOME}/sysbuild/src
+Arg: -D${HOME}/sysbuild/shark/destdir
+Arg: -M${HOME}/sysbuild/shark/obj
+Arg: -N2
+Arg: -R${HOME}/sysbuild/release
+Arg: -T${HOME}/sysbuild/shark/tools
+Arg: -U
+Arg: -j2
+Arg: -mshark
+Arg: tools
+Arg: sets
+Arg: release
+
+EOF
+    atf_check -o file:expout cat commands.log
+}
+
+
+atf_test_case build__machine_targets__unmatched
+build__machine_targets__unmatched_body() {
+    create_mock_binary cvs yes
+    PATH="$(pwd):${PATH}"
+
+    cat >experr <<EOF
+sysbuild: E: The 'macpp:kernel=/foo/bar a:b' targets do not match any machine in 'amd64 macppc shark'
+EOF
+    atf_check -s exit:1 -o empty -e file:experr sysbuild \
+        -c /dev/null -o CVSROOT="${MOCK_CVSROOT}" \
+        -o MACHINES="amd64 macppc shark" -o NJOBS=2 build \
+        tools macpp:kernel=/foo/bar a:b release
+
+    test ! -f commands.log || atf_fail "cvs should not have been executed"
+}
+
+
 atf_test_case build__with_x11
 build__with_x11_body() {
     create_mock_cvsroot "${MOCK_CVSROOT}"
@@ -655,6 +739,8 @@ atf_init_test_cases() {
     atf_add_test_case build__remove_all
     atf_add_test_case build__fast_mode
     atf_add_test_case build__many_machines
+    atf_add_test_case build__machine_targets__ok
+    atf_add_test_case build__machine_targets__unmatched
     atf_add_test_case build__with_x11
     atf_add_test_case build__some_args
 
