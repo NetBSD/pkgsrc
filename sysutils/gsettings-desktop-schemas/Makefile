@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/23 13:38:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/23 17:36:43 drochner Exp $
 #
 
 DISTNAME=	gsettings-desktop-schemas-3.4.2
@@ -21,5 +21,5 @@ USE_LANGUAGES=		c
 
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
 
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../mk/bsd.pkg.mk"
