@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2657 2012/08/23 12:34:28 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2658 2012/08/23 12:40:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4101,3 +4101,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.23 [obache 2012-08-23]
 	Updated converters/p5-JSON-XS to 2.33 [wen 2012-08-23]
 	Updated inputmethod/ibus to 1.4.2 [obache 2012-08-23]
+	Updated math/p5-Math-Base36 to 0.10 [wen 2012-08-23]
