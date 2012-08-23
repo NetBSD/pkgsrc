@@ -1,0 +1,7 @@
+libpeas is a gobject-based plugins engine, and is targetted at
+giving every application the chance to assume its own extensibility.
+It also has a set of features including, but not limited to:
+
+* multiple extension points
+* on demand (lazy) programming language support for C, Python and JS
+* simplicity of the API
