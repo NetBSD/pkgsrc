@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.632 2012/08/04 14:32:13 drochner Exp $
+# $NetBSD: Makefile,v 1.633 2012/08/23 18:24:25 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -192,6 +192,7 @@ SUBDIR+=	gst-plugins0.10-cairo
 SUBDIR+=	gst-plugins0.10-jpeg
 SUBDIR+=	gst-plugins0.10-png
 SUBDIR+=	gthumb
+SUBDIR+=	gthumb3
 SUBDIR+=	gtkam
 SUBDIR+=	gtkglext
 SUBDIR+=	gtkimageview
