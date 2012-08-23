@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2653 2012/08/22 19:45:06 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2654 2012/08/23 02:27:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed lang/tk-tclX [marino 2012-08-22]
 	Updated pkgtools/pkgin to 0.6.2.2nb1 [jperkin 2012-08-22]
 	Updated print/xetex to 0.9998nb2 [dholland 2012-08-22]
+	Updated sysutils/sysbuild to 2.2 [jmmv 2012-08-22]
