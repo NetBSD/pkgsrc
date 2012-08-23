@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/08/11 12:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/08/23 10:13:53 wiz Exp $
 #
 
 DISTNAME=	pycarddav0.3.4
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
+
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 USE_LANGUAGES=	# none
 
