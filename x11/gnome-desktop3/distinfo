@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/08/23 16:27:43 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2012/08/23 18:15:38 drochner Exp $
 
 SHA1 (gnome-desktop-3.4.2.tar.xz) = b6a03bed9dbb93acef686de83685393f6b94743a
 RMD160 (gnome-desktop-3.4.2.tar.xz) = 9922346292ef15609ed38652ebc8526b3643f29c
 Size (gnome-desktop-3.4.2.tar.xz) = 951504 bytes
+SHA1 (patch-aa) = a3ac659a29a12aee1c758959baabef480542576d
