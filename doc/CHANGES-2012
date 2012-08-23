@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2660 2012/08/23 13:45:22 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2661 2012/08/23 15:23:47 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4104,3 +4104,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/p5-Math-Base36 to 0.10 [wen 2012-08-23]
 	Added sysutils/gsettings-desktop-schemas version 3.4.2 [prlw1 2012-08-23]
 	Added devel/libpeas version 1.4.0 [prlw1 2012-08-23]
+	Updated graphics/gdk-pixbuf2 to 2.26.3 [drochner 2012-08-23]
+	Updated graphics/librsvg to 2.36.2 [drochner 2012-08-23]
+	Updated textproc/uriparser to 0.7.7 [drochner 2012-08-23]
+	Updated textproc/gnome-doc-utils to 0.20.10 [drochner 2012-08-23]
