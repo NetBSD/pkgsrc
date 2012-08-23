@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/08/21 21:58:14 marino Exp $
+# $NetBSD: Makefile,v 1.14 2012/08/23 17:03:53 marino Exp $
 #
 
 DISTNAME=	TclExpat-1.1
 PKGNAME=	tcl-expat-1.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc www tcl
 MASTER_SITES=	http://www.zveno.com/in-tclxml/
 
@@ -16,9 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=	yes
 
 MAKE_ENV+=	SHLIBTOOL=${SHLIBTOOL:Q}
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl
 
 INSTALLATION_DIRS=	share/doc/tcl/TclExpat
 
