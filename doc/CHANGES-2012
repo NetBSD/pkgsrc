@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2655 2012/08/23 11:51:41 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2656 2012/08/23 12:32:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/xetex to 0.9998nb2 [dholland 2012-08-22]
 	Updated sysutils/sysbuild to 2.2 [jmmv 2012-08-22]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.23 [obache 2012-08-23]
+	Updated converters/p5-JSON-XS to 2.33 [wen 2012-08-23]
