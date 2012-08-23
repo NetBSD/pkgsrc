@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/23 19:31:01 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/23 20:26:34 drochner Exp $
 #
 
 DISTNAME=	eog-3.4.3
@@ -37,7 +37,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
 
 # optional:
 .include "../../devel/exempi/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libexif+= libexif>=0.6.14
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
