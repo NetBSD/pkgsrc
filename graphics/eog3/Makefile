@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/23 19:11:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/23 19:31:01 prlw1 Exp $
 #
 
 DISTNAME=	eog-3.4.3
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	data/eog.pc.in
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
@@ -41,7 +41,5 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
 BUILDLINK_API_DEPENDS.libexif+= libexif>=0.6.14
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-
-.include "../../devel/glib2/schemas.mk"
 
 .include "../../mk/bsd.pkg.mk"
