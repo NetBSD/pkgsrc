@@ -32,6 +32,7 @@
 shtk_import cli
 shtk_import config
 shtk_import cvs
+shtk_import list
 shtk_import process
 
 
@@ -100,6 +101,27 @@ do_one_build() {
         Xflag="-X$(shtk_config_get XSRCDIR)"
     fi
 
+    local targets=
+    for target in $(shtk_config_get BUILD_TARGETS); do
+        case "${target}" in
+            *:*)
+                local submachine="$(echo "${target}" | cut -d : -f 1)"
+                local subtarget="$(echo "${target}" | cut -d : -f 2-)"
+                if [ "${submachine}" = "${machine}" ]; then
+                    targets="${targets} ${subtarget}"
+                else
+                    # The targets have already been validated, so there is
+                    # nothing to do in this case.
+                    :
+                fi
+                ;;
+
+            *)
+                targets="${targets} ${target}"
+                ;;
+        esac
+    done
+
     ( cd "$(shtk_config_get SRCDIR)" && shtk_process_run ./build.sh \
         -D"${basedir}/destdir" \
         -M"${basedir}/obj" \
@@ -112,7 +134,7 @@ do_one_build() {
         -m"${machine}" \
         ${uflag} \
         ${xflag} \
-        $(shtk_config_get BUILD_TARGETS) )
+        ${targets} )
 }
 
 
@@ -136,11 +158,36 @@ sysbuild_build() {
 
     [ ${#} -eq 0 ] || shtk_config_set BUILD_TARGETS "${*}"
 
+    local machines="$(shtk_config_get MACHINES)"
+
+    # Ensure that the list of targets reference valid machines, if any.
+    local unmatched_targets=
+    for target in $(shtk_config_get BUILD_TARGETS); do
+        case "${target}" in
+            *:*)
+                local submachine="$(echo "${target}" | cut -d : -f 1)"
+                if ! shtk_list_contains "${submachine}" ${machines}; then
+                    if [ -n "${unmatched_targets}" ]; then
+                        unmatched_targets="${unmatched_targets} ${target}"
+                    else
+                        unmatched_targets="${target}"
+                    fi
+                fi
+                ;;
+
+            *)
+                ;;
+        esac
+    done
+    [ -z "${unmatched_targets}" ] || shtk_cli_error \
+        "The '${unmatched_targets}' targets do not match any machine" \
+        "in '${machines}'"
+
     if shtk_config_get_bool UPDATE_SOURCES; then
         sysbuild_fetch
     fi
 
-    for machine in $(shtk_config_get MACHINES); do
+    for machine in ${machines}; do
         do_one_build "${machine}"
     done
 }
