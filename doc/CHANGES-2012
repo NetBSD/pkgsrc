@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2654 2012/08/23 02:27:25 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.2655 2012/08/23 11:51:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4098,3 +4098,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkgin to 0.6.2.2nb1 [jperkin 2012-08-22]
 	Updated print/xetex to 0.9998nb2 [dholland 2012-08-22]
 	Updated sysutils/sysbuild to 2.2 [jmmv 2012-08-22]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.23 [obache 2012-08-23]
