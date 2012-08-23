@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/07/08 17:31:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/08/23 15:18:07 drochner Exp $
 bin/gnome-doc-prepare
 bin/gnome-doc-tool
 bin/xml2po
@@ -137,6 +137,7 @@ share/gnome/help/gnome-doc-xslt/de/utils.xml
 share/locale/ar/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/as/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ast/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/be/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/be@latin/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/bg/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/bn/LC_MESSAGES/gnome-doc-utils.mo
@@ -169,6 +170,7 @@ share/locale/id/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/it/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ja/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ka/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/km/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/kn/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ko/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/lt/LC_MESSAGES/gnome-doc-utils.mo
@@ -204,15 +206,13 @@ share/locale/th/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/tr/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ug/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/uk/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/uz/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/uz@cyrillic/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/vi/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/wa/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-doc-utils.mo
-share/omf/gnome-doc-make/gnome-doc-make-C.omf
-share/omf/gnome-doc-make/gnome-doc-make-de.omf
-share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf
-share/omf/gnome-doc-xslt/gnome-doc-xslt-de.omf
 share/pkgconfig/gnome-doc-utils.pc
 share/pkgconfig/xml2po.pc
 share/xml/gnome/xslt/common/theme.xsl

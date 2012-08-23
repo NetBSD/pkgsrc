@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2012/06/14 07:44:42 sbd Exp $
+# $NetBSD: Makefile,v 1.57 2012/08/23 15:18:07 drochner Exp $
 #
 
-DISTNAME=	gnome-doc-utils-0.20.6
-PKGREVISION=	2
+DISTNAME=	gnome-doc-utils-0.20.10
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.20/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -17,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.16:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 DEPENDS+=	docbook-xml>=4.5:../../textproc/docbook-xml
-DEPENDS+=	scrollkeeper-dtd-[0-9]*:../../textproc/scrollkeeper-dtd
 
 USE_TOOLS+=		intltool pkg-config gmake gawk msgfmt bash:run
 GNU_CONFIGURE=		YES
@@ -45,5 +43,4 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
