@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2669 2012/08/24 15:21:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2670 2012/08/24 22:12:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/onscripter to 20120721 [tsutsui 2012-08-24]
 	Updated x11/xcursorgen to 1.0.5 [wiz 2012-08-24]
 	Updated meta-pkgs/modular-xorg-apps to 1.8 [wiz 2012-08-24]
+	Updated x11/libdrm to 2.4.39 [wiz 2012-08-24]
