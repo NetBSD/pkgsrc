@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2012/03/15 11:53:25 obache Exp $
+# $NetBSD: Makefile,v 1.95 2012/08/24 04:26:11 dholland Exp $
 
 DISTNAME=		TeXmacs-1.0.6.15-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/targz/
@@ -55,6 +55,8 @@ REPLACE_INTERPRETER+=		optionalperl
 REPLACE.optionalperl.old=	.*perl[^[:space:]]*
 REPLACE.optionalperl.new=	${LOCALBASE}/bin/perl
 REPLACE_FILES.optionalperl=	plugins/feynmf/bin/bbox_add.pl
+
+DEPENDS+=	ps2pkm>=1.5:../../fonts/ps2pkm
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
