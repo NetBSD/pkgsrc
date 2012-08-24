@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2668 2012/08/24 15:20:31 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2669 2012/08/24 15:21:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4162,3 +4162,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/TeXmacs to 1.0.6.15nb12 [dholland 2012-08-24]
 	Updated games/onscripter to 20120721 [tsutsui 2012-08-24]
 	Updated x11/xcursorgen to 1.0.5 [wiz 2012-08-24]
+	Updated meta-pkgs/modular-xorg-apps to 1.8 [wiz 2012-08-24]
