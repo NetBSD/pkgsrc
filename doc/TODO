@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11469 2012/08/24 15:20:31 wiz Exp $
+$NetBSD: TODO,v 1.11470 2012/08/24 15:24:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -491,7 +491,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o covered-current-20090802
 	o cpio-2.9
 	o cpmtools-2.6
-	o cppunit-1.13.0
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
 	o cryptopp-5.6.0
@@ -599,7 +598,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flightgear-2.6
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
-	o fluxbox-1.3.2
 	o fox-1.6.41
 	o freeciv-2.3.2
 	o freefont-20120503
@@ -950,7 +948,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
-	o openafs-1.7.2
 	o opendkim-2.6.7
 	o opengrok-0.11.1
 	o openh323-1.19.1
@@ -968,7 +965,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oto-0.5
 	o otpCalc-0.97
 	o p0f-3.00b
-	o p5-App-cpanminus-1.5013 [pkg/46549]
 	o p5-Config-General-2.51
 	o p5-GStreamer-0.17
 	o p5-GTop-0.18
@@ -988,7 +984,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o parallel-20120822
 	o pari-2.5.2
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-4.6.0
 	o patch-2.6.1
 	o patchutils-0.3.2
 	o pbzip2-1.1.6
@@ -1047,10 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-docutils-0.9.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
-	o py-gnosis-utils-1.2.1
 	o py-ldap-2.4.10
-	o py-pyutil-1.9.3 [pkg/46551]
-	o py-setuptools_trial-0.5.12 [pkg/46550]
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o qbrew-0.3.9
@@ -1124,7 +1116,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skype-4.0.0.8
-	o slock-1.0
 	o smproxy-1.0.3
 	o snd-10.6
 	o snes9x-1.53
@@ -1157,7 +1148,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sudo-1.8.5p3
 	o supertuxkart-0.7.3
 	o swfdec-gnome-2.30.1
-	o sympa-6.1.10
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
@@ -1166,7 +1156,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o taskjuggler-3.3.0
-	o tcl-8.5.11
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
@@ -1190,7 +1179,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tile-0.7.4
 	o tinc-1.0.19
 	o tinyproxy-1.8.3
-	o tk-8.5.11
 	o tkcvs-8.2.3
 	o tkdiff-4.2
 	o tkgate-1.8.7
@@ -1255,7 +1243,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wine-devel-1.5.11 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wireshark-1.8.2
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1374,7 +1361,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
 	o zile-2.4.8
-	o zim-0.56
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zopeedit-0.8
