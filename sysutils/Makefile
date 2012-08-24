@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2012/08/20 11:44:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.551 2012/08/24 15:47:26 prlw1 Exp $
 #
 
 COMMENT=	System utilities
@@ -150,6 +150,7 @@ SUBDIR+=	gpart
 SUBDIR+=	grub
 SUBDIR+=	grub2
 SUBDIR+=	grun
+SUBDIR+=	gsettings-desktop-schemas
 SUBDIR+=	gst-plugins0.10-gio
 SUBDIR+=	gst-plugins0.10-gnomevfs
 SUBDIR+=	gtk-send-pr
