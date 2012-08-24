@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.43 2012/08/23 08:47:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.44 2012/08/24 09:04:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -266,3 +266,5 @@ Pullup ticket #3910 - requested by drochner
 net/tor: security update
 Pullup ticket #3911 - requested by drochner
 net/wireshark: security update
+Pullup ticket #3912 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
