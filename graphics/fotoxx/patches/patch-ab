@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2012/08/24 12:48:11 ryoon Exp $
+$NetBSD: patch-ab,v 1.10 2012/08/24 20:35:39 ryoon Exp $
 
 --- zfuncs.cc.orig	2012-08-04 11:58:30.000000000 +0000
 +++ zfuncs.cc
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.9 2012/08/24 12:48:11 ryoon Exp $
  
     printf("*** zappcrash: \n %s \n",message);                              //  output message to stdout
  
-+#if defined (HAVE_LINEXECINFO)
++#if defined (HAVE_EXECINFO_H)
     nstack = backtrace(stacklist,nstack);                                   //  get traceback data
     stackents = backtrace_symbols(stacklist,nstack);
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.9 2012/08/24 12:48:11 ryoon Exp $
     }
     progexe[cc] = 0;
  
-+#if defined (HAVE_LINEXECINFO)
++#if defined (HAVE_EXECINFO_H)
     for (ii = 0; ii < nstack; ii++)                                         //  output backtrace to text file
     {
        pfunc = 0;
