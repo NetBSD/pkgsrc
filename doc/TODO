@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11467 2012/08/23 19:11:38 prlw1 Exp $
+$NetBSD: TODO,v 1.11468 2012/08/24 15:04:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.6.17
+	o abcm2ps-6.6.19
+	o abcmidi-20120808
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.4.1
 	o acme-091 [pkg/44771]
@@ -469,7 +470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.4.2
 	o chkrootkit-0.49
-	o chktex-1.7.0
+	o chktex-1.7.1
 	o chromium-0.9.15
 	o chrony-1.26
 	o cinepaint-1.3
@@ -734,7 +735,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-8.4
-	o highlight-3.10
+	o highlight-3.11
 	o honeyd-1.5c
 	o horde-4.0.15
 	o host-20070128
@@ -779,7 +780,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kbiff-4.0
-	o kdbg-2.5.1
+	o kdbg-2.5.2
 	o kde4-4.8.5
 	o kde4-4.9
 	o kdenlive-0.9.2
@@ -911,7 +912,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
-	o mupdf-1.1
 	o muse-0.9.2
 	o mysql-5.1.65
 	o nano-2.2.6
@@ -955,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opengrok-0.11.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
+	o openmpi-1.6.1
 	o openmsx-0.9.0
 	o openoffice-3.4
 	o openoffice3-3.3
@@ -984,7 +985,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
 	o paprefs-0.9.8
-	o parallel-20120622
+	o parallel-20120822
 	o pari-2.5.2
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-4.6.0
@@ -1088,7 +1089,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-1.8.7.370
 	o rudiments-0.37
 	o sabayon-2.30.1 [GNOME 2.30]
-	o sablecc-3.4
+	o sablecc-3.6
 	o samba-3.5.17
 	o samba-3.6.7
 	o sarg-2.2.5
@@ -1134,7 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.7
 	o spcaview-20060501
-	o spectrewm-1.1.2 [was scrotwm]
+	o spectrwm-2.0.0 [was scrotwm]
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
 	o squid-3.2.1
@@ -1182,7 +1183,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o texlive-2012
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-3.4.1
+	o texmaker-3.5
 	o tfmxplay-1.1.6
 	o tig-1.0
 	o tightvnc-2.0.95
@@ -1245,6 +1246,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
+	o webkit-gtk-1.8.3
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.590 [security]
 	o websvn-2.3.2
@@ -1344,7 +1346,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmon-1.5.6
-	o xmp-3.5.0
+	o xmp-3.9.1
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorp-1.8.5
