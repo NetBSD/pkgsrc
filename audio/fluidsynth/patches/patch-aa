@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2012/01/28 13:15:32 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2012/08/24 06:35:20 marino Exp $
 
---- src/drivers/fluid_oss.c.orig	2011-09-04 07:38:58.000000000 +0000
+--- src/drivers/fluid_oss.c.orig	2012-08-16 04:01:13.000000000 +0000
 +++ src/drivers/fluid_oss.c
-@@ -42,6 +42,12 @@
+@@ -42,10 +42,16 @@
  #include <errno.h>
  #include <sys/poll.h>
  
@@ -15,6 +15,11 @@ $NetBSD: patch-aa,v 1.3 2012/01/28 13:15:32 wiz Exp $
  #define BUFFER_LENGTH 512
  
  // Build issue on some systems (OSS 4.0)?
+-#ifdef SNDCTL_DSP_CHANNELS
++#if defined (SNDCTL_DSP_CHANNELS) && !defined (SOUND_PCM_WRITE_CHANNELS)
+   #define SOUND_PCM_WRITE_CHANNELS        SNDCTL_DSP_CHANNELS
+ #endif
+ 
 @@ -101,7 +107,7 @@ static void fluid_oss_midi_run(void* d);
  void
  fluid_oss_audio_driver_settings(fluid_settings_t* settings)
