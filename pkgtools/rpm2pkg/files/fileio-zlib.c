@@ -36,7 +36,7 @@
 static void
 ZLibCloseFunc(FileHandle *fh)
 {
-	gzFile *mygzfile = fh->fh_InstData;
+	gzFile mygzfile = fh->fh_InstData;
 	if (mygzfile != NULL)
 		(void)gzclose(mygzfile);
 }
@@ -44,7 +44,7 @@ ZLibCloseFunc(FileHandle *fh)
 static ssize_t
 ZLibReadFunc(FileHandle *fh, void *buffer, size_t bytes)
 {
-	gzFile *mygzfile = fh->fh_InstData;
+	gzFile mygzfile = fh->fh_InstData;
 	return gzread(mygzfile, buffer, bytes);
 }
 
