@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2670 2012/08/24 22:12:26 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2671 2012/08/25 01:57:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xcursorgen to 1.0.5 [wiz 2012-08-24]
 	Updated meta-pkgs/modular-xorg-apps to 1.8 [wiz 2012-08-24]
 	Updated x11/libdrm to 2.4.39 [wiz 2012-08-24]
+	Updated sysutils/sysupgrade to 1.2 [jmmv 2012-08-25]
