@@ -78,8 +78,9 @@ sysupgrade_auto_config() {
     if [ "$(shtk_config_get_default KERNEL "")" = "AUTO" ]; then
         local kernel="$(shtk_config_get_default DESTDIR "")/netbsd"
         if [ -e "${kernel}" ]; then
-            local kernel_name="$(config -x "${kernel}" | head -n 1 \
+            local kernel_path="$(config -x "${kernel}" | head -n 1 \
                                  | cut -d \" -f 2)"
+            local kernel_name="${kernel_path##*/}"
             [ -n "${kernel_name}" ] || shtk_cli_error "Failed to determine" \
                 "kernel name; please set KERNEL explicitly"
             shtk_config_set KERNEL "${kernel_name}"
@@ -133,26 +134,26 @@ sysupgrade_config() {
 }
 
 
-# Gets the path to a set, and ensures it exists.
+# Gets the path to a file in the cache.
 #
-# \post The path to the tgz of the set is printed on stdout.
+# \post The path to the file in the cache is printed on stdout.
 #
-# \param set_name The name of the set to query.
-get_set() {
-    local set_name="${1}"; shift
+# \param file The name of the file to query.
+get_cached_file() {
+    local file="${1}"; shift
 
-    echo "$(shtk_config_get CACHEDIR)/${set_name}.tgz"
+    echo "$(shtk_config_get CACHEDIR)/${file}"
 }
 
 
-# Ensures that a given set exists.
+# Ensures that a given distribution file exists in the cache.
 #
-# \param set_name The name of the set to query.
-require_set() {
-    local set_name="${1}"; shift
+# \param file The name of the file to query.
+require_cached_file() {
+    local file="${1}"; shift
 
-    local set_tgz="$(get_set "${set_name}")"
-    [ -f "${set_tgz}" ] || shtk_cli_error "Cannot find ${set_name}; did you run" \
+    local path="$(get_cached_file "${file}")"
+    [ -f "${path}" ] || shtk_cli_error "Cannot find ${file}; did you run" \
         "'$(shtk_cli_progname) fetch' first?"
 }
 
@@ -166,10 +167,10 @@ require_set() {
 extract_set() {
     local set_name="${1}"; shift
 
-    require_set "${set_name}"
+    require_cached_file "${set_name}.tgz"
 
     local destdir="$(shtk_config_get_default DESTDIR "")"
-    local set_tgz="$(get_set "${set_name}")"
+    local set_tgz="$(get_cached_file "${set_name}.tgz")"
 
     shtk_cli_info "Extracting ${set_name} into ${destdir}/"
     [ -z "${destdir}" ] || shtk_process_run mkdir -p "${destdir}"
@@ -188,26 +189,30 @@ sysupgrade_fetch() {
 
     local releasedir="$(shtk_config_get RELEASEDIR)"
     local cachedir="$(shtk_config_get CACHEDIR)"
-    local fetch_sets="$(shtk_config_get SETS)"
+    local fetch_files=
+    for set_name in $(shtk_config_get SETS); do
+        fetch_files="${fetch_files} binary/sets/${set_name}.tgz"
+    done
     if shtk_config_has KERNEL; then
-        fetch_sets="${fetch_sets} kern-$(shtk_config_get KERNEL)"
+        local kernel_name="$(shtk_config_get KERNEL)"
+        fetch_files="${fetch_files} binary/kernel/netbsd-${kernel_name}.gz"
     fi
 
     case "${releasedir}" in
         ftp://*|http://*)
             mkdir -p "${cachedir}"
 
-            for set_name in ${fetch_sets}; do
-                local file="${cachedir}/${set_name}.tgz"
-                if [ -f "${file}" ]; then
-                    shtk_cli_warning "Reusing existing ${file}"
+            for relative_file in ${fetch_files}; do
+                local local_file="${cachedir}/${relative_file##*/}"
+                if [ -f "${local_file}" ]; then
+                    shtk_cli_warning "Reusing existing ${local_file}"
                 else
-                    local url="${releasedir}/binary/sets/${set_name}.tgz"
+                    local url="${releasedir}/${relative_file}"
                     shtk_cli_info "Downloading ${url} into ${cachedir}"
-                    rm -f "${file}"
-                    ftp -R -o"${file}.tmp" "${url}" \
+                    rm -f "${local_file}"
+                    ftp -R -o"${local_file}.tmp" "${url}" \
                         || shtk_cli_error "Failed to fetch ${url}"
-                    mv "${file}.tmp" "${file}"
+                    mv "${local_file}.tmp" "${local_file}"
                 fi
             done
             ;;
@@ -215,11 +220,11 @@ sysupgrade_fetch() {
         /*)
             mkdir -p "${cachedir}"
 
-            for set_name in ${fetch_sets}; do
-                local src="${releasedir}/binary/sets/${set_name}.tgz"
+            for relative_file in ${fetch_files}; do
+                local src="${releasedir}/${relative_file}"
                 shtk_cli_info "Linking local ${src} into ${cachedir}"
                 [ -f "${src}" ] || shtk_cli_error "Cannot open ${src}"
-                ln -s -f "${src}" "${cachedir}/${set_name}.tgz" \
+                ln -s -f "${src}" "${cachedir}/${relative_file##*/}" \
                     || shtk_cli_error "Failed to link ${src} into ${cachedir}"
             done
             ;;
@@ -249,16 +254,24 @@ sysupgrade_kernel() {
         return 0
     fi
 
-    require_set "kern-${kernel_name}"
+    require_cached_file "netbsd-${kernel_name}.gz"
 
     local destdir="$(shtk_config_get_default DESTDIR "")"
     shtk_cli_info "Upgrading kernel using ${kernel_name} in ${destdir}/"
 
-    if [ -f "${destdir}/netbsd" ]; then
-        shtk_cli_info "Backing up 'netbsd' kernel as 'onetbsd'"
-        cp "${destdir}/netbsd" "${destdir}/onetbsd"
+    if gunzip -c "$(get_cached_file "netbsd-${kernel_name}.gz")" \
+        >"${destdir}/nnetbsd"
+    then
+        if [ -f "${destdir}/netbsd" ]; then
+            shtk_cli_info "Backing up 'netbsd' kernel as 'onetbsd'"
+            ln -f "${destdir}/netbsd" "${destdir}/onetbsd"
+        fi
+
+        mv "${destdir}/nnetbsd" "${destdir}/netbsd"
+    else
+        rm -f "${destdir}/nnetbsd"
+        shtk_cli_error "Failed to uncompress new kernel"
     fi
-    extract_set "kern-${kernel_name}"
 }
 
 
@@ -282,22 +295,24 @@ sysupgrade_modules() {
 #
 # \param ... Names of the sets to extract, to override SETS.
 sysupgrade_sets() {
-    shtk_cli_info "Upgrading base system"
-
     local sets=
     for set_name in "${@:-$(shtk_config_get SETS)}"; do
         case "${set_name}" in
             *etc) ;;  # Handled by etcupdate.
-            kern-*) ;;  # Handled by kernel.
+            kern-*)
+                shtk_cli_error "SETS should not contain any kernel sets;" \
+                    "found ${set_name}"
+                ;;
             modules) ;;  # Handled by modules.
             *) sets="${sets} ${set_name}" ;;
         esac
     done
 
     for set_name in ${sets}; do
-        require_set "${set_name}"
+        require_cached_file "${set_name}.tgz"
     done
 
+    shtk_cli_info "Upgrading base system"
     for set_name in ${sets}; do
         extract_set "${set_name}"
     done
@@ -306,7 +321,8 @@ sysupgrade_sets() {
 
 # Runs etcupdate to install new configuration files.
 sysupgrade_etcupdate() {
-    [ ${#} -eq 0 ] || shtk_cli_usage_error "etcupdate does not take any arguments"
+    [ ${#} -eq 0 ] || shtk_cli_usage_error "etcupdate does not take any" \
+        "arguments"
 
     if shtk_config_has DESTDIR; then
         shtk_cli_info "Skipping etcupdate (DESTDIR upgrades not supported)"
@@ -325,8 +341,8 @@ sysupgrade_etcupdate() {
 
     local sflags=
     for set_name in ${sets}; do
-        require_set "${set_name}"
-        sflags="${sflags} -s$(get_set "${set_name}")"
+        require_cached_file "${set_name}.tgz"
+        sflags="${sflags} -s$(get_cached_file "${set_name}.tgz")"
     done
 
     shtk_cli_info "Upgrading /etc interactively"
@@ -351,8 +367,8 @@ sysupgrade_postinstall() {
 
     local sflags=
     for set_name in ${sets}; do
-        require_set "${set_name}"
-        sflags="${sflags} -s$(get_set "${set_name}")"
+        require_cached_file "${set_name}.tgz"
+        sflags="${sflags} -s$(get_cached_file "${set_name}.tgz")"
     done
 
     shtk_cli_info "Performing postinstall checks"
@@ -371,7 +387,7 @@ sysupgrade_clean() {
     [ ${#} -eq 0 ] || shtk_cli_usage_error "clean does not take any arguments"
 
     shtk_cli_info "Cleaning downloaded files"
-    rm -f "$(shtk_config_get CACHEDIR)"/*.tgz*
+    rm -f "$(shtk_config_get CACHEDIR)"/*.*gz*
 }
 
 
@@ -398,8 +414,8 @@ sysupgrade_auto() {
         sysupgrade_${stage}
     done
 
-    shtk_config_get_bool "AUTOCLEAN" || shtk_cli_info "Distribution sets not deleted;" \
-        "further $(shtk_cli_progname) commands will reuse them"
+    shtk_config_get_bool "AUTOCLEAN" || shtk_cli_info "Distribution sets not" \
+        "deleted; further $(shtk_cli_progname) commands will reuse them"
 }
 
 
