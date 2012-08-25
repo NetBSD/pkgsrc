@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2671 2012/08/25 01:57:52 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.2672 2012/08/25 11:02:11 christos Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4165,3 +4165,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated meta-pkgs/modular-xorg-apps to 1.8 [wiz 2012-08-24]
 	Updated x11/libdrm to 2.4.39 [wiz 2012-08-24]
 	Updated sysutils/sysupgrade to 1.2 [jmmv 2012-08-25]
+	Added net/iana-etc version 1.230 [christos 2012-08-25]
