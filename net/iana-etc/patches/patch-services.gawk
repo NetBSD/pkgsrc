@@ -1,4 +1,6 @@
-$NetBSD: patch-services.gawk,v 1.1 2012/08/25 10:59:50 christos Exp $
+$NetBSD: patch-services.gawk,v 1.2 2012/08/25 13:01:42 christos Exp $
+
+o New services file has <port> <protocol> instead of <port>/<protocol>
 
 --- services.gawk	2008-03-05 19:51:45.000000000 +0200
 +++ services.gawk	2012-08-25 13:36:06.000000000 +0300
