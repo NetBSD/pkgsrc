@@ -63,34 +63,37 @@ EOF
 }
 
 
-# Generates a NetBSD release dir with fake tarballs.
+# Generates a NetBSD release dir with fake sets and kernels.
 #
-# Each of the generated sets contains a single file named '<set>.cookie'.
-# Additionally, if the set starts with kern-, a 'netbsd' file will also be
-# inside it.
+# Each generated set contains a single file named '<set>.cookie'.  The kernels
+# contain just an hardcoded string within them that can later be validated to
+# ensure the right set was unpacked.
 #
 # \param releasedir Path to the release directory.
-# \param ... Names of the sets to create under releasedir/binary/sets/.
+# \param ... Names of the sets to create under releasedir/binary/sets/ and the
+#     kernels to create under releasedir/binary/kernel/.  No extensions should
+#     be given.
 create_mock_release() {
     local releasedir="${1}"; shift
 
+    mkdir -p "${releasedir}/binary/kernel"
     mkdir -p "${releasedir}/binary/sets"
 
     for set_name in "${@}"; do
-        local files=
-
-        echo "File from ${set_name}" >"${set_name}.cookie"
-        files="${files} ${set_name}.cookie"
-
         case "${set_name}" in
-            kern-*)
-                echo "File from ${set_name}" >netbsd
-                files="${files} netbsd"
+            netbsd-*)
+                echo "File from ${set_name}" \
+                    >"${releasedir}/binary/kernel/${set_name}"
+                gzip "${releasedir}/binary/kernel/${set_name}"
+                ;;
+
+            *)
+                echo "File from ${set_name}" >"${set_name}.cookie"
+                tar czf "${releasedir}/binary/sets/${set_name}.tgz" \
+                    "${set_name}.cookie"
+                rm "${set_name}.cookie"
                 ;;
         esac
-
-        tar czf "${releasedir}/binary/sets/${set_name}.tgz" ${files}
-        rm ${files}
     done
 }
 
@@ -153,9 +156,9 @@ EOF
 
     mkdir root
     cat >root/netbsd <<EOF
-### START CONFIG FILE "ABCDE"
+### START CONFIG FILE "foo/bar/ABCDE"
 these are some contents
-### END CONFIG FILE "ABCDE"
+### END CONFIG FILE "foo/bar/ABCDE"
 EOF
     atf_check -o match:"KERNEL = ABCDE" \
         sysupgrade -c /dev/null \
@@ -277,7 +280,7 @@ EOF
     SYSUPGRADE_CACHEDIR="$(pwd)/a/b/c"; export SYSUPGRADE_CACHEDIR
     atf_check -o ignore -e ignore sysupgrade -c /dev/null \
         -o RELEASEDIR="ftp://example.net/pub/NetBSD/X.Y/a-machine" \
-        -o SETS="a foo" fetch
+        -o KERNEL=GENERIC -o SETS="a foo" fetch
 
     cat >expout <<EOF
 Command: ftp
@@ -295,8 +298,8 @@ Arg: ftp://example.net/pub/NetBSD/X.Y/a-machine/binary/sets/foo.tgz
 Command: ftp
 Directory: $(pwd)
 Arg: -R
-Arg: -o$(pwd)/a/b/c/kern-GENERIC.tgz.tmp
-Arg: ftp://example.net/pub/NetBSD/X.Y/a-machine/binary/sets/kern-GENERIC.tgz
+Arg: -o$(pwd)/a/b/c/netbsd-GENERIC.gz.tmp
+Arg: ftp://example.net/pub/NetBSD/X.Y/a-machine/binary/kernel/netbsd-GENERIC.gz
 
 EOF
     atf_check -o file:expout cat commands.log
@@ -308,7 +311,7 @@ fetch__http_head() {
     atf_set "require.progs" "/usr/libexec/httpd"
 }
 fetch__http_body() {
-    create_mock_release www/a-machine base comp etc kern-GENERIC tests text
+    create_mock_release www/a-machine base comp etc netbsd-GENERIC tests text
 
     /usr/libexec/httpd -b -s -d -I 30401 -P "$(pwd)/httpd.pid" "$(pwd)/www" \
         || atf_fail "Failed to start test HTTP server"
@@ -316,13 +319,13 @@ fetch__http_body() {
     SYSUPGRADE_CACHEDIR="$(pwd)/cache"; export SYSUPGRADE_CACHEDIR
     atf_check -o ignore -e ignore sysupgrade -c /dev/null \
         -o RELEASEDIR="http://localhost:30401/a-machine" \
-        -o SETS="base etc text" fetch
+        -o KERNEL=GENERIC -o SETS="base etc text" fetch
 
-    for set_name in base etc kern-GENERIC text; do
-        [ -e "cache/${set_name}.tgz" ] || atf_fail "${set_name} not fetched"
+    for set_name in base.tgz etc.tgz netbsd-GENERIC.gz text.tgz; do
+        [ -e "cache/${set_name}" ] || atf_fail "${set_name} not fetched"
     done
-    for set_name in comp tests; do
-        [ ! -e "cache/${set_name}.tgz" ] || atf_fail "${set_name} fetched"
+    for set_name in comp.tgz tests.tgz; do
+        [ ! -e "cache/${set_name}" ] || atf_fail "${set_name} fetched"
     done
 
     kill -9 "$(cat httpd.pid)"
@@ -338,24 +341,25 @@ fetch__http_cleanup() {
 
 atf_test_case fetch__local
 fetch__local_body() {
-    create_mock_release release base comp etc kern-GENERIC tests text
+    create_mock_release release base comp etc netbsd-GENERIC tests text
 
     SYSUPGRADE_CACHEDIR="$(pwd)/cache"; export SYSUPGRADE_CACHEDIR
     atf_check -o ignore -e ignore sysupgrade -c /dev/null \
-        -o RELEASEDIR="$(pwd)/release" -o SETS="base etc text" fetch
+        -o KERNEL=GENERIC -o RELEASEDIR="$(pwd)/release" \
+        -o SETS="base etc text" fetch
 
-    for set_name in base etc kern-GENERIC text; do
-        [ -e "cache/${set_name}.tgz" ] || atf_fail "${set_name} not fetched"
+    for set_name in base.tgz etc.tgz netbsd-GENERIC.gz text.tgz; do
+        [ -e "cache/${set_name}" ] || atf_fail "${set_name} not fetched"
     done
-    for set_name in comp tests; do
-        [ ! -e "cache/${set_name}.tgz" ] || atf_fail "${set_name} fetched"
+    for set_name in comp.tgz tests.tgz; do
+        [ ! -e "cache/${set_name}" ] || atf_fail "${set_name} fetched"
     done
 }
 
 
 atf_test_case fetch__no_kernel
 fetch__no_kernel_body() {
-    create_mock_release release base comp kern-GENERIC
+    create_mock_release release base comp netbsd-GENERIC
 
     SYSUPGRADE_CACHEDIR="$(pwd)/cache"; export SYSUPGRADE_CACHEDIR
     atf_check -o ignore -e ignore sysupgrade -c /dev/null \
@@ -364,7 +368,7 @@ fetch__no_kernel_body() {
     for set_name in base comp; do
         [ -e "cache/${set_name}.tgz" ] || atf_fail "${set_name} not fetched"
     done
-    [ ! -e "cache/kern-GENERIC.tgz" ] || atf_fail "kern-GENERIC fetched"
+    [ ! -e "cache/netbsd-GENERIC.gz" ] || atf_fail "netbsd-GENERIC fetched"
 }
 
 
@@ -418,8 +422,9 @@ kernel__from_config_body() {
     mkdir root
     echo "my old kernel" >root/netbsd
 
-    create_mock_release release kern-FOOBAR
-    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/sets"; export SYSUPGRADE_CACHEDIR
+    create_mock_release release netbsd-FOOBAR
+    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/kernel"
+    export SYSUPGRADE_CACHEDIR
 
     atf_check -s exit:0 \
         -e match:"Upgrading kernel using FOOBAR in $(pwd)/root/" \
@@ -427,7 +432,7 @@ kernel__from_config_body() {
         sysupgrade -c /dev/null \
         -o DESTDIR="$(pwd)/root" -o KERNEL=FOOBAR kernel
 
-    atf_check -o match:"File from kern-FOOBAR" cat root/netbsd
+    atf_check -o match:"File from netbsd-FOOBAR" cat root/netbsd
     atf_check -o match:"my old kernel" cat root/onetbsd
 }
 
@@ -437,8 +442,9 @@ kernel__from_arg_body() {
     mkdir root
     echo "my old kernel" >root/netbsd
 
-    create_mock_release release kern-FOOBAR kern-OTHER
-    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/sets"; export SYSUPGRADE_CACHEDIR
+    create_mock_release release netbsd-FOOBAR netbsd-OTHER
+    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/kernel"
+    export SYSUPGRADE_CACHEDIR
 
     atf_check -s exit:0 \
         -e match:"Upgrading kernel using OTHER in $(pwd)/root/" \
@@ -446,7 +452,28 @@ kernel__from_arg_body() {
         sysupgrade -c /dev/null \
         -o DESTDIR="$(pwd)/root" -o KERNEL=FOOBAR kernel OTHER
 
-    atf_check -o match:"File from kern-OTHER" cat root/netbsd
+    atf_check -o match:"File from netbsd-OTHER" cat root/netbsd
+    atf_check -o match:"my old kernel" cat root/onetbsd
+}
+
+
+atf_test_case kernel__override_backup
+kernel__override_backup_body() {
+    mkdir root
+    echo "my old kernel" >root/netbsd
+    echo "my older kernel" >root/onetbsd
+
+    create_mock_release release netbsd-FOOBAR
+    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/kernel"
+    export SYSUPGRADE_CACHEDIR
+
+    atf_check -s exit:0 \
+        -e match:"Upgrading kernel using FOOBAR in $(pwd)/root/" \
+        -e match:"Backing up" \
+        sysupgrade -c /dev/null \
+        -o DESTDIR="$(pwd)/root" -o KERNEL=FOOBAR kernel
+
+    atf_check -o match:"File from netbsd-FOOBAR" cat root/netbsd
     atf_check -o match:"my old kernel" cat root/onetbsd
 }
 
@@ -455,14 +482,15 @@ atf_test_case kernel__no_backup
 kernel__no_backup_body() {
     mkdir root
 
-    create_mock_release release kern-FOOBAR
-    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/sets"; export SYSUPGRADE_CACHEDIR
+    create_mock_release release netbsd-FOOBAR
+    SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/kernel"
+    export SYSUPGRADE_CACHEDIR
 
     atf_check -s exit:0 -e not-match:"Backing up" sysupgrade -c /dev/null \
         -o DESTDIR="$(pwd)/root" -o KERNEL=FOOBAR kernel
 
-    atf_check -o match:"File from kern-FOOBAR" cat root/netbsd
-    [ ! -f root/onetbsd ] || "onetbsd backup created, but not expected"
+    atf_check -o match:"File from netbsd-FOOBAR" cat root/netbsd
+    [ ! -f root/onetbsd ] || atf_fail "onetbsd backup created, but not expected"
 }
 
 
@@ -474,12 +502,31 @@ kernel__missing_set_body() {
     SYSUPGRADE_CACHEDIR="$(pwd)"; export SYSUPGRADE_CACHEDIR
 
     cat >experr <<EOF
-sysupgrade: E: Cannot find kern-GENERIC; did you run 'sysupgrade fetch' first?
+sysupgrade: E: Cannot find netbsd-GENERIC.gz; did you run 'sysupgrade fetch' first?
 EOF
     atf_check -s exit:1 -e file:experr sysupgrade -c /dev/null \
         -o DESTDIR="$(pwd)/root" -o KERNEL=GENERIC kernel
 
     atf_check -o match:"my old kernel" cat root/netbsd
+}
+
+
+atf_test_case kernel__bad_file
+kernel__bad_file_body() {
+    mkdir root
+    echo "my old kernel" >root/netbsd
+
+    echo "invalid gzip file" >netbsd-FOOBAR.gz
+    SYSUPGRADE_CACHEDIR="$(pwd)"; export SYSUPGRADE_CACHEDIR
+
+    atf_check -s exit:1 \
+        -e match:"Upgrading kernel using FOOBAR in $(pwd)/root/" \
+        -e match:"Failed to uncompress new kernel" \
+        sysupgrade -c /dev/null \
+        -o DESTDIR="$(pwd)/root" -o KERNEL=FOOBAR kernel
+
+    atf_check -o match:"my old kernel" cat root/netbsd
+    [ ! -f root/onetbsd ] || atf_fail "onetbsd backup created, but not expected"
 }
 
 
@@ -533,7 +580,7 @@ sets__from_config_body() {
     SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/sets"; export SYSUPGRADE_CACHEDIR
 
     expected_sets="base comp"
-    unexpected_sets="etc kern-GENERIC modules xetc"
+    unexpected_sets="etc modules xetc"
 
     atf_check -s exit:0 -e ignore sysupgrade -c /dev/null \
         -o DESTDIR="$(pwd)/root" \
@@ -558,7 +605,7 @@ sets__from_args_body() {
     SYSUPGRADE_CACHEDIR="$(pwd)/release/binary/sets"; export SYSUPGRADE_CACHEDIR
 
     expected_sets="base comp"
-    unexpected_sets="etc kern-GENERIC modules xetc"
+    unexpected_sets="etc modules xetc"
 
     atf_check -s exit:0 -e ignore sysupgrade -c /dev/null \
         -o DESTDIR="$(pwd)/root" -o SETS="foo bar baz" \
@@ -573,6 +620,16 @@ sets__from_args_body() {
         [ ! -f "root/${set_name}.cookie" ] \
             || atf_fail "Unexpected set ${set_name} extracted"
     done
+}
+
+
+atf_test_case sets__invalid_kern
+sets__invalid_kern_body() {
+    cat >experr <<EOF
+sysupgrade: E: SETS should not contain any kernel sets; found kern-FOO
+EOF
+    atf_check -s exit:1 -e file:experr sysupgrade -c /dev/null \
+        -o DESTDIR="$(pwd)/root" -o SETS="foo kern-FOO baz" sets
 }
 
 
@@ -633,8 +690,10 @@ EOF
 
 atf_test_case etcupdate__missing_etc
 etcupdate__missing_etc_body() {
+    SYSUPGRADE_CACHEDIR="$(pwd)"; export SYSUPGRADE_CACHEDIR
+
     cat >experr <<EOF
-sysupgrade: E: Cannot find etc; did you run 'sysupgrade fetch' first?
+sysupgrade: E: Cannot find etc.tgz; did you run 'sysupgrade fetch' first?
 EOF
     atf_check -s exit:1 -e file:experr sysupgrade -c /dev/null \
         -o RELEASEDIR="$(pwd)/missing" -o SETS="etc" etcupdate
@@ -756,8 +815,10 @@ EOF
 
 atf_test_case postinstall__missing_etc
 postinstall__missing_etc_body() {
+    SYSUPGRADE_CACHEDIR="$(pwd)"; export SYSUPGRADE_CACHEDIR
+
     cat >experr <<EOF
-sysupgrade: E: Cannot find etc; did you run 'sysupgrade fetch' first?
+sysupgrade: E: Cannot find etc.tgz; did you run 'sysupgrade fetch' first?
 EOF
     atf_check -s exit:1 -e file:experr sysupgrade -c /dev/null \
         -o RELEASEDIR="$(pwd)/missing" -o SETS="etc" postinstall
@@ -799,17 +860,19 @@ clean__nothing_body() {
 }
 
 
-atf_test_case clean__only_tgzs
-clean__only_tgzs_body() {
+atf_test_case clean__only_zipped
+clean__only_zipped_body() {
     SYSUPGRADE_CACHEDIR="$(pwd)/cache"; export SYSUPGRADE_CACHEDIR
     mkdir "${SYSUPGRADE_CACHEDIR}"
     touch cache/foo.tgz
     touch cache/foo.tgz.tmp
     touch cache/bar.gz
+    touch cache/bar.gz.tmp
     atf_check -e match:"Cleaning downloaded files" sysupgrade -c /dev/null clean
     [ ! -f cache/foo.tgz ] || atf_fail "tgz not deleted"
     [ ! -f cache/foo.tgz.tmp ] || atf_fail "Temporary tgz not deleted"
-    [ -f cache/bar.gz ] || atf_fail "Non-tgz files deleted"
+    [ ! -f cache/bar.gz ] || atf_fail "gz not deleted"
+    [ ! -f cache/bar.gz.tmp ] || atf_fail "Temporary gz not deleted"
     [ -d cache ] || atf_fail "Cache directory should not have been deleted"
 }
 
@@ -830,7 +893,7 @@ auto__simple_body() {
     create_mock_binary etcupdate
     PATH="$(pwd):${PATH}"
 
-    create_mock_release release base comp etc kern-CUSTOM modules
+    create_mock_release release base comp etc netbsd-CUSTOM modules
 
     mkdir root
     echo "old kernel" >root/netbsd
@@ -855,7 +918,7 @@ EOF
     atf_check -o inline:"File from base\n" cat root/base.cookie
     atf_check -o inline:"File from comp\n" cat root/comp.cookie
     atf_check -o inline:"File from modules\n" cat root/modules.cookie
-    atf_check -o inline:"File from kern-CUSTOM\n" cat root/netbsd
+    atf_check -o inline:"File from netbsd-CUSTOM\n" cat root/netbsd
     atf_check -o inline:"old kernel\n" cat root/onetbsd
 
     [ ! -f root/etc.cookie ] || atf_fail "etc extracted by mistake"
@@ -1014,8 +1077,10 @@ atf_init_test_cases() {
     atf_add_test_case kernel__skip
     atf_add_test_case kernel__from_config
     atf_add_test_case kernel__from_arg
+    atf_add_test_case kernel__override_backup
     atf_add_test_case kernel__no_backup
     atf_add_test_case kernel__missing_set
+    atf_add_test_case kernel__bad_file
     atf_add_test_case kernel__too_many_args
 
     atf_add_test_case modules__skip
@@ -1024,6 +1089,7 @@ atf_init_test_cases() {
 
     atf_add_test_case sets__from_config
     atf_add_test_case sets__from_args
+    atf_add_test_case sets__invalid_kern
 
     atf_add_test_case etcupdate__skip__none
     atf_add_test_case etcupdate__skip__no_etc
@@ -1041,7 +1107,7 @@ atf_init_test_cases() {
     atf_add_test_case postinstall__explicit_args
 
     atf_add_test_case clean__nothing
-    atf_add_test_case clean__only_tgzs
+    atf_add_test_case clean__only_zipped
     atf_add_test_case clean__too_many_args
 
     atf_add_test_case auto__simple

@@ -25,7 +25,7 @@
 .\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 .\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 .\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-.Dd August 6, 2012
+.Dd August 24, 2012
 .Dt SYSUPGRADE.CONF 5
 .Os
 .Sh NAME
@@ -97,8 +97,8 @@ Default: yes.
 .It Va KERNEL
 Name of the kernel to install.
 There must be a
-.Sq kern-<KERNEL>
-distribution set in the release directory matching this name.
+.Sq netbsd-<KERNEL>.gz
+file in the release directory matching this name.
 .Pp
 If this is set to the magic value
 .Sq AUTO ,
@@ -138,9 +138,9 @@ If this is set to the magic value
 the list of sets is determined from the files in
 .Pa <DESTDIR>/etc/mtree .
 .Pp
-This list should not include any
+This list cannot include any
 .Sq kern-*
-sets as this is automatically handled by the
+sets; the kernel to be installed is determined by the
 .Va KERNEL
 variable.
 .Pp
