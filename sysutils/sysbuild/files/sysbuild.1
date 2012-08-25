@@ -1,4 +1,4 @@
-.\" $NetBSD: sysbuild.1,v 1.4 2012/08/23 02:26:57 jmmv Exp $
+.\" $NetBSD: sysbuild.1,v 1.5 2012/08/25 19:20:53 jmmv Exp $
 .\" Copyright 2012 Google Inc.
 .\" All rights reserved.
 .\"
@@ -26,7 +26,7 @@
 .\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 .\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 .\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-.Dd August 22, 2012
+.Dd August 25, 2012
 .Dt SYSBUILD 1
 .Os
 .Sh NAME
@@ -43,6 +43,11 @@ build
 .Op Fl c Ar config_name
 .Op Fl o Ar variable=value
 config
+.Nm
+.Op Fl c Ar config_name
+.Op Fl o Ar variable=value
+env
+.Op Ar machine
 .Nm
 .Op Fl c Ar config_name
 .Op Fl o Ar variable=value
@@ -181,6 +186,67 @@ The format of the output is not a script, so it cannot be fed back into
 The purpose of this command is to aid in debugging the configuration of the
 tool before performing any builds, particularly when the configuration
 files use shell logic to determine the value of any variables.
+.Ss The env command
+The env command prints a shell script snippet that defines environment variables
+to simplify working with the directory layout of a
+.Nx
+build for a particular machine.
+If the
+.Va MACHINES
+variable is not defined, or if it lists more than one machine, then the
+.Ar machine
+argument is required.
+.Pp
+The common mechanism to use these variables is by executing
+.Nm
+in the following way:
+.Bd -literal -offset indent
+$ eval $(sysbuild env)
+.Ed
+.Pp
+The following variables are defined and/or modified:
+.Bl -tag -width PATH
+.It Va PATH
+The path to the tools is prepended to the path.
+Of particular interest is the
+.Pa nbmake-<machine>
+script made available in this way, which allows you to build arbitrary targets
+within the source directory using the tools.
+.It Va D
+Path to the destdir.
+.It Va O
+Path to the objects directory for the source tree.
+.It Va S
+Path to the source tree.
+.It Va T
+Path to the tools.
+Note that this points to the root of the tools, not their
+.Pa bin
+subdirectory.
+.It Va XO
+If
+.Va XSRCDIR
+is defined, path to the objects directory for the X source tree.
+.It Va XS
+If
+.Va XSRCDIR
+is defined, path to the X source tree.
+.El
+.Pp
+And the following functions are defined:
+.Bl -tag -width curobj
+.It Fn curobj
+When invoked from a subdirectory of either src or xsrc, prints the path to that
+same subdirectory within the objects hierarchy.
+You may use this to reference temporary build files easily when you are working
+within the source tree as follows:
+.Bd -literal -offset indent
+$ cd /usr/src/bin/ls
+/usr/src/bin/ls$ nbmake-amd64
+/usr/src/bin/ls$ cd $(curobj)
+/usr/obj/usr/src/bin/ls$
+.Ed
+.El
 .Ss The fetch command
 The fetch command downloads or updates the
 .Nx
