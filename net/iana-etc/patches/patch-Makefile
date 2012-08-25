@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2012/08/25 10:59:50 christos Exp $
+
+--- Makefile	2012-08-25 13:45:59.000000000 +0300
++++ Makefile	2012-08-25 13:10:09.000000000 +0300
+@@ -17,7 +17,7 @@
+ .PHONY: all files get test test-services test-protocols install clean \
+ 	protocol-numbers.iana port-numbers.iana dist
+ 
+-all: files
++all: get files
+ files: protocols services
+ 
+ get: protocol-numbers.iana port-numbers.iana
+@@ -30,10 +30,10 @@
+ test-protocols: protocols test-lib.gawk test-protocols.gawk
+ 	$(AWK) -f test-lib.gawk -f test-protocols.gawk <protocols
+ 
+-install: files
+-	install -d $(DESTDIR)$(PREFIX)$(ETC_DIR)
+-	install -m 644 protocols $(DESTDIR)$(PREFIX)$(ETC_DIR)
+-	install -m 644 services $(DESTDIR)$(PREFIX)$(ETC_DIR)
++#install: files
++#	install -d $(DESTDIR)$(PREFIX)$(ETC_DIR)
++#	install -m 644 protocols $(DESTDIR)$(PREFIX)$(ETC_DIR)
++#	install -m 644 services $(DESTDIR)$(PREFIX)$(ETC_DIR)
+ 
+ clean:
+ 	rm -vf \
+@@ -42,11 +42,11 @@
+ 	    protocol-numbers.iana port-numbers.iana
+ 
+ protocol-numbers.iana:
+-	$(AWK) -f get.gawk -v file=protocol-numbers >protocol-numbers.iana
++	$(AWK) -f get.gawk -v url=protocol-numbers file=protocol-numbers >protocol-numbers.iana
+ 	rm -f protocol-numbers
+ 
+ port-numbers.iana:
+-	$(AWK) -f get.gawk -v file=port-numbers >port-numbers.iana
++	$(AWK) -f get.gawk -v url=service-names-port-numbers file=port-numbers >port-numbers.iana
+ 	rm -f port-numbers
+ 
+ protocol-numbers:
