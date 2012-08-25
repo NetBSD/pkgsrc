@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2012/08/25 10:59:50 christos Exp $
+$NetBSD: distinfo,v 1.2 2012/08/25 11:10:18 christos Exp $
 
 SHA1 (iana-etc-2.30.tar.bz2) = 218593bcb9264014c4e397d838b2c218eac9df06
 RMD160 (iana-etc-2.30.tar.bz2) = c381a9b1a26a6a06cebf8b1789ac42b8d362256f
 Size (iana-etc-2.30.tar.bz2) = 205618 bytes
-SHA1 (patch-Makefile) = 4579e64c24c4834964915de81835111645d4e4b3
+SHA1 (patch-Makefile) = 624c86469d5f63418123730fd70f2dc230a6a3d8
 SHA1 (patch-get.gawk) = 9ee0c6f5ffc917605e10a0a17c78d317ea888a05
 SHA1 (patch-services.gawk) = 49f6d44cf1a33bb5f21c4ce9693fe6b26cddfab2
