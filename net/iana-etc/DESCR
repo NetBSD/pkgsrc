@@ -1,0 +1,6 @@
+This package installs nothing but creates a "protocols" and "services"
+file in it's work area. It uses Seth W. Klein's iana-etc software, but
+since this has not been modified since 2008, I have updated it to handle
+the location and the format of the current files. You can use the protocols
+and services files it generates for NetBSD following the information in
+/usr/src/doc/3RDPARTY
