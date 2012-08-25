@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2009/06/14 20:05:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.33 2012/08/25 10:43:09 shattered Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -221,7 +221,6 @@ lib/kde3/kfile_gif.la
 lib/kde3/kfile_ico.la
 lib/kde3/kfile_jpeg.la
 lib/kde3/kfile_pcx.la
-lib/kde3/kfile_pdf.la
 lib/kde3/kfile_png.la
 lib/kde3/kfile_pnm.la
 lib/kde3/kfile_ps.la
@@ -1129,7 +1128,6 @@ share/kde/services/kfile_gif.desktop
 share/kde/services/kfile_ico.desktop
 share/kde/services/kfile_jpeg.desktop
 share/kde/services/kfile_pcx.desktop
-share/kde/services/kfile_pdf.desktop
 share/kde/services/kfile_png.desktop
 share/kde/services/kfile_pnm.desktop
 share/kde/services/kfile_ps.desktop
