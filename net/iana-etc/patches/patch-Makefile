@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2012/08/25 10:59:50 christos Exp $
+$NetBSD: patch-Makefile,v 1.2 2012/08/25 11:10:19 christos Exp $
 
 --- Makefile	2012-08-25 13:45:59.000000000 +0300
 +++ Makefile	2012-08-25 13:10:09.000000000 +0300
@@ -26,7 +26,7 @@ $NetBSD: patch-Makefile,v 1.1 2012/08/25 10:59:50 christos Exp $
  
  clean:
  	rm -vf \
-@@ -42,11 +42,11 @@
+@@ -42,26 +42,26 @@
  	    protocol-numbers.iana port-numbers.iana
  
  protocol-numbers.iana:
@@ -40,3 +40,26 @@ $NetBSD: patch-Makefile,v 1.1 2012/08/25 10:59:50 christos Exp $
  	rm -f port-numbers
  
  protocol-numbers:
+-ifeq (protocol-numbers.iana, $(wildcard protocol-numbers.iana))
++#ifeq (protocol-numbers.iana, $(wildcard protocol-numbers.iana))
+ 	ln -f -s protocol-numbers.iana protocol-numbers
+-else
+-	ln -f -s protocol-numbers.dist protocol-numbers
+-endif
++#else
++#	ln -f -s protocol-numbers.dist protocol-numbers
++#endif
+ 
+ port-numbers:
+-ifeq (port-numbers.iana, $(wildcard port-numbers.iana))
++#ifeq (port-numbers.iana, $(wildcard port-numbers.iana))
+ 	ln -f -s port-numbers.iana port-numbers
+-else
+-	ln -f -s port-numbers.dist port-numbers
+-endif
++#else
++#	ln -f -s port-numbers.dist port-numbers
++#endif
+ 
+ protocols: protocol-numbers protocols.gawk
+ 	$(AWK) --re-interval -f protocols.gawk -v strip=$(STRIP) \
