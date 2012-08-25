@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/07/30 07:30:42 ryoon Exp $
+$NetBSD: patch-aa,v 1.2 2012/08/25 12:34:53 wiz Exp $
 
---- INSTALL.orig	2010-09-22 15:19:28.000000000 +0900
-+++ INSTALL	2010-10-09 08:03:26.881020586 +0900
-@@ -122,6 +122,8 @@
+Adapt ls(1) arguments for BSD.
+Do not install man page gzipped.
+Do not install into /usr.
+Add case for NetBSD and DragonFly in the wrapper script.
+
+--- INSTALL.orig	2012-03-28 10:48:06.000000000 +0000
++++ INSTALL
+@@ -122,6 +122,8 @@ PrintRequiredFree()
  
          if [ "${OSname}" = "Linux" ] ; then
            size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
@@ -11,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/07/30 07:30:42 ryoon Exp $
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -657,12 +661,8 @@
+@@ -657,16 +659,8 @@ InstallReader()
            record_config remove /usr/local/etc/bash_completion.d/acroread.sh
        fi
    fi
@@ -21,10 +26,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/07/30 07:30:42 ryoon Exp $
      manPageFile="acroread.1"
      gunzip "$ReadInstallDir/Adobe/Reader9/Resource/Shell/acroread.1.gz" 2>/dev/null 
 -  fi
+-
+-  rm -f "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
+-  ln -s "$ReadInstallDir/Adobe/Reader9/Resource/Shell/${manPageFile}" "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
+-  record_config remove "/usr/share/man/man1/${manPageFile}"
  
-   rm -f "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
-   ln -s "$ReadInstallDir/Adobe/Reader9/Resource/Shell/${manPageFile}" "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
-@@ -950,6 +950,19 @@
+   if [ "${OSname}" = "Linux" -o \( "${OSname}" = "SunOS" -a "`uname -m`" = "i86pc" \) ]; then
+       printf "%s" "Setting up libraries ... "
+@@ -950,6 +944,19 @@ case "$OSname" in
      ReadDefaultNum="$ReadIntelLinuxNum"
      DefaultName="Intel/Linux"
      ;;
