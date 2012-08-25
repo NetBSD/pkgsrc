@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/15 21:20:14 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/08/25 19:20:53 jmmv Exp $
 bin/sysbuild
 bin/sysbuild4cron
 man/man1/sysbuild.1
 man/man1/sysbuild4cron.1
 share/examples/sysbuild/default.conf
+share/sysbuild/env.sh
 ${TESTS}tests/sysbuild/Kyuafile
 ${TESTS}tests/sysbuild/sysbuild_test
 ${TESTS}tests/sysbuild/sysbuild4cron_test
