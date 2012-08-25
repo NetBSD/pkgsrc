@@ -1,4 +1,7 @@
-$NetBSD: patch-get.gawk,v 1.1 2012/08/25 10:59:50 christos Exp $
+$NetBSD: patch-get.gawk,v 1.2 2012/08/25 13:01:42 christos Exp $
+
+o Add a new parameter to specify the name of the url to get the files from.
+  Well, partial name but that is good enough.
 
 --- get.gawk	2008-03-05 20:04:18.000000000 +0200
 +++ get.gawk	2012-08-25 13:10:28.000000000 +0300
