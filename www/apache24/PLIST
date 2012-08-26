@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/08/20 14:14:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/08/26 12:37:34 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -94,8 +94,7 @@ lib/httpd/mod_autoindex.so
 lib/httpd/mod_buffer.so
 lib/httpd/mod_cache.so
 lib/httpd/mod_cache_disk.so
-${PLIST.prefork}lib/httpd/mod_cgi.so
-${PLIST.worker}lib/httpd/mod_cgid.so
+lib/httpd/mod_cgid.so
 lib/httpd/mod_charset_lite.so
 lib/httpd/mod_data.so
 lib/httpd/mod_dav.so
@@ -129,9 +128,9 @@ lib/httpd/mod_logio.so
 ${PLIST.lua}lib/httpd/mod_lua.so
 lib/httpd/mod_mime.so
 lib/httpd/mod_mime_magic.so
-${PLIST.mpm-shared}lib/httpd/mod_mpm_event.so
-${PLIST.mpm-shared}lib/httpd/mod_mpm_prefork.so
-${PLIST.mpm-shared}lib/httpd/mod_mpm_worker.so
+lib/httpd/mod_mpm_event.so
+lib/httpd/mod_mpm_prefork.so
+lib/httpd/mod_mpm_worker.so
 lib/httpd/mod_negotiation.so
 lib/httpd/mod_proxy.so
 lib/httpd/mod_proxy_ajp.so
@@ -176,13 +175,13 @@ libexec/cgi-bin/test-cgi
 man/man1/ab.1
 man/man1/apxs.1
 man/man1/dbmmanage.1
-man/man8/fcgistarter.8
 man/man1/htdbm.1
 man/man1/htdigest.1
 man/man1/htpasswd.1
 man/man1/httxt2dbm.1
 man/man1/logresolve.1
 man/man8/apachectl.8
+man/man8/fcgistarter.8
 man/man8/htcacheclean.8
 man/man8/httpd.8
 man/man8/rotatelogs.8
@@ -533,6 +532,8 @@ share/httpd/manual/developer/hooks.html.en
 share/httpd/manual/developer/index.html
 share/httpd/manual/developer/index.html.en
 share/httpd/manual/developer/index.html.zh-cn
+share/httpd/manual/developer/modguide.html
+share/httpd/manual/developer/modguide.html.en
 share/httpd/manual/developer/modules.html
 share/httpd/manual/developer/modules.html.en
 share/httpd/manual/developer/modules.html.ja.utf8
@@ -629,6 +630,9 @@ share/httpd/manual/howto/ssi.html.fr
 share/httpd/manual/howto/ssi.html.ja.utf8
 share/httpd/manual/howto/ssi.html.ko.euc-kr
 share/httpd/manual/images/apache_header.gif
+share/httpd/manual/images/build_a_mod_2.png
+share/httpd/manual/images/build_a_mod_3.png
+share/httpd/manual/images/build_a_mod_4.png
 share/httpd/manual/images/caching_fig1.gif
 share/httpd/manual/images/caching_fig1.png
 share/httpd/manual/images/caching_fig1.tr.png
@@ -651,6 +655,8 @@ share/httpd/manual/images/mod_rewrite_fig1.png
 share/httpd/manual/images/mod_rewrite_fig2.gif
 share/httpd/manual/images/mod_rewrite_fig2.png
 share/httpd/manual/images/pixel.gif
+share/httpd/manual/images/rewrite_backreferences.png
+share/httpd/manual/images/rewrite_process_uri.png
 share/httpd/manual/images/rewrite_rule_flow.png
 share/httpd/manual/images/right.gif
 share/httpd/manual/images/ssl_intro_fig1.gif
@@ -895,6 +901,7 @@ share/httpd/manual/mod/mod_dir.html.ko.euc-kr
 share/httpd/manual/mod/mod_dir.html.tr.utf8
 share/httpd/manual/mod/mod_dumpio.html
 share/httpd/manual/mod/mod_dumpio.html.en
+share/httpd/manual/mod/mod_dumpio.html.fr
 share/httpd/manual/mod/mod_dumpio.html.ja.utf8
 share/httpd/manual/mod/mod_echo.html
 share/httpd/manual/mod/mod_echo.html.en
@@ -972,6 +979,7 @@ share/httpd/manual/mod/mod_log_debug.html
 share/httpd/manual/mod/mod_log_debug.html.en
 share/httpd/manual/mod/mod_log_forensic.html
 share/httpd/manual/mod/mod_log_forensic.html.en
+share/httpd/manual/mod/mod_log_forensic.html.fr
 share/httpd/manual/mod/mod_log_forensic.html.ja.utf8
 share/httpd/manual/mod/mod_log_forensic.html.tr.utf8
 share/httpd/manual/mod/mod_logio.html
@@ -1012,12 +1020,14 @@ share/httpd/manual/mod/mod_proxy_express.html
 share/httpd/manual/mod/mod_proxy_express.html.en
 share/httpd/manual/mod/mod_proxy_fcgi.html
 share/httpd/manual/mod/mod_proxy_fcgi.html.en
+share/httpd/manual/mod/mod_proxy_fcgi.html.fr
 share/httpd/manual/mod/mod_proxy_fdpass.html
 share/httpd/manual/mod/mod_proxy_fdpass.html.en
 share/httpd/manual/mod/mod_proxy_ftp.html
 share/httpd/manual/mod/mod_proxy_ftp.html.en
 share/httpd/manual/mod/mod_proxy_html.html
 share/httpd/manual/mod/mod_proxy_html.html.en
+share/httpd/manual/mod/mod_proxy_html.html.fr
 share/httpd/manual/mod/mod_proxy_http.html
 share/httpd/manual/mod/mod_proxy_http.html.en
 share/httpd/manual/mod/mod_proxy_http.html.fr
@@ -1043,6 +1053,7 @@ share/httpd/manual/mod/mod_sed.html.en
 share/httpd/manual/mod/mod_sed.html.fr
 share/httpd/manual/mod/mod_session.html
 share/httpd/manual/mod/mod_session.html.en
+share/httpd/manual/mod/mod_session.html.fr
 share/httpd/manual/mod/mod_session_cookie.html
 share/httpd/manual/mod/mod_session_cookie.html.en
 share/httpd/manual/mod/mod_session_crypto.html
@@ -1254,6 +1265,8 @@ share/httpd/manual/programs/index.html.es
 share/httpd/manual/programs/index.html.ko.euc-kr
 share/httpd/manual/programs/index.html.tr.utf8
 share/httpd/manual/programs/index.html.zh-cn
+share/httpd/manual/programs/log_server_status.html
+share/httpd/manual/programs/log_server_status.html.en
 share/httpd/manual/programs/logresolve.html
 share/httpd/manual/programs/logresolve.html.en
 share/httpd/manual/programs/logresolve.html.ko.euc-kr
@@ -1266,6 +1279,8 @@ share/httpd/manual/programs/rotatelogs.html
 share/httpd/manual/programs/rotatelogs.html.en
 share/httpd/manual/programs/rotatelogs.html.ko.euc-kr
 share/httpd/manual/programs/rotatelogs.html.tr.utf8
+share/httpd/manual/programs/split-logfile.html
+share/httpd/manual/programs/split-logfile.html.en
 share/httpd/manual/programs/suexec.html
 share/httpd/manual/programs/suexec.html.en
 share/httpd/manual/programs/suexec.html.ko.euc-kr
@@ -1364,11 +1379,13 @@ share/httpd/manual/style/css/manual-print.css
 share/httpd/manual/style/css/manual-zip-100pc.css
 share/httpd/manual/style/css/manual-zip.css
 share/httpd/manual/style/css/manual.css
+share/httpd/manual/style/css/prettify.css
 share/httpd/manual/style/faq.dtd
 share/httpd/manual/style/lang.dtd
 share/httpd/manual/style/latex/atbeginend.sty
 share/httpd/manual/style/manualpage.dtd
 share/httpd/manual/style/modulesynopsis.dtd
+share/httpd/manual/style/scripts/prettify.js
 share/httpd/manual/style/sitemap.dtd
 share/httpd/manual/style/version.ent
 share/httpd/manual/suexec.html
