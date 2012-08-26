@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2681 2012/08/26 13:26:14 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2682 2012/08/26 13:34:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4175,3 +4175,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/tcl-tDOM version 0.8.3 [wiz 2012-08-26]
 	Updated www/apache24 to 2.4.3 [ryoon 2012-08-26]
 	Updated misc/libreoffice3-bin to 3.6.0 [ryoon 2012-08-26]
+	Updated fonts/umefont-ttf to 0.442 [ryoon 2012-08-26]
