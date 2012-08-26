@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2012/08/20 14:14:16 fhajny Exp $
+# $NetBSD: options.mk,v 1.6 2012/08/26 12:37:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
-PKG_OPTIONS_REQUIRED_GROUPS=	mpm
-PKG_OPTIONS_GROUP.mpm=		apache-mpm-event apache-mpm-prefork apache-mpm-worker
-PKG_SUPPORTED_OPTIONS=		lua suexec apache-mpm-shared
+PKG_SUPPORTED_OPTIONS=		lua suexec apache-mpm-event apache-mpm-prefork apache-mpm-worker
 PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
 
 .include "../../mk/bsd.options.mk"
@@ -18,24 +16,23 @@ PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
 #	prefork		non-threaded, pre-forking web server
 #	worker		hybrid multi-threaded multi-process web server
 #
-PLIST_VARS+=		worker prefork mpm-shared
+PLIST_VARS+=		worker prefork event
+
+CONFIGURE_ARGS+=	--enable-mpms-shared='event prefork worker'
+
 .if !empty(PKG_OPTIONS:Mapache-mpm-event)
 CONFIGURE_ARGS+=	--with-mpm=event
-PLIST.worker=		yes
-.elif !empty(PKG_OPTIONS:Mapache-mpm-worker)
-CONFIGURE_ARGS+=	--with-mpm=worker
-PLIST.worker=		yes
-.else
-CONFIGURE_ARGS+=	--with-mpm=prefork
-. if empty(PKG_OPTIONS:Mapache-mpm-shared)
-PLIST.prefork=		yes
-. endif
+PLIST.event=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mapache-mpm-shared)
-CONFIGURE_ARGS+=	--enable-mpms-shared='prefork worker event'
-PLIST.mpm-shared=	yes
+.if !empty(PKG_OPTIONS:Mapache-mpm-worker)
+CONFIGURE_ARGS+=	--with-mpm=worker
 PLIST.worker=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mapache-mpm-prefork)
+CONFIGURE_ARGS+=	--with-mpm=prefork
+PLIST.prefork=		yes
 .endif
 
 BUILD_DEFS+=		APACHE_MODULES
