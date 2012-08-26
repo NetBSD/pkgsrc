@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2009/11/04 11:44:15 adam Exp $
+$NetBSD: patch-ac,v 1.6 2012/08/26 19:42:09 marino Exp $
 
---- Makefile.in.orig	2008-10-30 01:13:48.000000000 +0100
+--- Makefile.in.orig	2011-04-05 02:36:16.000000000 +0000
 +++ Makefile.in
-@@ -16,15 +16,15 @@ else
- 	FINALTARGET = $(TARGET)
+@@ -20,15 +20,15 @@ else
+ 	endif
  endif
  
 -CFLAGS = @CFLAGS@
