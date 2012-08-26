@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2012/02/02 07:52:26 jnemeth Exp $
+# $NetBSD: Makefile,v 1.104 2012/08/26 10:31:39 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -19,6 +19,7 @@ SUBDIR+=	gnome-packagekit
 SUBDIR+=	libkver
 SUBDIR+=	libnbcompat
 SUBDIR+=	lintpkgsrc
+SUBDIR+=	mksandbox
 SUBDIR+=	mtree
 SUBDIR+=	nih
 SUBDIR+=	osabi
