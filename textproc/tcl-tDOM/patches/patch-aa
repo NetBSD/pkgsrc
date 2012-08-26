@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2012/08/26 12:12:28 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2012/08/26 13:05:38 wiz Exp $
 
 The TEA autoconf macros assume that NetBSD is some weird old operating system
 that can't handle dots in library names. Using the same values as newer FreeBSD
 versions yields a uniform PLIST for the platforms supported by pkgsrc.
+
+https://github.com/tDOM/tdom/issues/12
 
 --- configure.orig	2007-08-05 20:47:49.000000000 +0200
 +++ configure	2011-12-29 03:13:10.000000000 +0100
