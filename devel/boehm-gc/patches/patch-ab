@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.20 2012/05/29 14:35:42 wiz Exp $
+$NetBSD: patch-ab,v 1.21 2012/08/26 17:02:12 wiz Exp $
 
 --- configure.orig	2012-05-11 17:09:00.000000000 +0000
 +++ configure
@@ -22,16 +22,6 @@ $NetBSD: patch-ab,v 1.20 2012/05/29 14:35:42 wiz Exp $
      $as_echo "#define GC_DLL 1" >>confdefs.h
  
      # FIXME: Also pass -fvisibility=hidden option if GCC v4+ and not Win32.
-@@ -5508,6 +5508,9 @@ $as_echo "#define SOLARIS25_PROC_VDB_BUG
-  sparc*-*-openbsd*)
-     machdep="mach_dep.lo sparc_mach_dep.lo"
-     ;;
-+ sparc64-*-netbsd*)
-+    machdep="mach_dep.lo sparc_mach_dep.lo"
-+    ;;
-  sparc-sun-solaris2.3)
-     machdep="mach_dep.lo sparc_mach_dep.lo"
- 
 @@ -16438,7 +16441,7 @@ $as_echo "#define SMALL_CONFIG 1" >>conf
  
  fi
