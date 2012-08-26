@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2677 2012/08/26 10:07:10 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2678 2012/08/26 11:00:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/sysbuild to 2.3 [jmmv 2012-08-25]
 	Updated emulators/openmsx to 0.9.0 [marino 2012-08-26]
 	Updated pkgtools/pkg_online-client to 0.13.0nb1 [cheusov 2012-08-26]
+	Added pkgtools/mksandbox version 1.0 [wiz 2012-08-26]
