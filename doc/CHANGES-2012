@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2687 2012/08/26 17:00:15 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2688 2012/08/26 17:04:11 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4185,3 +4185,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added chat/irssi-xmpp version 0.52 [wiz 2012-08-26]
 	Updated pkgtools/nih to 0.10.1 [cheusov 2012-08-26]
 	Updated devel/boehm-gc to 7.2d [wiz 2012-08-26]
+	Updated pkgtools/distbb to 0.45.0 [cheusov 2012-08-26]
