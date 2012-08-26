@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1 2012/08/26 10:31:23 wiz Exp $
+
+DISTNAME=	mksandbox-1.0
+CATEGORIES=	pkgtools
+MASTER_SITES=	# none
+DISTFILES=	# none
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/bulk.html#setting-up-a-sandbox
+COMMENT=	Tool for creating sandboxes
+LICENSE=	original-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}
+NO_BUILD=	yes
+USE_LANGUAGES=	# none
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+
+do-extract:
+	cd ${FILESDIR} && cp mksandbox mksandbox.8 ${WRKSRC}/
+
+.include "../../mk/bsd.prefs.mk"
+
+SUBST_CLASSES+=		up
+SUBST_STAGE.up=		do-configure
+SUBST_FILES.up=		mksandbox mksandbox.8
+SUBST_SED.up+=		-e 's,/usr/pkgsrc,${PKGSRCDIR},g'
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/mksandbox ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/mksandbox.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+
+.include "../../mk/bsd.pkg.mk"
