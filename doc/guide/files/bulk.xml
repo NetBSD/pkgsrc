@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.9 2011/07/31 08:48:22 spz Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.10 2012/08/26 10:34:20 wiz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -366,7 +366,8 @@ fi
       using null mounts, or manually.</para>
 
       <para>There is a shell script called
-      <filename>pkgsrc/mk/bulk/mksandbox</filename> which will set
+      <filename>mksandbox</filename> installed by the <filename
+      role="pkg">pkgtools/mksandbox</filename> package, which will set
       up the sandbox environment using null mounts. It will also
       create a script called <filename>sandbox</filename> in the
       root of the sandbox environment, which will allow the null
