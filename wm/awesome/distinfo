@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2009/08/29 17:51:05 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/08/26 20:28:16 is Exp $
 
-SHA1 (awesome-2.3.6.tar.gz) = ccc70f810617b6fecc256296f1a3d75a59c5de61
-RMD160 (awesome-2.3.6.tar.gz) = c4a097026bff49a6a0ac65af13818958c3365bde
-Size (awesome-2.3.6.tar.gz) = 232212 bytes
-SHA1 (patch-aa) = a04211c3886c4bd01891b6182071eabdc065a94f
-SHA1 (patch-ab) = f997bc4f26e31ea07109861ac12f4a9771745c60
-SHA1 (patch-ac) = be1f54ba543dfe9f4f24eaba6623c4a912e1f60b
+SHA1 (awesome-3.4.10.tar.xz) = c5c774cc1ca416863e200fcfe01a05acc0fbcbc2
+RMD160 (awesome-3.4.10.tar.xz) = 66dc56438f577e30ac67507af243e955b7e39f79
+Size (awesome-3.4.10.tar.xz) = 715484 bytes
+SHA1 (patch-awesomeConfig.cmake) = ce48651d804fb8b277c33aed94861219acc1bc73
+SHA1 (patch-spawn.c) = 0e5f9ae05c950df85d3da3d22754e9d8c658ad93
