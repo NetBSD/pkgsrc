@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2012/08/26 14:06:19 wiz Exp $
+
+SHA1 (irssi-0.8.15.tar.bz2) = b79ce8c2c98a76b004f63706e7868cd363000d89
+RMD160 (irssi-0.8.15.tar.bz2) = 0c8fba8cf3409621f6c1883127e14538a58c3359
+Size (irssi-0.8.15.tar.bz2) = 948847 bytes
+SHA1 (irssi-xmpp-0.52.tar.gz) = 330d80e6deb115b875d2a4e1ad0841888285e378
+RMD160 (irssi-xmpp-0.52.tar.gz) = b007e0462fee3a24dc06296713e4fc912b8c2528
+Size (irssi-xmpp-0.52.tar.gz) = 68105 bytes
