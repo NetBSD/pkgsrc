@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11472 2012/08/26 09:12:55 marino Exp $
+$NetBSD: TODO,v 1.11473 2012/08/26 17:00:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blender-2.63a
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o boehm-gc-7.2d
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
