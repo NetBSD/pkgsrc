@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2012/08/26 18:10:25 adam Exp $
+$NetBSD: distinfo,v 1.21 2012/08/26 18:21:46 wiz Exp $
 
 SHA1 (pkg-config-0.27.1.tar.gz) = 08249417a51c0a7a940e4276105b142b77e576b5
 RMD160 (pkg-config-0.27.1.tar.gz) = ea01357dd1bcd40766123581c7f43fe59e41f4ac
 Size (pkg-config-0.27.1.tar.gz) = 1908265 bytes
 SHA1 (patch-configure) = 286dcc405ae8f4d4c6e8598960ed03ba5822dfb1
-SHA1 (patch-glib_m4macros_Makefile.in) = 4970ff3069fc3b7489e3f99a4572e2dbc2964408
