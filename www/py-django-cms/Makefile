@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:16 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/26 13:34:46 adam Exp $
 
-DISTNAME=	django-cms-2.2
+DISTNAME=	django-cms-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-cms/
@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-classy-tags-[0-9]*:../../www/py-django-classy-ta
 DEPENDS+=	${PYPKGPREFIX}-django-appmedia-[0-9]*:../../www/py-django-appmedia
 DEPENDS+=	${PYPKGPREFIX}-django-mptt-[0-9]*:../../www/py-django-mptt
 DEPENDS+=	${PYPKGPREFIX}-django-sekizai-[0-9]*:../../www/py-django-sekizai
+DEPENDS+=	${PYPKGPREFIX}-django-reversion-[0-9]*:../../www/py-django-reversion
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
