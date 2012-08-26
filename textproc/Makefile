@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2012/08/15 09:28:33 obache Exp $
+# $NetBSD: Makefile,v 1.639 2012/08/26 12:13:03 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -631,6 +631,7 @@ SUBDIR+=	suikyo-elisp
 SUBDIR+=	swath
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
+SUBDIR+=	tcl-tDOM
 SUBDIR+=	tcl-xml
 SUBDIR+=	tei
 SUBDIR+=	tei-p5-schema
