@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2675 2012/08/26 07:00:58 spz Exp $
+$NetBSD: CHANGES-2012,v 1.2676 2012/08/26 09:10:42 marino Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4169,3 +4169,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/iana-etc version 1.230 [christos 2012-08-25]
 	Updated print/acroread9 to 9.5.1nb1 [wiz 2012-08-25]
 	Updated sysutils/sysbuild to 2.3 [jmmv 2012-08-25]
+	Updated emulators/openmsx to 0.9.0 [marino 2012-08-26]
