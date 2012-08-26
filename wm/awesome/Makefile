@@ -1,39 +1,61 @@
-# $NetBSD: Makefile,v 1.26 2012/03/15 11:53:41 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/08/26 20:28:16 is Exp $
 #
 
-DISTNAME=		awesome-2.3.6
-PKGREVISION=		11
-CATEGORIES=		wm
-MASTER_SITES=		http://awesome.naquadah.org/download/
+DISTNAME=	awesome-3.4.10
+CATEGORIES=	x11 wm
+MASTER_SITES=	http://awesome.naquadah.org/download/
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://awesome.naquadah.org/
-COMMENT=		Tiling window manager based on dwm
+MAINTAINER=	pallegra@gmail.com
+HOMEPAGE=	http://awesome.naquadah.org/
+COMMENT=	Tiling window manager based on dwm
+LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
-
-EGDIR=			${PREFIX}/share/examples/awesome
-
-USE_LANGUAGES=		c99
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-LDFLAGS.DragonFly=	-lX11 -lXext
+CONFLICTS+=	awesome<3.0
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/awesomerc ${DESTDIR}${EGDIR}
+USE_TOOLS+=	bash gmake pkg-config
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../devel/confuse/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
+PKG_SYSCONFSUBDIR=	xdg/awesome
+
+CMAKE_ARGS+=	-DWITH_DBUS=OFF
+CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR:C/\/xdg\/awesome//}
+CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ:Q}
+CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
+
+REPLACE_BASH+=	build-utils/gperf.sh
+
+EGDIR=		${PREFIX}/share/examples/awesome
+CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
+
+SUBST_CLASSES+=		eg
+SUBST_MESSAGE.eg=	Fixing pathnames
+SUBST_STAGE.eg=		pre-configure
+SUBST_FILES.eg=		CMakeLists.txt
+SUBST_SED.eg=		-e "s,\$${AWESOME_SYSCONFDIR},${EGDIR},"
+
+SUBST_CLASSES+=		ev
+SUBST_MESSAGE.ev=	Fixing pathnames for libev
+SUBST_STAGE.ev=		pre-configure
+SUBST_FILES.ev=		awesomeConfig.cmake
+SUBST_SED.ev=		-e "s,PKGPREFIX,${PREFIX},"
+
+BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+
+
+.include "../../devel/gperf/buildlink3.mk"
+.include "../../devel/libev/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../x11/libxdg-basedir/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
