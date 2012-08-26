@@ -1,4 +1,4 @@
-.\" $NetBSD: mksandbox.8,v 1.1 2012/08/26 10:31:23 wiz Exp $
+.\" $NetBSD: mksandbox.8,v 1.2 2012/08/26 11:00:23 wiz Exp $
 .\"
 .\" Copyright (c) 2012 Thomas Klausner.  All rights reserved.
 .\"
@@ -79,6 +79,50 @@ instead of the default
 .Pa /usr/src
 (only needed for some packages).
 .El
+.Sh USAGE
+After
+.Nm
+has finished successfully,
+.Ar sandbox-dir
+will contain a file
+.Pa sandbox
+which can be used to set up and tear down the sandbox, as well as
+execute commands inside.
+The
+.Pa sandbox
+script supports the following commands:
+.Bl -tag -width XanythingXelseXXX
+.It Ic mount
+Set up the sandbox.
+.It Ic umount
+Tear down the sandbox.
+.It (no argument)
+Start
+.Xr ksh 1
+inside the sandbox.
+Can only be called after
+.Ic mount .
+.It anything-else
+Try running
+.Pa anything-else
+inside the sandbox.
+Fails if the argument is not an executable.
+Can only be called after
+.Ic mount .
+.El
+.Sh EXAMPLES
+The most common usage is running mksandbox once, e.g.
+.Dl mksandbox /home/user/sandboxdir
+and then reusing this sandbox.
+Once the sandbox exists, the most common usage is:
+.Bd -literal -offset indent
+cd /home/user/sandboxdir
+\&./sandbox mount
+\&./sandbox
+(do something inside, like a bulk build or building one package by hand)
+(CTRL-D or logout, to leave the shell inside the sandbox)
+\&./sandbox umount
+.Ed
 .Sh AUTHORS
 .An Alistair G. Crooks
 .Aq agc@NetBSD.org
