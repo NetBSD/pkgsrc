@@ -11,3 +11,5 @@ of the important features of BIND-9 are:
 	- Full NSEC3 support
 	- Automatic zone re-signing
 	- New update-policy methods tcp-self and 6to4-self
+
+This package contains the BIND 9.7 release.
