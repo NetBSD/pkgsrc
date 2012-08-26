@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.21 2012/08/26 17:02:12 wiz Exp $
+$NetBSD: patch-ab,v 1.22 2012/08/26 17:03:57 wiz Exp $
+
+Unportable test(1) construct.
 
 --- configure.orig	2012-05-11 17:09:00.000000000 +0000
 +++ configure
