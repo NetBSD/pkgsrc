@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/08/21 23:49:25 marino Exp $
+# $NetBSD: Makefile,v 1.33 2012/08/26 22:13:16 dholland Exp $
 #
 
 DISTNAME=	lavaps-2.7
@@ -19,8 +19,8 @@ USE_TOOLS+=	perl pod2man pod2html
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-tcltk \
-		--with-tcl-ver=8.4.18 \
-		--with-tk-ver=8.4.18 \
+		--with-tcl-ver=8.5.12 \
+		--with-tk-ver=8.5.12 \
 		--with-tcltk-lib-suffix-type=nodot
 
 # prevents the GConf schema from going into / when building the tcl/tk version
