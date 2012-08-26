@@ -2348,11 +2348,11 @@ bulk build inside a chroot environment.
 The first step is to set up a chroot sandbox, e.g. /usr/sandbox. This can be
 done by using null mounts, or manually.
 
-There is a shell script called pkgsrc/mk/bulk/mksandbox which will set up the
-sandbox environment using null mounts. It will also create a script called
-sandbox in the root of the sandbox environment, which will allow the null
-mounts to be activated using the sandbox mount command and deactivated using
-the sandbox umount command.
+There is a shell script called mksandbox installed by the pkgtools/mksandbox
+package, which will set up the sandbox environment using null mounts. It will
+also create a script called sandbox in the root of the sandbox environment,
+which will allow the null mounts to be activated using the sandbox mount
+command and deactivated using the sandbox umount command.
 
 To set up a sandbox environment by hand, after extracting all the sets from a
 NetBSD installation or doing a make distribution DESTDIR=/usr/sandbox in /usr/
