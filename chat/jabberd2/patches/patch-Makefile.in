@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.2 2012/05/12 05:44:46 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2012/08/26 18:25:47 adam Exp $
 
 Skip etc.
 
 --- Makefile.in.orig	2012-05-12 05:19:32.000000000 +0000
 +++ Makefile.in
-@@ -247,7 +247,7 @@ top_build_prefix = @top_build_prefix@
+@@ -245,7 +245,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  EXTRA_DIST = Doxyfile.in README.win32 README.protocol README.config contrib UPGRADE docs win32

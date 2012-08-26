@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.29 2012/06/16 05:34:31 dholland Exp $
+$NetBSD: distinfo,v 1.30 2012/08/26 18:25:47 adam Exp $
 
-SHA1 (jabberd-2.2.16.tar.gz) = d39f7475ec676a127e948f2c5f73d7605ec5a7f9
-RMD160 (jabberd-2.2.16.tar.gz) = c778babd0a883506f874dff56f879f800533e73c
-Size (jabberd-2.2.16.tar.gz) = 2818476 bytes
-SHA1 (patch-Makefile.in) = 10d7ad04ee5c0844e948f0302420a77a89c05b08
-SHA1 (patch-configure) = cf61b12c93c94e167c710a776128b73bb91ce0c3
-SHA1 (patch-s2s_out.c) = 89580485bc82ce57e22c382eb464b60c3820f346
+SHA1 (jabberd-2.2.17.tar.xz) = 2b94707e0a06d07ba0329760d308460edf0f1cd8
+RMD160 (jabberd-2.2.17.tar.xz) = 4e0d30fdd24ce707ce3c5e3654f51c01de7ee0a2
+Size (jabberd-2.2.17.tar.xz) = 1382124 bytes
+SHA1 (patch-Makefile.in) = 9cdc341d764b28d331b51fb5a559afbc0b3e952b
+SHA1 (patch-configure) = 1a58cc7b015a73009d8140402dfb739fc48e7fa0
+SHA1 (patch-s2s_out.c) = c72be21c425b56345eb8a79284b4e4aaf18c0d65
 SHA1 (patch-sm_mod_roster.c) = f43d80c2abfd31d99016b4738a717d3c6db183ce
-SHA1 (patch-util_log_c) = acc4f8747976ac189ccd95b9a3b5809887da4a32
+SHA1 (patch-util_log_c) = d7a5c6f8b0fe04be2ef53ed941100ca9dc53e9be
