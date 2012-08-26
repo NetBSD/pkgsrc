@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 08:10:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/26 12:53:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/south/creator/freezer.pyo
 ${PYSITELIB}/south/db/__init__.py
 ${PYSITELIB}/south/db/__init__.pyc
 ${PYSITELIB}/south/db/__init__.pyo
+${PYSITELIB}/south/db/firebird.py
+${PYSITELIB}/south/db/firebird.pyc
+${PYSITELIB}/south/db/firebird.pyo
 ${PYSITELIB}/south/db/generic.py
 ${PYSITELIB}/south/db/generic.pyc
 ${PYSITELIB}/south/db/generic.pyo
@@ -57,6 +60,9 @@ ${PYSITELIB}/south/introspection_plugins/__init__.pyo
 ${PYSITELIB}/south/introspection_plugins/annoying_autoonetoone.py
 ${PYSITELIB}/south/introspection_plugins/annoying_autoonetoone.pyc
 ${PYSITELIB}/south/introspection_plugins/annoying_autoonetoone.pyo
+${PYSITELIB}/south/introspection_plugins/django_audit_log.py
+${PYSITELIB}/south/introspection_plugins/django_audit_log.pyc
+${PYSITELIB}/south/introspection_plugins/django_audit_log.pyo
 ${PYSITELIB}/south/introspection_plugins/django_objectpermissions.py
 ${PYSITELIB}/south/introspection_plugins/django_objectpermissions.pyc
 ${PYSITELIB}/south/introspection_plugins/django_objectpermissions.pyo
@@ -93,6 +99,9 @@ ${PYSITELIB}/south/management/commands/graphmigrations.pyo
 ${PYSITELIB}/south/management/commands/migrate.py
 ${PYSITELIB}/south/management/commands/migrate.pyc
 ${PYSITELIB}/south/management/commands/migrate.pyo
+${PYSITELIB}/south/management/commands/migrationcheck.py
+${PYSITELIB}/south/management/commands/migrationcheck.pyc
+${PYSITELIB}/south/management/commands/migrationcheck.pyo
 ${PYSITELIB}/south/management/commands/schemamigration.py
 ${PYSITELIB}/south/management/commands/schemamigration.pyc
 ${PYSITELIB}/south/management/commands/schemamigration.pyo
@@ -186,6 +195,9 @@ ${PYSITELIB}/south/tests/circular_b/models.pyo
 ${PYSITELIB}/south/tests/db.py
 ${PYSITELIB}/south/tests/db.pyc
 ${PYSITELIB}/south/tests/db.pyo
+${PYSITELIB}/south/tests/db_mysql.py
+${PYSITELIB}/south/tests/db_mysql.pyc
+${PYSITELIB}/south/tests/db_mysql.pyo
 ${PYSITELIB}/south/tests/deps_a/__init__.py
 ${PYSITELIB}/south/tests/deps_a/__init__.pyc
 ${PYSITELIB}/south/tests/deps_a/__init__.pyo
@@ -285,6 +297,9 @@ ${PYSITELIB}/south/tests/fakeapp/migrations/__init__.pyo
 ${PYSITELIB}/south/tests/fakeapp/models.py
 ${PYSITELIB}/south/tests/fakeapp/models.pyc
 ${PYSITELIB}/south/tests/fakeapp/models.pyo
+${PYSITELIB}/south/tests/freezer.py
+${PYSITELIB}/south/tests/freezer.pyc
+${PYSITELIB}/south/tests/freezer.pyo
 ${PYSITELIB}/south/tests/inspector.py
 ${PYSITELIB}/south/tests/inspector.pyc
 ${PYSITELIB}/south/tests/inspector.pyo
@@ -294,6 +309,15 @@ ${PYSITELIB}/south/tests/logger.pyo
 ${PYSITELIB}/south/tests/logic.py
 ${PYSITELIB}/south/tests/logic.pyc
 ${PYSITELIB}/south/tests/logic.pyo
+${PYSITELIB}/south/tests/non_managed/__init__.py
+${PYSITELIB}/south/tests/non_managed/__init__.pyc
+${PYSITELIB}/south/tests/non_managed/__init__.pyo
+${PYSITELIB}/south/tests/non_managed/migrations/__init__.py
+${PYSITELIB}/south/tests/non_managed/migrations/__init__.pyc
+${PYSITELIB}/south/tests/non_managed/migrations/__init__.pyo
+${PYSITELIB}/south/tests/non_managed/models.py
+${PYSITELIB}/south/tests/non_managed/models.pyc
+${PYSITELIB}/south/tests/non_managed/models.pyo
 ${PYSITELIB}/south/tests/otherfakeapp/__init__.py
 ${PYSITELIB}/south/tests/otherfakeapp/__init__.pyc
 ${PYSITELIB}/south/tests/otherfakeapp/__init__.pyo
@@ -312,9 +336,12 @@ ${PYSITELIB}/south/tests/otherfakeapp/migrations/__init__.pyo
 ${PYSITELIB}/south/tests/otherfakeapp/models.py
 ${PYSITELIB}/south/tests/otherfakeapp/models.pyc
 ${PYSITELIB}/south/tests/otherfakeapp/models.pyo
-${PYSITELIB}/south/utils.py
-${PYSITELIB}/south/utils.pyc
-${PYSITELIB}/south/utils.pyo
+${PYSITELIB}/south/utils/__init__.py
+${PYSITELIB}/south/utils/__init__.pyc
+${PYSITELIB}/south/utils/__init__.pyo
+${PYSITELIB}/south/utils/datetime_utils.py
+${PYSITELIB}/south/utils/datetime_utils.pyc
+${PYSITELIB}/south/utils/datetime_utils.pyo
 ${PYSITELIB}/south/v2.py
 ${PYSITELIB}/south/v2.pyc
 ${PYSITELIB}/south/v2.pyo
