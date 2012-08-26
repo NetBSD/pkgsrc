@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.891 2012/08/12 17:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.892 2012/08/26 13:33:00 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -563,6 +563,7 @@ SUBDIR+=	py-django-mptt
 SUBDIR+=	py-django-registration
 SUBDIR+=	py-django-sekizai
 SUBDIR+=	py-django-south
+SUBDIR+=	py-django-reversion
 SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flup
 SUBDIR+=	py-gdata
