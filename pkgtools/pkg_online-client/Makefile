@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/03/09 19:15:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/26 10:06:46 cheusov Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:C/online/online-client/}
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MAINTAINER=	cheusov@NetBSD.org
 COMMENT+=	(client tools)
