@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2012/07/15 02:35:20 dholland Exp $
+# $NetBSD: Makefile,v 1.167 2012/08/26 14:06:44 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -53,6 +53,7 @@ SUBDIR+=	ircu
 SUBDIR+=	iroffer
 SUBDIR+=	irssi
 SUBDIR+=	irssi-icb
+SUBDIR+=	irssi-xmpp
 SUBDIR+=	jabberd
 SUBDIR+=	jabberd2
 SUBDIR+=	kadu
