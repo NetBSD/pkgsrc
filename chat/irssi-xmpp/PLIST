@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/26 14:06:19 wiz Exp $
+lib/irssi/modules/libfe_xmpp.so
+lib/irssi/modules/libtext_xmpp.so
+lib/irssi/modules/libxmpp_core.so
+share/doc/irssi/irssi-xmpp/FAQ
+share/doc/irssi/irssi-xmpp/GENERAL
+share/doc/irssi/irssi-xmpp/MUC
+share/doc/irssi/irssi-xmpp/STARTUP
+share/doc/irssi/irssi-xmpp/XEP
+share/irssi/help/roster
+share/irssi/help/xmppconnect
+share/irssi/help/xmppserver
