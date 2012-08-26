@@ -1,25 +1,24 @@
-$NetBSD: patch-ad,v 1.6 2010/12/25 10:53:22 adam Exp $
+$NetBSD: patch-ad,v 1.7 2012/08/26 19:42:09 marino Exp $
 
---- configure.orig	2009-03-27 10:13:51.000000000 +0100
+--- configure.orig	2011-04-28 12:07:28.000000000 +0000
 +++ configure
-@@ -3506,9 +3506,6 @@ case "$a8_target" in
-         sdlcheck="X_`sdl-config --cflags`"
-         if [ "$sdlcheck" != "X_" ]; then
-             CFLAGS="$CFLAGS `sdl-config --cflags`"
--            if [ "$a8_host" = "win" ]; then
--                CFLAGS=${CFLAGS/-Dmain=SDL_main/}
--            fi
-         else
-             { { echo "$as_me:$LINENO: error: \"No output from sdl-config!  Is sdl-config installed?\"" >&5
- echo "$as_me: error: \"No output from sdl-config!  Is sdl-config installed?\"" >&2;}
-@@ -6558,10 +6557,8 @@ _ACEOF
-         OBJS="atari_sdl.o"
-         CFLAGS="$CFLAGS -ansi -pedantic -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wstrict-prototypes -Winline"
+@@ -8425,7 +8425,7 @@ $as_echo "#define IDE 1" >>confdefs.h
+ 
+     fi
+ 
+-if [ "$WANT_IDE" == "yes" ]; then
++if [ "$WANT_IDE" = "yes" ]; then
+     # Check whether --enable-largefile was given.
+ if test "${enable_largefile+set}" = set; then :
+   enableval=$enable_largefile;
+@@ -8878,10 +8878,8 @@ case "$a8_target" in
+         LIBS="$LIBS $SDL_LIBS"
+         CFLAGS="$CFLAGS $SDL_CFLAGS"
          if [ "$a8_host" = "win" ]; then
 -            LIBS=${LIBS/-lSDLmain/}
              OBJS="$OBJS SDL_win32_main.o"
              CFLAGS="$CFLAGS -DNO_STDIO_REDIRECT"
 -            LIBS=${LIBS/-mwindows/}
          fi
- 
- cat >>confdefs.h <<\_ACEOF
+         ;;
+ esac
