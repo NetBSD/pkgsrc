@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.845 2012/08/03 09:07:21 asau Exp $
+# $NetBSD: pkglint.pl,v 1.846 2012/08/26 13:47:16 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4745,12 +4745,12 @@ sub checkline_mk_shellcmd($$) {
 
 sub expand_permission($) {
     my ($perm) = @_;
-    my %fullperm = ( "a" => "append", "d" => "default", "p" => "preprocess", "s" => "set", "t" => "runtime", "?" => "unknown" );
-    return $fullperm{$perm};
-#    for my $element (split(/,/, $perm)) {
-#	my ($location, $permission) = split(/:/, $element);
-#	return "-- $location == $permission -- ";
-#    }
+    # wiz 20120826: IIUC, "u" is the permission for the variable to be used at all here; no need to expand it
+    my %fullperm = ( "a" => "append", "d" => "default", "p" => "preprocess", "s" => "set", "t" => "runtime", "?" => "unknown", "u" => "" );
+    my $result = join(", ", map { $fullperm{$_} } split //, $perm);
+    $result =~ s/, $//g;
+
+    return $result;
 }
 
 sub checkline_mk_vardef($$$) {
