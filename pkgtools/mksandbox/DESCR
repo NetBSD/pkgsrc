@@ -1,0 +1,2 @@
+A small shell script to set up a sandbox (usually for a pkgsrc bulk
+build), using null mounts.
