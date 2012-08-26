@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2679 2012/08/26 12:13:13 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2680 2012/08/26 12:38:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4173,3 +4173,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkg_online-client to 0.13.0nb1 [cheusov 2012-08-26]
 	Added pkgtools/mksandbox version 1.0 [wiz 2012-08-26]
 	Added textproc/tcl-tDOM version 0.8.3 [wiz 2012-08-26]
+	Updated www/apache24 to 2.4.3 [ryoon 2012-08-26]
