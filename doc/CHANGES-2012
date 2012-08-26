@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2685 2012/08/26 14:06:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2686 2012/08/26 16:13:50 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4183,3 +4183,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-django-cms to 2.3 [adam 2012-08-26]
 	Updated pkgtools/pkglint to 4.123 [wiz 2012-08-26]
 	Added chat/irssi-xmpp version 0.52 [wiz 2012-08-26]
+	Updated pkgtools/nih to 0.10.1 [cheusov 2012-08-26]
