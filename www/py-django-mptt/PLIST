@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 07:48:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/26 12:54:17 adam Exp $
 ${PYSITELIB}/mptt/__init__.py
 ${PYSITELIB}/mptt/__init__.pyc
 ${PYSITELIB}/mptt/__init__.pyo
@@ -20,6 +20,8 @@ ${PYSITELIB}/mptt/locale/dk/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/dk/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/fr/LC_MESSAGES/django.po
+${PYSITELIB}/mptt/locale/nb/LC_MESSAGES/django.mo
+${PYSITELIB}/mptt/locale/nb/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/pl/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/pl/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/managers.py
