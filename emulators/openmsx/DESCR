@@ -1,16 +1,7 @@
-openMSX, the open source MSX emulator that tries to achieve near-perfect
-emulation by using a novel emulation model.
+MSX emulator that aims for perfection
 
-Hardware emulated:
-
-	o almost all MSX systems, except for some details.
-	o Different CPU clock speeds, including those for the Panasonic
-	  MSX2+ machines.
-	o Almost all known cartridge mapper types via autodetection or the
-          included ROM database.
-	o Many MSX storage (disk/SRAM) systems.
-	o kanji JIS ROM 1 and 2.
-	o Mouse and joystick (with option to use the keyboard as joystick).
-	o rensha turbo auto fire support.
-
-And more!
+openMSX is an open source MSX emulator that uses a unique emulation model
+which tries to achieve the highest level of accuracy possible.  It allows
+emulating a large number of different MSX machines.  Using the included
+C-BIOS ROM files, you can run game ROMs without the need to acquire the
+non-free original MSX-BIOS ROM.
