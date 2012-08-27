@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:53:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/08/27 14:45:37 morr Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -100,6 +100,7 @@ share/vim/${VIM_SUBDIR}/keymap/croatian_iso-8859-2.vim
 share/vim/${VIM_SUBDIR}/keymap/croatian_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/czech.vim
 share/vim/${VIM_SUBDIR}/keymap/czech_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/greek.vim
@@ -164,6 +165,7 @@ share/vim/${VIM_SUBDIR}/lang/fr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ga/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/it/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ja/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/ko.UTF-8/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ko/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/menu_af.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_af.utf-8.vim
@@ -269,6 +271,10 @@ share/vim/${VIM_SUBDIR}/lang/menu_sl_si.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_slovak_slovak_republic.1250.vim
 share/vim/${VIM_SUBDIR}/lang/menu_spanish_spain.850.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sr.utf-8.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sr_rs.ascii.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sr_rs.iso_8859-2.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sr_rs.iso_8859-5.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sr_rs.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sr_yu.ascii.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sr_yu.iso_8859-2.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sr_yu.iso_8859-5.vim
@@ -292,6 +298,7 @@ share/vim/${VIM_SUBDIR}/lang/menu_zh_cn.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh_tw.big5.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh_tw.cp950.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh_tw.utf-8.vim
+share/vim/${VIM_SUBDIR}/lang/nb/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/no/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/pl/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/pt_BR/LC_MESSAGES/vim.mo
