@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/02/20 20:50:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/08/27 22:19:32 wiz Exp $
 bin/geeqie
 lib/geeqie/geeqie-import
 lib/geeqie/geeqie-rotate
@@ -121,6 +121,6 @@ share/locale/th/LC_MESSAGES/geeqie.mo
 share/locale/tr/LC_MESSAGES/geeqie.mo
 share/locale/uk/LC_MESSAGES/geeqie.mo
 share/locale/vi/LC_MESSAGES/geeqie.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/geeqie.mo
+share/locale/zh_CN/LC_MESSAGES/geeqie.mo
 share/locale/zh_TW/LC_MESSAGES/geeqie.mo
 share/pixmaps/geeqie.png
