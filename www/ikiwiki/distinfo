@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.79 2012/07/01 01:34:57 schmonz Exp $
+$NetBSD: distinfo,v 1.80 2012/08/27 22:06:03 schmonz Exp $
 
-SHA1 (ikiwiki_3.20120629.tar.gz) = d987aef54b6d64275a9bb47480ca9f2882f796b2
-RMD160 (ikiwiki_3.20120629.tar.gz) = d78c15be3e497898f393d039d45d610887c86932
-Size (ikiwiki_3.20120629.tar.gz) = 2846452 bytes
+SHA1 (ikiwiki_3.20120725.tar.gz) = ec7b3cbe364a4277da3b22ce245dd7142e8b09bd
+RMD160 (ikiwiki_3.20120725.tar.gz) = 6bf5adcb190623f0f4ef7031a29975c9d90d285c
+Size (ikiwiki_3.20120725.tar.gz) = 2871942 bytes
