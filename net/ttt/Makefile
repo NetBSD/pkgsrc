@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/08/21 23:49:25 marino Exp $
+# $NetBSD: Makefile,v 1.23 2012/08/27 00:47:25 dholland Exp $
 #
 
 DISTNAME=	ttt-1.8.2
@@ -13,6 +13,8 @@ COMMENT=	Tele Traffic Tapper
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALL_TARGET=	install install-man
