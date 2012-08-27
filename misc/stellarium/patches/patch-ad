@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2010/12/06 21:03:19 adam Exp $
+$NetBSD: patch-ad,v 1.5 2012/08/27 09:07:37 adam Exp $
 
 --- data/ssystem.ini.orig	2010-12-06 20:51:50.000000000 +0000
 +++ data/ssystem.ini
-@@ -586,6 +586,26 @@ lighting = false
+@@ -1270,6 +1270,26 @@ lighting = false
  albedo = 1
  orbit_visualization_period = 365.25
  
