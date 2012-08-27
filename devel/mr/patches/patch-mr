@@ -1,0 +1,21 @@
+$NetBSD: patch-mr,v 1.1 2012/08/27 21:58:49 schmonz Exp $
+
+Other package systems install ack(1) as "ack-grep", but we don't.
+
+--- mr.orig	2012-08-17 06:09:34.000000000 +0000
++++ mr
+@@ -1976,11 +1976,11 @@ vcsh_log = vcsh run "$MR_REPO" git log "
+ veracity_log = vv log "$@"
+ 
+ hg_grep = hg grep "$@"
+-cvs_grep = ack-grep "$@"
+-svn_grep = ack-grep "$@"
++cvs_grep = ack "$@"
++svn_grep = ack "$@"
+ git_svn_grep = git grep "$@"
+ git_grep = git grep "$@"
+-bzr_grep = ack-grep "$@"
++bzr_grep = ack "$@"
+ 
+ run = "$@"
+ 
