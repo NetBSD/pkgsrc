@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:43:27 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/08/27 14:45:37 morr Exp $
 
 PKGNAME=	vim-lang-${VIM_VERSION}.${VIM_PATCHLEVEL}
-PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
