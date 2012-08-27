@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.22 2012/08/26 17:03:57 wiz Exp $
+$NetBSD: patch-ab,v 1.23 2012/08/27 16:41:22 wiz Exp $
 
 Unportable test(1) construct.
+https://github.com/ivmai/bdwgc/commit/e091c078fad900f7b96881d5706a646d9c530cd8
 
 --- configure.orig	2012-05-11 17:09:00.000000000 +0000
 +++ configure
