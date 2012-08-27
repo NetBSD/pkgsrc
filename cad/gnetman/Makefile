@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/08/21 23:49:18 marino Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/27 02:10:51 dholland Exp $
 #
 
 DISTNAME=		gnetman-11Feb05
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		TCL_CONFIG_SH=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 
 post-extract:
 	${RM} ${WRKSRC}/src/include/tcl.h
