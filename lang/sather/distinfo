@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2008/07/14 01:23:52 dholland Exp $
+$NetBSD: distinfo,v 1.11 2012/08/27 00:36:25 dholland Exp $
 
 SHA1 (sather-1.2.3.tar.gz) = 85678468dc99ee1880a38d994d4231e799fcaae6
 RMD160 (sather-1.2.3.tar.gz) = 219594b2621df4f4bb75bd41c67b1a26ecb04042
@@ -12,7 +12,7 @@ SHA1 (patch-af) = 1ab2a67446f48c088ec77550d199a9779c50ffb8
 SHA1 (patch-ag) = 5cd0a0ab1c1fbf80c6ba424fa1926957ede35715
 SHA1 (patch-ah) = 9dad48a3bc7e6af65eb51ae6070b8e67cab9ca2b
 SHA1 (patch-ai) = 032b6a4355bdd059d5b88ebe00ae2c1bf35c8eba
-SHA1 (patch-aj) = 1c8a60bccde97d5527578e3ad624211032a7aed3
+SHA1 (patch-aj) = a64522fa97e91cb8704f572f1670921590840976
 SHA1 (patch-ak) = 9efae5b96d5e8b8040d74eebc20b3aa7153d2aee
 SHA1 (patch-al) = 52d12bc03d041dfa28140842f46a423644952a91
 SHA1 (patch-am) = b75d6812ee2bcb81205d82316c8215d500df077c
