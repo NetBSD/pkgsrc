@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2702 2012/08/27 22:19:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2703 2012/08/27 22:22:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mr to 1.13 [schmonz 2012-08-27]
 	Updated www/ikiwiki to 3.20120725 [schmonz 2012-08-27]
 	Updated graphics/geeqie to 1.1 [wiz 2012-08-27]
+	Updated devel/ccache to 3.1.8 [wiz 2012-08-27]
