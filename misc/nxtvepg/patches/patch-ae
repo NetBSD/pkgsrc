@@ -1,6 +1,9 @@
-$NetBSD: patch-ae,v 1.10 2004/12/04 14:51:21 wiz Exp $
+$NetBSD: patch-ae,v 1.11 2012/08/27 00:35:08 dholland Exp $
 
---- Makefile.bsd.orig	2003-10-23 20:30:02.000000000 +0200
+- configure for pkgsrc
+- use tcl/tk 8.5 instead of 8.4
+
+--- Makefile.bsd.orig	2005-03-29 16:49:22.000000000 +0000
 +++ Makefile.bsd
 @@ -32,7 +32,7 @@
  X11BASE         ?= /usr/X11R6
@@ -11,6 +14,19 @@ $NetBSD: patch-ae,v 1.10 2004/12/04 14:51:21 wiz Exp $
  prefix          = $(PREFIX)
  TK_LIBRARY_BASE = $(LOCALBASE)/lib
  ifeq ($(OS), FreeBSD)
+@@ -46,10 +46,10 @@ WANT_USER_DBDIR = 1
+ # other settings
+ # On FreeBSD there is only a modified tclsh with a message to launch
+ # tclsh8.3 or tclsh8.4 , so this is hardcoded here
+-TCL_VER         = 8.4
++TCL_VER         = 8.5
+ LDLIBS          = -L$(LOCALBASE)/lib\
+                   -L$(X11BASE)/lib\
+-                  -ltk84 -ltcl84 -lX11 -lXmu -lm
++                  -ltk85 -ltcl85 -lX11 -lXmu -lm
+ 
+ INCS            += -I$(LOCALBASE)/include/tcl$(TCL_VER)\
+                    -I$(LOCALBASE)/include/tk$(TCL_VER)
 @@ -64,7 +64,7 @@ endif
  ### Common part for all UN*X variants  ###
  
