@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2012/08/17 23:08:21 tron Exp $
+# $NetBSD: Makefile,v 1.105 2012/08/27 17:11:34 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +13,7 @@ COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=5.2.0:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.2.0:../../devel/php-gettext
@@ -22,12 +24,11 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-FILES_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP:Q} PMCONFFILE=${PMCONFFILE:Q}
 PLIST_SUBST+=	DIST_VERSION=${DIST_VERSION:Q}
 MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
-CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
+CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config/config.inc.php
 DIST_VERSION=	3.5.2.2
 DOC_FILES=	ChangeLog Documentation.txt LICENSE README \
 		RELEASE-DATE-${DIST_VERSION}
@@ -208,6 +209,7 @@ INSTALL_DIRS+=	locale/zh_CN/LC_MESSAGES
 INSTALL_DIRS+=	locale/zh_TW
 INSTALL_DIRS+=	locale/zh_TW/LC_MESSAGES
 INSTALL_DIRS+=	scripts
+INSTALL_DIRS+=	setup
 INSTALL_DIRS+=	setup/frames
 INSTALL_DIRS+=	setup/lib
 INSTALL_DIRS+=	themes
@@ -230,7 +232,10 @@ INSTALLATION_DIRS+=	${PMDIR}/${dir}
 
 do-configure:
 	${SED} -e "s|@PMDIR@|${PMDIR}|g" ${FILESDIR}/phpmyadmin.conf	\
-		>${WRKDIR}/phpmyadmin.conf
+	  >${WRKDIR}/phpmyadmin.conf
+	cd ${WRKSRC}/libraries; 					\
+	${SED} -e "s#@@PMCONFFILE@@#${PMCONFFILE}#" vendor_config.php	\
+	  >vendor_config.php.pkgsrc
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.css ${DESTDIR}${PMDIR}
@@ -261,8 +266,8 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_DATA} ${DOC_FILES} ${DESTDIR}${PREFIX}/share/doc/phpmyadmin
 	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${DESTDIR}${EXDIR}/apache.conf
-
-	${RM} -f ${DESTDIR}${PREFIX}/share/phpmyadmin/libraries/footer.inc.php.orig
+	cd ${DESTDIR}${PREFIX}/share/phpmyadmin/libraries; \
+	${MV} -f vendor_config.php.pkgsrc vendor_config.php
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

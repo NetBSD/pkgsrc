@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2012/07/15 13:02:32 tron Exp $
+@comment $NetBSD: PLIST,v 1.29 2012/08/27 17:11:34 tron Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
 share/doc/phpmyadmin/LICENSE
@@ -451,15 +451,20 @@ share/phpmyadmin/server_sql.php
 share/phpmyadmin/server_status.php
 share/phpmyadmin/server_synchronize.php
 share/phpmyadmin/server_variables.php
+share/phpmyadmin/setup/config.php
 share/phpmyadmin/setup/frames/config.inc.php
 share/phpmyadmin/setup/frames/form.inc.php
 share/phpmyadmin/setup/frames/index.inc.php
 share/phpmyadmin/setup/frames/menu.inc.php
 share/phpmyadmin/setup/frames/servers.inc.php
+share/phpmyadmin/setup/index.php
 share/phpmyadmin/setup/lib/ConfigGenerator.class.php
 share/phpmyadmin/setup/lib/common.inc.php
 share/phpmyadmin/setup/lib/form_processing.lib.php
 share/phpmyadmin/setup/lib/index.lib.php
+share/phpmyadmin/setup/scripts.js
+share/phpmyadmin/setup/styles.css
+share/phpmyadmin/setup/validate.php
 share/phpmyadmin/show_config_errors.php
 share/phpmyadmin/sql.php
 share/phpmyadmin/tbl_addfield.php
