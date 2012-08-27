@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2012/01/08 11:35:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/08/27 08:49:09 adam Exp $
 lib/libboost_chrono.a
 lib/libboost_chrono.so
 lib/libboost_chrono.so.${BOOST_VERSION}
+lib/libboost_context.a
+lib/libboost_context.so
+lib/libboost_context.so.${BOOST_VERSION}
 lib/libboost_date_time.a
 lib/libboost_date_time.so
 lib/libboost_date_time.so.${BOOST_VERSION}
@@ -15,6 +18,9 @@ lib/libboost_graph.so.${BOOST_VERSION}
 lib/libboost_iostreams.a
 lib/libboost_iostreams.so
 lib/libboost_iostreams.so.${BOOST_VERSION}
+lib/libboost_locale.a
+lib/libboost_locale.so
+lib/libboost_locale.so.${BOOST_VERSION}
 lib/libboost_math_c99.a
 lib/libboost_math_c99.so
 lib/libboost_math_c99.so.${BOOST_VERSION}
