@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/06/07 12:12:22 martti Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/08/27 14:45:37 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -21,12 +21,14 @@ share/vim/${VIM_SUBDIR}/autoload/netrwFileHandlers.vim
 share/vim/${VIM_SUBDIR}/autoload/netrwSettings.vim
 share/vim/${VIM_SUBDIR}/autoload/paste.vim
 share/vim/${VIM_SUBDIR}/autoload/phpcomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/python3complete.vim
 share/vim/${VIM_SUBDIR}/autoload/pythoncomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/rubycomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/spellfile.vim
 share/vim/${VIM_SUBDIR}/autoload/sqlcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/syntaxcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/tar.vim
+share/vim/${VIM_SUBDIR}/autoload/tohtml.vim
 share/vim/${VIM_SUBDIR}/autoload/vimball.vim
 share/vim/${VIM_SUBDIR}/autoload/xml/html32.vim
 share/vim/${VIM_SUBDIR}/autoload/xml/html401f.vim
@@ -68,6 +70,7 @@ share/vim/${VIM_SUBDIR}/compiler/bcc.vim
 share/vim/${VIM_SUBDIR}/compiler/bdf.vim
 share/vim/${VIM_SUBDIR}/compiler/checkstyle.vim
 share/vim/${VIM_SUBDIR}/compiler/cs.vim
+share/vim/${VIM_SUBDIR}/compiler/cucumber.vim
 share/vim/${VIM_SUBDIR}/compiler/decada.vim
 share/vim/${VIM_SUBDIR}/compiler/dot.vim
 share/vim/${VIM_SUBDIR}/compiler/eruby.vim
@@ -133,8 +136,10 @@ share/vim/${VIM_SUBDIR}/doc/gui_x11.txt
 share/vim/${VIM_SUBDIR}/doc/hangulin.txt
 share/vim/${VIM_SUBDIR}/doc/hebrew.txt
 share/vim/${VIM_SUBDIR}/doc/help.txt
+share/vim/${VIM_SUBDIR}/doc/helphelp.txt
 share/vim/${VIM_SUBDIR}/doc/howto.txt
 share/vim/${VIM_SUBDIR}/doc/if_cscop.txt
+share/vim/${VIM_SUBDIR}/doc/if_lua.txt
 share/vim/${VIM_SUBDIR}/doc/if_mzsch.txt
 share/vim/${VIM_SUBDIR}/doc/if_ole.txt
 share/vim/${VIM_SUBDIR}/doc/if_perl.txt
@@ -245,7 +250,6 @@ share/vim/${VIM_SUBDIR}/evim.vim
 share/vim/${VIM_SUBDIR}/filetype.vim
 share/vim/${VIM_SUBDIR}/ftoff.vim
 share/vim/${VIM_SUBDIR}/ftplugin.vim
-share/vim/${VIM_SUBDIR}/ftplugin/AppendMatchGroup.vim
 share/vim/${VIM_SUBDIR}/ftplugin/README.txt
 share/vim/${VIM_SUBDIR}/ftplugin/a2ps.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aap.vim
@@ -275,6 +279,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/cs.vim
 share/vim/${VIM_SUBDIR}/ftplugin/csc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/csh.vim
 share/vim/${VIM_SUBDIR}/ftplugin/css.vim
+share/vim/${VIM_SUBDIR}/ftplugin/cucumber.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cvsrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/debchangelog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/debcontrol.vim
@@ -323,7 +328,9 @@ share/vim/${VIM_SUBDIR}/ftplugin/ld.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lftp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/libao.vim
 share/vim/${VIM_SUBDIR}/ftplugin/limits.vim
+share/vim/${VIM_SUBDIR}/ftplugin/liquid.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lisp.vim
+share/vim/${VIM_SUBDIR}/ftplugin/logcheck.vim
 share/vim/${VIM_SUBDIR}/ftplugin/loginaccess.vim
 share/vim/${VIM_SUBDIR}/ftplugin/logindefs.vim
 share/vim/${VIM_SUBDIR}/ftplugin/logtalk.dict
@@ -337,6 +344,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/mailcap.vim
 share/vim/${VIM_SUBDIR}/ftplugin/make.vim
 share/vim/${VIM_SUBDIR}/ftplugin/man.vim
 share/vim/${VIM_SUBDIR}/ftplugin/manconf.vim
+share/vim/${VIM_SUBDIR}/ftplugin/markdown.vim
 share/vim/${VIM_SUBDIR}/ftplugin/matlab.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/modconf.vim
@@ -344,7 +352,6 @@ share/vim/${VIM_SUBDIR}/ftplugin/mp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mplayerconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mrxvtrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/msmessages.vim
-share/vim/${VIM_SUBDIR}/ftplugin/mupad.vim
 share/vim/${VIM_SUBDIR}/ftplugin/muttrc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nanorc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/netrc.vim
@@ -357,6 +364,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/pascal.vim
 share/vim/${VIM_SUBDIR}/ftplugin/passwd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pdf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/perl.vim
+share/vim/${VIM_SUBDIR}/ftplugin/perl6.vim
 share/vim/${VIM_SUBDIR}/ftplugin/php.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pinfo.vim
 share/vim/${VIM_SUBDIR}/ftplugin/plaintex.vim
@@ -366,6 +374,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/prolog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/protocols.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pyrex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/python.vim
+share/vim/${VIM_SUBDIR}/ftplugin/qf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/quake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/racc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/readline.vim
@@ -377,6 +386,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/ruby.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sass.vim
 share/vim/${VIM_SUBDIR}/ftplugin/scheme.vim
 share/vim/${VIM_SUBDIR}/ftplugin/screen.vim
+share/vim/${VIM_SUBDIR}/ftplugin/scss.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sensors.vim
 share/vim/${VIM_SUBDIR}/ftplugin/services.vim
 share/vim/${VIM_SUBDIR}/ftplugin/setserial.vim
@@ -392,6 +402,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/sshconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sudoers.vim
 share/vim/${VIM_SUBDIR}/ftplugin/svg.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sysctl.vim
+share/vim/${VIM_SUBDIR}/ftplugin/tcl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tcsh.vim
 share/vim/${VIM_SUBDIR}/ftplugin/terminfo.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tex.vim
@@ -417,7 +428,6 @@ share/vim/${VIM_SUBDIR}/ftplugin/zsh.vim
 share/vim/${VIM_SUBDIR}/ftplugof.vim
 share/vim/${VIM_SUBDIR}/gvimrc_example.vim
 share/vim/${VIM_SUBDIR}/indent.vim
-share/vim/${VIM_SUBDIR}/indent/GenericIndent.vim
 share/vim/${VIM_SUBDIR}/indent/README.txt
 share/vim/${VIM_SUBDIR}/indent/aap.vim
 share/vim/${VIM_SUBDIR}/indent/ada.vim
@@ -429,6 +439,7 @@ share/vim/${VIM_SUBDIR}/indent/bst.vim
 share/vim/${VIM_SUBDIR}/indent/c.vim
 share/vim/${VIM_SUBDIR}/indent/cdl.vim
 share/vim/${VIM_SUBDIR}/indent/ch.vim
+share/vim/${VIM_SUBDIR}/indent/chaiscript.vim
 share/vim/${VIM_SUBDIR}/indent/changelog.vim
 share/vim/${VIM_SUBDIR}/indent/cmake.vim
 share/vim/${VIM_SUBDIR}/indent/cobol.vim
@@ -436,6 +447,8 @@ share/vim/${VIM_SUBDIR}/indent/config.vim
 share/vim/${VIM_SUBDIR}/indent/cpp.vim
 share/vim/${VIM_SUBDIR}/indent/cs.vim
 share/vim/${VIM_SUBDIR}/indent/css.vim
+share/vim/${VIM_SUBDIR}/indent/cucumber.vim
+share/vim/${VIM_SUBDIR}/indent/cuda.vim
 share/vim/${VIM_SUBDIR}/indent/d.vim
 share/vim/${VIM_SUBDIR}/indent/dictconf.vim
 share/vim/${VIM_SUBDIR}/indent/dictdconf.vim
@@ -460,19 +473,22 @@ share/vim/${VIM_SUBDIR}/indent/java.vim
 share/vim/${VIM_SUBDIR}/indent/javascript.vim
 share/vim/${VIM_SUBDIR}/indent/jsp.vim
 share/vim/${VIM_SUBDIR}/indent/ld.vim
+share/vim/${VIM_SUBDIR}/indent/lifelines.vim
+share/vim/${VIM_SUBDIR}/indent/liquid.vim
 share/vim/${VIM_SUBDIR}/indent/lisp.vim
 share/vim/${VIM_SUBDIR}/indent/logtalk.vim
 share/vim/${VIM_SUBDIR}/indent/lua.vim
+share/vim/${VIM_SUBDIR}/indent/mail.vim
 share/vim/${VIM_SUBDIR}/indent/make.vim
 share/vim/${VIM_SUBDIR}/indent/matlab.vim
 share/vim/${VIM_SUBDIR}/indent/mma.vim
 share/vim/${VIM_SUBDIR}/indent/mp.vim
-share/vim/${VIM_SUBDIR}/indent/mupad.vim
 share/vim/${VIM_SUBDIR}/indent/objc.vim
 share/vim/${VIM_SUBDIR}/indent/ocaml.vim
 share/vim/${VIM_SUBDIR}/indent/occam.vim
 share/vim/${VIM_SUBDIR}/indent/pascal.vim
 share/vim/${VIM_SUBDIR}/indent/perl.vim
+share/vim/${VIM_SUBDIR}/indent/perl6.vim
 share/vim/${VIM_SUBDIR}/indent/php.vim
 share/vim/${VIM_SUBDIR}/indent/postscr.vim
 share/vim/${VIM_SUBDIR}/indent/pov.vim
@@ -485,6 +501,7 @@ share/vim/${VIM_SUBDIR}/indent/rst.vim
 share/vim/${VIM_SUBDIR}/indent/ruby.vim
 share/vim/${VIM_SUBDIR}/indent/sass.vim
 share/vim/${VIM_SUBDIR}/indent/scheme.vim
+share/vim/${VIM_SUBDIR}/indent/scss.vim
 share/vim/${VIM_SUBDIR}/indent/sdl.vim
 share/vim/${VIM_SUBDIR}/indent/sh.vim
 share/vim/${VIM_SUBDIR}/indent/sml.vim
@@ -508,41 +525,30 @@ share/vim/${VIM_SUBDIR}/indent/yacc.vim
 share/vim/${VIM_SUBDIR}/indent/zsh.vim
 share/vim/${VIM_SUBDIR}/indoff.vim
 share/vim/${VIM_SUBDIR}/macros/README.txt
-share/vim/${VIM_SUBDIR}/macros/README.txt.info
 share/vim/${VIM_SUBDIR}/macros/dvorak
 share/vim/${VIM_SUBDIR}/macros/editexisting.vim
-share/vim/${VIM_SUBDIR}/macros/hanoi.info
 share/vim/${VIM_SUBDIR}/macros/hanoi/click.me
-share/vim/${VIM_SUBDIR}/macros/hanoi/click.me.info
 share/vim/${VIM_SUBDIR}/macros/hanoi/hanoi.vim
 share/vim/${VIM_SUBDIR}/macros/hanoi/poster
-share/vim/${VIM_SUBDIR}/macros/hanoi/poster.info
 share/vim/${VIM_SUBDIR}/macros/justify.vim
 share/vim/${VIM_SUBDIR}/macros/less.sh
 share/vim/${VIM_SUBDIR}/macros/less.vim
 share/vim/${VIM_SUBDIR}/macros/life/click.me
-share/vim/${VIM_SUBDIR}/macros/life/click.me.info
 share/vim/${VIM_SUBDIR}/macros/life/life.vim
 share/vim/${VIM_SUBDIR}/macros/matchit.txt
 share/vim/${VIM_SUBDIR}/macros/matchit.vim
-share/vim/${VIM_SUBDIR}/macros/maze.info
 share/vim/${VIM_SUBDIR}/macros/maze/Makefile
 share/vim/${VIM_SUBDIR}/macros/maze/README.txt
-share/vim/${VIM_SUBDIR}/macros/maze/README.txt.info
 share/vim/${VIM_SUBDIR}/macros/maze/main.aap
 share/vim/${VIM_SUBDIR}/macros/maze/maze.c
 share/vim/${VIM_SUBDIR}/macros/maze/maze_5.78
-share/vim/${VIM_SUBDIR}/macros/maze/maze_5.78.info
 share/vim/${VIM_SUBDIR}/macros/maze/maze_mac
 share/vim/${VIM_SUBDIR}/macros/maze/mazeansi.c
 share/vim/${VIM_SUBDIR}/macros/maze/mazeclean.c
 share/vim/${VIM_SUBDIR}/macros/maze/poster
-share/vim/${VIM_SUBDIR}/macros/maze/poster.info
 share/vim/${VIM_SUBDIR}/macros/shellmenu.vim
 share/vim/${VIM_SUBDIR}/macros/swapmous.vim
-share/vim/${VIM_SUBDIR}/macros/urm.info
 share/vim/${VIM_SUBDIR}/macros/urm/README.txt
-share/vim/${VIM_SUBDIR}/macros/urm/README.txt.info
 share/vim/${VIM_SUBDIR}/macros/urm/examples
 share/vim/${VIM_SUBDIR}/macros/urm/urm
 share/vim/${VIM_SUBDIR}/macros/urm/urm.vim
@@ -594,6 +600,7 @@ share/vim/${VIM_SUBDIR}/print/latin1.ps
 share/vim/${VIM_SUBDIR}/print/mac-roman.ps
 share/vim/${VIM_SUBDIR}/print/prolog.ps
 share/vim/${VIM_SUBDIR}/scripts.vim
+share/vim/${VIM_SUBDIR}/spell/check_locales.vim
 share/vim/${VIM_SUBDIR}/spell/cleanadd.vim
 share/vim/${VIM_SUBDIR}/spell/en.ascii.spl
 share/vim/${VIM_SUBDIR}/spell/en.ascii.sug
@@ -601,6 +608,7 @@ share/vim/${VIM_SUBDIR}/spell/en.latin1.spl
 share/vim/${VIM_SUBDIR}/spell/en.latin1.sug
 share/vim/${VIM_SUBDIR}/spell/en.utf-8.spl
 share/vim/${VIM_SUBDIR}/spell/en.utf-8.sug
+share/vim/${VIM_SUBDIR}/spell/fixdup.vim
 share/vim/${VIM_SUBDIR}/spell/he.vim
 share/vim/${VIM_SUBDIR}/spell/yi.vim
 share/vim/${VIM_SUBDIR}/synmenu.vim
@@ -654,6 +662,7 @@ share/vim/${VIM_SUBDIR}/syntax/bst.vim
 share/vim/${VIM_SUBDIR}/syntax/btm.vim
 share/vim/${VIM_SUBDIR}/syntax/bzr.vim
 share/vim/${VIM_SUBDIR}/syntax/c.vim
+share/vim/${VIM_SUBDIR}/syntax/cabal.vim
 share/vim/${VIM_SUBDIR}/syntax/calendar.vim
 share/vim/${VIM_SUBDIR}/syntax/catalog.vim
 share/vim/${VIM_SUBDIR}/syntax/cdl.vim
@@ -662,6 +671,7 @@ share/vim/${VIM_SUBDIR}/syntax/cdrtoc.vim
 share/vim/${VIM_SUBDIR}/syntax/cf.vim
 share/vim/${VIM_SUBDIR}/syntax/cfg.vim
 share/vim/${VIM_SUBDIR}/syntax/ch.vim
+share/vim/${VIM_SUBDIR}/syntax/chaiscript.vim
 share/vim/${VIM_SUBDIR}/syntax/change.vim
 share/vim/${VIM_SUBDIR}/syntax/changelog.vim
 share/vim/${VIM_SUBDIR}/syntax/chaskell.vim
@@ -690,6 +700,7 @@ share/vim/${VIM_SUBDIR}/syntax/csp.vim
 share/vim/${VIM_SUBDIR}/syntax/css.vim
 share/vim/${VIM_SUBDIR}/syntax/cterm.vim
 share/vim/${VIM_SUBDIR}/syntax/ctrlh.vim
+share/vim/${VIM_SUBDIR}/syntax/cucumber.vim
 share/vim/${VIM_SUBDIR}/syntax/cuda.vim
 share/vim/${VIM_SUBDIR}/syntax/cupl.vim
 share/vim/${VIM_SUBDIR}/syntax/cuplsim.vim
@@ -699,6 +710,7 @@ share/vim/${VIM_SUBDIR}/syntax/cweb.vim
 share/vim/${VIM_SUBDIR}/syntax/cynlib.vim
 share/vim/${VIM_SUBDIR}/syntax/cynpp.vim
 share/vim/${VIM_SUBDIR}/syntax/d.vim
+share/vim/${VIM_SUBDIR}/syntax/datascript.vim
 share/vim/${VIM_SUBDIR}/syntax/dcd.vim
 share/vim/${VIM_SUBDIR}/syntax/dcl.vim
 share/vim/${VIM_SUBDIR}/syntax/debchangelog.vim
@@ -746,6 +758,7 @@ share/vim/${VIM_SUBDIR}/syntax/eviews.vim
 share/vim/${VIM_SUBDIR}/syntax/exim.vim
 share/vim/${VIM_SUBDIR}/syntax/expect.vim
 share/vim/${VIM_SUBDIR}/syntax/exports.vim
+share/vim/${VIM_SUBDIR}/syntax/fan.vim
 share/vim/${VIM_SUBDIR}/syntax/fasm.vim
 share/vim/${VIM_SUBDIR}/syntax/fdcc.vim
 share/vim/${VIM_SUBDIR}/syntax/fetchmail.vim
@@ -839,6 +852,7 @@ share/vim/${VIM_SUBDIR}/syntax/libao.vim
 share/vim/${VIM_SUBDIR}/syntax/lifelines.vim
 share/vim/${VIM_SUBDIR}/syntax/lilo.vim
 share/vim/${VIM_SUBDIR}/syntax/limits.vim
+share/vim/${VIM_SUBDIR}/syntax/liquid.vim
 share/vim/${VIM_SUBDIR}/syntax/lisp.vim
 share/vim/${VIM_SUBDIR}/syntax/lite.vim
 share/vim/${VIM_SUBDIR}/syntax/litestep.vim
@@ -863,6 +877,7 @@ share/vim/${VIM_SUBDIR}/syntax/man.vim
 share/vim/${VIM_SUBDIR}/syntax/manconf.vim
 share/vim/${VIM_SUBDIR}/syntax/manual.vim
 share/vim/${VIM_SUBDIR}/syntax/maple.vim
+share/vim/${VIM_SUBDIR}/syntax/markdown.vim
 share/vim/${VIM_SUBDIR}/syntax/masm.vim
 share/vim/${VIM_SUBDIR}/syntax/mason.vim
 share/vim/${VIM_SUBDIR}/syntax/master.vim
@@ -906,6 +921,7 @@ share/vim/${VIM_SUBDIR}/syntax/nosyntax.vim
 share/vim/${VIM_SUBDIR}/syntax/nqc.vim
 share/vim/${VIM_SUBDIR}/syntax/nroff.vim
 share/vim/${VIM_SUBDIR}/syntax/nsis.vim
+share/vim/${VIM_SUBDIR}/syntax/obj.vim
 share/vim/${VIM_SUBDIR}/syntax/objc.vim
 share/vim/${VIM_SUBDIR}/syntax/objcpp.vim
 share/vim/${VIM_SUBDIR}/syntax/ocaml.vim
@@ -922,6 +938,7 @@ share/vim/${VIM_SUBDIR}/syntax/pcap.vim
 share/vim/${VIM_SUBDIR}/syntax/pccts.vim
 share/vim/${VIM_SUBDIR}/syntax/pdf.vim
 share/vim/${VIM_SUBDIR}/syntax/perl.vim
+share/vim/${VIM_SUBDIR}/syntax/perl6.vim
 share/vim/${VIM_SUBDIR}/syntax/pf.vim
 share/vim/${VIM_SUBDIR}/syntax/pfmain.vim
 share/vim/${VIM_SUBDIR}/syntax/php.vim
@@ -987,7 +1004,9 @@ share/vim/${VIM_SUBDIR}/syntax/sather.vim
 share/vim/${VIM_SUBDIR}/syntax/scheme.vim
 share/vim/${VIM_SUBDIR}/syntax/scilab.vim
 share/vim/${VIM_SUBDIR}/syntax/screen.vim
+share/vim/${VIM_SUBDIR}/syntax/scss.vim
 share/vim/${VIM_SUBDIR}/syntax/sd.vim
+share/vim/${VIM_SUBDIR}/syntax/sdc.vim
 share/vim/${VIM_SUBDIR}/syntax/sdl.vim
 share/vim/${VIM_SUBDIR}/syntax/sed.vim
 share/vim/${VIM_SUBDIR}/syntax/sendpr.vim
@@ -1045,6 +1064,7 @@ share/vim/${VIM_SUBDIR}/syntax/stata.vim
 share/vim/${VIM_SUBDIR}/syntax/stp.vim
 share/vim/${VIM_SUBDIR}/syntax/strace.vim
 share/vim/${VIM_SUBDIR}/syntax/sudoers.vim
+share/vim/${VIM_SUBDIR}/syntax/svg.vim
 share/vim/${VIM_SUBDIR}/syntax/svn.vim
 share/vim/${VIM_SUBDIR}/syntax/syncolor.vim
 share/vim/${VIM_SUBDIR}/syntax/synload.vim
@@ -1056,6 +1076,8 @@ share/vim/${VIM_SUBDIR}/syntax/tak.vim
 share/vim/${VIM_SUBDIR}/syntax/takcmp.vim
 share/vim/${VIM_SUBDIR}/syntax/takout.vim
 share/vim/${VIM_SUBDIR}/syntax/tar.vim
+share/vim/${VIM_SUBDIR}/syntax/taskdata.vim
+share/vim/${VIM_SUBDIR}/syntax/taskedit.vim
 share/vim/${VIM_SUBDIR}/syntax/tasm.vim
 share/vim/${VIM_SUBDIR}/syntax/tcl.vim
 share/vim/${VIM_SUBDIR}/syntax/tcsh.vim
@@ -1148,8 +1170,9 @@ share/vim/${VIM_SUBDIR}/tools/xcmdsrv_client.c
 share/vim/${VIM_SUBDIR}/tutor/README.el.cp737.txt
 share/vim/${VIM_SUBDIR}/tutor/README.el.txt
 share/vim/${VIM_SUBDIR}/tutor/README.txt
-share/vim/${VIM_SUBDIR}/tutor/README.txt.info
 share/vim/${VIM_SUBDIR}/tutor/tutor
+share/vim/${VIM_SUBDIR}/tutor/tutor.bj
+share/vim/${VIM_SUBDIR}/tutor/tutor.bj.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ca
 share/vim/${VIM_SUBDIR}/tutor/tutor.ca.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.cs
@@ -1160,6 +1183,7 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.de.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.el
 share/vim/${VIM_SUBDIR}/tutor/tutor.el.cp737
 share/vim/${VIM_SUBDIR}/tutor/tutor.el.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.eo
 share/vim/${VIM_SUBDIR}/tutor/tutor.eo.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.es
 share/vim/${VIM_SUBDIR}/tutor/tutor.es.utf-8
@@ -1171,7 +1195,6 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.hr.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.hu
 share/vim/${VIM_SUBDIR}/tutor/tutor.hu.cp1250
 share/vim/${VIM_SUBDIR}/tutor/tutor.hu.utf-8
-share/vim/${VIM_SUBDIR}/tutor/tutor.info
 share/vim/${VIM_SUBDIR}/tutor/tutor.it
 share/vim/${VIM_SUBDIR}/tutor/tutor.it.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.euc
@@ -1179,11 +1202,15 @@ share/vim/${VIM_SUBDIR}/tutor/tutor.ja.sjis
 share/vim/${VIM_SUBDIR}/tutor/tutor.ja.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.euc
 share/vim/${VIM_SUBDIR}/tutor/tutor.ko.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.nb
+share/vim/${VIM_SUBDIR}/tutor/tutor.nb.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.no
 share/vim/${VIM_SUBDIR}/tutor/tutor.no.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.pl
 share/vim/${VIM_SUBDIR}/tutor/tutor.pl.cp1250
 share/vim/${VIM_SUBDIR}/tutor/tutor.pl.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor.pt
+share/vim/${VIM_SUBDIR}/tutor/tutor.pt.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor.ru
 share/vim/${VIM_SUBDIR}/tutor/tutor.ru.cp1251
 share/vim/${VIM_SUBDIR}/tutor/tutor.ru.utf-8
