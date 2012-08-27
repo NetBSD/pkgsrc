@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2012/08/26 20:28:16 is Exp $
+# $NetBSD: Makefile,v 1.28 2012/08/27 10:12:30 wiz Exp $
 #
 
-DISTNAME=	awesome-3.4.10
+DISTNAME=	awesome-3.4.13
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -56,6 +56,9 @@ BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xcb-util-image/buildlink3.mk"
+.include "../../x11/xcb-util-keysyms/buildlink3.mk"
+.include "../../x11/xcb-util-wm/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
