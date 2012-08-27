@@ -1,0 +1,14 @@
+$NetBSD: patch-src_GeoMath_cpp,v 1.1 2012/08/27 06:50:13 dholland Exp $
+
+--- src/GeoMath.cpp~	2012-08-27 06:38:38.000000000 +0000
++++ src/GeoMath.cpp
+@@ -24,6 +24,9 @@
+ 
+ #include <QtGui>
+ 
++#define PI M_PI
++#define TWOPI (2 * PI)
++
+ static bool GPS_Math_Deg_To_DegMin(qreal v, qint32 *d, qreal *m)
+ {
+     bool sign = v < 0;

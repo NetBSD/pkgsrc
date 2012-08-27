@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/08/05 10:02:12 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/08/27 06:50:13 dholland Exp $
 #
 
 DISTNAME=	QLandkarteM.0.2.0
@@ -18,6 +18,13 @@ WRKSRC=		${WRKDIR}/QLandkarteM
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 QMAKE=		${QTDIR}/bin/qmake
+
+SUBST_CLASSES+=		proj
+SUBST_STAGE.proj=	pre-configure
+SUBST_FILES.proj=	src/*.cpp
+SUBST_FILES.proj+=	src/CMapRaster.h
+SUBST_SED.proj=		-e '/^.include .projects.h./s/projects/proj_api/'
+SUBST_MESSAGE.proj=	Fixing geography/proj interface
 
 INSTALLATION_DIRS+=	bin
 
