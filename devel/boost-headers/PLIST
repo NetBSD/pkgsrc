@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/07/02 07:02:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2012/08/27 08:49:09 adam Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -378,6 +378,7 @@ include/boost/asio/detail/impl/win_thread.ipp
 include/boost/asio/detail/impl/win_tss_ptr.ipp
 include/boost/asio/detail/impl/winsock_init.ipp
 include/boost/asio/detail/io_control.hpp
+include/boost/asio/detail/keyword_tss_ptr.hpp
 include/boost/asio/detail/kqueue_reactor.hpp
 include/boost/asio/detail/kqueue_reactor_fwd.hpp
 include/boost/asio/detail/local_free_on_block_exit.hpp
@@ -938,11 +939,24 @@ include/boost/container/flat_set.hpp
 include/boost/container/list.hpp
 include/boost/container/map.hpp
 include/boost/container/scoped_allocator.hpp
+include/boost/container/scoped_allocator_fwd.hpp
 include/boost/container/set.hpp
 include/boost/container/slist.hpp
 include/boost/container/stable_vector.hpp
 include/boost/container/string.hpp
 include/boost/container/vector.hpp
+include/boost/context/all.hpp
+include/boost/context/detail/config.hpp
+include/boost/context/detail/fcontext_arm.hpp
+include/boost/context/detail/fcontext_i386.hpp
+include/boost/context/detail/fcontext_i386_win.hpp
+include/boost/context/detail/fcontext_mips.hpp
+include/boost/context/detail/fcontext_ppc.hpp
+include/boost/context/detail/fcontext_x86_64.hpp
+include/boost/context/detail/fcontext_x86_64_win.hpp
+include/boost/context/fcontext.hpp
+include/boost/context/stack_allocator.hpp
+include/boost/context/stack_utils.hpp
 include/boost/crc.hpp
 include/boost/cregex.hpp
 include/boost/cstdint.hpp
@@ -1407,11 +1421,13 @@ include/boost/fusion/adapted/struct/adapt_struct.hpp
 include/boost/fusion/adapted/struct/adapt_struct_named.hpp
 include/boost/fusion/adapted/struct/define_assoc_struct.hpp
 include/boost/fusion/adapted/struct/define_struct.hpp
+include/boost/fusion/adapted/struct/define_struct_inline.hpp
 include/boost/fusion/adapted/struct/detail/adapt_base.hpp
 include/boost/fusion/adapted/struct/detail/at_impl.hpp
 include/boost/fusion/adapted/struct/detail/begin_impl.hpp
 include/boost/fusion/adapted/struct/detail/category_of_impl.hpp
 include/boost/fusion/adapted/struct/detail/define_struct.hpp
+include/boost/fusion/adapted/struct/detail/define_struct_inline.hpp
 include/boost/fusion/adapted/struct/detail/deref_data_impl.hpp
 include/boost/fusion/adapted/struct/detail/deref_impl.hpp
 include/boost/fusion/adapted/struct/detail/end_impl.hpp
@@ -1511,7 +1527,6 @@ include/boost/fusion/container/deque/detail/cpp03_deque_keyed_values.hpp
 include/boost/fusion/container/deque/detail/cpp11_deque_keyed_values.hpp
 include/boost/fusion/container/deque/detail/deque_forward_ctor.hpp
 include/boost/fusion/container/deque/detail/deque_initial_size.hpp
-include/boost/fusion/container/deque/detail/deque_keyed_values.hpp
 include/boost/fusion/container/deque/detail/deque_keyed_values_call.hpp
 include/boost/fusion/container/deque/detail/end_impl.hpp
 include/boost/fusion/container/deque/detail/is_sequence_impl.hpp
@@ -1858,6 +1873,7 @@ include/boost/fusion/include/deduce.hpp
 include/boost/fusion/include/deduce_sequence.hpp
 include/boost/fusion/include/define_assoc_struct.hpp
 include/boost/fusion/include/define_struct.hpp
+include/boost/fusion/include/define_struct_inline.hpp
 include/boost/fusion/include/deque.hpp
 include/boost/fusion/include/deque_fwd.hpp
 include/boost/fusion/include/deque_tie.hpp
@@ -1945,7 +1961,7 @@ include/boost/fusion/include/push_front.hpp
 include/boost/fusion/include/query.hpp
 include/boost/fusion/include/remove.hpp
 include/boost/fusion/include/remove_if.hpp
-include/boost/fusion/include/repetetive_view.hpp
+include/boost/fusion/include/repetitive_view.hpp
 include/boost/fusion/include/replace.hpp
 include/boost/fusion/include/replace_if.hpp
 include/boost/fusion/include/reverse.hpp
@@ -2083,6 +2099,7 @@ include/boost/fusion/sequence/io/in.hpp
 include/boost/fusion/sequence/io/out.hpp
 include/boost/fusion/sequence/sequence_facade.hpp
 include/boost/fusion/support.hpp
+include/boost/fusion/support/as_const.hpp
 include/boost/fusion/support/category_of.hpp
 include/boost/fusion/support/deduce.hpp
 include/boost/fusion/support/deduce_sequence.hpp
@@ -2548,6 +2565,7 @@ include/boost/geometry/strategies/transform/map_transformer.hpp
 include/boost/geometry/strategies/transform/matrix_transformers.hpp
 include/boost/geometry/strategies/within.hpp
 include/boost/geometry/util/add_const_if_c.hpp
+include/boost/geometry/util/bare_type.hpp
 include/boost/geometry/util/calculation_type.hpp
 include/boost/geometry/util/closure_as_bool.hpp
 include/boost/geometry/util/coordinate_cast.hpp
@@ -2837,6 +2855,7 @@ include/boost/graph/transitive_reduction.hpp
 include/boost/graph/transpose_graph.hpp
 include/boost/graph/tree_traits.hpp
 include/boost/graph/two_bit_color_map.hpp
+include/boost/graph/two_graphs_common_spanning_trees.hpp
 include/boost/graph/undirected_dfs.hpp
 include/boost/graph/undirected_graph.hpp
 include/boost/graph/use_mpi.hpp
@@ -4892,6 +4911,7 @@ include/boost/msm/back/queue_container_deque.hpp
 include/boost/msm/back/state_machine.hpp
 include/boost/msm/back/tools.hpp
 include/boost/msm/common.hpp
+include/boost/msm/event_traits.hpp
 include/boost/msm/front/common_states.hpp
 include/boost/msm/front/completion_event.hpp
 include/boost/msm/front/detail/common_states.hpp
@@ -5847,6 +5867,7 @@ include/boost/program_options/variables_map.hpp
 include/boost/program_options/version.hpp
 include/boost/progress.hpp
 include/boost/property_map/dynamic_property_map.hpp
+include/boost/property_map/function_property_map.hpp
 include/boost/property_map/parallel/caching_property_map.hpp
 include/boost/property_map/parallel/distributed_property_map.hpp
 include/boost/property_map/parallel/global_index_map.hpp
@@ -5855,6 +5876,7 @@ include/boost/property_map/parallel/local_property_map.hpp
 include/boost/property_map/property_map.hpp
 include/boost/property_map/property_map_iterator.hpp
 include/boost/property_map/shared_array_property_map.hpp
+include/boost/property_map/transform_value_property_map.hpp
 include/boost/property_map/vector_property_map.hpp
 include/boost/property_tree/detail/exception_implementation.hpp
 include/boost/property_tree/detail/file_parser_error.hpp
@@ -5997,19 +6019,24 @@ include/boost/proto/transform/detail/call.hpp
 include/boost/proto/transform/detail/construct_funop.hpp
 include/boost/proto/transform/detail/construct_pod_funop.hpp
 include/boost/proto/transform/detail/default_function_impl.hpp
+include/boost/proto/transform/detail/expand_pack.hpp
 include/boost/proto/transform/detail/fold_impl.hpp
 include/boost/proto/transform/detail/lazy.hpp
 include/boost/proto/transform/detail/make.hpp
 include/boost/proto/transform/detail/make_gcc_workaround.hpp
+include/boost/proto/transform/detail/pack.hpp
+include/boost/proto/transform/detail/pack_impl.hpp
 include/boost/proto/transform/detail/pass_through_impl.hpp
 include/boost/proto/transform/detail/preprocessed/call.hpp
 include/boost/proto/transform/detail/preprocessed/construct_funop.hpp
 include/boost/proto/transform/detail/preprocessed/construct_pod_funop.hpp
 include/boost/proto/transform/detail/preprocessed/default_function_impl.hpp
+include/boost/proto/transform/detail/preprocessed/expand_pack.hpp
 include/boost/proto/transform/detail/preprocessed/fold_impl.hpp
 include/boost/proto/transform/detail/preprocessed/lazy.hpp
 include/boost/proto/transform/detail/preprocessed/make.hpp
 include/boost/proto/transform/detail/preprocessed/make_gcc_workaround.hpp
+include/boost/proto/transform/detail/preprocessed/pack_impl.hpp
 include/boost/proto/transform/detail/preprocessed/pass_through_impl.hpp
 include/boost/proto/transform/detail/preprocessed/when.hpp
 include/boost/proto/transform/detail/when.hpp
@@ -8696,9 +8723,8 @@ include/boost/units/systems/temperature/celsius.hpp
 include/boost/units/systems/temperature/fahrenheit.hpp
 include/boost/units/unit.hpp
 include/boost/units/units_fwd.hpp
-include/boost/unordered/detail/allocator_helpers.hpp
+include/boost/unordered/detail/allocate.hpp
 include/boost/unordered/detail/buckets.hpp
-include/boost/unordered/detail/emplace_args.hpp
 include/boost/unordered/detail/equivalent.hpp
 include/boost/unordered/detail/extract_key.hpp
 include/boost/unordered/detail/fwd.hpp
