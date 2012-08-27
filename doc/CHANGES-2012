@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2699 2012/08/27 21:38:15 morr Exp $
+$NetBSD: CHANGES-2012,v 1.2700 2012/08/27 21:59:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/py-ldap to 2.4.10 [adam 2012-08-27]
 	Updated databases/phpmyadmin to 3.5.2.2nb1 [tron 2012-08-27]
 	Updated editors/vim-share to 7.3.638 [morr 2012-08-27]
+	Updated devel/mr to 1.13 [schmonz 2012-08-27]
