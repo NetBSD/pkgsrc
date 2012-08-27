@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.23 2012/06/03 10:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.24 2012/08/27 09:07:37 adam Exp $
 
-SHA1 (stellarium-0.11.2.tar.gz) = ed77c612b53d74dc2264b1be05f19d05950a1771
-RMD160 (stellarium-0.11.2.tar.gz) = b36bb6d709c4c67e1483630523b8c423622eea20
-Size (stellarium-0.11.2.tar.gz) = 47131184 bytes
-SHA1 (patch-aa) = e5c3968a2d8bde8a651cf87d0b5d99a3f01680b0
-SHA1 (patch-ab) = e7e1042cb674462f43fbb7c6ad5b023e62b54a59
-SHA1 (patch-ac) = e9436d4f9f34127f176931dda4665ddc5d6f8bfa
-SHA1 (patch-ad) = 5e4912f60fd74a868933e4afe27a67ddb73514a8
-SHA1 (patch-ae) = b1b4d821dd71e9ef7cd8c9263b12331d6f369916
-SHA1 (patch-src_core_modules_Skybright.cpp) = 13d35ea979af856333b6c014d79ad8f555f8fc6e
+SHA1 (stellarium-0.11.4a.tar.gz) = 4b0cadde9d91ec7ab821f4db955dec6111dbb51a
+RMD160 (stellarium-0.11.4a.tar.gz) = ed89d1467218a7eb46eb72ede9cf51bae22af5b6
+Size (stellarium-0.11.4a.tar.gz) = 54863608 bytes
+SHA1 (patch-ab) = 5ecb4a06f44520ec3fb3f17816b1f84dd2bcd28c
+SHA1 (patch-ad) = 9a2b3ac3c07434e2d713eae0e40d016803edfe7a
+SHA1 (patch-ae) = 8279d3b569c1399c6ecc3c8abfc9917a5f2807e7
+SHA1 (patch-src_core_modules_Skybright.cpp) = 7b6369fce6fa77b7007023136d7e8aebafd5c627
