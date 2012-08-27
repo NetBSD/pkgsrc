@@ -1,0 +1,15 @@
+$NetBSD: patch-proj_i,v 1.1 2012/08/27 07:18:02 dholland Exp $
+
+Adjust for new API of geography/proj.
+
+--- proj.i~	2006-07-26 21:12:03.000000000 +0000
++++ proj.i
+@@ -1,7 +1,7 @@
+ %module proj
+ 
+ %{
+-#include "projects.h"
++#include "proj_api.h"
+ %}
+ 
+ %include "typemaps.i"
