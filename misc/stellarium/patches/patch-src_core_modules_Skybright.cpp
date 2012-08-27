@@ -1,10 +1,10 @@
-$NetBSD: patch-src_core_modules_Skybright.cpp,v 1.2 2012/06/03 10:08:37 wiz Exp $
+$NetBSD: patch-src_core_modules_Skybright.cpp,v 1.3 2012/08/27 09:07:37 adam Exp $
 
---- src/core/modules/Skybright.cpp.orig	2011-07-02 15:22:18.000000000 +0200
-+++ src/core/modules/Skybright.cpp	2011-11-01 17:14:24.676826514 +0100
-@@ -29,6 +29,8 @@
- #include "Skybright.hpp"
- #include "StelUtils.hpp"
+--- src/core/modules/Skybright.cpp.orig	2012-08-26 10:23:18.000000000 +0000
++++ src/core/modules/Skybright.cpp
+@@ -33,6 +33,8 @@
+ #undef FS
+ #endif
  
 +#undef FS
 +
