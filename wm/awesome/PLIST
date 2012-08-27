@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/26 20:28:16 is Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/08/27 10:12:30 wiz Exp $
 bin/awesome
 bin/awesome-client
 bin/awsetbg
@@ -14,10 +14,18 @@ man/fr/man1/awesome-client.1
 man/fr/man1/awesome.1
 man/fr/man1/awsetbg.1
 man/fr/man5/awesomerc.5
+man/it/man1/awesome-client.1
+man/it/man1/awesome.1
+man/it/man1/awsetbg.1
+man/it/man5/awesomerc.5
 man/man1/awesome-client.1
 man/man1/awesome.1
 man/man1/awsetbg.1
 man/man5/awesomerc.5
+man/ru/man1/awesome-client.1
+man/ru/man1/awesome.1
+man/ru/man1/awsetbg.1
+man/ru/man5/awesomerc.5
 share/awesome/icons/awesome16.png
 share/awesome/icons/awesome32.png
 share/awesome/icons/awesome48.png
@@ -121,12 +129,14 @@ share/awesome/themes/default/titlebar/sticky_focus_inactive.png
 share/awesome/themes/default/titlebar/sticky_normal_active.png
 share/awesome/themes/default/titlebar/sticky_normal_inactive.png
 share/awesome/themes/sky/awesome-icon.png
+share/awesome/themes/sky/layouts/dwindle.png
 share/awesome/themes/sky/layouts/fairh.png
 share/awesome/themes/sky/layouts/fairv.png
 share/awesome/themes/sky/layouts/floating.png
 share/awesome/themes/sky/layouts/fullscreen.png
 share/awesome/themes/sky/layouts/magnifier.png
 share/awesome/themes/sky/layouts/max.png
+share/awesome/themes/sky/layouts/spiral.png
 share/awesome/themes/sky/layouts/tile.png
 share/awesome/themes/sky/layouts/tilebottom.png
 share/awesome/themes/sky/layouts/tileleft.png
