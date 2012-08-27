@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.9 2011/10/11 10:02:08 adam Exp $
+$NetBSD: patch-aa,v 1.10 2012/08/27 08:49:09 adam Exp $
 
---- boostcpp.jam.orig	2011-06-06 20:39:27.000000000 +0000
+--- boostcpp.jam.orig	2012-07-27 18:15:55.000000000 +0000
 +++ boostcpp.jam
-@@ -276,6 +276,7 @@ rule declare_install_and_stage_proper_ta
-       : <location>$(stage-locate)/lib
-         <install-dependencies>on <install-type>LIB
-         <install-no-version-symlinks>on
-+        <dll-path>@PREFIX@/lib
-       ;
+@@ -249,6 +249,7 @@ rule declare_install_and_stage_proper_ta
+         : <location>$(stage-locate)/lib
+           <install-dependencies>on <install-type>LIB
+           <install-no-version-symlinks>on
++          <dll-path>@PREFIX@/lib
+         ;
      $(p).mark-target-as-explicit stage-proper ;
  
-@@ -529,6 +530,10 @@ rule libraries-to-install ( existing-lib
-        ECHO "error: both --with-<library> and --without-<library> specified" ;
-        EXIT ;
-    }
+@@ -509,6 +510,10 @@ rule libraries-to-install ( existing-lib
+     {
+         EXIT error: both --with-<library> and --without-<library> specified ;
+     }
 +   if $(without-parameter) && $(without-parameter) = "*"
 +   {
-+       without-parameter = $(existing-libraries) ;
++       without-parameter = $(existing-libs) ;
 +   }
  
-    local wrong = [ set.difference $(with-parameter) : $(existing-libraries) ] ;
-    if $(wrong)
+     local wrong = [ set.difference $(with-parameter) : $(existing-libs) ] ;
+     if $(wrong)
