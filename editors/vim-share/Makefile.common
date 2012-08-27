@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.145 2012/08/27 21:35:56 morr Exp $
+# $NetBSD: Makefile.common,v 1.146 2012/08/27 22:10:34 morr Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -24,7 +24,8 @@ PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION}/
 
 PATCHFILES!=		${AWK} 'BEGIN {for (i=1; i<=${VIM_PATCHLEVEL}; i++) printf "7.3.%03d\n", i; exit}'
 
-BADPATCHES= 122 225 235 246 247 252 253 336 386 387 400 434 487 491 527 569 578 579 580 581 583 584 603 611 629                                                            
+BADPATCHES= 122 225 235 246 247 252 253 336 386 387 400 434 487 491 527 569 578 579 580 581 583 584 603 611 629
+
 .for p in ${BADPATCHES}
 PATCHFILES:= ${PATCHFILES:N7.3.${p}}
 .endfor
@@ -42,7 +43,7 @@ MAKE_JOBS_SAFE=		no	# At least on Solaris
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
 CHECK_INTERPRETER_SKIP=	share/vim/vim73/tools/vim132
 
-.include "options.mk"                                                                                                                                                     
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--with-modified-by=${MAINTAINER:Q}
 
