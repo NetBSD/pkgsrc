@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2012/01/28 15:01:00 wiz Exp $
+$NetBSD: distinfo,v 1.11 2012/08/27 22:21:44 wiz Exp $
 
-SHA1 (ccache-3.1.7.tar.gz) = 93872fb20c066859842e4bc989895359ae218ad6
-RMD160 (ccache-3.1.7.tar.gz) = b25ca4dead7574c017423e0ae47e7b3574813b0f
-Size (ccache-3.1.7.tar.gz) = 342160 bytes
+SHA1 (ccache-3.1.8.tar.gz) = 9f52273535a909de91edd59a5e15265ae9a32e91
+RMD160 (ccache-3.1.8.tar.gz) = 7b29525da3bb9f2d59c9e2b4559c44ecc1ef37d5
+Size (ccache-3.1.8.tar.gz) = 350456 bytes
