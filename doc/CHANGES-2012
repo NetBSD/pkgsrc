@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2692 2012/08/27 08:52:23 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2693 2012/08/27 09:08:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4197,3 +4197,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boost-build to 1.51.0 [adam 2012-08-27]
 	Updated devel/boost-python to 1.51.0 [adam 2012-08-27]
 	Updated meta-pkgs/boost to 1.51.0 [adam 2012-08-27]
+	Updated misc/stellarium to 0.11.4 [drochner 2012-08-27]
