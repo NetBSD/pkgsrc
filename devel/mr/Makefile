@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/05/14 23:56:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/27 21:58:49 schmonz Exp $
 #
 
-DISTNAME=		mr_1.12
+DISTNAME=		mr_1.13
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/mr/}
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=		p5-ack-[0-9]*:../../textproc/p5-ack
 
 NO_BUILD=		yes
 
