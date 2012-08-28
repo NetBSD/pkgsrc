@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.5 2012/03/15 08:30:06 ryoon Exp $
+$NetBSD: patch-as,v 1.6 2012/08/28 12:42:01 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2012-03-06 13:17:03.000000000 +0100
-+++ js/src/configure.in	2012-03-07 10:10:42.000000000 +0100
-@@ -856,7 +856,7 @@
+--- js/src/configure.in.orig	2012-08-08 20:20:10.000000000 +0000
++++ js/src/configure.in
+@@ -786,7 +786,7 @@ EOF
                  AC_LANG_RESTORE
              ])
  
@@ -13,7 +13,7 @@ Treat DragonFly like FreeBSD.
              AC_CACHE_CHECK(for |class __declspec(dllimport) exception| bug,
                             ac_cv_have_dllimport_exception_bug,
                  [
-@@ -2259,7 +2259,7 @@
+@@ -1996,7 +1996,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -22,7 +22,7 @@ Treat DragonFly like FreeBSD.
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -3368,7 +3368,7 @@
+@@ -3122,7 +3122,7 @@ then
      fi
  
  	case "$target" in
@@ -31,7 +31,7 @@ Treat DragonFly like FreeBSD.
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -4275,7 +4275,7 @@
+@@ -4015,7 +4015,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
