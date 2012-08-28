@@ -1,11 +1,11 @@
-$NetBSD: patch-mk,v 1.4 2012/07/18 16:10:06 ryoon Exp $
+$NetBSD: patch-mk,v 1.5 2012/08/28 12:42:01 ryoon Exp $
 
 * Conditional for NetBSD and DragonFly
 * From https://bugzilla.mozilla.org/show_bug.cgi?id=736961
 
---- config/rules.mk.orig	2012-07-04 16:03:15.000000000 +0000
+--- config/rules.mk.orig	2012-08-08 20:19:43.000000000 +0000
 +++ config/rules.mk
-@@ -556,6 +556,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+@@ -454,6 +454,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
  endif
  endif
  
@@ -18,7 +18,7 @@ $NetBSD: patch-mk,v 1.4 2012/07/18 16:10:06 ryoon Exp $
  ifeq ($(OS_ARCH),NetBSD)
  ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
  ifeq ($(MODULE),layout)
-@@ -565,6 +571,10 @@ endif
+@@ -463,6 +469,10 @@ endif
  endif
  endif
  
