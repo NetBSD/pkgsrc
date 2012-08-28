@@ -1,13 +1,13 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.69 2012/08/03 10:35:31 abs Exp $
+# $Id: pkg_chk.sh,v 1.70 2012/08/28 12:12:26 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
 #	out automatically installed packages
 # TODO: List user-installed packages that are not in config
 
-# Copyright (c) 2012 David Brownlee (Standard 2 clause BSD licence)
+# Copyright (c) 2001-2012 David Brownlee (Standard 2 clause BSD licence)
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,33 +34,26 @@
 
 PATH=${PATH}:/usr/sbin:/usr/bin
 
-SUMMARY_FILE=pkg_summary.gz
-OLD_SUMMARY_FILE=pkg_chk-summary
-
-is_binary_available()
-    {
-    if [ -n "$PKGDB" ]; then
-	for iba_pkg in $PKGDB; do
-	    case $iba_pkg in
-		*:"$1")
-		    return 0;
-		;;
-	    esac
-	done
-	return 1;
-    else
-	if [ -f "$PACKAGES/$1$PKG_SUFX" ]; then
-	    return 0;
-	else
-	    return 1;
-	fi
-    fi
-    }
+SUMMARY_FILES="pkg_summary.bz2 pkg_summary.gz pkg_summary.txt"
 
 bin_pkg_info2pkgdb()
     {
-    ${AWK} '/^PKGNAME=/ {sub("^PKGNAME=", ""); PKGNAME=$0} \
-	    /^PKGPATH=/ {sub("^PKGPATH=", ""); printf("%s:%s ", $0, PKGNAME)}'
+    # PKGDB is a newline separated list "pkgdir: pkgnamever[ pkgnamever ..] "
+    # For each PKGPATH return a set of valid package versions
+    ${AWK} -F= '
+    $1=="PKGNAME"{pkgname=$2}
+    $1=="PKGPATH"{pkgpath=$2}
+    NF==0 {
+      if (pkgpath && pkgname)
+        pkgs[pkgpath]=pkgs[pkgpath]" "pkgname;
+      pkgpath="";
+      pkgname=""
+    }
+    END {
+      if (pkgpath && pkgname) pkgs[pkgpath]=pkgname;
+      for (pkg in pkgs) { print pkg ":" pkgs[pkg] " "; }
+    }
+    '
     }
 
 check_packages_installed()
@@ -75,13 +68,54 @@ check_packages_installed()
 	elif [ -n "$opt_s" ] ; then
 	    extract_pkg_vars $pkgdir PKGNAME
 	else
-	    PKGNAME=`pkgdir2pkgname $pkgdir`
+	    PKGNAME=
+	    PKGNAMES="$(pkgdir2pkgnames $pkgdir)"
+	    case "$PKGNAMES" in
+		# multiple packages - determine which (if any) is installed
+		*' '* )
+		    # Sort so highest matching package picked first
+		    PKGNAMES="$(echo $PKGNAMES | tr ' ' '\n' | ${SORT} -r)"
+		    for pkgname in $PKGNAMES ; do
+			if [ -d $PKG_DBDIR/$pkgname ];then
+			    PKGNAME=$pkgname
+			    break;
+			fi
+		    done
+		    # In the absence of any better way to determine which
+		    # should be picked, use the highest version
+		    if [ -z "$PKGNAME" ] ; then
+			PKGNAME=$(echo $PKGNAMES | ${SED} 's/ .*//')
+		    fi
+		    ;;
+		* ) PKGNAME=$PKGNAMES ;;
+	    esac
 	fi
 	if [ -z "$PKGNAME" ]; then
 	    MISSING_DONE=$MISSING_DONE" "$pkgdir
 	    continue
 	fi
-	if [ ! -d $PKG_DBDIR/$PKGNAME ];then
+
+	if [ -d "$PKG_DBDIR/$PKGNAME" ];then
+	    if [ -n "$opt_B" ];then
+		# sort here temporarily to handle older +BUILD_VERSION
+		current_build_ver=$(get_build_ver | ${SED} 's|.*\$Net''BSD\: ||' | ${SORT} -u)
+		installed_build_ver=$(${SED} 's|.*\$Net''BSD\: ||' $PKG_DBDIR/$PKGNAME/+BUILD_VERSION | ${SORT} -u)
+		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
+		    msg "$pkgdir - $PKGNAME build_version mismatch"
+		    verbose "--current--"
+		    verbose "$current_build_ver"
+		    verbose "--installed--"
+		    verbose "$installed_build_ver"
+		    verbose "----"
+		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
+		else
+		    verbose "$pkgdir - $PKGNAME OK"
+		fi
+	    else
+		verbose "$pkgdir - $PKGNAME OK"
+	    fi
+	else
+	    # XXX need to handle multiple matching package case
 	    msg_n "$pkgdir - "
 	    pkg=$(echo $PKGNAME | ${SED} 's/-[0-9].*//')
 	    pkginstalled=$(sh -c "${PKG_INFO} -e $pkg" || true)
@@ -112,25 +146,6 @@ check_packages_installed()
 		msg_n " (has binary package)"
 	    fi
 	    msg
-	else
-	    if [ -n "$opt_B" ];then
-		# sort here temporarily to handle older +BUILD_VERSION
-		current_build_ver=$(get_build_ver | ${SED} 's|.*\$Net''BSD\: ||' | ${SORT} -u)
-		installed_build_ver=$(${SED} 's|.*\$Net''BSD\: ||' $PKG_DBDIR/$PKGNAME/+BUILD_VERSION | ${SORT} -u)
-		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
-		    msg "$pkgdir - $PKGNAME build_version mismatch"
-		    verbose "--current--"
-		    verbose "$current_build_ver"
-		    verbose "--installed--"
-		    verbose "$installed_build_ver"
-		    verbose "----"
-		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
-		else
-		    verbose "$PKGNAME: OK"
-		fi
-	    else
-		verbose "$PKGNAME: OK"
-	    fi
 	fi
     done
     }
@@ -234,20 +249,25 @@ extract_variables()
 	    extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF \
 			PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS PKG_SUFX
 	    if [ -z "$PACKAGES" ] ; then
-		PACKAGES=`pwd`
+		PACKAGES="$(pwd)"
 	    fi
 	fi
     fi
 
     # .tgz/.tbz to regexp
-    PKG_SUFX_RE=`echo $PKG_SUFX | ${SED} 's/[.]/[.]/'`
+    PKG_SUFX_RE="$(echo $PKG_SUFX | ${SED} 's/[.]/[.]/')"
 
     if [ ! -d $PKG_DBDIR ] ; then
 	fatal "Unable to access PKG_DBDIR ($PKG_DBDIR)"
     fi
 
     if [ -z "$PKGCHK_CONF" ];then
-	PKGCHK_CONF=$PKGSRCDIR/pkgchk.conf
+	# Check $PKG_SYSCONFDIR then fall back to $PKGSRCDIR
+	if [ -f $PKG_SYSCONFDIR/pkgchk.conf ] ; then
+	    PKGCHK_CONF=$PKG_SYSCONFDIR/pkgchk.conf
+	else
+	    PKGCHK_CONF=$PKGSRCDIR/pkgchk.conf
+	fi
     fi
     if [ -z "$PKGCHK_UPDATE_CONF" ];then
 	PKGCHK_UPDATE_CONF=$PKGSRCDIR/pkgchk_update-$(hostname).conf
@@ -294,15 +314,16 @@ generate_conf_from_installed()
 
 get_bin_pkg_info()
     {
-    summary_file=$PACKAGES/$SUMMARY_FILE
-    if [ -f $summary_file ] ; then
-	if [ -z "$(find $PACKAGES -type f -newer $summary_file -name '*.t[bg]z')" ] ; then
-	    msg_progress Reading $summary_file
-	    ${GZCAT} $summary_file
-	    return;
+    for summary_file in $SUMMARY_FILES ; do
+	if [ -f $PACKAGES/$summary_file ] ; then
+	    if [ -z "$(find $PACKAGES -type f -newer $PACKAGES/$summary_file -name '*.tgz')" ] ; then
+		verbose "Using summary file: $summary_file"
+		uncompress_filter $summary_file < $PACKAGES/$summary_file
+		return;
+	    fi
+	    echo "*** Ignoring $summary_file as newer pkgs in $PACKAGES" >&2
 	fi
-	echo "*** Ignoring $SUMMARY_FILE as PACKAGES contains newer files" >&2
-    fi
+    done
     msg_progress Scan $PACKAGES
     list_bin_pkgs | ${XARGS} ${PKG_INFO} -X
     }
@@ -318,6 +339,22 @@ get_build_ver()
     rm -f $MY_TMPFILE
     ${MAKE} _BUILD_VERSION_FILE=$MY_TMPFILE $MY_TMPFILE
     cat $MY_TMPFILE
+    }
+
+is_binary_available()
+    {
+    if [ -n "$PKGDB" ]; then
+        case "$PKGDB" in
+	    *" $1 "*) return 0;;
+	esac
+	return 1
+    else
+	if [ -f "$PACKAGES/$1$PKG_SUFX" ]; then
+	    return 0
+	else
+	    return 1
+	fi
+    fi
     }
 
 list_bin_pkgs ()
@@ -343,12 +380,12 @@ list_packages()
     # Convert passed in list of pkgdirs to a list of binary package files
     pkglist=''
     for pkgdir in $* ; do
-	pkgname=`pkgdir2pkgname $pkgdir`
+	pkgname="$(pkgdir2pkgnames $pkgdir| ${SED} 's/ .*//')"
 	if [ -z "$pkgname" ]; then
 	    fatal_later "$pkgdir - Unable to extract pkgname"
 	    continue
 	fi
-	if is_binary_available $pkgname ; then
+	if is_binary_available "$pkgname" ; then
 	    pkglist="$pkglist $pkgname$PKG_SUFX"
 	else
 	    fatal_later "$pkgname - no binary package found"
@@ -398,17 +435,25 @@ list_packages()
     printf "$pairlist" | ${TSORT}
     }
 
-pkgdir2pkgname()
+pkgdir2pkgnames()
     {
     pkgdir=$1
+    if [ -z "$pkgdir" ] ; then
+        fatal "blank pkgdir in pkgdir2pkgnames()"
+    fi
+    oIFS="$IFS"
+    IFS="
+"
+    # PKGDB is a newline separated list "pkgdir: pkgnamever[ pkgnamever ..] "
     for pkgline in $PKGDB ; do
-	case $pkgline in
+	case "$pkgline" in
 	    "$pkgdir:"*)
-		echo $pkgline | ${SED} 's/[^:]*://'
-		return;
+		echo $pkgline | ${SED} -e 's/[^:]*: //' -e 's/ $//'
+		break;
 	    ;;
 	esac
     done
+    IFS="$oIFS"
     }
 
 determine_tags()
@@ -666,6 +711,15 @@ run_cmd_su()
     fi
     }
 
+uncompress_filter()
+    {
+    case "$1" in
+	*.gz) ${GZCAT} ;;
+	*.bz2) ${BZCAT} ;;
+	*)	cat ;;
+    esac
+    }
+
 set_path()
     {
     arg=$1
@@ -727,11 +781,12 @@ verbose_var()
     if [ -n "$opt_v" ] ; then
 	var=$1
 	shift
-	verbose Variable $var = $(eval echo \$$var) $@
+	verbose Variable: $var = $(eval echo \$$var) $@
     fi
     }
 
-args=$(getopt BC:D:L:P:U:abcfghiklNnpqrsuv "$@")
+original_argv="$@"
+args=$(getopt BC:D:L:P:U:abcfghiklNnpqrsuv "$@" || true)
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -784,11 +839,14 @@ if [ $# != 0 ];then
     usage "Additional argument ($*) given"
 fi
 
+verbose "ARGV: $original_argv"
+
 # Hide PKG_PATH to avoid breakage in 'make' calls
 saved_PKG_PATH=$PKG_PATH
 unset PKG_PATH || true
 
 test -n "$AWK"	      || AWK="@AWK@"
+test -n "$BZCAT"      || BZCAT="@BZCAT@"
 test -n "$GREP"	      || GREP="@GREP@"
 test -n "$GZCAT"      || GZCAT="@GZCAT@"
 test -n "$GZIP_CMD"   || GZIP_CMD="@GZIP_CMD@"
@@ -806,6 +864,7 @@ test -n "$SED"	      || SED="@SED@"
 test -n "$SORT"	      || SORT="@SORT@"
 test -n "$TSORT"      || TSORT="@TSORT@"
 test -n "$XARGS"      || XARGS="@XARGS@"
+test -n "$PKG_SYSCONFDIR"  || PKG_SYSCONFDIR="@PKG_SYSCONFDIR@"
 
 MY_TMPDIR=`${MKTEMP} -d ${TMPDIR-/tmp}/${0##*/}.XXXXXX`
 test -n "$MY_TMPDIR" || fatal "Couldn't create temporary directory."
@@ -873,23 +932,26 @@ if [ -n "$opt_N" ]; then
 	done
 fi
 
-AWK_PARSE_SUMMARY='$1=="PKGNAME"{pkgname=$2} $1=="PKGPATH"{pkgpath=$2} NF==0{if (pkgpath && pkgname) print pkgpath ":" pkgname; pkgpath=""; pkgname=""} END{if (pkgpath && pkgname) print pkgpath ":" pkgname}'
-
 if [ -n "$opt_b" -a -z "$opt_s" ] ; then
     case $PACKAGES in
 	http://*|ftp://*)
-	    PKGDB=`ftp -o - $PACKAGES/$SUMMARY_FILE | ${GZIP_CMD} -cd \
-		| ${AWK} -F= "$AWK_PARSE_SUMMARY"`
-	    if [ -z "$PKGDB" ]
-	    then
-		PKGDB=`ftp -o - $PACKAGES/$OLD_SUMMARY_FILE`
-	    fi;;
+	    for summary_file in $SUMMARY_FILES ; do
+		verbose "parse pkg_summary $PACKAGES/$summary_file"
+	        PKGDB="$(ftp -o - $PACKAGES/$summary_file \
+		    | uncompress_filter $summary_file | bin_pkg_info2pkgdb)"
+		if [ -n "$PKGDB" ]; then
+		    break
+		fi
+	    done
+	    ;;
 	*)
 	    if [ -d "$PACKAGES" ] ; then
-		PKGDB=$(get_bin_pkg_info | bin_pkg_info2pkgdb)
+		PKGDB="$(get_bin_pkg_info | bin_pkg_info2pkgdb)"
 		PKGSRCDIR=NONE
-	    fi;;
+	    fi
+	    ;;
     esac
+    verbose "PKGDB entries: $(echo "$PKGDB"|wc -l)"
 fi
 
 if [ -n "$opt_g" ]; then
