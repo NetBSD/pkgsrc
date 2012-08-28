@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2012/07/18 16:10:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2012/08/28 12:42:00 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
@@ -36,7 +36,6 @@ LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/xulrunner -Wl,-rpath,${PREFIX}/lib
 pre-configure:
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC}/js/src && autoconf
-	cd ${WRKSRC}/nsprpub && autoconf
 
 post-install:
 	# XXX fix the pkg-config files instead

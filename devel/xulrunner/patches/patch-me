@@ -1,10 +1,10 @@
-$NetBSD: patch-me,v 1.5 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-me,v 1.6 2012/08/28 12:42:01 ryoon Exp $
 
 Add DragonFly support.
 
---- security/nss/lib/freebl/Makefile.orig	2009-06-29 18:15:13.000000000 +0200
+--- security/nss/lib/freebl/Makefile.orig	2012-08-08 20:20:56.000000000 +0000
 +++ security/nss/lib/freebl/Makefile
-@@ -212,7 +212,7 @@ endif
+@@ -279,7 +279,7 @@ endif
  # to bind the blapi function references in FREEBLVector vector
  # (ldvector.c) to the blapi functions defined in the freebl
  # shared libraries.
