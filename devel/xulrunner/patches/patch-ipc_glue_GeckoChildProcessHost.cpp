@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.4 2012/08/28 23:27:10 ryoon Exp $
 
---- ipc/glue/GeckoChildProcessHost.cpp.orig	2012-08-08 20:20:07.000000000 +0000
+--- ipc/glue/GeckoChildProcessHost.cpp.orig	2012-08-24 22:55:37.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
 @@ -410,7 +410,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So

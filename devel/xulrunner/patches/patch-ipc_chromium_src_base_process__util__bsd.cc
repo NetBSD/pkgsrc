@@ -1,10 +1,8 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.6 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.7 2012/08/28 23:27:10 ryoon Exp $
 
-# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
-
---- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-08-13 05:21:05.000000000 +0000
+--- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-08-28 18:53:59.000000000 +0000
 +++ ipc/chromium/src/base/process_util_bsd.cc
-@@ -0,0 +1,320 @@
+@@ -0,0 +1,318 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -34,15 +32,13 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.6 2012/08/28 12:4
 +#include "base/string_tokenizer.h"
 +#include "base/string_util.h"
 +
-+#ifdef OS_NETBSD
++#if defined(_POSIX_SPAWN) && _POSIX_SPAWN > 0
++#define HAVE_POSIX_SPAWN	1
++#elif defined(OS_NETBSD)
 +#include <sys/param.h>
 +#if __NetBSD_Version__ >= 599006500
 +#define HAVE_POSIX_SPAWN	1
 +#endif
-+#endif
-+
-+#if defined(_POSIX_SPAWN) && _POSIX_SPAWN > 0
-+#define HAVE_POSIX_SPAWN	1
 +#endif
 +
 +#ifndef __dso_public

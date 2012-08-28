@@ -1,11 +1,17 @@
-$NetBSD: patch-mm,v 1.15 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-mm,v 1.16 2012/08/28 23:27:10 ryoon Exp $
 
---- toolkit/library/Makefile.in.orig	2012-08-08 20:21:05.000000000 +0000
+--- toolkit/library/Makefile.in.orig	2012-08-24 22:56:06.000000000 +0000
 +++ toolkit/library/Makefile.in
-@@ -535,6 +535,19 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -535,6 +535,25 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
  endif
  
++ifneq (,$(filter DragonFly FreeBSD NetBSD OpenBSD,$(OS_ARCH)))
++OS_LIBS += $(call EXPAND_LIBNAME,kvm)
++# keep `environ' unresolved, see bug 14426 for binutils
++EXTRA_DSO_LDOPTS += -Wl,--warn-unresolved-symbols
++endif
++
 +ifneq (,$(filter DragonFly FreeBSD,$(OS_ARCH)))
 +EXTRA_DSO_LDOPTS += -lplc4 -lplds4 -lnspr4 -lnssutil3
 +endif
