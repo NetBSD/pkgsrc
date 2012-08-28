@@ -1,8 +1,8 @@
-$NetBSD: patch-zb,v 1.7 2008/08/11 12:14:10 martti Exp $
+$NetBSD: patch-feature.h,v 1.1 2012/08/28 05:59:39 morr Exp $
 
---- src/feature.h.orig	2008-08-06 14:00:39.000000000 +0300
-+++ src/feature.h	2008-08-11 12:59:23.000000000 +0300
-@@ -552,7 +552,7 @@
+--- src/feature.h.orig	2012-05-25 09:26:32.000000000 +0000
++++ src/feature.h
+@@ -559,7 +559,7 @@
   *			(used only with NO_BUILTIN_TCAPS not defined).
   */
  #ifdef HAVE_TGETENT
