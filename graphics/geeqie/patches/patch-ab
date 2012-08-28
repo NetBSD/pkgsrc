@@ -1,4 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2010/09/25 12:29:01 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2012/08/28 00:30:45 gdt Exp $
+
+Generate html docs in build phase (instead of install phase).
+gnome-doc-tool seems to ignore "-o html" so manually generate
+the same effect.
+
+Solves PLIST problem due to missing html files.
+
+This is not know to be reported upstream.
 
 --- doc/Makefile.in.orig	2010-09-25 12:02:12.000000000 +0000
 +++ doc/Makefile.in
