@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.4 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-aj,v 1.5 2012/08/28 23:27:10 ryoon Exp $
 
---- profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2012-08-08 20:20:55.000000000 +0000
+--- profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2012-08-24 22:56:00.000000000 +0000
 +++ profile/dirserviceprovider/src/nsProfileLock.cpp
 @@ -391,6 +391,7 @@ nsresult nsProfileLock::LockWithSymlink(
  #endif

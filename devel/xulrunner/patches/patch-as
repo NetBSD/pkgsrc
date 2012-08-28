@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.6 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-as,v 1.7 2012/08/28 23:27:10 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2012-08-08 20:20:10.000000000 +0000
+--- js/src/configure.in.orig	2012-08-24 22:55:39.000000000 +0000
 +++ js/src/configure.in
 @@ -786,7 +786,7 @@ EOF
                  AC_LANG_RESTORE
