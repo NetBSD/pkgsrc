@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2012/08/03 10:35:31 abs Exp $
+# $NetBSD: Makefile,v 1.80 2012/08/28 12:12:26 abs Exp $
 
-DISTNAME=	pkg_chk-2.0.4
+DISTNAME=	pkg_chk-2.0.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -31,7 +31,7 @@ SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
 SUBST_MESSAGE.vars=	Configuring sources.
 SUBST_FILES.vars=	pkg_chk.sh pkg_chk.8
-SUBST_VARS.vars=	AWK GREP GZCAT GZIP_CMD ID MAKE MAKECONF MKTEMP \
+SUBST_VARS.vars=	AWK BZCAT GREP GZCAT GZIP_CMD ID MAKE MAKECONF MKTEMP \
 			PKG_ADD PKG_ADMIN PKG_DELETE PKG_INFO \
 			SED SH SORT TSORT PREFIX PKG_DBDIR XARGS
 
