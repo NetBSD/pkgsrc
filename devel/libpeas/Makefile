@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/23 13:44:49 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/28 07:57:31 marino Exp $
 #
 
 DISTNAME=	libpeas-1.4.0
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
