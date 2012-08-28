@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/05/10 22:16:54 dholland Exp $
+$NetBSD: distinfo,v 1.6 2012/08/28 17:14:13 is Exp $
 
-SHA1 (phoon_01apr1995.tar.gz) = b0e81c9cd6f1d332bc25340c12e1f0fcc274c8b5
-RMD160 (phoon_01apr1995.tar.gz) = e5521bc9a78b34070f5072a112bf99d59f3ed7ac
-Size (phoon_01apr1995.tar.gz) = 15769 bytes
-SHA1 (patch-aa) = 3c51027cf81895628774dd59dd002b62668b8560
+SHA1 (phoon_29jun2005.tar.gz) = d646af184b83e1a4104fe82588daadae2938e08c
+RMD160 (phoon_29jun2005.tar.gz) = 5a03f83965e8b6dd490a6fffd0ec6bf36d155853
+Size (phoon_29jun2005.tar.gz) = 17450 bytes
+SHA1 (patch-aa) = 96167efc32d02cbd4b17f096438d03b034d6ac78
+SHA1 (patch-ab) = 2a2aa975027dad5392a69c1238c2805417484c32
+SHA1 (patch-ac) = 5fe9ed29dfdcfa61405eb1d9baab6f20f640dd93
