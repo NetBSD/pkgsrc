@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2703 2012/08/27 22:22:01 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2704 2012/08/28 00:59:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4214,3 +4214,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ikiwiki to 3.20120725 [schmonz 2012-08-27]
 	Updated graphics/geeqie to 1.1 [wiz 2012-08-27]
 	Updated devel/ccache to 3.1.8 [wiz 2012-08-27]
+	Updated editors/emacs24 to 24.2 [mef 2012-08-28]
+	Updated editors/emacs24-nox11 to 24.2 [mef 2012-08-28]
