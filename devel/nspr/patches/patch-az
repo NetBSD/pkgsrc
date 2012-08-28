@@ -1,8 +1,21 @@
-$NetBSD: patch-az,v 1.1 2012/04/18 20:57:33 ryoon Exp $
+$NetBSD: patch-az,v 1.2 2012/08/28 13:29:17 ryoon Exp $
 
---- nsprpub/pr/src/pthreads/ptthread.c.orig	2009-11-02 22:43:08.000000000 +0100
+https://bugzilla.mozilla.org/show_bug.cgi?id=782111
+
+--- nsprpub/pr/src/pthreads/ptthread.c.orig	2012-06-22 01:36:02.000000000 +0000
 +++ nsprpub/pr/src/pthreads/ptthread.c
-@@ -1089,12 +1089,12 @@ PR_IMPLEMENT(void) PR_ProcessExit(PRIntn
+@@ -21,6 +21,10 @@
+ #include <signal.h>
+ #include <dlfcn.h>
+ 
++#if defined(OPENBSD) || defined(FREEBSD) || defined(DRAGONFLY)
++#include <pthread_np.h>
++#endif
++
+ #ifdef SYMBIAN
+ /* In Open C sched_get_priority_min/max do not work properly, so we undefine
+  * _POSIX_THREAD_PRIORITY_SCHEDULING here.
+@@ -1041,12 +1045,12 @@ PR_IMPLEMENT(void) PR_ProcessExit(PRIntn
      _exit(status);
  }
  
@@ -17,3 +30,25 @@ $NetBSD: patch-az,v 1.1 2012/04/18 20:57:33 ryoon Exp $
  #endif
  }
  
+@@ -1619,7 +1623,7 @@ PR_IMPLEMENT(PRStatus) PR_SetCurrentThre
+ {
+     PRThread *thread;
+     size_t nameLen;
+-    int result;
++    int result = 0;
+ 
+     if (!name) {
+         PR_SetError(PR_INVALID_ARGUMENT_ERROR, 0);
+@@ -1637,8 +1641,10 @@ PR_IMPLEMENT(PRStatus) PR_SetCurrentThre
+         return PR_FAILURE;
+     memcpy(thread->name, name, nameLen + 1);
+ 
+-#if defined(OPENBSD) || defined(FREEBSD)
+-    result = pthread_set_name_np(thread->id, name);
++#if defined(OPENBSD) || defined(FREEBSD) || defined(DRAGONFLY)
++    pthread_set_name_np(thread->id, name);
++#elif defined(NETBSD)
++    pthread_setname_np(thread->id, "%s", (void *)name);
+ #else /* not BSD */
+     /*
+      * On OSX, pthread_setname_np is only available in 10.6 or later, so test
