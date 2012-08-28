@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2010/12/20 14:03:39 tonio Exp $
+# $NetBSD: options.mk,v 1.43 2012/08/28 20:15:41 tonio Exp $
 
 # Global and legacy options
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-smtp
+PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 # Comment the following line out on updates.
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
@@ -87,6 +87,13 @@ CONFIGURE_ARGS+=	--disable-smime
 ### Header cache
 ###
 .if !empty(PKG_OPTIONS:Mmutt-hcache)
+.  if !empty(PKG_OPTIONS:Mtokyocabinet)
+.  include "../../databases/tokyocabinet/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hcache
+CONFIGURE_ARGS+=	--enable-tokyocabinet
+CONFIGURE_ARGS+=	--without-gdbm
+CONFIGURE_ARGS+=	--without-bdb
+.  else
 BDB_ACCEPTED=		db4 db5
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .  include "../../mk/bdb.buildlink3.mk"
@@ -97,6 +104,7 @@ CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BDBBASE}/include
 CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
 CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
