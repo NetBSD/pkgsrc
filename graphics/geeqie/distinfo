@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/08/27 22:19:32 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/08/28 00:30:44 gdt Exp $
 
 SHA1 (geeqie-1.1.tar.gz) = 77167479e91e03d9512535a146c5d2d77941257f
 RMD160 (geeqie-1.1.tar.gz) = 060c62c3db32fe4bc05aa6dccd052360d3aac3cf
 Size (geeqie-1.1.tar.gz) = 1966211 bytes
-SHA1 (patch-ab) = 7a8a882489f9a6c9ea810051229a41803954be72
-SHA1 (patch-ac) = 4109912f790351c4cc14d6db753c9571a421ae36
+SHA1 (patch-ab) = a2aa37f813b32b216410515e6e80fe8fdc9c6803
+SHA1 (patch-ac) = 531d7338f1c42c62a738aa8fb4253b3324e71458
