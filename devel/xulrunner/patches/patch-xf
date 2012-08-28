@@ -1,8 +1,8 @@
-$NetBSD: patch-xf,v 1.3 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-xf,v 1.4 2012/08/28 23:27:10 ryoon Exp $
 
 NetBSD/m68k xptcall support code. From pkgsrc/www/firefox/patch-ae.
 
---- xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp.orig	2012-08-08 20:21:11.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp.orig	2012-08-24 22:56:10.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp
 @@ -91,17 +91,27 @@ extern "C" {
      }
