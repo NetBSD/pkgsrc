@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.4 2012/08/13 06:38:50 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/08/28 00:55:52 mef Exp $
 
-SHA1 (emacs-24.1.tar.gz) = f064396724a27c83b79b2d890d188abebaa5975e
-RMD160 (emacs-24.1.tar.gz) = 0fed00042339f46b29449bd561d2f881d13d8d38
-Size (emacs-24.1.tar.gz) = 51473111 bytes
+SHA1 (emacs-24.2.tar.gz) = 5fc4fe7797f821f2021ac415a81f5f190c52c0b2
+RMD160 (emacs-24.2.tar.gz) = 26f6c2b671ed7f160875d62e47c89afec085110f
+Size (emacs-24.2.tar.gz) = 51471017 bytes
 SHA1 (patch-aa) = dc41270debcdeba46056590ff99e72e79bd04729
 SHA1 (patch-ab) = 3021afead5011aa864a2734eeb72136c36580fb2
 SHA1 (patch-ad) = adc347ccd6edeb6e7ad96eeb98d6ee64176fb143
 SHA1 (patch-ag) = 3e6ee4774189185af10eada9c935120491318313
-SHA1 (patch-lisp_files.el) = 9963e3b6485ae569818f64ab878c3eb46895333d
