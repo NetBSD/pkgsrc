@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.7 2007/06/19 14:19:03 dmcmahill Exp $
+$NetBSD: patch-configure,v 1.1 2012/08/28 05:59:39 morr Exp $
 
 use the right shell and avoid a non-portable construct
 Needed to configure on SunOS-5.9/sparc.
 
---- src/configure.orig	2007-06-15 13:31:37.404435000 -0400
-+++ src/configure	2007-06-15 13:41:16.409314000 -0400
-@@ -1,6 +1,7 @@
+--- src/configure.orig	2010-08-15 13:02:25.000000000 +0000
++++ src/configure
+@@ -1,7 +1,8 @@
  #! /bin/sh
  # run the automatically generated configure script
 -CONFIG_STATUS=auto/config.status \
@@ -15,3 +15,4 @@ Needed to configure on SunOS-5.9/sparc.
 +$CONFIG_SHELL auto/configure "$@" --srcdir="${srcdir:-.}" --cache-file=auto/config.cache
  result=$?
  
+ # Stupid autoconf 2.5x causes this file to be left behind.
