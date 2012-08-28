@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libvpx_vpx__config__c.c,v 1.2 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-media_libvpx_vpx__config__c.c,v 1.3 2012/08/28 23:27:10 ryoon Exp $
 
---- media/libvpx/vpx_config_c.c.orig	2012-08-08 20:20:44.000000000 +0000
+--- media/libvpx/vpx_config_c.c.orig	2012-08-24 22:55:55.000000000 +0000
 +++ media/libvpx/vpx_config_c.c
 @@ -15,12 +15,12 @@
  /* 32 bit MacOS. */

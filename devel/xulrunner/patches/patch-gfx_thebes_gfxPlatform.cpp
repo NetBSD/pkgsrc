@@ -1,6 +1,6 @@
-$NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.2 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.3 2012/08/28 23:27:10 ryoon Exp $
 
---- gfx/thebes/gfxPlatform.cpp.orig	2012-08-08 20:20:04.000000000 +0000
+--- gfx/thebes/gfxPlatform.cpp.orig	2012-08-24 22:55:35.000000000 +0000
 +++ gfx/thebes/gfxPlatform.cpp
 @@ -443,6 +443,7 @@ void SourceBufferDestroy(void *srcBuffer
    static_cast<SourceSurface*>(srcBuffer)->Release();

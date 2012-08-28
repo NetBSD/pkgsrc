@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__linux.cc,v 1.1 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_file__util__linux.cc,v 1.2 2012/08/28 23:27:10 ryoon Exp $
 
---- ipc/chromium/src/base/file_util_linux.cc.orig	2012-08-08 20:20:07.000000000 +0000
+--- ipc/chromium/src/base/file_util_linux.cc.orig	2012-08-24 22:55:37.000000000 +0000
 +++ ipc/chromium/src/base/file_util_linux.cc
 @@ -28,7 +28,7 @@ bool GetTempDir(FilePath* path) {
  }

@@ -1,8 +1,8 @@
-$NetBSD: patch-md,v 1.2 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-md,v 1.3 2012/08/28 23:27:10 ryoon Exp $
 
 ???. from www/firefox/patch-ax.
 
---- security/coreconf/SunOS5.mk.orig	2012-08-08 20:20:55.000000000 +0000
+--- security/coreconf/SunOS5.mk.orig	2012-08-24 22:56:00.000000000 +0000
 +++ security/coreconf/SunOS5.mk
 @@ -147,6 +147,10 @@ endif
  endif

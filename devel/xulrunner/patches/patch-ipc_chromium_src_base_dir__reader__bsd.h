@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.1 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.2 2012/08/28 23:27:10 ryoon Exp $
 
---- ipc/chromium/src/base/dir_reader_bsd.h.orig	2012-08-13 05:21:05.000000000 +0000
+--- ipc/chromium/src/base/dir_reader_bsd.h.orig	2012-08-28 18:53:58.000000000 +0000
 +++ ipc/chromium/src/base/dir_reader_bsd.h
 @@ -0,0 +1,108 @@
 +// Copyright (c) 2010 The Chromium Authors. All rights reserved.
