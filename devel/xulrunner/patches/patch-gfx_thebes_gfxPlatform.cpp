@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.1 2012/04/26 13:30:29 ryoon Exp $
+$NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.2 2012/08/28 12:42:01 ryoon Exp $
 
---- gfx/thebes/gfxPlatform.cpp.orig	2012-04-04 04:25:21.000000000 +0000
+--- gfx/thebes/gfxPlatform.cpp.orig	2012-08-08 20:20:04.000000000 +0000
 +++ gfx/thebes/gfxPlatform.cpp
-@@ -436,6 +436,7 @@ void SourceBufferDestroy(void *srcBuffer
+@@ -443,6 +443,7 @@ void SourceBufferDestroy(void *srcBuffer
    static_cast<SourceSurface*>(srcBuffer)->Release();
  }
  
@@ -10,7 +10,7 @@ $NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.1 2012/04/26 13:30:29 ryoon Exp $
  void SourceSnapshotDetached(cairo_surface_t *nullSurf)
  {
    gfxImageSurface* origSurf =
-@@ -443,6 +444,7 @@ void SourceSnapshotDetached(cairo_surfac
+@@ -450,6 +451,7 @@ void SourceSnapshotDetached(cairo_surfac
  
    origSurf->SetData(&kSourceSurface, NULL, NULL);
  }
@@ -18,16 +18,16 @@ $NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.1 2012/04/26 13:30:29 ryoon Exp $
  
  RefPtr<SourceSurface>
  gfxPlatform::GetSourceSurfaceForSurface(DrawTarget *aTarget, gfxASurface *aSurface)
-@@ -512,6 +514,7 @@ gfxPlatform::GetSourceSurfaceForSurface(
-                                                      imgSurface->Stride(),
-                                                      format);
+@@ -544,6 +546,7 @@ gfxPlatform::GetSourceSurfaceForSurface(
+ 
+     }
  
 +    #ifdef MOZ_TREE_CAIRO
      cairo_surface_t *nullSurf =
  	cairo_null_surface_create(CAIRO_CONTENT_COLOR_ALPHA);
      cairo_surface_set_user_data(nullSurf,
-@@ -520,6 +523,7 @@ gfxPlatform::GetSourceSurfaceForSurface(
- 				NULL);
+@@ -552,6 +555,7 @@ gfxPlatform::GetSourceSurfaceForSurface(
+                                 NULL);
      cairo_surface_attach_snapshot(imgSurface->CairoSurface(), nullSurf, SourceSnapshotDetached);
      cairo_surface_destroy(nullSurf);
 +    #endif

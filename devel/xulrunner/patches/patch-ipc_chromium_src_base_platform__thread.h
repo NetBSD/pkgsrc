@@ -1,14 +1,18 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread.h,v 1.2 2012/05/08 19:29:36 martin Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread.h,v 1.3 2012/08/28 12:42:01 ryoon Exp $
 
 # Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
---- ipc/chromium/src/base/platform_thread.h.orig	2011-12-20 23:28:19.000000000 +0000
+--- ipc/chromium/src/base/platform_thread.h.orig	2012-08-08 20:20:07.000000000 +0000
 +++ ipc/chromium/src/base/platform_thread.h
-@@ -25,6 +25,8 @@ typedef pthread_t PlatformThreadHandle;
- #if defined(OS_LINUX)
+@@ -22,9 +22,11 @@ typedef void* PlatformThreadHandle;  // 
+ #elif defined(OS_POSIX)
+ #include <pthread.h>
+ typedef pthread_t PlatformThreadHandle;
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_OPENBSD)
  #include <unistd.h>
  typedef pid_t PlatformThreadId;
-+#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY) || defined (OS_NETBSD)
++#elif defined(OS_BSD)
 +typedef lwpid_t PlatformThreadId;
  #elif defined(OS_MACOSX)
  #include <mach/mach.h>

@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libvpx_vpx__config.h,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-media_libvpx_vpx__config.h,v 1.2 2012/08/28 12:42:01 ryoon Exp $
 
---- media/libvpx/vpx_config.h.orig	2012-01-29 11:24:47.000000000 +0100
-+++ media/libvpx/vpx_config.h	2012-02-09 15:07:24.000000000 +0100
-@@ -12,12 +12,12 @@
+--- media/libvpx/vpx_config.h.orig	2012-08-08 20:20:44.000000000 +0000
++++ media/libvpx/vpx_config.h
+@@ -16,12 +16,12 @@
  /* 32 bit MacOS. */
  #include "vpx_config_x86-darwin9-gcc.h"
  

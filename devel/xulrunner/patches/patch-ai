@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-ai,v 1.2 2012/08/28 12:42:01 ryoon Exp $
 
---- dbm/src/mktemp.c.orig	2009-06-29 18:14:43.000000000 +0200
+--- dbm/src/mktemp.c.orig	2012-08-08 20:19:51.000000000 +0000
 +++ dbm/src/mktemp.c
-@@ -90,7 +90,7 @@ mktemp(char *path)
+@@ -92,7 +92,7 @@ mktemp(char *path)
  static int 
  _gettemp(char *path, register int *doopen, int extraFlags)
  {    

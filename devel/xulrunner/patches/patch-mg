@@ -1,8 +1,8 @@
-$NetBSD: patch-mg,v 1.1.1.1 2009/08/05 02:59:48 tnn Exp $
+$NetBSD: patch-mg,v 1.2 2012/08/28 12:42:01 ryoon Exp $
 
 Add DragonFly support.
 
---- security/coreconf/DragonFly.mk.orig	2009-06-30 22:20:24.000000000 +0200
+--- security/coreconf/DragonFly.mk.orig	2012-08-13 05:26:35.000000000 +0000
 +++ security/coreconf/DragonFly.mk
 @@ -0,0 +1,83 @@
 +#
