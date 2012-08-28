@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2708 2012/08/28 15:55:08 tron Exp $
+$NetBSD: CHANGES-2012,v 1.2709 2012/08/28 23:32:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4221,3 +4221,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox to 15.0 [ryoon 2012-08-28]
 	Updated devel/nspr to 4.9.3.2nb1 [ryoon 2012-08-28]
 	Updated databases/phpmyadmin to 3.5.2.2nb2 [tron 2012-08-28]
+	Updated devel/xulrunner to 15.0nb1 [ryoon 2012-08-28]
+	Updated www/firefox to 15.0nb1 [ryoon 2012-08-28]
