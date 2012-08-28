@@ -1,10 +1,10 @@
-$NetBSD: patch-xpcom_typelib_xpidl_Makefile.in,v 1.1 2012/06/05 18:09:21 ryoon Exp $
+$NetBSD: patch-xpcom_typelib_xpidl_Makefile.in,v 1.2 2012/08/28 23:27:10 ryoon Exp $
 
 https://bugzilla.mozilla.org/show_bug.cgi?id=736961
 
---- xpcom/typelib/xpidl/Makefile.in.orig	2012-05-23 18:57:13.000000000 +0000
+--- xpcom/typelib/xpidl/Makefile.in.orig	2012-08-24 22:56:10.000000000 +0000
 +++ xpcom/typelib/xpidl/Makefile.in
-@@ -48,8 +48,8 @@ SDK_BINARY = \
+@@ -16,8 +16,8 @@ SDK_BINARY = \
    $(topsrcdir)/xpcom/idl-parser/xpidl.py \
    $(topsrcdir)/xpcom/idl-parser/header.py \
    $(topsrcdir)/xpcom/idl-parser/typelib.py \

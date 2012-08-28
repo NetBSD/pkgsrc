@@ -1,7 +1,7 @@
-$NetBSD: patch-js_src_jscpucfg.h,v 1.3 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-js_src_jscpucfg.h,v 1.4 2012/08/28 23:27:10 ryoon Exp $
 
 
---- js/src/jscpucfg.h.orig	2012-08-08 20:20:14.000000000 +0000
+--- js/src/jscpucfg.h.orig	2012-08-24 22:55:40.000000000 +0000
 +++ js/src/jscpucfg.h
 @@ -44,6 +44,21 @@
  #  define IS_BIG_ENDIAN 1

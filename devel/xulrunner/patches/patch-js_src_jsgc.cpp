@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_jsgc.cpp,v 1.2 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-js_src_jsgc.cpp,v 1.3 2012/08/28 23:27:10 ryoon Exp $
 
 http://gnats.netbsd.org/46622
 
---- js/src/jsgc.cpp.orig	2012-08-08 20:20:14.000000000 +0000
+--- js/src/jsgc.cpp.orig	2012-08-24 22:55:40.000000000 +0000
 +++ js/src/jsgc.cpp
 @@ -2635,8 +2635,12 @@ GetCPUCount()
          GetSystemInfo(&sysinfo);

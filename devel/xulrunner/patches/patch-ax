@@ -1,6 +1,6 @@
-$NetBSD: patch-ax,v 1.5 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-ax,v 1.6 2012/08/28 23:27:10 ryoon Exp $
 
---- xpcom/base/nsStackWalk.cpp.orig	2012-08-08 20:21:10.000000000 +0000
+--- xpcom/base/nsStackWalk.cpp.orig	2012-08-24 22:56:10.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
 @@ -23,7 +23,7 @@ struct CriticalAddress {
  };

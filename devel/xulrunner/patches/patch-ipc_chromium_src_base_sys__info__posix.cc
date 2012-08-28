@@ -1,8 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.4 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.5 2012/08/28 23:27:10 ryoon Exp $
 
-# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
-
---- ipc/chromium/src/base/sys_info_posix.cc.orig	2012-08-08 20:20:07.000000000 +0000
+--- ipc/chromium/src/base/sys_info_posix.cc.orig	2012-08-24 22:55:37.000000000 +0000
 +++ ipc/chromium/src/base/sys_info_posix.cc
 @@ -18,6 +18,11 @@
  #include <mach/mach_init.h>
