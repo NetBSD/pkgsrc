@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2012/08/28 11:46:33 he Exp $
+
+Newer tcl gives different diagnostics...
+
+--- tests/class.test.orig	2012-08-28 10:50:02.000000000 +0000
++++ tests/class.test
+@@ -37,7 +37,7 @@ test class-2.1 {Tix_InstanceCmd(): subwi
+ 
+     destroy .test
+     set a
+-} {1 {wrong # args: should be "tixPrimitive:subwidgets w type args"}}
++} {1 {wrong # args: should be "tixPrimitive:subwidgets w type ..."}}
+ 
+ test class-2.2 {Tix_InstanceCmd(): subwidgets} {
+     widgetTestClass1 .test
