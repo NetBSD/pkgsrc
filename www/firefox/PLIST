@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.55 2012/08/28 12:42:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.56 2012/08/28 16:39:19 abs Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
 lib/firefox/chrome.manifest
 ${PLIST.nobranding}lib/firefox/chrome/browser/content/branding/about-background.png
-lib/firefox/chrome/browser/content/branding/about-background.png
 lib/firefox/chrome/browser/content/branding/about-logo.png
 lib/firefox/chrome/browser/content/branding/about-wordmark.png
 lib/firefox/chrome/browser/content/branding/about.png
