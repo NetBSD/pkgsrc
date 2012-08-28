@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/08/27 17:11:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/08/28 15:54:54 tron Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
 share/doc/phpmyadmin/LICENSE
@@ -6,6 +6,14 @@ share/doc/phpmyadmin/README
 share/doc/phpmyadmin/RELEASE-DATE-${DIST_VERSION}
 share/examples/phpmyadmin/apache.conf
 share/examples/phpmyadmin/config.inc.php
+share/examples/phpmyadmin/config.manyhosts.inc.php
+share/examples/phpmyadmin/create_tables.sql
+share/examples/phpmyadmin/create_tables_drizzle.sql
+share/examples/phpmyadmin/openid.php
+share/examples/phpmyadmin/signon-script.php
+share/examples/phpmyadmin/signon.php
+share/examples/phpmyadmin/swekey.sample.conf
+share/examples/phpmyadmin/upgrade_tables_mysql_4_1_2+.sql
 share/phpmyadmin/Documentation.html
 share/phpmyadmin/Documentation.txt
 share/phpmyadmin/browse_foreigners.php
@@ -13,6 +21,7 @@ share/phpmyadmin/bs_disp_as_mime_type.php
 share/phpmyadmin/bs_play_media.php
 share/phpmyadmin/changelog.php
 share/phpmyadmin/chk_rel.php
+share/phpmyadmin/config.inc.php
 share/phpmyadmin/db_create.php
 share/phpmyadmin/db_datadict.php
 share/phpmyadmin/db_events.php
