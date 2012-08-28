@@ -1,6 +1,6 @@
-$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.h,v 1.2 2012/08/28 12:42:01 ryoon Exp $
+$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.h,v 1.3 2012/08/28 23:27:10 ryoon Exp $
 
---- dom/plugins/ipc/PluginModuleChild.h.orig	2012-08-08 20:19:54.000000000 +0000
+--- dom/plugins/ipc/PluginModuleChild.h.orig	2012-08-24 22:55:28.000000000 +0000
 +++ dom/plugins/ipc/PluginModuleChild.h
 @@ -330,7 +330,7 @@ private:
  
