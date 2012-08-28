@@ -1,48 +1,34 @@
-$NetBSD: patch-aa,v 1.3 2011/07/02 18:06:50 dholland Exp $
+$NetBSD: patch-aa,v 1.4 2012/08/28 11:46:33 he Exp $
 
---- unix/Makefile.in.orig	Thu Jan 11 02:43:46 2001
-+++ unix/Makefile.in
-@@ -217,6 +217,7 @@
- STLIB_LD = @STLIB_LD@
- 
- TCL_BIN_DIR = @TCL_BIN_DIR@
-+TCL_CC = @TCL_CC@
- TCL_DEFS = @TCL_DEFS@
- TCL_EXTRA_CFLAGS = @TCL_EXTRA_CFLAGS@
- TCL_LD_FLAGS = @TCL_LD_FLAGS@
-@@ -242,17 +243,20 @@
- TIX_DEFS = @TIX_DEFS@
- TIX_SRC_DIR = @TIX_SRC_DIR@
- 
-+X_INCLUDES = @x_includes@
-+
- AUTOCONF = autoconf
- 
- LDFLAGS = $(LDFLAGS_DEFAULT)
- 
--INCLUDES = -I$(TCL_SRC_DIR)/generic \
--	   -I$(TCL_SRC_DIR)/unix \
--	   -I$(TK_SRC_DIR)/generic \
--	   -I$(TK_SRC_DIR)/unix \
-+INCLUDES = -I$(TCL_DIR)/include/tcl/generic \
-+	   -I$(TCL_DIR)/include/tcl/unix \
-+	   -I$(TK_DIR)/include/tk/generic \
-+	   -I$(TK_DIR)/include/tk/unix \
- 	   -I$(GENERIC_DIR) \
- 	   -I$(UNIX_DIR) \
--	   -I$(WIN_DIR)
-+	   -I$(WIN_DIR) \
-+	   -I$(X_INCLUDES)
- 
- EXTRA_CFLAGS = $(TCL_DEFS) $(TK_DEFS) \
- 	$(PROTO_FLAGS) $(SECURITY_FLAGS) $(MEM_DEBUG_FLAGS) \
-@@ -343,7 +347,8 @@
- $(TIX_EXE_FILE): tixAppInit.o
- 	$(CC) @LDFLAGS@ tixAppInit.o \
- 		@TIX_BUILD_LIB_SPEC@ \
--		@TK_BUILD_LIB_SPEC@ @TCL_BUILD_LIB_SPEC@ \
-+		@TK_LIB_SPEC@ @TCL_LIB_SPEC@ \
-+		@TK_LIBS@ @TCL_LIBS@ \
- 		-o $(TIX_EXE_FILE)
- 
- #========================================================================
+IF AC_PATH_X fails, also look for /usr/X11R7.
+Additionally, also specify run-path to the X libraries.
+
+--- tclconfig/tcl.m4.orig	2007-02-21 22:09:05.000000000 +0000
++++ tclconfig/tcl.m4
+@@ -2313,7 +2313,7 @@ AC_DEFUN([TEA_PATH_UNIX_X], [
+ 	found_xincludes="no"
+ 	AC_TRY_CPP([#include <X11/Intrinsic.h>], found_xincludes="yes", found_xincludes="no")
+ 	if test "$found_xincludes" = "no"; then
+-	    dirs="/usr/unsupported/include /usr/local/include /usr/X386/include /usr/X11R6/include /usr/X11R5/include /usr/include/X11R5 /usr/include/X11R4 /usr/openwin/include /usr/X11/include /usr/sww/include"
++	    dirs="/usr/unsupported/include /usr/local/include /usr/X386/include /usr/X11R7/include /usr/X11R6/include /usr/X11R5/include /usr/include/X11R5 /usr/include/X11R4 /usr/openwin/include /usr/X11/include /usr/sww/include /usr/pkg/include"
+ 	    for i in $dirs ; do
+ 		if test -r $i/X11/Intrinsic.h; then
+ 		    AC_MSG_RESULT([$i])
+@@ -2336,7 +2336,7 @@ AC_DEFUN([TEA_PATH_UNIX_X], [
+     if test "$no_x" = yes; then
+ 	AC_MSG_CHECKING([for X11 libraries])
+ 	XLIBSW=nope
+-	dirs="/usr/unsupported/lib /usr/local/lib /usr/X386/lib /usr/X11R6/lib /usr/X11R5/lib /usr/lib/X11R5 /usr/lib/X11R4 /usr/openwin/lib /usr/X11/lib /usr/sww/X11/lib"
++	dirs="/usr/unsupported/lib /usr/local/lib /usr/X386/lib /usr/X11R7/lib /usr/X11R6/lib /usr/X11R5/lib /usr/lib/X11R5 /usr/lib/X11R4 /usr/openwin/lib /usr/X11/lib /usr/sww/X11/lib /usr/pkg/lib"
+ 	for i in $dirs ; do
+ 	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
+ 		AC_MSG_RESULT([$i])
+@@ -2349,7 +2349,7 @@ AC_DEFUN([TEA_PATH_UNIX_X], [
+ 	if test "$x_libraries" = ""; then
+ 	    XLIBSW=-lX11
+ 	else
+-	    XLIBSW="-L$x_libraries -lX11"
++	    XLIBSW="-L$x_libraries -Wl,-R,$x_libraries -lX11"
+ 	fi
+     fi
+     if test "$XLIBSW" = nope ; then
