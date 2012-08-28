@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2704 2012/08/28 00:59:01 mef Exp $
+$NetBSD: CHANGES-2012,v 1.2705 2012/08/28 11:48:09 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4216,3 +4216,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ccache to 3.1.8 [wiz 2012-08-27]
 	Updated editors/emacs24 to 24.2 [mef 2012-08-28]
 	Updated editors/emacs24-nox11 to 24.2 [mef 2012-08-28]
+	Updated x11/tk-Tix to 8.4.3 [he 2012-08-28]
