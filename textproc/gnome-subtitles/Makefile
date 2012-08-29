@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/06/14 07:43:49 sbd Exp $
+# $NetBSD: Makefile,v 1.24 2012/08/29 19:56:47 drochner Exp $
 
 DISTNAME=	gnome-subtitles-1.1
 PKGREVISION=	10
@@ -29,6 +29,7 @@ DEPENDS+=	gtkspell>=2.0:../../textproc/gtkspell
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 # for gconf-sharp
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
