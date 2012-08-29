@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/08/18 15:13:51 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/08/29 09:51:29 drochner Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -625,6 +625,8 @@ share/doc/avr-libc/avr-libc-user-manual/strtok__r_8S.html
 share/doc/avr-libc/avr-libc-user-manual/structdiv__t.html
 share/doc/avr-libc/avr-libc-user-manual/structldiv__t.html
 share/doc/avr-libc/avr-libc-user-manual/strupr_8S.html
+share/doc/avr-libc/avr-libc-user-manual/sync_off.png
+share/doc/avr-libc/avr-libc-user-manual/sync_on.png
 share/doc/avr-libc/avr-libc-user-manual/tab_a.png
 share/doc/avr-libc/avr-libc-user-manual/tab_b.png
 share/doc/avr-libc/avr-libc-user-manual/tab_h.png
