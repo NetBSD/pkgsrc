@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/08/12 07:47:29 marino Exp $
+$NetBSD: distinfo,v 1.13 2012/08/29 16:26:51 wiz Exp $
 
 SHA1 (darktable-1.0.5.tar.gz) = d007ada0f3fb3af6861de74323577b90eec3996e
 RMD160 (darktable-1.0.5.tar.gz) = e9740b7ebc045e8e52b42c41074888e423ff8c3e
@@ -12,4 +12,5 @@ SHA1 (patch-src_common_imageio__rgbe.c) = 71ac4e58bd89310323c25464bda8cb7a46c597
 SHA1 (patch-src_control_jobs_control__jobs.c) = 418bc906d7fb54d6c55060bf60f0e24b6b9d1f12
 SHA1 (patch-src_develop_blend.c) = 7411edf0903bbed7b4afcb82bc5c650100f23755
 SHA1 (patch-src_iop_lens.c) = 2c6613c4d46ec13085535e1106c32380e8fac1dc
+SHA1 (patch-src_iop_watermark.c) = 0b30f93011455fafc356dd861d1e0a078f647549
 SHA1 (patch-src_rawspeed_RawSpeed_Common.h) = c7dfc4e65ea46e7318d3d5ebdab6dcb5491c1c48
