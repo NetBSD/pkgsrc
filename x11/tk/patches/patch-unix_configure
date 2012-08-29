@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure,v 1.3 2012/08/25 11:51:24 bsiegert Exp $
+$NetBSD: patch-unix_configure,v 1.4 2012/08/29 11:55:06 dsainty Exp $
 
 --- unix/configure.orig	2012-07-25 16:45:53.000000000 +0000
 +++ unix/configure
@@ -87,6 +87,21 @@ $NetBSD: patch-unix_configure,v 1.3 2012/08/25 11:51:24 bsiegert Exp $
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
+@@ -7169,12 +7163,12 @@
+ 
+     if test "$SHARED_LIB_SUFFIX" = ""; then
+ 
+-	SHARED_LIB_SUFFIX='${VERSION}${SHLIB_SUFFIX}'
++	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}${SHLIB_SUFFIX}'
+ fi
+ 
+     if test "$UNSHARED_LIB_SUFFIX" = ""; then
+ 
+-	UNSHARED_LIB_SUFFIX='${VERSION}.a'
++	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+ fi
+ 
+     DLL_INSTALL_DIR="\$(LIB_INSTALL_DIR)"
 @@ -7190,7 +7184,7 @@ fi
  
  else
