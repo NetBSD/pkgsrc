@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2714 2012/08/29 14:15:58 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2715 2012/08/29 14:22:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Dancer to 1.3100 [wen 2012-08-29]
 	Updated fonts/p5-Font-TTF to 1.00 [wen 2012-08-29]
 	Updated net/nicovideo-dl to 0.0.20120212 [ryoon 2012-08-29]
+	Updated geography/p5-Geo-Distance to 0.19 [wen 2012-08-29]
