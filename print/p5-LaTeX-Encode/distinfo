@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/17 10:24:53 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/08/29 13:25:07 wen Exp $
 
-SHA1 (LaTeX-Encode-0.03.tar.gz) = 03d095b12bc425298fcb56cef5f0a2007cfc515b
-RMD160 (LaTeX-Encode-0.03.tar.gz) = e1dd766e6e2adf956b9c9c0eabe659c2dcab0671
-Size (LaTeX-Encode-0.03.tar.gz) = 22547 bytes
+SHA1 (LaTeX-Encode-0.05.tar.gz) = 8dbb9b37b19f41276ffb692a65d09fce468e5f62
+RMD160 (LaTeX-Encode-0.05.tar.gz) = 1ff04851d17b81df1110848b7378226cf2cfbd35
+Size (LaTeX-Encode-0.05.tar.gz) = 42547 bytes
