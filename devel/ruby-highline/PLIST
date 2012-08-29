@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/06/02 00:39:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/08/29 16:32:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/AUTHORS
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/examples/menus.rb
 ${GEM_LIBDIR}/examples/overwrite.rb
 ${GEM_LIBDIR}/examples/page_and_wrap.rb
 ${GEM_LIBDIR}/examples/password.rb
+${GEM_LIBDIR}/examples/repeat_entry.rb
 ${GEM_LIBDIR}/examples/trapping_eof.rb
 ${GEM_LIBDIR}/examples/using_readline.rb
 ${GEM_LIBDIR}/highline.gemspec
