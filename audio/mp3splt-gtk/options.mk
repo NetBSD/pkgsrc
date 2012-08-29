@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2011/10/21 20:56:00 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2012/08/29 19:56:47 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mp3splt-gtk
 PKG_SUPPORTED_OPTIONS=	gnome
@@ -12,5 +12,6 @@ CONFIGURE_ARGS+=	--disable-gnome
 .else
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 PLIST.gnome=		yes
 .endif
