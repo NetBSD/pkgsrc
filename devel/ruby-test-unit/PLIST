@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/17 15:24:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/08/29 16:47:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPL
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/test/unit/diff.rb
 ${GEM_LIBDIR}/lib/test/unit/error.rb
 ${GEM_LIBDIR}/lib/test/unit/exceptionhandler.rb
 ${GEM_LIBDIR}/lib/test/unit/failure.rb
+${GEM_LIBDIR}/lib/test/unit/fault-location-detector.rb
 ${GEM_LIBDIR}/lib/test/unit/fixture.rb
 ${GEM_LIBDIR}/lib/test/unit/notification.rb
 ${GEM_LIBDIR}/lib/test/unit/omission.rb
@@ -70,6 +71,7 @@ ${GEM_LIBDIR}/test/test-color.rb
 ${GEM_LIBDIR}/test/test-data.rb
 ${GEM_LIBDIR}/test/test-diff.rb
 ${GEM_LIBDIR}/test/test-emacs-runner.rb
+${GEM_LIBDIR}/test/test-fault-location-detector.rb
 ${GEM_LIBDIR}/test/test-fixture.rb
 ${GEM_LIBDIR}/test/test-notification.rb
 ${GEM_LIBDIR}/test/test-omission.rb
