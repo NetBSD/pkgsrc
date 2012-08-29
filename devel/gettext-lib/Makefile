@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2011/04/12 17:41:28 adam Exp $
+# $NetBSD: Makefile,v 1.53 2012/08/29 09:01:01 sbd Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-lib-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	gttli
 COMMENT=	Internationalized Message Handling Library (libintl)
 
@@ -16,6 +17,7 @@ CFLAGS+=		${CFLAGS.${ICONV_TYPE}-iconv}
 CFLAGS.gnu-iconv+=	-DHAVE_GNU_ICONV
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} localedir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	includedir=${PREFIX}/include/gettext
 
 CONFIGURE_DIRS=		gettext-runtime
 BUILD_DIRS=		gettext-runtime/intl
