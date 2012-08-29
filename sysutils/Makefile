@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2012/08/24 15:47:26 prlw1 Exp $
+# $NetBSD: Makefile,v 1.552 2012/08/29 17:18:47 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -224,6 +224,7 @@ SUBDIR+=	i810switch
 SUBDIR+=	iat
 SUBDIR+=	idesk
 SUBDIR+=	install-sh
+SUBDIR+=	intel-microcode-netbsd
 SUBDIR+=	ipa
 SUBDIR+=	ipmitool
 SUBDIR+=	ipw-firmware
