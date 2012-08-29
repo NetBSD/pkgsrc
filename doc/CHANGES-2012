@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2723 2012/08/29 16:38:34 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2724 2012/08/29 16:47:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4237,3 +4237,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-highline to 1.6.14 [taca 2012-08-29]
 	Updated devel/ruby-inline to 3.11.3 [taca 2012-08-29]
 	Updated devel/ruby-locale to 2.0.8 [taca 2012-08-29]
+	Updated devel/ruby-test-unit to 2.5.2 [taca 2012-08-29]
