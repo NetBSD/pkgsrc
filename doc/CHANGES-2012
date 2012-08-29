@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2720 2012/08/29 16:31:33 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2721 2012/08/29 16:33:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4234,3 +4234,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-fast_gettext to 0.6.9 [taca 2012-08-29]
 	Updated devel/ruby-gettext to 2.3.0 [taca 2012-08-29]
 	Updated devel/ruby-gettext_i18n_rails to 0.6.6 [taca 2012-08-29]
+	Updated devel/ruby-highline to 1.6.14 [taca 2012-08-29]
