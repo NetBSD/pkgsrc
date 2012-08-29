@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/07/31 13:50:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/08/29 16:09:01 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/doc/active_record.rdoc
 ${GEM_LIBDIR}/doc/advanced_associations.rdoc
 ${GEM_LIBDIR}/doc/association_basics.rdoc
 ${GEM_LIBDIR}/doc/cheat_sheet.rdoc
+${GEM_LIBDIR}/doc/core_extensions.rdoc
 ${GEM_LIBDIR}/doc/dataset_basics.rdoc
 ${GEM_LIBDIR}/doc/dataset_filtering.rdoc
 ${GEM_LIBDIR}/doc/mass_assignment.rdoc
@@ -70,6 +71,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.34.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.35.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.36.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.37.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.38.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
@@ -190,6 +192,8 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_interval.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_json.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_range.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_range_ops.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_row.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_row_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_statement_cache.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
@@ -238,6 +242,8 @@ ${GEM_LIBDIR}/lib/sequel/plugins/many_through_many.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/many_to_one_pk_lookup.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/nested_attributes.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/optimistic_locking.rb
+${GEM_LIBDIR}/lib/sequel/plugins/pg_row.rb
+${GEM_LIBDIR}/lib/sequel/plugins/pg_typecast_on_load.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements_safe.rb
@@ -285,6 +291,7 @@ ${GEM_LIBDIR}/spec/core/schema_generator_spec.rb
 ${GEM_LIBDIR}/spec/core/schema_spec.rb
 ${GEM_LIBDIR}/spec/core/spec_helper.rb
 ${GEM_LIBDIR}/spec/core/version_spec.rb
+${GEM_LIBDIR}/spec/core_extensions_spec.rb
 ${GEM_LIBDIR}/spec/extensions/active_model_spec.rb
 ${GEM_LIBDIR}/spec/extensions/arbitrary_servers_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_autoreloading_spec.rb
@@ -297,7 +304,6 @@ ${GEM_LIBDIR}/spec/extensions/caching_spec.rb
 ${GEM_LIBDIR}/spec/extensions/class_table_inheritance_spec.rb
 ${GEM_LIBDIR}/spec/extensions/columns_introspection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
-${GEM_LIBDIR}/spec/extensions/core_extensions_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
@@ -331,7 +337,11 @@ ${GEM_LIBDIR}/spec/extensions/pg_interval_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_json_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_range_ops_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_range_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_row_ops_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_row_plugin_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_row_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pg_statement_cache_spec.rb
+${GEM_LIBDIR}/spec/extensions/pg_typecast_on_load_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_safe_spec.rb
 ${GEM_LIBDIR}/spec/extensions/prepared_statements_spec.rb
