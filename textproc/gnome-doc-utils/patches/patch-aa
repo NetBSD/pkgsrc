@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.4 2012/08/29 19:11:12 drochner Exp $
+
+make sure pkgsrc getopt is used, native might be insufficient
+
+--- tools/gnome-doc-tool.in.orig	2011-01-10 16:13:20.000000000 +0000
++++ tools/gnome-doc-tool.in
+@@ -548,7 +548,7 @@ create_css() {
+       -lversion
+       -lhelp
+     ';
+-    options=`getopt -qn$progname $longopts -- o:vVh "$@"`
++    options=`@GETOPT@ -qn$progname $longopts -- o:vVh "$@"`
+     if [ "$?" != "0" ]; then print_help_css 1>&2; exit 1; fi
+     eval set -- "$options";
+     while [ "$1" != "--" ]; do
+@@ -604,7 +604,7 @@ convert_2html() {
+       -lversion
+       -lhelp
+     ';
+-    options=`getopt -qn$progname $longopts -- c:d:e:o:x:nvVh "$@"`
++    options=`@GETOPT@ -qn$progname $longopts -- c:d:e:o:x:nvVh "$@"`
+     if [ "$?" != "0" ]; then print_help_html $doc_format 1>&2; exit 1; fi
+     eval set -- "$options";
+     while [ "$1" != "--" ]; do
