@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2724 2012/08/29 16:47:43 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2725 2012/08/29 19:13:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4238,3 +4238,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-inline to 3.11.3 [taca 2012-08-29]
 	Updated devel/ruby-locale to 2.0.8 [taca 2012-08-29]
 	Updated devel/ruby-test-unit to 2.5.2 [taca 2012-08-29]
+	Updated pkgtools/rpm2pkg to 3.2.3 [marino 2012-08-29]
