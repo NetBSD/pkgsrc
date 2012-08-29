@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/07 10:47:50 fhajny Exp $
-${GEM_HOME}/cache/locale-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.2 2012/08/29 16:37:32 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/doc/text/news.md
 ${GEM_LIBDIR}/lib/locale.rb
 ${GEM_LIBDIR}/lib/locale/data/languages.tab.gz
 ${GEM_LIBDIR}/lib/locale/data/regions.tab.gz
+${GEM_LIBDIR}/lib/locale/driver.rb
 ${GEM_LIBDIR}/lib/locale/driver/cgi.rb
 ${GEM_LIBDIR}/lib/locale/driver/env.rb
 ${GEM_LIBDIR}/lib/locale/driver/jruby.rb
@@ -16,6 +20,7 @@ ${GEM_LIBDIR}/lib/locale/driver/win32_table.rb
 ${GEM_LIBDIR}/lib/locale/info.rb
 ${GEM_LIBDIR}/lib/locale/info/language.rb
 ${GEM_LIBDIR}/lib/locale/info/region.rb
+${GEM_LIBDIR}/lib/locale/middleware.rb
 ${GEM_LIBDIR}/lib/locale/tag.rb
 ${GEM_LIBDIR}/lib/locale/tag/cldr.rb
 ${GEM_LIBDIR}/lib/locale/tag/common.rb
@@ -26,6 +31,7 @@ ${GEM_LIBDIR}/lib/locale/tag/simple.rb
 ${GEM_LIBDIR}/lib/locale/taglist.rb
 ${GEM_LIBDIR}/lib/locale/util/memoizable.rb
 ${GEM_LIBDIR}/lib/locale/version.rb
+${GEM_LIBDIR}/locale.gemspec
 ${GEM_LIBDIR}/samples/cgi/README
 ${GEM_LIBDIR}/samples/cgi/cookie.cgi
 ${GEM_LIBDIR}/samples/cgi/http.rb
@@ -34,16 +40,17 @@ ${GEM_LIBDIR}/samples/cgi/locale.css
 ${GEM_LIBDIR}/samples/rack/README
 ${GEM_LIBDIR}/samples/rack/hello_rack.rb
 ${GEM_LIBDIR}/samples/rack/hello_rack.ru
+${GEM_LIBDIR}/samples/rack/locale_rack.rb
 ${GEM_LIBDIR}/samples/sample_1.rb
 ${GEM_LIBDIR}/samples/sample_info.rb
-${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/test_detect_cgi.rb
 ${GEM_LIBDIR}/test/test_detect_general.rb
 ${GEM_LIBDIR}/test/test_driver_jruby.rb
 ${GEM_LIBDIR}/test/test_driver_win32.rb
 ${GEM_LIBDIR}/test/test_info.rb
+${GEM_LIBDIR}/test/test_locale.rb
 ${GEM_LIBDIR}/test/test_memoizable.rb
 ${GEM_LIBDIR}/test/test_tag.rb
 ${GEM_LIBDIR}/test/test_taglist.rb
 ${GEM_LIBDIR}/test/test_thread.rb
-${GEM_HOME}/specifications/locale-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
