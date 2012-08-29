@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2012/08/23 15:18:07 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2012/08/29 19:11:12 drochner Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.20.10
+PKGREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.20/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.16:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 DEPENDS+=	docbook-xml>=4.5:../../textproc/docbook-xml
+DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
 USE_TOOLS+=		intltool pkg-config gmake gawk msgfmt bash:run
 GNU_CONFIGURE=		YES
@@ -28,6 +30,11 @@ CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN:Q}
 
 PKGCONFIG_OVERRIDE=	tools/gnome-doc-utils.pc.in
 PKGCONFIG_OVERRIDE+=	xml2po/xml2po.pc.in
+
+SUBST_CLASSES+=		getopt
+SUBST_STAGE.getopt=	pre-configure
+SUBST_FILES.getopt=	tools/gnome-doc-tool.in
+SUBST_SED.getopt=	"s|@GETOPT@|${LOCALBASE}/bin/getopt|g"
 
 PY_PATCHPLIST=		yes
 
