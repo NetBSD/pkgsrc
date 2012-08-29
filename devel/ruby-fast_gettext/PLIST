@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/28 15:31:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/08/29 16:11:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -78,4 +78,5 @@ ${GEM_LIBDIR}/spec/locale/yaml/en.yml
 ${GEM_LIBDIR}/spec/locale/yaml/notfound.yml
 ${GEM_LIBDIR}/spec/obsolete_locale/de/test.po
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/be_accessible_matcher.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
