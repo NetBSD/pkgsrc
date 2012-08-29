@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/08/12 22:00:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/29 11:22:12 obache Exp $
 #
 
 DISTNAME=		scummvm-tools-1.4.0
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=		.tar.bz2
