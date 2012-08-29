@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/15 17:16:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/08/29 15:58:26 marino Exp $
 lib/postgresql/plpython.so
 share/locale/de/LC_MESSAGES/plpython-8.4.mo
 share/locale/es/LC_MESSAGES/plpython-8.4.mo
@@ -7,5 +7,6 @@ share/locale/it/LC_MESSAGES/plpython-8.4.mo
 share/locale/ja/LC_MESSAGES/plpython-8.4.mo
 share/locale/pl/LC_MESSAGES/plpython-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/plpython-8.4.mo
+share/locale/ru/LC_MESSAGES/plpython-8.4.mo
 share/locale/tr/LC_MESSAGES/plpython-8.4.mo
 share/locale/zh_CN/LC_MESSAGES/plpython-8.4.mo
