@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/08/27 10:12:24 drochner Exp $
+# $NetBSD: Makefile,v 1.59 2012/08/29 16:26:58 marino Exp $
 
 DISTNAME=	stellarium-0.11.4a
 CATEGORIES=	misc
@@ -31,6 +31,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 #.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
