@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2012/07/18 06:37:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2012/08/30 16:24:48 adam Exp $
 @pkgdir var/run/wesnothd
 bin/wesnoth
 bin/wesnothd
@@ -45,6 +45,8 @@ man/sr@ijekavianlatin/man6/wesnothd.6
 man/sr@latin/man6/wesnoth.6
 man/sr@latin/man6/wesnothd.6
 man/tr/man6/wesnothd.6
+man/uk/man6/wesnoth.6
+man/uk/man6/wesnothd.6
 man/vi/man6/wesnoth.6
 man/vi/man6/wesnothd.6
 man/zh_CN/man6/wesnoth.6
@@ -11497,6 +11499,7 @@ share/wesnoth/data/tools/unit_tree/html_output.py
 share/wesnoth/data/tools/unit_tree/menu.js
 share/wesnoth/data/tools/unit_tree/overview.py
 share/wesnoth/data/tools/unit_tree/style.css
+share/wesnoth/data/tools/unit_tree/wiki_output.py
 share/wesnoth/data/tools/vim/formulaai.vim
 share/wesnoth/data/tools/wesnoth/README
 share/wesnoth/data/tools/wesnoth/__init__.py
