@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.8 2012/08/30 18:54:42 christos Exp $
+
+--- modules/gui/qt4/components/interface_widgets.cpp	2011-07-12 21:11:24.000000000 +0300
++++ modules/gui/qt4/components/interface_widgets.cpp	2012-08-30 17:46:45.000000000 +0300
+@@ -524,14 +524,14 @@
+         + qtr( "Double click to jump to a chosen time position" ) );
+     bufTimer->setSingleShot( true );
+ 
+-    CONNECT( THEMIM->getIM(), positionUpdated( float, int64_t, int ),
+-              this, setDisplayPosition( float, int64_t, int ) );
++    CONNECT( THEMIM->getIM(), positionUpdated( float, putime_t, int ),
++              this, setDisplayPosition( float, putime_t, int ) );
+     CONNECT( THEMIM->getIM(), cachingChanged( float ),
+               this, updateBuffering( float ) );
+     CONNECT( bufTimer, timeout(), this, updateBuffering() );
+ }
+ 
+-void TimeLabel::setDisplayPosition( float pos, int64_t t, int length )
++void TimeLabel::setDisplayPosition( float pos, putime_t t, int length )
+ {
+     showBuffering = false;
+     bufTimer->stop();

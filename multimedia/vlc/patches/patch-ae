@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.7 2012/08/30 18:54:42 christos Exp $
+
+--- modules/gui/qt4/components/interface_widgets.hpp	2011-07-12 21:11:24.000000000 +0300
++++ modules/gui/qt4/components/interface_widgets.hpp	2012-08-30 17:46:48.000000000 +0300
+@@ -146,7 +146,7 @@
+ signals:
+     void timeLabelDoubleClicked();
+ private slots:
+-    void setDisplayPosition( float pos, int64_t time, int length );
++    void setDisplayPosition( float pos, putime_t time, int length );
+     void setDisplayPosition( float pos );
+     void updateBuffering( float );
+     void updateBuffering();

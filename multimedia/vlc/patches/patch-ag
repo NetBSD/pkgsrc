@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.4 2012/08/30 18:54:42 christos Exp $
+
+--- modules/gui/qt4/input_manager.hpp	2011-07-12 21:11:24.000000000 +0300
++++ modules/gui/qt4/input_manager.hpp	2012-08-30 17:45:48.000000000 +0300
+@@ -36,6 +36,7 @@
+ #include <QObject>
+ #include <QEvent>
+ 
++typedef int64_t putime_t;
+ 
+ enum {
+     PositionUpdate_Type = QEvent::User + IMEventType + 1,
+@@ -200,11 +201,11 @@
+ 
+ private slots:
+     void togglePlayPause();
+-    void AtoBLoop( float, int64_t, int );
++    void AtoBLoop( float, putime_t, int );
+ 
+ signals:
+     /// Send new position, new time and new length
+-    void positionUpdated( float , int64_t, int );
++    void positionUpdated( float , putime_t, int );
+     void seekRequested( float pos );
+     void rateChanged( float );
+     void nameChanged( const QString& );
