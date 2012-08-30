@@ -1,0 +1,21 @@
+$NetBSD: patch-configure-libafs,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+--- configure-libafs.orig	2012-04-23 07:35:47.000000000 -0400
++++ configure-libafs	2012-04-28 19:07:36.000000000 -0400
+@@ -6442,6 +6442,7 @@
+     *_nbsd40)   AFS_PARAM_COMMON=param.nbsd40.h  ;;
+     *_nbsd50)   AFS_PARAM_COMMON=param.nbsd50.h  ;;
+     *_nbsd60)   AFS_PARAM_COMMON=param.nbsd60.h  ;;
++    *_nbsd70)   AFS_PARAM_COMMON=param.nbsd70.h  ;;
+     *_obsd31)   AFS_PARAM_COMMON=param.obsd31.h  ;;
+     *_obsd32)   AFS_PARAM_COMMON=param.obsd32.h  ;;
+     *_obsd33)   AFS_PARAM_COMMON=param.obsd33.h  ;;
+@@ -7082,7 +7083,7 @@
+ 		XCFLAGS="-O2 -pipe -fPIC"
+ 		;;
+ 
+-	*nbsd2*|*nbsd3*|*nbsd4*|*nbsd5*|*nbsd6*)
++	*nbsd2*|*nbsd3*|*nbsd4*|*nbsd5*|*nbsd6*|*nbsd7*)
+ 		MT_CFLAGS='-pthread -D_REENTRANT'
+ 		PAM_OPTMZ=-O2
+ 		PAM_CFLAGS="-pipe -fPIC"

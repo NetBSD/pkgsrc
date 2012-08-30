@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+--- configure.orig	2010-12-17 16:06:16.000000000 +0000
++++ configure
+@@ -5999,6 +5999,22 @@ echo $ECHO_N "checking your AFS sysname.
+ 			AFS_PARAM_COMMON=param.nbsd40.h
+ 			AFS_SYSNAME="i386_nbsd40"
+ 			;;
++		i?86-*-netbsd*5.[0-8]*)
++			AFS_PARAM_COMMON=param.nbsd50.h
++			AFS_SYSNAME="i386_nbsd50"
++			;;
++		x86_64-*-netbsd*5.[0-8]*)
++			AFS_PARAM_COMMON=param.nbsd50.h
++			AFS_SYSNAME="amd64_nbsd50"
++			;;
++		i?86-*-netbsd*5.99*)
++			AFS_PARAM_COMMON=param.nbsd60.h
++			AFS_SYSNAME="i386_nbsd60"
++			;;
++		x86_64-*-netbsd*5.99*)
++			AFS_PARAM_COMMON=param.nbsd60.h
++			AFS_SYSNAME="amd64_nbsd60"
++			;;
+ 		hppa*-hp-hpux11.0*)
+ 			AFS_SYSNAME="hp_ux110"
+ 			;;
+@@ -24555,7 +24571,7 @@ case $AFS_SYSNAME in
+ 		YACC="byacc"
+ 		;;
+ 
+-	*nbsd2*|*nbsd3*|*nbsd4*)
++	*nbsd2*|*nbsd3*|*nbsd4*|*nbsd5*|*nbsd6*)
+ 		LEX="flex -l"
+ 		MT_CFLAGS='${XCFLAGS} -DAFS_PTHREAD_ENV -D_REENTRANT '
+ 		MT_LIBS="-lpthread" # XXX -pthread soon
+@@ -24563,7 +24579,14 @@ case $AFS_SYSNAME in
+ 		SHLIB_LDFLAGS="-shared -Xlinker -x"
+ 		SHLIB_LINKER="${MT_CC} -shared"
+ 		TXLIBS="/usr/lib/libcurses.so"
+-		XCFLAGS="-O2 -pipe"
++		case $AFS_SYSNAME in
++		amd64_nbsd*)
++			XCFLAGS="-O2 -pipe -fPIC"
++			;;
++		*_nbsd*)
++			XCFLAGS="-O2 -pipe"
++			;;
++		esac
+ 		YACC="yacc"
+ 		;;
+ 
+@@ -25490,6 +25513,8 @@ if test "x$enable_optimize_lwp" = "xno";
+   LWP_OPTMZ=
+ fi
+ 
++XCFLAGS="${XCFLAGS} ${CFLAGS}"
++
+ if test "x$enable_strip_binaries" != "xno"; then
+   if test "x$enable_strip_binaries" = "xmaybe" -a "x$enable_debug" = "xyes"; then
+     NO_STRIP_BIN=-ns
