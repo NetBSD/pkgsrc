@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/16 19:10:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/30 07:54:29 drochner Exp $
 #
 
 DISTNAME=	gnome-chemistry-utils-0.12.13
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--disable-update-databases
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../misc/goffice0.8/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
