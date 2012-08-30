@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/08/17 01:02:06 mef Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/08/30 07:57:51 drochner Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
@@ -46,6 +46,8 @@ ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/tab_h.png
@@ -86,6 +88,8 @@ ${PLIST.latex}share/doc/doxygen/examples/author/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/open.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/pages.html
+${PLIST.latex}share/doc/doxygen/examples/author/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/author/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/author/html/tab_h.png
@@ -138,6 +142,8 @@ ${PLIST.latex}share/doc/doxygen/examples/autolink/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/autolink/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/autolink/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/autolink/html/tab_h.png
@@ -178,6 +184,8 @@ ${PLIST.latex}share/doc/doxygen/examples/class/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/class/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/class/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/class/html/tab_h.png
@@ -220,6 +228,8 @@ ${PLIST.latex}share/doc/doxygen/examples/define/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/define/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/define/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/define/html/tab_h.png
@@ -357,6 +367,8 @@ ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/diagrams/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/diagrams/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/diagrams/html/tab_h.png
@@ -411,6 +423,8 @@ ${PLIST.latex}share/doc/doxygen/examples/docstring/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/docstring/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/docstring/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/docstring/html/tab_h.png
@@ -455,6 +469,8 @@ ${PLIST.latex}share/doc/doxygen/examples/enum/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/enum/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/enum/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/enum/html/tab_h.png
@@ -499,6 +515,8 @@ ${PLIST.latex}share/doc/doxygen/examples/example/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/example/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/example/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/example/html/tab_h.png
@@ -540,6 +558,8 @@ ${PLIST.latex}share/doc/doxygen/examples/file/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/file/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/file/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/file/html/tab_h.png
@@ -583,6 +603,8 @@ ${PLIST.latex}share/doc/doxygen/examples/func/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/func/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/func/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/func/html/tab_h.png
@@ -637,6 +659,8 @@ ${PLIST.latex}share/doc/doxygen/examples/group/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/group/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/group/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/group/html/tab_h.png
@@ -680,6 +704,8 @@ ${PLIST.latex}share/doc/doxygen/examples/include/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/open.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/pages.html
+${PLIST.latex}share/doc/doxygen/examples/include/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/include/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/include/html/tab_h.png
@@ -724,6 +750,8 @@ ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/jdstyle/html/tab_h.png
@@ -781,6 +809,8 @@ ${PLIST.latex}share/doc/doxygen/examples/manual/html/struct_truck.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/struct_vehicle-members.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/struct_vehicle.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/struct_vehicle.png
+${PLIST.latex}share/doc/doxygen/examples/manual/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/manual/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/tab_h.png
@@ -827,6 +857,8 @@ ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/memgrp/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/memgrp/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/memgrp/html/tab_h.png
@@ -871,6 +903,8 @@ ${PLIST.latex}share/doc/doxygen/examples/mux/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/mux/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/mux/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/mux/html/tab_h.png
@@ -912,6 +946,8 @@ ${PLIST.latex}share/doc/doxygen/examples/overload/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/overload/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/overload/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/overload/html/tab_h.png
@@ -950,6 +986,8 @@ ${PLIST.latex}share/doc/doxygen/examples/page/html/open.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/page1.html
 ${PLIST.latex}share/doc/doxygen/examples/page/html/page2.html
 ${PLIST.latex}share/doc/doxygen/examples/page/html/pages.html
+${PLIST.latex}share/doc/doxygen/examples/page/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/page/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/page/html/tab_h.png
@@ -988,6 +1026,8 @@ ${PLIST.latex}share/doc/doxygen/examples/par/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/par/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/par/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/par/html/tab_h.png
@@ -1036,6 +1076,8 @@ ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/pyexample/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/pyexample/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/pyexample/html/tab_h.png
@@ -1080,6 +1122,8 @@ ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/qtstyle/html/tab_h.png
@@ -1122,6 +1166,8 @@ ${PLIST.latex}share/doc/doxygen/examples/relates/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/relates/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/relates/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/relates/html/tab_h.png
@@ -1168,6 +1214,8 @@ ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/open.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/restypedef_8cpp.html
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/struct_coord_struct-members.html
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/struct_coord_struct.html
+${PLIST.latex}share/doc/doxygen/examples/restypedef/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/restypedef/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/restypedef/html/tab_h.png
@@ -1211,6 +1259,8 @@ ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/open.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/structcmd_8h.html
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/structcmd_8h_source.html
+${PLIST.latex}share/doc/doxygen/examples/structcmd/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/structcmd/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/structcmd/html/tab_h.png
@@ -1254,6 +1304,8 @@ ${PLIST.latex}share/doc/doxygen/examples/tag/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/tag/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/tag/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/tag/html/tab_h.png
@@ -1305,6 +1357,8 @@ ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/tclexample/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/tclexample/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/tclexample/html/tab_h.png
@@ -1354,6 +1408,8 @@ ${PLIST.latex}share/doc/doxygen/examples/template/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/nav_g.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/nav_h.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/open.png
+${PLIST.latex}share/doc/doxygen/examples/template/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/examples/template/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/examples/template/html/tab_h.png
@@ -1422,6 +1478,7 @@ ${PLIST.latex}share/doc/doxygen/html/infoflow.png
 ${PLIST.latex}share/doc/doxygen/html/install.html
 ${PLIST.latex}share/doc/doxygen/html/jquery.js
 ${PLIST.latex}share/doc/doxygen/html/langhowto.html
+${PLIST.latex}share/doc/doxygen/html/lists.html
 ${PLIST.latex}share/doc/doxygen/html/markdown.html
 ${PLIST.latex}share/doc/doxygen/html/nav_f.png
 ${PLIST.latex}share/doc/doxygen/html/nav_g.png
@@ -1439,6 +1496,8 @@ ${PLIST.latex}share/doc/doxygen/html/preprocessing.html
 ${PLIST.latex}share/doc/doxygen/html/resize.js
 ${PLIST.latex}share/doc/doxygen/html/searching.html
 ${PLIST.latex}share/doc/doxygen/html/starting.html
+${PLIST.latex}share/doc/doxygen/html/sync_off.png
+${PLIST.latex}share/doc/doxygen/html/sync_on.png
 ${PLIST.latex}share/doc/doxygen/html/tab_a.png
 ${PLIST.latex}share/doc/doxygen/html/tab_b.png
 ${PLIST.latex}share/doc/doxygen/html/tab_h.png
