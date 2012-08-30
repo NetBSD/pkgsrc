@@ -1,0 +1,41 @@
+$NetBSD: patch-configure,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+- add netbsd7
+- fix spelling of 'internal' in roken test
+
+--- configure.orig	2012-04-23 11:35:46.000000000 +0000
++++ configure
+@@ -7260,6 +7260,7 @@ case $AFS_SYSNAME in
+     *_nbsd40)   AFS_PARAM_COMMON=param.nbsd40.h  ;;
+     *_nbsd50)   AFS_PARAM_COMMON=param.nbsd50.h  ;;
+     *_nbsd60)   AFS_PARAM_COMMON=param.nbsd60.h  ;;
++    *_nbsd70)   AFS_PARAM_COMMON=param.nbsd70.h  ;;
+     *_obsd31)   AFS_PARAM_COMMON=param.obsd31.h  ;;
+     *_obsd32)   AFS_PARAM_COMMON=param.obsd32.h  ;;
+     *_obsd33)   AFS_PARAM_COMMON=param.obsd33.h  ;;
+@@ -7900,14 +7901,14 @@ case $AFS_SYSNAME in
+ 		XCFLAGS="-O2 -pipe -fPIC"
+ 		;;
+ 
+-	*nbsd2*|*nbsd3*|*nbsd4*|*nbsd5*|*nbsd6*)
++	*nbsd2*|*nbsd3*|*nbsd4*|*nbsd5*|*nbsd6*|*nbsd7*)
+ 		MT_CFLAGS='-pthread -D_REENTRANT'
+ 		PAM_OPTMZ=-O2
+ 		PAM_CFLAGS="-pipe -fPIC"
+ 		SHLIB_CFLAGS="-fPIC"
+ 		SHLIB_LDFLAGS="-shared -Xlinker -x"
+ 		SHLIB_LINKER="${MT_CC} -shared"
+-		XCFLAGS="-pipe"
++		XCFLAGS="-pipe -I/usr/include/krb5 -DHAVE_NO_KRB5_524"
+ 		;;
+ 
+ 	*nbsd15|*nbsd16)
+@@ -19663,7 +19664,7 @@ fi
+ fi
+ 
+ 
+-  if test x"$roken_root" = xinteral; then :
++  if test x"$roken_root" = xinternal; then :
+ 
+   DIR_roken=roken
+   CPPFLAGS_roken=
