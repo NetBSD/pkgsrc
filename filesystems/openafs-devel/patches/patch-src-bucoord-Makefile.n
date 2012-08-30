@@ -1,0 +1,51 @@
+$NetBSD: patch-src-bucoord-Makefile.n,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+--- src/bucoord/Makefile.in.orig	2012-04-22 23:40:23.000000000 -0400
++++ src/bucoord/Makefile.in	2012-04-28 23:27:02.000000000 -0400
+@@ -23,7 +23,7 @@
+ 	$(TOP_LIBDIR)/libopr.a \
+ 	${TOP_LIBDIR}/libafshcrypto_lwp.a
+ 
+-all: ${TOP_LIBDIR}/libbxdb.a ${TOP_INCDIR}/afs/bucoord_prototypes.h ${TOP_INCDIR}/afs/bc.h backup
++all: ${TOP_LIBDIR}/libbxdb.a ${TOP_INCDIR}/afs/bucoord_prototypes.h ${TOP_INCDIR}/afs/bc.h afs-backup
+ 
+ generated: bucoord_errs.c bc.h
+ 
+@@ -66,7 +66,7 @@
+ 
+ $(BACKOBJS): bc.h ${TOP_INCDIR}/afs/butc.h
+ 
+-backup:  $(BACKOBJS) ${LIBS}
++afs-backup:  $(BACKOBJS) ${LIBS}
+ 	$(AFS_LDRULE) $(BACKOBJS) ${LIBS} $(LIB_roken) ${XLIBS}
+ 
+ bc.h: bucoord_errs.c
+@@ -84,23 +84,23 @@
+ # Install targets
+ #
+ 
+-install: libbxdb.a backup
++install: libbxdb.a afs-backup
+ 	${INSTALL} -d ${DESTDIR}${libdir}/afs
+ 	${INSTALL} -d ${DESTDIR}${sbindir}
+ 	${INSTALL_DATA} libbxdb.a ${DESTDIR}${libdir}/afs/libbxdb.a
+-	${INSTALL_PROGRAM} backup ${DESTDIR}${sbindir}/backup
++	${INSTALL_PROGRAM} afs-backup ${DESTDIR}${sbindir}/afs-backup
+ 
+-dest: libbxdb.a backup
++dest: libbxdb.a afs-backup
+ 	${INSTALL} -d ${DEST}/lib/afs
+ 	${INSTALL} -d ${DEST}/etc
+ 	${INSTALL_DATA} libbxdb.a ${DEST}/lib/afs/libbxdb.a
+-	${INSTALL_PROGRAM} backup ${DEST}/etc/backup
++	${INSTALL_PROGRAM} afs-backup ${DEST}/etc/afs-backup
+ 
+ #
+ # Misc targets
+ #
+ 
+ clean:
+-	$(RM) -f *.o backup convert *.ss.c *.cs.c *.xdr.c *.a core btest ttest AFS_component_version_number.c bc.h bucoord_errs.c
++	$(RM) -f *.o afs-backup convert *.ss.c *.cs.c *.xdr.c *.a core btest ttest AFS_component_version_number.c bc.h bucoord_errs.c
+ 
+ include ../config/Makefile.version
