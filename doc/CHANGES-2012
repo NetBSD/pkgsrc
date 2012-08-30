@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2726 2012/08/30 07:58:42 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2727 2012/08/30 11:56:44 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-test-unit to 2.5.2 [taca 2012-08-29]
 	Updated pkgtools/rpm2pkg to 3.2.3 [marino 2012-08-29]
 	Updated devel/doxygen to 1.8.2 [drochner 2012-08-30]
+	Updated lang/parrot to 4.7.0 [he 2012-08-30]
