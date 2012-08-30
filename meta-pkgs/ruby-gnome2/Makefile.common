@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2012/07/22 09:29:16 obache Exp $
+# $NetBSD: Makefile.common,v 1.26 2012/08/30 13:36:32 obache Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -24,7 +24,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		1.1.4
+VERSION=		1.1.5
 USE_RUBY_EXTCONF=	yes
 CONFIGURE_ENV+=		RUBYOPT="-Ku"
 
