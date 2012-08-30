@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.pam,v 1.1 2005/05/25 22:09:39 gendalia Exp $
-lib/pam_afs.krb.so.1
-lib/pam_afs.so.1

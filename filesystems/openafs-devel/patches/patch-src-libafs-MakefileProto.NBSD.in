@@ -1,0 +1,341 @@
+$NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+--- src/libafs/MakefileProto.NBSD.in.orig	2012-04-22 23:40:23.000000000 -0400
++++ src/libafs/MakefileProto.NBSD.in	2012-05-02 12:04:41.000000000 -0400
+@@ -1,122 +1,216 @@
+-# Copyright 2000, International Business Machines Corporation and others.
+-# All Rights Reserved.
+-#
+-# This software has been released under the terms of the IBM Public
+-# License.  For details, see the LICENSE file in the top-level source
+-# directory or online at http://www.openafs.org/dl/license10.html
+-#
+-srcdir=@srcdir@
+-include @TOP_OBJDIR@/src/config/Makefile.config
+-INSTALL = @INSTALL@
+-INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
+-
+-
+-# OS specific object files:
+-AFS_OS_OBJS = \
+-	osi_crypto.o \
+-	osi_gcpags.o \
+-	osi_groups.o \
+-	osi_file.o \
+-	osi_inode.o \
+-	osi_misc.o \
+-	osi_sleep.o \
+-	osi_vcache.o \
+-	osi_vm.o \
+-	osi_vnodeops.o
+-
+-AFS_OS_NFSOBJS = \
+-	osi_vfsops_nfs.o
+-
+-AFS_OS_NONFSOBJS = \
+-	osi_vfsops.o
+-
+-
+-# System specific build commands and flags
+-KSRC = @BSD_KERNEL_PATH@
+-KBLD = @BSD_KERNEL_BUILD@
+-KARCHFLAGS = -Di386 -march=pentiumpro -mtune=pentiumpro 
+-KOPTFLAGS = -D_KERNEL -DLKM -D_LKM -DDEBUG -DLOCKDEBUG
+-KDEFS=-Wall -ansi -nostdinc -I/usr/include \
+-	${KARCHFLAGS} ${KOPTFLAGS} \
+-	-ffreestanding -Wno-pointer-sign -Wno-strict-aliasing \
+-<i386_nbsd50>
+-	-std=gnu99 \
+-<all>
+-	-I${KSRC} -I${KSRC}/sys \
+-	-I${KBLD} -I../afs
+-DBUG = -O2 -g3
++#	NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.1 2012/05/02 23:19:25 christos Exp
++
++.include <bsd.own.mk>
++
++S=${NETBSDSRCDIR}/sys
++
++KMOD=	openafs
++
++.PATH.c: \
++	${.CURDIR}/../afs/NBSD \
++	${.CURDIR}/../afs/VNOPS \
++	${.CURDIR}/../afs \
++	${.CURDIR}/../auth \
++	${.CURDIR}/../dir \
++	${.CURDIR}/../fsint \
++	${.CURDIR}/../opr \
++	${.CURDIR}/../util \
++	${.CURDIR}/../rx/NBSD \
++	${.CURDIR}/../rx \
++	${.CURDIR}/../rxkad \
++	${.CURDIR}/../rxstat \
++	${.CURDIR}/../vlserver \
++	${.CURDIR}/../crypto/hcrypto/kernel \
++	${.CURDIR}/../crypto/rfc3961/kernel \
++	${.CURDIR}/../crypto/rfc3961 \
++	${.CURDIR}/../external/heimdal/hcrypto \
++	${.CURDIR}/../external/heimdal/krb5 \
++	${.CURDIR}/../external/heimdal/roken
++
+ DEFINES= -DAFSDEBUG -DKERNEL -DAFS -DVICE -DNFS -DUFS -DINET -DQUOTA -DGETMOUNT
+-OPTF=${OPT} 
+-OPTF2=${OPT2} 
+-CFLAGS=-I. -I.. -I${TOP_OBJDIR}/src/config ${FSINCLUDES} $(DEFINES) $(KDEFS) $(KOPTS) ${DBUG}
+-
+-
+-# Name of directory to hold object files and libraries.
+-KOBJ = MODLOAD
+-
+-# This tells Makefile.common to use it's single directory build target.
+-COMPDIRS = single_compdir
+-INSTDIRS = single_instdir
+-DESTDIRS = single_destdir
+-
+-include Makefile.common
+-
+-setup:
+-	-mkdir $(KOBJ)
+-	-$(RM) $(KOBJ)/Makefile $(KOBJ)/Makefile.common $(KOBJ)/config
+-	ln -fs ../Makefile $(KOBJ)/Makefile
+-	ln -fs ../Makefile.common $(KOBJ)/Makefile.common
+-	ln -fs ../config $(KOBJ)/config
+-	-$(RM) -f  h net netinet rpc ufs nfs  machine sys vm
+-	-ln -fs ${KSRC}/net net
+-	-ln -fs ${KSRC}/i386/include machine
+-	-ln -fs ${KSRC}/netinet netinet
+-	-ln -fs ${KSRC}/nfs nfs
+-	-ln -fs /usr/include/rpc rpc
+-	-ln -fs ${KSRC}/sys sys
+-	-ln -fs ${KSRC}/ufs/ufs ufs
+-	-ln -fs ${KSRC}/sys h
+-	-ln -fs ${KSRC}/vm vm
+-	-ln -fs ${KSRC}/arch/x86/include/via_padlock.h /usr/include/x86/via_padlock.h
+-	-ln -fs ${KSRC}/arch/x86/include/cpufunc.h /usr/include/x86/cpufunc.h
+-	-ln -fs ${KSRC}/arch/x86/include/pic.h /usr/include/machine/pic.h
+-	-touch $(KOBJ)/sec_net.h
+-
+-
+-# Below this line are targets when in the COMMON directory:
+-LIBAFS = libafs.o
+-LIBAFSNONFS = libafs.nonfs.o
+-
+-INST_LIBAFS = ${DESTDIR}${afskerneldir}/${LIBAFS}
+-INST_LIBAFSNONFS = ${DESTDIR}${afskerneldir}/${LIBAFSNONFS}
+-
+-DEST_LIBAFS = ${DEST}/root.client/bin/${LIBAFS}
+-DEST_LIBAFSNONFS = ${DEST}/root.client/bin/${LIBAFSNONFS}
+-
+-<i386_nbsd40 i386_nbsd50>
+-# libafs:	$(LIBAFS) $(LIBAFSNONFS)
+-libafs:	$(LIBAFSNONFS)
+-# install_libafs:	$(INST_LIBAFS) $(INST_LIBAFSNONFS)
+-#install_libafs:	$(INST_LIBAFSNONFS)
+-install_libafs:	
+-# dest_libafs:	$(DEST_LIBAFS) $(DEST_LIBAFSNONFS)
+-dest_libafs:	$(DEST_LIBAFSNONFS)
+-<all -i386_nbsd40 -i386_nbsd50>
+-libafs:
+-	echo WARNING: No kernel module for ${SYS_NAME}
+-
+-install_libafs:
+-	echo WARNING: No kernel module for ${SYS_NAME}
+-
+-dest_libafs:
+-	echo WARNING: No kernel module for ${SYS_NAME}
+-<all>
+-
+-# for now, just skip it
+-#${LIBAFS}: $(AFSAOBJS) $(AFSNFSOBJS)
+-#	$(LD) -r -z muldefs -o ${LIBAFS} ${AFSAOBJS} ${AFSNFSOBJS}
++DEFINES+=-DHAVE_CONFIG_H
+ 
+-${LIBAFSNONFS}:  $(AFSAOBJS) $(AFSNONFSOBJS)
+-	$(LD) -r -z muldefs -o ${LIBAFSNONFS} ${AFSAOBJS} ${AFSNONFSOBJS}
++CPPFLAGS+= ${DEFINES} \
++	-I${.CURDIR}/../afs/NBSD \
++	-I${.CURDIR}/../afs \
++	-I${.CURDIR}/../rx/NBSD \
++	-I${.CURDIR}/../rx \
++	-I${.CURDIR}/../rxkad \
++	-I${.CURDIR}/../fsint \
++	-I${.CURDIR}/../config \
++	-I${.CURDIR}/../crypto/rfc3961 \
++	-I${.CURDIR}/../crypto/hcrypto/kernel \
++	-I${.CURDIR}/../external/heimdal/krb5 \
++	-I${.CURDIR}/../../include \
++	-I${.CURDIR}/../../include/afs \
++	-I${.CURDIR}/../../include/hcrypto \
++	-I${.CURDIR}/.. \
++	-I${S}/sys
++
++AFS_SRCS=\
++	afs_atomlist.c \
++	afs_lhash.c \
++	afs_analyze.c \
++	afs_axscache.c \
++	afs_buffer.c \
++	afs_bypasscache.c \
++	afs_callback.c \
++	afs_cbqueue.c \
++	afs_cell.c \
++	afs_chunk.c \
++	afs_conn.c \
++	afs_daemons.c \
++	afs_dcache.c \
++	dir.c \
++	afs_disconnected.c \
++	afs_dynroot.c \
++	afs_error.c \
++	afs_icl.c \
++	afs_init.c \
++	afs_lock.c \
++	afs_mariner.c \
++	afs_memcache.c \
++	afs_fetchstore.c \
++	afs_osi.c \
++	afs_osidnlc.c \
++	afs_osi_alloc.c \
++	afs_osi_pag.c \
++	afs_osi_uio.c \
++	afs_osi_vget.c \
++	afs_osi_vm.c \
++	afs_segments.c \
++	afs_server.c \
++	afs_stat.c \
++	afs_syscall.c \
++	afs_tokens.c \
++	afs_user.c \
++	afs_util.c \
++	afs_vcache.c \
++	afs_vnop_access.c \
++	afs_vnop_attrs.c \
++	afs_vnop_create.c \
++	afs_vnop_dirops.c \
++	afs_vnop_fid.c \
++	afs_vnop_flock.c \
++	afs_vnop_link.c \
++	afs_vnop_lookup.c \
++	afs_vnop_open.c \
++	afs_vnop_read.c \
++	afs_vnop_readdir.c \
++	afs_vnop_remove.c \
++	afs_vnop_rename.c \
++	afs_vnop_strategy.c \
++	afs_vnop_symlink.c \
++	afs_vnop_write.c \
++	afs_volume.c \
++	afs_warn.c \
++	afsaux.c \
++	Kvice.xdr.c \
++	xdr_arrayn.c \
++	xdr_array.c \
++	xdr_int32.c \
++	xdr_int64.c \
++	Kvice.cs.c \
++	fcrypt.c \
++	rx.c \
++	rx_call.c \
++	rx_conn.c \
++	rx_peer.c \
++	rx_rdwr.c \
++	rx_clock.c \
++	rx_event.c \
++	rx_globals.c \
++	rx_identity.c \
++	rx_kmutex.c \
++	rx_knet.c \
++	rx_kcommon.c \
++	rx_misc.c \
++	rx_null.c \
++	rx_opaque.c \
++	rx_getaddr.c \
++	rx_packet.c \
++	rx_multi.c \
++	rx_stats.c \
++	rbtree.c \
++	xdr_rx.c \
++	xdr_mem.c \
++	xdr_len.c \
++	Kvldbint.cs.c \
++	Kvldbint.xdr.c \
++	Kcallback.ss.c \
++	Krxstat.ss.c \
++	Krxstat.xdr.c \
++	rxstat.c \
++	md5.c \
++	crypt_conn.c \
++	AFS_component_version_number.c\
++	afs_exporter.c \
++	rxkad_client.c \
++	rxkad_common.c \
++	xdr_afsuuid.c \
++	xdr.c \
++	Ktoken.xdr.c \
++	evp.c \
++	evp-algs.c \
++	rand.c \
++	alloc.c \
++	aes.c \
++	rijndael-alg-fst.c \
++	sha.c \
++	n-fold.c \
++	crypto.c \
++	algs.c \
++	crypto-aes.c \
++	context.c \
++	copy.c \
++	ct.c \
++	crypto-evp.c \
++	data.c \
++	keyblock.c \
++	store-int.c \
++	random.c \
++	uuid.c
++
++AFS_NFS_SRCS = \
++        afs_nfsclnt.c \
++        afs_nfsdisp.c \
++        afs_call_nfs.c \
++        afs_pioctl_nfs.c \
++        Kpagcb.cs.c \
++        Kpagcb.xdr.c \
++	osi_vfsops_nfs.c
++
++AFS_NO_NFS_SRCS = \
++        afs_call.c \
++        afs_pioctl.c \
++	osi_vfsops.c
++
++SRCS= \
++	${AFS_SRCS} \
++	${AFS_NO_NFS_SRCS} \
++	osi_crypto.c \
++	osi_gcpags.c \
++	osi_groups.c \
++	osi_file.c \
++	osi_inode.c \
++	osi_misc.c \
++	osi_sleep.c \
++	osi_vcache.c \
++	osi_vm.c \
++	osi_vnodeops.c \
++	osi_kmod.c \
++
++FAKE= err.h grp.h netdb.h pwd.h resolv.h 
++FAKE+= h rpc/types.h arpa/inet.h arpa/nameser.h
++CLEANFILES += ${FAKE}
++
++.include <bsd.kmodule.mk>
++
++.if !make(obj) && !make(clean) && !make(cleandir)
++${OBJS}: ${FAKE}
++
++${FAKE}:
++	mkdir -p arpa rpc
++	ln -s $S/sys h
++	for i in ${FAKE}; do if [ ! -f $$i ]; then touch $$i; fi; done
++.endif
