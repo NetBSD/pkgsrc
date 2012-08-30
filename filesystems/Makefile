@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/09 22:46:53 abs Exp $
+# $NetBSD: Makefile,v 1.34 2012/08/30 17:37:55 jakllsch Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -31,6 +31,8 @@ SUBDIR+=	fuse-unionfs
 SUBDIR+=	fuse-wdfs
 SUBDIR+=	fuse-wikipediafs
 SUBDIR+=	glusterfs
+SUBDIR+=	openafs
+SUBDIR+=	openafs-devel
 SUBDIR+=	perfuse
 SUBDIR+=	py-filesystem
 SUBDIR+=	py-fuse-bindings

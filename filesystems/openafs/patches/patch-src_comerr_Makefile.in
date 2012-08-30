@@ -1,0 +1,13 @@
+$NetBSD: patch-src_comerr_Makefile.in,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+--- src/comerr/Makefile.in.orig	2010-12-17 15:58:42.000000000 +0000
++++ src/comerr/Makefile.in
+@@ -11,7 +11,7 @@ all: compile_et ${TOP_INCDIR}/afs/com_er
+ 
+ et_lex.lex.c: et_lex.lex.l
+ 	$(RM) -f et_lex.lex.c
+-	$(LEX) -t $(srcdir)/et_lex.lex.l > et_lex.lex.c
++	$(LEX) -l -t $(srcdir)/et_lex.lex.l > et_lex.lex.c
+ 
+ compile_et:	compile_et.o error_table.o
+ 	case $(SYS_NAME) in \

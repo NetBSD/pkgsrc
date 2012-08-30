@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+SHA1 (openafs-1.4.14-src.tar.bz2) = 2b4e7c839bbf8f577fdd4831e7a3b3ebb9c41926
+RMD160 (openafs-1.4.14-src.tar.bz2) = ecc038d7f9068d420cf1c94f9c01db5ecd1accac
+Size (openafs-1.4.14-src.tar.bz2) = 11813993 bytes
+SHA1 (patch-aa) = 3dde7848f9773fd8398156149368748146564eee
+SHA1 (patch-src_afsd_afsd.c) = ccc518675fc4b4fa594bb6b3a9f2c36e03df2ea6
+SHA1 (patch-src_comerr_Makefile.in) = f325c813dab0dc62592abead6d112ce15df086c9
+SHA1 (patch-src_config_param.nbsd30.h) = 64bbe81ef7208b6e3f70af4eddcb9d535e8a9c34
+SHA1 (patch-src_config_param.nbsd40.h) = ddfb69d2255629946e6df8416e6e2fcbfc0ffabb
