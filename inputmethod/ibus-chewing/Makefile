@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/08/13 11:50:45 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/08/30 12:26:32 obache Exp $
 #
 
-DISTNAME=	ibus-chewing-1.4.0-Source
+DISTNAME=	ibus-chewing-1.4.2-Source
 PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
@@ -28,6 +28,7 @@ STRIP_CMD.yes=	${AWK} -f ${PKGSRCDIR}/mk/tools/msgfmt-msgctxt.awk
 STRIP_CMD.no=	${CAT}
 
 GCONF_SCHEMAS=	ibus-chewing.schemas
+CMAKE_ARGS+=	-DLIBEXEC_DIR=${PREFIX}/libexec
 CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
 
 # missing in archive
