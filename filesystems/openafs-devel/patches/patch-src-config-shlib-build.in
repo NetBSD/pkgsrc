@@ -1,0 +1,89 @@
+$NetBSD: patch-src-config-shlib-build.in,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+
+--- src/config/shlib-build.in.orig	2012-04-22 23:40:23.000000000 -0400
++++ src/config/shlib-build.in	2012-04-28 22:09:59.000000000 -0400
+@@ -77,6 +77,15 @@
+     exit 1
+ fi
+ 
++RUNPATH=
++for i in @LDFLAGS@
++do
++    case "$i" in
++    -Wl,-R*)
++	RUNPATH="${RUNPATH} $i"
++    esac
++done
++		
+ # Print out what we're doing while we do it for debugging.
+ export=
+ if [ -z "$filename" ] ; then
+@@ -98,8 +107,8 @@
+ 	> $library.exp
+         export="-bE:$library.exp"
+     fi
+-    echo "$linker $export -o $filename $*"
+-    $linker $export -o "$filename" "$@"
++    echo "$linker $export -o $filename $RUNPATH $*"
++    $linker $export -o "$filename" $RUNPATH "$@"
+     ;;
+ sun*_5*)
+     if [ -z "$plain" ] && [ -f "$srcdir/$library.map" ] ; then
+@@ -114,11 +123,11 @@
+         fi
+     fi
+     if [ -z "$soname" ] ; then
+-        echo "$linker $export -o $filename $*"
+-        $linker $export -o "$filename" "$@"
++        echo "$linker $export -o $filename $RUNPATH $*"
++        $linker $export -o "$filename" $RUNPATH "$@"
+     else
+-        echo "$linker $export -h $soname -o $filename $*"
+-        $linker $export -h "$soname" -o "$filename" "$@"
++        echo "$linker $export -h $soname -o $filename $RUNPATH $*"
++        $linker $export -h "$soname" -o "$filename" $RUNPATH "$@"
+     fi
+     ;;
+ *_linux*)
+@@ -126,19 +135,19 @@
+         export="-Wl,--version-script=$srcdir/$library.map"
+     fi
+     if [ -z "$soname" ] ; then
+-        echo "$linker $export -o $filename $*"
+-        $linker $export -o "$filename" "$@"
++        echo "$linker $export -o $filename $RUNPATH $*"
++        $linker $export -o "$filename" $RUNPATH "$@"
+     else
+-        echo "$linker $export -Wl,-h,$soname -o $filename $*"
+-        $linker $export -Wl,-h,"$soname" -o "$filename" "$@"
++        echo "$linker $export -Wl,-h,$soname -o $filename $RUNPATH $*"
++        $linker $export -Wl,-h,"$soname" -o "$filename" $RUNPATH "$@"
+     fi
+     ;;
+ hp_ux*)
+     if [ -z "$plain" ] && [ -f "$srcdir/$library.hp" ] ; then
+         export="-c $srcdir/$library.hp"
+     fi
+-    echo "$linker $export -o $filename $*"
+-    $linker $export -o "$filename" "$@"
++    echo "$linker $export -o $filename $RUNPATH $*"
++    $linker $export -o "$filename" "$RUNPATH $@"
+     ;;
+ *darwin*)
+     if [ -z "$plain" ] && [ -f "$srcdir/$library.map" ] ; then
+@@ -155,11 +164,11 @@
+ 	    export="$export,-flat_namespace,-undefined,suppress"
+ 	fi
+     fi
+-    echo "$linker $export -o $filename $*"
+-    $linker $export -o "$filename" "$@"
++    echo "$linker $export -o $filename $RUNPATH $*"
++    $linker $export -o "$filename" $RUNPATH "$@"
+     ;;
+ *)
+-    echo "$linker -o $filename $*"
+-    $linker -o "$filename" "$@"
++    echo "$linker -o $filename $RUNPATH $*"
++    $linker -o "$filename" $RUNPATH "$@"
+     ;;
+ esac
