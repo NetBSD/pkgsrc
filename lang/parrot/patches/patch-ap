@@ -1,31 +1,16 @@
-$NetBSD: patch-ap,v 1.1 2012/07/31 08:16:07 he Exp $
+$NetBSD: patch-ap,v 1.2 2012/08/30 11:56:07 he Exp $
 
 Do not embed rpath_blib into installable executables, as it will
 refer to the build directory via rpath.
 
---- ./tools/dev/pbc_to_exe.winxed.orig	2012-06-19 05:24:26.000000000 +0000
+--- ./tools/dev/pbc_to_exe.winxed.orig	2012-06-26 01:18:19.000000000 +0000
 +++ ./tools/dev/pbc_to_exe.winxed
-@@ -599,9 +599,9 @@ function link_file(string objfile, strin
-     string libparrot    = $P0['libparrot_linkflags'];
-     string libs         = $P0['libs'];
-     string o            = $P0['o'];
--    string rpath        = $P0['rpath_blib'];
-     string osname       = $P0['osname'];
-     string build_dir    = $P0['build_dir'];
-+    string rpath        = '';
-     string slash        = $P0['slash'];
-     string icushared    = $P0['icu_shared'];
-     string installed    = $P0['installed'];
-@@ -613,9 +613,10 @@ function link_file(string objfile, strin
-     string config     = pathquote;
-     if (installed != '1') {
-         config += build_dir + slash + 'src' + slash;
--	if (! install)
-+	if (! install) {
+@@ -617,7 +617,7 @@ function link_file(string objfile, strin
              config += 'parrot_config';
--        else {
-+	    rpath  += $P0['rpath_blib'];
-+        } else {
+         else {
              config += 'install_config';
-             rpath  += $P0['rpath_lib'];
+-            rpath  += $P0['rpath_lib'];
++            rpath  = $P0['rpath_lib'];
          }
+     }
+     else {
