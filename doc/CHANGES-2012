@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2729 2012/08/30 13:39:02 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2730 2012/08/30 16:27:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4255,3 +4255,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ruby-gnome2-gtk to 1.1.5 [obache 2012-08-30]
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.1.5 [obache 2012-08-30]
 	Updated x11/ruby-gnome2-vte to 1.1.5 [obache 2012-08-30]
+	Updated games/wesnoth to 1.10.4 [adam 2012-08-30]
