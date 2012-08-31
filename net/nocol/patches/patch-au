@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.1 2012/08/31 11:18:20 he Exp $
+
+Use wish instead of tixwish (now gone), add "package require Tix" instead.
+
+--- tknocol/tkNocol.tix.orig	2000-01-19 04:49:10.000000000 +0000
++++ tknocol/tkNocol.tix
+@@ -1,2 +1,4 @@
+-#!/usr/local/bin/tixwish
++#!/usr/local/bin/wish
++
++package require Tix
+ 
