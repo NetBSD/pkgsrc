@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2012/08/31 21:00:40 drochner Exp $
+
+--- modules/gui/qt4/util/input_slider.cpp.orig	2012-06-07 14:38:39.000000000 +0000
++++ modules/gui/qt4/util/input_slider.cpp
+@@ -122,7 +122,7 @@ void SeekSlider::setChapters( SeekPoints
+  * \param time Elapsed time. Unused
+  * \param legnth Duration time.
+  ***/
+-void SeekSlider::setPosition( float pos, int64_t time, int length )
++void SeekSlider::setPosition( float pos, putime_t time, int length )
+ {
+     VLC_UNUSED(time);
+     if( pos == -1.0 )
