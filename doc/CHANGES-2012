@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2737 2012/08/31 11:19:13 he Exp $
+$NetBSD: CHANGES-2012,v 1.2738 2012/08/31 11:52:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4264,3 +4264,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Tiny to 0.022 [wen 2012-08-31]
 	Updated www/opera to 12.02 [obache 2012-08-31]
 	Updated net/nocol to 4.3.1nb6 [he 2012-08-31]
+	Updated lang/sun-jre6 to 6.0.35 [obache 2012-08-31]
+	Updated lang/sun-jdk6 to 6.0.35 [obache 2012-08-31]
