@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/07/07 21:29:19 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/08/31 14:22:27 wiz Exp $
 bin/vsd2raw
 bin/vsd2text
 bin/vsd2xhtml
@@ -72,6 +72,7 @@ share/doc/libvisio/html/bc_s.png
 share/doc/libvisio/html/bdwn.png
 share/doc/libvisio/html/classVSDInternalStream-members.html
 share/doc/libvisio/html/classVSDInternalStream.html
+share/doc/libvisio/html/classVSDInternalStream.png
 share/doc/libvisio/html/classes.html
 share/doc/libvisio/html/classlibvisio_1_1EndOfStreamException.html
 share/doc/libvisio/html/classlibvisio_1_1GenericException.html
@@ -83,6 +84,7 @@ share/doc/libvisio/html/classlibvisio_1_1VSD6Parser.html
 share/doc/libvisio/html/classlibvisio_1_1VSD6Parser.png
 share/doc/libvisio/html/classlibvisio_1_1VSDSVGGenerator-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDSVGGenerator.html
+share/doc/libvisio/html/classlibvisio_1_1VSDSVGGenerator.png
 share/doc/libvisio/html/classlibvisio_1_1VSDStringVector-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDStringVector.html
 share/doc/libvisio/html/classlibvisio_1_1VSDStringVectorImpl-members.html
@@ -372,6 +374,8 @@ share/doc/libvisio/html/structlibvisio_1_1VSDXTextBlockStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDXTextBlockStyle.html
 share/doc/libvisio/html/structlibvisio_1_1XForm-members.html
 share/doc/libvisio/html/structlibvisio_1_1XForm.html
+share/doc/libvisio/html/sync_off.png
+share/doc/libvisio/html/sync_on.png
 share/doc/libvisio/html/tab_a.png
 share/doc/libvisio/html/tab_b.png
 share/doc/libvisio/html/tab_h.png
