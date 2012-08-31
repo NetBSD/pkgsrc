@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2742 2012/08/31 14:26:20 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2743 2012/08/31 19:44:25 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4270,3 +4270,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/p5-Email-Valid to 0.190 [wen 2012-08-31]
 	Updated www/tidy to 20091027nb3 [wiz 2012-08-31]
 	Updated converters/libvisio to 0.0.19nb2 [wiz 2012-08-31]
+	Updated x11/gtksourceview3 to 3.4.2 [prlw1 2012-08-31]
