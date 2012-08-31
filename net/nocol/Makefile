@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2008/10/02 17:40:43 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2012/08/31 11:18:20 he Exp $
 #
 
 DISTNAME=		nocol-4.3.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=	http://www.netplex-tech.com/software/nocol/downloads/
 
@@ -26,10 +26,10 @@ OWN_DIRS+=		/var/run/data
 
 DEPENDS+=		tk-Tix-[0-9]*:../../x11/tk-Tix
 
-.include "../../x11/tk-Tix/interpreter.mk"
+.include "../../x11/tk/interpreter.mk"
 
 REPLACE_PERL=		perlnocol/hostmon-osclients/hostmon-client*
-REPLACE_TK_TIX=		tknocol/tkNocol.tix
+REPLACE_WISH=		tknocol/tkNocol.tix
 
 INSTALLATION_DIRS=	share/nocol/gifs
 INSTALL_MAKE_FLAGS+=	ROOTDIR=${DESTDIR}${PREFIX} \
