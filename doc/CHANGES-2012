@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2738 2012/08/31 11:52:09 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2739 2012/08/31 12:08:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/nocol to 4.3.1nb6 [he 2012-08-31]
 	Updated lang/sun-jre6 to 6.0.35 [obache 2012-08-31]
 	Updated lang/sun-jdk6 to 6.0.35 [obache 2012-08-31]
+	Updated devel/p5-Test-WWW-Selenium to 1.33 [wen 2012-08-31]
