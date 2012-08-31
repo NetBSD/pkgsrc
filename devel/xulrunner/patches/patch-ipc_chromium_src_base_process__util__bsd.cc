@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.7 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.8 2012/08/31 11:52:13 ryoon Exp $
 
 --- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-08-28 18:53:59.000000000 +0000
 +++ ipc/chromium/src/base/process_util_bsd.cc
@@ -11,7 +11,7 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.7 2012/08/28 23:2
 +
 +#include "base/process_util.h"
 +
-+#include <sys/types.h>
++#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#include <sys/wait.h>
 +#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD)
@@ -32,13 +32,9 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.7 2012/08/28 23:2
 +#include "base/string_tokenizer.h"
 +#include "base/string_util.h"
 +
-+#if defined(_POSIX_SPAWN) && _POSIX_SPAWN > 0
++#if (defined(_POSIX_SPAWN) && _POSIX_SPAWN > 0) \
++  || (defined(OS_NETBSD) && __NetBSD_Version__ >= 599006500)
 +#define HAVE_POSIX_SPAWN	1
-+#elif defined(OS_NETBSD)
-+#include <sys/param.h>
-+#if __NetBSD_Version__ >= 599006500
-+#define HAVE_POSIX_SPAWN	1
-+#endif
 +#endif
 +
 +#ifndef __dso_public
@@ -291,7 +287,11 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.7 2012/08/28 23:2
 +#  endif
 +#else
 +  kvm  = kvm_open(NULL, NULL, NULL, KVM_NO_FILES, NULL);
++#if defined(OS_OPENBSD)
++  struct kinfo_proc* procs = kvm_getprocs(kvm, KERN_PROC_UID, getuid(), sizeof(struct kinfo_proc), &numEntries);
++#else
 +  struct kinfo_proc2* procs = kvm_getproc2(kvm, KERN_PROC_UID, getuid(), sizeof(struct kinfo_proc2), &numEntries);
++#endif
 +  if (procs != NULL && numEntries > 0) {
 +    for (int i = 0; i < numEntries; i++) {
 +    if (exe != procs[i].p_comm) continue;
