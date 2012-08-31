@@ -1,15 +1,88 @@
-$NetBSD: patch-src_Makefile,v 1.1 2012/03/14 23:11:58 joerg Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2012/08/31 16:29:49 adam Exp $
 
---- src/Makefile.orig	2012-03-13 15:57:17.000000000 +0000
+--- src/Makefile.orig	2011-12-01 21:25:12.000000000 +0000
 +++ src/Makefile
-@@ -18,8 +18,8 @@ LEXFLAGS = 
+@@ -8,18 +8,14 @@
+ 
+ ####### Compiler, tools and options
+ 
+-CC       = gcc
+-CXX      = g++
+ LEX      = flex
+ YACC     = yacc
+-CFLAGS   = -pipe -Wall -W -O2 -fPIC 
+-CXXFLAGS = -pipe -Wall -W -O2 -fPIC
+ LEXFLAGS = 
  YACCFLAGS= -d
  INCPATH  = -I. -I../include -I../glew/include -I.. -I/usr/X11R6/include
- LINK     = g++
+-LINK     = g++
 -LFLAGS   =  -shared -Wl,-soname,libopencsg.so.1 -Wl,-rpath,../lib
 -LIBS     = $(SUBLIBS) -L/usr/X11R6/lib -lGLU -lGL -lXmu
++LINK     = ${LIBTOOL} --mode=link ${CXX}
 +LFLAGS   =  -shared -Wl,-soname,libopencsg.so.1 -Wl,-rpath,${X11BASE}/lib
 +LIBS     = $(SUBLIBS) -lGLU -lGL -lXmu
  AR       = ar cqs
  RANLIB   = 
  QMAKE    = qmake
+@@ -105,7 +101,7 @@ OBJMOC = 
+ DIST	   = src.pro
+ QMAKE_TARGET = opencsg
+ DESTDIR  = ../lib/
+-TARGET   = libopencsg.so.1.3.2
++TARGET   = libopencsg.la
+ TARGETA	= ../lib/libopencsg.a
+ TARGETD	= libopencsg.so.1.3.2
+ TARGET0	= libopencsg.so
+@@ -118,36 +114,27 @@ first: all
+ .SUFFIXES: .c .o .cpp .cc .cxx .C
+ 
+ .cpp.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .cc.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .cxx.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .C.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
+ 
+ ####### Build rules
+ 
+ all: Makefile  ../lib/$(TARGET)
+ 
+ ../lib/$(TARGET):  $(UICDECLS) $(OBJECTS) $(OBJMOC) $(SUBLIBS) $(OBJCOMP)  
+-	test -d ../lib/ || mkdir -p ../lib/
+-	-$(DEL_FILE) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2)
+-	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS) $(OBJCOMP)
+-	-ln -s $(TARGET) $(TARGET0)
+-	-ln -s $(TARGET) $(TARGET1)
+-	-ln -s $(TARGET) $(TARGET2)
+-	-$(DEL_FILE) ../lib/$(TARGET)
+-	-$(DEL_FILE) ../lib/$(TARGET0)
+-	-$(DEL_FILE) ../lib/$(TARGET1)
+-	-$(DEL_FILE) ../lib/$(TARGET2)
+-	-$(MOVE) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2) ../lib/
++	$(LINK) ${LDFLAGS} -o $(TARGET) $(OBJECTS:.o=.lo) \
++		-rpath ${PREFIX}/lib -version-info 1:3
+ 
+ 
+ 
+@@ -272,7 +259,7 @@ stencilManager.o: stencilManager.cpp ope
+ 		stencilManager.h
+ 
+ RenderTexture.o: ../RenderTexture/RenderTexture.cpp ../RenderTexture/RenderTexture.h
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o RenderTexture.o ../RenderTexture/RenderTexture.cpp
++	${LIBTOOL} --mode=compile $(CXX) -c $(CXXFLAGS) $(INCPATH) -o RenderTexture.o ../RenderTexture/RenderTexture.cpp
+ 
+ ####### Install
+ 

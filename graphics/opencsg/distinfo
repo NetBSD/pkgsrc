@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/03/14 23:11:58 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/08/31 16:29:49 adam Exp $
 
 SHA1 (OpenCSG-1.3.2.tar.gz) = e2b4abf169ae3e319eb5f6d9ae6136fa96710a05
 RMD160 (OpenCSG-1.3.2.tar.gz) = 4480778c310a3d5f84933c1b35508dd94adf2332
 Size (OpenCSG-1.3.2.tar.gz) = 744712 bytes
-SHA1 (patch-Makefile) = 13c3cc669156b04b5d09af9587f76d1055629518
 SHA1 (patch-RenderTexture.cpp) = 9d65c9928b4f42fde109b5497912e6654b188c69
-SHA1 (patch-src_Makefile) = 7122719be270b183d35c7c0d8b39266dc84df4a7
+SHA1 (patch-src_Makefile) = a6950aaf3d8c23f1e5553267a4239f822d2e43d9
