@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11486 2012/08/31 19:52:59 prlw1 Exp $
+$NetBSD: TODO,v 1.11487 2012/08/31 20:28:13 is Exp $
 
 Suggested new packages
 ======================
@@ -949,7 +949,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openmpi-1.6.1
 	o openoffice-3.4
 	o openoffice3-3.3
-	o openssh-6.0p1
+	o openssh-6.1p1
 	o openssl-1.0.0d [pkg/44717]
 	o openssl-1.0.1c
 	o openttd-1.2.2
