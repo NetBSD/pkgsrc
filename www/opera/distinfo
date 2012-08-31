@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.39.2.1 2012/08/06 06:00:19 tron Exp $
+$NetBSD: distinfo,v 1.39.2.2 2012/08/31 15:27:41 tron Exp $
 
-SHA1 (opera-12.01-1532.amd64.freebsd.tar.xz) = 98474e1e46a62a80e4b71215d561f810510f2ffd
-RMD160 (opera-12.01-1532.amd64.freebsd.tar.xz) = 2020e4a717d9159500bcdcd9479962d7bea16190
-Size (opera-12.01-1532.amd64.freebsd.tar.xz) = 12965220 bytes
-SHA1 (opera-12.01-1532.i386.freebsd.tar.xz) = dac68542412c701b061875052d1ae6f3e1aac2b6
-RMD160 (opera-12.01-1532.i386.freebsd.tar.xz) = 9bd59ffe16785f76857b8e9520ed69e56d93e8a0
-Size (opera-12.01-1532.i386.freebsd.tar.xz) = 12710636 bytes
-SHA1 (opera-12.01-1532.i386.linux.tar.xz) = ccb71ed2aa27ff322a804f2bce60dd309da51666
-RMD160 (opera-12.01-1532.i386.linux.tar.xz) = 954183bf8da6d92b0c9e65ef17dd536bb4593a98
-Size (opera-12.01-1532.i386.linux.tar.xz) = 12855380 bytes
-SHA1 (opera-12.01-1532.x86_64.linux.tar.xz) = 9004fd0d43026a0fd2340a5fdfea208f47cb599d
-RMD160 (opera-12.01-1532.x86_64.linux.tar.xz) = 99c119c36bd1e39dc85908391a1d8e41e5956f8a
-Size (opera-12.01-1532.x86_64.linux.tar.xz) = 13223120 bytes
+SHA1 (opera-12.02-1578.amd64.freebsd.tar.xz) = 9cb060b4352b9fb6797d440e02452227adddbede
+RMD160 (opera-12.02-1578.amd64.freebsd.tar.xz) = 9573ec80bdf07aaf065b85a584a48c5ed5003cef
+Size (opera-12.02-1578.amd64.freebsd.tar.xz) = 12952100 bytes
+SHA1 (opera-12.02-1578.i386.freebsd.tar.xz) = b469bba93495fcc3f10bd41833bf612085de94a6
+RMD160 (opera-12.02-1578.i386.freebsd.tar.xz) = c80e8d78d09a335b526686dad0870c786d7c174f
+Size (opera-12.02-1578.i386.freebsd.tar.xz) = 12757132 bytes
+SHA1 (opera-12.02-1578.i386.linux.tar.xz) = da0829b6dd1aaab0c010a6c4dc0c7536650368cf
+RMD160 (opera-12.02-1578.i386.linux.tar.xz) = caba99992876e30d21d634157e8c3ea5de55b80d
+Size (opera-12.02-1578.i386.linux.tar.xz) = 12800028 bytes
+SHA1 (opera-12.02-1578.x86_64.linux.tar.xz) = edce56e135cd7a4c2ecafa26366417b6a102acd9
+RMD160 (opera-12.02-1578.x86_64.linux.tar.xz) = 117526e22317bf9ef5be0a3c7bcbe932970a99f8
+Size (opera-12.02-1578.x86_64.linux.tar.xz) = 13219992 bytes
