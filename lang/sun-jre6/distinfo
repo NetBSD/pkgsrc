@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.22 2012/06/14 01:05:37 obache Exp $
+$NetBSD: distinfo,v 1.22.2.1 2012/08/31 15:40:40 tron Exp $
 
 SHA1 (jce_policy-6.zip) = 7b1b021bd63152b93a16c96bb3a64f0e685fc425
 RMD160 (jce_policy-6.zip) = 6f45ce5f3c067e186554f79b3f1a61e4d7d22aae
 Size (jce_policy-6.zip) = 9101 bytes
-SHA1 (jre-6u33-linux-i586.bin) = 0eb29f15703fdcb567d64e15ed41a31a5a6ab66f
-RMD160 (jre-6u33-linux-i586.bin) = c395a2a780a3714673e4acd4a835e1ece1abd9bb
-Size (jre-6u33-linux-i586.bin) = 21693745 bytes
-SHA1 (jre-6u33-linux-x64.bin) = 2cf25614681fa5b3ee4c06612fb5ce91de6edb74
-RMD160 (jre-6u33-linux-x64.bin) = fc73909219502f216acff53e0d41e35e0039617b
-Size (jre-6u33-linux-x64.bin) = 21301090 bytes
+SHA1 (jre-6u35-linux-i586.bin) = 82b4dc3f53f4974902c430a50657de4a1851f85f
+RMD160 (jre-6u35-linux-i586.bin) = 9d0e95772219ed3c8c73c5ce1bee18293ce6cb93
+Size (jre-6u35-linux-i586.bin) = 21697122 bytes
+SHA1 (jre-6u35-linux-x64.bin) = 8c7b23fc6bb8ee41e417d5b067bbebe8b898f234
+RMD160 (jre-6u35-linux-x64.bin) = 2f7c7751804935d0a9e93a425818ee14080412c2
+Size (jre-6u35-linux-x64.bin) = 21301595 bytes
