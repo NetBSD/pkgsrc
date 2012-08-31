@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2733 2012/08/31 00:32:01 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2734 2012/08/31 00:50:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added filesystems/openafs version 1.4.14 [jakllsch 2012-08-30]
 	Updated print/p5-LaTeX-Encode to 0.06 [wen 2012-08-31]
 	Updated fonts/p5-Font-TTF to 1.02 [wen 2012-08-31]
+	Updated databases/p5-DBD-XBase to 1.03 [wen 2012-08-31]
