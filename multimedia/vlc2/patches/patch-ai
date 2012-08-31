@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2012/08/31 21:00:40 drochner Exp $
+
+--- modules/gui/qt4/util/input_slider.hpp.orig	2012-02-22 11:26:51.000000000 +0000
++++ modules/gui/qt4/util/input_slider.hpp
+@@ -40,6 +40,8 @@ class QTimer;
+ class SeekPoints;
+ class QPropertyAnimation;
+ 
++typedef int64_t putime_t;
++
+ /* Input Slider derived from QSlider */
+ class SeekSlider : public QSlider
+ {
+@@ -86,7 +88,7 @@ private:
+     QTimer *hideHandleTimer;
+ 
+ public slots:
+-    void setPosition( float, int64_t, int );
++    void setPosition( float, putime_t, int );
+     void updateBuffering( float );
+     void hideHandle();
+ 
