@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2012/07/27 19:28:58 drochner Exp $
+$NetBSD: distinfo,v 1.16 2012/08/31 00:50:04 schnoebe Exp $
 
 SHA1 (nmh-1.5.tar.gz) = 9d8c034206f793d6d796b514c9a8242422f0d4f7
 RMD160 (nmh-1.5.tar.gz) = 12c6aae9c02c5895593e4d5bff95a061c71b623c
@@ -7,3 +7,4 @@ SHA1 (patch-ba) = 380baae827368e97b03691b5bf2fd2c83123209a
 SHA1 (patch-bb) = 8ff2a2b8a7a79e0b38b7d8a2cb0266dccd66af7e
 SHA1 (patch-ca) = 756dfb664a6fb51f8fe5024f2fef13c9d9175acb
 SHA1 (patch-cd) = 9ce049cc2861d13b89fe38259921640d5733924e
+SHA1 (patch-uip_folder.c) = ab3c40af88cda668f98ce14440e3febabdae479d
