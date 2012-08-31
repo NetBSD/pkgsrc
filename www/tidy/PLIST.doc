@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.5 2012/07/10 06:53:41 tron Exp $
+@comment $NetBSD: PLIST.doc,v 1.6 2012/08/31 14:25:49 wiz Exp $
 share/doc/tidy/Overview.html
 share/doc/tidy/api/annotated.html
 share/doc/tidy/api/annotated.js
@@ -85,15 +85,13 @@ share/doc/tidy/api/structTidyDoc.html
 share/doc/tidy/api/structTidyNode.html
 share/doc/tidy/api/structTidyOption.html
 share/doc/tidy/api/struct__TidyAllocator.html
-share/doc/tidy/api/struct__TidyAllocator.js
 share/doc/tidy/api/struct__TidyAllocatorVtbl.html
-share/doc/tidy/api/struct__TidyAllocatorVtbl.js
 share/doc/tidy/api/struct__TidyBuffer.html
 share/doc/tidy/api/struct__TidyBuffer.js
 share/doc/tidy/api/struct__TidyInputSource.html
-share/doc/tidy/api/struct__TidyInputSource.js
 share/doc/tidy/api/struct__TidyOutputSink.html
-share/doc/tidy/api/struct__TidyOutputSink.js
+share/doc/tidy/api/sync_off.png
+share/doc/tidy/api/sync_on.png
 share/doc/tidy/api/tab_a.png
 share/doc/tidy/api/tab_b.png
 share/doc/tidy/api/tab_h.png
