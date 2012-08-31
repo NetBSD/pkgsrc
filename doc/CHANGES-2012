@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2743 2012/08/31 19:44:25 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2744 2012/08/31 19:52:59 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/tidy to 20091027nb3 [wiz 2012-08-31]
 	Updated converters/libvisio to 0.0.19nb2 [wiz 2012-08-31]
 	Updated x11/gtksourceview3 to 3.4.2 [prlw1 2012-08-31]
+	Added editors/gedit3 version 3.4.2 [prlw1 2012-08-31]
