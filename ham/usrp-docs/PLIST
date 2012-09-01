@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/07/09 12:15:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/09/01 10:18:54 marino Exp $
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h.html
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h__dep__incl.map
 share/doc/usrp-${PKGVERSION}/html/ad9862_8h__dep__incl.md5
@@ -1223,9 +1223,21 @@ share/doc/usrp-${PKGVERSION}/html/inherit_graph_25.png
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_26.map
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_26.md5
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_26.png
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_27.map
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_27.md5
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_27.png
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_28.map
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_28.md5
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_28.png
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_29.map
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_29.md5
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_29.png
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_3.map
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_3.md5
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_3.png
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_30.map
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_30.md5
+share/doc/usrp-${PKGVERSION}/html/inherit_graph_30.png
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_4.map
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_4.md5
 share/doc/usrp-${PKGVERSION}/html/inherit_graph_4.png
@@ -1295,6 +1307,8 @@ share/doc/usrp-${PKGVERSION}/html/structxcvr2450__table__entry.html
 share/doc/usrp-${PKGVERSION}/html/structxcvr2450__table__entry__coll__graph.map
 share/doc/usrp-${PKGVERSION}/html/structxcvr2450__table__entry__coll__graph.md5
 share/doc/usrp-${PKGVERSION}/html/structxcvr2450__table__entry__coll__graph.png
+share/doc/usrp-${PKGVERSION}/html/sync_off.png
+share/doc/usrp-${PKGVERSION}/html/sync_on.png
 share/doc/usrp-${PKGVERSION}/html/tab_a.png
 share/doc/usrp-${PKGVERSION}/html/tab_b.png
 share/doc/usrp-${PKGVERSION}/html/tab_h.png
