@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2012/06/14 07:44:03 sbd Exp $
+# $NetBSD: Makefile,v 1.95 2012/09/01 16:14:54 marino Exp $
 #
 
 DISTNAME=	rhythmbox-0.12.8
@@ -44,6 +44,7 @@ GCONF_SCHEMAS=		rhythmbox.schemas
 .include "../../sysutils/brasero/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../textproc/libplist/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.16.0
 .include "../../x11/gtk2/buildlink3.mk"
