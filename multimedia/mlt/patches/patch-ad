@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2010/10/19 16:41:30 abs Exp $
+$NetBSD: patch-ad,v 1.3 2012/09/01 11:18:54 marino Exp $
 
-# Add support for NetBSD - match FreeBSD
+# Add support for NetBSD & DragonFly - match FreeBSD
 
 --- src/modules/qimage/configure.orig	2010-09-14 06:00:09.000000000 +0000
 +++ src/modules/qimage/configure
@@ -9,7 +9,7 @@ $NetBSD: patch-ad,v 1.2 2010/10/19 16:41:30 abs Exp $
  		export LIBSUF=.dylib
  		;;
 -	Linux|FreeBSD)
-+	Linux|FreeBSD|NetBSD)
++	Linux|FreeBSD|NetBSD|DragonFly)
  		export LIBSUF=.so
  		;;
  	*)
