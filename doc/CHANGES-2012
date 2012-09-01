@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2749 2012/09/01 17:52:37 abs Exp $
+$NetBSD: CHANGES-2012,v 1.2750 2012/09/01 19:51:27 spz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4276,3 +4276,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/optipng to 0.7.2 [adam 2012-09-01]
 	Updated pkgtools/pkg_summary-utils to 0.58.3 [cheusov 2012-09-01]
 	Updated pkgtools/pkg_chk to 2.0.6 [abs 2012-09-01]
+	Updated games/pysolfc to 2.0 [spz 2012-09-01]
