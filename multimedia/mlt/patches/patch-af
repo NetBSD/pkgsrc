@@ -1,6 +1,7 @@
-$NetBSD: patch-af,v 1.2 2010/10/19 16:41:30 abs Exp $
+$NetBSD: patch-af,v 1.3 2012/09/01 11:18:54 marino Exp $
 
 # Add NetBSD support (same as FreeBSD) and clean up *BSD ifdefs
+# Add DragonFly support (same as FreeBSD)
 
 --- src/modules/kino/endian_types.h.orig	2010-09-14 06:00:09.000000000 +0000
 +++ src/modules/kino/endian_types.h
@@ -8,7 +9,7 @@ $NetBSD: patch-af,v 1.2 2010/10/19 16:41:30 abs Exp $
  #define _ENDIAN_TYPES_H
  
  /* Needed for BYTE_ORDER and BIG/LITTLE_ENDIAN macros. */
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
  #ifndef _BSD_SOURCE
  # define _BSD_SOURCE
 -#ifndef __FreeBSD__
@@ -25,18 +26,18 @@ $NetBSD: patch-af,v 1.2 2010/10/19 16:41:30 abs Exp $
  # include <sys/endian.h>
 -#endif /* __FreeBSD__ */
 -#endif
-+#endif /* !defined(__FreeBSD__) && !defined(__NetBSD__) */
++#endif /* !defined __FreeBSD__ || __NetBSD__ || __DragonFly__ */
  
  #include <sys/types.h>
 -#ifndef __FreeBSD__
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
  #include <byteswap.h>
  #else
  #define bswap_16(x) bswap16(x)
  #define bswap_32(x) bswap32(x)
  #define bswap_64(x) bswap64(x)
 -#endif /* __FreeBSD__ */
-+#endif /* !defined(__FreeBSD__) && !defined(__NetBSD__) */
++#endif /* !defined __FreeBSD__ || __NetBSD__ || __DragonFly__ */
  
  static inline int8_t bswap(const int8_t& x)
  {
