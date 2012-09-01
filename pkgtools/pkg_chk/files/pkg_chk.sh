@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.70 2012/08/28 12:12:26 abs Exp $
+# $Id: pkg_chk.sh,v 1.71 2012/09/01 17:52:09 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -276,13 +276,13 @@ extract_variables()
 
 fatal()
     {
-    msg "*** $@" >&2
+    msg "** $@" >&2
     cleanup_and_exit 1
     }
 
 fatal_later()
     {
-    msg "*** $@" >&2
+    msg "** $@" >&2
     fatal_later=1
     }
 
@@ -321,7 +321,7 @@ get_bin_pkg_info()
 		uncompress_filter $summary_file < $PACKAGES/$summary_file
 		return;
 	    fi
-	    echo "*** Ignoring $summary_file as newer pkgs in $PACKAGES" >&2
+	    msg "** Ignoring $summary_file as newer pkgs in $PACKAGES"
 	fi
     done
     msg_progress Scan $PACKAGES
