@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/09/12 19:45:29 snj Exp $
+$NetBSD: distinfo,v 1.3 2012/09/01 19:44:33 spz Exp $
 
-SHA1 (PySolFC-1.1.tar.bz2) = 5ff4d8c7f238c5dab6122e916aeae2de2d945123
-RMD160 (PySolFC-1.1.tar.bz2) = 2aa02c07294270281d5a685eb6b19086c85a7171
-Size (PySolFC-1.1.tar.bz2) = 3667355 bytes
-SHA1 (patch-aa) = c51bc9223f6abeed7de83c5d2615ca8f88c798a7
-SHA1 (patch-ab) = c3572b6659a109fa68852f298d352d14f3f46498
-SHA1 (patch-ac) = bef091ec396318e184032538314590ee9003c673
+SHA1 (PySolFC-2.0.tar.bz2) = 7a11aa04b3f5147396c8b5011228094c10ddc257
+RMD160 (PySolFC-2.0.tar.bz2) = ea846061cdf2630257322b2e9eb7289b71d47705
+Size (PySolFC-2.0.tar.bz2) = 4208776 bytes
+SHA1 (patch-ab) = 36a74977a12e5610e89f25c9482a475fac06dace
