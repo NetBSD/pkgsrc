@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/07/09 12:15:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/09/01 09:12:35 marino Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -367,27 +367,18 @@ share/doc/qof/html/doxy/qsfmaps.html
 share/doc/qof/html/doxy/reference.html
 share/doc/qof/html/doxy/resize.js
 share/doc/qof/html/doxy/structGHashTableKVPair.html
-share/doc/qof/html/doxy/structGHashTableKVPair.js
 share/doc/qof/html/doxy/structHandlerInfo.html
 share/doc/qof/html/doxy/structHandlerInfo.js
 share/doc/qof/html/doxy/structQofBackendOption__s.html
-share/doc/qof/html/doxy/structQofBackendOption__s.js
 share/doc/qof/html/doxy/structQofBackendProvider__s.html
-share/doc/qof/html/doxy/structQofBackendProvider__s.js
 share/doc/qof/html/doxy/structQofBackend__s.html
-share/doc/qof/html/doxy/structQofBackend__s.js
 share/doc/qof/html/doxy/structQofBookMergeData.html
-share/doc/qof/html/doxy/structQofBookMergeData.js
 share/doc/qof/html/doxy/structQofBookMergeRule.html
-share/doc/qof/html/doxy/structQofBookMergeRule.js
 share/doc/qof/html/doxy/structQofDate__s.html
-share/doc/qof/html/doxy/structQofDate__s.js
 share/doc/qof/html/doxy/structQofEntity__s.html
-share/doc/qof/html/doxy/structQofEntity__s.js
 share/doc/qof/html/doxy/structQofInstance__s.html
 share/doc/qof/html/doxy/structQofInstance__s.js
 share/doc/qof/html/doxy/structQofInt128.html
-share/doc/qof/html/doxy/structQofInt128.js
 share/doc/qof/html/doxy/structQofUndo__s.html
 share/doc/qof/html/doxy/structQofUndo__s.js
 share/doc/qof/html/doxy/structQsfMetadata__s.html
@@ -399,15 +390,10 @@ share/doc/qof/html/doxy/structQsfObject__s.js
 share/doc/qof/html/doxy/structQsfValidates__s.html
 share/doc/qof/html/doxy/structQsfValidates__s.js
 share/doc/qof/html/doxy/struct__QofBook.html
-share/doc/qof/html/doxy/struct__QofBook.js
 share/doc/qof/html/doxy/struct__QofNumeric.html
-share/doc/qof/html/doxy/struct__QofNumeric.js
 share/doc/qof/html/doxy/struct__QofObject.html
-share/doc/qof/html/doxy/struct__QofObject.js
 share/doc/qof/html/doxy/struct__QofParam.html
-share/doc/qof/html/doxy/struct__QofParam.js
 share/doc/qof/html/doxy/struct__QofQueryPredData.html
-share/doc/qof/html/doxy/struct__QofQueryPredData.js
 share/doc/qof/html/doxy/struct__QofSession.html
 share/doc/qof/html/doxy/struct__QofSession.js
 share/doc/qof/html/doxy/structbin__data.html
@@ -415,7 +401,6 @@ share/doc/qof/html/doxy/structbin__data.js
 share/doc/qof/html/doxy/structmd5__ctx.html
 share/doc/qof/html/doxy/structmd5__ctx.js
 share/doc/qof/html/doxy/structqof__entity__reference.html
-share/doc/qof/html/doxy/structqof__entity__reference.js
 share/doc/qof/html/doxy/structquery__boolean__def.html
 share/doc/qof/html/doxy/structquery__boolean__def.js
 share/doc/qof/html/doxy/structquery__char__def.html
@@ -443,7 +428,8 @@ share/doc/qof/html/doxy/structquery__string__def.js
 share/doc/qof/html/doxy/structquery__time__def.html
 share/doc/qof/html/doxy/structquery__time__def.js
 share/doc/qof/html/doxy/structtimespec64.html
-share/doc/qof/html/doxy/structtimespec64.js
+share/doc/qof/html/doxy/sync_off.png
+share/doc/qof/html/doxy/sync_on.png
 share/doc/qof/html/doxy/tab_a.png
 share/doc/qof/html/doxy/tab_b.png
 share/doc/qof/html/doxy/tab_h.png
@@ -468,7 +454,6 @@ share/doc/qof/html/doxy/test-stuff_8h_source.html
 share/doc/qof/html/doxy/tipshints.html
 share/doc/qof/html/doxy/todo.html
 share/doc/qof/html/doxy/union__GUID.html
-share/doc/qof/html/doxy/union__GUID.js
 share/locale/id/LC_MESSAGES/qof.mo
 share/locale/pt_BR/LC_MESSAGES/qof.mo
 share/locale/ro/LC_MESSAGES/qof.mo
