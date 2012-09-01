@@ -1,3 +1,3 @@
 This package provides C binding to libtk and libtcl, necessary for
-Tkinter to work. All other needed files (Tkinter.py and frineds)
+Tkinter to work. All other needed files (Tkinter.py and friends)
 are part of standard Python installation.
