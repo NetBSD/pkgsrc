@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2746 2012/08/31 19:57:32 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.2747 2012/09/01 09:20:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/gtksourceview3 version 3.4.2 [prlw1 2012-08-31]
 	Added editors/gedit3 version 3.4.2 [prlw1 2012-08-31]
 	Added editors/gedit3-spell version 3.4.2 [prlw1 2012-08-31]
+	Updated graphics/optipng to 0.7.2 [adam 2012-09-01]
