@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/01 22:11:38 mspo Exp $
+${PYSITELIB}/pyev.so
