@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/19 15:47:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/02 14:56:17 wiz Exp $
 #
 # Replacement Makefile for zlib.
 
@@ -10,7 +10,7 @@ LOBJS=	${OBJS:R:S/$/.lo/g}
 all: libz.la
 
 libz.la: ${LOBJS}
-	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
+	${LIBTOOL} --mode=link --tag=CC ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
 	    ${LOBJS} -version-info 1:2 -rpath ${PREFIX}/lib
 
 libz.a: ${OBJS}
@@ -23,4 +23,4 @@ libz.a: ${OBJS}
 	${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
 
 .c.lo:
-	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
+	${LIBTOOL} --mode=compile --tag=CC ${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
