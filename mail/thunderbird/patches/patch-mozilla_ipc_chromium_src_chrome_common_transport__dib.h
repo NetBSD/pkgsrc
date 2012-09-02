@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h,v 1.2 2012/04/28 16:56:59 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h,v 1.3 2012/09/02 06:43:42 ryoon Exp $
 
---- mozilla/ipc/chromium/src/chrome/common/transport_dib.h.orig	2012-04-20 22:40:06.000000000 +0000
+--- mozilla/ipc/chromium/src/chrome/common/transport_dib.h.orig	2012-08-25 00:31:11.000000000 +0000
 +++ mozilla/ipc/chromium/src/chrome/common/transport_dib.h
 @@ -7,7 +7,7 @@
  
@@ -16,7 +16,7 @@ $NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h,v 1.2 201
    };
    typedef HandleAndSequenceNum Id;
 -#elif defined(OS_MACOSX)
-+#elif defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_BSD)
++#elif defined(OS_MACOSX) || defined(OS_BSD)
    typedef base::SharedMemoryHandle Handle;
    // On Mac, the inode number of the backing file is used as an id.
    typedef base::SharedMemoryId Id;
