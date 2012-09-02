@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2759 2012/09/02 06:44:41 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2760 2012/09/02 06:50:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4286,3 +4286,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-CPAN-Reporter to 1.2006 [wen 2012-09-02]
 	Updated math/p5-Statistics-Descriptive to 3.0604 [wen 2012-09-02]
 	Updated mail/thunderbird to 15.0 [ryoon 2012-09-02]
+	Updated www/firefox-l10n to 15.0 [ryoon 2012-09-02]
