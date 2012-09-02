@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2766 2012/09/02 13:10:56 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2767 2012/09/02 13:21:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4293,3 +4293,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Compress-Raw-Zlib to 2.056 [wen 2012-09-02]
 	Updated devel/p5-Config-General to 2.51 [wen 2012-09-02]
 	Updated devel/p5-Config-GitLike to 1.09 [wen 2012-09-02]
+	Updated devel/p5-Data-Peek to 0.38 [wen 2012-09-02]
