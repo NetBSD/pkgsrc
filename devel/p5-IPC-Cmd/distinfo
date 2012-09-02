@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2011/10/16 13:54:32 hiramatsu Exp $
+$NetBSD: distinfo,v 1.9 2012/09/02 04:19:24 wen Exp $
 
-SHA1 (IPC-Cmd-0.72.tar.gz) = a11bb49c34c99d3a358c8b0aa18401b3097e72ab
-RMD160 (IPC-Cmd-0.72.tar.gz) = 47adf44f38d11b8ae7eb0781ee98d349a119bb6d
-Size (IPC-Cmd-0.72.tar.gz) = 26723 bytes
+SHA1 (IPC-Cmd-0.78.tar.gz) = a7a60e2a36052cd313252011a6d4ab3f1ce80771
+RMD160 (IPC-Cmd-0.78.tar.gz) = e52bfc2f2e499ade708f32dea5bc7342f499ac69
+Size (IPC-Cmd-0.78.tar.gz) = 27534 bytes
