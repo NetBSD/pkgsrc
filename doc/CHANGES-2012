@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2760 2012/09/02 06:50:36 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2761 2012/09/02 10:03:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/p5-Statistics-Descriptive to 3.0604 [wen 2012-09-02]
 	Updated mail/thunderbird to 15.0 [ryoon 2012-09-02]
 	Updated www/firefox-l10n to 15.0 [ryoon 2012-09-02]
+	Updated devel/mercurial to 2.3.1 [wiz 2012-09-02]
