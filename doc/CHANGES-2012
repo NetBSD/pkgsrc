@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2752 2012/09/01 22:14:10 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.2753 2012/09/02 00:32:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/pysolfc to 2.0 [spz 2012-09-01]
 	Updated sysutils/tarsnap to 1.0.33 [riz 2012-09-01]
 	Added devel/py-pyev version 4.04 [mspo 2012-09-01]
+	Updated www/mediawiki to 1.19.2 [wen 2012-09-02]
