@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/20 12:36:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/02 15:12:51 wiz Exp $
 bin/flickcurl
 bin/flickcurl-config
 bin/flickrdf
@@ -17,9 +17,16 @@ share/gtk-doc/html/flickcurl/appgarden-new-api-key-secret.png
 share/gtk-doc/html/flickcurl/appgarden-tell-us-about-your-app.png
 share/gtk-doc/html/flickcurl/appgarden-test-app-page.png
 share/gtk-doc/html/flickcurl/flickcurl-auth-authenticate.html
+share/gtk-doc/html/flickcurl/flickcurl-auth-build.html
 share/gtk-doc/html/flickcurl/flickcurl-auth-register.html
+share/gtk-doc/html/flickcurl/flickcurl-auth-upgrade.html
 share/gtk-doc/html/flickcurl/flickcurl-auth-use.html
 share/gtk-doc/html/flickcurl/flickcurl-auth.html
+share/gtk-doc/html/flickcurl/flickcurl-legacy-auth-authenticate.html
+share/gtk-doc/html/flickcurl/flickcurl-legacy-auth-build.html
+share/gtk-doc/html/flickcurl/flickcurl-legacy-auth-register.html
+share/gtk-doc/html/flickcurl/flickcurl-legacy-auth-use.html
+share/gtk-doc/html/flickcurl/flickcurl-legacy-auth.html
 share/gtk-doc/html/flickcurl/flickcurl-searching-search-example.html
 share/gtk-doc/html/flickcurl/flickcurl-searching-search-extras.html
 share/gtk-doc/html/flickcurl/flickcurl-searching-search-paging.html
