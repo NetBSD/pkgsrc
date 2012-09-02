@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.8 2012/03/05 03:58:02 dholland Exp $
+$NetBSD: patch-ab,v 1.9 2012/09/02 18:35:19 dholland Exp $
 
 Recognize dragonfly and solaris.
 
 --- configure.orig	2011-04-16 23:39:31.000000000 +0000
 +++ configure
-@@ -475,7 +475,7 @@ else
+@@ -540,7 +540,7 @@ else
  	echo_n "Checking hosttype... "
  	echo $_host_os
  	case $_host_os in
