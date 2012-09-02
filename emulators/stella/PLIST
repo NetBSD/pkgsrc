@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/10/16 16:08:19 dholland Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/09/02 18:35:19 dholland Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -36,9 +36,9 @@ share/doc/stella/graphics/eventmapping_remap.png
 share/doc/stella/graphics/jr_pacman.png
 share/doc/stella/graphics/launcher.png
 share/doc/stella/graphics/launcher_filter.png
-share/doc/stella/graphics/launcher_options.png
 share/doc/stella/graphics/launcher_options_files.png
 share/doc/stella/graphics/launcher_override.png
+share/doc/stella/graphics/logs.png
 share/doc/stella/graphics/options.png
 share/doc/stella/graphics/options_audio.png
 share/doc/stella/graphics/options_debugger.png
@@ -58,6 +58,10 @@ share/doc/stella/graphics/secret_quest.png
 share/doc/stella/graphics/select_romdir.png
 share/doc/stella/graphics/space_invaders.png
 share/doc/stella/index.html
-share/icons/large/stella.png
-share/icons/mini/stella.png
-share/icons/stella.png
+share/icons/hicolor/128x128/apps/stella.png
+share/icons/hicolor/16x16/apps/stella.png
+share/icons/hicolor/22x22/apps/stella.png
+share/icons/hicolor/24x24/apps/stella.png
+share/icons/hicolor/32x32/apps/stella.png
+share/icons/hicolor/48x48/apps/stella.png
+share/icons/hicolor/64x64/apps/stella.png
