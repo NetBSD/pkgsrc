@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2763 2012/09/02 12:49:16 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2764 2012/09/02 12:57:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4290,3 +4290,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mercurial to 2.3.1 [wiz 2012-09-02]
 	Updated mail/thunderbird-l10n to 15.0 [ryoon 2012-09-02]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.055 [wen 2012-09-02]
+	Updated devel/p5-Compress-Raw-Zlib to 2.056 [wen 2012-09-02]
