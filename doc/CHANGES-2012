@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2753 2012/09/02 00:32:11 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2754 2012/09/02 03:28:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4280,3 +4280,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/tarsnap to 1.0.33 [riz 2012-09-01]
 	Added devel/py-pyev version 4.04 [mspo 2012-09-01]
 	Updated www/mediawiki to 1.19.2 [wen 2012-09-02]
+	Updated net/p5-Net-Write to 1.06 [wen 2012-09-02]
