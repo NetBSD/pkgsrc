@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.2 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.3 2012/09/02 05:45:29 ryoon Exp $
 
 --- ipc/chromium/src/base/dir_reader_bsd.h.orig	2012-08-28 18:53:58.000000000 +0000
 +++ ipc/chromium/src/base/dir_reader_bsd.h
-@@ -0,0 +1,108 @@
+@@ -0,0 +1,112 @@
 +// Copyright (c) 2010 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -54,7 +54,11 @@ $NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.2 2012/08/28 23:27:1
 +  bool Next() {
 +    if (size_) {
 +      struct dirent* dirent = reinterpret_cast<struct dirent*>(&buf_[offset_]);
++#ifdef OS_DRAGONFLY
++      offset_ += _DIRENT_DIRSIZ(dirent);
++#else
 +      offset_ += dirent->d_reclen;
++#endif
 +    }
 +
 +    if (offset_ != size_)
