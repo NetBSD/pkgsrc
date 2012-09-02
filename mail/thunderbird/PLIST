@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.42 2012/07/19 17:57:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2012/09/02 06:43:39 ryoon Exp $
 bin/thunderbird
-include/thunderbird/ARIAGridAccessibleWrap.h
-include/thunderbird/AtkSocketAccessible.h
+include/thunderbird/AudioSegment.h
 include/thunderbird/BasicImplData.h
 include/thunderbird/BasicLayers.h
 include/thunderbird/BasicTiledThebesLayer.h
-include/thunderbird/CheckedInt.h
 include/thunderbird/CustomQS_Canvas.h
 include/thunderbird/CustomQS_Canvas2D.h
 include/thunderbird/CustomQS_WebGL.h
@@ -31,18 +29,30 @@ include/thunderbird/ImageLayers.h
 include/thunderbird/ImageLogging.h
 include/thunderbird/LayerManagerOGL.h
 include/thunderbird/LayerManagerOGLProgram.h
+include/thunderbird/LayerManagerOGLShaders.h
 include/thunderbird/LayerSorter.h
 include/thunderbird/Layers.h
 include/thunderbird/MailNewsTypes.h
 include/thunderbird/MailNewsTypes2.h
+include/thunderbird/MediaEngine.h
+include/thunderbird/MediaEngineDefault.h
 include/thunderbird/MediaResource.h
+include/thunderbird/MediaSegment.h
+include/thunderbird/MediaStreamGraph.h
 include/thunderbird/PCOMContentPermissionRequestChild.h
 include/thunderbird/PPrefTuple.h
 include/thunderbird/PrefTuple.h
 include/thunderbird/ReadbackLayer.h
 include/thunderbird/SVGAttrValueWrapper.h
+include/thunderbird/SharedBuffer.h
+include/thunderbird/SharedTextureImage.h
+include/thunderbird/StackArena.h
+include/thunderbird/StreamBuffer.h
 include/thunderbird/TabMessageUtils.h
+include/thunderbird/TexturePoolOGL.h
+include/thunderbird/TimeVarying.h
 include/thunderbird/VideoFrameContainer.h
+include/thunderbird/VideoSegment.h
 include/thunderbird/VideoUtils.h
 include/thunderbird/WebGLContext.h
 include/thunderbird/a11yGeneric.h
@@ -65,6 +75,7 @@ include/thunderbird/expat_external.h
 include/thunderbird/extIApplication.h
 include/thunderbird/ftpCore.h
 include/thunderbird/gc/Barrier.h
+include/thunderbird/gc/Heap.h
 include/thunderbird/gc/Root.h
 include/thunderbird/gc/Statistics.h
 include/thunderbird/gfx2DGlue.h
@@ -82,6 +93,7 @@ include/thunderbird/gfxFT2FontBase.h
 include/thunderbird/gfxFailure.h
 include/thunderbird/gfxFont.h
 include/thunderbird/gfxFontConstants.h
+include/thunderbird/gfxFontFeatures.h
 include/thunderbird/gfxFontTest.h
 include/thunderbird/gfxFontUtils.h
 include/thunderbird/gfxGdkNativeRenderer.h
@@ -124,6 +136,7 @@ include/thunderbird/harfbuzz/hb-ot-layout.h
 include/thunderbird/harfbuzz/hb-ot-shape.h
 include/thunderbird/harfbuzz/hb-ot-tag.h
 include/thunderbird/harfbuzz/hb-ot.h
+include/thunderbird/harfbuzz/hb-set.h
 include/thunderbird/harfbuzz/hb-shape.h
 include/thunderbird/harfbuzz/hb-unicode.h
 include/thunderbird/harfbuzz/hb-version.h
@@ -169,7 +182,6 @@ include/thunderbird/jsalloc.h
 include/thunderbird/jsapi.h
 include/thunderbird/jsatom.h
 include/thunderbird/jsatom.tbl
-include/thunderbird/jscell.h
 include/thunderbird/jsclass.h
 include/thunderbird/jsclist.h
 include/thunderbird/jscpucfg.h
@@ -238,7 +250,8 @@ include/thunderbird/mozIStorageService.h
 include/thunderbird/mozIStorageServiceQuotaManagement.h
 include/thunderbird/mozIStorageStatement.h
 include/thunderbird/mozIStorageStatementCallback.h
-include/thunderbird/mozIStorageStatementWrapper.h
+include/thunderbird/mozIStorageStatementParams.h
+include/thunderbird/mozIStorageStatementRow.h
 include/thunderbird/mozIStorageVacuumParticipant.h
 include/thunderbird/mozIStorageValueArray.h
 include/thunderbird/mozITXTToHTMLConv.h
@@ -257,9 +270,11 @@ include/thunderbird/mozilla/BlockingResourceBase.h
 include/thunderbird/mozilla/BloomFilter.h
 include/thunderbird/mozilla/CORSMode.h
 include/thunderbird/mozilla/CharTokenizer.h
+include/thunderbird/mozilla/CheckedInt.h
 include/thunderbird/mozilla/ClearOnShutdown.h
 include/thunderbird/mozilla/CondVar.h
 include/thunderbird/mozilla/DeadlockDetector.h
+include/thunderbird/mozilla/ErrorResult.h
 include/thunderbird/mozilla/FileLocation.h
 include/thunderbird/mozilla/FileUtils.h
 include/thunderbird/mozilla/FloatingPoint.h
@@ -287,6 +302,7 @@ include/thunderbird/mozilla/ModuleLoader.h
 include/thunderbird/mozilla/ModuleUtils.h
 include/thunderbird/mozilla/Monitor.h
 include/thunderbird/mozilla/Mutex.h
+include/thunderbird/mozilla/OSFileConstants.h
 include/thunderbird/mozilla/Observer.h
 include/thunderbird/mozilla/Omnijar.h
 include/thunderbird/mozilla/PaintTracker.h
@@ -306,12 +322,14 @@ include/thunderbird/mozilla/StartupTimeline.h
 include/thunderbird/mozilla/StringBuilder.h
 include/thunderbird/mozilla/Telemetry.h
 include/thunderbird/mozilla/TelemetryHistograms.h
+include/thunderbird/mozilla/ThreadLocal.h
 include/thunderbird/mozilla/TimeStamp.h
 include/thunderbird/mozilla/Types.h
 include/thunderbird/mozilla/Util.h
 include/thunderbird/mozilla/WidgetTraceEvent.h
 include/thunderbird/mozilla/X11Util.h
 include/thunderbird/mozilla/XPCOM.h
+include/thunderbird/mozilla/a11y/Accessible.h
 include/thunderbird/mozilla/a11y/FocusManager.h
 include/thunderbird/mozilla/a11y/Role.h
 include/thunderbird/mozilla/a11y/States.h
@@ -328,19 +346,28 @@ include/thunderbird/mozilla/docshell/OfflineCacheUpdateChild.h
 include/thunderbird/mozilla/docshell/OfflineCacheUpdateParent.h
 include/thunderbird/mozilla/dom/AudioChild.h
 include/thunderbird/mozilla/dom/AudioParent.h
+include/thunderbird/mozilla/dom/BindingUtils.h
 include/thunderbird/mozilla/dom/ContentChild.h
 include/thunderbird/mozilla/dom/ContentParent.h
 include/thunderbird/mozilla/dom/ContentProcess.h
 include/thunderbird/mozilla/dom/CrashReporterChild.h
 include/thunderbird/mozilla/dom/CrashReporterParent.h
 include/thunderbird/mozilla/dom/DOMError.h
+include/thunderbird/mozilla/dom/DOMJSClass.h
 include/thunderbird/mozilla/dom/DOMRequest.h
 include/thunderbird/mozilla/dom/Element.h
+include/thunderbird/mozilla/dom/EventListenerBinding.h
+include/thunderbird/mozilla/dom/EventTargetBinding.h
 include/thunderbird/mozilla/dom/ExternalHelperAppChild.h
 include/thunderbird/mozilla/dom/ExternalHelperAppParent.h
 include/thunderbird/mozilla/dom/FromParser.h
+include/thunderbird/mozilla/dom/FunctionBinding.h
 include/thunderbird/mozilla/dom/ImageData.h
 include/thunderbird/mozilla/dom/Link.h
+include/thunderbird/mozilla/dom/Nullable.h
+include/thunderbird/mozilla/dom/PrimitiveConversions.h
+include/thunderbird/mozilla/dom/PrototypeList.h
+include/thunderbird/mozilla/dom/RegisterBindings.h
 include/thunderbird/mozilla/dom/ScreenOrientation.h
 include/thunderbird/mozilla/dom/StorageChild.h
 include/thunderbird/mozilla/dom/StorageParent.h
@@ -348,25 +375,28 @@ include/thunderbird/mozilla/dom/StructuredCloneTags.h
 include/thunderbird/mozilla/dom/TabChild.h
 include/thunderbird/mozilla/dom/TabMessageUtils.h
 include/thunderbird/mozilla/dom/TabParent.h
+include/thunderbird/mozilla/dom/TypedArray.h
+include/thunderbird/mozilla/dom/WebGLRenderingContextBinding.h
+include/thunderbird/mozilla/dom/XMLHttpRequestBinding.h
+include/thunderbird/mozilla/dom/XMLHttpRequestEventTargetBinding.h
+include/thunderbird/mozilla/dom/XMLHttpRequestUploadBinding.h
 include/thunderbird/mozilla/dom/battery/Constants.h
 include/thunderbird/mozilla/dom/battery/Types.h
-include/thunderbird/mozilla/dom/bindings/Common.h
-include/thunderbird/mozilla/dom/bindings/DOMJSClass.h
-include/thunderbird/mozilla/dom/bindings/EventListenerBinding.h
-include/thunderbird/mozilla/dom/bindings/EventTargetBinding.h
-include/thunderbird/mozilla/dom/bindings/FunctionBinding.h
-include/thunderbird/mozilla/dom/bindings/Nullable.h
-include/thunderbird/mozilla/dom/bindings/PrototypeList.h
-include/thunderbird/mozilla/dom/bindings/Utils.h
-include/thunderbird/mozilla/dom/bindings/XMLHttpRequestBinding.h
-include/thunderbird/mozilla/dom/bindings/XMLHttpRequestEventTargetBinding.h
-include/thunderbird/mozilla/dom/bindings/XMLHttpRequestUploadBinding.h
+include/thunderbird/mozilla/dom/file/DOMFileHandle.h
+include/thunderbird/mozilla/dom/file/File.h
+include/thunderbird/mozilla/dom/file/FileCommon.h
+include/thunderbird/mozilla/dom/file/FileHandle.h
+include/thunderbird/mozilla/dom/file/FileHelper.h
+include/thunderbird/mozilla/dom/file/FileService.h
+include/thunderbird/mozilla/dom/file/LockedFile.h
+include/thunderbird/mozilla/dom/indexedDB/DatabaseInfo.h
 include/thunderbird/mozilla/dom/indexedDB/FileInfo.h
 include/thunderbird/mozilla/dom/indexedDB/FileManager.h
 include/thunderbird/mozilla/dom/indexedDB/IDBCursor.h
 include/thunderbird/mozilla/dom/indexedDB/IDBDatabase.h
 include/thunderbird/mozilla/dom/indexedDB/IDBEvents.h
 include/thunderbird/mozilla/dom/indexedDB/IDBFactory.h
+include/thunderbird/mozilla/dom/indexedDB/IDBFileHandle.h
 include/thunderbird/mozilla/dom/indexedDB/IDBIndex.h
 include/thunderbird/mozilla/dom/indexedDB/IDBKeyRange.h
 include/thunderbird/mozilla/dom/indexedDB/IDBObjectStore.h
@@ -376,6 +406,7 @@ include/thunderbird/mozilla/dom/indexedDB/IDBWrapperCache.h
 include/thunderbird/mozilla/dom/indexedDB/IndexedDatabase.h
 include/thunderbird/mozilla/dom/indexedDB/IndexedDatabaseManager.h
 include/thunderbird/mozilla/dom/indexedDB/Key.h
+include/thunderbird/mozilla/dom/indexedDB/SerializationHelpers.h
 include/thunderbird/mozilla/dom/network/Constants.h
 include/thunderbird/mozilla/dom/network/Types.h
 include/thunderbird/mozilla/dom/network/Utils.h
@@ -397,6 +428,7 @@ include/thunderbird/mozilla/dom/workers/bindings/WorkerFeature.h
 include/thunderbird/mozilla/dom/workers/bindings/XMLHttpRequest.h
 include/thunderbird/mozilla/dom/workers/bindings/XMLHttpRequestEventTarget.h
 include/thunderbird/mozilla/dom/workers/bindings/XMLHttpRequestUpload.h
+include/thunderbird/mozilla/fallible.h
 include/thunderbird/mozilla/gfx/2D.h
 include/thunderbird/mozilla/gfx/BaseMargin.h
 include/thunderbird/mozilla/gfx/BasePoint.h
@@ -538,8 +570,6 @@ include/thunderbird/nsAccDocManager.h
 include/thunderbird/nsAccessNode.h
 include/thunderbird/nsAccessNodeWrap.h
 include/thunderbird/nsAccessibilityService.h
-include/thunderbird/nsAccessible.h
-include/thunderbird/nsAccessibleWrap.h
 include/thunderbird/nsAgg.h
 include/thunderbird/nsAlgorithm.h
 include/thunderbird/nsAppDirectoryServiceDefs.h
@@ -619,7 +649,6 @@ include/thunderbird/nsCom.h
 include/thunderbird/nsCompatibility.h
 include/thunderbird/nsComponentManagerUtils.h
 include/thunderbird/nsComposeStrings.h
-include/thunderbird/nsCompressedCharMap.h
 include/thunderbird/nsContentCID.h
 include/thunderbird/nsContentCreatorFunctions.h
 include/thunderbird/nsContentDLF.h
@@ -647,6 +676,7 @@ include/thunderbird/nsDOMEventTargetHelper.h
 include/thunderbird/nsDOMFile.h
 include/thunderbird/nsDOMJSUtils.h
 include/thunderbird/nsDOMMediaQueryList.h
+include/thunderbird/nsDOMMediaStream.h
 include/thunderbird/nsDOMScriptObjectHolder.h
 include/thunderbird/nsDOMString.h
 include/thunderbird/nsDataHashtable.h
@@ -660,13 +690,13 @@ include/thunderbird/nsDeque.h
 include/thunderbird/nsDetectionConfident.h
 include/thunderbird/nsDeviceContext.h
 include/thunderbird/nsDeviceSensors.h
+include/thunderbird/nsDeviceStorage.h
 include/thunderbird/nsDirectoryService.h
 include/thunderbird/nsDirectoryServiceAtomList.h
 include/thunderbird/nsDirectoryServiceDefs.h
 include/thunderbird/nsDirectoryServiceUtils.h
 include/thunderbird/nsDisplayItemTypes.h
 include/thunderbird/nsDisplayList.h
-include/thunderbird/nsDocAccessibleWrap.h
 include/thunderbird/nsDocLoader.h
 include/thunderbird/nsDocShellCID.h
 include/thunderbird/nsDocShellLoadTypes.h
@@ -717,12 +747,10 @@ include/thunderbird/nsGridRowLeafLayout.h
 include/thunderbird/nsHTMLAudioElement.h
 include/thunderbird/nsHTMLCanvasElement.h
 include/thunderbird/nsHTMLDNSPrefetch.h
-include/thunderbird/nsHTMLImageAccessibleWrap.h
 include/thunderbird/nsHTMLMediaElement.h
 include/thunderbird/nsHTMLParts.h
 include/thunderbird/nsHTMLReflowMetrics.h
 include/thunderbird/nsHTMLReflowState.h
-include/thunderbird/nsHTMLTableAccessibleWrap.h
 include/thunderbird/nsHTMLTagList.h
 include/thunderbird/nsHTMLTags.h
 include/thunderbird/nsHTMLTokens.h
@@ -762,8 +790,6 @@ include/thunderbird/nsHttp.h
 include/thunderbird/nsHttpAtomList.h
 include/thunderbird/nsHttpHeaderArray.h
 include/thunderbird/nsHttpResponseHead.h
-include/thunderbird/nsHyperTextAccessible.h
-include/thunderbird/nsHyperTextAccessibleWrap.h
 include/thunderbird/nsHyphenationManager.h
 include/thunderbird/nsHyphenator.h
 include/thunderbird/nsIASN1Object.h
@@ -836,6 +862,7 @@ include/thunderbird/nsIApplicationCache.h
 include/thunderbird/nsIApplicationCacheChannel.h
 include/thunderbird/nsIApplicationCacheContainer.h
 include/thunderbird/nsIApplicationCacheService.h
+include/thunderbird/nsIAppsService.h
 include/thunderbird/nsIArray.h
 include/thunderbird/nsIAssociatedContentSecurity.h
 include/thunderbird/nsIAsyncInputStream.h
@@ -1051,8 +1078,12 @@ include/thunderbird/nsIDOMDOMTokenList.h
 include/thunderbird/nsIDOMDataContainerEvent.h
 include/thunderbird/nsIDOMDataTransfer.h
 include/thunderbird/nsIDOMDesktopNotification.h
+include/thunderbird/nsIDOMDeviceLightEvent.h
 include/thunderbird/nsIDOMDeviceMotionEvent.h
 include/thunderbird/nsIDOMDeviceOrientationEvent.h
+include/thunderbird/nsIDOMDeviceProximityEvent.h
+include/thunderbird/nsIDOMDeviceStorage.h
+include/thunderbird/nsIDOMDeviceStorageCursor.h
 include/thunderbird/nsIDOMDocument.h
 include/thunderbird/nsIDOMDocumentFragment.h
 include/thunderbird/nsIDOMDocumentType.h
@@ -1065,8 +1096,10 @@ include/thunderbird/nsIDOMEvent.h
 include/thunderbird/nsIDOMEventListener.h
 include/thunderbird/nsIDOMEventTarget.h
 include/thunderbird/nsIDOMFile.h
+include/thunderbird/nsIDOMFileHandle.h
 include/thunderbird/nsIDOMFileList.h
 include/thunderbird/nsIDOMFileReader.h
+include/thunderbird/nsIDOMFileRequest.h
 include/thunderbird/nsIDOMFontFace.h
 include/thunderbird/nsIDOMFontFaceList.h
 include/thunderbird/nsIDOMFormData.h
@@ -1077,6 +1110,7 @@ include/thunderbird/nsIDOMGeoPositionCoords.h
 include/thunderbird/nsIDOMGeoPositionError.h
 include/thunderbird/nsIDOMGeoPositionErrorCallback.h
 include/thunderbird/nsIDOMGetSVGDocument.h
+include/thunderbird/nsIDOMGlobalObjectConstructor.h
 include/thunderbird/nsIDOMGlobalPropertyInitializer.h
 include/thunderbird/nsIDOMHTMLAnchorElement.h
 include/thunderbird/nsIDOMHTMLAppletElement.h
@@ -1153,9 +1187,11 @@ include/thunderbird/nsIDOMLSProgressEvent.h
 include/thunderbird/nsIDOMLinkStyle.h
 include/thunderbird/nsIDOMLoadStatus.h
 include/thunderbird/nsIDOMLocation.h
+include/thunderbird/nsIDOMLockedFile.h
 include/thunderbird/nsIDOMMediaError.h
 include/thunderbird/nsIDOMMediaList.h
 include/thunderbird/nsIDOMMediaQueryList.h
+include/thunderbird/nsIDOMMediaStream.h
 include/thunderbird/nsIDOMMessageEvent.h
 include/thunderbird/nsIDOMMimeType.h
 include/thunderbird/nsIDOMMimeTypeArray.h
@@ -1177,9 +1213,11 @@ include/thunderbird/nsIDOMNamedNodeMap.h
 include/thunderbird/nsIDOMNavigator.h
 include/thunderbird/nsIDOMNavigatorBattery.h
 include/thunderbird/nsIDOMNavigatorDesktopNotification.h
+include/thunderbird/nsIDOMNavigatorDeviceStorage.h
 include/thunderbird/nsIDOMNavigatorGeolocation.h
 include/thunderbird/nsIDOMNavigatorNetwork.h
 include/thunderbird/nsIDOMNavigatorSms.h
+include/thunderbird/nsIDOMNavigatorUserMedia.h
 include/thunderbird/nsIDOMNode.h
 include/thunderbird/nsIDOMNodeFilter.h
 include/thunderbird/nsIDOMNodeIterator.h
@@ -1287,6 +1325,7 @@ include/thunderbird/nsIDOMSVGTransformable.h
 include/thunderbird/nsIDOMSVGURIReference.h
 include/thunderbird/nsIDOMSVGUnitTypes.h
 include/thunderbird/nsIDOMSVGUseElement.h
+include/thunderbird/nsIDOMSVGViewElement.h
 include/thunderbird/nsIDOMSVGViewSpec.h
 include/thunderbird/nsIDOMSVGZoomAndPan.h
 include/thunderbird/nsIDOMSVGZoomEvent.h
@@ -1305,7 +1344,6 @@ include/thunderbird/nsIDOMSmsMessage.h
 include/thunderbird/nsIDOMSmsRequest.h
 include/thunderbird/nsIDOMStorage.h
 include/thunderbird/nsIDOMStorageEvent.h
-include/thunderbird/nsIDOMStorageEventObsolete.h
 include/thunderbird/nsIDOMStorageIndexedDB.h
 include/thunderbird/nsIDOMStorageItem.h
 include/thunderbird/nsIDOMStorageManager.h
@@ -1321,6 +1359,7 @@ include/thunderbird/nsIDOMTransitionEvent.h
 include/thunderbird/nsIDOMTreeWalker.h
 include/thunderbird/nsIDOMUIEvent.h
 include/thunderbird/nsIDOMUserDataHandler.h
+include/thunderbird/nsIDOMUserProximityEvent.h
 include/thunderbird/nsIDOMValidityState.h
 include/thunderbird/nsIDOMWakeLock.h
 include/thunderbird/nsIDOMWakeLockListener.h
@@ -1391,7 +1430,6 @@ include/thunderbird/nsIDownloadProgressListener.h
 include/thunderbird/nsIDownloader.h
 include/thunderbird/nsIDragService.h
 include/thunderbird/nsIDragSession.h
-include/thunderbird/nsIDragSessionGTK.h
 include/thunderbird/nsIDroppedLinkHandler.h
 include/thunderbird/nsIEditActionListener.h
 include/thunderbird/nsIEditingSession.h
@@ -1444,6 +1482,7 @@ include/thunderbird/nsIFile.h
 include/thunderbird/nsIFileChannel.h
 include/thunderbird/nsIFilePicker.h
 include/thunderbird/nsIFileProtocolHandler.h
+include/thunderbird/nsIFileStorage.h
 include/thunderbird/nsIFileStreams.h
 include/thunderbird/nsIFileURL.h
 include/thunderbird/nsIFileView.h
@@ -1478,7 +1517,6 @@ include/thunderbird/nsIGenKeypairInfoDlg.h
 include/thunderbird/nsIGeolocationProvider.h
 include/thunderbird/nsIGfxInfo.h
 include/thunderbird/nsIGfxInfoDebug.h
-include/thunderbird/nsIGlobalHistory.h
 include/thunderbird/nsIGlobalHistory2.h
 include/thunderbird/nsIGnomeVFSService.h
 include/thunderbird/nsIGridPart.h
@@ -1514,6 +1552,7 @@ include/thunderbird/nsIIDBCursor.h
 include/thunderbird/nsIIDBCursorWithValue.h
 include/thunderbird/nsIIDBDatabase.h
 include/thunderbird/nsIIDBFactory.h
+include/thunderbird/nsIIDBFileHandle.h
 include/thunderbird/nsIIDBIndex.h
 include/thunderbird/nsIIDBKeyRange.h
 include/thunderbird/nsIIDBObjectStore.h
@@ -1651,6 +1690,7 @@ include/thunderbird/nsIMimeHeaders.h
 include/thunderbird/nsIMimeMiscStatus.h
 include/thunderbird/nsIMimeObjectClassAccess.h
 include/thunderbird/nsIMimeStreamConverter.h
+include/thunderbird/nsIMmsService.h
 include/thunderbird/nsIMobileConnectionProvider.h
 include/thunderbird/nsIModule.h
 include/thunderbird/nsIMovemailIncomingServer.h
@@ -1809,7 +1849,6 @@ include/thunderbird/nsIPluginHost.h
 include/thunderbird/nsIPluginInputStream.h
 include/thunderbird/nsIPluginInstanceOwner.h
 include/thunderbird/nsIPluginStreamInfo.h
-include/thunderbird/nsIPluginStreamListener.h
 include/thunderbird/nsIPluginTag.h
 include/thunderbird/nsIPluginTagInfo.h
 include/thunderbird/nsIPluginWidget.h
@@ -1839,6 +1878,8 @@ include/thunderbird/nsIPrintSettingsService.h
 include/thunderbird/nsIPrintStatusFeedback.h
 include/thunderbird/nsIPrintingPrompt.h
 include/thunderbird/nsIPrintingPromptService.h
+include/thunderbird/nsIPrivacyTransitionObserver.h
+include/thunderbird/nsIPrivateBrowsingConsumer.h
 include/thunderbird/nsIPrivateBrowsingService.h
 include/thunderbird/nsIPrivateDOMEvent.h
 include/thunderbird/nsIPrivateTextEvent.h
@@ -1982,6 +2023,7 @@ include/thunderbird/nsISerializable.h
 include/thunderbird/nsISerializationHelper.h
 include/thunderbird/nsIServerSocket.h
 include/thunderbird/nsIServiceManager.h
+include/thunderbird/nsISettingsService.h
 include/thunderbird/nsIShellService.h
 include/thunderbird/nsISidebar.h
 include/thunderbird/nsISignatureVerifier.h
@@ -2003,7 +2045,9 @@ include/thunderbird/nsISocketTransport.h
 include/thunderbird/nsISocketTransportService.h
 include/thunderbird/nsISound.h
 include/thunderbird/nsISpamSettings.h
+include/thunderbird/nsISpeculativeConnect.h
 include/thunderbird/nsISpellChecker.h
+include/thunderbird/nsIStandardFileStream.h
 include/thunderbird/nsIStandardURL.h
 include/thunderbird/nsIStartupCache.h
 include/thunderbird/nsIStatefulFrame.h
@@ -2130,6 +2174,7 @@ include/thunderbird/nsIVersionComparator.h
 include/thunderbird/nsIView.h
 include/thunderbird/nsIViewManager.h
 include/thunderbird/nsIViewSourceChannel.h
+include/thunderbird/nsIWapPushApplication.h
 include/thunderbird/nsIWeakReference.h
 include/thunderbird/nsIWeakReferenceUtils.h
 include/thunderbird/nsIWebBrowser.h
@@ -2175,7 +2220,6 @@ include/thunderbird/nsIX509CertDB2.h
 include/thunderbird/nsIX509CertList.h
 include/thunderbird/nsIX509CertValidity.h
 include/thunderbird/nsIXBLAccessible.h
-include/thunderbird/nsIXBLService.h
 include/thunderbird/nsIXFormsUtilityService.h
 include/thunderbird/nsIXMLContentBuilder.h
 include/thunderbird/nsIXMLContentSink.h
@@ -2297,6 +2341,7 @@ include/thunderbird/nsNodeUtils.h
 include/thunderbird/nsOSHelperAppService.h
 include/thunderbird/nsObjCExceptions.h
 include/thunderbird/nsObjectFrame.h
+include/thunderbird/nsObserverList.h
 include/thunderbird/nsObserverService.h
 include/thunderbird/nsOggCodecState.h
 include/thunderbird/nsOggDecoder.h
@@ -2328,6 +2373,7 @@ include/thunderbird/nsPluginsCID.h
 include/thunderbird/nsPluginsDir.h
 include/thunderbird/nsPoint.h
 include/thunderbird/nsPosixLocale.h
+include/thunderbird/nsPresArena.h
 include/thunderbird/nsPresContext.h
 include/thunderbird/nsPresState.h
 include/thunderbird/nsPrintfCString.h
@@ -2350,7 +2396,6 @@ include/thunderbird/nsReferencedElement.h
 include/thunderbird/nsRefreshDriver.h
 include/thunderbird/nsRegion.h
 include/thunderbird/nsRenderingContext.h
-include/thunderbird/nsRootAccessibleWrap.h
 include/thunderbird/nsRuleData.h
 include/thunderbird/nsRuleNode.h
 include/thunderbird/nsRuleProcessorData.h
@@ -2379,12 +2424,14 @@ include/thunderbird/nsScriptLoader.h
 include/thunderbird/nsScriptableInputStream.h
 include/thunderbird/nsServiceManagerUtils.h
 include/thunderbird/nsSize.h
+include/thunderbird/nsSpecialCasingData.h
 include/thunderbird/nsStackWalk.h
 include/thunderbird/nsStaticAtom.h
 include/thunderbird/nsStaticComponents.h
 include/thunderbird/nsStaticNameTable.h
 include/thunderbird/nsStorageStream.h
 include/thunderbird/nsStreamConverter.h
+include/thunderbird/nsStreamListenerWrapper.h
 include/thunderbird/nsStreamUtils.h
 include/thunderbird/nsString.h
 include/thunderbird/nsStringAPI.h
@@ -2414,6 +2461,7 @@ include/thunderbird/nsSubstring.h
 include/thunderbird/nsSubstringTuple.h
 include/thunderbird/nsSupportsArray.h
 include/thunderbird/nsSupportsPrimitives.h
+include/thunderbird/nsSurfaceTexture.h
 include/thunderbird/nsTArray-inl.h
 include/thunderbird/nsTArray.h
 include/thunderbird/nsTArrayHelpers.h
@@ -2427,7 +2475,6 @@ include/thunderbird/nsTString.h
 include/thunderbird/nsTSubstring.h
 include/thunderbird/nsTSubstringTuple.h
 include/thunderbird/nsTWeakRef.h
-include/thunderbird/nsTextAccessibleWrap.h
 include/thunderbird/nsTextFormatter.h
 include/thunderbird/nsTextFragment.h
 include/thunderbird/nsTextServicesCID.h
@@ -2443,6 +2490,7 @@ include/thunderbird/nsTransform2D.h
 include/thunderbird/nsTreeColFrame.h
 include/thunderbird/nsTreeSanitizer.h
 include/thunderbird/nsTreeUtils.h
+include/thunderbird/nsTypedSelection.h
 include/thunderbird/nsUCVJA2CID.h
 include/thunderbird/nsUCVJACID.h
 include/thunderbird/nsUConvCID.h
@@ -2462,6 +2510,7 @@ include/thunderbird/nsUnicodeNormalizer.h
 include/thunderbird/nsUnicodeProperties.h
 include/thunderbird/nsUnicodeScriptCodes.h
 include/thunderbird/nsVCardObj.h
+include/thunderbird/nsVKList.h
 include/thunderbird/nsVariant.h
 include/thunderbird/nsVersionComparator.h
 include/thunderbird/nsViewsCID.h
@@ -2488,10 +2537,7 @@ include/thunderbird/nsXPIDLString.h
 include/thunderbird/nsXPTCUtils.h
 include/thunderbird/nsXREAppData.h
 include/thunderbird/nsXULAppAPI.h
-include/thunderbird/nsXULListboxAccessibleWrap.h
-include/thunderbird/nsXULMenuAccessibleWrap.h
 include/thunderbird/nsXULPopupManager.h
-include/thunderbird/nsXULTreeGridAccessibleWrap.h
 include/thunderbird/nsZipArchive.h
 include/thunderbird/nscore.h
 include/thunderbird/nspluginroot.h
@@ -2500,6 +2546,10 @@ include/thunderbird/ogg/config_types.h
 include/thunderbird/ogg/ogg.h
 include/thunderbird/ogg/os_types.h
 include/thunderbird/opentype-sanitiser.h
+include/thunderbird/opus/opus.h
+include/thunderbird/opus/opus_defines.h
+include/thunderbird/opus/opus_multistream.h
+include/thunderbird/opus/opus_types.h
 include/thunderbird/ots-memory-stream.h
 include/thunderbird/pldhash.h
 include/thunderbird/png.h
@@ -2512,6 +2562,7 @@ include/thunderbird/prplIRequest.h
 include/thunderbird/prplITooltipInfo.h
 include/thunderbird/qcms.h
 include/thunderbird/qcmstypes.h
+include/thunderbird/qsObjectHelper.h
 include/thunderbird/rdf.h
 include/thunderbird/rdfIDataSource.h
 include/thunderbird/rdfISerializer.h
@@ -2530,7 +2581,6 @@ include/thunderbird/skia/SkBounder.h
 include/thunderbird/skia/SkBuffer.h
 include/thunderbird/skia/SkCanvas.h
 include/thunderbird/skia/SkChunkAlloc.h
-include/thunderbird/skia/SkClampRange.h
 include/thunderbird/skia/SkClipStack.h
 include/thunderbird/skia/SkColor.h
 include/thunderbird/skia/SkColorFilter.h
@@ -2539,9 +2589,11 @@ include/thunderbird/skia/SkColorShader.h
 include/thunderbird/skia/SkComposeShader.h
 include/thunderbird/skia/SkDashPathEffect.h
 include/thunderbird/skia/SkData.h
+include/thunderbird/skia/SkDeferredCanvas.h
 include/thunderbird/skia/SkDeque.h
 include/thunderbird/skia/SkDescriptor.h
 include/thunderbird/skia/SkDevice.h
+include/thunderbird/skia/SkDeviceProfile.h
 include/thunderbird/skia/SkDither.h
 include/thunderbird/skia/SkDraw.h
 include/thunderbird/skia/SkDrawFilter.h
@@ -2569,7 +2621,10 @@ include/thunderbird/skia/SkMaskFilter.h
 include/thunderbird/skia/SkMath.h
 include/thunderbird/skia/SkMatrix.h
 include/thunderbird/skia/SkMetaData.h
+include/thunderbird/skia/SkMorphologyImageFilter.h
 include/thunderbird/skia/SkOSFile.h
+include/thunderbird/skia/SkOrderedReadBuffer.h
+include/thunderbird/skia/SkOrderedWriteBuffer.h
 include/thunderbird/skia/SkPackBits.h
 include/thunderbird/skia/SkPaint.h
 include/thunderbird/skia/SkPath.h
@@ -2608,6 +2663,7 @@ include/thunderbird/skia/SkTRegistry.h
 include/thunderbird/skia/SkTScopedPtr.h
 include/thunderbird/skia/SkTSearch.h
 include/thunderbird/skia/SkTemplates.h
+include/thunderbird/skia/SkTextBox.h
 include/thunderbird/skia/SkThread.h
 include/thunderbird/skia/SkThread_platform.h
 include/thunderbird/skia/SkTime.h
@@ -2618,11 +2674,13 @@ include/thunderbird/skia/SkUnPreMultiply.h
 include/thunderbird/skia/SkUnitMapper.h
 include/thunderbird/skia/SkUserConfig.h
 include/thunderbird/skia/SkUtils.h
+include/thunderbird/skia/SkWeakRefCnt.h
 include/thunderbird/skia/SkWriter32.h
 include/thunderbird/skia/SkXfermode.h
 include/thunderbird/snappy/snappy-c.h
 include/thunderbird/snappy/snappy-stubs-public.h
 include/thunderbird/snappy/snappy.h
+include/thunderbird/speex/speex_resampler.h
 include/thunderbird/steelIApplication.h
 include/thunderbird/string-template-def-char.h
 include/thunderbird/string-template-def-unichar.h
@@ -2643,6 +2701,7 @@ include/thunderbird/vorbis/codec.h
 include/thunderbird/xpcIJSGetFactory.h
 include/thunderbird/xpcIJSModuleLoader.h
 include/thunderbird/xpcIJSWeakReference.h
+include/thunderbird/xpcObjectHelper.h
 include/thunderbird/xpc_map_end.h
 include/thunderbird/xpccomponents.h
 include/thunderbird/xpcexception.h
@@ -2677,6 +2736,7 @@ lib/thunderbird-sdk/sdk/bin/xpidllex.py
 lib/thunderbird-sdk/sdk/bin/xpidlyacc.py
 lib/thunderbird-sdk/sdk/bin/xpt.py
 lib/thunderbird-sdk/sdk/lib/libmozalloc.so
+lib/thunderbird-sdk/sdk/lib/libmozglue.a
 lib/thunderbird-sdk/sdk/lib/libunicharutil_external_s.a
 lib/thunderbird-sdk/sdk/lib/libunicharutil_external_s.a.desc
 lib/thunderbird-sdk/sdk/lib/libxpcom.so
@@ -2730,6 +2790,9 @@ lib/thunderbird/chrome/chat/skin/classic/prpl/irc/icon48.png
 lib/thunderbird/chrome/chat/skin/classic/prpl/twitter/icon.png
 lib/thunderbird/chrome/chat/skin/classic/prpl/twitter/icon32.png
 lib/thunderbird/chrome/chat/skin/classic/prpl/twitter/icon48.png
+lib/thunderbird/chrome/chat/skin/classic/prpl/xmpp/icon.png
+lib/thunderbird/chrome/chat/skin/classic/prpl/xmpp/icon32.png
+lib/thunderbird/chrome/chat/skin/classic/prpl/xmpp/icon48.png
 lib/thunderbird/chrome/classic/skin/classic/communicator/communicator.css
 lib/thunderbird/chrome/classic/skin/classic/communicator/icons/smileys/smiley-cool.png
 lib/thunderbird/chrome/classic/skin/classic/communicator/icons/smileys/smiley-cry.png
@@ -2810,12 +2873,6 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/cloudfile/addAccountDialog
 lib/thunderbird/chrome/classic/skin/classic/messenger/contactStarred.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/dialogs.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/editContactOverlay.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/featureConfigurator.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/featureConfigurators/animation.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/featureConfigurators/compact-header.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/featureConfigurators/folder-columns.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/featureConfigurators/subpage.css
-lib/thunderbird/chrome/classic/skin/classic/messenger/featureConfigurators/toolbars.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/filterDialog.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/folderMenus.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/folderPane.css
@@ -2850,6 +2907,8 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/icons/chat-toolbar-small.p
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/chat-toolbar.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/check.gif
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/close-button.png
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/closeTab-active.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/closeTab.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/columnpicker.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/connecting.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/dropbox.png
@@ -2889,7 +2948,12 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/icons/secure.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/server.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/status-small.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/status.png
-lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tab.png
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabActiveEnd.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabActiveMiddle.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabActiveStart.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabBackgroundEnd.png
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabBackgroundMiddle.png
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabBackgroundStart.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/tabDragIndicator.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/thread-col.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/thread-ignored.png
@@ -3265,6 +3329,8 @@ lib/thunderbird/chrome/en-US/locale/en-US/messenger/chat.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/chat.properties
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/Dropbox/management.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/Dropbox/settings.dtd
+lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/UbuntuOne/management.dtd
+lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/UbuntuOne/settings.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/YouSendIt/management.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/YouSendIt/settings.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/cloudfile/addAccountDialog.dtd
@@ -3278,7 +3344,6 @@ lib/thunderbird/chrome/en-US/locale/en-US/messenger/downloadsOverlay.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/editContactOverlay.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/editContactOverlay.properties
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/eudoraImportMsgs.properties
-lib/thunderbird/chrome/en-US/locale/en-US/messenger/featureConfigurator.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/fieldMapImport.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/filter.properties
 lib/thunderbird/chrome/en-US/locale/en-US/messenger/folderProps.dtd
@@ -3443,7 +3508,6 @@ lib/thunderbird/chrome/messenger/content/branding/about-logo.png
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.png
 lib/thunderbird/chrome/messenger/content/branding/about.png
 lib/thunderbird/chrome/messenger/content/branding/aboutDialog.css
-lib/thunderbird/chrome/messenger/content/branding/featureConfigurator.jpg
 lib/thunderbird/chrome/messenger/content/branding/icon48.png
 lib/thunderbird/chrome/messenger/content/branding/icon64.png
 lib/thunderbird/chrome/messenger/content/messagebody/addressbook/print.css
@@ -3582,6 +3646,7 @@ lib/thunderbird/chrome/messenger/content/messenger/browserRequest.js
 lib/thunderbird/chrome/messenger/content/messenger/browserRequest.xul
 lib/thunderbird/chrome/messenger/content/messenger/chat/addbuddy.js
 lib/thunderbird/chrome/messenger/content/messenger/chat/addbuddy.xul
+lib/thunderbird/chrome/messenger/content/messenger/chat/badgebutton.xml
 lib/thunderbird/chrome/messenger/content/messenger/chat/chat-messenger-overlay.js
 lib/thunderbird/chrome/messenger/content/messenger/chat/chat-messenger-overlay.xul
 lib/thunderbird/chrome/messenger/content/messenger/chat/chat.css
@@ -3598,7 +3663,6 @@ lib/thunderbird/chrome/messenger/content/messenger/chat/imcontact.xml
 lib/thunderbird/chrome/messenger/content/messenger/chat/imconv.xml
 lib/thunderbird/chrome/messenger/content/messenger/chat/imconversation.xml
 lib/thunderbird/chrome/messenger/content/messenger/chat/imgroup.xml
-lib/thunderbird/chrome/messenger/content/messenger/chat/imsearch.xml
 lib/thunderbird/chrome/messenger/content/messenger/chat/joinchat.js
 lib/thunderbird/chrome/messenger/content/messenger/chat/joinchat.xul
 lib/thunderbird/chrome/messenger/content/messenger/cloudfile/Dropbox/management.js
@@ -3626,20 +3690,6 @@ lib/thunderbird/chrome/messenger/content/messenger/downloadsOverlay.xul
 lib/thunderbird/chrome/messenger/content/messenger/editContactOverlay.js
 lib/thunderbird/chrome/messenger/content/messenger/editContactOverlay.xul
 lib/thunderbird/chrome/messenger/content/messenger/extraCustomizeItems.xul
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurator.css
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurator.js
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurator.xhtml
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/autosync.js
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/autosync.xhtml
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/compactheader.js
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/compactheader.xhtml
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/extensions.js
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/folderpanecolumns.js
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/folderpanecolumns.xhtml
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/introduction.xhtml
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/subpage.css
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/toolbar.js
-lib/thunderbird/chrome/messenger/content/messenger/featureConfigurators/toolbar.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/fieldMapImport.js
 lib/thunderbird/chrome/messenger/content/messenger/fieldMapImport.xul
 lib/thunderbird/chrome/messenger/content/messenger/folderDisplay.js
@@ -3858,11 +3908,9 @@ lib/thunderbird/chrome/newsblog/content/messenger-newsblog/Feed.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/FeedItem.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/am-newsblog.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/am-newsblog.xul
-lib/thunderbird/chrome/newsblog/content/messenger-newsblog/debug-utils.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/feed-parser.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/feed-subscriptions.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/feed-subscriptions.xul
-lib/thunderbird/chrome/newsblog/content/messenger-newsblog/file-utils.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/newsblogOverlay.js
 lib/thunderbird/chrome/newsblog/content/messenger-newsblog/utils.js
 lib/thunderbird/chrome/nonlocalized.manifest
@@ -3925,6 +3973,7 @@ lib/thunderbird/chrome/pippki/content/pippki/viewCertDetails.js
 lib/thunderbird/chrome/pippki/content/pippki/viewCertDetails.xul
 lib/thunderbird/chrome/toolkit/content/cookie/cookieAcceptDialog.js
 lib/thunderbird/chrome/toolkit/content/cookie/cookieAcceptDialog.xul
+lib/thunderbird/chrome/toolkit/content/global/BrowserElementChild.js
 lib/thunderbird/chrome/toolkit/content/global/XPCNativeWrapper.js
 lib/thunderbird/chrome/toolkit/content/global/about.xhtml
 lib/thunderbird/chrome/toolkit/content/global/aboutAbout.xhtml
@@ -4046,6 +4095,7 @@ lib/thunderbird/chrome/toolkit/content/global/remote-test-ipc.js
 lib/thunderbird/chrome/toolkit/content/global/resetProfile.css
 lib/thunderbird/chrome/toolkit/content/global/resetProfile.js
 lib/thunderbird/chrome/toolkit/content/global/resetProfile.xul
+lib/thunderbird/chrome/toolkit/content/global/resetProfileProgress.xul
 lib/thunderbird/chrome/toolkit/content/global/selectDialog.js
 lib/thunderbird/chrome/toolkit/content/global/selectDialog.xul
 lib/thunderbird/chrome/toolkit/content/global/strres.js
@@ -4321,7 +4371,6 @@ lib/thunderbird/chrome/toolkit/skin/classic/global/tabbox.css
 lib/thunderbird/chrome/toolkit/skin/classic/global/tabprompts.css
 lib/thunderbird/chrome/toolkit/skin/classic/global/textbox.css
 lib/thunderbird/chrome/toolkit/skin/classic/global/toolbar.css
-lib/thunderbird/chrome/toolkit/skin/classic/global/toolbar/Lighten.png
 lib/thunderbird/chrome/toolkit/skin/classic/global/toolbar/chevron.gif
 lib/thunderbird/chrome/toolkit/skin/classic/global/toolbar/spring.png
 lib/thunderbird/chrome/toolkit/skin/classic/global/toolbarbutton.css
@@ -4408,6 +4457,7 @@ lib/thunderbird/chrome/toolkit/skin/classic/mozapps/viewsource/viewsource.css
 lib/thunderbird/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallConfirm.css
 lib/thunderbird/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallItemGeneric.png
 lib/thunderbird/components/ConsoleAPI.js
+lib/thunderbird/components/ContactManager.js
 lib/thunderbird/components/FeedProcessor.js
 lib/thunderbird/components/GPSDGeolocationProvider.js
 lib/thunderbird/components/NetworkGeolocationProvider.js
@@ -4595,6 +4645,7 @@ lib/thunderbird/modules/FileUtils.jsm
 lib/thunderbird/modules/Geometry.jsm
 lib/thunderbird/modules/IOUtils.js
 lib/thunderbird/modules/ISO8601DateUtils.jsm
+lib/thunderbird/modules/IndexedDBHelper.jsm
 lib/thunderbird/modules/InlineSpellChecker.jsm
 lib/thunderbird/modules/LightweightThemeConsumer.jsm
 lib/thunderbird/modules/LightweightThemeManager.jsm
@@ -4613,6 +4664,8 @@ lib/thunderbird/modules/PopupNotifications.jsm
 lib/thunderbird/modules/PropertyListUtils.jsm
 lib/thunderbird/modules/SearchIntegration.js
 lib/thunderbird/modules/Services.jsm
+lib/thunderbird/modules/SettingsDB.jsm
+lib/thunderbird/modules/SettingsQueue.jsm
 lib/thunderbird/modules/SpellCheckDictionaryBootstrap.js
 lib/thunderbird/modules/StringBundle.js
 lib/thunderbird/modules/TelemetryStopwatch.jsm
@@ -4635,6 +4688,7 @@ lib/thunderbird/modules/activity/pop3Download.js
 lib/thunderbird/modules/activity/sendLater.js
 lib/thunderbird/modules/appIdleManager.js
 lib/thunderbird/modules/attachmentChecker.js
+lib/thunderbird/modules/chatHandler.jsm
 lib/thunderbird/modules/cloudFileAccounts.js
 lib/thunderbird/modules/ctypes.jsm
 lib/thunderbird/modules/dbViewWrapper.js
@@ -4687,7 +4741,9 @@ lib/thunderbird/modules/ircCommands.jsm
 lib/thunderbird/modules/ircDCC.jsm
 lib/thunderbird/modules/ircHandlers.jsm
 lib/thunderbird/modules/ircISUPPORT.jsm
+lib/thunderbird/modules/ircServices.jsm
 lib/thunderbird/modules/ircUtils.jsm
+lib/thunderbird/modules/ircWatchMonitor.jsm
 lib/thunderbird/modules/iteratorUtils.jsm
 lib/thunderbird/modules/jsProtoHelper.jsm
 lib/thunderbird/modules/jsTreeSelection.js
@@ -4697,6 +4753,7 @@ lib/thunderbird/modules/mailMigrator.js
 lib/thunderbird/modules/mailServices.js
 lib/thunderbird/modules/mailViewManager.js
 lib/thunderbird/modules/mailnewsMigrator.js
+lib/thunderbird/modules/msgDBCacheManager.js
 lib/thunderbird/modules/nsFormAutoCompleteResult.jsm
 lib/thunderbird/modules/oauth.jsm
 lib/thunderbird/modules/quickFilterManager.js
@@ -4769,6 +4826,7 @@ lib/thunderbird/searchplugins/wikipedia.xml
 lib/thunderbird/searchplugins/yahoo.xml
 lib/thunderbird/thunderbird
 lib/thunderbird/thunderbird-bin
+lib/thunderbird/update-settings.ini
 lib/thunderbird/update.locale
 lib/thunderbird/updater
 lib/thunderbird/updater.ini
@@ -4833,7 +4891,8 @@ share/idl/thunderbird/mozIStorageService.idl
 share/idl/thunderbird/mozIStorageServiceQuotaManagement.idl
 share/idl/thunderbird/mozIStorageStatement.idl
 share/idl/thunderbird/mozIStorageStatementCallback.idl
-share/idl/thunderbird/mozIStorageStatementWrapper.idl
+share/idl/thunderbird/mozIStorageStatementParams.idl
+share/idl/thunderbird/mozIStorageStatementRow.idl
 share/idl/thunderbird/mozIStorageVacuumParticipant.idl
 share/idl/thunderbird/mozIStorageValueArray.idl
 share/idl/thunderbird/mozITXTToHTMLConv.idl
@@ -4909,6 +4968,7 @@ share/idl/thunderbird/nsIApplicationCache.idl
 share/idl/thunderbird/nsIApplicationCacheChannel.idl
 share/idl/thunderbird/nsIApplicationCacheContainer.idl
 share/idl/thunderbird/nsIApplicationCacheService.idl
+share/idl/thunderbird/nsIAppsService.idl
 share/idl/thunderbird/nsIArray.idl
 share/idl/thunderbird/nsIAssociatedContentSecurity.idl
 share/idl/thunderbird/nsIAsyncInputStream.idl
@@ -5102,8 +5162,12 @@ share/idl/thunderbird/nsIDOMDOMTokenList.idl
 share/idl/thunderbird/nsIDOMDataContainerEvent.idl
 share/idl/thunderbird/nsIDOMDataTransfer.idl
 share/idl/thunderbird/nsIDOMDesktopNotification.idl
+share/idl/thunderbird/nsIDOMDeviceLightEvent.idl
 share/idl/thunderbird/nsIDOMDeviceMotionEvent.idl
 share/idl/thunderbird/nsIDOMDeviceOrientationEvent.idl
+share/idl/thunderbird/nsIDOMDeviceProximityEvent.idl
+share/idl/thunderbird/nsIDOMDeviceStorage.idl
+share/idl/thunderbird/nsIDOMDeviceStorageCursor.idl
 share/idl/thunderbird/nsIDOMDocument.idl
 share/idl/thunderbird/nsIDOMDocumentFragment.idl
 share/idl/thunderbird/nsIDOMDocumentType.idl
@@ -5116,8 +5180,10 @@ share/idl/thunderbird/nsIDOMEvent.idl
 share/idl/thunderbird/nsIDOMEventListener.idl
 share/idl/thunderbird/nsIDOMEventTarget.idl
 share/idl/thunderbird/nsIDOMFile.idl
+share/idl/thunderbird/nsIDOMFileHandle.idl
 share/idl/thunderbird/nsIDOMFileList.idl
 share/idl/thunderbird/nsIDOMFileReader.idl
+share/idl/thunderbird/nsIDOMFileRequest.idl
 share/idl/thunderbird/nsIDOMFontFace.idl
 share/idl/thunderbird/nsIDOMFontFaceList.idl
 share/idl/thunderbird/nsIDOMFormData.idl
@@ -5128,6 +5194,7 @@ share/idl/thunderbird/nsIDOMGeoPositionCoords.idl
 share/idl/thunderbird/nsIDOMGeoPositionError.idl
 share/idl/thunderbird/nsIDOMGeoPositionErrorCallback.idl
 share/idl/thunderbird/nsIDOMGetSVGDocument.idl
+share/idl/thunderbird/nsIDOMGlobalObjectConstructor.idl
 share/idl/thunderbird/nsIDOMGlobalPropertyInitializer.idl
 share/idl/thunderbird/nsIDOMHTMLAnchorElement.idl
 share/idl/thunderbird/nsIDOMHTMLAppletElement.idl
@@ -5204,9 +5271,11 @@ share/idl/thunderbird/nsIDOMLSProgressEvent.idl
 share/idl/thunderbird/nsIDOMLinkStyle.idl
 share/idl/thunderbird/nsIDOMLoadStatus.idl
 share/idl/thunderbird/nsIDOMLocation.idl
+share/idl/thunderbird/nsIDOMLockedFile.idl
 share/idl/thunderbird/nsIDOMMediaError.idl
 share/idl/thunderbird/nsIDOMMediaList.idl
 share/idl/thunderbird/nsIDOMMediaQueryList.idl
+share/idl/thunderbird/nsIDOMMediaStream.idl
 share/idl/thunderbird/nsIDOMMessageEvent.idl
 share/idl/thunderbird/nsIDOMMimeType.idl
 share/idl/thunderbird/nsIDOMMimeTypeArray.idl
@@ -5228,9 +5297,11 @@ share/idl/thunderbird/nsIDOMNamedNodeMap.idl
 share/idl/thunderbird/nsIDOMNavigator.idl
 share/idl/thunderbird/nsIDOMNavigatorBattery.idl
 share/idl/thunderbird/nsIDOMNavigatorDesktopNotification.idl
+share/idl/thunderbird/nsIDOMNavigatorDeviceStorage.idl
 share/idl/thunderbird/nsIDOMNavigatorGeolocation.idl
 share/idl/thunderbird/nsIDOMNavigatorNetwork.idl
 share/idl/thunderbird/nsIDOMNavigatorSms.idl
+share/idl/thunderbird/nsIDOMNavigatorUserMedia.idl
 share/idl/thunderbird/nsIDOMNode.idl
 share/idl/thunderbird/nsIDOMNodeFilter.idl
 share/idl/thunderbird/nsIDOMNodeIterator.idl
@@ -5338,6 +5409,7 @@ share/idl/thunderbird/nsIDOMSVGTransformable.idl
 share/idl/thunderbird/nsIDOMSVGURIReference.idl
 share/idl/thunderbird/nsIDOMSVGUnitTypes.idl
 share/idl/thunderbird/nsIDOMSVGUseElement.idl
+share/idl/thunderbird/nsIDOMSVGViewElement.idl
 share/idl/thunderbird/nsIDOMSVGViewSpec.idl
 share/idl/thunderbird/nsIDOMSVGZoomAndPan.idl
 share/idl/thunderbird/nsIDOMSVGZoomEvent.idl
@@ -5355,7 +5427,6 @@ share/idl/thunderbird/nsIDOMSmsMessage.idl
 share/idl/thunderbird/nsIDOMSmsRequest.idl
 share/idl/thunderbird/nsIDOMStorage.idl
 share/idl/thunderbird/nsIDOMStorageEvent.idl
-share/idl/thunderbird/nsIDOMStorageEventObsolete.idl
 share/idl/thunderbird/nsIDOMStorageIndexedDB.idl
 share/idl/thunderbird/nsIDOMStorageItem.idl
 share/idl/thunderbird/nsIDOMStorageManager.idl
@@ -5371,6 +5442,7 @@ share/idl/thunderbird/nsIDOMTransitionEvent.idl
 share/idl/thunderbird/nsIDOMTreeWalker.idl
 share/idl/thunderbird/nsIDOMUIEvent.idl
 share/idl/thunderbird/nsIDOMUserDataHandler.idl
+share/idl/thunderbird/nsIDOMUserProximityEvent.idl
 share/idl/thunderbird/nsIDOMValidityState.idl
 share/idl/thunderbird/nsIDOMWakeLock.idl
 share/idl/thunderbird/nsIDOMWakeLockListener.idl
@@ -5512,7 +5584,6 @@ share/idl/thunderbird/nsIGenKeypairInfoDlg.idl
 share/idl/thunderbird/nsIGeolocationProvider.idl
 share/idl/thunderbird/nsIGfxInfo.idl
 share/idl/thunderbird/nsIGfxInfoDebug.idl
-share/idl/thunderbird/nsIGlobalHistory.idl
 share/idl/thunderbird/nsIGlobalHistory2.idl
 share/idl/thunderbird/nsIGnomeVFSService.idl
 share/idl/thunderbird/nsIHTMLAbsPosEditor.idl
@@ -5543,6 +5614,7 @@ share/idl/thunderbird/nsIIDBCursor.idl
 share/idl/thunderbird/nsIIDBCursorWithValue.idl
 share/idl/thunderbird/nsIIDBDatabase.idl
 share/idl/thunderbird/nsIIDBFactory.idl
+share/idl/thunderbird/nsIIDBFileHandle.idl
 share/idl/thunderbird/nsIIDBIndex.idl
 share/idl/thunderbird/nsIIDBKeyRange.idl
 share/idl/thunderbird/nsIIDBObjectStore.idl
@@ -5663,6 +5735,7 @@ share/idl/thunderbird/nsIMimeEmitter.idl
 share/idl/thunderbird/nsIMimeHeaders.idl
 share/idl/thunderbird/nsIMimeMiscStatus.idl
 share/idl/thunderbird/nsIMimeStreamConverter.idl
+share/idl/thunderbird/nsIMmsService.idl
 share/idl/thunderbird/nsIMobileConnectionProvider.idl
 share/idl/thunderbird/nsIModule.idl
 share/idl/thunderbird/nsIMovemailIncomingServer.idl
@@ -5805,7 +5878,6 @@ share/idl/thunderbird/nsIPluginHost.idl
 share/idl/thunderbird/nsIPluginInputStream.idl
 share/idl/thunderbird/nsIPluginInstanceOwner.idl
 share/idl/thunderbird/nsIPluginStreamInfo.idl
-share/idl/thunderbird/nsIPluginStreamListener.idl
 share/idl/thunderbird/nsIPluginTag.idl
 share/idl/thunderbird/nsIPluginTagInfo.idl
 share/idl/thunderbird/nsIPop3IncomingServer.idl
@@ -5832,6 +5904,8 @@ share/idl/thunderbird/nsIPrintSettingsService.idl
 share/idl/thunderbird/nsIPrintStatusFeedback.idl
 share/idl/thunderbird/nsIPrintingPrompt.idl
 share/idl/thunderbird/nsIPrintingPromptService.idl
+share/idl/thunderbird/nsIPrivacyTransitionObserver.idl
+share/idl/thunderbird/nsIPrivateBrowsingConsumer.idl
 share/idl/thunderbird/nsIPrivateBrowsingService.idl
 share/idl/thunderbird/nsIProcess.idl
 share/idl/thunderbird/nsIProfile.idl
@@ -5950,6 +6024,7 @@ share/idl/thunderbird/nsISerializable.idl
 share/idl/thunderbird/nsISerializationHelper.idl
 share/idl/thunderbird/nsIServerSocket.idl
 share/idl/thunderbird/nsIServiceManager.idl
+share/idl/thunderbird/nsISettingsService.idl
 share/idl/thunderbird/nsIShellService.idl
 share/idl/thunderbird/nsISidebar.idl
 share/idl/thunderbird/nsISignatureVerifier.idl
@@ -5970,6 +6045,8 @@ share/idl/thunderbird/nsISocketTransport.idl
 share/idl/thunderbird/nsISocketTransportService.idl
 share/idl/thunderbird/nsISound.idl
 share/idl/thunderbird/nsISpamSettings.idl
+share/idl/thunderbird/nsISpeculativeConnect.idl
+share/idl/thunderbird/nsIStandardFileStream.idl
 share/idl/thunderbird/nsIStandardURL.idl
 share/idl/thunderbird/nsIStartupCache.idl
 share/idl/thunderbird/nsIStatusBarBiffManager.idl
@@ -6072,6 +6149,7 @@ share/idl/thunderbird/nsIUserInfo.idl
 share/idl/thunderbird/nsIVariant.idl
 share/idl/thunderbird/nsIVersionComparator.idl
 share/idl/thunderbird/nsIViewSourceChannel.idl
+share/idl/thunderbird/nsIWapPushApplication.idl
 share/idl/thunderbird/nsIWeakReference.idl
 share/idl/thunderbird/nsIWebBrowser.idl
 share/idl/thunderbird/nsIWebBrowserChrome.idl

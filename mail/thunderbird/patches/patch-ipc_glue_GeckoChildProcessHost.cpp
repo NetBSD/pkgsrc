@@ -1,8 +1,8 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.2 2012/04/28 16:56:58 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.3 2012/09/02 06:43:40 ryoon Exp $
 
---- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2012-04-20 22:40:07.000000000 +0000
+--- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2012-08-25 00:31:11.000000000 +0000
 +++ mozilla/ipc/glue/GeckoChildProcessHost.cpp
-@@ -430,7 +430,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -410,7 +410,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.2 2012/04/28 16:56:58 ryoo
    base::environment_map newEnvVars;
    // XPCOM may not be initialized in some subprocesses.  We don't want
    // to initialize XPCOM just for the directory service, especially
-@@ -445,8 +445,8 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -425,8 +425,8 @@ GeckoChildProcessHost::PerformAsyncLaunc
        if (NS_SUCCEEDED(rv)) {
          nsCString path;
          greDir->GetNativePath(path);
@@ -22,7 +22,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.2 2012/04/28 16:56:58 ryoo
          path += "/lib";
  #  endif  // MOZ_WIDGET_ANDROID
          const char *ld_library_path = PR_GetEnv("LD_LIBRARY_PATH");
-@@ -557,7 +557,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -537,7 +537,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -31,7 +31,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.2 2012/04/28 16:56:58 ryoo
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -594,7 +594,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -574,7 +574,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
  #endif
  
    base::LaunchApp(childArgv, mFileMap,
