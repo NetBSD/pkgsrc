@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2757 2012/09/02 04:32:49 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2758 2012/09/02 04:44:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4284,3 +4284,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-CPAN-Perl-Releases to 0.68 [wen 2012-09-02]
 	Updated devel/p5-IPC-Cmd to 0.78 [wen 2012-09-02]
 	Updated devel/p5-CPAN-Reporter to 1.2006 [wen 2012-09-02]
+	Updated math/p5-Statistics-Descriptive to 3.0604 [wen 2012-09-02]
