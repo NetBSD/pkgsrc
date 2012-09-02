@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/08/26 09:07:21 marino Exp $
+# $NetBSD: Makefile,v 1.34 2012/09/02 09:33:32 marino Exp $
 #
 
 DISTNAME=		openmsx-0.9.0
@@ -30,13 +30,10 @@ MAKE_ENV+=		OPENMSX_INSTALL=${PREFIX}/openmsx
 .if "${PKGSRC_COMPILER}" == "clang"
 # As a result of predefining CXX, .wrapper/bin/clang++ is automatically
 # hardlinked to c++, g++, which is exactly what we what!
-CXX_OVERRIDE=clang++
+CXX=clang++
 .elif "${PKGSRC_COMPILER}" == "gcc"
-CXX_OVERRIDE=g++
-.else
-CXX_OVERRIDE=${CXX}
+CXX=g++
 .endif
-CXX=${CXX_OVERRIDE}
 
 post-extract:
 	${CP} ${WRKSRC}/build/platform-freebsd.mk \
