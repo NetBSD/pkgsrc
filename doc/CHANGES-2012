@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2773 2012/09/02 18:35:48 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2774 2012/09/02 19:28:40 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4300,3 +4300,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/flickcurl to 1.23 [wiz 2012-09-02]
 	Updated misc/whohas to 0.29 [shattered 2012-09-02]
 	Updated emulators/stella to 3.7.2 [dholland 2012-09-02]
+	Updated pkgtools/distbb to 0.45.1 [cheusov 2012-09-02]
