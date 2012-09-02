@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2012/07/19 17:23:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/09/02 07:15:57 ryoon Exp $
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/cookie/cookieAcceptDialog.dtd
@@ -166,6 +167,7 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/sourceeditor.dtd
@@ -243,8 +245,11 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/feedback/main.properties
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/cookie/cookieAcceptDialog.dtd
@@ -411,6 +416,7 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/sourceeditor.dtd
@@ -488,8 +494,11 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/cookie/cookieAcceptDialog.dtd
@@ -656,6 +665,7 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/sourceeditor.dtd
@@ -733,8 +743,11 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/cookie/cookieAcceptDialog.dtd
@@ -901,6 +914,7 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/sourceeditor.dtd
@@ -978,8 +992,11 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/feedback/main.properties
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/cookie/cookieAcceptDialog.dtd
@@ -1146,6 +1163,7 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browse
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/sourceeditor.dtd
@@ -1223,8 +1241,11 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browse
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/cookie/cookieAcceptDialog.dtd
@@ -1391,6 +1412,7 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/sourceeditor.dtd
@@ -1468,8 +1490,11 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/feedback/main.properties
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/cookie/cookieAcceptDialog.dtd
@@ -1636,6 +1661,7 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/sourceeditor.dtd
@@ -1713,8 +1739,11 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/feedback/main.properties
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/cookie/cookieAcceptDialog.dtd
@@ -1881,6 +1910,7 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/br
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/sourceeditor.dtd
@@ -1958,8 +1988,11 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/br
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/feedback/main.properties
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/cookie/cookieAcceptDialog.dtd
@@ -2126,6 +2159,7 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/br
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/sourceeditor.dtd
@@ -2203,8 +2237,11 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/br
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/feedback/main.properties
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/cookie/cookieAcceptDialog.dtd
@@ -2371,6 +2408,7 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/sourceeditor.dtd
@@ -2448,8 +2486,11 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/feedback/main.properties
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/branding/brand.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/branding/browserconfig.properties
@@ -2471,6 +2512,7 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/sourceeditor.dtd
@@ -2693,8 +2735,11 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/servi
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/services/sync.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/feedback/main.properties
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/branding/browserconfig.properties
@@ -2716,6 +2761,7 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/sourceeditor.dtd
@@ -2938,8 +2984,11 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/servi
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/services/sync.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/branding/brand.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/branding/browserconfig.properties
@@ -2961,6 +3010,7 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/sourceeditor.dtd
@@ -3183,8 +3233,11 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/servi
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/services/sync.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/feedback/main.properties
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/branding/brand.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/branding/browserconfig.properties
@@ -3206,6 +3259,7 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browse
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/sourceeditor.dtd
@@ -3428,8 +3482,11 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/se
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/services/sync.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/feedback/main.properties
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/branding/brand.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/branding/browserconfig.properties
@@ -3451,6 +3508,7 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/sourceeditor.dtd
@@ -3673,8 +3731,11 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/servi
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/services/sync.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/feedback/main.properties
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/branding/brand.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/branding/browserconfig.properties
@@ -3696,6 +3757,7 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/sourceeditor.dtd
@@ -3918,8 +3980,11 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/servi
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/services/sync.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/feedback/main.properties
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/branding/brand.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/branding/browserconfig.properties
@@ -3941,6 +4006,7 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/sourceeditor.dtd
@@ -4163,8 +4229,11 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/servi
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/services/sync.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/feedback/main.properties
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/branding/brand.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/branding/browserconfig.properties
@@ -4186,6 +4255,7 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/sourceeditor.dtd
@@ -4408,8 +4478,11 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/servi
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/services/sync.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/feedback/main.properties
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/branding/brand.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/branding/browserconfig.properties
@@ -4431,6 +4504,7 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/br
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/sourceeditor.dtd
@@ -4653,8 +4727,11 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/services/sync.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/feedback/main.properties
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/branding/brand.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/branding/browserconfig.properties
@@ -4676,6 +4753,7 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/br
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/sourceeditor.dtd
@@ -4898,8 +4976,11 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/services/sync.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/feedback/main.properties
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/branding/brand.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/branding/browserconfig.properties
@@ -4921,6 +5002,7 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/br
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/sourceeditor.dtd
@@ -5143,8 +5225,11 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/services/sync.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/feedback/main.properties
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/branding/brand.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/branding/browserconfig.properties
@@ -5166,6 +5251,7 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/sourceeditor.dtd
@@ -5388,8 +5474,11 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/servi
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/services/sync.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/feedback/main.properties
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/branding/browserconfig.properties
@@ -5411,6 +5500,7 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/br
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/sourceeditor.dtd
@@ -5633,8 +5723,11 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/services/sync.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/feedback/main.properties
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/branding/browserconfig.properties
@@ -5656,6 +5749,7 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/br
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/sourceeditor.dtd
@@ -5878,8 +5972,11 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/services/sync.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/feedback/main.properties
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/branding/browserconfig.properties
@@ -5901,6 +5998,7 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/br
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/sourceeditor.dtd
@@ -6123,8 +6221,11 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/services/sync.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/feedback/main.properties
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/branding/browserconfig.properties
@@ -6146,6 +6247,7 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/br
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/sourceeditor.dtd
@@ -6368,8 +6470,11 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/services/sync.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/feedback/main.properties
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/branding/brand.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/branding/browserconfig.properties
@@ -6391,6 +6496,7 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/sourceeditor.dtd
@@ -6613,8 +6719,11 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/servi
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/services/sync.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/feedback/main.properties
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/branding/brand.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/branding/browserconfig.properties
@@ -6636,6 +6745,7 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/sourceeditor.dtd
@@ -6858,8 +6968,11 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/servi
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/services/sync.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/feedback/main.properties
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/branding/browserconfig.properties
@@ -6881,6 +6994,7 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/sourceeditor.dtd
@@ -7103,8 +7217,11 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/servi
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/services/sync.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/feedback/main.properties
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/branding/browserconfig.properties
@@ -7126,6 +7243,7 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/sourceeditor.dtd
@@ -7348,8 +7466,11 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/pippk
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/places/places.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/services/errors.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/services/sync.properties
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/branding/browserconfig.properties
@@ -7371,6 +7492,7 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/sourceeditor.dtd
@@ -7593,8 +7715,11 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/pippk
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/places/places.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/services/errors.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/services/sync.properties
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/branding/browserconfig.properties
@@ -7616,6 +7741,7 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/br
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/sourceeditor.dtd
@@ -7838,8 +7964,11 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/places/places.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/services/errors.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/services/sync.properties
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/branding/browserconfig.properties
@@ -7861,6 +7990,7 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/br
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/sourceeditor.dtd
@@ -8083,8 +8213,11 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/places/places.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/services/errors.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/services/sync.properties
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/branding/brand.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/branding/browserconfig.properties
@@ -8106,6 +8239,7 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/sourceeditor.dtd
@@ -8328,8 +8462,11 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/pippk
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/places/places.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/services/errors.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/services/sync.properties
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/branding/browserconfig.properties
@@ -8351,6 +8488,7 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/sourceeditor.dtd
@@ -8573,8 +8711,11 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/pippk
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/places/places.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/services/errors.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/services/sync.properties
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/branding/browserconfig.properties
@@ -8596,6 +8737,7 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/br
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/sourceeditor.dtd
@@ -8818,8 +8960,11 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/places/places.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/services/errors.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/services/sync.properties
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/branding/brand.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/branding/browserconfig.properties
@@ -8841,6 +8986,7 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/sourceeditor.dtd
@@ -9063,8 +9209,11 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/pippk
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/places/places.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/services/errors.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/services/sync.properties
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/branding/browserconfig.properties
@@ -9086,6 +9235,7 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/br
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/sourceeditor.dtd
@@ -9308,8 +9458,11 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/places/places.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/services/errors.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/services/sync.properties
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/branding/browserconfig.properties
@@ -9331,6 +9484,7 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/sourceeditor.dtd
@@ -9553,8 +9707,11 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/pippk
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/places/places.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/services/errors.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/services/sync.properties
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/branding/browserconfig.properties
@@ -9576,6 +9733,7 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/sourceeditor.dtd
@@ -9798,8 +9956,11 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/pippk
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/places/places.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/services/errors.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/services/sync.properties
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/branding/browserconfig.properties
@@ -9821,6 +9982,7 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/br
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/sourceeditor.dtd
@@ -10043,8 +10205,11 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/places/places.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/services/errors.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/services/sync.properties
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/branding/brand.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/branding/browserconfig.properties
@@ -10066,6 +10231,7 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/sourceeditor.dtd
@@ -10288,8 +10454,11 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/pippk
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/places/places.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/services/errors.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/services/sync.properties
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/branding/brand.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/branding/browserconfig.properties
@@ -10311,6 +10480,7 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/sourceeditor.dtd
@@ -10533,8 +10703,11 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/pippk
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/places/places.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/services/errors.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/services/sync.properties
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/branding/brand.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/branding/browserconfig.properties
@@ -10556,6 +10729,7 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/sourceeditor.dtd
@@ -10778,8 +10952,11 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/pippk
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/places/places.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/services/errors.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/services/sync.properties
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/branding/browserconfig.properties
@@ -10801,6 +10978,7 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/sourceeditor.dtd
@@ -11023,8 +11201,11 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/pippk
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/places/places.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/services/errors.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/services/sync.properties
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/branding/browserconfig.properties
@@ -11046,6 +11227,7 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/sourceeditor.dtd
@@ -11268,8 +11450,11 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/pippk
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/places/places.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/services/errors.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/services/sync.properties
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/branding/brand.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/branding/browserconfig.properties
@@ -11291,6 +11476,7 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/sourceeditor.dtd
@@ -11513,8 +11699,11 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/pippk
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/places/places.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/services/errors.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/services/sync.properties
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/branding/browserconfig.properties
@@ -11536,6 +11725,7 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/sourceeditor.dtd
@@ -11758,8 +11948,11 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/pippk
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/places/places.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/services/errors.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/services/sync.properties
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/branding/browserconfig.properties
@@ -11781,6 +11974,7 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/sourceeditor.dtd
@@ -12003,8 +12197,11 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/pippk
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/places/places.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/services/errors.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/services/sync.properties
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/branding/brand.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/branding/browserconfig.properties
@@ -12026,6 +12223,7 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/sourceeditor.dtd
@@ -12248,8 +12446,11 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/pippk
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/places/places.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/services/errors.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/services/sync.properties
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/branding/brand.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/branding/browserconfig.properties
@@ -12271,6 +12472,7 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/sourceeditor.dtd
@@ -12493,8 +12695,11 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/pippk
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/places/places.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/services/errors.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/services/sync.properties
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/branding/brand.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/branding/browserconfig.properties
@@ -12516,6 +12721,7 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/sourceeditor.dtd
@@ -12738,8 +12944,11 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/pippk
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/places/places.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/services/errors.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/services/sync.properties
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/branding/brand.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/branding/browserconfig.properties
@@ -12761,6 +12970,7 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browse
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/sourceeditor.dtd
@@ -12983,8 +13193,11 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/pi
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/places/places.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/services/errors.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/services/sync.properties
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/branding/browserconfig.properties
@@ -13006,6 +13219,7 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/sourceeditor.dtd
@@ -13228,8 +13442,11 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/pippk
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/places/places.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/services/errors.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/services/sync.properties
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/branding/browserconfig.properties
@@ -13251,6 +13468,7 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/sourceeditor.dtd
@@ -13473,8 +13691,11 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/pippk
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/places/places.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/services/errors.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/services/sync.properties
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/branding/browserconfig.properties
@@ -13496,6 +13717,7 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/sourceeditor.dtd
@@ -13718,8 +13940,11 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/pippk
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/places/places.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/services/errors.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/services/sync.properties
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/branding/browserconfig.properties
@@ -13741,6 +13966,7 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/br
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/sourceeditor.dtd
@@ -13963,8 +14189,11 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/places/places.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/services/errors.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/services/sync.properties
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/branding/browserconfig.properties
@@ -13986,6 +14215,7 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/sourceeditor.dtd
@@ -14208,8 +14438,11 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/pippk
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/places/places.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/services/errors.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/services/sync.properties
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/branding/browserconfig.properties
@@ -14231,6 +14464,7 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/br
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/sourceeditor.dtd
@@ -14453,8 +14687,11 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/places/places.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/services/errors.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/services/sync.properties
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/branding/browserconfig.properties
@@ -14476,6 +14713,7 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browse
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/sourceeditor.dtd
@@ -14698,8 +14936,11 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/pi
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/places/places.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/services/errors.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/services/sync.properties
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/branding/brand.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/branding/browserconfig.properties
@@ -14721,6 +14962,7 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/sourceeditor.dtd
@@ -14943,8 +15185,11 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/pippk
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/places/places.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/services/errors.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/services/sync.properties
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/branding/browserconfig.properties
@@ -14966,6 +15211,7 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/br
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/sourceeditor.dtd
@@ -15188,8 +15434,11 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/places/places.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/services/errors.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/services/sync.properties
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/branding/browserconfig.properties
@@ -15211,6 +15460,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/sourceeditor.dtd
@@ -15288,6 +15538,8 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/feedback/main.properties
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/cookie/cookieAcceptDialog.dtd
@@ -15435,6 +15687,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/servi
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/services/sync.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/branding/browserconfig.properties
@@ -15456,6 +15709,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/br
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/sourceeditor.dtd
@@ -15533,6 +15787,8 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/br
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/feedback/main.properties
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/cookie/cookieAcceptDialog.dtd
@@ -15680,6 +15936,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/services/sync.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/branding/browserconfig.properties
@@ -15701,6 +15958,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/br
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/sourceeditor.dtd
@@ -15778,6 +16036,8 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/br
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/feedback/main.properties
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/cookie/cookieAcceptDialog.dtd
@@ -15925,6 +16185,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/services/sync.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/branding/brand.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/branding/browserconfig.properties
@@ -15946,6 +16207,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/sourceeditor.dtd
@@ -16023,6 +16285,8 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/feedback/main.properties
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/cookie/cookieAcceptDialog.dtd
@@ -16170,6 +16434,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/servi
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/services/sync.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/branding/browserconfig.properties
@@ -16191,6 +16456,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/sourceeditor.dtd
@@ -16268,6 +16534,8 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/cookie/cookieAcceptDialog.dtd
@@ -16415,6 +16683,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/servi
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/services/sync.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/branding/browserconfig.properties
@@ -16436,6 +16705,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/sourceeditor.dtd
@@ -16513,6 +16783,8 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/cookie/cookieAcceptDialog.dtd
@@ -16660,6 +16932,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/servi
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/services/sync.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/branding/brand.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/branding/browserconfig.properties
@@ -16681,6 +16954,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/sourceeditor.dtd
@@ -16758,6 +17032,8 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/feedback/main.properties
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/cookie/cookieAcceptDialog.dtd
@@ -16905,6 +17181,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/servi
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/services/sync.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/branding/browserconfig.properties
@@ -16926,6 +17203,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/sourceeditor.dtd
@@ -17003,6 +17281,8 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/feedback/main.properties
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/cookie/cookieAcceptDialog.dtd
@@ -17150,6 +17430,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/servi
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/services/sync.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/branding/browserconfig.properties
@@ -17171,6 +17452,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/sourceeditor.dtd
@@ -17248,6 +17530,8 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/feedback/main.properties
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/cookie/cookieAcceptDialog.dtd
@@ -17395,6 +17679,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/servi
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/services/sync.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/branding/brand.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/branding/browserconfig.properties
@@ -17416,6 +17701,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browse
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/sourceeditor.dtd
@@ -17493,6 +17779,8 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browse
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/feedback/main.properties
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/cookie/cookieAcceptDialog.dtd
@@ -17640,6 +17928,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/se
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/services/sync.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/branding/browserconfig.properties
@@ -17661,6 +17950,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/sourceeditor.dtd
@@ -17738,6 +18028,8 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/feedback/main.properties
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/cookie/cookieAcceptDialog.dtd
@@ -17885,6 +18177,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/servi
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/services/sync.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/branding/browserconfig.properties
@@ -17906,6 +18199,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/sourceeditor.dtd
@@ -17983,6 +18277,8 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/feedback/main.properties
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/cookie/cookieAcceptDialog.dtd
@@ -18130,6 +18426,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/servi
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/services/sync.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/branding/browserconfig.properties
@@ -18151,6 +18448,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/br
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/sourceeditor.dtd
@@ -18228,6 +18526,8 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/br
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/feedback/main.properties
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/cookie/cookieAcceptDialog.dtd
@@ -18375,6 +18675,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/services/sync.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/branding/browserconfig.properties
@@ -18396,6 +18697,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/br
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/sourceeditor.dtd
@@ -18473,6 +18775,8 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/br
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/cookie/cookieAcceptDialog.dtd
@@ -18620,6 +18924,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/services/sync.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/branding/browserconfig.properties
@@ -18641,6 +18946,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/sourceeditor.dtd
@@ -18718,6 +19024,8 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/feedback/main.properties
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/cookie/cookieAcceptDialog.dtd
@@ -18865,6 +19173,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/servi
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/services/sync.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/branding/brand.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/branding/browserconfig.properties
@@ -18886,6 +19195,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/sourceeditor.dtd
@@ -18963,6 +19273,8 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/feedback/main.properties
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/cookie/cookieAcceptDialog.dtd
@@ -19110,6 +19422,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/servi
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/services/sync.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/branding/brand.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/branding/browserconfig.properties
@@ -19131,6 +19444,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/sourceeditor.dtd
@@ -19208,6 +19522,8 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/feedback/main.properties
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/cookie/cookieAcceptDialog.dtd
@@ -19355,6 +19671,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/servi
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/services/sync.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/branding/browserconfig.properties
@@ -19376,6 +19693,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/sourceeditor.dtd
@@ -19453,6 +19771,8 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/feedback/main.properties
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/cookie/cookieAcceptDialog.dtd
@@ -19600,6 +19920,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/servi
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/services/sync.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/branding/browserconfig.properties
@@ -19621,6 +19942,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/sourceeditor.dtd
@@ -19698,6 +20020,8 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/feedback/main.properties
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/cookie/cookieAcceptDialog.dtd
@@ -19845,6 +20169,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/servi
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/services/sync.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/branding/brand.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/branding/browserconfig.properties
@@ -19866,6 +20191,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/sourceeditor.dtd
@@ -19943,6 +20269,8 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/feedback/main.properties
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/cookie/cookieAcceptDialog.dtd
@@ -20090,6 +20418,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/servi
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/services/sync.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/branding/browserconfig.properties
@@ -20111,6 +20440,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/br
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/sourceeditor.dtd
@@ -20188,6 +20518,8 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/br
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/feedback/main.properties
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/cookie/cookieAcceptDialog.dtd
@@ -20335,6 +20667,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/services/sync.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/branding/brand.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/branding/browserconfig.properties
@@ -20356,6 +20689,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/br
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/sourceeditor.dtd
@@ -20433,6 +20767,8 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/br
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/feedback/main.properties
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/cookie/cookieAcceptDialog.dtd
@@ -20580,6 +20916,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/services/sync.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome.manifest
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/branding/brand.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/branding/browserconfig.properties
@@ -20601,6 +20938,7 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/gclicommands.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/layoutview.dtd
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/responsiveUI.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/scratchpad.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/sourceeditor.dtd
@@ -20678,6 +21016,8 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/taskbar.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/feedback/main.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/feedback/main.properties
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/pdfviewer/chrome.properties
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/pdfviewer/viewer.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/cookie/cookieAcceptDialog.dtd
