@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2775 2012/09/02 19:28:52 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2776 2012/09/02 20:26:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4302,3 +4302,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/stella to 3.7.2 [dholland 2012-09-02]
 	Updated pkgtools/distbb to 0.45.1 [cheusov 2012-09-02]
 	Updated devel/lmdbg to 1.1.0 [cheusov 2012-09-02]
+	Updated archivers/ark to 4.8.4nb1 [wiz 2012-09-02]
