@@ -1,11 +1,11 @@
-$NetBSD: patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp,v 1.3 2012/07/19 17:57:30 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp,v 1.4 2012/09/02 06:43:42 ryoon Exp $
 
---- mozilla/netwerk/protocol/http/HttpChannelParent.cpp.orig	2012-07-12 15:25:25.000000000 +0000
+--- mozilla/netwerk/protocol/http/HttpChannelParent.cpp.orig	2012-08-25 00:31:26.000000000 +0000
 +++ mozilla/netwerk/protocol/http/HttpChannelParent.cpp
-@@ -340,6 +340,13 @@ HttpChannelParent::RecvUpdateAssociatedC
- // Compiling this with GCC <= 4.4 fails with an internal compiler error
- #pragma GCC optimize ("O0")
- #endif
+@@ -299,6 +299,13 @@ HttpChannelParent::RecvUpdateAssociatedC
+   return true;
+ }
+ 
 +// Compiling with a version of GCC <= 4.4 fails with an internal compiler
 +// error.
 +#if !defined(__GNUC__) || \
@@ -13,6 +13,6 @@ $NetBSD: patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp,v 1.3 2012/07
 +#pragma GCC optimize ("O0")
 +#endif
 +
- 
  bool
  HttpChannelParent::RecvRedirect2Verify(const nsresult& result, 
+                                        const RequestHeaderTuples& changedHeaders)

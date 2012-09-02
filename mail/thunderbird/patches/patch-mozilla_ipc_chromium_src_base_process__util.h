@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.3 2012/06/12 19:37:49 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.4 2012/09/02 06:43:42 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util.h.orig	2012-06-01 17:19:23.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util.h.orig	2012-08-25 00:31:11.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util.h
 @@ -280,6 +280,7 @@ class NamedProcessIterator {
    const ProcessEntry* NextProcessEntry();

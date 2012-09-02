@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.9 2012/04/28 16:56:58 ryoon Exp $
+$NetBSD: patch-ak,v 1.10 2012/09/02 06:43:40 ryoon Exp $
 
---- mozilla/js/src/ctypes/libffi/configure.orig	2012-04-20 22:40:07.000000000 +0000
+--- mozilla/js/src/ctypes/libffi/configure.orig	2012-08-25 00:31:11.000000000 +0000
 +++ mozilla/js/src/ctypes/libffi/configure
 @@ -11278,7 +11278,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)

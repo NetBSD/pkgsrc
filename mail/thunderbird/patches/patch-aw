@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.10 2012/04/28 16:56:58 ryoon Exp $
+$NetBSD: patch-aw,v 1.11 2012/09/02 06:43:40 ryoon Exp $
 
---- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2012-04-20 22:40:27.000000000 +0000
+--- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2012-08-25 00:31:36.000000000 +0000
 +++ mozilla/xulrunner/stub/nsXULStub.cpp
-@@ -44,6 +44,29 @@
+@@ -11,6 +11,29 @@
  #include "nsILocalFile.h"
  
  #include <stdarg.h>
@@ -32,7 +32,7 @@ $NetBSD: patch-aw,v 1.10 2012/04/28 16:56:58 ryoon Exp $
  
  #ifdef XP_WIN
  #include <windows.h>
-@@ -202,7 +225,9 @@ main(int argc, char **argv)
+@@ -169,7 +192,9 @@ main(int argc, char **argv)
    char greDir[MAXPATHLEN];
    bool greFound = false;
  
