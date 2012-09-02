@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2769 2012/09/02 15:03:14 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2770 2012/09/02 15:05:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4296,3 +4296,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Data-Peek to 0.38 [wen 2012-09-02]
 	Updated devel/p5-Data-UUID to 1.218 [wen 2012-09-02]
 	Updated textproc/libyaml to 0.1.4 [wiz 2012-09-02]
+	Updated www/libmicrohttpd to 0.9.22 [wiz 2012-09-02]
