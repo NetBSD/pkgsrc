@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.enigmail,v 1.6 2012/06/12 19:37:48 ryoon Exp $
+@comment $NetBSD: PLIST.enigmail,v 1.7 2012/09/02 06:43:39 ryoon Exp $
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigMsgCompFields.js
@@ -13,6 +13,7 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/install.rdf
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/commonFuncs.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailCommon.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/keyManagement.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/mimeDecrypt.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeConsole.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeTransport.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
