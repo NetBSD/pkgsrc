@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11490 2012/09/02 15:13:05 wiz Exp $
+$NetBSD: TODO,v 1.11491 2012/09/02 15:45:23 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1239,7 +1239,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.590 [security]
 	o websvn-2.3.2
-	o whohas-0.29
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]

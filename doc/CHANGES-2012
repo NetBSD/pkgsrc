@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2771 2012/09/02 15:13:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2772 2012/09/02 15:45:23 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4298,3 +4298,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libyaml to 0.1.4 [wiz 2012-09-02]
 	Updated www/libmicrohttpd to 0.9.22 [wiz 2012-09-02]
 	Updated net/flickcurl to 1.23 [wiz 2012-09-02]
+	Updated misc/whohas to 0.29 [shattered 2012-09-02]
