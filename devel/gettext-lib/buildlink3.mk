@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2012/08/29 09:01:01 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2012/09/02 14:08:38 marino Exp $
 
 BUILDLINK_TREE+=	gettext
 
@@ -36,6 +36,7 @@ CHECK_BUILTIN.gettext:=	no
 USE_BUILTIN.iconv=	yes
 .else
 BUILDLINK_INCDIRS.gettext+= include/gettext
+BUILDLINK_FNAME_TRANSFORM.gettext+=    -e 's|include/gettext/|include/|'
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
