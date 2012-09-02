@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2011/06/19 16:44:03 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2012/09/02 18:35:19 dholland Exp $
 
-STELLA_VERSION=	3.4.1
+STELLA_VERSION=	3.7.2
 DISTNAME=	stella-${STELLA_VERSION}-src
 PKGNAME=	stella-${STELLA_VERSION}
 CATEGORIES=	emulators
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake
 UNLIMIT_RESOURCES=	datasize
 
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
