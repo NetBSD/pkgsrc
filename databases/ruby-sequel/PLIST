@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/08/29 16:09:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/09/03 15:14:49 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -72,6 +72,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.35.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.36.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.37.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.38.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.39.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
@@ -174,6 +175,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
+${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/eval_inspect.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
@@ -226,6 +228,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/boolean_readers.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/caching.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/class_table_inheritance.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/composition.rb
+${GEM_LIBDIR}/lib/sequel/plugins/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dataset_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/defaults_setter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dirty.rb
@@ -304,6 +307,8 @@ ${GEM_LIBDIR}/spec/extensions/caching_spec.rb
 ${GEM_LIBDIR}/spec/extensions/class_table_inheritance_spec.rb
 ${GEM_LIBDIR}/spec/extensions/columns_introspection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
+${GEM_LIBDIR}/spec/extensions/constraint_validations_plugin_spec.rb
+${GEM_LIBDIR}/spec/extensions/constraint_validations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
