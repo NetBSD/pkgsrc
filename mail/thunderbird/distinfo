@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.101 2012/09/02 12:27:50 ryoon Exp $
+$NetBSD: distinfo,v 1.102 2012/09/03 15:27:31 ryoon Exp $
 
 SHA1 (enigmail-1.4.4.tar.gz) = a1601191a3a421b2e94e7ff833300da72267d7ac
 RMD160 (enigmail-1.4.4.tar.gz) = f362b2f205ed151c2127db381c393394995ca8aa
@@ -70,7 +70,7 @@ SHA1 (patch-mozilla_gfx_thebes_gfxPlatform.cpp) = b4107fea2b683cec7be6c6179c4ecf
 SHA1 (patch-mozilla_ipc_chromium_Makefile.in) = 5b1cd2c6b9e9c21df504aafe85013445a7e9425e
 SHA1 (patch-mozilla_ipc_chromium_chromium-config.mk) = 3a502f13a41636f2e793f03fb041d267e6dadb71
 SHA1 (patch-mozilla_ipc_chromium_src_base_base__paths.h) = 1550fd2f3961ded7a17e821208d1bfe6f549e6ac
-SHA1 (patch-mozilla_ipc_chromium_src_base_dir__reader__bsd.h) = f9f95a520c95d9ee95cf1e270ace3594e36fe6db
+SHA1 (patch-mozilla_ipc_chromium_src_base_dir__reader__bsd.h) = 1a7779a9fd682739caeb7219548f5d2d479fc302
 SHA1 (patch-mozilla_ipc_chromium_src_base_dir__reader__posix.h) = 0c95e25bc77d775c37be342087c5e6591c90de8d
 SHA1 (patch-mozilla_ipc_chromium_src_base_file__util__linux.cc) = 9e0e8d4e8a4254fca93b37f51eb4940c8f82bd5e
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__loop.cc) = c8b5440d8886c97a54a759cad49cb129304a29de
