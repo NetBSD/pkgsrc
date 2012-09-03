@@ -1,0 +1,5 @@
+# $NetBSD: Makefile.version,v 1.1 2012/09/03 10:06:40 marino Exp $
+
+KTORRENT_VER=		4.2.1
+LIBKTORRENT_VER=	1.2.1.2
+LIBKTORRENT_FILEVER=	1.2.1-2
