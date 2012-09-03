@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/08/14 14:14:46 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/03 11:16:23 sno Exp $
 #
 
 DISTNAME=	Net-Server-SS-PreFork-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -13,7 +13,7 @@ COMMENT=	Hot-deployable variant of Perl 5 module Net::Server::PreFork
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Net/Server/SS/PreFork/.packlist
