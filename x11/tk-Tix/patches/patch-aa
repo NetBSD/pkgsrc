@@ -1,10 +1,29 @@
-$NetBSD: patch-aa,v 1.4 2012/08/28 11:46:33 he Exp $
+$NetBSD: patch-aa,v 1.5 2012/09/03 11:13:29 marino Exp $
 
 IF AC_PATH_X fails, also look for /usr/X11R7.
 Additionally, also specify run-path to the X libraries.
+Add DragonFly support.
 
 --- tclconfig/tcl.m4.orig	2007-02-21 22:09:05.000000000 +0000
 +++ tclconfig/tcl.m4
+@@ -1592,7 +1592,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="ld -Bshareable -x"
+@@ -1610,7 +1610,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	    	LDFLAGS="$LDFLAGS -pthread"
+ 	    fi
+ 	    case $system in
+-	    FreeBSD-3.*)
++	    *)
+ 	    	# FreeBSD-3 doesn't handle version numbers with dots.
+ 	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+ 	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
 @@ -2313,7 +2313,7 @@ AC_DEFUN([TEA_PATH_UNIX_X], [
  	found_xincludes="no"
  	AC_TRY_CPP([#include <X11/Intrinsic.h>], found_xincludes="yes", found_xincludes="no")
