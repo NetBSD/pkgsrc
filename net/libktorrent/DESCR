@@ -1,0 +1,5 @@
+KTorrent has sbeen split into the application ktorrent and the library
+libktorrent.  Libktorrent contains all the torrent downloading code and
+ktorrent contains all application code and plugins.  The goal is to make
+libktorrent an independent library which can be used by other
+applications.
