@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.4 2012/09/02 06:43:42 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.5 2012/09/03 15:47:49 marino Exp $
 
 --- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2012-08-31 13:56:11.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util_bsd.cc
-@@ -0,0 +1,318 @@
+@@ -0,0 +1,321 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -15,7 +15,10 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.4 2012/09
 +#include <sys/sysctl.h>
 +#include <sys/wait.h>
 +#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD)
++_Pragma("GCC visibility push(default)")
++#include <kvm.h>
 +#include <sys/user.h>
++_Pragma("GCC visibility pop")
 +#endif
 +
 +#include <ctype.h>
