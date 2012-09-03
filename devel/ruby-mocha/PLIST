@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/06/02 00:40:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/09/03 15:41:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/COPYING.rdoc
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/MIT-LICENSE.rdoc
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/RELEASE.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/build-matrix.rb
 ${GEM_LIBDIR}/examples/misc.rb
 ${GEM_LIBDIR}/examples/mocha.rb
 ${GEM_LIBDIR}/examples/stubba.rb
@@ -16,6 +17,8 @@ ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.1.4.1
 ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.1.4.2
 ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.2.0.0
 ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.2.0.1
+${GEM_LIBDIR}/gemfiles/Gemfile.minitest.2.11.0
+${GEM_LIBDIR}/gemfiles/Gemfile.minitest.2.11.2
 ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.2.3.0
 ${GEM_LIBDIR}/gemfiles/Gemfile.minitest.latest
 ${GEM_LIBDIR}/gemfiles/Gemfile.test-unit.2.0.0
@@ -37,6 +40,7 @@ ${GEM_LIBDIR}/lib/mocha/deprecation.rb
 ${GEM_LIBDIR}/lib/mocha/exception_raiser.rb
 ${GEM_LIBDIR}/lib/mocha/expectation.rb
 ${GEM_LIBDIR}/lib/mocha/expectation_error.rb
+${GEM_LIBDIR}/lib/mocha/expectation_error_factory.rb
 ${GEM_LIBDIR}/lib/mocha/expectation_list.rb
 ${GEM_LIBDIR}/lib/mocha/in_state_ordering_constraint.rb
 ${GEM_LIBDIR}/lib/mocha/inspect.rb
@@ -51,13 +55,16 @@ ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_141.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_142_to_172.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_200.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_201_to_222.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_230_to_262.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_2110_to_2111.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_2112_to_320.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_230_to_2101.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_330.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/assertion_counter.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_200.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_201_to_202.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_203_to_220.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_230_to_240.rb
+${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_230_to_251.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_185_and_below.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb
 ${GEM_LIBDIR}/lib/mocha/is_a.rb
@@ -107,7 +114,6 @@ ${GEM_LIBDIR}/lib/mocha/unexpected_invocation.rb
 ${GEM_LIBDIR}/lib/mocha/version.rb
 ${GEM_LIBDIR}/lib/mocha/yield_parameters.rb
 ${GEM_LIBDIR}/lib/mocha_standalone.rb
-${GEM_LIBDIR}/lib/stubba.rb
 ${GEM_LIBDIR}/mocha.gemspec
 ${GEM_LIBDIR}/test/acceptance/acceptance_test_helper.rb
 ${GEM_LIBDIR}/test/acceptance/api_test.rb
@@ -151,7 +157,6 @@ ${GEM_LIBDIR}/test/acceptance/stub_instance_method_defined_on_superclass_test.rb
 ${GEM_LIBDIR}/test/acceptance/stub_module_method_test.rb
 ${GEM_LIBDIR}/test/acceptance/stub_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubba_example_test.rb
-${GEM_LIBDIR}/test/acceptance/stubba_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubba_test_result_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubbing_error_backtrace_test.rb
 ${GEM_LIBDIR}/test/acceptance/stubbing_frozen_object_test.rb
