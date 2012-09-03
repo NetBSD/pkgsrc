@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/07/31 13:46:03 taca Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/03 15:12:54 taca Exp $
 
-DISTNAME=	cassandra-0.13.0
+DISTNAME=	cassandra-0.15.0
 CATEGORIES=	databases ruby
 
 MAINTAINER=	tonnerre@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Ruby extension for Cassandra
 LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-simple_uuid>=0.2.0<0.3:../../devel/ruby-simple_uuid
-DEPENDS+=	${RUBY_PKGPREFIX}-thrift_client>=0.7.0<0.9:../../devel/ruby-thrift_client
+DEPENDS+=	${RUBY_PKGPREFIX}-thrift_client>=0.7.0:../../devel/ruby-thrift_client
 
 RUBY_JSON_REQD=	0
 USE_RAKE=	run
