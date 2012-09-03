@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2778 2012/09/03 10:19:38 marino Exp $
+$NetBSD: CHANGES-2012,v 1.2779 2012/09/03 11:39:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/pngcrush to 1.7.37 [adam 2012-09-03]
 	Added net/libktorrent version 1.2.1.2 [marino 2012-09-03]
 	Updated net/ktorrent to 4.2.1 [marino 2012-09-03]
+	Updated devel/p5-Module-Install-ReadmeFromPod to 0.18 [sno 2012-09-03]
