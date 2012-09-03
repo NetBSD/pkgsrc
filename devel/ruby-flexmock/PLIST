@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/17 15:31:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/09/03 15:39:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TAGS
 ${GEM_LIBDIR}/doc/GoogleExample.rdoc
+${GEM_LIBDIR}/doc/examples/rspec_examples_spec.rdoc
+${GEM_LIBDIR}/doc/examples/test_unit_examples_test.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.4.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.4.1.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.4.2.rdoc
@@ -24,10 +26,12 @@ ${GEM_LIBDIR}/doc/releases/flexmock-0.8.3.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.8.4.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.8.5.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.9.0.rdoc
+${GEM_LIBDIR}/doc/releases/flexmock-1.0.0.rdoc
 ${GEM_LIBDIR}/flexmock.blurb
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/flexmock.rb
 ${GEM_LIBDIR}/lib/flexmock/argument_matchers.rb
+${GEM_LIBDIR}/lib/flexmock/argument_matching.rb
 ${GEM_LIBDIR}/lib/flexmock/argument_types.rb
 ${GEM_LIBDIR}/lib/flexmock/base.rb
 ${GEM_LIBDIR}/lib/flexmock/composite.rb
@@ -38,6 +42,7 @@ ${GEM_LIBDIR}/lib/flexmock/deprecated_methods.rb
 ${GEM_LIBDIR}/lib/flexmock/errors.rb
 ${GEM_LIBDIR}/lib/flexmock/expectation.rb
 ${GEM_LIBDIR}/lib/flexmock/expectation_director.rb
+${GEM_LIBDIR}/lib/flexmock/explicit_needed.rb
 ${GEM_LIBDIR}/lib/flexmock/mock_container.rb
 ${GEM_LIBDIR}/lib/flexmock/noop.rb
 ${GEM_LIBDIR}/lib/flexmock/ordering.rb
@@ -46,12 +51,17 @@ ${GEM_LIBDIR}/lib/flexmock/rails.rb
 ${GEM_LIBDIR}/lib/flexmock/rails/view_mocking.rb
 ${GEM_LIBDIR}/lib/flexmock/recorder.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec.rb
+${GEM_LIBDIR}/lib/flexmock/rspec_spy_matcher.rb
+${GEM_LIBDIR}/lib/flexmock/spy_describers.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit.rb
+${GEM_LIBDIR}/lib/flexmock/test_unit_assert_spy_called.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit_integration.rb
 ${GEM_LIBDIR}/lib/flexmock/undefined.rb
 ${GEM_LIBDIR}/lib/flexmock/validators.rb
 ${GEM_LIBDIR}/lib/flexmock/version.rb
 ${GEM_LIBDIR}/test/aliasing_test.rb
+${GEM_LIBDIR}/test/assert_spy_called_test.rb
+${GEM_LIBDIR}/test/base_class_test.rb
 ${GEM_LIBDIR}/test/container_methods_test.rb
 ${GEM_LIBDIR}/test/default_framework_adapter_test.rb
 ${GEM_LIBDIR}/test/demeter_mocking_test.rb
@@ -66,9 +76,11 @@ ${GEM_LIBDIR}/test/rails_view_stub_test.rb
 ${GEM_LIBDIR}/test/record_mode_test.rb
 ${GEM_LIBDIR}/test/redirect_error.rb
 ${GEM_LIBDIR}/test/rspec_integration/integration_spec.rb
+${GEM_LIBDIR}/test/rspec_integration/spy_example_spec.rb
 ${GEM_LIBDIR}/test/samples_test.rb
 ${GEM_LIBDIR}/test/should_ignore_missing_test.rb
 ${GEM_LIBDIR}/test/should_receive_test.rb
+${GEM_LIBDIR}/test/spys_test.rb
 ${GEM_LIBDIR}/test/test_setup.rb
 ${GEM_LIBDIR}/test/test_unit_integration/auto_test_unit_test.rb
 ${GEM_LIBDIR}/test/tu_integration_test.rb
