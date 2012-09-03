@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 12:41:40 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/03 11:16:22 sno Exp $
 
 DISTNAME=	Finance-Currency-Convert-WebserviceX-0.07001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CL/CLACO/}
 
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Finance/Currency/Convert/WebserviceX/.packlist
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
