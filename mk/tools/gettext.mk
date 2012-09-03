@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.15 2011/08/16 12:14:27 abs Exp $
+# $NetBSD: gettext.mk,v 1.16 2012/09/03 14:59:33 adam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,7 +81,7 @@ MSGFMT_STRIP_MSGID_PLURAL!=						\
 	fi
 .          endif
 .      endif
-.          if !defined(MSGFMT_STRIP_MSGCTXT)
+.      if !defined(MSGFMT_STRIP_MSGCTXT)
 MSGFMT_STRIP_MSGCTXT!=							\
 	if ${PKG_ADMIN} pmatch "gettext>=0.15"				\
 			gettext-${_TOOLS_VERSION.msgfmt:Q}; then	\
@@ -89,17 +89,17 @@ MSGFMT_STRIP_MSGCTXT!=							\
 	else								\
 		${ECHO} yes;						\
 	fi
-.          endif
+.      endif
 .    else
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 .    endif
 MSGFMT_STRIP_MSGID_PLURAL?=	no
-MSGFMT_STRIP_MSGCTXT?=		yes # pkgsrc version is too old
-.if ${MSGFMT_STRIP_MSGID_PLURAL} == "yes" || ${MSGFMT_STRIP_MSGCTXT} == "yes"
+MSGFMT_STRIP_MSGCTXT?=		no
+.    if ${MSGFMT_STRIP_MSGID_PLURAL} == "yes" || ${MSGFMT_STRIP_MSGCTXT} == "yes"
 _TOOLS_USE_MSGFMT_SH=		yes
-.else
+.    else
 _TOOLS_USE_MSGFMT_SH=		no
-.endif
+.    endif
 MAKEVARS+=	_TOOLS_USE_MSGFMT_SH
 
 # If we're not using the builtin gettext implementation, then we should
