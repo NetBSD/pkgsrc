@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2780 2012/09/03 15:09:17 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2781 2012/09/03 15:15:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4308,3 +4308,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ktorrent to 4.2.1 [marino 2012-09-03]
 	Updated devel/p5-Module-Install-ReadmeFromPod to 0.18 [sno 2012-09-03]
 	Updated databases/ruby-activeldap to 3.2.2 [taca 2012-09-03]
+	Updated databases/ruby-cassandra to 0.15.0 [taca 2012-09-03]
+	Updated databases/ruby-pg to 0.14.1 [taca 2012-09-03]
+	Updated databases/ruby-sequel to 3.39.0 [taca 2012-09-03]
