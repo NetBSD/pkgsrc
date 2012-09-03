@@ -1,37 +1,37 @@
-# $NetBSD: Makefile,v 1.43 2012/08/29 11:22:20 obache Exp $
+# $NetBSD: Makefile,v 1.44 2012/09/03 10:14:44 marino Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	23
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
 BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 
-KTORRENT_VER=	3.3
+.include "../../net/libktorrent/Makefile.version"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ktorrent.org/
 COMMENT=	Graphical BitTorrent client for KDE4
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		awk msgfmt pkg-config perl
+USE_TOOLS+=		gmake msgfmt pkg-config perl
+USE_CMAKE=		yes
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+
+CFLAGS+=		-DENABLE_KIO_MAGNET=1
+SCRDIR=			share/kde/apps/ktorrent/scripts
+
+CHECK_INTERPRETER_SKIP= ${SCRDIR}/auto_remove/auto_remove.py \
+			${SCRDIR}/auto_resume/auto_resume.py \
+			${SCRDIR}/email_notifications/email_notifications.py \
+			${SCRDIR}/tracker_groups/tracker_groups.py
+
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/qca2/buildlink3.mk"
+.include "../../net/libktorrent/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kde-runtime4/buildlink3.mk"
-.include "../../x11/kde-workspace4/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libXt?=	build
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
