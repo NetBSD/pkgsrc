@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/08/06 20:41:01 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/03 11:16:27 sno Exp $
 
 DISTNAME=	Search-QueryParser-SQL-0.008
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Search/}
 
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-Search-QueryParser>=0.93:../../databases/p5-Search-QueryParser/
 
 PERL5_PACKLIST=	auto/Search/QueryParser/SQL/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
