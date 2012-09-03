@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2779 2012/09/03 11:39:11 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2780 2012/09/03 15:09:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/libktorrent version 1.2.1.2 [marino 2012-09-03]
 	Updated net/ktorrent to 4.2.1 [marino 2012-09-03]
 	Updated devel/p5-Module-Install-ReadmeFromPod to 0.18 [sno 2012-09-03]
+	Updated databases/ruby-activeldap to 3.2.2 [taca 2012-09-03]
