@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/12 00:46:18 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/03 11:38:58 sno Exp $
 #
 
-DISTNAME=	Module-Install-ReadmeFromPod-0.12
+DISTNAME=	Module-Install-ReadmeFromPod-0.18
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
