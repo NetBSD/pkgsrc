@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.930 2012/08/30 17:37:54 jakllsch Exp $
+# $NetBSD: Makefile,v 1.931 2012/09/03 10:09:17 marino Exp $
 #
 
 COMMENT=	Networking tools
@@ -238,6 +238,7 @@ SUBDIR+=	libdmapsharing
 SUBDIR+=	libdnet
 SUBDIR+=	libfetch
 SUBDIR+=	libgdata
+SUBDIR+=	libktorrent
 SUBDIR+=	liblive
 SUBDIR+=	libmms
 SUBDIR+=	libnice
