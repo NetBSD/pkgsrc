@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2011/11/24 13:40:52 joerg Exp $
+$NetBSD: distinfo,v 1.15 2012/09/03 10:14:44 marino Exp $
 
-SHA1 (ktorrent-3.3.tar.bz2) = 0c39e8963790f3bb9420389101fdd5d12f3e0c10
-RMD160 (ktorrent-3.3.tar.bz2) = 3e1405ca4e6049635b2fc82b3cb616cec5fe1bea
-Size (ktorrent-3.3.tar.bz2) = 2745995 bytes
-SHA1 (patch-libbtcore_dht_rpcserver.cpp) = 00b5c9799cb55cde27d54f5d27dd7c9882b2668c
+SHA1 (ktorrent-4.2.1.tar.bz2) = 3f52c4a10011a49d304c08a3bb1290a022e0c53f
+RMD160 (ktorrent-4.2.1.tar.bz2) = 571bbd2aec23fcb5e37e7e83b4e67260f9c460bc
+Size (ktorrent-4.2.1.tar.bz2) = 3082436 bytes
+SHA1 (patch-plugins_webinterface_httpresponseheader.cpp) = e9a32ad9af676a329079fb6cff3510baffacbf5e
+SHA1 (patch-plugins_webinterface_httpresponseheader.h) = f89ff3151b0153cf6bc58d379aa3a2981e760d9b
