@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2782 2012/09/03 15:35:58 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2783 2012/09/03 15:42:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4312,3 +4312,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-pg to 0.14.1 [taca 2012-09-03]
 	Updated databases/ruby-sequel to 3.39.0 [taca 2012-09-03]
 	Updated devel/hoe to 3.0.8 [taca 2012-09-03]
+	Updated devel/ruby-flexmock to 1.0.0 [taca 2012-09-03]
+	Updated devel/ruby-mocha to 0.12.3 [taca 2012-09-03]
