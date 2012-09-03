@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2011/11/13 06:13:12 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/03 11:16:21 sno Exp $
 #
 
 DISTNAME=	Parse-Method-Signatures-1.003014
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
@@ -27,7 +28,7 @@ BUILD_DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 PERL5_PACKLIST=	auto/Parse/Method/Signatures/.packlist
 
 .include "../../lang/perl5/module.mk"
