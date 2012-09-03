@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/06/02 00:44:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/09/03 15:51:39 taca Exp $
 bin/autospec
 bin/rspec
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -122,6 +122,7 @@ ${GEM_LIBDIR}/spec/rspec/core/configuration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/deprecations_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/drb_command_line_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/drb_options_spec.rb
+${GEM_LIBDIR}/spec/rspec/core/dsl_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/example_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/filter_manager_spec.rb
