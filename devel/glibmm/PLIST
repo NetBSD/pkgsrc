@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2012/05/15 20:41:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2012/09/03 10:15:36 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -360,6 +360,7 @@ share/doc/glibmm-2.4/images/top.gif
 share/doc/glibmm-2.4/reference/glibmm-2.4.tag
 share/doc/glibmm-2.4/reference/html/annotated.html
 share/doc/glibmm-2.4/reference/html/bc_s.png
+share/doc/glibmm-2.4/reference/html/bdwn.png
 share/doc/glibmm-2.4/reference/html/classChecksumType.html
 share/doc/glibmm-2.4/reference/html/classGio_1_1Action-members.html
 share/doc/glibmm-2.4/reference/html/classGio_1_1Action.html
@@ -1092,9 +1093,27 @@ share/doc/glibmm-2.4/reference/html/classresize__policy.html
 share/doc/glibmm-2.4/reference/html/classresize__policy__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/closed.png
 share/doc/glibmm-2.4/reference/html/deprecated.html
+share/doc/glibmm-2.4/reference/html/dir_02fef2a40270467d72a7f717cf991d8a.html
+share/doc/glibmm-2.4/reference/html/dir_98c789a82e29670547769c353b486e1a.html
 share/doc/glibmm-2.4/reference/html/doxygen.css
 share/doc/glibmm-2.4/reference/html/doxygen.png
 share/doc/glibmm-2.4/reference/html/examples.html
+share/doc/glibmm-2.4/reference/html/ftv2blank.png
+share/doc/glibmm-2.4/reference/html/ftv2cl.png
+share/doc/glibmm-2.4/reference/html/ftv2doc.png
+share/doc/glibmm-2.4/reference/html/ftv2folderclosed.png
+share/doc/glibmm-2.4/reference/html/ftv2folderopen.png
+share/doc/glibmm-2.4/reference/html/ftv2lastnode.png
+share/doc/glibmm-2.4/reference/html/ftv2link.png
+share/doc/glibmm-2.4/reference/html/ftv2mlastnode.png
+share/doc/glibmm-2.4/reference/html/ftv2mnode.png
+share/doc/glibmm-2.4/reference/html/ftv2mo.png
+share/doc/glibmm-2.4/reference/html/ftv2node.png
+share/doc/glibmm-2.4/reference/html/ftv2ns.png
+share/doc/glibmm-2.4/reference/html/ftv2plastnode.png
+share/doc/glibmm-2.4/reference/html/ftv2pnode.png
+share/doc/glibmm-2.4/reference/html/ftv2splitbar.png
+share/doc/glibmm-2.4/reference/html/ftv2vertline.png
 share/doc/glibmm-2.4/reference/html/functions.html
 share/doc/glibmm-2.4/reference/html/functions_0x62.html
 share/doc/glibmm-2.4/reference/html/functions_0x63.html
@@ -1375,6 +1394,7 @@ share/doc/glibmm-2.4/reference/html/namespacemembers_eval_0x73.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_eval_0x74.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_eval_0x75.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_func.html
+share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x62.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x63.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x64.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x65.html
@@ -1396,6 +1416,7 @@ share/doc/glibmm-2.4/reference/html/namespacemembers_type.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_vars.html
 share/doc/glibmm-2.4/reference/html/namespaces.html
 share/doc/glibmm-2.4/reference/html/nav_f.png
+share/doc/glibmm-2.4/reference/html/nav_g.png
 share/doc/glibmm-2.4/reference/html/nav_h.png
 share/doc/glibmm-2.4/reference/html/open.png
 share/doc/glibmm-2.4/reference/html/pages.html
