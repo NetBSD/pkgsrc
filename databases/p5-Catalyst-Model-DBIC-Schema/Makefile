@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/01/10 08:58:04 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/03 11:16:26 sno Exp $
 
 DISTNAME=	Catalyst-Model-DBIC-Schema-0.59
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -35,7 +36,7 @@ BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Model/DBIC/Schema/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
