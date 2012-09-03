@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2776 2012/09/02 20:26:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2777 2012/09/03 05:28:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4303,3 +4303,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/distbb to 0.45.1 [cheusov 2012-09-02]
 	Updated devel/lmdbg to 1.1.0 [cheusov 2012-09-02]
 	Updated archivers/ark to 4.8.4nb1 [wiz 2012-09-02]
+	Updated graphics/pngcrush to 1.7.37 [adam 2012-09-03]
