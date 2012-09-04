@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/31 12:01:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/04 13:43:15 wiz Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -11,12 +11,16 @@ lib/bup/bup/git.py
 lib/bup/bup/hashsplit.py
 lib/bup/bup/helpers.py
 lib/bup/bup/index.py
+lib/bup/bup/ls.py
+lib/bup/bup/metadata.py
 lib/bup/bup/midx.py
 lib/bup/bup/options.py
 lib/bup/bup/path.py
 lib/bup/bup/shquote.py
 lib/bup/bup/ssh.py
 lib/bup/bup/vfs.py
+lib/bup/bup/vint.py
+lib/bup/bup/xstat.py
 lib/bup/cmd/bup-bloom
 lib/bup/cmd/bup-daemon
 lib/bup/cmd/bup-damage
@@ -33,6 +37,7 @@ lib/bup/cmd/bup-list-idx
 lib/bup/cmd/bup-ls
 lib/bup/cmd/bup-margin
 lib/bup/cmd/bup-memtest
+lib/bup/cmd/bup-meta
 lib/bup/cmd/bup-midx
 lib/bup/cmd/bup-mux
 lib/bup/cmd/bup-newliner
@@ -47,6 +52,7 @@ lib/bup/cmd/bup-tag
 lib/bup/cmd/bup-tick
 lib/bup/cmd/bup-version
 lib/bup/cmd/bup-web
+lib/bup/cmd/bup-xstat
 lib/bup/tornado/__init__.py
 lib/bup/tornado/auth.py
 lib/bup/tornado/autoreload.py

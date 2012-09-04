@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2012/03/15 11:53:38 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/04 13:43:14 wiz Exp $
 #
 
-DISTNAME=	bup-0.24b
-PKGREVISION=	3
+DISTNAME=	bup-0.25rc1
 CATEGORIES=	sysutils
 MASTER_SITES=	# manually packaged since master site is git repository
 # and only available via https
 # https://github.com/apenwarr/bup/tarball/
 # doc tarball: switch to "man" branch before downloading
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
+# latest apenwarr doc tarball is for 0.24b
+# bup-man-0.24b.tar.gz
+# use lelutin one instead
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} lelutin-bup-7e0bc2e.zip
+# ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/apenwarr/bup
@@ -16,17 +19,20 @@ COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
+DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needs changing on each update
-DOCDIR=		${WRKDIR}/apenwarr-bup-1783a57
-WRKSRC=		${WRKDIR}/apenwarr-bup-d8d6406
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/bup
+DOCDIR=		${WRKDIR}/lelutin-bup-7e0bc2e
+WRKSRC=		${WRKDIR}/apenwarr-bup-4525252
 
 TEST_TARGET=	test
+
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
+MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 USE_TOOLS+=		gmake perl
 REPLACE_PERL=		format-subst.pl wvtestrun
@@ -45,6 +51,7 @@ REPLACE_PYTHON+=	cmd/list-idx-cmd.py
 REPLACE_PYTHON+=	cmd/ls-cmd.py
 REPLACE_PYTHON+=	cmd/margin-cmd.py
 REPLACE_PYTHON+=	cmd/memtest-cmd.py
+REPLACE_PYTHON+=	cmd/meta-cmd.py
 REPLACE_PYTHON+=	cmd/midx-cmd.py
 REPLACE_PYTHON+=	cmd/mux-cmd.py
 REPLACE_PYTHON+=	cmd/newliner-cmd.py
@@ -59,6 +66,7 @@ REPLACE_PYTHON+=	cmd/tag-cmd.py
 REPLACE_PYTHON+=	cmd/tick-cmd.py
 REPLACE_PYTHON+=	cmd/version-cmd.py
 REPLACE_PYTHON+=	cmd/web-cmd.py
+REPLACE_PYTHON+=	cmd/xstat-cmd.py
 REPLACE_PYTHON+=	lib/tornado/__init__.py
 REPLACE_PYTHON+=	lib/tornado/auth.py
 REPLACE_PYTHON+=	lib/tornado/autoreload.py
