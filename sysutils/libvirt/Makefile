@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/08/16 13:15:29 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/04 21:30:51 gls Exp $
 
 DISTNAME=	libvirt-0.9.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://libvirt.org/sources/
 
@@ -64,6 +64,7 @@ CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.uml ${PKG_SYSCONFDIR}/logrotate.d/li
 CONF_FILES+=		${EGDIR}/sasl2/libvirt.conf ${PKG_SYSCONFDIR}/sasl2/libvirt.conf
 
 AUTO_MKDIRS=		yes
+RCD_SCRIPTS=            libvirtd
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
