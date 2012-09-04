@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2012/06/17 15:17:15 taca Exp $
+# $NetBSD: Makefile,v 1.43.2.1 2012/09/04 20:30:25 tron Exp $
 
-DISTNAME=	roundcubemail-0.7.2-dep
+DISTNAME=	roundcubemail-0.8.1-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -103,7 +102,7 @@ pre-install:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
 
 	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DESTDIR}${RCDIR}/
@@ -123,6 +122,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sh ${DESTDIR}${RCDIR}/bin/
 
 .for i in ${PAX_DIRS}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/${i}
 	cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${RCDIR}/${i}
 	${FIND} ${DESTDIR}${RCDIR}/${i} -type f | \
 		${XARGS} ${CHMOD} ${SHAREMODE}
