@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2791 2012/09/04 16:09:36 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2792 2012/09/04 16:11:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4328,3 +4328,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-apc to 3.1.13 [taca 2012-09-04]
 	Updated graphics/pear-Image_Canvas to 0.3.5 [taca 2012-09-04]
 	Updated www/contao211-translations to 201208130 [taca 2012-09-04]
+	Updated www/ap2-fcgid to 2.3.7 [taca 2012-09-04]
