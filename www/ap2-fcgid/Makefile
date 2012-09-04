@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/11/23 11:55:15 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/04 16:10:57 taca Exp $
 
-DISTNAME=	mod_fcgid-2.3.6
+DISTNAME=	mod_fcgid-2.3.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/mod_fcgid/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
 APACHE_MODULE=		YES
 USE_LIBTOOL=		YES
 
