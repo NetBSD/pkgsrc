@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/06/02 00:48:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/09/04 14:52:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -90,9 +90,9 @@ ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_a_new.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_new_record.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/have_extension.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/have_rendered.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/redirect_to.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/relation_match_array.rb
-${GEM_LIBDIR}/lib/rspec/rails/matchers/render_template.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/routing_matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/mocks.rb
 ${GEM_LIBDIR}/lib/rspec/rails/module_inclusion.rb
@@ -129,9 +129,9 @@ ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_a_new_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_new_record_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_routable_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/errors_on_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/matchers/have_rendered_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/redirect_to_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/relation_match_array_spec.rb
-${GEM_LIBDIR}/spec/rspec/rails/matchers/render_template_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/route_to_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/mocks/mock_model_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/mocks/stub_model_spec.rb
