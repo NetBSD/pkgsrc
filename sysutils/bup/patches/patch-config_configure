@@ -1,0 +1,25 @@
+$NetBSD: patch-config_configure,v 1.1 2012/09/04 13:43:15 wiz Exp $
+
+Use PYTHON from environment.
+Do not check for utimensat. It is found on NetBSD even though unusable
+for now (20120827).
+
+--- config/configure.orig	2011-06-09 03:24:45.000000000 +0000
++++ config/configure
+@@ -30,7 +30,7 @@ expr "$MAKE_VERSION" '>=' '3.81' || AC_F
+ TLOG " ok"
+ 
+ TLOGN "checking the python"
+-PYTHON=`acLookFor python`
++[ -n "$PYTHON" ] || PYTHON=`acLookFor python`
+ if [ -z "$PYTHON" ]; then
+     AC_FAIL " Cannot find python";
+ fi
+@@ -59,7 +59,6 @@ AC_CHECK_HEADERS unistd.h
+ AC_CHECK_HEADERS linux/fs.h
+ AC_CHECK_HEADERS sys/ioctl.h
+ 
+-AC_CHECK_FUNCS utimensat 
+ AC_CHECK_FUNCS utimes
+ AC_CHECK_FUNCS lutimes
+ 
