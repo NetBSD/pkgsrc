@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2784 2012/09/03 15:56:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2785 2012/09/04 12:20:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4318,3 +4318,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-rspec-expectations to 2.11.2 [taca 2012-09-03]
 	Updated devel/ruby-rspec-mocks to 2.11.2 [taca 2012-09-03]
 	Updated devel/ruby-rspec to 2.11.0 [taca 2012-09-03]
+	Updated devel/scmgit-base to 1.7.12 [adam 2012-09-04]
+	Updated devel/scmgit-docs to 1.7.12 [adam 2012-09-04]
+	Updated devel/scmgit to 1.7.12 [adam 2012-09-04]
+	Updated www/gitweb to 1.7.12 [adam 2012-09-04]
