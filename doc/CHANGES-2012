@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2787 2012/09/04 14:53:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2788 2012/09/04 15:58:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4324,3 +4324,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/gitweb to 1.7.12 [adam 2012-09-04]
 	Updated sysutils/bup to 0.25rc1 [wiz 2012-09-04]
 	Updated devel/ruby-rspec-rails to 2.11.0 [taca 2012-09-04]
+	Updated devel/ruby-gettext_i18n_rails to 0.7.1 [taca 2012-09-04]
