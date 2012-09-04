@@ -1,13 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2008/07/30 21:29:56 schmonz Exp $
+$NetBSD: MESSAGE,v 1.6.34.1 2012/09/04 20:30:25 tron Exp $
 
 Please refer to the following file on how to setup your RoundCube
 installation.
 
 	${DOCDIR}/INSTALL
 
+And please refer to the following file on how to upgrade your RoundCube
+from older version.
+
+	${DOCDIR}/UPGRADING
+
 For pkgsrc installations the RoundCube package is installed in
-non-default locations.
+these locations.
 
 	Log files:		${VARBASE}/log/roundcube/
 	Document root:		${PREFIX}/share/roundcube/
@@ -17,10 +22,5 @@ If you are running Apache and ap-php, then you can add the following lines
 to httpd.conf:
 
 	Include ${PKG_SYSCONFDIR}/roundcube.conf
-
-NOTE: The location of some of the roundcube configuration files
-has changed.  In addition to this please read the note in the
-${PKG_SYSCONFDIR}/roundcube.conf file about the protection of the
-installer directory.
 
 ===========================================================================
