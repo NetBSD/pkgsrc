@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2012/09/05 21:15:16 gls Exp $
+
+SHA1 (virt-manager-0.9.4.tar.gz) = 1c36a95242c83ea82925c0e0f3844a32b37b8247
+RMD160 (virt-manager-0.9.4.tar.gz) = 15b3d1da4e2571ef91899bcca14354cbf656242c
+Size (virt-manager-0.9.4.tar.gz) = 1709809 bytes
+SHA1 (patch-configure) = 4fd7620c1f28b9507d0a38c25cb8256595bfdd4c
+SHA1 (patch-src_Makefile.in) = 718a5f26c3d8f920ac680fc38cb10a07b6e47ef7
+SHA1 (patch-src_virt-manager-launch.in) = f5264467c86a2967d300aabd4bf91f86d57472a2
+SHA1 (patch-src_virt-manager-tui.in) = 4a067455c3b4bb952b6c8569b1de9d750bceda16
+SHA1 (patch-src_virt-manager.in) = 7fe731b375224b08225ac8a16ed36f653b18c59e

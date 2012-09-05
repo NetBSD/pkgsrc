@@ -1,0 +1,11 @@
+$NetBSD: patch-src_virt-manager-launch.in,v 1.1 2012/09/05 21:15:16 gls Exp $
+
+Do not harcode "python" interpreter, use PYTHONBIN instead.
+
+--- src/virt-manager-launch.in.orig	2012-07-29 20:20:46.000000000 +0000
++++ src/virt-manager-launch.in
+@@ -1,3 +1,3 @@
+ #!/bin/sh
+ 
+-exec python "::PYTHONDIR::/::PACKAGE::.py"
++exec @@PYTHONBIN@@ "::PYTHONDIR::/::PACKAGE::.py"
