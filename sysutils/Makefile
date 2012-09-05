@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2012/09/05 21:09:59 gls Exp $
+# $NetBSD: Makefile,v 1.554 2012/09/05 21:15:59 gls Exp $
 #
 
 COMMENT=	System utilities
@@ -426,6 +426,7 @@ SUBDIR+=	vcdimager-devel
 SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
+SUBDIR+=	virt-manager
 SUBDIR+=	virtinst
 SUBDIR+=	vobcopy
 SUBDIR+=	vxargs
