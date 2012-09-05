@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2798 2012/09/05 15:20:34 is Exp $
+$NetBSD: CHANGES-2012,v 1.2799 2012/09/05 16:47:12 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed cad/simian-docs [dmcmahill 2012-09-05]
 	Added devel/p5-List-AllUtils 0.0.3 [is 2012-09-05]
 	Added devel/p5-File-Slurp-Unicode 0.7.1 [is 2012-09-05]
+	Updated x11/xproto to 7.0.23nb1 [jperkin 2012-09-05]
