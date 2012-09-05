@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2802 2012/09/05 21:16:57 gls Exp $
+$NetBSD: CHANGES-2012,v 1.2803 2012/09/05 21:19:00 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xproto to 7.0.23nb1 [jperkin 2012-09-05]
 	Added sysutils/virtinst 0.600.3 [gls 2012-09-05]
 	Added sysutils/virt-manager 0.9.4 [gls 2012-09-05]
+	Updated net/nagstamon to 0.9.9 [gls 2012-09-05]
