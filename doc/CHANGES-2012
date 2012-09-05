@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2794 2012/09/04 23:08:52 tron Exp $
+$NetBSD: CHANGES-2012,v 1.2795 2012/09/05 09:02:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4331,3 +4331,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ap2-fcgid to 2.3.7 [taca 2012-09-04]
 	Updated sysutils/libvirt to 0.9.3nb7 [gls 2012-09-04]
 	Updated net/wireshark to 1.8.2nb2 [tron 2012-09-04]
+	Updated net/py-boto to 2.5.2 [wiz 2012-09-05]
