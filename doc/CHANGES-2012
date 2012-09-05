@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2797 2012/09/05 13:12:40 dmcmahill Exp $
+$NetBSD: CHANGES-2012,v 1.2798 2012/09/05 15:20:34 is Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4335,3 +4335,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/duplicity to 0.6.19 [wiz 2012-09-05]
 	Removed cad/simian [dmcmahill 2012-09-05]
 	Removed cad/simian-docs [dmcmahill 2012-09-05]
+	Added devel/p5-List-AllUtils 0.0.3 [is 2012-09-05]
+	Added devel/p5-File-Slurp-Unicode 0.7.1 [is 2012-09-05]
