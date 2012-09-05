@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.35 2012/08/28 12:42:01 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.36 2012/09/05 23:33:41 dsainty Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -58,6 +58,14 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+#
+# pysqlite2 is used by xulrunner's Python virtualenv.  If pysqlite2 isn't
+# installed at build time it will attempt to download it instead, so the
+# problem is stealthy in a networked environment, and obvious in an
+# offline environment.
+#
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
