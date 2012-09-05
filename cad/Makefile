@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/02/27 14:45:33 reinoud Exp $
+# $NetBSD: Makefile,v 1.76 2012/09/05 13:10:36 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -53,8 +53,6 @@ SUBDIR+=	qcad-manual-en
 SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
 SUBDIR+=	sci-wcalc
-SUBDIR+=	simian
-SUBDIR+=	simian-docs
 SUBDIR+=	spice
 SUBDIR+=	spiceprm
 SUBDIR+=	stdio-wcalc
