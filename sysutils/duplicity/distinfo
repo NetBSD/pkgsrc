@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2011/10/29 07:48:47 obache Exp $
+$NetBSD: distinfo,v 1.13 2012/09/05 10:05:43 wiz Exp $
 
-SHA1 (duplicity-0.6.16.tar.gz) = d134e56150969030ac391851cbe3d8b1a4ebfcee
-RMD160 (duplicity-0.6.16.tar.gz) = 1e8f4967113e55ad64d770cbe9f882dc0f2fddc0
-Size (duplicity-0.6.16.tar.gz) = 524358 bytes
+SHA1 (duplicity-0.6.19.tar.gz) = 07d72680d6b4850101a436f679793521a51f41ac
+RMD160 (duplicity-0.6.19.tar.gz) = 493336e8ac2c2f8a5dd15c441aa01d43aa426b06
+Size (duplicity-0.6.19.tar.gz) = 1131760 bytes

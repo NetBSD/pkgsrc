@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2012/03/15 11:53:38 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/05 10:05:43 wiz Exp $
 
-DISTNAME=		duplicity-0.6.16
-PKGREVISION=		1
+DISTNAME=		duplicity-0.6.19
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://code.launchpad.net/duplicity/0.6-series/${PKGVERSION_NOREV}/+download/
 
@@ -11,11 +10,15 @@ COMMENT=		Remote encrypting incremental backup utility
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=	gnupg>=1.0.0:../../security/gnupg
-DEPENDS+=	${PYPKGPREFIX}-boto>=0.9d:../../net/py-boto
+DEPENDS+=	${PYPKGPREFIX}-boto>=1.6a:../../net/py-boto
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
+
+REPLACE_PYTHON+=	*.py
+REPLACE_PYTHON+=	bin/*
+REPLACE_PYTHON+=	duplicity/*.py
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
