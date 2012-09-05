@@ -1,0 +1,2 @@
+This module wraps the standard File::Slurp package and adds character
+encoding support.
