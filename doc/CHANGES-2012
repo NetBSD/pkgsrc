@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2796 2012/09/05 10:05:55 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2797 2012/09/05 13:12:40 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4333,3 +4333,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/wireshark to 1.8.2nb2 [tron 2012-09-04]
 	Updated net/py-boto to 2.5.2 [wiz 2012-09-05]
 	Updated sysutils/duplicity to 0.6.19 [wiz 2012-09-05]
+	Removed cad/simian [dmcmahill 2012-09-05]
+	Removed cad/simian-docs [dmcmahill 2012-09-05]
