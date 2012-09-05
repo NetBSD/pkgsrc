@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/18 17:05:27 gls Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/05 21:18:39 gls Exp $
 bin/nagstamon
 bin/nagstamon.py
 ${PYSITELIB}/Nagstamon/Actions.py
@@ -48,10 +48,13 @@ ${PYSITELIB}/Nagstamon/__init__.pyc
 ${PYSITELIB}/Nagstamon/__init__.pyo
 ${PYSITELIB}/Nagstamon/resources/LICENSE
 ${PYSITELIB}/Nagstamon/resources/acknowledge_dialog.ui
+${PYSITELIB}/Nagstamon/resources/authentication_dialog.ui
 ${PYSITELIB}/Nagstamon/resources/close.png
 ${PYSITELIB}/Nagstamon/resources/close.svg
 ${PYSITELIB}/Nagstamon/resources/critical.wav
 ${PYSITELIB}/Nagstamon/resources/downtime_dialog.ui
+${PYSITELIB}/Nagstamon/resources/history.png
+${PYSITELIB}/Nagstamon/resources/history.svg
 ${PYSITELIB}/Nagstamon/resources/hostdown.wav
 ${PYSITELIB}/Nagstamon/resources/hosts.png
 ${PYSITELIB}/Nagstamon/resources/hosts.svg
@@ -97,6 +100,7 @@ ${PYSITELIB}/Nagstamon/resources/services.png
 ${PYSITELIB}/Nagstamon/resources/services.svg
 ${PYSITELIB}/Nagstamon/resources/settings.png
 ${PYSITELIB}/Nagstamon/resources/settings.svg
+${PYSITELIB}/Nagstamon/resources/settings_action_dialog.ui
 ${PYSITELIB}/Nagstamon/resources/settings_dialog.ui
 ${PYSITELIB}/Nagstamon/resources/settings_server_dialog.ui
 ${PYSITELIB}/Nagstamon/resources/submit_check_result_dialog.ui
