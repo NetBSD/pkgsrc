@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.3 2012/06/03 19:57:33 wiz Exp $
+$NetBSD: patch-ad,v 1.4 2012/09/05 16:46:55 jperkin Exp $
 
---- Xfuncproto.h.in.orig	2012-03-16 06:11:44.000000000 +0000
-+++ Xfuncproto.h.in
-@@ -83,7 +83,7 @@ in this Software without prior written a
+Patch from https://bugs.freedesktop.org/attachment.cgi?id=66181
+
+--- Xfuncproto.h.in.orig	Fri Mar 16 06:11:44 2012
++++ Xfuncproto.h.in	Wed Sep  5 15:10:40 2012
+@@ -83,7 +83,7 @@
  #endif /* GNUC >= 4 */
  
  /* Added in X11R6.9, so available in any version of modular xproto */
@@ -11,3 +13,13 @@ $NetBSD: patch-ad,v 1.3 2012/06/03 19:57:33 wiz Exp $
  # define _X_EXPORT      __attribute__((visibility("default")))
  # define _X_HIDDEN      __attribute__((visibility("hidden")))
  # define _X_INTERNAL    __attribute__((visibility("internal")))
+@@ -161,7 +161,8 @@
+ /* requires xproto >= 7.0.21 */
+ #ifndef _X_RESTRICT_KYWD
+ # if defined(restrict) /* assume autoconf set it correctly */ || \
+-   (defined(__STDC_VERSION__) && (__STDC_VERSION__ - 0 >= 199901L)) /* C99 */
++    (defined(__STDC_VERSION__) && (__STDC_VERSION__ - 0 >= 199901L) /* C99 */ \
++     && !defined(__cplusplus)) /* Workaround g++ issue on Solaris */
+ #  define _X_RESTRICT_KYWD  restrict
+ # elif defined(__GNUC__) && !defined(__STRICT_ANSI__) /* gcc w/C89+extensions */
+ #  define _X_RESTRICT_KYWD __restrict__
