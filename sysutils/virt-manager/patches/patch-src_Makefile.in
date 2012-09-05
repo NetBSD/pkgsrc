@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/09/05 21:15:16 gls Exp $
+
+Install GConf schemas where pkgsrc expects them.
+
+--- src/Makefile.in.orig	2012-07-29 20:28:51.000000000 +0000
++++ src/Makefile.in
+@@ -272,7 +272,7 @@ desktop_DATA = $(PACKAGE).desktop
+ dbusdir = $(datadir)/dbus-1/services
+ dbus_DATA_IN = $(PACKAGE).service.in
+ dbus_DATA = $(PACKAGE).service
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = $(datadir)/gconf/schemas
+ schema_DATA_IN = $(PACKAGE).schemas.in
+ schema_DATA = $(PACKAGE).schemas
+ CLEANFILES = $(bin_SCRIPTS) $(desktop_DATA) $(dbus_DATA) $(python_DATA) $(libexec_SCRIPTS) $(schema_DATA) $(PACKAGE).desktop.in
