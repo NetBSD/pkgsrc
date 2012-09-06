@@ -1,0 +1,19 @@
+$NetBSD: patch-suite_installer_package-manifest.in,v 1.1 2012/09/06 12:08:52 ryoon Exp $
+
+--- suite/installer/package-manifest.in.orig	2012-08-27 04:44:26.000000000 +0000
++++ suite/installer/package-manifest.in
+@@ -839,14 +839,11 @@ bin/libfreebl_32int64_3.so
+ @BINPATH@/extensions/inspector@mozilla.org/chrome.manifest
+ @BINPATH@/extensions/inspector@mozilla.org/chrome/inspector@JAREXT@
+ #ifdef MOZ_GTK2
+-@BINPATH@/extensions/inspector@mozilla.org/platform/Linux/chrome/icons/default/winInspectorMain16.xpm
+-@BINPATH@/extensions/inspector@mozilla.org/platform/Linux/chrome/icons/default/winInspectorMain.xpm
+ #elifdef XP_WIN32
+ @BINPATH@/extensions/inspector@mozilla.org/platform/WINNT/chrome/icons/default/winInspectorMain.ico
+ #elifdef XP_OS2
+ @BINPATH@/extensions/inspector@mozilla.org/platform/OS2/chrome/icons/default/winInspectorMain.ico
+ #endif
+-@BINPATH@/extensions/inspector@mozilla.org/components/components.list
+ @BINPATH@/extensions/inspector@mozilla.org/components/inspector-cmdline.js
+ @BINPATH@/extensions/inspector@mozilla.org/defaults/preferences/inspector.js
+ #endif
