@@ -1,12 +1,12 @@
-$NetBSD: patch-au,v 1.6 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-au,v 1.7 2012/09/06 12:08:51 ryoon Exp $
 
 - Fix device name on NetBSD
 - SOUND_VERSION just isn't a reliable way to detect features supported by
   particular OSS implementation.
 
---- mozilla/media/libsydneyaudio/src/sydney_audio_oss.c.orig	2012-04-23 06:28:07.000000000 +0000
+--- mozilla/media/libsydneyaudio/src/sydney_audio_oss.c.orig	2012-08-27 04:49:25.000000000 +0000
 +++ mozilla/media/libsydneyaudio/src/sydney_audio_oss.c
-@@ -55,7 +55,7 @@
+@@ -23,7 +23,7 @@
  // support only versions newer than 3.6.1
  #define SUPP_OSS_VERSION OSS_VERSION(3,0,1)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-au,v 1.6 2012/04/28 22:48:06 ryoon Exp $
  #error Unsupported OSS Version
  #else
  
-@@ -205,7 +205,12 @@ sa_stream_create_pcm(
+@@ -173,7 +173,12 @@ sa_stream_create_pcm(
      return SA_ERROR_SYSTEM;
    }
  

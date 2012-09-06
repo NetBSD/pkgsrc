@@ -1,10 +1,10 @@
-$NetBSD: patch-mi,v 1.4 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mi,v 1.5 2012/09/06 12:08:51 ryoon Exp $
 
 Add DragonFly support.
 
---- mozilla/config/config.mk.orig	2012-04-23 06:27:25.000000000 +0000
+--- mozilla/config/config.mk.orig	2012-08-27 04:49:04.000000000 +0000
 +++ mozilla/config/config.mk
-@@ -129,7 +129,7 @@ endif
+@@ -97,7 +97,7 @@ endif
  # but save the version to allow multiple versions of the same base
  # platform to be built in the same tree.
  #

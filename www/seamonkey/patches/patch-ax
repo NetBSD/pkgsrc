@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.10 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-ax,v 1.11 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-04-23 06:28:29.000000000 +0000
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-08-27 04:49:34.000000000 +0000
 +++ mozilla/xpcom/base/nsStackWalk.cpp
-@@ -54,7 +54,7 @@ struct CriticalAddress {
+@@ -23,7 +23,7 @@ struct CriticalAddress {
  };
  static CriticalAddress gCriticalAddress;
  

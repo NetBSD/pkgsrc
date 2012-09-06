@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_libsydneyaudio_src_sydney__audio__pulseaudio.c,v 1.1 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mozilla_media_libsydneyaudio_src_sydney__audio__pulseaudio.c,v 1.2 2012/09/06 12:08:52 ryoon Exp $
 
---- mozilla/media/libsydneyaudio/src/sydney_audio_pulseaudio.c.orig	2012-04-23 06:28:07.000000000 +0000
+--- mozilla/media/libsydneyaudio/src/sydney_audio_pulseaudio.c.orig	2012-08-27 04:49:25.000000000 +0000
 +++ mozilla/media/libsydneyaudio/src/sydney_audio_pulseaudio.c
-@@ -29,7 +29,9 @@
+@@ -6,7 +6,9 @@
  #include <stdio.h>
  #include <string.h>
  #include <pthread.h>

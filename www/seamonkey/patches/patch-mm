@@ -1,37 +1,25 @@
-$NetBSD: patch-mm,v 1.9 2012/07/19 17:33:29 ryoon Exp $
+$NetBSD: patch-mm,v 1.10 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2012-07-15 12:00:56.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2012-08-25 00:31:32.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -120,6 +120,7 @@ STATIC_LIBS += ipdlunittest_s
- endif
- 
- ifeq (Linux,$(OS_ARCH))
-+EXTRA_DSO_LDOPTS += -lnssutil3
- ifneq (Android,$(OS_TARGET))
- OS_LIBS += -lrt
- endif
-@@ -522,6 +523,24 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -535,6 +535,20 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
  endif
  
-+ifeq ($(OS_ARCH),DragonFly)
++ifneq (,$(filter DragonFly FreeBSD,$(OS_ARCH)))
 +OS_LIBS += $(call EXPAND_LIBNAME,kvm)
 +EXTRA_DSO_LDOPTS += -lplc4 -lplds4 -lnspr4 -lnssutil3
 +endif
 +
-+ifeq ($(OS_ARCH),FreeBSD)
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
-+EXTRA_DSO_LDOPTS += -lplc4 -lplds4 -lnspr4 -lnssutil3
-+endif
-+
++ifneq (,$(MOZ_CUBEB)$(MOZ_SYDNEYAUDIO))
 +ifeq ($(OS_ARCH),NetBSD)
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
 +EXTRA_DSO_LDOPTS += -lossaudio
 +endif
 +ifdef PKGSRC_PULSEAUDIO
 +EXTRA_DSO_LDOPTS += -lpulse
 +endif
++endif
 +
  ifeq ($(OS_ARCH),WINNT)
- OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 version winspool comdlg32 imm32 msimg32 shlwapi psapi ws2_32 dbghelp rasapi32 rasdlg iphlpapi uxtheme setupapi secur32)
+ OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 version winspool comdlg32 imm32 msimg32 shlwapi psapi ws2_32 dbghelp rasapi32 rasdlg iphlpapi uxtheme setupapi secur32 sensorsapi portabledeviceguids windowscodecs)
  ifdef MOZ_CRASHREPORTER

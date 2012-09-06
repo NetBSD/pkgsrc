@@ -1,8 +1,8 @@
-$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.2 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.3 2012/09/06 12:08:51 ryoon Exp $
 
---- mail/app/nsMailApp.cpp.orig	2012-04-23 06:20:50.000000000 +0000
+--- mail/app/nsMailApp.cpp.orig	2012-08-27 04:44:23.000000000 +0000
 +++ mail/app/nsMailApp.cpp
-@@ -52,6 +52,27 @@
+@@ -19,6 +19,27 @@
  
  #include <stdio.h>
  #include <stdarg.h>
@@ -30,7 +30,7 @@ $NetBSD: patch-mail_app_nsMailApp.cpp,v 1.2 2012/04/28 22:48:06 ryoon Exp $
  
  #include "nsCOMPtr.h"
  #include "nsILocalFile.h"
-@@ -151,6 +172,7 @@ static int do_main(const char *exePath, 
+@@ -115,6 +136,7 @@ static int do_main(const char *exePath, 
  
  int main(int argc, char* argv[])
  {
