@@ -1,6 +1,6 @@
-$NetBSD: patch-bi,v 1.4 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-bi,v 1.5 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/gfx/angle/src/compiler/osinclude.h.orig	2012-04-23 06:27:34.000000000 +0000
+--- mozilla/gfx/angle/src/compiler/osinclude.h.orig	2012-08-27 04:49:10.000000000 +0000
 +++ mozilla/gfx/angle/src/compiler/osinclude.h
 @@ -16,6 +16,7 @@
  #define ANGLE_OS_WIN

@@ -1,10 +1,10 @@
-$NetBSD: patch-xj,v 1.4 2012/04/28 22:48:07 ryoon Exp $
+$NetBSD: patch-xj,v 1.5 2012/09/06 12:08:52 ryoon Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp.orig	2012-04-23 06:28:29.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp.orig	2012-08-27 04:49:34.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp
-@@ -41,6 +41,7 @@
+@@ -6,6 +6,7 @@
  // Implement shared vtbl methods.
  
  #include "xptcprivate.h"
@@ -12,7 +12,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
  
  // The Linux/PPC ABI (aka PPC/SYSV ABI) passes the first 8 integral
  // parameters and the first 8 floating point parameters in registers
-@@ -71,7 +72,6 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -36,7 +37,6 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  {
      nsXPTCMiniVariant paramBuffer[PARAM_BUFFER_COUNT];
      nsXPTCMiniVariant* dispatchParams = NULL;
@@ -20,7 +20,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
      const nsXPTMethodInfo* info;
      PRUint32 paramCount;
      PRUint32 i;
-@@ -79,12 +79,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -44,12 +44,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  
      NS_ASSERTION(self,"no self");
  
@@ -34,7 +34,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
      NS_ASSERTION(info,"no method info");
      if (! info)
          return NS_ERROR_UNEXPECTED;
-@@ -119,8 +114,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -84,8 +79,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
                  if ((PRUint32) ap & 4) ap++; // doubles are 8-byte aligned on stack
                  dp->val.d = *(double*) ap;
                  ap += 2;
@@ -45,7 +45,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
              }
              continue;
          }
-@@ -130,8 +127,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -95,8 +92,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
              else {
                  dp->val.f = *(float*) ap;
  		ap += 1;
@@ -56,7 +56,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
              }
              continue;
          }
-@@ -179,9 +178,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -144,9 +143,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
          }
      }
  
@@ -69,7 +69,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
  
      if (dispatchParams != paramBuffer)
          delete [] dispatchParams;
-@@ -195,7 +194,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -160,7 +159,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  // however, it's quick, dirty, and'll break when the ABI changes on
  // us, which is what we want ;-).
  
@@ -80,7 +80,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
  __asm__ (                                                   \
          ".section \".text\" \n\t"                           \
          ".align 2 \n\t"                                     \
-@@ -206,6 +207,46 @@ __asm__ (                               
+@@ -171,6 +172,46 @@ __asm__ (                               
  	"li     11,"#n" \n\t"                               \
  	"b      SharedStub@local \n"                        \
  );
