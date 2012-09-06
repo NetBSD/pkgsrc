@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.146 2012/08/27 22:10:34 morr Exp $
+# $NetBSD: Makefile.common,v 1.147 2012/09/06 08:13:39 morr Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -12,19 +12,21 @@
 DISTNAME=		vim-${VIM_VERSION}
 DISTFILES=		vim-${VIM_VERSION}${EXTRACT_SUFX}
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/
+MASTER_SITES=		http://ftp.vim.org/pub/vim/unix/
+MASTER_SITES+=		ftp://ftp.vim.org/pub/editors/vim/unix/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/unix/
 DIST_SUBDIR=		vim${VIM_VERSION}
 EXTRACT_SUFX=		.tar.bz2
 
-PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION}/
+PATCH_SITES=		http://ftp.vim.org/pub/vim/patches/${VIM_VERSION}/
+PATCH_SITES+=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION}/
 PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION}/
 
 .include "../../mk/bsd.prefs.mk"
 
 PATCHFILES!=		${AWK} 'BEGIN {for (i=1; i<=${VIM_PATCHLEVEL}; i++) printf "7.3.%03d\n", i; exit}'
 
-BADPATCHES= 122 225 235 246 247 252 253 336 386 387 400 434 487 491 527 569 578 579 580 581 583 584 603 611 629
+BADPATCHES= 122 225 235 246 247 252 253 336 386 387 400 434 487 491 527 569 578 579 580 581 583 584 603 611 629 640 650
 
 .for p in ${BADPATCHES}
 PATCHFILES:= ${PATCHFILES:N7.3.${p}}
