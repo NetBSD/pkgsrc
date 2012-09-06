@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.19 2010/01/10 16:32:03 wiz Exp $
+# $NetBSD: Makefile-example,v 1.20 2012/09/06 11:06:58 is Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -14,7 +14,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=make/}
 MAINTAINER=		pkgsrc-users@NetBSD.org	# set this to your email address, pkgsrc-users@ is the default
 HOMEPAGE=		http://www.gnu.org/software/make/make.html
 COMMENT=		GNU version of 'make' utility	# start with a capital, no articles at start
-LICENSE=		hptools-license # Licences should be added to the pkgsrc/licenses directory.
+LICENSE=		hptools-license # Licenses should be added to the pkgsrc/licenses directory.
 
 # Parapraph for any build or run dependencies -- not libraries,
 # those should be handled using buildlink3.mk files.
