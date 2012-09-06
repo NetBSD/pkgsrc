@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2807 2012/09/06 08:17:58 morr Exp $
+$NetBSD: CHANGES-2012,v 1.2808 2012/09/06 11:02:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4344,3 +4344,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/libotr to 4.0.0 [gdt 2012-09-06]
 	Updated chat/pidgin-otr to 4.0.0 [gdt 2012-09-06]
 	Updated editors/vim-share to 7.3.653 [morr 2012-09-06]
+	Updated x11/gtk2 to 2.24.12 [drochner 2012-09-06]
