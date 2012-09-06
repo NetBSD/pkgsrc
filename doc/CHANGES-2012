@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2810 2012/09/06 12:24:21 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2811 2012/09/06 12:31:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4347,3 +4347,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk2 to 2.24.12 [drochner 2012-09-06]
 	Updated www/seamonkey to 2.12 [ryoon 2012-09-06]
 	Updated net/mikutter to 0.1.1.863 [obache 2012-09-06]
+	Updated security/ruby-oauth to 0.4.7 [obache 2012-09-06]
