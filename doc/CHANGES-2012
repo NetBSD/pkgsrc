@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2805 2012/09/06 00:25:00 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.2806 2012/09/06 05:34:35 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4335,11 +4335,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/duplicity to 0.6.19 [wiz 2012-09-05]
 	Removed cad/simian [dmcmahill 2012-09-05]
 	Removed cad/simian-docs [dmcmahill 2012-09-05]
-	Added devel/p5-List-AllUtils 0.0.3 [is 2012-09-05]
-	Added devel/p5-File-Slurp-Unicode 0.7.1 [is 2012-09-05]
+	Added devel/p5-List-AllUtils version 0.0.3 [is 2012-09-05]
+	Added devel/p5-File-Slurp-Unicode version 0.7.1 [is 2012-09-05]
 	Updated x11/xproto to 7.0.23nb1 [jperkin 2012-09-05]
-	Added sysutils/virtinst 0.600.3 [gls 2012-09-05]
-	Added sysutils/virt-manager 0.9.4 [gls 2012-09-05]
+	Added sysutils/virtinst version 0.600.3 [gls 2012-09-05]
+	Added sysutils/virt-manager version 0.9.4 [gls 2012-09-05]
 	Updated net/nagstamon to 0.9.9 [gls 2012-09-05]
 	Updated chat/libotr to 4.0.0 [gdt 2012-09-06]
 	Updated chat/pidgin-otr to 4.0.0 [gdt 2012-09-06]
