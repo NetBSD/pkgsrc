@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:37:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/09/06 00:23:18 gdt Exp $
 bin/otr_mackey
 bin/otr_modify
 bin/otr_parse
@@ -8,7 +8,9 @@ bin/otr_sesskeys
 include/libotr/auth.h
 include/libotr/b64.h
 include/libotr/context.h
+include/libotr/context_priv.h
 include/libotr/dh.h
+include/libotr/instag.h
 include/libotr/mem.h
 include/libotr/message.h
 include/libotr/privkey-t.h
