@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2811 2012/09/06 12:31:02 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2812 2012/09/06 17:26:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4348,3 +4348,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/seamonkey to 2.12 [ryoon 2012-09-06]
 	Updated net/mikutter to 0.1.1.863 [obache 2012-09-06]
 	Updated security/ruby-oauth to 0.4.7 [obache 2012-09-06]
+	Updated devel/xulrunner10 to 10.0.7 [ryoon 2012-09-06]
+	Updated www/firefox10 to 10.0.7 [ryoon 2012-09-06]
