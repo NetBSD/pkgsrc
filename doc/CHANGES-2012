@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2806 2012/09/06 05:34:35 gls Exp $
+$NetBSD: CHANGES-2012,v 1.2807 2012/09/06 08:17:58 morr Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4343,3 +4343,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/nagstamon to 0.9.9 [gls 2012-09-05]
 	Updated chat/libotr to 4.0.0 [gdt 2012-09-06]
 	Updated chat/pidgin-otr to 4.0.0 [gdt 2012-09-06]
+	Updated editors/vim-share to 7.3.653 [morr 2012-09-06]
