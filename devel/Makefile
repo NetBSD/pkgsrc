@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1642 2012/09/02 02:46:04 mspo Exp $
+# $NetBSD: Makefile,v 1.1643 2012/09/06 17:23:33 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -769,6 +769,7 @@ SUBDIR+=	p5-File-Save-Home
 SUBDIR+=	p5-File-ShareDir
 SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-File-Slurp
+SUBDIR+=	p5-File-Slurp-Unicode
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-File-Tempdir
 SUBDIR+=	p5-File-Touch
@@ -851,6 +852,7 @@ SUBDIR+=	p5-LEOCHARRE-Debug
 SUBDIR+=	p5-LEOCHARRE-Dir
 SUBDIR+=	p5-Lexical-Persistence
 SUBDIR+=	p5-Lexical-SealRequireHints
+SUBDIR+=	p5-List-AllUtils
 SUBDIR+=	p5-List-MoreUtils
 SUBDIR+=	p5-List-UtilsBy
 SUBDIR+=	p5-Locale-Msgfmt
