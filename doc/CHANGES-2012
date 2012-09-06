@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2809 2012/09/06 12:10:14 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2810 2012/09/06 12:24:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4346,3 +4346,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/vim-share to 7.3.653 [morr 2012-09-06]
 	Updated x11/gtk2 to 2.24.12 [drochner 2012-09-06]
 	Updated www/seamonkey to 2.12 [ryoon 2012-09-06]
+	Updated net/mikutter to 0.1.1.863 [obache 2012-09-06]
