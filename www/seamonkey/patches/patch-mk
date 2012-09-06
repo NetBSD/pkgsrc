@@ -1,8 +1,8 @@
-$NetBSD: patch-mk,v 1.7 2012/07/19 17:33:29 ryoon Exp $
+$NetBSD: patch-mk,v 1.8 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/config/rules.mk.orig	2012-07-18 11:34:55.000000000 +0000
+--- mozilla/config/rules.mk.orig	2012-08-27 04:49:04.000000000 +0000
 +++ mozilla/config/rules.mk
-@@ -556,6 +556,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+@@ -454,6 +454,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
  endif
  endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-mk,v 1.7 2012/07/19 17:33:29 ryoon Exp $
  ifeq ($(OS_ARCH),NetBSD)
  ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
  ifeq ($(MODULE),layout)
-@@ -565,6 +571,10 @@ endif
+@@ -463,6 +469,10 @@ endif
  endif
  endif
  
@@ -26,21 +26,3 @@ $NetBSD: patch-mk,v 1.7 2012/07/19 17:33:29 ryoon Exp $
  #
  # HP-UXBeOS specific section: for COMPONENTS only, add -Bsymbolic flag
  # which uses internal symbols first
-@@ -1452,7 +1462,7 @@ $(XPIDL_GEN_DIR)/%.h: %.idl $(XPIDL_DEPS
- 	$(PYTHON_PATH) \
- 	  $(PLY_INCLUDE) \
- 	  -I$(topsrcdir)/xpcom/idl-parser \
--	  $(topsrcdir)/xpcom/idl-parser/header.py --cachedir=$(DEPTH)/xpcom/idl-parser $(XPIDL_FLAGS) $(_VPATH_SRCS) -d $(MDDEPDIR)/$(@F).pp -o $@
-+	  $(topsrcdir)/xpcom/idl-parser/header.py --cachedir=$(DEPTH)/xpcom/idl-parser/cache $(XPIDL_FLAGS) $(_VPATH_SRCS) -d $(MDDEPDIR)/$(@F).pp -o $@
- 	@if test -n "$(findstring $*.h, $(EXPORTS))"; \
- 	  then echo "*** WARNING: file $*.h generated from $*.idl overrides $(srcdir)/$*.h"; else true; fi
- 
-@@ -1465,7 +1475,7 @@ $(XPIDL_GEN_DIR)/%.xpt: %.idl $(XPIDL_DE
- 	  $(PLY_INCLUDE) \
- 	  -I$(topsrcdir)/xpcom/idl-parser \
- 	  -I$(topsrcdir)/xpcom/typelib/xpt/tools \
--	  $(topsrcdir)/xpcom/idl-parser/typelib.py --cachedir=$(DEPTH)/xpcom/idl-parser $(XPIDL_FLAGS) $(_VPATH_SRCS) -d $(MDDEPDIR)/$(@F).pp -o $@
-+	  $(topsrcdir)/xpcom/idl-parser/typelib.py --cachedir=$(DEPTH)/xpcom/idl-parser/cache $(XPIDL_FLAGS) $(_VPATH_SRCS) -d $(MDDEPDIR)/$(@F).pp -o $@
- 
- # no need to link together if XPIDLSRCS contains only XPIDL_MODULE
- ifneq ($(XPIDL_MODULE).idl,$(strip $(XPIDLSRCS)))
