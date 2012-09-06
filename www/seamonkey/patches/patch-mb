@@ -1,8 +1,8 @@
-$NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mb,v 1.6 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2012-04-23 06:28:29.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2012-08-27 04:49:34.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in
-@@ -82,7 +82,7 @@ endif
+@@ -50,7 +50,7 @@ endif
  endif
  endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
  ifeq (86,$(findstring 86,$(OS_TEST)))
  CPPSRCS		:= xptcinvoke_gcc_x86_unix.cpp xptcstubs_gcc_x86_unix.cpp
  endif
-@@ -91,7 +91,7 @@ endif
+@@ -59,7 +59,7 @@ endif
  # New code for Linux, et. al., with gcc
  # Migrate other platforms here after testing
  #
@@ -20,7 +20,7 @@ $NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
  # Linux/x86-64
  ifeq (x86_64,$(OS_TEST))
  CPPSRCS		:= xptcinvoke_x86_64_unix.cpp xptcstubs_x86_64_linux.cpp
-@@ -109,12 +109,6 @@ ASFILES		:= xptcstubs_asm_ipf64.s xptcin
+@@ -77,12 +77,6 @@ ASFILES		:= xptcstubs_asm_ipf64.s xptcin
  endif
  endif
  #
@@ -33,7 +33,7 @@ $NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
  # Neutrino/Intel (uses the same unixish_x86 code)
  #
  ifeq ($(OS_TARGET),NTO)
-@@ -190,7 +184,7 @@ endif
+@@ -158,7 +152,7 @@ endif
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -42,7 +42,7 @@ $NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -247,7 +241,7 @@ endif
+@@ -215,7 +209,7 @@ endif
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -51,7 +51,7 @@ $NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -319,9 +313,10 @@ endif
+@@ -287,9 +281,10 @@ endif
  #
  # NetBSD/PPC
  #
@@ -63,7 +63,7 @@ $NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
  endif
  
  #
-@@ -387,6 +382,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
+@@ -355,6 +350,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
  ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
  endif
  #

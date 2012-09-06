@@ -1,8 +1,8 @@
-$NetBSD: patch-xb,v 1.4 2012/04/28 22:48:07 ryoon Exp $
+$NetBSD: patch-xb,v 1.5 2012/09/06 12:08:52 ryoon Exp $
 
 NetBSD/sparc64 xptcall support code. From pkgsrc/www/firefox3/files/
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_sparc64_netbsd.cpp.orig	2012-04-27 17:20:00.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_sparc64_netbsd.cpp.orig	2012-09-02 13:39:16.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_sparc64_netbsd.cpp
 @@ -0,0 +1,84 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*-

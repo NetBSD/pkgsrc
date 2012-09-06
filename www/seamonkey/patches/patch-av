@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.5 2012/07/19 17:33:29 ryoon Exp $
+$NetBSD: patch-av,v 1.6 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-07-17 18:13:28.000000000 +0000
+--- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-08-27 04:49:34.000000000 +0000
 +++ mozilla/xulrunner/app/nsXULRunnerApp.cpp
-@@ -39,6 +39,27 @@
+@@ -6,6 +6,27 @@
  #include "nsXPCOMGlue.h"
  #include <stdio.h>
  #include <stdlib.h>
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.5 2012/07/19 17:33:29 ryoon Exp $
  #ifdef XP_WIN
  #include <windows.h>
  #define snprintf _snprintf
-@@ -284,6 +305,7 @@ private:
+@@ -251,6 +272,7 @@ private:
  
  int main(int argc, char* argv[])
  {

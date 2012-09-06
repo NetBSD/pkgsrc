@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-aa,v 1.10 2012/09/06 12:08:50 ryoon Exp $
 
---- mozilla/configure.in.orig	2012-04-23 06:27:25.000000000 +0000
+--- mozilla/configure.in.orig	2012-08-27 04:49:04.000000000 +0000
 +++ mozilla/configure.in
-@@ -2413,7 +2413,7 @@ case "$target" in
+@@ -2299,7 +2299,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.9 2012/04/28 22:48:06 ryoon Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2421,6 +2421,9 @@ case "$target" in
+@@ -2307,6 +2307,9 @@ case "$target" in
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.9 2012/04/28 22:48:06 ryoon Exp $
      ;;
  
  ia64*-hpux*)
-@@ -3412,6 +3415,9 @@ dnl ====================================
+@@ -3309,6 +3312,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.9 2012/04/28 22:48:06 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4358,6 +4364,14 @@ if test -n "$YASM"; then
+@@ -4308,6 +4314,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.9 2012/04/28 22:48:06 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5732,11 +5746,11 @@ if test -n "$MOZ_WEBM" -a -z "$MOZ_NATIV
+@@ -5734,11 +5748,11 @@ if test -n "$MOZ_WEBM" -a -z "$MOZ_NATIV
  
      dnl See if we have assembly on this platform.
      case "$OS_ARCH:$CPU_ARCH" in
@@ -60,7 +60,16 @@ $NetBSD: patch-aa,v 1.9 2012/04/28 22:48:06 ryoon Exp $
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
-@@ -9102,6 +9116,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -6140,7 +6154,7 @@ if test -n "$MOZ_CRASHREPORTER"; then
+     AC_MSG_ERROR([Breakpad tools do not support compiling on $HOST_OS_ARCH while targeting $OS_ARCH.  Use --disable-crashreporter.])
+   fi
+ 
+-  if test "$OS_ARCH" == "WINNT" -a -z "$HAVE_64BIT_OS"; then
++  if test "$OS_ARCH" = "WINNT" -a -z "$HAVE_64BIT_OS"; then
+     MOZ_CRASHREPORTER_INJECTOR=1
+     AC_DEFINE(MOZ_CRASHREPORTER_INJECTOR)
+   fi
+@@ -9248,6 +9262,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`

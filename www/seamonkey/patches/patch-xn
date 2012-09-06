@@ -1,53 +1,52 @@
-$NetBSD: patch-xn,v 1.4 2012/04/28 22:48:07 ryoon Exp $
+$NetBSD: patch-xn,v 1.5 2012/09/06 12:08:52 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s.orig	2012-04-23 06:28:29.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s.orig	2012-08-27 04:49:34.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_mips.s
-@@ -42,8 +42,46 @@
+@@ -16,6 +16,47 @@
+ #include <sys/asm.h>
+ #endif
  
- /* This code is for MIPS using the O32 ABI. */
- 
--#include <sys/regdef.h>
--#include <sys/asm.h>
 +#ifdef __NetBSD__
 +# include <machine/regdef.h>
 +# include <machine/asm.h>
 +# ifndef fp
-+#  define	fp	s8
++#  define      fp      s8
 +# endif
 +# ifndef PTRLOG
 +#  if SZREG == 4
-+#   define	PTRLOG	2
++#   define     PTRLOG  2
 +#  else
-+#   define	PTRLOG	3
++#   define     PTRLOG  3
 +#  endif
 +# endif
 +# ifndef SETUP_GP
 +#  if defined(__mips_o32)
-+#   define	SETUP_GP	\
-+		.set push;	\
-+		.set noreorder;	\
-+		.cpload t9;	\
-+		.set pop
-+#   define	SAVE_GP(x)	\
-+		.cprestore x
++#   define     SETUP_GP        \
++               .set push;      \
++               .set noreorder; \
++               .cpload t9;     \
++               .set pop
++#   define     SAVE_GP(x)      \
++               .cprestore x
 +#  else
-+#   define	SETUP_GP
-+#   define	SAVE_GP(x)
++#   define     SETUP_GP
++#   define     SAVE_GP(x)
 +#  endif
 +# endif
 +# ifndef ALSZ
 +#  if defined(__mips_n32) || defined(__mips_n64)
-+#   define	ALSZ	15
-+#   define	ALMASK	~15
++#   define     ALSZ    15
++#   define     ALMASK  ~15
 +#  else
-+#   define	ALSZ	7
-+#   define	ALMASK	~7
++#   define     ALSZ    7
++#   define     ALMASK  ~7
 +#  endif
 +# endif
 +#else
 +# include <sys/regdef.h>
 +# include <sys/asm.h>
 +#endif
- 
++
  # NARGSAVE is the argument space in the callers frame, including extra
  # 'shadowed' space for the argument registers. The minimum of 4
+ # argument slots is sometimes predefined in the header files.

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa-toplevel,v 1.7 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-aa-toplevel,v 1.8 2012/09/06 12:08:50 ryoon Exp $
 
---- configure.in.orig	2012-04-23 06:20:50.000000000 +0000
+--- configure.in.orig	2012-08-27 04:44:23.000000000 +0000
 +++ configure.in
-@@ -1950,7 +1950,7 @@ ld.])
+@@ -1865,7 +1865,7 @@ ld.])
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa-toplevel,v 1.7 2012/04/28 22:48:06 ryoon Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1958,6 +1958,9 @@ ld.])
+@@ -1873,6 +1873,9 @@ ld.])
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa-toplevel,v 1.7 2012/04/28 22:48:06 ryoon Exp $
      ;; 
  
  ia64*-hpux*)
-@@ -3231,6 +3234,9 @@ dnl ====================================
+@@ -3106,6 +3109,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;

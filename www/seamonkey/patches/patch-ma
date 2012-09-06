@@ -1,8 +1,8 @@
-$NetBSD: patch-ma,v 1.4 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-ma,v 1.5 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/config/autoconf.mk.in.orig	2012-04-23 06:27:25.000000000 +0000
+--- mozilla/config/autoconf.mk.in.orig	2012-08-27 04:49:04.000000000 +0000
 +++ mozilla/config/autoconf.mk.in
-@@ -68,14 +68,14 @@ MOZ_PKG_SPECIAL = @MOZ_PKG_SPECIAL@
+@@ -37,14 +37,14 @@ MOZ_PKG_SPECIAL = @MOZ_PKG_SPECIAL@
  prefix		= @prefix@
  exec_prefix	= @exec_prefix@
  bindir		= @bindir@

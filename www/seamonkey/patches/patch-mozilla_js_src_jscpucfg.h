@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_jscpucfg.h,v 1.3 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jscpucfg.h,v 1.4 2012/09/06 12:08:52 ryoon Exp $
 
---- mozilla/js/src/jscpucfg.h.orig	2012-04-23 06:27:43.000000000 +0000
+--- mozilla/js/src/jscpucfg.h.orig	2012-08-27 04:49:16.000000000 +0000
 +++ mozilla/js/src/jscpucfg.h
-@@ -77,6 +77,21 @@
+@@ -44,6 +44,21 @@
  #  define IS_BIG_ENDIAN 1
  # endif
  

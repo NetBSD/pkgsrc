@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.5 2012/04/28 22:48:06 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.6 2012/09/06 12:08:51 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2012-04-27 17:19:59.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2012-08-31 13:56:11.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util_bsd.cc
-@@ -0,0 +1,326 @@
+@@ -0,0 +1,321 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -11,35 +11,22 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.5 2012/04
 +
 +#include "base/process_util.h"
 +
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <sys/wait.h>
++#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD)
++_Pragma("GCC visibility push(default)")
++#include <kvm.h>
++#include <sys/user.h>
++_Pragma("GCC visibility pop")
++#endif
++
 +#include <ctype.h>
 +#include <fcntl.h>
-+#include <unistd.h>
-+#include <string>
-+#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD)
-+/* DragonFly, as of v3.0.1, and FreeBSD 9.0-RELEASE do not explicitly mark symbols public */
-+#define PRE_SYS_INCLUDE		_Pragma("GCC visibility push(default)")
-+#define POST_SYS_INCLUDE	_Pragma("GCC visibility pop")
-+#else
-+#define PRE_SYS_INCLUDE
-+#define POST_SYS_INCLUDE
-+#endif
-+PRE_SYS_INCLUDE
 +#include <kvm.h>
-+POST_SYS_INCLUDE
-+#include <sys/sysctl.h>
-+#include <sys/types.h>
-+#include <sys/wait.h>
-+#if defined(OS_DRAGONFLY)
-+PRE_SYS_INCLUDE
-+#include <sys/user.h>
-+POST_SYS_INCLUDE
-+#define HAVE_POSIX_SPAWN	1
-+#endif
-+#if defined(OS_FREEBSD)
-+PRE_SYS_INCLUDE
-+#include <sys/user.h>
-+POST_SYS_INCLUDE
-+#endif
++#include <unistd.h>
++
++#include <string>
 +
 +#include "base/debug_util.h"
 +#include "base/eintr_wrapper.h"
@@ -48,17 +35,21 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.5 2012/04
 +#include "base/string_tokenizer.h"
 +#include "base/string_util.h"
 +
-+#ifdef __NetBSD__
-+#include <sys/param.h>
-+#if __NetBSD_Version__ >= 600000000
++#if (defined(_POSIX_SPAWN) && _POSIX_SPAWN > 0) \
++  || (defined(OS_NETBSD) && __NetBSD_Version__ >= 599006500)
 +#define HAVE_POSIX_SPAWN	1
 +#endif
++
++#ifndef __dso_public
++# ifdef __exported
++#  define __dso_public	__exported
++# else
++#  define __dso_public	__attribute__((__visibility__("default")))
++# endif
 +#endif
 +
 +#ifdef HAVE_POSIX_SPAWN
-+PRE_SYS_INCLUDE
 +#include <spawn.h>
-+POST_SYS_INCLUDE
 +extern "C" char **environ __dso_public;
 +#endif
 +
@@ -299,7 +290,11 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.5 2012/04
 +#  endif
 +#else
 +  kvm  = kvm_open(NULL, NULL, NULL, KVM_NO_FILES, NULL);
++#if defined(OS_OPENBSD)
++  struct kinfo_proc* procs = kvm_getprocs(kvm, KERN_PROC_UID, getuid(), sizeof(struct kinfo_proc), &numEntries);
++#else
 +  struct kinfo_proc2* procs = kvm_getproc2(kvm, KERN_PROC_UID, getuid(), sizeof(struct kinfo_proc2), &numEntries);
++#endif
 +  if (procs != NULL && numEntries > 0) {
 +    for (int i = 0; i < numEntries; i++) {
 +    if (exe != procs[i].p_comm) continue;
