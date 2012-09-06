@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.3 2012/09/06 02:51:44 jmmv Exp $
+
+Fix build under NetBSD 1.5.2
+
+Change utils::stream_length() to return a std::size_t instead of
+a std::streampos.  This allows the later comparison against an
+integer without having to use a cast.
+
+This is upstream change: 2a62375a170b4bed0fd760e7c6e8c4d1433da147
+--- utils/stream.cpp
++++ utils/stream.cpp
+@@ -39,10 +39,13 @@
+ ///
+ /// \param is The input stream for which to calculate its length.
+ ///
+-/// \return The length of the stream.
++/// \return The length of the stream.  This is of size_t type instead of
++/// directly std::streampos to simplify the caller.  Some systems do not
++/// support comparing a std::streampos directly to an integer (see
++/// NetBSD 1.5.x), which is what we often want to do.
+ ///
+ /// \throw std::exception If calculating the length fails due to a stream error.
+-std::streampos
++std::size_t
+ utils::stream_length(std::istream& is)
+ {
+     const std::streampos current_pos = is.tellg();
+@@ -50,7 +53,7 @@ utils::stream_length(std::istream& is)
+         is.seekg(0, std::ios::end);
+         const std::streampos length = is.tellg();
+         is.seekg(current_pos, std::ios::beg);
+-        return length;
++        return static_cast< std::size_t >(length);
+     } catch (...) {
+         is.seekg(current_pos, std::ios::beg);
+         throw;
+--- utils/stream.hpp
++++ utils/stream.hpp
+@@ -35,13 +35,14 @@
+ #if !defined(UTILS_STREAM_HPP)
+ #define UTILS_STREAM_HPP
+ 
++#include <cstddef>
+ #include <istream>
+ #include <string>
+ 
+ namespace utils {
+ 
+ 
+-std::streampos stream_length(std::istream&);
++std::size_t stream_length(std::istream&);
+ std::string read_stream(std::istream&);
+ 
+ 
