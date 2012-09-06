@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2804 2012/09/06 00:24:06 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.2805 2012/09/06 00:25:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4342,3 +4342,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/virt-manager 0.9.4 [gls 2012-09-05]
 	Updated net/nagstamon to 0.9.9 [gls 2012-09-05]
 	Updated chat/libotr to 4.0.0 [gdt 2012-09-06]
+	Updated chat/pidgin-otr to 4.0.0 [gdt 2012-09-06]
