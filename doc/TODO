@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11497 2012/09/06 21:43:51 wiz Exp $
+$NetBSD: TODO,v 1.11498 2012/09/07 15:25:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -448,8 +448,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.5.1
 	o c4-1.10 [schmonz]
 	o cacti-0.8.8a [pkg/46399]
-	o cairo-1.12.2
-	o cairo-gobject-1.12.2
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.8.64
