@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11498 2012/09/07 15:25:38 adam Exp $
+$NetBSD: TODO,v 1.11499 2012/09/07 21:53:25 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1063,7 +1063,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rcs-5.8.1
 	o rdp-1.6
 	o remind-3.1.12
-	o rendercheck-1.4
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
 	o rhythmbox-0.13.3
