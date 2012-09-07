@@ -1,8 +1,22 @@
-$NetBSD: patch-ab,v 1.4 2009/09/18 14:01:32 sketch Exp $
+$NetBSD: patch-ab,v 1.5 2012/09/07 12:57:14 adam Exp $
 
---- unix/configure.orig	Fri Sep 18 14:57:23 2009
-+++ unix/configure	Fri Sep 18 14:58:24 2009
-@@ -235,6 +235,7 @@
+Don't force compiler optimization flags.
+Introduce DISABLE_ASM
+
+--- unix/configure.orig	2008-06-20 03:32:20.000000000 +0000
++++ unix/configure
+@@ -118,10 +118,6 @@ _EOF_
+ fi
+ 
+ # optimization flags
+-if test -n "${CFLAGS_OPT}"; then
+-  CFLAGS="${CFLAGS} ${CFLAGS_OPT}"
+-  CFLAGS_BZ="${CFLAGS_BZ} ${CFLAGS_OPT}"
+-fi
+ 
+ 
+ # bzip2
+@@ -235,6 +233,7 @@ $CPP conftest.c >/dev/null 2>/dev/null |
  echo Check if we can use asm code
  OBJA=""
  OCRCU8=""
@@ -10,7 +24,7 @@ $NetBSD: patch-ab,v 1.4 2009/09/18 14:01:32 sketch Exp $
  if eval "$CPP match.S > _match.s 2>/dev/null"; then
    if test ! -s _match.s || grep error < _match.s > /dev/null; then
      :
-@@ -257,6 +258,7 @@
+@@ -257,6 +256,7 @@ if eval "$CPP match.S > _match.s 2>/dev/
    fi
  fi
  rm -f _match.s _match.o _crc_i386.s _crc_i386.o
