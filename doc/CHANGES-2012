@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2820 2012/09/07 15:17:48 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2821 2012/09/07 15:25:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4358,3 +4358,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/sysupgrade to 1.3 [jmmv 2012-09-07]
 	Updated games/onscripter to 20120901 [tsutsui 2012-09-07]
 	Updated pkgtools/pkg_summary-utils to 0.58.4 [cheusov 2012-09-07]
+	Updated graphics/cairo to 1.12.2 [adam 2012-09-07]
+	Updated graphics/cairo-gobject to 1.12.2 [adam 2012-09-07]
