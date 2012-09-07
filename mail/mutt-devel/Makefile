@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2012/03/12 14:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2012/09/07 18:36:02 spz Exp $
 
 DISTNAME=		mutt-1.5.21
 PKGREVISION=		4
@@ -21,6 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
+USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/mutt
