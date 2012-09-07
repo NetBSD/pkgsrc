@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2816 2012/09/07 11:38:00 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2817 2012/09/07 11:41:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4354,3 +4354,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-Lingua-EN-Tagger to 0.20 [sno 2012-09-07]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07031 [sno 2012-09-07]
 	Updated textproc/p5-Text-CSV_XS to 0.91 [sno 2012-09-07]
+	Updated databases/p5-DBD-CSV to 0.36 [sno 2012-09-07]
