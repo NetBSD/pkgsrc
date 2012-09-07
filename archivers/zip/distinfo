@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2009/09/18 14:01:32 sketch Exp $
+$NetBSD: distinfo,v 1.13 2012/09/07 12:57:14 adam Exp $
 
 SHA1 (zip30.tgz) = c9f4099ecf2772b53c2dd4a8e508064ce015d182
 RMD160 (zip30.tgz) = 1fc99daf3e36494ba392c7514a714fe3d258d232
 Size (zip30.tgz) = 1118845 bytes
 SHA1 (patch-aa) = e9fc1d2801cb4e0e193c6378bcf0ffbc8dfb3bd3
-SHA1 (patch-ab) = 0c38e3ea547a12fdec232acde863a55fbbff5f3e
+SHA1 (patch-ab) = 9fe46894b9098800d02b964c5d5817d1531e9909
