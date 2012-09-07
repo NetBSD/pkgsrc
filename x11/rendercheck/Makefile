@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/02/28 14:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/07 21:51:47 shattered Exp $
 #
 
-DISTNAME=	rendercheck-1.3
+DISTNAME=	rendercheck-1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
