@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.7 2012/07/25 13:17:08 obache Exp $
+# $NetBSD: hacks.mk,v 1.8 2012/09/07 11:43:54 adam Exp $
 
 .if !defined(GLIB2_HACKS_MK)
 GLIB2_HACKS_MK=	# defined
@@ -15,14 +15,12 @@ CFLAGS:=	-O0 ${CFLAGS:C/[+,-]O[0-9]?//g}
 CHECK_BUILTIN.libiconv:=	yes
 . include "../../converters/libiconv/builtin.mk"
 CHECK_BUILTIN.libiconv:=	no
-. if ${ICONV_TYPE} == "native"
 PKG_HACKS+=		darwin-iconv
 SUBST_CLASSES+=		iconv
 SUBST_STAGE.iconv=	pre-configure
 SUBST_MESSAGE.iconv=	Changing libiconv_open to iconv_open.
 SUBST_FILES.iconv=	configure
 SUBST_SED.iconv=	-e 's,libiconv_open,iconv_open,g'
-. endif
 .endif
 
 # Work around unresolved symbol g_test_config_vars during build
