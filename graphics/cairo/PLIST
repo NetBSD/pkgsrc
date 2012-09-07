@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/02/23 14:00:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/09/07 15:24:03 adam Exp $
 bin/cairo-trace
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
@@ -9,6 +9,7 @@ include/cairo/cairo-ps.h
 ${PLIST.carbon}include/cairo/cairo-quartz.h
 ${PLIST.carbon}include/cairo/cairo-quartz-image.h
 include/cairo/cairo-script-interpreter.h
+include/cairo/cairo-script.h
 include/cairo/cairo-svg.h
 include/cairo/cairo-tee.h
 include/cairo/cairo-version.h
@@ -16,6 +17,7 @@ ${PLIST.xcb}include/cairo/cairo-xcb.h
 ${PLIST.x11}include/cairo/cairo-xlib-xrender.h
 ${PLIST.x11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
+lib/cairo/cairo-fdr.la
 lib/cairo/libcairo-trace.la
 lib/libcairo-script-interpreter.la
 lib/libcairo.la
@@ -29,6 +31,7 @@ lib/pkgconfig/cairo-ps.pc
 ${PLIST.carbon}lib/pkgconfig/cairo-quartz-font.pc
 ${PLIST.carbon}lib/pkgconfig/cairo-quartz-image.pc
 ${PLIST.carbon}lib/pkgconfig/cairo-quartz.pc
+lib/pkgconfig/cairo-script.pc
 lib/pkgconfig/cairo-svg.pc
 lib/pkgconfig/cairo-tee.pc
 ${PLIST.xcb}lib/pkgconfig/cairo-xcb-shm.pc
@@ -54,16 +57,19 @@ share/gtk-doc/html/cairo/cairo-Paths.html
 share/gtk-doc/html/cairo/cairo-PostScript-Surfaces.html
 share/gtk-doc/html/cairo/cairo-Quartz-(CGFont)-Fonts.html
 share/gtk-doc/html/cairo/cairo-Quartz-Surfaces.html
+share/gtk-doc/html/cairo/cairo-Raster-Sources.html
 share/gtk-doc/html/cairo/cairo-Recording-Surfaces.html
 share/gtk-doc/html/cairo/cairo-Regions.html
 share/gtk-doc/html/cairo/cairo-SVG-Surfaces.html
+share/gtk-doc/html/cairo/cairo-Script-Surfaces.html
 share/gtk-doc/html/cairo/cairo-Transformations.html
 share/gtk-doc/html/cairo/cairo-Types.html
 share/gtk-doc/html/cairo/cairo-User-Fonts.html
-share/gtk-doc/html/cairo/cairo-Version-Information.html
 share/gtk-doc/html/cairo/cairo-Win32-Fonts.html
 share/gtk-doc/html/cairo/cairo-Win32-Surfaces.html
+share/gtk-doc/html/cairo/cairo-XCB-Surfaces.html
 share/gtk-doc/html/cairo/cairo-XLib-Surfaces.html
+share/gtk-doc/html/cairo/cairo-XLib-XRender-Backend.html
 share/gtk-doc/html/cairo/cairo-cairo-device-t.html
 share/gtk-doc/html/cairo/cairo-cairo-font-face-t.html
 share/gtk-doc/html/cairo/cairo-cairo-font-options-t.html
@@ -77,10 +83,10 @@ share/gtk-doc/html/cairo/cairo-fonts.html
 share/gtk-doc/html/cairo/cairo-support.html
 share/gtk-doc/html/cairo/cairo-surfaces.html
 share/gtk-doc/html/cairo/cairo-text.html
-share/gtk-doc/html/cairo/cairo.devhelp
 share/gtk-doc/html/cairo/cairo.devhelp2
 share/gtk-doc/html/cairo/home.png
 share/gtk-doc/html/cairo/index-1.10.html
+share/gtk-doc/html/cairo/index-1.12.html
 share/gtk-doc/html/cairo/index-1.2.html
 share/gtk-doc/html/cairo/index-1.4.html
 share/gtk-doc/html/cairo/index-1.6.html

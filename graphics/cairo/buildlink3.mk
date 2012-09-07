@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2011/11/01 06:01:26 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2012/09/07 15:24:03 adam Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cairo
 CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
-BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.10.2nb2
+BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.12.2
 BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
