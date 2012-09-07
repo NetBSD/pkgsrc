@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2012/05/07 01:53:38 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2012/09/07 19:16:54 adam Exp $
 
 BUILDLINK_TREE+=	xfce4-icon-theme
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-icon-theme
 XFCE4_ICON_THEME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-icon-theme+=	xfce4-icon-theme>=4.4.3
-BUILDLINK_ABI_DEPENDS.xfce4-icon-theme+=	xfce4-icon-theme>=4.4.3nb7
+BUILDLINK_ABI_DEPENDS.xfce4-icon-theme+=	xfce4-icon-theme>=4.4.3nb8
 BUILDLINK_PKGSRCDIR.xfce4-icon-theme?=	../../graphics/xfce4-icon-theme
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
