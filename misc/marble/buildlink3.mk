@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/06/14 07:43:33 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/09/07 19:17:11 adam Exp $
 
 BUILDLINK_TREE+=	marble
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	marble
 MARBLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.marble+=	marble>=4.8.0
-BUILDLINK_ABI_DEPENDS.marble?=	marble>=4.8.2nb1
+BUILDLINK_ABI_DEPENDS.marble?=	marble>=4.8.4nb1
 BUILDLINK_PKGSRCDIR.marble?=	../../misc/marble
 
 .include "../../x11/kdelibs4/buildlink3.mk"
