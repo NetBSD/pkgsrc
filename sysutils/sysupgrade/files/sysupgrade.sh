@@ -210,7 +210,9 @@ sysupgrade_fetch() {
                     local url="${releasedir}/${relative_file}"
                     shtk_cli_info "Downloading ${url} into ${cachedir}"
                     rm -f "${local_file}"
-                    ftp -R -o"${local_file}.tmp" "${url}" \
+                    local rflag=
+                    [ ! -f "${local_file}.tmp" ] || rflag=-R
+                    ftp ${rflag} -o"${local_file}.tmp" "${url}" \
                         || shtk_cli_error "Failed to fetch ${url}"
                     mv "${local_file}.tmp" "${local_file}"
                 fi
