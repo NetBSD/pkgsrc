@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/07/15 08:22:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/07 19:17:35 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.4.0
 
 DISTNAME=	xfce4-netload-plugin-${XFCE4_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-netload-plugin/
 COMMENT=	Xfce network load plugin

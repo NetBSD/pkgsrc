@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/08/29 11:22:16 obache Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/07 19:16:55 adam Exp $
 
 PKGNAME=	gnuradio-wxgui-${VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 COMMENT=	GUI framework for GNU Radio based on wxPython
 
 PKG_DESTDIR_SUPPORT=	user-destdir

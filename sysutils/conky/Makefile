@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 07:45:25 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/07 19:17:30 adam Exp $
 #
 
 DISTNAME=	conky-1.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conky/}
 EXTRACT_SUFX=	.tar.bz2
