@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/05/07 01:54:14 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/09/07 19:17:53 adam Exp $
 
 BUILDLINK_TREE+=	wxGTK28-contrib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wxGTK28-contrib
 WXGTK28_CONTRIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxGTK28-contrib+=	wxGTK28-contrib>=2.8.10
-BUILDLINK_ABI_DEPENDS.wxGTK28-contrib+=	wxGTK28-contrib>=2.8.10nb12
+BUILDLINK_ABI_DEPENDS.wxGTK28-contrib+=	wxGTK28-contrib>=2.8.10nb14
 BUILDLINK_PKGSRCDIR.wxGTK28-contrib?=	../../x11/wxGTK28-contrib
 
 .include "../../x11/wxGTK28/buildlink3.mk"

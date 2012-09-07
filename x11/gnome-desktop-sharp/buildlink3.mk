@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2012/08/13 14:25:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2012/09/07 19:17:44 adam Exp $
 
 BUILDLINK_TREE+=	gnome-desktop-sharp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-desktop-sharp
 GNOME_DESKTOP_SHARP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-desktop-sharp+=	gnome-desktop-sharp>=2.24.0
-BUILDLINK_ABI_DEPENDS.gnome-desktop-sharp+=	gnome-desktop-sharp>=2.26.0nb29
+BUILDLINK_ABI_DEPENDS.gnome-desktop-sharp+=	gnome-desktop-sharp>=2.26.0nb30
 BUILDLINK_PKGSRCDIR.gnome-desktop-sharp?=	../../x11/gnome-desktop-sharp
 
 .include "../../devel/libwnck/buildlink3.mk"

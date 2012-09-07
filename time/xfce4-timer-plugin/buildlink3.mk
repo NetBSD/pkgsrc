@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2012/07/15 08:22:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/09/07 19:17:38 adam Exp $
 
 BUILDLINK_TREE+=	xfce4-timer-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-timer-plugin
 XFCE4_TIMER_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-timer-plugin+=	xfce4-timer-plugin>=0.5.1
-BUILDLINK_ABI_DEPENDS.xfce4-timer-plugin+=	xfce4-timer-plugin>=0.5.1nb10
+BUILDLINK_ABI_DEPENDS.xfce4-timer-plugin+=	xfce4-timer-plugin>=0.5.1nb11
 BUILDLINK_PKGSRCDIR.xfce4-timer-plugin?=	../../time/xfce4-timer-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

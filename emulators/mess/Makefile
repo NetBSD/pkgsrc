@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2012/06/14 07:45:15 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/07 19:16:33 adam Exp $
 #
 
 DISTNAME=		mess0146s
 PKGNAME=		${DISTNAME:S/0/-0./:S/s$//}
-PKGREVISION=		1
+PKGREVISION=		2
 # original master site on cookie/javascript/whatever site
 MASTER_SITES=		# http://www.mess.org/_media/downloads:
 

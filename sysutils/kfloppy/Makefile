@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/06/16 04:45:38 markd Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/07 19:17:32 adam Exp $
 
 DISTNAME=	kfloppy-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	KDE floppy formatter
 

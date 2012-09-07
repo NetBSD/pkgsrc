@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/06/16 04:45:28 markd Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/07 19:16:35 adam Exp $
 
 DISTNAME=	blinken-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	memory enhancement game
 

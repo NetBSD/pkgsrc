@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/03/03 00:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/07 19:17:30 adam Exp $
 
 DISTNAME=		btpin-qt-1.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.galant.ukfsn.org/
 

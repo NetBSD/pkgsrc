@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/08/23 16:27:43 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/09/07 19:17:44 adam Exp $
 
 BUILDLINK_TREE+=	gnome-desktop3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-desktop3
 GNOME_DESKTOP3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-desktop3+=	gnome-desktop3>=3.4.2
-BUILDLINK_ABI_DEPENDS.gnome-desktop3+=	gnome-desktop3>=3.4.2
+BUILDLINK_ABI_DEPENDS.gnome-desktop3+=	gnome-desktop3>=3.4.2nb1
 BUILDLINK_PKGSRCDIR.gnome-desktop3?=	../../x11/gnome-desktop3
 
 .include "../../x11/gtk3/buildlink3.mk"

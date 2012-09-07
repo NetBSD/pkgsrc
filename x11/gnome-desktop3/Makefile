@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/08/23 16:27:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/07 19:17:44 adam Exp $
 #
 
 DISTNAME=	gnome-desktop-3.4.2
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/3.4/}
 EXTRACT_SUFX=	.tar.xz

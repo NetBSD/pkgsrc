@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2012/06/14 07:45:17 sbd Exp $
+# $NetBSD: Makefile,v 1.30 2012/09/07 19:16:36 adam Exp $
 #
 
 DISTNAME=		genecys-0.2
 PKGNAME=		genecys-client-0.2
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=genecys/}
 

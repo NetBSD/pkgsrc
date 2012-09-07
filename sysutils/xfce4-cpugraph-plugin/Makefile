@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/07/15 08:22:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/07 19:17:34 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.3.0
 
 DISTNAME=	xfce4-cpugraph-plugin-${XFCE4_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-cpugraph-plugin/
 COMMENT=	Xfce CPU load plugin
