@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2012/04/08 19:08:57 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/07 19:16:51 adam Exp $
 #
 
 DISTNAME=		py2cairo-1.8.10
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py2//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/08/27 22:19:32 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/07 19:16:44 adam Exp $
 #
 
 DISTNAME=	geeqie-1.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geeqie/}
 

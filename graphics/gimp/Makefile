@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.218 2012/08/20 12:54:01 wiz Exp $
+# $NetBSD: Makefile,v 1.219 2012/09/07 19:16:45 adam Exp $
 
-DISTNAME=	gimp-2.8.0
-PKGREVISION=	3
+DISTNAME=	gimp-2.8.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNU:=gimp/v${PKGVERSION_NOREV:R}/} \
@@ -13,27 +13,14 @@ HOMEPAGE=	http://www.gimp.org/
 COMMENT=	The GNU image manipulation program
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=		gimp<=1.2.3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+CONFLICTS+=	gimp<=1.2.3
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-
-PKG_SYSCONFSUBDIR=	gimp/2.0
-
-PKGCONFIG_OVERRIDE=	gimp.pc.in
-
-.include "../../mk/bsd.prefs.mk"
-
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.2.0
-BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.12
-
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
@@ -41,7 +28,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-linux-input
 CONFIGURE_ARGS+=	--without-mac-twain
 
+PKG_SYSCONFSUBDIR=	gimp/2.0
+PKGCONFIG_OVERRIDE=	gimp.pc.in
 UNLIMIT_RESOURCES+=	datasize
+
+.include "../../mk/bsd.prefs.mk"
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
 .for f in controllerrc gimprc gtkrc menurc sessionrc templaterc unitrc
@@ -52,6 +43,9 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 PLIST_VARS+=		remote
+
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.2.0
+BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.12
 
 .include "options.mk"
 

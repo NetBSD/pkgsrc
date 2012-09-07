@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2012/03/03 00:12:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/07 19:17:49 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	libxfce4menu-${XFCE4_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 COMMENT=	Xfce menu library
 

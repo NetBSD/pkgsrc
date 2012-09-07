@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/03/03 00:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/07 19:17:29 adam Exp $
 
 DISTNAME=	qca-gnupg-2.0.0-beta3
 PKGNAME=	qca2-gnupg-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/plugins/
 EXTRACT_SUFX=	.tar.bz2

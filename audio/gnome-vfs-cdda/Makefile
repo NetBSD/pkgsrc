@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/06/14 07:44:23 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/07 19:16:09 adam Exp $
 #
 
 GNOME_VFS_NAME=		cdda
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		audio
 
 PKG_DESTDIR_SUPPORT=	user-destdir

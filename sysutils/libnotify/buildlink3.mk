@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2012/03/03 00:12:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2012/09/07 19:17:33 adam Exp $
 
 BUILDLINK_TREE+=	libnotify
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libnotify
 LIBNOTIFY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.3.2
-BUILDLINK_ABI_DEPENDS.libnotify+=	libnotify>=0.4.5nb9
+BUILDLINK_ABI_DEPENDS.libnotify+=	libnotify>=0.4.5nb10
 BUILDLINK_PKGSRCDIR.libnotify?=	../../sysutils/libnotify
 
 .include "../../devel/glib2/buildlink3.mk"

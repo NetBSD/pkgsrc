@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2012/03/03 12:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/09/07 19:17:54 adam Exp $
 #
 
 DISTNAME=	x11vnc-0.9.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2012/07/01 19:05:27 dholland Exp $
+# $NetBSD: Makefile,v 1.48 2012/09/07 19:17:41 adam Exp $
 #
 
 DISTNAME=	kazehakase-0.5.8
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/43802/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/03/03 00:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/07 19:16:22 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
-PKGREVISION=	9
+PKGREVISION=	10
 COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/07/15 08:22:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/07 19:17:36 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.2.1
 
 DISTNAME=	xfce4-dict-plugin-${XFCE4_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-dict-plugin/
 COMMENT=	Xfce dictionary server plugin

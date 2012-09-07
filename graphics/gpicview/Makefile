@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/03/03 00:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/07 19:16:46 adam Exp $
 
 DISTNAME=	gpicview-0.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 
