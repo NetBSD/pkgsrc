@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2012/09/06 02:51:44 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2012/09/07 01:35:54 jmmv Exp $
 
-Fix build under NetBSD 1.5.2
+Fix build under NetBSD/amd64 1.5.2
 
 Change utils::stream_length() to return a std::size_t instead of
 a std::streampos.  This allows the later comparison against an
 integer without having to use a cast.
 
-This is upstream change: 2a62375a170b4bed0fd760e7c6e8c4d1433da147
+This is upstream change: aec91a38b7c91175fb24fee3ea500e3ee6d33efc
 --- utils/stream.cpp
 +++ utils/stream.cpp
 @@ -39,10 +39,13 @@
