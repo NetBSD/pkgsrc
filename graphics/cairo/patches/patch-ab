@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2011/02/12 13:40:53 drochner Exp $
+$NetBSD: patch-ab,v 1.16 2012/09/07 15:24:03 adam Exp $
 
---- util/cairo-gobject/Makefile.in.orig	2010-12-25 14:22:55.000000000 +0000
+--- util/cairo-gobject/Makefile.in.orig	2012-04-29 18:49:57.000000000 +0000
 +++ util/cairo-gobject/Makefile.in
-@@ -91,7 +91,7 @@ am__base_list = \
+@@ -114,7 +114,7 @@ am__uninstall_files_from_dir = { \
  am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(cairoincludedir)"
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.15 2011/02/12 13:40:53 drochner Exp $
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
  am_libcairo_gobject_la_OBJECTS =  \
  	libcairo_gobject_la-cairo-gobject-enums.lo \
-@@ -357,7 +357,7 @@ libcairo_gobject_la_SOURCES = \
+@@ -385,7 +385,7 @@ libcairo_gobject_la_SOURCES = \
  
  libcairo_gobject_la_CFLAGS = $(CAIRO_CFLAGS) $(GOBJECT_CFLAGS)
  libcairo_gobject_la_LDFLAGS = -version-info $(CAIRO_LIBTOOL_VERSION_INFO) -no-undefined $(export_symbols)
