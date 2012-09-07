@@ -278,6 +278,8 @@ EOF
     PATH="$(pwd):${PATH}"
 
     SYSUPGRADE_CACHEDIR="$(pwd)/a/b/c"; export SYSUPGRADE_CACHEDIR
+    mkdir -p a/b/c
+    touch a/b/c/foo.tgz.tmp
     atf_check -o ignore -e ignore sysupgrade -c /dev/null \
         -o RELEASEDIR="ftp://example.net/pub/NetBSD/X.Y/a-machine" \
         -o KERNEL=GENERIC -o SETS="a foo" fetch
@@ -285,7 +287,6 @@ EOF
     cat >expout <<EOF
 Command: ftp
 Directory: $(pwd)
-Arg: -R
 Arg: -o$(pwd)/a/b/c/a.tgz.tmp
 Arg: ftp://example.net/pub/NetBSD/X.Y/a-machine/binary/sets/a.tgz
 
@@ -297,7 +298,6 @@ Arg: ftp://example.net/pub/NetBSD/X.Y/a-machine/binary/sets/foo.tgz
 
 Command: ftp
 Directory: $(pwd)
-Arg: -R
 Arg: -o$(pwd)/a/b/c/netbsd-GENERIC.gz.tmp
 Arg: ftp://example.net/pub/NetBSD/X.Y/a-machine/binary/kernel/netbsd-GENERIC.gz
 
@@ -313,8 +313,16 @@ fetch__http_head() {
 fetch__http_body() {
     create_mock_release www/a-machine base comp etc netbsd-GENERIC tests text
 
-    /usr/libexec/httpd -b -s -d -I 30401 -P "$(pwd)/httpd.pid" "$(pwd)/www" \
-        || atf_fail "Failed to start test HTTP server"
+    if ! /usr/libexec/httpd -b -s -d -I 30401 -P "$(pwd)/httpd.pid" \
+        "$(pwd)/www" >httpd.out 2>httpd.err; then
+        if grep 'unknown option -- P' httpd.err >/dev/null; then
+            atf_skip "httpd does not support -P"
+        else
+            sed 's,^,httpd.out:,' httpd.out
+            sed 's,^,httpd.err:,' httpd.err
+            atf_fail "Failed to start test HTTP server"
+        fi
+    fi
 
     SYSUPGRADE_CACHEDIR="$(pwd)/cache"; export SYSUPGRADE_CACHEDIR
     atf_check -o ignore -e ignore sysupgrade -c /dev/null \
