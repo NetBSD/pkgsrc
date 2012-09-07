@@ -1,10 +1,10 @@
-$NetBSD: patch-backend_wbprivate_workbench_stdafx_h,v 1.1 2012/05/07 18:40:35 dholland Exp $
+$NetBSD: patch-backend_wbprivate_workbench_stdafx_h,v 1.2 2012/09/07 19:16:20 adam Exp $
 
 Fix build with latest glib2.
 
---- backend/wbprivate/workbench/stdafx.h~	2011-03-17 12:48:42.000000000 +0000
+--- backend/wbprivate/workbench/stdafx.h.orig	2011-03-17 12:48:42.000000000 +0000
 +++ backend/wbprivate/workbench/stdafx.h
-@@ -39,7 +39,6 @@
+@@ -65,7 +65,6 @@
  #include <gl/glu.h>
  
  #include <glib.h>
