@@ -1,0 +1,122 @@
+$NetBSD: patch-ab,v 1.1 2012/09/07 01:38:31 jmmv Exp $
+
+Fix build under NetBSD/i386 5.1.2
+
+Constants that do not fit in a long need to be qualified with a LL
+to not raise errors when building for a 32 bit machine.
+
+This is upstream change: 5e60ab68bbd8df52dfc45394e245104bd4c34a1e
+--- utils/datetime_test.cpp
++++ utils/datetime_test.cpp
+@@ -176,9 +176,9 @@ ATF_TEST_CASE_WITHOUT_HEAD(timestamp__from_microseconds);
+ ATF_TEST_CASE_BODY(timestamp__from_microseconds)
+ {
+     const datetime::timestamp ts = datetime::timestamp::from_microseconds(
+-        1328829351987654);
++        1328829351987654LL);
+     ATF_REQUIRE_EQ("2012-02-09 23:15:51", ts.strftime("%Y-%m-%d %H:%M:%S"));
+-    ATF_REQUIRE_EQ(1328829351987654, ts.to_microseconds());
++    ATF_REQUIRE_EQ(1328829351987654LL, ts.to_microseconds());
+     ATF_REQUIRE_EQ(1328829351, ts.to_seconds());
+ }
+ 
+@@ -248,7 +248,7 @@ ATF_TEST_CASE_BODY(timestamp__to_microseconds)
+ {
+     const datetime::timestamp ts1 = datetime::timestamp::from_values(
+         2010, 12, 10, 8, 45, 50, 123456);
+-    ATF_REQUIRE_EQ(1291970750123456, ts1.to_microseconds());
++    ATF_REQUIRE_EQ(1291970750123456LL, ts1.to_microseconds());
+ }
+ 
+ 
+@@ -275,16 +275,16 @@ ATF_TEST_CASE_BODY(timestamp__leap_second)
+ ATF_TEST_CASE_WITHOUT_HEAD(timestamp__equals);
+ ATF_TEST_CASE_BODY(timestamp__equals)
+ {
+-    ATF_REQUIRE(datetime::timestamp::from_microseconds(1291970750123456) ==
+-                datetime::timestamp::from_microseconds(1291970750123456));
++    ATF_REQUIRE(datetime::timestamp::from_microseconds(1291970750123456LL) ==
++                datetime::timestamp::from_microseconds(1291970750123456LL));
+ }
+ 
+ 
+ ATF_TEST_CASE_WITHOUT_HEAD(timestamp__differs);
+ ATF_TEST_CASE_BODY(timestamp__differs)
+ {
+-    ATF_REQUIRE(datetime::timestamp::from_microseconds(1291970750123456) !=
+-                datetime::timestamp::from_microseconds(1291970750123455));
++    ATF_REQUIRE(datetime::timestamp::from_microseconds(1291970750123456LL) !=
++                datetime::timestamp::from_microseconds(1291970750123455LL));
+ }
+ 
+ 
+@@ -292,11 +292,11 @@ ATF_TEST_CASE_WITHOUT_HEAD(timestamp__subtraction);
+ ATF_TEST_CASE_BODY(timestamp__subtraction)
+ {
+     const datetime::timestamp ts1 = datetime::timestamp::from_microseconds(
+-        1291970750123456);
++        1291970750123456LL);
+     const datetime::timestamp ts2 = datetime::timestamp::from_microseconds(
+-        1291970750123468);
++        1291970750123468LL);
+     const datetime::timestamp ts3 = datetime::timestamp::from_microseconds(
+-        1291970850123456);
++        1291970850123456LL);
+ 
+     ATF_REQUIRE(datetime::delta(0, 0) == ts1 - ts1);
+     ATF_REQUIRE(datetime::delta(0, 12) == ts2 - ts1);
+--- utils/sqlite/statement_test.cpp
++++ utils/sqlite/statement_test.cpp
+@@ -283,7 +283,7 @@ ATF_TEST_CASE_BODY(column_int64)
+             "INSERT INTO foo VALUES (NULL, 4294967419, NULL);");
+     sqlite::statement stmt = db.create_statement("SELECT * FROM foo");
+     ATF_REQUIRE(stmt.step());
+-    ATF_REQUIRE_EQ(4294967419L, stmt.column_int64(1));
++    ATF_REQUIRE_EQ(4294967419LL, stmt.column_int64(1));
+     ATF_REQUIRE(!stmt.step());
+ }
+ 
+@@ -424,7 +424,7 @@ ATF_TEST_CASE_BODY(safe_column_int64__ok)
+             "INSERT INTO foo VALUES (NULL, 4294967419, NULL);");
+     sqlite::statement stmt = db.create_statement("SELECT * FROM foo");
+     ATF_REQUIRE(stmt.step());
+-    ATF_REQUIRE_EQ(4294967419L, stmt.safe_column_int64("b"));
++    ATF_REQUIRE_EQ(4294967419LL, stmt.safe_column_int64("b"));
+     ATF_REQUIRE(!stmt.step());
+ }
+ 
+@@ -588,12 +588,12 @@ ATF_TEST_CASE_BODY(bind__int64)
+     sqlite::database db = sqlite::database::in_memory();
+     sqlite::statement stmt = db.create_statement("SELECT 3, ?");
+ 
+-    stmt.bind(1, static_cast< int64_t >(4294967419L));
++    stmt.bind(1, static_cast< int64_t >(4294967419LL));
+     ATF_REQUIRE(stmt.step());
+     ATF_REQUIRE(sqlite::type_integer == stmt.column_type(0));
+     ATF_REQUIRE_EQ(3, stmt.column_int(0));
+     ATF_REQUIRE(sqlite::type_integer == stmt.column_type(1));
+-    ATF_REQUIRE_EQ(4294967419, stmt.column_int64(1));
++    ATF_REQUIRE_EQ(4294967419LL, stmt.column_int64(1));
+     ATF_REQUIRE(!stmt.step());
+ }
+ 
+--- utils/units_test.cpp
++++ utils/units_test.cpp
+@@ -97,7 +97,7 @@ ATF_TEST_CASE_BODY(bytes__parse__tb)
+     ATF_REQUIRE_EQ(0, units::bytes::parse("0T"));
+     ATF_REQUIRE_EQ(units::bytes(TB), units::bytes::parse("1T"));
+     ATF_REQUIRE_EQ(units::bytes(TB), units::bytes::parse("1t"));
+-    ATF_REQUIRE_EQ(13567973486755, units::bytes::parse("12.340000T"));
++    ATF_REQUIRE_EQ(13567973486755LL, units::bytes::parse("12.340000T"));
+ }
+ 
+ 
+@@ -110,7 +110,7 @@ ATF_TEST_CASE_BODY(bytes__parse__gb)
+     ATF_REQUIRE_EQ(0, units::bytes::parse("0G"));
+     ATF_REQUIRE_EQ(units::bytes(GB), units::bytes::parse("1G"));
+     ATF_REQUIRE_EQ(units::bytes(GB), units::bytes::parse("1g"));
+-    ATF_REQUIRE_EQ(13249974108, units::bytes::parse("12.340G"));
++    ATF_REQUIRE_EQ(13249974108LL, units::bytes::parse("12.340G"));
+ }
+ 
+ 
