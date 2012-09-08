@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/05/29 15:12:26 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/09/08 16:55:47 cheusov Exp $
 include/google/dense_hash_map
 include/google/dense_hash_set
 include/google/sparse_hash_map
@@ -6,10 +6,22 @@ include/google/sparse_hash_set
 include/google/sparsehash/densehashtable.h
 include/google/sparsehash/hashtable-common.h
 include/google/sparsehash/libc_allocator_with_realloc.h
-include/google/sparsehash/sparseconfig.h
 include/google/sparsehash/sparsehashtable.h
 include/google/sparsetable
+include/google/template_util.h
 include/google/type_traits.h
+include/sparsehash/dense_hash_map
+include/sparsehash/dense_hash_set
+include/sparsehash/internal/densehashtable.h
+include/sparsehash/internal/hashtable-common.h
+include/sparsehash/internal/libc_allocator_with_realloc.h
+include/sparsehash/internal/sparseconfig.h
+include/sparsehash/internal/sparsehashtable.h
+include/sparsehash/sparse_hash_map
+include/sparsehash/sparse_hash_set
+include/sparsehash/sparsetable
+include/sparsehash/template_util.h
+include/sparsehash/type_traits.h
 lib/pkgconfig/libsparsehash.pc
 share/doc/sparsehash/AUTHORS
 share/doc/sparsehash/COPYING
