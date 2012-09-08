@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/09/08 22:35:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/08 22:44:16 cheusov Exp $
 #
 
 DISTNAME=	statist-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	http://www.usf.uni-osnabrueck.de/~breiter/tools/statist/v${PKGVERSION}/
 
@@ -12,6 +12,7 @@ COMMENT=	Small and portable statistics program
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
+CONFLICTS=	freeze-[0-9]* # bin/statist
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
