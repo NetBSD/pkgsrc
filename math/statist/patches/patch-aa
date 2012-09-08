@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/11/09 09:23:24 rh Exp $
+$NetBSD: patch-aa,v 1.2 2012/09/08 22:35:13 cheusov Exp $
 
---- Makefile.orig	Fri Nov 16 06:22:33 2001
-+++ Makefile
+--- src/Makefile.orig	2001-11-15 20:22:33.000000000 +0000
++++ src/Makefile
 @@ -16,11 +16,11 @@
  # and now for the language setting,
  # you can add	LANG=LANG_EN or LANG=LANG_DE to the make arguments
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/09 09:23:24 rh Exp $
  LIB_OBJECTS = menue.o procs.o funcs.o data.o plot.o memory_handling.o
  
 +.c.o:
-+	${LIBTOOL} --mode=compile ${CC} ${GCFLAGS} -o ${.TARGET:.o=.lo} ${.IMPSRC}
++	${LIBTOOL} --tag=CC --mode=compile ${CC} ${GCFLAGS} -o ${.TARGET:.o=.lo} ${.IMPSRC}
 +
  main:   $(MAIN)
  
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/09 09:23:24 rh Exp $
  
  $(MAIN) : $(OBJECTS) Makefile
 -	$(CC) $(LFLAGS) $(MAIN) $(OBJECTS) $(LIBS)
-+	${LIBTOOL} --mode=link ${CC} ${LFLAGS} ${MAIN} ${OBJECTS:.o=.lo} ${LIBS}
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LFLAGS} ${MAIN} ${OBJECTS:.o=.lo} ${LIBS}
  
  # change AB:
  $(SH_LIB):		$(LIB_OBJECTS) Makefile
@@ -73,7 +73,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/09 09:23:24 rh Exp $
  
  $(STAT_LIB):	$(LIB_OBJECTS) Makefile
 -	 $(LIBTOOL) $(STAT_LIB) $(LIB_OBJECTS)
-+	 ${LIBTOOL} --mode=link ${CC} -o ${STAT_LIB:.a=.la} ${LIB_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
++	 ${LIBTOOL} --tag=CC --mode=link ${CC} -o ${STAT_LIB:.a=.la} ${LIB_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
  statist.o : statist.c statist.h menue.h data.h funcs.h 
 -	$(CC) $(CFLAGS) statist.c
