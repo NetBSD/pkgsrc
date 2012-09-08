@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2825 2012/09/08 18:20:20 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2826 2012/09/08 19:39:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4364,3 +4364,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/sparsehash to 2.0.2 [cheusov 2012-09-08]
 	Updated pkgtools/nih to 0.10.1nb1 [cheusov 2012-09-08]
 	Updated pkgtools/distbb to 0.45.1nb2 [cheusov 2012-09-08]
+	Updated mail/getmail to 4.34.0 [schmonz 2012-09-08]
