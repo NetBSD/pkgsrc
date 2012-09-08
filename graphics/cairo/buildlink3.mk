@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2012/09/07 19:16:41 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2012/09/08 08:53:03 obache Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.12.2nb1
 BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
-BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.18.4
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.22.0
 
 .include "../../mk/bsd.fast.prefs.mk"
 
