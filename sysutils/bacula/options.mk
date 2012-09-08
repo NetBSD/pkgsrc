@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2012/02/23 12:16:31 shattered Exp $
+# $NetBSD: options.mk,v 1.19 2012/09/08 12:36:57 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 # bacula-static is broken -- see PR 42954
@@ -51,4 +51,6 @@ PLIST_SUBST+=		STATIC="@comment "
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+.else
+CONFIGURE_ARGS+=	--without-openssl
 .endif
