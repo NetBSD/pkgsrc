@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11499 2012/09/07 21:53:25 shattered Exp $
+$NetBSD: TODO,v 1.11500 2012/09/08 11:11:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,9 +373,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aliados-0.2.0
 	o allegro-4.4.2
 	o alsa-1.0.23
-	o alsa-lib-1.0.25
-	o alsa-plugins-1.0.25
-	o alsa-utils-1.0.25
+	o alsa-lib-1.0.26
+	o alsa-plugins-1.0.26
+	o alsa-utils-1.0.26
 	o amarok-2.6.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amsn-0.98.4
@@ -521,6 +521,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dinotrace-mode-9.3e
 	o dnsmasq-2.63
 	o doclifter-2.9
+	o dos2unix-6.0.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dspam-3.10.0
@@ -576,7 +577,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o farsight2-0.0.31
-	o fbreader-0.99.1
+	o fbreader-0.99.2
 	o fcitx-3.6.2
 	o feh-2.6
 	o felt-3.07
@@ -613,7 +614,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fvwm-2.6.0
 	o fvwm2-themes-0.7.0
 	o gallery3-3.0.2
-	o gama-1.12
+	o gama-1.13
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
@@ -633,7 +634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.19.13
 	o gfract-0.33
-	o ghc-7.0.4
+	o ghc-7.6
 	o ghostscript-9.05 [wip]
 	o ghostscript-9.06
 	o gifsicle-1.48
@@ -736,6 +737,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
+	o httping-1.5.4
 	o httptunnel-3.3
 	o hugin-2011.4.0
 	o hylafax-6.0.5
@@ -1089,7 +1091,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o samba-3.6.7
 	o sane-backends-1.0.23
 	o sarg-2.2.5
-	o sawfish-1.9.0
+	o sawfish-1.9.1
 	o saxon-9.2
 	o sbcl-1.0.58
 	o scapy-2.2.0
