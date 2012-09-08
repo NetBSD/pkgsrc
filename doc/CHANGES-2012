@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2822 2012/09/07 21:53:25 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.2823 2012/09/08 16:56:01 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4361,3 +4361,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/cairo to 1.12.2 [adam 2012-09-07]
 	Updated graphics/cairo-gobject to 1.12.2 [adam 2012-09-07]
 	Updated x11/rendercheck to 1.4 [shattered 2012-09-07]
+	Updated devel/sparsehash to 2.0.2 [cheusov 2012-09-08]
