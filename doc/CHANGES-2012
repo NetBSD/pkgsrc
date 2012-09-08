@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2828 2012/09/08 23:05:52 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2829 2012/09/08 23:06:11 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4367,3 +4367,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/getmail to 4.34.0 [schmonz 2012-09-08]
 	Updated games/exchess-book-small to 20000511nb2 [cheusov 2012-09-08]
 	Updated games/exchess-book-medium to 20000511nb2 [cheusov 2012-09-08]
+	Updated math/statist to 1.0.1nb3 [cheusov 2012-09-08]
