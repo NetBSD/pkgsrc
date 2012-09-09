@@ -1,4 +1,8 @@
-$NetBSD: patch-am,v 1.4 2012/09/09 19:26:38 dholland Exp $
+$NetBSD: patch-am,v 1.5 2012/09/09 19:49:45 dholland Exp $
+
+- use pkgsrc to handle -lresolv config
+- recognize NetBSD correctly
+- recognize DragonFly
 
 --- Configure.orig	2000-01-19 04:34:04.000000000 +0000
 +++ Configure
