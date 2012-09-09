@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2002/06/28 08:42:35 agc Exp $
+$NetBSD: patch-ak,v 1.2 2012/09/09 19:49:45 dholland Exp $
+
+Don't use nonexistent/nonstandard curses interfaces.
 
 --- netconsole/setup_display.c	2002/06/28 08:31:30	1.1
 +++ netconsole/setup_display.c	2002/06/28 08:31:50
