@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2832 2012/09/09 06:09:26 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.2833 2012/09/09 07:00:04 morr Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4371,3 +4371,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated archivers/freeze to 2.5nb3 [cheusov 2012-09-08]
 	Updated comms/asterisk18 to 1.8.15.1 [jnemeth 2012-09-09]
 	Updated comms/asterisk10 to 10.7.1 [jnemeth 2012-09-09]
+	Updated www/wordpress to 3.4.2 [morr 2012-09-09]
