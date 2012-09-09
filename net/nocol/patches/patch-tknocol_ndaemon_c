@@ -1,0 +1,16 @@
+$NetBSD: patch-tknocol_ndaemon_c,v 1.1 2012/09/09 19:35:21 dholland Exp $
+
+Use standard headers.
+
+--- tknocol/ndaemon.c~	2000-01-27 05:23:42.000000000 +0000
++++ tknocol/ndaemon.c
+@@ -45,6 +45,9 @@
+  *
+  */
+ 
++#include <stdlib.h>
++#include <string.h>
++
+ #include "ndaemon.h"
+ 
+ #ifdef LEASED_LINES		/* Company specific */
