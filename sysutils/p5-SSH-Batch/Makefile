@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/09/03 11:16:23 sno Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/09 13:24:53 abs Exp $
 
-DISTNAME=	SSH-Batch-0.028
+DISTNAME=	SSH-Batch-0.029
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AG/AGENT/}
 
