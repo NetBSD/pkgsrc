@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.46 2012/09/04 20:31:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.47 2012/09/09 16:34:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -275,3 +275,7 @@ lang/sun-jdk6: security update
 lang/sun-jre6: security update
 Pullup ticket #3915 - requested by taca
 mail/roundcube: security update
+Pullup ticket #3917 - requested by wen
+www/mediawiki: security update
+Pullup ticket #3918 - requested by morr
+www/wordpress: security update
