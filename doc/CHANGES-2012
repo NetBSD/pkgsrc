@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2837 2012/09/09 15:03:07 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2838 2012/09/09 20:39:52 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4382,3 +4382,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/p5-SSH-Batch to 0.029 [abs 2012-09-09]
 	Updated geography/gama to 1.13 [gdt 2012-09-09]
 	Updated mail/ruby-mime-types to 1.19 [taca 2012-09-09]
+	Updated net/nocol to 4.3.1nb7 [dholland 2012-09-09]
+	Updated pkgtools/lintpkgsrc to 4.85 [dholland 2012-09-09]
