@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/21 15:43:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/09/09 15:02:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.hoerc
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Licence.rdoc
 ${GEM_LIBDIR}/Manifest.txt
@@ -36,12 +34,4 @@ ${GEM_LIBDIR}/lib/mime/types/video.obsolete
 ${GEM_LIBDIR}/mime-types.gemspec
 ${GEM_LIBDIR}/test/test_mime_type.rb
 ${GEM_LIBDIR}/test/test_mime_types.rb
-${GEM_LIBDIR}/type-lists/application.txt
-${GEM_LIBDIR}/type-lists/audio.txt
-${GEM_LIBDIR}/type-lists/image.txt
-${GEM_LIBDIR}/type-lists/message.txt
-${GEM_LIBDIR}/type-lists/model.txt
-${GEM_LIBDIR}/type-lists/multipart.txt
-${GEM_LIBDIR}/type-lists/text.txt
-${GEM_LIBDIR}/type-lists/video.txt
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
