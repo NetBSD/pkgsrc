@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST.gtksourceview,v 1.3 2010/08/28 16:13:25 wiz Exp $
-lib/ocaml/lablgtk2/gSourceView.cmi
-lib/ocaml/lablgtk2/gSourceView.cmx
-lib/ocaml/lablgtk2/gSourceView.ml
-lib/ocaml/lablgtk2/gtkSourceView.cmi
-lib/ocaml/lablgtk2/gtkSourceView.cmx
-lib/ocaml/lablgtk2/gtkSourceView.ml
-lib/ocaml/lablgtk2/lablgtksourceview.a
-lib/ocaml/lablgtk2/lablgtksourceview.cma
-lib/ocaml/lablgtk2/lablgtksourceview.cmxa
-lib/ocaml/lablgtk2/lablgtksourceview.cmxs
-lib/ocaml/lablgtk2/liblablgtksourceview.a
-lib/ocaml/lablgtk2/sourceViewEnums.cmi
-lib/ocaml/lablgtk2/sourceViewEnums.cmx
-lib/ocaml/lablgtk2/sourceViewEnums.ml
-lib/ocaml/lablgtk2/sourceView_tags.h
-${PLIST.stubs}lib/ocaml/stublibs/dlllablgtksourceview.so
+@comment $NetBSD: PLIST.gtksourceview,v 1.4 2012/09/09 18:45:45 jaapb Exp $
+lib/ocaml/site-lib/lablgtk2/gSourceView.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gSourceView.cmx
+lib/ocaml/site-lib/lablgtk2/gSourceView.ml
+lib/ocaml/site-lib/lablgtk2/gtkSourceView.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gtkSourceView.cmx
+lib/ocaml/site-lib/lablgtk2/gtkSourceView.ml
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview.a
+lib/ocaml/site-lib/lablgtk2/lablgtksourceview.cma
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview.cmxa
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview.cmxs
+lib/ocaml/site-lib/lablgtk2/liblablgtksourceview.a
+lib/ocaml/site-lib/lablgtk2/sourceViewEnums.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/sourceViewEnums.cmx
+lib/ocaml/site-lib/lablgtk2/sourceViewEnums.ml
+lib/ocaml/site-lib/lablgtk2/sourceView_tags.h
+${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablgtksourceview.so
