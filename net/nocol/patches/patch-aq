@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.2 2012/09/09 19:35:20 dholland Exp $
+$NetBSD: patch-aq,v 1.3 2012/09/09 19:42:25 dholland Exp $
 
 - don't declare own errno
 - declare own external functions properly
@@ -13,8 +13,9 @@ $NetBSD: patch-aq,v 1.2 2012/09/09 19:35:20 dholland Exp $
  extern int		extended;
  extern int		ninterfaces;
  extern int		truncation;
-@@ -44,3 +43,4 @@ void			usage();
+@@ -44,3 +43,5 @@ void			usage();
  void			wakeup();
  void			flush_device();
  
 +char **get_devlist(void);
++char *ndt_namebw(int ndt, long *bw);
