@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11502 2012/09/09 14:26:32 gdt Exp $
+$NetBSD: TODO,v 1.11503 2012/09/09 15:13:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -875,6 +875,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
+	o mathomatic-16.0.3
 	o mawk-1.3.4.20120627
 	o mc-4.8.1.4
 	o mdocml-1.12.1
@@ -1045,6 +1046,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-docutils-0.9.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
+	o py-icalendar-3.1
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o qbrew-0.3.9
@@ -1157,6 +1159,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
+	o taglib-1.8
 	o taskjuggler-3.3.0
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1249,6 +1252,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
+	o wordpress-3.4.2
 	o worker-2.19.5
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9h
@@ -1256,7 +1260,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20120901
+	o x264-devel-20120908
 	o xanalyser-1.30
 	o xapian-1.2.12
 	o xaric-0.13.2
