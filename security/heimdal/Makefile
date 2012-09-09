@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2012/07/18 09:48:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.92 2012/09/09 09:23:06 cheusov Exp $
 
 DISTNAME=	heimdal-1.5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -14,6 +14,7 @@ CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
 CONFLICTS+=	gss-[0-9]*
+CONFLICTS+=	kth-krb4-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
