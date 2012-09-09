@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/09 09:09:38 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/09 09:13:00 obache Exp $
 #
 
 DISTNAME=	List-AllUtils-0.03
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/List/AllUtils/.packlist
 
-DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-List-MoreUtils>=0.28:../../devel/p5-List-MoreUtils
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
