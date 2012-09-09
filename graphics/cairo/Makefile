@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2012/09/08 08:53:03 obache Exp $
+# $NetBSD: Makefile,v 1.104 2012/09/09 01:28:06 dholland Exp $
 
 DISTNAME=	cairo-1.12.2
 PKGREVISION=	1
@@ -32,6 +32,7 @@ PKGCONFIG_OVERRIDE+=	src/cairo-features.pc.in
 CONFIGURE_ARGS+=	--enable-quartz
 CONFIGURE_ARGS+=	--enable-quartz-font
 CONFIGURE_ARGS+=	--enable-quartz-image
+PLIST.carbon=		yes
 .endif
 
 # For snprintf() and ctime_r()
