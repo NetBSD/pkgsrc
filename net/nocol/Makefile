@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/08/31 11:18:20 he Exp $
+# $NetBSD: Makefile,v 1.36 2012/09/09 19:26:54 dholland Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -12,6 +12,7 @@ COMMENT=		Extensible network and system monitoring utility
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=		no
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	< ${WRKSRC}/answers
