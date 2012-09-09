@@ -1,8 +1,11 @@
-$NetBSD: patch-ap,v 1.1 2005/12/27 13:47:11 joerg Exp $
+$NetBSD: patch-ap,v 1.2 2012/09/09 19:35:20 dholland Exp $
 
---- tpmon/tpmon.c.orig	2005-12-18 20:32:14.000000000 +0000
+- use standard headers
+- don't declare own errno
+
+--- tpmon/tpmon.c.orig	1998-07-31 18:35:34.000000000 +0000
 +++ tpmon/tpmon.c
-@@ -30,7 +30,7 @@
+@@ -30,13 +30,15 @@
  #include <sys/types.h>
  #include <sys/param.h>
  #include <sys/socket.h>
@@ -11,7 +14,15 @@ $NetBSD: patch-ap,v 1.1 2005/12/27 13:47:11 joerg Exp $
  #include <time.h>
  #include <sys/time.h>
  
-@@ -47,7 +47,6 @@
+ #include <netinet/in.h>
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <netdb.h>
+ #ifndef NeXT
+ #  include <unistd.h>
+@@ -47,7 +49,6 @@
  #include "osdefs.h"		/* definition of RAND */
  
  extern char *prognm;
