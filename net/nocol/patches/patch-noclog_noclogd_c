@@ -1,0 +1,15 @@
+$NetBSD: patch-noclog_noclogd_c,v 1.1 2012/09/09 19:35:21 dholland Exp $
+
+Use standard headers.
+
+--- noclog/noclogd.c~	1998-07-15 16:28:57.000000000 +0000
++++ noclog/noclogd.c
+@@ -41,6 +41,8 @@
+  *
+  */
+ 
++#include <stdlib.h>
++
+ #include "noclogd.h"
+ 
+ #define READ_TIMEOUT	5    	/* timeout for read() from sockets */
