@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11500 2012/09/08 11:11:48 wiz Exp $
+$NetBSD: TODO,v 1.11501 2012/09/09 13:28:50 abs Exp $
 
 Suggested new packages
 ======================
@@ -970,7 +970,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o otpCalc-0.97
 	o p0f-3.00b
 	o p5-Config-General-2.51
-	o p5-GStreamer-0.17
 	o p5-GTop-0.18
 	o p5-Gtk2-1.223
 	o p5-Perl-Tidy-20120714
@@ -978,7 +977,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
 	o p5-clutter-1.110
-	o p5-glib2-1.261
 	o p5-gtk2-1.244
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
