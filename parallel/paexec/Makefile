@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/03/09 19:00:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/09 23:30:26 cheusov Exp $
 #
 
-DISTNAME=	paexec-0.16.1
-PKGREVISION=	1
+DISTNAME=	paexec-0.17.0
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 		http://mova.org/~cheusov/pub/paexec/
@@ -13,7 +12,7 @@ COMMENT=	Distributes tasks over network or CPUs
 LICENSE=	mit
 
 BUILD_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
-DEPENDS+=		runawk>=0.20.0:../../lang/runawk
+DEPENDS+=		runawk>=1.4.3:../../lang/runawk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

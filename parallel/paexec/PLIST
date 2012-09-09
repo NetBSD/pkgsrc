@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/16 11:04:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/09 23:30:26 cheusov Exp $
 bin/paexec
 bin/paexec_reorder
 man/man1/paexec.1
@@ -8,19 +8,28 @@ share/doc/paexec/ChangeLog
 share/doc/paexec/NEWS
 share/doc/paexec/README
 share/doc/paexec/TODO
-share/examples/paexec/1_div_X/1_div_X_cmd
-share/examples/paexec/1_div_X/1_div_X_run
-share/examples/paexec/all_substr/all_substr_cmd
-share/examples/paexec/all_substr/all_substr_run
-share/examples/paexec/cc_wrapper/cc_wrapper_cmd
-share/examples/paexec/cc_wrapper/cc_wrapper_run
+share/examples/paexec/all_substr/cmd
+share/examples/paexec/all_substr/run
+share/examples/paexec/cc_wrapper/cmd
 share/examples/paexec/cc_wrapper/func1.c
 share/examples/paexec/cc_wrapper/func2.c
 share/examples/paexec/cc_wrapper/func3.c
-share/examples/paexec/make_package/make_package_cmd
-share/examples/paexec/make_package/make_package_cmd__xxx_failed
-share/examples/paexec/make_package/make_package_tasks
-share/examples/paexec/make_package/make_package_tasks2
-share/examples/paexec/make_package/make_package_tasks_cycle
-share/examples/paexec/toupper/toupper_cmd
-share/examples/paexec/toupper/toupper_run
+share/examples/paexec/cc_wrapper/run
+share/examples/paexec/cc_wrapper2/func1.c
+share/examples/paexec/cc_wrapper2/func2.c
+share/examples/paexec/cc_wrapper2/func3.c
+share/examples/paexec/cc_wrapper2/run
+share/examples/paexec/dirtest/run
+share/examples/paexec/dirtest/tasks
+share/examples/paexec/divide/cmd
+share/examples/paexec/divide/cmd2
+share/examples/paexec/divide/run
+share/examples/paexec/make_package/cmd
+share/examples/paexec/make_package/cmd__xxx_failed
+share/examples/paexec/make_package/run
+share/examples/paexec/make_package/run_cycle
+share/examples/paexec/make_package/tasks
+share/examples/paexec/make_package/tasks2
+share/examples/paexec/make_package/tasks_cycle
+share/examples/paexec/toupper/cmd
+share/examples/paexec/toupper/run
