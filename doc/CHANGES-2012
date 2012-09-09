@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2833 2012/09/09 07:00:04 morr Exp $
+$NetBSD: CHANGES-2012,v 1.2834 2012/09/09 09:23:23 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4372,3 +4372,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.15.1 [jnemeth 2012-09-09]
 	Updated comms/asterisk10 to 10.7.1 [jnemeth 2012-09-09]
 	Updated www/wordpress to 3.4.2 [morr 2012-09-09]
+	Updated security/heimdal to 1.5.2nb3 [cheusov 2012-09-09]
