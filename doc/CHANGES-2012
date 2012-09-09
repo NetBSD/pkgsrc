@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2830 2012/09/08 23:06:29 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.2831 2012/09/09 06:04:13 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4369,3 +4369,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/exchess-book-medium to 20000511nb2 [cheusov 2012-09-08]
 	Updated math/statist to 1.0.1nb3 [cheusov 2012-09-08]
 	Updated archivers/freeze to 2.5nb3 [cheusov 2012-09-08]
+	Updated comms/asterisk18 to 1.8.15.1 [jnemeth 2012-09-09]
