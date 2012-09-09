@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.63 2012/09/07 19:17:48 adam Exp $
+# $NetBSD: Makefile,v 1.64 2012/09/09 18:45:44 jaapb Exp $
 #
 
-DISTNAME=	lablgtk-2.14.2
-PKGREVISION=	20
+DISTNAME=	lablgtk-2.16.0
 CATEGORIES=	x11
-MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/979/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
+MAINTAINER=	jaapb@NetBSD.org
+HOMEPAGE=	http://lablgtk.forge.ocamlcore.org/
 COMMENT=	GTK+ 2.x bindings for Objective Caml
 # for installed files; more restrictions on applications/
 LICENSE=	gnu-lgpl-v2
@@ -29,7 +28,7 @@ PKG_DESTDIR_SUPPORT= user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 # Stub libraries for functions missing from base system.
-PLIST_VARS+=	stubs
+PLIST_VARS+=	stubs opt
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || \
     ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
@@ -37,13 +36,14 @@ PLIST_VARS+=	stubs
 PLIST.stubs=	yes
 .endif
 
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
+PLIST.opt=      yes
+.endif
+
 .include "options.mk"
 
 INSTALLATION_DIRS+=	lib/ocaml/site-lib
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/lib/ocaml/site-lib && ${LN} -s ../lablgtk2
-	${INSTALL_DATA} ${WRKSRC}/META ${DESTDIR}${PREFIX}/lib/ocaml/lablgtk2
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
