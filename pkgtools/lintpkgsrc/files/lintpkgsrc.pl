@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.1 2012/07/13 21:12:07 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.2 2012/09/09 15:47:35 mspo Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -601,6 +601,8 @@ sub invalid_version($) {
 
 # List (recursive) non directory contents of specified directory
 #
+#TODO this entire sub should be replaced with direct calls to
+#     File::Find
 sub listdir($$) {
     my ( $base, $dir ) = @_;
     my ($thisdir);
@@ -1506,19 +1508,38 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
         sum  => 'IGNORE'
     };
 
-    foreach my $file ( listdir( "$pkgdistdir", undef ) ) {
-        my ($dist);
-
-        if ( !defined( $dist = $distfiles{$file} ) ) {
-            $bad_distfiles{$file} = 1;
-
-        }
-        else {
-            if ( $dist->{sum} ne 'IGNORE' ) {
-                push( @{ $sumfiles{ $dist->{sumtype} } }, $file );
+# bad for memory
+#    foreach my $file ( listdir( "$pkgdistdir", undef ) ) {
+#        my ($dist);
+#
+#        if ( !defined( $dist = $distfiles{$file} ) ) {
+#            $bad_distfiles{$file} = 1;
+#
+#        }
+#        else {
+#            if ( $dist->{sum} ne 'IGNORE' ) {
+#                push( @{ $sumfiles{ $dist->{sumtype} } }, $file );
+#            }
+#        }
+#    }
+# check each file in $pkgdistdir
+    find ( { wanted => sub {
+            my ($dist);
+            if ( -f $File::Find::name )
+            {
+                my $distn = $File::Find::name;
+                $distn =~ s/$pkgdistdir\/?//g;
+                if ( !defined ($dist = $distfiles{$distn} ) ) {
+                    $bad_distfiles{$distn} = 1;
+                }
+                else {
+                    if ( $dist->{sum} ne 'IGNORE' ) {
+                        push( @{ $sumfiles{ $dist->{sumtype} } }, $distn );
+                    }
+                }
             }
-        }
-    }
+        } },
+        ($pkgdistdir) );
 
     if ( $check_unref && %bad_distfiles ) {
         verbose( scalar( keys %bad_distfiles ),
