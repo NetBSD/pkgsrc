@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/06/19 11:55:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2012/09/09 16:20:12 tron Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/COPYING
 share/mediawiki/CREDITS
@@ -1627,8 +1627,10 @@ share/mediawiki/maintenance/oracle/archives/patch-job_timestamp_field.sql
 share/mediawiki/maintenance/oracle/archives/patch-job_timestamp_index.sql
 share/mediawiki/maintenance/oracle/archives/patch-logging_type_action_index.sql
 share/mediawiki/maintenance/oracle/archives/patch-page_redirect_namespace_len.sql
+share/mediawiki/maintenance/oracle/archives/patch-page_restrictions_pkuk_fix.sql
 share/mediawiki/maintenance/oracle/archives/patch-rev_sha1_field.sql
 share/mediawiki/maintenance/oracle/archives/patch-testrun.sql
+share/mediawiki/maintenance/oracle/archives/patch-ufg_group-length-increase.sql
 share/mediawiki/maintenance/oracle/archives/patch-ug_group-length-increase.sql
 share/mediawiki/maintenance/oracle/archives/patch-up_property.sql
 share/mediawiki/maintenance/oracle/archives/patch-uploadstash.sql
