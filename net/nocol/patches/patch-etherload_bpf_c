@@ -1,0 +1,15 @@
+$NetBSD: patch-etherload_bpf_c,v 1.1 2012/09/09 19:35:20 dholland Exp $
+
+Use standard headers.
+
+--- etherload/bpf.c~	1997-08-22 05:44:36.000000000 +0000
++++ etherload/bpf.c
+@@ -43,6 +43,8 @@ static char *RCSid = "$Header: /home/vik
+ #include <net/if.h>
+ #include <signal.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <errno.h>
+ 
+ /* #include <netinet/in.h>	/* */

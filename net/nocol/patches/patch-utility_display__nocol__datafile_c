@@ -1,0 +1,17 @@
+$NetBSD: patch-utility_display__nocol__datafile_c,v 1.1 2012/09/09 19:35:21 dholland Exp $
+
+Functions returning pointers must be declared before being called.
+(The function in question does not appear to be in any header file
+and it isn't clear which if any it should be added to.)
+
+--- utility/display_nocol_datafile.c~	1994-06-12 17:21:24.000000000 +0000
++++ utility/display_nocol_datafile.c
+@@ -11,6 +11,8 @@
+ #include 	<stdio.h>
+ #include 	<sys/file.h>
+ 
++char *event_to_logstr(EVENT *);
++
+ int	debug;		/* referenced in libnocol.a */
+ char	*prognm;	/* referenced in libnocol.a */
+ 

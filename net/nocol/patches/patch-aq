@@ -1,6 +1,9 @@
-$NetBSD: patch-aq,v 1.1 2005/12/27 13:47:11 joerg Exp $
+$NetBSD: patch-aq,v 1.2 2012/09/09 19:35:20 dholland Exp $
 
---- etherload/externs.h.orig	2005-12-18 20:31:44.000000000 +0000
+- don't declare own errno
+- declare own external functions properly
+
+--- etherload/externs.h.orig	1997-08-22 05:52:10.000000000 +0000
 +++ etherload/externs.h
 @@ -14,7 +14,6 @@ extern int		breakscan;
  extern int		sleepsecs;
@@ -10,3 +13,8 @@ $NetBSD: patch-aq,v 1.1 2005/12/27 13:47:11 joerg Exp $
  extern int		extended;
  extern int		ninterfaces;
  extern int		truncation;
+@@ -44,3 +43,4 @@ void			usage();
+ void			wakeup();
+ void			flush_device();
+ 
++char **get_devlist(void);

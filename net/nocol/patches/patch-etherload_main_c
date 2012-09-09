@@ -1,0 +1,14 @@
+$NetBSD: patch-etherload_main_c,v 1.1 2012/09/09 19:35:20 dholland Exp $
+
+Use standard headers.
+
+--- etherload/main.c~	1997-08-22 05:58:22.000000000 +0000
++++ etherload/main.c
+@@ -65,6 +65,7 @@ static char *RCSid = "$Id: main.c,v 1.5 
+ #include <signal.h>
+ #include <errno.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
+ 
