@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/13 17:38:49 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/09/09 13:26:08 abs Exp $
 
-SHA1 (GTop-0.16.tar.gz) = aa617967ec1b1e8db7dcc7d58feb53e7ea875c05
-RMD160 (GTop-0.16.tar.gz) = 31716915c53393bd58c2f4c581e40d0c2b2e300d
-Size (GTop-0.16.tar.gz) = 28274 bytes
+SHA1 (GTop-0.18.tar.gz) = d8cb44410069e61c328537337090d42665c789e7
+RMD160 (GTop-0.18.tar.gz) = bb40ac4b90848d53701d68c04eb6bb69c9f117f0
+Size (GTop-0.18.tar.gz) = 18711 bytes
