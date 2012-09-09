@@ -1,4 +1,6 @@
-$NetBSD: patch-as,v 1.1 2005/12/27 13:47:11 joerg Exp $
+$NetBSD: patch-as,v 1.2 2012/09/09 19:49:45 dholland Exp $
+
+Don't declare own errno.
 
 --- support/multiping/multiping.c.orig	2005-12-18 20:42:05.000000000 +0000
 +++ support/multiping/multiping.c

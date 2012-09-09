@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2005/12/27 13:47:11 joerg Exp $
+$NetBSD: patch-ao,v 1.2 2012/09/09 19:49:45 dholland Exp $
+
+Support Dragonfly.
 
 --- etherload/os.h.orig	2005-12-18 20:29:45.000000000 +0000
 +++ etherload/os.h
