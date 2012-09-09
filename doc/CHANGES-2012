@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2835 2012/09/09 13:28:50 abs Exp $
+$NetBSD: CHANGES-2012,v 1.2836 2012/09/09 14:26:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4380,3 +4380,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/p5-pcsc to 1.4.12 [abs 2012-09-09]
 	Updated sysutils/p5-GTop to 0.16 [abs 2012-09-09]
 	Updated sysutils/p5-SSH-Batch to 0.029 [abs 2012-09-09]
+	Updated geography/gama to 1.13 [gdt 2012-09-09]

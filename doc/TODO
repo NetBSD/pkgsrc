@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11501 2012/09/09 13:28:50 abs Exp $
+$NetBSD: TODO,v 1.11502 2012/09/09 14:26:32 gdt Exp $
 
 Suggested new packages
 ======================
@@ -614,7 +614,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fvwm-2.6.0
 	o fvwm2-themes-0.7.0
 	o gallery3-3.0.2
-	o gama-1.13
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
