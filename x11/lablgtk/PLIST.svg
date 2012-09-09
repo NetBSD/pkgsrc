@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.svg,v 1.4 2010/08/28 16:13:25 wiz Exp $
-lib/ocaml/lablgtk2/lablrsvg.a
-lib/ocaml/lablgtk2/lablrsvg.cma
-lib/ocaml/lablgtk2/lablrsvg.cmxa
-lib/ocaml/lablgtk2/lablrsvg.cmxs
-lib/ocaml/lablgtk2/liblablrsvg.a
-lib/ocaml/lablgtk2/rsvg.cmi
-lib/ocaml/lablgtk2/rsvg.cmx
-lib/ocaml/lablgtk2/rsvg.ml
-${PLIST.stubs}lib/ocaml/stublibs/dlllablrsvg.so
+@comment $NetBSD: PLIST.svg,v 1.5 2012/09/09 18:45:45 jaapb Exp $
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablrsvg.a
+lib/ocaml/site-lib/lablgtk2/lablrsvg.cma
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablrsvg.cmxa
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablrsvg.cmxs
+lib/ocaml/site-lib/lablgtk2/liblablrsvg.a
+lib/ocaml/site-lib/lablgtk2/rsvg.cmi
+${PLIST.opt}lib/ocaml/site-lib/lablgtk2/rsvg.cmx
+lib/ocaml/site-lib/lablgtk2/rsvg.ml
+${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablrsvg.so
