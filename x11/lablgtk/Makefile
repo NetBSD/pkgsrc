@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/09/09 18:45:44 jaapb Exp $
+# $NetBSD: Makefile,v 1.65 2012/09/09 19:04:52 wiz Exp $
 #
 
 DISTNAME=	lablgtk-2.16.0
@@ -10,6 +10,8 @@ HOMEPAGE=	http://lablgtk.forge.ocamlcore.org/
 COMMENT=	GTK+ 2.x bindings for Objective Caml
 # for installed files; more restrictions on applications/
 LICENSE=	gnu-lgpl-v2
+
+DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
