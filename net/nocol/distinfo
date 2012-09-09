@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2012/09/09 19:35:20 dholland Exp $
+$NetBSD: distinfo,v 1.16 2012/09/09 19:42:25 dholland Exp $
 
 SHA1 (nocol-4.3.1.tar.gz) = a8cb88727bc3a3ddd544792407d431b3ef13a325
 RMD160 (nocol-4.3.1.tar.gz) = 77a57ae447f0a8f1ce2417d9b828710f21865cc8
@@ -17,14 +17,14 @@ SHA1 (patch-am) = 3729dd89c58bc3fcd6bffe16cd7b275ba841be9d
 SHA1 (patch-an) = 1a869a8a2e4e0c5a29540bff7d1da76e4d8c74e9
 SHA1 (patch-ao) = 114ebcc55d00981cc6709095f3280509880d76eb
 SHA1 (patch-ap) = 0c7ca32c9d00eb493df3ff2b1c441e6c1e1aa34e
-SHA1 (patch-aq) = 0277f571bf0eb664270cb1350512a586d08376a5
+SHA1 (patch-aq) = 04a764918910d6d20e09842ff280be0231a269f5
 SHA1 (patch-ar) = cba8de7526efde9d8598b9119ca8d27e3c60279f
 SHA1 (patch-as) = be1b999af6459b83fe7bfcab9e83b2e830198da6
 SHA1 (patch-at) = c49b96d1c2158d0a8f67228922f0e4bff5df2908
 SHA1 (patch-au) = a8bbcb0eef41ac514bb1106c5feedb5bc087aac7
 SHA1 (patch-etherload_bpf_c) = 2d11b411693b8bca39954da47bc2fc9afb1fc273
 SHA1 (patch-etherload_get__devlist_c) = dc03458a5ba5d825371dafced876de4c80228fb3
-SHA1 (patch-etherload_main_c) = 4d1c117635328cd1fc4f0120451d1c6ef7e23ee3
+SHA1 (patch-etherload_main_c) = 0ee5cffa70b42be6eca2e5de90b5583a7d684d50
 SHA1 (patch-etherload_nocol__specific_c) = 16c9c6ec50b56dbf4e35498eb09ee04e788f901b
 SHA1 (patch-etherload_util_c) = 964e84020af0ac2903aa7fb87512b81be67cb1fe
 SHA1 (patch-genmon_genmon_c) = cb07a91c2e9ae3f28f59578563b994bd3557018b
