@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2005/12/27 13:47:11 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2012/09/09 19:49:45 dholland Exp $
+
+ - don't declare own errno
+ - don't use curses internals
 
 --- netconsole/help_page.c.orig	1998-07-31 18:22:13.000000000 +0000
 +++ netconsole/help_page.c
