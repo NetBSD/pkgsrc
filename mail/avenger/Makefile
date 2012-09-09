@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/02/16 19:00:14 hans Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/09 18:30:18 cheusov Exp $
 
 DISTNAME=	avenger-0.8.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mailavenger.org/dist/
 
@@ -10,6 +11,8 @@ COMMENT=	SMTP server with filtering capabilities
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		deliver-[0-9]*
 
 BDB_ACCEPTED=		db4 db5
 USE_LANGUAGES=		c c++
