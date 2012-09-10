@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2874 2012/09/10 14:23:06 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2875 2012/09/10 14:25:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4420,3 +4420,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Dist-Zilla to 4.300023 [sno 2012-09-10]
 	Updated devel/p5-Capture-Tiny to 0.19 [sno 2012-09-10]
 	Updated devel/p5-Log-Any-Adapter to 0.09 [sno 2012-09-10]
+	Updated devel/p5-Scalar-List-Utils to 1.25 [sno 2012-09-10]
