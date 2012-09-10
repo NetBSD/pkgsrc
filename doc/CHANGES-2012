@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2859 2012/09/10 12:29:27 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2860 2012/09/10 12:47:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4405,3 +4405,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated inputmethod/ibus-table-chinese to 1.4.0 [obache 2012-09-10]
 	Added devel/p5-CPAN-Meta-Check version 0.004 [sno 2012-09-10]
 	Added devel/p5-Test-CheckDeps version 0.002 [sno 2012-09-10]
+	Updated devel/p5-MooseX-LazyRequire to 0.08 [sno 2012-09-10]
