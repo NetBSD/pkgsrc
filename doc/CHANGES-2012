@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2873 2012/09/10 14:20:32 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2874 2012/09/10 14:23:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4419,3 +4419,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-pip to 1.2.1 [wen 2012-09-10]
 	Updated devel/p5-Dist-Zilla to 4.300023 [sno 2012-09-10]
 	Updated devel/p5-Capture-Tiny to 0.19 [sno 2012-09-10]
+	Updated devel/p5-Log-Any-Adapter to 0.09 [sno 2012-09-10]
