@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2012/07/05 17:13:54 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 14:12:06 sno Exp $
 
-DISTNAME=	Dist-Zilla-4.300020
+DISTNAME=	Dist-Zilla-4.300023
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
@@ -30,7 +30,7 @@ DEPENDS+=	p5-Hash-Merge-Simple-[0-9]*:../../devel/p5-Hash-Merge-Simple
 DEPENDS+=	p5-JSON>=2.00:../../converters/p5-JSON
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Log-Dispatchouli>=1.102.220:../../devel/p5-Log-Dispatchouli
-DEPENDS+=	p5-Moose>=0.9100:../../devel/p5-Moose
+DEPENDS+=	p5-Moose>=0.9200:../../devel/p5-Moose
 DEPENDS+=	p5-Moose-Autobox>=0.10:../../devel/p5-Moose-Autobox
 DEPENDS+=	p5-MooseX-LazyRequire-[0-9]*:../../devel/p5-MooseX-LazyRequire
 DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
