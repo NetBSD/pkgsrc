@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/06/03 13:18:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/10 14:01:28 wen Exp $
 bin/pip
 bin/pip-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -10,9 +10,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pip/__init__.py
 ${PYSITELIB}/pip/__init__.pyc
 ${PYSITELIB}/pip/__init__.pyo
-${PYSITELIB}/pip/_pkgutil.py
-${PYSITELIB}/pip/_pkgutil.pyc
-${PYSITELIB}/pip/_pkgutil.pyo
+${PYSITELIB}/pip/__main__.py
+${PYSITELIB}/pip/__main__.pyc
+${PYSITELIB}/pip/__main__.pyo
 ${PYSITELIB}/pip/backwardcompat.py
 ${PYSITELIB}/pip/backwardcompat.pyc
 ${PYSITELIB}/pip/backwardcompat.pyo
