@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1645 2012/09/10 12:30:15 sno Exp $
+# $NetBSD: Makefile,v 1.1646 2012/09/10 12:31:24 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -1123,6 +1123,7 @@ SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
 SUBDIR+=	p5-Test-Base
 SUBDIR+=	p5-Test-CPAN-Meta-YAML
+SUBDIR+=	p5-Test-CheckDeps
 SUBDIR+=	p5-Test-CheckManifest
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-ClassAPI
