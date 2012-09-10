@@ -1,0 +1,24 @@
+$NetBSD: patch-tables_array_CMakeLists.txt,v 1.1 2012/09/10 11:53:41 obache Exp $
+
+* use more portable codeset names.
+
+--- tables/array/CMakeLists.txt.orig	2012-09-07 06:23:27.000000000 +0000
++++ tables/array/CMakeLists.txt
+@@ -8,7 +8,7 @@ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DI
+     ${CMAKE_CURRENT_BINARY_DIR}/array30.head @ONLY
+     )
+ 
+-CONVERT_ENCODING(${CMAKE_CURRENT_BINARY_DIR}/array30_27489.utf8 UTF16 array30_27489.txt)
++CONVERT_ENCODING(${CMAKE_CURRENT_BINARY_DIR}/array30_27489.utf8 UTF-16 array30_27489.txt)
+ GENERATE_FREQ(${CMAKE_CURRENT_BINARY_DIR}/array30_27489.freq
+     ${CMAKE_CURRENT_BINARY_DIR}/array30_27489.utf8
+     )
+@@ -27,7 +27,7 @@ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DI
+     ${CMAKE_CURRENT_BINARY_DIR}/array30-big.head @ONLY
+     )
+ 
+-CONVERT_ENCODING(${CMAKE_CURRENT_BINARY_DIR}/array30_ExtB.utf8 UTF16 array30_ExtB.txt)
++CONVERT_ENCODING(${CMAKE_CURRENT_BINARY_DIR}/array30_ExtB.utf8 UTF-16 array30_ExtB.txt)
+ 
+ ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/array30-big.utf8
+     COMMAND cat ${CMAKE_CURRENT_BINARY_DIR}/array30_27489.utf8
