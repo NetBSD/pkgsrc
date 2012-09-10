@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2870 2012/09/10 13:56:46 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2871 2012/09/10 14:03:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4416,3 +4416,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07033 [sno 2012-09-10]
 	Updated devel/p5-Class-Load to 0.20 [sno 2012-09-10]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.092 [sno 2012-09-10]
+	Updated devel/py-pip to 1.2.1 [wen 2012-09-10]
