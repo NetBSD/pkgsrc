@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/12 02:23:27 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2012/09/10 10:27:24 sno Exp $
 
-SHA1 (MooseX-MarkAsMethods-0.14.tar.gz) = ee909f27fb1bf03d1146e50f0fc31a82979078ac
-RMD160 (MooseX-MarkAsMethods-0.14.tar.gz) = 9cbbc08e79d00c65ebfb908733a526c17b3b5369
-Size (MooseX-MarkAsMethods-0.14.tar.gz) = 22326 bytes
+SHA1 (MooseX-MarkAsMethods-0.15.tar.gz) = 68e7df23d64b31b0524be153d71c9ff636eb2b26
+RMD160 (MooseX-MarkAsMethods-0.15.tar.gz) = 17f4b18310f264d89ba9049b17eabd489ad626c8
+Size (MooseX-MarkAsMethods-0.15.tar.gz) = 15311 bytes
