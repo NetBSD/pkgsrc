@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/03 12:14:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/10 11:53:40 obache Exp $
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/ChangeLog
 share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/RELEASE-NOTES.txt
 share/ibus-table/icons/array30-big.png
 share/ibus-table/icons/array30.png
 share/ibus-table/icons/cangjie-big.png
