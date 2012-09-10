@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/08/18 20:43:28 plunky Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/10 10:04:03 plunky Exp $
 #
 
 DISTNAME=	zyGrib-maps-2.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 DISTFILES=	zyGrib_maps2.4.tgz
