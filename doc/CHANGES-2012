@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2867 2012/09/10 13:38:39 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2868 2012/09/10 13:48:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4413,3 +4413,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Moo to 1.000003 [sno 2012-09-10]
 	Updated databases/p5-SQL-Abstract to 1.73 [sno 2012-09-10]
 	Updated databases/p5-DBIx-Class to 0.08200 [sno 2012-09-10]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07033 [sno 2012-09-10]
