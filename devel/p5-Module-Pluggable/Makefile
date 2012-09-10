@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/04/01 20:24:44 rhaen Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/10 10:57:16 sno Exp $
 #
 
-DISTNAME=	Module-Pluggable-4.0
+DISTNAME=	Module-Pluggable-4.3
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mpl
 CATEGORIES=	devel perl5
@@ -16,6 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Module/Pluggable/.packlist
+PERL5_MODULE_TYPE=	Module::Build
+
+post-extract:
+	 ${FIND} ${WRKSRC} -type f -name "*.pm" -print | ${XARGS} ${CHMOD} -x
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
