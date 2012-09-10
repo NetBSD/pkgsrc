@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2850 2012/09/10 10:35:29 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2851 2012/09/10 10:39:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4396,3 +4396,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-MooseX-Getopt to 0.47 [sno 2012-09-10]
 	Updated devel/p5-MooseX-MarkAsMethods to 0.15 [sno 2012-09-10]
 	Updated devel/p5-MooseX-Types to 0.35 [sno 2012-09-10]
+	Updated devel/p5-MooseX-Types-Common to 0.001008 [sno 2012-09-10]
