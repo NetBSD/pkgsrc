@@ -1,0 +1,28 @@
+MooseX::Has::Options provides a succinct syntax for declaring options for
+Moose attributes. It hijacks the has function imported by Moose and replaces
+it with one that understands following options syntax:
+
+    use Moose;
+    use MooseX::Has::Options;
+
+    has 'some_attribute' => (
+        qw(:ro :required),
+        isa => 'Str',
+        ...
+    );
+
+This will converted into:
+
+    use Moose;
+    use MooseX::Has::Options;
+
+    has 'some_attribute' => (
+        is => 'ro',
+	required => 1,
+        isa => 'Str',
+        ...
+    );
+
+Options must come in the beginning of the argument list.
+MooseX::Has::Options will stop searching for options after the
+first alphanumeric string that does not start with a colon.
