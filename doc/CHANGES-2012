@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2877 2012/09/10 14:47:41 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2878 2012/09/10 14:58:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Scalar-List-Utils to 1.25 [sno 2012-09-10]
 	Updated devel/p5-Perl-PrereqScanner to 1.014 [sno 2012-09-10]
 	Updated devel/p5-SVN-Class to 0.17 [wen 2012-09-10]
+	Updated devel/p5-Set-Array to 0.26 [wen 2012-09-10]
