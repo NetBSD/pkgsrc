@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2862 2012/09/10 12:58:13 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2863 2012/09/10 13:02:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4408,3 +4408,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-MooseX-LazyRequire to 0.08 [sno 2012-09-10]
 	Updated archivers/p5-Archive-Tar to 1.90 [sno 2012-09-10]
 	Updated devel/p5-Devel-GlobalDestruction to 0.09 [sno 2012-09-10]
+	Updated devel/p5-Role-Tiny to 1.001005 [sno 2012-09-10]
