@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/07/05 17:13:54 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/09/10 14:12:06 sno Exp $
 
-SHA1 (Dist-Zilla-4.300020.tar.gz) = a44296e9d3de53392c5b77bfd971a12b7fd2d91f
-RMD160 (Dist-Zilla-4.300020.tar.gz) = d975f40515344e9a3bff1938aff4ad83b8703bd9
-Size (Dist-Zilla-4.300020.tar.gz) = 125884 bytes
+SHA1 (Dist-Zilla-4.300023.tar.gz) = fadbd4f467a2740092e7498c577a786b1822aef0
+RMD160 (Dist-Zilla-4.300023.tar.gz) = 894a375297325928f08433033f6f1a9cffc3c179
+Size (Dist-Zilla-4.300023.tar.gz) = 129887 bytes
