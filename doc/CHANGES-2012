@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2864 2012/09/10 13:05:01 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2865 2012/09/10 13:07:23 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4410,3 +4410,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Devel-GlobalDestruction to 0.09 [sno 2012-09-10]
 	Updated devel/p5-Role-Tiny to 1.001005 [sno 2012-09-10]
 	Updated devel/p5-strictures to 1.004002 [sno 2012-09-10]
+	Updated devel/p5-Moo to 1.000003 [sno 2012-09-10]
