@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1643 2012/09/06 17:23:33 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1644 2012/09/10 10:02:27 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -928,6 +928,7 @@ SUBDIR+=	p5-MooseX-Declare
 SUBDIR+=	p5-MooseX-Emulate-Class-Accessor-Fast
 SUBDIR+=	p5-MooseX-FollowPBP
 SUBDIR+=	p5-MooseX-Getopt
+SUBDIR+=	p5-MooseX-Has-Options
 SUBDIR+=	p5-MooseX-InsideOut
 SUBDIR+=	p5-MooseX-LazyRequire
 SUBDIR+=	p5-MooseX-MarkAsMethods
