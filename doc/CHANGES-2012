@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2854 2012/09/10 10:57:26 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2855 2012/09/10 11:09:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4400,3 +4400,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-MooseX-Types-LoadableClass to 0.008 [sno 2012-09-10]
 	Updated devel/p5-MooseX-Types-Path-Class to 0.06 [sno 2012-09-10]
 	Updated devel/p5-Module-Pluggable to 4.3 [sno 2012-09-10]
+	Updated devel/p5-Test-Harness to 3.25 [sno 2012-09-10]
