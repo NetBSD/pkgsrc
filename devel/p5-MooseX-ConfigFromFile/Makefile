@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/09/03 11:16:21 sno Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/10 10:08:04 sno Exp $
 
-DISTNAME=	MooseX-ConfigFromFile-0.03
+DISTNAME=	MooseX-ConfigFromFile-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -13,6 +12,10 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=0.35:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types-Path-Class>=0.04:../../devel/p5-MooseX-Types-Path-Class
+DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
