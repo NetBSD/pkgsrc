@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2847 2012/09/10 10:16:56 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2848 2012/09/10 10:24:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4393,3 +4393,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/zyGrib to 6.0.1 [plunky 2012-09-10]
 	Updated devel/p5-MooseX-ConfigFromFile to 0.04 [sno 2012-09-10]
 	Updated devel/p5-MooseX-App-Cmd to 0.09 [sno 2012-09-10]
+	Updated devel/p5-MooseX-Getopt to 0.47 [sno 2012-09-10]
