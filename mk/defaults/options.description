@@ -189,10 +189,12 @@ ghostscript		Enable GhostScript support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
+glade			Enable Glade support
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
+gnomecanvas		Enable GNOME canvas support
 gnutls			Enable GNU TLS support.
 goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
@@ -208,6 +210,8 @@ gssapi			Enable gssapi (Kerberos V) support.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
+gtksourceview		Enable gtksourceview support.
+gtksourceview2		Enable gtksourceview2 support.
 gtkspell		Enable gtkspell support.
 guile			Enable support for GUILE.
 gzip			Enable compression using gzip.
