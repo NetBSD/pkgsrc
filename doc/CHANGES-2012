@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2844 2012/09/10 09:58:55 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2845 2012/09/10 10:06:07 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4390,3 +4390,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/runawk to 1.4.3 [cheusov 2012-09-09]
 	Updated graphics/ruby-rcairo to 1.12.2 [obache 2012-09-10]
 	Added devel/p5-MooseX-Has-Options version 0.002 [sno 2012-09-10]
+	Updated misc/zyGrib to 6.0.1 [plunky 2012-09-10]
