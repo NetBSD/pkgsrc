@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/02/28 14:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:34 asau Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-ra.informatik.uni-tuebingen.de/SNNS/
 COMMENT=	Software simulator for neural networks
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-global

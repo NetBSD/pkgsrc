@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2012/08/21 23:49:23 marino Exp $
+# $NetBSD: Makefile,v 1.86 2012/09/11 23:04:33 asau Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -11,7 +11,6 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 SCIBASE=	scilab-4.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/02/16 19:04:52 hans Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:04:17 asau Exp $
 
 DISTNAME=	dcdflib.c-1.1
 PKGREVISION=	1
@@ -15,7 +15,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
 USE_BSD_MAKEFILE=	yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	include lib share/doc/dcdflib.c
 MAKE_FLAGS+=		MKPROFILE=yes
 
