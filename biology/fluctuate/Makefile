@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 01:10:05 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 20:32:12 asau Exp $
 #
 
 DISTNAME=	fluctuate1.4.src.doc
@@ -9,8 +9,6 @@ MASTER_SITES=	http://evolution.gs.washington.edu/lamarc/fluctuate/
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://evolution.genetics.washington.edu/lamarc/fluctuate.html
 COMMENT=	Estimation of population growth rate
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fluctuate1.4
 BUILD_TARGET=	fluctuate

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/05 20:19:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 20:36:18 asau Exp $
 
 DISTNAME=	tbb30_20110325oss_src
 PKGNAME=	threadingbuildingblocks-3.0.6 # for "3.0 update 6"
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.threadingbuildingblocks.org/
 COMMENT=	Threading Buildling Blocks
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		$(WRKDIR)/$(DISTNAME:_src=) #tbb30_20101215oss
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 01:10:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/11 20:32:11 asau Exp $
 
 DISTNAME=	clustalw1.83.UNIX
 PKGNAME=	clustalw-1.83
@@ -11,7 +11,6 @@ HOMEPAGE=	http://bips.u-strasbg.fr/fr/Documentation/ClustalW/
 COMMENT=	General purpose multiple alignment program for DNA or proteins
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 BUILD_TARGET=	clustalw

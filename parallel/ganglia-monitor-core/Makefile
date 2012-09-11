@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/09/07 19:17:23 adam Exp $
+# $NetBSD: Makefile,v 1.40 2012/09/11 20:36:17 asau Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
 COMMENT=		Ganglia cluster monitor, monitoring daemon
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes

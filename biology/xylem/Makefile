@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/16 15:17:22 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/11 20:32:14 asau Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -11,7 +11,6 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/xylem
