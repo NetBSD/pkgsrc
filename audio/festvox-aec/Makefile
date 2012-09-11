@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/19 08:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/11 23:59:33 asau Exp $
 
 DISTNAME=	voice_aec_di-2.0
 PKGNAME=	festvox-aec-2.0
@@ -15,8 +15,6 @@ DEPENDS+=	festival>=1.4.0:../../audio/festival
 DEPENDS+=	festlex-ogi>=2.0:../../audio/festlex-ogi
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}nb1
 WRKSRC=		${WRKDIR}/festival

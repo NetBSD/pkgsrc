@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2012/03/07 14:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2012/09/12 00:24:41 asau Exp $
 
 DISTNAME=	lame-3.99.5
 CATEGORIES=	audio
@@ -9,7 +9,6 @@ HOMEPAGE=	http://lame.sourceforge.net/
 COMMENT=	Fast, high quality MP3 encoder
 LICENSE=	lame-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes

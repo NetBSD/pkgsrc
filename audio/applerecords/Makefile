@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:59:24 asau Exp $
 #
 
 DISTNAME=		applerecords-0.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.jar
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://web.archive.org/web/20060501054520/http://www.cdavies.org/applerecords.html
 COMMENT=		Java DAAP client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}
