@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/08/20 06:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/09/11 23:25:07 asau Exp $
 
 BASH_VERSION=		4.2
 
@@ -20,7 +20,6 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS=	static-bash-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		makeinfo bison
 USE_PKGLOCALEDIR=	yes

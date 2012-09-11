@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/04/09 00:48:13 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/11 23:19:39 asau Exp $
 #
 
 DISTNAME=	pkgsurvey-0.0
@@ -14,8 +14,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2012/08/16 13:30:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.67 2012/09/11 23:25:10 asau Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -13,8 +13,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://zsh.sourceforge.net/
 COMMENT=	The Z shell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/11/07 20:27:30 shattered Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:19:38 asau Exp $
 
 DISTNAME=	pkgfind-20111022
 CATEGORIES=	pkgtools
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Find packages by package name in pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=	err getprogname setprogname snprintf warn
 

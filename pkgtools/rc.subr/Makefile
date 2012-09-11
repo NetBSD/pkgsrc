@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/03/23 00:27:11 sbd Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 23:19:39 asau Exp $
 #
 
 DISTNAME=		rc.subr-20090118
@@ -9,8 +9,6 @@ DISTFILES=		# empty
 MAINTAINER=		sbd@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-[0-4].*-* Interix-*-*
 ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/03/19 09:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/09/11 23:19:38 asau Exp $
 
 DISTNAME=	pkg_tarup-1.9
 CATEGORIES=	pkgtools
@@ -7,8 +7,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Generates binary package(s) from installed pkg(s)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes

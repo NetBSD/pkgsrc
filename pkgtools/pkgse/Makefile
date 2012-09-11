@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:19:39 asau Exp $
 #
 
 DISTNAME=	pkgse-0.3
@@ -14,7 +14,6 @@ COMMENT=	Fetch informations about a NetBSD package from pkgsrc.netbsd.se
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run

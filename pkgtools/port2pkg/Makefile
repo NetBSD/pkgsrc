@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/03/26 14:05:36 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2012/09/11 23:19:39 asau Exp $
 #
 
 DISTNAME=	port2pkg-1.13
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert from a FreeBSD port to a NetBSD package
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 

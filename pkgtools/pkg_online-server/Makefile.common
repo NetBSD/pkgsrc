@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2012/08/26 10:06:46 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.7 2012/09/11 23:19:37 asau Exp $
 #
 # used by pkgtools/pkg_online-client/Makefile
 # used by pkgtools/pkg_online-server/Makefile
@@ -12,8 +12,6 @@ HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=	Client/Server package searcher for pkgsrc
 
 LICENSE=		2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../pkgtools/pkg_online-server/distinfo
 PATCHDIR=		${.CURDIR}/../../pkgtools/pkg_online-server/patches

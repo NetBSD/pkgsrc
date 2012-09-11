@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 23:25:08 asau Exp $
 #
 
 DISTNAME=		heirloom-sh-050706
@@ -11,8 +11,6 @@ MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://heirloom.sourceforge.net/
 COMMENT=		Traditional Unix shell derived from OpenSolaris code
 LICENSE=		cddl-1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

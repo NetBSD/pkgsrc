@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/26 10:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 23:25:08 asau Exp $
 
 DISTNAME=	nologinmsg-1.0
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	More functional native binary replacement for /sbin/nologin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=	getprogname
 

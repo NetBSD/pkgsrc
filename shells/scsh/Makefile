@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/12/22 04:37:51 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2012/09/11 23:25:09 asau Exp $
 
 DISTNAME=		scsh-0.6.7
 PKGREVISION=		1
@@ -12,8 +12,6 @@ COMMENT=		Unix shell embedded into Scheme, with access to all Posix calls
 LICENSE=		modified-bsd
 
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}	# Not 64-bit clean.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
