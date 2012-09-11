@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/07/09 12:03:55 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/11 19:46:53 asau Exp $
 #
 
 DISTNAME=	bsdtar-2.8.4
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libarchive/
 COMMENT=	Fast multi-format tape archiver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 # Explicitly do not depend on libtool as this can be used

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/03 10:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/11 19:46:56 asau Exp $
 #
 
 DISTNAME=	lhasa-0.0.7
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fragglet.github.com/lhasa/
 COMMENT=	Freely licensed lha archiving tool (for .lzh and .lha files)
 LICENSE=	isc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
