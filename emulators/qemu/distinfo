@@ -1,20 +1,18 @@
-$NetBSD: distinfo,v 1.77 2012/08/03 17:51:47 asau Exp $
+$NetBSD: distinfo,v 1.78 2012/09/11 17:13:44 asau Exp $
 
-SHA1 (qemu-1.1.1-1.tar.bz2) = 0754fe79279f58445d4a6e2c18afcbc3f0e1bb00
-RMD160 (qemu-1.1.1-1.tar.bz2) = e1fa73652dbcfd234f862ce1979adf16182f00bc
-Size (qemu-1.1.1-1.tar.bz2) = 9635574 bytes
-SHA1 (patch-configure) = 961b4efafaf806f071dde3f65c9f43ae770ca3e2
-SHA1 (patch-ef) = f26f1b860cca477d5e80c9cb2755c8dc6fa593ac
-SHA1 (patch-eg) = f06b9c675717fd54afba0cf2714158b358078a15
-SHA1 (patch-eh) = 9425da879c4809abe6959b402cb98de370f9ceb6
-SHA1 (patch-en) = 01f74603909474d222f9c8bc75c831b5c7393045
-SHA1 (patch-et) = 5755dc6ce5ecd84dfd34bb0e0f64b70c2639d575
-SHA1 (patch-hw-esp.c) = 37a48a1ad525b1efc6f159801aa0be4fb1622f69
-SHA1 (patch-hw_ppc__newworld.c) = 9490186f0189ea4eceaf15132259cf67ec002cc4
-SHA1 (patch-hw_ppc__oldworld.c) = e339647c92c7cbfe67b61b96bc655a47e7af2123
-SHA1 (patch-hw_xilinx__axienet.c) = ffd6a41d7c76ef11d63b27ffc263b668ee569e99
-SHA1 (patch-ioport.c) = 2bf04d5bf59b7e8939b20c168fb618a955bfa5a4
-SHA1 (patch-memory.c) = 6c7485270a5315c7eb174cb988a074fbbb760c3b
-SHA1 (patch-net_tap-bsd.c) = 48b95f1c8433ae460c569d679958fbd706f798e6
-SHA1 (patch-roms_seabios_tools_buildversion.sh) = 5ab15a25f47762a7abe30da0beb7b77facc88b13
-SHA1 (patch-slirp_tcp__subr.c) = 413f508eeb7fae166a3a512bd98dc63314b59af8
+SHA1 (qemu-1.2.0.tar.bz2) = 4bbfb35ca2e386e9b731c09a8eb1187c0c0795a8
+RMD160 (qemu-1.2.0.tar.bz2) = f6ebeeca42e2e694f17ab83cca3652baf7e74d1c
+Size (qemu-1.2.0.tar.bz2) = 9865186 bytes
+SHA1 (patch-configure) = 34ae5e65bc5beb45637303a02c42e9ede33564b6
+SHA1 (patch-ef) = fd9f0ca22b1f3c3950a0ea69ba32252265d2285a
+SHA1 (patch-eg) = 4be8e74d134e0736fa65977d885a9dd3b12e653b
+SHA1 (patch-eh) = 02ada323ac9ba0acf8e4d0746bc7d58abb24b288
+SHA1 (patch-en) = a2fdf12d46cb25004f5f0f6b3e187c59863e3b20
+SHA1 (patch-et) = 5b117320922385d9238c045178a75360545ea051
+SHA1 (patch-hw_ppc__newworld.c) = 043d48be9c4ec2ce2d5d303e379695d86931d242
+SHA1 (patch-hw_ppc__oldworld.c) = 92db10cb063d30226022cc0a810c7e1c7f20bfec
+SHA1 (patch-hw_xilinx__axienet.c) = 9a4c73c8dcf745d31661e0c88d683530d153feaf
+SHA1 (patch-ioport.c) = 3a9fc61cbf72a8cea29d1d168113b48c2f4968a9
+SHA1 (patch-memory.c) = 539f953cb115a35be109a442a190a82785518ef3
+SHA1 (patch-net_tap-bsd.c) = eb5e994a57c6f4291e34af9198ea007dbc21b191
+SHA1 (patch-slirp_tcp__subr.c) = 51ae78f3f04eae9a22568afdbf6e3b2bc3d34187
