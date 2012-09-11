@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2012/07/05 19:18:29 asau Exp $
+# $NetBSD: Makefile,v 1.102 2012/09/11 23:04:25 asau Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -20,8 +20,6 @@ OCTAVE_VER=	3.6.2
 .if (${MACHINE_ARCH} == "arm32")
 BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
 .endif
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes

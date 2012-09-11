@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/09/07 19:17:05 adam Exp $
+# $NetBSD: Makefile,v 1.37 2012/09/11 23:04:21 asau Exp $
 
 DISTNAME=	gnumeric-1.10.17
 PKGREVISION=	6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/gnumeric/
 COMMENT=	Spreadsheet program from the GNOME project
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_LIBTOOL=		yes

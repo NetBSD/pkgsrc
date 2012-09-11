@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/05/09 03:12:07 dbj Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 23:04:19 asau Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-2.1.5
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
