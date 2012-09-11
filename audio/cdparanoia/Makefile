@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/05/29 11:11:06 obache Exp $
+# $NetBSD: Makefile,v 1.32 2012/09/11 23:59:28 asau Exp $
 #
 
 DISTNAME=	cdparanoia-III-10.2
@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* Linux-*-* DragonFly-*-* Darwin-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.27 2012/09/07 19:16:06 adam Exp $
+# $NetBSD: Makefile,v 1.28 2012/09/11 23:59:26 asau Exp $
 #
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BMP_USE_ESD:=		yes
 .include "../../audio/bmp/Makefile.common"
