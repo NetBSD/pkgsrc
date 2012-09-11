@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/05/11 07:49:58 adam Exp $
+# $NetBSD: Makefile,v 1.42 2012/09/11 19:46:55 asau Exp $
 
 DISTNAME=	gtar-1.26
 CATEGORIES=	archivers
@@ -16,6 +16,5 @@ DEPENDS+=	gtar-base-${PKGVERSION_NOREV}{,nb*}:../../archivers/gtar-base
 DEPENDS+=	gtar-info-${PKGVERSION_NOREV}{,nb*}:../../archivers/gtar-info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/15 21:05:56 zafer Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/11 19:46:52 asau Exp $
 
 DISTNAME=	9e
 PKGNAME=	9e-1.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.eecs.harvard.edu/~wkj/Software/9e/
 COMMENT=	Explode Plan9 archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 
