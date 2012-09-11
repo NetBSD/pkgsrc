@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/04/09 00:48:12 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/11 23:19:37 asau Exp $
 #
 
 DISTNAME=	pkg_notify-0.4.3
@@ -13,7 +13,6 @@ COMMENT=	Notifies package maintainer when a new version is available
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes

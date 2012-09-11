@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2012/05/26 15:15:21 he Exp $
+# $NetBSD: Makefile,v 1.72 2012/09/11 23:25:09 asau Exp $
 
 DISTNAME=	tcsh-6.18.01
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.tcsh.org/Welcome
 COMMENT=	Extended C-shell with many useful features
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS?=	static-tcsh-[0-9]*
 
