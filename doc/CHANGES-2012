@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2897 2012/09/11 13:23:26 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2898 2012/09/11 17:59:06 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4443,3 +4443,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Text-Patch version 1.8 [sno 2012-09-11]
 	Updated time/p5-Time-HiRes to 1.9725 [sno 2012-09-11]
 	Updated www/p5-Plack to 1.0003 [wen 2012-09-11]
+	Updated emulators/qemu to 1.2.0 [asau 2012-09-11]
