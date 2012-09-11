@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/08 14:44:00 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/11 22:37:15 asau Exp $
 
 DISTNAME=	thrulay-0.8
 CATEGORIES=	benchmarks net
@@ -9,7 +9,6 @@ HOMEPAGE=	http://shlang.com/thrulay/
 COMMENT=	TCP and UDP network capacity tester
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
