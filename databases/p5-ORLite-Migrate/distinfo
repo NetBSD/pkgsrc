@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/01/26 15:35:42 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2012/09/11 08:49:27 sno Exp $
 
-SHA1 (ORLite-Migrate-1.09.tar.gz) = 6fd30fa546c3368829764c0bf7112800137f00c3
-RMD160 (ORLite-Migrate-1.09.tar.gz) = 808de661232b2488a010cfd463c0ce6133fed408
-Size (ORLite-Migrate-1.09.tar.gz) = 38002 bytes
+SHA1 (ORLite-Migrate-1.10.tar.gz) = 0badfe5156018282cd023d564e34b37a3f3749c9
+RMD160 (ORLite-Migrate-1.10.tar.gz) = 54bb90e0c0e0bc945afe92968de4f1df49d1b5a2
+Size (ORLite-Migrate-1.10.tar.gz) = 38469 bytes
