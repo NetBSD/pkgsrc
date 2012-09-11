@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/11/24 01:15:41 marino Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/11 22:37:14 asau Exp $
 
 DISTNAME=	postal-0.70
 CATEGORIES=	benchmarks
@@ -11,7 +11,6 @@ COMMENT=	Tool for benchmarking SMTP/POP servers
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
