@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/10 16:10:56 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 23:19:39 asau Exp $
 #
 
 DISTNAME=		rcorder-20120310
@@ -9,8 +9,6 @@ DISTFILES=		# empty
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Print a dependency ordering of interdependent files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_FEATURES=		nbcompat
