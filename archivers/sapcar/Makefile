@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/05/23 08:05:25 marino Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/11 19:47:01 asau Exp $
 
 PKGNAME=		sapcar-7.00
 CATEGORIES=		archivers
 EXTRACT_SUFX=		# empty
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 

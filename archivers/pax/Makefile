@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/06/17 10:21:39 sbd Exp $
+# $NetBSD: Makefile,v 1.48 2012/09/11 19:46:59 asau Exp $
 
 DISTNAME=		pax-20080110
 PKGREVISION=		2
@@ -10,7 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		POSIX standard archiver with many extensions
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 BOOTSTRAP_PKG=	yes
 CHECK_PERMS=		no
 

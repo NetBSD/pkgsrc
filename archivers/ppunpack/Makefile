@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/03/11 10:07:26 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 19:47:00 asau Exp $
 
 DISTNAME=	ppsmall-1.0
 PKGNAME=	ppunpack-1.0
@@ -11,7 +11,6 @@ COMMENT=	Decompresses Amiga PowerPacker files
 LICENSE=	ppunpack-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/PPUnpack
 

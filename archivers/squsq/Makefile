@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/02 03:48:36 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 19:47:01 asau Exp $
 
 DISTNAME=	t20-squsq-3.3
 PKGNAME=	squsq-3.3
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Compressor/decompressor for CP/M Squeeze compressed files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	${FILESDIR}/Makefile
 

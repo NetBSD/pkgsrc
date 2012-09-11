@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 19:47:02 asau Exp $
 #
 
 DISTNAME=		unshield-0.5.1
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		martin@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/synce/
 COMMENT=		Extract InstallShield .CAB files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

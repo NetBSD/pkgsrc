@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/09/16 15:39:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 19:46:59 asau Exp $
 #
 
 DISTNAME=		pbzip2-1.1.5
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://compression.ca/pbzip2/
 COMMENT=		Parallel implementation of the bzip2 block-sorting file compressor
 #LICENSE=		pbzip2-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS+=		require

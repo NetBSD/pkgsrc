@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/02 03:48:36 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:58 asau Exp $
 #
 
 DISTNAME=		mscompress-0.3
@@ -11,7 +11,6 @@ HOMEPAGE=		ftp://ftp.penguin.cz/pub/users/mhi/mscompress/
 COMMENT=		Microsoft "compress.exe/expand.exe" compatible (de)compressor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

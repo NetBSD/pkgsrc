@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/05/15 06:37:03 adam Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/11 19:47:03 asau Exp $
 
 DISTNAME=	zziplib-0.13.59
 CATEGORIES=	archivers
@@ -12,7 +12,6 @@ COMMENT=	Library for ZIP archive handling
 LICENSE=	gnu-lgpl-v2 OR mpl-1.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

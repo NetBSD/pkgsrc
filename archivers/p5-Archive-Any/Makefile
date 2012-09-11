@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/07 00:37:02 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 19:46:58 asau Exp $
 
 DISTNAME=	Archive-Any-0.0932
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,6 @@ DEPENDS+=		p5-Module-Find>=0.05:../../devel/p5-Module-Find
 DEPENDS+=		p5-Test-Warn>0:../../devel/p5-Test-Warn
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Archive/Any/.packlist
 PERL5_MODULE_TYPE=	Module::Build
