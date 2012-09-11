@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2012/07/25 11:33:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.89 2012/09/11 00:30:13 manu Exp $
 
 DISTNAME=	netatalk-2.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -51,7 +51,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/netatalk
 CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-ldap=no
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
