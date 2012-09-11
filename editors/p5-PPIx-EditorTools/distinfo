@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 18:27:38 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/09/11 09:02:04 sno Exp $
 
-SHA1 (PPIx-EditorTools-0.09.tar.gz) = 810f75ee98c378a4571b8ea951a06a317e3c0dce
-RMD160 (PPIx-EditorTools-0.09.tar.gz) = 693c12c9ae7bac8130c16db02b18c621b7adb3e4
-Size (PPIx-EditorTools-0.09.tar.gz) = 26003 bytes
+SHA1 (PPIx-EditorTools-0.17.tar.gz) = 7f818fc643de829278d097af6f04920cf7b78d44
+RMD160 (PPIx-EditorTools-0.17.tar.gz) = 5021afb0f1d62eba663ff17d7fa6958e441d94f6
+Size (PPIx-EditorTools-0.17.tar.gz) = 37993 bytes
