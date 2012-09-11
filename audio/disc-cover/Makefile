@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:59:30 asau Exp $
 #
 
 DISTNAME=	disc-cover-1.5.6
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.vanhemert.co.uk/disc-cover.html
 COMMENT=	Generation of CD covers
 
 DEPENDS+=	p5-Audio-CD>=0.05:../../audio/p5-Audio-CD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run pod2man
 REPLACE_PERL=		disc-cover

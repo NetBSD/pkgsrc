@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/07/22 09:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/12 00:24:35 asau Exp $
 #
 
 DISTNAME=	gnome-audio-2.22.2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Set of audio files for GNOME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
