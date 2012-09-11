@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/09/08 17:52:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/11 23:19:35 asau Exp $
 
 DISTNAME=	pkgnih-0.10.1
 PKGREVISION=	1
@@ -20,8 +20,6 @@ BUILD_DEPENDS+=		mk-configure>=0.21.0:../../devel/mk-configure
 
 CONFLICTS=		pkg_status-[0-9]*
 SUPERSEDES=		pkgnih-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		all all-doc
 INSTALL_TARGET=		install install-doc

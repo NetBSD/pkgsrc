@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/04/15 13:03:11 obache Exp $
+# $NetBSD: Makefile,v 1.32 2012/09/11 23:19:34 asau Exp $
 
 DISTNAME=	bootstrap-mk-files-20120415
 CATEGORIES=	pkgtools
@@ -10,8 +10,6 @@ CONFLICTS+=	mk-files-[0-9]*
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	*.mk files for the bootstrap bmake utility
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
 BOOTSTRAP_PKG=	yes

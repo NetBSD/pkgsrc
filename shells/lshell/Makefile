@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/12 19:44:21 gls Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/11 23:25:08 asau Exp $
 #
 
 DISTNAME=	lshell-0.9.15.1
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 PKG_GROUPS=	lshellg
 PKG_SHELL=	bin/lshell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# none
 

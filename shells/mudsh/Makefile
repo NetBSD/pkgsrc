@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/27 14:53:31 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/11 23:25:08 asau Exp $
 #
 
 DISTNAME=	mudsh
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xirium.com/tech/mud-shell/index.html
 COMMENT=	M.U.D. game-like shell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run

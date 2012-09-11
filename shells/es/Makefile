@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/05/07 12:02:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:25:08 asau Exp $
 
 DISTNAME=	es-0.9-alpha1
 PKGNAME=	es-0.9a1
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.sys.toronto.edu/pub/es/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hawkwind.cs.toronto.edu:8001/mlists/es.html
 COMMENT=	Extensible shell, derived from plan9's rc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	yacc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2010/06/06 03:45:17 dholland Exp $
+# $NetBSD: Makefile,v 1.80 2012/09/11 23:19:40 asau Exp $
 
 DISTNAME=	xpkgwedge-1.17
 CATEGORIES=	pkgtools devel x11
@@ -11,7 +11,6 @@ COMMENT=	Allows X11 pkgs to be built and used outside of $${X11BASE}
 LICENSE=	original-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty

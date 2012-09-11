@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/05/07 12:02:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 23:25:09 asau Exp $
 #
 
 DISTNAME=	posh_0.3.14
@@ -12,7 +12,6 @@ HOMEPAGE=	http://packages.debian.org/posh
 COMMENT=	Debian Policy-compliant Ordinary SHell
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 PKG_SHELL=		bin/posh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde4,v 1.16 2012/06/16 04:45:32 markd Exp $
+# $NetBSD: Makefile.kde4,v 1.17 2012/09/11 23:26:14 asau Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
@@ -23,8 +23,6 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS= _KDE_build
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build

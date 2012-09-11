@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 23:25:07 asau Exp $
 
 DISTNAME=	bash-doc-2.05b
 PKGNAME=	bash-doc-2.05.2
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	Documentation for the GNU Bourne Again Shell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	bash<=2.05nb1
 

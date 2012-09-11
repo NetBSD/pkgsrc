@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/09 00:48:12 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 23:19:37 asau Exp $
 
 DISTNAME=	pkg_leaves-1.2
 CATEGORIES=	pkgtools
@@ -7,8 +7,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Print leaf packages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
