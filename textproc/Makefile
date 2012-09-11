@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2012/08/26 12:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.640 2012/09/11 09:19:10 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -383,6 +383,7 @@ SUBDIR+=	p5-Text-MicroTemplate
 SUBDIR+=	p5-Text-Microformat
 SUBDIR+=	p5-Text-Ngram
 SUBDIR+=	p5-Text-PDF
+SUBDIR+=	p5-Text-Patch
 SUBDIR+=	p5-Text-Quoted
 SUBDIR+=	p5-Text-RecordParser
 SUBDIR+=	p5-Text-Reflow
