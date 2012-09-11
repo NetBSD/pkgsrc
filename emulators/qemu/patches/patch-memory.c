@@ -1,6 +1,6 @@
-$NetBSD: patch-memory.c,v 1.1 2012/06/07 21:23:46 ryoon Exp $
+$NetBSD: patch-memory.c,v 1.2 2012/09/11 17:13:45 asau Exp $
 
---- memory.c.orig	2012-06-01 09:13:13.000000000 +0000
+--- memory.c.orig	2012-09-05 14:03:06.000000000 +0000
 +++ memory.c
 @@ -311,7 +311,7 @@ static void memory_region_read_accessor(
      MemoryRegion *mr = opaque;

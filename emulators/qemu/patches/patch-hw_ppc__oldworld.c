@@ -1,8 +1,8 @@
-$NetBSD: patch-hw_ppc__oldworld.c,v 1.2 2012/06/07 21:23:46 ryoon Exp $
+$NetBSD: patch-hw_ppc__oldworld.c,v 1.3 2012/09/11 17:13:45 asau Exp $
 
 Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
 
---- hw/ppc_oldworld.c.orig	2012-06-01 09:13:13.000000000 +0000
+--- hw/ppc_oldworld.c.orig	2012-09-05 14:03:06.000000000 +0000
 +++ hw/ppc_oldworld.c
 @@ -60,7 +60,7 @@ static uint64_t translate_kernel_address
      return (addr & 0x0fffffff) + KERNEL_LOAD_ADDR;
@@ -13,7 +13,7 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
  {
      return (addr + TARGET_PAGE_SIZE - 1) & TARGET_PAGE_MASK;
  }
-@@ -175,7 +175,7 @@ static void ppc_heathrow_init (ram_addr_
+@@ -178,7 +178,7 @@ static void ppc_heathrow_init (ram_addr_
          }
          /* load initrd */
          if (initrd_filename) {
@@ -22,7 +22,7 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
              initrd_size = load_image_targphys(initrd_filename, initrd_base,
                                                ram_size - initrd_base);
              if (initrd_size < 0) {
-@@ -183,11 +183,11 @@ static void ppc_heathrow_init (ram_addr_
+@@ -186,11 +186,11 @@ static void ppc_heathrow_init (ram_addr_
                           initrd_filename);
                  exit(1);
              }

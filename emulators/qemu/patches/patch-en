@@ -1,6 +1,6 @@
-$NetBSD: patch-en,v 1.4 2012/06/07 21:23:46 ryoon Exp $
+$NetBSD: patch-en,v 1.5 2012/09/11 17:13:45 asau Exp $
 
---- tcg/arm/tcg-target.h.orig	2012-06-01 09:13:13.000000000 +0000
+--- tcg/arm/tcg-target.h.orig	2012-09-05 14:03:07.000000000 +0000
 +++ tcg/arm/tcg-target.h
 @@ -85,7 +85,7 @@ static inline void flush_icache_range(tc
                                        tcg_target_ulong stop)
