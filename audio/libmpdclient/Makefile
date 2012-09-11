@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/04 20:10:47 jakllsch Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/12 00:24:43 asau Exp $
 #
 
 DISTNAME=	libmpdclient-2.6
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mpd.wikia.com/wiki/ClientLib:libmpdclient
 COMMENT=	Asynchronous API library for interfacing MPD
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

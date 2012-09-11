@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:59:32 asau Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	Festival documentation, in (tex)info, html, dvi and ps formats
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

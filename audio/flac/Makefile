@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/01/24 17:11:18 heinz Exp $
+# $NetBSD: Makefile,v 1.46 2012/09/11 23:59:36 asau Exp $
 
 DISTNAME=	flac-1.2.1
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	Free lossless audio codec
 LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes

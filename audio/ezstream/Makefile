@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/14 07:45:30 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 23:59:31 asau Exp $
 #
 
 DISTNAME=		ezstream-0.5.4
@@ -14,7 +14,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-PKG_DESTDIR_SUPPORT=	user-destdir
 REPLACE_SH=		examples/meta.sh examples/play.sh
 
 .include "../../audio/libshout/buildlink3.mk"
