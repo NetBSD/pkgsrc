@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/04/15 22:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/11 22:37:14 asau Exp $
 
 DISTNAME=	nttcp-1.47
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	# http://home.leo.org/~elmar/nttcp/
 COMMENT=	New TCP testing and performance measuring tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

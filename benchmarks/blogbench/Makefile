@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/16 21:30:37 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/11 22:37:11 asau Exp $
 #
 
 DISTNAME=	blogbench-1.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blogbench.pureftpd.org/
 COMMENT=	Portable filesystem benchmark
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

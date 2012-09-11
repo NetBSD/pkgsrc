@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/14 07:44:47 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 22:37:15 asau Exp $
 
 DISTNAME=	sysbench-0.4.12
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sysbench/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sysbench.sourceforge.net/
 COMMENT=	Modular, cross-platform and multi-threaded benchmark tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

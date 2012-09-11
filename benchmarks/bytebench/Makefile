@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/04/04 10:49:37 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/11 22:37:11 asau Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		${DISTNAME:S/unix/byte/}
@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		BYTE Magazine's Public Domain benchmark for UNIX
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BENCHMARK_ENV+=		BINDIR=${WRKSRC}/pgms
 BENCHMARK_ENV+=		SCRPDIR=${WRKSRC}/pgms

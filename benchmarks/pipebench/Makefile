@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/11 10:33:21 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/11 22:37:14 asau Exp $
 #
 
 DISTNAME=	pipebench-0.40
@@ -8,8 +8,6 @@ MASTER_SITES=	# ftp://ftp.habets.pp.se/pub/synscan/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.habets.pp.se/synscan/programs.php?prog=pipebench
 COMMENT=	Measures the speed of a pipe
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 
