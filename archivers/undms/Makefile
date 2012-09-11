@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/03/11 10:09:45 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 19:47:02 asau Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Converts .dms Amiga disk images to uncompressed .adf images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
