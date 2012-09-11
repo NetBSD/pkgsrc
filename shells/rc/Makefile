@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/05/07 12:02:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/11 23:25:09 asau Exp $
 
 DISTNAME=       rc-1.7
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=   http://www-ftp.lip6.fr/pub/unix/shells/rc/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plan9.bell-labs.com/sys/doc/rc.html
 COMMENT=	Unix incarnation of the plan9 shell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-history
