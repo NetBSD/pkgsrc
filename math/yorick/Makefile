@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/02/04 15:01:20 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/11 23:04:36 asau Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yorick.sourceforge.net/
 COMMENT=	Numerical algebra system (similar to Matlab)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/yorick-1.6

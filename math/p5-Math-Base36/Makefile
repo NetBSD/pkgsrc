@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/23 12:38:35 wen Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/11 23:04:26 asau Exp $
 #
 
 DISTNAME=	Math-Base36-0.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Math-Base36/
 COMMENT=	Perl 5 module to encode and decode base36 strings
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Math/Base36/.packlist

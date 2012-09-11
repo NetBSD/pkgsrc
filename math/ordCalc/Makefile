@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/24 19:43:27 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/11 23:04:25 asau Exp $
 #
 
 ORDCALCVER=	0.2
@@ -17,8 +17,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c++
 USE_TOOLS+=	bash bison flex gmake
 USE_LIBTOOL=	yes
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 BUILD_TARGET=	EXE
 TEST_TARGET=	TEST
