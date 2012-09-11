@@ -1,9 +1,9 @@
-$NetBSD: patch-eg,v 1.4 2012/06/07 21:23:46 ryoon Exp $
+$NetBSD: patch-eg,v 1.5 2012/09/11 17:13:45 asau Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
 
---- hw/etraxfs_eth.c.orig	2012-06-01 09:13:13.000000000 +0000
+--- hw/etraxfs_eth.c.orig	2012-09-05 14:03:06.000000000 +0000
 +++ hw/etraxfs_eth.c
 @@ -184,7 +184,7 @@ static void mdio_read_req(struct qemu_md
  
