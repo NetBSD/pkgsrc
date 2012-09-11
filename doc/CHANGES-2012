@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2894 2012/09/11 09:02:14 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2895 2012/09/11 09:18:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4440,3 +4440,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-ORLite to 1.97 [sno 2012-09-11]
 	Updated devel/p5-PPIx-Regexp to 0.028 [sno 2012-09-11]
 	Updated editors/p5-PPIx-EditorTools to 0.17 [sno 2012-09-11]
+	Added textproc/p5-Text-Patch version 1.8 [sno 2012-09-11]
