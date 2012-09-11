@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:44:06 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/11 23:04:20 asau Exp $
 #
 
 DISTNAME=	geg-1.0.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.infolaunch.com/~daveb/
 MAINTAINER=	chris@infolaunch.com
 HOMEPAGE=	http://www.infolaunch.com/~daveb/
 COMMENT=	Program for drawing 2D math functions within a nice GUI
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
