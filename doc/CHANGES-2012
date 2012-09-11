@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2881 2012/09/11 07:38:44 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2882 2012/09/11 07:44:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Set-Array to 0.26 [wen 2012-09-10]
 	Updated wm/pekwm to 0.1.15 [gls 2012-09-10]
 	Updated devel/p5-UNIVERSAL-can to 1.20120726 [sno 2012-09-11]
+	Updated www/p5-CGI to 3.60 [sno 2012-09-11]
