@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/02/15 19:15:04 hans Exp $
+# $NetBSD: Makefile,v 1.52 2012/09/11 19:46:53 asau Exp $
 #
 
 DISTNAME=	bzip2-1.0.6
@@ -12,7 +12,6 @@ COMMENT=	Block-sorting file compressor
 DISTFILES=	# empty
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 REPLACE_SH=	bzdiff bzgrep bzmore
 
 MAKE_JOBS_SAFE=		no

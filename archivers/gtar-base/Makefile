@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/06/01 16:43:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.76 2012/09/11 19:46:55 asau Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	gcpio-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES=		snprintf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/08/23 11:59:00 adam Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:57 asau Exp $
 
 DISTNAME=	lzo-2.06
 CATEGORIES=	archivers
@@ -11,7 +11,6 @@ COMMENT=	Portable lossless data compression library
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
