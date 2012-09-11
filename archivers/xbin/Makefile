@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/03/04 19:50:56 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/11 19:47:03 asau Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -17,7 +17,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/03/15 11:53:20 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 19:47:00 asau Exp $
 #
 
 DISTNAME=	archive-2.0
@@ -14,8 +14,6 @@ COMMENT=	Simple archiver
 
 # no real libraries there
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Archive
 DIST_SUBDIR=	rox

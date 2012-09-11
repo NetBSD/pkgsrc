@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/06 08:35:15 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/11 19:47:01 asau Exp $
 #
 
 DISTNAME=	trrntzip_v02_src
@@ -12,7 +12,6 @@ COMMENT=	Create identical zip archives from identical files
 
 USE_TOOLS+=	aclocal autoconf automake autoheader
 GNU_CONFIGURE=	yes
-PKG_DESTDIR_SUPPORT=    user-destdir
 INSTALLATION_DIRS=	share/doc/torrentzip
 
 WRKSRC=	${WRKDIR}/trrntzip

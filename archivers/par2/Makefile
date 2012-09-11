@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/21 15:07:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 19:46:59 asau Exp $
 #
 
 DISTNAME=		par2cmdline-0.4
@@ -13,7 +13,6 @@ COMMENT=		Create or use PAR2 parity volumes
 LICENSE=		gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

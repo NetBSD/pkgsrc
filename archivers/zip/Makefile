@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/09/07 12:57:14 adam Exp $
+# $NetBSD: Makefile,v 1.62 2012/09/11 19:47:03 asau Exp $
 
 DISTNAME=	zip30
 PKGNAME=	zip-3.0
@@ -13,7 +13,6 @@ COMMENT=	Create/update ZIP files compatible with pkzip
 LICENSE=	info-zip
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	unix/Makefile
 
