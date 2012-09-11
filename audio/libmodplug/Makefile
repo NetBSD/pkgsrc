@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/08/09 19:29:27 gls Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/12 00:24:42 asau Exp $
 #
 
 DISTNAME=		libmodplug-0.8.8.4
@@ -11,7 +11,6 @@ COMMENT=		Library for decoding mod-like music formats
 LICENSE=		public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

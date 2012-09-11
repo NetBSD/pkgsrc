@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2011/04/09 13:20:20 shattered Exp $
+# $NetBSD: Makefile.common,v 1.34 2012/09/12 00:24:41 asau Exp $
 # used by audio/libao-arts/Makefile
 # used by audio/libao-esound/Makefile
 # used by audio/libao-macosx/Makefile
@@ -13,8 +13,6 @@ MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ao/
 COMMENT=	Cross-platform audio library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=	${.CURDIR}/../../audio/libao/distinfo
 PATCHDIR=	${.CURDIR}/../../audio/libao/patches

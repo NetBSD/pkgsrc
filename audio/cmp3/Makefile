@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/11 23:59:28 asau Exp $
 #
 
 DISTNAME=	cmp3-2.0pre6
@@ -13,8 +13,6 @@ COMMENT=	Curses based frontend to mpg123
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/cmp3-kenrevs
 USE_TOOLS+=		gmake

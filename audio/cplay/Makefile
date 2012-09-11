@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/23 12:05:07 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 23:59:29 asau Exp $
 
 DISTNAME=		cplay-1.49
 PKGREVISION=		4
@@ -11,8 +11,6 @@ COMMENT=		Curses front-end for various audio players
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_PATCH_SCRIPTS=	cplay
 

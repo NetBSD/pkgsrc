@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/07/01 19:05:12 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2012/09/12 00:24:40 asau Exp $
 #
 
 DISTNAME=		kid3-1.6
@@ -10,8 +10,6 @@ MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://kid3.sourceforge.net/
 COMMENT=		ID3 tagger for KDE 3
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes

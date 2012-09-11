@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/01/26 06:34:19 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/12 00:24:40 asau Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -13,8 +13,6 @@ JACK_VERSION=	0.115.1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jackaudio.org/
 COMMENT=	JACK audio connection kit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		JACKD_DEFAULT_TMPDIR
 BUILD_DEFS+=		JACKD_PROCFS_PATH

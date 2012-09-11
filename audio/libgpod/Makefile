@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/07 19:16:10 adam Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/12 00:24:42 asau Exp $
 
 DISTNAME=	libgpod-0.8.2
 PKGREVISION=	4
@@ -10,8 +10,6 @@ MAINTAINER=	srp@tworoads.net
 HOMEPAGE=	http://www.gtkpod.org/wiki/Libgpod
 COMMENT=	Library for accessing iPod onboard databases, playlists, etc
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE=	libgpod-1.0.pc.in
 

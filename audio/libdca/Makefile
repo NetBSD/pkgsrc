@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/10 13:20:10 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/12 00:24:41 asau Exp $
 #
 
 DISTNAME=	libdca-0.0.5
@@ -10,8 +10,6 @@ MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.videolan.org/developers/libdca.html
 COMMENT=	DTS Coherent Acoustics decoder
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Unresolved patent issue
 NO_BIN_ON_CDROM=${RESTRICTED}

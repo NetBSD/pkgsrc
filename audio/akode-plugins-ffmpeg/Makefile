@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/28 09:39:17 marino Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/11 23:59:22 asau Exp $
 #
 
 PKGNAME=		akode-plugins-ffmpeg-${AKODE_VERSION}
@@ -12,8 +12,6 @@ LICENSE=		gnu-lgpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/akode/distinfo
 PATCHDIR=		${.CURDIR}/../../audio/akode/patches
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-ffmpeg
 

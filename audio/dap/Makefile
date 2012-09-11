@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/02/06 12:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2012/09/11 23:59:30 asau Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	scw@NetBSD.org
 HOMEPAGE=	http://www.cee.hw.ac.uk/~richardk/
 COMMENT=	Digital audio recording and processing package
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

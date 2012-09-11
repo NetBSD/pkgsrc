@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/07 19:16:07 adam Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 23:59:27 asau Exp $
 #
 
 DISTNAME=	bsl-0.5.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://buzztard.sourceforge.net/
 COMMENT=	Buzz song loader
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

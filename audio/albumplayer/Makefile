@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/07 19:16:05 adam Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/11 23:59:23 asau Exp $
 #
 
 DISTNAME=	albumplayer-0.3.1
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 USE_DIRS+=		xdg-1.1
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	share/applications
 REPLACE_SH=		ap_flac_embed
 

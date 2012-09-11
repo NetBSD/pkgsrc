@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/02/10 22:10:05 zafer Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/11 23:59:33 asau Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
@@ -16,8 +16,6 @@ DEPENDS+=	festlex-ogi>=2.0:../../audio/festlex-ogi
 DEPENDS+=	festogi-spanish>=2.0:../../audio/festogi-spanish
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.81 2012/03/03 00:11:55 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2012/09/11 23:59:25 asau Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	7
 CATEGORIES=	audio
 HOMEPAGE=	http://multimedia.kde.org/
 COMMENT=	Analog Real-Time Synthesizer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 

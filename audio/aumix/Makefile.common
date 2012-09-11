@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2012/07/17 21:26:47 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.9 2012/09/11 23:59:25 asau Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
@@ -13,8 +13,6 @@ MAINTAINER=	trevor@jpj.net
 HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 COMMENT=	Set mix levels
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/aumix/distinfo
 PATCHDIR=		${.CURDIR}/../../audio/aumix/patches

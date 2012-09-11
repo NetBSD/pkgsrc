@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/11/13 14:47:26 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/11 23:59:30 asau Exp $
 
 DISTNAME=		daapd-0.2.4b
 PKGREVISION=		1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		nathanw@NetBSD.org
 HOMEPAGE=		http://www.deleet.de/projekte/daap/daapd/
 COMMENT=		Server for DAA protocol (iTunes)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

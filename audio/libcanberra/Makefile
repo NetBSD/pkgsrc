@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/07 19:16:09 adam Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/12 00:24:41 asau Exp $
 
 DISTNAME=	libcanberra-0.26
 PKGREVISION=	7
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0pointer.de/lennart/projects/libcanberra/
 COMMENT=	Desktop event sound library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

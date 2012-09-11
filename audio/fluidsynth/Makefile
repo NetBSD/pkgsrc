@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/08/19 21:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 23:59:37 asau Exp $
 
 DISTNAME=	fluidsynth-1.1.6
 CATEGORIES=	audio
@@ -11,7 +11,6 @@ COMMENT=	Software synthesizer based on SoundFont2
 LICENSE=	gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

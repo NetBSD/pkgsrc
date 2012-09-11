@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/01/21 21:21:50 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/12 00:24:39 asau Exp $
 #
 
 DISTNAME=	dgguspat
@@ -15,7 +15,6 @@ RESTRICTED=		Uses copyrighted patches
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
 USE_LANGUAGES=		# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/09/07 19:16:09 adam Exp $
+# $NetBSD: Makefile,v 1.44 2012/09/12 00:24:38 asau Exp $
 #
 
 DISTNAME=	gtkpod-1.0.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtkpod.org/
 COMMENT=	GUI for iPod using GTK2
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
