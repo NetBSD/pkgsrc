@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 01:10:05 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/11 20:32:12 asau Exp $
 
 DISTNAME=	fastDNAml_1.2.2
 PKGNAME=	fastDNAml-1.2.2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml/
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml.html
 COMMENT=	Program derived from Joseph Felsenstein's version 3.3 DNAML
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 

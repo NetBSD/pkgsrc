@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/08/14 14:17:42 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/11 20:36:18 asau Exp $
 #
 
 DISTNAME=	Parallel-Pvm-1.4.0
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csm.ornl.gov/pvm/pvm_home.html
 #HOMEPAGE=	http://search.cpan.org/dist/Parallel-Pvm/
 COMMENT=	Perl module for PVM (Parallel Virtual Machine)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PVM_ROOT?=		${LOCALBASE}/pvm3
 CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT:Q} PVM_ARCH=${PVM_ARCH:Q}
