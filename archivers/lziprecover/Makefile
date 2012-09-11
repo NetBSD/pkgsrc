@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/14 14:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/11 19:46:57 asau Exp $
 
 DISTNAME=	lziprecover-1.13
 CATEGORIES=	archivers
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/lzip/lziprecover.html
 COMMENT=	Recovery tool for lossless data compressor based on the LZMA algorithm
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++
 HAS_CONFIGURE=		yes
