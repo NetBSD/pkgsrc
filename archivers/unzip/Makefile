@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2012/04/27 06:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2012/09/11 19:47:02 asau Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -13,7 +13,6 @@ COMMENT=	List, test and extract compressed files in a ZIP archive
 LICENSE=	info-zip
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_SH=	unix/zipgrep
 

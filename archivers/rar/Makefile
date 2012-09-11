@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2012/04/04 21:22:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2012/09/11 19:47:00 asau Exp $
 #
 
 DISTNAME=	# overridden
@@ -18,8 +18,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rar

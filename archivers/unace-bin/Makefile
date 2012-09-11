@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/19 08:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 19:47:01 asau Exp $
 #
 
 DISTNAME=	linunace25
@@ -15,8 +15,6 @@ LICENSE=		unace-license
 RESTRICTED=		Only original file distribution.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base compat

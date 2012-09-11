@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:13 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/11 19:46:59 asau Exp $
 
 DISTNAME=	prc
 PKGNAME=	pdbar-0.5.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.djw.org/product/palm/par/
 COMMENT=	Palm database archiver
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2010/02/27 03:35:11 taca Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 19:47:00 asau Exp $
 
 MODNAME=		zlib
 CATEGORIES+=		archivers
 COMMENT=		PHP extension for zlib compression
 
 CONFLICTS=	php-zlib-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-${MODNAME}-dir=${BUILDLINK_DIR}
 
