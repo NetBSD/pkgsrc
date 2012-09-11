@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/06/04 09:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/11 23:59:21 asau Exp $
 #
 
 DISTNAME=		SDL_sound-1.0.3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://icculus.org/SDL_sound/downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://icculus.org/SDL_sound/
 COMMENT=		SDL library to handle the decoding of different file formats
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

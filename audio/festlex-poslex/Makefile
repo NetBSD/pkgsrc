@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 23:59:32 asau Exp $
 
 DISTNAME=	festlex_POSLEX
 PKGNAME=	festlex-poslex-1.4.0
@@ -12,8 +12,6 @@ COMMENT=	English lexicon suitable for use with Festival
 
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

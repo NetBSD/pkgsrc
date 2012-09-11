@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/06/24 07:38:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 23:59:30 asau Exp $
 #
 
 DISTNAME=	eawpats12_full
@@ -14,8 +14,6 @@ LICENSE=	generic-nonlicense
 RESTRICTED=	Some patches are copyrighted, some marked no-commercial-use
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes

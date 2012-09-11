@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/11 23:59:35 asau Exp $
 
 DISTNAME=	festvox_rablpc8k
 PKGNAME=	festvox-rab8-1.4.0
@@ -17,8 +17,6 @@ DEPENDS+=	festlex-oald>=1.4.0:../../audio/festlex-oald
 USE_TOOLS+=	pax
 
 CONFLICTS=	festvox-rab16-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

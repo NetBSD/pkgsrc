@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/09/07 19:16:08 adam Exp $
+# $NetBSD: Makefile,v 1.51 2012/09/12 00:24:34 asau Exp $
 #
 
 DISTNAME=		gmpc-0.20.0
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gmpc.wikia.com/wiki/Gnome_Music_Player_Client
 COMMENT=		GNOME client for the Music Player Daemon
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

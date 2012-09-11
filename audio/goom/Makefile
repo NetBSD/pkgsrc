@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/12 00:24:35 asau Exp $
 #
 
 DISTNAME=		goom-2k4-0-src
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=goom/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ios-software.com/index.php3?page=projet&quoi=1&lg=AN
 COMMENT=		Visual effects generator for mp3 players
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/goom2k4-0
 USE_PKGLOCALEDIR=	yes

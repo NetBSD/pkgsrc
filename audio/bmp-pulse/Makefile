@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/07 19:16:07 adam Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 23:59:27 asau Exp $
 #
 
 DISTNAME=	xmms-pulse-0.9.4
@@ -10,8 +10,6 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/xmms-pulse/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0pointer.de/lennart/projects/xmms-pulse/
 COMMENT=	BMP output plugin for the PulseAudio sound server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:59:34 asau Exp $
 
 DISTNAME=	voice_ogirab_di-2.0
 PKGNAME=	festvox-ogirab-2.0
@@ -15,8 +15,6 @@ DEPENDS+=	festival>=1.4.0:../../audio/festival
 DEPENDS+=	festlex-ogi>=2.0:../../audio/festlex-ogi
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

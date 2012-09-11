@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/03 00:12:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/12 00:24:42 asau Exp $
 #
 
 DISTNAME=	libmp3splt-0.7
@@ -10,8 +10,6 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://mp3splt.sourceforge.net/
 COMMENT=	Utility library for MP3 splitting/manipulation
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

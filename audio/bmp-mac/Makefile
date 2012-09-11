@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/07 19:16:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/11 23:59:26 asau Exp $
 #
 
 DISTNAME=	bmp-mac-0.1.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://distfiles.aydogan.net/audio/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://sourceforge.net/projects/mac-port/
 COMMENT=	BMP plugin for Monkey's Audio files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

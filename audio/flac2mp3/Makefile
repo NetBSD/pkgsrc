@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/23 03:11:15 snj Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/11 23:59:36 asau Exp $
 
 DISTNAME=	flac2mp3
 PKGNAME=	flac2mp3-20041223
@@ -16,7 +16,6 @@ DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	p5-MP3-Info-[0-9]*:../../audio/p5-MP3-Info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL=	flac2mp3.pl
 USE_TOOLS+=	perl:run

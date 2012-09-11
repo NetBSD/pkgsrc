@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:42:52 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 23:59:37 asau Exp $
 #
 
 DISTNAME=	freezetag-0.9.2
@@ -9,8 +9,6 @@ MASTER_SITES=	# http://katz.linuxpower.org/freezetag/current/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://katz.linuxpower.org/freezetag/
 COMMENT=	Id3 tag editor for GTK+-1.2.0 and higher
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/07/01 15:52:58 heinz Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/12 00:24:41 asau Exp $
 #
 
 DISTNAME=	a52dec-0.7.4
@@ -10,8 +10,6 @@ MASTER_SITES=	http://liba52.sourceforge.net/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://liba52.sourceforge.net/
 COMMENT=	Free ATSC A/52 stream decoder library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

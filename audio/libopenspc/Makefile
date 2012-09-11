@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 12:55:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/12 00:24:43 asau Exp $
 #
 
 DISTNAME=	OpenSPC_snap-20050926
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.comcast.net/~brad.martin1/
 COMMENT=	Library and player for SPC sound files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/libopenspc-0.3.99
 GNU_CONFIGURE=	yes

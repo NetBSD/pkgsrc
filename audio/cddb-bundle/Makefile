@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 08:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 23:59:28 asau Exp $
 #
 
 DISTNAME=	cddb.bundle-0.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gsburn.sourceforge.net/
 COMMENT=	CDDB client bundle
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/cddb.bundle
 NO_CONFIGURE=	yes

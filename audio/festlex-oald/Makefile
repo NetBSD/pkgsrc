@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:59:32 asau Exp $
 
 DISTNAME=	festlex_OALD
 PKGNAME=	festlex-oald-1.4.0
@@ -14,8 +14,6 @@ LICENSE=	no-commercial-use
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/09/07 19:16:09 adam Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/12 00:24:39 asau Exp $
 
 DISTNAME=	hydrogen-0.9.4.2
 PKGREVISION=	6
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hydrogen/}
 MAINTAINER=	chris.wareham@btinternet.com
 HOMEPAGE=	http://www.hydrogen-music.org/
 COMMENT=	Real time drum machine/sequencer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

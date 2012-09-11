@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 23:59:36 asau Exp $
 
 DISTNAME=	festvox_us1
 PKGNAME=	festvox-us1-1.4.0
@@ -18,8 +18,6 @@ DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
 DEPENDS+=	mbrolavox-us1-980512{,nb[0-9]*}:../../audio/mbrolavox-us1
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

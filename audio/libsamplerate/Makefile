@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/07/04 08:58:09 adam Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/12 00:24:44 asau Exp $
 
 DISTNAME=	libsamplerate-0.1.8
 CATEGORIES=	audio
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/SRC/
 COMMENT=	Sample rate converter library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

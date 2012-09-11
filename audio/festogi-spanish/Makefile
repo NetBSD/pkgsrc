@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/11 23:59:33 asau Exp $
 
 DISTNAME=	OGIspanish-2.0.1
 PKGNAME=	festogi-spanish-2.0.1
@@ -14,8 +14,6 @@ LICENSE=	no-commercial-use
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

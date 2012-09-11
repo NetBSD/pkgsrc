@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2009/02/24 15:04:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/09/12 00:24:35 asau Exp $
 #
 # used by audio/gnome-speech/Makefile
 # used by audio/gnome-speech-espeak/Makefile
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-speech/0.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	http://www.gnome.org/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCHDIR=	${.CURDIR}/../gnome-speech/patches
 DISTINFO_FILE=	${.CURDIR}/../gnome-speech/distinfo

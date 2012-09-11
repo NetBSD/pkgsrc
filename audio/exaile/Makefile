@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/09/07 19:16:07 adam Exp $
+# $NetBSD: Makefile,v 1.32 2012/09/11 23:59:31 asau Exp $
 #
 
 DISTNAME=	exaile_0.2.14
@@ -13,7 +13,6 @@ COMMENT=	Music player
 LICENSE=	gnu-gpl-v2 # or later
 
 WRKSRC=		${WRKDIR}/exaile-0.2.14
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake intltool msgfmt

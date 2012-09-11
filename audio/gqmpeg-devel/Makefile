@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/09/07 19:16:09 adam Exp $
+# $NetBSD: Makefile,v 1.37 2012/09/12 00:24:35 asau Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 PKGREVISION=		17
@@ -9,8 +9,6 @@ MAINTAINER=		sekiya@NetBSD.org
 HOMEPAGE=		http://gqmpeg.sourceforge.net/
 COMMENT=		GTK+ front end to mpg123
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		mpg123{,-esound,-nas}>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools

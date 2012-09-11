@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/07 19:16:08 adam Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/12 00:24:34 asau Exp $
 #
 
 DISTNAME=	gmpc-last-fm-0.20.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmpc.wikia.com/wiki/Last.fm
 COMMENT=	GMPC plugin for fetching cover and artist art from last.fm
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

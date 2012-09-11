@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/06/03 21:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2012/09/12 00:24:42 asau Exp $
 
 DISTNAME=	libmikmod-3.2.0
 CATEGORIES=	audio
@@ -9,7 +9,6 @@ HOMEPAGE=	http://mikmod.raphnet.net/
 COMMENT=	MikMod Sound Library
 LICENSE=	gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		autoconf gmake makeinfo
