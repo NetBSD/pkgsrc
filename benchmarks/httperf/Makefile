@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/07/08 14:22:52 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/11 22:37:12 asau Exp $
 
 DISTNAME=	httperf-0.8
 CATEGORIES=	benchmarks www
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.hpl.hp.com/research/linux/httperf/
 COMMENT=	Popular web server benchmarking program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no

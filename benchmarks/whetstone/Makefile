@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/02/22 14:15:28 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/11 22:37:15 asau Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Benchmark for processors that gives you a MIPS rating
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
