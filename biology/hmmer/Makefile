@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/08 15:20:04 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 20:32:12 asau Exp $
 #
 
 DISTNAME=		hmmer-2.3.2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://hmmer.janelia.org/
 COMMENT=		Implementation of profile HMM software for protein sequence analysis
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

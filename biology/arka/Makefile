@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:43:02 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 20:32:10 asau Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -12,9 +12,6 @@ HOMEPAGE=	http://www.bioinformatics.org/genpak/
 COMMENT=	Graphic interface for the programs from the GP package
 
 DEPENDS+=	gp-[0-9]*:../../biology/gp
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 
 CONF_FILES=	${PREFIX}/share/examples/arka/arkarc ${PKG_SYSCONFDIR}/arkarc
 CPPFLAGS+=	-DARKA_GLOBAL=\"${PKG_SYSCONFDIR}/arkarc\"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 07:44:44 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 20:32:11 asau Exp $
 #
 
 DISTNAME=	bodr-9
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://blueobelisk.org/
 COMMENT=	Blue Obelisk Data Repository
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake perl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/06/12 23:36:30 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 20:36:17 asau Exp $
 
 DISTNAME=	openmpi-1.6
 CATEGORIES=	parallel
@@ -11,8 +11,6 @@ COMMENT=	Open source MPI-2 implementation
 
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	mpich2-[0-9]*	# installs bin/mpicc & other wrappers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77

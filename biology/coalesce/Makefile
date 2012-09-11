@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/16 22:15:57 zafer Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 20:32:11 asau Exp $
 #
 
 DISTNAME=	coalesce1.5b
@@ -9,8 +9,6 @@ MASTER_SITES=	http://evolution.genetics.washington.edu/lamarc/coalesce/
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://evolution.genetics.washington.edu/lamarc/coalesce.html
 COMMENT=	Estimates effective population size and mutation rate
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/coalesce1.5beta
 BUILD_TARGET=	coalesce

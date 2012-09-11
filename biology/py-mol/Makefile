@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/04/08 19:08:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/11 20:32:14 asau Exp $
 
 DISTNAME=	pymol-v1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
@@ -16,8 +16,6 @@ USE_TOOLS+=	csh:run
 
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-Pmw-[0-9]*:../../x11/py-Pmw
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pymol
 
