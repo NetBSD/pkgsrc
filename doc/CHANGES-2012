@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2890 2012/09/11 08:35:51 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2891 2012/09/11 08:49:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4436,3 +4436,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Test-Class to 0.37 [sno 2012-09-11]
 	Updated devel/p5-Debug-Client to 0.20 [sno 2012-09-11]
 	Updated devel/p5-File-Next to 1.10 [sno 2012-09-11]
+	Updated databases/p5-ORLite-Migrate to 1.10 [sno 2012-09-11]
