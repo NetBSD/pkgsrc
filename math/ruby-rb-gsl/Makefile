@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/05/10 11:24:56 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/11 23:04:33 asau Exp $
 
 DISTNAME=	rb-gsl-1.14.7
 CATEGORIES=	math ruby
@@ -10,8 +10,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rb-gsl.rubyforge.org/
 COMMENT=	Ruby interface to the GNU Scientific Library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_SETUP=	yes
 USE_TOOLS=	pax
