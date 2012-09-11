@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/06/30 00:07:09 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/11 19:46:52 asau Exp $
 
 DISTNAME=	arj-3.10.22
 CATEGORIES=	archivers
@@ -9,7 +9,6 @@ HOMEPAGE=	http://arj.sourceforge.net/
 COMMENT=	Open-source ARJ archiver
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
