@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/02/16 19:05:40 hans Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/11 23:04:33 asau Exp $
 
 DISTNAME=	randlib.c-1.3
 PKGNAME=	randlib-1.3
@@ -15,7 +15,6 @@ WRKSRC=		${WRKDIR}/randlib.c/src
 MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
 USE_BSD_MAKEFILE=	yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	include lib share/doc/randlib share/examples/randlib
 MAKE_FLAGS+=		MKPROFILE=yes
 
