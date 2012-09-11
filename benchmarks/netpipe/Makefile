@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/10/16 10:15:56 adam Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/11 22:37:13 asau Exp $
 
 DISTNAME=	NetPIPE-3.7.1
 PKGNAME=	netpipe-3.7.1
@@ -11,7 +11,6 @@ COMMENT=	TCP/PVM/MPI testing and performance measuring tool
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 CFLAGS+=	-DHAVE_GETRUSAGE

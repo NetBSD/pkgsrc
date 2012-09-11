@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/04/15 22:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/11 22:37:15 asau Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -13,7 +13,6 @@ COMMENT=	TCP testing and performance measuring tool
 LICENSE=	public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 MAKE_ENV+=		NOGCCERROR=yes

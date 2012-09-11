@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/01/25 00:30:09 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/11 22:37:12 asau Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://performance.netlib.org/performance/html/flops.html
 COMMENT=		Floating point benchmark to give your MFLOPS rating
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 

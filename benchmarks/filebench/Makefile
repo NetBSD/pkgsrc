@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/02 17:43:16 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/11 22:37:12 asau Exp $
 
 DISTNAME=	filebench-1.4.9.1
 CATEGORIES=	benchmarks
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filebench/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://filebench.sf.net/
 COMMENT=	File system and storage benchmark
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
