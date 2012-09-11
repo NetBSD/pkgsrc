@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/07 15:14:04 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/12 00:24:40 asau Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.moll.no/oyvind/distfiles/
 MAINTAINER=	mob@bicekru.org
 #HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
 COMMENT=	Simple ncurses based jukebox
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
