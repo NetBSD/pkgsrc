@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/28 05:13:32 dsainty Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 19:47:01 asau Exp $
 
 DISTNAME=	sarab-0.2.4
 CATEGORIES=	archivers
@@ -10,8 +10,6 @@ COMMENT=	Schedule And Rotate Automatic Backups
 #LICENSE=	GPL
 
 DEPENDS+=	dar-[0-9]*:../../archivers/dar
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bash:run
 PKG_SYSCONFSUBDIR=	sarab

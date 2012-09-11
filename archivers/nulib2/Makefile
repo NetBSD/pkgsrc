@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/11/26 04:39:19 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/11 19:46:58 asau Exp $
 #
 
 DISTNAME=	nulibdist-203
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.nulib.com/
 COMMENT=	Handles Apple II ShrinkIt (NuFX) file/disk archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
