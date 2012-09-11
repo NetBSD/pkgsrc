@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/02/06 06:24:53 sbd Exp $
+# $NetBSD: Makefile,v 1.37 2012/09/11 22:37:10 asau Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=		4
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.fftw.org/benchfft/
 COMMENT=		Benchmark your machine with a number of FFT algorithms
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake csh:run
