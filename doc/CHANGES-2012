@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2884 2012/09/11 07:52:17 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.2885 2012/09/11 07:55:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4430,3 +4430,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-CGI to 3.60 [sno 2012-09-11]
 	Updated devel/p5-UNIVERSAL-isa to 1.20120726 [sno 2012-09-11]
 	Updated net/samba35 to 3.5.16nb1 [sbd 2012-09-11]
+	Updated devel/p5-Test-MockObject to 1.20120301 [sno 2012-09-11]
