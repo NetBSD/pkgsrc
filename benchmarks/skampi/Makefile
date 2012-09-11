@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/05/16 11:16:19 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 22:37:14 asau Exp $
 #
 
 DISTNAME=	skampi
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
 COMMENT=	MPI (Message Passing Interface) benchmarks
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/skampi-5.0.4-r0355
