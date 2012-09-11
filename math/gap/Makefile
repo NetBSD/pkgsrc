@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/06/19 01:41:32 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/11 23:04:20 asau Exp $
 #
 
 DISTNAME=	gap4r3
@@ -18,8 +18,6 @@ LICENSE=	no-commercial-use
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
 

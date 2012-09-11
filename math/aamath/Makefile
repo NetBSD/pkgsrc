@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/16 22:31:46 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 23:04:16 asau Exp $
 #
 
 DISTNAME=	aamath-0.3
@@ -10,7 +10,6 @@ MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://fuse.superglue.se/aamath/
 COMMENT=	ASCII art mathematics
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 WRKSRC=		${WRKDIR}/aamath

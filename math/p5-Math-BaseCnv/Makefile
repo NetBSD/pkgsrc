@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/16 22:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/11 23:04:26 asau Exp $
 #
 
 DISTNAME=	Math-BaseCnv-1.8.B59BrZX
@@ -17,7 +17,6 @@ BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Math/BaseCnv/.packlist
 

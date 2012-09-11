@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/03/17 21:00:49 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 23:04:22 asau Exp $
 
 DISTNAME=		libffm.0.28
 PKGNAME=		libffm-0.28
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Fast alpha-optimized replacement for some libm routines
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 

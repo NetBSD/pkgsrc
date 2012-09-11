@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/11 23:04:31 asau Exp $
 #
 
 DISTNAME=	fpconst-0.7.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://pypi.python.org/packages/source/f/fpconst/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://research.warnes.net/projects/RStatServer/fpconst/
 COMMENT=	IEEE 754 floating point special handling for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

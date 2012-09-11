@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/08/11 20:06:25 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/11 23:04:25 asau Exp $
 #
 
 DISTNAME=	newmat11
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.robertnz.net/ftp/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.robertnz.net/ol_doc.htm
 COMMENT=	Newmat C++ Matrix Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	nm_cc.mak

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/20 09:52:14 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/11 23:04:31 asau Exp $
 #
 
 DISTNAME=		pyephem-3.7.3.4
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rhodesmill.org/brandon/projects/pyephem.html
 COMMENT=		Scientific-grade astronomical computations for Python
 LICENSE=		gnu-lgpl-v3 OR gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-test:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} ${MAKE_ENV} \

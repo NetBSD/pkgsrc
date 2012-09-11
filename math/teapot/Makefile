@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/04 14:45:32 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/11 23:04:34 asau Exp $
 #
 
 DISTNAME=	teapot-1.09
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.moria.de/~michael/teapot/
 COMMENT=	Curses based spread sheet program
 LICENSE=	teapot-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${TEA_DOCSDIR} ${EGDIR}
 
 EGDIR=		share/examples/teapot

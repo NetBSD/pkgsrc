@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.16 2012/08/02 14:35:01 mishka Exp $
+# $NetBSD: Makefile.extension,v 1.17 2012/09/11 23:04:16 asau Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -15,7 +15,6 @@ DIST_SUBDIR?=		R
 CATEGORIES+=		math
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${R_PKGNAME}
 

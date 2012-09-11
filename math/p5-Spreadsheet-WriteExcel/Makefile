@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/08/14 13:38:24 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/11 23:04:29 asau Exp $
 #
 
 DISTNAME=	Spreadsheet-WriteExcel-2.37
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Spreadsheet-WriteExcel/
 COMMENT=	Create Excel data files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Parse-RecDescent-[0-9]*:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-OLE-Storage_Lite>=0.19:../../devel/p5-OLE-Storage_Lite

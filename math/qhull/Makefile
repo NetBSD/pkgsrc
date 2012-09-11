@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/30 10:55:49 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/11 23:04:33 asau Exp $
 #
 
 DISTNAME=	qhull-2003.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.qhull.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qhull.org/
 COMMENT=	Computing the convex hull
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

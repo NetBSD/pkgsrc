@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/08/15 17:16:37 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:31 asau Exp $
 #
 
 DISTNAME=	numpy-1.6.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://numpy.scipy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES+=	c fortran
 PYTHON_VERSIONS_INCLUDE_3X= yes

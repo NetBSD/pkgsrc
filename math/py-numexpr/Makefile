@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/02 19:25:04 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 23:04:31 asau Exp $
 #
 
 DISTNAME=	numexpr-1.4.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://numexpr.googlecode.com/
 COMMENT=	Numerical expression evaluator for NumPy
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

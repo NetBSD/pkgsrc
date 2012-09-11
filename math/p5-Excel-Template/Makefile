@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/16 22:15:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/11 23:04:26 asau Exp $
 
 DISTNAME=	Excel-Template-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	p5-XML-Parser>=0.01:../../textproc/p5-XML-Parser
 
 BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Excel/Template/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/09/05 13:07:09 asau Exp $
+# $NetBSD: Makefile,v 1.31 2012/09/11 23:04:36 asau Exp $
 #
 
 DISTNAME=	yacas-1.2.2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yacas.sourceforge.net/
 COMMENT=	Yet Another Computer Algebra System
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

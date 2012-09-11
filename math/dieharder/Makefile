@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/30 17:53:58 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/11 23:04:18 asau Exp $
 #
 
 DISTNAME=	dieharder-2.24.4
@@ -10,7 +10,6 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://www.phy.duke.edu/~rgb/General/dieharder.php
 COMMENT=	Random number generator test suite
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 AUTOMAKE_REQD=	1.9.6

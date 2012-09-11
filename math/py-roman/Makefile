@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/15 17:18:14 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 23:04:32 asau Exp $
 #
 
 DISTNAME=	roman-1.4.0
@@ -13,7 +13,6 @@ LICENSE=	python-software-foundation
 
 CONFLICTS+=	${PYPKGPREFIX}-docutils<=0.7
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCLUDE_3X= yes
 
