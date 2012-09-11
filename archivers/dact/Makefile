@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/02/10 00:25:54 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/11 19:46:53 asau Exp $
 
 DISTNAME=	dact-0.8.41
 CATEGORIES=	archivers
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.rkeene.org/devel/dact/
 COMMENT=	Dynamic adaptive compression tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

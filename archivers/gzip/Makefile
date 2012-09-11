@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/04/20 15:50:23 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 19:46:55 asau Exp $
 #
 
 DISTNAME=	gzip-1.3.12
@@ -14,7 +14,6 @@ COMMENT=	Compress or expand files
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gzip-base-[0-9]* gzip-info-[0-9]*
 

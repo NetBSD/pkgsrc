@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/02 03:48:36 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/11 19:46:52 asau Exp $
 
 DISTNAME=	arc-5.21o
 CATEGORIES=	archivers
@@ -10,7 +10,6 @@ HOMEPAGE=	http://sourceforge.net/projects/arc/
 COMMENT=	Create & extract files from DOS .ARC files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/04/15 20:51:23 jakllsch Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/11 19:46:57 asau Exp $
 #
 
 DISTNAME=		lzma465
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.7-zip.org/sdk.html
 COMMENT=		LZMA compression utility from 7zip
 LICENSE=		public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

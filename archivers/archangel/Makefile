@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/01/12 17:14:45 hans Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 19:46:52 asau Exp $
 
 DISTNAME=	archangel-20050730
 PKGREVISION=	1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	Compressing archiver which can sign and encrypt entries
 
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/archangel

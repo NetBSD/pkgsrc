@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2012/09/07 19:16:05 adam Exp $
+# $NetBSD: Makefile,v 1.119 2012/09/11 19:46:54 asau Exp $
 #
 
 DISTNAME=	file-roller-2.32.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/06/02 08:26:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.48 2012/09/11 19:46:55 asau Exp $
 
 DISTNAME=	sharutils-4.11.1
 PKGREVISION=	2
@@ -12,7 +12,6 @@ COMMENT=	Allow packing and unpacking of shell archives
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 AUTO_MKDIRS=		yes
 
