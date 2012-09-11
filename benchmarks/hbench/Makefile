@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/07/01 10:18:58 sbd Exp $
+# $NetBSD: Makefile,v 1.49 2012/09/11 22:37:12 asau Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
@@ -17,7 +17,6 @@ COMMENT=		Suite of portable benchmarks to measure the OS and the hardware
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/HBenchOS
 OSVERSION_SPECIFIC=	YES

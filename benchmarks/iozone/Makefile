@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/06/07 15:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.45 2012/09/11 22:37:12 asau Exp $
 
 DISTNAME=	iozone3_408
 PKGNAME=	iozone-3.408
@@ -15,7 +15,6 @@ LICENSE=	iozone-license
 NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/current
 MAKE_FILE=		makefile
