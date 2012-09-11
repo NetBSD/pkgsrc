@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2895 2012/09/11 09:18:01 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2896 2012/09/11 09:24:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4441,3 +4441,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-PPIx-Regexp to 0.028 [sno 2012-09-11]
 	Updated editors/p5-PPIx-EditorTools to 0.17 [sno 2012-09-11]
 	Added textproc/p5-Text-Patch version 1.8 [sno 2012-09-11]
+	Updated time/p5-Time-HiRes to 1.9725 [sno 2012-09-11]
