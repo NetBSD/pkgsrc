@@ -1,7 +1,17 @@
-# $NetBSD: INSTALL.nss_winbind,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+# $NetBSD: INSTALL.nss_winbind,v 1.2 2012/09/11 07:50:50 sbd Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	ln -sf ${PREFIX}/lib/nss_winbind.so.0 /usr/lib/nss_winbind.so.0
+	NSS_WINBIND='@NSS_WINBIND@'
+	case $NSS_WINBIND in
+	"@comment *")	;;
+	*)
+		if ${TEST} -f ${PREFIX}/${NSS_WINBIND} && \
+		   ${TEST} ! -e /usr/lib/${NSS_WINBIND##*/} ;then
+			${ECHO} "Creating /usr/lib/${NSS_WINBIND##*/} symlink."
+			${LN} -sf ${PREFIX}/${NSS_WINBIND} /usr/lib/${NSS_WINBIND##*/}
+		fi
+		;;
+	esac
 	;;
 esac
