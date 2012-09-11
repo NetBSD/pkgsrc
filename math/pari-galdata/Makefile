@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/04/17 16:11:08 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/11 23:04:29 asau Exp $
 
 DISTNAME=		galdata
 PKGNAME=		pari-galdata-2.1
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.parigp-home.de/
 COMMENT=		Galois group data for pari
 
 DEPENDS+=		pari-[0-9]*:../../math/pari
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		pari-2.1

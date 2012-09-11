@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/08 22:44:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 23:04:34 asau Exp $
 #
 
 DISTNAME=	statist-1.0.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 CONFLICTS=	freeze-[0-9]* # bin/statist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

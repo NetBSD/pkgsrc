@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/29 14:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:04:18 asau Exp $
 
 DISTNAME=	2.0.17
 PKGNAME=	eigen-2.0.17
@@ -16,7 +16,5 @@ USE_LANGUAGES+= c c++
 USE_CMAKE= yes
 WRKSRC=		${WRKDIR}/eigen-eigen-b23437e61a07
 FETCH_USING=	curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

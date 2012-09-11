@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/07/30 10:36:27 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/11 23:04:18 asau Exp $
 
 DISTNAME=		dfftpack-20001209
 PKGREVISION=		2
@@ -12,7 +12,6 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_LANGUAGES=		fortran77
 WRKSRC=			${WRKDIR}/dfftpack
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	lib share/doc/dfftpack share/examples/dfftpack
 
 post-extract:

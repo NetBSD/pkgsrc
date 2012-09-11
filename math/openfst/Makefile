@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/03 17:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/11 23:04:25 asau Exp $
 #
 
 DISTNAME=	openfst-1.1
@@ -9,8 +9,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://www.openfst.org/
 COMMENT=	OpenFst is a library for manipulating transducers
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

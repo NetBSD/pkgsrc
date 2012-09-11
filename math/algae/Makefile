@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/07/30 10:36:27 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 23:04:16 asau Exp $
 
 DISTNAME=		algae-4.3.6
 PKGREVISION=		2
@@ -10,8 +10,6 @@ HOMEPAGE=		http://algae.sourceforge.net/
 COMMENT=		Interpreted language for numerical analysis
 
 DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-dlmalloc

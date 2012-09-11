@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/09/07 19:17:06 adam Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/11 23:04:33 asau Exp $
 
 DISTNAME=	qalculate-units-0.9.4
 PKGREVISION=	14
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Utility for conversion between units using Qalculate
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

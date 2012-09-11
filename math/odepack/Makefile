@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/07/30 10:36:30 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/11 23:04:25 asau Exp $
 
 DISTNAME=		odepack-20001130
 PKGREVISION=		2
@@ -14,7 +14,6 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_LANGUAGES=		fortran77
 WRKSRC=			${WRKDIR}/odepack
 INSTALLATION_DIRS=	lib
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-build:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}

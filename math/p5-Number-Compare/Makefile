@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/12 02:55:50 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:04:28 asau Exp $
 
 DISTNAME=	Number-Compare-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Compiles a simple comparison to an anonymous subroutine
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Number/Compare/.packlist
 

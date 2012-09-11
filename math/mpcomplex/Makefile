@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/05 18:24:56 marino Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 23:04:24 asau Exp $
 
 DISTNAME=	mpc-1.0
 PKGNAME=	mpcomplex-1.0
@@ -9,8 +9,6 @@ MAINTAINER=	MarkoSchuetz@web.de
 HOMEPAGE=	http://www.multiprecision.org/mpc/
 COMMENT=	Multiprecision complex arithmetic library
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

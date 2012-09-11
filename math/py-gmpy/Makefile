@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/02 13:52:06 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/11 23:04:31 asau Exp $
 #
 
 DISTNAME=	gmpy-1.15
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/gmpy
 COMMENT=	Library for arbitrary precision arithmetic wirtten by Python
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

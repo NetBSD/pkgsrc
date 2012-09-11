@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/05/09 20:59:10 asau Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/11 23:04:23 asau Exp $
 
 DISTNAME=	mcsim-5.4.0
 CATEGORIES=	math
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_GNU:=mcsim/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/mcsim
 COMMENT=	Monte Carlo Simulation software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

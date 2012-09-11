@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/02/26 10:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/11 23:04:21 asau Exp $
 #
 
 DISTNAME=	autpgrp-1.1
@@ -12,8 +12,6 @@ EXTRACT_SUFX=	.zoo
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/autpgrp.html
 COMMENT=	GAP package for finding automorphism groups of finite p-groups
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/autpgrp
 NO_BUILD=	YES

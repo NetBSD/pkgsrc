@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/09/07 19:17:05 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/11 23:04:22 asau Exp $
 #
 
 DISTNAME=	grpn_1.3.3-1
@@ -17,7 +17,6 @@ COMMENT=	Graphical reverse polish notation (RPN) calculator
 BUILD_TARGET=	grpn
 USE_TOOLS+=	mkdirhier pkg-config
 WRKSRC=		${WRKDIR}/grpn-1.3.3
-PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

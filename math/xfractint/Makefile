@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/11 17:47:28 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:04:35 asau Exp $
 #
 
 DISTNAME=		xfrac310
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spanky.triumf.ca/pub/fractals/programs/unix/
 COMMENT=		Fractint for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_LIBTOOL=		yes

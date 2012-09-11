@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/12/12 22:10:21 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/11 23:04:35 asau Exp $
 #
 
 DISTNAME=	vista
@@ -12,8 +12,6 @@ HOMEPAGE=	http://forrest.psych.unc.edu/research/
 COMMENT=	Visual statistics system
 
 DEPENDS+=	xlispstat>=3.52.9:../../math/xlispstat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

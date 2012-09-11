@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/30 10:36:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 23:04:22 asau Exp $
 
 DISTNAME=	itpp-4.0.7
 CATEGORIES=	math
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES+=	c c++ fortran77
 

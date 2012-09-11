@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/04 10:48:32 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 23:04:23 asau Exp $
 #
 
 DISTNAME=		ltm-0.42.0
@@ -13,7 +13,6 @@ COMMENT=		Number theoretic multiple-precision integer library
 LICENSE=		public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/libtommath-0.42.0
 USE_LIBTOOL=		yes

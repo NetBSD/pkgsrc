@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/06/14 08:26:14 asau Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:17 asau Exp $
 
 DISTNAME=	cln-1.3.2
 PKGREVISION=	1
@@ -11,8 +11,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.ginac.de/CLN/
 COMMENT=	CLN Class Library for Numbers
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++

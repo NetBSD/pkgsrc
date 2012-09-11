@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/07/10 20:00:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/11 23:04:30 asau Exp $
 
 MODNAME=		bcmath
 CATEGORIES+=		math
 COMMENT=		PHP extension for bc-style arbitrary precision math
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-bcmath-[0-9]*
 

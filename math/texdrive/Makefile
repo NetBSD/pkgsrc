@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/06 01:44:54 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/11 23:04:34 asau Exp $
 #
 
 DISTNAME=	texdrive
@@ -14,8 +14,6 @@ COMMENT=	Emacs mode for creating inline formulae for HTML
 
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}

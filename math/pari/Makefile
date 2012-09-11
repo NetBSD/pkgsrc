@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/03/18 15:00:01 adam Exp $
+# $NetBSD: Makefile,v 1.52 2012/09/11 23:04:29 asau Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	7
@@ -11,8 +11,6 @@ COMMENT=	Software package for computer-aided number theory
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run

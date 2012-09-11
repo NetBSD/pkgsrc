@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/08/13 15:10:25 asau Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/11 23:04:23 asau Exp $
 
 DISTNAME=		maxima-5.28.0
 # On updates, please make sure editors/TeXmacs knows about the new
@@ -14,8 +14,6 @@ LICENSE=		gnu-gpl-v2
 
 # Note: lisp backend is depended and setup up for in options.mk
 DEPENDS+=		tk-[0-9]*:../../x11/tk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		makeinfo perl

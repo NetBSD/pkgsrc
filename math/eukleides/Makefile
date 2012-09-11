@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/07/16 14:32:49 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/11 23:04:18 asau Exp $
 
 DISTNAME=	eukleides.1.0.3
 PKGNAME=	eukleides-1.0.3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.eukleides.org/download/
 MAINTAINER=	tsadowski@gmx.net
 HOMEPAGE=	http://www.eukleides.org/
 COMMENT=	Euclidean geometry drawing language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/07/30 10:36:31 asau Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/11 23:04:34 asau Exp $
 #
 
 DISTNAME=	slatec_src
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/slatec/
 COMMENT=	Library of mathematical and statistical Fortran 77 subroutines
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/src
 USE_LANGUAGES=		fortran77

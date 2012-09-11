@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/08/06 20:49:25 adam Exp $
+# $NetBSD: Makefile,v 1.42 2012/09/11 23:04:27 asau Exp $
 
 DISTNAME=	Math-Pari-2.01080605
 PKGNAME=	p5-${DISTNAME:S/01080605/010806.05/}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Math-Pari/
 COMMENT=	Perl5 interface to the pari math library
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 #MAKE_PARAMS+=		paridir=${WRKDIR}/${PARI_DISTNAME}
 
 # XXX: to use or not to use...

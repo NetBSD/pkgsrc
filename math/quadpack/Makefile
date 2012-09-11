@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/07/30 10:36:31 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/11 23:04:33 asau Exp $
 
 DISTNAME=		quadpack-20001130
 PKGREVISION=		2
@@ -12,7 +12,6 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_LANGUAGES=		fortran77
 WRKSRC=			${WRKDIR}/quadpack
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	lib share/doc/quadpack
 
 pre-build:
