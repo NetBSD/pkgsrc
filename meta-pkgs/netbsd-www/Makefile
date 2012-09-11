@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/07 03:53:22 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2012/09/11 23:26:14 asau Exp $
 
 DISTNAME=	netbsd-www-1.7
 CATEGORIES=	meta-pkgs
@@ -7,8 +7,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Packages required to build the NetBSD.org web site
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # we add an explicit dependency on docbook-xsl here since earlier versions
 # generated slightly different html code, leading to a large number of
