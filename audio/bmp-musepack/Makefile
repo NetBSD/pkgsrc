@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/07 19:16:06 adam Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 23:59:27 asau Exp $
 #
 
 DISTNAME=		bmp-musepack-1.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.musepack.net/
 COMMENT=		BMP plugin for Musepack (mpc) files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config

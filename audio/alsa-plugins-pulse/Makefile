@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/03 00:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/11 23:59:23 asau Exp $
 #
 
 DISTNAME=	alsa-plugins-1.0.22
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alsa-project.org/
 COMMENT=	Advanced Linux Sound Architecture (ALSA) - PulseAudio plugin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS=	pkg-config gmake

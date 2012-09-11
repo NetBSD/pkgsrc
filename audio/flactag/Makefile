@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/03/03 00:12:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/11 23:59:36 asau Exp $
 #
 
 DISTNAME=	flactag-1.1
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++
 USE_TOOLS=	gmake
-PKG_DESTDIR_SUPPORT= user-destdir
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/01 16:41:35 hans Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/12 00:24:42 asau Exp $
 #
 
 DISTNAME=	libifp-1.0.0.2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ifp-driver.sourceforge.net/
 COMMENT=	General-purpose library-driver for iRiver's iFP portable players
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libusb=${BUILDLINK_PREFIX.libusb}

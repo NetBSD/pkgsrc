@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/11 23:59:33 asau Exp $
 
 DISTNAME=	festvox_don
 PKGNAME=	festvox-don-1.4.0
@@ -15,8 +15,6 @@ DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
 DEPENDS+=	festlex-oald>=1.4.0:../../audio/festlex-oald
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
