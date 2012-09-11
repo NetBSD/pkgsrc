@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/09/09 18:02:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.57 2012/09/11 19:46:57 dholland Exp $
 #
 
 DISTNAME=		krb4-1.2.2
@@ -22,6 +22,7 @@ CRYPTO=			yes
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		yacc
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/kerberosIV
 
 .include "../../mk/bsd.prefs.mk"
