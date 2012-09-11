@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 22:01:13 schwarz Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/11 20:32:13 asau Exp $
 #
 
 DISTNAME=		MUMmer3.20
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://mummer.sourceforge.net/
 COMMENT=		System for aligning whole genome sequences
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_TOOLS+=		csh:run gmake perl:run pax

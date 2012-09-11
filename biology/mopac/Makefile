@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/07/30 10:36:23 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/11 20:32:13 asau Exp $
 #
 
 DISTNAME=		mopac7
@@ -16,8 +16,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://server.ccl.net/cca/software/LINUX/mopac7/index.shtml
 COMMENT=		Molecular energy calculation program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/mopac7
 BUILD_TARGET=		MOPAC7
