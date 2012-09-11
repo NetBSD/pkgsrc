@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/01/13 15:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2012/09/11 23:19:34 asau Exp $
 
 DISTNAME=	createbuildlink-3.16
 CATEGORIES=	pkgtools sysutils
@@ -9,7 +9,6 @@ MAINTAINER=	rh@NetBSD.org
 COMMENT=	Shell script to help creating buildlink3.mk files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty

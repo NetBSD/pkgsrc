@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/05/19 10:54:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2012/09/11 23:19:36 asau Exp $
 
 DISTNAME=	pkg_comp-1.37
 CATEGORIES=	pkgtools
@@ -9,7 +9,6 @@ MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Build packages inside a chroot jail
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
