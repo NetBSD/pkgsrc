@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/05/02 03:30:21 jlam Exp $
+$NetBSD: distinfo,v 1.6 2012/09/12 08:52:26 sno Exp $
 
-SHA1 (Spiffy-0.30.tar.gz) = 1d8fe20f2fcf1e8efc0a1259217a36f77527b9d6
-RMD160 (Spiffy-0.30.tar.gz) = 9240ecffc3b259bb3c1a346735bdd91962f1e75c
-Size (Spiffy-0.30.tar.gz) = 27631 bytes
+SHA1 (Spiffy-0.31.tar.gz) = f2bbf4626e4bab2bf6a6aa0cc773d474fa75ef19
+RMD160 (Spiffy-0.31.tar.gz) = 38966986a7ac7bf8260a3d800d5fb27f1771e7f7
+Size (Spiffy-0.31.tar.gz) = 53320 bytes
