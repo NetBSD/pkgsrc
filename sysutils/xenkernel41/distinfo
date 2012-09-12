@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.9 2012/08/10 09:59:47 drochner Exp $
+$NetBSD: distinfo,v 1.10 2012/09/12 11:04:17 drochner Exp $
 
-SHA1 (xen-4.1.2.tar.gz) = db584cb0a0cc614888d7df3b196d514fdb2edd6e
-RMD160 (xen-4.1.2.tar.gz) = 457797ec4be286afbbcad940a9ce04e44f3f40d6
-Size (xen-4.1.2.tar.gz) = 10365786 bytes
-SHA1 (patch-CVE-2012-3432) = e85b1adf1c683a1d086410f0c4265ed72a86d7fb
-SHA1 (patch-CVE-2012-3433) = 51ca4a6427c19dc31ba2bd05e4c09027d52a4ebc
+SHA1 (xen-4.1.3.tar.gz) = 0f688955262d08fba28361ca338f3ad0c0f53d74
+RMD160 (xen-4.1.3.tar.gz) = a6296a16579fd628a1ff2aa64b6b800e4913eeae
+Size (xen-4.1.3.tar.gz) = 10382132 bytes
+SHA1 (patch-CVE-2012-3494) = 166121ce515aaa2f2e399431be3ca7d2496c79c6
+SHA1 (patch-CVE-2012-3496) = c863d3e951d5aaa5659f9e1f38723f8326b8d8b8
+SHA1 (patch-CVE-2012-3498) = 2bb2b40675de498ae9fcc89ba5267b5be4a2c4c1
 SHA1 (patch-xen_drivers_char_console_c) = 0fe186369602ccffaeec6f4bfbee8bb4298d3ff0
 SHA1 (patch-xen_include_xen_stdarg.h) = e9df974a9b783ed442ab17497198432cb9844b70
-SHA1 (patch-xsa7-xsa8-xen-4.1) = e48cfd4ae9e7a4d48e059738b3f36074d3982515
-SHA1 (patch-xsa9-xen-4.1) = 4bbefd6426e2a7b36ccecb81cc94dc33af34e4fb
