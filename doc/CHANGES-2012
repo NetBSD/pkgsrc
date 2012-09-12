@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2909 2012/09/12 14:18:23 dsainty Exp $
+$NetBSD: CHANGES-2012,v 1.2910 2012/09/12 14:29:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4456,3 +4456,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/xenkernel41 to 4.1.3 [drochner 2012-09-12]
 	Updated sysutils/xentools41 to 4.1.3 [drochner 2012-09-12]
 	Updated graphics/MesaLib to 7.4.4nb6 [dsainty 2012-09-12]
+	Updated devel/xulrunner to 15.0.1 [ryoon 2012-09-12]
+	Updated www/firefox to 15.0.1 [ryoon 2012-09-12]
