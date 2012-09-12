@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/07/28 21:48:17 reed Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/12 11:29:23 jperkin Exp $
 #
 
 DISTNAME=	libgnome-keyring-3.4.1
@@ -14,7 +14,7 @@ CONFLICTS+=	gnome-keyring<2.30
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config xgettext
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
