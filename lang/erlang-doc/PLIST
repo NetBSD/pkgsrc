@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/04/12 12:14:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/09/12 19:13:27 asau Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -214,6 +214,7 @@ lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_hooks.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_hooks_chapter.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_master.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_master_chapter.html
+lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_netconfc.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_rpc.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_run.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_slave.html
