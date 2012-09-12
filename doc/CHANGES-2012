@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2912 2012/09/12 17:02:49 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.2913 2012/09/12 17:21:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4460,3 +4460,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox to 15.0.1 [ryoon 2012-09-12]
 	Added print/tex-shadethm version 20101030 [is 2012-09-12]
 	Updated x11/qt4-libs to 4.8.2nb1 [jaapb 2012-09-12]
+	Added audio/py-dynampd version 1.1.0 [wiz 2012-09-12]
