@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2908 2012/09/12 11:12:01 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.2909 2012/09/12 14:18:23 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4455,3 +4455,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Wx-Perl-DataWalker to 0.02nb13 [sno 2012-09-12]
 	Updated sysutils/xenkernel41 to 4.1.3 [drochner 2012-09-12]
 	Updated sysutils/xentools41 to 4.1.3 [drochner 2012-09-12]
+	Updated graphics/MesaLib to 7.4.4nb6 [dsainty 2012-09-12]
