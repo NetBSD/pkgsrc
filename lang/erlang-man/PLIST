@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/04/12 12:14:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/09/12 19:13:28 asau Exp $
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameter_compile.1
 lib/erlang/man/man1/epmd.1
@@ -113,6 +113,7 @@ lib/erlang/man/man3/ct_cover.3
 lib/erlang/man/man3/ct_ftp.3
 lib/erlang/man/man3/ct_hooks.3
 lib/erlang/man/man3/ct_master.3
+lib/erlang/man/man3/ct_netconfc.3
 lib/erlang/man/man3/ct_rpc.3
 lib/erlang/man/man3/ct_slave.3
 lib/erlang/man/man3/ct_snmp.3
