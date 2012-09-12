@@ -1,0 +1,4 @@
+DynaMPD allows you to get a dynamic playlist with MPD: it adds to
+your current playlist some tracks related to what you are currently
+listenning to. The similar tracks request is done using the Last.fm
+API (no registration required).
