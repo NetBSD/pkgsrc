@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/01/22 19:13:18 abs Exp $
+$NetBSD: distinfo,v 1.5 2012/09/12 09:30:41 sno Exp $
 
-SHA1 (Wx-Perl-ProcessStream-0.30.tar.gz) = 8995e9dd55e0d0730cd6e792e7420b8b391fa7d9
-RMD160 (Wx-Perl-ProcessStream-0.30.tar.gz) = 337af13de9d7cab05b680676ae35f0b523dd76c8
-Size (Wx-Perl-ProcessStream-0.30.tar.gz) = 15651 bytes
+SHA1 (Wx-Perl-ProcessStream-0.32.tar.gz) = d1b0b2f08e90a6558d5eb4c99910204a299d107c
+RMD160 (Wx-Perl-ProcessStream-0.32.tar.gz) = f130b56b8a8f08b577b0a7a56cbc0574ca402d92
+Size (Wx-Perl-ProcessStream-0.32.tar.gz) = 15781 bytes
