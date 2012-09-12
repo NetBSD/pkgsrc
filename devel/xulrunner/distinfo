@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.77 2012/09/02 05:45:29 ryoon Exp $
+$NetBSD: distinfo,v 1.78 2012/09/12 14:27:14 ryoon Exp $
 
-SHA1 (firefox-15.0.source.tar.bz2) = a5e6067cf3fb7741818b630d90778928873a2b04
-RMD160 (firefox-15.0.source.tar.bz2) = e70629dbd92db68e39707e28fbe53df7f0946c36
-Size (firefox-15.0.source.tar.bz2) = 83713360 bytes
+SHA1 (firefox-15.0.1.source.tar.bz2) = bdbc4b6656c59b926e18f99b3335484427d08641
+RMD160 (firefox-15.0.1.source.tar.bz2) = 2b2116053c883a9a7bb0e04bf8058775d137a070
+Size (firefox-15.0.1.source.tar.bz2) = 83710112 bytes
 SHA1 (patch-aa) = 2c9a546ae951630e07668c9875d20041a6e5adac
 SHA1 (patch-ab) = b0d7975a291c63e07773e13b023f71e88c883128
 SHA1 (patch-ac) = 18640ddf00b7da9276fd67d95bd6f1b191a99d4f
