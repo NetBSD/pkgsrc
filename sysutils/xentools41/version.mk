@@ -1,5 +1,5 @@
-# $NetBSD: version.mk,v 1.2 2011/10/21 18:27:21 cegger Exp $
+# $NetBSD: version.mk,v 1.3 2012/09/12 11:09:32 drochner Exp $
 
 # Version number is used by xentool41 and xenstoretools
 
-VERSION=	4.1.2
+VERSION=	4.1.3
