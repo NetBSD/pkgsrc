@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 18:08:27 wiz Exp $
+$NetBSD: distinfo,v 1.4 2012/09/12 06:35:56 wiz Exp $
 
-SHA1 (xbacklight-1.1.2.tar.bz2) = e297b359ab83f3844ca5ea1c23280b2f8bb71cfd
-RMD160 (xbacklight-1.1.2.tar.bz2) = af2502cd91b7169517009c5036ff43de1d738fc4
-Size (xbacklight-1.1.2.tar.bz2) = 102939 bytes
+SHA1 (xbacklight-1.2.0.tar.bz2) = 6c43b29098e18a9d539b20fb7d0002e295ecdc20
+RMD160 (xbacklight-1.2.0.tar.bz2) = 61319d9caf42d6115da884ef3caf15724e2abfde
+Size (xbacklight-1.2.0.tar.bz2) = 115448 bytes
