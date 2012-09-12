@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2916 2012/09/12 19:19:05 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2917 2012/09/12 19:19:44 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4464,3 +4464,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/freeradius2 to 2.1.12nb4 [bouyer 2012-09-12]
 	Updated lang/erlang to 15.1.2 [asau 2012-09-12]
 	Updated lang/erlang-doc to 15.1.2 [asau 2012-09-12]
+	Updated lang/erlang-man to 15.1.2 [asau 2012-09-12]
