@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/12 16:00:31 is Exp $
+share/texmf-dist/tex/latex/shadethm/colored.sth
+share/texmf-dist/tex/latex/shadethm/shadethm.sty
+share/texmf-dist/doc/latex/shadethm/1st_read.me
+share/texmf-dist/doc/latex/shadethm/shadetest.tex
+share/texmf-dist/doc/latex/shadethm/shadetest.pdf
+share/texmf-dist/doc/latex/shadethm/shadethm-doc.tex
+share/texmf-dist/doc/latex/shadethm/shadethm-doc.pdf
