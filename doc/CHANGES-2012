@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2901 2012/09/12 08:52:37 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2902 2012/09/12 09:30:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4447,3 +4447,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/freeDiameter to 1.1.4 [wiz 2012-09-12]
 	Updated x11/xbacklight to 1.2.0 [wiz 2012-09-12]
 	Updated devel/p5-Spiffy to 0.31 [sno 2012-09-12]
+	Updated x11/p5-Alien-wxWidgets to 0.60 [sno 2012-09-12]
