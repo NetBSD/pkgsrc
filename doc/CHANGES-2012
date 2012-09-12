@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2914 2012/09/12 18:39:14 bouyer Exp $
+$NetBSD: CHANGES-2012,v 1.2915 2012/09/12 19:18:39 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4462,3 +4462,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-libs to 4.8.2nb1 [jaapb 2012-09-12]
 	Added audio/py-dynampd version 1.1.0 [wiz 2012-09-12]
 	Updated net/freeradius2 to 2.1.12nb4 [bouyer 2012-09-12]
+	Updated lang/erlang to 15.1.2 [asau 2012-09-12]
