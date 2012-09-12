@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2012/08/28 12:42:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.45 2012/09/12 14:27:14 ryoon Exp $
 bin/xulrunner
 include/xulrunner/AudioSegment.h
 include/xulrunner/BasicImplData.h
@@ -1643,7 +1643,6 @@ include/xulrunner/nsIPrintStatusFeedback.h
 include/xulrunner/nsIPrintingPrompt.h
 include/xulrunner/nsIPrintingPromptService.h
 include/xulrunner/nsIPrivacyTransitionObserver.h
-include/xulrunner/nsIPrivateBrowsingConsumer.h
 include/xulrunner/nsIPrivateBrowsingService.h
 include/xulrunner/nsIPrivateDOMEvent.h
 include/xulrunner/nsIPrivateTextEvent.h
@@ -4256,7 +4255,6 @@ share/idl/xulrunner/nsIPrintStatusFeedback.idl
 share/idl/xulrunner/nsIPrintingPrompt.idl
 share/idl/xulrunner/nsIPrintingPromptService.idl
 share/idl/xulrunner/nsIPrivacyTransitionObserver.idl
-share/idl/xulrunner/nsIPrivateBrowsingConsumer.idl
 share/idl/xulrunner/nsIPrivateBrowsingService.idl
 share/idl/xulrunner/nsIProcess.idl
 share/idl/xulrunner/nsIProfile.idl
