@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2905 2012/09/12 10:13:03 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2906 2012/09/12 10:25:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4451,3 +4451,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/p5-Wx to 0.9911 [sno 2012-09-12]
 	Updated x11/p5-Wx-Perl-ProcessStream to 0.32 [sno 2012-09-12]
 	Updated devel/p5-Devel-Size to 0.78 [sno 2012-09-12]
+	Updated textproc/p5-YAML to 0.84 [sno 2012-09-12]
