@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2898 2012/09/11 17:59:06 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2899 2012/09/12 06:32:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4444,3 +4444,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/p5-Time-HiRes to 1.9725 [sno 2012-09-11]
 	Updated www/p5-Plack to 1.0003 [wen 2012-09-11]
 	Updated emulators/qemu to 1.2.0 [asau 2012-09-11]
+	Updated net/freeDiameter to 1.1.4 [wiz 2012-09-12]
