@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/03/03 00:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/09/12 13:16:38 obache Exp $
 #
 
 DISTNAME=		snort-2.8.5.1
@@ -78,11 +78,6 @@ SUBST_FILES.install+=	src/dynamic-preprocessors/dcerpc/Makefile
 SUBST_FILES.install+=	src/dynamic-preprocessors/dns/Makefile
 SUBST_SED.install=	-e "s|-o root -g wheel||g"
 SUBST_MESSAGE.install=	Fixing install scripts.
-
-# does not work on SunOS
-.if ${OPSYS} == "SunOS"
-PKG_OPTIONS.snort=-inet6
-.endif
 
 .include "options.mk"
 
