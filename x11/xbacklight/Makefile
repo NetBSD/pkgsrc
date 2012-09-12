@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/06/03 18:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/12 06:35:56 wiz Exp $
 #
 
-DISTNAME=	xbacklight-1.1.2
+DISTNAME=	xbacklight-1.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +17,6 @@ USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
