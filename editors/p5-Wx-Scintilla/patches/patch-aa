@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2012/09/13 14:14:01 sno Exp $
+
+--- inc/Module/Build/Scintilla/GTK.pm.orig	2012-09-04 10:20:47.000000000 +0000
++++ inc/Module/Build/Scintilla/GTK.pm
+@@ -146,7 +146,7 @@ sub stc_link_xs {
+ 		'-Lblib/arch/auto/Wx/Scintilla ' . $self->stc_scintilla_link,
+ 		Alien::wxWidgets->libraries(qw(core base)),
+ 		$Config{perllibs},
+-		"-Wl,-rpath,'\$ORIGIN'",
++		"-Wl,-rpath,'" . File::Spec->catdir( $Config{vendorarch}, "auto/Wx/Scintilla" ) . "'",
+ 	);
+ 
+ 	$self->_run_command( \@cmd );
