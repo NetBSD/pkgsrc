@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11511 2012/09/13 19:44:43 wiz Exp $
+$NetBSD: TODO,v 1.11512 2012/09/13 20:12:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-docutils-0.9.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
-	o py-icalendar-3.1
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o qbrew-0.3.9
