@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2948 2012/09/13 19:57:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2949 2012/09/13 20:12:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4502,3 +4502,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/mpfr to 3.1.1p2 [asau 2012-09-13]
 	Updated math/mtl to 2.1.2.22 [asau 2012-09-13]
 	Updated databases/gramps3 to 3.4.1 [wiz 2012-09-13]
+	Updated time/py-icalendar to 3.1 [wiz 2012-09-13]
