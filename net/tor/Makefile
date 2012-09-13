@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2012/08/13 17:13:45 drochner Exp $
+# $NetBSD: Makefile,v 1.89 2012/09/13 17:09:01 drochner Exp $
 #
 
-DISTNAME=		tor-0.2.2.38
+DISTNAME=		tor-0.2.2.39
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 # MASTER_SITES redirects to https, and ftp(1) cannot handle that.
