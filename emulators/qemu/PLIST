@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2012/09/11 17:13:44 asau Exp $
+@comment $NetBSD: PLIST,v 1.31 2012/09/13 14:38:19 adam Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -60,9 +60,6 @@ share/examples/qemu/cpus-x86_64.conf
 share/examples/qemu/target-x86_64.conf
 share/qemu/bamboo.dtb
 share/qemu/bios.bin
-share/qemu/kvmvapic.bin
-share/qemu/palcode-clipper
-share/qemu/sgabios.bin
 share/qemu/keymaps/ar
 share/qemu/keymaps/bepo
 share/qemu/keymaps/common
@@ -99,11 +96,13 @@ share/qemu/keymaps/sl
 share/qemu/keymaps/sv
 share/qemu/keymaps/th
 share/qemu/keymaps/tr
+share/qemu/kvmvapic.bin
 share/qemu/linuxboot.bin
 share/qemu/multiboot.bin
 share/qemu/openbios-ppc
 share/qemu/openbios-sparc32
 share/qemu/openbios-sparc64
+share/qemu/palcode-clipper
 share/qemu/petalogix-ml605.dtb
 share/qemu/petalogix-s3adsp1800.dtb
 share/qemu/ppc_rom.bin
@@ -115,6 +114,7 @@ share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
 share/qemu/qemu-icon.bmp
 share/qemu/s390-zipl.rom
+share/qemu/sgabios.bin
 share/qemu/slof.bin
 share/qemu/spapr-rtas.bin
 share/qemu/vgabios-cirrus.bin
