@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 12:26:27 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/13 15:58:11 sno Exp $
 
-DISTNAME=	PadWalker-1.92
-PKGNAME=	p5-PadWalker-1.9.2
-PKGREVISION=	2
+DISTNAME=	PadWalker-1.96
+PKGNAME=	p5-${DISTNAME:S/96/9.6/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RO/ROBIN/}
 
