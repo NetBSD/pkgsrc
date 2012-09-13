@@ -1,16 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/04 14:45:32 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/13 22:29:09 asau Exp $
 bin/teapot
 man/man1/teapot.1
-share/doc/teapot/teapot.doc
-share/doc/teapot/teapot.html
-share/doc/teapot/teapot.ps
-share/examples/teapot/asqrt
-share/examples/teapot/asqrt.README
-share/examples/teapot/blink
-share/examples/teapot/counter
-share/examples/teapot/counter.README
-share/examples/teapot/graphtest.sh
-share/examples/teapot/life
-share/examples/teapot/life.README
-share/examples/teapot/sqrt
-share/examples/teapot/sqrt.README
+share/doc/teapot/COPYING
+share/doc/teapot/README
