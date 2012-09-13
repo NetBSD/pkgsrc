@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.169 2012/09/07 19:16:34 adam Exp $
+# $NetBSD: Makefile,v 1.170 2012/09/13 14:12:00 wiz Exp $
 #
 
 DISTNAME=		gnucash-2.4.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -26,9 +26,14 @@ INFO_FILES=		YES
 
 CONFIGURE_ARGS+=	--with-html-engine=webkit
 CONFIGURE_ARGS+=	--disable-dbi
+CONFIGURE_ARGS+=	--enable-python-bindings
 
 REPLACE_PERL+=		src/quotes/gnc-fq-dump
-REPLACE_PERL+=		src/optional/xsl/vcard-gnccustomer.pl
+REPLACE_PERL+=		packaging/win32/exetype.pl
+REPLACE_PERL+=		src/backend/xml/test/grab-types.pl
+REPLACE_PERL+=		src/quotes/Quote_example.pl
+
+PY_PATCHPLIST=		yes
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
@@ -58,6 +63,7 @@ GCONF_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../misc/goffice0.8/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
