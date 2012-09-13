@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2931 2012/09/13 15:09:31 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2932 2012/09/13 15:11:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Git-Repository to 1.26 [sno 2012-09-13]
 	Updated devel/p5-Hash-MultiValue to 0.12 [sno 2012-09-13]
 	Updated devel/p5-IO-Compress to 2.055 [sno 2012-09-13]
+	Updated devel/p5-IO-TieCombine to 1.002 [sno 2012-09-13]
