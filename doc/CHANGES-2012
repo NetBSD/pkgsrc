@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2943 2012/09/13 16:19:13 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2944 2012/09/13 16:24:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Perl-Critic to 1.117 [sno 2012-09-13]
 	Updated devel/p5-Test-CPAN-Meta-YAML to 0.21 [sno 2012-09-13]
 	Updated editors/p5-Padre-Plugin-PerlCritic to 0.12 [sno 2012-09-13]
+	Updated editors/p5-Padre-Plugin-PerlTidy to 0.22 [sno 2012-09-13]
