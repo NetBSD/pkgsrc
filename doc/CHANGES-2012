@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2951 2012/09/13 22:29:53 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2952 2012/09/13 23:27:51 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4505,3 +4505,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-icalendar to 3.1 [wiz 2012-09-13]
 	Updated math/snns to 4.3 [asau 2012-09-13]
 	Updated math/teapot to 2.3.0 [asau 2012-09-13]
+	Updated math/units to 2.00 [asau 2012-09-13]
