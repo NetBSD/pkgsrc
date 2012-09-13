@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2924 2012/09/13 14:12:19 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2925 2012/09/13 14:14:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added lang/gcc47-libs version 4.7.0nb5 [sbd 2012-09-13]
 	Updated devel/hg-git to 0.3.3 [cegger 2012-09-13]
 	Updated finance/gnucash to 2.4.11nb2 [wiz 2012-09-13]
+	Added editors/p5-Wx-Scintilla version 0.39 [sno 2012-09-13]
