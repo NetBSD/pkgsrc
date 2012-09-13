@@ -1,0 +1,4 @@
+This module activates community provided syntax extensions to Perl.
+Passing it a feature name, and optionally a scalar with arguments,
+and the dispatching system will load and install the extension in
+calling package.
