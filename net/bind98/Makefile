@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.13.2.1 2012/07/25 10:29:34 sbd Exp $
+# $NetBSD: Makefile,v 1.13.2.2 2012/09/13 07:48:01 sbd Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/ \
 		http://ftp.belnet.be/pub/mirror/ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.isc.org/software/bind
-COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
+HOMEPAGE=	http://www.isc.org/software/bind/
+COMMENT=	Version 9.8 of the Berkeley Internet Name Daemon, implementation of DNS
 
 CONFLICTS+=	bind<9.8.0
 
@@ -17,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.8.3-P2
+BIND_VERSION=	9.8.3-P3
 
 .include "../../mk/bsd.prefs.mk"
 
