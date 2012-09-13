@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/20 12:08:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/09/13 20:12:16 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,21 +26,37 @@ ${PYSITELIB}/icalendar/prop.pyo
 ${PYSITELIB}/icalendar/tests/__init__.py
 ${PYSITELIB}/icalendar/tests/__init__.pyc
 ${PYSITELIB}/icalendar/tests/__init__.pyo
+${PYSITELIB}/icalendar/tests/case_meetup.ics
+${PYSITELIB}/icalendar/tests/encoding.ics
 ${PYSITELIB}/icalendar/tests/example.txt
 ${PYSITELIB}/icalendar/tests/groupscheduled.ics
 ${PYSITELIB}/icalendar/tests/groupscheduled.txt
+${PYSITELIB}/icalendar/tests/issues.rst
 ${PYSITELIB}/icalendar/tests/multiple.ics
 ${PYSITELIB}/icalendar/tests/multiple.txt
 ${PYSITELIB}/icalendar/tests/recurrence.ics
 ${PYSITELIB}/icalendar/tests/recurrence.txt
 ${PYSITELIB}/icalendar/tests/small.ics
 ${PYSITELIB}/icalendar/tests/small.txt
+${PYSITELIB}/icalendar/tests/test_cases.py
+${PYSITELIB}/icalendar/tests/test_cases.pyc
+${PYSITELIB}/icalendar/tests/test_cases.pyo
+${PYSITELIB}/icalendar/tests/test_doctests.py
+${PYSITELIB}/icalendar/tests/test_doctests.pyc
+${PYSITELIB}/icalendar/tests/test_doctests.pyo
+${PYSITELIB}/icalendar/tests/test_encoding.py
+${PYSITELIB}/icalendar/tests/test_encoding.pyc
+${PYSITELIB}/icalendar/tests/test_encoding.pyo
 ${PYSITELIB}/icalendar/tests/test_icalendar.py
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyc
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyo
+${PYSITELIB}/icalendar/tests/test_property_params.py
+${PYSITELIB}/icalendar/tests/test_property_params.pyc
+${PYSITELIB}/icalendar/tests/test_property_params.pyo
+${PYSITELIB}/icalendar/tests/test_timezoned.py
+${PYSITELIB}/icalendar/tests/test_timezoned.pyc
+${PYSITELIB}/icalendar/tests/test_timezoned.pyo
+${PYSITELIB}/icalendar/tests/timezoned.ics
 ${PYSITELIB}/icalendar/tools.py
 ${PYSITELIB}/icalendar/tools.pyc
 ${PYSITELIB}/icalendar/tools.pyo
-${PYSITELIB}/icalendar/util.py
-${PYSITELIB}/icalendar/util.pyc
-${PYSITELIB}/icalendar/util.pyo
