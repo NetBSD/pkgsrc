@@ -1,0 +1,20 @@
+This is a lightweight module which provides 'Junction' operators, the most
+commonly used being any and all.  Inspired by the Perl6 design docs [1].
+
+Provides a limited subset of the functionality of Quantum::Superpositions
+([2]).
+
+That if you want to match against a regular expression, you must use == or
+!=. Not =~ or !~. You must also use a regex object, such as qr/\d/, not a
+plain regex such as /\d/.
+
+This module is actually a fork of Perl6::Junction with very few (initial)
+changes. The reason being that we want to avoid the incendiary name
+containing Perl6.
+
+Quantum::Superpositions provides the same functionality as this, and more.
+However, this module provides this limited functionality at a much greater
+runtime speed, with my benchmarks showing between 500% and 6000% improvment.
+
+[1] http://dev.perl.org/perl6/doc/design/exe/E06.html
+[2] http://search.cpan.org/perldoc?Quantum%3A%3ASuperpositions
