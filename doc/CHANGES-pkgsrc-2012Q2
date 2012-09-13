@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.48 2012/09/09 22:20:15 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.49 2012/09/13 08:03:20 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -281,3 +281,7 @@ Pullup ticket #3918 - requested by morr
 www/wordpress: security update
 Pullup ticket #3916 - requested by tron
 net/wireshark: security patch
+Pullup ticket #3919 - requested by taca
+net/bind?? CVE-2012-4244 security fix
+Pullup ticket #3920 - requested by taca
+net/{isc-dhcp4,isc-dhcpd4,isc-dhclient4,isc-dhcrelay} security fix
