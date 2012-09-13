@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2012/09/07 15:24:03 adam Exp $
+$NetBSD: distinfo,v 1.61 2012/09/13 15:50:08 jperkin Exp $
 
 SHA1 (cairo-1.12.2.tar.xz) = bc2ee50690575f16dab33af42a2e6cdc6451e3f9
 RMD160 (cairo-1.12.2.tar.xz) = 0174a5110f5f4c9ff15da984e0602dfd04643a63
@@ -6,3 +6,4 @@ Size (cairo-1.12.2.tar.xz) = 42051584 bytes
 SHA1 (patch-aa) = 474f44c1c8d4017137fe59b160afca8f16ad7287
 SHA1 (patch-ab) = 62ff361d52742bba0f49c6a32149269b958fa24a
 SHA1 (patch-ac) = 151c682245004902cf42ba141e3743592691dfb9
+SHA1 (patch-ad) = a1068a37113b162ccfe14d7f1bd0baa9df7e5530
