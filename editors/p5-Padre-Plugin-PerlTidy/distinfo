@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/03/08 18:29:44 sno Exp $
+$NetBSD: distinfo,v 1.3 2012/09/13 16:24:12 sno Exp $
 
-SHA1 (Padre-Plugin-PerlTidy-0.10.tar.gz) = 6361e0696430d2eeade928aa8b4f47853acd9517
-RMD160 (Padre-Plugin-PerlTidy-0.10.tar.gz) = 74dbdf60f853ce987dac62c55d6e7d62d990aa7f
-Size (Padre-Plugin-PerlTidy-0.10.tar.gz) = 23704 bytes
+SHA1 (Padre-Plugin-PerlTidy-0.22.tar.gz) = 3c4ac69266ff141071f5040e5b494a513267ad76
+RMD160 (Padre-Plugin-PerlTidy-0.22.tar.gz) = a13fb4f844baf5a73c41816f40696cb8cb883010
+Size (Padre-Plugin-PerlTidy-0.22.tar.gz) = 26467 bytes
