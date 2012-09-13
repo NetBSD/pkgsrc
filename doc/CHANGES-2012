@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2918 2012/09/13 01:37:00 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2919 2012/09/13 01:40:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4469,3 +4469,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind97 to 9.7.6pl3 [taca 2012-09-13]
 	Updated net/bind98 to 9.8.3pl3 [taca 2012-09-13]
 	Updated net/bind99 to 9.9.1pl3 [taca 2012-09-13]
+	Updated net/isc-dhcp4 to 4.2.4p2 [taca 2012-09-13]
+	Updated net/isc-dhclient4 to 4.2.4p2 [taca 2012-09-13]
+	Updated net/isc-dhcpd4 to 4.2.4p2 [taca 2012-09-13]
+	Updated net/isc-dhcrelay4 to 4.2.4p2 [taca 2012-09-13]
