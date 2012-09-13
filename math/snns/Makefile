@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:34 asau Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/13 21:43:08 asau Exp $
 
-DISTNAME=	SNNSv4.2
-PKGNAME=	snns-4.2
-PKGREVISION=	2
+DISTNAME=	SNNSv4.3
+PKGNAME=	snns-4.3
 CATEGORIES=	misc
 MASTER_SITES=	http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/
 
@@ -34,7 +33,7 @@ post-install:
 		    ${DESTDIR}${PREFIX}/share/examples/snns; \
 	done
 
-.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
