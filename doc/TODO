@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11510 2012/09/13 16:03:27 sno Exp $
+$NetBSD: TODO,v 1.11511 2012/09/13 19:44:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o autoconvert-0.3.16
 	o autogen-5.16.2
 	o avcheck-0.91
-	o avidemux-2.5.6
+	o avidemux-2.6
 	o avl-2.0.2a
 	o baci-20040415
 	o bacula-5.2.11
@@ -578,7 +578,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o farsight2-0.0.31
 	o fbreader-0.99.2
 	o fcitx-3.6.2
-	o feh-2.6
+	o feh-2.6.1
 	o felt-3.07
 	o fetchmail-6.3.22
 	o fetchyahoo-2.14.0
@@ -688,7 +688,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gpsim-0.26.1
 	o gramofile-1.6P
-	o gramps3-3.4.0
+	o gramps3-3.4.1
 	o granulate-0.2
 	o graphviz-2.28.0
 	o grhino-0.16.1
@@ -1050,6 +1050,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qbrew-0.3.9
 	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
+	o qt4-libs-4.8.3
 	o quilt-0.60
 	o qvplay-0.95
 	o radiance-3.7.2
