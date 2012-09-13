@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2929 2012/09/13 15:01:27 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2930 2012/09/13 15:05:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4483,3 +4483,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Const-Fast to 0.013 [sno 2012-09-13]
 	Updated devel/p5-Filesys-Notify-Simple to 0.08 [sno 2012-09-13]
 	Updated devel/p5-Git-Repository to 1.26 [sno 2012-09-13]
+	Updated devel/p5-Hash-MultiValue to 0.12 [sno 2012-09-13]
