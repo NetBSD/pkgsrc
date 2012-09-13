@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2917 2012/09/12 19:19:44 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2918 2012/09/13 01:37:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4465,3 +4465,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/erlang to 15.1.2 [asau 2012-09-12]
 	Updated lang/erlang-doc to 15.1.2 [asau 2012-09-12]
 	Updated lang/erlang-man to 15.1.2 [asau 2012-09-12]
+	Updated net/bind96 to 9.6.3.1.ESV.7pl3 [taca 2012-09-13]
+	Updated net/bind97 to 9.7.6pl3 [taca 2012-09-13]
+	Updated net/bind98 to 9.8.3pl3 [taca 2012-09-13]
+	Updated net/bind99 to 9.9.1pl3 [taca 2012-09-13]
