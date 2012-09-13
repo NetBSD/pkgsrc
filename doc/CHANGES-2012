@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2945 2012/09/13 17:35:05 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2946 2012/09/13 17:53:23 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4499,3 +4499,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/p5-Padre-Plugin-PerlCritic to 0.12 [sno 2012-09-13]
 	Updated editors/p5-Padre-Plugin-PerlTidy to 0.22 [sno 2012-09-13]
 	Updated math/mpcomplex to 1.0.1 [asau 2012-09-13]
+	Updated math/mpfr to 3.1.1p2 [asau 2012-09-13]
