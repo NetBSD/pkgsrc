@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2012/07/29 19:59:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2012/09/13 14:12:00 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -265,6 +265,12 @@ lib/libgnc-core-utils.la
 lib/libgnc-gnome.la
 lib/libgnc-module.la
 lib/libgnc-qof.la
+${PYSITELIB}/gnucash/__init__.py
+${PYSITELIB}/gnucash/_gnucash_core_c.la
+${PYSITELIB}/gnucash/function_class.py
+${PYSITELIB}/gnucash/gnucash_business.py
+${PYSITELIB}/gnucash/gnucash_core.py
+${PYSITELIB}/gnucash/gnucash_core_c.py
 libexec/gnucash/overrides/gnucash-env
 libexec/gnucash/overrides/gnucash-make-guids
 libexec/gnucash/overrides/guile
