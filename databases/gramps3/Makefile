@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/09/07 19:16:19 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/13 19:56:54 wiz Exp $
 #
 
-DISTNAME=		gramps-3.3.2
-PKGREVISION=		3
+DISTNAME=		gramps-3.4.1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -22,6 +21,11 @@ GNU_CONFIGURE=		yes
 REPLACE_PYTHON=		src/DateHandler/_Date_fr.py
 REPLACE_PYTHON+=	src/plugins/quickview/Reporef.py
 REPLACE_PYTHON+=	src/plugins/rel/rel_fr.py
+REPLACE_PYTHON+=	src/PlaceUtils.py
+REPLACE_PYTHON+=	src/plugins/gramplet/MetadataViewer.py
+REPLACE_PYTHON+=	src/plugins/lib/libhtml.py
+REPLACE_PYTHON+=	src/plugins/lib/libmetadata.py
+REPLACE_PYTHON+=	src/plugins/webreport/WebCal.py
 
 # pkgsrc registers mime files using mimedb.mk (see below)
 CONFIGURE_ARGS+=	--enable-packager-mode
