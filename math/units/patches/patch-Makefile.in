@@ -1,0 +1,29 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/09/13 23:27:05 asau Exp $
+
+--- Makefile.in.orig	2012-05-02 20:37:55.000000000 +0000
++++ Makefile.in
+@@ -31,6 +31,7 @@ CC = @CC@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
+@@ -84,11 +85,11 @@ units_cur_inst: units_cur
+ 	sed -e "s:outfile = 'currency.units':outfile='@UDAT@currency.units':" units_cur > units_cur_inst
+ 
+ install-support: definitions.units currency.units units_cur_inst
+-	$(srcdir)/mkinstalldirs @UDAT@  $(DESTDIR)$(bindir) 
+-	$(INSTALL_DATA) $(srcdir)/definitions.units @UDAT@definitions.units
+-	$(INSTALL_DATA) $(srcdir)/currency.units @UDAT@currency.units
+-	$(INSTALL_DATA) $(srcdir)/locale.map @UDAT@locale.map
+-	$(INSTALL_PROGRAM) units_cur_inst $(DESTDIR)$(bindir)/`echo units_cur|sed '$(transform)'`
++	$(srcdir)/mkinstalldirs $(DESTDIR)@UDAT@  $(DESTDIR)$(bindir) 
++	$(INSTALL_DATA) $(srcdir)/definitions.units $(DESTDIR)@UDAT@definitions.units
++	$(INSTALL_DATA) $(srcdir)/currency.units $(DESTDIR)@UDAT@currency.units
++	$(INSTALL_DATA) $(srcdir)/locale.map $(DESTDIR)@UDAT@locale.map
++	$(INSTALL_SCRIPT) units_cur_inst $(DESTDIR)$(bindir)/`echo units_cur|sed '$(transform)'`
+ 
+ install: units@EXEEXT@ install-doc install-support
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) 
