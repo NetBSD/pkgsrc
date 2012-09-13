@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/07/18 09:18:28 sno Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/13 15:51:53 sno Exp $
 #
 
-DISTNAME=	Moose-Autobox-0.12
+DISTNAME=	Moose-Autobox-0.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RJ/RJBS/}
@@ -15,10 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Moose/Autobox/.packlist
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-autobox>=2.23:../../devel/p5-autobox
 DEPENDS+=	p5-Moose>=0.42:../../devel/p5-Moose
-DEPENDS+=	p5-Perl6-Junction>=1.40000:../../devel/p5-Perl6-Junction
+DEPENDS+=	p5-Syntax-Keyword-Junction-[0-9]*:../../devel/p5-Syntax-Keyword-Junction
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 
