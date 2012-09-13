@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2947 2012/09/13 18:15:22 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2948 2012/09/13 19:57:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4501,3 +4501,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/mpcomplex to 1.0.1 [asau 2012-09-13]
 	Updated math/mpfr to 3.1.1p2 [asau 2012-09-13]
 	Updated math/mtl to 2.1.2.22 [asau 2012-09-13]
+	Updated databases/gramps3 to 3.4.1 [wiz 2012-09-13]
