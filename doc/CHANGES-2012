@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2940 2012/09/13 16:03:27 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2941 2012/09/13 16:10:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Module-ScanDeps to 1.09 [sno 2012-09-13]
 	Updated devel/p5-PadWalker to 1.9.6 [sno 2012-09-13]
 	Updated devel/p5-Perl-Tidy to 20120714 [sno 2012-09-13]
+	Updated devel/p5-Perl-Critic to 1.117 [sno 2012-09-13]
