@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/09/13 18:13:50 asau Exp $
 include/mtl/abs.h
 include/mtl/array2D.h
 include/mtl/banded_indexer.h
@@ -47,6 +47,7 @@ include/mtl/mtl2lapack.h
 include/mtl/mtl_algo.h
 include/mtl/mtl_complex.h
 include/mtl/mtl_config.h
+include/mtl/mtl_decl.h
 include/mtl/mtl_exception.h
 include/mtl/mtl_iterator.h
 include/mtl/mtl_limits.h
@@ -70,8 +71,8 @@ include/mtl/transform_iterator.h
 include/mtl/uplo.h
 include/mtl/utils.h
 share/doc/mtl/INSTALL
-share/doc/mtl/LICENSE
 share/doc/mtl/README
+share/doc/mtl/license.mtl.txt
 share/examples/mtl/abs_sum.cc
 share/examples/mtl/apply_givens.cc
 share/examples/mtl/array2D.cc
@@ -80,6 +81,8 @@ share/examples/mtl/banded_matvec_mult.cc
 share/examples/mtl/banded_view_test.cc
 share/examples/mtl/blocked_matrix.cc
 share/examples/mtl/blocked_vector.cc
+share/examples/mtl/cholesky.cc
+share/examples/mtl/cholesky_external.cc
 share/examples/mtl/dot_prod.cc
 share/examples/mtl/euclid_norm.cc
 share/examples/mtl/external_matrix.cc
@@ -88,13 +91,19 @@ share/examples/mtl/gecon.cc
 share/examples/mtl/geequ.cc
 share/examples/mtl/geev.cc
 share/examples/mtl/general_matvec_mult.cc
+share/examples/mtl/gesvd.cc
 share/examples/mtl/getrf.cc
+share/examples/mtl/gmres.cc
+share/examples/mtl/iccg.cc
+share/examples/mtl/ilu.cc
+share/examples/mtl/ilut.cc
 share/examples/mtl/kiester_geev.cc
 share/examples/mtl/lu_factorization.cc
 share/examples/mtl/lu_solve.cc
 share/examples/mtl/max_index.cc
 share/examples/mtl/neg_stride.cc
 share/examples/mtl/partition.cc
+share/examples/mtl/qmr.cc
 share/examples/mtl/range.cc
 share/examples/mtl/rank_1_gen_mat.cc
 share/examples/mtl/rank_1_symm_sparse.cc
@@ -106,6 +115,7 @@ share/examples/mtl/sparse_mult.cc
 share/examples/mtl/sparse_mult_col.cc
 share/examples/mtl/sparse_tri_solve.cc
 share/examples/mtl/sparse_vec_prod.cc
+share/examples/mtl/ssor.cc
 share/examples/mtl/subrange_vector.cc
 share/examples/mtl/swap_rows.cc
 share/examples/mtl/symm_banded_vec_prod.cc
