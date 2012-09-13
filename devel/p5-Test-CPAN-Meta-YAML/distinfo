@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/07/06 14:04:52 sno Exp $
+$NetBSD: distinfo,v 1.3 2012/09/13 16:14:30 sno Exp $
 
-SHA1 (Test-CPAN-Meta-YAML-0.20.tar.gz) = 43c6d1f70015aacbd62cb7199135d97c2327a29e
-RMD160 (Test-CPAN-Meta-YAML-0.20.tar.gz) = f5136b5343eedf25008a287eef95eeb4d39f0d87
-Size (Test-CPAN-Meta-YAML-0.20.tar.gz) = 15086 bytes
+SHA1 (Test-CPAN-Meta-YAML-0.21.tar.gz) = e4330a7fa2fa827b390736a60cbec92088f10a37
+RMD160 (Test-CPAN-Meta-YAML-0.21.tar.gz) = 46a98797f937a730cbafc242a76358916851c134
+Size (Test-CPAN-Meta-YAML-0.21.tar.gz) = 15105 bytes
