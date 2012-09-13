@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.125 2012/07/27 10:34:00 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.126 2012/09/13 10:17:14 sbd Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -482,6 +482,13 @@ _GCC_PKGSRCDIR+=	../../lang/gcc3-objc
 _GCC_DEPENDENCY+=	gcc3-objc>=${_GCC_REQD}:../../lang/gcc3-objc
 _USE_GCC_SHLIB?=	yes
 .  endif
+.endif
+
+# When not using the GNU linker, gcc will always link shared libraries
+# against the shared version of libgcc. Always enable _USE_GCC_SHILB on
+# platforms that don't use the GNU linker, such as SunOS.
+.if ${OPSYS} == "SunOS"
+_USE_GCC_SHLIB= yes
 .endif
 
 .if !empty(USE_NATIVE_GCC:M[yY][eE][sS]) && !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
