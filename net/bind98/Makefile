@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/08/26 14:23:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/13 01:35:18 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/ \
 		http://ftp.belnet.be/pub/mirror/ftp.isc.org/isc/bind9/${BIND_VERSION}/
@@ -17,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.8.3-P2
+BIND_VERSION=	9.8.3-P3
 
 .include "../../mk/bsd.prefs.mk"
 
