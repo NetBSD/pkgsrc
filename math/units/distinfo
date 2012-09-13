@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/19 04:56:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/09/13 23:27:05 asau Exp $
 
-SHA1 (units-1.86.tar.gz) = f6386d7fb476ffc808c6658af53a66f8f1027b1f
-RMD160 (units-1.86.tar.gz) = d54d8074445bbe60832301174544c40192a50dd7
-Size (units-1.86.tar.gz) = 232898 bytes
+SHA1 (units-2.00.tar.gz) = 6da9ea78ff0dc21bc43cf1809c530e61d9394ce0
+RMD160 (units-2.00.tar.gz) = 1a272a6dc6c38d0a3571205180146e25e3e0845c
+Size (units-2.00.tar.gz) = 653473 bytes
+SHA1 (patch-Makefile.in) = 1d2b0b7023e4be683a8fcfd3917cb5d1cd4617ec
