@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2935 2012/09/13 15:45:51 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2936 2012/09/13 15:47:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4489,3 +4489,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Sub-Exporter-Progressive to 0.001006 [sno 2012-09-13]
 	Added devel/p5-syntax version 0.004 [sno 2012-09-13]
 	Updated math/libmatheval to 1.1.8 [asau 2012-09-13]
+	Added devel/p5-Syntax-Keyword-Junction version 0.003001 [sno 2012-09-13]
