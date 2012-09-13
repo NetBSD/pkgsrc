@@ -1,0 +1,8 @@
+Scintilla is a contributed project which means it will not be the latest
+by the time a new wxWidgets distribution is released. And on the scintilla
+front, the Perl 5 lexer is not 100% bug free even and we do not have any
+kind of Perl 6 support in Scintilla.
+
+The ambitious goal of this project is to provide fresh Perl 5 and maybe 6
+support in Wx while preserving compatibility with Wx::StyledTextCtrl and
+continually contribute it back to Scintilla project.
