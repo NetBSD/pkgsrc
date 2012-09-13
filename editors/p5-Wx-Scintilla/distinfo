@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/09/13 14:14:01 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/09/13 14:16:44 sno Exp $
 
 SHA1 (Wx-Scintilla-0.39.tar.gz) = 40cb8b7b7ae0b8bb418d7c885022b821369ce42e
 RMD160 (Wx-Scintilla-0.39.tar.gz) = d487ca7bb79ca5581f36fb8ca6e7a1a6649522ba
 Size (Wx-Scintilla-0.39.tar.gz) = 848565 bytes
-SHA1 (patch-aa) = 259d5d0ef26f43e18ff824f66582b1cf11815894
+SHA1 (patch-aa) = 67dd553cb7af54ce9aa7a6521f4e9c1c2949cc00
