@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/09/13 22:29:11 asau Exp $
+
+--- CMakeLists.txt.orig	2012-02-06 11:30:53.000000000 +0000
++++ CMakeLists.txt
+@@ -105,7 +105,7 @@ if (ENABLE_HELP)
+ endif ()
+ 
+ install(FILES COPYING README DESTINATION share/doc/teapot)
+-install(FILES teapot.1 DESTINATION share/man/man1)
++install(FILES teapot.1 DESTINATION ${PKGMANDIR}/man1)
+ 
+ add_custom_target(dist
+ 	COMMAND ${CMAKE_COMMAND} -E remove_directory teapot-${Teapot_VERSION_MAJOR}.${Teapot_VERSION_MINOR}.${Teapot_VERSION_PATCH}
