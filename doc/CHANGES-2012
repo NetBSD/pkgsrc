@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2952 2012/09/13 23:27:51 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2953 2012/09/13 23:39:41 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4506,3 +4506,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/snns to 4.3 [asau 2012-09-13]
 	Updated math/teapot to 2.3.0 [asau 2012-09-13]
 	Updated math/units to 2.00 [asau 2012-09-13]
+	Updated math/octave to 3.6.3 [asau 2012-09-13]
