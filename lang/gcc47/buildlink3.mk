@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/09/13 10:11:02 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/09/13 10:17:14 sbd Exp $
 
 BUILDLINK_TREE+=	gcc47
 
@@ -16,14 +16,6 @@ BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc47}/gcc47
 
 BUILDLINK_FILES.gcc47=		#empty
 BUILDLINK_AUTO_VARS.gcc47=	no
-
-# When not using the GNU linker, gcc will always link shared libraries
-# against the shared version of libgcc. Always enable _USE_GCC_SHILB on
-# platforms that don't use the GNU linker, such as SunOS.
-.include "../../mk/bsd.fast.prefs.mk"
-.if ${OPSYS} == "SunOS"
-_USE_GCC_SHLIB= yes
-.endif
 
 # Packages that link against shared libraries need a full dependency.
 .if defined(_USE_GCC_SHLIB)
