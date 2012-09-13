@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2920 2012/09/13 07:19:23 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.2921 2012/09/13 09:13:23 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/isc-dhcpd4 to 4.2.4p2 [taca 2012-09-13]
 	Updated net/isc-dhcrelay4 to 4.2.4p2 [taca 2012-09-13]
 	Updated lang/gcc47 to 4.7.0nb4 [sbd 2012-09-13]
+	Updated math/mathomatic to 16.0.4 [asau 2012-09-13]
