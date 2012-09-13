@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2012/09/13 15:27:11 sno Exp $
+# fixing module name for right .packlist location
+
+--- Makefile.PL.orig	2012-08-25 16:41:32.000000000 +0000
++++ Makefile.PL
+@@ -7,7 +7,7 @@ use ExtUtils::MakeMaker;
+ my $key = eval { ExtUtils::MakeMaker->VERSION(6.56) } ? 'BUILD_REQUIRES' : 'PREREQ_PM' ;
+ 
+ WriteMakefile(
+-  NAME => 'Sub-Exporter-Progressive',
++  NAME => 'Sub::Exporter::Progressive',
+   VERSION_FROM => 'lib/Sub/Exporter/Progressive.pm',
+   $key => {
+ 	'Test::More' => 0.89,
