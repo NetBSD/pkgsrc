@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.44 2012/09/14 12:44:06 wiz Exp $
+$NetBSD: distinfo,v 1.45 2012/09/14 14:09:16 wiz Exp $
 
 SHA1 (unrarsrc-4.2.4.tar.gz) = 1cc29603fb4e4df16a3aa9bfc7da1afaf0923259
 RMD160 (unrarsrc-4.2.4.tar.gz) = 53a590ed2a71be86a0a7abfe9c37ddc8dc869800
 Size (unrarsrc-4.2.4.tar.gz) = 164641 bytes
-SHA1 (patch-ac) = 14192cf81b59442d5b4c2e9212330d8998135ec2
+SHA1 (patch-ac) = 4ee81900eff28a01fa609e548a72cfad3f352700
 SHA1 (patch-consio.cpp) = 341dd714b165fabf3dec0213b9bb3e57dcc146f5
