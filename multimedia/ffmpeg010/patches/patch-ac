@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2012/09/14 14:52:35 drochner Exp $
+
+--- Makefile.orig	2012-06-09 20:09:44.000000000 +0000
++++ Makefile
+@@ -124,7 +124,7 @@ install-progs: install-progs-yes $(PROGS
+ 
+ install-data: $(DATA_FILES)
+ 	$(Q)mkdir -p "$(DATADIR)"
+-	$(INSTALL) -m 644 $(DATA_FILES) "$(DATADIR)"
++	$(INSTALL) -c -m 644 $(DATA_FILES) "$(DATADIR)"
+ 
+ uninstall: uninstall-libs uninstall-headers uninstall-progs uninstall-data
+ 
