@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2012/09/07 19:17:22 adam Exp $
+# $NetBSD: Makefile,v 1.58 2012/09/14 19:14:53 jaapb Exp $
 
 DISTNAME=	unison-2.40.63
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	http://www.seas.upenn.edu/~bcpierce/unison/download/releases/stable/
 
@@ -18,6 +18,7 @@ BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.12.0nb2
 .else
 BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.11.2
 .endif
+BUILDLINK_API_DEPENDS.lablgtk+= lablgtk>=2.16.0
 
 # docs: unison-manual.pdf/html/ps/dvi
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
@@ -28,7 +29,7 @@ MAKE_ENV+=	HOME=${WRKDIR:Q}
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH}=="arm")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH}=="arm") || (${MACHINE_ARCH} == "x86_64")
 MAKE_FLAGS+=	NATIVE=true
 .else
 MAKE_FLAGS+=	NATIVE=false
@@ -39,6 +40,8 @@ MAKE_FLAGS+=	NATIVE=false
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 MAKE_FLAGS+=	THREADS=true
 .endif
+
+BUILD_TARGET=	buildexecutable
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/doc/unison
