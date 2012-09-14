@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/06/29 14:49:38 taca Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/09/14 15:50:26 taca Exp $
 #
 # used by security/f-prot-antivirus6-ms-bin/Makefile
 # used by security/f-prot-antivirus6-fs-bin/Makefile
@@ -7,7 +7,7 @@
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 CONFLICTS+=		f-prot-antivirus6-{fs,ms,ws} fprot-workstation-bin-*
 
-VERSION=		6.2.1
+VERSION=		6.2.2
 
 # ws, ms, fs
 FP_TYPE?=	ms
