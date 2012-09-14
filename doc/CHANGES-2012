@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2968 2012/09/14 17:04:09 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.2969 2012/09/14 17:58:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4525,3 +4525,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby18-base to 1.8.7.370nb1 [taca 2012-09-14]
 	Updated devel/ruby-gettext to 2.3.1 [taca 2012-09-14]
 	Updated audio/py-audiotools to 2.18 [jakllsch 2012-09-14]
+	Added biology/plink version 1.07 [asau 2012-09-14]
