@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2960 2012/09/14 08:15:37 morr Exp $
+$NetBSD: CHANGES-2012,v 1.2961 2012/09/14 12:44:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4514,3 +4514,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed comms/asterisk16 [jnemeth 2012-09-14]
 	Removed comms/asterisk-sounds-extra [jnemeth 2012-09-14]
 	Added devel/delta version 2006.08.03 [morr 2012-09-14]
+	Updated archivers/unrar to 4.2.4 [wiz 2012-09-14]
