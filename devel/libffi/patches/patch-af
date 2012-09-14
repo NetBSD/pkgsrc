@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.2 2010/03/30 09:21:30 jmcneill Exp $
+$NetBSD: patch-af,v 1.3 2012/09/14 23:45:27 asau Exp $
 
 Fixes to support the various NetBSD mips ports.
 
---- src/mips/ffi.c.orig	2009-12-29 10:22:26.000000000 -0500
-+++ src/mips/ffi.c	2010-03-30 04:57:29.000000000 -0400
-@@ -32,12 +32,19 @@
+--- src/mips/ffi.c.orig	2011-08-23 18:28:08.000000000 +0400
++++ src/mips/ffi.c	2012-02-19 20:04:17.000000000 +0400
+@@ -33,12 +33,17 @@
  
  #ifdef __GNUC__
  #  if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 3))
@@ -16,17 +16,15 @@ Fixes to support the various NetBSD mips ports.
  #endif
  
  #ifndef USE__BUILTIN___CLEAR_CACHE
--#include <sys/cachectl.h>
-+#  if !defined(__NetBSD__)
-+#    include <sys/cachectl.h>
-+#  else
+-#  if defined(__OpenBSD__)
++#  if defined(__NetBSD__)
 +#    include <mips/cachectl.h>
 +#    define cacheflush _cacheflush
-+#  endif
- #endif
- 
- #ifdef FFI_DEBUG
-@@ -460,6 +467,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
++#  elif defined(__OpenBSD__)
+ #    include <mips64/sysarch.h>
+ #  else
+ #    include <sys/cachectl.h>
+@@ -465,6 +470,7 @@
                ((cif->arg_types)[index]->type << (arg_reg * FFI_FLAG_BITS));
  	    arg_reg++;
  	    break;
@@ -34,7 +32,7 @@ Fixes to support the various NetBSD mips ports.
            case FFI_TYPE_LONGDOUBLE:
              /* Align it.  */
              arg_reg = ALIGN(arg_reg, 2);
-@@ -478,7 +486,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+@@ -483,7 +489,7 @@
  		arg_reg++;
  	      }
              break;
@@ -43,7 +41,7 @@ Fixes to support the various NetBSD mips ports.
  	  case FFI_TYPE_STRUCT:
              loc = arg_reg * FFI_SIZEOF_ARG;
  	    cif->flags += calc_n32_struct_flags(soft_float,
-@@ -540,6 +548,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+@@ -545,6 +551,7 @@
  	  cif->flags += cif->rtype->type << (FFI_FLAG_BITS * 8);
  	break;
  
@@ -51,7 +49,7 @@ Fixes to support the various NetBSD mips ports.
        case FFI_TYPE_LONGDOUBLE:
  	/* Long double is returned as if it were a struct containing
  	   two doubles.  */
-@@ -556,6 +565,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
+@@ -561,6 +568,7 @@
  					      << (4 + (FFI_FLAG_BITS * 8));
  	  }
  	break;

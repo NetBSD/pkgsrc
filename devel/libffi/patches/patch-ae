@@ -1,45 +1,27 @@
-$NetBSD: patch-ae,v 1.3 2010/03/30 09:21:30 jmcneill Exp $
+$NetBSD: patch-ae,v 1.4 2012/09/14 23:45:27 asau Exp $
 
 Make a minimal adjustment to support the various NetBSD mips ports.
 
---- src/mips/ffitarget.h.orig	2009-12-29 10:22:26.000000000 -0500
-+++ src/mips/ffitarget.h	2010-03-30 05:08:48.000000000 -0400
-@@ -27,20 +27,27 @@
- #ifndef LIBFFI_TARGET_H
- #define LIBFFI_TARGET_H
+--- src/mips/ffitarget.h.orig	2012-04-12 02:46:06.000000000 +0000
++++ src/mips/ffitarget.h
+@@ -32,7 +32,7 @@
+ #error "Please do not include ffitarget.h directly into your source.  Use ffi.h instead."
+ #endif
  
 -#ifdef linux
 +#if defined(linux)
  # include <asm/sgidefs.h>
--#else
+ #elif defined(__rtems__)
+ /*
+@@ -41,8 +41,10 @@
+ #define _MIPS_SIM_ABI32		1
+ #define _MIPS_SIM_NABI32	2
+ #define _MIPS_SIM_ABI64		3
+-#elif !defined(__OpenBSD__)
 +#elif defined(irix)
  # include <sgidefs.h>
 +#else
 +# include <sys/cdefs.h>
-+#endif
-+#ifndef _ABIN32
-+# define _ABIN32 _MIPS_SIM_NABI32
-+#endif
-+#ifndef _ABI64
-+# define _ABI64 _MIPS_SIM_ABI64
-+#endif
-+#ifndef _ABIO32
-+# define _ABIO32 _MIPS_SIM_ABI32
-+#endif
-+
-+#ifndef _MIPS_SIM
-+/* Let's cheat a bit... */   
-+#  define _MIPS_SIM _ABIO32
  #endif
--#  ifndef _ABIN32
--#    define _ABIN32 _MIPS_SIM_NABI32
--#  endif
--#  ifndef _ABI64
--#    define _ABI64 _MIPS_SIM_ABI64
--#  endif
--#  ifndef _ABIO32
--#    define _ABIO32 _MIPS_SIM_ABI32
--#  endif
  
- #if !defined(_MIPS_SIM)
- -- something is very wrong --
+ #  ifndef _ABIN32
