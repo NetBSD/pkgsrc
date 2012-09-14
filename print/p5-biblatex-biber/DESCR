@@ -1,0 +1,43 @@
+Biber is a BibTeX replacement for users of biblatex, with full Unicode
+support.
+
+REQUIREMENTS
+
+  Biber is written in Perl with the aim of providing a
+  customised and sophisticated data preparation backend for biblatex.
+
+  The pkgsrc package has the necessary dependencies.
+
+SUPPORT AND DOCUMENTATION
+
+  After installing, biber --help will give you the basic documentation.
+  The latest PDF documentation can be found here:
+
+  https://sourceforge.net/projects/biblatex-biber/files/biblatex-biber
+
+  More information, bugfix releases, forums and bug tracker are available at:
+
+      http://biblatex-biber.sourceforge.net
+
+BUGS
+
+  Please report any bugs or feature requests on our sourceforge tracker at
+    https://sourceforge.net/tracker2/?func=browse&group_id=228270
+
+
+==========================
+
+COPYRIGHT AND LICENCE
+
+  Copyright (C) 2009--2012 François Charette and Philip Kime
+
+  This program is free software; you can redistribute it and/or
+  modify it under the terms of either:
+
+    * the GNU General Public License as published by the Free
+    Software Foundation; either version 1, or (at your option) any
+    later version, or
+
+    * the Artistic License version 2.0.
+
+==========================
