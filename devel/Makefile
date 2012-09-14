@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1648 2012/09/13 15:48:13 sno Exp $
+# $NetBSD: Makefile,v 1.1649 2012/09/14 08:12:39 morr Exp $
 #
 
 COMMENT=	Development utilities
@@ -154,6 +154,7 @@ SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
 SUBDIR+=	dejagnu
+SUBDIR+=	delta
 SUBDIR+=	dev86
 SUBDIR+=	devIL
 SUBDIR+=	devhelp
