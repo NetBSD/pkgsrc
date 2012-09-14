@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2956 2012/09/14 01:30:44 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.2957 2012/09/14 02:26:40 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4510,3 +4510,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/xylib to 1.0 [asau 2012-09-14]
 	Updated math/wxMaxima to 12.09.0 [asau 2012-09-14]
 	Updated comms/asterisk10 to 10.8.0 [jnemeth 2012-09-14]
+	Updated comms/asterisk18 to 1.8.16.0 [jnemeth 2012-09-14]
