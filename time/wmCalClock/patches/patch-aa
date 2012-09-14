@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/02/16 11:51:46 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2012/09/14 13:51:05 wiz Exp $
+
+Adapt for pkgsrc.
 
 --- Makefile.orig	Sat Mar 27 01:46:38 1999
 +++ Makefile
