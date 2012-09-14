@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2961 2012/09/14 12:44:27 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.2962 2012/09/14 14:29:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed comms/asterisk-sounds-extra [jnemeth 2012-09-14]
 	Added devel/delta version 2006.08.03 [morr 2012-09-14]
 	Updated archivers/unrar to 4.2.4 [wiz 2012-09-14]
+	Updated net/p5-NetAddr-IP to 4.062 [sno 2012-09-14]
