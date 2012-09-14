@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2962 2012/09/14 14:29:03 sno Exp $
+$NetBSD: CHANGES-2012,v 1.2963 2012/09/14 14:38:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/delta version 2006.08.03 [morr 2012-09-14]
 	Updated archivers/unrar to 4.2.4 [wiz 2012-09-14]
 	Updated net/p5-NetAddr-IP to 4.062 [sno 2012-09-14]
+	Updated graphics/enblend-enfuse to 4.0nb6 [obache 2012-09-14]
