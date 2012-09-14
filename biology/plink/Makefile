@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/09/14 17:46:23 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/14 17:56:15 asau Exp $
 
 DISTNAME=	plink-1.07-src
+PKGNAME=	$(DISTNAME:-src=)
 CATEGORIES=	biology
 MASTER_SITES=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
 EXTRACT_SUFX=	.zip
