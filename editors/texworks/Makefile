@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/09/07 19:16:32 adam Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/14 12:26:19 drochner Exp $
 
 DISTNAME=	texworks-0.4.3-r858
 PKGNAME=	texworks-0.4.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	http://texworks.googlecode.com/files/
 
