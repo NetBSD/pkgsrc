@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/14 08:11:10 morr Exp $
+bin/delta
+bin/multidelta
+bin/topformflat
