@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2963 2012/09/14 14:38:47 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2964 2012/09/14 15:51:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4517,3 +4517,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated archivers/unrar to 4.2.4 [wiz 2012-09-14]
 	Updated net/p5-NetAddr-IP to 4.062 [sno 2012-09-14]
 	Updated graphics/enblend-enfuse to 4.0nb6 [obache 2012-09-14]
+	Updated security/f-prot-antivirus6-fs-bin to 6.2.2 [taca 2012-09-14]
+	Updated security/f-prot-antivirus6-ms-bin to 6.2.2 [taca 2012-09-14]
+	Updated security/f-prot-antivirus6-ws-bin to 6.2.2 [taca 2012-09-14]
