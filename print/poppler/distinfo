@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.74 2012/08/13 11:19:39 drochner Exp $
+$NetBSD: distinfo,v 1.75 2012/09/14 12:15:01 drochner Exp $
 
-SHA1 (poppler-0.20.3.tar.gz) = b3b01216fb4d2f4dfe2d29f91fff996dcf864a75
-RMD160 (poppler-0.20.3.tar.gz) = d7270e5fd55334b95c53b9012f9393a4bc5bb687
-Size (poppler-0.20.3.tar.gz) = 2144857 bytes
+SHA1 (poppler-0.20.4.tar.gz) = fd808cfcd249b7079a09a97f99ffb08db8c62b93
+RMD160 (poppler-0.20.4.tar.gz) = fc0b2f82b6102f4d9af3b3e589b22b05527e3bc5
+Size (poppler-0.20.4.tar.gz) = 2154257 bytes
 SHA1 (patch-aa) = c5d4bc5d858aaa2a3eca7ccc3623426d35124bdb
 SHA1 (patch-ab) = a90156aebaed91468457780ee256d9a870f11bf8
 SHA1 (patch-ag) = 4b914e85bb08ce83305d20de9c0a3e74d3cabdd2
