@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2965 2012/09/14 15:55:10 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2966 2012/09/14 15:56:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/f-prot-antivirus6-ws-bin to 6.2.2 [taca 2012-09-14]
 	Updated lang/php53 to 5.3.17 [taca 2012-09-14]
 	Updated lang/php54 to 5.4.7 [taca 2012-09-14]
+	Updated lang/ruby18-base to 1.8.7.370nb1 [taca 2012-09-14]
