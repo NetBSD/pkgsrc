@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/09/27 15:12:37 tez Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/14 23:45:27 asau Exp $
 #
 
-DISTNAME=	libffi-3.0.9
-PKGREVISION=	1
+DISTNAME=	libffi-3.0.11
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
@@ -34,6 +33,7 @@ pre-build:
 
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 TEST_TARGET=	check
+TEST_ENV=	
 BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 .endif
 

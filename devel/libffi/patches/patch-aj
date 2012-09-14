@@ -1,35 +1,29 @@
-$NetBSD: patch-aj,v 1.3 2010/07/22 04:17:44 jklos Exp $
+$NetBSD: patch-aj,v 1.4 2012/09/14 23:45:27 asau Exp $
 
---- src/m68k/ffi.c.orig	2009-12-29 15:22:26.000000000 +0000
+--- src/m68k/ffi.c.orig	2012-04-12 02:46:06.000000000 +0000
 +++ src/m68k/ffi.c
-@@ -9,8 +9,13 @@
+@@ -9,8 +9,11 @@
  
  #include <stdlib.h>
  #include <unistd.h>
--#include <sys/syscall.h>
--#include <asm/cachectl.h>
-+#if !defined(__NetBSD__)
-+  #include <sys/syscall.h>
-+  #include <asm/cachectl.h>
-+#else
-+  #include <sys/types.h>
-+  #include <m68k/sync_icache.h>
-+#endif
- 
- void ffi_call_SYSV (extended_cif *,
- 		    unsigned, unsigned,
-@@ -266,8 +271,12 @@ ffi_prep_closure_loc (ffi_closure* closu
+-#ifdef __rtems__
++#if defined(__rtems__)
+ void rtems_cache_flush_multiple_data_lines( const void *, size_t );
++#elif defined(__NetBSD__)
++#include <sys/types.h>
++#include <m68k/sync_icache.h>
+ #else
+ #include <sys/syscall.h>
+ #ifdef __MINT__
+@@ -335,8 +338,10 @@ ffi_prep_closure_loc (ffi_closure* closu
    else
      *(void **)(closure->tramp + 8) = ffi_closure_SYSV;
  
--  syscall(SYS_cacheflush, codeloc, FLUSH_SCOPE_LINE,
--	  FLUSH_CACHE_BOTH, FFI_TRAMPOLINE_SIZE);
-+  #if !defined(__NetBSD__)
-+    syscall(SYS_cacheflush, codeloc, FLUSH_SCOPE_LINE,
-+	    FLUSH_CACHE_BOTH, FFI_TRAMPOLINE_SIZE);
-+  #else
-+    m68k_sync_icache(codeloc, FFI_TRAMPOLINE_SIZE);
-+  #endif
- 
-   closure->cif  = cif;
-   closure->user_data = user_data;
+-#ifdef __rtems__
++#if defined(__rtems__)
+   rtems_cache_flush_multiple_data_lines( codeloc, FFI_TRAMPOLINE_SIZE );
++#elif defined(__NetBSD__)
++  m68k_sync_icache(codeloc, FFI_TRAMPOLINE_SIZE);
+ #elif defined(__MINT__)
+   Ssystem(S_FLUSHCACHE, codeloc, FFI_TRAMPOLINE_SIZE);
+ #else
