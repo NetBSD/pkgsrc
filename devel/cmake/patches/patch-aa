@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2011/09/14 17:54:48 brook Exp $
+$NetBSD: patch-aa,v 1.9 2012/09/14 13:26:20 wiz Exp $
+
+Patch in pkgsrc paths for finding stuff.
 
 --- Modules/Platform/UnixPaths.cmake.orig	2010-11-03 19:58:27.000000000 +0000
 +++ Modules/Platform/UnixPaths.cmake
