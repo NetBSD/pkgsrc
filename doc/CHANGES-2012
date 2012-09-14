@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2954 2012/09/14 00:22:29 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2955 2012/09/14 00:27:57 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/units to 2.00 [asau 2012-09-13]
 	Updated math/octave to 3.6.3 [asau 2012-09-13]
 	Updated math/xylib to 1.0 [asau 2012-09-14]
+	Updated math/wxMaxima to 12.09.0 [asau 2012-09-14]
