@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2969 2012/09/14 17:58:33 asau Exp $
+$NetBSD: CHANGES-2012,v 1.2970 2012/09/14 19:15:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-gettext to 2.3.1 [taca 2012-09-14]
 	Updated audio/py-audiotools to 2.18 [jakllsch 2012-09-14]
 	Added biology/plink version 1.07 [asau 2012-09-14]
+	Updated net/unison to 2.40.63nb12 [jaapb 2012-09-14]
