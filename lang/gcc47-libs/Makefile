@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/13 10:04:33 sbd Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/14 04:37:17 sbd Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"../../lang/${GCC_PKGNAME}/version.mk"
@@ -50,7 +50,7 @@ LIBRARY_FILES=	${WRKDIR}/lib_files
 
 GENERATE_PLIST+= ${SED} -e 's,^,${GCC_SUBPREFIX}/${TARGET_TRIPLE}/,' \
 			${LIBRARY_FILES};
-GENERATE_PLIST+= ${GREP} 'lib/' ${LIBRARY_FILES} || \
+GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
 		   ${ECHO} '@pkgdir ${GCC_SUBPREFIX}/${TARGET_TRIPLE}/lib' ;
 
 ${LIBRARY_FILES}:
