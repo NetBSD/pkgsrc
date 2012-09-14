@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2010/04/10 08:36:43 sborrill Exp $
-
-SHA1 (asterisk-sounds-1.2.1.tar.gz) = 219dd5412d4bbaeeef798a49bfd0f1a591fcc177
-RMD160 (asterisk-sounds-1.2.1.tar.gz) = 02d99d136e8a0a3ddd7fa3eec70f9332febedd36
-Size (asterisk-sounds-1.2.1.tar.gz) = 3249876 bytes
-SHA1 (patch-aa) = 4765fc5aa586843f9f60fc68a86c9fd941154c07
-SHA1 (patch-ab) = ec80ff880fb4d28c79af51c77a89268002681c0b
