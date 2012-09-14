@@ -1,0 +1,27 @@
+$NetBSD: patch-ap,v 1.1 2012/09/14 14:52:35 drochner Exp $
+
+--- libavutil/common.h.orig	2012-01-12 21:34:32.000000000 +0000
++++ libavutil/common.h
+@@ -37,6 +37,22 @@
+ #include "attributes.h"
+ #include "libavutil/avconfig.h"
+ 
++#if defined(__cplusplus)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__linux__)
++#undef _STDINT_H_
++#undef _SYS_STDINT_H_
++#undef _STDINT_H
++#undef _GCC_WRAP_STDINT_H
++#ifndef __STDC_CONSTANT_MACROS
++#define __STDC_CONSTANT_MACROS
++#endif
++#include <stdint.h>
++#endif /* FreeBSD | OpenBSD | linux */
++#if defined(__DragonFly__) || defined(__NetBSD__)
++#include <machine/int_const.h>
++#endif /* DragonFly | NetBSD */
++#endif /* __cplusplus */
++
+ #if AV_HAVE_BIGENDIAN
+ #   define AV_NE(be, le) (be)
+ #else
