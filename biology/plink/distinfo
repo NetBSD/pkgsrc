@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/09/14 17:46:23 asau Exp $
+
+SHA1 (plink-1.07-src.zip) = d41a2d014ebc02bf11e5235292b50fad6dedd407
+RMD160 (plink-1.07-src.zip) = ce22e2388fc711ac9938d21ffd3cb68512ba1150
+Size (plink-1.07-src.zip) = 2257297 bytes
+SHA1 (patch-Makefile) = cb01e12cea61d1fe41f352759481277284d9c187

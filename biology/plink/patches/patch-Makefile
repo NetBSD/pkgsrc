@@ -1,0 +1,76 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2012/09/14 17:46:23 asau Exp $
+
+--- Makefile.orig	2009-10-10 16:00:20.000000000 +0000
++++ Makefile
+@@ -19,32 +19,32 @@
+ # ---------------------------------------------------------------------
+ 
+ # Set this variable to either UNIX, MAC or WIN
+-SYS = UNIX
++SYS ?= UNIX
+ 
+ # Leave blank after "=" to disable; put "= 1" to enable
+ WITH_R_PLUGINS = 1
+ WITH_WEBCHECK = 1
+-FORCE_32BIT = 
++FORCE_32BIT ?= 
+ WITH_ZLIB = 1
+-WITH_LAPACK = 
+-FORCE_DYNAMIC = 
++WITH_LAPACK ?= 
++FORCE_DYNAMIC ?= 
+ 
+ # Put C++ compiler here; Windows has it's own specific version
+ CXX_UNIX = g++
+ CXX_WIN = c:\bin\mingw\bin\mingw32-g++.exe
+ 
+ # Any other compiler flags here ( -Wall, -g, etc)
+-CXXFLAGS = 
++CXXFLAGS ?= 
+ 
+ # Misc
+-LIB_LAPACK = /usr/lib/liblapack.so.3
+-
++LIB_LAPACK ?= /usr/lib/liblapack.so.3
++LIBDL ?= -ldl
+ 
+ # --------------------------------------------------------------------
+ # Do not edit below this line
+ # --------------------------------------------------------------------
+ 
+-CXXFLAGS += -O3 -I.
++CXXFLAGS += -I.
+ OUTPUT = plink
+ 
+ # Some system specific flags
+@@ -59,7 +59,7 @@ endif
+ 
+ ifeq ($(SYS),UNIX)
+  CXXFLAGS += -DUNIX
+- CXX = $(CXX_UNIX)
++ CXX ?= $(CXX_UNIX)
+  ifndef FORCE_DYNAMIC
+   CXXFLAGS += -static
+  endif
+@@ -125,10 +125,10 @@ CXXFLAGS += -DWITH_R_PLUGINS
+ HDR += sisocks.h Rsrv.h Rconnection.h config.h
+ SRC += r.cpp Rconnection.cpp
+ ifeq ($(SYS),MAC)
+-LIB += -ldl
++LIB += ${LIBDL}
+ endif
+ ifeq ($(SYS),UNIX)
+-LIB += -ldl -lcrypt
++LIB += ${LIBDL} -lcrypt
+ endif
+ endif
+ 
+@@ -151,7 +151,7 @@ OBJ = $(SRC:.cpp=.o)
+ all : $(OUTPUT) 
+ 
+ $(OUTPUT) :
+-	$(CXX) $(CXXFLAGS) -o $(OUTPUT) $(OBJ) $(LIB) 
++	$(CXX) -o $(OUTPUT) $(OBJ) $(LIB) 
+ 
+ $(OBJ) : $(HDR)
+ 
