@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.16 2009/09/02 21:19:54 wiz Exp $
+$NetBSD: patch-ac,v 1.17 2012/09/14 13:20:20 wiz Exp $
+
+Avoid full library name for libGL (including version number) since
+it differs between NetBSD's X and pkgsrc.
 
 --- src/video/x11/SDL_x11gl.c.orig	2007-12-31 04:48:13.000000000 +0000
 +++ src/video/x11/SDL_x11gl.c

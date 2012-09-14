@@ -1,4 +1,6 @@
-$NetBSD: patch-src_audio_sun_SDL__sunaudio.c,v 1.1 2011/12/29 10:00:50 jmcneill Exp $
+$NetBSD: patch-src_audio_sun_SDL__sunaudio.c,v 1.2 2012/09/14 13:20:20 wiz Exp $
+
+Use AUDIO_GETBUFINFO when available (jmcneill@).
 
 --- src/audio/sun/SDL_sunaudio.c.orig	2009-10-12 23:07:14.000000000 +0000
 +++ src/audio/sun/SDL_sunaudio.c
