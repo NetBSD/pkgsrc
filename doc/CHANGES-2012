@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2970 2012/09/14 19:15:18 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.2971 2012/09/14 19:24:50 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4527,3 +4527,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/py-audiotools to 2.18 [jakllsch 2012-09-14]
 	Added biology/plink version 1.07 [asau 2012-09-14]
 	Updated net/unison to 2.40.63nb12 [jaapb 2012-09-14]
+	Updated net/mldonkey to 3.1.3 [jaapb 2012-09-14]
+	Updated net/mldonkey-gui to 3.1.3 [jaapb 2012-09-14]
