@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/09/15 10:06:12 obache Exp $
+# $NetBSD: Makefile,v 1.47 2012/09/15 12:53:27 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -48,6 +48,5 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
