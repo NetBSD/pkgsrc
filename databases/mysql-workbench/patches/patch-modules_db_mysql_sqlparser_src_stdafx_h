@@ -1,8 +1,8 @@
-$NetBSD: patch-modules_db_mysql_sqlparser_src_stdafx_h,v 1.2 2012/09/07 19:16:20 adam Exp $
+$NetBSD: patch-modules_db_mysql_sqlparser_src_stdafx_h,v 1.3 2012/09/15 05:14:07 obache Exp $
 
 Fix build with latest glib2.
 
---- modules/db.mysql.sqlparser/src/stdafx.h.orig	2011-03-17 12:48:45.000000000 +0000
+--- modules/db.mysql.sqlparser/src/stdafx.h~	2011-03-17 12:48:45.000000000 +0000
 +++ modules/db.mysql.sqlparser/src/stdafx.h
 @@ -32,7 +32,7 @@
  #include <algorithm>
