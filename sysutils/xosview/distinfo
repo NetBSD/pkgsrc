@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2012/03/07 16:14:40 hans Exp $
+$NetBSD: distinfo,v 1.25 2012/09/15 09:03:50 cheusov Exp $
 
 SHA1 (xosview-1.8.3.tar.gz) = 420fd0620ff9fb9ba83fc833eeb8b872414e377e
 RMD160 (xosview-1.8.3.tar.gz) = 595e812dee686ccaa5d95eb537782679d752271b
@@ -9,4 +9,5 @@ SHA1 (patch-ac) = 3e9073c4ccd7e08d29a76b08f2ed0c7f9f9d9ede
 SHA1 (patch-ad) = 02ae8395e200e5cbf8d6339eced33fe5aa421d38
 SHA1 (patch-ae) = 6ff69eeffd40ec4ee3686f2069fd46853f346fff
 SHA1 (patch-af) = c556f02c7d8297968a78eb087f413f9472371c54
+SHA1 (patch-linux_lmstemp.cc) = d46c27884963901d0e5f5bed7cc880dc7fddc01c
 SHA1 (patch-sunos5_diskmeter.cc) = 99e119cb645c9982f2a116950ac2ffe84eeff1d4
