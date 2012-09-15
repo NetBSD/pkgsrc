@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2012/05/07 01:53:22 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2012/09/15 10:04:10 obache Exp $
 
 BUILDLINK_TREE+=	gobject-introspection
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gobject-introspection
 GOBJECT_INTROSPECTION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.6.14nb1
-BUILDLINK_ABI_DEPENDS.gobject-introspection+=	gobject-introspection>=1.30.0nb2
+BUILDLINK_ABI_DEPENDS.gobject-introspection+=	gobject-introspection>=1.32.1nb2
 BUILDLINK_PKGSRCDIR.gobject-introspection?=	../../devel/gobject-introspection
 
 
