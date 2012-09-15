@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/03/17 13:26:04 adam Exp $
+# $NetBSD: options.mk,v 1.5 2012/09/15 14:48:57 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
@@ -12,16 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	embedded-server mysqlmanager ndb-cluster pstack ssl
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .	include "../../security/openssl/buildlink3.mk"
-.  if ${OPSYS} == "SunOS"
-CHECK_BUILTIN.openssl:=yes
-.    include "../../security/openssl/builtin.mk"
-CHECK_BUILTIN.openssl:=no
-.    if ${USE_BUILTIN.openssl} == "yes"
-CONFIGURE_ARGS+=	--with-ssl=yes
-.    endif
-.  else
-CONFIGURE_ARGS+=	--with-ssl=yes
-.  endif
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
