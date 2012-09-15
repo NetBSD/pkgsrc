@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.50 2012/09/14 15:52:08 taca Exp $
+$NetBSD: distinfo,v 1.51 2012/09/15 00:08:10 taca Exp $
 
 SHA1 (php-5.3.17.tar.bz2) = d6f0192d2c1dae2921923762bde5ae356ceda5b5
 RMD160 (php-5.3.17.tar.bz2) = 40d0eee40b7c5218985ac490f2efa21d67f1279d
 Size (php-5.3.17.tar.bz2) = 11326372 bytes
+SHA1 (suhosin-patch-5.3.9-0.9.10.patch.gz) = 7b9ef5c3e0831154df0d6290aba0989ca90138ed
+RMD160 (suhosin-patch-5.3.9-0.9.10.patch.gz) = ce43921fd9b183b154713ecda98294f6c68d5f22
+Size (suhosin-patch-5.3.9-0.9.10.patch.gz) = 40967 bytes
 SHA1 (patch-aa) = b0dc6cd0b2103d5858280202506b33322a98496e
 SHA1 (patch-ab) = d08bb50cf074a6065ef0d1d67a713b7573cb2f5b
 SHA1 (patch-ac) = 1720f154232241c19d0c6e08a824e33252f1b690
