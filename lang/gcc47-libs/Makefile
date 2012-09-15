@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/14 04:37:17 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/15 08:10:20 sbd Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"../../lang/${GCC_PKGNAME}/version.mk"
@@ -35,7 +35,7 @@ FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC_DIST_VERSION}*
 GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${GCC_PKG_PREFIX}/${GCC_SUBPREFIX}
 
-.if defined(_PKGSRC_BARRIER)
+.if defined(_PKGSRC_BARRIER) && exists(${GCC_PREFIX}/bin/gcc)
 TARGET_TRIPLE!=		${GCC_PREFIX}/bin/gcc -dumpmachine
 .endif
 
