@@ -1,8 +1,8 @@
-$NetBSD: patch-library_base_file_utilities.cpp,v 1.2 2012/09/07 19:16:20 adam Exp $
+$NetBSD: patch-library_base_file_utilities.cpp,v 1.3 2012/09/15 05:14:07 obache Exp $
 
---- library/base/file_utilities.cpp.orig	2012-08-09 20:56:59.000000000 +0000
+--- library/base/file_utilities.cpp.orig	2011-03-17 12:48:44.000000000 +0000
 +++ library/base/file_utilities.cpp
-@@ -32,6 +32,9 @@
+@@ -31,6 +31,9 @@
  #include <fcntl.h>
  #include <sys/file.h>
  #endif
@@ -11,4 +11,4 @@ $NetBSD: patch-library_base_file_utilities.cpp,v 1.2 2012/09/07 19:16:20 adam Ex
 +#endif
  
  namespace base {
-   
+ 
