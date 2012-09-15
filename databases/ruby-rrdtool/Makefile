@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/09/07 19:16:20 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/15 10:04:04 obache Exp $
 #
 
 DISTNAME=	rrdtool-1.4.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 

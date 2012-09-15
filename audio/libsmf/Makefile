@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/09/12 00:24:44 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/15 10:03:40 obache Exp $
 #
 
 DISTNAME=	libsmf-1.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsmf/}
 

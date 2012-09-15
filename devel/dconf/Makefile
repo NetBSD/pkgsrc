@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2012/08/01 11:28:59 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/15 10:04:07 obache Exp $
 #
 # Attention: Update this only together with devel/dconf-editor
 #
 
 DISTNAME=	dconf-0.12.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.12/}
 EXTRACT_SUFX=	.tar.xz
