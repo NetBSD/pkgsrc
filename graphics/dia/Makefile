@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2012/09/07 19:16:43 adam Exp $
+# $NetBSD: Makefile,v 1.73 2012/09/15 10:04:49 obache Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	5
+PKGREVISION=	6
 
 .include "options.mk"
 

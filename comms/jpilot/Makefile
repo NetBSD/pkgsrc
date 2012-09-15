@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2012/09/07 19:16:18 adam Exp $
+# $NetBSD: Makefile,v 1.82 2012/09/15 10:03:58 obache Exp $
 #
 
 DISTNAME=		jpilot-1.6.0
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		comms
 MASTER_SITES=		http://www.jpilot.org/older/
 

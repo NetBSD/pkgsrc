@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/06/14 07:43:19 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/15 10:06:47 obache Exp $
 #
 
 DISTNAME=	rest-0.6
 PKGNAME=	librest-0.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://moblin.org/sites/all/files/
 #http://meego.gitorious.org/meego-middleware/librest

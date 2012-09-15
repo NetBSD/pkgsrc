@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/09/07 19:16:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/15 10:04:04 obache Exp $
 #
 
 MAKE_JOBS_SAFE=	no
@@ -6,7 +6,7 @@ MAKE_JOBS_SAFE=	no
 .include "../../devel/GConf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf-ui/}
-PKGREVISION=	4
+PKGREVISION=	5
 
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=${GCONF_VERSION}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/06/25 11:49:10 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/15 10:06:06 obache Exp $
 #
 
 DISTNAME=	ortp-0.16.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/linphone/ortp/sources/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2012/09/07 19:16:35 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/15 10:04:36 obache Exp $
 #
 
 DISTNAME=		atomix-2.14.0
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atomix/2.14/}
 

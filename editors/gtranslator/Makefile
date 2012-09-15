@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2012/09/07 19:16:30 adam Exp $
+# $NetBSD: Makefile,v 1.47 2012/09/15 10:04:27 obache Exp $
 
 DISTNAME=	gtranslator-1.1.7
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/1.1/}
 

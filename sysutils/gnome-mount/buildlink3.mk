@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/09/07 19:17:31 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/09/15 10:06:24 obache Exp $
 
 BUILDLINK_TREE+=	gnome-mount
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-mount
 GNOME_MOUNT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-mount+=	gnome-mount>=0.8nb1
-BUILDLINK_ABI_DEPENDS.gnome-mount+=	gnome-mount>=0.8nb15
+BUILDLINK_ABI_DEPENDS.gnome-mount+=	gnome-mount>=0.8nb16
 BUILDLINK_PKGSRCDIR.gnome-mount?=	../../sysutils/gnome-mount
 
 #.include "../../security/gnome-keyring/buildlink3.mk"

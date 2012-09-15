@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/09/07 19:16:43 adam Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/15 10:04:50 obache Exp $
 #
 
 PKGNAME=	eog-plugins-base-2.30.2
-PKGREVISION=	6
+PKGREVISION=	7
 
 COMMENT=	Plugin collection for eog
 

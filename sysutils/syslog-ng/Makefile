@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/03/03 00:13:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/15 10:06:32 obache Exp $
 
 VERS=		3.2.4
 DISTNAME=	syslog-ng_${VERS}
 PKGNAME=	syslog-ng-${VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${VERS}/source/
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

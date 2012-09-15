@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/06/14 07:43:40 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/15 10:05:48 obache Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
-PKGREVISION=2
+PKGREVISION=		3
 
 COMMENT+=		ugly plugins
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2012/09/07 19:16:30 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2012/09/15 10:04:25 obache Exp $
 
 BUILDLINK_TREE+=	gedit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gedit
 GEDIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gedit+=	gedit>=2.12.1nb4
-BUILDLINK_ABI_DEPENDS.gedit+=	gedit>=2.30.4nb8
+BUILDLINK_ABI_DEPENDS.gedit+=	gedit>=2.30.4nb9
 BUILDLINK_PKGSRCDIR.gedit?=	../../editors/gedit
 
 .include "../../x11/gtksourceview2/buildlink3.mk"

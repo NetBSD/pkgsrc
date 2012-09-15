@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/06/14 07:44:42 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/15 10:06:29 obache Exp $
 #
 
 DISTNAME=	DeviceKit-003
 PKGNAME=	${DISTNAME:S/DeviceKit/libdevkit-gobject/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 

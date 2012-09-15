@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/06/14 07:44:54 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/15 10:06:44 obache Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
 DISTNAME=	mod_auth_mellon-0.4.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www security
 MASTER_SITES=	http://modmellon.googlecode.com/files/
 

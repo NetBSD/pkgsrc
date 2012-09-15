@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/09/07 19:16:56 adam Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/15 10:05:12 obache Exp $
 #
 
 DISTNAME=	ibus-input-pad-1.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://input-pad.googlecode.com/files/
 

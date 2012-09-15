@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2012/09/07 19:17:21 adam Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/15 10:06:05 obache Exp $
 #
 
 VERSION=	0.9.9
 DISTNAME=	nagstamon_${VERSION}
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagstamon/}
 

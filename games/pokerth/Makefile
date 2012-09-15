@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/09/07 19:16:38 adam Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/15 10:04:42 obache Exp $
 
 DISTNAME=	PokerTH-0.7.1-src
 PKGNAME=	pokerth-0.7.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pokerth/}
 EXTRACT_SUFX=	.tar.bz2
