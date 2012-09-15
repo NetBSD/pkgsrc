@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/08/08 06:55:32 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/15 13:36:17 marino Exp $
 
 PKGNAME=	racket-textual-5.3
+PKGREVISION=	1
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
@@ -31,6 +32,8 @@ CONFIGURE_ARGS=	--enable-pthread
 USE_LANGUAGES=	c c++
 MAKE_JOBS_SAFE=	no
 UNLIMIT_RESOURCES=	datasize
+
+LDFLAGS.DragonFly+=	-rdynamic
 
 CHECK_INTERPRETER_SKIP=	lib/racket/collects/meta/build/sitemap/setup.py \
 			lib/racket/collects/meta/build/sitemap/sitemap_gen.py \
