@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.1 2010/09/08 13:53:00 tez Exp $
+$NetBSD: patch-ah,v 1.2 2012/09/15 10:26:02 adam Exp $
 
-fix syms file for stricter solaris ld
+Fix syms file for stricter solaris ld
 
---- libxslt/libxslt_solaris.syms.orig	2010-08-23 15:27:58.923572700 -0500
-+++ libxslt/libxslt_solaris.syms	2010-08-23 15:32:43.661353200 -0500
-@@ -107,7 +107,7 @@
+--- libxslt/libxslt_solaris.syms.orig	2012-09-15 09:51:49.000000000 +0000
++++ libxslt/libxslt_solaris.syms
+@@ -107,7 +107,7 @@ LIBXML2_1.0.11 {
    xsltFreeCompMatchList;
    xsltFreeTemplateHashes;
    xsltGetTemplate;
@@ -13,7 +13,7 @@ fix syms file for stricter solaris ld
    xsltTestCompMatchList;
  
  # preproc
-@@ -406,7 +406,7 @@
+@@ -407,7 +407,7 @@ LIBXML2_1.1.18 {
      global:
  
  # xsltInternals
@@ -22,7 +22,7 @@ fix syms file for stricter solaris ld
    xsltExtensionInstructionResultFinalize;
    xsltExtensionInstructionResultRegister;
    xsltInitCtxtKey;
-@@ -415,24 +415,24 @@
+@@ -416,24 +416,24 @@ LIBXML2_1.1.18 {
    xsltInit;
  
  # xsltInternals
@@ -58,7 +58,7 @@ fix syms file for stricter solaris ld
  } LIBXML2_1.1.9;
  
  LIBXML2_1.1.20 {
-@@ -475,5 +475,9 @@
+@@ -476,6 +476,10 @@ LIBXML2_1.1.26 {
  
  # transform
    xsltProcessOneNode;
@@ -68,3 +68,4 @@ fix syms file for stricter solaris ld
 +  *;
  } LIBXML2_1.1.25;
  
+ LIBXML2_1.1.27 {
