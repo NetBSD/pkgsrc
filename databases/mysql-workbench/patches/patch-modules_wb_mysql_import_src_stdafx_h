@@ -1,8 +1,8 @@
-$NetBSD: patch-modules_wb_mysql_import_src_stdafx_h,v 1.2 2012/09/07 19:16:20 adam Exp $
+$NetBSD: patch-modules_wb_mysql_import_src_stdafx_h,v 1.3 2012/09/15 05:14:07 obache Exp $
 
 Fix build with latest glib2.
 
---- modules/wb.mysql.import/src/stdafx.h.orig	2011-03-17 12:48:31.000000000 +0000
+--- modules/wb.mysql.import/src/stdafx.h~	2011-03-17 12:48:31.000000000 +0000
 +++ modules/wb.mysql.import/src/stdafx.h
 @@ -10,7 +10,7 @@
  #include <algorithm>
