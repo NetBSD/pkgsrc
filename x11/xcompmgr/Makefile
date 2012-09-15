@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/11/09 19:08:42 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/15 20:48:37 dholland Exp $
 #
 
 DISTNAME=	xcompmgr-1.1.5
@@ -27,13 +27,6 @@ XCOMPMGR_DEFS+=		-DCAN_DO_USABLE=1	# default: 0 (damage notification)
 #XCOMPMGR_DEFS+=	-DSHARP_SHADOW=0	# default  0 (?)
 
 CPPFLAGS+=	${XCOMPMGR_DEFS}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86) || \
-    defined(X11_TYPE) && !empty(X11_TYPE:Mnative) || !defined(X11_TYPE)
-PKG_FAIL_REASON+=	"This package is exclusively for X.org."
-.endif
 
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
