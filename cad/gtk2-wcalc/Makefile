@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/09/07 19:16:14 adam Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/15 10:03:48 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	gtk2-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 
 COMMENT=	GTK2 Based Transmission Line Analysis/Synthesis Calculator
 

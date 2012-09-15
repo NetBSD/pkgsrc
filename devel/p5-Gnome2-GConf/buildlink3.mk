@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2012/06/14 07:43:36 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2012/09/15 10:04:17 obache Exp $
 
 BUILDLINK_TREE+=	p5-Gnome2-GConf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	p5-Gnome2-GConf
 P5_GNOME2_GCONF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-Gnome2-GConf+=	p5-Gnome2-GConf>=1.044
-BUILDLINK_ABI_DEPENDS.p5-Gnome2-GConf+=	p5-Gnome2-GConf>=1.044nb5
+BUILDLINK_ABI_DEPENDS.p5-Gnome2-GConf+=	p5-Gnome2-GConf>=1.044nb6
 BUILDLINK_PKGSRCDIR.p5-Gnome2-GConf?=	../../devel/p5-Gnome2-GConf
 
 .include "../../devel/GConf/buildlink3.mk"
