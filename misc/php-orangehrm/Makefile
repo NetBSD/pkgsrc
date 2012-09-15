@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/16 05:25:03 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/15 13:31:09 obache Exp $
 #
 
 DISTNAME=	orangehrm-2.7
@@ -42,5 +42,4 @@ do-install:
 		${DESTDIR}${PREFIX}/${OHRDIR}
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
