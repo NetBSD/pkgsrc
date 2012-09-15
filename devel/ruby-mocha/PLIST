@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/09/03 15:41:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/09/15 12:28:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/COPYING.rdoc
@@ -58,13 +58,13 @@ ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_201_to_222.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_2110_to_2111.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_2112_to_320.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_230_to_2101.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_330.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_340.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/assertion_counter.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_200.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_201_to_202.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_203_to_220.rb
-${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_230_to_251.rb
+${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_230_to_252.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_185_and_below.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/ruby_version_186_and_above.rb
 ${GEM_LIBDIR}/lib/mocha/is_a.rb
