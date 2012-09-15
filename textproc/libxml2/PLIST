@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2012/06/03 22:18:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2012/09/15 10:23:38 adam Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -117,7 +117,6 @@ share/doc/libxml2/html/libxml-xmlwriter.html
 share/doc/libxml2/html/libxml-xpath.html
 share/doc/libxml2/html/libxml-xpathInternals.html
 share/doc/libxml2/html/libxml-xpointer.html
-share/doc/libxml2/html/libxml-xzlib.html
 share/doc/libxml2/html/right.png
 share/doc/libxml2/html/up.png
 share/doc/libxml2/io1.c
