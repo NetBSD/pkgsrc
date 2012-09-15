@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2012/09/12 00:24:42 asau Exp $
+# $NetBSD: Makefile,v 1.28 2012/09/15 10:03:40 obache Exp $
 
 DISTNAME=	libgpod-0.8.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
 EXTRACT_SUFX=	.tar.bz2
