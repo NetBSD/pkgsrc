@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/03/03 00:12:49 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/15 10:03:52 obache Exp $
 
 DISTNAME=	mu-conference_0.8
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	http://download.gna.org/mu-conference/
 

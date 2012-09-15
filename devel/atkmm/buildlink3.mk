@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/05/07 01:53:20 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/09/15 10:04:06 obache Exp $
 
 BUILDLINK_TREE+=	atkmm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	atkmm
 ATKMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.atkmm+=	atkmm>=2.22.1
-BUILDLINK_ABI_DEPENDS.atkmm+=	atkmm>=2.22.6nb2
+BUILDLINK_ABI_DEPENDS.atkmm+=	atkmm>=2.22.6nb3
 BUILDLINK_PKGSRCDIR.atkmm?=	../../devel/atkmm
 
 .include "../../devel/atk/buildlink3.mk"

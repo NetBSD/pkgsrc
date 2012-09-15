@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2012/09/12 00:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/15 10:03:38 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	pulse
 GST_PLUGINS0.10_DIRS=	ext/pulse
 GST_PLUGINS0.10_FLAGS=	pulse
-PKGREVISION=		1
+PKGREVISION=		2
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
-PKGREVISION=1
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

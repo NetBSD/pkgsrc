@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.74 2012/09/07 19:16:49 adam Exp $
+# $NetBSD: Makefile,v 1.75 2012/09/15 10:04:59 obache Exp $
 #
 
 PKGNAME=	kipi-plugins-2.5.0
 DISTNAME=	digikam-2.5.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

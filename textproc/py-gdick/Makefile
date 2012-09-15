@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/09/07 19:17:36 adam Exp $
+# $NetBSD: Makefile,v 1.31 2012/09/15 10:06:37 obache Exp $
 
 DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gdick/}
 EXTRACT_SUFX=	.tar.bz2

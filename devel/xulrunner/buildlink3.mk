@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2012/09/07 19:16:28 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2012/09/15 10:04:23 obache Exp $
 
 BUILDLINK_TREE+=	xulrunner
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xulrunner
 XULRUNNER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=11.0
-BUILDLINK_ABI_DEPENDS.xulrunner+=	xulrunner>=15.0nb2
+BUILDLINK_ABI_DEPENDS.xulrunner+=	xulrunner>=15.0.1nb1
 BUILDLINK_PKGSRCDIR.xulrunner?=		../../devel/xulrunner
 
 BUILDLINK_INCDIRS.xulrunner+=		lib/xulrunner-sdk/include

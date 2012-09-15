@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2012/09/07 19:17:02 adam Exp $
+# $NetBSD: Makefile,v 1.30 2012/09/15 10:05:24 obache Exp $
 #
 
 DISTNAME=	newmail-0.0.15
 PKGNAME=	claws-mail-newmail-0.0.15
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 

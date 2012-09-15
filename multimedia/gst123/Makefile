@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/09/07 19:17:14 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/15 10:05:49 obache Exp $
 #
 
 DISTNAME=	gst123-0.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://space.twc.de/~stefan/gst123/
 EXTRACT_SUFX=	.tar.bz2

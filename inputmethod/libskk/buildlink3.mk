@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/04/22 13:21:04 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/09/15 10:05:14 obache Exp $
 #
 
 BUILDLINK_TREE+=	libskk
@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	libskk
 LIBSKK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libskk+=	libskk>=0.0.12
+BUILDLINK_ABI_DEPENDS.libskk?=	libskk>=0.0.13nb1
 BUILDLINK_PKGSRCDIR.libskk?=	../../inputmethod/libskk
 
 .include "../../devel/glib2/buildlink3.mk"

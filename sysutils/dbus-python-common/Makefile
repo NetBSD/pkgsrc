@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/08/08 16:35:26 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/15 10:06:22 obache Exp $
 #
 
 DISTNAME=	dbus-python-1.1.1
 PKGNAME=	dbus-python-common-1.1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 

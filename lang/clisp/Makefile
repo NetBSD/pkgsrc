@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2012/09/07 19:17:00 adam Exp $
+# $NetBSD: Makefile,v 1.89 2012/09/15 10:05:18 obache Exp $
 #
 
 DISTNAME=		clisp-2.49
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2

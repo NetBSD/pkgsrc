@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/06/14 07:45:15 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/15 10:04:35 obache Exp $
 #
 
 DISTNAME=	gstfs-0.1
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bobcopeland.com/gstfs/releases/
 

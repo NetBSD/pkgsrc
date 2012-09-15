@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2012/09/07 19:17:49 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/15 10:07:10 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	libxfce4util-${XFCE4_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11
 COMMENT=	Xfce basic library
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/05/07 01:53:59 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/09/15 10:06:22 obache Exp $
 
 BUILDLINK_TREE+=	eggdbus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	eggdbus
 EGGDBUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.eggdbus+=	eggdbus>=0.6
-BUILDLINK_ABI_DEPENDS.eggdbus+=	eggdbus>=0.6nb3
+BUILDLINK_ABI_DEPENDS.eggdbus+=	eggdbus>=0.6nb4
 BUILDLINK_PKGSRCDIR.eggdbus?=	../../sysutils/eggdbus
 
 .include "../../devel/glib2/buildlink3.mk"

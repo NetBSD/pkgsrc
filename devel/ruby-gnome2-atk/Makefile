@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/04/14 04:27:49 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/15 10:04:21 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-atk-${VERSION}
 COMMENT=		Ruby binding of ATK-1.0.x or later
+PKGREVISION=		1
 CATEGORIES=		devel
 
 CONFLICTS+=		ruby-gnome2-atk-[0-9]*
