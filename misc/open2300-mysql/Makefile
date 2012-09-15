@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/09/30 10:49:17 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/15 15:03:24 obache Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-mysql-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	WS 23xx weather station MySQL support
 LICENSE=	gnu-gpl-v2
 
