@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2983 2012/09/15 15:15:15 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2984 2012/09/15 17:54:38 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4545,3 +4545,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql51-client to 5.1.65 [obache 2012-09-15]
 	Updated databases/mysql51-server to 5.1.65 [obache 2012-09-15]
 	Updated graphics/p5-Chart to 2.4.5 [wen 2012-09-15]
+	Updated www/p5-Mojolicious to 3.41 [mspo 2012-09-15]
