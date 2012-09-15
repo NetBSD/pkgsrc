@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2979 2012/09/15 12:30:02 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2980 2012/09/15 14:30:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4540,3 +4540,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-highline to 1.6.15 [taca 2012-09-15]
 	Updated devel/ruby-mocha to 0.12.4 [taca 2012-09-15]
 	Updated devel/ruby-turn to 0.9.6 [taca 2012-09-15]
+	Updated devel/p5-Getopt-Euclid to 0.3.7 [wen 2012-09-15]
