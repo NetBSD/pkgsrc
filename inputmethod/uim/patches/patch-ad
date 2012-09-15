@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2011/09/14 16:57:41 hans Exp $
+$NetBSD: patch-ad,v 1.2 2012/09/15 12:05:00 obache Exp $
+
+* Fix for SunOS, Add $(SunOS_LDFLAGS) where $(LDFLALGS) requested
 
 --- uim/Makefile.in.orig	2011-05-17 06:16:18.000000000 +0200
 +++ uim/Makefile.in	2011-09-13 15:25:17.188833173 +0200
