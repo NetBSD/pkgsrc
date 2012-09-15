@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2012/09/15 10:06:12 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2012/09/15 12:53:27 drochner Exp $
 
 BUILDLINK_TREE+=	poppler-glib
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.poppler-glib?=	../../print/poppler-glib
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .endif # POPPLER_GLIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-poppler-glib
