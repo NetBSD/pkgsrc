@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2975 2012/09/15 10:28:41 adam Exp $
+$NetBSD: CHANGES-2012,v 1.2976 2012/09/15 10:55:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4534,3 +4534,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4 to 4.8.3 [drochner 2012-09-15]
 	Updated textproc/libxml2 to 2.9.0 [adam 2012-09-15]
 	Updated textproc/libxslt to 1.1.27 [adam 2012-09-15]
+	Updated pkgtools/pkglint to 4.124 [wiz 2012-09-15]
