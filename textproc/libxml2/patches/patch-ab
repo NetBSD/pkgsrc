@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
+$NetBSD: patch-ab,v 1.25 2012/09/15 10:23:38 adam Exp $
 
---- configure.orig	2012-05-23 08:56:30.000000000 +0000
+--- configure.orig	2012-09-11 06:55:35.000000000 +0000
 +++ configure
-@@ -14088,7 +14088,7 @@ fi
+@@ -13971,7 +13971,7 @@ fi
  fi
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
-@@ -14553,13 +14553,13 @@ else
+@@ -14436,13 +14436,13 @@ else
          if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
              ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
  if test "x$ac_cv_header_pthread_h" = xyes; then :
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -14591,7 +14591,7 @@ fi
+@@ -14474,7 +14474,7 @@ fi
  $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
  if test "x$ac_cv_lib_pthread_pthread_join" = xyes; then :
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
  
  $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
  
-@@ -14613,12 +14613,12 @@ fi
+@@ -14496,12 +14496,12 @@ fi
         *beos*) WITH_THREADS="1"
  	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
         ;;
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
  	           if expr ${GCC_MEDIUM} \> 2 \& ${GCC_MAJOR} = 3 > /dev/null
  		   then
  		       THREAD_LIBS=""
-@@ -14635,6 +14635,10 @@ fi
+@@ -14518,6 +14518,10 @@ fi
  	       fi
  	   fi
         ;;
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.24 2012/06/03 22:18:34 wiz Exp $
      esac
      if test "$WITH_THREADS" = "1" ; then
  	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
-@@ -15310,10 +15314,6 @@ case "$host" in
+@@ -15209,10 +15213,6 @@ case "$host" in
  
  $as_echo "#define _WINSOCKAPI_ 1" >>confdefs.h
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2005/07/12 21:15:21 recht Exp $
+$NetBSD: patch-ac,v 1.7 2012/09/15 10:23:38 adam Exp $
 
 --- catalog.c.orig	2005-04-01 15:15:01.000000000 +0200
 +++ catalog.c
-@@ -62,10 +62,10 @@
+@@ -70,10 +70,10 @@
  #define XML_URN_PUBID "urn:publicid:"
  #define XML_CATAL_BREAK ((xmlChar *) -1)
  #ifndef XML_XML_DEFAULT_CATALOG

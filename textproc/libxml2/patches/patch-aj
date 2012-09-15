@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.2 2012/06/03 22:18:34 wiz Exp $
+$NetBSD: patch-aj,v 1.3 2012/09/15 10:23:38 adam Exp $
 
 Inlucde resolv.h conditionally:
   https://bugzilla.gnome.org/show_bug.cgi?id=617053
 
---- nanohttp.c.orig	2012-05-11 02:09:01.000000000 +0000
+--- nanohttp.c.orig	2012-09-11 04:23:25.000000000 +0000
 +++ nanohttp.c
 @@ -43,8 +43,10 @@
  #ifdef HAVE_ARPA_NAMESER_H
@@ -14,5 +14,5 @@ Inlucde resolv.h conditionally:
  #endif
 +#endif
  #ifdef HAVE_FCNTL_H
- #include <fcntl.h> 
+ #include <fcntl.h>
  #endif
