@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2981 2012/09/15 14:45:59 wen Exp $
+$NetBSD: CHANGES-2012,v 1.2982 2012/09/15 14:50:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4542,3 +4542,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-turn to 0.9.6 [taca 2012-09-15]
 	Updated devel/p5-Getopt-Euclid to 0.3.7 [wen 2012-09-15]
 	Updated devel/p5-Test-Weaken to 3.020000 [wen 2012-09-15]
+	Updated databases/mysql51-client to 5.1.65 [obache 2012-09-15]
+	Updated databases/mysql51-server to 5.1.65 [obache 2012-09-15]
