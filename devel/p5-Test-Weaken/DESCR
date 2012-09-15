@@ -1,29 +1,21 @@
-A memory leak occurs when a Perl data structure is destroyed but some of
-the contents of that structure are not freed. Leaked memory is a useless
-overhead. Leaks can significantly impact system performance. They can also
+Test::Weaken helps detect unfreed Perl data in arrays, hashes, scalars,
+objects, etc, by descending recursively through structures and watching
+that everything is freed. Unfreed data is a useless overhead and may
 cause an application to abend due to lack of memory.
 
-In Perl, circular references are a common cause of memory leaks. Circular
-references are allowed in Perl, but data structures containing circular
-references will leak memory unless the programmer takes specific measures
-to prevent leaks. Preventive measures include weakening the references
-and arranging to break the reference cycle just before the structure is
-destroyed.
+Normally if the last reference to something is discarded then it and
+anything in it is freed automatically. But this might not occur due to
+circular references, unexpected global variables or closures, or reference
+counting mistakes in XSUBs.
 
-When using circular references, it is easy to misdesign or misimplement a
-scheme for preventing memory leaks. Mistakes of this kind have been hard to
-detect in a test suite.
+Test::Weaken is named for the strategy used to detect leaks. References
+are taken to the test objects and all their contents, then those
+references are weakened and expected to be then freed.
 
-Test::Weaken allows easy detection of unfreed Perl data. Test::Weaken allows
-you to examine the unfreed data, even data that would usually have been made
-inaccessible.
+There's options to ignore intentional globals, or include extra associated
+data held elsewhere, or invoke an explicit destructor. Unfreed parts are
+reported and can be passed to other modules such as Devel::FindRef to try
+to discover why they weren't freed.
 
-Test::Weaken frees the test structure, then looks to see if any of the
-contents of the structure were not actually deallocated. By default,
-Test::Weaken determines the contents of a data structure by examining
-arrays and hashes, by following references, and by following tied variables
-to their underlying object. Test::Weaken does this recursively to unlimited
-depth.
-
-Test::Weaken can deal with circular references without going into infinite
-loops. Test::Weaken will not visit the same Perl data object twice.
+Test::Weaken examines structures to an unlimited depth and is safe on
+circular structures.
