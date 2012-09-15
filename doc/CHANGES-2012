@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2978 2012/09/15 12:05:59 obache Exp $
+$NetBSD: CHANGES-2012,v 1.2979 2012/09/15 12:30:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4537,3 +4537,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkglint to 4.124 [wiz 2012-09-15]
 	Updated mail/msmtp to 1.4.29 [ryoon 2012-09-15]
 	Updated inputmethod/uim to 1.8.2 [obache 2012-09-15]
+	Updated devel/ruby-highline to 1.6.15 [taca 2012-09-15]
+	Updated devel/ruby-mocha to 0.12.4 [taca 2012-09-15]
+	Updated devel/ruby-turn to 0.9.6 [taca 2012-09-15]
