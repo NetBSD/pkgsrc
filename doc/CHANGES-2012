@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2977 2012/09/15 11:25:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2978 2012/09/15 12:05:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4536,3 +4536,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libxslt to 1.1.27 [adam 2012-09-15]
 	Updated pkgtools/pkglint to 4.124 [wiz 2012-09-15]
 	Updated mail/msmtp to 1.4.29 [ryoon 2012-09-15]
+	Updated inputmethod/uim to 1.8.2 [obache 2012-09-15]
