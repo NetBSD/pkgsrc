@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 17:29:21 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/15 15:03:23 obache Exp $
 
 DISTNAME=	dm-mysql-adapter-1.2.0
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
