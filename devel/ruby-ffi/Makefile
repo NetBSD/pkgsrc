@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/08/21 13:52:10 taca Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/15 10:04:20 obache Exp $
 
 DISTNAME=	ffi-1.1.5
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
