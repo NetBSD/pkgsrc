@@ -1,0 +1,17 @@
+$NetBSD: patch-src_configure,v 1.1 2012/09/15 13:33:59 marino Exp $
+
+Fixes mbsrtowcs conftest on DragonFly (it segfaulted during the test)
+
+--- src/configure.orig	2012-08-06 22:51:46.000000000 +0000
++++ src/configure
+@@ -5111,8 +5111,10 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+   #include <wchar.h>
++  #include <strings.h>
+    int main() {
+      mbstate_t state;
++     bzero(&state, sizeof(mbstate_t));
+     char *src = "X";
+     mbsrtowcs(0, &src, 0, &state);
+      return 0;
