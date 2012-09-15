@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2011/12/19 03:04:13 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/15 15:03:26 obache Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
 
 MODNAME=		phrasea2
+PKGREVISION=		1
 PECL_VERSION=		${VERS}
 PECL_LEGACY_VERSION_SCHEME=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
