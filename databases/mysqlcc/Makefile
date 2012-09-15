@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2011/11/01 06:00:51 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/15 15:03:22 obache Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.8-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mysqlcc/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:45:19 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/15 15:03:24 obache Exp $
 
 PERDITION_COMMENT=	MySQL user database module
 PERDITION_PKGNAME=	mysql
-PKGREVISION=		2
+PKGREVISION=		3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
