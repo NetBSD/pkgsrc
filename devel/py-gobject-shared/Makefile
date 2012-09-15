@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2012/09/07 19:16:27 adam Exp $
+# $NetBSD: Makefile,v 1.30 2012/09/15 10:04:19 obache Exp $
 
 PKGNAME=		py-gobject-shared-2.28.6
-PKGREVISION=		4
+PKGREVISION=		5
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

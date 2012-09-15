@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/07/01 19:05:17 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/15 10:04:32 obache Exp $
 
 DISTNAME=	28107-kenigma-1.2.1
 PKGNAME=	kenigma-1.2.1
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	emulators security
 MASTER_SITES=	http://www.kde-apps.org/content/files/
 
