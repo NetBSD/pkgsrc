@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/04/28 15:54:07 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/09/16 06:20:48 taca Exp $
 
-SHA1 (logging-1.7.2.gem) = d08d3dc4ae8d6d21017250bbe73376ad4f6e473b
-RMD160 (logging-1.7.2.gem) = a3d9623ab4eb0cad83c7e762d8bde6fc88283e36
-Size (logging-1.7.2.gem) = 80384 bytes
+SHA1 (logging-1.8.0.gem) = a6fe2ccb98779ffbc349fecf8c8bb4024ba9d55c
+RMD160 (logging-1.8.0.gem) = 5b20ddd6158e96b2a4200813dd8bb02793516d33
+Size (logging-1.8.0.gem) = 86528 bytes
