@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.14 2012/03/20 06:14:30 taca Exp $
+# $NetBSD: gem.mk,v 1.15 2012/09/16 15:23:12 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -9,7 +9,6 @@
 #	Minimum version of required rubygems.  Ruby base packages contain:
 #
 #		ruby18-base:	none
-#		ruby19-base:	1.3.7
 #		ruby193-base:	1.8.11
 #
 #	If newer version of rubygems is resuiqred, set RUBYGEMS_REQD to
@@ -166,16 +165,12 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
 .else # !ruby18
 . if defined(RUBYGEMS_REQD)
 
-RUBY19_RUBYGEMS_VERS=	1.3.7
 RUBY193_RUBYGEMS_VERS=	1.8.11
 
 _RUBYGEMS_REQD_MAJOR=	${RUBYGEMS_REQD:C/\.[0-9\.]+$//}
 _RUBYGEMS_REQD_MINORS=	${RUBYGEMS_REQD:C/^([0-9]+)\.*//}
 
-.  if ${RUBY_VER} == "19"
-_RUBYGEMS_MAJOR=	${RUBY19_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
-_RUBYGEMS_MINORS=	${RUBY19_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
-.  elif ${RUBY_VER} == "193"
+.  if ${RUBY_VER} == "193"
 _RUBYGEMS_MAJOR=	${RUBY193_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
 _RUBYGEMS_MINORS=	${RUBY193_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
 .  else
