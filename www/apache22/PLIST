@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/02/01 19:53:21 tron Exp $
-${PLIST.suexec}sbin/suexec
+@comment $NetBSD: PLIST,v 1.21 2012/09/16 03:33:10 taca Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -127,17 +126,17 @@ ${PLIST.all-shared}lib/httpd/mod_version.so
 ${PLIST.all-shared}lib/httpd/mod_vhost_alias.so
 libexec/cgi-bin/printenv
 libexec/cgi-bin/test-cgi
-man/man1/ab.1
-man/man1/apxs.1
 man/man1/dbmmanage.1
 man/man1/htdbm.1
 man/man1/htdigest.1
 man/man1/htpasswd.1
 man/man1/httxt2dbm.1
-man/man1/logresolve.1
+man/man8/ab.8
 man/man8/apachectl.8
+man/man8/apxs.8
 man/man8/htcacheclean.8
 man/man8/httpd.8
+man/man8/logresolve.8
 man/man8/rotatelogs.8
 man/man8/suexec.8
 sbin/ab
@@ -156,6 +155,7 @@ sbin/httxt2dbm
 sbin/logresolve
 sbin/mkcert
 sbin/rotatelogs
+${PLIST.suexec}sbin/suexec
 share/examples/httpd/extra/httpd-autoindex.conf
 share/examples/httpd/extra/httpd-dav.conf
 share/examples/httpd/extra/httpd-default.conf
@@ -576,6 +576,7 @@ share/httpd/manual/images/mod_rewrite_fig1.png
 share/httpd/manual/images/mod_rewrite_fig2.gif
 share/httpd/manual/images/mod_rewrite_fig2.png
 share/httpd/manual/images/pixel.gif
+share/httpd/manual/images/rewrite_backreferences.png
 share/httpd/manual/images/rewrite_rule_flow.png
 share/httpd/manual/images/right.gif
 share/httpd/manual/images/ssl_intro_fig1.gif
@@ -1180,11 +1181,13 @@ share/httpd/manual/style/css/manual-print.css
 share/httpd/manual/style/css/manual-zip-100pc.css
 share/httpd/manual/style/css/manual-zip.css
 share/httpd/manual/style/css/manual.css
+share/httpd/manual/style/css/prettify.css
 share/httpd/manual/style/faq.dtd
 share/httpd/manual/style/lang.dtd
 share/httpd/manual/style/latex/atbeginend.sty
 share/httpd/manual/style/manualpage.dtd
 share/httpd/manual/style/modulesynopsis.dtd
+share/httpd/manual/style/scripts/prettify.js
 share/httpd/manual/style/sitemap.dtd
 share/httpd/manual/style/version.ent
 share/httpd/manual/suexec.html
