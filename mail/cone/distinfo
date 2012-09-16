@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2012/06/09 11:51:36 adam Exp $
+$NetBSD: distinfo,v 1.7 2012/09/16 00:49:41 dholland Exp $
 
 SHA1 (cone-0.90.tar.bz2) = 51614269ed0b8c091de4573bacefe5f394a08311
 RMD160 (cone-0.90.tar.bz2) = 2b2a924d8726535654c74c9d98d7e444aff9fd5e
 Size (cone-0.90.tar.bz2) = 3906323 bytes
 SHA1 (patch-af) = f2018ee08526ee9e0c9c93e6ff5f83b948fd7067
+SHA1 (patch-curses-cursesscreen.C) = 55aae19747367036d859c0e1835f2af96ea58a77
 SHA1 (patch-libmail-maildir.C) = 724c16cb897667792cbfb769b7c7e81b803a1bd5
 SHA1 (patch-libmail-mbox.C) = 02cb2a96fe1915f61126436439ae7842f882b512
 SHA1 (patch-libmail-mboxadd.C) = 8731fb947d48256a061d68d2630573323d5ec797
