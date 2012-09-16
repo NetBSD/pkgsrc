@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:21:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/09/16 12:37:51 obache Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/testtools/__init__.py
 ${PYSITELIB}/testtools/__init__.pyc
@@ -42,6 +42,9 @@ ${PYSITELIB}/testtools/run.pyo
 ${PYSITELIB}/testtools/runtest.py
 ${PYSITELIB}/testtools/runtest.pyc
 ${PYSITELIB}/testtools/runtest.pyo
+${PYSITELIB}/testtools/tags.py
+${PYSITELIB}/testtools/tags.pyc
+${PYSITELIB}/testtools/tags.pyo
 ${PYSITELIB}/testtools/testcase.py
 ${PYSITELIB}/testtools/testcase.pyc
 ${PYSITELIB}/testtools/testcase.pyo
@@ -96,6 +99,9 @@ ${PYSITELIB}/testtools/tests/test_runtest.pyo
 ${PYSITELIB}/testtools/tests/test_spinner.py
 ${PYSITELIB}/testtools/tests/test_spinner.pyc
 ${PYSITELIB}/testtools/tests/test_spinner.pyo
+${PYSITELIB}/testtools/tests/test_tags.py
+${PYSITELIB}/testtools/tests/test_tags.pyc
+${PYSITELIB}/testtools/tests/test_tags.pyo
 ${PYSITELIB}/testtools/tests/test_testcase.py
 ${PYSITELIB}/testtools/tests/test_testcase.pyc
 ${PYSITELIB}/testtools/tests/test_testcase.pyo
