@@ -1,7 +1,0 @@
-merb-exceptions
-===============
-A simple Merb plugin to ease exception notifications.
-
-The notifier currently supports two interfaces, Email Alerts and Web
-Hooks. Emails are formatted as plain text and sent using your Merb
-environment's mail settings. Web hooks as sent as post requests.
