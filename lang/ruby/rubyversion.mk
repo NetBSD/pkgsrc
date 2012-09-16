@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.84 2012/08/11 13:38:50 obache Exp $
+# $NetBSD: rubyversion.mk,v 1.85 2012/09/16 01:23:17 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -215,7 +215,7 @@ RUBY193_API_VERSION=	1.9.1
 #
 RUBY_VERSION_DEFAULT?=	193
 
-RUBY_VERSION_SUPPORTED?= 18 192 193
+RUBY_VERSION_SUPPORTED?= 193 192 18
 RUBY_VER?=		${RUBY_VERSION_DEFAULT}
 RUBY_VER_MAP.192=	19
 
