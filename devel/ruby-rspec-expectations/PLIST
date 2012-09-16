@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/09/03 15:52:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/09/16 06:25:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -126,4 +126,5 @@ ${GEM_LIBDIR}/spec/support/classes.rb
 ${GEM_LIBDIR}/spec/support/in_sub_process.rb
 ${GEM_LIBDIR}/spec/support/matchers.rb
 ${GEM_LIBDIR}/spec/support/ruby_version.rb
+${GEM_LIBDIR}/spec/support/shared_examples.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
