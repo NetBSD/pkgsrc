@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.471 2012/09/12 17:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.472 2012/09/16 14:19:04 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -217,6 +217,7 @@ SUBDIR+=	libmusicbrainz
 SUBDIR+=	libmusicbrainz5
 SUBDIR+=	libofa
 SUBDIR+=	libopenspc
+SUBDIR+=	libopus
 SUBDIR+=	libsamplerate
 SUBDIR+=	libshout
 SUBDIR+=	libsidplay
@@ -298,6 +299,7 @@ SUBDIR+=	ocp
 SUBDIR+=	oggasm
 SUBDIR+=	openal
 SUBDIR+=	opencore-amr
+SUBDIR+=	opus-tools
 SUBDIR+=	p5-Audio-CD
 SUBDIR+=	p5-Audio-Scan
 SUBDIR+=	p5-Audio-Wav
