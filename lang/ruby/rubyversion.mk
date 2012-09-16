@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.86 2012/09/16 15:17:12 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.87 2012/09/16 15:27:42 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 192 193
+#		Possible values: 18 193
 #		Default: 193
 #
 # RUBY_BUILD_RDOC
@@ -33,9 +33,8 @@
 # RUBY_VERSION_SUPPORTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 18 192 193
-#		Compatible values: 19 (= 192)
-#		Default: 18 192 193
+#		Possible values: 18 193
+#		Default: 18 193
 #
 # RUBY_VERSION_REQD
 #	The Ruby versions force to build (for pbulk).
@@ -44,7 +43,7 @@
 #	If "Yes", the package dosen't depend on any version of Ruby, such
 #	as editing mode for emacs.  In this case, package's name would begin
 #	with "ruby-".  Otherwise, the package's name is begin with
-#	${RUBY_PKGPREFIX}; "ruby18", "ruby19" and "ruby193".
+#	${RUBY_PKGPREFIX}; "ruby18" or "ruby193".
 #
 #		Possible values: Yes No
 #		Default: No
@@ -63,10 +62,9 @@
 # === Defined variables ===
 #
 # RUBY_VER
-#	Really selected version of ruby.  For compatibility, RUBY_VER
-#	would not set to 192 but 19.
+#	Really selected version of ruby.
 #
-#		Possible values: 18 19 193
+#		Possible values: 18 193
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -199,17 +197,14 @@ _RUBYVERSION_MK=	# defined
 
 # current supported Ruby's version
 RUBY18_VERSION=		1.8.7
-RUBY19_VERSION=		1.9.2
 RUBY193_VERSION=	1.9.3
 
 # patch
 RUBY18_PATCHLEVEL=	pl370
-RUBY19_PATCHLEVEL=	pl320
 RUBY193_PATCHLEVEL=	p194
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
-RUBY19_API_VERSION=	1.9.1
 RUBY193_API_VERSION=	1.9.1
 
 #
@@ -217,7 +212,6 @@ RUBY_VERSION_DEFAULT?=	193
 
 RUBY_VERSION_SUPPORTED?= 193 18
 RUBY_VER?=		${RUBY_VERSION_DEFAULT}
-RUBY_VER_MAP.192=	19
 
 # If package support only one version, use it.
 .if ${RUBY_VERSION_SUPPORTED:[\#]} == 1
@@ -257,7 +251,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
-#	with ${RUBY_NAME}; "ruby18", "ruby19",  and so on.
+#	with ${RUBY_NAME}; "ruby18", "ruby193",  and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
@@ -286,7 +280,7 @@ RUBY_BASE=		ruby${RUBY_VER}-base
 
 RUBY_PKGPREFIX?=	${RUBY_NAME}
 
-.if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
+.if ${RUBY_VER} == "18"
 RUBY_VER_DIR=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 .else
 RUBY_VER_DIR=		${RUBY_VERSION}
@@ -317,7 +311,7 @@ RUBY_STATICLIB?=	${RUBY_VER}-static.a
 RUBY_SHLIBVER=		${_RUBY_API_MAJOR}.${_RUBY_API_MINOR}
 _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_API_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-.if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
+.if ${RUBY_VER} == "18"
 RUBY_SHLIBVER=		${RUBY_VER}
 .else
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
