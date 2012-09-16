@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 06:29:40 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/16 06:26:40 taca Exp $
 
-DISTNAME=	termcolor-1.2.1
+DISTNAME=	termcolor-1.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
