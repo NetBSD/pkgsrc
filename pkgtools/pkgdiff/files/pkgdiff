@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.21 2011/02/02 23:34:48 wiz Exp $
+# $NetBSD: pkgdiff,v 1.22 2012/09/16 18:09:53 dholland Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -96,14 +96,29 @@ dodiff() {
 	esac
 }
 
+dogrep() {
+	egrep $* '\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\$'
+}
+
 case x"$PKGDIFF_FMT" in x)
 lines=3
 PKGDIFF_FMT="-p"
-while [ `dodiff "$PKGDIFF_FMT" -U $lines "$old" "$new" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\\$'`  !=  0 ]
+while [ `dodiff "$PKGDIFF_FMT" -U $lines "$old" "$new" | dogrep -c`  !=  0 ]
 do
 	lines=`expr $lines - 1`
+	if [ $lines = 0x -a x"$PKGDIFF_FMT" = x-p ]; then
+		# Try without -p instead
+		lines=3
+		PKGDIFF_FMT=""
+		continue
+	fi
 	if [ $lines = 0 ]; then
 		echo "Cannot strip away RCS IDs, please handle manually!" >&2
+		echo "These are the matching lines:" >&2
+		dodiff "$PKGDIFF_FMT" -U $lines "$old" "$new" | dogrep |\
+		  sed -e 's/^/   /' >&2
+		echo "Setting PKGDIFF_FMT might help." >&2
+		echo "Otherwise you may need to run diff by hand." >&2
 		exit 1
 	fi
 done
