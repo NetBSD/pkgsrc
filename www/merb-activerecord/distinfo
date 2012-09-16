@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2010/09/12 02:34:34 taca Exp $
-
-SHA1 (merb_activerecord-1.0.0.1.gem) = d4c7d5d8ff86b06f0d53dea828657d869fe7708f
-RMD160 (merb_activerecord-1.0.0.1.gem) = 04d5ce611f1100831614d1f0b5f407ac715dd3eb
-Size (merb_activerecord-1.0.0.1.gem) = 12288 bytes
