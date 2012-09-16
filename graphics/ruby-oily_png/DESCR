@@ -1,0 +1,2 @@
+This Ruby C extenstion defines a module that can be included into
+ChunkyPNG to improve its speed.
