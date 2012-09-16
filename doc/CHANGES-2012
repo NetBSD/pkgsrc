@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3004 2012/09/16 12:31:17 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3005 2012/09/16 12:38:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ocaml-sqlite3 to 2.0.2 [jaapb 2012-09-16]
 	Updated textproc/ruby-textpow to 1.3.0 [taca 2012-09-16]
 	Added archivers/ocaml-bz2 version 0.6.0 [jaapb 2012-09-16]
+	Updated devel/py-testtools to 0.9.15 [obache 2012-09-16]
