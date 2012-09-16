@@ -1,10 +1,10 @@
-Whitespace steganography	 	    	  	      	    	   
- 	    	     	      	      	      	       	  	      	      
-The program snow is used to conceal messages in ASCII text by      	    
-appending whitespace to the end of lines.  Because spaces and tabs are    
-generally not visible in text viewers, the message is effectively 
-hidden from casual observers.  And if the built-in encryption is used,	  
-the message cannot be read even if it is detected.  	 		
+Whitespace steganography
+
+The program snow is used to conceal messages in ASCII text by
+appending whitespace to the end of lines.  Because spaces and tabs are
+generally not visible in text viewers, the message is effectively
+hidden from casual observers.  And if the built-in encryption is used,
+the message cannot be read even if it is detected.
 
 What's in a name?
 
