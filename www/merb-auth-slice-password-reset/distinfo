@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/12 02:57:54 taca Exp $
-
-SHA1 (merb-auth-slice-password-reset-1.1.0.gem) = 061e01ac7600ee36c76df3036ffa3fc689c7020e
-RMD160 (merb-auth-slice-password-reset-1.1.0.gem) = 87e84f04f34eb5146db4a68783c32b73f5f049ed
-Size (merb-auth-slice-password-reset-1.1.0.gem) = 17408 bytes
