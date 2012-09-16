@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3011 2012/09/16 14:37:25 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3012 2012/09/16 14:38:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4633,3 +4633,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-json to 1.7.5 [taca 2012-09-16]
 	Updated www/camping to 2.1.523 [taca 2012-09-16]
 	Updated www/ruby-jquery-rails20 to 2.1.2 [taca 2012-09-16]
+	Updated fonts/vlgothic-ttf to 20120905 [ryoon 2012-09-16]
