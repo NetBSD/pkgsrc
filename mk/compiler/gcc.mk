@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.127 2012/09/16 07:31:18 sbd Exp $
+# $NetBSD: gcc.mk,v 1.128 2012/09/16 12:18:30 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -18,6 +18,10 @@
 #
 #	This should be disabled only for debugging.
 #
+# USE_PKGSRC_GCC_RUNTIME
+#	When set to "yes", the runtime gcc libraries (libgcc, libstdc++
+#	etc) will be used from pkgsrc rather than the native compiler.
+#
 # Package-settable variables:
 #
 # GCC_REQD
@@ -31,6 +35,12 @@
 #	known not to build on some platforms, e.g. Darwin.  If gcc3 is
 #	required, set GCC_REQD=3.0 so that we do not try to pull in
 #	lang/gcc3 unnecessarily and have it fail.
+#
+# USE_GCC_RUNTIME
+#	Packages which build shared libraries but do not use libtool to
+#	do so should define this variable.  It is used to determine whether
+#	the gcc runtime should be depended upon when a user has enabled
+#	USE_PKGSRC_GCC_RUNTIME.
 #
 # System-defined variables:
 #
@@ -81,6 +91,7 @@ _DEF_VARS.gcc=	\
 
 USE_NATIVE_GCC?=	no
 USE_PKGSRC_GCC?=	no
+USE_PKGSRC_GCC_RUNTIME?=no
 
 GCC_REQD+=	2.8.0
 
@@ -484,10 +495,17 @@ _USE_GCC_SHLIB?=	yes
 .  endif
 .endif
 
-# When not using the GNU linker, gcc will always link shared libraries
-# against the shared version of libgcc. Always enable _USE_GCC_SHILB on
-# platforms that don't use the GNU linker, such as SunOS.
-.if ${OPSYS} == "SunOS"
+# When not using the GNU linker, gcc will always link shared libraries against
+# the shared version of libgcc, and so _USE_GCC_SHLIB needs to be enabled on
+# platforms with non-GNU linkers, such as SunOS.
+#
+# However, we cannot simply do this by default as it will create circular
+# dependencies in packages which are required to build gcc itself, and so we
+# enable it based on USE_LIBTOOL for the majority of packages, and support
+# USE_GCC_RUNTIME for packages which create shared libraries but do not use
+# libtool to do so.
+#
+.if ${OPSYS} == "SunOS" && (defined(USE_LIBTOOL) || defined(USE_GCC_RUNTIME))
 _USE_GCC_SHLIB= yes
 .endif
 
