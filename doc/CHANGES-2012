@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3024 2012/09/16 20:29:32 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3025 2012/09/16 21:56:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4648,3 +4648,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ocaml-mysql to 1.1.1 [jaapb 2012-09-16]
 	Added net/choqok version 1.3 [jaapb 2012-09-16]
 	Updated net/nmap to 6.01 [pettai 2012-09-16]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2012Q3 branch [wiz 2012-09-16]
