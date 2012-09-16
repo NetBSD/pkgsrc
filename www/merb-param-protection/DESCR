@@ -1,3 +1,0 @@
-This package contains a plugin for the Merb framework that exposes two
-new controller methods which allow one to simply and flexibly filter
-the parameters available within the controller.
