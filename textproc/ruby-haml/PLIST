@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/06/02 01:10:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/09/16 09:27:05 taca Exp $
 bin/haml
 bin/html2haml
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -60,6 +60,12 @@ ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.2.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-3.2.x.lock
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-xss-2.3.x
 ${GEM_LIBDIR}/test/gemfiles/Gemfile.rails-xss-2.3.x.lock
+${GEM_LIBDIR}/test/haml-spec/LICENSE
+${GEM_LIBDIR}/test/haml-spec/README.md
+${GEM_LIBDIR}/test/haml-spec/lua_haml_spec.lua
+${GEM_LIBDIR}/test/haml-spec/perl_haml_test.pl
+${GEM_LIBDIR}/test/haml-spec/ruby_haml_test.rb
+${GEM_LIBDIR}/test/haml-spec/tests.json
 ${GEM_LIBDIR}/test/haml/engine_test.rb
 ${GEM_LIBDIR}/test/haml/erb/_av_partial_1.erb
 ${GEM_LIBDIR}/test/haml/erb/_av_partial_2.erb
