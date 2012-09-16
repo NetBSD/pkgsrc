@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3021 2012/09/16 20:04:14 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3022 2012/09/16 20:12:27 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4645,3 +4645,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkgdiff to 1.4 [dholland 2012-09-16]
 	Updated www/firefox-l10n to 15.0.1 [ryoon 2012-09-16]
 	Added security/qoauth version 1.0.1 [jaapb 2012-09-16]
+	Updated databases/ocaml-mysql to 1.1.1 [jaapb 2012-09-16]
