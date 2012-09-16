@@ -1,6 +1,0 @@
-This a meta package including Ruby 1.9.2 full release.
-
-It includes ruby19-base, ruby19-gdbm, ruby19-curses, ruby19-fiddle,
-ruby19-readline, ruby19-psych and ruby19-tk package.
-
-No package should depend on this package directly.
