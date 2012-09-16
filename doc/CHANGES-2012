@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2995 2012/09/16 08:15:30 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2996 2012/09/16 08:19:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4598,3 +4598,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-amq-protocol to 0.9.4 [taca 2012-09-16]
 	Updated net/ruby-amqp to 0.9.7 [taca 2012-09-16]
 	Added devel/ruby-hashery version 2.0.1 [taca 2012-09-16]
+	Updated print/ruby-pdf-reader to 1.2.0 [taca 2012-09-16]
