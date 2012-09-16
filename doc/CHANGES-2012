@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3006 2012/09/16 12:39:07 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3007 2012/09/16 13:41:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4617,3 +4617,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Added archivers/ocaml-bz2 version 0.6.0 [jaapb 2012-09-16]
 	Updated devel/py-testtools to 0.9.15 [obache 2012-09-16]
 	Added www/ocaml-curl version 0.5.3 [jaapb 2012-09-16]
+	Updated www/ruby-sass-rails31 to 3.1.6 [taca 2012-09-16]
+	Updated www/ruby-sass to 3.2.1 [taca 2012-09-16]
+	Updated www/ruby-compass to 0.12.2 [taca 2012-09-16]
+	Updated www/ruby-liquid to 2.4.1 [taca 2012-09-16]
+	Updated www/ruby-raindrops to 0.10.0 [taca 2012-09-16]
+	Updated www/ruby-sinatra to 1.3.3 [taca 2012-09-16]
+	Updated www/thin to 1.4.1 [taca 2012-09-16]
