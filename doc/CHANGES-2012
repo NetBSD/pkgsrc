@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3008 2012/09/16 14:01:09 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3009 2012/09/16 14:22:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4625,3 +4625,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-sinatra to 1.3.3 [taca 2012-09-16]
 	Updated www/thin to 1.4.1 [taca 2012-09-16]
 	Updated converters/ruby-Ascii85 to 1.0.2 [taca 2012-09-16]
+	Added audio/libopus version 1.0.1 [ryoon 2012-09-16]
+	Added audio/opus-tools version 0.1.5 [ryoon 2012-09-16]
