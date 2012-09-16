@@ -1,0 +1,2 @@
+QOAuth is a library to support interaction with OAuth-powered network services,
+such as StatusNet or Twitter, in a Qt way.
