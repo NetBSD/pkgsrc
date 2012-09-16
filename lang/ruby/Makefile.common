@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2012/03/21 15:40:12 taca Exp $
+# $NetBSD: Makefile.common,v 1.28 2012/09/16 15:21:30 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -8,8 +8,6 @@
 # used by devel/ruby-fiddle/Makefile
 # used by lang/ruby18/Makefile
 # used by lang/ruby18-base/Makefile
-# used by lang/ruby19/Makefile
-# used by lang/ruby19-base/Makefile
 # used by lang/ruby193/Makefile
 # used by lang/ruby193-base/Makefile
 # used by textproc/ruby-psych/Makefile
@@ -21,7 +19,7 @@
 #
 
 # Ruby's license
-.if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
+.if ${RUBY_VER} == "18"
 LICENSE=		gnu-gpl-v2 OR ruby-license
 .else
 LICENSE=		2-clause-bsd OR ruby-license
