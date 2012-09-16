@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 07:26:51 taca Exp $
-${GEM_HOME}/cache/transaction-simple-${PKGVERSION}.gem
-${GEM_LIBDIR}/History.txt
-${GEM_LIBDIR}/Install.txt
-${GEM_LIBDIR}/Licence.txt
+@comment $NetBSD: PLIST,v 1.4 2012/09/16 06:47:39 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/Licence.rdoc
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/Readme.txt
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/transaction-simple.rb
 ${GEM_LIBDIR}/lib/transaction/simple.rb
 ${GEM_LIBDIR}/lib/transaction/simple/group.rb
 ${GEM_LIBDIR}/lib/transaction/simple/threadsafe.rb
 ${GEM_LIBDIR}/lib/transaction/simple/threadsafe/group.rb
-${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/test/test_all.rb
+${GEM_LIBDIR}/research/instance_variable_defined.rb
+${GEM_LIBDIR}/research/special-dumpable-string.rb
+${GEM_LIBDIR}/research/special-dumpable.rb
 ${GEM_LIBDIR}/test/test_broken_graph.rb
 ${GEM_LIBDIR}/test/test_transaction_simple.rb
 ${GEM_LIBDIR}/test/test_transaction_simple_group.rb
 ${GEM_LIBDIR}/test/test_transaction_simple_threadsafe.rb
-${GEM_HOME}/specifications/transaction-simple-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
