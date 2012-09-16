@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/16 20:12:08 jaapb Exp $
 lib/ocaml/site-lib/mysql/META
 lib/ocaml/site-lib/mysql/dllmysql_stubs.so
 lib/ocaml/site-lib/mysql/libmysql_stubs.a
+lib/ocaml/site-lib/mysql/mysql.a
 lib/ocaml/site-lib/mysql/mysql.cma
+lib/ocaml/site-lib/mysql/mysql.cmx
+lib/ocaml/site-lib/mysql/mysql.cmxa
 lib/ocaml/site-lib/mysql/mysql.cmi
 lib/ocaml/site-lib/mysql/mysql.mli
 share/doc/ocaml-mysql/Mysql.html
+share/doc/ocaml-mysql/Mysql.Prepared.html
 share/doc/ocaml-mysql/index.html
 share/doc/ocaml-mysql/index_attributes.html
 share/doc/ocaml-mysql/index_class_types.html
@@ -17,3 +21,4 @@ share/doc/ocaml-mysql/index_modules.html
 share/doc/ocaml-mysql/index_types.html
 share/doc/ocaml-mysql/index_values.html
 share/doc/ocaml-mysql/type_Mysql.html
+share/doc/ocaml-mysql/type_Mysql.Prepared.html

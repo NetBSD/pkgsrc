@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/09/16 20:12:09 jaapb Exp $
+
+Update installation procedure to support DESTDIR
+--- Makefile.in.orig	2012-05-19 18:13:37.000000000 +0000
++++ Makefile.in
+@@ -5,6 +5,7 @@ RESULT=mysql
+ VERSION=@VERSION@
+ 
+ LIBINSTALL_FILES=$(wildcard *.mli *.cmi *.cma *.cmx *.cmxa *.a *.so)
++OCAMLFIND_INSTFLAGS=-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib -ldconf /var/null
+ 
+ CFLAGS=@CFLAGS@ -Wall -Wextra
+ CLIBS=$(foreach lib, @LIBS@, $(subst -l,,${lib}))
