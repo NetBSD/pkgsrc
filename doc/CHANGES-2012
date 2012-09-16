@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2998 2012/09/16 09:23:34 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.2999 2012/09/16 09:29:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4601,3 +4601,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/ruby-hashery version 2.0.1 [taca 2012-09-16]
 	Updated print/ruby-pdf-reader to 1.2.0 [taca 2012-09-16]
 	Updated fonts/umefont-ttf to 0.443 [ryoon 2012-09-16]
+	Updated textproc/ruby-coderay to 1.0.7 [taca 2012-09-16]
+	Updated textproc/ruby-haml to 3.1.7 [taca 2012-09-16]
+	Updated textproc/ruby-json-pure to 1.7.4 [taca 2012-09-16]
+	Updated textproc/ruby-json to 1.7.4 [taca 2012-09-16]
