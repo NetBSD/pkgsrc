@@ -1,0 +1,21 @@
+$NetBSD: patch-an,v 1.1 2012/09/16 20:29:06 pettai Exp $
+
+Fix for sa_len size problem on NetBSD
+(See commit r29739 in nmap's svn for details)
+
+--- libdnet-stripped/src/intf.c.orig	2012-05-24 03:59:25.000000000 +0000
++++ libdnet-stripped/src/intf.c
+@@ -64,9 +64,10 @@
+ #endif
+ 
+ #ifdef HAVE_SOCKADDR_SA_LEN
+-# define NEXTIFR(i)	((struct ifreq *)((u_char *)&i->ifr_addr + \
+-				(i->ifr_addr.sa_len ? i->ifr_addr.sa_len : \
+-				 sizeof(i->ifr_addr))))
++# define max(a, b) ((a) > (b) ? (a) : (b))
++# define NEXTIFR(i)	((struct ifreq *) \
++				max((u_char *)i + sizeof(struct ifreq), \
++				(u_char *)&i->ifr_addr + i->ifr_addr.sa_len))
+ #else
+ # define NEXTIFR(i)	(i + 1)
+ #endif
