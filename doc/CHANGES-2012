@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3000 2012/09/16 11:15:26 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3001 2012/09/16 11:33:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4608,3 +4608,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/ruby-facter to 1.6.12 [taca 2012-09-16]
 	Updated sysutils/ruby-activesambaldap to 0.1.0 [taca 2012-09-16]
 	Updated sysutils/capistrano to 2.13.3 [taca 2012-09-16]
+	Updated textproc/ruby-kramdown to 0.14.0 [taca 2012-09-16]
+	Updated textproc/ruby-libxml to 2.3.3 [taca 2012-09-16]
+	Updated textproc/ruby-nokogiri to 1.5.5 [taca 2012-09-16]
+	Updated textproc/ruby-ultraviolet to 1.0.0 [taca 2012-09-16]
