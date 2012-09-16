@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11518 2012/09/16 01:25:56 taca Exp $
+$NetBSD: TODO,v 1.11519 2012/09/16 20:29:32 pettai Exp $
 
 Suggested new packages
 ======================
@@ -932,7 +932,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nhc98-1.22 [pkg/45318]
 	o nickle-2.76
 	o nikto-2.0.1
-	o nmap-6.0
 	o notification-daemon-0.7.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
