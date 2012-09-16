@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3018 2012/09/16 16:18:00 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3019 2012/09/16 18:19:31 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4642,3 +4642,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rack-mount06 to 0.6.14nb1 [taca 2012-09-16]
 	Updated www/ruby-rack-test05 to 0.5.7nb1 [taca 2012-09-16]
 	Updated www/fengoffice to 2.1.0 [taca 2012-09-16]
+	Updated pkgtools/pkgdiff to 1.4 [dholland 2012-09-16]
