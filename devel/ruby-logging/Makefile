@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/04/28 15:54:07 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/16 06:20:48 taca Exp $
 
-DISTNAME=	logging-1.7.2
+DISTNAME=	logging-1.8.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
