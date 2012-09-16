@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2990 2012/09/16 06:28:21 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2991 2012/09/16 06:37:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4586,3 +4586,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-rspec-expectations to 2.11.3 [taca 2012-09-16]
 	Updated devel/ruby-termcolor to 1.2.2 [taca 2012-09-16]
 	Updated devel/ruby-uuidtools to 2.1.3 [taca 2012-09-16]
+	Updated graphics/ruby-chunky_png to 1.2.6 [taca 2012-09-16]
+	Updated graphics/ruby-gnuplot to 2.5.0 [taca 2012-09-16]
