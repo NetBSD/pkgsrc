@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.34 2012/09/04 12:17:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2012/09/16 21:50:16 cheusov Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
 bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
-${PLIST.gui}bin/gitk
 ${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
 lib/perl5/vendor_perl/${PKGMANDIR}/man3/Git.3
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.py
@@ -44,7 +43,6 @@ libexec/git-core/git-checkout
 libexec/git-core/git-checkout-index
 libexec/git-core/git-cherry
 libexec/git-core/git-cherry-pick
-${PLIST.gui}libexec/git-core/git-citool
 libexec/git-core/git-clean
 libexec/git-core/git-clone
 libexec/git-core/git-column
@@ -80,8 +78,6 @@ libexec/git-core/git-fsck-objects
 libexec/git-core/git-gc
 libexec/git-core/git-get-tar-commit-id
 libexec/git-core/git-grep
-${PLIST.gui}libexec/git-core/git-gui
-${PLIST.gui}libexec/git-core/git-gui--askpass
 libexec/git-core/git-hash-object
 libexec/git-core/git-help
 libexec/git-core/git-http-backend
@@ -215,73 +211,6 @@ share/examples/scmgit/templates/hooks/pre-rebase.sample
 share/examples/scmgit/templates/hooks/prepare-commit-msg.sample
 share/examples/scmgit/templates/hooks/update.sample
 share/examples/scmgit/templates/info/exclude
-${PLIST.gui}share/git-gui/lib/about.tcl
-${PLIST.gui}share/git-gui/lib/blame.tcl
-${PLIST.gui}share/git-gui/lib/branch.tcl
-${PLIST.gui}share/git-gui/lib/branch_checkout.tcl
-${PLIST.gui}share/git-gui/lib/branch_create.tcl
-${PLIST.gui}share/git-gui/lib/branch_delete.tcl
-${PLIST.gui}share/git-gui/lib/branch_rename.tcl
-${PLIST.gui}share/git-gui/lib/browser.tcl
-${PLIST.gui}share/git-gui/lib/checkout_op.tcl
-${PLIST.gui}share/git-gui/lib/choose_font.tcl
-${PLIST.gui}share/git-gui/lib/choose_repository.tcl
-${PLIST.gui}share/git-gui/lib/choose_rev.tcl
-${PLIST.gui}share/git-gui/lib/class.tcl
-${PLIST.gui}share/git-gui/lib/commit.tcl
-${PLIST.gui}share/git-gui/lib/console.tcl
-${PLIST.gui}share/git-gui/lib/database.tcl
-${PLIST.gui}share/git-gui/lib/date.tcl
-${PLIST.gui}share/git-gui/lib/diff.tcl
-${PLIST.gui}share/git-gui/lib/encoding.tcl
-${PLIST.gui}share/git-gui/lib/error.tcl
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Info.plist
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/MacOS/${WISH_APP}
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/Scripts/AppMain.tcl
-${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/git-gui.icns
-${PLIST.gui}share/git-gui/lib/git-gui.ico
-${PLIST.macosx}share/git-gui/lib/git-gui.tcl
-${PLIST.gui}share/git-gui/lib/index.tcl
-${PLIST.gui}share/git-gui/lib/line.tcl
-${PLIST.gui}share/git-gui/lib/logo.tcl
-${PLIST.gui}share/git-gui/lib/merge.tcl
-${PLIST.gui}share/git-gui/lib/mergetool.tcl
-${PLIST.gui}share/git-gui/lib/msgs/de.msg
-${PLIST.gui}share/git-gui/lib/msgs/el.msg
-${PLIST.gui}share/git-gui/lib/msgs/fr.msg
-${PLIST.gui}share/git-gui/lib/msgs/hu.msg
-${PLIST.gui}share/git-gui/lib/msgs/it.msg
-${PLIST.gui}share/git-gui/lib/msgs/ja.msg
-${PLIST.gui}share/git-gui/lib/msgs/nb.msg
-${PLIST.gui}share/git-gui/lib/msgs/pt_br.msg
-${PLIST.gui}share/git-gui/lib/msgs/ru.msg
-${PLIST.gui}share/git-gui/lib/msgs/sv.msg
-${PLIST.gui}share/git-gui/lib/msgs/zh_cn.msg
-${PLIST.gui}share/git-gui/lib/option.tcl
-${PLIST.gui}share/git-gui/lib/remote.tcl
-${PLIST.gui}share/git-gui/lib/remote_add.tcl
-${PLIST.gui}share/git-gui/lib/remote_branch_delete.tcl
-${PLIST.gui}share/git-gui/lib/search.tcl
-${PLIST.gui}share/git-gui/lib/shortcut.tcl
-${PLIST.gui}share/git-gui/lib/spellcheck.tcl
-${PLIST.gui}share/git-gui/lib/sshkey.tcl
-${PLIST.gui}share/git-gui/lib/status_bar.tcl
-${PLIST.gui}share/git-gui/lib/tclIndex
-${PLIST.gui}share/git-gui/lib/themed.tcl
-${PLIST.gui}share/git-gui/lib/tools.tcl
-${PLIST.gui}share/git-gui/lib/tools_dlg.tcl
-${PLIST.gui}share/git-gui/lib/transport.tcl
-${PLIST.gui}share/git-gui/lib/win32.tcl
-${PLIST.gui}share/git-gui/lib/win32_shortcut.js
-${PLIST.gui}share/gitk/lib/msgs/de.msg
-${PLIST.gui}share/gitk/lib/msgs/es.msg
-${PLIST.gui}share/gitk/lib/msgs/fr.msg
-${PLIST.gui}share/gitk/lib/msgs/hu.msg
-${PLIST.gui}share/gitk/lib/msgs/it.msg
-${PLIST.gui}share/gitk/lib/msgs/ja.msg
-${PLIST.gui}share/gitk/lib/msgs/pt_br.msg
-${PLIST.gui}share/gitk/lib/msgs/ru.msg
-${PLIST.gui}share/gitk/lib/msgs/sv.msg
 @pkgdir share/examples/scmgit/templates/branches
 share/locale/da/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
