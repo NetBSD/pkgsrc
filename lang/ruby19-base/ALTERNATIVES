@@ -1,6 +1,0 @@
-bin/erb @PREFIX@/bin/erb@RUBY_VER@
-bin/gem @PREFIX@/bin/gem@RUBY_VER@
-bin/irb @PREFIX@/bin/irb@RUBY_VER@
-bin/rake @PREFIX@/bin/rake@RUBY_VER@
-bin/ruby @PREFIX@/bin/@RUBY_NAME@
-bin/testrb @PREFIX@/bin/testrb@RUBY_VER@
