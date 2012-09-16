@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/29 15:49:43 taca Exp $
+$NetBSD: distinfo,v 1.3 2012/09/16 14:36:20 taca Exp $
 
-SHA1 (jquery-rails-2.0.2.gem) = 493579078a1554429d92da968a454d3fe0ff9ffe
-RMD160 (jquery-rails-2.0.2.gem) = d5d076682b8538c6210095cc2d8679ac32c51932
-Size (jquery-rails-2.0.2.gem) = 264192 bytes
+SHA1 (jquery-rails-2.1.2.gem) = e0eff33fd9bb0ecc5f9484898a98bdd523f2da0e
+RMD160 (jquery-rails-2.1.2.gem) = bd89726c7d147ed337fc76c39d3b04704ce8c283
+Size (jquery-rails-2.1.2.gem) = 266752 bytes
