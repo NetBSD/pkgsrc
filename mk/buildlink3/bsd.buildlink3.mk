@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.214 2012/05/24 07:27:27 sbd Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.215 2012/09/16 07:37:10 sbd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -352,6 +352,12 @@ BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .  endif
 .  if empty(BUILDLINK_PREFIX.${_pkg_}:M*not_found)
 MAKEVARS+=	BUILDLINK_PREFIX.${_pkg_}
+.  endif
+
+.  if empty(BUILDLINK_PREFIX.${_pkg_}:N/usr:N/boot/common:N/)
+BUILDLINK_DIR.${_pkg_}=	${BUILDLINK_PREFIX.${_pkg_}}
+.  else
+BUILDLINK_DIR.${_pkg_}= ${BUILDLINK_DIR}
 .  endif
 
 BUILDLINK_AUTO_VARS.${_pkg_}?=	yes
