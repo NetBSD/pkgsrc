@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/16 12:38:44 jaapb Exp $
+lib/ocaml/site-lib/curl/META
+${PLIST.opt}lib/ocaml/site-lib/curl/curl.a
+lib/ocaml/site-lib/curl/curl.cma
+lib/ocaml/site-lib/curl/curl.cmi
+${PLIST.opt}lib/ocaml/site-lib/curl/curl.cmxa
+lib/ocaml/site-lib/curl/curl.mli
+${PLIST.opt}lib/ocaml/site-lib/curl/libcurl-helper.a
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/curl
