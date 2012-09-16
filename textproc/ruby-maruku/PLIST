@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/09/10 08:22:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/09/16 14:24:12 taca Exp $
 bin/maruku
 bin/marutex
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -61,7 +61,6 @@ ${GEM_LIBDIR}/lib/maruku/textile2.rb
 ${GEM_LIBDIR}/lib/maruku/toc.rb
 ${GEM_LIBDIR}/lib/maruku/usage/example1.rb
 ${GEM_LIBDIR}/lib/maruku/version.rb
-${GEM_LIBDIR}/maruku_gem.rb
 ${GEM_LIBDIR}/tests/bugs/code_in_links.md
 ${GEM_LIBDIR}/tests/bugs/complex_escaping.md
 ${GEM_LIBDIR}/tests/math/syntax.md
@@ -123,7 +122,6 @@ ${GEM_LIBDIR}/tests/unittest/extra_dl.md
 ${GEM_LIBDIR}/tests/unittest/extra_header_id.md
 ${GEM_LIBDIR}/tests/unittest/extra_table1.md
 ${GEM_LIBDIR}/tests/unittest/footnotes.md
-${GEM_LIBDIR}/tests/unittest/hang.md
 ${GEM_LIBDIR}/tests/unittest/headers.md
 ${GEM_LIBDIR}/tests/unittest/hex_entities.md
 ${GEM_LIBDIR}/tests/unittest/hrule.md
