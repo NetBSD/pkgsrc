@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/28 15:54:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/09/16 06:20:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rvmrc
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/a.rb
 ${GEM_LIBDIR}/data/bad_logging_1.rb
 ${GEM_LIBDIR}/data/bad_logging_2.rb
 ${GEM_LIBDIR}/data/logging.rb
@@ -21,6 +19,7 @@ ${GEM_LIBDIR}/examples/formatting.rb
 ${GEM_LIBDIR}/examples/hierarchies.rb
 ${GEM_LIBDIR}/examples/layouts.rb
 ${GEM_LIBDIR}/examples/loggers.rb
+${GEM_LIBDIR}/examples/mdc.rb
 ${GEM_LIBDIR}/examples/names.rb
 ${GEM_LIBDIR}/examples/simple.rb
 ${GEM_LIBDIR}/lib/logging.rb
@@ -38,6 +37,7 @@ ${GEM_LIBDIR}/lib/logging/appenders/syslog.rb
 ${GEM_LIBDIR}/lib/logging/color_scheme.rb
 ${GEM_LIBDIR}/lib/logging/config/configurator.rb
 ${GEM_LIBDIR}/lib/logging/config/yaml_configurator.rb
+${GEM_LIBDIR}/lib/logging/diagnostic_context.rb
 ${GEM_LIBDIR}/lib/logging/layout.rb
 ${GEM_LIBDIR}/lib/logging/layouts.rb
 ${GEM_LIBDIR}/lib/logging/layouts/basic.rb
@@ -79,11 +79,12 @@ ${GEM_LIBDIR}/test/test_layout.rb
 ${GEM_LIBDIR}/test/test_log_event.rb
 ${GEM_LIBDIR}/test/test_logger.rb
 ${GEM_LIBDIR}/test/test_logging.rb
+${GEM_LIBDIR}/test/test_mapped_diagnostic_context.rb
+${GEM_LIBDIR}/test/test_nested_diagnostic_context.rb
 ${GEM_LIBDIR}/test/test_proxy.rb
 ${GEM_LIBDIR}/test/test_repository.rb
 ${GEM_LIBDIR}/test/test_root_logger.rb
 ${GEM_LIBDIR}/test/test_stats.rb
 ${GEM_LIBDIR}/test/test_utils.rb
-${GEM_LIBDIR}/tmp.txt
 ${GEM_LIBDIR}/version.txt
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
