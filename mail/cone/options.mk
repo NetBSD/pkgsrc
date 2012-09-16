@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.7 2008/02/27 08:25:17 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2012/09/16 00:51:32 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cone
 PKG_SUPPORTED_OPTIONS=		aspell ldap wide-curses
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_GROUP.tls=		gnutls ssl
-PKG_SUGGESTED_OPTIONS=		aspell ldap ssl
+PKG_SUGGESTED_OPTIONS=		aspell ldap ssl wide-curses
 
 .include "../../mk/bsd.options.mk"
 
