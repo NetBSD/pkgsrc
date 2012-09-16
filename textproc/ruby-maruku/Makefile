@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2010/09/10 08:22:12 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/16 14:24:12 taca Exp $
 
-DISTNAME=	maruku-0.6.0
+DISTNAME=	maruku-0.6.1
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
