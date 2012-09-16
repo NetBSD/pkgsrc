@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2987 2012/09/16 04:34:36 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.2988 2012/09/16 05:18:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4577,3 +4577,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/merb-core [taca 2012-09-16]
 	Updated www/apache22 to 2.2.23 [taca 2012-09-16]
 	Updated security/bitstir to 0.2nb2 [dholland 2012-09-16]
+	Updated databases/ruby-dm-serializer to 1.2.2 [taca 2012-09-16]
+	Updated databases/ruby-dm-types to 1.2.2 [taca 2012-09-16]
