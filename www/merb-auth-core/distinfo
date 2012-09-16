@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/12 02:54:50 taca Exp $
-
-SHA1 (merb-auth-core-1.1.1.gem) = 6cf28bd07915c62e4b333050e851922ab7109cc4
-RMD160 (merb-auth-core-1.1.1.gem) = 76c2f18a9acd381c483bee8405fe921ded923f69
-Size (merb-auth-core-1.1.1.gem) = 23040 bytes
