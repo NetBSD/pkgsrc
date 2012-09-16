@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/15 16:00:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/09/16 09:26:10 taca Exp $
 bin/coderay
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README_INDEX.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/coderay
@@ -64,10 +63,10 @@ ${GEM_LIBDIR}/lib/coderay/scanners/yaml.rb
 ${GEM_LIBDIR}/lib/coderay/style.rb
 ${GEM_LIBDIR}/lib/coderay/styles/_map.rb
 ${GEM_LIBDIR}/lib/coderay/styles/alpha.rb
+${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/lib/coderay/token_kinds.rb
 ${GEM_LIBDIR}/lib/coderay/tokens_proxy.rb
 ${GEM_LIBDIR}/lib/coderay/version.rb
-${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/test/functional/basic.rb
 ${GEM_LIBDIR}/test/functional/examples.rb
 ${GEM_LIBDIR}/test/functional/for_redcloth.rb
