@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/08 03:05:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/09/16 13:39:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/README.es.rdoc
 ${GEM_LIBDIR}/README.fr.rdoc
 ${GEM_LIBDIR}/README.hu.rdoc
 ${GEM_LIBDIR}/README.jp.rdoc
+${GEM_LIBDIR}/README.ko.rdoc
 ${GEM_LIBDIR}/README.pt-br.rdoc
 ${GEM_LIBDIR}/README.pt-pt.rdoc
 ${GEM_LIBDIR}/README.rdoc
@@ -41,6 +42,7 @@ ${GEM_LIBDIR}/test/haml_test.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/helpers_test.rb
 ${GEM_LIBDIR}/test/integration/app.rb
+${GEM_LIBDIR}/test/integration_helper.rb
 ${GEM_LIBDIR}/test/integration_test.rb
 ${GEM_LIBDIR}/test/less_test.rb
 ${GEM_LIBDIR}/test/liquid_test.rb
