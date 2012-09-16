@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2012/09/03 15:39:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/09/16 06:18:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TAGS
@@ -34,6 +36,7 @@ ${GEM_LIBDIR}/lib/flexmock/argument_matchers.rb
 ${GEM_LIBDIR}/lib/flexmock/argument_matching.rb
 ${GEM_LIBDIR}/lib/flexmock/argument_types.rb
 ${GEM_LIBDIR}/lib/flexmock/base.rb
+${GEM_LIBDIR}/lib/flexmock/class_extensions.rb
 ${GEM_LIBDIR}/lib/flexmock/composite.rb
 ${GEM_LIBDIR}/lib/flexmock/core.rb
 ${GEM_LIBDIR}/lib/flexmock/core_class_methods.rb
@@ -45,6 +48,7 @@ ${GEM_LIBDIR}/lib/flexmock/expectation_director.rb
 ${GEM_LIBDIR}/lib/flexmock/explicit_needed.rb
 ${GEM_LIBDIR}/lib/flexmock/mock_container.rb
 ${GEM_LIBDIR}/lib/flexmock/noop.rb
+${GEM_LIBDIR}/lib/flexmock/object_extensions.rb
 ${GEM_LIBDIR}/lib/flexmock/ordering.rb
 ${GEM_LIBDIR}/lib/flexmock/partial_mock.rb
 ${GEM_LIBDIR}/lib/flexmock/rails.rb
@@ -53,6 +57,7 @@ ${GEM_LIBDIR}/lib/flexmock/recorder.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec_spy_matcher.rb
 ${GEM_LIBDIR}/lib/flexmock/spy_describers.rb
+${GEM_LIBDIR}/lib/flexmock/symbol_extensions.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit_assert_spy_called.rb
 ${GEM_LIBDIR}/lib/flexmock/test_unit_integration.rb
@@ -71,6 +76,7 @@ ${GEM_LIBDIR}/test/extended_should_receive_test.rb
 ${GEM_LIBDIR}/test/flexmodel_test.rb
 ${GEM_LIBDIR}/test/naming_test.rb
 ${GEM_LIBDIR}/test/new_instances_test.rb
+${GEM_LIBDIR}/test/object_extensions_test.rb
 ${GEM_LIBDIR}/test/partial_mock_test.rb
 ${GEM_LIBDIR}/test/rails_view_stub_test.rb
 ${GEM_LIBDIR}/test/record_mode_test.rb
@@ -81,6 +87,8 @@ ${GEM_LIBDIR}/test/samples_test.rb
 ${GEM_LIBDIR}/test/should_ignore_missing_test.rb
 ${GEM_LIBDIR}/test/should_receive_test.rb
 ${GEM_LIBDIR}/test/spys_test.rb
+${GEM_LIBDIR}/test/symbol_extensions_test.rb
+${GEM_LIBDIR}/test/test_class_extensions.rb
 ${GEM_LIBDIR}/test/test_setup.rb
 ${GEM_LIBDIR}/test/test_unit_integration/auto_test_unit_test.rb
 ${GEM_LIBDIR}/test/tu_integration_test.rb
