@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/08/12 16:57:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/09/16 06:45:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -17,4 +17,5 @@ ${GEM_LIBDIR}/samples/c.rb
 ${GEM_LIBDIR}/samples/d.rb
 ${GEM_LIBDIR}/samples/e.rb
 ${GEM_LIBDIR}/samples/f.rb
+${GEM_LIBDIR}/test/overwrite_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
