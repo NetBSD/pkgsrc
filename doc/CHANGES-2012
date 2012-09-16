@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2996 2012/09/16 08:19:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2997 2012/09/16 09:12:02 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4507,6 +4507,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/teapot to 2.3.0 [asau 2012-09-13]
 	Updated math/units to 2.00 [asau 2012-09-13]
 	Updated math/octave to 3.6.3 [asau 2012-09-13]
+	Updated net/p5-SOAP-Lite to 0.715 [abs 2012-09-13]
 	Updated math/xylib to 1.0 [asau 2012-09-14]
 	Updated math/wxMaxima to 12.09.0 [asau 2012-09-14]
 	Updated comms/asterisk10 to 10.8.0 [jnemeth 2012-09-14]
