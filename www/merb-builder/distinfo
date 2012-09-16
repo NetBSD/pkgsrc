@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2011/08/13 00:17:16 taca Exp $
-
-SHA1 (merb_builder-0.9.13.gem) = 480bacb7900d5b6df3d7ff50f1c5c86ebccbf88f
-RMD160 (merb_builder-0.9.13.gem) = fc82bd227d846223c3e4696c35c2017c7b7f4963
-Size (merb_builder-0.9.13.gem) = 6144 bytes
