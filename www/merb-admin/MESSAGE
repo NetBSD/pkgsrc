@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/09/23 07:27:35 taca Exp $
-
-  Make sure to add authorization logic before deploying to production!
-  WARNING: MerbAdmin does not implement any authorization scheme.
-===========================================================================
