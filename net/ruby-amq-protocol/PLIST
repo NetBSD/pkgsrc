@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 14:47:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/16 07:25:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -7,12 +7,13 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/PROFILING.md
-${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/__init__.py
 ${GEM_LIBDIR}/amq-protocol.gemspec
 ${GEM_LIBDIR}/amqp_0.9.1_changes.json
 ${GEM_LIBDIR}/codegen.py
 ${GEM_LIBDIR}/codegen_helpers.py
+${GEM_LIBDIR}/generate.rb
 ${GEM_LIBDIR}/irb.rb
 ${GEM_LIBDIR}/lib/amq/hacks.rb
 ${GEM_LIBDIR}/lib/amq/protocol.rb
@@ -41,5 +42,4 @@ ${GEM_LIBDIR}/spec/amq/protocol/value_decoder_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/value_encoder_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/tasks.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
