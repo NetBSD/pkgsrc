@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/16 12:30:46 jaapb Exp $
+
+SHA1 (camlbz2-0.6.0.tar.gz) = c2bbff429b36eb60f5d410d7a6dbba2f0001a245
+RMD160 (camlbz2-0.6.0.tar.gz) = 544cf2b105c44dcc3eee6495e25c7b516e2fff7a
+Size (camlbz2-0.6.0.tar.gz) = 57771 bytes
+SHA1 (patch-Makefile.in) = 461eaf03de4bafca9d174d7ad242b8c496b07742

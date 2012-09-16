@@ -1,0 +1,3 @@
+This Objective Caml library provides easy access to compressed files in
+bzip2 format. It provides functions for reading from and writing to compressed
+files in these formats.
