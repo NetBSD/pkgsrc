@@ -1,3 +1,0 @@
-This package contains a plugin for the Merb framework that provides
-Merb::PartController, which is a lightweight way to share logic and
-templates amongst controllers.
