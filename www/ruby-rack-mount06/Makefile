@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/14 16:32:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/16 15:59:16 taca Exp $
 
 DISTNAME=	rack-mount-0.6.14
+PKGREVISION=	1
 CATEGORIES=	www
 
-# Note: www/ruby-actionpack3 needs ruby-rack-mount<0.7.
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/josh/rack-mount
 COMMENT=	Stackable dynamic tree based Rack router
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.0.0:../../www/ruby-rack
+# This package is for Ruby on Rails 3.0.x.
+DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.0.0<1.3:../../www/ruby-rack12
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
