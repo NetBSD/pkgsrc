@@ -1,0 +1,20 @@
+$NetBSD: patch-bitstir_c,v 1.1 2012/09/16 03:21:47 dholland Exp $
+
+Deploy a gross hack to make RND_POOLBITS available on recent NetBSD.
+
+--- bitstir.c~	2003-08-27 20:58:51.000000000 +0000
++++ bitstir.c
+@@ -41,6 +41,13 @@
+ #include <syslog.h>
+ #include <unistd.h>
+ 
++/* Ugh. Use this only if required and only if appropriate. */
++#ifdef __NetBSD__
++#ifndef RND_POOLBITS
++#include "hack.h"
++#endif
++#endif
++
+ const char gRequiredOS[] = "NetBSD";
+ const char gRandomDevice[] = "/dev/random";
+ const long gMaxEntropy = RND_POOLBITS;

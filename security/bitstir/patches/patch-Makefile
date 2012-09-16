@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile,v 1.1 2012/09/16 03:21:47 dholland Exp $
+
+Deploy a gross hack to make RND_POOLBITS available on recent NetBSD.
+
+--- Makefile~	2003-08-27 20:58:51.000000000 +0000
++++ Makefile
+@@ -14,9 +14,13 @@ all: bits-avail bitstir
+ bits-avail: bits-avail.c
+ 	$(CC) $(CFLAGS) -DFIND=$(FIND) -o bits-avail bits-avail.c
+ 
+-bitstir: bitstir.c
++bitstir: bitstir.c hack.h
+ 	$(CC) $(CFLAGS) -DFIND=$(FIND) -o bitstir bitstir.c
+ 
++hack.h:
++	grep RND_POOLWORDS /usr/include/sys/rnd.h | grep define > hack.h
++	grep RND_POOLBITS /usr/include/sys/rnd.h | grep define >> hack.h
++
+ install: .PHONY
+ 	install -c -o root -g wheel bitstir $(INSTALLDIR)
+ 	install -c -o root -g wheel bits-avail $(INSTALLDIR)
