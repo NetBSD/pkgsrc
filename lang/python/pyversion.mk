@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.100 2012/08/01 19:07:20 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.101 2012/09/16 20:03:50 cheusov Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -10,6 +10,14 @@
 #
 #	Possible values: 25 26 27 31 32
 #	Default: 27
+#
+# PYTHON_VERSION_REQD
+#	Python version to use. This is a user variable and
+#	should not be set in packages.
+#	Normally it is used by bulk build tools.
+#
+#	Possible: ${PYTHON_VERSIONS_ACCEPTED}
+#	Default:  ${PYTHON_VERSION_DEFAULT}
 #
 # === Package-settable variables ===
 #
