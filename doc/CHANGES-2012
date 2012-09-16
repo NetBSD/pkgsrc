@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2984 2012/09/15 17:54:38 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.2985 2012/09/16 01:16:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4546,3 +4546,31 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql51-server to 5.1.65 [obache 2012-09-15]
 	Updated graphics/p5-Chart to 2.4.5 [wen 2012-09-15]
 	Updated www/p5-Mojolicious to 3.41 [mspo 2012-09-15]
+	Removed www/merb-stories [taca 2012-09-16]
+	Removed www/merbful-authentication [taca 2012-09-16]
+	Removed www/merb-test-unit [taca 2012-09-16]
+	Removed www/merb-sequel [taca 2012-09-16]
+	Removed www/merb-parts [taca 2012-09-16]
+	Removed www/merb-more [taca 2012-09-16]
+	Removed www/merb-has-flash [taca 2012-09-16]
+	Removed www/merb-builder [taca 2012-09-16]
+	Removed www/merb-auth-slice-password-reset [taca 2012-09-16]
+	Removed www/merb-admin [taca 2012-09-16]
+	Removed www/merb-activerecord [taca 2012-09-16]
+	Removed www/merb [taca 2012-09-16]
+	Removed www/merb-datamapper [taca 2012-09-16]
+	Removed www/merb-slices [taca 2012-09-16]
+	Removed www/merb-param-protection [taca 2012-09-16]
+	Removed www/merb-mailer [taca 2012-09-16]
+	Removed www/merb-helpers [taca 2012-09-16]
+	Removed www/merb-haml [taca 2012-09-16]
+	Removed www/merb-gen [taca 2012-09-16]
+	Removed www/merb-exceptions [taca 2012-09-16]
+	Removed www/merb-cache [taca 2012-09-16]
+	Removed www/merb-auth-core [taca 2012-09-16]
+	Removed www/merb-auth-more [taca 2012-09-16]
+	Removed www/merb-auth-slice-password [taca 2012-09-16]
+	Removed www/merb-auth [taca 2012-09-16]
+	Removed www/merb-assets [taca 2012-09-16]
+	Removed www/merb-action-args [taca 2012-09-16]
+	Removed www/merb-core [taca 2012-09-16]
