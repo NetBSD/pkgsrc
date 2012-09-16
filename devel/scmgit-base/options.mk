@@ -1,32 +1,12 @@
-# $NetBSD: options.mk,v 1.5 2011/04/19 17:08:18 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2012/09/16 21:50:16 cheusov Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scmgit
-PKG_SUPPORTED_OPTIONS=	scmgit-gui python
-PKG_SUGGESTED_OPTIONS=	scmgit-gui python
+PKG_SUPPORTED_OPTIONS=	python
+PKG_SUGGESTED_OPTIONS=	python
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gui
-PLIST_VARS+=		macosx
 PLIST_VARS+=		python
-
-.if !empty(PKG_OPTIONS:Mscmgit-gui)
-PLIST.gui=		yes
-USE_TOOLS+=		wish:run
-CONFIGURE_ARGS+=	--with-tcltk=${WISH:Q}
-.  if ${OPSYS} == "Darwin" && exists(/System/Library/Frameworks/Tk.framework)
-.    if exists(/System/Library/Frameworks/Tk.framework/Resources/Wish.app)
-WISH_APP=Wish
-.    else
-WISH_APP=Wish Shell
-.    endif
-PLIST_SUBST+= WISH_APP=${WISH_APP:Q}
-PLIST.macosx=		yes
-PRIVILEGED_STAGES+=	clean
-.  endif
-.else
-CONFIGURE_ARGS+=	--without-tcltk
-.endif
 
 .if !empty(PKG_OPTIONS:Mpython)
 PY_PATCHPLIST=	yes

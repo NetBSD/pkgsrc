@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2012/06/18 20:50:39 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2012/09/16 21:50:16 cheusov Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
 PKGNAME=	scmgit-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -32,7 +33,9 @@ CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--without-tcltk
 
 BUILD_TARGET=		all
 
