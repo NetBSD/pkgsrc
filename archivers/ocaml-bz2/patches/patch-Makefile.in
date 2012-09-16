@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/09/16 12:30:46 jaapb Exp $
+
+Install into the right DESTDIR
+--- Makefile.in.orig	2008-11-08 11:19:40.000000000 +0000
++++ Makefile.in
+@@ -43,10 +43,10 @@ install : findlib-install
+ ifeq ($(DESTDIR),)
+ DESTDIR_FLAGS =
+ else
+-DESTDIR_FLAGS = -destdir $(DESTDIR)
++DESTDIR_FLAGS = -destdir $(DESTDIR)$(PREFIX)/lib/ocaml/site-lib/
+ findlib-install : install-mkdir
+ install-mkdir :
+-	test -d $(DESTDIR) || mkdir -p $(DESTDIR)
++	test -d $(DESTDIR)$(PREFIX)/lib/ocaml/site-lib/ || mkdir -p $(DESTDIR)$(PREFIX)/lib/ocaml/site-lib/
+ endif
+ else
+ install : normal-install
