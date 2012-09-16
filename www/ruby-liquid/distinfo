@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/12/16 13:27:06 taca Exp $
+$NetBSD: distinfo,v 1.3 2012/09/16 13:37:52 taca Exp $
 
-SHA1 (liquid-2.3.0.gem) = 0fbdd8a517125341baed1e3b51ff2a2e04c35280
-RMD160 (liquid-2.3.0.gem) = 5883c3e2afabfafab23dd1e58b1edc452327297e
-Size (liquid-2.3.0.gem) = 39936 bytes
+SHA1 (liquid-2.4.1.gem) = dc02b152a6e349f14224b156e887326d2bbc34c2
+RMD160 (liquid-2.4.1.gem) = 8d26c1172e15fde31b7b5c732b3e88925df405a1
+Size (liquid-2.4.1.gem) = 40960 bytes
