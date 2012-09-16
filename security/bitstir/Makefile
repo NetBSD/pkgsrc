@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/16 04:33:43 dholland Exp $
 #
 
 DISTNAME=		bitstir-0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.wiredyne.com/software/downloads/
 

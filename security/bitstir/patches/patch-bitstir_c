@@ -1,20 +1,90 @@
-$NetBSD: patch-bitstir_c,v 1.1 2012/09/16 03:21:47 dholland Exp $
+$NetBSD: patch-bitstir_c,v 1.2 2012/09/16 04:33:43 dholland Exp $
 
-Deploy a gross hack to make RND_POOLBITS available on recent NetBSD.
+Get gMaxEntropy and gCriticalEntropyThreshold from the kernel in the
+approved way, including at tls@'s suggestion a fallback in case the
+reported threshold is 0.
 
---- bitstir.c~	2003-08-27 20:58:51.000000000 +0000
-+++ bitstir.c
-@@ -41,6 +41,13 @@
+Also, fix a couple C usage issues.
+
+--- bitstir.c~	2003-08-27 16:58:51.000000000 -0400
++++ bitstir.c	2012-09-16 00:27:33.000000000 -0400
+@@ -40,11 +40,13 @@
+ #include <sys/wait.h>
  #include <syslog.h>
  #include <unistd.h>
++#include <paths.h>
++#include <sha1.h>
  
-+/* Ugh. Use this only if required and only if appropriate. */
-+#ifdef __NetBSD__
-+#ifndef RND_POOLBITS
-+#include "hack.h"
-+#endif
-+#endif
-+
  const char gRequiredOS[] = "NetBSD";
- const char gRandomDevice[] = "/dev/random";
- const long gMaxEntropy = RND_POOLBITS;
+-const char gRandomDevice[] = "/dev/random";
++const char gRandomDevice[] = _PATH_RANDOM;
+-const long gMaxEntropy = RND_POOLBITS;
+-const long gCriticalEntropyThreshold = RND_POOLBITS / 10;
++long gMaxEntropy;
++long gCriticalEntropyThreshold;
+ const long gMaxPathLen = PATH_MAX;
+ 
+ long verbose_flag = 0;
+@@ -76,8 +77,8 @@
+ 
+ void parse_command_line_args (int argc, char *argv[]);
+ long entropy_available(const char *device);
+-void restore_entropy();
+-void restore_entropy_one_shot();
++void restore_entropy(void);
++void restore_entropy_one_shot(void);
+ void nullify_fd (int fd);
+ void exec_find (const char *directory);
+ void kill_process (pid_t pid);
+@@ -88,9 +89,10 @@
+ void check_os ();
+ int is_directory (const char *path);
+ void setup_find_executable ();
++void get_random_stats(void);
+ void print_help ();
+ 
+-main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+   if( argc == 1 ) {
+     fprintf(stderr, "usage: %s [switches] --search-dir dir [--search-dir dir ...]\n",
+@@ -120,6 +122,7 @@
+     check_os();
+   }
+   setup_find_executable();
++  get_random_stats();
+ 
+   if( root_search_dir == (struct search_dir *) NULL ) {
+     log_err("No directory specified with --search-dir.  Exiting.\n");
+@@ -578,6 +582,31 @@
+   }
+ }
+ 
++void get_random_stats(void)
++{
++  rndpoolstat_t rs;
++  int fd;
++
++  fd = open(_PATH_URANDOM, O_RDONLY, 0644);
++  if (fd < 0) {
++    log_err("Could not open %s: %s\n", _PATH_URANDOM, strerror(errno));
++    exit(1);
++  }
++
++  if (ioctl(fd, RNDGETPOOLSTAT, &rs) < 0) {
++    log_err("RNDGETPOOLSTAT failed: %s\n", strerror(errno));
++    exit(1);
++  }
++
++  close(fd);
++
++  gMaxEntropy = rs.maxentropy;
++  gCriticalEntropyThreshold = rs.threshold;
++  if (gCriticalEntropyThreshold < 2 * SHA1_DIGEST_LENGTH) {
++    gCriticalEntropyThreshold = 2 * SHA1_DIGEST_LENGTH;
++  }
++}
++
+ void print_help()
+ {
+     fprintf(stderr, "Basic help message - see bitstir(8) for more detail:\n");

@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/09/16 03:21:47 dholland Exp $
+$NetBSD: distinfo,v 1.5 2012/09/16 04:33:43 dholland Exp $
 
 SHA1 (bitstir-0.2.tar.gz) = 867fc2b28805a71ca2f1e3e3337b3c906951e121
 RMD160 (bitstir-0.2.tar.gz) = a34412882c2685acd4b6613fbfe8a6c9fa9ebcf1
 Size (bitstir-0.2.tar.gz) = 6423 bytes
-SHA1 (patch-Makefile) = 4f7eea72ed245c3c67eb48de0c6724622a3c564b
-SHA1 (patch-bitstir_c) = 4af243a87acd713161797386f8a3b39f259e5037
+SHA1 (patch-bitstir_c) = d211b8598481091048597a638ad1538c2fc1a710
