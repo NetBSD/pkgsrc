@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/04 04:00:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/16 06:19:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.textile
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -61,6 +61,7 @@ ${GEM_LIBDIR}/test/api/chain_test.rb
 ${GEM_LIBDIR}/test/api/fallbacks_test.rb
 ${GEM_LIBDIR}/test/api/key_value_test.rb
 ${GEM_LIBDIR}/test/api/memoize_test.rb
+${GEM_LIBDIR}/test/api/override_test.rb
 ${GEM_LIBDIR}/test/api/pluralization_test.rb
 ${GEM_LIBDIR}/test/api/simple_test.rb
 ${GEM_LIBDIR}/test/backend/cache_test.rb
