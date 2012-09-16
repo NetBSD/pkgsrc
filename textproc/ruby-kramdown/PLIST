@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/06/13 14:41:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/09/16 11:28:15 taca Exp $
 bin/kramdown
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/CONTRIBUTERS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GPL
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/benchmark/benchmark.rb
@@ -107,8 +107,12 @@ ${GEM_LIBDIR}/test/testcases/block/04_header/atx_header.html
 ${GEM_LIBDIR}/test/testcases/block/04_header/atx_header.text
 ${GEM_LIBDIR}/test/testcases/block/04_header/atx_header_no_newline_at_end.html
 ${GEM_LIBDIR}/test/testcases/block/04_header/atx_header_no_newline_at_end.text
+${GEM_LIBDIR}/test/testcases/block/04_header/header_type_offset.html
+${GEM_LIBDIR}/test/testcases/block/04_header/header_type_offset.kramdown
+${GEM_LIBDIR}/test/testcases/block/04_header/header_type_offset.latex
+${GEM_LIBDIR}/test/testcases/block/04_header/header_type_offset.options
+${GEM_LIBDIR}/test/testcases/block/04_header/header_type_offset.text
 ${GEM_LIBDIR}/test/testcases/block/04_header/setext_header.html
-${GEM_LIBDIR}/test/testcases/block/04_header/setext_header.html.19
 ${GEM_LIBDIR}/test/testcases/block/04_header/setext_header.text
 ${GEM_LIBDIR}/test/testcases/block/04_header/setext_header_no_newline_at_end.html
 ${GEM_LIBDIR}/test/testcases/block/04_header/setext_header_no_newline_at_end.text
@@ -130,6 +134,9 @@ ${GEM_LIBDIR}/test/testcases/block/05_blockquote/very_long_line.html
 ${GEM_LIBDIR}/test/testcases/block/05_blockquote/very_long_line.text
 ${GEM_LIBDIR}/test/testcases/block/05_blockquote/with_code_blocks.html
 ${GEM_LIBDIR}/test/testcases/block/05_blockquote/with_code_blocks.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/disable-highlighting.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/disable-highlighting.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/disable-highlighting.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/error.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/error.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/highlighting.html
@@ -153,6 +160,9 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_eob_marker.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_eob_marker.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_ial.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_ial.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.text
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/error.html
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/error.html.19
 ${GEM_LIBDIR}/test/testcases/block/07_horizontal_rule/error.text
@@ -316,6 +326,9 @@ ${GEM_LIBDIR}/test/testcases/block/15_math/normal.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.text
 ${GEM_LIBDIR}/test/testcases/block/16_toc/no_toc.html
 ${GEM_LIBDIR}/test/testcases/block/16_toc/no_toc.text
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_exclude.html
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_exclude.options
+${GEM_LIBDIR}/test/testcases/block/16_toc/toc_exclude.text
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.html
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.options
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_levels.text
@@ -420,6 +433,6 @@ ${GEM_LIBDIR}/test/testcases/span/text_substitutions/greaterthan.text
 ${GEM_LIBDIR}/test/testcases/span/text_substitutions/lowerthan.html
 ${GEM_LIBDIR}/test/testcases/span/text_substitutions/lowerthan.text
 ${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography.html
-${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography.html.19
+${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography.options
 ${GEM_LIBDIR}/test/testcases/span/text_substitutions/typography.text
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
