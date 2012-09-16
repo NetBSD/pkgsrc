@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2011/12/16 13:26:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/09/16 14:34:35 taca Exp $
 bin/camping
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/camping
-${GEM_LIBDIR}/book/01_introduction
-${GEM_LIBDIR}/book/02_getting_started
-${GEM_LIBDIR}/book/51_upgrading
+${GEM_LIBDIR}/book/01_introduction.md
+${GEM_LIBDIR}/book/02_getting_started.md
+${GEM_LIBDIR}/book/51_upgrading.md
 ${GEM_LIBDIR}/examples/blog.rb
 ${GEM_LIBDIR}/extras/images/badge.gif
 ${GEM_LIBDIR}/extras/images/boys-life.png
@@ -46,6 +46,7 @@ ${GEM_LIBDIR}/test/app_helpers.rb
 ${GEM_LIBDIR}/test/app_inline_templates.rb
 ${GEM_LIBDIR}/test/app_markup.rb
 ${GEM_LIBDIR}/test/app_partials.rb
+${GEM_LIBDIR}/test/app_reloader.rb
 ${GEM_LIBDIR}/test/app_route_generating.rb
 ${GEM_LIBDIR}/test/app_sessions.rb
 ${GEM_LIBDIR}/test/app_simple.rb
@@ -54,6 +55,10 @@ ${GEM_LIBDIR}/test/apps/forms.rb
 ${GEM_LIBDIR}/test/apps/forward_to_other_controller.rb
 ${GEM_LIBDIR}/test/apps/migrations.rb
 ${GEM_LIBDIR}/test/apps/misc.rb
+${GEM_LIBDIR}/test/apps/reloader.rb
+${GEM_LIBDIR}/test/apps/reloader/config.ru
+${GEM_LIBDIR}/test/apps/reloader/reload_me.rb
+${GEM_LIBDIR}/test/apps/reloader_indirect.rb
 ${GEM_LIBDIR}/test/apps/sessions.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
