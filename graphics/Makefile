@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2012/08/30 07:30:03 jnemeth Exp $
+# $NetBSD: Makefile,v 1.636 2012/09/16 06:39:22 taca Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -419,6 +419,7 @@ SUBDIR+=	ruby-gnome2-rsvg
 SUBDIR+=	ruby-gnuplot
 SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-mini-magick
+SUBDIR+=	ruby-oily_png
 SUBDIR+=	ruby-opengl
 SUBDIR+=	ruby-rcairo
 SUBDIR+=	s10sh
