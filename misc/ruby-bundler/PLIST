@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/06/02 00:56:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/09/16 06:44:45 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -22,9 +22,11 @@ ${GEM_LIBDIR}/lib/bundler/dsl.rb
 ${GEM_LIBDIR}/lib/bundler/endpoint_specification.rb
 ${GEM_LIBDIR}/lib/bundler/environment.rb
 ${GEM_LIBDIR}/lib/bundler/fetcher.rb
+${GEM_LIBDIR}/lib/bundler/friendly_errors.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helper.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helpers.rb
 ${GEM_LIBDIR}/lib/bundler/gem_installer.rb
+${GEM_LIBDIR}/lib/bundler/gem_path_manipulation.rb
 ${GEM_LIBDIR}/lib/bundler/gem_tasks.rb
 ${GEM_LIBDIR}/lib/bundler/graph.rb
 ${GEM_LIBDIR}/lib/bundler/index.rb
@@ -40,6 +42,8 @@ ${GEM_LIBDIR}/lib/bundler/man/bundle-install
 ${GEM_LIBDIR}/lib/bundler/man/bundle-install.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle-package
 ${GEM_LIBDIR}/lib/bundler/man/bundle-package.txt
+${GEM_LIBDIR}/lib/bundler/man/bundle-platform
+${GEM_LIBDIR}/lib/bundler/man/bundle-platform.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle-update
 ${GEM_LIBDIR}/lib/bundler/man/bundle-update.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle.txt
@@ -49,6 +53,7 @@ ${GEM_LIBDIR}/lib/bundler/match_platform.rb
 ${GEM_LIBDIR}/lib/bundler/psyched_yaml.rb
 ${GEM_LIBDIR}/lib/bundler/remote_specification.rb
 ${GEM_LIBDIR}/lib/bundler/resolver.rb
+${GEM_LIBDIR}/lib/bundler/ruby_version.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_ext.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_integration.rb
 ${GEM_LIBDIR}/lib/bundler/runtime.rb
@@ -61,7 +66,7 @@ ${GEM_LIBDIR}/lib/bundler/templates/Executable
 ${GEM_LIBDIR}/lib/bundler/templates/Executable.standalone
 ${GEM_LIBDIR}/lib/bundler/templates/Gemfile
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Gemfile.tt
-${GEM_LIBDIR}/lib/bundler/templates/newgem/LICENSE.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/LICENSE.txt.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/README.md.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Rakefile.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/bin/newgem.tt
@@ -81,6 +86,7 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/empty_directory.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/file_manipulation.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/inject_into_file.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/base.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/dir_escape.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/file_binary_read.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/hash_with_indifferent_access.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/ordered_hash.rb
@@ -109,10 +115,12 @@ ${GEM_LIBDIR}/man/bundle-config.ronn
 ${GEM_LIBDIR}/man/bundle-exec.ronn
 ${GEM_LIBDIR}/man/bundle-install.ronn
 ${GEM_LIBDIR}/man/bundle-package.ronn
+${GEM_LIBDIR}/man/bundle-platform.ronn
 ${GEM_LIBDIR}/man/bundle-update.ronn
 ${GEM_LIBDIR}/man/bundle.ronn
 ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/index.txt
+${GEM_LIBDIR}/spec/bundler/definition_spec.rb
 ${GEM_LIBDIR}/spec/bundler/dsl_spec.rb
 ${GEM_LIBDIR}/spec/bundler/gem_helper_spec.rb
 ${GEM_LIBDIR}/spec/bundler/source_spec.rb
@@ -121,7 +129,6 @@ ${GEM_LIBDIR}/spec/cache/git_spec.rb
 ${GEM_LIBDIR}/spec/cache/path_spec.rb
 ${GEM_LIBDIR}/spec/cache/platform_spec.rb
 ${GEM_LIBDIR}/spec/install/deploy_spec.rb
-${GEM_LIBDIR}/spec/install/deprecated_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/c_ext_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/dependency_api_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/env_spec.rb
@@ -153,6 +160,7 @@ ${GEM_LIBDIR}/spec/other/init_spec.rb
 ${GEM_LIBDIR}/spec/other/newgem_spec.rb
 ${GEM_LIBDIR}/spec/other/open_spec.rb
 ${GEM_LIBDIR}/spec/other/outdated_spec.rb
+${GEM_LIBDIR}/spec/other/platform_spec.rb
 ${GEM_LIBDIR}/spec/other/show_spec.rb
 ${GEM_LIBDIR}/spec/quality_spec.rb
 ${GEM_LIBDIR}/spec/realworld/edgecases_spec.rb
