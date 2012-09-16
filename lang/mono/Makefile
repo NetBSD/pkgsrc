@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2012/06/14 07:44:46 sbd Exp $
+# $NetBSD: Makefile,v 1.125 2012/09/16 15:27:03 cheusov Exp $
 
 DISTNAME=	mono-2.10.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,7 @@ LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND x11
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-CONFLICTS=	pnet-[0-9]*
+CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q}
 
