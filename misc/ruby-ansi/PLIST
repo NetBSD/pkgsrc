@@ -1,11 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/01 15:10:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/16 06:43:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.ruby
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING.rdoc
+${GEM_LIBDIR}/Config.rb
+${GEM_LIBDIR}/DEMO.rdoc
 ${GEM_LIBDIR}/HISTORY.rdoc
-${GEM_LIBDIR}/QED.rdoc
 ${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/demo/01_ansicode.rdoc
+${GEM_LIBDIR}/demo/02_core.rdoc
+${GEM_LIBDIR}/demo/03_logger.rdoc
+${GEM_LIBDIR}/demo/04_progressbar.rdoc
+${GEM_LIBDIR}/demo/05_mixin.rdoc
+${GEM_LIBDIR}/demo/06_string.rdoc
+${GEM_LIBDIR}/demo/07_columns.rdoc
+${GEM_LIBDIR}/demo/08_table.rdoc
+${GEM_LIBDIR}/demo/09_diff.rdoc
+${GEM_LIBDIR}/demo/10_bbcode.rdoc
+${GEM_LIBDIR}/demo/11_terminal.rdoc
+${GEM_LIBDIR}/demo/applique/ae.rb
+${GEM_LIBDIR}/demo/applique/output.rb
 ${GEM_LIBDIR}/lib/ansi.rb
 ${GEM_LIBDIR}/lib/ansi.yml
 ${GEM_LIBDIR}/lib/ansi/bbcode.rb
@@ -28,19 +42,6 @@ ${GEM_LIBDIR}/lib/ansi/terminal/stty.rb
 ${GEM_LIBDIR}/lib/ansi/terminal/termios.rb
 ${GEM_LIBDIR}/lib/ansi/terminal/win32.rb
 ${GEM_LIBDIR}/lib/ansi/version.rb
-${GEM_LIBDIR}/qed/01_ansicode.rdoc
-${GEM_LIBDIR}/qed/02_core.rdoc
-${GEM_LIBDIR}/qed/03_logger.rdoc
-${GEM_LIBDIR}/qed/04_progressbar.rdoc
-${GEM_LIBDIR}/qed/05_mixin.rdoc
-${GEM_LIBDIR}/qed/06_string.rdoc
-${GEM_LIBDIR}/qed/07_columns.rdoc
-${GEM_LIBDIR}/qed/08_table.rdoc
-${GEM_LIBDIR}/qed/09_diff.rdoc
-${GEM_LIBDIR}/qed/10_bbcode.rdoc
-${GEM_LIBDIR}/qed/11_terminal.rdoc
-${GEM_LIBDIR}/qed/applique/ae.rb
-${GEM_LIBDIR}/qed/applique/output.rb
 ${GEM_LIBDIR}/test/case_ansicode.rb
 ${GEM_LIBDIR}/test/case_bbcode.rb
 ${GEM_LIBDIR}/test/case_mixin.rb
