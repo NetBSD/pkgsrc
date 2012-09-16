@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3014 2012/09/16 15:18:25 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3015 2012/09/16 15:56:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4638,3 +4638,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed lang/ruby19 [taca 2012-09-16]
 	Removed textproc/ruby-psych [taca 2012-09-16]
 	Removed lang/ruby19-base [taca 2012-09-16]
+	Updated misc/ruby-sprockets20 to 2.0.4nb1 [taca 2012-09-16]
