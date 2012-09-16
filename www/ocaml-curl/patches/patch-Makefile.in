@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/09/16 12:38:44 jaapb Exp $
+
+Install into correct DESTDIR, and install .cmi files
+--- Makefile.in.orig	2009-11-07 21:05:52.000000000 +0000
++++ Makefile.in
+@@ -69,8 +69,10 @@ libcurl-helper.a:	$(CURLHELPEROBJS)
+ 
+ install:
+ ifeq ($(FINDLIB),ocamlfind)
+-		ocamlfind install curl META $(wildcard *.cmi) \
+-			 $(wildcard *.a) $(wildcard *.cma) $(wildcard *.cmxa)
++		ocamlfind install -ldconf ignore \
++			-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/ \
++			curl META $(wildcard *.cmi) $(wildcard *.mli) \
++			$(wildcard *.a) $(wildcard *.cma) $(wildcard *.cmxa)
+ else
+ 		mkdir -p $(INSTALLDIR)
+ 		$(INSTALLDATA) curl.cma $(INSTALLDIR)
