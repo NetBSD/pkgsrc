@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/12 11:04:17 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/16 19:46:02 dholland Exp $
 #
 
 VERSION=	4.1.3
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
-COMMENT=	Xen 4.1.2 Kernel
+COMMENT=	Xen 4.1.x Kernel
 
 LICENSE=        gnu-gpl-v2
 
