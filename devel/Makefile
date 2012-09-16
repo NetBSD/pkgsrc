@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1649 2012/09/14 08:12:39 morr Exp $
+# $NetBSD: Makefile,v 1.1650 2012/09/16 08:15:06 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1427,6 +1427,7 @@ SUBDIR+=	ruby-gnome2-atk
 SUBDIR+=	ruby-gnome2-gio
 SUBDIR+=	ruby-gnome2-glib
 SUBDIR+=	ruby-gnome2-pango
+SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
 SUBDIR+=	ruby-hike
