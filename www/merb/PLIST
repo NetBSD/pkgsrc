@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/12 03:02:22 taca Exp $
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/lib/merb.rb
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
