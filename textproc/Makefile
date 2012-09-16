@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.640 2012/09/11 09:19:10 sno Exp $
+# $NetBSD: Makefile,v 1.641 2012/09/16 14:46:58 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -582,6 +582,7 @@ SUBDIR+=	ruby-json-pure
 SUBDIR+=	ruby-json-utils
 SUBDIR+=	ruby-kramdown
 SUBDIR+=	ruby-libxml
+SUBDIR+=	ruby-mab
 SUBDIR+=	ruby-markaby
 SUBDIR+=	ruby-maruku
 SUBDIR+=	ruby-mecab
