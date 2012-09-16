@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 07:04:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/16 14:36:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -14,8 +14,6 @@ ${GEM_LIBDIR}/lib/jquery/assert_select.rb
 ${GEM_LIBDIR}/lib/jquery/rails.rb
 ${GEM_LIBDIR}/lib/jquery/rails/engine.rb
 ${GEM_LIBDIR}/lib/jquery/rails/version.rb
-${GEM_LIBDIR}/spec/lib/jquery-rails_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.min.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.js
