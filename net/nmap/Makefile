@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2012/09/15 10:06:06 obache Exp $
+# $NetBSD: Makefile,v 1.93 2012/09/16 20:29:06 pettai Exp $
 
-DISTNAME=	nmap-5.51.6
-PKGREVISION=	6
+DISTNAME=	nmap-6.01
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +10,7 @@ HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 LICENSE=	gnu-gpl-v2
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=1.0.0
@@ -31,8 +30,11 @@ BUILD_DEFS+=		IPV6_READY
 
 CHECK_INTERPRETER_SKIP=	bin/uninstall_zenmap
 CHECK_INTERPRETER_SKIP+=	share/zenmap/su-to-zenmap.sh
+CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/oracle-default-accounts.lst
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/oracle-sids
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/passwords.lst
+CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/rtsp-urls.txt
+CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/snmpcommunities.lst
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
