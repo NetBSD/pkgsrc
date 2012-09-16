@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 14:16:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/16 14:00:28 taca Exp $
 bin/ascii85
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/Ascii85.gemspec
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ascii85
 ${GEM_LIBDIR}/lib/Ascii85/version.rb
 ${GEM_LIBDIR}/lib/ascii85.rb
 ${GEM_LIBDIR}/spec/lib/ascii85_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
