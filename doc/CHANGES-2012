@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3001 2012/09/16 11:33:14 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3002 2012/09/16 11:35:09 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-libxml to 2.3.3 [taca 2012-09-16]
 	Updated textproc/ruby-nokogiri to 1.5.5 [taca 2012-09-16]
 	Updated textproc/ruby-ultraviolet to 1.0.0 [taca 2012-09-16]
+	Updated databases/ocaml-sqlite3 to 2.0.2 [jaapb 2012-09-16]
