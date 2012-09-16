@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/05/23 12:50:04 marino Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/16 15:26:29 cheusov Exp $
 
 DISTNAME=	lc	# overridden below
 PKGNAME=	lc-${LCVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	cad
 MASTER_SITES=	http://lc.cray.com/download/
 
@@ -10,6 +10,8 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://lc.cray.com/
 COMMENT=	Finite Difference Time Domain (FDTD) Electromagnetic Simulator
 LICENSE=		lc-license
+
+CONFLICTS+=		mono-[0-9]* # bin/lc
 
 RESTRICTED=		Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
