@@ -1,0 +1,35 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/09/16 14:17:54 ryoon Exp $
+
+* Disable opusdec's direct audio output
+
+--- configure.ac.orig	2012-09-04 17:33:39.000000000 +0000
++++ configure.ac
+@@ -165,18 +165,18 @@ then
+ fi
+ 
+ dnl check for OSS
+-HAVE_OSS=no
+-AC_CHECK_HEADERS([sys/soundcard.h soundcard.h machine/soundcard.h],[
+-  HAVE_OSS=yes
+-  break
+-])
++dnl HAVE_OSS=no
++dnl AC_CHECK_HEADERS([sys/soundcard.h soundcard.h machine/soundcard.h],[
++dnl   HAVE_OSS=yes
++dnl   break
++dnl ])
+ 
+ dnl check for sndio
+-HAVE_SNDIO=no
+-AC_CHECK_LIB([sndio], [sio_open])
+-if test "x$ac_cv_lib_sndio_sio_open" = "xyes"; then
+-  HAVE_SNDIO=yes
+-fi
++dnl HAVE_SNDIO=no
++dnl AC_CHECK_LIB([sndio], [sio_open])
++dnl if test "x$ac_cv_lib_sndio_sio_open" = "xyes"; then
++dnl   HAVE_SNDIO=yes
++dnl fi
+ 
+ if test "x$HAVE_OSS" != "xyes" && test "x$HAVE_SNDIO" != "xyes"; then
+   AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])

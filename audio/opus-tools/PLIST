@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/16 14:17:54 ryoon Exp $
+bin/opusdec
+bin/opusenc
+bin/opusinfo
+man/man1/opusdec.1
+man/man1/opusenc.1
+man/man1/opusinfo.1
