@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/09/06 12:24:09 obache Exp $
+# $NetBSD: Makefile,v 1.52 2012/09/16 15:30:45 taca Exp $
 #
 
 DISTNAME=	mikutter.0.1.1.863
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RUBY_VERSION_SUPPORTED=	192 193
+RUBY_VERSION_SUPPORTED=	193
 
 .include "../../lang/ruby/rubyversion.mk"
 
