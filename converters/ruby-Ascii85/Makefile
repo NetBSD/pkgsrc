@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/19 14:16:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/16 14:00:28 taca Exp $
 
-DISTNAME=	Ascii85-1.0.1
+DISTNAME=	Ascii85-1.0.2
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
