@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 07:36:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/16 06:27:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/compat/securerandom.rb
 ${GEM_LIBDIR}/lib/uuidtools.rb
@@ -14,12 +16,11 @@ ${GEM_LIBDIR}/spec/uuidtools/utility_spec.rb
 ${GEM_LIBDIR}/spec/uuidtools/uuid_creation_spec.rb
 ${GEM_LIBDIR}/spec/uuidtools/uuid_parsing_spec.rb
 ${GEM_LIBDIR}/tasks/benchmark.rake
-${GEM_LIBDIR}/tasks/clobber.rake
 ${GEM_LIBDIR}/tasks/gem.rake
 ${GEM_LIBDIR}/tasks/git.rake
 ${GEM_LIBDIR}/tasks/metrics.rake
-${GEM_LIBDIR}/tasks/rdoc.rake
+${GEM_LIBDIR}/tasks/rspec.rake
 ${GEM_LIBDIR}/tasks/rubyforge.rake
-${GEM_LIBDIR}/tasks/spec.rake
+${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/website/index.html
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
