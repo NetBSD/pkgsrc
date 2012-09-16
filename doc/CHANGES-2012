@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3017 2012/09/16 16:01:22 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3018 2012/09/16 16:18:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4641,3 +4641,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/ruby-sprockets20 to 2.0.4nb1 [taca 2012-09-16]
 	Updated www/ruby-rack-mount06 to 0.6.14nb1 [taca 2012-09-16]
 	Updated www/ruby-rack-test05 to 0.5.7nb1 [taca 2012-09-16]
+	Updated www/fengoffice to 2.1.0 [taca 2012-09-16]
