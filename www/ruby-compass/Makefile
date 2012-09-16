@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/03/20 14:00:28 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/16 13:37:03 taca Exp $
 
-DISTNAME=	compass-0.12.1
+DISTNAME=	compass-0.12.2
 CATEGORIES=	www
 #MASTER_SITES=	http://gems.github.com/gems/
 
