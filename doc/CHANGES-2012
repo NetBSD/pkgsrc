@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.2986 2012/09/16 03:33:39 taca Exp $
+$NetBSD: CHANGES-2012,v 1.2987 2012/09/16 04:34:36 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4546,6 +4546,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql51-server to 5.1.65 [obache 2012-09-15]
 	Updated graphics/p5-Chart to 2.4.5 [wen 2012-09-15]
 	Updated www/p5-Mojolicious to 3.41 [mspo 2012-09-15]
+	Updated mail/cone to 0.90nb2 [dholland 2012-09-16]
 	Removed www/merb-stories [taca 2012-09-16]
 	Removed www/merbful-authentication [taca 2012-09-16]
 	Removed www/merb-test-unit [taca 2012-09-16]
@@ -4575,3 +4576,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/merb-action-args [taca 2012-09-16]
 	Removed www/merb-core [taca 2012-09-16]
 	Updated www/apache22 to 2.2.23 [taca 2012-09-16]
+	Updated security/bitstir to 0.2nb2 [dholland 2012-09-16]
