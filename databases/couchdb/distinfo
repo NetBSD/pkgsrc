@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.3 2011/12/20 14:08:55 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2012/09/17 09:42:46 fhajny Exp $
 
-SHA1 (apache-couchdb-1.1.1.tar.gz) = c901676663279338095642462bafa2d0667df98b
-RMD160 (apache-couchdb-1.1.1.tar.gz) = e61acf6649dbcfdd4834cc5f0920f38fd0d4ba76
-Size (apache-couchdb-1.1.1.tar.gz) = 1070948 bytes
-SHA1 (patch-aa) = 86666a2454c2a4540d95cb67e362b635942440f9
+SHA1 (apache-couchdb-1.2.0.tar.gz) = da17af99cf3b1f9a89f0051b7d9de0cbd6fe81b6
+RMD160 (apache-couchdb-1.2.0.tar.gz) = c96da6e285201f001431c57ee84cc04e2e244115
+Size (apache-couchdb-1.2.0.tar.gz) = 1326925 bytes
+SHA1 (patch-aa) = 87851cdb03140110b5000f6f7b374b555bb1781d
 SHA1 (patch-ab) = 5efc967379dd4b1fcbc18c64266f7308892d7b71
 SHA1 (patch-ac) = ad77cac068fe07046275271f0d745b3a1c8a4baa
 SHA1 (patch-ad) = 20fcfab5fe067d57703d2cc80e308b112ce60826
-SHA1 (patch-ae) = 4e8ed625790191b429a5116a6062ccb131cb4d18
-SHA1 (patch-src__couchdb__priv__couch_js__utf8.h) = 2134e3b717d04592ab24763fa8127d99df49b27b
+SHA1 (patch-ae) = b9af6f55d1fcaf88d6f3cff42eac233787bd2ee0
