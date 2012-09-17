@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11519 2012/09/16 20:29:32 pettai Exp $
+$NetBSD: TODO,v 1.11520 2012/09/17 14:30:30 taca Exp $
 
 Suggested new packages
 ======================
@@ -1081,7 +1081,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.6
 	o samba-3.5.17
-	o samba-3.6.7
+	o samba-3.6.8
 	o sane-backends-1.0.23
 	o sarg-2.2.5
 	o sawfish-1.9.1
@@ -1144,7 +1144,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.7.6
-	o sudo-1.8.6p1
+	o sudo-1.8.6p2
 	o supertuxkart-0.7.3
 	o swfdec-gnome-2.30.1
 	o sysinfo-4.2.2
