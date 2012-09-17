@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/19 20:12:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/09/17 12:06:01 markd Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
@@ -94,7 +94,6 @@ lib/kde4/kcm_kopete_highlight.so
 lib/kde4/kcm_kopete_history.so
 lib/kde4/kcm_kopete_latex.so
 lib/kde4/kcm_kopete_nowlistening.so
-lib/kde4/kcm_kopete_otr.so
 lib/kde4/kcm_kopete_pipes.so
 lib/kde4/kcm_kopete_pluginconfig.so
 lib/kde4/kcm_kopete_privacy.so
@@ -128,7 +127,6 @@ lib/kde4/kopete_jabber.so
 lib/kde4/kopete_latex.so
 lib/kde4/kopete_meanwhile.so
 lib/kde4/kopete_nowlistening.so
-lib/kde4/kopete_otr.so
 lib/kde4/kopete_pipes.so
 lib/kde4/kopete_privacy.so
 lib/kde4/kopete_qq.so
@@ -164,9 +162,6 @@ lib/libkopete.so.4.8.0
 lib/libkopete_oscar.so
 lib/libkopete_oscar.so.4
 lib/libkopete_oscar.so.4.8.0
-lib/libkopete_otr_shared.so
-lib/libkopete_otr_shared.so.1
-lib/libkopete_otr_shared.so.1.0.0
 lib/libkopete_videodevice.so
 lib/libkopete_videodevice.so.4
 lib/libkopete_videodevice.so.4.8.0
@@ -380,9 +375,6 @@ share/icons/oxygen/22x22/actions/view-user-offline-kopete.png
 share/icons/oxygen/22x22/actions/voicecall.png
 share/icons/oxygen/22x22/actions/webcamreceive.png
 share/icons/oxygen/22x22/actions/webcamsend.png
-share/icons/oxygen/22x22/status/object-locked-finished.png
-share/icons/oxygen/22x22/status/object-locked-unverified.png
-share/icons/oxygen/22x22/status/object-locked-verified.png
 share/icons/oxygen/32x32/actions/account_offline_overlay.png
 share/icons/oxygen/32x32/actions/im-status-message-edit.png
 share/icons/oxygen/32x32/actions/metacontact_unknown.png
@@ -392,7 +384,6 @@ share/icons/oxygen/32x32/actions/voicecall.png
 share/icons/oxygen/32x32/actions/webcamreceive.png
 share/icons/oxygen/32x32/actions/webcamsend.png
 share/icons/oxygen/48x48/actions/im-status-message-edit.png
-share/icons/oxygen/48x48/actions/mail-encrypt.png
 share/icons/oxygen/48x48/actions/view-user-offline-kopete.png
 share/icons/oxygen/48x48/actions/voicecall.png
 share/icons/oxygen/48x48/actions/webcamreceive.png
@@ -402,14 +393,10 @@ share/icons/oxygen/64x64/actions/webcamreceive.png
 share/icons/oxygen/64x64/actions/webcamsend.png
 share/icons/oxygen/scalable/actions/account_offline_overlay.svgz
 share/icons/oxygen/scalable/actions/im-status-message-edit.svgz
-share/icons/oxygen/scalable/actions/mail-encrypt.svgz
 share/icons/oxygen/scalable/actions/view-user-offline-kopete.svgz
 share/icons/oxygen/scalable/actions/voicecall.svgz
 share/icons/oxygen/scalable/actions/webcamreceive.svgz
 share/icons/oxygen/scalable/actions/webcamsend.svgz
-share/icons/oxygen/scalable/status/object-locked-finished.svgz
-share/icons/oxygen/scalable/status/object-locked-unverified.svgz
-share/icons/oxygen/scalable/status/object-locked-verified.svgz
 share/kde/apps/dolphinpart/kpartplugins/kget_plug_in.desktop
 share/kde/apps/dolphinpart/kpartplugins/kget_plug_in.rc
 share/kde/apps/kconf_update/kget.upd
@@ -885,8 +872,6 @@ share/kde/apps/kopete_history/historychatui.rc
 share/kde/apps/kopete_history/historyui.rc
 share/kde/apps/kopete_jabber/jabberchatui.rc
 share/kde/apps/kopete_latex/latexchatui.rc
-share/kde/apps/kopete_otr/otrchatui.rc
-share/kde/apps/kopete_otr/otrui.rc
 share/kde/apps/kopete_privacy/privacychatui.rc
 share/kde/apps/kopete_privacy/privacyui.rc
 share/kde/apps/kopete_skype/skypechatui.rc
@@ -1398,7 +1383,6 @@ share/kde/config.kcfg/kget.kcfg
 share/kde/config.kcfg/kget_checksumsearchfactory.kcfg
 share/kde/config.kcfg/kget_mirrorsearchfactory.kcfg
 share/kde/config.kcfg/kget_multisegkiofactory.kcfg
-share/kde/config.kcfg/kopete_otr.kcfg
 share/kde/config.kcfg/kopeteappearancesettings.kcfg
 share/kde/config.kcfg/kopetebehaviorsettings.kcfg
 share/kde/config.kcfg/kopetestatussettings.kcfg
@@ -1421,7 +1405,6 @@ share/kde4/services/kconfiguredialog/kopete_highlight_config.desktop
 share/kde4/services/kconfiguredialog/kopete_history_config.desktop
 share/kde4/services/kconfiguredialog/kopete_latex_config.desktop
 share/kde4/services/kconfiguredialog/kopete_nowlistening_config.desktop
-share/kde4/services/kconfiguredialog/kopete_otr_config.desktop
 share/kde4/services/kconfiguredialog/kopete_pipes_config.desktop
 share/kde4/services/kconfiguredialog/kopete_privacy_config.desktop
 share/kde4/services/kconfiguredialog/kopete_texteffect_config.desktop
@@ -1458,7 +1441,6 @@ share/kde4/services/kopete_jabber.desktop
 share/kde4/services/kopete_latex.desktop
 share/kde4/services/kopete_meanwhile.desktop
 share/kde4/services/kopete_nowlistening.desktop
-share/kde4/services/kopete_otr.desktop
 share/kde4/services/kopete_pipes.desktop
 share/kde4/services/kopete_pluginconfig.desktop
 share/kde4/services/kopete_privacy.desktop
