@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 20:19:16 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/17 11:47:29 jaapb Exp $
 #
 
 DISTNAME=	choqok-1.3
@@ -16,6 +16,7 @@ USE_TOOLS+=	perl msgfmt
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEPENDS+=         automoc4>=0.9.87:../../devel/automoc4
 DEPENDS=	qca2-ossl-[0-9]*:../../security/qca2-ossl
 
 .include "../../meta-pkgs/kde4/kde4.mk"
