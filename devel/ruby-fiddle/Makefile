@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/15 10:04:21 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/17 16:12:18 jperkin Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=		Ruby fiddle library to wrap libffi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RUBY_VERSION_SUPPORTED= 19 193
+RUBY_VERSION_SUPPORTED= 193
 USE_RUBY_EXTCONF=	yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/fiddle
 WRKSRC=			${RUBY_WRKSRC}/ext/fiddle
