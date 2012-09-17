@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.128 2012/09/16 12:18:30 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.129 2012/09/17 04:43:56 obache Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -758,7 +758,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .endif
 
 # Add dependency on GCC libraries if requested.
-.if !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss]) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
+.if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils)
 .    include "../../lang/gcc47-libs/buildlink3.mk"
