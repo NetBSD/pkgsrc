@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.28 2011/08/12 02:03:14 sbd Exp $
+$NetBSD: patch-ae,v 1.29 2012/09/18 07:17:29 bouyer Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2010-04-23 18:56:34.000000000 +0000
-+++ Makedefs.in
+--- Makedefs.in.orig	2012-03-01 01:05:55.000000000 +0100
++++ Makedefs.in	2012-09-12 16:45:31.000000000 +0200
 @@ -19,9 +19,11 @@
  
  AR		=	@AR@
@@ -21,21 +21,23 @@ Same for CXX.
  DSO		=	@DSO@
  DSOXX		=	@DSOXX@
  HTMLDOC		=	@HTMLDOC@
-@@ -41,11 +43,11 @@ SHELL		=	/bin/sh
+@@ -41,12 +43,12 @@
  # Installation programs...
  #
  
 -INSTALL_BIN	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
-+INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
++INSTALL_BIN	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 555 @INSTALL_STRIP@
  INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
+-INSTALL_COMPDATA =	$(INSTALL) -c -m 444 @INSTALL_GZIP@
++INSTALL_COMPDATA =	$(INSTALL) -c -m 444
  INSTALL_DATA	=	$(INSTALL) -c -m 444
  INSTALL_DIR	=	$(INSTALL) -d
 -INSTALL_LIB	=	$(LIBTOOL) $(INSTALL) -c -m 555 @INSTALL_STRIP@
-+INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 755 @INSTALL_STRIP@
++INSTALL_LIB	=	$(LIBTOOL) --mode=install $(INSTALL) -c -m 555 @INSTALL_STRIP@
  INSTALL_MAN	=	$(INSTALL) -c -m 444
  INSTALL_SCRIPT	=	$(INSTALL) -c -m 555
  
-@@ -263,19 +265,19 @@ DBUSDIR		=	@DBUSDIR@
+@@ -279,19 +281,19 @@
  
  .c.o:
  	echo Compiling $<...
