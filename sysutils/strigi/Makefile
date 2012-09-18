@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/09/15 10:06:32 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/18 15:53:14 jperkin Exp $
 
 DISTNAME=	strigi-0.6.4
 PKGREVISION=	14
@@ -27,6 +27,7 @@ RT_LIB_SCHED=	-lrt
 RT_LIB_SCHED=	# empty
 .endif
 
+CFLAGS.SunOS+=	-DCMAKE_HAVE_PTHREAD_CREATE
 LDFLAGS.SunOS+=	-mimpure-text -lrt
 
 CMAKE_ARGS+=	-DENABLE_CPPUNIT=OFF
