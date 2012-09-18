@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/08/09 15:57:06 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2012/09/18 16:44:24 ryoon Exp $
 
-SHA1 (enigmail-1.4.tar.gz) = 1ee4bcd8d38685af44c1aeeea4fbba7bf30513e4
-RMD160 (enigmail-1.4.tar.gz) = b3c717e150c826faae1daa09806e07dd16619c51
-Size (enigmail-1.4.tar.gz) = 1323467 bytes
-SHA1 (thunderbird-10.0.6esr.source.tar.bz2) = 95f33ea1f30018fa6213e1e9922e8346b52ec618
-RMD160 (thunderbird-10.0.6esr.source.tar.bz2) = 25e568eb0ff8e9acc2da03b25139fe667a5b11ad
-Size (thunderbird-10.0.6esr.source.tar.bz2) = 97779445 bytes
+SHA1 (thunderbird-10.0.7esr.source.tar.bz2) = 55b877745ac913680ed807900d5f2169da9e1233
+RMD160 (thunderbird-10.0.7esr.source.tar.bz2) = ed3cbf6216a2ac68f08d696d4b818f5495305643
+Size (thunderbird-10.0.7esr.source.tar.bz2) = 97590919 bytes
 SHA1 (patch-aa) = a6787e51004112a2056fd695c44c8610ffcc0d60
 SHA1 (patch-aa-toplevel) = dfff316c77e468a3720f3d18e9edfc67059fc0e1
 SHA1 (patch-ab) = 6e243fcf826226330d6b62548838393bb1cbafb5
@@ -60,7 +57,6 @@ SHA1 (patch-mm) = e9b4e83d4fee0aee0c56f85f0a320587184e2cf4
 SHA1 (patch-mn) = 043ff332b494ddc9dfff3286a4c7e296a9b352f4
 SHA1 (patch-mozilla_build_autoconf_gcc-pr49911.m4) = 84f15ee18c95829b19127b6efa46e57380528315
 SHA1 (patch-mozilla_build_autoconf_nss.m4) = 3344fd1a92508acf627371cebbb43b6f603652d5
-SHA1 (patch-mozilla_config_milestone.txt) = 105f664d6154a13849aa3cb30ad9318b88a9f2a5
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 2b8ad715181bd74966dcd941aead2c84658ad8a1
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = d2e60d0809eccb651ec8b17663a524004602c2db
 SHA1 (patch-mozilla_ipc_chromium_Makefile.in) = fc1e445bae48da5b3d4f97bf78b7ef3870032a06
@@ -77,7 +73,6 @@ SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_ipc__message__utils.h) = f55a
 SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h) = c451010a3d2c638e70e1fcec876b20eea28cf2cf
 SHA1 (patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp) = 3b4b7d9feacd477e89bfbb2bcebb3becfb8b1827
 SHA1 (patch-mozilla_js_src_build_autoconf_gcc-pr49911.m4) = 8aa13cbba888f0c077137686a7c9c791de58d800
-SHA1 (patch-mozilla_js_src_config_milestone.txt) = c8a18739a2d4d5eed6c00ba77de54978eea7c229
 SHA1 (patch-mozilla_js_src_jscpucfg.h) = 88a31fd62eda3bd7f95cae076a83b418e97e8412
 SHA1 (patch-mozilla_js_src_methodjit_MethodJIT.cpp) = c27d2e4105ea47a0fe2bec42ed2e9192db925c8c
 SHA1 (patch-mozilla_js_src_yarr_pcre_pcre.h) = 7d450964eba9c64cad932075c714087047fc8642
