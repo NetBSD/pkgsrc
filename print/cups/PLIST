@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2012/02/07 23:16:57 sbd Exp $
+@comment $NetBSD: PLIST,v 1.39 2012/09/18 07:17:28 bouyer Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -182,6 +182,7 @@ share/cups/ipptool/document-letter.pdf
 share/cups/ipptool/document-letter.ps
 share/cups/ipptool/get-completed-jobs.test
 share/cups/ipptool/get-jobs.test
+share/cups/ipptool/get-printer-attributes.test
 share/cups/ipptool/gray.jpg
 share/cups/ipptool/ipp-1.1.test
 share/cups/ipptool/ipp-2.0.test
