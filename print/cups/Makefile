@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2012/03/12 13:37:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.191 2012/09/18 07:17:28 bouyer Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,9 +6,8 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
-BASE_VERS=	1.5.2
+BASE_VERS=	1.5.4
 DIST_VERS=	${BASE_VERS}
-PKGREVISION=	1
 
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -172,6 +171,9 @@ post-install:
 	done
 .if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
+.endif
+.if !empty(PKG_OPTIONS:Mdnssd)
+	${LN} -s ${DESTDIR}${PREFIX}/libexec/cups/backend/dnssd ${DESTDIR}${PREFIX}/libexec/cups/backend/mdns
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
