@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3028 2012/09/18 16:45:08 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3029 2012/09/18 16:48:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4652,3 +4652,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/nsd to 3.2.13 [pettai 2012-09-16]
 	Updated print/cups to 1.5.4 [bouyer 2012-09-18]
 	Updated mail/thunderbird10 to 10.0.7 [ryoon 2012-09-18]
+	Updated mail/thunderbird10-l10n to 10.0.7 [ryoon 2012-09-18]
