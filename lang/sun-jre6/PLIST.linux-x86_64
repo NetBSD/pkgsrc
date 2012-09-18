@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.7 2012/06/14 01:05:37 obache Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.8 2012/09/18 16:33:59 ryoon Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -60,8 +60,6 @@ java/sun-6/lib/amd64/libjsound.so
 java/sun-6/lib/amd64/libjsoundalsa.so
 java/sun-6/lib/amd64/libmanagement.so
 java/sun-6/lib/amd64/libmlib_image.so
-java/sun-6/lib/amd64/libnative_chmod.so
-java/sun-6/lib/amd64/libnative_chmod_g.so
 java/sun-6/lib/amd64/libnet.so
 java/sun-6/lib/amd64/libnio.so
 java/sun-6/lib/amd64/libnpjp2.so
