@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/07/13 18:41:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/09/19 11:09:54 ryoon Exp $
 share/jenkins/ColorFormatter.class
 share/jenkins/JNLPMain.class
 share/jenkins/LogFileOutputStream$1.class
@@ -26,14 +26,11 @@ share/jenkins/WEB-INF/lib/acegi-security-1.0.5.jar
 share/jenkins/WEB-INF/lib/activation-1.1.1-hudson-1.jar
 share/jenkins/WEB-INF/lib/akuma-1.7.jar
 share/jenkins/WEB-INF/lib/annotation-indexer-1.2.jar
-share/jenkins/WEB-INF/lib/ant-1.8.0.jar
-share/jenkins/WEB-INF/lib/ant-launcher-1.8.0.jar
+share/jenkins/WEB-INF/lib/ant-1.8.3.jar
+share/jenkins/WEB-INF/lib/ant-launcher-1.8.3.jar
 share/jenkins/WEB-INF/lib/antlr-2.7.6.jar
 share/jenkins/WEB-INF/lib/aopalliance-1.0.jar
 share/jenkins/WEB-INF/lib/args4j-2.0.16.jar
-share/jenkins/WEB-INF/lib/asm-2.2.3.jar
-share/jenkins/WEB-INF/lib/asm-commons-2.2.3.jar
-share/jenkins/WEB-INF/lib/asm-tree-2.2.3.jar
 share/jenkins/WEB-INF/lib/asm3-3.3.0.jar
 share/jenkins/WEB-INF/lib/bcprov-jdk15-140.jar
 share/jenkins/WEB-INF/lib/bridge-method-annotation-1.4.jar
@@ -57,8 +54,8 @@ share/jenkins/WEB-INF/lib/crypto-util-1.1.jar
 share/jenkins/WEB-INF/lib/dom4j-1.6.1-hudson-3.jar
 share/jenkins/WEB-INF/lib/embedded_su4j-1.1.jar
 share/jenkins/WEB-INF/lib/ezmorph-1.0.3.jar
-share/jenkins/WEB-INF/lib/groovy-all-1.8.3.jar
-share/jenkins/WEB-INF/lib/guava-10.0.1.jar
+share/jenkins/WEB-INF/lib/groovy-all-1.8.5.jar
+share/jenkins/WEB-INF/lib/guava-11.0.1.jar
 share/jenkins/WEB-INF/lib/instance-identity-1.1.jar
 share/jenkins/WEB-INF/lib/j-interop-2.0.6-kohsuke-1.jar
 share/jenkins/WEB-INF/lib/j-interopdeps-2.0.6-kohsuke-1.jar
@@ -79,7 +76,7 @@ share/jenkins/WEB-INF/lib/json-lib-2.1-rev7.jar
 share/jenkins/WEB-INF/lib/jsr305-1.3.9.jar
 share/jenkins/WEB-INF/lib/jstl-1.1.0.jar
 share/jenkins/WEB-INF/lib/jtidy-4aug2000r7-dev-hudson-1.jar
-share/jenkins/WEB-INF/lib/libpam4j-1.4.jar
+share/jenkins/WEB-INF/lib/libpam4j-1.6.jar
 share/jenkins/WEB-INF/lib/libzfs-0.5.jar
 share/jenkins/WEB-INF/lib/localizer-1.10.jar
 share/jenkins/WEB-INF/lib/log4j-1.2.9.jar
@@ -87,10 +84,10 @@ share/jenkins/WEB-INF/lib/mail-1.4.4.jar
 share/jenkins/WEB-INF/lib/memory-monitor-1.7.jar
 share/jenkins/WEB-INF/lib/mina-core-2.0.2.jar
 share/jenkins/WEB-INF/lib/oro-2.0.8.jar
-share/jenkins/WEB-INF/lib/remoting-2.11.jar
+share/jenkins/WEB-INF/lib/owasp-html-sanitizer-r88.jar
+share/jenkins/WEB-INF/lib/remoting-2.16.jar
 share/jenkins/WEB-INF/lib/robust-http-client-1.2.jar
 share/jenkins/WEB-INF/lib/sezpoz-1.9.jar
-share/jenkins/WEB-INF/lib/sisu-guava-0.9.9.jar
 share/jenkins/WEB-INF/lib/sisu-guice-3.1.0.jar
 share/jenkins/WEB-INF/lib/slf4j-api-1.6.2.jar
 share/jenkins/WEB-INF/lib/slf4j-jdk14-1.6.2.jar
@@ -102,27 +99,29 @@ share/jenkins/WEB-INF/lib/spring-dao-1.2.9.jar
 share/jenkins/WEB-INF/lib/spring-jdbc-1.2.9.jar
 share/jenkins/WEB-INF/lib/spring-web-2.5.jar
 share/jenkins/WEB-INF/lib/ssh-cli-auth-1.2.jar
-share/jenkins/WEB-INF/lib/sshd-1.2.jar
+share/jenkins/WEB-INF/lib/sshd-1.3.jar
 share/jenkins/WEB-INF/lib/sshd-core-0.6.0.jar
-share/jenkins/WEB-INF/lib/stapler-1.182.jar
+share/jenkins/WEB-INF/lib/stapler-1.189.jar
 share/jenkins/WEB-INF/lib/stapler-adjunct-codemirror-1.1.jar
 share/jenkins/WEB-INF/lib/stapler-adjunct-timeline-1.3.jar
-share/jenkins/WEB-INF/lib/stapler-groovy-1.182.jar
-share/jenkins/WEB-INF/lib/stapler-jelly-1.182.jar
-share/jenkins/WEB-INF/lib/stapler-jrebel-1.182.jar
+share/jenkins/WEB-INF/lib/stapler-adjunct-zeroclipboard-1.0.7-1.jar
+share/jenkins/WEB-INF/lib/stapler-groovy-1.189.jar
+share/jenkins/WEB-INF/lib/stapler-jelly-1.189.jar
+share/jenkins/WEB-INF/lib/stapler-jrebel-1.189.jar
 share/jenkins/WEB-INF/lib/stax-api-1.0.1.jar
 share/jenkins/WEB-INF/lib/task-reactor-1.2.jar
 share/jenkins/WEB-INF/lib/tiger-types-1.3.jar
 share/jenkins/WEB-INF/lib/trilead-putty-extension-1.0.jar
 share/jenkins/WEB-INF/lib/trilead-ssh2-build212-hudson-5.jar
 share/jenkins/WEB-INF/lib/txw2-20070624.jar
-share/jenkins/WEB-INF/lib/version-number-1.0.jar
+share/jenkins/WEB-INF/lib/version-number-1.1.jar
+share/jenkins/WEB-INF/lib/windows-package-checker-1.0.jar
 share/jenkins/WEB-INF/lib/windows-remote-command-1.3.jar
 share/jenkins/WEB-INF/lib/winp-1.14.jar
 share/jenkins/WEB-INF/lib/wstx-asl-3.2.7.jar
 share/jenkins/WEB-INF/lib/xpp3-1.1.4c.jar
 share/jenkins/WEB-INF/lib/xpp3_min-1.1.4c.jar
-share/jenkins/WEB-INF/lib/xstream-1.3.1-jenkins-9.jar
+share/jenkins/WEB-INF/lib/xstream-1.3.1-jenkins-11.jar
 share/jenkins/WEB-INF/plugins/ant.hpi
 share/jenkins/WEB-INF/plugins/cvs.hpi
 share/jenkins/WEB-INF/plugins/javadoc.hpi
@@ -449,6 +448,8 @@ share/jenkins/help/system-config/cvs-browser_ja.html
 share/jenkins/help/system-config/cvs-browser_pt_BR.html
 share/jenkins/help/system-config/cvs-browser_ru.html
 share/jenkins/help/system-config/cvs-browser_tr.html
+share/jenkins/help/system-config/defaultJobNamingStrategy.html
+share/jenkins/help/system-config/defaultJobNamingStrategy_ja.html
 share/jenkins/help/system-config/globalEnvironmentVariables.html
 share/jenkins/help/system-config/globalEnvironmentVariables_de.html
 share/jenkins/help/system-config/globalEnvironmentVariables_fr.html
@@ -526,6 +527,8 @@ share/jenkins/help/system-config/nodeEnvironmentVariables.html
 share/jenkins/help/system-config/nodeEnvironmentVariables_de.html
 share/jenkins/help/system-config/nodeEnvironmentVariables_fr.html
 share/jenkins/help/system-config/nodeEnvironmentVariables_ja.html
+share/jenkins/help/system-config/patternJobNamingStrategy.html
+share/jenkins/help/system-config/patternJobNamingStrategy_ja.html
 share/jenkins/help/system-config/quietPeriod.html
 share/jenkins/help/system-config/quietPeriod_de.html
 share/jenkins/help/system-config/quietPeriod_fr.html
@@ -649,6 +652,7 @@ share/jenkins/help/view-config/includeregex_ru.html
 share/jenkins/help/view-config/includeregex_tr.html
 share/jenkins/help/view-config/statusFilter.html
 share/jenkins/help/view-config/statusFilter_ja.html
+share/jenkins/images/16x16/accept.png
 share/jenkins/images/16x16/blue.gif
 share/jenkins/images/16x16/blue.png
 share/jenkins/images/16x16/blue_anime.gif
@@ -740,6 +744,7 @@ share/jenkins/images/16x16/warning.png
 share/jenkins/images/16x16/yellow.gif
 share/jenkins/images/16x16/yellow.png
 share/jenkins/images/16x16/yellow_anime.gif
+share/jenkins/images/24x24/accept.png
 share/jenkins/images/24x24/blue.gif
 share/jenkins/images/24x24/blue.png
 share/jenkins/images/24x24/blue_anime.gif
@@ -838,6 +843,7 @@ share/jenkins/images/24x24/user.png
 share/jenkins/images/24x24/yellow.gif
 share/jenkins/images/24x24/yellow.png
 share/jenkins/images/24x24/yellow_anime.gif
+share/jenkins/images/32x32/accept.png
 share/jenkins/images/32x32/blue.gif
 share/jenkins/images/32x32/blue.png
 share/jenkins/images/32x32/blue_anime.gif
@@ -890,6 +896,7 @@ share/jenkins/images/32x32/user.png
 share/jenkins/images/32x32/yellow.gif
 share/jenkins/images/32x32/yellow.png
 share/jenkins/images/32x32/yellow_anime.gif
+share/jenkins/images/48x48/accept.png
 share/jenkins/images/48x48/blue.gif
 share/jenkins/images/48x48/blue.png
 share/jenkins/images/48x48/blue_anime.gif
