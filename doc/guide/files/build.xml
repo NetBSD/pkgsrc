@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.63 2011/08/04 13:50:07 kano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.64 2012/09/19 15:26:34 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -589,6 +589,13 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <quote>./configure</quote>) and
     <varname>CONFIGURE_ARGS</varname> may all be changed by the
     package.</para>
+
+    <para>If the program uses the Perl way of configuration (mainly Perl
+    modules, but not only), i.e. a file called
+    <filename>Makefile.PL</filename>, it should include
+    <filename>../../lang/perl5/module.mk</filename>. To set any parameter for
+    <filename>Makefile.PL</filename> use the <varname>MAKE_PARAMS</varname>
+    variable (e.g., <literal>MAKE_PARAMS+=foo=bar</literal></para>
 
     <para>If the program uses an <filename>Imakefile</filename>
     for configuration, the appropriate steps can be invoked by
