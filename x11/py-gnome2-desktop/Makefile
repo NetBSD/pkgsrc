@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2012/09/15 10:07:12 obache Exp $
+# $NetBSD: Makefile,v 1.66 2012/09/19 22:59:17 gdt Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,11 +31,12 @@ PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT:M27}
 PYTHON_VERSIONS_ACCEPTED+=	${PYTHON_VERSION_DEFAULT:M26}
 PYTHON_VERSIONS_ACCEPTED+=	${PYTHON_VERSION_DEFAULT:M25}
 
+.include "options.mk"
+
 .include "../../lang/python/extension.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
-.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 # works, but should better be in its own pkg to limit dependencies
