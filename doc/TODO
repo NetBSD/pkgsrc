@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11521 2012/09/19 15:39:41 ryoon Exp $
+$NetBSD: TODO,v 1.11522 2012/09/19 17:32:05 taca Exp $
 
 Suggested new packages
 ======================
@@ -521,6 +521,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dnsmasq-2.63
 	o doclifter-2.9
 	o dos2unix-6.0.2
+	o dovecot2-2.1.10
+	o dovecot2-pigeonhole-0.3.3
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dspam-3.10.0
@@ -1011,6 +1013,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppy-4.01
+	o postgresql92-9.2.0
 	o posh-0.5.5
 	o postal-0.72
 	o postfix-2.9.2
@@ -1143,7 +1146,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.7.6
-	o sudo-1.8.6p2
+	o sudo-1.8.6p3
 	o supertuxkart-0.7.3
 	o swfdec-gnome-2.30.1
 	o sysinfo-4.2.2
