@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2009/07/26 19:05:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/09/19 22:59:17 gdt Exp $
 lib/pkgconfig/gnome-python-desktop-2.0.pc
 ${PYSITELIB}/gtk-2.0/bugbuddy.py
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyc
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyo
 ${PYSITELIB}/gtk-2.0/evince.la
-${PYSITELIB}/gtk-2.0/evolution/__init__.py
-${PYSITELIB}/gtk-2.0/evolution/ebook.la
-${PYSITELIB}/gtk-2.0/evolution/ecal.la
+${PLIST.evolution}${PYSITELIB}/gtk-2.0/evolution/__init__.py
+${PLIST.evolution}${PYSITELIB}/gtk-2.0/evolution/ebook.la
+${PLIST.evolution}${PYSITELIB}/gtk-2.0/evolution/ecal.la
 ${PYSITELIB}/gtk-2.0/gnome/applet.py
 ${PYSITELIB}/gtk-2.0/gnome/applet.pyc
 ${PYSITELIB}/gtk-2.0/gnome/applet.pyo
@@ -68,7 +68,7 @@ share/gtk-doc/html/pygtksourceview/pygtksourceview.devhelp
 share/pygtk/2.0/defs/_gnomedesktop.defs
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
-share/pygtk/2.0/defs/ebook.defs
+${PLIST.evolution}share/pygtk/2.0/defs/ebook.defs
 share/pygtk/2.0/defs/evince.defs
 share/pygtk/2.0/defs/gnomekeyring.defs
 share/pygtk/2.0/defs/gtksourceview.defs
