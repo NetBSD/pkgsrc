@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.12 2012/05/06 08:34:14 gls Exp $
+$NetBSD: distinfo,v 1.13 2012/09/19 15:38:26 ryoon Exp $
 
-SHA1 (calibre-0.8.50.tar.xz) = 3c9522d03af625f11189e5248b680dd3fe302b9b
-RMD160 (calibre-0.8.50.tar.xz) = 9fa78b6316ab86120be39f990ed6edbcd7c50c7d
-Size (calibre-0.8.50.tar.xz) = 24580260 bytes
-SHA1 (patch-src_calibre_constants.py) = d86abb152ea2abb280e98830f608d90ee53b552d
-SHA1 (patch-src_calibre_devices_scanner.py) = 0ee6a7038c2be361563e4717ee87c6f7844e5e3f
-SHA1 (patch-src_calibre_ebooks_pdf_images.cpp) = 950f0302f3c387fb9b4ee41cd96d7c5103b7ad45
-SHA1 (patch-src_calibre_linux_py) = 04ae3325d88903e155280c65a8375d90a11a2ff0
+SHA1 (calibre-0.8.69.tar.xz) = 41df9e330d8fd29154bc74480e0251cc9cfcfeed
+RMD160 (calibre-0.8.69.tar.xz) = 203e55f9c458ac5500baf800cb03fd8861e1fdbf
+Size (calibre-0.8.69.tar.xz) = 26886920 bytes
+SHA1 (patch-setup_extensions.py) = aa8ee237a80b4da8dea03af950a7ac4caed9e51a
+SHA1 (patch-src_calibre_linux_py) = 267d01d4ba671299d88b9b3b9d2f98beb95c527e

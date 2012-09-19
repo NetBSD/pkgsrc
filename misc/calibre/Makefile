@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2012/09/15 10:05:34 obache Exp $
+# $NetBSD: Makefile,v 1.43 2012/09/19 15:38:26 ryoon Exp $
 #
 
-DISTNAME=	calibre-0.8.50
-PKGREVISION=	4
+DISTNAME=	calibre-0.8.69
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -214,4 +213,6 @@ BUILDLINK_API_DEPENDS.py-qt4+=	${PYPKGPREFIX}-qt4>=4.7.0
 .include "../../x11/py-qt4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7.0
 .include "../../x11/qt4-tools/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt4-qdbus+=	qt4-tools>=4.7.0
+.include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
