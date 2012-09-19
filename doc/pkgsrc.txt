@@ -5868,6 +5868,11 @@ CONFIGURE_ENV and arguments CONFIGURE_ARGS. The variables CONFIGURE_ENV,
 CONFIGURE_SCRIPT (default: "./configure") and CONFIGURE_ARGS may all be changed
 by the package.
 
+If the program uses the Perl way of configuration (mainly Perl modules, but not
+only), i.e. a file called Makefile.PL, it should include ../../lang/perl5/
+module.mk. To set any parameter for Makefile.PL use the MAKE_PARAMS variable
+(e.g., MAKE_PARAMS+=foo=bar
+
 If the program uses an Imakefile for configuration, the appropriate steps can
 be invoked by setting USE_IMAKE to "yes". (If you only want the package
 installed in ${X11PREFIX} but xmkmf not being run, set USE_X11BASE instead.)
