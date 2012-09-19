@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11522 2012/09/19 17:32:05 taca Exp $
+$NetBSD: TODO,v 1.11523 2012/09/19 18:20:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -419,11 +419,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.0
 	o autoconvert-0.3.16
 	o autogen-5.16.2
+	o automake-1.12.4
 	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
 	o baci-20040415
-	o bacula-5.2.11
+	o bacula-5.2.12
 	o balance-3.54
 	o balsa-2.4.9
 	o bash-completion-1.3
@@ -471,6 +472,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cinepaint-1.3
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clamav-0.97.6
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.10.8
@@ -715,7 +717,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gupnp-igd-0.2.1
 	o gv-3.7.3
 	o gvfs-1.6.7
-	o gwaei-3.4.3
+	o gwaei-3.6.0
 	o gworkspace-0.9.1
 	o gxine-0.5.907
 	o gzip-1.5
@@ -801,8 +803,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lbdb-0.38
 	o lbreakout-2.6.4
 	o lcc-4.2
+	o lcms2-2.4
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
+	o less-451
 	o level9-4.1
 	o lftp-4.3.7
 	o lgeneral-1.2.3
@@ -831,6 +835,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmms-0.6.2
 	o libmilter-8.14.5
 	o libnasl-2.3.1
+	o libnice-0.1.3
 	o libnids-1.24
 	o libnotify-0.7.1
 	o liboobs-2.32.0 [GNOME 2.32]
@@ -871,6 +876,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.147
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
@@ -878,6 +884,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.1.4
 	o mdocml-1.12.1
 	o mergeant-0.67
+	o mess-0.147
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
@@ -1043,6 +1050,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-docutils-0.9.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
+	o py-libxml2-2.9.0
+	o py-mpd-0.3.0
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o qbrew-0.3.9
@@ -1242,7 +1251,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wine-devel-1.5.12 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wine-devel-1.5.13 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1256,7 +1265,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20120908
+	o x264-devel-20120915
 	o xanalyser-1.30
 	o xapian-1.2.12
 	o xaric-0.13.2
@@ -1289,7 +1298,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-glint-1.2.8
 	o xf86-video-i128-1.3.6
 	o xf86-video-i740-1.3.4
-	o xf86-video-intel-2.20.7
+	o xf86-video-intel-2.20.8
 	o xf86-video-mach64-6.9.3
 	o xf86-video-mga-1.6.1
 	o xf86-video-neomagic-1.2.7
