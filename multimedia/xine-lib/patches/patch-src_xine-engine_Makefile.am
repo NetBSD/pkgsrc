@@ -1,0 +1,14 @@
+$NetBSD: patch-src_xine-engine_Makefile.am,v 1.1 2012/09/20 15:33:40 jperkin Exp $
+
+Ensure we link something.
+
+--- src/xine-engine/Makefile.am.orig	2012-09-20 14:30:26.827382120 +0000
++++ src/xine-engine/Makefile.am	2012-09-20 14:31:37.419849112 +0000
+@@ -50,6 +50,7 @@
+ 	-version-info $(XINE_LT_CURRENT):$(XINE_LT_REVISION):$(XINE_LT_AGE)
+ 
+ libxine_interface_la_SOURCES =
++libxine_interface_la_LIBADD = @LTLIBOBJS@
+ 
+ libxine_interface_la_LDFLAGS = $(AM_LDFLAGS) $(def_ldflags) \
+ 	-version-info $(XINE_LT_CURRENT):$(XINE_LT_REVISION):$(XINE_LT_AGE)
