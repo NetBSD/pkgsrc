@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.931 2012/09/03 10:09:17 marino Exp $
+# $NetBSD: Makefile,v 1.932 2012/09/20 06:44:28 jaapb Exp $
 #
 
 COMMENT=	Networking tools
@@ -64,6 +64,7 @@ SUBDIR+=	cdpd
 SUBDIR+=	cftp
 SUBDIR+=	chimera
 SUBDIR+=	chksniff
+SUBDIR+=	choqok
 SUBDIR+=	choparp
 SUBDIR+=	chrony
 SUBDIR+=	cia

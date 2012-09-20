@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2012/08/11 17:44:46 agc Exp $
+# $NetBSD: Makefile,v 1.441 2012/09/20 06:44:29 jaapb Exp $
 #
 
 COMMENT=	Security tools
@@ -325,6 +325,7 @@ SUBDIR+=	qca2
 SUBDIR+=	qca2-gnupg
 SUBDIR+=	qca2-ossl
 SUBDIR+=	qident
+SUBDIR+=	qoauth
 SUBDIR+=	racoon2
 SUBDIR+=	rainbowcrack
 SUBDIR+=	rats
