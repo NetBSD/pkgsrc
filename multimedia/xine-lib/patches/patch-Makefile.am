@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.am,v 1.1 2011/12/25 03:24:09 sbd Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2012/09/20 15:27:29 jperkin Exp $
 
---- Makefile.am.orig	2010-03-22 20:08:04.000000000 +0000
-+++ Makefile.am
-@@ -111,5 +111,5 @@ maintainer-clean-generic:
+--- Makefile.am.orig	2012-09-20 14:16:00.975034578 +0000
++++ Makefile.am	2012-09-20 14:16:09.825232062 +0000
+@@ -102,5 +102,5 @@
  maintainer-clean-generic-hook:
  	rm -f config.status
  
