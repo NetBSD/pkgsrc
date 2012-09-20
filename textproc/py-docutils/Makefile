@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2012/02/04 13:10:16 obache Exp $
+# $NetBSD: Makefile,v 1.35 2012/09/20 12:43:50 darcy Exp $
 
-DISTNAME=	docutils-0.8.1
-PKGREVISION=	1
+DISTNAME=	docutils-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
@@ -14,6 +13,7 @@ LICENSE=	public-domain AND 2-clause-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
+DEPENDS+=      ${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_LANGUAGES=	#none
 
@@ -26,6 +26,7 @@ SUBST_FILES.env+=	docutils/error_reporting.py
 SUBST_FILES.env+=	docutils/math/latex2mathml.py
 SUBST_FILES.env+=	docutils/math/math2html.py
 SUBST_FILES.env+=	docutils/writers/xetex/__init__.py
+SUBST_FILES.env+=       utils/punctuation_chars.py
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
