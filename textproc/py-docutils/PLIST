@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/04/08 20:21:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/09/20 12:43:50 darcy Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2man.py
@@ -311,9 +311,18 @@ ${PYSITELIB}/docutils/transforms/writer_aux.pyo
 ${PYSITELIB}/docutils/urischemes.py
 ${PYSITELIB}/docutils/urischemes.pyc
 ${PYSITELIB}/docutils/urischemes.pyo
-${PYSITELIB}/docutils/utils.py
-${PYSITELIB}/docutils/utils.pyc
-${PYSITELIB}/docutils/utils.pyo
+${PYSITELIB}/docutils/utils/__init__.py
+${PYSITELIB}/docutils/utils/__init__.pyc
+${PYSITELIB}/docutils/utils/__init__.pyo
+${PYSITELIB}/docutils/utils/code_analyzer.py
+${PYSITELIB}/docutils/utils/code_analyzer.pyc
+${PYSITELIB}/docutils/utils/code_analyzer.pyo
+${PYSITELIB}/docutils/utils/punctuation_chars.py
+${PYSITELIB}/docutils/utils/punctuation_chars.pyc
+${PYSITELIB}/docutils/utils/punctuation_chars.pyo
+${PYSITELIB}/docutils/utils/roman.py
+${PYSITELIB}/docutils/utils/roman.pyc
+${PYSITELIB}/docutils/utils/roman.pyo
 ${PYSITELIB}/docutils/writers/__init__.py
 ${PYSITELIB}/docutils/writers/__init__.pyc
 ${PYSITELIB}/docutils/writers/__init__.pyo
