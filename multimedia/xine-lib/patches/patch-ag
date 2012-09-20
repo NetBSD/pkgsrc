@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.25 2012/04/01 18:42:02 hans Exp $
+$NetBSD: patch-ag,v 1.26 2012/09/20 15:33:40 jperkin Exp $
 
---- configure.ac.orig	2012-02-04 00:41:43.000000000 +0000
-+++ configure.ac
-@@ -272,6 +272,10 @@ AC_CHECK_LIB([nsl],    [gethostbyname], 
+--- configure.ac.orig	2012-06-09 17:30:18.000000000 +0000
++++ configure.ac	2012-09-20 14:41:33.687892237 +0000
+@@ -9,7 +9,7 @@
+ 
+ dnl Initialize autoconf, autoheader, and automake
+ AC_INIT([xine-lib], XINE_VERSION_SPEC, [xine-bugs@lists.sourceforge.net])
+-AM_INIT_AUTOMAKE
++AM_INIT_AUTOMAKE([subdir-objects])
+ AC_CONFIG_SRCDIR([src/xine-engine/xine.c])
+ AC_CONFIG_MACRO_DIR([m4])
+ AC_CONFIG_LIBOBJ_DIR([lib])
+@@ -272,6 +272,10 @@
  AC_CHECK_LIB([resolv], [hstrerror],     [NET_LIBS="-lresolv $NET_LIBS"])
  AC_SUBST(NET_LIBS)
  
@@ -13,7 +22,7 @@ $NetBSD: patch-ag,v 1.25 2012/04/01 18:42:02 hans Exp $
  AC_CHECK_LIB([rt], [clock_getres],
               [RT_LIBS="-lrt"
                AC_DEFINE(HAVE_POSIX_TIMERS, 1, [Define this if you have POSIX timers.])], 
-@@ -361,6 +365,10 @@ case "$host_os" in
+@@ -361,6 +365,10 @@
  esac
  AC_CHECK_HEADERS([sys/dvdio.h sys/cdio.h sys/scsiio.h])
  
@@ -24,7 +33,7 @@ $NetBSD: patch-ag,v 1.25 2012/04/01 18:42:02 hans Exp $
  
  dnl ----------------
  dnl checks for types
-@@ -908,6 +916,7 @@ AC_CHECK_FUNCS([strncasecmp _strnicmp], 
+@@ -905,6 +913,7 @@
  
  AC_FUNC_FSEEKO
  
