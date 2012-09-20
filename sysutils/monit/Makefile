@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/20 09:14:05 jperkin Exp $
 #
 
 DISTNAME=		monit-4.10.1
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # no platform specific code yet
 NOT_FOR_PLATFORM+=	BSDOS-*-* DragonFly-*-* Interix-*-* IRIX-*-* OSF1-*-*
 
-USE_TOOLS+=		gmake flex yacc pax
+USE_TOOLS+=		gmake gzcat flex yacc pax
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
@@ -30,6 +30,9 @@ CONFIGURE_ARGS+=	--without-ssl
 .endif
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+.if ${OPSYS} == "SunOS" && ${ABI} == "32"
+CONFIGURE_ARGS+=	--without-largefiles
+.endif
 PKG_SYSCONFSUBDIR=	monit
 
 RCD_SCRIPTS=		monit
@@ -56,7 +59,7 @@ SUBST_SED.monit=	-e "s|^\# *set *daemon|set daemon|"
 SUBST_SED.monit+=	-e "s|include */etc/monit.d|include ${PKG_SYSCONFDIR}/monit.d|"
 
 post-extract:
-	cd ${WRKSRC}/contrib && pax -zrf monit-OSX-startup.tar.gz
+	cd ${WRKSRC}/contrib && gzcat monit-OSX-startup.tar.gz | pax -r
 
 # Perform configure substitutions on monit.1
 post-configure:
@@ -76,8 +79,6 @@ post-install:
 .for f in README StartupParameters.plist monit monit.plist monitrc
 	${INSTALL_DATA} ${WRKSRC}/contrib/monit/${f} ${DESTDIR}${EGDIR}/MacOSX
 .endfor
-
-
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
