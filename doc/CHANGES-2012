@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3032 2012/09/20 12:46:09 darcy Exp $
+$NetBSD: CHANGES-2012,v 1.3033 2012/09/20 21:29:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/jenkins to 1.466.2 [ryoon 2012-09-19]
 	Updated misc/calibre to 0.8.69 [ryoon 2012-09-19]
 	Updated textproc/py-docutils to 0.9 [darcy 2012-09-20]
+	Updated www/php-concrete5 to 5.6.0.1 [ryoon 2012-09-20]
