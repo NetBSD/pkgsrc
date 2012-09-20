@@ -1,0 +1,16 @@
+$NetBSD: patch-libs_context_build_Jamfile.v2,v 1.1 2012/09/20 12:22:27 jperkin Exp $
+
+_XOPEN_SOURCE_EXTENDED conflicts with existing _XOPEN_SOURCE definition.
+
+--- libs/context/build/Jamfile.v2.orig	2012-09-20 10:37:02.244099518 +0000
++++ libs/context/build/Jamfile.v2	2012-09-20 10:38:31.345922902 +0000
+@@ -17,8 +17,7 @@
+ project boost/context
+     : source-location ../src
+     : requirements
+-      <os>SOLARIS:<define>_XOPEN_SOURCE=1
+-      <os>SOLARIS:<define>_XOPEN_SOURCE_EXTENDED=1
++      <os>SOLARIS:<define>_XOPEN_SOURCE=600
+     : usage-requirements
+       <link>shared:<define>BOOST_CONTEXT_DYN_LINK=1
+     ;
