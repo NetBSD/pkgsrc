@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.86 2012/09/20 15:27:29 jperkin Exp $
+$NetBSD: distinfo,v 1.87 2012/09/20 15:33:40 jperkin Exp $
 
 SHA1 (xine-lib-1.2.2.tar.xz) = a349cbb0b72256bb262377796a022dcf63829b4c
 RMD160 (xine-lib-1.2.2.tar.xz) = 3f11df3fa8a8946bdcc9cdecd6952dc76b834d14
 Size (xine-lib-1.2.2.tar.xz) = 4857248 bytes
 SHA1 (patch-Makefile.am) = ab2bdb97834ea3ebf161e2c716f0dcb6eb147c1e
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
-SHA1 (patch-ag) = 0bdd5910ad7c446bdec5abac3292bcab7a4147ee
+SHA1 (patch-ag) = 00009002714ed26fa646eed326e2b0a5e2265572
 SHA1 (patch-aj) = 4215c3bc37cf636e563a509f9a391081ed8e773b
 SHA1 (patch-ak) = 987700e6526b5112ac66bd6a8f9ee41f338c3508
 SHA1 (patch-ap) = d48fa83879895d4b1f56bfbcbe31087dd57d8a82
@@ -41,3 +41,5 @@ SHA1 (patch-src-xine-engine-post.h) = 3b96d1279bbec48b2f3df50a576bfa8ec25f796f
 SHA1 (patch-src_audio__out_Makefile.am) = 5f8ba2ce81a63cb195407c3ce6649007ce15408f
 SHA1 (patch-src_libw32dll_wine_Makefile.am) = 17c717c84531780dc06c3cd5db8f879a560aeb3a
 SHA1 (patch-src_libw32dll_wine_registry.c) = f34685be27dc9ec098f80e78cd24f3e92f12367a
+SHA1 (patch-src_post_goom_convolve_fx.c) = 61ab87d03780f057ba6e8e7f2097e57bac9bfa49
+SHA1 (patch-src_xine-engine_Makefile.am) = 24efec8a881ca068b18e6370e9b02a6f6bc5c3d9
