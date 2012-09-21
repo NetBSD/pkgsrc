@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/05/06 08:29:38 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2012/09/21 11:28:43 ryoon Exp $
 
 SHA1 (gource-0.38.tar.gz) = 78f8c2064114313851f53b657d12db28abb89fae
 RMD160 (gource-0.38.tar.gz) = bfeb1de7d1d71dd8cb4d2f9e3fa4ecfc43a00191
 Size (gource-0.38.tar.gz) = 850811 bytes
+SHA1 (patch-src_logmill.cpp) = fed1b3aedb862b9d24a4cd4e7e26bb8ba72068f0
