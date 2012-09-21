@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3033 2012/09/20 21:29:53 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3034 2012/09/21 04:07:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/calibre to 0.8.69 [ryoon 2012-09-19]
 	Updated textproc/py-docutils to 0.9 [darcy 2012-09-20]
 	Updated www/php-concrete5 to 5.6.0.1 [ryoon 2012-09-20]
+	Updated graphics/optipng to 0.7.3 [taca 2012-09-21]
