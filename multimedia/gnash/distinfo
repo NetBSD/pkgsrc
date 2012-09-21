@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2012/03/12 12:43:38 obache Exp $
+$NetBSD: distinfo,v 1.19 2012/09/21 15:44:54 ryoon Exp $
 
 SHA1 (gnash-0.8.10.tar.bz2) = be3b12a5edcd3b05f2ae73d02f0991aa786e7300
 RMD160 (gnash-0.8.10.tar.bz2) = 0093174ec0a912309772c033b5f1c1ad46ab41dc
 Size (gnash-0.8.10.tar.bz2) = 4238106 bytes
-SHA1 (patch-aa) = ba87d2d3060ae545dd9a5f42f920d95a56990afc
+SHA1 (patch-aa) = a2739f522d1c7a6680fd85a44eeae7267e0a4e8d
 SHA1 (patch-ae) = ca44e2559a1ce0a24baf6d5479636f967e011202
 SHA1 (patch-libbase_Makefile.in) = c5b6533f5ac2b2ee26d0547c3054375e72512ccf
 SHA1 (patch-libcore_Makefile.in) = 6b92917f0be3779b7f6e1993ac29960cef50c736
