@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2012/03/12 12:43:39 obache Exp $
+$NetBSD: patch-aa,v 1.15 2012/09/21 15:44:54 ryoon Exp $
 
 --- configure.orig	2012-01-19 19:19:29.000000000 +0000
 +++ configure
@@ -43,3 +43,12 @@ $NetBSD: patch-aa,v 1.14 2012/03/12 12:43:39 obache Exp $
        else
         as_fn_error "${with_x11_incl} directory doesn't contain X.h" "$LINENO" 5
        fi
+@@ -44135,7 +44138,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+   dirname=""
+   libname=""
+       boost_headers="detail/lightweight_mutex.hpp thread/thread.hpp multi_index_container.hpp multi_index/key_extractors.hpp thread/mutex.hpp program_options/options_description.hpp iostreams/stream.hpp"
+-      boost_libs="thread program_options iostreams"
++      boost_libs="thread program_options iostreams system"
+ 
+       cygnal_boost_libs="serialization date_time"
+ 
