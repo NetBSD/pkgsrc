@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/09/20 12:43:50 darcy Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/09/21 12:45:01 obache Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2man.py
@@ -112,9 +112,12 @@ ${PYSITELIB}/docutils/math/latex2mathml.pyo
 ${PYSITELIB}/docutils/math/math2html.py
 ${PYSITELIB}/docutils/math/math2html.pyc
 ${PYSITELIB}/docutils/math/math2html.pyo
-${PYSITELIB}/docutils/math/unimathsymbols2tex.py
-${PYSITELIB}/docutils/math/unimathsymbols2tex.pyc
-${PYSITELIB}/docutils/math/unimathsymbols2tex.pyo
+${PYSITELIB}/docutils/math/tex2unichar.py
+${PYSITELIB}/docutils/math/tex2unichar.pyc
+${PYSITELIB}/docutils/math/tex2unichar.pyo
+${PYSITELIB}/docutils/math/unichar2tex.py
+${PYSITELIB}/docutils/math/unichar2tex.pyc
+${PYSITELIB}/docutils/math/unichar2tex.pyo
 ${PYSITELIB}/docutils/nodes.py
 ${PYSITELIB}/docutils/nodes.pyc
 ${PYSITELIB}/docutils/nodes.pyo
