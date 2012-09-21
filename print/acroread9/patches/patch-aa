@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2012/08/25 12:34:53 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2012/09/21 11:46:56 ryoon Exp $
 
 Adapt ls(1) arguments for BSD.
 Do not install man page gzipped.
@@ -16,7 +16,18 @@ Add case for NetBSD and DragonFly in the wrapper script.
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -657,16 +659,8 @@ InstallReader()
+@@ -637,10 +639,6 @@ InstallReader()
+     "$ReadInstallDir" \
+     "$ReadPlatformTar" "$SearchPlatformTar" "$CustomPlatformTar"
+ 
+-  rm -f /usr/bin/acroread 2>/dev/null && \
+-  ln -s "$ReadInstallDir/Adobe/Reader9/bin/acroread" /usr/bin/acroread 2>/dev/null && \
+-  record_config remove /usr/bin/acroread
+-
+   if [ "${OSname}" = "Linux" ]; then
+       rm -f /etc/bash_completion.d/acroread.sh 2>/dev/null && \
+       ln -s "$ReadInstallDir/Adobe/Reader9/Resource/Shell/acroread_tab" /etc/bash_completion.d/acroread.sh 2>/dev/null && \
+@@ -657,16 +655,8 @@ InstallReader()
            record_config remove /usr/local/etc/bash_completion.d/acroread.sh
        fi
    fi
@@ -33,7 +44,7 @@ Add case for NetBSD and DragonFly in the wrapper script.
  
    if [ "${OSname}" = "Linux" -o \( "${OSname}" = "SunOS" -a "`uname -m`" = "i86pc" \) ]; then
        printf "%s" "Setting up libraries ... "
-@@ -950,6 +944,19 @@ case "$OSname" in
+@@ -950,6 +940,19 @@ case "$OSname" in
      ReadDefaultNum="$ReadIntelLinuxNum"
      DefaultName="Intel/Linux"
      ;;

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/08/25 12:34:53 wiz Exp $
+$NetBSD: distinfo,v 1.6 2012/09/21 11:46:56 ryoon Exp $
 
 SHA1 (AdbeRdr9.5.1-1_i486linux_enu.tar.bz2) = 02985c18abbe7f530f7a29e76061c5bd362f5e42
 RMD160 (AdbeRdr9.5.1-1_i486linux_enu.tar.bz2) = ba457c98384af6223a4bc11c28e8b5ce8a542325
 Size (AdbeRdr9.5.1-1_i486linux_enu.tar.bz2) = 57138807 bytes
-SHA1 (patch-aa) = 22ed139da12bf7cf593f6e4c91ecddcc1ad5eb44
+SHA1 (patch-aa) = 363a2b763233c633efa1d031f8a556368e8fe66b
