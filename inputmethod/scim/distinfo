@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/08/19 08:09:08 obache Exp $
+$NetBSD: distinfo,v 1.7 2012/09/22 08:27:28 obache Exp $
 
 SHA1 (scim-1.4.14.tar.gz) = 73391be371dd7ef9f9af8b3a211e2bedec0cf71b
 RMD160 (scim-1.4.14.tar.gz) = 50643a8a8084c32612d415bfb0fe8b7f91c22459
@@ -19,5 +19,7 @@ SHA1 (patch-extras_immodules_agent_scim-bridge-agent.cpp) = f1a9bd1b185a02ba2e84
 SHA1 (patch-extras_immodules_client-common_scim-bridge-client-output.c) = 51c8635a3084112fd4362862690c4cc5bfffbe01
 SHA1 (patch-extras_immodules_client-common_scim-bridge-client.c) = ee441af01f39d65f8ed3f305407add2ac9fc0a32
 SHA1 (patch-extras_immodules_client-gtk_scim-bridge-client-imcontext-gtk.c) = 19c8f4ec70bb1c21c7318819367729579641866e
+SHA1 (patch-extras_immodules_common_scim-bridge-messenger.c) = 51a9a091fbbe9b212c695713d18260794ff30d81
 SHA1 (patch-extras_immodules_common_scim-bridge-messenger.h) = 1a9defe26a124317c410bef12b2a7f023ea284b4
+SHA1 (patch-extras_immodules_common_scim-bridge-string.c) = 77b2ec6744fdb650760a7858f6ff8fce999b86db
 SHA1 (patch-src_scim__helper__manager__server.cpp) = 3a1130f37c7c93389e2ae7db65af7438bac5de51
