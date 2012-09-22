@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/04/13 23:44:38 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/22 13:48:19 ryoon Exp $
 #
 
 DISTNAME=	ushare-1.1a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://ushare.geexbox.org/releases/
 EXTRACT_SUFX=	.tar.bz2

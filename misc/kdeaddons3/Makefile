@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2012/09/15 10:05:38 obache Exp $
+# $NetBSD: Makefile,v 1.78 2012/09/22 13:48:17 ryoon Exp $
 
 DISTNAME=	kdeaddons-${_KDE_VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	misc
 COMMENT=	Add ons for the KDE integrated X11 desktop
 
