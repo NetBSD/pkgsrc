@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/16 01:33:16 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/22 05:43:03 obache Exp $
 #
 
 DISTNAME=	libdlna-0.2.3
@@ -25,6 +25,11 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-ffmpeg-dir=${BUILDLINK_PREFIX.ffmpeg}
 
 MAKE_JOBS_SAFE=		no
+
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	pre-configure
+SUBST_FILES.config=	configure
+SUBST_SED.config=	-e 's,/usr/bin/install,${INSTALL},'
 
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
