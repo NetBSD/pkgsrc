@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/09/11 23:59:22 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/22 13:48:15 ryoon Exp $
 #
 
 PKGNAME=		akode-plugins-ffmpeg-${AKODE_VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		FFMPEG decoder plugin for akode framework
