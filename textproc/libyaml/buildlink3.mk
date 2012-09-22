@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/08/09 09:32:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/09/22 11:43:27 obache Exp $
 
 BUILDLINK_TREE+=	libyaml
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libyaml
 LIBYAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libyaml+=	libyaml>=0.1.1
+BUILDLINK_ABI_DEPENDS.libyaml+=	libyaml>=0.1.4
 BUILDLINK_PKGSRCDIR.libyaml?=	../../textproc/libyaml
 .endif	# LIBYAML_BUILDLINK3_MK
 
