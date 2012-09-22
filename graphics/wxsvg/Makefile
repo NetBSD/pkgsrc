@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2012/09/15 10:05:09 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/09/22 13:48:16 ryoon Exp $
 #
 
 DISTNAME=	wxsvg-1.1.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxsvg/}
 EXTRACT_SUFX=	.tar.bz2
