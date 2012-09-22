@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3034 2012/09/21 04:07:54 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3035 2012/09/22 06:20:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4658,3 +4658,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-docutils to 0.9 [darcy 2012-09-20]
 	Updated www/php-concrete5 to 5.6.0.1 [ryoon 2012-09-20]
 	Updated graphics/optipng to 0.7.3 [taca 2012-09-21]
+	Updated security/cyrus-saslauthd to 2.1.25nb1 [obache 2012-09-22]
