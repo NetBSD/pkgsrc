@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11525 2012/09/22 14:35:55 darcy Exp $
+$NetBSD: TODO,v 1.11526 2012/09/23 15:43:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.9.2
+	o ImageMagick-6.7.9.7
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -355,7 +355,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.6.19
+	o abcm2ps-6.6.20
 	o abcmidi-20120808
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.4.1
@@ -411,7 +411,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aspell-faroese-0.4.0
 	o aspell-norwegian-2.0.10
 	o astyle-1.15.3
-	o asymptote-2.16
+	o asymptote-2.17
 	o at-spi-2.4.0
 	o aterm-1.0.1
 	o attica-0.4.1
@@ -512,7 +512,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o defendguin-0.0.11
 	o dejagnu-1.5
 	o delegate-9.9.7
-	o denemo-0.9.4
+	o denemo-0.9.6
 	o dgen-1.30
 	o dhid-5.3
 	o dictem-1.0.4
@@ -621,7 +621,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gbdfed-1.6
-	o gcc47-4.7.1
+	o gcc47-4.7.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
@@ -724,7 +724,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gzip-1.5
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
-	o hanzim-3.4
+	o hanzim-3.5
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o hdf5-1.8.9
@@ -770,7 +770,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jed-0.99-18
-	o john-1.7.9jumbo6
+	o john-1.7.9jumbo7
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
@@ -832,7 +832,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblbxutil-1.1.0
 	o libltdl-2.4.2
 	o libmcs-0.7.2
-	o libmemcached-1.0.10
+	o libmemcached-1.0.11
 	o libmms-0.6.2
 	o libmilter-8.14.5
 	o libnasl-2.3.1
@@ -855,6 +855,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtool-2.4.2
 	o libtool-base-2.4.2
 	o libtool-info-2.4.2
+	o libusbx-1.0.13
 	o libv4l-0.8.5
 	o libvdpau-0.5
 	o libvirt-0.9.9
@@ -883,6 +884,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o matchbox-panel-0.9.3
 	o mawk-1.3.4.20120627
 	o mc-4.8.1.4
+	o mdds-0.6.1
 	o mdocml-1.12.1
 	o mergeant-0.67
 	o mess-0.147
@@ -903,7 +905,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-server-1.13.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-2.11.3
+	o mono-2.11.4
 	o mono-addins-0.6.2
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
@@ -976,7 +978,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Config-General-2.51
 	o p5-GTop-0.18
 	o p5-Gtk2-1.223
-	o p5-PerlMagick-6.7.9.2
+	o p5-PerlMagick-6.7.9.7
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
 	o p5-clutter-1.110
@@ -1052,6 +1054,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnosis-1.2.2
 	o py-libxml2-2.9.0
 	o py-mpd-0.3.0
+	o py-simplejson-2.6.2
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o qbrew-0.3.9
@@ -1119,6 +1122,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0.2
+	o shotwell-0.13.0
 	o showfont-1.0.3 [wip]
 	o sign-1.0.7
 	o simage-1.7.0
@@ -1185,6 +1189,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.5
 	o tfmxplay-1.1.6
+	o tiff-4.0.3
 	o tig-1.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
@@ -1265,7 +1270,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20120915
+	o x264-devel-20120922
 	o xanalyser-1.30
 	o xapian-1.2.12
 	o xaric-0.13.2
@@ -1348,7 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorp-1.8.5
-	o xosview-1.9.4
+	o xosview-1.10
 	o xpaint-2.9.9
 	o xpr-1.0.4 [unpackaged]
 	o xpuyopuyo-0.9.8
