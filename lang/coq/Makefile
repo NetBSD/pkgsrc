@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/09/15 10:05:18 obache Exp $
+# $NetBSD: Makefile,v 1.46 2012/09/23 08:36:43 tonio Exp $
 #
 
 DISTNAME=	coq-8.3pl1
@@ -30,7 +30,6 @@ PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
-      !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-*)
