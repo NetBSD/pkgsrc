@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2012/09/22 13:48:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2012/09/23 05:36:23 obache Exp $
 
 BUILDLINK_TREE+=	vlc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vlc
 VLC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vlc+=	vlc>=1.0.0
-BUILDLINK_ABI_DEPENDS.vlc+=	vlc>=1.1.13nb13
+BUILDLINK_ABI_DEPENDS.vlc+=	vlc>=1.1.13nb14
 BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
 
 pkgbase:= vlc
