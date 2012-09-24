@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/09/27 11:15:23 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/09/24 10:29:35 ryoon Exp $
 
-SHA1 (fuppes-0.640.tar.gz) = 51d7a3491a36969d8cd3d373a20f237600ab60fd
-RMD160 (fuppes-0.640.tar.gz) = 65e76c607056c9e6c975c960cc2aeaec4d37446c
-Size (fuppes-0.640.tar.gz) = 641228 bytes
-SHA1 (patch-ab) = 884a4130fc15f31a495db69100e1769e2c5c2787
-SHA1 (patch-ac) = 8359d390b4a3d9963240bb6bb3c467382cef6272
-SHA1 (patch-ad) = 8602a0684e2a764810fa667d11f4339adb1bef98
+SHA1 (fuppes-0.660.tar.gz) = ca729343754e0d775fb8291fda8b3ac64ef64df2
+RMD160 (fuppes-0.660.tar.gz) = 4a1f278fd4cb00d80ce2efae57201aaa73d11840
+Size (fuppes-0.660.tar.gz) = 685373 bytes
+SHA1 (patch-src_lib_HTTP_HTTPParser.cpp) = ddc3feba5a0d381dd2896f18943a946b556f2812
+SHA1 (patch-src_plugins_metadata__libavformat.c) = a66c05432d6a12beca47f8f2d496b522655b2159
