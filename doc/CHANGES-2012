@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3039 2012/09/24 14:21:08 manu Exp $
+$NetBSD: CHANGES-2012,v 1.3040 2012/09/24 23:11:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4720,3 +4720,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/xentools41 to 4.1.3nb1 [bouyer 2012-09-23]
 	Updated multimedia/fuppes to 0.660 [ryoon 2012-09-24]
 	Updated net/nagios-nsca to 2.9.1 [manu 2012-09-24]
+	Updated graphics/sane-backends to 1.0.22nb3 [wiz 2012-09-24]
