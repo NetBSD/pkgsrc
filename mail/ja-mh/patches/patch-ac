@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2010/09/27 12:01:49 taca Exp $
+$NetBSD: patch-ac,v 1.5 2012/09/24 16:12:15 taca Exp $
 
 * Add Dragonfly sport.
 * Care for ELF shared library.
@@ -31,7 +31,7 @@ $NetBSD: patch-ac,v 1.4 2010/09/27 12:01:49 taca Exp $
  fi
  
 +TERMINFO=
-+if test -f /usr/share/misc/terminfo.db
++if test -f /usr/share/misc/terminfo.db -o -f /usr/share/misc/terminfo.cdb
 +then
 +  TERMINFO=TERMINFO
 +fi
