@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3037 2012/09/23 16:39:09 bouyer Exp $
+$NetBSD: CHANGES-2012,v 1.3038 2012/09/24 10:30:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4718,3 +4718,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xvidcap to 1.1.3nb14 [ryoon 2012-09-22]
 	Updated x11/xvidcap-gtk2 to 1.1.3nb18 [ryoon 2012-09-22]
 	Updated sysutils/xentools41 to 4.1.3nb1 [bouyer 2012-09-23]
+	Updated multimedia/fuppes to 0.660 [ryoon 2012-09-24]
