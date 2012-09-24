@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 14:11:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 12:50:23 obache Exp $
 #
 
 DISTNAME=	npapi-sdk-0.27
@@ -7,7 +7,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/mgorny/npapi-sdk/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://github.com/mgorny/npapi-sdk/
+HOMEPAGE=	https://bitbucket.org/mgorny/npapi-sdk/
 COMMENT=	Reusable, released NPAPI-SDK
 LICENSE=	mpl-1.1
 
