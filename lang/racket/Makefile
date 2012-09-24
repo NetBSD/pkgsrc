@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/09/24 11:16:05 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/24 20:41:20 asau Exp $
 
 PKGNAME=	racket-5.3
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
@@ -51,7 +51,7 @@ REPLACE_RACKET+=	collects/ffi/examples/$f
 
 REPLACE_INTERPRETER+=	racket
 REPLACE.racket.old=	.*racket
-REPLACE.racket.new=	$(PREFIX)/bin/racket
+REPLACE.racket.new=	$(LOCALBASE)/bin/racket
 REPLACE_FILES.racket=	$(REPLACE_RACKET)
 
 do-test:
