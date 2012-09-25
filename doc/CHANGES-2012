@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3040 2012/09/24 23:11:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3041 2012/09/25 11:17:19 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4721,3 +4721,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/fuppes to 0.660 [ryoon 2012-09-24]
 	Updated net/nagios-nsca to 2.9.1 [manu 2012-09-24]
 	Updated graphics/sane-backends to 1.0.22nb3 [wiz 2012-09-24]
+	Updated converters/TECkit to 2.5.1nb1 [sbd 2012-09-25]
+	Updated converters/TECkit to 2.5.1nb1 [sbd 2012-09-25]
