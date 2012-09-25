@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/09/09 22:21:54 spz Exp $
+$NetBSD: distinfo,v 1.12 2012/09/25 05:04:36 sbd Exp $
 
 SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
 RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
@@ -18,7 +18,7 @@ SHA1 (patch-config_macro-archive_xsltproc.m4) = 20324db1ce3db016fa89fe39df5a8133
 SHA1 (patch-device-src_Makefile.am) = 29fd554033ff0ff7b1d98a08306f157ced7324c5
 SHA1 (patch-example_Makefile.am) = 8d2dac1abdc473fbf94489bcb620a42a665fd27a
 SHA1 (patch-oldrecover-src_Makefile.am) = 9127c1523937da3955662cc0b0921d05bca75248
-SHA1 (patch-perl_Makefile.am) = fc87ad285a70bc8883b158b32a4a368e3dff7758
-SHA1 (patch-perl_amglue_Makefile.am) = c28fa7bac55b328e9e34b0024cab16ccce1e04e4
+SHA1 (patch-perl_Makefile.am) = 7b09e5cc30c9b441dae03b06bef5c757c93ff9f7
+SHA1 (patch-perl_amglue_Makefile.am) = 051e456a5d34dd19a11ccd45c32f078e72d16e6f
 SHA1 (patch-recover-src_Makefile.am) = cd2ee55a0b285a33903e6157260cf167a1c79249
 SHA1 (patch-server-src_Makefile.am) = d1a4546a8ae55b86040d423bd1bde7b5de5f03aa
