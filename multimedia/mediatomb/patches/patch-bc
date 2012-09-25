@@ -1,6 +1,6 @@
-$NetBSD: patch-bc,v 1.2 2010/11/27 06:30:24 agc Exp $
+$NetBSD: patch-bc,v 1.3 2012/09/25 11:45:11 ryoon Exp $
 
---- src/storage/sql_storage.cc.orig	2010-10-02 22:11:55.000000000 +0000
+--- src/storage/sql_storage.cc.orig	2010-03-25 15:28:10.000000000 +0000
 +++ src/storage/sql_storage.cc
 @@ -2133,7 +2133,7 @@ void SQLStorage::autoscanUpdateLM(Ref<Au
              throw _Exception(_("autoscanUpdateLM called with adir with illegal objectID and location"));

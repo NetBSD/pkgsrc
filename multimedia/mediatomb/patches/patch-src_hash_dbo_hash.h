@@ -1,8 +1,8 @@
-$NetBSD: patch-src_hash_dbo_hash.h,v 1.1 2011/04/14 07:26:34 adam Exp $
+$NetBSD: patch-src_hash_dbo_hash.h,v 1.2 2012/09/25 11:45:11 ryoon Exp $
 
 Fix building with Clang.
 
---- src/hash/dbo_hash.h.orig	2011-04-14 07:15:03.000000000 +0000
+--- src/hash/dbo_hash.h.orig	2010-03-25 14:58:07.000000000 +0000
 +++ src/hash/dbo_hash.h
 @@ -106,7 +106,7 @@ public:
      inline bool remove(KT key)
