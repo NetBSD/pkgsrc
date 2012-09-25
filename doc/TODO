@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11527 2012/09/25 14:27:13 taca Exp $
+$NetBSD: TODO,v 1.11528 2012/09/25 14:35:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o abcm2ps-6.6.20
 	o abcmidi-20120808
 	o accerciser-1.12.2 [GNOME 2.32]
-	o accerciser-3.4.1
+	o accerciser-3.6.0
 	o acme-091 [pkg/44771]
 	o acpica-utils-20110623
 	o acr-0.5.2
@@ -413,6 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o astyle-1.15.3
 	o asymptote-2.17
 	o at-spi-2.4.0
+	o at-spi2-2.6.0
 	o aterm-1.0.1
 	o attica-0.4.1
 	o audacious-plugins-2.4.4
@@ -464,7 +465,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cfitsio-3.310
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.4.2
+	o cheese-3.6.0
 	o chkrootkit-0.49
 	o chktex-1.7.1
 	o chromium-0.9.15
@@ -475,7 +476,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clamav-0.97.6
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.10.8
+	o clutter-1.12.0
 	o clutter-gst-1.6.0
 	o coccigrep-1.11
 	o colorize-0.3.4
@@ -542,7 +543,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eigen3-3.1.1
 	o ejabberd-2.1.11
 	o ekiga-3.2.7
-	o electric-9.02
+	o electric-9.03
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -553,7 +554,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emerillon-0.1.90
 	o enca-1.13
 	o enlightenment-1.0.9
-	o eog-plugins-3.4.1
+	o eog-3.6.0
+	o eog-plugins-3.6.0
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
@@ -644,10 +646,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gl-7.8.2 [pkgrc-wip]
-	o glade-3.12.1
 	o glade3-3.8.1 [GNOME 2.34]
-	o glade3-3.10.2
+	o glade3-3.10.3
+	o glade3-3.12.2
+	o glade3-3.14.0
 	o gle-4.2.4
+	o glib2-2.34.0
 	o global-6.2 [pkg/45925]
 	o global-6.2.4
 	o glom-1.14.2 [GNOME 2.26]
@@ -658,7 +662,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
-	o gnome-games-3.4.1
+	o gnome-games-3.6.0
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-keyring-3.4.1
 	o gnome-media-2.32.0 [GNOME 2.32]
@@ -700,11 +704,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
 	o gssdp-1.12.2.1
+	o gstreamer-1.0.0
 	o gtexinfo-4.13a
 	o gthumb-3.0.2
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
+	o gtk3-3.6.0
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.38
@@ -718,7 +724,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gupnp-igd-0.2.1
 	o gv-3.7.3
 	o gvfs-1.6.7
-	o gwaei-3.6.0
+	o gwaei-3.6.1
 	o gworkspace-0.9.1
 	o gxine-0.5.907
 	o gzip-1.5
@@ -818,13 +824,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libchamplain08-0.12.3
 	o libextractor-0.6.3
 	o libflash-0.4.13
-	o libfolks-0.7.3
+	o libfolks-0.7.4.1
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
-	o libgee-0.6.5
+	o libgee-0.8.0
 	o libgiigic-1.1.2
+	o libgnome-keyring-3.6.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
@@ -859,7 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libv4l-0.8.5
 	o libvdpau-0.5
 	o libvirt-0.9.9
-	o libxklavier-5.2.1
+	o libxklavier-5.3
 	o licq-1.3.8
 	o liferea-1.8.8
 	o lilypond-2.16
@@ -909,7 +916,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mono-addins-0.6.2
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
-	o mousetweaks-3.4.2
+	o mousetweaks-3.6.0
 	o mp3diags-1.0.11
 	o mp3splt-2.4.3
 	o mp3splt-gtk-0.7.3
@@ -1056,7 +1063,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-docutils-0.9.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
+	o py-gobject-3.4.0
 	o py-libxml2-2.9.0
+	o py-moin-1.9.5
 	o py-mpd-0.3.0
 	o py-simplejson-2.6.2
 	o py-sybase-0.37
@@ -1118,7 +1127,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0 [GNOME 2.32]
-	o seahorse-3.4.1
+	o seahorse-3.6.0
+	o seahorse-nautilus-3.6.0
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1232,6 +1242,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ups-nut-2.6.2
 	o userppp-030706
 	o utilisp-1.14
+	o vala-0.18.0
 	o valgrind-3.7.0
 	o vbetool-1.1
 	o vera-1.17
@@ -1239,8 +1250,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.15
 	o vifm-0.7.3a
+	o vinagre-3.6.0
 	o vino-2.32.2 [GNOME 2.32]
-	o vino-3.4.2
+	o vino-3.6.0
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.4
@@ -1255,7 +1267,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webalizer-2.23.05
 	o webkit-gtk-1.8.3
 	o webmin-1.550 [security] [pkg/45066]
-	o webmin-1.590 [security]
+	o webmin-1.600 [security]
 	o websvn-2.3.2
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
