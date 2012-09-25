@@ -1,4 +1,4 @@
-$NetBSD: patch-perl_amglue_Makefile.am,v 1.1 2012/09/09 22:21:54 spz Exp $
+$NetBSD: patch-perl_amglue_Makefile.am,v 1.2 2012/09/25 05:04:36 sbd Exp $
 
 --- perl/amglue/Makefile.am.orig	2012-02-21 11:36:47.000000000 +0000
 +++ perl/amglue/Makefile.am
@@ -7,5 +7,5 @@ $NetBSD: patch-perl_amglue_Makefile.am,v 1.1 2012/09/09 22:21:54 spz Exp $
  libamglue_la_LDFLAGS = $(PERL_EXT_LDFLAGS) -release $(VERSION)
  libamglue_la_LIBADD = \
 -	$(top_builddir)/xfer-src/libamxfer.la
-+	-lamxfer
++	-L$(top_builddir)/xfer-src -lamxfer
  EXTRA_DIST += $(libamglue_la_SOURCES)
