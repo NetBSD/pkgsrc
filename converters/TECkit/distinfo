@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/02/05 20:21:00 markd Exp $
+$NetBSD: distinfo,v 1.3 2012/09/25 11:16:57 sbd Exp $
 
 SHA1 (TECkit_2_5_1.tar.gz) = 4c43541d11e82c88a56b69d9d077aa3b60e6bb5c
 RMD160 (TECkit_2_5_1.tar.gz) = 4f19b293878329b7eec76b77b322ea2155e34f2f
 Size (TECkit_2_5_1.tar.gz) = 2630207 bytes
 SHA1 (patch-source_Compiler.cpp) = abddeab807c8a724941de065f07a125c7f59569b
+SHA1 (patch-source_Public-headers_TECkit__Common.h) = 203253b23ca68bb148fd71bbca1c497da5101ef3
