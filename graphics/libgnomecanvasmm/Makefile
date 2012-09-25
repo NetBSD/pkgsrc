@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/15 10:05:02 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/25 15:25:05 jperkin Exp $
 
 DISTNAME=	libgnomecanvasmm-2.26.0
 PKGREVISION=	12
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gm4 gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgnomecanvas/libgnomecanvasmm-2.6.pc.in
 GNU_CONFIGURE=		yes
 
