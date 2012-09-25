@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/03/10 20:20:59 markd Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/25 11:16:57 sbd Exp $
 
 DISTNAME=	TECkit_2_5_1
 PKGNAME=	${DISTNAME:S/_/-/:S/_/./g}
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://scripts.sil.org/svn-view/teckit/TAGS/
 
