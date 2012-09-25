@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2008/04/11 10:11:59 agc Exp $
+$NetBSD: patch-af,v 1.2 2012/09/25 11:45:11 ryoon Exp $
 
---- config/mappings.xml	2008/04/11 09:24:50	1.1
-+++ config/mappings.xml	2008/04/11 09:25:38
+--- config/mappings.xml.orig	2010-03-22 10:39:50.000000000 +0000
++++ config/mappings.xml
 @@ -13,6 +13,7 @@
          <map from="m3u" to="audio/x-mpegurl"/>
          <map from="pls" to="audio/x-scpls"/>
