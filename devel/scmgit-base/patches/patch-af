@@ -1,6 +1,9 @@
-$NetBSD: patch-af,v 1.8 2012/09/04 12:17:12 adam Exp $
+$NetBSD: patch-af,v 1.9 2012/09/25 14:22:48 taca Exp $
 
---- Documentation/Makefile.orig	2010-10-22 03:49:16.000000000 +0000
+* Use BSR_INSTALL_*.
+* FIXME: Add "--skip-validation" to xmlto command.
+
+--- Documentation/Makefile.orig	2012-08-20 01:22:48.000000000 +0000
 +++ Documentation/Makefile
 @@ -169,16 +169,16 @@ pdf: user-manual.pdf
  install: install-man
@@ -27,3 +30,12 @@ $NetBSD: patch-af,v 1.8 2012/09/04 12:17:12 adam Exp $
  	if test -r $(DESTDIR)$(infodir)/dir; then \
  	  $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) git.info ;\
  	  $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) gitman.info ;\
+@@ -245,7 +245,7 @@ manpage-base-url.xsl: manpage-base-url.x
+ 
+ %.1 %.5 %.7 : %.xml manpage-base-url.xsl
+ 	$(QUIET_XMLTO)$(RM) $@ && \
+-	xmlto -m $(MANPAGE_XSL) $(XMLTO_EXTRA) man $<
++	xmlto --skip-validation -m $(MANPAGE_XSL) $(XMLTO_EXTRA) man $<
+ 
+ %.xml : %.txt
+ 	$(QUIET_ASCIIDOC)$(RM) $@+ $@ && \
