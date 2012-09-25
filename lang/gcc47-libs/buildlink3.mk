@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/09/15 10:30:39 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/09/25 06:43:42 sbd Exp $
 
 BUILDLINK_TREE+=	gcc47-libs
 
 .if !defined(GCC47_LIBS_BUILDLINK3_MK) && !defined(GCC47_BUILDLINK3_MK)
 GCC47_LIBS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gcc47-libs+=	{gcc47,gcc47-libs}>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc47-libs+=	{gcc47,gcc47-libs}>=4.7.0
+BUILDLINK_API_DEPENDS.gcc47-libs+=	{gcc47,gcc47-libs}>=4.7.0
 BUILDLINK_PKGSRCDIR.gcc47-libs=		../../lang/gcc47-libs
 BUILDLINK_DEPMETHOD.gcc47-libs?=	full
 
