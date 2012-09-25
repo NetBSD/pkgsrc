@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/08/14 06:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/25 09:02:42 jaapb Exp $
 #
 
 DISTNAME=		findlib-1.3.3
@@ -20,6 +20,7 @@ MAKE_JOBS_SAFE=		no
 CONFIGURE_ARGS+=	-bindir ${PREFIX}/bin
 CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-config ${PKG_SYSCONFDIR}/ocamlfind.conf
+CONFIGURE_ARGS+=	-sitelib ${PREFIX}/lib/ocaml/site-lib
 
 BUILD_TARGET=		all
 PLIST_SRC=		PLIST
