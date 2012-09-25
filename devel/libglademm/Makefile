@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/15 10:04:14 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/25 15:14:49 jperkin Exp $
 
 DISTNAME=	libglademm-2.6.7
 PKGREVISION=	12
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gm4 gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libglade/libglademm-2.4.pc.in
 GNU_CONFIGURE=		yes
 
