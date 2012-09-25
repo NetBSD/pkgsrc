@@ -1,4 +1,4 @@
-$NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
+$NetBSD: patch-perl_Makefile.am,v 1.3 2012/09/25 05:04:36 sbd Exp $
 
 --- perl/Makefile.am.orig	2012-02-21 11:36:47.000000000 +0000
 +++ perl/Makefile.am
@@ -9,9 +9,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libArchive_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/amar-src/libamar.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libArchive_la_LIBADD = -lamglue \
-+	-lamar \
-+	-lamanda
++libArchive_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/amar-src -lamar \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Archive.pm
  EXTRA_DIST += Amanda/Archive.swg Amanda/Archive.pm Amanda/Archive.pod
  MAINTAINERCLEANFILES += Amanda/Archive.c Amanda/Archive.pm
@@ -22,9 +22,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libDevice_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/device-src/libamdevice.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libDevice_la_LIBADD = -lamglue \
-+	-lamdevice \
-+	-lamanda
++libDevice_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/device-src -lamdevice \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Device.pm
  MAINTAINERCLEANFILES += Amanda/Device.c Amanda/Device.pm
  endif
@@ -35,9 +35,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libLogfile_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/server-src/libamserver.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libLogfile_la_LIBADD = -lamglue \
-+	-lamserver \
-+	-lamanda
++libLogfile_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/server-src -lamserver \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Logfile.pm
  MAINTAINERCLEANFILES += Amanda/Logfile.c Amanda/Logfile.pm
  endif
@@ -48,9 +48,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libCmdline_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/server-src/libamserver.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libCmdline_la_LIBADD = -lamglue \
-+	-lamserver \
-+	-lamanda
++libCmdline_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/server-src -lamserver \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Cmdline.pm
  MAINTAINERCLEANFILES += Amanda/Cmdline.c Amanda/Cmdline.pm
  endif
@@ -61,9 +61,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libTapelist_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/server-src/libamserver.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libTapelist_la_LIBADD = -lamglue \
-+	-lamserver \
-+	-lamanda
++libTapelist_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/server-src -lamserver \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Tapelist.pm
  MAINTAINERCLEANFILES += Amanda/Tapelist.c Amanda/Tapelist.pm
  endif
@@ -74,9 +74,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libDisklist_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/server-src/libamserver.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libDisklist_la_LIBADD = -lamglue \
-+	-lamserver \
-+	-lamanda
++libDisklist_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/server-src -lamserver \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Disklist.pm
  MAINTAINERCLEANFILES += Amanda/Disklist.c Amanda/Disklist.pm
  endif
@@ -86,8 +86,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libFeature_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libFeature_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libFeature_la_LIBADD = -lamglue \
-+	-lamanda
++libFeature_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Feature.pm
  MAINTAINERCLEANFILES += Amanda/Feature.c Amanda/Feature.pm
  EXTRA_DIST += Amanda/Feature.swg Amanda/Feature.pm Amanda/Feature.pod
@@ -97,8 +97,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libXfer_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libXfer_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/xfer-src/libamxfer.la
-+libXfer_la_LIBADD = -lamglue \
-+	-lamxfer
++libXfer_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamxfer
  Amanda_DATA += Amanda/Xfer.pm
  MAINTAINERCLEANFILES += Amanda/Xfer.c Amanda/Xfer.pm
  EXTRA_DIST += Amanda/Xfer.swg Amanda/Xfer.pm Amanda/Xfer.pod
@@ -109,9 +109,9 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
 -libNDMP_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la \
 -	$(top_builddir)/ndmp-src/libndmlib.la
-+libNDMP_la_LIBADD = -lamglue \
-+	-lamanda \
-+	-lndmlib
++libNDMP_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda \
++	-L$(top_builddir)/ndmp-src -lndmlib
  Amanda_DATA += Amanda/NDMP.pm
  MAINTAINERCLEANFILES += Amanda/NDMP.c Amanda/NDMP.pm
  EXTRA_DIST += Amanda/NDMP.swg Amanda/NDMP.pm Amanda/NDMP.pod
@@ -121,8 +121,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libXferServer_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libXferServer_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/server-src/libamserver.la
-+libXferServer_la_LIBADD = -lamglue \
-+	-lamserver
++libXferServer_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/server-src -lamserver
  Amanda_DATA += Amanda/XferServer.pm
  MAINTAINERCLEANFILES += Amanda/XferServer.c Amanda/XferServer.pm
  EXTRA_DIST += Amanda/XferServer.swg Amanda/XferServer.pm Amanda/XferServer.pod
@@ -132,8 +132,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libDebug_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libDebug_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libDebug_la_LIBADD = -lamglue \
-+	-lamanda
++libDebug_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Debug.pm
  EXTRA_DIST += Amanda/Debug.swg Amanda/Debug.pm Amanda/Debug.pod
  MAINTAINERCLEANFILES += Amanda/Debug.c Amanda/Debug.pm
@@ -143,8 +143,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libConfig_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libConfig_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libConfig_la_LIBADD = -lamglue \
-+	-lamanda
++libConfig_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Config.pm
  EXTRA_DIST += Amanda/Config.swg Amanda/Config.pm Amanda/Config.pod
  MAINTAINERCLEANFILES += Amanda/Config.c Amanda/Config.pm
@@ -154,8 +154,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libUtil_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libUtil_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libUtil_la_LIBADD = -lamglue \
-+	-lamanda
++libUtil_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Util.pm
  EXTRA_DIST += Amanda/Util.swg Amanda/Util.pm Amanda/Util.pod
  MAINTAINERCLEANFILES += Amanda/Util.c Amanda/Util.pm
@@ -165,8 +165,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libHeader_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libHeader_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libHeader_la_LIBADD = -lamglue \
-+	-lamanda
++libHeader_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Header.pm
  EXTRA_DIST += Amanda/Header.swg Amanda/Header.pm Amanda/Header.pod
  MAINTAINERCLEANFILES += Amanda/Header.c Amanda/Header.pm
@@ -176,8 +176,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libTests_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libTests_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libTests_la_LIBADD = -lamglue \
-+	-lamanda
++libTests_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/Tests.pm
  EXTRA_DIST += Amanda/Tests.swg Amanda/Tests.pm Amanda/Tests.pod
  MAINTAINERCLEANFILES += Amanda/Tests.c Amanda/Tests.pm
@@ -187,8 +187,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libMainLoop_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libMainLoop_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libMainLoop_la_LIBADD = -lamglue \
-+	-lamanda
++libMainLoop_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  Amanda_DATA += Amanda/MainLoop.pm
  EXTRA_DIST += Amanda/MainLoop.swg Amanda/MainLoop.pm Amanda/MainLoop.pod
  MAINTAINERCLEANFILES += Amanda/MainLoop.c Amanda/MainLoop.pm
@@ -198,8 +198,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libBinary_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libBinary_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/common-src/libamanda.la
-+libBinary_la_LIBADD = -lamglue \
-+	-lamanda
++libBinary_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/common-src -lamanda
  AmandaIPC_DATA += Amanda/IPC/Binary.pm
  EXTRA_DIST += Amanda/IPC/Binary.swg Amanda/IPC/Binary.pm Amanda/IPC/Binary.pod
  MAINTAINERCLEANFILES += Amanda/IPC/Binary.c Amanda/IPC/Binary.pm
@@ -209,8 +209,8 @@ $NetBSD: patch-perl_Makefile.am,v 1.2 2012/09/09 22:21:54 spz Exp $
  libApplication_la_LDFLAGS = $(PERL_EXT_LDFLAGS)
 -libApplication_la_LIBADD = amglue/libamglue.la \
 -	$(top_builddir)/client-src/libamclient.la
-+libApplication_la_LIBADD = -lamglue \
-+	-lamclient
++libApplication_la_LIBADD = -Lamglue -lamglue \
++	-L$(top_builddir)/client-src -lamclient
  Amanda_DATA += Amanda/Application.pm
  MAINTAINERCLEANFILES += Amanda/Application.c Amanda/Application.pm
  endif
