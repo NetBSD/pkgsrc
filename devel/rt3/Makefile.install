@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.18 2012/05/25 19:55:43 spz Exp $
+# $NetBSD: Makefile.install,v 1.19 2012/09/25 07:08:22 sbd Exp $
 
 .include "dirs.mk"
 
@@ -90,11 +90,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 	cd ${WRKSRC}/etc/upgrade/${_dir_} &&						\
 		${FIND} . -type f ! -name '*.orig' 2>/dev/null | 			\
-		pax -rw ${DESTDIR}${RT_SHARE_DIR}/etc/upgrade/${_dir_}
+		${PAX} -rw ${DESTDIR}${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 .endfor
 	@${ECHO} "=> Libraries"
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_LIB_DIR}
-	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' -o -name '*.in' 2>/dev/null | pax -rw ${DESTDIR}${RT_LIB_DIR}
+	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' -o -name '*.in' 2>/dev/null | ${PAX} -rw ${DESTDIR}${RT_LIB_DIR}
 	${FIND} ${DESTDIR}${RT_LIB_DIR} -type f -exec ${CHMOD} 644 {} \;
 	@${ECHO} "=> Binaries"
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
@@ -116,7 +116,7 @@ do-install:
 		${WRKSRC}/sbin/rt-validator	 ${DESTDIR}${PREFIX}/sbin
 	@${ECHO} "=> HTML documents"
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_HTML_DIR}
-	cd ${WRKSRC}/share/html && ${FIND} . -type f ! -name '*.orig' -o -name '*.in' 2>/dev/null | pax -rw ${DESTDIR}${RT_HTML_DIR}
+	cd ${WRKSRC}/share/html && ${FIND} . -type f ! -name '*.orig' -o -name '*.in' 2>/dev/null | ${PAX} -rw ${DESTDIR}${RT_HTML_DIR}
 	${FIND} ${DESTDIR}${RT_HTML_DIR} -type f -exec ${CHMOD} 644 {} \;
 	@${ECHO} "=> Documentation"
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_DOC_DIR}
