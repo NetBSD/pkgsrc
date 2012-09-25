@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/09/15 10:04:15 obache Exp $
+# $NetBSD: Makefile,v 1.41 2012/09/25 15:26:25 jperkin Exp $
 
 DISTNAME=	libgnomemm-2.30.0
 PKGREVISION=	10
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gm4 gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgnome/libgnomemm-2.6.pc.in
 GNU_CONFIGURE=		yes
 
