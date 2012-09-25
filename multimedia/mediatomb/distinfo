@@ -1,17 +1,25 @@
-$NetBSD: distinfo,v 1.10 2011/09/24 22:33:25 tron Exp $
+$NetBSD: distinfo,v 1.11 2012/09/25 11:45:11 ryoon Exp $
 
 SHA1 (mediatomb-0.12.1.tar.gz) = 86e880584cc9c8aaf3926d56048510d1d06e76b4
 RMD160 (mediatomb-0.12.1.tar.gz) = ecb61ca2483f76421beef1036ac442b8f805fa96
 Size (mediatomb-0.12.1.tar.gz) = 1240612 bytes
-SHA1 (patch-aa) = 09eefa3d86e40a5e7364f3b8b9a224ad3b8cf8b6
-SHA1 (patch-ab) = d79db20a98084e2297534d09ede39dd0141a600c
-SHA1 (patch-af) = ec9261d2ec645a07144f8b927fd57a50175903ca
-SHA1 (patch-ag) = 4ceebfca5a1f0556b71bee4713cb35726208f27e
-SHA1 (patch-ba) = ff31a77e71b772be945441d3c9219cd199f5ff83
-SHA1 (patch-bb) = 27661c4d0e841b6da8b280a3cbac3c38f581b2df
-SHA1 (patch-bc) = 40ef84ec5802431c5f2a811a5bf53a76d15c3904
-SHA1 (patch-src_hash_dbo_hash.h) = 77ecff9c2cc5ef940c3bc1e3e8b5c0aad7b7f690
-SHA1 (patch-src_hash_dbr_hash.h) = a57f155ffe43ff8615706b76718a835590999375
-SHA1 (patch-src_hash_dso_hash.h) = 50e0ce32e58e9d2122bed4db3509fa1f53c12945
+SHA1 (patch-aa) = d4d5964d6bbe76e470a75ffa5b81048ffaf6cb63
+SHA1 (patch-ab) = 3bc30de7f20c9468489453de95db28ec2192e2bb
+SHA1 (patch-af) = aab0d775169c886b58c1fc72489437341c4c25e7
+SHA1 (patch-ag) = 601d239d5a9ec51a63be6ecfa762c2598f8ecf5e
+SHA1 (patch-ba) = 1c2af26e7a6e72f5b82d9b29785b73615d5042a3
+SHA1 (patch-bb) = e36d15a71f463935111543f90dc0787b4a66da5d
+SHA1 (patch-bc) = c02375ac835203ba147f3d0347ff2ff0abe3bf13
+SHA1 (patch-src_cds__resource__manager.cc) = 1f537f1f29a19fd7ad082195cd090d6cf0a59abd
+SHA1 (patch-src_common.h) = c18747685996693d7aa653e1aa9041f0d774ee9d
+SHA1 (patch-src_hash_dbo_hash.h) = a5d951dc6887273188b3d41b8076000857b92431
+SHA1 (patch-src_hash_dbr_hash.h) = e98a4ce19f25f7e556c2c13e170aee21e57fc5cc
+SHA1 (patch-src_hash_dso_hash.h) = c229373ea25b4c49708cb2d8555a9e13f5d8bb4f
+SHA1 (patch-src_io__handler__buffer__helper.cc) = f1c88fab9379c322492ebf27840c20689bd8ac76
+SHA1 (patch-src_metadata_ffmpeg__handler.cc) = b343d3e065e506423872e32f35ae792306f2b50a
+SHA1 (patch-src_tools.cc) = dddb50c51786cbb6a7c77ff5e60c22c3a57dc0fa
+SHA1 (patch-src_transcoding_transcode__ext__handler.cc) = 6fe899f6b40de69561f568e1f976f6994e029260
+SHA1 (patch-src_upnp__xml.cc) = 843e92c3a186c83920512ff6b7f37ba006defc21
+SHA1 (patch-src_youtube__video__url.cc) = 0a739441ad4fb2db5d9f43c5ea3870e2839b6677
 SHA1 (patch-tombupnp_threadutil_src_ThreadPool.c) = 152fd5284382bfbdfe489945dd1e843fa38d5b02
-SHA1 (patch-tombupnp_upnp_src_genlib_net_http_webserver.c) = 671753a05d221370981e9ee6fdc1d896cadf2836
+SHA1 (patch-tombupnp_upnp_src_genlib_net_http_webserver.c) = c378cad0fefe08223b14672df432844ab94c4c7a
