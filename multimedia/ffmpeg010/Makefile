@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/14 14:52:34 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/25 13:47:21 jperkin Exp $
 
 PKGNAME=	ffmpeg-20120609.${DISTVERSION}
 
@@ -22,6 +22,9 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-asm
 .endif
+
+# "error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'"
+CFLAGS.SunOS+=	-DBROKEN_RELOCATIONS=1
 
 TEST_TARGET=	check
 
