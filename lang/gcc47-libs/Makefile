@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/15 08:10:20 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/26 10:27:47 sbd Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"../../lang/${GCC_PKGNAME}/version.mk"
@@ -34,10 +34,8 @@ FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC_DIST_VERSION}*
 
 GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${GCC_PKG_PREFIX}/${GCC_SUBPREFIX}
-
-.if defined(_PKGSRC_BARRIER) && exists(${GCC_PREFIX}/bin/gcc)
-TARGET_TRIPLE!=		${GCC_PREFIX}/bin/gcc -dumpmachine
-.endif
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
@@ -48,10 +46,10 @@ SHLIB_EXT=	so
 
 LIBRARY_FILES=	${WRKDIR}/lib_files
 
-GENERATE_PLIST+= ${SED} -e 's,^,${GCC_SUBPREFIX}/${TARGET_TRIPLE}/,' \
+GENERATE_PLIST+= ${SED} -e 's,^,${GCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
 			${LIBRARY_FILES};
 GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-		   ${ECHO} '@pkgdir ${GCC_SUBPREFIX}/${TARGET_TRIPLE}/lib' ;
+	   ${ECHO} '@pkgdir ${GCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
 
 ${LIBRARY_FILES}:
 	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC_DIST_VERSION}*' |		\
@@ -60,14 +58,10 @@ ${LIBRARY_FILES}:
 		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
 
 do-install: ${LIBRARY_FILES}
-.if defined(TARGET_TRIPLE) && !empty(TARGET_TRIPLE)
-	${TEST} -d ${DESTDIR}${GCC_PREFIX}/${TARGET_TRIPLE}/lib ||	\
-		${MKDIR} ${DESTDIR}${GCC_PREFIX}/${TARGET_TRIPLE}/lib
+	${TEST} -d ${DESTDIR}${GCC_PREFIX}/${GCC_TARGET_MACHINE}/lib ||	\
+		${MKDIR} ${DESTDIR}${GCC_PREFIX}/${GCC_TARGET_MACHINE}/lib
 	cd ${GCC_PREFIX} && 						\
-	  ${PAX} -rw ${DESTDIR}${GCC_PREFIX}/${TARGET_TRIPLE} <${LIBRARY_FILES}
-.else
-	${FALSE}
-.endif
+	  ${PAX} -rw ${DESTDIR}${GCC_PREFIX}/${GCC_TARGET_MACHINE} <${LIBRARY_FILES}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
