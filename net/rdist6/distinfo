@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2010/06/12 19:36:00 dholland Exp $
+$NetBSD: distinfo,v 1.15 2012/09/26 16:52:38 christos Exp $
 
-SHA1 (freerdist-0.92.tar.gz) = 84db4efd8d223a7e10d62e386349aa9236f71ae3
-RMD160 (freerdist-0.92.tar.gz) = 2106cbf21fbe6fda2738d2e9e2d750625eb8c2da
-Size (freerdist-0.92.tar.gz) = 135824 bytes
+SHA1 (freerdist-0.94.tar.gz) = 12141ceb7932727362c560b2589a06a8fa2dbb20
+RMD160 (freerdist-0.94.tar.gz) = d253d6e9fd930b9fc6ee49496bee2f55086da5cf
+Size (freerdist-0.94.tar.gz) = 138512 bytes
 SHA1 (patch-aa) = 9a63f74b3507d35d54a2590a5178896ffb193a54
 SHA1 (patch-ab) = 3cd2de9d584e8aaa0cf4258c66ba027ff767a367
 SHA1 (patch-ac) = 78df932333c8742139368abb5d12b910d34e222c
