@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/09/15 10:03:32 obache Exp $
+# $NetBSD: Makefile,v 1.48 2012/09/26 12:55:11 jperkin Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
@@ -20,10 +20,6 @@ PRINT_PLIST_AWK+=	/cdaudio/ { print "$${PLIST.cdaudio}" $$0; next }
 # for more information.
 USE_LANGUAGES=		c c++
 LDFLAGS.NetBSD+=	-lstdc++ -lm
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	SunOS_LDFLAGS="-shared -mimpure-text"
-.endif
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

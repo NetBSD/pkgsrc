@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/09/14 15:45:30 hans Exp $
+$NetBSD: distinfo,v 1.14 2012/09/26 12:55:11 jperkin Exp $
 
 SHA1 (bmp-0.9.7-ipv6-simple.diff) = d80943d504eeb06d96c2ca73ecc80a89b77e7c77
 RMD160 (bmp-0.9.7-ipv6-simple.diff) = 96072b98f774ed8614818664d0fe173ea5a3e4e5
@@ -7,10 +7,9 @@ SHA1 (bmp-0.9.7.1.tar.gz) = ab6444b9a35a8bb8e920a781e72d963a3fb60547
 RMD160 (bmp-0.9.7.1.tar.gz) = 9288083918913ca97ab8883d616159055931ade7
 Size (bmp-0.9.7.1.tar.gz) = 2056564 bytes
 SHA1 (patch-aa) = fbaa61ef68857c12b4506180a9d8d290dbf6615f
-SHA1 (patch-an) = da55750c5ee50acfd25e695813bfc025c4fc7b5f
+SHA1 (patch-an) = dca39915d93f99ead493bc6913469e791f2d0c79
 SHA1 (patch-ao) = c24712090587ff622d7b9df68757c984a057c6c2
 SHA1 (patch-ap) = 76d750aa820e9710d2520d3cec067d91346dc5aa
 SHA1 (patch-aq) = 56f42dbd772304f9205b519b2654487b9a45091b
 SHA1 (patch-ar) = 037d02b72cee6b2fdd24f9d41c28ec1220dcdf67
 SHA1 (patch-as) = dc1d9dc2100664c1ab4448234239d45741907604
-SHA1 (patch-at) = a643d4bc95d84424226f742675abc87c18834af5
