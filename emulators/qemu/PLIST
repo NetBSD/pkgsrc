@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/09/13 14:38:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/09/26 10:42:48 sbd Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -13,6 +13,7 @@ ${PLIST.microblazeel}bin/qemu-microblazeel
 ${PLIST.mips}bin/qemu-mips
 ${PLIST.mipsel}bin/qemu-mipsel
 ${PLIST.nbd}bin/qemu-nbd
+${PLIST.or32}bin/qemu-or32
 ${PLIST.ppc}bin/qemu-ppc
 ${PLIST.ppc64}bin/qemu-ppc64
 ${PLIST.ppc64abi32}bin/qemu-ppc64abi32
