@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2012/05/08 11:20:13 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2012/09/26 14:11:26 liamjfoy Exp $
 
 Changes from NetBSD xsrc/external/mit/xorg-server/dist/\
 hw/xfree86/os-support/bsd/bsd_mouse.c
@@ -23,8 +23,17 @@ Set the mouse event protocol version. (untested, but head will be broken
 unless I add this).
 ----------------------------
 
+Changes from NetBSD xsrc/external/mit/xf86-input-mouse/dist/\
+src/bsd_mouse.c
+
+----------------------------
+revision 1.3
+date: 2012/01/26 23:43:06;  author: christos;  state: Exp;  lines: +25 -1
+PR/45853: Pierre Pronchery: Add support for absolute positioning (tablets)
+----------------------------
+
 --- src/bsd_mouse.c.orig	2012-03-16 06:34:27.000000000 +0000
-+++ src/bsd_mouse.c
++++ src/bsd_mouse.c	2012-09-26 13:26:54.000000000 +0000
 @@ -53,12 +53,15 @@
  
  #define HUP_GENERIC_DESKTOP     0x0001
@@ -74,7 +83,47 @@ unless I add this).
  #if (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
  
  /* Only support wsmouse configuration for now */
-@@ -473,7 +493,7 @@ typedef struct _UsbMseRec {
+@@ -409,7 +429,7 @@ wsconsReadInput(InputInfoPtr pInfo)
+     n /= sizeof(struct wscons_event);
+     while( n-- ) {
+ 	int buttons = pMse->lastButtons;
+-	int dx = 0, dy = 0, dz = 0, dw = 0;
++	int dx = 0, dy = 0, dz = 0, dw = 0, x, y;
+ 	switch (event->type) {
+ 	case WSCONS_EVENT_MOUSE_UP:
+ #define BUTBIT (1 << (event->value <= 2 ? 2 - event->value : event->value))
+@@ -434,6 +454,30 @@ wsconsReadInput(InputInfoPtr pInfo)
+ 	    dw = event->value;
+ 	    break;
+ #endif
++	case WSCONS_EVENT_MOUSE_ABSOLUTE_X:
++	    miPointerGetPosition (pInfo->dev, &x, &y);
++	    x = event->value;
++	    miPointerSetPosition (pInfo->dev, &x, &y);
++	    xf86PostMotionEvent(pInfo->dev, TRUE, 0, 2, x, y);
++	    ++event;
++	    continue;
++	case WSCONS_EVENT_MOUSE_ABSOLUTE_Y:
++	    miPointerGetPosition (pInfo->dev, &x, &y);
++	    y = event->value;
++	    miPointerSetPosition (pInfo->dev, &x, &y);
++	    xf86PostMotionEvent(pInfo->dev, TRUE, 0, 2, x, y);
++	    ++event;
++	    continue;
++#ifdef WSCONS_EVENT_MOUSE_ABSOLUTE_Z
++	case WSCONS_EVENT_MOUSE_ABSOLUTE_Z:
++	    ++event;
++	    continue;
++#endif
++#ifdef WSCONS_EVENT_MOUSE_ABSOLUTE_W
++	case WSCONS_EVENT_MOUSE_ABSOLUTE_W:
++	    ++event;
++	    continue;
++#endif
+ 	default:
+ 	    xf86Msg(X_WARNING, "%s: bad wsmouse event type=%d\n", pInfo->name,
+ 		    event->type);
+@@ -473,7 +517,7 @@ typedef struct _UsbMseRec {
      hid_item_t loc_x;		/* x locator item */
      hid_item_t loc_y;		/* y locator item */
      hid_item_t loc_z;		/* z (wheel) locator item */
@@ -83,7 +132,7 @@ unless I add this).
      hid_item_t loc_btn[MSE_MAXBUTTONS]; /* buttons locator items */
     unsigned char *buffer;
  } UsbMseRec, *UsbMsePtr;
-@@ -688,6 +708,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -688,6 +732,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_WHEEL),
  		   hid_input, &pUsbMse->loc_z, pUsbMse->iid) < 0) {
      }
@@ -93,7 +142,7 @@ unless I add this).
  #else
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_X),
  		   hid_input, &pUsbMse->loc_x) < 0) {
-@@ -700,6 +723,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -700,6 +747,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_WHEEL),
  		   hid_input, &pUsbMse->loc_z) < 0) {
      }
@@ -103,7 +152,7 @@ unless I add this).
  #endif
      /* Probe for number of buttons */
      for (i = 1; i <= MSE_MAXBUTTONS; i++) {
-@@ -772,6 +798,9 @@ OSMouseInit(int flags)
+@@ -772,6 +822,9 @@ OSMouseInit(int flags)
      p->SetupAuto = SetupAuto;
      p->SetMiscRes = SetMouseRes;
  #endif
