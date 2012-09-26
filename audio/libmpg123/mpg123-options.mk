@@ -1,4 +1,4 @@
-# $NetBSD: mpg123-options.mk,v 1.2 2012/06/12 15:45:54 wiz Exp $
+# $NetBSD: mpg123-options.mk,v 1.3 2012/09/26 13:20:12 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpg123
@@ -7,7 +7,8 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "powerpc" || \
+   (${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS")
 PKG_SUPPORTED_OPTIONS+=	simd
 .elif !empty(MACHINE_ARCH:Marm*)
 PKG_SUPPORTED_OPTIONS+=	mpg123-arm-fixed64

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/10/17 19:45:55 shattered Exp $
+# $NetBSD: Makefile,v 1.52 2012/09/26 13:06:17 jperkin Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 PKGREVISION=	1
@@ -35,10 +35,6 @@ PLIST.oss	=	yes
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CPPFLAGS+=	-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
-.endif
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	SunOS_LDFLAGS="-shared -mimpure-text"
 .endif
 
 # MPG123_MODULE is not finally set yet, to avoid NOT_FOR_PLATFORM triggers
