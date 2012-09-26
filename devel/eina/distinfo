@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2011/12/05 17:14:52 joerg Exp $
+$NetBSD: distinfo,v 1.8 2012/09/26 07:37:26 jperkin Exp $
 
 SHA1 (eina-1.1.0.tar.bz2) = 49e21e455a6a9fb52b1956527ee68de474f43ae4
 RMD160 (eina-1.1.0.tar.bz2) = 14a565f6084a9cd1dcd1cff7327016a77d4aeeae
 Size (eina-1.1.0.tar.bz2) = 9983287 bytes
 SHA1 (patch-aa) = 3d93bfef1b09007a80875dfbf8cb37c13e2eb2c4
-SHA1 (patch-configure) = 3565bc3365773df935b08a2ffc0b4afebc7d27aa
+SHA1 (patch-configure) = a4ae3348716b41bb5e92a3e211dae751e10f5a29
 SHA1 (patch-configure.ac) = adf38da81845df07f4a28d04a8acc7b8fb0ab7ef
 SHA1 (patch-src_lib_eina__magic.c) = 3a11a343c16e38ea0bfb9adc7cb91dfbbdc4ebb7
 SHA1 (patch-src_lib_eina__simple__xml__parser.c) = 69417e74773ccfb552f92d938fcba114de4ae155

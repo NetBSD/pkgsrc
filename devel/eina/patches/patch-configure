@@ -1,7 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2012/09/26 07:37:26 jperkin Exp $
 
---- configure.orig	2011-11-28 12:06:59.000000000 +0000
-+++ configure
+--- configure.orig	2011-12-02 07:41:05.000000000 +0000
++++ configure	2012-09-25 14:11:20.202067900 +0000
 @@ -1,6 +1,6 @@
  #! /bin/sh
  # Guess values for system-dependent variables and create Makefiles.
@@ -1093,7 +1093,18 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    	  if test "$cross_compiling" = yes; then :
-@@ -12503,7 +12511,7 @@ if test -n "$ac_tool_prefix"; then
+@@ -12066,10 +12074,6 @@ fi
+ case "$host_os" in
+    mingw*)
+       ;;
+-   solaris*)
+-      _efl_threads_cflags="-mt"
+-      _efl_threads_libs="-mt"
+-      ;;
+    *)
+       _efl_threads_cflags="-pthread"
+       _efl_threads_libs="-pthread"
+@@ -12503,7 +12507,7 @@ if test -n "$ac_tool_prefix"; then
  set dummy ${ac_tool_prefix}gcc; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1102,7 +1113,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$CC"; then
-@@ -12543,7 +12551,7 @@ if test -z "$ac_cv_prog_CC"; then
+@@ -12543,7 +12547,7 @@ if test -z "$ac_cv_prog_CC"; then
  set dummy gcc; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1111,7 +1122,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$ac_ct_CC"; then
-@@ -12596,7 +12604,7 @@ if test -z "$CC"; then
+@@ -12596,7 +12600,7 @@ if test -z "$CC"; then
  set dummy ${ac_tool_prefix}cc; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1120,7 +1131,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$CC"; then
-@@ -12636,7 +12644,7 @@ if test -z "$CC"; then
+@@ -12636,7 +12640,7 @@ if test -z "$CC"; then
  set dummy cc; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1129,7 +1140,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$CC"; then
-@@ -12695,7 +12703,7 @@ if test -z "$CC"; then
+@@ -12695,7 +12699,7 @@ if test -z "$CC"; then
  set dummy $ac_tool_prefix$ac_prog; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1138,7 +1149,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$CC"; then
-@@ -12739,7 +12747,7 @@ do
+@@ -12739,7 +12743,7 @@ do
  set dummy $ac_prog; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1147,7 +1158,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$ac_ct_CC"; then
-@@ -12794,7 +12802,7 @@ fi
+@@ -12794,7 +12798,7 @@ fi
  test -z "$CC" && { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
  $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
  as_fn_error $? "no acceptable C compiler found in \$PATH
@@ -1156,7 +1167,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  # Provide some information about the compiler.
  $as_echo "$as_me:${as_lineno-$LINENO}: checking for C compiler version" >&5
-@@ -12823,7 +12831,7 @@ done
+@@ -12823,7 +12827,7 @@ done
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether we are using the GNU C compiler" >&5
  $as_echo_n "checking whether we are using the GNU C compiler... " >&6; }
@@ -1165,7 +1176,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -12860,7 +12868,7 @@ ac_test_CFLAGS=${CFLAGS+set}
+@@ -12860,7 +12864,7 @@ ac_test_CFLAGS=${CFLAGS+set}
  ac_save_CFLAGS=$CFLAGS
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $CC accepts -g" >&5
  $as_echo_n "checking whether $CC accepts -g... " >&6; }
@@ -1174,7 +1185,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_save_c_werror_flag=$ac_c_werror_flag
-@@ -12938,7 +12946,7 @@ else
+@@ -12938,7 +12942,7 @@ else
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $CC option to accept ISO C89" >&5
  $as_echo_n "checking for $CC option to accept ISO C89... " >&6; }
@@ -1183,7 +1194,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_cv_prog_cc_c89=no
-@@ -13037,7 +13045,7 @@ depcc="$CC"   am_compiler_list=
+@@ -13037,7 +13041,7 @@ depcc="$CC"   am_compiler_list=
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking dependency style of $depcc" >&5
  $as_echo_n "checking dependency style of $depcc... " >&6; }
@@ -1192,7 +1203,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -z "$AMDEP_TRUE" && test -f "$am_depcomp"; then
-@@ -13176,7 +13184,7 @@ if test -z "$CXX"; then
+@@ -13176,7 +13180,7 @@ if test -z "$CXX"; then
  set dummy $ac_tool_prefix$ac_prog; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1201,7 +1212,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$CXX"; then
-@@ -13220,7 +13228,7 @@ do
+@@ -13220,7 +13224,7 @@ do
  set dummy $ac_prog; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1210,7 +1221,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$ac_ct_CXX"; then
-@@ -13298,7 +13306,7 @@ done
+@@ -13298,7 +13302,7 @@ done
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether we are using the GNU C++ compiler" >&5
  $as_echo_n "checking whether we are using the GNU C++ compiler... " >&6; }
@@ -1219,7 +1230,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -13335,7 +13343,7 @@ ac_test_CXXFLAGS=${CXXFLAGS+set}
+@@ -13335,7 +13339,7 @@ ac_test_CXXFLAGS=${CXXFLAGS+set}
  ac_save_CXXFLAGS=$CXXFLAGS
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $CXX accepts -g" >&5
  $as_echo_n "checking whether $CXX accepts -g... " >&6; }
@@ -1228,7 +1239,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_save_cxx_werror_flag=$ac_cxx_werror_flag
-@@ -13421,7 +13429,7 @@ depcc="$CXX"  am_compiler_list=
+@@ -13421,7 +13425,7 @@ depcc="$CXX"  am_compiler_list=
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking dependency style of $depcc" >&5
  $as_echo_n "checking dependency style of $depcc... " >&6; }
@@ -1237,7 +1248,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -z "$AMDEP_TRUE" && test -f "$am_depcomp"; then
-@@ -13561,7 +13569,7 @@ if test -z "$CXX"; then
+@@ -13561,7 +13565,7 @@ if test -z "$CXX"; then
  set dummy $ac_tool_prefix$ac_prog; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1246,7 +1257,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$CXX"; then
-@@ -13605,7 +13613,7 @@ do
+@@ -13605,7 +13609,7 @@ do
  set dummy $ac_prog; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1255,7 +1266,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$ac_ct_CXX"; then
-@@ -13683,7 +13691,7 @@ done
+@@ -13683,7 +13687,7 @@ done
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether we are using the GNU C++ compiler" >&5
  $as_echo_n "checking whether we are using the GNU C++ compiler... " >&6; }
@@ -1264,7 +1275,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -13720,7 +13728,7 @@ ac_test_CXXFLAGS=${CXXFLAGS+set}
+@@ -13720,7 +13724,7 @@ ac_test_CXXFLAGS=${CXXFLAGS+set}
  ac_save_CXXFLAGS=$CXXFLAGS
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $CXX accepts -g" >&5
  $as_echo_n "checking whether $CXX accepts -g... " >&6; }
@@ -1273,7 +1284,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_save_cxx_werror_flag=$ac_cxx_werror_flag
-@@ -13806,7 +13814,7 @@ depcc="$CXX"  am_compiler_list=
+@@ -13806,7 +13810,7 @@ depcc="$CXX"  am_compiler_list=
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking dependency style of $depcc" >&5
  $as_echo_n "checking dependency style of $depcc... " >&6; }
@@ -1282,7 +1293,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -z "$AMDEP_TRUE" && test -f "$am_depcomp"; then
-@@ -13940,7 +13948,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+@@ -13940,7 +13944,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking how to run the C++ preprocessor" >&5
  $as_echo_n "checking how to run the C++ preprocessor... " >&6; }
  if test -z "$CXXCPP"; then
@@ -1291,7 +1302,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
        # Double quotes because CXXCPP needs to be expanded
-@@ -14241,7 +14249,7 @@ else
+@@ -14241,7 +14245,7 @@ else
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for non-GNU ld" >&5
  $as_echo_n "checking for non-GNU ld... " >&6; }
  fi
@@ -1300,7 +1311,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -z "$LD"; then
-@@ -14281,7 +14289,7 @@ fi
+@@ -14281,7 +14285,7 @@ fi
  test -z "$LD" && as_fn_error $? "no acceptable ld found in \$PATH" "$LINENO" 5
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking if the linker ($LD) is GNU ld" >&5
  $as_echo_n "checking if the linker ($LD) is GNU ld... " >&6; }
@@ -1309,7 +1320,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    # I'd rather use --version here, but apparently some GNU lds only accept -v.
-@@ -15790,7 +15798,7 @@ $as_echo "$lt_prog_compiler_pic_CXX" >&6
+@@ -15790,7 +15794,7 @@ $as_echo "$lt_prog_compiler_pic_CXX" >&6
  if test -n "$lt_prog_compiler_pic_CXX"; then
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking if $compiler PIC flag $lt_prog_compiler_pic_CXX works" >&5
  $as_echo_n "checking if $compiler PIC flag $lt_prog_compiler_pic_CXX works... " >&6; }
@@ -1318,7 +1329,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    lt_cv_prog_compiler_pic_works_CXX=no
-@@ -15846,7 +15854,7 @@ fi
+@@ -15846,7 +15850,7 @@ fi
  wl=$lt_prog_compiler_wl_CXX eval lt_tmp_static_flag=\"$lt_prog_compiler_static_CXX\"
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking if $compiler static flag $lt_tmp_static_flag works" >&5
  $as_echo_n "checking if $compiler static flag $lt_tmp_static_flag works... " >&6; }
@@ -1327,7 +1338,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    lt_cv_prog_compiler_static_works_CXX=no
-@@ -15886,7 +15894,7 @@ fi
+@@ -15886,7 +15890,7 @@ fi
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking if $compiler supports -c -o file.$ac_objext" >&5
  $as_echo_n "checking if $compiler supports -c -o file.$ac_objext... " >&6; }
@@ -1336,7 +1347,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    lt_cv_prog_compiler_c_o_CXX=no
-@@ -15938,7 +15946,7 @@ $as_echo "$lt_cv_prog_compiler_c_o_CXX" 
+@@ -15938,7 +15942,7 @@ $as_echo "$lt_cv_prog_compiler_c_o_CXX" 
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking if $compiler supports -c -o file.$ac_objext" >&5
  $as_echo_n "checking if $compiler supports -c -o file.$ac_objext... " >&6; }
@@ -1345,7 +1356,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    lt_cv_prog_compiler_c_o_CXX=no
-@@ -16919,7 +16927,7 @@ if test "x$ac_cv_env_PKG_CONFIG_set" != 
+@@ -16919,7 +16923,7 @@ if test "x$ac_cv_env_PKG_CONFIG_set" != 
  set dummy ${ac_tool_prefix}pkg-config; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1354,7 +1365,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    case $PKG_CONFIG in
-@@ -16962,7 +16970,7 @@ if test -z "$ac_cv_path_PKG_CONFIG"; the
+@@ -16962,7 +16966,7 @@ if test -z "$ac_cv_path_PKG_CONFIG"; the
  set dummy pkg-config; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1363,7 +1374,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    case $ac_pt_PKG_CONFIG in
-@@ -17072,7 +17080,7 @@ if test "${with_doxygen+set}" = set; the
+@@ -17072,7 +17076,7 @@ if test "${with_doxygen+set}" = set; the
  set dummy ${efl_doxygen}; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1372,7 +1383,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$efl_have_doxygen"; then
-@@ -17121,7 +17129,7 @@ else
+@@ -17121,7 +17125,7 @@ else
  set dummy ${efl_doxygen}; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1381,7 +1392,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$efl_have_doxygen"; then
-@@ -17394,7 +17402,7 @@ and EVIL_LIBS to avoid the need to call 
+@@ -17394,7 +17398,7 @@ and EVIL_LIBS to avoid the need to call 
  See the pkg-config man page for more details.
  
  To get pkg-config, see <http://pkg-config.freedesktop.org/>.
@@ -1390,7 +1401,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  else
  	EVIL_CFLAGS=$pkg_cv_EVIL_CFLAGS
  	EVIL_LIBS=$pkg_cv_EVIL_LIBS
-@@ -17612,7 +17620,7 @@ for ac_hdr in dirent.h sys/ndir.h sys/di
+@@ -17612,7 +17616,7 @@ for ac_hdr in dirent.h sys/ndir.h sys/di
    as_ac_Header=`$as_echo "ac_cv_header_dirent_$ac_hdr" | $as_tr_sh`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_hdr that defines DIR" >&5
  $as_echo_n "checking for $ac_hdr that defines DIR... " >&6; }
@@ -1399,7 +1410,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -17652,7 +17660,7 @@ done
+@@ -17652,7 +17656,7 @@ done
  if test $ac_header_dirent = dirent.h; then
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing opendir" >&5
  $as_echo_n "checking for library containing opendir... " >&6; }
@@ -1408,7 +1419,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_func_search_save_LIBS=$LIBS
-@@ -17686,11 +17694,11 @@ for ac_lib in '' dir; do
+@@ -17686,11 +17690,11 @@ for ac_lib in '' dir; do
  fi
  rm -f core conftest.err conftest.$ac_objext \
      conftest$ac_exeext
@@ -1422,7 +1433,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  else
    ac_cv_search_opendir=no
-@@ -17709,7 +17717,7 @@ fi
+@@ -17709,7 +17713,7 @@ fi
  else
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing opendir" >&5
  $as_echo_n "checking for library containing opendir... " >&6; }
@@ -1431,7 +1442,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_func_search_save_LIBS=$LIBS
-@@ -17743,11 +17751,11 @@ for ac_lib in '' x; do
+@@ -17743,11 +17747,11 @@ for ac_lib in '' x; do
  fi
  rm -f core conftest.err conftest.$ac_objext \
      conftest$ac_exeext
@@ -1445,7 +1456,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  else
    ac_cv_search_opendir=no
-@@ -17767,7 +17775,7 @@ fi
+@@ -17767,7 +17771,7 @@ fi
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether time.h and sys/time.h may both be included" >&5
  $as_echo_n "checking whether time.h and sys/time.h may both be included... " >&6; }
@@ -1454,7 +1465,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -17889,7 +17897,7 @@ fi
+@@ -17889,7 +17893,7 @@ fi
  # This bug is HP SR number 8606223364.
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking size of wchar_t" >&5
  $as_echo_n "checking size of wchar_t... " >&6; }
@@ -1463,7 +1474,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if ac_fn_c_compute_int "$LINENO" "(long int) (sizeof (wchar_t))" "ac_cv_sizeof_wchar_t"        "$ac_includes_default"; then :
-@@ -17899,7 +17907,7 @@ else
+@@ -17899,7 +17903,7 @@ else
       { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
  $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
  as_fn_error 77 "cannot compute sizeof (wchar_t)
@@ -1472,7 +1483,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
     else
       ac_cv_sizeof_wchar_t=0
     fi
-@@ -17924,7 +17932,7 @@ ac_fn_c_check_type "$LINENO" "siginfo_t"
+@@ -17924,7 +17928,7 @@ ac_fn_c_check_type "$LINENO" "siginfo_t"
       #endif
  
  "
@@ -1481,7 +1492,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  cat >>confdefs.h <<_ACEOF
  #define HAVE_SIGINFO_T 1
-@@ -17940,7 +17948,7 @@ fi
+@@ -17940,7 +17944,7 @@ fi
  ### Checks for compiler characteristics
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for an ANSI C-conforming const" >&5
  $as_echo_n "checking for an ANSI C-conforming const... " >&6; }
@@ -1490,7 +1501,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -18020,7 +18028,7 @@ fi
+@@ -18020,7 +18024,7 @@ fi
  
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether byte ordering is bigendian" >&5
  $as_echo_n "checking whether byte ordering is bigendian... " >&6; }
@@ -1499,7 +1510,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_cv_c_bigendian=unknown
-@@ -18239,12 +18247,12 @@ $as_echo "#define AC_APPLE_UNIVERSAL_BUI
+@@ -18239,12 +18243,12 @@ $as_echo "#define AC_APPLE_UNIVERSAL_BUI
       ;; #(
     *)
       as_fn_error $? "unknown endianness
@@ -1514,7 +1525,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_cv_c_inline=no
-@@ -18290,7 +18298,7 @@ esac
+@@ -18290,7 +18294,7 @@ esac
    *) :
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $CC option to accept ISO C99" >&5
  $as_echo_n "checking for $CC option to accept ISO C99... " >&6; }
@@ -1523,7 +1534,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_cv_prog_cc_c99=no
-@@ -18465,7 +18473,7 @@ if test "x$ac_cv_prog_cc_c99" != xno; th
+@@ -18465,7 +18469,7 @@ if test "x$ac_cv_prog_cc_c99" != xno; th
  else
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $CC option to accept ISO C89" >&5
  $as_echo_n "checking for $CC option to accept ISO C89... " >&6; }
@@ -1532,7 +1543,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_cv_prog_cc_c89=no
-@@ -18561,7 +18569,7 @@ fi
+@@ -18561,7 +18565,7 @@ fi
  esac
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $CC option to accept ISO Standard C" >&5
  $as_echo_n "checking for $CC option to accept ISO Standard C... " >&6; }
@@ -1541,7 +1552,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  fi
  
-@@ -18901,7 +18909,7 @@ and ESCAPE_LIBS to avoid the need to cal
+@@ -18901,7 +18905,7 @@ and ESCAPE_LIBS to avoid the need to cal
  See the pkg-config man page for more details.
  
  To get pkg-config, see <http://pkg-config.freedesktop.org/>.
@@ -1550,7 +1561,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  else
  	ESCAPE_CFLAGS=$pkg_cv_ESCAPE_CFLAGS
  	ESCAPE_LIBS=$pkg_cv_ESCAPE_LIBS
-@@ -18969,7 +18977,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+@@ -18969,7 +18973,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  ### Checks for library functions
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing strerror" >&5
  $as_echo_n "checking for library containing strerror... " >&6; }
@@ -1559,7 +1570,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_func_search_save_LIBS=$LIBS
-@@ -19003,11 +19011,11 @@ for ac_lib in '' cposix; do
+@@ -19003,11 +19007,11 @@ for ac_lib in '' cposix; do
  fi
  rm -f core conftest.err conftest.$ac_objext \
      conftest$ac_exeext
@@ -1573,7 +1584,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  else
    ac_cv_search_strerror=no
-@@ -19023,11 +19031,22 @@ if test "$ac_res" != no; then :
+@@ -19023,11 +19027,22 @@ if test "$ac_res" != no; then :
  
  fi
  
@@ -1597,7 +1608,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -19060,7 +19079,7 @@ fi
+@@ -19060,7 +19075,7 @@ fi
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for alloca" >&5
  $as_echo_n "checking for alloca... " >&6; }
@@ -1606,7 +1617,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -19071,6 +19090,8 @@ else
+@@ -19071,6 +19086,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -1615,7 +1626,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -19079,7 +19100,7 @@ else
+@@ -19079,7 +19096,7 @@ else
   #pragma alloca
  #   else
  #    ifndef alloca /* predefined by HP cc +Olibcalls */
@@ -1624,7 +1635,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  #    endif
  #   endif
  #  endif
-@@ -19123,7 +19144,7 @@ $as_echo "#define C_ALLOCA 1" >>confdefs
+@@ -19123,7 +19140,7 @@ $as_echo "#define C_ALLOCA 1" >>confdefs
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether \`alloca.c' needs Cray hooks" >&5
  $as_echo_n "checking whether \`alloca.c' needs Cray hooks... " >&6; }
@@ -1633,7 +1644,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -19164,7 +19185,7 @@ fi
+@@ -19164,7 +19181,7 @@ fi
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking stack direction for C alloca" >&5
  $as_echo_n "checking stack direction for C alloca... " >&6; }
@@ -1642,7 +1653,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test "$cross_compiling" = yes; then :
-@@ -19212,7 +19233,7 @@ _ACEOF
+@@ -19212,7 +19229,7 @@ _ACEOF
  
  fi
  
@@ -1651,7 +1662,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -19225,6 +19246,38 @@ fi
+@@ -19225,6 +19242,38 @@ fi
  done
  
  
@@ -1690,7 +1701,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  # dlopen and dladdr
  dlopen_libs=""
  case "$host_os" in
-@@ -19239,7 +19292,7 @@ case "$host_os" in
+@@ -19239,7 +19288,7 @@ case "$host_os" in
        for ac_func in dlopen
  do :
    ac_fn_c_check_func "$LINENO" "dlopen" "ac_cv_func_dlopen"
@@ -1699,7 +1710,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_DLOPEN 1
  _ACEOF
-@@ -19253,7 +19306,7 @@ done
+@@ -19253,7 +19302,7 @@ done
           for ac_func in dladdr
  do :
    ac_fn_c_check_func "$LINENO" "dladdr" "ac_cv_func_dladdr"
@@ -1708,7 +1719,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_DLADDR 1
  _ACEOF
-@@ -19267,7 +19320,7 @@ done
+@@ -19267,7 +19316,7 @@ done
        else
           { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dlopen in -ldl" >&5
  $as_echo_n "checking for dlopen in -ldl... " >&6; }
@@ -1717,7 +1728,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -19301,7 +19354,7 @@ LIBS=$ac_check_lib_save_LIBS
+@@ -19301,7 +19350,7 @@ LIBS=$ac_check_lib_save_LIBS
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_dl_dlopen" >&5
  $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
@@ -1726,7 +1737,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    res="yes"
  else
    res="no"
-@@ -19310,7 +19363,7 @@ fi
+@@ -19310,7 +19359,7 @@ fi
           if test "x${res}" = "xyes" ; then
              { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dladdr in -ldl" >&5
  $as_echo_n "checking for dladdr in -ldl... " >&6; }
@@ -1735,7 +1746,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -19344,7 +19397,7 @@ LIBS=$ac_check_lib_save_LIBS
+@@ -19344,7 +19393,7 @@ LIBS=$ac_check_lib_save_LIBS
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_dl_dladdr" >&5
  $as_echo "$ac_cv_lib_dl_dladdr" >&6; }
@@ -1744,7 +1755,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo "#define HAVE_DLADDR 1" >>confdefs.h
  
  fi
-@@ -19361,7 +19414,7 @@ esac
+@@ -19361,7 +19410,7 @@ esac
  
  
  ac_fn_c_check_header_mongrel "$LINENO" "fnmatch.h" "ac_cv_header_fnmatch_h" "$ac_includes_default"
@@ -1753,7 +1764,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    _efl_have_fnmatch="yes"
  else
    _efl_have_fnmatch="no"
-@@ -19372,7 +19425,7 @@ fi
+@@ -19372,7 +19421,7 @@ fi
  if test "x${_efl_have_fnmatch}" = "xyes" ; then
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing fnmatch" >&5
  $as_echo_n "checking for library containing fnmatch... " >&6; }
@@ -1762,7 +1773,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_func_search_save_LIBS=$LIBS
-@@ -19406,11 +19459,11 @@ for ac_lib in '' fnmatch evil iberty; do
+@@ -19406,11 +19455,11 @@ for ac_lib in '' fnmatch evil iberty; do
  fi
  rm -f core conftest.err conftest.$ac_objext \
      conftest$ac_exeext
@@ -1776,7 +1787,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  else
    ac_cv_search_fnmatch=no
-@@ -19449,7 +19502,7 @@ fi
+@@ -19449,7 +19498,7 @@ fi
  for ac_header in mcheck.h
  do :
    ac_fn_c_check_header_mongrel "$LINENO" "mcheck.h" "ac_cv_header_mcheck_h" "$ac_includes_default"
@@ -1785,7 +1796,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_MCHECK_H 1
  _ACEOF
-@@ -19463,7 +19516,7 @@ done
+@@ -19463,7 +19512,7 @@ done
  for ac_func in mtrace
  do :
    ac_fn_c_check_func "$LINENO" "mtrace" "ac_cv_func_mtrace"
@@ -1794,7 +1805,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_MTRACE 1
  _ACEOF
-@@ -19501,7 +19554,7 @@ if test "x${have_iconv}" = "xno" ; then
+@@ -19501,7 +19550,7 @@ if test "x${have_iconv}" = "xno" ; then
     for ac_header in iconv.h
  do :
    ac_fn_c_check_header_mongrel "$LINENO" "iconv.h" "ac_cv_header_iconv_h" "$ac_includes_default"
@@ -1803,7 +1814,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_ICONV_H 1
  _ACEOF
-@@ -20357,7 +20410,7 @@ if test "x$_efl_enable_coverage" = "xyes
+@@ -20357,7 +20406,7 @@ if test "x$_efl_enable_coverage" = "xyes
  set dummy lcov; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
  $as_echo_n "checking for $ac_word... " >&6; }
@@ -1812,7 +1823,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    $as_echo_n "(cached) " >&6
  else
    if test -n "$have_lcov"; then
-@@ -20734,10 +20787,21 @@ $as_echo "$as_me: WARNING: cache variabl
+@@ -20734,10 +20783,21 @@ $as_echo "$as_me: WARNING: cache variabl
       :end' >>confcache
  if diff "$cache_file" confcache >/dev/null 2>&1; then :; else
    if test -w "$cache_file"; then
@@ -1836,7 +1847,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    else
      { $as_echo "$as_me:${as_lineno-$LINENO}: not updating unwritable cache $cache_file" >&5
  $as_echo "$as_me: not updating unwritable cache $cache_file" >&6;}
-@@ -20922,7 +20986,7 @@ if test -z "${EFL_INSTALL_EXAMPLES_TRUE}
+@@ -20922,7 +20982,7 @@ if test -z "${EFL_INSTALL_EXAMPLES_TRUE}
  Usually this means the macro was only invoked conditionally." "$LINENO" 5
  fi
  
@@ -1845,7 +1856,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  ac_write_fail=0
  ac_clean_files_save=$ac_clean_files
  ac_clean_files="$ac_clean_files $CONFIG_STATUS"
-@@ -21023,6 +21087,7 @@ fi
+@@ -21023,6 +21083,7 @@ fi
  IFS=" ""	$as_nl"
  
  # Find who we are.  Look in the path if we contain no directory separator.
@@ -1853,7 +1864,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  case $0 in #((
    *[\\/]* ) as_myself=$0 ;;
    *) as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-@@ -21330,7 +21395,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+@@ -21330,7 +21391,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
  # values after options handling.
  ac_log="
  This file was extended by eina $as_me 1.1.0, which was
@@ -1862,7 +1873,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -21396,7 +21461,7 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
+@@ -21396,7 +21457,7 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
  ac_cs_config="`$as_echo "$ac_configure_args" | sed 's/^ //; s/[\\""\`\$]/\\\\&/g'`"
  ac_cs_version="\\
  eina config.status 1.1.0
@@ -1871,7 +1882,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    with options \\"\$ac_cs_config\\"
  
  Copyright (C) 2010 Free Software Foundation, Inc.
-@@ -21900,7 +21965,7 @@ do
+@@ -21900,7 +21961,7 @@ do
      "src/tests/Makefile") CONFIG_FILES="$CONFIG_FILES src/tests/Makefile" ;;
      "src/examples/Makefile") CONFIG_FILES="$CONFIG_FILES src/examples/Makefile" ;;
  
@@ -1880,7 +1891,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    esac
  done
  
-@@ -21923,9 +21988,10 @@ fi
+@@ -21923,9 +21984,10 @@ fi
  # after its creation but before its name has been assigned to `$tmp'.
  $debug ||
  {
@@ -1893,7 +1904,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  ' 0
    trap 'as_fn_exit 1' 1 2 13 15
  }
-@@ -21933,12 +21999,13 @@ $debug ||
+@@ -21933,12 +21995,13 @@ $debug ||
  
  {
    tmp=`(umask 077 && mktemp -d "./confXXXXXX") 2>/dev/null` &&
@@ -1908,7 +1919,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  
  # Set up the scripts for CONFIG_FILES section.
  # No need to generate them if there are no CONFIG_FILES.
-@@ -21960,7 +22027,7 @@ else
+@@ -21960,7 +22023,7 @@ else
    ac_cs_awk_cr=$ac_cr
  fi
  
@@ -1917,7 +1928,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  _ACEOF
  
  
-@@ -21988,7 +22055,7 @@ done
+@@ -21988,7 +22051,7 @@ done
  rm -f conf$$subs.sh
  
  cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1
@@ -1926,7 +1937,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  _ACEOF
  sed -n '
  h
-@@ -22036,7 +22103,7 @@ t delim
+@@ -22036,7 +22099,7 @@ t delim
  rm -f conf$$subs.awk
  cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1
  _ACAWK
@@ -1935,7 +1946,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    for (key in S) S_is_set[key] = 1
    FS = ""
  
-@@ -22068,7 +22135,7 @@ if sed "s/$ac_cr//" < /dev/null > /dev/n
+@@ -22068,7 +22131,7 @@ if sed "s/$ac_cr//" < /dev/null > /dev/n
    sed "s/$ac_cr\$//; s/$ac_cr/$ac_cs_awk_cr/g"
  else
    cat
@@ -1944,7 +1955,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    || as_fn_error $? "could not setup config files machinery" "$LINENO" 5
  _ACEOF
  
-@@ -22102,7 +22169,7 @@ fi # test -n "$CONFIG_FILES"
+@@ -22102,7 +22165,7 @@ fi # test -n "$CONFIG_FILES"
  # No need to generate them if there are no CONFIG_HEADERS.
  # This happens for instance with `./config.status Makefile'.
  if test -n "$CONFIG_HEADERS"; then
@@ -1953,7 +1964,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
  BEGIN {
  _ACEOF
  
-@@ -22114,8 +22181,8 @@ _ACEOF
+@@ -22114,8 +22177,8 @@ _ACEOF
  # handling of long lines.
  ac_delim='%!_!# '
  for ac_last_try in false false :; do
@@ -1964,7 +1975,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
      break
    elif $ac_last_try; then
      as_fn_error $? "could not make $CONFIG_HEADERS" "$LINENO" 5
-@@ -22216,7 +22283,7 @@ do
+@@ -22216,7 +22279,7 @@ do
    esac
    case $ac_mode$ac_tag in
    :[FHL]*:*);;
@@ -1973,7 +1984,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    :[FH]-) ac_tag=-:-;;
    :[FH]*) ac_tag=$ac_tag:$ac_tag.in;;
    esac
-@@ -22235,7 +22302,7 @@ do
+@@ -22235,7 +22298,7 @@ do
      for ac_f
      do
        case $ac_f in
@@ -1982,7 +1993,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
        *) # Look for the file first in the build tree, then in the source tree
  	 # (if the path is not absolute).  The absolute path cannot be DOS-style,
  	 # because $ac_f cannot contain `:'.
-@@ -22244,7 +22311,7 @@ do
+@@ -22244,7 +22307,7 @@ do
  	   [\\/$]*) false;;
  	   *) test -f "$srcdir/$ac_f" && ac_f="$srcdir/$ac_f";;
  	   esac ||
@@ -1991,7 +2002,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
        esac
        case $ac_f in *\'*) ac_f=`$as_echo "$ac_f" | sed "s/'/'\\\\\\\\''/g"`;; esac
        as_fn_append ac_file_inputs " '$ac_f'"
-@@ -22270,8 +22337,8 @@ $as_echo "$as_me: creating $ac_file" >&6
+@@ -22270,8 +22333,8 @@ $as_echo "$as_me: creating $ac_file" >&6
      esac
  
      case $ac_tag in
@@ -2002,7 +2013,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
      esac
      ;;
    esac
-@@ -22407,21 +22474,22 @@ s&@INSTALL@&$ac_INSTALL&;t t
+@@ -22407,21 +22470,22 @@ s&@INSTALL@&$ac_INSTALL&;t t
  s&@MKDIR_P@&$ac_MKDIR_P&;t t
  $ac_datarootdir_hack
  "
@@ -2032,7 +2043,7 @@ $NetBSD: patch-configure,v 1.1 2011/12/05 17:14:52 joerg Exp $
    esac \
    || as_fn_error $? "could not create $ac_file" "$LINENO" 5
   ;;
-@@ -22432,20 +22500,20 @@ which seems to be undefined.  Please mak
+@@ -22432,20 +22496,20 @@ which seems to be undefined.  Please mak
    if test x"$ac_file" != x-; then
      {
        $as_echo "/* $configure_input  */" \
