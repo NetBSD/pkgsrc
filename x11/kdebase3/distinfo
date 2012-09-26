@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2012/01/20 16:59:19 joerg Exp $
+$NetBSD: distinfo,v 1.116 2012/09/26 11:10:16 jperkin Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -60,5 +60,7 @@ SHA1 (patch-gd) = 39469384668e4ee7fc489406e2813100fc90aa9b
 SHA1 (patch-ge) = 8470cf03d768d784714e926281757e9d68749360
 SHA1 (patch-gf) = 78de196a700fa9cd5e221ff57c295fdb3562f931
 SHA1 (patch-kcheckpass_checkpass_pam.c) = b5dd2e50c5f1047d3c195836c8b2d06e11edea3b
+SHA1 (patch-kcontrol_access_kcmaccess.cpp) = f7eaec78fa13f2cfb5b97ca84c10f3e403b64919
 SHA1 (patch-kdesud) = acc40c2d1fb65e404a7aa0dbb6eae72fa7ac6a5e
 SHA1 (patch-kicker_applets_launcher_easyvector.h) = 7bcb64630a71cb3740ccf203b63dcdcbb7b30675
+SHA1 (patch-kxkb_kcmmisc.cpp) = 6e31f261c872dc942305a7c25e8c03c089bc272a
