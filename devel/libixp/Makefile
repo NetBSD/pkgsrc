@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/12/13 12:30:45 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/26 10:13:04 jperkin Exp $
 
 DISTNAME=		libixp-0.4
 CATEGORIES=		devel
@@ -13,5 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 
 USE_TOOLS+=		gmake
+
+REPLACE_SH+=		util/compile
 
 .include "../../mk/bsd.pkg.mk"
