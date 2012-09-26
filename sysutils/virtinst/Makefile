@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/25 19:53:39 gls Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/26 19:35:02 gls Exp $
 #
 
 DISTNAME=	virtinst-0.600.3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://virt-manager.org/
 COMMENT=	Module to help in starting installations inside of virtual machines
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	msgfmt
+USE_TOOLS+=	msgfmt xgettext
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
