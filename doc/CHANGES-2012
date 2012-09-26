@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3043 2012/09/26 09:56:25 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.3044 2012/09/26 10:43:00 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/TECkit to 2.5.1nb1 [sbd 2012-09-25]
 	Updated devel/php-memcache to 2.2.7 [taca 2012-09-25]
 	Updated devel/xulrunner to 15.0.1nb2 [sbd 2012-09-26]
+	Updated emulators/qemu to 1.2.0nb2 [sbd 2012-09-26]
