@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2011/10/17 19:45:55 shattered Exp $
+$NetBSD: distinfo,v 1.35 2012/09/26 13:06:18 jperkin Exp $
 
 SHA1 (mpg123-1.12.5.tar.bz2) = 476cb47a9b6570684b5af536beedf2026522e5f8
 RMD160 (mpg123-1.12.5.tar.bz2) = a59b0f7506b004c6e7d048ebef57090e1eb857af
@@ -7,5 +7,4 @@ SHA1 (patch-aa) = 9700187dc38af7d4b7f4f3332d76556d2cb7f418
 SHA1 (patch-ad) = 7ea68b64ee8a0e58036f79558ca1484870b0335a
 SHA1 (patch-af) = ed89154abc9e4eea7934e6b11431b4b8f95d36b0
 SHA1 (patch-ah) = 86754993466714cb2208a9291b72e8e03dde19c7
-SHA1 (patch-ai) = 9ce00cfa1dac387ea7b5df19fa4b1483b598748f
 SHA1 (patch-aj) = ab7e4b9ae33d8cabce4d381c6e07157cfb48e0b1
