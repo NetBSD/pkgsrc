@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2012/09/12 14:27:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.46 2012/09/26 09:51:36 sbd Exp $
 bin/xulrunner
 include/xulrunner/AudioSegment.h
 include/xulrunner/BasicImplData.h
@@ -1652,6 +1652,7 @@ include/xulrunner/nsIProfile.h
 include/xulrunner/nsIProfileChangeStatus.h
 include/xulrunner/nsIProfileMigrator.h
 include/xulrunner/nsIProfileUnlocker.h
+${PLIST.sps}include/xulrunner/nsIProfiler.h
 include/xulrunner/nsIProgrammingLanguage.h
 include/xulrunner/nsIProgressEventSink.h
 include/xulrunner/nsIPrompt.h
@@ -2260,6 +2261,7 @@ include/xulrunner/rdfISerializer.h
 include/xulrunner/rdfITripleVisitor.h
 include/xulrunner/readstrings.h
 include/xulrunner/sampler.h
+${PLIST.sps}include/xulrunner/shared-libraries.h
 include/xulrunner/skia/Sk64.h
 include/xulrunner/skia/SkAdvancedTypefaceMetrics.h
 include/xulrunner/skia/SkAutoKern.h
@@ -2372,6 +2374,7 @@ include/xulrunner/snappy/snappy-c.h
 include/xulrunner/snappy/snappy-stubs-public.h
 include/xulrunner/snappy/snappy.h
 include/xulrunner/speex/speex_resampler.h
+${PLIST.sps}include/xulrunner/sps_sampler.h
 include/xulrunner/string-template-def-char.h
 include/xulrunner/string-template-def-unichar.h
 include/xulrunner/string-template-undef.h
@@ -2429,6 +2432,7 @@ lib/xulrunner-sdk/sdk/bin/xpidl.py
 lib/xulrunner-sdk/sdk/bin/xpidllex.py
 lib/xulrunner-sdk/sdk/bin/xpidlyacc.py
 lib/xulrunner-sdk/sdk/bin/xpt.py
+${PLIST.jemalloc}lib/xulrunner-sdk/sdk/lib/libmemory.a
 lib/xulrunner-sdk/sdk/lib/libmozalloc.so
 lib/xulrunner-sdk/sdk/lib/libmozglue.a
 lib/xulrunner-sdk/sdk/lib/libunicharutil_external_s.a
@@ -3321,6 +3325,7 @@ lib/xulrunner/modules/PlacesUtils.jsm
 lib/xulrunner/modules/PluginProvider.jsm
 lib/xulrunner/modules/PluralForm.jsm
 lib/xulrunner/modules/PopupNotifications.jsm
+${PLIST.sps}lib/xulrunner/modules/Profiler.jsm
 lib/xulrunner/modules/PropertyListUtils.jsm
 lib/xulrunner/modules/Services.jsm
 lib/xulrunner/modules/SettingsDB.jsm
@@ -4261,6 +4266,7 @@ share/idl/xulrunner/nsIProfile.idl
 share/idl/xulrunner/nsIProfileChangeStatus.idl
 share/idl/xulrunner/nsIProfileMigrator.idl
 share/idl/xulrunner/nsIProfileUnlocker.idl
+${PLIST.sps}share/idl/xulrunner/nsIProfiler.idl
 share/idl/xulrunner/nsIProgrammingLanguage.idl
 share/idl/xulrunner/nsIProgressEventSink.idl
 share/idl/xulrunner/nsIPrompt.idl
