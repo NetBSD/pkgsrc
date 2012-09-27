@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/15 23:06:08 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/27 10:06:32 jperkin Exp $
 #
 
 DISTNAME=	xf86-video-vga-4.1.0
@@ -18,6 +18,12 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf autoheader automake autoreconf pkg-config
 
 BUILD_DEPENDS+=	xorg-util-macros>=1.2.0:../../devel/xorg-util-macros
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif

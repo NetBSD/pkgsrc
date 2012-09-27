@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/09/21 05:43:16 sno Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/27 10:06:30 jperkin Exp $
 
 DISTNAME=	xf86-video-nv-2.1.18
 #PKGREVISION=	2
@@ -16,6 +16,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
