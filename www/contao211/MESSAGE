@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/03/28 15:14:43 taca Exp $
+$NetBSD: MESSAGE,v 1.3 2012/09/27 03:06:55 taca Exp $
 
 To complete the setup, please read:
 
-	${PREFIX}/share/doc/contao${CT_VER}/README
+	${PREFIX}/share/doc/contao${CT_VER}/README.md
 
 To use minify the HTML markup function, you'll have to install the
 following package:
