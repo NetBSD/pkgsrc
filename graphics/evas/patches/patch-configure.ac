@@ -1,17 +1,21 @@
-$NetBSD: patch-configure.ac,v 1.2 2011/12/26 02:56:51 sbd Exp $
+$NetBSD: patch-configure.ac,v 1.3 2012/09/27 13:20:42 jperkin Exp $
 
---- configure.ac.orig	2011-11-17 03:25:24.000000000 +0000
-+++ configure.ac
-@@ -81,7 +81,7 @@ case "$host_os" in
+--- configure.ac.orig	Thu Nov 17 03:25:24 2011
++++ configure.ac	Thu Sep 27 13:04:34 2012
+@@ -80,8 +80,11 @@
+    mingw32ce*)
        MODULE_ARCH="$host_os-$host_cpu"
        ;;
++   solaris*)
++      MODULE_ARCH="solaris-$host_cpu-v_maj.v_min.v_mic"
++      ;;
     *)
 -      MODULE_ARCH="$host_os-$host_cpu-v_maj.v_min.v_mic"
 +      MODULE_ARCH="${host_os%-gnu}-$host_cpu-v_maj.v_min.v_mic"
        ;;
  esac
  AC_SUBST(MODULE_ARCH)
-@@ -569,6 +569,7 @@ if test "x${want_evas_cserve}" = "xyes"
+@@ -569,6 +572,7 @@
     AC_LINK_IFELSE(
        [AC_LANG_PROGRAM(
           [[
