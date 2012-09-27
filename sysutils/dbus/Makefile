@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/08/14 19:18:08 abs Exp $
+# $NetBSD: Makefile,v 1.56 2012/09/27 19:45:18 ryoon Exp $
 
 DISTNAME=	dbus-1.6.4
 PKGREVISION=	1
@@ -27,6 +27,9 @@ OWN_DIRS_PERMS+=	${VARBASE}/db/dbus ${DBUS_USER} ${DBUS_GROUP} 0755
 SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROUP} 4511
 
 .include "../../mk/bsd.prefs.mk"
+
+# Disable man2html detection forcibly
+CONFIGURE_ENV+=		ac_cv_path_MAN2HTML=
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
