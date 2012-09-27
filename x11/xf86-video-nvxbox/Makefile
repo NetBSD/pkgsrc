@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/15 23:06:06 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/27 10:06:30 jperkin Exp $
 #
 
 DISTNAME=	xf86-video-nvxbox-${VER}
@@ -18,6 +18,12 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-${VER}//}
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
