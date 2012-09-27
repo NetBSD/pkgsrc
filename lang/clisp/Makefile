@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2012/09/15 10:05:18 obache Exp $
+# $NetBSD: Makefile,v 1.90 2012/09/27 10:51:47 jperkin Exp $
 #
 
 DISTNAME=		clisp-2.49
@@ -28,7 +28,7 @@ CONFIGURE_DIRS=		.
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 BUILD_DIRS=		src
-USE_TOOLS+=		dvipdf
+USE_TOOLS+=		dvipdf groff
 UNLIMIT_RESOURCES=	datasize stacksize
 
 USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure --host=..." => cross-building
