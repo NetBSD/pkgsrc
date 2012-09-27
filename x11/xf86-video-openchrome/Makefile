@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/15 23:06:06 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/27 10:06:31 jperkin Exp $
 #
 
 DISTNAME=	xf86-video-openchrome-0.2.904
@@ -25,6 +25,10 @@ CONFIGURE_ARGS+=	--enable-dri
 PLIST_VARS+=		XvMC
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST.XvMC=		yes
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
