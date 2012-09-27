@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/14 12:19:32 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/27 12:01:57 jperkin Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	xetex-0.9998
@@ -71,6 +71,8 @@ INSTALLATION_DIRS+=	bin
 .if !empty(MACHINE_PLATFORM:MDarwin-1[0-9]*)
 CONFIGURE_ENV+=	kpse_cv_have_Carbon=no
 .endif
+
+CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
 
 .include "../../converters/TECkit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
