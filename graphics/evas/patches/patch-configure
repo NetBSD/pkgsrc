@@ -1,17 +1,21 @@
-$NetBSD: patch-configure,v 1.4 2011/12/26 02:56:51 sbd Exp $
+$NetBSD: patch-configure,v 1.5 2012/09/27 13:20:42 jperkin Exp $
 
---- configure.orig	2011-12-02 07:42:00.000000000 +0000
-+++ configure
-@@ -12101,7 +12101,7 @@ case "$host_os" in
+--- configure.orig	Fri Dec  2 07:42:00 2011
++++ configure	Thu Sep 27 13:05:49 2012
+@@ -12100,8 +12100,11 @@
+    mingw32ce*)
        MODULE_ARCH="$host_os-$host_cpu"
        ;;
++   solaris*)
++      MODULE_ARCH="solaris-$host_cpu-1.1.0"
++      ;;
     *)
 -      MODULE_ARCH="$host_os-$host_cpu-1.1.0"
 +      MODULE_ARCH="${host_os%-gnu}-$host_cpu-1.1.0"
        ;;
  esac
  
-@@ -19846,6 +19846,7 @@ $as_echo_n "checking whether shm_open()
+@@ -19846,6 +19849,7 @@
     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
