@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.50 2012/09/15 10:54:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q2,v 1.1.2.51 2012/09/27 11:10:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q2 branch:
@@ -287,3 +287,7 @@ Pullup ticket #3920 - requested by taca
 net/{isc-dhcp4,isc-dhcpd4,isc-dhclient4,isc-dhcrelay} security fix
 Pullup ticket #3921 - requested by bouyer
 net/freeradius2: security patch
+Pullup ticket #3922 - requested by taca
+www/apache22: security update
+Pullup ticket #3923 - requested by taca
+graphics/optipng: security update
