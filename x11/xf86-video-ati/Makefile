@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/10/27 16:48:26 jakllsch Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/27 10:06:29 jperkin Exp $
 
 DISTNAME=	xf86-video-ati-6.12.4
 PKGREVISION=	4
@@ -17,6 +17,12 @@ CONFIGURE_ARGS+=	--enable-dri
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
