@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/07/26 03:06:05 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/27 03:06:55 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 DIST_SUBDIR=	${CT_DIST_SUBDIR}
