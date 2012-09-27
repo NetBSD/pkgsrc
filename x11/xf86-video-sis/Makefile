@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/15 23:06:07 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/27 10:06:31 jperkin Exp $
 #
 
 DISTNAME=	xf86-video-sis-0.10.2
@@ -19,12 +19,17 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/compiler.mk"
+.include "../../mk/bsd.prefs.mk"
+
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
 .elif empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
