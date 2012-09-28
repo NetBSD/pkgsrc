@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/04/15 02:05:28 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2012/09/28 16:30:16 ryoon Exp $
 
 SHA1 (aranym_0.9.13.orig.tar.gz) = fa06e8204eef848c16411e4fbfdc2a19c64599c5
 RMD160 (aranym_0.9.13.orig.tar.gz) = c6e7303b56d8c63b836e573755cf592f935bb85e
@@ -11,3 +11,4 @@ SHA1 (patch-ac) = 8899894456b01c84efd9f96f553750c87df7c21a
 SHA1 (patch-ad) = bb8d6b2ecd0c0066f3032a0ef196a1adb51d1786
 SHA1 (patch-ae) = 6c7ab7cf17bb9da5944c9a09474079bcfe7e7f43
 SHA1 (patch-configure.ac) = 528076ace6ef57332e051109ccbd07eda6eaed72
+SHA1 (patch-src_uae__cpu_fpu_fpu__mpfr.cpp) = c492c198a746d62470112b7a7367692d47e16b61
