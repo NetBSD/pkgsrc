@@ -1,6 +1,9 @@
-$NetBSD: patch-lasso-xml-tools.c,v 1.1 2011/09/08 00:17:03 joerg Exp $
+$NetBSD: patch-lasso-xml-tools.c,v 1.2 2012/09/28 11:59:18 obache Exp $
 
---- lasso/xml/tools.c.orig	2011-09-07 03:18:42.000000000 +0000
+* XXX
+* for libxml>=2.9.0
+
+--- lasso/xml/tools.c.orig	2011-01-05 13:57:32.000000000 +0000
 +++ lasso/xml/tools.c
 @@ -27,6 +27,7 @@
  /* permit importation of timegm for glibc2, wait for people to complain it does not work on their
@@ -10,6 +13,15 @@ $NetBSD: patch-lasso-xml-tools.c,v 1.1 2011/09/08 00:17:03 joerg Exp $
  #include "private.h"
  #include <string.h>
  #include <time.h>
+@@ -1063,7 +1064,7 @@ lasso_node_build_deflated_query(LassoNod
+ 	buf = xmlAllocOutputBuffer(handler);
+ 	xmlNodeDumpOutput(buf, NULL, xmlnode, 0, 0, "utf-8");
+ 	xmlOutputBufferFlush(buf);
+-	buffer = buf->conv ? buf->conv->content : buf->buffer->content;
++	buffer = xmlBufferContent(buf->conv ? buf->conv : buf->buffer);
+ 
+ 	xmlFreeNode(xmlnode);
+ 	xmlnode = NULL;
 @@ -1196,6 +1197,11 @@ lasso_concat_url_query(const char *url, 
   *
   * Return value: TRUE if no error occurred during evaluation, FALSE otherwise.
@@ -41,3 +53,12 @@ $NetBSD: patch-lasso-xml-tools.c,v 1.1 2011/09/08 00:17:03 joerg Exp $
  	xpath_object = xmlXPathEvalExpression((xmlChar*)expression, xpath_ctx);
  	xpath_ctx->error = oldStructuredErrorFunc;
  
+@@ -2156,7 +2159,7 @@ lasso_xmlnode_to_string(xmlNode *node, g
+ 	buf = xmlAllocOutputBuffer(handler);
+ 	xmlNodeDumpOutput(buf, NULL, node, level, format ? 1 : 0, "utf-8");
+ 	xmlOutputBufferFlush(buf);
+-	buffer = buf->conv ? buf->conv->content : buf->buffer->content;
++	buffer = xmlBufferContent(buf->conv ? buf->conv : buf->buffer);
+ 	/* do not mix XML and GLib strings, so we must copy */
+ 	str = g_strdup((char*)buffer);
+ 	xmlOutputBufferClose(buf);
