@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2012/09/15 10:04:54 obache Exp $
+# $NetBSD: Makefile,v 1.63 2012/09/28 08:55:19 jperkin Exp $
 
 DISTNAME=	gnuplot-4.6.0
 PKGREVISION=	1
@@ -47,6 +47,7 @@ SUBST_SED.fontpath=	-e 's,@PKGSRC_PREFIX@,"${PREFIX}",'
 
 .include "options.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
