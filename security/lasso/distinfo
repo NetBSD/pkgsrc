@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2012/05/06 17:14:58 dholland Exp $
+$NetBSD: distinfo,v 1.11 2012/09/28 11:59:18 obache Exp $
 
 SHA1 (lasso-2.3.5.tar.gz) = 3ba022e85a2d05cd00e45d41f8f59a94b71b75b0
 RMD160 (lasso-2.3.5.tar.gz) = 24660682b34c38a556b9ea902066cc9b0f74e9a7
@@ -6,4 +6,7 @@ Size (lasso-2.3.5.tar.gz) = 3907467 bytes
 SHA1 (patch-lasso-errors_c) = 5c0fe304cd9cce6d926362c248ffe60c2c7357c5
 SHA1 (patch-lasso-errors_c_in) = d4663edb280d38a0cb1a422d9b95b1d344012f63
 SHA1 (patch-lasso-id-ff-provider.c) = 9312c67a8e81eeea95b888745a2b9f504a36a36f
-SHA1 (patch-lasso-xml-tools.c) = bd45a4ad4d492c0599665371cc413ef49064b54b
+SHA1 (patch-lasso-xml-tools.c) = 1cbc77b8fb9e6a4ecf0c1fe5017cca2782f343e4
+SHA1 (patch-lasso_id-ff_lecp.c) = c19d443664e6a68f37573d54add51998ffa2622b
+SHA1 (patch-lasso_id-ff_session.c) = 9fd9c5f413e96f24658c897e9ac10b5c6df253bd
+SHA1 (patch-lasso_saml-2.0_ecp.c) = 135f10c1d8b146963f0ccaa74ab5b871317b3111
