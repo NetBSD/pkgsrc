@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/09/04 13:31:37 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2012/09/28 08:30:00 dholland Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BROKEN=		Unbuildable for years and appears to be dead upstream.
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
