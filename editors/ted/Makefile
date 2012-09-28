@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/07/12 17:10:21 marino Exp $
+# $NetBSD: Makefile,v 1.51 2012/09/28 09:10:10 jperkin Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -71,6 +71,7 @@ do-install:
 	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad \
 		${DESTDIR}${PREFIX}/lib/X11/app-defaults/Ted
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
