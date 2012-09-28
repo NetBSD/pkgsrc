@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2012/07/03 17:36:10 joerg Exp $
+$NetBSD: distinfo,v 1.19 2012/09/28 05:47:31 dholland Exp $
 
 SHA1 (xorp-1.6.tar.gz) = 366d32068ed76b8ec69958b601d4fbde61ef4cbb
 RMD160 (xorp-1.6.tar.gz) = 32b3f6d03defc816ed983088e61b5e808de17f98
@@ -25,7 +25,7 @@ SHA1 (patch-libxorp_safe__callback__obj.hh) = a5019173b864829dd96f55c92d831dd98a
 SHA1 (patch-libxorp_test__main.hh) = 9893f1276066f16fe92b5787e9235484882cbfe9
 SHA1 (patch-libxorp_transaction.hh) = f6fbcc929610f48116590fd28a8df7ed30280856
 SHA1 (patch-libxorp_trie.hh) = eab5e4e232fb3bd60d9c3632c47bc4d89f432ed8
-SHA1 (patch-libxorp_utility.h) = dcd6dd63d82cbdbc47750422430cdd3f08f45497
+SHA1 (patch-libxorp_utility.h) = d9d929e0a900f7f3dcfa680982539c2881940223
 SHA1 (patch-libxorp_xorp.h) = 09fa420872903bdff321decd020810588668c2a2
 SHA1 (patch-ospf_peer.cc) = c5220d6ee8966ded9ebc168092c5c41a32ee6042
 SHA1 (patch-pim_pim__bsr.cc) = 67ebcd67efeb421327de9847803213f826a2c5cc
