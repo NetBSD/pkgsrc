@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/04/04 08:30:30 manu Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/09/28 11:52:22 obache Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
@@ -10,6 +10,7 @@ MASTER_SITES=	http://dev.entrouvert.org/lasso/
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://lasso.entrouvert.org/
 COMMENT=	Libery Alliance Single Sign On implementation
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=          ${.CURDIR}/../../security/lasso/distinfo
 PATCHDIR=               ${.CURDIR}/../../security/lasso/patches
