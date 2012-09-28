@@ -1,4 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:00:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/28 13:41:30 gdt Exp $
+bin/flarq
 bin/fldigi
+bin/fldigi-shell
+man/man1/flarq.1
+man/man1/fldigi-shell.1
+man/man1/fldigi.1
+share/applications/flarq.desktop
 share/applications/fldigi.desktop
+share/fldigi/NAVTEX_Stations.csv
+share/locale/es/LC_MESSAGES/fldigi.mo
+share/locale/fr/LC_MESSAGES/fldigi.mo
+share/locale/it/LC_MESSAGES/fldigi.mo
+share/locale/pl/LC_MESSAGES/fldigi.mo
+share/pixmaps/flarq.xpm
 share/pixmaps/fldigi.xpm
