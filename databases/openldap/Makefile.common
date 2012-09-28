@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2012/08/06 13:33:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.33 2012/09/28 12:28:53 manu Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -87,6 +87,9 @@ DB_CONFIG?=		# empty
 
 PTHREAD_OPTS+=		require
 
+# This avoids linking with base libfetch.so, which depends on base OpenSSL.
+# causing crashes when openldap-client is linked with pkgsrc OpenSSL.
+.include "../../net/libfetch/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

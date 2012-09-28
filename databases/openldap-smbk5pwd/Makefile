@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/08 05:01:03 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 12:28:53 manu Exp $
 
 PKGNAME=	${DISTNAME:S/-/-smbk5pwd-/}
 COMMENT=	Samba and Kerberos password sync for OpenLDAP
@@ -35,7 +35,7 @@ LIBS+=		-lkrb5 -lkadm5srv
 CPPFLAGS+=	-DDO_SAMBA
 .endif
 
-MAKE_ENV+=	LIBS=${LIBS:M*:Q}
+MAKE_ENV+=	EXTRA_LIBS=${LIBS:M*:Q}
 
 .include "../../databases/openldap/Makefile.common"
 .include "../../databases/openldap-client/buildlink3.mk"

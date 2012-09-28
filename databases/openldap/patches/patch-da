@@ -1,4 +1,4 @@
-$NetBSD: patch-da,v 1.5 2012/03/13 19:57:11 adam Exp $
+$NetBSD: patch-da,v 1.6 2012/09/28 12:28:53 manu Exp $
 
 --- contrib/slapd-modules/smbk5pwd/Makefile.orig	2012-02-29 17:37:09.000000000 +0000
 +++ contrib/slapd-modules/smbk5pwd/Makefile
@@ -23,7 +23,7 @@ $NetBSD: patch-da,v 1.5 2012/03/13 19:57:11 adam Exp $
  SSL_LIB=-lcrypto
  LDAP_LIB=-lldap_r -llber
 -LIBS=$(LDAP_LIB) $(HEIMDAL_LIB) $(SSL_LIB)
-+LIBS=$(LDAP_LIB) $(SSL_LIB)
++LIBS=$(LDAP_LIB) $(SSL_LIB) ${EXTRA_LIBS}
  
  prefix=/usr/local
  exec_prefix=$(prefix)
