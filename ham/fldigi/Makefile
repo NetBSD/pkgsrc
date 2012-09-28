@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/08/08 00:19:11 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/28 03:25:41 dholland Exp $
 #
 
 DISTNAME=	fldigi-3.03
@@ -20,6 +20,12 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-xmlrpc=no
 CONFIGURE_ENV+=		STRIP=${STRIP}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${LOWER_OPSYS} == "netbsd"
+CONFIGURE_ENV+=		ac_cv_header_execinfo_h=no
+.endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
