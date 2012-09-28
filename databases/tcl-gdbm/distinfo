@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:33:10 agc Exp $
+$NetBSD: distinfo,v 1.5 2012/09/28 08:54:24 dholland Exp $
 
 SHA1 (tclgdbm-0.10.tar.gz) = 8addd84ef3cde602d59d6aa7dffc5a1cda0bf092
 RMD160 (tclgdbm-0.10.tar.gz) = e75af043f30b72d78d0df6fe0099b6acf42854c4
 Size (tclgdbm-0.10.tar.gz) = 115524 bytes
 SHA1 (patch-aa) = cd51edd644fe218297afcae634d404e0362b915a
 SHA1 (patch-ab) = 82247114c0adc555a6f9e9b1eca895e1c7f6955f
+SHA1 (patch-tclgdbm_c) = 1252b779af76d959e6c0b498d3dff607856859b8
