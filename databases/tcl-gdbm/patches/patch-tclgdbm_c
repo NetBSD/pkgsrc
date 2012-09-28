@@ -1,0 +1,56 @@
+$NetBSD: patch-tclgdbm_c,v 1.1 2012/09/28 08:54:25 dholland Exp $
+
+Fix build with tcl85.
+
+--- tclgdbm.c~	2001-02-10 22:40:44.000000000 +0000
++++ tclgdbm.c
+@@ -491,7 +491,7 @@ nextkey( ClientData client, Tcl_Interp *
+ static int 
+ open( ClientData client, Tcl_Interp *interp, int objc, Tcl_Obj *CONST objv[] )
+ {
+-  static char *modes[] ={ "r",        "rw",         "rwc",       "rwn", NULL };
++  static const char *modes[] ={ "r",        "rw",         "rwc",       "rwn", NULL };
+   static int values[] ={  GDBM_READER, GDBM_WRITER, GDBM_WRCREAT, GDBM_NEWDB };
+   int mode, new;
+   char buf[16];
+@@ -556,7 +556,7 @@ open( ClientData client, Tcl_Interp *int
+ static int 
+ error( ClientData client, Tcl_Interp *interp, int objc, Tcl_Obj *CONST objv[] )
+ {
+-  static char *modes[] ={ "number", "text", NULL };
++  static const char *modes[] ={ "number", "text", NULL };
+   int mode;
+ 
+   if ( objc != 3 )
+@@ -589,7 +589,7 @@ error( ClientData client, Tcl_Interp *in
+ static int 
+ writemode( ClientData client, Tcl_Interp *interp, int objc, Tcl_Obj *CONST objv[] )
+ {
+-  static char *modes[] ={ "replace",    "insert",   NULL };
++  static const char *modes[] ={ "replace",    "insert",   NULL };
+   static int values[] ={  GDBM_REPLACE, GDBM_INSERT };
+   int mode;
+   DB *db ;
+@@ -619,7 +619,7 @@ writemode( ClientData client, Tcl_Interp
+ static int 
+ tclgdbm( ClientData client, Tcl_Interp *interp, int objc, Tcl_Obj *CONST objv[] )
+ {
+-  static char *cmds[] = {
++  static const char *cmds[] = {
+ 	"close", "delete", "error", "exists", "fetch", "firstkey", "insert",
+ 	"list", "nextkey", "open", "reorganize", "store", "writemode", NULL };
+   static int (*f[])(ClientData,Tcl_Interp*,int,Tcl_Obj*CONST*) = {
+@@ -641,13 +641,6 @@ tclgdbm( ClientData client, Tcl_Interp *
+ 
+ 
+ /*
+- * Not exported in tcl.h
+- */
+-Tcl_Namespace *Tcl_FindNamespace( Tcl_Interp*, char*, Tcl_Namespace*, int );
+-int Tcl_Export( Tcl_Interp*, Tcl_Namespace*, char*, int );
+-
+-
+-/*
+  * Tclgdbm_Init
+  *
+  * Initialization for package.
