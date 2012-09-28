@@ -1,11 +1,20 @@
-$NetBSD: patch-ab,v 1.4 2010/12/25 11:35:06 obache Exp $
+$NetBSD: patch-ab,v 1.5 2012/09/28 12:31:59 adam Exp $
 
 * portability fix
 * DragonFly also not require extra libs for OpenSSL.
 
---- configure.orig	2010-05-25 21:53:07.000000000 +0000
+--- configure.orig	2011-05-11 23:02:14.000000000 +0000
 +++ configure
-@@ -10988,7 +10988,7 @@ CC="$lt_save_CC"
+@@ -9818,7 +9818,7 @@ darwin* | rhapsody*)
+   soname_spec='${libname}${release}${major}$shared_ext'
+   shlibpath_overrides_runpath=yes
+   shlibpath_var=DYLD_LIBRARY_PATH
+-  shrext_cmds='`test .$module = .yes && echo .so || echo .dylib`'
++  shrext_cmds='.dylib'
+ 
+   sys_lib_search_path_spec="$sys_lib_search_path_spec /usr/local/lib"
+   sys_lib_dlsearch_path_spec='/usr/local/lib /lib /usr/lib'
+@@ -11005,7 +11005,7 @@ CC="$lt_save_CC"
  
  
  
@@ -14,7 +23,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/25 11:35:06 obache Exp $
      # Extract the first word of "rm", so it can be a program name with args.
  set dummy rm; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
-@@ -11703,7 +11703,7 @@ else
+@@ -11718,7 +11718,7 @@ else
  fi
  
  
@@ -23,15 +32,16 @@ $NetBSD: patch-ab,v 1.4 2010/12/25 11:35:06 obache Exp $
      shrext=$shrext_cmds
  fi
  
-@@ -12366,6 +12366,7 @@ elif test "z$with_openssl" != "z" ; then
+@@ -12465,6 +12465,8 @@ elif test "z$with_openssl" != "z" ; then
  	*-*-osf5*) openssl_exlibs=;;
  	*-*-openbsd*) openssl_exlibs=;;
  	*-*-netbsd*) openssl_exlibs=;;
 +	*-*-dragonfly*) openssl_exlibs=;;
++	*-*-darwin*) openssl_exlibs=;;
  	#FIXME: check if lib "dl" is required
  	*)          openssl_exlibs=-ldl;;
      esac
-@@ -12771,7 +12772,7 @@ else
+@@ -12864,7 +12866,7 @@ else
      XMLSEC_CRYPTO_DISABLED_LIST="$XMLSEC_CRYPTO_DISABLED_LIST openssl"
  fi
  
