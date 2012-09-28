@@ -1,4 +1,4 @@
-$NetBSD: patch-libxorp_utility.h,v 1.1 2012/07/03 17:36:10 joerg Exp $
+$NetBSD: patch-libxorp_utility.h,v 1.2 2012/09/28 05:47:32 dholland Exp $
 
 --- libxorp/utility.h.orig	2009-01-05 18:30:58.000000000 +0000
 +++ libxorp/utility.h
@@ -7,7 +7,7 @@ $NetBSD: patch-libxorp_utility.h,v 1.1 2012/07/03 17:36:10 joerg Exp $
   */
  #ifndef static_assert
 -#define static_assert(a) switch (a) case 0: case (a):
-+#define static_assert(a) typedef char static_assertion ## __LINE__[(a) ? 1 : -1]
++#define static_assert(a) ((void)sizeof(int[(a) ? 1 : -1]))
  #endif /* static_assert */
  
  /*
@@ -16,7 +16,7 @@ $NetBSD: patch-libxorp_utility.h,v 1.1 2012/07/03 17:36:10 joerg Exp $
  # undef UNUSED
  #endif /* UNUSED */
 -#define UNUSED(var)	static_assert(sizeof(var) != 0)
-+#define UNUSED(var)	(void)var
++#define UNUSED(var)	((void)var)
  
  #ifdef __cplusplus
  #define cstring(s) (s).str().c_str()
