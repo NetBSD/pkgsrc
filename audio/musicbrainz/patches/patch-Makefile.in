@@ -1,16 +1,14 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/09/27 11:14:33 jperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2012/09/28 03:33:30 dholland Exp $
 
 Do not descend into osdep, it creates an empty library, which systems such
 as Solaris do not like.
 
---- Makefile.in.orig	Thu Sep 27 10:59:01 2012
-+++ Makefile.in	Thu Sep 27 10:59:11 2012
-@@ -212,7 +212,7 @@
- #    $Id: patch-Makefile.in,v 1.1 2012/09/27 11:14:33 jperkin Exp $
+--- Makefile.in.orig	2007-05-12 10:17:57.000000000 +0000
++++ Makefile.in
+@@ -213,5 +213,5 @@ target_alias = @target_alias@
  #
  AUTOMAKE_OPTIONS = foreign
 -SUBDIRS = include lib osdep examples 
 +SUBDIRS = include lib examples 
  DIST_SUBDIRS = osdep include lib examples perl python
  pcdir = $(libdir)/pkgconfig
- pc_DATA = libmusicbrainz.pc
