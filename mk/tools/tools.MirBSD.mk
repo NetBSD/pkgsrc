@@ -1,4 +1,4 @@
-# $NetBSD: tools.MirBSD.mk,v 1.3 2012/07/27 12:53:26 bsiegert Exp $
+# $NetBSD: tools.MirBSD.mk,v 1.4 2012/09/28 19:07:59 bsiegert Exp $
 #
 # System-supplied tools for the MirOS operating system.
 
@@ -21,7 +21,7 @@ TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
-TOOLS_PLATFORM.false?=		/usr/bin/false
+TOOLS_PLATFORM.false?=		/bin/sh -c false
 TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
@@ -70,7 +70,7 @@ TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
-TOOLS_PLATFORM.true?=		/usr/bin/true
+TOOLS_PLATFORM.true?=		/bin/sh -c true
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
