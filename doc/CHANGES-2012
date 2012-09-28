@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3051 2012/09/28 00:54:20 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3052 2012/09/28 07:58:17 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4730,3 +4730,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/ejabberd to 2.1.10nb1 [tron 2012-09-26]
 	Updated www/contao211 to 2.11.5nb1 [taca 2012-09-27]
 	Updated www/contao211-translations to 201209250 [taca 2012-09-27]
+	Updated lang/swi-prolog-lite to 5.11.18nb1 [sbd 2012-09-28]
