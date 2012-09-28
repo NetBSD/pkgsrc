@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3054 2012/09/28 10:02:32 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.3055 2012/09/28 13:41:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/swi-prolog-lite to 5.11.18nb1 [sbd 2012-09-28]
 	Updated audio/xmcd to 3.0.2nb13 [dholland 2012-09-28]
 	Updated lang/tcl-otcl to 1.14 [sbd 2012-09-28]
+	Updated ham/fldigi to 3.21.52 [gdt 2012-09-28]
