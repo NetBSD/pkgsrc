@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3050 2012/09/27 13:48:45 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3051 2012/09/28 00:54:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4728,5 +4728,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xf86-input-mouse to 1.7.2nb2 [liamjfoy 2012-09-26]
 	Updated net/freerdist to 0.94 [christos 2012-09-26]
 	Updated chat/ejabberd to 2.1.10nb1 [tron 2012-09-26]
-	Updated www/contao211 to 2.11.6nb1 [taca 2012-09-27]
+	Updated www/contao211 to 2.11.5nb1 [taca 2012-09-27]
 	Updated www/contao211-translations to 201209250 [taca 2012-09-27]
