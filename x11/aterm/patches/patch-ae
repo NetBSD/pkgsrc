@@ -1,11 +1,21 @@
-$NetBSD: patch-ae,v 1.6 2007/01/19 08:02:33 rillig Exp $
+$NetBSD: patch-ae,v 1.7 2012/09/29 17:59:34 asau Exp $
 
 Tags: from-upstream
 
+Use pseudo-terminal multiplexor on NetBSD.
 Correctly set the terminal size on FreeBSD and NetBSD.
 
---- src/command.c.orig	2005-06-21 22:08:16.000000000 +0200
-+++ src/command.c	2007-01-19 08:56:52.000000000 +0100
+--- src/command.c.orig	2005-06-21 20:08:16.000000000 +0000
++++ src/command.c
+@@ -542,7 +542,7 @@ get_pty(void)
+     ptydev = ttydev = _getpty(&fd, O_RDWR | O_NDELAY, 0622, 0);
+     if (ptydev == NULL)
+ 	goto Failed;
+-#elif defined (__svr4__) || defined(__CYGWIN32__) || defined(__lnx21__)
++#elif defined (__svr4__) || defined(__CYGWIN32__) || defined(__lnx21__) || defined(__NetBSD__)
+     {
+ 	extern char    *ptsname();
+ 
 @@ -1085,6 +1085,8 @@ run_command(char *argv[])
  #endif				/* SRIOCSREDIR */
  	}
