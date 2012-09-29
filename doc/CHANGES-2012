@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3055 2012/09/28 13:41:42 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3056 2012/09/29 08:39:51 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/xmcd to 3.0.2nb13 [dholland 2012-09-28]
 	Updated lang/tcl-otcl to 1.14 [sbd 2012-09-28]
 	Updated ham/fldigi to 3.21.52 [gdt 2012-09-28]
+	Updated textproc/libplist to 1.8nb2 [dholland 2012-09-29]
