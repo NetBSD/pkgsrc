@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2012/07/02 16:27:11 drochner Exp $
+# $NetBSD: Makefile.common,v 1.79 2012/09/29 20:10:35 dholland Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-esound/Makefile
@@ -15,6 +15,8 @@ EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
+
+MAKE_JOBS_SAFE=		no
 
 XINE_MOD_DIR_VER=	2.2
 PLIST_SUBST+=		XINE_MOD_DIR_VER=${XINE_MOD_DIR_VER:Q}
