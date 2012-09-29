@@ -1,13 +1,16 @@
-$NetBSD: patch-swig_plist.i,v 1.1 2012/01/01 14:39:33 shattered Exp $
+$NetBSD: patch-swig_plist.i,v 1.2 2012/09/29 08:39:23 dholland Exp $
 
---- swig/plist.i.orig	2011-03-20 16:45:21.000000000 +0000
+Fix build on platforms where tv_sec isn't time_t.
+
+--- swig/plist.i.orig	2012-01-11 14:29:30.000000000 +0000
 +++ swig/plist.i
-@@ -34,7 +34,7 @@
+@@ -35,7 +35,8 @@
  }
  
  %typemap(out) timeval {
 -    struct tm* t = gmtime ( &$1.tv_sec );
-+    struct tm* t = gmtime ( (time_t*)&$1.tv_sec );
++    time_t mytime = $1.tv_sec;
++    struct tm* t = gmtime ( &mytime );
      if (t)
      {
  	PyDateTime_IMPORT;
