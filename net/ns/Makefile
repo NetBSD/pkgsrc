@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/08/21 23:49:24 marino Exp $
+# $NetBSD: Makefile,v 1.34 2012/09/29 04:23:02 dholland Exp $
 
 DISTNAME=	ns-2.33
 PKGREVISION=	1
@@ -12,9 +12,6 @@ COMMENT=	The UCB/LBNL Network Simulator Version 2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.12nb1
-BUILDLINK_API_DEPENDS.tk+=	tk>=8.4.12nb2
-
 WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	gmake
@@ -25,9 +22,9 @@ PTHREAD_OPTS+=	require
 
 CONFIGURE_ARGS+=	LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; ${ECHO} $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
-CONFIGURE_ARGS+=	--with-tcl-ver=8.4
+CONFIGURE_ARGS+=	--with-tcl-ver=8.5
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
-CONFIGURE_ARGS+=	--with-tk-ver=8.4
+CONFIGURE_ARGS+=	--with-tk-ver=8.5
 CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 CONFIGURE_ENV+=		X11LIBDIR=${X11PREFIX}/lib${LIBABISUFFIX}
