@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2002/08/25 18:39:47 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2012/09/29 06:29:01 dholland Exp $
 
---- configure.orig	Sat Jun 29 21:46:02 2002
-+++ configure	Sat Jun 29 21:47:37 2002
-@@ -7013,9 +7013,9 @@
+--- configure.orig	2002-06-18 11:31:49.000000000 +0000
++++ configure
+@@ -6090,7 +6090,7 @@ rm -f conftest*
+ 
+         
+     if test "$TCLINCLUDE" != "nope" -a "$TCLBIN" = "nope"; then
+-	for ac_prog in tclsh tclsh8.4 tclsh8.3 tclsh8.2 tclsh8.1 tclsh8.0
++	for ac_prog in tclsh tclsh8.6 tclsh8.5 tclsh8.4 tclsh8.3 tclsh8.2 tclsh8.1 tclsh8.0
+ do
+ # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
+@@ -7013,9 +7013,9 @@ else
  
  fi
  
