@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/04/22 16:11:13 wiz Exp $
+$NetBSD: distinfo,v 1.6 2012/09/29 08:39:22 dholland Exp $
 
 SHA1 (libplist-1.8.tar.bz2) = dea18ac31cc497dba959bdb459a2a49fb41664c3
 RMD160 (libplist-1.8.tar.bz2) = b8da55db4bec34e4c8b9126da0ea46e79f36ccf1
 Size (libplist-1.8.tar.bz2) = 81278 bytes
 SHA1 (patch-libcnary_node.c) = fb68624e544acee262f1440d5920cbb4288c1958
 SHA1 (patch-src_base64.c) = efc37b2345e0328eb7c74be1f07487e14eb3d3f6
-SHA1 (patch-swig_plist.i) = f4a375c2b96c8eb04c5f53f4753703c0bb86088d
+SHA1 (patch-swig_plist.i) = 6ec7b989168e0e20da06722a97631e082cd5b05d
