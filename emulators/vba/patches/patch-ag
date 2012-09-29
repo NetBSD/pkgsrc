@@ -1,11 +1,21 @@
-$NetBSD: patch-ag,v 1.2 2012/07/18 21:55:41 marino Exp $
+$NetBSD: patch-ag,v 1.3 2012/09/29 21:27:14 dholland Exp $
 
-Fix build with png-1.5.
-GzFile change from void * in libz 1.2.6
-This change required to compile with libz >= 1.2.6
+- Fix build with png-1.5.
+- Do not use void * as a synonym for gzFile, as gzFile is no longer
+  void * in libz 1.2.6.
+- Use const syntax correctly: const void * != void *const.
 
 --- src/Util.cpp.orig	2004-05-20 17:42:37.000000000 +0000
 +++ src/Util.cpp
+@@ -47,7 +47,7 @@ extern "C" {
+ #define _stricmp strcasecmp
+ #endif // ! _MSC_VER
+ 
+-static int (*utilGzWriteFunc)(gzFile, const voidp, unsigned int) = NULL;
++static int (*utilGzWriteFunc)(gzFile, voidpc, unsigned int) = NULL;
+ static int (*utilGzReadFunc)(gzFile, voidp, unsigned int) = NULL;
+ static int (*utilGzCloseFunc)(gzFile) = NULL;
+ 
 @@ -79,7 +79,7 @@ bool utilWritePNGFile(const char *fileNa
      return false;
    }
@@ -20,7 +30,7 @@ This change required to compile with libz >= 1.2.6
  gzFile utilGzOpen(const char *file, const char *mode)
  {
 -  utilGzWriteFunc = (int (*)(void *,void * const, unsigned int))gzwrite;
-+  utilGzWriteFunc = (int (*)(gzFile, void * const, unsigned int))gzwrite;
++  utilGzWriteFunc = (int (*)(gzFile, const void *, unsigned int))gzwrite;
    utilGzReadFunc = gzread;
    utilGzCloseFunc = gzclose;
  
