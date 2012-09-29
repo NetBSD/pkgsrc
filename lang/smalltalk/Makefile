@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2012/09/15 10:05:21 obache Exp $
+# $NetBSD: Makefile,v 1.69 2012/09/29 11:46:36 ryoon Exp $
 
 DISTNAME=	smalltalk-3.2.4
 PKGREVISION=	8
@@ -43,6 +43,13 @@ REPLACE_INTERPRETER+=	sys-sed
 REPLACE.sys-sed.old=	[^[:space:]]*sed
 REPLACE.sys-sed.new=	${SED}
 REPLACE_FILES.sys-sed=	${REPLACE_SED}
+
+.include "../../mk/bsd.prefs.mk"
+
+# for backtrace
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LIBS+=	-lexecinfo
+.endif
 
 post-extract:
 	sed -e "s/long double/double/g" -e "s/1.0L/1.0/g" -e  "s/0.0L/0.0/g" \
