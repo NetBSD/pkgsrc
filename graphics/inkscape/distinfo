@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2012/09/07 19:16:48 adam Exp $
+$NetBSD: distinfo,v 1.41 2012/09/29 23:28:22 dholland Exp $
 
 SHA1 (inkscape-0.48.3.1.tar.bz2) = 23344555a1b5cc7909ad01d926cfaddb67bfbde9
 RMD160 (inkscape-0.48.3.1.tar.bz2) = 139720f01b987001b558226ec2de60b36fb1123c
@@ -19,7 +19,3 @@ SHA1 (patch-am) = 2307f1ab4bb628d9babaeadb5783073f62eedaca
 SHA1 (patch-ap) = cd29bd178dc2c6c9456bc09d6663d6a25acc7da1
 SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
 SHA1 (patch-ar) = 128749bac44faf4135670068e06c0928eb5c27c8
-SHA1 (patch-src_box3d.cpp) = 5e67eaf8b6bd2bd4da5fc9f4dd267d69b279f211
-SHA1 (patch-src_graphlayout.cpp) = 4835b84a78daa4c4af4dc707ebbb929cef8360ee
-SHA1 (patch-src_ui_widget_registered-widget.h) = 970c70563415f9994f1e47f970c9c9c70eae8985
-SHA1 (patch-src_widget_desktop-widget.h) = d542db902ec192004796e5ad1c5100af0357e836
