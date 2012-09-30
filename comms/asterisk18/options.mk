@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2012/04/07 20:10:45 jnemeth Exp $
+# $NetBSD: options.mk,v 1.11 2012/09/30 19:29:05 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -67,8 +67,12 @@ post-configure:
 .if !empty(PKG_OPTIONS:Munixodbc)
 	${ECHO} "MENUSELECT_OPTS_app_voicemail=ODBC_STORAGE" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
-	# this is a hack to work around a bug in menuselect
+.if defined(PLIST.mgcp)
+	${ECHO} "MENUSELECT_RES=-res_pktccops" >> ${WRKSRC}/pkgsrc.makeopts
+	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
+.endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
+	# this is a hack to work around a bug in menuselect
 	cd ${WRKSRC} && make menuselect.makeopts
 
 .if !empty(PKG_OPTIONS:Mwebvmail)

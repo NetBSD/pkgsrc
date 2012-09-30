@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/08/15 08:05:06 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/09/30 19:24:18 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -332,6 +332,7 @@ lib/asterisk/modules/res_musiconhold.so
 lib/asterisk/modules/res_mutestream.so
 ${PLIST.unixodbc}lib/asterisk/modules/res_odbc.so
 lib/asterisk/modules/res_phoneprov.so
+${PLIST.mgcp}lib/asterisk/modules/res_pktccops.so
 lib/asterisk/modules/res_realtime.so
 lib/asterisk/modules/res_rtp_asterisk.so
 lib/asterisk/modules/res_rtp_multicast.so
