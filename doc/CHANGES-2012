@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3064 2012/09/30 22:07:54 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3065 2012/09/30 22:09:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/flightgear-data to 2.8.0 [dholland 2012-09-30]
 	Updated chat/ejabberd to 2.1.11 [tron 2012-09-30]
 	Added devel/userspace-rcu version 0.7.3 [pettai 2012-09-30]
+	Updated benchmark/thrulay to 0.9 [adam 2012-10-01]
