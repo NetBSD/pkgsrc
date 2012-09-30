@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3057 2012/09/30 09:07:09 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3058 2012/09/30 10:05:22 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4735,4 +4735,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/tcl-otcl to 1.14 [sbd 2012-09-28]
 	Updated ham/fldigi to 3.21.52 [gdt 2012-09-28]
 	Updated textproc/libplist to 1.8nb2 [dholland 2012-09-29]
+	Updated games/simgear to 2.8.0 [dholland 2012-09-30]
 	Updated pkgtools/url2pkg to 2.15 [asau 2012-09-30]
+	Updated games/flightgear to 2.8.0 [dholland 2012-09-30]
