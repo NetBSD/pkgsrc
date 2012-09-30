@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.6 2009/03/22 22:44:18 joerg Exp $
+# $NetBSD: NEWS,v 1.7 2012/09/30 09:02:10 asau Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,14 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Staged installation is default [asau 2012-08-14]
+	pkgsrc has changed to use unprivileged staged installation by default.
+	This makes it possible to prevent some installation mistakes.
+	It also makes detection of package conflicts easier.
+	Previously you had to set PKG_DESTDIR_SUPPORT to "user-destdir"
+	to invoke this functionality. Set PKG_DESTDIR_SUPPORT to "none"
+	to revert to direct installation.
 
 buildlink3.mk layout changed [joerg 2009-03-20]
 	The buildlink3.mk files have been reorganized to reduce
