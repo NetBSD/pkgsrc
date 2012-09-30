@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11532 2012/09/30 16:11:13 wiz Exp $
+$NetBSD: TODO,v 1.11533 2012/09/30 16:25:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,6 +353,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SDL_gfx-2.0.24
 	o SmartEiffel-2.3
 	o TiffIO-130e
+	o Transmission-2.71
+	o Transmission-gui-2.71
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.6.20
@@ -491,6 +493,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o covered-current-20090802
 	o cpio-2.9
 	o cpmtools-2.6
+	o cppunit-1.13.1
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
 	o cryptopp-5.6.0
@@ -508,6 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dasm-2.20.11
 	o dbench-4.0
+	o dbus-1.6.8
 	o dbus-glib-0.100 [wants dbus>1.2.16]
 	o dcc-1.3.141
 	o ddclient-3.7.3
@@ -594,7 +598,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ffmpeg-20120105.0.9.1
 	o ffmpeg-20120507.0.10.3
 	o ffmpeg-20120609.0.11.1
-	o ffplay-20120609.0.11.1
+	o ffmpeg-20120609.1.0
+	o ffplay-20120609.1.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
@@ -1064,7 +1069,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-creole-1.0.4 [pkg/46593]
-	o py-cython-0.17
+	o py-cython-0.17.1
 	o py-docutils-0.9 [pkg/46573]
 	o py-docutils-0.9.1
 	o py-game-1.9.1 [needs portmidi]
@@ -1073,6 +1078,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-libxml2-2.9.0
 	o py-moin-1.9.5
 	o py-mpd-0.3.0
+	o py-pytz-2012f
 	o py-simplejson-2.6.2
 	o py-sybase-0.37
 	o py-urwid-1.0.2
@@ -1295,7 +1301,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20120922
+	o x264-devel-20120929
 	o xanalyser-1.30
 	o xapian-1.2.12
 	o xaric-0.13.2
