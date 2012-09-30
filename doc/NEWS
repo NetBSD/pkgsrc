@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.7 2012/09/30 09:02:10 asau Exp $
+# $NetBSD: NEWS,v 1.8 2012/09/30 09:02:53 asau Exp $
 
 PKGSRC NEWS
 ===========
@@ -7,7 +7,7 @@ PKGSRC NEWS
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
 
-Staged installation is default [asau 2012-08-14]
+Unprivileged staged installation is default [asau 2012-08-14]
 	pkgsrc has changed to use unprivileged staged installation by default.
 	This makes it possible to prevent some installation mistakes.
 	It also makes detection of package conflicts easier.
