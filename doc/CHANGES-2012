@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3065 2012/09/30 22:09:29 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3066 2012/09/30 22:11:45 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/ejabberd to 2.1.11 [tron 2012-09-30]
 	Added devel/userspace-rcu version 0.7.3 [pettai 2012-09-30]
 	Updated benchmark/thrulay to 0.9 [adam 2012-10-01]
+	Updated misc/rlwrap to 0.37 [dholland 2012-09-30]
