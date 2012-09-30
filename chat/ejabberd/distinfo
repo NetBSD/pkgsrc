@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/01/07 23:02:03 fhajny Exp $
+$NetBSD: distinfo,v 1.19 2012/09/30 21:38:05 tron Exp $
 
-SHA1 (ejabberd-2.1.10.tar.gz) = c1164aa00f4445cc464cc57a986cf2607315635b
-RMD160 (ejabberd-2.1.10.tar.gz) = 7069aeeb87fd074988bc62cb4e898f7b920ab3c0
-Size (ejabberd-2.1.10.tar.gz) = 1942456 bytes
+SHA1 (ejabberd-2.1.11.tgz) = ae2c521d5e93fbd5bc826052c5524b5222dcfae6
+RMD160 (ejabberd-2.1.11.tgz) = d714aa744f7181b8c96f228787e4a1c32594be3f
+Size (ejabberd-2.1.11.tgz) = 2014232 bytes
 SHA1 (patch-aa) = 81bffd072f179713989cde0c1efc3cce8cf10944
 SHA1 (patch-ad) = ea92f93624b5d6d8fa3760d426a967a499721fe7
 SHA1 (patch-ae) = e518cb5eb67ae8feef7617ad52799af3b8e81179
