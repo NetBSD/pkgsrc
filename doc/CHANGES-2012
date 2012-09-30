@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3058 2012/09/30 10:05:22 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.3059 2012/09/30 15:15:54 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4726,7 +4726,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/xulrunner to 15.0.1nb2 [sbd 2012-09-26]
 	Updated emulators/qemu to 1.2.0nb2 [sbd 2012-09-26]
 	Updated x11/xf86-input-mouse to 1.7.2nb2 [liamjfoy 2012-09-26]
-	Updated net/freerdist to 0.94 [christos 2012-09-26]
+	Updated net/rdist6 to 0.94 [christos 2012-09-26]
 	Updated chat/ejabberd to 2.1.10nb1 [tron 2012-09-26]
 	Updated www/contao211 to 2.11.5nb1 [taca 2012-09-27]
 	Updated www/contao211-translations to 201209250 [taca 2012-09-27]
