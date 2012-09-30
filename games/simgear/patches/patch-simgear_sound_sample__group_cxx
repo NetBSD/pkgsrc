@@ -1,0 +1,16 @@
+$NetBSD: patch-simgear_sound_sample__group_cxx,v 1.1 2012/09/30 01:50:16 dholland Exp $
+
+Fix build failure on NetBSD.
+
+--- simgear/sound/sample_group.cxx~	2012-08-16 14:20:28.000000000 +0000
++++ simgear/sound/sample_group.cxx
+@@ -22,2 +22,4 @@
+ 
++#include <cmath>
++
+ #ifdef HAVE_CONFIG_H
+@@ -32,3 +34,3 @@
+ bool isNaN(float *v) {
+-   return (isnan(v[0]) || isnan(v[1]) || isnan(v[2]));
++   return (std::isnan(v[0]) || std::isnan(v[1]) || std::isnan(v[2]));
+ }

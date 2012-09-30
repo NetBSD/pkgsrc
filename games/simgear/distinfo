@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/08/27 06:11:50 adam Exp $
+$NetBSD: distinfo,v 1.5 2012/09/30 01:50:15 dholland Exp $
 
-SHA1 (SimGear-2.0.0.tar.gz) = 38dfd5644903670bdf1405e771c73aca6d43b595
-RMD160 (SimGear-2.0.0.tar.gz) = 5e1488804053cfc9e205384997ddd788e9b5fe83
-Size (SimGear-2.0.0.tar.gz) = 1058343 bytes
-SHA1 (patch-aa) = 654a1f8eb75c0f983d3284a1f68af5f7494cf85d
-SHA1 (patch-ab) = 5bbb254eaa4b8224bf6a6cf8864419ab1a6f77fd
-SHA1 (patch-ae) = 3ca2e00721a4ec3c36e64190e127b745833cb9eb
-SHA1 (patch-af) = df17bc401501493e4130a0be7a3e73380396dfa8
-SHA1 (patch-ag) = 1815edcd98cbcbbce2390faa2dd0aae665676e4d
+SHA1 (simgear-2.8.0.tar.bz2) = 63f030e4969a014326eb9835d33e3da6b26d2900
+RMD160 (simgear-2.8.0.tar.bz2) = 1d3f832d88abc85e2e253ba99fc1946e1a5ff746
+Size (simgear-2.8.0.tar.bz2) = 766340 bytes
+SHA1 (patch-simgear_scene_sky_cloud_cxx) = 670c1b2470c449545382040ccba75365d642f72a
+SHA1 (patch-simgear_sound_sample__group_cxx) = ef4dd3534aa902ed1d3945f5879bfe3ef20d31ca
+SHA1 (patch-simgear_timing_timestamp_cxx) = 20101dd1802c9d18a6680c9b4868efd5c937f973
