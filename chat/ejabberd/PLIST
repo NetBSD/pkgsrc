@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/01/07 23:02:03 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/09/30 21:38:04 tron Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -77,7 +77,9 @@ lib/erlang/lib/${PKGNAME}/ebin/jd2ejd.beam
 lib/erlang/lib/${PKGNAME}/ebin/jlib.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_announce_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure2.beam
@@ -88,10 +90,12 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_http_fileserver.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_ip_blacklist.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_irc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_irc_connection.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_irc_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_last.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_last_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc_log.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_muc_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc_room.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_offline.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_offline_odbc.beam
@@ -115,6 +119,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_roster_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_service_log.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster_ldap.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_sic.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_stats.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_time.beam
@@ -122,6 +127,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_vcard.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_ldap.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_xupdate.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_vcard_xupdate_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_version.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_buddy.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_club.beam
@@ -247,6 +253,7 @@ share/doc/ejabberd/release_notes_2.1.7.txt
 share/doc/ejabberd/release_notes_2.1.8.txt
 share/doc/ejabberd/release_notes_2.1.9.txt
 share/doc/ejabberd/release_notes_2.1.10.txt
+share/doc/ejabberd/release_notes_2.1.11.txt
 share/doc/ejabberd/webadmmain.png
 share/doc/ejabberd/webadmmainru.png
 share/doc/ejabberd/yozhikheader.png
