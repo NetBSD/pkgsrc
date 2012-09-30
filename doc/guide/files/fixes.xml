@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.109 2012/07/09 15:48:13 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.110 2012/09/30 09:16:56 asau Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1338,8 +1338,10 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
     <itemizedlist>
       <listitem><para><varname>PKG_DESTDIR_SUPPORT</varname> has to be
-      set to <quote>destdir</quote> or <quote>user-destdir</quote>. If
-      bsd.prefs.mk is included in the Makefile,
+      set to <quote>none</quote>, <quote>destdir</quote>, or
+      <quote>user-destdir</quote>. By default <varname>PKG_DESTDIR_SUPPORT</varname>
+      is set to <quote>user-destdir</quote> to help catching more
+      potential packaging problems. If bsd.prefs.mk is included in the Makefile,
       <varname>PKG_DESTDIR_SUPPORT</varname> needs to be set before
       the inclusion.</para></listitem>
 
