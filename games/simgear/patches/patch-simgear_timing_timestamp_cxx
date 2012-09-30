@@ -1,0 +1,19 @@
+$NetBSD: patch-simgear_timing_timestamp_cxx,v 1.1 2012/09/30 01:50:16 dholland Exp $
+
+NetBSD does not have clock_nanosleep() so we can't use the
+POSIX_TIMERS code.
+
+--- simgear/timing/timestamp.cxx~	2012-08-16 14:20:29.000000000 +0000
++++ simgear/timing/timestamp.cxx
+@@ -47,6 +47,11 @@
+ #  include <time.h>
+ #endif
+ 
++#ifdef __NetBSD__
++/* XXX netbsd doesn't have clock_nanosleep */
++#undef _POSIX_TIMERS
++#endif
++
+ #ifdef WIN32
+ #  include <windows.h>
+ #  if defined( __CYGWIN__ ) || defined( __CYGWIN32__ )

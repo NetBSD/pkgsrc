@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.24 2012/09/22 13:48:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/30 01:50:15 dholland Exp $
 
-DISTNAME=	SimGear-2.0.0
-PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	13
+DISTNAME=	simgear-2.8.0
 CATEGORIES=	games devel
 MASTER_SITES=	ftp://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/ \
 		ftp://ftp.goflyflightgear.com/simgear/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://simgear.sourceforge.net/
 COMMENT=	Simulator Construction Tools
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-jpeg-factory
+USE_CMAKE=		yes
 
-BUILDLINK_API_DEPENDS.plib+= plib>=1.8.4
+BUILDLINK_API_DEPENDS.plib+= plib>=1.8.5
 
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
