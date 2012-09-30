@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Main_locale_cxx,v 1.1 2012/09/30 10:04:33 dholland Exp $
+
+Use standard headers.
+
+--- src/Main/locale.cxx~	2012-08-16 14:20:56.000000000 +0000
++++ src/Main/locale.cxx
+@@ -20,6 +20,8 @@
+ 
+ #ifdef HAVE_WINDOWS_H
+ #include <windows.h>
++#else
++#include <cstdlib>
+ #endif
+ 
+ #include <simgear/props/props_io.hxx>

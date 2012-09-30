@@ -1,0 +1,25 @@
+$NetBSD: patch-CMakeModules_FindPLIB_cmake,v 1.1 2012/09/30 10:04:33 dholland Exp $
+
+Recognize BSDs other than FreeBSD.
+
+--- CMakeModules/FindPLIB.cmake~	2012-08-16 14:20:57.000000000 +0000
++++ CMakeModules/FindPLIB.cmake
+@@ -169,6 +169,18 @@ if(${haveJs} GREATER -1)
+         find_library(USBHID_LIBRARY usbhid)
+         # check_function_exists(hidinit)
+         set(JS_LIBS ${USBHID_LIBRARY})
++    elseif(CMAKE_SYSTEM_NAME MATCHES "NetBSD")
++        find_library(USBHID_LIBRARY usbhid)
++        # check_function_exists(hidinit)
++        set(JS_LIBS ${USBHID_LIBRARY})
++    elseif(CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++        find_library(USBHID_LIBRARY usbhid)
++        # check_function_exists(hidinit)
++        set(JS_LIBS ${USBHID_LIBRARY})
++    elseif(CMAKE_SYSTEM_NAME MATCHES "DragonFly")
++        find_library(USBHID_LIBRARY usbhid)
++        # check_function_exists(hidinit)
++        set(JS_LIBS ${USBHID_LIBRARY})
+     else()
+         message(WARNING "Unsupported platform for PLIB JS libs")
+     endif()
