@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/01/28 13:42:21 adam Exp $
+$NetBSD: distinfo,v 1.5 2012/09/30 22:06:24 adam Exp $
 
-SHA1 (thrulay-0.8.tar.gz) = c5ee231795cb0b26cb16dab867140d567627c1e5
-RMD160 (thrulay-0.8.tar.gz) = b19f309d87bcf00dee4ef49ffe38f5ea46e4caa2
-Size (thrulay-0.8.tar.gz) = 88881 bytes
-SHA1 (patch-aa) = 661b93f52044225f9133e8c79579a794369b1ab2
-SHA1 (patch-ab) = 769168d451a1e837fe45166705927ae785bf3be1
+SHA1 (thrulay-0.9.tar.bz2) = 9221fb49351e767882e50decbe73a27503ce5a3d
+RMD160 (thrulay-0.9.tar.bz2) = 10a2af3c51f9a186fb3421c2a22b027e56dbe7e6
+Size (thrulay-0.9.tar.bz2) = 256019 bytes
