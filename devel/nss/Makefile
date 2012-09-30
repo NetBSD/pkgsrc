@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/09/03 00:54:00 dsainty Exp $
+# $NetBSD: Makefile,v 1.57 2012/09/30 09:06:19 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
 PKGREVISION=		2
@@ -52,8 +52,8 @@ MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="-Wl,-R${BUILDLINK_PREFIX.nspr}/lib/nspr -Wl,-R,${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4"
 
 post-extract:
-	find ${WRKDIR} -type f | xargs ${CHMOD} 644
-	find ${WRKDIR} -type d | xargs ${CHMOD} 755
+	find ${WRKSRC} -type f | xargs ${CHMOD} 644
+	find ${WRKSRC} -type d | xargs ${CHMOD} 755
 
 do-build:
 	cd ${WRKSRC}/security/nss && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
