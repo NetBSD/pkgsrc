@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3059 2012/09/30 15:15:54 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.3060 2012/09/30 20:58:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4738,3 +4738,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/simgear to 2.8.0 [dholland 2012-09-30]
 	Updated pkgtools/url2pkg to 2.15 [asau 2012-09-30]
 	Updated games/flightgear to 2.8.0 [dholland 2012-09-30]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q3 branch [wiz 2012-09-30]
