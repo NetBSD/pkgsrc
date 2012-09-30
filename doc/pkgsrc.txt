@@ -7392,9 +7392,10 @@ for installation as usual. There are two ways: Either the package must install
 as root ("destdir") or the package can install as non-root user ("user-destdir"
 ).
 
-  * PKG_DESTDIR_SUPPORT has to be set to "destdir" or "user-destdir". If
-    bsd.prefs.mk is included in the Makefile, PKG_DESTDIR_SUPPORT needs to be
-    set before the inclusion.
+  * PKG_DESTDIR_SUPPORT has to be set to "none", "destdir", or "user-destdir".
+    By default PKG_DESTDIR_SUPPORT is set to "user-destdir" to help catching
+    more potential packaging problems. If bsd.prefs.mk is included in the
+    Makefile, PKG_DESTDIR_SUPPORT needs to be set before the inclusion.
 
   * All installation operations have to be prefixed with ${DESTDIR}.
 
