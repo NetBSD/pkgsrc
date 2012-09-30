@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11533 2012/09/30 16:25:22 wiz Exp $
+$NetBSD: TODO,v 1.11534 2012/09/30 21:38:22 tron Exp $
 
 Suggested new packages
 ======================
@@ -547,7 +547,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o efax-gtk-3.2.9
 	o egtk-0.3.6.2
 	o eigen3-3.1.1
-	o ejabberd-2.1.11
 	o ekiga-3.2.7
 	o electric-9.03
 	o electricfence-2.4.16

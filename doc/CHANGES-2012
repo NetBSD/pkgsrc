@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3061 2012/09/30 21:04:43 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3062 2012/09/30 21:38:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4740,3 +4740,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/flightgear to 2.8.0 [dholland 2012-09-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q3 branch [wiz 2012-09-30]
 	Added www/p5-HTML-Template-Expr version 0.07 [wiz 2012-09-30]
+	Updated chat/ejabberd to 2.1.11 [tron 2012-09-30]
