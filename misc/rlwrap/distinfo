@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/01/09 13:40:38 heinz Exp $
+$NetBSD: distinfo,v 1.3 2012/09/30 22:10:42 dholland Exp $
 
-SHA1 (rlwrap-0.30.tar.gz) = 26f3a6348710fee5e87f5274ddc29af8eaaf65d2
-RMD160 (rlwrap-0.30.tar.gz) = 23f19b9e98f61183fe719ee7a62db9d8ee2cf602
-Size (rlwrap-0.30.tar.gz) = 184037 bytes
+SHA1 (rlwrap-0.37.tar.gz) = c8fc5e7798a7c618a22583c56fa38d344700cc2f
+RMD160 (rlwrap-0.37.tar.gz) = 4e229e8fed579002605919760b313651aa427870
+Size (rlwrap-0.37.tar.gz) = 251438 bytes
