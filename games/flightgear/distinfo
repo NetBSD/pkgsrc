@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.3 2010/08/27 07:54:22 adam Exp $
+$NetBSD: distinfo,v 1.4 2012/09/30 10:04:33 dholland Exp $
 
-SHA1 (FlightGear-2.0.0.tar.gz) = 666d7a165e121feaabd2235959f5ed853ee88126
-RMD160 (FlightGear-2.0.0.tar.gz) = 0b7cd19c5f4413c82bc9e7e17cd423f823e03607
-Size (FlightGear-2.0.0.tar.gz) = 2425099 bytes
-SHA1 (patch-aa) = 5efea4534eb54f8eaf0c569add5f697509ad1e8c
+SHA1 (flightgear-2.8.0.tar.bz2) = fee4b2f1f6aca8e163ea018ae9897b99971c20bd
+RMD160 (flightgear-2.8.0.tar.bz2) = 97d8f572aeb186bfed27eb5b06803a0fa5213a61
+Size (flightgear-2.8.0.tar.bz2) = 2311023 bytes
+SHA1 (patch-CMakeModules_FindPLIB_cmake) = c5761d425743761f5f0c711ef2ca384a06f6d524
+SHA1 (patch-src_Canvas_ShivaVG_src_shConfig_h) = bd70a1e41a59196e31789e38ec67e65cef546edf
+SHA1 (patch-src_Main_locale_cxx) = 327f4103ff3aea60f2394a2ed192c5f6af36f60b
+SHA1 (patch-src_Network_ATC-Inputs_cxx) = 08644c682ddddcefea48aa84fa538b8fd20289c0
+SHA1 (patch-src_Network_ATC-Outputs_cxx) = d5367f8536988b2705b2ba4f8d86e28576b04648
+SHA1 (patch-utils_TerraSync_terrasync_cxx) = 48855911a5052301f2c7a449ac8ff14ada9ae8ea

@@ -1,0 +1,15 @@
+$NetBSD: patch-utils_TerraSync_terrasync_cxx,v 1.1 2012/09/30 10:04:33 dholland Exp $
+
+Recognize more BSDs.
+
+--- utils/TerraSync/terrasync.cxx~	2012-08-16 14:20:53.000000000 +0000
++++ utils/TerraSync/terrasync.cxx
+@@ -51,7 +51,7 @@
+ 
+ #if defined(_MSC_VER) || defined(__MINGW32__)
+     typedef void (__cdecl * sighandler_t)(int);
+-#elif defined( __APPLE__ ) || defined (__FreeBSD__)
++#elif defined( __APPLE__ ) || defined (__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+     typedef sig_t sighandler_t;
+ #endif
+ 

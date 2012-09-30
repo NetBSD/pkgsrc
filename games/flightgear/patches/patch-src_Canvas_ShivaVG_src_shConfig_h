@@ -1,0 +1,18 @@
+$NetBSD: patch-src_Canvas_ShivaVG_src_shConfig_h,v 1.1 2012/09/30 10:04:33 dholland Exp $
+
+This sublibrary insists on being able to work out its OS type, and
+only knows a few, even though it uses the results for just about
+nothing. So give it some crayons to play with.
+
+--- src/Canvas/ShivaVG/src/shConfig.h~	2012-08-16 14:20:56.000000000 +0000
++++ src/Canvas/ShivaVG/src/shConfig.h
+@@ -34,7 +34,8 @@
+ #else
+ 
+     // Unsupported system
+-    #error This operating system is not supported by SFML library
++    //#error This operating system is not supported by SFML library
++    #define VG_API_OTHER
+ 
+ #endif
+ 
