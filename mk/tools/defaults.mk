@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.57 2009/07/08 12:51:16 minskim Exp $
+# $NetBSD: defaults.mk,v 1.58 2012/10/01 10:45:16 ryoon Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -113,6 +113,7 @@ _TOOLS_VARNAME.mv=		MV
 _TOOLS_VARNAME.nice=		NICE
 _TOOLS_VARNAME.nroff=		NROFF
 _TOOLS_VARNAME.openssl=		OPENSSL
+_TOOLS_VARNAME.7za=		P7ZA
 _TOOLS_VARNAME.patch=		PATCH
 _TOOLS_VARNAME.pax=		PAX
 _TOOLS_VARNAME.perl=		PERL5
