@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/09/30 09:06:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2012/10/01 11:29:35 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
 PKGREVISION=		2
@@ -21,6 +21,15 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla
 USE_TOOLS+=		gmake perl pax pkg-config
 
 .include		"../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+SUBST_CLASSES+=			exec_path
+SUBST_STAGE.exec_path=		pre-configure
+SUBST_MESSAGE.exec_path=	Fixing @executable_path
+SUBST_FILES.exec_path=		security/nss/lib/freebl/config.mk
+SUBST_FILES.exec_path=		security/coreconf/Darwin.mk
+SUBST_SED.exec_path=		-e 's,@executable_path,${PREFIX}/lib/nss,g'
+.endif
 
 .if ${OPSYS} == "Linux"
 MAKE_ENV+=	FREEBL_NO_DEPEND=0
@@ -63,9 +72,9 @@ INSTALLATION_DIRS=	include/nss lib/nss lib/pkgconfig
 DIST=	${WRKSRC}/dist
 
 do-install:
-	(cd ${DIST}/public && pax -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
+	(cd ${DIST}/public && pax -Lrw . ${DESTDIR}${PREFIX}/include/nss/ )
 	(cd ${DIST}/*_OPT.OBJ/lib && \
-		pax -Lrwpe *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
+		pax -Lrw *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
 	${INSTALL_LIB} ${DIST}/*_OPT.OBJ/lib/libcrmf.a \
 		${DESTDIR}${PREFIX}/lib/nss/
 	set -e; \
