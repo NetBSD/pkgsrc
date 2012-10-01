@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.12 2010/12/22 09:33:30 tron Exp $
+# $NetBSD: extract,v 1.13 2012/10/01 10:45:16 ryoon Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -118,6 +118,7 @@ set -u		# treat undefined variables as errors
 : ${UNRAR:=unrar}
 : ${UNZIP_CMD:=unzip}
 : ${UNZOO:=unzoo}
+: ${P7ZA:="7za x"}
 
 : ${TMPDIR:=/tmp}
 
@@ -217,6 +218,7 @@ case "$distfile" in
 *.rpm)		_format=rpm ;;
 *.bin)		_format=jre-bin ;;
 *.gem)		_format=gem ;;
+*.7z)		_format=7z ;;
 *)		_format=none ;;
 esac
 ${TEST} -n "$format" || format="$_format"
@@ -338,6 +340,10 @@ jre-bin)
 
 gem)
 	${GEM} "$distfile"
+	;;
+
+7z)
+	${P7ZA} "$distfile"
 	;;
 
 none)
