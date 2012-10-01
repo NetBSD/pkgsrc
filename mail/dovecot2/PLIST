@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/08/13 13:57:46 ghen Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/10/01 07:10:14 ghen Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -374,6 +374,7 @@ lib/dovecot/lib20_expire_plugin.la
 lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_listescape_plugin.la
 lib/dovecot/lib20_mail_log_plugin.la
+lib/dovecot/lib20_mailbox_alias_plugin.la
 lib/dovecot/lib20_replication_plugin.la
 lib/dovecot/lib20_virtual_plugin.la
 lib/dovecot/lib20_zlib_plugin.la
