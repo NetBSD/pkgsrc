@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3074 2012/10/01 11:17:15 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3075 2012/10/01 11:51:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/freefont-ttf to 20120503 [ryoon 2012-10-01]
 	Updated fonts/liberation-ttf to 2.00.0 [ryoon 2012-10-01]
 	Updated fonts/sourcesans-fonts to 1.036 [ryoon 2012-10-01]
+	Updated www/aipo to 7.0.1 [ryoon 2012-10-01]
