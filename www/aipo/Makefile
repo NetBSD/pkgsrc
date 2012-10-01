@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/08/05 10:02:13 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 11:50:04 ryoon Exp $
 #
 
-DISTNAME=	aipo6030ja_linux32
-PKGNAME=	aipo-6.03
-PKGREVISION=	1
+DISTNAME=	aipo7010ja_linux32
+PKGNAME=	aipo-7.0.1
 CATEGORIES=	www
 MASTER_SITES=	http://aipo.googlecode.com/files/
 
@@ -19,7 +18,7 @@ USE_JAVA2=	6
 
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/aipo7010ja_linux
 USE_LANGUAGES=	# none
 
 USE_TOOLS+=	gunzip pax tar
@@ -38,7 +37,7 @@ SUBST_SED.username=		-e 's,cayenne.dbcp.username=postgres,cayenne.dbcp.username=
 SUBST_SED.username+=		-e 's,cayenne.dbcp.password=aipo,cayenne.dbcp.password=aipo_db_password,'
 
 post-extract:
-	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo6030.tar.gz | ${TAR} -xpf -
+	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo7010.tar.gz | ${TAR} -xpf -
 
 do-install:
 	cd  ${WRKSRC}/aipo/src/webapps && \
