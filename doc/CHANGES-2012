@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3067 2012/10/01 07:12:26 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.3068 2012/10/01 07:44:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/rlwrap to 0.37 [dholland 2012-09-30]
 	Updated mail/dovecot2 to 2.1.10 [ghen 2012-10-01]
 	Updated mail/dovecot2-pigeonhole to 0.3.3 [ghen 2012-10-01]
+	Updated net/libquvi-scripts to 0.4.9 [wiz 2012-10-01]
