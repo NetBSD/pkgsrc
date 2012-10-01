@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.translations,v 1.1 2011/08/12 12:46:42 taca Exp $
+# $NetBSD: INSTALL,v 1.1 2012/10/01 15:38:32 taca Exp $
 
 CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
 CT_OWN="@WWWOWN@"
