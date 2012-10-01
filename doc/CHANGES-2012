@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3081 2012/10/01 13:42:01 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3082 2012/10/01 15:31:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4761,3 +4761,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/coccigrep to 1.11 [ryoon 2012-10-01]
 	Updated misc/libreoffice3-bin to 3.6.1 [ryoon 2012-10-01]
 	Updated emulators/bochs to 2.6 [ryoon 2012-10-01]
+	Updated net/aria2 to 1.15.2 [ryoon 2012-10-01]
