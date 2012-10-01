@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11538 2012/10/01 11:51:13 ryoon Exp $
+$NetBSD: TODO,v 1.11539 2012/10/01 12:31:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dinotrace-mode-9.3e
 	o dnsmasq-2.63
 	o doclifter-2.9
-	o dos2unix-6.0.2
 	o dovecot2-2.1.10
 	o dovecot2-pigeonhole-0.3.3
 	o dri-7.8.2 [wip]
