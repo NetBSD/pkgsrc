@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.251 2012/07/27 10:48:36 jperkin Exp $
+# $NetBSD: replace.mk,v 1.252 2012/10/01 10:45:16 ryoon Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -205,6 +205,17 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 # command, e.g., TOOLS_TBL, TOOLS_YACC, etc., provided that "TOOL" has
 # been associated with <tool>.
 #
+.if !defined(TOOLS_IGNORE.7za) && !empty(_USE_TOOLS:M7za)
+.  if !empty(PKGPATH:Marchivers/p7zip)
+MAKEFLAGS+=			TOOLS_IGNORE.7za=
+.  elif !empty(_TOOLS_USE_PKGSRC.7za:M[yY][eE][sS])
+TOOLS_DEPENDS.7za?=		p7zip>=9.04:../../archivers/p7zip
+TOOLS_CREATE+=			7za
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.7za=7za
+TOOLS_PATH.7za=			${TOOLS_PREFIX.7za}/bin/7za
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.awk) && !empty(_USE_TOOLS:Mawk)
 .  if !empty(PKGPATH:Mlang/nawk)
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
