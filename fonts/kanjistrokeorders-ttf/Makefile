@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.2 2011/07/30 12:32:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 11:09:31 ryoon Exp $
 #
 
 DISTNAME=	KanjiStrokeOrders_v${KSOVER}
 PKGNAME=	${DISTNAME:tl:S/_v/-ttf-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	http://sites.google.com/site/nihilistorguk/Home/
+MASTER_SITES=	https://sites.google.com/site/nihilistorguk/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://sites.google.com/site/nihilistorguk/
+HOMEPAGE=	https://sites.google.com/site/nihilistorguk/
 COMMENT=	Japanese Kanji characters stroke order font
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# Force using "curl" for fetching the distribution file. It is only available
+# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
+FETCH_USING=	curl
+
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-KSOVER=		2.016
+KSOVER=		3.000
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
