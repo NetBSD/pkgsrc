@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/12/07 10:30:32 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/01 11:14:22 ryoon Exp $
 #
 
-DISTNAME=	liberation-fonts-ttf-1.07.1
-PKGREVISION=	1
+DISTNAME=	liberation-fonts-ttf-2.00.0
 PKGNAME=	${DISTNAME:S/-fonts//}
 CATEGORIES=	fonts
 MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/ \
@@ -11,9 +10,13 @@ MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/ \
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
 COMMENT=	TrueType fonts from RedHat
-LICENSE=	gnu-gpl-v2 # with some exception
+LICENSE=	open-font-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Force using "curl" for fetching the distribution file. It is only available
+# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
+FETCH_USING=	curl
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -30,7 +33,8 @@ do-install:
 		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f ; \
 	done
 
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${WRKSRC}/License.txt \
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/ChangeLog \
+		${WRKSRC}/LICENSE ${WRKSRC}/README ${WRKSRC}/TODO \
 		${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"

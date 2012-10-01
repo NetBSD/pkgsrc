@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/03/05 19:16:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/01 11:14:22 ryoon Exp $
 lib/X11/fonts/TTF/LiberationMono-Bold.ttf
 lib/X11/fonts/TTF/LiberationMono-BoldItalic.ttf
 lib/X11/fonts/TTF/LiberationMono-Italic.ttf
@@ -7,13 +7,12 @@ lib/X11/fonts/TTF/LiberationSans-Bold.ttf
 lib/X11/fonts/TTF/LiberationSans-BoldItalic.ttf
 lib/X11/fonts/TTF/LiberationSans-Italic.ttf
 lib/X11/fonts/TTF/LiberationSans-Regular.ttf
-lib/X11/fonts/TTF/LiberationSansNarrow-Bold.ttf
-lib/X11/fonts/TTF/LiberationSansNarrow-BoldItalic.ttf
-lib/X11/fonts/TTF/LiberationSansNarrow-Italic.ttf
-lib/X11/fonts/TTF/LiberationSansNarrow-Regular.ttf
 lib/X11/fonts/TTF/LiberationSerif-Bold.ttf
 lib/X11/fonts/TTF/LiberationSerif-BoldItalic.ttf
 lib/X11/fonts/TTF/LiberationSerif-Italic.ttf
 lib/X11/fonts/TTF/LiberationSerif-Regular.ttf
-share/doc/liberation-ttf/COPYING
-share/doc/liberation-ttf/License.txt
+share/doc/liberation-ttf/AUTHORS
+share/doc/liberation-ttf/ChangeLog
+share/doc/liberation-ttf/LICENSE
+share/doc/liberation-ttf/README
+share/doc/liberation-ttf/TODO
