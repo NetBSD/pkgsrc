@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3071 2012/10/01 11:10:29 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3072 2012/10/01 11:13:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4751,3 +4751,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/misaki-fonts to 1.0.20120603 [ryoon 2012-10-01]
 	Updated fonts/vlgothic-ttf to 20120928 [ryoon 2012-10-01]
 	Updated fonts/kanjistrokeorders-ttf to 3.000 [ryoon 2012-10-01]
+	Updated fonts/freefont-ttf to 20120503 [ryoon 2012-10-01]
