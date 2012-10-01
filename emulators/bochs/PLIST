@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/01/09 06:38:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/10/01 13:40:48 ryoon Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
@@ -21,12 +21,12 @@ ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pci.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pci2isa.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pci_ide.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pcipnic.la
-${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pcivga.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pic.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_pit.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_serial.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_soundmod.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_speaker.la
+${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_svga_cirrus.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_unmapped.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_common.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_ohci.la
@@ -63,6 +63,7 @@ share/bochs/keymaps/x11-pc-uk.map
 share/bochs/keymaps/x11-pc-us.map
 share/doc/bochs/CHANGES
 share/doc/bochs/COPYING
+share/doc/bochs/LICENSE
 share/doc/bochs/README
 share/doc/bochs/TODO
 share/doc/bochs/bochsrc-sample.txt
