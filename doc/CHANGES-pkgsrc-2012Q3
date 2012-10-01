@@ -1,4 +1,6 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.1 2012/09/30 20:55:41 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.2 2012/10/01 20:03:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
+Pullup ticket #3924 - requested by dholland
+games/flightgear-data: update to match "flightgear" package
