@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.49 2012/07/27 14:38:26 jperkin Exp $
+# $NetBSD: tools.Linux.mk,v 1.50 2012/10/01 10:25:03 ryoon Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -245,3 +245,7 @@ TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
 .if exists(/usr/bin/yacc)
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 .endif
+.if exists(/usr/bin/xzcat)
+TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
+.endif
+
