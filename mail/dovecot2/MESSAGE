@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2010/11/09 15:23:11 ghen Exp $
+$NetBSD: MESSAGE,v 1.2 2012/10/01 07:10:14 ghen Exp $
 
 The configuration for Dovecot 2.0 now lives in ${PKG_SYSCONFDIR}/dovecot/,
 and is split in multiple files.
@@ -10,5 +10,7 @@ When upgrading from Dovecot 1.2.x, you can either:
 - start over, editing the templates in ${PKG_SYSCONFDIR}/dovecot/conf.d/
 
 For more information, see http://wiki2.dovecot.org/Upgrading/2.0
+
+For upgrading from Dovecot 2.0, see http://wiki2.dovecot.org/Upgrading/2.1
 
 ===========================================================================
