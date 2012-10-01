@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.example,v 1.7 2012/06/25 08:57:10 jperkin Exp $
+# $NetBSD: Makefile.example,v 1.8 2012/10/01 15:31:00 taca Exp $
 #
 # used by www/contao211-example/Makefile
 #
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.contao.org/
-COMMENT=	Sample site data for Contao Open Source CMS
+COMMENT=	Sample site data for Contao Open Source CMS ${CT_VERBASE}
 
 DEPENDS+=	contao${CT_VER}>=${CT_PKGVER}:../../www/contao${CT_VER}
 
@@ -22,8 +22,10 @@ NO_CONFIGURE=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WWW_EG_FILES?=	tl_files/music_academy
-WWW_FILE?=	templates/music_academy.sql
+WWW_EG_FILES=	${CT_FILES}/music_academy
+WWW_FILE=	templates/music_academy.sql
+
+.include "../../www/contao/Makefile.common"
 
 .for f in ${WWW_EG_FILES} ${WWW_FILE}
 EXTRACT_ELEMENTS+=	${DISTNAME}/${f}
