@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/14 15:53:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 11:08:31 ryoon Exp $
 #
 
 DISTNAME=	croscorefonts-1.21.0
@@ -6,7 +6,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://gsdview.appspot.com/chromeos-localmirror/distfiles/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://gsdview.appspot.com/chromeos-localmirror/distfiles/
+HOMEPAGE=	http://fedoraproject.org/wiki/Google_Croscore_fonts
 COMMENT=	Google Croscore fonts
 LICENSE=	open-font-license
 
