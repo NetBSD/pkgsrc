@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11540 2012/10/01 12:41:55 ryoon Exp $
+$NetBSD: TODO,v 1.11541 2012/10/01 13:03:52 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -603,7 +603,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
-	o fotoxx-12.09.1
 	o fox-1.6.41
 	o freeciv-2.3.2
 	o freefont-20120503
