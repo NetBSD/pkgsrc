@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3070 2012/10/01 11:06:46 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3071 2012/10/01 11:10:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/libquvi-scripts to 0.4.9 [wiz 2012-10-01]
 	Updated fonts/misaki-fonts to 1.0.20120603 [ryoon 2012-10-01]
 	Updated fonts/vlgothic-ttf to 20120928 [ryoon 2012-10-01]
+	Updated fonts/kanjistrokeorders-ttf to 3.000 [ryoon 2012-10-01]
