@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/03/03 10:29:03 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2012/10/01 11:12:24 ryoon Exp $
 
-SHA1 (freefont-ttf-20100919.tar.gz) = feb1c3349529bbb769cfe55bc901baa917507407
-RMD160 (freefont-ttf-20100919.tar.gz) = 75697d0d1259c04d91653c1c41eb4627e0c35f88
-Size (freefont-ttf-20100919.tar.gz) = 3343733 bytes
+SHA1 (freefont-ttf-20120503.zip) = 46179a6f3469b386f6569fc61913314ba79aadac
+RMD160 (freefont-ttf-20120503.zip) = 6d557859062a9aaf2022f4bfd63b9973f31474f0
+Size (freefont-ttf-20120503.zip) = 6076197 bytes
