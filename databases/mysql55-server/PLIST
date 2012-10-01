@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/08/03 13:46:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/10/01 15:54:40 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -2521,7 +2521,6 @@ share/mysql/test/suite/engines/rr_trx/t/rr_u_10-19.test
 share/mysql/test/suite/engines/rr_trx/t/rr_u_10-19_nolimit.test
 share/mysql/test/suite/engines/rr_trx/t/rr_u_4.test
 share/mysql/test/suite/federated/disabled.def
-share/mysql/test/suite/federated/federated.inc
 share/mysql/test/suite/federated/federated.result
 share/mysql/test/suite/federated/federated.test
 share/mysql/test/suite/federated/federated_archive.result
@@ -2532,7 +2531,6 @@ share/mysql/test/suite/federated/federated_bug_25714.result
 share/mysql/test/suite/federated/federated_bug_25714.test
 share/mysql/test/suite/federated/federated_bug_35333.result
 share/mysql/test/suite/federated/federated_bug_35333.test
-share/mysql/test/suite/federated/federated_cleanup.inc
 share/mysql/test/suite/federated/federated_debug-master.opt
 share/mysql/test/suite/federated/federated_debug.result
 share/mysql/test/suite/federated/federated_debug.test
@@ -2547,7 +2545,9 @@ share/mysql/test/suite/federated/federated_server.test
 share/mysql/test/suite/federated/federated_transactions-slave.opt
 share/mysql/test/suite/federated/federated_transactions.result
 share/mysql/test/suite/federated/federated_transactions.test
-share/mysql/test/suite/federated/have_federated_db.inc
+share/mysql/test/suite/federated/include/federated.inc
+share/mysql/test/suite/federated/include/federated_cleanup.inc
+share/mysql/test/suite/federated/include/have_federated_db.inc
 share/mysql/test/suite/federated/my.cnf
 share/mysql/test/suite/funcs_1/README.txt
 share/mysql/test/suite/funcs_1/bitdata/bitdata_master.test
@@ -2976,6 +2976,7 @@ share/mysql/test/suite/innodb/r/innodb_file_format.result
 share/mysql/test/suite/innodb/r/innodb_gis.result
 share/mysql/test/suite/innodb/r/innodb_index_large_prefix.result
 share/mysql/test/suite/innodb/r/innodb_information_schema.result
+share/mysql/test/suite/innodb/r/innodb_information_schema_buffer.result
 share/mysql/test/suite/innodb/r/innodb_lock_wait_timeout_1.result
 share/mysql/test/suite/innodb/r/innodb_misc1.result
 share/mysql/test/suite/innodb/r/innodb_multi_update.result
@@ -3098,6 +3099,7 @@ share/mysql/test/suite/innodb/t/innodb_file_format.test
 share/mysql/test/suite/innodb/t/innodb_gis.test
 share/mysql/test/suite/innodb/t/innodb_index_large_prefix.test
 share/mysql/test/suite/innodb/t/innodb_information_schema.test
+share/mysql/test/suite/innodb/t/innodb_information_schema_buffer.test
 share/mysql/test/suite/innodb/t/innodb_lock_wait_timeout_1-master.opt
 share/mysql/test/suite/innodb/t/innodb_lock_wait_timeout_1.test
 share/mysql/test/suite/innodb/t/innodb_misc1-master.opt
