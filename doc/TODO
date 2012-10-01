@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11542 2012/10/01 13:14:20 ryoon Exp $
+$NetBSD: TODO,v 1.11543 2012/10/01 13:28:28 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -853,7 +853,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.14.8
 	o libreoffice-3.6.1
-	o libreoffice3-bin-3.6.1
 	o librep-0.92.2.1
 	o libspf2-1.2.9.1
 	o libssh-0.5.2 [www.libssh.org]
