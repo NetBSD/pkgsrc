@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3082 2012/10/01 15:31:49 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3083 2012/10/01 15:36:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/libreoffice3-bin to 3.6.1 [ryoon 2012-10-01]
 	Updated emulators/bochs to 2.6 [ryoon 2012-10-01]
 	Updated net/aria2 to 1.15.2 [ryoon 2012-10-01]
+	Updated print/pdf2djvu to 0.7.14 [ryoon 2012-10-01]
