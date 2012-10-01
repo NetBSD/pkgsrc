@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3083 2012/10/01 15:36:22 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3084 2012/10/01 15:39:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4763,3 +4763,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/bochs to 2.6 [ryoon 2012-10-01]
 	Updated net/aria2 to 1.15.2 [ryoon 2012-10-01]
 	Updated print/pdf2djvu to 0.7.14 [ryoon 2012-10-01]
+	Updated www/contao211 to 2.11.6 [taca 2012-10-01]
+	Updated www/contao211-example to 2.11.6 [taca 2012-10-01]
