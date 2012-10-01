@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2012/07/19 21:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2012/10/01 18:11:29 adam Exp $
 
-DISTNAME=	tiff-4.0.2
-PKGREVISION=	1
+DISTNAME=	tiff-4.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -9,6 +8,7 @@ MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.remotesensing.org/libtiff/
 COMMENT=	Library and tools for reading and writing TIFF data files
+LICENSE=	mit
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
