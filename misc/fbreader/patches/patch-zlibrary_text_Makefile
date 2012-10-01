@@ -1,0 +1,15 @@
+$NetBSD: patch-zlibrary_text_Makefile,v 1.1 2012/10/01 12:40:36 ryoon Exp $
+
+* Use liblinebreak instead of libunibreak
+
+--- zlibrary/text/Makefile.orig	2012-09-06 20:58:48.000000000 +0000
++++ zlibrary/text/Makefile
+@@ -34,7 +34,7 @@ $(TARGET): .objects
+ 	@echo -n 'Creating $@ ...'
+ 	@$(RM_QUIET) $(TARGET)
+ ifeq "$(ZLSHARED)" "yes"
+-	@$(LD) $(LDFLAGS) -shared -Wl,-soname,$(TARGET_SONAME) -o $(TARGET) $(patsubst %, %/*.o, $(SUBDIRS)) $(CORE_LIBS) -lunibreak -lfribidi
++	@$(LD) $(LDFLAGS) -shared -Wl,-soname,$(TARGET_SONAME) -o $(TARGET) $(patsubst %, %/*.o, $(SUBDIRS)) $(CORE_LIBS) -llinebreak -lfribidi
+ #@$(LD) $(LDFLAGS) -dynamiclib -dylinker_install_name $(TARGET_SONAME) -o $(TARGET) $(patsubst %, %/*.o, $(SUBDIRS)) $(CORE_LIBS) $(EXTERNAL_LIBS) -llinebreak -lfribidi
+ 	@ln -sf $(TARGET) $(TARGET_SONAME)
+ 	@ln -sf $(TARGET) $(TARGET_SHORTNAME)

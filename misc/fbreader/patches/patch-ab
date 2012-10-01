@@ -1,32 +1,25 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/01/18 17:39:37 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2012/10/01 12:40:36 ryoon Exp $
 
---- zlibrary/core/src/unix/time/ZLUnixTime.cpp.orig	2008-03-22 13:00:31.000000000 +0000
+--- zlibrary/core/src/unix/time/ZLUnixTime.cpp.orig	2012-09-06 20:58:48.000000000 +0000
 +++ zlibrary/core/src/unix/time/ZLUnixTime.cpp
-@@ -17,21 +17,21 @@
+@@ -17,7 +17,6 @@
   * 02110-1301, USA.
   */
  
 -#include <sys/timeb.h>
-+#include <sys/time.h>
  #include <time.h>
  
+ #include <ZLTime.h>
+@@ -25,9 +24,9 @@
  #include "ZLUnixTime.h"
  
  ZLTime ZLUnixTimeManager::currentTime() const {
 -	struct timeb timeB;
 -	ftime(&timeB);
--	return ZLTime(timeB.time, timeB.millitm);
-+	struct timeval timeV;
-+	gettimeofday(&timeV, NULL);
-+	return ZLTime(timeV.tv_sec, 1000*timeV.tv_usec);
+-	return ZLTime((long)timeB.time, timeB.millitm);
++	struct timeval timeB;
++	gettimeofday(&timeB,NULL);
++	return ZLTime(timeB.tv_sec, timeB.tv_usec/1000);
  }
  
  short ZLUnixTimeManager::hoursBySeconds(long seconds) const {
--	return localtime(&seconds)->tm_hour;
-+	return localtime((time_t*)&seconds)->tm_hour;
- }
- 
- short ZLUnixTimeManager::minutesBySeconds(long seconds) const {
--	return localtime(&seconds)->tm_min;
-+	return localtime((time_t*)&seconds)->tm_min;
- }
