@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/26 13:55:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/01 11:02:05 ryoon Exp $
 lib/X11/fonts/local/misaki_4x8_iso8859.pcf.gz
 lib/X11/fonts/local/misaki_4x8_jisx0201.pcf.gz
 lib/X11/fonts/local/misaki_gothic.pcf.gz
 lib/X11/fonts/local/misaki_mincho.pcf.gz
-share/doc/${PKGBASE}/misaki_bdf.txt
-share/doc/${PKGBASE}/readme.txt
+share/doc/misaki-fonts/misaki.txt
+share/doc/misaki-fonts/readme.txt
