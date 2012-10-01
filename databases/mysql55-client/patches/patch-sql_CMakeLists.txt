@@ -1,10 +1,10 @@
-$NetBSD: patch-sql_CMakeLists.txt,v 1.1.1.1 2011/04/25 21:12:53 adam Exp $
+$NetBSD: patch-sql_CMakeLists.txt,v 1.2 2012/10/01 15:54:40 adam Exp $
 
 Do not install files in MYSQL_DATADIR.
 
 --- sql/CMakeLists.txt.orig	2011-04-25 19:03:50.000000000 +0000
 +++ sql/CMakeLists.txt
-@@ -243,7 +243,7 @@ ADD_CUSTOM_TARGET(distclean
+@@ -259,7 +259,7 @@ ADD_CUSTOM_TARGET(distclean
    VERBATIM
    )
  
