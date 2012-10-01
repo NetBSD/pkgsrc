@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/05/29 22:58:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/01 21:19:44 cheusov Exp $
 #
 
 DISTNAME=	9base-6
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	9base-20100604
 CATEGORIES=	sysutils shells
 MASTER_SITES=	http://dl.suckless.org/tools/
@@ -35,20 +35,23 @@ LDFLAGS+= -static
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 
-MAKE_FLAGS+=	PREFIX=${PREFIX} \
-		MANPREFIX=${PREFIX}/${PKGMANDIR}
+PREFIX9P=	${PREFIX}/9base
+
+MAKE_FLAGS+=	PREFIX=${PREFIX9P} \
+		MANPREFIX=${PREFIX9P}/${PKGMANDIR}
 
 SUBST_CLASSES+=		shebang
 SUBST_STAGE.shebang=	pre-configure
 SUBST_MESSAGE.shebang=	Fixing shebang
 SUBST_FILES.shebang=	troff/tmac/sendcover
 SUBST_FILES.shebang+=	troff/font/devutf/mkMAP
-SUBST_SED.shebang=	-e 's,/bin/rc,${PREFIX}/bin/rc,'
+SUBST_SED.shebang=	-e 's,/bin/rc,${PREFIX9P}/bin/rc,'
 
-INSTALLATION_DIRS=	${PREFIX}/share/examples/9base
+INSTALLATION_DIRS=	${PREFIX9P}/share/examples/9base
+MAKE_DIRS+=		${PREFIX9P}/etc
 
-EGDIR=		${PREFIX}/share/examples/9base
-CONF_FILES=	${EGDIR}/rcmain ${PKG_SYSCONFDIR}/rcmain
+EGDIR=		${PREFIX9P}/share/examples/9base
+CONF_FILES=	${EGDIR}/rcmain ${PREFIX9P}/etc/rcmain
 
 post-extract:
 	${LN} -s getcallerpc-x86_64.c ${WRKSRC}/lib9/getcallerpc-amd64.c
