@@ -8971,7 +8971,7 @@
    EH_MECHANISM=-gcc
    THREADSLIB= -lpthread
    GMEM_LIB = gmemlib
-@@ -1231,26 +1240,101 @@
+@@ -1231,26 +1240,33 @@
    MISCLIB = -lutil
  endif
  
@@ -9008,13 +9008,13 @@
 +  EXTRA_GNATRTL_NONTASKING_OBJS=g-sse.o g-ssvety.o
 +  EXTRA_GNATRTL_TASKING_OBJS=a-exetim.o
 +
-+  EH_MECHANISM=-gcc
-+  THREADSLIB= -lpthread
-+  GMEM_LIB = gmemlib
-+  LIBRARY_VERSION := $(LIB_VERSION)
-+  MISCLIB = -lutil
-+endif
-+
+   EH_MECHANISM=-gcc
+   THREADSLIB= -lpthread
+   GMEM_LIB = gmemlib
+@@ -1258,6 +1274,268 @@
+   MISCLIB = -lutil
+ endif
+ 
 +
 +# DRAGONFLY i386
 +ifeq ($(strip $(filter-out %86 dragonfly%,$(arch) $(osys))),)
@@ -9076,13 +9076,13 @@
 +  EXTRA_GNATRTL_NONTASKING_OBJS=g-sse.o g-ssvety.o
 +  EXTRA_GNATRTL_TASKING_OBJS=a-exetim.o
 +
-   EH_MECHANISM=-gcc
-   THREADSLIB= -lpthread
-   GMEM_LIB = gmemlib
-@@ -1258,6 +1342,200 @@
-   MISCLIB = -lutil
- endif
- 
++  EH_MECHANISM=-gcc
++  THREADSLIB= -lpthread
++  GMEM_LIB = gmemlib
++  LIBRARY_VERSION := $(LIB_VERSION)
++  MISCLIB = -lutil
++endif
++
 +
 +# OPENBSD i386
 +ifeq ($(strip $(filter-out %86 openbsd%,$(arch) $(osys))),)
@@ -9280,15 +9280,6 @@
  ifeq ($(strip $(filter-out s390% linux%,$(arch) $(osys))),)
    LIBGNAT_TARGET_PAIRS_COMMON = \
    a-intnam.ads<a-intnam-linux.ads \
-@@ -2597,7 +2875,7 @@
- 	$(MAKE) $(FLAGS_TO_PASS) \
-              GNATLIBFLAGS="$(GNATLIBFLAGS)" \
- 	     GNATLIBCFLAGS="$(GNATLIBCFLAGS) $(PICFLAG_FOR_TARGET)" \
--	     GNATLIBCFLAGS_FOR_C="$(GNATLIBCFLAGS_FOR_C)" \
-+	     GNATLIBCFLAGS_FOR_C="$(GNATLIBCFLAGS_FOR_C) $(PICFLAG_FOR_TARGET)" \
- 	     MULTISUBDIR="$(MULTISUBDIR)" \
- 	     THREAD_KIND="$(THREAD_KIND)" \
-              gnatlib
 --- gnattools/configure.orig
 +++ gnattools/configure
 @@ -2058,7 +2058,27 @@

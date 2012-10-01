@@ -4,7 +4,7 @@
 +release
 --- gcc/config.gcc.orig
 +++ gcc/config.gcc
-@@ -573,6 +573,9 @@
+@@ -581,6 +581,9 @@
      "" | yes | posix)
        thread_file='posix'
        ;;
@@ -14,7 +14,7 @@
      *)
        echo 'Unknown thread configuration for FreeBSD'
        exit 1
-@@ -589,6 +592,26 @@
+@@ -597,6 +600,26 @@
    # need_64bit_hwint=yes # system compiler has this for all arch!
    use_gcc_stdint=wrap
    ;;
@@ -41,7 +41,7 @@
  *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
    extra_options="$extra_options gnu-user.opt"
    gas=yes
-@@ -644,6 +667,7 @@
+@@ -652,6 +675,7 @@
    esac
    ;;
  *-*-netbsd*)
@@ -49,7 +49,7 @@
    tmake_file="t-slibgcc"
    gas=yes
    gnu_ld=yes
-@@ -885,7 +909,32 @@
+@@ -893,7 +917,32 @@
  	tm_file="dbxelf.h elfos.h newlib-stdint.h arm/unknown-elf.h arm/elf.h arm/aout.h arm/arm.h arm/ecos-elf.h"
  	tmake_file="arm/t-arm arm/t-arm-elf"
  	;;
@@ -83,7 +83,7 @@
  	# The BPABI long long divmod functions return a 128-bit value in
  	# registers r0-r3.  Correctly modeling that requires the use of
  	# TImode.
-@@ -894,11 +943,6 @@
+@@ -902,11 +951,6 @@
  	tm_file="dbxelf.h elfos.h arm/unknown-elf.h arm/elf.h arm/bpabi.h"
  	tmake_file="arm/t-arm arm/t-arm-elf"
  	case ${target} in
@@ -95,7 +95,7 @@
  	arm*-*-rtemseabi*)
  	  tm_file="${tm_file} rtems.h arm/rtems-eabi.h newlib-stdint.h"
  	  tmake_file="${tmake_file} arm/t-bpabi t-rtems arm/t-rtems-eabi"
-@@ -1196,19 +1240,31 @@
+@@ -1208,19 +1252,31 @@
  x86_64-*-elf*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h"
  	;;
@@ -129,7 +129,7 @@
  	;;
  i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
  	tm_file="i386/i386.h i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h openbsd-oldgas.h openbsd.h i386/openbsd.h"
-@@ -3530,6 +3586,8 @@
+@@ -3554,6 +3610,8 @@
  		;;
  	i[34567]86-*-cygwin* | i[34567]86-*-mingw* | x86_64-*-mingw*)
  		;;
@@ -573,20 +573,41 @@
 +
 --- gcc/config/i386/freebsd.h.orig
 +++ gcc/config/i386/freebsd.h
-@@ -102,6 +102,7 @@
+@@ -91,6 +91,12 @@
+    When the -shared link option is used a final link is not being
+    done.  */
+ 
++#if FBSD_MAJOR < 9
++#define ELF_HASH_STYLE ""
++#else
++#define ELF_HASH_STYLE "--hash-style=both "
++#endif
++
+ #undef	LINK_SPEC
+ #define LINK_SPEC "\
+   %{p:%nconsider using '-pg' instead of '-p' with gprof(1)} \
+@@ -102,6 +108,7 @@
          %{rdynamic:-export-dynamic} \
          -dynamic-linker %(fbsd_dynamic_linker) } \
      %{static:-Bstatic}} \
-+  %{!static:--hash-style=both -rpath @PREFIX@/gcc-aux/lib} \
++  %{!static:" ELF_HASH_STYLE "-rpath @PREFIX@/gcc-aux/lib} \
    %{symbolic:-Bsymbolic}"
  
  /* A C statement to output to the stdio stream FILE an assembler
-@@ -148,3 +149,5 @@
+@@ -148,3 +155,5 @@
  
  #define TARGET_ASM_FILE_END file_end_indicate_exec_stack
  
 +/* Compile in __enable_execute_stack (void *) (see config.host) */
 +#define HAVE_ENABLE_EXECUTE_STACK
+--- gcc/config/i386/freebsd64.h.orig
++++ gcc/config/i386/freebsd64.h
+@@ -41,4 +41,5 @@
+         %{rdynamic:-export-dynamic} \
+ 	-dynamic-linker %(fbsd_dynamic_linker) } \
+     %{static:-Bstatic}} \
++  %{!static:" ELF_HASH_STYLE "-rpath @PREFIX@/gcc-aux/lib} \
+   %{symbolic:-Bsymbolic}"
 --- gcc/config/i386/netbsd-elf.h.orig
 +++ gcc/config/i386/netbsd-elf.h
 @@ -38,7 +38,8 @@
@@ -761,7 +782,7 @@
  	  tmake_file="${tmake_file} arm/t-bpabi"
  	  extra_parts="crtbegin.o crtend.o crti.o crtn.o"
  	  ;;
-@@ -523,16 +537,29 @@
+@@ -526,16 +540,29 @@
  x86_64-*-elf*)
  	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
  	;;
@@ -791,7 +812,7 @@
  	;;
  i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
  	;;
-@@ -1160,6 +1187,7 @@
+@@ -1163,6 +1190,7 @@
    i[34567]86-*-gnu* | \
    i[34567]86-*-solaris2* | x86_64-*-solaris2.1[0-9]* | \
    i[34567]86-*-cygwin* | i[34567]86-*-mingw* | x86_64-*-mingw* | \
@@ -1452,7 +1473,7 @@
  }
 --- gcc/configure.orig
 +++ gcc/configure
-@@ -26810,6 +26810,20 @@
+@@ -26856,6 +26856,20 @@
        gcc_cv_target_dl_iterate_phdr=no
      fi
      ;;
@@ -1576,7 +1597,7 @@
  	-rm -f $@
 --- configure.orig
 +++ configure
-@@ -14412,7 +14412,7 @@
+@@ -14419,7 +14419,7 @@
  _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
