@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3078 2012/10/01 13:03:51 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3079 2012/10/01 13:14:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4758,3 +4758,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/dos2unix to 6.0.2 [ryoon 2012-10-01]
 	Updated misc/fbreader to 0.99.2 [ryoon 2012-10-01]
 	Updated graphics/fotoxx to 12.10 [ryoon 2012-10-01]
+	Updated textproc/coccigrep to 1.11 [ryoon 2012-10-01]
