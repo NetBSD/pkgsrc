@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/27 08:02:05 adam Exp $
+$NetBSD: distinfo,v 1.1.1.1.18.1 2012/10/01 19:54:59 tron Exp $
 
-SHA1 (FlightGear-data-2.0.0.tar.bz2) = dba35023df93d5f2d2a6cb63370336a54f771b2f
-RMD160 (FlightGear-data-2.0.0.tar.bz2) = 0a3d0aa3ec5ccbaf7f699b47db1b99b0bc4cf4d1
-Size (FlightGear-data-2.0.0.tar.bz2) = 302068846 bytes
+SHA1 (FlightGear-data-2.8.0.tar.bz2) = 73139d5737cc34ba0671b0802ac4d2a768e7a763
+RMD160 (FlightGear-data-2.8.0.tar.bz2) = 8f8969de2ca966c9a4207a0f99ada6a64aa3f4d0
+Size (FlightGear-data-2.8.0.tar.bz2) = 685330156 bytes
