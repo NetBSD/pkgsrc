@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.27 2012/05/23 05:08:00 dholland Exp $
+$NetBSD: distinfo,v 1.28 2012/10/01 13:40:48 ryoon Exp $
 
-SHA1 (bochs-2.5.1.tar.gz) = e1052e943ebb8e3b84f407e0e3f17607268253b6
-RMD160 (bochs-2.5.1.tar.gz) = 25b515d46032626921a8cf995183116e28eba9e2
-Size (bochs-2.5.1.tar.gz) = 4126651 bytes
+SHA1 (bochs-2.6.tar.gz) = 327e7a6b5163a2795adae4a617554de4925b5cfe
+RMD160 (bochs-2.6.tar.gz) = 5a0f771b15023b40b291277235ac0ca8ada3c75c
+Size (bochs-2.6.tar.gz) = 4212828 bytes
 SHA1 (patch-.bochsrc) = df5b8879ec005fe44bca8bee42c549095012013d
 SHA1 (patch-Makefile.in) = ca8d485a9f4901df15eb3e521105de2ae833cfcb
-SHA1 (patch-configure) = b8ee4eb622e434472b4a6fa66088e15333ef291f
-SHA1 (patch-iodev_soundosx.cc) = e53434c1796133b1275a167bcec606bb185e283d
+SHA1 (patch-configure) = 66438d48e5e99bfcf778a37570b76b9fc2732ce5
+SHA1 (patch-iodev_sound_soundosx.cc) = 60ba51ac619b8149710d5ae7940ed6e4a68b36c2
 SHA1 (patch-main.cc) = 77296af5e8101c7c9ded37ec77571dbc61f98e4b
