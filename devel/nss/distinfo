@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2012/08/12 15:29:16 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2012/10/01 11:29:35 ryoon Exp $
 
 SHA1 (nss-3.13.6.tar.gz) = 1f86a7c787e8fe3ebd1dd1cce127e57fb347dac3
 RMD160 (nss-3.13.6.tar.gz) = 5391eb9341a0eb9ccb4815a35fb52e51a2d850d1
@@ -13,4 +13,6 @@ SHA1 (patch-mg) = 75ddcceaffae0bdb6ecb4efd1b5ffca68a8ae8a8
 SHA1 (patch-mh) = 0318566ecddafd00d4abd22a08ccab3eb72eabe3
 SHA1 (patch-mj) = 197fab0e00256dedc8a5f181ee0d0d6e42d8177f
 SHA1 (patch-mn) = a59f31b58547657b96a45a2753aab93866940203
+SHA1 (patch-security_coreconf_Darwin.mk) = 51b83c95df2aa8fcc5f5ade095787e16bbf6cb73
 SHA1 (patch-security_nss_cmd_shlibsign_sign.sh) = 0f4a691aacd5f58ab59ce7f11e22b4f6714e6938
+SHA1 (patch-security_nss_lib_freebl_config.mk) = 7e6ca7ea0e48d6e473e95fab932a1110e53fd883
