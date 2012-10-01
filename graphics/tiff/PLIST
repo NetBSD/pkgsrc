@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/06/20 21:07:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/10/01 18:11:29 adam Exp $
 bin/bmp2tiff
 bin/fax2ps
 bin/fax2tiff
@@ -59,6 +59,12 @@ man/man1/tiffsv.1
 man/man3/TIFFClose.3
 man/man3/TIFFDataWidth.3
 man/man3/TIFFError.3
+man/man3/TIFFFieldDataType.3
+man/man3/TIFFFieldName.3
+man/man3/TIFFFieldPassCount.3
+man/man3/TIFFFieldReadCount.3
+man/man3/TIFFFieldTag.3
+man/man3/TIFFFieldWriteCount.3
 man/man3/TIFFFlush.3
 man/man3/TIFFGetField.3
 man/man3/TIFFOpen.3
@@ -131,6 +137,12 @@ share/doc/tiff/html/libtiff.html
 share/doc/tiff/html/man/TIFFClose.3tiff.html
 share/doc/tiff/html/man/TIFFDataWidth.3tiff.html
 share/doc/tiff/html/man/TIFFError.3tiff.html
+share/doc/tiff/html/man/TIFFFieldDataType.3tiff.html
+share/doc/tiff/html/man/TIFFFieldName.3tiff.html
+share/doc/tiff/html/man/TIFFFieldPassCount.3tiff.html
+share/doc/tiff/html/man/TIFFFieldReadCount.3tiff.html
+share/doc/tiff/html/man/TIFFFieldTag.3tiff.html
+share/doc/tiff/html/man/TIFFFieldWriteCount.3tiff.html
 share/doc/tiff/html/man/TIFFFlush.3tiff.html
 share/doc/tiff/html/man/TIFFGetField.3tiff.html
 share/doc/tiff/html/man/TIFFOpen.3tiff.html
@@ -165,6 +177,7 @@ share/doc/tiff/html/man/TIFFsize.3tiff.html
 share/doc/tiff/html/man/TIFFstrip.3tiff.html
 share/doc/tiff/html/man/TIFFswab.3tiff.html
 share/doc/tiff/html/man/TIFFtile.3tiff.html
+share/doc/tiff/html/man/bmp2tiff.1.html
 share/doc/tiff/html/man/fax2ps.1.html
 share/doc/tiff/html/man/fax2tiff.1.html
 share/doc/tiff/html/man/gif2tiff.1.html
@@ -232,4 +245,4 @@ share/doc/tiff/html/v3.9.1.html
 share/doc/tiff/html/v3.9.2.html
 share/doc/tiff/html/v4.0.0.html
 share/doc/tiff/html/v4.0.1.html
-share/doc/tiff/html/v${PKGVERSION}.html
+share/doc/tiff/html/v4.0.2.html
