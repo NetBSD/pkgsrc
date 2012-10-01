@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3068 2012/10/01 07:44:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3069 2012/10/01 11:03:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/dovecot2 to 2.1.10 [ghen 2012-10-01]
 	Updated mail/dovecot2-pigeonhole to 0.3.3 [ghen 2012-10-01]
 	Updated net/libquvi-scripts to 0.4.9 [wiz 2012-10-01]
+	Updated fonts/misaki-fonts to 1.0.20120603 [ryoon 2012-10-01]
