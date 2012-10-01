@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11545 2012/10/01 15:56:19 adam Exp $
+$NetBSD: TODO,v 1.11546 2012/10/01 18:12:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -1206,7 +1206,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.5
 	o tfmxplay-1.1.6
-	o tiff-4.0.3
 	o tig-1.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
