@@ -1,17 +1,17 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/01/18 17:39:37 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2012/10/01 12:40:36 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fbreader
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
-PKG_OPTIONS_GROUP.gui=	gtk2 # qt3 qt4 - untested
+PKG_OPTIONS_GROUP.gui=	gtk2 qt3 qt4 # qt3 is untested
 PKG_SUPPORTED_OPTIONS=	debug
-PKG_SUGGESTED_OPTIONS=	gtk2
+PKG_SUGGESTED_OPTIONS=	qt4
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdebug)
-MAKE_ENV+=      TARGET_STATUS=debug
+MAKE_ENV+=	TARGET_STATUS=debug
 .else
-MAKE_ENV+=     TARGET_STATUS=release
+MAKE_ENV+=	TARGET_STATUS=release
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)

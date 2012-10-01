@@ -1,15 +1,9 @@
-$NetBSD: distinfo,v 1.4 2011/08/22 11:24:06 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/10/01 12:40:36 ryoon Exp $
 
-SHA1 (fbreader-sources-0.10.7.tgz) = d47a2fa46d43057cac9408db1f2c409f0d3a9942
-RMD160 (fbreader-sources-0.10.7.tgz) = dec4d8ee716697dd021535295c9fe62970f059a2
-Size (fbreader-sources-0.10.7.tgz) = 1600984 bytes
-SHA1 (patch-aa) = c76391244ee4a5f2efb1729157638ddb1ca97d3e
-SHA1 (patch-ab) = b2b2efd7389a847429003e460bd3ccfe4fb27722
-SHA1 (patch-ac) = 95c7a7bee4cfc017cdf52ac04895d78fde2530df
-SHA1 (patch-ae) = 29b33b9440e013cf87ae02ec4d32826f62e6b2ba
-SHA1 (patch-af) = dad6ecbf5ca5663d11ea4a5dbb0bed1ab3cae6d8
-SHA1 (patch-ag) = 19e92bd82df3cfb134ff17c9bdbb59028aceff95
-SHA1 (patch-ah) = 1a154c4650eefd8d255e3b17583e401000c07a54
-SHA1 (patch-ai) = d62ca84596a94f1ec020d419eb0c4f0a28422e1e
-SHA1 (patch-aj) = 5db2865b8975eb9972ec78ebc0914a81bd382b4c
-SHA1 (patch-zlibrary_text_src_view_ZLTextStyle.h) = a4b82ee22148ef3a5f381fb85583ac6f838a24d1
+SHA1 (fbreader-sources-0.99.2.tgz) = 16391ac7d5e38c014c48f9f9f8c0a21342926ffe
+RMD160 (fbreader-sources-0.99.2.tgz) = b143d8bb2aa3879f2c4b273011ffef5ec93532be
+Size (fbreader-sources-0.99.2.tgz) = 2423279 bytes
+SHA1 (patch-ab) = d52517a4467c86c028413b3e431f9a87548ad957
+SHA1 (patch-ah) = 8b30ee01cdb05d1680ce45cb57ba37011c33fa6c
+SHA1 (patch-ai) = 4e1e7f400277461853deba91536d25c13d9b6426
+SHA1 (patch-zlibrary_text_Makefile) = 626331a0fe20419613029ad1337c1d60d73837c9
