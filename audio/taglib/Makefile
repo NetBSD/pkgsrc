@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2012/05/29 13:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/02 17:24:48 wiz Exp $
 #
 
-DISTNAME=	taglib-1.7.2
+DISTNAME=	taglib-1.8
 CATEGORIES=	audio
-MASTER_SITES=	http://developer.kde.org/~wheeler/files/src/
+MASTER_SITES=	http://cloud.github.com/downloads/taglib/taglib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://developer.kde.org/~wheeler/taglib.html
+HOMEPAGE=	http://taglib.github.com/
 COMMENT=	Library for accessing id tags in various media files
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
