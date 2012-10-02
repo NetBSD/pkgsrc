@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/01/09 05:16:29 manu Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 21:25:23 asau Exp $
 
 DISTNAME=	nss_ldap-265
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.padl.com/OSS/nss_ldap.html
 COMMENT=	LDAP client for nsswitch
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needs nsswitch
 ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-*
