@@ -1,0 +1,3 @@
+Knot DNS is a high-performance authoritative-only DNS server
+which supports all key features of the domain name system including
+zone transfers, dynamic updates and DNSSEC.
