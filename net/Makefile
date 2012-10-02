@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.933 2012/09/27 06:10:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.934 2012/10/02 22:41:09 pettai Exp $
 #
 
 COMMENT=	Networking tools
@@ -219,6 +219,7 @@ SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
 SUBDIR+=	kmldonkey-kde3
 SUBDIR+=	knock
+SUBDIR+=	knot
 SUBDIR+=	kphone
 SUBDIR+=	ktorrent
 SUBDIR+=	ktorrent-kde3
