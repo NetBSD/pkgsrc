@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3094 2012/10/02 13:59:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3095 2012/10/02 14:53:35 gson Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkgin to 0.6.2.2nb2 [jperkin 2012-10-02]
 	Updated pkgtools/x11-links to 0.71 [tron 2012-10-02]
 	Updated pkgtools/revbump to 2.3 [wiz 2012-10-02]
+	Updated misc/py-anita to 1.29 [gson 2012-10-02]
