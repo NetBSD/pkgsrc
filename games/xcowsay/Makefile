@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/09/15 10:04:44 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 17:11:05 tron Exp $
 #
 
 DISTNAME=	xcowsay-1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nickg.me.uk/files/
 
