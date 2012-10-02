@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/07/14 12:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 23:48:01 asau Exp $
 
 DISTNAME=	libmusicbrainz-2.1.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://musicbrainz.org/doc/libmusicbrainz
 COMMENT=	Second generation incarnation of the CD Index (2.x series)
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES

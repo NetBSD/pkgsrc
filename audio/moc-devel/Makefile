@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/01/11 19:08:55 hans Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/02 23:47:58 asau Exp $
 
 DISTNAME=		moc-2.5.0-alpha3
 PKGNAME=		${DISTNAME:S/-alpha/./:moc%=moc-devel%}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		peter.schuller@infidyne.com
 HOMEPAGE=		http://moc.daper.net/
 COMMENT=		Curses based console audio player
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		moc-[0-9]*
 

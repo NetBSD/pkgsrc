@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/11/23 08:32:10 marino Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/02 23:48:09 asau Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
@@ -15,8 +15,6 @@ COMMENT=		Polyphonic analogue softsynth
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
 			*-*-vax *-*-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
