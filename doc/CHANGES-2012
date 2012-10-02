@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3089 2012/10/02 07:58:46 he Exp $
+$NetBSD: CHANGES-2012,v 1.3090 2012/10/02 08:04:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4771,3 +4771,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mercurial to 2.3.2 [wiz 2012-10-02]
 	Updated graphics/cairo to 1.12.2nb2 [tron 2012-10-02]
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.13nb6 [he 2012-10-02]
+	Removed lang/py24-html-docs [wiz 2012-10-02]
