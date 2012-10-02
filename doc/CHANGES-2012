@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3088 2012/10/02 07:39:45 tron Exp $
+$NetBSD: CHANGES-2012,v 1.3089 2012/10/02 07:58:46 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4770,3 +4770,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/tiff to 4.0.3 [adam 2012-10-01]
 	Updated devel/mercurial to 2.3.2 [wiz 2012-10-02]
 	Updated graphics/cairo to 1.12.2nb2 [tron 2012-10-02]
+	Updated security/p5-Crypt-OpenSSL-DSA to 0.13nb6 [he 2012-10-02]
