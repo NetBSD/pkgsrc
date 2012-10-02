@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3101 2012/10/02 17:27:14 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3102 2012/10/02 17:29:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/cppunit to 1.13.1 [wiz 2012-10-02]
 	Updated audio/taglib to 1.8 [wiz 2012-10-02]
 	Updated devel/mdds to 0.6.1 [wiz 2012-10-02]
+	Updated time/py-pytz to 2012f [wiz 2012-10-02]
