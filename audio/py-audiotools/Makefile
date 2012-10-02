@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/23 05:36:23 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 23:48:05 asau Exp $
 #
 
 DISTNAME=	audiotools-2.18
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://audiotools.sourceforge.net/
 COMMENT=	Collection of command line audio handling programs
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

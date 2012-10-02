@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/02/11 01:35:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/02 23:47:56 asau Exp $
 #
 
 DISTNAME=	mac-3.99-u4-b5-s7
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://etree.org/shnutils/shntool/
 COMMENT=	Monkey's Audio support library (for .ape files)
 LICENSE=	mac-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.fast.prefs.mk"
 

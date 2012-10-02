@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/10/15 08:57:43 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 23:48:06 asau Exp $
 #
 
 DISTNAME=		pyogg-1.3
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vorbis.com/
 COMMENT=		Python bindings for OGG library
 LICENSE=		gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 15:03:21 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 23:48:10 asau Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -50,8 +50,6 @@ MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.logitechsqueezebox.com/
 COMMENT=	Server for the family of networked audio players by Logitech
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_SUFX=	.tgz
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/15 10:13:18 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 23:48:06 asau Exp $
 #
 
 DISTNAME=	python-mpd-0.2.0
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.musicpd.org/~jat/python-mpd/
 COMMENT=	Python mpd client library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

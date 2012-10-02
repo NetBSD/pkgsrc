@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/12 12:06:18 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 23:48:05 asau Exp $
 
 DISTNAME=	id3-py_1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
@@ -10,8 +10,6 @@ MAINTAINER=	wes.chow@s7labs.com
 HOMEPAGE=	http://id3-py.sourceforge.net/
 COMMENT=	Python module to manipulate ID3 tags in MP3 files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 

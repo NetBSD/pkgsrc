@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/30 22:06:24 adam Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 23:48:16 asau Exp $
 
 DISTNAME=	thrulay-0.9
 CATEGORIES=	benchmarks net
@@ -11,7 +11,6 @@ COMMENT=	TCP and UDP network capacity tester
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/02/15 22:47:31 hans Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 23:48:09 asau Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
@@ -15,8 +15,6 @@ COMMENT=		Loop based sampler
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
 			*-*-vax *-*-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

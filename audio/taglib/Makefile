@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/02 17:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/02 23:48:10 asau Exp $
 #
 
 DISTNAME=	taglib-1.8
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taglib.github.com/
 COMMENT=	Library for accessing id tags in various media files
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 

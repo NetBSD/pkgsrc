@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/08/06 12:51:48 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 23:48:03 asau Exp $
 
 DISTNAME=	CDDB-1.220
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ CONFLICTS+=	CDDB-[0-9]*
 SUPERSEDES=	CDDB<=1.17nb1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/CDDB/.packlist
 

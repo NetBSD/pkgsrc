@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/02 17:10:36 tron Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/02 23:48:09 asau Exp $
 #
 
 DISTNAME=		solfege-3.14.1
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.solfege.org/
 COMMENT=		Practice several musical ear training exercises
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		txt2man-[0-9]*:../../converters/txt2man

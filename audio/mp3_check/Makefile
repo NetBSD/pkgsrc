@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/02 06:10:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 23:47:58 asau Exp $
 #
 
 DISTNAME=	mp3_check-1.98
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3check/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mp3check.sourceforge.net/
 COMMENT=	mp3 file checker
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

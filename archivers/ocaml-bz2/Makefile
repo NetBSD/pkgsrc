@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 12:30:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 23:47:56 asau Exp $
 
 PKGNAME=	ocaml-bz2-${VERSION}
 DISTNAME=	camlbz2-${VERSION}
@@ -10,8 +10,6 @@ MAINTAINER=	jaapb@NetBSD.org
 COMMENT=	OCaml library to manipulate bz2 archives
 HOMEPAGE=	http://camlbz2.forge.ocamlcore.org/
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

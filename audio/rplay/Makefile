@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2009/06/06 22:53:23 zafer Exp $
+# $NetBSD: Makefile,v 1.62 2012/10/02 23:48:08 asau Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://rplay.doit.org/dist/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		makeinfo
 USE_LIBTOOL=		YES

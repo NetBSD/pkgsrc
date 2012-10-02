@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/02/15 23:16:32 hans Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 23:48:15 asau Exp $
 #
 
 DISTNAME=		xmms-meta-timidity-0.2
@@ -14,8 +14,6 @@ COMMENT=		XMMS meta input script for timidity
 DEPENDS+=		timidity-[0-9]*:../../audio/timidity
 DEPENDS+=		freepats-[0-9]*:../../audio/freepats
 DEPENDS+=		xmms-meta-input-[0-9]*:../../audio/xmms-meta-input
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty

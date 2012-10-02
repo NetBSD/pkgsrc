@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/09/26 21:16:57 martin Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/02 23:48:00 asau Exp $
 #
 
 DISTNAME=	mserv-0.35
@@ -27,7 +27,6 @@ LDFLAGS.SunOS+=	-lnsl -lsocket
 post-configure:
 	${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h
 
-PKG_DESTDIR_SUPPORT=    user-destdir
 INSTALLATION_DIRS+=	share/doc/mserv share/mserv/webclient
 
 post-install:

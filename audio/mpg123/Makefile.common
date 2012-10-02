@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2010/10/26 21:06:44 zafer Exp $
+# $NetBSD: Makefile.common,v 1.36 2012/10/02 23:48:00 asau Exp $
 #
 # used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
@@ -18,8 +18,6 @@ LICENSE=	gnu-lgpl-v2.1
 MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://www.mpg123.org/
 COMMENT?=	Contains the ${MPG123_MODULE} module for mpg123
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE?=	yes
 USE_LIBTOOL?=	yes

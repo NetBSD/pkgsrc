@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/15 10:03:41 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 23:47:58 asau Exp $
 #
 
 DISTNAME=	moodbar-0.1.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://amarok.kde.org/wiki/Moodbar
 COMMENT=	Tool to show the "mood" of a track
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

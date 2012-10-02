@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2012/10/02 17:10:35 tron Exp $
+# $NetBSD: Makefile,v 1.99 2012/10/02 23:48:07 asau Exp $
 #
 
 DISTNAME=	rhythmbox-0.12.8
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/rhythmbox/
 COMMENT=	Music management application for GNOME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

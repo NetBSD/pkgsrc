@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/01 18:45:43 rhaen Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 23:48:03 asau Exp $
 
 DISTNAME=	CDDB_get-2.28
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://armin.emx.at/cddb/
 COMMENT=	Perl interface to query for CDDB information
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/CDDB_get/.packlist

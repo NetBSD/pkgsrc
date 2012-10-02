@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/05/21 22:25:02 shattered Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/02 23:48:02 asau Exp $
 
 DISTNAME=		ocp-0.1.21
 PKGREVISION=		3
@@ -10,8 +10,6 @@ MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/p/opencubicplayer/
 COMMENT=		Open Cubic Player
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

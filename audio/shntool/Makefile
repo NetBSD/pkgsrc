@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/14 18:56:00 rafal Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 23:48:08 asau Exp $
 #
 
 DISTNAME=	shntool-3.0.10
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.etree.org/shnutils/shntool/
 COMMENT=	Lossless audio compressor wrapper tool
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

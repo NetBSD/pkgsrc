@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/02/15 22:25:13 hans Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/02 23:48:02 asau Exp $
 
 DISTNAME=	openal-0.0.8
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openal.org/
 COMMENT=	3D positional spatialized sound library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		yes

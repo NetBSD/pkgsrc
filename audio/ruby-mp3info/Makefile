@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/06 04:33:31 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 23:48:08 asau Exp $
 #
 
 DISTNAME=	ruby-mp3info-0.6.13
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://ruby-mp3info.rubyforge.org/
 COMMENT=	Pure-ruby library for informations and tags on mp3 files
 LICENSE=	ruby-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_RUBY_SETUP=	yes

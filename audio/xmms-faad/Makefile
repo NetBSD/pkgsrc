@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/06/04 09:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 23:48:15 asau Exp $
 
 DISTNAME=		faad2-2.7
 PKGNAME=		xmms-faad-2.7
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=faac/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.audiocoding.com/
 COMMENT=		XMMS plugin for faad
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #RESTRICTED=		Dolby doesn't allow binary distributions
 #NO_BIN_ON_FTP=		${RESTRICTED}

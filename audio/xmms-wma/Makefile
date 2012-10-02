@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/06/04 09:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 23:48:16 asau Exp $
 #
 
 DISTNAME=	xmms-wma-1.0.5
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mcmcc.bat.ru/xmms-wma/
 COMMENT=	WMA input plugin for XMMS
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM=  *-*-i386 # Doesn't seem to be very portable...
 
 USE_TOOLS+=	gmake

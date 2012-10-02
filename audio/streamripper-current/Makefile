@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/15 10:03:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 23:48:10 asau Exp $
 #
 
 DISTNAME=	streamripper-1.64.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=streamripper/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://streamripper.sourceforge.net/
 COMMENT=	Splits SHOUTcast stream into tracks
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-included-libmad
