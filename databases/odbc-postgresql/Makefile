@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/08/05 10:02:10 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/02 21:25:23 asau Exp $
 
 DISTNAME=	psqlodbc-09.00.0200
 PKGNAME=	odbc-postgresql-9.0.200
@@ -10,8 +10,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://pgfoundry.org/projects/psqlodbc/
 COMMENT=	ODBC interface to PostgreSQL
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	postgresql-[0-7]*
 CONFLICTS+=	iodbc-postgresql-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/08/14 08:18:11 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:36 asau Exp $
 #
 
 DISTNAME=	YAML-MLDBM-0.10
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/YAML-MLDBM/
 COMMENT=	Use tied hash db-s with Python and Ruby
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-MLDBM>=2.01:../../databases/p5-MLDBM
 DEPENDS+=	p5-YAML>=0.35:../../textproc/p5-YAML

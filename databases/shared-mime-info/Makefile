@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/09/15 10:04:04 obache Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/02 21:25:52 asau Exp $
 #
 
 DISTNAME=	shared-mime-info-1.0
@@ -13,7 +13,6 @@ COMMENT=	Core database of common types
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES+=		c99

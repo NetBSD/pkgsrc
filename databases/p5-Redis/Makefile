@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/04 19:42:09 mishka Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:34 asau Exp $
 #
 
 DISTNAME=	Redis-1.951
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Redis/.packlist
 USE_LANGUAGES=	# none

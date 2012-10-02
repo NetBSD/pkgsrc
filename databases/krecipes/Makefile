@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 10:04:02 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 21:25:20 asau Exp $
 #
 
 DISTNAME=		krecipes-1.0-beta1
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=krecipes/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://krecipes.sourceforge.net/
 COMMENT=		Recipe manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes

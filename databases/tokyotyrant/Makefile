@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/08/06 04:39:22 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/02 21:25:55 asau Exp $
 #
 
 DISTNAME=	tokyotyrant-1.1.41
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://fallabs.com/tokyotyrant/
 COMMENT=	Network interface of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

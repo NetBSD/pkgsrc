@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/03/13 19:57:12 adam Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 21:25:24 asau Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nops-/}
 COMMENT=	Remove null-ops for OpenLDAP
 
 CONFLICTS+=	openldap<2.3.23nb1
 DEPENDS+=	openldap-server>=2.4.13nb1:../../databases/openldap-server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 

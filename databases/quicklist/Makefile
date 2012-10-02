@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:43:15 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/02 21:25:51 asau Exp $
 #
 
 DISTNAME=	quicklist-0.8.6
@@ -9,8 +9,6 @@ MASTER_SITES=	# ftp://ftp.quicklist.org/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.quicklist.org/
 COMMENT=	Simple database like AppleWorks & MS Works
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	msgfmt
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/04 12:03:39 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:37 asau Exp $
 
 DISTNAME=	DB-1.7.14
 CATEGORIES=	databases
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/DB
 COMMENT=	PHP Database Abstraction Layer
 LICENSE=	php
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"

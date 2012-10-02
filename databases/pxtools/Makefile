@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:43:14 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 21:25:48 asau Exp $
 #
 
 DISTNAME=		pxtools-0.0.20
@@ -9,8 +9,6 @@ MASTER_SITES=		http://jan.kneschke.de/projects/pxtools/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jan.kneschke.de/projects/pxtools/
 COMMENT=		Paradox database export/info utilities
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/06 20:29:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 21:25:53 asau Exp $
 
 DISTNAME=	sqlite-doc-3071400
 PKGNAME=	sqlite3-docs-3.7.14
@@ -16,8 +16,6 @@ COMMENT=	SQL Database Engine in a C Library (docs package)
 # because none of these things are part of the core deliverable SQLite
 # library."
 LICENSE=	public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	find xargs pax

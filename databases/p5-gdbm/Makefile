@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/01/24 09:10:59 sbd Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/02 21:25:36 asau Exp $
 
 .include "../../lang/perl5/Makefile.common"
 PKGNAME=	p5-${DISTNAME:S/perl/gdbm/}
@@ -11,8 +11,6 @@ DISTINFO_FILE=	${.CURDIR}/../../lang/perl5/distinfo
 
 COMMENT=	Perl interface to gdbm - GNU database manager
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/GDBM_File
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}

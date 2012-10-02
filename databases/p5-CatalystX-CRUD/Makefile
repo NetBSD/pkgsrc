@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/10/16 09:17:53 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 21:25:25 asau Exp $
 
 DISTNAME=	CatalystX-CRUD-0.52
 PKGNAME=	p5-${DISTNAME}
@@ -23,8 +23,6 @@ DEPENDS+=	p5-Sort-SQL>=0.07:../../databases/p5-Sort-SQL
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/.packlist
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

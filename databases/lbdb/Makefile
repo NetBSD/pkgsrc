@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/01/17 21:43:18 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/02 21:25:20 asau Exp $
 
 DISTNAME=		lbdb_0.35.1
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.spinnaker.de/debian/
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.spinnaker.de/lbdb/
 COMMENT=		The little brother's database
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-perl-ldap>=0.20:../../databases/p5-perl-ldap
 

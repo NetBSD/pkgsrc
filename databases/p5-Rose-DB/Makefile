@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/01/26 19:16:34 rhaen Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 21:25:34 asau Exp $
 
 DISTNAME=	Rose-DB-0.766
 PKGNAME=	p5-${DISTNAME}
@@ -23,8 +23,6 @@ DEPENDS+=	p5-Time-Clock-[0-9]*:../../time/p5-Time-Clock
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Rose/DB/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
 	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;

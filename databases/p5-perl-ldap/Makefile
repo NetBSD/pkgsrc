@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/06/12 15:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/02 21:25:36 asau Exp $
 
 DISTNAME=	perl-ldap-0.4001
 PKGNAME=	p5-${DISTNAME:S/4001/40.01/}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ldap.perl.org/
 COMMENT=	Perl class to access LDAP servers
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	IPV6_READY
 

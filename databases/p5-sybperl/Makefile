@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/08/14 08:18:11 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 21:25:36 asau Exp $
 #
 
 DISTNAME=	sybperl-2.16
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.peppler.org/downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.peppler.org/freeware/sybperl.html
 COMMENT=	Perl modules for using Sybase/MS-SQL databases
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Sybase/.packlist
 

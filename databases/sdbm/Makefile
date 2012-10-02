@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/04/16 04:01:10 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 21:25:52 asau Exp $
 #
 
 DISTNAME=		sdbm
@@ -18,7 +18,6 @@ MAKE_FILE=		makefile
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
 	cd ${WRKDIR} && ${SH} sdbm.shar >/dev/null

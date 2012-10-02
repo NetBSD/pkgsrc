@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/07/20 12:30:36 taca Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 21:25:40 asau Exp $
 
 MODNAME=		sqlite
 CATEGORIES+=		databases
 COMMENT=		PHP extension for SQLite 2.x databases
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		php-sqlite-[0-9]*
 

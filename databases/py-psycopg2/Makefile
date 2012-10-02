@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/08/05 10:02:11 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/02 21:25:50 asau Exp $
 
 DISTNAME=	psycopg2-2.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://initd.org/psycopg/
 COMMENT=	PostgreSQL database adapter for Python
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

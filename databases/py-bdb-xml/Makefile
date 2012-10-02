@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/04/08 19:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 21:25:48 asau Exp $
 
 DISTNAME=	dbxml-2.5.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
@@ -9,8 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/us/products/database/berkeley-db/
 COMMENT=	Python wrapper for Berkeley DB XML C++ API
 LICENSE=	modified-bsd AND apache-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	${PYPKGPREFIX}-dbxml<=1.2.1
 

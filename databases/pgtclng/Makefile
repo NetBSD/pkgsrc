@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/08/21 23:49:20 marino Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:38 asau Exp $
 #
 
 VER=		1.5.3
@@ -11,8 +11,6 @@ MASTER_SITES=	http://pgfoundry.org/frs/download.php/1075/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pgtclng.projects.postgresql.org/
 COMMENT=	Next Generation TCL interface to PostgreSQL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	pgtcl-[0-9]*
 

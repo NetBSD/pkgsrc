@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/07/14 22:16:35 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/02 21:25:17 asau Exp $
 #
 
 DISTNAME=		edb-1.0.5
@@ -9,8 +9,6 @@ PKGREVISION=		1
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.enlightenment.org/Libraries/Edb/
 COMMENT=		Database abstraction layer to Berkeley databases
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

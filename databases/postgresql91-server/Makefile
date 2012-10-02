@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/07/01 19:49:25 morr Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:48 asau Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-server-/}
 COMMENT=	PostgreSQL database server programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips

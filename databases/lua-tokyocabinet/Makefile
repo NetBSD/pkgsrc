@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/08/06 04:51:23 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 21:25:21 asau Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.9
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://fallabs.com/tokyocabinet/luadoc/
 COMMENT=	Lua binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
