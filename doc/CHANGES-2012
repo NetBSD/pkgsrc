@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3105 2012/10/02 17:36:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3106 2012/10/02 22:41:57 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4787,3 +4787,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/py-simplejson to 2.6.2 [wiz 2012-10-02]
 	Updated x11/xkeyboard-config to 2.7 [wiz 2012-10-02]
 	Updated security/libtasn1 to 2.14 [wiz 2012-10-02]
+	Added net/knot version 1.1.0 [pettai 2012-10-02]
