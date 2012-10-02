@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/03 12:20:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 20:11:35 asau Exp $
 #
 
 DISTNAME=	LuaJIT-1.1.5
@@ -12,8 +12,6 @@ COMMENT=	Just-In-Time Compiler for the Lua programming language
 ONLY_FOR_PLATFORM=	*-*-i386
 
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/08/21 23:49:22 marino Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/02 20:11:53 asau Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		1
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/sather/
 COMMENT=		Compiler for the Sather object oriented programming language
 #LICENSE=		gnu-gpl-v3 gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

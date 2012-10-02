@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/27 04:48:44 agc Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 20:11:49 asau Exp $
 
 DISTNAME=		picoc-2.1
 CATEGORIES=		lang
@@ -12,7 +12,6 @@ LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/picoc
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 AUTO_MKDIRS=		yes
 
 do-install:

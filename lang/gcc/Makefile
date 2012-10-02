@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2011/07/15 08:47:22 asau Exp $
+# $NetBSD: Makefile,v 1.96 2012/10/02 20:11:40 asau Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		7
@@ -16,8 +16,6 @@ HOMEPAGE=		http://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection, version 2
 
 NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* *-*-x86_64 DragonFly-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake bison
 MAKEFLAGS+=		GMAKE_LOCALE=no
