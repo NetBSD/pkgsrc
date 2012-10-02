@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 15:21:07 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:21 asau Exp $
 #
 
 PKGNAME=	libpqxx-doc-${LIBPQXX_VERSION}
 PKGREVISION=	1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/libpqxx/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/08/05 10:02:09 obache Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/02 21:25:18 asau Exp $
 #
 
 DISTNAME=	guile-pg-0.39
@@ -10,8 +10,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gnuvola.org/software/guile-pg/
 COMMENT=	PostgreSQL interface for Guile
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake

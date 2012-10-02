@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/15 10:04:02 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:20 asau Exp $
 
 DISTNAME=		ldapvi-1.7
 PKGREVISION=		7
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.lichteblau.com/download/
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.lichteblau.com/ldapvi/
 COMMENT=		Interactive LDAP client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_NCURSES=		yes
