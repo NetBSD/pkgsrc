@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/15 10:05:09 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 17:11:19 tron Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	4.4.3
 
 DISTNAME=	xfce4-icon-theme-${XFCE4_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 COMMENT=	Xfce icon themes
 

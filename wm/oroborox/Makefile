@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 10:06:43 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 17:12:06 tron Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
 PKGNAME=	oroborox-0.9.8
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2

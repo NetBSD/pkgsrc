@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2012/09/15 10:03:46 obache Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/02 17:10:37 tron Exp $
 
 DISTNAME=	chemtool-1.6.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	biology
 MASTER_SITES=	http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 

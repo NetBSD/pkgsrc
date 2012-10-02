@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/15 10:06:41 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/02 17:12:05 tron Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.5.1
 
 DISTNAME=	xfce4-timer-plugin-${XFCE4_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	time
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-timer-plugin/
 COMMENT=	Xfce4 timer plugin

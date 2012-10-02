@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2012/09/15 10:03:58 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2012/10/02 17:10:42 tron Exp $
 
 BUILDLINK_TREE+=	jpilot
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jpilot
 JPILOT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jpilot+=	jpilot>=1.6.0
-BUILDLINK_ABI_DEPENDS.jpilot+=	jpilot>=1.6.0nb15
+BUILDLINK_ABI_DEPENDS.jpilot+=	jpilot>=1.6.0nb16
 BUILDLINK_PKGSRCDIR.jpilot?=	../../comms/jpilot
 
 .include "../../comms/pilot-link-libs/buildlink3.mk"

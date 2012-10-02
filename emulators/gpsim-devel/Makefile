@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2012/09/15 10:04:32 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/02 17:10:58 tron Exp $
 #
 
 DISTNAME=	gpsim-20050905
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	emulators
 MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
 
