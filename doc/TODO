@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11550 2012/10/02 17:17:56 wiz Exp $
+$NetBSD: TODO,v 1.11551 2012/10/02 17:24:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1183,7 +1183,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
-	o taglib-1.8
 	o taskjuggler-3.3.0
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
