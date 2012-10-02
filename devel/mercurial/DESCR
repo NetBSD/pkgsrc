@@ -1,38 +1,17 @@
-Mercurial is a fast, lightweight Source Control Management system
-designed for efficient handling of very large distributed projects.
+Mercurial is a free, distributed source control management tool.
+It efficiently handles projects of any size and offers an easy and
+intuitive interface.
 
-Fast
-        * Extremely high-performance delta-compressed storage scheme
-        * Optimized for disk layout and access efficiency
-        * Complete cross-indexing of files and changesets
-        * Bandwidth and CPU efficient HTTP and SSH sync protocols
+Mercurial efficiently handles projects of any size and kind.  Every
+clone contains the whole project history, so most actions are local,
+fast and convenient. Mercurial supports a multitude of workflows
+and you can easily enhance its functionality with extensions.
 
-Scalable
-	* Distributed development model supports unlimited numbers
-	  of developers
-        * Allows arbitrary merging between developer branches
-	* Doesn't significantly degrade with large numbers of files
-	  or changesets
-        * No waiting for locks!
+It is easy to learn: You can follow our simple guide to learn how
+to revision your documents with Mercurial, or just use the quick
+start to get going instantly. A short overview of Mercurial's
+decentralized model is also available.
 
-Robust
-        * SHA1 integrity checking on repository data
-        * Append-only storage model with transaction journalling
-        * Fast full-repository verification
-        * Convenient backup
-
-Easy to use
-        * Most commands are familiar to users of CVS and other systems
-        * Built-in command help
-        * Integrated stand-alone web interface
-        * Works with various GUI tools
-
-Easy to adopt
-        * Runs on UNIX, MacOS X, and Windows
-        * Conversion tools available for many popular SCMs
-        * Allows a variety of usage models
-        * Supports user-defined hooks and extensions
-
-Free
-        * Source code available under the GPL license
-        * Actively community supported and developed
+And it just works: Mercurial strives to deliver on each of its
+promises. Most tasks simply work on the first try and without
+requiring arcane knowledge.
