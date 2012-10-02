@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2012/08/15 20:25:05 wiz Exp $
+$NetBSD: distinfo,v 1.40 2012/10/02 17:15:11 wiz Exp $
 
-SHA1 (automake-1.12.3.tar.xz) = d08297e9eb36c82e1baa4e7ad9d27fc1f7e91537
-RMD160 (automake-1.12.3.tar.xz) = f776bf1e65e2fdc38354802e8002bd27feb92140
-Size (automake-1.12.3.tar.xz) = 1378784 bytes
+SHA1 (automake-1.12.4.tar.xz) = 35ecd1cfccf4ff608f7801401979f316d9ed15bf
+RMD160 (automake-1.12.4.tar.xz) = a8919e18365925d35077224c6a3485f58d27b3b5
+Size (automake-1.12.4.tar.xz) = 1381908 bytes
