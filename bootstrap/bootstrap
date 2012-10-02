@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.180 2012/07/26 13:00:48 jperkin Exp $
+# $NetBSD: bootstrap,v 1.181 2012/10/02 21:02:21 cheusov Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -247,15 +247,15 @@ is_root()
 		if [ `uname -r` -lt 6  -a -z "$ID" ]; then
 	# older version of IRIX have an id command with limited features
 			if [ "`$idprog`" != "uid=0(root) gid=0(sys)" ]; then
-				return 0
+				return 1
 			fi
-			return 1
+			return 0
 		fi
 	fi
 	if [ `$idprog -u` != 0 ]; then
-		return 0
+		return 1
 	fi
-	return 1
+	return 0
 }
 
 # run a command, abort if it fails
@@ -534,9 +534,9 @@ HPUX)
 Interix)
 	is_root () {
 		if id -G | grep -q 131616; then
-			return 1
+			return 0
 		fi
-		return 0
+		return 1
 	}
 	mkdir_p () {
 		mkdir -p "$@" # allows umask to take effect
@@ -820,15 +820,7 @@ run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' 
 run_cmd "$chmodprog +x $wrkdir/bin/install-sh"
 install_sh="$shprog $wrkdir/bin/install-sh"
 
-is_root
-if [ $? = 1 ]; then
-	user=$root_user
-	group=$root_group
-else
-	if [ $unprivileged = "no" ]; then
-		die "You must be either root to install bootstrap-pkgsrc or use the --unprivileged option."
-	fi
-
+if [ $unprivileged = "yes" ]; then
 	user=`$whoamiprog`
 	group=`$groupsprog | $awkprog '{print $1}'`
 	echo_msg "building as unprivileged user $user/$group"
@@ -840,6 +832,11 @@ LIBOWN=$user
 LIBGRP=$group
 MANOWN=$user
 MANGRP=$group" > ${wrkdir}/Makefile.inc
+elif is_root; then
+	user=$root_user
+	group=$root_group
+else
+	die "You must be either root to install bootstrap-pkgsrc or use the --unprivileged option."
 fi
 
 # export the proper environment
