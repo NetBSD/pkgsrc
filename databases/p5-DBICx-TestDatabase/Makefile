@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/19 08:09:59 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:29 asau Exp $
 
 DISTNAME=	DBICx-TestDatabase-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DBICx-TestDatabase/
 COMMENT=	Perl 5 module to create temporary database from a DBIx::Class::Schema
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBICx/TestDatabase/.packlist

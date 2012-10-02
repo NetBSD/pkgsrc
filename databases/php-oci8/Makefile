@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/06/27 20:38:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 21:25:39 asau Exp $
 
 MODNAME=		oci8
 CATEGORIES+=		databases
 COMMENT=		PHP extension for Oracle 8 (and above) databases
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PHP_EXT_PATCHES=	yes
 

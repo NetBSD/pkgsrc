@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/27 12:31:40 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:50 asau Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-0
 PKGREVISION=	3
@@ -7,8 +7,6 @@ CATEGORIES=	databases python
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Built-in sqlite support for Python 2.5 and up
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		patch
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2012/10/02 17:10:43 tron Exp $
+# $NetBSD: Makefile,v 1.61 2012/10/02 21:25:18 asau Exp $
 #
 
 DISTNAME=		gramps-1.0.11
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://gramps-project.org/
 COMMENT=	Genealogical Research and Analysis Management Programming System
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

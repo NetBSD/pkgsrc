@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 17:10:43 tron Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 21:25:22 asau Exp $
 
 DISTNAME=	mysql-workbench-gpl-5.2.33b-src
 PKGNAME=	${DISTNAME:S/-gpl//:S/b-src$//}
@@ -12,8 +12,6 @@ COMMENT=	Cross-platform, visual database design tool
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b-src$/-src/}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
