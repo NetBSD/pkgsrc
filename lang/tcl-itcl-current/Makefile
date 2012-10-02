@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/08/21 23:49:23 marino Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 20:11:55 asau Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://incrtcl.sourceforge.net/itcl/
 COMMENT=	[incr Tcl] object-oriented extension to Tcl/Tk.  CVS snapshot
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	tcl-itcl-[0-9]*
 

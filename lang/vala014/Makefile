@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/15 10:05:21 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 20:11:56 asau Exp $
 #
 
 DISTNAME=	vala-0.14.2
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Vala
 COMMENT=	Compiler for the GObject type system (0.14 branch)
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	vala<0.12.1nb1
 

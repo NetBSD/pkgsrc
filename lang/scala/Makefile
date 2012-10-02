@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/01 22:22:01 yyamano Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 20:11:53 asau Exp $
 
 DISTNAME=	scala-2.9.2
 CATEGORIES=	lang
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	yyamano@NetBSD.org
 HOMEPAGE=	http://www.scala-lang.org/
 COMMENT=	Scala is a multi-paradigm programming language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 USE_JAVA2=	1.5

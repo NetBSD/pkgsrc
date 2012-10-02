@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/05/31 23:43:23 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 20:11:39 asau Exp $
 #
 
 DISTNAME=		focal
@@ -10,8 +10,6 @@ MASTER_SITES=		http://home.scarlet.be/~be042720/44/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.scarlet.be/~be042720/44/focal.htm
 COMMENT=		Interpreted programming language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FOCALDOCDIR=	${PREFIX}/share/doc/focal
 

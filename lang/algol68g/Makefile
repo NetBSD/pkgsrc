@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/03 20:06:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/02 20:11:35 asau Exp $
 #
 
 DISTNAME=	algol68g-2.4.1
@@ -9,8 +9,6 @@ MAINTAINER=	olafs@cs.ru.nl
 HOMEPAGE=	http://jmvdveer.home.xs4all.nl/algol.html
 COMMENT=	Algol 68genie compiler
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes

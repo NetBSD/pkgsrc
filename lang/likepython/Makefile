@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/15 11:53:29 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 20:11:44 asau Exp $
 #
 
 VER=            0.1
@@ -14,8 +14,6 @@ MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www.staringispolite.com/likepython/
 COMMENT=	OMG! It's like Python, but like, you know, casual!
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR} # More than one possibility -- please check manually.
 

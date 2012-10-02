@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/09/15 10:05:20 obache Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/02 20:11:47 asau Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -11,8 +11,6 @@ OWNER=		tnn@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
 COMMENT=	Open-source implementation of the Java Platform, Standard Edition
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}

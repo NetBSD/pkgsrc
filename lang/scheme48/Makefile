@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/12/17 19:02:11 marino Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/02 20:11:53 asau Exp $
 
 DISTNAME=		scheme48-1.8
 CATEGORIES=		lang
@@ -11,7 +11,6 @@ COMMENT=		The Scheme Underground implementation of R5RS
 
 NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 # bin/scheme-r5rs

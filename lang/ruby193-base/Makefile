@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/09/22 11:43:28 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 20:11:52 asau Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -14,8 +14,6 @@ COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
 LICENSE=	${RUBY_LICENSE}
 
 RUBY_VERSION_SUPPORTED=	193
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 USE_LANGUAGES=		c

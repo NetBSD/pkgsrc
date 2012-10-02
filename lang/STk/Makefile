@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/09/16 18:07:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/02 20:11:35 asau Exp $
 
 DISTNAME=	STk-4.0.1
 PKGREVISION=		3
@@ -11,7 +11,6 @@ COMMENT=	Scheme interpreter with full access to the Tk graphical package
 
 CONFLICTS+=	snow-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 OSVERSION_SPECIFIC=	yes

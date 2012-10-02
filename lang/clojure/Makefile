@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/04 11:51:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 20:11:37 asau Exp $
 #
 
 DISTNAME=	clojure-1.4.0
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://clojure.org/
 COMMENT=	Dynamic programming language that targets the Java VM
 LICENSE=	epl-v1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_JAVA=	run

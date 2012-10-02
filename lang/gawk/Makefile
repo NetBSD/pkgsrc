@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/06/15 00:32:27 sbd Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/02 20:11:40 asau Exp $
 
 DISTNAME=	gawk-4.0.1
 PKGREVISION=	2
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS=	ja-gawk-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

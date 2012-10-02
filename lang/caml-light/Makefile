@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/06 19:32:07 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:36 asau Exp $
 #
 
 DISTNAME=		cl74unix
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://ftp.inria.fr/lang/caml-light/
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://caml.inria.fr/caml-light/index.en.html
 COMMENT=		Another implementation of Caml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

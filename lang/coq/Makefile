@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/10/02 17:11:26 tron Exp $
+# $NetBSD: Makefile,v 1.48 2012/10/02 20:11:37 asau Exp $
 #
 
 DISTNAME=	coq-8.3pl1
@@ -10,8 +10,6 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES

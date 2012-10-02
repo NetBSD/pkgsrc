@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/01 10:36:58 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 20:11:51 asau Exp $
 #
 
 DISTNAME=	rcfunge2
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rcfunge98.com/
 COMMENT=	Funge interpreter
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/rcfunge
 BUILD_TARGET=	funge

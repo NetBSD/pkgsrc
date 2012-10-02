@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/03/11 18:55:34 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:39 asau Exp $
 #
 
 DISTNAME=		fort77-1.18
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The driver for f2c, a fortran to C translator
 
 DEPENDS+=		f2c-[0-9]*:../../lang/f2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run
 NO_BUILD=		yes

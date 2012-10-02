@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/09/15 10:05:19 obache Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/02 20:11:44 asau Exp $
 #
 
 DISTNAME=		librep-0.91.0
@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://librep.sourceforge.net/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake makeinfo
 USE_GNU_READLINE=	yes # uses rl_basic_quote_characters
 USE_LIBTOOL=		yes

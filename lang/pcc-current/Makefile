@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/03/27 15:17:04 plunky Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 20:11:48 asau Exp $
 
 DISTNAME=	pcc-${DATE_STR}
 PKGNAME=	pcc-current-${DATE_STR}
@@ -12,8 +12,6 @@ COMMENT=	Portable C compiler
 LICENSE=	pcc-license
 
 DATE_STR=	20120326
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	pcc-[0-9]*
 

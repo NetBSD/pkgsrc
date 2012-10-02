@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/21 23:49:22 marino Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 20:11:44 asau Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
@@ -12,8 +12,6 @@ HOMEPAGE=		http://www.tcl.tk/
 COMMENT=		TCL library for embedding
 
 DEPENDS+=		tcl>=8.4.6nb5:../../lang/tcl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
 GNU_CONFIGURE=		yes

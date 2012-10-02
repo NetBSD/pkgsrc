@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/11/30 20:13:29 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 20:11:42 asau Exp $
 #
 
 DISTNAME=	intercal-0.29
@@ -12,7 +12,6 @@ COMMENT=	The ultimate language for obfuscation and job security
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=	flex yacc
 GNU_CONFIGURE=	yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	bin lib
 INFO_FILES=	yes
 
