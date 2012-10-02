@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 08:18:10 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 21:25:35 asau Exp $
 
 DISTNAME=	SQL-ReservedWords-0.7
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/SQL-ReservedWords/
 COMMENT=	Reserved SQL words by standard and vendors
 
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/SQL/ReservedWords/.packlist
 

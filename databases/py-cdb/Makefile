@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/06 22:49:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 21:25:48 asau Exp $
 #
 
 DISTNAME=	python-cdb-0.34
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://pilcrow.madison.wi.us/
 COMMENT=	cdb python extension module
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

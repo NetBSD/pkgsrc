@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/08/14 08:18:11 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/02 21:25:35 asau Exp $
 
 DISTNAME=	Sort-SQL-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Sort/SQL/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

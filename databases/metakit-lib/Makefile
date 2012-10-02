@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/02/11 21:00:13 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/02 21:25:22 asau Exp $
 #
 
 VERSION=	2.4.9.7
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.equi4.com/pub/mk/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.equi4.com/metakit/
 COMMENT=	Embedded database library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	builds

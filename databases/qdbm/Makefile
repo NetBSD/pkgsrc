@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/25 09:40:57 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:50 asau Exp $
 #
 
 .include "Makefile.common"
@@ -7,8 +7,6 @@ CATEGORIES=	databases
 
 COMMENT=	Quick Database Manager - library of routines for managing a db
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 MAKE_FILE=	LTmakefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/17 10:14:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:23 asau Exp $
 #
 
 PKGNAME=	ocaml-sqlite3-${VERSION}
@@ -12,8 +12,6 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/mmottl/sqlite3-ocaml/
 COMMENT=	Sqlite bindings for OCaml
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--destdir "${DESTDIR}" --prefix "${PREFIX}"
