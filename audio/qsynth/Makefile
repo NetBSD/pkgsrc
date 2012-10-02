@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/09/15 10:03:44 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/02 23:48:07 asau Exp $
 
 DISTNAME=	qsynth-0.2.4
 PKGREVISION=	14
@@ -10,7 +10,6 @@ HOMEPAGE=	http://qsynth.sourceforge.net/
 COMMENT=	Qt GUI Interface to FluidSynth
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

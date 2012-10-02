@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/06/04 09:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/02 23:48:15 asau Exp $
 #
 
 DISTNAME=	flac-1.1.3
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flac.sourceforge.net/
 COMMENT=	FLAC XMMS plugin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

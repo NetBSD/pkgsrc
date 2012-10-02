@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/17 21:43:18 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 23:48:04 asau Exp $
 
 DISTNAME=	pa_snapshot_v19
 PKGNAME=	portaudio-devel-20060521
@@ -10,8 +10,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.portaudio.com/
 COMMENT=	Portable cross-platform Audio API
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
