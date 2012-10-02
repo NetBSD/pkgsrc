@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/08/12 16:07:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 17:28:59 wiz Exp $
 #
 
-DISTNAME=	pytz-2012d
+DISTNAME=	pytz-2012f
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pytz/
@@ -19,5 +19,8 @@ USE_LANGUAGES=	# none
 # py-setuptools needed, but not available; package itself is ready
 #PYTHON_VERSIONS_INCLUDE_3X=	yes
 
+REPLACE_PYTHON=	pytz/tzfile.py
+
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
