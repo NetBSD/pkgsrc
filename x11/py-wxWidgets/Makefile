@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2012/09/15 10:07:13 obache Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/02 17:12:18 tron Exp $
 #
 
 VERSION=	2.8.10.1
 DISTNAME=	wxPython-src-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-${VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 EXTRACT_SUFX=	.tar.bz2

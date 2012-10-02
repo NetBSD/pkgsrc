@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2012/09/15 10:06:34 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2012/10/02 17:12:02 tron Exp $
 
 BUILDLINK_TREE+=	xfce4-quicklauncher-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-quicklauncher-plugin
 XFCE4_QUICKLAUNCHER_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-quicklauncher-plugin+=	xfce4-quicklauncher-plugin>=1.9.4
-BUILDLINK_ABI_DEPENDS.xfce4-quicklauncher-plugin+=	xfce4-quicklauncher-plugin>=1.9.4nb12
+BUILDLINK_ABI_DEPENDS.xfce4-quicklauncher-plugin+=	xfce4-quicklauncher-plugin>=1.9.4nb13
 BUILDLINK_PKGSRCDIR.xfce4-quicklauncher-plugin?=	../../sysutils/xfce4-quicklauncher-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

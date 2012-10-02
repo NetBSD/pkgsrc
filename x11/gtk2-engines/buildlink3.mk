@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2012/09/15 10:06:55 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2012/10/02 17:12:14 tron Exp $
 
 BUILDLINK_TREE+=	gtk2-engines
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtk2-engines
 GTK2_ENGINES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk2-engines+=	gtk2-engines>=2.6.0
-BUILDLINK_ABI_DEPENDS.gtk2-engines+=	gtk2-engines>=2.20.2nb8
+BUILDLINK_ABI_DEPENDS.gtk2-engines+=	gtk2-engines>=2.20.2nb9
 BUILDLINK_PKGSRCDIR.gtk2-engines?=	../../x11/gtk2-engines
 
 .include "../../x11/gtk2/buildlink3.mk"
