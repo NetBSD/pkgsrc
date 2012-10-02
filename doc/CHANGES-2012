@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3086 2012/10/01 18:12:16 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3087 2012/10/02 07:23:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4768,3 +4768,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql55-client to 5.5.28 [adam 2012-10-01]
 	Updated databases/mysql55-server to 5.5.28 [adam 2012-10-01]
 	Updated graphics/tiff to 4.0.3 [adam 2012-10-01]
+	Updated devel/mercurial to 2.3.2 [wiz 2012-10-02]
