@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3090 2012/10/02 08:04:28 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3091 2012/10/02 09:03:25 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/cairo to 1.12.2nb2 [tron 2012-10-02]
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.13nb6 [he 2012-10-02]
 	Removed lang/py24-html-docs [wiz 2012-10-02]
+	Updated net/youtube-dl to 20120927 [ryoon 2012-10-02]
