@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/07/05 16:49:18 sno Exp $
+# $NetBSD: Makefile,v 1.55 2012/10/02 21:25:28 asau Exp $
 
 DISTNAME=	DBI-1.622
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	The database-independent Perl database access API
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/DBI/.packlist

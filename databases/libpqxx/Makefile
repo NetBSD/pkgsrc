@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.24 2012/08/05 10:02:09 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 21:25:21 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/libpqxx/Makefile.common"
 

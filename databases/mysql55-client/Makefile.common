@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2012/10/01 15:54:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2012/10/02 21:25:22 asau Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.5/}
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE?=		${.CURDIR}/../../databases/mysql55-client/distinfo
 PATCHDIR?=		${.CURDIR}/../../databases/mysql55-client/patches

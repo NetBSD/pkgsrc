@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/09/29 12:19:48 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:28 asau Exp $
 
 DISTNAME=	DBICx-Deploy-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JR/JROCKWAY/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DBICx-Deploy/
 COMMENT=	Perl 5 module to deploy a a DBIx::Class schema
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBICx/Deploy/.packlist

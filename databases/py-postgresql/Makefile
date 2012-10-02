@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/08/05 10:02:11 obache Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/02 21:25:49 asau Exp $
 
 DISTNAME=		PyGreSQL-4.0
 PKGNAME=		${PYPKGPREFIX}-postgresql-4.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 OWNER=			darcy@NetBSD.org
 HOMEPAGE=		http://www.PyGreSQL.org/
 COMMENT=		Python interface to PostgreSQL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		BINDIR=${PREFIX}/bin

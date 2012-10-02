@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/21 08:29:05 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:38 asau Exp $
 #
 
 DISTNAME=	pgbouncer-${VERSION}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc@NetBSD.org
 HOMEPAGE=	http://wiki.postgresql.org/wiki/PgBouncer
 COMMENT=	Lightweight connection pooler for PostgreSQL
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.4.2
 USE_LANGUAGES=	c

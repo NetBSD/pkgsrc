@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/08/14 08:18:04 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/02 21:25:25 asau Exp $
 
 DISTNAME=	CatalystX-CRUD-ModelAdapter-DBIC-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/ModelAdapter/DBIC/.packlist
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

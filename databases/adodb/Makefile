@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/09/16 05:46:22 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 21:25:15 asau Exp $
 #
 
 DISTNAME=	adodb496a
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://adodb.sourceforge.net/
 COMMENT=	Active Data Objects Data Base for php
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/adodb
 NO_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/09/15 15:03:23 obache Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/02 21:25:49 asau Exp $
 
 DISTNAME=	MySQL-python-${DIST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-mysqldb-${DIST_VERSION:S/c/rc/}
@@ -13,8 +13,6 @@ COMMENT=	MySQL interface for Python
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c6:../../devel/py-setuptools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes

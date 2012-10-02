@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/30 06:15:54 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:53 asau Exp $
 
 DISTNAME=	sqlsharpgtk-0.4
 PKGREVISION=	5
@@ -10,8 +10,6 @@ HOMEPAGE=	http://forge.novell.com/modules/xfmod/project/?sqlsharpgtk
 COMMENT=	GUI client for entering and running SQL commands and scripts
 
 BROKEN=		Unbuildable for years and appears to be dead upstream.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

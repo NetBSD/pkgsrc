@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/30 18:26:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 21:25:16 asau Exp $
 #
 
 DISTNAME=	datadraw3.1.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://datadraw.sourceforge.net/
 COMMENT=	Persistent database generator for high performance C applications
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	gnu-lgpl-v2
 

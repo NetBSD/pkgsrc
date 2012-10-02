@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/08/21 23:49:20 marino Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/02 21:25:54 asau Exp $
 #
 
 DISTNAME=	tclgdbm-0.10
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.graphviz.org/pub/tclgdbm/
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Tcl interface to gdbm - GNU database manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

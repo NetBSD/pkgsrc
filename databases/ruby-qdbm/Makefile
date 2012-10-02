@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/02/21 16:01:12 taca Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 21:25:52 asau Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://qdbm.sourceforge.net/
 COMMENT=	Ruby interface of QDBM
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

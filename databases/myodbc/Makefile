@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/09/15 15:03:22 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/02 21:25:22 asau Exp $
 
 DISTNAME=	mysql-connector-odbc-5.1.8
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/
 COMMENT=	ODBC driver (server side) for MySQL
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

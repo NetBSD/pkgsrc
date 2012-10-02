@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 15:03:23 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 21:25:39 asau Exp $
 
 MODNAME=		pdo_mysql
 PKGREVISION=		1
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (MySQL)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PHP_EXT_PATCHES=	yes
 
 .include "../../mk/bsd.prefs.mk"

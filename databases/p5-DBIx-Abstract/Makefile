@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/25 05:20:20 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:29 asau Exp $
 #
 
 DISTNAME=	DBIx-Abstract-1.01
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Check-ISA-[0-9]*:../../devel/p5-Check-ISA
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/DBIx/Abstract/.packlist
 

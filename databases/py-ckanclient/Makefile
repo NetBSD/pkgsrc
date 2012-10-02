@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:08:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:48 asau Exp $
 #
 
 DISTNAME=	ckanclient-0.9
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ckan.org/
 COMMENT=	Open-source data portal software
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

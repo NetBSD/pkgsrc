@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/01/26 15:25:13 rhaen Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/02 21:25:32 asau Exp $
 
 DISTNAME=	Jifty-DBI-0.74
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Jifty-DBI/
 COMMENT=	Perl 5 object-relational persistence framework
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Jifty/DBI/.packlist

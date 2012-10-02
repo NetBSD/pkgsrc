@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/08/06 20:45:08 adam Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/02 21:25:33 asau Exp $
 
 DISTNAME=	p5-Palm-1.012
 PKGNAME=	${DISTNAME:S/012/12.0/}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.coldsync.org/
 COMMENT=	Access Palm .pdb and .prc database files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Palm/.packlist
 

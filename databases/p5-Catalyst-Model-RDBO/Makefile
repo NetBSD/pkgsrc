@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 08:18:04 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:25 asau Exp $
 
 DISTNAME=	Catalyst-Model-RDBO-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.00:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Rose-DB-Object>=0:../../databases/p5-Rose-DB-Object
 
 PERL5_PACKLIST=	auto/Catalyst/Model/RDBO/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

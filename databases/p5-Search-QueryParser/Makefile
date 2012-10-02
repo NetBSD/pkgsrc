@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/06 20:40:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 21:25:35 asau Exp $
 
 DISTNAME=	Search-QueryParser-0.94
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=  ${PERL5_LICENSE}
 PERL5_PACKLIST=	auto/Search/QueryParser/.packlist
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

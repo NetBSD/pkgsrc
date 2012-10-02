@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/23 12:31:36 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:51 asau Exp $
 
 DISTNAME=	ruby-ldap-0.9.12
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
@@ -8,8 +8,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://github.com/alexey-chebotar/ruby-ldap
 COMMENT=	LDAP extension module for Ruby
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-openldap2
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
