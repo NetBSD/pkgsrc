@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2012/10/02 07:39:30 tron Exp $
+# $NetBSD: options.mk,v 1.9 2012/10/02 12:09:40 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -27,7 +27,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build # only for configure
 .  if !empty(PKG_OPTIONS:Mxcb)
 CONFIGURE_ARGS+=	--enable-xcb
 PLIST.xcb=		yes
-BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.6
 .  include "../../x11/libxcb/buildlink3.mk"
 .  endif
 
