@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2012/09/08 08:53:03 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2012/10/02 07:39:30 tron Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -18,6 +18,7 @@ pkgbase := cairo
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.cairo:Mxcb)
+BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.6
 .include "../../x11/libxcb/buildlink3.mk"
 .endif
 
