@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/12/17 19:45:27 abs Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 23:48:13 asau Exp $
 #
 
 DISTNAME=	wmsmixer-0.5.1
@@ -17,7 +17,6 @@ USE_LANGUAGES=	c++
 NO_INSTALL_MANPAGES= YES
 
 INSTALLATION_DIRS+= share/doc/wmsmixer share/examples/wmsmixer
-PKG_DESTDIR_SUPPORT= user-destdir
 
 pre-build:
 	${TOUCH} ${WRKSRC}/wmsmixer.man

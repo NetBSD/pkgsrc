@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 17:10:35 tron Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/02 23:48:04 asau Exp $
 #
 
 DISTNAME=	pavucontrol-0.9.10
@@ -15,8 +15,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake intltool perl msgfmt
 
 CONFIGURE_ARGS+=	--disable-lynx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"

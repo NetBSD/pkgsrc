@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/15 21:02:39 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/02 23:48:12 asau Exp $
 
 DISTNAME=		wavpack-4.50.1
 CATEGORIES=		audio
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.wavpack.com/
 COMMENT=		Audio codec for lossless, lossy and hybrid compression
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	wavpack.pc.in
