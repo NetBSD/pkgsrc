@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/09 23:27:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 20:11:52 asau Exp $
 #
 
 DISTNAME=	runawk-1.4.3
@@ -13,8 +13,6 @@ COMMENT=	AWK wrapper that provides support for modules
 BUILD_DEPENDS+=		mk-configure>=0.23.0:../../devel/mk-configure
 
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 TEST_TARGET=		test

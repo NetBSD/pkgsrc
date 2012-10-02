@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/05/23 03:02:26 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 20:11:54 asau Exp $
 #
 
 DISTNAME=	spl-1.0pre3
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clifford.at/spl/
 COMMENT=	The SPL Programming Language
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake gawk pax

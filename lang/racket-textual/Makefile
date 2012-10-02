@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/24 20:52:23 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:51 asau Exp $
 
 PKGNAME=	racket-textual-5.3
 PKGREVISION=	1
@@ -17,8 +17,6 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://racket-lang.org/
 COMMENT=	Scheme-based dialect of Lisp
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-[0-9]*
 
