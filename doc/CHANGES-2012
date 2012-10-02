@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3098 2012/10/02 17:15:24 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3099 2012/10/02 17:17:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4780,3 +4780,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/png to 1.5.13 [wiz 2012-10-02]
 	Updated x11/xterm to 282 [wiz 2012-10-02]
 	Updated devel/automake to 1.12.4 [wiz 2012-10-02]
+	Updated devel/cppunit to 1.13.1 [wiz 2012-10-02]
