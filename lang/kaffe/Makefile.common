@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2010/12/17 22:13:16 asau Exp $
+# $NetBSD: Makefile.common,v 1.24 2012/10/02 20:11:44 asau Exp $
 # used by lang/kaffe-x11/Makefile
 
 DISTNAME=		kaffe-1.1.7
@@ -21,8 +21,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf
 USE_TOOLS+=		gmake
 TEST_TARGET=		check
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k 	\
 			*-*-mipsel *-*-sparc *-*-powerpc *-*-x86_64

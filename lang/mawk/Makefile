@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/12/20 09:07:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:45 asau Exp $
 #
 
 DISTNAME=	mawk-1.3.4-20100625
@@ -11,8 +11,6 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.invisible-island.net/mawk/
 COMMENT=	AWK clone by Mike Brennan
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

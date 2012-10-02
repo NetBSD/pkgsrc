@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/01 17:26:52 marino Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/02 20:11:40 asau Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
@@ -17,8 +17,6 @@ GCC_BRANCH=	4.7
 GCC_POINT=	2
 GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
 LANGS=		c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake sed:run perl makeinfo bzip2 patch pod2man
 USE_BUILTIN.iconv=	no

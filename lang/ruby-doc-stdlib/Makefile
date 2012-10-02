@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/22 09:30:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 20:11:52 asau Exp $
 
 DISTNAME=	ruby-doc-stdlib-0.10.1
 CATEGORIES=	lang ruby
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.ruby-doc.org/
 COMMENT=	Ruby Standard Library Documentation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

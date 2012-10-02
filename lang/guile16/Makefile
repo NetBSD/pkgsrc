@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/12/15 23:41:45 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/02 20:11:42 asau Exp $
 
 DISTNAME=		guile-1.6.8
 PKGREVISION=		4
@@ -12,8 +12,6 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension (1.6.x series)
 
 # Purposely not defining PREV_PKGPATH
 SUPERSEDES=		guile-1.6.*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/1.6

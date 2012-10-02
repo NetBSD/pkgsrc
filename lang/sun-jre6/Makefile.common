@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2011/12/30 07:12:23 sbd Exp $
+# $NetBSD: Makefile.common,v 1.18 2012/10/02 20:11:55 asau Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -18,8 +18,6 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

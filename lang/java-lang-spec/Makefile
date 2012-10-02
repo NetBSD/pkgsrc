@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/14 14:27:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:43 asau Exp $
 
 DISTNAME=		langspec-3.0
 PKGNAME=		java-lang-spec-3.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java.sun.com/docs/books/jls/index.html
 COMMENT=		The Java(TM) Language Specification (HTML)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes

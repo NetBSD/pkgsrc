@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/06/03 08:35:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 20:11:40 asau Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-objc-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Objective C compiler
 PKGREVISION=	1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTLIBS=	libobjc/libobjc.la
 MAKE_ENV+=	DESTDIR=${DESTDIR}

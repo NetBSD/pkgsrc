@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/03/21 16:29:40 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/02 20:11:46 asau Exp $
 
 DISTNAME=	nawk-20050424
 PKGREVISION=	3
@@ -11,7 +11,6 @@ HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BOOTSTRAP_PKG=	yes
 

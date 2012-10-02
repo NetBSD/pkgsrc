@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/03/03 00:13:26 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/02 20:11:46 asau Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	1
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.canonware.com/onyx/
 COMMENT=	Embeddable stack-based threaded interpreted language
 
 BUILD_DEPENDS+=	cook-[0-9]*:../../devel/cook
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}

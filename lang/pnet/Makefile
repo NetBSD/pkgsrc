@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/01/27 09:15:21 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/02 20:11:49 asau Exp $
 
 DISTNAME=	pnet-0.8.0
 PKGREVISION=	1
@@ -14,8 +14,6 @@ BUILD_DEPENDS+=	treecc>=0.2.6:../../devel/treecc
 CONFLICTS=	mono-[0-9]*
 CONFLICTS+=	libffi-[0-9]*
 CONFLICTS+=	boehm-gc-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Unsupported by internal libffi
 NOT_FOR_PLATFORM=	NetBSD-*-x86_64

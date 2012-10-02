@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/04/14 20:06:49 hans Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 20:11:53 asau Exp $
 #
 
 DISTNAME=	sigscheme-0.8.5
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/sigscheme/
 COMMENT=	R5RS Scheme interpreter for embedded use
 #LICENSE=	# See ${WRKSRC}/COPYING
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

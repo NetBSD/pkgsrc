@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/11/22 01:25:48 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:48 asau Exp $
 
 DISTNAME=		pforth_v27_20101121
 PKGNAME=		pforth-27
@@ -10,8 +10,6 @@ MAINTAINER=		asau@NetBSD.org
 HOMEPAGE=		http://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			$(WRKDIR)/pforth_v27
 MAKE_FILE=		build/unix/Makefile

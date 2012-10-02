@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/03/05 04:00:44 dholland Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/02 20:11:42 asau Exp $
 
 DISTNAME=		icon.v943src
 PKGNAME=		icon-9.4.3
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 LICENSE=		public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_TARGET=	X-Configure
 BUILD_TARGET=		All

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/05/25 09:06:52 marino Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:37 asau Exp $
 
 DISTNAME=	clang-3.1
 CATEGORIES=	lang
@@ -10,8 +10,6 @@ MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
 

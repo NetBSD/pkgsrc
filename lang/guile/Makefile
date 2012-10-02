@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2011/05/12 12:15:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.98 2012/10/02 20:11:42 asau Exp $
 
 DISTNAME=		guile-1.8.8
 PKGREVISION=		1
@@ -11,8 +11,6 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 LICENSE=		gnu-lgpl-v2.1
 
 CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo

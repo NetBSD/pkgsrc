@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/08 20:24:44 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 20:11:35 asau Exp $
 
 DISTNAME=	abcl-src-1.0.1
 PKGNAME=	$(DISTNAME:C/-src//)
@@ -8,8 +8,6 @@ MASTER_SITES=	http://common-lisp.net/project/armedbear/releases/$(PKGVERSION_NOR
 MAINTAINER=	asau@NetBSD.org
 HOMEPAGE=	http://common-lisp.net/project/armedbear/
 COMMENT=	Armed Bear Common Lisp
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS=	apache-ant>=1.7.1:../../devel/apache-ant
 

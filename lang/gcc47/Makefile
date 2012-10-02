@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/13 10:11:50 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/02 20:11:41 asau Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -24,8 +24,6 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake makeinfo sed:run
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}

@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/09/07 05:19:33 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/02 20:11:40 asau Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - C++ compiler
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTLIBS=	libstdc++-v3/libsupc++/libsupc++.la			\
 		libstdc++-v3/src/libstdc++.la

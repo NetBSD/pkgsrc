@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/15 10:05:20 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 20:11:51 asau Exp $
 
 .include "dist.mk"
 
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
 LICENSE=	python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	python-[0-9]*
 

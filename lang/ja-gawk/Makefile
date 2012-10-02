@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/20 08:14:44 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/02 20:11:43 asau Exp $
 
 DISTNAME=	gawk-3.0.6
 PKGNAME=	ja-${DISTNAME}
@@ -15,8 +15,6 @@ COMMENT=	GNU awk + multi-byte extension
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	gawk-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INFO_FILES=	yes
 

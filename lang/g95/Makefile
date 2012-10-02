@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/07/21 22:01:17 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 20:11:39 asau Exp $
 
 DISTNAME=		g95_source
 VERSION=		0.92
@@ -15,8 +15,6 @@ SITES.gcc-core-4.0.3.tar.gz= ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.0.3/
 MAINTAINER=		wennmach@NetBSD.org
 HOMEPAGE=		http://www.g95.org/
 COMMENT=		Fortran 95 compiler from g95.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake gtar

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 20:11:43 asau Exp $
 
 DISTNAME=		vmspec.2nded.html
 PKGNAME=		java-vm-spec-2.0
@@ -8,8 +8,6 @@ MASTER_SITES=		ftp://ftp.javasoft.com/docs/specs/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java.sun.com/docs/books/vmspec/index.html
 COMMENT=		The Java(TM) Virtual Machine Specification (HTML)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/vmspec
 NO_CONFIGURE=		yes

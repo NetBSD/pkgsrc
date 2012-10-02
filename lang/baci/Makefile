@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/14 00:51:36 hans Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 20:11:35 asau Exp $
 #
 
 DISTNAME=	bacisrc
@@ -11,8 +11,6 @@ DISTFILES=	bacisrc.tar.gz \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mines.edu/fs_home/tcamp/baci/
 COMMENT=	Ben-Ari Concurrent Interpreter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	flex bison:run
 
