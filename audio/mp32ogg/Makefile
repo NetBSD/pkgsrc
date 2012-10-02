@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/03/09 11:09:51 pettai Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/02 23:47:58 asau Exp $
 
 DISTNAME=	mp32ogg-0.11
 PKGREVISION=	5
@@ -15,8 +15,6 @@ DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=	vorbis-tools>=1.0.0.7:../../audio/vorbis-tools
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 DEPENDS+=	p5-String-ShellQuote>=1.00:../../textproc/p5-String-ShellQuote
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run

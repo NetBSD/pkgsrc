@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/11/23 19:17:07 marino Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/02 23:48:08 asau Exp $
 #
 
 DISTNAME=	sidplay-base-1.0.9
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Tools for playing sidtunes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-*
 

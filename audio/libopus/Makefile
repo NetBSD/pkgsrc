@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 14:17:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 23:47:56 asau Exp $
 #
 
 DISTNAME=	opus-1.0.1
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://opus-codec.org/
 COMMENT=	Totally open, royalty-free, highly versatile audio codec library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
