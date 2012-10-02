@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/02 22:40:07 pettai Exp $
+libexec/knot-zcompile
+libexec/unittests
+libexec/unittests-libknot
+libexec/unittests-libknot-realdata
+libexec/unittests-xfr
+libexec/unittests-zcompile
+man/man8/knot.conf.8
+man/man8/knotc.8
+man/man8/knotd.8
+sbin/knotc
+sbin/knotd
+share/examples/knot/example.com.zone
+share/examples/knot/knot.sample.conf
+@pkgdir etc/knot
