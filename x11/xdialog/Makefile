@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 10:07:18 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 17:12:22 tron Exp $
 #
 
 DISTNAME=		Xdialog-2.3.1
 PKGNAME=		${DISTNAME:S/^X/x/}
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		x11 misc
 MASTER_SITES=		http://xdialog.free.fr/
 EXTRACT_SUFX=		.tar.bz2
