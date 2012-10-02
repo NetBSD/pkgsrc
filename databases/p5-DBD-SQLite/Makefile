@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/07/06 08:43:21 sno Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/02 21:25:27 asau Exp $
 
 DISTNAME=	DBD-SQLite-1.37
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/DBD-SQLite/
 COMMENT=	Perl DBI/DBD driver for sqlite databases (self contained)
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c

@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/16 15:32:47 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 21:25:41 asau Exp $
 
 PKGNAME=	${DISTNAME:C/-/${PGSQL_VERSION}-pgbench-/}
 COMMENT=	PostgreSQL benchmarking tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS+=		contrib/pgbench
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/09/15 15:03:23 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/02 21:25:51 asau Exp $
 #
 
 DISTNAME=	mysql-ruby-2.8.2
@@ -12,8 +12,6 @@ MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://www.tmtm.org/en/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
 LICENSE=	gnu-gpl-v2 OR ruby-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install

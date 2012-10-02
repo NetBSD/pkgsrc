@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/02/21 16:01:12 taca Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 21:25:52 asau Exp $
 #
 
 DISTNAME=	tokyocabinet-ruby-1.30
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://fallabs.com/tokyocabinet/rubydoc/
 COMMENT=	Ruby binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_EXTCONF=	yes
 REPLACE_RUBY_DIRS=	.

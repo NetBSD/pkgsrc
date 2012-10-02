@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/10/06 12:37:58 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:22 asau Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL 5, a free SQL database (client)
 
 CONFLICTS=		{mysql-client-[0-9]*,mysql3-client-[0-9]*}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 

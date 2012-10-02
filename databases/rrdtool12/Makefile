@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:00:52 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:51 asau Exp $
 
 DISTNAME=	rrdtool-1.2.30
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/rrdtool/
 COMMENT=	Data analysis tool generating graphical representations
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config perl

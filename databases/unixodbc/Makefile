@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/15 14:54:09 abs Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 21:25:55 asau Exp $
 
 DISTNAME=	unixODBC-2.3.0
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unixodbc.org/
 COMMENT=	ODBC 2.x/3.x driver manager
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		iodbc<3.52.7nb2
 

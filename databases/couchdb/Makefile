@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/17 09:42:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:15 asau Exp $
 #
 
 DISTNAME=		apache-couchdb-1.2.0
@@ -10,8 +10,6 @@ MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://couchdb.apache.org/
 COMMENT=		Document database server, accessible via a RESTful JSON API
 LICENSE=		apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION.ejson=		0.1.0
 VERSION.ibrowse=	2.2.0
