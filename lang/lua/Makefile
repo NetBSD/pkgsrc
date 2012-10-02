@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/03/12 15:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2012/10/02 20:11:44 asau Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 CATEGORIES=	lang
@@ -13,7 +13,6 @@ LICENSE=	mit
 .include "../../lang/lua/version.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

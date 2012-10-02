@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 16:38:11 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/02 20:11:35 asau Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
@@ -6,8 +6,6 @@ MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/algol60/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Algol 60 interpreter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

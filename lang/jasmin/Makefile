@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/02/07 06:42:34 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/02 20:11:43 asau Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -9,8 +9,6 @@ MASTER_SITES=	http://mrl.nyu.edu/~meyer/jasmin/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mrl.nyu.edu/~meyer/jasmin/
 COMMENT=	Java "assembler" interface
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 USE_TOOLS+=	pax csh:run

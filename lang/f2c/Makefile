@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2011/11/29 19:01:41 darcy Exp $
+# $NetBSD: Makefile,v 1.62 2012/10/02 20:11:39 asau Exp $
 
 DISTNAME=	f2c-20100903	# see notes below
 CATEGORIES=	lang
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/f2c/index.html
 COMMENT=	Fortran to C compiler including a script to emulate f77
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	egcs-current-19980608
 

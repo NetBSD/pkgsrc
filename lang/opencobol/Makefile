@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/23 23:19:37 hans Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:47 asau Exp $
 #
 
 DISTNAME=	open-cobol-1.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.sim-basis.de/
 MAINTAINER=	rodo@bloerp.de
 HOMEPAGE=	http://www.sim-basis.de/
 COMMENT=	Open-source COBOL compiler
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BDB_ACCEPTED=		db4 db5
 USE_LIBTOOL=		yes

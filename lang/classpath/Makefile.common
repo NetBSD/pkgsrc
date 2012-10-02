@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2011/04/20 12:06:02 obache Exp $
+# $NetBSD: Makefile.common,v 1.15 2012/10/02 20:11:37 asau Exp $
 #
 # used by lang/classpath/Makefile
 # used by lang/classpath-gui/Makefile
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://ftp.gnu.org/gnu/classpath/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/classpath/
 COMMENT=		Class libraries for Java VM
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		jikes>=1.18:../../lang/jikes
 
