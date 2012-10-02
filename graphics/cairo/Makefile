@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2012/10/02 07:39:30 tron Exp $
+# $NetBSD: Makefile,v 1.106 2012/10/02 17:11:07 tron Exp $
 
 DISTNAME=	cairo-1.12.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
