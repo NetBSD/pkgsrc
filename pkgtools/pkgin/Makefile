@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/09/11 23:19:38 asau Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/02 11:28:42 jperkin Exp $
 #
 
 DISTNAME=		pkgin-0.6.2.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		pkgtools
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -28,10 +28,13 @@ SUBST_SED.path=		-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g"
 SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
 SUBST_SED.path+=	-e "s|/var|${VARBASE}|g"
 SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
+SUBST_SED.path+=	-e "s|!=.*uname -p|=	${MACHINE_ARCH}|g"
 
 GNU_CONFIGURE=		yes
 USE_FEATURES=		nbcompat
 USE_TOOLS+=		nroff
+
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 DEPENDS+=		pkg_install>=20110215:../../pkgtools/pkg_install
 
