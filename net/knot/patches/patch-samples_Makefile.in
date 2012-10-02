@@ -1,0 +1,29 @@
+$NetBSD: patch-samples_Makefile.in,v 1.1 2012/10/02 22:40:07 pettai Exp $
+
+Fix sysconfdir + sample conf snippet
+
+--- samples/Makefile.in.orig	2012-10-02 21:43:47.000000000 +0000
++++ samples/Makefile.in
+@@ -167,6 +167,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++EGDIR=@EGDIR@
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -374,10 +375,10 @@ knot.sample.conf: Makefile
+ knot.sample.conf: knot.sample.conf.in
+ 
+ install-data-local: knot.sample.conf
+-	[ -d $(DESTDIR)/$(sysconfdir) ] || \
+-	  $(INSTALL) -d $(DESTDIR)/$(sysconfdir)
+-	[ -f $(DESTDIR)/$(sysconfdir)/knot.sample.conf ] || \
+-	  $(INSTALL_DATA) knot.sample.conf example.com.zone $(DESTDIR)/$(sysconfdir)
++	[ -d $(DESTDIR)/$(EGDIR) ] || \
++	  $(INSTALL) -d $(DESTDIR)/$(EGDIR)
++	[ -f $(DESTDIR)/$(EGDIR)/knot.sample.conf ] || \
++	  $(INSTALL_DATA) knot.sample.conf example.com.zone $(DESTDIR)/$(EGDIR)
+ 
+ clean-local:
+ 	rm -f knot.sample.conf
