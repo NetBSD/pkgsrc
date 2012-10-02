@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/12 11:23:59 marino Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 20:11:44 asau Exp $
 #
 
 DISTNAME=	konoha-1.0.0-952
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://konohascript.org/
 COMMENT=	Statically-typed scripting langauge
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/konoha-1.0.0
 USE_CMAKE=	yes
