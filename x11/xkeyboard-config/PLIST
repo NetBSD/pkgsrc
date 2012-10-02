@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/07/14 17:10:00 wiz Exp $
-share/X11/xkb/compat.dir
+@comment $NetBSD: PLIST,v 1.9 2012/10/02 17:31:24 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -18,7 +17,6 @@ share/X11/xkb/compat/pc
 share/X11/xkb/compat/pc98
 share/X11/xkb/compat/xfree86
 share/X11/xkb/compat/xtest
-share/X11/xkb/geometry.dir
 share/X11/xkb/geometry/README
 share/X11/xkb/geometry/amiga
 share/X11/xkb/geometry/ataritt
@@ -48,7 +46,6 @@ share/X11/xkb/geometry/sun
 share/X11/xkb/geometry/thinkpad
 share/X11/xkb/geometry/typematrix
 share/X11/xkb/geometry/winbook
-share/X11/xkb/keycodes.dir
 share/X11/xkb/keycodes/README
 share/X11/xkb/keycodes/aliases
 share/X11/xkb/keycodes/amiga
@@ -85,7 +82,6 @@ share/X11/xkb/rules/xkb.dtd
 share/X11/xkb/rules/xorg
 share/X11/xkb/rules/xorg.lst
 share/X11/xkb/rules/xorg.xml
-share/X11/xkb/symbols.dir
 share/X11/xkb/symbols/ad
 share/X11/xkb/symbols/af
 share/X11/xkb/symbols/al
@@ -181,6 +177,7 @@ share/X11/xkb/symbols/macintosh_vndr/pt
 share/X11/xkb/symbols/macintosh_vndr/se
 share/X11/xkb/symbols/macintosh_vndr/us
 share/X11/xkb/symbols/mao
+share/X11/xkb/symbols/md
 share/X11/xkb/symbols/me
 share/X11/xkb/symbols/mk
 share/X11/xkb/symbols/ml
@@ -209,6 +206,11 @@ share/X11/xkb/symbols/ru
 share/X11/xkb/symbols/rupeesign
 share/X11/xkb/symbols/se
 share/X11/xkb/symbols/sgi_vndr/jp
+share/X11/xkb/symbols/sharp_vndr/sl-c3x00
+share/X11/xkb/symbols/sharp_vndr/ws003sh
+share/X11/xkb/symbols/sharp_vndr/ws007sh
+share/X11/xkb/symbols/sharp_vndr/ws011sh
+share/X11/xkb/symbols/sharp_vndr/ws020sh
 share/X11/xkb/symbols/shift
 share/X11/xkb/symbols/si
 share/X11/xkb/symbols/sk
@@ -264,7 +266,6 @@ share/X11/xkb/symbols/vn
 share/X11/xkb/symbols/xfree68_vndr/amiga
 share/X11/xkb/symbols/xfree68_vndr/ataritt
 share/X11/xkb/symbols/za
-share/X11/xkb/types.dir
 share/X11/xkb/types/README
 share/X11/xkb/types/basic
 share/X11/xkb/types/cancel
