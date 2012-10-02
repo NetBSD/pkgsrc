@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/09/15 10:06:57 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 17:12:15 tron Exp $
 #
 
 DISTNAME=	gtksourceview-3.4.2
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/3.4/}
 EXTRACT_SUFX=	.tar.xz

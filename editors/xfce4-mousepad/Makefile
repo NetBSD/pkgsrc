@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/15 10:04:30 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 17:10:58 tron Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	0.2.16
 
 DISTNAME=	mousepad-${XFCE4_VERSION}
 PKGNAME=	xfce4-mousepad-${XFCE4_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	editors
 COMMENT=	Xfce text editor
 

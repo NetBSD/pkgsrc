@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2012/09/15 10:04:15 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2012/10/02 17:10:49 tron Exp $
 
 BUILDLINK_TREE+=	libgnomeuimm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomeuimm
 LIBGNOMEUIMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomeuimm+=	libgnomeuimm>=2.10.0
-BUILDLINK_ABI_DEPENDS.libgnomeuimm+=	libgnomeuimm>=2.28.0nb16
+BUILDLINK_ABI_DEPENDS.libgnomeuimm+=	libgnomeuimm>=2.28.0nb17
 BUILDLINK_PKGSRCDIR.libgnomeuimm?=	../../devel/libgnomeuimm
 
 .include "../../devel/gconfmm/buildlink3.mk"

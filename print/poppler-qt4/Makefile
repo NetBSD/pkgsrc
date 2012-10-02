@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2012/09/15 10:06:12 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/02 17:11:52 tron Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-qt4-${POPPLER_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		PDF rendering library (QT4 wrapper)
 MAINTAINER=		reed@reedmedia.net

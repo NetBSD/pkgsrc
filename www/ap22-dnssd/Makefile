@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/09/15 10:06:45 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 17:12:07 tron Exp $
 #
 
 DISTNAME=	mod_dnssd-0.5
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	www
 MASTER_SITES=	http://0pointer.de/lennart/projects/mod_dnssd/
 
