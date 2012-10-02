@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/10 13:26:44 sno Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 21:25:34 asau Exp $
 
 DISTNAME=	SQL-Abstract-1.73
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SQL-Abstract/
 COMMENT=	Generate SQL from Perl data structures
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Accessor-Grouped>=0.10005:../../devel/p5-Class-Accessor-Grouped
 DEPENDS+=	p5-Getopt-Long-Descriptive>=0.091:../../devel/p5-Getopt-Long-Descriptive

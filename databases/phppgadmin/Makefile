@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/07/18 09:03:37 asau Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/02 21:25:40 asau Exp $
 
 DISTNAME=	phpPgAdmin-5.0.4
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://phppgadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer PostgreSQL over the WWW
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.2.0:../../databases/php-pgsql
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 

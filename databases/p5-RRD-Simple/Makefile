@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 17:10:43 tron Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/02 21:25:33 asau Exp $
 
 DISTNAME=	RRD-Simple-1.44
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,6 @@ BUILD_DEPENDS+= p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+= p5-Test-Deep>=0.096:../../devel/p5-Test-Deep
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/RRD/Simple/.packlist

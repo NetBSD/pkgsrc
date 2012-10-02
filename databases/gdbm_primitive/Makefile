@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/01/24 09:10:58 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/02 21:25:17 asau Exp $
 #
 
 DISTNAME=	gdbm-prim-1.15
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.gz-link.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# http://homepage.mac.com/leffert/FileSharing.html
 COMMENT=	Shell primitives for working with GDBMs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_OPTS=		-f tar
 MAKE_ENV+=		BUILDLINK_LDFLAGS=${BUILDLINK_LDFLAGS:Q}

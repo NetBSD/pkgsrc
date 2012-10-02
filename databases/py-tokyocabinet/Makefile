@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/02 21:25:50 asau Exp $
 #
 
 VERSION=	0.5
@@ -11,8 +11,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://code.google.com/p/python-tokyocabinet/
 COMMENT=	Python wrapper to tokyocabinet database
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/python/egg.mk"

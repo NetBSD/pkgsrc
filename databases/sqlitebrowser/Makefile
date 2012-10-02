@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/01 06:00:52 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/02 21:25:53 asau Exp $
 
 DISTNAME=	sqlitebrowser-1.3-src
 PKGNAME=	sqlitebrowser-1.3
@@ -11,8 +11,6 @@ COMMENT=	QT3 lightweight GUI editor/viewer for SQLite Databases
 HOMEPAGE=	http://sqlitebrowser.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/sqlitebrowser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 QMAKE=		${QTDIR}/bin/qmake

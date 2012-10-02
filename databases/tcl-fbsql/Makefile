@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/09/15 15:03:23 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/02 21:25:54 asau Exp $
 
 DISTNAME=		fbsql.c
 PKGNAME=		tcl-fbsql-1.06
@@ -10,8 +10,6 @@ EXTRACT_SUFX=
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.fastbase.co.nz/fbsql/index.html
 COMMENT=		Tcl interface to MySQL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/src
 USE_LIBTOOL=		YES
