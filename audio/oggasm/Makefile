@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/02 06:10:33 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/02 23:48:02 asau Exp $
 #
 
 DISTNAME=	oggasm_1.4.0
@@ -15,8 +15,6 @@ COMMENT=	Perform batch conversion of mp3s into oggs
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=	vorbis-tools>=1.0.0.7:../../audio/vorbis-tools
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	perl:run

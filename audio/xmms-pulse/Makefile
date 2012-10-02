@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/15 10:03:46 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 23:48:16 asau Exp $
 
 DISTNAME=	xmms-pulse-0.9.4
 PKGREVISION=	8
@@ -8,8 +8,6 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/xmms-pulse/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	XMMS plugin to output sound through the pulseaudio daemon
 HOMEPAGE=	http://0pointer.de/lennart/projects/xmms-pulse/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-lynx

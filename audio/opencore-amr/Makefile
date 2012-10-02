@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/16 15:42:10 reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 23:48:02 asau Exp $
 #
 
 DISTNAME=	opencore-amr-0.1.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencore-amr/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opencore-amr.sourceforge.net/
 COMMENT=	Adaptive Multi-Rate speech codec libraries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

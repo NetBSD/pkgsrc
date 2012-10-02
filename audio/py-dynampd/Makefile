@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/12 17:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 23:48:05 asau Exp $
 #
 
 DISTNAME=	dynampd
@@ -15,8 +15,6 @@ COMMENT=	Dynamic playlist generator for MPD
 
 DEPENDS+=	${PYPKGPREFIX}-mpd-[0-9]*:../../audio/py-mpd
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		dynampd-${VERSION}
 WRKSRC=			${WRKDIR}

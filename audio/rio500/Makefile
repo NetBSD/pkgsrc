@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/02/15 22:41:19 hans Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/02 23:48:07 asau Exp $
 #
 
 DISTNAME=	rio500-0.7
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rio500/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rio500.sourceforge.net/
 COMMENT=	Utilities to manage your Diamond Rio 500 MP3 player
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/12 07:26:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 23:48:03 asau Exp $
 
 DISTNAME=	CDDB-File-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Parses a CDDB/freedb data file
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/CDDB/File/.packlist
 

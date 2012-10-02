@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/15 23:00:31 hans Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 23:48:10 asau Exp $
 #
 
 DISTNAME=	taglib-extras-1.0.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kollide.net/~jefferai/
 COMMENT=	Extra plugins for taglib
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

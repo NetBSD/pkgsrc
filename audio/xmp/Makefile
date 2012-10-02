@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/09/15 10:03:46 obache Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/02 23:48:16 asau Exp $
 
 DISTNAME=	xmp-3.4.1
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

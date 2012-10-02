@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/13 07:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 23:47:59 asau Exp $
 #
 
 DISTNAME=	mp3val-0.1.8-src
@@ -16,7 +16,6 @@ USE_TOOLS+=	gmake
 MAKE_FILE=	Makefile.linux
 BUILD_TARGET=	mp3val
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 do-install:

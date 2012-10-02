@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/02/15 23:11:29 hans Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/02 23:48:13 asau Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	3
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/examples
 
 post-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2012/05/03 09:55:29 obache Exp $
+# $NetBSD: Makefile,v 1.89 2012/10/02 23:48:01 asau Exp $
 
 DISTNAME=	nas-1.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -12,7 +12,6 @@ COMMENT=	Network Audio System
 LICENSE=	mit # with no-advertisement clause
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # 1) uses dia library before it is built
 # 2) make succeeds even with failures, making this problem non-obvious

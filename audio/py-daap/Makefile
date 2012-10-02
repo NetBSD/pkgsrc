@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/15 08:01:16 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 23:48:05 asau Exp $
 #
 
 DISTNAME=	PythonDaap-0.7
@@ -10,8 +10,6 @@ MASTER_SITES=	http://jerakeen.org/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://movieos.org/code/pythondaap/
 COMMENT=	Python binding for DAAP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

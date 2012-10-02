@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/08/21 23:49:18 marino Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/02 23:48:11 asau Exp $
 
 DISTNAME=	snack2.2.10
 PKGNAME=	tcl-snack-2.2.10
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.speech.kth.se/snack/
 COMMENT=	The Snack Sound Toolkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=	YES

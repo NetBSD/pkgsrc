@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/02/15 22:14:30 hans Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 23:48:00 asau Exp $
 
 DISTNAME=		mpc-0.21
 CATEGORIES=		audio
@@ -9,8 +9,6 @@ MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://musicpd.org/
 COMMENT=		Command-line client for musicpd
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

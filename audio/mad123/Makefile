@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 10:03:41 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 23:47:56 asau Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.mctavish.co.uk/mad123/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mctavish.co.uk/mad123/
 COMMENT=	Command-line MPEG audio player
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	nroff
 

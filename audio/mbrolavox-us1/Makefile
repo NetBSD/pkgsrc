@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/02 23:47:57 asau Exp $
 
 DISTNAME=	us1-980512
 PKGNAME=	mbrolavox-us1-980512
@@ -15,8 +15,6 @@ LICENSE=	no-commercial-use
 DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes

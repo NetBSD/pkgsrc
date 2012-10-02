@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/04/22 13:42:59 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/02 23:48:11 asau Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vorbis.com/
 COMMENT=	Ogg Vorbis encoder and player
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	IPV6_READY
 

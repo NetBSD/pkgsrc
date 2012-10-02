@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/24 09:10:56 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 23:48:01 asau Exp $
 
 DISTNAME=	mt-daapd-0.2.4.2
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mt-daapd/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mt-daapd.org/
 COMMENT=	Server for DAAP (iTunes)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake

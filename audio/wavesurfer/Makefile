@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/05/25 21:42:20 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 23:48:12 asau Exp $
 
 DISTNAME=	wavesurfer-1.8.5
 CATEGORIES=	audio
@@ -10,8 +10,6 @@ COMMENT=	Tool for sound visualization and manipulation
 
 DEPENDS+=	tcl-snack-[0-9]*:../../audio/tcl-snack
 DEPENDS+=	tk-[0-9]*:../../x11/tk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 
