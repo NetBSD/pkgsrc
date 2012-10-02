@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/12/17 19:58:36 abs Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/02 23:47:58 asau Exp $
 #
 
 DISTNAME=	mp3asm-0.1.3-1
@@ -15,7 +15,6 @@ WRKSRC=		${WRKDIR}/mp3asm-0.1
 GNU_CONFIGURE=	yes
 
 INSTALLATION_DIRS+= share/doc/mp3asm
-PKG_DESTDIR_SUPPORT=user-destdir
 
 post-patch:
 	${SED} "s/getprogname/_getprogname/g" ${WRKSRC}/src/mp3asm.c		\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/05/19 08:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 23:47:57 asau Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tcts.fpms.ac.be/synthesis/mbrola/
 COMMENT=		MBROLA diphone synthesizer executable
 LICENSE=		no-commercial-use
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		mbrola-20010717
