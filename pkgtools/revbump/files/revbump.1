@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.12 2012/10/02 13:59:02 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.13 2012/10/02 17:10:10 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012 The NetBSD Foundation, Inc.
 .\"
@@ -103,8 +103,8 @@ cvs diff `cat makebump`
  local tree, and fix them]
 lintpkgsrc -d
 [fix broken dependencies noted by this (usually subversion)]
-cvs diff `cat makebump`
-cvs commit `cat makebump`
+cvs diff `cat bl3bump makebump`
+cvs commit `cat bl3bump makebump`
 rm allbump bl3bump* makebump* commonbump
 .Ed
 .Sh SEE ALSO
