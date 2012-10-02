@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/03/19 14:41:56 asau Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/02 20:11:54 asau Exp $
 #
 
 SQUEAK_VERSION=	4.0
@@ -15,8 +15,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 LICENCE=	mit AND apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS=	squeak-vm-[0-9]*:../../lang/squeak-vm
 

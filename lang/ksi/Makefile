@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/08/12 09:27:54 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/02 20:11:44 asau Exp $
 
 DISTNAME=		ksi-3.9.0
 CATEGORIES=		lang
@@ -7,8 +7,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ksi/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ksi.sourceforge.net/
 COMMENT=		Portable, embeddable Scheme implementation written in C
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

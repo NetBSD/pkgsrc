@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/09/16 15:24:18 taca Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/02 20:11:52 asau Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION_FULL}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Wrapper package for Ruby programming language
 
 CONFLICTS=	pkg_alternatives-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

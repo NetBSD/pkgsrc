@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/01/14 07:44:34 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/02 20:11:41 asau Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		5
@@ -11,8 +11,6 @@ SITES.gcc-2.95.3.tar.gz=${MASTER_SITE_GNU:=gcc/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu-pascal.de/gpc/h-index.html
 COMMENT=		GNU Pascal Compiler
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz

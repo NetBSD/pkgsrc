@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/04 16:38:11 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/02 20:11:38 asau Exp $
 
 DISTNAME=	cu-prolog-3.94
 CATEGORIES=	lang
@@ -7,8 +7,6 @@ DISTFILES=	cupsrc.tar.gz cupdoc.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Experimental constraint logic programming language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/src
 DIST_SUBDIR=	${DISTNAME}

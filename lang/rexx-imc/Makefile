@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/09/18 16:51:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:51 asau Exp $
 #
 
 DISTNAME=	rexx-imc-1.76
@@ -10,8 +10,6 @@ MASTER_SITES=	http://users.comlab.ox.ac.uk/ian.collier/distribution/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.comlab.ox.ac.uk/ian.collier/Rexx/
 COMMENT=	Implementation of IBM's REXX scripting language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
