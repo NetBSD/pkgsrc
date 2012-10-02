@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/07/27 21:58:31 abs Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/02 20:11:47 asau Exp $
 #
 
 DISTNAME=	jdk1.7.0-20090502-${MACHINE_ARCH}-NetBSD_5.0
@@ -33,7 +33,6 @@ PLIST_VARS+=	client
 ONLY_FOR_PLATFORM=	NetBSD-[5-9]*-i386 NetBSD-[5-9]*-x86_64
 
 INSTALLATION_DIRS=	java/${JAVA_NAME}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	# Cannot use NO_BUILD as need java wrappers

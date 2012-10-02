@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/10/02 17:11:26 tron Exp $
+# $NetBSD: Makefile,v 1.71 2012/10/02 20:11:53 asau Exp $
 
 DISTNAME=	smalltalk-3.2.4
 PKGREVISION=	9
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.smalltalk.org/versions/GNUSmalltalk.html
 COMMENT=	GNU Smalltalk: A smalltalk-80 implementation
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-sparc *-*-powerpc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

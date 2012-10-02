@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/06 00:19:23 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 20:11:36 asau Exp $
 #
 
 DISTNAME=	boomerang-0.2-source
@@ -22,8 +22,6 @@ BUILD_DEPENDS+=	tex-amscls-[0-9]*:../../print/tex-amscls
 BUILD_DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 BUILD_DEPENDS+=	teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
 BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/boomerang-20090902
 USE_LANGUAGES=		c

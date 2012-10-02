@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/05/30 02:50:11 enami Exp $
+# $NetBSD: Makefile,v 1.62 2012/10/02 20:11:39 asau Exp $
 #
 
 DISTNAME=	Gauche-0.9.3.3
@@ -13,7 +13,6 @@ COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
 DEPENDS+=		slib-[0-9]*:../../devel/slib
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 .include "options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/05/12 07:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/02 20:11:37 asau Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://root.cern.ch/root/
 MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://root.cern.ch/root/Cint.html
 COMMENT=		C/C++ interpreter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		man-pages-[0-9]*
 

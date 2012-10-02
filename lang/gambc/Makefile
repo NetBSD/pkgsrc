@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/02 20:11:39 asau Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iro.umontreal.ca/~gambit/
 COMMENT=	GambitC Scheme System
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM+=	SunOS-*-*
 
 # bin/scheme-r5rs
