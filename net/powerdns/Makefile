@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/25 10:21:12 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/02 12:20:47 jperkin Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,5 +23,7 @@ SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	pdns/pdns.conf-dist
 SUBST_SED.conf=		-e 's,@PREFIX@,${PREFIX},'
 SUBST_SED.conf+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"

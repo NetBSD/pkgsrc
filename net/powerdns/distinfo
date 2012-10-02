@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/05/20 19:37:49 marino Exp $
+$NetBSD: distinfo,v 1.12 2012/10/02 12:20:47 jperkin Exp $
 
 SHA1 (pdns-2.9.22.5.tar.gz) = 7a514fe624c110afb8a262f4d76376d0f8e17bea
 RMD160 (pdns-2.9.22.5.tar.gz) = 8be76a7a63c3366d55724815245e2f955ec0adda
@@ -7,7 +7,11 @@ SHA1 (patch-aa) = e31080087d9369349e912c94e7dbfce72c9fc629
 SHA1 (patch-ab) = f54ace6ff60162e50119eb11bcb2f5db5e1ea480
 SHA1 (patch-configure) = 2a0beb262c421d7887dcabc56102c04b340a920b
 SHA1 (patch-pdns_aes_brg_endian.h) = f7e5294251cd0d89e8ff802292f27b0c4cb50be7
+SHA1 (patch-pdns_backends_bind_bindbackend2.cc) = d6d5d2c4a726f19c8846d7f0c96a45bd5f2e3a8a
 SHA1 (patch-pdns_dns.hh) = f7d95f4c28fd986e76b4c25333b1b063992aa0c5
 SHA1 (patch-pdns_dynmessenger.cc) = df89ba91abc96319b323fc19b413b127112f4afb
 SHA1 (patch-pdns_ext_nedmalloc_malloc.c) = 979ccbf76edf9ff8ceeded0cf6fc1e401d1c1504
+SHA1 (patch-pdns_packethandler.cc) = db36bf022ebf1e27f52e2e5f05f5fb81783f2288
 SHA1 (patch-pdns_pdns_recursor.cc) = f8dff83d9153d8c1eef2aeda23bf9338f9319b1a
+SHA1 (patch-pdns_receiver.cc) = 8a9932413f5c8234478cd9d5b3f5237fcf9ac087
+SHA1 (patch-pdns_resolver.cc) = fec1bfc0083c59963c1bfa44210fe84266b4bb56
