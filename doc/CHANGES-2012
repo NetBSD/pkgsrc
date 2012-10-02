@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3103 2012/10/02 17:30:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3104 2012/10/02 17:31:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4785,3 +4785,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mdds to 0.6.1 [wiz 2012-10-02]
 	Updated time/py-pytz to 2012f [wiz 2012-10-02]
 	Updated converters/py-simplejson to 2.6.2 [wiz 2012-10-02]
+	Updated x11/xkeyboard-config to 2.7 [wiz 2012-10-02]
