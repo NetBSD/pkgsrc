@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/04/07 16:35:18 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 00:20:09 asau Exp $
 
 DISTNAME=	base64-1.5
 CATEGORIES=	converters
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.fourmilab.ch/webtools/base64/
 COMMENT=	Encode and decode base64 files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		prog

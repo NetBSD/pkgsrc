@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/02/21 16:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 00:20:17 asau Exp $
 
 DISTNAME=	uconv-0.4.12
 PKGREVISION=	6
@@ -9,8 +9,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.yoshidam.net/Ruby.html#uconv
 COMMENT=	Unicode conversion library with Japanese codesets support
 LICENSE=	gnu-gpl-v2 OR ruby-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Depends on Ruby's internal and use 1.9's encoding support.
 RUBY_VERSION_SUPPORTED= 18
