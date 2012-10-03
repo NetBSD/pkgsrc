@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/14 07:45:23 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 16:08:32 asau Exp $
 #
 
 DISTNAME=	loggedfs-0.4
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_SOURCEFORGE:=loggedfs/}
 COMMENT=	FUSE file system which logs all operations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if exists(/usr/include/sys/statvfs.h)
 CPPFLAGS+=	-DHAVE_SYS_STATVFS_H

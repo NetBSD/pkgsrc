@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2012/10/02 17:11:00 tron Exp $
+# $NetBSD: Makefile,v 1.173 2012/10/03 16:10:12 asau Exp $
 #
 
 DISTNAME=		gnucash-2.4.11
@@ -10,8 +10,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal or business finance management program
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		guile-slib>=3.2.1:../../devel/guile-slib
 DEPENDS+=		guile-www>=2.21:../../devel/guile-www
