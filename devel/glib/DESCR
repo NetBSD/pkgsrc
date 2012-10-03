@@ -1,4 +1,6 @@
-GLib is the low-level core library that forms the basis for projects
-such as GTK+ and GNOME. It provides data structure handling for C,
-portability wrappers, and interfaces for such runtime functionality as
-an event loop, threads, dynamic loading, and an object system.
+GLib provides the core application building blocks for libraries
+and applications written in C.  It provides the core object system
+used in GNOME, the main loop implementation, and a large set of
+utility functions for strings and common data structures.
+
+This package contains GLib version 1.
