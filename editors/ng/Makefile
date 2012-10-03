@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/10 08:20:13 sbd Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/03 11:43:38 asau Exp $
 
 DISTNAME=	ng-1.4.3
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://tt.sakura.ne.jp/~amura/archives/ng/
 MAINTAINER=	fk200329@fsinet.or.jp
 HOMEPAGE=	http://tt.sakura.ne.jp/~amura/ng/
 COMMENT=	Very light Emacs-clone with japanese support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ng
 

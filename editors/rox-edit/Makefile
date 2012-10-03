@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/03/15 11:53:26 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:42 asau Exp $
 #
 
 DISTNAME=	edit-2.0
@@ -15,8 +15,6 @@ COMMENT=	Simple text editor for ROX
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Edit
 DIST_SUBDIR=	rox

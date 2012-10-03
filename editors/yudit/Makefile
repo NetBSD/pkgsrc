@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/03/02 13:33:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/03 11:43:48 asau Exp $
 
 DISTNAME=	yudit-2.9.2
 CATEGORIES=	editors
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yudit.org/
 COMMENT=	Unicode Text Editor
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

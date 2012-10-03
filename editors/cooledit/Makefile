@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/15 11:53:26 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 11:43:31 asau Exp $
 
 DISTNAME=	cooledit-3.17.17
 PKGREVISION=	6
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# http://cooledit.sourceforge.net/
 COMMENT=	Full-featured text editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
