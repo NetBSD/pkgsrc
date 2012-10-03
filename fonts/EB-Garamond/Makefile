@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/08 16:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:15 asau Exp $
 #
 
 DISTNAME=	EB-Garamond-0.012
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.georgduffner.at/ebgaramond/index.html
 COMMENT=	Egenolff-Berner Garamond font
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/georgd-EB-Garamond-d9f3abd
 

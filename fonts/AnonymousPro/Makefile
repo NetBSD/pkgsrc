@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/03 18:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:15 asau Exp $
 #
 
 DISTNAME=	AnonymousPro-1.001
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ms-studio.com/FontSales/anonymouspro.html
 COMMENT=	Fixed width Sans designed especially for Coders
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #WRKSRC=		${WRKDIR}/AnonymousPro-1.001
 USE_LANGUAGES=	# none
