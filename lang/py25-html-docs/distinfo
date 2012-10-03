@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2011/06/17 12:22:38 obache Exp $
-
-SHA1 (python/html-2.5.4.tar.bz2) = f547228fbabc9b259ca4c4b32daffc813cfe5455
-RMD160 (python/html-2.5.4.tar.bz2) = 78cf1d55bc50b9c4535d1519a11a0a4e1a47a12e
-Size (python/html-2.5.4.tar.bz2) = 1619772 bytes
