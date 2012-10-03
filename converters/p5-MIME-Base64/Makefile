@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2011/08/06 13:57:34 adam Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/03 00:20:14 asau Exp $
 
 DISTNAME=	MIME-Base64-3.13
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module for Base64 and Quoted-Printable encodings
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/MIME/Base64/.packlist
 
