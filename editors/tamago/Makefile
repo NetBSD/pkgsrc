@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/10/09 02:55:02 kim Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/03 11:43:43 asau Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
@@ -9,8 +9,6 @@ MASTER_SITES=	http://unit.aist.go.jp/itri/itri-gist/ftp.m17n.org/pub/tamago/
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/tamago/
 COMMENT=	CJK characters inputting system for emacs + leim
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	prefix=${DESTDIR:Q}${PREFIX}

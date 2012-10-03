@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:17 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 11:43:30 asau Exp $
 
 DISTNAME=	beav_1.40.orig
 PKGNAME=	beav-1.40.18
@@ -11,8 +11,6 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Binary Editor And Viewer, a full featured binary file editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

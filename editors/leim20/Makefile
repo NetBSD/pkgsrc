@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/12/19 00:52:51 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 11:43:36 asau Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	6
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods
 
 DEPENDS+=	emacs-${VERSION}{,nb[0-9]*}:../../editors/emacs20
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

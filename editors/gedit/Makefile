@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2012/10/02 17:10:54 tron Exp $
+# $NetBSD: Makefile,v 1.119 2012/10/03 11:43:33 asau Exp $
 #
 
 DISTNAME=		gedit-2.30.4
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gedit/
 COMMENT=		Lightweight GNOME2 text editor
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config

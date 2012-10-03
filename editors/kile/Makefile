@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2012/10/02 17:10:55 tron Exp $
+# $NetBSD: Makefile,v 1.67 2012/10/03 11:43:36 asau Exp $
 
 DISTNAME=		kile-2.1.1
 PKGREVISION=		5
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://kile.sourceforge.net/
 COMMENT=		LaTeX source editor - TeX shell - Gnuplot front end
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 

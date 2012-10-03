@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/07/20 14:38:51 marino Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/03 11:43:46 asau Exp $
 
 DISTNAME=		vile-9.8
 CATEGORIES=		editors
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://invisible-island.net/vile/
 COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

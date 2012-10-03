@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/15 11:53:26 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 11:43:38 asau Exp $
 #
 
 DISTNAME=	nts-78
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.duke.edu/~dgraham/NTS/
 COMMENT=	Simple GUI note taking application
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/01/29 19:56:45 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/03 11:43:42 asau Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.msg.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Unix version of Rob Pike's editor for plan9
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		libXgFonts>=1.0nb1:../../fonts/Xg
 

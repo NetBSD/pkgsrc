@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/11 09:02:04 sno Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 11:43:39 asau Exp $
 #
 
 DISTNAME=	PPIx-EditorTools-0.17
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PPIx-EditorTools/
 COMMENT=	Utility methods and base class for manipulating Perl via PPI
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+= p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+= p5-Test-Most-[0-9]*:../../devel/p5-Test-Most

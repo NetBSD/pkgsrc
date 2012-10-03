@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/06/12 02:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 11:43:31 asau Exp $
 #
 
 DISTNAME=	bvi-1.3.2.src
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bvi/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bvi.sourceforge.net/
 COMMENT=	Vi-like editor for binary files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES

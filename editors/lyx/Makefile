@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/02 17:10:55 tron Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/03 11:43:36 asau Exp $
 #
 
 DISTNAME=		lyx-1.6.10
@@ -59,8 +59,6 @@ DEPENDS+=		tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=		tex-xypic-[0-9]*:../../graphics/tex-xypic
 
 UNLIMIT_RESOURCES+=	datasize
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES

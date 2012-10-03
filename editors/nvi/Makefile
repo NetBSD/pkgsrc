@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/03/26 14:00:40 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/03 11:43:39 asau Exp $
 
 DISTNAME=	nvi-1.81.6
 PKGREVISION=	7
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kotnet.org/~skimo/nvi/devel/
 COMMENT=	Berkeley nvi with additional features
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/05/14 07:29:50 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 11:43:35 asau Exp $
 #
 
 DISTNAME=	jove4.16.0.70
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Small emacs-style editor, but lacks the LISP engine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	nroff

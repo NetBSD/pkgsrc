@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/08/03 15:55:52 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 11:43:47 asau Exp $
 
 DISTNAME=		xcoral-3.2
 PKGREVISION=		1
@@ -8,7 +8,6 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=editors/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multiwindow mouse-based text editor for X
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_X11BASE=	yes

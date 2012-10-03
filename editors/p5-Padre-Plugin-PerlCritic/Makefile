@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/13 16:19:01 sno Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:41 asau Exp $
 #
 
 DISTNAME=	Padre-Plugin-PerlCritic-0.12
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Padre-Plugin-PerlCritic/
 COMMENT=	Analyze perl files in Padre with Perl::Critic
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
 

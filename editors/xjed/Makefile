@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/08/07 14:54:36 marino Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 11:43:48 asau Exp $
 #
 PKGNAME=		xjed-0.99.16
 PKGREVISION=		1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/jed/Makefile.common"
 COMMENT=		Extensible folding editor with Emacs/WordStar/EDT emulations, X11 version
