@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11560 2012/10/03 20:04:19 adam Exp $
+$NetBSD: TODO,v 1.11561 2012/10/03 22:25:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-2.32.1.1 [GNOME 2.32]
-	o anjuta-3.4.1
+	o anjuta-3.6.0
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o anope-1.8.7
 	o antiright-8.6
@@ -490,6 +490,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
 	o cryptopp-5.6.0
+	o cscope-15.8a
 	o csound5-5.13
 	o ctwm-3.8.1
 	o cups-1.6.1
@@ -505,7 +506,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasm-2.20.11
 	o dbench-4.0
 	o dbus-1.6.8
-	o dbus-glib-0.100 [wants dbus>1.2.16]
 	o dcc-1.3.141
 	o ddclient-3.7.3
 	o ddrescue-1.16
@@ -587,7 +587,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ffmpeg-20120415.0.8.11
 	o ffmpeg-20120105.0.9.1
 	o ffmpeg-20120507.0.10.3
-	o ffmpeg-20120609.0.11.1
+	o ffmpeg-20120609.0.11.2
 	o ffmpeg-20120609.1.0
 	o ffplay-20120609.1.0
 	o fillets-ng-0.7.4
@@ -691,6 +691,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpredict-1.3
 	o gpsdrive-2.11
 	o gpsim-0.26.1
+	o grace-5.1.23
 	o gramofile-1.6P
 	o gramps3-3.4.1
 	o granulate-0.2
@@ -710,6 +711,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.38
+	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -783,7 +785,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.2
-	o kde4-4.9.1
+	o kde4-4.9.2
 	o kde4-4.9
 	o kdenlive-0.9.2
 	o kdevelop-4.3.1
@@ -1049,7 +1051,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o puzzles-9660
 	o pv-1.2.0
 	o pwlib-1.11.1
-	o py-FourSuite-1.0.2
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-creole-1.0.4 [pkg/46593]
@@ -1062,6 +1063,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-libxml2-2.9.0
 	o py-moin-1.9.5
 	o py-mpd-0.3.0
+	o py-qt4-4.9.5
+	o py-sip-4.14
 	o py-sybase-0.37
 	o py-urwid-1.0.2
 	o python33-3.3.0
@@ -1267,6 +1270,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wine-devel-1.5.14 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wireshark-1.8.3
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1387,7 +1391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.4.8
+	o zile-2.4.9
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zopeedit-0.8
