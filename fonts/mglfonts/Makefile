@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/11/05 06:12:00 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 18:28:27 asau Exp $
 
 DISTNAME=	fontkit-nobdf
 PKGNAME=	mglfonts-0.1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.NetBSD.org/ports/hpcmips/mgl2.html
 COMMENT=	MGL2 fonts and font tools
 
 WRKSRC=		${WRKDIR}/fontkit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin lib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/06 22:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 18:28:26 asau Exp $
 #
 
 DISTNAME=		libfontenc-1.1.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		The fontenc Library from X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/18 00:06:12 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 18:28:24 asau Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -18,8 +18,6 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.elisau10${EXTRACT_SUFX}=	\
 			http://hp.vector.co.jp/authors/VA004814/freesoft/
 SITES.clR5x8.bdf=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		bdftopcf gzip patch

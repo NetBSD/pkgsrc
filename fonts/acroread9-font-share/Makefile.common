@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/07/30 07:36:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/03 18:28:16 asau Exp $
 #
 # used by fonts/acroread9-chsfont/Makefile
 # used by fonts/acroread9-chtfont/Makefile
@@ -21,8 +21,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
