@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/07 17:37:36 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 11:43:37 asau Exp $
 #
 
 PKGNAME=		mflteco-19920331
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.catb.org/~esr/retro/
 MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.catb.org/~esr/retro/
 COMMENT=		MFL clone of Tape Editor and COrrector
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		te
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/08/31 19:52:18 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/03 11:43:34 asau Exp $
 # used by editors/gedit3/Makefile
 # used by editors/gedit3-spell/Makefile
 
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.gedit.org/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../editors/gedit3/distinfo
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
