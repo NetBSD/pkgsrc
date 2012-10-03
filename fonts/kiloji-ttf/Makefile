@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/04 05:41:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:26 asau Exp $
 
 DISTNAME=	# empty
 PKGNAME=	kiloji-ttf-2.1.0
@@ -14,8 +14,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.ez0.net/distribution/font/kiloji/
 COMMENT=	JIS X 0208 Japanese script fonts made by kilo
 LICENSE=	modified-bsd # with some difference
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes

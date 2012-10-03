@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/12 13:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:22 asau Exp $
 #
 
 DISTNAME=	font-schumacher-misc-1.1.2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.freedesktop.org/pub/individual/font/
 COMMENT=	Schumacher Miscellaneous "Crean" PCF fonts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config bdftopcf gzip ucs2any

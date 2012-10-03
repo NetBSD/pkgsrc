@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2009/01/04 16:29:41 shattered Exp $
+# $NetBSD: Makefile.common,v 1.14 2012/10/03 18:28:18 asau Exp $
 
 # used by fonts/cyr-rfx-bulgarian-mik/Makefile
 # used by fonts/cyr-rfx-ibm-cp866/Makefile
@@ -24,8 +24,6 @@ MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/00index.en.html
 COMMENT=	Cyrillic X11 fonts in ${CYR_RFX_ENCODING} encoding
 DIST_SUBDIR=	cyr-rfx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/07 08:52:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:30 asau Exp $
 #
 
 DISTNAME=	takao-fonts-ttf-003.02.01
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://launchpad.net/takao-fonts
 COMMENT=	Takao fonts are based on IPA(ex) fonts, and includes some bug fix
 LICENSE=	ipafont
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

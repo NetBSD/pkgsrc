@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/19 08:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 18:28:17 asau Exp $
 #
 
 DISTNAME=	bakoma-20010719
@@ -15,8 +15,6 @@ LICENSE+=		no-commercial-use
 
 NO_SRC_ON_CDROM=	#defined
 NO_BIN_ON_CDROM=	#defined
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BAKOMA_DIR=		${PREFIX}/share/tex-contrib/BaKoMa
 WRKSRC=			${WRKDIR}/bakoma

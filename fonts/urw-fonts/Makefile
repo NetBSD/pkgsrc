@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/02 19:00:36 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:32 asau Exp $
 #
 
 DISTNAME=	urw-fonts
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.gimp.org/pub/gimp/fonts/
 COMMENT=	Standard postscript fonts
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/URW
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/08 16:49:05 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 18:28:25 asau Exp $
 
 DISTNAME=	kcfonts-1.05
 PKGREVISION=	3
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	kevlo@midassol.com
 COMMENT=	Kuo Chauo Chinese Fonts collection
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes

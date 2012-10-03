@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/07 18:25:30 zafer Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 18:28:25 asau Exp $
 #
 
 DISTNAME=		shinonome-0.9.11-src
@@ -11,8 +11,6 @@ MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://openlab.ring.gr.jp/efont/shinonome/
 COMMENT=		12, 14, 16 dots bitmap fonts for Japanese, iso8859-1
 LICENSE=		public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES

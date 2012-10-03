@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/17 19:26:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:30 asau Exp $
 #
 
 DISTNAME=	roboto-fonts-20111115a
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://source.android.com/
 COMMENT=	Roboto font family from Google's Android 4
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_X11BASE=	yes

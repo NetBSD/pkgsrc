@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/16 15:25:31 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 18:28:16 asau Exp $
 
 DISTNAME=	adobe-cidfonts-20000901
 CATEGORIES=	fonts
@@ -25,8 +25,6 @@ DISTFILES+=	WadaMaruGo-RegularH WadaMaruGo-RegularH.afm
 DISTFILES+=	WadaMin-Bold WadaMin-Bold.afm
 DISTFILES+=	WadaMin-Regular WadaMin-Regular.afm
 DISTFILES+=	WadaMin-RegularH WadaMin-RegularH.afm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes

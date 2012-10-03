@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/20 20:32:11 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:27 asau Exp $
 
 DISTNAME=		lohit-fonts-2.3.1
 CATEGORIES=		fonts
@@ -8,8 +8,6 @@ MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://fedorahosted.org/lohit
 COMMENT=		Free fonts for Indian languages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 NO_CONFIGURE=		yes

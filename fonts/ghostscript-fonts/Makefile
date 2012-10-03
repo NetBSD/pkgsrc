@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/02 19:09:25 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 18:28:23 asau Exp $
 
 DISTNAME=		ghostscript-fonts-8.11
 PKGREVISION=		3
@@ -10,8 +10,6 @@ DISTFILES=		${GS_FONTS_OTHER}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gs-fonts.sourceforge.net/
 COMMENT=		Postscript fonts for Aladdin Ghostscript
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GS_FONTS_OTHER=		ghostscript-fonts-other-6.0.tar.gz
 

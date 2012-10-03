@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/01 09:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:32 asau Exp $
 #
 
 DISTNAME=	urbanrenewal
@@ -22,7 +22,6 @@ INSTALLATION_DIRS=	${TTFPATH}
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}
