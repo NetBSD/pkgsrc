@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/06 00:23:18 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 00:02:40 asau Exp $
 
 VERSION=	4.0.0
 DISTNAME=	libotr-${VERSION}
@@ -10,8 +10,6 @@ MAINTAINER=	nathanw@NetBSD.org
 HOMEPAGE=	http://www.cypherpunks.ca/otr/
 COMMENT=	Library for Off-The-Record encrypted messaging
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-pic

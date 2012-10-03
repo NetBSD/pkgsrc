@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/01/29 05:56:11 sbd Exp $
+# $NetBSD: Makefile,v 1.55 2012/10/03 00:10:29 asau Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -14,8 +14,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/
 COMMENT=		Unified GNU binutils for cross build environments
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 

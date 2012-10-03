@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 02:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 00:02:44 asau Exp $
 #
 
 DISTNAME=	roxirc-1.8
@@ -13,7 +13,6 @@ COMMENT=	Graphical IRC client written in tcl/tk
 DEPENDS+=	tk-[0-9]*:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES

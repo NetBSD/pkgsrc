@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/11/28 19:42:39 marino Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/03 00:02:47 asau Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/olh/Zephyr/index.html
 COMMENT=	Project Athena's original Instant Messaging system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/zephyr
 GNU_CONFIGURE=	YES
