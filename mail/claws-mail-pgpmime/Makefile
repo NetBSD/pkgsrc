@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2012/09/15 10:05:25 obache Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2012/10/03 12:08:33 spz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	pgpmime
-PKGREVISION=	1
+PKGREVISION=	2
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

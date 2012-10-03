@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2012/09/15 10:06:47 obache Exp $
+# $NetBSD: Makefile,v 1.61.2.1 2012/10/03 12:09:44 spz Exp $
 #
 
 DISTNAME=	libgtkhtml-2.6.3
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	www devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgtkhtml/2.6/}
 EXTRACT_SUFX=	.tar.bz2
