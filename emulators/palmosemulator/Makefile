@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/01/03 02:07:38 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/03 12:55:16 asau Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -13,8 +13,6 @@ MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.palmos.com/dev/tools/emulator/
 COMMENT=	Palm OS Emulator
 #LICENSE=       GPL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 

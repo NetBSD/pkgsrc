@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/06/14 22:37:34 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/03 12:55:09 asau Exp $
 #
 
 DISTNAME=			aranym_0.9.13.orig
@@ -13,8 +13,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
 COMMENT=		Atari Running on Any Machine
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
