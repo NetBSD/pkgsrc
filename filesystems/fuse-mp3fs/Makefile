@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/17 10:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 16:08:32 asau Exp $
 #
 
 DISTNAME=	mp3fs-0.13
@@ -13,7 +13,6 @@ COMMENT=	MP3 transcoding FUSE file system
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS=		pkg-config
 
 INSTALLATION_DIRS=	share/doc/fuse-mp3fs

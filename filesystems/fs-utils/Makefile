@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/12/21 07:46:59 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 16:08:30 asau Exp $
 #
 
 DISTNAME=		fs-utils_20091116
@@ -13,7 +13,6 @@ COMMENT=		Tools to access/modify a file system image through RUMP
 
 ONLY_FOR_PLATFORM=	NetBSD-[5-9]*-* FreeBSD-*-* Linux-*-*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_BSD_MAKEFILE=	yes
 WRKSRC=			${WRKDIR}/fs-utils
 INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1 ${PKGMANDIR}/man3

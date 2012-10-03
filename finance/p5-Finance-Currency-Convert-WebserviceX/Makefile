@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/03 11:16:22 sno Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 16:10:13 asau Exp $
 
 DISTNAME=	Finance-Currency-Convert-WebserviceX-0.07001
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Finance/Currency/Convert/WebserviceX/.packlist
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
