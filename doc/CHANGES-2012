@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3112 2012/10/03 22:17:35 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3113 2012/10/03 22:18:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed databases/gramps2 [wiz 2012-10-03]
 	Removed textproc/py-FourSuite [wiz 2012-10-03]
 	Removed textproc/py-gdick [wiz 2012-10-03]
+	Updated pkgtools/pkglint to 4.126 [wiz 2012-10-03]
