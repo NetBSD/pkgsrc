@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.16 2010/08/30 07:36:31 dsainty Exp $
+$NetBSD: patch-ac,v 1.17 2012/10/03 19:59:47 adam Exp $
 
 We intentionally wire down the 'libswanted' list in the package Makefile,
 so don't let the hints file add new libraries that may be found outside
@@ -6,7 +6,7 @@ Pkgsrc control.
 
 --- hints/linux.sh	2009-02-13 11:58:12.000000000 +1300
 +++ hints/linux.sh	2009-12-22 16:46:41.400187863 +1300
-@@ -54,9 +54,6 @@
+@@ -57,9 +57,6 @@
  shift
  libswanted="$*"
  

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.181 2012/10/02 20:11:48 asau Exp $
+# $NetBSD: Makefile,v 1.182 2012/10/03 19:59:47 adam Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
 COMMENT=	Practical Extraction and Report Language
-PKGREVISION=	5
 
 CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
 		p5-CGI-2.66{,nb*} p5-CGI-2.75{,nb*} p5-CGI-2.75.[0-2]	\
@@ -322,7 +321,7 @@ pre-configure:
 post-build:
 	${SED}	-e "s,@PERL5@,"${PERL5:Q}",g"				\
 		-e "s,@SH@,"${SH:Q}",g"					\
-		-e "s,@PKGMANDIR@,"${PKGMANDIR:Q}",g"			\
+		-e "s,@PKGMANDIR@,"${PKGMANDIR}",g"			\
 		${FILESDIR}/perllink.in > ${WRKDIR}/perllink.sh
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
