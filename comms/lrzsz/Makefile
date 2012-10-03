@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/03 11:24:41 asau Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.ohse.de/uwe/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ohse.de/uwe/software/lrzsz.html
 COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

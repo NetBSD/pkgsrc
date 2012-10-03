@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/25 11:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 11:24:38 asau Exp $
 #
 
 PKGNAME=		asterisk-sounds-de-x9media-20060714
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.x9media.com/
 COMMENT=		German voice prompt files for asterisk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		tar
 
