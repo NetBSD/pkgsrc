@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/31 21:34:39 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 11:24:41 asau Exp $
 
 DISTNAME=		libmal-0.44
 PKGREVISION=		1
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.jlogday.com/code/libmal/archive/
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://jasonday.home.att.net/code/libmal/
 COMMENT=		MAL convenience library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		malsync-[0-9]*
 

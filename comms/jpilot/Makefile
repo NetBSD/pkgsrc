@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2012/10/02 17:10:42 tron Exp $
+# $NetBSD: Makefile,v 1.84 2012/10/03 11:24:40 asau Exp $
 #
 
 DISTNAME=		jpilot-1.6.0
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.jpilot.org/older/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.jpilot.org/
 COMMENT=		Desktop organizer application for the palm pilot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
