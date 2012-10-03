@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11558 2012/10/03 12:13:03 asau Exp $
+$NetBSD: TODO,v 1.11559 2012/10/03 12:39:06 taca Exp $
 
 Suggested new packages
 ======================
@@ -926,6 +926,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
+	o mysql-5.1.66
 	o nap-1.5.3
 	o nas-1.9.3 [pkg/45449]
 	o nautilus-actions-2.30.3 [GNOME 2.30]
