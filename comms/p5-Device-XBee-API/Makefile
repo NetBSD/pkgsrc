@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/01 02:29:38 dsainty Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 11:24:43 asau Exp $
 #
 
 DISTNAME=	Device-XBee-API-0.4
@@ -10,8 +10,6 @@ MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?Device::XBee::API
 COMMENT=	Object-oriented Perl interface to Digi XBee module API mode
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Device-SerialPort>=1.04:../../comms/p5-Device-SerialPort
 
