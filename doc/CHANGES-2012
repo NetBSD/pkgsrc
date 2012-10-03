@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3109 2012/10/03 15:44:26 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3110 2012/10/03 20:04:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/pngcrush to 1.7.38 [adam 2012-10-03]
 	Updated graphics/gdk-pixbuf2 to 2.26.4 [adam 2012-10-03]
 	Updated x11/gtk2 to 2.24.13 [adam 2012-10-03]
+	Updated lang/perl5 to 5.16.1 [adam 2012-10-03]
