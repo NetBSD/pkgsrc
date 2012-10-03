@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/05/16 11:27:31 marino Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 12:55:11 asau Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.finalburn.com/dega/
 COMMENT=	Sega Game Gear, Sega Mark III and Sega Master System emulator
 
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
