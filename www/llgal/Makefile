@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 16:05:40 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:31 wiz Exp $
 #
 
 DISTNAME=	llgal-0.13.16
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www graphics
 MASTER_SITES=	http://download.gna.org/llgal/
 EXTRACT_SUFX=	.tar.bz2

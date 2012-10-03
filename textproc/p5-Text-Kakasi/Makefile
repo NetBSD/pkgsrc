@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2011/08/14 15:14:13 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/03 21:58:03 wiz Exp $
 
 DISTNAME=		Text-Kakasi-2.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		p5tka
 CATEGORIES=		japanese textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/07/28 07:21:07 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:15 wiz Exp $
 
 DISTNAME=	ps2eps-1.68
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.tm.uka.de/~bless/
 EXTRACT_SUFX=	.zip

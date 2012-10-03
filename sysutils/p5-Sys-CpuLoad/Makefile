@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/08/14 14:52:51 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:57:42 wiz Exp $
 
 DISTNAME=	Sys-CpuLoad-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 

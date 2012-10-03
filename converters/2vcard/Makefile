@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 00:20:09 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 21:54:06 wiz Exp $
 #
 
 DISTNAME=	2vcard-0.5
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/08 16:13:51 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:55 wiz Exp $
 #
 
 DISTNAME=	sparse-0.3
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://kernel.org/pub/software/devel/sparse/dist/
 

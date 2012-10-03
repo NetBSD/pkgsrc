@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/23 19:15:21 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:56:04 wiz Exp $
 #
 
 DISTNAME=	asciiquarium_1.0
 PKGNAME=	asciiquarium-1.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://robobunny.com/projects/asciiquarium/
 

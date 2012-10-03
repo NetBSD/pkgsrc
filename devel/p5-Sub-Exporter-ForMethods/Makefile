@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/07/05 15:35:34 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:36 wiz Exp $
 
 DISTNAME=	Sub-Exporter-ForMethods-0.100050
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 

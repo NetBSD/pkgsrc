@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2011/08/14 16:05:40 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:29 wiz Exp $
 
 DISTNAME=	dansguardian-${VERSION}.source
 PKGNAME=	dansguardian-${VERSION}
 VERSION=	2.8.0.6
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www
 MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 
