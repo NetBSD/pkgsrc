@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2012/10/02 17:10:44 tron Exp $
+# $NetBSD: Makefile,v 1.94 2012/10/03 21:54:27 wiz Exp $
 
 DISTNAME=	anjuta-2.24.2
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.24/}
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=anjuta/}

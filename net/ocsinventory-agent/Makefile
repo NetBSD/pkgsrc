@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/11/25 23:15:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:56:58 wiz Exp $
 #
 VERS=			1.1.2.1
-PKGREVISION=		3
+PKGREVISION=		4
 DISTNAME=		Ocsinventory-Agent-${VERS}
 PKGNAME=		ocsinventory-agent-${VERS}
 CATEGORIES=		net
