@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/24 20:38:55 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 11:43:37 asau Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Small, fast, public domain EMACS style editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		mg
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 18:25:53 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 11:43:45 asau Exp $
 
 DISTNAME=	ve-1.0
 CATEGORIES=	editors
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	NTHU-CS Maple BBS 2.36 BBS-like editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

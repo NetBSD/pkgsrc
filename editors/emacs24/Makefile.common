@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/06/16 21:03:41 dholland Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/03 11:43:33 asau Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
 MAKE_JOBS_SAFE=		no
