@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/12/09 00:48:44 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 16:10:14 asau Exp $
 
 DISTNAME=		xinvest-2.6.9
 PKGREVISION=		3
@@ -8,8 +8,6 @@ MASTER_SITES=		http://xinvest.sunsite.dk/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinvest.sunsite.dk/xinvest.html
 COMMENT=		Personal finance tracking and performance tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES

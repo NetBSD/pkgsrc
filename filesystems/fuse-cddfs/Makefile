@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 19:31:31 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 16:08:30 asau Exp $
 #
 
 DISTNAME=	cddfs-0.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://castet.matthieu.free.fr/cddfs/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://castet.matthieu.free.fr/cddfs/
 COMMENT=	FUSE filesystem that uses libparanoia for audio CDs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 BUILD_TARGET=		cddfs
