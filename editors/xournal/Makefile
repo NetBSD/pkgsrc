@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 17:10:58 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 11:43:48 asau Exp $
 
 DISTNAME=	xournal-0.4.7
 PKGREVISION=	5
@@ -14,8 +14,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config msgfmt
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LDFLAGS.DragonFly=	-lX11 -lz -lm
 LDFLAGS.SunOS=		-lX11 -lz -lm

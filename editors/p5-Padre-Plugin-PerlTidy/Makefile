@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/13 16:24:12 sno Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 11:43:41 asau Exp $
 #
 
 DISTNAME=	Padre-Plugin-PerlTidy-0.22
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Padre-Plugin-PerlTidy/
 COMMENT=	Format perl files in Padre using Perl::Tidy
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

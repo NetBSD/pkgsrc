@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2012/08/27 14:45:37 morr Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 11:43:46 asau Exp $
 
 PKGNAME=		vim-motif-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
 COMMENT=		Vim editor (vi clone) with X11 Motif GUI
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include		"../../editors/vim-share/Makefile.common"
 

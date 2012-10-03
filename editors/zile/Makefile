@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/02/11 09:54:21 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/03 11:43:48 asau Exp $
 
 DISTNAME=	zile-2.4.5
 CATEGORIES=	editors
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/zile/
 COMMENT=	Emacs-like text editor
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	makeinfo
 USE_NCURSES=	yes	# uses stdscr->_delay directly
