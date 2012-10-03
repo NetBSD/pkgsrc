@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/02/19 20:17:09 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/03 00:02:37 asau Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citizens Band chat server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

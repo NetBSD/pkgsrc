@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/12/17 10:14:52 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 00:02:46 asau Exp $
 #
 
 DISTNAME=	xaric-0.12.1
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rexfeany.com/software/xaric/
 COMMENT=	IRC client similar to BitchX and ircII
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
