@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:48 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 22:14:01 wiz Exp $
 #
 
 DISTNAME=	zim-0.56
@@ -40,11 +40,6 @@ SUBST_CLASSES+=			man-path
 SUBST_STAGE.man-path=		pre-configure
 SUBST_FILES.man-path+=		setup.py
 SUBST_SED.man-path=		-e s,share/man/man1,${PKGMANDIR}/man1,
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py25"
-DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
-.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
