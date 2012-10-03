@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/09/28 09:35:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/03 11:43:43 asau Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -12,7 +12,6 @@ COMMENT=	X11 based WordPad-like word processor
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gtar

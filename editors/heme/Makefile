@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/06 10:17:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:35 asau Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -11,7 +11,6 @@ HOMEPAGE=		http://sourceforge.net/projects/heme/
 COMMENT=		Fast and portable console hex editor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		heme
 USE_NCURSES=		chgat

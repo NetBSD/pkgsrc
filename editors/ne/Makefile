@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/18 03:44:52 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 11:43:38 asau Exp $
 
 DISTNAME=	ne-1.31
 CATEGORIES=	editors
@@ -7,8 +7,6 @@ DISTFILES=	${DISTNAME}.tar.gz ne.manpage.1 NE.spec.ascii NE.changes.spec
 
 MAINTAINER=	bjh@mail.dotcom.fr
 COMMENT=	Re-write of Phoenix E.  A sensible light-weight editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

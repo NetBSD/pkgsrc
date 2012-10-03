@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/02 17:10:56 tron Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 11:43:37 asau Exp $
 #
 
 DISTNAME=	medit-1.1.1
@@ -13,8 +13,6 @@ COMMENT=	Programming and around-programming text editor
 LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

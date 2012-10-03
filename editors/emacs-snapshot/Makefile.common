@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2012/06/16 21:06:17 dholland Exp $
+# $NetBSD: Makefile.common,v 1.53 2012/10/03 11:43:32 asau Exp $
 
 DISTNAME=	emacs-snapshot_20120319.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 SETGIDGAME=		yes
 MAKE_JOBS_SAFE=		no
 

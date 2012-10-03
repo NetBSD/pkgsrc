@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/06 01:44:51 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 11:43:43 asau Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/speedbar.shtml
 COMMENT=	Directory and code browser for emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/emacs/modules.mk"
 

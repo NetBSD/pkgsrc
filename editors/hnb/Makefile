@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/03 18:25:52 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 11:43:35 asau Exp $
 #
 
 DISTNAME=	hnb-1.9.17
@@ -11,8 +11,6 @@ HOMEPAGE=	http://hnb.sourceforge.net/
 COMMENT=	Hierarchical data organizer
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-U]-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 

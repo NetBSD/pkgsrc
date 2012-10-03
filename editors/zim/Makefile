@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/08/11 15:16:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 11:43:48 asau Exp $
 #
 
 DISTNAME=	zim-0.56
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://zim-wiki.org/
 COMMENT=	Zim brings the concept of a wiki to your desktop
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

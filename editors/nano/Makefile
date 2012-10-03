@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/09/15 10:04:29 obache Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/03 11:43:38 asau Exp $
 
 DISTNAME=	nano-2.2.6
 PKGREVISION=	1
@@ -15,8 +15,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 
 INFO_FILES=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-color
 CONFIGURE_ARGS+=	--enable-multibuffer

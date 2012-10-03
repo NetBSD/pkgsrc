@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/02 17:10:54 tron Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/03 11:43:33 asau Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
@@ -16,8 +16,6 @@ CONFLICTS+=	elisp-manual-[0-9]*
 CONFLICTS+=	emacs-[0-9]*
 CONFLICTS+=	emacs-nox11-[0-9]*
 CONFLICTS+=	mule-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake gzip mktemp:run perl:run pkg-config
 GNU_CONFIGURE=		yes

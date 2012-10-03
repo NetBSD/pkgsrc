@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/08/14 15:24:51 marino Exp $
+# $NetBSD: Makefile,v 1.47 2012/10/03 11:43:39 asau Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040608
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Clone of vi/ex, with multilingual patch
 
 CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_DIRS=	${WRKSRC}/build
 GNU_CONFIGURE=	YES

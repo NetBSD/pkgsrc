@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2011/12/09 14:36:34 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/03 11:43:38 asau Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERS=		5.5
 MASTER_SITE_NEDIT=	http://www.nedit.org/ftp/			\

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2010/01/29 19:43:36 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 11:43:31 asau Exp $
 #
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/11 15:08:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 11:43:30 asau Exp $
 #
 
 DISTNAME=	OmegaT_2.5.5_01_Source
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.omegat.org/
 COMMENT=	The translation memory (TM) application written in Java
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
