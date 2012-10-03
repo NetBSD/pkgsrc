@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/06 11:47:25 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 23:40:36 cheusov Exp $
 #
 
 VER=		1.0.2
@@ -28,6 +28,8 @@ SUBST_FILES.python+=	test/Xml/XPath/Core/*.py
 SUBST_FILES.python+=	test/test.py
 SUBST_STAGE.python=	post-build
 SUBST_SED.python=	-e 's,\#![^ ]* python,\#! ${PYTHONBIN},'
+
+#PYTHON_SELF_CONFLICT=	yes
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
