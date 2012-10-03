@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/02/06 05:46:25 manu Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/03 16:08:33 asau Exp $
 #
 
 DISTNAME=	perfuse-20120206
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	manu@NetBSD.org
 COMMENT=	PUFFS Enabled Relay to FUSE
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/src/
 BUILD_DIRS=	lib/libperfuse usr.sbin/perfused

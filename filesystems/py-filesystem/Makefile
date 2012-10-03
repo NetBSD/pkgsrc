@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:08:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 16:08:33 asau Exp $
 #
 
 VERSION=	0.4.0
@@ -11,8 +11,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://code.google.com/p/pyfilesystem/
 COMMENT=	Python filesystem access library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
