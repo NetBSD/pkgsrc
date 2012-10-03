@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.23 2012/09/16 20:03:50 cheusov Exp $
+# $NetBSD: phpversion.mk,v 1.24 2012/10/03 23:48:00 cheusov Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -13,10 +13,11 @@
 #	Possible: 53 54
 #	Default: 53
 #
+# === Infrastructure variables ===
+#
 # PHP_VERSION_REQD
-#	PHP version to use. This is a user variable and
-#	should not be set in packages.
-#	Normally it is used by bulk build tools.
+#	PHP version to use. This variable should not be set in
+#	packages.  Normally it is used by bulk build tools.
 #
 #	Possible: ${PHP_VERSIONS_ACCEPTED}
 #	Default:  ${PHP_VERSION_DEFAULT}
