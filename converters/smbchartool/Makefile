@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/07 18:04:21 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 00:20:17 asau Exp $
 #
 
 DISTNAME=	smbchartool-2.3a
@@ -16,8 +16,6 @@ COMMENT=	File name conversion tool for Samba
 
 DEPENDS+=	jcode-perl>=2.13:../../converters/jcode-perl
 DEPENDS+=	p5-Text-Iconv>=1.4:../../converters/p5-Text-Iconv
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 NO_BUILD=	yes

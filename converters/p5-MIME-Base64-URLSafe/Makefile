@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/06 13:58:20 adam Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 00:20:14 asau Exp $
 
 DISTNAME=	MIME-Base64-URLSafe-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/MIME-Base64-URLSafe/
 COMMENT=	Perl version of Python's URL-safe base64 codec
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/MIME/Base64/URLSafe/.packlist
 
