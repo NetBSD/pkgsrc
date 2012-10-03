@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2012/09/15 10:06:50 obache Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2012/10/03 12:09:47 spz Exp $
 #
 
 VERSION=	1.4.2
 DISTNAME=	deskmenu_${VERSION}
 PKGNAME=	deskmenu-${VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
 

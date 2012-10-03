@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/09/15 10:05:06 obache Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2012/10/03 12:08:13 spz Exp $
 #
 
 DISTNAME=	ristretto-0.0.22
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	http://goodies.xfce.org/releases/ristretto/
 
