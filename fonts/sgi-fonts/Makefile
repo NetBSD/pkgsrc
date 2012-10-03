@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/03/25 05:36:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 18:28:30 asau Exp $
 #
 
 DISTNAME=	sgi-fonts-1.0-457.src
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.rpm
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oss.sgi.com/projects/sgi_propack/
 COMMENT=	Linux compatibility package for SGI fonts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/sgi-fonts
 USE_LANGUAGES=	# none

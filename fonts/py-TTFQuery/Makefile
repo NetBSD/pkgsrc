@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/03 22:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 18:28:30 asau Exp $
 #
 
 DISTNAME=		TTFQuery-1.0.5
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ttfquery.sourceforge.net/
 COMMENT=		Query TTF font files for metadata and font outlines
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-fonttools>=2.0b1:../../fonts/py-fonttools
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/07 16:33:54 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 18:28:17 asau Exp $
 #
 
 DISTNAME=	artwiz-aleczapka-1.3
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vastwaters.com/
 COMMENT=	Set of free fonts for X11 desktops
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/artwiz-aleczapka
 USE_X11BASE=	yes

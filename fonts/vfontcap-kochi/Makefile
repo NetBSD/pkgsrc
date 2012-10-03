@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/09/02 08:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 18:28:32 asau Exp $
 
 DISTNAME=		vfontcap-kochi-0.0
 PKGREVISION=		3
@@ -11,8 +11,6 @@ COMMENT=		Configuration file for VFlib to use kochi-ttf
 
 DEPENDS+=		ja-vflib-lib-[0-9]*:../../print/ja-vflib-lib
 DEPENDS+=		kochi-ttf-[0-9]*:../../fonts/kochi-ttf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes

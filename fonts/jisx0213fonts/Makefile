@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 18:28:25 asau Exp $
 #
 
 DISTNAME=	jisx0213fonts-0.0
@@ -10,8 +10,6 @@ DISTFILES=	${FONTS:C/$/.bdf.gz/}
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	ftp://ftp.m17n.org/pub/character/fonts/imamura/jisx0213/
 COMMENT=	X11 bitmap fonts for JIS X 0213
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 USE_TOOLS+=	gzip

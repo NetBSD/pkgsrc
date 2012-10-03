@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/21 00:25:00 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 18:28:32 asau Exp $
 
 DISTNAME=	un-fonts-core-1.0.2-080608
 PKGNAME=	${DISTNAME:S/fonts-core/core-ttf/:S/-0/.200/}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://kldp.net/projects/unfonts/
 COMMENT=	Core set of Un Korean TrueType fonts
 
 CONFLICTS+=	un-ttf-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/un-fonts
 USE_X11BASE=	yes

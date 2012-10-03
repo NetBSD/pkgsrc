@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2012/04/07 12:49:35 obache Exp $
+# $NetBSD: Makefile.common,v 1.25 2012/10/03 18:28:18 asau Exp $
 #
 
 DISTNAME=	# empty
@@ -17,8 +17,6 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 USE_TOOLS+=     unzip
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	cyberbit-ttf
 

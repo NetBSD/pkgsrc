@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/22 18:20:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:27 asau Exp $
 #
 
 DISTNAME=	# empty
@@ -14,8 +14,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://mix-mplus-ipa.sourceforge.jp/
 COMMENT=	Fonts generated from M+ and IPA Gothic (Universal Design)
 LICENSE=	ipafont AND mplusfont
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes

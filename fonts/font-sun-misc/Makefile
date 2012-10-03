@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/12 02:10:26 mef Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:22 asau Exp $
 #
 
 DISTNAME=		font-sun-misc-1.0.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Sun Open Look PCF fonts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bdftopcf gzip

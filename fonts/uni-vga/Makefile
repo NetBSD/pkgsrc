@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/23 15:39:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:32 asau Exp $
 #
 
 DISTNAME=	uni-vga
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.inp.nsk.su/~bolkhov/files/fonts/univga/
 COMMENT=	Monospaced Unicode font based on the original IBM VGA font
 LICENSE=	mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		bdftopcf gzip
 
 FONTDIR=		${PREFIX}/lib/X11/fonts/uni-vga

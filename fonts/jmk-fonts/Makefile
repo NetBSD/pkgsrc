@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/10/08 03:23:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 18:28:25 asau Exp $
 #
 
 DISTNAME=	jmk-x11-fonts-3.0
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/fonts/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jmknoble.net/fonts/
 COMMENT=	Jim Knoble's font collection for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 MAKE_FLAGS+=	INSTALL_DIR=${PREFIX}/lib/X11/fonts/jmk

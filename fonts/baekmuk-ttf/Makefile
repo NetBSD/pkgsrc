@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 20:17:11 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 18:28:17 asau Exp $
 
 DISTNAME=	baekmuk-ttf-2.2
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://kldp.net/download.php/1429/
 MAINTAINER=	yui@yui.pe.kr
 HOMEPAGE=	http://kldp.net/projects/baekmuk/
 COMMENT=	Baekmuk family Korean TrueType fonts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

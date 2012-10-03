@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/04 10:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:28 asau Exp $
 #
 
 DISTNAME=	Mothanna-0.02
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Khotot
 COMMENT=	Mothanna is a sans-serif like Arabic OpenType font
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

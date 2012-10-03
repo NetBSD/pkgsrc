@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/03 18:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 18:28:18 asau Exp $
 #
 
 DISTNAME=		encodings-1.0.4
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X11 Font Index Generator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/lib/X11/fonts

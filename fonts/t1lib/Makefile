@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/07/17 13:22:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/03 18:28:30 asau Exp $
 
 DISTNAME=	t1lib-5.1.2
 PKGREVISION=	6
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for generating bitmaps from Adobe Type 1 fonts
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

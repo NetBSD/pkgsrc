@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 11:02:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 18:28:27 asau Exp $
 
 DISTNAME=		misaki_bdf_2012-06-03
 PKGNAME=		${DISTNAME:S/-//g:S/misaki_bdf_/misaki-fonts-1.0./}
@@ -9,8 +9,6 @@ MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.geocities.jp/littlimi/misaki.htm
 COMMENT=		8x8 dots X11 bitmap font for JIS X 0208
 LICENSE=		mplusfont
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES

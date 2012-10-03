@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/11/01 06:01:13 sbd Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 18:28:31 asau Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -18,8 +18,6 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
 LDFLAGS+=	${BUILDLINK_LDADD.getopt}

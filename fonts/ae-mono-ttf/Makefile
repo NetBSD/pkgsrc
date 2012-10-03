@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/16 23:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:16 asau Exp $
 #
 
 DISTNAME=	ae_fonts_mono
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Khotot
 COMMENT=	Collection of PCF fonts that include Arabic glyphs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
