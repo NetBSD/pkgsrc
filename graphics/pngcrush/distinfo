@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2012/09/03 05:27:39 adam Exp $
+$NetBSD: distinfo,v 1.45 2012/10/03 11:03:59 adam Exp $
 
-SHA1 (pngcrush-1.7.37-nolib.tar.xz) = 43f9083d329df07f29cda57c4e5d947410394e29
-RMD160 (pngcrush-1.7.37-nolib.tar.xz) = d42ad310c5294c2c2311d1a9d98da4c628a188e1
-Size (pngcrush-1.7.37-nolib.tar.xz) = 50544 bytes
+SHA1 (pngcrush-1.7.38-nolib.tar.xz) = 0e7fb685d89d809bdb9f144cb522f1c25cbf5899
+RMD160 (pngcrush-1.7.38-nolib.tar.xz) = c182dd6147ebdfbe660fd22fee57394f7336de9b
+Size (pngcrush-1.7.38-nolib.tar.xz) = 51344 bytes
 SHA1 (patch-aa) = c8342e5bb7947f1dc2ff31f0ef45190ebcc71d8e
