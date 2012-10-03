@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 21:25:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:25 wiz Exp $
 #
 
 DISTNAME=		build-farm-4_5
 PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/:S/_/./}
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://pgfoundry.org/frs/download.php/3028/
 EXTRACT_SUFX=		.tgz

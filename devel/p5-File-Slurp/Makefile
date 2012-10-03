@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/08/16 07:00:59 adam Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 21:55:02 wiz Exp $
 
 DISTNAME=	File-Slurp-9999.19
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5fsl
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}

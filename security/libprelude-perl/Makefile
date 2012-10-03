@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/07/05 16:07:18 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:24 wiz Exp $
 
 PKGNAME=		libprelude-perl-${VERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 COMMENT=		Perl bindings to LibPrelude
 
 PKG_DESTDIR_SUPPORT=	user-destdir

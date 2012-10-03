@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/07/12 13:51:04 wen Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 21:56:45 wiz Exp $
 
 DISTNAME=		File-MMagic-1.29
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 SVR4_PKGNAME=		p5fim
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}

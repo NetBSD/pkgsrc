@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2012/10/03 00:20:13 asau Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/03 21:54:09 wiz Exp $
 
 DISTNAME=	Jcode-2.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 SVR4_PKGNAME=	p5jco
 CATEGORIES=	converters japanese perl5
 MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 12:26:10 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:07 wiz Exp $
 
 DISTNAME=	IO-CaptureOutput-1.1102
 PKGNAME=	p5-${DISTNAME:S/1102/11.02/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
