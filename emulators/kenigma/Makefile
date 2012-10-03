@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/15 10:04:32 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 12:55:14 asau Exp $
 
 DISTNAME=	28107-kenigma-1.2.1
 PKGNAME=	kenigma-1.2.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.kde-apps.org/content/files/
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde-apps.org/content/show.php?content=28107
 COMMENT=	Replica of the German enigma code machine used in WW2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/kenigma
 

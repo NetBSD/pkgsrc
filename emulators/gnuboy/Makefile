@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/12/09 01:31:57 marino Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 12:55:13 asau Exp $
 
 DISTNAME=	gnuboy-1.0.3
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://brightrain.aerifal.cx/~laguna/src/
 MAINTAINER=	njl@sdf.lonestar.org
 #HOMEPAGE=	http://gnuboy.unix-fu.org/
 COMMENT=	Gameboy emulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
