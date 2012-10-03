@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2011/03/28 13:02:25 obache Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/03 00:02:34 asau Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
@@ -12,8 +12,6 @@ COMMENT=	IRC client based on ircII
 
 # This package is not even remotely 64-bit clean
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	bash
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:10:39 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 00:02:36 asau Exp $
 #
 
 DISTNAME=	gajim-0.15
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
 DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

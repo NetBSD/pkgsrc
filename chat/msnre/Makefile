@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/08/14 07:38:55 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 00:02:41 asau Exp $
 #
 
 DISTNAME=	msnre-0.91
@@ -11,7 +11,6 @@ HOMEPAGE=	http://msnre.sourceforge.net/
 COMMENT=	Console-based MSN Instant Messenger clone
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Curses-[0-9]*:../../devel/p5-Curses
 DEPENDS+=	p5-POE-[0-9]*:../../devel/p5-POE

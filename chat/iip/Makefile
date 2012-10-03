@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/16 15:00:58 hans Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 00:02:37 asau Exp $
 #
 
 DISTNAME=		iip-1.1.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.invisiblenet.net/iip/
 COMMENT=		The Invisible IRC Project
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 

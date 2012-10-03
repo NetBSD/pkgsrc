@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/03/15 11:53:21 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 00:02:34 asau Exp $
 #
 
 DISTNAME=	centerim-4.22.9
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.centerim.org/
 COMMENT=	Instant Messenger interface supporting many protocols
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run

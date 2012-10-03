@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2012/05/23 13:16:34 abs Exp $
+# $NetBSD: Makefile,v 1.61 2012/10/03 00:02:38 asau Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -15,7 +15,6 @@ LICENSE=		modified-bsd
 
 CONFLICTS=		blackened-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 VERS=			20111115

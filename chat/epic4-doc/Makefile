@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/26 10:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 00:02:36 asau Exp $
 #
 
 DISTNAME=	epic4-help-20050315
@@ -18,8 +18,6 @@ HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	Additional documentation for epic4 package
 
 DEPENDS+=	epic4>=2.0:../../chat/epic4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 

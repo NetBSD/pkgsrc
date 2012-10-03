@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/02/22 08:16:00 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/03 00:02:47 asau Exp $
 
 DISTNAME=		rh9.ymessenger-1.0.4-1.i386
 PKGNAME=		ymessenger-1.0.4
@@ -16,8 +16,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat gtk gdk-pixbuf

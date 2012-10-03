@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/08/21 23:49:19 marino Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/03 00:02:35 asau Exp $
 
 DISTNAME=	eggdrop1.6.21
 PKGNAME=	eggdrop-1.6.21
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

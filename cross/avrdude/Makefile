@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/04/16 13:09:27 shattered Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 00:10:29 asau Exp $
 
 DISTNAME=		avrdude-5.11
 PKGREVISION=		1
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_GNU_READLINE=	yes

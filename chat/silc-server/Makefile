@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/02/28 17:37:42 hans Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/03 00:02:44 asau Exp $
 
 DISTNAME=	silc-server-1.1.18
 CATEGORIES=	chat security
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.silcnet.org/
 COMMENT=	Server for the Secure Internet Live Conferencing (SILC) protocol
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

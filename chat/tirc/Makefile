@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/12/28 08:25:20 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 00:02:45 asau Exp $
 #
 
 DISTNAME=	tirc-1.2
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.mayn.de/pub/really_old_stuff/unix/network/irc/tirc/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# http://home.mayn.de/jean-luc/alt/tirc/
 COMMENT=	Token's 'Internet Relay Chat' Client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

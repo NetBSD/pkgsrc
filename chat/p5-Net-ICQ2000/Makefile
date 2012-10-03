@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/08/06 13:11:26 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 00:02:42 asau Exp $
 
 DISTNAME=	Net-ICQ2000-0.2.1
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	http://gonzo.kiev.ua/projects/vicq.old/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq.old/
 COMMENT=	Perl5 modules for the ICQv7 protocol realisation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Net/ICQ2000/.packlist
 

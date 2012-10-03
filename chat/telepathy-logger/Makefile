@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/09/15 10:03:56 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:02:45 asau Exp $
 #
 
 DISTNAME=	telepathy-logger-0.2.7
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Logger
 COMMENT=	telepathy logger module
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

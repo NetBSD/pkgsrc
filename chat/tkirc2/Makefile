@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/03/11 10:39:33 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 00:02:46 asau Exp $
 
 DISTNAME=	tkirc2.46
 PKGNAME=	tkirc2-2.46
@@ -14,7 +14,6 @@ DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tkirc2
 NO_CONFIGURE=	yes

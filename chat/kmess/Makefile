@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/09/15 10:03:51 obache Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/03 00:02:39 asau Exp $
 #
 
 DISTNAME=	kmess-1.4.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmess/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kmess.org/
 COMMENT=	MSN Messenger Client for KDE3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes

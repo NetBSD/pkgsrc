@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/02/16 14:00:08 hans Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 00:02:37 asau Exp $
 #
 
 DISTNAME=		gtmess-0.91
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtmess/}
 MAINTAINER=		luapzz@gmail.com
 HOMEPAGE=		http://gtmess.sourceforge.net/
 COMMENT=		Console-based MSN Messenger client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		tk-[0-9]*:../../x11/tk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/11/16 19:16:49 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 00:02:37 asau Exp $
 
 DISTNAME=	icbirc-1.8
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	Proxy IRC client and ICB server
 
 # uses strlcpy
 NOT_FOR_PLATFORM=	Linux-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 MAKE_ENV+=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/man"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/03/21 16:29:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 00:02:36 asau Exp $
 #
 
 DISTNAME=	goofey-3.15
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~tym/goofey.html
 COMMENT=	Text-based client for goofey, a flexible short message system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 LDFLAGS.SunOS+=	-lnsl -lsocket
