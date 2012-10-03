@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 23:48:01 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:53:56 wiz Exp $
 #
 
 DISTNAME=	mserv-irman-0.21
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://mserv-irman.googlecode.com/files/
 EXTRACT_SUFX=	.tbz

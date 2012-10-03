@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/12 03:57:11 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:25 wiz Exp $
 
 DISTNAME=	POEx-Types-1.100910
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NP/NPEREZ/}
 

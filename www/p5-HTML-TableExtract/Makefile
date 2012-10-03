@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2011/11/15 09:10:53 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 21:58:46 wiz Exp $
 
 DISTNAME=		HTML-TableExtract-2.11
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 

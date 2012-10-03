@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/09/29 12:34:19 abs Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:56:24 wiz Exp $
 #
 
 DISTNAME=	imapsync-1.286
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.linux-france.org/prj/imapsync/dist/
 EXTRACT_SUFX=	.tgz
