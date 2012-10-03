@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/09/09 11:01:17 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 00:20:15 asau Exp $
 #
 
 .include "../../converters/nkf/Makefile.common"
@@ -10,8 +10,6 @@ CATEGORIES=	japanese converters perl5
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Perl library for Network Kanji code conversion Filter
 #LICENSE=	zlib-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

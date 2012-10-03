@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 05:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:20:09 asau Exp $
 
 DISTNAME=		cbmconvert-2.1.2
 CATEGORIES=		converters archivers
@@ -6,8 +6,6 @@ MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/converters/unix/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Converts files to and from various C64/C128/CBM formats
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=		Makefile.unix
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/01 19:11:52 rhaen Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 00:20:15 asau Exp $
 
 DISTNAME=	Unicode-Normalize-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Unicode/Normalize/.packlist
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
