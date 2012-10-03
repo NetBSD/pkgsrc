@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2009/07/25 17:29:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/03 21:58:29 wiz Exp $
 #
 
 DISTNAME=		cvsweb-3.0.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/scop/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/09/11 22:37:11 asau Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 21:53:58 wiz Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		${DISTNAME:S/unix/byte/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.tux.org/pub/tux/benchmarks/System/unixbench/
 EXTRACT_SUFX=		.tgz

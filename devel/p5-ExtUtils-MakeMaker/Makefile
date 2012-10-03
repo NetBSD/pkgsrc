@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/03/23 13:12:48 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 21:54:58 wiz Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-6.62
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 

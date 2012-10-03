@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/15 14:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:58:17 wiz Exp $
 #
 
 DISTNAME=	ical2rem.pl
 PKGNAME=	ical2rem-0.5.2
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://jalcorn.net/
 EXTRACT_SUFX=	.txt

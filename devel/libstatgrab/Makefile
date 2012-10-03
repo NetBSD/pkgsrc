@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/08/24 06:33:10 sno Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 21:54:32 wiz Exp $
 
 DISTNAME=	libstatgrab-0.17
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
 		ftp://ftp.i-scream.org/pub/i-scream/libstatgrab/ \

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/11/13 21:08:55 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:29 wiz Exp $
 
 DISTNAME=		easygit-1.6.5.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://people.gnome.org/~newren/eg/download/1.6.5.3/
 DIST_SUBDIR=		${PKGNAME_NOREV}

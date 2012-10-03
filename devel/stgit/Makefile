@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/03/15 11:53:25 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 21:55:55 wiz Exp $
 
 DISTNAME=	stgit-0.14.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://homepage.ntlworld.com/cmarinas/stgit/
 

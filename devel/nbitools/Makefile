@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/10/02 22:49:49 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 21:54:33 wiz Exp $
 #
 
 DISTNAME=	nbitools-R6.3
 PKGNAME=	nbitools-6.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

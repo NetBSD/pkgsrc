@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/09/15 17:53:08 mspo Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 21:58:55 wiz Exp $
 
 DISTNAME=	Mojolicious-3.41
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mojolicious/SRI/}
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TE/TEMPIRE/}

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/05/27 20:53:42 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 21:56:42 wiz Exp $
 #
 
 DISTNAME=	dpkg_1.16.3
 PKGNAME=	dpkg-1.16.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.bz2

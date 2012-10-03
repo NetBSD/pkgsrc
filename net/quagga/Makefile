@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2012/06/07 16:51:43 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/03 21:57:09 wiz Exp $
 #
 
 DISTNAME=	quagga-0.99.21
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.quagga.net/download/
 

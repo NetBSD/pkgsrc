@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/01/28 00:19:41 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 21:57:44 wiz Exp $
 
 DISTNAME=	sarah-0.9.1b
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://prdownloads.sourceforge.net/sarah/
 

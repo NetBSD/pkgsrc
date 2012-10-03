@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2012/10/02 20:11:45 asau Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/03 21:56:19 wiz Exp $
 
 DISTNAME=		mercury-compiler-11.07
 PKGNAME=		mercury-11.07
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 			http://www.mercury.cs.mu.oz.au/download/files/ \

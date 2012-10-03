@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/09/03 11:16:20 sno Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:26 wiz Exp $
 #
 
 DISTNAME=	Package-Generator-0.103
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
 

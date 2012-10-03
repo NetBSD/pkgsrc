@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/10/02 23:48:02 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 21:53:56 wiz Exp $
 #
 
 DISTNAME=	oggasm_1.4.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

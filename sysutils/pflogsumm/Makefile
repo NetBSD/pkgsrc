@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:43 wiz Exp $
 #
 
 DISTNAME=		pflogsumm-1.1.0
+PKGREVISION=		1
 CATEGORIES=		sysutils mail
 MASTER_SITES=		ftp://jimsun.linxnet.com/pub/postfix_contrib/
 

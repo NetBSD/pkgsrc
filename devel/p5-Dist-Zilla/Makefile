@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 14:12:06 sno Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:56 wiz Exp $
 
 DISTNAME=	Dist-Zilla-4.300023
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
 

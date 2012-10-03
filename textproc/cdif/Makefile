@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/08/11 20:07:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 21:57:46 wiz Exp $
 #
 
 DISTNAME=		cdif-1.19
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://ftp.freebsd.org/pub/FreeBSD/distfiles/
 EXTRACT_SUFX=		# empty

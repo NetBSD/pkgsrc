@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/08/14 15:14:16 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 21:58:08 wiz Exp $
 
 DISTNAME=	XML-AutoWriter-0.4
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

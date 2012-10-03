@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 21:25:21 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:13 wiz Exp $
 #
 
 DISTNAME=	maatkit-7540
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://maatkit.googlecode.com/files/
 

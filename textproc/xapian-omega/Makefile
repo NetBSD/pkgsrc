@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/03/03 00:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 21:58:16 wiz Exp $
 #
 
 DISTNAME=		xapian-omega-1.2.8
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		http://oligarchy.co.uk/xapian/1.2.8/
 

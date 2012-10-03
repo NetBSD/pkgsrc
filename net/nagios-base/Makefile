@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2011/11/01 06:02:21 sbd Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/03 21:56:56 wiz Exp $
 #
 
 DISTNAME=		nagios-3.3.1
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 

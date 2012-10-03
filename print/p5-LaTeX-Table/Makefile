@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2011/08/14 14:21:30 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:19 wiz Exp $
 #
 
 DISTNAME=	LaTeX-Table-v1.0.6
 PKGNAME=	p5-${DISTNAME:S/v1/1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LaTeX/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/07/17 18:00:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:54:32 wiz Exp $
 
 DISTNAME=	libwhisker2-2.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.wiretrip.net/rfp/libwhisker/
 

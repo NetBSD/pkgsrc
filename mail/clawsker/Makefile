@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/08/10 15:37:49 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 21:56:21 wiz Exp $
 
 DISTNAME=	clawsker-0.7.8
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.claws-mail.org/tools/
 
