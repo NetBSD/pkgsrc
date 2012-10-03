@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/08/16 09:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 00:02:47 asau Exp $
 #
 
 DISTNAME=	zephyr-mode-2.5.20
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.cs.cmu.edu/People/dkindred/zephyr/zephyr.html
 COMMENT=	CMU Emacs-based Zephyr client
 
 DEPENDS+=	tzc>=2.6.15:../../chat/tzc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 
