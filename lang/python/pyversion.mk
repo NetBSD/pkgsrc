@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.102 2012/10/03 22:03:41 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.103 2012/10/03 23:39:21 cheusov Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -48,6 +48,13 @@
 #
 #	Possible values: (defined) (undefined)
 #	Default: (undefined)
+#
+# PYTHON_SELF_CONFLICT
+#	If set to "yes", additional CONFLICTS entries are added for
+#	registering a conflict between pyNN-<modulename> packages.
+#
+#	Possible values: yes no
+#	Default: no
 #
 # === Defined variables ===
 #
@@ -141,6 +148,14 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 _PYTHON_VERSION=	none
 .endif
 
+# Additional CONFLICTS
+.if ${PYTHON_SELF_CONFLICT:U:tl} == "yes"
+.for i in ${PYTHON_VERSIONS_ACCEPTED:N${_PYTHON_VERSION}}
+CONFLICTS +=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
+.endfor
+.endif # PYCONFLICTS
+
+#
 PLIST_VARS+=	py2x py3x
 
 .if ${_PYTHON_VERSION} == "32"
