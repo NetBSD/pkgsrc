@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/10 10:49:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 16:08:31 asau Exp $
 
 DISTNAME=	fuse-ext2-0.0.7
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	FUSE file-system to mount ext2 and ext3 file system
 LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

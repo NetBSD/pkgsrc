@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 12:41:40 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 16:10:13 asau Exp $
 
 DISTNAME=	Data-Currency-0.04002
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Data/Currency/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

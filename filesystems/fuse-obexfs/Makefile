@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/08 16:37:53 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 16:08:32 asau Exp $
 #
 
 DISTNAME=	obexfs-0.8
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openobex.org/
 COMMENT=	FUSE based filesystem using ObexFTP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config

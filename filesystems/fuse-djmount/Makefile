@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/13 23:55:37 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 16:08:31 asau Exp $
 
 DISTNAME=	djmount-0.71
 PKGNAME=	fuse-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djmount/}
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://djmount.sourceforge.net/
 COMMENT=	FUSE filesystem for accessing Media Server content via UPnP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

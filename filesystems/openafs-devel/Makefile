@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 16:08:33 asau Exp $
 
 DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -10,8 +10,6 @@ MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://www.openafs.org/
 COMMENT=	File system for sharing, scalability and transparent data migration
 LICENSE=	ibm-public-license-1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	heimdal-[0-9]*

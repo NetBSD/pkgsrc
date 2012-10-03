@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/06/16 01:47:33 manu Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/03 16:08:33 asau Exp $
 #
 
 DISTNAME=	glusterfs-3.2.7
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gluster.org/
 COMMENT=	Cluster filesystem
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

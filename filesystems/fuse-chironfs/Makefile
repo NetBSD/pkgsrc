@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/17 13:02:49 marino Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 16:08:30 asau Exp $
 #
 
 DISTNAME=	chironfs-1.1.1
@@ -10,8 +10,6 @@ MASTER_SITES=	http://chironfs.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/chironfs/
 COMMENT=	Replicating file system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
