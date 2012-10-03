@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/16 15:37:55 hans Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 00:02:44 asau Exp $
 #
 
 DISTNAME=	smirk-20080111
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://smirk.googlecode.com/
 COMMENT=	Revival of the curses-based Rhapsody IRC client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/05 23:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 00:02:47 asau Exp $
 
 DISTNAME=	ysmv7_2_9_9_1
 PKGNAME=	ysm-2.9.9.1
@@ -9,8 +9,6 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://ysmv7.sourceforge.net/
 COMMENT=	The 'You Sick Me' terminal based ICQ client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES # rl_delete_text

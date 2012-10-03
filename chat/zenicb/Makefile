@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/08/06 01:44:46 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 00:02:47 asau Exp $
 
 DISTNAME=		zenicb-19981202
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,7 +9,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		ICB client for Emacs
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/zenicb
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL

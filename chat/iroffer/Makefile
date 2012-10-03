@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 02:19:51 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 00:02:38 asau Exp $
 #
 
 DISTNAME=	iroffer1.3.b11
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://iroffer.org/
 COMMENT=	IRC (Internet Relay Chat) DCC OfferBot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

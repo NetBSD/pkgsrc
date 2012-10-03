@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/04/04 21:52:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/03 00:02:41 asau Exp $
 
 DISTNAME=	navi2ch-1.8.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://navi2ch.sourceforge.net/
 COMMENT=	2ch BBS browser for Emacs
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

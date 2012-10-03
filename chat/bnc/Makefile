@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/02/26 10:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 00:02:34 asau Exp $
 
 DISTNAME=	bnc2.9.4
 PKGNAME=	${DISTNAME:S/bnc/&-/}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.gotbnc.com/
 COMMENT=	Simple IRC relay proxy with support for virtual hosting
 
 DEPENDS+=	dialog-[0-9]*:../../misc/dialog
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl

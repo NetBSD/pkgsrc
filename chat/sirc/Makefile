@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/12/17 20:20:43 abs Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 00:02:44 asau Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	2
@@ -49,8 +49,6 @@ NO_BUILD=	yes
 DIST_SUBDIR=	sirc
 
 REPLACE_PERL+=	dsirc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(DEFAULT_IRC_SERVER)

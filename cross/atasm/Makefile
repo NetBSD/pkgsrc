@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 00:10:28 asau Exp $
 #
 
 DISTNAME=	atasm104
@@ -13,7 +13,6 @@ HOMEPAGE=	http://sourceforge.net/projects/atasm/
 COMMENT=	Cross-assembler for 6502 optimized to code for Atari 8 bit computers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=	YES

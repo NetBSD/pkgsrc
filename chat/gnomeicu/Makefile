@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2012/10/02 17:10:39 tron Exp $
+# $NetBSD: Makefile,v 1.84 2012/10/03 00:02:36 asau Exp $
 
 DISTNAME=	gnomeicu-0.99.12
 PKGREVISION=	29
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnomeicu.sourceforge.net/
 COMMENT=	GNOME ICQ client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

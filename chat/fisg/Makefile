@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/02/16 22:14:43 snj Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 00:02:36 asau Exp $
 
 DISTNAME=		fisg-0.2.0
 PKGREVISION=		1
@@ -13,7 +13,5 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=		gmake
 
 INSTALLATION_DIRS+=	bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/15 10:03:49 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 00:02:34 asau Exp $
 #
 
 DISTNAME=		ctrlproxy-3.0.8
@@ -21,7 +21,6 @@ CONF_FILES+=		${PREFIX}/share/examples/ctrlproxy/config.default \
 			${PKG_SYSCONFDIR}/config
 
 PKGCONFIG_OVERRIDE+=	ctrlproxy.pc.in
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	share/examples/ctrlproxy
 
 .include "options.mk"

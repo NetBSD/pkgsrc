@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/04/01 18:30:34 hans Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 00:02:40 asau Exp $
 #
 
 DISTNAME=	licq-1.3.5
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.licq.org/
 COMMENT=	ICQ client with plugin support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/15 18:34:41 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 00:10:30 asau Exp $
 
 DISTNAME=		w32api-3.11
 PKGNAME=		mingw-w32api-bin-3.11
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_MINGW}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mingw.sourceforge.net/
 COMMENT=		GCC libraries for win32 cross-development
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes

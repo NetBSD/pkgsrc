@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/08/14 07:38:55 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 00:02:42 asau Exp $
 #
 
 DISTNAME=	POE-Filter-IRCD-2.42
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-POE>=0.3202:../../devel/p5-POE
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/POE/Filter/IRCD/.packlist
 

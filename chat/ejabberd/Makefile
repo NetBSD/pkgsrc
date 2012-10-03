@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/09/30 21:38:04 tron Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/03 00:02:35 asau Exp $
 
 DISTNAME=	ejabberd-2.1.11
 CATEGORIES=	chat
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	jabberd-[0-9]*
 

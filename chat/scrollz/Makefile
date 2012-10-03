@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/06/12 15:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 00:02:44 asau Exp $
 #
 
 DISTNAME=	ScrollZ-1.9.5
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.scrollz.com/pub/ScrollZ/source/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.scrollz.com/
 COMMENT=	Advanced IRC client based on ircII client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

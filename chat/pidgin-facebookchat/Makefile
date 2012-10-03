@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/02 17:10:40 tron Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/03 00:02:42 asau Exp $
 
 DISTNAME=	pidgin-facebookchat-source-1.69
 PKGNAME=	${DISTNAME:S/-source-/-/}
@@ -13,8 +13,6 @@ COMMENT=	Plugin for pidgin to support Facebook IM
 LICENSE=	gnu-gpl-v3 # or later
 
 DEPENDS+=	pidgin>=2.7.9:../../chat/pidgin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 

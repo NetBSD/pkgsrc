@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/09/15 10:03:49 obache Exp $
+# $NetBSD: Makefile,v 1.62 2012/10/03 00:02:34 asau Exp $
 #
 
 DISTNAME=		bitlbee-3.0.3
@@ -10,8 +10,6 @@ MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

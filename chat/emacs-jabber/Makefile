@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/26 10:48:26 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 00:02:35 asau Exp $
 
 DISTNAME=		emacs-jabber-0.8.0
 CATEGORIES=		chat
@@ -9,8 +9,6 @@ MAINTAINER=		aran@100acres.us
 HOMEPAGE=		http://emacs-jabber.sourceforge.net/
 COMMENT=		Jabber client for Emacs
 LICENSE=		gnu-gpl-v2 # or later
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES

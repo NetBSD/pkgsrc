@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/06/12 15:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:02:34 asau Exp $
 
 DISTNAME=	cgiirc-0.5.10
 #PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cgiirc.org/
 COMMENT=	Access IRC from a web browser
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 NO_BUILD=	YES

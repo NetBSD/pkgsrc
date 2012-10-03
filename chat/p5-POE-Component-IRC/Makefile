@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/04/01 18:30:45 rhaen Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 00:02:42 asau Exp $
 #
 
 DISTNAME=	POE-Component-IRC-6.78
@@ -18,7 +18,6 @@ DEPENDS+=	p5-POE-Filter-IRCD>=1.7:../../chat/p5-POE-Filter-IRCD
 DEPENDS+=	p5-Test-Differences>=0.61:../../devel/p5-Test-Differences
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/POE/Component/IRC/.packlist
 
