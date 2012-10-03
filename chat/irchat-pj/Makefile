@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:46 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 00:02:38 asau Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,7 +13,6 @@ HOMEPAGE=	http://gouketsu.net/irchat-pj/
 COMMENT=	Emacs lisp interface to Internet Relay Chat
 
 INSTALLATION_DIRS=	bin ${EMACS_LISPPREFIX:C|^${PREFIX}/||}/irchat-pj
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/emacs/modules.mk"
 

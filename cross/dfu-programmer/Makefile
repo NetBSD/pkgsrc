@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/15 20:01:01 jakllsch Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 00:10:29 asau Exp $
 #
 
 DISTNAME=	dfu-programmer-0.5.4
@@ -9,8 +9,6 @@ MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	http://dfu-programmer.sourceforge.net/
 COMMENT=	Programmer for Atmel USB DFU Bootloader
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

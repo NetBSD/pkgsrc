@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/29 16:55:48 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 00:10:30 asau Exp $
 
 DISTNAME=	icdprog-0.3
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icdprog/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://icdprog.sourceforge.net/
 COMMENT=	Microchip PIC programmer using ICD hardware
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2012/10/02 17:10:41 tron Exp $
+# $NetBSD: Makefile,v 1.70 2012/10/03 00:02:43 asau Exp $
 
 PSI_VERSION=	0.14
 DISTNAME=	psi-${PSI_VERSION}
@@ -12,8 +12,6 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	Psi XMPP/Jabber Client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
