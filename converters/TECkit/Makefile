@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/25 11:16:57 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 00:20:09 asau Exp $
 
 DISTNAME=	TECkit_2_5_1
 PKGNAME=	${DISTNAME:S/_/-/:S/_/./g}
@@ -10,8 +10,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&cat_id=TECkit
 COMMENT=	Low-level toolkit to perform encoding conversions
 LICENSE=	gnu-lgpl-v2.1 OR cpl-1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

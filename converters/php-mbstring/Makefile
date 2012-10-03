@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/07/24 22:24:21 tron Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 00:20:15 asau Exp $
 
 MODNAME=		mbstring
 CATEGORIES+=		converters
 COMMENT=		PHP extension for multibyte characters support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		php-mbstring-[0-9]*
 

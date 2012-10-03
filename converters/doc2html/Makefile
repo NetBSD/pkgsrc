@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:20:10 asau Exp $
 #
 
 DISTNAME=	doc2html
@@ -15,8 +15,6 @@ DEPENDS+=	xlhtml-[0-9]*:../../converters/xlhtml
 DEPENDS+=	rtf2html-[0-9]*:../../converters/rtf2html
 DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gs:run perl:run
 

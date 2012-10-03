@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/22 15:12:29 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 00:20:15 asau Exp $
 
 DISTNAME=	I18N_UnicodeNormalizer-1.0.0
 CATEGORIES+=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	PHP classes to provide Unicode Normalization
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	2-clause-bsd
 

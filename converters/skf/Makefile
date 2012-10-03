@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/04/12 13:50:22 obache Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/03 00:20:17 asau Exp $
 
 DISTNAME=	skf_${VERSION}.0
 VERSION=	1.99
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/skf/
 COMMENT=	Simple Kanji Filter - i18n kanji converter
 #LICENSE=	modified-bsd # some files are derived from...see ${WRKSRC}/copywrite	
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/skf-${VERSION}
 INSTALL_TARGET=	install locale_install

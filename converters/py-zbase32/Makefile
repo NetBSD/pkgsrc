@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/12 20:02:53 gls Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 00:20:16 asau Exp $
 #
 
 DISTNAME=	zbase32-1.1.3
@@ -10,8 +10,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/zbase32/
 COMMENT=	Alternate base32 encoder (not RFC 3548 compliant)
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/env python

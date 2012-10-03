@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/16 18:05:09 hans Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 00:20:12 asau Exp $
 #
 
 DISTNAME=	odt2txt-0.4
@@ -10,8 +10,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://stosberg.net/odt2txt/
 COMMENT=	Simple converter from OpenDocument Text to plain text
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/08/06 14:33:52 adam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 00:20:14 asau Exp $
 
 DISTNAME=	Unicode-IMAPUtf7-2.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl extension to deal with IMAP UTF7
 DEPENDS+=	p5-Unicode-String>=2.06:../../converters/p5-Unicode-String
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Unicode/IMAPUtf7/.packlist
 

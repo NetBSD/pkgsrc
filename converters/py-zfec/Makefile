@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/02/16 18:06:45 hans Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 00:20:16 asau Exp $
 #
 
 DISTNAME=	zfec-1.4.22
@@ -10,8 +10,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/zfec/
 COMMENT=	Fast erasure codec
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver

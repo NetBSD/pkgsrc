@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 13:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:20:17 asau Exp $
 #
 
 DISTNAME=		rss2html-0.8.2
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.nopcode.org/blog/rss2html.html
 COMMENT=		RSS to HTML converter
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=		gmake

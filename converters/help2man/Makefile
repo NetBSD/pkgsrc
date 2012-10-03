@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/11 11:49:27 marino Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 00:20:11 asau Exp $
 
 DISTNAME=		help2man-1.38.2
 PKGREVISION=		4
@@ -9,8 +9,6 @@ MAINTAINER=		arved@arved.at
 HOMEPAGE=		http://www.gnu.org/software/help2man/
 COMMENT=		Generate simple manual pages from program output
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 

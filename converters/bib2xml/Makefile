@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 05:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 00:20:09 asau Exp $
 #
 
 DISTNAME=	bib2xml-10062002
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www-plan.cs.colorado.edu/henkel/stuff/bib2xml/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-plan.cs.colorado.edu/henkel/stuff/bib2xml/
 COMMENT=	BibTeX to XML converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bib2xml
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/17 21:40:45 darcy Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 00:20:10 asau Exp $
 #
 
 DISTNAME=	code2html-0.9.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.palfrader.org/code2html/all/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.palfrader.org/code2html/
 COMMENT=	Convert a program source code to syntax highlighted HTML
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 REPLACE_PERL=	code2html

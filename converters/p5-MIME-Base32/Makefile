@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/08/06 13:56:41 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 00:20:14 asau Exp $
 
 DISTNAME=	MIME-Base32-1.02a
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MIME-Base32/
 COMMENT=	Perl5 module for Base32 encoding
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needed for 1.02a
 WRKSRC=			${WRKDIR}/${DISTNAME:S/a$//}

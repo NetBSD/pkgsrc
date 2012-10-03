@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/08/21 23:49:19 marino Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/03 00:20:18 asau Exp $
 
 DISTNAME=	uudeview-0.5.20
 PKGNAME=	xdeview-0.5.20
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-tcl=${LOCALBASE:Q}

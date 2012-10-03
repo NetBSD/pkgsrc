@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/31 14:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 00:20:12 asau Exp $
 
 DISTNAME=	libvisio-0.0.19
 PKGREVISION=	2
@@ -12,8 +12,6 @@ COMMENT=	Library and tools for parsing the visio file format
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
 BUILD_DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

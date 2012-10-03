@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/06 02:31:53 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 00:20:11 asau Exp $
 
 DISTNAME=	kcc
 PKGNAME=	kcc-2.3
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Kanji code converter with auto encoding detection
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALL_MAKE_FLAGS+=	BINPATH=${DESTDIR}${PREFIX}/bin
 INSTALL_MAKE_FLAGS+=	MANPATH=${DESTDIR}${PREFIX}/${PKGMANDIR}

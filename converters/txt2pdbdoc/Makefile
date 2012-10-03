@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 00:20:18 asau Exp $
 
 DISTNAME=	txt2pdbdoc-1.4.4
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://homepage.mac.com/pauljlucas/software/txt2pdbdoc/
 COMMENT=	Text to Palm DOC converter
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	yes

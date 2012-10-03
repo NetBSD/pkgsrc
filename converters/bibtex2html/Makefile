@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/02/10 17:12:48 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/03 00:20:09 asau Exp $
 
 DISTNAME=	bibtex2html-1.97
 CATEGORIES=	converters
@@ -18,8 +18,6 @@ BUILD_DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 BUILD_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
