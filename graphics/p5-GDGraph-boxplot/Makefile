@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 12:59:49 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:12 wiz Exp $
 
 DISTNAME=	GDGraph-boxplot-1.00
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 

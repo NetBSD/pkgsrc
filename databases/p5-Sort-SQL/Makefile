@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/02 21:25:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 21:54:24 wiz Exp $
 
 DISTNAME=	Sort-SQL-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/K/KA/KARMAN/}
 

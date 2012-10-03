@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 17:12:01 tron Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 21:57:46 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.5.1
 
 DISTNAME=	xfce4-battery-plugin-${XFCE4_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-battery-plugin/
 COMMENT=	Xfce battey monitor plugin

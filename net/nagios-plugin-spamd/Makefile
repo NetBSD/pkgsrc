@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/03/17 21:54:18 zafer Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:57 wiz Exp $
 #
 
 DISTNAME=	check_spamd-1.4.pl
 PKGNAME=	nagios-plugin-spamd-${DISTNAME:S/check_spamd-//:S/.pl//}
+PKGREVISION=	1
 CATEGORIES=	net mail
 MASTER_SITES=	# ftp://jhweiss.de/pub/users/weiss/nagios/plugins/
 EXTRACT_SUFX=	# empty

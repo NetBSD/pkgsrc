@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 21:59:05 wiz Exp $
 #
 
 DISTNAME=	weblint-1.020
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.perl.com/CPAN/authors/id/NEILB/ \
 		ftp://ftp.gmd.de/mirrors/CPAN/authors/id/NEILB/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2012/08/29 09:05:31 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/03 21:57:35 wiz Exp $
 #
 
 DISTNAME=	tct-1.09
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://www.porcupine.org/forensics/
 

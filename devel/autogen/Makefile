@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/06/14 07:45:31 sbd Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 21:54:27 wiz Exp $
 
 DISTNAME=	autogen-5.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autogen/}
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/autogen/rel5.12/
