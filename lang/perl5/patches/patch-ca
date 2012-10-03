@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
+$NetBSD: patch-ca,v 1.12 2012/10/03 19:59:47 adam Exp $
 
---- Configure.orig	2011-09-26 09:44:34.000000000 +0000
+--- Configure.orig	2012-08-03 17:35:26.000000000 +0000
 +++ Configure
-@@ -3256,13 +3256,14 @@ EOM
+@@ -3265,13 +3265,14 @@ EOM
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -19,7 +19,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3284,7 +3285,7 @@ EOM
+@@ -3293,7 +3294,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -28,7 +28,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3295,7 +3296,7 @@ EOM
+@@ -3304,7 +3305,7 @@ EOM
  		next*) osname=next ;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -37,7 +37,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
                  	;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -4790,7 +4791,7 @@ case "$plibpth" in
+@@ -4713,7 +4714,7 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -46,7 +46,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  *) dlist="$libpth";;
  esac
  
-@@ -4798,7 +4799,7 @@ esac
+@@ -4721,7 +4722,7 @@ esac
  libpth=''
  for xxx in $dlist
  do
@@ -55,7 +55,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -6521,7 +6522,9 @@ rp='Pathname for the site-specific libra
+@@ -6451,7 +6452,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -66,7 +66,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -7033,7 +7036,9 @@ case "$vendorprefix" in
+@@ -6964,7 +6967,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -77,7 +77,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -7510,6 +7515,15 @@ case "$nm_so_opt" in
+@@ -7441,6 +7446,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -93,7 +93,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -8339,7 +8353,7 @@ if "$useshrplib"; then
+@@ -8303,7 +8317,7 @@ if "$useshrplib"; then
  		# beos doesn't like the default, either.
  		;;
  	haiku)
@@ -102,9 +102,9 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  		;;
  	hpux*)
  		# hpux doesn't like the default, either.
-@@ -9410,6 +9424,13 @@ EOCP
- 	;;
- esac
+@@ -9377,6 +9391,13 @@ esac
+ : Check if we want perlio
+ useperlio="$define"
  
 +: Look for a hint-file generated 'call-back-unit'.  We need
 +: to set some defaults for building perl in pkgsrc.
@@ -116,7 +116,7 @@ $NetBSD: patch-ca,v 1.11 2012/02/19 04:10:49 sbd Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -19061,7 +19082,15 @@ RCAT(Rei,ser)
+@@ -19082,7 +19103,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
