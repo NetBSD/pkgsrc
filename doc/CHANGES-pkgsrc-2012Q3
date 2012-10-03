@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.4 2012/10/03 12:16:53 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.5 2012/10/03 14:26:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -10,4 +10,5 @@ Pullup ticket #3926 - requested by mrg
 net/youtube-dl: compatibility update
 Pullup ticket #3927 - requested by tron
 graphics/cairo: build fix
-
+Pullup ticket #3929 - requested by bsiegert
+fonts/fontconfig: build fix
