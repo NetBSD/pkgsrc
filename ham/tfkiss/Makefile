@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/02/28 14:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 13:01:45 asau Exp $
 #
 
 DISTNAME=	tfkiss-1.2.4
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.ping.net.au/pub/unix/ham/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bfl.at/mayer/ham/
 COMMENT=	Software implementation of TheFirmware for use with TNT
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
