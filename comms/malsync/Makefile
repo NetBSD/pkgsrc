@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/20 00:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 11:24:41 asau Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/-/_/}.src
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.tomw.org/malsync/
 COMMENT=	Utility to synchronize Palm Pilots to the AvantGo.com service
 
 CONFLICTS+=	libmal-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/malsync
 USE_TOOLS+=		gmake

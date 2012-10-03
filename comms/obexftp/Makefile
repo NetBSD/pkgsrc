@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/02/16 17:40:29 hans Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 11:24:42 asau Exp $
 #
 
 DISTNAME=	obexftp-0.20
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openobex.triq.net/
 COMMENT=	File copying over the Object Exchange (OBEX) protocol
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config

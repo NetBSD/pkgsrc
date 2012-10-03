@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/02/28 14:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 11:24:41 asau Exp $
 
 DISTNAME=		kyopon-0.5
 CATEGORIES=		comms
@@ -7,8 +7,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=		tool to manipulate data of Kyocera PHS handset
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*
 

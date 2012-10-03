@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/29 13:22:16 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 11:24:44 asau Exp $
 #
 
 .include "../../comms/gammu/Makefile.common"
@@ -10,7 +10,6 @@ COMMENT=	Python bindings for gammu
 DISTINFO_FILE=	${.CURDIR}/../../comms/gammu/distinfo
 PATCHDIR=	${.CURDIR}/../../comms/gammu/patches
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		pkg-config
 CONFLICTS=		gammu<=1.24.0
 

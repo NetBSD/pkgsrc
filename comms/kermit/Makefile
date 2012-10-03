@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2012/05/17 20:29:13 christos Exp $
+# $NetBSD: Makefile,v 1.81 2012/10/03 11:24:40 asau Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.columbia.edu/kermit/
 COMMENT=	Network and serial communication, file transfer, and scripting utility
 LICENSE=	kermit-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

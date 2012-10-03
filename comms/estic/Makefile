@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/02/16 16:47:57 hans Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/03 11:24:39 asau Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.von-bassewitz.de/uz/estic/estic.html
 COMMENT=	German language configuration tool for ISTEC 1003/1008 ISDN systems
 LICENSE=		estic-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	estic-1.60-sources${EXTRACT_SUFX}
 

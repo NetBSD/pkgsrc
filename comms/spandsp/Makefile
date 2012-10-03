@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/06 12:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 11:24:44 asau Exp $
 #
 
 DISTNAME=	spandsp-0.0.6pre18
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.soft-switch.org/downloads/spandsp/
 COMMENT=	Library of DSP functions for telephony
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/spandsp-0.0.6
 GNU_CONFIGURE=	yes

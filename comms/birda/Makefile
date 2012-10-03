@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/02/16 16:40:34 hans Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 11:24:39 asau Exp $
 #
 
 DISTNAME=	birda-1.3
@@ -14,8 +14,6 @@ USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 

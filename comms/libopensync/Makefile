@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 10:03:58 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 11:24:41 asau Exp $
 #
 
 DISTNAME=	libopensync-0.22
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/
 COMMENT=	Platform independent synchronization framework
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/02/16 17:44:15 hans Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/03 11:24:44 asau Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20031214215022/http://www.proudman51.freeserve.co.uk/psion/
 COMMENT=	Tools to talk to the PSION organiser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

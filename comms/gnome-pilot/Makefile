@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2012/10/02 17:10:42 tron Exp $
+# $NetBSD: Makefile,v 1.72 2012/10/03 11:24:40 asau Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.17
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pilot/2.0/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Handheld synchronisation for GNOME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 
