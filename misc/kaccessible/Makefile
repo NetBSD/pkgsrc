@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/09/15 10:05:37 obache Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2012/10/03 12:08:43 spz Exp $
 
 DISTNAME=	kaccessible-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 COMMENT=	Provides accessibility services like focus tracking for KDE
 

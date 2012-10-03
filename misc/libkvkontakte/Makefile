@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/09/15 10:05:42 obache Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2012/10/03 12:08:48 spz Exp $
 #
 
 PKGNAME=	libkvkontakte-2.5.0
 DISTNAME=	digikam-2.5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

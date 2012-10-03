@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2012/09/15 10:06:15 obache Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2012/10/03 12:09:21 spz Exp $
 
 DISTNAME=	libfwbuilder-4.1.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 

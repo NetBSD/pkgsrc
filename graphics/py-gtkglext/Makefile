@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2012/09/15 10:05:05 obache Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2012/10/03 12:08:12 spz Exp $
 #
 
 DISTNAME=	pygtkglext-1.1.0
 PKGNAME=	${PYPKGPREFIX}-pygtkglext-1.1.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 EXTRACT_SUFX=	.tar.bz2

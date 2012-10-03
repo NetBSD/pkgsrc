@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/09/15 10:05:12 obache Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2012/10/03 12:08:20 spz Exp $
 #
 
 DISTNAME=	ibus-skk-1.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/ibus-skk/
 

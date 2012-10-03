@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2012/09/15 10:04:49 obache Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2012/10/03 12:07:57 spz Exp $
 #
 
 DIA_SUBPKG=		-python
 .include "../../graphics/dia/Makefile.common"
 
-PKGREVISION=		6
+PKGREVISION=		7
 
 COMMENT+=		(Python plugin)
 

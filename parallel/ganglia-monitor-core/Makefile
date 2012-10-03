@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2012/09/15 10:06:08 obache Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2012/10/03 12:09:11 spz Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
 PKGNAME=		ganglia-monitor-core-3.1.2
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 

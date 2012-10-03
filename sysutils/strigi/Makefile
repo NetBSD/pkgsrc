@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2012/09/18 15:53:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2012/10/03 12:09:32 spz Exp $
 
 DISTNAME=	strigi-0.6.4
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=strigi/}
 EXTRACT_SUFX=	.tar.bz2
