@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/04 12:16:05 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 00:20:18 asau Exp $
 #
 
 DISTNAME=	txt2man-1.5.6
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mvertes.free.fr/
 COMMENT=	Convert flat ASCII text to man page format
 LICENSE=	gnu-gpl-v2 # or later
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 USE_TOOLS+=	gawk
