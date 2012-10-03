@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/02/06 11:06:42 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 23:40:38 cheusov Exp $
 #
 
 DISTNAME=	PyX-0.9
@@ -31,6 +31,8 @@ SUBST_FILES.conf=	setup.py
 SUBST_SED.conf+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 
 INSTALLATION_DIRS=	share/examples/PyX
+
+PYTHON_SELF_CONFLICT=	yes
 
 pre-install:
 	${CP} ${WRKSRC}/pyxrc ${WRKSRC}/pyxrc.default

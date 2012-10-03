@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/11 20:32:14 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 23:40:35 cheusov Exp $
 
 DISTNAME=	pymol-v1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
@@ -19,7 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-Pmw-[0-9]*:../../x11/py-Pmw
 
 WRKSRC=		${WRKDIR}/pymol
 
-CONFLICTS=	pymol-[0-9]*
+CONFLICTS=		pymol-[0-9]*
+PYTHON_SELF_CONFLICT=	yes
 
 USE_LANGUAGES=	c c++
 

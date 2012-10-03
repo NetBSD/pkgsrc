@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/04/29 16:51:27 taca Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 23:40:37 cheusov Exp $
 #
 
 VER=		2.6
@@ -29,6 +29,8 @@ SUBST_FILES.cf=	setup.py denyhosts.cfg-dist daemon-control-dist
 REPLACE_PYTHON=	daemon-control-dist plugins/test_deny.py setup.py
 REPLACE_PYTHON+= scripts/restricted_from_invalid.py
 REPLACE_PYTHON+= scripts/restricted_from_passwd.py
+
+PYTHON_SELF_CONFLICT=	yes
 
 RCD_SCRIPTS+=	denyhosts
 

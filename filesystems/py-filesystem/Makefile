@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 16:08:33 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 23:40:37 cheusov Exp $
 #
 
 VERSION=	0.4.0
@@ -13,6 +13,8 @@ COMMENT=	Python filesystem access library
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

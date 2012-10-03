@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 20:11:50 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 23:40:38 cheusov Exp $
 
 DISTNAME=	Pyrex-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 PYDISTUTILSPKG= 	yes
 USE_TOOLS+= 	 	pax
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
