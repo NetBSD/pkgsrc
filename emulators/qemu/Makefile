@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2012/09/26 10:42:48 sbd Exp $
+# $NetBSD: Makefile,v 1.100 2012/10/03 12:55:17 asau Exp $
 
 DISTNAME=		qemu-1.2.0
 PKGREVISION=		2
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qemu.org/
 COMMENT=		CPU emulator using dynamic translation
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*

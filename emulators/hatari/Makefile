@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/08/12 11:06:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/03 12:55:14 asau Exp $
 
 DISTNAME=	hatari-${HATARI_VER}
 HATARI_VER=	1.6.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hatari.tuxfamily.org/
 COMMENT=	Atari ST emulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c

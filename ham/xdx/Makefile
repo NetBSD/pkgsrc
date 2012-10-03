@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 17:11:20 tron Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 13:01:46 asau Exp $
 #
 
 DISTNAME=	xdx-2.4.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qsl.net/pg4i/linux/xdx.html
 COMMENT=	Amateur Radio tcp/ip DX-cluster client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes

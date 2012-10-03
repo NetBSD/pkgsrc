@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/05/15 11:34:52 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 12:55:09 asau Exp $
 #
 
 DISTNAME=		aliados-0.1.1
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.arrakis.es/~ninsesabe/aliados/
 COMMENT=		CP/M 80 emulator
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		YES
 USE_LANGUAGES=		c++

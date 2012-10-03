@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/06/04 09:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 12:55:11 asau Exp $
 
 DISTNAME=	dosbox-0.74
 PKGREVISION=	3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dosbox.sourceforge.net/
 COMMENT=	Multi-platform DOS emulator using SDL
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes

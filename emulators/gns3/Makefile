@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/09 12:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 12:55:13 asau Exp $
 
 DISTNAME=	GNS3-0.7-src
 PKGNAME=	gns3-0.7
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gns3.org/
 COMMENT=	Graphical network simulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dynamips>=0.2.8rc1:../../emulators/dynamips
 

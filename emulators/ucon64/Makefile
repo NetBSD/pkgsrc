@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/07/18 22:10:21 marino Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 12:55:20 asau Exp $
 #
 
 DISTNAME=		ucon64-2.0.0-src
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ucon64.sourceforge.net/
 COMMENT=		Emulator ROM and disk image converter and inspector
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 

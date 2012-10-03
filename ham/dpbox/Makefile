@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/02/28 14:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 13:01:43 asau Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -10,8 +10,6 @@ MASTER_SITES=	http://home.snafu.de/wahlm/dl8hbs/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.snafu.de/wahlm/dl8hbs/dpbox.html
 COMMENT=	Multi-Protocol Amateur Packet Radio BBS
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 USE_TOOLS+=	gmake

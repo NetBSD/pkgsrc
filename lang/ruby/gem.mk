@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.15 2012/09/16 15:23:12 taca Exp $
+# $NetBSD: gem.mk,v 1.16 2012/10/03 12:58:34 asau Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -107,9 +107,6 @@
 #
 .if !defined(_RUBYGEM_MK)
 _RUBYGEM_MK=	# defined
-
-# By default, assume that gems are capable of user-destdir installation.
-PKG_DESTDIR_SUPPORT?=	user-destdir
 
 # replace interpeter bin default
 REPLACE_RUBY_DIRS?=	bin

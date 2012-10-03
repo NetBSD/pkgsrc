@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/08 16:46:14 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 12:55:22 asau Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.tim-mann.org/trs80/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}
 COMMENT=	TRS-80 Model I/III/4 Emulator for Unix
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	default
 

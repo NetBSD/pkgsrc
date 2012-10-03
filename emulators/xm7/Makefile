@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/01/03 07:17:01 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/03 12:55:22 asau Exp $
 #
 
 DISTNAME=		xm71020s
@@ -20,7 +20,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 EXTRACT_OPTS_ZIP=	-aqoLL	# lower-case filenames are expected

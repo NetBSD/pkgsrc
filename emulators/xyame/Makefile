@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/03 19:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 12:55:22 asau Exp $
 #
 
 DISTNAME=		xyame038
@@ -13,8 +13,6 @@ COMMENT=		Multi-system emulator (Gameboy, NES, and PC-Engine)
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty

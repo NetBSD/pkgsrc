@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 12:55:14 asau Exp $
 
 DISTNAME=		mftr33
 PKGNAME=		hercules-images-20010222
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.conmicro.cx/hercules/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.conmicro.cx/hercules/
 COMMENT=		Images to IPL the Hercules emulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes

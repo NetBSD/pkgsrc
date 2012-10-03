@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 10:04:34 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 12:55:21 asau Exp $
 
 DISTNAME=	wine-1.3.26
 PKGREVISION=	8
@@ -16,8 +16,6 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 ONLY_FOR_PLATFORM+=	*-*-i386
 #ONLY_FOR_PLATFORM+=	*-*-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes

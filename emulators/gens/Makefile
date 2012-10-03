@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 17:10:58 tron Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/03 12:55:13 asau Exp $
 #
 
 DISTNAME=		gens-rc3
@@ -15,8 +15,6 @@ BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 # contains i386 assembler sources
 ONLY_FOR_PLATFORM=	*-*-i386
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 WRKSRC=			${WRKDIR}/GensForLinux
 GNU_CONFIGURE=		yes

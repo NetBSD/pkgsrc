@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 19:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 12:55:09 asau Exp $
 #
 
 DISTNAME=		zident28
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/ZIPIdent/ZIPIdent.php
 COMMENT=		Identify arcade ROM sets
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
