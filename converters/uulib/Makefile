@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/03/17 22:30:20 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/03 00:20:18 asau Exp $
 #
 
 DISTNAME=	uudeview-0.5.20
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	uulib

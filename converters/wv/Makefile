@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/09/15 10:04:01 obache Exp $
+# $NetBSD: Makefile,v 1.79 2012/10/03 00:20:18 asau Exp $
 
 DISTNAME=	wv-1.2.9
 PKGREVISION=	7
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.abiword.com/downloads/wv/${PKGVERSION_NOREV}/
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://wvware.sourceforge.net/
 COMMENT=	Library and executables to access Microsoft Word files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

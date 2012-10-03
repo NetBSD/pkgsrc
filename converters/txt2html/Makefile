@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/03/10 20:08:13 markd Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 00:20:18 asau Exp $
 #
 
 DISTNAME=		txt2html-2.45
@@ -10,7 +10,6 @@ HOMEPAGE=		http://txt2html.sourceforge.net/
 COMMENT=		Plain text to HTML convertor
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL=		scripts/txt2html
 

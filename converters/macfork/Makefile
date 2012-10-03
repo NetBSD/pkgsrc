@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:20:12 asau Exp $
 
 DISTNAME=	macfork-1.0
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.cs.cmu.edu/~ajw/public/dist/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.cmu.edu/afs/cs/user/ajw/www/software/
 COMMENT=	Tool for extracting data from Macintosh resource forks
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/macfork
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 05:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 00:20:09 asau Exp $
 
 DISTNAME=	ack139
 PKGNAME=	ack-1.39
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.tohoku.ac.jp/pub/unix/ack/
 
 MAINTAINER=	kei_sun@ba2.so-net.ne.jp
 COMMENT=	Japanese code converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=     ack
 
