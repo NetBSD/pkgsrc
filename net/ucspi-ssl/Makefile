@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/03/15 03:02:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 21:57:12 wiz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.70
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${HOMEPAGE}
 

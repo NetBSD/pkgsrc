@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/10/08 04:39:37 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 21:57:23 wiz Exp $
 #
 
 DISTNAME=	egd-0.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://www.lothar.com/pub/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/08/12 07:27:10 adam Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:54:53 wiz Exp $
 
 DISTNAME=	Devel-Events-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NU/NUFFIN/}
 

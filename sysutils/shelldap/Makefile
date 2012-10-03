@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/05/08 20:57:03 imil Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:44 wiz Exp $
 #
 
 PKGNAME=	shelldap-0.5
 DISTNAME=	c6a3abc56c74
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://code.martini.nu/shelldap/archive/
 EXTRACT_SUFX=	.zip
