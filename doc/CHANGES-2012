@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3111 2012/10/03 22:03:55 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3112 2012/10/03 22:17:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4796,3 +4796,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/perl5 to 5.16.1 [adam 2012-10-03]
 	Removed lang/python25 [wiz 2012-10-03]
 	Removed lang/py25-html-docs [wiz 2012-10-03]
+	Removed databases/gramps [wiz 2012-10-03]
+	Removed databases/gramps2 [wiz 2012-10-03]
+	Removed textproc/py-FourSuite [wiz 2012-10-03]
+	Removed textproc/py-gdick [wiz 2012-10-03]
