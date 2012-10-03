@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/02/28 14:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 13:01:42 asau Exp $
 #
 
 DISTNAME=	7pl225sr
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	#http://home.t-online.de/home/dg1bbq/
 COMMENT=	Uuencode-like file coder for AMPR BBS S&F of binary files
 LICENSE=	no-commercial-use
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/7plsrc.225
 MAKE_FILE=	netbsd.mak

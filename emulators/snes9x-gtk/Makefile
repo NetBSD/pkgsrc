@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 17:10:59 tron Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/03 12:55:18 asau Exp $
 #
 
 DISTNAME=	snes9x-1.53-src
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snes9x.com/phpbb2/viewtopic.php?p=22874
 COMMENT=	SNES emulator with GTK frontend
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/gtk
 GNU_CONFIGURE=	yes

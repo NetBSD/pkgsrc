@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/07/27 11:14:22 cherry Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 12:55:17 asau Exp $
 #
 
 DISTNAME=	ski-1.3.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ski/}
 MAINTAINER=	cherry@zyx.in
 HOMEPAGE=	http://ski.sourceforge.net/
 COMMENT=	The ia64 instruction set simulator
-
-PKG_DESTDIR_SUPPORT=        user-destdir
 
 BUILD_DEPENDS+= libelf>=0.8.13:../../devel/libelf
 GNU_CONFIGURE=	yes

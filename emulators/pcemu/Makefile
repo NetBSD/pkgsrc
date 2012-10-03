@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 12:55:16 asau Exp $
 
 DISTNAME=	pcemu1.01alpha
 PKGNAME=	pcemu-1.01a
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	eric@fox.phoenix.az.us
 COMMENT=	8086 PC emulator, by David Hedley
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	bdftopcf mkfontdir
 

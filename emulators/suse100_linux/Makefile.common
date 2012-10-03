@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2009/06/05 11:20:27 abs Exp $
+# $NetBSD: Makefile.common,v 1.22 2012/10/03 12:55:18 asau Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0
@@ -18,8 +18,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
 .endif
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

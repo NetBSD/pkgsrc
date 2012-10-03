@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/02 17:11:20 tron Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/03 13:01:45 asau Exp $
 #
 
 DISTNAME=	grig-0.7.2
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=groundstation/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://groundstation.sourceforge.net/
 COMMENT=	Graphical user interface to the Hamlib libraries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config

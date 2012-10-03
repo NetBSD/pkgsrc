@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/10/02 17:11:20 tron Exp $
+# $NetBSD: Makefile,v 1.49 2012/10/03 13:01:46 asau Exp $
 #
 
 DISTNAME=	xlog-2.0.4
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.nongnu.org/xlog/
 COMMENT=	Amateur Radio logging program
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes

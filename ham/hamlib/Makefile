@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/08/07 12:21:54 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/03 13:01:45 asau Exp $
 #
 
 DISTNAME=	hamlib-1.2.15.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://hamlib.sourceforge.net/
 COMMENT=	API for digital communications equipment
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

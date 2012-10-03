@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 12:55:19 asau Exp $
 #
 
 DISTNAME=	swarm-0.61
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.cl.cam.ac.uk/~mwd24/phd/bin/
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.cl.cam.ac.uk/~mwd24/phd/swarm.html
 COMMENT=	Software arm7M core emulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/swarm
 BUILD_DIRS=	src

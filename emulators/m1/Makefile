@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/07/14 12:56:03 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 12:55:15 asau Exp $
 #
 
 DISTNAME=	m1077b-lnx
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.emuhype.com/index.phtml?s=misc&ss=index
 COMMENT=	Arcade video and pinball game sound emulator (Linux binary)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=	linux-i386
 EMUL_MODULES.linux= alsa base resmgr

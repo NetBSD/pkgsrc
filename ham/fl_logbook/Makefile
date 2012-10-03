@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/13 13:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 13:01:43 asau Exp $
 #
 
 DISTNAME=		fl_logbook.121.src
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.w1hkj.com/LinuxApps/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.w1hkj.com/
 COMMENT=		FLTK-based amateur radio log book
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 

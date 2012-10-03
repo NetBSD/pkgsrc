@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/03/03 12:55:48 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 12:55:10 asau Exp $
 #
 
 DISTNAME=	arcem-1.00-src
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arcem/}
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 EXTRACT_SUFX=	.tgz
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LINUX_FILES=	\
 		linux.rom.gz \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 19:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 12:55:09 asau Exp $
 #
 
 DISTNAME=	applyppf3_src
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.paradogs.com/pdx_ppf3.htm
 COMMENT=	PPF (Playstation Patch File) v3.0 apply tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin

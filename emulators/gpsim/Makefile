@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/02 17:10:58 tron Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/03 12:55:13 asau Exp $
 #
 
 DISTNAME=	gpsim-0.21.11
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsim/}
 MAINTAINER=	snoonan@tbearsiberians.com
 HOMEPAGE=	http://gpsim.sourceforge.net/
 COMMENT=	PIC emulator with X interface
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++

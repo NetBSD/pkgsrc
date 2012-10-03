@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 17:11:00 tron Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 12:55:22 asau Exp $
 
 SNAPSHOTDATE=		20120618
 DISTNAME=		xnp2-${SNAPSHOTDATE}
@@ -12,8 +12,6 @@ MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://www.asahi-net.or.jp/~aw9k-nnk/np2/
 COMMENT=		Neko Project II PC-9801 emulator
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2012/10/02 17:10:58 tron Exp $
+# $NetBSD: Makefile,v 1.70 2012/10/03 12:55:10 asau Exp $
 
 DISTNAME=		bochs-2.6
 PKGREVISION=		1
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		IA32 and AMD64 PC emulator
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

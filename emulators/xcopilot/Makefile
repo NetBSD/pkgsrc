@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:15 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 12:55:21 asau Exp $
 #
 
 DISTNAME=		xcopilot-0.6.6
@@ -9,8 +9,6 @@ MASTER_SITES=		http://xcopilot.cuspy.com/build/
 MAINTAINER=		nathanw@NetBSD.org
 HOMEPAGE=		http://xcopilot.cuspy.com/
 COMMENT=		PalmPilot emulator for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

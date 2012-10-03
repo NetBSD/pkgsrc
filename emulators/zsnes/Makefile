@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/03/15 11:46:09 obache Exp $
+# $NetBSD: Makefile,v 1.42 2012/10/03 12:55:23 asau Exp $
 
 DISTNAME=	zsnes151src
 PKGNAME=	zsnes-1.51
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 ONLY_FOR_PLATFORM=	*-*-i386
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/zsnes_1_51/src
 USE_LANGUAGES=		c c++

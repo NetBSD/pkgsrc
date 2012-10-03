@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/09/02 09:33:32 marino Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/03 12:55:16 asau Exp $
 #
 
 DISTNAME=		openmsx-0.9.0
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://openmsx.sourceforge.net/
 COMMENT=		MSX emulator that aims for perfection
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES+=		c++

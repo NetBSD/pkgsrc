@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/03 19:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 12:55:11 asau Exp $
 #
 
 DISTNAME=		cygwin-1.5.13-1
@@ -12,8 +12,6 @@ HOMEPAGE=		http://www.cygwin.com/
 COMMENT=		Basic Cygwin library and executables for emulation
 
 ONLY_FOR_PLATFORM=	Interix-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}

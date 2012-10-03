@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/12 02:03:15 marino Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 12:55:10 asau Exp $
 #
 
 DISTNAME=	B-emv2.2Linux
@@ -10,8 +10,6 @@ MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://b-em.bbcmicro.com/
 COMMENT=	Freeware Acorn BBC Micro Emulator with 2nd processors
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 
