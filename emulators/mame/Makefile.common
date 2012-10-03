@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2012/03/08 17:11:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2012/10/03 12:55:15 asau Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -15,8 +15,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
