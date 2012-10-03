@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/05 09:02:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 22:14:02 wiz Exp $
 #
 
 DISTNAME=	boto-2.5.2
@@ -16,8 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	boto/*/*.py
 REPLACE_PYTHON+=	bin/*
-
-PYTHON_VERSIONS_INCOMPATIBLE=	24 25
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
