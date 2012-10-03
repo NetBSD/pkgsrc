@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/14 21:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 23:40:36 cheusov Exp $
 #
 
 DISTNAME=	empy-3.3
@@ -18,6 +18,8 @@ REPLACE_PYTHON+=        em.py
 USE_TOOLS+=		pax
 PYDISTUTILSPKG=		# yes
 PLIST_SUBST+=		PYVERSSUFFIX="${PYVERSSUFFIX}"
+
+PYTHON_SELF_CONFLICT=	yes
 
 # Fix html path in documentation
 SUBST_CLASSES+=		doc
