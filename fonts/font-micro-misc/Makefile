@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/12 02:10:25 mef Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:21 asau Exp $
 #
 
 DISTNAME=	font-micro-misc-1.0.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.freedesktop.org/pub/individual/font/
 COMMENT=	Miscellaneous Micro PCF fonts
 LICENSE=	public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bdftopcf gzip

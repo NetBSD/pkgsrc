@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/17 20:47:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:28 asau Exp $
 #
 
 DISTNAME=	motoya-fonts-20111115
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://source.android.com/
 COMMENT=	Motoya L Cider W3 and L Mulberry W3 fonts
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_X11BASE=	YES

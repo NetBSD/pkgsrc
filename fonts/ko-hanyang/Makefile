@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/08 16:56:29 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 18:28:26 asau Exp $
 #
 
 DISTNAME=	hanyang-font-pcf
@@ -10,8 +10,6 @@ MASTER_SITES+=	ftp://ftp.kaist.ac.kr/pub/hangul/fonts/ \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 fonts for KSC 5601 standard
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	ksc5601fonts-[0-9]*
 

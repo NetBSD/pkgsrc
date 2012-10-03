@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/12/09 14:36:34 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 18:28:33 asau Exp $
 
 DISTNAME=	xmbdfed-4.5
 PKGREVISION=	4
@@ -8,8 +8,6 @@ MASTER_SITES=	# ftp://crl.nmsu.edu/CLR/multiling/General/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://crl.nmsu.edu/~mleisher/xmbdfed.html
 COMMENT=	Motif-based BDF font editor with lots of features
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 

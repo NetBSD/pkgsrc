@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/08/14 09:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 18:28:30 asau Exp $
 #
 
 DISTNAME=	yascentur-Ricty-3.2.0-0-gb9d8b9c.tar.gz
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
 COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND open-font-license AND mplusfont AND public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
