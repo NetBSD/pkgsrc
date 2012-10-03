@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/15 10:06:31 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/03 22:14:03 wiz Exp $
 #
 
 DISTNAME=	dbus-python-1.1.1
@@ -14,7 +14,6 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_TOOLS+=	pkg-config gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/02 05:50:21 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:01 wiz Exp $
 #
 
 VERS=		0.8.1-4.04
@@ -15,8 +15,6 @@ LICENSE=	BSD
 PYDISTUTILSPKG=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../lang/python/extension.mk"
