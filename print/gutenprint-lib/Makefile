@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2012/10/02 17:11:51 tron Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/03 21:57:17 wiz Exp $
 
 VERSION=	5.2.9
 DISTNAME=	gutenprint-${VERSION}
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.bz2

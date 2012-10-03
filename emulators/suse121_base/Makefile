@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/07/24 09:59:48 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:01 wiz Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-534.113.1.${SUSE_ARCH}
 RPMUPDPKGS+=	bash-4.2-1.14.1.${SUSE_ARCH}

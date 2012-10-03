@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2012/07/05 15:42:55 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/03 21:57:24 wiz Exp $
 #
 
 COMMENT=	LibPrelude libraries and c++ easy bindings
-PKGREVISION=	4
+PKGREVISION=	5
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 17:10:46 tron Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/03 21:54:30 wiz Exp $
 
 DISTNAME=	gdl-2.26.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdl/2.26/}
 EXTRACT_SUFX=	.tar.bz2

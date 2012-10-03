@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/11/28 15:26:26 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 21:59:04 wiz Exp $
 
 DISTNAME=	squid-2.7.STABLE9
-PKGREVISION=	2
+PKGREVISION=	3
 
 PKGNAME=	${DISTNAME:S/STABLE//}
 CATEGORIES=	www

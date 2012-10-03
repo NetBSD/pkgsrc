@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/12 12:32:09 adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:28 wiz Exp $
 
 DISTNAME=	ctemplate-0.99
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://google-ctemplate.googlecode.com/files/
 

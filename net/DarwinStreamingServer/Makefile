@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/08/14 14:14:40 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 21:56:51 wiz Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://static.macosforge.org/dss/downloads/
 

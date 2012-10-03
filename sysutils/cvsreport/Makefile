@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/07/06 10:17:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:37 wiz Exp $
 #
 
 DISTNAME=		cvsreport-0.3.5
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.gna.org/cvsreport/cvsreport.pkg/0.3.5/
 

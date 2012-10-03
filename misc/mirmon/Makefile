@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/06/14 08:49:14 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:56:44 wiz Exp $
 #
 
 DISTNAME=		mirmon-1.36
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		http://people.cs.uu.nl/henkp/mirmon/src/
 

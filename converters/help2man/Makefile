@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 00:20:11 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 21:54:07 wiz Exp $
 
 DISTNAME=		help2man-1.38.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_GNU:=help2man/}
 

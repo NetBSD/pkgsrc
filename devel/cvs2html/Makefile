@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/02/26 10:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 21:54:29 wiz Exp $
 #
 
 DISTNAME=	cvs2html-1.82
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

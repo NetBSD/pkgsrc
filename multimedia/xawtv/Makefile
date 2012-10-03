@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2011/11/01 06:02:16 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/03 21:56:51 wiz Exp $
 #
 
 DISTNAME=	xawtv-3.95
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	http://dl.bytesex.org/releases/xawtv/
 

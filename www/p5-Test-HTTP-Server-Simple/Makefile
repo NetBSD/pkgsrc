@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 16:06:10 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:59:00 wiz Exp $
 
 DISTNAME=	Test-HTTP-Server-Simple-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 

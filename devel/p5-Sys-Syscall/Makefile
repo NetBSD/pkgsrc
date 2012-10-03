@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/31 02:41:49 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:37 wiz Exp $
 #
 
 DISTNAME=	Sys-Syscall-0.23
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
 

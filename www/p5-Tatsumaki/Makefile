@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/10/22 01:39:58 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:59 wiz Exp $
 
 DISTNAME=	Tatsumaki-0.1013
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 

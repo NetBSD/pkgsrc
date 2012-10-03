@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 18:28:25 asau Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 21:56:03 wiz Exp $
 #
 
 DISTNAME=		shinonome-0.9.11-src
 PKGNAME=		ja-shinonome-0.9.11
+PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://openlab.ring.gr.jp/efont/dist/shinonome/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/06/02 14:29:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:26 wiz Exp $
 #
 
 DISTNAME=	BSD-arc4random-1.50
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SJ/SJSZ/
 

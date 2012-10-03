@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 21:59:05 wiz Exp $
 #
 
 DISTNAME=		webnew-1.3
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 

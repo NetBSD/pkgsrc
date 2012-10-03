@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/11/20 11:47:08 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:17 wiz Exp $
 #
 
 DISTNAME=	libical-0.44
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeassociation/}
 

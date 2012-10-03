@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/09/11 23:19:38 asau Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/03 21:57:15 wiz Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.8
+PKGREVISION=	1
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/12/06 19:19:16 reed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:31 wiz Exp $
 #
 
 DISTNAME=	lcov-1.9
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ltp/}
 

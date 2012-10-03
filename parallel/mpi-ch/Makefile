@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2012/09/11 20:36:17 asau Exp $
+# $NetBSD: Makefile,v 1.70 2012/10/03 21:57:14 wiz Exp $
 
 DISTNAME=	mpich2-1.4.1p1
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.4.1p1/
 

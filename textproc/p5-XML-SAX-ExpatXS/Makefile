@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/15 01:50:08 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:58:12 wiz Exp $
 #
 
 DISTNAME=	XML-SAX-ExpatXS-1.31
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5xsx
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}

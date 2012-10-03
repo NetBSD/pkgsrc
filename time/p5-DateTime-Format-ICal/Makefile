@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 15:28:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:19 wiz Exp $
 
 DISTNAME=		DateTime-Format-ICal-0.09
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		time perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DateTime/}
 

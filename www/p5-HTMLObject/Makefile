@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/08/14 16:05:56 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 21:58:47 wiz Exp $
 
 DISTNAME=		libhtmlobject-perl-${VERSION}
 PKGNAME=		p5-HTMLObject-${VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 SVR4_PKGNAME=		p5hto
 CATEGORIES=		www perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htmlobject/}

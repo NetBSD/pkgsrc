@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/08 15:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:56:52 wiz Exp $
 #
 
 DISTNAME=	arp-scan-1.8
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nta-monitor.com/tools/arp-scan/download/
 

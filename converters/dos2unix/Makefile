@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 00:20:10 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:54:07 wiz Exp $
 #
 
 DISTNAME=	dos2unix-6.0.2
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dos2unix/}
 

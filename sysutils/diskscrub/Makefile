@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/07/21 22:38:21 agc Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:57:37 wiz Exp $
 #
 
 DISTNAME=	scrub-2.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diskscrub/}
 EXTRACT_SUFX=	.tar.bz2

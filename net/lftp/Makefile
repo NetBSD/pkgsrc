@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2011/11/18 22:47:10 pettai Exp $
+# $NetBSD: Makefile,v 1.100 2012/10/03 21:56:55 wiz Exp $
 
 DISTNAME=		lftp-4.3.3
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.yars.free.net/pub/source/lftp/ \
 			ftp://ftp.st.ryukoku.ac.jp/pub/network/ftp/lftp/ \

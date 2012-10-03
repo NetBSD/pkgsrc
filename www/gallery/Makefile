@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/06/16 05:27:12 taca Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:29 wiz Exp $
 #
 
 DISTNAME=	gallery-1.5.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gallery/}
 

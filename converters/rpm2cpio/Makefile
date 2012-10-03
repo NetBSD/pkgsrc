@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 00:20:17 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/03 21:54:11 wiz Exp $
 
 DISTNAME=	rpm2cpio
 PKGNAME=	rpm2cpio-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://www.iagora.com/~espel/
 EXTRACT_SUFX=	# none

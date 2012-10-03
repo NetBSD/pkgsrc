@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/09/23 10:47:48 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:57:24 wiz Exp $
 #
 
 PKGNAME=		libpreludedb-python-${VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 COMMENT=		Python bindings for LibPreludeDB libraries
 
 PKG_DESTDIR_SUPPORT=	user-destdir

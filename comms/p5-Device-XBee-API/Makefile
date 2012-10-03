@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 11:24:43 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:06 wiz Exp $
 #
 
 DISTNAME=	Device-XBee-API-0.4
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JE/JEAGLE/
 
