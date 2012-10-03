@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/03 05:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 00:20:09 asau Exp $
 #
 
 DISTNAME=	bbcim095-5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	skrll@NetBSD.org
 COMMENT=	File and diskimage conversion utility for BBC Micro software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bbcim
 MAN_PAGE=	${FILESDIR}/bbcim.1

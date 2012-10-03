@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/04/11 17:48:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/03 00:20:18 asau Exp $
 
 DISTNAME=	unix2dos-1.3
 CATEGORIES=	converters
@@ -6,8 +6,6 @@ MASTER_SITES=	ftp://ftp.guug.org/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Translate ASCII files to/from DOS (cr/lf) and UNIX (lf)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	dos2unix-[0-9]*
 

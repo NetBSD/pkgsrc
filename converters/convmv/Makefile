@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/08/22 13:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 00:20:10 asau Exp $
 
 DISTNAME=		convmv-1.15
 CATEGORIES=		converters
@@ -9,7 +9,6 @@ HOMEPAGE=		http://j3e.de/linux/convmv/
 COMMENT=		Converts filenames from one encoding to another
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty

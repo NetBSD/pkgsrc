@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 00:20:11 asau Exp $
 
 DISTNAME=	dvi2tty5.0
 PKGNAME=	ja-dvi2tty-5.0
@@ -17,8 +17,6 @@ COMMENT=	Program for previewing DVI files (ASCII Japanese TeX)
 LICENSE=	no-commercial-use
 
 DEPENDS+=	ja-less>=358:../../misc/ja-less
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	ja-dvi2tty
 
