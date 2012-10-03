@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/01 18:49:01 rhaen Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 11:24:43 asau Exp $
 #
 
 DISTNAME=		asterisk-perl-1.03
@@ -12,7 +12,6 @@ HOMEPAGE=		http://asterisk.gnuinter.net/
 COMMENT=		Collection of perl modules to be used with Asterisk
 LICENSE=		artistic
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/asterisk-perl/.packlist

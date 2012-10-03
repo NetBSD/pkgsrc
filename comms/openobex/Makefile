@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/08/09 08:00:46 plunky Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 11:24:42 asau Exp $
 #
 
 DISTNAME=	openobex-1.5
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.openobex.org/
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
 
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config

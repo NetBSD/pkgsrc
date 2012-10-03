@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/02/16 17:49:41 hans Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/03 11:24:44 asau Exp $
 
 DISTNAME=	snooper-19991202
 PKGREVISION=	3
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/tools/snooper/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Serial line protocol analyzer (need two serial interfaces)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/snooper
 GNU_CONFIGURE=	yes

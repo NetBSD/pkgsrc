@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/02 17:10:41 tron Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/03 11:24:38 asau Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -19,8 +19,6 @@ COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	asterisk-sounds-extra-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

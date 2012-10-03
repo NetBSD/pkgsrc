@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/16 17:52:07 hans Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 11:24:44 asau Exp $
 #
 
 DISTNAME=		synce-libsynce-0.9.1
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synce.sourceforge.net/
 COMMENT=		Library to support communication with WinCE devices
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/03/14 12:11:50 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/03 11:24:39 asau Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.conserver.com/
 COMMENT=	Application that allows multiple users to watch serial consoles
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFLICTS+=	conserver8-[0-9]*

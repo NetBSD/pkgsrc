@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/07 17:15:48 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/03 11:24:40 asau Exp $
 #
 
 DISTNAME=	gku100
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
 COMMENT=	Minimal implementation of the ``kermit'' protocol (GPL'd)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	posix

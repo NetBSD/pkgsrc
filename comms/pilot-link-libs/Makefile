@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.22 2009/08/09 08:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 11:24:43 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../comms/pilot-link/Makefile.common"
 

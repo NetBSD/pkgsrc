@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/12/06 10:59:10 hauke Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 11:24:39 asau Exp $
 #
 
 PKGVER=		8.1.18
@@ -14,7 +14,6 @@ COMMENT=	Application that allows multiple users to watch serial consoles
 
 CONFLICTS=	conserver-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${EGDIR} ${DOCDIR}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
