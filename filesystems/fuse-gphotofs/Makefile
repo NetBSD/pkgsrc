@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/15 10:04:35 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 16:08:31 asau Exp $
 #
 
 DISTNAME=	gphotofs-0.4.0
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphotofs/
 COMMENT=	FUSE filesystem for accessing digital cameras
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

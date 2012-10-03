@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/08/17 12:53:19 marino Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 16:08:32 asau Exp $
 #
 
 DISTNAME=	svnfs-0.4
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jmadden.eu/
 COMMENT=	FUSE filesystem for accessing SVN repositories
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl

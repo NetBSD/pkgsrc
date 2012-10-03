@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/15 11:53:26 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 16:08:31 asau Exp $
 #
 
 DISTNAME=	gmailfs-0.7.2
@@ -10,8 +10,6 @@ MASTER_SITES=	http://richard.jones.name/google-hacks/gmail-filesystem/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html
 COMMENT=	FUSE filesystem which uses Google mail for free space
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=			yes
 PYTHON_PATCH_SCRIPTS=		gmailfs.py mount.gmailfs

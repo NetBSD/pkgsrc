@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/15 10:04:35 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 16:08:31 asau Exp $
 #
 
 DISTNAME=	gstfs-0.1
@@ -10,8 +10,6 @@ MASTER_SITES=	http://bobcopeland.com/gstfs/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bobcopeland.com/gstfs/
 COMMENT=	On-demand, transcoding filesystem (using GStreamer pipeline)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config gmake
 

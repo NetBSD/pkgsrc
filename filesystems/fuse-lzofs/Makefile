@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 19:31:31 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 16:08:32 asau Exp $
 #
 
 DISTNAME=	LZOlayer_fs-20060306
@@ -9,8 +9,6 @@ MASTER_SITES=	http://north.one.pl/~kazik/pub/LZOlayer/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://north.one.pl/~kazik/pub/LZOlayer/
 COMMENT=	Filesystem which allows you to use transparently compressed files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes

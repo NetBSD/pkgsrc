@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/03/15 11:53:27 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 16:08:33 asau Exp $
 #
 
 DISTNAME=	wikipediafs-0.3
@@ -10,9 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wikipediafs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wikipediafs.sourceforge.net/
 COMMENT=	FUSE filesystem for accessing the wikipedia
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 
 PYDISTUTILSPKG=		yes
 PY_PATCHLIST=		yes
