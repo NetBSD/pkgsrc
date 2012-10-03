@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/02 17:10:57 tron Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 11:43:42 asau Exp $
 #
 
 DISTNAME=	qgoogletranslator-1.2.1
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/qgt/
 COMMENT=	Qt gui for google translate based on ajax api
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 
