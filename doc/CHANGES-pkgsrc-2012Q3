@@ -1,6 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.2 2012/10/01 20:03:20 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.3 2012/10/03 08:00:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
 Pullup ticket #3924 - requested by dholland
 games/flightgear-data: update to match "flightgear" package
+Pullup ticket #3925 - requested by he
+security/p5-Crypt-OpenSSL-DSA: security patch
+Pullup ticket #3926 - requested by mrg
+net/youtube-dl: compatibility update
