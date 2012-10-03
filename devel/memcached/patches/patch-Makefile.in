@@ -1,8 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.1 2011/10/03 11:53:11 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2012/10/03 10:46:47 asau Exp $
 
 Don't build programs that won't be installed
+List test prerequisite.
 
---- Makefile.in.orig	2011-09-30 07:58:24.000000000 +0000
+--- Makefile.in.orig	2012-02-02 21:24:19.000000000 +0000
 +++ Makefile.in
 @@ -68,7 +68,7 @@ CONFIG_HEADER = config.h
  CONFIG_CLEAN_FILES =
@@ -13,3 +14,12 @@ Don't build programs that won't be installed
  am__memcached_SOURCES_DIST = memcached.c memcached.h hash.c hash.h \
  	slabs.c slabs.h items.c items.h assoc.c assoc.h thread.c \
  	daemon.c stats.c stats.h util.c util.h trace.h cache.h \
+@@ -1304,7 +1304,7 @@ memcached_dtrace.o: $(memcached_OBJECTS)
+ memcached_debug_dtrace.o: $(memcached_debug_OBJECTS)
+ 	$(DTRACE) $(DTRACEFLAGS) -G -o memcached_debug_dtrace.o -s ${srcdir}/memcached_dtrace.d $(memcached_debug_OBJECTS)
+ 
+-test:	memcached-debug sizes testapp
++test:	memcached-debug sizes testapp timedrun
+ 	$(srcdir)/sizes
+ 	$(srcdir)/testapp
+ 	prove $(srcdir)/t
