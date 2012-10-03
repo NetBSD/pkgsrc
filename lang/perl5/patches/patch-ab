@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.16 2011/08/05 18:06:14 adam Exp $
+$NetBSD: patch-ab,v 1.17 2012/10/03 19:59:47 adam Exp $
 
---- installperl.orig	2009-12-06 17:14:00.000000000 +0000
-+++ installperl	2009-12-06 17:14:13.000000000 +0000
-@@ -348,7 +348,6 @@
+--- installperl.orig	2012-08-03 17:35:26.000000000 +0000
++++ installperl
+@@ -346,7 +346,6 @@ $do_installprivlib = 0 if $versiononly &
  mkpath($installprivlib, $opts{verbose}, 0777);
  mkpath($installarchlib, $opts{verbose}, 0777);
  mkpath($installsitelib, $opts{verbose}, 0777) if ($installsitelib);
 -mkpath($installsitearch, $opts{verbose}, 0777) if ($installsitearch);
  
- if (chdir "lib") {
-     $do_installarchlib = ! samepath($installarchlib, '.');
+ if (-d 'lib') {
+     find({no_chdir => 1, wanted => \&installlib}, 'lib')
