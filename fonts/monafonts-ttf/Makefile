@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/11 13:16:29 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:28 asau Exp $
 # $FreeBSD: ports/japanese/monafonts-ttf/Makefile,v 1.1 2003/10/14 13:35:38 nobutaka Exp $
 
 DISTNAME=		monafont-ttf-2.90
@@ -17,8 +17,6 @@ NO_CONFIGURE=		YES
 
 FONTDIR=		${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIRS.ttf+=	${FONTDIR}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/14 21:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:16 asau Exp $
 #
 
 DISTNAME=	TextFonts
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.teilar.gr/~g1951d/
 COMMENT=	Various Unicode fonts by George Duros
 #LICENSE=	In lieu of a licence: Fonts in this site are offered free for any use; they may be opened, edited, modified, regenerated, posted, packaged and redistributed.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	TextFonts-${DDATE}
 
