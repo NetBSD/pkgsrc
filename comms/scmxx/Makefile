@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/02/16 17:47:04 hans Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/03 11:24:44 asau Exp $
 #
 
 DISTNAME=		scmxx-0.9.0
@@ -16,7 +16,6 @@ USE_TOOLS+=		gmake msgfmt
 LDFLAGS.SunOS+=		-lintl
 
 INSTALLATION_DIRS+= share/doc/scmxx share/examples/scmxx
-PKG_DESTDIR_SUPPORT= user-destdir
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/doc_sources.txt			\

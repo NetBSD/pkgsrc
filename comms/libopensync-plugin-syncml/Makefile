@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/15 10:03:59 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 11:24:41 asau Exp $
 #
 
 DISTNAME=	libopensync-plugin-syncml-0.22
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/download/releases/0.22/
 COMMENT=	Platform independent synchronization framework, SyncML plugin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
