@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/03 21:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/03 23:40:38 cheusov Exp $
 #
 
 VERSION=	2.8.10.1
@@ -20,7 +20,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 # previous name of the package
-CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
+CONFLICTS+=		${PYPKGPREFIX}-wxWindows-[0-9]*
+PYTHON_SELF_CONFLICT=	yes
 
 WXARG=	WXPORT=gtk2 UNICODE=1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 18:28:30 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 23:40:36 cheusov Exp $
 #
 
 DISTNAME=		fonttools-2.3
@@ -12,6 +12,8 @@ COMMENT=		Library for manipulating fonts
 
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+PYTHON_SELF_CONFLICT=	yes
 
 SUBST_CLASSES+=		fix-mandir
 SUBST_STAGE.fix-mandir=	pre-configure

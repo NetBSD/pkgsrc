@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/07 11:25:46 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 23:40:39 cheusov Exp $
 #
 
 VERS=		0.2.5
@@ -16,7 +16,9 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	#none
+USE_LANGUAGES=		#none
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

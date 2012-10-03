@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/24 11:10:59 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 23:40:36 cheusov Exp $
 #
 
 VER=		1.0
@@ -14,6 +14,7 @@ COMMENT=	Mailqs and rmmq, two scripts that ease Sendmail administration
 LICENSE=	2-clause-bsd
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
+PYTHON_SELF_CONFLICT=		yes
 
 USE_LANGUAGES=	# none
 
