@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/15 11:53:26 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 12:55:11 asau Exp $
 
 DISTNAME=	dynagen-0.11.0
 PKGREVISION=	3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dynagen.org/
 COMMENT=	Network configuration generator for Dynamips
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dynamips>=0.2.8rc1:../../emulators/dynamips
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 19:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 12:55:11 asau Exp $
 #
 
 DISTNAME=		esound-0.2.35-1
@@ -17,8 +17,6 @@ MAINTAINER=		interix-pkg-people@NetBSD.org
 COMMENT=		Enlightened sound daemon (daemon only) for Cygwin/Interix
 
 ONLY_FOR_PLATFORM=	Interix-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}

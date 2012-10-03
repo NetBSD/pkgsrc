@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:18 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 12:55:21 asau Exp $
 #
 
 DISTNAME=		vmips-1.3.1
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vmips/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vmips.sourceforge.net/
 COMMENT=		MIPS R3000 emulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
