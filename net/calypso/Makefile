@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:02 wiz Exp $
 
 DISTNAME=	calypso-1.0
 PKGREVISION=	1
@@ -19,7 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 INSTALLATION_DIRS=	share/examples/calypso
 

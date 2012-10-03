@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 23:48:06 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:00 wiz Exp $
 #
 
 DISTNAME=	pylast-0.5.11
@@ -12,7 +12,6 @@ COMMENT=	Python interface to Last.fm
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
