@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/04/28 05:55:10 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/03 00:02:38 asau Exp $
 #
 
 DISTNAME=	ircservices-5.0.64
@@ -10,8 +10,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.ircservices.za.net/
 COMMENT=	Services for IRC networks
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
