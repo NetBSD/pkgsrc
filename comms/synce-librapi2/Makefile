@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 11:24:44 asau Exp $
 #
 
 DISTNAME=		synce-librapi2-0.9.1
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synce.sourceforge.net/
 COMMENT=		Utilities/libraries to make RAPI calls on WinCE devices
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
