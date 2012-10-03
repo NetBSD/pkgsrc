@@ -7,3 +7,5 @@ GTK+ has been designed from the ground up to support a range of
 languages, not only C/C++. Using GTK+ from languages such as Perl and
 Python (especially in combination with the Glade GUI builder) provides
 an effective method of rapid application development.
+
+This package contains GTK+ 2.
