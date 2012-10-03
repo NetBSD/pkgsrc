@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/08/31 00:30:53 wen Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/03 18:28:29 asau Exp $
 #
 
 DISTNAME=	Font-TTF-1.02
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~mhosken/Font-TTF/
 COMMENT=	Perl module for TrueType font hacking
 LICENSE=	artistic-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-IO-String>=0:../../devel/p5-IO-String
 

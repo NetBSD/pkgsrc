@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/19 23:59:52 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 18:28:28 asau Exp $
 #
 
 DISTNAME=	mminstance-1.20
@@ -11,7 +11,5 @@ COMMENT=	Utility programs for creating instances of multiple master fonts
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"
