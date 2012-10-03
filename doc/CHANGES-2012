@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3113 2012/10/03 22:18:24 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3114 2012/10/03 23:22:21 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4743,7 +4743,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/flightgear-data to 2.8.0 [dholland 2012-09-30]
 	Updated chat/ejabberd to 2.1.11 [tron 2012-09-30]
 	Added devel/userspace-rcu version 0.7.3 [pettai 2012-09-30]
-	Updated benchmark/thrulay to 0.9 [adam 2012-10-01]
+	Updated benchmarks/thrulay to 0.9 [adam 2012-10-01]
 	Updated misc/rlwrap to 0.37 [dholland 2012-09-30]
 	Updated mail/dovecot2 to 2.1.10 [ghen 2012-10-01]
 	Updated mail/dovecot2-pigeonhole to 0.3.3 [ghen 2012-10-01]
