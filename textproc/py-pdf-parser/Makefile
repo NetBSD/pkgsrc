@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/23 23:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:03 wiz Exp $
 #
 
 DISTNAME=	pdf-parser_V0_3_7
@@ -21,7 +21,7 @@ REPLACE_PYTHON=	pdf-parser.py
 
 INSTALLATION_DIRS=	bin
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	26
 
 do-build:
 
