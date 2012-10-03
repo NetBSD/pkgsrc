@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/06/03 22:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 23:40:35 cheusov Exp $
 #
 
 VER=		1.9.4
@@ -23,6 +23,8 @@ REPLACE_PYTHON=	MoinMoin/i18n/tools/markup15to16.py \
 		wiki/server/moin*
 
 REPLACE_PERL=	MoinMoin/web/static/htdocs/applets/FCKeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.pl
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"

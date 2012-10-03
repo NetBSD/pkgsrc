@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 22:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 23:40:37 cheusov Exp $
 #
 
 DISTNAME=	networkx-1.7
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://networkx.lanl.gov/
 COMMENT=	Python package for creating and manipulating graphs and networks
 LICENSE=	modified-bsd
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
