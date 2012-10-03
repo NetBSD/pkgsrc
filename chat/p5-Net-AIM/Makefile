@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/10/21 04:29:23 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 00:02:41 asau Exp $
 
 DISTNAME=	Net-AIM-1.22
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.aryeh.net/netaim.php
 COMMENT=	Implementation of the AOL Instant Messenger TOC protocol
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Net/AIM/.packlist
 
