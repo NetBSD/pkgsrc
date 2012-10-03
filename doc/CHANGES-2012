@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3108 2012/10/03 12:13:03 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3109 2012/10/03 15:44:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4790,3 +4790,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/knot version 1.1.0 [pettai 2012-10-02]
 	Updated security/clamav to 0.97.6 [adam 2012-10-03]
 	Updated lang/chicken to 4.8.0 [asau 2012-10-03]
+	Updated graphics/pngcrush to 1.7.38 [adam 2012-10-03]
+	Updated graphics/gdk-pixbuf2 to 2.26.4 [adam 2012-10-03]
+	Updated x11/gtk2 to 2.24.13 [adam 2012-10-03]
