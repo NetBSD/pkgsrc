@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/02 23:48:05 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 23:40:37 cheusov Exp $
 #
 
 DISTNAME=	dynampd
@@ -21,6 +21,8 @@ WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	bin
 REPLACE_PYTHON=		dynampd.py
+
+PYTHON_SELF_CONFLICT=	yes
 
 do-build:
 
