@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 17:10:57 tron Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 11:43:45 asau Exp $
 
 DISTNAME=	texworks-0.4.3-r858
 PKGNAME=	texworks-0.4.3
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texworks/
 COMMENT=	Simple TeX front-end program
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake

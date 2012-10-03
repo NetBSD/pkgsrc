@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 12:38:56 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 11:43:40 asau Exp $
 #
 
 DISTNAME=	Padre-Plugin-DataWalker-0.02
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Padre-Plugin-DataWalker/
 COMMENT=	Simple Perl data structure browser Padre
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
