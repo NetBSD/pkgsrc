@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/09/15 10:04:20 obache Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2012/10/03 12:07:22 spz Exp $
 #
 
 DISTNAME=	qtscriptgenerator-src-0.1.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	http://qtscriptgenerator.googlecode.com/files/
 

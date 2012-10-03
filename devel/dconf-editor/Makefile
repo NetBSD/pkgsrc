@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/09/15 10:04:07 obache Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2012/10/03 12:07:05 spz Exp $
 #
 
 DISTNAME=	dconf-0.12.1
 PKGNAME=	dconf-editor-0.12.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.12/}
 EXTRACT_SUFX=	.tar.xz
