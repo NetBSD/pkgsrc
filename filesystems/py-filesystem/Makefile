@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 23:40:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 00:22:00 cheusov Exp $
 #
 
 VERSION=	0.4.0
 DISTNAME=	fs-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-filesystem-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://pyfilesystem.googlecode.com/files/
 

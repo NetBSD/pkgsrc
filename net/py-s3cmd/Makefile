@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 23:40:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/04 00:22:00 cheusov Exp $
 
 DISTNAME=	s3cmd-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=s3tools/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 23:40:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/04 00:22:00 cheusov Exp $
 
 DISTNAME=	python-musicbrainz2-0.4.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio python
 MASTER_SITES=	http://users.musicbrainz.org/~matt/
 

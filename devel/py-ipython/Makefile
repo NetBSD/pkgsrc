@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 23:40:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 00:21:59 cheusov Exp $
 #
 
 DISTNAME=	ipython-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://archive.ipython.org/release/0.10.2/
 

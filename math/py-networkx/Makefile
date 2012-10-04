@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 23:40:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/04 00:21:59 cheusov Exp $
 #
 
 DISTNAME=	networkx-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/n/networkx/ \
 		http://networkx.lanl.gov/download/networkx/

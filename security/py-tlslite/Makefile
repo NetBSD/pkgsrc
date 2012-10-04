@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 23:40:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 00:22:01 cheusov Exp $
 #
 
 DISTNAME=	tlslite-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${HOMEPAGE}
 

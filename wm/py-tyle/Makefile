@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 23:40:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/04 00:22:01 cheusov Exp $
 #
 
 DISTNAME=	pytyle-0.7.5
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytyle/}
 
