@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/08/07 20:40:58 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/10/04 21:58:58 joerg Exp $
 
 SHA1 (advi-1.10.1.tar.gz) = eedadf8d461b233eb352ba90fd312c094e643344
 RMD160 (advi-1.10.1.tar.gz) = 9962992f6512d185ead94d2a44ef11e454b80563
 Size (advi-1.10.1.tar.gz) = 9769604 bytes
 SHA1 (patch-Makefile.in) = 81947381ac464c8aa1de84d337ef82bfbf9caf54
 SHA1 (patch-configure) = cd53f7190a217beddff8e9988c489a4280e8d007
-SHA1 (patch-src_Makefile.in) = ce197feab5b1b3e575b4c745e424ce7fb8559325
+SHA1 (patch-src_Makefile.in) = f30cab6c5c594d74ef5a112a8e054d1d706f37b7
