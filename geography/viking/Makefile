@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/03 21:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/04 09:19:21 asau Exp $
 #
 
 DISTNAME=		viking-1.3
@@ -11,8 +11,6 @@ HOMEPAGE=		http://viking.sourceforge.net/
 COMMENT=		Viking manages GPS data, supports OpenStreetMap and geocaching
 
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
