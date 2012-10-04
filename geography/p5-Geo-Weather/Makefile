@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 09:19:19 asau Exp $
 #
 
 DISTNAME=		Geo-Weather-1.41
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Geo/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Geo-Weather/
 COMMENT=		Perl5 weather retrieval module
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-libwww>=5.803nb1:../../www/p5-libwww
 
