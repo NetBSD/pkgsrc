@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/21 13:08:40 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/04 09:19:17 asau Exp $
 #
 
 DISTNAME=		garmin-utils-2.5
@@ -10,8 +10,6 @@ MAINTAINER=		gson@NetBSD.org
 # also gdt@NetBSD.org is helping
 HOMEPAGE=		http://www.snafu.org/
 COMMENT=		Utilities for Garmin GPS receivers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 

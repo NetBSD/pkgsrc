@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:11:05 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/04 09:19:16 asau Exp $
 #
 
 DISTNAME=	emerillon-0.1.2
@@ -12,8 +12,6 @@ HOMEPAGE=	http://projects.gnome.org/emerillon/
 COMMENT=	Map browser
 
 BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt

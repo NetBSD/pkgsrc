@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:11:05 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/04 09:19:17 asau Exp $
 #
 
 DISTNAME=	geoclue-0.12.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/GeoClue
 COMMENT=	Geoinformation service API and base providers
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/07 01:25:42 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 09:19:17 asau Exp $
 #
 
 DISTNAME=		G7-1
@@ -14,8 +14,6 @@ MAINTAINER=		cngo@nmsu.edu
 HOMEPAGE=		http://www.epsg.org/
 COMMENT=		EPSG geodetic parameters database documentation
 LICENSE=		epsg-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Docs were included in geography/epsg up to 6.11.2, but are released
 # separately and hence now packaged separately.

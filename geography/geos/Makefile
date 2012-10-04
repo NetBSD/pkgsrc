@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/06/05 23:17:32 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/04 09:19:17 asau Exp $
 
 DISTNAME=	geos-3.3.4
 CATEGORIES=	geography
@@ -26,8 +26,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://geos.refractions.net/
 COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
