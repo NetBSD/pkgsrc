@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3120 2012/10/04 20:24:46 tron Exp $
+$NetBSD: CHANGES-2012,v 1.3121 2012/10/04 20:31:26 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/fldigi to 3.21.53 [mef 2012-10-04]
 	Updated net/wireshark to 1.8.3 [tron 2012-10-04]
 	Updated textproc/py-pdf-parser to 0.3.9 [wiz 2012-10-04]
+	Updated security/validns to 0.6 [pettai 2012-10-04]
