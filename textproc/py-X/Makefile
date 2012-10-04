@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 23:40:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/04 00:22:01 cheusov Exp $
 #
 
 DISTNAME=	PyX-0.9
 PKGNAME=	${PYPKGPREFIX}-X-0.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyx/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 23:40:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/04 00:22:00 cheusov Exp $
 #
 
 DISTNAME=	pyexcelerator-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-Excelerator-${VERSION}
+PKGREVISION=	1
 VERSION=	0.6.4.1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyexcelerator/}

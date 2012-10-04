@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 23:40:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 00:21:58 cheusov Exp $
 
 DISTNAME=	omniORBpy-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omniorb/}
 EXTRACT_SUFX=	.tar.bz2

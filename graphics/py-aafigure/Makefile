@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 23:40:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 00:21:58 cheusov Exp $
 #
 
 DISTNAME=	aafigure-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics converters python
 MASTER_SITES=	http://pypi.python.org/packages/source/a/aafigure/
 
