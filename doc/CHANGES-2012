@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3116 2012/10/04 10:49:33 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3117 2012/10/04 14:52:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4803,3 +4803,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkglint to 4.126 [wiz 2012-10-03]
 	Updated devel/p5-Module-CoreList to 2.73 [wiz 2012-10-04]
 	Updated devel/memcached to 1.4.15 [asau 2012-10-04]
+	Updated ham/fldigi to 3.21.53 [mef 2012-10-04]
