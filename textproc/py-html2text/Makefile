@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 23:40:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/04 00:21:59 cheusov Exp $
 #
 
 DISTNAME=		aaronsw-${GHNAME}-${GHVERSION}-0-g${GHCOMMIT}
+PKGREVISION=		1
 GHNAME=			html2text
 GHVERSION=		3.02
 GHCOMMIT=		d9bf7d6

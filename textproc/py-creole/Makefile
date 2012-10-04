@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 23:40:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 00:22:01 cheusov Exp $
 #
 
 VERS=		0.2.5
 DISTNAME=	python-creole-${VERS}
 PKGNAME=	${PYPKGPREFIX}-creole-${VERS}
+PKGREVISION=	1
 EGG_NAME=	python_creole-${VERS}
 CATEGORIES=	textproc www python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-creole/
