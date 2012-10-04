@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/25 21:42:21 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/04 09:19:21 asau Exp $
 #
 
 DISTNAME=		anthems-1.1
@@ -13,8 +13,6 @@ HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		National anthems (text) for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes

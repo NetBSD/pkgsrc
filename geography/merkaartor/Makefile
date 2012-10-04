@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/02 17:11:06 tron Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/04 09:19:19 asau Exp $
 #
 
 DISTNAME=	merkaartor-0.17.2
@@ -11,7 +11,6 @@ MAINTAINER=	jkunz@NetBSD.org
 HOMEPAGE=	http://www.merkaartor.be/
 COMMENT=	Merkaartor is an OpenStreetMap mapping program
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 QMAKE=			${QTDIR}/bin/qmake
