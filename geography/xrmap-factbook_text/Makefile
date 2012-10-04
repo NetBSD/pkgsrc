@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/04 09:19:22 asau Exp $
 #
 
 DISTNAME=		factbook_text_2006
@@ -12,8 +12,6 @@ HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		CIA factbook for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

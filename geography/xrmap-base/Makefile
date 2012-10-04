@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/05/04 16:16:42 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/04 09:19:21 asau Exp $
 #
 
 DISTNAME=		xrmap-2.29
@@ -7,8 +7,6 @@ PKGREVISION=		3
 CATEGORIES=		geography
 MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/
 EXTRACT_SUFX=		.tar.bz2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://frmas.free.fr/li_1.htm
