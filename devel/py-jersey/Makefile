@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/20 18:49:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 07:05:55 wiz Exp $
 
 DISTNAME=	jersey-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Framework for building Twisted Python command-line interfaces
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED= 27 26
 
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted

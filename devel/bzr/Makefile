@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/04/08 21:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2012/10/04 07:05:54 wiz Exp $
 
 DISTNAME=		bzr-${VER}
 PKGREVISION=		1
@@ -21,9 +21,6 @@ USE_TOOLS+=		gmake msgfmt
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-# Only these python versions are supported, see:
-# http://doc.bazaar.canonical.com/bzr.dev/en/whats-new/whats-new-in-2.4.html
-PYTHON_VERSIONS_ACCEPTED=	27 26
 
 PYTHON_PATCH_SCRIPTS=		bzr bzrlib/weave.py
 PYTHON_PATCH_SCRIPTS+=		bzrlib/patiencediff.py bzrlib/_patiencediff_py.py
