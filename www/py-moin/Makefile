@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 23:40:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/04 00:21:58 cheusov Exp $
 #
 
 VER=		1.9.4
 DISTNAME=	moin-${VER}
 PKGNAME=	${PYPKGPREFIX}-moin-${VER}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://static.moinmo.in/files/
 
