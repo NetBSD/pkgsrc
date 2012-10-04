@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/14 23:36:06 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:19:20 asau Exp $
 
 VERSION=	4.8.0
 DISTNAME=	proj-${VERSION}
@@ -13,8 +13,6 @@ COMMENT=	Cartographic projection software
 LICENSE=	mit
 
 PREV_PKGPATH=		misc/proj
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

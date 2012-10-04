@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 14:44:05 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 09:19:21 asau Exp $
 #
 
 DISTNAME=		CIA_WDB2.jpd
@@ -13,8 +13,6 @@ HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		Vector data for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/11/26 00:42:19 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 09:19:21 asau Exp $
 #
 
 DISTNAME=		shapelib-1.2.10
@@ -9,8 +9,6 @@ MASTER_SITES=		http://shapelib.maptools.org/dl/
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://shapelib.maptools.org/
 COMMENT=		Library for reading, writing and updating (limited) ESRI Shapefiles
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
 
