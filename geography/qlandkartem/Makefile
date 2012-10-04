@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/02 17:11:06 tron Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/04 09:19:21 asau Exp $
 #
 
 DISTNAME=	QLandkarteM.0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	jkunz@NetBSD.org
 HOMEPAGE=	http://www.qlandkarte.org/
 COMMENT=	QLandkarteM is a moving map application for mobile devices
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/QLandkarteM
 USE_LIBTOOL=	yes

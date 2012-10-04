@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/04 14:44:05 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/04 09:19:18 asau Exp $
 #
 
 DISTNAME=		gpsutils-0.4.0
@@ -8,8 +8,6 @@ MASTER_SITES=		http://wombat.ie/gps/
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://wombat.ie/gps/
 COMMENT=		Capture and convert data from a Garmin GPS receiver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/gpsutils-0.4.0/src
 INSTALLATION_DIRS=	bin

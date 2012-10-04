@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/04 09:19:22 asau Exp $
 #
 
 DISTNAME=		flags-1.1
@@ -15,8 +15,6 @@ COMMENT=		National flags for xrmap
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
 
 USE_TOOLS+=	pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
