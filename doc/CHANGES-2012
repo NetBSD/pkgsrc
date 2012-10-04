@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3117 2012/10/04 14:52:18 mef Exp $
+$NetBSD: CHANGES-2012,v 1.3118 2012/10/04 20:16:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Module-CoreList to 2.73 [wiz 2012-10-04]
 	Updated devel/memcached to 1.4.15 [asau 2012-10-04]
 	Updated ham/fldigi to 3.21.53 [mef 2012-10-04]
+	Updated net/wireshark to 1.8.2nb6 [tron 2012-10-04]
