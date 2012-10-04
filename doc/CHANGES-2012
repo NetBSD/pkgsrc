@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3115 2012/10/04 06:38:40 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3116 2012/10/04 10:49:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4802,3 +4802,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed textproc/py-gdick [wiz 2012-10-03]
 	Updated pkgtools/pkglint to 4.126 [wiz 2012-10-03]
 	Updated devel/p5-Module-CoreList to 2.73 [wiz 2012-10-04]
+	Updated devel/memcached to 1.4.15 [asau 2012-10-04]
