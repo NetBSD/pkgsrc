@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/13 23:06:37 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 07:05:55 wiz Exp $
 #
 
 DISTNAME=		buildbot-0.8.5
@@ -13,8 +13,6 @@ COMMENT=		Continuous integration system
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=		27 26
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-migrate-[0-9]*:../../databases/py-sqlalchemy-migrate
