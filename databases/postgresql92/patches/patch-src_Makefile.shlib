@@ -1,0 +1,40 @@
+$NetBSD: patch-src_Makefile.shlib,v 1.1 2012/10/05 21:03:10 adam Exp $
+
+--- src/Makefile.shlib.orig	2012-09-19 21:47:58.000000000 +0000
++++ src/Makefile.shlib
+@@ -159,17 +159,11 @@ endif
+ 
+ ifeq ($(PORTNAME), freebsd)
+   ifdef ELF_SYSTEM
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+-    endif
+     LINK.shared		= $(COMPILER) -shared
+     ifdef soname
+       LINK.shared	+= -Wl,-x,-soname,$(soname)
+     endif
+   else
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+-    endif
+     LINK.shared		= $(LD) -x -Bshareable -Bforcearchive
+   endif
+ endif
+@@ -185,6 +179,17 @@ ifeq ($(PORTNAME), netbsd)
+   endif
+ endif
+ 
++ifeq ($(PORTNAME), dragonfly)
++  ifdef ELF_SYSTEM
++    LINK.shared 	= $(COMPILER) -shared
++    ifdef soname
++      LINK.shared	+= -Wl,-x,-soname,$(soname)
++    endif
++  else
++    LINK.shared 	= $(LD) -x -Bshareable -Bforcearchive
++  endif
++endif
++
+ ifeq ($(PORTNAME), hpux)
+   ifdef SO_MAJOR_VERSION
+     shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)

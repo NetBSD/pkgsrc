@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/05 21:03:11 adam Exp $
+lib/postgresql/plpython2.so
+share/locale/cs/LC_MESSAGES/plpython-9.2.mo
+share/locale/de/LC_MESSAGES/plpython-9.2.mo
+share/locale/es/LC_MESSAGES/plpython-9.2.mo
+share/locale/fr/LC_MESSAGES/plpython-9.2.mo
+share/locale/ja/LC_MESSAGES/plpython-9.2.mo
+share/locale/pl/LC_MESSAGES/plpython-9.2.mo
+share/locale/pt_BR/LC_MESSAGES/plpython-9.2.mo
+share/locale/ro/LC_MESSAGES/plpython-9.2.mo
+share/locale/ru/LC_MESSAGES/plpython-9.2.mo
+share/postgresql/extension/plpython2u--1.0.sql
+share/postgresql/extension/plpython2u--unpackaged--1.0.sql
+share/postgresql/extension/plpython2u.control
+share/postgresql/extension/plpythonu--1.0.sql
+share/postgresql/extension/plpythonu--unpackaged--1.0.sql
+share/postgresql/extension/plpythonu.control

@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2012/10/05 21:03:10 adam Exp $
+
+--- configure.orig	2012-09-19 21:47:58.000000000 +0000
++++ configure
+@@ -2188,6 +2188,7 @@ case $host_os in
+   darwin*) template=darwin ;;
+ dragonfly*) template=netbsd ;;
+  freebsd*) template=freebsd ;;
++ dragonfly*) template=dragonfly ;;
+     hpux*) template=hpux ;;
+     irix*) template=irix ;;
+  linux*|gnu*|k*bsd*-gnu)
+@@ -7251,9 +7252,7 @@ $as_echo "$perl_useshrplib" >&6; }
+ 
+ { $as_echo "$as_me:$LINENO: checking for flags to link embedded Perl" >&5
+ $as_echo_n "checking for flags to link embedded Perl... " >&6; }
+-pgac_tmp1=`$PERL -MExtUtils::Embed -e ldopts`
+-pgac_tmp2=`$PERL -MConfig -e 'print $Config{ccdlflags}'`
+-perl_embed_ldflags=`echo X"$pgac_tmp1" | sed -e "s/^X//" -e "s%$pgac_tmp2%%" -e "s/ -arch [-a-zA-Z0-9_]*//g"`
++perl_embed_ldflags=`$PERL -MExtUtils::Embed -e ldopts`
+ if test -z "$perl_embed_ldflags" ; then
+ 	{ $as_echo "$as_me:$LINENO: result: no" >&5
+ $as_echo "no" >&6; }
