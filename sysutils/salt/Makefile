@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/05 09:35:52 apb Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/05 09:37:53 wiz Exp $
 #
 
 DISTNAME=	salt-0.9.5
@@ -33,7 +33,6 @@ CONF_FILES+=	${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
 
 RCD_SCRIPTS+=	salt_master salt_minion
 
-PYTHON_VERSIONS_ACCEPTED=       26 27
 .include "../../lang/python/distutils.mk"
 DEPENDS+= zeromq>=2.1.9:../../net/zeromq
 DEPENDS+= ${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq
