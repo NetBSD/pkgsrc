@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11564 2012/10/05 19:45:44 wiz Exp $
+$NetBSD: TODO,v 1.11565 2012/10/05 21:09:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -1023,11 +1023,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o poppy-4.01
-	o postgresql92-8.3.21
-	o postgresql92-8.4.13
-	o postgresql92-9.0.10
-	o postgresql92-9.1.6
-	o postgresql92-9.2.1
 	o posh-0.5.5
 	o postal-0.72
 	o postfix-2.9.2
