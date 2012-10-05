@@ -1,0 +1,14 @@
+pg_upgrade (formerly called pg_migrator) allows data stored
+in PostgreSQL data files to be migrated to a later PostgreSQL
+major version without the data dump/reload typically required
+for major version upgrades, e.g. from 8.4.7 to the current
+major release of PostgreSQL. It is not required for minor
+version upgrades, e.g. from 9.0.1 to 9.0.4.
+
+pg_upgrade works because, though new features are regularly
+added to PostgreSQL major releases, the internal data storage
+format rarely changes. pg_upgrade does its best to make sure the
+old and new clusters are binary-compatible, e.g. by checking for
+compatible compile-time settings, including 32/64-bit binaries.
+It is important that any external modules are also binary
+compatible, though this cannot be checked by pg_upgrade.
