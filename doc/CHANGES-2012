@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3126 2012/10/05 19:45:44 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3127 2012/10/05 21:09:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4812,3 +4812,18 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/distbb to 0.45.1nb3 [cheusov 2012-10-05]
 	Updated net/Transmission to 2.71 [wiz 2012-10-05]
 	Updated net/Transmission-gui to 2.71 [wiz 2012-10-05]
+	Added databases/postgresql92 version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-client version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-server version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-docs version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-adminpack version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-datatypes version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-dblink version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-fuzzystrmatch version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-monitoring version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-pgcrypto version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-plperl version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-plpython version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-pltcl version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-replicationtools version 9.2.1 [adam 2012-10-05]
+	Added databases/postgresql92-upgrade version 9.2.1 [adam 2012-10-05]
