@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2012/08/10 10:08:14 marino Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2012/10/05 13:56:46 tron Exp $
 
 Add DragonFly
 
---- configure.in.orig	2012-06-01 06:17:13.000000000 +0000
+--- configure.in.orig	2012-08-23 05:33:42.000000000 +0000
 +++ configure.in
 @@ -469,6 +469,14 @@ case "${canonical}" in
        vax-*)       machine=vax ;;
@@ -19,13 +19,44 @@ Add DragonFly
  
    ## OpenBSD ports
    *-*-openbsd* )
-@@ -998,6 +1006,9 @@ case $opsys in
+@@ -999,6 +1007,11 @@ case $opsys in
      LIB_MATH=
      START_FILES='pre-crt0.o'
      ;;
 +  dragonfly )
-+    LIB_STANDARD=-lc
++    # This base version is appended below
++    LIB_STANDARD='-lc $(CRT_DIR)/crtn.o'
++    START_FILES='$(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o'
 +    ;;
    freebsd )
      LIB_STANDARD='-lgcc -lc -lgcc $(CRT_DIR)/crtend.o $(CRT_DIR)/crtn.o'
      START_FILES='pre-crt0.o $(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o $(CRT_DIR)/crtbegin.o'
+@@ -1095,6 +1108,28 @@ fi                              # crt_fi
+ AC_SUBST(CRT_DIR)
+ 
+ case $opsys in
++  dragonfly )
++    if test "x${GCC}" = xyes ; then
++      libgcc_file=`$CC --print-libgcc-file-name 2>/dev/null`
++      case "$libgcc_file" in
++         */*)
++           crt_gcc_subdir=`AS_DIRNAME(["$libgcc_file"])`
++           ;;
++         *)
++           AC_MSG_ERROR([Cannot determine CRT $CC subdirectory.]) 
++           ;;
++      esac
++      for f in crtbegin.o crtend.o; do
++        if test ! -f $crt_gcc_subdir/$f; then
++          AC_MSG_ERROR([Required file not found: $f])
++        fi
++      done
++      LIB_STANDARD="$crt_gcc_subdir/crtend.o $LIB_STANDARD"
++      START_FILES="$START_FILES $crt_gcc_subdir/crtbegin.o"
++    else
++      AC_MSG_WARN([Correct CRT file list unknown for ${CC}.])
++    fi 
++    ;;
+   netbsd | openbsd )
+     if test -f $CRT_DIR/crti.o; then
+ 

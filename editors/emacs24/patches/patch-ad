@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2012/06/16 21:03:42 dholland Exp $
+$NetBSD: patch-ad,v 1.1.4.1 2012/10/05 13:56:47 tron Exp $
 
 This will sometimes help to avoid Segmentation Fault at
 build time
 
---- lisp/cus-dep.el.orig	2010-04-03 22:26:07.000000000 +0000
+--- lisp/cus-dep.el.orig	2012-08-23 05:33:42.000000000 +0000
 +++ lisp/cus-dep.el
-@@ -59,6 +59,7 @@ Usage: emacs -batch -l ./cus-dep.el -f c
+@@ -62,6 +62,7 @@ Usage: emacs -batch -l ./cus-dep.el -f c
              (unless (or (string-match custom-dependencies-no-scan-regexp file)
                          (string-match preloaded file)
                          (not (file-exists-p file)))
