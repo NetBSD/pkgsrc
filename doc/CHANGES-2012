@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3123 2012/10/05 09:29:56 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3124 2012/10/05 17:15:09 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4809,3 +4809,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/validns to 0.6 [pettai 2012-10-04]
 	Updated multimedia/kdemultimedia4 to 4.8.4nb5 [wiz 2012-10-04]
 	Updated www/ap2-perl to 2.0.7 [wiz 2012-10-05]
+	Updated pkgtools/distbb to 0.45.1nb3 [cheusov 2012-10-05]
