@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3125 2012/10/05 19:44:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3126 2012/10/05 19:45:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ap2-perl to 2.0.7 [wiz 2012-10-05]
 	Updated pkgtools/distbb to 0.45.1nb3 [cheusov 2012-10-05]
 	Updated net/Transmission to 2.71 [wiz 2012-10-05]
+	Updated net/Transmission-gui to 2.71 [wiz 2012-10-05]
