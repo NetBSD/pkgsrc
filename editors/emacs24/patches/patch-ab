@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2012/08/10 10:08:14 marino Exp $
+$NetBSD: patch-ab,v 1.2.2.1 2012/10/05 13:56:47 tron Exp $
 
 Add DragonFly
 
---- configure.orig	2012-06-10 07:29:35.000000000 +0000
+--- configure.orig	2012-08-23 06:37:10.000000000 +0000
 +++ configure
 @@ -4476,6 +4476,15 @@ case "${canonical}" in
      esac
@@ -20,13 +20,67 @@ Add DragonFly
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
-@@ -8088,6 +8097,9 @@ case $opsys in
+@@ -8095,6 +8104,11 @@ case $opsys in
      LIB_MATH=
      START_FILES='pre-crt0.o'
      ;;
 +  dragonfly )
-+    LIB_STANDARD=-lc
++    # This base version is appended below
++    LIB_STANDARD='-lc $(CRT_DIR)/crtn.o'
++    START_FILES='$(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o'
 +    ;;
    freebsd )
      LIB_STANDARD='-lgcc -lc -lgcc $(CRT_DIR)/crtend.o $(CRT_DIR)/crtn.o'
      START_FILES='pre-crt0.o $(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o $(CRT_DIR)/crtbegin.o'
+@@ -8209,6 +8223,51 @@ fi                              # crt_fi
+ 
+ 
+ case $opsys in
++  dragonfly )
++    if test "x${GCC}" = xyes ; then
++      libgcc_file=`$CC --print-libgcc-file-name 2>/dev/null`
++      case "$libgcc_file" in
++         */*)
++           crt_gcc_subdir=`$as_dirname -- "$libgcc_file" ||
++$as_expr X"$libgcc_file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
++	 X"$libgcc_file" : 'X\(//\)[^/]' \| \
++	 X"$libgcc_file" : 'X\(//\)$' \| \
++	 X"$libgcc_file" : 'X\(/\)' \| . 2>/dev/null ||
++$as_echo X"$libgcc_file" |
++    sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
++	    s//\1/
++	    q
++	  }
++	  /^X\(\/\/\)[^/].*/{
++	    s//\1/
++	    q
++	  }
++	  /^X\(\/\/\)$/{
++	    s//\1/
++	    q
++	  }
++	  /^X\(\/\).*/{
++	    s//\1/
++	    q
++	  }
++	  s/.*/./; q'`
++           ;;
++         *)
++           as_fn_error $? "Cannot determine CRT $CC subdirectory." "$LINENO" 5
++           ;;
++      esac
++      for f in crtbegin.o crtend.o; do
++        if test ! -f $crt_gcc_subdir/$f; then
++          as_fn_error $? "Required file not found: $f" "$LINENO" 5
++        fi
++      done
++      LIB_STANDARD="$crt_gcc_subdir/crtend.o $LIB_STANDARD"
++      START_FILES="$START_FILES $crt_gcc_subdir/crtbegin.o"
++    else
++      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Correct CRT file list unknown for ${CC}." >&5
++$as_echo "$as_me: WARNING: Correct CRT file list unknown for ${CC}." >&2;}
++    fi
++    ;;
+   netbsd | openbsd )
+     if test -f $CRT_DIR/crti.o; then
+ 
