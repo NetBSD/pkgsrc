@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2012/08/23 16:56:38 adam Exp $
+$NetBSD: distinfo,v 1.22 2012/10/05 22:15:35 adam Exp $
 
-SHA1 (postgresql-8.4.13.tar.bz2) = 3134d622a23a2b157d56d6c4c4547e133569d524
-RMD160 (postgresql-8.4.13.tar.bz2) = cd2bd8a0e24a0bda487afcecf4071b6a9f232b99
-Size (postgresql-8.4.13.tar.bz2) = 14666613 bytes
+SHA1 (postgresql-8.4.14.tar.bz2) = d82817a28c7b645e989b48e59d40a5045d37408a
+RMD160 (postgresql-8.4.14.tar.bz2) = 119c50a260a95a8c0798016e6615ffa084cc5a33
+Size (postgresql-8.4.14.tar.bz2) = 14679559 bytes
 SHA1 (patch-aa) = 72437773d67939c8d8c8e9a99caf430590fd726f
 SHA1 (patch-ab) = aa46d88c8a72edaf95880de48474ea484d6d2bf5
 SHA1 (patch-ac) = 0b82797d0b80bdd1e9b5f3de4989fe3848adf6cb
