@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.5 2012/10/03 14:26:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.6 2012/10/05 14:03:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -12,3 +12,9 @@ Pullup ticket #3927 - requested by tron
 graphics/cairo: build fix
 Pullup ticket #3929 - requested by bsiegert
 fonts/fontconfig: build fix
+Pullup ticket #3930 - requested by dholland
+x11/gtksourceview: build fix
+Pullup ticket #3931 - requested by marino
+textproc/yamcha: build fix
+Pullup ticket #3932 - requested by marino
+editors/emacs24: build fix
