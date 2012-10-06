@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.20 2012/07/24 18:23:38 drochner Exp $
+# $NetBSD: Makefile.common,v 1.21 2012/10/06 20:44:04 prlw1 Exp $
 #
 # used by devel/glib2/Makefile
+# used by devel/gdbus-codegen/Makefile
 # used by sysutils/gio-fam/Makefile
 
 # When updating this package, please apply patch-ak to configure.in and
 # then run a matching version of autoconf to regen patch-aa.
-DISTNAME=	glib-2.32.4
+DISTNAME=	glib-2.34.0
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
 MASTER_SITES=	ftp://ftp.gtk.org/pub/glib/${PKGVERSION_NOREV:R}/ \
@@ -36,6 +37,7 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS+=	--with-pcre=system
 CONFIGURE_ARGS+=	--disable-dtrace
+CONFIGURE_ARGS+=	--disable-modular-tests
 
 CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
 
@@ -43,10 +45,6 @@ CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-# configure detects wrongly
-CONFIGURE_ENV+=		ac_cv_func_statfs=no
-.endif
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKGLOCALEDIR="\"${PKGLOCALEDIR}\""
@@ -89,3 +87,6 @@ SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/glib20.pot
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
+
+pre-configure:
+	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/aclocal.m4 ${WRKSRC}/config.h.in
