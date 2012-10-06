@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3151 2012/10/06 16:44:31 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3152 2012/10/06 17:57:08 christos Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4913,3 +4913,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby18-base to 1.8.7.370nb2 [taca 2012-10-06]
 	Updated www/contao211-translations to 201210060 [taca 2012-10-06]
 	Added devel/transifex-client version 0.8.0 [taca 2012-10-06]
+	Added sysutils/bacula version to 5.2.12 [christos 2012-10-06]
+	Added sysutils/bacula-client to version 5.2.12 [christos 2012-10-06]
+	Added sysutils/bacula-doc to version 5.2.12 [christos 2012-10-06]
+	Added sysutils/bacula-qt-console to version 5.2.12 [christos 2012-10-06]
+	Added sysutils/bacula-wx-console to version 5.2.12 [christos 2012-10-06]
