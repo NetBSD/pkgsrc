@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 12:56:29 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:20 asau Exp $
 #
 
 DISTNAME=	tegaki-wagomu-japanese-kyoiku-0.3
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Tegaki project handwriting model for Wagomu-Japanese (kyoiku)
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

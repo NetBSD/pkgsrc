@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/12/14 18:31:48 marino Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 14:25:21 asau Exp $
 
 DISTNAME=	unicon-1.2
 PKGNAME=	unicon-im-1.2
@@ -10,8 +10,6 @@ CATEGORIES=	inputmethod
 MAINTAINER=	rxg@NetBSD.org
 #HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Libraries and modules of Unicon
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

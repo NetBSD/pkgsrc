@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/12 00:11:45 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:17 asau Exp $
 #
 
 DISTNAME=	${PKGNAME:S/pl/-/}
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/scim-tables-vietnamese-ext/
 COMMENT=	Scim table for Telex/VNI Vietnamese Input Method
 LICENSE=	gnu-gpl-v2 OR artistic # ${PERL_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	scim-tables-[0-9]*:../../inputmethod/scim-tables
 
