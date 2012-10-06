@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/10/03 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2012/10/06 14:11:00 asau Exp $
 
 DISTNAME=	inkscape-0.48.3.1
 PKGREVISION=	8
@@ -10,8 +10,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.inkscape.org/
 COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if !exists (/usr/bin/iconv)
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv

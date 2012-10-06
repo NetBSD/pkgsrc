@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:43:52 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:11:23 asau Exp $
 #
 
 DISTNAME=		tuxpaint-config-0.0.8
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.billsgames.com/unix/x/tuxpaint/config/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.billsgames.com/unix/x/tuxpaint/config/
 COMMENT=		Configuration program for tuxpaint
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/17 21:40:46 darcy Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:10:42 asau Exp $
 
 DISTNAME=	BlenderManual.html
 PKGNAME=	blender-doc-20030922
@@ -11,8 +11,6 @@ HOMEPAGE=	http://download.blender.org/documentation/
 COMMENT=	Documentation for Blender
 
 CONFLICTS=	blender<=2.31
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/doc
 NO_CONFIGURE=	yes

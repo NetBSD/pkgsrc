@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/02/03 22:37:56 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 14:11:08 asau Exp $
 
 DISTNAME=		ncview-1.92d
 PKGREVISION=	3
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
 COMMENT=		Visual browser for netCDF format files
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes

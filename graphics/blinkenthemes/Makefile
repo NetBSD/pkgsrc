@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/02 17:11:06 tron Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/06 14:10:42 asau Exp $
 #
 
 DISTNAME=	blinkenthemes-0.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://sven.gimp.org/blinkenlights/old/
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.blinkenlights.de/
 COMMENT=	Blinkenlights simulator themes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config

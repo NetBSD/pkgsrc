@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/10/02 17:11:10 tron Exp $
+# $NetBSD: Makefile,v 1.47 2012/10/06 14:10:51 asau Exp $
 #
 
 DISTNAME=		gfract-0.32
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.oskusoft.com/osku/gfract/index.html
 COMMENT=		Gtk-based fractal program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/21 00:41:34 zafer Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 14:10:39 asau Exp $
 #
 
 DISTNAME=	CRWInfo-0.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 MAINTAINER=	kirtai@users.sourceforge.net
 HOMEPAGE=	http://neuemuenze.heim1.tu-clausthal.de/~sven/crwinfo/
 COMMENT=	Extracts exposure information and thumbnails from Canon RAW files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 

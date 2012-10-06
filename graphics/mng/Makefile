@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/04/29 17:17:59 dholland Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/06 14:11:07 asau Exp $
 
 DISTNAME=	libmng-1.0.10
 PKGNAME=	mng-1.0.10
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmng/} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Waiting for automake to be pkgviews-enabled
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
