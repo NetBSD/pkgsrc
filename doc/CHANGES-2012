@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3154 2012/10/06 20:47:40 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.3155 2012/10/06 22:04:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-docs to 1.7.12.2 [adam 2012-10-06]
 	Updated www/gitweb to 1.7.12.2 [adam 2012-10-06]
 	Updated devel/glib2 to 2.34.0 [prlw1 2012-10-06]
+	Added devel/magit version 1.2.0 [jmmv 2012-10-06]
