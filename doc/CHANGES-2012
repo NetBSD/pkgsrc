@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3129 2012/10/06 04:31:37 obache Exp $
+$NetBSD: CHANGES-2012,v 1.3130 2012/10/06 05:31:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4873,3 +4873,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql83-pltcl to 8.3.21 [adam 2012-10-05]
 	Updated databases/postgresql83-server to 8.3.21 [adam 2012-10-05]
 	Updated emulators/suse121_gtk2 to 12.1nb3 [obache 2012-10-06]
+	Updated misc/libreoffice3-bin to 3.6.2 [ryoon 2012-10-06]
