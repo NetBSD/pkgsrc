@@ -1,37 +1,36 @@
-$NetBSD: patch-aa,v 1.3 2010/02/16 15:30:50 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2012/10/06 08:21:00 ryoon Exp $
 
---- src/network-light/upnp.c.orig	2009-08-26 14:54:42.000000000 +0000
+--- src/network-light/upnp.c.orig	2011-07-30 07:39:56.000000000 +0000
 +++ src/network-light/upnp.c
-@@ -25,7 +25,11 @@
- #include <stdio.h>
- #include <locale.h>
+@@ -27,7 +27,11 @@
  #include <string.h>
+ #include <gmodule.h>
+ #ifndef G_OS_WIN32
 +#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <uuid.h>
 +#else
  #include <uuid/uuid.h>
 +#endif
- #include <glib/gstdio.h>
- 
- #include "gui.h"
-@@ -317,9 +321,19 @@ static void init_uuid ()
-         uuid_t uuid_context;
-         xmlNode *uuid_node;
+ #else
+ #include <rpc.h>
+ typedef UUID uuid_t;
+@@ -335,8 +339,19 @@ static void init_uuid ()
          char *udn;
--
+ 
+ #ifndef G_OS_WIN32
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+	char *myuuidstr;
++char *myuuidstr;
 +#endif
 +
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+        uuid_create(&uuid_context, 0);
-+        uuid_to_string(&uuid_context, &myuuidstr, 0);
-+        strncpy(uuid, myuuidstr, sizeof(uuid));
-+        free(myuuidstr);
++	uuid_create(&uuid_context, 0);
++	uuid_to_string(&uuid_context, &myuuidstr, 0);
++	strncpy(uuid, myuuidstr, sizeof(uuid));
++	free(myuuidstr);
 +#else
          uuid_generate (uuid_context);
          uuid_unparse (uuid_context, uuid);
 +#endif
- 
-         uuid_node = xml_util_get_element ((xmlNode *) doc->doc,
-                                           "root",
+ #else
+ 	{
+ 		gchar *tmp_uuid;
