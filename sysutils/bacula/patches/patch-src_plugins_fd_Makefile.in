@@ -1,0 +1,14 @@
+$NetBSD: patch-src_plugins_fd_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
+
+don't remove file we justr installed
+
+--- src/plugins/fd/Makefile.in.orig	2012-09-13 04:51:19.000000000 -0400
++++ src/plugins/fd/Makefile.in	2012-10-05 11:19:22.000000000 -0400
+@@ -45,7 +45,6 @@
+ install: all
+ 	$(MKDIR) $(DESTDIR)$(plugindir)
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bpipe-fd.la $(DESTDIR)$(plugindir)
+-	$(RMF) $(DESTDIR)$(plugindir)/bpipe-fd.la
+ 
+ install-test-plugin: all
+ 	$(MKDIR) $(DESTDIR)$(plugindir)
