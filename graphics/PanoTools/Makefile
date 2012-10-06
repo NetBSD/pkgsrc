@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/04/07 16:25:37 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 14:10:40 asau Exp $
 #
 
 DISTNAME=		PanoTools
@@ -13,8 +13,6 @@ COMMENT=		View, create, edit, and remap panoramic images
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base jpeg png tiff
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/PTLinux
 BUILD_DIRS=		# empty

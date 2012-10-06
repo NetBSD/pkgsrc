@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/06 12:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:11:00 asau Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGNAME=	imlib-gtk-1.9.15
@@ -13,7 +13,6 @@ COMMENT=	Image manipulation library for X11 (gtk bits)
 
 CONFLICTS=	imlib<=1.9.15nb8
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DISTINFO_FILE=		${.CURDIR}/../imlib/distinfo

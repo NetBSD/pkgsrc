@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/06 14:10:40 asau Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openrm.org/
 COMMENT=		The OpenRM Scene Graph API
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/rm152
 CFLAGS+=		-I${X11BASE}/include

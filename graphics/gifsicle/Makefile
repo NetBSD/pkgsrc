@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:10:52 asau Exp $
 #
 
 DISTNAME=	gifsicle-1.41
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.lcdf.org/~eddietwo/gifsicle/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lcdf.org/~eddietwo/gifsicle/
 COMMENT=	Create, edit, and inspect GIFs from shell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

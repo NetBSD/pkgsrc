@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/11/14 14:37:19 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/06 14:10:48 asau Exp $
 
 DISTNAME=	f4l-0.2.1
 PKGREVISION=	5
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://f4l.sourceforge.net/
 COMMENT=	Development environment for Macromedia Flash
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

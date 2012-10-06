@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:11:14 asau Exp $
 #
 
 DISTNAME=	plnode141
@@ -11,8 +11,6 @@ MAINTAINER=	rh@NetBSD.org
 # HOMEPAGE=	http://www.sgpr.net/
 # domain squatted
 COMMENT=	Examples for the ploticus data plotting suite
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

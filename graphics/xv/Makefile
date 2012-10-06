@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2012/02/06 12:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2012/10/06 14:11:26 asau Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	19
@@ -39,7 +39,6 @@ SUBST_STAGE.gspath=	post-configure
 SUBST_MESSAGE.gspath=	Fixing path to ghostscript interpreter.
 
 INSTALLATION_DIRS+= share/doc/xv
-PKG_DESTDIR_SUPPORT=  user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
