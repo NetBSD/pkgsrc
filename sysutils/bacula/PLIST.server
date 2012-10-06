@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST.server,v 1.6 2010/03/09 07:06:00 adam Exp $
+@comment $NetBSD: PLIST.server,v 1.7 2012/10/06 17:54:53 christos Exp $
+lib/libbaccats.la
+lib/libbaccats-sqlite3.la
 lib/libbacsql.la
 libexec/bacula/chio-changer
 libexec/bacula/create_${BACULA_DB}_database
