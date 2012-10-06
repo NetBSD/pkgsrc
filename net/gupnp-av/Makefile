@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2012/09/15 10:06:01 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 08:15:27 ryoon Exp $
 #
 
-DISTNAME=	gupnp-av-0.5.4
-PKGREVISION=	8
+DISTNAME=	gupnp-av-0.10.3
 CATEGORIES=	net
-MASTER_SITES=	http://www.gupnp.org/sources/gupnp-av/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-av/0.10/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
