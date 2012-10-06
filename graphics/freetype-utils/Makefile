@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:43:44 obache Exp $
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+# $NetBSD: Makefile,v 1.24 2012/10/06 14:10:49 asau Exp $
 
 .include "../../graphics/freetype-lib/Makefile.common"
 

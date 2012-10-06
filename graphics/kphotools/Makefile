@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 10:05:00 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/06 14:11:02 asau Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://kphotools.sourceforge.net/
 COMMENT=	KDE app which helps you creating fast online photo galleries in HTML
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++

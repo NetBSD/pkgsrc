@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/11/01 06:01:29 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:10:46 asau Exp $
 
 DISTNAME=	dvipng-1.14
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/dvipng/
 COMMENT=	Convert TeX DVI files to PNG or GIF
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/07/02 17:19:05 prlw1 Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/06 14:11:17 asau Exp $
 #
 
 DISTNAME=		matplotlib-1.1.1
@@ -12,8 +12,6 @@ COMMENT=		Matlab-style plotting package for Python
 
 DEPENDS+=		${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-dateutil>=1.2:../../time/py-dateutil
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config

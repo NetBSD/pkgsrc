@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 15:39:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:10:54 asau Exp $
 
 DISTNAME=	warp-sharp
 PKGNAME=	gimp-${DISTNAME}-1.4
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.home.unix-ag.org/simon/gimp/warp-sharp.html
 COMMENT=	Image sharpening script for GIMP
 
 DEPENDS+=	gimp>=2.0:../../graphics/gimp
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes

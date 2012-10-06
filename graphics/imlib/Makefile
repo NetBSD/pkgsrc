@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2012/02/06 12:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2012/10/06 14:11:00 asau Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	12
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nl.rasterman.com/imlib.html
 COMMENT=	Image manipulation library for X11
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake

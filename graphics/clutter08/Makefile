@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:11:08 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:44 asau Exp $
 #
 
 DISTNAME=	clutter-0.8.8
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://clutter-project.org/
 COMMENT=	Open GL based interactive canvas library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	clutter-0.8.*{,nb*}
 

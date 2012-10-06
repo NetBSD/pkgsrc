@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:11:10 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 14:10:52 asau Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://download.berlios.de/gimmage/
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://gimmage.berlios.de/
 COMMENT=	GTKMM-based image viewing program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	share/doc/gimmage

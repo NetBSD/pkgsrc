@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 17:11:06 tron Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 14:10:42 asau Exp $
 #
 
 DISTNAME=		blinkentools-2.2
@@ -9,8 +9,6 @@ MASTER_SITES=		http://sven.gimp.org/blinkenlights/old/
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.blinkenlights.de/
 COMMENT=		Blinkenlights movies tools collection
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/03/21 19:27:16 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 14:11:25 asau Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -14,8 +14,6 @@ COMMENT=	Slide Presentations Using LaTeX/xdvi
 DEPENDS+=	latex2html>=2002.2:../../textproc/latex2html
 DEPENDS+=	tex-dvips-[0-9]*:../../print/tex-dvips
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xdvipresent
 NO_BUILD=	yes

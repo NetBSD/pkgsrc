@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 21:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/06 14:11:11 asau Exp $
 #
 
 DISTNAME=	GraphViz-2.04
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/GraphViz/
 COMMENT=	Perl interface to the Graphviz tools set
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # This is for the 'test' target
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/03 21:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/06 14:10:39 asau Exp $
 #
 
 .include "Makefile.common"
@@ -11,8 +11,6 @@ COMMENT=	X application for displaying and manipulating images
 #LICENSE=	mit AND # see ${WRKSRC}/Copyright.txt
 
 DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/02 17:11:17 tron Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/06 14:11:16 asau Exp $
 #
 
 DISTNAME=	pyclutter-1.0.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
 COMMENT=	Python modules for Clutter toolkit
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PREV_PKGPATH=	graphics/py-pyclutter
 SUPERSEDES=	${PYPKGPREFIX}-pyclutter-[0-9]*

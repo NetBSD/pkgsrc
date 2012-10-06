@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/03 21:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/06 14:11:11 asau Exp $
 #
 
 DISTNAME=	Image-Info-1.32
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Image-Info/
 COMMENT=	Perl module to extract meta information from images
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # missing recommends: Image::Xpm, Image::Xbm
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML

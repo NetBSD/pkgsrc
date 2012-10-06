@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/05/24 19:42:22 marino Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:11:08 asau Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -14,8 +14,6 @@ COMMENT=	Netscape plugin for cult 3d files
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 NOT_FOR_PLATFORM+=	Interix-*-*
 ONLY_FOR_PLATFORM=	*-*-i386
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/cult3d-5.2-b1-linux-x86
 NO_CONFIGURE=		yes

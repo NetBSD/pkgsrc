@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 14:11:12 asau Exp $
 #
 
 DISTNAME=	SVG-2.50
@@ -11,8 +11,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SVG/
 COMMENT=	Perl module for generation of SVG images
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/SVG/.packlist
 USE_LANGUAGES=		# none

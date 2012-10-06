@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/13 16:45:37 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 14:11:03 asau Exp $
 
 DISTNAME=		libart_lgpl-2.3.21
 PKGNAME=		${DISTNAME:S/_lgpl//}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.levien.com/libart/
 COMMENT=		High-performance 2D graphics library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

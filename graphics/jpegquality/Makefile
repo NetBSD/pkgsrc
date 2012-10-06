@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/01 20:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 14:11:01 asau Exp $
 #
 
 DISTNAME=	jpegquality
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wired.com/threatlevel/2007/08/researchers-ana/
 COMMENT=	Print quantization tables of a JPEG file
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

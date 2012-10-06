@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/08/21 23:49:22 marino Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/06 14:10:45 asau Exp $
 #
 
 DISTNAME=		cqcam-0.91
@@ -9,8 +9,6 @@ MASTER_SITES=		http://piki.org/patrick/cqcam/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://piki.org/patrick/cqcam/
 COMMENT=		Free Color QuickCam control program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

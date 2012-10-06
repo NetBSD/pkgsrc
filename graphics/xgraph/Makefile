@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/07/14 12:56:06 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 14:11:25 asau Exp $
 #
 
 DISTNAME=	xgraph-11.3.2-hack.9
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.goice.co.jp/member/mo/hack-progs/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tool to draw a graph on an X11 display
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

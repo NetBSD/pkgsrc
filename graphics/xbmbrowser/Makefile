@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/05/03 09:55:30 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/06 14:11:25 asau Exp $
 
 DISTNAME=		xbmbrowser5.1
 PKGNAME=		xbmbrowser-5.1
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		View complete directories of X bitmaps and X pixmaps
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_IMAKE=		YES

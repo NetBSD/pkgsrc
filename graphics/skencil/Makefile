@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/08/21 23:49:22 marino Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 14:11:22 asau Exp $
 #
 
 DISTNAME=	skencil-0.6.17
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sketch/}
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

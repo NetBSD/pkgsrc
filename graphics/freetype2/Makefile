@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2012/07/02 16:48:24 drochner Exp $
+# $NetBSD: Makefile,v 1.88 2012/10/06 14:10:50 asau Exp $
 
 DISTNAME=	freetype-2.4.10
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -12,7 +12,6 @@ COMMENT=	Font rendering engine and library API
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		grep gmake

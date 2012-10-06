@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2012/07/03 18:10:03 joerg Exp $
+# $NetBSD: Makefile,v 1.81 2012/10/06 14:10:42 asau Exp $
 
 DISTNAME=	blender-2.49b
 PKGREVISION=	10
@@ -15,7 +15,6 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		_build
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/08/30 05:21:20 hasso Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 14:10:42 asau Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -10,8 +10,6 @@ DISTFILES=		TheCallyDemo-0.9.1b.zip \
 			cal3d-${CAL3D_VERSION}${EXTRACT_SUFX}
 
 COMMENT=	Tools and demos for cal3d library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		automake pax
 

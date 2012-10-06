@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:11:11 asau Exp $
 #
 
 DISTNAME=	Gnome2-Canvas-1.002
@@ -14,8 +14,6 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

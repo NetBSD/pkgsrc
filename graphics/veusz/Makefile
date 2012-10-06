@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 17:11:19 tron Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/06 14:11:24 asau Exp $
 #
 
 DISTNAME=		veusz-1.16
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/veusz/
 COMMENT=		Scientific plotting package
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 USE_LANGUAGES=		c c++

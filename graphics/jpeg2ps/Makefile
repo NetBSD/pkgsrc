@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/10/12 05:33:05 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/06 14:11:01 asau Exp $
 #
 
 DISTNAME=	jpeg2ps-1.9
@@ -14,7 +14,6 @@ RESTRICTED=		may not be sold or bundled with any commercial package
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

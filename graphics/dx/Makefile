@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2012/08/18 08:49:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2012/10/06 14:10:46 asau Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	18
@@ -8,8 +8,6 @@ MASTER_SITES=	http://opendx.npaci.edu/source/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opendx.org/
 COMMENT=	Open Visualization Data Explorer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

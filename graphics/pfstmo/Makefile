@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/18 12:48:19 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:11:13 asau Exp $
 #
 
 DISTNAME=	pfstmo-1.3.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfstools/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pfstools.sourceforge.net/
 COMMENT=	Tone mapping operators for HDR images
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

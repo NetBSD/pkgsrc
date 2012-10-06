@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2012/10/03 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2012/10/06 14:10:57 asau Exp $
 
 DISTNAME=	graphviz-2.26.3
 PKGREVISION=	16
@@ -11,7 +11,6 @@ COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	cpl-1.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_FILES_SKIP+=	${PREFIX}/lib/graphviz/config6
 

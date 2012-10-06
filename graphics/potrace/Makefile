@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/17 21:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 14:11:15 asau Exp $
 
 DISTNAME=	potrace-1.10
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://potrace.sourceforge.net/
 COMMENT=	Utility for transforming bitmaps into vector graphics
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

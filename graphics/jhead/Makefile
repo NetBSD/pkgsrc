@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/07/01 17:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/06 14:11:01 asau Exp $
 
 DISTNAME=	jhead-2.96
 CATEGORIES=	graphics
@@ -10,7 +10,6 @@ COMMENT=	Extract EXIF header from JPEG image
 LICENSE=	public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 

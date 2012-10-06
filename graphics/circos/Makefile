@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 14:10:43 asau Exp $
 #
 
 DISTNAME=	circos-0.49
@@ -11,8 +11,6 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://mkweb.bcgsc.ca/circos/
 COMMENT=	Concise, explanatory, unique and print-ready data visualization
 #LICENSE=
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax perl bash:run

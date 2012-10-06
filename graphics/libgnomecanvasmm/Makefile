@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/02 17:11:15 tron Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/06 14:11:04 asau Exp $
 
 DISTNAME=	libgnomecanvasmm-2.26.0
 PKGREVISION=	13
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnomecanvas
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

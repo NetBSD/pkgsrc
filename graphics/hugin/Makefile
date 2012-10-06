@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/06 14:10:59 asau Exp $
 
 DISTNAME=	hugin-2010.4.0
 PKGREVISION=	14
@@ -11,8 +11,6 @@ HOMEPAGE=	http://hugin.sourceforge.net/
 COMMENT=	Panorama photo stitcher
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	autopano-sift-C>=2.5.1:../../graphics/autopano-sift-C
 DEPENDS+=	enblend-enfuse>=4.0:../../graphics/enblend-enfuse

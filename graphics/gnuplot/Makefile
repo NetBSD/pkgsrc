@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/10/02 17:11:12 tron Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/06 14:10:56 asau Exp $
 
 DISTNAME=	gnuplot-4.6.0
 PKGREVISION=	2
@@ -15,7 +15,6 @@ PATCHDIR=		${.CURDIR}/../../graphics/gnuplot/patches
 DISTINFO_FILE=		${.CURDIR}/../../graphics/gnuplot/distinfo
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		makeinfo pkg-config gmake
 GNU_CONFIGURE=		yes

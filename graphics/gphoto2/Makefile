@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/07/02 16:12:34 drochner Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/06 14:10:56 asau Exp $
 
 DISTNAME=	gphoto2-2.4.14
 CATEGORIES=	graphics
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphoto2/
 COMMENT=	Digital camera access command line client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		gphoto-[0-9]*
 

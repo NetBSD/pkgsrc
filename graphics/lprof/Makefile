@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/02/06 12:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 14:11:07 asau Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -12,8 +12,6 @@ COMMENT=		ICC Profile generation tool (for IT8.7 targets)
 
 MAKE_JOBS_SAFE=		no
 LDFLAGS.DragonFly=	-lstdc++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

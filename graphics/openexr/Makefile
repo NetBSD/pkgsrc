@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/01/03 17:58:35 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/06 14:11:08 asau Exp $
 
 DISTNAME=	openexr-1.7.0
 CATEGORIES=	graphics
@@ -8,8 +8,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++

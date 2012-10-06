@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 00:21:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:11:15 asau Exp $
 #
 
 DISTNAME=	aafigure-0.5
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-imaging-[0-9]*:../../graphics/py-imaging
 DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/04 11:45:32 abs Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/06 14:10:50 asau Exp $
 # Remember to also update graphics/gdk-pixbuf2-xlib
 
 DISTNAME=	gdk-pixbuf-2.26.4
@@ -13,7 +13,6 @@ COMMENT=	Image loaders for gtk2
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	gtk2+<2.22
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

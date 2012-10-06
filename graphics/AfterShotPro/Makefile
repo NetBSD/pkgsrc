@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/23 23:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:10:39 asau Exp $
 #
 
 CATEGORIES=	graphics
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.corel.com/corel/product/index.jsp?pid=prod4670071
 COMMENT=	Photo management software
 LICENSE=	corel-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Redistribution not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}

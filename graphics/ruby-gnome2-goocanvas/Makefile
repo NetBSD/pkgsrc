@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/02 17:11:18 tron Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/06 14:11:20 asau Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-goocanvas-${VERSION}
@@ -7,8 +7,6 @@ PKGREVISION=		3
 CATEGORIES=		graphics gnome
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-goocanvas-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_EXTCONF_SUBDIRS=	goocanvas
 

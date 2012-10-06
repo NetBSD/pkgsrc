@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/03 21:56:15 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/06 14:11:21 asau Exp $
 #
 
 DISTNAME=	showimg-0.9.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://www.jalix.org/projects/showimg/
 COMMENT=	Feature-rich image viewer for KDE including an image management system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config perl:run
 REPLACE_PERL+=	showimg/showimg/misc/convert2png.pl

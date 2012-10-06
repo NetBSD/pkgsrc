@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 17:11:07 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 14:10:43 asau Exp $
 #
 
 DISTNAME=	clutter-box2d-0.10.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
 COMMENT=	Clutter Box2D integration library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

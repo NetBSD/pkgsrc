@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:40 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:11:05 asau Exp $
 #
 
 DISTNAME=	libotf-0.9.12
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/libotf/
 COMMENT=	Library for handling OpenType fonts (OTF)
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
