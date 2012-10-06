@@ -1,7 +1,7 @@
 $NetBSD$
 
-Fix for CVE-2011-1005 which turned out affected to Ruby 1.9.3 from
-Ruby's repository r37068.
+Fix for CVE-2011-1005 which turned out affected to Ruby 1.9.3  from
+Ruby's repository r37068.  Now it assigned CVE-2012-4464 and CVE-2012-4466.
 
 --- error.c.orig	2012-02-25 12:32:19.000000000 +0000
 +++ error.c
