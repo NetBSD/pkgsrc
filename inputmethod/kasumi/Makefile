@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 17:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:25:13 asau Exp $
 
 DISTNAME=	kasumi-2.5
 PKGREVISION=	11
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kasumi.sourceforge.jp/
 COMMENT=	Dictionary management tool for anthy
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_X11=	yes

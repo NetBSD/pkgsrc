@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2010/05/16 00:18:41 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/10/06 14:25:18 asau Exp $
 # used by inputmethod/sj3-server/Makefile
 # used by inputmethod/sj3-client/Makefile
 #
@@ -13,8 +13,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/sj3/
 COMMENT?=	SJ3 Japanese input method
 #LICENSE=	# mit AND 2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/sj3/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/sj3/patches

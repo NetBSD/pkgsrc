@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/15 10:05:17 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:25:19 asau Exp $
 #
 
 DISTNAME=	tegaki-wagomu-0.3.1
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tegaki-python>=0.3:../../inputmethod/tegaki-python
 DEPENDS+=	swig-[0-9]*:../../devel/swig
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config

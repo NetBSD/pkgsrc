@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/10 06:57:20 taca Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 14:25:15 asau Exp $
 #
 
 DISTNAME=	prime-1.0.0.1
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/prime/
 COMMENT=	Japanese PRedictive Input Method Editor
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-prime-dict>=0.8.5:../../inputmethod/prime-dict
 DEPENDS+=	${RUBY_PKGPREFIX}-suikyo>=2.0:../../textproc/ruby-suikyo

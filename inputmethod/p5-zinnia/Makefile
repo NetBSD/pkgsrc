@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 14:25:15 asau Exp $
 #
 
 .include "../../inputmethod/zinnia/Makefile.common"
@@ -7,8 +7,6 @@ PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 
 COMMENT=	Zinnia perl module
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++
