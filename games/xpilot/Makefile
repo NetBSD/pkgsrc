@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/07 15:22:49 is Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:55:02 asau Exp $
 #
 
 DISTNAME=	xpilot-4.5.4
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xpilotgame/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xpilot.org/
 COMMENT=	Networked space battles for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

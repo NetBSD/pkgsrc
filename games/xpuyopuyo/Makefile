@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/06/04 09:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/06 11:55:02 asau Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		9
@@ -9,8 +9,6 @@ MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		automake autoconf gmake
 USE_X11BASE=		YES

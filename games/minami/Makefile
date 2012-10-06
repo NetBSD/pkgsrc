@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:47 asau Exp $
 #
 
 DISTNAME=	minami-1.0.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.guru.gr.jp/~issei/minami/
 COMMENT=	Text adventure
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	gen_act gen_dun gen_itm gen_scn minflag

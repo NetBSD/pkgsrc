@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/05/23 06:23:02 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:50 asau Exp $
 
 DISTNAME=	powwow-1.2.5
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://hoopajoo.net/static/powwow-mirror/powwow/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hoopajoo.net/projects/powwow.html
 COMMENT=	Client to play MUDs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 POWWOW_DIR=	${PREFIX}/share/powwow

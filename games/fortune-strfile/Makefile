@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/04/09 00:48:08 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:38 asau Exp $
 
 DISTNAME=	fortune-strfile-0
 CATEGORIES=	games
@@ -6,8 +6,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tool to prepare a fortune database
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_BSD_MAKEFILE=	yes

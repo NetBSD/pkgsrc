@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/09 10:02:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 11:55:03 asau Exp $
 #
 
 DISTNAME=	xsokoban-3.3c
@@ -14,8 +14,6 @@ WRKSRC=		${WRKDIR}/xsokoban
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SAVEPATH=		${VARBASE}/games/xsokoban
 SCOREFILE=		${SAVEPATH}/scores

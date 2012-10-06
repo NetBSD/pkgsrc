@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/03/15 11:53:28 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 11:54:44 asau Exp $
 #
 
 DISTNAME=		jools-0.20
@@ -10,8 +10,6 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} jools-musicpack-1.0.tar.gz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pessimization.com/software/jools/
 COMMENT=		Bejeweled clone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-game>=1.4:../../devel/py-game
 

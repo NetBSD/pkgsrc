@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/02/19 22:02:04 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/06 11:54:59 asau Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xbill.org/
 COMMENT=		Stop the dreaded Windows virus from infecting computers
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 SETGIDGAME=		yes
 
 CONFLICTS+=		gnome-games-[0-9]*
