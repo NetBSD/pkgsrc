@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3145 2012/10/06 12:46:57 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3146 2012/10/06 13:07:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4907,3 +4907,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/ast-ksh to 20120801 [ryoon 2012-10-06]
 	Added net/gupnp-dlna version 0.6.6 [ryoon 2012-10-06]
 	Updated emulators/aranym to 0.9.14 [ryoon 2012-10-06]
+	Updated pkgtools/url2pkg to 2.16 [ryoon 2012-10-06]
