@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/02 17:11:11 tron Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/06 14:10:54 asau Exp $
 #
 
 DISTNAME=	wideangle
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.c
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://members.ozemail.com.au/~hodsond/wideangle.html
 COMMENT=	GIMP plugin for wideangle lens distortions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

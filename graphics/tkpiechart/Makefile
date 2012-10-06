@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/04 15:39:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:23 asau Exp $
 
 DISTNAME=	tkpiechart-5.4
 PKGREVISION=	1
@@ -13,7 +13,6 @@ DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	stooop>=3.7:../../devel/stooop
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

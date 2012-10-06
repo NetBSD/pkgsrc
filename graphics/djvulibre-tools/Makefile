@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/02/06 12:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:46 asau Exp $
 
 DISTNAME=		djvulibre-3.5.24
 PKGNAME=		${DISTNAME:S/-/-tools-/}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://djvu.sourceforge.net/
 COMMENT=		Compression library for scanned documents
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCHDIR=		${.CURDIR}/../djvulibre-lib/patches
 DISTINFO_FILE=		${.CURDIR}/../djvulibre-lib/distinfo

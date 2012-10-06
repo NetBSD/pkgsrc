@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/03 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/06 14:10:58 asau Exp $
 
 DISTNAME=	gtkglext-1.2.0
 PKGREVISION=	16
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	OpenGL extension to GTK
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/07/20 12:30:36 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:11:13 asau Exp $
 
 MODNAME=		exif
 CATEGORIES+=		graphics
 COMMENT=		PHP extension to extract information from EXIF headers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared
 USE_PHP_EXT_PATCHES=	yes

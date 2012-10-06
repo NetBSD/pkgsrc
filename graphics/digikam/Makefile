@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2012/10/03 21:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2012/10/06 14:10:45 asau Exp $
 #
 
 DISTNAME=	digikam-2.5.0
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 

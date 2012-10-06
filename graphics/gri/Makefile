@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/03 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/06 14:10:57 asau Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gri.sourceforge.net/
 COMMENT=	Language for scientific graphics applications
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 15:39:09 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:52 asau Exp $
 #
 
 DISTNAME=	sgif1122
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.rz.uni-karlsruhe.de/pub/net/www/tools/giftrans/
 COMMENT=	Manipulate GIF89a images' transparency, comment and other data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/usr/src/${PKGNAME_NOREV}
 

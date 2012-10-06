@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/03 22:22:53 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 14:11:23 asau Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Visualization Tool for compiler graphs
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/vcg.1.30

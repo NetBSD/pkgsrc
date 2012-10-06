@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/09 21:53:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:10:57 asau Exp $
 
 DISTNAME=	graphviz-dot-mode
 PKGNAME=	${DISTNAME}-0.3.7
@@ -10,8 +10,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://users.skynet.be/ppareit/projects/graphviz-dot-mode/graphviz-dot-mode.html
 COMMENT=	Graphviz dot mode for Emacs
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	# none
