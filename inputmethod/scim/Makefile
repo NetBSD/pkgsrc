@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 14:25:15 asau Exp $
 #
 
 DISTNAME=		scim-1.4.14
@@ -12,8 +12,6 @@ COMMENT=		Smart Common Input Method
 LICENSE=		gnu-lgpl-v2.1
 
 SUPERSEDES+=		scim-bridge-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_SYSCONFSUBDIR=	scim
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/02/15 13:35:22 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:25:18 asau Exp $
 #
 
 .include "../../inputmethod/sj3/Makefile.common"
@@ -8,8 +8,6 @@ PKGNAME=	${DISTNAME:S/sj3-/sj3-server-/}
 COMMENT=	SJ3 Japanese input method server
 
 CONFLICTS=	sj3-dict-[0-9]* sj3-server-bin-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

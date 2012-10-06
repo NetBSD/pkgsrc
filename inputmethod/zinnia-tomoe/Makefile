@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/20 09:11:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:22 asau Exp $
 #
 
 DISTNAME=	zinnia-tomoe-0.6.0-20080911
@@ -13,8 +13,6 @@ COMMENT=	Zinna recognition models traned with Tomoe data
 #LICENSE=	# Tomoe's
 
 BUILD_DEPENDS+=	zinnia-[0-9]*:../../inputmethod/zinnia
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none

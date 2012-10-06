@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/02 17:11:21 tron Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 14:25:11 asau Exp $
 #
 
 DISTNAME=		gcin-1.1.7
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://www.csie.nctu.edu.tw/~cp76/gcin/
 COMMENT=		Gtk Chinese INput application in X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

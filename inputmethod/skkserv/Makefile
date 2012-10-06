@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/07/17 08:57:18 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 14:25:19 asau Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -11,8 +11,6 @@ HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
 COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
 
 DEPENDS=	skk-jisyo>=200708:../../inputmethod/skk-jisyo
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/skk-9.6
 

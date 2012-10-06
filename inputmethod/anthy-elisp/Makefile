@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/06 01:44:52 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 14:25:10 asau Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
@@ -9,8 +9,6 @@ MAINTAINER=	taya@NetBSD.org
 COMMENT=	Emacs lisp files for inputmethod/anthy
 
 DEPENDS+=	anthy>=${ANTHY_VERSION}:../../inputmethod/anthy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	EMACS=${EMACS_BIN:Q}

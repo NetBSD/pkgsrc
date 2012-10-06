@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/08 08:17:51 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 14:25:14 asau Exp $
 #
 
 DISTNAME=	libchewing-0.3.3
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://chewing.csie.net/
 COMMENT=	The intelligent phonetic input method library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

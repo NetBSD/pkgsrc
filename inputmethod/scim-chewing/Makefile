@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:11:23 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 14:25:16 asau Exp $
 #
 
 DISTNAME=		scim-chewing-0.3.4
@@ -11,8 +11,6 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://chewing.csie.net/
 COMMENT=		SCIM IMEngine module for Chewing input method
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

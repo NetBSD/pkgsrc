@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/15 10:05:17 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:25:19 asau Exp $
 #
 
 DISTNAME=	skktools-1.3.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://openlab.ring.gr.jp/skk/tools/
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/
 COMMENT=	SKK dictionary manipulation tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	skkserv<3.9.4nb7
 

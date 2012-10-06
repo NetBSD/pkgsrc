@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 17:11:23 tron Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:25:16 asau Exp $
 #
 
 DISTNAME=		scim-anthy-1.2.7
@@ -10,8 +10,6 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://scim-imengine.sourceforge.jp/
 COMMENT=		SCIM IMEngine module for anthy
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		kasumi>=0.6:../../inputmethod/kasumi
 

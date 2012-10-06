@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/02 17:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/06 14:25:13 asau Exp $
 #
 
 DISTNAME=		imhangul_status_applet-0.3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://download.kldp.net/imhangul/imhangul_status_applet/0.3/
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://imhangul.kldp.net/\#APPLET
 COMMENT=		GNOME2 applet to show imhangul status
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		imhangul>=0.9.6:../../inputmethod/imhangul
 

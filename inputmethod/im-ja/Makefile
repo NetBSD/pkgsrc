@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/02 17:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/06 14:25:13 asau Exp $
 #
 
 DISTNAME=	im-ja-1.5
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://im-ja.sourceforge.net/
 COMMENT=	Japanese input module for GTK2 and XIM server
 #LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 # AND bsd?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

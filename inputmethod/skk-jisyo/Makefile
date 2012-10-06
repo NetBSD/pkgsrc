@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/07 08:52:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 14:25:18 asau Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.bz2
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/wiki/wiki.cgi?page=SKK%BC%AD%BD%F1
 COMMENT=	Dictionary collection for SKK
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	skkserv<3.9.4nb7
 

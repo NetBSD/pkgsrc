@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/17 19:37:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:25:14 asau Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -13,8 +13,6 @@ COMMENT=	Simple skk multi-dictionary server
 LICENSE=	gnu-gpl-v2
 
 DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FIND_PREFIX:=		SKKJISYOCDBDIR=skk-jisyo-cdb
 

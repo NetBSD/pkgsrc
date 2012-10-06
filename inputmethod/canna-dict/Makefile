@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/02/20 11:44:53 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 14:25:10 asau Exp $
 
 PKGREVISION=	2
 CANNA_MODULE=	dict
 
 MAKE_JOBS_SAFE=	no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../inputmethod/canna/Makefile.common"
 

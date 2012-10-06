@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:51 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:25:10 asau Exp $
 #
 
 DISTNAME=		fcitx-3.1.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://www.fcitx.org/main/
 COMMENT=		Free Chinese Input Toy of X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 
