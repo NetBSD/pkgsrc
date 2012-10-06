@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/05/29 14:31:23 dillo Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 11:54:56 asau Exp $
 #
 
 DISTNAME=	tads23-unix
@@ -13,8 +13,6 @@ COMMENT=	TADS compiler and interpreter
 
 # for other OSs, enable appropriate Makefile sections
 ONLY_FOR_PLATFORM=	NetBSD-*-*
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}-1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

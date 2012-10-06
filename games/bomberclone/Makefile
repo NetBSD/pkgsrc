@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/05/16 14:35:34 marino Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/06 11:54:31 asau Exp $
 
 DISTNAME=		bomberclone-0.11.7
 PKGREVISION=		5
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bomberclone.de/
 COMMENT=		Multi-player Bomberman clone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		bomberclone-data-[0-9]*
 

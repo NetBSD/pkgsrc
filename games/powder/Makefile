@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/20 12:42:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 11:54:50 asau Exp $
 #
 
 DISTNAME=	powder117_src
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zincland.com/powder/index.php?pagename=about
 COMMENT=	Multiplatform roguelike game with graphics
 LICENSE=	powder-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake

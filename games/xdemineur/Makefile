@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/20 01:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/06 11:55:00 asau Exp $
 #
 
 DISTNAME=	xdemineur-2.1.1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/}
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Minesweeper game for the X Window System
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

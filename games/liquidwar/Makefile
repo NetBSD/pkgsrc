@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/01/29 21:04:58 marino Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 11:54:46 asau Exp $
 #
 
 DISTNAME=	liquidwar-5.6.4
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.ufoot.org/download/liquidwar/v5/5.6.4/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ufoot.org/liquidwar/v5
 COMMENT=	Unique multiplayer wargame
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/12/29 10:01:06 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/06 11:54:44 asau Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.samba.org/pub/KnightCap/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://samba.org/KnightCap/
 COMMENT=		Chess engine with 3D OpenGL-rendered chessboard
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		KnightCap
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/04/13 04:33:19 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:46 asau Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.devolution.com/~slouken/Maelstrom/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.devolution.com/~slouken/Maelstrom/
 COMMENT=	High resolution version of Asteroids (SDL version)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
 

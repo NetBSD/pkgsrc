@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/08 22:00:31 snj Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 11:54:52 asau Exp $
 
 DISTNAME=	quakespasm-0.85.1
 CATEGORIES=	games x11
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://quakespasm.sourceforge.net/
 COMMENT=	Enhanced Quake engine using SDL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needs fm{ax,in}, which NetBSD doesn't have prior to 5.1
 NOT_FOR_PLATFORM=	NetBSD-4*-* NetBSD-5.0*-*
