@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2012/06/10 08:50:03 obache Exp $
+# $NetBSD: Makefile.common,v 1.31 2012/10/06 12:23:36 ryoon Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -18,7 +18,7 @@ NOT_FOR_PLATFORM=	Interix-*-* # taking nearly a day to build and crash!
 CONFLICTS=	static-ast-ksh-[0-9]*
 KSH93_MAKEFLAGS=
 
-ASTKSH_VERSION=	2012-02-29
+ASTKSH_VERSION=	2012-08-01
 
 WRKSRC=		${WRKDIR}
 MAKE_FLAGS+=	CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
