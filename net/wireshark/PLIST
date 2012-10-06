@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2012/08/20 12:21:53 tron Exp $
+@comment $NetBSD: PLIST,v 1.23.2.1 2012/10/06 05:54:10 spz Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -44,6 +44,7 @@ share/wireshark/colorfilters
 ${PLIST.lua}share/wireshark/console.lua
 share/wireshark/dfilters
 share/wireshark/dftest.html
+share/wireshark/diameter/AlcatelLucent.xml
 share/wireshark/diameter/Cisco.xml
 share/wireshark/diameter/Ericsson.xml
 share/wireshark/diameter/TGPPGmb.xml
