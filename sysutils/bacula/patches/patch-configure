@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2012/10/06 17:54:53 christos Exp $
+
+use ${PREFIX} and ${PYVERSSUFFIX} instead of hunting down possible installs
+
+--- configure.orig	2012-09-13 04:51:19.000000000 -0400
++++ configure	2012-10-04 23:54:29.000000000 -0400
+@@ -22717,8 +22717,8 @@
+ 		PYTHON_INCDIR=`/usr/bin/python-config --includes`
+ 		PYTHON_LIBS=`/usr/bin/python-config --libs`
+ 	     else
+-		for python_root in /usr /usr/local /usr/sfw; do
+-		   for ver in python2.2 python2.3 python2.4 python2.5 python2.6 python2.7 python3; do
++		for python_root in ${PREFIX}; do
++		   for ver in python${PYVERSSUFFIX}; do
+ 		      if test -f $python_root/include/${ver}/Python.h; then
+ 			 PYTHON_INCDIR=-I$python_root/include/${ver}
+ 			 if test -d $python_root/lib64/${ver}/config; then
