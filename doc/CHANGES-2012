@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3150 2012/10/06 16:42:35 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3151 2012/10/06 16:44:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby193-base to 1.9.3p194nb3 [taca 2012-10-06]
 	Updated lang/ruby18-base to 1.8.7.370nb2 [taca 2012-10-06]
 	Updated www/contao211-translations to 201210060 [taca 2012-10-06]
+	Added devel/transifex-client version 0.8.0 [taca 2012-10-06]
