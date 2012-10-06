@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 11:54:31 asau Exp $
 #
 
 DISTNAME=		bos_1_1
@@ -13,7 +13,6 @@ COMMENT=		Invasion - Battle of Survival (real-time strategy game)
 
 DEPENDS+=		stratagus>=2.1:../../games/stratagus
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 USE_TOOLS+=	pax

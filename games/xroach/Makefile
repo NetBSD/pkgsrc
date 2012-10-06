@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/02/16 18:53:22 hans Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/06 11:55:02 asau Exp $
 #
 
 DISTNAME=	xroach
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Cockroaches hide under your windows
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		nroff
 USE_BSD_MAKEFILE=	yes

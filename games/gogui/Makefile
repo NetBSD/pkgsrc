@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/07 17:18:39 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 11:54:41 asau Exp $
 #
 
 DISTNAME=		gogui-0.9.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gogui.sourceforge.net/
 COMMENT=		GUI for Go-playing programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_BASH+=		bin/*
 USE_TOOLS+=		bash:run

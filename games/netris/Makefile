@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/12/18 23:08:29 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:48 asau Exp $
 #
 
 DISTNAME=		netris-0.52
@@ -14,8 +14,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		uebs@gmx.at
 HOMEPAGE=		http://www.netris.org/
 COMMENT=		Everybody's darling T*tris in a networked version
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES

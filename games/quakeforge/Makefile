@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/06/12 15:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/06 11:54:52 asau Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		11
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 MAINTAINER=		snj@NetBSD.org
 HOMEPAGE=		http://www.quakeforge.net/
 COMMENT=		Improved Quake engine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
 CONFIGURE_ARGS+=	--disable-ogg
