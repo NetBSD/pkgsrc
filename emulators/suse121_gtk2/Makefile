@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/07/24 10:02:27 obache Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2012/10/06 13:22:43 tron Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 RPMPKGS+=	libcairo2-1.10.2-14.1.3.${SUSE_ARCH}
-RPMPKGS+=	dbus-1-1.5.8-2.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	dbus-1-1.5.8-2.6.1.${SUSE_ARCH}
 RPMPKGS+=	dbus-1-glib-0.98-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	gconf2-3.2.0-2.2.2.${SUSE_ARCH}
 RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.24.0-2.4.1.${SUSE_ARCH}
