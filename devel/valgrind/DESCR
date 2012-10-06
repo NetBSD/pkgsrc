@@ -1,8 +1,15 @@
-Valgrind is a suite of tools for debugging and profiling x86-Linux programs.
-With the tools that come with Valgrind, you can automatically detect many
-memory management and threading bugs, avoiding hours of frustrating
-bug-hunting, making your programs more stable. You can also perform detailed
-profiling, to speed up and reduce memory use of your programs.
+Valgrind is an instrumentation framework for building dynamic analysis
+tools. There are Valgrind tools that can automatically detect many memory
+management and threading bugs, and profile your programs in detail. You
+can also use Valgrind to build new tools.
 
-The Valgrind distribution currently includes five tools: two memory error
-detectors, a thread error detector, a cache profiler and a heap profiler.
+The Valgrind distribution currently includes six production-quality
+tools: a memory error detector, two thread error detectors, a cache
+and branch-prediction profiler, a call-graph generating cache and
+branch-prediction profiler, and a heap profiler. It also includes three
+experimental tools: a heap/stack/global array overrun detector, a second
+heap profiler that examines how heap blocks are used, and a SimPoint basic
+block vector generator. It runs on the following platforms: X86/Linux,
+AMD64/Linux, ARM/Linux, PPC32/Linux, PPC64/Linux, S390X/Linux, MIPS/Linux,
+ARM/Android (2.3.x and later), X86/Android (4.0 and later), X86/Darwin
+and AMD64/Darwin (Mac OS X 10.6 and 10.7, with limited support for 10.8).
