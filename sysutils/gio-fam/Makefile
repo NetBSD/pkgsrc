@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/01 18:45:53 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 20:44:05 prlw1 Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -12,8 +12,7 @@ NOT_FOR_PLATFORM=	HPUX-*-* OSF1-*-*
 FAM_ACCEPTED=		fam gamin
 FAM_SERVER=		no
 
-USE_TOOLS+=		msgfmt
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt perl:run pkg-config
 
 CONFIGURE_ARGS+=	--enable-fam
 
