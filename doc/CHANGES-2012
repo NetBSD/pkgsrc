@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3156 2012/10/06 22:05:36 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.3157 2012/10/06 22:24:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4927,3 +4927,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/gitweb to 1.7.12.2 [adam 2012-10-06]
 	Updated devel/glib2 to 2.34.0 [prlw1 2012-10-06]
 	Added devel/magit version 1.2.0 [jmmv 2012-10-06]
+	Added devel/py-virtualenv version 1.8.2 [wiz 2012-10-06]
