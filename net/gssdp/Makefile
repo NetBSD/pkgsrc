@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2012/10/02 17:11:46 tron Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/06 08:12:33 ryoon Exp $
 #
 
-DISTNAME=	gssdp-0.7.2
-PKGREVISION=	14
+DISTNAME=	gssdp-0.12.2.1
 CATEGORIES=	net
-MASTER_SITES=	http://www.gupnp.org/sources/gssdp/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/0.12/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
