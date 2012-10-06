@@ -1,17 +1,17 @@
-$NetBSD: patch-an,v 1.8 2012/05/01 18:45:52 adam Exp $
+$NetBSD: patch-an,v 1.9 2012/10/06 20:44:05 prlw1 Exp $
 
---- gio/Makefile.in.orig	2012-05-01 00:10:52.000000000 +0000
+--- gio/Makefile.in.orig	2012-09-24 01:26:29.000000000 +0000
 +++ gio/Makefile.in
-@@ -760,7 +760,7 @@ EXTRA_DIST = gdbusdaemon.c gdbusdaemon.h
+@@ -802,7 +802,7 @@ EXTRA_DIST = gdbusdaemon.c gdbusdaemon.h
  	gschema.dtd gconstructor_as_data.h $(NULL) $(completion_DATA)
  TEST_PROGS = 
  NULL = 
 -SUBDIRS = gdbus-2.0/codegen $(am__append_1) $(am__append_4) \
 +SUBDIRS = $(am__append_1) $(am__append_4) \
- 	$(am__append_8) $(am__append_11) . $(am__append_14) tests
+ 	$(am__append_8) $(am__append_11) . $(am__append_14) \
+ 	$(am__append_21)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@noinst_DATA = gio-2.0.lib
- @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@install_ms_lib_cmd = $(INSTALL) gio-2.0.lib $(DESTDIR)$(libdir)
-@@ -3431,7 +3431,7 @@ info: info-recursive
+@@ -3511,7 +3511,7 @@ info: info-recursive
  
  info-am:
  

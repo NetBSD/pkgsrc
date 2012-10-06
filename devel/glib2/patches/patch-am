@@ -1,14 +1,14 @@
-$NetBSD: patch-am,v 1.7 2012/05/01 18:45:52 adam Exp $
+$NetBSD: patch-am,v 1.8 2012/10/06 20:44:05 prlw1 Exp $
 
---- gio/tests/converter-stream.c.orig	2010-09-13 15:57:51.000000000 +0000
+--- gio/tests/converter-stream.c.orig	2012-09-03 14:24:05.000000000 +0000
 +++ gio/tests/converter-stream.c
-@@ -739,7 +739,9 @@ main (int   argc,
+@@ -1167,7 +1167,9 @@ main (int   argc,
    CharsetTest charset_tests[] = {
      { "/converter-input-stream/charset/utf8->latin1", "UTF-8", "\303\205rr Sant\303\251", "ISO-8859-1", "\305rr Sant\351", 0 },
      { "/converter-input-stream/charset/latin1->utf8", "ISO-8859-1", "\305rr Sant\351", "UTF-8", "\303\205rr Sant\303\251", 0 },
 +#if 0 /* this depends on GNU iconv specific behaviour */
      { "/converter-input-stream/charset/fallbacks", "UTF-8", "Some characters just don't fit into latin1: πא", "ISO-8859-1", "Some characters just don't fit into latin1: \\CF\\80\\D7\\90", 4 },
 +#endif
- 
    };
  
+   gint i;
