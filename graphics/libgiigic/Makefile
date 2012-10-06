@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/23 15:40:52 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 14:11:04 asau Exp $
 #
 
 DISTNAME=		libgiigic-1.0.0.src
@@ -12,8 +12,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ggi-project.org/packages/libgiigic.html
 COMMENT=		General Input Configurator for GGI
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes

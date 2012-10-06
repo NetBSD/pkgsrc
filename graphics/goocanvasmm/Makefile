@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/06 14:10:56 asau Exp $
 #
 
 DISTNAME=	goocanvasmm-0.15.4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/GooCanvas
 COMMENT=	C++ wrappers for goocanvas
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

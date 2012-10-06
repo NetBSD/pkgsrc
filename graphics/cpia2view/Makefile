@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/04/15 22:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 14:10:45 asau Exp $
 #
 
 DISTNAME=	cpia2_driver-1.0
@@ -15,8 +15,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#cpia2
 COMMENT=	USB cameras based CPiA2 Utility Programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff

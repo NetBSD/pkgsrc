@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:11:11 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 14:10:54 asau Exp $
 #
 
 DISTNAME=	resynthesizer-0.16
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.logarithmic.net/pfh/resynthesizer
 COMMENT=	Gimp plug-in for texture synthesis
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config

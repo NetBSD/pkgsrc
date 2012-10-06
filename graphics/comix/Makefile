@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/02 17:11:08 tron Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/06 14:10:44 asau Exp $
 #
 
 DISTNAME=		comix-4.0.4
@@ -10,8 +10,6 @@ MAINTAINER=		hugor@users.sourceforge.net
 HOMEPAGE=		http://comix.sourceforge.net/index.html
 COMMENT=		Image viewer specifically designed to handle comic books
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
 .include "../../lang/python/extension.mk"

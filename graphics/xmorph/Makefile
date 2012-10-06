@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 13:43:52 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 14:11:26 asau Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmorph/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmorph.sourceforge.net/home/gourlay/public_html/Xmorph/
 COMMENT=	X program for image warping and dissolving
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-gtkmorph=no

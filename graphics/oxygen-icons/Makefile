@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/16 04:45:29 markd Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:09 asau Exp $
 
 DISTNAME=	oxygen-icons-4.8.4
 CATEGORIES=	graphics kde
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Oxygen icon set for the KDE integrated X11 desktop
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 TOOLS_DEPENDS.cmake= cmake>=2.6.3:../../devel/cmake
 

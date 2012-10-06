@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2012/10/02 17:11:14 tron Exp $
+# $NetBSD: Makefile,v 1.77 2012/10/06 14:11:02 asau Exp $
 #
 
 PKGNAME=	kipi-plugins-2.5.0
@@ -16,8 +16,6 @@ COMMENT=	Common plugin structure for KDE4 programs
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++

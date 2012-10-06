@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/10/27 10:32:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 14:10:46 asau Exp $
 
 DISTNAME=		djvulibre-3.5.24
 PKGNAME=		${DISTNAME:S/-/-lib-/}
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://djvu.sourceforge.net/
 COMMENT=		Compression library for scanned documents
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

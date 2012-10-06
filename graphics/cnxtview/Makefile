@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/04/15 22:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 14:10:44 asau Exp $
 #
 
 DISTNAME=	cnxtutil-0.00-alpha
@@ -10,8 +10,6 @@ MASTER_SITES=	http://home.384.jp/takam/bsd/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.384.jp/takam/bsd/NetBSD.html#webcamnote
 COMMENT=	Creative WEBCAM Notebook Utility Programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	SunOS-*-*	# needs <err.h> and <dev/usb/usb.h>
 

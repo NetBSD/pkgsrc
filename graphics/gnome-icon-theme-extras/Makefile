@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:43:46 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:10:56 asau Exp $
 #
 
 DISTNAME=		gnome-icon-theme-extras-2.30.1
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Extra icons for the GNOME icon sets
 #LICENSE=		Creative Commons Attribution-Share Alike 3.0 United States License
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

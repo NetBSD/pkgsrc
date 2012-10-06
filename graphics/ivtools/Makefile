@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/02/06 12:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 14:11:00 asau Exp $
 
 DISTNAME=	ivtools-1.2.8
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Drawing editors for PostScript, TeX, and web graphics
 
 CONFLICTS+=	dclock-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 DEPENDS+=	pstoedit>=3.0:../../graphics/pstoedit

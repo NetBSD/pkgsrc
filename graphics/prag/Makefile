@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:11:15 asau Exp $
 
 DISTNAME=	prag-1.0pl2
 PKGNAME=	prag-1.0.2
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.shar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Replacement to "grap" graph generator backend to pic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/prag-1.0
 NO_BUILD=	yes

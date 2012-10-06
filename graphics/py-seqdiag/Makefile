@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/21 14:32:13 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 14:11:18 asau Exp $
 #
 
 DISTNAME=	seqdiag-0.7.3
@@ -12,8 +12,6 @@ COMMENT=	Simple sequence-diagram image generator
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.1.2:../../graphics/py-blockdiag
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

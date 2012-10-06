@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/07/14 17:06:44 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 14:11:07 asau Exp $
 #
 
 DISTNAME=	mpgtx-1.3.1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpgtx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mpgtx.sourceforge.net/
 COMMENT=	Split and join MPEG files in various ways
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}	\

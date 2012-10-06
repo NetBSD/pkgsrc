@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/02 17:11:13 tron Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 14:10:58 asau Exp $
 
 DISTNAME=	gthumb-3.0.2
 PKGREVISION=	3
@@ -10,8 +10,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://gthumb.sourceforge.net/
 COMMENT=	Image viewer and browser for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

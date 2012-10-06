@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 17:11:11 tron Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/06 14:10:55 asau Exp $
 #
 
 DISTNAME=	libmng-1.0.10
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmng/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Simple GTK-based MNG viewer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/gcc/gtk-mng-view
 MAKE_ENV+=	LIBMNG_PREFIX=${BUILDLINK_PREFIX.mng:Q}

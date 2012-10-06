@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 14:11:09 asau Exp $
 
 DISTNAME=	GD-Barcode-1.15
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/GD/Barcode/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

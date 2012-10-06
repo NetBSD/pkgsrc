@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:47 asau Exp $
 
 DISTNAME=	enblend-enfuse-4.0
 # XXX distribution file has changed; remove the line below on next update
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://enblend.sourceforge.net/
 COMMENT=	Combines overlapping images without seams, with good exposure
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-753b534c819d
 

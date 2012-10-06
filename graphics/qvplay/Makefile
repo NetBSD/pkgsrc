@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/03 22:24:06 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:11:18 asau Exp $
 #
 
 DISTNAME=	qvplay-0.94
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~xg2k-hys/index-e.html
 COMMENT=	Software for use with CASIO QV digital cameras
 LICENSE=	generic-nonlicense
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	No permission to distribute
 NO_SRC_ON_FTP=		${RESTRICTED}

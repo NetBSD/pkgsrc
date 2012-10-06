@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2011/11/01 06:01:43 sbd Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/06 14:11:14 asau Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31pl4
@@ -9,8 +9,6 @@ MASTER_SITES=	http://ploticus.sourceforge.net/download/
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://ploticus.sourceforge.net/
 COMMENT=	Versatile data visualization engine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=		yes

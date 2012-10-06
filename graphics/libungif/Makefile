@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/03 21:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/06 14:11:06 asau Exp $
 
 DISTNAME=	libungif-4.1.4
 PKGREVISION=	2
@@ -13,7 +13,6 @@ COMMENT=	Tools and library routines for working with GIF images
 CONFLICTS=	giflib-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

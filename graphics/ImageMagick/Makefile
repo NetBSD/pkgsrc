@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2012/10/03 21:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2012/10/06 14:10:39 asau Exp $
 
 .include "Makefile.common"
 
@@ -10,7 +10,6 @@ COMMENT=	Package for display and interactive manipulation of images
 
 CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++ c99

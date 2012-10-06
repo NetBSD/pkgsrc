@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 14:11:10 asau Exp $
 #
 
 DISTNAME=	GD-SecurityImage-1.71
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 
 DEPENDS+=	p5-GD>0:../../graphics/p5-GD
 DEPENDS+=	p5-PerlMagick>=6.0.4:../../graphics/p5-PerlMagick
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/GD/SecurityImage/.packlist
 

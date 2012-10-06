@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/02/06 12:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:22 asau Exp $
 
 DISTNAME=		simage-1.6.1
 PKGREVISION=		11
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Library for image format loaders and front-ends
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

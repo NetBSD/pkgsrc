@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/06 14:11:02 asau Exp $
 
 PKGNAME=		koverartist-0.7.6
 DISTNAME=		38195-koverartist_0.7.6.orig
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.kde-apps.org/content/show.php?content=38195
 COMMENT=		CD/DVD case designer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 

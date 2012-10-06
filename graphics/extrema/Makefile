@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:11:09 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 14:10:48 asau Exp $
 #
 
 DISTNAME=	extrema-4.4.4
@@ -15,7 +15,6 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=	--with-wxGTK
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

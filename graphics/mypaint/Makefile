@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 10:05:04 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:11:07 asau Exp $
 #
 
 DISTNAME=	mypaint-1.0.0
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://mypaint.intilinux.com/
 COMMENT=	Fast and easy open-source graphics application for digital painters
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 

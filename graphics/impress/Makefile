@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/03 22:58:38 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:11:00 asau Exp $
 #
 
 DISTNAME=	imp1.1b9
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.ntlug.org/~ccox/impress/
 # AWOL, but ccox@ is listed as board member of ntlug.org
 COMMENT=	WYSIWYG vector graphics application
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	pstoedit>=3.19:../../graphics/pstoedit
 DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl

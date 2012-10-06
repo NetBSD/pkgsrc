@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/05/07 08:33:26 adam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:10:41 asau Exp $
 
 DISTNAME=	babl-0.1.10
 CATEGORIES=	graphics
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 # NOTE: to build documentation (which requires additional dependencies)
 #	define BUILD_DOCS in MAKE_ENV.
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake

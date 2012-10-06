@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/04/11 07:02:20 adam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:11:01 asau Exp $
 
 DISTNAME=	jpegoptim-1.2.4
 CATEGORIES=	graphics
@@ -8,8 +8,6 @@ MAINTAINER=	fab@gnux.info
 HOMEPAGE=	http://www.kokkonen.net/tjko/projects.html
 COMMENT=	JPEG optimizer
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

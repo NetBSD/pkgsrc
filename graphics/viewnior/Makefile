@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 17:11:19 tron Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 14:11:24 asau Exp $
 #
 
 DISTNAME=	viewnior-1.1
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://xsisqox.github.com/Viewnior/
 COMMENT=	Viewnior is a fast and simple image viewer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

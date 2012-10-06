@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/10/02 17:11:17 tron Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/06 14:11:18 asau Exp $
 
 DISTNAME=	qiv-2.2.3
 PKGREVISION=	11
@@ -11,8 +11,6 @@ HOMEPAGE=	http://spiegl.de/qiv/
 COMMENT=	Quick Image Viewer
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 

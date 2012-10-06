@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 14:11:12 asau Exp $
 
 DISTNAME=	RRDTool-OO-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~mschilli/RRDTool-OO/
 COMMENT=	Object-oriented interface to RRDTool
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	rrdtool>=1.2.0:../../databases/rrdtool
 DEPENDS+=	p5-Log-Log4perl>=0.4:../../devel/p5-Log-Log4perl

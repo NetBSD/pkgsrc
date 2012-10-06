@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 17:11:17 tron Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 14:11:18 asau Exp $
 #
 
 DISTNAME=	qiviewer-0.5.0
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/qiviewer/
 COMMENT=	Qt image viewer, designed to be fast and lightweight
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/qiviewer/src
 USE_LANGUAGES=	c c++

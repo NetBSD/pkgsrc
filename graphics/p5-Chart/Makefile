@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:11:09 asau Exp $
 
 DISTNAME=	Chart-2.4.5
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~chartgrp/
 COMMENT=	Perl5 charting library
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-GD>=2.0:../../graphics/p5-GD
 

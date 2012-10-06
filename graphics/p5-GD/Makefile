@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/10/03 21:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/10/06 14:11:09 asau Exp $
 
 DISTNAME=	GD-2.46
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/GD/
 COMMENT=	Perl5 interface to gd graphics library
 LICENSE=	gnu-gpl-v2 OR artistic-2.0
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.28

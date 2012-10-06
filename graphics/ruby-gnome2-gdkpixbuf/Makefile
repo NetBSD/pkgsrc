@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/09/15 10:05:07 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/06 14:11:20 asau Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gdkpixbuf-${VERSION}
@@ -8,8 +8,6 @@ CATEGORIES=		graphics devel
 
 CONFLICTS+=		ruby-gnome2-gdkpixbuf-[0-9]*
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gdkpixbuf-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_EXTCONF_SUBDIRS=	gdk_pixbuf2
 

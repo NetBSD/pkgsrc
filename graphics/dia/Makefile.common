@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2012/01/18 18:36:51 drochner Exp $
+# $NetBSD: Makefile.common,v 1.27 2012/10/06 14:10:45 asau Exp $
 #
 # used by graphics/dia-python/Makefile
 
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/dia/
 COMMENT=	Program for creating diagrams of all kinds
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/dia/patches

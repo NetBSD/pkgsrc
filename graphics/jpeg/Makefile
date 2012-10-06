@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/01/20 12:33:07 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/06 14:11:01 asau Exp $
 
 DISTNAME=	jpegsrc.v8d
 PKGNAME=	${DISTNAME:S/src.v/-/}
@@ -12,7 +12,6 @@ COMMENT=	IJG's jpeg compression utilities
 CONFLICTS=		libjpeg-turbo-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes

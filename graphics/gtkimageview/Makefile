@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 17:11:13 tron Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 14:10:58 asau Exp $
 
 DISTNAME=	gtkimageview-1.6.4
 PKGREVISION=	12
@@ -14,8 +14,6 @@ MASTER_SITES= 	http://trac.bjourne.webfactional.com/chrome/common/releases/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.bjourne.webfactional.com/
 COMMENT=	Image viewer widget for GTK
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

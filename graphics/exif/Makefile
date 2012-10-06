@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/07/13 16:43:34 adam Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/06 14:10:48 asau Exp $
 
 DISTNAME=	exif-0.6.21
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ COMMENT=	Grab Exif information from digital camera images
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

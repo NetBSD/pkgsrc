@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/08/18 08:49:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 14:11:22 asau Exp $
 
 DISTNAME=	tango-icon-theme-0.8.90
 PKGREVISION=	10
@@ -9,8 +9,6 @@ MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://tango.freedesktop.org/Tango_Desktop_Project
 COMMENT=	Tango desktop project icon theme
 LICENSE=	public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt

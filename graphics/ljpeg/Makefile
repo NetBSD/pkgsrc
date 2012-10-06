@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/10/29 22:34:33 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 14:11:07 asau Exp $
 #
 
 DISTNAME=		ljpg
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.cs.cornell.edu/pub/multimed/
 COMMENT=		Lossless JPEG codec
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/06 14:10:59 asau Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -15,8 +15,6 @@ DEPENDS+=		tcl>=8.0:../../lang/tcl
 DEPENDS+=		tk>=8.0:../../x11/tk
 DEPENDS+=		gv-[0-9]*:../../print/gv
 DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/igmt_1.2
 NO_BUILD=		yes

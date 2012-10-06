@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/03/28 08:01:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 14:11:06 asau Exp $
 #
 
 DISTNAME=	libvideogfx-1.0.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rachmaninoff.informatik.uni-mannheim.de/libvideogfx/index.html
 COMMENT=	C++ library for low-level video processing
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES

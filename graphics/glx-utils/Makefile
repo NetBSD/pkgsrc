@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2011/12/14 00:16:13 marino Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 14:10:55 asau Exp $
 
 DISTNAME=	MesaDemos-${MESA_VERSION}
 PKGNAME=	glx-utils-${MESA_VERSION}
 CATEGORIES=	x11 graphics
 COMMENT=	OpenGL glxgears and glxinfo
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/Mesa/Makefile.common"
 

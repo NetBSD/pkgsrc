@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2011/12/05 17:33:32 joerg Exp $
+# $NetBSD: Makefile.common,v 1.12 2012/10/06 14:10:47 asau Exp $
 # used by graphics/evas-png/Makefile
 
 EVAS_VERSION=	1.1.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/evas/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/evas/patches
