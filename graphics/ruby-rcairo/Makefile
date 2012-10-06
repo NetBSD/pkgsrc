@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/02 17:11:18 tron Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/06 14:11:20 asau Exp $
 
 DISTNAME=		rcairo-1.12.2
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://cairographics.org/rcairo/
 COMMENT=		Ruby bindings for cairo
 LICENSE=		ruby-license OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2012/10/01 18:11:29 adam Exp $
+# $NetBSD: Makefile,v 1.108 2012/10/06 14:11:23 asau Exp $
 
 DISTNAME=	tiff-4.0.3
 CATEGORIES=	graphics
@@ -13,7 +13,6 @@ LICENSE=	mit
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

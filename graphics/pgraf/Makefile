@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:13 asau Exp $
 
 DISTNAME=		pgraf-20010131
 PKGREVISION=		1
@@ -7,8 +7,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Portable graphics system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 \

@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 10:04:56 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:57 asau Exp $
 #
 
 GST_PLUGINS0.10_NAME=	jpeg
 GST_PLUGINS0.10_DIRS=	ext/jpeg
 PKGREVISION=		2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 

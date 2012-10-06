@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/08 11:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:24 asau Exp $
 
 DISTNAME=	vigra-1.8.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hci.iwr.uni-heidelberg.de/vigra/
 COMMENT=	Computer vision library
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
