@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/10 10:56:15 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 14:25:19 asau Exp $
 #
 
 DISTNAME=	tegaki-python-0.3.1
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # optional for desktop applications, see tegaki/character.py
 #DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-zinnia>=0.05:../../inputmethod/py-zinnia
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
