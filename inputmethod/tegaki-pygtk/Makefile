@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/10 10:56:15 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 14:25:19 asau Exp $
 #
 
 DISTNAME=	tegaki-pygtk-0.3.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tegaki-python>=0.2:../../inputmethod/tegaki-python
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.10:../../x11/py-gtk2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

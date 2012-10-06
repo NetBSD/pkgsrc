@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 12:58:08 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:20 asau Exp $
 #
 
 DISTNAME=	tegaki-zinnia-japanese-light-0.3
@@ -12,8 +12,6 @@ COMMENT=	Tegaki project handwriting model for Zinnia-Japanese (light)
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	tegaki-zinnia-japanese-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
