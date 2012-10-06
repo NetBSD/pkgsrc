@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/12/17 10:15:32 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 11:54:41 asau Exp $
 
 DISTNAME=	gnugo-3.8
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnugo/
 COMMENT=	Go playing program
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes

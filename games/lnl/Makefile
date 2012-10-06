@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/18 15:56:37 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:46 asau Exp $
 
 DISTNAME=	lnl-3.4.19
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lnl.sourceforge.jp/
 COMMENT=	L&L - Labyrinths & Legends - Fantasy RPG
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

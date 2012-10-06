@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/05/25 06:11:46 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:58 asau Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lide.punknet.cz/miri/Wormz.html
 COMMENT=		Networked game for X11
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/Wormz
 USE_LANGUAGES=		c c++

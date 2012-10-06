@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/03/26 10:04:37 rh Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/06 11:54:32 asau Exp $
 #
 
 DISTNAME=	cgoban-java-3.4.14
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.jar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gokgs.com/
 COMMENT=	Client for the KGS Go Server and SGF viewer/editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/03 11:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 11:54:47 asau Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
@@ -17,8 +17,6 @@ LICENSE=	generic-nonlicense
 # There is no true dependency on Aleph One.  These scenarios cannot be
 # played without it, though.
 #DEPENDS+=	alephone-[0-9]*:../../games/alephone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SCENARIO_BASE=		share/AlephOne/Scenarios
 .for scenario in 1 2 Infinity

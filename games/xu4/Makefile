@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 07:45:27 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 11:55:04 asau Exp $
 #
 
 DISTNAME=	xu4-1.0beta3
@@ -12,8 +12,6 @@ COMMENT=	Remake of Ultima IV
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	timidity-[0-9]*:../../audio/timidity
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/u4
 CONFIGURE_DIRS=	src

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/02/19 21:38:42 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/06 11:55:02 asau Exp $
 
 DISTNAME=	xpat2-1.07
 PKGREVISION=	3
@@ -11,7 +11,6 @@ COMMENT=	X11 solitaire game with 14 variations
 
 MAKE_JOBS_SAFE=		no
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	imake pax
 
