@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3132 2012/10/06 06:17:48 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3133 2012/10/06 08:13:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/libreoffice3-bin to 3.6.2 [ryoon 2012-10-06]
 	Added x11/autocutsel version 0.9.0nb1 [ryoon 2012-10-06]
 	Updated fonts/umefont-ttf to 0.444 [ryoon 2012-10-06]
+	Updated net/gssdp to 0.12.2.1 [ryoon 2012-10-06]
