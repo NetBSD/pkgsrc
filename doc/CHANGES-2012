@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3131 2012/10/06 06:00:51 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3132 2012/10/06 06:17:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4875,3 +4875,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_gtk2 to 12.1nb3 [obache 2012-10-06]
 	Updated misc/libreoffice3-bin to 3.6.2 [ryoon 2012-10-06]
 	Added x11/autocutsel version 0.9.0nb1 [ryoon 2012-10-06]
+	Updated fonts/umefont-ttf to 0.444 [ryoon 2012-10-06]
