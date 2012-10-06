@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 11:54:50 asau Exp $
 #
 
 DISTNAME=		polyglot_14
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wbec-ridderkerk.nl/html/details/PolyGlot.html
 COMMENT=		UCI to WB adapter (for chess engines)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/polyglot_14
 BUILD_DIRS=		src

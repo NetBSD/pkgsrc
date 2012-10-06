@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/21 18:12:42 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/06 11:54:31 asau Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -9,8 +9,6 @@ MASTER_SITES=	#
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/*/http://www.cs.utexas.edu/users/pahardin/bb.html
 COMMENT=	3d game of soccer, with tanks
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/battleball-2.1-src
 USE_LANGUAGES=	c c++

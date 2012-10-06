@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:33 asau Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${CHESS_ENGINE}-book-${DIST_SUBDIR}
@@ -13,8 +13,6 @@ COMMENT=		Chess opening book for ColChess (default)
 DEPENDS+=		colchess>=7.0:../../games/colchess
 
 CONFLICTS+=		colchess-book-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/ColChess
 CHESS_ENGINE=		colchess

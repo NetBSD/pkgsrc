@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/28 06:56:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:49 asau Exp $
 
 DISTNAME=	openttd-data-0.4.4
 CATEGORIES=	games x11
@@ -14,8 +14,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openttd.org/
 COMMENT=	Free data files for OpenTTD
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/02 17:11:02 tron Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/06 11:54:40 asau Exp $
 
 DISTNAME=	gcompris-12.01
 PKGREVISION=	7
@@ -9,8 +9,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://gcompris.net/
 COMMENT=	Educational games for children
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool gtar pkg-config msgfmt texi2html
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/09/21 08:17:40 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:55:01 asau Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 # HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
 # not maintained since 1999, rewritten into gnibbles
 COMMENT=		Winding snakes game for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/xnibbles
 USE_TOOLS+=		gmake

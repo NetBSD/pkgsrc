@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 11:54:43 asau Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.generalcoffee.com/hugo.html
 COMMENT=	Interactive fiction design system and interpreter
 
 SITES.hugolib.zip=${MASTER_SITE_IFARCHIVE:=programming/hugo/library/}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	gmake

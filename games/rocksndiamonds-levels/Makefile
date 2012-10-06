@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/07 17:56:24 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:53 asau Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
 PKGREVISION=	3
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/levels.html
 COMMENT=	DX, Emerald Mine, and Sokoban levels for Rocks'N'Diamonds
 
 DEPENDS+=	rocksndiamonds{,-sdl}>=1.4.0:../../games/rocksndiamonds
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

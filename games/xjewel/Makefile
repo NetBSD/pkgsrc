@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/05/25 04:44:15 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 11:55:01 asau Exp $
 
 DISTNAME=	xjewel-1.6
 PKGREVISION=	3
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.z
 
 MAINTAINER=	jdc@NetBSD.org
 COMMENT=	X windows-based dropping jewels game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 USE_TOOLS+=	gzcat bdftopcf mkfontdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:39 asau Exp $
 #
 
 DISTNAME=	Gate88_Mar19_05
@@ -16,8 +16,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11

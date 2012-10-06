@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/05/16 13:45:14 marino Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/06 11:54:58 asau Exp $
 #
 
 DISTNAME=	warzone2100-2.2.2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://wz2100.net/
 COMMENT=	Real-time strategy and real-time tactics hybrid computer game
 
 DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

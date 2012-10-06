@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/01/30 16:23:34 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/06 11:54:45 asau Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/koth/
 COMMENT=	The classic "shoot the other tank" artillery game, networked
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=	YES

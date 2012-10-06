@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/01/28 11:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 11:54:57 asau Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxmath/}
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxmath/
 COMMENT=	Educational math arcade game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tuxmath
 USE_TOOLS+=	gmake

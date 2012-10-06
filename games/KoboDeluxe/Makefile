@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/01/28 11:00:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 11:54:29 asau Exp $
 #
 
 DISTNAME=	KoboDeluxe-0.5.1
@@ -11,8 +11,6 @@ MAINTAINER=	as@rsn.bth.se
 HOMEPAGE=	http://olofson.net/kobodl/
 COMMENT=	Multi-way scrolling shoot 'em up game for X
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

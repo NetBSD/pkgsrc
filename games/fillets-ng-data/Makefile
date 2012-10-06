@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/09/08 00:12:37 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 11:54:37 asau Exp $
 #
 
 DISTNAME=	fillets-ng-data-0.7.1
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://fillets.sourceforge.net/
 COMMENT=	Fish Fillets NG data files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

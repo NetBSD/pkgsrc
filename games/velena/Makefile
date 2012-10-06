@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/12/12 07:11:06 marino Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:57 asau Exp $
 #
 
 DISTNAME=	veleng10
@@ -18,7 +18,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
 NOT_FOR_PLATFORM=	DragonFly-*-x86_64    # Can't build 32-bit binaries
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_OPTS_ZIP=	-LLaqo
 WRKSRC=			${WRKDIR}

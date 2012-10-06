@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/25 09:59:25 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:35 asau Exp $
 #
 
 DISTNAME=	dungeon-3.2b
@@ -10,8 +10,6 @@ MASTER_SITES=	http://eblong.com/zarf/glk/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://eblong.com/zarf/glk/
 COMMENT=	Classic game of Dungeon
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # There really isn't any license in any of the source code or in the
 # accompanying documentation, but the sources of many versions have

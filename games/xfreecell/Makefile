@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/03/21 16:29:39 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/06 11:55:00 asau Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2.giganet.net/~nakayama/
 COMMENT=	Popular freecell card game for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/23 13:36:45 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:56 asau Exp $
 #
 
 DISTNAME=	supertuxkart-0.6.2a-src
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://supertuxkart.sourceforge.net/
 COMMENT=	Free 3D kart racing game
 #LICENSE=	gnu-gpl-v3 AND Creative-Commons-Attribution AND Creative-Commons-BY-SA AND Creative-Commons-Sampling+ AND FreeArt License AND SoundSnap license AND Public Domain AND Image*After terms
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 17:11:04 tron Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:52 asau Exp $
 #
 
 DISTNAME=	rftg-0.8.1
@@ -12,8 +12,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://keldon.net/rftg/
 COMMENT=	AI opponent(s) for the card game Race for the Galaxy
 #LICENSE=	gnu-gpl-v2 AND ??? (but allowed)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

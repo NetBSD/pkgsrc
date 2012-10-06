@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/09 22:05:53 snj Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 11:54:43 asau Exp $
 
 DISTNAME=	quake3-latest-pk3s
 PKGNAME=	ioquake3-pk3-0
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.ioquake3.org/
 COMMENT=	pk3 files for ioquake3
 LICENSE=	quake3arena-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	lib/ioquake3/baseq3 lib/ioquake3/missionpack
 
 USE_LANGUAGES=	# none

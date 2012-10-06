@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/06 11:54:35 asau Exp $
 #
 
 DISTNAME=		eboard-1.0.4
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bergo.eng.br/eboard/
 COMMENT=		Graphical user interface for playing chess
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes

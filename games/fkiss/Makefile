@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/06 11:54:37 asau Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -16,8 +16,6 @@ PATCHFILES=		fkiss-0.33a.diff
 PATCH_DIST_STRIP=	-p1
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

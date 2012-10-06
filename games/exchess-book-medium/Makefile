@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/08 23:05:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:36 asau Exp $
 
 DISTNAME=		medium
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -13,8 +13,6 @@ COMMENT=		Chess opening book for EXchess (medium)
 DEPENDS+=		exchess-[0-9]*:../../games/exchess
 
 CONFLICTS=		${CHESS_ENGINE}-book-small-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 CHESS_ENGINE=		exchess

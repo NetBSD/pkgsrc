@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/10/02 17:11:04 tron Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/06 11:54:54 asau Exp $
 #
 
 DISTNAME=	sirius-0.8.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://sirius.bitvis.nu/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sirius.bitvis.nu/
 COMMENT=	Othello game for GNOME2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

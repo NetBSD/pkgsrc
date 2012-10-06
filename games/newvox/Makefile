@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/05/16 15:11:15 marino Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/06 11:54:48 asau Exp $
 #
 
 DISTNAME=	newvox-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.libsdl.org/projects/newvox/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/newvox/index.html
 COMMENT=	Voxel-style landscape rendering fly-by
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

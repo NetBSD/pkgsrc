@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/01/28 11:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:49 asau Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.30
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-games-dir=${PREFIX}/libexec
 
 INSTALLATION_DIRS=	share/doc/orbital_eunuchs_sniper
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 REPLACE_INTERPRETER+=	bash

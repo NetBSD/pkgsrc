@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/29 20:31:33 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:37 asau Exp $
 #
 
 DISTNAME=	finalbattle.0.0
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/finalbattle/
 COMMENT=	Multiplayer space battle simulation for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/final
 MAKE_FILE=	makefile

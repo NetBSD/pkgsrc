@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/12/12 07:06:19 marino Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 11:54:38 asau Exp $
 #
 
 DISTNAME=	fortunes-calvin-0.2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.netmeister.org/misc.html
 COMMENT=	Fortunes from the famous Calvin & Hobbes comic strips
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}nb1
 STRFILE=	${LOCALBASE}/bin/strfile

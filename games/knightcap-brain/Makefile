@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:44 asau Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -11,8 +11,6 @@ HOMEPAGE=		http://anu.samba.org/KnightCap/
 COMMENT=		Book of losing moves for KnightCap
 
 ONLY_FOR_PLATFORM=	*-*-i386
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
