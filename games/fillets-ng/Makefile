@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/05/16 18:01:36 marino Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 11:54:36 asau Exp $
 #
 
 DISTNAME=	fillets-ng-0.7.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://fillets.sourceforge.net/
 COMMENT=	Puzzle game about witty fish saving the world sokoban style
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	fillets-ng-data-0.7.1{,nb*}:../../games/fillets-ng-data
 

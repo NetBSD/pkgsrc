@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/12/15 04:32:10 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/06 11:54:51 asau Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	3
@@ -16,8 +16,6 @@ CONFLICTS=	quake3arena-[0-9]*
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11 glx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar pax find xargs
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} |	\

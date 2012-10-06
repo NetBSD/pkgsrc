@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/06 06:19:17 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 11:54:35 asau Exp $
 
 DISTNAME=		mapit.v1-16
 PKGNAME=		dipmap-1.16
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		njohnston@globaltetrahedron.com
 HOMEPAGE=		http://www.diplom.org/Online/mapsoftware.html
 COMMENT=		Generate postscript maps from results of play-by-email Diplomacy games
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=		makefile
 USE_TOOLS+=		csh:run

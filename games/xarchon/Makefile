@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/06/23 19:47:07 dholland Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/06 11:54:58 asau Exp $
 #
 
 DISTNAME=	xarchon-0.60
@@ -10,8 +10,6 @@ MASTER_SITES=	http://xarchon.seul.org/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xarchon.seul.org/
 COMMENT=	Chess-like strategy game with battle options
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES

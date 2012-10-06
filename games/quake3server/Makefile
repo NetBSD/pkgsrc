@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/03/11 12:24:39 zafer Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:51 asau Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGNAME=	quake3server-1.32b
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.run
 
 MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Dedicated Server for Linux
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../games/quake3server/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/05/16 14:56:45 marino Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 11:54:32 asau Exp $
 #
 
 DISTNAME=		chromium-bsu-0.9.14
@@ -11,8 +11,6 @@ HOMEPAGE=		http://chromium-bsu.sourceforge.net/
 COMMENT=		Fast paced, arcade-style, top-scrolling space shooter
 
 DEPENDS=		uralic-ttf-[0-9]*:../../fonts/uralic-ttf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++

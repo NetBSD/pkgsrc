@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 11:55:04 asau Exp $
 
 DISTNAME=	xworm102
 PKGNAME=	xworm-1.02
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.ekran.no/archive/x/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Classic game with apples and hungry worm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/XWorm
 BUILD_TARGET=	bsd

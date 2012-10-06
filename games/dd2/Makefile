@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/19 19:25:20 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:35 asau Exp $
 #
 
 DISTNAME=		dd2-0.2.2
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.usebox.net/jjm/dd2/releases/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.usebox.net/jjm/dd2/
 COMMENT=		Shoot'em up arcade game for one or two players
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/07/05 01:40:17 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2012/10/06 11:54:51 asau Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -15,8 +15,6 @@ COMMENT=	Legendary first person shoot'em up game
 DEPENDS+=	quakedata-[0-9]*:../../games/quakedata
 
 ONLY_FOR_PLATFORM=	*-*-i386
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake

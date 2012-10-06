@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 20:22:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:32 asau Exp $
 #
 
 DISTNAME=	chest-3.19
@@ -11,8 +11,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} answer.c analyse.c fac.c \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.drb.insel.de/~heiner/Chess/chest.html
 COMMENT=	Chess problem solver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	Templates/Makefile.simple
 

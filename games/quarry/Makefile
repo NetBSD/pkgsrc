@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 17:11:04 tron Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:52 asau Exp $
 #
 
 DISTNAME=	quarry-0.2.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://download.gna.org/quarry/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.gna.org/quarry/index.html
 COMMENT=	Multi-purpose GUI for several board games
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

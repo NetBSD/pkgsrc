@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 11:54:40 asau Exp $
 #
 
 DISTNAME=		genecys-data-0.2
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=genecys/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.genecys.org/
 COMMENT=		Game datafiles for Genecys
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		YES

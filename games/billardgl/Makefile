@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/07/07 04:01:30 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 11:54:31 asau Exp $
 #
 
 DISTNAME=	BillardGL-1.75
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=billardgl/}
 MAINTAINER=	wojtek@3miasto.net
 HOMEPAGE=	http://www.tobias-nopper.de/BillardGL/
 COMMENT=	3D Billard using OpenGL hardware acceleration
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=	src
 USE_LANGUAGES=	c c++

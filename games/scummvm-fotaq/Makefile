@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 11:54:53 asau Exp $
 #
 
 DISTNAME=		FOTAQ_Floppy
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scummvm.org/
 COMMENT=		Flight Of The Amazon Queen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/FOTAQ_Floppy
 

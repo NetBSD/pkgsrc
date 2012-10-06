@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/05/27 18:16:31 abs Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/06 11:55:01 asau Exp $
 
 DISTNAME=	xkobo-1.11
 PKGREVISION=	5
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://seki.math.hokudai.ac.jp:20080/xkobo-current.html
 COMMENT=	Multi-way scrolling shoot 'em up game for X.  Strangely addictive
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 LICENSE=	gnu-gpl-v2
 
 SETGIDGAME=	yes

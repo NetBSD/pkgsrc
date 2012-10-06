@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/03/09 12:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 11:54:29 asau Exp $
 #
 
 DISTNAME=		4stAttack-2.1.4
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=forcedattack/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://forcedattack.sourceforge.net/
 COMMENT=		Game in which you have to try to out-smart your opponent
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin share/${PKGBASE}
 

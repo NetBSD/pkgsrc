@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 11:55:02 asau Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.spinne.com/x/games/xpipeman/
 # domain squatted, page last updated 1999
 COMMENT=	Connect the pipes to contain the water flow game for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xpipeman
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/03/16 11:40:27 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/06 11:54:43 asau Exp $
 #
 
 DISTNAME=		ivan-0.50
@@ -12,7 +12,6 @@ COMMENT=		Graphical roguelike featuring deep gameplay
 LICENSE=		gnu-gpl-v2 # or later
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

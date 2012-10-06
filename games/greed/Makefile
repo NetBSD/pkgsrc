@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/23 05:58:17 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 11:54:42 asau Exp $
 #
 
 DISTNAME=		greed-3.4
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.catb.org/~esr/greed/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.catb.org/~esr/greed/
 COMMENT=		Strategy game: eat as much as possible
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		greed
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6

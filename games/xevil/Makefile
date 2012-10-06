@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/06/30 00:07:16 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/06 11:55:00 asau Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	snj@pobox.com
 HOMEPAGE=	http://www.xevil.com/
 COMMENT=	Side scrolling, bloody action game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

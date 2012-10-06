@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:56 asau Exp $
 
 DISTNAME=		thew-1.1.1
 PKGREVISION=		2
@@ -11,7 +11,6 @@ MAINTAINER=		ilfoglionascosto@netcat.it
 HOMEPAGE=		http://thew.sourceforce.net/
 COMMENT=		The hermit worm
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 AUTO_MKDIRS=		yes
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2012/10/03 21:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2012/10/06 11:54:58 asau Exp $
 
 DISTNAME=	wesnoth-1.10.4
 PKGREVISION=	4
@@ -12,8 +12,6 @@ COMMENT=	Fantasy turn-based strategy game
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes

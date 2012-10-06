@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/07/08 17:15:08 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/06 11:55:01 asau Exp $
 #
 
 DISTNAME=	xmahjongg-3.7
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.lcdf.org/~eddietwo/xmahjongg/
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.lcdf.org/~eddietwo/xmahjongg/
 COMMENT=	The Chinese game of Mah Jongg for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++

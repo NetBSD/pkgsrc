@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 11:54:30 asau Exp $
 #
 
 DISTNAME=		bastet-0.41
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fph.altervista.org/prog/bastet.shtml
 COMMENT=		Bastard Tetris
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 MAKE_FLAGS+=		BIN_PREFIX=${PREFIX}/bin/

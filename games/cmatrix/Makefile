@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/06/24 06:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 11:54:33 asau Exp $
 #
 
 DISTNAME=		cmatrix-1.2a
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.asty.org/cmatrix/dist/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.asty.org/cmatrix/
 COMMENT=		Make your console feel like Nadbuchonazor's bridge
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/07/06 10:17:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 11:54:58 asau Exp $
 #
 
 DISTNAME=	vms-empire-1.7
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/vms-empire/
 COMMENT=	Solitaire Empire (sometimes called "VMS Empire")
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 

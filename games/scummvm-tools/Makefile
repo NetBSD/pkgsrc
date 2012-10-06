@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:11:04 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:54 asau Exp $
 #
 
 DISTNAME=		scummvm-tools-1.4.0
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://scummvm.sourceforge.net/
 COMMENT=		Conversion and compression tools for ScummVM
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

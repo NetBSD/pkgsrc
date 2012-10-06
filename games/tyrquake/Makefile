@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/05 01:53:48 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:57 asau Exp $
 
 DISTNAME=	tyrquake-0.61
 CATEGORIES=	games x11
@@ -9,8 +9,6 @@ HOMEPAGE=	http://disenchant.net/engine.html
 COMMENT=	Conservative branch of Quake
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

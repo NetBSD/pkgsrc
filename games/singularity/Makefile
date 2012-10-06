@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/09 12:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:54 asau Exp $
 #
 
 DISTNAME=		singularity_0.28
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.emhsoft.com/singularity/
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.emhsoft.com/singularity/
 COMMENT=		Endgame: Singularity game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/08/31 12:14:33 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 11:55:04 asau Exp $
 
 DISTNAME=	zombies-1.0
 PKGREVISION=	5
@@ -21,8 +21,6 @@ OWN_DIRS_PERMS+=	${SAVEPATH} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 AUTO_MKDIRS=	yes
 BUILD_DEFS+=	VARBASE SCOREFILE
 MAKE_ENV+=	INSTALL_SCORE=echo SCOREFILE=${SCOREFILE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

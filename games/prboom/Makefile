@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/09/27 15:48:59 snj Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/06 11:54:50 asau Exp $
 
 DISTNAME=	prboom-2.5.0
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom/}
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://prboom.sourceforge.net/
 COMMENT=	Multiplayer-capable and modified version of DOOM
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-waddir=${PREFIX}/share/doom

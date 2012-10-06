@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/06/04 09:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 11:54:44 asau Exp $
 #
 
 DISTNAME=		kapooka_0.2
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kapooka.sourceforge.net/
 COMMENT=		Puzzle game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/kapooka
 USE_TOOLS+=		gmake

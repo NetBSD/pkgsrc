@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/05/20 00:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/06 11:54:41 asau Exp $
 
 DISTNAME=	gnuchess-5.07
 PKGREVISION=	4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.gnu.org/software/chess/chess.html
 COMMENT=	GNU chess engine
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	flex gmake
