@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3147 2012/10/06 14:07:33 alnsn Exp $
+$NetBSD: CHANGES-2012,v 1.3148 2012/10/06 16:28:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/aranym to 0.9.14 [ryoon 2012-10-06]
 	Updated pkgtools/url2pkg to 2.16 [ryoon 2012-10-06]
 	Updated devel/valgrind to 3.8.1 [alnsn 2012-10-06]
+	Updated lang/ruby193-base to 1.9.3p194nb3 [taca 2012-10-06]
