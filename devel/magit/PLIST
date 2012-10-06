@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/06 22:04:02 jmmv Exp $
+${EMACS_LISPPREFIX}/magit-bisect.el
+${EMACS_LISPPREFIX}/magit-bisect.elc
+${EMACS_LISPPREFIX}/magit-blame.el
+${EMACS_LISPPREFIX}/magit-blame.elc
+${EMACS_LISPPREFIX}/magit-key-mode.el
+${EMACS_LISPPREFIX}/magit-key-mode.elc
+${EMACS_LISPPREFIX}/magit-stgit.el
+${EMACS_LISPPREFIX}/magit-stgit.elc
+${EMACS_LISPPREFIX}/magit-svn.el
+${EMACS_LISPPREFIX}/magit-svn.elc
+${EMACS_LISPPREFIX}/magit-topgit.el
+${EMACS_LISPPREFIX}/magit-topgit.elc
+${EMACS_LISPPREFIX}/magit-wip.el
+${EMACS_LISPPREFIX}/magit-wip.elc
+${EMACS_LISPPREFIX}/magit.el
+${EMACS_LISPPREFIX}/magit.elc
+${EMACS_LISPPREFIX}/rebase-mode.el
+${EMACS_LISPPREFIX}/rebase-mode.elc
+info/magit.info

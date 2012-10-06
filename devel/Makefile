@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1653 2012/10/06 16:44:03 taca Exp $
+# $NetBSD: Makefile,v 1.1654 2012/10/06 22:04:01 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -441,6 +441,7 @@ SUBDIR+=	lwp
 SUBDIR+=	m17n-lib
 SUBDIR+=	m4
 SUBDIR+=	mad-flute
+SUBDIR+=	magit
 SUBDIR+=	makedepend
 SUBDIR+=	makedepf90
 SUBDIR+=	maketool
