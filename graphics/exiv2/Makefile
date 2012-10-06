@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/04/26 12:41:25 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/06 14:10:48 asau Exp $
 
 DISTNAME=	exiv2-0.23
 CATEGORIES=	graphics
@@ -8,8 +8,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.exiv2.org/
 COMMENT=	Image metadata manipulation
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_REQD+=		3.3
 USE_LANGUAGES=		c c++

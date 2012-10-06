@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:56:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/06 14:11:26 asau Exp $
 
 DISTNAME=	xplot-0.90.7.1
 PKGREVISION=	7
@@ -8,8 +8,6 @@ HOMEPAGE=	http://www.xplot.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Plotting program, most often used in conjunction with tcptrace
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes

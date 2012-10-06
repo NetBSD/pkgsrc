@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/12/18 13:15:10 reinoud Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 14:11:03 asau Exp $
 #
 
 DISTNAME=	lib3ds-1.2.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lib3ds/}
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://lib3ds.sourceforge.net/
 COMMENT=	3D Studio File Format Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

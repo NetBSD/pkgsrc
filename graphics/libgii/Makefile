@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/01/30 14:54:48 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/06 14:11:04 asau Exp $
 
 DISTNAME=	libgii-1.0.2.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ggi-project.org/
 COMMENT=	General Input Interface - API for all possible input sources
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes

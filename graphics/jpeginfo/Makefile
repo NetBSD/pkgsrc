@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/23 11:44:40 dsainty Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 14:11:01 asau Exp $
 
 DISTNAME=	jpeginfo-1.6.1
 CATEGORIES=	graphics
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kokkonen.net/tjko/projects.html
 COMMENT=	Generates informative listings from JPEG files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		autoconf
 GNU_CONFIGURE=		yes

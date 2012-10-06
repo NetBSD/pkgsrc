@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/02/03 23:24:54 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:10:48 asau Exp $
 
 DISTNAME=	fbm-1.2
 CATEGORIES=	graphics converters
@@ -7,8 +7,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fuzzy Pixmap Manipulation utilities
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 INSTALL_MAKE_FLAGS+=	BIN=${DESTDIR}${PREFIX}/bin/ \

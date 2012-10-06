@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/02 17:11:10 tron Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/06 14:10:51 asau Exp $
 
 DISTNAME=	gegl-0.2.0
 PKGREVISION=	5
@@ -10,8 +10,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gegl.org/
 COMMENT=	Graph based image processing framework
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

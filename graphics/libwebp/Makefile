@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/18 01:34:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:11:06 asau Exp $
 #
 
 DISTNAME=	libwebp-0.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/speed/webp/index.html
 COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

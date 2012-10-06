@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/02 17:11:08 tron Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:10:44 asau Exp $
 #
 
 DISTNAME=	mx-1.0.4
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blogs.gnome.org/thos/2010/05/20/mx-toolkit-1-0/
 COMMENT=	Clutter-based widget set
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

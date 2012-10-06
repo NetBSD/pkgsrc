@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:56:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 14:11:19 asau Exp $
 #
 
 DISTNAME=	ristretto-0.0.22
@@ -10,8 +10,6 @@ MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://goodies.xfce.org/projects/applications/ristretto
 COMMENT=	Xfce image viewer
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/11/01 06:01:43 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/06 14:11:14 asau Exp $
 #
 
 DISTNAME=	png2html-1.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.engr.mun.ca/~holden/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.engr.mun.ca/~holden/png2html.html
 COMMENT=	Takes a PNG image and transforms it to a web page
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FIX_RPATH+=	CFLAGS
 CFLAGS+=	-L${BUILDLINK_PREFIX.gd}/lib \

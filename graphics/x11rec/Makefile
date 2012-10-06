@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/09/13 14:39:30 taca Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:25 asau Exp $
 #
 
 DISTNAME=	x11rec-0.3
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://0xcc.net/x11rec/
 COMMENT=	Very ad hoc X11 recorder which create a movie
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
