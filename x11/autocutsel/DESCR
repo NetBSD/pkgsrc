@@ -1,0 +1,6 @@
+The autocutsel utility synchronizes the X11 cutbuffer and CLIPBOARD
+selection, the two copy/paste buffers mainly used by X applications.
+It also unifies "clipboards" between VNC servers and Windows.
+
+The autocutsel tool performs the synchronization continuously.
+The cutsel tool performs the synchronization whenever it is run.
