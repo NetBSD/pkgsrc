@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.13 2012/10/01 10:45:16 ryoon Exp $
+# $NetBSD: extract,v 1.14 2012/10/06 22:24:45 ryoon Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -119,6 +119,7 @@ set -u		# treat undefined variables as errors
 : ${UNZIP_CMD:=unzip}
 : ${UNZOO:=unzoo}
 : ${P7ZA:="7za x"}
+: ${P7ZA_SO:="7za x -so"}
 
 : ${TMPDIR:=/tmp}
 
@@ -181,6 +182,7 @@ esac
 # Derive the compression format of the archive based on the file extension.
 case "$distfile" in
 *.gz|*.tgz|*.z)			_cformat=gzip ;;
+*.7z)				_cformat=7z ;;
 *.bz2|*.tbz|*.tbz2|*.bz)	_cformat=bzip ;;
 *.lzma)				_cformat=lzma ;;
 *.xz)				_cformat=xz ;;
@@ -194,6 +196,7 @@ ${TEST} -n "$cformat" || cformat="$_cformat"
 #
 case "$cformat" in
 gzip|compress)	decompress_cat="${GZCAT}" ;;
+7z)		decompress_cat="${P7ZA_SO}" ;;
 bzip)		decompress_cat="${BZCAT}" ;;
 lzma)		decompress_cat="${XZCAT}" ;;
 xz)		decompress_cat="${XZCAT}" ;;
@@ -203,7 +206,7 @@ esac
 
 # Derive the format of the archive based on the file extension.
 case "$distfile" in
-*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz)
+*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z)
 		_format=tar ;;
 *.cpio|*.cpio.gz|*.cpio.bz2)
 		_format=cpio ;;
