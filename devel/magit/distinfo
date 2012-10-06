@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/06 22:04:02 jmmv Exp $
+
+SHA1 (magit-1.2.0.tar.gz) = b4d9531e9f66202f8a74cde38ad53ca1a6b4516d
+RMD160 (magit-1.2.0.tar.gz) = 6afbfd0c29b351e7c78c39ebaf74408b3a10a02d
+Size (magit-1.2.0.tar.gz) = 163318 bytes
