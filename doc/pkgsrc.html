@@ -969,7 +969,7 @@ and dashes.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="getting-via-cvs"></a>2.1.2. Via anonymous CVS</h3></div></div></div>
 <p>To fetch a specific pkgsrc stable branch, run:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r <em class="replaceable"><code>pkgsrc-20xxQy</code></em> -P pkgsrc</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r <em class="replaceable"><code>pkgsrc-20xxQy</code></em> -P pkgsrc</code></strong>
 </pre>
 <p>Where <em class="replaceable"><code>pkgsrc-20xxQy</code></em> is the stable 
 	branch to be checked out, for example, <span class="quote">&#8220;<span class="quote">pkgsrc-2009Q1</span>&#8221;</span></p>
@@ -977,11 +977,11 @@ and dashes.</p>
 	in your <code class="filename">/usr/</code> directory and all the package source 
 	will be stored under <code class="filename">/usr/pkgsrc/</code>.</p>
 <p>To fetch the pkgsrc current branch, run:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</code></strong>
 </pre>
 <p>Refer to the <a class="ulink" href="http://www.NetBSD.org/mirrors/" target="_top">list of available mirrors</a> to choose a faster CVS mirror, if needed.</p>
 <p>If you get error messages from <code class="literal">rsh</code>, you need to set CVS_RSH variable. E.g.:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; env CVS_RSH=ssh cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; env CVS_RSH=ssh cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</code></strong>
 </pre>
 <p>Refer to documentation on your command shell how to set CVS_RSH=ssh permanently.
 	For Bourne shells, you can set it in your <code class="filename">.profile</code>
@@ -998,7 +998,7 @@ export CVS_RSH
 	You can find an explanation of this file in the CVS documentation.</p>
 <pre class="programlisting">
 # recommended CVS configuration file from the pkgsrc guide
-cvs -q -z3
+cvs -q -z2
 checkout -P
 update -dP
 diff -upN
@@ -3953,7 +3953,7 @@ the software is known to work with, from the most recent to the older
 one, e.g.
 </p>
 <pre class="programlisting">
-PYTHON_VERSIONS_ACCEPTED=       25 24
+PYTHON_VERSIONS_ACCEPTED=       31 27 26
 </pre>
 <p>
 If the packaged software is a Python module, include
@@ -7554,7 +7554,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="idm19886272"></a><dl>
+<a name="idm19312832"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7571,7 +7571,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm19885888"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm19312448"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7581,7 +7581,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm19884864"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm19311424"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7592,7 +7592,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm19883840"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm19310400"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9597,7 +9597,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="idm21449408"></a><dl>
+<a name="idm20875968"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9640,7 +9640,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm21449024"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm20875584"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9656,7 +9656,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm21444928"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm20871488"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9674,7 +9674,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm21440576"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm20867136"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9692,7 +9692,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm21436352"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm20862912"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9705,7 +9705,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm21434176"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm20860736"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9721,7 +9721,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm21431104"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm20857664"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9745,7 +9745,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm21423040"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm20849600"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9770,7 +9770,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm21411008"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm20837568"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9818,7 +9818,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm21396288"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm20822848"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
