@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.35 2012/10/01 10:45:16 ryoon Exp $
+# $NetBSD: extract.mk,v 1.36 2012/10/06 22:16:08 ryoon Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -187,7 +187,7 @@ _EXTRACT_ENV+=	${TOOLS_UNRAR:D		UNRAR=${TOOLS_UNRAR:Q}}
 _EXTRACT_ENV+=	${TOOLS_UNZIP_CMD:D	UNZIP_CMD=${TOOLS_UNZIP_CMD:Q}}
 _EXTRACT_ENV+=	${TOOLS_UNZOO:D		UNZOO=${TOOLS_UNZOO:Q}}
 _EXTRACT_ENV+=	${TOOLS_XZCAT:D		XZCAT=${TOOLS_XZCAT:Q}}
-_EXTRACT_ENV+= ${TOOLS_7ZA:D		P7ZA=${TOOLS_7ZA:Q}}
+_EXTRACT_ENV+=	${TOOLS_7ZA:D		P7ZA=${TOOLS_7ZA:Q}}
 _EXTRACT_ENV+=	${EXTRACT_ENV}
 
 .if !empty(EXTRACT_USING:Mbsdtar)
