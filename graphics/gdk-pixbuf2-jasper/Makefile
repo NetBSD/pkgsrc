@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/15 10:04:51 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:10:50 asau Exp $
 #
 
 DISTNAME=	gdk-pixbuf-2.26.3
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/gdk-pixbuf2/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/gdk-pixbuf2/patches
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libtiff --without-libjpeg --without-libpng

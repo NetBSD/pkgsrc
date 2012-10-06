@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/05/16 13:18:59 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 14:11:13 asau Exp $
 
 DISTNAME=	Image_Color-1.0.4
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/Image_Color/
 COMMENT=	Manage and handles color data and conversions
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-pear-Image_Color-[0-9]*
 

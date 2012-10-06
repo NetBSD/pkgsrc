@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2011/11/29 17:55:07 drochner Exp $
+# $NetBSD: Makefile,v 1.67 2012/10/06 14:11:25 asau Exp $
 
 DISTNAME=	xfig.3.2.5b.full
 PKGNAME=	xfig-3.2.5b
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfig.org/
 COMMENT=	CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	transfig>=3.2.4:../../print/transfig
 # if we're using Xaw3d, then we need 1.5E or newer since using that

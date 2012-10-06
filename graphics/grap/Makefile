@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:17 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:10:57 asau Exp $
 
 DISTNAME=	grap-1.41
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.lunabase.org/~faber/Vault/software/grap/
 COMMENT=	Language for typesetting graphs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

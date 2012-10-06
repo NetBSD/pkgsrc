@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/02 17:11:06 tron Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/06 14:10:41 asau Exp $
 #
 
 DISTNAME=		aqsis-1.8.1
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.aqsis.org/
 COMMENT=		Renderman clone
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

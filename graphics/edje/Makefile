@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/05 17:35:03 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:10:46 asau Exp $
 #
 
 DISTNAME=	edje-1.1.0
@@ -10,7 +10,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 # epp binary is GPL
 LICENSE=		2-clause-bsd AND gnu-gpl-v2
 

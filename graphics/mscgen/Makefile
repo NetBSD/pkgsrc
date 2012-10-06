@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/01 06:01:41 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 14:11:07 asau Exp $
 #
 
 DISTNAME=		mscgen-src-0.20
@@ -11,8 +11,6 @@ MAINTAINER=		jan.m.danielsson@gmail.com
 HOMEPAGE=		http://www.mcternan.me.uk/mscgen/
 COMMENT=		Tool for drawing call sequence graphs
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

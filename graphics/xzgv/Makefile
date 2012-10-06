@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/10/02 17:11:20 tron Exp $
+# $NetBSD: Makefile,v 1.55 2012/10/06 14:11:26 asau Exp $
 #
 
 DISTNAME=	xzgv-0.9.1
@@ -10,8 +10,6 @@ MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/xzgv
 COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 USE_TOOLS+=		gmake makeinfo pkg-config gawk
