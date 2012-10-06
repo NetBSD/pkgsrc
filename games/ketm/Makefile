@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/05/16 15:16:09 marino Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/06 11:54:44 asau Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.t-online.de/home/haslbeck/ketm/
 COMMENT=	Old-school 2d-scrolling shooter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	ketm
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2011/06/01 11:20:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2012/10/06 11:54:47 asau Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -21,7 +21,6 @@ HOMEPAGE=		http://www.nethack.org/
 LICENSE=		nethack-license
 
 MAKE_JOBS_SAFE=		no
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if !defined(META_PACKAGE)
 

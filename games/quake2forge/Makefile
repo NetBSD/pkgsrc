@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/04/28 13:15:33 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/06 11:54:51 asau Exp $
 #
 
 DISTNAME=	quake2-0.3
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.quakeforge.net/
 COMMENT=	Enhanced Quake II engine
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/06 11:54:31 asau Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -13,7 +13,6 @@ COMMENT=		Virtual reality 3D GL game for X11
 
 NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 SETGIDGAME=		yes
 
 WRKSRC=			${WRKDIR}/battalionSource
