@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 12:13:16 alnsn Exp $
 #
 
-DISTNAME=		valgrind-2.4.0
-PKGREVISION=		2
+DISTNAME=		valgrind-3.8.1
 CATEGORIES=		devel
 MASTER_SITES=		http://valgrind.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		alnsn@NetBSD.org
 HOMEPAGE=		http://valgrind.org/downloads/
 COMMENT=		Debugging and profiling tools
 LICENSE=		gnu-gpl-v2
