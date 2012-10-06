@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3138 2012/10/06 09:38:35 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3139 2012/10/06 09:44:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4881,4 +4881,23 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/gupnp-av to 0.10.3 [ryoon 2012-10-06]
 	Updated net/gupnp-igd to 0.2.0 [ryoon 2012-10-06]
 	Updated net/gupnp-tools to 0.8.4 [ryoon 2012-10-06]
+	Updated net/libnice to 0.1.2nb4 [ryoon 2012-10-06]
+	Updated multimedia/farsight2 to 0.0.26nb12 [ryoon 2012-10-06]
+	Updated chat/telepathy-farsight to 0.0.16nb12 [ryoon 2012-10-06]
+	Updated chat/libpurple to 2.10.6nb4 [ryoon 2012-10-06]
+	Updated chat/pidgin to 2.10.6nb3 [ryoon 2012-10-06]
+	Updated chat/empathy to 2.34.0nb19 [ryoon 2012-10-06]
+	Updated chat/finch to 2.10.6nb4 [ryoon 2012-10-06]
+	Updated chat/msn-pecan to 0.0.18nb19 [ryoon 2012-10-06]
+	Updated chat/pidgin-facebookchat to 1.69nb12 [ryoon 2012-10-06]
+	Updated chat/pidgin-icb to 20070505nb23 [ryoon 2012-10-06]
+	Updated chat/pidgin-latex to 1.2.1nb23 [ryoon 2012-10-06]
+	Updated chat/pidgin-libnotify to 0.14nb21 [ryoon 2012-10-06]
+	Updated chat/pidgin-otr to 4.0.0nb5 [ryoon 2012-10-06]
+	Updated chat/pidgin-sametime to 2.10.6nb4 [ryoon 2012-10-06]
+	Updated chat/pidgin-silc to 2.10.6nb4 [ryoon 2012-10-06]
+	Updated chat/spectrum to 1.4.8nb13 [ryoon 2012-10-06]
+	Updated chat/telepathy-gabble to 0.11.10nb9 [ryoon 2012-10-06]
+	Updated net/gst-plugins0.10-libnice to 0.1.2nb4 [ryoon 2012-10-06]
+	Updated sysutils/nautilus-sendto to 2.32.0nb18 [ryoon 2012-10-06]
 	Updated net/gupnp-igd to 0.2.1 [ryoon 2012-10-06]
