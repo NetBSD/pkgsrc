@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 12:55:09 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/06 12:46:12 ryoon Exp $
 #
 
-DISTNAME=			aranym_0.9.13.orig
+DISTNAME=			aranym_0.9.14.orig
 PKGNAME=			${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=			2
 CATEGORIES=			emulators
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=aranym/}
-SITES.emutos-512k-0.8.6.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
-DISTFILES=			${DEFAULT_DISTFILES} emutos-512k-0.8.6.zip
+SITES.emutos-512k-0.8.7.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
+DISTFILES=			${DEFAULT_DISTFILES} emutos-512k-0.8.7.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
@@ -26,7 +25,7 @@ MANCOMPRESSED=		yes
 CONFIGURE_ARGS+=	--enable-fullmmu
 CONFIGURE_ARGS+=	--enable-atc=full
 
-EMUTOS_WRKSRC=		${WRKDIR}/emutos-512k-0.8.6
+EMUTOS_WRKSRC=		${WRKDIR}/emutos-512k-0.8.7
 EMUTOS_DOC_DIR=		${PREFIX}/share/doc/aranym/emutos
 EMUTOS_ROM_DIR=		${PREFIX}/share/aranym
 
