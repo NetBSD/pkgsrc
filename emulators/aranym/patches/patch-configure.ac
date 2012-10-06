@@ -1,17 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.1 2012/04/15 02:05:28 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2012/10/06 12:46:12 ryoon Exp $
 
---- configure.ac.orig	2012-03-23 09:33:34.000000000 +0000
+--- configure.ac.orig	2012-07-27 18:51:58.000000000 +0000
 +++ configure.ac
-@@ -193,7 +193,7 @@ case "$host_os" in
-   linux*)	OS_TYPE=linux;;
-   openbsd*)	OS_TYPE=openbsd;;
-   netbsd*)	OS_TYPE=netbsd;;
--  freebsd*|kfreebsd*-gnu)	OS_TYPE=freebsd;;
-+  freebsd*|dragonfly*|kfreebsd*-gnu)	OS_TYPE=freebsd;;
-   solaris*)	OS_TYPE=solaris;;
-   darwin*)	OS_TYPE=darwin;;
-   cygwin*)	OS_TYPE=cygwin;;
-@@ -269,10 +269,13 @@ AC_CHECK_HEADERS(termios.h termio.h allo
+@@ -277,10 +277,13 @@ AC_CHECK_HEADERS(termios.h termio.h allo
  AC_CHECK_HEADERS(sys/types.h sys/stat.h sys/vfs.h utime.h sys/param.h)
  AC_CHECK_HEADERS(sys/mount.h types.h stat.h)
  AC_CHECK_HEADERS(sys/socket.h)
@@ -24,33 +15,24 @@ $NetBSD: patch-configure.ac,v 1.1 2012/04/15 02:05:28 ryoon Exp $
 +#include <sys/types.h>
 +#endif
  ])
+ AC_CHECK_HEADERS(net/bpf.h)
  
- dnl Checks for typedefs, structures, and compiler characteristics.
-@@ -342,7 +345,7 @@ case "$host_os" in
-   irix*)
-     EXTRASYSSRCS="Unix/parameters_unix.cpp Unix/irix/unaligned.c Unix/host_filesys_unix.cpp"
-     ;;
--  freebsd*|kfreebsd*-gnu)
-+  freebsd*|dragonfly*|kfreebsd*-gnu)
-     AC_DEFINE([HAVE_O_FSYNC], 1, [Define if you want to use FreeBSD's imitation of O_SYNC])
-     EXTRASYSSRCS="Unix/parameters_unix.cpp Unix/host_filesys_unix.cpp"
-     ;;
-@@ -431,8 +434,14 @@ else
-       #include <linux/if_tun.h>
-       #endif
-       #if defined(HAVE_NET_IF_H) && defined(HAVE_NET_IF_TUN_H)
-+      #ifdef HAVE_SYS_TYPES_H
-+      #include <sys/types.h>
-+      #endif
-       #include <net/if.h>
-       #include <net/if_tun.h>
-+      #if defined(HAVE_NET_IF_TAP_H)
-+      #include <net/if_tap.h>
-+      #endif
-       #endif
-     ], [
-       struct ifreq ifr;
-@@ -1003,7 +1012,7 @@ if [[ "x$WANT_EXSIGSEGV" = "xyes" ]]; th
+@@ -437,8 +440,14 @@ AC_CACHE_CHECK([whether TUN/TAP is suppo
+     #include <linux/if_tun.h>
+     #endif
+     #if defined(HAVE_NET_IF_H) && defined(HAVE_NET_IF_TUN_H)
++    #ifdef HAVE_SYS_TYPES_H
++    #include <sys/types.h>
++    #endif
+     #include <net/if.h>
+     #include <net/if_tun.h>
++    #if defined(HAVE_NET_IF_TAP_H)
++    #include <net/if_tap.h>
++    #endif
+     #endif
+   ], [
+     struct ifreq ifr;
+@@ -1032,7 +1041,7 @@ if [[ "x$WANT_EXSIGSEGV" = "xyes" ]]; th
          AC_MSG_ERROR([Sorry, extended segfault handler not supported on your platform])
        fi
        ;;
@@ -59,7 +41,7 @@ $NetBSD: patch-configure.ac,v 1.1 2012/04/15 02:05:28 ryoon Exp $
        if [[ "x$HAVE_I386" = "xyes" ]]; then
          SYSSRCS="$SYSSRCS Unix/xbsd/sigsegv_xbsd.cpp"
        else
-@@ -1408,7 +1417,7 @@ fi
+@@ -1437,7 +1446,7 @@ fi
  dnl Check for SDL
  SDL_CFLAGS=
  SDL_LIBS=
