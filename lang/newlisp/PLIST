@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/11 13:03:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/06 10:49:42 ryoon Exp $
 bin/newlisp
 bin/${PKGNAME}
 bin/newlisp-edit
@@ -13,7 +13,6 @@ share/doc/newlisp/guiserver/guiserver.lsp.html
 share/doc/newlisp/guiserver/index.html
 share/doc/newlisp/guiserver/newlispdoc.css
 share/doc/newlisp/manual_frame.html
-share/doc/newlisp/newLISP-${PKGVERSION}-Release.html
 share/doc/newlisp/newLISPdoc.html
 share/doc/newlisp/newlisp_index.html
 share/doc/newlisp/newlisp_manual.html
@@ -45,12 +44,12 @@ share/${PKGNAME}/guiserver/textrot-demo.lsp
 share/${PKGNAME}/guiserver/uppercase.lsp
 share/${PKGNAME}/guiserver/widgets-demo.lsp
 share/${PKGNAME}/guiserver/word-count.lsp
-share/${PKGNAME}/init.lsp.example
 share/${PKGNAME}/modules/canvas.lsp
 share/${PKGNAME}/modules/cgi.lsp
 share/${PKGNAME}/modules/crypto.lsp
 share/${PKGNAME}/modules/ftp.lsp
 share/${PKGNAME}/modules/gmp.lsp
+share/${PKGNAME}/modules/gsl.lsp
 share/${PKGNAME}/modules/infix.lsp
 share/${PKGNAME}/modules/json.lsp
 share/${PKGNAME}/modules/macro.lsp
