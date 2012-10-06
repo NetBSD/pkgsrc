@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.29 2012/02/02 00:39:23 asau Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.30 2012/10/06 08:16:43 jnemeth Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -76,7 +76,7 @@ and dashes.</para>
 
 <para>To fetch a specific pkgsrc stable branch, run:</para>
 
-<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r <replaceable>pkgsrc-20xxQy</replaceable> -P pkgsrc</userinput>
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r <replaceable>pkgsrc-20xxQy</replaceable> -P pkgsrc</userinput>
 </screen>
 
 	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the stable 
@@ -88,7 +88,7 @@ and dashes.</para>
 
 <para>To fetch the pkgsrc current branch, run:</para>
 
-<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
 </screen>
 
 	<para>Refer to the <ulink url="http://www.NetBSD.org/mirrors/">list of available mirrors</ulink> to choose a faster CVS mirror, if needed.</para>
@@ -96,7 +96,7 @@ and dashes.</para>
 <!-- FIXME: All this CVS magic should move into appendix or so. -->
 	<para>If you get error messages from <literal>rsh</literal>, you need to set CVS_RSH variable. E.g.:</para>
 
-<screen>&uprompt; <userinput>cd /usr &amp;&amp; env CVS_RSH=ssh cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
+<screen>&uprompt; <userinput>cd /usr &amp;&amp; env CVS_RSH=ssh cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
 </screen>
 
 	<para>Refer to documentation on your command shell how to set CVS_RSH=ssh permanently.
@@ -118,7 +118,7 @@ export CVS_RSH
 
 <programlisting>
 # recommended CVS configuration file from the pkgsrc guide
-cvs -q -z3
+cvs -q -z2
 checkout -P
 update -dP
 diff -upN
