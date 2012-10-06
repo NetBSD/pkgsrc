@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.58 2012/10/04 07:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/06 11:06:44 adam Exp $
 
-DISTNAME=		bzr-${VER}
-PKGREVISION=		1
-CATEGORIES=		devel scm
-MASTER_SITES=		http://launchpad.net/bzr/${VER:R}/${VER}/+download/
-VER=			2.5.0
+DISTNAME=	bzr-2.5.1
+CATEGORIES=	devel scm
+MASTER_SITES=	https://launchpad.net/bzr/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
+FETCH_USING=	curl
 
-MAINTAINER=		ddeus.pkgsrc@mailnull.com
-HOMEPAGE=		http://bazaar-vcs.org/
-COMMENT=		Bazaar open source distributed version control system
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	ddeus.pkgsrc@mailnull.com
+HOMEPAGE=	http://bazaar-vcs.org/
+COMMENT=	Bazaar open source distributed version control system
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils

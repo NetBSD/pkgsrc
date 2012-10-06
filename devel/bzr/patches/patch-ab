@@ -1,9 +1,10 @@
-$NetBSD: patch-ab,v 1.9 2012/03/16 20:53:46 cheusov Exp $
+$NetBSD: patch-ab,v 1.10 2012/10/06 11:06:44 adam Exp $
 
-# Honor PKGMANDIR
+Install into PKGMANDIR
+
 --- setup.py.orig	2012-02-24 11:42:19.000000000 +0100
 +++ setup.py	2012-03-13 09:25:47.000000000 +0100
-@@ -761,7 +761,7 @@
+@@ -762,7 +762,7 @@
      if not 'bdist_egg' in sys.argv:
          # generate and install bzr.1 only with plain install, not the
          # easy_install one

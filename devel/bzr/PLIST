@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2012/03/16 20:53:45 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.36 2012/10/06 11:06:44 adam Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -214,21 +214,9 @@ ${PYSITELIB}/bzrlib/doc_generate/autodoc_man.pyo
 ${PYSITELIB}/bzrlib/doc_generate/autodoc_rstx.py
 ${PYSITELIB}/bzrlib/doc_generate/autodoc_rstx.pyc
 ${PYSITELIB}/bzrlib/doc_generate/autodoc_rstx.pyo
-${PYSITELIB}/bzrlib/doc_generate/builders/__init__.py
-${PYSITELIB}/bzrlib/doc_generate/builders/__init__.pyc
-${PYSITELIB}/bzrlib/doc_generate/builders/__init__.pyo
-${PYSITELIB}/bzrlib/doc_generate/builders/texinfo.py
-${PYSITELIB}/bzrlib/doc_generate/builders/texinfo.pyc
-${PYSITELIB}/bzrlib/doc_generate/builders/texinfo.pyo
 ${PYSITELIB}/bzrlib/doc_generate/conf.py
 ${PYSITELIB}/bzrlib/doc_generate/conf.pyc
 ${PYSITELIB}/bzrlib/doc_generate/conf.pyo
-${PYSITELIB}/bzrlib/doc_generate/writers/__init__.py
-${PYSITELIB}/bzrlib/doc_generate/writers/__init__.pyc
-${PYSITELIB}/bzrlib/doc_generate/writers/__init__.pyo
-${PYSITELIB}/bzrlib/doc_generate/writers/texinfo.py
-${PYSITELIB}/bzrlib/doc_generate/writers/texinfo.pyc
-${PYSITELIB}/bzrlib/doc_generate/writers/texinfo.pyo
 ${PYSITELIB}/bzrlib/email_message.py
 ${PYSITELIB}/bzrlib/email_message.pyc
 ${PYSITELIB}/bzrlib/email_message.pyo
@@ -1044,21 +1032,6 @@ ${PYSITELIB}/bzrlib/tests/commands/test_revert.pyo
 ${PYSITELIB}/bzrlib/tests/commands/test_update.py
 ${PYSITELIB}/bzrlib/tests/commands/test_update.pyc
 ${PYSITELIB}/bzrlib/tests/commands/test_update.pyo
-${PYSITELIB}/bzrlib/tests/doc_generate/__init__.py
-${PYSITELIB}/bzrlib/tests/doc_generate/__init__.pyc
-${PYSITELIB}/bzrlib/tests/doc_generate/__init__.pyo
-${PYSITELIB}/bzrlib/tests/doc_generate/builders/__init__.py
-${PYSITELIB}/bzrlib/tests/doc_generate/builders/__init__.pyc
-${PYSITELIB}/bzrlib/tests/doc_generate/builders/__init__.pyo
-${PYSITELIB}/bzrlib/tests/doc_generate/builders/test_texinfo.py
-${PYSITELIB}/bzrlib/tests/doc_generate/builders/test_texinfo.pyc
-${PYSITELIB}/bzrlib/tests/doc_generate/builders/test_texinfo.pyo
-${PYSITELIB}/bzrlib/tests/doc_generate/writers/__init__.py
-${PYSITELIB}/bzrlib/tests/doc_generate/writers/__init__.pyc
-${PYSITELIB}/bzrlib/tests/doc_generate/writers/__init__.pyo
-${PYSITELIB}/bzrlib/tests/doc_generate/writers/test_texinfo.py
-${PYSITELIB}/bzrlib/tests/doc_generate/writers/test_texinfo.pyc
-${PYSITELIB}/bzrlib/tests/doc_generate/writers/test_texinfo.pyo
 ${PYSITELIB}/bzrlib/tests/fake_command.py
 ${PYSITELIB}/bzrlib/tests/fake_command.pyc
 ${PYSITELIB}/bzrlib/tests/fake_command.pyo
@@ -2449,6 +2422,7 @@ share/locale/ar/LC_MESSAGES/bzr.mo
 share/locale/ast/LC_MESSAGES/bzr.mo
 share/locale/bs/LC_MESSAGES/bzr.mo
 share/locale/ca/LC_MESSAGES/bzr.mo
+share/locale/cs/LC_MESSAGES/bzr.mo
 share/locale/de/LC_MESSAGES/bzr.mo
 share/locale/en_AU/LC_MESSAGES/bzr.mo
 share/locale/en_GB/LC_MESSAGES/bzr.mo
@@ -2456,9 +2430,12 @@ share/locale/es/LC_MESSAGES/bzr.mo
 share/locale/fo/LC_MESSAGES/bzr.mo
 share/locale/fr/LC_MESSAGES/bzr.mo
 share/locale/gl/LC_MESSAGES/bzr.mo
+share/locale/he/LC_MESSAGES/bzr.mo
 share/locale/it/LC_MESSAGES/bzr.mo
 share/locale/ja/LC_MESSAGES/bzr.mo
 share/locale/ms/LC_MESSAGES/bzr.mo
+share/locale/my/LC_MESSAGES/bzr.mo
+share/locale/nb/LC_MESSAGES/bzr.mo
 share/locale/nl/LC_MESSAGES/bzr.mo
 share/locale/oc/LC_MESSAGES/bzr.mo
 share/locale/pl/LC_MESSAGES/bzr.mo
@@ -2466,5 +2443,7 @@ share/locale/pt_BR/LC_MESSAGES/bzr.mo
 share/locale/ro/LC_MESSAGES/bzr.mo
 share/locale/ru/LC_MESSAGES/bzr.mo
 share/locale/sco/LC_MESSAGES/bzr.mo
+share/locale/sv/LC_MESSAGES/bzr.mo
 share/locale/tr/LC_MESSAGES/bzr.mo
 share/locale/ug/LC_MESSAGES/bzr.mo
+share/locale/vi/LC_MESSAGES/bzr.mo
