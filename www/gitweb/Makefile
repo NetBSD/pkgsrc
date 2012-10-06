@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 18:28:13 adam Exp $
 
 .include "../../devel/scmgit/Makefile.version"
 
 DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -16,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
 DEPENDS+=	scmgit-base>=${GIT_VERSION}:../../devel/scmgit-base
+DEPENDS+=	p5-Time-HiRes>=1.9725:../../time/p5-Time-HiRes
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/scmgit-base/distinfo
 
