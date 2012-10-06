@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 17:11:21 tron Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 14:25:12 asau Exp $
 #
 
 DISTNAME=	ibus-t9-2.1.0.20100601
@@ -12,8 +12,6 @@ COMMENT=	IBus T9 Input Method
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

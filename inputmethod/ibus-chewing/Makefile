@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/02 17:11:21 tron Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/06 14:25:11 asau Exp $
 #
 
 DISTNAME=	ibus-chewing-1.4.2-Source
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	Chewing engine for IBus input platform
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 

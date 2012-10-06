@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/12/17 10:57:56 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 14:25:18 asau Exp $
 
 DISTNAME=	skkinput-2.06.4
 CATEGORIES=	japanese inputmethod
@@ -8,8 +8,6 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://skkinput2.sourceforge.jp/
 COMMENT=	X11 frontend for SKK
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	IPV6_READY
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/10 12:43:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:25:10 asau Exp $
 #
 
 DISTNAME=	dbskkd-cdb-2.00
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://github.com/jj1bdx/dbskkd-cdb
 COMMENT=	SKK dictionary server based on cdb
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	libexec \
