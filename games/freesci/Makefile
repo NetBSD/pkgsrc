@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/12/09 14:36:34 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/06 11:54:39 asau Exp $
 #
 
 DISTNAME=		freesci-0.3.5
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www-plan.cs.colorado.edu/reichenb/freesci/
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://freesci.linuxgames.com/
 COMMENT=		Interpreter for Sierra On-Line's SCI games
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

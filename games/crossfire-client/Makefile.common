@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/04/01 15:31:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/10/06 11:54:34 asau Exp $
 # used by games/crossfire-client/Makefile
 # used by games/crossfire-client-gtk/Makefile
 # used by games/crossfire-client-gtk2/Makefile
@@ -14,8 +14,6 @@ CROSSFIRE_VERSION=	1.11.0
 
 DISTINFO_FILE=		${.CURDIR}/../../games/crossfire-client/distinfo
 PATCHDIR=		${.CURDIR}/../../games/crossfire-client/patches
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes

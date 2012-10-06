@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/09 12:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/06 11:54:31 asau Exp $
 #
 
 DISTNAME=	blindmine-0.3-src
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	fox9@netb.co.kr
 HOMEPAGE=	http://blindmine.kldp.net/
 COMMENT=	Minesweeper clone that you can play with your eyes closed
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_CONFIGURE=	yes

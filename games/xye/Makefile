@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/01/28 11:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/06 11:55:04 asau Exp $
 #
 
 DISTNAME=	xye-0.9.1
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_NEW:=xye/xye/0.9.1/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xye.sourceforge.net/
 COMMENT=	Kye clone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xye-0.9.1
 GNU_CONFIGURE=	yes

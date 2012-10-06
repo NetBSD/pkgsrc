@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/07/08 17:17:48 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 11:55:01 asau Exp $
 #
 
 DISTNAME=	xgospel-1.12d
@@ -9,8 +9,6 @@ MASTER_SITES=	http://gailly.net/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gailly.net/go.html
 COMMENT=	X11 based IGS client for online "go" playing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
