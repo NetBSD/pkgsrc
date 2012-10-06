@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/02 11:20:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/06 08:14:20 ryoon Exp $
 bin/gupnp-binding-tool
 include/gupnp-1.0/libgupnp/gupnp-context-manager.h
 include/gupnp-1.0/libgupnp/gupnp-context.h
@@ -43,7 +43,6 @@ share/gtk-doc/html/gupnp/gupnp-Error-codes.html
 share/gtk-doc/html/gupnp/gupnp-Special-UPnP-types.html
 share/gtk-doc/html/gupnp/gupnp-binding-tool.html
 share/gtk-doc/html/gupnp/gupnp-gupnp-service-introspection.html
-share/gtk-doc/html/gupnp/gupnp.devhelp
 share/gtk-doc/html/gupnp/gupnp.devhelp2
 share/gtk-doc/html/gupnp/home.png
 share/gtk-doc/html/gupnp/index.html
