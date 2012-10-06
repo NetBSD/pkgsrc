@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3140 2012/10/06 10:50:19 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3141 2012/10/06 11:07:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4902,3 +4902,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/nautilus-sendto to 2.32.0nb18 [ryoon 2012-10-06]
 	Updated net/gupnp-igd to 0.2.1 [ryoon 2012-10-06]
 	Updated lang/newlisp to 10.4.4 [ryoon 2012-10-06]
+	Updated devel/bzr to 2.5.1 [adam 2012-10-06]
