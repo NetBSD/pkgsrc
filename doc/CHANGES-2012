@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3137 2012/10/06 08:21:29 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3138 2012/10/06 09:38:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/gupnp-av to 0.10.3 [ryoon 2012-10-06]
 	Updated net/gupnp-igd to 0.2.0 [ryoon 2012-10-06]
 	Updated net/gupnp-tools to 0.8.4 [ryoon 2012-10-06]
+	Updated net/gupnp-igd to 0.2.1 [ryoon 2012-10-06]
