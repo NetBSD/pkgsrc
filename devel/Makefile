@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1652 2012/09/30 22:07:01 pettai Exp $
+# $NetBSD: Makefile,v 1.1653 2012/10/06 16:44:03 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1579,6 +1579,7 @@ SUBDIR+=	tmake
 SUBDIR+=	tolua++
 SUBDIR+=	topgit
 SUBDIR+=	tpasm
+SUBDIR+=	transifex-client
 SUBDIR+=	tre
 SUBDIR+=	treecc
 SUBDIR+=	trio
