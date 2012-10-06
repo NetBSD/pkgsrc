@@ -1,20 +1,24 @@
-$NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
+$NetBSD: patch-ak,v 1.13 2012/10/06 20:44:05 prlw1 Exp $
 
---- configure.ac.orig	2012-05-01 00:06:39.000000000 +0000
+--- configure.ac.orig	2012-09-25 07:35:55.000000000 +0000
 +++ configure.ac
-@@ -852,7 +852,7 @@ int main (int argc, char **argv)
+@@ -864,7 +864,7 @@ int main (int argc, char **argv)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])
  
 -AC_MSG_CHECKING([whether using Sun Studio C compiler])
-+AC_MSG_CHECKING([whether using Sun Studio C compiler visibilily])
++AC_MSG_CHECKING([whether using Sun Studio C compiler visibility])
  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
  #else
  # include "error: this is not Sun Studio."
-@@ -1103,8 +1103,20 @@ AC_CHECK_TYPE([struct ip_mreqn], [
+@@ -1115,10 +1115,22 @@ AC_CHECK_TYPE([struct ip_mreqn], [
  
  case $host in
    *-*-solaris* )
+-     AC_DEFINE(_XOPEN_SOURCE_EXTENDED, 1, Needed to get declarations for msg_control and msg_controllen on Solaris)
+-     AC_DEFINE(_XOPEN_SOURCE,          2, Needed to get declarations for msg_control and msg_controllen on Solaris)
+-     AC_DEFINE(__EXTENSIONS__,         1, Needed to get declarations for msg_control and msg_controllen on Solaris)
+-     ;;
 +    AC_MSG_CHECKING([whether using Sun Studio C compiler with C99])
 +    AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#if defined(__STDC_VERSION__) || (__STDC_VERSION__ - 0 >= 199901L)
 +#else
@@ -25,14 +29,16 @@ $NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
 +    if test $g_have_sunstudio_c99 = yes; then
 +      AC_DEFINE(_XOPEN_SOURCE,          600, Needed to get declarations for msg_control and msg_controllen on Solaris)
 +    else
-      AC_DEFINE(_XOPEN_SOURCE_EXTENDED, 1, Needed to get declarations for msg_control and msg_controllen on Solaris)
-      AC_DEFINE(_XOPEN_SOURCE,          2, Needed to get declarations for msg_control and msg_controllen on Solaris)
++      AC_DEFINE(_XOPEN_SOURCE_EXTENDED, 1, Needed to get declarations for msg_control and msg_controllen on Solaris)
++      AC_DEFINE(_XOPEN_SOURCE,          2, Needed to get declarations for msg_control and msg_controllen on Solaris)
 +    fi
 +
-      AC_DEFINE(__EXTENSIONS__,         1, Needed to get declarations for msg_control and msg_controllen on Solaris)
-      ;;
++    AC_DEFINE(__EXTENSIONS__,         1, Needed to get declarations for msg_control and msg_controllen on Solaris)
++    ;;
  esac
-@@ -1465,11 +1477,12 @@ if test x"$glib_native_win32" = xyes; th
+ 
+ dnl
+@@ -1477,11 +1489,12 @@ if test x"$glib_native_win32" = xyes; th
    G_MODULE_LDFLAGS=
  else
    export SED
@@ -46,7 +52,7 @@ $NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1530,13 +1543,13 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
+@@ -1542,13 +1555,13 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -63,10 +69,10 @@ $NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
  	AC_CACHE_CHECK([for RTLD_GLOBAL brokenness],
  		glib_cv_rtldglobal_broken,[
  		AC_TRY_RUN([
-@@ -1599,6 +1612,38 @@ dnl *** check for having dlerror()
+@@ -1611,6 +1624,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
- fi
+ ])
 +dnl *** check for dlopen(NULL, 0) brokenness
 +	AC_CACHE_CHECK([for dlopen(NULL, 0) brokenness],
 +		glib_cv_dlopennull_broken,[
@@ -102,7 +108,7 @@ $NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1609,7 +1654,7 @@ fi
+@@ -1621,7 +1666,7 @@ fi
  
  AC_MSG_CHECKING(for the suffix of module shared libraries)
  export SED
@@ -111,16 +117,15 @@ $NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -1628,6 +1673,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
+@@ -1640,6 +1685,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
 +AC_SUBST(G_MODULE_BROKEN_DLOPEN_NULL)
-+
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -1995,22 +2042,8 @@ if test x"$have_threads" = xposix; then
+@@ -2010,22 +2056,8 @@ AS_IF([ test x"$have_threads" = xposix],
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
@@ -144,8 +149,8 @@ $NetBSD: patch-ak,v 1.12 2012/05/04 10:22:08 obache Exp $
 +      G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
         ;;
    esac
- fi
-@@ -2301,6 +2334,7 @@ case $host in
+ ])
+@@ -2311,6 +2343,7 @@ case $host in
      ;;
    *-*-openbsd*)
      LDFLAGS="$LDFLAGS -pthread"
