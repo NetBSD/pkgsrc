@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/05 15:29:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/06 12:05:24 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -31,7 +31,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-3.7.1.jar
+share/tomcat/lib/ecj-3.7.2.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -185,6 +185,7 @@ share/tomcat/webapps/docs/tribes/setup.html
 share/tomcat/webapps/docs/tribes/status.html
 share/tomcat/webapps/docs/tribes/transport.html
 share/tomcat/webapps/docs/virtual-hosting-howto.html
+share/tomcat/webapps/docs/web-socket-howto.html
 share/tomcat/webapps/docs/windows-auth-howto.html
 share/tomcat/webapps/docs/windows-service-howto.html
 share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.class
@@ -296,6 +297,28 @@ share/tomcat/webapps/examples/WEB-INF/classes/util/HTMLFilter.class
 share/tomcat/webapps/examples/WEB-INF/classes/util/HTMLFilter.java
 share/tomcat/webapps/examples/WEB-INF/classes/validators/DebugValidator.class
 share/tomcat/webapps/examples/WEB-INF/classes/validators/DebugValidator.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/chat/ChatWebSocketServlet$1.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/chat/ChatWebSocketServlet$ChatMessageInbound.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/chat/ChatWebSocketServlet.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/chat/ChatWebSocketServlet.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoMessage$EchoMessageInbound.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoMessage.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoMessage.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoStream$1.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoStream$EchoStreamInbound.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoStream.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoStream.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Direction.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Direction.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Location$1.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Location.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Location.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Snake.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Snake.java
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeWebSocketServlet$1.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeWebSocketServlet$SnakeMessageInbound.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeWebSocketServlet.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeWebSocketServlet.java
 share/tomcat/webapps/examples/WEB-INF/jsp/applet/Clock2.java
 share/tomcat/webapps/examples/WEB-INF/jsp/debug-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp/example-taglib.tld
@@ -497,6 +520,10 @@ share/tomcat/webapps/examples/servlets/reqheaders.html
 share/tomcat/webapps/examples/servlets/reqinfo.html
 share/tomcat/webapps/examples/servlets/reqparams.html
 share/tomcat/webapps/examples/servlets/sessions.html
+share/tomcat/webapps/examples/websocket/chat.html
+share/tomcat/webapps/examples/websocket/echo.html
+share/tomcat/webapps/examples/websocket/index.html
+share/tomcat/webapps/examples/websocket/snake.html
 share/tomcat/webapps/host-manager/META-INF/context.xml
 share/tomcat/webapps/host-manager/WEB-INF/jsp/401.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp
