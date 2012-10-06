@@ -869,7 +869,7 @@ $ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz
 
 To fetch a specific pkgsrc stable branch, run:
 
-$ cd /usr && cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-20xxQy -P pkgsrc
+$ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-20xxQy -P pkgsrc
 
 Where pkgsrc-20xxQy is the stable branch to be checked out, for example, "
 pkgsrc-2009Q1"
@@ -879,14 +879,14 @@ package source will be stored under /usr/pkgsrc/.
 
 To fetch the pkgsrc current branch, run:
 
-$ cd /usr && cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
+$ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
 
 Refer to the list of available mirrors to choose a faster CVS mirror, if
 needed.
 
 If you get error messages from rsh, you need to set CVS_RSH variable. E.g.:
 
-$ cd /usr && env CVS_RSH=ssh cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
+$ cd /usr && env CVS_RSH=ssh cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
 
 Refer to documentation on your command shell how to set CVS_RSH=ssh
 permanently. For Bourne shells, you can set it in your .profile or better
@@ -903,7 +903,7 @@ headache and some bug reports, so we strongly recommend it. You can find an
 explanation of this file in the CVS documentation.
 
 # recommended CVS configuration file from the pkgsrc guide
-cvs -q -z3
+cvs -q -z2
 checkout -P
 update -dP
 diff -upN
@@ -3472,7 +3472,7 @@ If the default Python versions are not supported by the software, set the
 PYTHON_VERSIONS_ACCEPTED variable to the Python versions the software is known
 to work with, from the most recent to the older one, e.g.
 
-PYTHON_VERSIONS_ACCEPTED=       25 24
+PYTHON_VERSIONS_ACCEPTED=       31 27 26
 
 If the packaged software is a Python module, include "../../lang/python/
 extension.mk". In this case, the package directory should be called "
