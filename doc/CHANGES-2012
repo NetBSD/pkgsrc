@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3152 2012/10/06 17:57:08 christos Exp $
+$NetBSD: CHANGES-2012,v 1.3153 2012/10/06 18:31:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4918,3 +4918,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/bacula-doc to version 5.2.12 [christos 2012-10-06]
 	Added sysutils/bacula-qt-console to version 5.2.12 [christos 2012-10-06]
 	Added sysutils/bacula-wx-console to version 5.2.12 [christos 2012-10-06]
+	Updated databases/sqlite3 to 3.7.14.1 [adam 2012-10-06]
+	Updated databases/sqlite3-docs to 3.7.14.1 [adam 2012-10-06]
+	Updated databases/sqlite3-tcl to 3.7.14.1 [adam 2012-10-06]
+	Updated devel/scmgit to 1.7.12.2 [adam 2012-10-06]
+	Updated devel/scmgit-base to 1.7.12.2 [adam 2012-10-06]
+	Updated devel/scmgit-docs to 1.7.12.2 [adam 2012-10-06]
+	Updated www/gitweb to 1.7.12.2 [adam 2012-10-06]
