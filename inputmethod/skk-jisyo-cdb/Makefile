@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/21 19:54:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 14:25:18 asau Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -11,7 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/wiki/wiki.cgi?page=SKK%BC%AD%BD%F1
 COMMENT=	Dictionary collection for SKK
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}
 
 BUILD_DEPENDS+=	tinycdb-[0-9]*:../../databases/tinycdb

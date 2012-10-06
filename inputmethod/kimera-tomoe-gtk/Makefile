@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 17:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:25:13 asau Exp $
 #
 
 DISTNAME=	kimera-tomoe-gtk-0.5
@@ -12,8 +12,6 @@ COMMENT=	Kimera helper program for Tomoe
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	kimera-[0-9]*:../../inputmethod/kimera
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

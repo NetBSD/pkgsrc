@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:11:22 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/06 14:25:13 asau Exp $
 #
 
 DISTNAME=	kimera-2.11
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://kimera.sourceforge.jp/
 COMMENT=	Kanji Input MEthod for RAgamuffins
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 

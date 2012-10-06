@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/15 10:05:17 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 14:25:21 asau Exp $
 #
 
 DISTNAME=	tomoe-0.6.0
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tomoe.sourceforge.jp/
 COMMENT=	Handwriting recognition engine
 #LICENSE=	gnu-lgpl-v2.1 # AND Creative Commons Attribution-ShareAlike Licence
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

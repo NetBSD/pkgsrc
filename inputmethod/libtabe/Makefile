@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/01/18 13:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/06 14:25:14 asau Exp $
 
 DISTNAME=	libtabe-0.2.6
 PKGREVISION=	3
@@ -9,8 +9,6 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://libtabe.sourceforge.net/
 COMMENT=	Library for Chinese language processing
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

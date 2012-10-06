@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 17:11:24 tron Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/06 14:25:17 asau Exp $
 #
 
 DISTNAME=	scim-python-0.1.13rc1
@@ -14,8 +14,6 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-enchant-[0-9]*:../../textproc/py-enchant
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

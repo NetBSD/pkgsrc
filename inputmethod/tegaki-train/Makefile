@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/10 10:56:16 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 14:25:19 asau Exp $
 #
 
 DISTNAME=	tegaki-train-0.3.1
@@ -12,8 +12,6 @@ COMMENT=	Train Tegaki with your own handwriting
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tegaki-pygtk>=0.2:../../inputmethod/tegaki-pygtk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

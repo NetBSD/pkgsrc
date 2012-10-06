@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 17:11:21 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 14:25:11 asau Exp $
 #
 
 DISTNAME=	ibus-handwrite-2.1.4
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus-handwrite/
 COMMENT=	Handwrite recognizer for ibus
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	zinnia-tomoe-[0-9]*:../../inputmethod/zinnia-tomoe
 

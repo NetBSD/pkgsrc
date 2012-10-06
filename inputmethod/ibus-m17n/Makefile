@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 17:11:21 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/06 14:25:12 asau Exp $
 #
 
 DISTNAME=	ibus-m17n-1.3.4
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	M17N engine for IBus platform
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

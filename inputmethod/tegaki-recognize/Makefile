@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/10 13:04:34 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 14:25:19 asau Exp $
 #
 
 DISTNAME=	tegaki-recognize-0.3.1.2
@@ -12,8 +12,6 @@ COMMENT=	Tegaki project integration in the desktop
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tegaki-pygtk>=0.2:../../inputmethod/tegaki-pygtk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
