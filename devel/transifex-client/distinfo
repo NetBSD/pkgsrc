@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/06 16:43:37 taca Exp $
+
+SHA1 (transifex-transifex-client-0.8.0-gb001295.tar.gz) = 410430adb105cffcc73d1b093b3e0094625cf863
+RMD160 (transifex-transifex-client-0.8.0-gb001295.tar.gz) = 331aed209ee294b2e5e8e503eb1976792d691c34
+Size (transifex-transifex-client-0.8.0-gb001295.tar.gz) = 36336 bytes
