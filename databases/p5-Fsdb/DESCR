@@ -1,0 +1,23 @@
+FSDB is package of commands for manipulating flat-ASCII databases from
+shell scripts.  FSDB is useful to process medium amounts of data (with
+very little data you'd do it by hand, with megabytes you might want a
+real database).
+
+Fsdb was known as Jdb from 1991 to Oct. 2008.
+
+Fsdb is very good at doing things like:
+
+	- extracting measurements from experimental output
+	- re-examining data to address different hypotheses
+	- joining data from different experiments
+	- eliminating/detecting outliers
+	- computing statistics on data (mean, confidence intervals,
+		correlations, histograms)
+	- reformatting data for graphing programs
+
+Rather than hand-code scripts to do each special case, FSDB provides
+higher-level functions.  Although it's often easy throw together a
+custom script to do any single task, I believe that there are several
+advantages to using this library: it is higher-level than raw perl,
+control uses names intead of column numbers, it is self-documenting,
+and it is very robust (error cases, careful memory handling, etc.).
