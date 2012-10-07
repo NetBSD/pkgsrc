@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3165 2012/10/07 20:14:52 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.3166 2012/10/07 20:21:15 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4937,3 +4937,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Renamed databases/jdb to databases/p5-Fsdb [bad 2012-10-07]
 	Updated databases/p5-Fsdb to 2.26 [bad 2012-10-07]
 	Updated x11/mlterm to 3.1.4 [tsutsui 2012-10-07]
+	Updated games/onscripter to 20120926 [tsutsui 2012-10-07]
