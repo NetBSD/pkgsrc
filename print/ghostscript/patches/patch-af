@@ -1,9 +1,23 @@
-$NetBSD: patch-af,v 1.6 2010/02/23 20:31:26 drochner Exp $
+$NetBSD: patch-af,v 1.7 2012/10/07 14:19:18 mef Exp $
 
---- base/unix-dll.mak.orig	2009-10-19 20:24:53.000000000 +0000
-+++ base/unix-dll.mak
-@@ -52,12 +52,12 @@ GS_SONAME_MAJOR_MINOR=$(GS_SONAME).$(GS_
- LDFLAGS_SO=-shared -Wl,-soname=$(GS_SONAME_MAJOR)
+(From the log for revision 1.4 of print/ghostscript/patches/patch-af)
+date: 2008/11/13 17:36:54;  author: chuck;  state: Exp;  lines: +22 -4
+ghostscript has hand-rolled shared lib handling in src/unix-dll.mak
+that does not do the right thing on Darwin (where shared libs are
+created with different linking flags and use dylib rather than so
+as an extension).
+
+You need to manually reconfigure unix-dll.mak to make it work, so
+do it in hacks.mk.
+
+XXX: this still leaves the issue of libgs.so (et al.) being hardwired
+in PLIST, instead of using libgs.dylib (et al.).   i'm not sure of
+the best way to fix that.   at least it compiles now....
+
+--- base/unix-dll.mak.orig	2012-02-08 17:48:48.000000000 +0900
++++ base/unix-dll.mak	2012-04-01 10:55:27.000000000 +0900
+@@ -58,10 +58,10 @@
+ 
  
  # MacOS X
 -#GS_SOEXT=dylib
@@ -15,27 +29,19 @@ $NetBSD: patch-af,v 1.6 2010/02/23 20:31:26 drochner Exp $
 +#Darwin#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
 +#Darwin#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
  #LDFLAGS_SO=-dynamiclib -flat_namespace
--#LDFLAGS_SO=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
-+#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
+ LDFLAGS_SO_MAC=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
  #LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
- 
- GS_SO=$(BINDIR)/$(GS_SONAME)
-@@ -80,15 +80,15 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
- 
+@@ -85,11 +85,11 @@
+ # Build the small Ghostscript loaders, with Gtk+ and without
  $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
--	$(LDFLAGS) -L$(BINDIR) -l$(GS)
-+	$(LDFLAGS) -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
+-	-L$(BINDIR) -l$(GS)
++	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
  
  $(GSSOX_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
--	$(LDFLAGS) -L$(BINDIR) -l$(GS) $(SOC_LIBS)
-+	$(LDFLAGS) -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
+-	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
++	-L$(BINDIR) -l$(GS) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
  
  # ------------------------- Recursive make targets ------------------------- #
  
--SODEFS=LDFLAGS='$(LDFLAGS) $(LDFLAGS_SO)'\
-+SODEFS=LDFLAGS='$(LDFLAGS)' LDFLAGS_SO='$(LDFLAGS_SO)'\
-  GS_XE=$(BINDIR)/$(SOBINRELDIR)/$(GS_SONAME_MAJOR_MINOR)\
-  STDIO_IMPLEMENTATION=c\
-  DISPLAY_DEV=$(DD)$(SOOBJRELDIR)/display.dev\
