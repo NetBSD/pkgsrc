@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.88 2012/10/03 21:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2012/10/07 14:19:18 mef Exp $
 
-DISTNAME=	ghostscript-8.71
-PKGREVISION=	11
+DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	http://ghostscript.com/releases/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ghostscript.sourceforge.net/
@@ -13,15 +13,16 @@ COMMENT=	Postscript interpreter
 # Plus adobe verbatim for Resources/CMap.
 LICENSE=	gnu-gpl-v3
 
+.include	"Makefile.common"
+
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 USE_TOOLS+=		gmake perl:run lex pkg-config
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
@@ -32,6 +33,8 @@ CONFIGURE_ARGS+=	-with-omni=no	# otherwise pulls in libstdc++
 REPLACE_PERL+=		lib/fixmswrd.pl
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/${PKGVERSION}/Resource
+# MESSAGE file substitution
+MESSAGE_SUBST+=		GS_RESOURCEDIR=${GS_RESOURCEDIR}
 
 # XXX make sure the local jpeg headers are found before those pulled
 # in indirectly by cups bl3
@@ -69,20 +72,26 @@ CFLAGS+=		-fPIC
 BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 .endif
 
-CONFIGURE_ENV+=	LPLIBDIR=${LOCALBASE}/lib
+CONFIGURE_ENV+=	LPLIBDIR=${PREFIX}/lib
+
+.include "options.mk"
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
 #	${RM} -rf ${WRKSRC}/jasper
 	${RM} -rf ${WRKSRC}/libpng
-	${RM} -rf ${WRKSRC}/tiff
+#	${RM} -rf ${WRKSRC}/tiff
 #	${RM} -rf ${WRKSRC}/zlib
+#
+#  To allow outside customization, rename cidfmap
+#	 (if you look at inside of the file, it is logically empty)
+.if !empty(PKG_OPTIONS:Mdisable-compile-inits)
+	(cd  ${WRKSRC}/Resource/Init/; ${MV} cidfmap cidfmap.dist)
+.endif
 
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
-
-.include "options.mk"
 
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

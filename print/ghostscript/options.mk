@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.11 2010/12/23 11:44:54 dsainty Exp $
+# $NetBSD: options.mk,v 1.12 2012/10/07 14:19:18 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
-PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig
+PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
 PKG_SUGGESTED_OPTIONS=	x11 fontconfig
 
 .include "../../mk/bsd.options.mk"
+
+# (no_cidfmap)	when --disable-compile-inits selected,
+#		cidfmap is renamed to cidfmap.dist
+PLIST_VARS+=		no_cidfmap
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
@@ -13,6 +17,7 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libXext/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
 PLIST_VARS+=		cups
@@ -23,7 +28,7 @@ INSTALL_TARGET+=	install-cups
 
 CUPS_CONFDIR?=	${PKG_SYSCONFBASEDIR}/cups
 CUPS_EGDIR=	${PREFIX}/share/examples/cups
-CONF_FILES+=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
+CONF_FILES+=	${CUPS_EGDIR}/gstoraster.convs ${CUPS_CONFDIR}/gstoraster.convs
 
 SUBST_CLASSES+=		cupsetc
 SUBST_STAGE.cupsetc=	post-extract
@@ -45,4 +50,13 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../fonts/fontconfig/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-fontconfig
+CONFIGURE_ARGS+=	--disable-freetype
+.endif
+
+# Please note the same if condition is in post-extract: target in Makefile
+.if !empty(PKG_OPTIONS:Mdisable-compile-inits)
+CONFIGURE_ARGS+=        --disable-compile-inits
+PLIST.no_cidfmap=	YES
+.else
+PLIST.cidfmap=		YES
 .endif

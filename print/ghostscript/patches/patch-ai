@@ -1,8 +1,12 @@
-$NetBSD: patch-ai,v 1.4 2009/02/16 16:31:30 drochner Exp $
+$NetBSD: patch-ai,v 1.5 2012/10/07 14:19:18 mef Exp $
 
---- base/mkromfs.c.orig	2009-02-13 12:20:54.000000000 +0100
+replace BSD/Linux specific "qd" printf format specifier by "lld",
+should fix build problem on Solaris reported by Joern Clausen
+per PR pkg/40664
+
+--- base/mkromfs.c.orig 2009-02-13 12:20:54.000000000 +0100
 +++ base/mkromfs.c
-@@ -467,7 +467,7 @@ main(int argc, char *argv[])
+@@ -1033,7 +1033,7 @@
  #endif
      fprintf(out,"\n#include \"stdint_.h\"\n");
      fprintf(out,"\n#include \"time_.h\"\n\n");
@@ -10,4 +14,4 @@ $NetBSD: patch-ai,v 1.4 2009/02/16 16:31:30 drochner Exp $
 +    fprintf(out,"    time_t gs_romfs_buildtime = %lld;\n\n", (long long)time(NULL));
  
      /* process the remaining arguments (options interspersed with paths) */
-     for (; atarg < argc; atarg++) {  
+     for (; atarg < argc; atarg++) {
