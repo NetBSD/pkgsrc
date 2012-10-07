@@ -1,0 +1,4 @@
+/Ryumin-Light-EUC-H
+/EUC-H /CMap findresource
+[/Ryumin-Light /CIDFont findresource]
+composefont pop

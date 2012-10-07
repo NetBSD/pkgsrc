@@ -1,0 +1,4 @@
+% $NetBSD: cidfmap-motoya,v 1.1 2012/10/07 14:22:52 mef Exp $
+%
+/Ryumin-Light          << /FileType /TrueType /Path (%%PREFIX%%/lib/X11/fonts/TTF/MTLmr3m.ttf) /SubfontID 0 /CSI [(Japan1) 2] >> ;
+/GothicBBB-Medium      << /FileType /TrueType /Path (%%PREFIX%%/lib/X11/fonts/TTF/MTLc3m.ttf) /SubfontID 0 /CSI [(Japan1) 2] >> ;

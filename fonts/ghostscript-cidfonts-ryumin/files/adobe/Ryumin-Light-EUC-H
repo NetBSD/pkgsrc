@@ -1,0 +1,5 @@
+%% $NetBSD: Ryumin-Light-EUC-H,v 1.1 2012/10/07 14:22:52 mef Exp $
+/Ryumin-Light-EUC-H
+/EUC-H /CMap findresource
+[/WadaMin-Regular /CIDFont findresource]
+composefont pop
