@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/04/27 12:31:42 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 10:54:39 shattered Exp $
 
 PKGNAME=	java-subversion-${SVNVER}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Java bindings for Subversion
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=		no
 SHLIBTOOL_OVERRIDE=	# empty
 
 USE_LANGUAGES+=		c c++
-USE_JAVA=		yes
+USE_JAVA2=		yes
 # We might need PKG_JVM_DEFAULT/PKG_JVMS_ACCEPTED; I'm not much for Java...
 
 CONFIGURE_ARGS+=	--enable-javahl --with-jdk=${PKG_JAVA_HOME}
