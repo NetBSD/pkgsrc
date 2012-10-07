@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 11:24:41 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 12:12:53 wiz Exp $
 #
 
 DISTNAME=	libopensync-0.22
@@ -17,6 +17,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--disable-python
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
