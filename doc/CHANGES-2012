@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3163 2012/10/07 18:54:09 bad Exp $
+$NetBSD: CHANGES-2012,v 1.3164 2012/10/07 19:35:33 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4914,7 +4914,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211-translations to 201210060 [taca 2012-10-06]
 	Added devel/transifex-client version 0.8.0 [taca 2012-10-06]
 	Updated sysutils/bacula to 5.2.12 [christos 2012-10-06]
-	Updated sysutils/bacula-client to 5.2.12 [christos 2012-10-06]
+	Updated sysutils/bacula-clientonly to 5.2.12 [christos 2012-10-06]
 	Updated sysutils/bacula-doc to 5.2.12 [christos 2012-10-06]
 	Updated sysutils/bacula-qt-console to 5.2.12 [christos 2012-10-06]
 	Updated sysutils/bacula-wx-console to 5.2.12 [christos 2012-10-06]
