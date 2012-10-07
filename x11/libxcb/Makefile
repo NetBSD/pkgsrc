@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/06/03 17:29:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 22:09:47 wiz Exp $
 #
 
-DISTNAME=	libxcb-1.8.1
+DISTNAME=	libxcb-1.9
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
 CONFIGURE_ARGS+=	--disable-doxygen
