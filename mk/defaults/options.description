@@ -1,6 +1,7 @@
 aalib			Enable aalib support.
 abook			Enable abook support.
 acl			Enable POSIX ACL support.
+adobe-cidfonts		Select Adobe-fonts.
 ads			Enable Windows Active Directory support.
 agg			Enable agg support.
 alsa			Enable ALSA support.
@@ -93,6 +94,7 @@ dbh			Enable DBH support.
 dbus			Enable dbus (desktop bus) support.
 debug			Enable debugging facilities in the package.
 deliver-suid		Install deliver executable setuid root.
+disable-compile-inits	Disable compile time implicit initialization.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-qmerge1		Initial patches to address dnscache poisoning weakness.
@@ -163,6 +165,7 @@ firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
 floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
+fontconfig		Enable FONTCONFIG (fonts/fontconfig) support.
 freediameter-all-extensions	Build all extensions for freeDiameter (except test and debug).
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
@@ -243,6 +246,7 @@ inspircd-sqloper	Enable storage of oper credentials in an SQL table.
 inspircd-sqlutils	Enable developer utilities which allow certain other SQL modules to be implemented easily.
 inspircd-ziplinks	Compress data before transmitting it between servers.
 iodbc			Enable ODBC support via iODBC.
+ipa			Select IPA fonts.
 ipa-memfunc-debug	Enable ipa_memfunc debugging.
 ipa-without-autorules	Disable dynamic rules support.
 ipa-without-limits	Disable limits support.
@@ -390,6 +394,7 @@ modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
+motoya			Add motoya fonts.
 mozilla			Use mozilla as gecko rendering engine.
 mozilla-enigmail	Enable the Enigmail OpenPGP extension.
 mozilla-jemalloc	Enable building with Mozilla'a jemalloc.
@@ -588,6 +593,7 @@ ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
 uds			Enable support for Unix domain sockets.
 uim			Enable UIM support.
 uim-fep			Enable UIM FEP support.
+umefont			Add Umefont.
 unicode			Enable support for Unicode.
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
