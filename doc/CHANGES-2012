@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3162 2012/10/07 16:36:13 bad Exp $
+$NetBSD: CHANGES-2012,v 1.3163 2012/10/07 18:54:09 bad Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4934,3 +4934,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/ghostscript-cidfonts-ryumin version 9.05 [mef 2012-10-07]
 	Updated ham/fldigi to 3.21.54 [mef 2012-10-07]
 	Removed net/freewais-sf [bad 2012-10-07]
+	Renamed databases/jdb to databases/p5-Fsdb [bad 2012-10-07]
+	Updated databases/p5-Fsdb to 2.26 [bad 2012-10-07]
