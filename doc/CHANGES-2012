@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3167 2012/10/07 21:12:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3168 2012/10/07 21:24:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/mlterm to 3.1.4 [tsutsui 2012-10-07]
 	Updated games/onscripter to 20120926 [tsutsui 2012-10-07]
 	Updated devel/pango to 1.30.1nb4 [wiz 2012-10-07]
+	Updated audio/py-mpd to 0.3.0 [wiz 2012-10-07]
