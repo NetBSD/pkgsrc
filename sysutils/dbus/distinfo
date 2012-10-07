@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.41 2012/08/14 19:18:08 abs Exp $
+$NetBSD: distinfo,v 1.42 2012/10/07 21:35:14 wiz Exp $
 
-SHA1 (dbus-1.6.4.tar.gz) = 17e619f008301592b7f01a60e7cf18e2752b5270
-RMD160 (dbus-1.6.4.tar.gz) = 041ad41c26f38647f3da8d7f0cb548c979521def
-Size (dbus-1.6.4.tar.gz) = 1927446 bytes
+SHA1 (dbus-1.6.8.tar.gz) = d9634807d1de9b64727ae2178e3af2227fca0fca
+RMD160 (dbus-1.6.8.tar.gz) = 063d855945bae0124a10b2fa98d64fd09e3b8eda
+Size (dbus-1.6.8.tar.gz) = 1929630 bytes
 SHA1 (patch-aa) = 0c3d145979e3b2358261c9f7f34701d02eb6ecd4
 SHA1 (patch-ab) = 48dd40c59eef3d99e1933a646e23206c7c55bc97
 SHA1 (patch-ak) = fcb0cad1b6e306db03d538d4ca65f4a18d4726ab
 SHA1 (patch-al) = 3f9f793b0c1455bf2bf079cc27b841c22f42c276
 SHA1 (patch-am) = 8c794ff8b0981e90243ee20c26ae1ecc72e68de8
 SHA1 (patch-ba) = ceb8e0c424c57410f8c3775087e4cae1b44da4c5
-SHA1 (patch-configure) = 829024482acb89fa12fa47fd42b171cc02efbb89
-SHA1 (patch-dbus_dbus-sysdeps-util-unix.c) = 79ff84b20dff597001e4e150c9ab27b05d6ff2a1
