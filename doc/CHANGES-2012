@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3173 2012/10/07 22:08:54 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3174 2012/10/07 22:09:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4945,3 +4945,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/dbus to 1.6.8 [wiz 2012-10-07]
 	Updated emulators/mame to 0.147 [wiz 2012-10-07]
 	Updated x11/xcb-proto to 1.8 [wiz 2012-10-07]
+	Updated x11/py-xcbgen to 1.8 [wiz 2012-10-07]
