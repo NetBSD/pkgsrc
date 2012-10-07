@@ -1,16 +1,22 @@
-$NetBSD: patch-an,v 1.3 2010/04/09 19:39:06 drochner Exp $
+$NetBSD: patch-an,v 1.4 2012/10/07 14:19:18 mef Exp $
 
---- psi/imainarg.c.orig	2009-12-08 06:31:51.000000000 +0000
-+++ psi/imainarg.c
-@@ -194,6 +194,11 @@ gs_main_init_with_args(gs_main_instance 
- 		return e_Fatal;
- 	}
+Do some initialization of global stuff earlier, in particular before
+"@file" args get processed, fixes PR pkg/42984 from T. M. Pederson.
+I'm not 100% sure that this has no side effects (the initialization
+order in gs is messy and undocumented) but I haven't found any within
+some weeks of testing.
+
+--- psi/imainarg.c.orig	2011-01-13 23:37:33.000000000 +0900
++++ psi/imainarg.c	2011-03-30 16:22:08.000000000 +0900
+@@ -194,6 +194,11 @@
+                 return e_Fatal;
+         }
      }
 +
 +    code = gs_main_init1(minst);
 +    if (code < 0)
-+	return code;
++      return code;
 +
      while ((arg = arg_next(&args, &code)) != 0) {
- 	switch (*arg) {
- 	    case '-':
+         switch (*arg) {
+             case '-':
