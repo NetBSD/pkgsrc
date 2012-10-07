@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.409 2012/10/05 21:09:02 adam Exp $
+# $NetBSD: Makefile,v 1.410 2012/10/07 18:52:16 bad Exp $
 #
 
 COMMENT=	Databases
@@ -42,7 +42,6 @@ SUBDIR+=	ipa_sdb
 SUBDIR+=	java-db3
 SUBDIR+=	java-qdbm
 SUBDIR+=	java-tokyocabinet
-SUBDIR+=	jdb
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
 SUBDIR+=	jdbc-postgresql83
@@ -152,6 +151,7 @@ SUBDIR+=	p5-DB_File
 SUBDIR+=	p5-DB_File-Lock
 SUBDIR+=	p5-Data-Table
 SUBDIR+=	p5-DublinCore-Record
+SUBDIR+=	p5-Fsdb
 SUBDIR+=	p5-Ima-DBI
 SUBDIR+=	p5-Jifty-DBI
 SUBDIR+=	p5-MARC

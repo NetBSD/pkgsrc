@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/07 18:52:17 bad Exp $
+
+SHA1 (Fsdb-2.26.tar.gz) = 5df321c6ea45424a7fff57e120b1f809b2dd4895
+RMD160 (Fsdb-2.26.tar.gz) = 20af75ba9711c5de73fbdda3993906b32560fe53
+Size (Fsdb-2.26.tar.gz) = 315213 bytes
