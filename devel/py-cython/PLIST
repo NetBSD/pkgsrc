@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2012/10/07 21:28:34 wiz Exp $
-bin/cygdb2.7
-bin/cython2.7
+@comment $NetBSD: PLIST,v 1.6 2012/10/07 22:42:52 wiz Exp $
+${PLIST.cygdb}bin/cygdb${PYVERSSUFFIX}
+bin/cython${PYVERSSUFFIX}
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyo
