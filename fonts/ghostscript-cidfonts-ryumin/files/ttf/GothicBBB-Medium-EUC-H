@@ -1,0 +1,4 @@
+/GothicBBB-Medium-EUC-H
+/EUC-H /CMap findresource
+[/GothicBBB-Medium /CIDFont findresource]
+composefont pop
