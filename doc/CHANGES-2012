@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3161 2012/10/07 15:02:07 mef Exp $
+$NetBSD: CHANGES-2012,v 1.3162 2012/10/07 16:36:13 bad Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4933,3 +4933,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/ghostscript-cidfonts to 20000901nb3 [mef 2012-10-07]
 	Added fonts/ghostscript-cidfonts-ryumin version 9.05 [mef 2012-10-07]
 	Updated ham/fldigi to 3.21.54 [mef 2012-10-07]
+	Removed net/freewais-sf [bad 2012-10-07]
