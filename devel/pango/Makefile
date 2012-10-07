@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.166 2012/10/02 17:10:51 tron Exp $
+# $NetBSD: Makefile,v 1.167 2012/10/07 21:12:19 wiz Exp $
 
 DISTNAME=		pango-1.30.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel fonts
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pango/1.30/}
 EXTRACT_SUFX=		.tar.xz
@@ -56,6 +56,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32.1
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.5.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
