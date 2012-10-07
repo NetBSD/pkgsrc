@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/30 14:28:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/07 10:23:51 prlw1 Exp $
 bin/g-ir-annotation-tool
 bin/g-ir-compiler
 bin/g-ir-generate
@@ -49,6 +49,9 @@ lib/gobject-introspection/giscanner/annotationmain.pyo
 lib/gobject-introspection/giscanner/annotationparser.py
 lib/gobject-introspection/giscanner/annotationparser.pyc
 lib/gobject-introspection/giscanner/annotationparser.pyo
+lib/gobject-introspection/giscanner/annotationpatterns.py
+lib/gobject-introspection/giscanner/annotationpatterns.pyc
+lib/gobject-introspection/giscanner/annotationpatterns.pyo
 lib/gobject-introspection/giscanner/ast.py
 lib/gobject-introspection/giscanner/ast.pyc
 lib/gobject-introspection/giscanner/ast.pyo

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 17:10:47 tron Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/07 10:23:51 prlw1 Exp $
 #
 
-DISTNAME=	gobject-introspection-1.32.1
-PKGREVISION=	3
+DISTNAME=	gobject-introspection-1.34.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/1.32/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/1.34/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,9 +20,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config flex bison gmake
 GMAKE_REQD=	3.81
 
-CONFIGURE_ARGS+=	--disable-tests
-
-PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
 
 SUBST_CLASSES+=	timet
@@ -43,9 +39,13 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 # not executable
 CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 
-# needed for test only
+PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
+
+CONFIGURE_ARGS+=	--disable-tests
+# needed for tests only
 #.include "../../graphics/cairo/buildlink3.mk"
-TEST_TARGET=	check
+#.include "../../graphics/cairo-gobject/buildlink3.mk"
+#TEST_TARGET=	check
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.30.0
 .include "../../devel/glib2/buildlink3.mk"
