@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3164 2012/10/07 19:35:33 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.3165 2012/10/07 20:14:52 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4936,3 +4936,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed net/freewais-sf [bad 2012-10-07]
 	Renamed databases/jdb to databases/p5-Fsdb [bad 2012-10-07]
 	Updated databases/p5-Fsdb to 2.26 [bad 2012-10-07]
+	Updated x11/mlterm to 3.1.4 [tsutsui 2012-10-07]
