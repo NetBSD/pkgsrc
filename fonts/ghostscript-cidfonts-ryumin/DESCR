@@ -1,0 +1,5 @@
+Ryumin-Light and GothicBBB are the most frequently used fonts
+in Japanese documents. This package will add the capability for
+gs to display Japanese document with those reference.
+Options to choose alternate fonts for them, see options.mk,
+and set to PKG_OPTIONS.gcr_type, currently default is ipa.
