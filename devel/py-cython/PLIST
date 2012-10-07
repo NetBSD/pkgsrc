@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2012/08/13 14:38:37 wiz Exp $
-${PLIST.cygdb}bin/cygdb${PYVERSSUFFIX}
-bin/cython${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.5 2012/10/07 21:28:34 wiz Exp $
+bin/cygdb2.7
+bin/cython2.7
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyo
@@ -68,6 +68,9 @@ ${PYSITELIB}/Cython/Compiler/FlowControl.py
 ${PYSITELIB}/Cython/Compiler/FlowControl.pyc
 ${PYSITELIB}/Cython/Compiler/FlowControl.pyo
 ${PYSITELIB}/Cython/Compiler/FlowControl.so
+${PYSITELIB}/Cython/Compiler/FusedNode.py
+${PYSITELIB}/Cython/Compiler/FusedNode.pyc
+${PYSITELIB}/Cython/Compiler/FusedNode.pyo
 ${PYSITELIB}/Cython/Compiler/Future.py
 ${PYSITELIB}/Cython/Compiler/Future.pyc
 ${PYSITELIB}/Cython/Compiler/Future.pyo
@@ -134,6 +137,9 @@ ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestParseTreeTransforms.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestParseTreeTransforms.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestParseTreeTransforms.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestSignatureMatching.py
+${PYSITELIB}/Cython/Compiler/Tests/TestSignatureMatching.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestSignatureMatching.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.pyo
@@ -254,6 +260,7 @@ ${PYSITELIB}/Cython/Includes/Deprecated/stdio.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/stdlib.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/stl.pxd
 ${PYSITELIB}/Cython/Includes/cpython/__init__.pxd
+${PYSITELIB}/Cython/Includes/cpython/array.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bool.pxd
 ${PYSITELIB}/Cython/Includes/cpython/buffer.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bytes.pxd
@@ -391,15 +398,22 @@ ${PYSITELIB}/Cython/Tests/xmlrunner.py
 ${PYSITELIB}/Cython/Tests/xmlrunner.pyc
 ${PYSITELIB}/Cython/Tests/xmlrunner.pyo
 ${PYSITELIB}/Cython/Utility/Buffer.c
+${PYSITELIB}/Cython/Utility/Builtins.c
 ${PYSITELIB}/Cython/Utility/Capsule.c
+${PYSITELIB}/Cython/Utility/CppConvert.pyx
+${PYSITELIB}/Cython/Utility/CppSupport.cpp
 ${PYSITELIB}/Cython/Utility/CythonFunction.c
 ${PYSITELIB}/Cython/Utility/Exceptions.c
+${PYSITELIB}/Cython/Utility/ExtensionTypes.c
 ${PYSITELIB}/Cython/Utility/FunctionArguments.c
 ${PYSITELIB}/Cython/Utility/Generator.c
+${PYSITELIB}/Cython/Utility/ImportExport.c
 ${PYSITELIB}/Cython/Utility/MemoryView.pyx
 ${PYSITELIB}/Cython/Utility/MemoryView_C.c
 ${PYSITELIB}/Cython/Utility/ModuleSetupCode.c
+${PYSITELIB}/Cython/Utility/ObjectHandling.c
 ${PYSITELIB}/Cython/Utility/Optimize.c
+${PYSITELIB}/Cython/Utility/Printing.c
 ${PYSITELIB}/Cython/Utility/StringTools.c
 ${PYSITELIB}/Cython/Utility/TestCyUtilityLoader.pyx
 ${PYSITELIB}/Cython/Utility/TestCythonScope.pyx
@@ -408,6 +422,7 @@ ${PYSITELIB}/Cython/Utility/TypeConversion.c
 ${PYSITELIB}/Cython/Utility/__init__.py
 ${PYSITELIB}/Cython/Utility/__init__.pyc
 ${PYSITELIB}/Cython/Utility/__init__.pyo
+${PYSITELIB}/Cython/Utility/arrayarray.h
 ${PYSITELIB}/Cython/Utils.py
 ${PYSITELIB}/Cython/Utils.pyc
 ${PYSITELIB}/Cython/Utils.pyo
