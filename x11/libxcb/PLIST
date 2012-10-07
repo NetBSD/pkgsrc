@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/10/07 22:09:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/10/07 22:40:44 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -256,6 +256,9 @@ man/man3/xcb_dri2_get_buffers_with_format_unchecked.3
 man/man3/xcb_dri2_get_msc.3
 man/man3/xcb_dri2_get_msc_reply.3
 man/man3/xcb_dri2_get_msc_unchecked.3
+man/man3/xcb_dri2_get_param.3
+man/man3/xcb_dri2_get_param_reply.3
+man/man3/xcb_dri2_get_param_unchecked.3
 man/man3/xcb_dri2_invalidate_buffers_event_t.3
 man/man3/xcb_dri2_query_version.3
 man/man3/xcb_dri2_query_version_reply.3
