@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/05 10:19:22 drochner Exp $
+$NetBSD: distinfo,v 1.2 2012/10/07 21:24:07 wiz Exp $
 
-SHA1 (python-mpd-0.2.0.tar.bz2) = 8f3d5b389aac996ca69b51b59473232164e4bcde
-RMD160 (python-mpd-0.2.0.tar.bz2) = eec009182f35efdde9c99bfffa8c5b958d47f90b
-Size (python-mpd-0.2.0.tar.bz2) = 15817 bytes
-SHA1 (patch-aa) = a126f785f5b02a13761bf9a3d0b52b7489e3f6c1
+SHA1 (python-mpd-0.3.0.tar.bz2) = e45dc7206949bd2176e7c77ebab1e21de33edc4b
+RMD160 (python-mpd-0.3.0.tar.bz2) = 4c02f6ecaabb74b2220cb7a85d5def3b9c657efe
+Size (python-mpd-0.3.0.tar.bz2) = 18333 bytes
