@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/30 22:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 13:45:47 asau Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Sources for machine-independent part of teTeX
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
 

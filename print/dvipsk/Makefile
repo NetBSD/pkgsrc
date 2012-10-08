@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/13 20:07:27 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 13:45:37 asau Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	dvipsk-5.992
@@ -17,8 +17,6 @@ DEPENDS+=	tex-dvips>=2011.25424:../../print/tex-dvips
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dvipsk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes

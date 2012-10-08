@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 13:45:39 asau Exp $
 #
 
 DISTNAME=	if-psprint-1.10
@@ -15,6 +15,5 @@ DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
 REPLACE_PERL=	if-psprint.pl
 USE_TOOLS+=	gs:run perl:run pod2man
-PKG_DESTDIR_SUPPORT = user-destdir
 
 .include "../../mk/bsd.pkg.mk"

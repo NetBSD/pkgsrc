@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.15 2012/03/03 21:32:34 minskim Exp $
+# $NetBSD: package.mk,v 1.16 2012/10/08 13:45:48 asau Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -38,8 +38,6 @@ DIST_SUBDIR?=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}
 EXTRACT_SUFX?=	.tar.xz
 
 HOMEPAGE?=	http://www.tug.org/texlive/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

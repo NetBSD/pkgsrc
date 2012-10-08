@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/22 16:21:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:47 asau Exp $
 #
 
 DISTNAME=	tex-bibtex8-3.71
@@ -10,8 +10,6 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://mirrors.ctan.org/biblio/bibtex/8-bit/
 COMMENT=	8-bit Implementation of BibTeX 0.99 with multilanguage support
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR} # More than one possibility -- please check manually.
 

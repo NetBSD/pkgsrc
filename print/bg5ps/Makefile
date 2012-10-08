@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/03/15 11:53:36 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 13:45:35 asau Exp $
 
 DISTNAME=	bg5ps-1.3.0
 PKGREVISION=	5
@@ -8,8 +8,6 @@ MASTER_SITES=	# ftp://freebsd.sinica.edu.tw/pub/keith/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/
 COMMENT=	Convert Big5/GB encoded files to postscript
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	arphic-ttf>=2.11:../../fonts/arphic-ttf
 

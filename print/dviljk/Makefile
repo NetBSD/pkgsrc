@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/04 15:30:10 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:45:37 asau Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	dviljk-2.6.5
@@ -15,8 +15,6 @@ CONFLICTS+=	teTeX-bin<=3.0nb32
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dviljk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

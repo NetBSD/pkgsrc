@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/28 02:29:39 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 13:45:47 asau Exp $
 
 DISTNAME=	igo
 PKGNAME=	tex-${DISTNAME}-0
@@ -14,8 +14,6 @@ COMMENT=	Fonts and macro to typeset Go diagrams
 BUILD_DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
 BUILD_DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
 BUILD_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/kpathsea/texmf.mk"
 
