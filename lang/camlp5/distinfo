@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/10/11 21:27:54 tonio Exp $
+$NetBSD: distinfo,v 1.7 2012/10/08 15:31:14 jaapb Exp $
 
-SHA1 (camlp5-5.15.tgz) = 7ccde66923e2ecb07981a2742dd315e637e37e67
-RMD160 (camlp5-5.15.tgz) = 48f9f409f85e9c1f9a5057e0869fba71c70e969c
-Size (camlp5-5.15.tgz) = 714641 bytes
+SHA1 (camlp5-6.06.tgz) = d3d56748de424afc3f878e650254b9d3e5fae6c2
+RMD160 (camlp5-6.06.tgz) = fefa727e756266d3b0697df494042c327f32294d
+Size (camlp5-6.06.tgz) = 681614 bytes
