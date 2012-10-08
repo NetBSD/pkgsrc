@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/04/17 20:08:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/08 12:42:19 asau Exp $
 #
 
 DISTNAME=	fluxbox-1.3.2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://fluxbox.sourceforge.net/
 COMMENT=	Window Manager for X based on Blackbox
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/12/08 01:38:51 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 12:42:22 asau Exp $
 #
 
 DISTNAME=	NovaWM-0.8_alpha
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=novawm/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://novawm.sourceforge.net/
 COMMENT=	Nova window manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++

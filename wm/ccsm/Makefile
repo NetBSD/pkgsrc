@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/14 07:44:30 sbd Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:42:18 asau Exp $
 #
 
 PKGVER=			0.8.4
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://compiz.org/
 COMMENT=		CompizConfig Settings Manager
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
 
