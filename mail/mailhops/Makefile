@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:16 asau Exp $
 #
 
 DISTNAME=		mailhops-1.4
@@ -19,8 +19,6 @@ EXTRACT_CMD=		echo ${CP} "$${extract_file}" ${WRKSRC}/mailhops; \
 
 
 DEPENDS+=       	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_TOOLS+=     	perl:run
 

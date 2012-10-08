@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2012/10/02 17:11:29 tron Exp $
+# $NetBSD: Makefile,v 1.141 2012/10/08 12:19:33 asau Exp $
 
 DISTNAME=	sylpheed-3.2.0
 PKGREVISION=	3
@@ -10,7 +10,6 @@ MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://sylpheed.sraoss.jp/en/
 COMMENT=	Gtk based e-mail and netnews client
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		sylpheed-claws-[0-9]*
 
 USE_PKGLOCALEDIR=	yes

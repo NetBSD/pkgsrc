@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/04/22 13:44:05 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/08 12:19:34 asau Exp $
 #
 
 DISTNAME=	tnef-1.4.3
@@ -11,7 +11,6 @@ HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Decode MS-TNEF MIME attachments
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 TEST_TARGET=		check

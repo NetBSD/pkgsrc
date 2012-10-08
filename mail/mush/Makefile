@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/03/17 20:45:57 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/08 12:19:18 asau Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -20,8 +20,6 @@ PATCHFILES=	patch-7.2.6-alpha-1 \
 MAINTAINER=	christos@NetBSD.org
 COMMENT=	Text-based mail client
 LICENSE=	mush-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Unmodified source may be distributed but not sold.
 NO_BIN_ON_FTP=		${RESTRICTED}

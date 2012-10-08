@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/01 10:38:18 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:09 asau Exp $
 #
 
 DISTNAME=	enma-1.2.0
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://enma.sourceforge.net/
 COMMENT=	Sender authentication milter supporting SPF and Sender ID
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

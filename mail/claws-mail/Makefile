@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.48 2012/10/02 17:11:26 tron Exp $
+# $NetBSD: Makefile,v 1.49 2012/10/08 12:19:03 asau Exp $
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/claws-mail
 

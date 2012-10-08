@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:31 asau Exp $
 
 DISTNAME=	sma-1.4
 CATEGORIES=	mail
@@ -7,8 +7,6 @@ MASTER_SITES=	http://www.klake.org/sma/dl/
 MAINTAINER=	markus@core.de
 HOMEPAGE=	http://www.klake.org/sma/
 COMMENT=	Sendmail log analyser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=	yes

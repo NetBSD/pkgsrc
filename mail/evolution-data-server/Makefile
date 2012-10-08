@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2012/10/02 17:11:29 tron Exp $
+# $NetBSD: Makefile,v 1.125 2012/10/08 12:19:10 asau Exp $
 
 DISTNAME=	evolution-data-server-2.32.3
 PKGREVISION=	12
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/evolution/
 COMMENT=	Evolution data server
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config

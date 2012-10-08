@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2011/12/18 11:33:42 obache Exp $
+# $NetBSD: Makefile,v 1.64 2012/10/08 12:19:07 asau Exp $
 
 DISTNAME=	cue-snap-20100426
 PKGNAME=	${DISTNAME:S/snap-//}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Mh-e like mail user agent
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}

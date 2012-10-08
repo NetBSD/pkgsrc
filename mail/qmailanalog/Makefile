@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/03/14 23:15:16 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 12:19:29 asau Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -9,8 +9,6 @@ MASTER_SITES=		http://cr.yp.to/software/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/qmailanalog.html
 COMMENT=		Collection of tools to help analyze qmail's activity
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DJB_RESTRICTED=		YES
 DJB_CONFIG_PREFIX=	${PREFIX}/qmailanalog

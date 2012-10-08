@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:42:44 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 12:19:26 asau Exp $
 
 PERDITION_COMMENT=	main program
 PKGREVISION=		1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 
