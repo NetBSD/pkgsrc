@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/01 15:39:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 12:42:22 asau Exp $
 #
 
 DISTNAME=	notion-3-2012042300-src
@@ -11,8 +11,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://notion.sourceforge.net/
 COMMENT=	Tiling window manager based on ion3
 LICENSE=	ion-license AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # notion is based on ion3
 CONFLICTS=	ion3-[0-9]*

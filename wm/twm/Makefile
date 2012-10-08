@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/17 02:47:58 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:42:23 asau Exp $
 
 DISTNAME=	twm-1.0.7
 CATEGORIES=	x11 wm
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Tom's Window Manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config yacc
