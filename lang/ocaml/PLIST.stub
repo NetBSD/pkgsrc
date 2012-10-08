@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.stub,v 1.5 2010/08/19 08:06:53 asau Exp $
+@comment $NetBSD: PLIST.stub,v 1.6 2012/10/08 15:05:32 jaapb Exp $
 lib/ocaml/stublibs/dllbigarray.so
 lib/ocaml/stublibs/dllcamlstr.so
-lib/ocaml/stublibs/dllmldbm.so
 lib/ocaml/stublibs/dllnums.so
 lib/ocaml/stublibs/dllthreads.so
 lib/ocaml/stublibs/dllunix.so

@@ -1,0 +1,36 @@
+$NetBSD: patch-asmcomp_power_emit.mlp,v 1.1 2012/10/08 15:05:32 jaapb Exp $
+
+Add profiling to power architecture
+--- asmcomp/power/emit.mlp.orig	2012-09-11 13:17:13.000000000 +0000
++++ asmcomp/power/emit.mlp
+@@ -828,6 +828,30 @@ let rec emit_all i =
+       emit_instr i None;
+       emit_all i.next
+ 
++(* Emission of the profiling prelude *)
++
++let emit_profile () =
++  match Config.system with
++    "bsd" ->
++      `        stwu 1, -32(1)\n`;
++      `        mflr 0\n`;
++      `        stw 0, 4(1)\n`;
++      `        stw 2, 8(1)\n`;
++      `        stw 3, 12(1)\n`;
++      `        stw 4, 16(1)\n`;
++      `        stw 5, 20(1)\n`;
++      `        stw 6, 24(1)\n`;
++      `        stw 7, 28(1)\n`;
++      `        bl {emit_symbol "_mcount"}\n`;
++      `        lwz 2, 8(1)\n`;
++      `        lwz 3, 12(1)\n`;
++      `        lwz 4, 16(1)\n`;
++      `        lwz 5, 20(1)\n`;
++      `        lwz 6, 24(1)\n`;
++      `        lwz 7, 28(1)\n`;
++      `        addic 1, 1, 32\n`;
++   | _ -> () (*unsupported yet*)
++
+ (* Emission of a function declaration *)
+ 
+ let fundecl fundecl =

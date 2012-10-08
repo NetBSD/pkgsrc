@@ -1,0 +1,130 @@
+$NetBSD: patch-configure,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+
+Several configure changes to work on and detect NetBSD (and some other OSes)
+--- configure.orig	2012-06-26 15:33:50.000000000 +0000
++++ configure
+@@ -633,7 +633,7 @@ if test $withsharedlibs = "yes"; then
+     x86_64-*-linux*)              natdynlink=true;;
+     i[3456]86-*-darwin[89].*)     natdynlink=true;;
+     i[3456]86-*-darwin*)
+-      if test $arch64 == true; then
++      if test $arch64 = true; then
+         natdynlink=true
+       fi;;
+     x86_64-*-darwin*)             natdynlink=true;;
+@@ -647,6 +647,8 @@ if test $withsharedlibs = "yes"; then
+     x86_64-*-openbsd*)            natdynlink=true;;
+     i[345]86-*-netbsd*)           natdynlink=true;;
+     x86_64-*-netbsd*)             natdynlink=true;;
++    i[345]86-*-dragonfly)         natdynlink=true;;
++    x86_64-*-dragonfly)           natdynlink=true;;
+     i386-*-gnu0.3)                natdynlink=true;;
+     arm*-*-linux*)                natdynlink=true;;
+   esac
+@@ -672,6 +674,7 @@ case "$host" in
+   sparc*-*-gnu*)                arch=sparc; system=gnu;;
+   i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
+   i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
++  i[3456]86-*-dragonfly*)       arch=i386; system=bsd_`sh ./runtest elf.c`;;
+   i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
+   i[3456]86-*-solaris*)         if $arch64; then
+                                   arch=amd64; system=solaris
+@@ -680,6 +683,7 @@ case "$host" in
+                                 fi;;
+   i[3456]86-*-beos*)            arch=i386; system=beos;;
+   i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
++  i[3456]86-*-interix3*)	arch=i386; system=interix3;;
+   i[3456]86-*-darwin*)          if $arch64; then
+                                   arch=amd64; system=macosx
+                                 else
+@@ -691,6 +695,7 @@ case "$host" in
+   powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
+   powerpc-*-darwin*)            arch=power; system=rhapsody
+                                 if $arch64; then model=ppc64; else model=ppc; fi;;
++  arm*-*-netbsd*)               arch=arm; system=netbsd;;
+   arm*-*-linux-gnueabihf)       arch=arm; system=linux_eabihf;;
+   armv7*-*-linux-gnueabi)       arch=arm; model=armv7; system=linux_eabi;;
+   armv6t2*-*-linux-gnueabi)     arch=arm; model=armv6t2; system=linux_eabi;;
+@@ -702,6 +707,7 @@ case "$host" in
+   x86_64-*-gnu*)                arch=amd64; system=gnu;;
+   x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
+   x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
++  x86_64-*-dragonfly*)          arch=amd64; system=dragonfly;;
+   x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
+   x86_64-*-darwin*)             arch=amd64; system=macosx;;
+ esac
+@@ -736,7 +742,7 @@ case "$arch,$nativecc,$system,$host_type
+                        if $arch64; then partialld="ld -r -arch ppc64"; fi;;
+   *,gcc*,cygwin,*)     nativecccompopts="$gcc_warnings -U_WIN32";;
+   amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
+-  amd64,gcc*,solaris,*) partialld="ld -r -m elf_x86_64";;
++  amd64,gcc*,solaris,*) partialld="ld -r -64";;
+   *,gcc*,*,*)          nativecccompopts="$gcc_warnings";;
+ esac
+ 
+@@ -752,7 +758,7 @@ case "$arch,$model,$system" in
+   arm,*,*)          as='as';
+                     aspp='gcc -c';;
+   i386,*,solaris)   as='as'
+-                    aspp='/usr/ccs/bin/as -P';;
++                    aspp='gcc -traditional -c';;
+   i386,*,*)         as='as'
+                     aspp='gcc -c';;
+   power,*,elf)      as='as -u -m ppc'
+@@ -786,6 +792,8 @@ case "$arch,$model,$system" in
+   amd64,*,linux) profiling='prof';;
+   amd64,*,gnu) profiling='prof';;
+   arm,*,linux*) profiling='prof';;
++  power,*,bsd) profiling='prof';;
++  *,*,dragonfly) profiling='prof';;
+   *) profiling='noprof';;
+ esac
+ 
+@@ -1244,6 +1252,8 @@ fi
+ x11_include="not found"
+ x11_link="not found"
+ 
++if test "$disable_x11" != "yes"; then
++
+ if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
+   if pkg-config --exists x11 2>/dev/null; then
+     x11_include=`pkg-config --cflags x11`
+@@ -1290,6 +1300,7 @@ if test "$x11_include" = "not found"; th
+     /usr/XFree86/include/X11  \
+                               \
+     /usr/include              \
++    /usr/pkg/include          \
+     /usr/local/include        \
+     /usr/unsupported/include  \
+     /usr/athena/include       \
+@@ -1347,6 +1358,7 @@ if test "$x11_include" = "not found"; th
+                           \
+     /usr/lib64            \
+     /usr/lib              \
++    /usr/pkg/lib          \
+     /usr/local/lib        \
+     /usr/unsupported/lib  \
+     /usr/athena/lib       \
+@@ -1368,18 +1380,16 @@ if test "$x11_include" = "not found"; th
+       if test $dir = /usr/lib; then
+         x11_link="-lX11"
+       else
+-        x11_libs="-L$dir"
+-        case "$host" in
+-          *-kfreebsd*-gnu) x11_link="-L$dir -lX11";;
+-          *-*-*bsd*) x11_link="-R$dir -L$dir -lX11";;
+-          *) x11_link="-L$dir -lX11";;
+-        esac
++        x11_libs="-L$dir ${COMPILER_RPATH_FLAG}$dir"
++        x11_link="-L$dir ${COMPILER_RPATH_FLAG}$dir -lX11"
+       fi
+       break
+     fi
+   done
+ fi
+ 
++fi # end of disable_x11 test
++
+ if test "x11_include" != "not found"; then
+   if test "$x11_include" = "-I/usr/include"; then
+     x11_include=""

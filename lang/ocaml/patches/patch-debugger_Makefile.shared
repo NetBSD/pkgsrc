@@ -1,13 +1,14 @@
-$NetBSD: patch-au,v 1.4 2009/09/07 21:48:13 tonio Exp $
+$NetBSD: patch-debugger_Makefile.shared,v 1.1 2012/10/08 15:05:33 jaapb Exp $
 
---- debugger/Makefile.shared.orig	2008-07-29 10:31:41.000000000 +0200
+Use BSD_INSTALL_* instead of mkdir and cp
+--- debugger/Makefile.shared.orig	2012-05-31 12:41:49.000000000 +0000
 +++ debugger/Makefile.shared
 @@ -83,7 +83,7 @@ ocamldebug$(EXE): $(OBJS) $(OTHEROBJS)
  	$(CAMLC) $(LINKFLAGS) -o ocamldebug$(EXE) -linkall $(OTHEROBJS) $(OBJS)
  
  install:
 -	cp ocamldebug$(EXE) $(BINDIR)/ocamldebug$(EXE)
-+	${BSD_INSTALL_SCRIPT} ocamldebug$(EXE) $(BINDIR)/ocamldebug$(EXE)
++	$(BSD_INSTALL_SCRIPT) ocamldebug$(EXE) $(BINDIR)/ocamldebug$(EXE)
  
  clean::
  	rm -f ocamldebug$(EXE)
