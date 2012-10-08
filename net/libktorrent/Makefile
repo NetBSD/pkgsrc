@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 23:01:04 adam Exp $
 
 DISTNAME=	libktorrent-${LIBKTORRENT_VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 DISTFILES=	libktorrent-${LIBKTORRENT_FILEVER}.tar.bz2
