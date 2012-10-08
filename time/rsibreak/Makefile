@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:58:24 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 13:04:29 asau Exp $
 
 DISTNAME=		rsibreak-0.11
 PKGREVISION=		6
@@ -10,8 +10,6 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.rsibreak.org/
 COMMENT=		RSI management tool
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
 

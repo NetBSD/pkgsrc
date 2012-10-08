@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:04:21 asau Exp $
 #
 
 DISTNAME=	DateTime-Calendar-Discordian-0.9.6
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DateTime-Calendar-Discordian
 COMMENT=	Perl extension for the Discordian Calendar
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Locale-[0-9]*:../../time/p5-DateTime-Locale
