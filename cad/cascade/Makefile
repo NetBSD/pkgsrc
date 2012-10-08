@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:25:11 asau Exp $
 #
 
 DISTNAME=	cascade-1.4
@@ -11,7 +11,6 @@ HOMEPAGE=	http://rfcascade.sourceforge.net/
 COMMENT=	Simple tool to analyze noise and distortion of a RF system
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

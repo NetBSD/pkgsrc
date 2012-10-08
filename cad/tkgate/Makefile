@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/08/21 21:37:55 marino Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 13:25:16 asau Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tkgate.org/
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
