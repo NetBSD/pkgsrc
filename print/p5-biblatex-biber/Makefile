@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 13:45:43 asau Exp $
 #
 
 VER=		0.9.9
@@ -14,8 +14,6 @@ HOMEPAGE=	http://biblatex-biber.sourceforge.net/
 COMMENT=	Replacement of bibtex for users of BibLaTeX
 DIST_SUBDIR=	${DISTNAME}-${VER}
 LICENSE=	gnu-gpl-v1 OR artistic-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # TODO: Look for the dependencies in Build.PL.
 # no - that's for building the self-contained binary, which we won't.

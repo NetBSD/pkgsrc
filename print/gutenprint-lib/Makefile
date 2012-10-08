@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/03 21:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 13:45:39 asau Exp $
 
 VERSION=	5.2.9
 DISTNAME=	gutenprint-${VERSION}
@@ -20,8 +20,6 @@ PRINT_PLIST_AWK+=	{ gsub("gutenprint/${INSTALLVERSION}", \
 				"gutenprint/$${INSTALLVERSION}") }
 PRINT_PLIST_AWK+=	{ gsub(".${INSTALLVERSION}$$", \
 				".$${INSTALLVERSION}") }
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake lex pkg-config perl:run
 USE_PKGLOCALEDIR=	YES

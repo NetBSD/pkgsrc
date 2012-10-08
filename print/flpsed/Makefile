@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/13 13:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:45:38 asau Exp $
 
 DISTNAME=		flpsed-0.3.9
 PKGREVISION=		2
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.ecademix.com/JohannesHofmann/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ecademix.com/JohannesHofmann/flpsed.html
 COMMENT=		WYSIWYG PostScript2 annotator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++

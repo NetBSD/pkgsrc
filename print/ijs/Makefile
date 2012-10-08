@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/01/27 13:33:02 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 13:45:39 asau Exp $
 
 DISTNAME=	ijs-0.35
 CATEGORIES=	print
@@ -7,8 +7,6 @@ MASTER_SITES=	http://www.linuxprinting.org/ijs/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linuxprinting.org/ijs/
 COMMENT=	Protocol library for raster page transmission
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

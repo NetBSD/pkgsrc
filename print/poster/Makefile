@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/06/06 11:05:21 markd Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 13:45:44 asau Exp $
 
 DISTNAME=	poster-20060221
 CATEGORIES=	print
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://printing.kde.org/downloads/
 COMMENT=	Resize a ps image to print on larger media and/or multiple sheets
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	poster
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 13:45:38 asau Exp $
 
 DISTNAME=	foomatic-filters-4.0.9
 PKGREVISION=	2
@@ -17,8 +17,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-file-converter-check
 CONFIGURE_ARGS+=	--disable-dbus
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.foomatic
 PKG_SUPPORTED_OPTIONS=	cups

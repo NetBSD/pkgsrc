@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/10 22:33:54 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:45:45 asau Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	ptexenc-1.3.0
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/ptexenc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

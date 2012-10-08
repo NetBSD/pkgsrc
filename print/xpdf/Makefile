@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2011/12/09 14:36:36 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2012/10/08 13:45:49 asau Exp $
 
 DISTNAME=	xpdf-3.03
 #PKGNAME=	xpdf-3.02pl4
@@ -16,8 +16,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/11/29 17:55:07 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 13:45:48 asau Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvik-22.84.16
@@ -21,7 +21,6 @@ DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/xdvik
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes

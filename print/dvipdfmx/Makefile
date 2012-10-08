@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/01/13 13:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 13:45:37 asau Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	dvipdfmx-20100328
@@ -18,8 +18,6 @@ DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dvipdfmx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gs:run ps2pdf:run

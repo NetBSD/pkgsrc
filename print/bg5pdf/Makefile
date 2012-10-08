@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/03/15 11:53:36 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/08 13:45:35 asau Exp $
 
 DISTNAME=	bg5pdf-1.0.0
 PKGREVISION=	12
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	rxg@NetBSD.org
 # HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
 COMMENT=	Wrap big5 encoding text file into PDF file by using PDFlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=				${WRKDIR}/bg5pdf
 PY_PATCHPLIST=			yes

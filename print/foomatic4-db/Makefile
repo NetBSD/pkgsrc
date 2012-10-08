@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/26 11:31:43 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:45:38 asau Exp $
 #
 
 DISTNAME=	foomatic-db-4.0-20120123
@@ -12,6 +12,5 @@ COMMENT=	Printer database
 WRKSRC=		${WRKDIR}/foomatic-db-20120123
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
-PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../mk/bsd.pkg.mk"

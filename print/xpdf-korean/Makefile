@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/27 15:14:01 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 13:45:49 asau Exp $
 #
 
 DISTNAME=	xpdf-korean-2005-jul-07
@@ -11,8 +11,6 @@ MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Xpdf support files for Korean
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 DEPENDS+=	baekmuk-ttf>=1.0:../../fonts/baekmuk-ttf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/27 18:42:48 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:50 asau Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xpdfopen-0.82
@@ -13,8 +13,6 @@ COMMENT=	Commands to control Acrobat Reader, xpdf, and evince
 CONFLICTS+=	teTeX-bin<=3.0nb34
 CONFLICTS+=	texlive-pdftools<2011
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/utils/xpdfopen
