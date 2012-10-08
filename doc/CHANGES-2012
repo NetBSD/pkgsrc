@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3187 2012/10/08 15:21:33 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3188 2012/10/08 15:28:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/p5-DateTime to 0.77 [wen 2012-10-08]
 	Updated lang/ocaml to 4.00.1 [jaapb 2012-10-08]
 	Updated archivers/ocaml-zip to 1.04nb1 [jaapb 2012-10-08]
+	Updated devel/frama-c to 20120901 [jaapb 2012-10-08]
