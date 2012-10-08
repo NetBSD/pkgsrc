@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2012/10/03 21:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2012/10/08 09:21:04 asau Exp $
 
 DISTNAME=	gxine-0.5.905
 PKGREVISION=	18
@@ -29,8 +29,6 @@ PKG_SYSCONFSUBDIR=	gxine
 .for f in gtkrc keypad.xml startup toolbar-fullscreen.xml toolbar-window.xml
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/09 10:02:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 09:21:07 asau Exp $
 #
 
 DISTNAME=	libvdpau-0.4.1
@@ -11,8 +11,6 @@ COMMENT=	Video Decode and Presentation API for Unix
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	${VDPAU_AVAILABLE_ON:S/$/-*-*/}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

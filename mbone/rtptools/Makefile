@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/13 17:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 09:25:50 asau Exp $
 #
 
 DISTNAME=		rtptools-1.18
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.cs.columbia.edu/IRT/software/rtptools/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.columbia.edu/IRT/software/rtptools/
 COMMENT=		Tools for processing RTP data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Dunix

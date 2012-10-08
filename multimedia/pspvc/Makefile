@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 17:11:42 tron Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 09:21:11 asau Exp $
 #
 
 DISTNAME=	pspvc-install-0.3
@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pspvc.sf.net/
 COMMENT=	PSP video converter
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/applications share/pspvc/bin
 
 USE_LANGUAGES=	c
