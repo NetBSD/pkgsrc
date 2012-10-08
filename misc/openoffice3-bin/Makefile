@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/14 07:44:00 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:31 asau Exp $
 
 DISTNAME=		openoffice3-bin	# overridden below
 PKGNAME=		openoffice3-bin-${OO_RELEASE}
@@ -46,8 +46,6 @@ RPM2PKG_STAGE=		do-install
 RUN_LDCONFIG=		no
 
 USE_TOOLS+=	patch
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

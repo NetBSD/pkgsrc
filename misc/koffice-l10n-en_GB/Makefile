@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/06/14 07:45:07 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:27 asau Exp $
 
 KOFFICE_LANGUAGE=	English (Great Britain)
 KOFFICE_LANGCODE=       en_GB
 PKGREVISION=		1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../misc/koffice/l10n.mk"
 .include "../../mk/bsd.pkg.mk"

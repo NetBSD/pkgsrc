@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:34 asau Exp $
 #
 
 DISTNAME=	Locale-US-2.112150
@@ -13,8 +13,6 @@ COMMENT=	Perl 5 module to maps US two-letter codes to states and vice versa
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Data-Section-Simple-[0-9]*:../../devel/p5-Data-Section-Simple
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Locale/US/.packlist
