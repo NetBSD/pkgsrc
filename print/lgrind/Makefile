@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/10/18 23:25:50 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/08 13:45:41 asau Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -12,8 +12,6 @@ COMMENT=	Source pretty printer for LaTeX
 
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/lgrind
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL

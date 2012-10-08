@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 13:45:48 asau Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	xetex-0.9998
@@ -18,8 +18,6 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/graphite ${DISTNAME}/libs/icu \
 			${DISTNAME}/libs/xpdf ${DISTNAME}/libs/obsdcompat \
 			${DISTNAME}/texk/web2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

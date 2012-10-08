@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 13:45:42 asau Exp $
 
 DISTNAME=	Net-CUPS-0.61
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-CUPS/
 COMMENT=	Common Unix Printing System Interface
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 
