@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/02 17:11:27 tron Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 12:19:04 asau Exp $
 #
 
 DISTNAME=	cachesaver-0.10.9
@@ -9,8 +9,6 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Saves Claws-Mail metadata every 60 seconds
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 

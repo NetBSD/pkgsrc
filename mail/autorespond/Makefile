@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/04 17:57:17 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:02 asau Exp $
 #
 
 DISTNAME=	autorespond-2.0.5
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.inter7.com/devel/
 COMMENT=	Simple autoresponder add-on package for qmail
 
 DEPENDS+=	qmail>=1.03:../../mail/qmail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		qmaildir
 SUBST_STAGE.qmaildir=	do-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/03 21:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 12:19:07 asau Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -17,7 +17,6 @@ DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
 DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0	# need Standard C++ Library

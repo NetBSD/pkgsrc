@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 12:19:25 asau Exp $
 #
 
 DISTNAME=		Net-SMTP-SSL-1.01
@@ -13,7 +13,6 @@ COMMENT=		Perl5 module providing SSL support for Net::SMTP
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Net/SMTP/SSL/.packlist

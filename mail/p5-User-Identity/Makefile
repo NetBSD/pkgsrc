@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 12:19:25 asau Exp $
 
 DISTNAME=	User-Identity-0.93
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Geography-Countries>=1.4:../../geography/p5-Geography-Countries
 BUILD_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/User/Identity/.packlist
 

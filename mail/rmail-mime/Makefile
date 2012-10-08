@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/08/06 01:44:54 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 12:19:30 asau Exp $
 #
 
 DISTNAME=	rmail-mime-1.13.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MIME-capabilities for RMAIL in Emacs
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.4:../../devel/semi
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/emacs/modules.mk"
 

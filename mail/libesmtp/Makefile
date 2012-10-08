@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/10/22 18:53:41 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/08 12:19:14 asau Exp $
 
 DISTNAME=	libesmtp-1.0.6
 CATEGORIES=	mail devel
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dolemite@wuli.nu
 HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
 COMMENT=	Library to manage posting of electronic mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

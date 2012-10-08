@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/10/03 21:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2012/10/08 12:19:22 asau Exp $
 
 DISTNAME=	MIME-tools-5.502
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MIME-tools/
 COMMENT=	Perl5 modules for encoding and decoding MIME messages
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-Temp>=0.18:../../devel/p5-File-Temp
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy

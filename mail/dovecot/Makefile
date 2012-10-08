@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2012/04/27 12:31:52 obache Exp $
+# $NetBSD: Makefile,v 1.161 2012/10/08 12:19:08 asau Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -20,7 +20,6 @@ COMMENT=		Secure IMAP and POP3 server
 LICENSE=		mit AND gnu-lgpl-v2.1 AND modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config rpcgen

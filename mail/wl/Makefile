@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/07/14 02:16:45 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/08 12:19:34 asau Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	all info
 INSTALL_TARGET=	install install-info
