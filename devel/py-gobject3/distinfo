@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/09/20 12:00:00 prlw1 Exp $
+$NetBSD: distinfo,v 1.3 2012/10/08 21:15:03 prlw1 Exp $
 
-SHA1 (pygobject-3.2.2.tar.xz) = b34405357d69412657904775a207a4a8357a934d
-RMD160 (pygobject-3.2.2.tar.xz) = 090fa4941fa30e68882e25856d92230ebdd0cea9
-Size (pygobject-3.2.2.tar.xz) = 564712 bytes
-SHA1 (patch-gi_pygi-argument.c) = 8df8557487944c54dabfbab66097278311f99752
+SHA1 (pygobject-3.4.0.tar.xz) = cd987de5794835bd47710b3c2c68514ea02eeebd
+RMD160 (pygobject-3.4.0.tar.xz) = c2085e99c4e39d4c4f7567bcadff1612addbf4fb
+Size (pygobject-3.4.0.tar.xz) = 607804 bytes
