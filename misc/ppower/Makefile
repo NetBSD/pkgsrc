@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/29 10:42:48 dsainty Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 09:57:35 asau Exp $
 #
 
 DISTNAME=	ppower-0.1.5
@@ -10,8 +10,6 @@ MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://ppower.sourceforge.net/
 COMMENT=	X10 controller software for the CM11A interface
 #LICENSE=       	GPL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		lex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/07/01 19:05:21 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 09:57:30 asau Exp $
 #
 
 DISTNAME=	mnemosyne-1.2.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mnemosyne-proj.org/
 COMMENT=	Sophisticated flash-card tool which optimizes your learning process
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

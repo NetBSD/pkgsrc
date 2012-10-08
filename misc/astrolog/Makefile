@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/03/17 21:10:47 zafer Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 09:57:16 asau Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
@@ -16,8 +16,6 @@ LICENSE=	astrolog-license
 RESTRICTED=	Do not sell or profit from this software in any way
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EPHEM=		LRZ5_24 CHI_24 CPJV_24

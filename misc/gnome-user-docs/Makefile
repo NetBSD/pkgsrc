@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/01/11 19:37:56 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 09:57:23 asau Exp $
 
 DISTNAME=	gnome-user-docs-2.32.0
 CATEGORIES=	misc
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	The GNOME 2 users guide
 LICENSE=	gnu-fdl-v1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome2-user-docs-[0-9]*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/03/04 19:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 09:57:31 asau Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_NCURSES=		yes	# Needs the <panel> library.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/12 00:13:40 morr Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 09:57:17 asau Exp $
 #
 
 DISTNAME=		bsdstats-5.3
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.bsdstats.org/
 COMMENT=		BSD-Stats collector script
 
 DEPENDS+=		netcat-[0-9]*:../../net/netcat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # XXX: Others might work
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-*

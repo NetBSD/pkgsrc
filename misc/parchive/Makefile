@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 19:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:34 asau Exp $
 #
 
 DISTNAME=	par-v1.1
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=parchive/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://parchive.sourceforge.net/
 COMMENT=	Create or use "Parity Volume Set" (PAR and Pnn) files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/par-cmdline
 

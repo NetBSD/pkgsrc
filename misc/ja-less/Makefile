@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/17 14:18:45 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:24 asau Exp $
 
 DISTNAME=	less-382
 PKGNAME=	ja-${DISTNAME}.262
@@ -17,8 +17,6 @@ PATCH_DIST_STRIP= -p1
 MAINTAINER=	komine@cc.meisei-u.ac.jp
 HOMEPAGE=	http://www25.big.jp/~jam/less/
 COMMENT=	Less + zcat + ISO-2022 - a pager similar to more and pg
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

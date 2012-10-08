@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/07/28 22:36:08 reed Exp $
+# $NetBSD: Makefile,v 1.42 2012/10/08 09:57:39 asau Exp $
 #
 
 DISTNAME=		UDFclient.0.7.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		reinoud@13thmonkey.org
 HOMEPAGE=		http://www.13thmonkey.org/udfclient/
 COMMENT=		UDF file system reader/writer for CD/CD-RW/DVD*RW/DVD-RAM and images
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

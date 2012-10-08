@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/04 07:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 09:57:22 asau Exp $
 #
 
 DISTNAME=	gaupol-0.19.2
@@ -19,7 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.16:../../x11/py-gtk2
 PYDISTUTILSPKG= 		yes
 USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 PYSETUPARGS=		--mandir=${PREFIX}/${PKGMANDIR}
 

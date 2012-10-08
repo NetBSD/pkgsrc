@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/08 01:06:50 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:20 asau Exp $
 
 DISTNAME=	dtach-0.8
 CATEGORIES=	misc
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtach/}
 MAINTAINER=	fgudin@nerim.net
 HOMEPAGE=	http://dtach.sourceforge.net/
 COMMENT=	Small program that emulates the detach feature of screen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	dtach

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/06/11 13:00:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:38 asau Exp $
 
 DISTNAME=	tmux-1.6
 CATEGORIES=	misc
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tmux.sourceforge.net/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TERMINFO=	yes

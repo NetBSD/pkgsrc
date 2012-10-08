@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.78 2012/09/22 13:48:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2012/10/08 09:57:26 asau Exp $
 
 DISTNAME=	kdeaddons-${_KDE_VERSION}
 PKGREVISION=	19
 CATEGORIES=	misc
 COMMENT=	Add ons for the KDE integrated X11 desktop
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 

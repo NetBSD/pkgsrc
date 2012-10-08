@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:36 asau Exp $
 #
 
 DISTNAME=	root-tail-0.0.10
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.goof.com/pcg/marc/data/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.goof.com/pcg/marc/root-tail.html
 COMMENT=	Allows printing of text directly to the X11 root window
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

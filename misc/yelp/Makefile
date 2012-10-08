@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.111 2012/10/08 09:57:42 asau Exp $
 #
 
 DISTNAME=		yelp-2.30.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Help browser for GNOME 2 desktop
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		docbook>=4.2:../../textproc/docbook
 

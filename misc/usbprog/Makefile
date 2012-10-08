@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 17:11:38 tron Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 09:57:39 asau Exp $
 #
 
 DISTNAME=	usbprog-0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.embedded-projects.net/index.php?page_id=165
 COMMENT=	Firmware loader for "usbprog" programming adapter
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

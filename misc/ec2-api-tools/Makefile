@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/31 20:46:01 jym Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 09:57:20 asau Exp $
 #
 
 PKGNAME=	ec2-api-tools-1.3.62308
@@ -15,8 +15,6 @@ HOMEPAGE=	http://aws.amazon.com/developertools/351
 COMMENT=	Amazon EC2 API tools (register, launch, administer instances)
 LICENSE=	amazon-software-license AND apache-2.0 AND gnu-gpl-v2 \
 		    AND cddl-1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/03 00:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 09:57:30 asau Exp $
 
 DISTNAME=	most-5.0.0a
 PKGREVISION=	4
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/
 MAINTAINER=	rhwang@bigpanda.com
 HOMEPAGE=	http://www.jedsoft.org/most/
 COMMENT=	Pager (like less) which has support for windows and binary files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

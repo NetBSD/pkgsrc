@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/02/17 14:02:14 hans Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 09:57:40 asau Exp $
 
 DISTNAME=	procps-3.2.6
 PKGNAME=	watch-3.2.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://procps.sourceforge.net/
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Watch a program with update intervals
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 MAKE_FILE=	${FILESDIR}/Makefile

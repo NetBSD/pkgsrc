@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/22 14:25:25 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:20 asau Exp $
 #
 
 PKGNAME=	ec2-ami-tools-1.3.57676
@@ -15,8 +15,6 @@ MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://aws.amazon.com/developertools/368
 COMMENT=	Amazon EC2 AMI Tools (bundle, create, upload AMIs to S3)
 LICENSE=	amazon-software-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS=	bash:run gtar:run gzip:run openssl:run pax tee:run
 

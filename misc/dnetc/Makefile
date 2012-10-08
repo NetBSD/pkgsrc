@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 09:57:19 asau Exp $
 
 DISTNAME=	${DISTNAME_${OPSYS}_${MACHINE_ARCH}}
 PKGNAME=	dnetc-2.${DISTVER_${OPSYS}_${MACHINE_ARCH}}
@@ -15,8 +15,6 @@ ONLY_FOR_PLATFORM=	Darwin-*-powerpc NetBSD-*-alpha NetBSD-*-arm	\
 			NetBSD-*-mipsel NetBSD-*-powerpc NetBSD-*-sparc \
 			NetBSD-*-sparc64 NetBSD-*-vax SunOS-*-sparc	\
 			SunOS-*-sparc64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
 NO_BUILD=	YES

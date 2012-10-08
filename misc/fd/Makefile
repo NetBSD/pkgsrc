@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/12/17 10:16:12 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/08 09:57:21 asau Exp $
 #
 
 DISTNAME=	FD-3.00j
@@ -10,8 +10,6 @@ MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 COMMENT=	File and directory management tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FLAGS+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}

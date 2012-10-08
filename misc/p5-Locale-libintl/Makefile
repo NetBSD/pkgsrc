@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:34 asau Exp $
 
 P5_LIBINTL_VER=	1.20
 DISTNAME=	libintl-perl-${P5_LIBINTL_VER}
@@ -13,7 +13,6 @@ COMMENT=	Perl internationalization library
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/libintl-perl/.packlist
 CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/Recode.pm

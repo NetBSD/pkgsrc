@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/24 16:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 09:57:20 asau Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -17,8 +17,6 @@ DISTFILES=	edict.gz edict_doc.html
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
 COMMENT=	Japanese-English dictionary file
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
