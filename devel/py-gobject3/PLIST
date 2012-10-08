@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/04 18:31:10 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/08 21:15:03 prlw1 Exp $
 include/pygobject-3.0/pygobject.h
 lib/libpyglib-gi-2.0-python${PYVERSSUFFIX}.la
 lib/pkgconfig/pygobject-3.0.pc
@@ -24,6 +24,9 @@ ${PYSITELIB}/gi/_gobject/constants.pyo
 ${PYSITELIB}/gi/_gobject/propertyhelper.py
 ${PYSITELIB}/gi/_gobject/propertyhelper.pyc
 ${PYSITELIB}/gi/_gobject/propertyhelper.pyo
+${PYSITELIB}/gi/_gobject/signalhelper.py
+${PYSITELIB}/gi/_gobject/signalhelper.pyc
+${PYSITELIB}/gi/_gobject/signalhelper.pyo
 ${PYSITELIB}/gi/importer.py
 ${PYSITELIB}/gi/importer.pyc
 ${PYSITELIB}/gi/importer.pyo
