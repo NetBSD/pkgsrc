@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 13:45:34 asau Exp $
 
 DISTNAME=	LPRng_DOC-3.6.13
 PKGNAME=	LPRng-doc-3.6.13
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lprng.com/
 COMMENT=	LPRng documentation in dvi, text, html and ps formats
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes

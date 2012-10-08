@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/09/06 21:08:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 13:45:35 asau Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.7
@@ -16,8 +16,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/AdobeReader
 BUILD_DIRS=		# empty
