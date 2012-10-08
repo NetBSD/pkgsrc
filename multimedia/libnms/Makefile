@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 09:21:07 asau Exp $
 #
 
 DISTNAME=	libnms-0.6.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://streaming.polito.it/client/library/
 COMMENT=	Open Media Streaming Client Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

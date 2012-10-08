@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 09:21:08 asau Exp $
 
 DISTNAME=	libvpx-v1.1.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/webm/
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

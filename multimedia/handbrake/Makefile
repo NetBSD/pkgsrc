@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 21:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 09:21:04 asau Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -42,8 +42,6 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl intltool msgfmt pkg-config bash

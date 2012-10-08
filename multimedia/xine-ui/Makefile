@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/09/22 13:48:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/08 09:21:15 asau Exp $
 #
 
 DISTNAME=		xine-ui-0.99.7
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.xz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xine-project.org/home
 COMMENT=		Skinned xlib-based xine GUI
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		msgfmt pkg-config gmake

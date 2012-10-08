@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/08/23 11:51:22 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 09:20:57 asau Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
@@ -15,8 +15,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	NetBSD-[0-4]*-* NetBSD-5.[0-9].*-*
 

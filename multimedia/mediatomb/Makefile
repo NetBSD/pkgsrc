@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/09/22 13:48:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/08 09:21:08 asau Exp $
 
 DISTNAME=	mediatomb-0.12.1
 PKGREVISION=	10
@@ -9,8 +9,6 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://mediatomb.cc/
 COMMENT=	UPnP MediaServer with a web user interface
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		automake autoconf autoreconf pkg-config

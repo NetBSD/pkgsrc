@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/05/19 08:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:21:15 asau Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
@@ -14,8 +14,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Play a variety of simple animation formats and show pictures
 HOMEPAGE=	http://xanim.polter.net/
 LICENSE=	xanim-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

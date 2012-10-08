@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/21 21:51:07 marino Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 09:25:51 asau Exp $
 #
 
 DISTNAME=		wbd-1.0ucl4
@@ -15,7 +15,6 @@ MAKE_FILE=		makefile
 WRKSRC=			${WRKDIR}/wbd
 BUILD_TARGET=		wbd
 NO_CONFIGURE=		yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

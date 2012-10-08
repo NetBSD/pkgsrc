@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/09/24 10:29:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/08 09:21:00 asau Exp $
 #
 
 DISTNAME=	fuppes-0.660
@@ -9,8 +9,6 @@ MAINTAINER=	tech-multimedia@NetBSD.org
 HOMEPAGE=	http://fuppes.ulrich-voelkel.de/
 COMMENT=	Free UPnP Entertainment Service
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

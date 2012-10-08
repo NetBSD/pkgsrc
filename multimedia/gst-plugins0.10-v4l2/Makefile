@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2012/09/15 10:05:48 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 09:21:03 asau Exp $
 #
 
 GST_PLUGINS0.10_NAME=	v4l2
 GST_PLUGINS0.10_DIRS=	sys/v4l2
 GST_PLUGINS0.10_FLAGS=	gst_v4l2
 PKGREVISION=		2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-[5-9]* Linux-* SunOS-5.11-*
 

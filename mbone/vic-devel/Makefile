@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/22 13:48:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:25:50 asau Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
@@ -7,8 +7,6 @@ CATEGORIES=	mbone tk
 MASTER_SITES=	http://www.NetBSD.org/~sborrill/snapshots/
 
 MAKE_JOBS_SAFE=	no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2012/09/22 13:48:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:21:15 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/xine-lib/Makefile.common"
 

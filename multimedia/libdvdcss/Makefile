@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/08/10 15:44:42 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/08 09:21:06 asau Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -22,7 +22,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKGCONFIG_OVERRIDE=	src/libdvdcss.pc.in
 
 GNU_CONFIGURE=		YES

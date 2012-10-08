@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 17:11:41 tron Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 09:21:09 asau Exp $
 
 DISTNAME=	mkvtoolnix-2.9.8
 PKGREVISION=	20
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
 COMMENT=	Matroska tools, old version for build with g++-4.1
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake msgfmt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/01 06:02:13 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 09:21:05 asau Exp $
 #
 
 DISTNAME=	libass-0.9.12
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libass/
 COMMENT=	Portable subtitle renderer for the ASS/SSA subtitle format
 LICENSE=	isc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/libass-0.9.12
 GNU_CONFIGURE=	yes

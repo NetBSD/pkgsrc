@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/10/07 19:04:46 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 09:21:06 asau Exp $
 
 DISTNAME=	libmatroska-1.3.0
 CATEGORIES=	multimedia devel
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.matroska.org/
 COMMENT=	Extensible open standard Audio/Video container format
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c++

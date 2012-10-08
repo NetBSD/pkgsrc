@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/18 15:15:48 taca Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 09:21:11 asau Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
@@ -10,8 +10,6 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.libming.org/
 COMMENT=		PHP extension for Ming library
 LICENSE=		php
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-ming-[0-9]*
 

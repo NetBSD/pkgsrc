@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2012/10/02 17:11:40 tron Exp $
+# $NetBSD: Makefile,v 1.104 2012/10/08 09:21:01 asau Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -17,8 +17,6 @@ SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		ftp://ftp2.mplayerhq.hu/MPlayer/skins/		\
 		http://ftp5.mplayerhq.hu/MPlayer/skins/		\
 		ftp://ftp5.mplayerhq.hu/MPlayer/skins/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 SKIN_EXTRACT_SUFX=	.tar.bz2

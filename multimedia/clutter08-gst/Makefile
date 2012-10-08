@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 09:20:58 asau Exp $
 #
 
 DISTNAME=	clutter-gst-0.8.0
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.clutter-project.org/
 COMMENT=	Clutter GStreamer integration
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

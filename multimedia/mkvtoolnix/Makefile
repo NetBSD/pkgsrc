@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/02 17:11:41 tron Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/08 09:21:09 asau Exp $
 
 DISTNAME=	mkvtoolnix-5.0.1
 PKGREVISION=	5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

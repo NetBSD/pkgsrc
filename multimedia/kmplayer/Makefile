@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/10/03 21:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2012/10/08 09:21:05 asau Exp $
 #
 
 DISTNAME=	kmplayer-0.11.3b
@@ -14,8 +14,6 @@ COMMENT=	KDE frontend to mplayer
 BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
 DEPENDS+=		mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt perl pkg-config
 USE_LANGUAGES=		c c++
