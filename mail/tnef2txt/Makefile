@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 17:57:20 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:34 asau Exp $
 #
 
 DISTNAME=	tnef2txt-1.4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.fiction.net/blong/programs/
 COMMENT=	Portable application/ms-tnef parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	tnef2txt
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/05/03 09:55:30 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:35 asau Exp $
 
 DISTNAME=		xmailwatcher
 PKGNAME=		${DISTNAME}-1.6
@@ -8,7 +8,6 @@ MASTER_SITES=		http://www.dcs.ed.ac.uk/home/gdmr/X11/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=	Mailbox checker which displays sender and subject lines of mails
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=		yes
 

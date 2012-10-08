@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/04 22:54:08 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:34 asau Exp $
 
 DISTNAME=	wl-beta_2.15.9+0.20110420.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//:S/.orig//}
@@ -9,8 +9,6 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	patch
 WRKSRC=		${WRKDIR}/wanderlust

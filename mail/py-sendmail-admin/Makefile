@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/04 00:21:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:28 asau Exp $
 #
 
 VER=		1.0
@@ -17,8 +17,6 @@ PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_SELF_CONFLICT=		yes
 
 USE_LANGUAGES=	# none
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
