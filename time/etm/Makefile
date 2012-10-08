@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/03/15 11:53:41 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 13:04:17 asau Exp $
 #
 
 DISTNAME=	etm-877
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.duke.edu/~dgraham/ETM/
 COMMENT=	events and tasks manager using simple text files
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil

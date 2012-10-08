@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 13:04:23 asau Exp $
 
 DISTNAME=	DateTime-Format-Strptime-1.52
 PKGNAME=	p5-${DISTNAME}00
@@ -10,8 +10,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-Strptime/
 COMMENT=	Perl 5 module to parse and format strp and strf time patterns
 LICENSE=	artistic-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime>=0.4400:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Locale>=0.45:../../time/p5-DateTime-Locale

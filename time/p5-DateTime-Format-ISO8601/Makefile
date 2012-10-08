@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 13:04:22 asau Exp $
 
 DISTNAME=	DateTime-Format-ISO8601-0.07
 PKGNAME=	p5-${DISTNAME}00
@@ -10,8 +10,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~jhoblitt/DateTime-Format-ISO8601/
 COMMENT=	Parses ISO8601 formats
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime>=0.18:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Builder>=0.77:../../time/p5-DateTime-Format-Builder
