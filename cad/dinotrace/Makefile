@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/03 21:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/08 13:25:11 asau Exp $
 #
 
 DISTNAME=	dinotrace-9.3c
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.veripool.com/dinotrace/
 COMMENT=	Tool for viewing the output of digital simulators
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		YES
