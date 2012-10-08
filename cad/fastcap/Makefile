@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/02/16 11:18:04 hans Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/08 13:25:12 asau Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=	tex-bibtex>=0.99c:../../print/tex-bibtex
 BUILD_DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
 BUILD_DEPENDS+=	tex-metapost>=1.212:../../graphics/tex-metapost
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 EXTRACT_USING=		bsdtar
