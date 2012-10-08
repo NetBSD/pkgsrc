@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3182 2012/10/08 12:53:30 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3183 2012/10/08 14:01:04 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4954,3 +4954,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/cairo to 1.12.4nb1 [tron 2012-10-08]
 	Updated games/gbrainy to 2.15 [wiz 2012-10-08]
 	Updated devel/p5-Mouse to 1.02 [wen 2012-10-08]
+	Updated net/drill to 1.6.13 [he 2012-10-08]
+	Updated net/drill to 1.6.13nb1 [he 2012-10-08]
