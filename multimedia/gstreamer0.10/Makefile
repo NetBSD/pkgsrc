@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/10/03 21:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/08 09:21:04 asau Exp $
 #
 
 DISTNAME=		gstreamer-0.10.36
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gstreamer.net/
 COMMENT=		Open source multimedia framework
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

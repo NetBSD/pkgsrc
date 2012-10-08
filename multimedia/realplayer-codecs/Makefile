@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/03/17 21:24:23 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 09:21:11 asau Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}-20050115
@@ -16,8 +16,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	RealPlayer 8 shared libraries, primarily for use with MPlayer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc *-*-alpha
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/01/20 13:55:27 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 09:20:59 asau Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvd-slideshow/}
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://dvd-slideshow.sourceforge.net/
 COMMENT=	Script that creates a slideshow-style DVD with some simple menus
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 DEPENDS+=	lame-[0-9]*:../../audio/lame

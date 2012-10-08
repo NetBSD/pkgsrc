@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/28 16:22:10 is Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 09:21:06 asau Exp $
 
 PKGNAME=	libflashsupport-1.0.2098
 DISTNAME=	libflashsupport-1-0-2098-i586
@@ -20,8 +20,6 @@ EMUL_REQD=		suse>=9.1
 EMUL_PKG_FMT=		rpm
 RPM2PKG_STRIP=		3
 RPM2PKG_PLIST=		# empty
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty

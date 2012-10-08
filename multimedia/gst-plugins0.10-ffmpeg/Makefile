@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/08 09:21:02 asau Exp $
 #
 
 DISTNAME=		gst-ffmpeg-0.10.13
@@ -9,8 +9,6 @@ MASTER_SITES=		http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 COMMENT=		ffmpeg plugin for gstreamer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

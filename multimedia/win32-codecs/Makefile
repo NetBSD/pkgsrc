@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/03/17 21:25:27 zafer Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/08 09:21:14 asau Exp $
 
 DISTNAME=	windows-all-20071007
 PKGNAME=	win32-codecs-071007
@@ -21,8 +21,6 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 

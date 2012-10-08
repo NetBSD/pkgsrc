@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/10/03 21:56:51 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/08 09:21:14 asau Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -16,7 +16,6 @@ COMMENT=		VideoLAN Client
 # Purposely not setting PREV_PKGPATH
 SUPERSEDES=		vlc-0.8.*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		vlc-[0-9]* vlc07-[0-9]*
 
 USE_LIBTOOL=		yes

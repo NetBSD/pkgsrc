@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:56:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 09:21:14 asau Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -17,7 +17,6 @@ LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config \
 			autoconf automake autoreconf

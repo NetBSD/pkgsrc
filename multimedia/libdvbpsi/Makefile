@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/11/05 15:59:48 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 09:21:05 asau Exp $
 
 DISTNAME=	libdvbpsi-0.2.2
 CATEGORIES=	multimedia
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.videolan.org/
 COMMENT=	PSI decoder and generator library for MPEG2 and DVB streams
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

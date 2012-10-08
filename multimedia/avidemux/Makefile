@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.78 2012/10/08 09:20:58 asau Exp $
 #
 
 DISTNAME=	avidemux_2.5.4
@@ -13,8 +13,6 @@ COMMENT=	Graphical video editing program
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++

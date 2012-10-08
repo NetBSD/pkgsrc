@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/08 09:20:59 asau Exp $
 #
 
 DISTNAME=	DVDStyler-2.1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.dvdstyler.de/
 COMMENT=	Crossplatform DVD Authoring System
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	dvdauthor>=0.6.10:../../multimedia/dvdauthor

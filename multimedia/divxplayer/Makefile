@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/08/23 02:12:51 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 09:20:58 asau Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
@@ -13,8 +13,6 @@ COMMENT=	DivX(TM) Video Player for Linux from DivX.com
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat x11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

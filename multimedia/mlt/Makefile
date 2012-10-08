@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:11:41 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 09:21:09 asau Exp $
 #
 
 DISTNAME=	mlt-0.5.10
@@ -10,8 +10,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.mltframework.org/twiki/bin/view/MLT/
 COMMENT=	Open source multimedia framework
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++

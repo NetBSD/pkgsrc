@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 17:11:42 tron Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/08 09:21:10 asau Exp $
 
 DISTNAME=	phonon-4.5.1
 PKGREVISION=	4
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://phonon.kde.org
 COMMENT=	Multimedia API for KDE and QT
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 

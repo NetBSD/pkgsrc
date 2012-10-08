@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 09:20:58 asau Exp $
 #
 
 DISTNAME=		dirac-1.0.2
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dirac/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dirac.sourceforge.net/
 COMMENT=		Open-source video codec designed at the BBC
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config perl:run
 USE_LIBTOOL=		yes

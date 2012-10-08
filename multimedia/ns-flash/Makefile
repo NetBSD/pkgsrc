@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/11/18 13:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/08 09:21:10 asau Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://download.macromedia.com/pub/flashplayer/installers/current/9/
@@ -19,8 +19,6 @@ CONFLICTS+=		communicator<=4.76nb1
 CONFLICTS+=		navigator<=4.76nb1
 
 CONFLICTS+=		adobe-flash-plugin-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		# empty
 DIST_SUBDIR=		flash/${FLASH_VERS}

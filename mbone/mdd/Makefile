@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 18:15:08 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:25:50 asau Exp $
 #
 
 DISTNAME=	mdd-20050318
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	manu@NetBSD.org
 COMMENT=	Multicast file distribution tool
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

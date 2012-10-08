@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/03 21:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/08 09:21:01 asau Exp $
 
 DISTNAME=		gnome-media-2.28.5
 PKGREVISION=		17
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
