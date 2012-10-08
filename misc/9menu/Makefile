@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/04 19:21:10 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 09:57:15 asau Exp $
 
 DISTNAME=		9menu-1.8
 PKGREVISION=		1
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.shar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Simple menu patterned after the plan9 user interface
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=		Makefile.noimake
 BUILD_TARGET=		9menu

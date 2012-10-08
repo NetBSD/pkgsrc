@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/11/10 10:23:15 dogcow Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:41 asau Exp $
 #
 
 DISTNAME=	xjdic24
@@ -18,7 +18,6 @@ COMMENT=	Japanese dictionary
 DEPENDS+=	edict-[0-9]*:../../misc/edict
 DEPENDS+=	kanjidic-[0-9]*:../../misc/kanjidic
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 WRKSRC=		${WRKDIR}

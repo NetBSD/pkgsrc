@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/15 07:35:56 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:28 asau Exp $
 #
 
 DISTNAME=	libquantum-1.0.0
@@ -9,8 +9,6 @@ MAINTAINER=	lennart@augustsson.net
 HOMEPAGE=	http://www.libquantum.de/
 COMMENT=	Quantum computing simulation library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

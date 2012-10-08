@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 09:57:37 asau Exp $
 
 DISTNAME=	gnats-3.113.1
 PKGNAME=	send-pr-${GNATS_VERSION}
@@ -16,7 +16,6 @@ GNATS_VERSION=	${DISTNAME:S/gnats-//}
 CONFLICTS+=	gnats-[0-9]* arla-[0-9]*
 
 GNU_CONFIGURE=		YES
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		makeinfo
 INFO_FILES=		yes

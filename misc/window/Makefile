@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/16 04:38:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 09:57:41 asau Exp $
 
 DISTNAME=	window-20120215
 CATEGORIES=	misc
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Windowing environment for ASCII terminals
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # The current distfile relies on the NetBSD make system and does not use any
 # kind of autoconfiguration.  This is done purely for simplicity reasons but

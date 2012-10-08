@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/12 08:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 09:57:15 asau Exp $
 #
 
 DISTNAME=	JBidwatcher-2.1.5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jbidwatcher.com/
 COMMENT=	eBay sniping, bidding and monitoring software
 #LICENSE=	Creative Commons BY-NC-SA Amended
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run

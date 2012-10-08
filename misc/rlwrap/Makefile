@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:36 asau Exp $
 #
 
 DISTNAME=	rlwrap-0.37
@@ -10,8 +10,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://utopia.knoware.nl/~hlub/uck/rlwrap/
 COMMENT=	Provides command line editing and history for other commands
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.readline+=readline>=4.2
 

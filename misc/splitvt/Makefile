@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/07/25 03:38:01 tonnerre Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 09:57:38 asau Exp $
 
 DISTNAME=		splitvt-1.6.6
 CATEGORIES=		misc
@@ -6,8 +6,6 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Run two shells in a split window/terminal
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=
 HAS_CONFIGURE=		yes
