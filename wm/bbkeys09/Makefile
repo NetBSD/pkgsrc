@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:42:17 asau Exp $
 #
 
 DISTNAME=	bbkeys-0.9.0
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbkeys/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbkeys.sourceforge.net/
 COMMENT=	General X Window keygrabber
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	bbkeys<=0.9
 

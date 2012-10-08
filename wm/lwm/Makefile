@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/07/14 12:56:14 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 12:42:21 asau Exp $
 
 DISTNAME=	lwm-1.2.1
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.jfc.org.uk/files/lwm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jfc.org.uk/software/lwm.html
 COMMENT=	Lightweight Window Manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

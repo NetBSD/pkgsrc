@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 21:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/08 12:42:21 asau Exp $
 #
 
 DISTNAME=	metisse-0.4.1
@@ -13,8 +13,6 @@ COMMENT=	Window manager with novel features
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	fvwm-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt perl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:53 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 12:42:17 asau Exp $
 #
 
 DISTNAME=	aewm++-1.0.24
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sapphire.sourceforge.net/
 COMMENT=	Fork of the popular minimal window manager aewm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

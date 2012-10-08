@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/12/23 11:44:57 dsainty Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/08 12:42:19 asau Exp $
 #
 
 DISTNAME=	ctwm-3.8a
@@ -11,7 +11,6 @@ HOMEPAGE=	http://ctwm.free.lp.se/
 COMMENT=	Window manager with support for multiple virtual screens and Gnome 1.x
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/04 00:22:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:42:23 asau Exp $
 #
 
 DISTNAME=	pytyle-0.7.5
@@ -13,8 +13,6 @@ COMMENT=	Manual tiling manager
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_SELF_CONFLICT=	yes
 

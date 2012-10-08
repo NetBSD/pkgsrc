@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/01/17 17:14:31 tron Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/08 12:42:25 asau Exp $
 
 #
 # There is no distinfo file because users can specify alternate themes
@@ -16,8 +16,6 @@ HOMEPAGE=	http://wm.themes.org/
 COMMENT=	Themes for the window manager WindowMaker
 
 DEPENDS+=	windowmaker>=0.80.0nb1:../../wm/windowmaker
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	wmthemes

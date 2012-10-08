@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 12:42:18 asau Exp $
 #
 
 DISTNAME=	bbpager-0.4.1beta1
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml
 COMMENT=	Pager for the blackbox window manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
