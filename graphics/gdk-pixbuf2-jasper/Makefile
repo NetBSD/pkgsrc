@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 14:10:50 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 08:04:28 marino Exp $
 #
 
-DISTNAME=	gdk-pixbuf-2.26.3
-PKGNAME=	gdk-pixbuf2-jasper-2.26.3
-PKGREVISION=	1
+DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
+PKGNAME=	gdk-pixbuf2-jasper-${PIXBUF2_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${MSITE_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/gdk-pixbuf2/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/gdk-pixbuf2/patches
+
+.include "../../graphics/gdk-pixbuf2/Makefile.version"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libtiff --without-libjpeg --without-libpng
