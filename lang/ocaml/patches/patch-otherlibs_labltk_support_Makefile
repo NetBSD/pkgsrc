@@ -1,0 +1,31 @@
+$NetBSD: patch-otherlibs_labltk_support_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+
+Use BSD_INSTALL_* instead of mkdir and cp
+--- otherlibs/labltk/support/Makefile.orig	2011-09-15 13:38:45.000000000 +0000
++++ otherlibs/labltk/support/Makefile
+@@ -42,19 +42,17 @@ PUBMLI=fileevent.mli protocol.mli textva
+ PUB= $(PUBMLI) $(PUBMLI:.mli=.cmi) tkthread.mli tkthread.cmi tkthread.cmo
+ 
+ install:
+-	if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(PUB) lib$(LIBNAME).$(A) $(INSTALLDIR)
++	if test -d $(INSTALLDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(INSTALLDIR); fi
++	$(BSD_INSTALL_DATA) $(PUB) lib$(LIBNAME).$(A) $(INSTALLDIR)
+ 	cd $(INSTALLDIR); $(RANLIB) lib$(LIBNAME).$(A)
+-	cd $(INSTALLDIR); chmod 644 $(PUB) lib$(LIBNAME).$(A)
+ 	if test -f dll$(LIBNAME)$(EXT_DLL); then \
+-	   cp dll$(LIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
++	   $(BSD_INSTALL_DATA) dll$(LIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
+ 
+ installopt:
+-	@if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(PUBMLI:.mli=.cmx) $(INSTALLDIR)
++	@if test -d $(INSTALLDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(INSTALLDIR); fi
++	$(BSD_INSTALL_DATA) $(PUBMLI:.mli=.cmx) $(INSTALLDIR)
+ 	if test -f tkthread.$(O); then \
+-	  cp tkthread.cmx tkthread.$(O) $(INSTALLDIR); \
+-	  chmod 644 $(INSTALLDIR)/tkthread.cmx $(INSTALLDIR)/tkthread.$(O); \
++	  $(BSD_INSTALL_DATA) tkthread.cmx tkthread.$(O) $(INSTALLDIR); \
+ 	fi
+ 
+ clean:

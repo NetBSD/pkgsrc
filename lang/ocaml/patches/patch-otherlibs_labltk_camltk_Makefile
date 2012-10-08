@@ -1,0 +1,23 @@
+$NetBSD: patch-otherlibs_labltk_camltk_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+
+Use BSD_INSTALL_* instead of mkdir and cp
+--- otherlibs/labltk/camltk/Makefile.orig	2011-07-27 14:17:02.000000000 +0000
++++ otherlibs/labltk/camltk/Makefile
+@@ -35,13 +35,13 @@ clean:
+ 	$(MAKE) -f Makefile.gen clean
+ 
+ install:
+-	if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(CAMLTKOBJS:.cmo=.cmi) $(CWIDGETOBJS:.cmo=.mli) $(INSTALLDIR)
++	if test -d $(INSTALLDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(INSTALLDIR); fi
++	$(BSD_INSTALL_DATA) $(CAMLTKOBJS:.cmo=.cmi) $(CWIDGETOBJS:.cmo=.mli) $(INSTALLDIR)
+ 	chmod 644 $(INSTALLDIR)/*.cmi
+ 
+ installopt:
+-	@if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(CAMLTKOBJSX) $(INSTALLDIR)
++	@if test -d $(INSTALLDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(INSTALLDIR); fi
++	$(BSD_INSTALL_DATA) $(CAMLTKOBJSX) $(INSTALLDIR)
+ 	chmod 644 $(INSTALLDIR)/*.cmx
+ 
+ .SUFFIXES :
