@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 12:19:06 asau Exp $
 
 DISTNAME=	clawsker-0.7.8
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.claws-mail.org/tools/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.claws-mail.org/clawsker
 COMMENT=	Edit Claws-Mail hidden preferences
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake msgfmt perl
 REPLACE_PERL=	clawsker

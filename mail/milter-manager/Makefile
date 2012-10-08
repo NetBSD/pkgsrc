@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/15 10:05:28 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/08 12:19:17 asau Exp $
 #
 
 DISTNAME=	milter-manager-1.8.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://milter-manager.sourceforge.net/
 COMMENT=	Milter to use milters effectively
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt

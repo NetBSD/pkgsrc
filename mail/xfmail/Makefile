@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/02/06 12:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/08 12:19:35 asau Exp $
 
 DISTNAME=		xfmail-1.5.5
 PKGREVISION=		6
@@ -12,8 +12,6 @@ COMMENT=		Xforms based mail application for Unix operating systems
 #LICENSE=		gpl-gnu-v2
 # A few files are.
 #LICENSE+=		mit-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_LANGUAGES=		c c++

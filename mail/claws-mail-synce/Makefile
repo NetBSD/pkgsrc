@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/02 17:11:28 tron Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 12:19:06 asau Exp $
 #
 
 DISTNAME=	synce_plugin-0.7.5
@@ -9,8 +9,6 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Synchronize addressbook of a Windows CE with Claws Mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 

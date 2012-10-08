@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 12:19:21 asau Exp $
 #
 
 DISTNAME=	IMAP-Admin-1.6.6
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IMAP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IMAP-Admin/
 COMMENT=	Perl5 module for administration of RFC-2060 IMAP servers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IMAP/Admin/.packlist
