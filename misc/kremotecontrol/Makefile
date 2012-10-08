@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/02 17:11:36 tron Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 23:02:07 adam Exp $
 
 DISTNAME=	kremotecontrol-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 COMMENT=	KDE frontend for your remote controls.
 
