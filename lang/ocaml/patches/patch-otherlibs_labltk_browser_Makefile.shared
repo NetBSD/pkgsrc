@@ -1,0 +1,14 @@
+$NetBSD: patch-otherlibs_labltk_browser_Makefile.shared,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+
+Use BSD_INSTALL_* instead of mkdir and cp
+--- otherlibs/labltk/browser/Makefile.shared.orig	2012-05-30 13:29:48.000000000 +0000
++++ otherlibs/labltk/browser/Makefile.shared
+@@ -63,7 +63,7 @@ help.ml:
+ 
+ install:
+ 	if test -f ocamlbrowser$(EXE); then : ; \
+-	  cp ocamlbrowser$(EXE) $(BINDIR); fi
++	  $(BSD_INSTALL_SCRIPT) ocamlbrowser$(EXE) $(BINDIR); fi
+ 
+ clean:
+ 	rm -f *.cm? ocamlbrowser$(EXE) dummy.mli *~ *.orig *.$(O) help.ml
