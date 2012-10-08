@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/03 21:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/08 12:19:17 asau Exp $
 
 DISTNAME=	MHonArc-2.6.18
 PKGNAME=	mhonarc-2.6.18
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mhonarc.org/
 COMMENT=	Mailbox to HTML converter, suitable for list archives
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 NO_BUILD=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/01/18 14:33:17 adam Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 12:19:08 asau Exp $
 
 DISTNAME=	drac
 PKGNAME=	drac-1.12
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mail.cc.umanitoba.ca/drac/
 COMMENT=	Dynamic Relay Authorization Control
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:19:11 asau Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
@@ -22,8 +22,6 @@ DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		fetchyahoo
