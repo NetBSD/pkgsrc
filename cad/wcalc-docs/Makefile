@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2011/04/22 13:43:04 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 13:25:17 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	${DISTNAME:S/wcalc/wcalc-docs/}
