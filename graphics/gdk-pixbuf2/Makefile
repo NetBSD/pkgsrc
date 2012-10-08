@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/10/06 14:10:50 asau Exp $
-# Remember to also update graphics/gdk-pixbuf2-xlib
+# $NetBSD: Makefile,v 1.22 2012/10/08 08:04:28 marino Exp $
 
-DISTNAME=	gdk-pixbuf-2.26.4
+DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/2.26/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${MSITE_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +12,8 @@ COMMENT=	Image loaders for gtk2
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	gtk2+<2.22
+
+.include "../../graphics/gdk-pixbuf2/Makefile.version"
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
