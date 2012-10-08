@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/10/02 21:25:37 asau Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/08 23:01:20 adam Exp $
 
 DISTNAME=	pgadmin3-1.12.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=pgadmin3/release/v${PKGVERSION_NOREV}/src/}
 

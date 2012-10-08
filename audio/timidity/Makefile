@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2012/10/02 23:48:11 asau Exp $
+# $NetBSD: Makefile,v 1.87 2012/10/08 23:01:14 adam Exp $
 
 DISTNAME=	TiMidity++-2.14.0
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=timidity/}
 EXTRACT_SUFX=	.tar.bz2

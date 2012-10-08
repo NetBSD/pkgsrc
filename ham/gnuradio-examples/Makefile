@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/10/03 13:01:44 asau Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/08 23:01:51 adam Exp $
 
 PKGNAME=	gnuradio-examples-${VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 COMMENT=	GUI framework for GNU Radio based on wxPython
 COMMENT=	Examples for GNU Radio
 

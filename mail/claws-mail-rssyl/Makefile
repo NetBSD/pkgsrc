@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 12:19:05 asau Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/08 23:01:59 adam Exp $
 #
 
 DISTNAME=	rssyl-0.33
 PKGNAME=	claws-mail-rssyl-0.33
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
