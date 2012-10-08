@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/12/06 00:19:23 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 15:18:22 jaapb Exp $
 #
 
 DISTNAME=	omake-${VERSION}-0.rc1
 PKGNAME=	omake-${VERSION}.0rc1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://omake.metaprl.org/downloads/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:54:11 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2012/10/08 15:18:26 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-graphics
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-graphics
 OCAML_GRAPHICS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-graphics+=	ocaml-graphics>=3.08.2
-BUILDLINK_ABI_DEPENDS.ocaml-graphics+=	ocaml-graphics>=3.12.0nb5
+BUILDLINK_ABI_DEPENDS.ocaml-graphics+=	ocaml-graphics>=4.00.1
 BUILDLINK_PKGSRCDIR.ocaml-graphics?=	../../x11/ocaml-graphics
 
 .include "../../lang/ocaml/buildlink3.mk"

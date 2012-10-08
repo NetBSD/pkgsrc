@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/02 20:11:46 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 15:18:22 jaapb Exp $
 #
 
 DISTNAME=	ocamlduce-3.12.1.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/644/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

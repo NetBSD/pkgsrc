@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/12/06 00:19:25 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 15:18:24 jaapb Exp $
 #
 
 DISTNAME=		pxp-1.1.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.ocaml-programming.de/packages/
 

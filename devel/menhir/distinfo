@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/13 22:45:03 bjs Exp $
+$NetBSD: distinfo,v 1.2 2012/10/08 15:18:21 jaapb Exp $
 
-SHA1 (menhir-20080912.tar.gz) = 8a18733023a4a0775cb19837a7497b40628ca197
-RMD160 (menhir-20080912.tar.gz) = f02e43047ee96d8f69505f43810a807404c322eb
-Size (menhir-20080912.tar.gz) = 377709 bytes
-SHA1 (patch-aa) = a10c492c55352aa49673345b47c8f420fc9fbe15
+SHA1 (menhir-20120123.tar.gz) = 6d521cfb1203ae640ecf0672b7a6c4ead9e76786
+RMD160 (menhir-20120123.tar.gz) = 7991cae05cc8246ff81f8f193ca6a8ba6d4d3d7b
+Size (menhir-20120123.tar.gz) = 398871 bytes
+SHA1 (patch-Makefile) = bc736eb58bc87e0bb11b0b2b483f2ebbd82573b2

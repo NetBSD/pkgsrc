@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/06/22 11:39:44 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 15:18:26 jaapb Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,6 @@ DISTINFO_FILE= ${PKGDIR}/../../lang/ocaml/distinfo
 PATCHDIR= ${PKGDIR}/../../lang/ocaml/patches
 
 PKGNAME=		${DISTNAME:S/ocaml/ocaml-graphics/}
-PKGREVISION=		6
 
 COMMENT+=		(graphics library)
 
