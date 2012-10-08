@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2012/10/08 13:58:48 he Exp $
+
+Document the automatic probing for /etc/trusted-key.key.
+
+--- drill.1.orig	2010-08-06 07:09:45.000000000 +0000
++++ drill.1
+@@ -161,6 +161,13 @@ given \fBdrill\fR tries to validate the 
+ key. No chasing is done. When \fBdrill\fR is doing a secure trace, this
+ key will be used as trust anchor. Can contain a DNSKEY or a DS record.
+ 
++Alternatively, if
++\fB-k\fR
++is not specified, and
++\fI/etc/trusted-key.key\fR
++exists and contains a valid DNSKEY or DS record, it will be used
++as the trust anchor.
++
+ .TP
+ \fB\-o \fImnemonic\fR
+ Use this option to set or unset specific header bits. A bit is

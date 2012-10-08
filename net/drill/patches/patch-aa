@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 2012/10/08 13:58:48 he Exp $
+
+For compatibility with dig, if neither -k <key> nor -D is specified,
+read /etc/trusted-key.key if it exists, and if successful, turn on
+DNSSEC handling.
+
+--- drill.c.orig	2012-01-20 10:18:41.000000000 +0000
++++ drill.c
+@@ -10,6 +10,8 @@
+ #include "drill.h"
+ #include <ldns/ldns.h>
+ 
++#include <sys/stat.h>
++
+ #ifdef HAVE_SSL
+ #include <openssl/err.h>
+ #endif
+@@ -397,6 +399,25 @@ main(int argc, char *argv[])
+ 	argc -= optind;
+ 	argv += optind;
+ 
++	/* 
++	 * If DNSSEC isn't enabled already, and /etc/trusted-key.key
++	 * exists, try to read it and turn on DNSSEC handling if successful.
++	 */
++	{
++		struct stat sb;
++
++		if (stat("/etc/trusted-key.key", &sb) == 0) {
++			if (qdnssec != true) {
++				status = read_key_file("/etc/trusted-key.key", key_list);
++				if (status != LDNS_STATUS_OK) {
++					error("Could not parse the key file /etc/trusted-key.key: %s", ldns_get_errorstr_by_id(status));
++				} else {
++					qdnssec = true; /* enable that too */
++				}
++			}
++		}
++	}
++
+ 	/* do a secure trace when requested */
+ 	if (PURPOSE == DRILL_TRACE && qdnssec) {
+ #ifdef HAVE_SSL
