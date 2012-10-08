@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2012/09/15 10:04:05 obache Exp $
+# $NetBSD: Makefile,v 1.86 2012/10/08 20:19:31 prlw1 Exp $
 
-DISTNAME=		atk-2.4.0
-PKGREVISION=		1
+DISTNAME=		atk-2.6.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/2.6/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -12,7 +11,6 @@ COMMENT=		Set of interfaces for accessibility
 LICENSE=		gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes
