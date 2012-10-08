@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/03/17 21:23:03 zafer Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 09:21:09 asau Exp $
 #
 
 DISTNAME=	mpeg_lib-1.3.1
@@ -11,8 +11,6 @@ MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gerg.ca/software/mpeglib/
 COMMENT=	Library for decoding MPEG movies
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

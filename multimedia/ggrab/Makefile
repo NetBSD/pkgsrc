@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/21 05:43:53 darcy Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 09:21:01 asau Exp $
 #
 
 DISTNAME=		${PKGNAME}-linux
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.menzebach.de/ggrab/
 COMMENT=		Server for recording video streams from dream dvb-receivers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 WRKSRC=			${WRKDIR}/ggrab-0.22a

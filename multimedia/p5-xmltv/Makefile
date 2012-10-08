@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 09:21:10 asau Exp $
 
 DISTNAME=	xmltv-0.5.56
 PKGNAME=	p5-${DISTNAME}
@@ -57,7 +57,6 @@ DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
 # Tk::TableMatrix missing for tv_check (report exceptions & changes in schedule)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/XMLTV/.packlist
 USE_TOOLS+=	perl
