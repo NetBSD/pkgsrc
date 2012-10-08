@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11583 2012/10/08 12:49:11 wiz Exp $
+$NetBSD: TODO,v 1.11584 2012/10/08 12:51:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -479,6 +479,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o consolekit-0.4.5
 	o cook-2.31
 	o coreutils-8.19
+	o courier-authlib-0.65.0
 	o covered-0.7.9
 	o covered-current-20090802
 	o cpio-2.9
@@ -880,7 +881,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.1.4
 	o mdocml-1.12.1
 	o mergeant-0.67
-	o mess-0.147
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
@@ -1035,7 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-2.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9660
+	o puzzles-9682
 	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
