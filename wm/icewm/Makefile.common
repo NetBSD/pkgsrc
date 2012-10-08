@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2011/04/18 11:55:14 obache Exp $
+# $NetBSD: Makefile.common,v 1.66 2012/10/08 12:42:20 asau Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icewm.org/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt

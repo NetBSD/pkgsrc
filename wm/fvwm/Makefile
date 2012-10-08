@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 12:42:20 asau Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	5
@@ -22,7 +22,6 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 USE_TOOLS+=		perl:run tar
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/04/22 13:44:55 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 12:42:18 asau Exp $
 
 DISTNAME=	bbrun-1.3
 PKGREVISION=	5
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.dwave.net/~jking/bbrun/
 MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://www.dwave.net/~jking/bbrun/
 COMMENT=	Run utility for BlackBox
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/bbrun
 USE_TOOLS+=	gmake

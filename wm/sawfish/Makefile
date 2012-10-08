@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2012/10/02 17:12:06 tron Exp $
+# $NetBSD: Makefile,v 1.68 2012/10/08 12:42:23 asau Exp $
 #
 
 DISTNAME=		sawfish-1.7.1
@@ -13,8 +13,6 @@ COMMENT=		Extensible window manager that is fully configurable in Lisp
 
 CONFLICTS+=		sawfish-replibs-[0-9]*
 CONFLICTS+=		sawfish-themes-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES

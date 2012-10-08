@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 12:42:24 asau Exp $
 #
 
 DISTNAME=	weewm-0.0.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://weewm.flashtux.org/
 COMMENT=	Fast and ultra light windowmanager with total keyboard control
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXAMPLESDIR=	${PREFIX}/share/examples/weewm
 DOCDIR=		${PREFIX}/share/doc/weewm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/10/03 21:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/08 12:42:25 asau Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	24
@@ -8,8 +8,6 @@ MASTER_SITES=	http://starplot.org/wmakerconf/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://starplot.org/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes

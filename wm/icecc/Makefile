@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/15 11:53:41 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/08 12:42:20 asau Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -25,8 +25,6 @@ COMMENT=		IceWM Control Centre
 
 DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=${VIM_VERSION}:../../editors/vim-xaw
 DEPENDS+=		${PYPKGPREFIX}-qt3-base-[0-9]*:../../x11/py-qt3-base
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

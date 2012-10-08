@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/12 22:28:56 tonio Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 12:42:22 asau Exp $
 #
 
 DISTNAME=	musca-0.9.24
@@ -12,8 +12,6 @@ HOMEPAGE=	http://aerosuidae.net/musca/Musca_Window_Manager
 COMMENT=	Simple dynamic window manager for X
 
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

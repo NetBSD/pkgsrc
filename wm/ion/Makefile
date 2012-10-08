@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/11/01 00:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/08 12:42:21 asau Exp $
 #
 
 DISTNAME=	ion-2-20040729
@@ -12,7 +12,6 @@ HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BROKEN=		Doesn't work with libtool 2.x
 

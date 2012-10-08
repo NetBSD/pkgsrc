@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/11/01 06:02:42 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 12:42:19 asau Exp $
 #
 
 DISTNAME=	echinus-0.4.3
@@ -10,8 +10,6 @@ MAINTAINER=	polachok@gmail.com
 HOMEPAGE=	http://www.plhk.ru/echinus
 COMMENT=	Simple and lightweight tiling window manager
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 

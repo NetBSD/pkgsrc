@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/08/10 16:39:55 marino Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 12:42:19 asau Exp $
 #
 
 DISTNAME=	cwm-3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://monkey.org/~marius/cwm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~marius/cwm/
 COMMENT=	Window manager for X11 initially inspired by evilwm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
