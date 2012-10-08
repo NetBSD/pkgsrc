@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3192 2012/10/08 20:20:06 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.3193 2012/10/08 20:24:12 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4966,3 +4966,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/libthai to 0.1.18 [adam 2012-10-08]
 	Added fonts/harfbuzz version 0.9.4 [adam 2012-10-08]
 	Updated devel/atk to 2.6.0 [prlw1 2012-10-08]
+	Updated devel/at-spi2-core to 2.6.0 [prlw1 2012-10-08]
