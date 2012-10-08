@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 14:26:03 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 14:34:06 asau Exp $
 
 DISTNAME=	polyml.5.5
 PKGNAME=	polyml-5.5
@@ -13,11 +13,13 @@ COMMENT=	Poly/ML is an implementation of Standard ML
 # Dumps core on NetBSD/amd64
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-system-libffi
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 TEST_TARGET=	tests
 
 .include "options.mk"
 
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
