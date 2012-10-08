@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/09/15 10:05:27 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 12:19:12 asau Exp $
 #
 
 DISTNAME=	gmime-2.4.32
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spruce.sourceforge.net/gmime/
 COMMENT=	Library for the creation and parsing of MIME messages
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	gmime<2.2.25nb2
 

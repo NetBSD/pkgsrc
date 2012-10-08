@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/11/01 00:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 12:27:41 asau Exp $
 #
 
 DISTNAME=	newsx-1.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.sfr-fresh.com/unix/misc/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kvaleberg.com/newsx.html
 COMMENT=	NNTP news exchange program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

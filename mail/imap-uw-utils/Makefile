@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/01/17 12:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 12:19:13 asau Exp $
 
 DISTNAME=	imap-utils
 PKGNAME=	imap-uw-utils-20050108
@@ -14,8 +14,6 @@ COMMENT=	UW IMAP mailbox utilities
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004c1nb1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SRCDIRS=	icat ifrom
 

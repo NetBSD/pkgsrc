@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:08 asau Exp $
 
 DISTNAME=	demime-1.1d
 PKGREVISION=	1
@@ -15,8 +15,6 @@ DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	perl:run pod2man

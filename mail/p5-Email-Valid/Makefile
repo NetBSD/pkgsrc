@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:21 asau Exp $
 
 DISTNAME=		Email-Valid-0.190
 PKGNAME=		p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Email/Valid/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/08/21 23:49:23 marino Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/08 12:19:10 asau Exp $
 
 DISTNAME=	exmh-2.7.2
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	X11/TK based mail reader front end to MH
 
 DEPENDS+=	nmh>=1.0:../../mail/nmh
 DEPENDS+=	metamail>=2.7:../../mail/metamail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	tclsh
 USE_TOOLS+=	wish:run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 12:19:23 asau Exp $
 #
 
 DISTNAME=		Mail-DKIM-0.38
@@ -14,7 +14,6 @@ COMMENT=		Perl5 module for DKIM-based mail-signing and -verifying
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.27:../../security/p5-Crypt-OpenSSL-RSA
 DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA

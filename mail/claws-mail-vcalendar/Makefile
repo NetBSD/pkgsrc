@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/02 17:11:28 tron Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/08 12:19:06 asau Exp $
 #
 
 DISTNAME=	vcalendar-2.0.13
@@ -9,8 +9,6 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enable vCalendar message handling
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #PLIST_SRC+=	PLIST
 

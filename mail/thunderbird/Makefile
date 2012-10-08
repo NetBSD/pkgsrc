@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2012/10/02 17:11:29 tron Exp $
+# $NetBSD: Makefile,v 1.100 2012/10/08 12:19:33 asau Exp $
 #
 
 DISTNAME=	# empty
@@ -16,8 +16,6 @@ EXTRACT_DIR.lightning-1.7.source.tar.bz2=	${WRKSRC}/lightning
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/comm-release

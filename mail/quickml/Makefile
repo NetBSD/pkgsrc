@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/16 15:30:44 taca Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 12:19:29 asau Exp $
 #
 
 DISTNAME=	quickml-0.7
@@ -11,7 +11,6 @@ HOMEPAGE=	http://0xcc.net/quickml/
 COMMENT=	Easy-to-use mailing list system
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 RCD_SCRIPTS+=	quickml

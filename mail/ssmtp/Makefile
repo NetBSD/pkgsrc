@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/07/03 11:47:50 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/08 12:19:32 asau Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -15,8 +15,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/stable/mail/ssmtp
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/.orig$//}
 USE_TOOLS+=		gmake

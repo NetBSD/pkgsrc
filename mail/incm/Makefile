@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:14 asau Exp $
 #
 
 DISTNAME=	incm-0.5
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.mew.org/
 COMMENT=	Tool to get mail from mbox file or maildir
 
 CONFLICTS=	mew-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=	utimes
 GNU_CONFIGURE=	YES

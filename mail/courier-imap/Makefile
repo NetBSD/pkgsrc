@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2012/10/03 21:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2012/10/08 12:19:06 asau Exp $
 
 DISTNAME=	courier-imap-4.10.0
 PKGREVISION=	1
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.courier-mta.org/imap/
 
 DEPENDS+=	courier-maildir>=0.65.0:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=0.65.0:../../net/couriertcpd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		env gmake perl
 USE_LANGUAGES=		c c++

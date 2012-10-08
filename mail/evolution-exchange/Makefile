@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/10/02 17:11:29 tron Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/08 12:19:10 asau Exp $
 #
 
 DISTNAME=	evolution-exchange-2.32.2
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.novell.com/products/desktop/features/evolution.html
 COMMENT=	Support for Microsoft Exchange 2000 and 2003 in Evolution
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 12:19:11 asau Exp $
 #
 
 DISTNAME=	fml-7.98.15-${FML_STAMP}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.fml.org/software/fml8/index.html.en
 COMMENT=	FML mailing list server development version
 LICENSE=	gnu-gpl-v2 OR artistic
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USERGROUP_PHASE=	pre-install
 
 # development version

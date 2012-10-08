@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:02 asau Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.amavis.org/
 COMMENT=	Mail virus scanner
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	amavis-[0-9]*
 CONFLICTS+=	amavis-perl-[0-9]*

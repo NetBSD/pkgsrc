@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/02 17:11:27 tron Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/08 12:19:03 asau Exp $
 #
 
 DISTNAME=	archive-0.6.12
@@ -9,8 +9,6 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Adds archiving to Claws-Mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 

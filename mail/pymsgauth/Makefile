@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/15 11:53:30 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 12:19:28 asau Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
@@ -9,8 +9,6 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://pyropus.ca/software/pymsgauth/
 COMMENT=		Automatically process qsecretary confirmation requests
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYMSGAUTH_PROGRAMS=	pymsgauth-*
 DOCS=			BUGS CHANGELOG COPYING pymsgauth.txt

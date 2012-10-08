@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/03/15 11:53:30 obache Exp $
+# $NetBSD: Makefile,v 1.48 2012/10/08 12:19:33 asau Exp $
 #
 
 DISTNAME=	tmda-1.1.12
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_PATCH_SCRIPTS=	${TMDA_PROGRAMS}
 PY_PATCHPLIST=		yes

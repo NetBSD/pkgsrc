@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 12:19:23 asau Exp $
 #
 
 DISTNAME=	Mail-RFC822-Address-0.3
@@ -16,8 +16,6 @@ DEPENDS+=	p5-ExtUtils-MakeMaker-[0-9]*:../../devel/p5-ExtUtils-MakeMaker
 
 PERL5_PACKLIST=	auto/Mail/RFC822/Address/.packlist
 USE_LANGUAGES=	# none
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

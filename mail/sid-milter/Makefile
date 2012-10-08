@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/04 22:09:49 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:31 asau Exp $
 #
 
 DISTNAME=	sid-milter-1.0.0
@@ -10,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://sid-milter.sourceforge.net/
 COMMENT=	Open source SPF/SenderID filter software from Sendmail, Inc
 LICENSE=	sendmail-open-source-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 

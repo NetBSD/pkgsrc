@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/02 16:30:32 hans Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:16 asau Exp $
 
 DISTNAME=	mailwrapper-19990412
 PKGREVISION=	4
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Wrapper to support arbitrary Mail Transport Agents
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES+=		cdefs
 USE_BSD_MAKEFILE=	yes

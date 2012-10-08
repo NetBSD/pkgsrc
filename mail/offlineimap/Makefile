@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/03/20 01:28:18 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 12:19:19 asau Exp $
 #
 
 DISTNAME=	offlineimap-v6.5.2.1
@@ -14,8 +14,6 @@ LICENSE=	python-software-foundation AND gnu-gpl-v2 # or later
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/offlineimap
 

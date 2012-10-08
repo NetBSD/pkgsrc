@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 12:19:28 asau Exp $
 #
 
 DISTNAME=		qgreylist-0.3
@@ -12,8 +12,6 @@ COMMENT=		Simple greylisting for qmail
 
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/qgreylist
 

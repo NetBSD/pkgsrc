@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:19:02 asau Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -17,8 +17,6 @@ LICENSE=	gnu-gpl-v2
 
 VERSION=	2.7.0
 PATCHLEVEL=	# empty
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip

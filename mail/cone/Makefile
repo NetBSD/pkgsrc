@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 12:19:06 asau Exp $
 
 DISTNAME=	cone-0.90
 PKGREVISION=	3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.courier-mta.org/cone/
 COMMENT=	Console newsreader and emailer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl true

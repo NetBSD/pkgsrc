@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:27 asau Exp $
 #
 
 DISTNAME=	poppy-3.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.cnpbagwell.com/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cnpbagwell.com/projects.html
 COMMENT=	Client to perform simple tasks with a POP3/IMAP server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run

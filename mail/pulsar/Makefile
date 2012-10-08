@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/17 12:02:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:28 asau Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://pulsar.sourceforge.net/
 COMMENT=	Small, secure POP3 daemon, featuring native SSL support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

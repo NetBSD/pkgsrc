@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/10/03 21:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/08 12:19:03 asau Exp $
 
 DISTNAME=	bogofilter-1.2.2
 PKGREVISION=	4
@@ -11,7 +11,6 @@ HOMEPAGE=	http://bogofilter.sourceforge.net/
 COMMENT=	Bayesian spam filter written in C
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2012/10/02 17:11:49 tron Exp $
+# $NetBSD: Makefile,v 1.73 2012/10/08 12:27:41 asau Exp $
 #
 
 DISTNAME=		pan-0.139
@@ -11,8 +11,6 @@ MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK2
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 12:19:23 asau Exp $
 
 DISTNAME=		Mail-ListDetector-1.04
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Mail-ListDetector/
 COMMENT=		Perl5 module to detect messages from a mailing lists
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-Email-Abstract-[0-9]*:../../mail/p5-Email-Abstract

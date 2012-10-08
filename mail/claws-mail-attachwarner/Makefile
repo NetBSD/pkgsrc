@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/02 17:11:27 tron Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/08 12:19:04 asau Exp $
 #
 
 DISTNAME=	attachwarner-0.2.24
@@ -9,8 +9,6 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Warns if a message mentions an attachment without attaching files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SRC+=	PLIST
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2012/08/31 02:09:49 schnoebe Exp $
+# $NetBSD: Makefile,v 1.78 2012/10/08 12:19:18 asau Exp $
 
 DISTNAME=		nmh-1.5
 PKGREVISION=		1
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
 COMMENT=		Cleaned up MH mailer suite
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

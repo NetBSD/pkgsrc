@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 17:11:28 tron Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:06 asau Exp $
 #
 
 DISTNAME=	tnef_parse-0.3.13
@@ -9,8 +9,6 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Handles TNEF attachments from Outlook
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #PLIST_SRC+=	PLIST
 

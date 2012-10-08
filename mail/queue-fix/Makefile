@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:29 asau Exp $
 #
 
 DISTNAME=		queue-fix-1.4
@@ -9,7 +9,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.netmeridian.com/e-huss/
 COMMENT=		Check and repair the qmail queue structure
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 DJB_RESTRICTED=		NO

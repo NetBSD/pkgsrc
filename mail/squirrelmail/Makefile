@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2012/10/03 21:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2012/10/08 12:19:32 asau Exp $
 
 DISTNAME=	squirrelmail-webmail-1.4.22
 PKGNAME=	${DISTNAME:S/-webmail//}
@@ -18,8 +18,6 @@ CONFLICTS+=	ja-squirrelspell-[0-9]*
 CONFLICTS+=	ja-squirrelmail-[0-9]*
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.3.3:../../devel/php-gettext
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes

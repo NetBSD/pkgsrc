@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:19:20 asau Exp $
 
 DISTNAME=	Email-FolderType-0.813
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-FolderType/
 COMMENT=	Perl 5 module to determine the type of a mail folder
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= auto/Email/FolderType/.packlist
 

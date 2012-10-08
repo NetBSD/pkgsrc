@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/05/07 19:21:57 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 12:19:19 asau Exp $
 #
 
 DISTNAME=	oe2mbx-1.21
@@ -9,8 +9,6 @@ MASTER_SITES=	# none
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/2/www.gpl.no/liboe/
 COMMENT=	Outlook Express messages to the Unix mailbox format converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # assumes fpos_t is an integral type
 NOT_FOR_PLATFORM=	Linux-*-*

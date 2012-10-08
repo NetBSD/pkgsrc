@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/03/03 00:13:29 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/08 12:19:13 asau Exp $
 
 DISTNAME=		imapfilter-2.0.6
 PKGREVISION=		4
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://imapfilter.hellug.gr/
 COMMENT=		Mail filtering utility for the IMAP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:24 asau Exp $
 
 DISTNAME=	Mail-Webmail-Gmail-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ DEPENDS+=	p5-Crypt-SSLeay>=0.51:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-libwww>=5.80:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Mail/Webmail/Gmail/.packlist
 

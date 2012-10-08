@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/04/08 19:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 12:27:41 asau Exp $
 
 DISTNAME=	lottanzb-0.4.1
 PKGREVISION=	1
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	hellanzb>=0.13:../../news/hellanzb
 DEPENDS+=	${PYPKGPREFIX}-kiwi>=1.9.9:../../x11/py-kiwi
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		#none
 USE_PKGLOCALEDIR=	yes

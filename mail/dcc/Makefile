@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/27 12:26:37 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 12:19:07 asau Exp $
 #
 #	Request by the author:
 #
@@ -17,8 +17,6 @@ OWNER=			petar@smokva.net
 HOMEPAGE=		http://www.rhyolite.com/dcc/
 COMMENT=		Anti-spam content filter
 LICENSE=		dcc-free-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

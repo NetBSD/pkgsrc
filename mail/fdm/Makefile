@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/23 18:04:12 marino Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 12:19:11 asau Exp $
 
 DISTNAME=		fdm-1.6
 CATEGORIES=		mail
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fdm.sourceforge.net/
 COMMENT=		Fetch or receive mail and deliver it in various ways
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
 EGDIR=			${PREFIX}/share/examples/fdm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 12:19:21 asau Exp $
 
 DISTNAME=		Email-Valid-Loose-0.05
 PKGNAME=		p5-${DISTNAME}
@@ -14,8 +14,6 @@ DEPENDS+=		p5-Email-Valid>=0.17:../../mail/p5-Email-Valid
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Email/Valid/Loose/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/01/18 14:34:29 adam Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 12:19:14 asau Exp $
 
 DISTNAME=	isync-1.0.4
 PKGREVISION=	4
@@ -11,7 +11,6 @@ COMMENT=	Synchronize a maildir with an imap server
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BDB_ACCEPTED=		db4 db5
 GNU_CONFIGURE=		yes

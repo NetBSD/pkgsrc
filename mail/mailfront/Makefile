@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/03/15 02:51:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:15 asau Exp $
 #
 
 DISTNAME=		mailfront-1.12
@@ -8,8 +8,6 @@ MASTER_SITES=		${HOMEPAGE}archive/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/mailfront/
 COMMENT=		Mail server network protocol front-ends
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail

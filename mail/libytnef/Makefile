@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:15 asau Exp $
 #
 
 DISTNAME=	libytnef-1.5
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ytnef/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Yerase's TNEF Stream Reader
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

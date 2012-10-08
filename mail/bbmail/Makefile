@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/03/17 21:40:46 darcy Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 12:19:03 asau Exp $
 #
 
 DISTNAME=	bbmail-0.8.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	Mailbox monitor (not only) for the blackbox windowmanager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
