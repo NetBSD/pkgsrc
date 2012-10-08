@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/27 08:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 09:20:58 asau Exp $
 #
 
 DISTNAME=	ccxstream-1.0.15
@@ -9,8 +9,6 @@ MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://www.xbmc.org/
 COMMENT=	Program for streaming multimedia content to XMBC over XBMSP protocol
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RCD_SCRIPTS=		ccxstream
 USE_TOOLS+=		gmake

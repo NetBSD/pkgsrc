@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/03 14:52:02 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 09:21:12 asau Exp $
 #
 
 DISTNAME=	schroedinger-1.0.11
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://diracvideo.org/
 COMMENT=	Dirac video compression library
 #LICENSE=	mpl or lgpl or gpl or mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

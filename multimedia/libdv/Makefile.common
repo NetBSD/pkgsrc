@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2010/07/18 09:49:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2012/10/08 09:21:05 asau Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdv/}
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://libdv.sourceforge.net/
 COMMENT=	DV video codec library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/libdv/distinfo
 PATCHDIR=		${.CURDIR}/../../multimedia/libdv/patches

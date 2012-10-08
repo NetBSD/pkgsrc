@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/22 13:48:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:21:00 asau Exp $
 
 DISTNAME=	ffmpeg2theora-0.28
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://v2v.cc/~j/ffmpeg2theora/
 COMMENT=	Simple converter to create Ogg Theora files
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 BUILD_DEPENDS+=		scons>=1.3.1:../../devel/scons

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/07/28 21:40:09 reed Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 09:21:07 asau Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library and tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
