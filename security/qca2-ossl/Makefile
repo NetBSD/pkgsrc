@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 17:11:55 tron Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 23:02:23 adam Exp $
 
 DISTNAME=	qca-ossl-2.0.0-beta3
 PKGNAME=	qca2-ossl-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/plugins/
 EXTRACT_SUFX=	.tar.bz2

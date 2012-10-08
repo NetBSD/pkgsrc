@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 14:25:15 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 23:01:54 adam Exp $
 
 DISTNAME=	novel-pinyin-0.2.5
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=novel-pinyin/}
 
