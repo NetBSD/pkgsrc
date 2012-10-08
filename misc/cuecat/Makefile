@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/12 22:52:03 zafer Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 09:57:18 asau Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
@@ -17,8 +17,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

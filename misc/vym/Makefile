@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 21:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 09:57:40 asau Exp $
 #
 
 DISTNAME=		vym-1.12.7
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vym.sourceforge.net/
 COMMENT=		Generate and manipulate maps which show your thoughts
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++
 USE_TOOLS+=		perl:run bash:run

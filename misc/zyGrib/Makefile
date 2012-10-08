@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/08 09:57:42 asau Exp $
 #
 
 DISTNAME=	zyGrib-6.0.1
@@ -19,8 +19,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	make
 
 CONFIGURE_ENV+=	QTDIR=${QTDIR}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
