@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/05/27 23:27:15 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 13:45:47 asau Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
@@ -14,8 +14,6 @@ COMMENT=	MusixTeX macros to typeset bagpipe music
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	tex-musixtex>=1.15:../../print/tex-musixtex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes

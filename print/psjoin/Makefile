@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:45:45 asau Exp $
 #
 
 DISTNAME=		psjoin
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://homepage3.nifty.com/tsato/tools/psjoin.html
 COMMENT=		Concatenate PostScript files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 NO_BUILD=		yes
