@@ -1,0 +1,31 @@
+$NetBSD: patch-asmrun_Makefile,v 1.1 2012/10/08 15:05:32 jaapb Exp $
+
+Use BSD_INSTALL_* instead of mkdir and cp
+--- asmrun/Makefile.orig	2012-05-24 16:17:19.000000000 +0000
++++ asmrun/Makefile
+@@ -65,14 +65,14 @@ libasmrunp.a: $(POBJS)
+ install: install-default install-$(RUNTIMED) install-$(PROFILING)
+ 
+ install-default:
+-	cp libasmrun.a $(LIBDIR)/libasmrun.a
++	$(BSD_INSTALL_DATA) libasmrun.a $(LIBDIR)/libasmrun.a
+ 	cd $(LIBDIR); $(RANLIB) libasmrun.a
+ 
+ install-noruntimed:
+ .PHONY: install-noruntimed
+ 
+ install-runtimed:
+-	cp libasmrund.a $(LIBDIR)/libasmrund.a
++	$(BSD_INSTALL_DATA) libasmrund.a $(LIBDIR)/libasmrund.a
+ 	cd $(LIBDIR); $(RANLIB) libasmrund.a
+ .PHONY: install-runtimed
+ 
+@@ -80,7 +80,7 @@ install-noprof:
+ 	rm -f $(LIBDIR)/libasmrunp.a; ln -s libasmrun.a $(LIBDIR)/libasmrunp.a
+ 
+ install-prof:
+-	cp libasmrunp.a $(LIBDIR)/libasmrunp.a
++	$(BSD_INSTALL_DATA) libasmrunp.a $(LIBDIR)/libasmrunp.a
+ 	cd $(LIBDIR); $(RANLIB) libasmrunp.a
+ 
+ power.o: power-$(SYSTEM).o

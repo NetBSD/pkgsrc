@@ -1,8 +1,9 @@
-$NetBSD: patch-aw,v 1.9 2012/03/04 09:06:46 asau Exp $
+$NetBSD: patch-ocamldoc_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
 
---- ocamldoc/Makefile.orig	2011-05-02 17:14:14.000000000 +0400
-+++ ocamldoc/Makefile	2012-03-04 07:19:46.000000000 +0400
-@@ -258,24 +258,24 @@
+Use BSD_INSTALL_* instead of mkdir and cp
+--- ocamldoc/Makefile.orig	2012-07-13 11:23:13.000000000 +0000
++++ ocamldoc/Makefile
+@@ -273,24 +273,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
  # Installation targets
  ######################
  install: dummy
@@ -33,7 +34,7 @@ $NetBSD: patch-aw,v 1.9 2012/03/04 09:06:46 asau Exp $
 -	$(CP) ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
 -	$(CP) $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
 +	if test -d $(INSTALL_BINDIR); then : ; else $(BSD_INSTALL_PROGRAM_DIR) $(INSTALL_BINDIR); fi
-+	if test -d $(INSTALL_LIBDIR); then : ; else $(BSD_INSTALL_DATA_DIR) $(INSTALL_LIBDIR); fi
++	if test -d $(INSTALL_LIBDIR); then : ; else $(BSD_INSTAALL_DATA_DIR) $(INSTALL_LIBDIR); fi
 +	$(BSD_INSTALL_PROGRAM) $(OCAMLDOC_OPT) $(INSTALL_BINDIR)/$(OCAMLDOC_OPT)$(EXE)
 +	$(BSD_INSTALL_DATA) ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
 +	$(BSD_INSTALL_DATA) $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)

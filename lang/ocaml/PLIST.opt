@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.18 2011/03/29 13:45:02 adam Exp $
+@comment $NetBSD: PLIST.opt,v 1.19 2012/10/08 15:05:32 jaapb Exp $
 bin/camlp4o.opt
 bin/camlp4of.opt
 bin/camlp4oof.opt
@@ -11,6 +11,7 @@ bin/ocamldep.opt
 bin/ocamldoc.opt
 bin/ocamllex.opt
 bin/ocamlopt
+bin/ocamloptp
 bin/ocamlopt.opt
 lib/ocaml/arg.cmx
 lib/ocaml/arith_flags.cmx
@@ -96,9 +97,6 @@ lib/ocaml/camlp4/camlp4prof.cmx
 lib/ocaml/camlp4/camlp4prof.o
 lib/ocaml/char.cmx
 lib/ocaml/complex.cmx
-lib/ocaml/dbm.a
-lib/ocaml/dbm.cmx
-lib/ocaml/dbm.cmxa
 lib/ocaml/digest.cmx
 lib/ocaml/filename.cmx
 lib/ocaml/format.cmx
@@ -139,6 +137,8 @@ lib/ocaml/parsing.cmx
 lib/ocaml/pervasives.cmx
 lib/ocaml/printexc.cmx
 lib/ocaml/printf.cmx
+lib/ocaml/profiling.cmx
+lib/ocaml/profiling.o
 lib/ocaml/queue.cmx
 lib/ocaml/random.cmx
 lib/ocaml/ratio.cmx

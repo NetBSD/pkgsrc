@@ -1,0 +1,16 @@
+$NetBSD: patch-camlp4_man_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+
+Use BSD_INSTALL_* instead of mkdir and cp
+--- camlp4/man/Makefile.orig	2011-07-27 14:17:02.000000000 +0000
++++ camlp4/man/Makefile
+@@ -20,8 +20,8 @@ include ../config/Makefile.base
+ 
+ install-local:
+ 	if test -n '$(MANDIR)'; then \
+-	  $(MKDIR) $(MANDIR)/man1 ; \
+-	  cp $(TARGET) $(MANDIR)/man1/. ; \
++          $(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
++	  $(BSD_INSTALL_MAN) $(TARGET) $(MANDIR)/man1/. ; \
+ 	  for i in $(ALIASES); do \
+ 	    rm -f $(MANDIR)/man1/$$i; \
+ 	    echo '.so man1/$(TARGET)' > $(MANDIR)/man1/$$i; \
