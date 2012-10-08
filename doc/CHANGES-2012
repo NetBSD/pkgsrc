@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3201 2012/10/08 23:36:32 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3202 2012/10/08 23:56:58 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4964,3 +4964,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/libsigc++ to 2.2.11 [adam 2012-10-08]
 	Updated lang/camlp5 to 6.06 [jaapb 2012-10-08]
 	Updated print/tex-texlive.infra to 2012.27610 [minskim 2012-10-08]
+	Updated comms/asterisk18 to 1.8.17.0 [jnemeth 2012-10-08]
