@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 23:01:56 adam Exp $
 #
 
 DISTNAME=	scim-thai-0.1.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
 		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/

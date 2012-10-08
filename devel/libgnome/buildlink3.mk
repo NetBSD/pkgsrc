@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2012/10/02 17:10:49 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2012/10/08 23:00:58 adam Exp $
 
 BUILDLINK_TREE+=	libgnome
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnome
 LIBGNOME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnome+=	libgnome>=2.32.1nb11
+BUILDLINK_ABI_DEPENDS.libgnome+=	libgnome>=2.32.1nb12
 BUILDLINK_PKGSRCDIR.libgnome?=	../../devel/libgnome
 
 .include "../../mk/bsd.fast.prefs.mk"

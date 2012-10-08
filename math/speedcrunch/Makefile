@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 17:11:32 tron Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 23:02:03 adam Exp $
 #
 
 DISTNAME=	speedcrunch-0.10.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	math
 MASTER_SITES=	http://speedcrunch.googlecode.com/files/
 

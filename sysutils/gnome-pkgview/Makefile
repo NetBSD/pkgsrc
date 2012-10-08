@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2012/10/02 17:11:58 tron Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/08 23:02:25 adam Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.6
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.greatnorthern.demon.co.uk/packages/gnome-pkgview/
 

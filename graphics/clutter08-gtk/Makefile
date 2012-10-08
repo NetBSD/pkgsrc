@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 14:10:44 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 23:00:46 adam Exp $
 #
 
 DISTNAME=	clutter-gtk-0.8.3
 PKGNAME=	${DISTNAME:S/clutter/clutter08/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/clutter-gtk/0.8/
 

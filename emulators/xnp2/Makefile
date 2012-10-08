@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 12:55:22 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 23:01:32 adam Exp $
 
 SNAPSHOTDATE=		20120618
 DISTNAME=		xnp2-${SNAPSHOTDATE}
 PKGNAME=		xnp2-0.83pl${SNAPSHOTDATE}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.asahi-net.or.jp/~aw9k-nnk/np2/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 17:12:02 tron Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 23:01:00 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.4.3
 
 DISTNAME=	xfce4-xkb-plugin-${XFCE4_VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-xkb-plugin/
 COMMENT=	Xfce Keyboard plugin

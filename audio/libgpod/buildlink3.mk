@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/10/02 17:10:33 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/10/08 23:00:47 adam Exp $
 
 BUILDLINK_TREE+=	libgpod
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgpod
 LIBGPOD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.3.2
-BUILDLINK_ABI_DEPENDS.libgpod+=	libgpod>=0.8.2nb6
+BUILDLINK_ABI_DEPENDS.libgpod+=	libgpod>=0.8.2nb7
 BUILDLINK_PKGSRCDIR.libgpod?=	../../audio/libgpod
 
 .include "../../devel/glib2/buildlink3.mk"
