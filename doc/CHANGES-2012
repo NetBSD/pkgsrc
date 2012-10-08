@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3183 2012/10/08 14:01:04 he Exp $
+$NetBSD: CHANGES-2012,v 1.3184 2012/10/08 14:26:28 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4956,3 +4956,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Mouse to 1.02 [wen 2012-10-08]
 	Updated net/drill to 1.6.13 [he 2012-10-08]
 	Updated net/drill to 1.6.13nb1 [he 2012-10-08]
+	Updated lang/polyml to 5.5 [asau 2012-10-08]
