@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/13 03:13:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:39 asau Exp $
 #
 
 DISTNAME=	usbids-20081118
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linux-usb.org/
 COMMENT=	Repository of USB IDs (usb.ids database)
 LICENSE=	modified-bsd OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 

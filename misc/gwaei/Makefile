@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:56:43 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 09:57:24 asau Exp $
 #
 
 DISTNAME=	gwaei-3.0.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gwaei.sourceforge.net/
 COMMENT=	Japanese dictionary for GNOME
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

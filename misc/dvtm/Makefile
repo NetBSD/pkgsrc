@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/08/14 11:58:01 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:20 asau Exp $
 #
 
 DISTNAME=	dvtm-0.7
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.brain-dump.org/projects/dvtm/
 COMMENT=	Dynamic virtual terminal manager
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c99

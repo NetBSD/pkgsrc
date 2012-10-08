@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 21:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/08 09:57:38 asau Exp $
 #
 
 DISTNAME=	taskjuggler-2.4.3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.taskjuggler.org/
 COMMENT=	Project management tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 SET_LIBDIR=	yes

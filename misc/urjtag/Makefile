@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/22 01:17:58 mef Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:39 asau Exp $
 #
 
 DISTNAME=	urjtag-0.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.urjtag.org/
 COMMENT=	JTAG tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
