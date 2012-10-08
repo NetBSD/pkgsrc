@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 13:25:13 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 23:01:16 adam Exp $
 #
 
 DISTNAME=	LibreCAD-LibreCAD-v1.0.2-0-ga6826ad
 PKGNAME=	librecad-1.0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	cad
 MASTER_SITES=	-https://github.com/LibreCAD/LibreCAD/tarball/v1.0.2
 

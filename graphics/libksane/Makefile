@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/02 17:11:16 tron Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 23:01:05 adam Exp $
 
 DISTNAME=	libksane-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 COMMENT=	SANE Library interface for KDE
 

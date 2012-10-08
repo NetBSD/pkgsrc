@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 20:11:51 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 23:01:57 adam Exp $
 
 PKGNAME=	racket-5.3
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
 		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
