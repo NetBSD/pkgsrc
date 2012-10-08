@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/10/08 13:30:43 he Exp $
+$NetBSD: distinfo,v 1.6 2012/10/08 13:58:48 he Exp $
 
 SHA1 (ldns-1.6.13.tar.gz) = 859f633d10b763f06b602e2113828cbbd964c7eb
 RMD160 (ldns-1.6.13.tar.gz) = c01c30699be2df5712a397516cd1a17bd8b155be
 Size (ldns-1.6.13.tar.gz) = 1066139 bytes
+SHA1 (patch-aa) = 3bbfcea6f44b49526451286590eac5de62841e72
+SHA1 (patch-ab) = 706e5edcf6982337b7360051f9964d77ad8716c2
