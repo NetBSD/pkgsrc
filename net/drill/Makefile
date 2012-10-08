@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/08/13 14:10:05 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 13:30:43 he Exp $
 
-VERSION=	1.6.8
+VERSION=	1.6.13
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
 CATEGORIES=	net
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.nlnetlabs.nl/dnssec/drill.html
 COMMENT=	DNSSEC debugging tool a'la dig
 LICENSE=	modified-bsd
 
+USE_TOOLS+=	gmake
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
@@ -18,6 +20,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ldns=${PREFIX}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/drill
+
+BUILDLINK_API_DEPENDS.ldns+=    ldns>=${VERSION}
 
 .include "../../net/ldns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
