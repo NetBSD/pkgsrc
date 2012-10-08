@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/01/26 21:13:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 13:25:15 asau Exp $
 #
 
 DISTNAME=		qcad-manual-de-2.0.4.0-1.html
 PKGNAME=		qcad-manual-de-2.0.4.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../cad/qcad/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/08/30 12:01:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/08 13:25:14 asau Exp $
 #
 
 DISTNAME=	ngspice-23
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://ngspice.sourceforge.net/
 COMMENT=	Next generation circuit simulation program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake makeinfo
