@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/14 12:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:25:12 asau Exp $
 #
 
 DISTNAME=	GDSreader.0.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://home.netcom.com/~serbanp/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.netcom.com/~serbanp/
 COMMENT=	GDS-II stream file to Postscript and HP/GL converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAME}
 

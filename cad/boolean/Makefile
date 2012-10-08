@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/10/02 17:10:37 tron Exp $
+# $NetBSD: Makefile,v 1.58 2012/10/08 13:25:11 asau Exp $
 #
 
 DISTNAME=	boolean_6_99
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://boolean.klaasholwerda.nl/bool.html
 COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/boolean
 

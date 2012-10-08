@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/06 01:44:46 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 13:25:17 asau Exp $
 #
 
 DISTNAME=		verilog-mode-3.60
@@ -12,8 +12,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://www.verilog.com/verilog-mode.html
 COMMENT=		Verilog mode for Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
