@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3181 2012/10/08 12:49:11 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3182 2012/10/08 12:53:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4953,3 +4953,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/tcllib to 1.14 [minskim 2012-10-07]
 	Updated graphics/cairo to 1.12.4nb1 [tron 2012-10-08]
 	Updated games/gbrainy to 2.15 [wiz 2012-10-08]
+	Updated devel/p5-Mouse to 1.02 [wen 2012-10-08]
