@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/09/29 20:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 09:20:58 asau Exp $
 #
 
 DISTNAME=	bsdav-1.4
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jakemsr.trancell.org/
 COMMENT=	BSD Audio/Video library and tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-*
 

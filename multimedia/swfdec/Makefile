@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/02 17:11:42 tron Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/08 09:21:12 asau Exp $
 #
 
 DISTNAME=		swfdec-0.8.4
@@ -11,8 +11,6 @@ HOMEPAGE=		http://swfdec.freedesktop.org/
 COMMENT=		Library for rendering Flash(R) animations and games
 
 SUPERSEDES=		swfdec-gtk2-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes

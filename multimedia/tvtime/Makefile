@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/14 07:45:30 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:21:13 asau Exp $
 
 DISTNAME=	tvtime-1.0.2
 PKGREVISION=	6
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tvtime.sourceforge.net/
 COMMENT=	High quality television application
 LICENSE=	gnu-gpl-v2 AND mit AND gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/01/29 02:48:30 jakllsch Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 09:20:59 asau Exp $
 
 DISTNAME=	dvdbackup-0.4.1
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dvdbackup.sourceforge.net/
 COMMENT=	DVD backup utility
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
