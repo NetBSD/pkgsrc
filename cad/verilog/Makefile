@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/04/13 14:19:29 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/08 13:25:16 asau Exp $
 #
 
 DISTNAME=	verilog-0.9.4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://icarus.com/eda/verilog/index.html
 COMMENT=	Verilog simulation and synthesis tool (stable release version)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	verilog-current-[0-9]*
 

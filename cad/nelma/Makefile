@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/04/22 13:43:04 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:25:14 asau Exp $
 #
 
 DISTNAME=	nelma-3.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.tablix.org/~avian/nelma/
 COMMENT=	Circuit board capacitance extraction tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 
