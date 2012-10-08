@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2012/04/05 10:41:54 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2012/10/08 12:19:13 asau Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -19,8 +19,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 MAKE_ENV+=		LIBTOOL=libtool

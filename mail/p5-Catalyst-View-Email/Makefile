@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:19:19 asau Exp $
 
 DISTNAME=	Catalyst-View-Email-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -31,7 +31,6 @@ PERL5_PACKLIST=	auto/Catalyst/View/Email/.packlist
 #MAKE_ENV+=       PERL_AUTOINSTALL=--skipdeps
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

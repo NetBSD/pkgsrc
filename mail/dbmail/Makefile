@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/09/15 15:03:24 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/08 12:19:07 asau Exp $
 
 DISTNAME=	dbmail-2.2.17
 PKGREVISION=	8
@@ -20,8 +20,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 
 BUILD_DEFS+=		VARBASE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			${PREFIX}/share/examples/dbmail
 CONF_FILES_PERMS+=	${EGDIR}/dbmail.conf ${PKG_SYSCONFDIR}/dbmail.conf \

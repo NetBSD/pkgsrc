@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/01/26 14:56:56 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 12:19:18 asau Exp $
 
 DISTNAME=	newmail-1.0.1
 PKGREVISION=	1
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.ugh.net.au/pub/unix/newmail/
 
 MAINTAINER=	andrew@ugh.net.au
 COMMENT=	Program to check multiple local mailboxes for new mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/newmail
 

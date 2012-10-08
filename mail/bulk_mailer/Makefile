@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 12:19:03 asau Exp $
 #
 
 DISTNAME=	bulk_mailer-1.13
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://cs.utk.edu/pub/moore/bulk_mailer/
 
 MAINTAINER=	abs@NetBSD.org
 COMMENT=	Assist in delivery of mail to large numbers of recipients
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 BUILD_TARGET=	bulk_mailer
