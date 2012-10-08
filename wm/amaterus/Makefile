@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/04/22 13:44:54 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 12:42:17 asau Exp $
 
 DISTNAME=	amaterus-0.34.1
 PKGREVISION=	6
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.taiyaki.org/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.taiyaki.org/
 COMMENT=	GTK+ window manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 INSTALLATION_DIRS=	share/doc/amaterus

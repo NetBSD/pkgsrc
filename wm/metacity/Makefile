@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2012/10/02 17:12:06 tron Exp $
+# $NetBSD: Makefile,v 1.104 2012/10/08 12:42:21 asau Exp $
 #
 
 DISTNAME=	metacity-2.34.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity/
 COMMENT=	GNOME-compliant window manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

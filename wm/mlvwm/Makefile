@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/02/23 03:52:30 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:42:21 asau Exp $
 #
 
 DISTNAME=	mlvwm091
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www2u.biglobe.ne.jp/~y-miyata/mlvwm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html
 COMMENT=	Macintosh Like Virtual Window Manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 
