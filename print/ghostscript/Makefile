@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2012/10/07 14:19:18 mef Exp $
+# $NetBSD: Makefile,v 1.90 2012/10/08 11:06:33 wiz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -30,7 +30,13 @@ BUILD_TARGET=		so
 INSTALL_TARGET=		soinstall
 CONFIGURE_ARGS+=	-with-omni=no	# otherwise pulls in libstdc++
 
-REPLACE_PERL+=		lib/fixmswrd.pl
+REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
+REPLACE_PERL+=		toolbin/checkdeps.pl
+REPLACE_PERL+=		toolbin/pscet_status.pl
+REPLACE_PERL+=		toolbin/performance.pl
+REPLACE_PERL+=		toolbin/squeeze2html.pl
+REPLACE_PERL+=		toolbin/bugsByEngineer.pl
+REPLACE_PERL+=		toolbin/htmldiff.pl
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/${PKGVERSION}/Resource
 # MESSAGE file substitution
