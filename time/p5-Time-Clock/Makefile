@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:04:25 asau Exp $
 
 DISTNAME=	Time-Clock-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=		auto/Time/Clock/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
 	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;

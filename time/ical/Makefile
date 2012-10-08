@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/08/21 23:49:26 marino Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 13:04:19 asau Exp $
 
 DISTNAME=	ical-2.3.1
 PKGREVISION=	4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.annexia.org/freeware/ical
 COMMENT=	Calendar application
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes

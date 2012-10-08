@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:58:23 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 13:04:26 asau Exp $
 
 DISTNAME=	Time-Piece-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Time::Piece - Object Oriented time objects
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

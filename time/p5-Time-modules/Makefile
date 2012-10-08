@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 13:04:27 asau Exp $
 
 DISTNAME=	Time-modules-2011.0517
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Miscellaneous date parsing and formatting
 LICENSE=	public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 

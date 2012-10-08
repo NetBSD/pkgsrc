@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 13:04:22 asau Exp $
 
 DISTNAME=		DateTime-Format-ICal-0.09
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://search.cpan.org/dist/DateTime-Format-ICal/
 COMMENT=		Parse and format iCal datetime and duration strings
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-DateTime>=0.17:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Event-ICal>=0.03:../../time/p5-DateTime-Event-ICal

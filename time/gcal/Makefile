@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/08/11 18:51:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/08 13:04:18 asau Exp $
 #
 
 DISTNAME=		gcal-3.6.2
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gcal/
 COMMENT=		GNU version of the standard calendar utility
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

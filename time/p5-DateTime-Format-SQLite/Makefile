@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:04:23 asau Exp $
 
 DISTNAME=	DateTime-Format-SQLite-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-SQLite/
 COMMENT=	Parse and format SQLite dates and times
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime>=0.10:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Builder>=0.60:../../time/p5-DateTime-Format-Builder

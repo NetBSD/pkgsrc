@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:04:21 asau Exp $
 
 DISTNAME=		DateTime-Event-ICal-0.10
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=		DateTime extension for computing rfc2445 recurrences
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-DateTime>=0.36:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Event-Recurrence>=0.16:../../time/p5-DateTime-Event-Recurrence

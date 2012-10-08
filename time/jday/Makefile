@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/07 20:10:32 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:04:19 asau Exp $
 #
 
 DISTNAME=		jday-1.3
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jday/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jday.sourceforge.net/
 COMMENT=		Julian date calculator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

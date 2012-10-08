@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 13:04:25 asau Exp $
 
 DISTNAME=	Test-MockTime-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 
 USE_LANGUAGES=	c # installs C module
 PERL5_PACKLIST=	auto/Test/MockTime/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

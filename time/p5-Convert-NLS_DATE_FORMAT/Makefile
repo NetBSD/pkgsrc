@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:04:20 asau Exp $
 
 DISTNAME=	Convert-NLS_DATE_FORMAT-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Convert-NLS_DATE_FORMAT/
 COMMENT=	Convert Oracle NLS_DATE_FORMAT <-> strftime Format Strings
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	#empty
 PERL5_PACKLIST= auto/Convert/NLS_DATE_FORMAT/.packlist

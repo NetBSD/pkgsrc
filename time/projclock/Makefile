@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/02/16 19:57:18 hans Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 13:04:28 asau Exp $
 #
 
 DISTNAME=	pclock0.7
@@ -15,7 +15,6 @@ COMMENT=	Time management software
 DEPENDS+=	tk>=8.3.4:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/projclock
 NO_CONFIGURE=	yes

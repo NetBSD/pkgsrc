@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/02/23 12:05:50 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 13:04:20 asau Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Date-[0-9]*:../../time/pear-Date
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

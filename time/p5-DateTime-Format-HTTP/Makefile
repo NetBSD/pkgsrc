@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:04:22 asau Exp $
 
 DISTNAME=	DateTime-Format-HTTP-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-HTTP/
 COMMENT=	Deal with date formats used by HTTP
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime>=0.17:../../time/p5-DateTime
 DEPENDS+=	p5-libwww>=1.44:../../www/p5-libwww
