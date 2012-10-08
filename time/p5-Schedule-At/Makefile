@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:04:25 asau Exp $
 
 DISTNAME=	Schedule-At-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Schedule/At/.packlist
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 TEST_ENV=	AT_CAN_EXEC=1
 
 .include "../../lang/perl5/module.mk"

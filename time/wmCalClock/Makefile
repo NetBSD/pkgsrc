@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/04 16:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:04:30 asau Exp $
 #
 
 DISTNAME=	wmCalClock-1.25
@@ -15,7 +15,6 @@ PREV_PKGPATH=	time/wmcalclock
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 USE_TOOLS+=	gmake
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"

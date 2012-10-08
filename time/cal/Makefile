@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 13:04:17 asau Exp $
 
 DISTNAME=		cal-3.5
 PKGREVISION=		1
@@ -7,8 +7,6 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/shell/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Enhanced color version of standard calendar utility
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/cal-3.5/source
 MAKE_FILE=		makefile.unx
