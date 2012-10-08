@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/09/02 12:37:10 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 13:04:16 asau Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -10,8 +10,6 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://anacron.sourceforge.net/
 COMMENT=	Periodic command scheduler
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 

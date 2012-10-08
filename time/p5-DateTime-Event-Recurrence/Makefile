@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:04:22 asau Exp $
 
 DISTNAME=		DateTime-Event-Recurrence-0.16
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://search.cpan.org/dist/DateTime-Event-Recurrence
 COMMENT=		DateTime::Set extension to create basic recurrence sets
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-DateTime-Set>=0.17:../../time/p5-DateTime-Set
 

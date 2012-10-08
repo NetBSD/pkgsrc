@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/29 22:20:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:04:18 asau Exp $
 #
 
 DISTNAME=		time-1.7
@@ -11,8 +11,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://directory.fsf.org/GNU/time.html
 COMMENT=		Report user, system, and real time used by a process
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
