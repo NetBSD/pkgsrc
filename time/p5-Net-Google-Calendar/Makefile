@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:04:24 asau Exp $
 
 DISTNAME=		Net-Google-Calendar-1.01
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Net-Google-Calendar/
 COMMENT=		Perl module for accessing Google calendars
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww

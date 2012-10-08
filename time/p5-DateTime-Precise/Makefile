@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:04:23 asau Exp $
 
 DISTNAME=	DateTime-Precise-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/DateTime-Precise/
 COMMENT=	Perl module for common time and date operations with GPS ops
 
 PERL5_PACKLIST=	auto/DateTime/Precise/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

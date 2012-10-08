@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/07 20:07:00 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 13:04:20 asau Exp $
 #
 
 DISTNAME=		logtime-1.2
@@ -7,8 +7,6 @@ MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Prints date and time in a standard format
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 

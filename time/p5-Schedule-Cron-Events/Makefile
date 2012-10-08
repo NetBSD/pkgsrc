@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 13:04:25 asau Exp $
 
 DISTNAME=	Schedule-Cron-Events-1.8
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl module to find when crontab events will occur
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Schedule/Cron/Events/.packlist
 

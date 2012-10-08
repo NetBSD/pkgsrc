@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/09 00:10:23 zafer Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 13:04:30 asau Exp $
 #
 
 DISTNAME=	wmtime-1.0b2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://web.cs.mun.ca/~gstarkes/wmaker/dockapps/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Time/Date applet for WindowMaker
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/wmtime.app
 USE_IMAKE=	YES
