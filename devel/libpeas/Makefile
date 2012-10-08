@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 17:10:49 tron Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 21:34:14 prlw1 Exp $
 #
 
-DISTNAME=	libpeas-1.4.0
-PKGREVISION=	3
+DISTNAME=	libpeas-1.6.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/1.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/1.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,8 +21,6 @@ USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
-
-CONFIGURE_ARGS+=	--enable-vala
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
