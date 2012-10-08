@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/04/22 13:44:16 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 09:21:04 asau Exp $
 #
 
 DISTNAME=	gtranscode-v0.3
@@ -12,8 +12,6 @@ HOMEPAGE=	http://fuzzymonkey.net/software/gtranscode/
 COMMENT=	GTK+ GUI front-end for transcode
 
 DEPENDS+=	transcode-[0-9]*:../../multimedia/transcode
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/gtranscode
 

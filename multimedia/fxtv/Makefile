@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/02/06 12:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 09:21:01 asau Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	19
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~rhh/fxtv/
 COMMENT=	TV display application for Brooktree 848 compatible TV cards
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

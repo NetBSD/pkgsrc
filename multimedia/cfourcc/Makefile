@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/29 17:02:11 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 09:20:58 asau Exp $
 #
 
 DISTNAME=	cfourcc-0.1.2
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sarovar.org/projects/gfourcc
 COMMENT=	Command-line tool for changing AVI FourCC codes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/cfourcc
 
 INSTALLATION_DIRS=	bin

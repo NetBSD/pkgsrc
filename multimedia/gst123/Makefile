@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:11:40 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 09:21:04 asau Exp $
 #
 
 DISTNAME=	gst123-0.3.1
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://space.twc.de/~stefan/gst123.php
 COMMENT=	The gst123 is designed to be a more flexible command line player
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

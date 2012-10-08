@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 09:20:59 asau Exp $
 #
 
 PKGNAME=	dvb-apps-20110713
@@ -11,8 +11,6 @@ MASTER_SITES=	http://linuxtv.org/hg/dvb-apps/archive/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linuxtv.org/
 COMMENT=	Digital Video Broadcasting (DVB) applications
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # netbsd-5 does not have dev/dtv/dtvio.h or its associated functionality.
 # (allow 5.99.* as relatively recent 5.99 may still be in use and should work)
