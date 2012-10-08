@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/02/16 19:06:52 hans Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 09:57:17 asau Exp $
 #
 
 DISTNAME=		bsdiff-4.3
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.daemonology.net/bsdiff/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.daemonology.net/bsdiff/
 COMMENT=		Size efficient binary diff and patch tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bzip2:run
 

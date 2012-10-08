@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 09:57:33 asau Exp $
 
 DISTNAME=		File-MMagic-XS-0.09006
 PKGNAME=		p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=		File Type With XS (a la mod_mime_magic)
 LICENSE=		${PERL5_LICENSE}
 
 MAKE_JOBS_SAFE=		no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/File/MMagic/XS/.packlist
 

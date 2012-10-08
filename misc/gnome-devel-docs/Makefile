@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/22 09:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:23 asau Exp $
 #
 
 DISTNAME=	gnome-devel-docs-2.26.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	The GNOME 2 developer's guide
 LICENSE=	gnu-fdl-v1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
