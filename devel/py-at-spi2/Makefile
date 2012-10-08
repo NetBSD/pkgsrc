@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 22:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 21:24:37 prlw1 Exp $
 #
 
-DISTNAME=	pyatspi-2.5.4
+DISTNAME=	pyatspi-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyatspi/2.5/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyatspi/2.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
