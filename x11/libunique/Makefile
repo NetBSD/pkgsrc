@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 17:12:16 tron Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 10:32:13 wiz Exp $
 #
 
 DISTNAME=	libunique-1.1.6
@@ -18,6 +18,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	unique.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # Workaround for Upstream Bug#562310.
 # for more detail, see also PR#41475.
