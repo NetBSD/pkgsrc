@@ -1,30 +1,41 @@
-# $NetBSD: Makefile,v 1.5 2011/12/06 00:19:23 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 15:18:21 jaapb Exp $
 #
 
-DISTNAME=	menhir-20080912
-PKGREVISION=	2
+DISTNAME=	menhir-20120123
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://cristal.inria.fr/~fpottier/menhir/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://cristal.inria.fr/~fpottier/menhir/
 COMMENT=	LR(1) parser generator in OCaml
+LICENSE=	qpl-v1.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-BUILD_DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-
 USE_TOOLS+=		gmake
+
+BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MAKE_ENV=		EGDIR=${EGDIR:Q}
 
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.09
+PLIST_VARS=	opt
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "arm")
+PLIST.opt=	yes
+.else
+MAKE_ENV+=	TARGET=byte
+.endif
 
 post-extract:
 	${RM} ${WRKSRC}/demos/calc/.omakedb*
+
+pre-install:
+	${MKDIR} ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/menhirLib
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

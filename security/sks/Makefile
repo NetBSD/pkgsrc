@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 15:18:24 jaapb Exp $
 #
 
 DISTNAME=	sks-1.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://sks-keyserver.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
