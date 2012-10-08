@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/12 00:08:35 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 13:45:46 asau Exp $
 
 DISTNAME=	rtf2LaTeX.1.5
 PKGNAME=	rtf2latex-1.5
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.dante.de/pub/tex/support/rtf2latex/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Filter that converts RTF (MS's Rich Text Format) into LaTeX
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/rtf2LaTeX
 NO_CONFIGURE=	yes

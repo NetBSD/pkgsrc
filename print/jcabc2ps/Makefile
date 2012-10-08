@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/22 06:20:27 marino Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:45:40 asau Exp $
 #
 
 DISTNAME=	jcabc2ps-src
@@ -14,8 +14,6 @@ COMMENT=	Music typesetting program for abc
 WRKSRC=		${WRKDIR}/jcabc2ps
 
 INSTALLATION_DIRS=	bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		getline
 SUBST_STAGE.getline=	pre-configure

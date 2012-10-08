@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:45:34 asau Exp $
 #
 
 DISTNAME=	ABC2PS-${ABC2PSVER}
@@ -11,8 +11,6 @@ WRKSRC=		${WRKDIR}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ihp-ffo.de/~msm/
 COMMENT=	Music typesetting program for abc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ABC2PSVER=	1.3.3
 

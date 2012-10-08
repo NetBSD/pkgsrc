@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/12/23 11:44:54 dsainty Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 13:45:39 asau Exp $
 
 DISTNAME=	hpijs-2.1.4
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hpinkjet.sourceforge.net/
 COMMENT=	HP inkjet printer driver server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	ghostscript<=6.01nb4 ghostscript-nox11<=6.01nb4
 

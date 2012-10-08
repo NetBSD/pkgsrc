@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/02 17:11:50 tron Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/08 13:45:37 asau Exp $
 #
 
 DISTNAME=	epdfview-0.1.8
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://trac.emma-soft.com/epdfview/
 COMMENT=	Lightweight PDF viewer using Poppler and GTK2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

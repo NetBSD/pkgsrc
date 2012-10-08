@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 17:11:52 tron Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:45:41 asau Exp $
 #
 
 DISTNAME=	libgxps-0.2.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Library for XPS documents
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/01 15:34:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 13:45:43 asau Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.14
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pdf2djvu/
 COMMENT=	pdf2djvu creates DjVu files from PDF files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 

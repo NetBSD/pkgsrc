@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2012/10/03 21:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2012/10/08 13:45:39 asau Exp $
 
 DISTNAME=	gv-3.7.1
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gs:run makeinfo perl:run

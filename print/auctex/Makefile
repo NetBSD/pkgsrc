@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/12/25 13:16:22 mef Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 13:45:35 asau Exp $
 
 DISTNAME=		auctex-11.86
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.gnu.org/software/auctex/
 COMMENT=		Enhanced LaTeX mode for Emacs
 LICENSE=		gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
 			${EMACS_LISPPREFIX}/auctex
 

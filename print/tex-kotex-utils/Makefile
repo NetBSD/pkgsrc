@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 13:45:47 asau Exp $
 
 DISTNAME=	kotex-dist-20110504
 PKGNAME=	tex-kotex-utils-0.3
@@ -16,8 +16,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
 COMMENT=	Utilities for tex-kotex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 WRKSRC=		${WRKDIR}

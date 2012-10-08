@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/16 01:09:44 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 13:45:36 asau Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
@@ -15,8 +15,6 @@ COMMENT=	CUPS drivers for printer Konica Minolta Magicolor 5440DL
 BUILD_DEPENDS+=	jbigkit>=1.6:../../graphics/jbigkit
 DEPENDS+=	cups>=1.1.14:../../print/cups
 DEPENDS+=	ghostscript>=8.0:../../print/ghostscript
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/5440DL_64_v1.2.1/magicolor5440DL-1.2.1/
 

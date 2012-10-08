@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/04/24 15:56:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:45:41 asau Exp $
 #
 
 DISTNAME=	libpaper_1.1.24
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libp/libpaper/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/unstable/libs/libpaper1
 COMMENT=	Paper size handling library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/02 17:11:50 tron Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 13:45:36 asau Exp $
 #
 
 DISTNAME=	diffpdf-2.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qtrac.eu/diffpdf.html
 COMMENT=	PDF comparision tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 INSTALLATION_DIRS+= bin ${PKGMANDIR}/man1

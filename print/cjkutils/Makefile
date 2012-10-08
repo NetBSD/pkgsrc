@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/19 22:52:32 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:36 asau Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	cjkutils-4.8.2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Utilities for CJK LaTeX
 
 DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/cjkutils

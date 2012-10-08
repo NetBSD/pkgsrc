@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/02/28 14:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 13:45:36 asau Exp $
 DISTNAME=	BibTool-2.48
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
@@ -12,8 +12,6 @@ BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 MAKE_FILE=	makefile

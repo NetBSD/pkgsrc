@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/15 01:53:45 markd Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 13:45:43 asau Exp $
 #
 
 DISTNAME=	pdfjam_208
@@ -16,8 +16,6 @@ DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
 DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/12 00:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 13:45:42 asau Exp $
 #
 
 DISTNAME=	mpage-2.5.5
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Print multiple pages per sheet of paper
 HOMEPAGE=	http://www.mesa.nl/download.html
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	default
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \

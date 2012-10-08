@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/07 19:43:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:44 asau Exp $
 
 DISTNAME=	texlive-20091011-source
 PKGNAME=	pdvipsk-5.98pl1.7b
@@ -16,8 +16,6 @@ DEPENDS+=	dvipsk>=5.98:../../print/dvipsk
 
 SITES.dvipsk-ja_5.98+p1.7b.orig-jpatch.tar.gz=	\
 		${MASTER_SITE_DEBIAN:=pool/main/d/dvipsk-ja/}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
