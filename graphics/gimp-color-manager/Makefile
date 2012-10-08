@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2012/10/06 14:10:52 asau Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 23:01:42 adam Exp $
 #
 
 DISTNAME=		gimp-color-manager-0.1.0
-PKGREVISION=		29
+PKGREVISION=		30
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://www.virtual-sub.org/
 

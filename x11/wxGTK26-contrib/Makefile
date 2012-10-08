@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 17:12:21 tron Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 23:00:50 adam Exp $
 #
 
 .include "../../x11/wxGTK26/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/wxGTK/wxGTK-contrib/}
-PKGREVISION=		16
+PKGREVISION=		17
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GTK-based implementation of the wxWidgets GUI library (contrib libraries)
 
