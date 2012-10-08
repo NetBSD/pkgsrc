@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2012/10/08 16:54:07 dholland Exp $
+
+--- configure.orig    2012-10-06 07:29:32.285323000 +0000
++++ configure
+@@ -11108,6 +11108,11 @@ $as_echo "Darwin/Mac OS X" >&6; }
+ $as_echo "OpenBSD" >&6; }
+ 	backend="openbsd"
+ 	;;
++*-dragonfly*)
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: DragonflyBSD (using OpenBSD backend)" >&5
++$as_echo "DragonflyBSD (using OpenBSD backend)" >&6; }
++	backend="openbsd"
++	;;
+ *-netbsd*)
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: NetBSD (using OpenBSD backend)" >&5
+ $as_echo "NetBSD (using OpenBSD backend)" >&6; }

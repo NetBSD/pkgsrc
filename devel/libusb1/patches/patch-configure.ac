@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/10/08 16:54:07 dholland Exp $
+
+--- configure.ac.orig    2012-04-20 06:44:27.000000000 +0000
++++ configure.ac
+@@ -58,6 +58,10 @@ case $host in
+ 	AC_MSG_RESULT([OpenBSD])
+ 	backend="openbsd"
+ 	;;
++*-dragonfly*)
++	AC_MSG_RESULT([DragonflyBSD (using OpenBSD backend)])
++	backend="openbsd"
++	;;
+ *-netbsd*)
+ 	AC_MSG_RESULT([NetBSD (using OpenBSD backend)])
+ 	backend="openbsd"
