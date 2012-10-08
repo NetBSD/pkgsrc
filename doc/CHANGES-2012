@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3189 2012/10/08 15:28:47 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3190 2012/10/08 15:31:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated archivers/ocaml-zip to 1.04nb1 [jaapb 2012-10-08]
 	Updated devel/frama-c to 20120901 [jaapb 2012-10-08]
 	Updated devel/libsigc++ to 2.2.11 [adam 2012-10-08]
+	Updated lang/camlp5 to 6.06 [jaapb 2012-10-08]
