@@ -1,4 +1,6 @@
-$NetBSD: patch-libusb_os_openbsd__usb.c,v 1.1 2012/10/08 16:54:07 dholland Exp $
+$NetBSD: patch-libusb_os_openbsd__usb.c,v 1.2 2012/10/08 16:59:26 dholland Exp $
+
+Fix build on Dragonfly.
 
 --- libusb/os/openbsd_usb.c.orig    2012-04-20 06:44:27.000000000 +0000
 +++ libusb/os/openbsd_usb.c
