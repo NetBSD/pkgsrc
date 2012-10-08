@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/03/05 13:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:21:07 asau Exp $
 
 DISTNAME=	libogg-1.3.0
 CATEGORIES=	multimedia devel
@@ -11,7 +11,6 @@ COMMENT=	Ogg project codecs library
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes

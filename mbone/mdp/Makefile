@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/03/22 04:53:39 manu Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/08 09:25:50 asau Exp $
 #
 
 # XXX: Shouldn't this package be simply called mdp, without the "src-"?
@@ -12,8 +12,6 @@ DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cs.itd.nrl.navy.mil/work/mdp/
 COMMENT=	Multicast file transfer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mdp
 BUILD_DIRS=	unix

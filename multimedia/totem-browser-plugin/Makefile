@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 17:11:43 tron Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/08 09:21:13 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/totem/Makefile.common"
 
