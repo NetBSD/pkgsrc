@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2011/05/14 18:45:54 hans Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/08 13:25:16 asau Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 COMMENT=	General-purpose circuit simulation program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 # GPL license used by GNU readline is not compatible

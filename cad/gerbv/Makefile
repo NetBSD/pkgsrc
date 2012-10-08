@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/02 17:10:38 tron Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/08 13:25:12 asau Exp $
 #
 
 DISTNAME=	gerbv-2.5.0
@@ -12,7 +12,6 @@ COMMENT=	Gerber file viewer
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

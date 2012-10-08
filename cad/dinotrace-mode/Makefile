@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/06 01:44:45 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 13:25:11 asau Exp $
 #
 
 DISTNAME=	dinotrace-9.3c
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.veripool.com/dinotrace/
 COMMENT=	Emacs major mode for dinotrace
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode>=3.13:../../cad/verilog-mode
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../editors/emacs/modules.mk"

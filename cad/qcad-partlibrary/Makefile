@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/25 21:42:20 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 13:25:16 asau Exp $
 #
 
 DISTNAME=		partlibrary-2.0.1.2-1
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ribbonsoft.com/qcad/
 COMMENT=	About 4500 mech, elec, etc. parts for the QCad 2D CAD system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

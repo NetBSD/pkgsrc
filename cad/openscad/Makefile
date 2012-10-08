@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/02 17:10:38 tron Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 13:25:15 asau Exp $
 #
 
 PKGNAME=	openscad-2011.12
@@ -13,8 +13,6 @@ COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 
 FETCH_USING=	curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/openscad-2011.12
 USE_LANGUAGES=	c c++
