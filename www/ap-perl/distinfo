@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/09/21 14:59:32 obache Exp $
+$NetBSD: distinfo,v 1.14 2012/10/08 11:49:39 marino Exp $
 
 SHA1 (mod_perl-1.31.tar.gz) = 5f6eadf2b0fc24ed4376d7708226391baa14c73f
 RMD160 (mod_perl-1.31.tar.gz) = 296bd5e95018c313bab84ae7b21ae9f64bd4a394
@@ -9,3 +9,4 @@ SHA1 (patch-ab) = 18b02747ae4b9ab17ce252cf003bf9fd7e4b2560
 SHA1 (patch-src_modules_perl_Log.xs) = 60c7473fac429a4aeeb60c8670dcdcb0f9cb80be
 SHA1 (patch-src_modules_perl_mod__perl.c) = 3c2e82fb91d4a470e7f018a92b330eac4c7b0630
 SHA1 (patch-src_modules_perl_perl__config.c) = daa30ae219bce44c0763ec84f64cef79989651a4
+SHA1 (patch-src_modules_perl_perl__util.c) = 741cfbd38ceb78e1b69c093b695be7b841e69b10
