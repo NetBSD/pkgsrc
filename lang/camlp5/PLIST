@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/10/08 15:31:14 jaapb Exp $
 bin/camlp5
 bin/camlp5o
 bin/camlp5r
@@ -6,8 +6,6 @@ bin/camlp5sch
 bin/mkcamlp5
 bin/ocpp5
 bin/mkcamlp5
-lib/ocaml/camlp5/ast2pt.cmi
-lib/ocaml/camlp5/ast2pt.mli
 lib/ocaml/camlp5/camlp5.cma
 lib/ocaml/camlp5/camlp5_top.cma
 lib/ocaml/camlp5/camlp5o.cma
@@ -59,6 +57,15 @@ lib/ocaml/camlp5/pa_lisp.o
 lib/ocaml/camlp5/pa_macro.cmi
 lib/ocaml/camlp5/pa_macro.cmo
 lib/ocaml/camlp5/pa_macro.o
+lib/ocaml/camlp5/pa_mkast.cmo
+lib/ocaml/camlp5/pa_mkast.o
+lib/ocaml/camlp5/pa_mktest.cmo
+lib/ocaml/camlp5/pa_mktest.o
+lib/ocaml/camlp5/pa_reloc.cmo
+lib/ocaml/camlp5/pa_reloc.o
+lib/ocaml/camlp5/reloc.cmi
+lib/ocaml/camlp5/reloc.mli
+lib/ocaml/camlp5/versdep.cmi
 lib/ocaml/camlp5/pa_o.cmo
 lib/ocaml/camlp5/pa_o.o
 lib/ocaml/camlp5/pa_oop.cmo
@@ -130,6 +137,7 @@ lib/ocaml/camlp5/stdpp.cmi
 lib/ocaml/camlp5/stdpp.mli
 lib/ocaml/camlp5/token.cmi
 lib/ocaml/camlp5/token.mli
+lib/ocaml/site-lib/camlp5/META
 man/man1/camlp5.1
 man/man1/camlp5o.1
 man/man1/camlp5o.opt.1
