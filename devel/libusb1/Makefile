@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/26 08:19:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 16:54:07 dholland Exp $
 #
 
 DISTNAME=	libusb-1.0.9
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NOT_FOR_PLATFORM=	DragonFly-*-* SunOS-*-*
+NOT_FOR_PLATFORM=	SunOS-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
