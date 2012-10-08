@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/12 17:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:04:20 asau Exp $
 #
 
 DISTNAME=	calendar-2.03.2
@@ -10,8 +10,6 @@ MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://calendar.forge.ocamlcore.org/
 COMMENT=	OCaml library managing dates and times
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
