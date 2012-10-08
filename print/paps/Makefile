@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 17:11:52 tron Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:45:43 asau Exp $
 #
 
 DISTNAME=	paps-0.6.8
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://paps.sourceforge.net/
 COMMENT=	Pango to PostScript converter
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

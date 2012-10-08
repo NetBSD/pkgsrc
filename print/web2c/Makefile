@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/14 12:19:32 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 13:45:48 asau Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	web2c-2012
@@ -20,8 +20,6 @@ DEPENDS+=	ptexenc>=1.3.0:../../print/ptexenc
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/libs/obsdcompat \
 			${DISTNAME}/texk/web2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes

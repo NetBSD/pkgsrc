@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 17:11:50 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 13:45:34 asau Exp $
 
 DISTNAME=	abcm2ps-6.6.6
 PKGREVISION=	4
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://moinejf.free.fr/
 COMMENT=	Converts ABC to music sheet in PostScript format
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	${PKGBASE}

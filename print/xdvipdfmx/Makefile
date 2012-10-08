@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/13 13:44:49 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 13:45:48 asau Exp $
 
 DISTNAME=	texlive-20120701-source
 PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
@@ -15,8 +15,6 @@ DEPENDS+=	dvipdfmx-[0-9]*:../../print/dvipdfmx
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/xdvipdfmx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

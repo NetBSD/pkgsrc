@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/29 11:55:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:48 asau Exp $
 
 DISTNAME=	splitbib
 PKGNAME=	tex-${DISTNAME}-20051222
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.ctan.org/tex-archive/macros/latex/contrib/splitbib/
 COMMENT=	Split and reorder your bibliography
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 
