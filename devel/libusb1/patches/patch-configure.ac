@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2012/10/08 16:54:07 dholland Exp $
+$NetBSD: patch-configure.ac,v 1.2 2012/10/08 16:59:26 dholland Exp $
+
+Recognize Dragonfly.
 
 --- configure.ac.orig    2012-04-20 06:44:27.000000000 +0000
 +++ configure.ac
