@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:44:09 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 09:57:22 asau Exp $
 #
 
 DISTNAME=		getopt-1.1.4
@@ -14,8 +14,6 @@ LICENSE=		gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

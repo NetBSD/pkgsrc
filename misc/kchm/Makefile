@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/09/15 10:05:37 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 09:57:25 asau Exp $
 #
 
 DISTNAME=	kchm-0.6.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://kchmnew.sourceforge.net/
 COMMENT=	KDE CHM file viewer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 SET_LIBDIR=	YES

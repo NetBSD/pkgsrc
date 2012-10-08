@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 14:52:28 gson Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 09:57:35 asau Exp $
 #
 
 DISTNAME=	anita-1.29
@@ -14,8 +14,6 @@ LICENSE=	isc
 DEPENDS+=	qemu>=0.12.3nb2:../../emulators/qemu
 DEPENDS+=	cdrtools>=2.00.00.00:../../sysutils/cdrtools
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	#none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/04 05:08:12 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 09:57:17 asau Exp $
 
 DISTNAME=	bottlerocket-0.04c
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://mlug.missouri.edu/~tymm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mlug.missouri.edu/~tymm/
 COMMENT=	Home Automation Software for the X10 FireCracker kit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes

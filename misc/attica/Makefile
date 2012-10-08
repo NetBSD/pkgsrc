@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 17:11:32 tron Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 09:57:16 asau Exp $
 
 DISTNAME=	attica-0.2.0
 PKGREVISION=	10
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://projects.kde.org/projects/kdesupport/attica
 COMMENT=	Qt library that implements the Open Collaboration Services API
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
