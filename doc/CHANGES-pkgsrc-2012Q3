@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.8 2012/10/06 13:23:27 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.9 2012/10/08 22:00:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -22,3 +22,5 @@ Pullup ticket #3933 - requested by tron
 net/wireshark: security update
 Pullup ticket #3934 - requested by obache
 emulators/suse121_gtk2: security update
+Pullup ticket #3935 - requested by obache
+security/qoauth: build fix
