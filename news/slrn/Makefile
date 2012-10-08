@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2012/06/23 23:02:58 dholland Exp $
+# $NetBSD: Makefile,v 1.54 2012/10/08 12:27:41 asau Exp $
 
 DISTNAME=	slrn-0.9.9p1
 PKGREVISION=	6
@@ -10,7 +10,6 @@ HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes

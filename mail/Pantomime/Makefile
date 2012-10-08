@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/08 12:19:01 asau Exp $
 #
 
 DISTNAME=	Pantomime-1.2.0pre3
@@ -9,8 +9,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.collaboration-world.com/pantomime/
 COMMENT=	Objective-C mail system class library
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	objc
 

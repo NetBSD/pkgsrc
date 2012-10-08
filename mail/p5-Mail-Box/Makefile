@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 12:19:23 asau Exp $
 
 DISTNAME=	Mail-Box-2.102
 PKGNAME=	p5-${DISTNAME}
@@ -27,7 +27,6 @@ DEPENDS+=	p5-File-Remove-[0-9]*:../../sysutils/p5-File-Remove
 DEPENDS+=	{perl>=5.10,p5-Test-Harness>=2.62}:../../devel/p5-Test-Harness
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Mail/Box/.packlist
 

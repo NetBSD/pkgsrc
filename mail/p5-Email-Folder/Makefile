@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:19:20 asau Exp $
 
 DISTNAME=	Email-Folder-0.855
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-Folder/
 COMMENT=	Perl 5 module to read all the messages from a folder
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= auto/Email/Folder/.packlist
 

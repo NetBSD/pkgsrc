@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/09 18:28:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 12:19:08 asau Exp $
 
 DISTNAME=	deliver-2.1.14
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=deliver/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://deliver.sourceforge.net/
 COMMENT=	Local mail delivery agent with shell-script control
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		avenger-[0-9]*
 

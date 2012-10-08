@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/02/26 10:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:19:28 asau Exp $
 #
 
 DISTNAME=	qcheck
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Text-only biff with Maildir support
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 

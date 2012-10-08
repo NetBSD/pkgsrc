@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/07/03 18:08:20 drochner Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/08 12:19:14 asau Exp $
 
 DISTNAME=	libetpan-1.1
 CATEGORIES=	mail
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libetpan.sourceforge.net/
 COMMENT=	Really nice mail library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BDB_ACCEPTED=		db3 db4 db5
 USE_LANGUAGES=		c c++

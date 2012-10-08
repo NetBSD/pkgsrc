@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:19:22 asau Exp $
 #
 
 DISTNAME=	MIME-EncWords-1.012.4
@@ -11,8 +11,6 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MIME-EncWords/
 COMMENT=	Perl5 modules for decoding RFC 2047 encoded words (improved)
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-MIME-Charset>=1.007.1:../../mail/p5-MIME-Charset
 

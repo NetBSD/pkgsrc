@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/08 12:19:16 asau Exp $
 #
 
 DISTNAME=	mailgraph-1.13
@@ -14,8 +14,6 @@ COMMENT=	RRDtool frontend for mail statistics
 
 DEPENDS+=	rrdtool>=1:../../databases/rrdtool
 DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 

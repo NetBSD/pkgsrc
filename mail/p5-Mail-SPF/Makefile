@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:23 asau Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
@@ -13,7 +13,6 @@ COMMENT=	Perl implementation of the Sender Policy Framework
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # sbin/spfd
 CONFLICTS+=	libspf2-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/02/04 02:39:54 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:30 asau Exp $
 #
 
 DISTNAME=	ripmime-1.4.0.2
@@ -9,7 +9,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.pldaniels.com/ripmime/
 COMMENT=	Extract the attached files out of a MIME encoded email package
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

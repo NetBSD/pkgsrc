@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/03 21:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/08 12:19:17 asau Exp $
 
 DISTNAME=		mimedefang-2.73
 PKGREVISION=		1
@@ -18,8 +18,6 @@ DEPENDS+=		p5-MailTools>=1.44:../../mail/p5-MailTools
 DEPENDS+=		p5-MIME-Base64>=3.03:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-MIME-tools>=5.413:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

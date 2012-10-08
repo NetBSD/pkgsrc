@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2012/09/08 19:39:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.121 2012/10/08 12:19:12 asau Exp $
 
 DISTNAME=		getmail-4.34.0
 CATEGORIES=		mail
@@ -8,8 +8,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://pyropus.ca/software/getmail/
 COMMENT=		Secure, flexible, reliable fetchmail replacement
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# none
 

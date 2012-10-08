@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/07 17:21:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:19:13 asau Exp $
 #
 
 DISTNAME=	ifile.procmail-0.3
@@ -14,8 +14,6 @@ COMMENT=	Set of scripts for ifile used in procmail environment
 
 DEPENDS+=	ifile>=1.2.1:../../mail/ifile
 DEPENDS+=	procmail>=3.22:../../mail/procmail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

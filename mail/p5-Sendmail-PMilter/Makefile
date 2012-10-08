@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:25 asau Exp $
 #
 
 DISTNAME=	Sendmail-PMilter-0.95
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmilter/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pmilter.sourceforge.net/
 COMMENT=	Pure-Perl Milter protocol API
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Though it doesn't exist yet, just in case:
 CONFLICTS+=	p5-Sendmail-Milter-[0-9]*

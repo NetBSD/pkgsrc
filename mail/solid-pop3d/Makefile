@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/02/04 02:42:23 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/08 12:19:31 asau Exp $
 
 DISTNAME=		solid-pop3d-0.15
 CATEGORIES=		mail
@@ -7,8 +7,6 @@ MASTER_SITES=		http://solidpop3d.pld.org.pl/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://solidpop3d.pld.org.pl/
 COMMENT=		Flexible POP3 server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			${PREFIX}/share/examples/spop3d
 MESSAGE_SUBST+=		EGDIR=${EGDIR}

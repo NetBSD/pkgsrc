@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/07/05 10:30:58 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2012/10/08 12:19:34 asau Exp $
 
 DISTNAME=	wmbiff-0.4.26
 PKGREVISION=	15
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wmbiff/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/wmbiff/
 COMMENT=	xbuffy like "mail-checker" for WindowMaker
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes

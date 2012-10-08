@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:19:06 asau Exp $
 
 DISTNAME=	courier-analog-0.16
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.courier-mta.org/
 COMMENT=	Courier log analyzer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 

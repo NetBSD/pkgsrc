@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/16 20:20:15 pettai Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:19 asau Exp $
 
 DISTNAME=	opendkim-2.5.2
 CATEGORIES=	mail
@@ -8,8 +8,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://opendkim.org/
 COMMENT=	Open source DKIM library, MTA filter implementation and tools
 LICENSE=	sendmail-open-source-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

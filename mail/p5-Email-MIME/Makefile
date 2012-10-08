@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:20 asau Exp $
 
 DISTNAME=		Email-MIME-1.910
 PKGNAME=		p5-${DISTNAME}
@@ -26,8 +26,6 @@ CONFLICTS+=		p5-Email-MIME-Modifier-[0-9]*
 
 SUPERSEDES+=		p5-Email-MIME-Creator<=1.444
 SUPERSEDES+=		p5-Email-MIME-Modifier<=1.456
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Email/MIME/.packlist
 

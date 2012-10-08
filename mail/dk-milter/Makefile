@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/02/06 06:19:17 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 12:19:08 asau Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/dk-milter/
 COMMENT=	Open source implementation of DomainKeys for sendmail
 LICENSE=	sendmail-open-source-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dk-milter

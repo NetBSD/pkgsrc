@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/04 02:25:43 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:13 asau Exp $
 #
 
 DISTNAME=	ifile-1.3.4
@@ -11,8 +11,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/ifile/
 COMMENT=	Intelligent mail filtering system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

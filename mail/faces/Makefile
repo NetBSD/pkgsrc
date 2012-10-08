@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/10/03 21:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2012/10/08 12:19:11 asau Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	6
@@ -17,8 +17,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 DEPENDS+=	netpbm>=9.2:../../graphics/netpbm
 
 CONFLICTS=	compface-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/faces
 USE_X11BASE=		YES

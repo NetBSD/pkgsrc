@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2012/10/03 21:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2012/10/08 12:19:07 asau Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
 PKGREVISION=	7
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

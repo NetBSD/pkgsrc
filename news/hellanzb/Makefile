@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 12:27:40 asau Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hellanzb.com/
 COMMENT=		Command line nntp file grabber
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=1.3:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat

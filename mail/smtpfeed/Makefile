@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/07/10 09:09:10 mef Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/08 12:19:31 asau Exp $
 
 DISTNAME=	smtpfeed-1.20
 CATEGORIES=	mail
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://member.wide.ad.jp/wg/smtp/smtpfeed.html
 COMMENT=	SMTP Fast Exploding External Deliverer for Sendmail
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # sendmail 8.x with WIDE patch works better with it, than stock 8.x.
 # require sendmail from pkgsrc.

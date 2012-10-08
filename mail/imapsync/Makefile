@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:14 asau Exp $
 #
 
 DISTNAME=	imapsync-1.286
@@ -17,8 +17,6 @@ DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Mail-IMAPClient>=3.1.9:../../mail/p5-Mail-IMAPClient
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run

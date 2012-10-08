@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:21 asau Exp $
 
 DISTNAME=	Email-Sender-0.110001
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-Sender/
 COMMENT=	Email::Sender - a library for sending email
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Capture-Tiny>=0.08:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Email-Abstract>=3:../../mail/p5-Email-Abstract

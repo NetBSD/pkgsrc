@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/08 12:19:27 asau Exp $
 #
 
 DISTNAME=	popa3d-1.0.2
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.openwall.com/popa3d/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
 COMMENT=	Secure, reliable, performant, and small pop3 server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 POPA3D_USER?=	popa3d
 POPA3D_GROUP?=	popa3d

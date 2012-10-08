@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2012/04/16 17:00:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2012/10/08 12:19:17 asau Exp $
 
 DISTNAME=	mew-6.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${MEW_CONTRIB_DIR:C|^${PREFIX}/||}
 
 DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.1:../../databases/ruby-sqlite3

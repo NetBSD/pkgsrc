@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/11 19:53:03 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 12:19:14 asau Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
@@ -9,8 +9,6 @@ MASTER_SITES=		http://j-chkmail.ensmp.fr/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://j-chkmail.ensmp.fr/
 COMMENT=		Behavior-based virus and spam milter for Sendmail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

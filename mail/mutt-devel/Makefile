@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2012/10/03 21:56:26 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2012/10/08 12:19:18 asau Exp $
 
 DISTNAME=		mutt-1.5.21
 PKGREVISION=		5
@@ -15,7 +15,6 @@ COMMENT=		Text-based MIME mail client with PGP & S/MIME support
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

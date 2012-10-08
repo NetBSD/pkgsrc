@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2012/10/03 21:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.255 2012/10/08 12:19:27 asau Exp $
 
 DISTNAME=	postfix-2.8.12
 PKGREVISION=	2
@@ -18,7 +18,6 @@ LICENSE=	cpl-1.0
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl

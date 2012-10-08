@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/14 07:45:27 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 12:19:26 asau Exp $
 #
 
 DISTNAME=	pfqueue-0.5.6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pfqueue.sourceforge.net/
 COMMENT=	Real-time queue scanner for postfix
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

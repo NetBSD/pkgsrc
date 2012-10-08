@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:44:04 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 12:19:18 asau Exp $
 #
 
 DISTNAME=	mpop-1.0.23
@@ -11,8 +11,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://mpop.sourceforge.net/
 COMMENT=	Small, fast and portable POP3 client
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
