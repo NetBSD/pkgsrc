@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3200 2012/10/08 21:56:27 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3201 2012/10/08 23:36:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4948,7 +4948,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/xcb-proto to 1.8 [wiz 2012-10-07]
 	Updated x11/py-xcbgen to 1.8 [wiz 2012-10-07]
 	Updated x11/libxcb to 1.9 [wiz 2012-10-07]
+	Updated graphics/cairo to 1.12.4 [wiz 2012-10-07]
+	Updated graphics/cairo-gobject to 1.12.4 [wiz 2012-10-07]
 	Updated devel/tcllib to 1.14 [minskim 2012-10-07]
+	Updated graphics/cairo to 1.12.4nb1 [tron 2012-10-08]
 	Updated games/gbrainy to 2.15 [wiz 2012-10-08]
 	Updated devel/p5-Mouse to 1.02 [wen 2012-10-08]
 	Updated net/drill to 1.6.13 [he 2012-10-08]
@@ -4960,13 +4963,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/frama-c to 20120901 [jaapb 2012-10-08]
 	Updated devel/libsigc++ to 2.2.11 [adam 2012-10-08]
 	Updated lang/camlp5 to 6.06 [jaapb 2012-10-08]
-	Updated devel/libthai to 0.1.18 [adam 2012-10-08]
-	Added fonts/harfbuzz version 0.9.4 [adam 2012-10-08]
-	Updated devel/atk to 2.6.0 [prlw1 2012-10-08]
-	Updated devel/at-spi2-core to 2.6.0 [prlw1 2012-10-08]
-	Updated devel/at-spi2-atk to 2.6.0 [prlw1 2012-10-08]
-	Updated security/botan to 1.8.14 [pettai 2012-10-08]
-	Updated devel/py-gobject3 to 3.4.0 [prlw1 2012-10-08]
-	Updated devel/py-at-spi2 to 2.6.0 [prlw1 2012-10-08]
-	Updated devel/libpeas to 1.6.0 [prlw1 2012-10-08]
-	Updated graphics/pango to 1.32.1 [adam 2012-10-08]
+	Updated print/tex-texlive.infra to 2012.27610 [minskim 2012-10-08]
