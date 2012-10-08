@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/02 17:12:05 tron Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/08 13:04:27 asau Exp $
 #
 
 DISTNAME=	planner-0.14.4
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Planner
 COMMENT=	Project management tool for the GNOME desktop
 LICENSE=	gnu-gpl-v2 # OR any later version
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

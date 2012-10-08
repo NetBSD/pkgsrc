@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 13:04:19 asau Exp $
 #
 
 DISTNAME=	ical2rem.pl
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-iCal-Parser-[0-9]*:../../textproc/p5-iCal-Parser
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 EXTRACT_ONLY=	# empty

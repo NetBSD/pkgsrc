@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 13:04:25 asau Exp $
 #
 
 DISTNAME=	Template-Plugin-DateTime-0.06001
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-DateTime/
 COMMENT=	A Template Plugin To Use DateTime Objects
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Strptime-[0-9]*:../../time/p5-DateTime-Format-Strptime

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/17 21:40:47 darcy Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/08 13:04:17 asau Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=3
 COMMENT=	Display the current date
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++

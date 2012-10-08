@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/05/03 09:55:31 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/08 13:04:17 asau Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_FREEBSD}
 MAINTAINER=	minoura@NetBSD.org
 COMMENT=	Analog clock with image in the middle
 LICENSE=	emiclock-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Do not distribute
 NO_SRC_ON_FTP=${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/02 23:47:37 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:04:29 asau Exp $
 
 DISTNAME=		cron_4.1
 PKGNAME=		vixie-cron-4.1
@@ -11,7 +11,6 @@ MAINTAINER=		reed@reedmedia.net
 COMMENT=		Execute and maintain scheduled commands
 
 SPECIAL_PERMS+=		bin/crontab ${SETUID_ROOT_PERMS}
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 # Don't extract into WRKDIR because rc.d script is replaced with binary
 EXTRACT_CMD=   ${MKDIR} ${WRKSRC} && cd ${WRKSRC} && ${CAT} $$extract_file | ${SH}

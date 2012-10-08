@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/02 17:12:04 tron Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/08 13:04:19 asau Exp $
 #
 
 DISTNAME=	hamster-applet-2.28.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projecthamster.wordpress.com/
 COMMENT=	Time tracking applet for GNOME
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/12/13 06:14:47 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/08 13:04:17 asau Exp $
 #
 
 DISTNAME=	cs113ins
@@ -17,8 +17,6 @@ RESTRICTED=	Distribution permitted only of unmodified distfile at no charge.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
