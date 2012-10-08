@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/11/28 00:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/08 12:42:19 asau Exp $
 #
 
 DISTNAME=	evilwm-1.1.0
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.6809.org.uk/evilwm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.6809.org.uk/evilwm/
 COMMENT=	Minimalist Window Manager for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

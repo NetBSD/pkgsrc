@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/07 19:44:42 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 12:42:20 asau Exp $
 #
 
 DISTNAME=		fluxter-0.1.0
@@ -8,8 +8,6 @@ MASTER_SITES=		http://benedict.isomedia.com/homes/stevencooper/files/
 MAINTAINER=		mj@turner.org.za
 HOMEPAGE=		http://benedict.isomedia.com/homes/stevencooper/projects/fluxter.html
 COMMENT=		Workspace pager dockapp, particularly useful with Fluxbox
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
