@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2012/10/02 17:12:00 tron Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/08 23:02:27 adam Exp $
 #
 
 DISTNAME=	rox-filer-2.10
 PKGNAME=	rox-2.10
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2
