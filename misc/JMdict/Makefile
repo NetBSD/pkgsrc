@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 19:21:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 09:57:15 asau Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -17,8 +17,6 @@ DISTFILES=	jmdict_proj_desc.html JMdict.gz JMdict.dtd
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
 COMMENT=	Japanese-Multilingual electronic dictionary
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}

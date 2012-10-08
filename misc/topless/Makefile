@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:39 asau Exp $
 #
 
 DISTNAME=	topless-1.52
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://bloghome.lovepeers.org/daymemo2/files/2005/0613/topless.html
 COMMENT=	Display command output on the whole screen like ``top''
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl pod2man
 

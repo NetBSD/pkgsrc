@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 09:57:33 asau Exp $
 #
 
 DISTNAME=		Locale-Maketext-1.13
@@ -13,8 +13,6 @@ PKG_FAIL_REASON=	"In Perl5 Core since 5.10.1"
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Locale-Maketext/
 COMMENT=		Perl framework for localization
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		{perl>=5.10.0,p5-I18N-LangTags>=0.30}:../../misc/p5-I18N-LangTags
 

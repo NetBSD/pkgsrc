@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/08/23 07:47:00 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:35 asau Exp $
 
 DISTNAME=	pty-redir-0.1
 CATEGORIES=	misc
@@ -9,8 +9,6 @@ MAINTAINER=	dustin@spy.net
 COMMENT=	Attach a program's stdio to a pty
 
 INSTALLATION_DIRS=	bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pty-redir ${DESTDIR}${PREFIX}/bin

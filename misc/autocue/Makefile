@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/03/02 16:21:32 hans Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:16 asau Exp $
 #
 
 DISTNAME=	autocue-20070224
@@ -13,8 +13,6 @@ COMMENT=	Time-based text formatter, sending output to xcb for pasting
 DEPENDS+=	xcb-[0-9]*:../../x11/xcb
 
 USE_FEATURES+=	cdefs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}

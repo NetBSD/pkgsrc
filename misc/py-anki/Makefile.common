@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/10/03 22:14:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/10/08 09:57:35 asau Exp $
 # used by misc/py-libanki/Makefile
 
 DISTNAME=	anki-1.2.11
@@ -10,8 +10,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://ankisrs.net/
 COMMENT=	Flashcard learning program
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none

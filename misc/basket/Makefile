@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/09/15 10:05:34 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 09:57:16 asau Exp $
 
 DISTNAME=		basket-1.0.2
 PKGREVISION=		18
@@ -8,8 +8,6 @@ MASTER_SITES=		http://basket.kde.org/downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://basket.kde.org/
 COMMENT=		Feature-rich note-taking KDE application
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LANGUAGES=		c c++

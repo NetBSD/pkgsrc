@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.58 2012/10/08 09:57:41 asau Exp $
 
 DISTNAME=	xchm-1.20
 PKGREVISION=	6
@@ -9,8 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://xchm.sourceforge.net/
 COMMENT=	CHM viewer for UNIX
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

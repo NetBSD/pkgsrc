@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 09:57:40 asau Exp $
 #
 
 DISTNAME=	whohas-0.29
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.philippwesche.org/200811/whohas/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.philippwesche.org/200811/whohas/intro.html
 COMMENT=	Query several packaging systems for a program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	wget-[0-9]*:../../net/wget

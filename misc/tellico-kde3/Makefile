@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/08 09:57:38 asau Exp $
 #
 
 DISTNAME=	tellico-1.3.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.periapsis.org/tellico/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.periapsis.org/tellico/
 COMMENT=	KDE application for organizing your collections
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

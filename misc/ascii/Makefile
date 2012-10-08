@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/19 17:33:50 bjs Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/08 09:57:15 asau Exp $
 #
 
 DISTNAME=	ascii-3.8
@@ -8,8 +8,6 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/ascii/
 COMMENT=	ASCII character table program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS=		gmake
 USE_LIBTOOL=		yes

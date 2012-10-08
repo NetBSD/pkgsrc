@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/02 17:11:39 tron Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 09:57:42 asau Exp $
 #
 
 DISTNAME=		yelp-3.4.2
@@ -11,8 +11,6 @@ MAINTAINER=		prlw1@cam.ac.uk
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Mallard capable help browser
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes

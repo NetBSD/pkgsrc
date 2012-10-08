@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 05:30:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/08 09:57:29 asau Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -47,8 +47,6 @@ RPM2PKG_STAGE=		do-install
 RUN_LDCONFIG=		no
 
 USE_TOOLS+=	patch
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

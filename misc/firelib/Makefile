@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 09:57:22 asau Exp $
 #
 
 DISTNAME=		firelib-1.0.1
@@ -10,7 +10,6 @@ HOMEPAGE=		http://fire.org/
 COMMENT=		Library for predicting fire spread rate, intensity, and more
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 

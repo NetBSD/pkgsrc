@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/03/17 21:17:28 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:25 asau Exp $
 
 DISTNAME=	jhd-2.3
 CATEGORIES=	japanese misc
@@ -9,7 +9,6 @@ COMMENT=	Japanese Hexadecimal Dump
 
 BUILD_DEPENDS+=	nkf>=1.7:../../converters/nkf
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
 
 post-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/02 17:11:33 tron Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 09:57:16 asau Exp $
 #
 
 DISTNAME=		blccc-1.99
@@ -9,8 +9,6 @@ MASTER_SITES=		http://sven.gimp.org/blinkenlights/
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.blinkenlights.de/
 COMMENT=		Blinkenlights Chaos Control Center
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 21:56:43 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/08 09:57:25 asau Exp $
 #
 
 DISTNAME=		kanjipad-2.0.0
@@ -9,8 +9,6 @@ MASTER_SITES=		http://fishsoup.net/software/kanjipad/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fishsoup.net/software/kanjipad/
 COMMENT=		Japanese handwriting recognition
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl pkg-config
 LDFLAGS+=		-lm	# direct link required by ld v2.22

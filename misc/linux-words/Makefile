@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/04 17:26:25 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:29 asau Exp $
 
 DISTNAME=		linux.words.2
 PKGNAME=		linux-words-2
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/}
 MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE=
 COMMENT=		English word list
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # For other word packages also consider other word lists like
 #  aspell's en list like ftp://ftp.gnu.org/gnu/aspell/aspell-en-0.51-0.tar.bz2

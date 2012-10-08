@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2012/01/18 14:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.75 2012/10/08 09:57:36 asau Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	8
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rpm.org/
 COMMENT=	The Red Hat Package Manager
 LICENSE=	gnu-lgpl-v2 OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		rpm2cpio<1.0nb1
 

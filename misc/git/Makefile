@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/02/22 09:15:56 obache Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/08 09:57:22 asau Exp $
 
 DISTNAME=	gnuit-4.9.5
 PKGNAME=	${DISTNAME:S/gnuit-/git-/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hulubei.net/tudor/git/
 COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/gnuit

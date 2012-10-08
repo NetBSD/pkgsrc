@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/26 10:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:18 asau Exp $
 
 DISTNAME=	colortail-0.3.0
 CATEGORIES=	misc
@@ -7,8 +7,6 @@ MASTER_SITES=	http://joakimandersson.se/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://joakimandersson.se/projects/colortail/
 COMMENT=	Colour-able replacement for tail(1)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/02/26 10:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:24 asau Exp $
 #
 
 DISTNAME=	granulate-0.1
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://134.74.16.12/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for splitting files in place
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

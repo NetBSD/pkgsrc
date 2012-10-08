@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 09:57:38 asau Exp $
 #
 
 DISTNAME=	teseq-1.0.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ftp.gnu.org/gnu/teseq/
 COMMENT=	Terminal control sequence analyzer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run sed:run

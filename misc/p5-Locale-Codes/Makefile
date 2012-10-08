@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/03 21:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/08 09:57:33 asau Exp $
 
 DISTNAME=	Locale-Codes-3.20
 PKGNAME=	p5-${DISTNAME}
@@ -12,12 +12,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Locale-Codes/
 COMMENT=	Perl5 module for ISO 3166, 639, 4217 and 15924 codes
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Locale/Codes/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

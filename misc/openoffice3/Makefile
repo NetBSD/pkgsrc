@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/10/03 21:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2012/10/08 09:57:31 asau Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
@@ -19,8 +19,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 3)
 LICENSE=		gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 

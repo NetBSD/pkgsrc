@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/16 15:30:45 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/08 09:57:24 asau Exp $
 
 DISTNAME=	howm-1.3.9.1
 PKGREVISION=	1
@@ -14,8 +14,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-migemo-[0-9]*:../../textproc/migemo
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}migemo-elisp-[0-9]*:../../textproc/migemo-elisp
 
 RUBY_VERSION_SUPPORTED= 193
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

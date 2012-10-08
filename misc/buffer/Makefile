@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:25 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:17 asau Exp $
 
 DISTNAME=	buffer-1.17
 CATEGORIES=	misc
@@ -6,8 +6,6 @@ MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Buffer sporadic binary I/O for faster tape use
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

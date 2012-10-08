@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/10 10:43:28 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:29 asau Exp $
 
 DISTNAME=	lv451
 PKGNAME=	lv-4.51
@@ -10,8 +10,6 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.ff.iij4u.or.jp/~nrt/lv/
 COMMENT=	Powerful Multilingual File Viewer
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_DIRS=	build
 GNU_CONFIGURE=	yes

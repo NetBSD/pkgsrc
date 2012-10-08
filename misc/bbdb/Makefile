@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/10/12 00:42:59 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 09:57:16 asau Exp $
 #
 
 DISTNAME=		bbdb-2.35
@@ -15,8 +15,6 @@ EMACS_VERSIONS_ACCEPTED=	emacs24 emacs24nox emacs23 emacs23nox \
 				emacs22 emacs22nox emacs21 emacs21nox \
 				emacs20
 CONFLICTS+=		xemacs-packages-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--enable-rmail

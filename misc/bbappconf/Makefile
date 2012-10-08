@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/03/17 21:40:46 darcy Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:16 asau Exp $
 #
 
 DISTNAME=	bbappconf-0.0.2
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=1
 COMMENT=	Configure the behaviour of an application under Blackbox
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_X11BASE=		YES

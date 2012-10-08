@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/16 14:55:33 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/08 09:57:25 asau Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_BACKUP}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# ftp://ftp.spa.is.uec.ac.jp/pub/NetBSD/jman/index.html
 COMMENT=	Japanese on-line manual pages of NetBSD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ja-less>=332:../../misc/ja-less
 DEPENDS+=	ja-groff-0.99{,nb*}:../../textproc/ja-groff

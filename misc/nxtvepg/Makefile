@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/10/03 21:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/08 09:57:31 asau Exp $
 
 DISTNAME=	nxtvepg-2.7.6
 PKGREVISION=	3
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/nxtvepg/
 COMMENT=	NextView EPG decoder
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \

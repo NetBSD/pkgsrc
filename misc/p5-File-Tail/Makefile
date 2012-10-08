@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 09:57:33 asau Exp $
 
 DISTNAME=	File-Tail-0.99.3
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-Tail/
 COMMENT=	Perl5 module for reading from continuously updated files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Time-HiRes>1.12:../../time/p5-Time-HiRes
 

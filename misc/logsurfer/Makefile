@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/10/28 17:13:26 tez Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 09:57:29 asau Exp $
 
 DISTNAME=	logsurfer-1.8
 PKGNAME=	logsurfer-1.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://kerryt.orcon.net.nz/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.crypt.gen.nz/logsurfer/
 COMMENT=	Processes logfiles and performs certain actions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}

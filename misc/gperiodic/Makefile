@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/10/02 17:11:34 tron Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/08 09:57:24 asau Exp $
 
 DISTNAME=		gperiodic-2.0.10
 PKGREVISION=		9
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.frantz.fi/software/gperiodic.php
 COMMENT=		Displays a periodic table of the elements
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
