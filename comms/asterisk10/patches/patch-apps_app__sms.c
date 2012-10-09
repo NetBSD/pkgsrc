@@ -1,6 +1,6 @@
-$NetBSD: patch-apps_app__sms.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-apps_app__sms.c,v 1.2 2012/10/09 01:36:32 jnemeth Exp $
 
---- apps/app_sms.c.orig	2011-07-14 20:25:31.000000000 +0000
+--- apps/app_sms.c.orig	2012-07-31 19:57:09.000000000 +0000
 +++ apps/app_sms.c
 @@ -553,7 +553,7 @@ static void packdate(unsigned char *o, t
  	int z;

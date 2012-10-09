@@ -1,6 +1,6 @@
-$NetBSD: patch-pbx_pbx__dundi.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-pbx_pbx__dundi.c,v 1.2 2012/10/09 01:36:32 jnemeth Exp $
 
---- pbx/pbx_dundi.c.orig	2011-07-14 20:25:31.000000000 +0000
+--- pbx/pbx_dundi.c.orig	2012-09-06 02:49:41.000000000 +0000
 +++ pbx/pbx_dundi.c
 @@ -38,7 +38,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
  #include <pthread.h>

@@ -1,8 +1,8 @@
-$NetBSD: patch-main_sched.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-main_sched.c,v 1.2 2012/10/09 01:36:32 jnemeth Exp $
 
---- main/sched.c.orig	2010-12-20 17:15:54.000000000 +0000
+--- main/sched.c.orig	2012-06-15 16:07:08.000000000 +0000
 +++ main/sched.c
-@@ -553,12 +553,12 @@ void ast_sched_dump(struct ast_sched_con
+@@ -557,12 +557,12 @@ void ast_sched_dump(struct ast_sched_con
  		struct timeval delta;
  		q = ast_heap_peek(con->sched_heap, x);
  		delta = ast_tvsub(q->when, when);
