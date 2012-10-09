@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3207 2012/10/09 14:21:08 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3208 2012/10/09 19:49:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4977,3 +4977,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/camlp5 to 6.07 [jaapb 2012-10-09]
 	Updated print/tex-dvips to 2012 [minskim 2012-10-09]
 	Updated print/tex-dvips-doc to 2012 [minskim 2012-10-09]
+	Updated fonts/tex-amsfonts to 3.03 [minskim 2012-10-09]
+	Updated fonts/tex-amsfonts-doc to 3.03 [minskim 2012-10-09]
