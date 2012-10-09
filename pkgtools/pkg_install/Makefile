@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2012/09/11 23:19:36 asau Exp $
+# $NetBSD: Makefile,v 1.188 2012/10/09 07:36:08 marino Exp $
 
 # Notes to package maintainers:
 #
@@ -60,6 +60,10 @@ CPPFLAGS+=		-D_LARGEFILE_SOURCE -D_LARGE_FILES
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
+
+# pkg_install uses the files from net/libfetch.  The file ftp.c intentionally
+# violates strict-aliasing rules, so a flag is needed to compile it on gcc 4.7
+CFLAGS+=		-Wno-strict-aliasing
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
