@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3206 2012/10/09 13:28:39 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3207 2012/10/09 14:21:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4975,3 +4975,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk10 to 10.9.0 [jnemeth 2012-10-09]
 	Updated net/libfetch to 2.34 [sbd 2012-10-09]
 	Updated lang/camlp5 to 6.07 [jaapb 2012-10-09]
+	Updated print/tex-dvips to 2012 [minskim 2012-10-09]
+	Updated print/tex-dvips-doc to 2012 [minskim 2012-10-09]
