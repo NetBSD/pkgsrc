@@ -1,8 +1,8 @@
-$NetBSD: patch-main_asterisk.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-main_asterisk.c,v 1.2 2012/10/09 01:36:32 jnemeth Exp $
 
---- main/asterisk.c.orig	2011-12-08 23:20:44.000000000 +0000
+--- main/asterisk.c.orig	2012-09-11 21:04:36.000000000 +0000
 +++ main/asterisk.c
-@@ -85,7 +85,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
+@@ -89,7 +89,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
  #include <sys/sysctl.h>
  #if !defined(__OpenBSD__)
  #include <sys/vmmeter.h>

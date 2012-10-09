@@ -1,6 +1,6 @@
-$NetBSD: patch-channels_chan__oss.c,v 1.2 2012/03/25 02:17:47 jnemeth Exp $
+$NetBSD: patch-channels_chan__oss.c,v 1.3 2012/10/09 01:36:32 jnemeth Exp $
 
---- channels/chan_oss.c.orig	2011-09-09 16:27:01.000000000 +0000
+--- channels/chan_oss.c.orig	2012-08-21 20:40:18.000000000 +0000
 +++ channels/chan_oss.c
 @@ -48,7 +48,7 @@ ASTERISK_FILE_VERSION(__FILE__, "$Revisi
  

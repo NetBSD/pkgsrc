@@ -1,8 +1,8 @@
-$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.2 2012/10/09 01:36:32 jnemeth Exp $
 
---- include/asterisk/autoconfig.h.in.orig	2011-10-06 22:58:40.000000000 +0000
+--- include/asterisk/autoconfig.h.in.orig	2012-08-09 19:11:01.000000000 +0000
 +++ include/asterisk/autoconfig.h.in
-@@ -896,6 +896,9 @@
+@@ -899,6 +899,9 @@
  /* Define to 1 if you have the <syslog.h> header file. */
  #undef HAVE_SYSLOG_H
  

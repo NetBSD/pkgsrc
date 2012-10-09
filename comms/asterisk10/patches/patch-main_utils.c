@@ -1,8 +1,8 @@
-$NetBSD: patch-main_utils.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-main_utils.c,v 1.2 2012/10/09 01:36:32 jnemeth Exp $
 
---- main/utils.c.orig	2011-11-02 21:37:11.000000000 +0000
+--- main/utils.c.orig	2012-08-27 13:57:10.000000000 +0000
 +++ main/utils.c
-@@ -484,7 +484,7 @@ const char *ast_inet_ntoa(struct in_addr
+@@ -488,7 +488,7 @@ const char *ast_inet_ntoa(struct in_addr
  static int dev_urandom_fd;
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-main_utils.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  #undef pthread_create /* For ast_pthread_create function only */
  #endif /* !__linux__ */
  
-@@ -1392,13 +1392,13 @@ int ast_false(const char *s)
+@@ -1399,13 +1399,13 @@ int ast_false(const char *s)
  static struct timeval tvfix(struct timeval a)
  {
  	if (a.tv_usec >= ONE_MILLION) {
