@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3204 2012/10/09 02:48:16 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.3205 2012/10/09 10:24:55 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4967,3 +4967,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.17.0 [jnemeth 2012-10-08]
 	Updated comms/asterisk10 to 10.9.0 [jnemeth 2012-10-09]
 	Updated net/libfetch to 2.34 [sbd 2012-10-09]
+	Updated lang/camlp5 to 6.07 [jaapb 2012-10-09]
