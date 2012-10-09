@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2012/10/08 23:00:35 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2012/10/09 12:16:31 drochner Exp $
 
 BUILDLINK_TREE+=	pango
 
@@ -15,7 +15,6 @@ pkgbase := pango
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.pango:Mx11)
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .endif
