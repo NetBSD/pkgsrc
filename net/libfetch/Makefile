@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2012/10/07 07:23:21 marino Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/09 02:48:04 sbd Exp $
 #
 
-DISTNAME=	libfetch-2.33
+DISTNAME=	libfetch-2.34
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -27,6 +27,9 @@ CFLAGS+=		-Wno-strict-aliasing
 .include "../../mk/bsd.prefs.mk"
 .if !empty(FETCH_USING:Mfetch)
 CHECK_PERMS=		no
+.endif
+.if ${OPSYS} == "Linux"
+CFLAGS+=	-fPIC
 .endif
 
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
