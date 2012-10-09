@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2012/10/06 20:44:04 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.22 2012/10/09 18:57:54 jmmv Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS+=	--with-pcre=system
 CONFIGURE_ARGS+=	--disable-dtrace
+CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
 CONFIGURE_ARGS+=	--disable-modular-tests
 
 CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
