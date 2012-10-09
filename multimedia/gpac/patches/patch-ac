@@ -1,7 +1,20 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/01/23 14:54:23 jmcneill Exp $
+$NetBSD: patch-ac,v 1.2 2012/10/09 17:53:51 marino Exp $
 
---- configure.orig	2009-01-23 09:22:30.000000000 -0500
+GCC 4.6+ chokes on "--warn-common" which older versions of GCC left fall to
+the linker.  The missing "," after "-Wl" is no longer acceptable.
+Rest is from original version of patch
+
+--- configure.orig	2008-12-02 18:04:42.000000000 +0000
 +++ configure
+@@ -102,7 +102,7 @@ extralibs="-lm"
+ bigendian="no"
+ SHFLAGS=-shared
+ need_inet_aton="no"
+-LDFLAGS="$LDFLAGS -Wl --warn-common"
++LDFLAGS="$LDFLAGS -Wl,--warn-common"
+ CFLAGS=""
+ CPPFLAGS=""
+ GPAC_SH_FLAGS=-lpthread
 @@ -217,12 +217,16 @@ case "$cpu" in
    ;;
    x86_64|amd64)
