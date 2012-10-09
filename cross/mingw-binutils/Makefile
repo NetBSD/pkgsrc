@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 00:10:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/09 07:48:20 marino Exp $
 
 DISTNAME=	binutils-2.18
 PKGNAME=	mingw-${DISTNAME:S/-src//}
@@ -16,6 +16,9 @@ GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
 USE_TOOLS+=		pax
 INFO_FILES=		yes
+
+# Required to pass -Werror on gcc4.7
+CFLAGS+=		-Wno-unused-but-set-variable
 
 post-install:
 .for f in windres dllwrap
