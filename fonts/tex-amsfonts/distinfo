@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/24 20:28:58 minskim Exp $
+$NetBSD: distinfo,v 1.4 2012/10/09 19:47:08 minskim Exp $
 
-SHA1 (tex-amsfonts-15878/amsfonts.tar.xz) = 0c7abb1fd212c7e8c4fca79ebb0744e1dc12bed4
-RMD160 (tex-amsfonts-15878/amsfonts.tar.xz) = e0ea21f4033b04162e3c4abe9d28bdebbfa9ec8a
-Size (tex-amsfonts-15878/amsfonts.tar.xz) = 3788340 bytes
+SHA1 (tex-amsfonts-26315/amsfonts.tar.xz) = be88800b266fb8203061a99b2f92030ee7a90a14
+RMD160 (tex-amsfonts-26315/amsfonts.tar.xz) = 7cbbcffe98881b7dbe356d53a771b57fb169de9f
+Size (tex-amsfonts-26315/amsfonts.tar.xz) = 3626028 bytes
