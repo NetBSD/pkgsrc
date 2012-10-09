@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 23:01:38 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/09 15:26:45 marino Exp $
 #
 
 DISTNAME=	geoclue-0.12.0
@@ -16,6 +16,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	geoclue.pc.in
+
+# Needed to pass -Werror for GCC 4.6+
+CFLAGS+=	-Wno-unused-but-set-variable
 
 # for documentation build
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
