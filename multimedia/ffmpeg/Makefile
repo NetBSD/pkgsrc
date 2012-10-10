@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2012/10/08 09:21:00 asau Exp $
+# $NetBSD: Makefile,v 1.90 2012/10/10 13:33:44 drochner Exp $
 
-# XXX This is release 0.7.13 but we had date-based pkgnames before.
-PKGNAME=	ffmpeg-20120609.${DISTVERSION}
-PKGREVISION=	1
+PKGNAME=	ffmpeg-20120919.${DISTVERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
@@ -23,11 +21,12 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
+# "error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'"
+CFLAGS.SunOS+=	-DBROKEN_RELOCATIONS=1
+
 TEST_TARGET=	check
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/TODO \
-		${DESTDIR}${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt \
 		${DESTDIR}${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
