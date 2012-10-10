@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2012/07/10 10:23:03 sbd Exp $
+$NetBSD: patch-configure,v 1.2.2.1 2012/10/10 13:48:13 tron Exp $
 
 * Add DragonFly support.
 * Link proper postgresql library.
 * Use separate @LIBREADLINE@ AC_SUBST.
+* Avoid using "==" for argument of test(1).
 
---- configure.orig	2012-06-01 15:29:52.000000000 +0000
+--- configure.orig	2012-09-27 00:35:19.000000000 +0000
 +++ configure
 @@ -1341,6 +1341,7 @@ LWRES_PLATFORM_NEEDVSNPRINTF
  ISC_PLATFORM_NEEDVSNPRINTF
@@ -14,7 +15,16 @@ $NetBSD: patch-configure,v 1.2 2012/07/10 10:23:03 sbd Exp $
  ISC_PLATFORM_NEEDSTRLCAT
  ISC_PLATFORM_NEEDSTRLCPY
  GENRANDOMLIB
-@@ -22166,6 +22167,8 @@ case $host in
+@@ -19754,7 +19755,7 @@ done
+ 
+ 			;;
+ 		esac
+-		if test "X$PYTHON" == "X"
++		if test "X$PYTHON" = "X"
+ 		then
+ 			case "$use_python" in
+ 			unspec)
+@@ -22390,6 +22391,8 @@ case $host in
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=true ;;
@@ -23,7 +33,7 @@ $NetBSD: patch-configure,v 1.2 2012/07/10 10:23:03 sbd Exp $
  *-bsdi[234]*)
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
-@@ -24800,23 +24803,47 @@ no)	;;
+@@ -25024,23 +25027,47 @@ no)	;;
  	then
  		readline=-lreadline
  	fi
@@ -86,7 +96,7 @@ $NetBSD: patch-configure,v 1.2 2012/07/10 10:23:03 sbd Exp $
          ;;
  esac
  
-@@ -27148,7 +27175,7 @@ $as_echo "no" >&6; }
+@@ -27372,7 +27399,7 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then
