@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.48 2012/10/10 11:48:39 drochner Exp $
+
+--- tests/validate-colorspace.tap.orig	2012-08-22 17:08:31.000000000 +0000
++++ tests/validate-colorspace.tap
+@@ -17,7 +17,7 @@
+ . ${srcdir}/tests/common.shi
+ 
+ depth=`eval ${CONVERT} xc:none -format '%[fx:QuantumRange]' info:-`
+-if [ "X$depth" == "X255" ]; then
++if [ "X$depth" = "X255" ]; then
+   echo "1..1"
+   echo "ok"
+   exit 0
