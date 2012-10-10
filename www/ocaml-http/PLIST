@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/10 11:23:32 jaapb Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/http
+lib/ocaml/site-lib/http/META
+${PLIST.opt}lib/ocaml/site-lib/http/http.a
+lib/ocaml/site-lib/http/http.cma
+${PLIST.opt}lib/ocaml/site-lib/http/http.cmxa
+lib/ocaml/site-lib/http/http_common.cmi
+lib/ocaml/site-lib/http/http_common.mli
+lib/ocaml/site-lib/http/http_daemon.cmi
+lib/ocaml/site-lib/http/http_daemon.mli
+lib/ocaml/site-lib/http/http_message.cmi
+lib/ocaml/site-lib/http/http_message.mli
+${PLIST.opt}lib/ocaml/site-lib/http/http_mt.a
+lib/ocaml/site-lib/http/http_mt.cma
+${PLIST.opt}lib/ocaml/site-lib/http/http_mt.cmxa
+lib/ocaml/site-lib/http/http_request.cmi
+lib/ocaml/site-lib/http/http_request.mli
+lib/ocaml/site-lib/http/http_response.cmi
+lib/ocaml/site-lib/http/http_response.mli
+lib/ocaml/site-lib/http/http_types.cmi
+lib/ocaml/site-lib/http/http_types.mli
+lib/ocaml/site-lib/http/http_user_agent.cmi
+lib/ocaml/site-lib/http/http_user_agent.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/http
