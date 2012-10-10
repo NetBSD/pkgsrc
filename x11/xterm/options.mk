@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2012/06/15 23:06:08 dholland Exp $
+# $NetBSD: options.mk,v 1.13 2012/10/10 16:29:35 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xterm
-PKG_SUPPORTED_OPTIONS=		debug pcre freetype luit
-PKG_SUGGESTED_OPTIONS=		freetype luit
+PKG_SUPPORTED_OPTIONS=		debug pcre freetype luit xpm
+PKG_SUGGESTED_OPTIONS=		freetype luit xpm
 
 .include "../../mk/bsd.options.mk"
 
@@ -36,4 +36,10 @@ DEPENDS+=	luit-[0-9]*:../../x11/luit
 CONFIGURE_ARGS+= --enable-luit --enable-mini-luit
 .else
 CONFIGURE_ARGS+= --disable-luit --disable-mini-luit
+.endif
+
+.if !empty(PKG_OPTIONS:Mxpm)
+### nothing
+.else
+CONFIGURE_ARGS+= --without-xpm
 .endif
