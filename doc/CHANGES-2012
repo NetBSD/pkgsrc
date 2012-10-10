@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3212 2012/10/10 09:31:39 sno Exp $
+$NetBSD: CHANGES-2012,v 1.3213 2012/10/10 10:24:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/fldigi to 3.21.56 [mef 2012-10-10]
 	Updated shells/tcsh to 6.18.01nb3 [dholland 2012-10-10]
 	Added databases/p5-DBIx-Class-Candy version 0.002101 [sno 2012-10-10]
+	Updated multimedia/ffmpeg010 to 20120919.0.10.5 [drochner 2012-10-10]
