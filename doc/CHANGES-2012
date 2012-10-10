@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3213 2012/10/10 10:24:32 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3214 2012/10/10 11:24:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/tcsh to 6.18.01nb3 [dholland 2012-10-10]
 	Added databases/p5-DBIx-Class-Candy version 0.002101 [sno 2012-10-10]
 	Updated multimedia/ffmpeg010 to 20120919.0.10.5 [drochner 2012-10-10]
+	Added www/ocaml-http version 0.1.5 [jaapb 2012-10-10]
