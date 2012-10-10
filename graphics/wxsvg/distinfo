@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/01/19 19:19:21 drochner Exp $
+$NetBSD: distinfo,v 1.10 2012/10/10 13:32:09 drochner Exp $
 
-SHA1 (wxsvg-1.1.6.tar.bz2) = 8ca606df4d5dd1cd476aa54d0f33408beea9d920
-RMD160 (wxsvg-1.1.6.tar.bz2) = 26218064e7a8ca9718fc7571f6b1380962edd43a
-Size (wxsvg-1.1.6.tar.bz2) = 654692 bytes
+SHA1 (wxsvg-1.1.9.tar.bz2) = a06b05ff8a7490a90e2ad6d087e825484ddedb61
+RMD160 (wxsvg-1.1.9.tar.bz2) = 5e64ba5204eda8afd888a9b078a6ed038881ae06
+Size (wxsvg-1.1.9.tar.bz2) = 670397 bytes
