@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/11/06 08:43:31 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/10 19:31:58 minskim Exp $
 
 DISTNAME=	cm
-PKGNAME=	tex-${DISTNAME}-2009.15878
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2012
 CATEGORIES=	fonts
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	24956
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Computer Modern fonts

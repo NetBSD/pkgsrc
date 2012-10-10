@@ -2,9 +2,9 @@ Knuth's final iteration of his re-interpretation of a c.19
 Modern-style font from Monotype.  The family is comprehensive,
 offering both sans and roman styles, and a monospaced font, together
 with mathematics fonts closely integrated with the mathematical
-facilities of TeX itself.  The base fonts are distributed as MetaFont
+facilities of TeX itself.  The base fonts are distributed as Metafont
 source, but autotraced PostScript Type 1 versions are available (one
 version in the AMS fonts distribution, and also the BaKoMa
-distribution). The Computer Modern fonts have inspired many later
+distribution).  The Computer Modern fonts have inspired many later
 families, notably the European Computer Modern and the Latin Modern
 families.
