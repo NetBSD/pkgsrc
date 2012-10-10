@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.7 2012/10/10 16:36:37 drochner Exp $
+
+wxGTK-2.8.10 doesn't have wxSYS_COLOUR_LISTBOXHIGHLIGHTTEXT
+
+--- src/VobListBox.cpp.orig	2012-07-24 17:59:30.000000000 +0000
++++ src/VobListBox.cpp
+@@ -61,7 +61,7 @@ void VobListBox::OnDrawItem(wxDC& dc, co
+ 	
+ 	// info
+ 	dc.SetFont(ITEM_FONT);
+-	dc.SetTextForeground((int)n == GetSelection() ? wxSystemSettings::GetColour(wxSYS_COLOUR_LISTBOXHIGHLIGHTTEXT)
++	dc.SetTextForeground((int)n == GetSelection() ? wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT)
+ 			: wxSystemSettings::GetColour(wxSYS_COLOUR_LISTBOXTEXT));
+ 	dc.SetTextForeground(*wxBLACK);
+ 	wxArrayString& info = m_info[n];
