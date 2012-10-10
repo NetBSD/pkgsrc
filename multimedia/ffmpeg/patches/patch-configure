@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.15 2011/11/29 17:58:17 jmmv Exp $
+$NetBSD: patch-configure,v 1.16 2012/10/10 13:33:44 drochner Exp $
 
---- configure.orig	2011-11-21 19:49:30.000000000 +0000
+--- configure.orig	2012-06-09 20:09:44.000000000 +0000
 +++ configure
-@@ -2412,6 +2412,11 @@ case $target_os in
+@@ -2604,6 +2604,11 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -14,7 +14,7 @@ $NetBSD: patch-configure,v 1.15 2011/11/29 17:58:17 jmmv Exp $
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          ;;
-@@ -2637,10 +2642,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -2835,10 +2840,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -31,28 +31,37 @@ $NetBSD: patch-configure,v 1.15 2011/11/29 17:58:17 jmmv Exp $
  
  if enabled alpha; then
  
-@@ -2974,7 +2982,7 @@ else
+@@ -3195,7 +3203,7 @@ else
  fi
  enabled sdl && add_cflags $sdl_cflags && add_extralibs $sdl_libs
  
 -texi2html -version > /dev/null 2>&1 && enable texi2html || disable texi2html
 +which texi2html > /dev/null 2>&1 && enable texi2html || disable texi2html
+ makeinfo --version > /dev/null 2>&1 && enable makeinfo  || disable makeinfo
  
  check_header linux/fb.h
- check_header linux/videodev.h
-@@ -3060,6 +3068,7 @@ check_ldflags -Wl,--warn-common
- check_ldflags -Wl,-rpath-link,libpostproc -Wl,-rpath-link,libswscale -Wl,-rpath-link,libavfilter -Wl,-rpath-link,libavdevice -Wl,-rpath-link,libavformat -Wl,-rpath-link,libavcodec -Wl,-rpath-link,libavutil
+@@ -3291,6 +3299,7 @@ check_ldflags -Wl,--warn-common
+ check_ldflags -Wl,-rpath-link=libpostproc:libswresample:libswscale:libavfilter:libavdevice:libavformat:libavcodec:libavutil
  test_ldflags -Wl,-Bsymbolic && append SHFLAGS -Wl,-Bsymbolic
  
 +if false; then
  echo "X{};" > $TMPV
  if test_ldflags -Wl,--version-script,$TMPV; then
      append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
-@@ -3072,6 +3081,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+@@ -3303,6 +3312,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
  void ff_foo(void) {}
  EOF
  fi
 +fi
  
- if enabled small; then
-     add_cflags $size_cflags
+ if [ -n "$optflags" ]; then
+     add_cflags $optflags
+@@ -3726,7 +3736,7 @@ Version: $version
+ Requires: $(enabled shared || echo $requires)
+ Requires.private: $(enabled shared && echo $requires)
+ Conflicts:
+-Libs: -L\${libdir} -l${shortname} $(enabled shared || echo $libs)
++Libs: -L\${libdir} -Wl,-R\${libdir} -l${shortname} $(enabled shared || echo $libs)
+ Libs.private: $(enabled shared && echo $libs)
+ Cflags: -I\${includedir}
+ EOF
