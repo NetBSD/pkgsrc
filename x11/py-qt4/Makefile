@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2012/10/08 23:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/10 16:53:38 drochner Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
-PYQT_VERSION=	4.9.4
-PKGREVISION=	4
+PYQT_VERSION=	4.9.5
 CATEGORIES=	x11 python
-MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
+#MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt4
@@ -70,6 +70,7 @@ do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
 
+BUILDLINK_API_DEPENDS.py-sip+= ${PYPKGPREFIX}-sip>=4.14
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
