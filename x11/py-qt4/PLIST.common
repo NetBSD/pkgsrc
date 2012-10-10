@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.18 2012/07/03 18:13:07 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.19 2012/10/10 16:53:39 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -88,6 +88,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qelapsedtimer.sip
 share/sip${PYVERSSUFFIX}/QtCore/qeventloop.sip
 share/sip${PYVERSSUFFIX}/QtCore/qeventtransition.sip
 share/sip${PYVERSSUFFIX}/QtCore/qfile.sip
+share/sip${PYVERSSUFFIX}/QtCore/qfiledevice.sip
 share/sip${PYVERSSUFFIX}/QtCore/qfileinfo.sip
 share/sip${PYVERSSUFFIX}/QtCore/qfilesystemwatcher.sip
 share/sip${PYVERSSUFFIX}/QtCore/qfinalstate.sip
@@ -423,6 +424,7 @@ share/sip${PYVERSSUFFIX}/QtNetwork/QtNetworkmod.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qabstractnetworkcache.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qabstractsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qauthenticator.sip
+share/sip${PYVERSSUFFIX}/QtNetwork/qdnslookup.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qftp.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qhostaddress.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qhostinfo.sip
@@ -443,6 +445,7 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkrequest.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworksession.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qssl.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qsslcertificate.sip
+share/sip${PYVERSSUFFIX}/QtNetwork/qsslcertificateextension.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qsslcipher.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qsslconfiguration.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qsslerror.sip
