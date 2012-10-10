@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2012/07/02 18:53:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.43 2012/10/10 11:44:31 drochner Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -159,6 +159,7 @@ man/man3/gnutls_dtls_get_data_mtu.3
 man/man3/gnutls_dtls_get_mtu.3
 man/man3/gnutls_dtls_get_timeout.3
 man/man3/gnutls_dtls_prestate_set.3
+man/man3/gnutls_dtls_set_data_mtu.3
 man/man3/gnutls_dtls_set_mtu.3
 man/man3/gnutls_dtls_set_timeouts.3
 man/man3/gnutls_ecc_curve_get.3
@@ -499,6 +500,7 @@ man/man3/gnutls_session_get_random.3
 man/man3/gnutls_session_is_resumed.3
 man/man3/gnutls_session_resumption_requested.3
 man/man3/gnutls_session_set_data.3
+man/man3/gnutls_session_set_premaster.3
 man/man3/gnutls_session_set_ptr.3
 man/man3/gnutls_session_ticket_enable_client.3
 man/man3/gnutls_session_ticket_enable_server.3
