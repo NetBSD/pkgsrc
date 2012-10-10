@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/10 14:28:51 drochner Exp $
+
+SHA1 (libquicktime-1.2.4.tar.gz) = 7008b2dc27b9b40965bd2df42d39ff4cb8b6305e
+RMD160 (libquicktime-1.2.4.tar.gz) = 4daed02aa99903218af6844e879334cd1ae9e018
+Size (libquicktime-1.2.4.tar.gz) = 1028626 bytes
