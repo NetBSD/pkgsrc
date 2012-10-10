@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2012/10/10 11:25:57 jaapb Exp $
+
+Correct location for expat and add DESTDIR support
+--- Makefile.orig	2005-03-13 14:00:29.000000000 +0000
++++ Makefile
+@@ -3,8 +3,8 @@
+ 
+ # Change this to match your expat installation.
+ EXPAT_LIB=-lexpat
+-EXPAT_LIBDIR=/usr/local/lib
+-EXPAT_INCDIR=/usr/local/include
++EXPAT_LIBDIR=${PREFIX}/lib
++EXPAT_INCDIR=${PREFIX}/include
+ 
+ NAME=expat
+ OBJECTS=expat.cmo
+@@ -50,7 +50,8 @@ $(XARCHIVE): $(CARCHIVE) $(XOBJECTS)
+ .PHONY: install
+ install: all
+ 	{ test ! -f $(XARCHIVE) || extra="$(XARCHIVE) $(NAME).a"; }; \
+-	$(OCAMLFIND) install $(NAME) META $(NAME).cmi $(NAME).mli $(ARCHIVE) \
++	$(OCAMLFIND) install -destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib \
++	-ldconf ignore $(NAME) META $(NAME).cmi $(NAME).mli $(ARCHIVE) \
+ 	dll$(CARCHIVE_NAME).so lib$(CARCHIVE_NAME).a $$extra
+ 
+ .PHONY: uninstall
