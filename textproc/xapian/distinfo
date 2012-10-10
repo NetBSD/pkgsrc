@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2012/01/10 01:03:28 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2012/10/10 16:10:31 wiz Exp $
 
-SHA1 (xapian-core-1.2.8.tar.gz) = 4bdd3845278812d467b8d0fb73ee27a5be05b2d9
-RMD160 (xapian-core-1.2.8.tar.gz) = f6a88984e553cbf6c56c339bcb61a68c45e905ed
-Size (xapian-core-1.2.8.tar.gz) = 4106342 bytes
+SHA1 (xapian-core-1.2.12.tar.gz) = 2b96800280fee41eed767289620172f5226c9c4f
+RMD160 (xapian-core-1.2.12.tar.gz) = 182f8c606db591002b588a42585f5fb566b68bb9
+Size (xapian-core-1.2.12.tar.gz) = 4138429 bytes
 SHA1 (patch-common_safeuuid.h) = a017a88f5a82854cddc7ca89921ceec361a076b8
