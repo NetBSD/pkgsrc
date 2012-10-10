@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2012/04/20 15:22:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.74 2012/10/10 11:48:39 drochner Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -40,6 +40,7 @@ include/ImageMagick/magick/attribute.h
 include/ImageMagick/magick/blob.h
 include/ImageMagick/magick/cache-view.h
 include/ImageMagick/magick/cache.h
+include/ImageMagick/magick/channel.h
 include/ImageMagick/magick/cipher.h
 include/ImageMagick/magick/client.h
 include/ImageMagick/magick/coder.h
@@ -89,6 +90,7 @@ include/ImageMagick/magick/montage.h
 include/ImageMagick/magick/morphology.h
 include/ImageMagick/magick/option.h
 include/ImageMagick/magick/paint.h
+include/ImageMagick/magick/pixel-accessor.h
 include/ImageMagick/magick/pixel.h
 include/ImageMagick/magick/policy.h
 include/ImageMagick/magick/prepress.h
@@ -1040,6 +1042,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/attribute.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/blob.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cache-view.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cache.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/channel.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/cipher.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/color.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/colormap.html
@@ -1064,6 +1067,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image-view.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/layer.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick++-classes.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-deprecate.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-property.html
@@ -1096,6 +1100,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/wand-view.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/architecture.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/binary-releases.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/changelog.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/channel.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/cipher.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/color.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/command-line-options.html
@@ -1179,11 +1184,8 @@ share/examples/ImageMagick/magic.xml
 share/examples/ImageMagick/mime.xml
 share/examples/ImageMagick/policy.xml
 share/examples/ImageMagick/quantization-table.xml
-share/examples/ImageMagick/sRGB.icc
 share/examples/ImageMagick/thresholds.xml
 share/examples/ImageMagick/type-dejavu.xml
 share/examples/ImageMagick/type-ghostscript.xml
 share/examples/ImageMagick/type-windows.xml
 share/examples/ImageMagick/type.xml
-@pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
-@pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
