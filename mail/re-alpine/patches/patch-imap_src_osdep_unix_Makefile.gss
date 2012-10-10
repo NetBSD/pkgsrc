@@ -1,0 +1,22 @@
+$NetBSD: patch-imap_src_osdep_unix_Makefile.gss,v 1.1 2012/10/10 19:49:07 markd Exp $
+
+heimdal support from imap-uw package.
+
+--- imap/src/osdep/unix/Makefile.gss.orig	2007-04-05 02:20:04.000000000 +0000
++++ imap/src/osdep/unix/Makefile.gss
+@@ -29,11 +29,13 @@
+ GSSDIR=/usr/local
+ GSSINCLUDE=$(GSSDIR)/include
+ GSSLIB=$(GSSDIR)/lib
+-GSSCFLAGS= -I$(GSSINCLUDE) -DGSS_C_NT_HOSTBASED_SERVICE=gss_nt_service_name -DKRB5_DEPRECATED=1
++GSSCFLAGS= -I$(GSSINCLUDE) -I$(GSSDIR)/include/krb5
+ GSSOLDLDFLAGS= -L$(GSSLIB) -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err
+ GSSNEWLDFLAGS= -L$(GSSLIB) -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
+ 
+ gss:	# GSSAPI Kerberos V flags
+ 	echo $(GSSCFLAGS) >> OSCFLAGS
+-	sh -c '(test -f $(GSSLIB)/libk5crypto.a) && echo $(GSSNEWLDFLAGS) || echo $(GSSOLDLDFLAGS)' >> LDFLAGS
++	sh -c '(test -f $(GSSLIB)/libk5crypto.a) && echo $(GSSNEWLDFLAGS) || echo $(GSSOLDLDFLAGS)' >> LDFLAGS.gss1
++	sh -c '(test -z "$(KRB5_CONFIG)") || $(KRB5_CONFIG) --libs gssapi' > LDFLAGS.gss2
++	sh -c '(test -z "$(KRB5_CONFIG)") && cat LDFLAGS.gss1 || cat LDFLAGS.gss2' >> LDFLAGS
+ 	echo "#include \"kerb_mit.c\"" >> auths.c
