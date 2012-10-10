@@ -1,27 +1,13 @@
-$NetBSD: patch-ac,v 1.11 2011/09/14 17:21:08 hans Exp $
+$NetBSD: patch-ac,v 1.12 2012/10/10 13:33:44 drochner Exp $
 
---- Makefile.orig	2011-06-21 21:29:25.000000000 +0200
-+++ Makefile	2011-09-12 17:54:06.075569882 +0200
-@@ -112,7 +112,7 @@ version.h .version:
- # force version.sh to run whenever version might have changed
- -include .version
- 
--DOCS = $(addprefix doc/, developer.html faq.html general.html libavfilter.html) $(HTMLPAGES) $(MANPAGES) $(PODPAGES)
-+DOCS = $(MANPAGES) $(PODPAGES)
- 
- documentation: $(DOCS)
- 
-@@ -152,11 +152,11 @@ install-progs: install-progs-yes $(PROGS
+--- Makefile.orig	2012-06-09 20:09:44.000000000 +0000
++++ Makefile
+@@ -124,7 +124,7 @@ install-progs: install-progs-yes $(PROGS
  
  install-data: $(DATA_FILES)
  	$(Q)mkdir -p "$(DATADIR)"
 -	$(INSTALL) -m 644 $(DATA_FILES) "$(DATADIR)"
 +	$(INSTALL) -c -m 644 $(DATA_FILES) "$(DATADIR)"
  
- install-man: $(MANPAGES)
- 	$(Q)mkdir -p "$(MANDIR)/man1"
--	$(INSTALL) -m 644 $(MANPAGES) "$(MANDIR)/man1"
-+	$(INSTALL) -c -m 644 $(MANPAGES) "$(MANDIR)/man1"
- 
- uninstall: uninstall-libs uninstall-headers uninstall-progs uninstall-data uninstall-man
+ uninstall: uninstall-libs uninstall-headers uninstall-progs uninstall-data
  
