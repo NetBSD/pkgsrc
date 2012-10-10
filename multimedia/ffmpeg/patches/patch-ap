@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.4 2012/02/03 08:43:50 sbd Exp $
+$NetBSD: patch-ap,v 1.5 2012/10/10 13:33:44 drochner Exp $
 
 --- libavutil/common.h.orig	2012-01-12 21:34:32.000000000 +0000
 +++ libavutil/common.h
