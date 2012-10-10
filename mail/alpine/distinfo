@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2010/12/11 20:32:32 abs Exp $
+$NetBSD: distinfo,v 1.18 2012/10/10 19:45:49 markd Exp $
 
 SHA1 (alpine-2.00a/alpine-2.00.tar.bz2) = dcbd3c5419954f484ccf706feaba31ce48cdebc4
 RMD160 (alpine-2.00a/alpine-2.00.tar.bz2) = 9e67704b23b3973d8b878e65ad9e6f5026c10d13
@@ -14,3 +14,6 @@ RMD160 (alpine-2.00a/searchheader.patch.gz) = cc1b2c3cf4cbceaf62e1c0378f5edf6bee
 Size (alpine-2.00a/searchheader.patch.gz) = 1708 bytes
 SHA1 (patch-aa) = c306613a297d61591d577b6968a31fc85b03f852
 SHA1 (patch-ab) = f0983d8c0123b06a2970eb2736b04afad1502450
+SHA1 (patch-imap_src_c-client_auth_gss.c) = 622b18f03074f87036f5469323125b4c855d9ce5
+SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
+SHA1 (patch-imap_src_osdep_unix_kerb_mit.c) = c77d5ee1e8aee30811c2df0562caa375ed270c0e
