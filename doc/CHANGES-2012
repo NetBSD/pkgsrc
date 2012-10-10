@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3220 2012/10/10 16:56:02 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3221 2012/10/10 19:26:54 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5002,3 +5002,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/py-sip to 4.14 [drochner 2012-10-10]
 	Updated x11/py-qt4 to 4.9.5 [drochner 2012-10-10]
 	Updated devel/eric4 to 4.5.6 [drochner 2012-10-10]
+	Updated shells/tcsh to 6.18.01nb4 [dholland 2012-10-10]
