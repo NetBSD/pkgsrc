@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3218 2012/10/10 16:07:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3219 2012/10/10 16:10:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4991,3 +4991,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/ocaml-expat version 0.9.1 [jaapb 2012-10-10]
 	Updated x11/xterm to 283 [wiz 2012-10-10]
 	Updated textproc/py-libxml2 to 2.9.0 [wiz 2012-10-10]
+	Updated textproc/xapian to 1.2.12 [wiz 2012-10-10]
