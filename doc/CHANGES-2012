@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3219 2012/10/10 16:10:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3220 2012/10/10 16:56:02 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4989,6 +4989,16 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/ffmpeg010 to 20120919.0.10.5 [drochner 2012-10-10]
 	Added www/ocaml-http version 0.1.5 [jaapb 2012-10-10]
 	Added textproc/ocaml-expat version 0.9.1 [jaapb 2012-10-10]
+	Updated graphics/shotwell-gtk3 to 0.13.1 [drochner 2012-10-10]
+	Updated security/gnutls to 3.0.24 [drochner 2012-10-10]
+	Updated graphics/ImageMagick to 6.7.9.10 [drochner 2012-10-10]
+	Updated graphics/librsvg to 2.36.3 [drochner 2012-10-10]
+	Updated graphics/wxsvg to 1.1.9 [drochner 2012-10-10]
+	Updated multimedia/transcode to 1.1.7 [drochner 2012-10-10]
 	Updated x11/xterm to 283 [wiz 2012-10-10]
 	Updated textproc/py-libxml2 to 2.9.0 [wiz 2012-10-10]
 	Updated textproc/xapian to 1.2.12 [wiz 2012-10-10]
+	Updated multimedia/dvdstyler to 2.3 [drochner 2012-10-10]
+	Updated x11/py-sip to 4.14 [drochner 2012-10-10]
+	Updated x11/py-qt4 to 4.9.5 [drochner 2012-10-10]
+	Updated devel/eric4 to 4.5.6 [drochner 2012-10-10]
