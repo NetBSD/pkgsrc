@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/22 03:31:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2012/10/10 13:48:13 tron Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -302,6 +302,7 @@ man/man8/dnssec-keygen.8
 man/man8/dnssec-revoke.8
 man/man8/dnssec-settime.8
 man/man8/dnssec-signzone.8
+man/man8/dnssec-verify.8
 man/man8/genrandom.8
 man/man8/isc-hmac-fixup.8
 man/man8/lwresd.8
@@ -321,6 +322,7 @@ sbin/dnssec-keygen
 sbin/dnssec-revoke
 sbin/dnssec-settime
 sbin/dnssec-signzone
+sbin/dnssec-verify
 sbin/genrandom
 sbin/isc-hmac-fixup
 sbin/lwresd
@@ -356,6 +358,7 @@ share/doc/bind9/arm/man.dnssec-keygen.html
 share/doc/bind9/arm/man.dnssec-revoke.html
 share/doc/bind9/arm/man.dnssec-settime.html
 share/doc/bind9/arm/man.dnssec-signzone.html
+share/doc/bind9/arm/man.dnssec-verify.html
 share/doc/bind9/arm/man.genrandom.html
 share/doc/bind9/arm/man.host.html
 share/doc/bind9/arm/man.isc-hmac-fixup.html
