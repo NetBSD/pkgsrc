@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3216 2012/10/10 12:19:41 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.3217 2012/10/10 13:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4989,3 +4989,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/ffmpeg010 to 20120919.0.10.5 [drochner 2012-10-10]
 	Added www/ocaml-http version 0.1.5 [jaapb 2012-10-10]
 	Added textproc/ocaml-expat version 0.9.1 [jaapb 2012-10-10]
+	Updated x11/xterm to 283 [wiz 2012-10-10]
