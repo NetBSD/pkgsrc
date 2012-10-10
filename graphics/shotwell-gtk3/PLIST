@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/14 21:56:51 gls Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/10 11:41:12 drochner Exp $
 bin/shotwell
 bin/shotwell-video-thumbnailer
 lib/shotwell/plugins/builtin/f-spot-24.png
 lib/shotwell/plugins/builtin/facebook.png
+lib/shotwell/plugins/builtin/facebook_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/flickr.png
+lib/shotwell/plugins/builtin/flickr_pin_entry_pane.glade
+lib/shotwell/plugins/builtin/flickr_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/picasa.png
+lib/shotwell/plugins/builtin/picasa_auth_code_entry_pane.glade
+lib/shotwell/plugins/builtin/picasa_not_set_up_pane.glade
+lib/shotwell/plugins/builtin/picasa_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/piwigo.png
 lib/shotwell/plugins/builtin/piwigo_authentication_pane.glade
 lib/shotwell/plugins/builtin/piwigo_publishing_options_pane.glade
@@ -15,6 +21,8 @@ lib/shotwell/plugins/builtin/shotwell-transitions.so
 lib/shotwell/plugins/builtin/slideshow-plugin.png
 lib/shotwell/plugins/builtin/yandex_publish_model.glade
 lib/shotwell/plugins/builtin/youtube.png
+lib/shotwell/plugins/builtin/youtube_publishing_options_pane.glade
+libexec/shotwell/shotwell-settings-migrator
 share/applications/shotwell-viewer.desktop
 share/applications/shotwell.desktop
 share/glib-2.0/schemas/org.yorba.shotwell-extras.gschema.xml
@@ -85,6 +93,7 @@ share/locale/el/LC_MESSAGES/shotwell-extras.mo
 share/locale/el/LC_MESSAGES/shotwell.mo
 share/locale/en_GB/LC_MESSAGES/shotwell-extras.mo
 share/locale/en_GB/LC_MESSAGES/shotwell.mo
+share/locale/eo/LC_MESSAGES/shotwell-extras.mo
 share/locale/es/LC_MESSAGES/shotwell-extras.mo
 share/locale/es/LC_MESSAGES/shotwell.mo
 share/locale/et/LC_MESSAGES/shotwell-extras.mo
@@ -113,6 +122,7 @@ share/locale/ja/LC_MESSAGES/shotwell-extras.mo
 share/locale/ja/LC_MESSAGES/shotwell.mo
 share/locale/kk/LC_MESSAGES/shotwell-extras.mo
 share/locale/kk/LC_MESSAGES/shotwell.mo
+share/locale/km/LC_MESSAGES/shotwell.mo
 share/locale/ko/LC_MESSAGES/shotwell-extras.mo
 share/locale/ko/LC_MESSAGES/shotwell.mo
 share/locale/lt/LC_MESSAGES/shotwell-extras.mo
@@ -125,6 +135,8 @@ share/locale/nb/LC_MESSAGES/shotwell-extras.mo
 share/locale/nb/LC_MESSAGES/shotwell.mo
 share/locale/nl/LC_MESSAGES/shotwell-extras.mo
 share/locale/nl/LC_MESSAGES/shotwell.mo
+share/locale/or/LC_MESSAGES/shotwell-extras.mo
+share/locale/or/LC_MESSAGES/shotwell.mo
 share/locale/pa/LC_MESSAGES/shotwell-extras.mo
 share/locale/pa/LC_MESSAGES/shotwell.mo
 share/locale/pl/LC_MESSAGES/shotwell-extras.mo
@@ -157,7 +169,6 @@ share/locale/tr/LC_MESSAGES/shotwell-extras.mo
 share/locale/tr/LC_MESSAGES/shotwell.mo
 share/locale/uk/LC_MESSAGES/shotwell-extras.mo
 share/locale/uk/LC_MESSAGES/shotwell.mo
-share/locale/vi/LC_MESSAGES/shotwell-extras.mo
 share/locale/vi/LC_MESSAGES/shotwell.mo
 share/locale/zh_CN/LC_MESSAGES/shotwell-extras.mo
 share/locale/zh_CN/LC_MESSAGES/shotwell.mo
