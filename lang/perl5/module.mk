@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.66 2012/05/18 21:04:46 ryoon Exp $
+# $NetBSD: module.mk,v 1.67 2012/10/10 09:27:12 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -167,15 +167,15 @@ do-configure: perl5-configure
 
 .PHONY: do-modbuild-build
 do-modbuild-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build ${BUILD_PARAMS}
 
 .PHONY: do-modbuild-test
 do-modbuild-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test ${BUILD_PARAMS}
 
 .PHONY: do-modbuild-install
 do-modbuild-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install ${PERL5_MODBUILD_DESTDIR_OPTION}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install ${PERL5_MODBUILD_DESTDIR_OPTION} ${BUILD_PARAMS}
 
 .if target(do-${PERL5_MODTYPE}-build) && !defined(NO_BUILD)
 do-build: do-${PERL5_MODTYPE}-build
