@@ -1,0 +1,38 @@
+# $NetBSD: Makefile,v 1.1 2012/10/10 14:28:51 drochner Exp $
+#
+
+DISTNAME=	libquicktime-1.2.4
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libquicktime/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://libquicktime.sourceforge.net/
+COMMENT=	Library for quicktime/avi/mp4 files
+LICENSE=	gnu-lgpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-doxygen
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+USE_PKGLOCALEDIR=	yes
+
+PKGCONFIG_OVERRIDE+=	libquicktime.pc.in
+
+# option?
+CONFIGURE_ARGS+=	--enable-gpl
+.include "../../audio/faad2/buildlink3.mk"
+.include "../../audio/faac/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
+#.include "../../multimedia/libdv/buildlink3.mk"
+.include "../../multimedia/schroedinger/buildlink3.mk"
+#.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
