@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3215 2012/10/10 11:26:13 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3216 2012/10/10 12:19:41 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4969,7 +4969,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-gobject3 to 3.4.0 [prlw1 2012-10-08]
 	Updated devel/py-at-spi2 to 2.6.0 [prlw1 2012-10-08]
 	Updated devel/libpeas to 1.6.0 [prlw1 2012-10-08]
-	Updated graphics/pango to 1.32.1 [adam 2012-10-08]
+	Updated devel/pango to 1.32.1 [adam 2012-10-08]
 	Updated print/tex-texlive.infra to 2012.27610 [minskim 2012-10-08]
 	Updated comms/asterisk18 to 1.8.17.0 [jnemeth 2012-10-08]
 	Updated comms/asterisk10 to 10.9.0 [jnemeth 2012-10-09]
