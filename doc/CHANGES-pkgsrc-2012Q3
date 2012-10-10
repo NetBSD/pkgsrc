@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.10 2012/10/09 19:14:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.11 2012/10/10 13:48:57 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -28,3 +28,15 @@ Pullup ticket #3936 - requested by dholland
 devel/frama-c: build fix update
 Pullup ticket #3937 - requested by sbd
 net/libfetch: build fix
+Pullup ticket #3939 - requested by taca
+lang/ruby193-base: security patch
+Pullup ticket #3940 - requested by taca
+lang/ruby18-base: security patch
+Pullup ticket #3941 - requested by taca
+net/bind96: security update
+Pullup ticket #3942 - requested by taca
+net/bind97: security update
+Pullup ticket #3943 - requested by taca
+net/bind98: security update
+Pullup ticket #3944 - requested by taca
+net/bind99: security update
