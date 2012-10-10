@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3209 2012/10/10 03:08:29 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3210 2012/10/10 05:42:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4983,3 +4983,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind97 to 9.7.7 [taca 2012-10-10]
 	Updated net/bind98 to 9.8.4 [taca 2012-10-10]
 	Updated net/bind99 to 9.9.2 [taca 2012-10-10]
+	Updated ham/fldigi to 3.21.56 [mef 2012-10-10]
