@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/06 23:09:30 tron Exp $
+$NetBSD: distinfo,v 1.2 2012/10/11 07:39:17 tron Exp $
 
-SHA1 (ffmpeg2theora-0.28.tar.bz2) = 431d29e511e109d1b3d774f12f8af975419b8050
-RMD160 (ffmpeg2theora-0.28.tar.bz2) = 4d21b10f745dcfb3a08c548ba248ea92681e5b63
-Size (ffmpeg2theora-0.28.tar.bz2) = 95404 bytes
+SHA1 (ffmpeg2theora-0.29.tar.bz2) = 7e78c5ddb8740b33a6ae4c9da76047bd8e662791
+RMD160 (ffmpeg2theora-0.29.tar.bz2) = 1dfb5bd0c404d2a23b5818a7aab82e6ebe802e72
+Size (ffmpeg2theora-0.29.tar.bz2) = 90143 bytes
