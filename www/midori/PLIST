@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2012/06/01 20:21:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/10/11 14:55:38 drochner Exp $
 bin/midori
+include/midori-0.4/extensions/delayed-load.h
 include/midori-0.4/extensions/external-download-manager.h
 include/midori-0.4/extensions/history-list.h
 lib/midori/libadblock.so
@@ -7,6 +8,7 @@ lib/midori/libaddons.so
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
 lib/midori/libcopy-tabs.so
+lib/midori/libdelayed-load.so
 lib/midori/libexternal-download-manager.so
 lib/midori/libfeed-panel.so
 lib/midori/libformhistory.so
@@ -32,22 +34,22 @@ share/examples/midori/extensions/adblock/config
 share/examples/midori/search
 share/icons/hicolor/16x16/apps/midori.png
 share/icons/hicolor/16x16/categories/extension.png
-share/icons/hicolor/16x16/status/news-feed.png
+share/icons/hicolor/16x16/status/internet-news-reader.png
 share/icons/hicolor/22x22/apps/midori.png
 share/icons/hicolor/22x22/categories/extension.png
-share/icons/hicolor/22x22/status/news-feed.png
+share/icons/hicolor/22x22/status/internet-news-reader.png
 share/icons/hicolor/24x24/apps/midori.png
 share/icons/hicolor/24x24/categories/extension.png
-share/icons/hicolor/24x24/status/news-feed.png
+share/icons/hicolor/24x24/status/internet-news-reader.png
 share/icons/hicolor/32x32/apps/midori.png
 share/icons/hicolor/32x32/categories/extension.png
-share/icons/hicolor/32x32/status/news-feed.png
+share/icons/hicolor/32x32/status/internet-news-reader.png
 share/icons/hicolor/48x48/apps/midori.png
 share/icons/hicolor/48x48/categories/extension.png
-share/icons/hicolor/48x48/status/news-feed.png
+share/icons/hicolor/48x48/status/internet-news-reader.png
 share/icons/hicolor/scalable/apps/midori.svg
 share/icons/hicolor/scalable/categories/extension.svg
-share/icons/hicolor/scalable/status/news-feed.svg
+share/icons/hicolor/scalable/status/internet-news-reader.svg
 share/locale/ar/LC_MESSAGES/midori.mo
 share/locale/ast/LC_MESSAGES/midori.mo
 share/locale/be/LC_MESSAGES/midori.mo
@@ -94,8 +96,11 @@ share/midori/res/autosuggestcontrol.css
 share/midori/res/autosuggestcontrol.js
 share/midori/res/close.png
 share/midori/res/error.html
+share/midori/res/gtk3.css
 share/midori/res/logo-shade.png
-share/midori/res/speeddial-head-0.4.6.html
+share/midori/res/speeddial-head.html
+share/vala/vapi/delayed-load.deps
+share/vala/vapi/delayed-load.vapi
 share/vala/vapi/external-download-manager.deps
 share/vala/vapi/external-download-manager.vapi
 share/vala/vapi/history-list.deps
