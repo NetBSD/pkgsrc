@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2012/08/07 06:51:58 sbd Exp $
+$NetBSD: patch-ac,v 1.5 2012/10/11 18:42:20 spz Exp $
+
+pkgsrcify
 
 --- client/Makefile.orig	2011-12-12 22:15:39.000000000 +0000
 +++ client/Makefile
