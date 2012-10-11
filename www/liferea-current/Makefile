@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2012/10/08 23:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/11 15:35:28 drochner Exp $
 
-DISTNAME=		liferea-1.6.8
-PKGREVISION=		7
+DISTNAME=		liferea-1.8.9
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -26,9 +25,7 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -36,4 +33,6 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
