@@ -347,6 +347,67 @@ fetch__http_cleanup() {
 }
 
 
+atf_test_case fetch__ssh__one_set
+fetch__ssh__one_set_body() {
+    create_mock_binary scp
+    PATH="$(pwd):${PATH}"
+
+    SYSUPGRADE_CACHEDIR="$(pwd)/a/b/c"; export SYSUPGRADE_CACHEDIR
+    mkdir -p a/b/c
+    atf_check -o ignore -e ignore sysupgrade -c /dev/null \
+        -o RELEASEDIR="ssh://example.net/home/sysbuild/release/machine" \
+        -o KERNEL="" -o SETS="one" fetch
+
+    cat >expout <<EOF
+Command: scp
+Directory: $(pwd)
+Arg: example.net:/home/sysbuild/release/machine/{binary/sets/one.tgz}
+Arg: $(pwd)/a/b/c/
+
+EOF
+    atf_check -o file:expout cat commands.log
+}
+
+
+atf_test_case fetch__ssh__many_sets
+fetch__ssh__many_sets_body() {
+    create_mock_binary scp
+    PATH="$(pwd):${PATH}"
+
+    SYSUPGRADE_CACHEDIR="$(pwd)/a/b/c"; export SYSUPGRADE_CACHEDIR
+    mkdir -p a/b/c
+    atf_check -o ignore -e ignore sysupgrade -c /dev/null \
+        -o RELEASEDIR="ssh://example.net/home/sysbuild/release/machine" \
+        -o KERNEL=GENERIC -o SETS="one two" fetch
+
+    cat >expout <<EOF
+Command: scp
+Directory: $(pwd)
+Arg: example.net:/home/sysbuild/release/machine/{binary/sets/one.tgz,binary/sets/two.tgz,binary/kernel/netbsd-GENERIC.gz}
+Arg: $(pwd)/a/b/c/
+
+EOF
+    atf_check -o file:expout cat commands.log
+}
+
+
+atf_test_case fetch__ssh__already_exist
+fetch__ssh__already_exist_body() {
+    create_mock_binary scp
+    PATH="$(pwd):${PATH}"
+
+    SYSUPGRADE_CACHEDIR="$(pwd)/a/b/c"; export SYSUPGRADE_CACHEDIR
+    mkdir -p a/b/c
+    touch a/b/c/netbsd-GENERIC.gz
+    touch a/b/c/one.tgz
+    atf_check -o ignore -e ignore sysupgrade -c /dev/null \
+        -o RELEASEDIR="ssh://example.net/home/sysbuild/release/machine" \
+        -o KERNEL=GENERIC -o SETS="one" fetch
+
+    [ ! -f commands.log ] || atf_fail "scp was invoked"
+}
+
+
 atf_test_case fetch__local
 fetch__local_body() {
     create_mock_release release base comp etc netbsd-GENERIC tests text
@@ -1076,6 +1137,9 @@ atf_init_test_cases() {
 
     atf_add_test_case fetch__ftp
     atf_add_test_case fetch__http
+    atf_add_test_case fetch__ssh__one_set
+    atf_add_test_case fetch__ssh__many_sets
+    atf_add_test_case fetch__ssh__already_exist
     atf_add_test_case fetch__local
     atf_add_test_case fetch__no_kernel
     atf_add_test_case fetch__unknown
