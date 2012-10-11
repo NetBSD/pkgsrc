@@ -1,0 +1,25 @@
+$NetBSD: patch-ba,v 1.1 2012/10/11 15:29:39 drochner Exp $
+
+partly fixed by upstream commit 59997ad65b64e43f418464c37373b9b57cf1f5f9
+(it is really a bug, not just killing a warning)
+
+--- modules/demux/mp4/libmp4.c.orig	2012-04-27 17:14:57.000000000 +0000
++++ modules/demux/mp4/libmp4.c
+@@ -1267,7 +1267,7 @@ static int MP4_ReadBox_dvc1( stream_t *p
+     p_dvc1 = p_box->data.p_dvc1;
+ 
+     MP4_GET1BYTE( p_dvc1->i_profile_level ); /* profile is on 4bits, level 3bits */
+-    if( p_dvc1->i_profile_level & 0xf0 >> 4 != 0x06 )
++    if( (p_dvc1->i_profile_level & 0xf0) >> 4 != 0x06 )
+     {
+         msg_Warn( p_stream, "unsupported VC-1 profile, please report" );
+         MP4_READBOX_EXIT( 0 );
+@@ -1286,7 +1286,7 @@ static int MP4_ReadBox_dvc1( stream_t *p
+ #ifdef MP4_VERBOSE
+     msg_Dbg( p_stream,
+              "read box: \"dvc1\" profile=0x%x level=0x%x",
+-             p_dvc1->i_profile_level & 0xf0 >> 4, p_dvc1->i_profile_level & 0xe > 1 );
++             (p_dvc1->i_profile_level & 0xf0) >> 4, (p_dvc1->i_profile_level & 0xe) >> 1 );
+ #endif
+ 
+     MP4_READBOX_EXIT( 1 );
