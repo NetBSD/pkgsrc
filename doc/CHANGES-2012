@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3225 2012/10/11 12:24:25 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3226 2012/10/11 15:37:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/sysupgrade to 1.4 [jmmv 2012-10-10]
 	Updated multimedia/ffmpeg2theora to 0.29 [tron 2012-10-11]
 	Updated textproc/py-docutils to 0.9.1 [wen 2012-10-11]
+	Updated textproc/py-creole to 1.0.5 [wen 2012-10-11]
