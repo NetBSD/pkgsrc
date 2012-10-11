@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 23:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/11 13:17:09 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 DISTNAME=	pykde4-${_KDE_VERSION}
@@ -25,10 +25,14 @@ REPLACE_PYTHON+= \
 SUBST_CLASSES+=	pykdeuic4
 SUBST_STAGE.pykdeuic4=	post-build
 SUBST_FILES.pykdeuic4=	tools/pykdeuic4/pykdeuic4.py
-SUBST_SED.pykdeuic4=	's:/usr/bin/env python$$:${PYTHONBIN}:'
+SUBST_SED.pykdeuic4=	-e 's:/usr/bin/env python$$:${PYTHONBIN}:'
 
 #post-extract:
 #	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
+
+# remove when file not patched any longer
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/sip2.7/PyKDE4/kdecore/typedefs.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
