@@ -219,6 +219,29 @@ sysupgrade_fetch() {
             done
             ;;
 
+        ssh://*)
+            mkdir -p "${cachedir}"
+
+            local relative_srcs=""
+            for relative_file in ${fetch_files}; do
+                local local_file="${cachedir}/${relative_file##*/}"
+                if [ -f "${local_file}" ]; then
+                    shtk_cli_warning "Reusing existing ${local_file}"
+                else
+                    if [ -z "${relative_srcs}" ]; then
+                        relative_srcs="${relative_file}"
+                    else
+                        relative_srcs="${relative_srcs},${relative_file}"
+                    fi
+                fi
+            done
+            if [ -n "${relative_srcs}" ]; then
+                local host="$(echo ${releasedir} | cut -d / -f 3)"
+                local dir="$(echo ${releasedir} | cut -d / -f 4-)"
+                scp "${host}:/${dir}/{${relative_srcs}}" "${cachedir}/"
+            fi
+            ;;
+
         /*)
             mkdir -p "${cachedir}"
 
