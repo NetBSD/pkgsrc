@@ -1,0 +1,14 @@
+$NetBSD: patch-build_Makefile.FreeBSD,v 1.1 2012/10/11 18:42:20 spz Exp $
+
+FreeBSD has stdint.h
+
+--- build/Makefile.FreeBSD.orig	2011-03-08 17:20:28.000000000 +0000
++++ build/Makefile.FreeBSD
+@@ -1,6 +1,6 @@
+ # Xymon compile-time settings for FreeBSD systems
+ 
+-OSDEF = -DBSD
++OSDEF = -DBSD -DHAVE_STDINT_H
+ 
+ # NETLIBS: None needed
+ NETLIBS =

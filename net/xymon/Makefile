@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 23:02:19 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/11 18:42:19 spz Exp $
 #
 
-DISTNAME=		xymon-4.3.7
-PKGREVISION=		5
+DISTNAME=		xymon-4.3.10
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
@@ -17,7 +16,7 @@ MAKE_JOBS_SAFE=		NO
 CONFLICTS+=		hobbitmon-[0-9]*
 CONFLICTS+=		hobbitclient-[0-9]*
 
-DEPENDS+=		fping>2:../../net/fping
+DEPENDS+=		fping>=2:../../net/fping
 	# xymonclient ought to be the same version as the server, modulo nbN
 DEPENDS+=		xymonclient>=4.3.0b2:../../net/xymonclient
 
