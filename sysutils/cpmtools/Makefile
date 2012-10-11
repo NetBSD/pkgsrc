@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 18:43:52 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/11 18:46:10 shattered Exp $
 #
 
-DISTNAME=		cpmtools-2.5
+DISTNAME=		cpmtools-2.13
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.moria.de/~michael/cpmtools/
 
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/cpmtools
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/cpmtools
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS+=	bin share/cpmtools ${PKGMANDIR}/man1 ${PKGMANDIR}/man5

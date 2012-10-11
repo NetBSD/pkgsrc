@@ -1,12 +1,14 @@
-$NetBSD: patch-ac,v 1.1 2006/12/06 14:58:01 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2012/10/11 18:46:11 shattered Exp $
 
---- cpmcp.c.orig	2006-12-06 14:53:28.000000000 +0000
+--- cpmcp.c.orig	2012-10-07 10:46:25.000000000 +0000
 +++ cpmcp.c
-@@ -8,6 +8,7 @@
- #include "dmalloc.h"
- #endif
+@@ -1,8 +1,8 @@
+ /* #includes */ /*{{{C}}}*//*{{{*/
+ #include "config.h"
  
-+#include <sys/types.h>
- #include <sys/stat.h>
+-#include <sys/stat.h>
+ #include <sys/types.h>
++#include <sys/stat.h>
  #include <ctype.h>
  #include <errno.h>
+ #include <stdio.h>
