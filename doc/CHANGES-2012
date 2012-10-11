@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3228 2012/10/11 15:57:21 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3229 2012/10/11 18:46:31 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5013,3 +5013,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/liferea-current to 1.8.9 [drochner 2012-10-11]
 	Updated textproc/py-creole to 1.0.5 [wen 2012-10-11]
 	Added textproc/json-c version 0.10 [ryoon 2012-10-11]
+	Updated sysutils/cpmtools to 2.13 [shattered 2012-10-11]
