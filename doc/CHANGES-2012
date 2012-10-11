@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3226 2012/10/11 15:37:25 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3227 2012/10/11 15:42:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5009,3 +5009,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/ffmpeg2theora to 0.29 [tron 2012-10-11]
 	Updated textproc/py-docutils to 0.9.1 [wen 2012-10-11]
 	Updated textproc/py-creole to 1.0.5 [wen 2012-10-11]
+	Added textproc/json-c version 0.10 [ryoon 2012-10-11]
