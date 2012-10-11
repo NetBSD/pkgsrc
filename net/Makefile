@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.935 2012/10/07 16:34:40 bad Exp $
+# $NetBSD: Makefile,v 1.936 2012/10/11 05:41:51 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -174,6 +174,7 @@ SUBDIR+=	gtk-vnc
 SUBDIR+=	gtk_wicontrol
 SUBDIR+=	gupnp
 SUBDIR+=	gupnp-av
+SUBDIR+=	gupnp-dlna
 SUBDIR+=	gupnp-igd
 SUBDIR+=	gupnp-tools
 SUBDIR+=	haproxy
