@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 23:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/11 11:01:04 drochner Exp $
 #
 
 DISTNAME=	gupnp-tools-0.8.4
@@ -23,4 +23,5 @@ PKG_DESTDIR_SUPPORT= user-destdir
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
