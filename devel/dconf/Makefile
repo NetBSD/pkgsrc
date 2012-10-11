@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/15 10:04:07 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/11 14:49:00 drochner Exp $
 #
 # Attention: Update this only together with devel/dconf-editor
 #
@@ -24,7 +24,7 @@ USE_TOOLS+=	pkg-config gmake
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala016/buildlink3.mk"
+.include "../../lang/vala018/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
