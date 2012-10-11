@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2010/01/27 18:43:52 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2012/10/11 18:46:11 shattered Exp $
 
---- Makefile.in.orig	2010-01-27 18:41:45.000000000 +0000
+--- Makefile.in.orig	2010-03-30 17:53:11.000000000 +0000
 +++ Makefile.in
-@@ -85,7 +85,7 @@ install:	all
+@@ -88,7 +88,7 @@ install:	all
  		$(INSTALL) -s -m 755 mkfs.cpm $(BINDIR)/mkfs.cpm
  		$(INSTALL) -s -m 755 fsck.cpm $(BINDIR)/fsck.cpm
- 		$(INSTALL) -s -m 755 fsed.cpm $(BINDIR)/fsed.cpm
--		$(INSTALL_DATA) diskdefs @datadir@/diskdefs
-+		$(INSTALL_DATA) diskdefs ${DESTDIR}@datadir@/diskdefs
+ 		[ $(FSED_CPM) != '' ] && $(INSTALL) -s -m 755 fsed.cpm $(BINDIR)/fsed.cpm
+-		$(INSTALL_DATA) diskdefs @datarootdir@/diskdefs
++		$(INSTALL_DATA) diskdefs ${DESTDIR}@datarootdir@/diskdefs
  		$(INSTALL_DATA) cpmls.1 $(MANDIR)/man1/cpmls.1
  		$(INSTALL_DATA) cpmcp.1 $(MANDIR)/man1/cpmcp.1
  		$(INSTALL_DATA) cpmrm.1 $(MANDIR)/man1/cpmrm.1
