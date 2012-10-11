@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3222 2012/10/10 19:35:50 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3223 2012/10/11 00:17:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5005,3 +5005,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/tcsh to 6.18.01nb4 [dholland 2012-10-10]
 	Updated fonts/tex-cm to 2012 [minskim 2012-10-10]
 	Updated fonts/tex-cm-doc to 2012 [minskim 2012-10-10]
+	Updated sysutils/sysupgrade to 1.4 [jmmv 2012-10-10]
