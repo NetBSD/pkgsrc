@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2012/10/08 23:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/11 14:55:38 drochner Exp $
 
-DISTNAME=	midori-0.4.6
-PKGREVISION=	5
+DISTNAME=	midori-0.4.7
 CATEGORIES=	www
 MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
 
@@ -68,6 +67,7 @@ pre-configure:
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../net/libsoup24/buildlink3.mk"
+#.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
@@ -75,5 +75,5 @@ BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala016/buildlink3.mk"
+.include "../../lang/vala018/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
