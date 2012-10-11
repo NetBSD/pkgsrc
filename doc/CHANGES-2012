@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3227 2012/10/11 15:42:42 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3228 2012/10/11 15:57:21 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5008,5 +5008,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/sysupgrade to 1.4 [jmmv 2012-10-10]
 	Updated multimedia/ffmpeg2theora to 0.29 [tron 2012-10-11]
 	Updated textproc/py-docutils to 0.9.1 [wen 2012-10-11]
+	Updated www/midori to 0.4.7 [drochner 2012-10-11]
+	Updated print/poppler to 0.20.5 [drochner 2012-10-11]
+	Updated www/liferea-current to 1.8.9 [drochner 2012-10-11]
 	Updated textproc/py-creole to 1.0.5 [wen 2012-10-11]
 	Added textproc/json-c version 0.10 [ryoon 2012-10-11]
