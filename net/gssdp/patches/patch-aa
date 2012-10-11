@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2012/10/10 15:23:39 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2012/10/11 10:56:48 drochner Exp $
+
+https://bugzilla.gnome.org/show_bug.cgi?id=685949
 
 --- libgssdp/gssdp-socket-functions.c.orig	2011-11-29 12:07:01.000000000 +0000
 +++ libgssdp/gssdp-socket-functions.c
