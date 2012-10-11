@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 15:18:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/11 18:23:12 dholland Exp $
 #
 
 DISTNAME=	ocamlduce-3.12.1.0
@@ -15,6 +15,8 @@ SITES.ocaml-3.12.1.tar.bz2= http://caml.inria.fr/pub/distrib/ocaml-3.12/
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://ocamlduce.forge.ocamlcore.org/
 COMMENT=	Library to integrate XML features into OCaml
+
+BROKEN=		Hangs the bulk build; needs update for ocaml 4.
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
