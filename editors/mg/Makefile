@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/11 13:03:38 marino Exp $
 #
 
 DISTNAME=	mg-20090107
@@ -16,6 +16,8 @@ MAKE_ENV+=	prefix=${PREFIX}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFLICTS+=	mg2a-[0-9]*
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
