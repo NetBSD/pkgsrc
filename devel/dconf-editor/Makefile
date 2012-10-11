@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 23:01:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/11 14:49:00 drochner Exp $
 #
 
 DISTNAME=	dconf-0.12.1
@@ -37,7 +37,7 @@ pre-build:
 
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala016/buildlink3.mk"
+.include "../../lang/vala018/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
