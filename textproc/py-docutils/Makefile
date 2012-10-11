@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2012/09/21 12:39:41 obache Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/11 12:22:26 wen Exp $
 
-DISTNAME=	docutils-0.9
+DISTNAME=	docutils-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
@@ -26,7 +26,13 @@ SUBST_FILES.env+=	docutils/error_reporting.py
 SUBST_FILES.env+=	docutils/math/latex2mathml.py
 SUBST_FILES.env+=	docutils/math/math2html.py
 SUBST_FILES.env+=	docutils/writers/xetex/__init__.py
-SUBST_FILES.env+=	utils/punctuation_chars.py
+SUBST_FILES.env+=	docutils/utils/punctuation_chars.py
+
+SUBST_CLASSES+=		python
+SUBST_SED.python=	-e "s,\#!/usr/bin/python,\#!${PYTHONBIN},"
+SUBST_MESSAGE.python=	Fixing path to python.
+SUBST_STAGE.python=	post-patch
+SUBST_FILES.python=	docutils/utils/code_analyzer.py
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
