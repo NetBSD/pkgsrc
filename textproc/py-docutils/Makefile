@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/11 12:22:26 wen Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/11 14:46:24 drochner Exp $
 
 DISTNAME=	docutils-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	public-domain AND 2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PYTHON_VERSIONS_INCLUDE_3X= yes
 DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
