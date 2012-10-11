@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3223 2012/10/11 00:17:24 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.3224 2012/10/11 07:40:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5006,3 +5006,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/tex-cm to 2012 [minskim 2012-10-10]
 	Updated fonts/tex-cm-doc to 2012 [minskim 2012-10-10]
 	Updated sysutils/sysupgrade to 1.4 [jmmv 2012-10-10]
+	Updated multimedia/ffmpeg2theora to 0.29 [tron 2012-10-11]
