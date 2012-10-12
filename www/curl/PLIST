@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2012/05/29 14:58:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2012/10/12 07:36:11 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -52,6 +52,7 @@ man/man3/curl_multi_socket.3
 man/man3/curl_multi_socket_action.3
 man/man3/curl_multi_strerror.3
 man/man3/curl_multi_timeout.3
+man/man3/curl_multi_wait.3
 man/man3/curl_share_cleanup.3
 man/man3/curl_share_init.3
 man/man3/curl_share_setopt.3
@@ -91,6 +92,7 @@ share/examples/curl/ftp-wildcard.c
 share/examples/curl/ftpget.c
 share/examples/curl/ftpgetinfo.c
 share/examples/curl/ftpgetresp.c
+share/examples/curl/ftpsget.c
 share/examples/curl/ftpupload.c
 share/examples/curl/ftpuploadresume.c
 share/examples/curl/getinfo.c
@@ -121,6 +123,7 @@ share/examples/curl/rtsp.c
 share/examples/curl/sampleconv.c
 share/examples/curl/sendrecv.c
 share/examples/curl/sepheaders.c
+share/examples/curl/sftpget.c
 share/examples/curl/simple.c
 share/examples/curl/simplepost.c
 share/examples/curl/simplesmtp.c
