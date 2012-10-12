@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.12 2012/09/02 06:43:39 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.13 2012/10/12 18:28:58 ryoon Exp $
 include/thunderbird/calBaseCID.h
 include/thunderbird/calIAlarm.h
 include/thunderbird/calIAlarmService.h
@@ -267,6 +267,7 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calenda
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-views.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/dialogs/calendar-alarm-dialog.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/dialogs/calendar-event-dialog.css
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/classification.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/today-pane.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/widgets/calendar-widgets.css
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/datetimepickers/datetimepickers.css
