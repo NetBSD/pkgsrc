@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3232 2012/10/12 14:55:44 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3233 2012/10/12 15:29:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5024,3 +5024,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ruby-tk to 1.9.3p286nb1 [taca 2012-10-12]
 	Updated lang/ruby193 to 1.9.3p286 [taca 2012-10-12]
 	Updated devel/ruby-mode to 1.9.3p286 [taca 2012-10-12]
+	Updated lang/ruby18-base to 1.8.7.371 [taca 2012-10-12]
+	Updated lang/ruby18 to 1.8.7.371 [taca 2012-10-12]
