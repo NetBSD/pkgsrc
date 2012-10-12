@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3231 2012/10/12 13:32:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3232 2012/10/12 14:55:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5016,3 +5016,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/cpmtools to 2.13 [shattered 2012-10-11]
 	Updated www/curl to 7.28.0 [adam 2012-10-12]
 	Updated devel/global to 6.2.4 [wiz 2012-10-12]
+	Updated lang/ruby193-base to 1.9.3p286 [taca 2012-10-12]
+	Updated databases/ruby-gdbm to 1.9.3p286nb2 [taca 2012-10-12]
+	Updated devel/ruby-curses to 1.9.3p286 [taca 2012-10-12]
+	Updated devel/ruby-fiddle to 1.9.3p286 [taca 2012-10-12]
+	Updated devel/ruby-readline to 1.9.3p286nb2 [taca 2012-10-12]
+	Updated x11/ruby-tk to 1.9.3p286nb1 [taca 2012-10-12]
+	Updated lang/ruby193 to 1.9.3p286 [taca 2012-10-12]
+	Updated devel/ruby-mode to 1.9.3p286 [taca 2012-10-12]
