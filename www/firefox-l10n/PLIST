@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/09/02 07:15:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/10/12 18:42:16 ryoon Exp $
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/alerts/notificationNames.properties
@@ -88,6 +88,7 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/globa
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/resetProfile.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/search/search.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/security/caps.properties
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/security/csp.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/svg/svg.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/textcontext.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/tree.dtd
@@ -337,6 +338,7 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/globa
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/search/search.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/security/caps.properties
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/security/csp.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/svg/svg.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/textcontext.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/tree.dtd
@@ -586,6 +588,7 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/globa
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/search/search.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/security/caps.properties
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/security/csp.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/svg/svg.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/textcontext.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/tree.dtd
@@ -835,6 +838,7 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/globa
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/resetProfile.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/search/search.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/security/caps.properties
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/security/csp.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/svg/svg.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/textcontext.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/tree.dtd
@@ -1084,6 +1088,7 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/gl
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/search/search.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/security/caps.properties
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/security/csp.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/svg/svg.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/textcontext.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/tree.dtd
@@ -1333,6 +1338,7 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/globa
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/resetProfile.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/search/search.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/security/caps.properties
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/security/csp.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/svg/svg.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/textcontext.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/tree.dtd
@@ -1582,6 +1588,7 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/globa
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/resetProfile.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/search/search.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/security/caps.properties
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/security/csp.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/svg/svg.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/textcontext.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/tree.dtd
@@ -1831,6 +1838,7 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/resetProfile.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/search/search.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/security/caps.properties
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/security/csp.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/svg/svg.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/textcontext.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/tree.dtd
@@ -2080,6 +2088,7 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/resetProfile.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/search/search.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/security/caps.properties
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/security/csp.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/svg/svg.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/textcontext.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/tree.dtd
@@ -2329,6 +2338,7 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/globa
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/resetProfile.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/search/search.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/security/caps.properties
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/security/csp.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/svg/svg.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/textcontext.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/tree.dtd
@@ -2675,6 +2685,7 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/globa
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/resetProfile.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/search/search.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/security/caps.properties
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/security/csp.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/svg/svg.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/textcontext.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/tree.dtd
@@ -2924,6 +2935,7 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/globa
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/search/search.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/security/caps.properties
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/security/csp.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/svg/svg.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/textcontext.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/tree.dtd
@@ -3173,6 +3185,7 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/globa
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/resetProfile.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/search/search.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/security/caps.properties
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/security/csp.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/svg/svg.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/textcontext.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/tree.dtd
@@ -3422,6 +3435,7 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/gl
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/resetProfile.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/search/search.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/security/caps.properties
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/security/csp.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/svg/svg.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/textcontext.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/tree.dtd
@@ -3671,6 +3685,7 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/globa
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/resetProfile.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/search/search.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/security/caps.properties
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/security/csp.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/svg/svg.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/textcontext.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/tree.dtd
@@ -3920,6 +3935,7 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/globa
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/resetProfile.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/search/search.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/security/caps.properties
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/security/csp.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/svg/svg.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/textcontext.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/tree.dtd
@@ -4169,6 +4185,7 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/globa
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/resetProfile.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/search/search.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/security/caps.properties
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/security/csp.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/svg/svg.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/textcontext.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/tree.dtd
@@ -4418,6 +4435,7 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/globa
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/resetProfile.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/search/search.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/security/caps.properties
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/security/csp.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/svg/svg.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/textcontext.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/tree.dtd
@@ -4667,6 +4685,7 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/resetProfile.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/search/search.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/security/caps.properties
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/security/csp.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/svg/svg.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/textcontext.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/tree.dtd
@@ -4916,6 +4935,7 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/resetProfile.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/search/search.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/security/caps.properties
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/security/csp.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/svg/svg.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/textcontext.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/tree.dtd
@@ -5165,6 +5185,7 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/resetProfile.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/search/search.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/security/caps.properties
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/security/csp.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/svg/svg.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/textcontext.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/tree.dtd
@@ -5414,6 +5435,7 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/globa
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/resetProfile.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/search/search.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/security/caps.properties
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/security/csp.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/svg/svg.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/textcontext.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/tree.dtd
@@ -5663,6 +5685,7 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/resetProfile.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/search/search.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/security/caps.properties
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/security/csp.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/svg/svg.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/textcontext.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/tree.dtd
@@ -5912,6 +5935,7 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/resetProfile.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/search/search.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/security/caps.properties
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/security/csp.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/svg/svg.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/textcontext.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/tree.dtd
@@ -6161,6 +6185,7 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/resetProfile.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/search/search.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/security/caps.properties
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/security/csp.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/svg/svg.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/textcontext.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/tree.dtd
@@ -6410,6 +6435,7 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/resetProfile.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/search/search.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/security/caps.properties
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/security/csp.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/svg/svg.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/textcontext.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/tree.dtd
@@ -6659,6 +6685,7 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/globa
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/resetProfile.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/search/search.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/security/caps.properties
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/security/csp.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/svg/svg.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/textcontext.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/tree.dtd
@@ -6908,6 +6935,7 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/globa
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/resetProfile.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/search/search.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/security/caps.properties
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/security/csp.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/svg/svg.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/textcontext.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/tree.dtd
@@ -7157,6 +7185,7 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/globa
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/resetProfile.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/search/search.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/security/caps.properties
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/security/csp.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/svg/svg.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/textcontext.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/tree.dtd
@@ -7408,6 +7437,7 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/globa
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/resetProfile.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/search/search.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/security/caps.properties
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/security/csp.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/svg/svg.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/textcontext.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/tree.dtd
@@ -7657,6 +7687,7 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/globa
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/resetProfile.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/search/search.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/security/caps.properties
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/security/csp.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/svg/svg.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/textcontext.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/tree.dtd
@@ -7906,6 +7937,7 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/resetProfile.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/search/search.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/security/caps.properties
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/security/csp.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/svg/svg.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/textcontext.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/tree.dtd
@@ -8155,6 +8187,7 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/search/search.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/security/caps.properties
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/security/csp.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/svg/svg.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/textcontext.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/tree.dtd
@@ -8404,6 +8437,7 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/globa
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/resetProfile.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/search/search.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/security/caps.properties
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/security/csp.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/svg/svg.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/textcontext.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/tree.dtd
@@ -8653,6 +8687,7 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/globa
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/resetProfile.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/search/search.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/security/caps.properties
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/security/csp.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/svg/svg.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/textcontext.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/tree.dtd
@@ -8902,6 +8937,7 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/resetProfile.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/search/search.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/security/caps.properties
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/security/csp.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/svg/svg.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/textcontext.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/tree.dtd
@@ -9151,6 +9187,7 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/globa
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/resetProfile.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/search/search.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/security/caps.properties
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/security/csp.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/svg/svg.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/textcontext.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/tree.dtd
@@ -9400,6 +9437,7 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/resetProfile.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/search/search.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/security/caps.properties
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/security/csp.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/svg/svg.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/textcontext.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/tree.dtd
@@ -9649,6 +9687,7 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/globa
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/resetProfile.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/search/search.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/security/caps.properties
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/security/csp.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/svg/svg.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/textcontext.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/tree.dtd
@@ -9898,6 +9937,7 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/globa
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/resetProfile.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/search/search.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/security/caps.properties
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/security/csp.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/svg/svg.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/textcontext.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/tree.dtd
@@ -10147,6 +10187,7 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/resetProfile.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/search/search.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/security/caps.properties
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/security/csp.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/svg/svg.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/textcontext.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/tree.dtd
@@ -10396,6 +10437,7 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/globa
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/resetProfile.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/search/search.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/security/caps.properties
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/security/csp.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/svg/svg.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/textcontext.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/tree.dtd
@@ -10645,6 +10687,7 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/globa
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/resetProfile.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/search/search.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/security/caps.properties
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/security/csp.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/svg/svg.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/textcontext.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/tree.dtd
@@ -10894,6 +10937,7 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/globa
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/resetProfile.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/search/search.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/security/caps.properties
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/security/csp.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/svg/svg.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/textcontext.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/tree.dtd
@@ -11143,6 +11187,7 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/globa
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/search/search.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/security/caps.properties
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/security/csp.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/svg/svg.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/textcontext.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/tree.dtd
@@ -11392,6 +11437,7 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/globa
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/resetProfile.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/search/search.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/security/caps.properties
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/security/csp.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/svg/svg.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/textcontext.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/tree.dtd
@@ -11641,6 +11687,7 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/globa
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/resetProfile.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/search/search.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/security/caps.properties
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/security/csp.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/svg/svg.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/textcontext.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/tree.dtd
@@ -11890,6 +11937,7 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/globa
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/search/search.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/security/caps.properties
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/security/csp.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/svg/svg.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/textcontext.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/tree.dtd
@@ -12139,6 +12187,7 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/globa
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/search/search.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/security/caps.properties
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/security/csp.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/svg/svg.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/textcontext.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/tree.dtd
@@ -12388,6 +12437,7 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/globa
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/resetProfile.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/search/search.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/security/caps.properties
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/security/csp.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/svg/svg.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/textcontext.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/tree.dtd
@@ -12637,6 +12687,7 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/globa
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/resetProfile.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/search/search.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/security/caps.properties
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/security/csp.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/svg/svg.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/textcontext.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/tree.dtd
@@ -12886,6 +12937,7 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/globa
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/resetProfile.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/search/search.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/security/caps.properties
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/security/csp.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/svg/svg.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/textcontext.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/tree.dtd
@@ -13135,6 +13187,7 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/gl
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/resetProfile.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/search/search.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/security/caps.properties
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/security/csp.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/svg/svg.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/textcontext.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/tree.dtd
@@ -13384,6 +13437,7 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/globa
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/resetProfile.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/search/search.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/security/caps.properties
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/security/csp.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/svg/svg.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/textcontext.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/tree.dtd
@@ -13633,6 +13687,7 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/globa
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/search/search.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/security/caps.properties
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/security/csp.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/svg/svg.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/textcontext.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/tree.dtd
@@ -13882,6 +13937,7 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/globa
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/resetProfile.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/search/search.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/security/caps.properties
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/security/csp.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/svg/svg.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/textcontext.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/tree.dtd
@@ -14131,6 +14187,7 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/resetProfile.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/search/search.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/security/caps.properties
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/security/csp.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/svg/svg.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/textcontext.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/tree.dtd
@@ -14380,6 +14437,7 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/globa
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/resetProfile.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/search/search.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/security/caps.properties
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/security/csp.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/svg/svg.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/textcontext.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/tree.dtd
@@ -14629,6 +14687,7 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/resetProfile.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/search/search.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/security/caps.properties
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/security/csp.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/svg/svg.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/textcontext.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/tree.dtd
@@ -14878,6 +14937,7 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/gl
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/resetProfile.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/search/search.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/security/caps.properties
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/security/csp.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/svg/svg.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/textcontext.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/tree.dtd
@@ -15127,6 +15187,7 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/globa
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/resetProfile.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/search/search.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/security/caps.properties
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/security/csp.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/svg/svg.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/textcontext.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/tree.dtd
@@ -15376,6 +15437,7 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/resetProfile.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/search/search.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/security/caps.properties
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/security/csp.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/svg/svg.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/textcontext.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/tree.dtd
@@ -15627,6 +15689,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/globa
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/resetProfile.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/search/search.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/security/caps.properties
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/security/csp.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/svg/svg.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/textcontext.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/tree.dtd
@@ -15876,6 +15939,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/resetProfile.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/search/search.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/security/caps.properties
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/security/csp.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/svg/svg.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/textcontext.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/tree.dtd
@@ -16125,6 +16189,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/resetProfile.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/search/search.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/security/caps.properties
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/security/csp.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/svg/svg.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/textcontext.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/tree.dtd
@@ -16374,6 +16439,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/globa
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/resetProfile.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/search/search.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/security/caps.properties
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/security/csp.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/svg/svg.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/textcontext.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/tree.dtd
@@ -16623,6 +16689,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/globa
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/search/search.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/security/caps.properties
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/security/csp.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/svg/svg.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/textcontext.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/tree.dtd
@@ -16872,6 +16939,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/globa
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/search/search.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/security/caps.properties
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/security/csp.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/svg/svg.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/textcontext.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/tree.dtd
@@ -17121,6 +17189,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/globa
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/resetProfile.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/search/search.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/security/caps.properties
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/security/csp.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/svg/svg.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/textcontext.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/tree.dtd
@@ -17370,6 +17439,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/globa
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/resetProfile.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/search/search.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/security/caps.properties
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/security/csp.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/svg/svg.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/textcontext.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/tree.dtd
@@ -17619,6 +17689,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/globa
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/resetProfile.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/search/search.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/security/caps.properties
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/security/csp.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/svg/svg.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/textcontext.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/tree.dtd
@@ -17868,6 +17939,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/gl
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/resetProfile.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/search/search.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/security/caps.properties
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/security/csp.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/svg/svg.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/textcontext.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/tree.dtd
@@ -18117,6 +18189,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/globa
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/resetProfile.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/search/search.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/security/caps.properties
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/security/csp.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/svg/svg.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/textcontext.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/tree.dtd
@@ -18366,6 +18439,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/globa
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/resetProfile.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/search/search.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/security/caps.properties
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/security/csp.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/svg/svg.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/textcontext.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/tree.dtd
@@ -18615,6 +18689,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/resetProfile.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/search/search.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/security/caps.properties
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/security/csp.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/svg/svg.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/textcontext.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/tree.dtd
@@ -18864,6 +18939,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/search/search.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/security/caps.properties
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/security/csp.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/svg/svg.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/textcontext.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/tree.dtd
@@ -19113,6 +19189,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/globa
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/resetProfile.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/search/search.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/security/caps.properties
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/security/csp.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/svg/svg.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/textcontext.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/tree.dtd
@@ -19362,6 +19439,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/globa
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/resetProfile.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/search/search.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/security/caps.properties
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/security/csp.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/svg/svg.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/textcontext.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/tree.dtd
@@ -19611,6 +19689,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/globa
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/resetProfile.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/search/search.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/security/caps.properties
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/security/csp.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/svg/svg.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/textcontext.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/tree.dtd
@@ -19860,6 +19939,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/globa
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/resetProfile.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/search/search.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/security/caps.properties
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/security/csp.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/svg/svg.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/textcontext.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/tree.dtd
@@ -20109,6 +20189,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/globa
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/resetProfile.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/search/search.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/security/caps.properties
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/security/csp.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/svg/svg.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/textcontext.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/tree.dtd
@@ -20358,6 +20439,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/globa
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/resetProfile.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/search/search.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/security/caps.properties
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/security/csp.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/svg/svg.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/textcontext.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/tree.dtd
@@ -20607,6 +20689,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/resetProfile.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/search/search.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/security/caps.properties
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/security/csp.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/svg/svg.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/textcontext.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/tree.dtd
@@ -20856,6 +20939,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/resetProfile.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/search/search.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/security/caps.properties
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/security/csp.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/svg/svg.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/textcontext.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/tree.dtd
@@ -21105,6 +21189,7 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/globa
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/resetProfile.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/search/search.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/security/caps.properties
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/security/csp.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/svg/svg.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/textcontext.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/tree.dtd
