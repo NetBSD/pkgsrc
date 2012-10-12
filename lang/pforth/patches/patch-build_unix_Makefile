@@ -1,0 +1,15 @@
+$NetBSD: patch-build_unix_Makefile,v 1.1 2012/10/12 16:25:21 marino Exp $
+
+GCC 4.7.2 breaks on the unrecognized -c89 switch.  Use -std= instead.
+
+--- build/unix/Makefile.orig	2010-08-27 17:50:07.000000000 +0000
++++ build/unix/Makefile
+@@ -24,7 +24,7 @@ PFORTHAPP    = pforth_standalone
+ WIDTHOPT=
+ 
+ FULL_WARNINGS =  \
+-        -c89 \
++        -std=c89 \
+         -fsigned-char \
+         -fno-builtin \
+         -fno-unroll-loops \
