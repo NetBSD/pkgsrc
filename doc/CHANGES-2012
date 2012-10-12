@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3235 2012/10/12 18:28:37 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3236 2012/10/12 18:30:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5029,3 +5029,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkg_summary-utils to 0.58.5 [cheusov 2012-10-12]
 	Updated devel/xulrunner to 16.0.1 [ryoon 2012-10-12]
 	Updated www/firefox to 16.0.1 [ryoon 2012-10-12]
+	Updated mail/thunderbird to 16.0.1 [ryoon 2012-10-12]
