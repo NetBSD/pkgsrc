@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 23:01:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/12 11:06:59 marino Exp $
 #
 
 PKGNAME=	qoauth-1.0.1
