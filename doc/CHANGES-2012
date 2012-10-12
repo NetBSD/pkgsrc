@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3230 2012/10/12 07:37:41 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3231 2012/10/12 13:32:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5015,3 +5015,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/json-c version 0.10 [ryoon 2012-10-11]
 	Updated sysutils/cpmtools to 2.13 [shattered 2012-10-11]
 	Updated www/curl to 7.28.0 [adam 2012-10-12]
+	Updated devel/global to 6.2.4 [wiz 2012-10-12]
