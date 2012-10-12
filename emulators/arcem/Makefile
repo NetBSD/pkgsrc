@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 12:55:10 asau Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/12 08:00:03 marino Exp $
 #
 
 DISTNAME=	arcem-1.00-src
@@ -32,6 +32,8 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	SYSTEM=X
 
 INSTALLATION_DIRS+=	bin share/arcem
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/linux.rom \
