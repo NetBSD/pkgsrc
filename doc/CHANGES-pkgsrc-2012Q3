@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.11 2012/10/10 13:48:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.12 2012/10/12 08:44:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -40,3 +40,5 @@ Pullup ticket #3943 - requested by taca
 net/bind98: security update
 Pullup ticket #3944 - requested by taca
 net/bind99: security update
+Pullup ticket #3945 - requested by taca
+sysutils/libpciaccess: build fix
