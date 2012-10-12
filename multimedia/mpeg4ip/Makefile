@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 09:21:09 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/12 08:04:04 marino Exp $
 
 DISTNAME=		mpeg4ip-1.5.0.1
 PKGREVISION=		1
@@ -47,6 +47,8 @@ CFLAGS+=		-fno-strict-aliasing
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
