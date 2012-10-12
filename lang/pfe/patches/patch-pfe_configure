@@ -1,0 +1,16 @@
+$NetBSD: patch-pfe_configure,v 1.1 2012/10/12 15:29:35 marino Exp $
+
+Fix typo "-W," -> "-Wl,".  GCC 4.7.2 doesn't allow this to pass as older
+GCCs do.
+
+--- pfe/configure.orig	2009-10-17 17:50:54.000000000 +0000
++++ pfe/configure
+@@ -20482,7 +20482,7 @@ opt_level="$WITHVAL_OPT"
+ if test "$GCC" = "yes" ; then
+    OPTIM="-O$opt_level"
+    DEBUG=" -W -Wshadow"
+-   LDFLAGS="$LDFLAGS -W,--warn-common" # -Wl,-S
++   LDFLAGS="$LDFLAGS -Wl,--warn-common" # -Wl,-S
+    # GCC_WARN="$GCC_WARN -Wtraditional"
+    # GCC_WARN="$GCC_WARN -Wconversion"
+ elif test ".$am_cv_CC_dependencies_compiler_type" = ".aix" ; then
