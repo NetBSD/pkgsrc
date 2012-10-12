@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3234 2012/10/12 17:53:55 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.3235 2012/10/12 18:28:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5027,3 +5027,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby18-base to 1.8.7.371 [taca 2012-10-12]
 	Updated lang/ruby18 to 1.8.7.371 [taca 2012-10-12]
 	Updated pkgtools/pkg_summary-utils to 0.58.5 [cheusov 2012-10-12]
+	Updated devel/xulrunner to 16.0.1 [ryoon 2012-10-12]
+	Updated www/firefox to 16.0.1 [ryoon 2012-10-12]
