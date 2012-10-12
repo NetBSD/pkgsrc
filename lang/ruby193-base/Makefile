@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 16:20:35 taca Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/12 14:51:31 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_FULL}
-PKGREVISION=	3
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-DIST_SUBDIR=	ruby193-base-201202170
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
@@ -72,11 +70,12 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 .include "../../lang/ruby/rubyversion.mk"
 
 .if !empty(RUBY_SUFFIX)
-CONFIGURE_ARGS+=	--program-suffix=${RUBY_SUFFIX}
-CONFIGURE_ARGS+=	--with-soname=${RUBY_NAME}
-CONFIGURE_ARGS+=	--with-sitedir=${PREFIX}/${RUBY_SITELIB_BASE}
-CONFIGURE_ARGS+=	--with-vendordir=${PREFIX}/${RUBY_VENDORLIB_BASE}
-CONFIGURE_ARGS+=	--with-ruby-version=${RUBY_VERSION}
+CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
+CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
+CONFIGURE_ARGS+= --with-sitedir=${PREFIX}/${RUBY_SITELIB_BASE}
+CONFIGURE_ARGS+= --with-vendordir=${PREFIX}/${RUBY_VENDORLIB_BASE}
+CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VERSION}
+CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
 .endif
 
 #
