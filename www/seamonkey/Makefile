@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.79 2012/10/08 23:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.80 2012/10/12 18:32:34 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.12
-PKGREVISION=	4
+SM_VER=		2.13
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
 DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2 \
-		lightning-1.7.source.tar.bz2
-SITES.lightning-1.7.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/1.7/source/}
-EXTRACT_DIR.lightning-1.7.source.tar.bz2=	${WRKSRC}/lightning
+		lightning-1.8.source.tar.bz2
+SITES.lightning-1.8.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/1.8/source/}
+EXTRACT_DIR.lightning-1.8.source.tar.bz2=	${WRKSRC}/lightning
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
@@ -42,8 +41,8 @@ BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 
 post-extract:
 	cd ${WRKSRC} && ${RM} -r calendar
-	${CP} -r ${EXTRACT_DIR.lightning-1.7.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
-	${RM} -r ${EXTRACT_DIR.lightning-1.7.source.tar.bz2}
+	${CP} -r ${EXTRACT_DIR.lightning-1.8.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
+	${RM} -r ${EXTRACT_DIR.lightning-1.8.source.tar.bz2}
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
