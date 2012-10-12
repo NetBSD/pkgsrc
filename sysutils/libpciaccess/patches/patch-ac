@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.12 2012/07/15 08:12:42 wiz Exp $
+$NetBSD: patch-ac,v 1.12.2.1 2012/10/12 08:43:45 tron Exp $
 
 Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
 Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
@@ -13,7 +13,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
   *
   * Permission to use, copy, modify, and distribute this software for any
   * purpose with or without fee is hereby granted, provided that the above
-@@ -20,8 +21,13 @@
+@@ -20,8 +21,22 @@
  #include <sys/mman.h>
  #include <sys/types.h>
  
@@ -22,12 +22,21 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
 +#ifdef HAVE_MTRR
  #include <machine/sysarch.h>
  #include <machine/mtrr.h>
++#ifdef _X86_SYSARCH_L
 +#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)(mr, num)
++#else
++#ifdef __i386__
++#define netbsd_set_mtrr(mr, num)	i386_set_mtrr((mr), (num))
++#endif
++#ifdef __amd64__
++#define netbsd_set_mtrr(mr, num)	x86_64_set_mtrr((mr), (num))
++#endif
++#endif
 +#endif
  
  #include <dev/pci/pciio.h>
  #include <dev/pci/pcireg.h>
-@@ -35,126 +41,152 @@
+@@ -35,126 +50,152 @@
  #include <unistd.h>
  
  
@@ -243,7 +252,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  
  	return pci_device_generic_unmap_range(dev, map);
  }
-@@ -163,25 +195,23 @@ static int
+@@ -163,25 +204,23 @@ static int
  pci_device_netbsd_read(struct pci_device *dev, void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_read)
  {
@@ -278,7 +287,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  
  		offset += toread;
  		data = (char *)data + toread;
-@@ -196,25 +226,23 @@ static int
+@@ -196,25 +235,23 @@ static int
  pci_device_netbsd_write(struct pci_device *dev, const void *data,
      pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_written)
  {
@@ -311,7 +320,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  		size -= 4;
  		*bytes_written += 4;
  	}
-@@ -222,10 +250,53 @@ pci_device_netbsd_write(struct pci_devic
+@@ -222,10 +259,53 @@ pci_device_netbsd_write(struct pci_devic
  	return 0;
  }
  
@@ -366,7 +375,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  	free(pci_sys);
  	pci_sys = NULL;
  }
-@@ -233,17 +304,34 @@ pci_system_netbsd_destroy(void)
+@@ -233,17 +313,34 @@ pci_system_netbsd_destroy(void)
  static int
  pci_device_netbsd_probe(struct pci_device *device)
  {
@@ -404,7 +413,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  	if (err)
  		return err;
  
-@@ -254,16 +342,16 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -254,16 +351,16 @@ pci_device_netbsd_probe(struct pci_devic
  	region = device->regions;
  	for (bar = PCI_MAPREG_START; bar < PCI_MAPREG_END;
  	     bar += sizeof(uint32_t), region++) {
@@ -425,7 +434,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  
  		if (PCI_MAPREG_TYPE(reg) == PCI_MAPREG_TYPE_IO) {
  			region->is_IO = 1;
-@@ -286,66 +374,189 @@ pci_device_netbsd_probe(struct pci_devic
+@@ -286,66 +383,189 @@ pci_device_netbsd_probe(struct pci_devic
  
  				bar += sizeof(uint32_t);
  
@@ -643,7 +652,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  				    &reg) != 0)
  					continue;
  				if (PCI_VENDOR(reg) == PCI_VENDOR_INVALID ||
-@@ -355,37 +566,43 @@ pci_system_netbsd_create(void)
+@@ -355,37 +575,43 @@ pci_system_netbsd_create(void)
  				ndevs++;
  			}
  		}
@@ -696,7 +705,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
  					continue;
  
  				device->base.device_class =
-@@ -393,8 +610,8 @@ pci_system_netbsd_create(void)
+@@ -393,8 +619,8 @@ pci_system_netbsd_create(void)
  				    PCI_SUBCLASS(reg) << 8;
  				device->base.revision = PCI_REVISION(reg);
  
