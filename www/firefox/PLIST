@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2012/08/28 16:39:19 abs Exp $
+@comment $NetBSD: PLIST,v 1.57 2012/10/12 18:27:21 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
@@ -300,6 +300,7 @@ lib/firefox/chrome/browser/skin/classic/browser/devtools/responsive-se-resizer.p
 lib/firefox/chrome/browser/skin/classic/browser/devtools/responsive-vertical-resizer.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/splitview.css
 lib/firefox/chrome/browser/skin/classic/browser/devtools/styleeditor.css
+lib/firefox/chrome/browser/skin/classic/browser/devtools/tools-icons-small.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/treepanel-button.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole.css
 lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole.png
@@ -357,6 +358,9 @@ lib/firefox/chrome/browser/skin/classic/browser/preferences/preferences.css
 lib/firefox/chrome/browser/skin/classic/browser/sanitizeDialog.css
 lib/firefox/chrome/browser/skin/classic/browser/searchbar.css
 lib/firefox/chrome/browser/skin/classic/browser/setDesktopBackground.css
+lib/firefox/chrome/browser/skin/classic/browser/share-button-active.png
+lib/firefox/chrome/browser/skin/classic/browser/share-button-shared.png
+lib/firefox/chrome/browser/skin/classic/browser/share-button.png
 lib/firefox/chrome/browser/skin/classic/browser/sync-128.png
 lib/firefox/chrome/browser/skin/classic/browser/sync-16-throbber.png
 lib/firefox/chrome/browser/skin/classic/browser/sync-16.png
@@ -523,7 +527,6 @@ lib/firefox/chrome/pdfjs/content/web/viewer.css
 lib/firefox/chrome/pdfjs/content/web/viewer.html
 lib/firefox/chrome/pdfjs/content/web/viewer.js
 lib/firefox/chrome/pdfjs/extension-files
-lib/firefox/chrome/pdfjs/install.rdf.in
 lib/firefox/components/Aitc.js
 lib/firefox/components/ChromeProfileMigrator.js
 lib/firefox/components/DownloadsStartup.js
@@ -554,6 +557,7 @@ lib/firefox/defaults/preferences/firefox-branding.js
 lib/firefox/defaults/preferences/firefox-l10n.js
 lib/firefox/defaults/preferences/firefox.js
 lib/firefox/defaults/preferences/services-aitc.js
+lib/firefox/defaults/preferences/services-notifications.js
 lib/firefox/defaults/preferences/services-sync.js
 lib/firefox/defaults/profile/bookmarks.html
 lib/firefox/defaults/profile/chrome/userChrome-example.css
@@ -575,8 +579,10 @@ lib/firefox/modules/NetworkPanel.jsm
 lib/firefox/modules/NetworkPrioritizer.jsm
 lib/firefox/modules/NewTabUtils.jsm
 lib/firefox/modules/PageThumbs.jsm
+lib/firefox/modules/PageThumbsWorker.js
 lib/firefox/modules/PlacesUIUtils.jsm
 lib/firefox/modules/PropertyPanel.jsm
+lib/firefox/modules/Social.jsm
 lib/firefox/modules/TelemetryTimestamps.jsm
 lib/firefox/modules/TreePanel.jsm
 lib/firefox/modules/WebConsoleUtils.jsm
@@ -589,7 +595,9 @@ lib/firefox/modules/devtools/CssRuleView.jsm
 lib/firefox/modules/devtools/DebuggerUI.jsm
 lib/firefox/modules/devtools/DeveloperToolbar.jsm
 lib/firefox/modules/devtools/GcliCommands.jsm
+lib/firefox/modules/devtools/GcliCookieCommands.jsm
 lib/firefox/modules/devtools/GcliTiltCommands.jsm
+lib/firefox/modules/devtools/Jsbeautify.jsm
 lib/firefox/modules/devtools/LayoutHelpers.jsm
 lib/firefox/modules/devtools/LayoutView.jsm
 lib/firefox/modules/devtools/Promise.jsm
@@ -627,11 +635,14 @@ lib/firefox/modules/services-common/log4moz.js
 lib/firefox/modules/services-common/observers.js
 lib/firefox/modules/services-common/preferences.js
 lib/firefox/modules/services-common/rest.js
+lib/firefox/modules/services-common/storageservice.js
 lib/firefox/modules/services-common/stringbundle.js
 lib/firefox/modules/services-common/tokenserverclient.js
 lib/firefox/modules/services-common/utils.js
 lib/firefox/modules/services-crypto/WeaveCrypto.js
 lib/firefox/modules/services-crypto/utils.js
+lib/firefox/modules/services-notifications/.mkdir.done
+lib/firefox/modules/services-notifications/service.js
 lib/firefox/modules/services-sync/addonsreconciler.js
 lib/firefox/modules/services-sync/constants.js
 lib/firefox/modules/services-sync/engines.js
@@ -676,5 +687,22 @@ lib/firefox/searchplugins/wikipedia.xml
 lib/firefox/searchplugins/yahoo.xml
 lib/firefox/update-settings.ini
 lib/firefox/updater.ini
+lib/firefox/webapprt-stub
+lib/firefox/webapprt/chrome.manifest
+lib/firefox/webapprt/chrome/en-US/locale/webapprt/webapp.dtd
+lib/firefox/webapprt/chrome/en-US/locale/webapprt/webapp.properties
+lib/firefox/webapprt/chrome/localized.manifest
+lib/firefox/webapprt/chrome/webapprt.manifest
+lib/firefox/webapprt/chrome/webapprt/content/webapp.js
+lib/firefox/webapprt/chrome/webapprt/content/webapp.xul
+lib/firefox/webapprt/components/CommandLineHandler.js
+lib/firefox/webapprt/components/ContentPermission.js
+lib/firefox/webapprt/components/ContentPolicy.js
+lib/firefox/webapprt/components/DirectoryProvider.js
+lib/firefox/webapprt/components/components.manifest
+lib/firefox/webapprt/defaults/preferences/prefs.js
+lib/firefox/webapprt/modules/WebappRT.jsm
+lib/firefox/webapprt/modules/WebappsHandler.jsm
+lib/firefox/webapprt/webapprt.ini
 share/applications/firefox.desktop
 share/pixmaps/firefox.png
