@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2012/06/12 15:46:03 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2012/10/12 07:36:11 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=	inet6 libssh2 gssapi ldap rtmp
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibssh2)
-CONFIGURE_ARGS+= 	--with-libssh2=${BUILDLINK_PREFIX.libssh2:Q}
+CONFIGURE_ARGS+=	--with-libssh2=${BUILDLINK_PREFIX.libssh2}
 .  include "../../security/libssh2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-libssh2
