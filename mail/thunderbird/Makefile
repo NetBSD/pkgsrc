@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.101 2012/10/08 23:02:00 adam Exp $
+# $NetBSD: Makefile,v 1.102 2012/10/12 18:28:58 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		15.0
-PKGREVISION=	4
+TB_VER=		16.0.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=thunderbird/releases/${TB_VER}/source/}
 DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2 \
-		lightning-1.7.source.tar.bz2
-SITES.lightning-1.7.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/1.7/source/}
-EXTRACT_DIR.lightning-1.7.source.tar.bz2=	${WRKSRC}/lightning
+		lightning-1.8.source.tar.bz2
+SITES.lightning-1.8.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/1.8/source/}
+EXTRACT_DIR.lightning-1.8.source.tar.bz2=	${WRKSRC}/lightning
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
@@ -41,8 +40,8 @@ ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 
 post-extract:
 	cd ${WRKSRC} && ${RM} -r calendar
-	${CP} -r ${EXTRACT_DIR.lightning-1.7.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
-	${RM} -r ${EXTRACT_DIR.lightning-1.7.source.tar.bz2}
+	${CP} -r ${EXTRACT_DIR.lightning-1.8.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
+	${RM} -r ${EXTRACT_DIR.lightning-1.8.source.tar.bz2}
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
