@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2011/12/04 21:59:36 marino Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/13 00:49:37 darcy Exp $
 
-DISTNAME=	ptlib-2.6.5
-PKGREVISION=	3
+DISTNAME=	ptlib-2.10.7
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.6/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.10/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.ekiga.net/
 COMMENT=	Portable Windows Libary
 # modified-bsd stands for Spencer's regex license, quite similar
@@ -58,6 +57,7 @@ post-install:
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
