@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3246 2012/10/13 11:50:31 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3247 2012/10/13 12:26:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/openldap-cloak to 2.4.33 [adam 2012-10-13]
 	Updated databases/openldap-nops to 2.4.33 [adam 2012-10-13]
 	Updated databases/openldap-smbk5pwd to 2.4.33 [adam 2012-10-13]
+	Updated converters/help2man to 1.40.12 [wen 2012-10-13]
