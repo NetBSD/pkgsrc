@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2011/12/04 21:59:36 marino Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/10/13 16:48:19 darcy Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptclib/asnber.h
 include/ptclib/asner.h
 include/ptclib/asnper.h
 include/ptclib/asnxer.h
+include/ptclib/cli.h
 include/ptclib/cypher.h
 include/ptclib/delaychan.h
 include/ptclib/dtmf.h
@@ -18,6 +19,7 @@ include/ptclib/httpsvc.h
 include/ptclib/inetmail.h
 include/ptclib/inetprot.h
 include/ptclib/ipacl.h
+include/ptclib/lua.h
 include/ptclib/memfile.h
 include/ptclib/mime.h
 include/ptclib/modem.h
@@ -52,6 +54,7 @@ include/ptclib/socks.h
 include/ptclib/telnet.h
 include/ptclib/threadpool.h
 include/ptclib/url.h
+include/ptclib/vcard.h
 include/ptclib/vsdl.h
 include/ptclib/vxml.h
 include/ptclib/xmpp.h
@@ -108,6 +111,7 @@ include/ptlib/sound.h
 include/ptlib/svcproc.h
 include/ptlib/syncpoint.h
 include/ptlib/syncthrd.h
+include/ptlib/syslog.h
 include/ptlib/tcpsock.h
 include/ptlib/textfile.h
 include/ptlib/thread.h
@@ -162,7 +166,7 @@ lib/libpt.so.${PKGVERSION}
 lib/libpt_s.a
 lib/pkgconfig/ptlib.pc
 lib/${PKGNAME}/devices/sound/oss_pwplugin.so
-${PLIST.video4l2}lib/${PKGNAME}/devices/videoinput/v4l2_pwplugin.so
+lib/${PKGNAME}/devices/videoinput/v4l2_pwplugin.so
 share/ptlib/make/common.mak
 share/ptlib/make/lib.mak
 share/ptlib/make/plugins.mak
