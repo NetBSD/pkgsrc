@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3245 2012/10/13 11:25:06 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3246 2012/10/13 11:50:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5040,3 +5040,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox10 to 10.0.9 [ryoon 2012-10-13]
 	Updated mail/thunderbird10 to 10.0.9 [ryoon 2012-10-13]
 	Updated devel/p5-Moose to 2.0604 [wen 2012-10-13]
+	Updated databases/openldap to 2.4.33 [adam 2012-10-13]
+	Updated databases/openldap-client to 2.4.33 [adam 2012-10-13]
+	Updated databases/openldap-server to 2.4.33 [adam 2012-10-13]
+	Updated databases/openldap-doc to 2.4.33 [adam 2012-10-13]
+	Updated databases/openldap-cloak to 2.4.33 [adam 2012-10-13]
+	Updated databases/openldap-nops to 2.4.33 [adam 2012-10-13]
+	Updated databases/openldap-smbk5pwd to 2.4.33 [adam 2012-10-13]
