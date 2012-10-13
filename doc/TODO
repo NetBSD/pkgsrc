@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11599 2012/10/12 18:28:37 ryoon Exp $
+$NetBSD: TODO,v 1.11600 2012/10/13 00:54:20 darcy Exp $
 
 Suggested new packages
 ======================
@@ -1016,7 +1016,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o projclock-0.9
 	o proxsmtp-1.10
 	o psmisc-22.18
-	o ptlib-2.10.7
 	o puf-1.0.0
 	o pulseaudio-2.0
 	o puppet-2.7.6
