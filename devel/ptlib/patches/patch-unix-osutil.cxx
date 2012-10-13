@@ -1,8 +1,10 @@
-$NetBSD: patch-unix-osutil.cxx,v 1.1 2011/12/04 21:59:37 marino Exp $
+$NetBSD: patch-unix-osutil.cxx,v 1.2 2012/10/13 00:49:38 darcy Exp $
 
---- src/ptlib/unix/osutil.cxx.orig	2009-09-21 00:25:17.000000000 +0000
+Add DragonFly support
+
+--- src/ptlib/unix/osutil.cxx.orig	2012-08-23 02:12:27.000000000 +0000
 +++ src/ptlib/unix/osutil.cxx
-@@ -79,7 +79,7 @@
+@@ -80,7 +80,7 @@
  #define P_USE_LANGINFO
  #endif
  
@@ -11,7 +13,7 @@ $NetBSD: patch-unix-osutil.cxx,v 1.1 2011/12/04 21:59:37 marino Exp $
  #define P_USE_STRFTIME
  
  #include <sys/param.h>
-@@ -534,7 +534,7 @@ PString PDirectory::GetVolume() const
+@@ -535,7 +535,7 @@ PString PDirectory::GetVolume() const
      }
      fclose(fp);
  
@@ -20,21 +22,12 @@ $NetBSD: patch-unix-osutil.cxx,v 1.1 2011/12/04 21:59:37 marino Exp $
  
      struct statfs * mnt;
      int count = getmntinfo(&mnt, MNT_NOWAIT);
-@@ -574,7 +574,7 @@ PString PDirectory::GetVolume() const
- 
- PBoolean PDirectory::GetVolumeSpace(PInt64 & total, PInt64 & free, DWORD & clusterSize) const
- {
--#if defined(P_LINUX) || defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS)
-+#if defined(P_LINUX) || defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(P_DRAGONFLY)
- 
-   struct statfs fs;
- 
-@@ -1429,7 +1429,7 @@ int PTime::GetTimeZone(PTime::TimeZoneTy
+@@ -1452,7 +1452,7 @@ int PTime::GetTimeZone(PTime::TimeZoneTy
      return tz;
    else
      return tz + ::daylight*60;
--#elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(__BEOS__) || defined(P_QNX)
-+#elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(__BEOS__) || defined(P_QNX) || defined(P_DRAGONFLY)
+-#elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(__BEOS__) || defined(P_QNX) || defined(P_GNU_HURD)
++#elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(__BEOS__) || defined(P_QNX) || defined(P_GNU_HURD) || defined(P_DRAGONFLY)
    time_t t;
    time(&t);
    struct tm ts;
