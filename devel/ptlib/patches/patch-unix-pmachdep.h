@@ -1,9 +1,11 @@
-$NetBSD: patch-unix-pmachdep.h,v 1.1 2011/12/04 21:59:37 marino Exp $
+$NetBSD: patch-unix-pmachdep.h,v 1.2 2012/10/13 00:49:38 darcy Exp $
 
---- include/ptlib/unix/ptlib/pmachdep.h.orig	2009-09-21 00:25:51.000000000 +0000
+- Add DragonFly support
+
+--- include/ptlib/unix/ptlib/pmachdep.h.orig	2012-08-23 02:12:57.000000000 +0000
 +++ include/ptlib/unix/ptlib/pmachdep.h
-@@ -62,6 +62,34 @@ typedef size_t socklen_t;
- #endif
+@@ -78,6 +78,34 @@ typedef size_t socklen_t;
+ #define HAS_IFREQ
  
  ///////////////////////////////////////////////////////////////////////////////
 +#elif defined(P_DRAGONFLY)
