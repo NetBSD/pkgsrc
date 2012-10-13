@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/10/13 16:48:19 darcy Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/10/13 22:43:23 darcy Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptclib/asnber.h
@@ -133,6 +133,7 @@ include/ptlib/unix/ptlib/icmpsock.h
 include/ptlib/unix/ptlib/ipdsock.h
 include/ptlib/unix/ptlib/ipsock.h
 include/ptlib/unix/ptlib/maccoreaudio.h
+include/ptlib/unix/ptlib/mail.h
 include/ptlib/unix/ptlib/mutex.h
 include/ptlib/unix/ptlib/pdirect.h
 include/ptlib/unix/ptlib/pipechan.h
@@ -161,6 +162,7 @@ include/ptlib/vconvert.h
 include/ptlib/video.h
 include/ptlib/videoio.h
 include/ptlib/videoio1394dc.h
+include/ptlib/wxstring.h
 lib/libpt.so
 lib/libpt.so.${PKGVERSION}
 lib/libpt_s.a
