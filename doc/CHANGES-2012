@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3240 2012/10/13 00:54:19 darcy Exp $
+$NetBSD: CHANGES-2012,v 1.3241 2012/10/13 00:58:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5034,3 +5034,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox-l10n to 16.0.1 [ryoon 2012-10-12]
 	Updated mail/thunderbird-l10n to 16.0.1 [ryoon 2012-10-12]
 	Updated devel/ptlib to 2.10.7 [darcy 2012-10-12]
+	Updated www/contao211-translations to 201210110 [taca 2012-10-13]
