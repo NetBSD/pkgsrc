@@ -1,0 +1,90 @@
+$NetBSD: patch-bin_fmtutil,v 1.1 2012/10/13 22:38:20 minskim Exp $
+
+--- bin/fmtutil.orig	2012-10-09 17:39:16.000000000 +0000
++++ bin/fmtutil
+@@ -213,7 +213,7 @@ getmatch()
+ initTexmfMain()
+ {
+   case $MT_TEXMFMAIN in
+-    "") MT_TEXMFMAIN=`kpsewhich --var-value=TEXMFMAIN`;;
++    "") MT_TEXMFMAIN=`@KPSEWHICH@ --var-value=TEXMFMAIN`;;
+   esac
+   export MT_TEXMFMAIN
+ }
+@@ -225,14 +225,14 @@ initTexmfMain()
+ ###############################################################################
+ cache_vars()
+ {
+-  : ${MT_VARTEXFONTS=`kpsewhich --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
+-  : ${MT_MKTEXNAM=`kpsewhich --format='web2c files' mktexnam`}
+-  : ${MT_MKTEXNAM_OPT=`kpsewhich --format='web2c files' mktexnam.opt`}
+-  : ${MT_MKTEXDIR=`kpsewhich --format='web2c files' mktexdir`}
+-  : ${MT_MKTEXDIR_OPT=`kpsewhich --format='web2c files' mktexdir.opt`}
+-  : ${MT_MKTEXUPD=`kpsewhich --format='web2c files' mktexupd`}
+-  : ${MT_MKTEX_CNF=`kpsewhich --format='web2c files' mktex.cnf`}
+-  : ${MT_MKTEX_OPT=`kpsewhich --format='web2c files' mktex.opt`}
++  : ${MT_VARTEXFONTS=`@KPSEWHICH@ --expand-var='$VARTEXFONTS' | sed 's%^!!%%'`}
++  : ${MT_MKTEXNAM=`@KPSEWHICH@ --format='web2c files' mktexnam`}
++  : ${MT_MKTEXNAM_OPT=`@KPSEWHICH@ --format='web2c files' mktexnam.opt`}
++  : ${MT_MKTEXDIR=`@KPSEWHICH@ --format='web2c files' mktexdir`}
++  : ${MT_MKTEXDIR_OPT=`@KPSEWHICH@ --format='web2c files' mktexdir.opt`}
++  : ${MT_MKTEXUPD=`@KPSEWHICH@ --format='web2c files' mktexupd`}
++  : ${MT_MKTEX_CNF=`@KPSEWHICH@ --format='web2c files' mktex.cnf`}
++  : ${MT_MKTEX_OPT=`@KPSEWHICH@ --format='web2c files' mktex.opt`}
+   export MT_VARTEXFONTS MT_MKTEXNAM MT_MKTEXNAM_OPT MT_MKTEXDIR
+   export MT_MKTEXDIR_OPT MT_MKTEXUPD MT_MKTEX_CNF MT_MKTEX_OPT
+ }
+@@ -574,7 +574,7 @@ main()
+ 
+   # set up destdir:
+   if test -z "$destdir"; then
+-    : ${MT_TEXMFVAR=`kpsewhich -var-value=TEXMFVAR`}
++    : ${MT_TEXMFVAR=`@KPSEWHICH@ -var-value=TEXMFVAR`}
+     destdir=$MT_TEXMFVAR/web2c
+   fi
+   test -d "$destdir" || mktexdir "$destdir" >/dev/null 2>&1
+@@ -683,7 +683,7 @@ parse_line()
+   inifile=`echo $lastarg | sed 's%^\*%%'`
+ 
+   # See if we can find $inifile for return code:
+-  kpsewhich -progname=$format -format=$kpsefmt $inifile >/dev/null 2>&1
++  @KPSEWHICH@ -progname=$format -format=$kpsefmt $inifile >/dev/null 2>&1
+ }
+ 
+ ###############################################################################
+@@ -696,7 +696,7 @@ find_hyphenfile()
+   format="$1"; hyphenation="`echo $2 | sed 's/,/ /g'`"
+   case $hyphenation in
+     -) ;;
+-    *) kpsewhich -progname="$format" -format=tex $hyphenation;;
++    *) @KPSEWHICH@ -progname="$format" -format=tex $hyphenation;;
+   esac
+ }
+ 
+@@ -727,7 +727,7 @@ run_initex()
+   poolfile=
+   tcxflag=
+   test -n "$pool" \
+-    && poolfile=`(kpsewhich -progname=$engine $pool.pool) 2>/dev/null`
++    && poolfile=`(@KPSEWHICH@ -progname=$engine $pool.pool) 2>/dev/null`
+   if test -n "$poolfile" && test -f "$poolfile"; then
+     verboseMsg "$progname: attempting to create localized format using pool=$pool and tcx=$tcx."
+     cp "$poolfile" $engine.pool
+@@ -886,7 +886,7 @@ recreate_by_fmt()
+ create_missing()
+ {
+   # match_cmd='test ! -f $destdir/$fmtfile'
+-  match_cmd='test ! -f "`kpsewhich -engine=$texengine -progname=$format $fmtfile`"'
++  match_cmd='test ! -f "`@KPSEWHICH@ -engine=$texengine -progname=$format $fmtfile`"'
+   recreate_loop
+ }
+ 
+@@ -896,7 +896,7 @@ create_missing()
+ ###############################################################################
+ recreate_existing()
+ {
+-  match_cmd='test -f "`kpsewhich -engine=$texengine -progname=$format $fmtfile`"'
++  match_cmd='test -f "`@KPSEWHICH@ -engine=$texengine -progname=$format $fmtfile`"'
+   recreate_loop
+ }
+ 
