@@ -396,6 +396,35 @@ EOF
 }
 
 
+atf_test_case build__mkvars
+build__mkvars_body() {
+    mkdir -p sysbuild/src
+    create_mock_binary sysbuild/src/build.sh
+
+    atf_check -o save:stdout -e save:stderr sysbuild \
+        -c /dev/null -o CVSROOT="${MOCK_CVSROOT}" \
+        -o MKVARS="MKDEBUG=yes FOO=bar" build -f
+
+    cat >expout <<EOF
+Command: build.sh
+Directory: ${HOME}/sysbuild/src
+Arg: -D${HOME}/sysbuild/$(uname -m)/destdir
+Arg: -M${HOME}/sysbuild/$(uname -m)/obj
+Arg: -N2
+Arg: -R${HOME}/sysbuild/release
+Arg: -T${HOME}/sysbuild/$(uname -m)/tools
+Arg: -U
+Arg: -VMKDEBUG=yes
+Arg: -VFOO=bar
+Arg: -m$(uname -m)
+Arg: -u
+Arg: release
+
+EOF
+    atf_check -o file:expout cat commands.log
+}
+
+
 atf_test_case build__with_x11
 build__with_x11_body() {
     create_mock_cvsroot "${MOCK_CVSROOT}"
@@ -488,6 +517,7 @@ CVSROOT = :ext:anoncvs@anoncvs.NetBSD.org:/cvsroot
 CVSTAG is undefined
 INCREMENTAL_BUILD = false
 MACHINES = $(uname -m)
+MKVARS is undefined
 NJOBS is undefined
 RELEASEDIR = ${HOME}/sysbuild/release
 SRCDIR = ${HOME}/sysbuild/src
@@ -571,6 +601,7 @@ CVSROOT = foo bar
 CVSTAG = the-new-tag
 INCREMENTAL_BUILD = false
 MACHINES = $(uname -m)
+MKVARS is undefined
 NJOBS is undefined
 RELEASEDIR = ${HOME}/sysbuild/release
 SRCDIR is undefined
@@ -870,6 +901,7 @@ atf_init_test_cases() {
     atf_add_test_case build__many_machines
     atf_add_test_case build__machine_targets__ok
     atf_add_test_case build__machine_targets__unmatched
+    atf_add_test_case build__mkvars
     atf_add_test_case build__with_x11
     atf_add_test_case build__some_args
 

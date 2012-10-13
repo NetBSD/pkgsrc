@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2012/08/25 19:20:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/13 18:40:33 jmmv Exp $
 
-DISTNAME=	sysbuild-2.3
+DISTNAME=	sysbuild-2.4
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -68,13 +68,13 @@ do-build:
 	    | ${BUILDLINK_PREFIX.shtk}/bin/shtk build \
 	    -s ${SH} -m ${file}_main -o ${WRKSRC}/${file} -
 .endfor
-.for file in sysbuild.1 sysbuild4cron.1 default.conf
+.for file in sysbuild.1 sysbuild4cron.1 sysbuild.conf.5 default.conf
 	sed ${BUILD_SUBST} <${FILESDIR}/${file} >${WRKSRC}/${file}
 .endfor
 	cp ${FILESDIR}/env.sh ${WRKSRC}
 	chmod +x ${WRKSRC}/env.sh
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 \
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			share/examples/sysbuild share/sysbuild
 
 do-install:
@@ -84,6 +84,8 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/sysbuild4cron.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/sysbuild.conf.5 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 .for file in default.conf
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${EGDIR}
 .endfor
