@@ -1,0 +1,58 @@
+$NetBSD: patch-texmf_texconfig_tcfmgr,v 1.1 2012/10/13 22:29:21 minskim Exp $
+
+--- texmf/texconfig/tcfmgr.orig	2010-05-20 18:50:17.000000000 +0000
++++ texmf/texconfig/tcfmgr
+@@ -47,7 +47,7 @@ setupMap()
+   esac
+   
+   case $TFC_MAP in
+-    "") TFC_MAP=`(kpsewhich -progname=texconfig -format='other text files' tcfmgr.map) 2>/dev/null`;;
++    "") TFC_MAP=`(@KPSEWHICH@ -progname=texconfig -format='other text files' tcfmgr.map) 2>/dev/null`;;
+   esac
+ 
+   case $TFC_MAP in
+@@ -84,7 +84,7 @@ setupTemp()
+ setupTexmfConfig()
+ {
+   case $TFC_TEXMFCONFIG in
+-    "") TFC_TEXMFCONFIG=`(kpsewhich -var-value=TEXMFCONFIG) 2>/dev/null`;;
++    "") TFC_TEXMFCONFIG=`(@KPSEWHICH@ -var-value=TEXMFCONFIG) 2>/dev/null`;;
+     *) (exit 0); return 0;;
+   esac
+   case $TFC_TEXMFCONFIG in
+@@ -95,7 +95,7 @@ setupTexmfConfig()
+ setupMktexDir()
+ {
+   case $TFC_MKTEXDIR in
+-    "") TFC_MKTEXDIR=`(kpsewhich --format='web2c files' mktexdir) 2>/dev/null`;;
++    "") TFC_MKTEXDIR=`(@KPSEWHICH@ --format='web2c files' mktexdir) 2>/dev/null`;;
+   esac
+ 
+   case $TFC_MKTEXDIR in
+@@ -106,7 +106,7 @@ setupMktexDir()
+ setupMktexupd()
+ {
+   case $TFC_MKTEXUPD in
+-    "") TFC_MKTEXUPD=`(kpsewhich --format='web2c files' mktexupd) 2>/dev/null`;;
++    "") TFC_MKTEXUPD=`(@KPSEWHICH@ --format='web2c files' mktexupd) 2>/dev/null`;;
+   esac
+ 
+   case $TFC_MKTEXUPD in
+@@ -193,7 +193,7 @@ check_out()
+     case "$orig" in
+       "")
+           get_info
+-          orig=`(kpsewhich -format="$kpseFormat" -progname="$kpseProgArg" "$TFC_FILE") 2>/dev/null`
++          orig=`(@KPSEWHICH@ -format="$kpseFormat" -progname="$kpseProgArg" "$TFC_FILE") 2>/dev/null`
+           ;;
+       *)
+           test -f "$orig" || orig=
+@@ -308,7 +308,7 @@ check_in()
+ find_file()
+ {
+   get_info
+-  kpsewhich -format="$kpseFormat" -progname="$kpseProgArg" "$TFC_FILE"
++  @KPSEWHICH@ -format="$kpseFormat" -progname="$kpseProgArg" "$TFC_FILE"
+ }
+ 
+ help()
