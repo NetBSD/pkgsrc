@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 09:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/13 01:35:43 obache Exp $
 #
 
 DISTNAME=	m17n-contrib-1.1.12
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://www.m17n.org/m17n-lib/
+HOMEPAGE=	http://www.nongnu.org/m17n/
 COMMENT=	Collection of contributed works used with the m17n library
 LICENSE=	gnu-lgpl-v2.1
 
