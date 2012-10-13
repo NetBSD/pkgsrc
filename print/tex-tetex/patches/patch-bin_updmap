@@ -1,6 +1,6 @@
-$NetBSD: patch-bin_updmap,v 1.2 2012/07/22 20:24:42 minskim Exp $
+$NetBSD: patch-bin_updmap,v 1.3 2012/10/13 22:38:20 minskim Exp $
 
---- bin/updmap.orig	2012-06-10 22:43:00.000000000 +0000
+--- bin/updmap.orig	2012-09-13 03:38:21.000000000 +0000
 +++ bin/updmap
 @@ -23,7 +23,7 @@ my $TEXMFROOT;
  
@@ -11,20 +11,22 @@ $NetBSD: patch-bin_updmap,v 1.2 2012/07/22 20:24:42 minskim Exp $
    if ($?) {
      print STDERR "updmap: Cannot find TEXMFROOT, aborting!\n";
      exit 1;
-@@ -50,9 +50,9 @@ use TeXLive::TLUtils qw(mkdirhier mktexu
+@@ -50,10 +50,10 @@ use TeXLive::TLUtils qw(mkdirhier mktexu
  # this function checks by itself whether it is running on windows or not
  reset_root_home();
  
 -chomp(my $TEXMFMAIN = `kpsewhich --var-value=TEXMFMAIN`);
 -chomp(my $TEXMFVAR = `kpsewhich -var-value=TEXMFVAR`);
 -chomp(my $TEXMFCONFIG = `kpsewhich -var-value=TEXMFCONFIG`);
+-chomp(my $TEXMFHOME = `kpsewhich -var-value=TEXMFHOME`);
 +chomp(my $TEXMFMAIN = `@KPSEWHICH@ --var-value=TEXMFMAIN`);
 +chomp(my $TEXMFVAR = `@KPSEWHICH@ -var-value=TEXMFVAR`);
 +chomp(my $TEXMFCONFIG = `@KPSEWHICH@ -var-value=TEXMFCONFIG`);
++chomp(my $TEXMFHOME = `@KPSEWHICH@ -var-value=TEXMFHOME`);
  
  # make sure that on windows *everything* is in lower case for comparison
  if (win32()) {
-@@ -213,15 +213,15 @@ sub main {
+@@ -215,7 +215,7 @@ sub main {
      # in the list is the one where changes will be written to.
      ($changes_config_file) = @{$opts{'cnffile'}};
    } else {
@@ -33,17 +35,20 @@ $NetBSD: patch-bin_updmap,v 1.2 2012/07/22 20:24:42 minskim Exp $
      chomp(@all_files);
      my @used_files;
      for my $f (@all_files) {
-       push @used_files, (win32() ? lc($f) : $f);
+@@ -225,10 +225,10 @@ sub main {
+     my $TEXMFLOCALVAR;
+     my @TEXMFLOCAL;
+     if (win32()) {
+-      chomp($TEXMFLOCALVAR =`kpsewhich --expand-path=\$TEXMFLOCAL`);
++      chomp($TEXMFLOCALVAR =`@KPSEWHICH@ --expand-path=\$TEXMFLOCAL`);
+       @TEXMFLOCAL = map { lc } split(/;/ , $TEXMFLOCALVAR);
+     } else {
+-      chomp($TEXMFLOCALVAR =`kpsewhich --expand-path='\$TEXMFLOCAL'`);
++      chomp($TEXMFLOCALVAR =`@KPSEWHICH@ --expand-path='\$TEXMFLOCAL'`);
+       @TEXMFLOCAL = split /:/ , $TEXMFLOCALVAR;
      }
      #
--    chomp(my $TEXMFLOCAL =`kpsewhich --var-value=TEXMFLOCAL`);
--    chomp(my $TEXMFHOME =`kpsewhich --var-value=TEXMFHOME`);
-+    chomp(my $TEXMFLOCAL =`@KPSEWHICH@ --var-value=TEXMFLOCAL`);
-+    chomp(my $TEXMFHOME =`@KPSEWHICH@ --var-value=TEXMFHOME`);
-     if (win32()) {
-       $TEXMFLOCAL = lc($TEXMFLOCAL);
-       $TEXMFHOME = lc($TEXMFHOME);
-@@ -1140,7 +1140,7 @@ sub mkMaps {
+@@ -1139,7 +1139,7 @@ sub mkMaps {
  
  sub locateMap {
    my $map = shift;
@@ -52,7 +57,7 @@ $NetBSD: patch-bin_updmap,v 1.2 2012/07/22 20:24:42 minskim Exp $
    chomp($ret);
    return $ret;
  }
-@@ -1788,7 +1788,7 @@ sub read_map_files {
+@@ -1787,7 +1787,7 @@ sub read_map_files {
      $alldata->{'maps'}{$m}{'status'} = 'enabled';
    }
    @maps = sort_uniq(@maps);

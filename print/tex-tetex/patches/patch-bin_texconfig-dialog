@@ -1,0 +1,178 @@
+$NetBSD: patch-bin_texconfig-dialog,v 1.1 2012/10/13 22:38:20 minskim Exp $
+
+--- bin/texconfig-dialog.orig	2012-10-09 17:39:16.000000000 +0000
++++ bin/texconfig-dialog
+@@ -81,14 +81,7 @@ logexec()
+ ###############################################################################
+ runDialog()
+ {
+-  if test -n "$DIALOG_PROG"; then
+-    termCtl clear
+-    $DIALOG_PROG --title "TeX setup utility" ${1+"$@"}
+-    runDialogRc=$?
+-    termCtl clear
+-  else
+-    abort "could not find dialog or whiptail program to run"
+-  fi
++  @DIALOG@ --title "TeX setup utility" ${1+"$@"}
+   (exit $runDialogRc)
+   return $runDialogRc
+ }
+@@ -101,7 +94,7 @@ findDialog()
+ {
+   for bin in whiptail dialog
+   do
+-    binLoc=`texconfig findprog $bin`
++    binLoc=`@TEXCONFIG@ findprog $bin`
+     case $binLoc in
+       "") DIALOG_PROG="";;
+       *)  DIALOG_PROG=$binLoc; break;;
+@@ -195,11 +188,11 @@ trouble, you may have more luck with +/-
+         menuMode
+         ;;
+       REHASH)
+-        logexec texconfig rehash
++        logexec @TEXCONFIG@ rehash
+         termCtl readln
+         ;;
+       FORMATS)
+-        texconfig formats
++        @TEXCONFIG@ formats
+         termCtl readln
+         ;;
+       HYPHENATION)
+@@ -209,11 +202,11 @@ trouble, you may have more luck with +/-
+         menuDvips
+         ;;
+       FAQ)
+-        texconfig faq
++        @TEXCONFIG@ faq
+         termCtl readln
+         ;;
+       CONF)
+-        logexec texconfig conf
++        logexec @TEXCONFIG@ conf
+         termCtl readln
+         ;;
+       LOG)
+@@ -234,7 +227,7 @@ Chosse a mode to be used when metafont g
+ be differences between modes of the same resolution. See the comments in the file modes.mf for more details.
+ \"" \
+       23 80 14 \
+-      `texconfig mode-list` 2>"$tmpmenu"
++      `@TEXCONFIG@ mode-list` 2>"$tmpmenu"
+ }
+ 
+ menuMode()
+@@ -243,7 +236,7 @@ menuMode()
+   mode=`cat "$tmpmenu"`
+ 
+   if test -n "$mode"; then
+-    logexec texconfig mode "$mode"
++    logexec @TEXCONFIG@ mode "$mode"
+     termCtl readln
+   fi
+ }
+@@ -312,7 +305,7 @@ NOTE: If you just press return, printing
+               menuDvipsPrintOpt=$menuDvipsAns
+               ;;
+           esac
+-          logexec texconfig dvips $menuDvipsPrinterOpt printcmd "$menuDvipsPrintOpt"
++          logexec @TEXCONFIG@ dvips $menuDvipsPrinterOpt printcmd "$menuDvipsPrintOpt"
+           termCtl readln
+         fi
+         ;;
+@@ -321,7 +314,7 @@ NOTE: If you just press return, printing
+         mode=`cat "$tmpmenu"`
+   
+         if test -n "$mode"; then
+-          logexec texconfig dvips $menuDvipsPrinterOpt mode "$mode"
++          logexec @TEXCONFIG@ dvips $menuDvipsPrinterOpt mode "$mode"
+           termCtl readln
+         fi
+         ;;
+@@ -331,7 +324,7 @@ offset), e.g. 2mm,-0.5in (right 2mm and 
+         case $menuDvipsAns in
+           "") : ;;
+           *)
+-            logexec texconfig dvips $menuDvipsPrinterOpt offset "$menuDvipsAns"
++            logexec @TEXCONFIG@ dvips $menuDvipsPrinterOpt offset "$menuDvipsAns"
+             termCtl readln
+             ;;
+         esac
+@@ -339,11 +332,11 @@ offset), e.g. 2mm,-0.5in (right 2mm and 
+       PAPER)
+         eval runDialog \
+           --menu \'\\n\\nChoose the default papersize definition for dvips.\\n\\n\' \
+-          23 80 8 `texconfig dvips paper-list` \
++          23 80 8 `@TEXCONFIG@ dvips paper-list` \
+           2>"$tmpmenu"
+         paper=`cat "$tmpmenu"`
+         if test -n "$paper"; then
+-          logexec texconfig dvips paper "$paper"
++          logexec @TEXCONFIG@ dvips paper "$paper"
+           termCtl readln
+         fi
+         ;;
+@@ -364,7 +357,7 @@ offset), e.g. 2mm,-0.5in (right 2mm and 
+         case $menuDvipsAns in
+           "") : ;;
+           *)
+-            logexec texconfig dvips add $menuDvipsAns
++            logexec @TEXCONFIG@ dvips add $menuDvipsAns
+             termCtl readln
+             ;;
+         esac
+@@ -375,7 +368,7 @@ offset), e.g. 2mm,-0.5in (right 2mm and 
+         case $menuDvipsAns in
+           "") : ;;
+           *)
+-	    logexec texconfig dvips del $menuDvipsAns
++	    logexec @TEXCONFIG@ dvips del $menuDvipsAns
+             termCtl readln
+             ;;
+         esac
+@@ -398,11 +391,11 @@ Select your default paper format.
+   p=`cat "$tmpmenu"`
+   case $p in
+     A4)
+-      logexec texconfig paper a4
++      logexec @TEXCONFIG@ paper a4
+       termCtl readln
+       ;;
+     LETTER)
+-      logexec texconfig paper letter
++      logexec @TEXCONFIG@ paper letter
+       termCtl readln
+       ;;
+   esac
+@@ -415,14 +408,14 @@ menuHyphenation()
+ Choose format to set up hyphenation for.
+ " \
+     23 80 14 \
+-    `texconfig hyphen-list | sed 's@\(.*\)@\1 \1@'`  2>"$tmpmenu"
++    `@TEXCONFIG@ hyphen-list | sed 's@\(.*\)@\1 \1@'`  2>"$tmpmenu"
+   p=`cat "$tmpmenu"`
+   case $p in
+     "")
+       return
+       ;;
+     *)
+-      texconfig hyphen "$p"
++      @TEXCONFIG@ hyphen "$p"
+       termCtl readln
+   esac
+ }
+@@ -445,9 +438,9 @@ eof
+ esac
+ 
+ 
+-: ${TEXMFCONFIG=`kpsewhich -var-value=TEXMFCONFIG`}
+-: ${TEXMFVAR=`kpsewhich -var-value=TEXMFVAR`}
+-: ${TEXMFMAIN=`kpsewhich -var-value=TEXMFMAIN`}
++: ${TEXMFCONFIG=`@KPSEWHICH@ -var-value=TEXMFCONFIG`}
++: ${TEXMFVAR=`@KPSEWHICH@ -var-value=TEXMFVAR`}
++: ${TEXMFMAIN=`@KPSEWHICH@ -var-value=TEXMFMAIN`}
+ export TEXMFCONFIG TEXMFVAR TEXMFMAIN
+ 
+ setupTmpDir

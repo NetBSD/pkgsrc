@@ -1,0 +1,18 @@
+$NetBSD: patch-bin_kpsetool,v 1.1 2012/10/13 22:38:20 minskim Exp $
+
+--- bin/kpsetool.orig	2012-10-09 17:39:16.000000000 +0000
++++ bin/kpsetool
+@@ -109,10 +109,10 @@ esac
+ case "$action" in
+   kpsewhich)
+     test $# = 1 || { echo "$progname: missing filename"; echo "$usage"; exit 1; }
+-    kpsewhich $flags -format="$format" "$1";;
++    @KPSEWHICH@ $flags -format="$format" "$1";;
+   kpsepath)
+-    kpsewhich $flags -show-path="$format";;
++    @KPSEWHICH@ $flags -show-path="$format";;
+   kpsexpand)
+     test $# = 1 || { echo "$progname: missing string"; echo "$usage"; exit 1; }
+-    kpsewhich $flags -expand-var="$1";;
++    @KPSEWHICH@ $flags -expand-var="$1";;
+ esac
