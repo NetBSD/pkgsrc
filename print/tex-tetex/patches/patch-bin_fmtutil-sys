@@ -1,0 +1,19 @@
+$NetBSD: patch-bin_fmtutil-sys,v 1.1 2012/10/13 22:38:20 minskim Exp $
+
+--- bin/fmtutil-sys.orig	2012-10-09 17:39:16.000000000 +0000
++++ bin/fmtutil-sys
+@@ -19,11 +19,11 @@ unset RUNNING_BSH
+ test -n "${ZSH_VERSION+set}" && alias -g '${1+"$@"}'='"$@"'
+ export PATH
+ 
+-v=`kpsewhich -var-value TEXMFSYSVAR`
+-c=`kpsewhich -var-value TEXMFSYSCONFIG`
++v=`@KPSEWHICH@ -var-value TEXMFSYSVAR`
++c=`@KPSEWHICH@ -var-value TEXMFSYSCONFIG`
+ 
+ TEXMFVAR="$v"
+ TEXMFCONFIG="$c"
+ export TEXMFVAR TEXMFCONFIG
+ 
+-exec fmtutil ${1+"$@"}
++exec @FMTUTIL@ ${1+"$@"}

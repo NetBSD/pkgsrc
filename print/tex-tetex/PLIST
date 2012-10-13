@@ -1,4 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2012/07/22 20:24:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/10/13 22:38:20 minskim Exp $
+bin/allcm
+bin/allec
+bin/allneeded
+bin/dvi2fax
+bin/dvired
+bin/fmtutil
+bin/fmtutil-sys
+bin/kpsepath
+bin/kpsetool
+bin/kpsewhere
+bin/kpsexpand
+bin/texconfig-dialog
+bin/texconfig-sys
+bin/texlinks
 bin/updmap
 bin/updmap-sys
 share/texmf-dist/web2c/updmap.cfg
@@ -30,3 +44,4 @@ share/texmf/fonts/map/dvips/tetex/mathpple.map
 share/texmf/fonts/map/dvips/tetex/pdftex35.map
 share/texmf/fonts/map/dvips/tetex/ps2pk35.map
 share/texmf/web2c/updmap.cfg
+@pkgdir share/texmf-dist/scripts/tetex

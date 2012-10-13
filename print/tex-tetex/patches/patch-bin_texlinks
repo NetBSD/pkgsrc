@@ -1,0 +1,40 @@
+$NetBSD: patch-bin_texlinks,v 1.1 2012/10/13 22:38:20 minskim Exp $
+
+--- bin/texlinks.orig	2012-10-09 17:39:16.000000000 +0000
++++ bin/texlinks
+@@ -188,7 +188,7 @@ install_link()
+ ###############################################################################
+ search_symlinkdir()
+ {
+-  kpsewhich=`check_for_binary kpsewhich`
++  kpsewhich=@KPSEWHICH@
+   test -z "$kpsewhich" && return 1
+   symlinkdir=`echo $kpsewhich | sed 's@/*kpsewhich$@@'`
+   kpseaccess -w "$symlinkdir" || return 1
+@@ -251,7 +251,7 @@ main()
+   silent=false
+   thisdir=`pwd`
+   : ${KPSE_DOT=$thisdir}; export KPSE_DOT
+-  selfautoloc=`kpsewhich --expand-var='$SELFAUTOLOC'`
++  selfautoloc=`@KPSEWHICH@ --expand-var='$SELFAUTOLOC'`
+   while 
+     case $1 in
+       --h*|-h)
+@@ -272,7 +272,7 @@ main()
+   dirs="$*"
+ 
+   # if no cnf_file from command-line, look it up with kpsewhich:
+-  test -z "$cnf_file" && cnf_file=`kpsewhich --format='web2c files' $cnf`
++  test -z "$cnf_file" && cnf_file=`@KPSEWHICH@ --format='web2c files' $cnf`
+   test -f "$cnf_file" || abort "config file \`$cnf' not found"
+ 
+ 
+@@ -287,7 +287,7 @@ main()
+     if test $multiplatform = true; then
+       case $selfautoloc in
+         */bin) dirs=$selfautoloc;;
+-        *)     parent=`kpsewhich --expand-var='$SELFAUTODIR'`
++        *)     parent=`@KPSEWHICH@ --expand-var='$SELFAUTODIR'`
+                dirs=`find $parent -type f -name kpsewhich -print \
+                        | sed 's@/kpsewhich$@@'`;;
+       esac
