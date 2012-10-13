@@ -40,7 +40,8 @@ shtk_import process
 #
 # Please remember to update sysbuild(1) if you change this list.
 SYSBUILD_CONFIG_VARS="BUILD_ROOT BUILD_TARGETS CVSROOT CVSTAG INCREMENTAL_BUILD
-                      MACHINES NJOBS RELEASEDIR SRCDIR UPDATE_SOURCES XSRCDIR"
+                      MACHINES MKVARS NJOBS RELEASEDIR SRCDIR UPDATE_SOURCES
+                      XSRCDIR"
 
 
 # Paths to installed files.
@@ -95,6 +96,11 @@ do_one_build() {
         rm -rf "${basedir}/tools"
     fi
 
+    local Vflags=
+    for Vflag in $(shtk_config_get_default MKVARS ""); do
+        Vflags="${Vflags} -V${Vflag}"
+    done
+
     local xflag=
     local Xflag=
     if shtk_config_has XSRCDIR; then
@@ -130,6 +136,7 @@ do_one_build() {
         -R"$(shtk_config_get RELEASEDIR)" \
         -T"${basedir}/tools" \
         -U \
+        ${Vflags} \
         ${Xflag} \
         ${jflag} \
         -m"${machine}" \
@@ -270,7 +277,7 @@ sysbuild_fetch() {
     if shtk_config_has XSRCDIR; then
         shtk_cli_info "Updating X11 source tree"
         shtk_cvs_fetch "${cvsroot}" xsrc \
-	    "$(shtk_config_get_default CVSTAG '')" "$(shtk_config_get XSRCDIR)"
+            "$(shtk_config_get_default CVSTAG '')" "$(shtk_config_get XSRCDIR)"
     fi
 }
 
