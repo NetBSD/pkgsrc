@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2012/09/11 19:46:55 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/13 09:34:49 skrll Exp $
 #
 
 DISTNAME=	jamjar-0.7.1
 CATEGORIES=	archivers
 MASTER_SITES=	# none
 
-MAINTAINER=	skrll@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wonka.acunia.com/
 COMMENT=	Acunia version of the jar archiver
 
