@@ -1,0 +1,161 @@
+.\" $NetBSD: sysbuild.conf.5,v 1.1 2012/10/13 18:40:33 jmmv Exp $
+.\" Copyright 2012 Google Inc.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions are
+.\" met:
+.\"
+.\" * Redistributions of source code must retain the above copyright
+.\"   notice, this list of conditions and the following disclaimer.
+.\" * Redistributions in binary form must reproduce the above copyright
+.\"   notice, this list of conditions and the following disclaimer in the
+.\"   documentation and/or other materials provided with the distribution.
+.\" * Neither the name of Google Inc. nor the names of its contributors
+.\"   may be used to endorse or promote products derived from this software
+.\"   without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+.\" "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+.\" LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+.\" A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+.\" OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+.\" SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+.\" LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+.\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.Dd October 13, 2012
+.Dt SYSBUILD.CONF 5
+.Os
+.Sh NAME
+.Nm sysbuild.conf
+.Nd configuration file format for the sysbuild tool
+.Sh DESCRIPTION
+Configuration files for
+.Xr sysbuild 1
+are plain shell scripts that define a set of recognized variables.
+.Pp
+As scripts, they can perform any magic they desire to deduce the value of
+the configuration variables.
+For example, the default configuration file shipped with
+.Xr sysbuild 1
+automatically deduces the value of the
+.Va NJOBS
+variable by looking at how many CPUs are available in the system.
+.Pp
+The following variables configure the source trees:
+.Bl -tag -width INCREMENTAL_BUILD
+.It Va CVSROOT
+Location of the CVS root from which to check out or update the src and xsrc
+modules.
+.Pp
+Default:
+.Sq :ext:anoncvs@anoncvs.NetBSD.org:/cvsroot
+.It Va CVSTAG
+CVS tag to use during checkouts or updates of the src and xsrc modules.
+.Pp
+Default: not defined.
+.It Va SRCDIR
+Path to the src module.
+If you want
+.Xr sysbuild 1
+to perform an update of this directory before every build, you will need
+write access to it.
+Otherwise, you can use a read-only directory.
+.Pp
+Default:
+.Pa /usr/src .
+.It Va UPDATE_SOURCES
+Whether to perform an update of the source tree before every build or not.
+.Pp
+Default:
+.Sq true .
+.It Va XSRCDIR
+Path to the xsrc module.
+If you want
+.Xr sysbuild 1
+to perform an update of this directory before every build, you will need
+write access to it.
+Otherwise, you can use a read-only directory.
+.Pp
+Defining this variable causes
+.Xr sysbuild 1
+to build the X Window System as part of the build of
+.Nx .
+.Pp
+Default: not defined.
+.El
+.Pp
+The following variables configure the location of the build files:
+.Bl -tag -width INCREMENTAL_BUILD
+.It Va BUILD_ROOT
+Path to the directory in which to place build files.
+These include the obj tree, the destdir and the cross-build tools generated
+by the
+.Nm build.sh
+script.
+The contents of this directory are sorted by machine type so that it can be
+shared across builds for different machines.
+.Pp
+Default:
+.Pa ~/sysbuild/ .
+.It Va RELEASEDIR
+Path to the directory that will contain the build products (aka the release
+files).
+The contents of this directory are sorted by machine type so that it can be
+shared across builds for different machines.
+.Pp
+Default:
+.Pa ~/sysbuild/release .
+.El
+.Pp
+The following variables configure the build process:
+.Bl -tag -width INCREMENTAL_BUILD
+.It Va BUILD_TARGETS
+Whitespace-separated list of targets to pass to
+.Nm build.sh
+during builds.
+Targets can be prefixed by a machine name and a colon, in which case they only
+apply to that machine; for example,
+.Sq macppc:kernel=${HOME}/CUSTOM macppc:releasekernel=${HOME}/CUSTOM .
+.Pp
+Default:
+.Sq release .
+.It Va INCREMENTAL_BUILD
+Whether to perform update builds or not.
+An update build reuses existing obj, destdir and tools trees.
+.Pp
+Of special note is that
+.Xr sysbuild 1
+will take care of pruning files likely to cause breakage during update
+builds before performing the build itself.
+As an example, this includes deleting all the modules from
+.Pa destdir/stand/<platform>/ .
+.Pp
+Default:
+.Sq false .
+.It Va MACHINES
+Whitespace-separated list of machine types to build for.
+.Pp
+Default: the name of the host machine type.
+.It Va MKVARS
+Whitespace-separated list of
+.Sq VARIABLE=value
+.Xr make 1
+variable definitions to be set during the build.
+A useful example would be:
+.Sq MKVARS="MKDEBUG=yes" .
+.Pp
+Default: not defined.
+.It Va NJOBS
+Number of parallel jobs to use during the build.
+If not set, disables parallel builds (which, due to
+.Nm make 1
+semantics, is not the same as setting this to 1).
+.Pp
+Default: not defined.
+.El
+.Sh SEE ALSO
+.Xr sysbuild 1
