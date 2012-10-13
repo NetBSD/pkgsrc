@@ -1,8 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2011/12/04 21:59:36 marino Exp $
+$NetBSD: patch-configure,v 1.4 2012/10/13 00:49:38 darcy Exp $
 
---- configure.orig	2009-09-21 00:25:59.000000000 +0000
+- Add DragonFly support
+
+--- configure.orig	2012-08-23 02:13:11.000000000 +0000
 +++ configure
-@@ -3828,6 +3828,108 @@ fi
+@@ -4411,6 +4411,108 @@ fi
  
                     ;;
  
@@ -17,7 +19,7 @@ $NetBSD: patch-configure,v 1.3 2011/12/04 21:59:36 marino Exp $
 +#define P_PTHREADS 1
 +_ACEOF
 +
-+		   { echo "$as_me:$LINENO: checking for swab" >&5
++          { echo "$as_me:$LINENO: checking for swab" >&5
 +echo $ECHO_N "checking for swab... $ECHO_C" >&6; }
 +if test "${ac_cv_func_swab+set}" = set; then
 +  echo $ECHO_N "(cached) $ECHO_C" >&6
@@ -81,8 +83,8 @@ $NetBSD: patch-configure,v 1.3 2011/12/04 21:59:36 marino Exp $
 +  cat conftest.err >&5
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } && {
-+	 test -z "$ac_cxx_werror_flag" ||
-+	 test ! -s conftest.err
++    test -z "$ac_cxx_werror_flag" ||
++    test ! -s conftest.err
 +       } && test -s conftest$ac_exeext &&
 +       $as_test_x conftest$ac_exeext; then
 +  ac_cv_func_swab=yes
@@ -90,7 +92,7 @@ $NetBSD: patch-configure,v 1.3 2011/12/04 21:59:36 marino Exp $
 +  echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
-+	ac_cv_func_swab=no
++   ac_cv_func_swab=no
 +fi
 +
 +rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
@@ -106,17 +108,17 @@ $NetBSD: patch-configure,v 1.3 2011/12/04 21:59:36 marino Exp $
 +
 +fi
 +
-+		   ;;
++          ;;
 +
    freebsd*|kfreebsd*)       OSTYPE=FreeBSD ;
  		   OS_TAG="P_FREEBSD" ;
                     if test "x$OSRELEASE" = "x"; then
-@@ -8264,7 +8366,7 @@ echo "${ECHO_T}no" >&6; }
-               { echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
+@@ -6806,7 +6908,7 @@ $as_echo "no" >&6; }
+               { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
                case "$target_os" in
 -                freebsd*|openbsd*|netbsd*|darwin*|beos*)
 +                dragonfly*|freebsd*|openbsd*|netbsd*|darwin*|beos*)
-                   { echo "$as_me:$LINENO: checking for dlopen in -lc" >&5
- echo $ECHO_N "checking for dlopen in -lc... $ECHO_C" >&6; }
- if test "${ac_cv_lib_c_dlopen+set}" = set; then
+                   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dlopen in -lc" >&5
+ $as_echo_n "checking for dlopen in -lc... " >&6; }
+ if ${ac_cv_lib_c_dlopen+:} false; then :
