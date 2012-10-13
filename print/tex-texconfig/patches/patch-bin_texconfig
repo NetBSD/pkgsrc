@@ -1,0 +1,241 @@
+$NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
+
+--- bin/texconfig.orig	2012-10-09 17:17:14.000000000 +0000
++++ bin/texconfig
+@@ -91,7 +91,7 @@ echoShowKpseVariable()
+   for eskv
+   do
+     var=$eskv
+-    val=`kpsewhich -var-value="$eskv"`
++    val=`@KPSEWHICH@ -var-value="$eskv"`
+     echo "$var=$val"
+   done
+ }
+@@ -123,7 +123,7 @@ echoLocateCfgfile()
+   for elc
+   do
+     case $elc in
+-      texmf.cnf) elcLoc=`kpsewhich $elc`;;
++      texmf.cnf) elcLoc=`@KPSEWHICH@ $elc`;;
+       *) elcLoc=`tcfmgr --cmd find --file "$elc"`;;
+     esac
+     case $elcLoc in
+@@ -190,7 +190,7 @@ setupTmpDir()
+ setupTexmfmain()
+ {
+   case $MT_TEXMFMAIN in
+-    "") MT_TEXMFMAIN=`kpsewhich -var-value=TEXMFMAIN`;;
++    "") MT_TEXMFMAIN=`@KPSEWHICH@ -var-value=TEXMFMAIN`;;
+     *) return;;
+   esac
+ }
+@@ -201,7 +201,7 @@ setupTexmfmain()
+ setupTexmfdist()
+ {
+   case $MT_TEXMFDIST in
+-    "") MT_TEXMFDIST=`kpsewhich -var-value=TEXMFDIST`;;
++    "") MT_TEXMFDIST=`@KPSEWHICH@ -var-value=TEXMFDIST`;;
+     *) return;;
+   esac
+ }
+@@ -212,7 +212,7 @@ setupTexmfdist()
+ setupTexmfvar()
+ {
+   case $MT_TEXMVAR in
+-    "") MT_TEXMVAR=`kpsewhich -var-value=TEXMFVAR`;;
++    "") MT_TEXMVAR=`@KPSEWHICH@ -var-value=TEXMFVAR`;;
+     *) return;;
+   esac
+ }
+@@ -223,7 +223,7 @@ setupTexmfvar()
+ setupSystexmf()
+ {
+   case $MT_SYSTEXMF in
+-    "") MT_SYSTEXMF=`kpsewhich -var-value=SYSTEXMF`;;
++    "") MT_SYSTEXMF=`@KPSEWHICH@ -var-value=SYSTEXMF`;;
+     *) return;;
+   esac
+ }
+@@ -478,7 +478,7 @@ listDvipsPapers()
+ #
+ getFormatsForHyphen()
+ {
+-  fmtutil --catcfg | awk '$3 != "-" {print $1}' | sort
++  @FMTUTIL@ --catcfg | awk '$3 != "-" {print $1}' | sort
+ }
+ 
+ ###############################################################################
+@@ -607,7 +607,7 @@ TeX Live home page: <http://tug.org/texl
+       echo
+       echo '============================= font map files ============================='
+       for m in psfonts.map pdftex.map ps2pk.map dvipdfm.map; do
+-        echo "$m: `kpsewhich $m`"
++        echo "$m: `@KPSEWHICH@ $m`"
+       done
+       echo
+       echo '=========================== kpathsea variables ==========================='
+@@ -703,7 +703,7 @@ Valid PAPER settings:
+             *)
+               otherPrinter=true
+               otherPrinterName=$2
+-              otherPrinterFile=`kpsewhich -format='dvips config' "config.$otherPrinterName"`
++              otherPrinterFile=`@KPSEWHICH@ -format='dvips config' "config.$otherPrinterName"`
+               case $otherPrinterFile in
+                 "")
+                   echo "$progname: configuration file \`config.$otherPrinterName' for printer \`$otherPrinterName' not found" >&2
+@@ -736,7 +736,7 @@ Valid PAPER settings:
+               ;;
+             *)
+               printerName=$2
+-              pFile=`kpsewhich -format='dvips config' "config.$printerName"`
++              pFile=`@KPSEWHICH@ -format='dvips config' "config.$printerName"`
+               case $pFile in
+                 "")
+                   setupTmpDir
+@@ -773,7 +773,7 @@ Valid PAPER settings:
+               ;;
+             *)
+               printerName=$2
+-              pFile=`kpsewhich -format='dvips config' "config.$printerName"`
++              pFile=`@KPSEWHICH@ -format='dvips config' "config.$printerName"`
+               case $pFile in
+                 "")
+                   echo "$progname: configuration file for printer \`$printerName' (config.$printerName) not found" >&2
+@@ -931,7 +931,7 @@ For more information about these \`featu
+               ;;
+             *)
+               tcBatchFontVardir=$3
+-              tfc=`kpsewhich texmf.cnf`
++              tfc=`@KPSEWHICH@ texmf.cnf`
+               if test -n "$tfc"; then
+                 if test -w "$tfc"; then
+                   configReplace "$tfc" '^VARTEXFONTS' "VARTEXFONTS  = $tcBatchFontVardir"
+@@ -947,7 +947,7 @@ For more information about these \`featu
+           esac
+           ;;
+         rw)
+-          MT_VARTEXFONTS=`kpsewhich -var-value VARTEXFONTS`
++          MT_VARTEXFONTS=`@KPSEWHICH@ -var-value VARTEXFONTS`
+           if test -z "$MT_VARTEXFONTS"; then
+             echo "$progname: failed to set \`font rw'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
+             return
+@@ -973,7 +973,7 @@ For more information about these \`featu
+           fmgrConfigReplace mktex.cnf '^: ..MT_FEATURES=' ": \${MT_FEATURES=appendonlydir:varfonts}"
+           ;;
+         ro)
+-          MT_VARTEXFONTS=`kpsewhich -var-value VARTEXFONTS`
++          MT_VARTEXFONTS=`@KPSEWHICH@ -var-value VARTEXFONTS`
+           if test -z "$MT_VARTEXFONTS"; then
+             echo "$progname: failed to set \`font ro'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
+             return
+@@ -1024,10 +1024,10 @@ EOM
+ 
+       setupTmpDir
+       echo "$progname: analyzing old configuration..." >&2
+-      fmtutil --catcfg > $tmpdir/pre
+-      fmtutil --edit
++      @FMTUTIL@ --catcfg > $tmpdir/pre
++      @FMTUTIL@ --edit
+       echo "$progname: analyzing new configuration..." >&2
+-      fmtutil --catcfg > $tmpdir/post
++      @FMTUTIL@ --catcfg > $tmpdir/post
+ 
+       if cmp $tmpdir/pre $tmpdir/post >/dev/null 2>&1; then
+         echo "$progname: no new/updated formats available ..." >&2
+@@ -1035,9 +1035,9 @@ EOM
+       echo "$progname: updating formats ..." >&2
+         comm -13 $tmpdir/pre $tmpdir/post > $tmpdir/addOrChange
+         for i in `awk '{print $1}' $tmpdir/addOrChange`; do
+-          fmtutil --byfmt "$i" || rc=1
++          @FMTUTIL@ --byfmt "$i" || rc=1
+         done
+-        texlinks --multiplatform || rc=1
++        @TEXLINKS@ --multiplatform || rc=1
+       fi
+       ;;
+ 
+@@ -1077,7 +1077,7 @@ $formatsForHyphenFmt"
+         *)
+           if checkElemInList "$tcBatchHyphenFormat" $formatsForHyphen; then
+ 
+-            tcBatchHyphenFile=`fmtutil --showhyphen "$tcBatchHyphenFormat"`
++            tcBatchHyphenFile=`@FMTUTIL@ --showhyphen "$tcBatchHyphenFormat"`
+             case $tcBatchHyphenFile in
+               "")
+                 echo "$progname: could not find hyphen setup file for format \`$tcBatchHyphenFormat'" >&2
+@@ -1134,7 +1134,7 @@ $formatsForHyphenFmt"
+                   fi
+                   ;;
+               esac
+-              fmtutil --byhyphen "$tcBatchHFOut"
++              @FMTUTIL@ --byhyphen "$tcBatchHFOut"
+             fi
+           else
+             echo "$progname: invalid format \`$tcBatchHyphenFormat' specified as argument for \`$progname hyphen'" >&2
+@@ -1152,9 +1152,9 @@ $formatsForHyphenFmt"
+     init)
+       case $2 in
+         "")
+-          if fmtutil --all \
+-             && texlinks --multiplatform \
+-             && updmap; then
++          if @FMTUTIL@ --all \
++             && @TEXLINKS@ --multiplatform \
++             && @UPDMAP@; then
+             :
+           else
+             rc=1
+@@ -1163,7 +1163,7 @@ $formatsForHyphenFmt"
+         *)
+           shift 1
+           for i in "$@"; do
+-            fmtutil --byfmt "$i" || rc=1
++            @FMTUTIL@ --byfmt "$i" || rc=1
+           done
+           ;;
+       esac
+@@ -1266,7 +1266,7 @@ Valid PAPER settings:
+                 set x `getRes "$tcBatchPdftexMode"`; shift
+                 fmgrConfigReplace pdftexconfig.tex 'pdfpkresolution' "\\pdfpkresolution=$1"
+                 if $fmgrConfigReplaceChanged; then
+-                  fmtutil --refresh
++                  @FMTUTIL@ --refresh
+                 fi
+               else
+                 echo "$progname: unknown MODE \`$tcBatchPdftexMode' given as argument for \`$progname pdftex mode'" >&2
+@@ -1285,7 +1285,7 @@ Valid PAPER settings:
+               wChanged=$fmgrConfigReplaceChanged
+               fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
+               if $wChanged || $fmgrConfigReplaceChanged; then
+-                fmtutil --refresh
++                @FMTUTIL@ --refresh
+               fi
+               ;;
+             a4)
+@@ -1294,7 +1294,7 @@ Valid PAPER settings:
+               wChanged=$fmgrConfigReplaceChanged
+               fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
+               if $wChanged || $fmgrConfigReplaceChanged; then
+-                fmtutil --refresh
++                @FMTUTIL@ --refresh
+               fi
+               ;;
+             "") echo "$help" >&2; rc=1;;
+@@ -1314,7 +1314,7 @@ Valid PAPER settings:
+       ;;
+ 
+     rehash)
+-      mktexlsr
++      @MKTEXLSR@
+       ;;
+     
+     # 
+@@ -1417,7 +1417,7 @@ Valid PAPER settings:
+ ###############################################################################
+ tcInteractive()
+ {
+-  texconfig-dialog
++  @TEXCONFIG_DIALOG@
+ }
+ 
+ ###############################################################################
