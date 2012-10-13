@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/11 18:23:12 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/13 16:10:18 asau Exp $
 #
 
 DISTNAME=	ocamlduce-3.12.1.0
@@ -42,7 +42,7 @@ BUILD_TARGET=	world
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.12.1
 pre-configure:
 	cd ${WRKSRC} && DISTDIR=${DISTDIR} make prepare
-	cd ${WRKSRC}/ocaml-3.12.1 && ${PATCH} < ${FILESDIR}/ocaml-configure.diff
+	cd ${WRKSRC}/ocaml-3.12.1 && ${PATCH} -Nt < ${FILESDIR}/ocaml-configure.diff
 	cd ${WRKSRC}/ocaml-3.12.1 && ./configure -prefix ${PREFIX} -libs ${LDFLAGS:Q} -with-pthread -host ${MACHINE_GNU_PLATFORM:Q} -mandir ${PREFIX}/${PKGMANDIR} -no-tk
 
 .include "../../lang/ocaml/buildlink3.mk"
