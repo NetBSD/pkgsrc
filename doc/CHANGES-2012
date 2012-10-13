@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3250 2012/10/13 18:41:00 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.3251 2012/10/13 22:32:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5051,3 +5051,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox10-l10n to 10.0.9 [ryoon 2012-10-13]
 	Updated mail/thunderbird10-l10n to 10.0.9 [ryoon 2012-10-13]
 	Updated sysutils/sysbuild to 2.4 [jmmv 2012-10-13]
+	Added print/tex-texconfig version 2012 [minskim 2012-10-13]
+	Added print/tex-texconfig-doc version 2012 [minskim 2012-10-13]
