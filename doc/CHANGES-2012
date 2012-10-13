@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3251 2012/10/13 22:32:56 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3252 2012/10/13 22:39:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5053,3 +5053,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/sysbuild to 2.4 [jmmv 2012-10-13]
 	Added print/tex-texconfig version 2012 [minskim 2012-10-13]
 	Added print/tex-texconfig-doc version 2012 [minskim 2012-10-13]
+	Updated print/tex-tetex to 3.0.27774 [minskim 2012-10-13]
+	Updated print/tex-tetex-doc to 3.0.27774 [minskim 2012-10-13]
