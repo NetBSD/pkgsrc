@@ -1,7 +1,9 @@
-$NetBSD: patch-include_ptclib_pldap.h,v 1.1 2012/04/19 12:34:43 hans Exp $
+$NetBSD: patch-include_ptclib_pldap.h,v 1.2 2012/10/13 00:49:38 darcy Exp $
 
---- include/ptclib/pldap.h.orig	2009-09-21 02:25:53.000000000 +0200
-+++ include/ptclib/pldap.h	2012-04-18 20:29:59.394305646 +0200
+- Allow building on Solaris
+
+--- include/ptclib/pldap.h.orig 2012-08-23 02:13:03.000000000 +0000
++++ include/ptclib/pldap.h
 @@ -103,12 +103,7 @@ class PLDAPSession : public PObject
        AuthSimple,
        AuthSASL,
@@ -13,5 +15,6 @@ $NetBSD: patch-include_ptclib_pldap.h,v 1.1 2012/04/19 12:34:43 hans Exp $
        NumAuthenticationMethod
 -#endif
      };
- 
-     /**Bind to the remote LDAP server.
+
+     /**Start encrypted connection
+
