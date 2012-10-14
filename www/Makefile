@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.898 2012/10/14 21:58:02 mspo Exp $
+# $NetBSD: Makefile,v 1.899 2012/10/14 22:10:36 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -544,6 +544,7 @@ SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flup
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
+SUBDIR+=	py-httplib2
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-mechanize
 SUBDIR+=	py-moin
