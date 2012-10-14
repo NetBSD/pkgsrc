@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/10/26 23:38:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/14 17:00:43 minskim Exp $
 share/texmf/doc/texlive/index.html
 share/texmf/doc/texlive/texlive-common/examples/ex5.tex
 share/texmf/doc/texlive/texlive-common/examples/ex6.tex
@@ -11,4 +11,5 @@ share/texmf/doc/texlive/texlive-common/stdcoll.png
 share/texmf/doc/texlive/texlive-common/tlmgr-general-options.png
 share/texmf/doc/texlive/texlive-common/tlmgr-gui.png
 share/texmf/doc/texlive/texlive-common/tlmgr-paper-options.png
+share/texmf/doc/texlive/texlive-common/tray-menu.png
 share/texmf/doc/texlive/texlive-common/wizard-w32.png
