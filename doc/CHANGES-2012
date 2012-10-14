@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3262 2012/10/14 18:13:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3263 2012/10/14 21:27:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5067,3 +5067,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-collection-documentation-base-doc to 2012 [minskim 2012-10-14]
 	Updated graphics/libotf to 0.9.13 [wiz 2012-10-14]
 	Updated sysutils/desktop-file-utils to 0.21 [wiz 2012-10-14]
+	Updated print/tex-kpathsea to 2012nb1 [minskim 2012-10-14]
+	Updated print/tex-tetex to 3.0.27774nb1 [minskim 2012-10-14]
+	Updated print/texlive-tetex to 2011nb3 [minskim 2012-10-14]
