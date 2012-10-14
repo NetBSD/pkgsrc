@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/14 22:07:00 wiz Exp $
+
+SHA1 (httplib2-0.7.6.tar.gz) = 4ad095cb3d65ddded5381dc4edc4078f908d7885
+RMD160 (httplib2-0.7.6.tar.gz) = 2261d6659a0d6058d1db680eeab992bae06a81df
+Size (httplib2-0.7.6.tar.gz) = 141916 bytes
