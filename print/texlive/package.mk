@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.16 2012/10/08 13:45:48 asau Exp $
+# $NetBSD: package.mk,v 1.17 2012/10/14 17:48:34 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -33,7 +33,7 @@ MASTER_SITES?=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/archive/}
 .if empty(TEXLIVE_REV)
 DIST_SUBDIR?=	${PKGNAME_NOREV}
 .else
-DIST_SUBDIR?=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}
+DIST_SUBDIR?=	${PKGBASE:C/-doc$$//}-${TEXLIVE_REV}
 .endif
 EXTRACT_SUFX?=	.tar.xz
 
