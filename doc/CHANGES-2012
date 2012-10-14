@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3266 2012/10/14 21:54:09 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3267 2012/10/14 21:57:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5073,3 +5073,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-hyphen-base to 2012 [minskim 2012-10-14]
 	Updated print/tex-misc to 2012 [minskim 2012-10-14]
 	Updated print/tex-plain to 3.141592653.26647 [minskim 2012-10-14]
+	Updated fonts/tex-metafont to 2012 [minskim 2012-10-14]
