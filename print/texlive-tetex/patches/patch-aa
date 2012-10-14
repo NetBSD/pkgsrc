@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2012/10/13 22:43:23 minskim Exp $
+$NetBSD: patch-aa,v 1.11 2012/10/14 21:26:24 minskim Exp $
 
 --- Makefile.in.orig	2011-06-16 14:01:09.000000000 +0000
 +++ Makefile.in
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.10 2012/10/13 22:43:23 minskim Exp $
  
  scriptsdir = texmf/scripts/tetex
  nodist_bin_SCRIPTS = $(am__append_1)
-@@ -226,57 +212,30 @@ all_scripts = $(lua_scripts) $(perl_scri
+@@ -226,57 +212,29 @@ all_scripts = $(lua_scripts) $(perl_scri
  @WIN32_TRUE@@WIN32_WRAP_TRUE@wrappers = $(all_scripts:=.exe)
  @WIN32_TRUE@@WIN32_WRAP_TRUE@runscript = $(top_srcdir)/../../texk/texlive/w32_wrapper/runscript.exe
  texmfdir = ${prefix}/$(scriptsdir)
@@ -64,13 +64,11 @@ $NetBSD: patch-aa,v 1.10 2012/10/13 22:43:23 minskim Exp $
 -	texlinks.man \
 -	thumbpdf.man \
 -	updmap.man
-+	rumakeindex.man
- 
- dist_man5_MANS = \
+-
+-dist_man5_MANS = \
 -	fmtutil.cnf.5 \
 -	updmap.cfg.5
-+	fmtutil.cnf.5
- 
+-
 -texconfdir = ${prefix}
 -nobase_dist_texconf_DATA = \
 -	texmf/texconfig/README \
@@ -82,6 +80,10 @@ $NetBSD: patch-aa,v 1.10 2012/10/13 22:43:23 minskim Exp $
 -texconfigdir = ${prefix}/texmf/texconfig
 -dist_texconfig_SCRIPTS = tcfmgr
 -dist_texconfig_DATA = tcfmgr.map
++	rumakeindex.man
++
++dist_man5_MANS =
++
 +texconfdir = ${prefix}/share
 +nobase_dist_texconf_DATA =
 +
@@ -106,7 +108,7 @@ $NetBSD: patch-aa,v 1.10 2012/10/13 22:43:23 minskim Exp $
  
  EXTRA_DIST = README.texdoctk old-fontinst.bat old-updmap
  run_texlinks = $(DESTDIR)$(bindir)/texlinks -v \
-@@ -810,7 +769,7 @@ info-am:
+@@ -810,7 +768,7 @@ info-am:
  
  install-data-am: install-dist_texconfigDATA \
  	install-dist_texconfigSCRIPTS install-dist_texmfSCRIPTS \
