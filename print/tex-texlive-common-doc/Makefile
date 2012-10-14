@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/10/26 23:38:44 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/14 17:00:43 minskim Exp $
 
 DISTNAME=	texlive-common.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	19316
+PKGNAME=	tex-${DISTNAME:S/./-/}-2012
+TEXLIVE_REV=	26673
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX Live manual (common elements)
