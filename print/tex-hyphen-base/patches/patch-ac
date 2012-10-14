@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.6 2011/12/11 20:30:25 minskim Exp $
+$NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.lua.orig	2011-08-05 02:26:45.000000000 +0000
+--- texmf/tex/generic/config/language.dat.lua.orig	2012-06-06 02:37:05.000000000 +0000
 +++ texmf/tex/generic/config/language.dat.lua
-@@ -33,629 +33,4 @@ return {
+@@ -33,638 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
 --- from dehyph-exptl:
--	['german-x-2011-07-01'] = {
--		loader = 'dehypht-x-2011-07-01.tex',
+-	['german-x-2012-05-30'] = {
+-		loader = 'dehypht-x-2012-05-30.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'german-x-latest' },
 -		patterns = 'hyph-de-1901.pat.txt',
 -		hyphenation = 'hyph-de-1901.hyp.txt',
 -	},
--	['ngerman-x-2011-07-01'] = {
--		loader = 'dehyphn-x-2011-07-01.tex',
+-	['ngerman-x-2012-05-30'] = {
+-		loader = 'dehyphn-x-2012-05-30.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'ngerman-x-latest' },
@@ -214,6 +214,15 @@ $NetBSD: patch-ac,v 1.6 2011/12/11 20:30:25 minskim Exp $
 -		righthyphenmin = 3,
 -		synonyms = { 'patois', 'francais' },
 -		patterns = 'hyph-fr.pat.txt',
+-		hyphenation = '',
+-	},
+--- from hyphen-friulan:
+-	['friulan'] = {
+-		loader = 'loadhyph-fur.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-fur.pat.txt',
 -		hyphenation = '',
 -	},
 --- from hyphen-galician:
@@ -419,15 +428,6 @@ $NetBSD: patch-ac,v 1.6 2011/12/11 20:30:25 minskim Exp $
 -		patterns = 'hyph-kmr.pat.txt',
 -		hyphenation = '',
 -	},
---- from hyphen-lao:
--	['lao'] = {
--		loader = 'loadhyph-lo.tex',
--		lefthyphenmin = 1,
--		righthyphenmin = 1,
--		synonyms = {  },
--		patterns = 'hyph-lo.pat.txt',
--		hyphenation = '',
--	},
 --- from hyphen-latin:
 -	['latin'] = {
 -		loader = 'loadhyph-la.tex',
@@ -513,6 +513,15 @@ $NetBSD: patch-ac,v 1.6 2011/12/11 20:30:25 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-ro.pat.txt',
+-		hyphenation = '',
+-	},
+--- from hyphen-romansh:
+-	['romansh'] = {
+-		loader = 'loadhyph-rm.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-rm.pat.txt',
 -		hyphenation = '',
 -	},
 --- from hyphen-russian:
