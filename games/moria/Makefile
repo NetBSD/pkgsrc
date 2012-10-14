@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:47 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/14 03:03:32 dholland Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
@@ -10,7 +10,8 @@ MASTER_SITES=		ftp://ftp.funet.fi/pub/unix/games/moria/source/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		simonb@NetBSD.org
-HOMEPAGE=		http://www-math.bgsu.edu/~grabine/moria.html
+HOMEPAGE=		http://remarque.org/~grabiner/moria.html
+#HOMEPAGE=		http://www-math.bgsu.edu/~grabine/moria.html
 COMMENT=		Rogue-like game with a different sense of scale than Rogue
 
 WRKSRC=			${WRKDIR}/umoria
