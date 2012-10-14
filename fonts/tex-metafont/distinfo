@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/04/13 01:48:55 minskim Exp $
+$NetBSD: distinfo,v 1.6 2012/10/14 21:56:11 minskim Exp $
 
-SHA1 (tex-metafont-21566/metafont.tar.xz) = a7674cb0856aa00a82bb8f18e3810cb4239b6d46
-RMD160 (tex-metafont-21566/metafont.tar.xz) = a1e1044a0579162fcd68dcd0c457f1a7c766f8db
-Size (tex-metafont-21566/metafont.tar.xz) = 36740 bytes
+SHA1 (tex-metafont-26689/metafont.tar.xz) = 0ab609ebe22ab71bf508dab358dc0d53a32c774b
+RMD160 (tex-metafont-26689/metafont.tar.xz) = a5ad1f9b23e84cc2753749b0117a99a4b2943975
+Size (tex-metafont-26689/metafont.tar.xz) = 36744 bytes
