@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.7 2012/07/23 19:17:40 jperkin Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.8 2012/10/14 18:12:37 minskim Exp $
 #
 # Delete format files.
 #
@@ -32,36 +32,6 @@ DEINSTALL)
 			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$format.log
 		done
 	fi
-	format_names="@FORMAT_NAMES@"
-	for f in $format_names ; do
-		@CAT@ @PREFIX@/share/texmf/fmtutil/format.$f.cnf |
-		@GREP@ "^[^#]" |
-		while read format engine junk; do
-		  ${GREP} -v "^${format}[[:space:]][[:space:]]*${engine}[[:space:]]" ${FMTUTIL_CNF} > \
-			${FMTUTIL_CNF}.tmp &&
-		  ${MV} ${FMTUTIL_CNF}.tmp ${FMTUTIL_CNF}
-		  case "$engine" in
-		    mpost)
-		      if [ "$format" = "mpost" ]; then
-		        fmtfile="mp*.mem"
-		      else
-		        fmtfile="$format.mem"
-		      fi
-		      texengine=metapost
-		      ;;
-		    mf*)
-		      fmtfile="$format.base"
-		      texengine=metafont
-		      ;;
-		    *)
-		      fmtfile="$format.fmt"
-		      texengine=$engine
-		      ;;
-		  esac
-			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$fmtfile
-			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$format.log
-		done
-	done
 	@FIND@ @VARBASE@/lib/texmf -depth -type d -exec @RMDIR@ {} \; 2>/dev/null
 	@MKTEXLSR@ @VARBASE@/lib/texmf
         ;;
