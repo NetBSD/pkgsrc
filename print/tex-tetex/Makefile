@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/10/13 22:38:20 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/14 21:25:22 minskim Exp $
 
 DISTNAME=	tetex
 PKGNAME=	tex-${DISTNAME}-3.0.27774
+PKGREVISION=	1
 TEXLIVE_REV=	27774
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +11,7 @@ COMMENT=	Supplementary files for updmap
 CONFLICTS=	texlive-tetex<=2011nb1
 DEPENDS+=	dialog>=1.0:../../misc/dialog
 DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
+DEPENDS+=	tex-kpathsea>=2012nb1:../../print/tex-kpathsea
 DEPENDS+=	tex-texconfig-[0-9]*:../../print/tex-texconfig
 DEPENDS+=	tex-texlive.infra-[0-9]*:../../print/tex-texlive.infra
 
@@ -68,5 +70,6 @@ post-install:
 	${LN} -sf allcm ${DESTDIR}${PREFIX}/bin/allec
 	${LN} -sf kpsetool ${DESTDIR}${PREFIX}/bin/kpsepath
 	${LN} -sf kpsetool ${DESTDIR}${PREFIX}/bin/kpsexpand
+	${LN} -sf fmtutil ${DESTDIR}${PREFIX}/bin/mktexfmt
 
 .include "../../mk/bsd.pkg.mk"
