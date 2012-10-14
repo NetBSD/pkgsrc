@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 23:02:15 adam Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/14 16:04:44 wiz Exp $
 #
 
 VERSION=	3.5.0
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filezilla/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://filezilla-project.org/
 COMMENT=	FTP, FTPS and SFTP client with intuitive GUI
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,6 +23,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 CONFIGURE_ARGS+=	--disable-autoupdatecheck
 CONFIGURE_ARGS+=	--with-tinyxml=builtin
+# avoid xdg-utils dependency
+CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 
 .include "options.mk"
 
