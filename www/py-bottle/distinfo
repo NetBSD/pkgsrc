@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/14 21:56:56 mspo Exp $
+
+SHA1 (bottle-0.11.2.tar.gz) = 4959deb79a3ebdd9da425d2ee6e5f8ae31d7246e
+RMD160 (bottle-0.11.2.tar.gz) = 456d1460393974a28dc52c5275e9a9e03f71bd9d
+Size (bottle-0.11.2.tar.gz) = 60341 bytes
