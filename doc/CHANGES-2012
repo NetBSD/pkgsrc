@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3263 2012/10/14 21:27:43 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3264 2012/10/14 21:50:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5070,3 +5070,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-kpathsea to 2012nb1 [minskim 2012-10-14]
 	Updated print/tex-tetex to 3.0.27774nb1 [minskim 2012-10-14]
 	Updated print/texlive-tetex to 2011nb3 [minskim 2012-10-14]
+	Updated print/tex-hyphen-base to 2012 [minskim 2012-10-14]
