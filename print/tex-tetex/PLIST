@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/10/13 22:38:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/10/14 21:25:22 minskim Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -10,6 +10,7 @@ bin/kpsepath
 bin/kpsetool
 bin/kpsewhere
 bin/kpsexpand
+bin/mktexfmt
 bin/texconfig-dialog
 bin/texconfig-sys
 bin/texlinks
