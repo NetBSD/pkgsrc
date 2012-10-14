@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3268 2012/10/14 21:58:25 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.3269 2012/10/14 22:00:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5075,3 +5075,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-plain to 3.141592653.26647 [minskim 2012-10-14]
 	Updated fonts/tex-metafont to 2012 [minskim 2012-10-14]
 	Updated www/py-bottle to 0.11.2 [mspo 2012-10-14]
+	Updated graphics/tex-mptopdf to 2012 [minskim 2012-10-14]
+	Updated graphics/tex-mptopdf-doc to 2012 [minskim 2012-10-14]
