@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3258 2012/10/14 17:08:53 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3259 2012/10/14 17:52:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5062,3 +5062,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/filezilla to 3.5.0nb12 [wiz 2012-10-14]
 	Updated print/tex-texlive-common-doc to 2012 [minskim 2012-10-14]
 	Updated print/tex-texlive-en-doc to 2012 [minskim 2012-10-14]
+	Added print/tex-texlive-docindex version 2012 [minskim 2012-10-14]
+	Added print/tex-texlive-docindex-doc version 2012 [minskim 2012-10-14]
