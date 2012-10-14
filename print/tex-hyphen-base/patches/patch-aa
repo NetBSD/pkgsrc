@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.8 2011/12/11 20:30:24 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2012/10/14 21:49:29 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.orig	2011-08-05 02:26:40.000000000 +0000
+--- texmf/tex/generic/config/language.dat.orig	2012-06-06 02:36:59.000000000 +0000
 +++ texmf/tex/generic/config/language.dat
-@@ -57,143 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -57,145 +57,3 @@ english		hyphen.tex  % do not change!
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
 -% from dehyph-exptl:
--german-x-2011-07-01 dehypht-x-2011-07-01.tex
+-german-x-2012-05-30 dehypht-x-2012-05-30.tex
 -=german-x-latest
--ngerman-x-2011-07-01 dehyphn-x-2011-07-01.tex
+-ngerman-x-2012-05-30 dehyphn-x-2012-05-30.tex
 -=ngerman-x-latest
 -% from hyphen-afrikaans:
 -afrikaans loadhyph-af.tex
@@ -60,6 +60,8 @@ $NetBSD: patch-aa,v 1.8 2011/12/11 20:30:24 minskim Exp $
 -french loadhyph-fr.tex
 -=patois
 -=francais
+-% from hyphen-friulan:
+-friulan loadhyph-fur.tex
 -% from hyphen-galician:
 -galician loadhyph-gl.tex
 -% from hyphen-german:
@@ -96,8 +98,6 @@ $NetBSD: patch-aa,v 1.8 2011/12/11 20:30:24 minskim Exp $
 -italian loadhyph-it.tex
 -% from hyphen-kurmanji:
 -kurmanji loadhyph-kmr.tex
--% from hyphen-lao:
--lao loadhyph-lo.tex
 -% from hyphen-latin:
 -latin loadhyph-la.tex
 -% from hyphen-latvian:
@@ -119,6 +119,8 @@ $NetBSD: patch-aa,v 1.8 2011/12/11 20:30:24 minskim Exp $
 -=portuges
 -% from hyphen-romanian:
 -romanian loadhyph-ro.tex
+-% from hyphen-romansh:
+-romansh loadhyph-rm.tex
 -% from hyphen-russian:
 -russian loadhyph-ru.tex
 -% from hyphen-sanskrit:
