@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/14 21:56:56 mspo Exp $
+bin/bottle.py
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/bottle.py
+${PYSITELIB}/bottle.pyc
+${PYSITELIB}/bottle.pyo
