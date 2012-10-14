@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2012/02/13 12:29:12 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2012/10/14 18:13:18 wiz Exp $
+
+Do not install XEmacs mode for editing desktop files.
+(If you want it, make a separate package for it.)
 
 --- Makefile.in.orig	2011-12-20 15:09:44.000000000 +0000
 +++ Makefile.in
