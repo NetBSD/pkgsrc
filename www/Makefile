@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.897 2012/10/10 11:24:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.898 2012/10/14 21:58:02 mspo Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -527,6 +527,7 @@ SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-blosxom
+SUBDIR+=	py-bottle
 SUBDIR+=	py-cherrypy
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
