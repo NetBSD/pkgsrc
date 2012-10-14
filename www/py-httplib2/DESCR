@@ -1,0 +1,13 @@
+A comprehensive Python HTTP client library that supports many features left out
+of other HTTP libraries.
+
+Features:
+ o HTTP and HTTPS
+ o Keep-Alive
+ o Authentication
+ o Caching
+ o All Methods
+ o Redirects
+ o Compression
+ o Lost update support
+ o Unit Tested
