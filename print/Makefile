@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2012/10/13 22:32:56 minskim Exp $
+# $NetBSD: Makefile,v 1.545 2012/10/14 17:52:44 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -621,6 +621,8 @@ SUBDIR+=	tex-texconfig-doc
 SUBDIR+=	tex-texdoc
 SUBDIR+=	tex-texdoc-doc
 SUBDIR+=	tex-texlive-common-doc
+SUBDIR+=	tex-texlive-docindex
+SUBDIR+=	tex-texlive-docindex-doc
 SUBDIR+=	tex-texlive-en-doc
 SUBDIR+=	tex-texlive-scripts
 SUBDIR+=	tex-texlive.infra
