@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/13 22:50:06 minskim Exp $
-bin/mktexfmt
+@comment $NetBSD: PLIST,v 1.4 2012/10/14 21:21:34 minskim Exp $
 share/texmf/web2c/amiga-pl.tcx
 share/texmf/web2c/cp1250cs.tcx
 share/texmf/web2c/cp1250pl.tcx
@@ -9,6 +8,7 @@ share/texmf/web2c/cp852-cs.tcx
 share/texmf/web2c/cp852-pl.tcx
 share/texmf/web2c/cp8bit.tcx
 share/texmf/web2c/empty.tcx
+share/texmf/web2c/fmtutil.cnf
 share/texmf/web2c/il1-t1.tcx
 share/texmf/web2c/il2-cs.tcx
 share/texmf/web2c/il2-pl.tcx
