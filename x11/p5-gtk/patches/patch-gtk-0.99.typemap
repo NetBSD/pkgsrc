@@ -1,0 +1,31 @@
+$NetBSD: patch-gtk-0.99.typemap,v 1.1 2012/10/15 12:58:33 wiz Exp $
+
+--- gtk-0.99.typemap.orig	2001-05-07 10:13:45.000000000 +0000
++++ gtk-0.99.typemap
+@@ -62,7 +62,7 @@ T_GtkPTROBJ
+ 	} while(0)
+ 
+ T_GtkPTROBJOrNULL
+-	$var = SvTRUE($arg) ? Cast$type(SvGtkObjectRef($arg, \"" . ($foo=$ntype,$foo=~s/_OrNULL//,$foo). "\")) : 0
++	$var = SvTRUE($arg) ? Cast$type(SvGtkObjectRef($arg, \"" . (our $foo=$ntype,$foo=~s/_OrNULL//,$foo). "\")) : 0
+ 
+ T_GtkPTROBJUp
+ 	$var = Cast$type(SvGtkObjectRef($arg, \"${ntype}\"))
+@@ -95,14 +95,14 @@ T_SimpleVal
+ 	do {
+ 		if (!$arg || !SvOK($arg))
+ 			croak(\"$var is not of type ${ntype}\");
+-		$var = Sv" . ($foo=$ntype, $foo=~s/://g, $foo=~s/^GtkGdk/Gdk/, $foo) . "($arg);
++		$var = Sv" . (our $foo=$ntype, $foo=~s/://g, $foo=~s/^GtkGdk/Gdk/, $foo) . "($arg);
+ 	} while (0)
+ 
+ T_SimpleValOrNULL
+-	$var = ($arg && SvOK($arg)) ? Sv" . ($foo=$ntype, $foo=~s/://g, $foo=~s/^GtkGdk/Gdk/, $foo=~s/_OrNULL$//, $foo) . "($arg) : 0
++	$var = ($arg && SvOK($arg)) ? Sv" . (our $foo=$ntype, $foo=~s/://g, $foo=~s/^GtkGdk/Gdk/, $foo=~s/_OrNULL$//, $foo) . "($arg) : 0
+ 
+ T_SimplePtr
+-	$var = Sv" . ($foo=$ntype, $foo=~s/://g, $foo=~s/^GtkGdk/Gdk/, $foo) . "($arg,0)
++	$var = Sv" . (our $foo=$ntype, $foo=~s/://g, $foo=~s/^GtkGdk/Gdk/, $foo) . "($arg,0)
+ 
+ OUTPUT
+ 
