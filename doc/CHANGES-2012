@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3270 2012/10/14 22:10:54 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3271 2012/10/15 03:33:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5078,3 +5078,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/tex-mptopdf to 2012 [minskim 2012-10-14]
 	Updated graphics/tex-mptopdf-doc to 2012 [minskim 2012-10-14]
 	Added www/py-httplib2 version 0.7.6 [wiz 2012-10-14]
+	Updated mail/roundcube to 0.8.1nb1 [taca 2012-10-15]
