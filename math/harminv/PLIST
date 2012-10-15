@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/15 18:57:29 asau Exp $
+bin/harminv
+include/harminv.h
+lib/libharminv.la
+lib/pkgconfig/harminv.pc
+man/man1/harminv.1
