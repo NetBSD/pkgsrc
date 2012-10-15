@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3274 2012/10/15 12:31:15 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3275 2012/10/15 12:32:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed lang/vala016 [drochner 2012-10-15]
 	Updated devel/p5-Date-Calc-XS to 6.3 [wiz 2012-10-15]
 	Updated databases/p5-Fsdb to 2.26nb1 [wiz 2012-10-15]
+	Updated devel/p5-Test-Compile to 0.13nb4 [wiz 2012-10-15]
