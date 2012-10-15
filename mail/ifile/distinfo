@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/10/03 12:47:20 obache Exp $
+$NetBSD: distinfo,v 1.9 2012/10/15 09:35:16 joerg Exp $
 
 SHA1 (ifile-1.3.4/ifile-1.3.4.tar.gz) = c8ef75cfe8f25af65b3384e016b7fd2d324346b0
 RMD160 (ifile-1.3.4/ifile-1.3.4.tar.gz) = ac13f9b8ba99319be61764ffb9492cc9405b3ea7
 Size (ifile-1.3.4/ifile-1.3.4.tar.gz) = 187742 bytes
-SHA1 (patch-aa) = c61f441f9bcae546fcebe351be02cad9f1e3b00a
+SHA1 (patch-aa) = f60b5642496e83707f722c2ea1d63460599226ba
 SHA1 (patch-ad) = 6b92eec1416a40cc692ff58915f8ebf133160f6a
+SHA1 (patch-argp_argp-fmtstream.h) = 505591cb210f783422a9e600e1f97a2ca3ae09ad
