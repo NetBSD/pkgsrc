@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3273 2012/10/15 11:55:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3274 2012/10/15 12:31:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5083,3 +5083,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added multimedia/ffmpeg version 20120919.0.10.5 [drochner 2012-10-15]
 	Removed lang/vala016 [drochner 2012-10-15]
 	Updated devel/p5-Date-Calc-XS to 6.3 [wiz 2012-10-15]
+	Updated databases/p5-Fsdb to 2.26nb1 [wiz 2012-10-15]
