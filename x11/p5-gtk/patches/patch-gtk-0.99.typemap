@@ -1,4 +1,8 @@
-$NetBSD: patch-gtk-0.99.typemap,v 1.1 2012/10/15 12:58:33 wiz Exp $
+$NetBSD: patch-gtk-0.99.typemap,v 1.2 2012/10/15 13:05:54 wiz Exp $
+
+Fix build with perl-5.16.
+Based on
+http://blog.truecrux.org/post/xxxi
 
 --- gtk-0.99.typemap.orig	2001-05-07 10:13:45.000000000 +0000
 +++ gtk-0.99.typemap
