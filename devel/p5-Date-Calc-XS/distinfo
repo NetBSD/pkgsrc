@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/24 16:53:49 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/10/15 11:55:42 wiz Exp $
 
-SHA1 (Date-Calc-XS-6.2.tar.gz) = 306e8416add132fa497a336e6594f30b9abb624e
-RMD160 (Date-Calc-XS-6.2.tar.gz) = 9459c46d260db974c57a3512737430e67ed02c93
-Size (Date-Calc-XS-6.2.tar.gz) = 84306 bytes
+SHA1 (Date-Calc-XS-6.3.tar.gz) = 534f4c422f4b344248f5288edbfc83571f6350f9
+RMD160 (Date-Calc-XS-6.3.tar.gz) = ea167f497e0124010d70ac2af094262bb7a8a73b
+Size (Date-Calc-XS-6.3.tar.gz) = 87311 bytes
