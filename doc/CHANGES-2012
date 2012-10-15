@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3272 2012/10/15 09:11:26 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3273 2012/10/15 11:55:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5079,6 +5079,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/tex-mptopdf-doc to 2012 [minskim 2012-10-14]
 	Added www/py-httplib2 version 0.7.6 [wiz 2012-10-14]
 	Updated mail/roundcube to 0.8.1nb1 [taca 2012-10-15]
-	Removed multimedia/ffmpeg010 version 20120919.0.10.5 [drochner 2012-10-15]
+	Removed multimedia/ffmpeg010 [drochner 2012-10-15]
 	Added multimedia/ffmpeg version 20120919.0.10.5 [drochner 2012-10-15]
-	Removed lang/vala016 version 0.16.1 [drochner 2012-10-15]
+	Removed lang/vala016 [drochner 2012-10-15]
+	Updated devel/p5-Date-Calc-XS to 6.3 [wiz 2012-10-15]
