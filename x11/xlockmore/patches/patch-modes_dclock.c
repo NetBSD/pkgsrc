@@ -1,7 +1,21 @@
-$NetBSD: patch-modes_dclock.c,v 1.1 2012/10/15 15:29:10 is Exp $
+$NetBSD: patch-modes_dclock.c,v 1.2 2012/10/15 20:47:57 is Exp $
 
 --- modes/dclock.c.orig	2012-01-23 13:19:21.000000000 +0000
 +++ modes/dclock.c
+@@ -376,11 +376,11 @@ static dclockstruct *dclocks = (dclockst
+ extern char *message;
+ 
+ static unsigned long
+-timeAtLastNewYear(long timeNow)
++timeAtLastNewYear(time_t timeNow)
+ {
+ 	struct tm *t;
+ 
+-	t = localtime((const time_t *) &timeNow);
++	t = localtime(&timeNow);
+ 	return (unsigned long)(t->tm_year);
+ }
+ 
 @@ -420,7 +420,7 @@ convert(double x, char *string)
  }
  
