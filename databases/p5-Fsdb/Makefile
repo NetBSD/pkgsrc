@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/10/07 18:52:17 bad Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/15 12:31:00 wiz Exp $
 
 DISTNAME=	Fsdb-2.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/FSDB/
 
@@ -18,6 +19,65 @@ DEPENDS+=	p5-HTML-Parser>=3.69:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Text-CSV_XS>=0.91:../../textproc/p5-Text-CSV_XS
 
 PERL5_PACKLIST=		auto/Fsdb/.packlist
+
+REPLACE_PERL+=	lib/Fsdb.pm
+REPLACE_PERL+=	lib/Fsdb/Filter.pm
+REPLACE_PERL+=	lib/Fsdb/IO.pm
+REPLACE_PERL+=	lib/Fsdb/Support/DelayPassComments.pm
+REPLACE_PERL+=	lib/Fsdb/Support/NamedTmpfile.pm
+REPLACE_PERL+=	lib/Fsdb/Support/TDistribution.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbmultistats.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolstats.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/csv_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbrowuniq.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolstatscores.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbfilepivot.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolsplittocols.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolcreate.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcol.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbsort.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/mysql_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbpipeline.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolneaten.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbmapreduce.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolsregression.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/tcpdump_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbrow.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbfilealter.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolsplittorows.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbrowaccumulate.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/cgi_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/db_to_csv.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbjoin.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbsubprocess.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/db_to_html_table.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbfilevalidate.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbmerge.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolhisto.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbfilestripcomments.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/html_table_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/tabdelim_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolcopylast.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbformmail.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcoldefine.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbmerge2.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolpercentile.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/kitrace_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/combined_log_format_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolmerge.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/xml_to_db.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolrename.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbrowdiff.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolscorrelate.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbroweval.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbrvstatdiff.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbrowcount.pm
+REPLACE_PERL+=	lib/Fsdb/Filter/dbcolmovingstats.pm
+REPLACE_PERL+=	lib/Fsdb/Support.pm
+REPLACE_PERL+=	lib/Fsdb/BoundedQueue.pm
+REPLACE_PERL+=	lib/Fsdb/IO/Replayable.pm
+REPLACE_PERL+=	lib/Fsdb/IO/Writer.pm
+REPLACE_PERL+=	lib/Fsdb/IO/Reader.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
