@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3295 2012/10/16 22:10:58 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3296 2012/10/16 22:25:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5114,3 +5114,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-ifplatform-doc version 0.3a [minskim 2012-10-16]
 	Added graphics/tex-auto-pst-pdf version 0.6 [minskim 2012-10-16]
 	Added graphics/tex-auto-pst-pdf-doc version 0.6 [minskim 2012-10-16]
+	Updated graphics/tex-pstricks to 2.33 [minskim 2012-10-16]
+	Updated graphics/tex-pstricks-doc to 2.33 [minskim 2012-10-16]
