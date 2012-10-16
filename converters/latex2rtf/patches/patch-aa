@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.6 2009/12/17 21:56:22 abs Exp $
+$NetBSD: patch-aa,v 1.7 2012/10/16 17:23:33 shattered Exp $
 
---- Makefile.orig	2004-11-08 02:59:18.000000000 +0000
+--- Makefile.orig	2007-11-18 06:10:57.000000000 +0000
 +++ Makefile
 @@ -2,3 +2,3 @@
  
 -CC=gcc
 +CC?=gcc
  MKDIR=mkdir -p
-@@ -20,3 +20,3 @@ CFLAGS:=-DUNIX
+@@ -25,3 +25,3 @@ LINK_FLAGS = -lm
  #Base directory - adapt as needed
 -PREFIX=$(PREFIX_DRIVE)/usr/local
 +PREFIX?=$(PREFIX_DRIVE)/usr/local
  
-@@ -27,3 +27,3 @@ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
+@@ -32,3 +32,3 @@ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
  BIN_INSTALL=$(PREFIX)/bin
 -MAN_INSTALL=$(PREFIX)/man/man1
 +MAN_INSTALL=$(PREFIX)/$(PKGMANDIR)/man1
  INFO_INSTALL=$(PREFIX)/info
-@@ -170,13 +170,13 @@ doc: doc/latex2rtf.texi doc/Makefile
- install: latex2rtf doc/latex2rtf.1 $(CFGS) scripts/latex2png
+@@ -205,13 +205,13 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+ 	cd doc && $(MAKE)
 -	$(MKDIR) $(BIN_INSTALL)
 -	$(MKDIR) $(MAN_INSTALL)
 -	$(MKDIR) $(CFG_INSTALL)
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.6 2009/12/17 21:56:22 abs Exp $
 +	cp doc/latex2rtf.pdf  $(DESTDIR)$(PREFIX)/share/doc/latex2rtf
 +#	cp doc/latex2rtf.txt  $(DESTDIR)$(SUPPORT_INSTALL)
  	@echo "******************************************************************"
-@@ -197,5 +197,5 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+@@ -232,5 +232,5 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
  install-info: doc/latex2rtf.info
 -	$(MKDIR) $(INFO_INSTALL)
 -	cp doc/latex2rtf.info $(INFO_INSTALL)

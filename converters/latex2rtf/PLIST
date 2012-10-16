@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/10/16 17:23:33 shattered Exp $
 bin/latex2png
 bin/latex2rtf
 info/latex2rtf.info
@@ -46,6 +46,7 @@ share/latex2rtf/cfg/spanish.cfg
 share/latex2rtf/cfg/style.cfg
 share/latex2rtf/cfg/swedish.cfg
 share/latex2rtf/cfg/turkish.cfg
+share/latex2rtf/cfg/ukrainian.cfg
 share/latex2rtf/cfg/usorbian.cfg
 share/latex2rtf/cfg/welsh.cfg
 share/doc/latex2rtf/latex2rtf.html
