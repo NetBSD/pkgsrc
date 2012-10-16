@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/04/27 12:31:46 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/16 07:08:13 wiz Exp $
 #
 
 VERS=			1.7.5
@@ -35,12 +35,7 @@ INSTALLATION_DIRS=	${PYSITELIB}/pysvn
 BUILDLINK_TRANSFORM+=	rm:-lresolv
 .endif
 
-.include "../../lang/python/pyversion.mk"
-
 do-configure:
-.if ${PYVERSSUFFIX} == "2.5"
-	cd ${WRKSRC}/${PSVNSRC} && ${PYTHONBIN} ${PYSETUP} backport
-.endif
 	cd ${WRKSRC}/${PSVNSRC} && \
 	${PYTHONBIN} ${PYSETUP} configure --fixed-module-name \
 		--svn-root-dir=${BUILDLINK_PREFIX.subversion-base}
