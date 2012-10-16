@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2011/12/14 19:42:15 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/16 20:03:24 minskim Exp $
 
 DISTNAME=	pdftex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.40.11
-PKGREVISION=	3
-TEXLIVE_REV=	24563
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.40.11pl27932
+TEXLIVE_REV=	27932
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pdftex
