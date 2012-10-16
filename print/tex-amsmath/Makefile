@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/02/19 00:27:38 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 21:52:51 minskim Exp $
 
 DISTNAME=	amsmath
 PKGNAME=	tex-${DISTNAME}-2.13
 PKGREVISION=	2
-TEXLIVE_REV=	20250
+TEXLIVE_REV=	26389
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	AMS mathematical facilities for LaTeX

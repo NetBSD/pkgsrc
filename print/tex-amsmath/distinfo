@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/11/14 15:19:41 minskim Exp $
+$NetBSD: distinfo,v 1.4 2012/10/16 21:52:51 minskim Exp $
 
-SHA1 (tex-amsmath-20250/amsmath.tar.xz) = d76fde2713b10f3aded375a085b7bcf4fd7cec6c
-RMD160 (tex-amsmath-20250/amsmath.tar.xz) = 4b786ac27d80119d1e8f9affd65d0d27c88ea64c
-Size (tex-amsmath-20250/amsmath.tar.xz) = 29948 bytes
+SHA1 (tex-amsmath-26389/amsmath.tar.xz) = 3d6d316611ceee000a0ab6ec21dc4cca62761744
+RMD160 (tex-amsmath-26389/amsmath.tar.xz) = 7a6ebac576895072365e8cfbd328053cdd42dac2
+Size (tex-amsmath-26389/amsmath.tar.xz) = 29952 bytes
