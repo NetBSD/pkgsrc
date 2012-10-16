@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3282 2012/10/16 17:44:08 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3283 2012/10/16 19:42:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5092,3 +5092,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/latex2rtf to 1.9.19 [shattered 2012-10-16]
 	Added devel/pangox-compat version 0.0.1 [wiz 2012-10-16]
 	Updated graphics/gtkglext to 1.2.0nb18 [wiz 2012-10-16]
+	Updated print/tex-ifluatex to 1.3pl26725 [minskim 2012-10-16]
+	Updated print/tex-ifluatex-doc to 1.3pl26725 [minskim 2012-10-16]
