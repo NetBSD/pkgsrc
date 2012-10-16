@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/26 21:53:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/10/16 21:55:12 minskim Exp $
 bin/pdfatfi
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
+share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
 share/texmf-dist/scripts/oberdiek/luacolor-pre065.lua
 share/texmf-dist/scripts/oberdiek/luacolor.lua
 share/texmf-dist/scripts/oberdiek/magicnum.lua
@@ -19,6 +20,7 @@ share/texmf-dist/tex/generic/oberdiek/embedfile.sty
 share/texmf-dist/tex/generic/oberdiek/engord.sty
 share/texmf-dist/tex/generic/oberdiek/eolgrab.sty
 share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+share/texmf-dist/tex/generic/oberdiek/fibnum.sty
 share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -88,6 +90,7 @@ share/texmf-dist/tex/generic/oberdiek/setouterhbox.sty
 share/texmf-dist/tex/generic/oberdiek/soulutf8.sty
 share/texmf-dist/tex/generic/oberdiek/stringenc.sty
 share/texmf-dist/tex/generic/oberdiek/telprint.sty
+share/texmf-dist/tex/generic/oberdiek/thepdfnumber.sty
 share/texmf-dist/tex/generic/oberdiek/uniquecounter.sty
 share/texmf-dist/tex/latex/oberdiek/accsupp-dvipdfm.def
 share/texmf-dist/tex/latex/oberdiek/accsupp-dvips.def
@@ -121,6 +124,7 @@ share/texmf-dist/tex/latex/oberdiek/classlist.sty
 share/texmf-dist/tex/latex/oberdiek/colonequals.sty
 share/texmf-dist/tex/latex/oberdiek/dtx-attach.sty
 share/texmf-dist/tex/latex/oberdiek/dvipscol.sty
+share/texmf-dist/tex/latex/oberdiek/enparen.sty
 share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 share/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 share/texmf-dist/tex/latex/oberdiek/flags.sty
@@ -175,6 +179,7 @@ share/texmf-dist/tex/latex/oberdiek/x-atarist.def
 share/texmf-dist/tex/latex/oberdiek/x-cp1250.def
 share/texmf-dist/tex/latex/oberdiek/x-cp1251.def
 share/texmf-dist/tex/latex/oberdiek/x-cp1252.def
+share/texmf-dist/tex/latex/oberdiek/x-cp1255.def
 share/texmf-dist/tex/latex/oberdiek/x-cp1257.def
 share/texmf-dist/tex/latex/oberdiek/x-cp437.def
 share/texmf-dist/tex/latex/oberdiek/x-cp850.def
