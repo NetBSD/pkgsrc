@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/16 21:59:00 minskim Exp $
+share/texmf-dist/doc/latex/ifplatform/README
+share/texmf-dist/doc/latex/ifplatform/ifplatform.pdf
