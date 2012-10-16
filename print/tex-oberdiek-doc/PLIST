@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/26 21:53:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/10/16 21:55:12 minskim Exp $
 share/texmf-dist/doc/latex/oberdiek/accsupp-example1.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp-example2.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp.pdf
@@ -28,6 +28,7 @@ share/texmf-dist/doc/latex/oberdiek/embedfile-example-collection.tex
 share/texmf-dist/doc/latex/oberdiek/embedfile-example-plain.tex
 share/texmf-dist/doc/latex/oberdiek/embedfile.pdf
 share/texmf-dist/doc/latex/oberdiek/engord.pdf
+share/texmf-dist/doc/latex/oberdiek/enparen.pdf
 share/texmf-dist/doc/latex/oberdiek/eolgrab.pdf
 share/texmf-dist/doc/latex/oberdiek/epstopdf.pdf
 share/texmf-dist/doc/latex/oberdiek/etexcmds.pdf
@@ -35,6 +36,8 @@ share/texmf-dist/doc/latex/oberdiek/example-mycolorsetup.sty
 share/texmf-dist/doc/latex/oberdiek/example/eolgrab-example-env.tex
 share/texmf-dist/doc/latex/oberdiek/example/eolgrab-example-ltx.tex
 share/texmf-dist/doc/latex/oberdiek/example/eolgrab-example-sec.tex
+share/texmf-dist/doc/latex/oberdiek/example/hologo-example.tex
+share/texmf-dist/doc/latex/oberdiek/fibnum.pdf
 share/texmf-dist/doc/latex/oberdiek/flags.pdf
 share/texmf-dist/doc/latex/oberdiek/gettitlestring.pdf
 share/texmf-dist/doc/latex/oberdiek/grfext.pdf
@@ -172,12 +175,15 @@ share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/etexcmds-test4.tex
+share/texmf-dist/doc/latex/oberdiek/test/fibnum-test-calc.tex
+share/texmf-dist/doc/latex/oberdiek/test/fibnum-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/gettitlestring-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/gettitlestring-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/grfext-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/grfext-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/grffile-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/hobsub-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/hologo-test-list.tex
 share/texmf-dist/doc/latex/oberdiek/test/hologo-test-spacefactor.tex
 share/texmf-dist/doc/latex/oberdiek/test/hologo-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/hopatch-test1.tex
@@ -214,6 +220,7 @@ share/texmf-dist/doc/latex/oberdiek/test/kvoptions-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test3.tex
+share/texmf-dist/doc/latex/oberdiek/test/kvsetkeys-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/letltxmacro-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/letltxmacro-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test1.tex
@@ -221,6 +228,7 @@ share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/listingsutf8-test5.tex
+share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test-carcdr.tex
 share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test-gobble.tex
 share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test-ifboxempty.tex
 share/texmf-dist/doc/latex/oberdiek/test/ltxcmds-test-ifempty.tex
@@ -277,6 +285,7 @@ share/texmf-dist/doc/latex/oberdiek/test/refcount-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/refcount-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/refcount-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/refcount-test4.tex
+share/texmf-dist/doc/latex/oberdiek/test/refcount-test5.tex
 share/texmf-dist/doc/latex/oberdiek/test/rerunfilecheck-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/resizegather-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/rotchiffre-test1.tex
@@ -296,6 +305,9 @@ share/texmf-dist/doc/latex/oberdiek/test/soulutf8-test5.tex
 share/texmf-dist/doc/latex/oberdiek/test/stringenc-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/stringenc-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/telprint-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/thepdfnumber-test1.tex
+share/texmf-dist/doc/latex/oberdiek/test/thepdfnumber-test2.tex
+share/texmf-dist/doc/latex/oberdiek/test/thepdfnumber-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/uniquecounter-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/uniquecounter-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/uniquecounter-test3.tex
@@ -303,6 +315,7 @@ share/texmf-dist/doc/latex/oberdiek/test/zref-test-base.tex
 share/texmf-dist/doc/latex/oberdiek/test/zref-test-runs.tex
 share/texmf-dist/doc/latex/oberdiek/test/zref-test-titleref-memoir.tex
 share/texmf-dist/doc/latex/oberdiek/test/zref-test1.tex
+share/texmf-dist/doc/latex/oberdiek/thepdfnumber.pdf
 share/texmf-dist/doc/latex/oberdiek/transparent-example.tex
 share/texmf-dist/doc/latex/oberdiek/transparent.pdf
 share/texmf-dist/doc/latex/oberdiek/twoopt.pdf
