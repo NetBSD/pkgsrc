@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/10/16 17:50:03 wiz Exp $
+
+SHA1 (pangox-compat-0.0.1.tar.xz) = fad400b88882cf59e125b25771319f66db03f203
+RMD160 (pangox-compat-0.0.1.tar.xz) = ff7ff4ed5f484a34bc57ef74e5d93837b70125d7
+Size (pangox-compat-0.0.1.tar.xz) = 251452 bytes
+SHA1 (patch-pangox.pc.in) = a34026dae5150e8ba95c3a0dd27352757db12649
