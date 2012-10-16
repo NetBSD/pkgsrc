@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3283 2012/10/16 19:42:24 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3284 2012/10/16 19:50:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5094,3 +5094,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gtkglext to 1.2.0nb18 [wiz 2012-10-16]
 	Updated print/tex-ifluatex to 1.3pl26725 [minskim 2012-10-16]
 	Updated print/tex-ifluatex-doc to 1.3pl26725 [minskim 2012-10-16]
+	Updated print/tex-latexconfig to 2012 [minskim 2012-10-16]
