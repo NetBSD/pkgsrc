@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/02 21:25:50 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/16 06:48:15 wiz Exp $
 
 SQLALCHEMYVERS=	0.6.9
 DISTNAME=	SQLAlchemy-${SQLALCHEMYVERS}
@@ -13,6 +13,7 @@ COMMENT=	Python SQL toolkit and Object Relational Mapper
 LICENSE=	mit
 
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "options.mk"
 
