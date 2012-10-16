@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/16 22:07:51 minskim Exp $
+share/texmf-dist/doc/latex/auto-pst-pdf/README
+share/texmf-dist/doc/latex/auto-pst-pdf/auto-pst-pdf-DE.pdf
+share/texmf-dist/doc/latex/auto-pst-pdf/auto-pst-pdf-DE.tex
+share/texmf-dist/doc/latex/auto-pst-pdf/auto-pst-pdf.pdf
+share/texmf-dist/doc/latex/auto-pst-pdf/example-psfrag.tex
+share/texmf-dist/doc/latex/auto-pst-pdf/example.eps
+share/texmf-dist/doc/latex/auto-pst-pdf/example.tex
