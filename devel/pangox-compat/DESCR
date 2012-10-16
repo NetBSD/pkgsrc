@@ -1,0 +1,3 @@
+This is a compatibility library providing the obsolete pangox library
+that is not shipped by Pango itself anymore.  If you are still using
+pangox, well, really, get a life...
