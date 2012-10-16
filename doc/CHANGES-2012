@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3279 2012/10/16 10:01:47 kleink Exp $
+$NetBSD: CHANGES-2012,v 1.3280 2012/10/16 17:24:04 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5089,3 +5089,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/py-scipy to 0.7.2nb1 [wiz 2012-10-16]
 	Updated graphics/py-pyfits to 2.4.0nb1 [wiz 2012-10-16]
 	Updated textproc/p5-Text-vCard to 2.12 [kleink 2012-10-16]
+	Updated converters/latex2rtf to 1.9.19 [shattered 2012-10-16]
