@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/09/14 20:50:11 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/16 19:40:01 minskim Exp $
 
 DISTNAME=	ifluatex
-PKGNAME=	tex-${DISTNAME}-1.3
-TEXLIVE_REV=	18100
+PKGNAME=	tex-${DISTNAME}-1.3pl26725
+TEXLIVE_REV=	26725
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	The \ifluatex switch for TeX
