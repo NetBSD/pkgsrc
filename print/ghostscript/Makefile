@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2012/10/08 11:06:33 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2012/10/16 10:10:17 rumko Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -89,6 +89,7 @@ post-extract:
 	${RM} -rf ${WRKSRC}/libpng
 #	${RM} -rf ${WRKSRC}/tiff
 #	${RM} -rf ${WRKSRC}/zlib
+	${RM} -rf ${WRKSRC}/freetype
 #
 #  To allow outside customization, rename cidfmap
 #	 (if you look at inside of the file, it is logically empty)
@@ -103,6 +104,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 # pkgsrc jasper is too new
 #.include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
