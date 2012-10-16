@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3290 2012/10/16 21:36:13 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3291 2012/10/16 21:43:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5105,3 +5105,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-latex-bin-doc to 2012 [minskim 2012-10-16]
 	Updated print/tex-pdftex-def to 0.06d [minskim 2012-10-16]
 	Updated print/tex-graphics-doc to 1.0onb3 [minskim 2012-10-16]
+	Updated print/tex-tools to 2012 [minskim 2012-10-16]
+	Updated print/tex-tools-doc to 2012 [minskim 2012-10-16]
