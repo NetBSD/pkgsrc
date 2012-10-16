@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/16 17:50:03 wiz Exp $
+etc/pango/pangox.aliases
+include/pango-1.0/pango/pangox.h
+lib/libpangox-1.0.la
+lib/pkgconfig/pangox.pc
