@@ -1,0 +1,8 @@
+This package uses the (La)TeX extension -shell-escape to
+establish whether the document is being processed on a Windows
+or on a Unix-like system (Mac OS X, Linux, etc.), or on Cygwin
+(Unix environment over a windows system). Booleans provided
+are \ifwindows, \iflinux, \ifmacosx, and \ifcygwin. The
+package also preserves the output of uname on a Unix-like
+system, which may be used to distinguish between various
+classes of Unix systems.
