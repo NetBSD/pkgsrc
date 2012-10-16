@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3286 2012/10/16 20:40:02 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3287 2012/10/16 20:45:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5099,3 +5099,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-pdftex-doc to 1.40.11pl27932 [minskim 2012-10-16]
 	Updated print/tex-luatex to 0.70.1pl26689 [minskim 2012-10-16]
 	Updated print/tex-luatex-doc to 0.70.1pl26689 [minskim 2012-10-16]
+	Updated print/tex-latex to 2012 [minskim 2012-10-16]
+	Updated print/tex-latex-doc to 2012 [minskim 2012-10-16]
