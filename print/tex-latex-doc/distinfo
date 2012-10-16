@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/12/14 20:14:26 minskim Exp $
+$NetBSD: distinfo,v 1.5 2012/10/16 20:44:38 minskim Exp $
 
-SHA1 (tex-latex-23639/latex.doc.tar.xz) = 15f65d9845c4aa13aff8e89089717824feea0dd1
-RMD160 (tex-latex-23639/latex.doc.tar.xz) = eef6cbe7a66a3dccf7b0fefb5f00ec7aee78e9c6
-Size (tex-latex-23639/latex.doc.tar.xz) = 8068036 bytes
+SHA1 (tex-latex-27907/latex.doc.tar.xz) = 4c99de95d7234ca1df847373f4a098f9b33422aa
+RMD160 (tex-latex-27907/latex.doc.tar.xz) = 91e31c9cfc2a2cb7d535029d12925c772b6483a7
+Size (tex-latex-27907/latex.doc.tar.xz) = 8016936 bytes
