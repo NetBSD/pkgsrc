@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/12/14 19:42:15 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/16 20:03:24 minskim Exp $
 
 DISTNAME=	pdftex
-PKGNAME=	tex-${DISTNAME}-1.40.11
-PKGREVISION=	5
-TEXLIVE_REV=	24563
+PKGNAME=	tex-${DISTNAME}-1.40.11pl27932
+TEXLIVE_REV=	27932
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX extension for direct creation of PDF
@@ -16,12 +15,21 @@ DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
 DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
+USE_TOOLS+=	sh:run
+
+REPLACE_SH=	bin/simpdftex
+
 INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=		"pdftex pdftex language.def -translate-file=cp227.tcx *pdfetex.ini\\netex pdftex language.def -translate-file=cp227.tcx *etex.ini\\npdfetex pdftex language.def -translate-file=cp227.tcx *pdfetex.ini\\n"
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
 .include "../../print/texlive/package.mk"
+
+post-extract:
+	${MKDIR} ${WRKSRC}/bin
+	${MV} ${WRKSRC}/texmf-dist/scripts/simpdftex/simpdftex \
+		${WRKSRC}/bin/
 
 post-install:
 	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/etex
