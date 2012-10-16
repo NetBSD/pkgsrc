@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2012/08/21 15:26:31 taca Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2012/10/16 18:45:01 tron Exp $
 
 DISTNAME=	roundcubemail-0.8.1-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -9,8 +10,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.8.1:../../mail/pear-Mail_Mime

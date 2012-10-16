@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2012/08/21 15:26:31 taca Exp $
+$NetBSD: distinfo,v 1.25.2.1 2012/10/16 18:45:01 tron Exp $
 
 SHA1 (roundcubemail-0.8.1-dep.tar.gz) = 3e9642800e7e5226057b54c61baba17f5ba75680
 RMD160 (roundcubemail-0.8.1-dep.tar.gz) = 92430f23b5241ef9cf8942d75455d2aba84fdc72
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 4946fab1dd1a809d32de7fa16b9eb1075eb8424a
 SHA1 (patch-ab) = ac9f7ac488f9c309fd1b30a8ecec73e52b245c11
 SHA1 (patch-ac) = c25fc1c662bbdbde388165fe835e8af9b5665c5b
 SHA1 (patch-af) = e2bae396f049b2c5030f24e539b7f418a3d09d78
+SHA1 (patch-program_steps_utils_error.inc) = d2062e13762d33bcd8426c7c2db1f49e910b9d50
