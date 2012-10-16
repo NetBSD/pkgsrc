@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1655 2012/10/06 22:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1656 2012/10/16 17:42:31 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1252,6 +1252,7 @@ SUBDIR+=	p5-version
 SUBDIR+=	palmpower
 SUBDIR+=	pango
 SUBDIR+=	pangomm
+SUBDIR+=	pangox-compat
 SUBDIR+=	papaya
 SUBDIR+=	pardiff
 SUBDIR+=	patch
