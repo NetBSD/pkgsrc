@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/07 19:45:53 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 21:41:00 minskim Exp $
 
 DISTNAME=	tools
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	20258
+PKGNAME=	tex-${DISTNAME}-2012
+TEXLIVE_REV=	26263
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	The LaTeX standard tools bundle
