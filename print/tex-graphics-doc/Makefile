@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/11/07 19:36:54 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 21:35:13 minskim Exp $
 
 DISTNAME=	graphics.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0o
-PKGREVISION=	2
-TEXLIVE_REV=	20255
+PKGREVISION=	3
+TEXLIVE_REV=	25405
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-graphics
