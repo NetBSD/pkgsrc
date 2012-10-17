@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.88 2012/09/16 20:03:50 cheusov Exp $
+# $NetBSD: rubyversion.mk,v 1.88.2.1 2012/10/17 09:47:20 tron Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -27,10 +27,11 @@
 #		Possible values: Yes No
 #		Default: Yes
 #
+# === Infrastructure variables ===
+#
 # RUBY_VERSION_REQD
-#	Ruby version to use. This is a user variable and
-#	should not be set in packages.
-#	Normally it is used by bulk build tools.
+#	Ruby version to use. This variable should not be set in
+#	packages.  Normally it is used by bulk build tools.
 #
 #		Possible values: ${RUBY_VERSION_SUPPORTED}
 #		Default:         ${RUBY_VERSION_DEFAULT}
@@ -205,7 +206,7 @@ RUBY193_VERSION=	1.9.3
 
 # patch
 RUBY18_PATCHLEVEL=	pl370
-RUBY193_PATCHLEVEL=	p194
+RUBY193_PATCHLEVEL=	p286
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
