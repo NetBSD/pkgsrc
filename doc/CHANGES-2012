@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3296 2012/10/16 22:25:42 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3297 2012/10/17 01:56:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5116,3 +5116,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added graphics/tex-auto-pst-pdf-doc version 0.6 [minskim 2012-10-16]
 	Updated graphics/tex-pstricks to 2.33 [minskim 2012-10-16]
 	Updated graphics/tex-pstricks-doc to 2.33 [minskim 2012-10-16]
+	Updated www/ikiwiki to 3.20121016 [schmonz 2012-10-17]
