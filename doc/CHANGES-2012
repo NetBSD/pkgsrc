@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3300 2012/10/17 22:15:00 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3301 2012/10/17 22:20:33 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5120,3 +5120,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated parallel/hwloc to 1.5 [asau 2012-10-17]
 	Updated databases/phpmyadmin to 3.5.3 [tron 2012-10-17]
 	Updated textproc/py-sphinx to 1.1.3nb1 [wiz 2012-10-17]
+	Updated security/scrypt to 1.1.6 [pettai 2012-10-17]
+	Added security/scrypt version 1.1.6 [pettai 2012-10-17]
