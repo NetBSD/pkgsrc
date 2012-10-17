@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/17 23:27:34 asau Exp $
 
-DISTNAME=	openmpi-1.6
-PKGREVISION=	1
+DISTNAME=	openmpi-1.6.2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +25,7 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
+CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
@@ -51,4 +51,6 @@ TEST_TARGET=	check
 LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 .include "../../devel/libltdl/convenience.mk" # for "test" target to work
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../parallel/hwloc/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk" # should be reexported by hwloc?
 .include "../../mk/bsd.pkg.mk"
