@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/17 22:17:47 pettai Exp $
+
+SHA1 (scrypt-1.1.6.tgz) = 7b1b3feccfe2ff08b5d05752ef1ca7df2ec8646d
+RMD160 (scrypt-1.1.6.tgz) = a395db33b7c638a4f0feba2bc76874cf634b33de
+Size (scrypt-1.1.6.tgz) = 83776 bytes
