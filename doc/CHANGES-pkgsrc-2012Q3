@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.14 2012/10/17 09:48:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.15 2012/10/17 19:22:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -46,3 +46,6 @@ Pullup ticket #3948 - requested by taca
 mail/roundcube: security patch
 Pullup ticket #3947 - requested by taca
 lang/ruby193-base: security update
+Pullup ticket #3949 - requested by is
+x11/xlockmore: security patch
+x11/xlockmore-lite: security patch
