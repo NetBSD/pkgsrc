@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3301 2012/10/17 22:20:33 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3302 2012/10/17 22:25:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-sphinx to 1.1.3nb1 [wiz 2012-10-17]
 	Updated security/scrypt to 1.1.6 [pettai 2012-10-17]
 	Added security/scrypt version 1.1.6 [pettai 2012-10-17]
+	Updated www/ikiwiki to 3.20121017 [schmonz 2012-10-17]
