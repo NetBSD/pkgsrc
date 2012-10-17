@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/22 08:17:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2012/10/17 09:47:20 tron Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -564,9 +564,6 @@ ${RUBY_LIB}/rubygems/server.rb
 ${RUBY_LIB}/rubygems/source_index.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
-${RUBY_LIB}/rubygems/ssl_certs/AddTrustExternalCARoot.pem
-${RUBY_LIB}/rubygems/ssl_certs/Entrust_net-Secure-Server-Certification-Authority.pem
-${RUBY_LIB}/rubygems/ssl_certs/VerisignClass3PublicPrimaryCertificationAuthority-G2.pem
 ${RUBY_LIB}/rubygems/ssl_certs/ca-bundle.pem
 ${RUBY_LIB}/rubygems/syck_hack.rb
 ${RUBY_LIB}/rubygems/test_case.rb
