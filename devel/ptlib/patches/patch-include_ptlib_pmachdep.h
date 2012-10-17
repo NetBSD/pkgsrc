@@ -1,9 +1,9 @@
-$NetBSD: patch-include_ptlib_pmachdep.h,v 1.1 2012/10/13 22:43:23 darcy Exp $
+$NetBSD: patch-include_ptlib_pmachdep.h,v 1.2 2012/10/17 10:26:16 jperkin Exp $
 
 - Prevent an annoying warning while building
 
---- /usr/obj/devel/ptlib/work.x86_64/ptlib-2.10.7/include/ptlib/unix/ptlib/pmachdep.h.orig	2012-08-23 02:12:57.000000000 +0000
-+++ /usr/obj/devel/ptlib/work.x86_64/ptlib-2.10.7/include/ptlib/unix/ptlib/pmachdep.h
+--- include/ptlib/unix/ptlib/pmachdep.h.orig	2012-08-23 02:12:57.000000000 +0000
++++ include/ptlib/unix/ptlib/pmachdep.h
 @@ -112,7 +112,9 @@ typedef int socklen_t;
  #elif defined(P_OPENBSD)
  
