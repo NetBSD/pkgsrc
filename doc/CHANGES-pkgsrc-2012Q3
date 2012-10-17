@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.13 2012/10/16 18:45:19 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.14 2012/10/17 09:48:34 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -44,3 +44,5 @@ Pullup ticket #3945 - requested by taca
 sysutils/libpciaccess: build fix
 Pullup ticket #3948 - requested by taca
 mail/roundcube: security patch
+Pullup ticket #3947 - requested by taca
+lang/ruby193-base: security update
