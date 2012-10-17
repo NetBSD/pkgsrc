@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.8.2.1 2012/10/10 10:27:48 tron Exp $
+$NetBSD: distinfo,v 1.8.2.2 2012/10/17 09:47:20 tron Exp $
 
-SHA1 (ruby193-base-201202170/ruby-1.9.3-p194.tar.bz2) = afb497dc10ea3d83ecbe3ccd9ed45fba1457721c
-RMD160 (ruby193-base-201202170/ruby-1.9.3-p194.tar.bz2) = bca45d750cfd8523e838903c8693749652960d60
-Size (ruby193-base-201202170/ruby-1.9.3-p194.tar.bz2) = 9841223 bytes
-SHA1 (patch-configure) = 3ab88504dda0c244b6c58dc42778d9a63f1e4d23
-SHA1 (patch-configure.in) = f743324dda92bd4c490a7214f4822b4cc9a4c5dc
+SHA1 (ruby-1.9.3-p286.tar.bz2) = 095c783c88965c6e72b1f3484c50c60207b60bfa
+RMD160 (ruby-1.9.3-p286.tar.bz2) = 5ca0dbc1f2d046954f0ce20af76a01ece78cd3f2
+Size (ruby-1.9.3-p286.tar.bz2) = 9961862 bytes
+SHA1 (patch-configure) = 7bb0cfd69781bf1a66378fe3b2f8a40a1235cc15
+SHA1 (patch-configure.in) = 0c6cb3a7ebe50111fd0a506b18e3a45a516ec751
 SHA1 (patch-defs_default__gems) = fb24111736f1a76a05e853aa068024dbdd24e5a5
-SHA1 (patch-error.c) = c825fc775fa28acfd9f965d2d801389e3ea42922
-SHA1 (patch-lib_mkmf.rb) = a4547a4bcbf1f533e264578c455ef1c7e6c9aa74
 SHA1 (patch-lib_rdoc_ri_driver.rb) = acb4cb022893eb8dea2adf7564f5e5e1a0f1e9c8
 SHA1 (patch-lib_rubygems.rb) = cc02e3a296d88605ef8444d64ca805ddebb524c6
 SHA1 (patch-lib_rubygems_commands_install__command.rb) = ff637f39f3fd76b7550fd7f8c32fe303eec6f8c3

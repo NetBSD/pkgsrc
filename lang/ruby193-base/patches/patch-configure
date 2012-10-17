@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
+$NetBSD: patch-configure,v 1.3.2.1 2012/10/17 09:47:21 tron Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.orig	Fri Apr 20 01:32:41 2012
+--- configure.orig	2012-10-12 09:23:46.000000000 +0000
 +++ configure
-@@ -10605,6 +10605,9 @@ esac
+@@ -10654,6 +10654,9 @@ esac
    superux*) :
      	ac_cv_func_setitimer=no
  		 ;; #(
@@ -15,7 +15,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
    *) :
      	LIBS="-lm $LIBS" ;;
  esac
-@@ -11923,6 +11926,9 @@ fi
+@@ -11980,6 +11983,9 @@ fi
  ac_fn_c_check_type "$LINENO" "struct timespec" "ac_cv_type_struct_timespec" "#ifdef HAVE_TIME_H
  #include <time.h>
  #endif
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
  "
  if test "x$ac_cv_type_struct_timespec" = xyes; then :
  
-@@ -15731,7 +15737,7 @@ done
+@@ -15790,7 +15796,7 @@ done
      MAINLIBS="-pthread $MAINLIBS" ;; #(
    *) :
      case "$target_os" in #(
@@ -34,7 +34,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
      LIBS="-pthread $LIBS" ;; #(
    *) :
      LIBS="-l$pthread_lib $LIBS" ;;
-@@ -16180,8 +16186,12 @@ esac ;; #(
+@@ -16239,8 +16245,12 @@ esac ;; #(
  			rb_cv_dlopen=yes ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
@@ -47,7 +47,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -16193,7 +16203,7 @@ esac ;; #(
+@@ -16252,7 +16262,7 @@ esac ;; #(
  			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
  			fi
  			rb_cv_dlopen=yes ;; #(
@@ -56,7 +56,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
      	: ${LDSHARED='$(CC) -shared ${CCDLFLAGS}'}
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-E"
-@@ -16707,7 +16717,7 @@ case "$enable_shared" in #(
+@@ -16781,7 +16791,7 @@ _ACEOF
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -65,7 +65,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -16724,7 +16734,7 @@ case "$enable_shared" in #(
+@@ -16798,7 +16808,7 @@ _ACEOF
  	   LIBRUBY_ALIASES=""
  	fi
  	 ;; #(
@@ -74,7 +74,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
  
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
-@@ -16785,7 +16795,12 @@ esac
+@@ -16859,7 +16869,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -88,7 +88,7 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
  	 ;; #(
    *) :
       ;;
-@@ -16848,11 +16863,7 @@ if test "$install_doc" != no; then
+@@ -16922,11 +16937,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
@@ -101,21 +101,3 @@ $NetBSD: patch-configure,v 1.3 2012/07/25 14:26:57 bsiegert Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -17752,7 +17763,7 @@ ac_config_files="$ac_config_files $FIRST
- ac_config_files="$ac_config_files Makefile"
- 
- 
--ruby_pc="${RUBY_BASE_NAME}-${MAJOR}.${MINOR}.pc"
-+ruby_pc="${RUBY_BASE_NAME}-${RUBY_PROGRAM_VERSION}.pc"
- 
- exec=exec
- 
-@@ -18409,6 +18420,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
