@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.43 2011/10/30 22:07:19 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.44 2012/10/17 16:16:32 abs Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -477,7 +477,7 @@ monitor_file(...)
 
       <para>This generally involves cleaning up the patches
       (because sometimes the patches that are
-      added to pkgsrc are quick hacks), filling bug reports in the
+      added to pkgsrc are quick hacks), filing bug reports in the
       appropriate trackers for the projects and working with the
       mainstream authors to accept your changes.  It is
       <emphasis>extremely important</emphasis> that you do it so that
