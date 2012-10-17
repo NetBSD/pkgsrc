@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/02 17:11:50 tron Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/17 03:11:44 asau Exp $
 
-DISTNAME=	hwloc-1.4
-PKGREVISION=	3
+DISTNAME=	hwloc-1.5
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.4/downloads/
+MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.5/downloads/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.open-mpi.org/projects/hwloc/
