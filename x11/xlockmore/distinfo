@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2012/02/13 11:46:13 drochner Exp $
+$NetBSD: distinfo,v 1.48.6.1 2012/10/17 19:22:10 tron Exp $
 
 SHA1 (xlockmore-5.38.tar.bz2) = 5a0fd27209dfc0966a1ec691f9ea4416587082bf
 RMD160 (xlockmore-5.38.tar.bz2) = 227a2c13c8cf1ddb027138dc520874accf5c0f72
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 48bd5ea9389f646df5ffe290f3230b028916f0d1
 SHA1 (patch-ac) = e05f4956c0b4bd9b90c86e5a1174aab5e474115f
 SHA1 (patch-ad) = a76c7d9f17dec5cf2a3de6d0c3343c80cf53d314
 SHA1 (patch-ae) = b78d7d148c9a62dbdf72e05aeec8d22d10ab9cce
+SHA1 (patch-modes_dclock.c) = b5863dab4153cbe19b54c2838c85df1a84f09a14
