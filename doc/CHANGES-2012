@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3302 2012/10/17 22:25:02 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.3303 2012/10/17 23:28:43 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/scrypt to 1.1.6 [pettai 2012-10-17]
 	Added security/scrypt version 1.1.6 [pettai 2012-10-17]
 	Updated www/ikiwiki to 3.20121017 [schmonz 2012-10-17]
+	Updated parallel/openmpi to 1.6.2 [asau 2012-10-17]
