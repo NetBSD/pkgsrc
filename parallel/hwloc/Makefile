@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/17 03:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/17 03:36:14 asau Exp $
 
 DISTNAME=	hwloc-1.5
 CATEGORIES=	parallel
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-debug --enable-picky
 TEST_TARGET=	check
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf -ivf
+	$(RUN) cd $(WRKSRC) && autoreconf -ivf
 
 # libpci??
 #.include "../../graphics/cairo/buildlink3.mk" # optional
