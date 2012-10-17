@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2012/09/16 15:21:30 taca Exp $
+# $NetBSD: Makefile.common,v 1.28.2.1 2012/10/17 09:47:20 tron Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -64,9 +64,6 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 			RUBY_NAME=${RUBY_NAME:Q}
 
 .if !empty(RUBY_EXTNAME)
-.if ${RUBY_VER} == "193"
-DIST_SUBDIR=	ruby193-base-201202170
-.endif
 
 PKGNAME?=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_FULL}
 DISTINFO_FILE=		${.CURDIR}/../../lang/${RUBY_BASE}/distinfo
