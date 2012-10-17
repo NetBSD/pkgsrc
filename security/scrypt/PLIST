@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/17 22:17:47 pettai Exp $
+bin/scrypt
+man/man1/scrypt.1
