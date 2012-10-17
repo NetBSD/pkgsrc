@@ -1,46 +1,62 @@
-$NetBSD: patch-aj,v 1.2 2010/12/16 21:00:54 asau Exp $
+$NetBSD: patch-aj,v 1.3 2012/10/17 23:27:35 asau Exp $
 
 Install configuration files into example directory.
 
---- opal/etc/Makefile.in.orig	2010-03-31 05:34:56.000000000 +0400
-+++ opal/etc/Makefile.in	2010-03-31 20:54:20.000000000 +0400
+--- opal/etc/Makefile.in.orig	2012-08-22 14:25:33.000000000 +0000
++++ opal/etc/Makefile.in
 @@ -35,6 +35,7 @@
  #
  VPATH = @srcdir@
  pkgdatadir = $(datadir)/@PACKAGE@
-+exampledir = $(pkgdatadir)/examples
++sysconfexampledir = $(pkgdatadir)/examples
  pkgincludedir = $(includedir)/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@
  pkglibexecdir = $(libexecdir)/@PACKAGE@
-@@ -1240,24 +1241,24 @@
+@@ -1302,24 +1303,24 @@ uninstall-am: uninstall-local
  # details why the mkdir is in install-data-local.
  
  install-data-local:
--	$(mkdir_p) $(DESTDIR)$(sysconfdir)
-+	$(mkdir_p) $(DESTDIR)$(exampledir)
+-	$(MKDIR_P) $(DESTDIR)$(sysconfdir)
++	$(MKDIR_P) $(DESTDIR)$(sysconfexampledir)
  	@ p="$(opal_config_files)"; \
          if test "$(opal_file_from_platform)" = "yes"; then \
  	    if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 -	    echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(sysconfdir)/openmpi-mca-params.conf"; \
 -	    $(INSTALL_DATA) $$d$$p $(DESTDIR)$(sysconfdir)/openmpi-mca-params.conf; \
-+	    echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(exampledir)/openmpi-mca-params.conf"; \
-+	    $(INSTALL_DATA) $$d$$p $(DESTDIR)$(exampledir)/openmpi-mca-params.conf; \
++	    echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(sysconfexampledir)/openmpi-mca-params.conf"; \
++	    $(INSTALL_DATA) $$d$$p $(DESTDIR)$(sysconfexampledir)/openmpi-mca-params.conf; \
          else \
              for file in $$p; do \
 -	        if test -f $(DESTDIR)$(sysconfdir)/openmpi-mca-params.conf; then \
-+	        if test -f $(DESTDIR)$(exampledir)/openmpi-mca-params.conf; then \
++	        if test -f $(DESTDIR)$(sysconfexampledir)/openmpi-mca-params.conf; then \
  	            echo "******************************* WARNING ************************************"; \
  	            echo "*** Not installing new $$file over existing file in:"; \
 -	            echo "***   $(DESTDIR)$(sysconfdir)/$$file"; \
-+	            echo "***   $(DESTDIR)$(exampledir)/$$file"; \
++	            echo "***   $(DESTDIR)$(sysconfexampledir)/$$file"; \
  	            echo "******************************* WARNING ************************************"; \
  	        else \
  	            if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
  	            f="`echo $$file | sed -e 's|^.*/||'`"; \
 -	            echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f"; \
 -	            $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f; \
-+	            echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f"; \
-+	            $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f; \
++	            echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfexampledir)/$$f"; \
++	            $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfexampledir)/$$f; \
  	        fi; \
  	    done \
          fi;
+@@ -1331,11 +1332,11 @@ install-data-local:
+ uninstall-local:
+ 	@ p="$(opal_config_files)"; \
+ 	for file in $$p; do \
+-	  if test -f "$(DESTDIR)$(sysconfdir)/$$file"; then \
++	  if test -f "$(DESTDIR)$(sysconfexampledir)/$$file"; then \
+ 	  	if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
+-	    if diff "$(DESTDIR)$(sysconfdir)/$$file" "$$d$$file" > /dev/null 2>&1 ; then \
+-	      echo "rm -f $(DESTDIR)$(sysconfdir)/$$file" ; \
+-	      rm -f "$(DESTDIR)$(sysconfdir)/$$file" ; \
++	    if diff "$(DESTDIR)$(sysconfexampledir)/$$file" "$$d$$file" > /dev/null 2>&1 ; then \
++	      echo "rm -f $(DESTDIR)$(sysconfexampledir)/$$file" ; \
++	      rm -f "$(DESTDIR)$(sysconfexampledir)/$$file" ; \
+ 	    fi ; \
+ 	  fi ; \
+ 	done

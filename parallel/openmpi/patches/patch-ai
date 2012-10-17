@@ -1,39 +1,55 @@
-$NetBSD: patch-ai,v 1.3 2011/03/23 05:32:29 asau Exp $
+$NetBSD: patch-ai,v 1.4 2012/10/17 23:27:35 asau Exp $
 
 Install configuration files into example directory.
 
---- orte/etc/Makefile.in.orig	2011-03-09 17:51:05.000000000 +0300
-+++ orte/etc/Makefile.in	2011-03-11 00:11:49.000000000 +0300
-@@ -1051,6 +1051,7 @@
+--- orte/etc/Makefile.in.orig	2012-08-22 14:26:19.000000000 +0000
++++ orte/etc/Makefile.in
+@@ -1085,6 +1085,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
-+exampledir = $(pkgdatadir)/examples
++sysconfexampledir = $(pkgdatadir)/examples
  sysinfo_solaris_CFLAGS = @sysinfo_solaris_CFLAGS@
  sysinfo_solaris_CPPFLAGS = @sysinfo_solaris_CPPFLAGS@
  sysinfo_solaris_LDFLAGS = @sysinfo_solaris_LDFLAGS@
-@@ -1264,19 +1265,19 @@
+@@ -1303,19 +1304,19 @@ uninstall-am: uninstall-local
  # details why the mkdir is in install-data-local.
  
  install-data-local:
--	$(mkdir_p) $(DESTDIR)$(sysconfdir)
-+	$(mkdir_p) $(DESTDIR)$(exampledir)
+-	$(MKDIR_P) $(DESTDIR)$(sysconfdir)
++	$(MKDIR_P) $(DESTDIR)$(sysconfexampledir)
  	@ p="$(orte_config_files)"; \
  	for file in $$p; do \
 -	  if test -f $(DESTDIR)$(sysconfdir)/$$file; then \
-+	  if test -f $(DESTDIR)$(exampledir)/$$file; then \
++	  if test -f $(DESTDIR)$(sysconfexampledir)/$$file; then \
  	    echo "******************************* WARNING ************************************"; \
  	    echo "*** Not installing new $$file over existing file in:"; \
 -	    echo "***   $(DESTDIR)$(sysconfdir)/$$file"; \
-+	    echo "***   $(DESTDIR)$(exampledir)/$$file"; \
++	    echo "***   $(DESTDIR)$(sysconfexampledir)/$$file"; \
  	    echo "******************************* WARNING ************************************"; \
  	  else \
  	    if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
  	    f="`echo $$file | sed -e 's|^.*/||'`"; \
 -	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f"; \
 -	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f; \
-+	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f"; \
-+	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(exampledir)/$$f; \
++	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfexampledir)/$$f"; \
++	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfexampledir)/$$f; \
  	  fi; \
  	done
  
+@@ -1326,11 +1327,11 @@ install-data-local:
+ uninstall-local:
+ 	@ p="$(orte_config_files)"; \
+ 	for file in $$p; do \
+-	  if test -f "$(DESTDIR)$(sysconfdir)/$$file"; then \
++	  if test -f "$(DESTDIR)$(sysconfexampledir)/$$file"; then \
+ 	  	if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
+-	    if diff "$(DESTDIR)$(sysconfdir)/$$file" "$$d$$file" > /dev/null 2>&1 ; then \
+-	      echo "rm -f $(DESTDIR)$(sysconfdir)/$$file" ; \
+-	      rm -f "$(DESTDIR)$(sysconfdir)/$$file" ; \
++	    if diff "$(DESTDIR)$(sysconfexampledir)/$$file" "$$d$$file" > /dev/null 2>&1 ; then \
++	      echo "rm -f $(DESTDIR)$(sysconfexampledir)/$$file" ; \
++	      rm -f "$(DESTDIR)$(sysconfexampledir)/$$file" ; \
+ 	    fi ; \
+ 	  fi ; \
+ 	done
