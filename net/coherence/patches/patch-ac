@@ -1,0 +1,61 @@
+$NetBSD: patch-ac,v 1.1 2012/10/17 18:36:42 drochner Exp $
+
+http://coherence.beebits.net/ticket/360
+(diff -U 0 to avoid RCS ID string)
+
+--- coherence/upnp/core/test/test_utils.py.orig	2010-01-02 16:10:20.000000000 +0100
++++ coherence/upnp/core/test/test_utils.py	2012-10-17 19:43:26.000000000 +0200
+@@ -11,0 +12 @@
++import os
+@@ -12,0 +14,4 @@
++from twisted.python.filepath import FilePath
++from twisted.internet import reactor
++from twisted.web import static, server
++from twisted.protocols import policies
+@@ -14 +19 @@
+-from coherence.upnp.core.utils import *
++from coherence.upnp.core import utils
+@@ -124 +129 @@
+-        newData = de_chunk_payload(testData)
++        newData = utils.de_chunk_payload(testData)
+@@ -128,0 +134,40 @@
++class TestClient(unittest.TestCase):
++
++    def _listen(self, site):
++        return reactor.listenTCP(0, site, interface="127.0.0.1")
++
++    def setUp(self):
++        name = self.mktemp()
++        os.mkdir(name)
++        FilePath(name).child("file").setContent("0123456789")
++        r = static.File(name)
++        self.site = server.Site(r, timeout=None)
++        self.wrapper = policies.WrappingFactory(self.site)
++        self.port = self._listen(self.wrapper)
++        self.portno = self.port.getHost().port
++
++    def tearDown(self):
++        return self.port.stopListening()
++
++    def getURL(self, path):
++        return "http://127.0.0.1:%d/%s" % (self.portno, path)
++
++    def assertResponse(self, original, content, headers):
++        self.assertIsInstance(original, tuple)
++        self.assertEqual(original[0], content)
++        originalHeaders = original[1]
++        for header in headers:
++            self.assertIn(header, originalHeaders)
++            self.assertEqual(originalHeaders[header], headers[header])
++
++    def test_getPage(self):
++        content = '0123456789'
++        headers = {'accept-ranges': ['bytes'],
++                   'content-length': ['10'],
++                   'content-type': ['text/html']}
++        d = utils.getPage(self.getURL("file"))
++        d.addCallback(self.assertResponse, content, headers)
++        return d
++
++
++
