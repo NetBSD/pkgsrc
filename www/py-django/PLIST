@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/04/18 19:23:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2012/10/18 12:04:17 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
@@ -5296,6 +5296,9 @@ ${PYSITELIB}/django/utils/simplejson/scanner.pyo
 ${PYSITELIB}/django/utils/simplejson/tool.py
 ${PYSITELIB}/django/utils/simplejson/tool.pyc
 ${PYSITELIB}/django/utils/simplejson/tool.pyo
+${PYSITELIB}/django/utils/six.py
+${PYSITELIB}/django/utils/six.pyc
+${PYSITELIB}/django/utils/six.pyo
 ${PYSITELIB}/django/utils/synch.py
 ${PYSITELIB}/django/utils/synch.pyc
 ${PYSITELIB}/django/utils/synch.pyo
