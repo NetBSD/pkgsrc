@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.663 2012/10/06 06:00:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.664 2012/10/18 09:43:01 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -560,6 +560,7 @@ SUBDIR+=	xrandr
 SUBDIR+=	xrdb
 SUBDIR+=	xrefresh
 SUBDIR+=	xrestop
+SUBDIR+=	xscope
 SUBDIR+=	xscreensaver
 SUBDIR+=	xscreensaver-demo
 SUBDIR+=	xscribble
