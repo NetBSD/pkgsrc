@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11610 2012/10/18 09:43:12 wiz Exp $
+$NetBSD: TODO,v 1.11611 2012/10/18 09:44:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -303,7 +303,7 @@ Suggested new packages
 	app: constype, intel-gpu-tools, mkcomposecache, oclock,
 	proxymngr, rstart, showfont, xcmsdb, xdbedizzy, xditview, xedit,
 	xf86dga, xfindproxy, xfsinfo, xfwp, xgc, xlsatoms, xmh,
-	xphelloworld, xpr, xrx, xscope, xstdcmap, xtrap
+	xphelloworld, xpr, xrx, xstdcmap, xtrap
 	driver: xf86-input-acecad, xf86-input-aiptek,
 	xf86-input-calcomp, xf86-input-citron, xf86-input-digitaledge,
 	xf86-input-dmc, xf86-input-dynapro, xf86-input-elo2300,
