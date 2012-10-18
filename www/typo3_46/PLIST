@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/08/15 13:51:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/10/18 14:34:06 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2027,6 +2027,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/stylesheets/structure/topbar.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/stylesheets/visual/main_content.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/.htaccess
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/README.txt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/System/Filter/AlphanumericTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/about/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/about/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/about/ext_icon.gif
