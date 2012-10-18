@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 21:24:37 prlw1 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/18 10:47:56 prlw1 Exp $
 #
 
 DISTNAME=	pyatspi-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyatspi/2.6/}
 EXTRACT_SUFX=	.tar.xz
@@ -23,10 +24,12 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
+REPLACE_PYTHON=	examples/magFocusTracker.py
 
 CONFLICTS=	${PYPKGPREFIX}-at-spi-[0-9]*
 
 .include "../../devel/py-gobject3/buildlink3.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
