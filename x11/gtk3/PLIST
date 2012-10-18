@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2012/04/30 14:26:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/10/18 19:08:47 prlw1 Exp $
+bin/gtk-launch
 bin/gtk-query-immodules-3.0
 bin/gtk3-demo
 bin/gtk3-demo-application
@@ -185,12 +186,14 @@ include/gtk-3.0/gtk/gtkinfobar.h
 include/gtk-3.0/gtk/gtkinvisible.h
 include/gtk-3.0/gtk/gtklabel.h
 include/gtk-3.0/gtk/gtklayout.h
+include/gtk-3.0/gtk/gtklevelbar.h
 include/gtk-3.0/gtk/gtklinkbutton.h
 include/gtk-3.0/gtk/gtkliststore.h
 include/gtk-3.0/gtk/gtklockbutton.h
 include/gtk-3.0/gtk/gtkmain.h
 include/gtk-3.0/gtk/gtkmenu.h
 include/gtk-3.0/gtk/gtkmenubar.h
+include/gtk-3.0/gtk/gtkmenubutton.h
 include/gtk-3.0/gtk/gtkmenuitem.h
 include/gtk-3.0/gtk/gtkmenushell.h
 include/gtk-3.0/gtk/gtkmenutoolbutton.h
@@ -229,6 +232,7 @@ include/gtk-3.0/gtk/gtkscalebutton.h
 include/gtk-3.0/gtk/gtkscrollable.h
 include/gtk-3.0/gtk/gtkscrollbar.h
 include/gtk-3.0/gtk/gtkscrolledwindow.h
+include/gtk-3.0/gtk/gtksearchentry.h
 include/gtk-3.0/gtk/gtkselection.h
 include/gtk-3.0/gtk/gtkseparator.h
 include/gtk-3.0/gtk/gtkseparatormenuitem.h
@@ -324,6 +328,7 @@ ${PLIST.quartz}lib/pkgconfig/gtk+-quartz-3.0.pc
 lib/pkgconfig/gtk+-unix-print-3.0.pc
 ${PLIST.x11}lib/pkgconfig/gtk+-x11-3.0.pc
 libdata/gtk-3.0/im-multipress.conf
+man/man1/gtk-launch.1
 man/man1/gtk-query-immodules-3.0.1
 man/man1/gtk-update-icon-cache.1
 share/aclocal/gtk-3.0.m4
@@ -336,6 +341,7 @@ share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
 share/gtk-3.0/demo/alphatest.png
 share/gtk-3.0/demo/apple-red.png
 share/gtk-3.0/demo/application.c
+share/gtk-3.0/demo/application.ui
 share/gtk-3.0/demo/appwindow.c
 share/gtk-3.0/demo/assistant.c
 share/gtk-3.0/demo/background.jpg
@@ -345,6 +351,17 @@ share/gtk-3.0/demo/changedisplay.c
 share/gtk-3.0/demo/clipboard.c
 share/gtk-3.0/demo/colorsel.c
 share/gtk-3.0/demo/combobox.c
+share/gtk-3.0/demo/css_accordion.c
+share/gtk-3.0/demo/css_accordion.css
+share/gtk-3.0/demo/css_basics.c
+share/gtk-3.0/demo/css_basics.css
+share/gtk-3.0/demo/css_multiplebgs.c
+share/gtk-3.0/demo/css_multiplebgs.css
+share/gtk-3.0/demo/css_pixbufs.c
+share/gtk-3.0/demo/css_pixbufs.css
+share/gtk-3.0/demo/css_shadows.c
+share/gtk-3.0/demo/css_shadows.css
+share/gtk-3.0/demo/cssview.css
 share/gtk-3.0/demo/demo.ui
 share/gtk-3.0/demo/dialog.c
 share/gtk-3.0/demo/drawingarea.c
@@ -352,6 +369,7 @@ share/gtk-3.0/demo/editable_cells.c
 share/gtk-3.0/demo/entry_buffer.c
 share/gtk-3.0/demo/entry_completion.c
 share/gtk-3.0/demo/expander.c
+share/gtk-3.0/demo/fancy.css
 share/gtk-3.0/demo/floppybuddy.gif
 share/gtk-3.0/demo/gnome-applets.png
 share/gtk-3.0/demo/gnome-calendar.png
@@ -362,6 +380,8 @@ share/gtk-3.0/demo/gnome-gimp.png
 share/gtk-3.0/demo/gnome-gmush.png
 share/gtk-3.0/demo/gnome-gsame.png
 share/gtk-3.0/demo/gnu-keys.png
+share/gtk-3.0/demo/gtk-logo-24.png
+share/gtk-3.0/demo/gtk-logo-48.png
 share/gtk-3.0/demo/gtk-logo-rgb.gif
 share/gtk-3.0/demo/hypertext.c
 share/gtk-3.0/demo/iconview.c
@@ -371,6 +391,7 @@ share/gtk-3.0/demo/infobar.c
 share/gtk-3.0/demo/links.c
 share/gtk-3.0/demo/list_store.c
 share/gtk-3.0/demo/menus.c
+share/gtk-3.0/demo/menus.ui
 share/gtk-3.0/demo/offscreen_window.c
 share/gtk-3.0/demo/offscreen_window2.c
 share/gtk-3.0/demo/overlay.c
@@ -378,6 +399,7 @@ share/gtk-3.0/demo/panes.c
 share/gtk-3.0/demo/pickers.c
 share/gtk-3.0/demo/pixbufs.c
 share/gtk-3.0/demo/printing.c
+share/gtk-3.0/demo/reset.css
 share/gtk-3.0/demo/rotated_text.c
 share/gtk-3.0/demo/search_entry.c
 share/gtk-3.0/demo/sizegroup.c
@@ -385,6 +407,9 @@ share/gtk-3.0/demo/spinner.c
 share/gtk-3.0/demo/stock_browser.c
 share/gtk-3.0/demo/textscroll.c
 share/gtk-3.0/demo/textview.c
+share/gtk-3.0/demo/theming.ui
+share/gtk-3.0/demo/theming_custom_css.c
+share/gtk-3.0/demo/theming_style_classes.c
 share/gtk-3.0/demo/toolpalette.c
 share/gtk-3.0/demo/transparent.c
 share/gtk-3.0/demo/tree_store.c
@@ -411,6 +436,7 @@ share/gtk-doc/html/gdk3/annotation-glossary.html
 share/gtk-doc/html/gdk3/api-index-3-0.html
 share/gtk-doc/html/gdk3/api-index-3-2.html
 share/gtk-doc/html/gdk3/api-index-3-4.html
+share/gtk-doc/html/gdk3/api-index-3-6.html
 share/gtk-doc/html/gdk3/api-index-deprecated.html
 share/gtk-doc/html/gdk3/api-index-full.html
 share/gtk-doc/html/gdk3/arrow.png
@@ -454,6 +480,7 @@ share/gtk-doc/html/gdk3/gdk3-Points-Rectangles-and-Regions.html
 share/gtk-doc/html/gdk3/gdk3-Properties-and-Atoms.html
 share/gtk-doc/html/gdk3/gdk3-RGBA-Colors.html
 share/gtk-doc/html/gdk3/gdk3-Selections.html
+share/gtk-doc/html/gdk3/gdk3-Testing.html
 share/gtk-doc/html/gdk3/gdk3-Threads.html
 share/gtk-doc/html/gdk3/gdk3-Visuals.html
 share/gtk-doc/html/gdk3/gdk3-Windows.html
@@ -618,11 +645,13 @@ share/gtk-doc/html/gtk3/GtkInfoBar.html
 share/gtk-doc/html/gtk3/GtkInvisible.html
 share/gtk-doc/html/gtk3/GtkLabel.html
 share/gtk-doc/html/gtk3/GtkLayout.html
+share/gtk-doc/html/gtk3/GtkLevelBar.html
 share/gtk-doc/html/gtk3/GtkLinkButton.html
 share/gtk-doc/html/gtk3/GtkListStore.html
 share/gtk-doc/html/gtk3/GtkLockButton.html
 share/gtk-doc/html/gtk3/GtkMenu.html
 share/gtk-doc/html/gtk3/GtkMenuBar.html
+share/gtk-doc/html/gtk3/GtkMenuButton.html
 share/gtk-doc/html/gtk3/GtkMenuItem.html
 share/gtk-doc/html/gtk3/GtkMenuShell.html
 share/gtk-doc/html/gtk3/GtkMenuToolButton.html
@@ -660,6 +689,7 @@ share/gtk-doc/html/gtk3/GtkScaleButton.html
 share/gtk-doc/html/gtk3/GtkScrollable.html
 share/gtk-doc/html/gtk3/GtkScrollbar.html
 share/gtk-doc/html/gtk3/GtkScrolledWindow.html
+share/gtk-doc/html/gtk3/GtkSearchEntry.html
 share/gtk-doc/html/gtk3/GtkSeparator.html
 share/gtk-doc/html/gtk3/GtkSeparatorMenuItem.html
 share/gtk-doc/html/gtk3/GtkSeparatorToolItem.html
@@ -734,6 +764,7 @@ share/gtk-doc/html/gtk3/annotation-glossary.html
 share/gtk-doc/html/gtk3/api-index-3-0.html
 share/gtk-doc/html/gtk3/api-index-3-2.html
 share/gtk-doc/html/gtk3/api-index-3-4.html
+share/gtk-doc/html/gtk3/api-index-3-6.html
 share/gtk-doc/html/gtk3/api-index-deprecated.html
 share/gtk-doc/html/gtk3/api-index-full.html
 share/gtk-doc/html/gtk3/appchooserbutton.png
@@ -782,6 +813,9 @@ share/gtk-doc/html/gtk3/document-revert-ltr.png
 share/gtk-doc/html/gtk3/document-revert-rtl.png
 share/gtk-doc/html/gtk3/document-save-as.png
 share/gtk-doc/html/gtk3/document-save.png
+share/gtk-doc/html/gtk3/down-center.png
+share/gtk-doc/html/gtk3/down-end.png
+share/gtk-doc/html/gtk3/down-start.png
 share/gtk-doc/html/gtk3/drawing.png
 share/gtk-doc/html/gtk3/drive-harddisk.png
 share/gtk-doc/html/gtk3/ease-in-out.png
@@ -864,6 +898,7 @@ share/gtk-doc/html/gtk3/gtk-edit.png
 share/gtk-doc/html/gtk3/gtk-font.png
 share/gtk-doc/html/gtk3/gtk-getting-started.html
 share/gtk-doc/html/gtk3/gtk-index.png
+share/gtk-doc/html/gtk3/gtk-launch.html
 share/gtk-doc/html/gtk3/gtk-migrating-2-to-3.html
 share/gtk-doc/html/gtk3/gtk-migrating-GtkGrid.html
 share/gtk-doc/html/gtk3/gtk-migrating-GtkStyleContext-bonus-points.html
@@ -940,7 +975,11 @@ share/gtk-doc/html/gtk3/layout-rlbt.png
 share/gtk-doc/html/gtk3/layout-rltb.png
 share/gtk-doc/html/gtk3/layout-tblr.png
 share/gtk-doc/html/gtk3/layout-tbrl.png
+share/gtk-doc/html/gtk3/left-center.png
+share/gtk-doc/html/gtk3/left-end.png
+share/gtk-doc/html/gtk3/left-start.png
 share/gtk-doc/html/gtk3/left.png
+share/gtk-doc/html/gtk3/levelbar.png
 share/gtk-doc/html/gtk3/linear.png
 share/gtk-doc/html/gtk3/link-button.png
 share/gtk-doc/html/gtk3/list-add.png
@@ -966,6 +1005,7 @@ share/gtk-doc/html/gtk3/media-skip-backward-ltr.png
 share/gtk-doc/html/gtk3/media-skip-backward-rtl.png
 share/gtk-doc/html/gtk3/media-skip-forward-ltr.png
 share/gtk-doc/html/gtk3/media-skip-forward-rtl.png
+share/gtk-doc/html/gtk3/menu-button.png
 share/gtk-doc/html/gtk3/menubar.png
 share/gtk-doc/html/gtk3/messagedialog.png
 share/gtk-doc/html/gtk3/migrating.html
@@ -987,9 +1027,13 @@ share/gtk-doc/html/gtk3/progressbar.png
 share/gtk-doc/html/gtk3/pt06.html
 share/gtk-doc/html/gtk3/radio-group.png
 share/gtk-doc/html/gtk3/recentchooserdialog.png
+share/gtk-doc/html/gtk3/right-center.png
+share/gtk-doc/html/gtk3/right-end.png
+share/gtk-doc/html/gtk3/right-start.png
 share/gtk-doc/html/gtk3/right.png
 share/gtk-doc/html/gtk3/scales.png
 share/gtk-doc/html/gtk3/scrolledwindow.png
+share/gtk-doc/html/gtk3/search-entry.png
 share/gtk-doc/html/gtk3/separator.png
 share/gtk-doc/html/gtk3/slices.png
 share/gtk-doc/html/gtk3/sliders.png
@@ -1006,6 +1050,9 @@ share/gtk-doc/html/gtk3/toolbar.png
 share/gtk-doc/html/gtk3/toolpalette.png
 share/gtk-doc/html/gtk3/tools-check-spelling.png
 share/gtk-doc/html/gtk3/tree-view-coordinates.png
+share/gtk-doc/html/gtk3/up-center.png
+share/gtk-doc/html/gtk3/up-end.png
+share/gtk-doc/html/gtk3/up-start.png
 share/gtk-doc/html/gtk3/up.png
 share/gtk-doc/html/gtk3/view-fullscreen.png
 share/gtk-doc/html/gtk3/view-refresh.png
@@ -1131,6 +1178,8 @@ share/locale/ko/LC_MESSAGES/gtk30-properties.mo
 share/locale/ko/LC_MESSAGES/gtk30.mo
 share/locale/ku/LC_MESSAGES/gtk30-properties.mo
 share/locale/ku/LC_MESSAGES/gtk30.mo
+share/locale/ky/LC_MESSAGES/gtk30-properties.mo
+share/locale/ky/LC_MESSAGES/gtk30.mo
 share/locale/lg/LC_MESSAGES/gtk30-properties.mo
 share/locale/lg/LC_MESSAGES/gtk30.mo
 share/locale/li/LC_MESSAGES/gtk30-properties.mo
