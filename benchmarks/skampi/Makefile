@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/11 22:37:14 asau Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/18 16:58:18 asau Exp $
 #
 
 DISTNAME=	skampi
@@ -17,6 +17,10 @@ WRKSRC=		${WRKDIR}/skampi-5.0.4-r0355
 USE_TOOLS+=	gmake pax
 BUILD_TARGET=	skampi
 INSTALLATION_DIRS=	bin
+
+# Force file regeneration:
+post-extract:
+	rm $(WRKSRC)/Makefile.dep
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skampi ${DESTDIR}${PREFIX}/bin/skampi
