@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/10/18 19:08:47 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/10/18 19:10:00 prlw1 Exp $
 bin/gtk-launch
 bin/gtk-query-immodules-3.0
 bin/gtk3-demo
@@ -1172,6 +1172,8 @@ share/locale/kg/LC_MESSAGES/gtk30-properties.mo
 share/locale/kg/LC_MESSAGES/gtk30.mo
 share/locale/kk/LC_MESSAGES/gtk30-properties.mo
 share/locale/kk/LC_MESSAGES/gtk30.mo
+share/locale/km/LC_MESSAGES/gtk30-properties.mo
+share/locale/km/LC_MESSAGES/gtk30.mo
 share/locale/kn/LC_MESSAGES/gtk30-properties.mo
 share/locale/kn/LC_MESSAGES/gtk30.mo
 share/locale/ko/LC_MESSAGES/gtk30-properties.mo
