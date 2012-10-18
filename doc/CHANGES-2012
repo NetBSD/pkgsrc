@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3306 2012/10/18 10:12:58 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.3307 2012/10/18 10:19:20 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/xscope version 1.3.1 [wiz 2012-10-18]
 	Updated meta-pkgs/modular-xorg-apps to 1.9 [wiz 2012-10-18]
 	Updated devel/at-spi2-core to 2.6.1 [prlw1 2012-10-18]
+	Updated devel/at-spi2-atk to 2.6.1 [prlw1 2012-10-18]
