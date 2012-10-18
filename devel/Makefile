@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1656 2012/10/16 17:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.1657 2012/10/18 19:21:04 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -419,6 +419,7 @@ SUBDIR+=	libview
 SUBDIR+=	libvolume_id
 SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
+SUBDIR+=	libwnck3
 SUBDIR+=	libxenserver
 SUBDIR+=	lincvs
 SUBDIR+=	lmdbg
