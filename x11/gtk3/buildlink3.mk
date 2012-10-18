@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2012/10/08 23:00:34 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/10/18 19:08:47 prlw1 Exp $
 
 BUILDLINK_TREE+=	gtk3
 
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.gtk3?=	../../x11/gtk3
 pkgbase := gtk3
 .include "../../mk/pkg-build-options.mk"
 
+.include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
