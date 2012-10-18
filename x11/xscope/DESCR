@@ -1,0 +1,12 @@
+XSCOPE is a program to monitor the connections between the X11 window
+server and a client program.  xscope runs as a separate process.  By
+adjusting the host and/or display number that a X11 client attaches
+to, the client is attached to xscope instead of X11.  xscope attaches
+to X11 as if it were the client.  All bytes from the client are sent
+to xscope which passes them on to X11; all bytes from X11 are sent to
+xscope which sends them on to the client.  xscope is transparent to
+the client and X11.
+
+In addition to passing characters back and forth, xscope will print
+information about this traffic on stdout, giving performance and
+debugging information for an X11 client and server.
