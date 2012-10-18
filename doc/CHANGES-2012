@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3308 2012/10/18 12:06:01 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3309 2012/10/18 12:20:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/at-spi2-core to 2.6.1 [prlw1 2012-10-18]
 	Updated devel/at-spi2-atk to 2.6.1 [prlw1 2012-10-18]
 	Updated www/py-django to 1.4.2 [adam 2012-10-18]
+	Updated www/drupal7 to 7.16 [taca 2012-10-18]
