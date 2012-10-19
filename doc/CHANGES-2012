@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3316 2012/10/19 07:33:56 sno Exp $
+$NetBSD: CHANGES-2012,v 1.3317 2012/10/19 07:42:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5139,3 +5139,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated filesystems/glusterfs to 3.3.1 [manu 2012-10-19]
 	Added math/p5-Math-Prime-Util version 0.11 [sno 2012-10-19]
 	Updated devel/p5-Devel-NYTProf to 4.09 [sno 2012-10-19]
+	Updated devel/p5-Parse-RecDescent to 1.967.9 [sno 2012-10-19]
