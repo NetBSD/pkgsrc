@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/07/24 18:40:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/19 17:48:06 drochner Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -375,18 +375,18 @@ lib/vlc/vlc-cache-gen
 man/man1/vlc-wrapper.1
 man/man1/vlc.1
 share/applications/vlc.desktop
-share/doc/vlc/LICENSE
-share/doc/vlc/QtVLC.pro
 share/doc/vlc/bugreport-howto.txt
 share/doc/vlc/fortunes.txt
-share/doc/vlc/gtk_player.c
 share/doc/vlc/intf-vcd.txt
-share/doc/vlc/libvlc_DVD_ripper.c
-share/doc/vlc/main.cpp
-share/doc/vlc/player.cpp
-share/doc/vlc/player.h
-share/doc/vlc/vlc-thumb.c
-share/doc/vlc/wx_player.cpp
+share/doc/vlc/libvlc/QtPlayer/LICENSE
+share/doc/vlc/libvlc/QtPlayer/QtVLC.pro
+share/doc/vlc/libvlc/QtPlayer/main.cpp
+share/doc/vlc/libvlc/QtPlayer/player.cpp
+share/doc/vlc/libvlc/QtPlayer/player.h
+share/doc/vlc/libvlc/gtk_player.c
+share/doc/vlc/libvlc/libvlc_DVD_ripper.c
+share/doc/vlc/libvlc/vlc-thumb.c
+share/doc/vlc/libvlc/wx_player.cpp
 share/icons/hicolor/128x128/apps/vlc-xmas.png
 share/icons/hicolor/128x128/apps/vlc.png
 share/icons/hicolor/16x16/apps/vlc.png
@@ -397,6 +397,7 @@ share/icons/hicolor/32x32/apps/vlc.png
 share/icons/hicolor/32x32/apps/vlc.xpm
 share/icons/hicolor/48x48/apps/vlc-xmas.png
 share/icons/hicolor/48x48/apps/vlc.png
+share/kde/apps/solid/actions/vlc-openbd.desktop
 share/kde/apps/solid/actions/vlc-opencda.desktop
 share/kde/apps/solid/actions/vlc-opendvd.desktop
 share/kde/apps/solid/actions/vlc-openvcd.desktop
@@ -408,6 +409,7 @@ share/locale/ast/LC_MESSAGES/vlc.mo
 share/locale/be/LC_MESSAGES/vlc.mo
 share/locale/bg/LC_MESSAGES/vlc.mo
 share/locale/bn/LC_MESSAGES/vlc.mo
+share/locale/bn_IN/LC_MESSAGES/vlc.mo
 share/locale/br/LC_MESSAGES/vlc.mo
 share/locale/ca/LC_MESSAGES/vlc.mo
 share/locale/cgg/LC_MESSAGES/vlc.mo
@@ -429,6 +431,7 @@ share/locale/fur/LC_MESSAGES/vlc.mo
 share/locale/ga/LC_MESSAGES/vlc.mo
 share/locale/gd/LC_MESSAGES/vlc.mo
 share/locale/gl/LC_MESSAGES/vlc.mo
+share/locale/gu/LC_MESSAGES/vlc.mo
 share/locale/he/LC_MESSAGES/vlc.mo
 share/locale/hi/LC_MESSAGES/vlc.mo
 share/locale/hr/LC_MESSAGES/vlc.mo
