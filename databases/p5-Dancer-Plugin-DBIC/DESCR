@@ -1,0 +1,6 @@
+Dancer::Plugin::DBIC makes it very easy to create Dancer applications that
+interface with databases. Only the database connection has to be configured
+in Dancer configuration file of the application.
+
+For performance, schema objects are cached in memory and are lazy loaded
+the first time they are accessed.
