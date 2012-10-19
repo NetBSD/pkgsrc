@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.15 2012/10/17 19:22:30 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.16 2012/10/19 16:50:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -49,3 +49,5 @@ lang/ruby193-base: security update
 Pullup ticket #3949 - requested by is
 x11/xlockmore: security patch
 x11/xlockmore-lite: security patch
+Pullup ticket #3951 - requested by taca
+www/drupal7: security update
