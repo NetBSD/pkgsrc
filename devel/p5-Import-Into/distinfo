@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/10/19 07:47:13 sno Exp $
+
+SHA1 (Import-Into-1.001000.tar.gz) = 327f195ddc6773497ee282e58546f5cb519dda5f
+RMD160 (Import-Into-1.001000.tar.gz) = 0340a94a5db295ab851346795d1e40abb1c97681
+Size (Import-Into-1.001000.tar.gz) = 4762 bytes
+SHA1 (patch-aa) = 6691d22c594497fadc0ae362f3b4ec67b61f8a2e
