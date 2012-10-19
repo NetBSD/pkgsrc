@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3320 2012/10/19 07:55:42 sno Exp $
+$NetBSD: CHANGES-2012,v 1.3321 2012/10/19 08:03:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5143,3 +5143,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Import-Into version 1.001000 [sno 2012-10-19]
 	Added devel/p5-Package-Variant version 1.001002 [sno 2012-10-19]
 	Added databases/p5-DBIx-Class-Helpers version 2.015001 [sno 2012-10-19]
+	Added databases/p5-Dancer-Plugin-DBIC version 0.1601 [sno 2012-10-19]
