@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2012/10/03 16:08:33 asau Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/19 04:15:21 manu Exp $
 #
 
-DISTNAME=	glusterfs-3.2.7
+DISTNAME=	glusterfs-3.3.1
 CATEGORIES=	filesystems
-MASTER_SITES=	http://download.gluster.com/pub/gluster/glusterfs/3.2/3.2.7/
+MASTER_SITES=	http://download.gluster.org/pub/gluster/glusterfs/3.3/3.3.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gluster.org/
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		flex bison
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}\ -D_INCOMPLETE_XOPEN_C063
 CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}\ -DDEBUG
 
 # Make sure we do not attept to link with -lfl
@@ -62,8 +61,6 @@ SUBST_SED.vol=		-e "s/glusterd.vol/glusterd.vol.sample/g"
 REPLACE_PYTHON+=	${WRKSRC}/extras/volgen/glusterfs-volgen
 
 EGDIR=			${PREFIX}/etc/glusterfs
-CONF_FILES+=		${EGDIR}/glusterfs.vol.sample ${EGDIR}/glusterfs.vol
-CONF_FILES+=		${EGDIR}/glusterfsd.vol.sample ${EGDIR}/glusterfsd.vol
 CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
 OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
@@ -71,6 +68,8 @@ BUILD_DEFS+=		VARBASE
 RCD_SCRIPTS=		glusterfsd glusterd
 
 PLIST_SRC=		${PLIST_SRC_DFLT}
+PLIST_SUBST+=		VARBASE=${VARBASE}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
 
@@ -79,9 +78,7 @@ post-build:
 
 post-install:
 	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount.glusterfs \
-	    ${DESTDIR}/${PREFIX}/sbin/
-	${INSTALL_SCRIPT} ${FILESDIR}/xattr-init.sh \
-	    ${DESTDIR}/${PREFIX}/etc/glusterfs/
+	    ${DESTDIR}/${PREFIX}/sbin/mount.glusterfs
 
 # Debug
 CFLAGS+=		-g
@@ -92,7 +89,7 @@ INSTALL_UNSTRIPPED=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/python/application.mk"
 .if ${OPSYS} == "NetBSD"
-.include "../../filesystems/perfuse/buildlink3.mk"
+#.include "../../filesystems/perfuse/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
