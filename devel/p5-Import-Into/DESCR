@@ -1,0 +1,14 @@
+Writing exporters is a pain. Some use Exporter, some use Sub::Exporter,
+some use Moose::Exporter, some use Exporter::Declare ... and some things
+are pragmas.
+
+If you want to re-export other things, you have to know which is which.
+Exporter subclasses provide export_to_level, but if they overrode their
+import method all bets are off. Sub::Exporter provides an into parameter
+but figuring out something used it isn't trivial. Pragmas need to have
+their import method called directly since they affect the current unit
+of compilation.
+
+It's ... annoying.
+
+However, there is an approach that actually works for all of these types.
