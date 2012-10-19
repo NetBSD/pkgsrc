@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.412 2012/10/19 07:56:21 sno Exp $
+# $NetBSD: Makefile,v 1.413 2012/10/19 08:03:54 sno Exp $
 #
 
 COMMENT=	Databases
@@ -151,6 +151,7 @@ SUBDIR+=	p5-DBIx-SearchBuilder
 SUBDIR+=	p5-DBM-Deep
 SUBDIR+=	p5-DB_File
 SUBDIR+=	p5-DB_File-Lock
+SUBDIR+=	p5-Dancer-Plugin-DBIC
 SUBDIR+=	p5-Data-Table
 SUBDIR+=	p5-DublinCore-Record
 SUBDIR+=	p5-Fsdb
