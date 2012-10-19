@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2012/04/30 14:21:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/10/19 17:58:03 drochner Exp $
 lib/gio/modules/libgiognutls.la
 lib/gio/modules/libgiolibproxy.la
 libexec/glib-pacrunner
 share/dbus-1/services/org.gtk.GLib.PACRunner.service
+share/locale/ar/LC_MESSAGES/glib-networking.mo
 share/locale/as/LC_MESSAGES/glib-networking.mo
 share/locale/be/LC_MESSAGES/glib-networking.mo
 share/locale/bg/LC_MESSAGES/glib-networking.mo
