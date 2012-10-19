@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/13 22:17:35 alnsn Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/19 23:13:15 alnsn Exp $
 #
 
 DISTNAME=		valgrind-3.8.1
@@ -24,6 +24,8 @@ ONLY_FOR_PLATFORM=	Linux-*-x86_64 \
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 TEST_TARGET=		regtest
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH:C/arm.*/arm/} == "arm"
 PLIST_SUBST+=		VGCONF_ARCH_PRI=arm
