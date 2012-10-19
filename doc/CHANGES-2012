@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3319 2012/10/19 07:51:09 sno Exp $
+$NetBSD: CHANGES-2012,v 1.3320 2012/10/19 07:55:42 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Parse-RecDescent to 1.967.9 [sno 2012-10-19]
 	Added devel/p5-Import-Into version 1.001000 [sno 2012-10-19]
 	Added devel/p5-Package-Variant version 1.001002 [sno 2012-10-19]
+	Added databases/p5-DBIx-Class-Helpers version 2.015001 [sno 2012-10-19]
