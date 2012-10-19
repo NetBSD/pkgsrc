@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2012/09/15 10:06:04 obache Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/19 18:01:13 drochner Exp $
 
-DISTNAME=	libsoup-2.38.1
+DISTNAME=	libsoup-2.40.1
 PKGNAME=	${DISTNAME:S/libsoup/libsoup24/}
-PKGREVISION=	2
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.38/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.40/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake intltool
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -31,6 +30,10 @@ TEST_TARGET=	check
 .if !empty(CC_VERSION:Mgcc-4.[01].*) || !empty(CC_VERSION:Mgcc-[1-3].*)
 CONFIGURE_ARGS+= 	--disable-more-warnings
 .endif
+
+REPLACE_PYTHON= libsoup/tld-parser.py
+PYTHON_FOR_BUILD_ONLY= yes
+.include "../../lang/python/application.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.7
