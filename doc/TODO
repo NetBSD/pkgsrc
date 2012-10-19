@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11612 2012/10/18 12:20:58 taca Exp $
+$NetBSD: TODO,v 1.11613 2012/10/19 10:28:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,7 @@ Suggested new packages
 	xf86-input-hyperpen, xf86-input-jamstudio, xf86-input-joystick,
 	xf86-input-magellan, xf86-input-magictouch, xf86-input-microtouch,
 	xf86-input-mutouch, xf86-input-palmax, xf86-input-penmount,
-	xf86-input-spaceorb, xf86-input-summa, xf86-input-synaptics,
+	xf86-input-spaceorb, xf86-input-summa, xf86-input-synaptics [pkg/47082],
 	xf86-input-tek4957, xf86-input-ur98, xf86-video-amd, xf86-video-dummy,
 	xf86-video-fbdev, xf86-video-glide, xf86-video-impact,
 	xf86-video-modesetting, xf86-video-newport, xf86-video-omap, xf86-video-qxl,
@@ -411,7 +411,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o astyle-1.15.3
 	o asymptote-2.21
 	o at-spi-2.4.0
-	o at-spi2-2.6.0
+	o at-spi2-2.6.1
 	o aterm-1.0.1
 	o attica-0.4.1
 	o audacious-plugins-2.4.4
@@ -458,11 +458,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdlabelgen-4.2.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
-	o cfengine-3.3.4
+	o cfengine-3.3.8
 	o cfitsio-3.310
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.6.0
+	o cheese-3.6.1
 	o chkrootkit-0.49
 	o chktex-1.7.1
 	o chromium-0.9.15
@@ -472,7 +472,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.12.0
+	o clutter-1.12.2
 	o clutter-gst-1.6.0
 	o colorize-0.3.4
 	o colortail-0.3.3
@@ -547,8 +547,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o enca-1.13
 	o enlightenment-1.0.9
 	o enscript-1.6.6
-	o eog-3.6.0
-	o eog-plugins-3.6.0
+	o eog-3.6.1
+	o eog-plugins-3.6.1
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
@@ -561,7 +561,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm-891
 	o ettercap-0.7.4
 	o eukleides-1.5.4
-	o evince-3.6.0
+	o evince-3.6.1
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.32.2
@@ -574,6 +574,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fakeroot-1.6.5
 	o farsight2-0.0.31
 	o fcitx-3.6.2
+	o feh-2.7
 	o felt-3.07
 	o fetchmail-6.3.22
 	o fetchyahoo-2.14.0
@@ -604,6 +605,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fuse-ntfs-3g-2012.1.15
 	o fvwm-2.6.0
 	o fvwm2-themes-0.7.0
+	o galculator-2.0
 	o gallery3-3.0.2
 	o gammu-1.30.0
 	o gap-4r4p9
@@ -634,22 +636,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gl-7.8.2 [pkgrc-wip]
+	o glade-3.14.1
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.3
 	o glade3-3.12.2
 	o glade3-3.14.0
 	o gle-4.2.4
+	o glib2-2.34.1
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.6
+	o gnome-3.6.1
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
-	o gnome-games-3.6.0
+	o gnome-games-3.6.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.4.1
+	o gnome-keyring-3.6.1
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
@@ -696,7 +700,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
-	o gtk3-3.6.0
+	o gtk3-3.6.1
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.38
@@ -814,7 +818,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
-	o libgee-0.8.0
+	o libgee-0.8.1
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.6.0
 	o libgnomedb-3.1.2
@@ -879,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mdocml-1.12.1
 	o mergeant-0.67
 	o mesure-0.7.2
+	o mg-20110905 [pkg/47079]
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
 	o mined-2012.22
@@ -908,7 +913,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpich-1.8
 	o mpop-1.0.27
 	o mserv-devel-0.41
-	o mu-0.9.8.5
+	o mu-0.9.9
 	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1035,6 +1040,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-creole-1.0.4 [pkg/46593]
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
+	o py-gobject3-3.4.1
 	o py-moin-1.9.5
 	o py-sybase-0.37
 	o py-urwid-1.0.2
@@ -1095,8 +1101,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0 [GNOME 2.32]
-	o seahorse-3.6.0
-	o seahorse-nautilus-3.6.0
+	o seahorse-3.6.1
+	o seahorse-nautilus-3.6.1
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1214,10 +1220,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.15
-	o vifm-0.7.3a
-	o vinagre-3.6.0
+	o vifm-0.7.4
+	o vinagre-3.6.1
 	o vino-2.32.2 [GNOME 2.32]
-	o vino-3.6.0
+	o vino-3.6.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
@@ -1229,8 +1235,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-1.10
-	o webkit-gtk3-1.10
+	o webkit-gtk-1.10.1
+	o webkit-gtk3-1.10.1
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.600 [security]
 	o websvn-2.3.2
@@ -1247,7 +1253,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wordpress-3.4.2
 	o worker-2.19.5
 	o wpi-firmware-1.14.2
-	o wwwoffle-2.9h
+	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
