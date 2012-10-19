@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11613 2012/10/19 10:28:48 wiz Exp $
+$NetBSD: TODO,v 1.11614 2012/10/19 18:42:45 drochner Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm-891
 	o ettercap-0.7.4
 	o eukleides-1.5.4
-	o evince-3.6.1
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.32.2
@@ -642,7 +641,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.12.2
 	o glade3-3.14.0
 	o gle-4.2.4
-	o glib2-2.34.1
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -799,7 +797,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lbdb-0.38
 	o lbreakout-2.6.4
 	o lcc-4.2
-	o lcms2-2.4
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
 	o less-451

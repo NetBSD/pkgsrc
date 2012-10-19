@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3323 2012/10/19 14:59:57 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3324 2012/10/19 18:42:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5147,3 +5147,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-SQL-Translator to 0.11016 [sno 2012-10-19]
 	Updated lang/php53 to 5.3.18 [taca 2012-10-19]
 	Updated lang/php54 to 5.4.8 [taca 2012-10-19]
+	Updated multimedia/vlc2 to 2.0.4 [drochner 2012-10-19]
+	Updated graphics/lcms2 to 2.4 [drochner 2012-10-19]
+	Updated devel/glib2 to 2.34.1 [drochner 2012-10-19]
+	Updated devel/gobject-introspection to 1.34.1.1 [drochner 2012-10-19]
+	Updated textproc/libcroco to 0.6.7 [drochner 2012-10-19]
+	Updated print/evince3 to 3.6.1 [drochner 2012-10-19]
