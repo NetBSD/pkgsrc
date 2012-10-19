@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 23:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/19 17:48:06 drochner Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		9
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
 			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.xz
 
-VLC_VERSION=		2.0.3
+VLC_VERSION=		2.0.4
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -39,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-smb
 CONFIGURE_ARGS+=	--enable-dvdread \
 			--enable-flac \
 			--enable-theora \
-			--enable-lua=no
+			--disable-lua
 
 # Build optimalized modules
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
@@ -140,6 +139,7 @@ BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.3.5
 # needs x264_encoder_delayed_frames
 BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .include "../../multimedia/x264-devel/buildlink3.mk"
+#.include "../../lang/lua/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
