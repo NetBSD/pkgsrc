@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/10/19 19:58:47 marino Exp $
+
+Fixes error: lib/bindtextdomain.so: missing library: libintl.so.8
+
+For platforms that do not have a native libintl and use the pkgsrc version,
+the rpath must be set in order to pass the PKG_DEVELOPER checks.  This
+bakes the proper RPATH into the bindtextdomain.so library.
+
+--- Makefile.in.orig	2012-08-24 06:57:40.000000000 +0000
++++ Makefile.in
+@@ -113,7 +113,7 @@ $(target).h2m: $(srcdir)/$(target).h2m.P
+ 
+ preload: $(preload).so
+ $(preload).so: $(srcdir)/$(preload).c
+-	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS)
++	$(CC) $(CFLAGS) -o $@ -fPIC -shared $? $(LIBS) $(COMPILER_RPATH_FLAG)$(libdir)
+ 
+ man: $(target).1
+ $(target).1: $(srcdir)/$(target).PL $(srcdir)/$(target).h2m.PL
