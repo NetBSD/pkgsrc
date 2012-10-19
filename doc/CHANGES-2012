@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3313 2012/10/18 19:23:29 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.3314 2012/10/19 04:16:05 manu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5136,3 +5136,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_47 to 4.7.5 [taca 2012-10-18]
 	Updated x11/gtk3 to 3.6.1 [prlw1 2012-10-18]
 	Added devel/libwnck3 version 3.4.3 [prlw1 2012-10-18]
+	Updated filesystems/glusterfs to 3.3.1 [manu 2012-10-19]
