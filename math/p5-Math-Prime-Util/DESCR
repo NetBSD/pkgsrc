@@ -1,0 +1,4 @@
+A set of utilities related to prime numbers. These include multiple sieving
+methods, is_prime, prime_count, nth_prime, approximations and bounds for
+the prime_count and nth prime, next_prime and prev_prime, factoring
+utilities, and more.
