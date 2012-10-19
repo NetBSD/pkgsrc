@@ -1,0 +1,26 @@
+$NetBSD: patch-da,v 1.1 2012/10/19 04:15:22 manu Exp $
+
+Avoid corner case where the client is unsable to reconnect to servers
+
+Backport of a bit from http://review.gluster.org/362
+
+--- rpc/rpc-transport/socket/src/socket.c.orig	2012-09-30 06:42:07.000000000 +0200
++++ rpc/rpc-transport/socket/src/socket.c	2012-09-30 09:41:50.000000000 +0200
+@@ -278,8 +278,17 @@
+                         gf_log (this->name, GF_LOG_DEBUG,
+                                 "shutdown() returned %d. %s",
+                                 ret, strerror (errno));
+                 }
++
++                /*
++                 * Without this, reconnect (= disconnect + connect)
++                 * won't work except by accident. 
++                 */  
++                event_unregister (this->ctx->event_pool,
++                                  priv->sock, priv->idx);
++                close (priv->sock);
++                priv->sock = -1;
+         }
+ 
+ out:
+         return ret;

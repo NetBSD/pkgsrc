@@ -1,36 +1,7 @@
-$NetBSD: distinfo,v 1.25 2012/06/16 01:47:33 manu Exp $
+$NetBSD: distinfo,v 1.26 2012/10/19 04:15:21 manu Exp $
 
-SHA1 (glusterfs-3.2.7.tar.gz) = 13873edece614ecdbb75953daefaf76c4fd2ca3b
-RMD160 (glusterfs-3.2.7.tar.gz) = 8ecc90a0bf852a57db33d15480b494926abe2abe
-Size (glusterfs-3.2.7.tar.gz) = 2424292 bytes
-SHA1 (patch-aa) = bfd1dbcb6945dd387d88bd96616e4bc29c3e0628
-SHA1 (patch-ab) = d240bfd8bd8e5994f612a3387cd75f30bb91c8d7
-SHA1 (patch-ac) = 21d86775c2174ea630404a1a329dfd49c7f493d9
-SHA1 (patch-ae) = d5d0dce5cb82c61fbb02289123d0be34ce835e18
-SHA1 (patch-af) = ac9333cc55ad0cf42233e3c69b32e22c483c077a
-SHA1 (patch-an) = 21f56d5379023bd2ea3432b4e3e3f9a0979c496f
-SHA1 (patch-ao) = 26e350655e276c8cb3ecb3cc9b7c0a4e7ab2ff7b
-SHA1 (patch-ar) = 27d0288083d06623a328e851a776095aa1f1d2df
-SHA1 (patch-as) = a2c637bf52151e85969927f281e432693ac539ba
-SHA1 (patch-ax) = 054942de06c3df60ffc0c190dd2702f77edd9ec6
-SHA1 (patch-bb) = f7b79676322064396242b0f3e6cd81c180c7dd8e
-SHA1 (patch-be) = f178ee8106c349354f7f21bc37fca3ca47ca9e44
-SHA1 (patch-bf) = 0f182ccd632b5e622237bd95c9978c113f8ce531
-SHA1 (patch-bh) = d88d4e8b863f36b2c27c4f5eff2fdc235ef76fd8
-SHA1 (patch-bj) = 9b8b2374d4c197e60a1990b09be1117bf0c0a552
-SHA1 (patch-bk) = 3464ae85a444f5dc8adf2262b3bc25d88a531bb8
-SHA1 (patch-bl) = 4e61aef116ce34907f7a93beaa9ad7a3c49751a9
-SHA1 (patch-bm) = 401fe1c2bbf71474e2238c3e6c3fe5a5c614c4f5
-SHA1 (patch-bn) = 98ce48be2239f42edc4ef8e26644305f6aa0a5eb
-SHA1 (patch-bo) = be0dcdcc0acb6a5e54664372c34a28f1307fbd00
-SHA1 (patch-bp) = 77463ea7d739d532e20dbe5bd66d58c22ba0c248
-SHA1 (patch-bq) = 083f22383b88890f9e6f2c90a4435657ccd10579
-SHA1 (patch-br) = 153aa644c306407e3135620f31d0ff918bfdb1e5
-SHA1 (patch-bs) = d2f79ef19143f74f5a12187ea2dfd9e1ed92b726
-SHA1 (patch-bt) = 58f8e5ce66e6b691dd9972bd649dc18f7d5a258a
-SHA1 (patch-bv) = 2c3b654e5858bf0948307ca6ae7048e276fca9ef
-SHA1 (patch-bw) = dca12eb81163fd1a0ada13165e990ddcb8fefbf2
-SHA1 (patch-bx) = b2aca473091bb64d14c6da046379d33ca8a5785e
-SHA1 (patch-ca) = 7b87f5b1a34eaa9a74f21bc40c794585817070ae
-SHA1 (patch-ce) = a1bfec3d057a27cefc4eb70d46a42202637d973f
-SHA1 (patch-cf) = 6d615a6a48f14f7e08c6b034d73ce441c26d0105
+SHA1 (glusterfs-3.3.1.tar.gz) = c29632e4938533069c4c0206fb1c32de8443168d
+RMD160 (glusterfs-3.3.1.tar.gz) = 667bac9362aab01ab04f9119e399b8d955e01135
+Size (glusterfs-3.3.1.tar.gz) = 2636698 bytes
+SHA1 (patch-da) = 312a8c73c1a22058dc43cf5f957380c42a5a23e4
+SHA1 (patch-db) = a97ac1bea9be2a9d7162eb495cb9b3c741d70e34
