@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/10/06 17:54:53 christos Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/10/20 13:39:38 christos Exp $
 share/doc/bacula/console/About_this_document.html
 share/doc/bacula/console/Bacula_Console.html
 share/doc/bacula/console/Bacula_Console_Operators_Gu.html
@@ -127,6 +127,7 @@ share/doc/bacula/developers/prev.png
 share/doc/bacula/developers/prev_g.png
 share/doc/bacula/developers/up.png
 share/doc/bacula/developers/up_g.png
+share/doc/bacula/developers/img6.png
 share/doc/bacula/main/ANSI_IBM_Tape_Labels.html
 share/doc/bacula/main/About_this_document.html
 share/doc/bacula/main/Autochanger_Resource.html
@@ -155,6 +156,7 @@ share/doc/bacula/main/Data_Spooling.html
 share/doc/bacula/main/Director_Index.html
 share/doc/bacula/main/Disaster_Recovery_Using_Bac.html
 share/doc/bacula/main/File_Daemon_Index.html
+share/doc/bacula/main/File_Deduplication_using_Ba.html
 share/doc/bacula/main/GNU_Free_Documentation_Lice.html
 share/doc/bacula/main/General_Index.html
 share/doc/bacula/main/Getting_Started_with_Bacula.html
@@ -168,8 +170,12 @@ share/doc/bacula/main/Monitor_Configuration.html
 share/doc/bacula/main/New_Features_in_3_0_0.html
 share/doc/bacula/main/New_Features_in_5_0_0.html
 share/doc/bacula/main/New_Features_in_5_0_1.html
+share/doc/bacula/main/New_Features_in_5_2_1.html
+share/doc/bacula/main/New_Features_in_5_2_2.html
+share/doc/bacula/main/New_Features_in_5_2_x.html
 share/doc/bacula/main/New_Features_in_Released.html
 share/doc/bacula/main/Release_Version_5_0_2.html
+share/doc/bacula/main/Release_Version_5_0_3.html
 share/doc/bacula/main/Released_Version_3_0_3_3_0_.html
 share/doc/bacula/main/Restore_Command.html
 share/doc/bacula/main/Storage_Daemon_Configuratio.html
@@ -222,6 +228,10 @@ share/doc/bacula/main/img38.png
 share/doc/bacula/main/img39.png
 share/doc/bacula/main/img4.png
 share/doc/bacula/main/img40.png
+share/doc/bacula/main/img41.png
+share/doc/bacula/main/img42.png
+share/doc/bacula/main/img43.png
+share/doc/bacula/main/img44.png
 share/doc/bacula/main/img5.png
 share/doc/bacula/main/img6.png
 share/doc/bacula/main/img7.png
