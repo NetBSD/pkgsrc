@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2008/09/05 02:07:51 dholland Exp $
+$NetBSD: patch-ae,v 1.2 2012/10/20 22:11:30 joerg Exp $
 
 Fix 64-bit build.
 
@@ -13,3 +13,12 @@ Fix 64-bit build.
  #include "misc.h"
  #include "debugger.h"
  #include "mlvalues.h"
+@@ -182,7 +184,7 @@ int debugger(event)
+   value val;
+   value * p;
+ 
+-  if (dbg_socket == -1) return;  /* Not connected to a debugger. */
++  if (dbg_socket == -1) return -1;  /* Not connected to a debugger. */
+ 
+   /* Report the event to the debugger */
+   switch(event) {
