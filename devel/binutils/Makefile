@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/07/27 12:34:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2012/10/20 22:06:55 joerg Exp $
 
 DISTNAME=	binutils-2.22
 CATEGORIES=	devel
@@ -45,7 +45,8 @@ PLIST.gprof=	yes
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-Wno-unused-value -Wno-format-security \
-		-Wno-uninitialized -Wno-format
+		-Wno-uninitialized -Wno-format -Wno-string-plus-int \
+		-Wno-empty-body -Wno-self-assign
 .endif
 
 # Prevent the need to run texi2pod.pl and pod2man which would
