@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 00:20:16 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/20 13:14:48 wiz Exp $
 
-DISTNAME=	python2-chardet-2.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python2-//}
-PKGREVISION=	1
+DISTNAME=	chardet-2.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
-MASTER_SITES=	http://chardet.feedparser.org/download/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://pypi.python.org/packages/source/c/chardet/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://chardet.feedparser.org/
+HOMEPAGE=	http://pypi.python.org/pypi/chardet
 COMMENT=	Character encoding auto-detection in Python
 LICENSE=	gnu-lgpl-v2.1
 
-EGG_NAME=	${DISTNAME:S/python2-//}
-
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
