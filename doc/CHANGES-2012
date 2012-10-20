@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3332 2012/10/20 15:43:08 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3333 2012/10/20 16:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5163,3 +5163,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed graphics/p5-Gdk-Imlib [wiz 2012-10-20]
 	Removed graphics/p5-Gdk-Pixbuf [wiz 2012-10-20]
 	Removed x11/p5-gtk [wiz 2012-10-20]
+	Updated devel/py-distribute to 0.6.29 [wiz 2012-10-20]
