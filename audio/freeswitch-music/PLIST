@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/20 12:21:39 darcy Exp $
+${freeswitch-08k}${MUSICDIR}/8000/partita-no-3-in-e-major-bwv-1006-1-preludio.wav
+${freeswitch-08k}${MUSICDIR}/8000/ponce-preludio-in-e-major.wav
+${freeswitch-08k}${MUSICDIR}/8000/suite-espanola-op-47-leyenda.wav
+${freeswitch-08k}${MUSICDIR}/8000/danza-espanola-op-37-h-142-xii-arabesca.wav
+${freeswitch-16k}${MUSICDIR}/16000/partita-no-3-in-e-major-bwv-1006-1-preludio.wav
+${freeswitch-16k}${MUSICDIR}/16000/ponce-preludio-in-e-major.wav
+${freeswitch-16k}${MUSICDIR}/16000/suite-espanola-op-47-leyenda.wav
+${freeswitch-16k}${MUSICDIR}/16000/danza-espanola-op-37-h-142-xii-arabesca.wav
+${freeswitch-32k}${MUSICDIR}/32000/partita-no-3-in-e-major-bwv-1006-1-preludio.wav
+${freeswitch-32k}${MUSICDIR}/32000/ponce-preludio-in-e-major.wav
+${freeswitch-32k}${MUSICDIR}/32000/suite-espanola-op-47-leyenda.wav
+${freeswitch-32k}${MUSICDIR}/32000/danza-espanola-op-37-h-142-xii-arabesca.wav
+${freeswitch-48k}${MUSICDIR}/48000/partita-no-3-in-e-major-bwv-1006-1-preludio.wav
+${freeswitch-48k}${MUSICDIR}/48000/ponce-preludio-in-e-major.wav
+${freeswitch-48k}${MUSICDIR}/48000/suite-espanola-op-47-leyenda.wav
+${freeswitch-48k}${MUSICDIR}/48000/danza-espanola-op-37-h-142-xii-arabesca.wav
