@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 00:20:12 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/20 22:04:27 joerg Exp $
 
 DISTNAME=	libwpd-0.9.2
 PKGREVISION=	1
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	libwpd-0.9.pc.in libwpd-stream-0.9.pc.in
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
-BUILDLINK_TRANSFORM+=	rm:-Werror
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-private-field
 .endif
 
 .include "../../mk/bsd.pkg.mk"
