@@ -168,6 +168,10 @@ fluidsynth		Enable MIDI support using fluidsynth.
 fontconfig		Enable FONTCONFIG (fonts/fontconfig) support.
 freediameter-all-extensions	Build all extensions for freeDiameter (except test and debug).
 freeradius-simul-use	Enable Simultaneous-Use.
+freeswitch-08k		8000Hz Audio Files
+freeswitch-16k		16000Hz Audio Files
+freeswitch-32k		32000Hz Audio Files
+freeswitch-48k		48000Hz Audio Files
 freetype		Enable freetype support.
 fribidi			Enable BIDI support using fribidi.
 ftp			Enable File Transfer Protocol (FTP) support.
