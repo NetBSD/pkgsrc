@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 00:20:12 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/20 22:04:50 joerg Exp $
 
 DISTNAME=	libwps-0.2.4
 CATEGORIES=	converters
@@ -16,6 +16,11 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libwps-0.2.pc.in
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-private-field
+.endif
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
