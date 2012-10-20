@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:43 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2012/10/20 13:14:48 wiz Exp $
+bin/chardetect.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/chardet/__init__.py
 ${PYSITELIB}/chardet/__init__.pyc
 ${PYSITELIB}/chardet/__init__.pyo
@@ -99,9 +103,6 @@ ${PYSITELIB}/chardet/sbcsgroupprober.pyo
 ${PYSITELIB}/chardet/sjisprober.py
 ${PYSITELIB}/chardet/sjisprober.pyc
 ${PYSITELIB}/chardet/sjisprober.pyo
-${PYSITELIB}/chardet/test.py
-${PYSITELIB}/chardet/test.pyc
-${PYSITELIB}/chardet/test.pyo
 ${PYSITELIB}/chardet/universaldetector.py
 ${PYSITELIB}/chardet/universaldetector.pyc
 ${PYSITELIB}/chardet/universaldetector.pyo
