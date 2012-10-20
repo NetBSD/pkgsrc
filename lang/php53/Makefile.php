@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.24 2012/10/19 14:57:02 taca Exp $
+# $NetBSD: Makefile.php,v 1.25 2012/10/20 00:29:40 taca Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 
@@ -70,6 +70,22 @@ PATCH_DIST_STRIP=	-p1
 PLIST.suhosin=		yes
 MESSAGE_SRC=		${.CURDIR}/../../lang/php53/MESSAGE
 MESSAGE_SRC+=		${.CURDIR}/../../lang/php53/MESSAGE.suhosin
+
+# quick fix to apply suhosin patch
+SUBST_CLASSES+=			suhosin-pre
+SUBST_STAGE.suhosin-pre=	pre-patch # post-extract
+SUBST_FILES.suhosin-pre=	sapi/litespeed/lsapi_main.c
+SUBST_SED.suhosin-pre=		-e "s|1997-2012|1997-2004|g"
+SUBST_MESSAGE.suhosin-pre=	Modify before applying suhosin-patch
+
+# revert copyright year as original PHP
+SUBST_CLASSES+=			suhosin-post
+SUBST_STAGE.suhosin-post=	post-patch
+SUBST_FILES.suhosin-post=	sapi/litespeed/lsapi_main.c
+SUBST_SED.suhosin-post=		-e "s|1997-2004|1997-2012|g"
+SUBST_SED.suhosin-post+=	-e "s|1997-2011|1997-2012|g"
+SUBST_MESSAGE.suhosin-post=	Restore after applying suhosin-patch
+
 .  endif
 .endif
 
