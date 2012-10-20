@@ -1,21 +1,41 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:26 agc Exp $
+$NetBSD: patch-ab,v 1.3 2012/10/20 22:03:46 joerg Exp $
 
---- src/mulSetup.c.orig	Wed May  6 19:48:32 1998
-+++ src/mulSetup.c	Wed May  6 19:55:09 1998
-@@ -36,6 +36,16 @@
+--- src/mulSetup.c.orig	2004-08-11 17:44:56.000000000 +0000
++++ src/mulSetup.c
+@@ -37,6 +37,16 @@ operation of Software or Licensed Progra
  
  cube *cstack[1024];		/* Stack used in several routines. */
  
 +
 +/* Function prototypes for static functions in this file */
 +static int placeq(int flag, ssystem *sys,charge *charges);
-+static indexkid(ssystem *sys, cube *dad, int *pqindex, int *pcindex);
-+static getnbrs(ssystem *sys);
-+static linkcubes(ssystem *sys);
-+static setMaxq(ssystem *sys);
-+static getAllInter(ssystem *sys);
-+static set_vector_masks(ssystem *sys);
++static int indexkid(ssystem *sys, cube *dad, int *pqindex, int *pcindex);
++static void getnbrs(ssystem *sys);
++static void linkcubes(ssystem *sys);
++static int setMaxq(ssystem *sys);
++static int getAllInter(ssystem *sys);
++static int set_vector_masks(ssystem *sys);
 +
  /*
    sets up the partitioning of space and room for charges and expansions
  */
+@@ -717,8 +727,7 @@ int all_mul_exact, all_loc_exact, p, num
+ Find all the nearest neighbors.
+ At the bottom level, get neighbors due to a parents being exact.
+ */
+-static getnbrs(sys)
+-ssystem *sys;
++static void getnbrs(ssystem *sys)
+ {
+ cube *nc, *np, *****cubes = sys->cubes;
+ int depth = sys->depth;
+@@ -793,8 +802,7 @@ for the cubes requiring local expansion 
+ direct methods and one for cubes with potential evaluation points. 
+ Note, upnumvects and exact must be set!!!
+ */
+-static linkcubes(sys)
+-ssystem *sys;
++static void linkcubes(ssystem *sys)
+ {
+   cube *nc, **plnc, **pdnc, **pmnc, *****cubes = sys->cubes;
+   int i, j, k, l, cnt = 0;
