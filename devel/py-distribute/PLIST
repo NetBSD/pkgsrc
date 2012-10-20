@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/25 19:05:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/20 16:11:00 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
+${PYSITELIB}/_markerlib/__init__.py
+${PYSITELIB}/_markerlib/__init__.pyc
+${PYSITELIB}/_markerlib/__init__.pyo
+${PYSITELIB}/_markerlib/markers.py
+${PYSITELIB}/_markerlib/markers.pyc
+${PYSITELIB}/_markerlib/markers.pyo
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -140,6 +146,9 @@ ${PYSITELIB}/setuptools/tests/test_dist_info.pyo
 ${PYSITELIB}/setuptools/tests/test_easy_install.py
 ${PYSITELIB}/setuptools/tests/test_easy_install.pyc
 ${PYSITELIB}/setuptools/tests/test_easy_install.pyo
+${PYSITELIB}/setuptools/tests/test_markerlib.py
+${PYSITELIB}/setuptools/tests/test_markerlib.pyc
+${PYSITELIB}/setuptools/tests/test_markerlib.pyo
 ${PYSITELIB}/setuptools/tests/test_packageindex.py
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyc
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyo
@@ -149,6 +158,12 @@ ${PYSITELIB}/setuptools/tests/test_resources.pyo
 ${PYSITELIB}/setuptools/tests/test_sandbox.py
 ${PYSITELIB}/setuptools/tests/test_sandbox.pyc
 ${PYSITELIB}/setuptools/tests/test_sandbox.pyo
+${PYSITELIB}/setuptools/tests/test_sdist.py
+${PYSITELIB}/setuptools/tests/test_sdist.pyc
+${PYSITELIB}/setuptools/tests/test_sdist.pyo
+${PYSITELIB}/setuptools/tests/test_test.py
+${PYSITELIB}/setuptools/tests/test_test.pyc
+${PYSITELIB}/setuptools/tests/test_test.pyo
 ${PYSITELIB}/setuptools/tests/test_upload_docs.py
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyc
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyo
