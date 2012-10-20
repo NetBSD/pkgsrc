@@ -1,7 +1,10 @@
-$NetBSD: patch-an,v 1.1 2012/09/16 20:29:06 pettai Exp $
+$NetBSD: patch-an,v 1.2 2012/10/20 22:59:30 pettai Exp $
 
 Fix for sa_len size problem on NetBSD
 (See commit r29739 in nmap's svn for details)
+
+Fix (build) for Solaris 10
+(See commit r29672 in nmap's svn or PR pkg/47033)
 
 --- libdnet-stripped/src/intf.c.orig	2012-05-24 03:59:25.000000000 +0000
 +++ libdnet-stripped/src/intf.c
@@ -19,3 +22,15 @@ Fix for sa_len size problem on NetBSD
  #else
  # define NEXTIFR(i)	(i + 1)
  #endif
+@@ -954,9 +955,11 @@ intf_loop(intf_t *intf, intf_handler cal
+ 			;
+ 		else
+ 			return (-1);
++#ifdef IFF_IPMP
+ 		if (lifr->lifr_flags & IFF_IPMP) {
+ 			continue;
+ 		}
++#endif
+ 		
+ 		if (_intf_get_noalias(intf, entry) < 0)
+ 			return (-1);
