@@ -1,23 +1,51 @@
-$NetBSD: patch-ac,v 1.3 2005/12/05 20:50:38 rillig Exp $
+$NetBSD: patch-ac,v 1.4 2012/10/20 22:14:05 joerg Exp $
 
---- buffer.c.orig	1994-10-04 09:44:53.000000000 -0700
+--- buffer.c.orig	1994-10-04 16:44:53.000000000 +0000
 +++ buffer.c
-@@ -118,6 +118,4 @@
+@@ -103,4 +103,6 @@
+  * 
+  */
++#include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <stdio.h>
+@@ -118,6 +120,4 @@ static char *rcsid = "$Header: /a/swan/h
  #endif
  
 -extern char *shmat();
 -
  /* General macros */
  #define TRUE 1
-@@ -385,4 +383,5 @@ parse_args( argc, argv )
+@@ -385,4 +385,5 @@ parse_args( argc, argv )
  
  /* The interrupt handler */
 +void
  shutdown()
  {
-@@ -401,4 +400,5 @@ shutdown()
+@@ -401,4 +402,5 @@ shutdown()
  
  /* Shutdown because the child has ended */
 +void
  child_shutdown()
  {
+@@ -461,5 +463,5 @@ buffer_allocate()
+ 
+ 	if( debug )
+-		fprintf( stderr, "%s pbuffer is 0x%08x, buffer_size is %d [%d x %d]\n",
++		fprintf( stderr, "%s pbuffer is %p, buffer_size is %d [%d x %d]\n",
+ 			proc_string,
+ 			(char *)pbuffer, buffer_size, blocks, blocksize );
+@@ -489,5 +491,5 @@ buffer_allocate()
+ }
+ 
+-buffer_remove()
++void buffer_remove(void)
+ {
+ 	static char removing = FALSE;
+@@ -728,5 +730,5 @@ write_block_to_stdout()
+ 	if( next_k == 0 && showevery ){
+ 		if( debug > 3 )
+-			fprintf( stderr, "W: next_k = %lu showevery = %lu\n", next_k, showevery );
++			fprintf( stderr, "W: next_k = %lu showevery = %d\n", next_k, showevery );
+ 		showevery = showevery / 1024;
+ 		next_k = showevery;
