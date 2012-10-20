@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2012/02/15 11:20:46 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/10/20 13:32:54 wiz Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
@@ -21,3 +21,9 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--disable-rle
 CONFIGURE_ARGS+=	--disable-x11
 CONFIGURE_ARGS+=	--disable-gl
+
+SUBST_CLASSES+=		split
+SUBST_FILES.split+=	util/Makefile.in
+SUBST_SED.split+=	-e 's,../lib/libgif.la,$$(prefix)/lib/libgif.la,g'
+SUBST_MESSAGE.split=	Change Makefile for giflib-util split-off.
+SUBST_STAGE.split=	pre-configure
