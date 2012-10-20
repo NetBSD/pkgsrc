@@ -1,4 +1,4 @@
-$NetBSD: patch-yacc_main_c,v 1.1 2011/11/06 19:32:07 dholland Exp $
+$NetBSD: patch-yacc_main_c,v 1.2 2012/10/20 22:11:30 joerg Exp $
 
 Avoid insecure use of mktemp().
 
@@ -32,6 +32,15 @@ Avoid insecure use of mktemp().
  
  done(k)
  int k;
+@@ -121,7 +124,7 @@ usage()
+     exit(1);
+ }
+ 
+-getargs(argc, argv)
++void getargs(argc, argv)
+ int argc;
+ char *argv[];
+ {
 @@ -276,12 +279,21 @@ create_file_names()
      union_file_name[len + 5] = 'u';
  
