@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/10/20 12:49:35 darcy Exp $
+# $NetBSD: options.mk,v 1.3 2012/10/20 13:01:30 darcy Exp $
 
 PKG_OPTIONS_VAR=         PKG_OPTIONS.freeswitch
 PKG_SUPPORTED_OPTIONS=   freeswitch-08k freeswitch-16k freeswitch-32k freeswitch-48k
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=   freeswitch-08k freeswitch-16k
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mfreeswitch-08kx)
+.if !empty(PKG_OPTIONS:Mfreeswitch-08k)
 DISTFILES+=	freeswitch-sounds-music-8000-1.0.8.tar.gz
 INSTALLATION_DIRS+= share/freeswitch/sounds/music/8000
 SOUND_DIRS+= 8000
