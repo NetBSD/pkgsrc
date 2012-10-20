@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3329 2012/10/20 13:23:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3330 2012/10/20 14:27:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5158,3 +5158,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/py-chardet to 2.1.1 [wiz 2012-10-20]
 	Updated devel/mono-addins to 1.0 [wiz 2012-10-20]
 	Updated x11/xterm to 284 [wiz 2012-10-20]
+	Updated security/p5-Crypt-OpenSSL-DSA to 0.14 [wen 2012-10-20]
