@@ -1,0 +1,43 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/10/20 02:25:17 sbd Exp $
+
+Use GZIP_CMD instead of GZIP so that GZIP is exported to the env of a
+sub-make and then to gzip itself.
+
+--- Makefile.in.orig	2012-10-19 09:33:04.860211550 +0000
++++ Makefile.in
+@@ -318,7 +318,7 @@ dddroot_DATA = NEWS COPYING
+ # Subdirectories.
+ # -----------------------------------------------------------------------------
+ SUBDIRS = themes vsllib ddd
+-GZIP = gzip
++GZIP_CMD = gzip
+ 
+ # -----------------------------------------------------------------------------
+ # Distribution (via etc/make-final).
+@@ -872,7 +872,7 @@ snapshot:
+ 		> proto-toplev/FILES; \
+ 	    ( cd proto-toplev; $(TAR) --create --dereference \
+ 		--verbose --files-from FILES \
+-		--file - ) | $(GZIP) -v -9 > $$ddd-$$VER.tar.gz; \
++		--file - ) | $(GZIP_CMD) -v -9 > $$ddd-$$VER.tar.gz; \
+ 	)
+ 	rm -fr proto-toplev
+ 
+@@ -900,7 +900,7 @@ htmldist:
+ 		> proto-toplev/FILES; \
+ 	    ( cd proto-toplev; $(TAR) --create --dereference \
+ 		--verbose --files-from FILES \
+-		--file - ) | $(GZIP) -v -9 > $$ddd-$$VER-html-manual.tar.gz; \
++		--file - ) | $(GZIP_CMD) -v -9 > $$ddd-$$VER-html-manual.tar.gz; \
+ 	)
+ 	rm -fr proto-toplev
+ 
+@@ -928,7 +928,7 @@ picsdist:
+ 		> proto-toplev/FILES; \
+ 	    ( cd proto-toplev; $(TAR) --create --dereference \
+ 		--verbose --files-from FILES \
+-		--file - ) | $(GZIP) -v -9 > $$ddd-$$VER-pics.tar.gz; \
++		--file - ) | $(GZIP_CMD) -v -9 > $$ddd-$$VER-pics.tar.gz; \
+ 	)
+ 	rm -fr proto-toplev
+ $(srcdir)/ChangeLog: $(srcdir)/Makefile.am
