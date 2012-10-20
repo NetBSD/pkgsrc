@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/10/20 12:21:39 darcy Exp $
-
+# $NetBSD: options.mk,v 1.2 2012/10/20 12:49:35 darcy Exp $
 
 PKG_OPTIONS_VAR=         PKG_OPTIONS.freeswitch
 PKG_SUPPORTED_OPTIONS=   freeswitch-08k freeswitch-16k freeswitch-32k freeswitch-48k
@@ -31,7 +30,7 @@ SOUND_DIRS+= 48000
 INSTALLATION_DIRS+= share/freeswitch/sounds/music/48000
 .endif
 
-.for opt in ${PKG_SUPPORTED_OPTIONS} xxx
+.for opt in ${PKG_SUPPORTED_OPTIONS}
 .if !empty(PKG_OPTIONS:M${opt})
 PLIST_SUBST+= ${opt}=""
 .else
@@ -39,4 +38,4 @@ PLIST_SUBST+= ${opt}="@comment "
 .endif
 .endfor
 
-PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS} xxx
+PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
