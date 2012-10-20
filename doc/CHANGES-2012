@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3325 2012/10/20 00:58:23 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3326 2012/10/20 00:58:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libcroco to 0.6.7 [drochner 2012-10-19]
 	Updated print/evince3 to 3.6.1 [drochner 2012-10-19]
 	Updated graphics/cairo to 1.12.4nb2 [wiz 2012-10-20]
+	Updated graphics/cairo-gobject to 1.12.4 [wiz 2012-10-20]
