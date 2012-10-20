@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2010/09/29 21:57:04 minskim Exp $
+$NetBSD: distinfo,v 1.10 2012/10/20 22:03:46 joerg Exp $
 
 SHA1 (fastcap-2.0-18Sep92.tgz) = 7ad255cfe33c60428e934b87298951829331e4d5
 RMD160 (fastcap-2.0-18Sep92.tgz) = 3073f17442abaf67b9d3a7c8bd05054dbb706a9a
 Size (fastcap-2.0-18Sep92.tgz) = 1392318 bytes
 SHA1 (patch-aa) = 489b5f8716627f9c9297e8d11f1cfb0e1777b3fe
-SHA1 (patch-ab) = 4336ebcb0ba385e6937129735653db20d48d186f
+SHA1 (patch-ab) = c0e078a2d3607f65a797fb6c61dc34ce33a0d4e2
 SHA1 (patch-ac) = 3b3b6d461d5875dfdbaf8af16546887f57279b88
 SHA1 (patch-ad) = a9d971f0990d5cf04651afd73689170ce1eb0f13
 SHA1 (patch-ae) = fd04e26454f89661a02e37fc51770746af108fd1
@@ -20,3 +20,5 @@ SHA1 (patch-an) = 51f9cf9fdf32755ab3b79b093873782e8ce20a41
 SHA1 (patch-ao) = 55fb0926e433b96336a0574e09231e825c717607
 SHA1 (patch-ap) = 63378fe5ceac7b2c76bdb4d6f3a50010cef621f8
 SHA1 (patch-aq) = e0620792ae3bcadfc4d7ec3cdf7f4cd21ce465cd
+SHA1 (patch-src_mulDo.c) = b080cc22b07ee30527e98f92c71080049df796e2
+SHA1 (patch-src_mulMats.c) = b6258dc14cfc5d3445a0a9b8e30d7de30ff15e99
