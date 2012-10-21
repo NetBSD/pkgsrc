@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11622 2012/10/21 20:41:35 wiz Exp $
+$NetBSD: TODO,v 1.11623 2012/10/21 20:42:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1042,7 +1042,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gobject3-3.4.1
 	o py-lxml-3.0.1
 	o py-moin-1.9.5
-	o py-pytz-2012g
 	o py-sybase-0.37
 	o py-sympy-0.7.2
 	o py-urwid-1.0.2
