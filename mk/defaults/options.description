@@ -291,6 +291,7 @@ lang-cs			Add Czech language support.
 lang-da			Add Danish language support.
 lang-de			Add German language support.
 lang-el			Add Greek language support.
+lang-en			Add English language support.
 lang-es			Add Spanish language support.
 lang-et			Add Estonian language support.
 lang-fa			Add Persian language support.
