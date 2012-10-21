@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/22 13:00:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/21 17:13:49 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.23.0
@@ -17,8 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# no languages
 
-DOC_FILES=		README NEWS ChangeLog TODO FAQ COPYRIGHT \
-			doc/presentation.pdf
+DOC_FILES=		ChangeLog doc/presentation.pdf
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} BMAKE=${PREFIX}/bin/bmake
 
