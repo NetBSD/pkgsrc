@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11621 2012/10/21 20:40:20 wiz Exp $
+$NetBSD: TODO,v 1.11622 2012/10/21 20:41:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -880,7 +880,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mawk-1.3.4.20120627
 	o mc-4.8.1.4
 	o mdocml-1.12.1
-	o meld-1.6.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mg-20110905 [pkg/47079]
