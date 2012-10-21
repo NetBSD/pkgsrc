@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3359 2012/10/21 22:20:55 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3360 2012/10/21 22:22:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5194,3 +5194,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/p5-Authen-SASL-Cyrus to 0.13 [wiz 2012-10-21]
 	Updated security/p5-Crypt-SSLeay to 0.64 [wiz 2012-10-21]
 	Updated security/p5-Digest-SHA to 5.72 [wiz 2012-10-21]
+	Updated security/p5-IO-Socket-SSL to 1.77 [wiz 2012-10-21]
