@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/21 17:17:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/21 17:24:58 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.23.0
@@ -20,7 +20,9 @@ USE_LANGUAGES=		# no languages
 
 DOC_FILES=		doc/presentation.pdf
 
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} BMAKE=${PREFIX}/bin/bmake
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} \
+			SYSCONFDIR=${PKG_SYSCONFDIR} \
+			BMAKE=${PREFIX}/bin/bmake
 
 AUTO_MKDIRS=		yes
 
