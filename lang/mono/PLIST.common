@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2011/06/10 04:11:29 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2012/10/21 21:21:40 wiz Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -288,6 +288,7 @@ lib/mono/4.0/Microsoft.Build.Engine.dll
 lib/mono/4.0/Microsoft.Build.Framework.dll
 lib/mono/4.0/Microsoft.Build.Tasks.v4.0.dll
 lib/mono/4.0/Microsoft.Build.Utilities.v4.0.dll
+lib/mono/4.0/Microsoft.Build.dll
 lib/mono/4.0/Microsoft.Build.xsd
 lib/mono/4.0/Microsoft.CSharp.dll
 lib/mono/4.0/Microsoft.CSharp.targets
@@ -559,6 +560,8 @@ lib/mono/gac/Microsoft.Build.Utilities.v4.0/4.0.0.0__b03f5f7f11d50a3a/Microsoft.
 lib/mono/gac/Microsoft.Build.Utilities.v4.0/4.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Utilities.v4.0.dll.mdb
 lib/mono/gac/Microsoft.Build.Utilities/2.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Utilities.dll
 lib/mono/gac/Microsoft.Build.Utilities/2.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.Utilities.dll.mdb
+lib/mono/gac/Microsoft.Build/4.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.dll
+lib/mono/gac/Microsoft.Build/4.0.0.0__b03f5f7f11d50a3a/Microsoft.Build.dll.mdb
 lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a/Microsoft.CSharp.dll
 lib/mono/gac/Microsoft.CSharp/4.0.0.0__b03f5f7f11d50a3a/Microsoft.CSharp.dll.mdb
 lib/mono/gac/Microsoft.VisualC/0.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
@@ -693,8 +696,8 @@ lib/mono/gac/System.Data.OracleClient/2.0.0.0__b77a5c561934e089/System.Data.Orac
 lib/mono/gac/System.Data.OracleClient/2.0.0.0__b77a5c561934e089/System.Data.OracleClient.dll.mdb
 lib/mono/gac/System.Data.OracleClient/4.0.0.0__b77a5c561934e089/System.Data.OracleClient.dll
 lib/mono/gac/System.Data.OracleClient/4.0.0.0__b77a5c561934e089/System.Data.OracleClient.dll.mdb
-lib/mono/gac/System.Data.Services.Client/3.5.0.0__b03f5f7f11d50a3a/System.Data.Services.Client.dll
-lib/mono/gac/System.Data.Services.Client/3.5.0.0__b03f5f7f11d50a3a/System.Data.Services.Client.dll.mdb
+lib/mono/gac/System.Data.Services.Client/3.5.0.0__b77a5c561934e089/System.Data.Services.Client.dll
+lib/mono/gac/System.Data.Services.Client/3.5.0.0__b77a5c561934e089/System.Data.Services.Client.dll.mdb
 lib/mono/gac/System.Data.Services.Client/4.0.0.0__b77a5c561934e089/System.Data.Services.Client.dll
 lib/mono/gac/System.Data.Services.Client/4.0.0.0__b77a5c561934e089/System.Data.Services.Client.dll.mdb
 lib/mono/gac/System.Data.Services/3.5.0.0__b77a5c561934e089/System.Data.Services.dll
@@ -885,6 +888,10 @@ lib/mono/mono-configuration-crypto/4.0/Mono.Configuration.Crypto.dll.mdb
 lib/mono/mono-configuration-crypto/4.0/mono-configuration-crypto.exe
 lib/mono/mono-configuration-crypto/4.0/mono-configuration-crypto.exe.mdb
 lib/mono/monodoc/monodoc.dll
+lib/mono/xbuild-frameworks/.NETFramework/v2.0/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v3.0/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList/FrameworkList.xml
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.CSharp.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.Common.targets
 lib/mono/xbuild/Microsoft/Silverlight/v2.0/Microsoft.Silverlight.VisualBasic.targets
@@ -894,10 +901,6 @@ lib/mono/xbuild/Microsoft/Silverlight/v3.0/Microsoft.Silverlight.Common.targets
 lib/mono/xbuild/Microsoft/Silverlight/v3.0/Microsoft.Silverlight.VisualBasic.targets
 lib/mono/xbuild/Microsoft/Silverlight/v3.0/Moonlight.Build.Tasks.dll
 lib/mono/xbuild/Microsoft/VisualStudio/v9.0/WebApplications/Microsoft.WebApplication.targets
-lib/mono/xbuild-frameworks/.NETFramework/v2.0/RedistList/FrameworkList.xml
-lib/mono/xbuild-frameworks/.NETFramework/v3.0/RedistList/FrameworkList.xml
-lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList/FrameworkList.xml
-lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList/FrameworkList.xml
 lib/monodoc/monodoc.xml
 lib/monodoc/sources/Mono.source
 lib/monodoc/sources/Mono.tree
