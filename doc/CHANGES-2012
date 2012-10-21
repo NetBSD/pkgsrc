@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3340 2012/10/21 17:56:40 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3341 2012/10/21 18:08:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5169,7 +5169,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed comms/gscmxx [wiz 2012-10-21]
 	Updated fonts/terminus-font to 4.38 [cheusov 2012-10-21]
 	Updated misc/tmux to 1.7 [wen 2012-10-21]
-	Added print/tex-umlaute version v2.1 [minskim 2012-10-21]
-	Added print/tex-umlaute-doc version v2.1 [minskim 2012-10-21]
+	Added print/tex-umlaute version 2.1 [minskim 2012-10-21]
+	Added print/tex-umlaute-doc version 2.1 [minskim 2012-10-21]
 	Added print/tex-psfrag version 3.04 [minskim 2012-10-21]
 	Added print/tex-psfrag-doc version 3.04 [minskim 2012-10-21]
