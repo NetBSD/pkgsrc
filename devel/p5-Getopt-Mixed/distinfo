@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/15 21:11:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2012/10/21 22:42:57 wiz Exp $
 
-SHA1 (Getopt-Mixed-1.10.tar.gz) = 3d5fb052910e4a560ff02c4e4f594a27fe1d22e0
-RMD160 (Getopt-Mixed-1.10.tar.gz) = 4cd74ed2906c1b63d56dba0eb802e037918fda69
-Size (Getopt-Mixed-1.10.tar.gz) = 11199 bytes
+SHA1 (Getopt-Mixed-1.11.tar.gz) = 1dee916c35c562d146510a283bf7477c65f9cf18
+RMD160 (Getopt-Mixed-1.11.tar.gz) = 92db760dd3bb850e0cc04f7eea1d483bf8585463
+Size (Getopt-Mixed-1.11.tar.gz) = 21162 bytes
