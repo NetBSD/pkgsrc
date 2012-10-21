@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2012/07/11 12:59:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.35 2012/10/21 18:14:16 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2751,9 +2751,6 @@ share/texmf-dist/doc/latex/ps4pdf/README
 share/texmf-dist/doc/latex/ps4pdf/create-eps
 share/texmf-dist/doc/latex/ps4pdf/penguin.eps
 share/texmf-dist/doc/latex/ps4pdf/ps4pdf-test.tex
-share/texmf-dist/doc/latex/psfrag/pfgguide.ps
-share/texmf-dist/doc/latex/psfrag/readme.sem
-share/texmf-dist/doc/latex/psfrag/readme.xfg
 share/texmf-dist/doc/latex/revtex4/DOWNLOAD
 share/texmf-dist/doc/latex/revtex4/README
 share/texmf-dist/doc/latex/revtex4/auguide.dvi
@@ -2891,7 +2888,6 @@ share/texmf-dist/dvips/antt/config.antt
 share/texmf-dist/dvips/omega/config.omega
 share/texmf-dist/dvips/omega/omega.cfg
 share/texmf-dist/dvips/pl/config.pl
-share/texmf-dist/dvips/psfrag/psfrag.pro
 share/texmf-dist/dvips/qfonts/config.qbk
 share/texmf-dist/dvips/qfonts/config.qcr
 share/texmf-dist/dvips/qfonts/config.qhv
@@ -6514,7 +6510,6 @@ share/texmf-dist/tex/latex/portland/portland.sty
 share/texmf-dist/tex/latex/program/program.sty
 share/texmf-dist/tex/latex/ps4pdf/ps4pdf.sty
 share/texmf-dist/tex/latex/psboxit/psboxit.sty
-share/texmf-dist/tex/latex/psfrag/psfrag.sty
 share/texmf-dist/tex/latex/qfonts/ot1qbk.fd
 share/texmf-dist/tex/latex/qfonts/ot1qcr.fd
 share/texmf-dist/tex/latex/qfonts/ot1qhv.fd
@@ -6561,13 +6556,6 @@ share/texmf-dist/tex/latex/textmerg/textmerg.tex
 share/texmf-dist/tex/latex/textpos/textpos.sty
 share/texmf-dist/tex/latex/totpages/totpages.sty
 share/texmf-dist/tex/latex/treesvr/trees.sty
-share/texmf-dist/tex/latex/umlaute/atari.def
-share/texmf-dist/tex/latex/umlaute/isolatin.def
-share/texmf-dist/tex/latex/umlaute/mac.def
-share/texmf-dist/tex/latex/umlaute/pc850.def
-share/texmf-dist/tex/latex/umlaute/roman8.def
-share/texmf-dist/tex/latex/umlaute/umlaut.sty
-share/texmf-dist/tex/latex/umlaute/umlaute.sty
 share/texmf-dist/tex/latex/units/nicefrac.sty
 share/texmf-dist/tex/latex/units/units.sty
 share/texmf-dist/tex/latex/upquote/upquote.sty
