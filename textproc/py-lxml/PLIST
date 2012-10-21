@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/02/07 11:54:41 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/10/21 21:34:42 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,17 +23,12 @@ ${PYSITELIB}/lxml/doctestcompare.py
 ${PYSITELIB}/lxml/doctestcompare.pyc
 ${PYSITELIB}/lxml/doctestcompare.pyo
 ${PYSITELIB}/lxml/etree.so
-${PYSITELIB}/lxml/etree_defs.h
-${PYSITELIB}/lxml/etreepublic.pxd
 ${PYSITELIB}/lxml/html/ElementSoup.py
 ${PYSITELIB}/lxml/html/ElementSoup.pyc
 ${PYSITELIB}/lxml/html/ElementSoup.pyo
 ${PYSITELIB}/lxml/html/__init__.py
 ${PYSITELIB}/lxml/html/__init__.pyc
 ${PYSITELIB}/lxml/html/__init__.pyo
-${PYSITELIB}/lxml/html/_dictmixin.py
-${PYSITELIB}/lxml/html/_dictmixin.pyc
-${PYSITELIB}/lxml/html/_dictmixin.pyo
 ${PYSITELIB}/lxml/html/_diffcommand.py
 ${PYSITELIB}/lxml/html/_diffcommand.pyc
 ${PYSITELIB}/lxml/html/_diffcommand.pyo
@@ -67,6 +62,26 @@ ${PYSITELIB}/lxml/html/soupparser.pyo
 ${PYSITELIB}/lxml/html/usedoctest.py
 ${PYSITELIB}/lxml/html/usedoctest.pyc
 ${PYSITELIB}/lxml/html/usedoctest.pyo
+${PYSITELIB}/lxml/includes/__init__.py
+${PYSITELIB}/lxml/includes/__init__.pyc
+${PYSITELIB}/lxml/includes/__init__.pyo
+${PYSITELIB}/lxml/includes/c14n.pxd
+${PYSITELIB}/lxml/includes/config.pxd
+${PYSITELIB}/lxml/includes/dtdvalid.pxd
+${PYSITELIB}/lxml/includes/etree_defs.h
+${PYSITELIB}/lxml/includes/etreepublic.pxd
+${PYSITELIB}/lxml/includes/htmlparser.pxd
+${PYSITELIB}/lxml/includes/lxml-version.h
+${PYSITELIB}/lxml/includes/relaxng.pxd
+${PYSITELIB}/lxml/includes/schematron.pxd
+${PYSITELIB}/lxml/includes/tree.pxd
+${PYSITELIB}/lxml/includes/uri.pxd
+${PYSITELIB}/lxml/includes/xinclude.pxd
+${PYSITELIB}/lxml/includes/xmlerror.pxd
+${PYSITELIB}/lxml/includes/xmlparser.pxd
+${PYSITELIB}/lxml/includes/xmlschema.pxd
+${PYSITELIB}/lxml/includes/xpath.pxd
+${PYSITELIB}/lxml/includes/xslt.pxd
 ${PYSITELIB}/lxml/isoschematron/__init__.py
 ${PYSITELIB}/lxml/isoschematron/__init__.pyc
 ${PYSITELIB}/lxml/isoschematron/__init__.pyo
@@ -79,6 +94,8 @@ ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematro
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt
+${PYSITELIB}/lxml/lxml.etree.h
+${PYSITELIB}/lxml/lxml.etree_api.h
 ${PYSITELIB}/lxml/objectify.so
 ${PYSITELIB}/lxml/pyclasslookup.py
 ${PYSITELIB}/lxml/pyclasslookup.pyc
@@ -86,7 +103,6 @@ ${PYSITELIB}/lxml/pyclasslookup.pyo
 ${PYSITELIB}/lxml/sax.py
 ${PYSITELIB}/lxml/sax.pyc
 ${PYSITELIB}/lxml/sax.pyo
-${PYSITELIB}/lxml/tree.pxd
 ${PYSITELIB}/lxml/usedoctest.py
 ${PYSITELIB}/lxml/usedoctest.pyc
 ${PYSITELIB}/lxml/usedoctest.pyo
