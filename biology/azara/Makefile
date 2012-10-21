@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/11 20:32:10 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/21 17:53:09 cheusov Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -18,22 +18,14 @@ MAKE_FILE=		makefile
 
 INSTALLATION_DIRS=	bin
 
+PROGFILES=	azara bin2asc combine connect contours deflate \
+	extract float2int int2float look_at look_byte look_for mat2par \
+	par2mat peak_find peak_fit plot1 plot2 process project reflate \
+	slides swap unblock viewer
+
 do-install:
-.for PROG in azara \
-		bin2asc \
-		combine connect contours \
-		deflate \
-		extract \
-		float2int \
-		int2float \
-		look_at look_byte look_for \
-		mat2par \
-		par2mat peak_find peak_fit plot1 plot2 process project \
-		reflate \
-		slides swap \
-		unblock viewer
-		${CP} ${WRKSRC}/bin/${PROG} ${DESTDIR}${PREFIX}/bin
-.endfor
+	set -e; cd ${WRKSRC}/bin; \
+	${INSTALL_PROGRAM} ${PROGFILES} ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
