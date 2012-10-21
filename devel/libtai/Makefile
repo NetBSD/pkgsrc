@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2012/10/21 11:26:50 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/21 13:36:19 schmonz Exp $
 #
 
 DISTNAME=	libtai-0.60
 PKGREVISION=	4
 CATEGORIES=	devel
-MASTER_SITES=	${HOMEPAGE:Q}
+MASTER_SITES=	http://cr.yp.to/libtai/
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://cr.yp.to/libtai/
+HOMEPAGE=	http://cr.yp.to/libtai.html
 COMMENT=	Library for storing and manipulating dates and times
 
 CONFLICTS=	libowfat-[0-9]*
