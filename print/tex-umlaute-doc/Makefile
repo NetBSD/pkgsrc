@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/10/21 17:46:40 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/21 18:07:08 minskim Exp $
 
 DISTNAME=	umlaute.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-v2.1
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
