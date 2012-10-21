@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2012/10/21 18:50:54 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/21 18:54:26 darcy Exp $
 
-DISTNAME=		freeswitch-sounds-ru${VERSION}
+DISTNAME=		freeswitch-sounds-ru-${VERSION}
 VERSION=		1.0.13
 CATEGORIES=		audio
 MASTER_SITES=	http://files.freeswitch.org/
