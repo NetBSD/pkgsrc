@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:38 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/21 14:49:01 wen Exp $
 
-DISTNAME=	tmux-1.6
+DISTNAME=	tmux-1.7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
@@ -20,6 +20,6 @@ BUILDLINK_TRANSFORM+=   rename:-D_XPG4_2:-D_XPG6
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1b
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
