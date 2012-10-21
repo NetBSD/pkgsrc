@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3334 2012/10/21 04:24:32 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3335 2012/10/21 04:32:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5165,3 +5165,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed x11/p5-gtk [wiz 2012-10-20]
 	Updated devel/py-distribute to 0.6.29 [wiz 2012-10-20]
 	Added devel/p5-IO-HTML version 0.04 [wen 2012-10-21]
+	Updated www/p5-HTTP-Message to 6.06 [wen 2012-10-21]
