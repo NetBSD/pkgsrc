@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3350 2012/10/21 22:05:57 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3351 2012/10/21 22:07:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5185,3 +5185,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/harfbuzz to 0.9.5 [wiz 2012-10-21]
 	Updated textproc/py-lxml to 3.0.1 [wiz 2012-10-21]
 	Updated databases/p5-DBD-postgresql to 2.19.3 [wiz 2012-10-21]
+	Updated databases/p5-DB_File to 1.827 [wiz 2012-10-21]
