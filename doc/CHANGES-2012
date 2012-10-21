@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3355 2012/10/21 22:14:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3356 2012/10/21 22:15:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/p5-Business-ISBN-Data to 20120719.001 [wiz 2012-10-21]
 	Updated net/p5-Net-DNS to 0.68 [wiz 2012-10-21]
 	Updated net/p5-NetAddr-IP to 4.065 [wiz 2012-10-21]
+	Updated security/p5-Authen-SASL to 2.16 [wiz 2012-10-21]
