@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/06/14 07:44:41 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/21 21:34:42 wiz Exp $
 #
 
-DISTNAME=	lxml-2.3.2
+DISTNAME=	lxml-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://lxml.de/files/
 EXTRACT_SUFX=	.tgz
@@ -15,7 +14,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c11:../../devel/py-setuptools
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.7.8
