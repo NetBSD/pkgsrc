@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.9 2012/10/21 13:36:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/21 13:37:12 schmonz Exp $
 #
 
-DISTNAME=	libtai-0.60
-PKGREVISION=	4
-CATEGORIES=	devel
-MASTER_SITES=	http://cr.yp.to/libtai/
+DISTNAME=		libtai-0.60
+PKGREVISION=		4
+CATEGORIES=		devel
+MASTER_SITES=		http://cr.yp.to/libtai/
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://cr.yp.to/libtai.html
-COMMENT=	Library for storing and manipulating dates and times
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://cr.yp.to/libtai.html
+COMMENT=		Library for storing and manipulating dates and times
 
-CONFLICTS=	libowfat-[0-9]*
+CONFLICTS=		libowfat-[0-9]*
 
-DJB_RESTRICTED=	NO
+DJB_RESTRICTED=		NO
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	nroff
+USE_TOOLS+=		nroff
 
-EGDIR=		share/examples/${PKGBASE}
-CONF_FILES+=	${EGDIR}/leapsecs.dat ${PKG_SYSCONFDIR}/leapsecs.dat
+EGDIR=			share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/leapsecs.dat ${PKG_SYSCONFDIR}/leapsecs.dat
 
 INSTALLATION_DIRS=	bin include lib ${EGDIR}
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3
