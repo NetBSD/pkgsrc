@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/07/07 03:06:24 mspo Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/21 16:01:40 cheusov Exp $
 #
 
 DISTNAME=	sendfile-2.1b
@@ -30,8 +30,8 @@ SUBST_VARS.makeconfig=	PREFIX PKG_SYSCONFBASEDIR
 post-configure:
 	cd ${WRKSRC} &&${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} config
 
-OWN_DIRS+=	 ${VARBASE}/spool/sendfile
-OWN_DIRS_PERMS+= ${VARBASE}/spool/sendfile/LOG ${ROOT_USER} ${ROOT_GROUP} 700
-OWN_DIRS_PERMS+= ${VARBASE}/spool/sendfile/OUTGOING ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS+=	${VARBASE}/spool/sendfile
+OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/LOG ${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/OUTGOING ${ROOT_USER} ${ROOT_GROUP} 1777
 
 .include "../../mk/bsd.pkg.mk"
