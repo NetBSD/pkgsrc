@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2012/10/21 18:50:54 darcy Exp $
+
+SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = bff5ed02816b0d7e193503a980bc3dc7655e6564
+RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = fdf15330ca1ab76507f24d311ddcfc37b4df0b18
+Size (freeswitch/freeswitch-sounds-ru-RU-elena-16000-1.0.13.tar.gz) = 28650196 bytes
+SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 4c1e0d8fecd999afac75170e5a2636e0d7acd7c0
+RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 8ec35413af595e5b6f82c9ccab0ace10abb05c6b
+Size (freeswitch/freeswitch-sounds-ru-RU-elena-32000-1.0.13.tar.gz) = 56843560 bytes
+SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = 27dc9d953f41c351323a2068dfa22f98dfc31ea2
+RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = f7a7481d6df7a0217dda8ba94d2f940686d94db1
+Size (freeswitch/freeswitch-sounds-ru-RU-elena-48000-1.0.13.tar.gz) = 84394475 bytes
+SHA1 (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = cff2da72b0dc53df781ac7526f3e035192f9065c
+RMD160 (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = 2e6902bdd848b0b5cd70463d217e717c4eb4e9fe
+Size (freeswitch/freeswitch-sounds-ru-RU-elena-8000-1.0.13.tar.gz) = 14363334 bytes
