@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/21 17:55:05 minskim Exp $
+share/texmf-dist/doc/latex/psfrag/00readme.txt
+share/texmf-dist/doc/latex/psfrag/announce.txt
+share/texmf-dist/doc/latex/psfrag/example.eps
+share/texmf-dist/doc/latex/psfrag/pfgguide.pdf
+share/texmf-dist/doc/latex/psfrag/pfgguide.tex
+share/texmf-dist/doc/latex/psfrag/testfig.eps
