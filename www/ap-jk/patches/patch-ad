@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2010/02/16 14:52:13 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2012/10/21 21:33:25 erh Exp $
+
+Fixup the Makefile so it doesn't use libtool to install.
 
 --- apache-1.3/Makefile.in.orig	2006-03-02 16:45:37.000000000 +0000
 +++ apache-1.3/Makefile.in	2006-03-02 16:45:52.000000000 +0000
