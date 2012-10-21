@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3380 2012/10/21 23:12:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3381 2012/10/21 23:13:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5215,3 +5215,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/p5-Image-Size to 3.232 [wiz 2012-10-21]
 	Updated textproc/p5-Encode to 2.47 [wiz 2012-10-21]
 	Updated textproc/p5-YAML-Syck to 1.21 [wiz 2012-10-21]
+	Updated www/p5-HTML-Tree to 5.03 [wiz 2012-10-21]
