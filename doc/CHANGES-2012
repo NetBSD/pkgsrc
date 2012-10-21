@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3353 2012/10/21 22:10:53 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3354 2012/10/21 22:12:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5188,3 +5188,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DB_File to 1.827 [wiz 2012-10-21]
 	Updated mail/p5-MIME-Types to 1.35 [wiz 2012-10-21]
 	Updated misc/p5-Business-ISBN-Data to 20120719.001 [wiz 2012-10-21]
+	Updated net/p5-Net-DNS to 0.68 [wiz 2012-10-21]
