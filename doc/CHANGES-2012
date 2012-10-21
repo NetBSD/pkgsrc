@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3343 2012/10/21 18:59:06 darcy Exp $
+$NetBSD: CHANGES-2012,v 1.3344 2012/10/21 20:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5177,3 +5177,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added audio/freeswitch-sounds-en version 1.0.22 [darcy 2012-10-21]
 	Added audio/freeswitch-sounds-fr version 1.0.18 [darcy 2012-10-21]
 	Added audio/freeswitch-sounds-ru version 1.0.13 [darcy 2012-10-21]
+	Updated devel/meld to 1.6.1 [wiz 2012-10-21]
