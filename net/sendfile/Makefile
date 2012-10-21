@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2012/10/21 16:01:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/21 16:05:19 cheusov Exp $
 #
 
 DISTNAME=	sendfile-2.1b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://fex.rus.uni-stuttgart.de/download/
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fex.rus.uni-stuttgart.de/saft/sendfile.html
 COMMENT=	Implementation of the Simple asynchronous file transfer protocol
 LICENSE=	gnu-gpl-v2
+
+CONFLICTS=	jabberd2-[0-9]*
 
 #WRKSRC=		${WRKDIR}/sendfile-2.1b
 
