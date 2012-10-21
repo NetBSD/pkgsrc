@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2012/10/06 14:11:12 asau Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/21 23:05:30 wiz Exp $
 #
 
-DISTNAME=	Image-Size-3.230
-PKGNAME=	p5-${DISTNAME:S/220/2.2/}
-PKGREVISION=	2
+DISTNAME=	Image-Size-3.232
+PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5isi
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
@@ -20,6 +19,8 @@ DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 BUILD_DEPENDS+=	{perl>=5.10.0,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Image/Size/.packlist
+
+REPLACE_PERL+=	imgsize
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
