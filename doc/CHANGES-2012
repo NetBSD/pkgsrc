@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3367 2012/10/21 22:41:01 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3368 2012/10/21 22:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5202,3 +5202,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-LWP-Protocol-https to 6.03 [wiz 2012-10-21]
 	Updated devel/p5-Class-Load-XS to 0.06 [wiz 2012-10-21]
 	Updated devel/p5-Date-Manip to 6.34 [wiz 2012-10-21]
+	Updated devel/p5-File-HomeDir to 1.00 [wiz 2012-10-21]
