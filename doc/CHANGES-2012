@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3348 2012/10/21 21:26:19 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3349 2012/10/21 21:34:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5183,3 +5183,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/Transmission-gui to 2.72 [wiz 2012-10-21]
 	Updated lang/mono to 2.10.9 [wiz 2012-10-21]
 	Updated fonts/harfbuzz to 0.9.5 [wiz 2012-10-21]
+	Updated textproc/py-lxml to 3.0.1 [wiz 2012-10-21]
