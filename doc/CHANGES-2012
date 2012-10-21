@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3336 2012/10/21 12:07:02 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3337 2012/10/21 13:01:17 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5167,3 +5167,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-IO-HTML version 0.04 [wen 2012-10-21]
 	Updated www/p5-HTTP-Message to 6.06 [wen 2012-10-21]
 	Removed comms/gscmxx [wiz 2012-10-21]
+	Updated fonts/terminus-font to 4.38 [cheusov 2012-10-21]
