@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/10/21 00:20:27 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2012/10/21 09:00:56 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,7 +21,6 @@ pkgbase := openldap-client
     !empty(PKG_BUILD_OPTIONS.openldap-client:Msasl)
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
-.include "../../net/libfetch/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif # OPENLDAP_BUILDLINK3_MK
 
