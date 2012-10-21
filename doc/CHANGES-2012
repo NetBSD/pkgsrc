@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3345 2012/10/21 20:42:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3346 2012/10/21 20:54:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5179,3 +5179,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added audio/freeswitch-sounds-ru version 1.0.13 [darcy 2012-10-21]
 	Updated devel/meld to 1.6.1 [wiz 2012-10-21]
 	Updated time/py-pytz to 2012g [wiz 2012-10-21]
+	Updated net/Transmission to 2.72 [wiz 2012-10-21]
+	Updated net/Transmission-gui to 2.72 [wiz 2012-10-21]

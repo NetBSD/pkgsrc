@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11623 2012/10/21 20:42:34 wiz Exp $
+$NetBSD: TODO,v 1.11624 2012/10/21 20:54:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,8 +353,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SDL_gfx-2.0.24
 	o SmartEiffel-2.3
 	o TiffIO-130e
-	o Transmission-2.72
-	o Transmission-gui-2.72
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.6.20
