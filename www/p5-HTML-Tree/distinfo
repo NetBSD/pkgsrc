@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2012/07/24 08:38:53 sno Exp $
+$NetBSD: distinfo,v 1.14 2012/10/21 23:13:03 wiz Exp $
 
-SHA1 (HTML-Tree-5.02.tar.gz) = 899bc572de36456c04d9b7a7b2f980dedf387324
-RMD160 (HTML-Tree-5.02.tar.gz) = 987de99678d4ab2f6842c9ef57e538242b787a12
-Size (HTML-Tree-5.02.tar.gz) = 147057 bytes
+SHA1 (HTML-Tree-5.03.tar.gz) = eb9aae88501f8158440eb98bcb979a57c08c2be5
+RMD160 (HTML-Tree-5.03.tar.gz) = cb99422ac8caf99b2d8de7aadf903e923f6b0cb6
+Size (HTML-Tree-5.03.tar.gz) = 147857 bytes
