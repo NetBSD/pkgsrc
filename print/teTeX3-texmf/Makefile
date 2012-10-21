@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2012/10/08 13:45:47 asau Exp $
+# $NetBSD: Makefile,v 1.60 2012/10/21 18:14:16 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -138,6 +138,7 @@ DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
 DEPENDS+=	tex-printlen-[0-9]*:../../print/tex-printlen
+DEPENDS+=	tex-psfrag-[0-9]*:../../print/tex-psfrag
 DEPENDS+=	tex-psgo-[0-9]*:../../graphics/tex-psgo
 DEPENDS+=	tex-pst-3d-[0-9]*:../../graphics/tex-pst-3d
 DEPENDS+=	tex-pst-3dplot-[0-9]*:../../graphics/tex-pst-3dplot
@@ -183,6 +184,7 @@ DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 DEPENDS+=	tex-twoinone-[0-9]*:../../print/tex-twoinone
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
+DEPENDS+=	tex-umlaute-[0-9]*:../../print/tex-umlaute
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-verbdef-[0-9]*:../../print/tex-verbdef
 DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
@@ -317,7 +319,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/picinpar
 	rm -rf ${WRKSRC}/doc/latex/placeins
 	rm -rf ${WRKSRC}/doc/latex/pre*
-	rm -rf ${WRKSRC}/doc/latex/ps[g-n]*
+	rm -rf ${WRKSRC}/doc/latex/ps[f-n]*
 	rm -rf ${WRKSRC}/doc/latex/rotating
 	rm -rf ${WRKSRC}/doc/latex/se*
 	rm -rf ${WRKSRC}/doc/latex/soul
@@ -334,7 +336,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/m[a-j]*
 	rm -rf ${WRKSRC}/doc/pdftex
 	rm -rf ${WRKSRC}/dvips/[b-n]*
-	rm -rf ${WRKSRC}/dvips/pstricks
+	rm -rf ${WRKSRC}/dvips/ps*
 	rm -rf ${WRKSRC}/dvips/[r-z]*
 	rm -rf ${WRKSRC}/fonts/afm/[a-o]*
 	rm -rf ${WRKSRC}/fonts/afm/public/[b-n]*
@@ -513,9 +515,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/picinpar
 	rm -rf ${WRKSRC}/tex/latex/placeins
 	rm -rf ${WRKSRC}/tex/latex/pre*
-	rm -rf ${WRKSRC}/tex/latex/psl*
-	rm -rf ${WRKSRC}/tex/latex/pstricks
-	rm -rf ${WRKSRC}/tex/latex/psn*
+	rm -rf ${WRKSRC}/tex/latex/ps[c-z]*
 	rm -rf ${WRKSRC}/tex/latex/pxfonts
 	rm -rf ${WRKSRC}/tex/latex/relsize
 	rm -rf ${WRKSRC}/tex/latex/rotating
@@ -535,7 +535,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/toc*
 	rm -rf ${WRKSRC}/tex/latex/tools
 	rm -rf ${WRKSRC}/tex/latex/t[s-z]*
-	rm -rf ${WRKSRC}/tex/latex/ulem
+	rm -rf ${WRKSRC}/tex/latex/u[l-m]*
 	rm -rf ${WRKSRC}/tex/latex/url
 	rm -rf ${WRKSRC}/tex/latex/version
 	rm -rf ${WRKSRC}/tex/latex/wasysym
