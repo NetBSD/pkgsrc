@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3365 2012/10/21 22:33:19 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3366 2012/10/21 22:36:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5200,3 +5200,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-XML-LibXML to 2.00.07 [wiz 2012-10-21]
 	Updated textproc/p5-XML-LibXSLT to 1.78 [wiz 2012-10-21]
 	Updated www/p5-LWP-Protocol-https to 6.03 [wiz 2012-10-21]
+	Updated devel/p5-Class-Load-XS to 0.06 [wiz 2012-10-21]
