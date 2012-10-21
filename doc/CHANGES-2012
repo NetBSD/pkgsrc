@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3362 2012/10/21 22:28:28 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3363 2012/10/21 22:30:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5197,3 +5197,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/p5-IO-Socket-SSL to 1.77 [wiz 2012-10-21]
 	Updated security/p5-Mozilla-CA to 20120823 [wiz 2012-10-21]
 	Updated security/p5-Net-SSLeay to 1.49 [wiz 2012-10-21]
+	Updated textproc/p5-XML-LibXML to 2.00.07 [wiz 2012-10-21]
