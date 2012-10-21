@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:54 asau Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/21 21:07:11 cheusov Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=js/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/js/spidermonkey/
 COMMENT=	Standalone JavaScript implementation in C
+
+CONFLICTS=	js-[0-9]*
 
 WRKSRC=		${WRKDIR}/js/src
 
@@ -19,7 +21,7 @@ USE_TOOLS+=	gmake pkg-config
 MAKE_FILE=	Makefile.ref
 CFLAGS+=	-DJS_USE_FDLIBM_MATH=0
 
-MAKE_FLAGS+=	BUILD_OPT=1 LDFLAGS=${LDFLAGS:Q} PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=	BUILD_OPT=1 LDFLAGS=${LDFLAGS:Q} PREFIX=${PREFIX}
 
 INSTALLATION_DIRS=	bin include lib
 
@@ -58,7 +60,7 @@ do-install:
 	  ${DESTDIR}${PREFIX}/bin
 	${INSTALL_LIB} ${WRKSRC}/${BUILDDIRPREFIX}_OPT.OBJ/libjs.${SO_SUFFIX} \
 	  ${DESTDIR}${PREFIX}/lib
-	${CP} ${WRKSRC}/${BUILDDIRPREFIX}_OPT.OBJ/jsautocfg.h ${WRKSRC}
+	${INSTALL_DATA} ${WRKSRC}/${BUILDDIRPREFIX}_OPT.OBJ/jsautocfg.h ${WRKSRC}
 	${INSTALL_DATA} ${WRKSRC}/*.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/*.tbl ${DESTDIR}${PREFIX}/include
 
