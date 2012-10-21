@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3373 2012/10/21 22:49:40 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3374 2012/10/21 22:52:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Package-DeprecationManager to 0.13 [wiz 2012-10-21]
 	Updated devel/p5-Storable to 2.39 [wiz 2012-10-21]
 	Updated devel/p5-common-sense to 3.6 [wiz 2012-10-21]
+	Updated devel/p5-version to 0.9901 [wiz 2012-10-21]
