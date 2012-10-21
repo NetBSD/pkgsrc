@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3341 2012/10/21 18:08:03 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.3342 2012/10/21 18:14:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-umlaute-doc version 2.1 [minskim 2012-10-21]
 	Added print/tex-psfrag version 3.04 [minskim 2012-10-21]
 	Added print/tex-psfrag-doc version 3.04 [minskim 2012-10-21]
+	Updated print/teTeX3-texmf to 3.0nb38 [minskim 2012-10-21]
