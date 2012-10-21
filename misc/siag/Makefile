@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2012/10/21 11:35:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.60 2012/10/21 11:39:12 cheusov Exp $
 #
 
 DISTNAME=	siag-3.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc editors math textproc
 MASTER_SITES=	http://siag.nu/pub/siag/
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://siag.nu/
 COMMENT=	Poor man's office suite with spreadsheet, word processor, etc
 LICENSE=	gnu-gpl-v2
+
+CONFLICTS=	siod-[0-9]*
 
 #DEPENDS+=	gv>=3.5.8nb1:../../print/gv
 #DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
