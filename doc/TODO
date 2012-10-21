@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11620 2012/10/21 14:53:31 wen Exp $
+$NetBSD: TODO,v 1.11621 2012/10/21 20:40:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,6 +353,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SDL_gfx-2.0.24
 	o SmartEiffel-2.3
 	o TiffIO-130e
+	o Transmission-2.72
+	o Transmission-gui-2.72
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.6.20
@@ -380,7 +382,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-2.32.1.1 [GNOME 2.32]
-	o anjuta-3.6.0
+	o anjuta-3.6.1
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o anope-1.8.7
 	o antiright-8.6
@@ -717,6 +719,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
+	o harfbuzz-0.9.5
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o hdf5-1.8.9
@@ -877,6 +880,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mawk-1.3.4.20120627
 	o mc-4.8.1.4
 	o mdocml-1.12.1
+	o meld-1.6.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mg-20110905 [pkg/47079]
@@ -896,8 +900,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-server-1.13.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-2.11.4
+	o mono-2.10.9
 	o moserial-2.30.0 [GNOME 2.30]
+	o mosh-1.2.3
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.6.0
 	o mp3diags-1.0.11
@@ -1036,7 +1041,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gobject3-3.4.1
+	o py-lxml-3.0.1
 	o py-moin-1.9.5
+	o py-pytz-2012g
 	o py-sybase-0.37
 	o py-sympy-0.7.2
 	o py-urwid-1.0.2
@@ -1253,7 +1260,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20121013
+	o x264-devel-20121020
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
