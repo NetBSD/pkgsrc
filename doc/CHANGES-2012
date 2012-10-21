@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3378 2012/10/21 23:05:42 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3379 2012/10/21 23:10:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/p5-Image-BMP to 1.17 [wiz 2012-10-21]
 	Updated graphics/p5-Image-ExifTool to 9.01 [wiz 2012-10-21]
 	Updated graphics/p5-Image-Size to 3.232 [wiz 2012-10-21]
+	Updated textproc/p5-Encode to 2.47 [wiz 2012-10-21]
