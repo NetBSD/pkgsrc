@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2012/09/20 06:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2012/10/21 12:07:02 wiz Exp $
 #
 
 COMMENT=	Communication utilities
@@ -21,7 +21,6 @@ SUBDIR+=	fidogate
 SUBDIR+=	gammu
 SUBDIR+=	gkermit
 SUBDIR+=	gnome-pilot
-SUBDIR+=	gscmxx
 SUBDIR+=	gsmlib
 SUBDIR+=	hylafax
 SUBDIR+=	jpilot
