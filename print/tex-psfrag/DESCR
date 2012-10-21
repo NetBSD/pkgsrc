@@ -1,0 +1,7 @@
+Allows LaTeX constructions (equations, picture environments,
+etc.) to be precisely superimposed over Encapsulated PostScript
+figures, using your own favorite drawing tool to create an EPS
+figure and placing simple text 'tags' where each replacement is
+to be placed, with PSfrag automatically removing these tags
+from the figure and replacing them with a user specified LaTeX
+construction, properly aligned, scaled, and/or rotated.
