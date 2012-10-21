@@ -1,0 +1,5 @@
+An early package for using alternate input encodings. The
+author considers the package mostly obsolete, since most of its
+functions are taken by the inputenc package; however, inputenc
+doesn't support the roman8 and atari encodings, so umlaute
+remains the sole source of that support.

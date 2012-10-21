@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/21 17:46:18 minskim Exp $
+share/texmf-dist/tex/latex/umlaute/atari.def
+share/texmf-dist/tex/latex/umlaute/isolatin.def
+share/texmf-dist/tex/latex/umlaute/mac.def
+share/texmf-dist/tex/latex/umlaute/pc850.def
+share/texmf-dist/tex/latex/umlaute/roman8.def
+share/texmf-dist/tex/latex/umlaute/umlaute.sty
