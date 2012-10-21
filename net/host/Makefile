@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/10/21 15:49:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/21 15:52:10 cheusov Exp $
 
 DISTNAME=	host-20040812
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.weird.com/pub/local/
+MASTER_SITES=	ftp://ftp.planix.com/pub/Planix/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.weird.com/~woods/projects/host.html
