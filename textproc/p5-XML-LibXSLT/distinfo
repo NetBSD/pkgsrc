@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/04/22 12:15:39 wiz Exp $
+$NetBSD: distinfo,v 1.10 2012/10/21 22:31:56 wiz Exp $
 
-SHA1 (XML-LibXSLT-1.77.tar.gz) = 776a31dfb0a049f6986e76643dc01af1d158bae9
-RMD160 (XML-LibXSLT-1.77.tar.gz) = fb9e1f26e6f7a4df695b31f85304a9fd19013039
-Size (XML-LibXSLT-1.77.tar.gz) = 85981 bytes
+SHA1 (XML-LibXSLT-1.78.tar.gz) = 33bf2143883b1b1a6c1f2a72680aa0014afea903
+RMD160 (XML-LibXSLT-1.78.tar.gz) = 9209bede25a9c59a6e3360a653c37e7400093a0e
+Size (XML-LibXSLT-1.78.tar.gz) = 86432 bytes
