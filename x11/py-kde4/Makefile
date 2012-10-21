@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/11 13:17:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/21 21:07:42 markd Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 DISTNAME=	pykde4-${_KDE_VERSION}
@@ -32,7 +32,7 @@ SUBST_SED.pykdeuic4=	-e 's:/usr/bin/env python$$:${PYTHONBIN}:'
 
 # remove when file not patched any longer
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/share/sip2.7/PyKDE4/kdecore/typedefs.sip.orig
+	${RM} -f ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/typedefs.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
