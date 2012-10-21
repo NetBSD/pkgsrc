@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.5 2012/10/21 11:04:42 shattered Exp $
+
+--- tools/generic-callout.c.orig	2011-07-24 11:03:29.000000000 +0000
++++ tools/generic-callout.c
+@@ -601,7 +601,12 @@ static char *mount_ipod (const char *dev
+                 return NULL;
+         }
+         g_assert (tmpname == filename);
++#if !defined(__linux__)
++        result = -1;
++#else
+         result = mount (dev_path, tmpname, fstype, 0, NULL);
++#endif
++
+         if (result != 0) {
+                 g_debug("failed to mount device %s at %s: %s",
+                         dev_path, tmpname, strerror(errno));
