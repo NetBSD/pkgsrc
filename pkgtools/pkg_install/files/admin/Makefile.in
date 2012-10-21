@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.24 2012/05/15 16:43:53 christos Exp $
+# $NetBSD: Makefile.in,v 1.25 2012/10/21 09:08:56 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -30,7 +30,7 @@ SCRIPTS=	audit-packages download-vulnerability-list
 .if empty(BOOTSTRAP)
 LIBS=		-linstall -lfetch
 .if !empty(SSL_SUPPORT)
-LIBS+=		-lcrypto
+LIBS+=		-lssl -lcrypto
 CFLAGS+=	-DHAVE_SSL
 .endif
 LIBS+=		@LIBS@
