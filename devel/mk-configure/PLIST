@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/07/22 13:00:41 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/21 17:17:01 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -21,7 +21,6 @@ man/man1/mkc_check_sizeof.1
 man/man1/mkcmake.1
 man/man7/mk-configure.7
 share/doc/mk-configure/COPYRIGHT
-share/doc/mk-configure/ChangeLog
 share/doc/mk-configure/FAQ
 share/doc/mk-configure/NEWS
 share/doc/mk-configure/README
