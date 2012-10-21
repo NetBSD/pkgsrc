@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3369 2012/10/21 22:43:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3370 2012/10/21 22:44:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5204,3 +5204,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Date-Manip to 6.34 [wiz 2012-10-21]
 	Updated devel/p5-File-HomeDir to 1.00 [wiz 2012-10-21]
 	Updated devel/p5-Getopt-Mixed to 1.11 [wiz 2012-10-21]
+	Updated devel/p5-IMDB-Film to 0.52 [wiz 2012-10-21]
