@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2012/10/22 02:39:53 rh Exp $
+
+Remove duplicate instance variables from @implementation
+
+--- gui/Calculator/CalcFace.m.orig	2001-01-22 00:54:30.000000000 +0000
++++ gui/Calculator/CalcFace.m
+@@ -30,10 +30,6 @@
+ //
+ 
+ @implementation CalcFace: NSWindow
+-{
+-  NSButton *buttons[18];
+-  NSTextField *display;
+-}
+ 
+ -(id)init
+ {
