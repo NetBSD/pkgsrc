@@ -1,9 +1,21 @@
-#	$NetBSD: gnustep.mk,v 1.20 2009/12/28 10:49:23 obache Exp $
+#	$NetBSD: gnustep.mk,v 1.21 2012/10/22 02:06:19 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
 
-.include "../../mk/bsd.prefs.mk"
+.ifndef GNUSTEP_SKIP_DEFAULT_OPTIONS
+PKG_OPTIONS_VAR?=	PKG_OPTIONS.gnustep
+PKG_SUPPORTED_OPTIONS+=	fragile
+PKGSRC_COMPILER+=	clang
+
+.include "../../mk/bsd.options.mk"
+
+.if empty(PKG_OPTIONS:Mfragile)
+ONLY_FOR_COMPILER=	clang
+BUILDLINK_API_DEPENDS.clang+=   clang>=3.1
+.include "../../lang/clang/buildlink3.mk"
+.endif
+.endif
 
 GNUSTEP_SUBDIR=		share/GNUstep
 GNUSTEP_ROOT=		${PREFIX}
