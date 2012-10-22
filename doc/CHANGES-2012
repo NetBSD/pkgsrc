@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3404 2012/10/22 22:10:21 rh Exp $
+$NetBSD: CHANGES-2012,v 1.3405 2012/10/22 22:35:31 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5239,3 +5239,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/cddb-bundle to 0.2nb4 [rh 2012-10-22]
 	Updated audio/cdplayer to 0.5.1 [rh 2012-10-22]
 	Updated devel/ObjectiveLib to 1.0.0nb1 [rh 2012-10-22]
+	Updated devel/edcommon to 32nb7 [rh 2012-10-22]
