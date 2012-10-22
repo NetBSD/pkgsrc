@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3400 2012/10/22 14:54:09 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3401 2012/10/22 15:16:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5235,3 +5235,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Module-Build-WithXSpp version 0.12 [wiz 2012-10-22]
 	Updated devel/p5-MooseX-Daemonize to 0.15 [wen 2012-10-22]
 	Updated graphics/cairo to 1.12.6 [wiz 2012-10-22]
+	Updated graphics/cairo-gobject to 1.12.6 [wiz 2012-10-22]
