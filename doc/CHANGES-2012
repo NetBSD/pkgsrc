@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3394 2012/10/22 03:09:52 rh Exp $
+$NetBSD: CHANGES-2012,v 1.3395 2012/10/22 03:14:04 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/Gorm to 1.2.18 [rh 2012-10-22]
 	Updated devel/ProjectCenter to 0.6.1 [rh 2012-10-22]
 	Updated sysutils/gworkspace to 0.9.1 [rh 2012-10-22]
+	Updated meta-pkgs/gnustep to 2.6.2 [rh 2012-10-22]
