@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2009/04/13 12:45:04 rh Exp $
+$NetBSD: patch-aa,v 1.7 2012/10/22 03:08:29 rh Exp $
 
---- GWorkspace/Desktop/GWDesktopManager.m.orig	2007-02-23 01:30:56.000000000 +1000
+Add missing includes.
+
+--- GWorkspace/Desktop/GWDesktopManager.m.orig	2012-03-28 18:45:01.000000000 +0000
 +++ GWorkspace/Desktop/GWDesktopManager.m
 @@ -31,6 +31,14 @@
- #include "GWorkspace.h"
- #include "GWViewersManager.h"
- #include "TShelf/TShelfWin.h"
+ #import "GWorkspace.h"
+ #import "GWViewersManager.h"
+ #import "TShelf/TShelfWin.h"
 +#include <sys/types.h>
 +#include <sys/param.h>
 +

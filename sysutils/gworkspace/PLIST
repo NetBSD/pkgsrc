@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:16:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/10/22 03:08:29 rh Exp $
 bin/GWorkspace
 bin/Recycler
 bin/ddbd
@@ -43,7 +43,6 @@ lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.go
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DefEditorPref.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DefSortOrderPref.gorm/data.classes
-lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DefSortOrderPref.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DefSortOrderPref.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DesktopPref.gorm/data.classes
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/DesktopPref.gorm/data.info
@@ -91,7 +90,6 @@ lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/TabbedShelf-develop.tiff
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/Help/TabbedShelf.rtfd/dummy.tiff
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/HiddenFilesPref.gorm/data.classes
-lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/HiddenFilesPref.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/HiddenFilesPref.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/HistoryPref.gorm/data.classes
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/HistoryPref.gorm/data.info
@@ -110,7 +108,6 @@ lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/da
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/OpenWith.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/OperationPrefs.gorm/data.classes
-lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/OperationPrefs.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/OperationPrefs.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.gorm/data.classes
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/PrefWindow.gorm/data.info
@@ -122,10 +119,8 @@ lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.go
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/SearchResults.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/data.classes
-lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/ShelfPref.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/StartAppWin.gorm/data.classes
-lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/StartAppWin.gorm/data.info
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/StartAppWin.gorm/objects.gorm
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.gorm/data.classes
 lib/GNUstep/Applications/GWorkspace.app/Resources/English.lproj/XTermPref.gorm/data.info
@@ -140,9 +135,11 @@ lib/GNUstep/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_Small_
 lib/GNUstep/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_Small_osx.tiff
 lib/GNUstep/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_alt.tiff
 lib/GNUstep/Applications/GWorkspace.app/Resources/FileIcon_Directory_Open_osx.tiff
+lib/GNUstep/Applications/GWorkspace.app/Resources/FileIcon_WebLink.tiff
 lib/GNUstep/Applications/GWorkspace.app/Resources/FileManager.tiff
 lib/GNUstep/Applications/GWorkspace.app/Resources/French.lproj/Localizable.strings
 lib/GNUstep/Applications/GWorkspace.app/Resources/GWorkspace.desktop
+lib/GNUstep/Applications/GWorkspace.app/Resources/GWorkspaceInfo.plist
 lib/GNUstep/Applications/GWorkspace.app/Resources/German.lproj/Localizable.strings
 lib/GNUstep/Applications/GWorkspace.app/Resources/Hungarian.lproj/Localizable.strings
 lib/GNUstep/Applications/GWorkspace.app/Resources/Info-gnustep.plist
@@ -253,10 +250,8 @@ lib/GNUstep/Applications/GWorkspace.app/stamp.make
 lib/GNUstep/Applications/Recycler.app/Recycler
 lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/Localizable.strings
 lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/PreferencesWin.gorm/data.classes
-lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/PreferencesWin.gorm/data.info
 lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/PreferencesWin.gorm/objects.gorm
 lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/StartAppWin.gorm/data.classes
-lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/StartAppWin.gorm/data.info
 lib/GNUstep/Applications/Recycler.app/Resources/English.lproj/StartAppWin.gorm/objects.gorm
 lib/GNUstep/Applications/Recycler.app/Resources/Info-gnustep.plist
 lib/GNUstep/Applications/Recycler.app/Resources/Recycler.desktop
@@ -323,6 +318,7 @@ lib/GNUstep/Bundles/FolderViewer.inspector/Resources/Info-gnustep.plist
 lib/GNUstep/Bundles/FolderViewer.inspector/Resources/InspectorInfo.plist
 lib/GNUstep/Bundles/FolderViewer.inspector/stamp.make
 lib/GNUstep/Bundles/IBViewViewer.inspector/IBViewViewer
+lib/GNUstep/Bundles/IBViewViewer.inspector/Resources/English.lproj/Help.rtfd/.gwdir
 lib/GNUstep/Bundles/IBViewViewer.inspector/Resources/English.lproj/Help.rtfd/TXT.rtf
 lib/GNUstep/Bundles/IBViewViewer.inspector/Resources/English.lproj/Help.rtfd/dummy.tiff
 lib/GNUstep/Bundles/IBViewViewer.inspector/Resources/Info-gnustep.plist
@@ -332,6 +328,7 @@ lib/GNUstep/Bundles/ImageThumbnailer.thumb/ImageThumbnailer
 lib/GNUstep/Bundles/ImageThumbnailer.thumb/Resources/Info-gnustep.plist
 lib/GNUstep/Bundles/ImageThumbnailer.thumb/stamp.make
 lib/GNUstep/Bundles/ImageViewer.inspector/ImageViewer
+lib/GNUstep/Bundles/ImageViewer.inspector/Resources/English.lproj/Help.rtfd/.gwdir
 lib/GNUstep/Bundles/ImageViewer.inspector/Resources/English.lproj/Help.rtfd/TXT.rtf
 lib/GNUstep/Bundles/ImageViewer.inspector/Resources/English.lproj/Help.rtfd/dummy.tiff
 lib/GNUstep/Bundles/ImageViewer.inspector/Resources/Info-gnustep.plist
@@ -341,6 +338,7 @@ lib/GNUstep/Bundles/MDModuleAnnotations.mdm/MDModuleAnnotations
 lib/GNUstep/Bundles/MDModuleAnnotations.mdm/Resources/Info-gnustep.plist
 lib/GNUstep/Bundles/MDModuleAnnotations.mdm/stamp.make
 lib/GNUstep/Bundles/NSColorViewer.inspector/NSColorViewer
+lib/GNUstep/Bundles/NSColorViewer.inspector/Resources/English.lproj/Help.rtfd/.gwdir
 lib/GNUstep/Bundles/NSColorViewer.inspector/Resources/English.lproj/Help.rtfd/TXT.rtf
 lib/GNUstep/Bundles/NSColorViewer.inspector/Resources/English.lproj/Help.rtfd/dummy.tiff
 lib/GNUstep/Bundles/NSColorViewer.inspector/Resources/Info-gnustep.plist
@@ -412,6 +410,7 @@ lib/GNUstep/Frameworks/FSNode.framework/libFSNode.so
 lib/GNUstep/Frameworks/Inspector.framework/Headers
 lib/GNUstep/Frameworks/Inspector.framework/Inspector
 lib/GNUstep/Frameworks/Inspector.framework/Resources
+lib/GNUstep/Frameworks/Inspector.framework/Versions/0/Headers/ContentViewersProtocol.h
 lib/GNUstep/Frameworks/Inspector.framework/Versions/0/Headers/Inspector.h
 lib/GNUstep/Frameworks/Inspector.framework/Versions/0/Inspector
 lib/GNUstep/Frameworks/Inspector.framework/Versions/0/Resources/Date-0.tiff
@@ -518,7 +517,6 @@ lib/GNUstep/Frameworks/Operation.framework/Versions/1/Resources/English.lproj/Fi
 lib/GNUstep/Frameworks/Operation.framework/Versions/1/Resources/English.lproj/Localizable.strings
 lib/GNUstep/Frameworks/Operation.framework/Versions/1/Resources/Info-gnustep.plist
 lib/GNUstep/Frameworks/Operation.framework/Versions/1/Resources/Operation.tiff
-lib/GNUstep/Frameworks/Operation.framework/Versions/1/Resources/progind.tiff
 lib/GNUstep/Frameworks/Operation.framework/Versions/1/libOperation.so
 lib/GNUstep/Frameworks/Operation.framework/Versions/1/libOperation.so.1.0.0
 lib/GNUstep/Frameworks/Operation.framework/Versions/Current
