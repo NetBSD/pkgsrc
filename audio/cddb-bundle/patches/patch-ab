@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1 2012/10/22 21:37:02 rh Exp $
+
+Substitute 'bool' to make this compile under C99.
+
+--- Cddb/Cddb.m.orig	2002-10-17 13:17:01.000000000 +0000
++++ Cddb/Cddb.m
+@@ -44,7 +44,7 @@ int cddb_sum (int n)
+ 
+ 
+ - (NSString *) discidWithCDTracks: (NSArray *) tracks 
+-                          locally: (BOOL) bool
++                          locally: (BOOL) locally
+ {
+   NSMutableString *string = [NSMutableString new];
+   int i = 0, numtracks = 0;
+@@ -72,7 +72,7 @@ int cddb_sum (int n)
+ 
+   [string appendFormat: @" %d", totaltime];
+ 
+-  if (bool == YES) // Calculate locally
++  if (locally == YES) // Calculate locally
+     {
+       RELEASE(string);
+       RELEASE(tracks);
+@@ -123,9 +123,9 @@ int cddb_sum (int n)
+ 
+ - (NSDictionary *) readWithCategory: (NSString *) category
+                              discid: (NSString *) discid
+-                        postProcess: (BOOL) bool
++                        postProcess: (BOOL) postproc
+ {
+-  if (bool == NO)
++  if (postproc == NO)
+     return [self read: [NSString stringWithFormat: @"%@ %@", category, discid]];
+   else
+     {
