@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1660 2012/10/21 04:22:25 wen Exp $
+# $NetBSD: Makefile,v 1.1661 2012/10/22 13:46:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -729,6 +729,7 @@ SUBDIR+=	p5-Exporter-Lite
 SUBDIR+=	p5-ExtUtils-AutoInstall
 SUBDIR+=	p5-ExtUtils-CBuilder
 SUBDIR+=	p5-ExtUtils-Command
+SUBDIR+=	p5-ExtUtils-CppGuess
 SUBDIR+=	p5-ExtUtils-Depends
 SUBDIR+=	p5-ExtUtils-Embed
 SUBDIR+=	p5-ExtUtils-F77
@@ -819,8 +820,8 @@ SUBDIR+=	p5-IO-Capture
 SUBDIR+=	p5-IO-CaptureOutput
 SUBDIR+=	p5-IO-Compress
 SUBDIR+=	p5-IO-Digest
-SUBDIR+=	p5-IO-Handle-Util
 SUBDIR+=	p5-IO-HTML
+SUBDIR+=	p5-IO-Handle-Util
 SUBDIR+=	p5-IO-InSitu
 SUBDIR+=	p5-IO-Interactive
 SUBDIR+=	p5-IO-LockedFile
