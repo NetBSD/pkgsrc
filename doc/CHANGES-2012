@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3383 2012/10/22 02:08:00 rh Exp $
+$NetBSD: CHANGES-2012,v 1.3384 2012/10/22 02:14:00 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTML-Tree to 5.03 [wiz 2012-10-21]
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.17 [wiz 2012-10-21]
 	Updated devel/gnustep-make to 2.6.2 [rh 2012-10-22]
+	Updated devel/gnustep-objc to 1.6.1 [rh 2012-10-22]
