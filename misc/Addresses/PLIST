@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:07:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/10/22 02:48:41 rh Exp $
 bin/AddressManager
-include/AddressBook
+include/AddressBook/AddressBook.h
 include/AddressView
 include/Addresses
 lib/GNUstep/Applications/AddressManager.app/AddressManager
@@ -9,16 +9,19 @@ lib/GNUstep/Applications/AddressManager.app/Resources/AddressManager.tiff
 lib/GNUstep/Applications/AddressManager.app/Resources/AddressManagerInfo.plist
 lib/GNUstep/Applications/AddressManager.app/Resources/Dutch.lproj/AddressManager.gorm/Add.tiff
 lib/GNUstep/Applications/AddressManager.app/Resources/Dutch.lproj/AddressManager.gorm/data.classes
+lib/GNUstep/Applications/AddressManager.app/Resources/Dutch.lproj/AddressManager.gorm/data.info
 lib/GNUstep/Applications/AddressManager.app/Resources/Dutch.lproj/AddressManager.gorm/objects.gorm
 lib/GNUstep/Applications/AddressManager.app/Resources/Dutch.lproj/ISOCountryCodes.dict
 lib/GNUstep/Applications/AddressManager.app/Resources/Dutch.lproj/Localizable.strings
 lib/GNUstep/Applications/AddressManager.app/Resources/English.lproj/AddressManager.gorm/Add.tiff
 lib/GNUstep/Applications/AddressManager.app/Resources/English.lproj/AddressManager.gorm/data.classes
+lib/GNUstep/Applications/AddressManager.app/Resources/English.lproj/AddressManager.gorm/data.info
 lib/GNUstep/Applications/AddressManager.app/Resources/English.lproj/AddressManager.gorm/objects.gorm
 lib/GNUstep/Applications/AddressManager.app/Resources/English.lproj/ISOCountryCodes.dict
 lib/GNUstep/Applications/AddressManager.app/Resources/English.lproj/Localizable.strings
 lib/GNUstep/Applications/AddressManager.app/Resources/French.lproj/AddressManager.gorm/Add.tiff
 lib/GNUstep/Applications/AddressManager.app/Resources/French.lproj/AddressManager.gorm/data.classes
+lib/GNUstep/Applications/AddressManager.app/Resources/French.lproj/AddressManager.gorm/data.info
 lib/GNUstep/Applications/AddressManager.app/Resources/French.lproj/AddressManager.gorm/objects.gorm
 lib/GNUstep/Applications/AddressManager.app/Resources/French.lproj/ISOCountryCodes.dict
 lib/GNUstep/Applications/AddressManager.app/Resources/French.lproj/Localizable.strings
@@ -36,7 +39,6 @@ lib/GNUstep/Applications/AddressManager.app/Resources/Spanish.lproj/Localizable.
 lib/GNUstep/Applications/AddressManager.app/Resources/VCFFile.tiff
 lib/GNUstep/Applications/AddressManager.app/Resources/VCFImage.tiff
 lib/GNUstep/Applications/AddressManager.app/Resources/VCFImageMulti.tiff
-lib/GNUstep/Applications/AddressManager.app/library_paths.openapp
 lib/GNUstep/Applications/AddressManager.app/stamp.make
 lib/GNUstep/Frameworks/AddressView.framework/AddressView
 lib/GNUstep/Frameworks/AddressView.framework/Headers
