@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3401 2012/10/22 15:16:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3402 2012/10/22 21:37:21 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5236,3 +5236,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-MooseX-Daemonize to 0.15 [wen 2012-10-22]
 	Updated graphics/cairo to 1.12.6 [wiz 2012-10-22]
 	Updated graphics/cairo-gobject to 1.12.6 [wiz 2012-10-22]
+	Updated audio/cddb-bundle to 0.2nb4 [rh 2012-10-22]
