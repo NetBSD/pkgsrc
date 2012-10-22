@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2012/10/22 21:37:02 rh Exp $
+
+Substitute 'bool' to make this compile under C99.
+
+--- Cddb/Cddb.h.orig	2002-10-15 14:32:13.000000000 +0000
++++ Cddb/Cddb.h
+@@ -55,7 +55,7 @@
+  * The keys of NSDictionary are "length" and "offset".
+  */
+ - (NSString *) discidWithCDTracks: (NSArray *) tracks
+-                          locally: (BOOL) bool;
++                          locally: (BOOL) yesno;
+ 
+ /* Return the query using a NSArray of NSDictionary.
+  * The number of object in NSArray are the number of tracks.
+@@ -77,7 +77,7 @@
+  */
+ - (NSDictionary *) readWithCategory: (NSString *) category
+                              discid: (NSString *) discid
+-                        postProcess: (BOOL) bool;
++                        postProcess: (BOOL) yesno;
+ 
+ /* Low-level methods */
+ /* Input format:
