@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.7 2011/04/07 01:55:15 rh Exp $
+$NetBSD: patch-ab,v 1.8 2012/10/22 02:17:16 rh Exp $
 
---- base.make.in.orig	2010-06-10 10:13:51.000000000 +0000
+--- base.make.in.orig	2012-01-17 09:28:03.000000000 +0000
 +++ base.make.in
-@@ -39,7 +39,8 @@ ifeq ($(FOUNDATION_LIB),gnu)
-   GNUSTEP_BASE_SUBMINOR_VERSION = @SUBMINOR_VERSION@
+@@ -39,7 +39,8 @@ ifeq ($(BASE_MAKE_LOADED),)
+     GNUSTEP_BASE_SUBMINOR_VERSION = @SUBMINOR_VERSION@
  
-   FND_LDFLAGS =
--  FND_LIBS = -lgnustep-base
-+  FND_LIBS = -lgnustep-base -lobjc
-+  OBJC_LIBS = -lpthread
-   FND_DEFINE = -DGNUSTEP_BASE_LIBRARY=1
-   GNUSTEP_DEFINE = -DGNUSTEP
- else
+     FND_LDFLAGS =
+-    FND_LIBS = -lgnustep-base
++    FND_LIBS = -lgnustep-base -lobjc
++    OBJC_LIBS = -lpthread
+     FND_DEFINE = -DGNUSTEP_BASE_LIBRARY=1
+     GNUSTEP_DEFINE = -DGNUSTEP
+   else
