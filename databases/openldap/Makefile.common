@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2012/10/21 09:00:55 joerg Exp $
+# $NetBSD: Makefile.common,v 1.35 2012/10/22 09:41:07 ghen Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -21,7 +21,7 @@ MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ghen@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.openldap.org/
 LICENSE=	modified-bsd
 
