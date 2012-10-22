@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2011/11/01 06:02:51 sbd Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/22 02:25:15 rh Exp $
 
-DISTNAME=	gnustep-back-0.18.0
-PKGREVISION=	1
+DISTNAME=	gnustep-back-0.22.0
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -22,15 +21,15 @@ MAKE_FILE=		GNUmakefile
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${GNUSTEP_ROOT}/lib/GNUstep/Fonts
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../devel/gnustep-make/gnustep.mk"
 
 PREFER_PKGSRC+=	freetype2
 
+.include "../../x11/gnustep-gui/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
-.include "../../x11/gnustep-gui/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
