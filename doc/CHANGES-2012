@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3386 2012/10/22 02:22:11 rh Exp $
+$NetBSD: CHANGES-2012,v 1.3387 2012/10/22 02:26:28 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/gnustep-objc to 1.6.1 [rh 2012-10-22]
 	Updated devel/gnustep-base to 1.24.0 [rh 2012-10-22]
 	Updated devel/gnustep-gui to 0.22.0 [rh 2012-10-22]
+	Updated devel/gnustep-back to 0.22.0 [rh 2012-10-22]
