@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3391 2012/10/22 02:54:15 rh Exp $
+$NetBSD: CHANGES-2012,v 1.3392 2012/10/22 03:00:34 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5226,3 +5226,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/Pantomime to 1.2.0 [rh 2012-10-22]
 	Updated misc/Addresses to 0.4.8 [rh 2012-10-22]
 	Updated mail/GNUMail to 1.2.0 [rh 2012-10-22]
+	Updated devel/Gorm to 1.2.18 [rh 2012-10-22]
