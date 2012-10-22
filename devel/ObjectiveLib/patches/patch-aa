@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2012/10/22 22:10:15 rh Exp $
+
+Make this compile with libobjc2.
+
+--- ObjectOutStream.m.orig	2007-03-25 18:12:15.000000000 +0000
++++ ObjectOutStream.m
+@@ -257,11 +257,11 @@
+         {
+             [pointerMap assign: cls];
+             [stream writeByte: WIRE_TYPE_CLASS_NAME];
+-            len = strlen(cls->name);
++            len = strlen(class_getName(cls));
+             [stream writeInt16: len];
+-            [stream completelyWriteBytes: (const uint8_t*)cls->name count: len];
+-            [stream writeInt: class_get_version(cls)];
+-            spr = class_get_super_class(cls);
++            [stream completelyWriteBytes: (const uint8_t*)class_getName(cls) count: len];
++            [stream writeInt: class_getVersion(cls)];
++            spr = class_getSuperclass(cls);
+             if (spr == cls || spr == NULL || [pointerMap lookUp: spr] != UINT32_MAX)
+                 break;
+             cls = spr;
+@@ -363,7 +363,7 @@
+             else
+             {
+                 RAISE_EXCEPTION(OLInputOutputException,
+-                    @"The object of type %s does not respond to writeSelfToStream: or to encodeWithCoder:", ((Class)[object class])->name);
++                    @"The object of type %s does not respond to writeSelfToStream: or to encodeWithCoder:", class_getName((Class)[object class]));
+             }
+             [pointerMap assign: object];
+         }
