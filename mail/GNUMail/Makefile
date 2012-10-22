@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/10/08 12:19:01 asau Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/22 02:53:12 rh Exp $
 #
 
-DISTNAME=	GNUMail-1.2.0pre3
-PKGREVISION=	2
+DISTNAME=	GNUMail-1.2.0
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 
@@ -13,15 +12,13 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	objc
 
-WRKSRC=		${WRKDIR}/GNUMail
 NO_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	no
 MAKE_FILE=	GNUmakefile
 
 FIX_GNUSTEP_INSTALLATION_DIR= yes
-.for _dir_ in Account Advanced Clock Colors Compose Face Filtering	\
+.for dir in Account Advanced Clock Colors Compose Face Filtering	\
 	Fonts Import MIME PGP Receiving Sending Viewing
-SUBST_FILES.gnustep_installation_dir+=	Bundles/${_dir_}/GNUmakefile
+SUBST_FILES.gnustep_installation_dir+=	Bundles/${dir}/GNUmakefile
 .endfor
 
 .include "../../mail/Pantomime/buildlink3.mk"
