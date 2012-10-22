@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3402 2012/10/22 21:37:21 rh Exp $
+$NetBSD: CHANGES-2012,v 1.3403 2012/10/22 21:46:49 rh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/cairo to 1.12.6 [wiz 2012-10-22]
 	Updated graphics/cairo-gobject to 1.12.6 [wiz 2012-10-22]
 	Updated audio/cddb-bundle to 0.2nb4 [rh 2012-10-22]
+	Updated audio/cdplayer to 0.5.1 [rh 2012-10-22]
