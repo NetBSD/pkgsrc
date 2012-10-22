@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/10/22 21:46:26 rh Exp $
 bin/CDPlayer
-include/CDPlayer/AudioCDProtocol.h
+include/AudioCD/AudioCDProtocol.h
 lib/GNUstep/Applications/CDPlayer.app/CDPlayer
 lib/GNUstep/Applications/CDPlayer.app/Resources/CDPlayer.desktop
 lib/GNUstep/Applications/CDPlayer.app/Resources/CDPlayer.help/Config.tiff
@@ -78,3 +78,4 @@ lib/GNUstep/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/object
 lib/GNUstep/Preferences/AudioCD.prefs/Resources/German.lproj/Localizable.strings
 lib/GNUstep/Preferences/AudioCD.prefs/Resources/Info-gnustep.plist
 lib/GNUstep/Preferences/AudioCD.prefs/stamp.make
+@pkgdir include/CDPlayer
