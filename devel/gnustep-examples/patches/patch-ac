@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2012/10/22 02:39:54 rh Exp $
+
+Remove duplicate instance variables from @implementation
+
+--- gui/GSTest/StringDrawing-test/StringDrawing-test.m.orig	2003-08-25 20:26:11.000000000 +0000
++++ gui/GSTest/StringDrawing-test/StringDrawing-test.m
+@@ -50,9 +50,7 @@
+ @end
+ 
+ @implementation TrivialTextView: NSView
+-{
+-  NSAttributedString *attr;
+-}
++
+ -(void) dealloc
+ {
+   TEST_RELEASE (attr);
