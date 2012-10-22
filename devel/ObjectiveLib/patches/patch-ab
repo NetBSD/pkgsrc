@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2012/10/22 22:10:15 rh Exp $
+
+Make this compile with libobjc2.
+
+--- ObjectInStream.m.orig	2007-03-25 18:12:15.000000000 +0000
++++ ObjectInStream.m
+@@ -437,7 +437,7 @@ NSString* const OLClassNotFoundException
+         else
+         {
+             RAISE_EXCEPTION(OLInputOutputException,
+-                @"Instances of the class \"%s\" do not respond to either initWithObjectInStream: or initWithCoder:", cls->name);
++                @"Instances of the class \"%s\" do not respond to either initWithObjectInStream: or initWithCoder:", class_getName(cls));
+         }
+         object = [cls alloc];
+         object = initWithStream ?
