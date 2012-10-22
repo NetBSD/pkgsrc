@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.16 2011/04/07 02:12:48 rh Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/10/22 02:25:15 rh Exp $
 bin/gpbs
-lib/GNUstep/Bundles/libgnustep-back-018.bundle/Resources/English.lproj/nfontFaceNames.strings
-lib/GNUstep/Bundles/libgnustep-back-018.bundle/Resources/Info-gnustep.plist
-lib/GNUstep/Bundles/libgnustep-back-018.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
-lib/GNUstep/Bundles/libgnustep-back-018.bundle/libgnustep-back-018
-lib/GNUstep/Bundles/libgnustep-back-018.bundle/stamp.make
+lib/GNUstep/Bundles/libgnustep-back-022.bundle/Resources/English.lproj/nfontFaceNames.strings
+lib/GNUstep/Bundles/libgnustep-back-022.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/Bundles/libgnustep-back-022.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
+lib/GNUstep/Bundles/libgnustep-back-022.bundle/libgnustep-back-022
+lib/GNUstep/Bundles/libgnustep-back-022.bundle/stamp.make
 lib/GNUstep/Fonts/Helvetica.nfont/FontInfo.plist
 lib/GNUstep/Fonts/Helvetica.nfont/n019003l.afm
 lib/GNUstep/Fonts/Helvetica.nfont/n019003l.pfb
