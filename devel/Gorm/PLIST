@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2011/04/07 02:20:30 rh Exp $
+@comment $NetBSD: PLIST,v 1.22 2012/10/22 02:59:42 rh Exp $
 bin/Gorm
 include/GormCore/GormBoxEditor.h
 include/GormCore/GormClassEditor.h
@@ -56,6 +56,7 @@ include/GormCore/GormViewWindow.h
 include/GormCore/GormViewWithContentViewEditor.h
 include/GormCore/GormViewWithSubviewsEditor.h
 include/GormCore/GormWindowEditor.h
+include/GormCore/GormWindowTemplate.h
 include/GormCore/GormWrapperBuilder.h
 include/GormCore/GormWrapperLoader.h
 include/GormCore/NSCell+GormAdditions.h
@@ -346,6 +347,9 @@ lib/GNUstep/Applications/Gorm.app/Resources/Nib.plugin/stamp.make
 lib/GNUstep/Applications/Gorm.app/Resources/RightArr.tiff
 lib/GNUstep/Applications/Gorm.app/Resources/Sunday_seurat.tiff
 lib/GNUstep/Applications/Gorm.app/Resources/VersionProfiles.plist
+lib/GNUstep/Applications/Gorm.app/Resources/Xib.plugin/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/Gorm.app/Resources/Xib.plugin/Xib
+lib/GNUstep/Applications/Gorm.app/Resources/Xib.plugin/stamp.make
 lib/GNUstep/Applications/Gorm.app/Resources/bezel_nib.tiff
 lib/GNUstep/Applications/Gorm.app/Resources/browserView.tiff
 lib/GNUstep/Applications/Gorm.app/Resources/button_nib.tiff
