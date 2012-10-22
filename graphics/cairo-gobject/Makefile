@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2012/10/20 00:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/22 15:16:19 wiz Exp $
 
-DISTNAME=	cairo-1.12.4
+DISTNAME=	cairo-1.12.6
 PKGNAME=	${DISTNAME:S/-/-gobject-/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
