@@ -1,30 +1,17 @@
-$NetBSD: patch-Modules_Debuggers_ProjectCenter_PTYView.m,v 1.1 2011/11/25 21:35:55 joerg Exp $
+$NetBSD: patch-Modules_Debuggers_ProjectCenter_PTYView.m,v 1.2 2012/10/22 03:03:23 rh Exp $
 
---- Modules/Debuggers/ProjectCenter/PTYView.m.orig	2009-01-02 17:51:00.000000000 +0000
+Include util.h when compiling for NetBSD and OpenBSD.
+
+--- Modules/Debuggers/ProjectCenter/PTYView.m.orig	2012-04-20 08:35:30.000000000 +0000
 +++ Modules/Debuggers/ProjectCenter/PTYView.m
-@@ -34,10 +34,6 @@
- #import <stdlib.h>
- #import <string.h>
- 
--#if !defined(__OpenBSD__)
--#import <stropts.h>
--#endif
--
- #ifndef NOTIFICATION_CENTER
- #define NOTIFICATION_CENTER [NSNotificationCenter defaultCenter]
- #endif
-@@ -48,6 +44,14 @@
- #define USE_FORKPTY_REPLACEMENT 1
+@@ -46,6 +46,10 @@
+ #include <stropts.h>
  #endif
  
-+#ifdef __SOLARIS__
-+#import <stropts.h>
-+#endif
-+
 +#if defined (__NetBSD__) || defined (__OpenBSD__)
 +#  include <util.h>
 +#endif
 +
- #if !(defined (__NetBSD__)) && !(defined (__SOLARIS__)) && !(defined (__OpenBSD__))
- #  include <pty.h>
+ #ifndef NOTIFICATION_CENTER
+ #define NOTIFICATION_CENTER [NSNotificationCenter defaultCenter]
  #endif
