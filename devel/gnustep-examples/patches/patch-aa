@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2012/10/22 02:39:53 rh Exp $
+
+Remove duplicate instance variables from @implementation
+
+--- gui/Calculator/CalcBrain.m.orig	1999-10-07 20:48:52.000000000 +0000
++++ gui/Calculator/CalcBrain.m
+@@ -27,15 +27,7 @@
+ #include <math.h>
+ 
+ @implementation CalcBrain: NSObject
+-{
+-  CalcFace *face;
+-  double result;
+-  double enteredNumber;
+-  calcOperation operation;
+-  int fractionalDigits;
+-  BOOL decimalSeparator;
+-  BOOL editing;
+-}
++
+ -(id) init
+ {
+   [super init];

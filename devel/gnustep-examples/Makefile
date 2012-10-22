@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2011/04/07 02:17:00 rh Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/22 02:39:53 rh Exp $
 #
 
 DISTNAME=	gnustep-examples-1.3.0
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -17,8 +18,8 @@ USE_LANGUAGES=	objc
 NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 
+.include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
