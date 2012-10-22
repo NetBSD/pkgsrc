@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.27 2012/07/06 15:09:44 drochner Exp $
+$NetBSD: distinfo,v 1.28 2012/10/22 02:17:16 rh Exp $
 
-SHA1 (gnustep-base-1.20.1.tar.gz) = 5aff36405aa712473d51877ab77156d231297744
-RMD160 (gnustep-base-1.20.1.tar.gz) = 3f210ac74bf633bf1b5571ee3458e6db4f6d57b1
-Size (gnustep-base-1.20.1.tar.gz) = 2612827 bytes
-SHA1 (patch-aa) = 840943a504dd6a5543f16f9b95f634d35dc08ad7
-SHA1 (patch-ab) = f81bdc3f22b11679ab046370dc0373593162bfb3
-SHA1 (patch-ac) = f7aa9933dabb96f8d70c940360e2758ffd504e1e
-SHA1 (patch-ad) = da10386d7bcdfb2f5f3e1c55eec4d8bcf2e2e4ee
-SHA1 (patch-af) = 08105cb292759874c695bacb78d0dc40612993d4
-SHA1 (patch-ag) = 77fc4a4738ddbe75d17a0274dfef6cad607f8bb1
+SHA1 (gnustep-base-1.24.0.tar.gz) = 4d73df5b5a594213a4c7a0ed97fc04d10c9ced69
+RMD160 (gnustep-base-1.24.0.tar.gz) = 3710966cac708c5f22b1e5eaee456951791a1620
+Size (gnustep-base-1.24.0.tar.gz) = 2947759 bytes
+SHA1 (patch-aa) = f1298afa2775a45e0c9a04752ab28e5d8e898965
+SHA1 (patch-ab) = 1d56de33bc1320962b763ab6b7b50c38751e3210
+SHA1 (patch-ac) = 4e8e209ad202385948d0f4b0d29e5e61e01da410
+SHA1 (patch-ad) = b9ea5311cd1179e3e2a893fb3ba5325d98143a96
+SHA1 (patch-af) = e1a6f17dd2a70d9bf2b8e92a1ebe111bb105dbc9

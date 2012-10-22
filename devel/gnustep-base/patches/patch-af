@@ -1,12 +1,16 @@
-$NetBSD: patch-af,v 1.7 2009/10/31 14:17:23 tnn Exp $
+$NetBSD: patch-af,v 1.8 2012/10/22 02:17:16 rh Exp $
 
---- Source/NSNetServices.m.orig	2008-06-12 12:44:00.000000000 +0200
-+++ Source/NSNetServices.m
-@@ -40,6 +40,7 @@
- 
- #import <sys/types.h>
- #import <sys/socket.h>		// AF_INET / AF_INET6
-+#import <time.h>		// struct timeval
- 
- #import <netinet/in.h>		// struct sockaddr_in / sockaddr_in6
- #import <arpa/inet.h>		// inet_pton(3)
+--- Source/Additions/GSXML.m.orig	2012-01-09 08:28:27.000000000 +0000
++++ Source/Additions/GSXML.m
+@@ -984,7 +984,11 @@ static NSMapTable	*nodeNames = 0;
+ 	1,
+ 	"utf-8");
+       xmlOutputBufferFlush(buf);
++#if LIBXML_VERSION < 20900
+       string = UTF8StrLen(buf->buffer->content, buf->buffer->use);
++#else
++      string = UTF8StrLen(xmlBufContent(buf->buffer), xmlBufUse(buf->buffer));
++#endif
+       xmlOutputBufferClose(buf);
+     }
+   return string;
