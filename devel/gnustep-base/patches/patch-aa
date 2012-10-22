@@ -1,26 +1,21 @@
-$NetBSD: patch-aa,v 1.15 2011/04/07 01:55:15 rh Exp $
+$NetBSD: patch-aa,v 1.16 2012/10/22 02:17:16 rh Exp $
 
---- configure.orig	2010-06-17 19:09:26.000000000 +0000
+--- configure.orig	2012-01-29 16:57:06.000000000 +0000
 +++ configure
-@@ -5071,18 +5071,19 @@ echo $ECHO_N "checking the Objective-C r
- if test "$OBJC_RUNTIME_LIB" = "nx" -o "$OBJC_RUNTIME_LIB" = "apple"; then
-   { echo "$as_me:$LINENO: result: NeXT" >&5
- echo "${ECHO_T}NeXT" >&6; }
--  LIBOBJC='-lobjc'
-+  LIBOBJC='-lobjc @PTHREAD_LIBS@'
-   OBJCFLAGS="-fnext-runtime -DNeXT_RUNTIME"
- elif test "$OBJC_RUNTIME_LIB" = "gnugc"; then
-   { echo "$as_me:$LINENO: result: GNU" >&5
- echo "${ECHO_T}GNU" >&6; }
-   LIBOBJC='-lobjc_gc -ldl -lgc'
-+  LIBOBJC='-lobjc_gc -ldl -lgc @PTHREAD_LIBS@'
-   OBJCFLAGS="-fgnu-runtime"
-   OBJC_WITH_GC=yes
- else
-   { echo "$as_me:$LINENO: result: GNU" >&5
- echo "${ECHO_T}GNU" >&6; }
--  LIBOBJC='-lobjc'
-+  LIBOBJC='-lobjc @PTHREAD_LIBS@'
-   OBJCFLAGS="-fgnu-runtime"
+@@ -5641,6 +5641,7 @@ $as_echo "$as_me: error: The command 'gn
+    { (exit 1); exit 1; }; }
+   exit 1
  fi
++LIBOBJC="$LIBOBJC @PTHREAD_LIBS@"
  
+ #--------------------------------------------------------------------
+ # Miscellaneous flags
+@@ -6463,7 +6464,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+   fi
+-  LIBS="-lobjc_gc -ldl"
++  LIBS="-lobjc_gc -ldl @PTHREAD_LIBS@"
+   { $as_echo "$as_me:$LINENO: checking for class_ivar_set_gcinvisible" >&5
+ $as_echo_n "checking for class_ivar_set_gcinvisible... " >&6; }
+ if test "${ac_cv_func_class_ivar_set_gcinvisible+set}" = set; then
