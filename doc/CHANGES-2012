@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3396 2012/10/22 13:41:21 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3397 2012/10/22 13:46:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/gworkspace to 0.9.1 [rh 2012-10-22]
 	Updated meta-pkgs/gnustep to 2.6.2 [rh 2012-10-22]
 	Updated devel/p5-Moo to 1.000004 [wen 2012-10-22]
+	Added devel/p5-ExtUtils-CppGuess version 0.07 [wiz 2012-10-22]
