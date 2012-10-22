@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 12:19:01 asau Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/22 02:44:12 rh Exp $
 #
 
-DISTNAME=	Pantomime-1.2.0pre3
+DISTNAME=	Pantomime-1.2.0
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 
@@ -15,9 +15,8 @@ USE_LANGUAGES=	objc
 PRIVILEGED_STAGES+=	build
 PRIVILEGED_STAGES+=	clean
 
-WRKSRC=		${WRKDIR}/Pantomime
 NO_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	no
+#MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS=-DMKDIR
 MAKE_FILE=	GNUmakefile
 
