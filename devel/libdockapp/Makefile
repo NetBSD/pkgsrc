@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/05/04 19:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 10:24:03 wiz Exp $
 #
 
 DISTNAME=	libdockapp-0.6.2
@@ -26,5 +26,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
