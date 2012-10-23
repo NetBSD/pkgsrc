@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/11/01 06:02:48 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 10:24:16 wiz Exp $
 #
 
 DISTNAME=	ede-1.0.4
@@ -24,6 +24,5 @@ INSTALLATION_DIRS+=	bin
 
 .include "../../x11/efltk/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

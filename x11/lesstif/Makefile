@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2011/11/01 06:03:02 sbd Exp $
+# $NetBSD: Makefile,v 1.99 2012/10/23 10:24:18 wiz Exp $
 
 DISTNAME=	lesstif-0.95.2
 PKGREVISION=	2
@@ -70,5 +70,4 @@ post-patch:
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
