@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2009/01/09 16:20:20 shattered Exp $
+$NetBSD: patch-aa,v 1.13 2012/10/23 20:49:38 shattered Exp $
 
 --- example/jwhois.conf.orig	2007-03-26 09:12:08.000000000 +0000
 +++ example/jwhois.conf
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.12 2009/01/09 16:20:20 shattered Exp $
  # Path to the browser to use for HTTP servers.
  #
 -browser-pathname = "/usr/bin/lynx";
-+browser-pathname = "/usr/pkg/bin/lynx";
++browser-pathname = "@PREFIX@/bin/lynx";
  
  #
  # Command line argument to browser to get output on stdout.
