@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/05/13 15:59:33 hans Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:25 asau Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
@@ -15,8 +15,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	SunOS-*-*      # only for Solaris, at the moment
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		default
 INSTALL_TARGET=		install install.man

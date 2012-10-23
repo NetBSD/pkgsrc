@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/27 20:01:36 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:23 asau Exp $
 #
 
 DISTNAME=		shc-3.7
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.datsi.fi.upm.es/~frosal/
 COMMENT=		Shell script to C compiler
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

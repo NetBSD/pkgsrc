@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/21 19:29:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:00 asau Exp $
 
 VERS=		0.2.12
 DISTNAME=	eventlog_${VERS}
@@ -13,7 +13,6 @@ COMMENT=	Support library for syslog-ng
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/22 23:41:04 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 19:50:57 asau Exp $
 
 DISTNAME=	ddrescue-1.15
 CATEGORIES=	sysutils
@@ -8,8 +8,6 @@ MAINTAINER=	ef@math.uni-bonn.de
 HOMEPAGE=	http://www.gnu.org/software/ddrescue/ddrescue.html
 COMMENT=	GNU ddrescue is a data recovery tool
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		YES
 USE_LANGUAGES=		c++

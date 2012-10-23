@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/12/14 21:44:32 macallan Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 19:51:00 asau Exp $
 
 DISTNAME=	estd-r7
 PKGNAME=	estd-0.7
@@ -9,8 +9,6 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/estd.html
 COMMENT=	Dynamically sets the CPU-frequency on SpeedStep and PowerNow CPUs
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	share/examples/rc.d
 

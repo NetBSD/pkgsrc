@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 19:51:10 asau Exp $
 #
 
 DISTNAME=		liboobs-2.22.2
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Lightweight GObject based interface to system-tools-backends
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

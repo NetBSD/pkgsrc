@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 19:50:56 asau Exp $
 #
 
 DISTNAME=		cvsreport-0.3.5
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/cvsreport/
 COMMENT=		Message reports from CVS activity
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=		cvsreport
 USE_TOOLS+=		perl:run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/02/28 14:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:07 asau Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 COMMENT=	Command Line Interface HFS (not HFS+) disk access tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include/libhfs

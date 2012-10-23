@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/27 22:26:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 19:51:15 asau Exp $
 #
 
 DISTNAME=		oak-1.5.0
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.ktools.org/dist/oak/
 MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://www.ktools.org/dist/oak/
 COMMENT=		System log reporting tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake

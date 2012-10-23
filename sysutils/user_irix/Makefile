@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:28 asau Exp $
 #
 
 DISTNAME=		user-20110201
@@ -9,8 +9,6 @@ DISTFILES=		# empty
 MAINTAINER=		cheusov@NetBSD.org
 COMMENT=		Limited NetBSD-compatible useradd/groupadd commands
 LICENSE=		2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	IRIX-*-*
 

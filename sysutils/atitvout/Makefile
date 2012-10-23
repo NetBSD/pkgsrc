@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/27 18:29:02 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 19:50:51 asau Exp $
 
 DISTNAME=	atitvout-0.4
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/atitvout/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0pointer.de/lennart/projects/atitvout/
 COMMENT=	Allows TV-Out connector support under Linux/NetBSD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 # Linux-*-i386 [gnumakefile needs work]
 

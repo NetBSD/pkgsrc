@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/02/26 10:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 19:51:23 asau Exp $
 #
 
 DISTNAME=		service-config-0.51
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.superscript.com/service-config/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.superscript.com/service-config/intro.html
 COMMENT=		Utility to create and configure svscan service directories
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 

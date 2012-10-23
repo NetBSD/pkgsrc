@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 23:02:25 adam Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/23 19:51:05 asau Exp $
 #
 
 DISTNAME=	gnome-volume-manager-2.24.1
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME daemon to auto-mount and manage storage devices
 
 DEPENDS+=	gnome-mount>=0.8:../../sysutils/gnome-mount
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES

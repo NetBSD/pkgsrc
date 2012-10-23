@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/01 20:40:54 riz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:26 asau Exp $
 #
 
 DISTNAME=	tarsnap-autoconf-1.0.33
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tarsnap.com/
 COMMENT=	Secure online backup service
 LICENSE=	tarsnap-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INSTALL_MAKE_FLAGS=	sysconfdir=${PREFIX}/share/examples/tarsnap

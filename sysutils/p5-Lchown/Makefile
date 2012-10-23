@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:57:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 19:51:17 asau Exp $
 
 DISTNAME=	Lchown-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ COMMENT=	Perl5 module interface to the lchown() system call
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES+=		c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Lchown/.packlist
 PERL5_MODULE_TYPE=	Module::Build

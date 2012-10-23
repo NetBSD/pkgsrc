@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/03/08 01:19:42 jym Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:51:36 asau Exp $
 #
 
 DISTNAME=	xen-2.0.7-install-x86_32
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=	.tgz
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=user-destdir
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/ports/xen/

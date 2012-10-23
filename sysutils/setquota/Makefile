@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/05/12 22:08:24 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:23 asau Exp $
 #
 
 DISTNAME=	setquota-0.1
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.jurai.net/users/winter/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# unknown
 COMMENT=	Command line quota tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BSD oriented, haven't checked on other environment now
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*

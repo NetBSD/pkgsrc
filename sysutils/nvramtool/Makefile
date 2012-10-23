@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/08 19:59:48 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 19:51:15 asau Exp $
 #
 
 DISTNAME=	nvramtool-r6338
@@ -10,8 +10,6 @@ MAINTAINER=	jakllsch@kollasch.net
 HOMEPAGE=	http://www.coreboot.org/Nvramtool
 COMMENT=	Coreboot CMOS NVRAM manipulation utility
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+= gmake
 USE_TOOLS+= date

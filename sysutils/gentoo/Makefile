@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:44:42 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 19:51:03 asau Exp $
 
 DISTNAME=	gentoo-0.11.57
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gentoo/}
 MAINTAINER=	dunse@goa.nu
 HOMEPAGE=	http://www.obsession.se/gentoo/
 COMMENT=	Two-pane filemanager using GTK+, 100% GUI configurable
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt

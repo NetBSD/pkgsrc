@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:17 asau Exp $
 
 DISTNAME=	Mac-AppleScript-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mac/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Mac-AppleScript/
 COMMENT=	Perl 5 module to execute applescript commands on OS X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 

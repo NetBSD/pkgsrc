@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/03 21:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/23 19:51:21 asau Exp $
 
 DISTNAME=	rconfig-0.47
 PKGREVISION=	1
@@ -13,8 +13,6 @@ COMMENT=	Manage configurations for many machines via rdist trees
 DEPENDS+=	fping-[0-9]*:../../net/fping
 DEPENDS+=	freerdist-[0-9]*:../../net/rdist6
 DEPENDS+=	shmux-[0-9]*:../../sysutils/shmux
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_TOOLS+=	perl:run pod2man pod2html
 

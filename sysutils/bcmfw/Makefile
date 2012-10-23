@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:52 asau Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
@@ -15,8 +15,6 @@ LICENSE=		bcmfw-license
 RESTRICTED=		No clear permission redistribute firmware
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
 

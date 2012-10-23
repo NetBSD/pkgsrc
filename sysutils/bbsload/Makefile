@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:50:52 asau Exp $
 #
 
 DISTNAME=	bbsload-0.2.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 MAINTAINER=	pino@dohd.org
 HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	Small (in dimensions) tool to display the average load
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

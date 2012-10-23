@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 20:44:52 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:51:15 asau Exp $
 #
 
 DISTNAME=	nrg2iso-0.4
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gregory.kokanosky.free.fr/v4/linux/nrg2iso.en.html
 COMMENT=	Converts Nero Burning Roms to ISO images
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 

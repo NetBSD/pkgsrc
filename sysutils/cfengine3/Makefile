@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:55 asau Exp $
 #
 
 DISTNAME=	cfengine-3.1.4
@@ -10,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://cfengine.com/pages/community
 COMMENT=	Tool for automating system administration
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

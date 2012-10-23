@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/04 17:58:31 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:26 asau Exp $
 #
 
 DISTNAME=		testdisk-6.13
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.cgsecurity.org/wiki/TestDisk
 COMMENT=		Tool to check and undelete partitions
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

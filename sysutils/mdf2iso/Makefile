@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/27 19:18:07 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:12 asau Exp $
 #
 
 DISTNAME=	mdf2iso-0.3.0-src
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mdf2iso.berlios.de/
 COMMENT=	Utility to convert Alcohol 120% images to ISO-9660 format
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

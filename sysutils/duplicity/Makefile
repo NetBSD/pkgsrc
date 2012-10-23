@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/09/05 10:05:43 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 19:50:59 asau Exp $
 
 DISTNAME=		duplicity-0.6.19
 CATEGORIES=		sysutils net
@@ -11,8 +11,6 @@ LICENSE=		gnu-gpl-v2
 
 DEPENDS+=	gnupg>=1.0.0:../../security/gnupg
 DEPENDS+=	${PYPKGPREFIX}-boto>=1.6a:../../net/py-boto
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/07/14 23:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 19:51:10 asau Exp $
 #
 
 DISTNAME=	libpciaccess-0.13.1
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	PCI access utility library from X.org
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ###
 ### XXX This list is probably not exhaustive.
 ###

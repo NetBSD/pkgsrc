@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/27 20:58:05 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/23 19:51:39 asau Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Graphical display for the current UVM status
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/01/27 20:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 19:51:24 asau Exp $
 #
 
 DISTNAME=		sredird-2.0.0
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.pcmicro.com/sredird/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pcmicro.com/sredird/
 COMMENT=		RFC2217 compliant serial port redirector
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FLAGS+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q}
 BUILD_TARGET=		sredird
