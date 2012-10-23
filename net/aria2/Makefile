@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/01 15:30:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/23 17:18:09 asau Exp $
 #
 
 DISTNAME=	aria2-1.15.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aria2.sourceforge.net/
 COMMENT=	Multi-threaded, multi-protocol, flexible download accelerator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

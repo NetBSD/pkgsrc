@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/06 15:47:53 roy Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:16 asau Exp $
 #
 
 DISTNAME=		dhcpcd-dbus-0.6.0
@@ -12,7 +12,6 @@ HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
 COMMENT=		DBus binding for dhcpcd
 LICENSE=		modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c99
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/10/16 03:47:30 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 17:19:02 asau Exp $
 #
 
 DISTNAME=	libdnet-1.12
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libdnet/
 COMMENT=	Python wrapper for libdnet
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 PYSETUPSUBDIR=	python

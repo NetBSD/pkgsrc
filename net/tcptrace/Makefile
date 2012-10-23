@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/12/07 15:18:51 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 17:19:12 asau Exp $
 
 DISTNAME=	tcptrace-6.6.7
 CATEGORIES=	net
@@ -7,8 +7,6 @@ MASTER_SITES=	http://www.tcptrace.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcptrace.org/
 COMMENT=	TCP dump file analysis tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

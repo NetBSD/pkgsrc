@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/01/18 10:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:24 asau Exp $
 
 DISTNAME=		gofish-1.2
 CATEGORIES=		net
@@ -8,8 +8,6 @@ MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://gofish.sourceforge.net/
 COMMENT=		Gopher server
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/gofish
 USE_PKGLOCALEDIR=	yes

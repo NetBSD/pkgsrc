@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:46 asau Exp $
 #
 
 DISTNAME=	Net-Akismet-0.05
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-Akismet/
 COMMENT=	Perl 5 interface to Akismet - comment and trackback spam fighter
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 
 DEPENDS+=	p5-libwww>=5.09:../../www/p5-libwww

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/14 07:45:30 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:36 asau Exp $
 #
 
 DISTNAME=	microdc2-0.15.6
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 MAINTAINER=	d.den.brok@uni-bonn.de
 HOMEPAGE=	http://corsair626.no-ip.org/microdc/
 COMMENT=	Console-based DirectConnect client
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 BUILDLINK_API_DEPENDS.readline+=readline>=4
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.16

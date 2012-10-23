@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/23 17:18:11 asau Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
@@ -16,8 +16,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake flex bison
 USE_GNU_READLINE=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--localstatedir=/var
 BIRD6?=			# empty
