@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/18 16:59:30 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:48 asau Exp $
 #
 
 DISTNAME=	passwdqc-1.1.4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwall.com/passwdqc/
 COMMENT=	Password strength checker
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	pam
 INSTALLATION_DIRS= lib/security ${PKGMANDIR}/man8 ${PKGMANDIR}/man5

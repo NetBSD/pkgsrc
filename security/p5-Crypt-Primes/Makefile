@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 18:16:42 asau Exp $
 #
 
 DISTNAME=		Crypt-Primes-0.50
@@ -13,7 +13,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Crypt-Primes/
 COMMENT=		Perl5 module for provable prime number generation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Math-Pari>=2.001804:../../math/p5-Math-Pari
 DEPENDS+=		p5-Crypt-Random>=0.33:../../security/p5-Crypt-Random

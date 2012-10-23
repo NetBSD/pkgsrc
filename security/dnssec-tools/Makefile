@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 18:16:25 asau Exp $
 #
 
 DISTNAME=	dnssec-tools-1.12.2
@@ -10,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.dnssec-tools.org/
 COMMENT=	Toolkit to ease the deployment of DNSSEC related technologies
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-DNS-SEC-[0-9]*:../../security/p5-Net-DNS-SEC
 DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff

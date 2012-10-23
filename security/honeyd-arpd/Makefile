@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/02/11 21:22:04 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/23 18:16:30 asau Exp $
 #
 
 DISTNAME=	arpd-0.2
@@ -10,8 +10,6 @@ MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://niels.xtdnet.nl/honeyd/
 COMMENT=	ARP daemon for honeyd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RCD_SCRIPTS=	honeydarpd
 GNU_CONFIGURE=	yes

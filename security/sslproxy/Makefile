@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:02:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:59 asau Exp $
 
 DISTNAME=	sslproxy-1.0.5
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/sslproxy/
 COMMENT=	Small SSL proxy
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 EXTRACT_SUFX=		.tgz
 
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/03/24 19:43:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:59 asau Exp $
 
 DISTNAME=	ssss-0.5
 PKGREVISION=	2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://point-at-infinity.org/ssss/
 COMMENT=	Shamir's Secret Sharing Scheme
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

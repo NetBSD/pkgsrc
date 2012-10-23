@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 20:46:38 pettai Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/23 18:16:21 asau Exp $
 
 DISTNAME=	Botan-1.8.14
 PKGNAME=	${DISTNAME:tl}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://botan.randombit.net/
 COMMENT=	Portable, easy to use, and efficient C++ crypto library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++

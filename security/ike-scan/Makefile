@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/27 22:05:28 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:31 asau Exp $
 
 DISTNAME=	ike-scan-1.9
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.nta-monitor.com/tools/ike-scan/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nta-monitor.com/tools/ike-scan/
 COMMENT=	Fingerprinting IKE implementation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl

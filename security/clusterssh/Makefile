@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:22 asau Exp $
 #
 
 DISTNAME=	App-ClusterSSH-4.01_01
@@ -11,8 +11,6 @@ MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/D/DU/DUNCS/
 COMMENT=	Cluster administration tool
 LICENSE=	gnu-gpl-v1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Exception-Class>=1.32:../../devel/p5-Exception-Class
 DEPENDS+=	p5-Tk>=804.030:../../x11/p5-Tk

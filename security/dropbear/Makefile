@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/08/13 17:47:26 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/23 18:16:26 asau Exp $
 
 DISTNAME=	dropbear-2012.55
 CATEGORIES=	security
@@ -10,8 +10,6 @@ COMMENT=	Small SSH2 server and client, aimed at embedded market
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

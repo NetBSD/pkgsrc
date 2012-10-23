@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/03/03 00:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 18:16:20 asau Exp $
 #
 
 DISTNAME=	amap-5.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeworld.thc.org/thc-amap/
 COMMENT=	Applications and Services scanner
 LICENSE=	amap-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 

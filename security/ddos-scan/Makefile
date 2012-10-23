@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/27 22:13:41 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 18:16:24 asau Exp $
 #
 
 DISTNAME=	ddos_scan
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://staff.washington.edu/dittrich/
 COMMENT=	Scan for a limited set of distributed denial of service (ddos) agents
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	default dds
 

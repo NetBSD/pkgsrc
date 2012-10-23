@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/10/03 21:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2012/10/23 18:17:00 asau Exp $
 
 DISTNAME=		stunnel-4.53
 PKGREVISION=		1
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		VARBASE
 USE_LIBTOOL=		yes

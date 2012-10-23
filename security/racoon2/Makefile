@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:56 asau Exp $
 #
 
 DISTNAME=		racoon2-20100526a
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		yes
 INSTALL_UNSTRIPPED=	yes
 USE_TOOLS+=		grep sed flex yacc
 USE_TOOLS+=		gzip:run perl:run	# used by pskgen
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # @perl_bindir@ will be /usr/pkgsrc/security/racoon2/work/.tools/bin/perl.
 # REPLACE_PERL cannot be used, since @perl_bindir@ does not match its pattern.

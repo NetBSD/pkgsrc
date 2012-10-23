@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/03/02 16:42:06 hans Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/23 18:16:56 asau Exp $
 #
 
 DISTNAME=		rsaref
@@ -20,7 +20,6 @@ WRKSRC=			${WRKDIR}/install
 CRYPTO=			yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES+=		cdefs
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 18:16:40 asau Exp $
 #
 
 DISTNAME=		Crypt-Blowfish-2.12
@@ -13,7 +13,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Crypt-Blowfish/
 COMMENT=		Perl5 Blowfish implementation
 # LICENSE=		unclear
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # recommended for tests

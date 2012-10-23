@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/01 16:27:57 hans Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:24 asau Exp $
 #
 
 DISTNAME=	destroy-20040415
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.freebsdhackers.net/destroy/
 COMMENT=	Program to securely destroy files on the hard disk
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES+=	fts_open
 

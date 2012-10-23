@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/05 10:14:46 apb Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/23 18:16:54 asau Exp $
 #
 
 DISTNAME=		M2Crypto-0.21.1
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://chandlerproject.org/bin/view/Projects/MeTooCrypto
 COMMENT=		Crypto and SSL toolkit for Python
 LICENSE=		m2crypto-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # constness is very different between openssl versions,
 # it seems, and 0.9.7i is the version which currently is

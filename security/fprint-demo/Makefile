@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 23:02:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/23 18:16:27 asau Exp $
 
 DISTNAME=	fprint_demo-0.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://reactivated.net/fprint/wiki/Fprint_demo
 COMMENT=	Simple GTK+ application to demonstrate libfprint's capabilities
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

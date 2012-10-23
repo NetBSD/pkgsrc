@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/07/05 15:44:07 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/23 18:16:29 asau Exp $
 
 DISTNAME=	gsasl-1.8.0
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gsasl/
 COMMENT=	GNU implementation of the Simple Authentication and Security Layer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt pkg-config
 USE_LIBTOOL=		yes

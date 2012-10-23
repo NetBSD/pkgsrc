@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/07/14 12:56:11 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 18:16:33 asau Exp $
 #
 
 VERSION=	0.32
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.remlab.net/files/libident/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.remlab.net/libident/
 COMMENT=	Small library to interface to the ident protocol server (rfc1413)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/04 00:21:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 18:16:53 asau Exp $
 #
 
 VER=		2.6
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://denyhosts.sourceforge.net/
 COMMENT=	Watch auth log for invalid ssh login attempts and block hosts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 

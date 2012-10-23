@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/24 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:48 asau Exp $
 
 DISTNAME=	pam_fprint-0.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://reactivated.net/fprint/wiki/Pam_fprint
 COMMENT=	PAM module to provide authentication using fingerprint readers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

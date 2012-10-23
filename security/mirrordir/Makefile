@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/04/14 22:45:51 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:36 asau Exp $
 #
 
 DISTNAME=	mirrordir-0.10.49
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# http://mirrordir.sourceforge.net/
 COMMENT=	Directory mirroring tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	qmail>=1.03nb7 netqmail>=1.05
 

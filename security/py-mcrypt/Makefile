@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/29 06:31:21 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 18:16:54 asau Exp $
 #
 
 DISTNAME=	python-mcrypt-1.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labix.org/python-mcrypt
 COMMENT=	Python interface to mcrypt library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/27 21:59:21 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:32 asau Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.schneier.com/blowfish.html
 COMMENT=	Blowfish block cipher library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bf
 CRYPTO=		YES

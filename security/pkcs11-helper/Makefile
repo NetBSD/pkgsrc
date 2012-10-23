@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/06 17:39:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 18:16:51 asau Exp $
 
 DISTNAME=	pkcs11-helper-1.08
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 COMMENT=	Library that simplifies the interaction with PKCS\#11
 LICENSE=	modified-bsd OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf autoreconf gmake pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/01/27 21:54:17 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 18:16:32 asau Exp $
 
 DISTNAME=	libdes-4.04b
 CATEGORIES=	security
@@ -6,8 +6,6 @@ MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Small DES (Data Encryption Standard) lib & standalone program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/des
 CRYPTO=		YES

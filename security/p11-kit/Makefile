@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/03 14:43:12 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 18:16:39 asau Exp $
 #
 
 DISTNAME=	p11-kit-0.10
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://p11-glue.freedesktop.org/
 COMMENT=	PKCS#11 module manager
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

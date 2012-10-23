@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 18:16:45 asau Exp $
 #
 
 DISTNAME=		GnuPG-Interface-0.45
@@ -12,8 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/GnuPG-Interface/
 COMMENT=		Perl interface to GnuPG
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		gnupg>=1.2.3:../../security/gnupg
 DEPENDS+=		p5-Any-Moose>=0.04:../../devel/p5-Any-Moose

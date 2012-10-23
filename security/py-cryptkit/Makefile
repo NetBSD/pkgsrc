@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/10/29 08:07:23 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:53 asau Exp $
 
 DISTNAME=	cryptkit-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cryptkit/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cryptkit.sourceforge.net/
 COMMENT=	Python Cryptographic Toolkit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

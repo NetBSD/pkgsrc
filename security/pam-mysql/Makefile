@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 15:03:25 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 18:16:48 asau Exp $
 
 DISTNAME=	pam_mysql-0.7RC1
 PKGNAME=	${DISTNAME:S/_/-/:S/RC/rc/}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pam-mysql/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pam-mysql.sourceforge.net/
 COMMENT=	PAM module for authenticating with MySQL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCDIR=		${PREFIX}/share/doc/pam-mysql
 

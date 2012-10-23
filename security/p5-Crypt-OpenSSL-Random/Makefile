@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 18:16:42 asau Exp $
 #
 
 DISTNAME=		Crypt-OpenSSL-Random-0.04
@@ -12,8 +12,6 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://perl-openssl.sourceforge.net/
 COMMENT=		Perl5 wrapper module for OpenSSL pseudo-random number generator
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 
