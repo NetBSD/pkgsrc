@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2012/08/16 15:14:20 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2012/10/23 19:50:55 asau Exp $
 
 DISTNAME=	cdrtools-3.01a08
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
@@ -17,7 +17,6 @@ COMMENT=	Software for creating ISO9660 images and writing CD/DVD/Blu-ray
 CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]* cdrkit-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a[0-9]*//}
 

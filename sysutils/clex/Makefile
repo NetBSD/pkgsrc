@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/17 13:23:28 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:50:55 asau Exp $
 #
 
 DISTNAME=		clex-4.6.4
@@ -9,8 +9,6 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.clex.sk/
 COMMENT=		File manager with a full-screen user interface
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_NCURSES=		yes # enter_{bold,reverse,underline}_mode
 GNU_CONFIGURE=		yes

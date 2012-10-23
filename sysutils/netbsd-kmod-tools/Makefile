@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/27 12:37:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:15 asau Exp $
 
 DISTNAME=	netbsd-kmod-tools-5.1
 CATEGORIES=	sysutils
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	NetBSD kmod tools
 
 ONLY_FOR_PLATFORM=	NetBSD-5.[0-8]*-*
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-extract:
 	mkdir ${WRKSRC}

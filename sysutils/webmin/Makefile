@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/03 21:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/23 19:51:34 asau Exp $
 
 .include "version.mk"
 
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 

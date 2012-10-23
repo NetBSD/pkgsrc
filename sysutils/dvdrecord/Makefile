@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/05/19 22:03:44 abs Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 19:50:59 asau Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 LIBS.SunOS+=		-lsocket
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

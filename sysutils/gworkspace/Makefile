@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/22 03:08:29 rh Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/23 19:51:06 asau Exp $
 #
 
 DISTNAME=	gworkspace-0.9.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/experience/GWorkspace.html
 COMMENT=	GNUstep Workspace manager
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	GWLib-[0-9]*
 

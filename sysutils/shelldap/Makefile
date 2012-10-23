@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:23 asau Exp $
 #
 
 PKGNAME=	shelldap-0.5
@@ -19,8 +19,6 @@ DEPENDS+=	p5-Digest-MD5>=2.51:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Algorithm-Diff>=1.1902:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-perl-ldap>=0.40.01:../../databases/p5-perl-ldap
 DEPENDS+=	p5-Term-ReadLine>=1.20:../../devel/p5-Term-ReadLine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/shelldap-c6a3abc56c74
 USE_LANGUAGES=	# none

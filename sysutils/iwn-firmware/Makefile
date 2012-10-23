@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/19 19:04:36 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:09 asau Exp $
 #
 
 DISTNAME=		iwlwifi-4965-ucode-${PKG_VERSION}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://intellinuxwireless.org/
 COMMENT=		Firmware binary image for the iwn(4) driver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
