@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2012/10/08 09:21:15 asau Exp $
+# $NetBSD: Makefile,v 1.109 2012/10/23 10:24:09 wiz Exp $
 
 PKGREVISION=	4
 
@@ -65,5 +65,4 @@ CONFIGURE_ARGS+=	--disable-opengl
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

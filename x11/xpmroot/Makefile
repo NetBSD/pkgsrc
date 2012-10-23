@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/07/30 03:59:06 dholland Exp $
+# $NetBSD: Makefile,v 1.62 2012/10/23 10:24:22 wiz Exp $
 #
 
 DISTNAME=	fvwm-${PKG_VERSION}
@@ -32,5 +32,4 @@ do-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

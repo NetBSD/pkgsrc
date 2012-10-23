@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.72 2012/10/06 14:10:40 asau Exp $
+# $NetBSD: Makefile.common,v 1.73 2012/10/23 10:24:06 wiz Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -29,4 +29,3 @@ DIST_SUBDIR=		Mesa-${MESA_PKGVERSION}
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"

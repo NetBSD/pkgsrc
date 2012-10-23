@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 23:48:13 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 10:24:02 wiz Exp $
 #
 
 DISTNAME=	wmsmixer-0.5.1
@@ -29,6 +29,5 @@ post-install:
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

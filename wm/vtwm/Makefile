@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 12:42:24 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 10:24:15 wiz Exp $
 #
 
 DISTNAME=	vtwm-5.4.7
@@ -20,5 +20,4 @@ USE_TOOLS+=	flex yacc
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

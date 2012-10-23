@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/05/07 14:03:26 obache Exp $
+# $NetBSD: options.mk,v 1.3 2012/10/23 10:24:21 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x11vnc
@@ -25,7 +25,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif

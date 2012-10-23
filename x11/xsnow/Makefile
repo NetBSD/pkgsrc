@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/01/18 15:18:53 is Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/23 10:24:23 wiz Exp $
 
 DISTNAME=	xsnow-1.42
 PKGREVISION=	5
@@ -23,5 +23,4 @@ IMAKEOPTS+=	-DExtraLibraries=${LIBS:Q}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

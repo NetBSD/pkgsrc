@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/02/06 12:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/23 10:24:23 wiz Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	17
@@ -27,5 +27,4 @@ SUBST_SED.prefix=	-e 's|@PREFIX@|${PREFIX}|g'
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

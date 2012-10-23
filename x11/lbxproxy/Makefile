@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/26 00:39:59 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 10:24:18 wiz Exp $
 #
 
 DISTNAME=		lbxproxy-1.0.2
@@ -22,6 +22,5 @@ BROKEN=			Unsupported by modern X.org
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/xproxymanagementprotocol/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

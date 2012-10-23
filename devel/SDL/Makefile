@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2012/09/15 10:04:04 obache Exp $
+# $NetBSD: Makefile,v 1.107 2012/10/23 10:24:02 wiz Exp $
 
 DISTNAME=	SDL-1.2.15
 PKGREVISION=	4
@@ -57,7 +57,6 @@ CONFIGURE_ARGS+=	--disable-x11-shared
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/08 12:42:19 asau Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/23 10:24:13 wiz Exp $
 #
 
 DISTNAME=	evilwm-1.1.0
@@ -23,5 +23,4 @@ do-install:
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

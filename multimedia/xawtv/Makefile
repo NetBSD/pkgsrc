@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/08 09:21:15 asau Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 10:24:09 wiz Exp $
 #
 
 DISTNAME=	xawtv-3.95
@@ -59,7 +59,6 @@ MAKE_FLAGS+=		SUID_ROOT= FS_LIBS=-lFS
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xf86vidmodeproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
