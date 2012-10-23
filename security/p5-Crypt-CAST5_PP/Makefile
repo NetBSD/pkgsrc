@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 18:16:40 asau Exp $
 #
 
 DISTNAME=		Crypt-CAST5_PP-1.04
@@ -12,7 +12,6 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-CAST5_PP/
 COMMENT=		The CAST5 block cipher, implemented in pure Perl
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty

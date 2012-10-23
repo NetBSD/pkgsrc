@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 18:16:44 asau Exp $
 
 DISTNAME=	Digest-HMAC-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-HMAC/
 COMMENT=	Perl5 module for HMAC
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Digest-SHA>=1.00:../../security/p5-Digest-SHA
 DEPENDS+=	p5-Digest-MD5>=2.00:../../security/p5-Digest-MD5

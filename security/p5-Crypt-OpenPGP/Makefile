@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/23 18:16:41 asau Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-1.06
@@ -12,8 +12,6 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-OpenPGP/
 COMMENT=		Pure-Perl OpenPGP implementation
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 DEPENDS+=		p5-Crypt-CAST5_PP-[0-9]*:../../security/p5-Crypt-CAST5_PP

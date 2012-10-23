@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/03/21 06:50:13 scottr Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:48 asau Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://ftp.feep.net/pub/software/PAM/pam_dbm/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.feep.net/PAM/pam_dbm/
 COMMENT=		PAM module for DBM authentication
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

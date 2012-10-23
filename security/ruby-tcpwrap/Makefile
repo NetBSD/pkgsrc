@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/02/21 16:01:19 taca Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 18:16:57 asau Exp $
 
 DISTNAME=	ruby-tcpwrap-0.6
 PKGNAME=	${RUBY_PKGPREFIX}-tcpwrap-0.6
@@ -11,7 +11,6 @@ HOMEPAGE=	# not available
 COMMENT=	TCP wrappers library for Ruby
 LICENSE=	2-clause-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_RUBY_EXTCONF=	yes
 WRKSRC=			${WRKDIR}/ruby-tcpwrap
 INSTALL_TARGET=		site-install

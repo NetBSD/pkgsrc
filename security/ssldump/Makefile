@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/09/13 17:27:36 shattered Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 18:16:59 asau Exp $
 #
 
 DISTNAME=	ssldump-0.9b3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.rtfm.com/ssldump/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rtfm.com/ssldump/
 COMMENT=	SSLv3/TLS network protocol analyzer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
