@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/19 07:55:32 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 16:07:12 asau Exp $
 
 DISTNAME=	DBIx-Class-Helpers-2.015001
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,6 @@ BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/DBIx/Class/Helpers/.packlist
 

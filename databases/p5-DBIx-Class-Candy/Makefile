@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/10 09:31:23 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 16:07:12 asau Exp $
 
 DISTNAME=	DBIx-Class-Candy-0.002101
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,6 @@ BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/DBIx/Class/Candy/.packlist
 
