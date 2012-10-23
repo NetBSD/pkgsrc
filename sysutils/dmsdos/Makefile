@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/27 18:46:39 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 19:50:59 asau Exp $
 #
 
 DISTNAME=	dmsdos-0.9.2.3-pre2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cmp.felk.cvut.cz/~pisa/dmsdos/
 COMMENT=	Program to access DBLSPACE/DRVSPACE containers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dmsdos-0.9.2.3-pre2/src
 

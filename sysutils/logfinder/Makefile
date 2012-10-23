@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/15 11:53:38 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:11 asau Exp $
 #
 
 DISTNAME=		logfinder-0.1
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.eff.org/osp/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.eff.org/osp/
 COMMENT=		Eliminate Unwanted Logging of Personal Data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		lsof>=4.72:../../sysutils/lsof
 

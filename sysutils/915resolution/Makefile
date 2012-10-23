@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/12/12 14:57:46 abs Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:50 asau Exp $
 #
 
 DISTNAME=	915resolution-0.5.3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://915resolution.mango-lang.org/
 COMMENT=	BIOS VESA resolution utility for 8XX/9XX Intel chips
 LICENSE=	public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 FreeBSD-*-x86_64 DragonFly-*-i386

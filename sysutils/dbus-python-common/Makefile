@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/15 10:06:22 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 19:50:57 asau Exp $
 #
 
 DISTNAME=	dbus-python-1.1.1
@@ -16,8 +16,6 @@ COMMENT=	Python bindings for the D-BUS message bus system
 LICENSE=	mit
 
 CONFLICTS+=	py[0-9]*-dbus<1.1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCLUDE_3X= yes

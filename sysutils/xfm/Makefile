@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/05/03 09:55:31 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 19:51:38 asau Exp $
 
 DISTNAME=	xfm-1.4.3
 PKGREVISION=	3
@@ -9,8 +9,6 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/
 COMMENT=	The X File Manager
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET+=	all xfm.install.script Xfm.ad
 

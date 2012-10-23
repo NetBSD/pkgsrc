@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/01/16 23:37:49 heinz Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/23 19:51:01 asau Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -15,7 +15,6 @@ COMMENT=		File Alteration Monitor
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 # fam and libfam
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # fam is bundled with IRIX
 NOT_FOR_PLATFORM=	IRIX-*-*

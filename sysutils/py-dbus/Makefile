@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 22:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/23 19:51:20 asau Exp $
 #
 
 DISTNAME=	dbus-python-1.1.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	Python bindings for the D-BUS message bus system
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

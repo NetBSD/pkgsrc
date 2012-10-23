@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/03/18 20:41:44 zafer Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:08 asau Exp $
 #
 
 DISTNAME=	isapnptools-1.27
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.roestock.demon.co.uk/isapnptools/index.html
 COMMENT=	Manually query and configure isapnp devices
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES

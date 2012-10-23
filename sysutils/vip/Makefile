@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:29 asau Exp $
 
 DISTNAME=	vip-19971113
 PKGREVISION=	2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.cs.duke.edu/~des/vip.html
 COMMENT=	Script to edit the data at any point in a pipeline
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

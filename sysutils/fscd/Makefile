@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/09 22:44:06 jdf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:02 asau Exp $
 #
 
 DISTNAME=	fscd-1.0.1
@@ -10,7 +10,6 @@ HOMEPAGE=	https://vcs.in-berlin.de/schrank21_fscd
 COMMENT=	FreeBSD service check daemon to monitor services
 LICENSE=	2-clause-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CPPFLAGS+=	-DSYSCONFDIR=\"${PKG_SYSCONFDIR}/\"
 # Only for platforms with kqueue.
 ONLY_FOR_PLATFORM=	NetBSD-[2-9].*-* FreeBSD-[4-9].*-* OpenBSD-*-* DragonFly-*-* Darwin-*-*

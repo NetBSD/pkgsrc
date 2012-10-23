@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/09/16 12:02:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 19:51:29 asau Exp $
 #
 
 DISTNAME=	vobcopy-1.2.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://lpn.rnbhq.org/projects/c/c.shtml
 COMMENT=	Copies DVD .vob files to harddisk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	vobcopy
 

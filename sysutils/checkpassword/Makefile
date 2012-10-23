@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/27 18:38:15 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:50:55 asau Exp $
 #
 
 DISTNAME=		checkpassword-0.90
@@ -12,7 +12,6 @@ COMMENT=		Simple, uniform password-checking interface to all root applications
 DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

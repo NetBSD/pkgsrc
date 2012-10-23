@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2012/09/15 09:04:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.70 2012/10/23 19:51:39 asau Exp $
 
 DISTNAME=	xosview-1.8.3
 PKGREVISION=	2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://xosview.sourceforge.net/
 COMMENT=	X11 graphical display of OS statistics
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_LANGUAGES=		c c++

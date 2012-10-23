@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/25 12:20:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:25 asau Exp $
 
 DISTNAME=	sysbuild-user-1.0
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ COMMENT=	Runs sysbuild periodically under a dedicated user
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS=		sysbuild>=2.0:../../sysutils/sysbuild
 

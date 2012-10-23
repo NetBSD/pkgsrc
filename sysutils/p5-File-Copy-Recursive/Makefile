@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:16 asau Exp $
 
 DISTNAME=	File-Copy-Recursive-0.38
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Perl extension for recursively copying files and directories
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/File/Copy/Recursive/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

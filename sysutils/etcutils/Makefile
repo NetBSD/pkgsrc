@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/01 18:08:38 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:00 asau Exp $
 #
 
 DISTNAME=	etcutils-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/~jmmv/etcutils/
 COMMENT=	Utilities to programmatically edit configuration files
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/27 19:31:05 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:15 asau Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -7,8 +7,6 @@ DISTNAME+=		NFORCE-Linux-x86-1.0-0310-pkg1.run
 CATEGORIES=		sysutils
 MASTER_SITES+=		http://www.morgart.com/NetBSD/nVidia/nvnet/
 MASTER_SITES+=		http://download.nvidia.com/XFree86/nforce/1.0-0310/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_SUFX=
 

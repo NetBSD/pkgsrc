@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2012/10/08 23:00:58 adam Exp $
+# $NetBSD: Makefile,v 1.97 2012/10/23 19:51:05 asau Exp $
 
 PKGREVISION=		15
 
@@ -20,7 +20,6 @@ LDFLAGS.Darwin+=	-lresolv
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 .include "Makefile.common"

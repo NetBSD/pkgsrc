@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/15 10:06:30 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:14 asau Exp $
 
 DISTNAME=	ndesk-dbus-glib-0.4.1
 PKGREVISION=	8
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.ndesk.org/archive/ndesk-dbus/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ndesk.org/DBusSharp
 COMMENT=	C\# implementation of dbus - GLib integration
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

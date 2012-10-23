@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/10/08 23:02:25 adam Exp $
+# $NetBSD: Makefile,v 1.47 2012/10/23 19:51:04 asau Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.greatnorthern.demon.co.uk/packages/gnome-pkgview/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 COMMENT=	Displays the version of GNOME components installed
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes

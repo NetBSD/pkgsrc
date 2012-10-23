@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 10:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:27 asau Exp $
 
 DISTNAME=		torsmo-0.18
 PKGREVISION=		2
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=torsmo/}
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://torsmo.sourceforge.net/
 COMMENT=		Tyopoytaorvelo System Monitor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 

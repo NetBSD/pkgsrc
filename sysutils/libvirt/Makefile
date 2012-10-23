@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/04 21:30:51 gls Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:10 asau Exp $
 
 DISTNAME=	libvirt-0.9.3
 PKGREVISION=	7
@@ -9,8 +9,6 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://libvirt.org/
 COMMENT=	Virtualisation toolkit for host operating systems
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-vbox=no --sysconfdir=${EGDIR} --localstatedir=${VARBASE}

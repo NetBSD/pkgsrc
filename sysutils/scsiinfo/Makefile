@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/03/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:23 asau Exp $
 
 DISTNAME=	scsiinfo-4.7
 CATEGORIES=	sysutils
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.shar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Displays information about SCSI devices attached to a system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

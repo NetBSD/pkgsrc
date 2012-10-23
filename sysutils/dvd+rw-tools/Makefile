@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/04/15 22:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/23 19:50:59 asau Exp $
 #
 
 DISTNAME=	dvd+rw-tools-7.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fy.chalmers.se/~appro/linux/DVD+RW/
 COMMENT=	Tools for writing DVD+R[W] disks
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{cdrtools-[1-9]*,cdrtools-ossdvd-[0-9]*}:../../sysutils/cdrtools
 

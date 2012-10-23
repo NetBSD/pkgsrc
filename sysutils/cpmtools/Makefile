@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/11 18:46:10 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 19:50:56 asau Exp $
 #
 
 DISTNAME=		cpmtools-2.13
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.moria.de/~michael/cpmtools/
 MAINTAINER=		dgriffi@cs.csubak.edu
 HOMEPAGE=		http://www.moria.de/~michael/cpmtools/
 COMMENT=		Similar to mtools, except for CP/M filesystems
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

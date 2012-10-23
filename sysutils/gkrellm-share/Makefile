@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2011/03/18 12:09:31 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:51:03 asau Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
 PKGREVISION=		#
 GKRELLM_PKGBASE=	gkrellm-share
 
 COMMENT=		GKrellM2 locale files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	yes

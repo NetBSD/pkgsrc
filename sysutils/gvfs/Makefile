@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/10/08 23:02:26 adam Exp $
+# $NetBSD: Makefile,v 1.48 2012/10/23 19:51:06 asau Exp $
 #
 
 DISTNAME=	gvfs-1.6.6
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Userspace virtual filesystem
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

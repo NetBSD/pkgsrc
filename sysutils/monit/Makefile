@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/20 09:14:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:13 asau Exp $
 #
 
 DISTNAME=		monit-4.10.1
@@ -10,8 +10,6 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://www.tildeslash.com/monit/
 COMMENT=		Utility for monitoring processes, files, directories and devices
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # no platform specific code yet
 NOT_FOR_PLATFORM+=	BSDOS-*-* DragonFly-*-* Interix-*-* IRIX-*-* OSF1-*-*
