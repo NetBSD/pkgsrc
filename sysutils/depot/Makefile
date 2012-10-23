@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/12/19 05:20:36 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 19:50:58 asau Exp $
 #
 
 DISTNAME=	depot-5.14
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # "Most of the content here is being removed and archived."
 # HOMEPAGE=	http://asg.web.cmu.edu/depot/
 COMMENT=	Maps several separate packages into a tree without merging them
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

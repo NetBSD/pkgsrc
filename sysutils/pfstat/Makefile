@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/11/01 06:02:35 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 19:51:19 asau Exp $
 
 DISTNAME=	pfstat-2.5
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/pfstat.html
 COMMENT=	Utility to render graphical statistics for PF
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		yacc

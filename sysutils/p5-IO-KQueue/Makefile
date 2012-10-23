@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:17 asau Exp $
 
 DISTNAME=	IO-KQueue-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-perl-headers-[0-9]*:../../devel/p5-perl-headers
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-* Darwin-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

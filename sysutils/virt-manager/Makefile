@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 23:02:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:29 asau Exp $
 #
 
 DISTNAME=	virt-manager-0.9.4
@@ -10,8 +10,6 @@ MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	http://virt-manager.org/
 COMMENT=	GUI to manage virtual machines
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libvirt-package-names=libvirt
