@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/23 18:16:42 asau Exp $
 #
 
 DISTNAME=		Crypt-RSA-1.99
@@ -28,7 +28,6 @@ DEPENDS+=		p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions
 DEPENDS+=		p5-Tie-EncryptedHash-[0-9]*:../../security/p5-Tie-EncryptedHash
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/RSA/.packlist

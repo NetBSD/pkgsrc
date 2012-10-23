@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/03/18 20:30:12 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 18:16:58 asau Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -14,8 +14,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # google for osmtpd
 HOMEPAGE=	http://www.obtuse.com/smtpd.html
 COMMENT=	Store and forward SMTP proxy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SPOOL=		/var/spool/smtpd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2012/04/03 15:00:30 adam Exp $
+# $NetBSD: Makefile,v 1.54 2012/10/23 18:16:32 asau Exp $
 
 DISTNAME=	libgcrypt-1.5.0
 CATEGORIES=	security
@@ -15,7 +15,6 @@ COMMENT=	GNU cryptographic library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

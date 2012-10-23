@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/05 20:01:23 adam Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/23 18:16:25 asau Exp $
 
 DISTNAME=	dirmngr-1.1.0
 PKGREVISION=	3
@@ -52,7 +52,6 @@ OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 
 INSTALLATION_DIRS=	sbin
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-build:
 	${SETENV} ${BUILDENV} ${CC} ${CFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o ${WRKDIR}/runDirmngr ${FILESDIR}/runDirmngr.c

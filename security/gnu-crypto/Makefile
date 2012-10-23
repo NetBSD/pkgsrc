@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:28 asau Exp $
 #
 
 DISTNAME=		gnu-crypto-2.0.1-bin
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gnu-crypto/
 COMMENT=		GPL implementation of the Java Crypto Extensions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA2=		yes
 INSTALLATION_DIRS=	lib/java/gnu-crypto ${PKGINFODIR}

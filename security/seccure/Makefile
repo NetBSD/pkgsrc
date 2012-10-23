@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:44:39 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:57 asau Exp $
 
 DISTNAME=	seccure-0.4
 PKGREVISION=	2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://point-at-infinity.org/seccure/
 COMMENT=	SECCURE Elliptic Curve Crypto Utility for Reliable Encryption
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
