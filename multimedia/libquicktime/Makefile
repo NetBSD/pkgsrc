@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/10 14:28:51 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 16:07:13 asau Exp $
 #
 
 DISTNAME=	libquicktime-1.2.4
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libquicktime.sourceforge.net/
 COMMENT=	Library for quicktime/avi/mp4 files
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-doxygen
