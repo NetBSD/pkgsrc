@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 15:20:36 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 17:18:44 asau Exp $
 #
 
 DISTNAME=	omniNotify-2.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://omninotify.sourceforge.net/
 COMMENT=	CORBA Notification Service
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/omniNotify
 GNU_CONFIGURE=	yes

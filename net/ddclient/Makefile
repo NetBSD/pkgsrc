@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/23 17:18:16 asau Exp $
 
 DISTNAME=	ddclient-3.6.6
 PKGREVISION=	3
@@ -24,7 +24,6 @@ CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-configure:
 	cd ${WRKSRC}; for f in ddclient; do				\

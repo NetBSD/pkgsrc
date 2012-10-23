@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:16 asau Exp $
 
 DISTNAME=	dhcpd-pools-2.16
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://dhcpd-pools.sourceforge.net/
 COMMENT=	ISC dhcpd lease analysis and reporting
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes

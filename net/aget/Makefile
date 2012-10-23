@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:38 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:08 asau Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.enderunix.org/aget/
 COMMENT=	Multithreaded HTTP download accelerator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/02/22 14:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 17:18:33 asau Exp $
 #
 
 DISTNAME=	live.2012.02.04
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.live555.com/liveMedia/public/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.live555.com/liveMedia/
 COMMENT=	Set of C++ libraries for multimedia streaming
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/live
 USE_LANGUAGES=	c c++

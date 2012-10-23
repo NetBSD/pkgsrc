@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/02/11 22:35:09 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/23 17:19:04 asau Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://service.real.com/firewall/fdev.html
 COMMENT=	Proxy server for the RealAudio RTSP protocol
 LICENSE=	no-commercial-use
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		${LICENSE}
 NO_SRC_ON_FTP=		${RESTRICTED}

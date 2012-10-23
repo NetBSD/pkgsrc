@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 23:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 17:18:31 asau Exp $
 #
 
 DISTNAME=	kmldonkey-2.0.2-kde4.4.0
@@ -14,8 +14,6 @@ COMMENT=	KDE4 interface for mldonkey
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

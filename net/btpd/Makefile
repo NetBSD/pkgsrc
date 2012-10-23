@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/12/03 12:44:21 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 17:18:13 asau Exp $
 
 DISTNAME=	btpd-0.16
 CATEGORIES=	net
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/btpd/btpd/wiki/
 COMMENT=	Daemon for file sharing over bittorrent
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

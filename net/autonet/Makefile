@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:10 asau Exp $
 
 DISTNAME=	autonet-0.22
 CATEGORIES=	net
@@ -7,8 +7,6 @@ EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	abs@absd.org
 COMMENT=	Automatically configure network interface & WEP keys
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM= NetBSD-*-*
 

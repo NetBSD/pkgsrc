@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/14 22:58:07 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 17:19:12 asau Exp $
 
 PKGNAME=		teamspeak-client-2.0.32.60
 DISTNAME=		ts2_client_rc2_2032
@@ -29,7 +29,6 @@ do-build:
 	${SED} "s|%installdir%|${LIB_DIR}|" ${WRKSRC}/TeamSpeak \
 						> ${WRKDIR}/TeamSpeak
 
-PKG_DESTDIR_SUPPORT= 	user-destdir
 INSTALLATION_DIRS=	bin ${LIB_DIR}/sounds ${DOC_DIR}
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:11 asau Exp $
 
 DISTNAME=	batchftp102
 PKGNAME=	batchftp-1.02
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Automatically download files via the FTP protocol
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/16 19:27:50 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:22 asau Exp $
 
 DISTNAME=	gethost-0.03
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Hostname and IP resolver for testing /etc/hosts and nsswitch.conf
 CONFLICTS=	dnssec-tools-[0-9]*
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=		inet6
 
