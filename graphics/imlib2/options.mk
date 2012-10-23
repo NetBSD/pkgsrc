@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2011/05/04 02:00:02 obache Exp $
+# $NetBSD: options.mk,v 1.11 2012/10/23 10:24:06 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--disable-amd64
 PLIST_VARS+=		x11
 
 .if !empty(PKG_OPTIONS:Mx11)
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 PLIST.x11=		yes
