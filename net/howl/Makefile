@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 17:18:27 asau Exp $
 
 DISTNAME=		howl-1.0.0
 CATEGORIES=		net
@@ -7,8 +7,6 @@ MASTER_SITES=		http://www.porchdogsoft.com/download/
 MAINTAINER=		nathanw@NetBSD.org
 HOMEPAGE=		http://www.porchdogsoft.com/products/howl/
 COMMENT=		Zeroconf (Rendezvous) implementation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

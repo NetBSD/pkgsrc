@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/09/16 15:30:45 taca Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/23 17:18:36 asau Exp $
 #
 
 DISTNAME=	mikutter.0.1.1.863
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mikutter.hachune.net/
 COMMENT=	Simply, powerfully, and moefully twitter client
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_VERSION_SUPPORTED=	193
 

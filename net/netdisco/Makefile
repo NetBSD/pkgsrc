@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/03 21:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/23 17:18:41 asau Exp $
 #
 
 DISTNAME=		netdisco-1.1_with_mibs
@@ -11,8 +11,6 @@ MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netdisco.org/
 COMMENT=		Open Source web-based network management tool
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-SNMP-Info>=2.04:../../net/p5-SNMP-Info
 DEPENDS+=		p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI

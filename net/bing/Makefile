@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/23 17:18:11 asau Exp $
 
 DISTNAME=	bing-1.0.4
 CATEGORIES=	net
@@ -7,8 +7,6 @@ MASTER_SITES=	http://fgouget.free.fr/bing/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fgouget.free.fr/bing/index-en.shtml
 COMMENT=	Bing is a point-to-point bandwidth measurement tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
