@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2010/01/30 15:29:04 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/10/23 10:24:06 wiz Exp $
 
 BUILDLINK_TREE+=	libggi
 
@@ -18,7 +18,6 @@ BUILDLINK_PKGSRCDIR.libggi?=	../../graphics/libggi
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/libgii/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .endif # LIBGGI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libggi

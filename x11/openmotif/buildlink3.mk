@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2012/05/07 01:54:12 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2012/10/23 10:24:20 wiz Exp $
 
 BUILDLINK_TREE+=	openmotif
 
@@ -23,7 +23,6 @@ BUILDLINK_TRANSFORM+=	rm:-lXp
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .endif # OPENMOTIF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-openmotif

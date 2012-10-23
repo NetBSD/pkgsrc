@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/10/06 14:11:26 asau Exp $
+# $NetBSD: Makefile,v 1.71 2012/10/23 10:24:07 wiz Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	8
@@ -45,5 +45,4 @@ pre-configure:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/Xaw3d/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/05/03 09:55:32 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 10:24:22 wiz Exp $
 #
 
 DISTNAME=	xlupe-1.1
@@ -17,5 +17,4 @@ USE_IMAKE=	yes
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
