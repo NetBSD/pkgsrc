@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/07/17 21:00:34 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:08 asau Exp $
 #
 
 DISTNAME=	ipa-2.1.2
@@ -10,8 +10,6 @@ MAINTAINER=	simon@comsys.ntu-kpi.kiev.ua
 HOMEPAGE=	http://ipa-system.sourceforge.net/
 COMMENT=	Pluggable accounting system
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

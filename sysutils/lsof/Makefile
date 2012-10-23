@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2012/10/03 21:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2012/10/23 19:51:11 asau Exp $
 
 DISTNAME=		lsof_4.84
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -24,8 +24,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://people.freebsd.org/~abe/
 COMMENT=		Lists information about open files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 HAS_CONFIGURE=		yes

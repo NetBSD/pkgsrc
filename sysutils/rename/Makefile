@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/06 22:44:18 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:21 asau Exp $
 
 DISTNAME=	rename-1.3
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rename/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rename.sourceforge.net/
 COMMENT=	Rename recursively with regex patterns
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

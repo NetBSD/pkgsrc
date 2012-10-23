@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/09 12:34:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:30 asau Exp $
 #
 
 DISTNAME=	vxargs-0.3.3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.py
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dharma.cis.upenn.edu/planetlab/vxargs/
 COMMENT=	Runs parallel jobs with visualization and redirection
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_CMD=	${CP} $${extract_file} ${WRKSRC}/vxargs.py
 NO_BUILD=	yes

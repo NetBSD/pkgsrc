@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2012/03/17 02:19:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2012/10/23 19:51:02 asau Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
@@ -6,8 +6,6 @@
 DISTNAME=	gamin-0.1.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/~veillard/gamin/

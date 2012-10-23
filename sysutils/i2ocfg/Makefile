@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/02/07 13:24:36 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:07 asau Exp $
 
 DISTNAME=		i2ocfg-1.1
 CATEGORIES=		sysutils
@@ -17,7 +17,5 @@ INSTALL_MAKE_FLAGS=	MANDIR=${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS=	libexec/cgi-bin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
 MANCOMPRESSED_IF_MANZ=	YES
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

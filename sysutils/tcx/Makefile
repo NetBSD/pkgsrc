@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/01/27 20:19:36 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:26 asau Exp $
 
 DISTNAME=	tcx-linux
 PKGNAME=	tcx-19940124
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Transparently compress executables
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 SPECIAL_PERMS+=	bin/untcx ${SETUID_ROOT_PERMS}
 
 INSTALLATION_DIRS+=	bin

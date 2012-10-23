@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/22 23:47:15 rh Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 19:50:54 asau Exp $
 #
 
 DISTNAME=	burn-0.4.1
@@ -15,8 +15,6 @@ DEPENDS+=	cdparanoia>=3.0.9.8:../../audio/cdparanoia
 DEPENDS+=	cdrtools>=1.10:../../sysutils/cdrtools
 DEPENDS+=	cdrdao>=1.1.5:../../sysutils/cdrdao
 DEPENDS+=	gworkspace-[0-9]*:../../sysutils/gworkspace
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	GNUmakefile
 USE_TOOLS+=	gmake
