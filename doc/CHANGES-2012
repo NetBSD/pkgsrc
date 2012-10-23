@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3408 2012/10/23 14:04:40 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3409 2012/10/23 18:17:32 manu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5243,3 +5243,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/Cenon to 3.9.6 [rh 2012-10-22]
 	Updated sysutils/burn to 0.4.1nb2 [rh 2012-10-22]
 	Updated devel/p5-Git-Repository to 1.27 [wen 2012-10-23]
+	Updated security/lasso to 2.3.6 [manu 2012-10-23]
