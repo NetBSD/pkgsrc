@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:41 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:59 asau Exp $
 
 DISTNAME=	portmap_4
 PKGNAME=	portmap-4
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
 COMMENT=	RPC portmapper with access control
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # TODO: maybe look at portmap_5beta ?
 

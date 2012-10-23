@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/21 16:05:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 17:19:08 asau Exp $
 #
 
 DISTNAME=	sendfile-2.1b
@@ -15,7 +15,6 @@ CONFLICTS=	jabberd2-[0-9]*
 
 #WRKSRC=		${WRKDIR}/sendfile-2.1b
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 EGDIR=		${PREFIX}/share/examples/sendfile

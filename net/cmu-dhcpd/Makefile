@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/01 12:16:45 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:14 asau Exp $
 #
 
 DISTNAME=	CMU-dhcp-3.3.7+PU-9
@@ -6,8 +6,6 @@ PKGNAME=	cmu-dhcpd-3.3.7.9
 CATEGORIES=	net
 MASTER_SITES=	http://www.net.princeton.edu/software/dhcpd/
 EXTRACT_SUFX=	.tar.Z
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.net.princeton.edu/software/dhcpd/

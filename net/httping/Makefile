@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/02/18 10:06:56 shattered Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:27 asau Exp $
 
 DISTNAME=	httping-1.5.2
 CATEGORIES=	net
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vanheusden.com/httping/
 COMMENT=	Like 'ping' but for http-requests
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
