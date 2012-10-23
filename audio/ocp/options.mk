@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/05/21 22:25:02 shattered Exp $
+# $NetBSD: options.mk,v 1.3 2012/10/23 10:31:39 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocp
 PKG_SUPPORTED_OPTIONS=	x11
@@ -22,7 +22,6 @@ PLIST.x11=		yes
 PLIST.desktop=		yes
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .else
