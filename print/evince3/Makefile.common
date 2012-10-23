@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/10/19 18:39:05 drochner Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/10/23 07:58:45 wiz Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
@@ -22,6 +22,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 # XXX fake for "configure" to allow build w/o a gs installed
 # (avoid hard dependency on a specific version)
