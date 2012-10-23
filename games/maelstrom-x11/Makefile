@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/06 11:54:46 asau Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/23 10:24:04 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -55,6 +55,5 @@ post-install:
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

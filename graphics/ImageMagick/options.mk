@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2011/05/13 12:55:39 abs Exp $
+# $NetBSD: options.mk,v 1.12 2012/10/23 10:24:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ImageMagick
 PKG_SUPPORTED_OPTIONS=	x11 jasper djvu ghostscript wmf
@@ -10,7 +10,6 @@ PKG_SUGGESTED_OPTIONS=	x11 jasper
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif

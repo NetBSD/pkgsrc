@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/11/01 06:02:42 sbd Exp $
+# $NetBSD: Makefile,v 1.42 2012/10/23 10:24:14 wiz Exp $
 
 PKGREVISION=		2
 COMMENT=		Small, fast and light-weight window manager
@@ -13,7 +13,6 @@ CONFIGURE_ARGS+=	--with-xpm=${BUILDLINK_PREFIX.libXpm}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
