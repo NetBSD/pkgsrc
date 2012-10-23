@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2012/10/08 23:01:13 adam Exp $
+# $NetBSD: Makefile,v 1.64 2012/10/23 10:28:47 wiz Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -140,6 +140,5 @@ BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.0.20
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
