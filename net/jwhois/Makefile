@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2011/04/22 13:44:23 obache Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/23 17:18:30 asau Exp $
 #
 
 DISTNAME=		jwhois-4.0
@@ -10,8 +10,6 @@ MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

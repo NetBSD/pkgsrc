@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/10/31 11:57:00 obache Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/23 17:19:03 asau Exp $
 #
 
 DISTNAME=	SOAPpy-0.11.6
@@ -13,8 +13,6 @@ COMMENT=	SOAP implementation
 
 DEPENDS+=	${PYPKGPREFIX}-fpconst>=0.6.0:../../math/py-fpconst
 DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 

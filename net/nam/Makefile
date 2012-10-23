@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/08/21 23:49:24 marino Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/23 17:18:40 asau Exp $
 
 DISTNAME=	ns-allinone-2.29.3
 PKGNAME=	nam-1.11
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.isi.edu/nsnam/nam/
 COMMENT=	The UCB/LBNL Network Animator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 23:02:17 adam Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 17:18:40 asau Exp $
 #
 
 VERSION=	0.9.9
@@ -13,7 +13,6 @@ HOMEPAGE=	http://nagstamon.ifw-dresden.de/
 COMMENT=	Nagios status monitor which takes place in systray or on desktop
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# none
 PYDISTUTILSPKG=		yes
 

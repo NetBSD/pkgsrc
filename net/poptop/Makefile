@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/12 15:30:18 adam Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/23 17:18:59 asau Exp $
 
 DISTNAME=	pptpd-1.3.4
 PKGNAME=	${DISTNAME:S/pptpd/poptop/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.poptop.org/
 COMMENT=	PPTP server with support for Microsoft VPN clients
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/03/15 11:53:35 obache Exp $
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+# $NetBSD: Makefile,v 1.32 2012/10/23 17:18:12 asau Exp $
 
 .include "../../net/bittorrent/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/08/21 23:49:25 marino Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 17:19:13 asau Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.nosuchname.net/scotty/
 COMMENT=	Graphical network discovery and monitoring tool based on scotty
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib	\

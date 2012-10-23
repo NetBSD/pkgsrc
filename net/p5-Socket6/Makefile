@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 21:57:08 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/23 17:18:55 asau Exp $
 #
 
 DISTNAME=		Socket6-0.23
@@ -14,7 +14,6 @@ COMMENT=		Perl5 module to support getaddrinfo() and getnameinfo()
 LICENSE=		modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Socket6/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/04/07 09:23:11 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 17:19:09 asau Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -10,8 +10,6 @@ MASTER_SITES=		http://reptile.rug.ac.be/~coder/sniffit/files/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
 COMMENT=		Packet sniffer program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 
