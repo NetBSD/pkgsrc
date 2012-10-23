@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 13:04:16 asau Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/23 10:24:11 wiz Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -38,5 +38,4 @@ do-install:
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

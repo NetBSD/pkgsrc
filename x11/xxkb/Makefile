@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/09 10:02:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 10:24:24 wiz Exp $
 
 DISTNAME=	xxkb-1.11-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -32,5 +32,4 @@ post-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 21:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/23 10:24:10 wiz Exp $
 #
 
 DISTNAME=	lavaps-2.7
@@ -35,5 +35,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2012/01/19 15:17:42 reed Exp $
+# $NetBSD: options.mk,v 1.13 2012/10/23 10:24:17 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -49,7 +49,6 @@ BUILDLINK_API_DEPENDS.libXi+=	libXi>=1.3.0
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 

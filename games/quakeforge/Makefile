@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/06 11:54:52 asau Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/23 10:24:05 wiz Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		11
@@ -55,7 +55,6 @@ INSTALLATION_DIRS=	include/QF/GL include/QF/plugin include/QF/ruamoko/gui
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

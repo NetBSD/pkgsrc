@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/06 11:54:29 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/23 10:24:04 wiz Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -27,5 +27,4 @@ post-extract:
 	&& ${GTAR} xfz ${DISTDIR}/abuse_data.tar.gz
 
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

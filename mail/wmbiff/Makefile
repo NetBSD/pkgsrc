@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/10/08 12:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.48 2012/10/23 10:24:08 wiz Exp $
 
 DISTNAME=	wmbiff-0.4.26
 PKGREVISION=	15
@@ -23,5 +23,4 @@ post-install:
 .include "../../wm/windowmaker/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

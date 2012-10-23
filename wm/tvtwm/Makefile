@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 12:42:23 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 10:24:15 wiz Exp $
 
 DISTNAME=	tvtwm.pl11
 PKGNAME=	tvtwm-11
@@ -18,5 +18,4 @@ USE_TOOLS+=	lex yacc
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/22 02:25:15 rh Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/23 10:24:17 wiz Exp $
 
 DISTNAME=	gnustep-back-0.22.0
 CATEGORIES=	x11 gnustep
@@ -33,6 +33,5 @@ PREFER_PKGSRC+=	freetype2
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

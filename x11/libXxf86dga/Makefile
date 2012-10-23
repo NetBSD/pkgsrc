@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/09 07:00:49 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 10:24:19 wiz Exp $
 #
 
 DISTNAME=		libXxf86dga-1.1.3
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xf86dgaproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/01/08 05:25:54 obache Exp $
+# $NetBSD: options.mk,v 1.4 2012/10/23 10:24:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.GraphicsMagick
 PKG_SUPPORTED_OPTIONS=	bzip2 lzma x11 jasper ghostscript wmf
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--without-lzma
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--without-x
