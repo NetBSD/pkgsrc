@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/09/15 10:06:15 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:32 asau Exp $
 
 DISTNAME=	libfprint-0.0.6
 PKGREVISION=	18
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://reactivated.net/fprint/wiki/Libfprint
 COMMENT=	Fingerprint reader access library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

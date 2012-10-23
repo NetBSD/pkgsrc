@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/15 22:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:54 asau Exp $
 
 DISTNAME=	oauth-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://pypi.python.org/pypi/oauth/
 COMMENT=	Python OAuth library
 LICENSE=	mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/egg.mk"

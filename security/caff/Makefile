@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:22 asau Exp $
 
 DISTNAME=	signing-party_1.1.4.orig
 PKGNAME=	${DISTNAME:S/signing-party_/caff-/S/.orig//}
@@ -10,8 +10,6 @@ MAINTAINER=	ghen@NetBSD.org,tonio@NetBSD.org
 HOMEPAGE=	http://pgp-tools.alioth.debian.org/
 COMMENT=	Various GnuPG related tools
 LICENSE=	gnu-gpl-v2 AND modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 

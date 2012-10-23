@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/11/13 21:09:03 shattered Exp $
+# $NetBSD: Makefile,v 1.48 2012/10/23 18:17:01 asau Exp $
 
 DISTNAME=		vlp4510e
 PKGNAME=		uvscan-5.10
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mcafee.com/us/enterprise/products/system_security/servers/virusscan_command_line_scanner_windows_unix.html
 COMMENT=		Evaluation version of a DOS/Windows file virus scanner
 LICENSE=		uvscan-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		restrictive 30 day evaluation license
 NO_BIN_ON_FTP=		${RESTRICTED}

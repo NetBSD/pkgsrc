@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/07/06 10:17:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 18:16:22 asau Exp $
 #
 
 DISTNAME=		chkrootkit-0.47
@@ -12,7 +12,6 @@ COMMENT=		Locally checks for signs of a rootkit
 LICENSE=		modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 NO_CONFIGURE=		yes

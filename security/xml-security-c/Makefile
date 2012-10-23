@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/07/28 23:33:31 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 18:17:01 asau Exp $
 
 DISTNAME=	xml-security-c-1.6.1
 CATEGORIES=	security devel
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://santuario.apache.org/
 COMMENT=	XML Digital Signature specification implementation
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

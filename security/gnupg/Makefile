@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2012/03/03 00:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2012/10/23 18:16:28 asau Exp $
 
 DISTNAME=	gnupg-1.4.12
 CATEGORIES=	security
@@ -16,7 +16,6 @@ COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes

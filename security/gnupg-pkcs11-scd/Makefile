@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/06 17:39:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:28 asau Exp $
 #
 
 VERSION=	0.7.0
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnupg-pkcs11.sourceforge.net/
 COMMENT=	OpenSC smart card support for GnuPG
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=     pkg-config

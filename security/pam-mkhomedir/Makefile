@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/21 22:19:25 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 18:16:48 asau Exp $
 
 DISTNAME=	pam-mkhomedir-1
 CATEGORIES=	security
@@ -7,8 +7,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	tonnerre@NetBSD.org
 COMMENT=	Pluggable authentication module for automatic homedir creation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	lib/security
 LDLIBS=			-lpam
