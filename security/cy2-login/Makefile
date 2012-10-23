@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/08/12 10:16:54 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:23 asau Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-login/}
 COMMENT=	Cyrus SASL LOGIN authentication plugin
 SASL_PLUGIN=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../security/cyrus-sasl/Makefile.common"
 

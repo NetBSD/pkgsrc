@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 18:16:58 asau Exp $
 #
 
 DISTNAME=	SnortSnarf-050314.1
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.snort.org/dl/contrib/data_analysis/snortsnarf/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.silicondefense.com/software/snortsnarf/
 COMMENT=	Generate HTML report summaries from snort incident alerts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Time-modules>=101.062101:../../time/p5-Time-modules
 
