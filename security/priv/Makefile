@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/02/15 17:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 18:16:52 asau Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
@@ -11,7 +11,6 @@ MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Execute commands as a different user
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/18 20:44:38 marino Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 18:17:02 asau Exp $
 #
 
 DISTNAME=	zkt-1.1.0
@@ -9,8 +9,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.hznet.de/dns/zkt/
 COMMENT=	DNSSEC Zone Key Tool
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-configpath=${PKG_SYSCONFDIR}/zkt

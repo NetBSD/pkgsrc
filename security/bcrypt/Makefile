@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 18:16:21 asau Exp $
 #
 
 DISTNAME=	bcrypt-1.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://bcrypt.sourceforge.net/
 COMMENT=	Cross platform file encryption utility
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	bcrypt
 

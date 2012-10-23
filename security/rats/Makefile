@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/02/20 08:25:51 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/23 18:16:56 asau Exp $
 #
 
 DISTNAME=		rats-2.1
@@ -12,7 +12,6 @@ COMMENT=		Rough Auditing Tool for Security
 LICENSE=		gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/rats

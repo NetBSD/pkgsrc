@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 18:16:30 asau Exp $
 
 DISTNAME=	hydan-0.13
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://crazyboy.com/hydan/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://crazyboy.com/hydan/
 COMMENT=	Steganography tool for covert comms, signing and watermarking
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 FreeBSD-*-i386 Linux-*-i386
 

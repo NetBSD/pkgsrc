@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/16 22:34:23 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 18:16:50 asau Exp $
 #
 
 MODNAME=		suhosin
@@ -11,8 +11,6 @@ MASTER_SITES=		http://download.suhosin.org/
 MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://www.hardened-php.net/suhosin/index.html
 COMMENT=		Advanced protection system for PHP installations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # There is no patch for PHP 5.4 yet(?). 
 PHP_VERSIONS_ACCEPTED=	53

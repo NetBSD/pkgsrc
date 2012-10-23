@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/07/17 16:01:10 marino Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/23 18:16:33 asau Exp $
 
 DISTNAME=	libgpg-error-1.10
 PKGREVISION=	2
@@ -16,7 +16,6 @@ COMMENT=	Definitions of common error values for all GnuPG components
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
