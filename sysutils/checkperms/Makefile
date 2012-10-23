@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/01 22:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/23 19:50:55 asau Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.roland-illig.de/checkperms/
 COMMENT=	Check and correct file permissions
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 AUTO_MKDIRS=		yes
 
 USE_BSD_MAKEFILE=	yes

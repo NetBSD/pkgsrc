@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/04 22:26:56 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:08 asau Exp $
 #
 
 DISTNAME=		ir-account-0.2
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.ir.bbn.com/~gdt/ir-account/
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.ir.bbn.com/~gdt/ir-account/
 COMMENT=		Copy accounts among systems and manage sudo privs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

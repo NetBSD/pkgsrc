@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:09 asau Exp $
 #
 
 DISTNAME=		k3b-1.0.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.k3b.org/
 COMMENT=		DVD and CD authoring program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		cdrdao-[0-9]*:../../sysutils/cdrdao
 DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
