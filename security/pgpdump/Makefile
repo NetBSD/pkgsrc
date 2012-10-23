@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/11/05 09:17:04 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 18:16:49 asau Exp $
 #
 
 DISTNAME=	pgpdump-0.26
@@ -13,7 +13,6 @@ COMMENT=	PGP packet visualizer
 GNU_CONFIGURE=	YES
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pgpdump

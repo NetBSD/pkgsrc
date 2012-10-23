@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2012/02/16 19:43:14 hans Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 18:17:01 asau Exp $
 #
 
 DISTNAME=	tripwire-1.2
 PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_BACKUP}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cerias.purdue.edu/about/history/coast/coast-library.html

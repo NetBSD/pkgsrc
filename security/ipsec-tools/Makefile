@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/11/11 11:42:20 obache Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/23 18:16:31 asau Exp $
 
 DISTNAME=		ipsec-tools-0.7.3
 CATEGORIES=		security
@@ -10,7 +10,6 @@ HOMEPAGE=		http://ipsec-tools.sourceforge.net/
 COMMENT=		IPsec-tools racoon IKE daemon
 
 ONLY_FOR_PLATFORM=	NetBSD-[3-9].*-* FreeBSD-[5-9].*-* Linux-2.[6-9].*-*
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

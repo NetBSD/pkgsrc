@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 18:16:50 asau Exp $
 
 MODNAME=		mcrypt
 CATEGORIES+=		security
 COMMENT=		PHP extension for the mcrypt crypto algorithms library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-mcrypt-[0-9]*
 

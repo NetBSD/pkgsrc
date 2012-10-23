@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/03/20 23:38:26 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 18:16:53 asau Exp $
 #
 
 VERSION=	0.6.0
@@ -15,8 +15,6 @@ COMMENT=	Python wrapper for (and copy of parts of) crypto++
 # GPL v2 or later.
 # or Transitive Grace Period Public Licence, version 1.0 or later.
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
