@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/03 21:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/23 17:19:13 asau Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGREVISION=		6
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.tightvnc.com/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
 CONFLICTS=		vnc-[0-9]* vncviewer-[0-9]*
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes

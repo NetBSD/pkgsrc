@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/03/17 22:00:48 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:19:08 asau Exp $
 #
 
 DISTNAME=		sdist-1.7
@@ -8,8 +8,6 @@ MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Invoke rdist to distribute files to a set of hosts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		netname-[0-9]*:../../net/netname
 DEPENDS+=		osname-[0-9]*:../../sysutils/osname
@@ -26,8 +24,6 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 NO_CONFIGURE=		yes
 BUILD_MAKE_FLAGS+=	PREFIX=${PREFIX} PAWD=${SDIST_PAWD}
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	post-extract

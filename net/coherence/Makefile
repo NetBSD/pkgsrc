@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/17 18:36:42 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:15 asau Exp $
 #
 
 DISTNAME=	Coherence-0.6.6.2
@@ -12,7 +12,6 @@ HOMEPAGE=	http://coherence.beebits.net/
 COMMENT=	Media server framework
 
 USE_LANGUAGES=	# none
-PKG_DESTDIR_SUPPORT= user-destdir
 
 DEPENDS+= ${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 

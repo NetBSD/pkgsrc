@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/15 22:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/23 17:18:18 asau Exp $
 #
 
 DISTNAME=	dtcpclient-20060526
@@ -13,8 +13,6 @@ COMMENT=	Dynamic Tunnel Configuration Protocol client
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Darwin-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 

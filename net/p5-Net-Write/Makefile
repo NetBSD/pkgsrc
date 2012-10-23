@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:52 asau Exp $
 #
 
 DISTNAME=	Net-Write-1.06
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-Write/
 COMMENT=	Portable interface to open and send raw data to network
 LICENSE=	artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Gomor-[0-9]*:../../devel/p5-Class-Gomor
 DEPENDS+=	p5-Net-Pcap>=0.12:../../net/p5-Net-Pcap

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/01/25 09:56:08 he Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 17:19:21 asau Exp $
 
 DISTNAME=	yale-tftpd-3.0
 PKGREVISION=	6
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.cert.dfn.de/pub/tools/net/yale-tftpd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enhanced tftpd(8) from Yale University and cisco Systems
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 

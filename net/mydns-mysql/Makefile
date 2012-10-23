@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/15 15:03:24 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:38 asau Exp $
 
 PKGNAME=		${DISTNAME:S/-/-mysql-/}
 PKGREVISION=		7
@@ -9,8 +9,6 @@ CONFLICTS=		mydns-pgsql-[0-9]*
 DISTINFO_FILE=		${.CURDIR}/../../net/mydns-pgsql/distinfo
 PATCHDIR=		${.CURDIR}/../../net/mydns-pgsql/patches
 FILESDIR=		${.CURDIR}/../../net/mydns-pgsql/files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--without-pgsql
 CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql

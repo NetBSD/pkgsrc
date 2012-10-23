@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2012/10/08 23:02:14 adam Exp $
+# $NetBSD: Makefile,v 1.87 2012/10/23 17:18:13 asau Exp $
 #
 
 DISTNAME=		bug-buddy-2.26.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Graphical GNOME2 bug reporting tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES

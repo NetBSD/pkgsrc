@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/11/29 17:55:07 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/23 17:19:13 asau Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tightvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		vncviewer-[0-9]*
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc

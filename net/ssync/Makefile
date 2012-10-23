@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/03/17 22:05:00 zafer Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 17:19:10 asau Exp $
 #
 
 DISTNAME=		ssync-1.6
@@ -7,8 +7,6 @@ MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Invoke rsync to distribute files to a set of hosts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		netname-[0-9]*:../../net/netname
 DEPENDS+=		osname-[0-9]*:../../sysutils/osname

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:57:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:47 asau Exp $
 #
 
 DISTNAME=	Net-DNSServer-0.11
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 module to be used as a domain name server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-IPC-SharedCache-[0-9]*:../../devel/p5-IPC-SharedCache
 DEPENDS+=	p5-Net-Bind-[0-9]*:../../net/p5-Net-Bind

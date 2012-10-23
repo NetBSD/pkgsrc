@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 08:15:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:26 asau Exp $
 #
 
 DISTNAME=	gupnp-av-0.10.3
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-PKG_DESTDIR_SUPPORT= user-destdir
 
 PKGCONFIG_OVERRIDE+=	gupnp-av-1.0.pc.in
 

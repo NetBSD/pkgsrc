@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/12 15:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:44 asau Exp $
 #
 
 DISTNAME=		omniORB-4.1.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX+=		.tar.bz2
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://omniorb.sourceforge.net/
 COMMENT=		CORBA ORB
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=		GNUmakefile
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/04/19 21:23:24 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:15 asau Exp $
 #
 
 DISTNAME=	csup-snap-20100404
@@ -11,8 +11,6 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://www.mu.org/~mux/csup.html
 COMMENT=	Rewrite of the CVSup file updating client in C
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	lex yacc
 

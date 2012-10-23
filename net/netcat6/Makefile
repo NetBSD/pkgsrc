@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:44:26 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:41 asau Exp $
 
 DISTNAME=		nc6-1.0
 PKGNAME=		${DISTNAME:S/nc/netcat/}
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		ghen@NetBSD.org
 COMMENT=		Network swiss army knife
 HOMEPAGE=		http://www.deepspace6.net/projects/netcat6.html
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

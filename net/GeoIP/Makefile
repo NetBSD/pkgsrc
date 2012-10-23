@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/07/02 05:36:14 obache Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/23 17:18:07 asau Exp $
 
 DISTNAME=	GeoIP-1.4.8
 CATEGORIES=	net
@@ -9,7 +9,6 @@ HOMEPAGE=	http://www.maxmind.com/app/c
 COMMENT=	Find the country from any IP address
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 #  md5.c and types.h, from GNUPG
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes

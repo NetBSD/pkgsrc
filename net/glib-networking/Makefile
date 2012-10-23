@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/19 17:58:03 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:23 asau Exp $
 #
 
 DISTNAME=	glib-networking-2.34.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Network-related giomodules for glib
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt

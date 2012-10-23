@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2012/10/03 21:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2012/10/23 17:18:21 asau Exp $
 
 DISTNAME=	freeradius-${RADVER}
 PKGREVISION=	3
@@ -11,7 +11,6 @@ COMMENT=	Free RADIUS server implementation
 
 CONFLICTS+=	freeradius-2.[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"

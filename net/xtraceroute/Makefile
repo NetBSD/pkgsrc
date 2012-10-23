@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/02/06 12:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2012/10/23 17:19:21 asau Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -11,8 +11,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dtek.chalmers.se/~d3august/xt/index.html
 COMMENT=	Graphical version of traceroute, which traces the route IP packets go
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

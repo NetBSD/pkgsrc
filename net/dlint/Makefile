@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:17 asau Exp $
 #
 
 DISTNAME=	dlint1.4.0
@@ -14,7 +14,6 @@ COMMENT=	Internet Domain Name System (DNS) error checking utility
 USE_TOOLS+=	perl:run
 NO_BUILD=	YES
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	bin man/man1
 
 do-configure:

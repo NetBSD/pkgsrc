@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/21 17:56:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:15 asau Exp $
 
 DISTNAME=	connect
 PKGNAME=	${DISTNAME}-1.95
@@ -21,7 +21,6 @@ LIBS.Darwin+=	-lresolv
 LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/doc/connect
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	${MKDIR} ${WRKSRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/11 18:42:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:19:08 asau Exp $
 
 DISTNAME=		skype-2.1.0.81
 CATEGORIES=		net
@@ -16,8 +16,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_REQD=		suse>=11.3

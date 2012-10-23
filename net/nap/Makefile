@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/03/21 02:36:40 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 17:18:40 asau Exp $
 
 DISTNAME=	nap-1.4.4
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nap/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nap.sourceforge.net/
 COMMENT=	Terminal based Napster client similar to ircII
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

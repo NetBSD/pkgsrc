@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/13 10:20:53 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 17:19:03 asau Exp $
 #
 
 DISTNAME=	pypcap-1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pypcap/
 COMMENT=	Simplified object-oriented python module for libpcap
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 

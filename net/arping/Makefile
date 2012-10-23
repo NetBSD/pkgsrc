@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/11/01 00:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 17:18:10 asau Exp $
 #
 
 DISTNAME=		arping-2.08
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.habets.pp.se/synscan/programs.php?prog=arping
 COMMENT=		ARP-level ping utility
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LIBS+=			-lnet -lpcap
 LIBS.SunOS+=		-lsocket -lnsl

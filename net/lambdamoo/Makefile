@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/02/11 21:57:09 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 17:18:31 asau Exp $
 
 DISTNAME=		LambdaMOO-1.8.1
 PKGNAME=		lambdamoo-1.8.1
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lambdamoo/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/lambdamoo/
 COMMENT=		The definitive MOO software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		lambdamoo-core>=990412:../../net/lambdamoo-core
 DEPENDS+=		lambdamoo-doc>=1.8.0p6:../../net/lambdamoo-doc

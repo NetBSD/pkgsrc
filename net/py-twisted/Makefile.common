@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2012/04/20 18:47:37 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/10/23 17:19:03 asau Exp $
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
 
@@ -15,5 +15,3 @@ LICENSE=	mit
 
 DISTINFO_FILE?=		${.CURDIR}/../py-twisted/distinfo
 PATCHDIR?=		${.CURDIR}/../py-twisted/patches
-
-PKG_DESTDIR_SUPPORT=	user-destdir

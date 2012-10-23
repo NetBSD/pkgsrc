@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:56:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 17:18:46 asau Exp $
 #
 
 DISTNAME=		IO-Socket-Multicast-1.12
@@ -12,8 +12,6 @@ MAINTAINER=		he@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO-Socket-Multicast/
 COMMENT=		Perl multicast socket IO
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-IO-Interface>=0.94:../../net/p5-IO-Interface
 

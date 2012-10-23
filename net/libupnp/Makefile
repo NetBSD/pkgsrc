@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/04/13 23:38:34 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/23 17:18:35 asau Exp $
 #
 
 DISTNAME=		libupnp-1.6.17
@@ -10,8 +10,6 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://pupnp.sourceforge.net/
 COMMENT=		Portable Universal Plug and Play (UPnP) SDK
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/14 13:35:46 abs Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:28 asau Exp $
 
 DISTNAME=	inadyn.v1.96.2
 PKGNAME=	${DISTNAME:C:.v:-:} # inadyn-1.96.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inatech.eu/inadyn/
 COMMENT=	Dynamic DNS client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 RCD_SCRIPTS=	inadyn

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/12/18 15:21:54 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 17:19:10 asau Exp $
 
 DISTNAME=		spegla-1.1p4
 PKGREVISION=		1
@@ -7,8 +7,6 @@ MASTER_SITES=		ftp://subzero.campus.luth.se/pub/spegla/
 
 MAINTAINER=		jnilsson@ludd.luth.se
 COMMENT=		Mirror program for FTP sites (written in C)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/05/13 09:02:55 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:27 asau Exp $
 
 DISTNAME=	hesiod-3.0.2
 CATEGORIES=	net
@@ -6,8 +6,6 @@ MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/hesiod/
 
 MAINTAINER=	kpneal@pobox.org
 COMMENT=	Hesiod network database client and library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

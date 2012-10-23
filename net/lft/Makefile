@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/11 07:02:38 gls Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:32 asau Exp $
 #
 
 DISTNAME=		lft-3.31
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pwhois.org/lft/
 COMMENT=		Layer four traceroute capable of tracing protocol paths
 LICENSE=		lft-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

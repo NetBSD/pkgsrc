@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/12 08:04:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 17:19:03 asau Exp $
 
 DISTNAME=	suds-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fedorahosted.org/suds/
 COMMENT=	Lightweight SOAP python client for consuming Web Services
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=		${DISTNAME}
 USE_LANGUAGES=		# empty

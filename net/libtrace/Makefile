@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/07/30 10:25:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:35 asau Exp $
 #
 
 DISTNAME=	libtrace-3.0.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://research.wand.net.nz/software/libtrace.php
 COMMENT=	Library for trace processing
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake lex
 USE_LANGUAGES=	c c++

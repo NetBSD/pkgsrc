@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/11 22:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 17:18:34 asau Exp $
 #
 
 DISTNAME=	libnipper-0.12.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nipper.sourceforge.net/
 COMMENT=	Performs security audits of network device configuration
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 USE_CMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/11 21:36:18 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:29 asau Exp $
 #
 
 DISTNAME=	iplog-2.2.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ojnk/}
 MAINTAINER=	gremlin@portal-to-web.de
 HOMEPAGE=	http://ojnk.sourceforge.net/
 COMMENT=	Iplog is a tool using pcap to log IP traffic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

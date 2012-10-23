@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2012/10/03 21:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2012/10/23 17:18:32 asau Exp $
 
 DISTNAME=		lftp-4.3.3
 PKGREVISION=		1
@@ -15,7 +15,6 @@ COMMENT=		Powerful command line file transfer client
 LICENSE=		gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bison
 MAKE_JOBS_SAFE=		no

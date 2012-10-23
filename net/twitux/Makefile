@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 23:02:18 adam Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 17:19:15 asau Exp $
 #
 
 DISTNAME=		twitux-0.69
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://live.gnome.org/DanielMorales/Twitux
 COMMENT=		GTK+ Twitter client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES

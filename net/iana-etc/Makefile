@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/25 13:12:35 christos Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:28 asau Exp $
 #
 
 DISTNAME=	iana-etc-2.30
@@ -10,8 +10,6 @@ MAINTAINER=	christos@NetBSD.org
 HOMEPAGE=	http://sethwklein.net/
 COMMENT=	Tools to process the IANA source files into services and protocols
 LICENSE=	osl
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_TOOLS+=	gmake gawk
 

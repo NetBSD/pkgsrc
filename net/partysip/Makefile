@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:40 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:56 asau Exp $
 #
 
 DISTNAME=		partysip-2.2.3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://savannah.gnu.org/download/partysip/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/partysip/partysip.html
 COMMENT=		SIP proxy server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-config-dir=/etc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2011/04/22 13:42:01 obache Exp $
+# $NetBSD: Makefile,v 1.123 2012/10/23 17:18:08 asau Exp $
 
 DISTNAME=	ORBit-0.5.17
 PKGREVISION=	2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	High-performance CORBA ORB with support for the C language
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bison flex gmake xgettext
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 23:02:17 adam Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/23 17:18:37 asau Exp $
 
 DISTNAME=	monsoon-0.20
 PKGREVISION=	23
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.monsoon-project.org/jaws/data/files/
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.monsoon-project.org/
 COMMENT=	Open source GTK+ bittorrent client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no

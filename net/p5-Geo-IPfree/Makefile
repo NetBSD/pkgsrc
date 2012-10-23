@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:45 asau Exp $
 #
 
 DISTNAME=	Geo-IPfree-1.100470
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/~bricas/${DISTNAME}/
 COMMENT=	Gets country name by IP or hostname
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Geo/IPfree/.packlist
 

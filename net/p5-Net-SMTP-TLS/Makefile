@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:51 asau Exp $
 #
 
 DISTNAME=	Net-SMTP-TLS-0.12
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-SMTP-TLS/
 COMMENT=	Perl5 SMTP client module supporting TLS and AUTH
 LICENSE=	${PERL5_LICENSE} # see README
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL

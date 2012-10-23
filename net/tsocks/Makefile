@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/21 23:40:18 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:19:14 asau Exp $
 #
 
 DISTNAME=	tsocks-1.8beta5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tsocks.sourceforge.net/
 COMMENT=	Transparent SOCKS proxying library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

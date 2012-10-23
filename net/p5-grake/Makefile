@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:56 asau Exp $
 #
 
 DISTNAME=	grake-0.1.0
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/grake/
 COMMENT=	Tool for scanning webpages for Youtube video links
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
 DEPENDS+=	p5-Test-Pod>=1.44:../../devel/p5-Test-Pod

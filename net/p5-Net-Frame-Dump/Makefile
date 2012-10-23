@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:48 asau Exp $
 
 DISTNAME=	Net-Frame-Dump-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Net-Pcap>=0.12:../../net/p5-Net-Pcap
 DEPENDS+=	p5-Net-Frame-[0-9]*:../../net/p5-Net-Frame
 
 PKG_INSTALLATION_TYPES=		overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Net/Frame/Dump/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:41 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 17:19:00 asau Exp $
 #
 
 DISTNAME=	proxycheck-0.49a
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.corpit.ru/mjt/proxycheck/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.corpit.ru/mjt/proxycheck.html
 COMMENT=	Tester for open (promiscuous) proxy systems
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 MAKE_FLAGS+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} LDFLAGS=${LDFLAGS:M*:Q}

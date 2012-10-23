@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/02/11 20:25:12 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:12 asau Exp $
 #
 
 DISTNAME=		bounce-0.0
@@ -7,8 +7,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Tool to forward TCP connection from one IP to another
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		majordomo-*
 

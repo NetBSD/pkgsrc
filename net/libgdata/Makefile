@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/15 10:06:03 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:33 asau Exp $
 #
 
 DISTNAME=	libgdata-0.6.6
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://live.gnome.org/libgdata
 COMMENT=	Google Data API based Glib client library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes
