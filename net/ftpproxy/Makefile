@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/02/11 21:03:54 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:22 asau Exp $
 #
 
 DISTNAME=	ftpproxy-${VERSION}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ftpproxy.org/
 COMMENT=	Application level gateway for FTP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=	src
 VERSION=	1.2.3

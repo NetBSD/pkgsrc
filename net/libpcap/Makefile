@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/06/27 10:53:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/23 17:18:34 asau Exp $
 
 DISTNAME=	libpcap-1.1.1
 PKGREVISION=	1
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 INSTALLATION_DIRS=	bin
 

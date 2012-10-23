@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:54 asau Exp $
 #
 
 DISTNAME=	SNMP-Info-2.06
@@ -13,8 +13,6 @@ HOMEPAGE=	http://search.cpan.org/dist/SNMP-Info/
 #HOMEPAGE=	http://snmp-info.sourceforge.net/
 COMMENT=	Perl5 object oriented interface to SNMP informations
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	net-snmp>=5.1.2:../../net/net-snmp
 

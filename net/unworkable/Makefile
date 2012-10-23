@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/03/08 01:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 17:19:16 asau Exp $
 
 DISTNAME=	unworkable-0.51
 PKGREVISION=	5
@@ -8,8 +8,6 @@ MASTER_SITES=	# http://p2presearch.com/unworkable/dist/
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://p2presearch.com/unworkable/
 COMMENT=	BSD-licensed command-line torrent client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	yacc
 WRKSRC=		${WRKDIR}/unworkable

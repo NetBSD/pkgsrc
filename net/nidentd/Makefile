@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/11 22:19:14 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:42 asau Exp $
 #
 
 DISTNAME=	nidentd-1.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	symka@NetBSD.org
 COMMENT=	identd that supports IPv4, IPv6, NAT, fake and random
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	lsof>=4.61:../../sysutils/lsof
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/09/15 10:06:03 obache Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/23 17:18:32 asau Exp $
 
 DISTNAME=	libIDL-0.8.14
 PKGREVISION=	4
@@ -11,7 +11,6 @@ COMMENT=	CORBA Interface Definition Language parser
 LICENSE=	gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex pkg-config

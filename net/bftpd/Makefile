@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/04 04:30:45 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:11 asau Exp $
 #
 
 DISTNAME=	bftpd-2.9
@@ -9,8 +9,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://bftpd.sourceforge.net/
 COMMENT=	Small and fast FTP server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}/bftpd

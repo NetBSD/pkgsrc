@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/29 14:13:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:42 asau Exp $
 #
 
 DISTNAME=	nicovideo-dl-0.0.20120212
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/nicovideo-dl/
 COMMENT=	Download videos from www.nicovideo.jp
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes

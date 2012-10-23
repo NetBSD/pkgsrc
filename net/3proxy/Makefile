@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:07 asau Exp $
 #
 
 DISTNAME=	3proxy-0.5.3k
@@ -16,8 +16,6 @@ COMMENT=	Multi-protocol proxy
 # says "current version of GNU GPL" without specifying a numeric version
 # number.  3proxy-0.6.* will have a different license.
 LICENSE=	3proxy-0.5-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	Makefile.unix

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2009/06/30 00:07:21 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2012/10/23 17:19:09 asau Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -19,8 +19,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

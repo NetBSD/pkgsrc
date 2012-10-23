@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/09/15 10:05:56 obache Exp $
+# $NetBSD: Makefile,v 1.79 2012/10/23 17:18:08 asau Exp $
 #
 
 DISTNAME=		ORBit2-2.14.19
@@ -13,7 +13,6 @@ COMMENT=		High-performance CORBA ORB with C language support
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		linc>=1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/11 21:24:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:25 asau Exp $
 
 DISTNAME=	gt-itm
 PKGNAME=	gt-itm-0pre19961004
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www-static.cc.gatech.edu/projects/gtitm/gt-itm/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www-static.cc.gatech.edu/projects/gtitm/
 COMMENT=	GT Internetwork Topology Models
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/src

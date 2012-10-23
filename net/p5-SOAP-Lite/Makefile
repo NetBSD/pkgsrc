@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/03 21:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/23 17:18:54 asau Exp $
 
 DISTNAME=	SOAP-Lite-0.715
 PKGNAME=	p5-${DISTNAME}
@@ -27,8 +27,6 @@ DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 DEPENDS+=	{perl>=5.10.1,p5-constant>=1.14}:../../devel/p5-constant
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=	{perl>=5.10.0,p5-version>=0}:../../devel/p5-version
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[a-z]$||}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/03/21 16:29:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:45 asau Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
@@ -11,8 +11,6 @@ DISTFILES=	${DISTNAME}-1.i386_compat.rpm
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.overnet.com/
 COMMENT=	Peer-to-peer file sharing client (binary pkg)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat

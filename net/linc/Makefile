@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/09/15 10:06:04 obache Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/23 17:18:35 asau Exp $
 #
 
 DISTNAME=		linc-1.1.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Network client/server library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		ORBit2>=2.8
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/04/19 19:39:35 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:19:09 asau Exp $
 #
 
 DISTNAME=	slurm-0.3.3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://distfiles.aydogan.net/net/
 MAINTAINER=	mail@eckigesauge.de
 HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
 COMMENT=	Realtime traffic statistics
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

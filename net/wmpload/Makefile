@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 10:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 17:19:20 asau Exp $
 #
 
 DISTNAME=	wmpload-0.9.5
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/network/serial/ppp/}
 MAINTAINER=	abs@NetBSD.org
 #HOMEPAGE=	http://www.engr.utk.edu/~mdsmith/pload/
 COMMENT=	PPP monitor for X11, totals and current in/out rates in 64x64 cube
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 USE_IMAKE=	YES

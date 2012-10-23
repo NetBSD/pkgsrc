@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:45 asau Exp $
 
 DISTNAME=	openwbem-3.2.2
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openwbem/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwbem.org/
 COMMENT=	Web-based Enterprise Management software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	ac_cv_path_TRUE_PATHNAME=true ac_cv_path_FALSE_PATHNAME=false

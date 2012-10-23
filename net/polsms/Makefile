@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/03/03 00:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/23 17:18:59 asau Exp $
 #
 
 DISTNAME=	sms-2.0.3
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ceti.pl/~miki/komputery/sms.html
 COMMENT=	Send SMS to cellular phones in Poland (Plus, Idea, Era)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake

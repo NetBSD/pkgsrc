@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2012/09/14 19:23:30 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.46 2012/10/23 17:18:37 asau Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -20,8 +20,6 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl
 MAKE_JOBS_SAFE=		no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ENV+=		WGET=""
 CONFIGURE_ENV+=		ac_cv_prog_WGET="no"

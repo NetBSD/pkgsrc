@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/02 10:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:31 asau Exp $
 
 DISTNAME=	knock-0.5
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.zeroflux.org/projects/knock/
 COMMENT=	Port knocking server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake

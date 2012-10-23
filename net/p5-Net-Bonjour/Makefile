@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:46 asau Exp $
 #
 
 DISTNAME=		Net-Bonjour-0.96
@@ -17,7 +17,6 @@ DEPENDS+=		p5-Net-DNS>=0.50:../../net/p5-Net-DNS
 SUPERSEDES+=		p5-Net-Rendezvous-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Net/Bonjour/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:56 asau Exp $
 #
 
 DISTNAME=	umph-0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/umph/
 COMMENT=	Command line tool for parsing video links from Youtube feeds
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
 DEPENDS+=	p5-XML-DOM>=1.44:../../textproc/p5-XML-DOM

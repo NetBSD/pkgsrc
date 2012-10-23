@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/10 17:26:05 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:21 asau Exp $
 
 DISTNAME=	fping-2.4b2_to
 PKGNAME=	fping-2.4b2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.fping.com/download/
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.fping.com/
 COMMENT=	Quickly ping many hosts w/o flooding the network
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

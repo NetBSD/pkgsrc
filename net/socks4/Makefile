@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/02/08 00:16:00 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/23 17:19:09 asau Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -14,7 +14,6 @@ COMMENT=	Old library, server and client for using proxy firewall software
 CONFLICTS=	socks5-[0-9]* dante*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/socks.cstc.4.2
 MAKE_ENV+=		OPTIMIZE=${CFLAGS:M*:Q}

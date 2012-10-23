@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/01/21 02:38:30 zafer Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/23 17:19:20 asau Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
@@ -14,8 +14,6 @@ PATCH_SITES=	ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/patch
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.wu-ftpd.org/
 COMMENT=	Replacement ftp server for Un*x systems
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	wu-ftpd-vr-[0-9]*
 CONFLICTS+=	beroftpd-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/23 17:18:43 asau Exp $
 
 DISTNAME=	oinkmaster-2.0
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oinkmaster.sourceforge.net/
 COMMENT=	Manage snort rule updates
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	snort{,-mysql,-pgsql}-[0-9]*:../../net/snort
 

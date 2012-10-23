@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/04/08 19:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 17:19:07 asau Exp $
 #
 
 DISTNAME=		scapy-2.1.1
@@ -13,8 +13,6 @@ COMMENT=		Interactive packet manipulation program
 DEPENDS+=	${PYPKGPREFIX}-libpcap-[0-9]*:../../net/py-libpcap
 DEPENDS+=	${PYPKGPREFIX}-libdnet-[0-9]*:../../net/py-libdnet
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=			yes
 

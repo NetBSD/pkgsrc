@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/02/26 10:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:10 asau Exp $
 #
 
 DISTNAME=		awhois.sh-v1.61
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		# nowt
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.planix.com/pub/Planix/
 COMMENT=		All-encompassing whois client wrapper
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin

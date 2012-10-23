@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:50 asau Exp $
 #
 
 DISTNAME=	Net-MAC-2.103622
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-MAC/
 COMMENT=	Perl 5 module for representing and manipulating MAC addresses
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Net/MAC/.packlist

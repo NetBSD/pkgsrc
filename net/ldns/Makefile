@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 17:18:32 asau Exp $
 
 DISTNAME=	ldns-1.6.13
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://www.nlnetlabs.nl/projects/ldns/
 COMMENT=	Library for simplified DNS programming
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		yes

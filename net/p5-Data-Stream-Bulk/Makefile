@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:45 asau Exp $
 #
 
 DISTNAME=	Data-Stream-Bulk-0.08
@@ -20,7 +20,6 @@ DEPENDS+=	p5-Test-use-ok>=0:../../devel/p5-Test-use-ok
 BUILD_DEPENDS+=	p5-Test-TempDir>=0:../../devel/p5-Test-TempDir
 BUILD_DEPENDS+=	p5-DBD-Mock>=1.37:../../databases/p5-DBD-Mock
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Data/Stream/Bulk/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:57:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:55 asau Exp $
 #
 
 DISTNAME=		WebService-Google-Reader-0.20
@@ -12,7 +12,6 @@ HOMEPAGE=		http://search.cpan.org/dist/WebService-Google-Reader/
 COMMENT=		Perl 5 module providing an interface to Google Reader
 LICENSE=		${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/WebService/Google/Reader/.packlist
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.82}:../../devel/p5-Test-Simple

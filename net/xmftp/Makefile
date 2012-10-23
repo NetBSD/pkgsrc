@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/01/12 15:56:57 hans Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 17:19:21 asau Exp $
 #
 
 DISTNAME=	xmftp-1.0.4
@@ -9,8 +9,6 @@ MASTER_SITES=	http://viraj.org/old/xmftp/
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://viraj.org/old/xmftp/
 COMMENT=	X/Motif FTP client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xmftp/source
 USE_X11BASE=	yes

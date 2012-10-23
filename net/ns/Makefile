@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/09/29 04:24:08 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/23 17:18:42 asau Exp $
 
 DISTNAME=	ns-2.33
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://nsnam.isi.edu/nsnam/
 COMMENT=	The UCB/LBNL Network Simulator Version 2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c99 c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/21 15:52:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/23 17:18:27 asau Exp $
 
 DISTNAME=	host-20040812
 PKGREVISION=	1
@@ -19,8 +19,6 @@ MAKE_FILE=	Makefile.BSD
 MAKE_FLAGS+=	__NetBSD__=1
 
 USE_TOOLS+=	nroff
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/17 17:33:09 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 17:19:03 asau Exp $
 #
 
 DISTNAME=	pyzmq-2.1.11
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/zeromq/pyzmq/
 COMMENT=	Python bindings for zeromq
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/distutils.mk"
 .include "../../net/zeromq/buildlink3.mk"

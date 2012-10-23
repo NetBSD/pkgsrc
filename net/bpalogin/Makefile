@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:12 asau Exp $
 #
 
 DISTNAME=	bpalogin-2.0.2
@@ -10,8 +10,6 @@ MASTER_SITES=	http://bpalogin.sourceforge.net/download/	\
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bpalogin.sourceforge.net/
 COMMENT=	BigPond Advance login client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	bpalogin

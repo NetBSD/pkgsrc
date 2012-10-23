@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/03/05 04:18:14 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 17:18:28 asau Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.29
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	is@NetBSD.org
 COMMENT=	Distributed finger service
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 WRKSRC=		${WRKDIR}/finger
 

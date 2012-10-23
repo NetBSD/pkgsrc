@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/11 22:38:12 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/23 17:19:05 asau Exp $
 #
 
 DISTNAME=		rinetd
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.boutell.com/rinetd/http/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.boutell.com/rinetd/
 COMMENT=		Internet redirection server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 BUILD_TARGET=		rinetd

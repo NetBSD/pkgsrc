@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/04/22 13:44:21 obache Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/23 17:18:18 asau Exp $
 #
 
 DISTNAME=	driftnet-0.1.6
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.ex-parrot.com/~chris/driftnet/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ex-parrot.com/~chris/driftnet/
 COMMENT=	Real-time image sniffer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 

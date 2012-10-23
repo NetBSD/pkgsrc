@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 17:18:15 asau Exp $
 #
 
 DISTNAME=	CoilMQ-0.6.1
@@ -10,8 +10,6 @@ MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/coilmq/
 COMMENT=	Lightweight Python STOMP message broker
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.6.9:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-stompclient>=0.3.2:../../devel/py-stompclient

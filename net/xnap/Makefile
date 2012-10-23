@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/01/01 20:06:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:19:21 asau Exp $
 #
 
 DISTNAME=	xnap-2.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnap/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xnap.sourceforge.net/
 COMMENT=	Java filesharing client with support for OpenNap
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	1.4

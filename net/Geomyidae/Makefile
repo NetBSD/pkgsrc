@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/24 22:21:43 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 17:18:07 asau Exp $
 #
 
 DISTNAME=	Geomyidae-0.12
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jgw@freeshell.org
 HOMEPAGE=	http://www.r-36.net/
 COMMENT=	Gopher daemon for Linux/BSD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 

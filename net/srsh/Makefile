@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/03/17 22:03:40 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 17:19:10 asau Exp $
 #
 
 DISTNAME=		srsh-1.2
@@ -17,8 +17,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 NO_CONFIGURE=		yes
 BUILD_MAKE_FLAGS+=	PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	post-extract

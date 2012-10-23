@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2011/01/13 15:09:58 pooka Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/23 17:18:41 asau Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.securityfocus.com/tools/137
 COMMENT=	Read and write data across network connections
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}

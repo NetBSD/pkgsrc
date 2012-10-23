@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/11/01 06:02:19 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/23 17:18:31 asau Exp $
 
 DISTNAME=		kphone-4.2
 PKGREVISION=		11
@@ -10,8 +10,6 @@ HOMEPAGE=		http://sourceforge.net/projects/kphone
 COMMENT=		Graphical Voice Over Internet (VoIP) phone
 
 WRKSRC=			${WRKDIR}/kphone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

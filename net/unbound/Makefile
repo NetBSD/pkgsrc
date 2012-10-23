@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/08/13 14:00:03 pettai Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 17:19:15 asau Exp $
 
 DISTNAME=	unbound-1.4.18
 CATEGORIES=	net
@@ -8,8 +8,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.unbound.net/
 COMMENT=	DNS resolver and recursive server
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	VARBASE
 
