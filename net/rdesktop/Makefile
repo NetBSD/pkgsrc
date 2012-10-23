@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/04/26 14:54:28 abs Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/23 17:19:05 asau Exp $
 
 DISTNAME=		rdesktop-1.7.1
 CATEGORIES=		net
@@ -8,8 +8,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rdesktop.org/
 COMMENT=		Open-source Remote Desktop Protocol client
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		pkg-config

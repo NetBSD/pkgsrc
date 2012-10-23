@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/02 22:40:07 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 17:18:31 asau Exp $
 #
 
 DISTNAME=	knot-1.1.0
@@ -9,8 +9,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.knot-dns.cz/
 COMMENT=	Knot (auth) DNS server
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		VARBASE
 

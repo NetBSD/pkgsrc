@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/09/15 10:05:59 obache Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/23 17:18:23 asau Exp $
 #
 
 DISTNAME=		gnet-2.0.8
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnet/2.0/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnetlibrary.org/
 COMMENT=		Simple network library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES

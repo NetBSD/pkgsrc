@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/11 21:52:59 markd Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:09 asau Exp $
 
 DISTNAME=	configurator_201
 PKGNAME=	${BINNAME}-2.0.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Configuration program for Apple's Airport Base Station
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	BINNAME=${BINNAME:Q} JARNAME=${JARNAME:Q}
 

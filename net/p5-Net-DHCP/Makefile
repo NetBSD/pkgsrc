@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:47 asau Exp $
 #
 
 DISTNAME=	Net-DHCP-0.67
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-DHCP/
 COMMENT=	Object methods to create a DHCP packet
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGSUBDIR=       share/examples/p5-Net-DHCP
 INSTALLATION_DIRS+=     ${EGSUBDIR}

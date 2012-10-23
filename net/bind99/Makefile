@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/21 15:49:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:11 asau Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.isc.org/software/bind/
 COMMENT=	Version 9.9 of the Berkeley Internet Name Daemon, implementation of DNS
 
 CONFLICTS+=	host-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

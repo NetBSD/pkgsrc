@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 17:18:37 asau Exp $
 #
 
 DISTNAME=		modcap.c
@@ -11,7 +11,6 @@ MAINTAINER=		agc@NetBSD.org
 COMMENT=		Command line utility to modify pcap capture files
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 AUTO_MKDIRS=		yes
 
 WRKSRC=			${WRKDIR}

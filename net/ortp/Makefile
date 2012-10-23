@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/15 10:06:06 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 17:18:45 asau Exp $
 #
 
 DISTNAME=	ortp-0.16.1
@@ -10,8 +10,6 @@ MAINTAINER=	zul@netbsd-fr.org
 HOMEPAGE=	http://www.linphone.org/index.php/eng/code_review/ortp
 COMMENT=	Real-time Transport Protocol stack
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
