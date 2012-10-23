@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.4 2012/10/23 19:51:07 asau Exp $
 # used by archivers/heirloom-tar/Makefile
 # used by devel/heirloom-common/Makefile
 # used by devel/heirloom-getopt/Makefile
@@ -118,8 +118,6 @@ MAINTAINER=	cheusov@NetBSD.org
 COMMENT?=	Collection of standard Unix utilities (${PKGBASE:S/heirloom-//})
 
 HEIRLOOM_VER=		070715
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCHDIR=	${.CURDIR}/../../sysutils/heirloom-doc/patches
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/heirloom-doc/distinfo

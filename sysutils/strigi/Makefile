@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 23:02:27 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/23 19:51:25 asau Exp $
 
 DISTNAME=	strigi-0.6.4
 PKGREVISION=	17
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://strigi.sourceforge.net/
 COMMENT=	Small fast desktop searching program
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config perl

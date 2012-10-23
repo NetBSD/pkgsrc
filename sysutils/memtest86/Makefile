@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/02/19 11:14:32 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/23 19:51:12 asau Exp $
 #
 
 DISTNAME=		memtest86-4.0
@@ -11,8 +11,6 @@ COMMENT=		Thorough, stand alone memory test for x86 arch
 LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 

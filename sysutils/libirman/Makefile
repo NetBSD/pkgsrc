@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/02/13 22:18:01 abs Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:10 asau Exp $
 #
 
 DISTNAME=	libirman-0.4.1c
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/irman.conf ${PKG_SYSCONFDIR}/irman.conf
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/doc share/examples
 
 post-build:

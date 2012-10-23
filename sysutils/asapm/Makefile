@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/03/02 13:15:23 obache Exp $
+# $NetBSD: Makefile,v 1.42 2012/10/23 19:50:51 asau Exp $
 #
 
 DISTNAME=		asapm-2.11
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tigr.net/afterstep/view.php?applet=asapm/data
 COMMENT=		Laptop battery status display for X11
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if !exists(/usr/include/machine/apmvar.h)
 PKG_FAIL_REASON+=	"APM needs /usr/include/machine/apmvar.h to build."

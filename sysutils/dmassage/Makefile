@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:58 asau Exp $
 #
 
 DISTNAME=	dmassage-0.6
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.sentia.org/projects/dmassage/
 COMMENT=	dmesg(8) parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
 

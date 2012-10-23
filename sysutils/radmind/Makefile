@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/11/26 04:40:27 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/23 19:51:21 asau Exp $
 #
 
 DISTNAME=	radmind-1.14.1
@@ -10,8 +10,6 @@ MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://rsug.itd.umich.edu/software/radmind/
 COMMENT=	Remote file administration and integrity tool
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/02/09 22:51:38 rumko Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:19 asau Exp $
 
 DISTNAME=	pftop-0.7
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.eee.metu.edu.tr/~canacar/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eee.metu.edu.tr/~canacar/pftop/
 COMMENT=	Utility for real-time display of statistics for PF
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 
