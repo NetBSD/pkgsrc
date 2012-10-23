@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/10/08 23:02:27 adam Exp $
+# $NetBSD: Makefile,v 1.65 2012/10/23 19:51:35 asau Exp $
 
 DISTNAME=	xcdroast-${DIST_VER}
 PKGNAME=	xcdroast-${DIST_VER:S/alpha/a/}
@@ -12,8 +12,6 @@ PATCHFILES=	parse_version.patch
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	Graphical user interface for the command-line cdrecord-tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		cdrtools>=2.01:../../sysutils/cdrtools
 

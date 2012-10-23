@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/08 22:47:05 jakllsch Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:02 asau Exp $
 #
 
 DISTNAME=	flashrom-0.9.5.2
@@ -11,8 +11,6 @@ MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	http://www.flashrom.org/
 COMMENT=	Universal (coreboot/LinuxBIOS) flash utility
 LICENSE=        gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+= gmake pkg-config
 

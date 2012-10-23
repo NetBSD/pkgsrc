@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/05 17:38:21 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:00 asau Exp $
 #
 
 DISTNAME=	efreet-1.1.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	2-clause-bsd
 

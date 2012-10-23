@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/27 20:46:37 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:37 asau Exp $
 
 DISTNAME=	xenvstat-20041127
 PKGREVISION=	2
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	X11-based display environmental sensor readings
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
