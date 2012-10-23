@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 18:16:45 asau Exp $
 #
 
 DISTNAME=	GSSAPI-0.28
@@ -11,8 +11,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://perlgssapi.sourceforge.net/
 COMMENT=	Perl extension providing access to the GSSAPIv2 library
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/GSSAPI/.packlist
 

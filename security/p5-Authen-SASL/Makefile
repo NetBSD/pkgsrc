@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/21 22:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/23 18:16:40 asau Exp $
 #
 
 DISTNAME=	Authen-SASL-2.16
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Authen-SASL/
 COMMENT=	Perl module to handle SASL authentication
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Authen/SASL/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

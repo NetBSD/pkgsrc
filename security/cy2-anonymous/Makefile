@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/08/12 10:16:54 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 18:16:23 asau Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-anonymous/}
 COMMENT=	Cyrus SASL ANONYMOUS authentication plugin
 SASL_PLUGIN=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	cyrus-sasl<=2.1.19nb1
 

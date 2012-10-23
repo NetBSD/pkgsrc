@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 18:16:40 asau Exp $
 #
 
 DISTNAME=		Crypt-DES-2.05
@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-DES/
 COMMENT=		XS-based DES implementation for Perl
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC

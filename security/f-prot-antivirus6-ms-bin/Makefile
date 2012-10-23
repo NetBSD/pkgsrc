@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 18:16:27 asau Exp $
 #
 DISTNAME=		${FP_DISTNAME}
 PKGREVISION=		1
@@ -8,7 +8,6 @@ MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		http://www.f-prot.com/products/corporate_users/unix/
 COMMENT=		F-PROT antivirus for Mail Servers
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		pax perl:run
 
 FP_TYPE=		ms

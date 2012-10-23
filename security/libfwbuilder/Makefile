@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/08 23:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/23 18:16:32 asau Exp $
 
 DISTNAME=	libfwbuilder-4.1.3
 PKGREVISION=	10
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fwbuilder.org/
 COMMENT=	Firewall Builder API
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2011/02/28 14:53:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2012/10/23 18:16:38 asau Exp $
 #
 # used by security/opensc/Makefile
 # used by security/opensc-signer/Makefile
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.opensc-project.org/files/opensc/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opensc-project.org/opensc/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 

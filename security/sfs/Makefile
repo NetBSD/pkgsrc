@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/03 21:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/23 18:16:58 asau Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fs.net/sfswww/
 COMMENT=		Secure, global, self-certifying network file system
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

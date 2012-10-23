@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/14 07:13:59 manu Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:48 asau Exp $
 #
 
 DISTNAME=	pam_p11-0.1.5
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.opensc-project.org/files/pam_p11/
 COMMENT=	Smart card PAM module
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

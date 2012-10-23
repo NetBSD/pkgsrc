@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:44:37 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:39 asau Exp $
 #
 
 DISTNAME=		otpCalc-0.96
@@ -9,8 +9,6 @@ MASTER_SITES=		http://original.killa.net/infosec/otpCalc/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://original.killa.net/infosec/otpCalc/
 COMMENT=		OTP and S/Key calculator for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/01/18 14:46:03 adam Exp $
+# $NetBSD: Makefile,v 1.48 2012/10/23 18:16:20 asau Exp $
 
 DISTNAME=	Linux-PAM-0.77
 PKGNAME=	${DISTNAME:S/Linux-//}
@@ -18,7 +18,6 @@ MAKE_JOBS_SAFE=	no
 CONFLICTS+=	openpam-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

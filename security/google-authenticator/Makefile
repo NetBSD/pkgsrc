@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/11 17:09:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:29 asau Exp $
 
 DISTNAME=	libpam-google-authenticator-1.0-source
 PKGNAME=	${DISTNAME:S/libpam-//:S/-source//}
@@ -12,7 +12,6 @@ COMMENT=	One-time password generator and PAM module from Google
 
 LICENSE=	apache-2.0
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS=		gmake
 
 CFLAGS+=	-DNO_STATIC_MODULES

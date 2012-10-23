@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/01/27 18:23:10 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/23 18:16:59 asau Exp $
 
 DISTNAME=	x11-ssh-askpass-1.0
 PKGNAME=	${DISTNAME:S/^x11-//}
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.jmknoble.net/software/x11-ssh-askpass/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jmknoble.net/software/x11-ssh-askpass/
 COMMENT=	X11-based passphrase dialog for OpenSSH
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 INSTALL_TARGET=	install

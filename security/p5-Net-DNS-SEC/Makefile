@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/23 18:16:45 asau Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-0.16
@@ -12,8 +12,6 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://www.net-dns.org/
 COMMENT=		DNSSEC extension to Net::DNS Perl DNS Resolver Module
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Crypt-OpenSSL-Bignum>=0.03:../../security/p5-Crypt-OpenSSL-Bignum
 DEPENDS+=		p5-Crypt-OpenSSL-DSA>=0.10:../../security/p5-Crypt-OpenSSL-DSA

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 18:16:41 asau Exp $
 #
 
 DISTNAME=		Crypt-GPG-1.63
@@ -17,7 +17,6 @@ DEPENDS+=		p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # It defaults to a gpg path in /usr/local, which is not helpful
 SUBST_CLASSES+=		local

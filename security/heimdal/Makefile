@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2012/09/09 09:23:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.93 2012/10/23 18:16:30 asau Exp $
 
 DISTNAME=	heimdal-1.5.2
 PKGREVISION=	3
@@ -15,8 +15,6 @@ CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
 CONFLICTS+=	gss-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

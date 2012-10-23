@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/07 13:24:36 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:56 asau Exp $
 
 DISTNAME=	qident-1.2
 CATEGORIES=	security net
@@ -14,8 +14,6 @@ USE_TOOLS+=		groff nroff
 MANCOMPRESSED_IF_MANZ=	YES
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../security/libident/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

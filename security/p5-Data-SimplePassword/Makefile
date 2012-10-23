@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/23 18:16:43 asau Exp $
 #
 
 DISTNAME=		Data-SimplePassword-0.07
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Data-SimplePassword/
 COMMENT=		Simple random password generator
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-CLASS-[0-9]*:../../devel/p5-CLASS
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor

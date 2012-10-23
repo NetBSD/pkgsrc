@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 18:16:36 asau Exp $
 
 DISTNAME=	munge-0.5.10
 PKGREVISION=	1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://code.google.com/p/munge/
 COMMENT=	Authentication service for creating and validating credentials
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS=	perl
 GNU_CONFIGURE=	yes

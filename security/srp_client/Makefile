@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/03/24 19:43:28 asau Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/23 18:16:59 asau Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://srp.stanford.edu/
 COMMENT=		Client programs using Secure Remote Password protocol
 LICENSE=		srp_client-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Licensor makes vague patent claims.
 NO_SRC_ON_CDROM=	${RESTRICTED}

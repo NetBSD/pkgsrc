@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 23:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/23 18:16:51 asau Exp $
 
 DISTNAME=	polkit-qt-0.9.4
 PKGREVISION=	10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://api.kde.org/kdesupport-api/kdesupport-apidocs/polkit-qt/html
 COMMENT=	Qt Wrapper around PolicyKit
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 

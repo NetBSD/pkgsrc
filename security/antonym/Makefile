@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/23 18:16:20 asau Exp $
 #
 
 DISTNAME=		antonym-1.9
@@ -19,7 +19,6 @@ USE_TOOLS+=		perl:run
 REPLACE_PERL=		antonym
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin share/examples/antonym
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/03/19 09:18:02 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/23 18:16:51 asau Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	4
@@ -14,8 +14,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mit.edu/people/marc/pks/
 COMMENT=	PGP Public Key Server
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

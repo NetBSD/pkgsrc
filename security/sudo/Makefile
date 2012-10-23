@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2012/05/16 14:49:55 taca Exp $
+# $NetBSD: Makefile,v 1.137 2012/10/23 18:17:00 asau Exp $
 #
 
 DISTNAME=		sudo-1.7.9p1
@@ -20,7 +20,6 @@ USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
-PKG_DESTDIR_SUPPORT=	user-destdir
 PLIST_VARS+=		ldap
 
 .include "../../mk/bsd.prefs.mk"

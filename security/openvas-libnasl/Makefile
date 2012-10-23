@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/15 10:06:16 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 18:16:38 asau Exp $
 #
 
 DISTNAME=	openvas-libnasl-2.0.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://wald.intevation.org/frs/download.php/549/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
 COMMENT=	Libraries for the Open Vulnerability Assessment System
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

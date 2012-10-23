@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/15 10:06:13 obache Exp $
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:26 asau Exp $
 
 .include "../../security/dsniff/Makefile.common"
 

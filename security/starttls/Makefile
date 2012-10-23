@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/14 13:20:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:59 asau Exp $
 #
 
 DISTNAME=		starttls-0.10
@@ -10,8 +10,6 @@ MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		ftp://opaopa.org/pub/elisp/
 COMMENT=		Simple wrapper program for STARTTLS on emacsen
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

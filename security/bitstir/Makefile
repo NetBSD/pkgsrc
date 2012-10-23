@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/16 04:33:43 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 18:16:21 asau Exp $
 #
 
 DISTNAME=		bitstir-0.2
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.wiredyne.com/software/downloads/
 MAINTAINER=		pdh@wiredyne.com
 HOMEPAGE=		http://www.wiredyne.com/software/bitstir.html
 COMMENT=		Entropy restoration daemon
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 

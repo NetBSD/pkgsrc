@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/02/11 21:22:04 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:27 asau Exp $
 
 DISTNAME=	fragroute-1.2
 PKGREVISION=	12
@@ -8,8 +8,6 @@ MASTER_SITES=	http://monkey.org/~dugsong/fragroute/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.monkey.org/~dugsong/fragroute/
 COMMENT=	Tool for intercepting, modifying and rewriting egress traffic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libdnet=${BUILDLINK_PREFIX.libdnet}

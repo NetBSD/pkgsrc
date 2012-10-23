@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2011/04/22 13:42:48 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/23 18:16:37 asau Exp $
 
 DISTNAME=	opencdk-0.6.6
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Open Crypto Development Kit
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
