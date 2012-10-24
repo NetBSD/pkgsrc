@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/01/12 11:21:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/10/24 15:48:32 joerg Exp $
 #
 # used by x11/wxGTK26/Makefile
 # used by x11/wxGTK26-contrib/Makefile
@@ -44,6 +44,7 @@ CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK
 
+.include "../../devel/pangox-compat/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

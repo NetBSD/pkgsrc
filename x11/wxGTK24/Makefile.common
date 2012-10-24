@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/04/19 11:47:12 obache Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/10/24 15:48:32 joerg Exp $
 #
 # used by x11/wxGTK24/Makefile
 
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	--with-gtk
 CONFIGURE_ARGS+=	--enable-gtk2
 PLIST_SUBST+=		GTKVER=2
 
+.include "../../devel/pangox-compat/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
