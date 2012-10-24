@@ -1,0 +1,38 @@
+$NetBSD: patch-configure,v 1.1 2012/10/24 09:01:40 manu Exp $
+
+Make sure libpscslite.so is not linked against -lphtread on NetBSD, as
+loading libpthread.so through dlopen() is now forbidden
+
+
+--- ./configure.orig	2012-10-24 06:24:27.000000000 +0200
++++ ./configure	2012-10-24 06:39:49.000000000 +0200
+@@ -823,8 +823,10 @@
+ LIBTOOL
+ PTHREAD_CFLAGS
+ PTHREAD_LIBS
+ PTHREAD_CC
++LIBPCSC_PTHREAD_CFLAGS
++LIBPCSC_PTHREAD_LIBS
+ acx_pthread_config
+ PKG_CONFIG
+ LEXLIB
+ LEX_OUTPUT_ROOT
+@@ -6135,8 +6137,18 @@
+ 
+ 
+ CC="$PTHREAD_CC"
+ 
++case `uname` in
++NetBSD)
++	LIBPCSC_PTHREAD_LIBS=''
++	LIBPCSC_PTHREAD_CFLAGS=''
++	;;
++*)
++	LIBPCSC_PTHREAD_LIBS=$PTHREAD_LIBS
++	LIBPCSC_PTHREAD_CFLAGS=$PTHREAD_CFLAGS
++	;;
++esac
+ 
+ 
+ 
+ # Add libtool support
