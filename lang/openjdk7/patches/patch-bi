@@ -1,4 +1,4 @@
-$NetBSD: patch-bi,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bi,v 1.2 2012/10/24 15:36:47 joerg Exp $
 
 --- hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp.orig	2009-10-17 16:49:37.000000000 +0200
 +++ hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp
@@ -11,3 +11,34 @@ $NetBSD: patch-bi,v 1.1 2009/10/18 10:21:01 tnn Exp $
  # define context_trapno uc_mcontext.mc_trapno
  # ifdef AMD64
  #  define context_pc uc_mcontext.mc_rip
+@@ -275,14 +275,7 @@
+ #endif
+ 
+ address os::current_stack_pointer() {
+-#ifdef SPARC_WORKS
+-  register void *esp;
+-  __asm__("mov %%"SPELL_REG_SP", %0":"=r"(esp));
+-  return (address) ((char*)esp + sizeof(long)*2);
+-#else
+-  register void *esp __asm__ (SPELL_REG_SP);
+-  return (address) esp;
+-#endif
++  return (address)__builtin_frame_address(0);
+ }
+ 
+ char* os::non_memory_address_word() {
+@@ -358,13 +351,7 @@ frame os::get_sender_for_C_frame(frame* 
+ }
+ 
+ intptr_t* _get_previous_fp() {
+-#ifdef SPARC_WORKS
+-  register intptr_t **ebp;
+-  __asm__("mov %%"SPELL_REG_FP", %0":"=r"(ebp));
+-#else
+-  register intptr_t **ebp __asm__ (SPELL_REG_FP);
+-#endif
+-  return (intptr_t*) *ebp;   // we want what it points to.
++  return (intptr_t *)__builtin_frame_address(1);
+ }
+ 
+ 
