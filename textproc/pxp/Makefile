@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 15:18:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/24 13:15:32 jaapb Exp $
 #
 
-DISTNAME=		pxp-1.1.6
-PKGREVISION=		2
+DISTNAME=		pxp-1.2.3
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.ocaml-programming.de/packages/
+MASTER_SITES=		http://download.camlcity.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ocaml-programming.de/packages/
+HOMEPAGE=		http://projects.camlcity.org/projects/pxp.html
 COMMENT=		Polymorphic XML parser, a validating XML-1.0 parser (OCaml)
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-DEPENDS+=		ocamlnet-[0-9]*:../../net/ocamlnet
-
 USE_TOOLS+=		gmake
-BUILD_TARGET=		all opt
 HAS_CONFIGURE=		yes
-PLIST_SRC=		PLIST.opt PLIST
+CONFIGURE_ARGS=		-with-lex -with-wlex -lexlist utf8,iso88591
 INSTALL_ENV=		OCAMLFIND_INSTALL_ARGS="install -destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib"
+BUILD_TARGET=		all
 
 MAKE_JOBS_SAFE=		no
 
@@ -28,12 +25,25 @@ SUBST_STAGE.ocamlfind=	do-configure
 SUBST_FILES.ocamlfind=			\
 	src/pxp/Makefile		\
 	src/pxp-engine/Makefile		\
-	src/pxp-lex-iso88591/Makefile	\
-	src/pxp-lex-utf8/Makefile	\
-	src/pxp-wlex/Makefile
+	gensrc/pxp-lex-iso88591/Makefile	\
+	gensrc/pxp-lex-utf8/Makefile	\
+	gensrc/pxp-wlex/Makefile
 SUBST_SED.ocamlfind=	-e 's|\($$(OCAMLFIND)\) install|\1 $$(OCAMLFIND_INSTALL_ARGS)|'
 
 INSTALLATION_DIRS=	lib/ocaml/site-lib/pxp
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS=     opt
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "arm")
+PLIST.opt=      yes
+BUILD_TARGET+=	opt
+.endif
+
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../devel/ocaml-findlib/buildlink3.mk"
+.include "../../net/ocamlnet/buildlink3.mk"
+.include "../../devel/pcre-ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
