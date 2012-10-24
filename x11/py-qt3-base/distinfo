@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2009/06/17 07:11:03 hasso Exp $
+$NetBSD: distinfo,v 1.17 2012/10/24 15:32:56 joerg Exp $
 
 SHA1 (PyQt-mac-gpl-3.18.1.tar.gz) = dbfb3e5443480705c36002167e0d6303fc751a3f
 RMD160 (PyQt-mac-gpl-3.18.1.tar.gz) = db6685a6a231a7414a08674a0ea245260c234de2
@@ -6,6 +6,6 @@ Size (PyQt-mac-gpl-3.18.1.tar.gz) = 813598
 SHA1 (PyQt-x11-gpl-3.18.1.tar.gz) = 310c17bd3b0f81f8b516c5b755250171fa9c9a04
 RMD160 (PyQt-x11-gpl-3.18.1.tar.gz) = 1278b805bcd0a3e34e68a07849c052382c452096
 Size (PyQt-x11-gpl-3.18.1.tar.gz) = 819441 bytes
-SHA1 (patch-aa) = 418b159936234e82e9ec208a854d74c636933b95
+SHA1 (patch-aa) = 2d645fa20ff670f15c81d6e565f2e20b3ba110c1
 SHA1 (patch-ab) = 4f4476e7f6f81fa1eb458a5dcdbaed3d13330f91
 SHA1 (patch-ac) = 94cc4e24179d6557de35a8a019e37e5d35eca68d
