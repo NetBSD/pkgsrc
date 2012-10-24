@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/11 15:44:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/10/24 13:15:32 jaapb Exp $
 
-SHA1 (pxp-1.1.6.tar.gz) = 49ca3cc02f87eb6c6cf26a6cc0ed386f86161c72
-RMD160 (pxp-1.1.6.tar.gz) = d4569f9e40b151f494a5e8744ba0713ad740b8ad
-Size (pxp-1.1.6.tar.gz) = 615236 bytes
+SHA1 (pxp-1.2.3.tar.gz) = 4d0846f9f22d354740bb5a6c638da170e7a04e36
+RMD160 (pxp-1.2.3.tar.gz) = 276b19d06d89927c751518a36a36cef4f3f62fe8
+Size (pxp-1.2.3.tar.gz) = 702592 bytes
+SHA1 (patch-tools_src_m2parsergen_Makefile) = 115700c42eb1a2204eb395e4840681c4663f0a76
+SHA1 (patch-tools_src_odoc_Makefile) = 1c7b769bd9d145b6e12850428af2eb61720f2334
