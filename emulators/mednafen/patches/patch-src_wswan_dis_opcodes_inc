@@ -1,8 +1,10 @@
-$NetBSD: patch-src_wswan_dis_opcodes_inc,v 1.1 2012/05/21 19:37:26 dholland Exp $
+$NetBSD: patch-src_wswan_dis_opcodes_inc,v 1.2 2012/10/24 22:36:27 wiz Exp $
 
 Comment out unused static data that refers to nonexistent functions.
 Sometimes these elements are dropped by the compiler and sometimes
 they fail the build. It is not at all clear why the behavior varies.
+
+https://sourceforge.net/tracker/?func=detail&aid=3579880&group_id=150840&atid=779049
 
 --- src/wswan/dis/opcodes.inc~	2009-05-15 01:30:50.000000000 +0000
 +++ src/wswan/dis/opcodes.inc
