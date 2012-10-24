@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 13:01:46 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/24 15:37:58 joerg Exp $
 #
 
 DISTNAME=	yaesu-0.13
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/ham/}
 

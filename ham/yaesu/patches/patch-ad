@@ -1,16 +1,66 @@
-$NetBSD: patch-ad,v 1.7 2006/01/14 11:45:46 wulf Exp $
+$NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
 
---- main.c.orig	2004-07-27 11:56:47.000000000 +0930
-+++ main.c	2006-01-14 22:59:42.000000000 +1030
-@@ -5,7 +5,6 @@
+--- main.c.orig	2004-07-27 02:26:47.000000000 +0000
++++ main.c
+@@ -5,8 +5,13 @@
  #include <stdlib.h>
  #include <termios.h>
  #include <signal.h>
 -#include <asm/io.h>
- #include <config.h>
+-#include <config.h>
++#include "config.h"
++
++#include "yaesu.h"
++
++static void bye_msg(void);
++static int port_open(int, char*[]);
++
  float freq_to_change_to;
  char flag_data_return[5];
-@@ -100,29 +99,29 @@
+ char data_array[650];
+@@ -24,34 +29,6 @@ int main(int argc, char* argv[]) {
+     char flag_data_return[5];
+     struct termios termattribs;
+     struct termios *defaults_serial;
+-    extern splt_tog();
+-    extern freq_out();
+-    extern mem_rec();
+-    extern vfo_2mem();
+-    extern mem_hide();
+-    extern mem_2vfo();
+-    extern step();
+-    extern lock();
+-    extern vfo_ab();
+-    extern clar();
+-    extern ham_gen();
+-    extern ptt();
+-    extern tuner10();
+-    extern stat_up();
+-    extern bright();
+-    extern mode();
+-    extern strt_tun();
+-    extern meter_rd();
+-    extern rd_flags();
+-    extern rptr_off();
+-    extern reptear();
+-    extern ctcss();
+-    extern stat_out();
+-    extern aux();
+-    extern wwv_find();
+-    extern outport();
+-    void yaesu(); 
+-    void cleanup();
+     signal(SIGINT, cleanup);
+     yaesu_return = 1;
+ 
+@@ -94,35 +71,35 @@ int main(int argc, char* argv[]) {
+ /*
+  *  This function returns the fd for the serial port.
+  */
+-port_open(int argc, char* argv[]) {
++static int port_open(int argc, char* argv[]) {
+     int fdSer;
+ 
      if (argc == 2) {
         switch(argv[1][0]) {
               case '0':
@@ -48,7 +98,7 @@ $NetBSD: patch-ad,v 1.7 2006/01/14 11:45:46 wulf Exp $
                  exit(3);
               }
               break;
-@@ -130,6 +129,15 @@
+@@ -130,6 +107,15 @@ port_open(int argc, char* argv[]) {
               printf("Invalid serial port number!!!\n  Remember:  com1 is 0, com2 is 1, etc.\n");
               return(-1);
         }
@@ -64,13 +114,16 @@ $NetBSD: patch-ad,v 1.7 2006/01/14 11:45:46 wulf Exp $
      } else {
         printf("usage:  yaesu [port #]\n");
         exit(3);
-@@ -139,8 +147,21 @@
+@@ -137,10 +123,23 @@ port_open(int argc, char* argv[]) {
+     return(fdSer);
+ }
  
- bye_msg() {
- 
--printf("\n Thank you for using KG0CQ's 'yaesu' program, this is version .1lx.  You may use this program for as long as you like, it will always be free to use, no matter what version.  You may distribute this program freely so long as it distributed in and with the original zipfile or tar file.  Please do not distribute modifed versions.  A nice Windows version, DOS console version, Linux console, and Linux X version should be on their way in the coming months.  If you wish to support the author's efforts just say thanks via email or packet!  email:   drranu@holly.ColoState.EDU or packet:  KG0CQ@KF0UW.#NECO.USA.NOAM Having fun hamming, hope to catch you on the air!!!\n\n");
+-bye_msg() {
 -
-++printf("\n\n\
+-printf("\n Thank you for using KG0CQ's 'yaesu' program, this is version .1lx.  You may use this program for as long as you like, it will always be free to use, no matter what version.  You may distribute this program freely so long as it distributed in and with the original zipfile or tar file.  Please do not distribute modifed versions.  A nice Windows version, DOS console version, Linux console, and Linux X version should be on their way in the coming months.  If you wish to support the author's efforts just say thanks via email or packet!  email:   drranu@holly.ColoState.EDU or packet:  KG0CQ@KF0UW.#NECO.USA.NOAM Having fun hamming, hope to catch you on the air!!!\n\n");
++static void bye_msg(void) {
+ 
++printf("\n\n\
 +    Thank you for using KG0CQ's 'yaesu' program, this is version .1lx.\n\
 +    You may use this program for as long as you like, it will always  \n\
 +    be free to use, no matter what version.  You may distribute this  \n\
