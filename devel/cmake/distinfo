@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.40 2012/09/14 13:26:20 wiz Exp $
+$NetBSD: distinfo,v 1.41 2012/10/24 22:42:16 wiz Exp $
 
 SHA1 (cmake-2.8.9.tar.gz) = b96663c0757a5edfbddc410aabf7126a92131e2b
 RMD160 (cmake-2.8.9.tar.gz) = 66808a280eb8e4ae798df3283fab8bcc3f512777
 Size (cmake-2.8.9.tar.gz) = 5658837 bytes
 SHA1 (patch-Modules_FindX11.cmake) = 4851de3ab7e3fd44f87f34385a0730f47da1c820
 SHA1 (patch-Modules_Platform_SunOS.cmake) = bec194d087b2ee092cf0db11752fb30b0e86f384
-SHA1 (patch-Utilities_KWIML_ABI.h.in) = 98df469c09dcbb8f21a5ae71cdfe696bffdb7976
+SHA1 (patch-Utilities_KWIML_ABI.h.in) = 4642d13c6bdfce92c452a4cf3876a9dd244da891
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = 4e8cef0eab2ad8cb27cd7076e077bb5e7425a95c
 SHA1 (patch-aa) = 00d3634a99727d55c77950bbc4ce6db26091dbd3
 SHA1 (patch-ab) = aee3fb2f908aed1ce6e92b7c7ccf5b06f0596502
