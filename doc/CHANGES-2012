@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3410 2012/10/24 08:57:58 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3411 2012/10/24 13:15:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5245,3 +5245,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Git-Repository to 1.27 [wen 2012-10-23]
 	Updated security/lasso to 2.3.6 [manu 2012-10-23]
 	Updated math/fftw to 3.3.2nb2 [wiz 2012-10-24]
+	Updated textproc/pxp to 1.2.3 [jaapb 2012-10-24]
