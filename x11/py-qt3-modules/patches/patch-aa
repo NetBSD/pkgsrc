@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2009/06/17 07:11:04 hasso Exp $
+$NetBSD: patch-aa,v 1.8 2012/10/24 15:32:56 joerg Exp $
 
---- configure.py.orig	2009-06-16 11:47:29 +0300
-+++ configure.py	2009-06-17 05:37:17 +0300
+--- configure.py.orig	2009-06-16 08:47:29.000000000 +0000
++++ configure.py
 @@ -195,7 +195,7 @@ class ConfigurePyQt3(ConfigureBase):
      """This class defines the methods to configure PyQt v3.
      """
@@ -20,6 +20,41 @@ $NetBSD: patch-aa,v 1.7 2009/06/17 07:11:04 hasso Exp $
  
          if opt_qtpetag:
              pyqt_modules.append("qtpe")
+@@ -258,27 +256,27 @@ class ConfigurePyQt3(ConfigureBase):
+         }
+ 
+     def code(self, extra_include_dirs, extra_lib_dir, extra_libs):
+-        generate_code("qt", extra_include_dirs=extra_include_dirs, extra_lib_dir=extra_lib_dir, extra_libs=extra_libs)
++        generate_code("qt", extra_include_dirs=extra_include_dirs, extra_lib_dir=extra_lib_dir, extra_libs=extra_libs, extra_cxxflags="-DANY=void")
+ 
+         if "qtext" in pyqt_modules:
+-            generate_code("qtext", extra_define=qsci_define, extra_include_dirs=[opt_qsciincdir], extra_lib_dir=opt_qscilibdir, extra_libs=["qscintilla"], sip_flags=qtext_sip_flags)
++            generate_code("qtext", extra_define=qsci_define, extra_include_dirs=[opt_qsciincdir], extra_lib_dir=opt_qscilibdir, extra_libs=["qscintilla"], sip_flags=qtext_sip_flags, extra_cxxflags="-DANY=void")
+ 
+         if "qtgl" in pyqt_modules:
+-            generate_code("qtgl", opengl=1)
++            generate_code("qtgl", opengl=1, extra_cxxflags="-DANY=void")
+ 
+         if "qtpe" in pyqt_modules:
+-            generate_code("qtpe", extra_libs=["qpe"], sip_flags=qtpe_sip_flags)
++            generate_code("qtpe", extra_libs=["qpe"], sip_flags=qtpe_sip_flags, extra_cxxflags="-DANY=void")
+ 
+         if "qtui" in pyqt_modules:
+-            generate_code("qtui", extra_libs=["qui"])
++            generate_code("qtui", extra_libs=["qui"], extra_cxxflags="-DANY=void")
+ 
+         if "qtaxcontainer" in pyqt_modules:
+-            generate_code("qtaxcontainer", extra_libs=["qaxcontainer"])
++            generate_code("qtaxcontainer", extra_libs=["qaxcontainer"], extra_cxxflags="-DANY=void")
+ 
+         # The rest don't need special handling.
+         for m in ("qtcanvas", "qtnetwork", "qtsql", "qttable", "qtxml"):
+             if m in pyqt_modules:
+-                generate_code(m)
++                generate_code(m, extra_cxxflags="-DANY=void")
+ 
+     def tools(self):
+         tool_dirs = []
 @@ -286,65 +284,6 @@ class ConfigurePyQt3(ConfigureBase):
          if qt_version >= 0x030000:
              # The Professional Edition needs special handling.
