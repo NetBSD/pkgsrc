@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/05/27 10:05:52 kivinen Exp $
+$NetBSD: distinfo,v 1.9 2012/10/24 08:33:51 manu Exp $
 
 SHA1 (opensc-0.11.13.tar.gz) = 408b374286004c3df15ec17856f69fd4c2a1aceb
 RMD160 (opensc-0.11.13.tar.gz) = cd900866e51cd64fa7c5a3287cd58193dec26528
@@ -11,5 +11,7 @@ SHA1 (patch-ae) = 94ca059a2e9bf5689f4193587247e443213df9a4
 SHA1 (patch-af) = 3b8db1b680c833940973f11b8abb47e34fa5ecd0
 SHA1 (patch-ag) = 1d2de187008d4ce9aac1f97f829aafd035324082
 SHA1 (patch-ah) = e9a8e3aa06af5a7ce47015f8eba41fd2bb12b32d
+SHA1 (patch-configure) = 65af2389d4a3b875ea206542ac94446e0bfc4796
 SHA1 (patch-src_libopensc_card-setcos.c) = 209bf0a92f9872635ea06d5ea9a7742c7874d61d
 SHA1 (patch-src_libopensc_cards.h) = ebc1db10feda1b2f6a666842120772908c778db7
+SHA1 (patch-src_pkcs11_pkcs11-global.c) = 06c93969a04c930a87a607f6d48a13197c1307bf
