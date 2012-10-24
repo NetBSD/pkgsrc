@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2012/10/03 21:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/24 08:57:46 wiz Exp $
 
 DISTNAME=	fftw-3.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/ \
 		http://www.fftw.org/
@@ -28,6 +28,15 @@ TEST_TARGET=		check
 
 .if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_TOOLS+=		perl
+.endif
+
+PLIST_VARS+=		pthreads
+
+PTHREAD_OPTS=		native
+.include "../../mk/pthread.buildlink3.mk"
+.if !empty(PTHREAD_TYPE:Mnative)
+CONFIGURE_ARGS+=	--enable-threads
+PLIST.pthreads=		yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"
