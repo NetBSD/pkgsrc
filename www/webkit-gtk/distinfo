@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2012/08/27 14:11:13 drochner Exp $
+$NetBSD: distinfo,v 1.54 2012/10/24 15:40:16 joerg Exp $
 
 SHA1 (webkit-1.8.3.tar.xz) = ccf567fdfd7fbc63a3340777278e41b17522b80d
 RMD160 (webkit-1.8.3.tar.xz) = a25fe7966630d2a0e0926f565e28a9054d446c14
@@ -8,6 +8,7 @@ SHA1 (patch-Source_JavaScriptCore_wtf_MathExtras.h) = a47cf7e70688d46096930b2029
 SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f056b8f08c68d44e1b9dfd2bcf60cb788b05f38f
 SHA1 (patch-Source_WebCore_css_CSSGrammar.y) = 22e704480c4f0045ed9ee20f807ce703f20749e9
 SHA1 (patch-Source_WebCore_css_CSSParser.cpp) = 8a7687bd2361184765f2757335f80a68bdc09bf7
+SHA1 (patch-Source_WebCore_editing_Editor.h) = 80dab9dc483417703b100155816b2a2bedd533e3
 SHA1 (patch-Source_WebCore_xml_XPathGrammar.y) = aa5881029a604673ef3e15be7a8d92ed3489658e
 SHA1 (patch-Source_WebCore_xml_XPathParser.cpp) = 53fec9eb744c9890ba9d2b0511bb917e8c8a1b7f
 SHA1 (patch-ai) = 7b94becb603b88c66d8d8f1619d90dc6553d970c
