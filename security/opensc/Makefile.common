@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2012/10/23 18:16:38 asau Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/10/24 08:33:51 manu Exp $
 #
 # used by security/opensc/Makefile
 # used by security/opensc-signer/Makefile
@@ -23,3 +23,5 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-sensitive-logging
+CONFIGURE_ENV+=		PCSC_CFLAGS=-I${PREFIX}/include/PCSC
+
