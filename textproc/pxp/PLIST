@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/24 13:15:32 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pxp
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pxp-lex-utf8
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pxp-lex-iso88591
@@ -7,14 +7,28 @@ lib/ocaml/site-lib/pxp-engine/META
 lib/ocaml/site-lib/pxp-engine/pxp_aux.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_codewriter.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_codewriter.mli
+lib/ocaml/site-lib/pxp-engine/pxp_core_parser.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_core_parser.mli
+lib/ocaml/site-lib/pxp-engine/pxp_core_types.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_core_types.mli
 lib/ocaml/site-lib/pxp-engine/pxp_dfa.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_dfa.mli
 lib/ocaml/site-lib/pxp-engine/pxp_document.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_document.mli
 lib/ocaml/site-lib/pxp-engine/pxp_dtd.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_dtd.mli
+lib/ocaml/site-lib/pxp-engine/pxp_dtd_parser.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_dtd_parser.mli
+${PLIST.opt}lib/ocaml/site-lib/pxp-engine/pxp_engine.a
 lib/ocaml/site-lib/pxp-engine/pxp_engine.cma
+${PLIST.opt}lib/ocaml/site-lib/pxp-engine/pxp_engine.cmxa
 lib/ocaml/site-lib/pxp-engine/pxp_entity.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_entity_manager.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_ev_parser.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_ev_parser.mli
+lib/ocaml/site-lib/pxp-engine/pxp_event.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_event.mli
+lib/ocaml/site-lib/pxp-engine/pxp_lex_aux.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_lexer_types.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_lexer_types.mli
 lib/ocaml/site-lib/pxp-engine/pxp_lexers.cmi
@@ -30,38 +44,47 @@ lib/ocaml/site-lib/pxp-engine/pxp_reader.mli
 lib/ocaml/site-lib/pxp-engine/pxp_top.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_top.cmo
 lib/ocaml/site-lib/pxp-engine/pxp_top.mli
+lib/ocaml/site-lib/pxp-engine/pxp_tree_parser.cmi
+lib/ocaml/site-lib/pxp-engine/pxp_tree_parser.mli
 lib/ocaml/site-lib/pxp-engine/pxp_types.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_types.mli
 lib/ocaml/site-lib/pxp-engine/pxp_yacc.cmi
 lib/ocaml/site-lib/pxp-engine/pxp_yacc.mli
 lib/ocaml/site-lib/pxp-lex-iso88591/META
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_aux_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_content_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_content_string_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_declaration_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_document_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_document_type_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_dtd_string_iso88591.cmi
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_iso88591.a
 lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_iso88591.cma
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_iso88591.cmxa
+lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_iso88591_01.cmi
 lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_link_iso88591.cmi
 lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_link_iso88591.cmo
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_misc_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_name_string_iso88591.cmi
-lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_within_tag_iso88591.cmi
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_link_iso88591.cmx
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-iso88591/pxp_lex_link_iso88591.o
 lib/ocaml/site-lib/pxp-lex-utf8/META
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_aux_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_content_string_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_content_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_declaration_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_document_type_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_document_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_dtd_string_utf8.cmi
 lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_link_utf8.cmi
 lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_link_utf8.cmo
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_misc_utf8.cmi
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_name_string_utf8.cmi
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_link_utf8.cmx
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_link_utf8.o
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8.a
 lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8.cma
-lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_within_tag_utf8.cmi
+${PLIST.opt}lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8.cmxa
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_01.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_02.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_03.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_04.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_05.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_06.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_07.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_08.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_09.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_10.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_11.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_12.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_13.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_14.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_15.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_16.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_17.cmi
+lib/ocaml/site-lib/pxp-lex-utf8/pxp_lex_utf8_18.cmi
 lib/ocaml/site-lib/pxp/META
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pxp-engine
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pxp-lex-iso88591
