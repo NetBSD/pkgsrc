@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2009/06/17 07:11:03 hasso Exp $
+$NetBSD: patch-aa,v 1.8 2012/10/24 15:32:56 joerg Exp $
 
 --- configure.py.orig	2009-06-16 11:47:29 +0300
 +++ configure.py	2009-06-17 05:21:23 +0300
@@ -40,6 +40,15 @@ $NetBSD: patch-aa,v 1.7 2009/06/17 07:11:03 hasso Exp $
  
          if opt_qtpetag:
              pyqt_modules.append("qtpe")
+@@ -258,7 +258,7 @@ class ConfigurePyQt3(ConfigureBase):
+         }
+ 
+     def code(self, extra_include_dirs, extra_lib_dir, extra_libs):
+-        generate_code("qt", extra_include_dirs=extra_include_dirs, extra_lib_dir=extra_lib_dir, extra_libs=extra_libs)
++        generate_code("qt", extra_include_dirs=extra_include_dirs, extra_lib_dir=extra_lib_dir, extra_libs=extra_libs, extra_cxxflags="-DANY=void")
+ 
+         if "qtext" in pyqt_modules:
+             generate_code("qtext", extra_define=qsci_define, extra_include_dirs=[opt_qsciincdir], extra_lib_dir=opt_qscilibdir, extra_libs=["qscintilla"], sip_flags=qtext_sip_flags)
 @@ -289,7 +289,7 @@ class ConfigurePyQt3(ConfigureBase):
  
              sipconfig.inform("Creating pyuic Makefile...")
