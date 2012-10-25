@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3420 2012/10/25 20:33:42 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.3421 2012/10/25 21:01:04 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5255,3 +5255,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/gv to 3.7.3 [asau 2012-10-25]
 	Updated net/ldns to 1.6.15 [pettai 2012-10-25]
 	Removed devel/equeue [cheusov 2012-10-25]
+	Updated net/drill to 1.6.15 [he 2012-10-25]
