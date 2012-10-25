@@ -1,16 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2007/01/06 22:45:49 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2012/10/25 08:28:20 asau Exp $
 
---- src/constants.h.orig	2006-09-30 10:13:00.000000000 +0200
+--- src/constants.h.orig	2012-04-07 14:12:07.000000000 +0000
 +++ src/constants.h
-@@ -68,6 +68,7 @@
- #define	NUMLEN	5		/* line number length */
- #define	PATHLEN	250		/* file pathname length */
- #define	PATLEN	250		/* symbol pattern length */
-+#define	TEMPSTRING_LEN 8191	/* max strlen() of the global temp string */
- #define TEMPSTRING_LEN 8191     /* max strlen() of the global temp string */
- #define	REFFILE	"cscope.out"	/* cross-reference output file */
- #define	NAMEFILE "cscope.files"	/* default list-of-files file */
-@@ -85,6 +86,13 @@
+@@ -85,6 +85,13 @@
  #define NUMLEN_STR STRINGIZE(NUMLEN)
  #define TEMPSTRING_LEN_STR STRINGIZE(TEMPSTRING_LEN)
  
@@ -24,9 +16,9 @@ $NetBSD: patch-aa,v 1.12 2007/01/06 22:45:49 wiz Exp $
  /* screen lines */
  #define	FLDLINE	(LINES - FIELDS - 1)	/* first input field line */
  #define	MSGLINE	0			/* message line */
-@@ -103,7 +111,7 @@
+@@ -103,7 +110,7 @@
  #define INCLUDES	8
- #define	FIELDS		9
+ #define	FIELDS		10
  
 -#if (BSD || V9) && !__NetBSD__ && !__FreeBSD__
 +#if (BSD || V9) && !__NetBSD__ && !__FreeBSD__ && !__APPLE__
