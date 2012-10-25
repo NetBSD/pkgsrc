@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2009/08/25 20:09:18 hasso Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/10/25 08:03:14 asau Exp $
 bin/cflow
 info/cflow.info
 share/locale/da/LC_MESSAGES/cflow.mo
+share/locale/fi/LC_MESSAGES/cflow.mo
 share/locale/ga/LC_MESSAGES/cflow.mo
 share/locale/id/LC_MESSAGES/cflow.mo
 share/locale/pl/LC_MESSAGES/cflow.mo
