@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/15 22:48:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/25 10:25:27 drochner Exp $
 sbin/minidlna
 share/examples/minidlna/minidlna.conf
+share/examples/rc.d/minidlna
