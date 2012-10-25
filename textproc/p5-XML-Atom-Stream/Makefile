@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:34 asau Exp $
 
 DISTNAME=	XML-Atom-Stream-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Atom-Stream/
 COMMENT=	Client interface for AtomStream
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #really: Test::More >= 0.32
 BUILD_DEPENDS+=	p5-Test-Simple>=0.32:../../devel/p5-Test-Simple

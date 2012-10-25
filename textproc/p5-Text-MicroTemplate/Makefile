@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:27 asau Exp $
 
 DISTNAME=	Text-MicroTemplate-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-MicroTemplate/
 COMMENT=	Perl 5 module providing a template engine
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Text/MicroTemplate/.packlist

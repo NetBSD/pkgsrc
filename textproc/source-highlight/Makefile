@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/08/29 11:22:20 obache Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/25 06:57:01 asau Exp $
 
 DISTNAME=	source-highlight-3.1.4
 PKGREVISION=	5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/src-highlite/
 COMMENT=	Highlight syntax of various languages source into HTML document
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags
 

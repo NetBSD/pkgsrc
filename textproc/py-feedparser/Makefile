@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/05/26 16:51:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/25 06:56:49 asau Exp $
 #
 
 DISTNAME=		feedparser-5.1.2
@@ -10,8 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://feedparser.googlecode.com/
 COMMENT=		Parse RSS and Atom feeds in Python
 LICENSE=		2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		#none
 

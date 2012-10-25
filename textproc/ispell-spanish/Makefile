@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/05 11:56:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:00 asau Exp $
 #
 
 DISTNAME=	espa~nol-1.7
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.datsi.fi.upm.es/~coes/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://es.tldp.org/htmls/coes.html
 COMMENT=	Spanish dictionary for interactive spelling checker
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 

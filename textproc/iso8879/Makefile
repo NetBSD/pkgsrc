@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/04/12 07:17:15 minskim Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/25 06:55:57 asau Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.iso.org/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	unzip
