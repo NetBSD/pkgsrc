@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2012/09/16 14:19:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.473 2012/10/25 06:43:10 jnemeth Exp $
 #
 
 COMMENT=	Audio tools
@@ -115,6 +115,10 @@ SUBDIR+=	flite
 SUBDIR+=	fluidsynth
 SUBDIR+=	freealut
 SUBDIR+=	freepats
+SUBDIR+=	freeswitch-music
+SUBDIR+=	freeswitch-sounds-en
+SUBDIR+=	freeswitch-sounds-fr
+SUBDIR+=	freeswitch-sounds-ru
 SUBDIR+=	freezetag
 SUBDIR+=	gbemol
 SUBDIR+=	gimmix
