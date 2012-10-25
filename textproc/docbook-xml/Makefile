@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/10/27 12:23:37 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/25 06:55:47 asau Exp $
 #
 
 DISTNAME=	docbook-xml-4.5
@@ -15,7 +15,6 @@ HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	XML DTD designed for computer documentation
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty

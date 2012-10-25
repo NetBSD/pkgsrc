@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:56:38 asau Exp $
 
 DISTNAME=	XML-RAI-1.3031
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	p5-XML-RSS-Parser>=4.0:../../textproc/p5-XML-RSS-Parser
 BUILD_DEPENDS+=	p5-Test-Weaken-[0-9]*:../../devel/p5-Test-Weaken
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/RAI/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:47 asau Exp $
 #
 
 DISTNAME=	Whoosh-0.1.13
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://whoosh.ca/
 COMMENT=	Fast, featureful full-text indexing and searching library implemented
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# none
 

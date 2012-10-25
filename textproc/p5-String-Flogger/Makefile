@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:21 asau Exp $
 #
 
 DISTNAME=		String-Flogger-1.101242
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/String-Flogger/
 COMMENT=		Perl 5 module for string munging for loggers
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util

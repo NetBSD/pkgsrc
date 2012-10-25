@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/21 22:30:28 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/25 06:56:37 asau Exp $
 #
 
 DISTNAME=	XML-LibXML-2.0007
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-LibXML/
 COMMENT=	Perl interface to the libxml2 library
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-SAX>=0.11:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-NamespaceSupport>=1.07:../../textproc/p5-XML-NamespaceSupport

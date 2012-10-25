@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:43 asau Exp $
 #
 
 DISTNAME=	YAML-LibYAML-0.38
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/YAML-LibYAML/
 COMMENT=	Perl XS binding to libyaml
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/YAML/LibYAML/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

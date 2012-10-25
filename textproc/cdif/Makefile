@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/25 06:55:44 asau Exp $
 #
 
 DISTNAME=		cdif-1.19
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.srekcah.org/~utashiro/perl/scripts/cdif/
 COMMENT=		Word context diff
 #LICENSE=		cdif-license # 1.19 can be used for any porpose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 

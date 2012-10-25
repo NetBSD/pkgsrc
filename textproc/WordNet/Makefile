@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/08/21 23:49:26 marino Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/25 06:55:38 asau Exp $
 #
 
 DISTNAME=		WordNet-3.0
@@ -14,8 +14,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wordnet.princeton.edu/
 COMMENT=		Lexical reference system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

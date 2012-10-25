@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/09/10 08:14:36 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:57 asau Exp $
 
 DISTNAME=	html-parser-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-html-parser-${VERSION}
@@ -15,7 +15,6 @@ NO_CONFIGURE=	yes
 
 VERSION=		19990912p2
 INSTALLATION_DIRS=	${RUBY_DOC}/html-parser ${RUBY_VENDORLIB}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SRCS=		formatter.rb html-parser.rb sgml-parser.rb
 

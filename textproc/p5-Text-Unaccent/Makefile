@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:31 asau Exp $
 #
 
 DISTNAME=	Text-Unaccent-1.08
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Unaccent/
 COMMENT=	Perl5 module that removes accents from a string
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/Unaccent/.packlist
 

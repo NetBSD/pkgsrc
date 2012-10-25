@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/08 20:03:08 marino Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:57:07 asau Exp $
 #
 
 DISTNAME=	xmlada-${XMLADA_VERS}
@@ -13,7 +13,6 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/xmlada/
 COMMENT=	Adacore XML suite for the Ada language
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 XMLADA_VERS=		4.2.0.0
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c ada

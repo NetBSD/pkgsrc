@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:50 asau Exp $
 #
 
 DISTNAME=	jsonlib-1.6.1
@@ -10,8 +10,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	https://launchpad.net/jsonlib
 COMMENT=	JSON serializer/deserializer for Python
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

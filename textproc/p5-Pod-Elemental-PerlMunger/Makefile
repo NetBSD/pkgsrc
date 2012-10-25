@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:17 asau Exp $
 
 DISTNAME=	Pod-Elemental-PerlMunger-0.093331
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	p5-Pod-Elemental>=0.092941:../../textproc/p5-Pod-Elemental
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Elemental/PerlMunger/.packlist
 

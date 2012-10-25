@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/09/10 08:00:53 taca Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:56:55 asau Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGREVISION=	2
@@ -21,7 +21,6 @@ USE_RUBY_SETUP=		yes
 USE_RUBY_SETUP_PKG=	yes
 INSTALLATION_DIRS=	bin ${RUBY_DOC}/amrita ${RUBY_EG}/amrita \
 			${RUBY_VENDORLIB}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '.cvsignore' -exec ${RM} -f {} \;
