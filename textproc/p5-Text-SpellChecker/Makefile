@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:29 asau Exp $
 #
 
 DISTNAME=	Text-SpellChecker-0.11
@@ -15,8 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Text-Aspell>=0.04:../../textproc/p5-Text-Aspell
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/SpellChecker/.packlist
 

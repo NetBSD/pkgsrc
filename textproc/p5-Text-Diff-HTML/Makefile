@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:25 asau Exp $
 
 DISTNAME=	Text-Diff-HTML-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Diff-HTML/
 COMMENT=	HTML formatting class for Text::Diff
 LICENSE=	gnu-gpl-v2 # OR artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Text-Diff>=0.11:../../textproc/p5-Text-Diff
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser

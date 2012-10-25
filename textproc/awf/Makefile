@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/07 22:24:37 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:55:42 asau Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.shar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.scn.rain.com/pub/text/
 COMMENT=	Text formatter (nroff-clone) written in awk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/^\#!/d' | ${SH}
 WRKSRC=		${WRKDIR}

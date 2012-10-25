@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/25 06:56:41 asau Exp $
 #
 
 DISTNAME=	XML-Writer-0.615
@@ -18,7 +18,6 @@ COMMENT=	Perl module for writing XML documents
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/XML/Writer/.packlist
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

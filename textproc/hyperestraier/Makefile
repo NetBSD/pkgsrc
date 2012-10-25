@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/05/25 09:48:50 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/25 06:55:56 asau Exp $
 
 .include "Makefile.common"
 
@@ -6,8 +6,6 @@ CATEGORIES=	japanese textproc www
 
 COMMENT=	Full-text search system for communities
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

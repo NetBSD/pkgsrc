@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2011/04/14 10:33:41 adam Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/25 06:55:47 asau Exp $
 
 DISTNAME=	docbook-4.5
 CATEGORIES=	textproc
@@ -15,7 +15,6 @@ DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 		docbook-4.2.zip docbook-4.3.zip docbook-4.4.zip docbook-4.5.zip
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook/

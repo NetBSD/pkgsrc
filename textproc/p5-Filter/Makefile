@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/25 06:56:12 asau Exp $
 
 DISTNAME=	Filter-1.45
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Filter/
 COMMENT=	Perl5 classes representing a number of source filters
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Filter/.packlist
 

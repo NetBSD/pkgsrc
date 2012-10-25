@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/01 14:54:38 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:55:44 asau Exp $
 #
 # Possible TODOs:
 # - set CH based on manual page section number, and real OS name
@@ -21,7 +21,6 @@ COMMENT=		Simplistic nroff-like formatter in C, like "awf"
 WRKSRC=			${WRKDIR}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

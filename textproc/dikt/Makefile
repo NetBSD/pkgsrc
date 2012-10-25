@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 23:02:28 adam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:55:46 asau Exp $
 #
 
 DISTNAME=	dikt-2d
@@ -13,8 +13,6 @@ COMMENT=	Dictionary protocol client for KDE
 LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

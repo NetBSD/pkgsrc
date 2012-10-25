@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/25 06:56:41 asau Exp $
 #
 
 DISTNAME=	XML-Writer-String-0.1
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl module for writing XML documents based on XML::Writer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
 

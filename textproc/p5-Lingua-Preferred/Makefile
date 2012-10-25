@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:14 asau Exp $
 #
 
 DISTNAME=		Lingua-Preferred-0.2.4
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Choose a preferred language from a selection
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Lingua/Preferred/.packlist

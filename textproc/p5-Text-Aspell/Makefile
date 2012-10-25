@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:23 asau Exp $
 #
 
 DISTNAME=	Text-Aspell-0.09
@@ -13,8 +13,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Text-Aspell/
 COMMENT=	Perl interface to the GNU Aspell library
 
 BUILD_DEPENDS+=	aspell-english>0:../../textproc/aspell-english
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/Aspell/.packlist
 

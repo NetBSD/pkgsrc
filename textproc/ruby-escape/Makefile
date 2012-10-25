@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/25 02:12:50 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:56 asau Exp $
 #
 
 DISTNAME=	escape-0.2
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.a-k-r.org/escape/
 COMMENT=	HTML/URI/shell escaping utilities for Ruby
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# none
 USE_RUBY_INSTALL=	yes

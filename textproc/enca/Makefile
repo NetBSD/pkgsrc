@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:55:49 asau Exp $
 #
 
 DISTNAME=		enca-1.9
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://trific.ath.cx/software/enca/
 COMMENT=		Extremely Naive Charset Analyser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

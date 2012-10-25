@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/10/22 02:37:21 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:55:56 asau Exp $
 #
 
 DISTNAME=	ipadic-2.7.0
@@ -19,7 +19,6 @@ DOCDIR=		share/doc/chasen
 DOCS=		AUTHORS COPYING ChangeLog NEWS doc/ipadic-ja.pdf
 
 INSTALLATION_DIRS=	${DOCDIR}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

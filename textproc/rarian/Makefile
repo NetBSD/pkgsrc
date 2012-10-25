@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/14 07:44:45 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:53 asau Exp $
 #
 
 DISTNAME=	rarian-0.8.1
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rarian.freedesktop.org/
 COMMENT=	Documentation metadata library
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	scrollkeeper-[0-9]*
 

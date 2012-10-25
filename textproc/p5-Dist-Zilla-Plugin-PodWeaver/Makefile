@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:11 asau Exp $
 
 DISTNAME=	Dist-Zilla-Plugin-PodWeaver-3.101641
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,6 @@ BUILD_DEPENDS+=	p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Dist/Zilla/Plugin/PodWeaver/.packlist
 

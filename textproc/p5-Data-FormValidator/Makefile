@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/25 06:56:11 asau Exp $
 
 DISTNAME=	Data-FormValidator-4.66
 PKGNAME=	p5-${DISTNAME}
@@ -23,7 +23,6 @@ BUILD_DEPENDS+=	{perl>=5.11.1,p5-CGI>=3.48}:../../www/p5-CGI
 
 PERL5_REQD+=	5.8.0
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/Data/FormValidator/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 

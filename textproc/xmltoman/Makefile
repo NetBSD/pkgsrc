@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:57:08 asau Exp $
 #
 
 DISTNAME=	xmltoman_0.4.orig
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xmltoman/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	XML to manual page converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 

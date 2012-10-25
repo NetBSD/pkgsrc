@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/03/15 11:53:40 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/25 06:57:09 asau Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	9
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~jantien/yodl/
 COMMENT=	High-level document preparation system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	bison flex gmake

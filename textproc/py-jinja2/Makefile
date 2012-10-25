@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/17 22:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/25 06:56:50 asau Exp $
 
 DISTNAME=	Jinja2-2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jinja.pocoo.org/2/
 COMMENT=	Small but fast and easy to use stand-alone template engine
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		#none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/06/14 07:43:19 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:56:54 asau Exp $
 
 DISTNAME=	rasqal-0.9.29
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://librdf.org/rasqal
 COMMENT=	Library that handles RDF query syntaxes
 LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes

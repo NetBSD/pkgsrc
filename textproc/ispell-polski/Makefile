@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/17 14:43:05 abs Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:55:58 asau Exp $
 #
 
 DISTNAME=	ispell-pl-20021127
@@ -13,7 +13,6 @@ COMMENT=	Polish dictionary for interactive spelling checker
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 
 INSTALLATION_DIRS=	lib
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	cd ${WRKSRC} && ${SH} ./zbuduj.slownik.sh

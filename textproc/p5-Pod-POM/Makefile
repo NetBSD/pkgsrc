@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/25 06:56:18 asau Exp $
 #
 
 DISTNAME=	Pod-POM-0.27
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=		p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/Pod/POM/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/06/01 12:29:46 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/25 06:57:06 asau Exp $
 #
 
 DISTNAME=		wdiff-1.1.2
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/wdiff/
 COMMENT=		Word-by-word diff
 LICENSE=		gnu-gpl-v3 # or later
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

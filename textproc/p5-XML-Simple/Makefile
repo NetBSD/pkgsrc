@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/25 06:56:40 asau Exp $
 #
 
 DISTNAME=	XML-Simple-2.20
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Simple/
 COMMENT=	Easy Perl API to read/write XML
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # well, XML::SAX >= 0.15 is required, and we distribute 0.99 after a lot of
 # out and back in of XML::SAX::Base I tend to require no specific version

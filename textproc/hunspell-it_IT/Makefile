@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/12 21:49:37 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:55 asau Exp $
 
 DISTNAME=	italiano_2_4_2007_09_01
 CATEGORIES=	textproc
@@ -15,7 +15,6 @@ DICTNAME=	it_IT
 VERSION=	2.4
 PKGNAME=	hunspell-${DICTNAME}-${VERSION}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=		yes
 PLIST_SUBST+=		DICTNAME=${DICTNAME}
 WRKSRC=			${WRKDIR}

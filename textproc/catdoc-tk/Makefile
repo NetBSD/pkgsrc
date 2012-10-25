@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/05/01 13:51:56 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:55:43 asau Exp $
 #
 
 .include "../../textproc/catdoc/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/catdoc/catdoc-tk/}
 COMMENT=		Reads MS-Word file and puts out its content as plain text (Tk interface)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		catdoc>=0.91.4nb1:../../textproc/catdoc
 

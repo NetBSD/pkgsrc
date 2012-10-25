@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/03 16:59:39 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:06 asau Exp $
 
 DISTNAME=	markdown-mode
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-1.8.1
@@ -11,8 +11,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://jblevins.org/projects/markdown-mode/
 COMMENT=	Emacs major mode for editing Markdown-formatted text files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

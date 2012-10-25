@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/08/29 19:11:12 drochner Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/25 06:55:51 asau Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.20.10
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Documentation utilities for the GNOME project
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.16:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/15 22:07:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:02 asau Exp $
 
 DISTNAME=		clucene-core-0.9.21b
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://clucene.sourceforge.net/index.php/Main_Page
 COMMENT=		Text search engine written in C++
 LICENSE=		gnu-lgpl-v2.1 OR apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++

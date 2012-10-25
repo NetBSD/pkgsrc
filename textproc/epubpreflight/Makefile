@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/07 09:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:49 asau Exp $
 #
 
 DISTNAME=	epubpreflight-0.1.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://epubcheck.googlecode.com/
 COMMENT=	TODO: Short description of the package
 LICENSE=	modified-bsd AND mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run

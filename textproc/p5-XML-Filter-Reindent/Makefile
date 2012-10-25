@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:36 asau Exp $
 
 DISTNAME=	XML-Filter-Reindent-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TJ/TJMATHER/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Filter-Reindent-0.03/
 COMMENT=	Reformats whitespace for pretty printing XML
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
 

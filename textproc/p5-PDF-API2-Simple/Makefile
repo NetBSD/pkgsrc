@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:16 asau Exp $
 
 DISTNAME=	PDF-API2-Simple-1.1.4u
 WRKSRC=		${WRKDIR}/${DISTNAME:S/u$//}
@@ -13,8 +13,6 @@ COMMENT=	Simplistic wrapper for the Perl5 PDF::API2 modules
 LICENSE=	public-domain
 
 BROKEN=		Broken upstream and not actively maintained
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-PDF-API2>=2.019:../../textproc/p5-PDF-API2
 

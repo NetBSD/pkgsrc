@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/03/15 21:00:56 tonio Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/25 06:55:53 asau Exp $
 
 DISTNAME=	hevea-1.10
 CATEGORIES=	textproc
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://ftp.inria.fr/INRIA/moscova/hevea/
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://pauillac.inria.fr/~maranget/hevea/
 COMMENT=	LaTeX to HTML translator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	ocaml>=3.07:../../lang/ocaml
 MAKE_ENV+=	DESTDIR=${DESTDIR}

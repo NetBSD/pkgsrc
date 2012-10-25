@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:20 asau Exp $
 #
 
 DISTNAME=		String-Errf-0.006
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/String-Errf/
 COMMENT=		Perl 5 module providing a simple string formatter
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 DEPENDS+=	p5-String-Formatter>=0.102081:../../textproc/p5-String-Formatter

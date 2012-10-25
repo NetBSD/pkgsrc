@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:17 asau Exp $
 
 DISTNAME=	Pod-Escapes-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module for decoding Pod E<...> sequences
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Escapes/.packlist
 

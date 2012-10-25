@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:17 asau Exp $
 #
 
 DISTNAME=	Pod-Abstract-0.20
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/Pod/Abstract/.packlist

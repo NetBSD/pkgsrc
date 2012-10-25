@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/07 21:38:04 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:01 asau Exp $
 
 DISTNAME=	sed-3.02
 PKGNAME=	ja-sed-3.02
@@ -13,8 +13,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/sed/sed.html
 COMMENT=	GNU sed + multi-byte extension
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	gsed-[0-9]*
 

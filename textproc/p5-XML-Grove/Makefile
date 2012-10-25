@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/25 06:56:36 asau Exp $
 #
 
 DISTNAME=	XML-Grove-0.46alpha
@@ -12,8 +12,6 @@ MAINTAINER=	explorer@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Grove/
 COMMENT=	Perl 5 module providing simple objects for parsed XML documents
 LICENSE=	artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libxml>=0.0.7:../../textproc/p5-libxml
 

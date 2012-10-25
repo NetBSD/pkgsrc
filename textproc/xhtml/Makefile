@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/07 20:28:29 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:57:07 asau Exp $
 #
 
 DISTNAME=	xhtml1
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w3.org/MarkUp/
 COMMENT=	DTDs for the Extensible Hypertext Markup Language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty

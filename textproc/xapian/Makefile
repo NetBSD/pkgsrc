@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/10 16:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:57:06 asau Exp $
 #
 
 DISTNAME=		xapian-core-${VERSION}
@@ -11,8 +11,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://xapian.org/
 COMMENT=		Probabilistic Information Retrieval search engine
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

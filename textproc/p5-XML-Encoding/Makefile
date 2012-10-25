@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/25 06:56:35 asau Exp $
 
 DISTNAME=	XML-Encoding-2.08
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Perl module for parsing XML encoding maps
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-XML-Parser>=2.18:../../textproc/p5-XML-Parser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/XML/Encoding/.packlist
 

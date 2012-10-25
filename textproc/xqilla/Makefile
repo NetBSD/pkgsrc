@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/23 08:34:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:09 asau Exp $
 
 DISTNAME=	XQilla-2.2.4
 PKGNAME=	${DISTNAME:tl}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xqilla.sourceforge.net/
 COMMENT=	XQuery and XPath 2 processor
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

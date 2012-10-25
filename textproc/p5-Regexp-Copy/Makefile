@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:19 asau Exp $
 #
 
 DISTNAME=		Regexp-Copy-0.06
@@ -13,7 +13,6 @@ COMMENT=		Perl5 module to copy Regexp objects
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Regexp/Copy/.packlist

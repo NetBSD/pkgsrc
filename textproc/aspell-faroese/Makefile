@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/25 06:55:40 asau Exp $
 
 DISTNAME=	aspell-fo-0.2.38
 PKGNAME=	${DISTNAME:C/-fo-/-faroese-/}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fo.speling.org/
 COMMENT=	Faroese language support for aspell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl
 REPLACE_PERL=	unsq

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:56:28 asau Exp $
 #
 
 DISTNAME=	Text-Reform-1.20
@@ -14,7 +14,6 @@ COMMENT=	Manual text wrapping and reformatting
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/Reform/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/07 20:52:31 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:53 asau Exp $
 #
 
 DISTNAME=		qprint-1.0
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.fourmilab.ch/webtools/qprint/
 MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://www.fourmilab.ch/webtools/qprint/
 COMMENT=		Encode and decode quoted-printable files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

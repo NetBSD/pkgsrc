@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/05/05 22:16:14 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/25 06:56:49 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-expat-0
@@ -8,8 +8,6 @@ CATEGORIES=	textproc python
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Python interface to expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

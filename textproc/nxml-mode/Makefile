@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/08/06 01:44:56 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:09 asau Exp $
 
 DISTNAME=		nxml-mode-20041004
 PKGREVISION=		2
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.thaiopensource.com/download/
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.thaiopensource.com/nxml-mode/
 COMMENT=		Major mode for editing XML documents for emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_TOOLS+=		makeinfo

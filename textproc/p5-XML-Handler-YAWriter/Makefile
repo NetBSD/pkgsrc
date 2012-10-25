@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:37 asau Exp $
 #
 
 DISTNAME=	XML-Handler-YAWriter-0.23
@@ -13,7 +13,6 @@ HOMEPAGE=	http://search.cpan.org/dist/XML-Handler-YAWriter/
 COMMENT=	Another Perl module for writing XML documents
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # really: XML::Parser::PerlSAX' => 0.06
 DEPENDS+=		p5-libxml>=0.07:../../textproc/p5-libxml

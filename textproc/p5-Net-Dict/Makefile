@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:15 asau Exp $
 #
 
 DISTNAME=		Net-Dict-2.08
@@ -13,7 +13,6 @@ COMMENT=		Client API for the DICT protocol defined in RFC2229
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Net/Dict/.packlist
 

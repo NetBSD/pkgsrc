@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:23 asau Exp $
 
 DISTNAME=	Template-Tiny-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Template-Tiny/
 COMMENT=	Template Toolkit reimplemented in as little code as possible
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Capture-Tiny>=0.07:../../devel/p5-Capture-Tiny
 

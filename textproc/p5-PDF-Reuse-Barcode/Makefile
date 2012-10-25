@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:16 asau Exp $
 
 DISTNAME=	PDF-Reuse-Barcode-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	p5-Barcode-Code128-[0-9]*:../../graphics/p5-Barcode-Code128
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/PDF/Reuse/Barcode/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/16 14:46:04 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:46 asau Exp $
 
 DISTNAME=		gettext-0.18.1.1
 PKGNAME=		po-mode-2.2
@@ -13,7 +13,6 @@ LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/gettext-tools/misc
 NO_CONFIGURE=		YES
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/po-mode
 
 SRCS=			po-compat.el po-mode.el start-po.el

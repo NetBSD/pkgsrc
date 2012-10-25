@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/14 20:19:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:00 asau Exp $
 #
 
 DISTNAME=	sgrep-1.94a
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.helsinki.fi/u/jjaakkol/sgrep.html
 COMMENT=	Tool for searching and indexing text, SGML,XML and HTML files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 # only used for example files

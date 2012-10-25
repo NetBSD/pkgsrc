@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:44:49 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:55:42 asau Exp $
 #
 
 DISTNAME=	aspell-cy-0.50-3
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	Welsh language support for aspell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 

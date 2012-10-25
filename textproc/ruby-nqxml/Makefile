@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/09/10 08:30:42 taca Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:58 asau Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -30,7 +30,6 @@ INSTALL_TARGET=		install \
 			--install-dir=${DESTDIR}${PREFIX}/${RUBY_VENDORLIB}
 INSTALLATION_DIRS=	${RUBY_DOC}/nqxml ${RUBY_EG}/nqxml/contrib \
 			${RUBY_EG}/nqxml/tests
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 .for f in ${DOC}

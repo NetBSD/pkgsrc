@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:37 asau Exp $
 #
 
 DISTNAME=	XML-LibXML-Simple-0.91
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-LibXML-Simple/
 COMMENT=	XML::LibXML clone of XML::Simple
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 

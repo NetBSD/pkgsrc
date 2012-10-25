@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:55:43 asau Exp $
 #
 
 .include "Makefile.common"
 
 COMMENT=	Yet another Japanese Dependency Structure Analyzer
 PKGREVISION=	1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

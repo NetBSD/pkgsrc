@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/10 10:56:15 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:00 asau Exp $
 #
 
 DISTNAME=	itstool-1.1.2
@@ -11,8 +11,6 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://itstool.org/
 COMMENT=	ITS Tool allows you to translate XML documents with PO files
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
