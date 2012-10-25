@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3418 2012/10/25 16:53:35 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3419 2012/10/25 19:25:24 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/pngcrush to 1.7.41 [adam 2012-10-25]
 	Updated mail/getmail to 4.35.0 [schmonz 2012-10-25]
 	Updated print/gv to 3.7.3 [asau 2012-10-25]
+	Updated net/ldns to 1.6.15 [pettai 2012-10-25]
