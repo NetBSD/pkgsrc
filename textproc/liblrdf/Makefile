@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/14 07:43:41 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/25 06:56:03 asau Exp $
 #
 
 DISTNAME=	liblrdf-0.5.0
@@ -10,8 +10,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	https://github.com/swh/LRDF
 COMMENT=	Library for easy manipulation of LADSPA plugin RDF descriptions
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/swh-LRDF-7ebc032
 

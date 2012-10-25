@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/03 21:57:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/25 06:56:16 asau Exp $
 #
 
 DISTNAME=	PDF-Create-1.06
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PDF-Create/
 COMMENT=	Perl5 module for creating pdf documents
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/PDF/Create/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/03/08 01:12:07 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/25 06:56:08 asau Exp $
 
 DISTNAME=		nbsed-20120308
 CATEGORIES=		textproc pkgtools
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 BOOTSTRAP_PKG=	yes
 
 USE_FEATURES=		nbcompat

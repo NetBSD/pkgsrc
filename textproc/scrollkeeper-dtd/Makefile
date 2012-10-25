@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/27 14:33:14 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:00 asau Exp $
 #
 
 DISTNAME=	scrollkeeper-omf.dtd
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scrollkeeper.sourceforge.net/
 COMMENT=	DTD from the Scrollkeeper package
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes

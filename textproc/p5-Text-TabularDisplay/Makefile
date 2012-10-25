@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:29 asau Exp $
 #
 
 DISTNAME=	Text-TabularDisplay-1.28
@@ -13,7 +13,6 @@ COMMENT=	Display text in formatted table output
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Text/TabularDisplay/.packlist

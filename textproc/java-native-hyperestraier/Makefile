@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/25 09:43:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:01 asau Exp $
 #
 
 .include "../../textproc/hyperestraier/Makefile.common"
@@ -8,8 +8,6 @@ CATEGORIES=	databases java
 
 COMMENT=	Java native interface of Hyper Estraier
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MY_SUBDIR=	javanative
 BUILD_DIRS=	${MY_SUBDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 23:02:28 adam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/25 06:55:48 asau Exp $
 
 DISTNAME=		ebview-0.3.6
 PKGREVISION=		13
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ebview/}
 MAINTAINER=		yamajun@ofug.net
 HOMEPAGE=		http://ebview.sourceforge.net/
 COMMENT=		GTK2 based EPWING dictionary browser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config msgfmt

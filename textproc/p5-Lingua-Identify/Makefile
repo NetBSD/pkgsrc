@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:14 asau Exp $
 #
 
 DISTNAME=	Lingua-Identify-0.50
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Lingua-Identify/
 COMMENT=	Language identification
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Factory-Util>=1.6:../../devel/p5-Class-Factory-Util
 DEPENDS+=	p5-Text-Affixes>=0.07:../../textproc/p5-Text-Affixes

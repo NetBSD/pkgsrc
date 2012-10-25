@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 15:18:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:55:53 asau Exp $
 #
 
 DISTNAME=	harmony-stable-${VERSION}
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alliance.seas.upenn.edu/~harmony/
 COMMENT=	Generic framework for reconciling disconnected updates to heterogeneous, replicated XML data
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk

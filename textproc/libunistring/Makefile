@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/14 23:11:47 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:04 asau Exp $
 #
 
 DISTNAME=	libunistring-0.9.3
@@ -9,8 +9,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libunistring/
 COMMENT=	Unicode string library
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:57:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/25 06:56:07 asau Exp $
 
 DISTNAME=	mdoclint-1.17
 PKGREVISION=	1
@@ -11,7 +11,6 @@ OWNER=		wiz@NetBSD.org
 COMMENT=	Tool for verifying man pages
 LICENSE=	2-clause-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFLICTS=	mdocml<1.6.9

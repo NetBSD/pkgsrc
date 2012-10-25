@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/09/07 11:18:50 ghen Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/25 06:55:50 asau Exp $
 
 DISTNAME=	glimpse-4.18.5
 PKGREVISION=	1
@@ -16,8 +16,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 # both install bin/agrep (approx. grep)
 CONFLICTS+=	tre>=0.7.5nb6
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

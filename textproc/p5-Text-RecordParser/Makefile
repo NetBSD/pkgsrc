@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:28 asau Exp $
 #
 
 DISTNAME=	Text-RecordParser-v1.5.0
@@ -23,7 +23,6 @@ DEPENDS+=	p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
 DEPENDS+=	p5-Text-TabularDisplay>=1.22:../../textproc/p5-Text-TabularDisplay
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/RecordParser/.packlist

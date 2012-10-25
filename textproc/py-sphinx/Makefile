@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/17 22:14:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/25 06:56:52 asau Exp $
 
 DISTNAME=	Sphinx-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://sphinx.pocoo.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
