@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11630 2012/10/25 08:03:30 asau Exp $
+$NetBSD: TODO,v 1.11631 2012/10/25 08:28:35 asau Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
 	o cryptopp-5.6.0
-	o cscope-15.8a
 	o csound5-5.13
 	o ctwm-3.8.1
 	o cups-1.6.1
