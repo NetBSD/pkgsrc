@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/15 22:48:01 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 10:25:27 drochner Exp $
 #
 
 DISTNAME=	minidlna_1.0.25_src
@@ -15,8 +15,14 @@ WRKSRC=	${WRKDIR}/minidlna-1.0.25
 MAKE_FILE=	BSDmakefile
 EGDIR=		${PREFIX}/share/examples/minidlna
 
+SUBST_CLASSES+=	confdir
+SUBST_STAGE.confdir= pre-build
+SUBST_FILES.confdir= minidlna.c
+SUBST_VARS.confdir= PKG_SYSCONFDIR
+
 CONF_FILES=	${EGDIR}/minidlna.conf \
 		${PKG_SYSCONFDIR}/minidlna.conf
+RCD_SCRIPTS=	minidlna
 
 INSTALLATION_DIRS=	sbin share/examples/minidlna
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-minidlna.c,v 1.1 2012/10/15 22:48:02 drochner Exp $
+$NetBSD: patch-minidlna.c,v 1.2 2012/10/25 10:25:27 drochner Exp $
 
 --- minidlna.c.orig	2012-05-08 00:10:42.000000000 +0000
 +++ minidlna.c
@@ -45,7 +45,7 @@ $NetBSD: patch-minidlna.c,v 1.1 2012/10/15 22:48:02 drochner Exp $
  	struct sigaction sa;
  	const char * presurl = NULL;
 -	const char * optionsfile = "/etc/minidlna.conf";
-+	const char * optionsfile = PREFIX "/etc/minidlna.conf";
++	const char * optionsfile = "@PKG_SYSCONFDIR@/minidlna.conf";
  	char mac_str[13];
  	char * string, * word;
  	enum media_types type;
