@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2010/12/18 13:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/25 08:28:20 asau Exp $
 
-DISTNAME=	cscope-15.7a
-PKGREVISION=	1
+DISTNAME=	cscope-15.8a
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cscope/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cscope.sourceforge.net/
