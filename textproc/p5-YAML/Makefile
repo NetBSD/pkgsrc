@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/25 06:56:42 asau Exp $
 
 DISTNAME=	YAML-0.84
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty

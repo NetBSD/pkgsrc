@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/27 11:53:07 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:57 asau Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
@@ -8,8 +8,6 @@ CATEGORIES+=	ruby
 
 COMMENT=	MeCab ruby module
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 REPLACE_RUBY+=		test.rb

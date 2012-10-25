@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:56:21 asau Exp $
 
 DISTNAME=	String-ShellQuote-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Quote strings for passing through the shell
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/String/ShellQuote/.packlist
 

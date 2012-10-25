@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/04 00:22:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:48 asau Exp $
 #
 
 DISTNAME=	PyX-0.9
@@ -16,8 +16,6 @@ DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	#none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:55:43 asau Exp $
 #
 
 DISTNAME=	btparse-0.35
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gerg.ca/software/btOOL/
 COMMENT=	BibTeX parsing library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl pod2man
 USE_LIBTOOL=YES

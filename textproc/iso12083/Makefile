@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/07/07 21:54:17 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/25 06:55:57 asau Exp $
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	5
@@ -9,8 +9,6 @@ DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://xml.coverpages.org/sgml-xml.html
 COMMENT=	SGML DTDs from the The Electronic Publishing Special Interest Group
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	iso12083
 
