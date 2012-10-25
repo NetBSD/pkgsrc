@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.18 2012/10/25 06:22:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.19 2012/10/25 15:08:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -55,3 +55,5 @@ Pullup ticket #3953 - requested by wiz
 security/clamav: security update
 Pullup ticket #3954 - requested by apb
 multimedia/xine-lib: build fix
+Pullup ticket #3955 - requested by he
+graphics/gnuplot: bug fix patch
