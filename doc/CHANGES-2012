@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3414 2012/10/25 08:28:35 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3415 2012/10/25 08:52:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5249,3 +5249,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gnuplot to 4.6.0nb4 [he 2012-10-24]
 	Updated devel/cflow to 1.4 [asau 2012-10-25]
 	Updated devel/cscope to 15.8a [asau 2012-10-25]
+	Updated math/grace to 5.1.23 [asau 2012-10-25]
