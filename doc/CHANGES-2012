@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3415 2012/10/25 08:52:33 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3416 2012/10/25 11:31:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5250,3 +5250,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/cflow to 1.4 [asau 2012-10-25]
 	Updated devel/cscope to 15.8a [asau 2012-10-25]
 	Updated math/grace to 5.1.23 [asau 2012-10-25]
+	Updated graphics/pngcrush to 1.7.41 [adam 2012-10-25]
