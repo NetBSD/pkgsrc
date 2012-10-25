@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 11:33:40 drochner Exp $
 #
 
 DISTNAME=		openjpeg-1.5.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://openjpeg.googlecode.com/files/
 
