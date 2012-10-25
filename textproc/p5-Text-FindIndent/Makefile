@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:26 asau Exp $
 
 DISTNAME=	Text-FindIndent-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Heuristically determine the indent style
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+= {perl>=5.10.1,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/FindIndent/.packlist

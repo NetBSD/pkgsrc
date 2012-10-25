@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/15 10:06:37 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:56:02 asau Exp $
 #
 
 DISTNAME=	json-glib-0.14.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/JsonGlib
 COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

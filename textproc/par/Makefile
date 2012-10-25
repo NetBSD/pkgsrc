@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:51 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:56:44 asau Exp $
 
 DISTNAME=	Par152
 PKGNAME=	par-1.52
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.nicemice.net/par/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nicemice.net/par/
 COMMENT=	Paragraph reformatter, vaguely similar to fmt, but better
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

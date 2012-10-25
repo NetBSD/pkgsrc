@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/16 21:50:38 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:08 asau Exp $
 #
 
 DISTNAME=	metauml_lib_0.2.5
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://metauml.sourceforge.net/
 COMMENT=	MetaPost library for typesetting UML diagrams
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGBASE}_lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/09/15 10:06:36 obache Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/25 06:55:49 asau Exp $
 #
 
 DISTNAME=		enchant-1.6.0
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.abisource.com/projects/enchant/
 COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config autoconf
 USE_LANGUAGES=		c c++

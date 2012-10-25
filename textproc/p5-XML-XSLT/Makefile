@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/25 06:56:42 asau Exp $
 
 DISTNAME=	XML-XSLT-0.48
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://xmlxslt.sourceforge.net/
 COMMENT=	Perl5 module for processing XSLT
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-DOM>=1.25:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
