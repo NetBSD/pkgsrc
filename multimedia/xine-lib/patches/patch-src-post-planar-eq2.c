@@ -1,4 +1,4 @@
-$NetBSD: patch-src-post-planar-eq2.c,v 1.2 2012/09/27 10:28:14 apb Exp $
+$NetBSD: patch-src-post-planar-eq2.c,v 1.2.2.1 2012/10/25 06:22:22 tron Exp $
 
 In affine_1d_MMX(), move the initialisation of %mm3 and %mm4 registers
 into a separate asm statement, to give the compiler more freedom
@@ -11,7 +11,7 @@ eq2.c:128:5: error: 'asm' operand has impossible constraints
 
 --- src/post/planar/eq2.c.orig	2012-02-05 19:17:02.000000000 +0000
 +++ src/post/planar/eq2.c
-@@ -126,8 +126,13 @@ void affine_1d_MMX (eq2_param_t *par, un
+@@ -126,8 +126,12 @@ void affine_1d_MMX (eq2_param_t *par, un
  
    while (h-- > 0) {
      asm volatile (
@@ -21,13 +21,12 @@ eq2.c:128:5: error: 'asm' operand has impossible constraints
 +      "movq (%1), %%mm4 \n\t"
 +      :
 +      : "r" (brvec), "r" (contvec)
-+      :
 +    );
 +    asm volatile (
        "pxor %%mm0, %%mm0 \n\t"
        "movl %4, %%eax\n\t"
        ASMALIGN(4)
-@@ -149,7 +154,7 @@ void affine_1d_MMX (eq2_param_t *par, un
+@@ -149,7 +153,7 @@ void affine_1d_MMX (eq2_param_t *par, un
        "decl %%eax \n\t"
        "jnz 1b \n\t"
        : "=r" (src), "=r" (dst)
@@ -36,7 +35,7 @@ eq2.c:128:5: error: 'asm' operand has impossible constraints
        : "%eax"
      );
  
-@@ -288,19 +293,26 @@ typedef struct eq2_parameters_s {
+@@ -288,19 +292,26 @@ typedef struct eq2_parameters_s {
   * description of params struct
   */
  START_PARAM_DESCR( eq2_parameters_t )
