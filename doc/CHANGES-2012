@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3417 2012/10/25 13:38:45 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.3418 2012/10/25 16:53:35 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5252,3 +5252,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/grace to 5.1.23 [asau 2012-10-25]
 	Updated graphics/pngcrush to 1.7.41 [adam 2012-10-25]
 	Updated mail/getmail to 4.35.0 [schmonz 2012-10-25]
+	Updated print/gv to 3.7.3 [asau 2012-10-25]
