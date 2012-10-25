@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/07/20 12:30:37 taca Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:46 asau Exp $
 
 MODNAME=		pspell
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for pspell support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-pspell-[0-9]*
 

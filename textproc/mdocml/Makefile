@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/21 21:24:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/25 06:56:07 asau Exp $
 
 DISTNAME=	mdocml-1.12.0
 PKGREVISION=	2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://mdocml.bsd.lv/
 COMMENT=	Man page tool (mdoc macro compiler)
 LICENSE=	2-clause-bsd # not exactly, but near enough
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=		PREFIX=${PREFIX} DBLIB=${BDB_LIBS:Q}
 
 CONFLICTS=		man-pages-[0-9]* groff-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 00:22:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:51 asau Exp $
 
 DISTNAME=	Markdown-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.freewisdom.org/projects/python-markdown/
 COMMENT=	XHTML generator using a simple markup
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 PYTHON_SELF_CONFLICT=	yes

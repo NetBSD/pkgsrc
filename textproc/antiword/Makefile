@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:47 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/25 06:55:38 asau Exp $
 #
 
 DISTNAME=	antiword-0.37
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.winfield.demon.nl/linux/
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.winfield.demon.nl/index.html
 COMMENT=	Free MS Word to text and PostScript converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	siag<3.6.1
 

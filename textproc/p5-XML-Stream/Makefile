@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/25 06:56:40 asau Exp $
 #
 
 DISTNAME=	XML-Stream-1.23
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Stream/
 COMMENT=	XML::Stream provides you with access to XML Stream
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Authen-SASL-[0-9]*:../../security/p5-Authen-SASL
 DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>0}:../../converters/p5-MIME-Base64

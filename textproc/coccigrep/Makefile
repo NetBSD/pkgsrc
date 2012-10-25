@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/01 13:12:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:55:44 asau Exp $
 #
 
 DISTNAME=	coccigrep-1.11
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.regit.org/software/coccigrep/
 COMMENT=	coccigrep is a semantic grep for the C language
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS=	coccinelle-[0-9]*:../../devel/coccinelle
 

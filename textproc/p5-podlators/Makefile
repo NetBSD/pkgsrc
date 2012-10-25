@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:44 asau Exp $
 
 DISTNAME=	podlators-2.4.0
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Pod-Simple>=3.06:../../textproc/p5-Pod-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/.packlist
 

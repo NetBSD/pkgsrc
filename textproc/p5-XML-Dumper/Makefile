@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/25 06:56:35 asau Exp $
 
 DISTNAME=	XML-Dumper-0.81
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ COMMENT=	Perl to XML structure input/output engine
 DEPENDS+=	p5-XML-Parser>=2.16:../../textproc/p5-XML-Parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/Dumper/.packlist
 
