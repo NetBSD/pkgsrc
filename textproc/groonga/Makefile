@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/09/16 15:30:45 taca Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/25 06:55:52 asau Exp $
 #
 
 DISTNAME=	groonga-2.0.3
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://groonga.org/
 COMMENT=	Fulltext search engine and column store
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_VERSION_SUPPORTED=	193
 .include "../../lang/ruby/rubyversion.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 21:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/25 06:56:38 asau Exp $
 
 DISTNAME=	XML-RSS-1.48
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-RSS/
 COMMENT=	XML-RSS helps to create and update RSS files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Mail-[0-9]*:../../time/p5-DateTime-Format-Mail

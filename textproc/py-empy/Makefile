@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 00:21:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:49 asau Exp $
 #
 
 DISTNAME=	empy-3.3
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.alcyone.com/software/empy/
 COMMENT=	Powerful and robust templating system for Python
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin share/doc
 REPLACE_PYTHON+=        em.py
 

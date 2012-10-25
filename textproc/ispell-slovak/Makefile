@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/07 21:48:22 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:00 asau Exp $
 #
 
 DISTNAME=	ispell-sk-0.2.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://sk-spell.sk.cx/
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://sk-spell.sk.cx/?id=4
 COMMENT=	Slovak dictionary for ispell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 

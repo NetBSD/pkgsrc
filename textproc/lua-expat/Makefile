@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/06/04 23:13:40 schnoebe Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:56:06 asau Exp $
 #
 
 DISTNAME=	luaexpat-1.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://matthewwild.co.uk/projects/projects
 COMMENT=	XML parser for LUA based on expat
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile

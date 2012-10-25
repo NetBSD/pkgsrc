@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/10 08:14:55 taca Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:57 asau Exp $
 
 DISTNAME=	htree-0.7
 CATEGORIES=	textproc ruby
@@ -8,8 +8,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.a-k-r.org/htree/
 COMMENT=	Tree data structure which represent HTML and XML data for Ruby
 LICENSE=	ruby-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes

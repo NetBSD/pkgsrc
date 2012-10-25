@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/11 15:35:09 wen Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:48 asau Exp $
 #
 
 VERS=		1.0.5
@@ -13,8 +13,6 @@ HOMEPAGE=	http://code.google.com/p/python-creole/
 COMMENT=	Creole <-> HTML converter
 
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-textile>=0:../../textproc/py-textile

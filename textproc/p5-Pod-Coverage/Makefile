@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/25 06:56:17 asau Exp $
 
 DISTNAME=	Pod-Coverage-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Devel-Symdump>=2.01:../../devel/p5-Devel-Symdump
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Coverage/.packlist
 

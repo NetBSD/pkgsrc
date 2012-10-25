@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:19 asau Exp $
 
 DISTNAME=	Pod-Weaver-3.101638
 PKGNAME=	p5-${DISTNAME}
@@ -33,7 +33,6 @@ BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Weaver/.packlist
 

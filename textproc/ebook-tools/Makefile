@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/14 07:43:21 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:55:48 asau Exp $
 #
 
 # also update lit2epub if you update this package.
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ebook-tools.sourceforge.net/
 COMMENT=	Tools for accessing and converting various ebook file formats
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

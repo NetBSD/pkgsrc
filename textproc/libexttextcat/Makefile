@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/03 20:05:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:03 asau Exp $
 
 DISTNAME=	libexttextcat-3.3.1
 CATEGORIES=	textproc
@@ -9,8 +9,6 @@ MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://cgit.freedesktop.org/libreoffice/libexttextcat/
 COMMENT=	Text categorization library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	libtextcat-[0-9]*
 

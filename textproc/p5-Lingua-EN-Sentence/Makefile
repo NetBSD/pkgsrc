@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:13 asau Exp $
 
 DISTNAME=	Lingua-EN-Sentence-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Lingua-EN-Sentence/
 COMMENT=	Perl module for splitting English text into sentences
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/25 06:57:06 asau Exp $
 #
 
 DISTNAME=		xapian-omega-1.2.8
@@ -10,8 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://xapian.org/docs/omega/overview.html
 COMMENT=		Search engine application for websites using Xapian
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

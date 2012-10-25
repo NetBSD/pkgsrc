@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 00:21:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:51 asau Exp $
 #
 
 DISTNAME=	markdown2-2.0.1
@@ -12,8 +12,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	https://github.com/trentm/python-markdown2
 COMMENT=	Fast and complete Python implementation of Markdown
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

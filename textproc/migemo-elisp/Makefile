@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/12 11:53:51 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:08 asau Exp $
 
 .include "../../textproc/migemo/Makefile.common"
 
@@ -6,8 +6,6 @@ PKGNAME=	${EMACS_PKGNAME_PREFIX}migemo-elisp-${MIGEMO_VERSION}
 PKGREVISION=	3
 
 COMMENT=	Elisp for migemo
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-migemo>=${MIGEMO_VERSION}:../../textproc/migemo
 

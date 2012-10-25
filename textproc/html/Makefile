@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/07/07 22:02:39 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/25 06:55:54 asau Exp $
 #
 
 DISTNAME=	html-4.01
@@ -13,7 +13,6 @@ COMMENT=	SGML DTDs for the Hypertext Markup Language
 DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty

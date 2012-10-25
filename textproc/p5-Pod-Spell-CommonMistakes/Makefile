@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:57:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/25 06:56:18 asau Exp $
 
 DISTNAME=	Pod-Spell-CommonMistakes-1.000
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=	p5-IO-stringy>=2.110:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Pod-Spell>=1.01:../../textproc/p5-Pod-Spell
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Spell/CommonMistakes/.packlist
 

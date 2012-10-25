@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/25 06:56:13 asau Exp $
 #
 
 DISTNAME=		Lingua-EN-Numbers-Ordinate-1.02
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Lingua-EN-Numbers-Ordinate/
 COMMENT=		Go from cardinal number (3) to ordinal ("3rd")
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=		p5-Array-Compare-[0-9]*:../../devel/p5-Array-Compare
 

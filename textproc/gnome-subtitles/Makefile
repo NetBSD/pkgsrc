@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 23:02:28 adam Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/25 06:55:51 asau Exp $
 
 DISTNAME=	gnome-subtitles-1.1
 PKGREVISION=	14
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnome-subtitles.sourceforge.net/
 COMMENT=	Subtitle editor for the GNOME desktop
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

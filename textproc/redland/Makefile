@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/25 06:56:54 asau Exp $
 
 DISTNAME=	redland-1.0.15
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://librdf.org/
 COMMENT=	Libraries supporting the Resource Description Framework (RDF)
 LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake perl pkg-config
 GNU_CONFIGURE=	yes

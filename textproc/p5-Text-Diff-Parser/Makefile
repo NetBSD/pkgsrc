@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:25 asau Exp $
 
 DISTNAME=	Text-Diff-Parser-0.1001
 PKGNAME=	p5-${DISTNAME:S/1001/10.01/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Diff-Parser/
 COMMENT=	Parse patch files containing unified and standard diffs
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/Diff/Parser/.packlist
 

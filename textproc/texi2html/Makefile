@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/03 21:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/25 06:57:04 asau Exp $
 
 DISTNAME=	texi2html-5.0
 PKGREVISION=	2
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 CONFLICTS=	teTeX-bin-1.*{,nb*}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes

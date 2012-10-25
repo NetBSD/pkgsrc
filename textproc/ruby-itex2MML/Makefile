@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/08 15:33:48 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:57 asau Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	${RUBY_PKGPREFIX}-itex2MML-${ITEX2MML_VERSION}
@@ -12,8 +12,6 @@ COMMENT=	Ruby binding for itex2MML
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.0
 
 BUILD_DEPENDS+=	swig>=1.3:../../devel/swig
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ITEX2MML_VERSION=	1.4.5
 

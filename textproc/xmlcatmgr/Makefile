@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/01/16 23:37:49 heinz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/25 06:57:08 asau Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -12,7 +12,6 @@ COMMENT=	XML and SGML catalog manager
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

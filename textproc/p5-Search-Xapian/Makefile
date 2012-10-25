@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/25 06:56:19 asau Exp $
 #
 
 DISTNAME=		Search-Xapian-1.2.8.0
@@ -11,8 +11,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://xapian.org/docs/bindings/perl/Search/Xapian.html
 COMMENT=		Perl XS frontend to the Xapian C++ search library
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++
 

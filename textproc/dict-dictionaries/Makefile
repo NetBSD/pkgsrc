@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/07 22:17:24 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:55:45 asau Exp $
 
 DISTNAME=	#
 PKGNAME=	dict-data-1.8.0
@@ -15,8 +15,6 @@ DISTFILES=	dict-gazetteer-1.3.tar.gz \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary data for DICTD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dict-server>=1.8.0nb1:../../textproc/dict-server
 

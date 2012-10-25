@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2012/10/03 21:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2012/10/25 06:55:39 asau Exp $
 #
 
 DISTNAME=		aspell-0.60.6.1
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aspell.net/
 COMMENT=		Spell checker with good multi-language support
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		libpspell-[0-9]*
 

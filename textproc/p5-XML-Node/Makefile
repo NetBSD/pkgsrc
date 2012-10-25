@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/25 06:56:37 asau Exp $
 #
 
 DISTNAME=	XML-Node-0.11
@@ -12,7 +12,6 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://belmont-shores.ics.uci.edu/XML::Node/
 COMMENT=	Node-based XML parsing: an simplified interface to XML::Parser
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/XML/Node/.packlist
 
 REPLACE_PERL=	parse-orders.pl parse-foo.pl parse-testsuite.pl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:01 asau Exp $
 
 DISTNAME=	sub2srt-0.5.3
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	Simple tool to convert 2 common subtitle formats to subviewer format
 
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# empty
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=		sub2srt
 INSTALLATION_DIRS=	bin

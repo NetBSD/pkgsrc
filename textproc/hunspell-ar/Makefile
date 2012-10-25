@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/12 20:52:40 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:54 asau Exp $
 
 VERSION=		20080110
 DICTNAME=		ar
@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@netbsd.org
 HOMEPAGE=		http://wiki.services.openoffice.org/wiki/Dictionaries
 COMMENT=		Arabic dictionary for hunspell
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# none
 
 INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-${DICTNAME}

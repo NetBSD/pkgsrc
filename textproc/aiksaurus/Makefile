@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/02/28 14:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/25 06:55:38 asau Exp $
 #
 
 DISTNAME=	aiksaurus-1.2.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://aiksaurus.sourceforge.net/
 COMMENT=	English-language thesaurus
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 USE_LANGUAGES=	c c++

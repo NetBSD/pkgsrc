@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:17 asau Exp $
 
 DISTNAME=	Pod-Eventual-0.093330
 PKGNAME=	p5-${DISTNAME:S/093330/093.330/}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Mixin-Linewise>=0.001:../../devel/p5-Mixin-Linewise
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Eventual/.packlist
 

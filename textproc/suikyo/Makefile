@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/10/11 09:31:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:02 asau Exp $
 #
 
 .include "Makefile.common"
 
 MAINTAINER=	obache@NetBSD.org
 COMMENT=	Romaji-Kana conversion library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	suikyo-conv-table>=${SUIKYO_VER}:../../textproc/suikyo-conv-table
 DEPENDS+=	suikyo-docs>=${SUIKYO_VER}:../../textproc/suikyo-docs

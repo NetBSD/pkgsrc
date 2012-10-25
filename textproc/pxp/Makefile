@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/24 13:15:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:47 asau Exp $
 #
 
 DISTNAME=		pxp-1.2.3
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://projects.camlcity.org/projects/pxp.html
 COMMENT=		Polymorphic XML parser, a validating XML-1.0 parser (OCaml)
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes

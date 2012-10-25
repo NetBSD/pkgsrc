@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/25 06:55:54 asau Exp $
 #
 
 DISTNAME=	hunspell-1.3.2
@@ -10,8 +10,6 @@ MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://hunspell.sourceforge.net/
 COMMENT=	Improved spellchecker
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-[0-9]+$//}
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/25 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:55:55 asau Exp $
 #
 
 VERSION=	20060207
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wiki.services.openoffice.org/wiki/Dictionaries
 COMMENT=	US American English dictionaries for hunspell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	hunspell-dictionaries/en_US-${VERSION}
 

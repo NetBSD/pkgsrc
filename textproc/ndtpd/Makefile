@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/03 21:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/25 06:56:09 asau Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
 
 PKG_INSTALLATION_TYPES=	pkgviews overwrite
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	makeinfo perl:run
 USE_LIBTOOL=	YES

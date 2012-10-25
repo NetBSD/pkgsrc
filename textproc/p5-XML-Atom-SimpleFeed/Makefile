@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/25 06:56:33 asau Exp $
 
 DISTNAME=	XML-Atom-SimpleFeed-0.86
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Atom-SimpleFeed/
 COMMENT=	Generate simple Atom syndication feeds
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/Atom/SimpleFeed/.packlist
 

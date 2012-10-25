@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/03 21:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/25 06:56:39 asau Exp $
 
 DISTNAME=	XML-SAX-0.99
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/XML-SAX/
 COMMENT=	Perl interface to the SAX2 XML Parser
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	p5-XML-SAX-Base<1.07

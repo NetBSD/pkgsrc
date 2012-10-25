@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/25 06:56:10 asau Exp $
 #
 
 DISTNAME=	CAM-PDF-1.57
@@ -11,8 +11,6 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CAM-PDF/
 COMMENT=	Perl 5 PDF manipulation library
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	csh:run
 

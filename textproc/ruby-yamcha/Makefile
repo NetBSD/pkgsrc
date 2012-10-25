@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/21 16:01:22 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:59 asau Exp $
 #
 
 .include "../../textproc/yamcha/Makefile.common"
@@ -7,8 +7,6 @@ PKGREVISION=	1
 CATEGORIES+=	ruby
 
 COMMENT=	YamCha ruby module
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

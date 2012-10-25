@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/30 10:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:45 asau Exp $
 #
 
 DISTNAME=		dadadodo-1.04
@@ -11,7 +11,6 @@ COMMENT=		Analyse texts for word probabilities and generate random sentences
 # near enough
 LICENSE=		mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin share/doc/dadadodo
 
 do-install:

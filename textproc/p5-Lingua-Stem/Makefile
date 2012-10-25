@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:14 asau Exp $
 
 DISTNAME=	Lingua-Stem-0.84
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-Lingua-Stem-Snowball-Da>=1.01:../../textproc/p5-Lingua-Stem-Snowbal
 DEPENDS+=	p5-Snowball-Norwegian>=1.0:../../textproc/p5-Snowball-Norwegian
 DEPENDS+=	p5-Snowball-Swedish>=1.01:../../textproc/p5-Snowball-Swedish
 DEPENDS+=	p5-Text-German-[0-9]*:../../textproc/p5-Text-German
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Lingua/Stem/.packlist

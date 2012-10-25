@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/15 22:01:04 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/25 06:56:06 asau Exp $
 
 DISTNAME=	lout-3.38
 CATEGORIES=	textproc
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lout.sourceforge.net/
 COMMENT=	Basser Lout, a TeX/troff-like formatter with PostScript/PDF output
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 INSTALL_TARGET=	allinstall

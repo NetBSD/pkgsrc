@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/25 06:56:25 asau Exp $
 
 DISTNAME=       Text-Emoticon-0.04
 PKGNAME=        p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIYAGAWA/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Emoticon/
 COMMENT=	Emoticon filter class
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 

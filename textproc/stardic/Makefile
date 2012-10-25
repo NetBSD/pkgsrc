@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/12/09 14:36:36 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/25 06:57:01 asau Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
@@ -9,8 +9,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	English-Chinese dictionary
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 USE_LANGUAGES=	c c++

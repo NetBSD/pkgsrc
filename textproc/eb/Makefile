@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/10/03 21:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/25 06:55:48 asau Exp $
 
 DISTNAME=	eb-4.3
 PKGREVISION=	3
@@ -54,8 +54,6 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/25 06:56:35 asau Exp $
 #
 
 DISTNAME=		XML-Feed-0.44
@@ -12,8 +12,6 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/XML-Feed/
 COMMENT=		Perl syndication feed parser for both RSS and Atom feeds
 LICENSE=		gnu-gpl-v2 # OR artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
 DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime

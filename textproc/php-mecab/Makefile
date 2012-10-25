@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/03/11 11:50:21 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:45 asau Exp $
 #
 
 PECL_DISTNAME=	php-${MODNAME}-${PECL_VERSION}
@@ -13,8 +13,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	https://github.com/rsky/php-mecab
 COMMENT=	PHP extension for MeCab Morphological Analyzer
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			share/examples/php/mecab
 INSTALLATION_DIRS+=	${EGDIR}

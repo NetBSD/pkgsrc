@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:49 asau Exp $
 #
 
 DISTNAME=	pyenchant-1.6.5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rfk.id.au/software/pyenchant/
 COMMENT=	Spellchecking library for Python
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/pyversion.mk"
 

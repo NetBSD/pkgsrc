@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/21 23:10:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/25 06:56:11 asau Exp $
 
 DISTNAME=	Encode-2.47
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~dankogai/Encode/
 COMMENT=	Provides interfaces between strings and the rest of the system
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_REQD+=	5.7.3
 

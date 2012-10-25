@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/25 06:56:40 asau Exp $
 
 DISTNAME=	XML-SAX-Writer-0.53
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	p5-XML-NamespaceSupport>=1.00:../../textproc/p5-XML-NamespaceSupport
 DEPENDS+=	p5-XML-Filter-BufferText>=1.00:../../textproc/p5-XML-Filter-BufferText
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/SAX/Writer/.packlist
 MAKE_ENV+=		PERL5LIB="${PREFIX}/${PERL5_SUB_INSTALLSITELIB}"

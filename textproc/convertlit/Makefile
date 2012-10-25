@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/10/06 21:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:55:45 asau Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -15,8 +15,6 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${CONVERTLIT_HOMEPAGE}
 COMMENT=		Convert Microsoft Legal Reader format eBooks into open format
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		lib clit18

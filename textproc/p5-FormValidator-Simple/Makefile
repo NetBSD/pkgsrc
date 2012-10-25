@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:12 asau Exp $
 
 DISTNAME=	FormValidator-Simple-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -29,8 +29,6 @@ DEPENDS+=	p5-YAML>=0.39:../../textproc/p5-YAML
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/FormValidator/Simple/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

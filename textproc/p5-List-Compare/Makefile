@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:15 asau Exp $
 #
 
 DISTNAME=		List-Compare-0.37
@@ -11,8 +11,6 @@ MAINTAINER=		pettai@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/~jkeenan/List-Compare/
 COMMENT=		Compare elements of two or more lists
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/List/Compare/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 21:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/25 06:56:26 asau Exp $
 
 DISTNAME=		Text-Kakasi-2.04
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Text-Kakasi/
 COMMENT=		Perl5 module to use Kakasi
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/Kakasi/.packlist
 

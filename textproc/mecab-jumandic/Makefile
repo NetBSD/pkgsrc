@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/29 09:10:06 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:07 asau Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -11,8 +11,6 @@ COMMENT=	Japanese Morphological Dictionary for MeCab
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	mecab-base-[0-9]*:../../textproc/mecab-base
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

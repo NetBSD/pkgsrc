@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/10 11:25:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:09 asau Exp $
 #
 
 DISTNAME=	ocaml-expat-0.9.1
@@ -9,8 +9,6 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://mmzeeman.home.xs4all.nl/ocaml/
 COMMENT=	OCaml bindings for the expat library
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 BUILD_TARGET=	all

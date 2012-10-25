@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/02/28 17:17:57 apb Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:54 asau Exp $
 #
 
 DISTNAME=	regxml-${SNAPSHOT_DATE}-${SNAPSHOT_HASH:C/(......).*/\1/}
@@ -40,8 +40,6 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
 

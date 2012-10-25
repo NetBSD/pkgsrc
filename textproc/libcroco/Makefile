@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/10/19 18:19:33 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/25 06:56:03 asau Exp $
 
 DISTNAME=	libcroco-0.6.7
 CATEGORIES=	textproc
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freespiders.org/projects/libcroco/
 COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes

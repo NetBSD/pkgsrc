@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/01/16 09:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/25 06:55:50 asau Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -13,8 +13,6 @@ MAINTAINER=	ftigeot@users.sourceforge.net
 HOMEPAGE=	http://xmlgraphics.apache.org/fop/
 COMMENT=	Print formatter driven by XSL Formatting Objects (XSL-FO)
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 USE_TOOLS+=	pax

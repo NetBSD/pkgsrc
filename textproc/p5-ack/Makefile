@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/25 06:56:43 asau Exp $
 
 DISTNAME=	ack-1.96
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ack/
 COMMENT=	Grep-like text finder
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl
 USE_LANGUAGES=		# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 21:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/25 06:55:51 asau Exp $
 
 DISTNAME=	grep-2.14
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/grep/grep.html
 COMMENT=	GNU grep
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo msgfmt

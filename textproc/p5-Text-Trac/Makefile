@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:30 asau Exp $
 
 DISTNAME=	Text-Trac-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Trac/
 COMMENT=	Perl extension for formatting text with Trac Wiki Style
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable

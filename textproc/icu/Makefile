@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/07/10 19:14:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.76 2012/10/25 06:55:56 asau Exp $
 
 DISTNAME=	icu4c-49_1_2-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icu-project.org/
 COMMENT=	Robust and full-featured Unicode services
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/icu/source
 USE_TOOLS+=		gmake

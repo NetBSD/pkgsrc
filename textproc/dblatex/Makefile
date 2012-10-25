@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/03/15 11:53:40 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:55:45 asau Exp $
 #
 
 DISTNAME=	dblatex-0.3.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dblatex.sourceforge.net/
 COMMENT=	DocBook to LaTeX Publishing
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:32 asau Exp $
 
 DISTNAME=	Text-WrapI18N-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-WrapI18N/
 COMMENT=	Perl5 module to wrap internationalized text
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Text-CharWidth-[0-9]*:../../textproc/p5-Text-CharWidth
 

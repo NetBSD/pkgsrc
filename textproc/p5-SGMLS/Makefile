@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:19 asau Exp $
 #
 
 DISTNAME=		SGMLSpm-1.03ii
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/D/DM/DMEGG/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/SGMLSpm-1.03ii/
 COMMENT=		Class for postprocessing the output from the sgmls and nsgmls parsers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 
