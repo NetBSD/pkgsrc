@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3412 2012/10/24 13:33:43 he Exp $
+$NetBSD: CHANGES-2012,v 1.3413 2012/10/25 08:03:30 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5247,3 +5247,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/fftw to 3.3.2nb2 [wiz 2012-10-24]
 	Updated textproc/pxp to 1.2.3 [jaapb 2012-10-24]
 	Updated graphics/gnuplot to 4.6.0nb4 [he 2012-10-24]
+	Updated devel/cflow to 1.4 [asau 2012-10-25]
