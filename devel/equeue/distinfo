@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/03/04 09:49:04 asau Exp $
-
-SHA1 (equeue-2.1.4.tar.gz) = 5e88fa99fc793844cb315b1be1c445c8ced3491b
-RMD160 (equeue-2.1.4.tar.gz) = 58dee14cb64c6368135501fab5d42e2229fdbdd6
-Size (equeue-2.1.4.tar.gz) = 249481 bytes
-SHA1 (patch-aa) = 4e56fecc11ffd3345cae8081568e2aa002d29d64
-SHA1 (patch-ab) = 0aad36338ffe78d1444debeeee85456aae720e9f
