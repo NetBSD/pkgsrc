@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/10/25 08:51:59 asau Exp $
 bin/xmgrace
 grace/auxiliary/README
 grace/auxiliary/convcal.c
@@ -91,6 +91,7 @@ grace/fonts/FontDataBase
 grace/fonts/enc/CP1251.enc
 grace/fonts/enc/IsoLatin1.enc
 grace/fonts/enc/IsoLatin2.enc
+grace/fonts/enc/IsoLatin5.enc
 grace/fonts/enc/IsoLatin7.enc
 grace/fonts/enc/IsoLatin9.enc
 grace/fonts/enc/KOI8-R.enc
