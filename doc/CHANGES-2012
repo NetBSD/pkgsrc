@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3422 2012/10/26 02:25:51 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.3423 2012/10/26 10:19:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5256,3 +5256,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ldns to 1.6.15 [pettai 2012-10-25]
 	Removed devel/equeue [cheusov 2012-10-25]
 	Updated net/drill to 1.6.15 [he 2012-10-25]
+	Updated devel/py-gobject3 to 3.4.1.1 [prlw1 2012-10-26]
