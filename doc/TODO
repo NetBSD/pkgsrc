@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11633 2012/10/25 16:53:35 asau Exp $
+$NetBSD: TODO,v 1.11634 2012/10/26 10:19:18 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -1030,7 +1030,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-creole-1.0.4 [pkg/46593]
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
-	o py-gobject3-3.4.1
 	o py-moin-1.9.5
 	o py-sybase-0.37
 	o py-sympy-0.7.2
