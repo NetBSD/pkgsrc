@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/11 15:40:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/26 20:16:44 joerg Exp $
 #
 
 DISTNAME=	json-c-0.10
@@ -19,5 +19,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	json.pc.in
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-tautological-compare -Wno-unused-value
+.endif
 
 .include "../../mk/bsd.pkg.mk"
