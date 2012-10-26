@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.2 2011/11/27 19:43:33 joerg Exp $
+$NetBSD: patch-at,v 1.3 2012/10/26 20:21:33 joerg Exp $
 
 --- x11/serverping.cpp.orig	2003-03-22 21:55:12.000000000 +0000
 +++ x11/serverping.cpp
@@ -14,3 +14,12 @@ $NetBSD: patch-at,v 1.2 2011/11/27 19:43:33 joerg Exp $
  #include "utils.h"
  #include "streams.h"
  #include "xetp_basic.h"
+@@ -355,7 +356,7 @@ void ServerPing::print_results_and_exit(
+ 
+ 
+ 
+-main(int argc,char** argv) {
++int main(int argc,char** argv) {
+   ServerPing ping(argc,argv);
+   ping.go();
+ }
