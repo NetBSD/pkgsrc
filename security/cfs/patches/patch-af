@@ -1,11 +1,24 @@
-$NetBSD: patch-af,v 1.1 2001/06/09 04:32:14 jlam Exp $
+$NetBSD: patch-af,v 1.2 2012/10/26 20:24:19 joerg Exp $
 
---- cfs.h.orig	Wed Dec  3 13:31:31 1997
-+++ cfs.h	Fri Jun  8 21:13:28 2001
-@@ -224,4 +224,5 @@
+--- cfs.h.orig	2012-10-26 13:15:56.000000000 +0000
++++ cfs.h
+@@ -183,6 +183,11 @@ extern instance *instances[];
+ extern nfstime roottime;
+ extern cfs_fileid rootnode;
+ 
++void closeall(void);
++void freeinstance(int i);
++void freelist(cfs_fileid *f);
++void mask_cipher(cfskey *k, unsigned char *s, int d);
++
+ #ifdef hpux
+ #define seteuid(x) setresuid(-1,x,-1)
+ #define setegid(x) setresgid(-1,x,-1)
+@@ -224,4 +229,6 @@ extern cfs_fileid rootnode;
  #define d_fileno d_ino
  */
  #endif
 -#include<stdlib.h>
 +#include <stdlib.h>
 +#include <string.h>
++#include <unistd.h>
