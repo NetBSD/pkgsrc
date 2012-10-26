@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11634 2012/10/26 10:19:18 prlw1 Exp $
+$NetBSD: TODO,v 1.11635 2012/10/26 11:12:20 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o abcm2ps-6.6.20
 	o abcmidi-20120808
 	o accerciser-1.12.2 [GNOME 2.32]
-	o accerciser-3.6.0
 	o acme-091 [pkg/44771]
 	o acpica-utils-20110623
 	o acr-0.5.2
