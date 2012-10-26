@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3426 2012/10/26 13:54:18 elric Exp $
+$NetBSD: CHANGES-2012,v 1.3427 2012/10/26 21:49:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/accerciser3 version 3.6.0 [prlw1 2012-10-26]
 	Updated math/gcalctool-gtk3 to 6.6.1 [prlw1 2012-10-26]
 	Updated security/knc to 1.7 [elric 2012-10-26]
+	Updated graphics/cairo to 1.12.6nb1 [wiz 2012-10-26]
