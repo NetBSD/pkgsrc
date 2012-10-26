@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3421 2012/10/25 21:01:04 he Exp $
+$NetBSD: CHANGES-2012,v 1.3422 2012/10/26 02:25:51 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5220,8 +5220,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/gnustep-make to 2.6.2 [rh 2012-10-22]
 	Updated devel/gnustep-objc to 1.6.1 [rh 2012-10-22]
 	Updated devel/gnustep-base to 1.24.0 [rh 2012-10-22]
-	Updated devel/gnustep-gui to 0.22.0 [rh 2012-10-22]
-	Updated devel/gnustep-back to 0.22.0 [rh 2012-10-22]
+	Updated x11/gnustep-gui to 0.22.0 [rh 2012-10-22]
+	Updated x11/gnustep-back to 0.22.0 [rh 2012-10-22]
 	Updated devel/gnustep-examples to 1.3.0nb1 [rh 2012-10-22]
 	Updated mail/Pantomime to 1.2.0 [rh 2012-10-22]
 	Updated misc/Addresses to 0.4.8 [rh 2012-10-22]
