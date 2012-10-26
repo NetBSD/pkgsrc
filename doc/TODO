@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11635 2012/10/26 11:12:20 prlw1 Exp $
+$NetBSD: TODO,v 1.11636 2012/10/26 11:24:49 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
-	o gtk3-3.6.1
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.38
