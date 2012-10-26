@@ -1,0 +1,26 @@
+$NetBSD: patch-data_buttons-programming.ui,v 1.1 2012/10/26 11:36:34 prlw1 Exp $
+
+Revert the following commit, as the window doesn't look "more seamless"
+with "missing icon" icons.
+
+commit f962134f6683a1cfcdc51fd19abd6f9fb03d5e10
+Author: Rui Matos <tiagomatos@gmail.com>
+Date:   Tue Feb 14 16:44:13 2012 +0100
+
+    Change 'undo' and 'clear' buttons to use symbolic icons
+
+    This way they don't stand out as much and the whole window looks more
+    seamless.
+
+    https://bugzilla.gnome.org/show_bug.cgi?id=670098
+--- data/buttons-programming.ui.orig	2012-02-15 22:30:59.000000000 +0000
++++ data/buttons-programming.ui
+@@ -2113,7 +2113,7 @@
+                 <child>
+                   <object class="GtkImage" id="image1">
+                     <property name="visible">True</property>
+-                    <property name="icon-name">edit-clear-symbolic</property>
++                    <property name="stock">gtk-clear</property>
+                   </object>
+                 </child>
+               </object>
