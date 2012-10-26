@@ -1,8 +1,8 @@
-$NetBSD: patch-src_topology-netbsd.c,v 1.1.1.1 2012/03/21 13:31:35 asau Exp $
+$NetBSD: patch-src_topology-netbsd.c,v 1.2 2012/10/26 20:23:25 joerg Exp $
 
---- src/topology-netbsd.c.orig	2012-03-21 11:13:38.000000000 +0000
+--- src/topology-netbsd.c.orig	2012-10-25 19:32:55.000000000 +0000
 +++ src/topology-netbsd.c
-@@ -0,0 +1,166 @@
+@@ -0,0 +1,167 @@
 +/*
 + * Copyright © 2012 Aleksej Saushev, The NetBSD Foundation
 + * Copyright © 2009-2011 inria.  All rights reserved.
@@ -142,6 +142,7 @@ $NetBSD: patch-src_topology-netbsd.c,v 1.1.1.1 2012/03/21 13:31:35 asau Exp $
 +  return hwloc_netbsd_get_thread_cpubind(topology, pthread_self(), hwloc_cpuset, flags);
 +}
 +
++void hwloc_set_netbsd_hooks(struct hwloc_topology *topology);
 +
 +void
 +hwloc_look_netbsd(struct hwloc_topology *topology)
