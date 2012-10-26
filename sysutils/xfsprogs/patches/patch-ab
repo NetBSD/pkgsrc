@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/12/30 23:03:05 agc Exp $
+$NetBSD: patch-ab,v 1.2 2012/10/26 20:32:56 joerg Exp $
 
---- include/builddefs.in	2005/12/29 13:56:15	1.1
-+++ include/builddefs.in	2005/12/29 13:59:14
-@@ -116,6 +116,11 @@
+--- include/builddefs.in.orig	2005-10-07 16:51:34.000000000 +0000
++++ include/builddefs.in
+@@ -116,6 +116,11 @@ ifeq ($(PKG_PLATFORM),freebsd)
  PLDLIBS = -L/usr/local/lib -lintl
  PCFLAGS = -I/usr/local/include
  endif
