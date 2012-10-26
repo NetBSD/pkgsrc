@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2012/10/03 21:56:01 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2012/10/26 16:08:18 shattered Exp $
 
 DISTNAME=		qemu-1.2.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
