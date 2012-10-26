@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2007/11/30 20:30:22 rillig Exp $
+$NetBSD: distinfo,v 1.8 2012/10/26 20:37:15 joerg Exp $
 
 SHA1 (cim-3.30.tar.gz) = 8636ac8d1eaee793769051af60140af80b82b22f
 RMD160 (cim-3.30.tar.gz) = d5c07046799dec8840c7c7d9f5c88e552a4c6432
@@ -6,3 +6,15 @@ Size (cim-3.30.tar.gz) = 416809 bytes
 SHA1 (patch-aa) = 6e20870f7bf0c2befdc0a73d00827606958e2931
 SHA1 (patch-ab) = e5d14212cbc4fbf956ade6c8b68f1dcc92a0841a
 SHA1 (patch-ac) = e63f63f906a968ef7dc8343e44235916eddf6574
+SHA1 (patch-src_dekl.c) = 3900ef403be2e62eafc4b826504d58eb28fed7b7
+SHA1 (patch-src_dekl.h) = 4a88d45fc715233ed4d56376104149f2299a2177
+SHA1 (patch-src_error.c) = 99a51cd6a779a6626b945df43c31ae05c43e2ad2
+SHA1 (patch-src_expbuilder.c) = e8b34170917105dcad13605c8418b21457818ce3
+SHA1 (patch-src_expchecker.c) = c5ae46c6932fd276b093ff4c149f597f7757162a
+SHA1 (patch-src_extspec.c) = 913d43ffa911e03f260f52c59bec7d3d2ce016b1
+SHA1 (patch-src_extspec.h) = e4a6bf554e045997276589baaa3e7dbc20e72a26
+SHA1 (patch-src_gen.h) = b1a6ec2dce0e518fb5430af5d42530ea82898207
+SHA1 (patch-src_genexp.c) = 1c826b32b490de0c428f8e7d0144a79298fce4ee
+SHA1 (patch-src_genpar.c) = 5675cf1ec69bf5378a709a03c25d981434628540
+SHA1 (patch-src_genstr.c) = c2e1a75636273a8281c4070ff25928e4847753be
+SHA1 (patch-src_lex.c) = c7c5011d24f8abb076b17c132d9b3cbdac816cce
