@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2009/02/13 22:18:01 abs Exp $
+$NetBSD: distinfo,v 1.10 2012/10/26 20:29:15 joerg Exp $
 
 SHA1 (libirman-0.4.1c.tbz) = be8e734842d33da4f7d6949212479f693c925a12
 RMD160 (libirman-0.4.1c.tbz) = 4ffeb2fd219df81051a8192ade02a7e39a3e0202
 Size (libirman-0.4.1c.tbz) = 48911 bytes
+SHA1 (patch-lirmand.c) = 0963825bbe9cca927ca87889ea7a1c0941e562ee
