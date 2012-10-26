@@ -1,8 +1,43 @@
-$NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
+$NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
 
---- metamail/mailto.c.orig	1994-02-09 12:30:26.000000000 -0800
-+++ metamail/mailto.c	2004-02-24 10:13:44.000000000 -0800
-@@ -570,6 +570,7 @@ char **argv;
+--- metamail/mailto.c.orig	1994-02-09 20:30:26.000000000 +0000
++++ metamail/mailto.c
+@@ -36,6 +36,7 @@ STILL NEED TO DO/SUPPORT:
+ -- Replace EditString with something that does the right thing in-line.
+ */
+ 
++#include <stdlib.h>
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <config.h>
+@@ -50,8 +51,6 @@ STILL NEED TO DO/SUPPORT:
+ #include <getfiles.h>
+ #include <time.h>
+ #include <lib_protos.h>
+-#else
+-extern char *getenv();
+ #endif
+ 
+ #ifdef SYSV
+@@ -60,9 +59,16 @@ extern char *getenv();
+ #include <unistd.h>
+ #endif
+ 
+-extern char *malloc(), *realloc(), *index(), *getmyname();
+ struct mailpart *CreateNewPart();
+ 
++void DeAlias(char *name, FILE *fp, char *hdr);
++void HeaderFputs(char *s, FILE *fp, char *hdr);
++void HandleAliasCommand(char *aliasline);
++void ProcessOneMailRC(char *fname, int IsAndrew);
++void EditCurrentMessage(int UseVisual);
++void FputsQuotingLT(char *s, FILE *fp, struct mailpart *part, int EightBitMode, int RightToLeftMode);
++void WriteOutMessage(FILE *fp, char *ToList, char *Subject, char *CCList, struct mailpart *FirstPart);
++
+ /* The main data structure for the multiple parts of the mail */
+ 
+ struct mailpart {
+@@ -570,6 +576,7 @@ char **argv;
          if (isupper(*sdum)) *sdum = tolower(*sdum);
      }
      if (strcmp(CharacterSet, "us-ascii")
@@ -10,7 +45,19 @@ $NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
           && strncmp(CharacterSet, "iso-8859-", 9)) {
          fprintf(stderr, "mailto:  Unsupported character set: %s\n", CharacterSet);
          exit(-1);
-@@ -1130,6 +1131,7 @@ struct mailpart *part;
+@@ -1042,10 +1049,7 @@ char *newid() {
+     return(idbuf);
+ }
+ 
+-WriteOutMessage(fp, ToList, Subject, CCList, FirstPart)
+-FILE *fp;
+-char *ToList, *Subject, *CCList;
+-struct mailpart *FirstPart;
++void WriteOutMessage(FILE *fp, char *ToList, char *Subject, char *CCList, struct mailpart *FirstPart)
+ {
+     FILE *fpin;
+     static int ctr = 0;
+@@ -1130,6 +1134,7 @@ struct mailpart *part;
          if (part->isrich) {
              if (strcmp(CharacterSet, "us-ascii")
                   && (strncmp(CharacterSet, "iso-8859-", 9) 
@@ -18,7 +65,7 @@ $NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
                        || part->encoding_type_needed != ENC_NONE)) {
                  fprintf(fp, "Content-type: text/richtext; charset=\"%s\"\n", CharacterSet);
              } else {
-@@ -1140,6 +1142,7 @@ struct mailpart *part;
+@@ -1140,6 +1145,7 @@ struct mailpart *part;
              WriteCtypeNicely(fp, part->content_type);
              if (strcmp(CharacterSet, "us-ascii")
                   && (strncmp(CharacterSet, "iso-8859-", 9) 
@@ -26,7 +73,20 @@ $NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
                        || part->encoding_type_needed != ENC_NONE)) {
                  fprintf(fp, "; charset=\"%s\"\n", CharacterSet);
              } else fputs("\n", fp);
-@@ -1745,6 +1748,7 @@ CreateNewPart() {
+@@ -1328,11 +1334,7 @@ struct mailpart *part;
+     }
+ }
+ 
+-FputsQuotingLT(s, fp, part, EightBitMode, RightToLeftMode)
+-char *s;
+-FILE *fp;
+-struct mailpart *part;
+-int EightBitMode, RightToLeftMode;
++void FputsQuotingLT(char *s, FILE *fp, struct mailpart *part, int EightBitMode, int RightToLeftMode)
+ {
+     static int InNewLineSequence=1;
+     int c=0;
+@@ -1745,6 +1747,7 @@ CreateNewPart() {
      }
      printf("\n\nEnter your choice as a number from 0 to %d: ", i);
      fflush(stdout);
@@ -34,7 +94,7 @@ $NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
      fgets(LineBuf, sizeof(LineBuf), stdin);
      ans = atoi(LineBuf);
      if (ans == 0 || ans == 1) {
-@@ -1791,7 +1795,7 @@ CreateNewPart() {
+@@ -1791,7 +1794,7 @@ CreateNewPart() {
                  int ct;
                  printf("\nEnter the MIME Content-type value for the data from file %s\n    (type '?' for a list of locally-valid content-types): ", sdum);
                  fflush(stdout);
@@ -43,7 +103,7 @@ $NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
                  if (index(LineBuf, '/')) {
                      char lc[100], *s, AnsBuf[100];
                      strcpy(lc, LineBuf);
-@@ -1809,7 +1813,7 @@ CreateNewPart() {
+@@ -1809,7 +1812,7 @@ CreateNewPart() {
                      }
                      if (mc) break;
                      printf("The MIME content-type '%s' is not listed in your local mailcap files,\nand may not be a valid MIME type.  Do you want to use it anyway [no] ? ", LineBuf);
@@ -52,3 +112,58 @@ $NetBSD: patch-af,v 1.3 2004/02/25 03:58:43 snj Exp $
                      while (s && *s && isspace((unsigned char) *s)) ++s;
                      if (s && (*s == 'y' || *s == 'Y')) break;
                      continue;
+@@ -2073,8 +2076,7 @@ char *ctype, *pat;
+     return(0);
+ }
+ 
+-EditCurrentMessage(UseVisual)
+-int UseVisual;
++void EditCurrentMessage(int UseVisual)
+ {
+     char *editor = NULL;
+     char *CmdBuf, *CmdBuf2, LineBuf[100];
+@@ -2212,9 +2214,7 @@ int IsAndrew;
+     }
+ }
+ 
+-ProcessOneMailRC(fname, IsAndrew)
+-char *fname;
+-int IsAndrew;
++void ProcessOneMailRC(char *fname, int IsAndrew)
+ {
+     FILE *fp;
+     char *LineBuf = NULL, *sdum;
+@@ -2290,8 +2290,7 @@ struct alias {
+     struct alias *next;
+ } *FirstAlias = NULL;
+ 
+-HandleAliasCommand(aliasline)
+-char *aliasline;
++void HandleAliasCommand(char *aliasline)
+ {
+     struct alias *tmpalias;
+     char *s, *s2;
+@@ -2357,10 +2356,7 @@ char *s;
+     return(NULL);
+ }
+ 
+-HeaderFputs(s, fp, hdr)
+-char *s;
+-FILE *fp;
+-char *hdr;
++void HeaderFputs(char *s, FILE *fp, char *hdr)
+ {
+     char *firstnonascii, *firstascii;
+ 
+@@ -2436,10 +2432,7 @@ char *hdr;
+     }
+ }
+ 
+-DeAlias(name, fp, hdr)
+-char *name;
+-FILE *fp;
+-char *hdr;
++void DeAlias(char *name, FILE *fp, char *hdr)
+ {
+     struct alias *tmpalias;
+     char *end, savechar;
