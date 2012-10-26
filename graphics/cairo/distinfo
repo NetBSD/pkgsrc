@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.66 2012/10/22 14:53:58 wiz Exp $
+$NetBSD: distinfo,v 1.67 2012/10/26 21:49:23 wiz Exp $
 
 SHA1 (cairo-1.12.6.tar.xz) = a383c6cb4495e18848ea43e1031c294aa9417a43
 RMD160 (cairo-1.12.6.tar.xz) = 78d3cc6200bd3f5a288843a6b360f44d7756fa2e
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 474f44c1c8d4017137fe59b160afca8f16ad7287
 SHA1 (patch-ab) = 62ff361d52742bba0f49c6a32149269b958fa24a
 SHA1 (patch-ac) = 151c682245004902cf42ba141e3743592691dfb9
 SHA1 (patch-ad) = a1068a37113b162ccfe14d7f1bd0baa9df7e5530
+SHA1 (patch-src_cairo-xlib-surface-shm.c) = 76ae8b94319e7ca7c0bf7f14e53512684f386778
