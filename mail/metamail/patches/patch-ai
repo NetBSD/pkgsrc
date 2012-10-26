@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
+$NetBSD: patch-ai,v 1.2 2012/10/26 20:27:15 joerg Exp $
 
---- metamail/metamail.c.orig	1994-02-16 17:57:19.000000000 -0800
-+++ metamail/metamail.c	2004-02-24 10:47:27.000000000 -0800
+--- metamail/metamail.c.orig	1994-02-17 01:57:19.000000000 +0000
++++ metamail/metamail.c
 @@ -83,7 +83,7 @@ extern char *MkRmScript();
  #define MAX_FILE_NAME_SIZE 256
  #define WRITE_BINARY	"w"
@@ -11,7 +11,29 @@ $NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
  #define CATCOMMAND  "cat"
  #define CATTEMPLATE "cat %s"
  #define METAMAIL    "metamail"
-@@ -579,7 +579,7 @@ int nestingdepth;
+@@ -100,15 +100,14 @@ extern char **environ, *gets();
+ #define CMDSIZE 1200 /* Maximum size of command to execute */
+ 
+ #define LINE_BUF_SIZE       2000
+-#ifndef MICROSOFT
+-extern char *malloc();
+-extern char *realloc();
+-#endif
+-extern char *getenv();
+-extern char *index();
+-extern char *rindex();
++#include <string.h>
++#include <stdlib.h>
++
+ char fileToDelete[MAX_FILE_NAME_SIZE];
+ 
++void PauseForUser(void);
++void maybephead(char *);
++
+ char *FindParam();
+ extern FILE *popen();
+ static char *nomem = "Out of memory!";
+@@ -579,7 +578,7 @@ int nestingdepth;
                                  int overwriteans = -1;
                                  do {
                                      printf("File %s exists.  Do you want to overwrite it (y/n) ?\n", Fname);
@@ -20,7 +42,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
                                      if (!s) {
                                          overwriteans = 0;
                                      } else {
-@@ -1202,9 +1202,9 @@ char *SquirrelFile;
+@@ -1202,9 +1201,9 @@ char *SquirrelFile;
      fprintf(outfp, "Content-type: %s", ContentType);
      for (j=0; j<CParamsUsed; ++j) {
          fprintf(outfp, " ; ");
@@ -32,7 +54,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
      }
      fprintf(outfp, "\n\n"); 
      TranslateInputToOutput(InputFP, outfp, EncodingCode, ContentType);
-@@ -1823,7 +1823,7 @@ char *ctype, *progname, *label;
+@@ -1823,7 +1822,7 @@ char *ctype, *progname, *label;
          } else {
              printf("This message contains '%s'-format data.\nDo you want to view it using the '%s' command (y/n) [y] ? ", ctype, ShortCommand(progname));
          }
@@ -41,7 +63,16 @@ $NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
          if (!s) return(0); /* EOF */
  	while (s && *s && isspace((unsigned char) *s)) ++s;
  	if (*s == 'y' || *s == 'Y' || !*s || *s == '\n') return(1);
-@@ -2022,7 +2022,8 @@ int ShowLeadingWhitespace;
+@@ -1900,7 +1899,7 @@ char *hdr;
+ }
+ 
+ /* check the header given to see if it matches any in the KeyHeadList */
+-maybephead(hdr)
++void maybephead(hdr)
+ char *hdr;
+ {
+     char *s;
+@@ -2022,7 +2021,8 @@ int ShowLeadingWhitespace;
      if (lc2strcmp(charset, PrevCharset)) {
          char *s2, *charsetinuse;
  
@@ -51,7 +82,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
          for (s2=PrevCharset; *s2; ++s2) {
              if (isupper((unsigned char) *s2)) *s2 = tolower((unsigned char) *s2);
          }
-@@ -2032,7 +2033,7 @@ int ShowLeadingWhitespace;
+@@ -2032,7 +2032,7 @@ int ShowLeadingWhitespace;
          }
      }
      if (ecode == ENCODING_NONE) {
@@ -60,3 +91,18 @@ $NetBSD: patch-ai,v 1.1 2004/02/25 03:58:43 snj Exp $
      } else {
          /* What follows is REALLY bogus, but all my encoding stuff is pipe-oriented right now... */
          MkTmpFileName(TmpFile);
+@@ -2655,12 +2655,12 @@ char *s2;
+ #endif
+ }
+ 
+-PauseForUser() {
++void PauseForUser() {
+ #if defined(MSDOS) || defined(AMIGA)
+     char Buf[100];
+ #endif
+ 
+-    if (DefinitelyNotTty || MustNotBeTty) return;	
++    if (DefinitelyNotTty || MustNotBeTty) return;
+ #if defined(MSDOS) || defined(AMIGA)
+     printf("Press RETURN to go on\n");
+     gets(Buf);

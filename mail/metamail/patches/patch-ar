@@ -1,8 +1,12 @@
-$NetBSD: patch-ar,v 1.1 2006/01/19 10:55:30 tron Exp $
+$NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
 
 --- richmail/richtext.c.orig	1994-02-09 16:31:18.000000000 +0000
-+++ richmail/richtext.c	2006-01-19 10:51:42.000000000 +0000
-@@ -16,6 +16,8 @@
++++ richmail/richtext.c
+@@ -13,18 +13,16 @@ OF THIS MATERIAL FOR ANY PURPOSE.  IT IS
+ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+ */
+ 
++#include <string.h>
  #include <stdio.h>
  #include <ctype.h>
  #include <signal.h>
@@ -11,16 +15,57 @@ $NetBSD: patch-ar,v 1.1 2006/01/19 10:55:30 tron Exp $
  #include "richlex.h"
  #include "richset.h"
  #include <config.h>
-@@ -79,6 +81,8 @@
+ 
+-extern char *getenv();
+-#ifdef AMIGA
+-extern char *strchr();
+-#endif
+-
+ #ifdef MSDOS
+ unsigned _stklen=16384;	/* Increase stack size under MS-DOS */
+ #endif
+@@ -79,7 +77,13 @@ static int FakeTerminal;
  extern tputs();
  #endif
  
+-static outputc(), realoutputc(), MakeWorkingMargins(), Pause(), fputsmovingright(), ResetTerminalCodes(), FinalizeTerminal(), outputstr(), FPUTS();
 +static int lc2strcmp(char *s1, char *s2);
 +
- static outputc(), realoutputc(), MakeWorkingMargins(), Pause(), fputsmovingright(), ResetTerminalCodes(), FinalizeTerminal(), outputstr(), FPUTS();
++static outputc(), realoutputc(), MakeWorkingMargins(), Pause(), FinalizeTerminal(), outputstr(), FPUTS();
++static void fputsmovingright(struct charsetmember *s, FILE *fp);
++static void ResetTerminalCodes(int FakeTerminal, int standout, int underline, int bold, char *standoutbuf, char *standendbuf,
++                    int modifiedstandout, char *StartUnderline, char *StopUnderline, int modifiedunderline,
++                    char *BoldOn, char *BoldOff, int modifiedbold);
  
  #define	OUTC(c)		(outputc((RCHAR)(c)))
-@@ -989,7 +993,7 @@
+ 
+@@ -905,9 +909,7 @@ static Pause()
+ /* Leading spaces should be output as MoveRight, to avoid 
+    having margins that are underlined or reverse video */
+ 
+-static fputsmovingright(s, fp)
+-struct charsetmember *s;
+-FILE *fp;
++static void fputsmovingright(struct charsetmember *s, FILE *fp)
+ {
+     int inmargin=1;
+     if (!s) return;
+@@ -925,11 +927,9 @@ FILE *fp;
+     }
+ }
+ 
+-static ResetTerminalCodes(FakeTerminal, standout, underline, bold, standoutbuf, standendbuf,
+-                    modifiedstandout, StartUnderline, StopUnderline, modifiedunderline,
+-                    BoldOn, BoldOff, modifiedbold)
+-char *standoutbuf, *standendbuf, *StartUnderline, *StopUnderline,
+-    *BoldOn, *BoldOff;
++static void ResetTerminalCodes(int FakeTerminal, int standout, int underline, int bold, char *standoutbuf, char *standendbuf,
++                    int modifiedstandout, char *StartUnderline, char *StopUnderline, int modifiedunderline,
++                    char *BoldOn, char *BoldOff, int modifiedbold)
+ {
+     if (OverStrike)
+ 	return;
+@@ -989,7 +989,7 @@ FILE *fp;
      while(*s) (*RichtextPutc)((int)(*s++),fp);
  }
  
