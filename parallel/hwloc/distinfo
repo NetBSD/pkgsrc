@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/10/17 03:11:44 asau Exp $
+$NetBSD: distinfo,v 1.4 2012/10/26 20:23:25 joerg Exp $
 
 SHA1 (hwloc-1.5.tar.gz) = 0ff8c81481987627dc21b3ed826caaefc94d4d0f
 RMD160 (hwloc-1.5.tar.gz) = eb9a055db25561a8d8aa35c6a54f9787ee3839ed
@@ -6,5 +6,5 @@ Size (hwloc-1.5.tar.gz) = 3118586 bytes
 SHA1 (patch-config_hwloc.m4) = 9a76635c82021fe79d7ffab0642b7d667c43b0d5
 SHA1 (patch-configure.ac) = 5ee0bdd92edf7b33fc41ca37eac8a93ab2c28bbe
 SHA1 (patch-src_Makefile.am) = 8da2df8954347d6de72b18dee6f5141db549f9a5
-SHA1 (patch-src_topology-netbsd.c) = aa5729b8e10326f6e30aaab40bf5368955a66733
+SHA1 (patch-src_topology-netbsd.c) = fdce87839e7215664d783bace5aac29f8a835bd2
 SHA1 (patch-src_topology.c) = 4e7bdac212a96c51e4464bed05f2ac54bc6f5a53
