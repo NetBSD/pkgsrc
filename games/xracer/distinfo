@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2006/02/28 17:45:55 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/10/26 20:22:12 joerg Exp $
 
 SHA1 (xracer-0.96.9.tar.gz) = 8c7a4f0be46ee83bbb588f6c5834340f519a3059
 RMD160 (xracer-0.96.9.tar.gz) = 1e9611dd55b1a3f0bf681a7051fcbb37bec47a6e
@@ -21,3 +21,5 @@ SHA1 (patch-ap) = 491cf858882cedc2fce86503240b6ccb63e72c77
 SHA1 (patch-aq) = 90dd0c5a669439b47ca489117b9efa19c656f40a
 SHA1 (patch-ar) = be958b29fdf3fdb82df9b0cc6f1c152371c7a858
 SHA1 (patch-as) = 5f22c78bec9b9fab9feb2cae73afc251f4367066
+SHA1 (patch-include_xracer-craft.h) = b53a6f89f29263451ea111a44a5b84eb91721c1f
+SHA1 (patch-include_xracer-player.h) = 6a7f33c926d74c1d2ee9dc21d91acbf269b57f6c
