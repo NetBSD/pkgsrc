@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2012/07/30 04:08:53 dholland Exp $
+$NetBSD: distinfo,v 1.8 2012/10/26 20:14:51 joerg Exp $
 
 SHA1 (xscribble.tgz) = 9983577533c6b6f482e2bfe863f54604337562c7
 RMD160 (xscribble.tgz) = 49f5a5339819a76e303a135d54fb8ffd4f88febb
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 6da2e1ba900c05d428de74b44e369c0e0c242190
 SHA1 (patch-ac) = 61557798a2ea575862e9c0a14761465491ec6ac5
 SHA1 (patch-ad) = 9fe0ce4f137975cd380280e13ccfa1543016b5b7
 SHA1 (patch-ae) = 794a20d07760403be3fd90fef5de604732834771
+SHA1 (patch-lirec_sc.c) = c53184fc5161ce5484f5e6139bae411727538f41
