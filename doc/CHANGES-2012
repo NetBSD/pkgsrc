@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3431 2012/10/27 12:02:27 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3432 2012/10/27 12:13:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5265,3 +5265,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/hdf5-c++ to 1.8.9 [asau 2012-10-27]
 	Updated math/units to 2.01 [wen 2012-10-27]
 	Updated devel/p5-CPAN-Perl-Releases to 0.80 [wen 2012-10-27]
+	Updated devel/p5-Devel-PatchPerl to 0.76 [wen 2012-10-27]
