@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/06/19 08:13:13 taca Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/27 19:43:33 wiz Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -8,6 +8,7 @@ SUBDIR+=	gnucash
 SUBDIR+=	gnucash-docs
 SUBDIR+=	kmymoney2
 SUBDIR+=	libofx
+SUBDIR+=	moneyguru
 SUBDIR+=	p5-Algorithm-LUHN
 SUBDIR+=	p5-Data-Currency
 SUBDIR+=	p5-Finance-Currency-Convert-WebserviceX
