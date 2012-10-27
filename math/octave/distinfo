@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2012/09/13 23:39:14 asau Exp $
+$NetBSD: distinfo,v 1.35 2012/10/27 13:01:35 asau Exp $
 
 SHA1 (octave-3.6.3.tar.bz2) = e8bd0c0b33ab9714ddb524f2258546c3536f0628
 RMD160 (octave-3.6.3.tar.bz2) = 1b0f75da1efc77cef0698a7affe56a477430cc1f
@@ -7,4 +7,5 @@ SHA1 (patch-fflush-fpos_t.c) = 24ed7f95f8431b59bc5ee0dfb0e6624b8029f512
 SHA1 (patch-fseeko-fpos_t.c) = ca846a014f9adfd47f7bbcf6557bf26a53f4a8e9
 SHA1 (patch-libgnu_string.in.h) = 4af39b76faa3ac90454a9d664919b7a6cd45fa9d
 SHA1 (patch-liboctave_oct-time.cc) = 40c21f509b6c95942e6ba43c52494d1d707ed515
+SHA1 (patch-scripts_pkg_pkg.m) = e6fa838e3910d52164d7cb3ca084c748cd68abb9
 SHA1 (patch-src_oct-conf.h.in) = d3fa5166db289fbd9eba355911341e891fb6d822
