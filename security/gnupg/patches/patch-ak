@@ -1,4 +1,9 @@
-$NetBSD: patch-ak,v 1.3 2006/04/04 21:16:37 wiz Exp $
+$NetBSD: patch-ak,v 1.4 2012/10/27 17:39:12 wiz Exp $
+
+Add a patch to handle systems which have uint64_t but not the UINT64_C
+macro.  This could happen with UNIX98-type systems, such as the code on
+our netbsd-1-5 branch, and would prevent this package from building on
+such systems.  Problem also reported to the original author.
 
 --- include/types.h.orig	2005-07-27 17:02:56.000000000 +0000
 +++ include/types.h
