@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2012/10/23 10:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2012/10/27 17:43:28 wiz Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,8 +42,6 @@ DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-release-version=${PKGNAME:Q}
-CONFIGURE_ARGS+=	--with-vendor-name="The NetBSD Foundation"
-CONFIGURE_ARGS+=	--with-vendor-name-short="pkgsrc"
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
 CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
@@ -55,7 +53,6 @@ CONFIGURE_ARGS+=	--without-dtrace
 CONFIGURE_ARGS+=	--without-dtrace
 .endif
 CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
-CONFIGURE_ARGS+=	--with-vendor-web="http://www.pkgsrc.org/"
 
 CONFIGURE_ARGS+=	--enable-xorg
 
