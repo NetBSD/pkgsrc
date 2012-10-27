@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3438 2012/10/27 19:43:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3439 2012/10/27 22:19:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox to 16.0.2 [ryoon 2012-10-27]
 	Updated x11/modular-xorg-server to 1.6.5nb13 [wiz 2012-10-27]
 	Added finance/moneyguru version 2.6.1 [wiz 2012-10-27]
+	Added security/KeePass version 2.20.1 [wiz 2012-10-27]
