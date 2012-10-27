@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3427 2012/10/26 21:49:42 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3428 2012/10/27 08:55:11 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5261,3 +5261,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/gcalctool-gtk3 to 6.6.1 [prlw1 2012-10-26]
 	Updated security/knc to 1.7 [elric 2012-10-26]
 	Updated graphics/cairo to 1.12.6nb1 [wiz 2012-10-26]
+	Updated devel/hdf5 to 1.8.9 [asau 2012-10-27]
