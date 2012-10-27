@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3436 2012/10/27 16:39:09 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3437 2012/10/27 17:51:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5271,3 +5271,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/p5-Test-TCP to 1.18 [wen 2012-10-27]
 	Updated devel/xulrunner to 16.0.2 [ryoon 2012-10-27]
 	Updated www/firefox to 16.0.2 [ryoon 2012-10-27]
+	Updated x11/modular-xorg-server to 1.6.5nb13 [wiz 2012-10-27]
