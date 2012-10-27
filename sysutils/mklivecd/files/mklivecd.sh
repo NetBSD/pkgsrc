@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.49 2008/04/29 13:48:06 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.50 2012/10/27 21:43:28 zafer Exp $
 #
 # Copyright (c) 2004-2008 Juan Romero Pardines.
 # All rights reserved.
@@ -679,11 +679,11 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.49 2008/04/29 13:48:06 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.50 2012/10/27 21:43:28 zafer Exp $
 # 
 
 # PROVIDE: root
-# REQUIRE: fsck
+# REQUIRE: fsck_root
 
 . /etc/rc.subr
 
