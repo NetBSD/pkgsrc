@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2012/02/16 18:45:59 hans Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/10/27 08:54:48 asau Exp $
 # used by devel/hdf5-c++/Makefile
 
-HDF5_VER=	1.8.7
+HDF5_VER=	1.8.9
 DISTNAME=	hdf5-${HDF5_VER}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current/src/
@@ -19,6 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
+DISTINFO_FILE=	${.CURDIR}/../../devel/hdf5/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/hdf5/patches
 
 # it appears that this file is informative only and is not actually
