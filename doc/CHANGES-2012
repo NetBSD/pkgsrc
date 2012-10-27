@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3428 2012/10/27 08:55:11 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3429 2012/10/27 08:55:27 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5262,3 +5262,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/knc to 1.7 [elric 2012-10-26]
 	Updated graphics/cairo to 1.12.6nb1 [wiz 2012-10-26]
 	Updated devel/hdf5 to 1.8.9 [asau 2012-10-27]
+	Updated devel/hdf5-c++ to 1.8.9 [asau 2012-10-27]
