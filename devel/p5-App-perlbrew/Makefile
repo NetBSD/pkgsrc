@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/27 12:27:44 wen Exp $
 
-DISTNAME=	App-perlbrew-0.41
+DISTNAME=	App-perlbrew-0.54
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -12,10 +11,10 @@ COMMENT=	Manage perl installations in your $$HOME
 LICENSE=	mit
 
 DEPENDS+=	p5-File-Path-Tiny>=0.1:../../devel/p5-File-Path-Tiny
-DEPENDS+=	p5-Devel-PatchPerl>=0.62:../../devel/p5-Devel-PatchPerl
+DEPENDS+=	p5-Devel-PatchPerl>=0.76:../../devel/p5-Devel-PatchPerl
 DEPENDS+=	p5-local-lib>=1.008:../../devel/p5-local-lib
-DEPENDS+=	p5-Capture-Tiny>=0.13:../../devel/p5-Capture-Tiny
-DEPENDS+=	p5-CPAN-Perl-Releases>=0.40:../../devel/p5-CPAN-Perl-Releases
+DEPENDS+=	p5-Capture-Tiny>=0.20:../../devel/p5-Capture-Tiny
+DEPENDS+=	p5-CPAN-Perl-Releases>=0.76:../../devel/p5-CPAN-Perl-Releases
 
 # actually, only TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Test-Simple>=0.98:../../devel/p5-Test-Simple
