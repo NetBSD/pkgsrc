@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/27 22:18:50 wiz Exp $
+bin/KeePass
+libexec/KeePass/KeePass.XmlSerializers.dll
+libexec/KeePass/KeePass.chm
+libexec/KeePass/KeePass.exe
+libexec/KeePass/KeePass.exe.config
+libexec/KeePass/KeePassLibC32.dll
+libexec/KeePass/KeePassLibC64.dll
+libexec/KeePass/License.txt
+libexec/KeePass/ShInstUtil.exe
+libexec/KeePass/XSL/KDBX_DetailsFull.xsl
+libexec/KeePass/XSL/KDBX_DetailsLite.xsl
+libexec/KeePass/XSL/KDBX_PasswordsOnly.xsl
+libexec/KeePass/XSL/KDBX_Styles.css
+libexec/KeePass/XSL/KDBX_Tabular.xsl
+libexec/KeePass/XSL/TableHeader.gif
