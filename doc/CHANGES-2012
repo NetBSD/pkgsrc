@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3435 2012/10/27 12:35:10 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3436 2012/10/27 16:39:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5269,3 +5269,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Capture-Tiny to 0.20 [wen 2012-10-27]
 	Updated devel/p5-App-perlbrew to 0.54 [wen 2012-10-27]
 	Updated net/p5-Test-TCP to 1.18 [wen 2012-10-27]
+	Updated devel/xulrunner to 16.0.2 [ryoon 2012-10-27]
+	Updated www/firefox to 16.0.2 [ryoon 2012-10-27]
