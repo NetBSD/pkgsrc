@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2009/11/17 17:11:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/28 08:23:16 wiz Exp $
 
-DISTNAME=	gnome-common-2.28.0
+DISTNAME=	gnome-common-3.6.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-common/2.28/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-common/3.6/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
