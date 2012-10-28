@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/10/03 21:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/28 06:30:10 asau Exp $
 
 DISTNAME=	awstats-7.1
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.awstats.org/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 

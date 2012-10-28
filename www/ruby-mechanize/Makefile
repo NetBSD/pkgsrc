@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/02 01:18:05 taca Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:31:03 asau Exp $
 
 DISTNAME=	mechanize-2.5.1
 CATEGORIES=	www
@@ -7,8 +7,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://mechanize.rubyforge.org/
 COMMENT=	Library to automate interaction with websites
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5<1:../../net/ruby-domain_name
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.17<2:../../mail/ruby-mime-types

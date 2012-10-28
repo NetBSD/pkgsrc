@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2010/02/16 14:52:33 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:07 asau Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
 
 MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 

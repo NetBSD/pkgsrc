@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/28 06:30:44 asau Exp $
 
 DISTNAME=	Kwiki-Icons-Gnome-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 #HOMEPAGE=	http://search.cpan.org/dist/Kwiki-Icons-Gnome/
 COMMENT=	Kwiki GNOME icons plugin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Kwiki>=0.34:../../www/p5-Kwiki
 

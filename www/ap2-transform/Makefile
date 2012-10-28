@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/14 07:44:46 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:08 asau Exp $
 #
 
 DISTNAME=	mod_transform-0.4.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.outoforder.cc/projects/apache/mod_transform/
 COMMENT=	Filter module for Apache 2.0 to do dynamic XSL transformations
 LICENSE=	gnu-gpl-v2 # or later
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

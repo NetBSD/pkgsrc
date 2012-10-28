@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/03/15 11:53:44 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/28 06:31:10 asau Exp $
 #
 
 DISTNAME=	zopeedit-0.7-src
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/Caseman/ExternalEditor
 COMMENT=	Helper client application for Zope's ExternalEditor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	#none
 

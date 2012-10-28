@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:17 asau Exp $
 #
 
 DISTNAME=		htmlfix-1.03
@@ -15,7 +15,6 @@ USE_TOOLS+=		perl:run
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 REPLACE_PERL=		htmlfix.pl
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

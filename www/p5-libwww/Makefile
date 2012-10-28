@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2012/10/03 21:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2012/10/28 06:30:56 asau Exp $
 
 DISTNAME=	libwww-perl-6.04
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 library for WWW access
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 #		Encode in perl 5.14

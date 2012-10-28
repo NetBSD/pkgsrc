@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:37 asau Exp $
 #
 
 DISTNAME=		HTML-Form-6.03
@@ -13,8 +13,6 @@ COMMENT=		HTML Form Class that represents an HTML form element
 LICENSE=		${PERL5_LICENSE}
 
 CONFLICTS+=		p5-libwww<6.00
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-HTTP-Date>=6.00:../../www/p5-HTTP-Date
 
