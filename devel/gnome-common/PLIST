@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/10/28 08:23:16 wiz Exp $
 bin/gnome-autogen.sh
 bin/gnome-doc-common
+share/aclocal/gnome-code-coverage.m4
 share/aclocal/gnome-common.m4
 share/aclocal/gnome-compiler-flags.m4
 share/gnome-common/data/omf.make
