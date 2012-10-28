@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/28 06:30:33 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-State-Cookie-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/Session/State/Cookie/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

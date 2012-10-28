@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/08/10 15:04:32 hauke Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:59 asau Exp $
 #
 
 PYBLOXSOMVERS=	1.5.2
@@ -13,8 +13,6 @@ HOMEPAGE=	http://pyblosxom.github.com/
 COMMENT=	PyBlosxom is a lightweight file-based weblog system
 
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${DISTNAME}	# upstream reissued tarball with no changes
 

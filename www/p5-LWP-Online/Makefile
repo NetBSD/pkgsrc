@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:47 asau Exp $
 #
 
 DISTNAME=	LWP-Online-1.08
@@ -13,7 +13,6 @@ COMMENT=	Does your process have access to the web
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

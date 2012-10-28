@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:53 asau Exp $
 
 DISTNAME=	Template-Stash-EscapeHTML-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Escape HTML automatically in Template-Toolkit
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Template-Toolkit>=2.13:../../www/p5-Template-Toolkit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= 	auto/Template/Stash/EscapeHTML/.packlist
 PERL5_MODULE_TYPE=	Module::Build

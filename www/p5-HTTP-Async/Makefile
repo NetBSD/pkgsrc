@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:40 asau Exp $
 
 DISTNAME=	HTTP-Async-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Lightweight HTTP client implementation
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/HTTP/Async/.packlist
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

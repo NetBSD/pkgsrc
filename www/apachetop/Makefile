@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/28 00:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/28 06:30:10 asau Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_FREEBSD}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spork.qfe3.net/apachetop/
 COMMENT=	Real time apache log display
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/httpd/access_log

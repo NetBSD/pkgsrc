@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/28 06:30:37 asau Exp $
 
 DISTNAME=		HTML-Format-2.10
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=		http://search.cpan.org/dist/HTML-Format/
 COMMENT=		Perl5 modules for converting HTML to other text formats
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Font-AFM>=1.18:../../fonts/p5-Font-AFM
 DEPENDS+=		p5-HTML-Tree>=3.15:../../www/p5-HTML-Tree

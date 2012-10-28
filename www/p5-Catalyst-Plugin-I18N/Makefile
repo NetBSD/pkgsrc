@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:32 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-I18N-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-MRO-Compat>=0.10:../../devel/p5-MRO-Compat
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/Plugin/I18N/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
