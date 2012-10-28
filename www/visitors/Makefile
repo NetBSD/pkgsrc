@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:31:07 asau Exp $
 #
 
 DISTNAME=		visitors-0.7
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.hping.org/visitors/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hping.org/visitors/
 COMMENT=		Very fast web log analyzer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/visitors_0.7
 INSTALLATION_DIRS=	bin share/visitors share/doc/visitors

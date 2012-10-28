@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/26 12:49:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:00 asau Exp $
 #
 
 DISTNAME=	django-registration-0.8-alpha-1
@@ -13,8 +13,6 @@ COMMENT=	User-registration application for Django
 LICENSE=	modified-bsd
 
 DEPENDS+=      ${PYPKGPREFIX}-django>=1:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none

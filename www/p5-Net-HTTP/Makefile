@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:47 asau Exp $
 
 DISTNAME=	Net-HTTP-6.03
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Perl 5 module for low-level HTTP connections (client)
 LICENSE=	${PERL5_LICENSE}
 
 CONFLICTS+=	p5-libwww<6.00
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Net/HTTP/.packlist

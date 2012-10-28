@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/13 15:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:13 asau Exp $
 # FreeBSD Id: ports/www/dojo/Makefile,v 1.14 2011/08/20 17:27:37 ohauer Exp
 
 DISTNAME=		dojo-release-1.7.2
@@ -10,8 +10,6 @@ LICENSE=		modified-bsd
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dojotoolkit.org/
 COMMENT=		Open-source DHTML toolkit written in JavaScript
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_TOOLS+=		pax

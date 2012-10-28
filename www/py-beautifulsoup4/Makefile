@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:59 asau Exp $
 #
 
 DISTNAME=	beautifulsoup4-4.1.0
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-PKG_DESTDIR_SUPPORT=		user-destdir
 # cannot enable this until py-lxml supports it
 # (otherwise pbulk fails during indexing)
 #PYTHON_VERSIONS_INCLUDE_3X=	yes

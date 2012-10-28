@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2012/07/01 15:53:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.58 2012/10/28 06:30:20 asau Exp $
 # used by www/links/Makefile
 # used by www/links-gui/Makefile
 
@@ -12,7 +12,6 @@ HOMEPAGE=	http://links.twibright.com/
 LICENSE=	gnu-gpl-v2 # including special OpenSSL paragraph
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

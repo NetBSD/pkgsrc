@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/08/16 16:05:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:57 asau Exp $
 #
 
 DISTNAME=	owncloud-4.0.7
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://owncloud.org/
 COMMENT=	Web services under your control
 LICENSE=	gnu-agpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd

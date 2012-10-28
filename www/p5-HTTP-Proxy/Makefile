@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:42 asau Exp $
 #
 
 DISTNAME=	HTTP-Proxy-0.25
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Proxy/
 COMMENT=	Perl5 module providing a simple HTTP proxy daemon
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww>=2.0:../../www/p5-libwww
 

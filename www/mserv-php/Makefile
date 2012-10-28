@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:58:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:23 asau Exp $
 #
 
 DISTNAME=	mserv-php-090
@@ -27,7 +27,6 @@ SUBST_FILES.paths=	${WRKDIR}/config.php
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-build
 
-PKG_DESTDIR_SUPPORT = user-destdir
 INSTALLATION_DIRS += share/mserv-php share/mserv-php/image share/doc/mserv-php
 
 do-build:

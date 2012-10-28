@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:32 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-RequireSSL-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.23:../../www/p5-Catalyst-Runtime
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/Plugin/RequireSSL/.packlist
 PERL5_MODULE_TYPE=	Module::Build
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

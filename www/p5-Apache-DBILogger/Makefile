@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:26 asau Exp $
 #
 
 DISTNAME=	Apache-DBILogger-0.93
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ask.netcetera.dk/
 COMMENT=	Database-independent httpd database logging module
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Apache-DBILogConfig-[0-9]*:../../www/p5-Apache-DBILogConfig
 

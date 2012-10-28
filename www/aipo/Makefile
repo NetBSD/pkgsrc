@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/01 11:50:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:01 asau Exp $
 #
 
 DISTNAME=	aipo7010ja_linux32
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.aipo.com/
 COMMENT=	Web-based groupware that supports Japanese interface
 LICENSE=	gnu-agpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 USE_JAVA2=	6

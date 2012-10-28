@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:43 asau Exp $
 #
 
 DISTNAME=	HTTP-Tiny-0.022
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Tiny/
 COMMENT=	Perl5 module providing a small, simple, correct HTTP/1.1 client
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/HTTP/Tiny/.packlist
 

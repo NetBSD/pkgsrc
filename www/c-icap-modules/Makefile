@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/29 10:11:18 adam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:11 asau Exp $
 
 DISTNAME=	c_icap_modules-0.2.1
 PKGNAME=	${DISTNAME:S/_/-/g}
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://c-icap.sourceforge.net/
 COMMENT=	C-ICAP server modules
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes

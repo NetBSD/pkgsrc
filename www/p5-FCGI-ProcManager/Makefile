@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:36 asau Exp $
 
 DISTNAME=	FCGI-ProcManager-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/FCGI-ProcManager/
 COMMENT=	Functions for managing FastCGI applications
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/FCGI/ProcManager/.packlist
 

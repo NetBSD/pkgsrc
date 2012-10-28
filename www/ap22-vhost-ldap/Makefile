@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/02 07:13:50 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:09 asau Exp $
 
 MVL_VERSION=		1.2.0
 DISTNAME=		mod-vhost-ldap_${MVL_VERSION}.orig
@@ -13,8 +13,6 @@ COMMENT=		Apache 2.2 module LDAP Virtual Hosts support
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 NO_CONFIGURE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 APACHE_MODULE_NAME=	mod_vhost_ldap
 

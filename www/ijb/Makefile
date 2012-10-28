@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/13 21:38:17 abs Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:18 asau Exp $
 #
 
 DISTNAME=	ijb20
@@ -15,7 +15,6 @@ COMMENT=	Internet Junkbuster Proxy to block banner ads and cookies
 MAKE_ENV+=	MORE_CFLAGS=${CFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/junkbuster
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/junkbuster ${DESTDIR}${PREFIX}/bin

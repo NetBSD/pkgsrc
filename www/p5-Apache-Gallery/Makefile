@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/03 21:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/28 06:30:26 asau Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -12,8 +12,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://apachegallery.dk/
 COMMENT=	Perl5/Apache module for handling image directories
 LICENSE=	artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
 DEPENDS+=	p5-URI>=1.23:../../www/p5-URI

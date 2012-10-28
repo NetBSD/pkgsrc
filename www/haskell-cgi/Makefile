@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/03/17 09:57:55 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:16 asau Exp $
 
 DISTNAME=	haskell-cgi-20001206
 CATEGORIES=	www
@@ -11,8 +11,6 @@ COMMENT=	CGI module for the Hugs Haskell 98 interpreter
 DEPENDS+=	hugs98-[0-9]*:../../lang/hugs
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

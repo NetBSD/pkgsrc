@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/03/31 13:25:56 obache Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/28 06:31:08 asau Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_XEMACS:=emacs-w3/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/w3/
 COMMENT=	World Wide Web browser for Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # included in xemacs-packages
 # emacs22 doesn't work

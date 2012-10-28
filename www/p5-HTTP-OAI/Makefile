@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:41 asau Exp $
 
 DISTNAME=	HTTP-OAI-3.27
 PKGNAME=	p5-${DISTNAME}
@@ -18,8 +18,6 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/HTTP-OAI/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

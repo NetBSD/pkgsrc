@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/08/30 03:08:40 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/28 06:30:05 asau Exp $
 #
 
 DISTNAME=		mod_python-2.7.11
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.modpython.org/
 COMMENT=		Python interpreter embedded into Apache
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

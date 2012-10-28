@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/03 21:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/28 06:30:36 asau Exp $
 
 DISTNAME=	HTML-FillInForm-2.1
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module that populates HTML Forms with CGI data
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 

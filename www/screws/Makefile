@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 21:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/28 06:31:04 asau Exp $
 #
 
 DISTNAME=	screws-0.56
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nopcode.org/?t=screws
 COMMENT=	SCRipt Enhanced Web Server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run pax gmake
 

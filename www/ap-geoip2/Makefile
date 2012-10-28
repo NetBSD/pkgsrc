@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/10 09:49:03 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:04 asau Exp $
 #
 
 DISTNAME=	mod_geoip2_1.2.5
@@ -10,8 +10,6 @@ MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://www.maxmind.com/app/mod_geoip
 COMMENT=	Apache module to interact with the MaxMind geoip database
 LICENSE=	apache-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/apache.mk"
 APACHE_MODULE=	yes

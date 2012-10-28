@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/05/08 13:51:01 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:31:01 asau Exp $
 #
 
 DISTNAME=	Genshi-0.6
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-babel>=0.8:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 

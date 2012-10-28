@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/15 08:35:28 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/28 06:31:09 asau Exp $
 #
 
 DISTNAME=	www6to4-1.6
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 MAINTAINER=	feico@pasta.cs.uit.no
 HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	Lightweight http proxy, helps IPv4 only browsers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES+=		inet6
 

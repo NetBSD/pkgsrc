@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:55 asau Exp $
 #
 
 DISTNAME=	WWW-Facebook-API-0.4.18
@@ -21,7 +21,6 @@ DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
 DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/WWW/Facebook/API/.packlist
 

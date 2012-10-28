@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:29 asau Exp $
 
 DISTNAME=	CGI-Session-Serialize-yaml-4.26
 EXTRACT_SUFX=	.tgz
@@ -16,8 +16,6 @@ DEPENDS+=	p5-CGI-Session>=4.30:../../www/p5-CGI-Session
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CGI/Session/Serialize/yaml/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

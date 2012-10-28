@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/15 11:10:57 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:31:01 asau Exp $
 #
 
 DISTNAME=	jonpy-0.06
@@ -11,8 +11,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://jonpy.sourceforge.net
 COMMENT=	Tools for FastCGI/CGI Python programs
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

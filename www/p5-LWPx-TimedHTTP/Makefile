@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:47 asau Exp $
 #
 
 DISTNAME=	LWPx-TimedHTTP-1.8
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/LWPx-TimedHTTP/
 COMMENT=	Perl 5 module to time the different stages of an HTTP request
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-libwww>=6.0:../../www/p5-libwww
 

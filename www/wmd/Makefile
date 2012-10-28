@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/17 19:13:39 abs Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:09 asau Exp $
 #
 
 DISTNAME=		wmd-1.0.1
@@ -15,7 +15,6 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 
 INSTALLATION_DIRS=	share/doc/wmd share/wmd/images
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	cd ${WRKSRC} &&							\

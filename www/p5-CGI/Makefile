@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/10/03 21:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2012/10/28 06:30:27 asau Exp $
 
 VERS=		3.60
 DISTNAME=	CGI.pm-${VERS}
@@ -13,7 +13,6 @@ HOMEPAGE=	http://search.cpan.org/dist/CGI.pm/
 COMMENT=	Perl5 module for writing forms-based CGI programs
 LICENSE=	gnu-gpl-v2 OR artistic-2.0
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty

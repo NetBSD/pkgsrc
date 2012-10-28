@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:31:05 asau Exp $
 
 DISTNAME=	squidclamav-6.8
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://squidclamav.darold.net/
 COMMENT=	Clamav ICAP service and redirector for Squid
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	clamav>=0.97:../../security/clamav
 DEPENDS+=	squid>=3.1.12:../../www/squid31

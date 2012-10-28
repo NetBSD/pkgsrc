@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/17 13:46:29 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:58 asau Exp $
 #
 
 MODNAME=		uploadprogress
@@ -7,8 +7,6 @@ CATEGORIES=		www
 
 MAINTAINER=		mbowie@buzmo.com
 COMMENT=		PHP extension to track progress of a file upload
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 

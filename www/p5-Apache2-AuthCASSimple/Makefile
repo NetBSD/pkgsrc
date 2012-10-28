@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:26 asau Exp $
 #
 
 DISTNAME=	Apache2-AuthCASSimple-0.10
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Apache2-AuthCASSimple/
 COMMENT=	Apache2 module to authenticate through a CAS server
 #LICENSE=	artistic OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Apache2/AuthCASSimple/.packlist

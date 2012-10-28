@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:27 asau Exp $
 
 DISTNAME=	App-Nopaste-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/App-Nopaste/
 COMMENT=	Perl 5 module providing easy access to any pastebin
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/App/Nopaste/.packlist

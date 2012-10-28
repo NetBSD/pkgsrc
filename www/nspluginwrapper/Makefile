@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/08 23:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/28 06:30:24 asau Exp $
 #
 
 DISTNAME=       nspluginwrapper-1.2.2
@@ -34,7 +34,6 @@ SUBST_STAGE.npviewer=	post-build
 SUBST_FILES.npviewer=	${PLUGIN_SRCDIR}/npviewer
 SUBST_SED.npviewer=	-e "s|/usr/|${PREFIX}/|g"
 
-PKG_DESTDIR_SUPPORT= 	user-destdir
 INSTALLATION_DIRS=	${PLUGIN_INSTDIR}
 
 post-install:

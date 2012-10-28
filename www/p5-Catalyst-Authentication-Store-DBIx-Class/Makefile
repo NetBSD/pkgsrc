@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:30 asau Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-DBIx-Class-0.1503
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,6 @@ DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 PERL5_PACKLIST= 	auto/Catalyst/Authentication/Store/DBIx/Class/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

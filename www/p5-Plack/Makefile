@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/28 06:30:48 asau Exp $
 
 DISTNAME=	Plack-1.0003
 PKGNAME=	p5-${DISTNAME}
@@ -24,8 +24,6 @@ DEPENDS+=	p5-Filesys-Notify-Simple-[0-9]*:../../devel/p5-Filesys-Notify-Simple
 DEPENDS+=	p5-Hash-MultiValue>=0.05:../../devel/p5-Hash-MultiValue
 DEPENDS+=	p5-HTTP-Body>=1.06:../../www/p5-HTTP-Body
 DEPENDS+=	p5-Test-TCP>=0.11:../../net/p5-Test-TCP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Plack/.packlist

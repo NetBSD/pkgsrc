@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:42 asau Exp $
 #
 
 DISTNAME=	HTTP-Response-Encoding-0.06
@@ -16,7 +16,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTTP/Response/Encoding/.packlist

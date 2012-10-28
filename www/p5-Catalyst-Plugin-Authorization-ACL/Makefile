@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:32 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Authorization-ACL-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -28,8 +28,6 @@ BUILD_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst-[0-9]*:../../www/p5-Test-WWW-Mech
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/Plugin/Authorization/ACL/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

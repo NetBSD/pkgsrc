@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:50 asau Exp $
 
 DISTNAME=	Rose-HTMLx-Form-Field-Serial-0.002
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ DEPENDS+=	p5-Rose-HTML-Objects>=0:../../www/p5-Rose-HTML-Objects
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Rose/HTMLx/Form/Field/Serial/.packlist
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

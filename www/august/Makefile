@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:10 asau Exp $
 #
 
 DISTNAME=	august0.63b.src
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.bostream.nu/johanb/august/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bostream.nu/johanb/august/
 COMMENT=	Simple Tk-based HTML editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none

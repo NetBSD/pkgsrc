@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:30 asau Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-Htpasswd-1.003
 PKGNAME=	p5-${DISTNAME}
@@ -24,7 +24,6 @@ REPLACE_PERL+=	lib/Catalyst/Authentication/Store/Htpasswd/*.pm
 
 PERL5_PACKLIST= 	auto/Catalyst/Authentication/Store/Htpasswd/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2012/07/01 01:32:37 dholland Exp $
+# $NetBSD: Makefile.common,v 1.59 2012/10/28 06:31:08 asau Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -11,7 +11,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://w3m.sourceforge.net/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2012/10/12 18:32:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2012/10/28 06:31:04 asau Exp $
 #
 
 DISTNAME=	# empty
@@ -15,8 +15,6 @@ EXTRACT_DIR.lightning-1.8.source.tar.bz2=	${WRKSRC}/lightning
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/

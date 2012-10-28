@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:27 asau Exp $
 #
 
 DISTNAME=	Apache-AuthCookie-3.18
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Apache-AuthCookie/
 COMMENT=	Perl5 module for Authentication and Authorization via cookies
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-CGI>=3.12:../../www/p5-CGI
 

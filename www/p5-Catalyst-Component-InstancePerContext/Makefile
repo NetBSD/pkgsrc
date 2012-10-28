@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:30 asau Exp $
 
 DISTNAME=	Catalyst-Component-InstancePerContext-0.001001
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Ut
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Component/InstancePerContext/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

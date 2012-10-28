@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:36 asau Exp $
 
 DISTNAME=		HTML-Email-Obfuscate-1.00
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=		Perl5 module for obfuscating HTML email addresses
 
 DEPENDS+=		p5-HTML-Parser>=3.46:../../www/p5-HTML-Parser
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty

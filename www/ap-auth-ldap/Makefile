@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/02/20 14:58:44 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/28 06:30:02 asau Exp $
 
 DISTNAME=	auth_ldap-1.6.1
 PKGNAME=	ap13-auth-ldap-1.6.1
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.rudedog.org/auth_ldap/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rudedog.org/auth_ldap/
 COMMENT=	Module to allow apache authentication against an LDAP directory
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	ap-auth-ldap-[0-9]*
 

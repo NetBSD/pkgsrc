@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2012/10/03 21:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2012/10/28 06:31:10 asau Exp $
 
 DISTNAME=	wwwoffle-2.9a
 PKGREVISION=	3
@@ -24,8 +24,6 @@ PLIST_SUBST+=		GZIP_CMD=${GZIP_CMD:Q}
 INSTALLATION_DIRS=	sbin libdata
 
 RCD_SCRIPTS=		wwwoffled
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure

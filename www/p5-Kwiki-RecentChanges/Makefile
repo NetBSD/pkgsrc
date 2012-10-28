@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:45 asau Exp $
 
 DISTNAME=	Kwiki-RecentChanges-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 #HOMEPAGE=	http://search.cpan.org/dist/Kwiki-Recent-Changes/
 COMMENT=	Kwiki plugin to display recent changes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki
 

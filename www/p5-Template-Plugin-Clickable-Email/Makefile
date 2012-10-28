@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:52 asau Exp $
 
 DISTNAME=	Template-Plugin-Clickable-Email-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	p5-Email-Find-[0-9]*:../../mail/p5-Email-Find
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Template/Plugin/Clickable/Email/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
 PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"

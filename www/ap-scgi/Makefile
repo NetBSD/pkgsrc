@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/06/21 05:35:09 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:05 asau Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME}
 PKGREVISION=	2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 COMMENT=	Simple Common Gateway Interface for Apache
 

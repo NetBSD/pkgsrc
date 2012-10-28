@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/08 07:51:20 adam Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:00 asau Exp $
 
 DISTNAME=	django-appmedia-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/divio/django-appmedia
 COMMENT=	Handling django app media
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty

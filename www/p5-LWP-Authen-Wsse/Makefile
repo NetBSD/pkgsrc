@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:46 asau Exp $
 
 DISTNAME=	LWP-Authen-Wsse-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/LWP-Authen-Wsse/
 COMMENT=	Library for enabling X-WSSE authentication in LWP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1

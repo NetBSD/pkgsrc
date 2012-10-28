@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:31:08 asau Exp $
 #
 
 DISTNAME=	waplet
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://waplet.sourceforge.net/
 COMMENT=	Java applet-based WAP emulator and WML browser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:56 asau Exp $
 #
 
 DISTNAME=		WordPress-XMLRPC-1.23
@@ -11,8 +11,6 @@ MAINTAINER=		imil@gcu.info
 HOMEPAGE=		http://search.cpan.org/dist/WordPress-XMLRPC/
 COMMENT=		Perl 5 API to WordPress XML-RPC services
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-LEOCHARRE-CLI2-[0-9]*:../../devel/p5-LEOCHARRE-CLI2
 DEPENDS+=		p5-LEOCHARRE-Debug-[0-9]*:../../devel/p5-LEOCHARRE-Debug

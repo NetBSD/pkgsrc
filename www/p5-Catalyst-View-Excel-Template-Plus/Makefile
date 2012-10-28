@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:34 asau Exp $
 
 DISTNAME=	Catalyst-View-Excel-Template-Plus-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,6 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/View/Excel/Template/Plus/.packlist
 
 PERL5_MODULE_TYPE=	Module::Build
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

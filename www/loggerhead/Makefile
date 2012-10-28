@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/04/08 19:09:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/28 06:30:21 asau Exp $
 
 DISTNAME=	loggerhead-${VER}
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/loggerhead
 COMMENT=	Web viewer for Bazaar branches
 LICENSE=	gnu-gpl-v2 # or later
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	bzr>=1.17:../../devel/bzr
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0:../../converters/py-simplejson

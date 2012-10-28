@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 18:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/28 06:30:16 asau Exp $
 
 .include "../../devel/scmgit/Makefile.version"
 
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://git.or.cz/
 COMMENT=	Web interface for GIT repositories
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
 DEPENDS+=	scmgit-base>=${GIT_VERSION}:../../devel/scmgit-base
