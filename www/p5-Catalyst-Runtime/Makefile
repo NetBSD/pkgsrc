@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/03 21:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/28 06:30:34 asau Exp $
 
 DISTNAME=	Catalyst-Runtime-5.90007
 PKGNAME=	p5-${DISTNAME}
@@ -54,7 +54,6 @@ BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 #MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

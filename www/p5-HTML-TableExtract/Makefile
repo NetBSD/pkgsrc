@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/28 06:30:39 asau Exp $
 
 DISTNAME=		HTML-TableExtract-2.11
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		damon@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-TableExtract/
 COMMENT=		Perl5 module to simplify extracting HTML tables
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-HTML-Parser>=3.08:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree

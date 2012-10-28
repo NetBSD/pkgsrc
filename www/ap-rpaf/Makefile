@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/21 05:35:03 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:05 asau Exp $
 #
 
 DISTNAME=		mod_rpaf-0.5
@@ -9,8 +9,6 @@ MASTER_SITES=		http://stderr.net/apache/rpaf/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://stderr.net/apache/rpaf/
 COMMENT=		Remaps reverse-proxied connections to "real" requesting IPs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		ap-rpaf-[0-9]*
 

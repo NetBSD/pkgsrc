@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/20 14:58:44 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/28 06:30:03 asau Exp $
 #
 
 DISTNAME=	mod_bandwidth.c
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cohprog.com/mod_bandwidth.html
 COMMENT=	Apache module for bandwidth management
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	ap-bandwidth-[0-9]*
 

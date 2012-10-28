@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 23:02:32 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:17 asau Exp $
 #
 
 DISTNAME=	61e08e67b176
@@ -12,8 +12,6 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://icedtea.classpath.org/
 COMMENT=	Java browser plugin and Web Start launcher
 #LICENSE=	# GPL2 + Classpath exception
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++

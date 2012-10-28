@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:52 asau Exp $
 
 DISTNAME=		Template-Provider-Encoding-0.10
 PKGNAME=		p5-${DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Template-Provider-Encoding/
 COMMENT=		Explicitly declare encodings of your templates
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		p5-Template-Toolkit>=2.14:../../www/p5-Template-Toolkit

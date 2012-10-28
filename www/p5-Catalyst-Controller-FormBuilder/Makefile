@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:31 asau Exp $
 
 DISTNAME=	Catalyst-Controller-FormBuilder-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -26,8 +26,6 @@ DEPENDS+=	p5-Catalyst-View-TT>=0.23:../../www/p5-Catalyst-View-TT
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Controller/FormBuilder/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

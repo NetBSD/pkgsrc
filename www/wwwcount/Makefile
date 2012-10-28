@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/11/01 13:45:06 hans Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/28 06:31:10 asau Exp $
 
 DISTNAME=	wwwcount2.5
 PKGNAME=	wwwcount-2.5
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_BACKUP}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.muquit.com/muquit/software/Count/Count.html
 COMMENT=	Graphical access counter, clock and date indicator for WWW pages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1				\

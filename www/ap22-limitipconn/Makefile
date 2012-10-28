@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/08 14:45:14 is Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/28 06:30:09 asau Exp $
 #
 
 DISTNAME=		mod_limitipconn-0.23
@@ -20,7 +20,6 @@ COMMENT=		Limits per-IP connections to an Apache 2 server
 APACHE_MODULE=		yes
 MAKE_FLAGS+=		APXS=${APXS:Q}
 USE_LIBTOOL=		yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	lib/httpd
 
