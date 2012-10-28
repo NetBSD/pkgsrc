@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/04 07:08:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:10 asau Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -14,7 +14,6 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/aws/
 COMMENT=	Adacore Ada Web Server demonstration programs
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 AWS_VERSION=		2.10.0.1
 USE_TOOLS+=		gmake makeinfo sed gawk
 USE_LANGUAGES=		c ada

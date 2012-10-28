@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:35 asau Exp $
 
 DISTNAME=	CatalystX-CRUD-Controller-RHTMLO-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	p5-Rose-HTML-Objects>=0:../../www/p5-Rose-HTML-Objects
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/Controller/RHTMLO/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

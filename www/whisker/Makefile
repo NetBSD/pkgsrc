@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:31:09 asau Exp $
 
 DISTNAME=	whisker-2.1
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.wiretrip.net/rfp/bins/whisker/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wiretrip.net/rfp/
 COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 

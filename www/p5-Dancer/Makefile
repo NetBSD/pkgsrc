@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/28 06:30:35 asau Exp $
 
 DISTNAME=	Dancer-1.3100
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perldancer.org/
 COMMENT=	Perl 5 lightweight yet powerful web application framework
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Dancer/.packlist

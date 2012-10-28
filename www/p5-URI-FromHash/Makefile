@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:54 asau Exp $
 #
 
 DISTNAME=	URI-FromHash-0.03
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/URI/
 COMMENT=	Build a URI from a set of named parameters
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-URI>0:../../www/p5-URI
 DEPENDS+=	p5-Params-Validate>0:../../devel/p5-Params-Validate

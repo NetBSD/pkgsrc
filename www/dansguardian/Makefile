@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:13 asau Exp $
 
 DISTNAME=	dansguardian-${VERSION}.source
 PKGNAME=	dansguardian-${VERSION}
@@ -10,8 +10,6 @@ MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://dansguardian.org/
 COMMENT=	Fast, featureful web content filter for Squid proxy servers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dansguardian-${VERSION}
 HAS_CONFIGURE=	yes

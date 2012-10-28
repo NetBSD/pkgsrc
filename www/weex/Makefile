@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/02/16 20:06:35 hans Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/28 06:31:09 asau Exp $
 
 DISTNAME=	weex-2.6.1.5
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weex/}
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://weex.sourceforge.net/
 COMMENT=	Non-interactive ftp client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

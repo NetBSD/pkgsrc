@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/15 22:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:31:01 asau Exp $
 #
 
 DISTNAME=	pendrell-0.2.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pendrell.olix0r.net/
 COMMENT=	HTTP/1.1 User Agent for the Programmable Web
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted

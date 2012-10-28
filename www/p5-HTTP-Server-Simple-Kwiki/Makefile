@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:42 asau Exp $
 
 DISTNAME=	HTTP-Server-Simple-Kwiki-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Server-Simple-Kwiki/
 COMMENT=	standalone HTTP server for Kwiki
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTTP/Server/Simple/Kwiki/.packlist

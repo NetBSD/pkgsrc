@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:39 asau Exp $
 #
 
 DISTNAME=	HTML-Tiny-1.05
@@ -11,8 +11,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTML-Tiny/
 COMMENT=	Lightweight, dependency free HTML/XML generation in Perl
 LICENSE=	gnu-gpl-v2 # OR artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTML/Tiny/.packlist
