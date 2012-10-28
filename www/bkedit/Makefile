@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/06/14 07:45:25 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/28 06:30:11 asau Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.vakuumverpackt.de/nettools/bk_edit/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vakuumverpackt.de/nettools/bk_edit/
 COMMENT=		Bookmark manager and editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

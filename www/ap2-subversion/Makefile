@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2012/04/27 12:32:05 obache Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/28 06:30:08 asau Exp $
 
 PKGNAME=	${APACHE_PKG_PREFIX}-subversion-${SVNVER}
 PKGREVISION=	4
 COMMENT=	WebDAV server (Apache module) for Subversion
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../devel/subversion/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}

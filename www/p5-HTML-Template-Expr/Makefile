@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:39 asau Exp $
 
 DISTNAME=		HTML-Template-Expr-0.07
 PKGNAME=		p5-${DISTNAME}
@@ -13,8 +13,6 @@ COMMENT=		Perl5 module to create HTML templates with simple expressions
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Parse-RecDescent-[0-9]*:../../devel/p5-Parse-RecDescent
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/HTML/Template/Expr/.packlist
 

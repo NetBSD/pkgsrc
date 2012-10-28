@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/26 12:54:17 adam Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:00 asau Exp $
 
 DISTNAME=	django-mptt-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://github.com/django-mptt/django-mptt
 COMMENT=	Utilities for implementing Modified Preorder Tree Traversal
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PYDISTUTILSPKG=		yes

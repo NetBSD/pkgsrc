@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:32 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Authentication-0.10018
 PKGNAME=	p5-${DISTNAME}0
@@ -26,7 +26,6 @@ BUILD_DEPENDS+= p5-Test-WWW-Mechanize-Catalyst>=0.50:../../www/p5-Test-WWW-Mecha
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
 MAKE_PARAMS+=	--skipdeps
 PERL5_PACKLIST= auto/Catalyst/Plugin/Authentication/.packlist
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

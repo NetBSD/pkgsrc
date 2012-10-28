@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2012/10/03 21:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2012/10/28 06:30:05 asau Exp $
 
 DISTNAME=		mod_ssl-2.8.31-1.3.41
 PKGNAME=		ap13-ssl-2.8.31
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.modssl.org/source/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.modssl.org/
 COMMENT=		SSL/TLS protocols module for Apache
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 CONFLICTS+=		ap-ssl-[0-9]*

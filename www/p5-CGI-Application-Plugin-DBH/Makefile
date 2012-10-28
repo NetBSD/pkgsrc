@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:27 asau Exp $
 
 DISTNAME=		CGI-Application-Plugin-DBH-4.00
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://search.cpan.org/dist/CGI-Application-Plugin-DBH
 COMMENT=		Easy DBI access from CGI::Application
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-CGI-Application-[0-9]*:../../www/p5-CGI-Application
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI

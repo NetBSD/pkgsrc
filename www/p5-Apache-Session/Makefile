@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 21:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/28 06:30:26 asau Exp $
 #
 
 DISTNAME=		Apache-Session-1.88
@@ -13,8 +13,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Apache-Session/
 COMMENT=		Perl5 module to provide persistent storage
 LICENSE=		gnu-gpl-v2 # OR artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Test-Deep>=0.082:../../devel/p5-Test-Deep
 DEPENDS+=		p5-Test-Exception>=0.15:../../devel/p5-Test-Exception

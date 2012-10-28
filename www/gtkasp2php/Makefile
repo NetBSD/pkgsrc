@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 13:44:58 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/28 06:30:16 asau Exp $
 #
 
 DISTNAME=	asp2php-0.76.17
@@ -10,8 +10,6 @@ MASTER_SITES=	http://65.108.58.129/asp2php/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://asp2php.naken.cc/
 COMMENT=	Gtk+ version of utility to convert asp pages to php pages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

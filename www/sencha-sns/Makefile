@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/04 10:01:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:04 asau Exp $
 #
 
 DISTNAME=	sencha-sns-1.0.3
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://oss.icz.co.jp/sns/
 COMMENT=	Social Networking Service software that supports Timeline
 LICENSE=	gnu-gpl-v2 AND mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql

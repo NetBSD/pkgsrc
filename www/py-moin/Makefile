@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/04 00:21:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/28 06:31:01 asau Exp $
 #
 
 VER=		1.9.4
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://moinmo.in/
 COMMENT=	MoinMoin, a Python clone of WikiWiki
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

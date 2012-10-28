@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/07/26 10:26:09 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/28 06:31:01 asau Exp $
 #
 
 VERSION=		0.10.0
@@ -16,8 +16,6 @@ LICENSE=		mit
 MAINTAINER+=		gdt@ir.bbn.com
 HOMEPAGE=		http://divmod.org/trac/wiki/DivmodNevow
 COMMENT=		Next-generation web application templating system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml

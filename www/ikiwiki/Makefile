@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2012/10/17 22:24:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.100 2012/10/28 06:30:18 asau Exp $
 #
 
 DISTNAME=		ikiwiki_3.20121017
@@ -10,8 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://ikiwiki.info/
 COMMENT=		Wiki compiler
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Text-Markdown-Discount-[0-9]*:../../textproc/p5-Text-Markdown-Discount
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI

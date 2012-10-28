@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/04/08 12:23:04 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/28 06:30:10 asau Exp $
 #
 
 DISTNAME=	asp2php-0.77.3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://asp2php.naken.cc/
 COMMENT=	Converts asp pages to php pages
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
