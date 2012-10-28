@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3439 2012/10/27 22:19:17 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3440 2012/10/28 02:02:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5274,3 +5274,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/modular-xorg-server to 1.6.5nb13 [wiz 2012-10-27]
 	Added finance/moneyguru version 2.6.1 [wiz 2012-10-27]
 	Added security/KeePass version 2.20.1 [wiz 2012-10-27]
+	Updated security/keepassx to 0.4.3 [markd 2012-10-27]
