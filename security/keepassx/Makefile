@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 18:16:31 asau Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/28 02:00:50 markd Exp $
 #
 
-DISTNAME=	KeePassX-0.2.2
-PKGNAME=	${DISTNAME:S/KeePassX/keepassx/}
-PKGREVISION=	15
+DISTNAME=	keepassx-0.4.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
 
@@ -12,27 +10,22 @@ HOMEPAGE=	http://keepassx.sourceforge.net/
 COMMENT=	Password manager or safe
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 
 QMAKE=			${QTDIR}/bin/qmake
-CONFIGURE_ARGS+=	QMAKE=${QMAKE:Q} PREFIX=${PREFIX:Q}
+CONFIGURE_ARGS+=	QMAKE=${QMAKE:Q} PREFIX=${PREFIX:Q} PRECOMPILED=0
 MAKE_ENV+=		QTDIR=${QTDIR} PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
-BUILDLINK_DEPMETHOD.qt3-tools=	build
-
 do-configure:
 	cd ${WRKSRC} && \
-		${QMAKE} -o Makefile ${CONFIGURE_ARGS} keepass.pro
+		${QMAKE} -unix -o Makefile ${CONFIGURE_ARGS} keepassx.pro
 
 pre-install:
-	${CP} ${WRKSRC}/bin/keepass ${WRKSRC}/src
+	${CP} ${WRKSRC}/bin/keepassx ${WRKSRC}/src
 
-post-install:
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/share/keepass/icons/*.png
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"

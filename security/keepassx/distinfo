@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/07/03 18:37:55 schwarz Exp $
+$NetBSD: distinfo,v 1.4 2012/10/28 02:00:50 markd Exp $
 
-SHA1 (KeePassX-0.2.2.tar.gz) = bae4b984d32f2bb6220d17a135e3322c4df73fcb
-RMD160 (KeePassX-0.2.2.tar.gz) = ba386cca105227120c0c50a500eee3b2b2bf24ec
-Size (KeePassX-0.2.2.tar.gz) = 302656 bytes
-SHA1 (patch-src_crypto_twofish.cpp) = 7bd41b67c0df56be41a9579d09c5d8d765b97353
-SHA1 (patch-src_lib_random.cpp) = 802b128fcc9c4805e1061246a2c9e9aeb420dbe8
-SHA1 (patch-src_src.pro) = 291d8f96c20a67e5098dac11af457de7300a953b
+SHA1 (keepassx-0.4.3.tar.gz) = d25ecc9d3caaa5a6d0f39a42c730a95997f37e2e
+RMD160 (keepassx-0.4.3.tar.gz) = 3e963d82dd6b8bc32e32dbb46efa9168bac1088b
+Size (keepassx-0.4.3.tar.gz) = 1368766 bytes
