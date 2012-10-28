@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/09/17 12:12:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/28 03:33:45 markd Exp $
 bin/texworks
 share/doc/texworks/COPYING
 share/doc/texworks/README
@@ -17,6 +17,8 @@ share/texworks-help/en/index17.html
 share/texworks-help/en/index18.html
 share/texworks-help/en/index14.html
 share/texworks-help/en/index33.html
+share/texworks-help/en/index43.html
+share/texworks-help/en/index50.html
 share/texworks-help/en/bibname.html
 share/texworks-help/en/index12.html
 share/texworks-help/en/Firststeps.html
