@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3444 2012/10/28 11:18:01 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.3445 2012/10/28 20:32:30 is Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5279,3 +5279,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/texworks to 0.4.4 [markd 2012-10-28]
 	Updated devel/gnome-common to 3.6.0 [wiz 2012-10-28]
 	Updated www/pound to 2.6 [shattered 2012-10-28]
+	Updated x11/xlockmore to 5.41 [is 2012-10-28]
+	Updated x11/xlockmore-lite to 5.41 [is 2012-10-28]
