@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/28 06:30:54 asau Exp $
 #
 
 DISTNAME=	WWW-Amazon-Wishlist-2.006
@@ -14,7 +14,6 @@ COMMENT=	Perl5 module to get details from your Amazon wishlist
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTML-Tree>=0:../../www/p5-HTML-Tree

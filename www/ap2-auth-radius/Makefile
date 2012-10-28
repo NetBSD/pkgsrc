@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/20 14:58:45 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/28 06:30:06 asau Exp $
 
 DISTNAME=	mod_auth_radius
 PKGNAME=	${APACHE_PKG_PREFIX}-auth-radius-1.5.7
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/mod_auth_radius/
 COMMENT=	Module to allow apache2 authentication against a RADIUS server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-1.5.7
 EXTRACT_SUFX=		.tar

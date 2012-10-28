@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/03 21:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/28 06:31:05 asau Exp $
 
 DISTNAME=	snownews-1.5.12
 PKGREVISION=	2
@@ -11,8 +11,6 @@ COMMENT=	Small, curses based RSS feed reader
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

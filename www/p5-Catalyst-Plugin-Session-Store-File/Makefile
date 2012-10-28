@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:33 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-File-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-MRO-Compat>=0.10:../../devel/p5-MRO-Compat
 
 PERL5_PACKLIST= 	auto/Catalyst/Plugin/Session/Store/File/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

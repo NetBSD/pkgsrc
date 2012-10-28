@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:31 asau Exp $
 
 DISTNAME=	Catalyst-Engine-JobQueue-POE-0.0.3
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	p5-POE-Component-Cron>=0.014:../../devel/p5-POE-Component-Cron
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Engine/JobQueue/POE/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

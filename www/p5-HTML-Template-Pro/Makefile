@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:39 asau Exp $
 
 DISTNAME=	HTML-Template-Pro-0.9509
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	p5-JSON>=2.0:../../converters/p5-JSON
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/HTML/Template/Pro/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

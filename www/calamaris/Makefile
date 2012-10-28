@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/28 06:30:12 asau Exp $
 #
 
 DISTNAME=	calamaris-2.58
@@ -9,8 +9,6 @@ MASTER_SITES=	http://cord.de/tools/squid/calamaris/
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://cord.de/tools/squid/calamaris/
 COMMENT=	Squid logfile analyzer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	calamaris

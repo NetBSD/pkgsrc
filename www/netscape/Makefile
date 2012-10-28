@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/02/16 18:17:18 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/28 06:30:23 asau Exp $
 #
 
 DISTNAME=	netscape-20040123
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	abs@NetBSD.org
 COMMENT=	Open new window using netscape-like browser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

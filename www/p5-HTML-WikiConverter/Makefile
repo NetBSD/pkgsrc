@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:40 asau Exp $
 #
 
 DISTNAME=	HTML-WikiConverter-0.68
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTML-WikiConverter/
 COMMENT=	Convert HTML to wiki markup
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Data-Inheritable>=0.02:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-CSS>=1.07:../../www/p5-CSS

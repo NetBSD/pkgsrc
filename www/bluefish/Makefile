@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2012/10/08 23:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.104 2012/10/28 06:30:11 asau Exp $
 
 DISTNAME=	bluefish-2.2.3
 PKGREVISION=	5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bluefish.openoffice.nl/
 COMMENT=	GTK HTML editor for the experienced web designer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
 

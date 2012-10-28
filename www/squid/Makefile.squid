@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.19 2011/03/04 19:56:51 gdt Exp $
+# $NetBSD: Makefile.squid,v 1.20 2012/10/28 06:31:05 asau Exp $
 #
 # used by www/squid27/Makefile
 # used by www/squid31/Makefile
@@ -62,8 +62,6 @@ INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin \
 			share/squid share/squid/errors share/squid/icons \
 			${DOCDIR} ${EGDIR}
 SPECIAL_PERMS+=		libexec/pinger ${SETUID_ROOT_PERMS}
-
-PKG_DESTDIR_SUPPORT?=	user-destdir
 
 POST_INSTALL_EXTRA?=
 

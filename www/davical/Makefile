@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:13 asau Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.davical.org/
 COMMENT=	Simple CalDAV server using a PostgreSQL backend
 
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical

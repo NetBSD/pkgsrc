@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/09/21 09:39:01 sborrill Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/28 06:30:06 asau Exp $
 #
 
 DISTNAME=	ntlm2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.jamiekerwick.co.uk/modntlm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://modntlm.sourceforge.net/
 COMMENT=	Apache module for NTLM authentication
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 

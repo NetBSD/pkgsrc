@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/11 14:55:38 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/28 06:30:22 asau Exp $
 
 DISTNAME=	midori-0.4.7
 CATEGORIES=	www
@@ -13,7 +13,6 @@ HAS_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 CHECK_PORTABILITY_SKIP+= win32/x86-mingw32-opensuse/install.sh

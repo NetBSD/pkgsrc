@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/10/03 21:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/28 06:30:37 asau Exp $
 
 DISTNAME=		HTML-Parser-3.69
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=		Perl5 module to parse HTML text documents
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-HTML-Tagset>=3.0:../../www/p5-HTML-Tagset
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI

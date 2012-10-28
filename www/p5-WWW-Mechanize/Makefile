@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/03 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/28 06:30:55 asau Exp $
 
 DISTNAME=	WWW-Mechanize-1.72
 PKGNAME=	p5-${DISTNAME}
@@ -31,7 +31,6 @@ BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 # if not set explicitly
 MAKE_PARAMS+=	--mech-dump --nolive
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	# empty

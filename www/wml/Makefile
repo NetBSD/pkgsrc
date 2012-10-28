@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/03 21:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/28 06:31:09 asau Exp $
 #
 
 DISTNAME=	wml-2.0.9
@@ -9,8 +9,6 @@ MASTER_SITES=	http://thewml.org/distrib/
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://thewml.org/
 COMMENT=	Web Meta Language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Bit-Vector>=5.2:../../devel/p5-Bit-Vector
 DEPENDS+=	p5-Image-Size>=2.6:../../graphics/p5-Image-Size

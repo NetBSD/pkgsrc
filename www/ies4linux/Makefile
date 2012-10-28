@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/05/27 18:28:17 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:18 asau Exp $
 #
 
 DISTNAME=	ies4linux-2.99.0.1
@@ -16,7 +16,6 @@ DEPENDS+=  ${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 BUILD_DEPENDS+= cabextract-[0-9]*:../../archivers/cabextract
 
 NO_BUILD= 	yes
-PKG_DESTDIR_SUPPORT=    user-destdir
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run pax unzip:run
 

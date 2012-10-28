@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/12/17 13:11:09 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/28 06:30:14 asau Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	2
@@ -9,7 +9,6 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${ETCDIR}
 
 USE_TOOLS+=	makeinfo

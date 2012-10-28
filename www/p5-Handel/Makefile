@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/28 06:30:43 asau Exp $
 
 DISTNAME=	Handel-1.00011
 PKGNAME=	p5-${DISTNAME}
@@ -49,8 +49,6 @@ DEPENDS+=	p5-HTML-FillInForm>=0:../../www/p5-HTML-FillInForm
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST= 	auto/Handel/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

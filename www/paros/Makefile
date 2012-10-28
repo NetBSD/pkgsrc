@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/09/29 17:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:56 asau Exp $
 #
 
 DISTNAME=	paros-3.2.13-unix
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.parosproxy.org/
 COMMENT=	HTTP/HTTPS proxy for assessing web application vulnerabilities
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_JAVA2=	yes

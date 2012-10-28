@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/20 21:29:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:57 asau Exp $
 #
 
 DISTNAME=	concrete5.6.0.1
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.concrete5.org/
 COMMENT=	Open sourece Content Management System
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.2.0:../../converters/php-iconv

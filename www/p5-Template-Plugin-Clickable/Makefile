@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:52 asau Exp $
 
 DISTNAME=	Template-Plugin-Clickable-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	p5-URI-Find>=0.13:../../www/p5-URI-Find
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Template/Plugin/Clickable/.packlist
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2011/11/30 14:02:59 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2012/10/28 06:30:21 asau Exp $
 
 DISTNAME=	lynx2.8.7
 PKGNAME=	lynx-2.8.7
@@ -17,7 +17,6 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # 2.8.7 was rereleased under the same name
 # XXX: remove when updating!

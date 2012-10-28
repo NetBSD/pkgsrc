@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/28 06:30:42 asau Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.952
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Request-Form/
 COMMENT=	Construct HTTP::Request objects for form processing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI

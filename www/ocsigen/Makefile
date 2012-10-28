@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 15:18:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:24 asau Exp $
 #
 
 VERSION=	2.1
@@ -12,8 +12,6 @@ MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://www.ocsigen.org/
 COMMENT=	Web programming framework for OCaml
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 DEPENDS+=	ocaml-react-[0-9]*:../../devel/ocaml-react

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/28 06:30:54 asau Exp $
 #
 
 DISTNAME=	VRML-1.10
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.gfz-potsdam.de/~palm/software/VRML/doc
 COMMENT=	Set of VRML classes for Perl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/VRML/.packlist
 

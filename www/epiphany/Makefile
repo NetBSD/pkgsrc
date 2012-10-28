@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2012/10/08 23:00:45 adam Exp $
+# $NetBSD: Makefile,v 1.133 2012/10/28 06:30:15 asau Exp $
 #
 
 DISTNAME=	epiphany-2.30.6
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

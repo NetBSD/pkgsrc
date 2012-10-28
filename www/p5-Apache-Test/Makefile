@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:26 asau Exp $
 #
 
 DISTNAME=		Apache-Test-1.31
@@ -12,8 +12,6 @@ MAINTAINER=		adam@migus.org
 HOMEPAGE=		http://search.cpan.org/dist/Apache-Test/
 COMMENT=		Wrapper for Test.pm to test an Apache server
 LICENSE=		apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		ap2-perl-[0-9]*
 

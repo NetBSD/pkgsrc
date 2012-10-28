@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/28 06:30:01 asau Exp $
 #
 
 DISTNAME=	album
@@ -11,8 +11,6 @@ MASTER_SITES=	http://marginalhacks.com/bin/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://marginalhacks.com/Hacks/album/
 COMMENT=	Generate HTML albums of images
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	jhead>=2.0:../../graphics/jhead

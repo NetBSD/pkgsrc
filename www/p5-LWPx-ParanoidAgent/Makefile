@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:47 asau Exp $
 #
 
 DISTNAME=	LWPx-ParanoidAgent-1.07
@@ -11,8 +11,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/LWPx-ParanoidAgent/
 COMMENT=	Subclass of module LWP::UserAgent that protects you from harm
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS

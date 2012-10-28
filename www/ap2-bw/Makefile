@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/02/20 14:58:46 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:07 asau Exp $
 #
 
 DISTNAME=		bw_mod-0.6
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ivn.cl/apache/
 COMMENT=		Class-based bandwidth limiting module for Apache 2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 APACHE_MODULE=		# defined
 INSTALLATION_DIRS=	share/doc

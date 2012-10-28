@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/15 10:06:47 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/28 06:30:20 asau Exp $
 #
 
 DISTNAME=	rest-0.7.12
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://moblin.org/projects/librest
 COMMENT=	Library for "RESTful" web services
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

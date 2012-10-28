@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:31:09 asau Exp $
 #
 
 DISTNAME=		webnew-1.3
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://kimmo.suominen.com/sw/webnew/
 COMMENT=		Retrieve modification times of web documents
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run
 

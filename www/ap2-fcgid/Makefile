@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/04 16:10:57 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:07 asau Exp $
 
 DISTNAME=	mod_fcgid-2.3.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/mod_fcgid/
 COMMENT=	High performance alternative to mod_cgi or mod_cgid
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
 APACHE_MODULE=		YES

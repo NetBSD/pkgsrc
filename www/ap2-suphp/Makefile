@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/09/21 13:51:11 adam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/28 06:30:08 asau Exp $
 #
 
 DISTNAME=		suphp-0.7.1
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suphp.org/
 COMMENT=		SuEXEC-like wrapper for PHP scripts
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		lex
 USE_PKGLOCALEDIR=	yes

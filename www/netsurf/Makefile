@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/12 14:36:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/28 06:30:23 asau Exp $
 #
 
 DISTNAME=	netsurf-1.2-src
@@ -13,8 +13,6 @@ COMMENT=	Web browser for RISC OS and UNIX-like platforms
 
 BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
 BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # current codebase needs strndup
 NOT_FOR_PLATFORM=	NetBSD-[0-3]*-*

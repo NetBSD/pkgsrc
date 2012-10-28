@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/16 04:31:15 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:31:07 asau Exp $
 #
 
 DISTNAME=	urlgrabber-3.1.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://urlgrabber.baseurl.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://urlgrabber.baseurl.org/
 COMMENT=	Python package that drastically simplifies the fetching of files
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LANGUAGES=	# none
 

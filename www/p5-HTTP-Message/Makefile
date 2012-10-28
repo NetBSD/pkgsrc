@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/21 04:30:58 wen Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:41 asau Exp $
 
 DISTNAME=	HTTP-Message-6.06
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Construct HTTP style messages
 LICENSE=	${PERL5_LICENSE}
 
 CONFLICTS+=	p5-libwww<6.00
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser

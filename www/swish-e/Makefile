@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/03 21:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/28 06:31:06 asau Exp $
 
 DISTNAME=	swish-e-2.4.5
 PKGREVISION=	5
@@ -8,8 +8,6 @@ MASTER_SITES=	http://swish-e.org/distribution/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://swish-e.org/
 COMMENT=	Simple web indexing for humans - enhanced
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

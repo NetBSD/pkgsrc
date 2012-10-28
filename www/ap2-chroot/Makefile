@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/14 22:26:31 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:07 asau Exp $
 
 DISTNAME=	mod_chroot-0.5
 PKGNAME=	${DISTNAME:S/mod_/${APACHE_PKG_PREFIX}-/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://core.segfault.pl/~hobbit/mod_chroot/
 COMMENT=	Module to easily run Apache in a chroot environment
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # functional conflict, apache>=2.2.10 has builtin ChrootDir directive support.
 CONFLICTS+=	apache>=2.2.10

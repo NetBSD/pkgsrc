@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/28 06:30:43 asau Exp $
 
 DISTNAME=	Jemplate-0.261
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Javascript Templating with Template Toolkit
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_REQD+=	5.6.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Template-Toolkit>=2.19:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-File-Find-Rule>=0.30:../../devel/p5-File-Find-Rule

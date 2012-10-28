@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/21 23:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/28 06:30:39 asau Exp $
 
 DISTNAME=		HTML-Tree-5.03
 PKGNAME=		p5-${DISTNAME}
@@ -22,7 +22,6 @@ DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_MODULE_TYPE=	Module::Build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/01 01:32:53 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:31:05 asau Exp $
 
 DISTNAME=	spawn-fcgi-1.6.3
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.lighttpd.net/download/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://redmine.lighttpd.net/projects/spawn-fcgi
 COMMENT=	FastCGI deployment tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	lighttpd<1.4.23
 

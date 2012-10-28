@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/10/02 09:23:18 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:18 asau Exp $
 
 DISTNAME=	Kahua-1.0.1
 PKGNAME=	${DISTNAME:C/Kahua/kahua/}
@@ -14,8 +14,6 @@ COMMENT=	Continuation-based framework to develop application service
 MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	Gauche>=0.8.8:../../lang/gauche
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFBASEDIR:Q}

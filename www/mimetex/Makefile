@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/08 08:11:56 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/28 06:30:22 asau Exp $
 #
 
 DISTNAME=	mimetex
@@ -16,8 +16,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c
 
 WRKSRC=		${WRKDIR}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	libexec/cgi-bin
 

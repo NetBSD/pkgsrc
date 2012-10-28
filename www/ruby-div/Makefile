@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 13:04:25 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:03 asau Exp $
 #
 
 DISTNAME=	div-1.3.2
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.druby.org/ilikeruby/div.en.html
 COMMENT=	Simple Web Application framework with dRuby and ERB
 #LICENSE=	# TODO: nothing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

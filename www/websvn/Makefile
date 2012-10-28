@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/09/16 05:46:27 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/28 06:31:09 asau Exp $
 #
 
 DISTNAME=	websvn-2.2.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/45918/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.websvn.info/
 COMMENT=	Subversion repository web frontend
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib

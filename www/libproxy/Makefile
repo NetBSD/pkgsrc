@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 22:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:19 asau Exp $
 #
 
 DISTNAME=	libproxy-0.3.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libproxy/
 COMMENT=	Library that provides automatic proxy configuration management
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --without-python

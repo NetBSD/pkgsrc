@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/10/03 21:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2012/10/28 06:30:58 asau Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.privoxy.org/
 COMMENT=	Web proxy with advanced filtering capabilities
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
