@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.45 2012/06/11 13:41:12 wiz Exp $
+# $NetBSD: options.mk,v 1.46 2012/10/28 23:40:24 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -85,7 +85,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.for o in aalib arts cdparanoia dv esound gif jpeg \
+.for o in cdparanoia dv esound gif jpeg \
 	    dvdread dvdnav \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \

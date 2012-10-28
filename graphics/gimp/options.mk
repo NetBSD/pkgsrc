@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2010/09/15 20:59:50 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2012/10/28 23:40:24 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gimp
 PKG_SUPPORTED_OPTIONS=	aalib mng svg
-PKG_SUGGESTED_OPTIONS=	aalib mng svg
+PKG_SUGGESTED_OPTIONS=	mng svg
 
 .include "../../mk/bsd.options.mk"
 
