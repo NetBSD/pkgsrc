@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/08/21 23:49:26 marino Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/28 06:30:04 asau Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap13-dtcl-0.11.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://tcl.apache.org/mod_dtcl/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tcl.apache.org/
 COMMENT=	Simple, fast Tcl server side scripting for apache
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	ap-dtcl-[0-9]*
 

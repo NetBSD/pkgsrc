@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/15 11:16:58 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/28 06:30:58 asau Exp $
 #
 
 DISTNAME=	ClientForm-0.2.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wwwsearch.sourceforge.net/ClientForm/
 COMMENT=	Python module for handling HTML forms on the client side
 LICENSE=	modified-bsd OR zpl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

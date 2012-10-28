@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.example,v 1.8 2012/10/01 15:31:00 taca Exp $
+# $NetBSD: Makefile.example,v 1.9 2012/10/28 06:30:13 asau Exp $
 #
 # used by www/contao211-example/Makefile
 #
@@ -19,8 +19,6 @@ DISTINFO_FILE=	${.CURDIR}/../../www/contao${CT_VER}/distinfo
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WWW_EG_FILES=	${CT_FILES}/music_academy
 WWW_FILE=	templates/music_academy.sql

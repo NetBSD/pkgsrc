@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 15:18:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:24 asau Exp $
 #
 
 DISTNAME=		ocurl-0.5.3
@@ -12,8 +12,6 @@ MAINTAINER=		rich.neswold@gmail.com
 HOMEPAGE=		http://sourceforge.net/projects/ocurl/
 COMMENT=		OCaml bindings to the CURL library
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=         no
 

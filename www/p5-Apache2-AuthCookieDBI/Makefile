@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:27 asau Exp $
 #
 
 DISTNAME=	Apache2-AuthCookieDBI-2.14
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Apache2-AuthCookieDBI
 COMMENT=	Perl5 module AuthCookie backed by a DBI database
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Apache2-AuthCookie>=3.08:../../www/p5-Apache2-AuthCookie
 DEPENDS+=	p5-DBI>=1.40:../../databases/p5-DBI

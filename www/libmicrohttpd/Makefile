@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/02 15:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:19 asau Exp $
 #
 
 DISTNAME=	libmicrohttpd-0.9.22
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libmicrohttpd/
 COMMENT=	Small C library to run an HTTP server as part of another app
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/28 06:30:54 asau Exp $
 #
 
 DISTNAME=	WWW-Curl-4.15
@@ -15,7 +15,6 @@ LICENSE=	mpl-1.0 OR mpl-1.1 OR mit
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.10.8
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/WWW/Curl/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

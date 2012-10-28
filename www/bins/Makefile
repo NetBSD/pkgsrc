@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/03 21:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/28 06:30:11 asau Exp $
 #
 
 DISTNAME=	bins-1.1.29
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bins.sautret.org/
 COMMENT=	Static HTML photo album generator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-gettext>=1.01:../../devel/p5-gettext
 DEPENDS+=	p5-HTML-Clean>=0.8:../../www/p5-HTML-Clean

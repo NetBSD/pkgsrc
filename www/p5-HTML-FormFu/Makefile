@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:58:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:37 asau Exp $
 #
 
 DISTNAME=		HTML-FormFu-0.09005
@@ -13,7 +13,6 @@ COMMENT=		HTML Form Creation, Rendering and Validation Framework
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Captcha-reCAPTCHA>=0.93:../../www/p5-Captcha-reCAPTCHA
 DEPENDS+=	p5-Class-Accessor-Chained-[0-9]*:../../devel/p5-Class-Accessor-Chained

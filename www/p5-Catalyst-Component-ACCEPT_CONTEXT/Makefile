@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:30 asau Exp $
 
 DISTNAME=	Catalyst-Component-ACCEPT_CONTEXT-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,6 @@ BUILD_DEPENDS+=	p5-Devel-Cycle-[0-9]*:../../devel/p5-Devel-Cycle
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Component/ACCEPT_CONTEXT/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

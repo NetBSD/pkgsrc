@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/12/17 19:18:35 abs Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/28 06:30:23 asau Exp $
 
 DISTNAME=		plugger-4.0-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
@@ -30,7 +30,6 @@ PLIST_SUBST+=		NS_PLUGINS_DIR=${NS_PLUGINS_DIR:S/${PREFIX}\///}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man7
 INSTALLATION_DIRS+=	lib/netscape/plugins share/doc/plugger
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .PHONY: do-install-common do-install-pluggerrc
 do-install-common:
