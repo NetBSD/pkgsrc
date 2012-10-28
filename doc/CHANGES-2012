@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3443 2012/10/28 08:23:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3444 2012/10/28 11:18:01 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5278,3 +5278,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/p5-Sendmail-PMilter to 1.00 [markd 2012-10-27]
 	Updated editors/texworks to 0.4.4 [markd 2012-10-28]
 	Updated devel/gnome-common to 3.6.0 [wiz 2012-10-28]
+	Updated www/pound to 2.6 [shattered 2012-10-28]
