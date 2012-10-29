@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/29 14:30:32 prlw1 Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 14:40:27 prlw1 Exp $
 #
 
-DISTNAME=	eog-3.4.3
-PKGREVISION=	5
+DISTNAME=	eog-3.6.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/3.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/3.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
@@ -18,6 +17,8 @@ USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=	data/eog.pc.in
 
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
 .include "../../devel/glib2/schemas.mk"
@@ -26,7 +27,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
@@ -39,6 +39,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.0
 .include "../../graphics/lcms2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libexif+= libexif>=0.6.14
 .include "../../graphics/libexif/buildlink3.mk"
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.36.2
 .include "../../graphics/librsvg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
