@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 15:18:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/29 09:11:22 jaapb Exp $
 #
 
 DISTNAME=	menhir-20120123
@@ -31,11 +31,10 @@ PLIST.opt=	yes
 MAKE_ENV+=	TARGET=byte
 .endif
 
+INSTALLATION_DIRS=	lib/ocaml/site-lib/menhirLib
+
 post-extract:
 	${RM} ${WRKSRC}/demos/calc/.omakedb*
-
-pre-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/menhirLib
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
