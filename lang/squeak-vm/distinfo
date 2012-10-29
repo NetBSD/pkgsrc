@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.5 2012/10/20 22:12:30 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/10/29 07:33:40 asau Exp $
 
-SHA1 (squeak/Squeak-3.11.3.2135-src.tar.gz) = cdc033b14e56ea05aa62bcb1686bb73f4347e29f
-RMD160 (squeak/Squeak-3.11.3.2135-src.tar.gz) = abb7dbde7e79f18161842d1451959ad09e7ef3ad
-Size (squeak/Squeak-3.11.3.2135-src.tar.gz) = 3585556 bytes
+SHA1 (squeak/Squeak-4.10.2.2614-src.tar.gz) = bd807730537122b220840b4a89f04a6689f435c2
+RMD160 (squeak/Squeak-4.10.2.2614-src.tar.gz) = 8e8a94ef036aa9ca51ade7683c3c9c8844a56660
+Size (squeak/Squeak-4.10.2.2614-src.tar.gz) = 3297314 bytes
 SHA1 (patch-Cross_plugins_Mpeg3Plugin_libmpeg_audio_layer3.c) = 81539b093c78f88747da97f18f56f38223117a39
 SHA1 (patch-Cross_plugins_Mpeg3Plugin_libmpeg_video_getpicture.c) = 19f0eabfcdc983d5e7c09db9081d0a01fe333798
 SHA1 (patch-Cross_plugins_Mpeg3Plugin_libmpeg_video_idct.c) = 2509f50f51671943df8b989e89a21408b08dbdc9
-SHA1 (patch-aa) = dfdb3be82288e8bd7658832e8dd91d242d2b97b2
+SHA1 (patch-aa) = 45f8ba1a89e12a4b3fb068049a5d193f8c0d7f9b
 SHA1 (patch-ab) = 019a6b1bc50e3abc500902a45edcd960b7708bf2
 SHA1 (patch-ac) = bad06ae257766407c90a62f5927a53c97ee8072a
 SHA1 (patch-ad) = e426d1de4b496704be08c67d2d2ab61a24735017
 SHA1 (patch-ae) = 73c358e42d153c9e6fe605fa1c77360ad48c6ec3
 SHA1 (patch-af) = 529550d988f5655791942145c79f5448431c04c4
-SHA1 (patch-ag) = 6c435d13b36c5308d516f35d4b3988dfecf2f91b
