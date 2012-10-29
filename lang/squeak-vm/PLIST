@@ -1,19 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/17 12:45:17 marino Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/29 07:33:40 asau Exp $
 bin/squeak
 bin/squeak.sh
+lib/squeak/${PKGVERSION}/ckformat
 lib/squeak/${PKGVERSION}/so.AioPlugin
 lib/squeak/${PKGVERSION}/so.B3DAcceleratorPlugin
 lib/squeak/${PKGVERSION}/so.ClipboardExtendedPlugin
 ${PLIST.pulse}lib/squeak/${PKGVERSION}/so.DBusPlugin
 lib/squeak/${PKGVERSION}/so.FileCopyPlugin
 lib/squeak/${PKGVERSION}/so.HostWindowPlugin
-lib/squeak/${PKGVERSION}/so.ImmX11Plugin
-lib/squeak/${PKGVERSION}/so.KedamaPlugin
-lib/squeak/${PKGVERSION}/so.KedamaPlugin2
-lib/squeak/${PKGVERSION}/so.MIDIPlugin
 lib/squeak/${PKGVERSION}/so.Mpeg3Plugin
-lib/squeak/${PKGVERSION}/so.OggPlugin
-lib/squeak/${PKGVERSION}/so.PseudoTTYPlugin
+lib/squeak/${PKGVERSION}/so.ScratchPlugin
 lib/squeak/${PKGVERSION}/so.Squeak3D
 lib/squeak/${PKGVERSION}/so.SqueakFFIPrims
 lib/squeak/${PKGVERSION}/so.UUIDPlugin
