@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/11 12:00:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/29 05:07:24 asau Exp $
 #
 
 DISTNAME=	xvkbd-3.3
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://homepage3.nifty.com/tsato/xvkbd/
 COMMENT=	The xvkbd is a virtual (graphical) keyboard program for X
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/09/29 17:59:34 asau Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/29 05:06:07 asau Exp $
 #
 
 DISTNAME=	aterm-1.0.0
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.afterstep.org/aterm.php
 COMMENT=	Aterm (Afterstep XVT) - a VT102 emulator for the X window system
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 MAKE_JOBS_SAFE=	no

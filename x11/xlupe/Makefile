@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 10:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:07:15 asau Exp $
 #
 
 DISTNAME=	xlupe-1.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://core.de/~coto/projects/xlupe/
 MAINTAINER=	coto@core.de
 HOMEPAGE=	http://core.de/~coto/projects/xlupe/
 COMMENT=	Magnifier for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

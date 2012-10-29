@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 10:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/29 05:06:55 asau Exp $
 
 DISTNAME=	wmfstatus-0.4
 PKGREVISION=	1
@@ -14,7 +14,6 @@ MAKE_JOBS_SAFE=		no
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmfstatus
 
 INSTALLATION_DIRS=	bin
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	share/doc/wmfstatus
 
 do-install:

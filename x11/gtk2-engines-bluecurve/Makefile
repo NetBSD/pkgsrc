@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/08 23:02:36 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/29 05:06:18 asau Exp $
 #
 
 DISTNAME=	GTK2-Wonderland-Engine-1.0
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://art.gnome.org/
 COMMENT=	Port of the famous Bluecurve theme for GTK2+
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

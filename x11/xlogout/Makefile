@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/05/15 12:35:06 mrg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/29 05:07:14 asau Exp $
 #
 
 DISTNAME=	xlogout
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Quick logout button
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

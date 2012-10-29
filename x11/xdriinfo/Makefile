@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:07:01 asau Exp $
 #
 
 DISTNAME=	xdriinfo-1.0.3
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X.org DRI information utility
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ###
 ### XXX	Prior to this revision, the r300 driver did not export a symbol
 ###	xdriinfo needs to access its configuration data.  To override

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/06/03 18:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:07:02 asau Exp $
 #
 
 DISTNAME=		xextproto-7.2.1
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		XExt extension headers from X.org
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		xextensions-[0-9]*
 

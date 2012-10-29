@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2011/04/22 13:42:12 obache Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/29 05:06:19 asau Exp $
 
 DISTNAME=	gtkglarea-1.2.3
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openev/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20011204180640/http://www.student.oulu.fi/~jlof/gtkglarea/
 COMMENT=	OpenGL/Mesa widget for GTK+ GUI toolkit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/01 19:05:29 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:53 asau Exp $
 #
 
 DISTNAME=		tile_0.7.3
@@ -11,8 +11,6 @@ MASTER_SITES=		http://www.unixdev.net/downloads/tile/0.7.3/
 MAINTAINER=		inittab@unixdev.net
 HOMEPAGE=		http://www.unixdev.net/projects/tile
 COMMENT=		X11 Window Tiler
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes

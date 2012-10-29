@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/07 16:58:02 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/29 05:07:17 asau Exp $
 #
 
 DISTNAME=	xpaste-1.1
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Display the content of the X11 paste buffer in a window
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_IMAKE=	yes

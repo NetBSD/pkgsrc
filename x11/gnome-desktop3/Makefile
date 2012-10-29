@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 23:01:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:14 asau Exp $
 #
 
 DISTNAME=	gnome-desktop-3.4.2
@@ -12,8 +12,6 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME3 desktop-wide documents and libgnome-desktop library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

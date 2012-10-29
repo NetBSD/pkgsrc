@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/23 17:10:50 reed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/29 05:06:52 asau Exp $
 
 DISTNAME=		slock-1.0
 CATEGORIES=		x11
@@ -8,8 +8,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://tools.suckless.org/slock
 COMMENT=		Simple X11 screen locker
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin share/doc/slock

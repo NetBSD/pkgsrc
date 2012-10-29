@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 23:00:51 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:06:19 asau Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
@@ -14,8 +14,6 @@ MAINTAINER=	draco@marino.st
 HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
 COMMENT=	Ada graphical toolkit based on Gtk+
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config perl makeinfo pkg-config

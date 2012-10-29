@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/29 05:07:10 asau Exp $
 
 DISTNAME=		xfishtank-2.2
 PKGREVISION=		1
@@ -7,8 +7,6 @@ MASTER_SITES=		ftp://ftp.uni-koeln.de/windows/xcontrib/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Make fish swim in the background of your screen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/xfishtank2.0
 USE_IMAKE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/03 18:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:49 asau Exp $
 #
 
 DISTNAME=		renderproto-0.11.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Render extension headers from modular X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		renderext-[0-9]*
 

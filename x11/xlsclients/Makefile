@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 12:09:42 tron Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:14 asau Exp $
 #
 
 DISTNAME=		xlsclients-1.1.2
@@ -11,8 +11,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X client listing utility
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

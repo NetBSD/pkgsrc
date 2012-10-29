@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/15 18:18:05 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:07:08 asau Exp $
 #
 
 DISTNAME=		xf86miscproto-0.9.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		XF86Misc extension headers from modular X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xf86miscproto.pc.in

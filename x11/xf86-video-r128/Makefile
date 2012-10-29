@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/27 10:06:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/29 05:07:05 asau Exp $
 
 DISTNAME=	xf86-video-r128-6.8.1
 PKGREVISION=	2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ATI Rage128 video driver
 
 CONFLICTS=		xf86-video-ati<6.9.0
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-dri
 

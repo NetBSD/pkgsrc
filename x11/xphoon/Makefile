@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/07/28 02:45:56 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/29 05:07:18 asau Exp $
 #
 
 DISTNAME=	xphoon.tar
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Set the root window to the moon in its current phase
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xphoon
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/08 23:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/29 05:06:50 asau Exp $
 #
 
 DISTNAME=	rox-session-0.28
@@ -35,7 +35,6 @@ SUBST_FILES.lib=	findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 USE_TOOLS+=	pax
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-install:
 	${RM} -f ${WRKSRC}/wm.py.orig

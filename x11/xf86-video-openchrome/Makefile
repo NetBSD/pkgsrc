@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/27 10:06:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/29 05:07:05 asau Exp $
 #
 
 DISTNAME=	xf86-video-openchrome-0.2.904
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openchrome.org/
 COMMENT=	Modular Xorg OpenChrome driver for VIA UniChrome video chipsets
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

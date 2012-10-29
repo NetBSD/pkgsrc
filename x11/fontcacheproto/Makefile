@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/15 17:51:32 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:12 asau Exp $
 #
 
 DISTNAME=		fontcacheproto-0.1.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Fontcache extension headers from X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	fontcacheproto.pc.in

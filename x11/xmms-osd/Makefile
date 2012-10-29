@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.24 2012/06/04 09:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/29 05:07:16 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/xosd/Makefile.common"
 

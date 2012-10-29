@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/07/12 14:16:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:06:48 asau Exp $
 #
 
 DISTNAME=		randrproto-1.4.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Randr extension headers from modular X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		randrext-[0-9]*
 

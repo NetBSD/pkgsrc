@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/10/08 23:00:55 adam Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/29 05:06:44 asau Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.25.3
@@ -15,8 +15,6 @@ COMMENT=	Python binding for GNOME2
 # need xsltproc to build docs
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=	YES
 USE_LIBTOOL=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/10/08 23:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.47 2012/10/29 05:06:11 asau Exp $
 #
 
 DISTNAME=	fast-user-switch-applet-2.24.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ignore-your.tv/fusa/
 COMMENT=	Switch between users from the GNOME Panel
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		gdm>=2.16.0:../../x11/gdm
 

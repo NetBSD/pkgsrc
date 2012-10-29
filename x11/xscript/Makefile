@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/07/14 12:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/29 05:07:20 asau Exp $
 #
 
 DISTNAME=	xscript.tar
@@ -12,8 +12,6 @@ EXTRACT_SUFX=	.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ee.ryerson.ca/~elf/xapps/Q-XVIII.html
 COMMENT=	X Window system script recording and playback
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/test-distrib/src
 USE_IMAKE=	YES

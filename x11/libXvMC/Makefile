@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 10:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:06:36 asau Exp $
 #
 
 DISTNAME=		libXvMC-1.0.7
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		XVideo Motion Compensation Library
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

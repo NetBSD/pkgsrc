@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 10:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/29 05:06:35 asau Exp $
 #
 
 DISTNAME=		libXpm-3.5.10
@@ -11,8 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X PixMap Library from modular Xorg X11
 
 CONFLICTS+=		xpm-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config xgettext

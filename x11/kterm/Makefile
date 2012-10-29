@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/05/31 13:05:27 obache Exp $
+# $NetBSD: Makefile,v 1.58 2012/10/29 05:06:32 asau Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	23
@@ -16,8 +16,6 @@ PATCH_DIST_STRIP= -p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Multi-lingual terminal emulator for X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

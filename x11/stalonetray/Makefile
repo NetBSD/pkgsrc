@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/02/28 14:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/29 05:06:52 asau Exp $
 #
 DISTNAME=stalonetray-0.8.1
 CATEGORIES=x11
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stalonetray.sourceforge.net/
 COMMENT=	Stand-alone system tray
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-native-kde

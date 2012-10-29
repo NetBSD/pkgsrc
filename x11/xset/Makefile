@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 10:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/29 05:07:20 asau Exp $
 #
 
 DISTNAME=		xset-1.2.2
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X11 user preferences utility
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

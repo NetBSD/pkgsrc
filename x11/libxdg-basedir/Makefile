@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/10 13:11:39 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:38 asau Exp $
 #
 
 DISTNAME=	libxdg-basedir-1.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
 COMMENT=	XDG Base Directory library
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

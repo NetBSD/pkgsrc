@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/15 17:59:26 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:07:19 asau Exp $
 #
 
 DISTNAME=		xproxymanagementprotocol-1.0.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Proxy Management extension headers from modular X.org X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE+=	xproxymngproto.pc.in
 GNU_CONFIGURE=		yes

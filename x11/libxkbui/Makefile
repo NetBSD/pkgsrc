@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:16 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:38 asau Exp $
 #
 
 DISTNAME=		libxkbui-1.0.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		xkbui library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	xkbui.pc.in

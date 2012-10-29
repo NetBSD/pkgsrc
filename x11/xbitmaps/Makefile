@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/10 15:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/29 05:06:58 asau Exp $
 #
 
 DISTNAME=		xbitmaps-1.1.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Common X11 bitmaps
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

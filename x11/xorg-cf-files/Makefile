@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/07/02 15:55:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/29 05:07:17 asau Exp $
 #
 
 DISTNAME=		xorg-cf-files-1.0.4
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xorg imake rules
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

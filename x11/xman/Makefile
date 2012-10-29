@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/07/14 21:58:17 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/29 05:07:15 asau Exp $
 #
 
 DISTNAME=		xman-1.1.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Manual page browser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

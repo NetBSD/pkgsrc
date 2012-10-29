@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/07/13 15:14:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/29 05:06:35 asau Exp $
 #
 
 DISTNAME=		libXi-1.6.1
@@ -12,7 +12,6 @@ COMMENT=		X Input extension library
 LICENSE=		mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

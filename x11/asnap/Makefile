@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:57 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:06:07 asau Exp $
 
 DISTNAME=		asnap
 PKGNAME=		${DISTNAME}-1.0
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:S/contrib/R5contrib/}
 
 MAINTAINER=		he@NetBSD.org
 COMMENT=		Takes a snapshot of a region of the screen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_IMAKE=		yes
