@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/07/30 01:19:15 dholland Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/29 05:06:06 asau Exp $
 #
 
 DISTNAME=		xaos-3.5
@@ -10,7 +10,6 @@ HOMEPAGE=		http://xaos.sourceforge.net/
 COMMENT=		Zoomable fractal rendering doodad
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES

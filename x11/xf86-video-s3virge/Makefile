@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/27 10:06:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/29 05:07:05 asau Exp $
 #
 
 DISTNAME=	xf86-video-s3virge-1.10.4
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg S3 ViRGE video driver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2012/10/28 20:21:11 is Exp $
+# $NetBSD: Makefile.common,v 1.68 2012/10/29 05:07:14 asau Exp $
 #
 # This Makefile.common is included by:
 #
@@ -25,7 +25,6 @@ PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
 FILESDIR?=		${.CURDIR}/../xlockmore/files
 MESSAGE_SRC?=		${.CURDIR}/../xlockmore/MESSAGE
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"

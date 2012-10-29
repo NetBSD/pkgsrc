@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/12/08 09:03:07 tron Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/29 05:06:06 asau Exp $
 
 DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
@@ -13,7 +13,6 @@ COMMENT=		X Fixes extension of X RandR
 
 CONFLICTS+=		libXfixes-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/22 02:21:21 rh Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/29 05:06:16 asau Exp $
 
 DISTNAME=	gnustep-gui-0.22.0
 CATEGORIES=	x11 gnustep
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep AppKit Implementation
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		objc
 GNU_CONFIGURE=		yes

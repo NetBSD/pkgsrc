@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2012/10/08 23:00:54 adam Exp $
+# $NetBSD: Makefile,v 1.89 2012/10/29 05:06:44 asau Exp $
 #
 
 DISTNAME=	pygtk-2.24.0
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pygtk.org/
 COMMENT=	Python bindings for GTK+2
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	${PYPKGPREFIX}-gtk<0.6.10
 

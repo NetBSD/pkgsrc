@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/09/27 10:06:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/29 05:07:05 asau Exp $
 
 DISTNAME=	xf86-video-nv-2.1.18
 #PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg NVIDIA video driver
 LICENSE=	mit AND modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

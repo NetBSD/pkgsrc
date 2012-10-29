@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/03 18:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/29 05:07:23 asau Exp $
 #
 
 DISTNAME=		xtrans-1.2.7
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Network API translation layer to insulate X
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

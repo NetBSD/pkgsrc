@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 10:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/29 05:07:15 asau Exp $
 
 DISTNAME=	magicpoint-1.09a
 PKGNAME=	xmindpath-1.09a
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.riken.go.jp/pub/misc/Japan/MagicPoint/ \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MindPath PocketPoint user-level driver for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/xmindpath
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/09 14:36:36 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/29 05:07:15 asau Exp $
 #
 
 DISTNAME=		Xlt-13.0.13
@@ -12,7 +12,6 @@ HOMEPAGE=		http://xlt.sourceforge.net/
 COMMENT=		OpenMotif/Lesstif Widget library
 
 PKG_INSTALLATION_TYPES=	overwrite
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
