@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/03 21:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/29 05:06:51 asau Exp $
 
 DISTNAME=		rxvt-unicode-9.15
 PKGREVISION=		4
@@ -21,7 +21,6 @@ CONFIGURE_ENV+=		ac_cv_path_TIC=no
 
 CONFIGURE_ARGS+=	--enable-256-color
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	share/doc/rxvt-unicode share/examples/rxvt-unicode
 
 post-install:

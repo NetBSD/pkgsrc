@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/08/23 13:12:47 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/29 05:07:00 asau Exp $
 #
 
 DISTNAME=		libXcursor-1.1.2
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.freedesktop.org/Software/xlibs
 COMMENT=		Client-side cursor loading library for X
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		libXcursor-[0-9]*
 

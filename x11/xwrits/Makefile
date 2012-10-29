@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/07/14 12:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/29 05:07:25 asau Exp $
 
 DISTNAME=	xwrits-2.24
 CATEGORIES=	x11
@@ -7,8 +7,6 @@ MASTER_SITES=	http://www.lcdf.org/~eddietwo/xwrits/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.lcdf.org/~eddietwo/xwrits/
 COMMENT=	Wrist break reminder for prevention of repetitive stress injuries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

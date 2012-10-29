@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:18 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:07:13 asau Exp $
 #
 
 DISTNAME=		xkbdata-1.0.1
@@ -12,8 +12,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xorg keyboard maps and layouts
 
 CONFLICTS+=		xkeyboard-config-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

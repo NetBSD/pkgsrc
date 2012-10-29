@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 10:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:07:19 asau Exp $
 #
 
 DISTNAME=	xrandr-1.3.5
@@ -12,8 +12,6 @@ COMMENT=	Primitive command line interface to RandR extension
 LICENSE=	mit
 
 DEPENDS+=	nickle-[0-9]*:../../math/nickle
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

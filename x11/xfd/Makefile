@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/15 15:08:20 marino Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/29 05:07:10 asau Exp $
 #
 
 DISTNAME=	xfd-1.0.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Display all the characters in an X font
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

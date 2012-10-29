@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/09 07:00:46 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:33 asau Exp $
 #
 
 DISTNAME=		libICE-1.0.8
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Inter Client Exchange (ICE) library for X
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

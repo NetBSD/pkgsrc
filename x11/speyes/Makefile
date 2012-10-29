@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 10:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/29 05:06:52 asau Exp $
 
 DISTNAME=	speyes-1.2.0
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.okb-1.org/speyes/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.okb-1.org/speyes/speyes.html
 COMMENT=	South Park XEyes clone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

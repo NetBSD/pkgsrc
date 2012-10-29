@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/27 10:06:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/29 05:07:02 asau Exp $
 
 DISTNAME=	xf86-input-mouse-1.7.2
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg mouse driver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

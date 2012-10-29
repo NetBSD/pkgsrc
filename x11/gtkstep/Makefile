@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:45:04 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/29 05:06:20 asau Exp $
 
 DISTNAME=		gtkstep-1.10
 PKGREVISION=		7
@@ -12,8 +12,6 @@ COMMENT=		GTK theme-engine to yield a NEXTSTEP(tm) look and feel
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/themes/Step/gtk/gtkrc.in

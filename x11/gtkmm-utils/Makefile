@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 23:00:40 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:06:20 asau Exp $
 #
 
 DISTNAME=	gtkmm-utils-0.4.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://gtkmm-utils.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gtkmm-utils/
 COMMENT=	C++ utility and widget library based on glibmm and gtkmm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

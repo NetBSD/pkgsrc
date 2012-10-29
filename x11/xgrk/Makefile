@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/30 02:59:21 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:11 asau Exp $
 #
 
 DISTNAME=		xgrk-1.6.3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://users.softlab.ece.ntua.gr/~sivann/software/xgrk/
 MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.softlab.ece.ntua.gr/~sivann/software/xgrk/
 COMMENT=		Greek keyboard switcher for X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 

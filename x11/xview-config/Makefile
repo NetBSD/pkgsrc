@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/02/29 13:13:14 hans Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/29 05:07:24 asau Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-config-3.2.1
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 OWNER=			dholland@NetBSD.org
 COMMENT=		OpenLook Toolkit config files
 LICENSE=		sun-openlook-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

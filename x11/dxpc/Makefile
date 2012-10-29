@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/03/18 10:50:46 adam Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/29 05:06:10 asau Exp $
 
 DISTNAME=	dxpc-3.9.2
 CATEGORIES=	x11
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vigor.nu/dxpc/
 COMMENT=	Differential X Protocol Compressor
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

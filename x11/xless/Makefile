@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/05/03 09:55:32 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/29 05:07:14 asau Exp $
 
 DISTNAME=	xless-1.7
 PKGREVISION=	4
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 text viewer; useful as an add-on tool for other apps
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/06/06 09:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/29 05:07:13 asau Exp $
 #
 
 DISTNAME=		xkbevd-1.1.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Possible replacement for xev (work in progress)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 23:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:51 asau Exp $
 #
 
 DISTNAME=	wxruby-2.0.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wxruby.rubyforge.org/wiki/wiki.pl
 COMMENT=	Cross-platform GUI library for creating desktop applications
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.2.0:../../textproc/ruby-redcloth
 

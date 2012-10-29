@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 23:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/29 05:06:50 asau Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtksourceview2-${VERSION}
@@ -7,8 +7,6 @@ PKGREVISION=		4
 CATEGORIES=		x11
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtksourceview2-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_EXTCONF_SUBDIRS=	gtksourceview2
 

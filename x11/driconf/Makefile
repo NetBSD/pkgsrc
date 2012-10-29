@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/06/15 23:06:02 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/29 05:06:10 asau Exp $
 #
 
 DISTNAME=	driconf-0.9.1
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2 # or later
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.4:../../x11/py-gtk2
 DEPENDS+=	xdriinfo>=1.0.2:../../x11/xdriinfo
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt msgmerge xgettext

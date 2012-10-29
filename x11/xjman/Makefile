@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/10/07 14:59:35 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/29 05:07:12 asau Exp $
 
 DISTNAME=	xjman-0.5
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xjman.dsl.gr.jp/
 COMMENT=	Japanized X manual from "The X Japanese Documentation Project"
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ja-man-[0-9]*:../../misc/ja-man
 

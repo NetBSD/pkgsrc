@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/09 07:00:47 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/29 05:06:34 asau Exp $
 #
 
 DISTNAME=		libXdmcp-1.1.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Display Manager Control Protocol library from X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

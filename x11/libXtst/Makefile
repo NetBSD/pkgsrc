@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/09 07:00:48 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:36 asau Exp $
 #
 
 DISTNAME=		libXtst-1.2.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Tst Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

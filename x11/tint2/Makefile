@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 23:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/29 05:06:53 asau Exp $
 
 DISTNAME=		tint2-0.11
 PKGREVISION=		13
@@ -10,8 +10,6 @@ MAINTAINER=		fernandotcl@gmail.com
 HOMEPAGE=		http://code.google.com/p/tint2/
 COMMENT=		Tint2 is a simple panel/taskbar
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++ # XXX CMake. pkg does not really need c++
 USE_LIBTOOL=		yes

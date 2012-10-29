@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/08 23:02:40 adam Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/29 05:07:17 asau Exp $
 #
 
 DISTNAME=	xpad-4.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mterry.name/xpad/
 COMMENT=	Sticky notes application for GTK+ 2.0
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

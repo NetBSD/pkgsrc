@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/03 18:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/29 05:07:08 asau Exp $
 #
 
 DISTNAME=		xf86vidmodeproto-2.3.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		XF86VidMode extension headers from modular X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xf86vidmodeproto.pc.in

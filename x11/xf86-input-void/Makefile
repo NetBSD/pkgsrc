@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/27 10:06:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:03 asau Exp $
 
 DISTNAME=	xf86-input-void-1.2.0
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg dummy input driver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

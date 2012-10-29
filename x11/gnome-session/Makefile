@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2012/10/08 23:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.142 2012/10/29 05:06:15 asau Exp $
 #
 
 DISTNAME=		gnome-session-2.26.2
@@ -14,8 +14,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 session management utilities
 
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome-core<1.4.2nb4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/15 09:29:34 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/29 05:06:50 asau Exp $
 #
 # This package is for use with native X11. Do not update to later versions.
 
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Render extension headers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		renderext-[0-9]*
 

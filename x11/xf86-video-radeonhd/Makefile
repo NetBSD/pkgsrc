@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/27 10:06:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/29 05:07:05 asau Exp $
 
 DISTNAME=	xf86-video-radeonhd-1.3.0
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://wiki.x.org/wiki/radeonhd
 COMMENT=	Modular X.org driver for Radeon HD series
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

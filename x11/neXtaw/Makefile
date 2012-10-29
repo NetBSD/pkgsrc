@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 10:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/29 05:06:41 asau Exp $
 
 DISTNAME=	neXtaw-0.15.1
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://siag.nu/pub/neXtaw/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://siag.nu/neXtaw/
 COMMENT=	NeXTstep-like widgets based on the Athena Widget set
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes

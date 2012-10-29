@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/29 05:06:54 asau Exp $
 #
 
 DISTNAME=	unclutter-8
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Remove idle cursor image from screen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/unclutter
 USE_IMAKE=	yes

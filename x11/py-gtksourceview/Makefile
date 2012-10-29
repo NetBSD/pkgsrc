@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 23:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/29 05:06:44 asau Exp $
 
 DISTNAME=	pygtksourceview-2.10.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for gtksourceview2
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 

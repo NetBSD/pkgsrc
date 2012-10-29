@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 23:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/29 05:06:45 asau Exp $
 #
 
 DISTNAME=	QScintilla-gpl-2.6.2
@@ -11,8 +11,6 @@ MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/software/qscintilla/intro
 COMMENT=	QScintilla -- Python bindings --
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 

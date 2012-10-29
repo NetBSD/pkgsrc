@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/03 18:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:52 asau Exp $
 #
 
 DISTNAME=	setxkbmap-1.3.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Set the keyboard map using the X Keyboard Extension
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

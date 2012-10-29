@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 23:02:35 adam Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/29 05:06:17 asau Exp $
 #
 
 DISTNAME=	grandr_applet-0.4
@@ -9,8 +9,6 @@ MASTER_SITES=	http://dekorte.homeip.net/download/grandr-applet/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dekorte.homeip.net/download/grandr-applet/
 COMMENT=	gnome-panel front end to the xrandr extension
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

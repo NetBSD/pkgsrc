@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 10:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:07:12 asau Exp $
 #
 
 DISTNAME=	xinput-1.5.2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Xinput diagnostic utility for modular X.org
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

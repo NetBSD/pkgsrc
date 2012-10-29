@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/10/08 23:00:56 adam Exp $
+# $NetBSD: Makefile,v 1.71 2012/10/29 05:06:32 asau Exp $
 #
 
 DISTNAME=	lablgtk-2.16.0
@@ -12,8 +12,6 @@ COMMENT=	GTK+ 2.x bindings for Objective Caml
 # for installed files; more restrictions on applications/
 LICENSE=	gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
@@ -23,8 +21,6 @@ BUILD_TARGET=		world
 BUILDLINK_DEPMETHOD.ocaml=	full
 
 CONFLICTS=	lablgtk2-2.*{,nb*}
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

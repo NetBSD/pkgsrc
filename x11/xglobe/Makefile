@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/11/01 06:03:12 sbd Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/29 05:07:11 asau Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -15,8 +15,6 @@ DISTFILES+=	${MAPS} ${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.unc.edu/~scheuerm/xglobe/
 COMMENT=	Displays the earth as seen from space, similar to xearth
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	xglobe
 MAPS=		LE.400.gif Brill.400.gif mggd.gif

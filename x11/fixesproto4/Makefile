@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/08 00:39:31 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/29 05:06:12 asau Exp $
 #
 # This package is for use with Xfixes only. Do not update to later versions.
 
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Fixes extension headers from X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		fixesext-[0-9]*
 

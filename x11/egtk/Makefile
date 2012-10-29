@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/04/22 13:45:02 obache Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/29 05:06:11 asau Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -13,8 +13,6 @@ COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 #LICENSE=	Fiffel Forum Freeware License, version 1
 
 DEPENDS+=	SmartEiffel-[0-9]*:../../lang/SmartEiffel
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 

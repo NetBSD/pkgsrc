@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/06/16 04:30:22 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/29 05:07:01 asau Exp $
 
 DISTNAME=		xdm3d-1.0
 PKGREVISION=		5
@@ -15,8 +15,6 @@ USE_IMAKE=		yes
 
 PLIST_SRC=		${WRKDIR}/PLIST-src
 INSTALLATION_DIRS=	bin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

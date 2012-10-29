@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/07/07 17:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/29 05:07:17 asau Exp $
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/bsd-sources/4.4BSD-Lite/usr/src/games/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Classic BSD4.4 cat-and-mouse
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pub/bsd-sources/4.4BSD-Lite/usr/src/games/xneko
 MANCOMPRESSED_IF_MANZ=	yes

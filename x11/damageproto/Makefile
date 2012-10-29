@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/05/29 15:06:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:09 asau Exp $
 #
 
 DISTNAME=		damageproto-1.2.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Damage extension headers from modular X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	damageproto.pc.in

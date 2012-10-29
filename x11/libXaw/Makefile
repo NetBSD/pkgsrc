@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 10:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/29 05:06:33 asau Exp $
 #
 
 DISTNAME=		libXaw-1.0.11
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Athena Widgets Library from modular Xorg X11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

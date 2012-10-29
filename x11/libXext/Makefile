@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/06/09 07:00:47 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/29 05:06:34 asau Exp $
 #
 
 DISTNAME=		libXext-1.3.1
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Extension library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

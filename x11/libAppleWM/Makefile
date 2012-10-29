@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 10:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/29 05:06:32 asau Exp $
 #
 
 DISTNAME=		libAppleWM-1.4.0
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		AppleWM library from modular X.org
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 

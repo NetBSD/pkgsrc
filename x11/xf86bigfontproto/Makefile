@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/29 15:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:07:07 asau Exp $
 #
 
 DISTNAME=		xf86bigfontproto-1.2.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		XF86BigFont extension headers from X.org
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xf86bigfontproto.pc.in

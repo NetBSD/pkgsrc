@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/10/23 10:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2012/10/29 05:06:12 asau Exp $
 
 DISTNAME=	fox-1.6.33
 PKGREVISION=	6
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.fox-toolkit.org/ftp/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fox-toolkit.org/
 COMMENT=	Fast and extensive C++ GUI toolkit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

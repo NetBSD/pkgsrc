@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/27 10:06:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:07:02 asau Exp $
 
 DISTNAME=	xf86-input-keyboard-1.6.1
 CATEGORIES=	x11
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg keyboard driver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
