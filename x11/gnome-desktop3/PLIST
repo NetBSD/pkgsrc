@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/23 16:27:43 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/29 14:29:27 prlw1 Exp $
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-crossfade.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-desktop-thumbnail.h
@@ -8,9 +8,11 @@ include/gnome-desktop-3.0/libgnome-desktop/gnome-rr-config.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr-labeler.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-wall-clock.h
+include/gnome-desktop-3.0/libgnome-desktop/gnome-xkb-info.h
 lib/girepository-1.0/GnomeDesktop-3.0.typelib
 lib/libgnome-desktop-3.la
 lib/pkgconfig/gnome-desktop-3.0.pc
+libexec/gnome-rr-debug
 share/gir-1.0/GnomeDesktop-3.0.gir
 share/gnome/gnome-version.xml
 share/gtk-doc/html/gnome-desktop3/GnomeDesktopThumbnailFactory.html
@@ -18,11 +20,8 @@ share/gtk-doc/html/gnome-desktop3/background.html
 share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-bg.html
 share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-desktop-utils.html
 share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-config.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-crtc.html
 share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-labeler.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-mode.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-output.html
-share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr-screen.html
+share/gtk-doc/html/gnome-desktop3/gnome-desktop3-gnome-rr.html
 share/gtk-doc/html/gnome-desktop3/gnome-desktop3.devhelp2
 share/gtk-doc/html/gnome-desktop3/home.png
 share/gtk-doc/html/gnome-desktop3/index.html
@@ -54,6 +53,7 @@ share/locale/ca/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/crh/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/cs/LC_MESSAGES/gnome-desktop-3.0.mo
+share/locale/csb/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/cy/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/da/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/de/LC_MESSAGES/gnome-desktop-3.0.mo
