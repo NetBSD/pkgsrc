@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/03/19 14:41:56 asau Exp $
-share/squeak/${PKGVERSION}/Squeak${PKGVERSION}-basic.changes
-share/squeak/${PKGVERSION}/Squeak${PKGVERSION}-basic.image
+@comment $NetBSD: PLIST,v 1.9 2012/10/29 08:04:21 asau Exp $
+share/squeak/${PKGVERSION}/Squeak${PKGVERSION}.changes
+share/squeak/${PKGVERSION}/Squeak${PKGVERSION}.image
 share/squeak/${PKGVERSION}/SqueakV40.sources
