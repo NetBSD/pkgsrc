@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/29 12:43:21 prlw1 Exp $
 #
 
-DISTNAME=	yelp-xsl-3.4.2
+DISTNAME=	yelp-xsl-3.6.1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-xsl/3.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-xsl/3.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
