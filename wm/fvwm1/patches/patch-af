@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2012/10/29 09:46:46 cegger Exp $
+
+--- sample.fvwmrc/system.fvwmrc.orig	1994-12-02 19:19:12.000000000 +0000
++++ sample.fvwmrc/system.fvwmrc
+@@ -227,7 +227,7 @@ ButtonStyle : 4 4 50x65@1 35x35@1 65x35@
+ 
+ Function "InitFunction"
+ 	Module	"I"	FvwmBanner
+-	Exec	"I"	xpmroot /usr/include/X11/pixmaps/fvwm.xpm &
++	Exec	"I"	xpmroot ${X11BASE}/include/pixmaps/fvwm.xpm &
+ 	Module	"I"	GoodStuff
+ 	Exec	"I"	exec xterm -geometry 80x64+0+0 &
+ 	Wait	"I"	xterm
