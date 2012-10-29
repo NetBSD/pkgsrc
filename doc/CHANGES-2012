@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3449 2012/10/29 11:33:39 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3450 2012/10/29 12:37:37 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5285,3 +5285,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/squeak-vm to 4.10.2.2614 [asau 2012-10-29]
 	Updated lang/squeak to 4.3 [asau 2012-10-29]
 	Updated lang/coq to 8.4 [jaapb 2012-10-29]
+	Updated sysutils/gsettings-desktop-schemas to 3.6.0 [prlw1 2012-10-29]
