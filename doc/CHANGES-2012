@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3451 2012/10/29 12:43:55 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.3452 2012/10/29 12:44:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/coq to 8.4 [jaapb 2012-10-29]
 	Updated sysutils/gsettings-desktop-schemas to 3.6.0 [prlw1 2012-10-29]
 	Updated textproc/itstool to 1.2.0 [prlw1 2012-10-29]
+	Updated textproc/yelp-xsl to 3.6.1 [prlw1 2012-10-29]
