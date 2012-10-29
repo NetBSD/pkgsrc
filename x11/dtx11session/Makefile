@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/07 18:28:48 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:10 asau Exp $
 
 DISTNAME=	dtxsession-1.0
 CATEGORIES=	x11
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sun.com/software/solaris/cde/
 COMMENT=	Launch a X11 session from CDE login service
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	SunOS-*-*
 

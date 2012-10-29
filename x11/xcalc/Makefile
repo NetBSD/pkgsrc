@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/03 18:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:06:58 asau Exp $
 #
 
 DISTNAME=		xcalc-1.0.4.1
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Scientific calculator for X
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

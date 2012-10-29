@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/04/22 13:42:11 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/29 05:06:17 asau Exp $
 #
 
 DISTNAME=	gtk+extra-0.99.17
@@ -9,8 +9,6 @@ MASTER_SITES=	http://gtkextra.sourceforge.net/src/
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://gtkextra.sourceforge.net/
 COMMENT=	Useful set of GTK+ widgets for creating GUIs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_TOOLS+=		gmake

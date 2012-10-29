@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.35 2012/05/06 18:52:04 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/29 05:06:45 asau Exp $
 #
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/py-qt3-base/Makefile.common"
 

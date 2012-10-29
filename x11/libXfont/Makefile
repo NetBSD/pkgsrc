@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/06/09 07:52:51 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/29 05:06:34 asau Exp $
 #
 
 DISTNAME=		libXfont-1.4.5
@@ -10,8 +10,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X font Library
 LICENSE=		mit AND modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

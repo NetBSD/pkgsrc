@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 10:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/29 05:07:20 asau Exp $
 #
 
 DISTNAME=		xsetmode-1.0.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Switch mode of XInput devices
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

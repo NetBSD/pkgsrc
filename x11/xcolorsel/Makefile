@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/06/20 01:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/29 05:07:00 asau Exp $
 #
 
 DISTNAME=	xcolorsel-1.1a-src
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Browse and select named X colors from rgb.txt
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xcolorsel
 MAKE_ENV+=	LIBXAW=${LIBXAW:Q}

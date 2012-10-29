@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/29 05:06:43 asau Exp $
 #
 
 DISTNAME=		X11-Protocol-0.56
@@ -12,7 +12,6 @@ HOMEPAGE=		http://search.cpan.org/dist/X11-Protocol/
 COMMENT=		Interface to the X11 protocol
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/X11/Protocol/.packlist
 
