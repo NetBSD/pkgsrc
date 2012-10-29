@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/23 14:43:47 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:54 asau Exp $
 #
 
 DISTNAME=	unicode-screensaver-0.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.joachim-breitner.de/archive/unicode-screensaver/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.joachim-breitner.de/projects#unicode-screensaver
 COMMENT=	Screensaver that repeatedly randomly picks an unicode character
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

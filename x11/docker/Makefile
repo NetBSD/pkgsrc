@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/09/15 10:06:50 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:06:09 asau Exp $
 #
 
 DISTNAME=	docker-1.5
 PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://offload1.icculus.org/openbox/2/docker/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://icculus.org/openbox/2/docker/

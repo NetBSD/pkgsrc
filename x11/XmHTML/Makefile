@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/12/09 14:36:35 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/29 05:06:07 asau Exp $
 #
 
 DISTNAME=	XmHTML-1.1.7
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.xs4all.nl/~ripley/XmHTML/
 COMMENT=	Motif Widget capable of displaying HTML 3.2 conforming text
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 USE_TOOLS+=	gmake

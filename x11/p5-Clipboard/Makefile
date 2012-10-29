@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:42 asau Exp $
 
 DISTNAME=	Clipboard-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Clipboard/
 COMMENT=	Copy and paste with any OS
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
