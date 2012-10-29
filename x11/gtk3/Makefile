@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/18 19:08:47 prlw1 Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/29 05:06:19 asau Exp $
 
 DISTNAME=	gtk+-3.6.1
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/
 COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt perl pkg-config bash

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2012/10/08 23:00:38 adam Exp $
+# $NetBSD: Makefile,v 1.67 2012/10/29 05:06:20 asau Exp $
 #
 
 DISTNAME=	gtksourceview-1.8.5
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtksourceview.sourceforge.net/
 COMMENT=	Text widget that extends GTK2's GtkTextView widget
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/08 23:01:03 adam Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/29 05:06:41 asau Exp $
 #
 
 DISTNAME=	nucleo-0.7.5
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://insitu.lri.fr/metisse/
 COMMENT=	Toolkit to explore new uses of video and HCI techniques
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake

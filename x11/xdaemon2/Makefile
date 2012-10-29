@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/24 13:26:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/29 05:07:01 asau Exp $
 
 DISTNAME=	xdaemon-2.1
 PKGREVISION=	1
@@ -9,8 +9,6 @@ DISTFILES=	${IMAGES:=.png} Daemon.README
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	BSD Daemon sticking on your desktop (like xteddy)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	xteddy-2.*:../../x11/xteddy2
 
