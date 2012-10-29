@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/27 10:06:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/29 05:07:04 asau Exp $
 #
 
 DISTNAME=	xf86-video-imstt-1.1.0
@@ -12,8 +12,6 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg IMS Twin Turbo 128 video driver
 
 BROKEN=		Broken with xserver 1.6 and up
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

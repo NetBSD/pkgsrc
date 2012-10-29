@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/16 03:21:22 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/29 05:06:57 asau Exp $
 
 DISTNAME=	x2x-1.27
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://apotheca.hpl.hp.com/ftp/pub/Compaq/SRC/x2x/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://x2x.dottedmag.net/
 COMMENT=	One keyboard and mouse to control multiple X displays
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

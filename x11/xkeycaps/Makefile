@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/10 17:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/29 05:07:13 asau Exp $
 #
 
 DISTNAME=	xkeycaps-2.46
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jwz.org/xkeycaps/
 COMMENT=	Graphical front-end to xmodmap
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

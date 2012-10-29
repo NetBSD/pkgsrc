@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/06/15 23:06:09 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/29 05:07:24 asau Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
@@ -19,8 +19,6 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 NOT_FOR_PLATFORM=	*-*-alpha
 
 USE_IMAKE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && ${LN} -fs libolgx.so.3.2 libolgx.so.3 && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 10:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/29 05:06:36 asau Exp $
 #
 
 DISTNAME=		libXxf86dga-1.1.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Library for the XFree86-DGA X extension
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
