@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:14 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/29 14:29:26 prlw1 Exp $
 #
 
-DISTNAME=	gnome-desktop-3.4.2
+DISTNAME=	gnome-desktop-3.6.1
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
-PKGREVISION=	4
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/3.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/3.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
@@ -26,10 +25,13 @@ CONFIGURE_ARGS+=	--disable-desktop-docs
 CONFIGURE_ARGS+=	--disable-scrollkeeper
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
+BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.33.3
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gsettings-deskopt-schmemas+=	gsettings-deskopt-schmemas>=3.5.91
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
