@@ -1,0 +1,32 @@
+$NetBSD: patch-Makefile.build,v 1.1 2012/10/29 11:33:18 jaapb Exp $
+
+Install configuration file in examples directory
+--- Makefile.build.orig	2012-08-10 21:53:21.000000000 +0000
++++ Makefile.build
+@@ -575,7 +575,7 @@ endif
+ ifdef COQINSTALLPREFIX
+ FULLBINDIR=$(BINDIR:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)
+ FULLCOQLIB=$(COQLIBINSTALL:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)
+-FULLCONFIGDIR=$(CONFIGDIR:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)
++FULLCONFIGDIR=$(DATADIR:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)/examples
+ FULLDATADIR=$(DATADIR:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)
+ FULLMANDIR=$(MANDIR:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)
+ FULLEMACSLIB=$(EMACSLIB:"$(OLDROOT)%="$(COQINSTALLPREFIX)%)
+@@ -584,7 +584,7 @@ FULLDOCDIR=$(DOCDIR:"$(OLDROOT)%="$(COQI
+ else
+ FULLBINDIR=$(BINDIR)
+ FULLCOQLIB=$(COQLIBINSTALL)
+-FULLCONFIGDIR=$(CONFIGDIR)
++FULLCONFIGDIR=$(DATADIR)/examples
+ FULLDATADIR=$(DATADIR)
+ FULLMANDIR=$(MANDIR)
+ FULLEMACSLIB=$(EMACSLIB)
+@@ -638,7 +638,7 @@ install-library:
+ 	$(INSTALLSH)  $(FULLCOQLIB) $(INSTALLCMI)
+ ifeq ($(BEST),opt)
+ 	$(INSTALLLIB) $(LIBCOQRUN) $(FULLCOQLIB)
+-	$(INSTALLSH)  $(FULLCOQLIB) $(CONFIG:.cmo=.cmx) $(CONFIG:.cmo=.o) $(LINKCMO:.cma=.cmxa) $(LINKCMO:.cma=.a) $(PLUGINSOPT)
++	$(INSTALLSH)  $(FULLCOQLIB) $(CONFIG:.cmo=.cmx) $(CONFIG:.cmo=.o) $(LINKCMO:.cma=.cmxa) $(LINKCMO:.cma=.a) $(PLUGINSOPT) $(PLUGINSOPT:.cmxs=.cmxa) $(PLUGINSOPT:.cmxs=.a)
+ endif
+ # csdpcert is not meant to be directly called by the user; we install
+ # it with libraries
