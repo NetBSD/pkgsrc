@@ -1,0 +1,38 @@
+$NetBSD: patch-Makefile,v 1.1 2012/10/29 09:11:23 jaapb Exp $
+
+Change installation procedure to conform with pkgsrc (install, destdir)
+--- Makefile.orig	2012-01-23 10:57:40.000000000 +0000
++++ Makefile
+@@ -34,10 +34,10 @@ ifndef PREFIX
+   $(error Please define PREFIX)
+ endif
+ 
+-bindir          := ${PREFIX}/bin
+-docdir		:= ${PREFIX}/share/doc/menhir
+-libdir	        := ${PREFIX}/share/menhir
+-mandir          := ${PREFIX}/share/man/man1
++bindir          := ${DESTDIR}${PREFIX}/bin
++docdir		:= ${DESTDIR}${PREFIX}/share/doc/menhir
++libdir	        := ${DESTDIR}${PREFIX}/share/menhir
++mandir          := ${DESTDIR}${PKGMANDIR}/man1
+ MANS            := menhir.1
+ DOCS            := manual.pdf demos
+ MLYLIB          := src/standard.mly
+@@ -79,13 +79,14 @@ install: all
+ 	mkdir -p $(libdir)
+ 	mkdir -p $(docdir)
+ 	mkdir -p $(mandir)
+-	install src/$(MENHIREXE) $(bindir)
+-	install -m 644 $(MLYLIB) $(libdir)
++	${BSD_INSTALL_PROGRAM} src/$(MENHIREXE) $(bindir)
++	${BSD_INSTALL_DATA} $(MLYLIB) $(libdir)
+ 	cp -r $(DOCS) $(docdir)
+ 	cp -r $(MANS) $(mandir)
+ 	@cd src && if $(USE_OCAMLFIND) ; then \
+ 	  echo Installing MenhirLib via ocamlfind. ; \
+-	  ocamlfind install menhirLib META $(MENHIRLIB) ; \
++	  ocamlfind install -destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib \
++			-ldconf ignore menhirLib META $(MENHIRLIB) ; \
+ 	else \
+ 	  echo Installing MenhirLib manually. ; \
+ 	  install -m 644 $(MENHIRLIB) $(libdir) ; \
