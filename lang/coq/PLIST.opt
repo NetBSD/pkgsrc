@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.opt,v 1.7 2010/11/14 20:53:02 tonio Exp $
-bin/coqchk.opt
-${PLIST.coqide}bin/coqide.opt
-bin/coqtop.opt
-man/man1/coqtop.opt.1
