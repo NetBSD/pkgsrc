@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2012/10/08 23:01:57 adam Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/29 11:33:17 jaapb Exp $
 #
 
-DISTNAME=	coq-8.3pl1
-PKGREVISION=	16
+DISTNAME=	coq-8.4
 CATEGORIES=	lang math
-MASTER_SITES=	http://coq.inria.fr/distrib/V8.3pl1/files/
+MASTER_SITES=	http://coq.inria.fr/distrib/V8.4/files/
 
-MAINTAINER=	richards+netbsd@CS.Princeton.EDU
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 LICENSE=	gnu-lgpl-v2.1
@@ -15,6 +14,8 @@ USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
+CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	-configdir ${PKG_SYSCONFDIR}/xdg/coq
 BUILD_TARGET=		world
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
@@ -22,8 +23,13 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-	(${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
+    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "arm")
+PLIST.opt=	yes
+COQIDE_TYPE=	opt
+.else
+PLIST.byte=	yes
+COQIDE_TYPE=	byte
 .endif
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
@@ -31,7 +37,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-*)
-PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
+PLIST.natdynlink=	yes
 .  endif
 .endif
 
@@ -46,7 +52,7 @@ _STRIPFLAG_INSTALL=
 REPLACE_SH=	configure install.sh
 INSTALL_ENV+=	COQINSTALLPREFIX=${DESTDIR}
 
-PLIST_VARS=		coqide
+PLIST_VARS=		coqide byte opt natdynlink
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	coqide
 .include "../../mk/bsd.options.mk"
@@ -54,7 +60,13 @@ PKG_SUPPORTED_OPTIONS=	coqide
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 PLIST.coqide=		yes
+CONFIGURE_ARGS+=	-coqide ${COQIDE_TYPE}
+.else
+CONFIGURE_ARGS+=	-coqide no
 .endif
+
+EGDIR=		${PREFIX}/share/coq/examples
+CONF_FILES=	${EGDIR}/coqide-gtk2rc ${PKG_SYSCONFDIR}/xdg/coq/coqide-gtk2rc
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
