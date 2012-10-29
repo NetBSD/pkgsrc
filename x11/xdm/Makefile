@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/04/29 08:04:56 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/29 05:07:01 asau Exp $
 
 DISTNAME=	xdm-1.1.11
 PKGREVISION=	1
@@ -11,8 +11,6 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X Display Manager from modular X.org
 
 DEPENDS+=	sessreg-[0-9]*:../../x11/sessreg
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_SYSCONFSUBDIR=	xdm
 CONFIGURE_ARGS+=	--with-xdmconfigdir=${PKG_SYSCONFDIR:Q}

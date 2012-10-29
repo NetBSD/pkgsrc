@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:16 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/29 05:06:54 asau Exp $
 #
 
 DISTNAME=		trapproto-3.4.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Trap extension headers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/trapproto.pc.in
 USE_TOOLS+=		pkg-config

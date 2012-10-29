@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/03/05 04:28:21 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/29 05:06:40 asau Exp $
 
 DISTNAME=	Mowitz-0.3.1
 PKGREVISION=	2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://siag.nu/pub/mowitz/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://siag.nu/mowitz/
 COMMENT=	"More widgets" library providing X11 widgets
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

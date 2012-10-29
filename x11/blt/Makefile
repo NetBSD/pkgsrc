@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/08/21 22:00:24 marino Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/29 05:06:08 asau Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -12,7 +12,6 @@ HOMEPAGE=	http://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

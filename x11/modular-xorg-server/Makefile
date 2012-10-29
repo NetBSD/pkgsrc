@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2012/10/27 17:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2012/10/29 05:06:40 asau Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X11 server from modular X.org
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
 
 GNU_CONFIGURE=	yes

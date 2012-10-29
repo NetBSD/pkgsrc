@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 23:01:01 adam Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/29 05:06:42 asau Exp $
 
 DISTNAME=	Wx-0.9911
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Wx/
 COMMENT=	Perl5 interface to the wxWidgets cross-platform GUI toolkit
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	p5-Alien-wxWidgets>=0.25:../../x11/p5-Alien-wxWidgets

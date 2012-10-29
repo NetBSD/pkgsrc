@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/09 07:00:50 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:24 asau Exp $
 #
 
 DISTNAME=	xwd-1.0.5
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Dump X11 display or window to XWD X Window Dump image file
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
