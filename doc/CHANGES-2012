@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3454 2012/10/29 14:29:45 prlw1 Exp $
+$NetBSD: CHANGES-2012,v 1.3455 2012/10/29 14:40:46 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/yelp-xsl to 3.6.1 [prlw1 2012-10-29]
 	Updated misc/yelp3 to 3.6.1 [prlw1 2012-10-29]
 	Updated x11/gnome-desktop3 to 3.6.1 [prlw1 2012-10-29]
+	Updated graphics/eog3 to 3.6.1 [prlw1 2012-10-29]
