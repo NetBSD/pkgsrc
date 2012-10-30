@@ -1,7 +1,7 @@
-$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/16 20:47:34 hans Exp $
+$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2012/10/30 12:46:30 drochner Exp $
 
---- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2011-09-26 22:54:57.000000000 +0200
-+++ Source/JavaScriptCore/heap/MachineStackMarker.cpp	2011-12-08 19:30:49.602746923 +0100
+--- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2012-10-16 15:22:38.000000000 +0000
++++ Source/JavaScriptCore/heap/MachineStackMarker.cpp
 @@ -20,6 +20,9 @@
   */
  
@@ -12,7 +12,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
  #include "MachineStackMarker.h"
  
  #include "ConservativeRoots.h"
-@@ -60,6 +63,10 @@
+@@ -49,6 +52,10 @@
  #include <unistd.h>
  
  #if OS(SOLARIS)
@@ -23,7 +23,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
  #include <thread.h>
  #else
  #include <pthread.h>
-@@ -317,6 +324,7 @@ typedef pthread_attr_t PlatformThreadReg
+@@ -313,6 +320,7 @@ typedef pthread_attr_t PlatformThreadReg
  #error Need a thread register struct for this platform
  #endif
  
@@ -31,7 +31,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
  static size_t getPlatformThreadRegisters(const PlatformThread& platformThread, PlatformThreadRegisters& regs)
  {
  #if OS(DARWIN)
-@@ -377,6 +385,7 @@ static size_t getPlatformThreadRegisters
+@@ -379,6 +387,7 @@ static size_t getPlatformThreadRegisters
  #error Need a way to get thread registers on this platform
  #endif
  }
@@ -39,7 +39,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
  
  static inline void* otherThreadStackPointer(const PlatformThreadRegisters& regs)
  {
-@@ -440,6 +449,7 @@ static inline void* otherThreadStackPoin
+@@ -442,6 +451,7 @@ static inline void* otherThreadStackPoin
  #endif
  }
  
@@ -47,7 +47,7 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
  static void freePlatformThreadRegisters(PlatformThreadRegisters& regs)
  {
  #if USE(PTHREADS) && !OS(WINDOWS) && !OS(DARWIN) && !OS(QNX)
-@@ -448,24 +458,40 @@ static void freePlatformThreadRegisters(
+@@ -450,20 +460,36 @@ static void freePlatformThreadRegisters(
      UNUSED_PARAM(regs);
  #endif
  }
@@ -55,8 +55,6 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
  
  void MachineThreads::gatherFromOtherThread(ConservativeRoots& conservativeRoots, Thread* thread)
  {
-     suspendThread(thread->platformThread);
- 
 +#if OS(SOLARIS)
 +    struct lwpstatus lwp;
 +    char procfile[64];
@@ -83,8 +81,6 @@ $NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/1
      void* stackBase = thread->stackBase;
      swapIfBackwards(stackPointer, stackBase);
      conservativeRoots.add(stackPointer, stackBase);
- 
-     resumeThread(thread->platformThread);
 -
 -    freePlatformThreadRegisters(regs);
  }
