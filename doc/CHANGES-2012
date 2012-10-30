@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3459 2012/10/30 14:50:15 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3460 2012/10/30 16:14:29 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5297,3 +5297,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/intel-microcode-netbsd to 20120606.v2 [drochner 2012-10-30]
 	Updated security/p5-Crypt-CBC to 2.31 [wen 2012-10-30]
 	Updated net/p5-NetAddr-IP to 4.066 [wen 2012-10-30]
+	Updated games/onscripter to 20121029 [tsutsui 2012-10-30]
