@@ -1,6 +1,8 @@
---- Source/JavaScriptCore/wtf/Threading.h.orig	2011-03-21 19:41:47.000000000 +0100
-+++ Source/JavaScriptCore/wtf/Threading.h	2011-09-13 17:47:57.423475599 +0200
-@@ -113,6 +113,8 @@ using WTF::createThread;
+$NetBSD: patch-Source_JavaScriptCore_wtf_Threading.h,v 1.3 2012/10/30 12:46:30 drochner Exp $
+
+--- Source/WTF/wtf/Threading.h.orig	2012-08-27 19:05:10.000000000 +0000
++++ Source/WTF/wtf/Threading.h
+@@ -112,6 +112,8 @@ using WTF::createThread;
  using WTF::currentThread;
  using WTF::detachThread;
  using WTF::waitForThreadCompletion;
