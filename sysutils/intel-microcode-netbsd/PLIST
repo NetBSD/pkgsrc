@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/29 17:17:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/30 13:26:51 drochner Exp $
 libdata/firmware/cpu_x86_intel1/00000650-0
 libdata/firmware/cpu_x86_intel1/00000650-1
 libdata/firmware/cpu_x86_intel1/00000650-3
@@ -193,6 +193,8 @@ libdata/firmware/cpu_x86_intel1/000206d7-2
 libdata/firmware/cpu_x86_intel1/000206d7-3
 libdata/firmware/cpu_x86_intel1/000206d7-5
 libdata/firmware/cpu_x86_intel1/000206d7-6
+libdata/firmware/cpu_x86_intel1/000206f2-0
+libdata/firmware/cpu_x86_intel1/000206f2-2
 libdata/firmware/cpu_x86_intel1/000306a9-1
 libdata/firmware/cpu_x86_intel1/000306a9-4
 share/examples/rc.d/intel-microcode
