@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1 2012/04/28 14:12:16 drochner Exp $
+$NetBSD: patch-aj,v 1.2 2012/10/30 12:46:30 drochner Exp $
 
---- Source/JavaScriptCore/wtf/InlineASM.h.orig	2012-04-25 13:01:47.000000000 +0000
-+++ Source/JavaScriptCore/wtf/InlineASM.h
+--- Source/WTF/wtf/InlineASM.h.orig	2012-10-16 15:22:38.000000000 +0000
++++ Source/WTF/wtf/InlineASM.h
 @@ -42,7 +42,7 @@
  #define THUMB_FUNC_PARAM(name)
  #endif
  
 -#if (OS(LINUX) || OS(FREEBSD)) && CPU(X86_64)
 +#if (OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(SOLARIS)) && CPU(X86_64) || (OS(SOLARIS) && CPU(X86))
- #define SYMBOL_STRING_RELOCATION(name) #name "@plt"
- #elif OS(DARWIN) || (CPU(X86_64) && COMPILER(MINGW) && !GCC_VERSION_AT_LEAST(4, 5, 0))
- #define SYMBOL_STRING_RELOCATION(name) "_" #name
+ #define GLOBAL_REFERENCE(name) #name "@plt"
+ #elif CPU(X86) && COMPILER(MINGW)
+ #define GLOBAL_REFERENCE(name) "@" #name "@4"
