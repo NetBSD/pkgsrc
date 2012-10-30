@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.54 2012/10/24 15:40:16 joerg Exp $
+$NetBSD: distinfo,v 1.55 2012/10/30 12:46:30 drochner Exp $
 
-SHA1 (webkit-1.8.3.tar.xz) = ccf567fdfd7fbc63a3340777278e41b17522b80d
-RMD160 (webkit-1.8.3.tar.xz) = a25fe7966630d2a0e0926f565e28a9054d446c14
-Size (webkit-1.8.3.tar.xz) = 7814028 bytes
-SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = a19c152025d16b32cf6e429483d3885bd8243de8
-SHA1 (patch-Source_JavaScriptCore_wtf_MathExtras.h) = a47cf7e70688d46096930b2029d0970576a11b3c
-SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f056b8f08c68d44e1b9dfd2bcf60cb788b05f38f
-SHA1 (patch-Source_WebCore_css_CSSGrammar.y) = 22e704480c4f0045ed9ee20f807ce703f20749e9
-SHA1 (patch-Source_WebCore_css_CSSParser.cpp) = 8a7687bd2361184765f2757335f80a68bdc09bf7
-SHA1 (patch-Source_WebCore_editing_Editor.h) = 80dab9dc483417703b100155816b2a2bedd533e3
-SHA1 (patch-Source_WebCore_xml_XPathGrammar.y) = aa5881029a604673ef3e15be7a8d92ed3489658e
-SHA1 (patch-Source_WebCore_xml_XPathParser.cpp) = 53fec9eb744c9890ba9d2b0511bb917e8c8a1b7f
-SHA1 (patch-ai) = 7b94becb603b88c66d8d8f1619d90dc6553d970c
-SHA1 (patch-aj) = 857bd0111fc6dee35dcf83523ff2438ed71981b7
-SHA1 (patch-ak) = 62135a6e242c2e9c2e8be2d2d00fa1021f9c9525
+SHA1 (webkitgtk-1.10.1.tar.xz) = 3a2df2eb42ffdd7f3b39873d5461c347a6330493
+RMD160 (webkitgtk-1.10.1.tar.xz) = ea246d29a1def4993d592d8464b527b2c9ed1bdc
+Size (webkitgtk-1.10.1.tar.xz) = 8548452 bytes
+SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = c5e1efdac5f6e2a4c035b6a3ce808d0e7a076703
+SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f166335d829aba9051c1aaf1b950ec655deef372
+SHA1 (patch-Source_WebCore_editing_Editor.h) = 43562577dd6432a86fd8ee0a1e7bb0db31f07d2d
+SHA1 (patch-ai) = 8df303ffde5c4398e56601c524e9ab4aff52096c
+SHA1 (patch-aj) = 930d1b5d73028b2f2e5abb33c15f72befadc64ce
+SHA1 (patch-ak) = 64ad843164f1c12968e933080e0966a9019abfdf
 SHA1 (patch-al) = 47a931be9ccd0669d77b6e60d5fd098c8d3667ab
-SHA1 (patch-configure) = 5f805583b6292d61a7b13cbf6d35d864774e4cd8
+SHA1 (patch-am) = 9516994b630b43c7c234f61debf8d762cf7aee97
+SHA1 (patch-configure) = 448caea068344fe987e566f73b3f567dad7b93ed
