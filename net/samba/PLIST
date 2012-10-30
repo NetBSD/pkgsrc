@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2012/07/06 23:32:59 asau Exp $
+@comment $NetBSD: PLIST,v 1.51 2012/10/30 13:24:32 drochner Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -19,17 +19,12 @@ bin/smbstatus
 bin/smbta-util
 bin/smbtar
 bin/smbtree
-bin/tdbbackup
-bin/tdbdump
-bin/tdbrestore
-bin/tdbtool
 bin/testparm
 ${PLIST.winbind}bin/wbinfo
 include/libsmbclient.h
 include/netapi.h
 include/smb_share_modes.h
 include/talloc.h
-include/tdb.h
 ${PLIST.winbind}include/wbclient.h
 lib/libnetapi.${LIBEXT}
 lib/libnetapi.${LIBEXT}.0
@@ -40,9 +35,6 @@ lib/libsmbsharemodes.${LIBEXT}.0
 lib/libtalloc.${LIBEXT}
 lib/libtalloc.${LIBEXT}.2
 lib/libtalloc.${LIBEXT}.2.0.5
-lib/libtdb.${LIBEXT}
-lib/libtdb.${LIBEXT}.1
-lib/libtdb.${LIBEXT}.1.2.9
 ${PLIST.winbind}lib/libwbclient.${LIBEXT}
 ${PLIST.winbind}lib/libwbclient.${LIBEXT}.0
 ${PLIST.winbind}${NSS_WINBIND}
@@ -139,9 +131,6 @@ man/man8/smbpasswd.8
 man/man8/smbspool.8
 man/man8/smbta-util.8
 man/man8/swat.8
-man/man8/tdbbackup.8
-man/man8/tdbdump.8
-man/man8/tdbtool.8
 man/man8/vfs_acl_tdb.8
 man/man8/vfs_acl_xattr.8
 man/man8/vfs_aio_fork.8
@@ -506,9 +495,6 @@ share/samba/swat/help/manpages/smbta-util.8.html
 share/samba/swat/help/manpages/smbtar.1.html
 share/samba/swat/help/manpages/smbtree.1.html
 share/samba/swat/help/manpages/swat.8.html
-share/samba/swat/help/manpages/tdbbackup.8.html
-share/samba/swat/help/manpages/tdbdump.8.html
-share/samba/swat/help/manpages/tdbtool.8.html
 share/samba/swat/help/manpages/testparm.1.html
 share/samba/swat/help/manpages/vfs_acl_tdb.8.html
 share/samba/swat/help/manpages/vfs_acl_xattr.8.html
