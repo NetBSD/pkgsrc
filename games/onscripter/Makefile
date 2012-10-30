@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/07 20:20:24 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/30 16:09:53 tsutsui Exp $
 #
 
-DISTNAME=		onscripter-20120926
+DISTNAME=		onscripter-20121029
 CATEGORIES=		games
 MASTER_SITES=		http://onscripter.sourceforge.jp/
 
@@ -20,6 +20,8 @@ BUILD_TARGET=	ALL
 
 USE_TOOLS+=	pkg-config
 
+.include "options.mk"
+
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix=	${MAKE_FILE}
@@ -27,6 +29,7 @@ SUBST_SED.fix=		-e 's!@RM@!${RM}!g'
 SUBST_SED.fix+=		-e 's!@CXX@!${CXX:Q}!g'
 SUBST_SED.fix+=		-e 's!@LD@!${LD:Q}!g'
 SUBST_SED.fix+=		-e 's!@CXXFLAGS@!${CXXFLAGS:Q}!g'
+SUBST_SED.fix+=		-e 's!@PDA_DEFS@!${PDA_DEFS:Q}!g'
 
 do-install:
 .for f in nsaconv nsadec onscripter sarconv sardec
