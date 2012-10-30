@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2012/10/08 09:21:04 asau Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/30 12:54:15 drochner Exp $
 #
 
 DISTNAME=		gstreamer-0.10.36
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=		.tar.bz2
@@ -69,5 +69,6 @@ CONFIGURE_ARGS+= --disable-check
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
