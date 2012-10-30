@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/26 10:56:58 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/30 16:55:08 prlw1 Exp $
 #
 
 DISTNAME=	accerciser-3.6.0
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
+
+BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 # correct dependency:
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
