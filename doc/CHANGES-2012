@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3463 2012/10/30 20:45:54 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.3464 2012/10/30 22:07:14 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5301,3 +5301,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/totem-pl-parser to 3.4.3 [drochner 2012-10-30]
 	Updated devel/RTFM to 2.4.5 [morr 2012-10-30]
 	Updated misc/vttest to 20120506 [shattered 2012-10-30]
+	Updated mail/exim to 4.80.1 [abs 2012-10-30]
