@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 09:21:02 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/30 12:56:00 drochner Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=		4
+PKGREVISION=		5
 
 #CONFIGURE_ARGS+= --disable-silent-rules
 
@@ -23,4 +23,5 @@ TEST_TARGET=		check-torture
 # soft dependency only, .pc file not needed
 #.include "../../textproc/iso-codes/buildlink3.mk"
 
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
