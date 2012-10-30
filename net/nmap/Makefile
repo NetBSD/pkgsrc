@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2012/10/23 17:18:42 asau Exp $
+# $NetBSD: Makefile,v 1.98 2012/10/30 23:34:38 pettai Exp $
 
 DISTNAME=	nmap-6.01
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,6 +39,7 @@ CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/snmpcommunities.lst
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--without-subversion
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -73,5 +74,6 @@ post-build:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+#.include "../../devel/subversion-base/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
