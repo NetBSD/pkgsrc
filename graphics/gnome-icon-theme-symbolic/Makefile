@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:10:56 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/30 12:53:05 drochner Exp $
 #
 
-DISTNAME=		gnome-icon-theme-symbolic-2.30.0
-PKGREVISION=		2
+DISTNAME=		gnome-icon-theme-symbolic-3.6.0
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-symbolic/2.30/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-symbolic/3.6/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
