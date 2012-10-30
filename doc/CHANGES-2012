@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3457 2012/10/30 13:43:49 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3458 2012/10/30 14:38:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5295,3 +5295,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/webkit-gtk to 1.10.1 [drochner 2012-10-30]
 	Updated graphics/gnome-icon-theme-symbolic to 3.6.0 [drochner 2012-10-30]
 	Updated sysutils/intel-microcode-netbsd to 20120606.v2 [drochner 2012-10-30]
+	Updated security/p5-Crypt-CBC to 2.31 [wen 2012-10-30]
