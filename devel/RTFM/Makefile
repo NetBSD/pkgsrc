@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/07/27 20:22:13 morr Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/30 20:38:09 morr Exp $
 #
 
-DISTNAME=	RTFM-2.4.4
+DISTNAME=	RTFM-2.4.5
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
