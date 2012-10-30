@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/08/27 14:45:37 morr Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/10/30 22:39:07 morr Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -91,6 +91,7 @@ share/vim/${VIM_SUBDIR}/keymap/README.txt
 share/vim/${VIM_SUBDIR}/keymap/accents.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/belarusian-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/bulgarian-bds.vim
 share/vim/${VIM_SUBDIR}/keymap/bulgarian-phonetic.vim
 share/vim/${VIM_SUBDIR}/keymap/canfr-win.vim
@@ -299,6 +300,7 @@ share/vim/${VIM_SUBDIR}/lang/menu_zh_tw.big5.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh_tw.cp950.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh_tw.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/nb/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/nl/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/no/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/pl/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/pt_BR/LC_MESSAGES/vim.mo
