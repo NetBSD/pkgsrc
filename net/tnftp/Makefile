@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/23 17:19:13 asau Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/31 04:54:40 asau Exp $
 
 DISTNAME=		tnftp-20070806
 SVR4_PKGNAME=		tnftp
@@ -39,7 +39,7 @@ CHECK_BUILTIN.readline:=	yes
 CHECK_BUILTIN.readline:=	no
 
 .if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
-USE_BUILTIN.termcap=	yes
+USE_BUILTIN.termcap?=	yes
 .endif
 
 .include "../../mk/termcap.buildlink3.mk"
