@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:19 asau Exp $
 #
 
 DISTNAME=	parent-0.225
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/parent/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

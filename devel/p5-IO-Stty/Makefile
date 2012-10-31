@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:18:22 asau Exp $
 
 DISTNAME=	IO-Stty-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	#empty
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/IO/Stty/.packlist
 PERL5_MODULE_TYPE=	Module::Build

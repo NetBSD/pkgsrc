@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:17 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:51 asau Exp $
 #
 
 DISTNAME=	trio-1.11
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctrio/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://daniel.haxx.se/projects/trio/
 COMMENT=	Fully matured and stable set of printf and string functions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 

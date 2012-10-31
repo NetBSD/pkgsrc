@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/16 16:05:53 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:23 asau Exp $
 #
 
 DISTNAME=	php-mode-1.5.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=php-mode/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/php-mode/
 COMMENT=	PHP editing mode for Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:26 asau Exp $
 #
 
 DISTNAME=	Locale-Msgfmt-0.15
@@ -13,7 +13,6 @@ COMMENT=	Perl 5 module to compile .po files to .mo files
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Locale/Msgfmt/.packlist
 

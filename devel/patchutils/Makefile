@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:55:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:19:22 asau Exp $
 #
 
 DISTNAME=		patchutils-0.3.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cyberelk.net/tim/patchutils/index.html
 COMMENT=		Some programs for manipulating patch files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		patch-[0-9]*:../../devel/patch
 

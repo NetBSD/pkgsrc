@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/15 09:39:31 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:16:34 asau Exp $
 #
 
 DISTNAME=	apache-ivy-2.2.0-bin
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ant.apache.org/ivy/
 COMMENT=	"Apache Project's Java-Based agile dependency manager"
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 DEPENDS+=	apache-ant>=1.6:../../devel/apache-ant

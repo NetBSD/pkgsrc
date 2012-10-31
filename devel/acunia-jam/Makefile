@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/13 09:34:49 skrll Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:33 asau Exp $
 #
 
 DISTNAME=	acunia-jam-1.0
@@ -13,7 +13,6 @@ COMMENT=	Acunia version of the program construction tool, like make(1)
 CONFLICTS=	jam-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/jam
 USE_TOOLS+=	yacc

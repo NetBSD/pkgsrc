@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:44 asau Exp $
 #
 
 DISTNAME=	Package-Constants-0.02
@@ -11,8 +11,6 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Package-Constants/
 COMMENT=	Lists all the constants defined in a Perl package
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Package/Constants/.packlist
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:18:57 asau Exp $
 
 DISTNAME=	Spoon-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Spoon/
 COMMENT=	Spiffy Application Building Framework
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-IO-All>=0.32:../../devel/p5-IO-All
 DEPENDS+=	p5-Spiffy>=0.22:../../devel/p5-Spiffy

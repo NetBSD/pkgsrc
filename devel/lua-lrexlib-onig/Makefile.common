@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/07/24 08:50:40 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/31 11:17:26 asau Exp $
 # used by devel/lua-lrexlib-posix/Makefile
 # used by devel/lua-lrexlib-pcre/Makefile
 # used by devel/lua-lrexlib-oniguruma/Makefile
@@ -14,8 +14,6 @@ EXTRACT_SUFX=	.zip
 HOMEPAGE=	http://luaforge.net/projects/lrexlib
 
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

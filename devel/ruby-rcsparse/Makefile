@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/02/21 16:01:15 taca Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:42 asau Exp $
 
 DISTNAME=	75d93404707d
 PKGNAME=	${RUBY_PKGPREFIX}-rcsparse-0.0.0.45
@@ -15,7 +15,6 @@ LICENSE=	corecode-license
 DIST_SUBDIR=	rcsparse
 WRKSRC=		${WRKDIR}/rcsparse-${DISTNAME}
 USE_RUBY_EXTCONF=	yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

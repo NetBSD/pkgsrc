@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/12 13:31:58 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/31 11:17:01 asau Exp $
 #
 
 DISTNAME=	global-6.2.4
@@ -11,7 +11,6 @@ COMMENT=	Source code tag system including web browser output
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:59 asau Exp $
 #
 
 DISTNAME=	Syntax-Keyword-Junction-0.003001
@@ -11,8 +11,6 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Syntax-Keyword-Junction/
 COMMENT=	Perl5 module to provide keywords for any, all, none, or one
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Sub-Exporter-Progressive>=0.001006:../../devel/p5-Sub-Exporter-Progressive
 DEPENDS+=	p5-syntax-[0-9]*:../../devel/p5-syntax

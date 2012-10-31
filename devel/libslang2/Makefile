@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/03/03 12:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:17:21 asau Exp $
 #
 
 DISTNAME=	slang-2.2.4
@@ -16,7 +16,6 @@ COMMENT=	Routines for rapid alpha-numeric terminal applications development
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

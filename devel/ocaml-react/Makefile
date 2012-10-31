@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 15:18:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:33 asau Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	react-0.9.4
@@ -15,8 +15,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix "${PREFIX}" --destdir "${DESTDIR}"
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=   destdir
 SUBST_STAGE.destdir=  post-configure

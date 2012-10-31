@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:18:59 asau Exp $
 
 DISTNAME=	Sub-Uplevel-0.24
 PKGNAME=	p5-${DISTNAME}00
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Sub-Uplevel/
 COMMENT=	Apparently run a function in a higher stack frame
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Sub/Uplevel/.packlist

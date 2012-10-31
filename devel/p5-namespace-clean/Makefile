@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:19:19 asau Exp $
 
 DISTNAME=	namespace-clean-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module to keep imports and functions out of your namespace
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-B-Hooks-EndOfScope>=0.10:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-Package-Stash>=0.23:../../devel/p5-Package-Stash

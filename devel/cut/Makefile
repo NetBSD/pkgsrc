@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/29 17:53:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:49 asau Exp $
 #
 
 DISTNAME=	cut-2.4
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.falvotech.com/content/cut/downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.falvotech.com/content/cut/
 COMMENT=	C Unit Tester
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin
 

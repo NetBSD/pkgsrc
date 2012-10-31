@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:18:17 asau Exp $
 
 DISTNAME=	Graph-0.94
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module for graph operations
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Graph/.packlist
 

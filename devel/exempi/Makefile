@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/07/02 13:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:16:56 asau Exp $
 #
 
 DISTNAME=	exempi-2.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libopenraw.freedesktop.org/wiki/Exempi
 COMMENT=	XMP library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_tls=none
