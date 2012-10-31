@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/05/20 17:32:34 marino Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:42 asau Exp $
 
 DISTNAME=	ncurses-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ncurses-${VER}
@@ -11,8 +11,6 @@ LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ncurses-ruby.berlios.de/
 COMMENT=	Ruby interface to ncurses
-
-PKG_DESTDIR_SUPPORT?=	user-destdir
 
 VER=			1.2.4
 USE_NCURSES=		YES	# mouse functions

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/01/17 21:43:19 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/31 11:16:59 asau Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gdb/gdb.html
 COMMENT=		The GNU Project Debugger
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-*
 

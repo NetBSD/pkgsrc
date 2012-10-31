@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/12 07:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:26 asau Exp $
 #
 
 DISTNAME=	pthread-sem-1.0
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.cit.gu.edu.au/teaching/2105CIT/software/
 
 MAINTAINER=	rh@NetBSD.org
 COMMENT=	Semaphore implementation for (PTH) pthreads
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		man-pages-[0-9]*
 

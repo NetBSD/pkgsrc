@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 17:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:00 asau Exp $
 #
 
 DISTNAME=	gflib
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.utk.edu/~plank/plank/gdlib/
 COMMENT=	Reed Solomon and Galois Field error correction library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/05/19 08:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:17:07 asau Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cigital.com/its4/
 COMMENT=	Static C/C++ code scanner for potential security problems
 LICENSE=	no-commercial-use
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/its4
 HAS_CONFIGURE=	YES

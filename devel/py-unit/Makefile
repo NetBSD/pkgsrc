@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/04 00:22:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:35 asau Exp $
 
 DISTNAME=	pyunit-1.4.1
 PKGNAME=	${PYPKGPREFIX}-unit-1.4.1
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyunit/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pyunit.sourceforge.net/
 COMMENT=	Unit testing framework for python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=	PyUnit-${PKGVERSION_NOREV}
 

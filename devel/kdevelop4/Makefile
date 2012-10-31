@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 23:01:23 adam Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/31 11:17:08 asau Exp $
 #
 
 DISTNAME=	kdevelop-4.2.3
@@ -17,8 +17,6 @@ BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config perl msgfmt
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # because of some expansion to ${PKGDIRNAME}.kdev4 which is done wrong by bmake
 USE_TOOLS+=     gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:00 asau Exp $
 #
 
 DISTNAME=	Template-Plugin-ListMoreUtils-0.02
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-ListMoreUtils/
 COMMENT=	TT2 plugin to use List::MoreUtils
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 
 DEPENDS+=	p5-List-MoreUtils>=0.22:../../devel/p5-List-MoreUtils

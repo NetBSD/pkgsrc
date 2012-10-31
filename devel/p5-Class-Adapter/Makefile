@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:45 asau Exp $
 
 DISTNAME=	Class-Adapter-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-Adapter/
 COMMENT=	Perl 5 module implementing the adapter design pattern
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=	auto/Class/Adapter/.packlist
 
 post-extract:

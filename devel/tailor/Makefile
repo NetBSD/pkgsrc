@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/03/15 11:53:25 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:19:49 asau Exp $
 #
 
 DISTNAME=		tailor-0.9.35
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wiki.darcs.net/DarcsWiki/Tailor
 COMMENT=		Tool to migrate changesets between various version control systems
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		#none
 

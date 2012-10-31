@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:02 asau Exp $
 
 DISTNAME=	Devel-Size-0.78
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-Size/
 COMMENT=	Perl 5 module for finding the memory usage of variables
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Devel/Size/.packlist
 

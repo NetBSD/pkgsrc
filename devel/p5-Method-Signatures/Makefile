@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:29 asau Exp $
 
 DISTNAME=	Method-Signatures-20120523
 PKGNAME=	p5-${DISTNAME}
@@ -29,8 +29,6 @@ USE_LANGUAGES=	# empty
 
 PERL5_PACKLIST=		auto/Method/Signatures/.packlist
 PERL5_MODULE_TYPE=	Module::Build
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

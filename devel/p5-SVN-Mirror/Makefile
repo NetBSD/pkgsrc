@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:18:54 asau Exp $
 
 DISTNAME=	SVN-Mirror-0.75
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/SVN-Mirror/
 COMMENT=	Mirrors one Subversion repository to another
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-subversion>=1.2.0:../../devel/p5-subversion
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI

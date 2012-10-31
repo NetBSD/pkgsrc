@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/08 09:34:17 imil Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:51 asau Exp $
 #
 
 DISTNAME=	tolua++-1.0.93
@@ -10,8 +10,6 @@ MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://www.codenix.com/~tolua/
 COMMENT=	Tool to integrate C/C++ code with Lua
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

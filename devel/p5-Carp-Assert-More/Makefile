@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:17:44 asau Exp $
 
 DISTNAME=	Carp-Assert-More-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Carp/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Carp-Assert-More/
 COMMENT=	Perl5 module providing convenience wrappers around Carp::Assert
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Carp/Assert/More/.packlist
 

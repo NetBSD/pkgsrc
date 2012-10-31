@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/08 20:43:38 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:11 asau Exp $
 #
 
 DISTNAME=	util-linux-ng-2.18
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kernel.org/~kzak/util-linux-ng/
 COMMENT=	Library to handle device identification and token extraction
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:18:56 asau Exp $
 
 DISTNAME=	Spiffy-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Spiffy/
 COMMENT=	Object-oriented Perl framework
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # optional requirement for spiffy_filter() sub
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter

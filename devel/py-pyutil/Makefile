@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/04 07:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:34 asau Exp $
 #
 
 DISTNAME=	pyutil-1.9.3
@@ -10,8 +10,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/pyutil
 COMMENT=	Collection of mature utilities for Python programmers
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson

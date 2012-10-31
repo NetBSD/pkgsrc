@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/11/08 16:34:47 taca Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:40 asau Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_RUBY}
 MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby extension to curses library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_EXTCONF=	yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/curses

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2012/08/06 06:25:02 adam Exp $
+# $NetBSD: Makefile,v 1.86 2012/10/31 11:16:40 asau Exp $
 
 DISTNAME=	bison-2.6.2
 CATEGORIES=	devel
@@ -11,7 +11,6 @@ COMMENT=	GNU yacc(1) replacement
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

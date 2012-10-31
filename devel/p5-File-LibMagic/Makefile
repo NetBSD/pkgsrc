@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:11 asau Exp $
 
 DISTNAME=	File-LibMagic-0.96
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perlwrapper for libmagic
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.file+=	file>=5.00
 

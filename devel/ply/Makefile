@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/15 11:53:25 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:25 asau Exp $
 
 DISTNAME=	ply-3.3
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.dabeaz.com/ply/
 MAINTAINER=	nonaka@netbsd.org
 HOMEPAGE=	http://www.dabeaz.com/ply/
 COMMENT=	Python Lex-Yacc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

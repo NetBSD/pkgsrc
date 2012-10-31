@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/08 16:18:33 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:18 asau Exp $
 #
 
 DISTNAME=		libmimedir-0.5
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmimedir/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/libmimedir/
 COMMENT=		MIME Directory Profile parser library (RFC 2425)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

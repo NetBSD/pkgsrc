@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:38 asau Exp $
 
 DISTNAME=	MooseX-SimpleConfig-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Config-Any>=0.13:../../devel/p5-Config-Any
 DEPENDS+=	p5-Moose>=0.35:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-ConfigFromFile>=0.02:../../devel/p5-MooseX-ConfigFromFile
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 

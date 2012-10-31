@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:09 asau Exp $
 #
 
 DISTNAME=	Test-Perl-Critic-1.02
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-Perl-Critic/
 COMMENT=	Perl 5 module providing a Perl::Critic interface for test programs
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Perl-Critic>=1.105:../../devel/p5-Perl-Critic
 

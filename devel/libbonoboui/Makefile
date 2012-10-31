@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2012/10/08 23:00:51 adam Exp $
+# $NetBSD: Makefile,v 1.95 2012/10/31 11:17:11 asau Exp $
 #
 
 DISTNAME=	libbonoboui-2.24.4
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 Object activation framework library (graphical version)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

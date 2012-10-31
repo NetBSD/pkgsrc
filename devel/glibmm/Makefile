@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/03 21:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/31 11:17:01 asau Exp $
 
 DISTNAME=	glibmm-2.32.1
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ bindings for glib
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

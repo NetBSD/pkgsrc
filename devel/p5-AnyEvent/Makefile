@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:17:37 asau Exp $
 
 DISTNAME=	AnyEvent-6.14
 PKGNAME=	p5-AnyEvent-6.130
@@ -12,7 +12,6 @@ HOMEPAGE=	http://software.schmorp.de/pkg/AnyEvent.html
 COMMENT=	Simple API for io, timer and completion callbacks
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=	auto/AnyEvent/.packlist
 
 # 	  Task::Weaken in perl 5.14

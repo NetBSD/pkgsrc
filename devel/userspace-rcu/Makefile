@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/30 22:06:17 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:52 asau Exp $
 #
 
 DISTNAME=	userspace-rcu-0.7.3
@@ -10,8 +10,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://lttng.org/urcu
 COMMENT=	Userspace RCU (Read Copy Update)
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

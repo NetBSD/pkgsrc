@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:16 asau Exp $
 
 DISTNAME=	VCP-Dest-svk-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ AUTHOR_DIR=	authors/id/C/CL/CLKAO
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/VCP-Dest-svk/
 COMMENT=	VCP destination driver for SVN/SVK repositories
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-VCP>=0.9beta20050110:../../devel/p5-VCP
 DEPENDS+=	p5-YAML>=0.62:../../textproc/p5-YAML

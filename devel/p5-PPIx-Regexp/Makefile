@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:44 asau Exp $
 #
 
 DISTNAME=	PPIx-Regexp-0.028
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PPIx-Regexp/
 COMMENT=	Represent a regular expression of some sort
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-PPI>=1.117:../../devel/p5-PPI

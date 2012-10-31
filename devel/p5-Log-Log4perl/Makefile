@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:18:28 asau Exp $
 #
 
 DISTNAME=	Log-Log4perl-1.36
@@ -13,7 +13,6 @@ COMMENT=	Log4j implementation for Perl
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Log/Log4perl/.packlist
-PKG_DESTDIR_SUPPORT=user-destdir
 
 REPLACE_PERL+=	lib/Log/Log4perl/Layout/PatternLayout/Multiline.pm
 

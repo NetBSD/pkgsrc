@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:15 asau Exp $
 
 DISTNAME=	UNIVERSAL-isa-1.20120726
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ BUILD_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/UNIVERSAL/isa/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

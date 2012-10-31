@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/27 12:27:44 wen Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:38 asau Exp $
 
 DISTNAME=	App-perlbrew-0.54
 PKGNAME=	p5-${DISTNAME}
@@ -25,8 +25,6 @@ BUILD_DEPENDS+=	p5-Test-Spec>=0:../../devel/p5-Test-Spec
 BUILD_DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 BUILD_DEPENDS+=	p5-IO-All>=0:../../devel/p5-IO-All
 #		File::Temp in perl 5.14
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl

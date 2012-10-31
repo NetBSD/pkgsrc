@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/25 15:22:47 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:19:51 asau Exp $
 
 DISTNAME=	tre-0.8.0
 CATEGORIES=	devel
@@ -11,8 +11,6 @@ LICENSE=	modified-bsd
 
 # both install bin/agrep (approx. grep)
 CONFLICTS+=	glimpse-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

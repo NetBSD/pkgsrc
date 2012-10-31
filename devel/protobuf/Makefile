@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/04 13:31:23 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:26 asau Exp $
 #
 
 DISTNAME=	protobuf-2.4.1
@@ -9,8 +9,6 @@ MAINTAINER=	aran@100acres.us
 HOMEPAGE=	http://code.google.com/p/protobuf/
 COMMENT=	Google protocol buffers
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

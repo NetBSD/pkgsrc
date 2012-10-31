@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:15 asau Exp $
 
 DISTNAME=	TryCatch-1.003000
 PKGNAME=	p5-${DISTNAME}
@@ -27,7 +27,6 @@ BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/TryCatch/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:27 asau Exp $
 
 DISTNAME=		Log-Dispatch-Array-1.001
 PKGNAME=		p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=		rhaen@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Log-Dispatch-Array/
 COMMENT=		Perl 5 module to log events to an array
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/21 22:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:21 asau Exp $
 
 DISTNAME=	version-0.9901
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/version/
 COMMENT=	Perl extension for Version Objects
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c

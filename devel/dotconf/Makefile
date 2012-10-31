@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/04 16:57:00 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:16:54 asau Exp $
 #
 
 DISTNAME=	dotconf-1.3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opentts.org/projects/dotconf
 COMMENT=	Simple-to-use and powerful configuration-file parser library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

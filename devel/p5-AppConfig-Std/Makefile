@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:39 asau Exp $
 
 DISTNAME=	AppConfig-Std-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/AppConfig-Std/
 COMMENT=	AppConfig::Std Perl module
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/AppConfig/Std/.packlist
 

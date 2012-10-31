@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:20 asau Exp $
 
 DISTNAME=	sapnwrfc-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	SAP Netweaver RFC support for Perl
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES+=		c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/31 11:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:23 asau Exp $
 
 DISTNAME=	libusb-compat-0.1.4
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libusb.org/wiki/libusb-compat-0.1
 COMMENT=	USB access library version 0 compatibility layer on top of version 1
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

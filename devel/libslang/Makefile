@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2009/08/30 01:22:09 zafer Exp $
+# $NetBSD: Makefile,v 1.69 2012/10/31 11:17:21 asau Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -15,7 +15,6 @@ HOMEPAGE=	http://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

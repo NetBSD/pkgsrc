@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:16:39 asau Exp $
 
 DISTNAME=	automake-1.4-p6
 PKGNAME=	automake14-1.4.6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator (old version)
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	autoconf213>=2.13:../../devel/autoconf213
 

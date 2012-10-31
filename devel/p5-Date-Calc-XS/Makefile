@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/15 11:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:57 asau Exp $
 
 DISTNAME=	Date-Calc-XS-6.3
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Carp-Clan>=5.3:../../devel/p5-Carp-Clan
 DEPENDS+=	p5-Date-Calc>=6.2:../../devel/p5-Date-Calc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Date/Calc/XS/.packlist

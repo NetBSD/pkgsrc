@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/09/08 19:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:16:45 asau Exp $
 
 DISTNAME=	cgdb-0.6.5
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cgdb.sourceforge.net/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

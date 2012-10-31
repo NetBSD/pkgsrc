@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:18:25 asau Exp $
 #
 
 DISTNAME=	List-MoreUtils-0.33
@@ -14,7 +14,6 @@ COMMENT=	Provide the stuff missing in List::Util
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/List/MoreUtils/.packlist
 

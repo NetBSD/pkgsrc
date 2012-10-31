@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/15 10:04:20 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:37 asau Exp $
 #
 
 DISTNAME=	qof-0.7.5
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
 
 MAKE_JOBS_SAFE=		no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

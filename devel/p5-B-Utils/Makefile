@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:41 asau Exp $
 
 DISTNAME=	B-Utils-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/B-Utils/
 COMMENT=	Perl 5 module providing op tree manipulation helper functions
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends

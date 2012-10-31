@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:18:35 asau Exp $
 #
 
 DISTNAME=	MooseX-Declare-0.35
@@ -23,8 +23,6 @@ DEPENDS+=	p5-namespace-clean>=0.11:../../devel/p5-namespace-clean
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled

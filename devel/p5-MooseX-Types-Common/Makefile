@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:38 asau Exp $
 #
 
 DISTNAME=	MooseX-Types-Common-0.001008
@@ -16,8 +16,6 @@ DEPENDS+=	p5-Moose>=0.39:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types>=0.04:../../devel/p5-MooseX-Types
 
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/Common/.packlist

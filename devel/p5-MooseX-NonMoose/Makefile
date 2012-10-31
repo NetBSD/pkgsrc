@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:36 asau Exp $
 #
 
 DISTNAME=	MooseX-NonMoose-0.22
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MooseX-NonMoose/
 COMMENT=	Perl 5 module to subclass non-Moose classes with Moose
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/NonMoose/.packlist

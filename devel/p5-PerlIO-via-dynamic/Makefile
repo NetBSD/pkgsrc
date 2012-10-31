@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:18:50 asau Exp $
 
 DISTNAME=	PerlIO-via-dynamic-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/PerlIO-via-dynamic/
 COMMENT=	Perl module for dynamic PerlIO layers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/PerlIO/via/dynamic/.packlist
 

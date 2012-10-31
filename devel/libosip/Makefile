@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/12/19 12:56:04 schwarz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:17:19 asau Exp $
 #
 
 DISTNAME=	libosip2-3.6.0
@@ -11,7 +11,6 @@ COMMENT=	Implementation of SIP
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

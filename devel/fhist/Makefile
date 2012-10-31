@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/04/22 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:16:57 asau Exp $
 #
 
 DISTNAME=		fhist-1.16
@@ -9,8 +9,6 @@ MASTER_SITES=		http://fhist.sourceforge.net/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fhist.sourceforge.net/
 COMMENT=		File history and comparison tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gsoelim msgfmt yacc
 GNU_CONFIGURE=		YES

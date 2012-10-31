@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:00 asau Exp $
 #
 
 DISTNAME=	Template-Plugin-VMethods-0.03
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Template-Plugin-VMethods/
 COMMENT=	Install virtual methods into the Template Toolkit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# empty
 
 DEPENDS+=	p5-Template-Toolkit>=2.06:../../www/p5-Template-Toolkit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:50 asau Exp $
 #
 
 DISTNAME=	Proc-InvokeEditor-1.04
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTEVENS/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Proc-InvokeEditor/
 COMMENT=	Perl 5 module for starting a text editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Proc/InvokeEditor/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/10 17:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:55 asau Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Graphical X11 interface for gdb
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_IMAKE=	yes

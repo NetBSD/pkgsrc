@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:51 asau Exp $
 
 DISTNAME=	Clone-Fast-0.96
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Natively copying Perl data structures
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Clone/Fast/.packlist

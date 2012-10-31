@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/11 17:01:35 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:50 asau Exp $
 #
 
 DISTNAME=		cvsclone
@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Clone a CVS repository using the :pserver: access method
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		lex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/29 01:34:06 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:45 asau Exp $
 
 DISTNAME=	sgb-2007-03.28
 PKGNAME=	sgb-20070328
@@ -12,8 +12,6 @@ COMMENT=	The Stanford GraphBase
 
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}

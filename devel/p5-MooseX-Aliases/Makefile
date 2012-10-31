@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:34 asau Exp $
 #
 
 DISTNAME=	MooseX-Aliases-0.10
@@ -13,8 +13,6 @@ COMMENT=	Easy aliasing of methods and attributes in Moose
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=1.09:../../devel/p5-Moose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Aliases/.packlist

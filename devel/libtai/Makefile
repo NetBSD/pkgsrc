@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/21 13:37:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:22 asau Exp $
 #
 
 DISTNAME=		libtai-0.60
@@ -13,8 +13,6 @@ COMMENT=		Library for storing and manipulating dates and times
 CONFLICTS=		libowfat-[0-9]*
 
 DJB_RESTRICTED=		NO
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		nroff
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/19 12:19:41 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:18 asau Exp $
 #
 
 DISTNAME=	libmowgli-0.7.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://www.atheme.org/projects/mowgli
 COMMENT=	Development framework for C (like GLib)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PREV_PKGPATH=	devel/mowgli
 

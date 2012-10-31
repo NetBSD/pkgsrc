@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:53 asau Exp $
 
 DISTNAME=	Role-Tiny-1.001005
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 CONFLICTS+=	p5-Moo<0.009014
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Moose
 BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple

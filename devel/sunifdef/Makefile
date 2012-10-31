@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:48 asau Exp $
 #
 
 DISTNAME=	sunifdef-3.1.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.strudl.org/public_ftp/sunifdef/nix/stable/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.strudl.org/public_ftp/sunifdef/nix/stable/
 COMMENT=	Tool for eliminating superfluous C preprocessor conditionals
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

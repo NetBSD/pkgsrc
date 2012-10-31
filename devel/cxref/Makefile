@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/10/13 21:30:00 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:51 asau Exp $
 
 DISTNAME=	cxref-1.6d
 CATEGORIES=	devel lang
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/cxref/
 COMMENT=	C Cross Referencing & Documenting tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cxref-cpp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/02 13:44:00 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:36 asau Exp $
 #
 
 DISTNAME=		winpdb-1.4.6
@@ -13,8 +13,6 @@ COMMENT=		Python GUI debugger
 LICENSE=		gnu-gpl-v2 # or later
 
 DEPENDS+=		${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		#none
 

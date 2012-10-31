@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/11 10:02:08 adam Exp $
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:16:42 asau Exp $
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)

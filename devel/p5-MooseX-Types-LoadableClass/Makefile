@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:39 asau Exp $
 
 DISTNAME=	MooseX-Types-LoadableClass-0.008
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Class-Load>=0.06:../../devel/p5-Class-Load
 DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types>=0.22:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/LoadableClass/.packlist

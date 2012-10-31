@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:18:15 asau Exp $
 
 DISTNAME=	Filesys-Notify-Simple-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Filesys-Notify-Simple/
 COMMENT=	Perl5 module providing a simple and dumb file system watcher
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-SharedFork-[0-9]*:../../devel/p5-Test-SharedFork
 

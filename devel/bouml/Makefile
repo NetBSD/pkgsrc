@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/13 08:09:25 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:42 asau Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bouml.fr/
 COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
 LICENSE=                gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BOUMLVERSION=		4.22.2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:34 asau Exp $
 #
 
 DISTNAME=	MooseX-CompileTime-Traits-1.102570
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Declare-[0-9]*:../../devel/p5-MooseX-Declare
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/CompileTime/Traits/.packlist

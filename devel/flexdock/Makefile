@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/08 12:38:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:16:57 asau Exp $
 #
 
 DISTNAME=	flexdock-0.5.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://flexdock.dev.java.net/
 COMMENT=	Swing windowing and docking framework
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_JAVA=	run

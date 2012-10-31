@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/15 12:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:04 asau Exp $
 #
 
 DISTNAME=	Test-Compile-0.13
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-Compile/
 COMMENT=	Perl 5 module to check whether Perl module files compile correctly
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Compile/.packlist

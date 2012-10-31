@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/05/02 22:33:27 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:17:31 asau Exp $
 #
 
 DISTNAME=	nbpatch-20100124
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Patch files using diff output
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Allow checkperms and other core dependencies to use patches
 CHECK_PERMS=		no

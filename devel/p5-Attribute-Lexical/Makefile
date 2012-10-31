@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:39 asau Exp $
 
 DISTNAME=	Attribute-Lexical-0.004
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Lexical-SealRequireHints>=0.005:../../devel/p5-Lexical-SealRequireHints
 DEPENDS+=	p5-Params-Classify-[0-9]*:../../devel/p5-Params-Classify
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# none

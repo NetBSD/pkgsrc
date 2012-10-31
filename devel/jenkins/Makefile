@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/19 11:09:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:07 asau Exp $
 #
 
 DISTNAME=	jenkins
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://jenkins-ci.org/
 COMMENT=	Open source continuous integration server (LTS release)
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 J_VERSION=	1.466.2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:17:43 asau Exp $
 
 DISTNAME=	Cache-2.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	The Cache interface
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-NFSLock>=1.20:../../devel/p5-File-NFSLock
 DEPENDS+=	p5-Heap>=0.01:../../devel/p5-Heap

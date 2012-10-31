@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2009/06/14 22:57:59 joerg Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/10/31 11:16:53 asau Exp $
 # used by devel/distcc-pump/Makefile
 # used by devel/distccmon-gnome/Makefile
 # used by devel/distccmon-gtk/Makefile
@@ -15,8 +15,6 @@ HOMEPAGE=		http://distcc.org/
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/distcc/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/distcc/patches
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

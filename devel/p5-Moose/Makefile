@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/10/13 11:23:00 wen Exp $
+# $NetBSD: Makefile,v 1.60 2012/10/31 11:18:33 asau Exp $
 
 DISTNAME=	Moose-2.0604
 PKGNAME=	p5-${DISTNAME}
@@ -83,8 +83,6 @@ BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= auto/Moose/.packlist
 

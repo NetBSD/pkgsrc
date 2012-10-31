@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:08 asau Exp $
 #
 
 DISTNAME=		Test-POE-Server-TCP-1.16
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-POE-Server-TCP/
 COMMENT=		POE Component providing TCP server services for tests
 LICENSE=		artistic-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-POE>=1.004:../../devel/p5-POE
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:55:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:04 asau Exp $
 #
 
 DISTNAME=		Test-Exception-0.31
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Exception/
 COMMENT=		Test exception based code
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Sub-Uplevel>=0.18:../../devel/p5-Sub-Uplevel
 

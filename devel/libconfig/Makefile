@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/05/07 08:34:22 ahoka Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:11 asau Exp $
 #
 
 DISTNAME=	libconfig-1.3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.hyperrealm.com/libconfig/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hyperrealm.com/libconfig/
 COMMENT=	Simple library for manipulating structured configuration files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes

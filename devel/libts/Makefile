@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/06/30 00:07:13 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:17:23 asau Exp $
 #
 
 DISTNAME=		TS-1.08
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.snake.net/software/TS/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Library of simple token-scanning routines
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

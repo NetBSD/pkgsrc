@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/16 17:19:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:16:59 asau Exp $
 #
 
 DISTNAME=	generate-2.7
@@ -12,8 +12,6 @@ HOMEPAGE=	http://darcy.druid.net/readme-generate.html
 COMMENT=	Simple text pre-processor
 
 CONFLICTS+=	glimmer-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

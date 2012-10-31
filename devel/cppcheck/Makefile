@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 23:01:21 adam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:16:48 asau Exp $
 #
 
 DISTNAME=	cppcheck-1.48
@@ -16,7 +16,6 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 USE_TOOLS+=		gmake

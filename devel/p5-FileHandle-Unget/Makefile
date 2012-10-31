@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:18:15 asau Exp $
 
 DISTNAME=	FileHandle-Unget-0.1623
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/FileHandle-Unget/
 COMMENT=	Perl5 module providing an improved filehandle
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/FileHandle/Unget/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/10 16:15:36 agc Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:09 asau Exp $
 
 DISTNAME=	LDPC-2006-02-08
 PKGNAME=	ldpc-20060208
@@ -10,8 +10,6 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.cs.utoronto.ca/~radford/ftp/LDPC-2006-02-08/index.html
 COMMENT=	Low Density Parity Check Codes
 LICENSE=	ldpc-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		progs
 

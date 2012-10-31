@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2012/10/08 23:00:58 adam Exp $
+# $NetBSD: Makefile,v 1.97 2012/10/31 11:17:15 asau Exp $
 #
 
 DISTNAME=	libgnome-2.32.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Core GNOME2 library (non-graphical)
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:18:21 asau Exp $
 #
 
 DISTNAME=		IO-Null-1.01
@@ -11,8 +11,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO-Null/
 COMMENT=		Perl module for null filehandles
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

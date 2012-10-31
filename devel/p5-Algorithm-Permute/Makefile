@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:36 asau Exp $
 
 DISTNAME=	Algorithm-Permute-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Permute/
 COMMENT=	Perl module for generating permutations with object oriented interface
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Algorithm/Permute/.packlist
 

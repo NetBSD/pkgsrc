@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:49 asau Exp $
 
 DISTNAME=	ctemplate-0.99
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/google-ctemplate/
 COMMENT=	Simple but powerful template language for C++
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

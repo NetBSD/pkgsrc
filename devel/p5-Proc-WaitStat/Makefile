@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:51 asau Exp $
 #
 
 DISTNAME=		Proc-WaitStat-1.00
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Proc-WaitStat/
 COMMENT=		Perl5 extension to interpret wait status values
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-IPC-Signal-[0-9]*:../../devel/p5-IPC-Signal
 

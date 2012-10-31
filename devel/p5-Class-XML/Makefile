@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:51 asau Exp $
 
 DISTNAME=	Class-XML-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-XML/
 COMMENT=	Perl 5 module providing a simple XML abstraction
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Accessor>=0.19:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0.02:../../devel/p5-Class-Data-Inheritable

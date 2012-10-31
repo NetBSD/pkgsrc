@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:17:55 asau Exp $
 
 DISTNAME=	Data-Buffer-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Data-Buffer/
 COMMENT=	Perl5 module for low-level binary buffer
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Buffer/.packlist

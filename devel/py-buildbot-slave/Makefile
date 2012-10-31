@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 07:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:28 asau Exp $
 #
 
 DISTNAME=		buildbot-slave-0.8.5
@@ -11,8 +11,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://buildbot.net/
 COMMENT=		Buildbot slave
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 

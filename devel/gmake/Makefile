@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2012/06/02 07:57:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.83 2012/10/31 11:17:01 asau Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	GNU version of 'make' utility
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 TEXINFO_REQD+=		4.0

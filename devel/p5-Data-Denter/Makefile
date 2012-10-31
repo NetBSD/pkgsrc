@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:55 asau Exp $
 
 DISTNAME=	Data-Denter-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-Denter/
 COMMENT=	(deprecated) alternative Perl 5 module to Data::Dumper and Storable
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Denter/.packlist

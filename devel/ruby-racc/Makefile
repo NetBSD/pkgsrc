@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/02/21 16:01:15 taca Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:42 asau Exp $
 
 DISTNAME=	racc-${RACC_VERSION}
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://i.loveruby.net/en/projects/racc/
 COMMENT=	LALR(1) parser generator for Ruby
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		ruby[1-9][0-9]-racc-*
 

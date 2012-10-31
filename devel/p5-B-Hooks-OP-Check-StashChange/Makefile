@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:41 asau Exp $
 
 DISTNAME=	B-Hooks-OP-Check-StashChange-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 
 DEPENDS+=	p5-parent-[0-9]*:../../devel/p5-parent
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/OP/Check/StashChange/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/08/23 08:37:33 bjs Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:22 asau Exp $
 #
 
 DISTNAME=	libtar-1.2.11
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.feep.net/pub/software/libtar/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.feep.net/libtar/
 COMMENT=	Library for manipulating POSIX tar files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:16:48 asau Exp $
 
 DISTNAME=	cook-2.26
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://miller.emu.id.au/pmiller/software/cook/
 MAINTAINER=	groo@NetBSD.org
 HOMEPAGE=	http://miller.emu.id.au/pmiller/software/cook/
 COMMENT=	More powerful replacement for the traditional make(1) tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	msgfmt yacc perl:run
 GNU_CONFIGURE=	yes

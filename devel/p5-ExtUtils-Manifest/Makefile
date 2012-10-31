@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:07 asau Exp $
 
 DISTNAME=	ExtUtils-Manifest-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-Manifest/
 COMMENT=	Perl utilities to write and check a MANIFEST file
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/ExtUtils/Manifest/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:18:55 asau Exp $
 #
 
 DISTNAME=		Scalar-List-Utils-1.25
@@ -13,7 +13,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Scalar-List-Utils/
 COMMENT=		Perl subroutines that would be nice to have in the perl core
 LICENSE=		${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c

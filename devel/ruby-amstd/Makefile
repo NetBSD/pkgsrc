@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/09/10 05:10:59 taca Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:40 asau Exp $
 
 DISTNAME=	amstd-2.0.0
 PKGREVISION=	2
@@ -18,7 +18,6 @@ CONFIGURE_ARGS=		--site-ruby=${PREFIX}/${RUBY_VENDORLIB} \
 DOCS=			README.en README.ja manual.rd.ja
 
 INSTALLATION_DIRS=	${RUBY_DOC}/amstd
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 .for f in ${DOCS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:24 asau Exp $
 #
 
 DISTNAME=		Internals-1.1
@@ -16,8 +16,6 @@ COMMENT=		Write-protect Perl variables, manipulate refcounts
 USE_LANGUAGES=		c
 PERL5_MODULE_TYPE=	MakeMaker
 PERL5_PACKLIST=		auto/Internals/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

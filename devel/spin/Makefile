@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/18 03:42:25 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:47 asau Exp $
 
 DISTNAME=	spin525
 PKGNAME=	spin-5.2.5
@@ -10,7 +10,6 @@ HOMEPAGE=	http://spinroot.com/spin/whatispin.html
 COMMENT=	Formal correctness prover
 LICENSE=	spin-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 WRKSRC=		${WRKDIR}/Spin/Src5.2.5

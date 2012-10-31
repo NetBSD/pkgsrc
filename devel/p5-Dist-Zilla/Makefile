@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:04 asau Exp $
 
 DISTNAME=	Dist-Zilla-4.300023
 PKGNAME=	p5-${DISTNAME}
@@ -63,8 +63,6 @@ BUILD_DEPENDS+=	p5-File-ShareDir-Install>=0.03:../../devel/p5-File-ShareDir-Inst
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
 BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Dist/Zilla/.packlist
 

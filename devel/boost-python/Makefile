@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/07/02 07:02:25 adam Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:16:42 asau Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
 BOOST_CONFIG=		installed
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	lib
 

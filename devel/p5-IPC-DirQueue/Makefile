@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:23 asau Exp $
 
 DISTNAME=	IPC-DirQueue-1.0
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Disk-based many-to-many task queue
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=  p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/11 11:19:55 zafer Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:54 asau Exp $
 #
 
 DISTNAME=	xmake-1.06
@@ -11,7 +11,6 @@ HOMEPAGE=	http://apollo.backplane.com/xmake/
 COMMENT=	Portable make utility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xmake
 

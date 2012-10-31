@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/07/14 12:56:01 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:17:10 asau Exp $
 #
 
 DISTNAME=		libargparse-0.1.0000
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aqsis/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.aqsis.org/
 COMMENT=		Argument parsing library in C++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

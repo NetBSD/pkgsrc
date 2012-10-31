@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:07 asau Exp $
 
 DISTNAME=	Test-MockObject-1.20120301
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,6 @@ INSTALL_TARGET=	pure_install
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Test/MockObject/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

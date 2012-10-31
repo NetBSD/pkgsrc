@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/23 14:51:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:10 asau Exp $
 
 PKGNAME=	lemon-1.0
 DISTNAME=	sqlite-3.5.9
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.hwaci.com/sw/lemon/
 COMMENT=	Simple LALR(1) parser generator
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin share/lemon
 

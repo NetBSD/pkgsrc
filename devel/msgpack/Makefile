@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/09/04 02:57:11 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:30 asau Exp $
 #
 
 DISTNAME=	msgpack-0.5.7
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://msgpack.org/
 COMMENT=	Binary-based efficient object serialization library
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

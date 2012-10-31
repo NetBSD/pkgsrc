@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/08/14 21:00:46 markd Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:18 asau Exp $
 #
 
 DISTNAME=		libmtp-1.1.3
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmtp/}
 MAINTAINER=		ku3@sl.aanet.ru
 HOMEPAGE=		http://libmtp.sourceforge.net/
 COMMENT=		Implementation of Media Transfer Protocol (MTP)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

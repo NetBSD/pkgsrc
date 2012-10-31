@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:16:53 asau Exp $
 #
 
 DISTNAME=	dmake-v4.1-src-export.all-unknown-all
@@ -11,8 +11,6 @@ MASTER_SITES=	http://dmake.wticorp.com/SourceDistribution/ \
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://dmake.wticorp.com/
 COMMENT=	Portable make supported by many platforms
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 BUILD_TARGET=	linux

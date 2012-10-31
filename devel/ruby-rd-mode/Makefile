@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/11/08 16:35:36 taca Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:19:42 asau Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -11,8 +11,6 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/rdtool/
 COMMENT=	Editing mode for RD (Ruby Document Format)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/03 00:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:16:46 asau Exp $
 #
 
 CLISP_MODULE=	pcre
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP PCRE module
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

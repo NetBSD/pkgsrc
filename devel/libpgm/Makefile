@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:19 asau Exp $
 #
 
 DISTNAME=	libpgm-5.1.118
@@ -11,8 +11,6 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/openpgm/
 COMMENT=	PGM reliable multicast library implementing RFC 3208
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/openpgm/pgm
 

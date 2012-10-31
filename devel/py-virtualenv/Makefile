@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/06 22:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:36 asau Exp $
 
 DISTNAME=	virtualenv-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/virtualenv
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON=	virtualenv.py

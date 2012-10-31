@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:08:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:35 asau Exp $
 
 DISTNAME=	py-sysctl-0.1
 PKGNAME=	${PYPKGPREFIX}-sysctl-0.1
@@ -10,8 +10,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-*
 
 MAINTAINER=	cherry@zyx.in
 COMMENT=	Python interface to sysctl(3)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	# yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:04 asau Exp $
 
 DISTNAME=	Dist-Zooky-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -24,8 +24,6 @@ DEPENDS+=	p5-Software-License>=0.101.620:../../devel/p5-Software-License
 # for implicit depdendencies like File::Temp, IPC::Cmd,
 #     Module::Load::Conditional, Params::Check
 PERL5_REQD+=	5.14.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Dist/Zooky/.packlist
 

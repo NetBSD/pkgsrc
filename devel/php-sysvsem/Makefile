@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:24 asau Exp $
 
 MODNAME=		sysvsem
 CATEGORIES+=		devel
 COMMENT=		PHP extension for SysV semaphore support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-sysvsem-[0-9]*
 

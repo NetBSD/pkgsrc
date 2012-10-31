@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/03 13:19:34 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:33 asau Exp $
 #
 
 DISTNAME=	ordereddict-1.1
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/ordereddict/
 COMMENT=	Drop-in substitute for Py2.7's new collections.OrderedDict
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

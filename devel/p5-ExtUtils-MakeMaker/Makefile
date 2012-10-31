@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:18:07 asau Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-6.62
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Write a Makefile for an extension module from a Makefile.PL
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-CPAN-Meta>=2.112150:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-Parse-CPAN-Meta>=1.4401:../../devel/p5-Parse-CPAN-Meta

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2012/10/03 21:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2012/10/31 11:16:54 asau Exp $
 
 DISTNAME=	doxygen-1.8.2.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize

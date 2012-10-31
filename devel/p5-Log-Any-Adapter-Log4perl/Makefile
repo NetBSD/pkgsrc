@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:27 asau Exp $
 #
 
 DISTNAME=	Log-Any-Adapter-Log4perl-0.06
@@ -13,7 +13,6 @@ COMMENT=	Adapter to use Log::Log4perl with Log::Any
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Log-Any-Adapter-[0-9]*:../../devel/p5-Log-Any-Adapter
 DEPENDS+=	p5-Log-Log4perl>=1.00:../../devel/p5-Log-Log4perl

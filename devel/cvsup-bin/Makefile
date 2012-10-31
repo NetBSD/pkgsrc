@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/02/07 09:39:16 shattered Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:50 asau Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -15,8 +15,6 @@ CONFLICTS=	cvsup-[0-9]* cvsup-gui-[0-9]*
 
 EMUL_PLATFORMS=		netbsd-i386
 EMUL_REQD=		netbsd>=1.5
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # XXX Remove the following line on the next update; see PR 25255 for details
 DIST_SUBDIR=		cvsup-i386-1.6

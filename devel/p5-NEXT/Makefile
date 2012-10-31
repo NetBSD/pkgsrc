@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:18:39 asau Exp $
 
 DISTNAME=	NEXT-0.65
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/NEXT/
 COMMENT=	Provide a pseudo-class NEXT (et al) that allows method redispatch
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/NEXT/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/02/28 14:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:50 asau Exp $
 #
 
 DISTNAME=	tkdiff-4.1.4-unix
@@ -11,7 +11,6 @@ HOMEPAGE=	http://sourceforge.net/projects/tkdiff/
 COMMENT=	Graphical 2-way diff/merge tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

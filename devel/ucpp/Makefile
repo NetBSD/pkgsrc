@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/03/26 17:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:52 asau Exp $
 #
 
 DISTNAME=	ucpp-1.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ucpp/
 COMMENT=	C preprocessor and lexer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

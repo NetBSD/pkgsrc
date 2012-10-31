@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/31 11:18:03 asau Exp $
 
 DISTNAME=	Devel-Symdump-2.08
 PKGNAME=	p5-${DISTNAME}00
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module for inspecting perl's symtable/class hiers
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Devel/Symdump/.packlist
 

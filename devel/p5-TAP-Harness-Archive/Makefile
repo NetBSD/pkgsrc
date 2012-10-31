@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:59 asau Exp $
 #
 
 DISTNAME=	TAP-Harness-Archive-0.14
@@ -17,7 +17,6 @@ DEPENDS+=	p5-YAML-Tiny>=0:../../textproc/p5-YAML-Tiny
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/TAP/Harness/Archive/.packlist
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

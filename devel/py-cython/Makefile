@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/16 07:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:29 asau Exp $
 #
 
 DISTNAME=	Cython-0.17.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cython.org/
 COMMENT=	C-Extensions for Python
 LICENSE=	apache-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 PYDISTUTILSPKG= yes

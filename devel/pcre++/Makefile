@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/03 00:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:22 asau Exp $
 #
 
 DISTNAME=		pcre++-0.9.5
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.daemon.de/files/mirror/ftp.daemon.de/scip/Apps/pcre++/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.daemon.de/PCRE
 COMMENT=		Wrapper class around the pcre library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

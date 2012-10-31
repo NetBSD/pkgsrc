@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2012/10/19 17:54:57 drochner Exp $
+# $NetBSD: Makefile.common,v 1.24 2012/10/31 11:17:00 asau Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -19,7 +19,6 @@ COMMENT=	# empty; redefined in Makefile
 LICENSE=	gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config

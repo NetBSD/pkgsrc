@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/27 12:20:13 wen Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:17:44 asau Exp $
 
 DISTNAME=	Capture-Tiny-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Capture STDOUT and STDERR from Perl, XS or external programs
 LICENSE=	apache-2.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Capture/Tiny/.packlist
 

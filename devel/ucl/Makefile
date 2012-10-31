@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/02/26 10:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:19:52 asau Exp $
 #
 
 DISTNAME=	ucl-1.03
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.oberhumer.com/opensource/ucl/
 COMMENT=	Portable lossless data compression library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

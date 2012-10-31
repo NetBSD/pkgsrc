@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:07 asau Exp $
 #
 
 DISTNAME=	Test-Most-0.31
@@ -22,8 +22,6 @@ DEPENDS+=	p5-Test-Warn>=0.23:../../devel/p5-Test-Warn
 
 # recommended
 DEPENDS+=	p5-Data-Dumper-Names>=0.03:../../devel/p5-Data-Dumper-Names
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # XXX fix proving some kind of version setting via lang/perl5/module.mk
 BUILD_DEPENDS+=	p5-Module-Build>=0.40000:../../devel/p5-Module-Build

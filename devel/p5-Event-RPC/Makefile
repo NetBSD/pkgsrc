@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:18:05 asau Exp $
 
 DISTNAME=	Event-RPC-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.exit1.org/Event-RPC/
 #HOMEPAGE=	http://search.cpan.org/dist/Event-RPC/
 COMMENT=	Event based transparent Client/Server RPC framework
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Event-[0-9]*:../../devel/p5-Event
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/08/31 11:43:17 apb Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:36 asau Exp $
 #
 
 DISTNAME=	PythonTidy-1.20
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lacusveris.com/PythonTidy/
 COMMENT=	Cleans up, regularizes, and reformats the text of Python scripts
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:18:32 asau Exp $
 #
 
 DISTNAME=	Module-Pluggable-4.3
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Pluggable/
 COMMENT=	Perl 5 module for automatically adding the ability to have plugins to modules
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Module/Pluggable/.packlist

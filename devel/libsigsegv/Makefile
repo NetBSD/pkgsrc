@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/06 21:51:14 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:17:21 asau Exp $
 #
 
 DISTNAME=		libsigsegv-2.10
@@ -9,7 +9,6 @@ MAINTAINER=		martijn.van.buul@gmail.com
 HOMEPAGE=		http://savannah.gnu.org/projects/libsigsegv/
 COMMENT=		Library for handling page faults in user mode
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		libsigsegv25-[0-9]*
 
 USE_PKGLOCALEDIR=	yes

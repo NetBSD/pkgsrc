@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:19 asau Exp $
 #
 
 DISTNAME=		IO-1.25
@@ -11,8 +11,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO/
 COMMENT=		Perl module for various IO modules
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

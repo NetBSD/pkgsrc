@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:02 asau Exp $
 #
 
 DISTNAME=	Test-Approx-0.03
@@ -13,7 +13,6 @@ COMMENT=	Perl module for testing approximate equality of values
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Text-LevenshteinXS>=0.03:../../textproc/p5-Text-LevenshteinXS
 

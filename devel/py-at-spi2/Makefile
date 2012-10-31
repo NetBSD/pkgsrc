@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/18 10:47:56 prlw1 Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:28 asau Exp $
 #
 
 DISTNAME=	pyatspi-2.6.0
@@ -16,8 +16,6 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	at-spi2-core>=2.3.90:../../devel/at-spi2-core
 DEPENDS+=	at-spi2-atk-[0-9]*:../../devel/at-spi2-atk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config

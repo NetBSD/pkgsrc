@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/04 07:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:16:44 asau Exp $
 
 PKGNAME=	bzrtools-${VER}
 DISTNAME=	bzrtools-${VER:R}
@@ -10,8 +10,6 @@ MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://bazaar-vcs.org/BzrTools
 COMMENT=	Collection of plugins for Bazaar
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_PATCH_SCRIPTS= check-release.py test.py
 

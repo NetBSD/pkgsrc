@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:18:47 asau Exp $
 #
 
 DISTNAME=	Parse-Method-Signatures-1.003014
@@ -24,8 +24,6 @@ DEPENDS+=	p5-namespace-clean>=0.10:../../devel/p5-namespace-clean
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled

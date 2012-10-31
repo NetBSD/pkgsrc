@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/05/20 00:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/10/31 11:16:44 asau Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/ \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utility to explain and compose C and C++ declarations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		cdecl
 # missing rl_completion_matches

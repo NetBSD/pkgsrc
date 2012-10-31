@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:17 asau Exp $
 #
 
 DISTNAME=	Gnome2-GConf-1.044
@@ -14,8 +14,6 @@ COMMENT=	Perl bindings for the GConf configuration database
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
