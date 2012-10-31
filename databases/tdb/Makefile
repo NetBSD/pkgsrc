@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 12:34:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 13:09:48 wiz Exp $
 #
 
 DISTNAME=	tdb-1.2.10
@@ -15,8 +15,9 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 # both install tdbtool and tdbdump
 CONFLICTS+=	samba<3.6.6nb3
 
-GNU_CONFIGURE=		YES
+HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 USE_TOOLS+=		gmake
 
 PKGCONFIG_OVERRIDE=	tdb.pc.in
