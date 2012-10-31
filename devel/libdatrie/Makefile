@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/22 04:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:12 asau Exp $
 #
 
 DISTNAME=	libdatrie-0.2.5
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://linux.thai.net/~thep/datrie/datrie.html
 COMMENT=	Implementation of Double-Array Trie
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

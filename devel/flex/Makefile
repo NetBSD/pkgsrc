@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/08/01 13:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/31 11:16:57 asau Exp $
 
 DISTNAME=		flex-2.5.36
 PKGREVISION=		1
@@ -14,8 +14,6 @@ COMMENT=		Fast clone of lex(1), the lexical scanner generator
 #BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
 #BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 #BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gm4:run makeinfo

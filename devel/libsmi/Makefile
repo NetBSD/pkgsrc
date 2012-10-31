@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/11/23 11:30:50 tron Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:17:21 asau Exp $
 
 DISTNAME=	libsmi-0.4.8
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/libsmi/
 COMMENT=	Library to access SMI MIB information
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MIBDIR=		${PREFIX}/share/libsmi/mibs
 PIBDIR=		${PREFIX}/share/libsmi/pibs

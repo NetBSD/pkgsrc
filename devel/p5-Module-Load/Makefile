@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:32 asau Exp $
 
 DISTNAME=	Module-Load-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module to runtime require of both modules and files
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Module/Load/.packlist
 

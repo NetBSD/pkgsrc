@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:17:36 asau Exp $
 
 DISTNAME=	Algorithm-Dependency-1.110
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=	p5-Test-ClassAPI>=0.6:../../devel/p5-Test-ClassAPI
 DEPENDS+=	p5-Params-Util>=0.31:../../devel/p5-Params-Util
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Algorithm/Dependency/.packlist
 

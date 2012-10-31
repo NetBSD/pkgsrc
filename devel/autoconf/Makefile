@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2012/10/03 21:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2012/10/31 11:16:38 asau Exp $
 
 DISTNAME=		autoconf-2.69
 PKGREVISION=		1
@@ -23,7 +23,6 @@ CONFLICTS+=		gdb<5.3
 CONFLICTS+=		gdb>6<6.2.1nb5
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES

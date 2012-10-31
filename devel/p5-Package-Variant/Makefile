@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/19 07:50:56 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:18:45 asau Exp $
 #
 
 DISTNAME=	Package-Variant-1.001002
@@ -12,7 +12,6 @@ COMMENT=	Perl5 module wrapper for parameterizable packages
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Import-Into>=1.0:../../devel/p5-Import-Into
 DEPENDS+=	p5-Module-Runtime>=0.13:../../devel/p5-Module-Runtime

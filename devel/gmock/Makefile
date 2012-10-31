@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/29 15:18:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:01 asau Exp $
 #
 
 DISTNAME=	gmock-1.6.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://code.google.com/p/googlemock/
 COMMENT=	C++ Mocking Framework
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 GNU_CONFIGURE=	yes

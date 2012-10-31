@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/17 10:15:16 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:18 asau Exp $
 #
 
 DISTNAME=		libnjb-2.2.6
@@ -10,8 +10,6 @@ MAINTAINER=		ku3@sl.aanet.ru
 HOMEPAGE=		http://libnjb.sourceforge.net/
 COMMENT=		Communicating with some Creative and Dell audio players
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:13 asau Exp $
 
 DISTNAME=	Tie-Cache-LRU-Expires-0.54
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Extends Tie::Cache::LRU with expiring
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Tie-Cache-LRU-[0-9]*:../../devel/p5-Tie-Cache-LRU
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Tie/Cache/LRU/Expires/.packlist
 

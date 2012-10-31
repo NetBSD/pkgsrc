@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/03/15 11:53:24 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:16:55 asau Exp $
 
 DISTNAME=	epydoc-2.1
 PKGREVISION=	7
@@ -11,8 +11,6 @@ COMMENT=	Python documentation framework
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	#none
 USE_TOOLS+=	pax

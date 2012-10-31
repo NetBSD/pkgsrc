@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:18:23 asau Exp $
 
 DISTNAME=	IPC-Cmd-0.78
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module for finding and running system commands
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IPC/Cmd/.packlist

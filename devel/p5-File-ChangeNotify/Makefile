@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:18:09 asau Exp $
 
 DISTNAME=	File-ChangeNotify-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Watch for changes to files, cross-platform style
 LICENSE=	artistic-2.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose

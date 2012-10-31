@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 17:25:56 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:07 asau Exp $
 
 DISTNAME=	javacc-4.0
 CATEGORIES=	devel
@@ -7,8 +7,6 @@ MASTER_SITES=	https://javacc.dev.java.net/files/documents/17/26776/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://javacc.dev.java.net/
 COMMENT=	Java Compiler Compiler [tm]
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_JAVA=	run

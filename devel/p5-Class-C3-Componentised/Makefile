@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:17:46 asau Exp $
 
 DISTNAME=	Class-C3-Componentised-1.001000
 PKGNAME=	p5-${DISTNAME:S/00$//}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?Class::C3::Componentised
 COMMENT=	Load mix-ins or components to your C3-based class
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector

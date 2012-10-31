@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:35 asau Exp $
 #
 
 DISTNAME=	MooseX-FollowPBP-0.05
@@ -14,8 +14,6 @@ LICENSE=	artistic-2.0
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Moose>=0.94:../../devel/p5-Moose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/FollowPBP/.packlist

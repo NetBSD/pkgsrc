@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/15 20:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:23 asau Exp $
 #
 
 DISTNAME=	awl-${LIBAWL_VERSION}
@@ -11,8 +11,6 @@ MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://andrew.mcmillan.net.nz/projects/awl/
 COMMENT=	PHP Andrew's Web Libraries
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
 

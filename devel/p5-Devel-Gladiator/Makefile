@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:00 asau Exp $
 
 DISTNAME=	Devel-Gladiator-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-Gladiator/
 COMMENT=	Perl 5 module to walk Perl's arena
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Devel/Gladiator/.packlist
 

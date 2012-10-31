@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:10 asau Exp $
 
 DISTNAME=		Test-Tester-0.108
 PKGNAME=		p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=		Perl5 module to ease testing test modules built with Test::Builder
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Tester/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

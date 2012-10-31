@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:17:57 asau Exp $
 
 DISTNAME=	Data-UUID-1.218
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module for generating UUIDs
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Digest-MD5>=0:../../security/p5-Digest-MD5
 

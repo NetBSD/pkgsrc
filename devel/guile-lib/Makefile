@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/03/24 19:43:23 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:17:05 asau Exp $
 
 DISTNAME=	guile-lib-0.1.6
 PKGREVISION=	3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://download.gna.org/guile-lib/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/guile-lib/
 COMMENT=	Library functions for Guile, implemented in Scheme
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

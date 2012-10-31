@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:08 asau Exp $
 
 DISTNAME=	Test-NoWarnings-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	p5-Test-Tester>=0.107:../../devel/p5-Test-Tester
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/Test/NoWarnings/.packlist
 
 .include "../../lang/perl5/module.mk"

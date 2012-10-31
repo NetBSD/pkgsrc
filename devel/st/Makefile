@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/06/19 05:59:25 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:47 asau Exp $
 #
 
 DISTNAME=	st-1.8
@@ -11,8 +11,6 @@ COMMENT=	Non-preemptive thread library for Internet applications
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-vax
 MAKE_JOBS_SAFE=		no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake

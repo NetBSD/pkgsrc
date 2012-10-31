@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/21 22:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:18:11 asau Exp $
 
 DISTNAME=	File-HomeDir-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-HomeDir/
 COMMENT=	Get the home directory for yourself or other users
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled

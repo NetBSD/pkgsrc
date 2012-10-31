@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 15:18:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:08 asau Exp $
 #
 
 DISTNAME=	js_of_ocaml-1.2
@@ -17,8 +17,6 @@ DIST_SUBDIR=	js_of_ocaml-1.2
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 DEPENDS+=	ocaml-lwt>=2.3.0:../../devel/ocaml-lwt
 DEPENDS+=	ocaml-deriving-ocsigen>=0.3:../../devel/ocaml-deriving-ocsigen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 USE_TOOLS=	gmake

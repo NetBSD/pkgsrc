@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/06/06 21:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:16:46 asau Exp $
 #
 
 DISTNAME=	chmlib-0.40
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2.1
 CONFLICTS=	kchm-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

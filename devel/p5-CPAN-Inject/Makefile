@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:42 asau Exp $
 
 DISTNAME=	CPAN-Inject-1.13
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Inject a distribution for installation via the CPAN shell
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-CPAN-Checksums>=1.05:../../devel/p5-CPAN-Checksums
 DEPENDS+=	p5-File-chmod>=0.30:../../sysutils/p5-File-chmod

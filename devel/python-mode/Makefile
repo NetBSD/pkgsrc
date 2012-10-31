@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/10/09 02:49:48 kim Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/31 11:19:36 asau Exp $
 #
 
 DISTNAME=	python-mode-1.0
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-mode/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/python-mode/
 COMMENT=	Emacs mode for editing python files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ELISP_FILES=	python-mode.el
 # Could be installed as well, but what about pycomplete.py?

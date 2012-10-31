@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/13 14:00:55 cegger Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:17:05 asau Exp $
 #
 
 DISTNAME=		hg-git-0.3.3
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://hg-git.github.com
 COMMENT=		Git plugin for Mercurial
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.8.0:../../devel/py-dulwich
 DEPENDS+=	mercurial>=1.7.0:../../devel/mercurial

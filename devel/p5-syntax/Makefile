@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:21 asau Exp $
 #
 
 DISTNAME=	syntax-0.004
@@ -17,8 +17,6 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/syntax/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

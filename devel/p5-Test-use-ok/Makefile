@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:12 asau Exp $
 
 DISTNAME=	Test-use-ok-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Alternative to Test::More::use_ok
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/use/ok/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 23:01:01 adam Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:19:37 asau Exp $
 #
 
 DISTNAME=	qtscriptgenerator-src-0.1.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/qtscriptgenerator/
 COMMENT=	Tool that generates Qt bindings for Qt Script
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 USE_LIBTOOL=	yes
