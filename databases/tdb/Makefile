@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/30 13:24:31 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 12:34:28 wiz Exp $
 #
 
 DISTNAME=	tdb-1.2.10
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www.samba.org/ftp/tdb/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/tdb/
 COMMENT=	Small database system which uses files to store data
+
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # both install tdbtool and tdbdump
 CONFLICTS+=	samba<3.6.6nb3
