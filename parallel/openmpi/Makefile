@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2012/10/24 05:49:26 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 06:19:35 asau Exp $
 
-DISTNAME=	openmpi-1.6.2
+DISTNAME=	openmpi-1.6.3
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 EXTRACT_SUFX=	.tar.bz2
