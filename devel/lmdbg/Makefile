@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/02 18:48:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:17:24 asau Exp $
 #
 
 DISTNAME=	lmdbg-1.1.0
@@ -18,8 +18,6 @@ DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 
 ONLY_FOR_COMPILER=	gcc icc clang
 NOT_FOR_PLATFORM=	Darwin-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		test
 

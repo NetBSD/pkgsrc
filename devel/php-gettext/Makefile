@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/09/02 14:09:56 marino Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:19:23 asau Exp $
 
 MODNAME=		gettext
 CATEGORIES+=		devel
 COMMENT=		PHP extension for gettext support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-gettext-[0-9]*
 

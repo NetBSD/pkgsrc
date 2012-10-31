@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:40 asau Exp $
 
 DISTNAME=	Autodia-2.14
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Autodia/.packlist
 REPLACE_PERL=	autodia.pl

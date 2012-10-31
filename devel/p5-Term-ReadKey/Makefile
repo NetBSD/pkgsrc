@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 21:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:19:01 asau Exp $
 #
 
 VERS=		2.30
@@ -13,7 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/TermReadKey/
 COMMENT=	Change terminal modes and perform non-blocking reads
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/15 11:53:23 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:31 asau Exp $
 #
 
 DISTNAME=	RBTools-0.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.reviewboard.org/docs/manual/dev/users/tools/
 COMMENT=	Tool to submit patches to a Review Board
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

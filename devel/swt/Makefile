@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 23:01:25 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/31 11:19:48 asau Exp $
 #
 
 SWTREL=		3.5.1
@@ -16,8 +16,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org/swt/
 COMMENT=	Open source widget toolkit for Java
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake pkg-config

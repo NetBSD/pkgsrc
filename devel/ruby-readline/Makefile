@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/05/13 08:37:03 sbd Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/31 11:19:43 asau Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -11,8 +11,6 @@ MASTER_SITES=		${MASTER_SITE_RUBY}
 MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby extension to readline library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_EXTCONF=	yes
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}

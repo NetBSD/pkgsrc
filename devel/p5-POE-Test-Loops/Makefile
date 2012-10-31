@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:18:43 asau Exp $
 
 DISTNAME=	POE-Test-Loops-1.350
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/POE-Test-Loops/
 COMMENT=	Perl module providing reusable tests for POE::Loop authors
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/POE/Test/Loops/.packlist
 

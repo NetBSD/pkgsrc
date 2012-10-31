@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:52 asau Exp $
 #
 
 DISTNAME=	delta-2006.08.03
@@ -10,8 +10,6 @@ MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://delta.tigris.org/
 COMMENT=	Heuristically minimizes interesting files
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FETCH_USING=	wget
 USE_TOOLS+=	gmake perl

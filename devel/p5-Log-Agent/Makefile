@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:18:26 asau Exp $
 
 DISTNAME=	Log-Agent-0.307
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Log-Agent/
 COMMENT=	General logging framework aimed at reusable modules
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Log/Agent/.packlist
 

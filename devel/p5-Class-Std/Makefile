@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:50 asau Exp $
 
 DISTNAME=	Class-Std-0.011
 PKGNAME=	p5-${DISTNAME:S/011/0.11/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Std/
 COMMENT=	Perl 5 module to support creation of standard inside-out classes
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Class/Std/.packlist
 PERL5_MODULE_TYPE=	Module::Build

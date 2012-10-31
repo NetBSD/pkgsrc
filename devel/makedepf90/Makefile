@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/16 12:00:27 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:27 asau Exp $
 #
 
 DISTNAME=		makedepf90-2.8.8
@@ -9,8 +9,6 @@ MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://personal.inet.fi/private/erikedelmann/makedepf90/
 COMMENT=		Creates Makefile dependencies for Fortran code
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

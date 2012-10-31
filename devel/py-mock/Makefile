@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/16 21:45:18 gls Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:32 asau Exp $
 #
 
 DISTNAME=	mock-0.8.0
@@ -10,8 +10,6 @@ MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/mock
 COMMENT=	Python testing framework
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/11/08 18:50:56 heinz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/31 11:19:53 asau Exp $
 #
 
 DISTNAME=		xdelta-1.1.4
@@ -8,8 +8,6 @@ MASTER_SITES=		http://xdelta.googlecode.com/files/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xdelta.org/
 COMMENT=		Enhanced diff that works on binary files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.glib+=	glib>=1.2.8
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.1.3

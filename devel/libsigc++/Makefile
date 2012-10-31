@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/08 15:12:09 adam Exp $
+# $NetBSD: Makefile,v 1.39 2012/10/31 11:17:20 asau Exp $
 
 DISTNAME=	libsigc++-2.2.11
 CATEGORIES=	devel
@@ -9,8 +9,6 @@ MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/10/08 23:01:24 adam Exp $
+# $NetBSD: Makefile,v 1.46 2012/10/31 11:17:30 asau Exp $
 #
 
 DISTNAME=		monotone-viz-1.0.1-nolablgtk
@@ -10,8 +10,6 @@ MASTER_SITES=		http://oandrieu.nerim.net/monotone-viz/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://oandrieu.nerim.net/monotone-viz/
 COMMENT=		Visualize monotone ancestry graphs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		monotone-viz
 GNU_CONFIGURE=		yes

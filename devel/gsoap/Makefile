@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/18 12:11:36 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:17:04 asau Exp $
 
 DISTNAME=		gsoap_2.7.17
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -10,7 +10,6 @@ MAINTAINER=		chriswareham@chriswareham.demon.co.uk
 HOMEPAGE=		http://gsoap2.sourceforge.net/
 COMMENT=		Tools for coding SOAP XML Web Services in C and C++
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/gsoap-2.7

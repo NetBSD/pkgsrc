@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/08/27 22:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:16:44 asau Exp $
 
 DISTNAME=	ccache-3.1.8
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

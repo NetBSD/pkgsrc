@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/05 17:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:16:55 asau Exp $
 #
 
 DISTNAME=	eina-1.1.0
@@ -11,8 +11,6 @@ HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Data types library
 
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

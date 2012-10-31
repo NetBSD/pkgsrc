@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:18:06 asau Exp $
 
 DISTNAME=	ExtUtils-AutoInstall-0.63
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Lets Makefile.PL automatically install dependencies
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Sort-Versions>=1.2:../../devel/p5-Sort-Versions
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/06/14 07:45:13 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:16:33 asau Exp $
 #
 
 DISTNAME=	accerciser-1.12.1
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-at-spi>=1.23.4:../../devel/py-at-spi
 DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes

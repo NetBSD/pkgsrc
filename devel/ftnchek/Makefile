@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/01/17 21:43:19 sbd Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:16:58 asau Exp $
 
 DISTNAME=	ftnchek-3.2.2
 PKGREVISION=	1
@@ -19,8 +19,6 @@ USE_TOOLS+=	soelim
 .if (${MACHINE_ARCH} == "arm")
 CFLAGS+=	-O1
 .endif
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/emacs/site-lisp
 INSTALLATION_DIRS+=	share/doc/ftnchek share/doc/ftnchek/html
