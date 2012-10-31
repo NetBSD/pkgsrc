@@ -1,13 +1,13 @@
-.\" $NetBSD: kver.3,v 1.2 2004/04/24 10:53:03 grant Exp $
+.\" $NetBSD: kver.3,v 1.3 2012/10/31 14:41:55 apb Exp $
 .\"
-.Dd December 13, 2003
+.Dd October 31, 2012
 .Os
 .Dt KVER 3
 .Sh NAME
 .Nm kver
 .Nd override system version library
 .Sh SYNOPSIS
-LD_PRELOAD=.../libkver.so uname -a
+LD_PRELOAD=@PREFIX@/lib/libkver.so uname -a
 .Sh DESCRIPTION
 The
 .Nm
@@ -16,24 +16,114 @@ library provides implementations of
 .Xr uname 3 that
 shadow the real implementation and could be configured to override the
 information identifying the current system.
-The library is usually loaded by the run-time link-editor via the
-LD_PRELOAD hook.
-.Pp
 This is useful for, among other things, building packages in a
 sandbox/chrooted environment for a different
 .Nx
 release then the system hosting the sandbox.
 .Pp
-The library must be configured for reporting a specific
-.Nx
-release or else it emits a warning message on the standard error output.
-The value of the environment variable
-.Ev LIBKVER_OSRELEASE
-or the ``name'' of the file referenced by the symbolic link named
-.Pa /libkver_osrelease
-are checked in that order for the
-.Nx
-release number the library should reports information for.
+The library is usually loaded by the run-time link-editor via the
+LD_PRELOAD hook.
+The
+.Xr kver 8
+utility provides a simple wrapper for convenience.
+.Pp
+For each variable that may be overridden,
+.Nm
+first attempts to obtain an override value from an environment variable;
+if the environment variable is not set then it uses
+.Xr readlink 3
+to get the target of a symbolic link, and treats that as the override value;
+if that also fails, then the variable is not overridden.
+If none of the variables are overridden, or if an error occurs, then
+the
+.Nm
+library emits a warning message on the standard error output,
+and allows the program to run without any overrides.
+.Pp
+The following table lists all the variables that may be overridden,
+giving the environment variable name, the symbolic link name,
+and a description of the way the value is used.
+.Pp
+.Bl -column "LIBKVER_MACHINE_ARCH" "/libkver_machine_arch"
+.It Sy Environment Ta Sy Symlink Ta Sy Description
+.
+.It Ev LIBKVER_OSTYPE Ta Pa /libkver_ostype Ta
+The operating system type, e.g.
+.Qq Nx .
+Overrides the
+.Xr sysctl 7
+variable
+.Va kern.ostype .
+Overrides the result from
+.Xr uname 1
+with the
+.Fl s
+flag.
+Overrides the
+.Va sysname
+element of the
+.Vt "struct utsname"
+result from
+.Xr uname 3 .
+.
+.It Ev LIBKVER_OSRELEASE Ta Pa /libkver_osrelease Ta
+The operating system release, e.g.
+.Qq "6.0_STABLE" .
+Overrides the
+.Xr sysctl 7
+variable
+.Va kern.osrelease .
+Overrides the result from
+.Xr uname 1
+with the
+.Fl r
+flag.
+Overrides the
+.Va release
+element of the
+.Vt "struct utsname"
+result from
+.Xr uname 3 .
+.Pp
+This value is also converted to an integer, which is used to
+override the value of the
+.Xr sysctl 7
+variable
+.Va kern.osrevision .
+.
+.It Ev LIBKVER_MACHINE Ta Pa /libkver_machine Ta
+The operating hardware platform, e.g.
+.Dq "amd64" .
+Overrides the
+.Xr sysctl 7
+variable
+.Va hw.machine .
+Overrides the result from
+.Xr uname 1
+with the
+.Fl m
+flag.
+Overrides the
+.Va machine
+element of the
+.Vt "struct utsname"
+result from
+.Xr uname 3 .
+.
+.It Ev LIBKVER_MACHINE_ARCH Ta Pa /libkver_machine_arch Ta
+The machine processor architecture, e.g.
+.Dq "x86_64" .
+Overrides the
+.Xr sysctl 7
+variable
+.Va hw.machine_arch .
+Overrides the result from
+.Xr uname 1
+with the
+.Fl p
+flag.
+.El
+.Pp
 .Sh EXAMPLES
 .Dl env LD_PRELOAD=/lib/libkver.so LIBKVER_OSRELEASE=1.5 uname -r
 .Pp
@@ -41,7 +131,27 @@ release number the library should reports information for.
 .Dl env LD_PRELOAD=/lib/libkver.so uname -r
 .Sh SEE ALSO
 .Xr ld.so 1 ,
+.Xr uname 1 ,
 .Xr sysctl 3 ,
+.Xr uname 3 ,
+.Xr kver 8
+.Sh DIAGNOSTICS
+.Bl -diag
+.It "libkver: uname"
 .Xr uname 3
+failed.
+.It "libkver: not configured"
+None of the configurable variables has been overridden.
+.It "libkver: sysctl hw.machine_arch"
+.Xr sysctl 3
+failed to retrieve the value of the
+.Va hw.machine_arch
+variable.
+.It "libkver: cannot convert osrelease to osrevision: %s"
+The osrelease string could not be converted to an integer for use by the
+.Va kern.osrevision
+.Xr sysctl 7
+variable.
 .Sh AUTHORS
 .An Stoned Elipot Aq seb@NetBSD.org
+.An Alan Barrett Aq apb@NetBSD.org
