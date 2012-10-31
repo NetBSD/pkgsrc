@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3465 2012/10/30 22:44:26 morr Exp $
+$NetBSD: CHANGES-2012,v 1.3466 2012/10/31 06:19:53 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5306,3 +5306,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/vim-gtk2 to 7.3.712 [morr 2012-10-30]
 	Updated editors/vim-lang to 7.3.712 [morr 2012-10-30]
 	Updated editors/vim-share to 7.3.712 [morr 2012-10-30]
+	Updated parallel/openmpi to 1.6.3 [asau 2012-10-31]
