@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3467 2012/10/31 13:06:37 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3468 2012/10/31 22:49:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5308,3 +5308,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/vim-share to 7.3.712 [morr 2012-10-30]
 	Updated parallel/openmpi to 1.6.3 [asau 2012-10-31]
 	Updated graphics/cairo to 1.12.6nb2 [wiz 2012-10-31]
+	Updated emulators/yabause to 0.9.11.1nb9 [wiz 2012-10-31]
