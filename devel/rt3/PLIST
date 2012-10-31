@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2012/05/25 19:55:43 spz Exp $
+@comment $NetBSD: PLIST,v 1.22 2012/10/31 20:39:26 spz Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -506,6 +506,7 @@ share/rt3/html/Elements/HeaderJavascript
 share/rt3/html/Elements/ListActions
 share/rt3/html/Elements/ListMenu
 share/rt3/html/Elements/Login
+share/rt3/html/Elements/LoginRedirectWarning
 share/rt3/html/Elements/Logo
 share/rt3/html/Elements/Logout
 share/rt3/html/Elements/MakeClicky
