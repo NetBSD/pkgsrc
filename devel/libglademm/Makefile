@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 23:00:41 adam Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/31 11:17:15 asau Exp $
 
 DISTNAME=	libglademm-2.6.7
 PKGREVISION=	14
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ bindings for libglade
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

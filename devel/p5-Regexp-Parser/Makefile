@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:52 asau Exp $
 #
 
 DISTNAME=	Regexp-Parser-0.21
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Regexp-Parser/
 COMMENT=	Perl 5 base class for parsing regexes
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Regexp/Parser/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/19 14:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:17 asau Exp $
 #
 
 DISTNAME=	libmcs-0.7.1
@@ -10,8 +10,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 #HOMEPAGE=	http://sacredspiral.co.uk/~nenolod/mcs/
 COMMENT=	BSD licensed configuration database system
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/21 20:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/31 11:17:28 asau Exp $
 #
 
 DISTNAME=		meld-1.6.1
@@ -12,8 +12,6 @@ COMMENT=		Visual diff and merge tool
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-gtk2>=2.14.0:../../x11/py-gtk2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=		YES
 USE_TOOLS+=			gmake msgfmt intltool

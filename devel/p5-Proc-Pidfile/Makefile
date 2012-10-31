@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:18:51 asau Exp $
 #
 
 DISTNAME=		Proc-Pidfile-1.005
@@ -13,7 +13,6 @@ COMMENT=		Perl module for maintaining a pid file
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Proc/Pidfile/.packlist
 

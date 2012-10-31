@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/22 14:09:36 wen Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:35 asau Exp $
 #
 
 DISTNAME=	MooseX-Daemonize-0.15
@@ -14,8 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Moose>=0.33:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Getopt>=0.07:../../devel/p5-MooseX-Getopt
 DEPENDS+=	p5-MooseX-Types-Path-Class-[0-9]*:../../devel/p5-MooseX-Types-Path-Class
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Daemonize/.packlist

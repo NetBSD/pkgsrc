@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2012/10/27 08:54:48 asau Exp $
+# $NetBSD: Makefile.common,v 1.4 2012/10/31 11:17:05 asau Exp $
 # used by devel/hdf5-c++/Makefile
 
 HDF5_VER=	1.8.9
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pax tr
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/31 11:18:32 asau Exp $
 #
 
 DISTNAME=	Module-ScanDeps-1.09
@@ -18,8 +18,6 @@ PERL5_PACKLIST=		auto/Module/ScanDeps/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 REPLACE_PERL+=	script/scandeps.pl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

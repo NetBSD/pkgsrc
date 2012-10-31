@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:06 asau Exp $
 #
 
 DISTNAME=	Test-Inter-1.03
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-Inter/
 COMMENT=	Perl 5 framework for more readable interactive tests
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Inter/.packlist

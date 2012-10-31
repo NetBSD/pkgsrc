@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/09 05:02:06 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:47 asau Exp $
 #
 
 DISTNAME=	spiff-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.darwinsys.com/freeware/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.darwinsys.com/freeware/
 COMMENT=	Make controlled approximate comparisons between files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 AUTO_MKDIRS=	yes
 BUILD_TARGET=	spiff

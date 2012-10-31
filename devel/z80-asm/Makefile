@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 17:45:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:55 asau Exp $
 #
 
 DISTNAME=	z80-asm-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=	http://virtus.ath.cx/z80/
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/
 COMMENT=	Z80 assembly code assembler and disassembler
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 23:01:24 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:37 asau Exp $
 
 DISTNAME=	qjson-0.7.1
 PKGREVISION=	4
@@ -10,8 +10,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://qjson.sourceforge.net/
 COMMENT=	Qt library for handling JSON data
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

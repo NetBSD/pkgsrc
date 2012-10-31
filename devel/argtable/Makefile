@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/29 17:44:37 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:37 asau Exp $
 
 DISTNAME=	argtable-1.2
 CATEGORIES=	devel
@@ -7,8 +7,6 @@ MASTER_SITES=	http://www.ibiblio.org/pub/Linux/devel/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ibiblio.org/pub/Linux/devel/argtable.html
 COMMENT=	Library for parsing command line arguments of a C/C++ program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/15 10:04:12 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:09 asau Exp $
 
 DISTNAME=		kdiff3-0.9.91
 PKGREVISION=		16
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kdiff3/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kdiff3.sourceforge.net/
 COMMENT=		File and directory diff and merge tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt
 USE_LANGUAGES=		c c++

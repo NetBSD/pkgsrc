@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/28 23:38:10 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:16:46 asau Exp $
 #
 
 DISTNAME=	chrpath-0.13
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.hungry.com/pub/hungry/chrpath/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freshmeat.net/projects/chrpath/
 COMMENT=	Change the dynamic library load path of compiled binaries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

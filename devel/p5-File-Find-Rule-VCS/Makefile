@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:11 asau Exp $
 
 DISTNAME=	File-Find-Rule-VCS-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	File::Find::Rule extension to Exclude files/directories for VCS's
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-Find-Rule>=0.20:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-Text-Glob>=0.08:../../textproc/p5-Text-Glob

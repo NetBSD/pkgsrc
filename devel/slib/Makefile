@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/08/16 08:29:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/31 11:19:46 asau Exp $
 
 DISTNAME=	slib-3b3
 #
@@ -15,8 +15,6 @@ MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://swissnet.ai.mit.edu/~jaffer/SLIB.html
 COMMENT=	Portable Scheme library of compatibility and utility functions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

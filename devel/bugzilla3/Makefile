@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:16:43 asau Exp $
 #
 
 DISTNAME=	bugzilla-3.2.4
@@ -16,8 +16,6 @@ DEPENDS+=	p5-Template-Toolkit>=2.15:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-Email-Send>=2.00:../../mail/p5-Email-Send
 DEPENDS+=	p5-Email-MIME>=1.903:../../mail/p5-Email-MIME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

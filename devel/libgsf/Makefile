@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2012/09/15 10:04:15 obache Exp $
+# $NetBSD: Makefile,v 1.81 2012/10/31 11:17:16 asau Exp $
 #
 
 DISTNAME=	libgsf-1.14.22
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES

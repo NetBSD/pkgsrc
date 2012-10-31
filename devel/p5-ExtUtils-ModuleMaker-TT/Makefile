@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:08 asau Exp $
 
 DISTNAME=	ExtUtils-ModuleMaker-TT-0.93
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Makes skeleton modules with Template Toolkit templates
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Config-Find>=0.22:../../devel/p5-Config-Find
 DEPENDS+=	p5-Config-General>=2.29:../../devel/p5-Config-General

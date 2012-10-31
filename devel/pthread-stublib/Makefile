@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/09 00:48:08 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:27 asau Exp $
 
 DISTNAME=	pthread-stublib-1.0
 CATEGORIES=	devel
@@ -11,8 +11,6 @@ WRKSRC=		${WRKDIR}
 USE_LIBTOOL=	yes
 
 ONLY_FOR_PLATFORM= NetBSD-[12].*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	lib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 23:00:47 adam Exp $
+# $NetBSD: Makefile,v 1.36 2012/10/31 11:16:59 asau Exp $
 
 DISTNAME=	gdl-2.26.2
 PKGREVISION=	19
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Devtool Libraries
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

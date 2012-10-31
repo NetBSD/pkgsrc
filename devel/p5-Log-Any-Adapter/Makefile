@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:18:26 asau Exp $
 #
 
 DISTNAME=	Log-Any-Adapter-0.09
@@ -13,7 +13,6 @@ COMMENT=	Tell Log::Any where to send its logs
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Devel-GlobalDestruction-[0-9]*:../../devel/p5-Devel-GlobalDestruction

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:47 asau Exp $
 #
 
 DISTNAME=	colordiff-1.0.9
@@ -10,8 +10,6 @@ MAINTAINER=	rhansen@bbn.com
 HOMEPAGE=	http://colordiff.sourceforge.net/
 COMMENT=	Colour-highlighted 'diff' output
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 USE_TOOLS=	perl:run

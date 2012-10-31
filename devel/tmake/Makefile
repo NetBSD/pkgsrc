@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:51 asau Exp $
 #
 
 DISTNAME=	tmake-1.13
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.qtsoftware.com/freebies/tmake/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qtsoftware.com/developer/downloads/qt/freebies/
 COMMENT=	Cross-platform Makefile Tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 

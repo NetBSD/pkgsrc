@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:43 asau Exp $
 #
 
 DISTNAME=	PPI-XS-0.901
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PPI-XS/
 COMMENT=	Perl 5 XS acceleration for the PPI perl parser
 LICENSE=	gnu-gpl-v2 # OR artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Before update this package, please check $PM_COMPATIBLE in lib/PPI/XS.pm.
 # If it is greater than version of devel/p5-PPI, p5-PPI should be updated.

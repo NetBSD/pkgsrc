@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/11 14:49:00 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:51 asau Exp $
 #
 
 DISTNAME=	dconf-0.12.1
@@ -15,8 +15,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/dconf/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/dconf/patches
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --enable-editor
