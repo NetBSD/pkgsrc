@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/31 11:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 22:44:40 wiz Exp $
 
 DISTNAME=	pangomm-2.28.4
 PKGREVISION=	7
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
-COMMENT=	C++ bindings for pangomm
+COMMENT=	C++ bindings for pango
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=		gtkmm<=2.13.5
