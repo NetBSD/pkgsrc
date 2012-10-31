@@ -1,4 +1,4 @@
-.\" $NetBSD: kver.3,v 1.4 2012/10/31 14:47:08 apb Exp $
+.\" $NetBSD: kver.3,v 1.5 2012/10/31 22:55:40 wiz Exp $
 .\"
 .Dd October 31, 2012
 .Os
@@ -22,7 +22,8 @@ sandbox/chrooted environment for a different
 release then the system hosting the sandbox.
 .Pp
 The library is usually loaded by the run-time link-editor via the
-LD_PRELOAD hook.
+.Ev LD_PRELOAD
+hook.
 The
 .Xr kver 8
 utility provides a simple wrapper for convenience.
@@ -31,7 +32,7 @@ For each variable that may be overridden,
 .Nm
 first attempts to obtain an override value from an environment variable;
 if the environment variable is not set then it uses
-.Xr readlink 3
+.Xr readlink 2
 to get the target of a symbolic link, and treats that as the override value;
 if that also fails, then the variable is not overridden.
 If none of the variables are overridden, or if an error occurs, then
@@ -123,18 +124,11 @@ with the
 .Fl p
 flag.
 .El
-.Pp
 .Sh EXAMPLES
 .Dl env LD_PRELOAD=/lib/libkver.so LIBKVER_OSRELEASE=1.5 uname -r
 .Pp
 .Dl ln -s 1.6.2 /libkver_osrelease
 .Dl env LD_PRELOAD=/lib/libkver.so uname -r
-.Sh SEE ALSO
-.Xr ld.so 1 ,
-.Xr uname 1 ,
-.Xr sysctl 3 ,
-.Xr uname 3 ,
-.Xr kver 8
 .Sh DIAGNOSTICS
 .Bl -diag
 .It "libkver: uname"
@@ -152,6 +146,12 @@ The osrelease string could not be converted to an integer for use by the
 .Va kern.osrevision
 .Xr sysctl 7
 variable.
+.Sh SEE ALSO
+.Xr ld.so 1 ,
+.Xr uname 1 ,
+.Xr sysctl 3 ,
+.Xr uname 3 ,
+.Xr kver 8
 .Sh AUTHORS
 .An Stoned Elipot Aq seb@NetBSD.org
 .An Alan Barrett Aq apb@NetBSD.org
