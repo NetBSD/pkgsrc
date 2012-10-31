@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:26 asau Exp $
 #
 
 DISTNAME=	List-UtilsBy-0.07
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/List-UtilsBy/
 COMMENT=	Higher-order list utility functions
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGE=	# empty
 PERL5_PACKLIST=	auto/List/UtilsBy/.packlist

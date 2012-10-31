@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/02 07:13:48 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:25 asau Exp $
 
 DISTNAME=	apache-log4cxx-0.10.0
 PKGNAME=	${DISTNAME:S/apache-//}
@@ -17,8 +17,6 @@ USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-doxygen --disable-html-docs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE+=	liblog4cxx.pc.in
 

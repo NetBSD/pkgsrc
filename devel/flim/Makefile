@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/10/04 03:07:53 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/31 11:16:57 asau Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/flim \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 

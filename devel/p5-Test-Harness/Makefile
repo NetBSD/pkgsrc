@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/03 21:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/31 11:19:05 asau Exp $
 #
 
 DISTNAME=	Test-Harness-3.25
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-Harness/
 COMMENT=	Run Perl standard test scripts with statistics
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= auto/Test/Harness/.packlist
 

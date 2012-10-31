@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/14 12:08:48 imil Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:32 asau Exp $
 #
 
 DISTNAME=	lockfile-0.9.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/lockfile/
 COMMENT=	Platform-independent file locking module
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 

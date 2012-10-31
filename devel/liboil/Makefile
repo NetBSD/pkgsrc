@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/07 16:10:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:17:19 asau Exp $
 #
 
 DISTNAME=	liboil-0.3.17
@@ -8,8 +8,6 @@ MASTER_SITES=	http://liboil.freedesktop.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://liboil.freedesktop.org/wiki/
 COMMENT=	Library of simple, CPU-optimized functions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/26 04:39:39 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:16:51 asau Exp $
 
 DISTNAME=	darts-0.32
 PKGREVISION=	1
@@ -19,8 +19,6 @@ HTMLDOCDIR=	share/doc/html/darts
 DOCS=		AUTHORS ChangeLog README
 EXAMPLES=	darts.cpp mkdarts.cpp
 HTMLDOCS=	darts.css index.html
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLESDIR} ${HTMLDOCDIR}
 

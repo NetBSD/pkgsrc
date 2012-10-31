@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/03 21:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/31 11:19:18 asau Exp $
 
 DISTNAME=	Glib-1.262
 PKGNAME=	p5-${DISTNAME:S/Glib/glib2/}
@@ -13,7 +13,6 @@ COMMENT=	Perl bindings for Glib 2
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig

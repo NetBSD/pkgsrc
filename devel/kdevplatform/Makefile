@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 23:01:23 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/31 11:17:08 asau Exp $
 #
 
 DISTNAME=	kdevplatform-1.2.3
@@ -18,8 +18,6 @@ USE_TOOLS+=	pkg-config perl msgfmt
 USE_LANGUAGES=	c c++
 
 CXXFLAGS.Linux+=	-fpermissive
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"

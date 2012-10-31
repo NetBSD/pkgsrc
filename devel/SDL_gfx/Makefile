@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/01/28 13:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/31 11:16:32 asau Exp $
 
 DISTNAME=	SDL_gfx-2.0.23
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
 COMMENT=	Basic drawing routines for SDL
 LICENSE=	zlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

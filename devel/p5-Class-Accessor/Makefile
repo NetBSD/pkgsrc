@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:17:45 asau Exp $
 
 DISTNAME=	Class-Accessor-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Automated accessor generation
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Class/Accessor/.packlist
 

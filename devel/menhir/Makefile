@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/29 09:11:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:17:28 asau Exp $
 #
 
 DISTNAME=	menhir-20120123
@@ -10,8 +10,6 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://cristal.inria.fr/~fpottier/menhir/
 COMMENT=	LR(1) parser generator in OCaml
 LICENSE=	qpl-v1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

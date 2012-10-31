@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2011/12/17 10:15:08 sbd Exp $
+# $NetBSD: Makefile,v 1.44 2012/10/31 11:16:59 asau Exp $
 #
 
 DISTNAME=	gdb-5.3
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
 NOT_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* NetBSD-*-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=		YES

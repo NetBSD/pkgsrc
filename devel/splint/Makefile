@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/02 05:53:14 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:47 asau Exp $
 #
 
 DISTNAME=	splint-3.1.2.src
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lclint.cs.virginia.edu/
 COMMENT=	Statically check C programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

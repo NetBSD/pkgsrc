@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:18:29 asau Exp $
 
 DISTNAME=	Make-1.00
 PKGNAME=	p5-Make-1.00
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.ni-s.u-net.com/
 COMMENT=	Perl5 module implementing 'make' in Perl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Make/.packlist
 

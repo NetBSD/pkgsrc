@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/07/14 12:56:02 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:19 asau Exp $
 #
 
 DISTNAME=		liboop-1.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.liboop.org/
 COMMENT=		Event loop management library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES

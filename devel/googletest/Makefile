@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/10 10:56:17 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:03 asau Exp $
 #
 
 DISTNAME=	gtest-1.6.0
@@ -12,8 +12,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://code.google.com/p/googletest/
 COMMENT=	Google's C++ testing framework
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:53 asau Exp $
 #
 
 DISTNAME=	Config-Properties-1.73
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Config-Properties/
 COMMENT=	Read and write property files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-Temp>=0:../../devel/p5-File-Temp
 

@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 18:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:19:44 asau Exp $
 
 PKGNAME=	scmgit-docs-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (documentation)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		git<4.9.5nb1		# misc/git
 

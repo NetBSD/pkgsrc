@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/02/23 11:00:17 adam Exp $
+# $NetBSD: Makefile,v 1.52 2012/10/31 11:19:39 asau Exp $
 
 DISTNAME=	readline-6.2
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ COMMENT=	GNU library that can recall and edit previous input
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

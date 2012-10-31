@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:37 asau Exp $
 
 DISTNAME=	MooseX-Role-WithOverloading-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MooseX-Role-WithOverloading/
 COMMENT=	Moose extension for roles which support overloading
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Moose>=0.94:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:13 asau Exp $
 
 DISTNAME=	File-Slurp-Unicode-0.7.1
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Read/write/append files quickly
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/File/Slurp/Unicode/.packlist
 
