@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/09/11 23:19:35 asau Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/31 14:41:55 apb Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -18,7 +18,7 @@ CHECK_PERMS=		no
 NO_PKGTOOLS_REQD_CHECK=	yes
 USE_BSD_MAKEFILE=	yes
 
-VERSION=		0.6
+VERSION=		0.7
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
@@ -34,7 +34,14 @@ FILES_SUBST+=		HAS_SYSCTL=true
 FILES_SUBST+=		HAS_SYSCTL=false
 .endif
 
-INSTALLATION_DIRS+=	lib man/man3 man/cat3
+SUBST_CLASSES+=         paths
+SUBST_FILES.paths=      kver/kver.sh kver/kver.8 lib/kver.3
+SUBST_SED.paths+=       -e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=       -e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=      post-patch
+
+INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 ${PKGMANDIR}/cat8
+INSTALLATION_DIRS+=	lib ${PKGMANDIR}/man3 ${PKGMANDIR}/cat3
 .if empty(LDD_SYSCTL:M*libc*)
 INSTALLATION_DIRS+=	sbin
 .endif
