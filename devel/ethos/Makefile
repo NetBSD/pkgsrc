@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 23:00:43 adam Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:56 asau Exp $
 #
 
 DISTNAME=	ethos-0.2.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://git.dronelabs.com/ethos/about/
 COMMENT=	Plugin interface library
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

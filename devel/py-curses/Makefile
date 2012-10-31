@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/04/15 22:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/31 11:19:29 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-curses-0
@@ -8,8 +8,6 @@ CATEGORIES=	devel python
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 COMMENT=	Curses module for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

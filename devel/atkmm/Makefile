@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:16:38 asau Exp $
 
 DISTNAME=	atkmm-2.22.6
 PKGREVISION=	4
@@ -12,8 +12,6 @@ COMMENT=	C++ bindings for atk
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 CONFLICTS+=	gtkmm<2.22.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		autoconf gmake perl pkg-config
 USE_LIBTOOL=		yes

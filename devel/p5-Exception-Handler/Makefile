@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:05 asau Exp $
 
 DISTNAME=	Exception-Handler-1.004
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Report exceptions with formatted text call-stack
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Exception/Handler/.packlist
 

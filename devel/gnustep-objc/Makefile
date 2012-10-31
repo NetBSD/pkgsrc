@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/22 02:13:05 rh Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:17:02 asau Exp $
 #
 
 DISTNAME=	libobjc2-1.6.1
@@ -11,8 +11,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	https://github.com/gnustep/gnustep-libobjc2
 COMMENT=	Objective-C runtime
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LANGUAGES=			objc
 USE_TOOLS+=			gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:17 asau Exp $
 
 DISTNAME=	accessors-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/accessors/.packlist
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

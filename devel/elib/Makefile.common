@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/06/13 06:46:41 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/10/31 11:16:55 asau Exp $
 #
 # used by devel/emacs20-elib/Makefile
 
@@ -8,8 +8,6 @@ MASTER_SITES=	http://jdee.sunsite.dk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library of utility functions for Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../editors/emacs/modules.mk"
 

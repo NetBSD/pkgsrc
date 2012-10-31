@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/02/27 22:46:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/31 11:17:30 asau Exp $
 #
 
 DISTNAME=	monotone-1.0
@@ -13,8 +13,6 @@ COMMENT=	Simplifies the configuration of a dedicated Monotone server
 
 DEPENDS+=	digest>=20080510:../../pkgtools/digest
 DEPENDS+=	monotone>=1.0:../../devel/monotone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	2-clause-bsd
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:31 asau Exp $
 #
 
 DISTNAME=	Module-ExtractUse-0.23
@@ -19,8 +19,6 @@ BUILD_DEPENDS+=	p5-Test-NoWarnings>0:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=	p5-Test-Pod>0:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage>0:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+=	p5-UNIVERSAL-require>0:../../devel/p5-UNIVERSAL-require
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Module/ExtractUse/.packlist
 PERL5_MODULE_TYPE=	Module::Build

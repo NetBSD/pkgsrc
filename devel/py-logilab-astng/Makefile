@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:32 asau Exp $
 #
 
 VERSION=	0.21.0
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.logilab.org/project/logilab-astng
 COMMENT=	Extend Python abstract syntax tree
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

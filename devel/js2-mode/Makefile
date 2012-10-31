@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/22 03:44:50 dsainty Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:07 asau Exp $
 #
 
 DISTNAME=	js2-20080406
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.el
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/js2-mode/
 COMMENT=	Improved JavaScript mode for GNU Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

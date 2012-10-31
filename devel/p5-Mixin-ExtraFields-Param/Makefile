@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:30 asau Exp $
 #
 
 DISTNAME=	Mixin-ExtraFields-Param-0.011
@@ -13,7 +13,6 @@ COMMENT=	Perl 5 module to make your class provide a familiar "param" method
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Mixin-ExtraFields>=0.002:../../devel/p5-Mixin-ExtraFields
 DEPENDS+=	p5-Sub-Exporter>=0.900:../../devel/p5-Sub-Exporter

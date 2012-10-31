@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/28 08:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:02 asau Exp $
 
 DISTNAME=	gnome-common-3.6.0
 CATEGORIES=	devel gnome
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Generic M4 macros for GNOME development
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

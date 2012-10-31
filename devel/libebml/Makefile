@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/10/07 18:59:39 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/31 11:17:12 asau Exp $
 
 DISTNAME=	libebml-1.2.2
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ HOMEPAGE=	http://sourceforge.net/projects/ebml/
 COMMENT=	Extensible Binary Meta Language support library
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c++

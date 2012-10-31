@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:08 asau Exp $
 
 DISTNAME=	File-BOM-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Utilities for handling Byte Order Marks
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=	auto/File/BOM/.packlist

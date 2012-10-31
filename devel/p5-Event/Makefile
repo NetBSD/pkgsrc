@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:18:04 asau Exp $
 
 DISTNAME=	Event-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Event library for Perl
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Event/.packlist
 

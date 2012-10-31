@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/07 15:08:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:53 asau Exp $
 #
 
 DISTNAME=		xdelta3.0.0
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xdelta.org/
 COMMENT=		Enhanced diff that works on binary files (version 3.x)
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		xdelta3
 USE_TOOLS+=		gmake

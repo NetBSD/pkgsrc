@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:38 asau Exp $
 
 DISTNAME=		ratfor77
 PKGNAME=		ratfor-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=		http://sepwww.stanford.edu/ftp/sep-distr/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sepwww.stanford.edu/software/ratfor.html
 COMMENT=		Preprocessor for the Ratfor dialect of Fortran
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		ratfor77
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:15 asau Exp $
 
 DISTNAME=	VCP-autrijus-snapshot-0.9-${SNAPSHOT_VERS}
 SNAPSHOT_VERS=	20050110
@@ -12,8 +12,6 @@ AUTHOR_DIR=	authors/id/A/AU/AUTRIJUS
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Versioned Copy, copying hierarchies of versioned files
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:35 asau Exp $
 #
 
 DISTNAME=	p4pr
@@ -12,8 +12,6 @@ MAINTAINER=	schmonz@NetBSD.org
 COMMENT=	Perforce file annotation with change, revision, and branch
 
 DEPENDS+=	p4-[0-9]*:../../devel/p4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# none

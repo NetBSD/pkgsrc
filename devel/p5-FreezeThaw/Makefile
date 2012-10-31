@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/31 11:18:15 asau Exp $
 #
 
 DISTNAME=	FreezeThaw-0.5001
@@ -14,7 +14,6 @@ COMMENT=	Converting Perl structures to strings and back
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/FreezeThaw/.packlist

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.77 2012/04/27 12:31:47 obache Exp $
+# $NetBSD: Makefile,v 1.78 2012/10/31 11:19:47 asau Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 PKGREVISION=	5
 COMMENT=	Version control system, base programs and libraries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # on at least solaris, configure fails to figure out
 # that you need -lintl

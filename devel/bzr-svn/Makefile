@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/04 07:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/31 11:16:44 asau Exp $
 
 DISTNAME=	bzr-svn-${VER}
 CATEGORIES=	devel scm
@@ -11,7 +11,6 @@ HOMEPAGE=	http://bazaar-vcs.org/BzrForeignBranches/Subversion
 COMMENT=	Foreign Subversion repository support for Bazaar
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PYTHON_PATCH_SCRIPTS= info.py wiki.py
 
 DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.8.8:../../devel/py-subvertpy

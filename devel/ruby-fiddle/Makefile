@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/12 14:52:34 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:41 asau Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_RUBY}
 MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby fiddle library to wrap libffi
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_VERSION_SUPPORTED= 193
 USE_RUBY_EXTCONF=	yes

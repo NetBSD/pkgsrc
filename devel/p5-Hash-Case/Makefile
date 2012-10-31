@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:18:17 asau Exp $
 #
 
 DISTNAME=	Hash-Case-1.01
@@ -17,7 +17,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Log-Report>=0.26:../../devel/p5-Log-Report
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Hash/Case/.packlist
 

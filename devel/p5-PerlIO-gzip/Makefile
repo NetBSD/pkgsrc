@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:49 asau Exp $
 
 DISTNAME=	PerlIO-gzip-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES+=	c
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/PerlIO/gzip/.packlist
 

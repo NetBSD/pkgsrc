@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2012/01/19 19:34:46 drochner Exp $
+# $NetBSD: Makefile.common,v 1.19 2012/10/31 11:16:31 asau Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
@@ -14,8 +14,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gconf/
 COMMENT=		Configuration database system used by GNOME
 LICENSE=		gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # not ready yet.  .schemas are installed in the depot.
 #PKG_INSTALLATION_TYPES= overwrite pkgviews

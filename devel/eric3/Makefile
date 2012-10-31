@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/15 11:53:24 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/31 11:16:56 asau Exp $
 #
 
 DISTNAME=	eric-3.8.1
@@ -13,8 +13,6 @@ COMMENT=	Python IDE
 DEPENDS+=	${PYPKGPREFIX}-qt3-modules>=3.11:../../x11/py-qt3-modules
 DEPENDS+=	${PYPKGPREFIX}-qt3-qscintilla>=3.11:../../x11/py-qt3-qscintilla
 DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_LANGUAGES=

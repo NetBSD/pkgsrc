@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/06/30 00:07:13 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:17:19 asau Exp $
 #
 
 DISTNAME=		portlib-1.01
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.snake.net/software/portlib/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Portable file locking and directory reading
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

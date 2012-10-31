@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:19:50 asau Exp $
 
 DISTNAME=	tet3.7-unsup.src
 PKGNAME=	tet3-3.7
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tetworks.opengroup.org/
 COMMENT=	The Open Group test harness
 LICENSE=	artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 HAS_CONFIGURE=		yes

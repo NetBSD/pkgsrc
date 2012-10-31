@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/03 21:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/31 11:16:59 asau Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		7
@@ -10,8 +10,6 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gcvs-1.0-configure.tar.gz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cvsgui.sourceforge.net/
 COMMENT=		GTK interface for CVS
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		cvs-[0-9]*
 

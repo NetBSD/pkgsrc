@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:13 asau Exp $
 
 DISTNAME=	Tie-Cache-LRU-20110205
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Carp-Assert-[0-9]*:../../devel/p5-Carp-Assert
 DEPENDS+=	p5-enum-[0-9]*:../../devel/p5-enum
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Virtual-[0-9]*:../../devel/p5-Class-Virtual
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Tie/Cache/LRU/.packlist
 

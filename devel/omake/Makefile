@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 15:18:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:34 asau Exp $
 #
 
 DISTNAME=	omake-${VERSION}-0.rc1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://omake.metaprl.org/index.html
 COMMENT=	Build system designed for scalability and portability
 LICENSE=	gnu-gpl-v2 AND mit AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 

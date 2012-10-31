@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:43:22 obache Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/31 11:19:25 asau Exp $
 #
 
 DISTNAME=	pilrc-3.2
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pilrc/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pilrc.sourceforge.net/
 COMMENT=	Generate resources for PalmOS applications from textual description
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFIGURE_SCRIPT=unix/configure

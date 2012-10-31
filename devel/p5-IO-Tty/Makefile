@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:18:22 asau Exp $
 #
 
 DISTNAME=	IO-Tty-1.10
@@ -12,8 +12,6 @@ MAINTAINER=	rhaen@NetBSD.org
 COMMENT=	Another Perl class for I/O on tty and pseudo-tty devices
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 
 PERL5_PACKLIST=		auto/IO/Tty/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/06/01 16:32:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/31 11:19:22 asau Exp $
 
 DISTNAME=	patch-2.5.9
 PKGREVISION=	2
@@ -18,7 +18,6 @@ COMMENT=	Patch files using diff output
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

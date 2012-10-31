@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:16 asau Exp $
 
 DISTNAME=		Getopt-Long-2.38
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=		Extended processing of command line options
 LICENSE=		artistic-2.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Getopt/Long/.packlist

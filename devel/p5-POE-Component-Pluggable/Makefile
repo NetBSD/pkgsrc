@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:42 asau Exp $
 
 DISTNAME=	POE-Component-Pluggable-1.26
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-constant>=1.17:../../devel/p5-constant
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/POE/Component/Pluggable/.packlist
 

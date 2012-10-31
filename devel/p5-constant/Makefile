@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:18 asau Exp $
 
 DISTNAME=	constant-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl pragma to declare constants
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/constant/.packlist

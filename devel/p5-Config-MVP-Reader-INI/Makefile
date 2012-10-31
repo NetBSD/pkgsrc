@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:53 asau Exp $
 
 DISTNAME=	Config-MVP-Reader-INI-2.101461
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Config-MVP-Reader-INI/
 COMMENT=	Perl5 module providing an MVP config reader for .ini files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
 DEPENDS+=	p5-Config-MVP>=2.0:../../devel/p5-Config-MVP

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:35 asau Exp $
 #
 
 DISTNAME=	MooseX-Has-Options-0.002
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MooseX-Has-Options/
 COMMENT=	Succinct options for Moose
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Has/Options/.packlist

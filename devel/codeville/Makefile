@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/09 12:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/31 11:16:47 asau Exp $
 
 DISTNAME=	Codeville-0.8.0
 PKGNAME=	codeville-0.8.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PYTHON=		*.py
 REPLACE_PYTHON+=	*/*.py

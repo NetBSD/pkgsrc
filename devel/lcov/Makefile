@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:09 asau Exp $
 #
 
 DISTNAME=	lcov-1.9
@@ -12,7 +12,6 @@ COMMENT=	Front-end for GCC's coverage testing tool gcov
 
 NO_BUILD=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/lcov
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		perl
 
 REPLACE_PERL=		bin/gendesc bin/genhtml bin/geninfo bin/genpng bin/lcov

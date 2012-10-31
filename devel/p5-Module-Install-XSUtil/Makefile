@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:18:32 asau Exp $
 #
 
 DISTNAME=	Module-Install-XSUtil-0.42
@@ -13,7 +13,6 @@ COMMENT=	Perl 5 module providing utility functions for XS modules
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		c # for test target
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Module/Install/XSUtil/.packlist
 

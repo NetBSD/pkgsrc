@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/12/07 15:15:53 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:54 asau Exp $
 #
 
 DISTNAME=	eet-1.5.0
@@ -14,7 +14,6 @@ COMMENT=	Library for speedy storage, retrieval, and compression
 LICENSE=	2-clause-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES

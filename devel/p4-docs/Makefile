@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:17:34 asau Exp $
 #
 
 DISTNAME=	p4-docs
 COMMENT=	Perforce SCM documentation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/p4/Makefile.common"
 

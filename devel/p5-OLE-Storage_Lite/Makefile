@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:55:24 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:18:40 asau Exp $
 
 DISTNAME=	OLE-Storage_Lite-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/OLE-Storage_Lite/
 COMMENT=	Module for reading and writing OLE-Structured files
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		p5-IO-stringy>=2.101:../../devel/p5-IO-stringy

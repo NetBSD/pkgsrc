@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/04 00:22:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:35 asau Exp $
 
 DISTNAME=	subvertpy-0.8.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://launchpad.net/subvertpy
 COMMENT=	Alternative Python bindings for Subversion
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	SVN_PREFIX=${BUILDLINK_PREFIX.subversion-base}
 

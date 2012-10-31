@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/03 21:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/31 11:18:41 asau Exp $
 #
 
 DISTNAME=	PAR-Dist-0.47
@@ -16,8 +16,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Archive-Zip>1.28:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Module-Signature>=0.25:../../security/p5-Module-Signature
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/PAR/Dist/.packlist

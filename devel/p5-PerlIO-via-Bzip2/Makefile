@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:50 asau Exp $
 
 DISTNAME=	PerlIO-via-Bzip2-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Compress-Bzip2>=1.03:../../archivers/p5-Compress-Bzip2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/PerlIO/via/Bzip2/.packlist
 

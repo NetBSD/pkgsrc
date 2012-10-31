@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:53 asau Exp $
 
 DISTNAME=	Role-Identifiable-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl 5 role with an ident attribute
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 

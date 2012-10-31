@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:16 asau Exp $
 #
 
 DISTNAME=	XSLoader-0.15
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/XSLoader/
 COMMENT=	Dynamically load C libraries into Perl code
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/XSLoader/.packlist

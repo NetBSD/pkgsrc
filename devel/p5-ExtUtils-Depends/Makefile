@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 21:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:18:06 asau Exp $
 
 DISTNAME=	ExtUtils-Depends-0.304
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Easily build XS extensions that depend on XS extensions
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty

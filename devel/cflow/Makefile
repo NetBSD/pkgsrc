@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 08:03:14 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:16:45 asau Exp $
 
 DISTNAME=	cflow-1.4
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/cflow/
 COMMENT=	Code-path flow analyzer for C
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		yacc lex msgfmt

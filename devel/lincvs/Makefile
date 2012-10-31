@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:17:24 asau Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://lincvs.org/
 COMMENT=		Nice GUI front-end to CVS (using Qt)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/02/28 14:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:17:29 asau Exp $
 #
 
 DISTNAME=		mkcmd-8.14
@@ -10,7 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Command-line parser and manual page generator
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		m4

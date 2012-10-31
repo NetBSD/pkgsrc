@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/10/04 03:09:25 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.32 2012/10/31 11:19:45 asau Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -19,7 +19,6 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/semi \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/06 08:35:51 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:27 asau Exp $
 #
 
 DISTNAME=	man-pages-3.41
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kernel.org/doc/man-pages/
 COMMENT=	The Linux man-pages project for Linux kernel and C library interface
 #LICENSE=	many, and not even upstream cares about sorting them out
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	# This package only installs files.
 

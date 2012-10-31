@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/09 10:02:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:26 asau Exp $
 
 .include "../../devel/lua-lrexlib/Makefile.version"
 
@@ -21,7 +21,5 @@ DEPENDS+=	lua-lrexlib-${i}-${VERSION}{,nb*}:../../devel/lua-lrexlib-${i}
 DESCR_SRC=		${.CURDIR}/DESCR.common
 
 META_PACKAGE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

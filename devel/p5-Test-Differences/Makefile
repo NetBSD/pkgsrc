@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:04 asau Exp $
 
 DISTNAME=	Test-Differences-0.61
 PKGNAME=	p5-${DISTNAME}00
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Text-Diff>=0.35:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Differences/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

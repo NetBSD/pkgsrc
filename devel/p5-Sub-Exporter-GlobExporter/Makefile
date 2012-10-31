@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:58 asau Exp $
 
 DISTNAME=	Sub-Exporter-GlobExporter-0.002
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,6 @@ BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Sub/Exporter/GlobExporter/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

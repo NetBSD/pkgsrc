@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:14 asau Exp $
 
 DISTNAME=	Tree-Simple-VisitorFactory-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	p5-Tree-Simple>=1.00:../../devel/p5-Tree-Simple
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Tree/Simple/VisitorFactory/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

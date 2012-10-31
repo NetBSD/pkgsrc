@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/10/09 10:02:47 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/10/31 11:17:26 asau Exp $
 # used by devel/lua-stdlib-doc/Makefile
 # used by devel/lua-stdlib/Makefile
 
@@ -9,8 +9,6 @@ MASTER_SITES=		http://luaforge.net/frs/download.php/3987/
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://luaforge.net/projects/stdlib/
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/lua-stdlib/distinfo
 

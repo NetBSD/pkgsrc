@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/29 10:25:37 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:54 asau Exp $
 #
 
 DISTNAME=		util-macros-1.17
@@ -11,8 +11,6 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xorg autotool macros
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

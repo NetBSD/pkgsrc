@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/04/15 22:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:19:29 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cursespanel-0
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 COMMENT=	Curses panel module for Python
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

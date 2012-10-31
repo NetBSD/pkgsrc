@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/12/03 00:02:14 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:30 asau Exp $
 #
 
 DISTNAME=	generate-2.6
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 OWNER=		darcy@NetBSD.org
 HOMEPAGE=	http://www.druid.net/darcy/readme-generate.html
 COMMENT=	Python interface to Generate
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 

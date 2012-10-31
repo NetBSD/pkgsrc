@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/03/15 11:53:25 obache Exp $
+# $NetBSD: Makefile,v 1.43 2012/10/31 11:19:39 asau Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roundup.sourceforge.net/
 COMMENT=	Issue tracking system with command-line, web and email clients
 LICENSE=	mit AND zpl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=
 USE_TOOLS+=	pax

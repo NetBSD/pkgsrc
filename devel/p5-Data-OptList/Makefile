@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:56 asau Exp $
 
 DISTNAME=	Data-OptList-0.107
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ PERL5_PACKLIST=	auto/Data/OptList/.packlist
 
 DEPENDS+=	p5-Params-Util>=0.14:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Install>=0.921:../../devel/p5-Sub-Install
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/05/20 00:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:55 asau Exp $
 #
 
 DISTNAME=	elf-0.5.3
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_BACKUP} \
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.kerneled.com/projects/elf/
 COMMENT=	ELF header analyzer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/20 13:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:17:29 asau Exp $
 
 DISTNAME=	mono-addins-1.0
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/Mono.Addins
 COMMENT=	Framework for creating extensible applications
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

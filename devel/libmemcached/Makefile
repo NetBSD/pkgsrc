@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/09 19:08:46 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:17 asau Exp $
 #
 
 DISTNAME=	libmemcached-1.0.4
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libmemcached.org/
 COMMENT=	C/C++ client library and tools for the memcached server
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

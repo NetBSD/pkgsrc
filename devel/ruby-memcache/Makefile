@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/21 16:01:14 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:41 asau Exp $
 
 DISTNAME=	ruby-memcache-0.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/memcache/
 COMMENT=	Ruby wrapper for memcache
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_EXTCONF=	yes
 

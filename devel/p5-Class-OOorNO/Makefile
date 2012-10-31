@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:49 asau Exp $
 
 DISTNAME=	Class-OOorNO-0.011
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Give your module classic *AND* OO interfaces
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Class/OOorNO/.packlist
 

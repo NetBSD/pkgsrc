@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 23:00:45 adam Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:17:01 asau Exp $
 #
 
 DISTNAME=	gmtk-1.0.6
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gmtk/
 COMMENT=	Gnome-mplayer toolkit
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

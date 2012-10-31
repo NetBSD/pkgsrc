@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:19 asau Exp $
 #
 
 DISTNAME=	IO-AIO-4.15
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IO-AIO/
 COMMENT=	Perl 5 module implementing asynchronous input/output
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Note: libeio is bundle with the distribution tarball.
 # Its configure script is run via  Makefile.PL

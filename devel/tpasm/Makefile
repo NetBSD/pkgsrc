@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/03 17:45:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:51 asau Exp $
 #
 
 DISTNAME=	tpasm1.0r
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sqt.com/
 COMMENT=	Assembler for 6805, 68HC11, 6502, Surplus, 8051, Z80, PIC, and AVR
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tpasm
 USE_LANGUAGES=	c++

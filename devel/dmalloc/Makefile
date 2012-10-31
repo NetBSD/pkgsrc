@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/11 18:35:07 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:53 asau Exp $
 
 DISTNAME=		dmalloc-5.5.2
 CATEGORIES=		devel
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dmalloc.com/
 COMMENT=		Run-time configurable debugging malloc library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

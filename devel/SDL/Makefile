@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2012/10/28 23:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2012/10/31 11:16:32 asau Exp $
 
 DISTNAME=	SDL-1.2.15
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

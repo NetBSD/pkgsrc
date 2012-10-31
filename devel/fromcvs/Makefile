@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/03/22 14:25:25 taca Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/31 11:16:58 asau Exp $
 
 DISTNAME=	c31a1dd9cbb2
 # Last part of PKGNAME is changeset number
@@ -16,8 +16,6 @@ LICENSE=	corecode-license
 DEPENDS+=	${RUBY_PKGPREFIX}-rbtree>=0.2.0:../../devel/ruby-rbtree
 DEPENDS+=	${RUBY_PKGPREFIX}-rcsparse>=0.0.0.37:../../devel/ruby-rcsparse
 DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.2.1:../../databases/ruby-sqlite3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fromcvs-${DISTNAME}
 DIST_SUBDIR=	fromcvs

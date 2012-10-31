@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:54 asau Exp $
 
 DISTNAME=	Const-Fast-0.013
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl5 facility for creating read-only scalars, arrays, and hashes
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 

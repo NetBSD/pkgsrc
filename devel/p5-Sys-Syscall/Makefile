@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:59 asau Exp $
 #
 
 DISTNAME=	Sys-Syscall-0.23
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/
 COMMENT=	Support lib for perlbal
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Sys/Syscall/.packlist
 USE_LANGUAGES=	# none

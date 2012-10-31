@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:59 asau Exp $
 
 DISTNAME=	Devel-EvalContext-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-EvalContext/
 COMMENT=	Perl 5 module to save lexicals and hints between calls to eval
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Data-Alias>=1.01:../../devel/p5-Data-Alias
 DEPENDS+=	p5-PadWalker>=1.0:../../devel/p5-PadWalker

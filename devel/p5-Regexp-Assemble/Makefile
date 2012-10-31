@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:52 asau Exp $
 #
 
 DISTNAME=	Regexp-Assemble-0.35
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Regexp-Assemble/
 COMMENT=	Perl 5 module to assemble multiple regular expressions
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Regexp/Assemble/.packlist
 

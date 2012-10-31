@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:09 asau Exp $
 
 DISTNAME=	Test-Requires-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Requires/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

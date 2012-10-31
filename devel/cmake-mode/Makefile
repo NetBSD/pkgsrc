@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/06 01:44:47 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:16:46 asau Exp $
 #
 
 DISTNAME=	cmake-mode
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.el
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
 COMMENT=	Emacs mode for CMake syntax highlighting and indentation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}

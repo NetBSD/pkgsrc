@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:42 asau Exp $
 
 DISTNAME=	CPAN-Meta-2.120921
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CPAN-Meta/
 COMMENT=	Perl module for handling the distribution metadata for a CPAN dist
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # this is the meta data backend which used YAML/JSON to read ...
 DEPENDS+=	p5-CPAN-Meta-Requirements>=2.121:../../devel/p5-CPAN-Meta-Requirements

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/20 16:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:30 asau Exp $
 #
 
 DISTNAME=	distribute-0.6.29
@@ -11,7 +11,6 @@ HOMEPAGE=	http://pypi.python.org/pypi/distribute
 COMMENT=	Replacement for setuptools
 LICENSE=	python-software-foundation # or ZPL
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=	${PYPKGPREFIX}-setuptools-[0-9]*
 PYTHON_VERSIONS_INCLUDE_3X= yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}

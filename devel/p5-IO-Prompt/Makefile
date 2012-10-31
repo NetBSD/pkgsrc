@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:21 asau Exp $
 #
 
 DISTNAME=	IO-Prompt-0.997001
@@ -13,7 +13,6 @@ COMMENT=	Interactively prompt for user input
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{perl>=5.10,p5-version-[0-9]*}:../../devel/p5-version
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey

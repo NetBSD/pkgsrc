@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:17:39 asau Exp $
 
 DISTNAME=	AtExit-2.01
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Provides an ANSI C style atexit() function to Perl programs
 LICENSE=	artistic
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/AtExit/.packlist
 

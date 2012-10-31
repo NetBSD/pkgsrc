@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/22 15:36:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:17:17 asau Exp $
 
 DISTNAME=		libmaa-1.3.2
 CATEGORIES=		devel
@@ -8,8 +8,6 @@ MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://www.dict.org/
 COMMENT=		General purpose data structures and functions
 LICENSE=		gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		lib
 TEST_TARGET=		test

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/25 11:00:51 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:55 asau Exp $
 #
 
 DISTNAME=	zzuf-0.13
@@ -8,8 +8,6 @@ MASTER_SITES=	http://caca.zoy.org/files/zzuf/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://caca.zoy.org/wiki/zzuf/
 COMMENT=	Transparent application input fuzzer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

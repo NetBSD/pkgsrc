@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/03 12:32:40 manu Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:25 asau Exp $
 #
 
 DISTNAME=	locktests
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nfsv4.bullopensource.org/tools/tests_tools/
 COMMENT=	POSIX locks stress-test
 LICENSE=	gnu-gpl-v3 # According to web site
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/locks
 BUILD_TARGET=	All

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/04/16 11:05:49 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/31 11:17:04 asau Exp $
 
 DISTNAME=		GTL-1.2.4-lgpl
 PKGNAME=		${DISTNAME:S/-lgpl//:tl}
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.infosun.fim.uni-passau.de/GTL/
 COMMENT=		C++ graph data structure library based on the STL
 LICENSE=		gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++

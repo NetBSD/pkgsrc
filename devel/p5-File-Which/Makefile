@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:14 asau Exp $
 #
 
 DISTNAME=	File-Which-1.09
@@ -13,7 +13,6 @@ COMMENT=	Portable implementation of the 'which' utility
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		p5-Test-Script>=1.05:../../devel/p5-Test-Script
 BUILD_DEPENDS+=		p5-Test-Simple>=0.80:../../devel/p5-Test-Simple

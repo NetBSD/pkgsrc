@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/19 23:13:15 alnsn Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:52 asau Exp $
 #
 
 DISTNAME=		valgrind-3.8.1
@@ -10,8 +10,6 @@ MAINTAINER=		alnsn@NetBSD.org
 HOMEPAGE=		http://valgrind.org/downloads/
 COMMENT=		Debugging and profiling tools
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/valgrind.pc.in

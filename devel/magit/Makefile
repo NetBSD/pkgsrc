@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/06 22:04:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:27 asau Exp $
 #
 
 DISTNAME=	magit-1.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://magit.github.com/magit/
 COMMENT=	Inspect and modify Git repositories from Emacs
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FETCH_USING=		curl
 INFO_FILES=		yes

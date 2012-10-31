@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:16:32 asau Exp $
 #
 
 DISTNAME=	RTx-RightsMatrix-0.03.00
@@ -13,7 +13,6 @@ COMMENT=	Utility to efficiently manage rights to a RT installation
 
 DEPENDS+=	rt>=3.4.5:../../devel/rt3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 
 .include "../../devel/rt3/dirs.mk"

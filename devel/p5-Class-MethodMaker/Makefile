@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:17:49 asau Exp $
 #
 
 DISTNAME=		Class-MethodMaker-2.18
@@ -13,7 +13,6 @@ COMMENT=		Getter/setter OO method maker for class elements
 LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 PERL5_PACKLIST=		auto/Class/MethodMaker/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/04/25 11:41:59 sno Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:44 asau Exp $
 #
 
 DISTNAME=	cvs-1.11.23
@@ -12,7 +12,6 @@ COMMENT=	Concurrent Versions System
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

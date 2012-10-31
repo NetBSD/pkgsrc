@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:03 asau Exp $
 
 DISTNAME=	Devel-Trace-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Devel-Trace/
 COMMENT=	Print out each line before it is executed (like sh -x)
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Devel/Trace/.packlist

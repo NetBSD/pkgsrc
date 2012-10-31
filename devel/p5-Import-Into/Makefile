@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/19 07:47:13 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:18:24 asau Exp $
 #
 
 DISTNAME=	Import-Into-1.001000
@@ -12,7 +12,6 @@ COMMENT=	Perl5 module to import packages into other packages
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Import/Into/.packlist
 

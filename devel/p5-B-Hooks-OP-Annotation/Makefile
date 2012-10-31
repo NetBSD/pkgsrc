@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:40 asau Exp $
 
 DISTNAME=	B-Hooks-OP-Annotation-0.44
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/B-Hooks-OP-Annotation/
 COMMENT=	Perl 5 module to annotate and delegate hooked OPs
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/B/Hooks/OP/Annotation/.packlist
 

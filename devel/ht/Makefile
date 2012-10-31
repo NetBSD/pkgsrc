@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/03/17 14:22:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:17:06 asau Exp $
 #
 
 DISTNAME=	ht-2.0.14
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hte.sourceforge.net/
 COMMENT=	Viewer, editor and analyzer for text, binary and executable files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

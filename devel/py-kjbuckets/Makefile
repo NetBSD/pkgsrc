@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/10/16 07:08:44 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:31 asau Exp $
 #
 
 DISTNAME=	gadfly-1.0.0
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gadfly/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/aaron_watters/kjbuckets/
 COMMENT=	Fast set, graph and mapping operations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ELEMENTS=	${DISTNAME}/kjbuckets
 EXTRACT_ELEMENTS+=	${DISTNAME}/doc/kjbuckets.txt

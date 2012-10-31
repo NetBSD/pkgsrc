@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/10 00:09:23 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:17:07 asau Exp $
 #
 
 PKGNAME=	jam-2.5.2
@@ -14,8 +14,6 @@ HOMEPAGE=	http://freetype.sourceforge.net/jam/index.html
 COMMENT=	Program construction tool, like make(1)
 
 CONFLICTS=	acunia-jam-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

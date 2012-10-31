@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:18:46 asau Exp $
 
 DISTNAME=	Params-Util-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Simple standalone param-checking functions
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Params/Util/.packlist
 

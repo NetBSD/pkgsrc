@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/08 23:01:23 adam Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/31 11:17:04 asau Exp $
 
 DISTNAME=	guile-gnome-platform-2.16.1
 PKGREVISION=	21
@@ -9,8 +9,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/guile-gnome/
 COMMENT=	Library to access gobject/glib/gtk and gnome from guile
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	guile-slib>=2.4.2:../../devel/guile-slib
 

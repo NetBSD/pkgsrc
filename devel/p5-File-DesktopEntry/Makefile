@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:18:09 asau Exp $
 
 DISTNAME=	File-DesktopEntry-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl module for handling .desktop files
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-BaseDir>=0.03:../../devel/p5-File-BaseDir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:18:11 asau Exp $
 
 DISTNAME=	File-Flat-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Implements a flat file system
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-ClassAPI>=1.02:../../devel/p5-Test-ClassAPI
 DEPENDS+=	p5-File-Remove>=0.21:../../sysutils/p5-File-Remove

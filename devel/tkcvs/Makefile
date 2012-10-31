@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2010/01/29 19:19:49 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2012/10/31 11:19:50 asau Exp $
 #
 
 DISTNAME=	tkcvs_7_2_1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.twobarleycorns.net/tkcvs.html
 COMMENT=	Tcl/Tk frontends to CVS and diff
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	tk>=8.4:../../x11/tk
 

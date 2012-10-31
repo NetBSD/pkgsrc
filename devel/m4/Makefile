@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2012/06/02 07:51:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.69 2012/10/31 11:17:27 asau Exp $
 
 DISTNAME=	m4-1.4.16
 PKGREVISION=	3
@@ -11,7 +11,6 @@ COMMENT=	GNU version of UNIX m4 macro language processor
 LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

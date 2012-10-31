@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:12 asau Exp $
 #
 
 DISTNAME=	Test-YAML-Valid-0.04
@@ -16,8 +16,6 @@ DEPENDS+=	p5-YAML>=0.60:../../textproc/p5-YAML
 DEPENDS+=	p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-YAML-Syck>=0.60:../../textproc/p5-YAML-Syck
 DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= 	auto/Test/YAML/Valid/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

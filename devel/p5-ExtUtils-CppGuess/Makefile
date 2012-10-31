@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/22 13:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:18:06 asau Exp $
 
 DISTNAME=	ExtUtils-CppGuess-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Perl5 module for guess C++ compiler and flags
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #USE_LANGUAGES=		c
 PERL5_MODULE_TYPE=	Module::Build

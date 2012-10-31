@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:12 asau Exp $
 
 DISTNAME=	Throwable-0.102080
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	p5-Devel-StackTrace>=1.2100:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Moose>=0.87:../../devel/p5-Moose
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Throwable/.packlist
 

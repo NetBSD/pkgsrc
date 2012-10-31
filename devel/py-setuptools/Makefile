@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 22:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/31 11:19:34 asau Exp $
 
 EGG_VERSION=		0.6c11
 DISTNAME=		setuptools-${EGG_VERSION}
@@ -11,8 +11,6 @@ MASTER_SITES=		http://pypi.python.org/packages/source/s/setuptools/
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/DevCenter/setuptools
 COMMENT=		New Python packaging system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

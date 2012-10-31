@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/31 11:17:44 asau Exp $
 
 DISTNAME=	Carp-Clan-6.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Report errors from perspective of a "clan" of modules
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Carp/Clan/.packlist

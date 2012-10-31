@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/02 12:42:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:52 asau Exp $
 
 DISTNAME=	vanessa_adt-0.0.8
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vergenet.net/linux/vanessa/
 COMMENT=	Library that provides Abstract Data Types (ADTs)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/04 07:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:16:43 asau Exp $
 
 DISTNAME=	bzr-explorer-${VER}
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	https://launchpad.net/bzr-explorer
 COMMENT=	GUI frontend to bzr
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Needed for launchpad
 FETCH_USING=	curl

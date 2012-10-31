@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/05/12 07:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/31 11:17:14 asau Exp $
 #
 
 DISTNAME=	libgetopt-1.4.4
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for handling --long options
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		man-pages-[0-9]*
 

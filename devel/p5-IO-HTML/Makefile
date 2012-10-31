@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/21 04:22:26 wen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:18:20 asau Exp $
 
 DISTNAME=	IO-HTML-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Open an HTML file with automatic charset detection
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/IO/HTML/.packlist
 

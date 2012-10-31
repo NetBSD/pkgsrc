@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/09/28 09:45:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:24 asau Exp $
 #
 
 DISTNAME=		physfs-1.0.1
@@ -9,8 +9,6 @@ MASTER_SITES=		http://offload1.icculus.org/physfs/downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icculus.org/physfs/
 COMMENT=		Library providing abstract access to various archives
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

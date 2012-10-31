@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:42 asau Exp $
 
 DISTNAME=	CPAN-Checksums-2.08
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Write a CHECKSUMS file for a directory as on CPAN
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Compress-Bzip2-[0-9]*:../../archivers/p5-Compress-Bzip2
 DEPENDS+=	p5-Data-Compare-[0-9]*:../../devel/p5-Data-Compare

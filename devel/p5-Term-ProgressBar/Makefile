@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/31 11:19:01 asau Exp $
 
 DISTNAME=	Term-ProgressBar-2.13
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://search.cpan.org/dist/Term-ProgressBar/
 COMMENT=	Provide a progress meter on a standard terminal
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Class-MethodMaker>=1.02:../../devel/p5-Class-MethodMaker

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/17 00:01:42 taca Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:19:41 asau Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_RUBY}
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby editing mode for Emacs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
 WRKSRC=			${RUBY_WRKSRC}/misc

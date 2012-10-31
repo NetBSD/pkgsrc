@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/05/23 03:35:27 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:50 asau Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=teem/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://teem.sourceforge.net/
 COMMENT=		Libraries for manipulation of Structured Scientific Data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pax
 

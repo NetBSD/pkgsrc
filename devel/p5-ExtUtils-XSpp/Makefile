@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:18:08 asau Exp $
 
 DISTNAME=	ExtUtils-XSpp-0.1602
 PKGNAME=	p5-${DISTNAME:S/1602/16.02/}
@@ -16,8 +16,6 @@ BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.22.02}:../../devel/p5-ExtUtils-ParseXS
 DEPENDS+=	p5-Digest-MD5>=2.0:../../security/p5-Digest-MD5
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_MODULE_TYPE=	Module::Build

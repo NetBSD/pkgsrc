@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:17:52 asau Exp $
 
 DISTNAME=	Compress-Raw-Zlib-2.056
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Perl5 module interface to the zlib compression library
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 

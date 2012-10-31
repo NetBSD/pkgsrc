@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:18:45 asau Exp $
 
 DISTNAME=	PadWalker-1.96
 PKGNAME=	p5-${DISTNAME:S/96/9.6/}
@@ -13,8 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST= auto/PadWalker/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:36 asau Exp $
 #
 
 DISTNAME=	MooseX-MultiInitArg-0.01
@@ -13,8 +13,6 @@ COMMENT=	Attributes with aliases for constructor arguments
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/MultiInitArg/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.77 2009/12/15 17:35:36 joerg Exp $
+# $NetBSD: Makefile.common,v 1.78 2012/10/31 11:17:23 asau Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-info/Makefile
@@ -38,7 +38,6 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	glibtool-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

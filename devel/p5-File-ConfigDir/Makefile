@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:09 asau Exp $
 
 DISTNAME=	File-ConfigDir-0.004
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-p5-people@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-ConfigDir/
 COMMENT=	Get directories of configuration files
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-HomeDir>=0.50:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-List-MoreUtils>=0.22:../../devel/p5-List-MoreUtils

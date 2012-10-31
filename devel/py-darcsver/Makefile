@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/26 13:53:47 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:29 asau Exp $
 #
 
 DISTNAME=	darcsver-1.5.1
@@ -13,8 +13,6 @@ COMMENT=	Generate a version number from darcs history
 LICENSE=	modified-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

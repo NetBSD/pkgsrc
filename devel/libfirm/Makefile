@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/18 18:57:23 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:13 asau Exp $
 #
 
 DISTNAME=	libfirm-1.17.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libfirm.sourceforge.net/
 COMMENT=	Provides a graph-based SSA representation of programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

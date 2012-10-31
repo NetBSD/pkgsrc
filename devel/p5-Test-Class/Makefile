@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:03 asau Exp $
 
 DISTNAME=	Test-Class-0.37
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	{perl>=5.10.0,p5-Storable>=2.04}:../../devel/p5-Storable
 DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.78}:../../devel/p5-Test-Simple
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.25:../../devel/p5-Test-Exception
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Class/.packlist

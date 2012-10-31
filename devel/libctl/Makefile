@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/03/24 19:43:23 asau Exp $
+# $NetBSD: Makefile,v 1.29 2012/10/31 11:17:11 asau Exp $
 
 DISTNAME=	libctl-2.2
 PKGREVISION=	7
@@ -8,8 +8,6 @@ MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 COMMENT=	Guile-based flexible control file library for scientific simulations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

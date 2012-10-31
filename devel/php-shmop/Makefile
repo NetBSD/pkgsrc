@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/07/20 12:30:36 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:24 asau Exp $
 
 MODNAME=		shmop
 CATEGORIES+=		devel
 COMMENT=		PHP extension for simple SysV shared memory operations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-shmop-[0-9]*
 

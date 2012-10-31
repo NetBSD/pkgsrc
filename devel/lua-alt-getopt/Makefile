@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/09 10:02:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:25 asau Exp $
 #
 
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/}
@@ -11,8 +11,6 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/lua-alt-getopt/
 COMMENT=	Lua API for getopt similar to getopt_long(3)
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 

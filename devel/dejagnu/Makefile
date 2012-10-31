@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/16 13:45:55 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:52 asau Exp $
 #
 
 DISTNAME=	dejagnu-1.4.4
@@ -13,8 +13,6 @@ COMMENT=	TCL/Expect-based framework for regression testing
 DEPENDS+=	tcl-expect>=5.32.1:../../lang/tcl-expect
 
 GNU_CONFIGURE=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALL_TARGET=	install install-doc
 

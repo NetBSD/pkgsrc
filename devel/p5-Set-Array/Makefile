@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:18:55 asau Exp $
 #
 
 DISTNAME=	Set-Array-0.26
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Set-Array/
 COMMENT=	Arrays as objects with lots of handy methods
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Try-Tiny>=0.11:../../devel/p5-Try-Tiny
 BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep

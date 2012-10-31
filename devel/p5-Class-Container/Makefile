@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 21:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:17:46 asau Exp $
 
 DISTNAME=	Class-Container-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-Container/
 COMMENT=	Glues object frameworks together transparently
 LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Params-Validate>=0.23:../../devel/p5-Params-Validate

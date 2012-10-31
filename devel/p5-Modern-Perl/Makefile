@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:30 asau Exp $
 
 DISTNAME=	Modern-Perl-1.20120130
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Enable all of the features of Modern Perl with one command
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Modern/Perl/.packlist

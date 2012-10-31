@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/08/25 11:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:53 asau Exp $
 #
 
 DISTNAME=		wide
@@ -12,8 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www2.mta.ac.il/~tal/WIDE/
 COMMENT=		IDE for the While programming language
 LICENSE=		eclipse-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/WIDE

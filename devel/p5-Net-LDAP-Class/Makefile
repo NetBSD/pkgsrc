@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:40 asau Exp $
 #
 
 DISTNAME=	Net-LDAP-Class-0.25
@@ -20,8 +20,6 @@ DEPENDS+=	p5-Rose-Object-[0-9]*:../../devel/p5-Rose-Object
 DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 
 BUILD_DEPENDS+=	p5-Net-LDAP-Server-Test>=0.09:../../devel/p5-Net-LDAP-Server-Test
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Net/LDAP/Class/.packlist
 

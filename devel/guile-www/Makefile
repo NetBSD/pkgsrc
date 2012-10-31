@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/09/12 21:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/31 11:17:05 asau Exp $
 
 DISTNAME=	guile-www-2.32
 CATEGORIES=	devel www
@@ -9,8 +9,6 @@ HOMEPAGE=	http://www.nongnu.org/guile-www/
 COMMENT=	Guile WWW module
 
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

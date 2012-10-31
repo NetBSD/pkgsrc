@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2012/10/03 21:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2012/10/31 11:17:08 asau Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	30
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	cervisia-[0-9]*
 CONFLICTS+=	umbrello-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/22 02:17:16 rh Exp $
+# $NetBSD: Makefile,v 1.53 2012/10/31 11:17:02 asau Exp $
 
 DISTNAME=	gnustep-base-1.24.0
 CATEGORIES=	devel gnustep
@@ -8,8 +8,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep foundation classes
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		objc
 GNU_CONFIGURE=		yes

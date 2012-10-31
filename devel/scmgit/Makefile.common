@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2012/09/16 21:50:16 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.24 2012/10/31 11:19:44 asau Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -13,8 +13,6 @@ MASTER_SITES?=	http://git-core.googlecode.com/files/
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://git-scm.com/
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.fast.prefs.mk"
 

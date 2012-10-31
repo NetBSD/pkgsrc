@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 21:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/31 11:18:51 asau Exp $
 #
 
 DISTNAME=		Proc-ProcessTable-0.45
@@ -12,7 +12,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Proc-ProcessTable/
 COMMENT=		Perl extension to access the UNIX process table
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL=		example.pl
 

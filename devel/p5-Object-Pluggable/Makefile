@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:41 asau Exp $
 #
 
 DISTNAME=	Object-Pluggable-1.29
@@ -18,8 +18,6 @@ DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Object/Pluggable/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

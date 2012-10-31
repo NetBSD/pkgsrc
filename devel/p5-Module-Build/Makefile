@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 21:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/31 11:18:30 asau Exp $
 
 DISTNAME=	Module-Build-0.4001
 PKGNAME=	p5-${DISTNAME}0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Build/
 COMMENT=	Build and install Perl modules
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
 DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.21}:../../devel/p5-ExtUtils-ParseXS

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/17 21:40:45 darcy Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:33 asau Exp $
 #
 
 DISTNAME=		nspr-reference
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=nspr/doc/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.mozilla.org/pub/mozilla.org/nspr/doc/
 COMMENT=		HTML Documentation for NSPR
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		YES
 NO_BUILD=		YES

@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:35 asau Exp $
 #
 
 DISTNAME=	p4web
 HOMEPAGE=	http://www.perforce.com/perforce/products/p4web.html
 COMMENT=	Perforce SCM Web client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 P4BINONLY=	# defined
 

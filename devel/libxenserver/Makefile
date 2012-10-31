@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 07:43:20 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:24 asau Exp $
 #
 
 DISTNAME=	libxenserver-5.6.100-1-src
@@ -21,7 +21,6 @@ USE_TOOLS+=	gmake pax
 
 PLIST_SUBST+=	MAJOR=${MAJOR:Q} MINOR=${MINOR:Q}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	include/xen/api
 INSTALLATION_DIRS+=	share/examples/libxenserver lib
 
