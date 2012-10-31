@@ -1,0 +1,145 @@
+.\" $NetBSD: kver.8,v 1.1 2012/10/31 14:41:55 apb Exp $
+.\"
+.Dd October 31, 2012
+.Os
+.Dt KVER 8
+.Sh NAME
+.Nm kver
+.Nd run a command with overriden system version
+.Sh SYNOPSIS
+.Nm
+.Op Fl s Ar ostype
+.Op Fl r Ar osrelease
+.Op Fl m Ar machine
+.Op Fl p Ar machine_arch
+.Ar command
+.Op Ar argument ...
+.Sh DESCRIPTION
+The
+.Nm
+utility
+provides a simple wrapper around the
+.Xr kver 3
+library.
+It converts its options to environment variables understood by
+.Xr kver 3 ,
+sets the
+.Ev LD_PRELOAD
+environment variable to ensure that the
+.Xr kver 3
+library
+.Pq Pa @PREFIX@/lib/libkver.so
+is loaded,
+and executes the specified
+.Ar command
+with the specified
+.Ar argument Ns s .
+.Pp
+The following options are accepted:
+.Bl -tag -offset indent
+.It Fl s Ar ostype
+The operating system type, e.g.
+.Qq Nx .
+Sets the
+.Ev LIBKVER_OSTYPE
+environment variable.
+.It Fl r Ar osrelease
+The operating system release, e.g.
+.Qq "6.0_STABLE" .
+Sets the
+.Ev LIBKVER_OSRELEASE
+environment variable.
+.It Fl m Ar machine
+The operating hardware platform, e.g.
+.Dq "amd64" .
+Sets the
+.Ev LIBKVER_MACHINE
+environment variable.
+.It Fl p Ar machine_arch
+The machine processor architecture, e.g.
+.Dq "x86_64" .
+Sets the
+.Ev LIBKVER_MACHINE_ARCH
+environment variable.
+.El
+.Pp
+If the
+.Fl m Ar machine
+option is specified and the
+.Fl p Ar machine_arch
+option is not specified, then
+.Nm
+checks that
+.Ar machine
+is valid, and attempts to set an appropriate value for
+.Va machine_arch ;
+for example,
+.Dq "-m macppc"
+implies
+.Dq "-p powerpc" .
+Some aliases for
+.Ar machine Ns / Ns Ar machine_arch
+pairs are also supported; for example,
+.Dq "-m macppc64"
+is shorthand for
+.Dq "-m macppc -p powerpc64" .
+The way
+.Nm
+handles a
+.Ar machine
+name without a
+.Ar machine_arch
+name is intended to be identical to the way the
+.Pa build.sh
+script in the
+.Nx
+source tree handles the same situation.
+To pass arbitrary values of
+.Fl m Ar machine
+without any validation, you must also specify
+.Fl p Ar machine_arch .
+.Sh EXAMPLES
+.Bl -tag
+.It Li "kver -r 1.5 uname -r"
+Run the
+.Ql "uname -r"
+command with
+.Va osrelease
+set to
+.Ql 1.5 .
+.It Li "kver -m i386 chroot ."
+Run the
+.Ql "chroot ."
+command with
+.Va machine
+set to
+.Ql i386 
+and with
+.Va machine_arch
+set to
+.Ql i386
+(which is the default
+.Va machine_arch
+for that
+.Va machine ) .
+.It Li "kver -m evbmips sysctl hw.machine_arch"
+Error, because there is no default
+.Va machine_arch
+corresponding to
+.Dq "-m evbmips" .
+.It Li "kver -m evbmips -p mipseb sysctl hw.machine_arch"
+Run the
+.Ql "sysctl hw.machine_arch"
+command with
+.Va machine
+set to
+.Ql evbmips
+and
+.Va machine_arch
+set to
+.Ql mipseb .
+.El
+.Sh SEE ALSO
+.Xr kver 3
+.Sh AUTHORS
+.An Alan Barrett Aq apb@NetBSD.org
