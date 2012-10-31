@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/05/14 20:21:19 hans Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:10 asau Exp $
 #
 
 DISTNAME=	libbegemot-1.11
@@ -7,8 +7,6 @@ MASTER_SITES=	http://people.freebsd.org/~harti/libbegemot/
 
 MAINTAINER=	packages@grumpf.hope-2000.org
 COMMENT=	Base development library, contains useful routines
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

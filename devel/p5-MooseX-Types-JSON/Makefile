@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:38 asau Exp $
 #
 
 DISTNAME=	MooseX-Types-JSON-0.02
@@ -13,7 +13,6 @@ COMMENT=	Perl 5 module providing JSON datatype for Moose
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/MooseX/Types/JSON/.packlist
 

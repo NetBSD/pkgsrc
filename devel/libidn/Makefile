@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2012/10/03 21:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2012/10/31 11:17:16 asau Exp $
 
 DISTNAME=	libidn-1.25
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Internationalized Domain Names command line tool
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

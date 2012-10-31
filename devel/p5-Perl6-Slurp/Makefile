@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/31 11:18:49 asau Exp $
 #
 
 DISTNAME=	Perl6-Slurp-0.03
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Perl6-Slurp/
 COMMENT=	Implements the Perl 6 'slurp' built-in
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Perl6-Export-[0-9]*:../../devel/p5-Perl6-Export
 

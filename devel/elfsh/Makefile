@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/10/02 23:50:56 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:55 asau Exp $
 #
 
 VERS=		0.51b3
@@ -13,7 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://elfsh.segfault.net/
 COMMENT=	ELF format exploration shell
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/02/16 18:10:43 hans Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:16:39 asau Exp $
 
 DISTNAME=	avltree-1.1
 CATEGORIES=	devel
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://odin.compchem.ucsf.edu/pub/amber/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	In-memory index w/ binary and string keys and key counts
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	nroff
 

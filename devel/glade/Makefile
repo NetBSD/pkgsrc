@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/10/08 23:01:22 adam Exp $
+# $NetBSD: Makefile,v 1.76 2012/10/31 11:17:00 asau Exp $
 
 DISTNAME=	glade-2.12.2
 PKGREVISION=	15
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://glade.gnome.org/
 COMMENT=	User interface builder for the GTK2+ toolkit
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		glade2-[0-9]* glade2-gnome-[0-9]*
 CONFLICTS+=		glade-gnome-[0-9]*

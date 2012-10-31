@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/19 18:08:33 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/31 11:17:03 asau Exp $
 #
 
 DISTNAME=	gobject-introspection-1.34.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/GObjectIntrospection
 COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 

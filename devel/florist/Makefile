@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/07/15 11:52:57 marino Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:16:58 asau Exp $
 #
 
 DISTNAME=		florist-gpl-2012-src
@@ -13,7 +13,6 @@ HOMEPAGE=		http://libre.adacore.com/
 COMMENT=		POSIX Ada Binding, IEEE Standards 1003.5(b,c)
 LICENSE=		gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c ada
 

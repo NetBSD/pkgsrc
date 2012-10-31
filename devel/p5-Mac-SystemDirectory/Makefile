@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:28 asau Exp $
 #
 
 DISTNAME=	Mac-SystemDirectory-0.04
@@ -13,8 +13,6 @@ COMMENT=	Locate Mac OS X Standard System Directories
 LICENSE=	${PERL5_LICENSE}
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

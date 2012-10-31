@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 23:00:36 adam Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/31 11:19:21 asau Exp $
 
 DISTNAME=	pangomm-2.28.4
 PKGREVISION=	7
@@ -10,8 +10,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ bindings for pangomm
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gtkmm<=2.13.5
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 23:01:24 adam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:16 asau Exp $
 #
 
 DISTNAME=	Wx-Perl-DataWalker-0.02
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Wx-Perl-DataWalker/
 COMMENT=	Shows a relatively simple Perl data structure browser
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-XSAccessor>=0.06:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-Devel-Size>=0.71:../../devel/p5-Devel-Size

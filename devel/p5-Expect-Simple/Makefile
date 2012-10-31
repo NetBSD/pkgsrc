@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:05 asau Exp $
 
 DISTNAME=	Expect-Simple-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Expect-Simple/
 COMMENT=	Perl 5 module providing a wrapper around the Expect module
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Expect-[0-9]*:../../devel/p5-Expect
 

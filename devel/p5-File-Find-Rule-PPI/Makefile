@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:10 asau Exp $
 
 DISTNAME=	File-Find-Rule-PPI-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Add support for PPI queries to File::Find::Rule
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-File-Find-Rule>=0.20:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-PPI>=1.00:../../devel/p5-PPI

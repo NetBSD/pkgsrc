@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:16:43 asau Exp $
 #
 
 DISTNAME=	buddy-2.4
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buddy/}
 MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://buddy.sourceforge.net/
 COMMENT=	Library for binary decision diagrams
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

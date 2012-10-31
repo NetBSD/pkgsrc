@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/26 08:52:22 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:54 asau Exp $
 #
 
 DISTNAME=	ecore-1.1.0
@@ -10,9 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Event Abstraction and Modular Convenience Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes

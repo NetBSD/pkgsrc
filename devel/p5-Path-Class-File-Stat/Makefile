@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:47 asau Exp $
 #
 
 DISTNAME=	Path-Class-File-Stat-0.03
@@ -13,7 +13,6 @@ COMMENT=	Cache and compare stat() calls on a Path::Class::File object
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Path/Class/File/Stat/.packlist
 

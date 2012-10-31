@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/16 12:37:51 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:35 asau Exp $
 #
 
 DISTNAME=	testtools-0.9.15
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://launchpad.net/testtools
 COMMENT=	Extensions to the Python standard library unit testing framework
 LICENSE=	mit AND python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

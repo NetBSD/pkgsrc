@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2011/04/12 17:41:28 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/31 11:16:59 asau Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -17,7 +17,6 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS=	gettext<=0.10.35
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

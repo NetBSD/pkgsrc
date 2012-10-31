@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/07/24 22:24:21 tron Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/31 11:19:23 asau Exp $
 
 MODNAME=		gmp
 CATEGORIES+=		devel math
 COMMENT=		PHP extension for arbitrary precision math
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PHP_EXT_PATCHES=	yes
 
 CONFLICTS=	php-gmp-[0-9]*

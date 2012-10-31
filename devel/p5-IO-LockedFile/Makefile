@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 11:18:21 asau Exp $
 #
 
 DISTNAME=	IO-LockedFile-0.23
@@ -11,8 +11,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/IO-LockedFile/
 COMMENT=	Supply object methods for locking files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

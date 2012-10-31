@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/10 10:40:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:22 asau Exp $
 
 DISTNAME=	pcc-libs-1.0.0
 CATEGORIES=	devel
 MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc-releases/ \
 		http://pcc.ludd.ltu.se/ftp/pub/pcc-releases/
 EXTRACT_SUFX=	.tgz
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HOMEPAGE=	http://pcc.ludd.ltu.se/
 COMMENT=	Runtime libraries for the Portable C Compiler

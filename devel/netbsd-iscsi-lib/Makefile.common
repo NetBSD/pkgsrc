@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2011/10/06 14:19:25 sborrill Exp $
+# $NetBSD: Makefile.common,v 1.4 2012/10/31 11:17:32 asau Exp $
 # Included by:
 # net/netbsd-iscsi-target/Makefile
 # net/netbsd-iscsi-initiator/Makefile
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 
 AUTO_MKDIRS=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # ISCSI_INITIATOR_MAX_TARGETS can be overridden in your mk.conf file
 ISCSI_INITIATOR_MAX_TARGETS?=	16
