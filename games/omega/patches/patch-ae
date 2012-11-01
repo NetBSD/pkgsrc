@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2003/12/31 18:07:47 ben Exp $
+$NetBSD: patch-ae,v 1.5 2012/11/01 19:44:17 joerg Exp $
 
---- compress.c.orig	1998-08-08 03:47:56.000000000 -0700
+--- compress.c.orig	1998-08-08 10:47:56.000000000 +0000
 +++ compress.c
 @@ -104,7 +104,7 @@ static char sccsid[] = "@(#)compress.c	5
  #ifdef PBITS		/* Preferred BITS for this memory size */
@@ -20,3 +20,51 @@ $NetBSD: patch-ae,v 1.4 2003/12/31 18:07:47 ben Exp $
  
  #define htabof(i)	htab[i]
  #define codetabof(i)	codetab[i]
+@@ -379,6 +379,10 @@ int perm_stat = 0;			/* permanent status
+ 
+ code_int getcode();
+ 
++void copystat(char *ifname, char *ofname);
++void decompress(void);
++void compress(void);
++
+ Usage() {
+ #ifdef DEBUG
+ fprintf(stderr,"Usage: compress [-dDVfc] [-b maxbits] [file ...]\n");
+@@ -460,7 +464,7 @@ FILE *infile, *outfile;
+  * procedure needs no input table, but tracks the way the table was built.
+  */
+ 
+-do_compression( decomp, file )
++void do_compression( decomp, file )
+ int decomp;
+ char *file;
+ {
+@@ -663,7 +667,7 @@ long int out_count = 0;			/* # of codes 
+  * questions about this implementation to ames!jaw.
+  */
+ 
+-compress()
++void compress(void)
+ {
+     register long fcode;
+     register code_int i = 0;
+@@ -931,7 +935,7 @@ code_int  code;
+  * with those of the compress() routine.  See the definitions above.
+  */
+ 
+-decompress() {
++void decompress(void) {
+     register char_type *stackp;
+     register int finchar;
+     register code_int code, oldcode, incode;
+@@ -1227,8 +1231,7 @@ writeerr()
+     exit ( 1 );
+ }
+ 
+-copystat(ifname, ofname)
+-char *ifname, *ofname;
++void copystat(char *ifname, char *ofname)
+ {
+     struct stat statbuf;
+     int mode;
