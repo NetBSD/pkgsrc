@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2006/10/24 11:51:55 dsainty Exp $
+$NetBSD: patch-af,v 1.3 2012/11/01 19:27:36 joerg Exp $
 
---- xcalpr/xcalpr.c.orig	2006-10-20 16:38:40.000000000 +1300
-+++ xcalpr/xcalpr.c	2006-10-24 11:08:56.000000000 +1300
-@@ -59,6 +59,7 @@
+--- xcalpr/xcalpr.c.orig	2012-10-30 21:25:09.000000000 +0000
++++ xcalpr/xcalpr.c
+@@ -59,6 +59,7 @@ static char    *copyright = "@(#)Copyrig
   
  ***/
  #include <stdio.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.2 2006/10/24 11:51:55 dsainty Exp $
  #include <ctype.h>
  #include <string.h>
  #include <time.h>
-@@ -86,7 +87,7 @@
+@@ -86,7 +87,7 @@ static char	*daynames[]	= {"Sun", "Mon",
  
  static char	*dayfiles[7];		/* connected contents of any dayfiles */
  
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.2 2006/10/24 11:51:55 dsainty Exp $
  	
  static int mon[] = { 
      31, 28, 31, 30,
-@@ -100,8 +101,6 @@
+@@ -100,8 +101,6 @@ static int mon[] = { 
  static char	*memerr = "No more memory\n";
  static char	*usage = "Usage: xcalpr [-d dir][-x][-c][-u user][-f file] [month list]\n";
  
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.2 2006/10/24 11:51:55 dsainty Exp $
  /*
   * Routines
   */
-@@ -132,6 +131,8 @@
+@@ -132,6 +131,8 @@ main(argc, argv)
  	int		ac;
  	int		yr;
  
@@ -37,3 +37,12 @@ $NetBSD: patch-af,v 1.2 2006/10/24 11:51:55 dsainty Exp $
  	while ((c = getopt(argc, argv, "d:u:f:cxv")) != EOF) {
  
  		switch (c) {
+@@ -494,7 +495,7 @@ connect_file(filename, bytes)
+  
+         if (statb.st_size == 0) {
+ 		*bytes = 0;
+-		return;
++		return NULL;
+ 	}
+ 
+ 	fibase = readbfile(fd, statb.st_size);
