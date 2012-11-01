@@ -1,5 +1,20 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/19 13:56:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/11/01 19:42:01 joerg Exp $
 
 SHA1 (prng-3.0.2.tar.gz) = 02175da3f49a16bcf7eee70b53564f05941232d4
 RMD160 (prng-3.0.2.tar.gz) = e7d885a74751e8d9c906279516a025a152d4c12e
 Size (prng-3.0.2.tar.gz) = 497047 bytes
+SHA1 (patch-src_anti.c) = 9c59690cb330c618b45a8b661004a28da80f11b1
+SHA1 (patch-src_compound.c) = 4b2bf6f4a7e17edf9af7196904dec25172e68888
+SHA1 (patch-src_cons.c) = 96101503051eb6794c008ce9b46fc205726d6fcd
+SHA1 (patch-src_dicg.c) = 81fae8bbee6797bba7649b3ddac7f268127511e8
+SHA1 (patch-src_eicg.c) = 020993311c7d67c5a5bc3768f4cab97681b8d218
+SHA1 (patch-src_external.c) = 0ec01f81c6c6960ce1b75da0bbbaf274b578aff2
+SHA1 (patch-src_file.c) = 6e1379a28155ba7b084c2105233a5fd1acd553cc
+SHA1 (patch-src_icg.c) = 5af81ada3c1772f88b316b83fde4813cad907ce1
+SHA1 (patch-src_lcg.c) = 15aee3bb2ecc01697d3edc68d5824e27db22c4c3
+SHA1 (patch-src_meicg.c) = aa40178f4d02f923513de7c5bc155f25c7624bee
+SHA1 (patch-src_mt19937.c) = 1b97825840ad0fa797219f45c5256276eb9231f0
+SHA1 (patch-src_prng.h) = 2f719fcbb151c08b2731246688911a4b49f4baad
+SHA1 (patch-src_qcg.c) = 16d7f5dca829264c62ca7ca97f5c9ddc50186117
+SHA1 (patch-src_sub.c) = 0c01b28efdbf772c6345fbaa707a0514b625beca
+SHA1 (patch-src_support.c) = 78eb361b56f378cf390400bd5f48ff2fb5c751f5
