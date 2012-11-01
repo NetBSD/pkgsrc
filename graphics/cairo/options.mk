@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2012/10/20 00:55:06 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2012/11/01 08:54:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -14,7 +14,9 @@ PLIST_VARS+=		carbon x11 xcb
 .if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:Mxcb)
 CONFIGURE_ARGS+=	--enable-xlib
 CONFIGURE_ARGS+=	--enable-xlib-xrender
-PLIST.gl=		yes
+# does not build against NetBSD-5's MesaLib, and is according
+# to upstream, only used by "toy applications"
+CONFIGURE_ARGS+=	--disable-gl
 PLIST.x11=		yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

@@ -1,0 +1,22 @@
+$NetBSD: patch-config.h.in,v 1.1 2012/11/01 08:54:47 wiz Exp $
+
+Detect old-style shm headers. From upstream.
+
+--- config.h.in.orig	2012-10-22 12:09:27.000000000 +0200
++++ config.h.in	2012-10-31 14:29:24.000000000 +0100
+@@ -255,6 +255,15 @@
+ /* Define to 1 if you have the <windows.h> header file. */
+ #undef HAVE_WINDOWS_H
+ 
++/* Define to 1 if you have the <X11/extensions/shmproto.h> header file. */
++#undef HAVE_X11_EXTENSIONS_SHMPROTO_H
++
++/* Define to 1 if you have the <X11/extensions/shmstr.h> header file. */
++#undef HAVE_X11_EXTENSIONS_SHMSTR_H
++
++/* Define to 1 if you have the <X11/extensions/XShm.h> header file. */
++#undef HAVE_X11_EXTENSIONS_XSHM_H
++
+ /* Define to 1 if you have the `XRenderCreateConicalGradient' function. */
+ #undef HAVE_XRENDERCREATECONICALGRADIENT
+ 
