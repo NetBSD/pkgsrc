@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2010/12/18 08:15:51 dsainty Exp $
+$NetBSD: distinfo,v 1.5 2012/11/01 19:52:03 joerg Exp $
 
 SHA1 (resize_image-0.6.tar.gz) = e26f53db67de09bc641caf1ced4742a97be0c4a4
 RMD160 (resize_image-0.6.tar.gz) = 42d2ab8813835d51aa984546cb5f2c003e01f667
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 65098e5be882473082afcf1411fe32f3fcb9dacc
 SHA1 (patch-ab) = 1ef571f47e79a018dfa73d5996265059edd746d1
 SHA1 (patch-ac) = 98b9d32e7d6ba96244a27288a9b36b3a7d41fbd1
 SHA1 (patch-ad) = a11e21c71ef4dda8d4ff5311dc57c857fe84f064
+SHA1 (patch-image_image__trans.c) = 1457b87bdbc7aa1f21c6cc8b0004cbbf9fe6b334
