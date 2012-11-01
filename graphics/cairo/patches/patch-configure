@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.5 2012/11/01 08:54:47 wiz Exp $
+
+Detect old-style shm headers. From upstream.
+
+--- configure.orig	2012-10-22 10:08:43.000000000 +0000
++++ configure
+@@ -21799,6 +21799,22 @@ fi
+ 
+       fi
+ 
++      for ac_header in X11/extensions/XShm.h X11/extensions/shmproto.h X11/extensions/shmstr.h
++do :
++  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
++ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "#include <X11/Xlibint.h>
++			#include <X11/Xproto.h>
++"
++if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
++  cat >>confdefs.h <<_ACEOF
++#define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
++done
++
++
+ 
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether cairo's Xlib surface backend feature could be enabled" >&5
+ $as_echo_n "checking whether cairo's Xlib surface backend feature could be enabled... " >&6; }
