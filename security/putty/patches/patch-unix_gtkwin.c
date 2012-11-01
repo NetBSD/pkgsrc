@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_gtkwin.c,v 1.1 2012/02/22 15:27:17 wiz Exp $
+$NetBSD: patch-unix_gtkwin.c,v 1.2 2012/11/01 19:32:44 joerg Exp $
 
 Make the home/end keys work on BSD servers as well as Linux ones
 
@@ -21,7 +21,7 @@ Make the home/end keys work on BSD servers as well as Linux ones
 +		    he = code == 1 ? "\x1B[7~" : "\x1B[8~";
 +		else
 +		    he = code == 1 ? "\x1BOH" : "\x1BOF";
-+		end = 1 + sprintf(output+1, he);
++		end = 1 + sprintf(output+1, "%s", he);
  		goto done;
  	    }
  	    if (code) {
