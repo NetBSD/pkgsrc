@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2008/11/20 02:19:26 chuck Exp $
+$NetBSD: patch-ab,v 1.3 2012/11/01 19:26:15 joerg Exp $
 
---- detex.l.orig	2008-11-19 20:20:18.000000000 -0500
-+++ detex.l	2008-11-19 20:20:54.000000000 -0500
-@@ -59,9 +59,7 @@
+--- detex.l.orig	2008-02-01 19:55:51.000000000 +0000
++++ detex.l
+@@ -59,9 +59,7 @@ static char	rcsid[] = "$Header: /p/src/l
  #ifndef MAXPATHLEN
  #include <sys/param.h>
  #endif
@@ -12,9 +12,14 @@ $NetBSD: patch-ab,v 1.2 2008/11/20 02:19:26 chuck Exp $
  
  #define	LaBEGIN		if (fLatex) BEGIN
  #define	IGNORE		if (fSpace && !fWord) putchar(' ')
-@@ -73,9 +71,6 @@
+@@ -72,10 +70,11 @@ static char	rcsid[] = "$Header: /p/src/l
+ #define STRIPARGS(x)	cArgs=x; LaBEGIN LaMacro2
  #define	CITE(x)		if (fLatex && !fCite) KILLARGS(x)
  
++void InputFile(char *sbFile);
++void IncludeFile(char *sbFile);
++void AddInclude(char *sbFile);
++
  char	*SafeMalloc();
 -#ifndef NO_MALLOC_DECL
 -char	*malloc();
@@ -22,3 +27,33 @@ $NetBSD: patch-ab,v 1.2 2008/11/20 02:19:26 chuck Exp $
  #ifdef OS2
  void	yyless(int);
  #endif
+@@ -565,8 +564,7 @@ char	*sbEnv;
+ **	the sbFile is ignored.
+ ******/
+ 
+-InputFile(sbFile)
+-char	*sbFile;
++void InputFile(char *sbFile)
+ {
+ 	FILE	*TexOpen();
+ 
+@@ -589,8 +587,7 @@ char	*sbFile;
+ **	and open sbFile.  If the open fails, the sbFile is ignored.
+ ******/
+ 
+-IncludeFile(sbFile)
+-char	*sbFile;
++void IncludeFile(char *sbFile)
+ {
+ 	FILE	*TexOpen();
+ 
+@@ -615,8 +612,7 @@ char	*sbFile;
+ **	If the include list is too long, sbFile is ignored.
+ ******/
+ 
+-AddInclude(sbFile)
+-char	*sbFile;
++void AddInclude(char *sbFile)
+ {
+ 	if (!fFollow)
+ 	    return;
