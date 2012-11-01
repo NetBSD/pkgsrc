@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2006/10/24 11:51:55 dsainty Exp $
+$NetBSD: patch-ag,v 1.2 2012/11/01 19:27:36 joerg Exp $
 
---- xcalev/xcalev.c.orig	2006-10-24 11:10:19.000000000 +1300
-+++ xcalev/xcalev.c	2006-10-24 11:13:37.000000000 +1300
-@@ -52,6 +52,7 @@
+--- xcalev/xcalev.c.orig	2012-10-30 21:25:09.000000000 +0000
++++ xcalev/xcalev.c
+@@ -52,11 +52,13 @@ static char    *copyright = "@(#)Copyrig
   
  ***/
  #include <stdio.h>
@@ -10,7 +10,13 @@ $NetBSD: patch-ag,v 1.1 2006/10/24 11:51:55 dsainty Exp $
  #include <ctype.h>
  #include <string.h>
  #include <time.h>
-@@ -88,8 +89,6 @@
+ #include <pwd.h>
+ #include <unistd.h>
++#include <fcntl.h>
+ #if defined(NeXT)
+ #include <sys/fcntl.h>
+ #endif
+@@ -88,8 +90,6 @@ static int	year;			/* year to do the wor
  static char	*memerr = "No more memory\n";
  static char	*usage = "Usage: xcalev [-f srcfile] [-d dir][-x][-r] [year]\n";
  
@@ -19,3 +25,12 @@ $NetBSD: patch-ag,v 1.1 2006/10/24 11:51:55 dsainty Exp $
  /*
   *	routines
   */
+@@ -441,7 +441,7 @@ connect_file(filename, bytes)
+  
+         if (statb.st_size == 0) {
+ 		*bytes = 0;
+-		return;
++		return NULL;
+ 	}
+ 	fibase = readbfile(fd, statb.st_size);
+ 
