@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2012/10/24 13:32:54 he Exp $
+# $NetBSD: Makefile,v 1.68 2012/11/01 14:04:58 mlelstv Exp $
 
 DISTNAME=	gnuplot-4.6.0
 PKGREVISION=	4
@@ -30,8 +30,13 @@ USE_LANGUAGES=		c
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[01234].*)
+CONFIGURE_ARGS+=        --with-readline=${BUILDLINK_PREFIX.readline}
+.include "../../devel/readline/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--with-readline=bsd
 .include "../../mk/curses.buildlink3.mk"
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .include "../../devel/readline/buildlink3.mk"
