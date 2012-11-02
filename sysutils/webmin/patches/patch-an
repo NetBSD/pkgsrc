@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2008/07/25 02:55:27 tonnerre Exp $
+$NetBSD: patch-an,v 1.2 2012/11/02 19:02:51 shattered Exp $
 
 --- man/search.cgi.orig	2007-09-21 23:26:43.000000000 +0200
 +++ man/search.cgi
@@ -12,13 +12,3 @@ $NetBSD: patch-an,v 1.1 2008/07/25 02:55:27 tonnerre Exp $
  &ui_print_header(&text('search_for', $for), $text{'search_title'}, "");
  if (@rv) {
  	#@rv = sort { $b->[4] <=> $a->[4] } @rv;
-@@ -280,7 +281,8 @@ if (@rv) {
- 	print &ui_columns_end();
- 	}
- else {
--	print "<p><b>",&text('search_none', "<tt>$in{'for'}</tt>"),"</b><p>\n";
-+	print "<p><b>",&text('search_none', "<tt>" . &html_escape($in{'for'}) .
-+		"</tt>"),"</b><p>\n";
- 	}
- 
- &ui_print_footer("", $text{'index_return'});
