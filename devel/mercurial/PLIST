@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/08/11 00:23:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/11/02 01:46:05 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -634,7 +634,6 @@ ${PYSITELIB}/mercurial/templates/static/style-gitweb.css
 ${PYSITELIB}/mercurial/templates/static/style-monoblue.css
 ${PYSITELIB}/mercurial/templates/static/style-paper.css
 ${PYSITELIB}/mercurial/templates/static/style.css
-${PYSITELIB}/mercurial/templates/template-vars.txt
 ${PYSITELIB}/mercurial/transaction.py
 ${PYSITELIB}/mercurial/transaction.pyc
 ${PYSITELIB}/mercurial/transaction.pyo
