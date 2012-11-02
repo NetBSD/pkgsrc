@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2012/10/23 10:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/11/02 22:28:54 joerg Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.bz2
@@ -124,6 +124,16 @@ post-extract:
 	cd ${WRKDIR}/${ICEDTEA_WEB}/netx && pax -rw . \
 	  ${WRKSRC}/jdk/src/share/classes
 	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/${ICEDTEA}/patches/rhino.patch
+	mv ${WRKDIR}/bootstrap/bin/java ${WRKDIR}/bootstrap/bin/java-real
+	printf '#!/bin/sh\nexec %s/bootstrap/bin/java-real -mx256m "$$@"\n' \
+	    ${WRKDIR} > ${WRKDIR}/bootstrap/bin/java
+	chmod a+x ${WRKDIR}/bootstrap/bin/java
+.for T in idlj jar javac javah javap native2ascii rmic
+	mv ${WRKDIR}/bootstrap/bin/$T ${WRKDIR}/bootstrap/bin/$T-real
+	printf '#!/bin/sh\n\nexec %s/bootstrap/bin/$T-real -J-mx256m "$$@"\n' \
+	    ${WRKDIR} > ${WRKDIR}/bootstrap/bin/$T
+	chmod a+x ${WRKDIR}/bootstrap/bin/$T
+.endfor
 
 do-build: ${WRKDIR}/stage3-done
 
