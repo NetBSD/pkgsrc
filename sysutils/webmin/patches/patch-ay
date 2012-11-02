@@ -1,6 +1,8 @@
---- mailboxes/mail_search.cgi.orig	2009-03-18 07:30:35.000000000 +0200
-+++ mailboxes/mail_search.cgi	2009-04-09 12:43:30.000000000 +0300
-@@ -46,7 +46,8 @@
+$NetBSD: patch-ay,v 1.3 2012/11/02 19:02:51 shattered Exp $
+
+--- mailboxes/mail_search.cgi.orig	2012-06-29 22:31:50.000000000 +0000
++++ mailboxes/mail_search.cgi
+@@ -46,7 +46,8 @@ if ($in{'simple'}) {
  		@searchlist = ( [ $field, $what ] );
  		@rv = &mailbox_search_mail(\@searchlist, 0, $folder);
  		print "<p><b>",&text('search_results5', scalar(@rv),
@@ -10,7 +12,7 @@
  		}
  	else {
  		# Just search by Subject and From in one folder
-@@ -73,7 +74,8 @@
+@@ -73,7 +74,8 @@ if ($in{'simple'}) {
  			&error($text{'search_eboolean'});
  			}
  		print "<p><b>",&text('search_results2', scalar(@rv),
@@ -20,27 +22,32 @@
  		}
  	foreach $mail (@rv) {
  		$mail->{'folder'} = $folder;
-@@ -106,8 +108,8 @@
+@@ -106,9 +108,9 @@ else {
  # Show list of messages, with form
  if (@rv) {
  	print &ui_form_start("delete_mail.cgi", "post");
 -	print &ui_hidden("user", $in{'user'});
+-	print &ui_hidden("dom", $in{'dom'});
 -	print &ui_hidden("folder", $in{'folder'});
 +	print &ui_hidden("user", &html_escape($in{'user'}));
-+	print &ui_hidden("folder", &html_escape($in{'folder'}));
++	print &ui_hidden("dom", &html_escape($in{'folder'}));
++ 	print &ui_hidden("folder", &html_escape($in{'folder'}));
  	if ($config{'top_buttons'} && !$multi_folder) {
  		&show_buttons(1, \@folders, $folder, \@rv, $in{'user'}, 1);
  		}
-@@ -121,8 +123,9 @@
+@@ -121,10 +123,10 @@ if (@rv) {
+ else {
  	print "<b>$text{'search_none'}</b> <p>\n";
  	}
- 
+-
 -&ui_print_footer($in{'simple'} ? ( ) : ( "search_form.cgi?folder=$in{'folder'}",
 -				$text{'sform_return'} ),
--	"list_mail.cgi?user=$in{'user'}&folder=$in{'folder'}", $text{'mail_return'},
+-	"list_mail.cgi?user=$in{'user'}&folder=$in{'folder'}&dom=$in{'dom'}",
+-	  $text{'mail_return'},
++  
 +&ui_print_footer($in{'simple'} ? ( ) : ( "search_form.cgi?folder=" .
 +	&urlize($in{'folder'}), $text{'sform_return'} ),
 +	"list_mail.cgi?user=" . &urlize($in{'user'}) . "&folder=" .
-+	&urlize($in{'folder'}), $text{'mail_return'},
- 	"", $text{'index_return'});
++	&urlize($in{'folder'}) . "&dom=" . &urlize($in{'dom'}), $text{'mail_return'},
+ 	&user_list_link(), $text{'index_return'});
  
