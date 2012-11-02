@@ -1,4 +1,4 @@
-# $NetBSD: setup-pre.sh,v 1.2 2007/10/08 08:47:09 obache Exp $
+# $NetBSD: setup-pre.sh,v 1.3 2012/11/02 19:02:51 shattered Exp $
 #
 # This shell script is sourced by webmin's setup.sh to provide local
 # overrides and defaults for configuration settings.

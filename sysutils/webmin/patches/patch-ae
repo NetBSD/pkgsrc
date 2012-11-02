@@ -1,11 +1,13 @@
---- man/module.info.orig	2009-03-18 07:30:39.000000000 +0200
-+++ man/module.info	2009-04-09 12:33:13.000000000 +0300
+$NetBSD: patch-ae,v 1.5 2012/11/02 19:02:51 shattered Exp $
+
+--- man/module.info.orig	2011-04-27 00:19:08.000000000 +0200
++++ man/module.info	2011-06-15 23:17:56.000000000 +0200
 @@ -9,7 +9,7 @@
  name=Man
  desc_tr=Kýlavuz Sayfalar
  desc_de=Systemdokumentation
--os_support=solaris corel-linux debian-linux open-linux redhat-linux mandrake-linux slackware-linux solaris suse-linux united-linux turbo-linux freebsd openbsd cobalt-linux lfs-linux irix aix hpux macos netbsd msc-linux osf1 generic-linux openserver gentoo-linux trustix-linux sol-linux coherent-linux openmamba-linux
-+os_support=solaris corel-linux debian-linux open-linux redhat-linux mandrake-linux slackware-linux solaris suse-linux united-linux turbo-linux freebsd openbsd cobalt-linux lfs-linux irix aix hpux macos netbsd msc-linux osf1 generic-linux openserver gentoo-linux trustix-linux sol-linux coherent-linux openmamba-linux dragonfly
+-os_support=solaris corel-linux debian-linux open-linux redhat-linux mandrake-linux slackware-linux solaris suse-linux united-linux turbo-linux freebsd openbsd cobalt-linux lfs-linux irix aix hpux macos netbsd msc-linux osf1 generic-linux openserver gentoo-linux trustix-linux sol-linux coherent-linux openmamba-linux pardus-linux
++os_support=solaris corel-linux debian-linux open-linux redhat-linux mandrake-linux slackware-linux solaris suse-linux united-linux turbo-linux freebsd openbsd cobalt-linux lfs-linux irix aix hpux macos netbsd msc-linux osf1 generic-linux openserver gentoo-linux trustix-linux sol-linux coherent-linux openmamba-linux pardus-linux dragonfly
  desc_sk=Systémová dokumentácia
  desc_zh_CN=Ê¹ÓÃÊÖ²á
  risk=low medium high

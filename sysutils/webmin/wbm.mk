@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.10 2012/05/13 08:10:12 sbd Exp $
+# $NetBSD: wbm.mk,v 1.11 2012/11/02 19:02:50 shattered Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -40,7 +40,7 @@ CATEGORIES+=	sysutils www
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.webmin.com/standard.html
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run perl
 DEPENDS+=	webmin>=${WBM_VERSION}:../../sysutils/webmin
 
 .for m in ${WBM_DEPEND_MODULES}

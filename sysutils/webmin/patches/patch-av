@@ -1,15 +1,15 @@
-$NetBSD: patch-av,v 1.1 2008/07/25 02:55:27 tonnerre Exp $
+$NetBSD: patch-av,v 1.2 2012/11/02 19:02:51 shattered Exp $
 
---- ldap-useradmin/search_user.cgi.orig	2007-09-21 23:28:25.000000000 +0200
-+++ ldap-useradmin/search_user.cgi
-@@ -23,8 +23,8 @@ elsif ($in{'match'} == 3) {
+--- ldap-useradmin/search_user.cgi.orig	2011-04-27 00:19:01.000000000 +0200
++++ ldap-useradmin/search_user.cgi	2011-06-15 23:36:01.000000000 +0200
+@@ -24,8 +24,8 @@ elsif ($in{'match'} == 3) {
  $rv = $ldap->search(base => $base,
- 		    filter => "(&(objectClass=posixAccount)$search)");
+ 		    filter => "(&".&user_filter().$search.")");
  if ($rv->code) {
 -	&error(&text('search_err', "<tt>$search</tt>",
 -		     "<tt>$base</tt>", $rv->error));
-+	&error(&text('search_err', "<tt>" . &html_escape($search) . "</tt>",
-+		     "<tt>" . &html_escape($base) . "</tt>", $rv->error));
++       &error(&text('search_err', "<tt>" . &html_escape($search) . "</tt>",
++                    "<tt>" . &html_escape($base) . "</tt>", $rv->error));
  	}
  @users = $rv->all_entries;
  
