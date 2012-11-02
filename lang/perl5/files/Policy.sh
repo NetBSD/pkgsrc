@@ -1,4 +1,4 @@
-# $NetBSD: Policy.sh,v 1.2 2011/05/16 07:59:04 abs Exp $
+# $NetBSD: Policy.sh,v 1.3 2012/11/02 07:36:24 sbd Exp $
 #
 # Site-wide policy settings for pkgsrc Perl
 #
@@ -28,7 +28,7 @@ vendorprefix='@PERL5_VENDORPREFIX@'
 
 # The Perl Configure script will install scripts into "*/script"
 # directories if they exist, so override with explicit settings.
-scriptdir='@PERL5_SCRIPTDIR@'
+scriptdir='@PERL5_PERLBASE@/bin'
 sitescript='@PERL5_SITEBASE@/bin'
 vendorscript='@PERL5_VENDORBASE@/bin'
 
@@ -51,7 +51,7 @@ vendorlib_stem='@PERL5_VENDORBASE@'
 # Avoid manpage conflicts between the standard Perl library, 3rd-party
 # modules, and other packages.
 man1ext='1'
-man1dir='@PERL5_MAN1DIR@'
+man1dir='@PERL5_PERLBASE@/@PKGMANDIR@/man1'
 siteman1dir='@PERL5_SITEBASE@/@PKGMANDIR@/man1'
 vendorman1dir='@PERL5_VENDORBASE@/@PKGMANDIR@/man1'
 man3ext='3'
