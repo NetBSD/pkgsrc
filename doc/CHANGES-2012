@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3474 2012/11/02 14:48:18 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3475 2012/11/02 16:07:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/py-ptt version 1.9.0 [imil 2012-11-02]
 	Updated net/Transmission to 2.73 [wiz 2012-11-02]
 	Updated net/Transmission-gui to 2.73 [wiz 2012-11-02]
+	Updated x11/xterm to 286 [wiz 2012-11-02]
