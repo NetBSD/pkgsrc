@@ -1,6 +1,8 @@
---- proc/module.info.orig	2009-03-18 07:30:39.000000000 +0200
-+++ proc/module.info	2009-04-09 12:34:49.000000000 +0300
-@@ -11,7 +11,7 @@
+$NetBSD: patch-ag,v 1.4 2012/11/02 19:02:51 shattered Exp $
+
+--- proc/module.info.orig	2012-01-22 00:47:19.000000000 +0000
++++ proc/module.info
+@@ -12,7 +12,7 @@ desc_ko_KR.UTF-8=鞁ろ枆欷戩澑 頂勲靹胳
  name=Process Manager
  desc_tr=莂lan S黵e鏻er
  desc_de=Laufende Prozesse
@@ -8,4 +10,4 @@
 +os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows dragonfly
  desc_zh_CN=进程管理器
  risk=medium high
- desc_ja_JP.UTF-8=瀹熻銉椼儹銈汇偣
+ desc_pl.UTF-8=Dzia艂aj膮ce procesy
