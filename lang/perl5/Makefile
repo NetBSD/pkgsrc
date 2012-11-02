@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2012/11/02 08:26:59 sbd Exp $
+# $NetBSD: Makefile,v 1.188 2012/11/02 21:22:10 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -152,17 +152,7 @@ LOCLIBRPATHFLAGS=	# empty
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
-
-CHECK_BUILTIN.pthread:=	yes
-.include "../../mk/pthread.builtin.mk"
-CHECK_BUILTIN.pthread:=	no
-
-# By default, build with threads only if the threads are native.
-.if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
-PERL5_BUILD_THREADS_SUPPORT=	yes
-.else
-PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
-.endif
+.include "options.mk"
 
 .if !empty(MACHINE_PLATFORM:MMirBSD*)
 SUBST_CLASSES+=			mirbsd-paths
@@ -171,87 +161,6 @@ SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
 SUBST_SED.mirbsd-paths=		-e 's,/usr/mpkg,${PREFIX},g'
 SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
 .endif
-
-.include "../../mk/compiler.mk"
-
-PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
-PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
-PKG_OPTIONS_GROUP.perlbits=	64bitauto 64bitint 64bitmore 64bitall 64bitnone
-PKG_SUPPORTED_OPTIONS=		debug threads mstats
-.if !empty(PERL5_BUILD_THREADS_SUPPORT:M[yY][eE][sS])
-PKG_SUGGESTED_OPTIONS=		threads
-.endif
-
-.if ${OPSYS} == "IRIX"
-.  if defined(ABI) && ${ABI} == "64"
-PKG_SUGGESTED_OPTIONS+=		64bitint
-.  endif
-.elif ${OPSYS} == "AIX"
-.  if defined(ABI) && ${ABI} == "64"
-PKG_SUGGESTED_OPTIONS+=		64bitall
-.  else
-PKG_SUGGESTED_OPTIONS+=		64bitnone
-.  endif
-.else
-PKG_SUGGESTED_OPTIONS+=		64bitauto
-.endif
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mthreads)
-.  include "../../mk/pthread.buildlink3.mk"
-CONFIGURE_ARGS+=	-Duseithreads
-CFLAGS+=		${PTHREAD_CFLAGS}
-LDFLAGS+=		${PTHREAD_LDFLAGS}
-LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
-.  if ${OBJECT_FMT} == "XCOFF"
-PERL5_RPATH_THREAD=-thread
-.  endif
-.else
-CONFIGURE_ARGS+=	-Uuseithreads
-.  if ${OBJECT_FMT} == "XCOFF"
-PERL5_RPATH_THREAD=
-.  endif
-.endif
-
-.if !empty(PKG_OPTIONS:Mdebug)
-CFLAGS+=		-DDEBUGGING
-.endif
-
-.if !empty(PKG_OPTIONS:Mmstats)
-CFLAGS+=		-DPERL_DEBUGGING_MSTATS
-CONFIGURE_ARGS+=	-Dusemymalloc
-.else
-CONFIGURE_ARGS+=	-Uusemymalloc
-.endif
-
-.if !empty(PKG_OPTIONS:M64bitint)
-CONFIGURE_ARGS+=	-Duse64bitint
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int/CORE
-.  endif
-.elif !empty(PKG_OPTIONS:M64bitmore)
-CONFIGURE_ARGS+=	-Dusemorebits
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int-ld/CORE
-.  endif
-.elif !empty(PKG_OPTIONS:M64bitall)
-CONFIGURE_ARGS+=	-Duse64bitall
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64all/CORE
-.  endif
-.elif !empty(PKG_OPTIONS:M64bitnone)
-CONFIGURE_ARGS+=	-Uuse64bitall -Uusemorebits -Uuse64bitint
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi/CORE
-.  endif
-.else
-.  if ${OBJECT_FMT} == "XCOFF"
-BROKEN=		XCOFF targets need the path specified where libperl.a resides.\
-Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this.
-.  endif
-.endif
-SUBST_VARS.policysh+=	LOCLIBRPATHFLAGS
 
 # Remove a spurious workdir reference
 SUBST_CLASSES+=		rm
