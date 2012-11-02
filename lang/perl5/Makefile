@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2012/11/02 07:29:30 sbd Exp $
+# $NetBSD: Makefile,v 1.185 2012/11/02 07:36:24 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -63,8 +63,6 @@ SUBST_VARS.policysh+=	CFLAGS
 SUBST_VARS.policysh+=	PERL5_PREFIX
 SUBST_VARS.policysh+=	PERL5_SITEPREFIX
 SUBST_VARS.policysh+=	PERL5_VENDORPREFIX
-PERL5_SCRIPTDIR=	${PERL5_PERLBASE}/bin
-SUBST_VARS.policysh+=	PERL5_SCRIPTDIR
 SUBST_VARS.policysh+=	PERL5_PERLBASE
 SUBST_VARS.policysh+=	PERL5_SITEBASE
 SUBST_VARS.policysh+=	PERL5_SITEBIN
@@ -72,8 +70,6 @@ SUBST_VARS.policysh+=	PERL5_VENDORBASE
 SUBST_VARS.policysh+=	PERL5_PRIVLIB
 SUBST_VARS.policysh+=	PERL5_SITELIB
 SUBST_VARS.policysh+=	PERL5_VENDORLIB
-PERL5_MAN1DIR=		${PERL5_PERLBASE}/${PKGMANDIR}/man1
-SUBST_VARS.policysh+=	PERL5_MAN1DIR
 SUBST_VARS.policysh+=	PKGMANDIR
 SUBST_VARS.policysh+=	LOCALBASE
 SUBST_VARS.policysh+=	PTHREAD_LDFLAGS
@@ -340,8 +336,8 @@ perl5-post-install:
 	${RUN}if ${TEST} -x ${DESTDIR}${PREFIX}/bin/a2p; then		\
 		strip ${DESTDIR}${PREFIX}/bin/a2p;			\
 	fi
-	${RUN}${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh ${DESTDIR}${PERL5_SCRIPTDIR}/perllink;	\
-	${INSTALL_MAN} ${FILESDIR}/perllink.1 ${DESTDIR}${PERL5_MAN1DIR}/perllink.1;	\
+	${RUN}${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh ${DESTDIR}${PERL5_PERLBASE}/bin/perllink;	\
+	${INSTALL_MAN} ${FILESDIR}/perllink.1 ${DESTDIR}${PERL5_PERLBASE}/${PKGMANDIR}/man1/perllink.1;	\
 	${RM} -f ${DESTDIR}${PREFIX}/bin/perllink				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;		\
 	${LN} -s ${PERL5_SCRIPTDIR}/perllink ${DESTDIR}${PREFIX}/bin/perllink;	\
