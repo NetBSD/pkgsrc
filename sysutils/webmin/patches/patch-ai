@@ -1,11 +1,13 @@
---- init/module.info.orig	2009-03-18 07:30:40.000000000 +0200
-+++ init/module.info	2009-04-09 12:37:02.000000000 +0300
-@@ -22,7 +22,7 @@
- desc_ru_SU=úÁÇÒÕÚËÁ É ÚÁ×ÅÒÛÅÎÉÅ ÒÁÂÏÔÙ ÓÉÓÔÅÍÙ
+$NetBSD: patch-ai,v 1.5 2012/11/02 19:02:51 shattered Exp $
+
+--- init/module.info.orig	2011-04-27 00:19:08.000000000 +0200
++++ init/module.info	2011-06-15 23:20:14.000000000 +0200
+@@ -10,7 +10,7 @@
+ name=Boot Manager
  desc_tr=Açılış ve Kapanış
  desc_de=System-Start und -Stop
--os_support=solaris coherent-linux redhat-linux mandrake-linux debian-linux suse-linux united-linux hpux slackware-linux freebsd unixware openserver open-linux turbo-linux openbsd corel-linux cobalt-linux cobalt-linux osf1 irix aix macos netbsd msc-linux generic-linux trustix-linux gentoo-linux openmamba-linux windows
-+os_support=solaris coherent-linux redhat-linux mandrake-linux debian-linux suse-linux united-linux hpux slackware-linux freebsd unixware openserver open-linux turbo-linux openbsd corel-linux cobalt-linux cobalt-linux osf1 irix aix macos netbsd msc-linux generic-linux trustix-linux gentoo-linux openmamba-linux windows dragonfly
+-os_support=solaris coherent-linux redhat-linux mandrake-linux debian-linux suse-linux united-linux hpux slackware-linux freebsd unixware openserver open-linux turbo-linux openbsd corel-linux cobalt-linux cobalt-linux osf1 irix aix macos netbsd msc-linux generic-linux trustix-linux gentoo-linux openmamba-linux windows pardus-linux
++os_support=solaris coherent-linux redhat-linux mandrake-linux debian-linux suse-linux united-linux hpux slackware-linux freebsd unixware openserver open-linux turbo-linux openbsd corel-linux cobalt-linux cobalt-linux osf1 irix aix macos netbsd msc-linux generic-linux trustix-linux gentoo-linux openmamba-linux windows pardus-linux dragonfly
  desc_sk=©tart a vypnutie
- desc_ko_KR.euc=ºÎÆÃ ¹× Á¾·á 
  desc_zh_CN=Òıµ¼ºÍ¹Ø»ú
+ risk=low medium high
