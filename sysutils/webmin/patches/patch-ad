@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.8 2012/11/02 19:02:51 shattered Exp $
+
 --- os_list.txt.orig	2009-03-18 07:30:26.000000000 +0200
 +++ os_list.txt	2009-04-09 12:31:24.000000000 +0300
 --- os_list.txt.orig	2009-03-18 05:30:26.000000000 +0000
@@ -24,11 +26,3 @@
  
  # BSDI (may not be detected properly)
  BSDI				$1	freebsd		$1	$uname =~ /BSDI.*\s([0-9\.]+)/i
-@@ -325,6 +319,7 @@ Generic Linux			2.4	generic-linux	2.4	`u
- Generic Linux			2.5	generic-linux	2.5	`uname -r` =~ /2\.4\./
- Generic Linux			2.6	generic-linux	2.6	`uname -r` =~ /2\.6\./
- Generic Linux			2.7	generic-linux	2.7	`uname -r` =~ /2\.7\./
-+Generic Linux			$1	generic-linux	$1	`uname -r` =~ /3\.[0-9]+/
- 
- # Windows
- Windows				XP	windows		xp	(-d "c:/windows" || -d "c:/winnt") && `ver` =~ /XP/

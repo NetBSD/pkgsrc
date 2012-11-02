@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.32 2012/10/23 19:51:34 asau Exp $
+# $NetBSD: Makefile,v 1.33 2012/11/02 19:02:50 shattered Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
-PKGREVISION=	5
+#KGREVISION=	5
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
+LICENSE=        modified-bsd
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
@@ -81,18 +82,18 @@ pre-configure:
 		*)	rm -rf $${m} ;;					\
 		esac;							\
 	done &&								\
-	for t in `${ECHO} */theme.info | ${SED} -e 's/\/theme.info//g'`; do\
+	for t in `${ECHO} */theme.info | sed -e 's/\/theme.info//g'`; do\
 		rm -rf $${t};						\
 	done &&								\
 	touch ${WRKSRC}/minimal-install
 
 do-configure:
-	${SED}	-e "s,@WEBMIN_EGDIR@,${DESTDIR}/${WEBMIN_EGDIR},g"	\
-		-e "s,@WEBMIN_VARDIR@,${DESTDIR}/${WEBMIN_VARDIR},g"	\
+	sed	-e "s,@WEBMIN_EGDIR@,${DESTDIR}${WEBMIN_EGDIR},g"	\
+		-e "s,@WEBMIN_VARDIR@,${DESTDIR}${WEBMIN_VARDIR},g"	\
 		-e "s,@PERL5@,"${PERL5:Q}",g"				\
 		${FILESDIR}/setup-pre.sh > ${WRKSRC}/setup-pre.sh
 	cd ${WRKSRC}; for file in acl/config acl/config-*; do		\
-		${SED} -e "s,^ssleay=.*,ssleay=${SSLBASE}/bin/openssl,"	\
+		sed -e "s,^ssleay=.*,ssleay=${SSLBASE}/bin/openssl,"	\
 			"$$file" > "$$file.new";			\
 		${MV} -f "$$file.new" "$$file";				\
 	done
@@ -103,22 +104,31 @@ do-configure:
 #
 do-install:
 	${SH} ${WRKSRC}/setup.sh ${DESTDIR}${WEBMIN_DIR}
-	${SED}	-e "/^env_WEBMIN_CONFIG=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR}," \
-		-e "/^logout=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
-		-e "/^userfile=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
-		-e "/^keyfile=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+	sed	-e "/^env_WEBMIN_CONFIG=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR}," \
+		-e "/^logout=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+		-e "/^userfile=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+		-e "/^keyfile=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+		-e "s,${DESTDIR},,g"	\
 		${DESTDIR}${WEBMIN_EGDIR}/miniserv.conf > ${WRKDIR}/miniserv.conf
-	for file in reload start stop; do				\
-		${SED}	-e "s,${WEBMIN_EGDIR}/miniserv.conf,${WEBMIN_ETCDIR}/miniserv.conf," \
+	sed	-e "s,${DESTDIR},,g"	\
+		${DESTDIR}${WEBMIN_DIR}/setup-pre.sh > ${WRKDIR}/setup-pre.sh
+	for file in install-dir reload restart start stop var-path; do	\
+		sed	-e "s,${DESTDIR}${WEBMIN_EGDIR}/miniserv.conf,${WEBMIN_ETCDIR}/miniserv.conf," \
+			-e "s,${DESTDIR},,g"	\
 			${DESTDIR}${WEBMIN_EGDIR}/$$file > ${WRKDIR}/$$file; \
 	done
-	cd ${DESTDIR}${WEBMIN_EGDIR} && ${RM} -f miniserv.conf reload start stop
+	cd ${DESTDIR}${WEBMIN_EGDIR} && ${RM} -f miniserv.conf install-dir reload restart start stop var-path
 	for file in miniserv.conf; do					\
 		${INSTALL_DATA} ${WRKDIR}/$$file			\
 				    ${DESTDIR}${WEBMIN_EGDIR}/$$file;	\
 		${RM} -f ${WRKDIR}/$$file;				\
 	done
-	for file in reload start stop; do				\
+	for file in setup-pre.sh; do					\
+		${INSTALL_SCRIPT} ${WRKDIR}/$$file			\
+				    ${DESTDIR}${WEBMIN_DIR}/$$file;	\
+		${RM} -f ${WRKDIR}/$$file;				\
+	done
+	for file in install-dir reload restart start stop var-path; do	\
 		${INSTALL_SCRIPT} ${WRKDIR}/$$file		    	\
 				    ${DESTDIR}${WEBMIN_EGDIR}/$$file;	\
 		${RM} -f ${WRKDIR}/$$file;				\

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: webmin.sh,v 1.3 2006/05/16 04:01:28 jlam Exp $
+# $NetBSD: webmin.sh,v 1.4 2012/11/02 19:02:51 shattered Exp $
 #
 
 # PROVIDE: webmin
