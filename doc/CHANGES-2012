@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3475 2012/11/02 16:07:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3476 2012/11/02 19:03:30 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5316,3 +5316,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/Transmission to 2.73 [wiz 2012-11-02]
 	Updated net/Transmission-gui to 2.73 [wiz 2012-11-02]
 	Updated x11/xterm to 286 [wiz 2012-11-02]
+	Updated sysutils/webmin to 1.600 [shattered 2012-11-02]
