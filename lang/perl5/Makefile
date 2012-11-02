@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2012/11/02 07:36:24 sbd Exp $
+# $NetBSD: Makefile,v 1.186 2012/11/02 08:18:50 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -336,13 +336,16 @@ perl5-post-install:
 	${RUN}if ${TEST} -x ${DESTDIR}${PREFIX}/bin/a2p; then		\
 		strip ${DESTDIR}${PREFIX}/bin/a2p;			\
 	fi
-	${RUN}${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh ${DESTDIR}${PERL5_PERLBASE}/bin/perllink;	\
-	${INSTALL_MAN} ${FILESDIR}/perllink.1 ${DESTDIR}${PERL5_PERLBASE}/${PKGMANDIR}/man1/perllink.1;	\
-	${RM} -f ${DESTDIR}${PREFIX}/bin/perllink				\
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;		\
-	${LN} -s ${PERL5_SCRIPTDIR}/perllink ${DESTDIR}${PREFIX}/bin/perllink;	\
-	${LN} -s ${PERL5_MAN1DIR}/perllink.1					\
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;
+	${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh 			\
+		${DESTDIR}${PERL5_PERLBASE}/bin/perllink
+	${INSTALL_MAN} ${FILESDIR}/perllink.1				\
+		${DESTDIR}${PERL5_PERLBASE}/${PKGMANDIR}/man1/perllink.1
+	${RM} -f ${DESTDIR}${PREFIX}/bin/perllink			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1
+	${LN} -s ${PERL5_PERLBASE}/bin/perllink 			\
+		${DESTDIR}${PREFIX}/bin/perllink
+	${LN} -s ${PERL5_PERLBASE}/${PKGMANDIR}/man1/perllink.1		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1
 .if ${OPSYS} == "Haiku"
 	${CHMOD} a+x ${DESTDIR}${PREFIX}/bin/perl
 .endif
