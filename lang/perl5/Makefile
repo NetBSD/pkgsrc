@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2012/10/20 10:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.184 2012/11/02 07:29:30 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -333,7 +333,6 @@ PERL5_PACKLIST=		.packlist
 PERL5_PACKLIST_DESTDIR=	no
 FILES_SUBST+=		PERL5_COMMENT=\#
 FILES_SUBST+=		PERL5_PACKLIST=
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
 post-install: perl5-post-install
 
@@ -347,11 +346,7 @@ perl5-post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;		\
 	${LN} -s ${PERL5_SCRIPTDIR}/perllink ${DESTDIR}${PREFIX}/bin/perllink;	\
 	${LN} -s ${PERL5_MAN1DIR}/perllink.1					\
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;	\
-	{ ${CAT} ${PKGDIR}/PLIST;					\
-	  ${ECHO} "${PERL5_SCRIPTDIR}/perllink";			\
-	  ${ECHO} "${PERL5_MAN1DIR}/perllink.1";			\
-	} | ${SED} -e "s,^"${PREFIX:Q}"/,," > ${PLIST_SRC}
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/perllink.1;
 .if ${OPSYS} == "Haiku"
 	${CHMOD} a+x ${DESTDIR}${PREFIX}/bin/perl
 .endif

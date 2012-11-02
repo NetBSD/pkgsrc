@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/06 06:18:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/11/02 07:29:30 sbd Exp $
 bin/perllink
+lib/perl5/bin/perllink
+lib/perl5/${PKGMANDIR}/man1/perllink.1
 man/man1/perllink.1
