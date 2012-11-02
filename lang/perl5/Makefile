@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2012/11/02 08:18:50 sbd Exp $
+# $NetBSD: Makefile,v 1.187 2012/11/02 08:26:59 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -162,17 +162,6 @@ CHECK_BUILTIN.pthread:=	no
 PERL5_BUILD_THREADS_SUPPORT=	yes
 .else
 PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
-.endif
-
-### [Sat Dec 18 17:29:44 EST 2004 : jlam]
-### Native threading on VAX isn't ready for primetime in NetBSD>=2.0.
-### Build Perl without threads-support until VAX native threads are
-### known to work.
-###
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-vax) && \
-    !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
-PKG_HACKS+=			broken-vax-pthreads
-PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
 .if !empty(MACHINE_PLATFORM:MMirBSD*)
