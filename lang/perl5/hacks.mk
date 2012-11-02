@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.6 2012/10/03 19:59:47 adam Exp $
+# $NetBSD: hacks.mk,v 1.7 2012/11/02 08:26:59 sbd Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -36,6 +36,17 @@ CFLAGS+=	-DDEBUGGING -g -msoft-quad-float -O2
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 PKG_HACKS+=		powerpc-codegen
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
+.endif
+
+### [Sat Dec 18 17:29:44 EST 2004 : jlam]
+### Native threading on VAX isn't ready for primetime in NetBSD>=2.0.
+### Build Perl without threads-support until VAX native threads are
+### known to work.
+###
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-vax) && \
+    !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
+PKG_HACKS+=			broken-vax-pthreads
+PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
 ### [Mon May 9 15:35:44 UTC 2005 : jlam]
