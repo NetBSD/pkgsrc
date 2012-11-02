@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.87 2012/08/11 14:49:44 marino Exp $
+# $NetBSD: java-vm.mk,v 1.88 2012/11/02 00:48:03 sbd Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -140,6 +140,11 @@ _ONLY_FOR_PLATFORMS.openjdk7= \
 _ONLY_FOR_PLATFORMS.openjdk7-bin= \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64
+
+# Set ONLY_FOR_PLATFORM based on accepted JVMs
+.for _jvm_ in ${PKG_JVMS_ACCEPTED}
+ONLY_FOR_PLATFORM+=	${_ONLY_FOR_PLATFORMS.${_jvm_}}
+.endfor
 
 # Set the accepted JVMs for this platform.
 .for _jvm_ in ${_PKG_JVMS}
