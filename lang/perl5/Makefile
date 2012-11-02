@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2012/11/02 21:22:10 sbd Exp $
+# $NetBSD: Makefile,v 1.189 2012/11/02 22:24:08 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -138,18 +138,6 @@ SYSLIBPATH.SunOS=	/usr/lib
 SYSLIBPATH.AIX=		/usr/lib
 SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
 SUBST_VARS.policysh+=	SYSLIBPATH
-
-# On a.out platforms, we link with "ld" and on ELF platforms, we link with
-# "cc", so we need to use different options to pass the run-time search path
-# flags to the link command in the right way.
-#
-.if ${OBJECT_FMT} == "a.out"
-LOCLIBRPATHFLAGS=	${LINKER_RPATH_FLAG} ${LOCALBASE}/lib
-.elif ${OBJECT_FMT} == "ELF" || ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
-.else
-LOCLIBRPATHFLAGS=	# empty
-.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "options.mk"
