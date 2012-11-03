@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3478 2012/11/02 23:55:17 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3479 2012/11/03 01:02:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5319,3 +5319,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/webmin to 1.600 [shattered 2012-11-02]
 	Updated lang/sbcl to 1.1.1 [asau 2012-11-02]
 	Updated ham/hamlib to 1.2.15.3 [gdt 2012-11-02]
+	Updated devel/bison to 2.6.4 [wiz 2012-11-03]
