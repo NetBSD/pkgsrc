@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/09/09 15:13:09 wiz Exp $
+$NetBSD: distinfo,v 1.14 2012/11/03 13:45:00 wiz Exp $
 
 SHA1 (vsftpd-2.3.4.tar.gz) = b774cc6b4c50e20f4fe9ca7f6aa74169ce7fe5ea
 RMD160 (vsftpd-2.3.4.tar.gz) = 4097b495b5b03833e18b1639931939c3176e498b
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 2dcfae2eb16b2053f07eb3ee8f6d4af4b30d9799
 SHA1 (patch-ad) = 8b09a8fbc84f51c7334d6ab08e0a98b2e31c4fa0
 SHA1 (patch-ae) = ba770387570d202b440593d6c7cbd8d53d411a41
 SHA1 (patch-af) = 3ac549f091e6285298f9508a5fec40bd97b7d9d1
+SHA1 (patch-sysdeputil.c) = 3efe030f66c50a31f6cb5e8565920f5b0eb4e78d
