@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3485 2012/11/03 14:30:20 imil Exp $
+$NetBSD: CHANGES-2012,v 1.3486 2012/11/03 14:43:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5326,3 +5326,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/py-hgtools version 2.0.2 [imil 2012-11-03]
 	Added net/py-irclib version 3.4.2 [imil 2012-11-03]
 	Updated net/py-ptt to 1.9.0nb1 [imil 2012-11-03]
+	Updated www/elinks to 0.12rc6 [wiz 2012-11-03]
