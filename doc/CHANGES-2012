@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3480 2012/11/03 01:57:44 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3481 2012/11/03 12:49:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5321,3 +5321,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/hamlib to 1.2.15.3 [gdt 2012-11-02]
 	Updated devel/bison to 2.6.4 [wiz 2012-11-03]
 	Updated audio/pulseaudio to 2.1 [ryoon 2012-11-03]
+	Updated ham/fldigi to 3.21.58 [makoto 2012-11-03]
