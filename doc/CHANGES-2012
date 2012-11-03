@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3487 2012/11/03 18:46:40 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3488 2012/11/03 18:47:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5328,3 +5328,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/py-ptt to 1.9.0nb1 [imil 2012-11-03]
 	Updated www/elinks to 0.12rc6 [wiz 2012-11-03]
 	Updated www/seamonkey to 2.13.2 [ryoon 2012-11-03]
+	Updated www/seamonkey-l10n to 2.13.2 [ryoon 2012-11-03]
