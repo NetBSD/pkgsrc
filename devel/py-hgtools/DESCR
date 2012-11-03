@@ -1,0 +1,12 @@
+hgtools builds on the setuptools_hg plugin for setuptools. hgtools provides
+classes for inspecting and working with repositories in the Mercurial version
+control system.
+
+hgtools provides a plugin for setuptools that enables setuptools to find files
+under the Mercurial version control system.
+
+The classes provided by hgtools are designed to work natively with the
+Mercurial Python libraries (in process) or fall back to using the command-line
+program hg(1) if available. The command-line support is especially useful
+inside virtualenvs that don't have access to a system-wide installed Mercurial
+lib (i.e. when the virtualenv was created with --no-site-packages).

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/11/03 13:55:16 imil Exp $
+
+SHA1 (hgtools-2.0.2.zip) = b4db6f850e2172cff5f1740c6591cd97cadec285
+RMD160 (hgtools-2.0.2.zip) = 22d7416d1b28c6b2dd8ed2652a4ef3229b9a81a8
+Size (hgtools-2.0.2.zip) = 30635 bytes
