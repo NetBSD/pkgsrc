@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/19 17:52:38 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/03 20:18:53 adam Exp $
 
 DISTNAME=	lcms2-2.4
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/2.2/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
@@ -11,8 +11,8 @@ LICENSE=	mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
 # lcms does not need zlib, but will look for it and link it to tifficc
