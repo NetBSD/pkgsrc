@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/08/06 06:25:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2012/11/03 01:02:23 wiz Exp $
 bin/bison
 info/bison.info
 lib/liby.a
@@ -75,7 +75,9 @@ share/locale/ro/LC_MESSAGES/bison.mo
 share/locale/ru/LC_MESSAGES/bison-runtime.mo
 share/locale/ru/LC_MESSAGES/bison.mo
 share/locale/sl/LC_MESSAGES/bison-runtime.mo
+share/locale/sq/LC_MESSAGES/bison-runtime.mo
 share/locale/sr/LC_MESSAGES/bison-runtime.mo
+share/locale/sr/LC_MESSAGES/bison.mo
 share/locale/sv/LC_MESSAGES/bison-runtime.mo
 share/locale/sv/LC_MESSAGES/bison.mo
 share/locale/th/LC_MESSAGES/bison-runtime.mo
