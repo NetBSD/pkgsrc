@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2011/06/14 13:36:34 wiz Exp $
+$NetBSD: distinfo,v 1.28 2012/11/03 14:43:25 wiz Exp $
 
-SHA1 (elinks-0.12pre5.tar.bz2) = 15fb38fa938a0eec9d5f22fdd538a6785e2854af
-RMD160 (elinks-0.12pre5.tar.bz2) = 4983083f21928da78f937b4dea09f8937c3a9cb9
-Size (elinks-0.12pre5.tar.bz2) = 2783523 bytes
+SHA1 (elinks-0.12pre6.tar.bz2) = 3517795e8a390cb36ca249a5be6514b9784520a5
+RMD160 (elinks-0.12pre6.tar.bz2) = 99d92dde61ed9c626f10d3d431ed4d325b2e33f6
+Size (elinks-0.12pre6.tar.bz2) = 2854500 bytes
 SHA1 (patch-aa) = b188ab3975bcfd6a491c2e41a17b1f31703d4667
 SHA1 (patch-ab) = a1d9b4246869c1999043c76dbcb35996a6b294fd
 SHA1 (patch-ac) = a7f4bacbdf4073a5a733fe565b1f51dc755c7e4d
