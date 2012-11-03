@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.34 2012/10/28 06:30:24 asau Exp $
+# $NetBSD: Makefile,v 1.35 2012/11/04 00:00:21 dholland Exp $
 #
 
-DISTNAME=       nspluginwrapper-1.2.2
-PKGREVISION=    16
-CATEGORIES=     www
-MASTER_SITES=   http://gwenole.beauchesne.info/projects/nspluginwrapper/files/
-EXTRACT_SUFX=   .tar.bz2
+DISTNAME=	nspluginwrapper-1.2.2
+PKGREVISION=	16
+CATEGORIES=	www
+MASTER_SITES=	http://gwenole.beauchesne.info/projects/nspluginwrapper/files/
+EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/-/-i386-/}-1.x86_64.rpm
 
-MAINTAINER=     abs@NetBSD.org
-HOMEPAGE=       http://gwenole.beauchesne.info/projects/nspluginwrapper/
-COMMENT=        Use Netscape compatible plugins from other platforms
+MAINTAINER=	abs@NetBSD.org
+HOMEPAGE=	http://gwenole.beauchesne.info/projects/nspluginwrapper/
+COMMENT=	Use Netscape compatible plugins from other platforms
 LICENSE=	gnu-gpl-v2
 
 EMUL_PLATFORMS=		linux-i386
