@@ -1,0 +1,40 @@
+$NetBSD: patch-configure,v 1.1 2012/11/03 01:54:55 ryoon Exp $
+
+--- configure.orig	2012-07-19 11:30:11.000000000 +0000
++++ configure
+@@ -8062,7 +8062,7 @@ $as_echo "#define ATOMIC_ARM_INLINE_ASM 
+ fi
+             fi
+         ;;
+-        *-netbsdelf5*)
++        *-netbsd*)
+             { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+             need_libatomic_ops=no
+@@ -19748,7 +19748,7 @@ _ACEOF
+ 
+ fi
+ 
+-if test "$ac_cv_tls" == "__thread"; then :
++if test "$ac_cv_tls" = "__thread"; then :
+ 
+ $as_echo "#define SUPPORT_TLS___THREAD 1" >>confdefs.h
+ 
+@@ -20146,7 +20146,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ fi
+ 
+-if test "x$ax_pthread_ok" == "xyes"; then :
++if test "x$ax_pthread_ok" = "xyes"; then :
+ 
+ $as_echo "#define _POSIX_PTHREAD_SEMANTICS 1" >>confdefs.h
+ 
+@@ -26138,7 +26138,7 @@ _ACEOF
+ PA_SOEXT=.so
+ 
+ 
+-pulseconfdir="${sysconfdir}/pulse"
++pulseconfdir="${EGDIR}"
+ 
+ 
+   prefix_NONE=
