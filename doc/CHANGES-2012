@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3494 2012/11/03 22:57:41 morr Exp $
+$NetBSD: CHANGES-2012,v 1.3495 2012/11/03 22:58:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/grig to 0.8.0 [gdt 2012-11-03]
 	Updated mail/fetchmail to 6.3.22 [morr 2012-11-03]
 	Updated mail/fetchmailconf to 6.3.22 [morr 2012-11-03]
+	Added fonts/sourcecodepro-fonts version 1.009 [ryoon 2012-11-03]
