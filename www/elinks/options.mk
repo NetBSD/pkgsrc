@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2012/06/12 15:46:04 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2012/11/03 14:43:25 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp javascript finger gopher
@@ -10,10 +10,8 @@ PKG_OPTIONS_GROUP.tls=	gnutls ssl
 PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_OPTIONAL_GROUPS=	malloc
-PKG_SUGGESTED_OPTIONS=	ssl javascript elinks-html-highlight elinks-exmode
+PKG_SUGGESTED_OPTIONS=	ssl elinks-html-highlight elinks-exmode
 PKG_SUGGESTED_OPTIONS+=	expat boehm-gc inet6
-
-PKG_OPTIONS_LEGACY_OPTS+= spidermonkey:javascript
 
 .include "../../mk/bsd.options.mk"
 
@@ -46,18 +44,14 @@ CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--disable-nntp
 .endif
 
-.if !empty(PKG_OPTIONS:Mjavascript)
-
-.include "../../lang/see/buildlink3.mk"
-
-CONFIGURE_ARGS+=	--with-see=${BUILDLINK_PREFIX.see:Q}
-CONFIGURE_ARGS+=	--without-spidermonkey
-CONFIGURE_ARGS+=	--enable-sm-scripting
-.else
-CONFIGURE_ARGS+=	--without-spidermonkey
-CONFIGURE_ARGS+=	--without-see
-CONFIGURE_ARGS+=	--disable-sm-scripting
-.endif
+#.if !empty(PKG_OPTIONS:Mjavascript)
+#.include "../../lang/spidermonkey/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-spidermonkey
+#CONFIGURE_ARGS+=	--enable-sm-scripting
+#.else
+#CONFIGURE_ARGS+=	--without-spidermonkey
+#CONFIGURE_ARGS+=	--disable-sm-scripting
+#.endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 
