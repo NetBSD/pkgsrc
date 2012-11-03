@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2012/11/02 22:28:54 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
 
 --- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2012-05-12 08:57:44.793207000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.6 2012/11/02 22:28:54 joerg Exp $
 +  getrlimit(RLIMIT_DATA, &limits);
 +  _physical_memory = MIN2(_physical_memory, (julong)limits.rlim_cur);
 +#if defined(RLIMIT_AS)
-+  getrlimit(RLIMIT_DATA, &limits);
++  getrlimit(RLIMIT_AS, &limits);
 +  _physical_memory = MIN2(_physical_memory, (julong)limits.rlim_cur);
  #endif
  }
