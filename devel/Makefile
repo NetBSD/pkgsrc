@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1664 2012/10/26 10:56:58 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1665 2012/11/03 13:56:19 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1332,6 +1332,7 @@ SUBDIR+=	py-generate
 SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
+SUBDIR+=	py-hgtools
 SUBDIR+=	py-idle
 SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython012
