@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/11/03 01:54:55 ryoon Exp $
+
+--- src/Makefile.in.orig	2012-07-19 11:30:13.000000000 +0000
++++ src/Makefile.in
+@@ -2943,7 +2943,7 @@ pulselibexecdir = $(libexecdir)/pulse
+ @HAVE_X11_TRUE@xdgautostartdir = $(sysconfdir)/xdg/autostart
+ @HAVE_ALSA_TRUE@alsaprofilesetsdir = $(datadir)/pulseaudio/alsa-mixer/profile-sets
+ @HAVE_ALSA_TRUE@alsapathsdir = $(datadir)/pulseaudio/alsa-mixer/paths
+-@HAVE_DBUS_TRUE@dbuspolicydir = $(sysconfdir)/dbus-1/system.d
++@HAVE_DBUS_TRUE@dbuspolicydir = ${EGDIR}
+ 
+ ###################################
+ #     Compiler/linker flags       #

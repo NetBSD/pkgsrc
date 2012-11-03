@@ -1,27 +1,9 @@
-$NetBSD: distinfo,v 1.33 2012/05/30 23:47:49 obache Exp $
+$NetBSD: distinfo,v 1.34 2012/11/03 01:54:55 ryoon Exp $
 
-SHA1 (pulseaudio-0.9.21.tar.gz) = 0309c97f7e0812e243c1bb80a4b74dc26369ac22
-RMD160 (pulseaudio-0.9.21.tar.gz) = 6db0725253228b673a78cbfae4824fadce2198ed
-Size (pulseaudio-0.9.21.tar.gz) = 2056896 bytes
-SHA1 (patch-aa) = 201916051465bcb694bc6490dd6d23265ee02241
-SHA1 (patch-ab) = 1cf47a55b1c794b315646379ae03d633dc1d348f
-SHA1 (patch-ac) = b42e6ef8ff2851ea78a6eae6cb6241c94d74b2d0
-SHA1 (patch-ad) = 5ae0e5d8b0b7622c35cb2fabba4a33b673cbd442
-SHA1 (patch-ae) = 5e6957e73ffd96d2e63e5ea4eb9b0ca9ea016b30
-SHA1 (patch-af) = e11fb419787e3cd1f305b66c995915f11276770e
-SHA1 (patch-ag) = 64c93717f864605ba66cc6c4be84a594aeda943c
-SHA1 (patch-ah) = b4ce6535ca9dfc695bd04c5fae0a5bc614bec2eb
-SHA1 (patch-ba) = 7a57cbd68026c72804bb705d2a23e562c59b86a7
-SHA1 (patch-bb) = e6f4095eb460c605b8dcc02980c5cff0cd0715a8
-SHA1 (patch-ca) = 14ea426afebad99b53e6f8d594ff2f5adac07e30
-SHA1 (patch-da) = 3d63c7a2e76e41b9400869badda0d0e008c4b9bc
-SHA1 (patch-db) = 1bd6b5c35a38476de4bfdb606b5ecf8243ddf91f
-SHA1 (patch-dc) = fe5f8e6eec89ec832d9d161fa0a201e64a841a0c
-SHA1 (patch-dd) = bfccd97ecf3be1ae9ac41a642b356743e055550f
-SHA1 (patch-de) = 3b8423a5936b8434de22fdd04ff2057dde09a2b8
-SHA1 (patch-poll_c-build-fix) = f9a2e86275431c53257c596974a6973c8034b1f0
-SHA1 (patch-src_modules_bluetooth_module-bluetooth-device.c) = 2c107e60772d53970365ab60a3d2fc52a6df2034
-SHA1 (patch-src_modules_rtp_module-rtp-recv.c) = 4119c37ac184bc6794304c50fd57e6c8a69fdd31
-SHA1 (patch-src_modules_rtp_rtp.c) = 00973c7a08f1809d35f9b61b569888bbed14ce6b
-SHA1 (patch-src_pulsecore_macro.h) = 635629d334529021d0dca2defe9c757c4cd20c5b
-SHA1 (patch-src_pulsecore_svolume_mmx.c) = ad1a1be7c1acf52c41447b2fb7d7dcd4c2da204b
+SHA1 (pulseaudio-2.1.tar.xz) = 56b4ad9207ea3aec0ad1b8be4b55793b426a4f01
+RMD160 (pulseaudio-2.1.tar.xz) = 87f6051bbbe59c26e505a9765f388d3ee4d3a485
+Size (pulseaudio-2.1.tar.xz) = 1355004 bytes
+SHA1 (patch-aa) = 59dbd4e6670bc401d2254226b6ba1f4549f35ff7
+SHA1 (patch-configure) = 8f0b923470bd41d0c8495e88b8dfff59628261a1
+SHA1 (patch-dc) = 48baff12528f09940d63c6bdaf4369cab7e56de3
+SHA1 (patch-src_Makefile.in) = 9f1ba78d232cc56c69009245f2eaa6d6c6cf349c

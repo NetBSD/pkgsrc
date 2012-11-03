@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.12 2012/05/30 23:47:49 obache Exp $
+$NetBSD: patch-aa,v 1.13 2012/11/03 01:54:55 ryoon Exp $
 
-SNDDSP_GETODELAY isn't defined on NetBSD-4.x.
 ioctl() takes u_long argument on NetBSD.
 On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
 stat() system call has been versioned, use latest version when dlopen()ing.
 Try more typical device names.
 SOUND_PCM_* is not available on SunOS.
 
---- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
+--- src/utils/padsp.c.orig	2012-07-16 11:37:55.000000000 +0000
 +++ src/utils/padsp.c
 @@ -49,6 +49,9 @@
  #ifdef __linux__
@@ -19,18 +18,7 @@ SOUND_PCM_* is not available on SunOS.
  
  #include <pulse/pulseaudio.h>
  #include <pulse/gccmacro.h>
-@@ -60,6 +63,10 @@
- # define SIOCINQ FIONREAD
- #endif
- 
-+#if !defined(SNDCTL_DSP_GETODELAY)
-+# define SNDCTL_DSP_GETODELAY _IOR ('P', 23, int)
-+#endif
-+
- /* make sure gcc doesn't redefine open and friends as macros */
- #undef open
- #undef open64
-@@ -115,7 +122,11 @@ static pthread_mutex_t func_mutex = PTHR
+@@ -115,7 +118,11 @@ static pthread_mutex_t func_mutex = PTHR
  
  static PA_LLIST_HEAD(fd_info, fd_infos) = NULL;
  
@@ -41,8 +29,8 @@ SOUND_PCM_* is not available on SunOS.
 +#endif
  static int (*_close)(int) = NULL;
  static int (*_open)(const char *, int, mode_t) = NULL;
- static FILE* (*_fopen)(const char *path, const char *mode) = NULL;
-@@ -141,6 +152,15 @@ static inline fnptr dlsym_fn(void *handl
+ static int (*___open_2)(const char *, int) = NULL;
+@@ -143,6 +150,15 @@ static inline fnptr dlsym_fn(void *handl
      return (fnptr) (long) dlsym(handle, symbol);
  }
  
@@ -51,14 +39,14 @@ SOUND_PCM_* is not available on SunOS.
 +do { \
 +    pthread_mutex_lock(&func_mutex); \
 +    if (!_ioctl)  \
-+        _ioctl = (int (*)(int, u_long, void*)) dlsym_fn(RTLD_NEXT, "ioctl"); \
++	_ioctl = (int (*)(int, u_long, void*)) dlsym_fn(RTLD_NEXT, "ioctl"); \
 +    pthread_mutex_unlock(&func_mutex); \
 +} while(0)
 +#else
  #define LOAD_IOCTL_FUNC() \
  do { \
      pthread_mutex_lock(&func_mutex); \
-@@ -148,6 +168,7 @@ do { \
+@@ -150,6 +166,7 @@ do { \
          _ioctl = (int (*)(int, int, void*)) dlsym_fn(RTLD_NEXT, "ioctl"); \
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
@@ -66,7 +54,7 @@ SOUND_PCM_* is not available on SunOS.
  
  #define LOAD_OPEN_FUNC() \
  do { \
-@@ -181,11 +202,16 @@ do { \
+@@ -199,11 +216,16 @@ do { \
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
  
@@ -84,17 +72,7 @@ SOUND_PCM_* is not available on SunOS.
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
  
-@@ -1458,7 +1484,8 @@ static int real_open(const char *filenam
-         return _open(filename, flags, mode);
-     }
- 
--    if (filename && dsp_cloak_enable() && (strcmp(filename, "/dev/dsp") == 0 || strcmp(filename, "/dev/adsp") == 0))
-+    if (filename && dsp_cloak_enable() && (strcmp(filename, "/dev/dsp") == 0 || strcmp(filename, "/dev/adsp") == 0 ||
-+      strcmp(filename, "/dev/sound") == 0 || strcmp(filename, "/dev/audio") == 0))
-         r = dsp_open(flags, &_errno);
-     else if (filename && mixer_cloak_enable() && strcmp(filename, "/dev/mixer") == 0)
-         r = mixer_open(flags, &_errno);
-@@ -2224,6 +2251,7 @@ static int dsp_ioctl(fd_info *i, unsigne
+@@ -2264,6 +2286,7 @@ static int dsp_ioctl(fd_info *i, unsigne
              break;
          }
  
@@ -102,27 +80,25 @@ SOUND_PCM_* is not available on SunOS.
          case SOUND_PCM_READ_RATE:
              debug(DEBUG_LEVEL_NORMAL, __FILE__": SOUND_PCM_READ_RATE\n");
  
-@@ -2247,7 +2275,7 @@ static int dsp_ioctl(fd_info *i, unsigne
-             *(int*) argp = pa_sample_size(&i->sample_spec)*8;
+@@ -2288,6 +2311,7 @@ static int dsp_ioctl(fd_info *i, unsigne
              pa_threaded_mainloop_unlock(i->mainloop);
              break;
--
+ 
 +#endif
          case SNDCTL_DSP_GETOPTR: {
              count_info *info;
  
-@@ -2317,21 +2345,35 @@ fail:
+@@ -2357,21 +2381,35 @@ fail:
      return ret;
  }
  
--#ifdef sun
 +/* NetBSD < 6 and 6.99.0 - 6.99.6 used a different ioctl() definition */
 +#if defined(__NetBSD__) && (__NetBSD_Version__ < 600000000 ||  \
 +    (__NetBSD_Version__ > 699000000 && __NetBSD_Version__ < 699000700) )
 +# define OLD_NETBSD_IOCTL_CALL
 +#endif
 +
-+#ifdef __sun
+ #ifdef sun
  int ioctl(int fd, int request, ...) {
 +#elif defined(OLD_NETBSD_IOCTL_CALL)
 +int ioctl(int fd, u_long request, void *_argp) {
@@ -148,75 +124,3 @@ SOUND_PCM_* is not available on SunOS.
  
      if (!function_enter()) {
          LOAD_IOCTL_FUNC();
-@@ -2390,6 +2432,8 @@ int access(const char *pathname, int mod
-     if (!pathname ||
-         (strcmp(pathname, "/dev/dsp") != 0 &&
-          strcmp(pathname, "/dev/adsp") != 0 &&
-+	 strcmp(pathname, "/dev/sound") != 0 &&
-+	 strcmp(pathname, "/dev/audio") != 0 &&
-          strcmp(pathname, "/dev/sndstat") != 0 &&
-          strcmp(pathname, "/dev/mixer") != 0 )) {
-         LOAD_ACCESS_FUNC();
-@@ -2418,6 +2462,8 @@ int stat(const char *pathname, struct st
-     if (!pathname ||
-         !buf ||
-         ( strcmp(pathname, "/dev/dsp") != 0 &&
-+	  strcmp(pathname, "/dev/sound") != 0 &&
-+	  strcmp(pathname, "/dev/audio") != 0 &&
-           strcmp(pathname, "/dev/adsp") != 0 &&
-           strcmp(pathname, "/dev/sndstat") != 0 &&
-           strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2475,6 +2521,8 @@ int stat64(const char *pathname, struct 
-     if (!pathname ||
-         !buf ||
-         ( strcmp(pathname, "/dev/dsp") != 0 &&
-+	  strcmp(pathname, "/dev/sound") != 0 &&
-+	  strcmp(pathname, "/dev/audio") != 0 &&
-           strcmp(pathname, "/dev/adsp") != 0 &&
-           strcmp(pathname, "/dev/sndstat") != 0 &&
-           strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2520,6 +2568,8 @@ int open64(const char *filename, int fla
- 
-     if (!filename ||
-         ( strcmp(filename, "/dev/dsp") != 0 &&
-+	  strcmp(filename, "/dev/sound") != 0 &&
-+	  strcmp(filename, "/dev/audio") != 0 &&
-           strcmp(filename, "/dev/adsp") != 0 &&
-           strcmp(filename, "/dev/sndstat") != 0 &&
-           strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2540,6 +2590,8 @@ int __xstat(int ver, const char *pathnam
-     if (!pathname ||
-         !buf ||
-         ( strcmp(pathname, "/dev/dsp") != 0 &&
-+	  strcmp(pathname, "/dev/sound") != 0 &&
-+	  strcmp(pathname, "/dev/audio") != 0 &&
-           strcmp(pathname, "/dev/adsp") != 0 &&
-           strcmp(pathname, "/dev/sndstat") != 0 &&
-           strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2563,6 +2615,8 @@ int __xstat64(int ver, const char *pathn
-     if (!pathname ||
-         !buf ||
-         ( strcmp(pathname, "/dev/dsp") != 0 &&
-+	  strcmp(pathname, "/dev/sound") != 0 &&
-+	  strcmp(pathname, "/dev/audio") != 0 &&
-           strcmp(pathname, "/dev/adsp") != 0 &&
-           strcmp(pathname, "/dev/sndstat") != 0 &&
-           strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2592,6 +2646,8 @@ FILE* fopen(const char *filename, const 
-     if (!filename ||
-         !mode ||
-         ( strcmp(filename, "/dev/dsp") != 0 &&
-+	  strcmp(filename, "/dev/sound") != 0 &&
-+	  strcmp(filename, "/dev/audio") != 0 &&
-           strcmp(filename, "/dev/adsp") != 0 &&
-           strcmp(filename, "/dev/sndstat") != 0 &&
-           strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2635,6 +2691,8 @@ FILE *fopen64(const char *filename, cons
-     if (!filename ||
-         !mode ||
-         ( strcmp(filename, "/dev/dsp") != 0 &&
-+	  strcmp(filename, "/dev/sound") != 0 &&
-+	  strcmp(filename, "/dev/audio") != 0 &&
-           strcmp(filename, "/dev/adsp") != 0 &&
-           strcmp(filename, "/dev/sndstat") != 0 &&
-           strcmp(filename, "/dev/mixer") != 0 )) {
