@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 21:14:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/03 13:54:20 ryoon Exp $
 bin/viewnior
 man/man1/viewnior.1
 share/applications/viewnior.desktop
@@ -14,12 +14,16 @@ share/locale/da/LC_MESSAGES/viewnior.mo
 share/locale/de/LC_MESSAGES/viewnior.mo
 share/locale/el/LC_MESSAGES/viewnior.mo
 share/locale/es/LC_MESSAGES/viewnior.mo
+share/locale/fi/LC_MESSAGES/viewnior.mo
 share/locale/fr/LC_MESSAGES/viewnior.mo
+share/locale/gl/LC_MESSAGES/viewnior.mo
+share/locale/he/LC_MESSAGES/viewnior.mo
 share/locale/hu/LC_MESSAGES/viewnior.mo
 share/locale/it/LC_MESSAGES/viewnior.mo
 share/locale/ja/LC_MESSAGES/viewnior.mo
 share/locale/lt/LC_MESSAGES/viewnior.mo
 share/locale/nl/LC_MESSAGES/viewnior.mo
+share/locale/oc/LC_MESSAGES/viewnior.mo
 share/locale/pl/LC_MESSAGES/viewnior.mo
 share/locale/pt/LC_MESSAGES/viewnior.mo
 share/locale/pt_BR/LC_MESSAGES/viewnior.mo
