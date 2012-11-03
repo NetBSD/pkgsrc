@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:00:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/11/03 22:56:06 gdt Exp $
 bin/grig
+lib/locale/fr/LC_MESSAGES/grig.mo
 man/man1/grig.1
 share/grig/AUTHORS
 share/grig/COPYING
