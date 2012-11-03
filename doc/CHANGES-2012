@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3495 2012/11/03 22:58:56 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3496 2012/11/03 23:13:48 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5338,3 +5338,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/fetchmail to 6.3.22 [morr 2012-11-03]
 	Updated mail/fetchmailconf to 6.3.22 [morr 2012-11-03]
 	Added fonts/sourcecodepro-fonts version 1.009 [ryoon 2012-11-03]
+	Updated net/p5-Net-Server to 2.006 [pettai 2012-11-03]
