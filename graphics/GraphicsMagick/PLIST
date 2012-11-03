@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/02/26 12:22:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/11/03 20:45:46 adam Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -115,6 +115,7 @@ lib/${PKGNAME}/modules-Q8/coders/icon.la
 lib/${PKGNAME}/modules-Q8/coders/identity.la
 lib/${PKGNAME}/modules-Q8/coders/info.la
 lib/${PKGNAME}/modules-Q8/coders/jbig.la
+lib/${PKGNAME}/modules-Q8/coders/jnx.la
 ${PLIST.jasper}lib/${PKGNAME}/modules-Q8/coders/jp2.la
 lib/${PKGNAME}/modules-Q8/coders/jpeg.la
 lib/${PKGNAME}/modules-Q8/coders/label.la
@@ -245,12 +246,10 @@ share/doc/GraphicsMagick/www/Magick++/Drawable_example_1.png
 share/doc/GraphicsMagick/www/Magick++/Enumerations.html
 share/doc/GraphicsMagick/www/Magick++/Exception.html
 share/doc/GraphicsMagick/www/Magick++/FormatCharacters.html
-share/doc/GraphicsMagick/www/Magick++/Future.html
 share/doc/GraphicsMagick/www/Magick++/Geometry.html
 share/doc/GraphicsMagick/www/Magick++/Image.html
 share/doc/GraphicsMagick/www/Magick++/Image.png
 share/doc/GraphicsMagick/www/Magick++/ImageDesign.html
-share/doc/GraphicsMagick/www/Magick++/Install.html
 share/doc/GraphicsMagick/www/Magick++/Montage.html
 share/doc/GraphicsMagick/www/Magick++/PixelPacket.html
 share/doc/GraphicsMagick/www/Magick++/Pixels.html
