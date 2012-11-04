@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3500 2012/11/04 13:46:22 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3501 2012/11/04 17:14:52 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5343,3 +5343,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/p5-Unicode-Normalize to 1.16 [wen 2012-11-04]
 	Updated time/p5-DateTime-TimeZone to 1.53 [wen 2012-11-04]
 	Updated devel/p5-Tree-DAG_Node to 1.07 [wen 2012-11-04]
+	Updated pkgtools/pkg_summary-utils to 0.59.0 [cheusov 2012-11-04]
