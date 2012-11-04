@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3499 2012/11/04 13:28:06 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3500 2012/11/04 13:46:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5342,3 +5342,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/perl5 to 5.16.2 [adam 2012-11-04]
 	Updated converters/p5-Unicode-Normalize to 1.16 [wen 2012-11-04]
 	Updated time/p5-DateTime-TimeZone to 1.53 [wen 2012-11-04]
+	Updated devel/p5-Tree-DAG_Node to 1.07 [wen 2012-11-04]
