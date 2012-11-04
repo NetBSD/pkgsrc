@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2012/10/31 11:19:14 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/04 13:45:23 wen Exp $
 #
 
-DISTNAME=	Tree-DAG_Node-1.06
+DISTNAME=	Tree-DAG_Node-1.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tree/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dprice@cs.nmsu.edu
 HOMEPAGE=	http://search.cpan.org/dist/Tree-DAG_Node/
