@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/08/10 08:46:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.13.26.1 2012/11/04 17:12:29 spz Exp $
 bin/fetchmail
 man/man1/fetchmail.1
 share/doc/fetchmail/COPYING
@@ -29,6 +29,7 @@ share/locale/pt_BR/LC_MESSAGES/fetchmail.mo
 share/locale/ru/LC_MESSAGES/fetchmail.mo
 share/locale/sk/LC_MESSAGES/fetchmail.mo
 share/locale/sq/LC_MESSAGES/fetchmail.mo
+share/locale/sv/LC_MESSAGES/fetchmail.mo
 share/locale/tr/LC_MESSAGES/fetchmail.mo
 share/locale/vi/LC_MESSAGES/fetchmail.mo
 share/locale/zh_CN/LC_MESSAGES/fetchmail.mo
