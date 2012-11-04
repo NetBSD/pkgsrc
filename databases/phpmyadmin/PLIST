@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2012/08/28 15:54:54 tron Exp $
+@comment $NetBSD: PLIST,v 1.30.2.1 2012/11/04 09:02:47 spz Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
 share/doc/phpmyadmin/LICENSE
@@ -65,8 +65,6 @@ share/phpmyadmin/js/export.js
 share/phpmyadmin/js/functions.js
 share/phpmyadmin/js/get_image.js.php
 share/phpmyadmin/js/gis_data_editor.js
-share/phpmyadmin/js/highcharts/exporting.js
-share/phpmyadmin/js/highcharts/highcharts.js
 share/phpmyadmin/js/import.js
 share/phpmyadmin/js/indexes.js
 share/phpmyadmin/js/jquery/jquery-1.6.2.js
@@ -423,6 +421,7 @@ share/phpmyadmin/locale/ru/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/si/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/sk/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/sl/LC_MESSAGES/phpmyadmin.mo
+share/phpmyadmin/locale/sr@latin/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/sv/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/tr/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/uk/LC_MESSAGES/phpmyadmin.mo
