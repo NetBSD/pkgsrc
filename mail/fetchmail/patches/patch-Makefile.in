@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/11/03 22:50:22 morr Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2012/11/04 18:41:47 morr Exp $
 
-Even with disabled python, wrapper around fetchmailconf.py and it's
+Even with disabled python, wrapper around fetchmailconf.py and its
 manpage is installed.
 
 --- Makefile.in.orig	2012-08-29 21:25:11.000000000 +0000
