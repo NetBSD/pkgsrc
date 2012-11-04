@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile.in,v 1.1.2.2 2012/11/04 17:12:30 spz Exp $
+
+Even with disabled python, wrapper around fetchmailconf.py and it's
+manpage is installed.
+
+--- Makefile.in.orig	2012-08-29 21:25:11.000000000 +0000
++++ Makefile.in
+@@ -448,10 +448,10 @@ ACLOCAL_AMFLAGS = -I m4 -I m4-local
+ AM_YFLAGS = -d
+ BUILT_SOURCES = rcfile_y.h
+ dist_noinst_SCRIPTS = specgen.sh
+-dist_man1_MANS = fetchmail.man $(pym)
++dist_man1_MANS = fetchmail.man
+ pys = fetchmailconf.py
+ pym = fetchmailconf.man
+-nodist_bin_SCRIPTS = fetchmailconf
++nodist_bin_SCRIPTS =
+ python_PYTHON = $(pys)
+ CLEANFILES = $(nodist_bin_SCRIPTS)
+ noinst_LIBRARIES = libfm.a $(am__append_2)
