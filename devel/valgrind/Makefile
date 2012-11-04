@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:52 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/11/04 05:12:56 minskim Exp $
 #
 
 DISTNAME=		valgrind-3.8.1
@@ -15,7 +15,8 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/valgrind.pc.in
 GNU_CONFIGURE=		yes
 
-ONLY_FOR_PLATFORM=	Linux-*-x86_64 \
+ONLY_FOR_PLATFORM=	Darwin-*-i386 Darwin-*-x86_64 \
+			Linux-*-x86_64 \
 			Linux-*-i386   \
 			Linux-*-arm*
 
