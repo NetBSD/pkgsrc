@@ -646,6 +646,7 @@ xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xaw			Enable Xaw support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast.
+xcb			Enable XCB (libxcb) support.
 xft2			Enable Xft support.
 xim			Enable X Input Method support.
 xinerama		Enable Xinerama support.
