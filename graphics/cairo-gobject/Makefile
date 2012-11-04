@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2012/10/22 15:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/04 23:49:50 wiz Exp $
 
-DISTNAME=	cairo-1.12.6
+DISTNAME=	cairo-1.12.8
 PKGNAME=	${DISTNAME:S/-/-gobject-/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -25,6 +25,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps
 
+INSTALLATION_DIRS+=	lib/pkgconfig
+
 .if exists(/System/Library/Frameworks/Carbon.framework)
 CONFIGURE_ARGS+=        --enable-quartz
 CONFIGURE_ARGS+=        --enable-quartz-font
@@ -46,7 +48,6 @@ CONFIGURE_ENV+=		ac_cv_type___uint128_t=no
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/src/cairo-gobject.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
