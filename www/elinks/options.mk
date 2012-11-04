@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.15 2012/11/03 14:43:25 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2012/11/04 21:50:53 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
-PKG_SUPPORTED_OPTIONS+=	bittorrent nntp javascript finger gopher
+PKG_SUPPORTED_OPTIONS+=	bittorrent nntp finger gopher
 PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-exmode expat
 PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
 PKG_SUPPORTED_OPTIONS+=	kerberos
