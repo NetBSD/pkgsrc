@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2012/11/04 05:12:56 minskim Exp $
+lib/valgrind/drd-amd64-darwin.dSYM/Contents/Info.plist
+lib/valgrind/drd-amd64-darwin.dSYM/Contents/Resources/DWARF/drd-amd64-darwin
+lib/valgrind/exp-dhat-amd64-darwin.dSYM/Contents/Info.plist
+lib/valgrind/exp-dhat-amd64-darwin.dSYM/Contents/Resources/DWARF/exp-dhat-amd64-darwin
+lib/valgrind/exp-sgcheck-amd64-darwin.dSYM/Contents/Info.plist
+lib/valgrind/exp-sgcheck-amd64-darwin.dSYM/Contents/Resources/DWARF/exp-sgcheck-amd64-darwin
+lib/valgrind/helgrind-amd64-darwin.dSYM/Contents/Info.plist
+lib/valgrind/helgrind-amd64-darwin.dSYM/Contents/Resources/DWARF/helgrind-amd64-darwin
+lib/valgrind/massif-amd64-darwin.dSYM/Contents/Info.plist
+lib/valgrind/massif-amd64-darwin.dSYM/Contents/Resources/DWARF/massif-amd64-darwin
+lib/valgrind/memcheck-amd64-darwin.dSYM/Contents/Info.plist
+lib/valgrind/memcheck-amd64-darwin.dSYM/Contents/Resources/DWARF/memcheck-amd64-darwin
+lib/valgrind/vgpreload_core-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_core-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_core-amd64-darwin.so
+lib/valgrind/vgpreload_drd-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_drd-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_drd-amd64-darwin.so
+lib/valgrind/vgpreload_exp-dhat-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_exp-dhat-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_exp-dhat-amd64-darwin.so
+lib/valgrind/vgpreload_exp-sgcheck-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_exp-sgcheck-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_exp-sgcheck-amd64-darwin.so
+lib/valgrind/vgpreload_helgrind-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_helgrind-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_helgrind-amd64-darwin.so
+lib/valgrind/vgpreload_massif-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_massif-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_massif-amd64-darwin.so
+lib/valgrind/vgpreload_memcheck-amd64-darwin.so.dSYM/Contents/Info.plist
+lib/valgrind/vgpreload_memcheck-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_memcheck-amd64-darwin.so
