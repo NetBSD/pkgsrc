@@ -1,0 +1,3 @@
+mailsort is a perl script that sorts mbox format (single file) mail
+folders by the dates in the `From ' lines that separate mail messages
+in each folder.
