@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.23 2012/11/04 17:14:25 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.24 2012/11/05 09:08:20 spz Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -65,3 +65,5 @@ Pullup ticket #3957 - requested by abs
 mail/exim: security update
 Pullup ticket #3958 - requested by morr
 mail/fetchmail: security update
+Pullup ticket #3959 - requested by tron
+mail/fetchmail: build fix
