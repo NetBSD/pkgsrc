@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2007/11/07 08:57:10 tron Exp $
+# $NetBSD: options.mk,v 1.15.44.1 2012/11/05 09:06:58 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=	kerberos4 kerberos gssapi ssl
@@ -46,6 +46,13 @@ CONFIGURE_ARGS+=        --with-kerberos5=no
 ### Support POP3 and IMAP over SSL.
 ###
 .if !empty(PKG_OPTIONS:Mssl)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
+# "fetchmail" requires the "SSL_CTX_clear_options" library function which
+# was added in OpenSSL 0.9.8m. NetBSD 5.* ships with a snapshot that
+# claims to be OpenSSL 0.9.9 but doesn't provide this function. Force
+# the use of the "openssl" package to fix the build.
+USE_BUILTIN.openssl=	no
+.  endif
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .else
