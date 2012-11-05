@@ -4,4 +4,6 @@ modular enough to be statically linked, but also works fine as a shared
 library.  FLTK also includes FLUID, an interactive user interface builder
 program.
 
-FLTK2 is the next generation of FLTK and still in very active development.
+FLTK 2.0 is an experimental branch and has been declared inactive,
+superceded by 3.0.
+
