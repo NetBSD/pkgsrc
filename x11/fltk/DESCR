@@ -3,3 +3,11 @@ toolkit for X (UNIX), OpenGL, and Win32.  FLTK was designed to be small and
 modular enough to be statically linked, but also works fine as a shared
 library.  FLTK also includes FLUID, an interactive user interface builder
 program.
+
+This is version 1.1.  From the FLTK website:
+
+  FLTK 1.1.x is the former stable development branch. It is no longer
+  being maintained, and any bug fixes will be applied against FLTK
+  1.3.x.
+
+  We recommend using the active FLTK 1.3.0 branch instead.
