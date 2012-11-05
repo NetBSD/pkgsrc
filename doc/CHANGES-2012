@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3506 2012/11/04 23:50:21 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3507 2012/11/05 14:27:21 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5350,3 +5350,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/nsd to 3.2.14 [pettai 2012-11-04]
 	Updated graphics/cairo to 1.12.8 [wiz 2012-11-04]
 	Updated graphics/cairo-gobject to 1.12.8 [wiz 2012-11-04]
+	Updated net/dhcpd-pools to 2.16nb2 [he 2012-11-05]
