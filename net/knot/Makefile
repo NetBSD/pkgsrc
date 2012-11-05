@@ -1,24 +1,26 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 17:18:31 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/05 23:08:06 pettai Exp $
 #
 
-DISTNAME=	knot-1.1.0
+DISTNAME=	knot-1.1.1
 CATEGORIES=	net
-MASTER_SITES=	http://public.nic.cz/files/knot-dns/
+MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
+FETCH_USING=	curl
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.knot-dns.cz/
 COMMENT=	Knot (auth) DNS server
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=	VARBASE
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/knot
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/knot
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	flex gmake
+RCD_SCRIPTS=	knot
 
 EGDIR=			${PREFIX}/share/examples/knot
 KNOT_SYSCONFDIR=	${PKG_SYSCONFDIR}/knot
