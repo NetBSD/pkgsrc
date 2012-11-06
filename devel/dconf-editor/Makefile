@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:51 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/11/06 18:52:24 drochner Exp $
 #
 
-DISTNAME=	dconf-0.12.1
-PKGNAME=	dconf-editor-0.12.1
-PKGREVISION=	4
+DISTNAME=	dconf-0.14.1
+PKGNAME=	dconf-editor-0.14.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.14/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,7 +18,7 @@ PATCHDIR=	${.CURDIR}/../../devel/dconf/patches
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --enable-editor
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake intltool
 
 BUILD_DIRS=	editor
 INSTALL_DIRS=	editor
