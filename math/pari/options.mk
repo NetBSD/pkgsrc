@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2011/03/18 15:00:01 adam Exp $
+# $NetBSD: options.mk,v 1.7 2012/11/06 02:18:37 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
-PKG_SUGGESTED_OPTIONS=	doc gmp x11
+# x11 is not suggested because it's not reasonable to include a GUI in
+# a foundation library.
+PKG_SUGGESTED_OPTIONS=	doc gmp
 
 .include "../../mk/bsd.options.mk"
 
