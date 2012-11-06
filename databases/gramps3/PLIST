@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/09/13 19:56:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/11/06 18:49:17 drochner Exp $
 bin/gramps
 man/cs/man1/gramps.1
 man/fr/man1/gramps.1
@@ -127,6 +127,9 @@ share/gramps/Filters/Rules/Citation/_ChangedSince.pyo
 share/gramps/Filters/Rules/Citation/_CitationPrivate.py
 share/gramps/Filters/Rules/Citation/_CitationPrivate.pyc
 share/gramps/Filters/Rules/Citation/_CitationPrivate.pyo
+share/gramps/Filters/Rules/Citation/_HasCitation.py
+share/gramps/Filters/Rules/Citation/_HasCitation.pyc
+share/gramps/Filters/Rules/Citation/_HasCitation.pyo
 share/gramps/Filters/Rules/Citation/_HasGallery.py
 share/gramps/Filters/Rules/Citation/_HasGallery.pyc
 share/gramps/Filters/Rules/Citation/_HasGallery.pyo
@@ -283,6 +286,9 @@ share/gramps/Filters/Rules/Family/_HasRelType.pyo
 share/gramps/Filters/Rules/Family/_HasSourceCount.py
 share/gramps/Filters/Rules/Family/_HasSourceCount.pyc
 share/gramps/Filters/Rules/Family/_HasSourceCount.pyo
+share/gramps/Filters/Rules/Family/_HasSourceOf.py
+share/gramps/Filters/Rules/Family/_HasSourceOf.pyc
+share/gramps/Filters/Rules/Family/_HasSourceOf.pyo
 share/gramps/Filters/Rules/Family/_HasTag.py
 share/gramps/Filters/Rules/Family/_HasTag.pyc
 share/gramps/Filters/Rules/Family/_HasTag.pyo
@@ -337,6 +343,9 @@ share/gramps/Filters/Rules/MediaObject/_ChangedSince.pyo
 share/gramps/Filters/Rules/MediaObject/_HasAttribute.py
 share/gramps/Filters/Rules/MediaObject/_HasAttribute.pyc
 share/gramps/Filters/Rules/MediaObject/_HasAttribute.pyo
+share/gramps/Filters/Rules/MediaObject/_HasCitation.py
+share/gramps/Filters/Rules/MediaObject/_HasCitation.pyc
+share/gramps/Filters/Rules/MediaObject/_HasCitation.pyo
 share/gramps/Filters/Rules/MediaObject/_HasIdOf.py
 share/gramps/Filters/Rules/MediaObject/_HasIdOf.pyc
 share/gramps/Filters/Rules/MediaObject/_HasIdOf.pyo
@@ -352,12 +361,21 @@ share/gramps/Filters/Rules/MediaObject/_HasNoteRegexp.pyo
 share/gramps/Filters/Rules/MediaObject/_HasReferenceCountOf.py
 share/gramps/Filters/Rules/MediaObject/_HasReferenceCountOf.pyc
 share/gramps/Filters/Rules/MediaObject/_HasReferenceCountOf.pyo
+share/gramps/Filters/Rules/MediaObject/_HasSourceCount.py
+share/gramps/Filters/Rules/MediaObject/_HasSourceCount.pyc
+share/gramps/Filters/Rules/MediaObject/_HasSourceCount.pyo
+share/gramps/Filters/Rules/MediaObject/_HasSourceOf.py
+share/gramps/Filters/Rules/MediaObject/_HasSourceOf.pyc
+share/gramps/Filters/Rules/MediaObject/_HasSourceOf.pyo
 share/gramps/Filters/Rules/MediaObject/_HasTag.py
 share/gramps/Filters/Rules/MediaObject/_HasTag.pyc
 share/gramps/Filters/Rules/MediaObject/_HasTag.pyo
 share/gramps/Filters/Rules/MediaObject/_MatchesFilter.py
 share/gramps/Filters/Rules/MediaObject/_MatchesFilter.pyc
 share/gramps/Filters/Rules/MediaObject/_MatchesFilter.pyo
+share/gramps/Filters/Rules/MediaObject/_MatchesSourceConfidence.py
+share/gramps/Filters/Rules/MediaObject/_MatchesSourceConfidence.pyc
+share/gramps/Filters/Rules/MediaObject/_MatchesSourceConfidence.pyo
 share/gramps/Filters/Rules/MediaObject/_MediaPrivate.py
 share/gramps/Filters/Rules/MediaObject/_MediaPrivate.pyc
 share/gramps/Filters/Rules/MediaObject/_MediaPrivate.pyo
@@ -643,6 +661,9 @@ share/gramps/Filters/Rules/Place/_AllPlaces.pyo
 share/gramps/Filters/Rules/Place/_ChangedSince.py
 share/gramps/Filters/Rules/Place/_ChangedSince.pyc
 share/gramps/Filters/Rules/Place/_ChangedSince.pyo
+share/gramps/Filters/Rules/Place/_HasCitation.py
+share/gramps/Filters/Rules/Place/_HasCitation.pyc
+share/gramps/Filters/Rules/Place/_HasCitation.pyo
 share/gramps/Filters/Rules/Place/_HasGallery.py
 share/gramps/Filters/Rules/Place/_HasGallery.pyc
 share/gramps/Filters/Rules/Place/_HasGallery.pyo
@@ -667,6 +688,12 @@ share/gramps/Filters/Rules/Place/_HasPlace.pyo
 share/gramps/Filters/Rules/Place/_HasReferenceCountOf.py
 share/gramps/Filters/Rules/Place/_HasReferenceCountOf.pyc
 share/gramps/Filters/Rules/Place/_HasReferenceCountOf.pyo
+share/gramps/Filters/Rules/Place/_HasSourceCount.py
+share/gramps/Filters/Rules/Place/_HasSourceCount.pyc
+share/gramps/Filters/Rules/Place/_HasSourceCount.pyo
+share/gramps/Filters/Rules/Place/_HasSourceOf.py
+share/gramps/Filters/Rules/Place/_HasSourceOf.pyc
+share/gramps/Filters/Rules/Place/_HasSourceOf.pyo
 share/gramps/Filters/Rules/Place/_InLatLonNeighborhood.py
 share/gramps/Filters/Rules/Place/_InLatLonNeighborhood.pyc
 share/gramps/Filters/Rules/Place/_InLatLonNeighborhood.pyo
@@ -676,6 +703,9 @@ share/gramps/Filters/Rules/Place/_MatchesEventFilter.pyo
 share/gramps/Filters/Rules/Place/_MatchesFilter.py
 share/gramps/Filters/Rules/Place/_MatchesFilter.pyc
 share/gramps/Filters/Rules/Place/_MatchesFilter.pyo
+share/gramps/Filters/Rules/Place/_MatchesSourceConfidence.py
+share/gramps/Filters/Rules/Place/_MatchesSourceConfidence.pyc
+share/gramps/Filters/Rules/Place/_MatchesSourceConfidence.pyo
 share/gramps/Filters/Rules/Place/_PlacePrivate.py
 share/gramps/Filters/Rules/Place/_PlacePrivate.pyc
 share/gramps/Filters/Rules/Place/_PlacePrivate.pyo
@@ -811,6 +841,9 @@ share/gramps/Filters/Rules/_HasSourceBase.pyo
 share/gramps/Filters/Rules/_HasSourceCountBase.py
 share/gramps/Filters/Rules/_HasSourceCountBase.pyc
 share/gramps/Filters/Rules/_HasSourceCountBase.pyo
+share/gramps/Filters/Rules/_HasSourceOfBase.py
+share/gramps/Filters/Rules/_HasSourceOfBase.pyc
+share/gramps/Filters/Rules/_HasSourceOfBase.pyo
 share/gramps/Filters/Rules/_HasTagBase.py
 share/gramps/Filters/Rules/_HasTagBase.pyc
 share/gramps/Filters/Rules/_HasTagBase.pyo
