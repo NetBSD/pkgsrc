@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2012/10/08 23:01:20 adam Exp $
+# $NetBSD: Makefile,v 1.38 2012/11/06 18:49:17 drochner Exp $
 #
 
-DISTNAME=		gramps-3.4.1
-PKGREVISION=		3
+DISTNAME=		gramps-3.4.2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=		http://gramps-project.org/
 COMMENT=		Genealogical Research and Analysis Management Programming System V3
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
+#DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 
 USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 USE_PKGLOCALEDIR=	yes
