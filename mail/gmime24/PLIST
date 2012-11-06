@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/21 12:26:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/11/06 18:56:12 drochner Exp $
 include/gmime-2.4/gmime/gmime-charset.h
 include/gmime-2.4/gmime/gmime-cipher-context.h
 include/gmime-2.4/gmime/gmime-content-type.h
@@ -105,7 +105,6 @@ share/gtk-doc/html/gmime-2.4/ch01.html
 share/gtk-doc/html/gmime-2.4/classes.html
 share/gtk-doc/html/gmime-2.4/core.html
 share/gtk-doc/html/gmime-2.4/fundamentals.html
-share/gtk-doc/html/gmime-2.4/gmime-2.4.devhelp
 share/gtk-doc/html/gmime-2.4/gmime-2.4.devhelp2
 share/gtk-doc/html/gmime-2.4/gmime-GMimeHeader.html
 share/gtk-doc/html/gmime-2.4/gmime-GMimeParam.html
