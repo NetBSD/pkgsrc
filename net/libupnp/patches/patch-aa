@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.12 2012/11/06 18:59:46 drochner Exp $
+
+--- upnp/src/inc/uuid.h.orig	2012-02-23 17:48:42.000000000 +0000
++++ upnp/src/inc/uuid.h
+@@ -45,6 +45,9 @@ int uuid_create(
+ 	/*! . */
+ 	uuid_upnp * id);
+ 
++/* XXX avoid namespace conflict with system (DCE RPC) function */
++#define uuid_create upnp_uuid_create
++
+ /*!
+  * \brief Out will be xxxx-xx-xx-xx-xxxxxx format.
+  */
