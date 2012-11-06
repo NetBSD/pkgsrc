@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.12 2007/08/15 13:56:24 jlam Exp $
+# $NetBSD: checksum,v 1.12.46.1 2012/11/06 09:55:38 tron Exp $
 #
 # Copyright (c) 2006, 2007 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -156,17 +156,12 @@ fi
 		${TEST} -z "$patch" || sfile="${sfile##*/}"
 		${TEST} "$d_file" = "($sfile)" || continue
 
-		case "$files_left" in
-		"$file"|"$file "*)	pre= ;;
-		*" $file")		pre="${files_left%% $file}" ;;
-		*)			pre="${files_left%% $file *} " ;;
-		esac
-		case "$files_left" in
-		"$file"|*" $file")	post= ;;
-		"$file "*)		post="${files_left##$file }" ;;
-		*)			post="${files_left##* $file }" ;;
-		esac
-		files_left="${pre}${post}"
+		new_files_left=
+		for file_left in $files_left; do
+			${TEST} "${file_left}" = "${file}" || \
+			    new_files_left="${new_files_left} ${file_left}"
+		done
+		files_left="${new_files_left}"
 
 		if ${TEST} "$d_checksum" = "IGNORE"; then
 			${ECHO} 1>&2 "$self: Ignoring checksum for $sfile"
