@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/27 13:51:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/06 18:38:33 drochner Exp $
 bin/flactag
+man/man1/flactag.1
