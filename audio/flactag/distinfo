@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.5 2012/02/04 09:26:10 sbd Exp $
+$NetBSD: distinfo,v 1.6 2012/11/06 18:38:33 drochner Exp $
 
-SHA1 (flactag-1.1.tar.gz) = 8b0b65068b2659eceb36831694657bf2210ca36b
-RMD160 (flactag-1.1.tar.gz) = 975091ad58b1c88e972e0b99ae800c068bc668d7
-Size (flactag-1.1.tar.gz) = 110567 bytes
+SHA1 (flactag-2.0.4.tar.gz) = eb62b3b8657fe26c6f838b0098fd4f176ccb454d
+RMD160 (flactag-2.0.4.tar.gz) = 2eeece5d5da94a51e0e11fe425de3d0ec11b6639
+Size (flactag-2.0.4.tar.gz) = 482150 bytes
 SHA1 (patch-CommandLine.cc) = f677354989b98c26a613cfdf1f10ab8746ac6ec3
-SHA1 (patch-ConfigFile.cc) = 3936aabe97b7660cbe5731e81317494782859877
-SHA1 (patch-ErrorLog.cc) = 7ae1bbce462db4e7b776d976b14485be1a40d063
-SHA1 (patch-FileNameBuilder.cc) = c7ba316bcf999670125c37573f29b7338804b15c
-SHA1 (patch-aa) = 71425b556d64b828083f0738e61fb0b9ca15b1df
-SHA1 (patch-ac) = cf71f4f68663ed9dc73662e32df55c0621fcaa14
-SHA1 (patch-ad) = ff867a7acc08e08e3f109c63a235c13243a95cc6
+SHA1 (patch-ConfigFile.cc) = 73ead20be34420b903eaa5ad61b7ba60f0aa03fe
+SHA1 (patch-ErrorLog.cc) = d3557d5f19a571fbaeb9b6cfe574cf7b31afb1d1
+SHA1 (patch-FileNameBuilder.cc) = 8daed0f95e479b22228bd4f62163f8f148107df8
+SHA1 (patch-aa) = af23402361767ad79a2b0af006e2a89a25318d41
