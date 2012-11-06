@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2012/11/03 09:08:51 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2012/11/06 12:04:34 ryoon Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -15,18 +15,26 @@ BUILDLINK_PKGSRCDIR.pulseaudio?=	../../audio/pulseaudio
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
+BUILDLINK_LIBDIRS.pulseaudio+=		lib/pulseaudio
+BUILDLINK_RPATHDIRS.pulseaudio+=	lib/pulseaudio
+
 pkgbase:= pulseaudio
 .  include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.pulseaudio:Mx11)
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .endif
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .endif # PULSEAUDIO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pulseaudio
