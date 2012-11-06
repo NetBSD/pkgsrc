@@ -1,12 +1,12 @@
-$NetBSD: patch-ErrorLog.cc,v 1.1 2012/02/04 09:26:11 sbd Exp $
+$NetBSD: patch-ErrorLog.cc,v 1.2 2012/11/06 18:38:34 drochner Exp $
 
---- ErrorLog.cc.orig	2008-12-16 11:20:56.000000000 +0000
+--- ErrorLog.cc.orig	2012-10-19 21:40:21.000000000 +0000
 +++ ErrorLog.cc
-@@ -25,6 +25,7 @@
+@@ -26,6 +26,7 @@
  ----------------------------------------------------------------------------*/
  
  #include "ErrorLog.h"
 +#include <cstdio>
  
- const std::vector<std::string>::size_type CErrorLog::m_cMaxSize=100;
- 	
+ #include <stdio.h>
+ 
