@@ -1,0 +1,16 @@
+File::KeePass gives access to KeePass version 1 (kdb) and version
+2 (kdbx) databases.
+
+The version 1 and version 2 databases are very different in
+construction, but the majority of information overlaps and many
+algorithms are similar. File::KeePass attempts to iron out as many
+of the differences.
+
+File::KeePass gives nearly raw data access. There are a few utility
+methods for manipulating groups and entries. More advanced manipulation
+can easily be layered on top by other modules.
+
+File::KeePass is only used for reading and writing databases and
+for keeping passwords scrambled while in memory. Programs dealing
+with UI or using of auto-type features are the domain of other
+modules on CPAN. File::KeePass::Agent is one example.
