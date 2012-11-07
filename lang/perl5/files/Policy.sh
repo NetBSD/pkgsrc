@@ -1,11 +1,13 @@
-# $NetBSD: Policy.sh,v 1.4 2012/11/07 02:46:19 sbd Exp $
+# $NetBSD: Policy.sh,v 1.5 2012/11/07 03:58:00 sbd Exp $
 #
 # Site-wide policy settings for pkgsrc Perl
 #
 archname='@MACHINE_ARCH@-@LOWER_OPSYS@'
 cc='@CC@'
-if $test -n '@CFLAGS@'; then
-	optimize='@CFLAGS@'
+ccflags='@CFLAGS@'
+ldflags='@LDFLAGS@'
+if $test -n "$ccflags"; then
+	optimize="$ccflags"
 fi
 i_malloc='undef'
 installusrbinperl='undef'
