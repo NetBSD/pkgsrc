@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2012/10/08 09:21:05 asau Exp $
+# $NetBSD: Makefile.common,v 1.14 2012/11/07 23:15:48 adam Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdv/}
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://libdv.sourceforge.net/
 COMMENT=	DV video codec library
+LICENSE=	gnu-lgpl-v2.1
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/libdv/distinfo
 PATCHDIR=		${.CURDIR}/../../multimedia/libdv/patches
@@ -27,7 +28,7 @@ PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-.if ${X11_TYPE} != "native"
+.if ${X11_TYPE} != "native" && ${OPSYS} != "Darwin"
 .include "../../x11/libXv/buildlink3.mk"
 .elif !exists(${X11BASE}/include/X11/extensions/Xvlib.h)
 CONFIGURE_ARGS+=	--disable-xv
