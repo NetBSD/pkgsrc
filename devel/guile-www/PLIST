@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.11 2011/05/31 11:53:52 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/11/07 00:50:05 gdt Exp $
 info/guile-www.info
 share/guile/site/www/cgi
+share/guile/site/www/crlf
 share/guile/site/www/data/http-status
 share/guile/site/www/data/mime-types
 share/guile/site/www/http
 share/guile/site/www/main
+share/guile/site/www/post
 share/guile/site/www/server-utils/answer
 share/guile/site/www/server-utils/big-dishing-loop
 share/guile/site/www/server-utils/cgi-prep
