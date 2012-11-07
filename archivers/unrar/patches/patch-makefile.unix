@@ -1,0 +1,15 @@
+$NetBSD: patch-makefile.unix,v 1.1 2012/11/07 22:35:55 adam Exp $
+
+Use pkgsrc provided CXX and CXXFLAGS.
+
+--- makefile.unix.orig	2012-11-07 22:31:22.000000000 +0000
++++ makefile.unix
+@@ -2,8 +2,6 @@
+ # Makefile for UNIX - unrar
+ 
+ # Linux using GCC
+-CXX=g++
+-CXXFLAGS=-O2
+ LIBFLAGS=-fPIC
+ DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ STRIP=strip
