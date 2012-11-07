@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3512 2012/11/07 10:14:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3513 2012/11/07 10:24:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5363,3 +5363,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/liferea-current to 1.8.10 [drochner 2012-11-06]
 	Updated devel/guile-www to 2.35 [gdt 2012-11-07]
 	Added devel/p5-Sort-Naturally version 1.03 [wiz 2012-11-07]
+	Added security/p5-File-KeePass version 2.03 [wiz 2012-11-07]
