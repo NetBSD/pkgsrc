@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2011/07/25 10:16:54 adam Exp $
+$NetBSD: patch-ab,v 1.12 2012/11/07 20:59:51 adam Exp $
 
 --- config/mh-darwin.orig	2011-07-19 21:16:46.000000000 +0000
 +++ config/mh-darwin
-@@ -25,11 +25,7 @@ SHLIB.c=	$(CC) -dynamiclib -dynamic $(CF
+@@ -28,11 +28,7 @@ SHLIB.c=	$(CC) -dynamiclib -dynamic $(CF
  SHLIB.cc=	$(CXX) -dynamiclib -dynamic $(CXXFLAGS) $(LDFLAGS) $(LD_SOOPTIONS)
  
  ## Compiler switches to embed a library name and version information

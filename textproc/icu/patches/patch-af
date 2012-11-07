@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.11 2012/04/25 18:53:44 adam Exp $
+$NetBSD: patch-af,v 1.12 2012/11/07 20:59:51 adam Exp $
 
 --- runConfigureICU.orig	2011-07-19 21:19:38.000000000 +0000
 +++ runConfigureICU
-@@ -286,7 +286,7 @@ case $platform in
+@@ -284,7 +284,7 @@ case $platform in
          RELEASE_CFLAGS='-O3'
          RELEASE_CXXFLAGS='-O3'
          ;;
