@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/11/26 20:03:21 imil Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/11/07 15:25:04 joerg Exp $
 include/compiz/compiz-animationaddon.h
 lib/compiz/lib3d.la
 lib/compiz/libaddhelper.la
@@ -16,6 +16,7 @@ lib/compiz/libgroup.la
 lib/compiz/libloginout.la
 lib/compiz/libmaximumize.la
 lib/compiz/libmblur.la
+lib/compiz/libnotification.la
 lib/compiz/libreflex.la
 lib/compiz/libscalefilter.la
 lib/compiz/libshelf.la
@@ -44,6 +45,7 @@ share/compiz/group.xml
 share/compiz/loginout.xml
 share/compiz/maximumize.xml
 share/compiz/mblur.xml
+share/compiz/notification.xml
 share/compiz/reflection.png
 share/compiz/reflex.xml
 share/compiz/scalefilter.xml
@@ -72,6 +74,7 @@ share/gconf/schemas/compiz-group.schemas
 share/gconf/schemas/compiz-loginout.schemas
 share/gconf/schemas/compiz-maximumize.schemas
 share/gconf/schemas/compiz-mblur.schemas
+share/gconf/schemas/compiz-notification.schemas
 share/gconf/schemas/compiz-reflex.schemas
 share/gconf/schemas/compiz-scalefilter.schemas
 share/gconf/schemas/compiz-shelf.schemas
