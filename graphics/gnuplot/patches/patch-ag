@@ -1,11 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2012/08/10 15:14:54 drochner Exp $
+$NetBSD: patch-ag,v 1.6 2012/11/07 19:22:05 he Exp $
 
 NetBSD editline keeps header files in "readline", not "editline".
 Same applies to DragonFly.
 
---- configure.orig	2012-03-08 04:35:17.000000000 +0000
+Also get rid of a non-portable "test ... ==" instance.
+
+--- configure.orig	2012-09-26 23:06:30.000000000 +0000
 +++ configure
-@@ -8679,9 +8679,9 @@ fi
+@@ -9197,9 +9197,9 @@ fi
  
  $as_echo "#define HAVE_LIBEDITLINE 1" >>confdefs.h
  
@@ -14,10 +16,10 @@ Same applies to DragonFly.
  do :
 -  ac_fn_c_check_header_mongrel "$LINENO" "editline/readline.h" "ac_cv_header_editline_readline_h" "$ac_includes_default"
 +  ac_fn_c_check_header_mongrel "$LINENO" "readline/readline.h" "ac_cv_header_editline_readline_h" "$ac_includes_default"
- if test "x$ac_cv_header_editline_readline_h" = x""yes; then :
+ if test "x$ac_cv_header_editline_readline_h" = xyes; then :
    cat >>confdefs.h <<_ACEOF
  #define HAVE_EDITLINE_READLINE_H 1
-@@ -14772,7 +14774,7 @@ $as_echo "    tek40xx, tek410x, texdraw,
+@@ -15340,7 +15340,7 @@ $as_echo "    tek40xx, tek410x, texdraw,
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: " >&5
  $as_echo "" >&6; }
  
