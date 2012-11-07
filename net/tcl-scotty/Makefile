@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/08/22 22:18:23 marino Exp $
+# $NetBSD: Makefile,v 1.28 2012/11/07 12:54:30 he Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -29,6 +29,8 @@ CONFIGURE_ENV+=	TARGET=scotty
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	lex yacc
+
+PLIST_SUBST+=	MACHINE="${MACHINE}"
 
 INSTALL_TARGET= tnm-install install-man sinstall
 
