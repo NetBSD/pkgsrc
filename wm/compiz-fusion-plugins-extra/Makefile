@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 23:02:30 adam Exp $
+# $NetBSD: Makefile,v 1.23 2012/11/07 15:25:04 joerg Exp $
 #
 
 PKGVER=		0.8.4
@@ -52,6 +52,7 @@ GCONF_SCHEMAS+=		compiz-widget.schemas
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/compiz-bcop/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../wm/compiz-fusion-plugins-main/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../wm/compiz/buildlink3.mk"
