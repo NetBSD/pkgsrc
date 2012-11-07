@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2012/08/10 15:14:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/11/07 19:22:04 he Exp $
 bin/gnuplot
 info/gnuplot.info
 ${PLIST.qt4}libexec/gnuplot/4.6/gnuplot_qt
 ${PLIST.x11}libexec/gnuplot/4.6/gnuplot_x11
 man/man1/gnuplot.1
+share/emacs/site-lisp/gnuplot-eldoc.el
+share/emacs/site-lisp/gnuplot-eldoc.elc
 share/gnuplot/4.6/PostScript/8859-1.ps
 share/gnuplot/4.6/PostScript/8859-15.ps
 share/gnuplot/4.6/PostScript/8859-2.ps
