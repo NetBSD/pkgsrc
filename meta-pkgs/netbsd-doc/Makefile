@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2007/12/19 12:27:29 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2012/11/07 16:55:23 joerg Exp $
 #
 
-DISTNAME=	netbsd-doc-1.2
-PKGREVISION=	1
+DISTNAME=	netbsd-doc-1.3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Meta-package including all packages to convert SGML->HTML
 
 DEPENDS+=	opensp>=1.4:../../textproc/opensp
-DEPENDS+=	jade>=1.2.1nb3:../../textproc/jade
+DEPENDS+=	openjade-[0-9]*:../../textproc/openjade
 DEPENDS+=	docbook>=4.0:../../textproc/docbook
 DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 DEPENDS+=	iso12083>=1993:../../textproc/iso12083
