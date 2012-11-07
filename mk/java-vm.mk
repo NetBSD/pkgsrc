@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.88 2012/11/02 00:48:03 sbd Exp $
+# $NetBSD: java-vm.mk,v 1.89 2012/11/07 16:26:51 jperkin Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -102,7 +102,8 @@ _PKG_JVM_DEFAULT?=	openjdk7
 _PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk6
-.  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
+.  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386) || \
+        !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64)
 _PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MDragonFly-*-*)
 _PKG_JVM_DEFAULT?=	openjdk7
@@ -132,7 +133,8 @@ _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	Linux-*-i[3-6]86 \
 	Linux-*-x86_64 \
 	NetBSD-*-i386 NetBSD-*-x86_64 \
-	SunOS-5.11-i386
+	SunOS-5.11-i386 \
+	SunOS-5.11-x86_64
 _ONLY_FOR_PLATFORMS.openjdk7= \
 	DragonFly-*-* \
 	NetBSD-[4-9]*-i386 \
