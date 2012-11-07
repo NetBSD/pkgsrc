@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3519 2012/11/07 21:06:11 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3520 2012/11/07 21:08:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boost-build to 1.52.0 [adam 2012-11-07]
 	Updated devel/boost-python to 1.52.0 [adam 2012-11-07]
 	Updated meta-pkgs/boost to 1.52.0 [adam 2012-11-07]
+	Updated security/gnupg to 1.4.12nb1 [wiz 2012-11-07]
