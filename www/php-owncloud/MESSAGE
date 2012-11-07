@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2012/07/11 12:14:59 ryoon Exp $
+$NetBSD: MESSAGE,v 1.8 2012/11/07 21:30:45 ryoon Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
@@ -13,7 +13,7 @@ To use ownCloud, you will need to perform the following steps.
 	DocumentRoot "${PREFIX}/share/owncloud"
 	LoadModule php5_module lib/httpd/mod_php5.so
 	AddType application/x-httpd-php .php
-	<Directory ${PREFIX}/share/owncloud>
+	<Directory "${PREFIX}/share/owncloud">
 		DirectoryIndex index.php
 		Options All
 		Allow from All
