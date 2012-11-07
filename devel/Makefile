@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1665 2012/11/03 13:56:19 imil Exp $
+# $NetBSD: Makefile,v 1.1666 2012/11/07 10:14:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1085,6 +1085,7 @@ SUBDIR+=	p5-ShipIt
 SUBDIR+=	p5-Smart-Comments
 SUBDIR+=	p5-Software-License
 SUBDIR+=	p5-Sort-Maker
+SUBDIR+=	p5-Sort-Naturally
 SUBDIR+=	p5-Sort-Versions
 SUBDIR+=	p5-Spiffy
 SUBDIR+=	p5-Spoon
