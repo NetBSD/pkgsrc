@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3510 2012/11/06 19:04:10 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3511 2012/11/07 00:50:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5361,3 +5361,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/glibmm to 2.34.1 [drochner 2012-11-06]
 	Updated security/gnutls to 3.0.25 [drochner 2012-11-06]
 	Updated www/liferea-current to 1.8.10 [drochner 2012-11-06]
+	Updated devel/guile-www to 2.35 [gdt 2012-11-07]
