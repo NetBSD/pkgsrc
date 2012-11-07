@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3516 2012/11/07 13:45:46 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3517 2012/11/07 14:34:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5367,3 +5367,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/kpcli version 1.5 [wiz 2012-11-07]
 	Updated devel/guile-www to 2.32 [gdt 2012-11-07]
 	Updated databases/guile-pg to 0.44 [gdt 2012-11-07]
+	Updated lang/tcl to 8.5.12nb2 [he 2012-11-07]
+	Updated net/tcl-scotty to 2.1.11nb8 [he 2012-11-07]
