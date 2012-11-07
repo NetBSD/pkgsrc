@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/11/03 23:13:21 pettai Exp $
+# $NetBSD: Makefile,v 1.29 2012/11/07 00:28:37 taca Exp $
 #
 
 DISTNAME=	Net-Server-2.006
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://seamons.com/net_server.html
 COMMENT=	Perl5 modules for network services engine
 LICENSE=	${PERL5_LICENSE}
+
+REPLACE_PERL=	bin/net-server
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Net/Server/.packlist
