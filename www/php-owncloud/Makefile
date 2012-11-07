@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:57 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/11/07 21:30:45 ryoon Exp $
 #
 
-DISTNAME=	owncloud-4.0.7
+DISTNAME=	owncloud-4.0.8
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://owncloud.org/releases/
@@ -17,6 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.0:../../archivers/php-zlib
 
 .include "options.mk"
 
@@ -35,8 +36,8 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		OC_DIR=${OC_DIR}
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pmp * .htaccess \
-		${DESTDIR}${PREFIX}/${OC_DIR}
+	cd ${WRKDIR} && pax -rw -pmp owncloud \
+		${DESTDIR}${PREFIX}/share
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
