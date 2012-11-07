@@ -1,4 +1,4 @@
-# $NetBSD: Policy.sh,v 1.3 2012/11/02 07:36:24 sbd Exp $
+# $NetBSD: Policy.sh,v 1.4 2012/11/07 02:46:19 sbd Exp $
 #
 # Site-wide policy settings for pkgsrc Perl
 #
@@ -83,10 +83,11 @@ cat > UU/pkgsrc.cbu <<EOCBU
 # This script UU/pkgsrc.cbu will get 'called-back' by Configure
 # *after* all hints
 
-# Sets the correct LDFLAGS for linking against pkgsrc-installed
-# libraries
-ldflags="@LOCLIBRPATHFLAGS@ \$ldflags"
-lddlflags="@LOCLIBRPATHFLAGS@ \$lddlflags"
+# XCOFF targets need the path specified where libperl.a resides.
+if $test "@OBJECT_FMT@" = "XCOFF"; then
+	ldflags="@COMPILER_RPATH_FLAG@\${shrpdir} \$ldflags"
+	lddlflags="@COMPILER_RPATH_FLAG@\${shrpdir} \$lddlflags"
+fi
 
 # Set pkgsrc defaults for library and header search paths:
 # nail down the directories in which headers and libraries of

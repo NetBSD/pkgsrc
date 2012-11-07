@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2012/11/02 22:24:08 sbd Exp $
+# $NetBSD: Makefile,v 1.190 2012/11/07 02:46:19 sbd Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -58,8 +58,10 @@ SUBST_STAGE.policysh=	pre-configure
 SUBST_FILES.policysh=	Policy.sh
 SUBST_VARS.policysh+=	MACHINE_ARCH
 SUBST_VARS.policysh+=	LOWER_OPSYS
+SUBST_VARS.policysh+=	OBJECT_FMT
 SUBST_VARS.policysh+=	CC
 SUBST_VARS.policysh+=	CFLAGS
+SUBST_VARS.policysh+=	COMPILER_RPATH_FLAG
 SUBST_VARS.policysh+=	PERL5_PREFIX
 SUBST_VARS.policysh+=	PERL5_SITEPREFIX
 SUBST_VARS.policysh+=	PERL5_VENDORPREFIX
