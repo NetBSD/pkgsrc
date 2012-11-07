@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2012/10/23 18:16:28 asau Exp $
+# $NetBSD: Makefile,v 1.112 2012/11/07 12:24:39 wiz Exp $
 
 DISTNAME=	gnupg-1.4.12
 CATEGORIES=	security
@@ -38,17 +38,6 @@ CONFIGURE_ARGS+=	--disable-gnupg-iconv
     && defined(ABI) && ${ABI} == 64
 CONFIGURE_ARGS+=	--disable-asm
 .endif
-
-# XXX: still needed?
-#.if ${OPSYS} == "FreeBSD"
-#SUBST_CLASSES+=	    fixme
-#SUBST_STAGE.fixme=  post-configure
-#SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
-#		    mpi/i386/mpih-mul1.S mpi/i386/mpih-mul2.S \
-#		    mpi/i386/mpih-mul3.S mpi/i386/mpih-rshift.S \
-#		    mpi/i386/mpih-sub1.S
-#SUBST_SED.fixme=    -e "s,ALIGN (3),ALIGN (4),g"
-#.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS \
