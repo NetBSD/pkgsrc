@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3515 2012/11/07 13:37:02 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3516 2012/11/07 13:45:46 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5366,3 +5366,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/p5-File-KeePass version 2.03 [wiz 2012-11-07]
 	Added security/kpcli version 1.5 [wiz 2012-11-07]
 	Updated devel/guile-www to 2.32 [gdt 2012-11-07]
+	Updated databases/guile-pg to 0.44 [gdt 2012-11-07]
