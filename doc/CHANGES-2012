@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3517 2012/11/07 14:34:49 he Exp $
+$NetBSD: CHANGES-2012,v 1.3518 2012/11/07 14:47:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/guile-pg to 0.44 [gdt 2012-11-07]
 	Updated lang/tcl to 8.5.12nb2 [he 2012-11-07]
 	Updated net/tcl-scotty to 2.1.11nb8 [he 2012-11-07]
+	Updated fonts/encodings to 1.0.4nb1 [wiz 2012-11-07]
