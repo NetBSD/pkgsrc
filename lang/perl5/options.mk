@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/11/02 21:22:10 sbd Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/07 02:46:19 sbd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -68,28 +68,15 @@ CONFIGURE_ARGS+=	-Uusemymalloc
 
 .if !empty(PKG_OPTIONS:M64bitint)
 CONFIGURE_ARGS+=	-Duse64bitint
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int/CORE
-.  endif
 .elif !empty(PKG_OPTIONS:M64bitmore)
 CONFIGURE_ARGS+=	-Dusemorebits
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int-ld/CORE
-.  endif
 .elif !empty(PKG_OPTIONS:M64bitall)
 CONFIGURE_ARGS+=	-Duse64bitall
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64all/CORE
-.  endif
 .elif !empty(PKG_OPTIONS:M64bitnone)
 CONFIGURE_ARGS+=	-Uuse64bitall -Uusemorebits -Uuse64bitint
-.  if ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi/CORE
-.  endif
 .else
 .  if ${OBJECT_FMT} == "XCOFF"
 BROKEN=		XCOFF targets need the path specified where libperl.a resides.\
 Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this.
 .  endif
 .endif
-SUBST_VARS.policysh+=	LOCLIBRPATHFLAGS
