@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2012/11/07 12:21:46 jperkin Exp $
+$NetBSD: distinfo,v 1.57 2012/11/07 15:29:13 joerg Exp $
 
 SHA1 (webkitgtk-1.10.1.tar.xz) = 3a2df2eb42ffdd7f3b39873d5461c347a6330493
 RMD160 (webkitgtk-1.10.1.tar.xz) = ea246d29a1def4993d592d8464b527b2c9ed1bdc
@@ -10,6 +10,6 @@ SHA1 (patch-Source_WebCore_platform_sql_SQLiteDatabase.cpp) = 0f33b188b242166584
 SHA1 (patch-ai) = 8df303ffde5c4398e56601c524e9ab4aff52096c
 SHA1 (patch-aj) = 930d1b5d73028b2f2e5abb33c15f72befadc64ce
 SHA1 (patch-ak) = 64ad843164f1c12968e933080e0966a9019abfdf
-SHA1 (patch-al) = 47a931be9ccd0669d77b6e60d5fd098c8d3667ab
+SHA1 (patch-al) = dd7201d0a5dcc0f173a156f3bb42e1417bef6b06
 SHA1 (patch-am) = 9516994b630b43c7c234f61debf8d762cf7aee97
 SHA1 (patch-configure) = 448caea068344fe987e566f73b3f567dad7b93ed
