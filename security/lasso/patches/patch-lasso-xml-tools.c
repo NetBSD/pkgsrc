@@ -1,4 +1,4 @@
-$NetBSD: patch-lasso-xml-tools.c,v 1.3 2012/10/23 18:16:15 manu Exp $
+$NetBSD: patch-lasso-xml-tools.c,v 1.4 2012/11/07 15:31:23 joerg Exp $
 
 Patch from upstream to support libxml >= 2.9.0. From commit message:
 
@@ -10,11 +10,21 @@ appeared in recent version of libxml; but the reference API document
 does not give any introduction date for functions so it's hard to be
 sure.
 
+Don't use nested functions.
+
 diff --git a/lasso/xml/tools.c b/lasso/xml/tools.c
 index c4b3c8a..cda8775 100644
---- lasso/xml/tools.c
+--- lasso/xml/tools.c.orig	2011-11-29 09:19:49.000000000 +0000
 +++ lasso/xml/tools.c
-@@ -36,6 +36,7 @@
+@@ -27,6 +27,7 @@
+ /* permit importation of timegm for glibc2, wait for people to complain it does not work on their
+  * system. */
+ #define _BSD_SOURCE
++#define _NETBSD_SOURCE
+ #include "private.h"
+ #include <string.h>
+ #include <time.h>
+@@ -36,6 +37,7 @@
  #include <libxml/uri.h>
  #include <libxml/parser.h>
  #include <libxml/parserInternals.h>
@@ -22,7 +32,7 @@ index c4b3c8a..cda8775 100644
  
  #include <openssl/pem.h>
  #include <openssl/sha.h>
-@@ -1043,38 +1044,30 @@ lasso_sign_node(xmlNode *xmlnode, const char *id_attr_name, const char *id_value
+@@ -1043,38 +1045,30 @@ lasso_sign_node(xmlNode *xmlnode, const 
  	return 0;
  }
  
@@ -73,7 +83,7 @@ index c4b3c8a..cda8775 100644
  	stream.avail_in = in_len;
  	stream.next_out = ret;
  	stream.avail_out = in_len * 2;
-@@ -1097,6 +1090,7 @@ lasso_node_build_deflated_query(LassoNode *node)
+@@ -1097,6 +1091,7 @@ lasso_node_build_deflated_query(LassoNod
  			rc = deflateEnd(&stream);
  		}
  	}
@@ -81,7 +91,7 @@ index c4b3c8a..cda8775 100644
  	if (rc != Z_OK) {
  		lasso_release(ret);
  		message(G_LOG_LEVEL_CRITICAL, "Failed to deflate");
-@@ -1104,7 +1098,6 @@ lasso_node_build_deflated_query(LassoNode *node)
+@@ -1104,7 +1099,6 @@ lasso_node_build_deflated_query(LassoNod
  	}
  
  	b64_ret = xmlSecBase64Encode(ret, stream.total_out, 0);
@@ -89,7 +99,7 @@ index c4b3c8a..cda8775 100644
  	lasso_release(ret);
  
  	ret = xmlURIEscapeStr(b64_ret, NULL);
-@@ -1115,6 +1108,20 @@ lasso_node_build_deflated_query(LassoNode *node)
+@@ -1115,6 +1109,20 @@ lasso_node_build_deflated_query(LassoNod
  	return rret;
  }
  
@@ -110,7 +120,48 @@ index c4b3c8a..cda8775 100644
  gboolean
  lasso_node_init_from_deflated_query_part(LassoNode *node, char *deflate_string)
  {
-@@ -2144,22 +2151,21 @@ cleanup:
+@@ -1196,28 +1204,34 @@ lasso_concat_url_query(const char *url, 
+  *
+  * Return value: TRUE if no error occurred during evaluation, FALSE otherwise.
+  */
++static void
++structuredErrorFunc (void *userData, xmlErrorPtr error) {
++	struct wrapped_cb_data *data = userData;
++	*(int *)userData = error->code;
++}
++
+ gboolean
+ lasso_eval_xpath_expression(xmlXPathContextPtr xpath_ctx, const char *expression,
+ 		xmlXPathObjectPtr *xpath_object_ptr, int *xpath_error_code)
+ {
+-	xmlXPathObject *xpath_object = NULL;
+-	int errorCode = 0;
+ 	xmlStructuredErrorFunc oldStructuredErrorFunc;
++	void *oldUserData;
++	int errorCode = 0;
++	xmlXPathObject *xpath_object = NULL;
+ 	gboolean rc = TRUE;
+ 
+-	void structuredErrorFunc (G_GNUC_UNUSED void *userData, xmlErrorPtr error) {
+-		errorCode = error->code;
+-	}
+-
+ 	g_return_val_if_fail(xpath_ctx != NULL && expression != NULL, FALSE);
+ 
+ 	if (xpath_error_code) { /* reset */
+ 		*xpath_error_code = 0;
+ 	}
+ 	oldStructuredErrorFunc = xpath_ctx->error;
++	oldUserData = xpath_ctx->userData;
+ 	xpath_ctx->error = structuredErrorFunc;
++	xpath_ctx->userData = &errorCode;
+ 	xpath_object = xmlXPathEvalExpression((xmlChar*)expression, xpath_ctx);
+ 	xpath_ctx->error = oldStructuredErrorFunc;
++	xpath_ctx->userData = oldUserData;
+ 
+ 	if (xpath_object) {
+ 		if (xpath_object_ptr) {
+@@ -2144,22 +2158,21 @@ cleanup:
  char*
  lasso_xmlnode_to_string(xmlNode *node, gboolean format, int level)
  {
@@ -142,6 +193,3 @@ index c4b3c8a..cda8775 100644
  
  	return str;
  }
--- 
-1.7.4.1
-
