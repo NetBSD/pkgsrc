@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.16 2012/10/10 13:33:44 drochner Exp $
+$NetBSD: patch-configure,v 1.17 2012/11/08 19:57:29 adam Exp $
 
---- configure.orig	2012-06-09 20:09:44.000000000 +0000
+--- configure.orig	2012-09-28 01:37:35.000000000 +0000
 +++ configure
-@@ -2604,6 +2604,11 @@ case $target_os in
+@@ -3019,6 +3019,11 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -13,8 +13,8 @@ $NetBSD: patch-configure,v 1.16 2012/10/10 13:33:44 drochner Exp $
 +        test "${subarch}" != "x86_32" && enable pic
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
-         ;;
-@@ -2835,10 +2840,13 @@ check_cc <<EOF && enable attribute_may_a
+         enabled gcc || check_ldflags -Wl,-zmuldefs
+@@ -3300,10 +3305,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -31,24 +31,15 @@ $NetBSD: patch-configure,v 1.16 2012/10/10 13:33:44 drochner Exp $
  
  if enabled alpha; then
  
-@@ -3195,7 +3203,7 @@ else
- fi
- enabled sdl && add_cflags $sdl_cflags && add_extralibs $sdl_libs
- 
--texi2html -version > /dev/null 2>&1 && enable texi2html || disable texi2html
-+which texi2html > /dev/null 2>&1 && enable texi2html || disable texi2html
- makeinfo --version > /dev/null 2>&1 && enable makeinfo  || disable makeinfo
- 
- check_header linux/fb.h
-@@ -3291,6 +3299,7 @@ check_ldflags -Wl,--warn-common
- check_ldflags -Wl,-rpath-link=libpostproc:libswresample:libswscale:libavfilter:libavdevice:libavformat:libavcodec:libavutil
- test_ldflags -Wl,-Bsymbolic && append SHFLAGS -Wl,-Bsymbolic
+@@ -3827,6 +3835,7 @@ enabled xmm_clobber_test &&
+                   -Wl,--wrap,sws_scale ||
+     disable xmm_clobber_test
  
 +if false; then
  echo "X{};" > $TMPV
  if test_ldflags -Wl,--version-script,$TMPV; then
      append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
-@@ -3303,6 +3312,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+@@ -3839,6 +3848,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
  void ff_foo(void) {}
  EOF
  fi
@@ -56,7 +47,7 @@ $NetBSD: patch-configure,v 1.16 2012/10/10 13:33:44 drochner Exp $
  
  if [ -n "$optflags" ]; then
      add_cflags $optflags
-@@ -3726,7 +3736,7 @@ Version: $version
+@@ -4336,7 +4346,7 @@ Version: $version
  Requires: $(enabled shared || echo $requires)
  Requires.private: $(enabled shared && echo $requires)
  Conflicts:
