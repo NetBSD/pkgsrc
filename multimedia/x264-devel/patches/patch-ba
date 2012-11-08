@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.3 2011/07/18 21:00:12 drochner Exp $
+$NetBSD: patch-ba,v 1.4 2012/11/08 19:55:56 adam Exp $
 
 --- encoder/analyse.c.orig	2011-07-07 20:45:05.000000000 +0000
 +++ encoder/analyse.c
-@@ -283,7 +283,7 @@ float *x264_analyse_prepare_costs( x264_
+@@ -285,7 +285,7 @@ float *x264_analyse_prepare_costs( x264_
          return NULL;
      logs[0] = 0.718f;
      for( int i = 1; i <= 2*4*2048; i++ )
