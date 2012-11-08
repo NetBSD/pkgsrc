@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2012/11/05 12:53:08 drochner Exp $
+# $NetBSD: Makefile.common,v 1.24 2012/11/08 19:57:29 adam Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
@@ -7,14 +7,45 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-DISTVERSION=	0.10.6
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
+
+DISTVERSION=	1.0
 PREV_PKGPATH=	multimedia/ffmpeg-devel
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg/patches
 
-HAS_CONFIGURE=	YES
-USE_LANGUAGES+=	c99
-USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake texi2html pod2man
+USE_LANGUAGES=		c99
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake texi2html pod2man
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--cc=${CC:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--disable-stripping
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-pthreads
+CONFIGURE_ARGS+=	--enable-gpl
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-amd3dnow
+CONFIGURE_ARGS+=	--disable-amd3dnowext
+CONFIGURE_ARGS+=	--disable-mmx
+CONFIGURE_ARGS+=	--disable-mmx2
+CONFIGURE_ARGS+=	--disable-sse
+CONFIGURE_ARGS+=	--disable-ssse3
+.else
+CONFIGURE_ARGS+=	--enable-runtime-cpudetect
+.endif
+
+# No posix_memalign() in NetBSD 4.0 and earlier
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
+CONFIGURE_ARGS+=	--enable-memalign-hack
+.endif
+
+# Let's not put garbage into /tmp
+CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
+
 
 .include "../../mk/compiler.mk"
 
@@ -44,36 +75,6 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 
 MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q}
 # LOCALBASE=${LOCALBASE:Q}
-
-# Let's not put garbage into /tmp
-CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
-
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--cc=${CC:Q}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-optimizations
-CONFIGURE_ARGS+=	--disable-stripping
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-pthreads
-CONFIGURE_ARGS+=	--enable-gpl
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-amd3dnow
-CONFIGURE_ARGS+=	--disable-amd3dnowext
-CONFIGURE_ARGS+=	--disable-mmx
-CONFIGURE_ARGS+=	--disable-mmx2
-CONFIGURE_ARGS+=	--disable-sse
-CONFIGURE_ARGS+=	--disable-ssse3
-.else
-CONFIGURE_ARGS+=	--enable-runtime-cpudetect
-.endif
-
-# No posix_memalign() in NetBSD 4.0 and earlier
-#
-.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
-CONFIGURE_ARGS+=	--enable-memalign-hack
-.endif
 
 pre-configure:
 	mkdir ${WRKSRC}/tmp
