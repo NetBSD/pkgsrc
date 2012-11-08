@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.939 2012/11/03 14:19:11 imil Exp $
+# $NetBSD: Makefile,v 1.940 2012/11/08 07:18:25 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -505,8 +505,8 @@ SUBDIR+=	py-dns
 SUBDIR+=	py-dpkt
 SUBDIR+=	py-foolscap
 SUBDIR+=	py-google
-SUBDIR+=	py-kenosis
 SUBDIR+=	py-irclib
+SUBDIR+=	py-kenosis
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-medusa
