@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/12 16:28:40 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/08 19:57:29 adam Exp $
 bin/ffplay
-man/man1/ffplay.1
