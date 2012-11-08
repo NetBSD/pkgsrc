@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:14 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/08 13:25:53 taca Exp $
 
-DISTNAME=	drupal-7.16
+DISTNAME=	drupal-7.17
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -42,6 +42,10 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	scripts/drupal.sh scripts/password-hash.sh
+REPLACE_FILES.php+=	scripts/dump-database-d6.sh
+REPLACE_FILES.php+=	scripts/dump-database-d7.sh
+REPLACE_FILES.php+=	scripts/generate-d6-content.sh
+REPLACE_FILES.php+=	scripts/generate-d6-content.sh
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
@@ -50,7 +54,7 @@ SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
-INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites/all \
+INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites \
 			share/doc/drupal share/examples/drupal
 .for i in ${PAX_DIRS}
 INSTALLATION_DIRS+=	${DRUPAL}/${i}
@@ -63,8 +67,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
-	${INSTALL_DATA} ${WRKSRC}/sites/all/README.txt \
-		${DESTDIR}${PREFIX}/${DRUPAL}/sites/all
 	${INSTALL_DATA} ${WRKSRC}/drupal.conf \
 		${DESTDIR}${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/sites/default/default.settings.php \
