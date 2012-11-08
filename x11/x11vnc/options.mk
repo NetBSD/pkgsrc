@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/11/08 10:43:50 sborrill Exp $
+# $NetBSD: options.mk,v 1.5 2012/11/08 12:56:21 sborrill Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x11vnc
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--without-avahi
 
 .if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--without-ipv6
+CPPFLAGS+=		-DX11VNC_IPV6=0
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
