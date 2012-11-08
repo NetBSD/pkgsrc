@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.20 2012/10/28 06:31:05 asau Exp $
+# $NetBSD: Makefile.squid,v 1.21 2012/11/08 04:18:45 taca Exp $
 #
 # used by www/squid27/Makefile
 # used by www/squid31/Makefile
@@ -19,7 +19,6 @@ MAKE_ENV+=	PKG_PREFIX=${PREFIX:Q} VARBASE=${VARBASE:Q}
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
 		--localstatedir=${SQUID_DATADIR:Q} \
 		--datarootdir=${PREFIX}/share/squid \
-		--enable-auth=basic,digest,ntlm \
 		--enable-cachemgr-hostname=localhost \
 		--enable-delay-pools \
 		--enable-icmp \
