@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.25 2012/11/06 09:56:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.26 2012/11/08 09:03:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -69,3 +69,5 @@ Pullup ticket #3959 - requested by tron
 mail/fetchmail: build fix
 Pullup ticket #3960 - requested by jmmv
 mk/checksum: build time speedup for packages with a large number of patches
+Pullup ticket #3962 - requested by he
+lang/tcl: bug fix patch
