@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/10/18 14:34:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/11/08 13:50:48 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2027,7 +2027,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/stylesheets/structure/topbar.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/stylesheets/visual/main_content.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/.htaccess
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/README.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/System/Filter/AlphanumericTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/about/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/about/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/about/ext_icon.gif
@@ -3999,6 +3998,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Vi
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Viewport/Left/Options/Forms/Various.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Viewport/Left/Options/Panel.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Resources/Public/JavaScript/Wizard/Viewport/Right.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Tests/Unit/System/Filter/AlphanumericTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/ext_icon.gif
@@ -5126,6 +5126,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi1/locallang.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi2/class.tx_rtehtmlarea_pi2.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi2/locallang.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi3/class.tx_rtehtmlarea_pi3.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi4/class.tx_rtehtmlarea_pi4.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/download.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/external_link.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/external_link_new_window.gif
@@ -5134,6 +5135,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/int
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/mail.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/locallang.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/pageTSConfig.txt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/setup.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/advanced/pageTSConfig.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/advanced/userTSConfig.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/contentcss/default.css
