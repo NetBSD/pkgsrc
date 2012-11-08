@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2012/11/08 04:56:01 taca Exp $
+
+SHA1 (contao-3.0.0.tar.gz) = 843d605fb241d4f9e4b3737c0e6528a9c8ed246e
+RMD160 (contao-3.0.0.tar.gz) = 946c92b43517d143b363f5b62d6a2431dbb784c8
+Size (contao-3.0.0.tar.gz) = 7466700 bytes
+SHA1 (patch-system_modules_calendar_modules_ModuleCalendar.php) = e6ee08ec6dbefe9d71a7aedea879c458e92889a5
+SHA1 (patch-system_modules_core_classes_Frontend.php) = ff9ea30b8b70b4eec9d8d69af4406e968d740e4d
