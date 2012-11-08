@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11654 2012/11/08 08:13:02 wiz Exp $
+$NetBSD: TODO,v 1.11655 2012/11/08 19:59:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -574,10 +574,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o feh-2.7
 	o felt-3.07
 	o fetchyahoo-2.14.0
-	o ffmpeg-20121028.0.10.6
-	o ffmpeg-20120919.0.11.2
-	o ffmpeg-20120919.1.0
-	o ffplay-20120919.1.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
@@ -1251,7 +1247,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20121027
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
