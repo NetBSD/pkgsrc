@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/08 23:02:11 adam Exp $
+# $NetBSD: Makefile,v 1.53 2012/11/08 07:28:12 adam Exp $
 
 DISTNAME=	mkvtoolnix-5.0.1
 PKGREVISION=	6
@@ -24,15 +24,21 @@ LDFLAGS.DragonFly=	-lboost_system
 
 INSTALL_ENV+=	SHELL=${SH:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MAKE_JOBS)
+DRAKE_ARGS=	-j${MAKE_JOBS}
+.else
+DRAKE_ARGS=	# empty
+.endif
+
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ruby drake
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ruby drake ${DRAKE_ARGS}
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ruby drake install
 
 .include "options.mk"
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
 BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
