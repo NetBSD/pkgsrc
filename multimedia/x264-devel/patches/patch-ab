@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.16 2012/11/08 19:55:56 adam Exp $
+$NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
 
 --- Makefile.orig	2012-11-07 21:45:03.000000000 +0000
 +++ Makefile
@@ -88,7 +88,17 @@ $NetBSD: patch-ab,v 1.16 2012/11/08 19:55:56 adam Exp $
  
  %.o: %.S
  	$(AS) $(ASFLAGS) -o $@ $<
-@@ -250,8 +253,7 @@ install-lib-dev:
+@@ -238,8 +241,7 @@ distclean: clean
+ 	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def
+ 
+ install-cli: cli
+-	install -d $(DESTDIR)$(bindir)
+-	install x264$(EXE) $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} x264 $(DESTDIR)$(bindir)/x264
+ 
+ install-lib-dev:
+ 	install -d $(DESTDIR)$(includedir)
+@@ -250,8 +252,7 @@ install-lib-dev:
  	install -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
