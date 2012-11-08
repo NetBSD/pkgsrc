@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/08/15 13:49:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/11/08 13:48:39 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -4544,6 +4544,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi1/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi2/class.tx_rtehtmlarea_pi2.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi2/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi3/class.tx_rtehtmlarea_pi3.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/pi4/class.tx_rtehtmlarea_pi4.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/download.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/external_link.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/external_link_new_window.gif
@@ -4552,6 +4553,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/int
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/img/mail.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/pageTSConfig.txt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/accessibilityicons/setup.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/advanced/pageTSConfig.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/advanced/userTSConfig.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/res/contentcss/default.css
