@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2012/11/06 12:04:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2012/11/08 11:52:20 jperkin Exp $
 #
 
 DISTNAME=	pulseaudio-2.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake gm4 intltool pkg-config
+USE_TOOLS+=	gmake gm4 intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--disable-default-build-tests
 # broken test for TLS
 CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
-
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
