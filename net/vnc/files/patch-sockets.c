@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2002/10/23 18:16:59 bouyer Exp $
+$NetBSD: patch-sockets.c,v 1.1 2012/11/08 10:58:08 sborrill Exp $
 
 --- Xvnc/programs/Xserver/hw/vnc/sockets.c.orig	Wed Oct 23 19:16:52 2002
 +++ Xvnc/programs/Xserver/hw/vnc/sockets.c	Wed Oct 23 19:18:31 2002
