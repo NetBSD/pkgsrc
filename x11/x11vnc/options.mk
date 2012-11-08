@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2012/10/23 10:24:21 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2012/11/08 10:43:50 sborrill Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x11vnc
-PKG_SUPPORTED_OPTIONS=	avahi x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	avahi inet6 x11
+PKG_SUGGESTED_OPTIONS=	inet6 x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +12,10 @@ PKG_SUGGESTED_OPTIONS=	x11
 CONFIGURE_ARGS+=	--with-avahi=${BUILDLINK_PREFIX.avahi}
 .else
 CONFIGURE_ARGS+=	--without-avahi
+.endif
+
+.if empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
