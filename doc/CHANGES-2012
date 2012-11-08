@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3524 2012/11/08 13:26:35 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3525 2012/11/08 13:53:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5385,3 +5385,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/cy2-saml to 1.4 [manu 2012-11-08]
 	Updated security/pam-saml to 1.4 [manu 2012-11-08]
 	Updated www/drupal7 to 7.17 [taca 2012-11-08]
+	Updated www/typo3_45 to 4.5.21 [taca 2012-11-08]
+	Updated www/typo3_46 to 4.6.14 [taca 2012-11-08]
+	Updated www/typo3_47 to 4.7.6 [taca 2012-11-08]
