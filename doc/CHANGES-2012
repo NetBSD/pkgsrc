@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3523 2012/11/08 08:49:05 manu Exp $
+$NetBSD: CHANGES-2012,v 1.3524 2012/11/08 13:26:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5384,3 +5384,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/contao30-example version 3.0.0 [taca 2012-11-08]
 	Updated security/cy2-saml to 1.4 [manu 2012-11-08]
 	Updated security/pam-saml to 1.4 [manu 2012-11-08]
+	Updated www/drupal7 to 7.17 [taca 2012-11-08]
