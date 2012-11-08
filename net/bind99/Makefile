@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 17:18:11 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/11/08 16:01:51 tron Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--disable-openssl-version-check
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--with-python=no
 .if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} != ""
 CONFIGURE_ARGS+=        --disable-atomic
 .endif
