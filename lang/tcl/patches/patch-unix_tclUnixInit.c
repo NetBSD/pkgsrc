@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_tclUnixInit.c,v 1.1 2012/08/21 21:31:47 marino Exp $
+$NetBSD: patch-unix_tclUnixInit.c,v 1.1.2.1 2012/11/08 09:03:09 tron Exp $
 
 Carried over from TCL 8.4
 
@@ -47,17 +47,19 @@ Carried over from TCL 8.4
  
  #ifdef HAVE_COREFOUNDATION
      char tclLibPath[MAXPATHLEN + 1];
-@@ -915,7 +926,12 @@ TclpSetVariables(
- 	Tcl_SetVar(interp, "tcl_pkgPath", pkgPath, TCL_GLOBAL_ONLY);
-     }
+@@ -986,8 +997,15 @@ TclpSetVariables(
  
--#ifdef DJGPP
+ #endif /* DJGPP */
+ 	}
 +#if defined(__NetBSD__)
 +	if (sysctl(mib, sizeof(mib) / sizeof(int), machine_arch, &len, NULL, 0) < 0)
 +	    unameOK = 0;
 +	else
-+            Tcl_SetVar2(interp, "tcl_platform", "platform", "unix", TCL_GLOBAL_ONLY);
-+#elif defined(DJGPP)
-     Tcl_SetVar2(interp, "tcl_platform", "platform", "dos", TCL_GLOBAL_ONLY);
- #else
-     Tcl_SetVar2(interp, "tcl_platform", "platform", "unix", TCL_GLOBAL_ONLY);
++            Tcl_SetVar2(interp, "tcl_platform", "machine", machine_arch, TCL_GLOBAL_ONLY);
++#else
+ 	Tcl_SetVar2(interp, "tcl_platform", "machine", name.machine,
+ 		TCL_GLOBAL_ONLY);
++#endif /* __NetBSD__ */
+     }
+ #endif /* !NO_UNAME */
+     if (!unameOK) {
