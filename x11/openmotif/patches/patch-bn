@@ -1,3 +1,5 @@
+$NetBSD: patch-bn,v 1.2 2012/11/09 16:46:50 ryoon Exp $
+
 --- lib/Xm/XmIm.c.orig	Tue Dec 16 11:40:22 2008
 +++ lib/Xm/XmIm.c	Tue Dec 16 11:43:36 2008
 @@ -79,7 +79,7 @@
