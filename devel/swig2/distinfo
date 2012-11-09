@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/11/09 14:25:44 gdt Exp $
+
+SHA1 (swig-2.0.8.tar.gz) = 763305da320163903c69c1cdfbf9a942117d9ace
+RMD160 (swig-2.0.8.tar.gz) = defca7a34be7ce8407949d6bd17b860e5169618d
+Size (swig-2.0.8.tar.gz) = 5291361 bytes
