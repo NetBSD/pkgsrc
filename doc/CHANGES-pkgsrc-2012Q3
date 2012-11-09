@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.26 2012/11/08 09:03:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.27 2012/11/09 17:48:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -71,3 +71,7 @@ Pullup ticket #3960 - requested by jmmv
 mk/checksum: build time speedup for packages with a large number of patches
 Pullup ticket #3962 - requested by he
 lang/tcl: bug fix patch
+Pullup ticket #3963 - requested by taca
+www/typo3_45: security update
+Pullup ticket #3964 - requested by taca
+www/typo3_46: security update
