@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3537 2012/11/10 19:17:57 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3538 2012/11/10 22:14:38 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/oath-toolkit to 1.12.6 [pettai 2012-11-10]
 	Updated net/tacacs-shrubbery to 4.0.4.26 [pettai 2012-11-10]
 	Updated security/ykclient to 2.9 [pettai 2012-11-10]
+	Added security/otptool version 1.1.4 [pettai 2012-11-10]
