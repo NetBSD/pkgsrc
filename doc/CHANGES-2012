@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3536 2012/11/10 18:54:34 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3537 2012/11/10 19:17:57 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5407,3 +5407,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/motif version 2.3.4 [ryoon 2012-11-10]
 	Updated security/oath-toolkit to 1.12.6 [pettai 2012-11-10]
 	Updated net/tacacs-shrubbery to 4.0.4.26 [pettai 2012-11-10]
+	Updated security/ykclient to 2.9 [pettai 2012-11-10]
