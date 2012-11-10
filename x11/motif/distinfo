@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2012/11/10 17:10:10 ryoon Exp $
+
+SHA1 (motif-2.3.4-src.tgz) = 49ecfe2a0939232ca78ce318d938044e7f751b6d
+RMD160 (motif-2.3.4-src.tgz) = 96e1ed3c5b99d420e3e2e4eae1b5590961191a33
+Size (motif-2.3.4-src.tgz) = 9527040 bytes
+SHA1 (patch-Makefile.am) = 3185b240e3d6a60d3c04fa90fafe1af020de6a15
+SHA1 (patch-clients_uil_UilDB.c) = 781b52e915e667eeb02359a51cfeefdb9556c4dd
+SHA1 (patch-clients_uil_UilDiags.c) = 39ac8307219b435baf3d1bf829809fcb6536b1a9
+SHA1 (patch-doc_man_man3_Makefile.am) = b396f5e1235834f507a415c62b0efaa939943f1d
+SHA1 (patch-doc_man_man4_Makefile.am) = 154071494cf54a65e2e266861c81771a14156cae
+SHA1 (patch-doc_man_man5_Makefile.am) = 2f6e0cc239faf53e3391aef9da3def934023928e
+SHA1 (patch-lib_Xm_Scale.c) = d78669a3332ab9d7dd140a1a1d9532e065573c7b
+SHA1 (patch-lib_Xm_TextF.c) = 1bd1801d708ff2c832c131c9954b3bbfd444ed42
+SHA1 (patch-lib_Xm_XmIm.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-lib_Xm_Xmfuncs.h) = fef6a642988a8024da0bff00cdc40dc485695e2b
+SHA1 (patch-lib_Xm_Xmos.c) = 88af3627fad7c9ec40db0e8aca47e9617fe8c53b
+SHA1 (patch-lib_Xm_XpmI.h) = b27e0156bc2dd990a4d9642186b1638276054314
+SHA1 (patch-tools_wml_wmluiltok.l) = 1e79df5605ad8b25a55fbb617a707d27d27e3f2a
