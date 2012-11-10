@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3532 2012/11/10 14:25:25 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3533 2012/11/10 14:37:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5397,3 +5397,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/lbreakout2 to 2.6.4 [shattered 2012-11-10]
 	Updated lang/runawk to 1.4.4 [cheusov 2012-11-10]
 	Updated security/sks to 1.1.4 [pettai 2012-11-10]
+	Updated lang/ruby193-base to 1.9.3p327 [taca 2012-11-10]
+	Updated databases/ruby-gdbm to 1.9.3p327nb2 [taca 2012-11-10]
+	Updated devel/ruby-curses to 1.9.3p327 [taca 2012-11-10]
+	Updated devel/ruby-fiddle to 1.9.3p327 [taca 2012-11-10]
+	Updated devel/ruby-readline to 1.9.3p327nb2 [taca 2012-11-10]
+	Updated x11/ruby-tk to 1.9.3p327nb1 [taca 2012-11-10]
+	Updated devel/ruby-mode to 1.9.3p327 [taca 2012-11-10]
