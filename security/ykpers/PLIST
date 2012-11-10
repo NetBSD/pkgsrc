@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/13 15:30:07 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/10 20:53:43 pettai Exp $
 bin/ykchalresp
+bin/ykinfo
 bin/ykpersonalize
 include/ykpers-1/ykcore.h
 include/ykpers-1/ykdef.h
@@ -8,4 +9,5 @@ include/ykpers-1/ykstatus.h
 lib/libykpers-1.la
 lib/pkgconfig/ykpers-1.pc
 man/man1/ykchalresp.1
+man/man1/ykinfo.1
 man/man1/ykpersonalize.1
