@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2012/10/06 11:54:45 asau Exp $
+# $NetBSD: Makefile,v 1.38 2012/11/10 08:53:28 shattered Exp $
 
-DISTNAME=	lbreakout2-2.6.3
+DISTNAME=	lbreakout2-2.6.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
