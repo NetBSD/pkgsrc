@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.9 2012/10/10 03:07:12 taca Exp $
+$NetBSD: distinfo,v 1.10 2012/11/10 23:45:39 pettai Exp $
 
 SHA1 (bind-9.9.2.tar.gz) = eb9fa7b497d67ce61a120cb96c302381bc385324
 RMD160 (bind-9.9.2.tar.gz) = 80118091f62a5f44565c86ab1ce4461c2c6d890b
 Size (bind-9.9.2.tar.gz) = 7285050 bytes
+SHA1 (rl-9.9.2.patch) = 18250e466e03a36a0b81dbceb41570aa2d548118
+RMD160 (rl-9.9.2.patch) = ea855f46db89b0791a8cf610474106775104568b
+Size (rl-9.9.2.patch) = 91993 bytes
 SHA1 (patch-bin_dig_Makefile.in) = d2c2a0b137be7e31fdc15438d107116fc38a38b9
 SHA1 (patch-bin_dig_dighost.c) = 186cdc70605242afb0211dc8802ec75677a65614
 SHA1 (patch-bin_nsupdate_Makefile.in) = 42b39d60468ffa8ed13f77259755b217966de664
