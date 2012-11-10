@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3530 2012/11/10 08:53:53 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.3531 2012/11/10 11:22:38 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5395,3 +5395,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/swig2 version 2.0.8nb1 [gdt 2012-11-09]
 	Updated fonts/ipaexfont to 00201 [ryoon 2012-11-09]
 	Updated games/lbreakout2 to 2.6.4 [shattered 2012-11-10]
+	Updated lang/runawk to 1.4.4 [cheusov 2012-11-10]
