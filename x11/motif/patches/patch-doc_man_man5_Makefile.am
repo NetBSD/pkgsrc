@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_man_man5_Makefile.am,v 1.1 2012/11/10 17:10:10 ryoon Exp $
+
+* Move mwmrc to 5 from 4
+
+--- doc/man/man5/Makefile.am.orig	2012-10-22 14:50:39.000000000 +0000
++++ doc/man/man5/Makefile.am
+@@ -5,4 +5,5 @@ EXTRA_DIST = $(man_MANS)
+ man_MANS = \
+     Traits.5 \
+     UIL.5 \
+-    WML.5
++    WML.5 \
++    mwmrc.5

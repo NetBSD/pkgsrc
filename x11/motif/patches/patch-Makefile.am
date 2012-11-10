@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.am,v 1.1 2012/11/10 17:10:10 ryoon Exp $
+
+* Do not build demo
+
+--- Makefile.am.orig	2012-10-22 14:50:38.000000000 +0000
++++ Makefile.am
+@@ -28,7 +28,7 @@ SUBDIRS	= bindings bitmaps \
+              include \
+              tools \
+              clients \
+-             doc \
+-             demos
++             doc
++
+ AUTOMAKE_OPTIONS = 1.4
+ ACLOCAL_AMFLAGS = -I .
