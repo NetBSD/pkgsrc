@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/08/19 20:33:23 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/11/10 11:22:15 cheusov Exp $
 bin/alt_getopt
 bin/alt_getopt.sh
 bin/runawk
@@ -6,7 +6,6 @@ man/man1/alt_getopt.1
 man/man1/runawk.1
 man/man3/runawk_modules.3
 share/doc/runawk/COPYRIGHT
-share/doc/runawk/ChangeLog
 share/doc/runawk/NEWS
 share/doc/runawk/README
 share/doc/runawk/TODO
