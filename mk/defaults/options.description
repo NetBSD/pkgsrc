@@ -501,6 +501,7 @@ quartz			Enable Quartz support on Mac OS X.
 quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
 readline		Enable use of GNU readline library.
+rrl			Enable Response Rate Limiting.
 rsaref			Use RSAREF library.
 rtmp			Enable rtmp:// support using rtmpdump.
 rtree			Enable R-tree support.
