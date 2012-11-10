@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8.2.2 2012/10/17 09:47:20 tron Exp $
+$NetBSD: distinfo,v 1.8.2.3 2012/11/10 23:06:57 tron Exp $
 
-SHA1 (ruby-1.9.3-p286.tar.bz2) = 095c783c88965c6e72b1f3484c50c60207b60bfa
-RMD160 (ruby-1.9.3-p286.tar.bz2) = 5ca0dbc1f2d046954f0ce20af76a01ece78cd3f2
-Size (ruby-1.9.3-p286.tar.bz2) = 9961862 bytes
+SHA1 (ruby-1.9.3-p327.tar.bz2) = 7fbacfc960ef76d98c83f20eb31c71d6aaf9a5a6
+RMD160 (ruby-1.9.3-p327.tar.bz2) = 5cd8317a3bdfeb7d6faef4f2ae49193292a60031
+Size (ruby-1.9.3-p327.tar.bz2) = 9975835 bytes
 SHA1 (patch-configure) = 7bb0cfd69781bf1a66378fe3b2f8a40a1235cc15
 SHA1 (patch-configure.in) = 0c6cb3a7ebe50111fd0a506b18e3a45a516ec751
 SHA1 (patch-defs_default__gems) = fb24111736f1a76a05e853aa068024dbdd24e5a5
