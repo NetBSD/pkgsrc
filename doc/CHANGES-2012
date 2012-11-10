@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3533 2012/11/10 14:37:54 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3534 2012/11/10 17:11:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5404,3 +5404,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-readline to 1.9.3p327nb2 [taca 2012-11-10]
 	Updated x11/ruby-tk to 1.9.3p327nb1 [taca 2012-11-10]
 	Updated devel/ruby-mode to 1.9.3p327 [taca 2012-11-10]
+	Added x11/motif version 2.3.4 [ryoon 2012-11-10]
