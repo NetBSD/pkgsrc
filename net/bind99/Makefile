@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2012/11/08 16:01:51 tron Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/10 23:45:39 pettai Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/ \
 		http://ftp.belnet.be/pub/mirror/ftp.isc.org/isc/bind9/${BIND_VERSION}/
+
+PATCHFILES=	rl-9.9.2.patch
+PATCH_SITES=	http://ss.vix.com/~vixie/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/software/bind/
