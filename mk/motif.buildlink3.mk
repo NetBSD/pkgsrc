@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink3.mk,v 1.15 2012/01/12 15:51:14 hans Exp $
+# $NetBSD: motif.buildlink3.mk,v 1.16 2012/11/10 17:13:37 ryoon Exp $
 #
 # Package-settable variables:
 #
@@ -53,6 +53,7 @@ _MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
 .if defined(MOTIF_TYPE)
 .  if (${MOTIF_TYPE} == "dt") || \
 	(${MOTIF_TYPE} == "lesstif") || \
+	(${MOTIF_TYPE} == "motif") || \
 	(${MOTIF_TYPE} == "openmotif")
 _MOTIF_TYPE=		${MOTIF_TYPE}
 .  endif
@@ -73,7 +74,9 @@ _MOTIFBASE=		${X11BASE}
 .  endif
 .endif
 
-.if ${_MOTIF_TYPE} == "openmotif"
+.if ${_MOTIF_TYPE} == "motif"
+.  include "../../x11/motif/buildlink3.mk"
+.elif ${_MOTIF_TYPE} == "openmotif"
 .  include "../../x11/openmotif/buildlink3.mk"
 .elif ${_MOTIF_TYPE} == "lesstif"
 .  include "../../x11/lesstif/buildlink3.mk"
