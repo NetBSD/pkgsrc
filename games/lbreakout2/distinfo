@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2011/06/09 17:06:16 drochner Exp $
+$NetBSD: distinfo,v 1.14 2012/11/10 08:53:28 shattered Exp $
 
-SHA1 (lbreakout2-2.6.3.tar.gz) = 6d09ca1e5b50116efb4f17ac86cee53b081c2229
-RMD160 (lbreakout2-2.6.3.tar.gz) = 24b4717b642c5e544c1917dc86de61f2fcfde392
-Size (lbreakout2-2.6.3.tar.gz) = 3403150 bytes
+SHA1 (lbreakout2-2.6.4.tar.gz) = 23c2f0d99354ee03b0a7bf6885ba0f0cc6837e70
+RMD160 (lbreakout2-2.6.4.tar.gz) = acfb1f1abd0e4de868d3f7758c4e2b6cce5d002a
+Size (lbreakout2-2.6.4.tar.gz) = 3470380 bytes
 SHA1 (patch-aa) = 25736b37b9ab5f8d57d25bffa3f456b0384f266d
 SHA1 (patch-ab) = beee4c08af31eb515ddea2e512db1f6f7cb7dcf1
 SHA1 (patch-ac) = 67405340bf632d93d767e0d4c1f3df23c07e7a1e
