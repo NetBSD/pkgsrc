@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2012/10/27 16:38:00 ryoon Exp $
+$NetBSD: distinfo,v 1.82 2012/11/11 22:26:00 joerg Exp $
 
 SHA1 (firefox-16.0.2.source.tar.bz2) = 0ffe96896583e92561b341330ab09ddc50140dd1
 RMD160 (firefox-16.0.2.source.tar.bz2) = 74424c68e594fff842104385bb6c6f2a3a034fd2
@@ -64,6 +64,9 @@ SHA1 (patch-ipc_glue_SharedMemorySysV.h) = c82d7fd5f1a099da175107401c725cfd5ea81
 SHA1 (patch-js_src_config_system-headers) = 86f1aa66f8a35d6967c2cd03d05b6dd57209a690
 SHA1 (patch-js_src_jscpucfg.h) = afce65ca5964fb732d96cf22902f89cd02aedf0d
 SHA1 (patch-js_src_jsgc.cpp) = 0e617094a4b7d87cdf801d9bc4ac1f52d909a12a
+SHA1 (patch-js_src_jsinterp.cpp) = bee8bdde7dd951dbfbe5b049eb502f7412fbf8e6
+SHA1 (patch-js_src_jsproxy.h) = 74b3ab7856530a9c7ed2d9b12b47b0eeffb0d1ae
+SHA1 (patch-js_src_jsprvtd.h) = 3891d3a3f3a449d95f051da3a7365a1f1963f2b8
 SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = f2b12fa554ec319b5848b1cc13ec17ef967b08d7
 SHA1 (patch-mb) = d1348344ad269df7008d857417551c594c9b9195
 SHA1 (patch-md) = 1369069901aacaa47d76753772236fe159d42362
