@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/11/11 21:35:17 jakllsch Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/prettytable.py
+${PYSITELIB}/prettytable.pyc
+${PYSITELIB}/prettytable.pyo
