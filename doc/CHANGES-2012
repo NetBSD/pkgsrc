@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3542 2012/11/11 21:29:16 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.3543 2012/11/11 21:31:18 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5413,3 +5413,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind99 to 9.9.2nb2 [pettai 2012-11-10]
 	Added devel/py-filechunkio version 1.5 [jakllsch 2012-11-11]
 	Updated comms/asterisk18 to 1.8.18.0 [jnemeth 2012-11-11]
+	Updated net/py-boto to 2.6.0 [jakllsch 2012-11-11]
