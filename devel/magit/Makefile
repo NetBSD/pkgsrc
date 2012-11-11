@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/11 07:45:30 dholland Exp $
 #
 
 DISTNAME=	magit-1.2.0
@@ -14,12 +14,19 @@ LICENSE=	gnu-gpl-v3
 FETCH_USING=		curl
 INFO_FILES=		yes
 USE_LANGUAGES=		# none
-USE_TOOLS=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 
 MAKE_FLAGS+=		EMACS=${EMACS_BIN}
 MAKE_FLAGS+=		PREFIX=${PREFIX}
 MAKE_FLAGS+=		SYSCONFDIR=${PKG_SYSCONFDIR}
+
+# pbulk sets BATCH=1 on the make command line, which breaks the makefile.
+SUBST_CLASSES+=		batch
+SUBST_STAGE.batch=	pre-build
+SUBST_FILES.batch=	Makefile Makefile-e
+SUBST_SED.batch+=	-e 's,BATCH,BAATCH,'
+SUBST_MESSAGE.batch=	Working around pbulk make variable pollution.
 
 INSTALL_TARGET=		install_core
 
