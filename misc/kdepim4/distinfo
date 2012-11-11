@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2012/03/19 21:01:28 markd Exp $
+$NetBSD: distinfo,v 1.17 2012/11/11 22:29:13 joerg Exp $
 
 SHA1 (kdepim-4.4.11.1.tar.bz2) = 49dd6cc8406b0ef4bb681bfc0de6ad9368b4b5b2
 RMD160 (kdepim-4.4.11.1.tar.bz2) = 51394b9dcb3aecc4f108e87de37c21e3af820ee1
@@ -21,8 +21,11 @@ SHA1 (patch-an) = 0644fda1025698dcb6833672ca88656931cd73dd
 SHA1 (patch-ao) = e8c93353d3d73662a55589dc71ceb8d7e03426bd
 SHA1 (patch-ap) = cf6854d683345d51c6d9f19286d73fea693a241a
 SHA1 (patch-kalarm_CMakeLists.txt) = 6799c123f626c50b8bef7ca3e720f899938accdc
+SHA1 (patch-kmail_imapaccountbase.h) = 0f04ffe6e936bdd8ca5823be3d711a41965c64c8
+SHA1 (patch-kmail_networkaccount.h) = 0e1f95fcabad758fcd75a1c0e6605fcf7e57dd2b
 SHA1 (patch-knode_CMakeLists.txt) = 0f3fcf56b46ff0b82fbadb3602947b6235db5234
 SHA1 (patch-kontact_plugins_akregator_CMakeLists.txt) = d148f3adad4fd2889dbd5e80402904322a4721c4
 SHA1 (patch-korganizer_CMakeLists.txt) = 3beb3f01c7e77cb4551dfe359ee4dddbca035840
+SHA1 (patch-libkleo_backends_qgpgme_threadedjobmixin.h) = ebad4d39e349e0b089a6d9cddfd9dd14f5e898ba
 SHA1 (patch-plugins_kaddressbook_editorpages_CMakeLists.txt) = 106a99f984eb1991065f920d120b03a5095f6688
 SHA1 (patch-plugins_kmail_bodypartformatter_CMakeLists.txt) = 63b88d4afdbb9901c7b0344559d41a21b733c57f
