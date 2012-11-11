@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2006/10/21 11:19:28 uebayasi Exp $
+$NetBSD: distinfo,v 1.15 2012/11/11 22:30:08 joerg Exp $
 
 SHA1 (hugs98-Sep2006.tar.gz) = bf3fec6b28ab812839d20a6c19d0f39e8190b4cc
 RMD160 (hugs98-Sep2006.tar.gz) = 99b6b88bd7256efa16e97684f265932d29133c40
 Size (hugs98-Sep2006.tar.gz) = 2157369 bytes
+SHA1 (patch-packages_base_include_HsBase.h) = 003db97899985bec5783dfdda2436019f49686c6
