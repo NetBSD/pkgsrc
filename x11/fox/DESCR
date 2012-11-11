@@ -1,8 +1,2 @@
-FOX is a C++ GUI toolkit that is supposed to
-allow programmers to write a program once, and
-compile anywhere (or so the website says, it sounds
-like Java to me). FOX is a very flexible library,
-it has all sorts of functions and options, and is
-supposed to be fairly fast.
-
-Author: Jeroen van der Zijp <jvz@cfdrc.com>
+FOX stands for Free Objects for X. It is a C++ based class library
+for building Graphical User Interfaces.
