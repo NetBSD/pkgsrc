@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/11 21:17:45 jakllsch Exp $
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2012/11/11 21:28:04 jakllsch Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/filechunkio/__init__.py
 ${PYSITELIB}/filechunkio/__init__.pyc
 ${PYSITELIB}/filechunkio/__init__.pyo
