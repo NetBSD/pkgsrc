@@ -1,13 +1,13 @@
 #!/bin/sh
 #
-# $Id: fscd.sh,v 1.1 2012/05/03 21:21:58 jdf Exp $
+# $Id: fscd.sh,v 1.2 2012/11/12 12:11:11 jdf Exp $
 #
 # Startup script for service monitoring daemon.
 #
 
 # PROVIDE: fscd
 # REQUIRE: DAEMON syslogd
-# BEFORE:  NETWORKING LOGIN
+# BEFORE:  LOGIN
 # KEYWORD: shutdown
 
 . /etc/rc.subr
