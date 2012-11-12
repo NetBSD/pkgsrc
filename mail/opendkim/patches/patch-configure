@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.1 2012/11/12 19:23:36 pettai Exp $
+
+Portability fixes
+
+--- configure.orig	2012-11-12 18:55:05.000000000 +0000
++++ configure
+@@ -18989,18 +18989,18 @@ then
+ 	as_fn_error $? "reputation requires libxml2 or libjansson" "$LINENO" 5
+ fi
+ 
+-if test  x"$xml2_found" == x"yes" -a x"$jansson_found" == x"yes"
++if test  x"$xml2_found" = x"yes" -a x"$jansson_found" = x"yes"
+ then
+ 	as_fn_error $? "cannot use both libxml2 and libjansson" "$LINENO" 5
+ fi
+ 
+-if test x"$xml2_found" == x"yes"
++if test x"$xml2_found" = x"yes"
+ then
+ 
+ $as_echo "#define USE_XML2 1" >>confdefs.h
+ 
+ fi
+-if test x"$jansson_found" == x"yes"
++if test x"$jansson_found" = x"yes"
+ then
+ 
+ $as_echo "#define USE_JANSSON 1" >>confdefs.h
