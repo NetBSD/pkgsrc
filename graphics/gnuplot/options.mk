@@ -1,7 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2012/08/10 15:14:54 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2012/11/12 22:02:43 bad Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
-PKG_SUPPORTED_OPTIONS=	gd lua pdf x11 qt4 wxwidgets
+PKG_SUPPORTED_OPTIONS=	gd lua pdf x11 qt4
+.if ${OPSYS} != "NetBSD"
+# wxterminal is broken on NetBSD c.f. pkg/47177
+PKG_SUPPORTED_OPTIONS+=	wxwidgets
+.endif
 PKG_SUGGESTED_OPTIONS=	gd x11
 
 .include "../../mk/bsd.options.mk"
