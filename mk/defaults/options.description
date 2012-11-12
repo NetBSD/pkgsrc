@@ -76,6 +76,7 @@ clisp			Common/C Lisp.
 clutter			Use Clutter for graphics support.
 compface		Enable compface support.
 coqide			Enable ide support for coq.
+coreaudio		Enable Core Audio library support.
 courier-dsn		Delivery Status Notification (DNS) mail delivery.
 courier-esmtp		ESMTP mail delivery.
 courier-gnutls		Support using GNU TLS instead of OpenSSL.
@@ -378,6 +379,7 @@ libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-mozilla		Use xulrunner to render HTML.
+lilypond		Enable LilyPond music typesetter support.
 links			Use and enable support for the links browser.
 links-xz		Enable lzma support for the links WWW browser.
 links-zlib		Enable zlib support for the links WWW browser.
