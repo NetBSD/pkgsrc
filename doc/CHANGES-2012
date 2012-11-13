@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3551 2012/11/13 16:23:01 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3552 2012/11/13 16:32:58 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5422,3 +5422,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Test-Compile to 0.22 [wen 2012-11-13]
 	Updated devel/p5-Test-use-ok to 0.11 [wen 2012-11-13]
 	Updated net/ldns to 1.6.16 [pettai 2012-11-13]
+	Updated security/opendnssec to 1.3.11 [pettai 2012-11-13]
