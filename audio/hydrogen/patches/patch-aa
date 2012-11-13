@@ -1,45 +1,56 @@
-$NetBSD: patch-aa,v 1.3 2012/06/28 07:32:37 sbd Exp $
+$NetBSD: patch-aa,v 1.4 2012/11/13 23:26:23 mrg Exp $
 
-diff -ru Sconstruct.orig Sconstruct
---- Sconstruct.orig	2010-09-19 15:36:25.000000000 +0000
-+++ Sconstruct
-@@ -47,7 +47,7 @@ def get_platform_flags( opts ):
+--- Sconstruct.orig	2012-02-19 13:54:05.000000000 -0800
++++ Sconstruct	2012-11-13 13:39:48.000000000 -0800
+@@ -47,7 +47,7 @@
  
  	env = Environment( options = opts )
  
--	if sys.platform == "linux2" or sys.platform == "darwin":
-+	if sys.platform == "linux2" or sys.platform == "darwin" or sys.platform[:6] == "netbsd":
+-	if sys.platform == "linux2" or sys.platform == "linux3" or sys.platform == "darwin":
++	if sys.platform == "linux2" or sys.platform == "linux3" or sys.platform == "darwin" or sys.platform[:6] == "netbsd":
  		if str(env['debug']) == "1":
  			cppflags += ['-Wall',  '-g2', '-ggdb', '-O0'] 
  			for flag in env["optflags"].split(" "):
-@@ -73,6 +73,11 @@ def get_platform_flags( opts ):
+@@ -75,6 +75,12 @@
+ 		    if str(env['bundle']) == "1": cppflags.append('-DBUNDLE_SUPPORT')
  
  		cppflags.append('-DLADSPA_SUPPORT')
- 		
++
 +		includes.append( env['prefix'] + "/include" )
 +		ldflags.append( "-L" + env['prefix'] + "/lib" )
 +		ldflags.append( "-Wl,-R," + env['prefix'] + "/lib" )
 +		# XXX: this should go in py4.py but i'm not sure where
 +		ldflags.append( "-Wl,-R," + env['prefix'] + "/qt4/lib" )
+ 		
  
- 
- 	if str(env['libarchive']) == "1": cppflags.append('-DLIBARCHIVE_SUPPORT')
-@@ -87,6 +92,9 @@ def get_platform_flags( opts ):
- 	if sys.platform == 'linux2':
+ 	if str(env['gui']) == "0": cppflags.append('-DNO_GUI_SUPPORT')
+@@ -96,6 +102,10 @@
  		ldflags.append('-lasound')
+ 	#	ldflags.append('-lrubberband')
  
 +	elif sys.platform[:6] == 'netbsd':
++		cppflags.append('-pthread')
 +		ldflags.append('-lossaudio')
 +
  	elif sys.platform == "win32":
  		includes.append( '3rdparty\libsndfile-1_0_17' )
  		includes.append( 'build\pthreads\include' )
-@@ -269,7 +277,7 @@ def get_hydrogen_gui( lib_hydrogen , opt
- 	if str(env['lash']) == "1":
- 	        env.ParseConfig('pkg-config --cflags --libs lash-1.0')
- 
--	if sys.platform == "darwin" or sys.platform == "linux2":
-+	if sys.platform == "darwin" or sys.platform == "linux2" or sys.platform[:6] == "netbsd":
+@@ -283,6 +293,9 @@
  		env.Append( LIBS = ["z"] )
+ 		env.Append( LIBS = ["pthread"] )
  
++	if sys.platform[:6] == "netbsd":
++		env.Append( LIBS = ["z"] )
++
  	if sys.platform == "darwin" and str(env['coreaudio']) == "1":
+ 		env.Append( LINKFLAGS = ['-framework','ApplicationServices'])
+ 		env.Append( LINKFLAGS = ['-framework','AudioUnit'])
+@@ -380,7 +393,7 @@
+ 
+ includes, a , b = get_platform_flags( opts )
+ 
+-env = Environment(options = opts, CPPPATH = includes)
++env = Environment(options = opts, ENV=os.environ, CPPPATH = includes)
+ 
+ 
+ Help(opts.GenerateHelpText(env))
