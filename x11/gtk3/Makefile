@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2012/10/29 05:06:19 asau Exp $
+# $NetBSD: Makefile,v 1.32 2012/11/13 21:55:27 adam Exp $
 
-DISTNAME=	gtk+-3.6.1
+DISTNAME=	gtk+-3.6.2
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/${PKGVERSION_NOREV:R}/ \
@@ -74,8 +74,6 @@ _BUILDING_GTK3=	yes
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
 .include "../../devel/atk/buildlink3.mk"
-BUILDLINK_API_DEPENDS.at-spi2-atk+=	at-spi2-atk>=2.6.1
-.include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.33.1
 .include "../../devel/glib2/buildlink3.mk"

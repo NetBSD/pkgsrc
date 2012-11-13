@@ -1,4 +1,4 @@
-
+# $NetBSD: buildlink3.mk,v 1.13 2012/11/13 21:55:27 adam Exp $
 
 BUILDLINK_TREE+=	gtk3
 
