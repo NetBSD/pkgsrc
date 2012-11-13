@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3553 2012/11/13 21:15:16 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3554 2012/11/13 21:56:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5424,3 +5424,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ldns to 1.6.16 [pettai 2012-11-13]
 	Updated security/opendnssec to 1.3.11 [pettai 2012-11-13]
 	Updated net/freeDiameter to 1.1.5 [wiz 2012-11-13]
+	Updated devel/glib2 to 2.34.2 [adam 2012-11-13]
+	Updated devel/at-spi2-core to 2.6.2 [adam 2012-11-13]
+	Updated devel/at-spi2-atk to 2.6.2 [adam 2012-11-13]
+	Updated x11/gtk3 to 3.6.2 [adam 2012-11-13]
