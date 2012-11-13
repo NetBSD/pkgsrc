@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/30 22:06:17 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/13 23:21:33 pettai Exp $
 include/urcu-bp.h
 include/urcu-call-rcu.h
 include/urcu-defer.h
@@ -23,6 +23,7 @@ include/urcu/rculfqueue.h
 include/urcu/rculfstack.h
 include/urcu/rculist.h
 include/urcu/ref.h
+include/urcu/static/bkp-wfqueue.h
 include/urcu/static/rculfqueue.h
 include/urcu/static/rculfstack.h
 include/urcu/static/urcu-bp.h
