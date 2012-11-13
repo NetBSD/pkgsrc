@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:04 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 13:25:23 wen Exp $
 #
 
-DISTNAME=	Test-Compile-0.13
+DISTNAME=	Test-Compile-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -18,7 +17,6 @@ PERL5_PACKLIST=		auto/Test/Compile/.packlist
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
