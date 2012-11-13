@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3554 2012/11/13 21:56:00 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3555 2012/11/13 23:21:59 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5428,3 +5428,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/at-spi2-core to 2.6.2 [adam 2012-11-13]
 	Updated devel/at-spi2-atk to 2.6.2 [adam 2012-11-13]
 	Updated x11/gtk3 to 3.6.2 [adam 2012-11-13]
+	Updated devel/userspace-rcu to 0.7.5 [pettai 2012-11-13]
