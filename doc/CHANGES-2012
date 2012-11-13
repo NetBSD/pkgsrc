@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3546 2012/11/12 19:24:02 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3547 2012/11/13 00:39:03 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5417,3 +5417,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/py-prettytable version 0.6.1 [jakllsch 2012-11-11]
 	Updated sysutils/fscd to 1.1 [jdf 2012-11-12]
 	Updated mail/opendkim to 2.6.7 [pettai 2012-11-12]
+	Updated comms/asterisk10 to 10.10.0 [jnemeth 2012-11-13]
