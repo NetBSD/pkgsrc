@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3555 2012/11/13 23:21:59 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3556 2012/11/13 23:26:55 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5429,3 +5429,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/at-spi2-atk to 2.6.2 [adam 2012-11-13]
 	Updated x11/gtk3 to 3.6.2 [adam 2012-11-13]
 	Updated devel/userspace-rcu to 0.7.5 [pettai 2012-11-13]
+	Updated audio/hydrogen to 0.9.5.1 [mrg 2012-11-13]
