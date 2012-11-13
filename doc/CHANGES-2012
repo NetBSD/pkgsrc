@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3547 2012/11/13 00:39:03 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.3548 2012/11/13 11:57:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5418,3 +5418,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/fscd to 1.1 [jdf 2012-11-12]
 	Updated mail/opendkim to 2.6.7 [pettai 2012-11-12]
 	Updated comms/asterisk10 to 10.10.0 [jnemeth 2012-11-13]
+	Updated time/p5-DateTime-TimeZone to 1.54 [wen 2012-11-13]
