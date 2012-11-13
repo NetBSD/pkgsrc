@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/10/23 10:24:17 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2012/11/13 21:55:27 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -37,8 +37,10 @@ CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 PLIST.x11=		yes
 
+BUILDLINK_API_DEPENDS.at-spi2-atk+=	at-spi2-atk>=2.6.1
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
+.include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
