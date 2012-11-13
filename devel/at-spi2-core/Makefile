@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:16:38 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2012/11/13 21:43:16 adam Exp $
 
-DISTNAME=	at-spi2-core-2.6.1
+DISTNAME=	at-spi2-core-2.6.2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}//}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
@@ -11,30 +10,29 @@ HOMEPAGE=	http://www.linuxfoundation.org/collaborate/workgroups/accessibility/at
 COMMENT=	Assistive Technology Service Provider Interface Core
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool msgfmt pkg-config
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-
-PKGCONFIG_OVERRIDE+=	atspi-2.pc.in
-
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
+PKGCONFIG_OVERRIDE+=	atspi-2.pc.in
+
 BUILD_DEFS+=	VARBASE PKG_SYSCONFBASE
 
-EGDIR=		${PREFIX}/share/examples/at-spi2-core
-PKG_SYSCONFSUBDIR= at-spi2
-busconfigdir=	${PKG_SYSCONFDIR}
+EGDIR=			${PREFIX}/share/examples/at-spi2-core
+PKG_SYSCONFSUBDIR=	at-spi2
+busconfigdir=		${PKG_SYSCONFDIR}
 eg_busconfigdir=	${EGDIR}/at-spi2
-default_sessiondir= ${PKG_SYSCONFBASE}/xdg/autostart
-eg_default_sessiondir= ${EGDIR}/xdg/autostart
+default_sessiondir=	${PKG_SYSCONFBASE}/xdg/autostart
+eg_default_sessiondir=	${EGDIR}/xdg/autostart
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 CONF_FILES=	${eg_busconfigdir}/accessibility.conf \
-			${busconfigdir}/accessibility.conf \
-		${eg_default_sessiondir}/at-spi-dbus-bus.desktop \
+			${busconfigdir}/accessibility.conf
+CONF_FILES+=	${eg_default_sessiondir}/at-spi-dbus-bus.desktop \
 			${default_sessiondir}/at-spi-dbus-bus.desktop
 
 .include "../../devel/glib2/buildlink3.mk"
@@ -42,5 +40,4 @@ CONF_FILES=	${eg_busconfigdir}/accessibility.conf \
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
