@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.13 2012/05/01 18:45:52 adam Exp $
+$NetBSD: patch-af,v 1.14 2012/11/13 21:23:07 adam Exp $
 
 --- glib/libcharset/Makefile.in.orig	2010-09-27 16:10:13.000000000 +0000
 +++ glib/libcharset/Makefile.in
-@@ -728,18 +728,6 @@ lcov-clean:
+@@ -776,18 +776,6 @@ lcov-clean:
  # run tests in cwd as part of make check
  check-local: test-nonrecursive
  install-exec-local: all-local

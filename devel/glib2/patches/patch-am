@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.8 2012/10/06 20:44:05 prlw1 Exp $
+$NetBSD: patch-am,v 1.9 2012/11/13 21:23:07 adam Exp $
 
 --- gio/tests/converter-stream.c.orig	2012-09-03 14:24:05.000000000 +0000
 +++ gio/tests/converter-stream.c
-@@ -1167,7 +1167,9 @@ main (int   argc,
+@@ -1173,7 +1173,9 @@ main (int   argc,
    CharsetTest charset_tests[] = {
      { "/converter-input-stream/charset/utf8->latin1", "UTF-8", "\303\205rr Sant\303\251", "ISO-8859-1", "\305rr Sant\351", 0 },
      { "/converter-input-stream/charset/latin1->utf8", "ISO-8859-1", "\305rr Sant\351", "UTF-8", "\303\205rr Sant\303\251", 0 },
