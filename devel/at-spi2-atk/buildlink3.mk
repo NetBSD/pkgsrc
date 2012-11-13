@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/10/18 10:19:01 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/11/13 21:44:23 adam Exp $
+
 BUILDLINK_TREE+=	at-spi2-atk
 
 .if !defined(AT_SPI2_ATK_BUILDLINK3_MK)
