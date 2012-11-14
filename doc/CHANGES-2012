@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3556 2012/11/13 23:26:55 mrg Exp $
+$NetBSD: CHANGES-2012,v 1.3557 2012/11/14 14:55:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5430,3 +5430,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk3 to 3.6.2 [adam 2012-11-13]
 	Updated devel/userspace-rcu to 0.7.5 [pettai 2012-11-13]
 	Updated audio/hydrogen to 0.9.5.1 [mrg 2012-11-13]
+	Updated www/typo3_45 to 4.5.22 [taca 2012-11-14]
+	Updated www/typo3_46 to 4.6.15 [taca 2012-11-14]
+	Updated www/typo3_47 to 4.7.7 [taca 2012-11-14]
