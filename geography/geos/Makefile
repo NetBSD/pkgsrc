@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2012/10/04 09:19:17 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/11/15 22:07:27 gdt Exp $
 
-DISTNAME=	geos-3.3.4
+DISTNAME=	geos-3.3.6
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,7 @@ EXTRACT_SUFX=	.tar.bz2
 # changes.  The following packages incorrectly (from the geos
 # viewpoint) link directly against -lgeos and should be revbumped on
 # every update (and fixed not to use -lgeos):
-#   geography/gdail-lib
+#   geography/gdal-lib
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://geos.refractions.net/
