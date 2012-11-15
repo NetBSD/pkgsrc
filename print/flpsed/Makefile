@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 13:45:38 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/15 13:44:14 gdt Exp $
 
 DISTNAME=		flpsed-0.3.9
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		print
 MASTER_SITES=		http://www.ecademix.com/JohannesHofmann/
 
@@ -18,6 +18,6 @@ INSTALLATION_DIRS+=	share/doc/flpsed
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/flpsed
 
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
