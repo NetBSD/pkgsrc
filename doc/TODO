@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11660 2012/11/14 15:00:49 taca Exp $
+$NetBSD: TODO,v 1.11661 2012/11/15 16:45:23 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1192,7 +1192,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o totem-3.4.1
-	o tpasm-1.2
 	o tpb-0.6.4
 	o tree-1.6.0
 	o trio-1.12
