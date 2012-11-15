@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2012/06/01 14:32:54 gdt Exp $
+$NetBSD: distinfo,v 1.18 2012/11/15 22:07:27 gdt Exp $
 
-SHA1 (geos-3.3.4.tar.bz2) = 2ec4be729c851460daf89d0d2ab785be5ef4c5c5
-RMD160 (geos-3.3.4.tar.bz2) = e7d34c5ccc5c1d82a1ebaec36ef20c346c321608
-Size (geos-3.3.4.tar.bz2) = 1861750 bytes
+SHA1 (geos-3.3.6.tar.bz2) = 454c9b61f158de509db60a69512414a0a1b0743b
+RMD160 (geos-3.3.6.tar.bz2) = bc7d2fdb8a8df309b0b24988167e1166325b92a4
+Size (geos-3.3.6.tar.bz2) = 1819672 bytes
 SHA1 (patch-ae) = d568c8950a24b516c6fd58e401bbf19405a2d150
 SHA1 (patch-include-geos-platform.h.in) = 92bd5fc2421650ce4853dce85d8d2e6509aa64e9
