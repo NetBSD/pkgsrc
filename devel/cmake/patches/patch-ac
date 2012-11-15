@@ -1,26 +1,26 @@
-$NetBSD: patch-ac,v 1.9 2012/09/14 13:26:20 wiz Exp $
+$NetBSD: patch-ac,v 1.10 2012/11/15 19:31:55 adam Exp $
 
 Insist on select python version for pkgsrc.
 
 --- Modules/FindPythonLibs.cmake.orig	2012-08-09 18:15:19.000000000 +0000
 +++ Modules/FindPythonLibs.cmake
 @@ -67,11 +67,18 @@ ELSE(PythonLibs_FIND_VERSION)
-     SET(_PYTHON_FIND_OTHER_VERSIONS ${_PYTHON3_VERSIONS} ${_PYTHON2_VERSIONS} ${_PYTHON1_VERSIONS})
- ENDIF(PythonLibs_FIND_VERSION)
+     set(_PYTHON_FIND_OTHER_VERSIONS ${_PYTHON3_VERSIONS} ${_PYTHON2_VERSIONS} ${_PYTHON1_VERSIONS})
+ endif()
  
 +# for pkgsrc: force Python version (set in pyversion.mk)
-+IF(DEFINED PYVERSSUFFIX)
-+  SET(_VERSIONS ${PYVERSSUFFIX})
-+ELSE(DEFINED PYVERSSUFFIX)
-+  SET(_VERSIONS ${_PYTHON2_VERSIONS} ${_PYTHON3_VERSIONS})
-+ENDIF(DEFINED PYVERSSUFFIX)
++if(DEFINED PYVERSSUFFIX)
++  set(_VERSIONS ${PYVERSSUFFIX})
++else()
++  set(_VERSIONS ${_PYTHON2_VERSIONS} ${_PYTHON3_VERSIONS})
++endif()
 +
  # Set up the versions we know about, in the order we will search. Always add
  # the user supplied additional versions to the front.
- SET(_Python_VERSIONS
+ set(_Python_VERSIONS
    ${Python_ADDITIONAL_VERSIONS}
 -  ${_PYTHON_FIND_OTHER_VERSIONS}
 +  ${_VERSIONS}
    )
  
- UNSET(_PYTHON_FIND_OTHER_VERSIONS)
+ unset(_PYTHON_FIND_OTHER_VERSIONS)
