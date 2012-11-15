@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2012/10/08 23:01:40 adam Exp $
+# $NetBSD: Makefile,v 1.41 2012/11/15 13:44:14 gdt Exp $
 
 DISTNAME=	cinepaint-0.22-1
 PKGNAME=	cinepaint-0.22.1
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cinepaint/}
 
@@ -28,7 +28,7 @@ BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.13 # needs _cmsLCMScolorSpace
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
