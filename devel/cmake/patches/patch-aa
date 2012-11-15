@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.9 2012/09/14 13:26:20 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2012/11/15 19:31:55 adam Exp $
 
 Patch in pkgsrc paths for finding stuff.
 
---- Modules/Platform/UnixPaths.cmake.orig	2010-11-03 19:58:27.000000000 +0000
+--- Modules/Platform/UnixPaths.cmake.orig	2012-10-31 15:32:05.000000000 +0000
 +++ Modules/Platform/UnixPaths.cmake
-@@ -48,10 +48,10 @@
+@@ -48,10 +48,10 @@ list(APPEND CMAKE_SYSTEM_INCLUDE_PATH
    /usr/include/w32api
  
    # X11
@@ -14,10 +14,10 @@ Patch in pkgsrc paths for finding stuff.
    # Other
 -  /usr/pkg/include
 +  @LOCALBASE@/include
-   /opt/csw/include /opt/include  
+   /opt/csw/include /opt/include
    /usr/openwin/include
    )
-@@ -61,16 +61,16 @@
+@@ -61,16 +61,16 @@ list(APPEND CMAKE_SYSTEM_LIBRARY_PATH
    /usr/lib/w32api
  
    # X11
@@ -27,13 +27,13 @@ Patch in pkgsrc paths for finding stuff.
    # Other
 -  /usr/pkg/lib
 +  @LOCALBASE@/lib
-   /opt/csw/lib /opt/lib 
+   /opt/csw/lib /opt/lib
    /usr/openwin/lib
    )
  
- LIST(APPEND CMAKE_SYSTEM_PROGRAM_PATH
+ list(APPEND CMAKE_SYSTEM_PROGRAM_PATH
 -  /usr/pkg/bin
 +  @LOCALBASE@/bin
    )
  
- LIST(APPEND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES
+ list(APPEND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES
