@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/09/14 23:45:27 asau Exp $
+$NetBSD: distinfo,v 1.22.2.1 2012/11/15 15:50:10 tron Exp $
 
 SHA1 (libffi-3.0.11.tar.gz) = bff6a6c886f90ad5e30dee0b46676e8e0297d81d
 RMD160 (libffi-3.0.11.tar.gz) = 2495e499b63bed7e334ea15979f2eb24ed12ef9a
@@ -12,4 +12,5 @@ SHA1 (patch-ag) = 6333317170f6e92f89db966315276dcd8e3484f2
 SHA1 (patch-ah) = e9580069ede90cd616da7bc230b28acbf5d204a6
 SHA1 (patch-ai) = f85a6cb64d4a9d7c3e56b47b7092fce10a744b5b
 SHA1 (patch-aj) = d130b2b20b94ca26c70dcc46614e36c6d0ac9153
+SHA1 (patch-ak) = 2dcd80ef62cf5c8df71f0a0424de86586ade6a62
 SHA1 (patch-fficonfig.h.in) = fd85fa767bc057c843ff71cc61bedfcff84def43
