@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 13:01:43 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/15 13:44:14 gdt Exp $
 #
 
 DISTNAME=		fl_logbook.121.src
 PKGNAME=		fl_logbook-1.21
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		ham
 MASTER_SITES=		http://www.w1hkj.com/LinuxApps/
 
@@ -25,5 +25,5 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Release/fl_logbook ${DESTDIR}${PREFIX}/bin
 
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
