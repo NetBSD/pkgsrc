@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.179 2012/11/13 21:23:07 adam Exp $
+$NetBSD: distinfo,v 1.180 2012/11/15 14:22:03 drochner Exp $
 
 SHA1 (glib-2.34.2.tar.xz) = ad16ef038e606d422fb282a78394328de3214309
 RMD160 (glib-2.34.2.tar.xz) = 5c3d8179941011c8420f35fa8f1aaaeb9bf52650
 Size (glib-2.34.2.tar.xz) = 6367740 bytes
+SHA1 (glib-gio-kqueue-2.32.4-v3.patch) = e849a2b306caa17aeffae1a4a480999681e98b5b
+RMD160 (glib-gio-kqueue-2.32.4-v3.patch) = 38c00a1ea75a5176720fcc4bc8160d1d9b0c3895
+Size (glib-gio-kqueue-2.32.4-v3.patch) = 100892 bytes
 SHA1 (patch-aa) = 71405ed89d2abd25edec375d52c43fe50c9f7c82
 SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
 SHA1 (patch-ac) = 96e153339675457356f71e35d20375bed669d337
