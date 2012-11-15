@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3562 2012/11/15 16:45:24 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.3563 2012/11/15 19:32:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5441,3 +5441,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gdk-pixbuf2 to 2.26.5 [drochner 2012-11-15]
 	Updated devel/gobject-introspection to 1.34.2 [drochner 2012-11-15]
 	Updated devel/tpasm to 1.7 [shattered 2012-11-15]
+	Updated devel/cmake to 2.8.10 [adam 2012-11-15]
