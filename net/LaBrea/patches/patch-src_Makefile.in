@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/11/16 20:10:20 joerg Exp $
+
+--- src/Makefile.in.orig	2012-11-16 11:46:22.000000000 +0000
++++ src/Makefile.in
+@@ -121,7 +121,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+-AM_CPPFLAGS = -I../inc -I- @DNETINC@ @PCAPINC@
++AM_CPPFLAGS = @DNETINC@ @PCAPINC@
+ 
+ sbin_PROGRAMS = labrea
+ 

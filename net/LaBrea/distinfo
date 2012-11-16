@@ -1,7 +1,20 @@
-$NetBSD: distinfo,v 1.5 2006/06/06 19:47:48 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/11/16 20:10:20 joerg Exp $
 
 SHA1 (labrea-2.5-stable-1.tar.gz) = 8f374b05cc50294b2773bda98f8317cf5b102067
 RMD160 (labrea-2.5-stable-1.tar.gz) = 27078ab4b4efdd3f0e8233cac228295bc5a5cf47
 Size (labrea-2.5-stable-1.tar.gz) = 210494 bytes
 SHA1 (patch-aa) = f3b7b2556513a90b24b5adf73a99da28462d33e4
-SHA1 (patch-ab) = 0a53983fd42e6e05242b317464e6c40ac0296518
+SHA1 (patch-ab) = 8a7d091795b0740384651d9e68b95a94af02e1df
+SHA1 (patch-src_Makefile.am) = 56c4709cc58beca503e22f2ce9a9345f9f16a687
+SHA1 (patch-src_Makefile.in) = c4b40eca2a36aacf34c7002bcb16f77d65f4f777
+SHA1 (patch-src_bget.c) = 315878e2a1474782323e0c140a8669dfc4143501
+SHA1 (patch-src_ctl.c) = a34625f2833c9d29f502e4511710932c828e15b5
+SHA1 (patch-src_getopt.c) = 8ef6823d92b2387261826a64bdec7d77eeb86b16
+SHA1 (patch-src_getopt1.c) = a8e0b262d0b1964c0c8e183d4287c9d22c1f8d6a
+SHA1 (patch-src_labrea.c) = 7649f79ce50064661fb3cf4dc6ab50a6f8066ef9
+SHA1 (patch-src_labrea__init.c) = ca4beab6f498dac1efd3c7e68ce7eab1ededbc6b
+SHA1 (patch-src_lbio.c) = c9ea4af31a70395ecc83cfeeaf7ec5acdd63f315
+SHA1 (patch-src_pkt.c) = d2db16a001a7603765422f9f2adf9accf261cd48
+SHA1 (patch-src_pkt__handler.c) = 74bdb6964a6758059f6a27b18439479aab6d6bff
+SHA1 (patch-src_syslog.c) = f9b3c699478496e13ca6dca2043c026d117872a5
+SHA1 (patch-src_utils.c) = 7342c619a3b1beb0a9aae6f66ed0179022d7daa9
