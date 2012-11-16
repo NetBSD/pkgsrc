@@ -1,4 +1,4 @@
-$NetBSD: patch-de,v 1.5 2009/12/10 20:35:58 abs Exp $
+$NetBSD: patch-de,v 1.6 2012/11/16 00:29:40 joerg Exp $
 
 --- lib/libxview/textsw/es_file.c.orig	1993-06-29 05:17:34.000000000 +0000
 +++ lib/libxview/textsw/es_file.c
@@ -38,6 +38,15 @@ $NetBSD: patch-de,v 1.5 2009/12/10 20:35:58 abs Exp $
  
  static void update_read_buf();  /* update the read buf if overlaps write buf */
  static Es_status es_file_commit();
+@@ -216,7 +218,7 @@ update_read_buf(private,start,end,buf)
+     }
+ }
+     
+-Pkg_private int
++Pkg_private void
+ es_file_append_error(error_buf, file_name, status)
+     char           *error_buf;
+     CHAR           *file_name;
 @@ -330,6 +332,16 @@ es_file_create(name, options, status)
      int             open_option;
      struct stat     buf;
