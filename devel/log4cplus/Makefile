@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/16 00:44:34 joerg Exp $
 #
 
 DISTNAME=	log4cplus-1.0.4
@@ -14,5 +14,10 @@ LICENSE=	apache-2.0 AND 2-clause-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++	# C for configure
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CPPFLAGS+=	-Werror=ignored-attributes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
