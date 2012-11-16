@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/11/16 00:33:49 joerg Exp $
 bin/ssfe
 bin/sirc
 lib/sirc/dsirc
@@ -15,6 +15,7 @@ lib/sirc/scripts/avoice.pl
 lib/sirc/scripts/country.pl
 lib/sirc/scripts/finger.pl
 lib/sirc/scripts/ftp.pl
+lib/sirc/scripts/getopts.pl
 lib/sirc/scripts/howl.pl
 lib/sirc/scripts/hotmail.pl
 lib/sirc/scripts/lastlog.pl
