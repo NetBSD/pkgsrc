@@ -1,4 +1,4 @@
-$NetBSD: patch-cy,v 1.4 2009/12/10 20:35:57 abs Exp $
+$NetBSD: patch-cy,v 1.5 2012/11/16 00:29:40 joerg Exp $
 
 --- lib/libxview/textsw/txt_file.c.orig	1993-06-29 05:17:48.000000000 +0000
 +++ lib/libxview/textsw/txt_file.c
@@ -174,7 +174,13 @@ $NetBSD: patch-cy,v 1.4 2009/12/10 20:35:57 abs Exp $
      Es_status       status;
      Textsw_view_handle view = VIEW_ABS_TO_REP(abstract);
  
-@@ -969,7 +1022,11 @@ textsw_cd(textsw, locx, locy)
+@@ -964,12 +1017,16 @@ textsw_get_from_fd(view, fd, print_error
+     return (result);
+ }
+ 
+-Pkg_private int
++Pkg_private void
+ textsw_cd(textsw, locx, locy)
      Textsw_folio    textsw;
      int             locx, locy;
  {
@@ -214,7 +220,15 @@ $NetBSD: patch-cy,v 1.4 2009/12/10 20:35:57 abs Exp $
  	    if ((fd = open(buf_mb, 0)) >= 0) {	/* } for match */
  		textsw_implicit_commit(folio);
  #else
-@@ -1034,9 +1103,15 @@ textsw_file_stuff(view, locx, locy)
+@@ -1027,16 +1096,22 @@ textsw_get_from_file(view, filename, pri
+ }
+ 
+ 
+-Pkg_private int
++Pkg_private void
+ textsw_file_stuff(view, locx, locy)
+     Textsw_view_handle view;
+     int             locx, locy;
  {
      Textsw_folio    folio = FOLIO_FOR_VIEW(view);
      int             fd;
