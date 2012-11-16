@@ -1,6 +1,6 @@
-$NetBSD: patch-src_date.h,v 1.1 2011/11/25 21:59:57 joerg Exp $
+$NetBSD: patch-src_date.h,v 1.2 2012/11/16 00:33:36 gdt Exp $
 
---- src/date.h.orig	2011-11-25 17:49:57.000000000 +0000
+--- src/date.h.orig	2006-09-11 15:40:15.000000000 +0000
 +++ src/date.h
 @@ -25,13 +25,15 @@
  #ifndef DATE_H

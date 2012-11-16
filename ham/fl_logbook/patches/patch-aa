@@ -1,51 +1,73 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/01/21 16:49:23 obache Exp $
+$NetBSD: patch-aa,v 1.2 2012/11/16 00:33:36 gdt Exp $
 
---- Makefile.orig	2006-11-21 14:10:53.000000000 +0000
-+++ Makefile
-@@ -10,7 +10,6 @@ else
- endif
+Use $(CXX) to build C++ programs.
+
+--- makefile.orig	2008-01-25 17:02:00.000000000 +0000
++++ makefile
+@@ -6,7 +6,6 @@
+ #
  
- PROJECT = fl_logbook
--CC = "/usr/bin/g++"
+ SRC = src/
+-CC = g++
+ CCFLAG = `fltk-config --cxxflags` -I$(SRC) -Wno-deprecated 
+ LIBS = `fltk-config --ldflags`
  
- ifeq ($(CFG),Debug)
-   OBJ_DIR = Debug
-@@ -19,9 +18,9 @@ ifeq ($(CFG),Debug)
-   C_INCLUDE_DIRS = -I"src" 
-   C_PREPROC = 
-   CFLAGS = -pipe `fltk-config --cxxflags` -Wno-deprecated -ffast-math -Wall -ggdb2 -O0 -fno-rtti -fexceptions 
--  LIB_DIRS = -L"src/lib" -L"../../../../../usr/local/lib" 
-+  LIB_DIRS = -L"src/lib"
-   LIBS = 
--  LDFLAGS = -pipe `fltk-config --ldstaticflags`
-+  LDFLAGS = -pipe `fltk-config --ldflags`
- endif
+@@ -16,45 +15,45 @@ LIBS = `fltk-config --ldflags`
+ all: fl_logbook
  
- ifeq ($(CFG),Release)
-@@ -31,9 +30,9 @@ ifeq ($(CFG),Release)
-   C_INCLUDE_DIRS = -I"src" 
-   C_PREPROC = 
-   CFLAGS = -pipe `fltk-config --cxxflags` -Wno-deprecated -ffast-math -Wall -g0 -O2 -fno-rtti -fexceptions 
--  LIB_DIRS = -L"src/lib" -L"../../../../../usr/local/lib" 
-+  LIB_DIRS = -L"src/lib"
-   LIBS =
--  LDFLAGS = -pipe -s `fltk-config --ldstaticflags`
-+  LDFLAGS = -pipe -s `fltk-config --ldflags`
- endif
+ adif_io.o: $(SRC)adif_io.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)adif_io.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)adif_io.cpp
  
- SRC_OBJS = \
-@@ -52,12 +51,12 @@ SRC_OBJS = \
+ support.o: $(SRC)support.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)support.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)support.cpp
  
- define build_target
- @echo Linking...
--@$(CC) -o "$(OUTPUT_DIR)/$(TARGET)" $(SRC_OBJS) $(LIB_DIRS) $(LIBS) $(LDFLAGS)
-+@$(CXX) -o "$(OUTPUT_DIR)/$(TARGET)" $(SRC_OBJS) $(LIB_DIRS) $(LIBS) $(LDFLAGS)
- endef
+ ipcdata.o: $(SRC)ipcdata.cpp $(SRC)ipcdata.h
+-	$(CC) $(CCFLAG) -c $(SRC)ipcdata.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)ipcdata.cpp
+ 	
+ multipsklog.o: $(SRC)multipsklog.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)multipsklog.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)multipsklog.cpp
  
- define compile_source
- @echo Compiling $<
--@$(CC) $(CFLAGS) $(C_PREPROC) $(C_INCLUDE_DIRS) -c "$<" -o "$@"
-+@$(CXX) $(CFLAGS) $(C_PREPROC) $(C_INCLUDE_DIRS) -c "$<" -o "$@"
- endef
+ qso_db.o: $(SRC)qso_db.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)qso_db.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)qso_db.cpp
  
- .PHONY: print_header directories
+ lgbook.o:$(SRC)lgbook.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)lgbook.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)lgbook.cpp
+  
+ calendar.o:$(SRC)calendar.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)calendar.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)calendar.cxx
+  
+ combo.o:$(SRC)combo.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)combo.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)combo.cxx
+  
+ date.o:$(SRC)date.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)date.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)date.cxx
+  
+ table.o:$(SRC)table.cxx
+-	$(CC) $(CCFLAG) -c $(SRC)table.cxx
++	$(CXX) $(CCFLAG) -c $(SRC)table.cxx
+  
+ fileio.o:$(SRC)fileio.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)fileio.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)fileio.cpp
+  
+ fl_logbook.o: $(SRC)fl_logbook.cpp
+-	$(CC) $(CCFLAG) -c $(SRC)fl_logbook.cpp
++	$(CXX) $(CCFLAG) -c $(SRC)fl_logbook.cpp
+ 
+ fl_logbook:  fl_logbook.o lgbook.o qso_db.o combo.o \
+ 		adif_io.o multipsklog.o support.o \
+ 		calendar.o date.o table.o fileio.o ipcdata.o
+-	$(CC) $(CCFLAG) \
++	$(CXX) $(CCFLAG) \
+ 		fl_logbook.o lgbook.o qso_db.o combo.o \
+ 		adif_io.o multipsklog.o support.o \
+ 		calendar.o date.o table.o fileio.o ipcdata.o \
