@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.17 2012/10/20 22:03:01 joerg Exp $
+$NetBSD: distinfo,v 1.18 2012/11/16 00:32:50 joerg Exp $
 
 SHA1 (boolean_6_99.tgz) = 03e8dc7c9aa2886b0d5663669248c507524c5b22
 RMD160 (boolean_6_99.tgz) = 7977bb140169fa15a7dde9709ba1867e763b7b9c
 Size (boolean_6_99.tgz) = 4270460 bytes
 SHA1 (patch-aa) = 0ca93dd87f8c314d718b63a14a94cbea7739b5a3
-SHA1 (patch-ab) = 688efee8aeb2f2616a6f67a2dbfd1055d48cb9b3
+SHA1 (patch-ab) = de9890d92db5a2957b1372e9562eb1d416f7f4b1
+SHA1 (patch-apps_edit_src_drivers_gdsdrin.cpp) = 8845e71816bae65cb38c86217483ac868f5a0ce1
 SHA1 (patch-apps_edit_src_drivers_printer.cpp) = fcbe44d1f059bb9ee2cf8301a7f02ec0686b318a
 SHA1 (patch-apps_edit_src_gdssourc_text.cpp) = da50d4d3156e807177cdc7d71c8de586dbd04f6d
 SHA1 (patch-apps_edit_src_intrface_strucdlg_cpp) = 44637ca6b71f722c55f0986ee31ee29f35fe8858
