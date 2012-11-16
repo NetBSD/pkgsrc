@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/12/07 15:15:17 joerg Exp $
+$NetBSD: distinfo,v 1.9 2012/11/16 00:33:17 joerg Exp $
 
 SHA1 (covered-20060904.tar.gz) = 78869b20bc6e032b4dac3a3029c4ea6a97962d3a
 RMD160 (covered-20060904.tar.gz) = c1a9e841f7e0a341bd8bce5c4f04e349e0b07672
 Size (covered-20060904.tar.gz) = 1549138 bytes
-SHA1 (patch-src_lxt2__read.c) = 0e260f7de5ccf52a1cc3ba4bf3d5fdb36dc69c9e
+SHA1 (patch-src_lxt2__read.c) = b08a12cf36fd8d5dc0c8e07469827d734f931b23
+SHA1 (patch-src_lxt2__read.h) = 3179039e6d48b0ccac0198d7107a422d07152a84
