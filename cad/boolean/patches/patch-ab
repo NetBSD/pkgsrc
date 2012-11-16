@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2012/01/03 01:18:46 dholland Exp $
+$NetBSD: patch-ab,v 1.7 2012/11/16 00:32:50 joerg Exp $
 
 - configure for pkgsrc
 
---- bin/FindwxWidgets.cmake.orig	2009-08-14 18:59:11.000000000 +0200
+--- bin/FindwxWidgets.cmake.orig	2008-10-13 12:59:48.000000000 +0000
 +++ bin/FindwxWidgets.cmake
 @@ -137,9 +137,9 @@ SET( wxWidgets_UCD "" )
  SET( wxWidgets_DBG "" )
