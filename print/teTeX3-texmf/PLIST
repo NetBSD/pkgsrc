@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2012/10/21 18:14:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.36 2012/11/16 14:39:45 jaapb Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2595,8 +2595,6 @@ share/texmf-dist/doc/latex/ccaption/ccaption.dvi
 share/texmf-dist/doc/latex/ccfonts/ccfonts.dvi
 share/texmf-dist/doc/latex/ccfonts/readme
 share/texmf-dist/doc/latex/chappg/chappg.txt
-share/texmf-dist/doc/latex/comment/README
-share/texmf-dist/doc/latex/comment/comm_latest.tex
 share/texmf-dist/doc/latex/concmath/concmath.dvi
 share/texmf-dist/doc/latex/crop/crop.dvi
 share/texmf-dist/doc/latex/currvita/README
@@ -2680,10 +2678,6 @@ share/texmf-dist/doc/latex/images/change_begin.gif
 share/texmf-dist/doc/latex/images/change_end.gif
 share/texmf-dist/doc/latex/images/new.gif
 share/texmf-dist/doc/latex/images/redball.gif
-share/texmf-dist/doc/latex/index/README
-share/texmf-dist/doc/latex/index/TODO
-share/texmf-dist/doc/latex/index/index.dvi
-share/texmf-dist/doc/latex/index/sample.tex
 share/texmf-dist/doc/latex/jknappen/mathbbol.rme
 share/texmf-dist/doc/latex/jknappen/mathrsfs.rme
 share/texmf-dist/doc/latex/labels/labels.dvi
@@ -6281,7 +6275,6 @@ share/texmf-dist/tex/latex/cmbright/t1cmbr.fd
 share/texmf-dist/tex/latex/cmbright/t1cmtl.fd
 share/texmf-dist/tex/latex/cmbright/ts1cmbr.fd
 share/texmf-dist/tex/latex/cmbright/ts1cmtl.fd
-share/texmf-dist/tex/latex/comment/comment.sty
 share/texmf-dist/tex/latex/concmath/concmath.sty
 share/texmf-dist/tex/latex/concmath/omlccm.fd
 share/texmf-dist/tex/latex/concmath/omlccr.fd
@@ -6369,7 +6362,6 @@ share/texmf-dist/tex/latex/graphics/vtex.def
 share/texmf-dist/tex/latex/greek/iso-8859-7.def
 share/texmf-dist/tex/latex/hangcaption/hangcaption.sty
 share/texmf-dist/tex/latex/import/import.sty
-share/texmf-dist/tex/latex/index/index.sty
 share/texmf-dist/tex/latex/jknappen/greekctr.sty
 share/texmf-dist/tex/latex/jknappen/latin1jk.def
 share/texmf-dist/tex/latex/jknappen/latin2jk.def
