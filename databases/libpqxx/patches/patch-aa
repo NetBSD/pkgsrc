@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/06/27 01:57:26 markd Exp $
+$NetBSD: patch-aa,v 1.2 2012/11/16 00:41:33 joerg Exp $
 
---- configure.orig	2005-06-21 22:51:02.000000000 +1200
+--- configure.orig	2005-07-01 07:52:28.000000000 +0000
 +++ configure
 @@ -19403,7 +19403,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.1 2005/06/27 01:57:26 markd Exp $
  	for option in $* ; do
  		SAVE_CXXFLAGS="$CXXFLAGS"
  		CXXFLAGS="$CXXFLAGS $option"
+@@ -19650,7 +19650,7 @@ _ACEOF
+ echo "$as_me:$LINENO: result: ${std}" >&5
+ echo "${ECHO_T}${std}" >&6
+ if ! test -z "${std}" ; then
+-	usestd="using namespace ${std};"
++	usestd="namespace ${std} {} using namespace ${std};"
+ fi
+ 
+ 
