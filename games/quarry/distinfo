@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/13 16:06:16 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/11/16 00:50:39 joerg Exp $
 
 SHA1 (quarry-0.2.0.tar.gz) = 261683ed795db8309b2a830badff4d2f1f2cd860
 RMD160 (quarry-0.2.0.tar.gz) = d931fa8a228f545c285c5481771bae91fa0787f8
@@ -7,3 +7,18 @@ SHA1 (patch-aa) = 4ca3baf50d135572e3fe2905cb7369b54f1d6233
 SHA1 (patch-ab) = 30214ce85f680b99dccc0009f5bd7ff8f927d9d1
 SHA1 (patch-ac) = f37e86ecf9fb0d93fd02c990a3224fffb9ee5c15
 SHA1 (patch-ad) = 07b6eb3a618a26830c74a085cc9e132b413caa52
+SHA1 (patch-src_board_board-internals.h) = 463be30643595776a9dcb2c93efb1cfed07b3b12
+SHA1 (patch-src_board_board.c) = a4ca50b94312ec6536dd61fd16cd705923c6402e
+SHA1 (patch-src_board_board.h) = fb7096efb0131bbeb23bdfc73bcc9192cae391e0
+SHA1 (patch-src_gui-gtk_gtk-control-center.c) = a25b63b0fbcf2d5c8133ff58d7ebc2dff7c8dbc5
+SHA1 (patch-src_gui-gtk_gtk-control-center.h) = f792f026b4793fee46e748bc6206ff309bc932d9
+SHA1 (patch-src_gui-gtk_quarry-text-buffer.c) = efbcdad5857cb61262d92ee6086f4c696601a0ce
+SHA1 (patch-src_gui-gtk_quarry-text-buffer.h) = 9ec5a88dfbd1fe24d324cbed907ff72de192d70c
+SHA1 (patch-src_gui-utils_time-control.c) = 2be7ce448f22ce88cbc25025943df3b306bd5e22
+SHA1 (patch-src_gui-utils_time-control.h) = 829a5a94f5d57c18373233918e2caafa128c657b
+SHA1 (patch-src_sgf_sgf-privates.h) = 08f5924924cdf1c4adbc3a23b8ad33af6ee17cf1
+SHA1 (patch-src_sgf_sgf-tree.c) = 32e8b26ed58be374a5ba9c83acb959fdc3dbe039
+SHA1 (patch-src_sgf_sgf-utils.c) = 1113d0183761d552597e0581808341e1de0ca10f
+SHA1 (patch-src_sgf_sgf.h) = 1ec4c961ddb14d7c34d12e50f18ba85a8793b5fb
+SHA1 (patch-src_utils_string-list.c) = 21c48aed6facdb0e9a6da43fbc223e816e76210a
+SHA1 (patch-src_utils_utils.h) = 93a887aa7973b3a86852b1727610c086cbc3b485
