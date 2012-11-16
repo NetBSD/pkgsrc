@@ -1,4 +1,4 @@
-$NetBSD: patch-ds,v 1.4 2011/09/29 07:47:56 dholland Exp $
+$NetBSD: patch-ds,v 1.5 2012/11/16 00:29:40 joerg Exp $
 
 - Needs sys/param.h to define BSD if it's going to test it. I'm not
 sure if this is actually failing at the moment but it could start
@@ -51,3 +51,13 @@ without notice.
  #else
  #define sigisempty(s)   (!(*(s)))
  #endif
+@@ -492,6 +500,9 @@ void	ntfy_assert_debug();
+ 
+ void	ntfy_fatal_error();
+ 
++void ntfy_add_to_table(NTFY_CLIENT *, NTFY_CONDITION *, int);
++void ntfy_remove_from_table(NTFY_CLIENT *, NTFY_CONDITION *);
++
+ #define	pkg_private	extern
+ #define	pkg_private_data
+ 
