@@ -1,4 +1,4 @@
-$NetBSD: patch-core_libs_database_imagehistory_imagehistorygraph_boost.h,v 1.1 2012/03/21 21:14:47 markd Exp $
+$NetBSD: patch-core_libs_database_imagehistory_imagehistorygraph_boost.h,v 1.2 2012/11/16 20:06:08 joerg Exp $
 
 boost148.patch from ArchLinux - build with recent boost.
 
@@ -22,6 +22,24 @@ boost148.patch from ArchLinux - build with recent boost.
                                            // Invert the default compare method: With greater, we get the longest path
                                            distance_compare(std::greater<int>()).
                                            // will be returned if a node is unreachable
+@@ -1362,7 +1362,7 @@ protected:
+             template <typename VertexType, typename GraphType>
+             void discover_vertex(VertexType u, const GraphType&) const
+             {
+-                record(u);
++                this->record(u);
+             }
+         };
+ 
+@@ -1373,7 +1373,7 @@ protected:
+             template <typename VertexType, typename GraphType>
+             void discover_vertex(VertexType u, const GraphType&) const
+             {
+-                record(u);
++                this->record(u);
+             }
+         };
+ 
 @@ -1384,14 +1384,15 @@ protected:
          template <class GraphType, typename VertexLessThan>
          class lessThanMapEdgeToTarget
