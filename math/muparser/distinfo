@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/08/15 17:38:49 drochner Exp $
+$NetBSD: distinfo,v 1.6 2012/11/16 01:04:43 joerg Exp $
 
 SHA1 (muparser_v2_2_2.zip) = 830383b1bcfa706be5a6ac8b7ba43f32f16a1497
 RMD160 (muparser_v2_2_2.zip) = efcaea175523b2e7b3e0d2abaf1ee8767d142da3
 Size (muparser_v2_2_2.zip) = 1508675 bytes
 SHA1 (patch-aa) = ce9187280bdaf5c00765723b01412b232fcbe4d7
+SHA1 (patch-src_muParserTest.cpp) = da3e3b3916cdc158513ef40dda8c10ddf8c87840
