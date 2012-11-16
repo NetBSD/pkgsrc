@@ -1,8 +1,18 @@
-$NetBSD: patch-fg,v 1.2 2009/12/10 20:35:58 abs Exp $
+$NetBSD: patch-fg,v 1.3 2012/11/16 00:29:40 joerg Exp $
 
 --- lib/libxview/window/window_set.c.orig	1993-06-29 05:15:47.000000000 +0000
 +++ lib/libxview/window/window_set.c
-@@ -960,6 +960,8 @@ window_set_avlist_tier2(win_public, attr
+@@ -649,6 +649,9 @@ window_set_avlist(win_public, avlist)
+     return (error);
+ }
+ 
++Xv_private void window_set_cms_data(Xv_Window, Xv_cmsdata *);
++Xv_private void window_set_cms_name(Xv_Window, char *);
++
+ static     Xv_opaque
+ window_set_avlist_tier2(win_public, attrs, error, new_rect, old_rect, win_attrs, win_attrs_mask)
+     Xv_Window			 win_public;
+@@ -960,6 +963,8 @@ window_set_avlist_tier2(win_public, attr
      return(error);
  }
  
@@ -11,7 +21,7 @@ $NetBSD: patch-fg,v 1.2 2009/12/10 20:35:58 abs Exp $
  static     Xv_opaque
  window_set_avlist_tier3(win_public, attrs, error, new_rect, old_rect, win_attrs, win_attrs_mask)
      Xv_Window			 win_public;
-@@ -1072,7 +1074,6 @@ window_set_avlist_tier3(win_public, attr
+@@ -1072,7 +1077,6 @@ window_set_avlist_tier3(win_public, attr
  
        case WIN_SOFT_FNKEY_LABELS: {
          register Xv_Drawable_info 	*info;
