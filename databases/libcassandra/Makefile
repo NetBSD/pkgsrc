@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 21:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/11/16 00:40:18 joerg Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -32,5 +32,10 @@ GCC_REQD+=	4.4
 
 CONFIGURE_ARGS+=	CPPFLAGS="-I${BUILDLINK_PREFIX.libthrift}/include/thrift -I${BUILDLINK_PREFIX.boost-headers}/include/boost"
 MAKE_ENV+=		AM_DEFAULT_VERBOSITY=1
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-c++11-extensions
+.endif
 
 .include "../../mk/bsd.pkg.mk"
