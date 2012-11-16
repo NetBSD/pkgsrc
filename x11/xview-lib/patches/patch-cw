@@ -1,4 +1,4 @@
-$NetBSD: patch-cw,v 1.4 2009/12/10 20:35:57 abs Exp $
+$NetBSD: patch-cw,v 1.5 2012/11/16 00:29:40 joerg Exp $
 
 --- lib/libxview/textsw/txt_again.c.orig	1993-06-29 05:17:32.000000000 +0000
 +++ lib/libxview/textsw/txt_again.c
@@ -133,3 +133,12 @@ $NetBSD: patch-cw,v 1.4 2009/12/10 20:35:57 abs Exp $
  
  static int
  textsw_next_is_delimiter(again)
+@@ -848,7 +944,7 @@ textsw_get_recorded_x(view)
+     int             found_it_already = FALSE;
+ 
+     if (!TXTSW_DO_AGAIN(folio))
+-	return;
++	return -1;
+     again = &folio->again[0];
+     if (TXTSW_STRING_IS_NULL(again)) {
+ 	return (result);

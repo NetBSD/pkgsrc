@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.3 2009/12/10 20:35:56 abs Exp $
+$NetBSD: patch-ak,v 1.4 2012/11/16 00:29:39 joerg Exp $
 
 --- lib/libxview/font/font.c.orig	1993-06-29 05:15:01.000000000 +0000
 +++ lib/libxview/font/font.c
@@ -13,3 +13,21 @@ $NetBSD: patch-ak,v 1.3 2009/12/10 20:35:56 abs Exp $
  /*
   * delimiters
   */
+@@ -144,7 +148,7 @@ static char	*font_strip_name();
+ static int	font_delim_count();
+ static XID font_try_misc_name();
+ static Font_locale_info *find_font_locale_info();
+-static int	font_setup_known_families();
++static void	font_setup_known_families();
+ static int	font_setup_known_styles();
+ static void	font_init_known_families();
+ static void	font_init_known_styles();
+@@ -3315,7 +3319,7 @@ Font_locale_info	*linfo;
+ 
+ }
+ 
+-static int
++static void
+ font_setup_known_families(linfo)
+ Font_locale_info	*linfo;
+ {

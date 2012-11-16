@@ -1,17 +1,18 @@
-$NetBSD: patch-cz,v 1.4 2009/12/10 20:35:57 abs Exp $
+$NetBSD: patch-cz,v 1.5 2012/11/16 00:29:40 joerg Exp $
 
 --- lib/libxview/textsw/txt_input.c.orig	1993-06-29 05:17:42.000000000 +0000
 +++ lib/libxview/textsw/txt_input.c
-@@ -40,8 +40,6 @@ static char     sccsid[] = "@(#)txt_inpu
+@@ -40,8 +40,7 @@ static char     sccsid[] = "@(#)txt_inpu
  #include <stdlib.h> 
  #endif /* SVR4 */
  
 -extern int      errno;
 -
++Pkg_private void textsw_do_remote_drag_copy_move(Textsw_view_handle, Event *, short);
  Pkg_private Xv_Cursor move_cursor, dup_cursor;	/* laf */
  Pkg_private void termsw_menu_set();
  Pkg_private Key_map_handle textsw_do_filter();
-@@ -57,6 +55,8 @@ static	void	textsw_do_undo();
+@@ -57,6 +56,8 @@ static	void	textsw_do_undo();
  Pkg_private     void textsw_implicit_commit_doit();
  #endif
  
@@ -20,7 +21,7 @@ $NetBSD: patch-cz,v 1.4 2009/12/10 20:35:57 abs Exp $
  #define SPACE_CHAR 0x20
  
  Pkg_private int
-@@ -193,6 +193,15 @@ textsw_gprofed_routine(view, ie)
+@@ -193,6 +194,15 @@ textsw_gprofed_routine(view, ie)
  #endif
  
  
@@ -36,7 +37,7 @@ $NetBSD: patch-cz,v 1.4 2009/12/10 20:35:57 abs Exp $
  Pkg_private int
  textsw_process_event(view_public, ie, arg)
      Textsw_view     view_public;
-@@ -200,14 +209,6 @@ textsw_process_event(view_public, ie, ar
+@@ -200,14 +210,6 @@ textsw_process_event(view_public, ie, ar
      Notify_arg      arg;
  {
      Pkg_private void     textsw_update_scrollbars();
