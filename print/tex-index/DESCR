@@ -1,0 +1,4 @@
+This is a reimplementation of LaTeX's indexing macros to
+provide better support for indexing. For example, it supports
+multiple indexes in a single document and provides a more
+robust \index command.
