@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/09/14 17:46:23 asau Exp $
+$NetBSD: distinfo,v 1.2 2012/11/16 00:32:07 joerg Exp $
 
 SHA1 (plink-1.07-src.zip) = d41a2d014ebc02bf11e5235292b50fad6dedd407
 RMD160 (plink-1.07-src.zip) = ce22e2388fc711ac9938d21ffd3cb68512ba1150
 Size (plink-1.07-src.zip) = 2257297 bytes
 SHA1 (patch-Makefile) = cb01e12cea61d1fe41f352759481277284d9c187
+SHA1 (patch-elf.cpp) = ab0bfdda3c84b4f3891f53a95bacaafa5d016bd9
+SHA1 (patch-idhelp.cpp) = 3321f343a02bf7cfd253f12f24c8abfb2ef9ec3a
+SHA1 (patch-sets.cpp) = cd317b6b3775682e60e93f1d35955007d71b90b0
