@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3567 2012/11/16 14:29:02 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3568 2012/11/16 14:36:42 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5446,3 +5446,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/fl_logbook to 2.5 [gdt 2012-11-16]
 	Added print/tex-comment version 3.6 [jaapb 2012-11-16]
 	Added print/tex-comment-doc version 3.6 [jaapb 2012-11-16]
+	Added print/tex-index version 4.1beta [jaapb 2012-11-16]
