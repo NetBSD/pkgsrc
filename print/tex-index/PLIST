@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/11/16 14:36:27 jaapb Exp $
+share/texmf-dist/bibtex/bst/index/xagsm.bst
+share/texmf-dist/bibtex/bst/index/xplain.bst
+share/texmf-dist/makeindex/index/bibref.ist
+share/texmf-dist/tex/latex/index/autind.sty
+share/texmf-dist/tex/latex/index/bibref.sty
+share/texmf-dist/tex/latex/index/index.sty
