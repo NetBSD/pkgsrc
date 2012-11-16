@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2012/09/29 23:28:22 dholland Exp $
+$NetBSD: distinfo,v 1.42 2012/11/16 00:54:04 joerg Exp $
 
 SHA1 (inkscape-0.48.3.1.tar.bz2) = 23344555a1b5cc7909ad01d926cfaddb67bfbde9
 RMD160 (inkscape-0.48.3.1.tar.bz2) = 139720f01b987001b558226ec2de60b36fb1123c
@@ -19,3 +19,12 @@ SHA1 (patch-am) = 2307f1ab4bb628d9babaeadb5783073f62eedaca
 SHA1 (patch-ap) = cd29bd178dc2c6c9456bc09d6663d6a25acc7da1
 SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
 SHA1 (patch-ar) = 128749bac44faf4135670068e06c0928eb5c27c8
+SHA1 (patch-src_2geom_basic-intersection.cpp) = 743b13293191a74d4c0c22231e5ed7866219dfee
+SHA1 (patch-src_2geom_solve-bezier-parametric.cpp) = 71cca994451b1e7d5aba625600089d1e4a47888e
+SHA1 (patch-src_color-profile.cpp) = 14932b25ed333925518d5140b3691a29e155cd9a
+SHA1 (patch-src_display_nr-filter-gaussian.cpp) = 344109eb4360560bfe8481b25588ef37e5140135
+SHA1 (patch-src_dom_io_domstream.cpp) = 6b525b8e730e4497afdf1da0ae27f0dc69bfad40
+SHA1 (patch-src_dom_io_domstream.h) = 9325fc9d211eb3349628a736283ed0c475399a8b
+SHA1 (patch-src_ui_dialog_inkscape-preferences.cpp) = f95af6d326ddf7512b67f68efe0b23bc3ebe651e
+SHA1 (patch-src_ui_widget_registered-widget.h) = a5c16bcd28a015959121ed8b92423762f182a71b
+SHA1 (patch-src_widgets_desktop-widget.h) = 6528b3105590bfa8b5d33d428aa8c9cbc3561225
