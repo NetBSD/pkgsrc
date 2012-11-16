@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile_in,v 1.1 2012/11/16 02:28:39 dholland Exp $
+
+Use optimizer levels that actually exist.
+
+--- src/Makefile.in~	2004-02-11 21:18:50.000000000 +0000
++++ src/Makefile.in
+@@ -65,7 +65,7 @@ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+ # Automake is seriously broken...this seems to be the only way to get the conditional
+-CFLAGS = $(@DEVEL_TRUE@DEVELFLAGS) @EXTRAFLAGS@ -fno-strict-aliasing -O9 #-g -pg
++CFLAGS = $(@DEVEL_TRUE@DEVELFLAGS) @EXTRAFLAGS@ -fno-strict-aliasing -O3 #-g -pg
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
