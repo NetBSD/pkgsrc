@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/03/19 23:01:43 markd Exp $
+$NetBSD: patch-aa,v 1.2 2012/11/16 00:52:14 joerg Exp $
 
 --- libkexiv2/libkexiv2/kexiv2.cpp.orig	2009-02-27 08:39:37.000000000 +0000
 +++ libkexiv2/libkexiv2/kexiv2.cpp
@@ -23,6 +23,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/19 23:01:43 markd Exp $
  namespace KExiv2Iface
  {
  
+@@ -800,8 +814,8 @@ bool KExiv2::setExifThumbnail(const QIma
+         QBuffer buffer(data);
+         buffer.open(IO_WriteOnly);
+         thumb.save(&buffer, "JPEG");
+-        Exiv2::ExifThumb thumb(d->exifMetadata);
+-        thumb.setJpegThumbnail((Exiv2::byte *)data.data(), data.size());
++        Exiv2::ExifThumb thumb2(d->exifMetadata);
++        thumb2.setJpegThumbnail((Exiv2::byte *)data.data(), data.size());
+ #else
+         KTempFile thumbFile(QString(), "KExiv2ExifThumbnail");
+         thumbFile.setAutoDelete(true);
 @@ -1603,7 +1617,11 @@ QString KExiv2::getExifTagTitle(const ch
      {
          std::string exifkey(exifTagName);
