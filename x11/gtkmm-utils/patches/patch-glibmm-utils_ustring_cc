@@ -1,8 +1,8 @@
-$NetBSD: patch-glibmm-utils_ustring_cc,v 1.1 2012/05/07 01:41:44 dholland Exp $
+$NetBSD: patch-glibmm-utils_ustring_cc,v 1.2 2012/11/16 00:27:20 joerg Exp $
 
 Fix build with latest glib2.
 
---- glibmm-utils/ustring.cc~	2008-06-19 13:12:29.000000000 +0000
+--- glibmm-utils/ustring.cc.orig	2008-06-19 13:12:29.000000000 +0000
 +++ glibmm-utils/ustring.cc
 @@ -20,8 +20,7 @@
   */
@@ -14,3 +14,18 @@ Fix build with latest glib2.
  #include "ustring.h"
  
  namespace Glib {
+@@ -156,12 +155,12 @@ trim(Glib::ustring& str)
+ }
+ 
+ Glib::ustring
+-uprintf(const Glib::ustring& format, ...)
++uprintf(const char *format, ...)
+ {
+     va_list args;
+ 
+     va_start(args, format);
+-    gchar* cstr = g_strdup_vprintf(format.c_str(), args);
++    gchar* cstr = g_strdup_vprintf(format, args);
+     Glib::ustring str(cstr);
+     g_free(cstr);
+   
