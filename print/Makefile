@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.549 2012/11/16 14:29:30 jaapb Exp $
+# $NetBSD: Makefile,v 1.550 2012/11/16 14:38:35 jaapb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -423,6 +423,8 @@ SUBDIR+=	tex-ifplatform-doc
 SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-ifxetex-doc
 SUBDIR+=	tex-igo
+SUBDIR+=	tex-index
+SUBDIR+=	tex-index-doc
 SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-jadetex-doc
 SUBDIR+=	tex-japanese
