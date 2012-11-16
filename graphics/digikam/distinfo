@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.36 2012/03/21 21:14:47 markd Exp $
+$NetBSD: distinfo,v 1.37 2012/11/16 20:06:08 joerg Exp $
 
 SHA1 (digikam-2.5.0.tar.bz2) = 6cadb838669d1bdcbd6abb677889f7d68d696383
 RMD160 (digikam-2.5.0.tar.bz2) = 4ff1b5fbc2cc4a8cb9994f7c7796086418dd43fb
 Size (digikam-2.5.0.tar.bz2) = 54976375 bytes
 SHA1 (patch-CMakeLists.txt) = be9b2c8df31e20b4d051c2bdaf92d0a0dff573b8
+SHA1 (patch-core_digikam_album_albummanager.h) = 1933ade39e080f1dda996683a6edf47b125a9acf
 SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = 78f2e7a35d7ddae3c8f685414112bd6aebec2855
-SHA1 (patch-core_libs_database_imagehistory_imagehistorygraph_boost.h) = 4a7eb391a392ad2dbbf42a0fb06c157ce79d5177
+SHA1 (patch-core_libs_database_imagehistory_imagehistorygraph_boost.h) = 18aead6282798bfb20d43ec2a6b8a6a73bc9d065
+SHA1 (patch-core_libs_dimg_filters_icc_iccmanager.h) = 96eb80ae73184d95efb52d01ede8e25b607158a0
 SHA1 (patch-core_utilities_setup_setupplugins.cpp) = c15907a93144d33905d1dd33f604362b79e89690
 SHA1 (patch-doc_CMakeLists.txt) = 5b4ba1daa49607b8773c3903d953e11bebc4d661
