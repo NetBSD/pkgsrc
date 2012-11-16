@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/09/03 10:06:40 marino Exp $
+$NetBSD: distinfo,v 1.2 2012/11/16 01:05:33 joerg Exp $
 
 SHA1 (libktorrent-1.2.1-2.tar.bz2) = 857e4227c4bba685755d66581d881f893f6311ae
 RMD160 (libktorrent-1.2.1-2.tar.bz2) = 3daa90d1da8de816ff5b02b46c93e6741a97c8fa
 Size (libktorrent-1.2.1-2.tar.bz2) = 896558 bytes
+SHA1 (patch-examples_ktcli_main.cpp) = 6ed9db8aa7701402d8784cb5209be9b433dc9680
 SHA1 (patch-src_net_address.h) = 0689a5efc34062868ffb6e0ebbfe3b00ffdc8c20
