@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2009/02/11 21:00:13 joerg Exp $
+$NetBSD: distinfo,v 1.9 2012/11/16 00:40:44 joerg Exp $
 
 SHA1 (metakit-2.4.9.7.tar.gz) = 1b75400038fcad941886deb0748e669c224bc995
 RMD160 (metakit-2.4.9.7.tar.gz) = e563c2187e66ed7a8ea0e9a16971e6ce777e3088
 Size (metakit-2.4.9.7.tar.gz) = 868310 bytes
 SHA1 (patch-ab) = 74a987a807844460cee9b13cd06578529911c68e
+SHA1 (patch-python_PyView.cpp) = 48d9062f9dd2c77b6e4686c2fc328265307b16e4
