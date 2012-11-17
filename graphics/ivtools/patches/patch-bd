@@ -1,8 +1,16 @@
-$NetBSD: patch-bd,v 1.1 2010/01/08 18:46:48 joerg Exp $
+$NetBSD: patch-bd,v 1.2 2012/11/17 22:08:26 markd Exp $
 
---- src/Attribute/attrvalue.c.orig	2010-01-08 18:22:39.000000000 +0000
-+++ src/Attribute/attrvalue.c
-@@ -283,7 +283,7 @@ boolean AttributeValue::boolean_val() {
+--- work.i386/ivtools-1.2/src/Attribute/attrvalue.c.orig	2009-08-26 17:51:51.000000000 +0000
++++ work.i386/ivtools-1.2/src/Attribute/attrvalue.c
+@@ -38,6 +38,7 @@
+ #include <memory.h>
+ #endif
+ #include <stdio.h>
++#include <stdint.h>
+ #include <string.h>
+ #include <cstdio>
+ using namespace std;
+@@ -393,7 +394,7 @@ boolean AttributeValue::boolean_val() {
      case AttributeValue::StringType:
  	return (boolean) int_val()!=-1;
      case AttributeValue::ObjectType:
