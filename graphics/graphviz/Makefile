@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2012/11/11 18:35:27 markd Exp $
+# $NetBSD: Makefile,v 1.110 2012/11/17 22:37:40 markd Exp $
 
 DISTNAME=	graphviz-2.26.3
 PKGREVISION=	18
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ARGS+=	--disable-r
+CONFIGURE_ARGS+=	--with-gts=no
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
