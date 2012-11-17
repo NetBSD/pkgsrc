@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3573 2012/11/17 10:58:52 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3574 2012/11/17 11:15:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5456,3 +5456,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/gitweb to 1.8.0 [adam 2012-11-16]
 	Updated devel/xulrunner to 16.0.2nb1 [ryoon 2012-11-17]
 	Updated www/firefox to 16.0.2nb1 [ryoon 2012-11-17]
+	Updated pkgtools/url2pkg to 2.17 [ryoon 2012-11-17]
