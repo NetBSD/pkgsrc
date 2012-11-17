@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2011/10/14 09:06:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/11/17 11:50:14 ryoon Exp $
 bin/spatch
+bin/spatch.byte
 bin/spatch.opt
-lib/dllpycaml_stubs.so
 man/man1/spatch.1
+man/man3/Coccilib.3
+share/coccinelle/commons/commands.cmi
 share/coccinelle/commons/common.cmi
 share/coccinelle/commons/common_extra.cmi
 share/coccinelle/commons/glimpse.cmi
@@ -11,7 +13,6 @@ share/coccinelle/commons/oarray.cmi
 share/coccinelle/commons/oassoc.cmi
 share/coccinelle/commons/objet.cmi
 share/coccinelle/commons/ocollection.cmi
-share/coccinelle/commons/ofullcommon.cmi
 share/coccinelle/commons/ograph.cmi
 share/coccinelle/commons/ograph_extended.cmi
 share/coccinelle/commons/ograph_simple.cmi
@@ -19,7 +20,6 @@ share/coccinelle/commons/osequence.cmi
 share/coccinelle/commons/oset.cmi
 share/coccinelle/commons/parser_combinators.cmi
 share/coccinelle/commons/seti.cmi
-share/coccinelle/commons/sexp_common.cmi
 share/coccinelle/globals/iteration.cmi
 share/coccinelle/ocaml/coccilib.cmi
 share/coccinelle/parsing_c/ast_c.cmi

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:16:47 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/11/17 11:50:14 ryoon Exp $
 
-DISTNAME=	coccinelle-0.2.5
-PKGREVISION=	4
+DISTNAME=	coccinelle-1.0.0-rc15
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	devel
 MASTER_SITES=	http://coccinelle.lip6.fr/distrib/
 EXTRACT_SUFX=	.tgz
@@ -16,13 +16,10 @@ DEPENDS+=	menhir>=20071212:../../devel/menhir
 
 MAKE_JOBS_SAFE=		no
 
-HAS_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake pkg-config
 REPLACE_PERL=	configure
 BUILD_TARGET=	all all.opt
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIG_SHELL=	${PERL5}
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man+=	configure
