@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3579 2012/11/17 16:07:22 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3580 2012/11/17 23:01:05 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5462,3 +5462,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird10-l10n to 10.0.10 [ryoon 2012-11-17]
 	Updated devel/coccinelle to 1.0.0rc15 [ryoon 2012-11-17]
 	Updated time/p5-DateTime to 0.78 [wen 2012-11-17]
+	Updated devel/qtscriptgenerator to 0.2.0 [markd 2012-11-17]
+	Updated audio/amarok to 2.6.0 [markd 2012-11-17]
