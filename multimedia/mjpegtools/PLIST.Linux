@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2011/01/29 20:31:19 markd Exp $
-bin/lavrec
-bin/lavvideo
-bin/testrec
-lib/liblavrec.la
