@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/31 11:19:37 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/11/17 21:51:49 markd Exp $
 #
 
-DISTNAME=	qtscriptgenerator-src-0.1.0
+DISTNAME=	qtscriptgenerator-src-0.2.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	22
 CATEGORIES=	devel
 MASTER_SITES=	http://qtscriptgenerator.googlecode.com/files/
 
@@ -45,7 +44,6 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/qtscriptgenerator/examples/images
 
 .include "../../multimedia/phonon/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../x11/qt4-tools/buildlink3.mk"
