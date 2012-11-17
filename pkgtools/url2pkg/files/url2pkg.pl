@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.20 2012/10/06 13:06:31 ryoon Exp $
+# $NetBSD: url2pkg.pl,v 1.21 2012/11/17 11:15:13 ryoon Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -306,7 +306,7 @@ sub generate_initial_package($) {
 		}
 	}
 
-	if ($distfile =~ qr"^(.*)(\.tgz|\.tar\.Z|\.tar\.gz|\.tar\.bz2|\.tar\.xz)$") {
+	if ($distfile =~ qr"^(.*)(\.tgz|\.tar\.Z|\.tar\.gz|\.tar\.bz2|\.tar\.xz|\.tar\.7z)$") {
 		($distname, $dist_sufx) = ($1, $2);
 	} elsif ($distfile =~ qr"^(.*)(\.[^.]+)$") {
 		($distname, $dist_sufx) = ($1, $2);
