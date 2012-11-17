@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
-
---- configure.in.orig	2012-08-24 22:55:19.000000000 +0000
-+++ configure.in
-@@ -2299,7 +2299,7 @@ case "$target" in
+--- configure.in.orig	2012-10-24 16:32:27.000000000 +0200
++++ configure.in	2012-11-12 11:29:00.000000000 +0100
+@@ -2040,7 +2040,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,7 +9,7 @@ $NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2307,6 +2307,9 @@ case "$target" in
+@@ -2048,6 +2048,9 @@ case "$target" in
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -21,7 +19,7 @@ $NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
      ;;
  
  ia64*-hpux*)
-@@ -3309,6 +3312,9 @@ dnl ====================================
+@@ -3027,6 +3030,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +29,17 @@ $NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4308,6 +4314,14 @@ if test -n "$YASM"; then
+@@ -3328,6 +3334,9 @@ AC_CACHE_CHECK(
+         #ifdef linux
+         #define _BSD_SOURCE 1
+         #endif
++	#ifdef __NetBSD__
++	#error use of global _res variable in threaded programs is not portable
++	#endif
+         #include <resolv.h>
+         ],
+         [int foo = res_ninit(&_res);],
+@@ -3992,6 +4001,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -46,7 +54,7 @@ $NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5734,11 +5748,11 @@ if test -n "$MOZ_WEBM" -a -z "$MOZ_NATIV
+@@ -5438,11 +5455,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
  
      dnl See if we have assembly on this platform.
      case "$OS_ARCH:$CPU_ARCH" in
@@ -60,7 +68,7 @@ $NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
-@@ -6140,7 +6154,7 @@ if test -n "$MOZ_CRASHREPORTER"; then
+@@ -5841,7 +5858,7 @@ if test -n "$MOZ_CRASHREPORTER"; then
      AC_MSG_ERROR([Breakpad tools do not support compiling on $HOST_OS_ARCH while targeting $OS_ARCH.  Use --disable-crashreporter.])
    fi
  
@@ -69,7 +77,7 @@ $NetBSD: patch-aa,v 1.12 2012/08/28 23:27:10 ryoon Exp $
      MOZ_CRASHREPORTER_INJECTOR=1
      AC_DEFINE(MOZ_CRASHREPORTER_INJECTOR)
    fi
-@@ -9248,6 +9262,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -9105,6 +9122,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
