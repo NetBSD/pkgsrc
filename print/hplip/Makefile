@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 23:02:20 adam Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/18 00:50:42 schnoebe Exp $
 #
 
-DISTNAME=		hplip-3.12.6
-PKGREVISION=		5
+DISTNAME=		hplip-3.12.10a
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -71,12 +70,6 @@ REPLACE_PYTHON+=	fax/filters/pstotiff
 REPLACE_PERL=		prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
 
 PY_PATCHPLIST=		yes
-
-SUBST_CLASSES+=			strip-cr
-SUBST_STAGE.strip-cr=		post-extract
-SUBST_MESSAGE.strip-cr=		Strip trailing carriage returns
-SUBST_FILES.strip-cr=		prnt/hpcups/HPCupsFilter.cpp
-SUBST_FILTER_CMD.strip-cr=	${TR} -d '\r'
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		post-configure
