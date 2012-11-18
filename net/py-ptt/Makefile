@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/11/03 14:29:25 imil Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/18 02:25:37 asau Exp $
 #
 
 PTTVERS=	1.9.0
@@ -12,8 +12,6 @@ MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://mike.verdone.ca/twitter/
 COMMENT=	Twitter API, command-line tool, and IRC bot
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
