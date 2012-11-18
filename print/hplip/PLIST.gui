@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST.gui,v 1.1.1.1 2012/05/18 03:03:22 schnoebe Exp $
+@comment $NetBSD: PLIST.gui,v 1.2 2012/11/18 00:50:42 schnoebe Exp $
 bin/hp-toolbox
 share/PolicyKit/policy/com.hp.hplip.policy
+share/applications/hplip.desktop
 share/dbus-1/system-services/com.hp.hplip.service
 share/examples/hplip/dbus-1/system.d/com.hp.hplip.conf
+share/examples/hplip/xdg/autostart/hplip-systray.desktop
 share/hplip/data/images/128x128/audio.png
 share/hplip/data/images/128x128/bmp.png
 share/hplip/data/images/128x128/gif.png
