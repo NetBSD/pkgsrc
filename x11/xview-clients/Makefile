@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/29 05:07:24 asau Exp $
+# $NetBSD: Makefile,v 1.38 2012/11/18 01:51:04 joerg Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-clients-3.2.1
@@ -27,6 +27,11 @@ SUBST_MESSAGE.xvc=	Fixing hard-coded paths.
 SUBST_FILES.xvc=	olwm/openwin-menu-programs
 SUBST_SED.xvc=		-e "s,@PREFIX@,${PREFIX},g"
 SUBST_SED.xvc+=		-e "s,@X11BASE@,${X11BASE},g"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+MAKE_FLAGS+=		CCOPTIONS=-Wno-error=return-type
+.endif
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xview-lib/buildlink3.mk"
