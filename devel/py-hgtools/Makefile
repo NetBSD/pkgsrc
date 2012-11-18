@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/03 13:55:16 imil Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/18 02:25:37 asau Exp $
 #
 
 HGTVERS=	2.0.2
@@ -12,8 +12,6 @@ MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/packages/source/h/hgtools/
 COMMENT=	Classes and setuptools plugin for Mercurial repositories
 LICENSE=	gnu-gpl-v1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
