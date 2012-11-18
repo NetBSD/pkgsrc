@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3580 2012/11/17 23:01:05 markd Exp $
+$NetBSD: CHANGES-2012,v 1.3581 2012/11/18 00:52:01 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5464,3 +5464,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/p5-DateTime to 0.78 [wen 2012-11-17]
 	Updated devel/qtscriptgenerator to 0.2.0 [markd 2012-11-17]
 	Updated audio/amarok to 2.6.0 [markd 2012-11-17]
+	Updated print/hplip to 3.12.10a [schnoebe 2012-11-18]
