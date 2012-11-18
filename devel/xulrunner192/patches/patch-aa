@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
+$NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
 
---- configure.in.orig	2009-10-16 17:13:35.000000000 +0200
+--- configure.in.orig	2012-03-06 14:45:23.000000000 +0000
 +++ configure.in
-@@ -1799,7 +1799,7 @@ case "$target" in
+@@ -1858,7 +1858,7 @@ case "$target" in
      fi
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1813,6 +1813,9 @@ case "$target" in
+@@ -1872,6 +1872,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -21,7 +21,17 @@ $NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
      ;; 
  
  *-hpux*)
-@@ -3043,6 +3046,9 @@ dnl ====================================
+@@ -2939,6 +2942,9 @@ if test "$GNU_CC"; then
+   AC_CACHE_CHECK(for visibility(hidden) attribute,
+                  ac_cv_visibility_hidden,
+                  [cat > conftest.c <<EOF
++#ifdef __clang__
++#error Not supported by old Mozilla
++#endif
+                   int foo __attribute__ ((visibility ("hidden"))) = 1;
+ EOF
+                   ac_cv_visibility_hidden=no
+@@ -3110,6 +3116,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +41,7 @@ $NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4158,6 +4164,14 @@ else
+@@ -4326,6 +4335,14 @@ else
     fi
  fi
  
@@ -46,7 +56,7 @@ $NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -8375,7 +8389,8 @@ rm -f confdefs.h.save
+@@ -8630,7 +8647,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -56,7 +66,7 @@ $NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -8466,6 +8481,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -8721,6 +8739,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
