@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11663 2012/11/17 23:01:04 markd Exp $
+$NetBSD: TODO,v 1.11664 2012/11/18 14:10:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -948,6 +948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o open-vm-tools-2010.09.19.301124
 	o opencv-2.4.3
 	o opendkim-2.7.1
+	o opendnssec-1.3.11
 	o opengrok-0.11.1
 	o openmortal-0.7.1
 	o openoffice-3.4
@@ -1051,7 +1052,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o racket-5.3.1
 	o radiance-3.7.2
 	o rails-3.2.7
-	o raine-0.51.8
+	o raine-0.51.15
 	o rapidsvn-0.12
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
@@ -1209,7 +1210,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ups-nut-2.6.2
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.18.0
+	o vala-0.18.1
 	o valgrind-3.7.0
 	o vbetool-1.1
 	o vera-1.17
