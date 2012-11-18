@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/11 21:17:45 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/18 02:25:37 asau Exp $
 #
 
 DISTNAME=	filechunkio-1.5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/fabian/filechunkio
 COMMENT=	Chunck files for input/output
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
