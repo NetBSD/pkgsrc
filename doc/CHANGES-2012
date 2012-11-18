@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3581 2012/11/18 00:52:01 schnoebe Exp $
+$NetBSD: CHANGES-2012,v 1.3582 2012/11/18 13:33:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5465,3 +5465,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/qtscriptgenerator to 0.2.0 [markd 2012-11-17]
 	Updated audio/amarok to 2.6.0 [markd 2012-11-17]
 	Updated print/hplip to 3.12.10a [schnoebe 2012-11-18]
+	Updated graphics/optipng to 0.7.4 [taca 2012-11-18]
