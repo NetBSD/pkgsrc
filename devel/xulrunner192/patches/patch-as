@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
+$NetBSD: patch-as,v 1.2 2012/11/18 01:55:52 joerg Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2009-06-29 18:14:51.000000000 +0200
+--- js/src/configure.in.orig	2012-03-06 14:45:30.000000000 +0000
 +++ js/src/configure.in
-@@ -1693,7 +1693,7 @@ case "$target" in
+@@ -1653,7 +1653,7 @@ case "$target" in
      fi
      ;;
  
@@ -13,7 +13,7 @@ Treat DragonFly like FreeBSD.
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2504,7 +2504,7 @@ darwin*)
+@@ -2509,7 +2509,7 @@ darwin*)
  solaris*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
@@ -22,7 +22,17 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
  *cygwin*|*mingw*|*mks*|*msvc*|*wince)
-@@ -4185,7 +4185,7 @@ if test "$MOZ_MEMORY"; then
+@@ -2724,6 +2724,9 @@ if test "$GNU_CC"; then
+   AC_CACHE_CHECK(for visibility(hidden) attribute,
+                  ac_cv_visibility_hidden,
+                  [cat > conftest.c <<EOF
++#ifdef __clang__
++#error Not supported by old Mozilla
++#endif
+                   int foo __attribute__ ((visibility ("hidden"))) = 1;
+ EOF
+                   ac_cv_visibility_hidden=no
+@@ -4150,7 +4153,7 @@ if test "$MOZ_MEMORY"; then
    darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
