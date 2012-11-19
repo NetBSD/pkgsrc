@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2010/11/18 22:52:04 adam Exp $
+$NetBSD: patch-aa,v 1.3 2012/11/19 23:13:48 joerg Exp $
 
 --- doc/doc.pri.orig	2010-08-24 07:46:09.000000000 +0000
 +++ doc/doc.pri
+@@ -21,7 +21,7 @@ HELP_DEP_FILES = $$PWD/qtcreator.qdoc \
+                  $$PWD/qt-html-templates.qdocconf \
+                  $$PWD/qtcreator.qdocconf
+ 
+-html_docs.commands = $$QDOC -creator $$PWD/qtcreator.qdocconf
++html_docs.commands = $$QDOC $$PWD/qtcreator.qdocconf
+ html_docs.depends += $$HELP_DEP_FILES
+ html_docs.files = $$QHP_FILE
+ 
 @@ -33,7 +33,7 @@ qch_docs.depends += html_docs
  qch_docs.files = $$QCH_FILE
  
