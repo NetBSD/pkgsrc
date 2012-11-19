@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3585 2012/11/19 10:58:55 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3586 2012/11/19 19:55:29 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5469,3 +5469,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/phpmyadmin to 3.5.4 [tron 2012-11-18]
 	Updated x11/qt4-libs to 4.8.3nb5 [ryoon 2012-11-19]
 	Updated editors/Sigil to 0.6.0 [ryoon 2012-11-19]
+	Updated graphics/py-blockdiag to 1.2.3 [cheusov 2012-11-19]
