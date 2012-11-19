@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 09:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.29 2012/11/19 02:57:15 joerg Exp $
 #
 
 DISTNAME=	kchm-0.6.5
@@ -18,6 +18,8 @@ USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 
 CONFLICTS=	chmlib-[0-9]*
+
+BUILDLINK_TRANSFORM+=	rm:-fno-exceptions
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
