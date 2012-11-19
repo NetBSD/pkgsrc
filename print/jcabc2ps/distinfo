@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2011/10/03 06:45:30 dholland Exp $
+$NetBSD: distinfo,v 1.3 2012/11/19 03:04:22 joerg Exp $
 
 SHA1 (jcabc2ps-src.tar.gz) = 6dbd9d00453c97ccf04cf707e6c4db88361c3bea
 RMD160 (jcabc2ps-src.tar.gz) = e454dc1d787c9b5a833316f5edb5dff463e6daa4
@@ -13,9 +13,9 @@ SHA1 (patch-memBlock_c) = 714a5b2ab8c88185b2419f1fef9eb599a17ad209
 SHA1 (patch-memBlock_h) = 1ad1ab3ccc79881571c4222657cdf7fdaefd6150
 SHA1 (patch-minStrM_c) = d1f53802383cd1d265189dddd8142a374228ff91
 SHA1 (patch-minStr_c) = a83d1aa0ed266323d62dd0ece7f6d207127001d4
-SHA1 (patch-misc_c) = 1e801d82c3e309be464bc95b771d1797273dc07d
-SHA1 (patch-music_c) = a4f74c6c73ec3183fee32aa59d474cbd927454e4
-SHA1 (patch-parse_c) = afdb7166bb7dade13057f67da6920677996a1e7b
+SHA1 (patch-misc_c) = 0ed52fe7ae9e683735e83675519e98f65b268480
+SHA1 (patch-music_c) = 9e3878e0d40fd68437a04a952d9865ada98e126e
+SHA1 (patch-parse_c) = c77ef8a1daf3882609193edc3d486c7b55aa8793
 SHA1 (patch-playback_c) = f51e8c7edede77944c379127349c809e7c327ef3
 SHA1 (patch-pssubs_c) = ec4fba07e85cb21f59d553c70518202ef1a1990d
 SHA1 (patch-setStr_c) = 5446511f40c6dc5c9018ad39b637a4742600a548
