@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2005/06/04 10:44:29 wiz Exp $
+$NetBSD: patch-an,v 1.2 2012/11/19 03:05:04 joerg Exp $
 
---- get_index.c.orig	2002-09-27 23:41:07.000000000 +0200
+--- get_index.c.orig	2002-09-27 21:41:07.000000000 +0000
 +++ get_index.c
 @@ -15,7 +15,9 @@ extern	int	WHOLEFILESCOPE;
  extern	unsigned int *dest_index_set;
@@ -12,3 +12,19 @@ $NetBSD: patch-an,v 1.1 2005/06/04 10:44:29 wiz Exp $
  extern	int	ByteLevelIndex;
  extern  int	RecordLevelIndex;
  extern  int	rdelim_len;
+@@ -53,6 +55,7 @@ free_list(p1)
+ }
+ 
+ /* Unions offset lists list2 with list1 sorted in increasing order (deletes elements from list2) => changes both list1 and list2: f += #elems added */
++void
+ sorted_union(list1, list2, f, pf, cf)
+ 	struct offsets **list1, **list2;
+ 	int	*f, pf, cf;
+@@ -115,6 +118,7 @@ sorted_union(list1, list2, f, pf, cf)
+ }
+ 
+ /* Intersects offset lists list2 with list1 sorted in increasing order (deletes elements from list2) => changes both list1 and list2 */
++void
+ sorted_intersection(filenum, list1, list2, f)
+ 	struct offsets **list1, **list2;
+ 	int	*f;
