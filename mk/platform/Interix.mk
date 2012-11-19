@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.67 2012/03/19 12:34:17 joerg Exp $
+# $NetBSD: Interix.mk,v 1.68 2012/11/19 11:34:15 ryoon Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -92,7 +92,7 @@ CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
-MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
+MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775

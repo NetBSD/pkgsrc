@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.7 2012/06/16 20:13:06 bsiegert Exp $
+# $NetBSD: MirBSD.mk,v 1.8 2012/11/19 11:34:15 ryoon Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -17,7 +17,7 @@ TYPE?=		type				# Shell builtin
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
-MOTIF_TYPE_DEFAULT?=	openmotif
+MOTIF_TYPE_DEFAULT?=	motif
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		/usr/bin/sudo /bin/mksh -c
