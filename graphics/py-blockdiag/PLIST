@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/21 14:25:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/11/19 19:54:39 cheusov Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,12 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/blockdiag/DiagramDraw.py
-${PYSITELIB}/blockdiag/DiagramDraw.pyc
-${PYSITELIB}/blockdiag/DiagramDraw.pyo
-${PYSITELIB}/blockdiag/DiagramMetrics.py
-${PYSITELIB}/blockdiag/DiagramMetrics.pyc
-${PYSITELIB}/blockdiag/DiagramMetrics.pyo
 ${PYSITELIB}/blockdiag/__init__.py
 ${PYSITELIB}/blockdiag/__init__.pyc
 ${PYSITELIB}/blockdiag/__init__.pyo
@@ -30,6 +24,9 @@ ${PYSITELIB}/blockdiag/elements.pyo
 ${PYSITELIB}/blockdiag/imagedraw/__init__.py
 ${PYSITELIB}/blockdiag/imagedraw/__init__.pyc
 ${PYSITELIB}/blockdiag/imagedraw/__init__.pyo
+${PYSITELIB}/blockdiag/imagedraw/base.py
+${PYSITELIB}/blockdiag/imagedraw/base.pyc
+${PYSITELIB}/blockdiag/imagedraw/base.pyo
 ${PYSITELIB}/blockdiag/imagedraw/filters/__init__.py
 ${PYSITELIB}/blockdiag/imagedraw/filters/__init__.pyc
 ${PYSITELIB}/blockdiag/imagedraw/filters/__init__.pyo
@@ -48,6 +45,12 @@ ${PYSITELIB}/blockdiag/imagedraw/simplesvg.pyo
 ${PYSITELIB}/blockdiag/imagedraw/svg.py
 ${PYSITELIB}/blockdiag/imagedraw/svg.pyc
 ${PYSITELIB}/blockdiag/imagedraw/svg.pyo
+${PYSITELIB}/blockdiag/imagedraw/textfolder.py
+${PYSITELIB}/blockdiag/imagedraw/textfolder.pyc
+${PYSITELIB}/blockdiag/imagedraw/textfolder.pyo
+${PYSITELIB}/blockdiag/imagedraw/utils.py
+${PYSITELIB}/blockdiag/imagedraw/utils.pyc
+${PYSITELIB}/blockdiag/imagedraw/utils.pyo
 ${PYSITELIB}/blockdiag/metrics.py
 ${PYSITELIB}/blockdiag/metrics.pyc
 ${PYSITELIB}/blockdiag/metrics.pyo
@@ -225,6 +228,8 @@ ${PYSITELIB}/blockdiag/tests/diagrams/node_rotated_labels.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_shape.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_shape_background.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_shape_namespace.diag
+${PYSITELIB}/blockdiag/tests/diagrams/node_shape_with_none_shadow.diag
+${PYSITELIB}/blockdiag/tests/diagrams/node_shape_with_solid_shadow.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_style_dasharray.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_styles.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_width_and_height.diag
@@ -288,6 +293,9 @@ ${PYSITELIB}/blockdiag/tests/test_builder_node.pyo
 ${PYSITELIB}/blockdiag/tests/test_builder_separate.py
 ${PYSITELIB}/blockdiag/tests/test_builder_separate.pyc
 ${PYSITELIB}/blockdiag/tests/test_builder_separate.pyo
+${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.py
+${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyc
+${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyo
 ${PYSITELIB}/blockdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/blockdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/blockdiag/tests/test_generate_diagram.pyo
@@ -306,15 +314,6 @@ ${PYSITELIB}/blockdiag/tests/test_utils_fontmap.pyo
 ${PYSITELIB}/blockdiag/tests/utils.py
 ${PYSITELIB}/blockdiag/tests/utils.pyc
 ${PYSITELIB}/blockdiag/tests/utils.pyo
-${PYSITELIB}/blockdiag/utils/PDFTextFolder.py
-${PYSITELIB}/blockdiag/utils/PDFTextFolder.pyc
-${PYSITELIB}/blockdiag/utils/PDFTextFolder.pyo
-${PYSITELIB}/blockdiag/utils/PILTextFolder.py
-${PYSITELIB}/blockdiag/utils/PILTextFolder.pyc
-${PYSITELIB}/blockdiag/utils/PILTextFolder.pyo
-${PYSITELIB}/blockdiag/utils/TextFolder.py
-${PYSITELIB}/blockdiag/utils/TextFolder.pyc
-${PYSITELIB}/blockdiag/utils/TextFolder.pyo
 ${PYSITELIB}/blockdiag/utils/__init__.py
 ${PYSITELIB}/blockdiag/utils/__init__.pyc
 ${PYSITELIB}/blockdiag/utils/__init__.pyo
