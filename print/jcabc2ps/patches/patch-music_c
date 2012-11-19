@@ -1,8 +1,8 @@
-$NetBSD: patch-music_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+$NetBSD: patch-music_c,v 1.2 2012/11/19 03:04:22 joerg Exp $
 
 Use standard headers.
 
---- music.c~	2011-10-03 06:44:38.000000000 +0000
+--- music.c.orig	2006-01-06 22:49:30.000000000 +0000
 +++ music.c
 @@ -5,6 +5,7 @@
   */
@@ -12,3 +12,12 @@ Use standard headers.
  #include <ctype.h>
  
  #include "jcabc2ps.h"
+@@ -5155,7 +5156,7 @@ void doLine(fp,type,xref_str,npat,pat,se
+ 	}
+ }
+ 
+-dummy() {return;}
++void dummy() {return;}
+ 
+ Str  line = {0};
+ 

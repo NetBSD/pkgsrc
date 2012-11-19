@@ -1,8 +1,8 @@
-$NetBSD: patch-parse_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+$NetBSD: patch-parse_c,v 1.2 2012/11/19 03:04:22 joerg Exp $
 
 Declare functions before calling them.
 
---- parse.c~	2006-01-06 22:46:33.000000000 +0000
+--- parse.c.orig	2006-01-06 22:46:33.000000000 +0000
 +++ parse.c
 @@ -13,6 +13,7 @@
  #include "format.h"
@@ -12,3 +12,21 @@ Declare functions before calling them.
  
  #include "parse.h"
  
+@@ -20,6 +21,7 @@ int syntaxErrors = 0;	// Count the error
+ int errorLimit = 100;	// Give up after this many errors
+ 
+ int middleadj (char note);
++void prsEnd(int k);
+ 
+ int ksigcancel = 0;		// Flag controlling ksig-cancel code.
+ Ksig *lastks = 0;		// For remembering Ksig struct
+@@ -2482,8 +2484,7 @@ char *repquot(k,p)
+ * Modified to accept any string of digits [jc 2000-04-22]
+ * Modified to accept quoted string [jc 2002-05-20]
+ */
+-prsEnd(k)
+-	int   k;
++void prsEnd(int k)
+ {	char *F = "prsEnd";
+ 	char *q = P;		// Remember starting point
+ 	int   c=0, d=0, i;
