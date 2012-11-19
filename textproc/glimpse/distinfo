@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2008/06/05 17:21:48 ghen Exp $
+$NetBSD: distinfo,v 1.12 2012/11/19 03:05:04 joerg Exp $
 
 SHA1 (glimpse-4.18.5.tar.gz) = a7a6168f3decab6cb6c674914259e2cf71be4e40
 RMD160 (glimpse-4.18.5.tar.gz) = c1012980e0e09de9c71e07ffed075817e0814eec
@@ -16,11 +16,15 @@ SHA1 (patch-aj) = e4f8f557f23213f2b2224084b853d1c269caf091
 SHA1 (patch-ak) = 35b637bf404fa0f22d669e922eeb33f7a37010c6
 SHA1 (patch-al) = 84ee54521e8086e83f68a78db40a2d6f0cd86cc9
 SHA1 (patch-am) = 6438bb41b5816d5b7172a20a02472632d0e3bf82
-SHA1 (patch-an) = 898cdfd1d90083c494c15a9c84d8db196a833ae4
-SHA1 (patch-ao) = f1cb44f3d2e940adffe04ebdb7ee149fb9df8a64
+SHA1 (patch-an) = 7ffe1d0528fc7ce4737633ec0270bd3b32714517
+SHA1 (patch-ao) = 3c35916cc59d0e94fd2ad97d39357a20b5990485
 SHA1 (patch-ap) = ff5f0223544631fca4c3fcc9f1448a7c46b818e8
 SHA1 (patch-aq) = b39d669c1a362724668781762376583df6039d87
 SHA1 (patch-ar) = 26be8fc0e9bb75d286ed68451355e8a1c348f43c
 SHA1 (patch-as) = e684ae15474231d103a8341c4d1d68fb035807ee
 SHA1 (patch-at) = 6f4d94c03fe0804e9b4fc240bf1b899e9a4bf4a5
 SHA1 (patch-au) = 12b657e845627f5819711354b73ba3cf213c7434
+SHA1 (patch-compress_main__tbuild.c) = e582a9f0c7bf273b482b6967396a3b2235bc0650
+SHA1 (patch-compress_misc.c) = f585414bca6d6db29a32853146d447154c7e29da
+SHA1 (patch-get__filename.c) = 3ba7e0e2574b416744a3907b261c7048681af4e5
+SHA1 (patch-index_io.c) = 375697d29b0a0272204437a25b03086734dbffec
