@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/29 05:06:47 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/11/19 23:13:48 joerg Exp $
 
 DISTNAME=	qt-creator-2.0.1-src
 PKGNAME=	${DISTNAME:S/qt-/qt4-/:S/-src//}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	http://get.qt.nokia.com/qtcreator/
 EXTRACT_SUFX=	.tgz
@@ -20,8 +20,7 @@ INSTALLATION_DIRS=	bin lib/qtcreator lib/qtcreator/plugins/Nokia \
 			share/doc/qtcreator share/pixmaps share/qtcreator \
 			share/qtcreator/translations
 
-BUILD_DEPENDS+=	qt4-tools>=4.7.0:../../x11/qt4-tools \
-		qt4-sqlite3>=4.7.0:../../x11/qt4-sqlite3
+BUILD_DEPENDS+=	qt4-sqlite3>=4.7.0:../../x11/qt4-sqlite3
 
 BUILD_TARGET=	make_default qch_docs
 MAKE_ENV+=	PREFIX=${PREFIX}
@@ -60,6 +59,8 @@ do-install:
 		schemes snippets styles templates -type f \! -name "*.orig" -exec \
                 ${INSTALL_DATA} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
+
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
