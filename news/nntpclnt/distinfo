@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2010/12/15 03:14:51 chuck Exp $
+$NetBSD: distinfo,v 1.9 2012/11/19 03:00:14 joerg Exp $
 
 SHA1 (nntpclnt-1.6.1.tar.gz) = df24e9083185680d85bdc016e9e4ba54f4071f80
 RMD160 (nntpclnt-1.6.1.tar.gz) = b3d8ec94d74cc1a0f88264756b89c91fabde0750
 Size (nntpclnt-1.6.1.tar.gz) = 34369 bytes
 SHA1 (patch-aa) = e4c947e9acdd6f814437409e475b819588c444fa
-SHA1 (patch-ab) = 8d00f429d249319d0cfba7c22d2e292acbef3089
+SHA1 (patch-ab) = 1727359c86283d24c34e6d161e4b3ee8fd873499
 SHA1 (patch-ac) = ed067e2f2c6c22e32ca388dc6f990aa720d762aa
-SHA1 (patch-ad) = 1b648dcaba5625326e17ecdce90622a02e207f17
+SHA1 (patch-ad) = bc44ff1539a4ab1129a2ea86ec08f5b61d6e41dd
