@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2010/12/15 03:14:51 chuck Exp $
+$NetBSD: patch-ab,v 1.5 2012/11/19 03:00:14 joerg Exp $
 
---- nntpclnt.c.orig	1994-08-11 17:37:51.000000000 -0400
-+++ nntpclnt.c	2010-12-14 22:08:04.000000000 -0500
-@@ -24,6 +24,11 @@
+--- nntpclnt.c.orig	1994-08-11 21:37:51.000000000 +0000
++++ nntpclnt.c
+@@ -24,6 +24,11 @@ static char     *rcsid = "@(#)$Id: nntpc
   * Include configuration parameters only if we're made in the nntp tree.
   */
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/15 03:14:51 chuck Exp $
  #ifdef NNTPSRC
  #include "config.h"
  #endif /* NNTPSRC */
-@@ -64,11 +69,6 @@
+@@ -64,11 +69,6 @@ static char     *rcsid = "@(#)$Id: nntpc
  #define net_read(a,b,c,d,e)        soread(a,b,c)
  #define net_write(a,b,c,d)	   sowrite(a,b,c)
  #endif
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/15 03:14:51 chuck Exp $
  #include "nntpclnt.h"
  #ifdef NONETDB
  # define        IPPORT_NNTP     ((unsigned short) 119)
-@@ -154,7 +154,9 @@
+@@ -154,7 +154,9 @@ char    *file;
  	static char     buf[256];
  	char            *index();
  	char            *getenv();
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/15 03:14:51 chuck Exp $
  
  	if (cp = getenv("NNTPSERVER")) {
  		(void) strcpy(buf, cp);
-@@ -199,7 +201,7 @@
+@@ -199,7 +201,7 @@ char    *file;
  server_init(machine)
  char    *machine;
  {
@@ -45,7 +45,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/15 03:14:51 chuck Exp $
  	char    line[256];
  	char    *index();
  #if defined(DECNET) || defined(SGI4DDN)
-@@ -248,7 +250,13 @@
+@@ -248,7 +250,13 @@ char    *machine;
  	/* Now get the server's signon message */
  
  	(void) get_server(line, sizeof(line));
@@ -60,7 +60,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/15 03:14:51 chuck Exp $
  }
  
  #ifdef DATAKIT
-@@ -296,6 +304,14 @@
+@@ -296,6 +304,14 @@ char *machine;
   *
   *      Errors:         Printed via perror.
   */
