@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2012/10/24 15:37:58 joerg Exp $
+$NetBSD: distinfo,v 1.11 2012/11/19 23:15:10 joerg Exp $
 
 SHA1 (yaesu-0.13.tar.gz) = 188cd4f472bc191c0467f09cfd5d7df79a7b280b
 RMD160 (yaesu-0.13.tar.gz) = 779c982112255c72f4fb1d95d8921714aa266bb8
@@ -6,7 +6,7 @@ Size (yaesu-0.13.tar.gz) = 26388 bytes
 SHA1 (patch-aa) = 3b0181d8989dd6f69eb4e9f486a552d17f301908
 SHA1 (patch-ab) = d51cb63253878428c9b751d64a138c7a0e54cbba
 SHA1 (patch-ac) = cd5ee0384a53f436e07b4cec904c3a2176a40cdf
-SHA1 (patch-ad) = 9ed611c78cfd5bae2e825a76b2af02eb1d4ddb9d
+SHA1 (patch-ad) = fac65f2d455f8185ef08b048931c01223b1236f8
 SHA1 (patch-ae) = bdeb565940a70912bf03a0909eeccdfad30b928e
 SHA1 (patch-aux.c) = c9d4bd5dea9da933e16fcbe773f8b2462dd2c4fd
 SHA1 (patch-bright.c) = 6c4e2d6267b7ad1830894e2a611aa952b54fddb7
@@ -38,3 +38,4 @@ SHA1 (patch-vfo__a2b.c) = 368821a1ff98e401061bcab886c9aa93e5f95fbe
 SHA1 (patch-vfo__ab.c) = 0c8a1c882236004dada2c2ccbba5a9c490bec2e7
 SHA1 (patch-wwv__find.c) = f74d7196362c0bbe8546937004815e119c6f53e5
 SHA1 (patch-yaesu.c) = 37e46559d06c50ba104a49fc5402c142fd2c9aa4
+SHA1 (patch-yaesu.h) = 1bc805ee60d339fb24381de505cc48cfa9037153
