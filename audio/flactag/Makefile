@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/11/06 18:38:33 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/19 23:14:14 joerg Exp $
 #
 
 DISTNAME=	flactag-2.0.4
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
 GNU_CONFIGURE=	yes
+
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
