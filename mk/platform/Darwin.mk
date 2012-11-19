@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.48 2012/03/19 12:34:16 joerg Exp $
+# $NetBSD: Darwin.mk,v 1.49 2012/11/19 11:34:15 ryoon Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -14,6 +14,7 @@
 # Leopard	10.5.x	9.x.y	3.x (gcc 4.0.1, 4.0.1 and 4.2.1 from 3.1)
 # Snow Leopard	10.6.x	10.x.y	3.2+ (gcc 4.0.1 and 4.2.1)
 # Lion		10.7.x	11.x.y	4.1 (llvm gcc 4.2.1)
+# Mountain Lion	10.8.x	12.x.y	4.5 (llvm gcc 4.2.1)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
@@ -53,7 +54,7 @@ COMPILER_USE_SYMLINKS?=	no
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
-MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
+MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 NOLOGIN?=		/usr/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		/usr/bin/sudo ${SH} -c
