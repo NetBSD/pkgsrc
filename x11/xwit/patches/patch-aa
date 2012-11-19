@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/16 14:15:53 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2012/11/19 23:12:02 joerg Exp $
 
---- xwit.c.orig	Tue Oct 21 03:32:54 1997
+--- xwit.c.orig	1997-10-21 01:32:54.000000000 +0000
 +++ xwit.c
-@@ -131,10 +131,14 @@
+@@ -131,10 +131,14 @@ static
  mssleep(ms)
  int ms;
  {
@@ -17,3 +17,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/16 14:15:53 wiz Exp $
  }
  
  /*
+@@ -299,7 +303,7 @@ domove(window, x, y, right, bottom)
+ /*
+  * set window size
+  */
+-static
++static void
+ doresize(window, w, h)
+     Window window;
+     int w, h;
