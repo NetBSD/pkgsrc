@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2005/12/08 18:02:07 joerg Exp $
+$NetBSD: patch-ai,v 1.2 2012/11/19 03:03:42 joerg Exp $
 
 --- src/meter/meter_ux.c.orig	2005-12-08 17:57:11.000000000 +0000
 +++ src/meter/meter_ux.c
@@ -10,3 +10,11 @@ $NetBSD: patch-ai,v 1.1 2005/12/08 18:02:07 joerg Exp $
  int snmp_dump_packet = 0;
  #define MXINTERFACES 4
  
+@@ -2848,6 +2847,7 @@ void one_second_process(void)
+ #endif
+    }
+ 
++void
+ handle_keyboard()
+ {
+    char kb_buf[25];
