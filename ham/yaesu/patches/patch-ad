@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
+$NetBSD: patch-ad,v 1.9 2012/11/19 23:15:10 joerg Exp $
 
 --- main.c.orig	2004-07-27 02:26:47.000000000 +0000
 +++ main.c
-@@ -5,8 +5,13 @@
+@@ -5,8 +5,14 @@
  #include <stdlib.h>
  #include <termios.h>
  #include <signal.h>
@@ -14,14 +14,24 @@ $NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
 +
 +static void bye_msg(void);
 +static int port_open(int, char*[]);
++static void cleanup(int);
 +
  float freq_to_change_to;
  char flag_data_return[5];
  char data_array[650];
-@@ -24,34 +29,6 @@ int main(int argc, char* argv[]) {
+@@ -17,41 +23,14 @@ char mode1, mode2, mode3;
+ char narrow1, narrow2, narrow3, narrow4, narrow5, narrow6;
+ char white_space;
+ 
++struct termios defaults_serial;
++
+ int main(int argc, char* argv[]) {
+     static char version[] = "yaesu v .11lx.  May 19th, 1995.  Author: Emarit Ranu, KG0CQ.";
+     int fdSer; 				/* serial file descriptor integer */
+     int zero_port_byte;
      char flag_data_return[5];
      struct termios termattribs;
-     struct termios *defaults_serial;
+-    struct termios *defaults_serial;
 -    extern splt_tog();
 -    extern freq_out();
 -    extern mem_rec();
@@ -53,7 +63,16 @@ $NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
      signal(SIGINT, cleanup);
      yaesu_return = 1;
  
-@@ -94,35 +71,35 @@ int main(int argc, char* argv[]) {
+@@ -59,7 +38,7 @@ int main(int argc, char* argv[]) {
+     if (fdSer == -1) {
+         exit(3);
+     }
+-    tcgetattr(fdSer,defaults_serial);      /* save current serial settings */
++    tcgetattr(fdSer, &defaults_serial);      /* save current serial settings */
+ 
+     termattribs.c_iflag = IGNBRK | IGNPAR | IMAXBEL | IXOFF;
+     termattribs.c_oflag = 0;  
+@@ -94,35 +73,35 @@ int main(int argc, char* argv[]) {
  /*
   *  This function returns the fd for the serial port.
   */
@@ -98,7 +117,7 @@ $NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
                  exit(3);
               }
               break;
-@@ -130,6 +107,15 @@ port_open(int argc, char* argv[]) {
+@@ -130,6 +109,15 @@ port_open(int argc, char* argv[]) {
               printf("Invalid serial port number!!!\n  Remember:  com1 is 0, com2 is 1, etc.\n");
               return(-1);
         }
@@ -114,7 +133,7 @@ $NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
      } else {
         printf("usage:  yaesu [port #]\n");
         exit(3);
-@@ -137,10 +123,23 @@ port_open(int argc, char* argv[]) {
+@@ -137,16 +125,29 @@ port_open(int argc, char* argv[]) {
      return(fdSer);
  }
  
@@ -140,4 +159,13 @@ $NetBSD: patch-ad,v 1.8 2012/10/24 15:38:00 joerg Exp $
 +    Having fun hamming, hope to catch you on the air!!!\n\n");
  }
  
- void
+-void
+-cleanup(int fdSer, struct termios *defaults_serial)
++static void
++cleanup(int fdSer)
+ {
+-  tcsetattr(fdSer, TCSANOW, defaults_serial); 
++  tcsetattr(fdSer, TCSANOW, &defaults_serial); 
+   close(fdSer);
+   bye_msg();
+   printf("Killed by signal 2!\n"); 
