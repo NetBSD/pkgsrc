@@ -1,8 +1,28 @@
-$NetBSD: patch-ao,v 1.1 2005/06/04 10:44:29 wiz Exp $
+$NetBSD: patch-ao,v 1.2 2012/11/19 03:05:04 joerg Exp $
 
---- index/build_in.c.orig	2002-10-11 07:28:32.000000000 +0200
+--- index/build_in.c.orig	2002-10-11 05:28:32.000000000 +0000
 +++ index/build_in.c
-@@ -605,7 +605,9 @@ traverse1()
+@@ -125,6 +125,12 @@ extern struct  indices *ip;
+ extern int HashTableSize;
+ struct token **hash_table; /*[MAX_64K_HASH];*/
+ 
++void remove_filename(int fileindex, int new_partition);
++void merge_in(FILE *f1, FILE *f2, FILE *f3);
++void init_hash_table(void);
++void build_hash(void);
++
++void
+ build_index()
+ {
+ 	int	i;
+@@ -599,13 +605,16 @@ next_token:
+ #endif
+ }
+ 
++void
+ traverse1()
+ {
+     FILE *i1, *i2, *i3;
      int ret;
      char s[MAX_LINE_LEN], es1[MAX_LINE_LEN], es2[MAX_LINE_LEN], es3[MAX_LINE_LEN];
      char s1[MAX_LINE_LEN];
@@ -12,3 +32,45 @@ $NetBSD: patch-ao,v 1.1 2005/06/04 10:44:29 wiz Exp $
      static int maxsortlinelen = 0;
      int	i;
  
+@@ -781,7 +790,8 @@ build_hash():
+ input: a set of filenames in name_list[], a partition table p_table[]
+ output: a hash table hash_table[].
+ -----------------------------------------------------------------------*/
+-build_hash()
++void
++build_hash(void)
+ {
+     int	fd;                          /* opened file number */
+     int  i, pn;                  /* pn: current partition */
+@@ -1230,7 +1240,8 @@ try_again_1:
+     my_free(buffer_begin, BLOCK_SIZE + 10);
+ }
+ 
+-init_hash_table()
++void
++init_hash_table(void)
+ {
+     int i;
+ 
+@@ -1481,8 +1492,8 @@ extern unsigned char *dest_index_buf;
+ extern unsigned char *merge_index_buf;
+ 
+ /* merge index file f1 and f2, then put the result in index file f3 */
+-merge_in(f1, f2, f3)
+-FILE *f1, *f2, *f3;
++void
++merge_in(FILE *f1, FILE *f2, FILE *f3)
+ {
+     int src_mark, dest_mark;
+     int	src_num, dest_num;
+@@ -1895,8 +1906,8 @@ fprintf(stderr,"Realloc #4, new size is 
+     return;
+ }
+ 
+-remove_filename(fileindex, new_partition)
+-	int	fileindex, new_partition;
++void
++remove_filename(int fileindex, int new_partition)
+ {
+ 	if ((fileindex < 0) || (fileindex >= MaxNum24bPartition)) return;
+ #if	BG_DEBUG
