@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.42 2012/03/19 12:34:16 joerg Exp $
+# $NetBSD: DragonFly.mk,v 1.43 2012/11/19 11:34:15 ryoon Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -14,7 +14,7 @@ TYPE?=		type				# Shell builtin
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
-MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
+MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
