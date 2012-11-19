@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11666 2012/11/19 10:58:55 ryoon Exp $
+$NetBSD: TODO,v 1.11667 2012/11/19 16:39:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -414,6 +414,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.0
 	o autoconvert-0.3.16
 	o autogen-5.16.2
+	o automake-1.12.5
 	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
@@ -427,6 +428,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o benchfft-3.1
 	o bftpd-3.7
 	o biew-6.1.0
+	o binutils-2.23.1
 	o bioperl-1.5.0
 	o bison-2.6.5
 	o bitlbee-3.0.6
@@ -569,6 +571,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o farsight2-0.0.31
+	o fbreader-0.99.3
 	o fcitx-3.6.2
 	o feh-2.7
 	o felt-3.07
@@ -580,6 +583,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
+	o fontforge-20120731 [pkg/47202]
 	o fotoxx-12.11
 	o fox-1.6.41
 	o freefont-20120503
@@ -663,7 +667,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnucash-docs-2.4.1
+	o gnucash-docs-2.4.2
 	o gnuchess-6.0.1
 	o gnutls-3.1.4 [needs nettle-2.5]
 	o gok-2.30.1 [GNOME 2.32]
@@ -705,6 +709,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
+	o harfbuzz-0.9.6
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o help2man-1.40.10 [pkg/46548]
@@ -714,7 +719,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hiawatha-8.6
 	o highlight-3.12
 	o honeyd-1.5c
-	o horde-5.0.1
+	o horde-5.0.2
 	o host-20070128
 	o howm-1.4.0 [pkg/47075]
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -814,7 +819,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblbxutil-1.1.0
 	o libltdl-2.4.2
 	o libmcs-0.7.2
-	o libmemcached-1.0.13
+	o libmemcached-1.0.14
 	o libmicrohttpd-0.9.23
 	o libmms-0.6.2
 	o libmilter-8.14.5
@@ -875,7 +880,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
 	o mined-2012.22
-	o minicom-2.6
+	o minicom-2.6.1 [pkg/47209]
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mirmon-1.37
@@ -931,13 +936,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o notification-daemon-0.7.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
+	o nspluginwrapper-1.4.4 [pkg/47208]
 	o nss-3.14
 	o ntop-5.0
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nucleo-0.7.6
 	o nulib2-220
-	o nut-18.3
+	o nut-18.4
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o olvwm-4.5
@@ -946,7 +952,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o opencv-2.4.3
-	o opendkim-2.7.1
+	o opendkim-2.7.2
 	o opendnssec-1.3.11
 	o opengrok-0.11.1
 	o openmortal-0.7.1
@@ -1035,6 +1041,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gobject-3.4.2
+	o py-httplib2-0.7.7
 	o py-moin-1.9.5
 	o py-pytz-2012h
 	o py-sip-4.14.1
@@ -1205,6 +1212,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
+	o unison-2.40.102
 	o ups-nut-2.6.2
 	o userppp-030706
 	o utilisp-1.14
@@ -1213,6 +1221,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vbetool-1.1
 	o vera-1.17
 	o vfu-4.09
+	o vice-2.4
 	o vicq-0.4.2
 	o viewvc-1.1.17
 	o vifm-0.7.4a
@@ -1231,8 +1240,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o webkit-gtk3-1.10.1
+	o webmin-1.610
 	o websvn-2.3.2
-	o weechat-0.3.9.1
+	o weechat-0.3.9.2
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
