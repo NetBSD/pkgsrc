@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2006/09/19 08:05:16 rillig Exp $
+$NetBSD: distinfo,v 1.8 2012/11/19 02:59:39 joerg Exp $
 
 SHA1 (socks5-v1_0r2_tar.gz) = 57c6e3a17381ce48bed008a86442385dbc2d11de
 RMD160 (socks5-v1_0r2_tar.gz) = 18b6986027cee615cdae051d47240f3dc99b9c85
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = 1fe2e130eaa29731d9ddae6cfc3d6d728b89053e
 SHA1 (patch-aj) = b0019fe20f666e1d42483dd9e0e06aec9a02ba3e
 SHA1 (patch-ak) = f8ea0bea85e37d997b4a54cd66b4f537aee9fcd9
 SHA1 (patch-al) = 0837caf83252fb0f660721a3fcfc066c5fe91333
+SHA1 (patch-clients_archie_pfs.h) = 126bde203ecf5602f61fe581ac8d0032e28f00f1
