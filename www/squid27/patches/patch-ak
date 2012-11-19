@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.3 2012/02/20 15:31:04 taca Exp $
+$NetBSD: patch-ak,v 1.4 2012/11/19 03:02:50 joerg Exp $
 
 * Dirty work around for some version of IP filter.
 * Portability with pf(4)'s header.
@@ -15,10 +15,12 @@ $NetBSD: patch-ak,v 1.3 2012/02/20 15:31:04 taca Exp $
  #if HAVE_SYS_IOCTL_H
  #include <sys/ioctl.h>
  #endif
-@@ -79,6 +82,10 @@
+@@ -79,6 +82,12 @@
  #elif HAVE_NETINET_IP_NAT_H
  #include <netinet/ip_nat.h>
  #endif
++
++#undef m_len
 +
 +/* stolen from defines.h */
 +#define debug(SECTION, LEVEL) \
@@ -26,7 +28,7 @@ $NetBSD: patch-ak,v 1.3 2012/02/20 15:31:04 taca Exp $
  #endif
  
  #if PF_TRANSPARENT
-@@ -88,7 +95,12 @@
+@@ -88,7 +97,12 @@
  #include <sys/fcntl.h>
  #include <net/if.h>
  #include <netinet/in.h>
