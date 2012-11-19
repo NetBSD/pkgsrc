@@ -1,4 +1,4 @@
-$NetBSD: patch-src_engine.c,v 1.1 2012/04/22 14:09:10 obache Exp $
+$NetBSD: patch-src_engine.c,v 1.2 2012/11/19 23:15:53 joerg Exp $
 
 * for ibus-1.4
 
@@ -51,6 +51,30 @@ $NetBSD: patch-src_engine.c,v 1.1 2012/04/22 14:09:10 obache Exp $
      }
  }
  
+@@ -349,7 +351,7 @@ ibus_array_engine_update_symbol_lookup_t
+ 
+     if (arrayeng->preedit->len == 0) {
+         ibus_engine_hide_lookup_table ((IBusEngine *) arrayeng);
+-        return;
++        return FALSE;
+     }
+ 
+     ibus_lookup_table_clear (arrayeng->table);
+@@ -360,12 +362,12 @@ ibus_array_engine_update_symbol_lookup_t
+     
+     if (candidates == NULL) {
+         ibus_engine_hide_lookup_table ((IBusEngine *) arrayeng);
+-        return;
++        return FALSE;
+     }
+     else if (candidates->len == 0) {
+         array_release_candidates(candidates);
+         ibus_engine_hide_lookup_table ((IBusEngine *) arrayeng);
+-        return;
++        return FALSE;
+     }
+ 
+     for (i = 0; i < candidates->len; i++) {
 @@ -754,14 +756,14 @@ static void ibus_array_engine_property_a
  static void ibus_config_value_changed (IBusConfig *config, 
                                          const gchar *section, 
