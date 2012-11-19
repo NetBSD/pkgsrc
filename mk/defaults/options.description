@@ -648,7 +648,7 @@ uucp			Enable support for uucp.
 uulib			Enable support for uulib.
 v4l2			Enable V4L2 (Video4Linux2) support.
 valgrind		Enable Valgrind debugging and profiling support.
-vbr			Enable Vouch By Reference
+vbr			Enable Vouch By Reference support.
 vdpau			Enable support for VDPAU.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
