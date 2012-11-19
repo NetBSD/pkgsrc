@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2010/11/18 22:52:04 adam Exp $
+$NetBSD: distinfo,v 1.4 2012/11/19 23:13:48 joerg Exp $
 
 SHA1 (qt-creator-2.0.1-src.tgz) = 605bfe7876c4fa322544bc2314b059767eae407f
 RMD160 (qt-creator-2.0.1-src.tgz) = f33a58c926bd710b4688bb5292fa66c417e78070
 Size (qt-creator-2.0.1-src.tgz) = 18350214 bytes
-SHA1 (patch-aa) = 02e9af5be92a1ed526df1993944804ed51a4c852
+SHA1 (patch-aa) = 57b6fe2b9601aee03790c69e05004edcfd2c896f
 SHA1 (patch-ab) = f0acd533050e7f310dba5981eef0f51992d3a41c
 SHA1 (patch-ac) = 9f2427a642c5c4fb7204da2144bda1c04931e024
 SHA1 (patch-ad) = 2f3349e9e3ef5f1c784e3025ea0a520e4e452089
@@ -19,3 +19,5 @@ SHA1 (patch-am) = 075cfbe1b642f1913976c0cbdf40041e912b308b
 SHA1 (patch-an) = 9b2183299919cea25216143ffdd283e10654fdb7
 SHA1 (patch-ao) = 4359debaebeb4686b8b6b4efefb1f7b480c0287c
 SHA1 (patch-ap) = a96b4a03ce289870fe2a3102e1945e42a57a9459
+SHA1 (patch-src_libs_3rdparty_botan_build_botan_secmem.h) = aa781861ca11bc77486dfa8f95c1dd2dd90874db
+SHA1 (patch-src_plugins_coreplugin_mimedatabase.h) = 33f0d746566247b1866e8262b321bd741c234e0d
