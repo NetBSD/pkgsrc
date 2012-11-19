@@ -1,16 +1,23 @@
-$NetBSD: patch-Makefile-0_95,v 1.1 2011/10/03 04:20:34 dholland Exp $
+$NetBSD: patch-Makefile-0_95,v 1.2 2012/11/19 23:22:39 joerg Exp $
 
 Set LDFLAGS vs. LIBS properly, so the right things happen when LDFLAGS
 is set from the pkgsrc makefile.
 
---- Makefile-0.95~	2008-11-02 23:23:50.000000000 +0000
+--- Makefile-0.95.orig	2008-11-02 23:23:50.000000000 +0000
 +++ Makefile-0.95
-@@ -55,9 +55,9 @@ CPPFLAGS = -MMD -Wall -Wno-switch -Wno-n
+@@ -49,15 +49,14 @@ LD         = gcc
+ TARGET     = handy_sdl
+ 
+ # Note that we use optimization level 2 instead of 3--3 doesn't seem to gain much over 2
+-CFLAGS   = -MMD -Wall -Wno-switch -O4 -D$(SYSTYPE) -DANSI_GCC -DSDL_PATCH -ffast-math -fomit-frame-pointer `sdl-config --cflags` 
+-CPPFLAGS = -MMD -Wall -Wno-switch -Wno-non-virtual-dtor -O4 -D$(SYSTYPE) -DANSI_GCC -DSDL_PATCH \
++CFLAGS   += -MMD -Wall -Wno-switch -D$(SYSTYPE) -DANSI_GCC -DSDL_PATCH -ffast-math -fomit-frame-pointer `sdl-config --cflags` 
++CPPFLAGS = -MMD -Wall -Wno-switch -Wno-non-virtual-dtor -D$(SYSTYPE) -DANSI_GCC -DSDL_PATCH \
+ 		-ffast-math -fomit-frame-pointer `sdl-config --cflags` -g \
  #		-fomit-frame-pointer `sdl-config --cflags` -g
  #		-fomit-frame-pointer `sdl-config --cflags` -DLOG_UNMAPPED_MEMORY_ACCESSES
  
 -LDFLAGS =
-+LDFLAGS = -L/usr/local/lib -L/usr/lib
  
 -LIBS = -L/usr/local/lib -L/usr/lib `sdl-config $(SDLLIBTYPE)` -lstdc++ -lz $(GLLIB)
 +LIBS = `sdl-config $(SDLLIBTYPE)` -lstdc++ -lz $(GLLIB)
