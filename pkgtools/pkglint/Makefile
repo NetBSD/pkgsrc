@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.421 2012/10/03 22:17:18 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.422 2012/11/20 11:41:29 abs Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
