@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2012/10/31 11:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.30 2012/11/20 23:13:03 tez Exp $
 #
 
 DISTNAME=		gdb-6.2.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
