@@ -1,15 +1,24 @@
-$NetBSD: patch-Makefile,v 1.1 2012/03/22 12:56:51 obache Exp $
+$NetBSD: patch-Makefile,v 1.2 2012/11/20 11:22:00 abs Exp $
 
 * Honor user setting CFLAGS.
+* Do not override FWNAME if passed in
 
 --- Makefile.orig	2012-03-05 20:37:13.000000000 +0000
 +++ Makefile
-@@ -11,7 +11,7 @@
- # Linux users, please use Makefile.linux :
- #  make -f Makefile.linux
+@@ -28,7 +28,6 @@ FWNAME = pf
+ .else
+ FWNAME = ipf
+ .endif
+-.endif
  
--CFLAGS = -pipe -Wall -Os -ansi
-+CFLAGS ?= -pipe -Wall -Os -ansi
- #CFLAGS = -pipe -Wall -O -g -DDEBUG -ansi
- CC ?= gcc
- RM = rm -f
+ # better way to find if we are using ipf or pf
+ .if $(OSNAME) == "FreeBSD"
+@@ -53,6 +52,8 @@ FWNAME != . /etc/rc.subr; . /etc/rc.conf
+ FWNAME = ipfw
+ .endif
+ 
++.endif
++
+ # Solaris specific CFLAGS
+ .if $(OSNAME) == "SunOS"
+ CFLAGS += -DSOLARIS2=`uname -r | cut -d. -f2`
