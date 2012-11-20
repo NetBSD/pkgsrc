@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3591 2012/11/20 20:19:28 morr Exp $
+$NetBSD: CHANGES-2012,v 1.3592 2012/11/20 23:05:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/wbm-tunnel to 1.600 [morr 2012-11-20]
 	Updated sysutils/wbm-useradmin to 1.600 [morr 2012-11-20]
 	Updated sysutils/wbm-virtual-server to 3.572nb2 [morr 2012-11-20]
+	Updated devel/binutils to 2.22nb1 [jperkin 2012-11-20]
