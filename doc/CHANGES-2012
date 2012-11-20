@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3593 2012/11/20 23:13:26 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.3594 2012/11/20 23:14:50 tez Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5518,3 +5518,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/wbm-virtual-server to 3.572nb2 [morr 2012-11-20]
 	Updated devel/binutils to 2.22nb1 [jperkin 2012-11-20]
 	Updated lang/gcc47 to 4.7.0nb6 [jperkin 2012-11-20]
+	Updated devel/gdb6 to 6.2.1nb7 [tez 2012-11-20]
