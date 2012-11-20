@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/09/11 19:46:54 asau Exp $
+# $NetBSD: Makefile,v 1.44 2012/11/20 17:07:05 jperkin Exp $
 #
 
 DISTNAME=	cpio-2.6
@@ -27,6 +27,15 @@ TEST_TARGET=		check
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 
 CONFIGURE_ARGS+=	--program-prefix=g
+
+PLIST_VARS+=	rmt
+
+.include "../../mk/bsd.prefs.mk"
+
+# don't include rmt if gtar won't build it
+.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin"
+PLIST.rmt=	yes
+.endif
 
 post-install:
 	${LN} -sf ${PREFIX}/bin/gcpio ${DESTDIR}${PREFIX}/gnu/bin/cpio
