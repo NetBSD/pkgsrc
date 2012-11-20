@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.17 2012/07/23 12:24:34 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.18 2012/11/20 23:05:22 jperkin Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -30,7 +30,7 @@ gnu/bin/as
 gnu/bin/c++filt
 ${PLIST.gprof}gnu/bin/gprof
 gnu/bin/elfedit
-gnu/bin/ld
+${PLIST.ld}gnu/bin/ld
 gnu/bin/ld.bfd
 gnu/bin/nm
 gnu/bin/objcopy
@@ -46,7 +46,7 @@ gnu/man/man1/as.1
 gnu/man/man1/c++filt.1
 gnu/man/man1/dlltool.1
 ${PLIST.gprof}gnu/man/man1/gprof.1
-gnu/man/man1/ld.1
+${PLIST.ld}gnu/man/man1/ld.1
 gnu/man/man1/elfedit.1
 gnu/man/man1/nlmconv.1
 gnu/man/man1/nm.1
