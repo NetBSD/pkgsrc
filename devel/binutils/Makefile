@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2012/10/31 11:16:40 asau Exp $
+# $NetBSD: Makefile,v 1.47 2012/11/20 23:05:22 jperkin Exp $
 
 DISTNAME=	binutils-2.22
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
@@ -34,10 +35,15 @@ INSTALLATION_DIRS=	gnu/bin gnu/man/man1
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
-PLIST_VARS+=	gprof
+PLIST_VARS+=	gprof ld
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "IRIX"
 PLIST.gprof=	yes
+EXTRA_FILES+=	gprof
+.endif
+.if ${OPSYS} != "SunOS"
+PLIST.ld=	yes
+EXTRA_FILES+=	ld
 .endif
 
 .include "../../mk/compiler.mk"
@@ -57,14 +63,22 @@ post-configure:
 	fi
 .endfor
 
+SYMLINK_FILES =	addr2line ar as c++filt dlltool elfedit ld.bfd		\
+		nlmconv nm objcopy objdump ranlib readelf size strings	\
+		strip windmc windres
+.if ${PLIST.gprof} == "yes"
+SYMLINK_FILES+=	gprof
+.endif
+.if ${PLIST.ld} == "yes"
+SYMLINK_FILES+=	ld
+.endif
+
 post-install:
 	cd ${DESTDIR}${PREFIX} &&					\
 	    find ${MACHINE_GNU_PLATFORM}/lib/ldscripts -type f -print	\
 	    | sort -r							\
 	    > ${WRKDIR}/PLIST_DYNAMIC
-.for f in addr2line ar as c++filt dlltool elfedit gprof ld ld.bfd	\
-	  nlmconv nm objcopy objdump ranlib readelf size strings strip	\
-	  windmc windres
+.for f in ${SYMLINK_FILES}
 	set -e; \
 	if [ -f ${DESTDIR}${PREFIX}/bin/g${f:Q} ]; then \
 	    ${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}; \
