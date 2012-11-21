@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 18:16:51 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/21 23:32:35 gdt Exp $
 
 DISTNAME=	pkcs11-helper-1.08
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.opensc-project.org/files/pkcs11-helper/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 COMMENT=	Library that simplifies the interaction with PKCS\#11
 LICENSE=	modified-bsd OR gnu-gpl-v2
