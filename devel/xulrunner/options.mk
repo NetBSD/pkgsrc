@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2012/04/26 13:30:29 ryoon Exp $
+# $NetBSD: options.mk,v 1.14 2012/11/21 15:26:49 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome pulseaudio
@@ -41,5 +41,5 @@ CONFIGURE_ARGS+=	--enable-install-strip
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
-ALL_ENV+=	PKGSRC_PULSEAUDIO=1
+CONFIGURE_ARGS+=	--enable-pulseaudio
 .endif

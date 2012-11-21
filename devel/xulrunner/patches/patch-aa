@@ -1,25 +1,18 @@
---- configure.in.orig	2012-10-24 16:32:27.000000000 +0200
-+++ configure.in	2012-11-12 11:29:00.000000000 +0100
-@@ -2040,7 +2040,7 @@ case "$target" in
-     MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
-     ;;
- 
--*-freebsd*)
-+*-freebsd* | *-dragonfly*)
-     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
- 	DLL_SUFFIX=".so.1.0"
- 	DSO_LDOPTS="-shared"
-@@ -2048,6 +2048,9 @@ case "$target" in
-     if test ! "$GNU_CC"; then
- 	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
+$NetBSD: patch-aa,v 1.14 2012/11/21 15:26:49 ryoon Exp $
+
+--- configure.in.orig	2012-11-19 15:42:04.000000000 +0000
++++ configure.in
+@@ -2080,6 +2080,9 @@ ia64*-hpux*)
+     if test -z "$MC"; then
+         MC=mc.exe
      fi
 +    if test "$LIBRUNPATH"; then
 +	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
 +    fi
      ;;
- 
- ia64*-hpux*)
-@@ -3027,6 +3030,9 @@ dnl ====================================
+ *-mingw*)
+     DSO_CFLAGS=
+@@ -2979,6 +2982,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -29,7 +22,7 @@
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3328,6 +3334,9 @@ AC_CACHE_CHECK(
+@@ -3279,6 +3285,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -39,7 +32,7 @@
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -3992,6 +4001,14 @@ if test -n "$YASM"; then
+@@ -3947,6 +3956,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -54,7 +47,18 @@
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5438,11 +5455,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
+@@ -5158,8 +5175,8 @@ fi
+ 
+ AC_SUBST(MOZ_WEBRTC)
+ 
+-case "$target_cpu" in
+-arm*)
++case "$target" in
++arm-*-linux*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+     MOZ_SAMPLE_TYPE_S16LE=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16LE)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16LE)
+@@ -5356,11 +5373,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
  
      dnl See if we have assembly on this platform.
      case "$OS_ARCH:$CPU_ARCH" in
@@ -68,21 +72,3 @@
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
-@@ -5841,7 +5858,7 @@ if test -n "$MOZ_CRASHREPORTER"; then
-     AC_MSG_ERROR([Breakpad tools do not support compiling on $HOST_OS_ARCH while targeting $OS_ARCH.  Use --disable-crashreporter.])
-   fi
- 
--  if test "$OS_ARCH" == "WINNT" -a -z "$HAVE_64BIT_OS"; then
-+  if test "$OS_ARCH" = "WINNT" -a -z "$HAVE_64BIT_OS"; then
-     MOZ_CRASHREPORTER_INJECTOR=1
-     AC_DEFINE(MOZ_CRASHREPORTER_INJECTOR)
-   fi
-@@ -9105,6 +9122,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
-     AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
-     if test "$OS_ARCH" != "WINNT"; then
-        NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
-+       AC_MSG_WARN([pkgsrc: adding run path to NSPR_LIBS for bundled NSPR.])
-+       NSPR_LIBS="-Wl,-R${prefix}/lib/\${MOZILLA_PKG_NAME} ${NSPR_LIBS}"
-        $PERL -pi.bak -e "s '^NSPR_LIBS\\s*=.*'NSPR_LIBS = $NSPR_LIBS'" config/autoconf.mk
-        NSPR_CFLAGS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --includedir=$LIBXUL_DIST/include/nspr --cflags`
-        $PERL -pi.bak -e "s '^NSPR_CFLAGS\\s*=.*'NSPR_CFLAGS = $NSPR_CFLAGS'" config/autoconf.mk
