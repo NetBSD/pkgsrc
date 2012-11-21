@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/11/21 22:24:27 abs Exp $
+
+* Like most other Operating Systems, NetBSD needs -fPIC with -DPIC
+
+--- configure.orig	2012-11-15 03:05:11.000000000 +0000
++++ configure
+@@ -111,7 +111,7 @@ build_config()
+ 		NetBSD)
+ 		[ "$optimisations" = "true" ] &&
+ 			echo "OPTIMISATIONS+=-ffast-math"
+-		echo "CFLAGS+=-pthread"
++		echo "CFLAGS+=-fPIC -pthread"
+ 		echo "SHFLAGS=-shared"
+ 		echo "RDYNAMIC=-rdynamic"
+ 		echo "LDFLAGS+=-Wl,--no-undefined -Wl,--as-needed"

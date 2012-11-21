@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/09/01 11:18:53 marino Exp $
+$NetBSD: distinfo,v 1.4 2012/11/21 22:24:27 abs Exp $
 
-SHA1 (mlt-0.5.10.tar.gz) = e0b3d8f77ad6d97d6495614e78dfbbb531e70f77
-RMD160 (mlt-0.5.10.tar.gz) = 015053ddb98175adc905d2ccf29ae962f295a9bb
-Size (mlt-0.5.10.tar.gz) = 819471 bytes
-SHA1 (patch-aa) = 15678a43add7566921aebe8079a9d3ae96f134c8
-SHA1 (patch-ab) = 61ce1f1324ee475d45f429c2cf4d8563140e8a66
-SHA1 (patch-ac) = 43fc78584d94200c808738e8eeb1005c64609d45
-SHA1 (patch-ad) = 8cbc98971731d84c5681a6249e5f3020be830903
-SHA1 (patch-ae) = b74fdcb11bd69299ca090f6228f37fb548e53066
-SHA1 (patch-af) = 1f7182398c6c5631f719539d72c29c87f5e42e34
-SHA1 (patch-ag) = 938d553380c8370d8ac8dad1d47008d0ff216f7c
-SHA1 (patch-ah) = 5d1f7f0323aa50e53602008d402193e8a19ddf72
-SHA1 (patch-ai) = fbac0f478a950e31791a63ad52604ae212c386ee
+SHA1 (mlt-0.8.6.tar.gz) = 616e807ba9f8fd8d6c9f87cb04416885c471596c
+RMD160 (mlt-0.8.6.tar.gz) = 354130bdd1d42e55f01703d2eac25a947d86f377
+Size (mlt-0.8.6.tar.gz) = 1104163 bytes
+SHA1 (patch-configure) = 52cc702fd561d45699bb7d5dce2b43a80fb9d474
+SHA1 (patch-src_modules_videostab_stab_estimate.c) = 58549c2ee2780604c043637a25dd39e92f90b7ce
