@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3597 2012/11/21 02:09:38 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3598 2012/11/21 15:28:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5522,3 +5522,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gcc47-libs to 4.7.0nb7 [jperkin 2012-11-20]
 	Added comms/p5-Data-AMF version 0.09 [dsainty 2012-11-21]
 	Updated ham/xlog to 2.0.5 [gdt 2012-11-21]
+	Updated devel/xulrunner to 17.0 [ryoon 2012-11-21]
+	Updated www/firefox to 17.0 [ryoon 2012-11-21]
