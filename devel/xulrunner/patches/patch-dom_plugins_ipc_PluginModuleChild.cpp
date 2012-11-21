@@ -1,6 +1,6 @@
-$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.3 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.4 2012/11/21 15:26:50 ryoon Exp $
 
---- dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-08-24 22:55:28.000000000 +0000
+--- dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-11-19 17:09:26.000000000 +0000
 +++ dom/plugins/ipc/PluginModuleChild.cpp
 @@ -5,6 +5,7 @@
   * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
@@ -10,7 +10,7 @@ $NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.3 2012/08/28 23:27:10 r
  #include <QtCore/QTimer>
  #include "nsQAppInstance.h"
  #include "NestedLoopTimer.h"
-@@ -192,7 +193,7 @@ PluginModuleChild::Init(const std::strin
+@@ -196,7 +197,7 @@ PluginModuleChild::Init(const std::strin
  
      // TODO: use PluginPRLibrary here
  
@@ -19,7 +19,7 @@ $NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.3 2012/08/28 23:27:10 r
      mShutdownFunc =
          (NP_PLUGINSHUTDOWN) PR_FindFunctionSymbol(mLibrary, "NP_Shutdown");
  
-@@ -1811,7 +1812,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
+@@ -1827,7 +1828,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
      PLUGIN_LOG_DEBUG_METHOD;
      AssertPluginThread();
  
@@ -28,8 +28,8 @@ $NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.3 2012/08/28 23:27:10 r
      return true;
  #elif defined(OS_WIN) || defined(OS_MACOSX)
      *_retval = mGetEntryPointsFunc(&mFunctions);
-@@ -1840,7 +1841,7 @@ PluginModuleChild::AnswerNP_Initialize(c
-     SendBackUpXResources(FileDescriptor(xSocketFd, false/*don't close*/));
+@@ -1856,7 +1857,7 @@ PluginModuleChild::AnswerNP_Initialize(c
+     SendBackUpXResources(FileDescriptor(xSocketFd));
  #endif
  
 -#if defined(OS_LINUX)
