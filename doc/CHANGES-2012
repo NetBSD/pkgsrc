@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3595 2012/11/20 23:15:23 jperkin Exp $
+$NetBSD: CHANGES-2012,v 1.3596 2012/11/21 00:06:43 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5520,3 +5520,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gcc47 to 4.7.0nb6 [jperkin 2012-11-20]
 	Updated devel/gdb6 to 6.2.1nb7 [tez 2012-11-20]
 	Updated lang/gcc47-libs to 4.7.0nb7 [jperkin 2012-11-20]
+	Added comms/p5-Data-AMF version 0.09 [dsainty 2012-11-21]
