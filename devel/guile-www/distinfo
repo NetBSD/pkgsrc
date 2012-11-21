@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2012/11/07 00:50:05 gdt Exp $
+$NetBSD: distinfo,v 1.13 2012/11/21 01:49:54 gdt Exp $
 
 SHA1 (guile-www-2.35.tar.xz) = 31619996edd2dfd86286650a9db5298f579ac740
 RMD160 (guile-www-2.35.tar.xz) = a75d79ae25a8dd23306a52b9bfa144a701820bd8
 Size (guile-www-2.35.tar.xz) = 614004 bytes
+SHA1 (patch-v_Makefile.in) = 6790ad019783b5a8c1ab7443b401fbf7f89ca2e7
