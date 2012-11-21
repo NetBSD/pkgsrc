@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/11/20 23:05:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2012/11/21 00:17:11 jperkin Exp $
 
 DISTNAME=	binutils-2.22
 PKGREVISION=	1
@@ -36,11 +36,16 @@ INSTALLATION_DIRS=	gnu/bin gnu/man/man1
 # gprof (XXX: and others?) cannot be built on all platforms
 #
 PLIST_VARS+=	gprof ld
+PLIST.gprof=	# empty
+PLIST.ld=	# empty
+
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} != "IRIX"
 PLIST.gprof=	yes
 EXTRA_FILES+=	gprof
 .endif
+
 .if ${OPSYS} != "SunOS"
 PLIST.ld=	yes
 EXTRA_FILES+=	ld
