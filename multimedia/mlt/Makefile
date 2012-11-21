@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 23:02:11 adam Exp $
-#
+# $NetBSD: Makefile,v 1.18 2012/11/21 22:24:27 abs Exp $
 
-DISTNAME=	mlt-0.5.10
-PKGREVISION=	14
+DISTNAME=	mlt-0.8.6
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.sourceforge.net/project/mlt/mlt/
 
-MAINTAINER=	abs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mltframework.org/twiki/bin/view/MLT/
 COMMENT=	Open source multimedia framework
 LICENSE=	gnu-gpl-v2
@@ -16,19 +14,19 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-gpl
 
-PKGCONFIG_OVERRIDE+=	mlt-0.5.10/mlt++.pc.in
-PKGCONFIG_OVERRIDE+=	mlt-0.5.10/mlt-framework.pc.in
+PKGCONFIG_OVERRIDE+=	mlt-0.8.6/mlt++.pc.in
+PKGCONFIG_OVERRIDE+=	mlt-0.8.6/mlt-framework.pc.in
 
-.include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/sox/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
+.include "../../multimedia/swfdec/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
