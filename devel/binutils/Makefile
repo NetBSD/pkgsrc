@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/11/21 00:17:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2012/11/21 07:46:40 jperkin Exp $
 
 DISTNAME=	binutils-2.22
 PKGREVISION=	1
@@ -36,8 +36,6 @@ INSTALLATION_DIRS=	gnu/bin gnu/man/man1
 # gprof (XXX: and others?) cannot be built on all platforms
 #
 PLIST_VARS+=	gprof ld
-PLIST.gprof=	# empty
-PLIST.ld=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -71,10 +69,10 @@ post-configure:
 SYMLINK_FILES =	addr2line ar as c++filt dlltool elfedit ld.bfd		\
 		nlmconv nm objcopy objdump ranlib readelf size strings	\
 		strip windmc windres
-.if ${PLIST.gprof} == "yes"
+.if defined(PLIST.gprof)
 SYMLINK_FILES+=	gprof
 .endif
-.if ${PLIST.ld} == "yes"
+.if defined(PLIST.ld)
 SYMLINK_FILES+=	ld
 .endif
 
