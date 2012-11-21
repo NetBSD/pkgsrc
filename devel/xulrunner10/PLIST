@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/07/22 00:03:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/11/21 13:02:17 is Exp $
 bin/xulrunner10
 include/xulrunner10/AtkSocketAccessible.h
 include/xulrunner10/BasicLayers.h
@@ -217,6 +217,7 @@ include/xulrunner10/mozilla/CharTokenizer.h
 include/xulrunner10/mozilla/CondVar.h
 include/xulrunner10/mozilla/DeadlockDetector.h
 include/xulrunner10/mozilla/FileUtils.h
+include/xulrunner10/mozilla/FloatingPoint.h
 include/xulrunner10/mozilla/FunctionTimer.h
 include/xulrunner10/mozilla/GenericFactory.h
 include/xulrunner10/mozilla/IHistory.h
@@ -228,6 +229,7 @@ include/xulrunner10/mozilla/ModuleLoader.h
 include/xulrunner10/mozilla/ModuleUtils.h
 include/xulrunner10/mozilla/Monitor.h
 include/xulrunner10/mozilla/Mutex.h
+include/xulrunner10/mozilla/NullPtr.h
 include/xulrunner10/mozilla/Omnijar.h
 include/xulrunner10/mozilla/PaintTracker.h
 include/xulrunner10/mozilla/PluginLibrary.h
@@ -243,7 +245,9 @@ include/xulrunner10/mozilla/Telemetry.h
 include/xulrunner10/mozilla/TelemetryHistograms.h
 include/xulrunner10/mozilla/TimeStamp.h
 include/xulrunner10/mozilla/Types.h
+include/xulrunner10/mozilla/TypeTraits.h
 include/xulrunner10/mozilla/Util.h
+include/xulrunner10/mozilla/WeakPtr.h
 include/xulrunner10/mozilla/WidgetTraceEvent.h
 include/xulrunner10/mozilla/X11Util.h
 include/xulrunner10/mozilla/XPCOM.h
