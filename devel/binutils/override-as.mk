@@ -1,10 +1,10 @@
-# $NetBSD: override-as.mk,v 1.5 2012/07/23 12:24:34 jperkin Exp $
+# $NetBSD: override-as.mk,v 1.6 2012/11/21 10:53:53 jperkin Exp $
 
 # This Makefile fragment can be included by packages that wish to
 # override the default selection of as(1) and use the one from devel/binutils
 # instead.
 
-PKG_AS=		${PREFIX}/gnu/bin/as
+PKG_AS=		${PREFIX}/bin/gas
 
 .include "../../mk/compiler.mk"
 
