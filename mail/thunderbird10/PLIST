@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/08/04 12:03:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/11/22 08:14:15 is Exp $
 bin/thunderbird10
 include/thunderbird10/AtkSocketAccessible.h
 include/thunderbird10/BasicLayers.h
@@ -226,6 +226,7 @@ include/thunderbird10/mozilla/BlockingResourceBase.h
 include/thunderbird10/mozilla/CondVar.h
 include/thunderbird10/mozilla/DeadlockDetector.h
 include/thunderbird10/mozilla/FileUtils.h
+include/thunderbird10/mozilla/FloatingPoint.h
 include/thunderbird10/mozilla/FunctionTimer.h
 include/thunderbird10/mozilla/GenericFactory.h
 include/thunderbird10/mozilla/IHistory.h
@@ -235,6 +236,7 @@ include/thunderbird10/mozilla/ModuleLoader.h
 include/thunderbird10/mozilla/ModuleUtils.h
 include/thunderbird10/mozilla/Monitor.h
 include/thunderbird10/mozilla/Mutex.h
+include/thunderbird10/mozilla/NullPtr.h
 include/thunderbird10/mozilla/Omnijar.h
 include/thunderbird10/mozilla/PaintTracker.h
 include/thunderbird10/mozilla/PluginLibrary.h
@@ -250,7 +252,9 @@ include/thunderbird10/mozilla/Telemetry.h
 include/thunderbird10/mozilla/TelemetryHistograms.h
 include/thunderbird10/mozilla/TimeStamp.h
 include/thunderbird10/mozilla/Types.h
+include/thunderbird10/mozilla/TypeTraits.h
 include/thunderbird10/mozilla/Util.h
+include/thunderbird10/mozilla/WeakPtr.h
 include/thunderbird10/mozilla/WidgetTraceEvent.h
 include/thunderbird10/mozilla/X11Util.h
 include/thunderbird10/mozilla/XPCOM.h
