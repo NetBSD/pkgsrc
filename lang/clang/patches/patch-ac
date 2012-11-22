@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2011/04/07 09:26:33 adam Exp $
+$NetBSD: patch-ac,v 1.5 2012/11/22 22:45:15 marino Exp $
 
---- Makefile.rules.orig	2011-03-25 06:26:58.000000000 +0000
+--- Makefile.rules.orig	2012-05-15 22:06:08.000000000 +0000
 +++ Makefile.rules
-@@ -564,11 +564,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), 
+@@ -625,11 +625,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS),
  ifneq ($(HOST_OS), Darwin)
  ifdef TOOLNAME
    LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.4 2011/04/07 09:26:33 adam Exp $
  endif
  else
  ifneq ($(DARWIN_MAJVERS),4)
-@@ -746,9 +741,6 @@ endif
+@@ -821,9 +816,6 @@ endif
  # in the file so they get built before dependencies
  #---------------------------------------------------------
  
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.4 2011/04/07 09:26:33 adam Exp $
  # To create other directories, as needed, and timestamp their creation
  %/.dir:
  	$(Verb) $(MKDIR) $* > /dev/null
-@@ -876,7 +868,9 @@ install-local::
+@@ -958,7 +950,9 @@ install-local::
  uninstall-local::
  	$(Echo) UnInstall circumvented with NO_INSTALL
  else
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.4 2011/04/07 09:26:33 adam Exp $
  	$(Echo) Installing Configuration Files To $(DESTDIR)$(PROJ_etcdir)
  	$(Verb)for file in $(CONFIG_FILES); do \
            if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
-@@ -1298,7 +1292,7 @@ install-local:: $(DestArchiveLib)
+@@ -1380,7 +1374,7 @@ install-local:: $(DestArchiveLib)
  $(DestArchiveLib): $(LibName.A) $(DESTDIR)$(PROJ_libdir)
  	$(Echo) Installing $(BuildMode) Archive Library $(DestArchiveLib)
  	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_libdir)
