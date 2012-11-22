@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3602 2012/11/22 00:16:20 bad Exp $
+$NetBSD: CHANGES-2012,v 1.3603 2012/11/22 00:31:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox-l10n to 17.0 [ryoon 2012-11-21]
 	Updated devel/nspr to 4.9.3.3 [ryoon 2012-11-21]
 	Added math/py-pandas version 0.9.1 [bad 2012-11-22]
+	Updated security/pkcs11-helper to 1.10 [gdt 2012-11-22]
