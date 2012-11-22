@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/06 10:49:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/11/22 18:54:06 ryoon Exp $
 bin/newlisp
 bin/${PKGNAME}
 bin/newlisp-edit
@@ -48,6 +48,7 @@ share/${PKGNAME}/modules/canvas.lsp
 share/${PKGNAME}/modules/cgi.lsp
 share/${PKGNAME}/modules/crypto.lsp
 share/${PKGNAME}/modules/ftp.lsp
+share/${PKGNAME}/modules/getopts.lsp
 share/${PKGNAME}/modules/gmp.lsp
 share/${PKGNAME}/modules/gsl.lsp
 share/${PKGNAME}/modules/infix.lsp
@@ -55,6 +56,7 @@ share/${PKGNAME}/modules/json.lsp
 share/${PKGNAME}/modules/macro.lsp
 share/${PKGNAME}/modules/mysql.lsp
 share/${PKGNAME}/modules/odbc.lsp
+share/${PKGNAME}/modules/plot.lsp
 share/${PKGNAME}/modules/pop3.lsp
 share/${PKGNAME}/modules/postgres.lsp
 share/${PKGNAME}/modules/postscript.lsp
