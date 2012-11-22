@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3604 2012/11/22 07:37:01 abs Exp $
+$NetBSD: CHANGES-2012,v 1.3605 2012/11/22 08:28:12 is Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5522,6 +5522,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gcc47-libs to 4.7.0nb7 [jperkin 2012-11-20]
 	Added comms/p5-Data-AMF version 0.09 [dsainty 2012-11-21]
 	Updated ham/xlog to 2.0.5 [gdt 2012-11-21]
+	Updated devel/xulrunner10 to 10.0.11 [is 2012-11-21]
+	Updated www/firefox10 to 10.0.11 [is 2012-11-21]
 	Updated devel/xulrunner to 17.0 [ryoon 2012-11-21]
 	Updated www/firefox to 17.0 [ryoon 2012-11-21]
 	Updated www/firefox10-l10n to 10.0.11 [ryoon 2012-11-21]
@@ -5530,3 +5532,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/mlt to 0.8.6 [abs 2012-11-21]
 	Added math/py-pandas version 0.9.1 [bad 2012-11-22]
 	Updated security/pkcs11-helper to 1.10 [gdt 2012-11-22]
+	Updated mail/thunderbird10 to 10.0.11 [is 2012-11-22]
