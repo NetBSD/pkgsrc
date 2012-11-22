@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/04/28 07:20:46 adam Exp $
+$NetBSD: distinfo,v 1.3 2012/11/22 00:31:04 gdt Exp $
 
-SHA1 (pkcs11-helper-1.08.tar.bz2) = 2a2d57850a780f7495ee0ff2afadfb3f019ddaed
-RMD160 (pkcs11-helper-1.08.tar.bz2) = 04ac3b05c7621bd127e6262810f459c1de00f306
-Size (pkcs11-helper-1.08.tar.bz2) = 362352 bytes
+SHA1 (pkcs11-helper-1.10.tar.bz2) = 8c1e6dde1f42e9bf59da429c5035950042b540f4
+RMD160 (pkcs11-helper-1.10.tar.bz2) = c1f8aed0ea956cc6ac84147223f4bf03db5e06eb
+Size (pkcs11-helper-1.10.tar.bz2) = 375741 bytes
 SHA1 (patch-aa) = 05294e1f777717a54dc63425edd5cb8c13a70978
