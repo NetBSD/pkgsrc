@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2012/11/03 20:03:02 joerg Exp $
+$NetBSD: distinfo,v 1.20 2012/11/22 11:02:05 marino Exp $
 
 SHA1 (openjdk7/61e08e67b176.tar.bz2) = 3db5488f3c0ea1b9c83a74632d300d8717c9b478
 RMD160 (openjdk7/61e08e67b176.tar.bz2) = c0dd67a6ae982f09b3675c164b5decab4f7e140f
@@ -91,3 +91,5 @@ SHA1 (patch-bl) = a3b3bd6007c83664538baf401447fd0df9f4143b
 SHA1 (patch-bm) = 40c83ad219f529c3ca130547560681ab57b44bf8
 SHA1 (patch-bn) = 5b34da35e39e08c935c805b5ef7b2c8cc8d285da
 SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = bc339888ede68ada2682b803420a7c9515e5578f
+SHA1 (patch-hotspot_src_share_vm_oops_constantPoolOop.cpp) = 1eeca23f0baddf94c369ddd4d4dc91802d7c1e2a
+SHA1 (patch-hotspot_src_share_vm_opto_loopnode.cpp) = 05a564d96659d2a2546029bdad49cd718f867a81
