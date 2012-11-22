@@ -1,0 +1,21 @@
+$NetBSD: patch-test_CMakeLists.txt,v 1.1 2012/11/22 10:01:10 jnemeth Exp $
+
+--- test/CMakeLists.txt.orig	2012-09-18 10:56:28.000000000 +0000
++++ test/CMakeLists.txt
+@@ -44,7 +44,7 @@ FOREACH(T my_basics my_blob my_bulk my_c
+ 		my_types my_unicode my_unixodbc my_use_result my_bug13766)
+ 	ADD_EXECUTABLE(${T} ${T}.c)
+ 
+-    INSTALL(TARGETS ${T} DESTINATION test COMPONENT tests)
++    INSTALL(TARGETS ${T} DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
+ 
+ 	IF(WIN32)
+ 	  TARGET_LINK_LIBRARIES(${T} ${ODBCLIB} ${ODBCINSTLIB})
+@@ -59,6 +59,6 @@ INSTALL(FILES
+ 	${CMAKE_CURRENT_BINARY_DIR}/CTestTestfile.cmake
+ 	${CMAKE_CURRENT_BINARY_DIR}/odbc.ini
+ 	${CMAKE_CURRENT_BINARY_DIR}/odbcinst.ini
+-        DESTINATION test COMPONENT tests)
++        DESTINATION share/mysql-connector-odbc/test COMPONENT tests)
+ 
+ 
