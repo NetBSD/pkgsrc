@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3605 2012/11/22 08:28:12 is Exp $
+$NetBSD: CHANGES-2012,v 1.3606 2012/11/22 10:01:21 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added math/py-pandas version 0.9.1 [bad 2012-11-22]
 	Updated security/pkcs11-helper to 1.10 [gdt 2012-11-22]
 	Updated mail/thunderbird10 to 10.0.11 [is 2012-11-22]
+	Updated databases/myodbc to 5.2.2 [jnemeth 2012-11-22]
