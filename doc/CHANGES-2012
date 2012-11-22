@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3607 2012/11/22 12:04:58 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3608 2012/11/22 18:54:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5535,3 +5535,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird10 to 10.0.11 [is 2012-11-22]
 	Updated databases/myodbc to 5.2.2 [jnemeth 2012-11-22]
 	Updated mail/thunderbird10-l10n to 10.0.11 [ryoon 2012-11-22]
+	Updated lang/newlisp to 10.4.5 [ryoon 2012-11-22]
