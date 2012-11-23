@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2012/10/03 21:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2012/11/23 17:33:36 drochner Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	2
 
 COMMENT=	Docbook XSL modular stylesheet
 
@@ -25,6 +23,7 @@ INSTALLATION_DIRS=	${EGDIR} ${XSLDIR}
 do-install:
 	cd ${WRKSRC}/template && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${DESTDIR}${XSLDIR}
+	${INSTALL_DATA} ${WRKSRC}/VERSION.xsl ${DESTDIR}${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DESTDIR}${XSLDIR}/catalog.xml
 	set -e; for d in ${XSLMODS}; do \
 	    ${ECHO} "${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}/$$d"; \
