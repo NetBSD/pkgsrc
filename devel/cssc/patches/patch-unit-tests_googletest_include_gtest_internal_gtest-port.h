@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/11/23 23:03:12 marino Exp $
+$NetBSD: patch-unit-tests_googletest_include_gtest_internal_gtest-port.h,v 1.1 2012/11/23 23:03:12 marino Exp $
 
 SHA1 (CSSC-1.3.0.tar.gz) = 5f9d7338c58efd9fed7b774843045433b61aed12
 RMD160 (CSSC-1.3.0.tar.gz) = 4318632f0c243ee59639ea9226e0a3d2409e9763
