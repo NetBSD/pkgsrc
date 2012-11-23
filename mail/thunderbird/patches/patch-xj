@@ -1,8 +1,8 @@
-$NetBSD: patch-xj,v 1.5 2012/09/02 06:43:44 ryoon Exp $
+$NetBSD: patch-xj,v 1.6 2012/11/23 07:17:54 ryoon Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp.orig	2012-08-25 00:31:36.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp.orig	2012-11-19 22:42:45.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp
 @@ -6,6 +6,7 @@
  // Implement shared vtbl methods.
@@ -18,9 +18,9 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
      nsXPTCMiniVariant* dispatchParams = NULL;
 -    nsIInterfaceInfo* iface_info = NULL;
      const nsXPTMethodInfo* info;
-     PRUint32 paramCount;
-     PRUint32 i;
-@@ -44,12 +44,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+     uint32_t paramCount;
+     uint32_t i;
+@@ -44,11 +44,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  
      NS_ASSERTION(self,"no self");
  
@@ -29,13 +29,12 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 -    if (! iface_info)
 -        return NS_ERROR_UNEXPECTED;
 -
--    iface_info->GetMethodInfo(PRUint16(methodIndex), &info);
 +    self->mEntry->GetMethodInfo(PRUint16(methodIndex), &info);
+     iface_info->GetMethodInfo(uint16_t(methodIndex), &info);
      NS_ASSERTION(info,"no method info");
      if (! info)
-         return NS_ERROR_UNEXPECTED;
-@@ -84,8 +79,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
-                 if ((PRUint32) ap & 4) ap++; // doubles are 8-byte aligned on stack
+@@ -84,8 +80,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+                 if ((uint32_t) ap & 4) ap++; // doubles are 8-byte aligned on stack
                  dp->val.d = *(double*) ap;
                  ap += 2;
 +#if __GXX_ABI_VERSION < 100
@@ -45,7 +44,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
              }
              continue;
          }
-@@ -95,8 +92,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -95,8 +93,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
              else {
                  dp->val.f = *(float*) ap;
  		ap += 1;
@@ -56,20 +55,20 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
              }
              continue;
          }
-@@ -144,9 +143,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -144,9 +144,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
          }
      }
  
--    result = self->CallMethod((PRUint16) methodIndex, info, dispatchParams);
+-    result = self->CallMethod((uint16_t) methodIndex, info, dispatchParams);
 -
 -    NS_RELEASE(iface_info);
 +    result = self->mOuter->CallMethod((PRUint16) methodIndex,
-+                                      info,
-+                                      dispatchParams);
++				      info,
++				      dispatchParams);
  
      if (dispatchParams != paramBuffer)
          delete [] dispatchParams;
-@@ -160,7 +159,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+@@ -160,7 +160,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  // however, it's quick, dirty, and'll break when the ABI changes on
  // us, which is what we want ;-).
  
@@ -80,7 +79,7 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
  __asm__ (                                                   \
          ".section \".text\" \n\t"                           \
          ".align 2 \n\t"                                     \
-@@ -171,6 +172,46 @@ __asm__ (                               
+@@ -171,6 +173,46 @@ __asm__ (                               
  	"li     11,"#n" \n\t"                               \
  	"b      SharedStub@local \n"                        \
  );
