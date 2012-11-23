@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/08 19:20:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/23 17:38:42 drochner Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-view
@@ -13,6 +13,7 @@ include/harfbuzz/hb-ot-layout.h
 include/harfbuzz/hb-ot-tag.h
 include/harfbuzz/hb-ot.h
 include/harfbuzz/hb-set.h
+include/harfbuzz/hb-shape-plan.h
 include/harfbuzz/hb-shape.h
 include/harfbuzz/hb-unicode.h
 include/harfbuzz/hb-version.h
