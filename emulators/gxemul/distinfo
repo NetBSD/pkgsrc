@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2012/11/23 12:33:22 joerg Exp $
+$NetBSD: distinfo,v 1.40 2012/11/23 22:43:09 alnsn Exp $
 
 SHA1 (gxemul-0.6.0.tar.gz) = aa37ad5f200eee045b1da2b1d3f651401cf474af
 RMD160 (gxemul-0.6.0.tar.gz) = ac6291a5f8bc9c0d1988d3ce39750339fe90a8ce
@@ -17,3 +17,4 @@ SHA1 (patch-src_devices_dev__dreamcast__gdrom.cc) = 3e9abc13118fb79473adb11156f7
 SHA1 (patch-src_include_components_CPUDyntransComponent.h) = 4fa3c327c4ce5ee9e39e7bc49ce6029b2a7da100
 SHA1 (patch-src_include_components_M88K__CPUComponent.h) = afd07ae4df33d0c0a9d3d8c15dca4ef9ee7dd916
 SHA1 (patch-src_include_components_MIPS__CPUComponent.h) = 4e49da9af0d220a1ea7c4520d8e7e53d8d84c155
+SHA1 (patch-src_include_refcount__ptr.h) = 1735780a1228241a708c5c79b9d4658fa71c6c18
