@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2003/05/31 14:41:32 grant Exp $
+$NetBSD: patch-ab,v 1.4 2012/11/23 11:37:41 joerg Exp $
 
 This patch incorporates a patch from the mod_xslt project page on sourceforge
 in order to have a valid base URI set during xslt processing, so that document
@@ -6,7 +6,7 @@ inclusion will DTRT.
 
 It also fixes two multi-line literals which are disallowed in gcc 3.3.
 
---- mod_xslt.c.orig	Thu Aug 24 12:05:28 2000
+--- mod_xslt.c.orig	2000-08-24 02:05:28.000000000 +0000
 +++ mod_xslt.c
 @@ -43,7 +43,7 @@
  #include "http_protocol.h"
@@ -47,9 +47,10 @@ It also fixes two multi-line literals which are disallowed in gcc 3.3.
      if (cfg->debug){
 -      return mod_xslt_debug_out(r, "XSLT DEBUG: \"AddHandler mod_xslt .xml\" will cause infinite
 -      recursion. Remove it!\n"); 
+-      return ;
 +      return mod_xslt_debug_out(r, "XSLT DEBUG: \"AddHandler mod_xslt .xml\" will cause infinite\n"
 +      "recursion. Remove it!\n"); 
-       return ;
++      return SERVER_ERROR;
      } else {
 -      ap_log_error(APLOG_MARK, APLOG_NOERRNO|APLOG_ERR, r->server, "\"AddHandler mod_xslt .xml\" will cause infinite
 -      recursion. Remove it!\n");
@@ -57,3 +58,4 @@ It also fixes two multi-line literals which are disallowed in gcc 3.3.
 +      "recursion. Remove it!\n");
        return SERVER_ERROR;
      }
+ 
