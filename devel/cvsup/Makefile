@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:40 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/11/23 14:31:44 gson Exp $
 
 .include "${.CURDIR}/../../devel/cvsup/Makefile.common"
 
 PKGNAME=	cvsup-16.1.h
-PKGREVISION=	2
+PKGREVISION=	3
 
 M3FLAGS+=	-DNOGUI
 
