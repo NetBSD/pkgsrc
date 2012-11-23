@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3611 2012/11/23 07:18:51 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3612 2012/11/23 07:42:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5539,3 +5539,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/guile-www to 2.36 [gdt 2012-11-23]
 	Updated net/freeradius2 to 2.2.0 [jnemeth 2012-11-23]
 	Updated mail/thunderbird to 17.0 [ryoon 2012-11-23]
+	Updated mail/thunderbird-l10n to 17.0 [ryoon 2012-11-23]
