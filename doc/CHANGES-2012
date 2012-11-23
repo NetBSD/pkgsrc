@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3618 2012/11/23 17:42:52 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3619 2012/11/23 18:03:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5559,3 +5559,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/seamonkey-l10n to 2.14 [ryoon 2012-11-23]
 	Updated fonts/harfbuzz to 0.9.7 [drochner 2012-11-23]
 	Updated devel/pango to 1.32.3 [drochner 2012-11-23]
+	Updated fonts/umefont-ttf to 0.445 [ryoon 2012-11-23]
