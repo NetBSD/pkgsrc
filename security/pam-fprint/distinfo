@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/26 21:52:00 plunky Exp $
+$NetBSD: distinfo,v 1.2 2012/11/23 12:30:01 joerg Exp $
 
 SHA1 (pam_fprint-0.2.tar.bz2) = d52543cb2b4cb7d1a32ae30347a9053bc118f2cd
 RMD160 (pam_fprint-0.2.tar.bz2) = 483fcf6b70d4805b1da4f95acbd34c672275a4ba
 Size (pam_fprint-0.2.tar.bz2) = 72781 bytes
 SHA1 (patch-aa) = e2d6a4daa9d3e7d0af10807d1d81e74941b79089
+SHA1 (patch-src_pam__fprint.c) = 562bae58862dcc7efa2075c346ab1adb403769eb
+SHA1 (patch-src_pam__fprint__enroll.c) = 36ea5c81a098e05740d098a96839b5ded4a64fd7
