@@ -1,4 +1,4 @@
-/* $NetBSD: alloc.c,v 1.2 2007/06/25 21:38:43 joerg Exp $ */
+/* $NetBSD: alloc.c,v 1.3 2012/11/23 12:13:35 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -94,4 +94,24 @@ xstrndup(const char *str, size_t len)
 	buf[len] = '\0';
 
 	return buf;
+}
+
+size_t
+djb_hash(const char *s)
+{
+	size_t h = 5381;
+
+	while (*s)
+		h = h * 33 + (size_t)(unsigned char)*s++;
+	return h;
+}
+
+size_t
+djb_hash2(const char *s, const char *e)
+{
+	size_t h = 5381;
+
+	while (*s && s < e)
+		h = h * 33 + (size_t)(unsigned char)*s++;
+	return h;
 }

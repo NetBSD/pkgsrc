@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.24 2012/06/19 13:40:07 jperkin Exp $
+# $NetBSD: pkg-build,v 1.25 2012/11/23 12:13:35 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -193,7 +193,7 @@ run_make run_direct package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 if [ "${use_destdir}" != "no" ] && \
    [ -z "${is_bootstrap}" ]; then
 	if ! ${pkg_add_cmd} ${pkgname} \
-	    > ${bulklog}/${pkgname}/package.log 2>&1; then
+	    >> ${bulklog}/${pkgname}/package.log 2>&1; then
 		run_make run_direct package-clean
 		cleanup
 	fi
