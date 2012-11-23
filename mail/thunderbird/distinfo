@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.107 2012/11/23 07:17:53 ryoon Exp $
+$NetBSD: distinfo,v 1.108 2012/11/23 11:08:05 ryoon Exp $
 
 SHA1 (enigmail-1.4.5.tar.gz) = 16d0450a9f5fb4de0e9cc5b9f8091dce4b070aaf
 RMD160 (enigmail-1.4.5.tar.gz) = 860a1ca813fd2ccae69ac0afe07affd39611e56a
@@ -56,7 +56,7 @@ SHA1 (patch-mg) = f660cfddc4fd49301df2bd31949b5845b8e08f46
 SHA1 (patch-mh) = fff2c712e23d9ffc909cf1a5a3303a155b386716
 SHA1 (patch-mi) = 4dd76f01a7c3463485ae6bcdc1df622f214419b5
 SHA1 (patch-mj) = f0b7ce3767423c17953bfa511f9e80da2f262543
-SHA1 (patch-mk) = 6a835bfbf4995c7499f5c9d6bf266429e327871e
+SHA1 (patch-mk) = abaad282567f82277fb58836617d91fa6024c51f
 SHA1 (patch-ml) = 71ea1c4f984b448d380ed94dabce988a74c4853f
 SHA1 (patch-mm) = 92d4a37be44cabe5f72c5352518a1a6566283163
 SHA1 (patch-mn) = 1d0293cce00aa5fa8aa6d0c37dade3c251ca7da6
@@ -93,15 +93,15 @@ SHA1 (patch-mozilla_media_libcubeb_src_Makefile.in) = 0477f3dbdf3ce595ebce4c18f0
 SHA1 (patch-mozilla_media_libsydneyaudio_src_sydney__audio__pulseaudio.c) = c12f98cd3e8797d4b2626b18d884c09d4e35d679
 SHA1 (patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp) = 4ce50fe017b56f7bb8d07d3d72a117bfea61f003
 SHA1 (patch-mozilla_storage_src_Makefile.in) = 302301fd992a58e472f72ae6dc9a226129354175
-SHA1 (patch-mozilla_xpcom_Makefile.in) = f7d495a53e207b3ca24df3337b3bb5a88ca9b34a
+SHA1 (patch-mozilla_xpcom_Makefile.in) = 73c9daf053f88dacb6b5f8351b29f57cc48c98a9
 SHA1 (patch-mozilla_xpcom_idl-parser_Makefile.in) = 282a06fc56e9fe6980560a3f288bc204a6324188
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_src_md_unix_xptcinvoke__ppc__netbsd.cpp) = 58b06ebd1068edc06d3fe1f6464217da4c157e49
 SHA1 (patch-mozilla_xpcom_typelib_xpidl_Makefile.in) = addbabcf67b58605f6f8e4ccb674af7ab46d9d22
 SHA1 (patch-mp) = 6687d3583947cd3dc62f9005c38916a747326e3a
-SHA1 (patch-pa) = 659ce8e226b0683d667526df076ded8903aeb235
+SHA1 (patch-pa) = 3515d1f62dc874baa4b2ef21d699d5fadfe3765f
 SHA1 (patch-pb) = 6ffe3119c9968480de8702e35498cf1f3decba4f
 SHA1 (patch-pc) = 2edc09191a28be7368eca2ef05cf3faa3224d493
-SHA1 (patch-pd) = 99c58b5b6d145c5d19724acd04ce88abe61c0f3a
+SHA1 (patch-pd) = 0383adf29067da09c31a83c336174c943fe52ea3
 SHA1 (patch-pg) = 30b00a6a302c431dd2ea36afc7ee87d564dd7159
 SHA1 (patch-rc) = 46175f709b324d6a363378807eb5689aea52f065
 SHA1 (patch-toolkit_toolkit-tiers.mk) = da9e166c6ae48719370ed2fc979edf1eaeb7fdbd

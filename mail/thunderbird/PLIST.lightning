@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.14 2012/11/23 07:17:53 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.15 2012/11/23 11:08:05 ryoon Exp $
 include/thunderbird/calBaseCID.h
 include/thunderbird/calIAlarm.h
 include/thunderbird/calIAlarmService.h
@@ -15,6 +15,7 @@ include/thunderbird/calICalendarViewController.h
 include/thunderbird/calIChangeLog.h
 include/thunderbird/calIDateTime.h
 include/thunderbird/calIDateTimeFormatter.h
+include/thunderbird/calIDeletedItems.h
 include/thunderbird/calIDuration.h
 include/thunderbird/calIErrors.h
 include/thunderbird/calIEvent.h
