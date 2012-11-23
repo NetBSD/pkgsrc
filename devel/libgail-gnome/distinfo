@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2012/05/10 04:46:57 dholland Exp $
+$NetBSD: distinfo,v 1.12 2012/11/23 17:14:12 drochner Exp $
 
-SHA1 (libgail-gnome-1.20.1.tar.bz2) = 97bc7dca6130f6dfa76070669b0c46b56d374d24
-RMD160 (libgail-gnome-1.20.1.tar.bz2) = b4ea4008186c5ca9f4090d1b4b4b6c85a27f1dd0
-Size (libgail-gnome-1.20.1.tar.bz2) = 242952 bytes
-SHA1 (patch-gail-gnome_gail-gnome-debug_h) = 6eed6a2a97c6212498b9a13e4b44d9468d96d778
+SHA1 (libgail-gnome-1.20.4.tar.bz2) = ac1bb6f24dc16d8cc557fd6a6c6737f977de067f
+RMD160 (libgail-gnome-1.20.4.tar.bz2) = 21138e64f7d93b3d5cf37f9242e014ccceb5ba3f
+Size (libgail-gnome-1.20.4.tar.bz2) = 236497 bytes

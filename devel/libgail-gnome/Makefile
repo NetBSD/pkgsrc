@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2012/10/31 11:17:13 asau Exp $
+# $NetBSD: Makefile,v 1.52 2012/11/23 17:14:11 drochner Exp $
 #
 
-DISTNAME=	libgail-gnome-1.20.1
-PKGREVISION=	22
+DISTNAME=	libgail-gnome-1.20.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgail-gnome/1.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,9 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE=	libgail-gnome.pc.in
+GCONF_SCHEMAS=		libgail-gnome.schemas
 
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
