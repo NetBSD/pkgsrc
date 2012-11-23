@@ -1,0 +1,9 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2012/11/23 11:46:24 fhajny Exp $
+
+case "${STAGE}" in
+POST-INSTALL)
+	${CHOWN} -R @TOMCAT_USER@:@TOMCAT_GROUP@ ${PKG_PREFIX}/share/tomcat/webapps
+	;;
+esac
