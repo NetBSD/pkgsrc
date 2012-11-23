@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/30 20:13:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/23 11:55:06 drochner Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 include/rhythmbox/backends/rb-encoder.h
@@ -120,6 +120,8 @@ lib/rhythmbox/plugins/dbus-media-server/dbus-media-server.plugin
 lib/rhythmbox/plugins/dbus-media-server/libdbus-media-server.la
 lib/rhythmbox/plugins/generic-player/generic-player.plugin
 lib/rhythmbox/plugins/generic-player/libgeneric-player.la
+lib/rhythmbox/plugins/grilo/grilo.plugin
+lib/rhythmbox/plugins/grilo/libgrilo.la
 lib/rhythmbox/plugins/im-status/im-status.plugin
 lib/rhythmbox/plugins/im-status/im-status.py
 lib/rhythmbox/plugins/im-status/im-status.pyc
