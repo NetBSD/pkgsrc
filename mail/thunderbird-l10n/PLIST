@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/10/12 18:50:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/11/23 07:32:19 ryoon Exp $
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/.mkdir.done
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/alerts/notificationNames.properties
@@ -311,6 +311,7 @@ lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/search.properties
@@ -691,6 +692,7 @@ lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/search.properties
@@ -1071,6 +1073,7 @@ lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/l
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/search.properties
@@ -1451,6 +1454,7 @@ lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/search.properties
@@ -1831,6 +1835,7 @@ lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/search.properties
@@ -2211,6 +2216,7 @@ lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/search.properties
@@ -2591,6 +2597,7 @@ lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/search.properties
@@ -2971,6 +2978,7 @@ lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/search.properties
@@ -3351,6 +3359,7 @@ lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/search.properties
@@ -3731,6 +3740,7 @@ lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/l
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/search.properties
@@ -4111,6 +4121,7 @@ lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/l
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/search.properties
@@ -4491,6 +4502,7 @@ lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/l
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/search.properties
@@ -4871,6 +4883,7 @@ lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/l
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/search.properties
@@ -5251,6 +5264,7 @@ lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/search.properties
@@ -5631,6 +5645,7 @@ lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/search.properties
@@ -6011,6 +6026,7 @@ lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/search.properties
@@ -6391,6 +6407,7 @@ lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/search.properties
@@ -6771,6 +6788,7 @@ lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/l
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/search.properties
@@ -7151,6 +7169,7 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/l
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/search.properties
@@ -7531,6 +7550,7 @@ lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/search.properties
@@ -7911,6 +7931,7 @@ lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/search.properties
@@ -8291,6 +8312,7 @@ lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/search.properties
@@ -8671,6 +8693,7 @@ lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/search.properties
@@ -9051,6 +9074,7 @@ lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/search.properties
@@ -9431,6 +9455,7 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/search.properties
@@ -9811,6 +9836,7 @@ lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/search.properties
@@ -10191,6 +10217,7 @@ lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/search.properties
@@ -10571,6 +10598,7 @@ lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/l
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/search.properties
@@ -10951,6 +10979,7 @@ lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/search.properties
@@ -11331,6 +11360,7 @@ lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/l
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/search.properties
@@ -11711,6 +11741,7 @@ lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/l
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/search.properties
@@ -12091,6 +12122,7 @@ lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/l
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/search.properties
@@ -12471,6 +12503,7 @@ lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/search.properties
@@ -12851,6 +12884,7 @@ lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/search.properties
@@ -13231,6 +13265,7 @@ lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/search.properties
@@ -13611,6 +13646,7 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/search.properties
@@ -13991,6 +14027,7 @@ lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/search.properties
@@ -14371,6 +14408,7 @@ lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/search.properties
@@ -14751,6 +14789,7 @@ lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/l
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/search.properties
@@ -15131,6 +15170,7 @@ lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/l
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/search.properties
@@ -15511,6 +15551,7 @@ lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/search.properties
@@ -15891,6 +15932,7 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/search.properties
@@ -16271,6 +16313,7 @@ lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/search.properties
@@ -16651,6 +16694,7 @@ lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/l
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/search.properties
@@ -17031,6 +17075,7 @@ lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/l
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/quickFilterBar.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/renameFolderDialog.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/safeMode.dtd
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/sanitize.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/search-attributes.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/search-operators.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/search.properties
