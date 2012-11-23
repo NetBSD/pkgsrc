@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11668 2012/11/21 02:09:38 gdt Exp $
+$NetBSD: TODO,v 1.11669 2012/11/23 17:42:52 drochner Exp $
 
 Suggested new packages
 ======================
@@ -573,7 +573,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o farsight2-0.0.31
 	o fbreader-0.99.3
 	o fcitx-3.6.2
-	o feh-2.7
 	o felt-3.07
 	o fetchyahoo-2.14.0
 	o fillets-ng-0.7.4
@@ -709,7 +708,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
-	o harfbuzz-0.9.6
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o help2man-1.40.10 [pkg/46548]
@@ -805,7 +803,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libexttextcat-3.4.0
 	o libflash-0.4.13
 	o libfolks-0.8.0
-	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
