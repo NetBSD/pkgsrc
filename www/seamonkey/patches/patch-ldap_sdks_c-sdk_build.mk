@@ -1,6 +1,6 @@
-$NetBSD: patch-ldap_sdks_c-sdk_build.mk,v 1.2 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-ldap_sdks_c-sdk_build.mk,v 1.3 2012/11/23 17:28:49 ryoon Exp $
 
---- ldap/sdks/c-sdk/build.mk.orig	2012-08-27 04:49:44.000000000 +0000
+--- ldap/sdks/c-sdk/build.mk.orig	2012-11-18 10:20:06.000000000 +0000
 +++ ldap/sdks/c-sdk/build.mk
 @@ -488,21 +488,21 @@ LINK_LIB        = $(RM) $@; $(AR) $(AR_F
  LINK_LIB2       = $(RM) $@; $(AR) $@ $(OBJS2); $(RANLIB) $@

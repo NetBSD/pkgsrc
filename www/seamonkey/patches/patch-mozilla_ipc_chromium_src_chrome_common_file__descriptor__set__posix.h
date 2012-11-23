@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_file__descriptor__set__posix.h,v 1.1 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_file__descriptor__set__posix.h,v 1.2 2012/11/23 17:28:49 ryoon Exp $
 
---- mozilla/ipc/chromium/src/chrome/common/file_descriptor_set_posix.h.orig	2012-08-27 04:49:15.000000000 +0000
+--- mozilla/ipc/chromium/src/chrome/common/file_descriptor_set_posix.h.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/chrome/common/file_descriptor_set_posix.h
 @@ -30,7 +30,7 @@ class FileDescriptorSet : public base::R
    // In debugging mode, it's a fatal error to try and add more than this number

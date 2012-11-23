@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.8 2012/10/12 18:32:35 ryoon Exp $
+$NetBSD: patch-aw,v 1.9 2012/11/23 17:28:49 ryoon Exp $
 
---- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2012-10-02 17:02:29.000000000 +0000
+--- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2012-11-18 10:19:54.000000000 +0000
 +++ mozilla/xulrunner/stub/nsXULStub.cpp
 @@ -11,6 +11,29 @@
  #include "nsIFile.h"
@@ -32,14 +32,3 @@ $NetBSD: patch-aw,v 1.8 2012/10/12 18:32:35 ryoon Exp $
  
  #ifdef XP_WIN
  #include <windows.h>
-@@ -169,7 +192,9 @@ main(int argc, char **argv)
-   char greDir[MAXPATHLEN];
-   bool greFound = false;
- 
--#if defined(XP_MACOSX)
-+#if defined(__NetBSD__)
-+  netbsd_fixrlimit();
-+#elif defined(XP_MACOSX)
-   CFBundleRef appBundle = CFBundleGetMainBundle();
-   if (!appBundle)
-     return 1;

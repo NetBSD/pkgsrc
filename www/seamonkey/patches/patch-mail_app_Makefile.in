@@ -1,6 +1,6 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.4 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.5 2012/11/23 17:28:49 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2012-08-27 04:44:23.000000000 +0000
+--- mail/app/Makefile.in.orig	2012-11-18 10:14:23.000000000 +0000
 +++ mail/app/Makefile.in
 @@ -63,6 +63,10 @@ LOCAL_INCLUDES += \
  DEFINES += -DXPCOM_GLUE

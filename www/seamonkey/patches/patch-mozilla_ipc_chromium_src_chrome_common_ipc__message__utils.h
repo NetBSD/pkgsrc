@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_ipc__message__utils.h,v 1.4 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_ipc__message__utils.h,v 1.5 2012/11/23 17:28:49 ryoon Exp $
 
---- mozilla/ipc/chromium/src/chrome/common/ipc_message_utils.h.orig	2012-08-27 04:49:15.000000000 +0000
+--- mozilla/ipc/chromium/src/chrome/common/ipc_message_utils.h.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/chrome/common/ipc_message_utils.h
-@@ -195,7 +195,7 @@ struct ParamTraits<unsigned long long> {
+@@ -218,7 +218,7 @@ struct ParamTraits<long long> {
  };
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_ipc__message__utils.h,v 1.
  // There size_t is a synonym for |unsigned long| ...
  template <>
  struct ParamTraits<size_t> {
-@@ -248,7 +248,7 @@ struct ParamTraits<uint32> {
+@@ -271,7 +271,7 @@ struct ParamTraits<uint32> {
  };
  #endif  // defined(OS_MACOSX)
  

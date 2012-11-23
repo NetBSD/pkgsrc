@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_jsgc.cpp,v 1.1 2012/09/06 12:08:52 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jsgc.cpp,v 1.2 2012/11/23 17:28:50 ryoon Exp $
 
---- mozilla/js/src/jsgc.cpp.orig	2012-08-27 04:49:16.000000000 +0000
+--- mozilla/js/src/jsgc.cpp.orig	2012-11-18 10:19:39.000000000 +0000
 +++ mozilla/js/src/jsgc.cpp
-@@ -2635,8 +2635,12 @@ GetCPUCount()
+@@ -2865,8 +2865,12 @@ GetCPUCount()
          GetSystemInfo(&sysinfo);
          ncpus = unsigned(sysinfo.dwNumberOfProcessors);
  # else

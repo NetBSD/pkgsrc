@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h,v 1.4 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h,v 1.5 2012/11/23 17:28:49 ryoon Exp $
 
---- mozilla/ipc/chromium/src/chrome/common/transport_dib.h.orig	2012-08-27 04:49:15.000000000 +0000
+--- mozilla/ipc/chromium/src/chrome/common/transport_dib.h.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/chrome/common/transport_dib.h
 @@ -7,7 +7,7 @@
  
