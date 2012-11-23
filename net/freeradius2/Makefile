@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/10/23 17:18:21 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/11/23 01:31:18 jnemeth Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
-PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -45,7 +44,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.12
+RADVER=			2.2.0
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -63,7 +62,8 @@ CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 MAKE_ENV+=		R=${DESTDIR}
 
-REPLACE_PERL=		scripts/radsqlrelay
+REPLACE_PERL=		src/modules/rlm_counter/rad_counter
+REPLACE_PERL+=		scripts/radsqlrelay
 
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
