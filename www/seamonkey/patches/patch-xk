@@ -1,8 +1,8 @@
-$NetBSD: patch-xk,v 1.5 2012/09/06 12:08:52 ryoon Exp $
+$NetBSD: patch-xk,v 1.6 2012/11/23 17:28:50 ryoon Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s.orig	2012-08-27 04:49:34.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s.orig	2012-11-18 10:19:54.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s
 @@ -25,23 +25,23 @@
  	.type  SharedStub,@function

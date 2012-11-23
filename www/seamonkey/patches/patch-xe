@@ -1,8 +1,8 @@
-$NetBSD: patch-xe,v 1.5 2012/09/06 12:08:52 ryoon Exp $
+$NetBSD: patch-xe,v 1.6 2012/11/23 17:28:50 ryoon Exp $
 
-NetBSD/m68k xptcall support code. From pkgsrc/www/firefox/patch-ad.
+ NetBSD/m68k xptcall support code. From pkgsrc/www/firefox/patch-ad.
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2012-08-27 04:49:34.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2012-11-18 10:19:54.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
 @@ -100,6 +100,15 @@ extern "C" {
      }
@@ -18,10 +18,10 @@ NetBSD/m68k xptcall support code. From pkgsrc/www/firefox/patch-ad.
 +#endif
 +
  XPTC_PUBLIC_API(nsresult)
- XPTC_InvokeByIndex(nsISupports* that, PRUint32 methodIndex,
-                    PRUint32 paramCount, nsXPTCVariant* params)
-@@ -107,30 +116,30 @@ XPTC_InvokeByIndex(nsISupports* that, PR
-     PRUint32 result;
+ XPTC_InvokeByIndex(nsISupports* that, uint32_t methodIndex,
+                    uint32_t paramCount, nsXPTCVariant* params)
+@@ -107,30 +116,30 @@ XPTC_InvokeByIndex(nsISupports* that, ui
+     uint32_t result;
  
   __asm__ __volatile__(
 -    "movl  %4, sp@-\n\t"

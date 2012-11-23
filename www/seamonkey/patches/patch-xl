@@ -1,10 +1,10 @@
-$NetBSD: patch-xl,v 1.5 2012/09/06 12:08:52 ryoon Exp $
+$NetBSD: patch-xl,v 1.6 2012/11/23 17:28:50 ryoon Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s.orig	2012-08-27 04:49:34.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s.orig	2012-11-18 10:19:54.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s
-@@ -20,41 +20,41 @@
+@@ -20,41 +20,42 @@
  		      
          .section ".text"
  	.align 2
@@ -12,10 +12,21 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 -	.type  XPTC_InvokeByIndex,@function
 +	.globl NS_InvokeByIndex_P
 +	.type  NS_InvokeByIndex_P,@function
++
++//
++// NS_InvokeByIndex_P(nsISupports* that, PRUint32 methodIndex,
++//                    PRUint32 paramCount, nsXPTCVariant* params)
++//
++
++NS_InvokeByIndex_P:
++	stwu    sp,-32(sp)                      // setup standard stack frame
++	mflr    r0                              // save LR
++	stw     r3,8(sp)                        // r3 <= that
++	stw     r4,12(sp)                       // r4 <= methodIndex
  
 -#
--# XPTC_InvokeByIndex(nsISupports* that, PRUint32 methodIndex,
--#                    PRUint32 paramCount, nsXPTCVariant* params)
+-# XPTC_InvokeByIndex(nsISupports* that, uint32_t methodIndex,
+-#                    uint32_t paramCount, nsXPTCVariant* params)
 -#
 -
 -XPTC_InvokeByIndex:
@@ -23,16 +34,6 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 -	mflr    r0				# save LR
 -	stw     r3,8(sp)			# r3 <= that
 -	stw     r4,12(sp)			# r4 <= methodIndex
-+//
-+// NS_InvokeByIndex_P(nsISupports* that, PRUint32 methodIndex,
-+//                    PRUint32 paramCount, nsXPTCVariant* params)
-+//
-+
-+NS_InvokeByIndex_P:
-+	stwu    sp,-32(sp)			// setup standard stack frame
-+	mflr    r0				// save LR
-+	stw     r3,8(sp)			// r3 <= that
-+	stw     r4,12(sp)			// r4 <= methodIndex
  	stw     r30,16(sp)
  	stw     r31,20(sp)
  
@@ -71,46 +72,3 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
  	lfd     f2,40(r30)   
  	lfd     f3,48(r30)  
  	lfd     f4,56(r30)  
-@@ -63,18 +63,13 @@ XPTC_InvokeByIndex:
- 	lfd     f7,80(r30)  
- 	lfd     f8,88(r30)
- 
--	lwz     r3,8(r31)			# r3 <= that
--	lwz     r4,12(r31)			# r4 <= methodIndex
--	lwz     r5,0(r3)			# r5 <= vtable ( == *that )
--	slwi    r4,r4,3				# convert to offset ( *= 8 )
--	addi	r4,r4,8				# skip first two vtable entries
--	add	r4,r4,r5
--	lhz	r0,0(r4)			# virtual base offset
--	extsh	r0,r0
--	add	r3,r3,r0
--	lwz     r0,4(r4)			# r0 <= methodpointer ( == vtable + offset )
-+	lwz     r3,8(r31)			// r3 <= that
-+	lwz     r4,12(r31)			// r4 <= methodIndex
-+	lwz     r5,0(r3)			// r5 <= vtable ( == *that )
-+	slwi    r4,r4,2				// convert to offset ( *= 4 )
-+	lwzx	r0,r4,r5			// r0 <= methodpointer ( == vtable + offset )
- 
--        lwz     r4,4(r30)			# load GP regs with method parameters
-+        lwz     r4,4(r30)			// load GP regs with method parameters
- 	lwz     r5,8(r30)   
- 	lwz     r6,12(r30)  
- 	lwz     r7,16(r30)  
-@@ -82,13 +77,13 @@ XPTC_InvokeByIndex:
- 	lwz     r9,24(r30)  
- 	lwz     r10,28(r30)
- 
--	mtlr    r0				# copy methodpointer to LR    
--	blrl					# call method
-+	mtlr    r0				// copy methodpointer to LR    
-+	blrl					// call method
- 	
--	lwz     r30,16(r31)			# restore r30 & r31
-+	lwz     r30,16(r31)			// restore r30 & r31
- 	lwz     r31,20(r31)
- 	
--	lwz     r11,0(sp)			# clean up the stack
-+	lwz     r11,0(sp)			// clean up the stack
- 	lwz     r0,4(r11)
- 	mtlr    r0
- 	mr      sp,r11
