@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.5 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.6 2012/11/23 17:28:49 ryoon Exp $
 
---- mozilla/ipc/chromium/chromium-config.mk.orig	2012-08-27 04:49:15.000000000 +0000
+--- mozilla/ipc/chromium/chromium-config.mk.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/chromium-config.mk
 @@ -24,17 +24,6 @@ LOCAL_INCLUDES += \
    -I$(DEPTH)/ipc/ipdl/_ipdlheaders \
