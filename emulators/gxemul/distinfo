@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2012/08/02 09:41:06 abs Exp $
+$NetBSD: distinfo,v 1.39 2012/11/23 12:33:22 joerg Exp $
 
 SHA1 (gxemul-0.6.0.tar.gz) = aa37ad5f200eee045b1da2b1d3f651401cf474af
 RMD160 (gxemul-0.6.0.tar.gz) = ac6291a5f8bc9c0d1988d3ce39750339fe90a8ce
@@ -10,4 +10,10 @@ SHA1 (patch-ae) = 19ef822c16f0f6dd50aea719e0bc797c39d1f9c0
 SHA1 (patch-af) = 8304ff5d8f779ac60f8d416d27e0a183e0e47d94
 SHA1 (patch-ag) = 9d13bf6f6e6038e114a45cfbd03e4e52ac60d2c7
 SHA1 (patch-configure) = b7cacc97ffdeb127be196a7d352ee82b673d4026
+SHA1 (patch-src_components_cpu_CPUDyntransComponent.cc) = 1a70375b3ed409ef43122ce7e6935c07b4ed386d
+SHA1 (patch-src_components_cpu_M88K__CPUComponent.cc) = 931cdc9a806e9ff48dccb2a63873c52491336b30
+SHA1 (patch-src_components_cpu_MIPS__CPUComponent.cc) = 75d8276092fcdc9f548f874e5807ae8e6a2b9eae
 SHA1 (patch-src_devices_dev__dreamcast__gdrom.cc) = 3e9abc13118fb79473adb11156f73c93b13b6dd8
+SHA1 (patch-src_include_components_CPUDyntransComponent.h) = 4fa3c327c4ce5ee9e39e7bc49ce6029b2a7da100
+SHA1 (patch-src_include_components_M88K__CPUComponent.h) = afd07ae4df33d0c0a9d3d8c15dca4ef9ee7dd916
+SHA1 (patch-src_include_components_MIPS__CPUComponent.h) = 4e49da9af0d220a1ea7c4520d8e7e53d8d84c155
