@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.10 2009/12/16 19:41:41 joerg Exp $
+# $NetBSD: pre-build,v 1.11 2012/11/23 12:13:35 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -63,9 +63,18 @@ if [ -d "${bulklog}/meta" ]; then
 	echo "Warning: All log files of the previous pbulk run will be"
 	echo "removed in 5 seconds. If you want to abort, press Ctrl-C."
 	sleep 5
+	if [ "${reuse_scan_results}" = yes -a -f "${bulklog}/meta/pscan" ]; then
+		echo "Reusing old scan results"
+		rm -rf "${bulklog}.old"
+		mv "${bulklog}" "${bulklog}.old"
+	else
+		echo "Removing old scan results"
+		rm -rf "${bulklog}"/* || true
+	fi
+else
+	rm -rf "${bulklog}"/* || true
 fi
 
-rm -rf "${bulklog}"/* || true
 mkdir -p "${bulklog}" "${loc}"
 
 @PREFIX@/libexec/pbulk/client-clean
