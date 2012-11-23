@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.29 2011/04/19 06:32:48 roy Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/11/23 17:33:36 drochner Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
+share/xsl/docbook/VERSION.xsl
 share/xsl/docbook/catalog.xml
 share/xsl/docbook/common/af.xml
 share/xsl/docbook/common/am.xml
@@ -321,6 +322,7 @@ share/xsl/docbook/images/colorsvg/tip.svg
 share/xsl/docbook/images/colorsvg/up.svg
 share/xsl/docbook/images/colorsvg/warning.svg
 share/xsl/docbook/images/draft.png
+share/xsl/docbook/images/draft.svg
 share/xsl/docbook/images/home.gif
 share/xsl/docbook/images/home.png
 share/xsl/docbook/images/home.svg
@@ -417,6 +419,8 @@ share/xsl/docbook/params/body.font.family.xml
 share/xsl/docbook/params/body.font.master.xml
 share/xsl/docbook/params/body.font.size.xml
 share/xsl/docbook/params/body.margin.bottom.xml
+share/xsl/docbook/params/body.margin.inner.xml
+share/xsl/docbook/params/body.margin.outer.xml
 share/xsl/docbook/params/body.margin.top.xml
 share/xsl/docbook/params/body.start.indent.xml
 share/xsl/docbook/params/bookmarks.collapse.xml
@@ -429,10 +433,12 @@ share/xsl/docbook/params/callout.graphics.path.xml
 share/xsl/docbook/params/callout.graphics.xml
 share/xsl/docbook/params/callout.icon.size.xml
 share/xsl/docbook/params/callout.list.table.xml
+share/xsl/docbook/params/callout.properties.xml
 share/xsl/docbook/params/callout.unicode.font.xml
 share/xsl/docbook/params/callout.unicode.number.limit.xml
 share/xsl/docbook/params/callout.unicode.start.character.xml
 share/xsl/docbook/params/callout.unicode.xml
+share/xsl/docbook/params/calloutlist.properties.xml
 share/xsl/docbook/params/callouts.extension.xml
 share/xsl/docbook/params/chapter.autolabel.xml
 share/xsl/docbook/params/chunk.append.xml
@@ -444,6 +450,7 @@ share/xsl/docbook/params/chunk.separate.lots.xml
 share/xsl/docbook/params/chunk.toc.xml
 share/xsl/docbook/params/chunk.tocs.and.lots.has.title.xml
 share/xsl/docbook/params/chunk.tocs.and.lots.xml
+share/xsl/docbook/params/chunked.filename.prefix.xml
 share/xsl/docbook/params/chunker.output.cdata-section-elements.xml
 share/xsl/docbook/params/chunker.output.doctype-public.xml
 share/xsl/docbook/params/chunker.output.doctype-system.xml
@@ -548,6 +555,7 @@ share/xsl/docbook/params/formal.title.properties.xml
 share/xsl/docbook/params/funcsynopsis.decoration.xml
 share/xsl/docbook/params/funcsynopsis.style.xml
 share/xsl/docbook/params/function.parens.xml
+share/xsl/docbook/params/generate.consistent.ids.xml
 share/xsl/docbook/params/generate.css.header.xml
 share/xsl/docbook/params/generate.id.attributes.xml
 share/xsl/docbook/params/generate.index.xml
@@ -598,6 +606,8 @@ share/xsl/docbook/params/html.head.legalnotice.link.multiple.xml
 share/xsl/docbook/params/html.head.legalnotice.link.types.xml
 share/xsl/docbook/params/html.longdesc.link.xml
 share/xsl/docbook/params/html.longdesc.xml
+share/xsl/docbook/params/html.script.type.xml
+share/xsl/docbook/params/html.script.xml
 share/xsl/docbook/params/html.stylesheet.type.xml
 share/xsl/docbook/params/html.stylesheet.xml
 share/xsl/docbook/params/htmlhelp.alias.file.xml
@@ -673,6 +683,7 @@ share/xsl/docbook/params/informalexample.properties.xml
 share/xsl/docbook/params/informalfigure.properties.xml
 share/xsl/docbook/params/informaltable.properties.xml
 share/xsl/docbook/params/inherit.keywords.xml
+share/xsl/docbook/params/inner.region.content.properties.xml
 share/xsl/docbook/params/insert.link.page.number.xml
 share/xsl/docbook/params/insert.olink.page.number.xml
 share/xsl/docbook/params/insert.olink.pdf.frag.xml
@@ -806,6 +817,7 @@ share/xsl/docbook/params/orderedlist.label.properties.xml
 share/xsl/docbook/params/orderedlist.label.width.xml
 share/xsl/docbook/params/orderedlist.properties.xml
 share/xsl/docbook/params/othercredit.like.author.enabled.xml
+share/xsl/docbook/params/outer.region.content.properties.xml
 share/xsl/docbook/params/output-root.xml
 share/xsl/docbook/params/output.indent.xml
 share/xsl/docbook/params/overlay.js.xml
@@ -823,6 +835,7 @@ share/xsl/docbook/params/page.width.xml
 share/xsl/docbook/params/pages.template.xml
 share/xsl/docbook/params/paper.type.xml
 share/xsl/docbook/params/para.propagates.style.xml
+share/xsl/docbook/params/para.properties.xml
 share/xsl/docbook/params/part.autolabel.xml
 share/xsl/docbook/params/passivetex.extensions.xml
 share/xsl/docbook/params/pgwide.properties.xml
@@ -891,6 +904,10 @@ share/xsl/docbook/params/refentry.xref.manvolnum.xml
 share/xsl/docbook/params/reference.autolabel.xml
 share/xsl/docbook/params/region.after.extent.xml
 share/xsl/docbook/params/region.before.extent.xml
+share/xsl/docbook/params/region.inner.extent.xml
+share/xsl/docbook/params/region.inner.properties.xml
+share/xsl/docbook/params/region.outer.extent.xml
+share/xsl/docbook/params/region.outer.properties.xml
 share/xsl/docbook/params/revhistory.table.cell.properties.xml
 share/xsl/docbook/params/revhistory.table.properties.xml
 share/xsl/docbook/params/revhistory.title.properties.xml
@@ -933,6 +950,7 @@ share/xsl/docbook/params/show.foil.number.xml
 share/xsl/docbook/params/show.revisionflag.xml
 share/xsl/docbook/params/showtoc.image.xml
 share/xsl/docbook/params/side.float.properties.xml
+share/xsl/docbook/params/side.region.precedence.xml
 share/xsl/docbook/params/sidebar.float.type.xml
 share/xsl/docbook/params/sidebar.float.width.xml
 share/xsl/docbook/params/sidebar.properties.xml
@@ -952,6 +970,7 @@ share/xsl/docbook/params/suppress.homepage.title.xml
 share/xsl/docbook/params/suppress.navigation.xml
 share/xsl/docbook/params/symbol.font.family.xml
 share/xsl/docbook/params/table.borders.with.css.xml
+share/xsl/docbook/params/table.caption.properties.xml
 share/xsl/docbook/params/table.cell.border.color.xml
 share/xsl/docbook/params/table.cell.border.style.xml
 share/xsl/docbook/params/table.cell.border.thickness.xml
@@ -969,6 +988,7 @@ share/xsl/docbook/params/table.table.properties.xml
 share/xsl/docbook/params/tablecolumns.extension.xml
 share/xsl/docbook/params/target.database.document.xml
 share/xsl/docbook/params/targets.filename.xml
+share/xsl/docbook/params/task.properties.xml
 share/xsl/docbook/params/template.xml
 share/xsl/docbook/params/tex.math.delims.xml
 share/xsl/docbook/params/tex.math.file.xml
@@ -1027,6 +1047,14 @@ share/xsl/docbook/params/variablelist.term.break.after.xml
 share/xsl/docbook/params/variablelist.term.properties.xml
 share/xsl/docbook/params/variablelist.term.separator.xml
 share/xsl/docbook/params/verbatim.properties.xml
+share/xsl/docbook/params/webhelp.autolabel.xml
+share/xsl/docbook/params/webhelp.base.dir.xml
+share/xsl/docbook/params/webhelp.common.dir.xml
+share/xsl/docbook/params/webhelp.default.topic.xml
+share/xsl/docbook/params/webhelp.include.search.tab.xml
+share/xsl/docbook/params/webhelp.indexer.language.xml
+share/xsl/docbook/params/webhelp.start.filename.xml
+share/xsl/docbook/params/webhelp.tree.cookie.id.xml
 share/xsl/docbook/params/wordml.template.xml
 share/xsl/docbook/params/writing.mode.xml
 share/xsl/docbook/params/xbCollapsibleLists.js.xml
