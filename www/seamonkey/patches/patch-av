@@ -1,6 +1,6 @@
-$NetBSD: patch-av,v 1.6 2012/09/06 12:08:51 ryoon Exp $
+$NetBSD: patch-av,v 1.7 2012/11/23 17:28:49 ryoon Exp $
 
---- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-08-27 04:49:34.000000000 +0000
+--- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-11-18 10:19:54.000000000 +0000
 +++ mozilla/xulrunner/app/nsXULRunnerApp.cpp
 @@ -6,6 +6,27 @@
  #include "nsXPCOMGlue.h"

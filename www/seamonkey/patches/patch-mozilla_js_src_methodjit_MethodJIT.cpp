@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.4 2012/09/06 12:08:52 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.5 2012/11/23 17:28:50 ryoon Exp $
 
---- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-08-27 04:49:16.000000000 +0000
+--- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-11-18 10:19:40.000000000 +0000
 +++ mozilla/js/src/methodjit/MethodJIT.cpp
 @@ -135,7 +135,7 @@ PopActiveVMFrame(VMFrame &f)
  

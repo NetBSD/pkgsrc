@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.6 2012/10/12 18:32:35 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.7 2012/11/23 17:28:48 ryoon Exp $
 include/seamonkey/calBaseCID.h
 include/seamonkey/calIAlarm.h
 include/seamonkey/calIAlarmService.h
@@ -15,6 +15,7 @@ include/seamonkey/calICalendarViewController.h
 include/seamonkey/calIChangeLog.h
 include/seamonkey/calIDateTime.h
 include/seamonkey/calIDateTimeFormatter.h
+include/seamonkey/calIDeletedItems.h
 include/seamonkey/calIDuration.h
 include/seamonkey/calIErrors.h
 include/seamonkey/calIEvent.h
@@ -63,7 +64,6 @@ lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-pro
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/calendarCreation.xul
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/gcal.png
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/gdata-calendar-event-dialog.xul
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/classification.png
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/gdata-event-dialog-reminder.xul
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/gdata-migration-overlay.xul
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider/content/gdata-migration-wizard.xul
@@ -91,6 +91,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calC
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calCalendarSearchService.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDateTimeFormatter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDavRequestHandlers.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDeletedItems.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calEvent.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calFilter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calFreeBusyService.js
@@ -228,9 +229,10 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/widgets/calendar-widget-bindings.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/widgets/calendar-widgets.xml
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/content/calendar/widgets/minimonth.xml
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/abcard.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/alarm-flashing.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/alarm-icons.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/attendee-icons.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/cal-icon24.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/cal-icon32.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/calendar-alarm-dialog.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/calendar-alarms.css
@@ -260,6 +262,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/calendar-unifinder.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/calendar-views.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/checkbox-images.png
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/classification.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-daypicker.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-management.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/calendar-task-tree.css
@@ -375,6 +378,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calItera
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calItipUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calPrintUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calProviderUtils.jsm
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calRecurrenceUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageHelpers.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageUpgrade.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calUtils.jsm
@@ -395,6 +399,7 @@ share/idl/seamonkey/calICalendarViewController.idl
 share/idl/seamonkey/calIChangeLog.idl
 share/idl/seamonkey/calIDateTime.idl
 share/idl/seamonkey/calIDateTimeFormatter.idl
+share/idl/seamonkey/calIDeletedItems.idl
 share/idl/seamonkey/calIDuration.idl
 share/idl/seamonkey/calIErrors.idl
 share/idl/seamonkey/calIEvent.idl
