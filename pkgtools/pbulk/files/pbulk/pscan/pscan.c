@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.7 2011/03/06 02:23:32 seanb Exp $ */
+/* $NetBSD: pscan.c,v 1.8 2012/11/23 12:13:35 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -33,11 +33,13 @@
 
 #include <nbcompat.h>
 
+#include <sys/stat.h>
 #include <sys/uio.h>
 #include <nbcompat/err.h>
 #ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
 #endif
+#include <fcntl.h>
 #include <nbcompat/limits.h>
 #include <signal.h>
 #include <nbcompat/stdio.h>
@@ -52,7 +54,7 @@ int verbosity;
 
 static const char *bmake_path;
 static const char *output_file;
-static const char *pkgsrc_tree;
+const char *pkgsrc_tree;
 
 static void	find_full_tree(void);
 static void	read_limited_list(void);
@@ -62,14 +64,16 @@ static void
 usage(void)
 {
 	(void)fprintf(stderr, "usage: pbulk-scan -c <master> [ -v ] -M <make> <pkgsrc tree>\n");
-	(void)fprintf(stderr, "usage: pbulk-scan [ -I <start> ] [ -l ] [ -v ] [ -m <port> ] -M <make> <pksgrc tree> <output file>\n");
+	(void)fprintf(stderr, "usage: pbulk-scan [ -I <start> ] [ -L <old scan> ] [ -l ] [ -v ]\n"
+			      "                  [ -m <port> ] -M <make> <pksgrc tree> <output file>\n");
 	exit(1);
 }
 
 int
 main(int argc, char **argv)
 {
-	const char *client_port = NULL, *master_port = NULL, *start_script = NULL;
+	const char *client_port = NULL, *last_scan = NULL, *master_port = NULL;
+	const char *start_script = NULL;
 	int ch, limited_scan;
 	struct sigaction sa;
 
@@ -77,13 +81,16 @@ main(int argc, char **argv)
 
 	limited_scan = 0;
 
-	while ((ch = getopt(argc, argv, "I:M:lc:m:v")) != -1) {
+	while ((ch = getopt(argc, argv, "I:M:L:lc:m:v")) != -1) {
 		switch (ch) {
 		case 'I':
 			start_script = optarg;
 			break;
 		case 'c':
 			client_port = optarg;
+			break;
+		case 'L':
+			last_scan = optarg;
 			break;
 		case 'l':
 			limited_scan = 1;
@@ -120,6 +127,9 @@ main(int argc, char **argv)
 		warnx("Only client mode or master mode can be active");
 		usage();
 	}
+
+	if (client_port == NULL)
+		read_old_scan(last_scan);
 
 	if (client_port) {
 		if (limited_scan != 0 || argc != 1)
