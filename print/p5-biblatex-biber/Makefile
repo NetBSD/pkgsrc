@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 13:45:43 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 00:35:29 ryoon Exp $
 #
 
 VER=		0.9.9
 DISTNAME=	biblatex-biber
 PKGNAME=	p5-biblatex-biber-${VER}
 PKGREVISION=	1
-CATEGORIES=	wip
+CATEGORIES=	print
 MASTER_SITES=	http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/${VER}/
 # TODO: can I express this with MASTER_SITES_SOURCEFORGE ?
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://biblatex-biber.sourceforge.net/
 COMMENT=	Replacement of bibtex for users of BibLaTeX
 DIST_SUBDIR=	${DISTNAME}-${VER}
@@ -23,31 +23,31 @@ WRKSRC=			${WRKDIR}/biblatex-biber-v0.9.9	# XXX not ${VER} - that only works for
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Biber/Config/.packlist
 USE_LANGUAGES=		# empty
-USE_TOOLS=		perl
+USE_TOOLS+=		perl
 REPLACE_PERL+=		bin/biber
 
-DEPENDS+=		p5-Data-Compare:../../devel/p5-Data-Compare
-DEPENDS+=		p5-Data-Dump:../../devel/p5-Data-Dump
-DEPENDS+=		p5-Date-Simple:../../devel/p5-Date-Simple
-DEPENDS+=		p5-File-Slurp:../../devel/p5-File-Slurp
-DEPENDS+=		p5-File-Slurp-Unicode:../../devel/p5-File-Slurp-Unicode
-DEPENDS+=		p5-List-AllUtils:../../devel/p5-List-AllUtils
-DEPENDS+=		p5-Log-Log4perl:../../devel/p5-Log-Log4perl
-DEPENDS+=		p5-Regexp-Common:../../textproc/p5-Regexp-Common
+DEPENDS+=		p5-Data-Compare-[0-9]*:../../devel/p5-Data-Compare
+DEPENDS+=		p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=		p5-Date-Simple-[0-9]*:../../devel/p5-Date-Simple
+DEPENDS+=		p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+DEPENDS+=		p5-File-Slurp-Unicode-[0-9]*:../../devel/p5-File-Slurp-Unicode
+DEPENDS+=		p5-List-AllUtils-[0-9]*:../../devel/p5-List-AllUtils
+DEPENDS+=		p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
+DEPENDS+=		p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=		p5-Unicode-Collate>=0.89:../../converters/p5-Unicode-Collate
-DEPENDS+=		p5-XML-LibXML-Simple:../../textproc/p5-XML-LibXML-Simple
-DEPENDS+=		p5-XML-LibXSLT:../../textproc/p5-XML-LibXSLT
-DEPENDS+=		p5-XML-Writer:../../textproc/p5-XML-Writer
-DEPENDS+=		p5-XML-Writer-String:../../textproc/p5-XML-Writer-String
-DEPENDS+=		p5-Business-ISSN:../../wip/p5-Business-ISSN
-DEPENDS+=		p5-Business-ISMN:../../wip/p5-Business-ISMN
+DEPENDS+=		p5-XML-LibXML-Simple-[0-9]*:../../textproc/p5-XML-LibXML-Simple
+DEPENDS+=		p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
+DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
+DEPENDS+=		p5-XML-Writer-String-[0-9]*:../../textproc/p5-XML-Writer-String
+DEPENDS+=		p5-Business-ISSN-[0-9]*:../../wip/p5-Business-ISSN
+DEPENDS+=		p5-Business-ISMN-[0-9]*:../../wip/p5-Business-ISMN
 
-DEPENDS+=		p5-Readonly-XS:../../devel/p5-Readonly-XS
-DEPENDS+=		tex-biblatex-1.7:../../print/tex-biblatex
+DEPENDS+=		p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
+DEPENDS+=		tex-biblatex-1.7-[0-9]*:../../print/tex-biblatex
 
-DEPENDS+=		p5-IPC-Run3:../../devel/p5-IPC-Run3
-DEPENDS+=		p5-Text-BibTeX:../../textproc/p5-Text-BibTeX
-DEPENDS+=		p5-libwww:../../www/p5-libwww
+DEPENDS+=		p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
+DEPENDS+=		p5-Text-BibTeX-[0-9]*:../../textproc/p5-Text-BibTeX
+DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 
 BUILD_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.4:../../devel/p5-ExtUtils-LibBuilder
 BUILD_DEPENDS+=		p5-Config-AutoConf>=0.1:../../devel/p5-Config-AutoConf
