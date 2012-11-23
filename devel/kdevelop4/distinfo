@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/03/20 10:52:26 markd Exp $
+$NetBSD: distinfo,v 1.5 2012/11/23 20:37:41 markd Exp $
 
-SHA1 (kdevelop-4.2.3.tar.bz2) = e87ae29b343df3fea9bda7d8d85ec696e57b68e4
-RMD160 (kdevelop-4.2.3.tar.bz2) = 9e403f9457ff33adf0afdf107eb0255a560c9014
-Size (kdevelop-4.2.3.tar.bz2) = 4991238 bytes
+SHA1 (kdevelop-4.4.1.tar.bz2) = 31bd10ffdbf2a6f2b3a75ecc8c1877d1bcc5b685
+RMD160 (kdevelop-4.4.1.tar.bz2) = e37a5f25711bb283b68e7a8d2a2f194c3176abcb
+Size (kdevelop-4.4.1.tar.bz2) = 6228685 bytes
