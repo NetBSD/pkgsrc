@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/15 19:36:09 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2012/11/23 11:40:15 joerg Exp $
 
---- libgksu/libgksu.c.orig	2008-05-28 00:00:44.000000000 +0000
+--- libgksu/libgksu.c.orig	2012-11-22 20:56:53.000000000 +0000
 +++ libgksu/libgksu.c
-@@ -23,7 +23,12 @@
+@@ -23,7 +23,13 @@
  #include <unistd.h>
  #include <string.h>
  #include <fcntl.h>
++#include <termios.h>
 +#ifdef __linux__
  #include <pty.h>
 +#endif
