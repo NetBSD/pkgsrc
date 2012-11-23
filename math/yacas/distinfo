@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2011/12/05 22:50:25 joerg Exp $
+$NetBSD: distinfo,v 1.12 2012/11/23 12:11:00 joerg Exp $
 
 SHA1 (yacas-1.2.2.tar.gz) = 8e753c22c207a5aa5e9fd2a9d519605d5b73d5b9
 RMD160 (yacas-1.2.2.tar.gz) = 6c49ca60e4f1f92e7d30e8d91b6126e55d77321b
 Size (yacas-1.2.2.tar.gz) = 1203303 bytes
 SHA1 (patch-manmake_manripper.cpp) = c474c025f10b58517676e4146d6f0b58eff5a65a
+SHA1 (patch-src_grower.h) = a2dd133c2b5b5326f9cc242e04e5fc80df104211
