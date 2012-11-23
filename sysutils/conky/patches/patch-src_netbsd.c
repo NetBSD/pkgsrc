@@ -1,4 +1,4 @@
-$NetBSD: patch-src_netbsd.c,v 1.1.1.1 2012/05/13 08:42:20 imil Exp $
+$NetBSD: patch-src_netbsd.c,v 1.2 2012/11/23 12:30:38 joerg Exp $
 
 Many fixes and addons for conky to work on NetBSD.
 
@@ -36,7 +36,7 @@ Many fixes and addons for conky to work on NetBSD.
 +
 +int				sysmon_fd;
 +
-+inline void proc_find_top(struct process **cpu, struct process **mem);
++static inline void proc_find_top(struct process **cpu, struct process **mem);
 +
 +int8_t envsys_get_val(Devquery, void *);
 +
