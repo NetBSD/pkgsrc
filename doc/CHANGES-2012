@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3617 2012/11/23 17:36:08 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3618 2012/11/23 17:42:52 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5543,7 +5543,19 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/parrot to 4.8.0 [he 2012-11-23]
 	Updated pkgtools/pbulk-base to 0.46 [joerg 2012-11-22]
 	Updated pkgtools/pbulk to 0.51 [joerg 2012-11-22]
+	Updated www/lighttpd to 1.4.32 [drochner 2012-11-23]
 	Updated lang/php53 to 5.3.19 [taca 2012-11-23]
 	Updated lang/php54 to 5.4.9 [taca 2012-11-23]
+	Updated lang/vala018 to 0.18.1 [drochner 2012-11-23]
+	Updated devel/libgee to 0.6.6.1 [drochner 2012-11-23]
+	Updated devel/libgsf to 1.14.25 [drochner 2012-11-23]
+	Updated devel/libgail-gnome to 1.20.4 [drochner 2012-11-23]
+	Updated graphics/feh to 2.7 [drochner 2012-11-23]
+	Updated x11/gnome-desktop3 to 3.6.2 [drochner 2012-11-23]
+	Updated graphics/gnome-icon-theme-symbolic to 3.6.2 [drochner 2012-11-23]
+	Updated multimedia/dvdstyler to 2.3.4 [drochner 2012-11-23]
 	Updated www/seamonkey to 2.14 [ryoon 2012-11-23]
+	Updated textproc/docbook-xsl to 1.77.1 [drochner 2012-11-23]
 	Updated www/seamonkey-l10n to 2.14 [ryoon 2012-11-23]
+	Updated fonts/harfbuzz to 0.9.7 [drochner 2012-11-23]
+	Updated devel/pango to 1.32.3 [drochner 2012-11-23]
