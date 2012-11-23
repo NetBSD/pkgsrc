@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/10/01 12:16:45 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/11/23 12:31:05 joerg Exp $
 
 SHA1 (CMU-dhcp-3.3.7+PU-9.tar.Z) = 9c7eb8f498eddd35d0eb9ceaa90451f06bb5cf27
 RMD160 (CMU-dhcp-3.3.7+PU-9.tar.Z) = b426f5580771ef635a34c336d0422cc31dd934d2
@@ -11,3 +11,5 @@ SHA1 (patch-ae) = 648f6fe130c060c926ba6d43508701bbf7c0cfbd
 SHA1 (patch-af) = 2d355ecde64da2ea5d9f1afdb608884691ccd0f0
 SHA1 (patch-ag) = 1aa3fe933938f26aca96a4973b11d1840639cd73
 SHA1 (patch-ah) = 35ff79c48bf11c161a4f1d3e8c2b72228f5b423f
+SHA1 (patch-dynamic.c) = 9b6f56e7b4f950984df726bd300bb54058e9f945
+SHA1 (patch-perm.c) = 493e62a160633e8812a77ed02ed1780f18332c44
