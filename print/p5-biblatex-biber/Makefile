@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/23 00:35:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 00:42:21 ryoon Exp $
 #
 
 VER=		0.9.9
@@ -43,7 +43,7 @@ DEPENDS+=		p5-Business-ISSN-[0-9]*:../../wip/p5-Business-ISSN
 DEPENDS+=		p5-Business-ISMN-[0-9]*:../../wip/p5-Business-ISMN
 
 DEPENDS+=		p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
-DEPENDS+=		tex-biblatex-1.7-[0-9]*:../../print/tex-biblatex
+DEPENDS+=		tex-biblatex-1.7:../../print/tex-biblatex
 
 DEPENDS+=		p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 DEPENDS+=		p5-Text-BibTeX-[0-9]*:../../textproc/p5-Text-BibTeX
