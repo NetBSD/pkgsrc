@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2012/11/23 11:51:15 drochner Exp $
+
+--- configure.orig	2012-11-08 16:00:23.000000000 +0000
++++ configure
+@@ -3903,10 +3903,6 @@ fi
+ 
+ 
+ 
+-PKG_CONFIG="pkg-config"
+-if test -n "$host" ; then
+-	PKG_CONFIG=$host-$PKG_CONFIG
+-fi
+ 
+ 
+ case `pwd` in
