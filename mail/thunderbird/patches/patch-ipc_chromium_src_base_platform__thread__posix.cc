@@ -1,14 +1,13 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.5 2012/09/02 06:43:40 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2012/11/23 07:17:54 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/platform_thread_posix.cc.orig	2012-08-25 00:31:11.000000000 +0000
+--- mozilla/ipc/chromium/src/base/platform_thread_posix.cc.orig	2012-11-19 22:42:22.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/platform_thread_posix.cc
-@@ -9,16 +9,31 @@
+@@ -9,16 +9,30 @@
  
  #if defined(OS_MACOSX)
  #include <mach/mach.h>
 +#elif defined(OS_NETBSD)
 +#include <lwp.h>
-+#include <nspr/prthread.h>
  #elif defined(OS_LINUX)
  #include <sys/syscall.h>
 -#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
@@ -37,7 +36,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.5 2012/09/02
  #if defined(OS_MACOSX)
  namespace base {
  void InitThreading();
-@@ -38,9 +53,20 @@ PlatformThreadId PlatformThread::Current
+@@ -38,9 +52,20 @@ PlatformThreadId PlatformThread::Current
    // into the kernel.
  #if defined(OS_MACOSX)
    return mach_thread_self();
@@ -61,7 +60,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.5 2012/09/02
  #elif defined(OS_LINUX)
    return syscall(__NR_gettid);
  #endif
-@@ -83,10 +109,10 @@ void PlatformThread::SetName(const char*
+@@ -83,9 +108,9 @@ void PlatformThread::SetName(const char*
    // Note that glibc also has a 'pthread_setname_np' api, but it may not be
    // available everywhere and it's only benefit over using prctl directly is
    // that it can set the name of threads other than the current thread.
@@ -69,9 +68,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.5 2012/09/02
 +#if defined(OS_BSD) && !defined(OS_NETBSD)
    pthread_set_name_np(pthread_self(), name);
 -#elif defined(__NetBSD__)
--  pthread_setname_np(pthread_self(), "%s", name);
 +#elif defined(OS_NETBSD)
-+  PR_SetCurrentThreadName(name);
+   pthread_setname_np(pthread_self(), "%s", (void *)name);
  #else
    prctl(PR_SET_NAME, reinterpret_cast<uintptr_t>(name), 0, 0, 0); 
- #endif
