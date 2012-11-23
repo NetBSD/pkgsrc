@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3612 2012/11/23 07:42:03 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3613 2012/11/23 08:48:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5540,3 +5540,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/freeradius2 to 2.2.0 [jnemeth 2012-11-23]
 	Updated mail/thunderbird to 17.0 [ryoon 2012-11-23]
 	Updated mail/thunderbird-l10n to 17.0 [ryoon 2012-11-23]
+	Updated lang/parrot to 4.8.0 [he 2012-11-23]
