@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.21 2012/05/06 23:21:20 dholland Exp $
+$NetBSD: distinfo,v 1.22 2012/11/23 20:28:03 markd Exp $
 
-SHA1 (kmplayer-0.11.3b.tar.bz2) = 347ee765c682c466858141aa9c53c52a30a2df63
-RMD160 (kmplayer-0.11.3b.tar.bz2) = 25fc30b6f6176a86d5a3d8619ec516777dfd096e
-Size (kmplayer-0.11.3b.tar.bz2) = 575403 bytes
+SHA1 (kmplayer-0.11.3d.tar.bz2) = f43651d4252cf6d878b5b014c1e5e9b18b2e31c4
+RMD160 (kmplayer-0.11.3d.tar.bz2) = 39cf21c28c176697632d60b8f2993e78a9e3dd0f
+Size (kmplayer-0.11.3d.tar.bz2) = 573173 bytes
 SHA1 (patch-aa) = 85d6f4f17a2c8afff505298f62b3105979a9e9f1
 SHA1 (patch-ab) = 975524f4ef0163d47c452f16ab98016acebead09
-SHA1 (patch-src_npplayer_cpp) = 211cbb8539b0d7acd2c6342cb36144b35a6662c2
