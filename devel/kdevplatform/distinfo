@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/03/20 10:48:53 markd Exp $
+$NetBSD: distinfo,v 1.5 2012/11/23 20:37:13 markd Exp $
 
-SHA1 (kdevplatform-1.2.3.tar.bz2) = c8badd157c2477b1b299403d01d40f68a1ba14cd
-RMD160 (kdevplatform-1.2.3.tar.bz2) = 04d8b57c53f384bb86cf5a3abc214d37e5b3cf8b
-Size (kdevplatform-1.2.3.tar.bz2) = 1751819 bytes
+SHA1 (kdevplatform-1.4.1.tar.bz2) = 48f2b40256e96aa015fa40978d5a9a93056fba75
+RMD160 (kdevplatform-1.4.1.tar.bz2) = 2726503031278ee0da8357cfa3796edb4625c398
+Size (kdevplatform-1.4.1.tar.bz2) = 2029442 bytes
