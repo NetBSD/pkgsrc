@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/30 12:53:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/11/23 17:23:33 drochner Exp $
 share/icons/gnome/scalable/actions/action-unavailable-symbolic.svg
 share/icons/gnome/scalable/actions/bookmark-add-symbolic.svg
 share/icons/gnome/scalable/actions/bookmark-new-symbolic.svg
@@ -204,6 +204,7 @@ share/icons/gnome/scalable/emotes/face-wink-symbolic.svg
 share/icons/gnome/scalable/emotes/face-worried-symbolic.svg
 share/icons/gnome/scalable/emotes/face-yawn-symbolic.svg
 share/icons/gnome/scalable/mimetypes/application-certificate-symbolic.svg
+share/icons/gnome/scalable/mimetypes/application-rss+xml-symbolic.svg
 share/icons/gnome/scalable/mimetypes/audio-x-generic-symbolic.svg
 share/icons/gnome/scalable/mimetypes/package-x-generic-symbolic.svg
 share/icons/gnome/scalable/mimetypes/text-x-generic-symbolic.svg
