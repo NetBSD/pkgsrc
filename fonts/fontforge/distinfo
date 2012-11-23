@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.58 2011/05/02 11:15:42 adam Exp $
+$NetBSD: distinfo,v 1.59 2012/11/23 20:49:03 adam Exp $
 
-SHA1 (fontforge_full-20110222.tar.bz2) = 8fada07647f102351bb1d7d1c4da487356e7142f
-RMD160 (fontforge_full-20110222.tar.bz2) = 7f276e9e3ef673b78355bb7be50f6b2587aee633
-Size (fontforge_full-20110222.tar.bz2) = 5126031 bytes
-SHA1 (patch-aa) = 9b94b0dccc3006112dae8289ed81c5aaba262576
+SHA1 (fontforge_full-20120731-b.tar.bz2) = b520f532b48e557c177dffa29120225066cc4e84
+RMD160 (fontforge_full-20120731-b.tar.bz2) = f752e70df3a1433ed2ddd10201c5cf88367f2959
+Size (fontforge_full-20120731-b.tar.bz2) = 5541994 bytes
+SHA1 (patch-aa) = 106c5adbeb2cdb7b468ef795cf1fdb973ada89f1
 SHA1 (patch-ab) = ec93a47051186bcb901fd145edffad7c457c33fd
-SHA1 (patch-ae) = 2cffc4dad365ff3f7850c1982bbe27bc9821f792
+SHA1 (patch-ae) = 18c976e7723641eda13c70f276113026bae18bc0
+SHA1 (patch-fontforge_macbinary.c) = 263fc55f334d0f3bdd59d4dcca64c4033cb13bad
+SHA1 (patch-gutils_giomime.c) = 77235fc0247dd65066491a44256d6d8531e581ff
