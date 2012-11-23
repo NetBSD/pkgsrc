@@ -1,4 +1,4 @@
-$NetBSD: patch-mk,v 1.7 2012/09/02 06:43:41 ryoon Exp $
+$NetBSD: patch-mk,v 1.8 2012/11/23 11:08:06 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
@@ -22,7 +22,7 @@ Treat DragonFly like FreeBSD.
  endif
  
 +ifeq ($(OS_ARCH),NetBSD)
-+EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/xulrunner
++EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/thunderbird
 +endif
 +
  #
