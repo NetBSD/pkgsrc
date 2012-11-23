@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/10/30 20:13:35 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/23 11:55:06 drochner Exp $
 #
 
 DISTNAME=	rhythmbox-2.98
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/2.98/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +19,9 @@ USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--disable-browser-plugin
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-fm-radio
+
+# option?
+.include "../../net/grilo/buildlink3.mk"
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
