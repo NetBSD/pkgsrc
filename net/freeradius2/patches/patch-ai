@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.5 2009/10/11 09:18:25 adam Exp $
+$NetBSD: patch-ai,v 1.6 2012/11/23 01:31:18 jnemeth Exp $
 
---- configure.orig	2009-09-14 16:43:29.000000000 +0200
+--- configure.orig	2012-09-10 11:51:34.000000000 +0000
 +++ configure
-@@ -20935,13 +20935,13 @@ fi
+@@ -20961,13 +20961,13 @@ fi
  done
  
  
@@ -19,16 +19,16 @@ $NetBSD: patch-ai,v 1.5 2009/10/11 09:18:25 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -20998,7 +20998,7 @@ fi
+@@ -21024,7 +21024,7 @@ fi
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
  if test $ac_cv_lib_pthread_pthread_create = yes; then
     CFLAGS="$CFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
--                  LIBS="$LIBS -lpthread"
-+                  LIBS="$LIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+-                  LIBS="-lpthread $LIBS"
++                  LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
  else
    { echo "$as_me:$LINENO: checking for pthread_create in -lc_r" >&5
  echo $ECHO_N "checking for pthread_create in -lc_r... $ECHO_C" >&6; }
-@@ -21466,7 +21466,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
+@@ -21493,7 +21493,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -37,7 +37,7 @@ $NetBSD: patch-ai,v 1.5 2009/10/11 09:18:25 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -25283,7 +25283,7 @@ gethostbyaddrrstyle=""
+@@ -25556,7 +25556,7 @@ gethostbyaddrrstyle=""
  { echo "$as_me:$LINENO: checking gethostbyaddr_r() syntax" >&5
  echo $ECHO_N "checking gethostbyaddr_r() syntax... $ECHO_C" >&6; }
  case "$host" in

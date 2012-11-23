@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2012/04/03 01:38:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/11/23 01:31:18 jnemeth Exp $
+bin/rad_counter
 bin/radclient
 bin/radconf2xml
 bin/radcrypt
@@ -56,6 +57,8 @@ lib/rlm_attr_filter-${RADVER}.la
 lib/rlm_attr_filter.la
 lib/rlm_attr_rewrite-${RADVER}.la
 lib/rlm_attr_rewrite.la
+lib/rlm_cache-${RADVER}.la
+lib/rlm_cache.la
 lib/rlm_chap-${RADVER}.la
 lib/rlm_chap.la
 lib/rlm_checkval-${RADVER}.la
@@ -112,8 +115,6 @@ lib/rlm_logintime-${RADVER}.la
 lib/rlm_logintime.la
 lib/rlm_mschap-${RADVER}.la
 lib/rlm_mschap.la
-${PLIST.mysql}lib/rlm_sql_mysql-${RADVER}.la
-${PLIST.mysql}lib/rlm_sql_mysql.la
 lib/rlm_otp-${RADVER}.la
 lib/rlm_otp.la
 ${PLIST.pam}lib/rlm_pam-${RADVER}.la
@@ -144,6 +145,8 @@ ${PLIST.iodbc}lib/rlm_sql_iodbc-${RADVER}.la
 ${PLIST.iodbc}lib/rlm_sql_iodbc.la
 lib/rlm_sql_log-${RADVER}.la
 lib/rlm_sql_log.la
+${PLIST.mysql}lib/rlm_sql_mysql-${RADVER}.la
+${PLIST.mysql}lib/rlm_sql_mysql.la
 ${PLIST.unixodbc}lib/rlm_sql_unixodbc-${RADVER}.la
 ${PLIST.unixodbc}lib/rlm_sql_unixodbc.la
 lib/rlm_sqlcounter-${RADVER}.la
@@ -152,6 +155,8 @@ lib/rlm_sqlippool-${RADVER}.la
 lib/rlm_sqlippool.la
 lib/rlm_unix-${RADVER}.la
 lib/rlm_unix.la
+lib/rlm_wimax-${RADVER}.la
+lib/rlm_wimax.la
 man/man1/radclient.1
 man/man1/radeapclient.1
 man/man1/radlast.1
@@ -195,7 +200,7 @@ man/man8/radsniff.8
 man/man8/radsqlrelay.8
 man/man8/radwatch.8
 man/man8/rlm_dbm_cat.8
-man/man8/rlm_dbm_parse.8
+man/man8/rlm_dbm_parser.8
 man/man8/rlm_ippool_tool.8
 sbin/checkrad
 sbin/raddebug
@@ -267,7 +272,6 @@ share/doc/freeradius/rfc/rfc2866.txt
 share/doc/freeradius/rfc/rfc2867.txt
 share/doc/freeradius/rfc/rfc2868.txt
 share/doc/freeradius/rfc/rfc2869.txt
-share/doc/freeradius/rfc/rfc2882.txt
 share/doc/freeradius/rfc/rfc2924.txt
 share/doc/freeradius/rfc/rfc3079.txt
 share/doc/freeradius/rfc/rfc3162.txt
@@ -276,6 +280,7 @@ share/doc/freeradius/rfc/rfc3576.txt
 share/doc/freeradius/rfc/rfc3579.txt
 share/doc/freeradius/rfc/rfc3580.txt
 share/doc/freeradius/rfc/rfc3748.txt
+share/doc/freeradius/rfc/rfc4282.txt
 share/doc/freeradius/rfc/rfc4372.txt
 share/doc/freeradius/rfc/rfc4590.txt
 share/doc/freeradius/rfc/rfc4668.txt
@@ -399,7 +404,6 @@ share/examples/freeradius/sites-available/robust-proxy-accounting
 share/examples/freeradius/sites-available/status
 share/examples/freeradius/sites-available/virtual.example.com
 share/examples/freeradius/sites-available/vmps
-@pkgdir share/examples/freeradius/sites-enabled
 share/examples/freeradius/sql.conf
 share/examples/freeradius/sql/mssql/dialup.conf
 share/examples/freeradius/sql/mssql/schema.sql
@@ -457,8 +461,10 @@ share/freeradius/dictionary.azaire
 share/freeradius/dictionary.bay
 share/freeradius/dictionary.bintec
 share/freeradius/dictionary.bristol
+share/freeradius/dictionary.bt
 share/freeradius/dictionary.cablelabs
 share/freeradius/dictionary.cabletron
+share/freeradius/dictionary.camiant
 share/freeradius/dictionary.chillispot
 share/freeradius/dictionary.cisco
 share/freeradius/dictionary.cisco.bbsm
@@ -476,6 +482,7 @@ share/freeradius/dictionary.epygi
 share/freeradius/dictionary.ericsson
 share/freeradius/dictionary.erx
 share/freeradius/dictionary.extreme
+share/freeradius/dictionary.f5
 share/freeradius/dictionary.fortinet
 share/freeradius/dictionary.foundry
 share/freeradius/dictionary.freeradius
@@ -517,9 +524,11 @@ share/freeradius/dictionary.nortel
 share/freeradius/dictionary.ntua
 share/freeradius/dictionary.openser
 share/freeradius/dictionary.packeteer
+share/freeradius/dictionary.paloalto
 share/freeradius/dictionary.patton
 share/freeradius/dictionary.propel
 share/freeradius/dictionary.prosoft
+share/freeradius/dictionary.purewave
 share/freeradius/dictionary.quiconnect
 share/freeradius/dictionary.quintum
 share/freeradius/dictionary.redback
@@ -541,6 +550,7 @@ share/freeradius/dictionary.rfc4818
 share/freeradius/dictionary.rfc4849
 share/freeradius/dictionary.rfc5090
 share/freeradius/dictionary.rfc5176
+share/freeradius/dictionary.rfc5447
 share/freeradius/dictionary.rfc5580
 share/freeradius/dictionary.rfc5607
 share/freeradius/dictionary.rfc5904
@@ -559,6 +569,7 @@ share/freeradius/dictionary.symbol
 share/freeradius/dictionary.t_systems_nova
 share/freeradius/dictionary.telebit
 share/freeradius/dictionary.telkom
+share/freeradius/dictionary.terena
 share/freeradius/dictionary.trapeze
 share/freeradius/dictionary.tropos
 share/freeradius/dictionary.ukerna
@@ -578,3 +589,4 @@ share/freeradius/dictionary.wispr
 share/freeradius/dictionary.xedia
 share/freeradius/dictionary.xylan
 share/freeradius/dictionary.zyxel
+@pkgdir share/examples/freeradius/sites-enabled
