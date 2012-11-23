@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.23 2011/05/02 11:15:42 adam Exp $
+$NetBSD: patch-ae,v 1.24 2012/11/23 20:49:03 adam Exp $
 
---- configure.orig	2010-04-29 17:53:45.000000000 +0000
+--- configure.orig	2012-08-02 15:09:08.000000000 +0000
 +++ configure
-@@ -20275,14 +20275,14 @@ if test "x$ac_cv_file__usr_include_libxm
+@@ -12608,14 +12608,14 @@ if test "x$ac_cv_file__usr_include_libxm
    CFLAGS="$CFLAGS -I/usr/include/libxml2/"
  else
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.23 2011/05/02 11:15:42 adam Exp $
    ac_cv_file__usr_local_include_libxml2_libxml=yes
  else
    ac_cv_file__usr_local_include_libxml2_libxml=no
-@@ -20291,7 +20291,7 @@ fi
+@@ -12624,7 +12624,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
  $as_echo "$ac_cv_file__usr_local_include_libxml2_libxml" >&6; }
  if test "x$ac_cv_file__usr_local_include_libxml2_libxml" = x""yes; then :
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.23 2011/05/02 11:15:42 adam Exp $
  else
    $as_echo "#define _NO_LIBXML 1" >>confdefs.h
  
-@@ -23016,7 +23016,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+@@ -15352,7 +15352,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
   echo 'prefix = @prefix@' >> $ac_confdir/po/Makefile.in
