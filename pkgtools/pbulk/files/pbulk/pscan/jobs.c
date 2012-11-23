@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.5 2008/01/15 22:14:30 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.6 2012/11/23 12:13:35 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -46,6 +46,218 @@
 
 #define UNCONST(x) ((void *)(uintptr_t)(x))
 
+#define	STAT_HASH_SIZE	131072
+#define	HASH_SIZE 32768
+
+struct stat_cache {
+	char *path;
+	time_t mtime;
+	SLIST_ENTRY(stat_cache) hash_link;
+};
+SLIST_HEAD(stat_cache_hash, stat_cache);
+
+static struct stat_cache_hash stat_hash_table[STAT_HASH_SIZE];
+
+static time_t
+stat_path(const char *path)
+{
+	size_t val = djb_hash(path) % STAT_HASH_SIZE;
+	struct stat_cache_hash *h = &stat_hash_table[val];
+	struct stat_cache *e;
+	struct stat sb;
+
+	SLIST_FOREACH(e, h, hash_link) {
+		if (strcmp(path, e->path) == 0)
+			return e->mtime;
+	}
+	e = xmalloc(sizeof(*e));
+	e->path = xstrdup(path);
+	if (stat(path, &sb) == -1)
+		e->mtime = -1;
+	else
+		e->mtime = sb.st_mtime;
+	SLIST_INSERT_HEAD(h, e, hash_link);
+	return e->mtime;
+}
+
+struct scan_entry {
+	char *location;
+	char *data;
+	char *scan_depends;
+	SLIST_ENTRY(scan_entry) hash_link;
+};
+SLIST_HEAD(scan_entry_hash, scan_entry);
+
+static struct scan_entry_hash hash_table[HASH_SIZE];
+static time_t scan_mtime;
+
+static size_t
+hash_entry(const char *path)
+{
+	return djb_hash(path) % HASH_SIZE;
+}
+
+static size_t
+hash_entry2(const char *path, const char *path_end)
+{
+
+	return djb_hash2(path, path_end) % HASH_SIZE;
+}
+
+static void
+add_entry(const char *l_start, const char *l_end,
+	  const char *s_start, const char *s_end,
+          const char *d_start, const char *d_end)
+{
+	struct scan_entry *e;
+	struct scan_entry_hash *h;
+
+	if (l_start == l_end)
+		errx(1, "Location entry missing");
+
+	h = &hash_table[hash_entry2(l_start, l_end)];
+	SLIST_FOREACH(e, h, hash_link) {
+		if (strncmp(e->location, l_start, l_end - l_start) == 0 &&
+		    e->location[l_end - l_start] == '\0') {
+			size_t l1, l2, l3;
+			l1 = strlen(e->data);
+			l2 = d_end - d_start;
+			l_start -= 13;
+			++l_end;
+			l3 = l_start - d_start;
+			e->data = xrealloc(e->data, l1 + l2 + 1);
+			memcpy(e->data + l1, d_start, l3);
+			memcpy(e->data + l1 + l3, l_end, d_end - l_end);
+			e->data[l1 + l3 + d_end - l_end] = '\0';
+			return;
+		}
+	}
+	e = xmalloc(sizeof(*e));
+	e->location = xstrndup(l_start, l_end - l_start);
+	e->data = xmalloc(d_end - d_start + 1);
+	l_start -= 13;
+	++l_end;
+	memcpy(e->data, d_start, l_start - d_start);
+	memcpy(e->data + (l_start - d_start), l_end, d_end - l_end);
+	e->data[l_start - d_start + d_end - l_end] = '\0';
+
+	if (s_start != s_end)
+		e->scan_depends = xstrndup(s_start, s_end - s_start);
+	else
+		e->scan_depends = NULL;
+	SLIST_INSERT_HEAD(h, e, hash_link);
+}
+
+void
+read_old_scan(const char *path)
+{
+	size_t i;
+	int fd;
+	char *buf;
+	struct stat sb;
+	const char *entry_start;
+	const char *l_start, *l_end;
+	const char *s_start, *s_end;
+	const char *line, *eol;
+
+	for (i = 0; i < HASH_SIZE; ++i)
+		SLIST_INIT(&hash_table[i]);
+
+	if (path == NULL)
+		return;
+	if ((fd = open(path, O_RDONLY)) == -1)
+		return;
+	if (fstat(fd, &sb) == -1) {
+		close(fd);
+		return;
+	}
+	scan_mtime = sb.st_mtime;
+	buf = read_from_file(fd);
+	entry_start = buf;
+	l_start = l_end = NULL;
+	entry_start = buf;
+	for (line = buf; *line; line = eol) {
+		eol = strchr(line, '\n');
+		if (eol == NULL)
+			errx(1, "Incomplete old scan");
+		++eol;
+		if (strncmp(line, "PKGNAME=", 8) == 0) {
+			if (line == buf)
+				continue;
+			add_entry(l_start, l_end, s_start, s_end,
+			    entry_start, line);
+			l_start = l_end = NULL;
+			entry_start = line;
+		} else if (strncmp(line, "PKG_LOCATION=", 13) == 0) {
+			l_start = line + 13;
+			l_end = eol - 1;
+		} else if (strncmp(line, "SCAN_DEPENDS=", 13) == 0) {
+			s_start = line + 13;
+			s_end = eol - 1;
+		}
+	}
+	if (entry_start != line)
+		add_entry(l_start, l_end, s_start, s_end,
+		    entry_start, line);
+}
+
+static struct scan_entry *
+find_old_scan(const char *location)
+{
+	struct scan_entry *e;
+	char *dep, *dep2, *path, *fullpath;
+	int is_current;
+	time_t mtime;
+
+	e = SLIST_FIRST(&hash_table[hash_entry(location)]);
+	while (e) {
+		if (strcmp(e->location, location) == 0)
+			break;
+		e = SLIST_NEXT(e, hash_link);
+	}
+	if (e == NULL)
+		return NULL;
+
+	if (e->scan_depends == NULL)
+		return e;
+
+	is_current = 1;
+	dep2 = dep = xstrdup(e->scan_depends);
+	while ((path = strtok(dep, " ")) != NULL) {
+		dep = NULL;
+		if (*path == '\0')
+			continue;
+		if (*path == '/') {
+			mtime = stat_path(path);
+			if (mtime == -1 || mtime >= scan_mtime) {
+				is_current = 0;
+				break;
+			}
+			continue;
+		}
+		if (strncmp("../../", path, 6) == 0) {
+			const char *s1 = strrchr(location, '/');
+			const char *s2 = strchr(location, '/');
+			if (s1 == s2)
+				fullpath = xasprintf("%s/%s", pkgsrc_tree,
+				    path + 6);
+			else
+				fullpath = xasprintf("%s/%s/%s", pkgsrc_tree,
+				    location, path);
+		} else {
+			fullpath = xasprintf("%s/%s/%s", pkgsrc_tree,
+			    location, path);
+		}
+		mtime = stat_path(fullpath);
+		if (mtime == -1 || mtime >= scan_mtime) {
+			is_current = 0;
+			break;
+		}
+	}
+	free(dep2);
+	return is_current ? e : NULL;
+}
+
 static struct scan_job *jobs;
 static size_t len_jobs, allocated_jobs, first_undone_job, done_jobs;
 
@@ -86,12 +298,21 @@ struct scan_job *
 get_job(void)
 {
 	size_t i;
+	struct scan_entry *e;
+	struct scan_job * job;
 
 	for (i = first_undone_job; i < len_jobs; ++i) {
-		if (jobs[i].state == JOB_OPEN) {
-			jobs[i].state = JOB_IN_PROCESSING;
-			return &jobs[i];
+		job = &jobs[i];
+		if (job->state != JOB_OPEN)
+			continue;
+		e = find_old_scan(job->pkg_location);
+		if (e == NULL) {
+			job->state = JOB_IN_PROCESSING;
+			return job;
 		}
+		job->scan_output = xstrdup(e->data);
+		process_job(job, JOB_DONE);
+		i = first_undone_job - 1;
 	}
 
 	return NULL;
@@ -139,8 +360,7 @@ pkgname_dup(const char *line)
 	return xstrndup(pkgname, pkgname_len);
 }
 
-#define	HASH_SIZE 1024
-#define	HASH_ITEM(x) (((unsigned char)(x)[0] + (unsigned char)(x)[1] * 257) & (HASH_SIZE - 1))
+#define	HASH_ITEM(x) (djb_hash(x) % HASH_SIZE)
 
 static struct pkgname_hash *pkgname_hash[HASH_SIZE];
 
