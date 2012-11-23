@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/10/10 16:36:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/11/23 17:27:09 drochner Exp $
 bin/dvdstyler
 man/man1/dvdstyler.1
 share/applications/dvdstyler.desktop
@@ -172,6 +172,7 @@ share/locale/nl/LC_MESSAGES/dvdstyler.mo
 share/locale/pl/LC_MESSAGES/dvdstyler.mo
 share/locale/pt/LC_MESSAGES/dvdstyler.mo
 share/locale/pt_BR/LC_MESSAGES/dvdstyler.mo
+share/locale/ro/LC_MESSAGES/dvdstyler.mo
 share/locale/ru/LC_MESSAGES/dvdstyler.mo
 share/locale/sk/LC_MESSAGES/dvdstyler.mo
 share/locale/sl/LC_MESSAGES/dvdstyler.mo
