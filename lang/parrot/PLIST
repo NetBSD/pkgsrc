@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2012/07/31 08:16:06 he Exp $
+@comment $NetBSD: PLIST,v 1.33 2012/11/23 08:47:25 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -135,6 +135,7 @@ include/parrot/${PKGVERSION}/pmc/pmc_opcode.h
 include/parrot/${PKGVERSION}/pmc/pmc_oplib.h
 include/parrot/${PKGVERSION}/pmc/pmc_orderedhash.h
 include/parrot/${PKGVERSION}/pmc/pmc_orderedhashiterator.h
+include/parrot/${PKGVERSION}/pmc/pmc_os.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfile.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileannotation.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileannotations.h
@@ -603,6 +604,7 @@ src/parrot/${PKGVERSION}/pmc/opcode.dump
 src/parrot/${PKGVERSION}/pmc/oplib.dump
 src/parrot/${PKGVERSION}/pmc/orderedhash.dump
 src/parrot/${PKGVERSION}/pmc/orderedhashiterator.dump
+src/parrot/${PKGVERSION}/pmc/os.dump
 src/parrot/${PKGVERSION}/pmc/packfile.dump
 src/parrot/${PKGVERSION}/pmc/packfileannotation.dump
 src/parrot/${PKGVERSION}/pmc/packfileannotations.dump
