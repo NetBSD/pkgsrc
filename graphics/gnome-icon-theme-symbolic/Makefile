@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/30 12:53:05 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 17:23:33 drochner Exp $
 #
 
-DISTNAME=		gnome-icon-theme-symbolic-3.6.0
+DISTNAME=		gnome-icon-theme-symbolic-3.6.2
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-symbolic/3.6/}
 EXTRACT_SUFX=		.tar.xz
