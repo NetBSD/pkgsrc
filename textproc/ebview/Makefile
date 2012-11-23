@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/25 06:55:48 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/11/23 11:37:16 joerg Exp $
 
 DISTNAME=		ebview-0.3.6
 PKGREVISION=		13
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		YES
 LDFLAGS.DragonFly=	-lX11
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/pangox-compat/buildlink3.mk"
 .include "../../textproc/eb/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
