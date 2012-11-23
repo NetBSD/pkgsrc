@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.25 2012/10/19 14:59:15 taca Exp $
+# $NetBSD: phpversion.mk,v 1.26 2012/11/23 13:22:51 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -75,8 +75,8 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 
 .include "../../mk/bsd.prefs.mk"
 
-PHP53_VERSION=			5.3.18
-PHP54_VERSION=			5.4.8
+PHP53_VERSION=			5.3.19
+PHP54_VERSION=			5.4.9
 
 PHP_VERSION_DEFAULT?=		53
 PHP_VERSIONS_ACCEPTED?=		53 54
