@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/29 12:37:07 prlw1 Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 17:19:39 drochner Exp $
 #
 
-DISTNAME=	gsettings-desktop-schemas-3.6.0
+DISTNAME=	gsettings-desktop-schemas-3.6.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/3.6/}
 EXTRACT_SUFX=	.tar.xz
