@@ -1,8 +1,8 @@
-$NetBSD: patch-suite_installer_package-manifest.in,v 1.1 2012/09/06 12:08:52 ryoon Exp $
+$NetBSD: patch-suite_installer_package-manifest.in,v 1.2 2012/11/23 17:28:50 ryoon Exp $
 
---- suite/installer/package-manifest.in.orig	2012-08-27 04:44:26.000000000 +0000
+--- suite/installer/package-manifest.in.orig	2012-11-18 10:14:25.000000000 +0000
 +++ suite/installer/package-manifest.in
-@@ -839,14 +839,11 @@ bin/libfreebl_32int64_3.so
+@@ -873,14 +873,11 @@ bin/libfreebl_32int64_3.so
  @BINPATH@/extensions/inspector@mozilla.org/chrome.manifest
  @BINPATH@/extensions/inspector@mozilla.org/chrome/inspector@JAREXT@
  #ifdef MOZ_GTK2
