@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.111 2012/08/01 12:22:14 drochner Exp $
+# $NetBSD: Makefile.common,v 1.112 2012/11/24 22:32:11 cheusov Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
@@ -63,7 +63,7 @@ GCC_REQD+=		2.95.3
 .endif
 
 .if !exists(/usr/bin/bc)
-BUILD_DEPENDS+=		bc>=[0-9]*:../../math/bc
+BUILD_DEPENDS+=		bc-[0-9]*:../../math/bc
 .endif
 
 INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
