@@ -1,6 +1,6 @@
-$NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.3 2012/11/24 21:38:49 adam Exp $
 
---- unix/Makefile.in.orig	2012-07-25 16:45:05.000000000 +0000
+--- unix/Makefile.in.orig	2012-11-09 15:14:39.000000000 +0000
 +++ unix/Makefile.in
 @@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
@@ -28,7 +28,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
-@@ -193,6 +196,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
+@@ -194,6 +197,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
  #BUILD_DLTEST		=
  
  TCL_LIB_FILE		= @TCL_LIB_FILE@
@@ -36,7 +36,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  #TCL_LIB_FILE		= libtcl.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -541,7 +545,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
+@@ -542,7 +546,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
  
  all: binaries libraries doc
  
@@ -45,7 +45,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  
  libraries:
  
-@@ -557,6 +561,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+@@ -558,6 +562,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f $@
  	@MAKE_STUB_LIB@
  
@@ -57,8 +57,8 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  # Make target which outputs the list of the .o contained in the Tcl lib useful
  # to build a single big shared library containing Tcl and other extensions.
  # Used for the Tcl Plugin.  -- dl
-@@ -722,9 +731,16 @@ install-binaries: binaries
- 	    fi
+@@ -719,9 +728,16 @@ install-binaries: binaries
+ 	    done;
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
 -	@chmod 555 "$(DLL_INSTALL_DIR)"/$(LIB_FILE)
@@ -75,7 +75,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)"/tclConfig.sh
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -734,7 +750,8 @@ install-binaries: binaries
+@@ -731,7 +747,8 @@ install-binaries: binaries
  	@EXTRA_INSTALL_BINARIES@
  
  install-libraries: libraries $(INSTALL_TZDATA) install-msgs
@@ -85,7 +85,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  	    do \
  	    if [ ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -743,7 +760,7 @@ install-libraries: libraries $(INSTALL_T
+@@ -739,7 +756,7 @@ install-libraries: libraries $(INSTALL_T
  		else true; \
  		fi; \
  	    done;
@@ -94,10 +94,10 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
  	    do \
  	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
-@@ -756,12 +773,17 @@ install-libraries: libraries $(INSTALL_T
- 	    chmod +x $(SRC_DIR)/../unix/install-sh; \
- 	    fi
- 	@echo "Installing header files";
+@@ -748,12 +765,17 @@ install-libraries: libraries $(INSTALL_T
+ 		fi; \
+ 	    done;
+ 	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
 -	@for i in $(GENERIC_DIR)/tcl.h $(GENERIC_DIR)/tclDecls.h \
 -		$(GENERIC_DIR)/tclPlatDecls.h \
 -		$(GENERIC_DIR)/tclTomMath.h \
@@ -115,21 +115,21 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
 -	    $(INSTALL_DATA) $$i "$(INCLUDE_INSTALL_DIR)"; \
 +	    cd "$(INCLUDE_INSTALL_DIR)" && ln -sf tcl/generic/$$i $$i; \
  	    done;
- 	@echo "Installing library files to $(SCRIPT_INSTALL_DIR)";
+ 	@echo "Installing library files to $(SCRIPT_INSTALL_DIR)/";
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex \
-@@ -774,22 +796,24 @@ install-libraries: libraries $(INSTALL_T
+@@ -766,22 +788,24 @@ install-libraries: libraries $(INSTALL_T
  	    do \
  	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/http1.0; \
  	    done;
--	@echo "Installing package http 2.7.9 as a Tcl Module";
--	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/http-2.7.9.tm;
- 	@echo "Installing library opt0.4 directory";
+-	@echo "Installing package http 2.7.10 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/http-2.7.10.tm;
+ 	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
  	@for i in $(TOP_DIR)/library/opt/*.tcl ; \
  	    do \
  	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/opt0.4; \
  	    done;
- 	@echo "Installing package msgcat 1.4.5 as a Tcl Module";
--	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/msgcat-1.4.5.tm;
+ 	@echo "Installing package msgcat 1.5.0 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/msgcat-1.5.0.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.4/msgcat.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.4/pkgIndex.tcl;
  	@echo "Installing package tcltest 2.3.4 as a Tcl Module";
@@ -146,5 +146,5 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/08/23 16:14:43 adam Exp $
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/shell.tcl "$(SCRIPT_INSTALL_DIR)"/shell1.1/shell.tcl
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/shell1.1/pkgIndex.tcl
  
- 	@echo "Installing library encoding directory";
+ 	@echo "Installing encoding files to $(SCRIPT_INSTALL_DIR)/encoding/";
  	@for i in $(TOP_DIR)/library/encoding/*.enc ; do \
