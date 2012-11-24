@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 18:28:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/24 17:38:54 ryoon Exp $
 #
 
-DISTNAME=	SourceSansPro_FontsOnly-1.036
+DISTNAME=	SourceSansPro_FontsOnly-1.038
 PKGNAME=	${DISTNAME:S/SourceSansPro_FontsOnly/sourcesans-fonts/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sourcesans.adobe/}
@@ -18,6 +18,6 @@ FONTS_DIR=	${PREFIX}/share/fonts/sourcesans
 INSTALLATION_DIRS=	share/fonts/sourcesans
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.otf  ${DESTDIR}${FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/OTF/*.otf  ${DESTDIR}${FONTS_DIR}
 
 .include "../../mk/bsd.pkg.mk"
