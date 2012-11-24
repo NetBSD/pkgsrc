@@ -129,6 +129,7 @@ eb			Enable EB dictionary library support.
 ecl			Use Embeddable Common Lisp.
 ecore			Enable ecore library support.
 eekboard		Use eekboard for virtual keyboard support.
+efence			Build with Electric Fence malloc() debugger support.
 efnet			Enable tweaks to support EFNet.
 elinks-exmode		Enable vi-like command entry.
 elinks-fastmem		Allow direct use of system memory allocation functions.
@@ -230,6 +231,7 @@ guile			Enable support for GUILE.
 gzip			Enable compression using gzip.
 hal			Support for the freedesktop.org Hardware Abstraction Layer.
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
+hawknl			Enable HawkNL network API support.
 hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
 hunspell		Add spell checking support using hunspell.
@@ -524,6 +526,7 @@ quartz			Enable Quartz support on Mac OS X.
 quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
 readline		Enable use of GNU readline library.
+regexp			Enable POSIX.2 regexp support.
 rrl			Enable Response Rate Limiting.
 rsaref			Use RSAREF library.
 rsound			Enable support for the RSound PCM audio library.
@@ -644,6 +647,7 @@ unrealircd-shunnotices	Notify a user when they are no longer shunned.
 unrealircd-topicisnuhost	/topic command to show the nick!user@host of the person who set the topic.
 unrealircd-ziplinks	Compress data before transmitting it between servers.
 upnp			Enable support for UPnP.
+utf8			Enable UTF-8 (iconv) character encoding support.
 uucp			Enable support for uucp.
 uulib			Enable support for uulib.
 v4l2			Enable V4L2 (Video4Linux2) support.
@@ -686,6 +690,7 @@ xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
 xmlrpc			Enable XMLRPC support.
 xnp2-ia32		Enable ia32 core instead of the default 80286 core
+xpm			Enable X PixMap image format support.
 xrandr			Enable Xrandr support.
 xrender			Enable Xrender support.
 xscreensaver-webcollage	Install webcollage screensaver.
