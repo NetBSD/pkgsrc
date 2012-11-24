@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2012/11/07 14:30:48 he Exp $
+# $NetBSD: Makefile,v 1.71 2012/11/24 21:38:49 adam Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -19,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 INSTALL_TARGET=		install
 
 # The test target gives better results when not run as root.
