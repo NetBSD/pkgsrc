@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3625 2012/11/24 14:06:43 manu Exp $
+$NetBSD: CHANGES-2012,v 1.3626 2012/11/24 17:39:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5569,3 +5569,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Tree-DAG_Node to 1.09 [adam 2012-11-24]
 	Updated devel/SOPE to 2.0.2a [manu 2012-11-24]
 	Updated www/SOGo to 2.0.2a [manu 2012-11-24]
+	Updated fonts/sourcesans-fonts to 1.038 [ryoon 2012-11-24]
