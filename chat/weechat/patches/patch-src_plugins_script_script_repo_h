@@ -1,0 +1,16 @@
+$NetBSD: patch-src_plugins_script_script_repo_h,v 1.1 2012/11/24 11:16:07 tonio Exp $
+
+script: fix compilation on OS X
+From weechat commit 485728a43fd7eff34893abc287495242379ab078
+
+--- src/plugins/script/script-repo.h.orig	2012-11-18 09:40:28.000000000 +0000
++++ src/plugins/script/script-repo.h
+@@ -57,7 +57,7 @@ struct t_script_repo
+ extern struct t_script_repo *scripts_repo;
+ extern struct t_script_repo *last_script_repo;
+ extern int script_repo_count, script_repo_count_displayed;
+-struct t_hashtable *script_repo_max_length_field;
++extern struct t_hashtable *script_repo_max_length_field;
+ extern char *script_repo_filter;
+ 
+ extern int script_repo_script_valid (struct t_script_repo *script);
