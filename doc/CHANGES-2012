@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3622 2012/11/23 23:25:24 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3623 2012/11/24 11:16:32 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5565,3 +5565,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/kdevelop4 to 4.4.1 [markd 2012-11-23]
 	Updated fonts/fontforge to 20120731 [adam 2012-11-23]
 	Updated net/knot to 1.1.2 [pettai 2012-11-23]
+	Updated chat/weechat to 0.3.9.2 [tonio 2012-11-24]
