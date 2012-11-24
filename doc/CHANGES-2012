@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3624 2012/11/24 13:55:10 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3625 2012/11/24 14:06:43 manu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5567,3 +5567,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/knot to 1.1.2 [pettai 2012-11-23]
 	Updated chat/weechat to 0.3.9.2 [tonio 2012-11-24]
 	Updated devel/p5-Tree-DAG_Node to 1.09 [adam 2012-11-24]
+	Updated devel/SOPE to 2.0.2a [manu 2012-11-24]
+	Updated www/SOGo to 2.0.2a [manu 2012-11-24]
