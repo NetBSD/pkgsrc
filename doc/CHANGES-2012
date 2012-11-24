@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3626 2012/11/24 17:39:33 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3627 2012/11/24 21:40:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5570,3 +5570,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/SOPE to 2.0.2a [manu 2012-11-24]
 	Updated www/SOGo to 2.0.2a [manu 2012-11-24]
 	Updated fonts/sourcesans-fonts to 1.038 [ryoon 2012-11-24]
+	Updated lang/tcl to 8.5.13 [adam 2012-11-24]
+	Updated x11/tk to 8.5.13 [adam 2012-11-24]
