@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/06/16 03:15:32 dholland Exp $
-bin/mskacc-gui
+@comment $NetBSD: PLIST,v 1.3 2012/11/25 21:37:50 shattered Exp $
+bin/xkbset-gui
 bin/xkbset
 man/man1/xkbset.1
