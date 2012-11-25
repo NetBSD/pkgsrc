@@ -1,0 +1,3 @@
+Polysh is a tool to aggregate several remote shells into one. It is used to
+launch an interactive remote shell on many machines at once. It is written in
+Python and requires Python >= 2.4.
