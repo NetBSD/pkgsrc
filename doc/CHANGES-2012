@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3629 2012/11/25 10:59:18 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3630 2012/11/25 11:17:36 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5575,3 +5575,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-django-reversion to 1.6.4 [adam 2012-11-25]
 	Updated www/py-django-cms to 2.3.4 [adam 2012-11-25]
 	Updated fonts/vlgothic-ttf to 20121109 [ryoon 2012-11-25]
+	Added sysutils/polysh version 0.4 [imil 2012-11-25]
