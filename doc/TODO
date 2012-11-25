@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11672 2012/11/24 11:16:33 tonio Exp $
+$NetBSD: TODO,v 1.11673 2012/11/25 21:38:19 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1320,7 +1320,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xhippo-3.5
 	o xinput-1.6.0
 	o xjman-0.7
-	o xkbset-0.5
 	o xli-2006.11.10
 	o xlsatoms-1.1.1 [unpackaged]
 	o xmbdfed-4.6
