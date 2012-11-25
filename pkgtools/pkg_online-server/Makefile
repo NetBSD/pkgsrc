@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/03/09 19:15:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 20:51:03 cheusov Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
@@ -9,7 +9,7 @@ MAINTAINER=	cheusov@NetBSD.org
 COMMENT+=	(server tools)
 
 DEPENDS+=	dict-server>=1.10.10nb2:../../textproc/dict-server
-DEPENDS+=	pkg_summary-utils>=0.18.1:../../pkgtools/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.60.0:../../pkgtools/pkg_summary-utils
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 
 BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
