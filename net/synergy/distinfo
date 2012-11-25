@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/06/23 03:16:50 taca Exp $
+$NetBSD: distinfo,v 1.9 2012/11/25 16:39:40 gls Exp $
 
-SHA1 (synergy-1.3.7-Source.tar.gz) = 0f67dc4a221dc0db74ec8a35d3dd578e9d76eccc
-RMD160 (synergy-1.3.7-Source.tar.gz) = 5f28bd102293437481a8c5808d5cbfc8722ee1ae
-Size (synergy-1.3.7-Source.tar.gz) = 2518746 bytes
+SHA1 (synergy-1.3.8-Source.tar.gz) = 82e80b22c6746e573d047aa4a1ad7b71c28cf7d3
+RMD160 (synergy-1.3.8-Source.tar.gz) = 3b02faec3b5e5dbea1853e6decd92e4cf6eca419
+Size (synergy-1.3.8-Source.tar.gz) = 2518396 bytes
 SHA1 (patch-tools_gmock-1.6.0_configure) = 45cfbcdc8b55c1e745265ed4e2bbbfe41ef000a2
 SHA1 (patch-tools_gtest-1.6.0_configure) = 35d77cab8e651bff031294f7d12570cb582aba1a
