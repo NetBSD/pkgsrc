@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:11:06 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 17:28:04 ryoon Exp $
 #
 
-DISTNAME=	libwebp-0.2.0
+DISTNAME=	libwebp-0.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://webp.googlecode.com/files/
 EXTRACT_SUFX=	.zip
