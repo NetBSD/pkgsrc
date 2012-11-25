@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.7 2012/09/11 23:19:37 asau Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/11/25 20:51:03 cheusov Exp $
 #
 # used by pkgtools/pkg_online-client/Makefile
 # used by pkgtools/pkg_online-server/Makefile
 
 DISTNAME=	pkg_online-${VERSION}
-MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
+MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/ \
+		ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/pkg_online/
 
-VERSION=	0.13.0
+VERSION=	0.13.1
 
 HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=	Client/Server package searcher for pkgsrc
