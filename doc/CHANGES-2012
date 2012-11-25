@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3633 2012/11/25 16:54:13 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3634 2012/11/25 17:28:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5579,3 +5579,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/synergy to 1.3.8 [gls 2012-11-25]
 	Updated fonts/migu-ttf to 20121030 [ryoon 2012-11-25]
 	Updated fonts/ricty-ttf to 3.2.1 [ryoon 2012-11-25]
+	Updated graphics/libwebp to 0.2.1 [ryoon 2012-11-25]
