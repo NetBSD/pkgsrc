@@ -1,9 +1,9 @@
-$NetBSD: patch-src_calibre_linux_py,v 1.3 2012/09/19 15:38:27 ryoon Exp $
+$NetBSD: patch-src_calibre_linux_py,v 1.4 2012/11/26 14:02:50 ryoon Exp $
 
 Lifted from ArchLinux, saves mime and desktop files on disk
 instead of trying to add them directly.
 
---- src/calibre/linux.py.orig	2012-09-14 04:45:20.000000000 +0000
+--- src/calibre/linux.py.orig	2012-11-23 03:36:53.000000000 +0000
 +++ src/calibre/linux.py
 @@ -179,19 +179,6 @@ class PostInstall:
              self.setup_completion()
@@ -34,7 +34,7 @@ instead of trying to add them directly.
              if not os.path.exists(os.path.dirname(f)):
                  os.makedirs(os.path.dirname(f))
              self.manifest.append(f)
-@@ -357,51 +344,39 @@ class PostInstall:
+@@ -357,63 +344,39 @@ class PostInstall:
  
              with TemporaryDirectory() as tdir, CurrentDir(tdir), \
                                  PreserveMIMEDefaults():
@@ -44,6 +44,18 @@ instead of trying to add them directly.
 -                cc('xdg-icon-resource install --noupdate --context mimetypes --size 128 calibre-lrf.png text-lrs', shell=True)
 -                self.icon_resources.append(('mimetypes', 'application-lrs',
 -                '128'))
+-                render_img('mimetypes/mobi.png', 'calibre-mobi.png')
+-                cc('xdg-icon-resource install --noupdate --context mimetypes --size 128 calibre-mobi.png application-x-mobipocket-ebook', shell=True)
+-                self.icon_resources.append(('mimetypes', 'application-x-mobipocket-ebook', '128'))
+-                render_img('mimetypes/tpz.png', 'calibre-tpz.png')
+-                cc('xdg-icon-resource install --noupdate --context mimetypes --size 128 calibre-tpz.png application-x-topaz-ebook', shell=True)
+-                self.icon_resources.append(('mimetypes', 'application-x-topaz-ebook', '128'))
+-                render_img('mimetypes/azw2.png', 'calibre-azw2.png')
+-                cc('xdg-icon-resource install --noupdate --context mimetypes --size 128 calibre-azw2.png application-x-kindle-application', shell=True)
+-                self.icon_resources.append(('mimetypes', 'application-x-kindle-application', '128'))
+-                render_img('mimetypes/azw3.png', 'calibre-azw3.png')
+-                cc('xdg-icon-resource install --noupdate --context mimetypes --size 128 calibre-azw3.png application-x-mobi8-ebook', shell=True)
+-                self.icon_resources.append(('mimetypes', 'application-x-mobi8-ebook', '128'))
 -                render_img('lt.png', 'calibre-gui.png', width=256, height=256)
 -                cc('xdg-icon-resource install --noupdate --size 256 calibre-gui.png calibre-gui', shell=True)
 -                self.icon_resources.append(('apps', 'calibre-gui', '128'))
@@ -89,14 +101,14 @@ instead of trying to add them directly.
 -                    cc(' '.join(cmd), shell=True)
 -                    self.menu_resources.append(x)
 -                cc(['xdg-desktop-menu', 'forceupdate'])
--                f = open('calibre-mimetypes', 'wb')
+-                f = open('calibre-mimetypes.xml', 'wb')
 +                dir = os.path.join(self.opts.staging_sharedir,'../mime/packages/')
 +                os.makedirs(dir)
 +                f = open(os.path.join(dir, 'calibre.xml'), 'wb')
                  f.write(MIME)
                  f.close()
--                self.mime_resources.append('calibre-mimetypes')
--                cc('xdg-mime install ./calibre-mimetypes', shell=True)
+-                self.mime_resources.append('calibre-mimetypes.xml')
+-                cc('xdg-mime install ./calibre-mimetypes.xml', shell=True)
          except Exception:
              if self.opts.fatal_errors:
                  raise
