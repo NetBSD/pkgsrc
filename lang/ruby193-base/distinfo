@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/11/10 14:34:27 taca Exp $
+$NetBSD: distinfo,v 1.13 2012/11/26 12:37:52 fhajny Exp $
 
 SHA1 (ruby-1.9.3-p327.tar.bz2) = 7fbacfc960ef76d98c83f20eb31c71d6aaf9a5a6
 RMD160 (ruby-1.9.3-p327.tar.bz2) = 5cd8317a3bdfeb7d6faef4f2ae49193292a60031
@@ -24,6 +24,7 @@ SHA1 (patch-man_erb.1) = 210aa77328689868162566bf01e3ba261dec0c2b
 SHA1 (patch-man_irb.1) = 899fdd973bb2491cf7f606ee68ffa6cdbe42f725
 SHA1 (patch-man_ri.1) = 3283b897b8ed36933ccecce158bcb3463d667aff
 SHA1 (patch-man_ruby.1) = 8c9edcdc72b674f8f4ef5b35e17aa0a6c38245e7
+SHA1 (patch-random.c) = 48ae24de7f1b73a115e0994dbd35890eb5f6b5fa
 SHA1 (patch-test_rubygems_test__gem.rb) = bb6946eceed2112a7b3d8df84f59c793bdb73bb0
 SHA1 (patch-tool_rbinstall.rb) = f0497085a09b31145f57028b30e335b09acabcff
 SHA1 (patch-vsnprintf.c) = 7bb4ca07381536717518143ef7803634168ca9fa
