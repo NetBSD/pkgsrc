@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2012/10/08 23:02:04 adam Exp $
+# $NetBSD: Makefile,v 1.47 2012/11/26 14:02:49 ryoon Exp $
 #
 
-DISTNAME=	calibre-0.8.69
-PKGREVISION=	2
+DISTNAME=	calibre-0.9.7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
 DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pax
