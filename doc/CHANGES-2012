@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3642 2012/11/26 15:51:56 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3643 2012/11/26 15:53:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5588,3 +5588,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/calibre to 0.9.7 [ryoon 2012-11-26]
 	Updated devel/jenkins to 1.480.1 [ryoon 2012-11-26]
 	Added databases/jdbc-postgresql92 version 1002 [ryoon 2012-11-26]
+	Updated www/aipo to 7.0.2 [ryoon 2012-11-26]
