@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2012/11/26 15:50:31 ryoon Exp $
+
+SHA1 (postgresql-9.2-1002.jdbc4.jar) = 65b528162f7cf20b4d44bc31a446724e217ba35b
+RMD160 (postgresql-9.2-1002.jdbc4.jar) = 9e34845af873060edc0014130be3ea08517586d3
+Size (postgresql-9.2-1002.jdbc4.jar) = 579785 bytes
+SHA1 (postgresql-jdbc-9.2-1002.src.tar.gz) = ac5efbe2a3acf8fdb443bda874f97b1928f23efc
+RMD160 (postgresql-jdbc-9.2-1002.src.tar.gz) = d0c86e6152e6733dea4aacf564f3094d01755f11
+Size (postgresql-jdbc-9.2-1002.src.tar.gz) = 674693 bytes
