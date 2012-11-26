@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3640 2012/11/26 14:04:49 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3641 2012/11/26 14:23:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5586,3 +5586,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/softhsm to 1.3.4 [pettai 2012-11-26]
 	Added net/py-netifaces version 0.8 [ryoon 2012-11-26]
 	Updated misc/calibre to 0.9.7 [ryoon 2012-11-26]
+	Updated devel/jenkins to 1.480.1 [ryoon 2012-11-26]
