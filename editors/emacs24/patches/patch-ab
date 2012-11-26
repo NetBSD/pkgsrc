@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2012/10/03 21:32:42 marino Exp $
+$NetBSD: patch-ab,v 1.4 2012/11/26 16:56:16 martin Exp $
 
 Add DragonFly
 
@@ -20,6 +20,15 @@ Add DragonFly
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
+@@ -7854,7 +7854,7 @@
+   ## IBM's X11R5 uses -lIM and -liconv in AIX 3.2.2.
+   aix4-2) LIBS_SYSTEM="-lrts -lIM -liconv" ;;
+ 
+-  freebsd) LIBS_SYSTEM="-lutil" ;;
++  freebsd|netbsd|openbsd) LIBS_SYSTEM="-lutil" ;;
+ 
+   hpux*) LIBS_SYSTEM="-l:libdld.sl" ;;
+ 
 @@ -8095,6 +8104,11 @@ case $opsys in
      LIB_MATH=
      START_FILES='pre-crt0.o'
