@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2011/12/06 12:41:02 ryoon Exp $
+$NetBSD: MESSAGE,v 1.4 2012/11/26 15:52:37 ryoon Exp $
 
 To use aipo, you will need to perform the following steps.
 
-1. Install postgresql server, for example postgresql84-server,
+1. Install postgresql server, for example postgresql91-server,
    and enable it.
 
-	# cd databases/postgresql84-server
+	# cd databases/postgresql91-server
 	# make install
-	and follow MESSAGE in databases/postgresql84-server directory.
+	and follow MESSAGE in databases/postgresql91-server directory.
 
 2. Install apache tomcat server, for example apache-tomcat7
 
@@ -27,7 +27,7 @@ To use aipo, you will need to perform the following steps.
 5. Set password to aipo_pgsql user
 
 	$ sudo -u pgsql psql template1
-	psql (8.4.9)
+	psql (9.1.6)
 	Type "help" for help.
 
 	template1=# alter user aipo_pgsql with password 'aipo_db_password';
@@ -74,4 +74,5 @@ To use aipo, you will need to perform the following steps.
 		${PREFIX}/share/aipo/webapps/ROOT/WEB-INF/classes/aipo/securityTokenKey.txt
 
 12. Start apache tomcat and access http://localhost:8080/aipo/portal
+    Default username/password are admin/admin.
 ===========================================================================
