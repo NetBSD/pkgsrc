@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3646 2012/11/26 17:37:36 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3647 2012/11/26 19:03:43 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/sun-jdk6 to 6.0.37 [ryoon 2012-11-26]
 	Updated editors/emacs24 to 24.2nb4 [martin 2012-11-26]
 	Updated math/fftw to 3.3.3 [adam 2012-11-26]
+	Updated net/tor to 0.2.3.25 [drochner 2012-11-26]
