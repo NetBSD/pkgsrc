@@ -1,0 +1,6 @@
+Portable network interface information.
+
+netifaces provides a (hopefully portable-ish) way for Python
+programmers to get access to a list of the network interfaces on
+the local machine, and to obtain the addresses of those network
+interfaces.

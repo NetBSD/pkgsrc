@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/11/26 13:55:00 ryoon Exp $
+
+SHA1 (netifaces-0.8.tar.gz) = a483338e1cb75dd572109467d523e152088c026d
+RMD160 (netifaces-0.8.tar.gz) = e5204d8415d1ae1ec84118eeb86928a1ea770f18
+Size (netifaces-0.8.tar.gz) = 15484 bytes
