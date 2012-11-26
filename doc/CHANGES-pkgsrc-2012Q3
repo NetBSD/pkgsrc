@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.30 2012/11/15 15:51:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.31 2012/11/26 23:53:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -85,3 +85,7 @@ Pullup ticket #3966 - requested by tron
 net/bind99: build fix
 Pullup ticket #3969 - requested by he
 devel/libffi: build fix
+Pullup ticket #3971 - requested by tonio
+chat/weechat: security update
+Pullup ticket #3972 - requested by fhajny
+lang/ruby193-base: build fix
