@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2011/09/06 19:34:01 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2012/11/26 19:00:20 drochner Exp $
 
 From: Taylor R Campbell
 Subject: patch for Tor to workaround OpenSSL renegotiation lossage on 5.1
@@ -20,23 +20,23 @@ put into NetBSD 5.1 (and SSL_OP_ALLOW_UNSAFE_RENEGOTIATION defined in
 ssl.h) so that this patch would be unnecessary.
 [2. text/plain; nbsd51-reneg]
 
---- ./src/common/tortls.c.~1~	2010-05-02 22:02:50.000000000 +0000
-+++ ./src/common/tortls.c	2010-07-30 00:34:00.000000000 +0000
-@@ -356,6 +356,17 @@
+--- src/common/tortls.c.orig	2012-11-19 21:24:54.000000000 +0000
++++ src/common/tortls.c
+@@ -477,6 +477,17 @@ tor_tls_init(void)
       * program should be allowed to use renegotiation unless it first passed
       * a test of intelligence and determination.
       */
 +#ifdef __NetBSD__
 +    /* In NetBSD 5.1, OpenSSL 0.9.9-dev was imported and `fixed' to use
 +       the same scheme as 0.9.8l.  */
-+    if (version == 0x00909000L) {
++    if (version == OPENSSL_V_NOPATCH(0,9,9)) {
 +      log_notice(LD_GENERAL, "OpenSSL %s on NetBSD looks like version 0.9.8l; "
-+                 "I will try SSL3_FLAGS to enable renegotation.",
++                 "I will try SSL3_FLAGS and SSL_OP to enable renegotation.",
 +                 SSLeay_version(SSLEAY_VERSION));
 +      use_unsafe_renegotiation_flag = 1;
 +      use_unsafe_renegotiation_op = 1;
 +    } else
 +#endif
-     if (version >= 0x009080c0L && version < 0x009080d0L) {
-       log_notice(LD_GENERAL, "OpenSSL %s looks like version 0.9.8l; "
-                  "I will try SSL3_FLAGS to enable renegotation.",
+     if (version > OPENSSL_V(0,9,8,'k') && version <= OPENSSL_V(0,9,8,'l')) {
+       log_notice(LD_GENERAL, "OpenSSL %s looks like version 0.9.8l, but "
+                  "some vendors have backported renegotiation code from "
