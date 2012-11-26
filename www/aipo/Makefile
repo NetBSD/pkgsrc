@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:01 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/26 15:52:37 ryoon Exp $
 #
 
-DISTNAME=	aipo7010ja_linux32
-PKGNAME=	aipo-7.0.1
+DISTNAME=	aipo${VERSION:S/.//g}0ja_linux32
+VERSION=	7.0.2
+PKGNAME=	aipo-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	http://aipo.googlecode.com/files/
 
@@ -11,12 +12,14 @@ HOMEPAGE=	http://www.aipo.com/
 COMMENT=	Web-based groupware that supports Japanese interface
 LICENSE=	gnu-agpl-v3
 
+DEPENDS=	jdbc-postgresql92-[0-9]*:../../databases/jdbc-postgresql92
+
 USE_JAVA=	run
 USE_JAVA2=	6
 
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}/aipo7010ja_linux
+WRKSRC=		${WRKDIR}/aipo${VERSION:S/.//g}0ja_linux
 USE_LANGUAGES=	# none
 
 USE_TOOLS+=	gunzip pax tar
@@ -35,7 +38,7 @@ SUBST_SED.username=		-e 's,cayenne.dbcp.username=postgres,cayenne.dbcp.username=
 SUBST_SED.username+=		-e 's,cayenne.dbcp.password=aipo,cayenne.dbcp.password=aipo_db_password,'
 
 post-extract:
-	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo7010.tar.gz | ${TAR} -xpf -
+	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo${VERSION:S/.//g}0.tar.gz | ${TAR} -xpf -
 
 do-install:
 	cd  ${WRKSRC}/aipo/src/webapps && \
@@ -43,7 +46,7 @@ do-install:
 	cd  ${WRKSRC}/aipo/src/initdata && \
 		pax -rw psml files mail sql \
 			${DESTDIR}${PREFIX}/${AIPO_DIR}/webapps/aipo/WEB-INF
-	${INSTALL_DATA} ${WRKSRC}/aipo/src/postgresql-8.4-702.jdbc4.jar \
+	${INSTALL_DATA} ${PREFIX}/lib/java/postgresql92.jar \
 			${DESTDIR}${PREFIX}/${TOMCAT_DIR}/lib
 	${INSTALL_DATA} ${WRKSRC}/aipo/src/tools.jar \
 			${DESTDIR}${PREFIX}/${TOMCAT_DIR}/lib
