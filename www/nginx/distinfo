@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.21 2012/08/08 06:44:08 imil Exp $
+$NetBSD: distinfo,v 1.22 2012/11/26 14:38:14 fhajny Exp $
 
 SHA1 (naxsi-core-0.48.tgz) = 7391532e7026179c0c9e52e15c5d645259f94fa6
 RMD160 (naxsi-core-0.48.tgz) = 6c1c3934bb35976e7b40b39b26b07bfc6ea3cda0
 Size (naxsi-core-0.48.tgz) = 42816 bytes
-SHA1 (nginx-1.2.3.tar.gz) = 98059ae08ebbfaaead868128f7b66ebce16be9af
-RMD160 (nginx-1.2.3.tar.gz) = 49f9a8ede7ab68a067ba562b9917f84db427b2a1
-Size (nginx-1.2.3.tar.gz) = 723294 bytes
+SHA1 (nginx-1.2.5.tar.gz) = c36feaadbaad6938b02f4038c2d68cab10907f59
+RMD160 (nginx-1.2.5.tar.gz) = 67a46b1f4c073d67ced9949ef361f333606347b7
+Size (nginx-1.2.5.tar.gz) = 725368 bytes
 SHA1 (nginx_http_push_module-0.692.tar.gz) = 72103084cad8f4d3d9a49a6b04cf780e4541605d
 RMD160 (nginx_http_push_module-0.692.tar.gz) = 9d2be16074cf28115af0f1d8f3646937cda649ad
 Size (nginx_http_push_module-0.692.tar.gz) = 29119 bytes
