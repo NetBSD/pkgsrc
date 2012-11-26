@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3644 2012/11/26 16:26:38 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3645 2012/11/26 16:58:36 martin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5591,3 +5591,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/aipo to 7.0.2 [ryoon 2012-11-26]
 	Updated lang/sun-jre6 to 6.0.37 [ryoon 2012-11-26]
 	Updated lang/sun-jdk6 to 6.0.37 [ryoon 2012-11-26]
+	Updated editors/emacs24 to 24.2nb4 [martin 2012-11-26]
