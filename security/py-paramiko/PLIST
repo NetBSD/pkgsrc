@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/07/22 14:03:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/11/27 22:13:32 gls Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -67,6 +67,9 @@ ${PYSITELIB}/paramiko/pkey.pyo
 ${PYSITELIB}/paramiko/primes.py
 ${PYSITELIB}/paramiko/primes.pyc
 ${PYSITELIB}/paramiko/primes.pyo
+${PYSITELIB}/paramiko/proxy.py
+${PYSITELIB}/paramiko/proxy.pyc
+${PYSITELIB}/paramiko/proxy.pyo
 ${PYSITELIB}/paramiko/resource.py
 ${PYSITELIB}/paramiko/resource.pyc
 ${PYSITELIB}/paramiko/resource.pyo
