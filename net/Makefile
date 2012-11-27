@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.941 2012/11/23 11:52:04 drochner Exp $
+# $NetBSD: Makefile,v 1.942 2012/11/27 11:32:17 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -512,6 +512,7 @@ SUBDIR+=	py-kenosis
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-medusa
+SUBDIR+=	py-netifaces
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
 SUBDIR+=	py-ptt
