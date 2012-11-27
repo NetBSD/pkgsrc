@@ -1,8 +1,13 @@
-$NetBSD: patch-src_metadata_ffmpeg__handler.cc,v 1.1 2012/09/25 11:45:11 ryoon Exp $
+$NetBSD: patch-src_metadata_ffmpeg__handler.cc,v 1.2 2012/11/27 20:16:40 tron Exp $
+
+Fix build with recent versions of "ffmpeg". Partially taken from this
+Debian bug report:
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=677959
 
 --- src/metadata/ffmpeg_handler.cc.orig	2010-03-25 14:58:10.000000000 +0000
-+++ src/metadata/ffmpeg_handler.cc
-@@ -89,47 +89,30 @@ static void addFfmpegMetadataFields(Ref<
++++ src/metadata/ffmpeg_handler.cc	2012-11-27 20:02:25.000000000 +0000
+@@ -89,47 +89,30 @@
  
  	Ref<StringConverter> sc = StringConverter::m2i();
      
@@ -64,8 +69,8 @@ $NetBSD: patch-src_metadata_ffmpeg__handler.cc,v 1.1 2012/09/25 11:45:11 ryoon E
 +		return;
 +	for (const mapping_t *m = mapping; m->avname != NULL; m++)
 +	{
-+		AVMetadataTag *tag = NULL;
-+		tag = av_metadata_get(pFormatCtx->metadata, m->avname, NULL, 0);
++		AVDictionaryEntry *tag = NULL;
++		tag = av_dict_get(pFormatCtx->metadata, m->avname, NULL, 0);
 +		if (tag && tag->value && tag->value[0])
 +		{
 +			log_debug("Added metadata %s: %s\n", m->avname, tag->value);
@@ -74,7 +79,7 @@ $NetBSD: patch-src_metadata_ffmpeg__handler.cc,v 1.1 2012/09/25 11:45:11 ryoon E
  	}
  }
  
-@@ -178,7 +161,7 @@ static void addFfmpegResourceFields(Ref<
+@@ -178,7 +161,7 @@
  	for(i=0; i<pFormatCtx->nb_streams; i++) 
      {
  		AVStream *st = pFormatCtx->streams[i];
@@ -83,7 +88,7 @@ $NetBSD: patch-src_metadata_ffmpeg__handler.cc,v 1.1 2012/09/25 11:45:11 ryoon E
          {
              if (st->codec->codec_tag > 0)
              {
-@@ -209,7 +192,7 @@ static void addFfmpegResourceFields(Ref<
+@@ -209,7 +192,7 @@
                  *y = st->codec->height;
  			}
  		} 
@@ -92,3 +97,42 @@ $NetBSD: patch-src_metadata_ffmpeg__handler.cc,v 1.1 2012/09/25 11:45:11 ryoon E
          {
  			// Increase number of audiochannels
  			audioch++;
+@@ -251,7 +234,7 @@
+     int x = 0;
+     int y = 0;
+ 
+-	AVFormatContext *pFormatCtx;
++	AVFormatContext *pFormatCtx = avformat_alloc_context();
+ 	
+ 	// Suppress all log messages
+ 	av_log_set_callback(FfmpegNoOutputStub);
+@@ -259,15 +242,15 @@
+ 	// Register all formats and codecs
+     av_register_all();
+ 
+-    // Open video file
+-    if (av_open_input_file(&pFormatCtx, 
+-                          item->getLocation().c_str(), NULL, 0, NULL) != 0)
++	// Open video file
++    if (avformat_open_input(&pFormatCtx, 
++                          item->getLocation().c_str(), NULL, NULL) != 0)
+         return; // Couldn't open file
+ 
+     // Retrieve stream information
+-    if (av_find_stream_info(pFormatCtx) < 0)
++    if (avformat_find_stream_info(pFormatCtx,NULL) < 0)
+     {
+-        av_close_input_file(pFormatCtx);
++        avformat_close_input(&pFormatCtx);
+         return; // Couldn't find stream information
+     }   
+ 	// Add metadata using ffmpeg library calls
+@@ -276,7 +259,7 @@
+ 	addFfmpegResourceFields(item, pFormatCtx, &x, &y);
+ 	
+     // Close the video file
+-    av_close_input_file(pFormatCtx);
++    avformat_close_input(&pFormatCtx);
+ }
+ 
+ Ref<IOHandler> FfmpegHandler::serveContent(Ref<CdsItem> item, int resNum, off_t *data_size)
