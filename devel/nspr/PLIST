@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/06/07 13:48:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/11/27 11:38:57 ryoon Exp $
 bin/compile-et.pl
 bin/nspr-config
 bin/prerr.properties
@@ -15,21 +15,15 @@ include/nspr/md/_hpux64.cfg
 include/nspr/md/_irix32.cfg
 include/nspr/md/_irix64.cfg
 include/nspr/md/_linux.cfg
-include/nspr/md/_ncr.cfg
-include/nspr/md/_nec.cfg
-include/nspr/md/_netbsd.cfg
-include/nspr/md/_nextstep.cfg
+include/nspr/md/_${LOWER_OPSYS}.cfg
 include/nspr/md/_nto.cfg
 include/nspr/md/_openbsd.cfg
 include/nspr/md/_os2.cfg
 include/nspr/md/_osf1.cfg
 include/nspr/md/_qnx.cfg
-include/nspr/md/_reliantunix.cfg
 include/nspr/md/_riscos.cfg
 include/nspr/md/_scoos.cfg
 include/nspr/md/_solaris.cfg
-include/nspr/md/_sony.cfg
-include/nspr/md/_sunos4.cfg
 include/nspr/md/_symbian.cfg
 include/nspr/md/_unixware.cfg
 include/nspr/md/_unixware7.cfg
@@ -91,11 +85,11 @@ include/nspr/prtypes.h
 include/nspr/prvrsion.h
 include/nspr/prwin16.h
 lib/nspr/libnspr4.a
-lib/nspr/libnspr4.${SO_SUFFIX}
+lib/nspr/libnspr4.so
 lib/nspr/libplc4.a
-lib/nspr/libplc4.${SO_SUFFIX}
+lib/nspr/libplc4.so
 lib/nspr/libplds4.a
-lib/nspr/libplds4.${SO_SUFFIX}
+lib/nspr/libplds4.so
 lib/nspr/pkgconfig/nspr.pc
 lib/pkgconfig/nspr.pc
 share/aclocal/nspr.m4
