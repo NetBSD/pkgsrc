@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3648 2012/11/27 11:40:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3649 2012/11/27 12:12:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5595,3 +5595,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/fftw to 3.3.3 [adam 2012-11-26]
 	Updated net/tor to 0.2.3.25 [drochner 2012-11-26]
 	Updated devel/nspr to 4.9.4 [ryoon 2012-11-27]
+	Updated www/php-owncloud to 4.5.3 [ryoon 2012-11-27]
