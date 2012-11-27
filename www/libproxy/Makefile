@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/11/23 16:40:41 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/27 11:26:23 drochner Exp $
 #
 
 DISTNAME=	libproxy-0.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	http://libproxy.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
