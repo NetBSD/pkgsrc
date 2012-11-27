@@ -1,4 +1,6 @@
-$NetBSD: patch-bug687392,v 1.1 2012/11/23 15:43:13 drochner Exp $
+$NetBSD: patch-bug687392,v 1.2 2012/11/27 11:13:49 drochner Exp $
+
+CVE-2012-5576
 
 --- plug-ins/common/file-xwd.c.orig	2012-03-12 19:18:10.000000000 +0000
 +++ plug-ins/common/file-xwd.c
