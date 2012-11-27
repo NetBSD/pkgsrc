@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3651 2012/11/27 20:17:22 tron Exp $
+$NetBSD: CHANGES-2012,v 1.3652 2012/11/27 22:14:14 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5598,3 +5598,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-owncloud to 4.5.3 [ryoon 2012-11-27]
 	Updated textproc/libxslt to 1.1.28 [adam 2012-11-27]
 	Updated multimedia/mediatomb to 0.12.1nb11 [tron 2012-11-27]
+	Updated security/py-paramiko to 1.9.0 [gls 2012-11-27]
