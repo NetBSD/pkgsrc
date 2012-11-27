@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2012/10/19 08:03:54 sno Exp $
+# $NetBSD: Makefile,v 1.414 2012/11/27 11:33:18 ryoon Exp $
 #
 
 COMMENT=	Databases
@@ -46,6 +46,7 @@ SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
 SUBDIR+=	jdbc-postgresql83
 SUBDIR+=	jdbc-postgresql84
+SUBDIR+=	jdbc-postgresql92
 SUBDIR+=	kmysqladmin
 SUBDIR+=	krecipes
 SUBDIR+=	lbdb
