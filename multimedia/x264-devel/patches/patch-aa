@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.15 2012/11/08 19:55:56 adam Exp $
+$NetBSD: patch-aa,v 1.16 2012/11/28 16:29:53 adam Exp $
 
---- configure.orig	2012-11-07 21:45:03.000000000 +0000
+--- configure.orig	2012-11-27 21:45:03.000000000 +0000
 +++ configure
-@@ -465,6 +465,10 @@ case $host_os in
+@@ -466,6 +466,10 @@ case $host_os in
          SYS="FREEBSD"
-         LDFLAGS="$LDFLAGS -lm"
+         libm="-lm"
          ;;
 +    dragonfly*)
 +        SYS="DRAGONFLY"
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.15 2012/11/08 19:55:56 adam Exp $
      kfreebsd*-gnu)
          SYS="FREEBSD"
          define HAVE_MALLOC_H
-@@ -564,7 +568,7 @@ case $host_cpu in
+@@ -567,7 +571,7 @@ case $host_cpu in
              ASFLAGS="$ASFLAGS -f elf"
          fi
          ;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.15 2012/11/08 19:55:56 adam Exp $
          ARCH="X86_64"
          AS="yasm"
          [ $compiler = GNU ] && CFLAGS="-m64 $CFLAGS" && LDFLAGS="-m64 $LDFLAGS"
-@@ -584,13 +588,14 @@ case $host_cpu in
+@@ -587,13 +591,14 @@ case $host_cpu in
          fi
          ;;
      powerpc|powerpc64)
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.15 2012/11/08 19:55:56 adam Exp $
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
-@@ -736,7 +741,7 @@ fi
+@@ -739,7 +744,7 @@ fi
  # pthread-win32 is lgpl, prevent its use if --disable-gpl is specified and targeting windows
  [ "$SYS" = "WINDOWS" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.15 2012/11/08 19:55:56 adam Exp $
  if [ "$thread" = "auto" ]; then
      thread="no"
      case $SYS in
-@@ -919,10 +924,11 @@ fi
+@@ -922,10 +927,11 @@ fi
  cc_check "stdint.h" "" "uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3};" && define HAVE_VECTOREXT
  
  if [ "$pic" = "yes" ] ; then
