@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3654 2012/11/28 15:51:29 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3655 2012/11/28 16:33:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5601,3 +5601,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/py-paramiko to 1.9.0 [gls 2012-11-27]
 	Updated shells/rssh to 2.3.4 [wiz 2012-11-28]
 	Added multimedia/ffmpeg010 version 20120609.0.10.4 [ryoon 2012-11-28]
+	Updated multimedia/x264-devel to 20121127 [adam 2012-11-28]
