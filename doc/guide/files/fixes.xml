@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.110 2012/09/30 09:16:56 asau Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.111 2012/11/28 20:36:15 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1060,6 +1060,18 @@ pre-configure:
 
     <para>See <xref linkend="perl-modules" /> for information
     about handling perl modules.</para>
+  </sect2>
+
+  <sect2 id="shell-scripts">
+    <title>Packages containing shell scripts</title>
+
+    <para><varname>REPLACE_SH</varname>,
+    <varname>REPLACE_BASH</varname>, <varname>REPLACE_CSH</varname>,
+    and <varname>REPLACE_KSH</varname> can be used to replace shell
+    hash bangs in files. Please use the appropriate one, prefering
+    <varname>REPLACE_SH</varname> in case this shell is sufficient.
+    When using <varname>REPLACE_BASH</varname>, don't forget to add
+    <filename>bash</filename> to <varname>USE_TOOLS</varname>.</para>
   </sect2>
 
   <sect2 id="other-programming-languages">
