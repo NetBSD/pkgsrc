@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/04/14 09:29:18 gls Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/11/28 17:48:45 gls Exp $
 bin/fab
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,6 +51,9 @@ ${PYSITELIB}/fabric/contrib/project.pyo
 ${PYSITELIB}/fabric/decorators.py
 ${PYSITELIB}/fabric/decorators.pyc
 ${PYSITELIB}/fabric/decorators.pyo
+${PYSITELIB}/fabric/docs.py
+${PYSITELIB}/fabric/docs.pyc
+${PYSITELIB}/fabric/docs.pyo
 ${PYSITELIB}/fabric/exceptions.py
 ${PYSITELIB}/fabric/exceptions.pyc
 ${PYSITELIB}/fabric/exceptions.pyo
@@ -98,6 +101,7 @@ share/doc/fabric/api/contrib/project.rst
 share/doc/fabric/api/core/colors.rst
 share/doc/fabric/api/core/context_managers.rst
 share/doc/fabric/api/core/decorators.rst
+share/doc/fabric/api/core/docs.rst
 share/doc/fabric/api/core/network.rst
 share/doc/fabric/api/core/operations.rst
 share/doc/fabric/api/core/tasks.rst
