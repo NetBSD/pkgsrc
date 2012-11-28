@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11676 2012/11/28 13:56:03 wiz Exp $
+$NetBSD: TODO,v 1.11677 2012/11/28 15:57:11 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.21
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
-	o gstreamer-1.0.0
+	o gstreamer-1.0.3
 	o gtexinfo-4.13a
 	o gthumb-3.0.2
 	o gtick-0.4.2
