@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3653 2012/11/28 13:55:06 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3654 2012/11/28 15:51:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5600,3 +5600,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/mediatomb to 0.12.1nb11 [tron 2012-11-27]
 	Updated security/py-paramiko to 1.9.0 [gls 2012-11-27]
 	Updated shells/rssh to 2.3.4 [wiz 2012-11-28]
+	Added multimedia/ffmpeg010 version 20120609.0.10.4 [ryoon 2012-11-28]
