@@ -336,7 +336,8 @@ II. The pkgsrc developer's guide
             19.4.1. C, C++, and Fortran
             19.4.2. Java
             19.4.3. Packages containing perl scripts
-            19.4.4. Other programming languages
+            19.4.4. Packages containing shell scripts
+            19.4.5. Other programming languages
 
         19.5. Fixing problems in the build phase
 
@@ -3299,7 +3300,8 @@ Table of Contents
         19.4.1. C, C++, and Fortran
         19.4.2. Java
         19.4.3. Packages containing perl scripts
-        19.4.4. Other programming languages
+        19.4.4. Packages containing shell scripts
+        19.4.5. Other programming languages
 
     19.5. Fixing problems in the build phase
 
@@ -3990,7 +3992,7 @@ out-of-the box on NetBSD. Furthermore, any user that gets newer distfiles will
 get the fixes straight from the packaged code.
 
 This generally involves cleaning up the patches (because sometimes the patches
-that are added to pkgsrc are quick hacks), filling bug reports in the
+that are added to pkgsrc are quick hacks), filing bug reports in the
 appropriate trackers for the projects and working with the mainstream authors
 to accept your changes. It is extremely important that you do it so that the
 packages in pkgsrc are kept simple and thus further changes can be done without
@@ -6425,7 +6427,8 @@ Table of Contents
     19.4.1. C, C++, and Fortran
     19.4.2. Java
     19.4.3. Packages containing perl scripts
-    19.4.4. Other programming languages
+    19.4.4. Packages containing shell scripts
+    19.4.5. Other programming languages
 
 19.5. Fixing problems in the build phase
 
@@ -7198,7 +7201,14 @@ version number. The default is "5.0".
 See Section 19.6.6, "Packages installing perl modules" for information about
 handling perl modules.
 
-19.4.4. Other programming languages
+19.4.4. Packages containing shell scripts
+
+REPLACE_SH, REPLACE_BASH, REPLACE_CSH, and REPLACE_KSH can be used to replace
+shell hash bangs in files. Please use the appropriate one, prefering REPLACE_SH
+in case this shell is sufficient. When using REPLACE_BASH, don't forget to add
+bash to USE_TOOLS.
+
+19.4.5. Other programming languages
 
 Currently, there is no special handling for other languages in pkgsrc. If a
 compiler package provides a buildlink3.mk file, include that, otherwise just
