@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/02/26 13:16:32 adam Exp $
+$NetBSD: distinfo,v 1.6 2012/11/29 07:31:02 adam Exp $
 
 SHA1 (krb5-appl-1.0.3-signed.tar) = 6711c1b46633e666e6e707363ffffce5e1c84d9d
 RMD160 (krb5-appl-1.0.3-signed.tar) = 491359af5da2ea3c680811b08d9696eb43794a21
 Size (krb5-appl-1.0.3-signed.tar) = 634880 bytes
 SHA1 (patch-ab) = 4522fcdb396d2079ac6405926a64f907d94a2593
 SHA1 (patch-gssftp_ftp_cmds_c) = 24942a2bcfc0cb0ce3045da5468d315c5b1bfadb
-SHA1 (patch-gssftp_ftp_ftp_var.h) = bd851e19a70db30bec53d20d75bb1855a13b3084
+SHA1 (patch-gssftp_ftp_ftp_var.h) = 44a7483c6af469738ae4eab3d1450bac259d71ac
