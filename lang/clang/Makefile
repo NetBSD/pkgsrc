@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/11/22 22:45:15 marino Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/29 11:42:24 marino Exp $
 
 DISTNAME=	clang-3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \

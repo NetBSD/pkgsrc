@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/11/22 22:45:15 marino Exp $
+$NetBSD: distinfo,v 1.13 2012/11/29 11:42:24 marino Exp $
 
 SHA1 (clang-3.1.src.tar.gz) = 19f33b187a50d22fda2a6f9ed989699a9a9efd62
 RMD160 (clang-3.1.src.tar.gz) = 5ae09d3d69d4f1e50e07f6bf3474da96e6a84feb
@@ -10,5 +10,7 @@ SHA1 (patch-ab) = 140ac84d513cf20c9eb30a9e8e2f6b87bdd074fe
 SHA1 (patch-ac) = 676fbc85e25a8d338a7ac13f79af53666b27da4a
 SHA1 (patch-ad) = 2767a9931b157552f8d6796641e23cce7979dc3d
 SHA1 (patch-projects_sample_autoconf_config.sub) = 7e8449c46ed0c3e5530235d33a35f7f4e083d0b0
-SHA1 (patch-tools_clang_lib_Driver_ToolChains.cpp) = 80b9890fdc5b4932c4b9301c50809b80212d0e48
-SHA1 (patch-tools_clang_lib_Driver_Tools.cpp) = 9dcb364d1fd31ddb5672ad4d8b247dab1fe179c6
+SHA1 (patch-tools_clang_lib_Driver_ToolChains.cpp) = 8298ea94d4a69354be9a6e535e539887eb322ab8
+SHA1 (patch-tools_clang_lib_Driver_Tools.cpp) = f932d4e56bb0c35441a75afd7844358deb5d4361
+SHA1 (patch-tools_clang_lib_Frontend_InitHeaderSearch.cpp) = 18b558f48e73e73e2b90dfb40d512357c0d40da4
+SHA1 (patch-tools_clang_test_Driver_dragonfly.c) = 7e2cf2e40bce1037eb229f8cb399d095385f293e
