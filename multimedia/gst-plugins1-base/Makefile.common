@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1 2012/11/29 08:22:29 ryoon Exp $
+#
+# used by audio/gst-plugins1-alsa/Makefile
+# used by audio/gst-plugins1-cdparanoia/Makefile
+# used by sysutils/gst-plugins1-gio/Makefile
+# used by audio/gst-plugins1-libvisual/Makefile
+# used by multimedia/gst-plugins1-ogg/Makefile
+# used by devel/gst-plugins1-pango/Makefile
+# used by multimedia/gst-plugins1-theora/Makefile
+# used by audio/gst-plugins1-vorbis/Makefile
+# used by x11/gst-plugins1-x11/Makefile
+#
+
+GST_PLUGINS1_TYPE=	base
+GST_PLUGINS1_VER=	1.0.3
+BUILDLINK_API_DEPENDS.gstreamer1+= gstreamer1>=1.0.3
+LICENSE=		gnu-lgpl-v2
+
+# Disable all drivers and features by default.
+.for driver in	alsa \
+		cdparanoia \
+		freetypetest \
+		gio \
+		ivorbis \
+		libvisual \
+		ogg \
+		oggtest \
+		pango \
+		theora \
+		vorbis \
+		vorbistest \
+		x \
+		xshm \
+		xvideo
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+
+.include "../../devel/orc/buildlink3.mk"
+.include "plugins.mk"
