@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3667 2012/11/29 13:53:26 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3668 2012/11/29 14:22:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5652,3 +5652,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added multimedia/gst-plugins1-libav version 1.0.3 [ryoon 2012-11-29]
 	Added audio/gst-plugins1-jack version 1.0.3 [ryoon 2012-11-29]
 	Updated devel/cppcheck to 1.57 [ryoon 2012-11-29]
+	Updated devel/p5-File-Util to 3.32 [wen 2012-11-29]
