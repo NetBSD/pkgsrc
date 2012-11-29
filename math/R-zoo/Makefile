@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/15 17:10:18 brook Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/29 08:09:54 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	S3 Infrastructure for Regular and Irregular Time Series
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	zoo
-R_PKGVER=	1.7-7
+R_PKGVER=	1.7-9
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
