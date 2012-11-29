@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11678 2012/11/29 07:21:52 wen Exp $
+$NetBSD: TODO,v 1.11679 2012/11/29 09:40:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,6 +456,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdrkit-1.1.10
 	o celestia-1.6.0
 	o cfengine-3.3.8 [pkg/47249]
+	o cfengine-3.4.0
 	o cfitsio-3.310
 	o check-0.9.9
 	o cheese-2.32.0 [GNOME 2.32]
@@ -1134,7 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.7
 	o spcaview-20060501
-	o spectrwm-2.1.0 [was scrotwm]
+	o spectrwm-2.1.1 [was scrotwm]
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
 	o squid-3.2.3 [pkg/47164]
@@ -1249,6 +1250,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wine-devel-1.5.18 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wireshark-1.8.4
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1262,7 +1264,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
-	o x264-devel-20121124
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
