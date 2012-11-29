@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3657 2012/11/29 00:53:38 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3658 2012/11/29 02:05:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5604,3 +5604,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/x264-devel to 20121127 [adam 2012-11-28]
 	Updated sysutils/fabric to 1.5.1 [gls 2012-11-28]
 	Removed security/opensc-signer [gdt 2012-11-29]
+	Updated devel/p5-Class-Method-Modifiers to 1.12 [wen 2012-11-29]
