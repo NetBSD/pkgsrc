@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3658 2012/11/29 02:05:51 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3659 2012/11/29 02:39:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/fabric to 1.5.1 [gls 2012-11-28]
 	Removed security/opensc-signer [gdt 2012-11-29]
 	Updated devel/p5-Class-Method-Modifiers to 1.12 [wen 2012-11-29]
+	Updated devel/p5-Role-Tiny to 1.002004 [wen 2012-11-29]
