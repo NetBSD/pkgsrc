@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.447 2012/11/10 22:16:40 pettai Exp $
+# $NetBSD: Makefile,v 1.448 2012/11/29 00:49:31 gdt Exp $
 #
 
 COMMENT=	Security tools
@@ -172,7 +172,6 @@ SUBDIR+=	opendnssec
 SUBDIR+=	openpam
 SUBDIR+=	opensaml
 SUBDIR+=	opensc
-SUBDIR+=	opensc-signer
 SUBDIR+=	openssh
 SUBDIR+=	openssl
 SUBDIR+=	openvas-client
