@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/10 17:10:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/29 22:06:41 jperkin Exp $
 
 PKGVER=		2.3.4
 DISTNAME=	motif-${PKGVER}-src
@@ -21,7 +21,7 @@ WRKSRC=			${WRKDIR}/motif-${PKGVER}
 CONFLICTS+=		lesstif-[0-9]* openmotif-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		flex gmake tbl pkg-config automake
+USE_TOOLS+=		flex gmake tbl pkg-config automake yacc
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no # PR 37233
 
