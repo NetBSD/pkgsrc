@@ -1,0 +1,46 @@
+# $NetBSD: Makefile.common,v 1.1 2012/11/29 08:26:09 ryoon Exp $
+#
+# used by audio/gst-plugins1-dts/Makefile
+# used by audio/gst-plugins1-faac/Makefile
+# used by audio/gst-plugins1-faad/Makefile
+# used by net/gst-plugins1-mms/Makefile
+# used by net/gst-plugins1-rtmp/Makefile
+# used by audio/gst-plugins1-spc/Makefile
+# used by multimedia/gst-plugins1-resindvd/Makefile
+## used by multimedia/gst-plugins1-xvid/Makefile (broken)
+## used by audio/gst-plugins1-musepack/Makefile (probably newer libmusepack or libmpcdec is needed)
+#
+
+GST_PLUGINS1_TYPE=	bad
+GST_PLUGINS1_VER=	1.0.3
+
+# Disable all drivers and features by default.
+.for driver in	cdaudio \
+		directfb \
+		dts \
+		dvb \
+		faac \
+		faad \
+		fbdev \
+		gsm \
+		libmms \
+		musepack \
+		musicbrainz \
+		neon \
+		real \
+		sdl \
+		shm \
+		soundtouch \
+		swfdec \
+		vcd \
+		vdpau \
+		xvid
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.0.3
+BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
+
+.include "../../devel/orc/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/plugins.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"

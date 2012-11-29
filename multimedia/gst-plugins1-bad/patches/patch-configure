@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2012/11/29 08:26:10 ryoon Exp $
+
+* Improve portability
+
+--- configure.orig	2012-10-07 06:40:08.000000000 +0000
++++ configure
+@@ -32288,9 +32288,9 @@ $as_echo "#define HAVE_LIBUSB 1" >>confd
+ 
+           HAVE_LIBUSB="yes"
+ fi
+-  if test "x$HAVE_UVCVIDEO_H" == "xyes" && \
+-     test "x$HAVE_GUDEV" == "xyes" && \
+-     test "x$HAVE_LIBUSB" == "xyes"; then
++  if test "x$HAVE_UVCVIDEO_H" = "xyes" && \
++     test "x$HAVE_GUDEV" = "xyes" && \
++     test "x$HAVE_LIBUSB" = "xyes"; then
+     HAVE_UVCH264=yes
+   else
+     HAVE_UVCH264=no
