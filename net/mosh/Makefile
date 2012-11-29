@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/29 07:19:35 wen Exp $
 
-DISTNAME=	mosh-1.2.2
-PKGREVISION=	1
+DISTNAME=	mosh-1.2.3
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/downloads/keithw/mosh/
 
@@ -22,6 +21,7 @@ REPLACE_PERL+=	scripts/mosh
 .include "../../devel/protobuf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2.0.4
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
