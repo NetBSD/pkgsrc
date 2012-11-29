@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.14 2012/07/02 19:08:45 drochner Exp $
+$NetBSD: distinfo,v 1.15 2012/11/29 11:01:16 drochner Exp $
 
 SHA1 (vcalendar-2.0.13.tar.gz) = 082fde227e6cb3514bab53423718331174e6617c
 RMD160 (vcalendar-2.0.13.tar.gz) = a34846aa714f076792934bd8ea794f5d0db72ba2
 Size (vcalendar-2.0.13.tar.gz) = 861524 bytes
+SHA1 (patch-CVE-2012-5527_1) = 221b291b5fd879a95f156a2482c6f8a8fd7c1fd1
+SHA1 (patch-CVE-2012-5527_2) = 24b15b3bde4f70103cf2def205d1c7994dcc8b67
+SHA1 (patch-CVE-2012-5527_3) = a4d5df429262b681e67599b0377ba9b8107ea201
