@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1 2012/11/29 08:24:42 ryoon Exp $
+
+--- configure.orig	2012-11-20 23:47:00.000000000 +0000
++++ configure
+@@ -23417,6 +23417,9 @@ main ()
+ #error GCC before 3.4 has critical bugs compiling inline assembly
+ #endif
+ #endif
++#ifdef __SUNPRO_C
++#error Sun Studio cannot handle assembly in this package
++#endif
+ __asm__ (""::)
+   ;
+   return 0;
+@@ -29386,6 +29389,10 @@ $as_echo_n "checking Checking for up to 
+ #ifdef __sun /* Solaris */
+ #include <sys/types.h>
+ #include <sys/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
+ #else /* Linux */
+ #include <linux/types.h>
+ #define _LINUX_TIME_H
+@@ -29459,6 +29466,8 @@ $as_echo_n "checking struct v4l2_buffer 
+ #ifdef __sun /* Solaris */
+ #include <sys/types.h>
+ #include <sys/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
+ #else /* Linux */
+ #include <linux/types.h>
+ #define _LINUX_TIME_H

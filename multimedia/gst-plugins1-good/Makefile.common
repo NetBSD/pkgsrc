@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1 2012/11/29 08:24:42 ryoon Exp $
+#
+# used by audio/gst-plugins1-flac/Makefile
+## used by multimedia/gst-plugins1-v4l2/Makefile (broken)
+# used by graphics/gst-plugins1-jpeg/Makefile
+# used by graphics/gst-plugins1-png/Makefile
+# used by audio/gst-plugins1-oss/Makefile
+# used by audio/gst-plugins1-pulse/Makefile
+# used by audio/gst-plugins1-speex/Makefile
+# used by multimedia/gst-plugins1-vpx/Makefile
+# used by x11/gst-plugins1-x11/Makefile
+# used by audio/gst-plugins1-wavpack/Makefile
+#
+
+GST_PLUGINS1_TYPE=	good
+GST_PLUGINS1_VER=	1.0.3
+
+# Disable all drivers and features by default.
+.for driver in	aalib \
+		aalibtest \
+		cairo \
+		dv1394 \
+		flac \
+		gst_v4l2 \
+		jack \
+		jpeg \
+		libcaca \
+		libdv \
+		libpng \
+		oss \
+		oss4 \
+		pulse \
+		shout2 \
+		speex \
+		sunaudio \
+		vpx \
+		x \
+		xshm \
+		xvideo \
+		zlib
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+
+.include "../../multimedia/gst-plugins1-base/plugins.mk"
+.include "../../devel/orc/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gstreamer1+=		gstreamer1>=1.0.3
+.include "../../multimedia/gstreamer1/buildlink3.mk"

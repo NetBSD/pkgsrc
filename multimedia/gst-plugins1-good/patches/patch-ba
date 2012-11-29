@@ -1,0 +1,23 @@
+$NetBSD: patch-ba,v 1.1 2012/11/29 08:24:42 ryoon Exp $
+
+--- sys/v4l2/gstv4l2object.h.orig	2012-10-25 10:55:59.000000000 +0000
++++ sys/v4l2/gstv4l2object.h
+@@ -38,13 +38,17 @@
+  */
+ #include <sys/ioctl.h>
+ #include <sys/types.h>
+-#ifndef __sun
++#if !defined(__sun) && !defined(__NetBSD__)
+ #include <linux/types.h>
+ #define _LINUX_TIME_H
+ #define __user
+ #include <linux/videodev2.h>
+ #else
++#ifdef __sun
+ #include <sys/videodev2.h>
++#else
++#include <sys/videoio.h>
++#endif
+ #endif
+ 
+ #include <gst/gst.h>
