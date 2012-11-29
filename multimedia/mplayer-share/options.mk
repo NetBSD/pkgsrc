@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.46 2012/10/28 23:40:24 wiz Exp $
+# $NetBSD: options.mk,v 1.47 2012/11/29 17:27:17 drochner Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -140,7 +140,8 @@ CONFIGURE_ARGS+=	--disable-cdparanoia
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--enable-debug --disable-sighandler
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mdts)
