@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/10/31 11:16:48 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/11/29 13:52:51 ryoon Exp $
 #
 
-DISTNAME=	cppcheck-1.48
-PKGREVISION=	8
+DISTNAME=	cppcheck-1.57
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,24 +14,24 @@ LICENSE=	gnu-gpl-v3
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
-USE_TOOLS+=		gmake
+FIND_PREFIX:=	DBXSLDIR=docbook-xsl
+.include "../../mk/find-prefix.mk"
 
-BUILDLINK_TRANSFORM+=	rm:-Wlogical-op
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+BUILD_TARGET=		all man
+BUILD_MAKE_FLAGS+=	DB2MAN=${DBXSLDIR}/share/xsl/docbook/manpages/docbook.xsl
 
 .include "options.mk"
 
-.PHONY: man-build
-post-build: man-build
-man-build:
-	cd ${WRKSRC}/man && xsltproc --nonet \
-		--param man.charmap.use.subset "0" \
-		--param make.year.ranges "1" \
-		--param make.single.year.ranges "1" \
-		${PREFIX}/share/xsl/docbook/manpages/docbook.xsl \
-		cppcheck.1.xml
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/cppcheck.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.if !empty(PKG_OPTIONS:Mqt)
+	${INSTALL_PROGRAM} ${WRKSRC}/gui/cppcheck-gui \
+		${DESTDIR}${PREFIX}/bin
+.endif
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
