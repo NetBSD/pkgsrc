@@ -5,3 +5,8 @@ specially designed for compressing voice at low bitrates in the
 IP (VoIP), internet audio streaming, archiving of speech data (e.g.
 voice mail), and audio books.  In some sense, it is meant to be
 complementary to the Ogg Vorbis codec.
+
+GStreamer is released under the LGPL.
+
+This package is part of the 'good' plugins for GStreamer.  It provides the
+speex plugin, which allows speex encoding.
