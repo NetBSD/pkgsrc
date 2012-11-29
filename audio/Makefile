@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.474 2012/10/30 20:14:28 drochner Exp $
+# $NetBSD: Makefile,v 1.475 2012/11/29 09:40:41 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -165,6 +165,25 @@ SUBDIR+=	gst-plugins0.10-speex
 SUBDIR+=	gst-plugins0.10-twolame
 SUBDIR+=	gst-plugins0.10-vorbis
 SUBDIR+=	gst-plugins0.10-wavpack
+SUBDIR+=	gst-plugins1-a52
+SUBDIR+=	gst-plugins1-alsa
+SUBDIR+=	gst-plugins1-cdparanoia
+SUBDIR+=	gst-plugins1-dts
+SUBDIR+=	gst-plugins1-faac
+SUBDIR+=	gst-plugins1-faad
+SUBDIR+=	gst-plugins1-flac
+SUBDIR+=	gst-plugins1-jack
+SUBDIR+=	gst-plugins1-lame
+SUBDIR+=	gst-plugins1-libvisual
+SUBDIR+=	gst-plugins1-mad
+SUBDIR+=	gst-plugins1-oss
+SUBDIR+=	gst-plugins1-pulse
+SUBDIR+=	gst-plugins1-sid
+SUBDIR+=	gst-plugins1-spc
+SUBDIR+=	gst-plugins1-speex
+SUBDIR+=	gst-plugins1-twolame
+SUBDIR+=	gst-plugins1-vorbis
+SUBDIR+=	gst-plugins1-wavpack
 SUBDIR+=	gtick
 SUBDIR+=	gtkmserv
 SUBDIR+=	gtkpod
