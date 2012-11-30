@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2012/10/29 05:06:44 asau Exp $
+# $NetBSD: Makefile,v 1.90 2012/11/30 12:32:50 ryoon Exp $
 #
 
 DISTNAME=	pygtk-2.24.0
@@ -22,12 +22,13 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=	gmake pkg-config
 
+.include "options.mk"
+
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
-.include "../../math/py-numpy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.15.3
 .include "../../devel/py-gobject/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.16.0
