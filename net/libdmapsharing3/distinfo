@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/11/30 22:34:44 wiz Exp $
+
+SHA1 (libdmapsharing-2.9.15.tar.gz) = 289a83813a391dd471f8fef56377e167634eeea2
+RMD160 (libdmapsharing-2.9.15.tar.gz) = 2113dcbc97859197ceea951a7ca17da123bcee4b
+Size (libdmapsharing-2.9.15.tar.gz) = 708500 bytes
