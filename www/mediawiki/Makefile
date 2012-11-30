@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2012/10/28 06:30:21 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/11/30 08:12:23 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.wikimedia.org/mediawiki/${VER}/
 
@@ -19,8 +18,8 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "options.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-VER=			1.19
-PVER=			2
+VER=			1.20
+PVER=			1
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -61,9 +60,15 @@ SUBST_SED.perl=		-e "s|/usr/bin/perl|${PERL5}|"
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-patch
 SUBST_MESSAGE.python=	Fixing python path
-SUBST_FILES.python+=	extensions/ConfirmEdit/captcha.py includes/zhtable/Makefile.py
+SUBST_FILES.python+=	extensions/ConfirmEdit/captcha.py
 SUBST_FILES.python+=	maintenance/cssjanus/cssjanus.py maintenance/cssjanus/csslex.py
 SUBST_SED.python=	-e "s,/usr/bin/python,${PYTHONBIN},"
+
+SUBST_CLASSES+=		python2
+SUBST_STAGE.python2=	post-patch
+SUBST_MESSAGE.python2=	Fixing python path
+SUBST_FILES.python2+=	includes/zhtable/Makefile.py
+SUBST_SED.python2=	-e "s,/usr/bin/env python,${PYTHONBIN},"
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
