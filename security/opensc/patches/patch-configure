@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2012/10/24 08:33:51 manu Exp $
+$NetBSD: patch-configure,v 1.2 2012/11/30 14:44:35 gdt Exp $
 
 Make sure we do not link against -lpthread, as we only need mutexes
 that can be found in libc.
@@ -6,10 +6,9 @@ that can be found in libc.
 Linking with -lpthread hurst with opensc-pkcs11.so since NetBSD-6.0
 libpthread cannot be loaded by dlopen()
 
---- configure.orig	2012-10-19 11:29:36.000000000 +0200
-+++ configure	2012-10-19 14:57:03.000000000 +0200
-@@ -12821,8 +12821,17 @@
- ac_compiler_gnu=$ac_cv_c_compiler_gnu
+--- configure.orig	2011-07-15 10:46:59.000000000 +0000
++++ configure
+@@ -12903,6 +12903,15 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  acx_pthread_ok=no
  
@@ -25,4 +24,3 @@ libpthread cannot be loaded by dlopen()
  # We used to check for pthread.h first, but this fails if pthread.h
  # requires special compiler flags (e.g. on True64 or Sequent).
  # It gets checked for in the link test anyway.
- 
