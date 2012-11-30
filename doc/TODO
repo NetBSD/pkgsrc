@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11680 2012/11/29 09:41:50 ryoon Exp $
+$NetBSD: TODO,v 1.11681 2012/11/30 16:03:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1229,7 +1229,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o viewvc-1.1.17
 	o vifm-0.7.4a
 	o vigra-1.9.0
-	o vinagre-3.6.2
 	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.6.2
 	o visual-regexp-3.1
