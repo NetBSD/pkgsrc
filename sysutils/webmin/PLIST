@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/11/02 19:02:50 shattered Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/11/30 10:04:15 jperkin Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -76,11 +76,11 @@ share/webmin/acl/cert_issue.cgi
 share/webmin/acl/cert_output.cgi
 share/webmin/acl/cgi_args.pl
 share/webmin/acl/config
-share/webmin/acl/config-${LOWER_OPSYS}
 share/webmin/acl/config-*-linux
 share/webmin/acl/config-dragonfly
 share/webmin/acl/config-freebsd
 share/webmin/acl/config-macos
+share/webmin/acl/config-netbsd
 share/webmin/acl/config-openbsd
 share/webmin/acl/config-solaris-10-*
 share/webmin/acl/config.info
@@ -256,7 +256,6 @@ share/webmin/acl/webmin.schema
 share/webmin/acl_security.pl
 share/webmin/changepass.pl
 share/webmin/chooser.cgi
-share/webmin/config-${LOWER_OPSYS}
 share/webmin/config-aix
 share/webmin/config-cobalt-linux
 share/webmin/config-coherent-linux
@@ -271,6 +270,7 @@ share/webmin/config-lib.pl
 share/webmin/config-macos
 share/webmin/config-mandrake-linux
 share/webmin/config-msc-linux
+share/webmin/config-netbsd
 share/webmin/config-open-linux
 share/webmin/config-openbsd
 share/webmin/config-openmamba-linux
@@ -295,7 +295,6 @@ share/webmin/cron/CHANGELOG
 share/webmin/cron/acl_security.pl
 share/webmin/cron/backup_config.pl
 share/webmin/cron/cgi_args.pl
-share/webmin/cron/config-${LOWER_OPSYS}
 share/webmin/cron/config-aix
 share/webmin/cron/config-cobalt-linux
 share/webmin/cron/config-coherent-linux
@@ -311,6 +310,7 @@ share/webmin/cron/config-macos
 share/webmin/cron/config-macos-9.2-*
 share/webmin/cron/config-mandrake-linux
 share/webmin/cron/config-msc-linux
+share/webmin/cron/config-netbsd
 share/webmin/cron/config-open-linux
 share/webmin/cron/config-openbsd
 share/webmin/cron/config-openmamba-linux
@@ -552,7 +552,6 @@ share/webmin/init/atboot.pl
 share/webmin/init/backup_config.pl
 share/webmin/init/cgi_args.pl
 share/webmin/init/change_rl.cgi
-share/webmin/init/config-${LOWER_OPSYS}
 share/webmin/init/config-aix
 share/webmin/init/config-cobalt-linux-2.2-4.0
 share/webmin/init/config-cobalt-linux-5.0-*
@@ -569,6 +568,7 @@ share/webmin/init/config-irix
 share/webmin/init/config-macos
 share/webmin/init/config-mandrake-linux
 share/webmin/init/config-msc-linux
+share/webmin/init/config-netbsd
 share/webmin/init/config-open-linux
 share/webmin/init/config-openbsd
 share/webmin/init/config-openmamba-linux
@@ -962,7 +962,6 @@ share/webmin/lang_list.txt
 share/webmin/maketemp.pl
 share/webmin/man/CHANGELOG
 share/webmin/man/cgi_args.pl
-share/webmin/man/config-${LOWER_OPSYS}
 share/webmin/man/config-aix
 share/webmin/man/config-cobalt-linux
 share/webmin/man/config-coherent-linux
@@ -978,6 +977,7 @@ share/webmin/man/config-lfs-linux
 share/webmin/man/config-macos
 share/webmin/man/config-mandrake-linux
 share/webmin/man/config-msc-linux
+share/webmin/man/config-netbsd
 share/webmin/man/config-open-linux
 share/webmin/man/config-open-linux-3.1e
 share/webmin/man/config-openbsd
@@ -1148,7 +1148,6 @@ share/webmin/proc/Util.class
 share/webmin/proc/Util.java
 share/webmin/proc/acl_security.pl
 share/webmin/proc/cgi_args.pl
-share/webmin/proc/config-${LOWER_OPSYS}
 share/webmin/proc/config-*-linux
 share/webmin/proc/config-aix
 share/webmin/proc/config-dragonfly
@@ -1156,6 +1155,7 @@ share/webmin/proc/config-freebsd
 share/webmin/proc/config-hpux
 share/webmin/proc/config-irix
 share/webmin/proc/config-macos
+share/webmin/proc/config-netbsd
 share/webmin/proc/config-openbsd
 share/webmin/proc/config-openserver
 share/webmin/proc/config-osf1
