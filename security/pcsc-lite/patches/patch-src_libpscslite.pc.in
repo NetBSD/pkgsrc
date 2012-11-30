@@ -1,0 +1,15 @@
+$NetBSD: patch-src_libpscslite.pc.in,v 1.1 2012/11/30 14:28:55 gdt Exp $
+
+Make sure dependencies (opensc) do not get -pthread.
+
+--- src/libpcsclite.pc.in.orig	2012-11-30 10:43:54.000000000 +0100
++++ src/libpcsclite.pc.in	2012-11-30 10:46:24.000000000 +0100
+@@ -7,6 +7,6 @@
+ Name: PCSC Lite
+ Description: PC/SC smart card interface
+ Version: @VERSION@
+ Libs: -L${libdir} -lpcsclite
+-Libs.private: @PTHREAD_LIBS@
+-Cflags: -I${includedir} @PTHREAD_CFLAGS@
++Libs.private:
++Cflags: -I${includedir}
