@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2012/10/24 08:33:51 manu Exp $
+# $NetBSD: Makefile.common,v 1.9 2012/11/30 14:44:34 gdt Exp $
 #
 # used by security/opensc/Makefile
 # used by security/opensc-signer/Makefile
 
-OPENSC_PKG_VERSION=	0.11.13
+OPENSC_PKG_VERSION=	0.12.2
 DISTNAME=		opensc-${OPENSC_PKG_VERSION}
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/opensc/
@@ -20,8 +20,10 @@ USE_TOOLS+=		gmake pkg-config
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--disable-sensitive-logging
-CONFIGURE_ENV+=		PCSC_CFLAGS=-I${PREFIX}/include/PCSC
+# Previous versions needed these, but 0.12.2 configure does not
+# recognize them.
+#CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+#CONFIGURE_ARGS+=	--disable-sensitive-logging
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ENV+=		PCSC_CFLAGS=-I${PREFIX}/include/PCSC
