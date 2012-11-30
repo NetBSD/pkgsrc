@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.6 2012/11/23 12:13:35 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.7 2012/11/30 16:22:49 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -176,6 +176,7 @@ read_old_scan(const char *path)
 	entry_start = buf;
 	l_start = l_end = NULL;
 	entry_start = buf;
+	s_start = s_end = NULL;
 	for (line = buf; *line; line = eol) {
 		eol = strchr(line, '\n');
 		if (eol == NULL)
@@ -188,6 +189,7 @@ read_old_scan(const char *path)
 			    entry_start, line);
 			l_start = l_end = NULL;
 			entry_start = line;
+			s_start = s_end = NULL;
 		} else if (strncmp(line, "PKG_LOCATION=", 13) == 0) {
 			l_start = line + 13;
 			l_end = eol - 1;
