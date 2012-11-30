@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3677 2012/11/30 14:45:00 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3678 2012/11/30 15:51:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5665,3 +5665,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-wle to 0.9.7 [wen 2012-11-30]
 	Updated math/R-statmod to 1.4.16 [wen 2012-11-30]
 	Updated security/opensc to 0.12.2 [gdt 2012-11-30]
+	Added security/libsecret version 0.12 [ryoon 2012-11-30]
