@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3673 2012/11/30 08:26:01 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3674 2012/11/30 08:35:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5661,3 +5661,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/moodle to 2.3.3 [wen 2012-11-30]
 	Updated www/mediawiki to 1.20.1 [wen 2012-11-30]
 	Updated math/p5-Math-Prime-Util to 0.14 [wen 2012-11-30]
+	Updated math/R-xts to 0.8.8 [wen 2012-11-30]
