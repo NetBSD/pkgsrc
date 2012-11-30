@@ -1,8 +1,7 @@
-$NetBSD: patch-src_thread_unix.c,v 1.1 2012/10/24 09:01:41 manu Exp $
+$NetBSD: patch-src_thread_unix.c,v 1.2 2012/11/30 14:28:55 gdt Exp $
 
-Make sure libpscslite.so is not linked against -lphtread on NetBSD, as
-loading libpthread.so through dlopen() is now forbidden
-
+Make sure libpscslite.so is not linked against -lpthread on NetBSD, as
+loading libpthread.so through dlopen() is now forbidden.
 
 --- ./src/thread_unix.c.orig	2012-10-24 06:22:45.000000000 +0200
 +++ ./src/thread_unix.c	2012-10-24 06:23:57.000000000 +0200
