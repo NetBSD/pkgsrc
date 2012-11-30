@@ -1,17 +1,12 @@
-$NetBSD: distinfo,v 1.9 2012/10/24 08:33:51 manu Exp $
+$NetBSD: distinfo,v 1.10 2012/11/30 14:44:34 gdt Exp $
 
-SHA1 (opensc-0.11.13.tar.gz) = 408b374286004c3df15ec17856f69fd4c2a1aceb
-RMD160 (opensc-0.11.13.tar.gz) = cd900866e51cd64fa7c5a3287cd58193dec26528
-Size (opensc-0.11.13.tar.gz) = 1513327 bytes
-SHA1 (patch-aa) = ad1c02161590c43170137d1deeaf5e88e7fef1ce
-SHA1 (patch-ab) = 6d3d055abd1b94c7024838b9b25cc6005af0d36a
-SHA1 (patch-ac) = 6c77415312d1ab149a9cbae9c49f4cf31c950502
-SHA1 (patch-ad) = a618df0e8bc59af9ccea3f3b423b363e09ab0a4c
-SHA1 (patch-ae) = 94ca059a2e9bf5689f4193587247e443213df9a4
-SHA1 (patch-af) = 3b8db1b680c833940973f11b8abb47e34fa5ecd0
-SHA1 (patch-ag) = 1d2de187008d4ce9aac1f97f829aafd035324082
-SHA1 (patch-ah) = e9a8e3aa06af5a7ce47015f8eba41fd2bb12b32d
-SHA1 (patch-configure) = 65af2389d4a3b875ea206542ac94446e0bfc4796
-SHA1 (patch-src_libopensc_card-setcos.c) = 209bf0a92f9872635ea06d5ea9a7742c7874d61d
-SHA1 (patch-src_libopensc_cards.h) = ebc1db10feda1b2f6a666842120772908c778db7
-SHA1 (patch-src_pkcs11_pkcs11-global.c) = 06c93969a04c930a87a607f6d48a13197c1307bf
+SHA1 (opensc-0.12.2.tar.gz) = 8c34be52eb94025eb181c02b466223901bef744c
+RMD160 (opensc-0.12.2.tar.gz) = 45504135db05fd404a357ebd8bea047c5c8604dc
+Size (opensc-0.12.2.tar.gz) = 1738553 bytes
+SHA1 (patch-aa) = f7993647c19d3cca3b976d66a97ee18fca12f8b2
+SHA1 (patch-ab) = 4d19b0990b227aceb3ab4bf8c1f222f337ee1ff7
+SHA1 (patch-configure) = fcd938ec3f269642fbd577868768c8ac67270be6
+SHA1 (patch-src_common_compat__getopt.c) = a1a473a6d2690dacb968be7991e6218233b20e7f
+SHA1 (patch-src_common_compat__getopt.h) = cdd04e708f249a3969a47c4ed458d6b86a11d2f1
+SHA1 (patch-src_common_compat__getopt__main.c) = 0a9a608434ec8f274627b2f65f5c53a6ceb79f2a
+SHA1 (patch-src_pkcs11_pkcs11-global.c) = 5d0d23706f932f10a63d8da82ab34d3c00e470f5
