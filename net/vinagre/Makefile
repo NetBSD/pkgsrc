@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2012/10/23 17:19:17 asau Exp $
+# $NetBSD: Makefile,v 1.35 2012/11/30 16:02:32 ryoon Exp $
 #
 
-DISTNAME=	vinagre-3.4.2
-PKGREVISION=	4
+DISTNAME=	vinagre-3.6.2
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/3.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/3.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,27 +24,27 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.vinagre
 PKG_SUPPORTED_OPTIONS=	avahi telepathy
 .include "../../mk/bsd.options.mk"
 .if empty(PKG_OPTIONS:Mavahi)
-CONFIGURE_ARGS+= --disable-avahi
+CONFIGURE_ARGS+= --without-avahi
 .else
 .include "../../net/avahi/buildlink3.mk"
 .endif
 PLIST_VARS+= telepathy
 .if !empty(PKG_OPTIONS:Mtelepathy)
-CONFIGURE_ARGS+= --enable-telepathy
+CONFIGURE_ARGS+= --with-telepathy
 .include "../../chat/telepathy-glib/buildlink3.mk"
 PLIST.telepathy= yes
 .else
-CONFIGURE_ARGS+= --disable-telepathy
+CONFIGURE_ARGS+= --without-telepathy
 .endif
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.4.3
 .include "../../net/gtk-vnc/buildlink3.mk"
-.include "../../security/libgnome-keyring/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
