@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2010/09/01 15:59:23 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2012/11/30 14:44:34 gdt Exp $
 
---- etc/Makefile.in.orig	2010-02-16 09:32:17.000000000 +0000
+Disable installation of config file, because pkgsrc installs config
+files as examples.
+
+--- etc/Makefile.in.orig	2011-07-15 10:47:01.000000000 +0000
 +++ etc/Makefile.in
-@@ -471,12 +471,7 @@ opensc.conf: opensc.conf.in force
+@@ -466,12 +466,7 @@ opensc.conf: opensc.conf.in force
  		-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
  		-e 's|@DEFAULT_PCSC_PROVIDER[@]|$(DEFAULT_PCSC_PROVIDER)|g' \
  		< $< > $@

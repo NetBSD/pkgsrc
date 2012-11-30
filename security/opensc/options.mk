@@ -1,7 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/02/26 10:50:05 hasso Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/30 14:44:34 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
-PKG_SUPPORTED_OPTIONS=	openct pcsc-lite
+
+# Really this should be an options group; exactly one of openct,
+# pcsc-lite, or ctapi must be specified.
+PKG_SUPPORTED_OPTIONS=	pcsc-lite openct
 PKG_SUGGESTED_OPTIONS=	pcsc-lite
 
 .include "../../mk/bsd.options.mk"
