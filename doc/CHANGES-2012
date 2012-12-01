@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3688 2012/12/01 13:59:18 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3689 2012/12/01 15:22:41 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5677,3 +5677,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Log-Handler to 0.76 [wen 2012-12-01]
 	Updated devel/p5-Test-Spec to 0.46 [wen 2012-12-01]
 	Updated textproc/p5-Data-FormValidator to 4.80 [wen 2012-12-01]
+	Updated filesystems/openafs to 1.6.1 [jakllsch 2012-12-01]
