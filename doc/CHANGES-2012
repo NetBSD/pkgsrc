@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3684 2012/12/01 11:53:09 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3685 2012/12/01 12:43:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5673,3 +5673,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/libmsn to 4.2.1 [ryoon 2012-12-01]
 	Updated editors/zim to 0.57 [ryoon 2012-12-01]
 	Updated devel/p5-Test-Weaken to 3.022000 [wen 2012-12-01]
+	Updated time/p5-DateTime-TimeZone to 1.56 [wen 2012-12-01]
