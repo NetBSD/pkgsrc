@@ -1,4 +1,3 @@
 libmsn is a C++ library for Microsoft's MSN Messenger service. It provides
 a high-level interface that allows an application to access instant messaging
 features with ease.
-
