@@ -1,4 +1,6 @@
-$NetBSD: patch-plugins_sound_esd_sound_esd.h,v 1.1 2011/12/04 21:59:37 marino Exp $
+$NetBSD: patch-plugins_sound_esd_sound_esd.h,v 1.2 2012/12/01 15:28:03 darcy Exp $
+
+- Add Dragonfly support
 
 --- plugins/sound_esd/sound_esd.h.orig	2009-09-21 00:25:31.000000000 +0000
 +++ plugins/sound_esd/sound_esd.h
