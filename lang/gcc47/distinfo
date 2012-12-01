@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2012/11/16 01:03:54 joerg Exp $
+$NetBSD: distinfo,v 1.12 2012/12/01 02:29:32 sbd Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-4.7.0.tar.bz2) = 03b8241477a9f8a34f6efe7273d92b9b6dd9fe82
-RMD160 (gcc-4.7.0.tar.bz2) = 4ed660b281cdb9bcf98f5c2cf2da105c71db5be4
-Size (gcc-4.7.0.tar.bz2) = 82518546 bytes
+SHA1 (gcc-4.7.2.tar.bz2) = a464ba0f26eef24c29bcd1e7489421117fb9ee35
+RMD160 (gcc-4.7.2.tar.bz2) = fc281ade14b47d2a9c2ced4f7082c74bfbae31c1
+Size (gcc-4.7.2.tar.bz2) = 82884636 bytes
 SHA1 (patch-configure) = 51c0978c60baddd90ef7e512445fdef913c04e6c
 SHA1 (patch-gcc_Makefile.in) = 1cf954d214a1d4a3fd4fece1f577f11b511e20ed
 SHA1 (patch-gcc_config.gcc) = efa4ecabd71bdec14d5dd1f8bb836116c7a9d6e9
@@ -24,7 +24,7 @@ SHA1 (patch-libgcc_config_i386_dragonfly-unwind.h) = 9d77252dd982495e90f95b82706
 SHA1 (patch-libgcc_crtstuff.c) = 88500ea895cd683608f8f2b7177149f11947e3b4
 SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 2a0b8c6d2f86d985506578b4e74947d3fb1766a5
 SHA1 (patch-libgfortran_configure) = b3bbc7d9201073a1bed0b7e10141465bab52c8be
-SHA1 (patch-libgo_Makefile.in) = c06e3f0deb9f906d2c158262cffdc3fb7af95602
+SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
 SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
@@ -34,6 +34,5 @@ SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__base.h) = 1c8ee3ea80bd88
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__configure__char.cc) = d5649f42b61ff3c27d60e813cc844b820525aee4
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h) = fecd20146d8e0bdebb073c8d64886e36293416fd
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_os__defines.h) = 9a45ecb4309c50ca90008b2fc7d3b44d002698b4
-SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 94879703659b960c7b61122b4b4173e01cec1afc
-SHA1 (patch-libstdc++-v3_configure) = 4846c93afac42e4fdd20141234d601517cab7175
+SHA1 (patch-libstdc++-v3_configure) = 7aa0c5fea3b446657aa27f603d99ea50ed1e44c1
 SHA1 (patch-libstdc++-v3_configure.host) = 7426ea4a9735e5f886f4a3ffb4a9ba62734178c4
