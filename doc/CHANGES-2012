@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3680 2012/11/30 22:35:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3681 2012/12/01 02:29:47 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5668,3 +5668,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/libsecret version 0.12 [ryoon 2012-11-30]
 	Updated net/vinagre to 3.6.2 [ryoon 2012-11-30]
 	Added net/libdmapsharing3 version 2.9.15 [wiz 2012-11-30]
+	Updated lang/gcc47 to 4.7.2 [sbd 2012-12-01]
+	Updated lang/gcc47-libs to 4.7.2nb1 [sbd 2012-12-01]
