@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 16:08:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/01 15:22:32 jakllsch Exp $
 
-DISTNAME=	openafs-1.4.14-src
+DISTNAME=	openafs-1.6.1-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	filesystems net sysutils
-MASTER_SITES=	http://www.openafs.org/dl/openafs/1.4.14/
+MASTER_SITES=	http://www.openafs.org/dl/openafs/1.6.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
@@ -46,10 +46,12 @@ BUILD_DEFS+= VARBASE
 
 # attempt to future-proof configuration
 pre-build:
-	cd ${WRKSRC}/src/config && for i in 50 60 70 80 90; do	\
-		${SED} -e 's|nbsd40|nbsd'$$i'|g' param.i386_nbsd40.h > param.i386_nbsd$$i.h; \
-		${SED} -e 's|nbsd40|nbsd'$$i'|g' param.amd64_nbsd40.h > param.amd64_nbsd$$i.h; \
-		${CP} param.nbsd40.h param.nbsd$$i.h; 			\
+	cd ${WRKSRC}/src/config && for i in 70 80 90; do \
+		${SED} -e 's|nbsd60|nbsd'$$i'|g' param.i386_nbsd60.h > param.i386_nbsd$$i.h; \
+		${SED} -e 's|nbsd60|nbsd'$$i'|g' param.amd64_nbsd60.h > param.amd64_nbsd$$i.h; \
+		${CP} param.nbsd60.h param.nbsd$$i.h; \
 	done
+
+MAKE_ENV+=	LD_RUN_PATH=${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
