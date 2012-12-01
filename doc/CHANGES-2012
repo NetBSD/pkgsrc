@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3689 2012/12/01 15:22:41 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.3690 2012/12/01 15:33:41 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5678,3 +5678,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Test-Spec to 0.46 [wen 2012-12-01]
 	Updated textproc/p5-Data-FormValidator to 4.80 [wen 2012-12-01]
 	Updated filesystems/openafs to 1.6.1 [jakllsch 2012-12-01]
+	Updated devel/ptlib to 2.10.7nb1 [darcy 2012-12-01]
