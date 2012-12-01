@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.220.2.1 2012/10/03 12:08:01 spz Exp $
+# $NetBSD: Makefile,v 1.220.2.2 2012/12/01 12:04:00 tron Exp $
 
 DISTNAME=	gimp-2.8.2
-PKGREVISION=	3
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNU:=gimp/v${PKGVERSION_NOREV:R}/} \
