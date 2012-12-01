@@ -1,6 +1,6 @@
-$NetBSD: patch-libstdc++-v3_configure,v 1.1 2012/06/23 22:13:02 marino Exp $
+$NetBSD: patch-libstdc++-v3_configure,v 1.2 2012/12/01 02:29:32 sbd Exp $
 
---- libstdc++-v3/configure.orig	2012-03-02 07:13:55.000000000 +0000
+--- libstdc++-v3/configure.orig	2012-08-06 14:34:27.000000000 +0000
 +++ libstdc++-v3/configure
 @@ -15704,7 +15704,7 @@ $as_echo "stdio" >&6; }
  if test "${enable_clocale+set}" = set; then :
@@ -21,10 +21,15 @@ $NetBSD: patch-libstdc++-v3_configure,v 1.1 2012/06/23 22:13:02 marino Exp $
        *)
  	if test x"$with_newlib" = x"yes"; then
  	  enable_clocale_flag=newlib
-@@ -15883,6 +15886,23 @@ $as_echo "darwin or freebsd" >&6; }
-       CTIME_CC=config/locale/generic/time_members.cc
-       CLOCALE_INTERNAL_H=config/locale/generic/c++locale_internal.h
-       ;;
+@@ -15878,6 +15881,23 @@ $as_echo "darwin or freebsd" >&6; }
+       CMESSAGES_H=config/locale/generic/messages_members.h
+       CMESSAGES_CC=config/locale/generic/messages_members.cc
+       CMONEY_CC=config/locale/generic/monetary_members.cc
++      CNUMERIC_CC=config/locale/generic/numeric_members.cc
++      CTIME_H=config/locale/generic/time_members.h
++      CTIME_CC=config/locale/generic/time_members.cc
++      CLOCALE_INTERNAL_H=config/locale/generic/c++locale_internal.h
++      ;;
 +    dragonfly)
 +      { $as_echo "$as_me:${as_lineno-$LINENO}: result: dragonfly" >&5
 +$as_echo "dragonfly" >&6; }
@@ -37,11 +42,6 @@ $NetBSD: patch-libstdc++-v3_configure,v 1.1 2012/06/23 22:13:02 marino Exp $
 +      CMESSAGES_H=config/locale/generic/messages_members.h
 +      CMESSAGES_CC=config/locale/generic/messages_members.cc
 +      CMONEY_CC=config/locale/generic/monetary_members.cc
-+      CNUMERIC_CC=config/locale/generic/numeric_members.cc
-+      CTIME_H=config/locale/generic/time_members.h
-+      CTIME_CC=config/locale/generic/time_members.cc
-+      CLOCALE_INTERNAL_H=config/locale/generic/c++locale_internal.h
-+      ;;
- 
-     gnu)
-       { $as_echo "$as_me:${as_lineno-$LINENO}: result: gnu" >&5
+       CNUMERIC_CC=config/locale/generic/numeric_members.cc
+       CTIME_H=config/locale/generic/time_members.h
+       CTIME_CC=config/locale/generic/time_members.cc
