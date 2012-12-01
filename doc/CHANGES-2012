@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3683 2012/12/01 10:36:58 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3684 2012/12/01 11:53:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5672,3 +5672,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gcc47-libs to 4.7.2nb1 [sbd 2012-12-01]
 	Updated chat/libmsn to 4.2.1 [ryoon 2012-12-01]
 	Updated editors/zim to 0.57 [ryoon 2012-12-01]
+	Updated devel/p5-Test-Weaken to 3.022000 [wen 2012-12-01]
