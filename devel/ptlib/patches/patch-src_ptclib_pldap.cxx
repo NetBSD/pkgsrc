@@ -1,4 +1,6 @@
-$NetBSD: patch-src_ptclib_pldap.cxx,v 1.1 2012/04/19 12:34:43 hans Exp $
+$NetBSD: patch-src_ptclib_pldap.cxx,v 1.2 2012/12/01 15:28:03 darcy Exp $
+
+- Add Solaris support
 
 --- src/ptclib/pldap.cxx.orig	2009-09-21 02:25:24.000000000 +0200
 +++ src/ptclib/pldap.cxx	2012-04-18 20:29:09.841685925 +0200
