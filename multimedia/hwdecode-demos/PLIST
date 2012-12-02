@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 04:19:08 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/02 15:50:35 cheusov Exp $
 bin/vaapi_h264
 bin/vaapi_mpeg2
 bin/vaapi_mpeg4
 bin/vaapi_vc1
+${PLIST.vdpau}bin/vdpau_h264
+${PLIST.vdpau}bin/vdpau_mpeg2
+${PLIST.vdpau}bin/vdpau_mpeg4
+${PLIST.vdpau}bin/vdpau_vc1
 share/hwdecode-demos/h264.mp4
 share/hwdecode-demos/mpeg2.m2v
 share/hwdecode-demos/mpeg4.mp4
