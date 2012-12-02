@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11686 2012/12/02 12:35:45 wen Exp $
+$NetBSD: TODO,v 1.11687 2012/12/02 13:14:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1343,7 +1343,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
-	o xscope-1.4
 	o xsd-3.3.0
 	o xsoldier-1.4
 	o xterm-287
