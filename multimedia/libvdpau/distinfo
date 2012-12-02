@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/02/20 14:24:05 wiz Exp $
+$NetBSD: distinfo,v 1.4 2012/12/02 12:15:08 cheusov Exp $
 
-SHA1 (libvdpau-0.4.1.tar.gz) = d09deff305e4927bc96fca8383f991d137e64d45
-RMD160 (libvdpau-0.4.1.tar.gz) = 94bd82e0c1a9d1fd3854bec4718720b9bc6894f1
-Size (libvdpau-0.4.1.tar.gz) = 456607 bytes
+SHA1 (libvdpau-0.5.tar.gz) = 1b18b8f75eea52740af84881313d860ad5c27d0b
+RMD160 (libvdpau-0.5.tar.gz) = d189dff51a745945c7140bea70b1af20288872e4
+Size (libvdpau-0.5.tar.gz) = 478945 bytes
 SHA1 (patch-src_Makefile.in) = eee1081fdc114e7bcd8c1a74b8fa60c2f4d479dc
