@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/02 10:38:51 cheusov Exp $
 #
 
-DISTNAME=	parallel-20110522
-PKGREVISION=	1
+DISTNAME=	parallel-20121122
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GNU:=parallel/}
 EXTRACT_SUFX=	.tar.bz2
