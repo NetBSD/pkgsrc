@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3697 2012/12/02 10:29:05 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.3698 2012/12/02 10:39:08 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5686,3 +5686,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/zoem to 11.166 [cheusov 2012-12-02]
 	Updated net/wireshark to 1.8.4 [tron 2012-12-02]
 	Updated lang/mawk to 1.3.4.20121129 [cheusov 2012-12-02]
+	Updated parallel/parallel to 20121122 [cheusov 2012-12-02]
