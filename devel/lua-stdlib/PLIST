@@ -1,17 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/12 01:45:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/02 09:26:08 cheusov Exp $
 ${LUA_LDIR}/base.lua
+${LUA_LDIR}/bin.lua
 ${LUA_LDIR}/debug_ext.lua
+${LUA_LDIR}/debug_init.lua
+${LUA_LDIR}/fstable.lua
 ${LUA_LDIR}/getopt.lua
 ${LUA_LDIR}/io_ext.lua
 ${LUA_LDIR}/lcs.lua
 ${LUA_LDIR}/list.lua
 ${LUA_LDIR}/math_ext.lua
 ${LUA_LDIR}/mbox.lua
+${LUA_LDIR}/modules.lua
 ${LUA_LDIR}/object.lua
+${LUA_LDIR}/package_ext.lua
 ${LUA_LDIR}/parser.lua
-${LUA_LDIR}/rex.lua
 ${LUA_LDIR}/set.lua
 ${LUA_LDIR}/std.lua
+${LUA_LDIR}/strbuf.lua
+${LUA_LDIR}/strict.lua
 ${LUA_LDIR}/string_ext.lua
+${LUA_LDIR}/tree.lua
 ${LUA_LDIR}/table_ext.lua
 ${LUA_LDIR}/xml.lua
