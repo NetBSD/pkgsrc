@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/13 09:44:17 spz Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/02 11:31:17 spz Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -29,7 +29,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-3.7.jar
+share/tomcat/lib/ecj-3.7.2.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -451,9 +451,9 @@ share/tomcat/webapps/examples/servlets/reqheaders.html
 share/tomcat/webapps/examples/servlets/reqinfo.html
 share/tomcat/webapps/examples/servlets/reqparams.html
 share/tomcat/webapps/examples/servlets/sessions.html
-share/tomcat/webapps/host-manager/401.jsp
-share/tomcat/webapps/host-manager/403.jsp
 share/tomcat/webapps/host-manager/META-INF/context.xml
+share/tomcat/webapps/host-manager/WEB-INF/jsp/401.jsp
+share/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/host-manager/WEB-INF/web.xml
 share/tomcat/webapps/host-manager/images/add.gif
 share/tomcat/webapps/host-manager/images/asf-logo.gif
@@ -465,9 +465,9 @@ share/tomcat/webapps/host-manager/images/tomcat.gif
 share/tomcat/webapps/host-manager/images/update.gif
 share/tomcat/webapps/host-manager/images/void.gif
 share/tomcat/webapps/host-manager/manager.xml
-share/tomcat/webapps/manager/401.jsp
-share/tomcat/webapps/manager/403.jsp
 share/tomcat/webapps/manager/META-INF/context.xml
+share/tomcat/webapps/manager/WEB-INF/jsp/401.jsp
+share/tomcat/webapps/manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
