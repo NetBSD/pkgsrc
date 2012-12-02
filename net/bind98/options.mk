@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2012/11/10 23:44:30 pettai Exp $
+# $NetBSD: options.mk,v 1.3 2012/12/02 11:51:44 is Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind98
 PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	inet6 threads mysql pgsql ldap dlz-filesystem
-PKG_SUPPORTED_OPTIONS+=	rrl
+PKG_SUPPORTED_OPTIONS+=	rrl kerberos
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -20,6 +20,8 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=	inet6
 .endif
+
+PKG_SUGGESTED_OPTIONS+= kerberos
 
 .include "../../mk/bsd.options.mk"
 
@@ -88,6 +90,16 @@ CONFIGURE_ARGS+=	--disable-threads
 ###
 ### dig(1) option +sigchase for DNSSEC signature chasing
 ###
+
+###
+### kerberos/gssapi support
+###
+.if !empty(PKG_OPTIONS:Mkerberos)
+CONFIGURE_ARGS+=       --with-gssapi=${BUILDLINK_PREFIX.${KRB5_TYPE}}
+.include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=       --without-gssapi
+.endif
 .if !empty(PKG_OPTIONS:Mbind-dig-sigchase)
 # If anything else needs to add entries to STD_CDEFINES, this will need
 # to be changed so that the two can cooperate.
