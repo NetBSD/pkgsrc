@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11681 2012/11/30 16:03:50 ryoon Exp $
+$NetBSD: TODO,v 1.11682 2012/12/02 09:52:31 tron Exp $
 
 Suggested new packages
 ======================
@@ -1248,7 +1248,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wine-devel-1.5.18 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wireshark-1.8.4
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
