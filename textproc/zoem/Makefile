@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/02 09:50:02 cheusov Exp $
 #
 
-DISTNAME=	zoem-10-265
-PKGNAME=	${DISTNAME:S/10-/10./}
+DISTNAME=	${PKGNAME:S/./-/}
+PKGNAME=	zoem-11.166
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.micans.org/zoem/src/
 
