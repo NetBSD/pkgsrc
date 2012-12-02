@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3701 2012/12/02 12:35:45 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3702 2012/12/02 13:13:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5690,3 +5690,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/pcre to 8.32 [adam 2012-12-02]
 	Updated multimedia/libvdpau to 0.5 [cheusov 2012-12-02]
 	Updated math/py-sympy to 0.7.2 [wen 2012-12-02]
+	Updated devel/py-mock to 1.0.1 [wen 2012-12-02]
