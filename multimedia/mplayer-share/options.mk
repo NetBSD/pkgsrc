@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2012/11/29 17:27:17 drochner Exp $
+# $NetBSD: options.mk,v 1.48 2012/12/02 01:33:52 cheusov Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -7,7 +7,9 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 .include "../../mk/oss.buildlink3.mk"
+
 .include "../../multimedia/libvdpau/available.mk"
+.include "../../comms/lirc/available.mk"
 
 # -------------------------------------------------------------------------
 # Define PKG_SUPPORTED_OPTIONS based on the current package and system.
@@ -36,6 +38,10 @@ PKG_SUPPORTED_OPTIONS+=	aalib caca esound ggi mplayer-menu nas pulseaudio sdl
 
 .if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	vdpau
+.endif
+
+.if ${LIRC_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+=	lirc
 .endif
 
 .  if ${OPSYS} != "SunOS"
@@ -89,7 +95,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 	    dvdread dvdnav \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
-	    nas oss pulseaudio png sdl theora vorbis x264 xvid vdpau
+	    nas oss pulseaudio png sdl theora vorbis x264 xvid vdpau lirc
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${o})
 PKG_SUGGESTED_OPTIONS+=	${o}
 .  endif
@@ -354,6 +360,13 @@ CONFIGURE_ARGS+=	--enable-vdpau
 .  include "../../multimedia/libvdpau/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-vdpau
+.endif
+
+.if !empty(PKG_OPTIONS:Mlirc)
+CONFIGURE_ARGS+=	--enable-lirc
+.  include "../../comms/lirc/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-lirc
 .endif
 
 # -------------------------------------------------------------------------
