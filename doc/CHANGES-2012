@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3696 2012/12/02 09:52:31 tron Exp $
+$NetBSD: CHANGES-2012,v 1.3697 2012/12/02 10:29:05 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5685,3 +5685,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/lua-stdlib-doc to 28 [cheusov 2012-12-02]
 	Updated textproc/zoem to 11.166 [cheusov 2012-12-02]
 	Updated net/wireshark to 1.8.4 [tron 2012-12-02]
+	Updated lang/mawk to 1.3.4.20121129 [cheusov 2012-12-02]
