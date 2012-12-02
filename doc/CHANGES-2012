@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3693 2012/12/02 09:26:31 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.3694 2012/12/02 09:27:13 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5682,3 +5682,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-html5lib to 0.95 [adam 2012-12-01]
 	Added comms/lirc version 0.9.0 [cheusov 2012-12-02]
 	Updated devel/lua-stdlib to 28 [cheusov 2012-12-02]
+	Updated devel/lua-stdlib-doc to 28 [cheusov 2012-12-02]
