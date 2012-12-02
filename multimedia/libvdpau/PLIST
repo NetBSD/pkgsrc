@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/01 20:41:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/02 12:15:08 cheusov Exp $
 include/vdpau/vdpau.h
 include/vdpau/vdpau_x11.h
 lib/libvdpau.la
@@ -8,3 +8,4 @@ share/doc/libvdpau/AUTHORS
 share/doc/libvdpau/COPYING
 share/doc/libvdpau/NEWS
 share/doc/libvdpau/README
+share/examples/libvdpau/vdpau_wrapper.cfg
