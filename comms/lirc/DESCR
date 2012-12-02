@@ -1,0 +1,5 @@
+LIRC is a package that supports receiving and sending IR signals of
+the most common IR remote controls. It contains a daemon that decodes
+and sends IR signals, a mouse daemon that translates IR signals to
+mouse movements and a couple of user programs that allow to control
+your computer with a remote control.
