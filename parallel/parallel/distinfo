@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/23 21:38:37 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2012/12/02 10:38:51 cheusov Exp $
 
-SHA1 (parallel-20110522.tar.bz2) = 88f29514fda71aa2137c4caa3ce86b033fb66cce
-RMD160 (parallel-20110522.tar.bz2) = 79e6eb4a67804689a056bf15d1531b923f254aee
-Size (parallel-20110522.tar.bz2) = 170201 bytes
+SHA1 (parallel-20121122.tar.bz2) = 3bb25bed991ce73f5f302d1051b278e6ebb3c25a
+RMD160 (parallel-20121122.tar.bz2) = 6e5661e6037de1e0ce3b527a976d4d3270e839f5
+Size (parallel-20121122.tar.bz2) = 236294 bytes
