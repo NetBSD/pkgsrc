@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 09:21:04 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/02 15:50:35 cheusov Exp $
 #
 
 DISTNAME=	hwdecode-demos-0.9.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/
 
@@ -15,6 +15,18 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 
+PLIST_VARS+=	vdpau
+
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.if ${VDPAU_AVAILABLE} == yes
+PLIST.vdpau=	yes
+.else
+CONFIGURE_ARGS+=	--disable-vdpau
+.endif
+
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../multimedia/libva/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
