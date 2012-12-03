@@ -1,0 +1,15 @@
+$NetBSD: patch-intern_ghost_SConscript,v 1.1 2012/12/03 13:15:51 ryoon Exp $
+
+* Add window system support on NetBSD
+
+--- intern/ghost/SConscript.orig	2012-10-09 18:33:16.000000000 +0000
++++ intern/ghost/SConscript
+@@ -26,7 +26,7 @@ if env['WITH_GHOST_SDL']:
+             pass
+     incs += ' ' + env['BF_SDL_INC']
+     defs += ['WITH_GHOST_SDL']
+-elif window_system in ('linux', 'openbsd3', 'sunos5', 'freebsd7', 'freebsd8', 'freebsd9', 'aix4', 'aix5'):
++elif window_system in ('linux', 'openbsd3', 'sunos5', 'freebsd7', 'freebsd8', 'freebsd9', 'aix4', 'aix5', 'netbsd6'):
+     for f in pf:
+         try:
+             sources.remove('intern' + os.sep + f + 'Win32.cpp')

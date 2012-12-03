@@ -1,45 +1,31 @@
-$NetBSD: patch-ab,v 1.8 2009/11/03 19:06:51 markd Exp $
+$NetBSD: patch-ab,v 1.9 2012/12/03 13:15:50 ryoon Exp $
 
---- source/blender/blenlib/intern/storage.c.orig	2009-05-25 19:46:22 +0300
-+++ source/blender/blenlib/intern/storage.c	2009-08-28 21:32:31 +0300
-@@ -47,7 +47,7 @@
+--- source/blender/blenlib/intern/storage.c.orig	2012-10-09 18:40:29.000000000 +0000
++++ source/blender/blenlib/intern/storage.c
+@@ -43,7 +43,7 @@
  #include <time.h>
  #include <sys/stat.h>
  
--#if defined (__sun__) || defined (__sun) || defined (__sgi)
-+#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__) || defined (__NetBSD__)
+-#if defined(__sun__) || defined(__sun) || defined(__NetBSD__)
++#if defined(__sun__) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <sys/statvfs.h> /* Other modern unix os's should probably use this also */
  #elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
  #include <sys/statfs.h>
-@@ -88,10 +88,6 @@ struct statfs {
- #include <pwd.h>
- #endif
- 
--#if !defined(__FreeBSD__) && !defined(__APPLE__)
--#include <malloc.h>
--#endif
--
- /* lib includes */
- #include "MEM_guardedalloc.h"
- 
-@@ -179,7 +175,7 @@ double BLI_diskfree(char *dir)
- 	return (double) (freec*bytesps*sectorspc);
+@@ -163,7 +163,7 @@ double BLI_dir_free_space(const char *di
+ 	return (double) (freec * bytesps * sectorspc);
  #else
  
--#if defined (__sun__) || defined (__sun) || defined (__sgi)
-+#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__) || defined (__NetBSD__)
+-#if defined(__sun__) || defined(__sun) || defined(__NetBSD__)
++#if defined(__sun__) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  	struct statvfs disk;
  #else
  	struct statfs disk;
-@@ -204,9 +200,9 @@ double BLI_diskfree(char *dir)
- 	return -1;
+@@ -186,7 +186,7 @@ double BLI_dir_free_space(const char *di
+ 	if (statfs(name, &disk)) return(-1);
  #endif
  
--#if defined (__sun__) || defined (__sun) || defined (__sgi)
-+#if defined (__sun__) || defined (__sun) || defined (__sgi) || defined(__DragonFly__) || defined (__NetBSD__)
+-#if defined(__sun__) || defined(__sun) || defined(__NetBSD__)
++#if defined(__sun__) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  	if (statvfs(name, &disk)) return(-1);	
--#elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
-+#elif !defined(__FreeBSD__) && !defined(linux) && !defined (__OpenBSD__) && !defined (__NetBSD__) && (defined(__sparc) || defined(__sparc__))
+ #elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
  	/* WARNING - This may not be supported by geeneric unix os's - Campbell */
- 	if (statfs(name, &disk, sizeof(struct statfs), 0)) return(-1);
- #endif
