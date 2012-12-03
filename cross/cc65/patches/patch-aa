@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/08 19:53:47 wiz Exp $
-
---- make/gcc.mak.orig	2007-06-21 15:40:27.000000000 -0500
+$NetBSD: patch-aa,v 1.2 2012/12/03 14:36:39 wen Exp $
+Fix ${PREFIX}
+--- make/gcc.mak.orig	2012-12-03 21:01:07.000000000 +0000
 +++ make/gcc.mak
-@@ -14,7 +14,7 @@
- MAKEOVERRIDES=
+@@ -15,7 +15,7 @@
+ # (That trick has been disabled.)
  
  # The install prefix and directories
 -prefix		= /usr/local
