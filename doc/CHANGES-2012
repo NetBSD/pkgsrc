@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3711 2012/12/03 15:04:11 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3712 2012/12/03 21:13:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5703,3 +5703,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated cross/cc65 to 2.13.3 [wen 2012-12-03]
 	Updated textproc/p5-Text-BibTeX to 0.66 [wen 2012-12-03]
 	Updated textproc/p5-Text-Xslate to 1.5025 [wen 2012-12-03]
+	Updated security/openct to 0.6.20 [gdt 2012-12-03]
