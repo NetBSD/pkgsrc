@@ -364,7 +364,7 @@ libiconv-cp932		Add supplemental support for CP932.
 libind			Add Indian script support using libind.
 liblqr			Enable liblqr (liquid rescale) support.
 libmms			Enable streaming from mms:// URLS using libmms.
-libmp4v2		Enable libmp4v2 (MP4) support.
+libmp4v2		Enable MP4 support using libmp4v2.
 libmpg123		Enable mpg123 project's core decoder library support.
 libmtp			Enable MTP via libmtp support.
 libofa			Enable Open Fingerprint Architecture library support.
@@ -428,6 +428,7 @@ mozilla-jit		Enable nanojit javascript acceleration.
 mozilla-lightning	Enable the lightning calendar extension.
 mozilla-single-profile	Enable single profiles on mozilla browsers.
 mp3tunes		Enable support for mp3tunes.com.
+mp4v2			Enable MP4 support using mp4v2.
 mpcdec			Enable Musepack decoder library support.
 mpeg3			Enable libmpeg3 MPEG decoding library support.
 mpeg4ip			Enable mpeg4ip support.
