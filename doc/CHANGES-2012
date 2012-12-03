@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3704 2012/12/02 13:58:55 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3705 2012/12/03 10:53:53 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5696,3 +5696,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.8.0.1 [adam 2012-12-02]
 	Updated devel/scmgit-docs to 1.8.0.1 [adam 2012-12-02]
 	Updated www/gitweb to 1.8.0.1 [adam 2012-12-02]
+	Updated archivers/ocaml-zip to 1.04nb2 [jaap1 2012-12-03]
