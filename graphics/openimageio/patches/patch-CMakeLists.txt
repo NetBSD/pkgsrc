@@ -1,0 +1,44 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/12/03 12:54:14 ryoon Exp $
+
+* Enable in-tree build
+* Remove rpath handling
+
+--- CMakeLists.txt.orig	2012-11-16 23:02:42.000000000 +0000
++++ CMakeLists.txt
+@@ -13,10 +13,6 @@ set (CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS T
+ message (STATUS "Project source dir = ${PROJECT_SOURCE_DIR}")
+ message (STATUS "Project build dir = ${CMAKE_BINARY_DIR}")
+ 
+-if (${PROJECT_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+-    message (FATAL_ERROR "Not allowed to run in-source build!")
+-endif ()
+-
+ if (NOT CMAKE_BUILD_TYPE) 
+     set (CMAKE_BUILD_TYPE "Release") 
+ endif ()
+@@ -197,25 +193,6 @@ endif()
+ set (INSTALL_DOCS ON CACHE BOOL "Install documentation")
+ 
+ 
+-###########################################################################
+-# Rpath handling.
+-if (CMAKE_SKIP_RPATH)
+-    # We need to disallow the user from truly setting CMAKE_SKIP_RPATH, since
+-    # we want to run the generated executables from the build tree in order to
+-    # generate the manual page documentation.  However, we make sure the
+-    # install rpath is unset so that the install tree is still free of rpaths
+-    # for linux packaging purposes.
+-    set (CMAKE_SKIP_RPATH FALSE)
+-    unset (CMAKE_INSTALL_RPATH)
+-else ()
+-    set (CMAKE_INSTALL_RPATH "${LIB_INSTALL_DIR}")
+-    if (NOT IS_ABSOLUTE ${CMAKE_INSTALL_RPATH})
+-        set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${LIB_INSTALL_DIR}")
+-    endif ()
+-    set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+-endif ()
+-
+-
+ if (MSVC)
+     add_definitions (-D_CRT_SECURE_NO_DEPRECATE)
+     add_definitions (-D_CRT_SECURE_NO_WARNINGS)
