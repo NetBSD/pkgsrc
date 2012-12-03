@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/06/06 13:56:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/12/03 13:04:24 ryoon Exp $
 bin/opencv_createsamples
 bin/opencv_haartraining
 bin/opencv_performance
@@ -18,9 +18,11 @@ include/opencv2/calib3d/calib3d.hpp
 include/opencv2/contrib/contrib.hpp
 include/opencv2/contrib/detection_based_tracker.hpp
 include/opencv2/contrib/hybridtracker.hpp
+include/opencv2/contrib/openfabmap.hpp
 include/opencv2/contrib/retina.hpp
 include/opencv2/core/core.hpp
 include/opencv2/core/core_c.h
+include/opencv2/core/cuda_devptrs.hpp
 include/opencv2/core/devmem2d.hpp
 include/opencv2/core/eigen.hpp
 include/opencv2/core/gpumat.hpp
@@ -68,10 +70,37 @@ include/opencv2/flann/sampling.h
 include/opencv2/flann/saving.h
 include/opencv2/flann/simplex_downhill.h
 include/opencv2/flann/timer.h
+include/opencv2/gpu/device/border_interpolate.hpp
+include/opencv2/gpu/device/color.hpp
+include/opencv2/gpu/device/common.hpp
+include/opencv2/gpu/device/datamov_utils.hpp
+include/opencv2/gpu/device/detail/color_detail.hpp
+include/opencv2/gpu/device/detail/reduction_detail.hpp
+include/opencv2/gpu/device/detail/transform_detail.hpp
+include/opencv2/gpu/device/detail/type_traits_detail.hpp
+include/opencv2/gpu/device/detail/vec_distance_detail.hpp
+include/opencv2/gpu/device/dynamic_smem.hpp
+include/opencv2/gpu/device/emulation.hpp
+include/opencv2/gpu/device/filters.hpp
+include/opencv2/gpu/device/funcattrib.hpp
+include/opencv2/gpu/device/functional.hpp
+include/opencv2/gpu/device/limits.hpp
+include/opencv2/gpu/device/saturate_cast.hpp
+include/opencv2/gpu/device/scan.hpp
+include/opencv2/gpu/device/static_check.hpp
+include/opencv2/gpu/device/transform.hpp
+include/opencv2/gpu/device/type_traits.hpp
+include/opencv2/gpu/device/utility.hpp
+include/opencv2/gpu/device/vec_distance.hpp
+include/opencv2/gpu/device/vec_math.hpp
+include/opencv2/gpu/device/vec_traits.hpp
+include/opencv2/gpu/device/warp.hpp
+include/opencv2/gpu/device/warp_reduce.hpp
 include/opencv2/gpu/devmem2d.hpp
 include/opencv2/gpu/gpu.hpp
 include/opencv2/gpu/gpumat.hpp
 include/opencv2/gpu/stream_accessor.hpp
+include/opencv2/highgui/cap_ios.h
 include/opencv2/highgui/highgui.hpp
 include/opencv2/highgui/highgui_c.h
 include/opencv2/imgproc/imgproc.hpp
@@ -184,6 +213,7 @@ share/OpenCV/doc/opencv-logo-white.png
 share/OpenCV/doc/opencv-logo.png
 share/OpenCV/doc/opencv-logo2.png
 share/OpenCV/doc/opencv.jpg
+share/OpenCV/doc/opencv2manager.pdf
 share/OpenCV/doc/opencv2refman.pdf
 share/OpenCV/doc/opencv_cheatsheet.pdf
 share/OpenCV/doc/opencv_tutorials.pdf
@@ -215,5 +245,7 @@ share/OpenCV/haarcascades/haarcascade_profileface.xml
 share/OpenCV/haarcascades/haarcascade_righteye_2splits.xml
 share/OpenCV/haarcascades/haarcascade_upperbody.xml
 share/OpenCV/lbpcascades/lbpcascade_frontalface.xml
+share/OpenCV/lbpcascades/lbpcascade_profileface.xml
+share/OpenCV/lbpcascades/lbpcascade_silverware.xml
 @pkgdir share/doc/opencv/ref/pics
 @pkgdir share/doc/opencv/papers
