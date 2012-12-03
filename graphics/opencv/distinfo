@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2012/07/13 18:13:59 prlw1 Exp $
+$NetBSD: distinfo,v 1.15 2012/12/03 13:04:24 ryoon Exp $
 
-SHA1 (OpenCV-2.4.2.tar.bz2) = 96ff27b87e0f028d1d16201afebabec4e0c72367
-RMD160 (OpenCV-2.4.2.tar.bz2) = 496964503629b0ff4432fbdd276837ab3f134411
-Size (OpenCV-2.4.2.tar.bz2) = 52562911 bytes
+SHA1 (OpenCV-2.4.3.tar.bz2) = 982be2c3e52dfc3e9d14692c60bc856b2b766be2
+RMD160 (OpenCV-2.4.3.tar.bz2) = b862ddd9e7fefd885d78835660a9f5c9320889c2
+Size (OpenCV-2.4.3.tar.bz2) = 67240491 bytes
