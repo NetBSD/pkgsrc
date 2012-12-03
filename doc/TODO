@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11688 2012/12/03 13:05:25 ryoon Exp $
+$NetBSD: TODO,v 1.11689 2012/12/03 13:16:33 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bioperl-1.5.0
 	o bison-2.6.5
 	o bitlbee-3.0.6
-	o blender-2.64
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
