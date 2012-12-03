@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/08 19:53:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/12/03 14:36:39 wen Exp $
 
-SHA1 (cc65-sources-2.12.0.tar.bz2) = e009060fda9fbec9fcfa01761abdb1b5aaa01b34
-RMD160 (cc65-sources-2.12.0.tar.bz2) = 579e4877f5f129f8bdff8ce3ad4f15a44c57f25c
-Size (cc65-sources-2.12.0.tar.bz2) = 1051755 bytes
-SHA1 (patch-aa) = 90cb89e3ab42744532a4b57f7f9671b3812770a4
-SHA1 (patch-ab) = 493fd3b61eee5fea407f0c767ebaa0cb0ef7d49f
+SHA1 (cc65-sources-2.13.3.tar.bz2) = 925c6edfcef7057e24ecb0704fa07210faec07bc
+RMD160 (cc65-sources-2.13.3.tar.bz2) = ad728cb61113af4592460bce7d42ca57f6a2fb1a
+Size (cc65-sources-2.13.3.tar.bz2) = 1103245 bytes
+SHA1 (patch-aa) = b78b62ea09c2c61221cae93d2d71588eca51b149
