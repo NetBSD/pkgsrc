@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2012/09/23 05:36:23 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2012/12/03 17:26:40 prlw1 Exp $
 
 BUILDLINK_TREE+=	vlc
 
@@ -30,7 +30,7 @@ pkgbase:= vlc
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
