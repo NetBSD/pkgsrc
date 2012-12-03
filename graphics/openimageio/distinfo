@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2012/12/03 12:54:14 ryoon Exp $
+
+SHA1 (oiio-Release-1.1.1.tar.gz) = f46e0a6f42c9fb875702ee526e9bf073110791ea
+RMD160 (oiio-Release-1.1.1.tar.gz) = 3ff3119fcb61ffaa2ec4828a3ce356ac8702ec88
+Size (oiio-Release-1.1.1.tar.gz) = 8217036 bytes
+SHA1 (patch-CMakeLists.txt) = 2923ca84d7981aaaf6494588392444e5ee07f74a
+SHA1 (patch-cmake_oiio__macros.cmake) = 016c4792c1dc85a903477f4c72af26577e1b2bb9
+SHA1 (patch-cmake_platform.cmake) = 841295fbd0ba47dda7224e6536b0a7e6f6ea9558
+SHA1 (patch-include_tbb_tbb__machine.h) = 7d9a196397315e0d39dd2f16139e011ab84c5630
+SHA1 (patch-include_tbb_tbb__misc.h) = 27995a9cdb72b182e352b2a649756af2d60fec86
+SHA1 (patch-libutil_sysutil.cpp) = b7484aef56ea239bae20faba1f04c14907557485
+SHA1 (patch-make_detectplatform.mk) = a399f09b9280109519a829dbacc1b924a074f4cc
+SHA1 (patch-ptex.imageio_ptex_PtexPlatform.h) = 3c32f95181cfcf8c0e67249a4d04f7ea14a5e122
