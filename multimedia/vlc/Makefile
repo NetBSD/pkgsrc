@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2012/10/08 23:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.145 2012/12/03 17:26:40 prlw1 Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -130,7 +130,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
