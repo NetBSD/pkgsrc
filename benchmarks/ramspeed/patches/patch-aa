@@ -1,0 +1,24 @@
+--- build.sh.orig	2006-08-29 04:21:00.000000000 +0900
++++ build.sh	2012-12-04 18:05:13.000000000 +0900
+@@ -75,8 +75,8 @@
+ 	then CFLAGS="-Wall -O2"
+ 	     LFLAGS="-Wl,-O2 -Wl,-s"
+ 	     TARGET="AMD64_ASM"
+-	else CFLAGS="-Wall -O"
+-	     LFLAGS="-Wl,-O -Wl,-s"
++	else CFLAGS="-Wall -O2"
++	     LFLAGS="-Wl,-O2 -Wl,-s"
+ 	     TARGET="GENERIC"
+ 	fi
+ 	;;
+@@ -139,8 +139,8 @@
+      echo " "
+ fi
+ 
+-echo "press Enter to continue or Control-C to abort"
+-read ANS
++# echo "press Enter to continue or Control-C to abort"
++# read ANS
+ 
+ case $TARGET in
+ 

@@ -1,0 +1,7 @@
+RAMspeed, a cache and memory benchmarking tool
+(for uniprocessor machines running UNIX-like operating systems).
+
+This command line utility measures effective bandwidth of both cache and memory
+subsystems. It has been written entirely in C for portability purposes, though
+benchmark routines are also available in several assembly languages for
+performance reasons.
