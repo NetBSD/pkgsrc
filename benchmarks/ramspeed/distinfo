@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/12/04 10:32:53 msaitoh Exp $
+
+SHA1 (ramspeed-2.6.0.tar.gz) = 8f071abc0b654785eafab37edd59a085e8add789
+RMD160 (ramspeed-2.6.0.tar.gz) = 997c437c359d3f9f9264768e64584e7c430e8d3a
+Size (ramspeed-2.6.0.tar.gz) = 77531 bytes
+SHA1 (patch-aa) = 7c8cddcf5929ffdb6f60eeb996356532d8c35777
