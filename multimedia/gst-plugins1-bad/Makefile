@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.1 2012/11/29 08:26:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/04 06:23:27 asau Exp $
 #
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 
