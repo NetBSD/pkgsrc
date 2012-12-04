@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2012/11/21 15:26:49 ryoon Exp $
+$NetBSD: distinfo,v 1.85 2012/12/04 20:28:45 ryoon Exp $
 
 SHA1 (firefox-17.0esr.source.tar.bz2) = d8d1d51b2d2accf3432fc23a77215274f12b7c70
 RMD160 (firefox-17.0esr.source.tar.bz2) = 03640f39920ac2d3786eb0b570ff3626d3407135
@@ -91,6 +91,7 @@ SHA1 (patch-pd) = c6b261264770c8a5eda31690b37f7eb992333f2a
 SHA1 (patch-pg) = a89cb4b92f974d32d4a309a4628f32aff306de71
 SHA1 (patch-rc) = 13b0253d166cac6b4b1e7efaba006e37015cbbdb
 SHA1 (patch-storage_src_Makefile.in) = 3f9a4bc71a6b64df819bbce6dbae18705d2183ac
+SHA1 (patch-toolkit_components_osfile_osfileutils.cpp) = 08935fcd03e3047317df3fe115596383b008c2e9
 SHA1 (patch-toolkit_library_Makefile.in) = 4193e7bafdac62a84c5a5ce4a21f0c616ce51362
 SHA1 (patch-toolkit_toolkit-tiers.mk) = 7c878d6d4a2ad3ddaa353d6f56d4954b7861d1ad
 SHA1 (patch-xa) = 5b66ed59bc9603a059e11695ae4c380093b36157
@@ -107,5 +108,6 @@ SHA1 (patch-xm) = aab7aa76909b520b9c1fdc5a27c4ec440e060cce
 SHA1 (patch-xn) = 27ca333ce018a5f72278461a55d141c063ac98ca
 SHA1 (patch-xo) = 3d875dad673a47b2059b8eea9f41fe9e370295d5
 SHA1 (patch-xpcom_Makefile.in) = c44608dc176900c3ce49fb7059e42e404a7c6df3
+SHA1 (patch-xpcom_ds_TimeStamp.h) = 99a590ea3cf6ada0c6e8781f5b39bff46a6990b9
 SHA1 (patch-xpcom_idl-parser_Makefile.in) = 0382a7ab00c2e7245f5ddbbe5a50036a8ae418ef
 SHA1 (patch-xpcom_typelib_xpidl_Makefile.in) = 4821d564e467494f65e70bb9ecec7cac2754ca0c
