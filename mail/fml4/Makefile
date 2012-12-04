@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:12 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/04 11:19:13 taca Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
 PKGNAME=	fml4-4.0.3.20040215
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.fml.org/pub/fml/stable/
 
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fml.org/software/fml4/index-e.html
 COMMENT=	FML mailing list server
 LICENSE=	gnu-gpl-v2 OR artistic
+
+DEPENDS+=	p5-Perl4-CoreLibs>=0.003:../../devel/p5-Perl4-CoreLibs
 
 PLIST_SRC=	${PKGDIR}/PLIST
 FML_DIR=	fml
