@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/24 14:06:43 manu Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/04 06:18:39 asau Exp $
 #
 
 DISTNAME=	SOPE-2.0.2a
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sope.opengroupware.org/
 COMMENT=	Framework for writing clever web servers driven by objects
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 
