@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2012/08/13 13:57:46 ghen Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2012/12/04 14:04:43 tron Exp $
 
-DISTNAME=	dovecot-2.1.9
+DISTNAME=	dovecot-2.1.12
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dovecot.org/releases/2.1/
 
@@ -63,6 +63,9 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
 
 .include "options.mk"
+
+# Don't compress manual pages as they include each other.
+.undef MANZ
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
