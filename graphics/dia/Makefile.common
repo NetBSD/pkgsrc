@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2012/10/06 14:10:45 asau Exp $
+# $NetBSD: Makefile.common,v 1.28 2012/12/04 12:37:15 ryoon Exp $
 #
 # used by graphics/dia-python/Makefile
 
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.97/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/dia/
+HOMEPAGE=	https://live.gnome.org/Dia
 COMMENT=	Program for creating diagrams of all kinds
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
