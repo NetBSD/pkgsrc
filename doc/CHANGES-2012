@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3718 2012/12/04 09:30:07 adam Exp $
+$NetBSD: CHANGES-2012,v 1.3719 2012/12/04 10:34:17 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/easytag to 2.1.7nb5 [wiz 2012-12-03]
 	Updated mail/dovecot2 to 2.1.11 [tron 2012-12-04]
 	Updated mail/dovecot2 to 2.1.12 [adam 2012-12-04]
+	Added benchmarks/ramspeed version 2.6.0 [msaitoh 2012-12-04]
