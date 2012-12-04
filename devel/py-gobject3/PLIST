@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/26 10:18:42 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/04 14:54:34 prlw1 Exp $
 include/pygobject-3.0/pygobject.h
 lib/libpyglib-gi-2.0-python${PYVERSSUFFIX}.la
 lib/pkgconfig/pygobject-3.0.pc
@@ -66,4 +66,4 @@ ${PYSITELIB}/gi/repository/__init__.pyo
 ${PYSITELIB}/gi/types.py
 ${PYSITELIB}/gi/types.pyc
 ${PYSITELIB}/gi/types.pyo
-${PYSITELIB}/pygobject-3.4.1.1-py${PYVERSSUFFIX}-${LOWER_OPSYS}-${OS_VERSION}-${UNAME_M}.egg-info
+${PYSITELIB}/pygobject-${PKGVERSION}-py${PYVERSSUFFIX}-${PLATFORM}.egg-info
