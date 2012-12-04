@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/11/28 15:50:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/04 06:23:27 asau Exp $
 
 PKGNAME=	ffmpeg010-20120609.${DISTVERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-avfilter
 #CONFIGURE_ARGS+=	--enable-avfilter-lavf
