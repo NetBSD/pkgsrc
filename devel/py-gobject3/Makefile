@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/26 10:18:42 prlw1 Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/04 14:54:34 prlw1 Exp $
 #
 
 DISTNAME=		pygobject-3.4.1.1
@@ -32,12 +32,13 @@ REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 TEST_TARGET=    check
 
-# for the egg
-UNAME_M!=	uname -m
-PLIST_SUBST+=	UNAME_M=${UNAME_M:Q}
-
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+
+# for the egg
+PLATFORM!=	${PYTHONBIN:Q} -c "import sys; from distutils import util; sys.stdout.write(util.get_platform())"
+PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
+
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.34.1.1
