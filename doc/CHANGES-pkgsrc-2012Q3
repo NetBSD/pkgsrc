@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.34 2012/12/04 13:36:43 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.35 2012/12/04 14:05:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -99,3 +99,5 @@ Pullup ticket #3979 - requested by wen
 www/mediawiki: security update
 Pullup ticket #3980 - requested by wen
 www/moodle: security update
+Pullup ticket #3981 - requested by adam
+mail/dovecot2: security update
