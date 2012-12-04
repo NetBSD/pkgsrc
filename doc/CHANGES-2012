@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3717 2012/12/04 08:19:09 tron Exp $
+$NetBSD: CHANGES-2012,v 1.3718 2012/12/04 09:30:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added multimedia/mp4v2 version 2.0.0 [wiz 2012-12-03]
 	Updated audio/easytag to 2.1.7nb5 [wiz 2012-12-03]
 	Updated mail/dovecot2 to 2.1.11 [tron 2012-12-04]
+	Updated mail/dovecot2 to 2.1.12 [adam 2012-12-04]
