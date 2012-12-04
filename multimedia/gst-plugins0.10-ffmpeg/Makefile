@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 09:21:02 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/12/04 15:16:14 prlw1 Exp $
 #
 
 DISTNAME=		gst-ffmpeg-0.10.13
@@ -22,7 +22,7 @@ PKGSRC_MAKE_ENV+=	PERL=${PERL5}
 # the upstream developers only want to support building against
 # the included ffmpeg version, since the ffmpeg API/ABI is unstable
 # and there are no releases
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg010/buildlink3.mk"
 CONFIGURE_ARGS+= --with-system-ffmpeg
 .include "../../devel/orc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
