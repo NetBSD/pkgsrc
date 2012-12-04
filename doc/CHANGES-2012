@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3720 2012/12/04 11:19:41 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3721 2012/12/04 15:05:07 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5670,3 +5670,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/dovecot2 to 2.1.12 [adam 2012-12-04]
 	Added benchmarks/ramspeed version 2.6.0 [msaitoh 2012-12-04]
 	Updated mail/fml4 to 4.0.3.20040215nb3 [taca 2012-12-04]
+	Updated devel/py-gobject3 to 3.4.2 [prlw1 2012-12-04]
