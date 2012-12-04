@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.649 2012/11/11 21:36:16 jakllsch Exp $
+# $NetBSD: Makefile,v 1.650 2012/12/04 18:15:41 darcy Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -536,6 +536,7 @@ SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
 SUBDIR+=	py-sphinx
+SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-textile
 SUBDIR+=	py-vobject
 SUBDIR+=	py-xlrd
