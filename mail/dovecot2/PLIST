@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/10/01 07:10:14 ghen Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/12/04 08:18:34 tron Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -462,6 +462,7 @@ share/doc/dovecot/thread-refs.txt
 share/doc/dovecot/wiki/ACL.txt
 share/doc/dovecot/wiki/AixPluginsSupport.txt
 share/doc/dovecot/wiki/AuthDatabase.CheckPassword.txt
+share/doc/dovecot/wiki/AuthDatabase.Dict.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.AuthBinds.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.PasswordLookups.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.Userdb.txt
@@ -589,6 +590,7 @@ share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.NoLogin.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.Proxy.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.User.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.txt
+share/doc/dovecot/wiki/PasswordDatabase.IMAP.txt
 share/doc/dovecot/wiki/PasswordDatabase.PAM.txt
 share/doc/dovecot/wiki/PasswordDatabase.Shadow.txt
 share/doc/dovecot/wiki/PasswordDatabase.Static.txt
@@ -661,6 +663,7 @@ share/doc/dovecot/wiki/Upgrading.1.1.txt
 share/doc/dovecot/wiki/Upgrading.1.2.txt
 share/doc/dovecot/wiki/Upgrading.2.0.txt
 share/doc/dovecot/wiki/Upgrading.2.1.txt
+share/doc/dovecot/wiki/Upgrading.2.2.txt
 share/doc/dovecot/wiki/Upgrading.txt
 share/doc/dovecot/wiki/UserDatabase.ExtraFields.txt
 share/doc/dovecot/wiki/UserDatabase.NSS.txt
