@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/07/27 12:44:20 wen Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2012/12/04 13:13:44 tron Exp $
 
-DISTNAME=	moodle-2.1.7
+DISTNAME=	moodle-2.3.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moodle/}
 EXTRACT_SUFX=	.tgz
@@ -70,8 +70,6 @@ SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli
 SUBST_FILES.php+=	admin/mailout-debugger.php admin/process_email.php
 SUBST_FILES.php+=	auth/ldap/cli/sync_users.php auth/cas/cli/sync_users.php auth/db/cli/sync_users.php
 SUBST_FILES.php+=	enrol/ldap/cli/sync.php enrol/database/cli/sync.php enrol/category/cli/sync.php
-SUBST_FILES.php+=	lib/pear/PHP/runsniffer
-SUBST_FILES.php+=	local/qeupgradehelper/cli/convert.php
 SUBST_FILES.php+=	mod/chat/chatd.php
 SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
