@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/05 02:18:14 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/05 02:19:46 dsainty Exp $
 #
 
 DISTNAME=	${GHACCOUNT}-${GHNAME}-${GHDESCRIBE}-g${GHCOMMIT}
@@ -11,7 +11,7 @@ GHDESCRIBE=	v1.22-398
 GHVERSION=	d74c9f6e0119f6340b027b1b97b6603704040922
 GHCOMMIT=	d74c9f6
 
-CATEGORIES=	local
+CATEGORIES=	net
 MASTER_SITES=	https://github.com/${GHACCOUNT}/${GHNAME}/tarball/${GHVERSION}/
 
 MAINTAINER=	dsainty@NetBSD.org
