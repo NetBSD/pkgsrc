@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.18 2010/07/24 08:22:02 obache Exp $
+$NetBSD: distinfo,v 1.18.18.1 2012/12/05 18:52:07 tron Exp $
 
-SHA1 (gv-3.7.1.tar.gz) = 05fcf76f29de77e67379bae7e9ca1c8a26bbf6e1
-RMD160 (gv-3.7.1.tar.gz) = ddeef03ff83442379cd02d8ac4491a43c57eeddc
-Size (gv-3.7.1.tar.gz) = 747166 bytes
+SHA1 (gv-3.7.3.tar.gz) = 75a3d90f0e2aa7542443a16122424159bda29713
+RMD160 (gv-3.7.3.tar.gz) = d3e7f3137f0aff521a667606ea05507c0dfc5784
+Size (gv-3.7.3.tar.gz) = 754282 bytes
 SHA1 (patch-aa) = de9dff87b4a064dda2ac2cd949cf78c8c2349e2e
-SHA1 (patch-ae) = 8ed82e599e729d01b05b0053eb027ab3cb9ca773
-SHA1 (patch-af) = da0bf3a7f4bdce391531274d4c51b9ec6d35c07e
-SHA1 (patch-aj) = 9bba6286d8ee4e6c197ca2a07aae8538471df4f3
