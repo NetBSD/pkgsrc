@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.36 2012/12/05 07:12:52 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.37 2012/12/05 18:52:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -107,3 +107,5 @@ Pullup ticket #3982 - requested by taca
 net/bind98 security update
 Pullup ticket #3983 - requested by taca
 net/bind99 security update
+Pullup ticket #3984 - requested by is
+print/gv: bug fix update
