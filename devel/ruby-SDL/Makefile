@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/01/28 11:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/05 12:12:23 taca Exp $
 
 DISTNAME=	rubysdl-2.1.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rubysdl/SDL/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.kmc.gr.jp/~ohai/rubysdl.en.html
 COMMENT=	Ruby extension library to use SDL library
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 
-GEM_CLEANBUILD=	Makefile *.o sdl_ext.${RUBY_DLEXT} mkmf.log
+GEM_CLEANBUILD=	Makefile *.o *.time sdl_ext.${RUBY_DLEXT} mkmf.log
 
 .include "../../lang/ruby/gem.mk"
 
