@@ -1,15 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2010/07/24 08:22:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.8.18.1 2012/12/05 18:52:07 tron Exp $
 bin/gv
 bin/gv-update-userconfig
 info/gv.info
 man/man1/gv-update-userconfig.1
 man/man1/gv.1
 share/gv/GV
-share/gv/gv_class.ad
-share/gv/gv_copyright.dat
-share/gv/gv_spartan.dat
 share/gv/gv_system.ad
-share/gv/gv_user.ad
-share/gv/gv_user_res.dat
-share/gv/gv_widgetless.dat
 @pkgdir share/gv/safe-gs-workdir
