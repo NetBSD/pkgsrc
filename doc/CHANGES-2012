@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3728 2012/12/05 13:10:48 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3729 2012/12/05 14:52:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5680,3 +5680,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox-l10n to 17.0.1 [ryoon 2012-12-05]
 	Updated www/seamonkey to 2.14.1 [ryoon 2012-12-05]
 	Updated www/seamonkey-l10n to 2.14.1 [ryoon 2012-12-05]
+	Updated www/php-owncloud to 4.5.4 [ryoon 2012-12-05]
