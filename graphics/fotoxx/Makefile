@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/10/08 23:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/12/05 16:37:59 ryoon Exp $
 #
 
-DISTNAME=	fotoxx-12.10
-PKGREVISION=	3
+DISTNAME=	fotoxx-12.12.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kornelix.com/uploads/1/3/0/3/13035936/
 
@@ -18,7 +17,6 @@ DEPENDS+=	gimp-ufraw-[0-9]*:../../graphics/gimp-ufraw
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config
-TOOLS_NOOP+=	xdg-desktop-menu
 
 BUILD_TARGET=	fotoxx
 INSTALL_TARGET=	install
