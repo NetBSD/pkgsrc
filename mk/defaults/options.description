@@ -125,6 +125,8 @@ dv			Enable usage of the libdv library.
 dvdnav			Enable libdvdnav support to navigate DVDs.
 dvdread			Enable reproduction of DVDs.
 dvi			Enable device independent file format (mostly TeX) support.
+eaccelerator-disassembler	Include disassembler.
+eaccelerator-doc-comment-inclusion	Retain doc-comments in internal php structures.
 eb			Enable EB dictionary library support.
 ecl			Use Embeddable Common Lisp.
 ecore			Enable ecore library support.
