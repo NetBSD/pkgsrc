@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2012/10/15 03:33:22 taca Exp $
+# $NetBSD: Makefile,v 1.49 2012/12/05 15:38:01 taca Exp $
 
-DISTNAME=	roundcubemail-0.8.1-dep
+DISTNAME=	roundcubemail-0.8.4-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
