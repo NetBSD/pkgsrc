@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/10/01 13:02:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/12/05 16:37:59 ryoon Exp $
 bin/fotoxx
 man/man1/fotoxx.1
 share/applications/kornelix-fotoxx.desktop
@@ -8,6 +8,7 @@ share/doc/fotoxx/changelog
 share/doc/fotoxx/copyright
 share/doc/fotoxx/edit-menus
 share/doc/fotoxx/fotoxx.man
+share/doc/fotoxx/freecode
 share/doc/fotoxx/images/CMYK.jpg
 share/doc/fotoxx/images/HDF-paint.jpg
 share/doc/fotoxx/images/HDR-adjust.jpg
@@ -15,14 +16,13 @@ share/doc/fotoxx/images/add-geotags.jpg
 share/doc/fotoxx/images/annotate.jpg
 share/doc/fotoxx/images/auto-trim.jpg
 share/doc/fotoxx/images/batch-add-geotags.jpg
+share/doc/fotoxx/images/batch-convert.jpg
 share/doc/fotoxx/images/batch-raw-conv.jpg
 share/doc/fotoxx/images/batch-rename.jpg
-share/doc/fotoxx/images/batch-resize-export.jpg
 share/doc/fotoxx/images/bright-ramp.jpg
 share/doc/fotoxx/images/brightness-color.jpg
 share/doc/fotoxx/images/chromatic.jpg
 share/doc/fotoxx/images/colorchart.png
-share/doc/fotoxx/images/curve-edit.jpg
 share/doc/fotoxx/images/denoise.jpg
 share/doc/fotoxx/images/edit-caption-comments.jpg
 share/doc/fotoxx/images/edit-tags.jpg
@@ -59,6 +59,7 @@ share/doc/fotoxx/images/search-images-metadata.jpg
 share/doc/fotoxx/images/search-images.jpg
 share/doc/fotoxx/images/select-area.jpg
 share/doc/fotoxx/images/sharpen.jpeg
+share/doc/fotoxx/images/shift-colors.jpg
 share/doc/fotoxx/images/show-RGB.jpg
 share/doc/fotoxx/images/slide-show.jpg
 share/doc/fotoxx/images/smart-erase.jpg
@@ -79,13 +80,14 @@ share/doc/fotoxx/userguide-en.html
 share/doc/fotoxx/userguide-es.html
 share/doc/fotoxx/userguide-it.html
 share/fotoxx/icons/bottom.png
+share/fotoxx/icons/broken.png
 share/fotoxx/icons/cancel.png
 share/fotoxx/icons/discard.png
 share/fotoxx/icons/down+.png
 share/fotoxx/icons/down.png
 share/fotoxx/icons/favorites.png
 share/fotoxx/icons/fg-color.png
-share/fotoxx/icons/folder256.png
+share/fotoxx/icons/folder.png
 share/fotoxx/icons/fotoxx-banner.png
 share/fotoxx/icons/fotoxx.png
 share/fotoxx/icons/help.png
