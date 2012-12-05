@@ -1,0 +1,12 @@
+Download videos from various Flash-based video hosting sites, without having
+to use the Flash player. Handy for saving videos for watching offline, and
+means you don't have to keep upgrading Flash for sites that insist on a newer
+version of the player.
+
+Includes support for the following sites/players (and more!):
+
+  YouTube, eHow, Brightcove (used by many sites like Channel 4, Daily
+  Telegraph ...), BBC (news, etc), Metacafe, 5min, Google, fliqz, nicovideo,
+  vimeo, Blip, Break, Collegehumor, Muzu, Sevenload, Megavideo, Wat.tv.
+
+Also includes a 'generic' method which works on many other sites.
