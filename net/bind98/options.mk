@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/03/04 03:52:15 taca Exp $
+# $NetBSD: options.mk,v 1.1.1.1.14.1 2012/12/05 07:07:43 sbd Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind98
 PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	inet6 threads mysql pgsql ldap dlz-filesystem
+PKG_SUPPORTED_OPTIONS+=	rrl
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -49,6 +50,11 @@ CONFIGURE_ARGS+=	--with-dlz-ldap=${BUILDLINK_PREFIX.openldap-client}
 
 .if !empty(PKG_OPTIONS:Mdlz-filesystem)
 CONFIGURE_ARGS+=	--with-dlz-filesystem
+.endif
+
+.if !empty(PKG_OPTIONS:Mrrl)
+PATCHFILES=rl-9.8.4.patch
+PATCH_SITES=http://ss.vix.com/~vixie/
 .endif
 
 ###
