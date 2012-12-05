@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/11/19 10:57:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/05 15:28:29 ryoon Exp $
 bin/sigil
 share/applications/sigil.desktop
 share/pixmaps/sigil.png
@@ -29,10 +29,12 @@ share/sigil/translations/sigil_es_ES.qm
 share/sigil/translations/sigil_fr.qm
 share/sigil/translations/sigil_gl.qm
 share/sigil/translations/sigil_id_ID.qm
+share/sigil/translations/sigil_is.qm
 share/sigil/translations/sigil_it.qm
 share/sigil/translations/sigil_ja.qm
 share/sigil/translations/sigil_km.qm
 share/sigil/translations/sigil_ko.qm
+share/sigil/translations/sigil_lv_LV.qm
 share/sigil/translations/sigil_nl.qm
 share/sigil/translations/sigil_pl.qm
 share/sigil/translations/sigil_pt_BR.qm
