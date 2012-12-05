@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3725 2012/12/05 11:50:00 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3726 2012/12/05 12:21:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5677,3 +5677,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/get-flash-videos version 0.0.20121204 [dsainty 2012-12-05]
 	Updated devel/xulrunner to 17.0.1 [ryoon 2012-12-05]
 	Updated www/firefox to 17.0.1 [ryoon 2012-12-05]
+	Updated www/firefox-l10n to 17.0.1 [ryoon 2012-12-05]
