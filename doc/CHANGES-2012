@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3723 2012/12/05 00:56:44 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3724 2012/12/05 02:25:11 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5674,3 +5674,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/py-sphinx-theme-cloud version 1.5 [darcy 2012-12-04]
 	Updated net/bind98 to 9.8.4pl1 [taca 2012-12-05]
 	Updated net/bind99 to 9.9.2pl1 [taca 2012-12-05]
+	Added net/get-flash-videos version 0.0.20121204 [dsainty 2012-12-05]
