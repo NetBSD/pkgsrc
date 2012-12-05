@@ -1,13 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2012/08/12 16:19:41 taca Exp $
+$NetBSD: MESSAGE,v 1.8 2012/12/05 15:38:01 taca Exp $
 
 Please refer to the following file on how to setup your RoundCube
 installation.
 
 	${DOCDIR}/INSTALL
 
-And please refer to the following file on how to upgrade your RoundCube
-from older version.
+Please refer to the following file on how to upgrade your RoundCube
+from older version and make sure to remember the version of current
+installed Round cube with "pkg_info -I roundcube".
 
 	${DOCDIR}/UPGRADING
 
