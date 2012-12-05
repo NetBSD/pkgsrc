@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3722 2012/12/04 15:21:35 darcy Exp $
+$NetBSD: CHANGES-2012,v 1.3723 2012/12/05 00:56:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5672,3 +5672,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/fml4 to 4.0.3.20040215nb3 [taca 2012-12-04]
 	Updated devel/py-gobject3 to 3.4.2 [prlw1 2012-12-04]
 	Added textproc/py-sphinx-theme-cloud version 1.5 [darcy 2012-12-04]
+	Updated net/bind98 to 9.8.4pl1 [taca 2012-12-05]
+	Updated net/bind99 to 9.9.2pl1 [taca 2012-12-05]
