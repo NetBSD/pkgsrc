@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3732 2012/12/05 15:31:48 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3733 2012/12/05 15:38:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5684,3 +5684,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/umefont-ttf to 0.446 [ryoon 2012-12-05]
 	Updated editors/Sigil to 0.6.1 [ryoon 2012-12-05]
 	Updated www/php-eaccelerator to 0.9.6.1nb1 [taca 2012-12-05]
+	Updated mail/roundcube to 0.8.4 [taca 2012-12-05]
