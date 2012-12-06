@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2012/10/12 07:36:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2012/12/06 16:24:29 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -99,6 +99,7 @@ share/examples/curl/getinfo.c
 share/examples/curl/getinmemory.c
 share/examples/curl/ghiper.c
 share/examples/curl/hiperfifo.c
+share/examples/curl/href_extractor.c
 share/examples/curl/htmltidy.c
 share/examples/curl/http-post.c
 share/examples/curl/httpcustomheader.c
