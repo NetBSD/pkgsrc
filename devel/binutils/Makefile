@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/11/21 07:46:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2012/12/06 11:40:57 jperkin Exp $
 
 DISTNAME=	binutils-2.22
 PKGREVISION=	1
@@ -84,11 +84,11 @@ post-install:
 .for f in ${SYMLINK_FILES}
 	set -e; \
 	if [ -f ${DESTDIR}${PREFIX}/bin/g${f:Q} ]; then \
-	    ${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}; \
+	    ${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f}; \
 	fi
 	if [ -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/g${f:Q}.1 ]; then \
 	    ${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 \
-	              ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1; \
+	              ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1; \
 	fi
 .endfor
 

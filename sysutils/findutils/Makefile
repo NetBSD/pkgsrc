@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/23 19:51:01 asau Exp $
+# $NetBSD: Makefile,v 1.32 2012/12/06 11:43:03 jperkin Exp $
 
 DISTNAME=	findutils-4.2.33
 PKGREVISION=	3
@@ -20,12 +20,14 @@ CONFIGURE_ARGS+=	--program-prefix=g
 
 AUTO_MKDIRS=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
 .for f in find locate updatedb xargs
-	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1
+	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f}
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man5/glocatedb.5 ${DESTDIR}${PREFIX}/gnu/man/man5/locatedb.5
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man5/glocatedb.5 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man5/locatedb.5
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
