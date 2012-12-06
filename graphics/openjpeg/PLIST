@@ -1,18 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/24 13:25:01 drochner Exp $
-bin/image_to_j2k
-bin/j2k_dump
-bin/j2k_to_image
-include/openjpeg-1.5/openjpeg.h
-include/openjpeg.h
-lib/libopenjpeg.la
-lib/pkgconfig/libopenjpeg.pc
-lib/pkgconfig/libopenjpeg1.pc
-man/man1/image_to_j2k.1
-man/man1/j2k_dump.1
-man/man1/j2k_to_image.1
-man/man1/jpwl_image_to_j2k.1
-man/man1/jpwl_j2k_to_image.1
-man/man3/jpwl_libopenjpeg.3
-man/man3/libopenjpeg.3
-share/doc/openjpeg-1.5/CHANGES
-share/doc/openjpeg-1.5/LICENSE
+@comment $NetBSD: PLIST,v 1.3 2012/12/06 17:09:18 adam Exp $
+bin/opj_compress
+bin/opj_decompress
+bin/opj_dump
+include/openjpeg-2.0/openjpeg.h
+include/openjpeg-2.0/opj_config.h
+include/openjpeg-2.0/opj_stdint.h
+lib/libopenjp2.so
+lib/libopenjp2.so.2.0.0
+lib/libopenjp2.so.6
+lib/openjpeg-2.0/OpenJPEGConfig.cmake
+lib/openjpeg-2.0/OpenJPEGTargets-noconfig.cmake
+lib/openjpeg-2.0/OpenJPEGTargets.cmake
+share/doc/openjpeg-2.0/CHANGES
+share/doc/openjpeg-2.0/LICENSE
+share/man/man1/opj_compress.1
+share/man/man1/opj_decompress.1
+share/man/man1/opj_dump.1
+share/man/man3/libopenjp2.3
