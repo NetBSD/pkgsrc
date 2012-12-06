@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/09/20 21:29:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/06 14:52:02 ryoon Exp $
 share/concrete5/INSTALL
 share/concrete5/LICENSE.TXT
 share/concrete5/concrete/blocks/autonav/add.php
@@ -875,12 +875,14 @@ share/concrete5/concrete/css/ccm_app/build/ccm.app.mobile.less
 share/concrete5/concrete/css/ccm_app/build/ccm.colorpicker.less
 share/concrete5/concrete/css/ccm_app/build/ccm.dashboard.1200.less
 share/concrete5/concrete/css/ccm_app/build/ccm.dashboard.less
+share/concrete5/concrete/css/ccm_app/build/ccm.default.theme.less
 share/concrete5/concrete/css/ccm_app/build/jquery.rating.less
 share/concrete5/concrete/css/ccm_app/build/jquery.ui.less
 share/concrete5/concrete/css/ccm_app/chosen.less
 share/concrete5/concrete/css/ccm_app/components.less
 share/concrete5/concrete/css/ccm_app/dashboard.less
 share/concrete5/concrete/css/ccm_app/dashboard_responsive.less
+share/concrete5/concrete/css/ccm_app/default_theme.less
 share/concrete5/concrete/css/ccm_app/editing_dialogs.less
 share/concrete5/concrete/css/ccm_app/filemanager.less
 share/concrete5/concrete/css/ccm_app/header.less
@@ -1157,6 +1159,7 @@ share/concrete5/concrete/helpers/concrete/upgrade/version_551.php
 share/concrete5/concrete/helpers/concrete/upgrade/version_552.php
 share/concrete5/concrete/helpers/concrete/upgrade/version_560.php
 share/concrete5/concrete/helpers/concrete/upgrade/version_5601.php
+share/concrete5/concrete/helpers/concrete/upgrade/version_5602.php
 share/concrete5/concrete/helpers/concrete/urls.php
 share/concrete5/concrete/helpers/concrete/user.php
 share/concrete5/concrete/helpers/concrete/validation.php
@@ -1538,24 +1541,21 @@ share/concrete5/concrete/jobs/generate_sitemap.php
 share/concrete5/concrete/jobs/index_search.php
 share/concrete5/concrete/jobs/process_email.php
 share/concrete5/concrete/jobs/remove_old_page_versions.php
-share/concrete5/concrete/js/bootstrap.alert.js
-share/concrete5/concrete/js/bootstrap.popover.js
-share/concrete5/concrete/js/bootstrap.tooltip.js
-share/concrete5/concrete/js/bootstrap.transitions.js
-share/concrete5/concrete/js/build.sh
-share/concrete5/concrete/js/buildmin.sh
+share/concrete5/concrete/js/bootstrap.js
+share/concrete5/concrete/js/bootstrap/bootstrap.alert.js
+share/concrete5/concrete/js/bootstrap/bootstrap.dropdown.js
+share/concrete5/concrete/js/bootstrap/bootstrap.popover.js
+share/concrete5/concrete/js/bootstrap/bootstrap.tooltip.js
+share/concrete5/concrete/js/bootstrap/bootstrap.transitions.js
+share/concrete5/concrete/js/bootstrap/build/bootstrap.js
 share/concrete5/concrete/js/ccm.app.js
 share/concrete5/concrete/js/ccm.base.js
 share/concrete5/concrete/js/ccm.spellchecker.js
-share/concrete5/concrete/js/ccm_app/__bootstrap.dropdown.js
-share/concrete5/concrete/js/ccm_app/__bootstrap.tooltip.js
-share/concrete5/concrete/js/ccm_app/__bootstrap.transitions.js
-share/concrete5/concrete/js/ccm_app/_bootstrap.alert.js
-share/concrete5/concrete/js/ccm_app/_bootstrap.popover.js
 share/concrete5/concrete/js/ccm_app/_jquery.colorpicker.js
 share/concrete5/concrete/js/ccm_app/_jquery.hoverIntent.js
 share/concrete5/concrete/js/ccm_app/_jquery.liveupdate.js
 share/concrete5/concrete/js/ccm_app/_jquery.metadata.js
+share/concrete5/concrete/js/ccm_app/build/ccm.app.js
 share/concrete5/concrete/js/ccm_app/chosen.jquery.js
 share/concrete5/concrete/js/ccm_app/dashboard.js
 share/concrete5/concrete/js/ccm_app/filemanager.js
