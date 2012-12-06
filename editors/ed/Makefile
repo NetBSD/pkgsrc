@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 11:43:32 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/12/06 11:41:19 jperkin Exp $
 
 DISTNAME=		ed-1.1
 PKGREVISION=		2
@@ -21,10 +21,12 @@ INSTALL_TARGET=		install install-man
 
 AUTO_MKDIRS=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
 .for f in ed red
-	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1
+	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f}
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
