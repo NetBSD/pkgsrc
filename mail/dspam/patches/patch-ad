@@ -1,28 +1,28 @@
-$NetBSD: patch-ad,v 1.3 2010/03/10 13:43:38 martti Exp $
+$NetBSD: patch-ad,v 1.4 2012/12/06 10:47:35 roy Exp $
 
 Make this pkgsrc friendly.
 
---- src/dspam.conf.in.orig	2006-02-15 22:06:35.000000000 +0200
-+++ src/dspam.conf.in	2006-05-05 23:44:16.000000000 +0300
-@@ -24,7 +24,7 @@
+--- src/dspam.conf.in	2012-04-11 19:48:33.000000000 +0100
++++ src/dspam.conf.in	2012-12-05 16:25:34.000000000 +0000
+@@ -26,7 +26,7 @@
  # this option. If you do not wish to lose all of your data, you will need to
  # migrate it to the new backend before making this change.
  #
--StorageDriver @libdir@/@storage_driver@
-+#StorageDriver @libdir@/@storage_driver@
+-StorageDriver @libdir@/dspam/@storage_driver@
++#StorageDriver @libdir@/dspam/@storage_driver@
  
  #
- # Trusted Delivery Agent: Specifies the local delivery agent DSPAM should call 
-@@ -53,7 +53,7 @@
- # the user DSPAM is processing mail for. This configuration parameter is only 
+ # Trusted Delivery Agent: Specifies the local delivery agent DSPAM should call
+@@ -55,7 +55,7 @@
+ # the user DSPAM is processing mail for. This configuration parameter is only
  # necessary if you plan on allowing untrusted processing.
  #
 -#UntrustedDeliveryAgent "/usr/bin/procmail -d %u"
 +#UntrustedDeliveryAgent "@PREFIX@/bin/procmail -d %u"
  
  #
- # SMTP or LMTP Delivery: Alternatively, you may wish to use SMTP or LMTP 
-@@ -76,7 +76,7 @@
+ # SMTP or LMTP Delivery: Alternatively, you may wish to use SMTP or LMTP
+@@ -88,7 +88,7 @@
  # a quarantine agent which will be called with all messages DSPAM thinks is
  # spam. Use %u to specify the user DSPAM is processing mail for.
  #
@@ -31,33 +31,42 @@ Make this pkgsrc friendly.
  
  #
  # DSPAM can optionally process "plused users" (addresses in the user+detail
-@@ -264,7 +264,7 @@
+@@ -350,7 +350,7 @@
  # Storage driver settings: Specific to a particular storage driver. Uncomment
  # the configuration specific to your installation, if applicable.
  #
--#MySQLServer    	/var/lib/mysql/mysql.sock
-+#MySQLServer    	/tmp/mysql.sock
- #MySQLPort
- #MySQLUser 	     	dspam
- #MySQLPass    		changeme
-@@ -633,9 +633,9 @@
- # specified. If you want the client machine to perform delivery, use
- # the --stdout option in conjunction with a local setup. 
+-#MySQLServer		/var/lib/mysql/mysql.sock
++#MySQLServer		/tmp/mysql.sock
+ #MySQLPort		
+ #MySQLUser		dspam
+ #MySQLPass		changeme
+@@ -361,7 +361,7 @@
+ # If you are using replication for clustering, you can also specify a separate
+ # server to perform all writes to.
  #
+-#MySQLWriteServer	/var/lib/mysql/mysql.sock
++#MySQLWriteServer	/tmp/mysql.sock
+ #MySQLWritePort		
+ #MySQLWriteUser		dspam
+ #MySQLWritePass		changeme
+@@ -807,9 +807,9 @@
+ # interfaces.
+ #
+ #ServerHost		127.0.0.1
 -#ServerPort		24
 +#ServerPort		2400
  #ServerQueueSize	32
--#ServerPID              /var/run/dspam.pid
-+#ServerPID              @DSPAM_PIDDIR@/dspam.pid
+-#ServerPID		/var/run/dspam.pid
++#ServerPID		@DSPAM_PIDDIR@/dspam.pid
  
  #
  # ServerMode specifies the type of LMTP server to start. This can be one of:
-@@ -689,7 +689,7 @@
+@@ -865,7 +865,7 @@
  # If you are a reporting streamlined blackhole list participant, you can
  # touch ip addresses within the directory the rabl_client process is watching.
  #
 -#RABLQueue	/var/spool/rabl
 +#RABLQueue	@VARBASE@/spool/rabl
  
- # DataSource: If you are using any type of data source that does not include
- # email-like headers (such as documents), uncomment the line below. This
+ # ---  ---
+ 
