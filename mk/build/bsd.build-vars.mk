@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build-vars.mk,v 1.7 2011/09/08 20:17:15 abs Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.8 2012/12/06 11:36:31 jperkin Exp $
 #
 # Package-settable variables:
 #
@@ -40,6 +40,7 @@ MAKE_ENV+=	X11BASE=${X11BASE:Q}
 MAKE_ENV+=	X11PREFIX=${X11PREFIX:Q}
 MAKE_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
 MAKE_ENV+=	PKGINFODIR=${PKGINFODIR:Q}
+MAKE_ENV+=	PKGGNUDIR=${PKGGNUDIR:Q}
 
 # Provide a consistent environment for packages using (Net)BSD-style
 # Makefiles.
