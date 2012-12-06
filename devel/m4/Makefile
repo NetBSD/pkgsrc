@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2012/10/31 11:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.70 2012/12/06 11:40:59 jperkin Exp $
 
 DISTNAME=	m4-1.4.16
 PKGREVISION=	3
@@ -29,7 +29,7 @@ AUTO_MKDIRS=		yes
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/*.m4 ${DESTDIR}${PREFIX}/share/examples/m4
-	${LN} -sf ${PREFIX}/bin/gm4 ${DESTDIR}${PREFIX}/gnu/bin/m4
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gm4.1 ${DESTDIR}${PREFIX}/gnu/man/man1/m4.1
+	${LN} -sf ${PREFIX}/bin/gm4 ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/m4
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gm4.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/m4.1
 
 .include "../../mk/bsd.pkg.mk"

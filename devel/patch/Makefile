@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/31 11:19:22 asau Exp $
+# $NetBSD: Makefile,v 1.36 2012/12/06 11:40:59 jperkin Exp $
 
 DISTNAME=	patch-2.5.9
 PKGREVISION=	2
@@ -39,8 +39,8 @@ do-patch:
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
 
-SYMLINKS	= bin/gpatch gnu/bin/patch \
-		man/man1/gpatch.1 gnu/man/man1/patch.1
+SYMLINKS	= bin/gpatch ${PKGGNUDIR}bin/patch \
+		man/man1/gpatch.1 ${PKGGNUDIR}${PKGMANDIR}/man1/patch.1
 post-install:
 .for o n in ${SYMLINKS}
 	${LN} -sf ${PREFIX}/${o} ${DESTDIR}${PREFIX}/${n}

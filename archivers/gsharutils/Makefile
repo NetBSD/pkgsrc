@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/09/11 19:46:55 asau Exp $
+# $NetBSD: Makefile,v 1.49 2012/12/06 11:38:19 jperkin Exp $
 
 DISTNAME=	sharutils-4.11.1
 PKGREVISION=	2
@@ -27,10 +27,12 @@ CONFIGURE_ENV+=		SH=${TOOLS_SH}
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
 .for f in shar unshar
-	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1
+	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f}
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"

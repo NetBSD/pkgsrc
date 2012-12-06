@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2012/10/31 11:17:01 asau Exp $
+# $NetBSD: Makefile,v 1.84 2012/12/06 11:40:59 jperkin Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	ac_cv_func_strndup=no
 post-install:
 	${CHMOD} g-s ${DESTDIR}${PREFIX}/bin/gmake
 	${CHGRP} ${BINGRP} ${DESTDIR}${PREFIX}/bin/gmake
-	${LN} -sf ${PREFIX}/bin/gmake ${DESTDIR}${PREFIX}/gnu/bin/make
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gmake.1 ${DESTDIR}${PREFIX}/gnu/man/man1/make.1
+	${LN} -sf ${PREFIX}/bin/gmake ${DESTDIR}${PREFIX}/${PKGGNUDIR}/bin/make
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gmake.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/make.1
 
 .include "../../mk/bsd.pkg.mk"

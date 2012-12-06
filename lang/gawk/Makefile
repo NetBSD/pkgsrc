@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/10/02 20:11:40 asau Exp $
+# $NetBSD: Makefile,v 1.52 2012/12/06 11:42:05 jperkin Exp $
 
 DISTNAME=	gawk-4.0.1
 PKGREVISION=	2
@@ -38,8 +38,8 @@ CFLAGS+=	-Dvm_region=vm_region_64
 INSTALLATION_DIRS+=	gnu/bin gnu/man/man1
 
 post-install:
-	${LN} -s ../../bin/gawk ${DESTDIR}${PREFIX}/gnu/bin/awk
-	${LN} -s ../../../man/man1/gawk.1 ${DESTDIR}${PREFIX}/gnu/man/man1/awk.1
+	${LN} -s ${PREFIX}/bin/gawk ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/awk
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/gawk.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/awk.1
 
 BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.10.36
 

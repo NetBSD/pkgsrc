@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/10/25 06:55:52 asau Exp $
+# $NetBSD: Makefile,v 1.42 2012/12/06 11:43:24 jperkin Exp $
 #
 
 DISTNAME=	sed-4.2.1
@@ -26,8 +26,10 @@ USE_TOOLS+=		grep makeinfo
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
-.for g n in bin/gsed gnu/bin/sed man/man1/gsed.1 gnu/man/man1/sed.1
+.for g n in bin/gsed ${PKGGNUDIR}bin/sed ${PKGMANDIR}/man1/gsed.1 ${PKGGNUDIR}${PKGMANDIR}/man1/sed.1
 	${LN} -sf ${PREFIX}/${g} ${DESTDIR}${PREFIX}/${n}
 .endfor
 
