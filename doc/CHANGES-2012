@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3736 2012/12/06 08:12:48 apb Exp $
+$NetBSD: CHANGES-2012,v 1.3737 2012/12/06 10:49:22 roy Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5689,3 +5689,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/opendnssec to 1.3.12 [pettai 2012-12-05]
 	Updated sysutils/salt to 0.10.5 [apb 2012-12-05]
 	Added sysutils/salt-docs version 0.10.5 [apb 2012-12-06]
+	Updated mail/dspam to 3.10.2 [roy 2012-12-06]
