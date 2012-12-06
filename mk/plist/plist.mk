@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.43 2012/05/27 14:32:28 cheusov Exp $
+# $NetBSD: plist.mk,v 1.44 2012/12/06 11:36:31 jperkin Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -136,6 +136,7 @@ _PLIST_AWK_ENV+=	LIBTOOL_EXPAND=${_LIBTOOL_EXPAND:Q}
 _PLIST_AWK_ENV+=	LS=${TOOLS_LS:Q}
 _PLIST_AWK_ENV+=	MANINSTALL=${_PLIST_MANINSTALL:Q}
 _PLIST_AWK_ENV+=	MANZ=${_MANZ:Q}
+_PLIST_AWK_ENV+=	PKGGNUDIR=${PKGGNUDIR:Q}
 _PLIST_AWK_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
 _PLIST_AWK_ENV+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
 _PLIST_AWK_ENV+=	TEST=${TOOLS_TEST:Q}
@@ -169,6 +170,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		RMDIR=${RMDIR:Q}					\
 		RM=${RM:Q}						\
 		TRUE=${TRUE:Q}						\
+		PKGGNUDIR=${PKGGNUDIR:Q}				\
 		PKGMANDIR=${PKGMANDIR:Q}
 
 .for _var_ in ${PLIST_VARS}
@@ -187,6 +189,7 @@ _PLIST_1_AWK+=		-f ${PKGSRCDIR}/mk/plist/plist-macros.awk
 
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-functions.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-locale.awk
+_PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-gnu.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-info.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-man.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-libtool.awk
