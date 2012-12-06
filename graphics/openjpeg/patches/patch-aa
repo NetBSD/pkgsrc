@@ -1,31 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2012/03/24 13:25:01 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2012/12/06 17:09:18 adam Exp $
 
---- libopenjpeg/opj_malloc.h.orig	2012-02-07 10:49:55.000000000 +0000
-+++ libopenjpeg/opj_malloc.h
-@@ -69,26 +69,6 @@ Allocate memory aligned to a 16 byte bou
- @return Returns a void pointer to the allocated space, or NULL if there is insufficient memory available
- */
- /* FIXME: These should be set with cmake tests, but we're currently not requiring use of cmake */
--#ifdef _WIN32
--	/* Someone should tell the mingw people that their malloc.h ought to provide _mm_malloc() */
--	#ifdef __GNUC__
--		#include <mm_malloc.h>
--		#define HAVE_MM_MALLOC
--	#else /* MSVC, Intel C++ */
--		#include <malloc.h>
--		#ifdef _mm_malloc
--			#define HAVE_MM_MALLOC
--		#endif
--	#endif
+--- src/lib/openjp2/opj_malloc.h.orig	2012-11-19 14:26:08.000000000 +0000
++++ src/lib/openjp2/opj_malloc.h
+@@ -80,16 +80,6 @@ Allocate memory aligned to a 16 byte bou
+ 			#define HAVE_MM_MALLOC
+ 		#endif
+ 	#endif
 -#else /* Not _WIN32 */
 -	#if defined(__sun)
 -		#define HAVE_MEMALIGN
+-  #elif defined(__FreeBSD__)
+-    #define HAVE_POSIX_MEMALIGN
 -	/* Linux x86_64 and OSX always align allocations to 16 bytes */
--	#elif !defined(__amd64__) && !defined(__APPLE__)	
+-	#elif !defined(__amd64__) && !defined(__APPLE__) && !defined(_AIX)
 -		#define HAVE_MEMALIGN
 -		#include <malloc.h>			
 -	#endif
--#endif
+ #endif
  
  #define opj_aligned_malloc(size) malloc(size)
- #define opj_aligned_free(m) free(m)
