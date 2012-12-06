@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1982 2012/07/18 12:29:12 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1983 2012/12/06 11:36:30 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -194,6 +194,7 @@ BSD_MAKE_ENV+=	MKHTML=no
 
 _BUILD_DEFS=		${BUILD_DEFS}
 _BUILD_DEFS+=		LOCALBASE
+_BUILD_DEFS+=		PKGGNUDIR
 _BUILD_DEFS+=		PKGINFODIR
 _BUILD_DEFS+=		PKGMANDIR
 _BUILD_DEFS+=		_USE_DESTDIR
