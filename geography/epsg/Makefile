@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2012/10/04 09:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/07 02:19:58 gdt Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
-PKGNAME=		epsg-7.4.1
-VERS=			7_4_1
-VERS_README=		7_4
+PKGNAME=		epsg-8.1
+VERS=			8_1
+VERS_README=		8.1
 CATEGORIES=		geography databases
 MASTER_SITES+=		http://www.epsg.org/databases/ \
 			http://www.epsg.org/databases/Arc/${VERS}/
@@ -30,6 +30,9 @@ INSTALLATION_DIRS=	${BINDIR} ${DOCDIR} ${EPSGDIR}
 MESSAGE_SUBST+=		BINDIR=${BINDIR:Q}
 MESSAGE_SUBST+=		EPSGDIR=${EPSGDIR:Q}
 
+# Sometimes (8.0), pgsql files are in epsg-v${VERS}sql-PostgreSQL/,
+# with mysql files in epsg-v${VERS}sql-mySQL/.
+# Sometimes (8.1), they appear in the working directory itself.
 DATAFILES.pgsql+=	EPSG_v${VERS}.mdb_Data_PostgreSQL.sql
 DATAFILES.pgsql+=	EPSG_v${VERS}.mdb_FKeys_PostgreSQL.sql
 DATAFILES.pgsql+=	EPSG_v${VERS}.mdb_Tables_PostgreSQL.sql
@@ -47,6 +50,9 @@ SUBST_MESSAGE.epsg=	Fixing EPSG example script
 PLIST_SUBST+=		VERS=${VERS}
 PLIST_SUBST+=		VERS_README=${VERS_README}
 
+# Note that the doc files are unpacked twice, once for PostgeSQL and
+# once for mySQL.  We assume that they are the same and ignore the
+# issue.
 post-extract:
 	${CP} ${FILESDIR}/epsg-load ${WRKSRC}
 
