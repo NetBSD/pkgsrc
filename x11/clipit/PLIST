@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/07 01:41:58 khorben Exp $
+bin/clipit
+man/man1/clipit.1
+share/applications/clipit.desktop
+share/examples/clipit/xdg/autostart/clipit-startup.desktop
+share/icons/hicolor/scalable/apps/clipit-trayicon.svg
+share/locale/cs/LC_MESSAGES/clipit.mo
+share/locale/da/LC_MESSAGES/clipit.mo
+share/locale/de/LC_MESSAGES/clipit.mo
+share/locale/es/LC_MESSAGES/clipit.mo
+share/locale/es_ES/LC_MESSAGES/clipit.mo
+share/locale/et/LC_MESSAGES/clipit.mo
+share/locale/fr/LC_MESSAGES/clipit.mo
+share/locale/hu/LC_MESSAGES/clipit.mo
+share/locale/it/LC_MESSAGES/clipit.mo
+share/locale/ja/LC_MESSAGES/clipit.mo
+share/locale/nb/LC_MESSAGES/clipit.mo
+share/locale/pl/LC_MESSAGES/clipit.mo
+share/locale/pt_BR/LC_MESSAGES/clipit.mo
+share/locale/ro/LC_MESSAGES/clipit.mo
+share/locale/ru/LC_MESSAGES/clipit.mo
+share/locale/sv/LC_MESSAGES/clipit.mo
+share/locale/tr/LC_MESSAGES/clipit.mo
+share/locale/zh_CN/LC_MESSAGES/clipit.mo
