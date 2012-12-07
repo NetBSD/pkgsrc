@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2012/11/29 09:40:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.668 2012/12/07 01:42:48 khorben Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -25,6 +25,7 @@ SUBDIR+=	beforelight
 SUBDIR+=	bigreqsproto
 SUBDIR+=	bitmap
 SUBDIR+=	blt
+SUBDIR+=	clipit
 SUBDIR+=	clisp-gtk2
 SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
