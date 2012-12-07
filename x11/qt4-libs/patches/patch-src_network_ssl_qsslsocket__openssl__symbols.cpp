@@ -1,4 +1,4 @@
-$NetBSD: patch-src_network_ssl_qsslsocket__openssl__symbols.cpp,v 1.4 2012/04/09 09:12:49 adam Exp $
+$NetBSD: patch-src_network_ssl_qsslsocket__openssl__symbols.cpp,v 1.5 2012/12/07 10:06:13 adam Exp $
 
 * fixes build with OpenSSL 0.9.9-dev
 * fix build with -openssl-linked for OpenSSL 0.9.8*
@@ -6,7 +6,7 @@ $NetBSD: patch-src_network_ssl_qsslsocket__openssl__symbols.cpp,v 1.4 2012/04/09
 
 --- src/network/ssl/qsslsocket_openssl_symbols.cpp.orig	2012-03-14 14:01:30.000000000 +0000
 +++ src/network/ssl/qsslsocket_openssl_symbols.cpp
-@@ -171,7 +171,7 @@ DEFINEFUNC(int, SSL_CTX_check_private_ke
+@@ -174,7 +174,7 @@ DEFINEFUNC(int, SSL_CTX_check_private_ke
  #endif
  DEFINEFUNC4(long, SSL_CTX_ctrl, SSL_CTX *a, a, int b, b, long c, c, void *d, d, return -1, return)
  DEFINEFUNC(void, SSL_CTX_free, SSL_CTX *a, a, return, DUMMYARG)
@@ -15,7 +15,7 @@ $NetBSD: patch-src_network_ssl_qsslsocket__openssl__symbols.cpp,v 1.4 2012/04/09
  DEFINEFUNC(SSL_CTX *, SSL_CTX_new, const SSL_METHOD *a, a, return 0, return)
  #else
  DEFINEFUNC(SSL_CTX *, SSL_CTX_new, SSL_METHOD *a, a, return 0, return)
-@@ -217,7 +217,7 @@ DEFINEFUNC3(void, SSL_set_bio, SSL *a, a
+@@ -220,7 +220,7 @@ DEFINEFUNC3(void, SSL_set_bio, SSL *a, a
  DEFINEFUNC(void, SSL_set_accept_state, SSL *a, a, return, DUMMYARG)
  DEFINEFUNC(void, SSL_set_connect_state, SSL *a, a, return, DUMMYARG)
  DEFINEFUNC(int, SSL_shutdown, SSL *a, a, return -1, return)

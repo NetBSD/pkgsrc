@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.81 2012/11/19 10:51:44 ryoon Exp $
+$NetBSD: distinfo,v 1.82 2012/12/07 10:06:13 adam Exp $
 
-SHA1 (qt-everywhere-opensource-src-4.8.3.tar.gz) = bc352a283610e0cd2fe0dbedbc45613844090fcb
-RMD160 (qt-everywhere-opensource-src-4.8.3.tar.gz) = fe56e5da874503a79d6f84a1e15460eba5a6feae
-Size (qt-everywhere-opensource-src-4.8.3.tar.gz) = 233635127 bytes
+SHA1 (qt-everywhere-opensource-src-4.8.4.tar.gz) = f5880f11c139d7d8d01ecb8d874535f7d9553198
+RMD160 (qt-everywhere-opensource-src-4.8.4.tar.gz) = 3c09a3b1411385d0917225f01ac2ff3a2ce83fda
+Size (qt-everywhere-opensource-src-4.8.4.tar.gz) = 236593028 bytes
 SHA1 (patch-aa) = 9b5f8bd980d8c3f38fd3c541380fd42d2a93a609
 SHA1 (patch-ab) = 447a888cbc784a54935f23d1005d6977374a484d
 SHA1 (patch-ac) = 078ddafefc719f248740f40e2063dae07cd601e5
@@ -19,12 +19,12 @@ SHA1 (patch-am) = 018a5982834737ca8ceb6460dc696b6e3a70ec54
 SHA1 (patch-an) = 8aa6ceffb9acab4771d22b3184a1360227a81409
 SHA1 (patch-ao) = a63839ae22e0bf13ff40f5377df2bc36ca052d91
 SHA1 (patch-ap) = 86a2f5cce47607c8c453c63c6213d5efb48c8569
-SHA1 (patch-aq) = acff9d38a341a0d686c0379886ee92126d8a950c
+SHA1 (patch-aq) = 5821207c6c2340dd048cb29be23b56af27d5ef79
 SHA1 (patch-ar) = ba839210b42532b1797604722442841e43acbae1
 SHA1 (patch-as) = b0962c535fc2e8da08bb78b9ebcb5cd678565058
 SHA1 (patch-au) = 397a18f84299026e21aee0079784f56698fc9c6b
 SHA1 (patch-av) = f716b571ef0f8b5c7684378a0e3772c1680c6dcf
-SHA1 (patch-aw) = df067e2530a825734ffc0afe2607e43c45c07f9b
+SHA1 (patch-aw) = 7e6735bf637bf3e72afe488f37b399d170185f8f
 SHA1 (patch-ay) = e1edcb5de9a40b3549c7cd74ebb814c6b4eb6c94
 SHA1 (patch-ba) = 8e70813962e434a82a737ce4f3ea743c1bb560f9
 SHA1 (patch-bb) = 0d002013974af33e097df5df03ec3f45222846b5
@@ -32,7 +32,7 @@ SHA1 (patch-bc) = 5df34d2d6bb2f93e511cdfb2d9371e1646f5a773
 SHA1 (patch-bd) = 013dd17149e4ed60072adfd226f7e6b3ea8eb5cd
 SHA1 (patch-be) = dd47e1fbf46ca01901e664f544ea1942f61c2557
 SHA1 (patch-bf) = fba76801814a69d22ce5cc58ac2a8c2bfe3bd019
-SHA1 (patch-bg) = 76175e659be041ba02c1c07fe8e8fceb029e6759
+SHA1 (patch-bg) = 50d10a94b98b2e0cd8aa1a05dfc1e002c0f2ef2f
 SHA1 (patch-ca) = 8b69cb6201f624f43df7d766ff1967253bb22430
 SHA1 (patch-cb) = 13e1b0ffb171637e1ff84a548ef83cf4e006c207
 SHA1 (patch-cg) = 2519fe525237167f10dffb9294c861f4d7063f31
@@ -51,7 +51,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_WebCore_features.pri) = d0053dd2732604908
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 0377066bd28d5eae02e8fcf200da4360c286ad84
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_MediaPlayer.cpp) = f9a1f71b4607c5f542c059873cf5735fad9ff3a1
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_qt_PlatformKeyboardEventQt.cpp) = b28cf71983f8e71b82b1c634a10b3898ca13ede5
-SHA1 (patch-src_corelib_io_io.pri) = eb8ada83d1d5ba18ec4cc8d0ab72d4a400112191
-SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = 3eef33da6498014a95f6ef9ff2df2eefcfd736db
-SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 67744fd7eb821cbff5a763c85fc080270bd86922
+SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
+SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
+SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2b282caa298508dc3e9dd8566
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
