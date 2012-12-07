@@ -1,16 +1,16 @@
-$NetBSD: patch-ah,v 1.3 2011/01/02 23:53:13 schnoebe Exp $
+$NetBSD: patch-ah,v 1.4 2012/12/07 23:52:09 schnoebe Exp $
 
 pkgsrc places idna.h in a different directory than other package
 managers
 
---- iris/src/xmpp/xmpp-core/connector.cpp.orig	2009-07-16 00:08:57.000000000 -0500
+--- iris/src/xmpp/xmpp-core/connector.cpp.orig	2012-10-04 00:53:09.000000000 +0000
 +++ iris/src/xmpp/xmpp-core/connector.cpp
-@@ -37,7 +37,7 @@
+@@ -36,7 +36,7 @@
  #include <QUrl>
  #include <QTimer>
- #include "safedelete.h"
+ #include <qca.h>
 -#include <libidn/idna.h>
 +#include <idna.h>
  
- #include "ndns.h"
- 
+ #include "bsocket.h"
+ #include "httpconnect.h"
