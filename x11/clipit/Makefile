@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/07 01:41:58 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/07 01:46:35 khorben Exp $
 #
 
 DISTNAME=	clipit-1.4.2
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkclipit/}
 PKGREVISION=	1
 
-MAINTAINER=	khorben@defora.org
+MAINTAINER=	khorben@NetBSD.org
 HOMEPAGE=	http://clipit.rspwn.com/
 COMMENT=	Lightweight, fully featured GTK+ clipboard manager
 
