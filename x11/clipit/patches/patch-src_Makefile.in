@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2012/12/07 01:41:58 khorben Exp $
+
+Fixes build on MacOS X
+
+--- src/Makefile.in.orig	2012-04-04 07:53:01.000000000 +0000
++++ src/Makefile.in
+@@ -226,7 +226,7 @@ AM_CPPFLAGS = -I$(top_srcdir)
+ AM_CFLAGS = -Wall -g -DCLIPITLOCALEDIR=\""$(clipitlocaledir)"\"
+ INCLUDES = $(GTK_CFLAGS) $(APPINDICATOR_CFLAGS) -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include
+ LDADD = $(GTK_LIBS) $(APPINDICATOR_LIBS) $(X11_LIBS)
+-AM_LDFLAGS = -Wl,--as-needed
++#AM_LDFLAGS = -Wl,--as-needed
+ DISTCLEANFILES = *.bak *.log *~ .deps/*.P
+ clipit_SOURCES = main.c main.h \
+ 			utils.c utils.h \

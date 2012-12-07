@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/12/07 01:41:58 khorben Exp $
+
+SHA1 (clipit-1.4.2.tar.gz) = e01d02a60efdac575f8c0f84ceef210be1466d1a
+RMD160 (clipit-1.4.2.tar.gz) = 3ef589b5eab4bb2cb65b220d82d3ba06881dba84
+Size (clipit-1.4.2.tar.gz) = 284614 bytes
+SHA1 (patch-src_Makefile.in) = 8aac206ff8a32044fd926d8808399fe70b863b92
