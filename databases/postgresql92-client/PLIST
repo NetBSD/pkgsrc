@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/05 21:03:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/07 21:19:50 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -568,8 +568,11 @@ share/locale/cs/LC_MESSAGES/ecpg-9.2.mo
 share/locale/cs/LC_MESSAGES/ecpglib6-9.2.mo
 share/locale/cs/LC_MESSAGES/initdb-9.2.mo
 share/locale/cs/LC_MESSAGES/libpq5-9.2.mo
+share/locale/cs/LC_MESSAGES/pg_basebackup-9.2.mo
 share/locale/cs/LC_MESSAGES/pg_config-9.2.mo
+share/locale/cs/LC_MESSAGES/pg_controldata-9.2.mo
 share/locale/cs/LC_MESSAGES/pg_ctl-9.2.mo
+share/locale/cs/LC_MESSAGES/pg_dump-9.2.mo
 share/locale/cs/LC_MESSAGES/pg_resetxlog-9.2.mo
 share/locale/cs/LC_MESSAGES/pgscripts-9.2.mo
 share/locale/cs/LC_MESSAGES/psql-9.2.mo
@@ -638,9 +641,11 @@ share/locale/pl/LC_MESSAGES/ecpg-9.2.mo
 share/locale/pl/LC_MESSAGES/ecpglib6-9.2.mo
 share/locale/pl/LC_MESSAGES/initdb-9.2.mo
 share/locale/pl/LC_MESSAGES/libpq5-9.2.mo
+share/locale/pl/LC_MESSAGES/pg_basebackup-9.2.mo
 share/locale/pl/LC_MESSAGES/pg_config-9.2.mo
 share/locale/pl/LC_MESSAGES/pg_controldata-9.2.mo
 share/locale/pl/LC_MESSAGES/pg_ctl-9.2.mo
+share/locale/pl/LC_MESSAGES/pg_dump-9.2.mo
 share/locale/pl/LC_MESSAGES/pg_resetxlog-9.2.mo
 share/locale/pl/LC_MESSAGES/pgscripts-9.2.mo
 share/locale/pl/LC_MESSAGES/psql-9.2.mo
@@ -648,9 +653,11 @@ share/locale/pt_BR/LC_MESSAGES/ecpg-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/ecpglib6-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/initdb-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/libpq5-9.2.mo
+share/locale/pt_BR/LC_MESSAGES/pg_basebackup-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/pg_config-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/pg_controldata-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/pg_ctl-9.2.mo
+share/locale/pt_BR/LC_MESSAGES/pg_dump-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/pg_resetxlog-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/pgscripts-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/psql-9.2.mo
@@ -687,8 +694,11 @@ share/locale/zh_CN/LC_MESSAGES/ecpg-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/ecpglib6-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/initdb-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/libpq5-9.2.mo
+share/locale/zh_CN/LC_MESSAGES/pg_basebackup-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/pg_config-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/pg_controldata-9.2.mo
+share/locale/zh_CN/LC_MESSAGES/pg_ctl-9.2.mo
+share/locale/zh_CN/LC_MESSAGES/pg_dump-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/pg_resetxlog-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/pgscripts-9.2.mo
 share/locale/zh_CN/LC_MESSAGES/psql-9.2.mo
