@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/09/15 08:18:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/12/07 10:06:14 adam Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -626,6 +626,8 @@ qt4/mkspecs/win32-msvc2008/qmake.conf
 qt4/mkspecs/win32-msvc2008/qplatformdefs.h
 qt4/mkspecs/win32-msvc2010/qmake.conf
 qt4/mkspecs/win32-msvc2010/qplatformdefs.h
+qt4/mkspecs/win32-msvc2012/qmake.conf
+qt4/mkspecs/win32-msvc2012/qplatformdefs.h
 qt4/mkspecs/wince50standard-armv4i-msvc2005/default_post.prf
 qt4/mkspecs/wince50standard-armv4i-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-armv4i-msvc2005/qplatformdefs.h
