@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:55 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/12/07 16:01:15 adam Exp $
 
-DISTNAME=	glew-1.6.0
+DISTNAME=	glew-1.9.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glew/}
 EXTRACT_SUFX=	.tgz
@@ -19,8 +19,8 @@ INSTALL_TARGET=		install.all
 INSTALLATION_DIRS+=	lib/pkgconfig
 
 post-patch:
-	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.dragonfly
-	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.netbsd
+	${LN} -sf Makefile.netbsdelf ${WRKSRC}/config/Makefile.dragonfly
+	${LN} -sf Makefile.netbsdelf ${WRKSRC}/config/Makefile.netbsd
 
 .include "../../mk/bsd.prefs.mk"
 
