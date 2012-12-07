@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/01/02 23:53:12 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/12/07 23:52:09 schnoebe Exp $
 bin/psi
 share/doc/psi/COPYING
 share/doc/psi/README
@@ -163,19 +163,26 @@ share/psi/iconsets/system/default/whiteboarding/translate.png
 share/psi/iconsets/system/default/whiteboarding/ungroup.png
 share/psi/iconsets/system/default/whiteboarding/whiteboard.png
 share/psi/iconsets/system/default/xml.png
-share/psi/psi_be.qm
-share/psi/psi_cs.qm
-share/psi/psi_de.qm
-share/psi/psi_fr.qm
-share/psi/psi_it.qm
-share/psi/psi_ja.qm
-share/psi/psi_pl.qm
-share/psi/psi_ru.qm
-share/psi/psi_sl.qm
-share/psi/psi_sv.qm
-share/psi/psi_pt_BR.qm
-share/psi/psi_ur_PK.qm
-share/psi/psi_zh_TW.qm
+${PLIST.be}share/psi/psi_be.qm
+${PLIST.cs}share/psi/psi_cs.qm
+${PLIST.de}share/psi/psi_de.qm
+${PLIST.eo}share/psi/psi_eo.qm
+${PLIST.es}share/psi/psi_es.qm
+${PLIST.es-es}share/psi/psi_es_ES.qm
+${PLIST.fr}share/psi/psi_fr.qm
+${PLIST.it}share/psi/psi_it.qm
+${PLIST.ja}share/psi/psi_ja.qm
+${PLIST.mk}share/psi/psi_mk.qm
+${PLIST.pl}share/psi/psi_pl.qm
+${PLIST.pt-br}share/psi/psi_pt_BR.qm
+${PLIST.ru}share/psi/psi_ru.qm
+${PLIST.sl}share/psi/psi_sl.qm
+${PLIST.sv}share/psi/psi_sv.qm
+${PLIST.uk}share/psi/psi_uk.qm
+${PLIST.ur-pk}share/psi/psi_ur_PK.qm
+${PLIST.vi}share/psi/psi_vi.qm
+${PLIST.zh-cn}share/psi/psi_zh_CN.qm
+${PLIST.zh-tw}share/psi/psi_zh_TW.qm
 share/psi/sound/chat1.wav
 share/psi/sound/chat2.wav
 share/psi/sound/ft_complete.wav
