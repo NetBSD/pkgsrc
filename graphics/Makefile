@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.640 2012/12/03 12:55:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.641 2012/12/08 22:46:21 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -311,6 +311,7 @@ SUBDIR+=	opendis
 SUBDIR+=	openexr
 SUBDIR+=	openimageio
 SUBDIR+=	openjpeg
+SUBDIR+=	openjpeg15
 SUBDIR+=	optipng
 SUBDIR+=	osg
 SUBDIR+=	oxygen-icons
