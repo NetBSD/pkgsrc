@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3755 2012/12/08 16:54:20 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3756 2012/12/08 17:10:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5777,3 +5777,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Log-Dispatch to 2.33 [wen 2012-12-08]
 	Updated lang/ecl to 12.12.1 [asau 2012-12-08]
 	Added www/libmrss version 0.19.2nb1 [ryoon 2012-12-08]
+	Added net/podcastdl version 0.3.0 [ryoon 2012-12-08]
