@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3757 2012/12/08 19:00:37 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3758 2012/12/08 19:53:14 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/libmrss version 0.19.2nb1 [ryoon 2012-12-08]
 	Added net/podcastdl version 0.3.0 [ryoon 2012-12-08]
 	Updated math/fricas to 1.1.8 [asau 2012-12-08]
+	Updated fonts/gbdfed to 1.6 [shattered 2012-12-08]
