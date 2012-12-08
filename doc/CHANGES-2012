@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3764 2012/12/08 23:39:25 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3765 2012/12/08 23:49:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5787,3 +5787,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/libgee0.8 version 0.8.2 [wiz 2012-12-08]
 	Updated time/py-icalendar to 3.2 [wiz 2012-12-08]
 	Updated sysutils/cdrtools to 3.01alpha09 [wiz 2012-12-08]
+	Updated converters/libvisio to 0.0.22 [wiz 2012-12-08]
