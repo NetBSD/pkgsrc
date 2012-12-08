@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3765 2012/12/08 23:49:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3766 2012/12/08 23:51:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5788,3 +5788,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-icalendar to 3.2 [wiz 2012-12-08]
 	Updated sysutils/cdrtools to 3.01alpha09 [wiz 2012-12-08]
 	Updated converters/libvisio to 0.0.22 [wiz 2012-12-08]
+	Updated devel/global to 6.2.5 [wiz 2012-12-08]
