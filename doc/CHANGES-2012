@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3761 2012/12/08 23:06:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3762 2012/12/08 23:21:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added graphics/openjpeg15 version 1.5.1 [adam 2012-12-08]
 	Updated graphics/openimageio to 1.1.2 [adam 2012-12-08]
 	Updated x11/libdrm to 2.4.40 [wiz 2012-12-08]
+	Added devel/libgee0.8 version 0.8.2 [wiz 2012-12-08]
