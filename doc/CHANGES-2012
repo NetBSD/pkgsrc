@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3758 2012/12/08 19:53:14 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.3759 2012/12/08 22:16:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5780,3 +5780,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/podcastdl version 0.3.0 [ryoon 2012-12-08]
 	Updated math/fricas to 1.1.8 [asau 2012-12-08]
 	Updated fonts/gbdfed to 1.6 [shattered 2012-12-08]
+	Updated x11/xterm to 287 [wiz 2012-12-08]
