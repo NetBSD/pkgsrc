@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/08 22:43:10 adam Exp $
+bin/image_to_j2k
+bin/j2k_dump
+bin/j2k_to_image
+include/openjpeg-1.5/openjpeg.h
+lib/libopenjpeg.la
+lib/pkgconfig/libopenjpeg.pc
+lib/pkgconfig/libopenjpeg1.pc
+man/man1/image_to_j2k.1
+man/man1/j2k_dump.1
+man/man1/j2k_to_image.1
+man/man1/jpwl_image_to_j2k.1
+man/man1/jpwl_j2k_to_image.1
+man/man3/jpwl_libopenjpeg.3
+man/man3/libopenjpeg.3
+share/doc/openjpeg-1.5/LICENSE
