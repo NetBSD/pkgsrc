@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/08 23:20:07 wiz Exp $
+include/gee-0.8/gee.h
+lib/girepository-1.0/Gee-0.8.typelib
+lib/libgee-0.8.la
+lib/pkgconfig/gee-0.8.pc
+share/gir-1.0/Gee-0.8.gir
+share/vala/vapi/gee-0.8.vapi
