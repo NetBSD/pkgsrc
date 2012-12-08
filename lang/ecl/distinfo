@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2012/08/10 08:15:16 marino Exp $
+$NetBSD: distinfo,v 1.14 2012/12/08 13:29:45 asau Exp $
 
-SHA1 (ecl-12.7.1.tar.gz) = c5b81d0dc5fdd6c72af99dc883752bfee85028dc
-RMD160 (ecl-12.7.1.tar.gz) = 5b0eab08fd377b84cb41e19f195683e4f03259a3
-Size (ecl-12.7.1.tar.gz) = 9009087 bytes
+SHA1 (ecl-12.12.1.tgz) = b9f4c45b87f0647303baebbb26efb536db8f79bf
+RMD160 (ecl-12.12.1.tgz) = da49d326da9a8fb1cebb64c9b44b586e550f5783
+Size (ecl-12.12.1.tgz) = 9006697 bytes
 SHA1 (patch-aa) = 84c5a7617843594d83229bb8621d897a183dc8f9
 SHA1 (patch-ab) = f0229ede69a04648eadf03e0d4bcbed2c200c340
