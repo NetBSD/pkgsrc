@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3750 2012/12/08 00:43:47 asau Exp $
+$NetBSD: CHANGES-2012,v 1.3751 2012/12/08 02:54:17 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5697,6 +5697,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-concrete5 to 5.6.0.2 [ryoon 2012-12-06]
 	Updated www/curl to 7.28.1 [adam 2012-12-06]
 	Updated graphics/openjpeg to 2.0.0 [adam 2012-12-06]
+	Added x11/clipit version 1.4.2 [khorben 2012-12-07]
 	Updated geography/epsg to 8.1 [gdt 2012-12-07]
 	Updated x11/qt4 to 4.8.4 [adam 2012-12-07]
 	Updated x11/qt4-libs to 4.8.4 [adam 2012-12-07]
