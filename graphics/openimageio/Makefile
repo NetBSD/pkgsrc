@@ -1,30 +1,26 @@
-# $NetBSD: Makefile,v 1.1 2012/12/03 12:54:14 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2012/12/08 22:47:40 adam Exp $
 
-DISTNAME=	oiio-Release-1.1.1
-PKGNAME=	${DISTNAME:S/oiio-Release/openimageio/}
+DISTNAME=	Release-1.1.2
+PKGNAME=	${DISTNAME:S/Release/openimageio/}
 CATEGORIES=	graphics
-MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-1.1.1.tar.gz
+MASTER_SITES=	https://github.com/OpenImageIO/oiio/archive/
+FETCH_USING=	curl
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/openimageio/
 COMMENT=	OpenImageIO is a library for reading and writing images
 LICENSE=	modified-bsd
 
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
+WRKSRC=		${WRKDIR}/oiio-${DISTNAME}/src
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-
-USE_TOOLS+=	gmake
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 
 CXXFLAGS+=		-std=c++0x
 
 CMAKE_ARGS+=		-DILMBASE_HOME:STRING=${BUILDLINK_PREFIX.ilmbase}
-CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg}
+CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg15}
 CMAKE_ARGS+=		-DOPENEXR_HOME:STRING=${BUILDLINK_PREFIX.openexr}
 
 post-patch:
@@ -38,7 +34,7 @@ post-patch:
 .include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/opencv/buildlink3.mk"
-.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/openjpeg15/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
