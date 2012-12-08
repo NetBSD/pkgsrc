@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/09/15 10:05:30 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/12/08 15:26:57 asau Exp $
 
-PKGNAME=		fricas-1.1.6
+PKGNAME=		fricas-1.1.8
 DISTNAME=		${PKGNAME_NOREV}-full
-PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
 EXTRACT_SUFX=		.tar.bz2
