@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 10:24:10 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2012/12/08 23:09:39 adam Exp $
 
 DISTNAME=	mupdf-1.1-source
 PKGNAME=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://ccxvii.net/mupdf/download/ \
 		http://ccxvii.net/mupdf/download/archive/
@@ -12,9 +12,8 @@ HOMEPAGE=	http://mupdf.com/
 COMMENT=	Lightweight PDF viewer and toolkit
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config gmake
-
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
@@ -32,6 +31,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/openjpeg15/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
