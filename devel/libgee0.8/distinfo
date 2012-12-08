@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/12/08 23:20:07 wiz Exp $
+
+SHA1 (libgee-0.8.2.tar.xz) = 762800f769fee6ff0d42c7d9772a9a036d020b67
+RMD160 (libgee-0.8.2.tar.xz) = e484b9712a45a009829da49f677ca66bbe3f5f40
+Size (libgee-0.8.2.tar.xz) = 583048 bytes
+SHA1 (patch-gee_Makefile.in) = 344091da335523de69c934103fa9319ce7b0c1fb
