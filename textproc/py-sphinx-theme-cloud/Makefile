@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/04 15:19:52 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/08 18:29:31 dholland Exp $
 
 
 DISTNAME=	cloud_sptheme-${VERSION}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://packages.python.org/cloud_sptheme/
 COMMENT=	Sphinx cloud theme
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_LANGUAGES=	#none
 
