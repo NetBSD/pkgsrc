@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/10/12 13:31:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/12/08 23:51:04 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -17,6 +17,7 @@ man/man1/htags.1
 share/gtags/AUTHORS
 share/gtags/BOKIN_MODEL
 share/gtags/BOKIN_MODEL_FAQ
+share/gtags/BUILD_TOOLS
 share/gtags/COPYING
 share/gtags/ChangeLog
 share/gtags/DONORS
@@ -38,6 +39,7 @@ share/gtags/gtags.conf
 share/gtags/gtags.el
 share/gtags/gtags.pl
 share/gtags/gtags.vim
+share/gtags/head.in
 share/gtags/icons/back.png
 share/gtags/icons/bottom.png
 share/gtags/icons/c.png
@@ -79,6 +81,7 @@ share/gtags/jquery/jquery.treeview.css
 share/gtags/jquery/jquery.treeview.js
 share/gtags/jscode_suggest.tmpl
 share/gtags/jscode_treeview.tmpl
+share/gtags/mainpage.dox
 share/gtags/script/README
 share/gtags/script/elvis-global
 share/gtags/script/global-client
