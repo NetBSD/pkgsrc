@@ -1,8 +1,8 @@
-$NetBSD: patch-src_common_darktable.h,v 1.1 2012/08/12 07:47:29 marino Exp $
+$NetBSD: patch-src_common_darktable.h,v 1.2 2012/12/08 00:15:26 jakllsch Exp $
 
---- src/common/darktable.h.orig	2012-07-21 10:44:08.000000000 +0000
+--- src/common/darktable.h.orig	2012-11-23 23:23:21.000000000 +0000
 +++ src/common/darktable.h
-@@ -43,7 +43,7 @@
+@@ -47,7 +47,7 @@
  #include <mach/mach.h>
  #include <sys/sysctl.h>
  #endif

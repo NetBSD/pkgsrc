@@ -1,8 +1,8 @@
-$NetBSD: patch-src_iop_lens.c,v 1.1 2012/05/05 19:18:33 jakllsch Exp $
+$NetBSD: patch-src_iop_lens.c,v 1.2 2012/12/08 00:15:26 jakllsch Exp $
 
---- src/iop/lens.c.orig	2012-04-27 20:25:52.000000000 +0000
+--- src/iop/lens.c.orig	2012-11-23 23:23:21.000000000 +0000
 +++ src/iop/lens.c
-@@ -842,7 +842,7 @@ static void parse_maker_model (
+@@ -1106,7 +1106,7 @@ static void parse_maker_model (
  {
    const gchar *sep;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-src_iop_lens.c,v 1.1 2012/05/05 19:18:33 jakllsch Exp $
      txt++;
    sep = strchr (txt, ',');
    if (sep)
-@@ -853,7 +853,7 @@ static void parse_maker_model (
+@@ -1117,7 +1117,7 @@ static void parse_maker_model (
      memcpy (make, txt, len);
      make [len] = 0;
  
