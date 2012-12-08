@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3752 2012/12/08 12:05:03 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3753 2012/12/08 12:14:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5774,3 +5774,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/darktable to 1.1 [jakllsch 2012-12-08]
 	Updated lang/sbcl to 1.1.2 [asau 2012-12-08]
 	Updated converters/p5-Unicode-Collate to 0.95 [wen 2012-12-08]
+	Updated devel/p5-Log-Dispatch to 2.33 [wen 2012-12-08]
