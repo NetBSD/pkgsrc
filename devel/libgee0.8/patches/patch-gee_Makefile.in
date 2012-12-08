@@ -1,0 +1,18 @@
+$NetBSD: patch-gee_Makefile.in,v 1.1 2012/12/08 23:20:07 wiz Exp $
+
+NetBSD's sed by default only supports basic regex (not extended)
+where '+' is just a character like any other.
+Another option would be using 'sed -r', but in this case * is simpler
+and more portable.
+
+--- gee/Makefile.in.orig	2012-11-10 22:37:32.000000000 +0000
++++ gee/Makefile.in
+@@ -487,7 +487,7 @@ dist_vapi_DATA = \
+ # Extract dlname from libfolks.la; see bug #658002.
+ # This is what g-ir-scanner does.
+ @HAVE_INTROSPECTION_TRUE@libgee_dlname = \
+-@HAVE_INTROSPECTION_TRUE@	`$(SED) -n "s/^dlname='\([A-Za-z0-9.+-]\+\)'/\1/p" libgee-0.8.la`
++@HAVE_INTROSPECTION_TRUE@	`$(SED) -n "s/^dlname='\([A-Za-z0-9.+-]*\)'/\1/p" libgee-0.8.la`
+ 
+ @HAVE_INTROSPECTION_TRUE@INTROSPECTION_COMPILER_ARGS = \
+ @HAVE_INTROSPECTION_TRUE@	-l $(libgee_dlname)
