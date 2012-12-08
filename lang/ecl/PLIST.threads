@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.threads,v 1.1 2011/03/04 14:46:32 wiz Exp $
+@comment $NetBSD: PLIST.threads,v 1.2 2012/12/08 13:29:45 asau Exp $
 include/ecl/atomic_ops.h
 include/ecl/atomic_ops/generalize-small.h
 include/ecl/atomic_ops/generalize.h
@@ -43,3 +43,11 @@ include/ecl/atomic_ops/sysdeps/standard_ao_double_t.h
 include/ecl/atomic_ops/sysdeps/sunc/sparc.h
 include/ecl/atomic_ops/sysdeps/test_and_set_t_is_ao_t.h
 include/ecl/atomic_ops/sysdeps/test_and_set_t_is_char.h
+include/ecl/atomic_ops/sysdeps/armcc/arm_v6.h
+include/ecl/atomic_ops/sysdeps/gcc/avr32.h
+include/ecl/atomic_ops/sysdeps/gcc/mips.h
+include/ecl/atomic_ops/sysdeps/gcc/sh.h
+include/ecl/atomic_ops/sysdeps/msftc/arm.h
+include/ecl/atomic_ops/sysdeps/msftc/common32_defs.h
+include/ecl/atomic_ops/sysdeps/sunc/x86.h
+include/ecl/atomic_ops/sysdeps/sunc/x86_64.h
