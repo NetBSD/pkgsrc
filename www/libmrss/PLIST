@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/08 16:53:41 ryoon Exp $
+include/mrss.h
+lib/libmrss.la
+lib/pkgconfig/mrss.pc
