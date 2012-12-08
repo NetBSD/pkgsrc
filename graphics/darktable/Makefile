@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 23:01:40 adam Exp $
+# $NetBSD: Makefile,v 1.23 2012/12/08 00:15:26 jakllsch Exp $
 
-DISTNAME=	darktable-1.0.5
-PKGREVISION=	5
+DISTNAME=	darktable-1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 
@@ -48,20 +47,19 @@ CFLAGS+=	-mstackrealign -msse2
 CFLAGS+=	-D_NETBSD_SOURCE
 .endif
 
+CHECK_PORTABILITY_SKIP+= packaging/macosx/start
+
 # for some reason msgfmt can't handle these po files
 post-extract:
-	${RM} ${WRKSRC}/po/cs.po
-	${RM} ${WRKSRC}/po/es.po
-	${RM} ${WRKSRC}/po/fr.po
-	${RM} ${WRKSRC}/po/it.po
-	${RM} ${WRKSRC}/po/ja.po
-	${RM} ${WRKSRC}/po/nl.po
 	${RM} ${WRKSRC}/po/pl.po
-	${RM} ${WRKSRC}/po/ru.po
-	${RM} ${WRKSRC}/po/sv.po
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/pkgsrc_build
+
+# wants Clearlooks at runtime
+DEPENDS+=	gtk2-engines-[0-9]*:../../x11/gtk2-engines
+
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.12.1
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
@@ -78,9 +76,11 @@ pre-configure:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/flickcurl/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
