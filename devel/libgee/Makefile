@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/11/23 17:10:24 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2012/12/08 23:20:37 wiz Exp $
 #
 
 DISTNAME=	libgee-0.6.6.1
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Libgee
-COMMENT=	Library providing GObject-based interfaces and classes
+COMMENT=	Library providing GObject-based interfaces and classes (v0.6)
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
