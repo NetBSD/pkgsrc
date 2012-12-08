@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/08/08 16:28:36 wiz Exp $
+$NetBSD: distinfo,v 1.3 2012/12/08 19:51:51 shattered Exp $
 
-SHA1 (gbdfed-1.4-patch1) = b8c5c0b7219a085e3d947dc39da39ae4270102ec
-RMD160 (gbdfed-1.4-patch1) = 476e9d2aaa0716cf9d052688e542ebec998b6263
-Size (gbdfed-1.4-patch1) = 6035 bytes
-SHA1 (gbdfed-1.5.tbz2) = b3a937beedf222e10bf6f379240d43687a9c75ac
-RMD160 (gbdfed-1.5.tbz2) = d3754e4b0a2005ac347010a21296e45e1b1d3ef6
-Size (gbdfed-1.5.tbz2) = 229315 bytes
+SHA1 (gbdfed-1.6.tbz2) = 4985f100e56a5b097f169f63be3ef7b054d929c9
+RMD160 (gbdfed-1.6.tbz2) = 205de4c1e3e2e0e3e3c037d2b1f3090ff15723f0
+Size (gbdfed-1.6.tbz2) = 236166 bytes
 SHA1 (patch-aa) = 2247ae325bd54647c7a06a096488eb75e68315a7
-SHA1 (patch-ab) = 38deb59e7a8a8479a2cf52c00f4404242e410d18
