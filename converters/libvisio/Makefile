@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 00:20:12 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/08 23:49:36 wiz Exp $
 
-DISTNAME=	libvisio-0.0.19
-PKGREVISION=	2
+DISTNAME=	libvisio-0.0.22
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +11,7 @@ COMMENT=	Library and tools for parsing the visio file format
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
 BUILD_DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
+BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
@@ -20,8 +20,10 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
 PKGCONFIG_OVERRIDE=	libvisio-0.0.pc.in
+USE_TOOLS+=	perl:build
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
