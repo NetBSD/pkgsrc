@@ -1,20 +1,10 @@
-$NetBSD: patch-tools_h5jam_testh5jam.sh.in,v 1.1 2012/10/27 08:54:48 asau Exp $
+$NetBSD: patch-tools_h5jam_testh5jam.sh.in,v 1.2 2012/12/09 00:07:39 adam Exp $
 
-Use portable construct to check file existence.
 Use portable "=" to test string equality.
 
 --- tools/h5jam/testh5jam.sh.in.orig	2012-05-09 15:06:08.000000000 +0000
 +++ tools/h5jam/testh5jam.sh.in
-@@ -103,7 +103,7 @@ COPY_TESTFILES_TO_TESTDIR()
-         echo $tstfile | tr -d ' ' | grep '^#' > /dev/null
-         RET=$?
-         if [ $RET -eq 1 ]; then
--            if [ -a $tstfile ]; then
-+            if [ -e $tstfile ]; then
-                 $CP -f $tstfile $TESTDIR
-             else
-                 echo "Error: FAILED to copy $tstfile"
-@@ -456,9 +456,9 @@ UNJAMTEST () {
+@@ -464,9 +464,9 @@ UNJAMTEST () {
  #
  
  TOOLTEST_OUTPUT() {
