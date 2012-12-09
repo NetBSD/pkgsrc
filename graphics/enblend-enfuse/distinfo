@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.8 2011/01/29 16:38:33 adam Exp $
+$NetBSD: distinfo,v 1.9 2012/12/09 00:11:42 adam Exp $
 
-SHA1 (enblend-enfuse-4.0/enblend-enfuse-4.0.tar.gz) = 34c3a5ce11c6ef0ef520d8a15a3cb6a94a567033
-RMD160 (enblend-enfuse-4.0/enblend-enfuse-4.0.tar.gz) = 9e531b5bf6f7258ef8778c01b456979e0bc04338
-Size (enblend-enfuse-4.0/enblend-enfuse-4.0.tar.gz) = 1046677 bytes
+SHA1 (enblend-enfuse-4.1.tar.gz) = 265db3fddc88de7dbbd30f0f848e489cce2c88ba
+RMD160 (enblend-enfuse-4.1.tar.gz) = c367a17be58039e4e97b1fa7a51efe92bc68e402
+Size (enblend-enfuse-4.1.tar.gz) = 857011 bytes
 SHA1 (patch-aa) = b1809fe6ef6609658b697635c6cbf0c112a03fd1
-SHA1 (patch-ab) = afc074bb94e2a2b96c654c37540072514ba0bce0
-SHA1 (patch-ac) = 916f4655ff30013583014eb8deecc72bd19ae55d
-SHA1 (patch-ad) = 735b9bb01a8a76ec3dc4a13cece4d79681c2d951
-SHA1 (patch-ae) = fbb68114f877cf01960b353b527fa45cdac6b59d
-SHA1 (patch-af) = a32710958e30000fe75ecd436071306ea4b1844c
-SHA1 (patch-ag) = 6ef31f8b5ce54883e636adf23b4ea615ae9c752d
+SHA1 (patch-ab) = 7e641cf3806fe1b5e797085014a54b2fc16c6613
+SHA1 (patch-ac) = 883137e4e4920760d375d3dea27085c265ccf117
+SHA1 (patch-ad) = 8cef2de4ff47fe5798e33b8096d5e5cf71fafba1
+SHA1 (patch-src_gpu.cc) = 8a126e995a4f993e940814f647f1b961037470cf
