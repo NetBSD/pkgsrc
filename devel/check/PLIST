@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/12/09 15:09:34 wiz Exp $
 include/check.h
 info/check.info
 lib/libcheck.la
 lib/pkgconfig/check.pc
+man/man1/checkmk.1
 share/aclocal/check.m4
 share/doc/check/COPYING.LESSER
 share/doc/check/ChangeLog

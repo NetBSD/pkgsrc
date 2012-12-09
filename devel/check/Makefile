@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:16:45 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/12/09 15:09:34 wiz Exp $
 #
 
-DISTNAME=	check-0.9.8
+DISTNAME=	check-0.9.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=check/}
 
