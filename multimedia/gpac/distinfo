@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/10/09 17:53:51 marino Exp $
+$NetBSD: distinfo,v 1.7 2012/12/09 17:15:06 ryoon Exp $
 
-SHA1 (gpac-0.4.5.tar.gz) = 2ec03c1d7dc3f4d10c0f7b47696cc1e753a56fc8
-RMD160 (gpac-0.4.5.tar.gz) = 21249249a412efa5d1237907cb6b8cfe6282e86f
-Size (gpac-0.4.5.tar.gz) = 4269054 bytes
-SHA1 (patch-aa) = bd4a1314fa80ced3cc4aaa632e4a522f877207a9
-SHA1 (patch-ab) = 19bb0746ced98fbb438673a406a570cad7aaabb4
-SHA1 (patch-ac) = 6b4d87c366d27d997c81014d152535150ac48042
-SHA1 (patch-ad) = 32eac449b1b108937f9a723d7c4ba622182cf9ed
-SHA1 (patch-extra_lib__include__ffmpeg__avio.h) = dff4609d59ec5da3788e2b613b73075eda0e7af0
-SHA1 (patch-modules_oss__audio_Makefile) = 523e9fdfa620de073db3b388d25d18906c8001db
+SHA1 (gpac-0.5.0.tar.gz) = 48ba16272bfa153abb281ff8ed31b5dddf60cf20
+RMD160 (gpac-0.5.0.tar.gz) = fc9cd2665a699dbe6d228e4e638baeae12b9e6af
+Size (gpac-0.5.0.tar.gz) = 7861057 bytes
+SHA1 (patch-modules_oss__audio_Makefile) = dd47cf086edfb8ea63b6c58b6d1548177be44786
