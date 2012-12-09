@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:24 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/12/09 00:05:09 adam Exp $
 
-DISTNAME=	vigra-1.8.0-src
+DISTNAME=	vigra-1.9.0-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 
@@ -11,14 +10,15 @@ HOMEPAGE=	http://hci.iwr.uni-heidelberg.de/vigra/
 COMMENT=	Computer vision library
 LICENSE=	mit
 
+EXTRACT_USING=	gtar
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
 CMAKE_ARGS+=	-D DOCINSTALL:PATH=${PREFIX}/share/doc
+CMAKE_ARGS+=	-D WITH_OPENEXR=YES
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
@@ -32,8 +32,6 @@ SUBST_MESSAGE.python=	Fixing path to python.
 # usually during configure, so don't depend on python.
 CHECK_INTERPRETER_SKIP=	bin/vigra-config
 
-.include "options.mk"
-
 pre-install:
 	${RM} -f ${WRKSRC}/include/vigra/*.orig
 
@@ -41,5 +39,6 @@ pre-install:
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
