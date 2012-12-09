@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3773 2012/12/09 15:08:24 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3774 2012/12/09 15:09:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/unison to 2.40.102 [wiz 2012-12-09]
 	Updated devel/automake to 1.12.5 [wiz 2012-12-09]
 	Updated time/py-pytz to 2012h [wiz 2012-12-09]
+	Updated devel/check to 0.9.9 [wiz 2012-12-09]
