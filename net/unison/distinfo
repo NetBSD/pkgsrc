@@ -1,16 +1,7 @@
-$NetBSD: distinfo,v 1.20 2012/10/13 09:05:11 wiz Exp $
+$NetBSD: distinfo,v 1.21 2012/12/09 15:02:50 wiz Exp $
 
-SHA1 (unison-2.40.63.tar.gz) = 645e70bc37a5d4e8e9ccb7bad065fc579b18cf75
-RMD160 (unison-2.40.63.tar.gz) = 5dede9ea2f1213d4a22ed1914da7bfb1921f9993
-Size (unison-2.40.63.tar.gz) = 2601791 bytes
-SHA1 (patch-Makefile.OCaml) = 0fa4cc6ecec2465bdf3f64db198a50ed015fd8be
+SHA1 (unison-2.40.102.tar.gz) = bf18f64fa30bd04234e864d42190294e0d9a2910
+RMD160 (unison-2.40.102.tar.gz) = 0231fd41895bde97ad4ae15bdc4994f9c9e27ad6
+Size (unison-2.40.102.tar.gz) = 2694761 bytes
+SHA1 (patch-Makefile.OCaml) = 2872f07e323f23375b0b7ea5ec17fe387fe22a0f
 SHA1 (patch-aa) = dd1a001fb7071cd9141615b42a692e6d1d812081
-SHA1 (patch-case.ml) = 6ddf5d68f6c69fea73f870bfcef4ffc539478acd
-SHA1 (patch-fspath.ml) = ccd41590e93145cc61ca0bb1cc0a0ba6329927a4
-SHA1 (patch-fspath.mli) = 9c2532e002985f985ed904022e514a57a33666d5
-SHA1 (patch-path.ml) = a2554a58acfd148204744ea8831440f59a99be98
-SHA1 (patch-path.mli) = e288c1e7db23862fb7293b47ea6cb8806ca612a5
-SHA1 (patch-props.ml) = c829ccb24574be1aebc4bcf6f5ef4e5c136fa9c4
-SHA1 (patch-update.ml) = aef7b5ddab4ba36ed089f8a5b57b212e433f6b3c
-SHA1 (patch-uutil.ml) = 6b5efc5dc46abe8886029e900dca0b0237ef777d
-SHA1 (patch-uutil.mli) = cf1df58af75d47091d7d9950158c82980dedd1f2
