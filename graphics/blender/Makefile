@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2012/12/03 13:15:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2012/12/09 17:37:44 ryoon Exp $
 
 DISTNAME=	blender-2.64a
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -45,7 +46,8 @@ SCONS_ARGS+=	BF_PNG=${BUILDLINK_PREFIX.png}
 SCONS_ARGS+=	BF_TIFF=${BUILDLINK_PREFIX.tiff}
 SCONS_ARGS+=	BF_GETTEXT=${BUILDLINK_PREFIX.gettext-tools}
 SCONS_ARGS+=	BF_FREETYPE=${BUILDLINK_PREFIX.freetype2}
-SCONS_ARGS+=	BF_OPENJPEG=${BUILDLINK_PREFIX.openjpeg}
+SCONS_ARGS+=	BF_OPENJPEG=${BUILDLINK_PREFIX.openjpeg15}
+SCONS_ARGS+=	BF_OPENJPEG_INC=${BUILDLINK_PREFIX.openjpeg15}/include/openjpeg-1.5
 SCONS_ARGS+=	BF_OPENGL=${BUILDLINK_PREFIX.Mesa}
 SCONS_ARGS+=	BF_PCRE=${BUILDLINK_PREFIX.pcre}
 #SCONS_ARGS+=	BF_FFMPEG=${BUILDLINK_PREFIX.ffmpeg010}
@@ -62,12 +64,6 @@ do-install:
 	cd ${WRKSRC} && \
 		${SCONSDIR}/bin/scons ${SCONS_ARGS}
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.*-*)
-BFINSTALLDIR=	netbsd6
-.elif !empty(MACHINE_PLATFORM:MLinux-*-*)
-BFINSTALLDIR=	linux
-.endif
-
 CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py
 
 post-install:
@@ -83,7 +79,7 @@ post-install:
 #.include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/openimageio/buildlink3.mk"
-.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/openjpeg15/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
