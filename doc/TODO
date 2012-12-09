@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11707 2012/12/09 00:14:58 adam Exp $
+$NetBSD: TODO,v 1.11708 2012/12/09 08:11:45 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
-	o aria2-1.16.0
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
