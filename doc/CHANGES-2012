@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3775 2012/12/09 15:15:30 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3776 2012/12/09 15:17:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-pytz to 2012h [wiz 2012-12-09]
 	Updated devel/check to 0.9.9 [wiz 2012-12-09]
 	Updated print/poppler-data to 0.4.6 [wiz 2012-12-09]
+	Updated www/libmicrohttpd to 0.9.23 [wiz 2012-12-09]
