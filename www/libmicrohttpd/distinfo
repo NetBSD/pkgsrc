@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/09/02 15:05:32 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/12/09 15:17:16 wiz Exp $
 
-SHA1 (libmicrohttpd-0.9.22.tar.gz) = 95d2934448ea2f6beff985f312b4502ea1563d2a
-RMD160 (libmicrohttpd-0.9.22.tar.gz) = a928f6cb9524b855097d7d8429e426d73d112b71
-Size (libmicrohttpd-0.9.22.tar.gz) = 829899 bytes
+SHA1 (libmicrohttpd-0.9.23.tar.gz) = 3b68c19f179ddafa9493c9dce16e7d082d9ec20f
+RMD160 (libmicrohttpd-0.9.23.tar.gz) = 3e154f0e3839d74a4b6cfa49f6b48c3c1084eddc
+Size (libmicrohttpd-0.9.23.tar.gz) = 779432 bytes
