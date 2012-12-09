@@ -1,0 +1,7 @@
+Photologue is a reusable Django application that provides powerful image
+management and manipulation functionality as well as a complete photo gallery
+solution. The 2.x release adds more effects, including reflections and
+transparent watermarks. It also introduces the ImageModel abstract base class
+allowing developers to easily integrated the Photologue core functionality into
+their own models. Photologue embraces the Django admin and smoothly integrates
+with photo thumbnails and effect previews.
