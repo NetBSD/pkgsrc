@@ -1,14 +1,15 @@
-# $NetBSD: Makefile.common,v 1.4 2012/10/31 11:17:05 asau Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/12/09 00:07:38 adam Exp $
+# used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
-HDF5_VER=	1.8.9
+HDF5_VER=	1.8.10
 DISTNAME=	hdf5-${HDF5_VER}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current/src/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	alnsn@NetBSD.org
 HOMEPAGE=	http://www.hdfgroup.org/HDF5/
-
 LICENSE=	original-bsd
 
 USE_LIBTOOL=		yes

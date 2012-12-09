@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2012/12/09 00:07:38 adam Exp $
+
+Unreverse order of CPPFLAGS.
+
+--- configure.orig	2012-10-27 00:14:59.000000000 +0000
++++ configure
+@@ -30787,9 +30787,9 @@ if test -n "$AM_CPPFLAGS"; then
+         d="-I${ROOT}/${d}"
+         ;;
+     esac
+-    TEMP_CPPFLAGS="$d $TEMP_CPPFLAGS"
++    TEMP_CPPFLAGS="$TEMP_CPPFLAGS $d"
+   done
+-  AM_CPPFLAGS=$TEMP_CPPFLAGS
++  AM_CPPFLAGS="$TEMP_CPPFLAGS"
+ fi
+ 
+ ## ----------------------------------------------------------------------
