@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.OCaml,v 1.3 2012/10/13 09:05:11 wiz Exp $
+$NetBSD: patch-Makefile.OCaml,v 1.4 2012/12/09 15:02:51 wiz Exp $
 
 Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
+
 --- Makefile.OCaml.orig	2011-04-16 20:35:38.000000000 +0000
 +++ Makefile.OCaml
 @@ -71,8 +71,8 @@ OCAMLLIBDIR=$(shell ocamlc -v | tail -1 
@@ -14,15 +15,6 @@ Correct lablgtk paths for 2.16, and use ocamlopt.opt for compilation
  ##BCP [3/2007]: Removed temporarily, since the OSX UI is not working well 
  ## at the moment and we don't want to confuse people by building it by default
  ifeq ($(OSARCH),osx)
-@@ -217,7 +217,7 @@ OCAMLOBJS += \
-           lwt/pqueue.cmo lwt/lwt.cmo lwt/lwt_util.cmo \
-           lwt/$(SYSTEM)/lwt_unix_impl.cmo lwt/lwt_unix.cmo \
-           \
--          case.cmo pred.cmo uutil.cmo \
-+          uutil.cmo case.cmo pred.cmo \
-           fileutil.cmo name.cmo path.cmo fspath.cmo fs.cmo fingerprint.cmo \
-           abort.cmo osx.cmo external.cmo \
-           props.cmo fileinfo.cmo os.cmo lock.cmo clroot.cmo common.cmo \
 @@ -285,14 +285,14 @@ endif
  
  # Gtk GUI
