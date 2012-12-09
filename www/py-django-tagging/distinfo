@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/12/09 20:35:51 adam Exp $
+
+SHA1 (django-tagging-0.3.1.tar.gz) = f737bff307a21175b0dbacdb7969cd6bfff6f6ea
+RMD160 (django-tagging-0.3.1.tar.gz) = 676bbc075d9ea82a9913c67c1ea173c12f642dbd
+Size (django-tagging-0.3.1.tar.gz) = 31531 bytes
