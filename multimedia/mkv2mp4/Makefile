@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/12/09 08:15:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2012/12/09 17:17:33 ryoon Exp $
 #
 
 DISTNAME=	mkv2mp4-20121208
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-0.0./}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
