@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11719 2012/12/09 17:16:23 ryoon Exp $
+$NetBSD: TODO,v 1.11720 2012/12/09 17:35:03 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -351,7 +351,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o RealPlayer-11
 	o SDL_gfx-2.0.24
 	o SOGo-2.0.3
-	o Sigil-0.6.2
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-81
