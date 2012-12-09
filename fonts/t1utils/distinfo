@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/08/11 14:59:09 taca Exp $
+$NetBSD: distinfo,v 1.8 2012/12/09 15:21:48 wiz Exp $
 
-SHA1 (t1utils-1.34.tar.gz) = a5b174a1d132436c410edf514ac74a6f4ae258e2
-RMD160 (t1utils-1.34.tar.gz) = 325b6be1267d570acf56cd850323aa12908e736e
-Size (t1utils-1.34.tar.gz) = 155425 bytes
-SHA1 (patch-aa) = 71199d4bbee28360c55eca739227f85e4ed7c36e
+SHA1 (t1utils-1.36.tar.gz) = 474143e828eed4755fd51bbcbde1cb906114cadb
+RMD160 (t1utils-1.36.tar.gz) = 77ef2611a2fdd039e7972df2586bc3072d4beb09
+Size (t1utils-1.36.tar.gz) = 164812 bytes
