@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:03 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/09 15:19:30 wiz Exp $
 
-DISTNAME=	libexttextcat-3.3.1
+DISTNAME=	libexttextcat-3.4.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libexttextcat/
 EXTRACT_SUFX=	.tar.xz
