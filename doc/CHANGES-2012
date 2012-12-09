@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3771 2012/12/09 15:03:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3772 2012/12/09 15:07:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5798,3 +5798,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/aria2 to 1.16.0 [ryoon 2012-12-09]
 	Updated multimedia/mkv2mp4 to 0.0.20121208 [ryoon 2012-12-09]
 	Updated net/unison to 2.40.102 [wiz 2012-12-09]
+	Updated devel/automake to 1.12.5 [wiz 2012-12-09]
