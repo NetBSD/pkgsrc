@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2012/02/26 08:38:21 obache Exp $
+$NetBSD: distinfo,v 1.10 2012/12/09 00:05:09 adam Exp $
 
-SHA1 (vigra-1.8.0-src.tar.gz) = 09f1d506c2748ebeb7d9f1c77ce387f9e7b837d2
-RMD160 (vigra-1.8.0-src.tar.gz) = 99d781da6e0ca94ce3404e1bcb3adeb9e43a2017
-Size (vigra-1.8.0-src.tar.gz) = 29814914 bytes
+SHA1 (vigra-1.9.0-src.tar.gz) = 6e4981f4ce75932ec62df6523f577c327f885ba0
+RMD160 (vigra-1.9.0-src.tar.gz) = 84e3f1bc985df1ea928e9aa5adc6e0c153cbdd40
+Size (vigra-1.9.0-src.tar.gz) = 30813416 bytes
 SHA1 (patch-include-vigra-mathutil.hxx) = ccbf0061582f09493169f686d504e4c5a5b1924d
