@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2009/12/16 21:28:35 adam Exp $
+$NetBSD: patch-ab,v 1.3 2012/12/09 00:11:42 adam Exp $
 
---- src/enfuse.cc.orig	2009-11-13 16:58:19.000000000 +0100
+--- src/enfuse.cc.orig	2012-12-08 08:23:59.000000000 +0000
 +++ src/enfuse.cc
-@@ -54,8 +54,12 @@ extern "C" char *optarg;
+@@ -51,8 +51,12 @@ extern "C" char *optarg;
  extern "C" int optind;
  
  #ifndef _MSC_VER
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.2 2009/12/16 21:28:35 adam Exp $
  
  #include <signal.h>
  #include <stdlib.h>
-@@ -1341,6 +1345,8 @@ int main(int argc, char** argv)
+@@ -1663,6 +1667,8 @@ int main(int argc, char** argv)
      // functions in float_cast.h will work properly.
      // See changes in vigra numerictraits.hxx
      _controlfp(_RC_NEAR, _MCW_RC);
