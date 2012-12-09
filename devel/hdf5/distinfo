@@ -1,22 +1,15 @@
-$NetBSD: distinfo,v 1.28 2012/10/27 08:54:48 asau Exp $
+$NetBSD: distinfo,v 1.29 2012/12/09 00:07:38 adam Exp $
 
-SHA1 (hdf5-1.8.9.tar.gz) = 4ba3ede947b1571e9586fdeb8351d6585a56133c
-RMD160 (hdf5-1.8.9.tar.gz) = a971f0f666786d93f33f8cc59d67e29fab77a351
-Size (hdf5-1.8.9.tar.gz) = 8258774 bytes
-SHA1 (patch-c++_examples_Makefile.in) = 4c063e3138507a5dbf99f4c7785611a45ffcf753
+SHA1 (hdf5-1.8.10.tar.bz2) = 867a91b75ee0bbd1f1b13aecd52e883be1507a2c
+RMD160 (hdf5-1.8.10.tar.bz2) = 78fe33ae4205068f7bddeb98f0e7a2c77310b651
+Size (hdf5-1.8.10.tar.bz2) = 6024645 bytes
+SHA1 (patch-c++_examples_Makefile.in) = 9ae14ae81abc9c858abb0d03b92e498b2113591c
 SHA1 (patch-c++_examples_run-c++-ex.sh.in) = 58c38b2ba5557cdae2c4fe1e72c6fa55e5606f1e
-SHA1 (patch-configure.in) = c08f39c3aba0ff34022d4afc26cdfd8785f504b7
-SHA1 (patch-examples_Makefile.in) = 3049b17a6656e7b9818ec69607b278b6e7dc937d
+SHA1 (patch-configure) = b8d6e6e53ecb5e5861fba88be1a203cedf6747b3
+SHA1 (patch-examples_Makefile.in) = 93d0764eaa8ccebdd3705195ba0ffc5fa83c2610
 SHA1 (patch-examples_run-c-ex.sh.in) = 744d3e6bbae1a9b496e3657db6a62fac78fcd7ed
-SHA1 (patch-hl_c++_examples_Makefile.in) = 6e651fae42365e67c281d8bc80e2c60faeddec01
+SHA1 (patch-hl_c++_examples_Makefile.in) = a3310436f9f73946fba0d404158c990d68638f16
 SHA1 (patch-hl_c++_examples_run-hlc++-ex.sh.in) = fba3d976adb02d80682ddc42a8ef64f6dddffa41
 SHA1 (patch-hl_examples_Makefile.in) = 2fe09e8a88eeca49db58908a6b4a3a70f01cb0b4
 SHA1 (patch-hl_examples_run-hlc-ex.sh.in) = 38c2c112439d6febb023d638d965f04bbaa45d5f
-SHA1 (patch-tools_h5copy_testh5copy.sh) = 745f951117bbc1a05fbfb6df8cdff3d58771c635
-SHA1 (patch-tools_h5diff_testh5diff.sh) = 62e02ee65a4b9284f548f872aad9bcf7884fb477
-SHA1 (patch-tools_h5dump_testh5dump.sh.in) = d373f9a0618499bbb71827df6ffe6bed2b5dab17
-SHA1 (patch-tools_h5import_h5importtestutil.sh) = 7bd31ce6ca50c0a8d4040b7d2518dc4658b51c5c
-SHA1 (patch-tools_h5jam_testh5jam.sh.in) = 1d8d618ee90adfe6735a22eecd1a6c60c1437da6
-SHA1 (patch-tools_h5ls_testh5ls.sh.in) = 71bfe26ce98d3579bf8decaf7ef10a5f5f27e255
-SHA1 (patch-tools_h5repack_h5repack.sh.in) = c235aef4f6c781ef0028685b505fd77aa7b5722d
-SHA1 (patch-tools_h5stat_testh5stat.sh.in) = 962ff9cdf8c7c459e47147cf85826e190aee4179
+SHA1 (patch-tools_h5jam_testh5jam.sh.in) = 89068ae1694c586f85b25240fda30549eddf2d0f
