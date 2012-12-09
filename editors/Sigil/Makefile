@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2012/12/05 15:28:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2012/12/09 17:34:20 ryoon Exp $
 #
 
-DISTNAME=	Sigil-0.6.1-Code
+DISTNAME=	Sigil-0.6.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
 CATEGORIES=	editors
 MASTER_SITES=	http://sigil.googlecode.com/files/
