@@ -1,10 +1,10 @@
-$NetBSD: patch-examples_Makefile.in,v 1.1 2011/10/07 10:38:51 alnsn Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.2 2012/12/09 00:07:38 adam Exp $
 
 Fix paths to examples.
 
 --- examples/Makefile.in.orig	2011-05-10 14:20:44.000000000 +0000
 +++ examples/Makefile.in
-@@ -387,8 +387,8 @@ EXTLINK_DIRS = red blue u2w
+@@ -417,8 +417,8 @@ EXTLINK_DIRS = red blue u2w
  
  # Example directory
  # Note: no '/' after DESTDIR.  Explanation in commence.am
