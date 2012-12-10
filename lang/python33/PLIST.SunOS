@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2012/12/10 03:15:48 tsarna Exp $
+lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/CDIO.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/CDIO.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/DLFCN.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/DLFCN.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/STROPTS.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/STROPTS.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/TYPES.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/__pycache__/TYPES.cpython-33.pyo
