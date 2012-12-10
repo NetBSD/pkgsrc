@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/02/25 21:09:50 sno Exp $
+$NetBSD: distinfo,v 1.10 2012/12/10 13:27:39 wen Exp $
 
-SHA1 (Clone-0.31.tar.gz) = 100c69b3091213336f9abe3060286938786a7b32
-RMD160 (Clone-0.31.tar.gz) = 183fa7abdbe9c588b693cdaec41e85a6a5e57ff7
-Size (Clone-0.31.tar.gz) = 11753 bytes
+SHA1 (Clone-0.34.tar.gz) = afe735bea84ae2b3288e7876f6fa3a64a757b268
+RMD160 (Clone-0.34.tar.gz) = b6825c0ec4c87633c2273b967b74b1f1b35acc58
+Size (Clone-0.34.tar.gz) = 13192 bytes
