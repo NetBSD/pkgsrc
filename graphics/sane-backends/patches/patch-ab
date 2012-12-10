@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2011/07/12 12:19:41 wiz Exp $
+$NetBSD: patch-ab,v 1.13 2012/12/10 12:06:51 ryoon Exp $
 
---- configure.orig	2011-02-14 01:27:52.000000000 +0000
+--- configure.orig	2012-08-19 20:45:11.000000000 +0000
 +++ configure
-@@ -7202,13 +7202,13 @@ if test "x$ac_cv_header_pthread_h" = x""
+@@ -7236,13 +7236,13 @@ if test "x$ac_cv_header_pthread_h" = xye
  #define HAVE_PTHREAD_H 1
  _ACEOF
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.12 2011/07/12 12:19:41 wiz Exp $
 -$as_echo_n "checking for pthread_create in -lpthread... " >&6; }
 +       { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
 +$as_echo_n "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
- if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then :
+ if ${ac_cv_lib_pthread_pthread_create+:} false; then :
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -19,16 +19,16 @@ $NetBSD: patch-ab,v 1.12 2011/07/12 12:19:41 wiz Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -7239,7 +7239,7 @@ fi
+@@ -7273,7 +7273,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pthread_pthread_create" >&5
  $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
- if test "x$ac_cv_lib_pthread_pthread_create" = x""yes; then :
+ if test "x$ac_cv_lib_pthread_pthread_create" = xyes; then :
 -  PTHREAD_LIBS="-lpthread"
 +  PTHREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  fi
  
         have_pthread=yes
-@@ -17092,14 +17092,14 @@ for be in ${BACKENDS}; do
+@@ -17741,14 +17741,14 @@ for be in ${BACKENDS}; do
      ;;
  
      mustek_pp)

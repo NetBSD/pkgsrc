@@ -1,14 +1,9 @@
-# $NetBSD: Makefile.common,v 1.29 2011/07/12 13:19:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2012/12/10 12:06:50 ryoon Exp $
 # used by graphics/sane-frontends/Makefile
 
 CATEGORIES?=	graphics
-MASTER_SITES?=	ftp://gd.tuwien.ac.at/hci/sane/${DISTNAME}/ \
-		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/${DISTNAME}/ \
-		ftp://ftp.sane-project.org/pub/sane/${DISTNAME}/ \
-		ftp://ftp2.sane-project.org/pub/sane/${DISTNAME}/ \
-		ftp://ftp3.sane-project.org/pub/sane/${DISTNAME}/ \
-		ftp://ftp4.sane-project.org/hci/sane/${DISTNAME}/ \
-		ftp://ftp5.sane-project.org/pub/sane/${DISTNAME}/
+MASTER_SITES?=	${MASTER_SITE_LOCAL}
+# http://alioth.debian.org/frs/?group_id=30186
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.sane-project.org/
@@ -16,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 SANE_MAJOR?=	1
 SANE_MINOR?=	0
-SANE_MICRO?=	22
+SANE_MICRO?=	23
 SANE_VERSION=	${SANE_MAJOR}.${SANE_MINOR}.${SANE_MICRO}
 PLIST_SUBST+=	SANE_MAJOR=${SANE_MAJOR:Q}
 PLIST_SUBST+=	SANE_MINOR=${SANE_MINOR:Q}

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.33 2011/07/31 20:05:58 gls Exp $
+$NetBSD: distinfo,v 1.34 2012/12/10 12:06:50 ryoon Exp $
 
-SHA1 (sane-backends-1.0.22.tar.gz) = dc04d6e6fd18791d8002c3fdb23e89fef3327135
-RMD160 (sane-backends-1.0.22.tar.gz) = 524713474a819331d0179fa642fef710d073f1d1
-Size (sane-backends-1.0.22.tar.gz) = 5150661 bytes
+SHA1 (sane-backends-1.0.23.tar.gz) = 62fc65736879f0bdb2fda20a31ee10d1ed335ae7
+RMD160 (sane-backends-1.0.23.tar.gz) = af41f4b2d34aa6dae9dfc88d1dedd630f6584737
+Size (sane-backends-1.0.23.tar.gz) = 5342350 bytes
 SHA1 (patch-aa) = ff3439b060d6aa78f63d6acd09d87499a4d7f224
-SHA1 (patch-ab) = 9ce48e03a70ae0c1c31a27e09f3745773fa9b898
+SHA1 (patch-ab) = 0462997912869fe3083e1b385a478a31bc3deec0
 SHA1 (patch-ac) = 900911de5cde4a6cdc35cbc2d13371b13c596474
-SHA1 (patch-ad) = ffd50b49305c05bda28de0536ca54171baff6892
+SHA1 (patch-ad) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-ae) = bf9b53fd5c9b74915769afe9e17bed292a8a9ed9
 SHA1 (patch-af) = db4ba80826d76363ad28c22eea325e19868fd1e4
 SHA1 (patch-ag) = 8155659bce4e1ce569a8a4a74131f21670c0a834
@@ -14,5 +14,5 @@ SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
 SHA1 (patch-ai) = 74f27b5a66e3dfd96337cb00a4ff3bc48804256b
 SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
 SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
-SHA1 (patch-backend_magicolor.c) = d717160eef83b7f412f55ca2716ebf76f3fb1900
-SHA1 (patch-backend_xerox__mfp-tcp.c) = 45cf630762ec9757aa8e1306190641dd99dcc673
+SHA1 (patch-backend_magicolor.c) = e6cbb54a0ea0e688b0189b3d07d1dff34070a179
+SHA1 (patch-backend_xerox__mfp-tcp.c) = 3818b623217f15ed7f30724d1d70b1614befb88f
