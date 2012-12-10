@@ -1,0 +1,12 @@
+$NetBSD: patch-an,v 1.1 2012/12/10 03:15:49 tsarna Exp $
+
+--- Modules/makesetup.orig	2008-06-11 05:26:20.000000000 +0000
++++ Modules/makesetup
+@@ -164,6 +164,7 @@ sed -e 's/[ 	]*#.*//' -e '/^[ 	]*$/d' |
+ 			-rpath)		libs="$libs $arg"; skip=libs;;
+ 			--rpath)	libs="$libs $arg"; skip=libs;;
+ 			-[A-Zl]*)	libs="$libs $arg";;
++			-pthread)	libs="$libs $arg";;
+ 			*.a)		libs="$libs $arg";;
+ 			*.so)		libs="$libs $arg";;
+ 			*.sl)		libs="$libs $arg";;
