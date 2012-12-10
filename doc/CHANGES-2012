@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3785 2012/12/10 03:15:48 tsarna Exp $
+$NetBSD: CHANGES-2012,v 1.3786 2012/12/10 09:18:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5855,4 +5855,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/py-django-photologue version 2.4 [adam 2012-12-09]
 	Added comms/py-serial version 2.6 [tsarna 2012-12-09]
 	Added lang/python33 version 3.3.0 [tsarna 2012-12-09]
-
+	Updated fonts/sourcecodepro-fonts to 1.013 [ryoon 2012-12-10]
