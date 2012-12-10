@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3787 2012/12/10 12:08:06 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3788 2012/12/10 13:28:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5857,3 +5857,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added lang/python33 version 3.3.0 [tsarna 2012-12-09]
 	Updated fonts/sourcecodepro-fonts to 1.013 [ryoon 2012-12-10]
 	Updated graphics/sane-backends to 1.0.23 [ryoon 2012-12-10]
+	Updated devel/p5-Clone to 0.34 [wen 2012-12-10]
