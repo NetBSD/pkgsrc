@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2012/03/05 13:29:40 sno Exp $
+$NetBSD: distinfo,v 1.13 2012/12/10 14:58:04 wen Exp $
 
-SHA1 (Class-Accessor-Grouped-0.10006.tar.gz) = 42e1dedbde44f0ca1de68c6601fd92e9baa943e7
-RMD160 (Class-Accessor-Grouped-0.10006.tar.gz) = 89570f6351519e5d4b6edb73d436bc48e357fdaf
-Size (Class-Accessor-Grouped-0.10006.tar.gz) = 42420 bytes
+SHA1 (Class-Accessor-Grouped-0.10009.tar.gz) = 5029e415292d6d4744aa1442ca5b0f11fbc5c480
+RMD160 (Class-Accessor-Grouped-0.10009.tar.gz) = ac0c946a0dd4c3f724c4fa7598b264b3f3bdea10
+Size (Class-Accessor-Grouped-0.10009.tar.gz) = 46425 bytes
