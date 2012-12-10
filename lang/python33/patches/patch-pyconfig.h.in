@@ -1,0 +1,14 @@
+$NetBSD: patch-pyconfig.h.in,v 1.1 2012/12/10 03:15:49 tsarna Exp $
+
+--- pyconfig.h.in.orig	2011-06-11 17:46:28.000000000 +0200
++++ pyconfig.h.in	2011-11-29 20:17:04.328552361 +0100
+@@ -1173,7 +1173,9 @@
+ #undef _UINT64_T
+ 
+ /* Define to the level of X/Open that your system supports */
++#if !defined(__sun) || (defined(__sun) && !defined(_XOPEN_SOURCE))
+ #undef _XOPEN_SOURCE
++#endif
+ 
+ /* Define to activate Unix95-and-earlier features */
+ #undef _XOPEN_SOURCE_EXTENDED

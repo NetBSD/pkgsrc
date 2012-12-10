@@ -1,0 +1,103 @@
+$NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
+
+--- configure.orig	2012-04-11 06:54:08.000000000 +0000
++++ configure
+@@ -3020,7 +3020,7 @@ case $ac_sys_system/$ac_sys_release in
+   # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
+   # In addition, Stefan Krah confirms that issue #1244610 exists through
+   # OpenBSD 4.6, but is fixed in 4.7.
+-  OpenBSD/2.* | OpenBSD/3.* | OpenBSD/4.[0123456])
++  OpenBSD/2.* | OpenBSD/3.* | OpenBSD/4.[0123456] | MirBSD/*)
+     define_xopen_source=no
+     # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
+     # also defined. This can be overridden by defining _BSD_SOURCE
+@@ -4959,15 +4959,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+ 	      PY3LIBRARY=libpython3.so
+ 	  fi
+           ;;
+-    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*|OpenBSD*|MirBSD*)
+ 	  LDLIBRARY='libpython$(LDVERSION).so'
+ 	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
+-	  case $ac_sys_system in
+-	      FreeBSD*)
+-		SOVERSION=`echo $SOVERSION|cut -d "." -f 1`
+-		;;
+-	  esac
+ 	  INSTSONAME="$LDLIBRARY".$SOVERSION
+ 	  if test "$with_pydebug" != yes
+           then
+@@ -7626,8 +7621,8 @@ then
+ 			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
+ 		else
+ 			# No framework, use the Python app as bundle-loader
+-			BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
+-			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
++			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+ 			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+ 		fi ;;
+ 	Darwin/*)
+@@ -7652,9 +7647,9 @@ then
+ 				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
+ 			else
+ 				# No framework, use the Python app as bundle-loader
+-				BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
+-				LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+-				LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++				BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
++				LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++				LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+ 			fi
+ 		fi
+ 		;;
+@@ -7688,9 +7683,15 @@ then
+ 				   ;;
+ 				esac
+ 		fi;;
++	MirBSD*)
++		LDSHARED='$(CC) -shared $(CCSHARED)'
++		LDCXXSHARED='$(CXX) -shared $(CCSHARED)';;
+ 	NetBSD*|DragonFly*)
+ 		LDSHARED='$(CC) -shared'
+ 		LDCXXSHARED='$(CXX) -shared';;
++	Interix*) # XXX tv need image-base hack
++		LDSHARED='$(CC) -shared'
++		LDCXXSHARED='$(CXX) -shared';;
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes" ; then
+ 			LDSHARED='$(CC) -shared'
+@@ -7731,7 +7732,8 @@ then
+ 		 fi;;
+ 	Linux*|GNU*) CCSHARED="-fPIC";;
+ 	BSD/OS*/4*) CCSHARED="-fpic";;
+-	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
++	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*) CCSHARED="-fPIC";;
++	Interix*) CCSHARED="";;
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then CCSHARED="-fPIC"
+@@ -7774,11 +7776,12 @@ then
+ 	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
+ 	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
+ 	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
+-	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
++	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*)
+ 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
+ 		then
+ 			LINKFORSHARED="-Wl,--export-dynamic"
+ 		fi;;
++	Interix*) LINKFORSHARED="-Wl,-E";;
+ 	SunOS/5*) case $CC in
+ 		  *gcc*)
+ 		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
+@@ -12738,8 +12741,6 @@ then
+ 		esac
+ 		;;
+ 	CYGWIN*)   SO=.dll;;
+-	Linux*|GNU*)
+-		   SO=.${SOABI}.so;;
+ 	*)	   SO=.so;;
+ 	esac
+ else

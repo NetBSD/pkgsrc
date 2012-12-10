@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2012/12/10 03:15:48 tsarna Exp $
+lib/libpython${PY_VER_SUFFIX}.dylib
+lib/python${PY_VER_SUFFIX}/lib-dynload/_gestalt.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_scproxy.so

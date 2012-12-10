@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.104 2012/10/03 23:48:00 cheusov Exp $
+# $NetBSD: pyversion.mk,v 1.105 2012/12/10 03:15:48 tsarna Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 26 27 31 32
+#	Possible values: 26 27 31 32 33
 #	Default: 27
 #
 # === Infrastructure variables ===
@@ -27,8 +27,8 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 32 31 27 26
-#	Default: (32 31) 27 26
+#	Possible values: 33 32 31 27 26
+#	Default: (33 32 31) 27 26
 #
 # PYTHON_VERSIONS_INCLUDE_3X
 #	Wether the default PYTHON_VERSIONS_ACCEPTED should include
@@ -41,7 +41,7 @@
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 26 27 31 32
+#	Possible values: 26 27 31 32 33
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -94,7 +94,7 @@ BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		27
 .if ${PYTHON_VERSIONS_INCLUDE_3X:U:tl} == "yes"
-PYTHON_VERSIONS_ACCEPTED?=		32 31 27 26
+PYTHON_VERSIONS_ACCEPTED?=		33 32 31 27 26
 .else
 PYTHON_VERSIONS_ACCEPTED?=		27 26
 .endif
@@ -104,6 +104,7 @@ BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
 BUILDLINK_API_DEPENDS.python27?=		python27>=2.7
 BUILDLINK_API_DEPENDS.python31?=		python31>=3.1
 BUILDLINK_API_DEPENDS.python32?=		python32>=3.2
+BUILDLINK_API_DEPENDS.python33?=		python33>=3.3
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -159,7 +160,14 @@ CONFLICTS +=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
 #
 PLIST_VARS+=	py2x py3x
 
-.if ${_PYTHON_VERSION} == "32"
+.if ${_PYTHON_VERSION} == "33"
+PYPKGSRCDIR=	../../lang/python33
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python33}:${PYPKGSRCDIR}
+PYPACKAGE=	python33
+PYVERSSUFFIX=	3.3
+PYPKGPREFIX=	py33
+PLIST.py3x=	yes
+.elif ${_PYTHON_VERSION} == "32"
 PYPKGSRCDIR=	../../lang/python32
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python32}:${PYPKGSRCDIR}
 PYPACKAGE=	python32

@@ -1,0 +1,32 @@
+$NetBSD: patch-au,v 1.1 2012/12/10 03:15:49 tsarna Exp $
+
+--- Makefile.pre.in.orig	2012-09-29 04:00:41.000000000 -0400
++++ Makefile.pre.in	2012-12-09 18:53:09.000000000 -0500
+@@ -77,7 +77,7 @@
+ # be able to build extension modules using the directories specified in the
+ # environment variables
+ PY_CPPFLAGS=	-I. -I$(srcdir)/Include $(CONFIGURE_CPPFLAGS) $(CPPFLAGS)
+-PY_LDFLAGS=	$(CONFIGURE_LDFLAGS) $(LDFLAGS)
++PY_LDFLAGS=	-L. $(CONFIGURE_LDFLAGS) $(LDFLAGS)
+ NO_AS_NEEDED=	@NO_AS_NEEDED@
+ LDLAST=		@LDLAST@
+ SGI_ABI=	@SGI_ABI@
+@@ -713,7 +713,7 @@
+ $(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
+ 	$(OPCODETARGETGEN) $(OPCODETARGETS_H)
+ 
+-Python/ceval.o: $(OPCODETARGETS_H) $(srcdir)/Python/ceval_gil.h
++#Python/ceval.o: $(OPCODETARGETS_H) $(srcdir)/Python/ceval_gil.h
+ 
+ Python/formatter_unicode.o: $(srcdir)/Python/formatter_unicode.c \
+ 				$(BYTESTR_DEPS)
+@@ -926,7 +926,8 @@
+ 		if test -n "$(PY3LIBRARY)"; then \
+ 			$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
+ 		fi; \
+-	else	true; \
++	elif test -f $(INSTSONAME); then \
++		$(INSTALL_SHARED) $(INSTSONAME) $(DESTDIR)$(LIBDIR); \
+ 	fi
+ 
+ bininstall: altbininstall
