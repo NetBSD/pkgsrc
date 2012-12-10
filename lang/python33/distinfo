@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2012/12/10 03:15:48 tsarna Exp $
+
+SHA1 (Python-3.3.0.tar.bz2) = 3e1464bc2c1dfa74287bc58da81168f50b0ae5c7
+RMD160 (Python-3.3.0.tar.bz2) = f48265da6491e611056e27bca76565d6e6235770
+Size (Python-3.3.0.tar.bz2) = 13781940 bytes
+SHA1 (patch-aa) = 99ebcbbfc53b855a32b424dec27012e1e969c3d0
+SHA1 (patch-ab) = 1c0a25bf7ec6ee76e84c799619ec7cd8910f16e1
+SHA1 (patch-ah) = bb43aaab260935a5a0d5e7ce1ccc30f4832cab1d
+SHA1 (patch-al) = 6265d71b7cb5bc6c09ed7f516ef804f5f447cd21
+SHA1 (patch-am) = ae1e3a2f15923e5d337942c65d797ed6e82171d9
+SHA1 (patch-an) = 933acde107b735931d26ace4eef251000b9f07ba
+SHA1 (patch-ao) = dc524b08634c23c25227bd03e221dab0ff2a03f3
+SHA1 (patch-au) = e70683340e788cdd2a2d0395c22bb11ca426ca0a
+SHA1 (patch-av) = 9b44f339f65f029b7f17dbc654739a7ae3c12780
+SHA1 (patch-aw) = 598e4710c426110012048946786a6d72f050e0fc
+SHA1 (patch-pyconfig.h.in) = 7ebc0ed9ca9a37c5a6c8e04cc3f7fca4a5c90e8c
