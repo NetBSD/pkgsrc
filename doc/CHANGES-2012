@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3791 2012/12/10 14:59:13 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3792 2012/12/11 00:17:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5861,3 +5861,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/p5-Math-Prime-Util to 0.15 [wen 2012-12-10]
 	Updated devel/p5-Class-XSAccessor to 1.16 [wen 2012-12-10]
 	Updated devel/p5-Class-Accessor-Grouped to 0.10009 [wen 2012-12-10]
+	Updated lang/python33 to 3.3.0nb1 [wiz 2012-12-11]
