@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3798 2012/12/11 14:58:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3799 2012/12/11 23:30:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added lang/sun-jre7 version 7.0.9 [ryoon 2012-12-11]
 	Added lang/sun-jdk7 version 7.0.9 [ryoon 2012-12-11]
 	Updated pkgtools/pkglint to 4.127 [ryoon 2012-12-11]
+	Added security/polarssl version 1.2.0 [gdt 2012-12-11]
