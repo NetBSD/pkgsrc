@@ -1,0 +1,2968 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
+include/asterisk.h
+include/asterisk/_private.h
+include/asterisk/abstract_jb.h
+include/asterisk/acl.h
+include/asterisk/adsi.h
+include/asterisk/ael_structs.h
+include/asterisk/agi.h
+include/asterisk/alaw.h
+include/asterisk/aoc.h
+include/asterisk/app.h
+include/asterisk/ast_expr.h
+include/asterisk/ast_version.h
+include/asterisk/astdb.h
+include/asterisk/astmm.h
+include/asterisk/astobj.h
+include/asterisk/astobj2.h
+include/asterisk/astosp.h
+include/asterisk/audiohook.h
+include/asterisk/autochan.h
+include/asterisk/autoconfig.h
+include/asterisk/bridging.h
+include/asterisk/bridging_features.h
+include/asterisk/bridging_technology.h
+include/asterisk/build.h
+include/asterisk/buildinfo.h
+include/asterisk/buildopts.h
+include/asterisk/calendar.h
+include/asterisk/callerid.h
+include/asterisk/causes.h
+include/asterisk/ccss.h
+include/asterisk/cdr.h
+include/asterisk/cel.h
+include/asterisk/celt.h
+include/asterisk/channel.h
+include/asterisk/channel_internal.h
+include/asterisk/channelstate.h
+include/asterisk/chanvars.h
+include/asterisk/cli.h
+include/asterisk/compat.h
+include/asterisk/compiler.h
+include/asterisk/config.h
+include/asterisk/config_options.h
+include/asterisk/crypto.h
+include/asterisk/data.h
+include/asterisk/datastore.h
+include/asterisk/devicestate.h
+include/asterisk/dial.h
+include/asterisk/dlinkedlists.h
+include/asterisk/dns.h
+include/asterisk/dnsmgr.h
+include/asterisk/doxygen/architecture.h
+include/asterisk/doxygen/asterisk-git-howto.h
+include/asterisk/doxygen/commits.h
+include/asterisk/doxygen/licensing.h
+include/asterisk/doxygen/mantisworkflow.h
+include/asterisk/doxygen/releases.h
+include/asterisk/doxygen/reviewboard.h
+include/asterisk/doxyref.h
+include/asterisk/dsp.h
+include/asterisk/dundi.h
+include/asterisk/endian.h
+include/asterisk/enum.h
+include/asterisk/event.h
+include/asterisk/event_defs.h
+include/asterisk/extconf.h
+include/asterisk/features.h
+include/asterisk/file.h
+include/asterisk/format.h
+include/asterisk/format_cap.h
+include/asterisk/format_pref.h
+include/asterisk/frame.h
+include/asterisk/frame_defs.h
+include/asterisk/framehook.h
+include/asterisk/fskmodem.h
+include/asterisk/fskmodem_float.h
+include/asterisk/fskmodem_int.h
+include/asterisk/global_datastores.h
+include/asterisk/hashtab.h
+include/asterisk/heap.h
+include/asterisk/http.h
+include/asterisk/http_websocket.h
+include/asterisk/image.h
+include/asterisk/indications.h
+include/asterisk/inline_api.h
+include/asterisk/io.h
+include/asterisk/jabber.h
+include/asterisk/jingle.h
+include/asterisk/linkedlists.h
+include/asterisk/localtime.h
+include/asterisk/lock.h
+include/asterisk/logger.h
+include/asterisk/manager.h
+include/asterisk/md5.h
+include/asterisk/message.h
+include/asterisk/mod_format.h
+include/asterisk/module.h
+include/asterisk/monitor.h
+include/asterisk/musiconhold.h
+include/asterisk/netsock.h
+include/asterisk/netsock2.h
+include/asterisk/network.h
+include/asterisk/optional_api.h
+include/asterisk/options.h
+include/asterisk/paths.h
+include/asterisk/pbx.h
+include/asterisk/pktccops.h
+include/asterisk/plc.h
+include/asterisk/poll-compat.h
+include/asterisk/presencestate.h
+include/asterisk/privacy.h
+include/asterisk/pval.h
+include/asterisk/res_fax.h
+include/asterisk/res_odbc.h
+include/asterisk/res_srtp.h
+include/asterisk/rtp_engine.h
+include/asterisk/say.h
+include/asterisk/sched.h
+include/asterisk/security_events.h
+include/asterisk/security_events_defs.h
+include/asterisk/select.h
+include/asterisk/sha1.h
+include/asterisk/silk.h
+include/asterisk/sip_api.h
+include/asterisk/slin.h
+include/asterisk/slinfactory.h
+include/asterisk/smdi.h
+include/asterisk/speech.h
+include/asterisk/srv.h
+include/asterisk/stringfields.h
+include/asterisk/strings.h
+include/asterisk/stun.h
+include/asterisk/syslog.h
+include/asterisk/taskprocessor.h
+include/asterisk/tcptls.h
+include/asterisk/tdd.h
+include/asterisk/term.h
+include/asterisk/test.h
+include/asterisk/threadstorage.h
+include/asterisk/time.h
+include/asterisk/timing.h
+include/asterisk/transcap.h
+include/asterisk/translate.h
+include/asterisk/udptl.h
+include/asterisk/ulaw.h
+include/asterisk/unaligned.h
+include/asterisk/utils.h
+include/asterisk/version.h
+include/asterisk/xml.h
+include/asterisk/xmldoc.h
+include/asterisk/xmpp.h
+lib/asterisk/modules/app_adsiprog.so
+lib/asterisk/modules/app_alarmreceiver.so
+lib/asterisk/modules/app_amd.so
+lib/asterisk/modules/app_authenticate.so
+lib/asterisk/modules/app_cdr.so
+lib/asterisk/modules/app_celgenuserevent.so
+lib/asterisk/modules/app_chanisavail.so
+lib/asterisk/modules/app_channelredirect.so
+lib/asterisk/modules/app_chanspy.so
+lib/asterisk/modules/app_confbridge.so
+lib/asterisk/modules/app_controlplayback.so
+lib/asterisk/modules/app_db.so
+lib/asterisk/modules/app_dial.so
+lib/asterisk/modules/app_dictate.so
+lib/asterisk/modules/app_directed_pickup.so
+lib/asterisk/modules/app_directory.so
+lib/asterisk/modules/app_disa.so
+lib/asterisk/modules/app_dumpchan.so
+lib/asterisk/modules/app_echo.so
+lib/asterisk/modules/app_exec.so
+lib/asterisk/modules/app_externalivr.so
+lib/asterisk/modules/app_festival.so
+lib/asterisk/modules/app_followme.so
+lib/asterisk/modules/app_forkcdr.so
+lib/asterisk/modules/app_getcpeid.so
+lib/asterisk/modules/app_ices.so
+lib/asterisk/modules/app_image.so
+lib/asterisk/modules/app_macro.so
+lib/asterisk/modules/app_milliwatt.so
+lib/asterisk/modules/app_minivm.so
+lib/asterisk/modules/app_mixmonitor.so
+lib/asterisk/modules/app_morsecode.so
+lib/asterisk/modules/app_mp3.so
+lib/asterisk/modules/app_nbscat.so
+lib/asterisk/modules/app_originate.so
+lib/asterisk/modules/app_page.so
+lib/asterisk/modules/app_parkandannounce.so
+lib/asterisk/modules/app_playback.so
+lib/asterisk/modules/app_playtones.so
+lib/asterisk/modules/app_privacy.so
+lib/asterisk/modules/app_queue.so
+lib/asterisk/modules/app_read.so
+lib/asterisk/modules/app_readexten.so
+lib/asterisk/modules/app_record.so
+lib/asterisk/modules/app_sayunixtime.so
+lib/asterisk/modules/app_senddtmf.so
+lib/asterisk/modules/app_sendtext.so
+lib/asterisk/modules/app_sms.so
+lib/asterisk/modules/app_softhangup.so
+lib/asterisk/modules/app_speech_utils.so
+lib/asterisk/modules/app_stack.so
+lib/asterisk/modules/app_system.so
+lib/asterisk/modules/app_talkdetect.so
+lib/asterisk/modules/app_test.so
+lib/asterisk/modules/app_transfer.so
+lib/asterisk/modules/app_url.so
+lib/asterisk/modules/app_userevent.so
+lib/asterisk/modules/app_verbose.so
+lib/asterisk/modules/app_voicemail.so
+lib/asterisk/modules/app_waitforring.so
+lib/asterisk/modules/app_waitforsilence.so
+lib/asterisk/modules/app_waituntil.so
+lib/asterisk/modules/app_while.so
+lib/asterisk/modules/app_zapateller.so
+lib/asterisk/modules/bridge_builtin_features.so
+lib/asterisk/modules/bridge_multiplexed.so
+lib/asterisk/modules/bridge_simple.so
+lib/asterisk/modules/bridge_softmix.so
+${PLIST.unixodbc}lib/asterisk/modules/cdr_adaptive_odbc.so
+lib/asterisk/modules/cdr_csv.so
+lib/asterisk/modules/cdr_custom.so
+lib/asterisk/modules/cdr_manager.so
+${PLIST.unixodbc}lib/asterisk/modules/cdr_odbc.so
+lib/asterisk/modules/cdr_sqlite3_custom.so
+lib/asterisk/modules/cdr_syslog.so
+lib/asterisk/modules/cel_custom.so
+lib/asterisk/modules/cel_manager.so
+${PLIST.unixodbc}lib/asterisk/modules/cel_odbc.so
+lib/asterisk/modules/cel_sqlite3_custom.so
+lib/asterisk/modules/chan_agent.so
+lib/asterisk/modules/chan_bridge.so
+lib/asterisk/modules/chan_iax2.so
+lib/asterisk/modules/chan_local.so
+${PLIST.mgcp}lib/asterisk/modules/chan_mgcp.so
+lib/asterisk/modules/chan_motif.so
+lib/asterisk/modules/chan_multicast_rtp.so
+lib/asterisk/modules/chan_oss.so
+lib/asterisk/modules/chan_sip.so
+lib/asterisk/modules/chan_skinny.so
+lib/asterisk/modules/chan_unistim.so
+lib/asterisk/modules/codec_a_mu.so
+lib/asterisk/modules/codec_adpcm.so
+lib/asterisk/modules/codec_alaw.so
+lib/asterisk/modules/codec_g722.so
+lib/asterisk/modules/codec_g726.so
+lib/asterisk/modules/codec_gsm.so
+lib/asterisk/modules/codec_ilbc.so
+lib/asterisk/modules/codec_lpc10.so
+lib/asterisk/modules/codec_resample.so
+${PLIST.speex}lib/asterisk/modules/codec_speex.so
+lib/asterisk/modules/codec_ulaw.so
+lib/asterisk/modules/format_g719.so
+lib/asterisk/modules/format_g723.so
+lib/asterisk/modules/format_g726.so
+lib/asterisk/modules/format_g729.so
+lib/asterisk/modules/format_gsm.so
+lib/asterisk/modules/format_h263.so
+lib/asterisk/modules/format_h264.so
+lib/asterisk/modules/format_ilbc.so
+lib/asterisk/modules/format_jpeg.so
+lib/asterisk/modules/format_pcm.so
+lib/asterisk/modules/format_siren14.so
+lib/asterisk/modules/format_siren7.so
+lib/asterisk/modules/format_sln.so
+lib/asterisk/modules/format_vox.so
+lib/asterisk/modules/format_wav.so
+lib/asterisk/modules/format_wav_gsm.so
+lib/asterisk/modules/func_aes.so
+lib/asterisk/modules/func_audiohookinherit.so
+lib/asterisk/modules/func_base64.so
+lib/asterisk/modules/func_blacklist.so
+lib/asterisk/modules/func_callcompletion.so
+lib/asterisk/modules/func_callerid.so
+lib/asterisk/modules/func_cdr.so
+lib/asterisk/modules/func_channel.so
+lib/asterisk/modules/func_config.so
+lib/asterisk/modules/func_curl.so
+lib/asterisk/modules/func_cut.so
+lib/asterisk/modules/func_db.so
+lib/asterisk/modules/func_devstate.so
+lib/asterisk/modules/func_dialgroup.so
+lib/asterisk/modules/func_dialplan.so
+lib/asterisk/modules/func_enum.so
+lib/asterisk/modules/func_env.so
+lib/asterisk/modules/func_extstate.so
+lib/asterisk/modules/func_frame_trace.so
+lib/asterisk/modules/func_global.so
+lib/asterisk/modules/func_groupcount.so
+lib/asterisk/modules/func_hangupcause.so
+lib/asterisk/modules/func_iconv.so
+lib/asterisk/modules/func_jitterbuffer.so
+lib/asterisk/modules/func_lock.so
+lib/asterisk/modules/func_logic.so
+lib/asterisk/modules/func_math.so
+lib/asterisk/modules/func_md5.so
+lib/asterisk/modules/func_module.so
+${PLIST.unixodbc}lib/asterisk/modules/func_odbc.so
+lib/asterisk/modules/func_pitchshift.so
+lib/asterisk/modules/func_presencestate.so
+lib/asterisk/modules/func_rand.so
+lib/asterisk/modules/func_realtime.so
+lib/asterisk/modules/func_sha1.so
+lib/asterisk/modules/func_shell.so
+${PLIST.speex}lib/asterisk/modules/func_speex.so
+lib/asterisk/modules/func_sprintf.so
+lib/asterisk/modules/func_srv.so
+lib/asterisk/modules/func_strings.so
+lib/asterisk/modules/func_sysinfo.so
+lib/asterisk/modules/func_timeout.so
+lib/asterisk/modules/func_uri.so
+lib/asterisk/modules/func_version.so
+lib/asterisk/modules/func_vmcount.so
+lib/asterisk/modules/func_volume.so
+lib/asterisk/modules/pbx_ael.so
+lib/asterisk/modules/pbx_config.so
+lib/asterisk/modules/pbx_dundi.so
+lib/asterisk/modules/pbx_loopback.so
+lib/asterisk/modules/pbx_realtime.so
+lib/asterisk/modules/pbx_spool.so
+lib/asterisk/modules/res_adsi.so
+lib/asterisk/modules/res_ael_share.so
+lib/asterisk/modules/res_agi.so
+lib/asterisk/modules/res_calendar.so
+lib/asterisk/modules/res_clialiases.so
+lib/asterisk/modules/res_clioriginate.so
+lib/asterisk/modules/res_config_curl.so
+${PLIST.ldap}lib/asterisk/modules/res_config_ldap.so
+${PLIST.unixodbc}lib/asterisk/modules/res_config_odbc.so
+lib/asterisk/modules/res_config_sqlite3.so
+lib/asterisk/modules/res_convert.so
+lib/asterisk/modules/res_crypto.so
+lib/asterisk/modules/res_curl.so
+lib/asterisk/modules/res_fax.so
+${PLIST.spandsp}lib/asterisk/modules/res_fax_spandsp.so
+lib/asterisk/modules/res_format_attr_celt.so
+lib/asterisk/modules/res_format_attr_h263.so
+lib/asterisk/modules/res_format_attr_h264.so
+lib/asterisk/modules/res_format_attr_silk.so
+lib/asterisk/modules/res_http_websocket.so
+lib/asterisk/modules/res_limit.so
+lib/asterisk/modules/res_monitor.so
+lib/asterisk/modules/res_musiconhold.so
+lib/asterisk/modules/res_mutestream.so
+${PLIST.unixodbc}lib/asterisk/modules/res_odbc.so
+lib/asterisk/modules/res_phoneprov.so
+${PLIST.mgcp}lib/asterisk/modules/res_pktccops.so
+lib/asterisk/modules/res_realtime.so
+lib/asterisk/modules/res_rtp_asterisk.so
+lib/asterisk/modules/res_rtp_multicast.so
+lib/asterisk/modules/res_security_log.so
+lib/asterisk/modules/res_smdi.so
+lib/asterisk/modules/res_speech.so
+lib/asterisk/modules/res_stun_monitor.so
+${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
+lib/asterisk/modules/res_timing_pthread.so
+lib/asterisk/modules/res_xmpp.so
+lib/libasteriskssl.so
+lib/libasteriskssl.so.1
+lib/pkgconfig/asterisk.pc
+libdata/asterisk/documentation/appdocsxml.dtd
+libdata/asterisk/documentation/core-en_US.xml
+libdata/asterisk/images/asterisk-intro.jpg
+libdata/asterisk/images/kpad2.jpg
+libdata/asterisk/moh/.asterisk-moh-opsound-wav-2.03
+libdata/asterisk/moh/CHANGES-asterisk-moh-opsound-wav
+libdata/asterisk/moh/CREDITS-asterisk-moh-opsound-wav
+libdata/asterisk/moh/LICENSE-asterisk-moh-opsound-wav
+libdata/asterisk/moh/macroform-cold_day.wav
+libdata/asterisk/moh/macroform-robot_dity.wav
+libdata/asterisk/moh/macroform-the_simplicity.wav
+libdata/asterisk/moh/manolo_camp-morning_coffee.wav
+libdata/asterisk/moh/reno_project-system.wav
+libdata/asterisk/phoneprov/000000000000-directory.xml
+libdata/asterisk/phoneprov/000000000000-phone.cfg
+libdata/asterisk/phoneprov/000000000000.cfg
+libdata/asterisk/phoneprov/polycom.xml
+libdata/asterisk/phoneprov/polycom_line.xml
+libdata/asterisk/phoneprov/snom-mac.xml
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.22
+libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
+libdata/asterisk/sounds/en/1-yes-2-no.gsm
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.22
+libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.11
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.22
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.22
+libdata/asterisk/sounds/en/T-changed-to.gsm
+libdata/asterisk/sounds/en/T-is-not-available.gsm
+libdata/asterisk/sounds/en/T-to-disable-ancmnt.gsm
+libdata/asterisk/sounds/en/T-to-enable-ancmnt.gsm
+libdata/asterisk/sounds/en/T-to-hear-cur-ancmnt.gsm
+libdata/asterisk/sounds/en/T-to-leave-msg.gsm
+libdata/asterisk/sounds/en/T-to-reach-main-office.gsm
+libdata/asterisk/sounds/en/T-to-rec-ancmnt.gsm
+libdata/asterisk/sounds/en/T-to-rtrn-to-main-menu.gsm
+libdata/asterisk/sounds/en/a-charge-for-this-svc.gsm
+libdata/asterisk/sounds/en/a-collect-charge-of.gsm
+libdata/asterisk/sounds/en/a-collect-charge.gsm
+libdata/asterisk/sounds/en/a-connect-charge-of.gsm
+libdata/asterisk/sounds/en/a-connect-charge.gsm
+libdata/asterisk/sounds/en/abandon-all-hope.gsm
+libdata/asterisk/sounds/en/abandons.gsm
+libdata/asterisk/sounds/en/academic-support.gsm
+libdata/asterisk/sounds/en/access-code.gsm
+libdata/asterisk/sounds/en/access-denied.gsm
+libdata/asterisk/sounds/en/access-granted.gsm
+libdata/asterisk/sounds/en/accessible-through-system.gsm
+libdata/asterisk/sounds/en/account-balance-is.gsm
+libdata/asterisk/sounds/en/accounting.gsm
+libdata/asterisk/sounds/en/accounts-payable.gsm
+libdata/asterisk/sounds/en/accounts-receivable.gsm
+libdata/asterisk/sounds/en/activated.gsm
+libdata/asterisk/sounds/en/added-to.gsm
+libdata/asterisk/sounds/en/added.gsm
+libdata/asterisk/sounds/en/address.gsm
+libdata/asterisk/sounds/en/administration.gsm
+libdata/asterisk/sounds/en/advised-to-seek-shelter.gsm
+libdata/asterisk/sounds/en/after-the-tone.gsm
+libdata/asterisk/sounds/en/afternoon.gsm
+libdata/asterisk/sounds/en/agent-alreadyon.gsm
+libdata/asterisk/sounds/en/agent-incorrect.gsm
+libdata/asterisk/sounds/en/agent-loggedoff.gsm
+libdata/asterisk/sounds/en/agent-loginok.gsm
+libdata/asterisk/sounds/en/agent-newlocation.gsm
+libdata/asterisk/sounds/en/agent-pass.gsm
+libdata/asterisk/sounds/en/agent-user.gsm
+libdata/asterisk/sounds/en/airport.gsm
+libdata/asterisk/sounds/en/alabama.gsm
+libdata/asterisk/sounds/en/alaska.gsm
+libdata/asterisk/sounds/en/albuquerque.gsm
+libdata/asterisk/sounds/en/alert.gsm
+libdata/asterisk/sounds/en/all-circuits-busy-now.gsm
+libdata/asterisk/sounds/en/all-outgoing-lines-unavailable.gsm
+libdata/asterisk/sounds/en/all-reps-busy.gsm
+libdata/asterisk/sounds/en/all-your-base.gsm
+libdata/asterisk/sounds/en/altitude.gsm
+libdata/asterisk/sounds/en/ampersand.gsm
+libdata/asterisk/sounds/en/an-error-has-occured.gsm
+libdata/asterisk/sounds/en/an-error-has-occurred.gsm
+libdata/asterisk/sounds/en/and-area-code.gsm
+libdata/asterisk/sounds/en/and-or.gsm
+libdata/asterisk/sounds/en/and-prs-pound-whn-finished.gsm
+libdata/asterisk/sounds/en/and.gsm
+libdata/asterisk/sounds/en/another-time.gsm
+libdata/asterisk/sounds/en/approaching.gsm
+libdata/asterisk/sounds/en/approximately.gsm
+libdata/asterisk/sounds/en/are-you-still-there.gsm
+libdata/asterisk/sounds/en/are-you-still-there2.gsm
+libdata/asterisk/sounds/en/arizona.gsm
+libdata/asterisk/sounds/en/arkansas.gsm
+libdata/asterisk/sounds/en/arlington.gsm
+libdata/asterisk/sounds/en/ascending-2tone.gsm
+libdata/asterisk/sounds/en/astcc-account-balance-is.gsm
+libdata/asterisk/sounds/en/astcc-account-number-invalid.gsm
+libdata/asterisk/sounds/en/astcc-balance-of-account-is.gsm
+libdata/asterisk/sounds/en/astcc-card-number-invalid.gsm
+libdata/asterisk/sounds/en/astcc-digit-account-number.gsm
+libdata/asterisk/sounds/en/astcc-followed-by-pound.gsm
+libdata/asterisk/sounds/en/astcc-followed-by-the-hash-key.gsm
+libdata/asterisk/sounds/en/astcc-followed-by-the-pound-key.gsm
+libdata/asterisk/sounds/en/astcc-login12pound.gsm
+libdata/asterisk/sounds/en/astcc-please-enter-your.gsm
+libdata/asterisk/sounds/en/astcc-skipping-any-punctuation.gsm
+libdata/asterisk/sounds/en/asterisk-friend.gsm
+libdata/asterisk/sounds/en/at-any-time.gsm
+libdata/asterisk/sounds/en/at-customers-request.gsm
+libdata/asterisk/sounds/en/at-following-number.gsm
+libdata/asterisk/sounds/en/at-sign.gsm
+libdata/asterisk/sounds/en/at-tone-time-exactly.gsm
+libdata/asterisk/sounds/en/athletics.gsm
+libdata/asterisk/sounds/en/atlanta.gsm
+libdata/asterisk/sounds/en/atlantic.gsm
+libdata/asterisk/sounds/en/attention-required.gsm
+libdata/asterisk/sounds/en/auditing.gsm
+libdata/asterisk/sounds/en/austin.gsm
+libdata/asterisk/sounds/en/auth-incorrect.gsm
+libdata/asterisk/sounds/en/auth-thankyou.gsm
+libdata/asterisk/sounds/en/available-options.gsm
+libdata/asterisk/sounds/en/available.gsm
+libdata/asterisk/sounds/en/avg-speed-answer.gsm
+libdata/asterisk/sounds/en/away-naughty-boy.gsm
+libdata/asterisk/sounds/en/away-naughty-girl.gsm
+libdata/asterisk/sounds/en/backslash.gsm
+libdata/asterisk/sounds/en/bad.gsm
+libdata/asterisk/sounds/en/baltimore.gsm
+libdata/asterisk/sounds/en/bar.gsm
+libdata/asterisk/sounds/en/barn.gsm
+libdata/asterisk/sounds/en/barns.gsm
+libdata/asterisk/sounds/en/barometric.gsm
+libdata/asterisk/sounds/en/bearing.gsm
+libdata/asterisk/sounds/en/beaufort.gsm
+libdata/asterisk/sounds/en/because-paranoid.gsm
+libdata/asterisk/sounds/en/beep.gsm
+libdata/asterisk/sounds/en/beeperr.gsm
+libdata/asterisk/sounds/en/before-the-number.gsm
+libdata/asterisk/sounds/en/believe-its-free.gsm
+libdata/asterisk/sounds/en/billing-and-collections.gsm
+libdata/asterisk/sounds/en/billing.gsm
+libdata/asterisk/sounds/en/billionth.gsm
+libdata/asterisk/sounds/en/bits.gsm
+libdata/asterisk/sounds/en/blue-eyed-polar-bear.gsm
+libdata/asterisk/sounds/en/bookstore.gsm
+libdata/asterisk/sounds/en/boston.gsm
+libdata/asterisk/sounds/en/box.gsm
+libdata/asterisk/sounds/en/brian.gsm
+libdata/asterisk/sounds/en/business-development.gsm
+libdata/asterisk/sounds/en/busy-hangovers.gsm
+libdata/asterisk/sounds/en/busy-pls-hold.gsm
+libdata/asterisk/sounds/en/but.gsm
+libdata/asterisk/sounds/en/by.gsm
+libdata/asterisk/sounds/en/bytes.gsm
+libdata/asterisk/sounds/en/cafeteria.gsm
+libdata/asterisk/sounds/en/california.gsm
+libdata/asterisk/sounds/en/call-forward.gsm
+libdata/asterisk/sounds/en/call-forwarding.gsm
+libdata/asterisk/sounds/en/call-fwd-cancelled.gsm
+libdata/asterisk/sounds/en/call-fwd-no-ans.gsm
+libdata/asterisk/sounds/en/call-fwd-on-busy.gsm
+libdata/asterisk/sounds/en/call-fwd-parallel.gsm
+libdata/asterisk/sounds/en/call-fwd-unconditional.gsm
+libdata/asterisk/sounds/en/call-preempted.gsm
+libdata/asterisk/sounds/en/call-quality-menu.gsm
+libdata/asterisk/sounds/en/call-requres.gsm
+libdata/asterisk/sounds/en/call-terminated.gsm
+libdata/asterisk/sounds/en/call-waiting.gsm
+libdata/asterisk/sounds/en/call.gsm
+libdata/asterisk/sounds/en/calling.gsm
+libdata/asterisk/sounds/en/calls-taken-by.gsm
+libdata/asterisk/sounds/en/calls-waiting-for-rep.gsm
+libdata/asterisk/sounds/en/calls.gsm
+libdata/asterisk/sounds/en/campground-office.gsm
+libdata/asterisk/sounds/en/cancelled.gsm
+libdata/asterisk/sounds/en/cannot-complete-as-dialed.gsm
+libdata/asterisk/sounds/en/cannot-complete-network-error.gsm
+libdata/asterisk/sounds/en/cannot-complete-otherend-error.gsm
+libdata/asterisk/sounds/en/cannot-complete-temp-error.gsm
+libdata/asterisk/sounds/en/card-balance-is.gsm
+libdata/asterisk/sounds/en/card-is-invalid.gsm
+libdata/asterisk/sounds/en/card-number.gsm
+libdata/asterisk/sounds/en/carried-away-by-monkeys.gsm
+libdata/asterisk/sounds/en/cause-code.gsm
+libdata/asterisk/sounds/en/cc-amex.gsm
+libdata/asterisk/sounds/en/cc-discover.gsm
+libdata/asterisk/sounds/en/cc-mastercard.gsm
+libdata/asterisk/sounds/en/cc-visa.gsm
+libdata/asterisk/sounds/en/celsius.gsm
+libdata/asterisk/sounds/en/cent.gsm
+libdata/asterisk/sounds/en/central.gsm
+libdata/asterisk/sounds/en/cents-per-minute.gsm
+libdata/asterisk/sounds/en/cents.gsm
+libdata/asterisk/sounds/en/ceo-office.gsm
+libdata/asterisk/sounds/en/chance-of.gsm
+libdata/asterisk/sounds/en/changing.gsm
+libdata/asterisk/sounds/en/channel-insecure-warn.gsm
+libdata/asterisk/sounds/en/channel-secure.gsm
+libdata/asterisk/sounds/en/channel.gsm
+libdata/asterisk/sounds/en/charlotte.gsm
+libdata/asterisk/sounds/en/chat-room.gsm
+libdata/asterisk/sounds/en/check-number-dial-again.gsm
+libdata/asterisk/sounds/en/chemistry.gsm
+libdata/asterisk/sounds/en/chicago.gsm
+libdata/asterisk/sounds/en/chris.gsm
+libdata/asterisk/sounds/en/claims.gsm
+libdata/asterisk/sounds/en/clear.gsm
+libdata/asterisk/sounds/en/clearing.gsm
+libdata/asterisk/sounds/en/cleveland.gsm
+libdata/asterisk/sounds/en/clli.gsm
+libdata/asterisk/sounds/en/close-parenthesis.gsm
+libdata/asterisk/sounds/en/clouds.gsm
+libdata/asterisk/sounds/en/cloudy.gsm
+libdata/asterisk/sounds/en/collections.gsm
+libdata/asterisk/sounds/en/colorado-springs.gsm
+libdata/asterisk/sounds/en/colorado.gsm
+libdata/asterisk/sounds/en/columbus.gsm
+libdata/asterisk/sounds/en/comma.gsm
+libdata/asterisk/sounds/en/communications.gsm
+libdata/asterisk/sounds/en/company-dir-411.gsm
+libdata/asterisk/sounds/en/complaint.gsm
+libdata/asterisk/sounds/en/compliance.gsm
+libdata/asterisk/sounds/en/computer-friend1.gsm
+libdata/asterisk/sounds/en/computer-friend2.gsm
+libdata/asterisk/sounds/en/conditions.gsm
+libdata/asterisk/sounds/en/conf-adminmenu-162.gsm
+libdata/asterisk/sounds/en/conf-adminmenu.gsm
+libdata/asterisk/sounds/en/conf-banned.gsm
+libdata/asterisk/sounds/en/conf-enteringno.gsm
+libdata/asterisk/sounds/en/conf-errormenu.gsm
+libdata/asterisk/sounds/en/conf-extended.gsm
+libdata/asterisk/sounds/en/conf-full.gsm
+libdata/asterisk/sounds/en/conf-getchannel.gsm
+libdata/asterisk/sounds/en/conf-getconfno.gsm
+libdata/asterisk/sounds/en/conf-getpin.gsm
+libdata/asterisk/sounds/en/conf-hasentered.gsm
+libdata/asterisk/sounds/en/conf-hasjoin.gsm
+libdata/asterisk/sounds/en/conf-hasleft.gsm
+libdata/asterisk/sounds/en/conf-invalid.gsm
+libdata/asterisk/sounds/en/conf-invalidpin.gsm
+libdata/asterisk/sounds/en/conf-kicked.gsm
+libdata/asterisk/sounds/en/conf-leaderhasleft.gsm
+libdata/asterisk/sounds/en/conf-locked.gsm
+libdata/asterisk/sounds/en/conf-lockednow.gsm
+libdata/asterisk/sounds/en/conf-muted.gsm
+libdata/asterisk/sounds/en/conf-noempty.gsm
+libdata/asterisk/sounds/en/conf-nonextended.gsm
+libdata/asterisk/sounds/en/conf-now-muted.gsm
+libdata/asterisk/sounds/en/conf-now-recording.gsm
+libdata/asterisk/sounds/en/conf-now-unmuted.gsm
+libdata/asterisk/sounds/en/conf-onlyone.gsm
+libdata/asterisk/sounds/en/conf-onlyperson.gsm
+libdata/asterisk/sounds/en/conf-onlypersonleft.gsm
+libdata/asterisk/sounds/en/conf-otherinparty.gsm
+libdata/asterisk/sounds/en/conf-peopleinconf.gsm
+libdata/asterisk/sounds/en/conf-placeintoconf.gsm
+libdata/asterisk/sounds/en/conf-roll-callcomplete.gsm
+libdata/asterisk/sounds/en/conf-sysop.gsm
+libdata/asterisk/sounds/en/conf-sysopreq.gsm
+libdata/asterisk/sounds/en/conf-sysopreqcancelled.gsm
+libdata/asterisk/sounds/en/conf-thereare.gsm
+libdata/asterisk/sounds/en/conf-unlockednow.gsm
+libdata/asterisk/sounds/en/conf-unmuted.gsm
+libdata/asterisk/sounds/en/conf-usermenu-162.gsm
+libdata/asterisk/sounds/en/conf-usermenu.gsm
+libdata/asterisk/sounds/en/conf-userswilljoin.gsm
+libdata/asterisk/sounds/en/conf-userwilljoin.gsm
+libdata/asterisk/sounds/en/conf-waitforleader.gsm
+libdata/asterisk/sounds/en/conf-youareinconfnum.gsm
+libdata/asterisk/sounds/en/confbridge-begin-glorious-a.gsm
+libdata/asterisk/sounds/en/confbridge-begin-glorious-b.gsm
+libdata/asterisk/sounds/en/confbridge-begin-glorious-c.gsm
+libdata/asterisk/sounds/en/confbridge-begin-leader.gsm
+libdata/asterisk/sounds/en/confbridge-conf-begin.gsm
+libdata/asterisk/sounds/en/confbridge-conf-end.gsm
+libdata/asterisk/sounds/en/confbridge-dec-list-vol-in.gsm
+libdata/asterisk/sounds/en/confbridge-dec-list-vol-out.gsm
+libdata/asterisk/sounds/en/confbridge-dec-talk-vol-in.gsm
+libdata/asterisk/sounds/en/confbridge-dec-talk-vol-out.gsm
+libdata/asterisk/sounds/en/confbridge-has-joined.gsm
+libdata/asterisk/sounds/en/confbridge-has-left.gsm
+libdata/asterisk/sounds/en/confbridge-inc-list-vol-in.gsm
+libdata/asterisk/sounds/en/confbridge-inc-list-vol-out.gsm
+libdata/asterisk/sounds/en/confbridge-inc-talk-vol-in.gsm
+libdata/asterisk/sounds/en/confbridge-inc-talk-vol-out.gsm
+libdata/asterisk/sounds/en/confbridge-invalid.gsm
+libdata/asterisk/sounds/en/confbridge-join.gsm
+libdata/asterisk/sounds/en/confbridge-leave-in.gsm
+libdata/asterisk/sounds/en/confbridge-leave-out.gsm
+libdata/asterisk/sounds/en/confbridge-leave.gsm
+libdata/asterisk/sounds/en/confbridge-lock-extended.gsm
+libdata/asterisk/sounds/en/confbridge-lock-in.gsm
+libdata/asterisk/sounds/en/confbridge-lock-no-join.gsm
+libdata/asterisk/sounds/en/confbridge-lock-out.gsm
+libdata/asterisk/sounds/en/confbridge-locked.gsm
+libdata/asterisk/sounds/en/confbridge-menu-exit-in.gsm
+libdata/asterisk/sounds/en/confbridge-menu-exit-out.gsm
+libdata/asterisk/sounds/en/confbridge-mute-extended.gsm
+libdata/asterisk/sounds/en/confbridge-mute-in.gsm
+libdata/asterisk/sounds/en/confbridge-mute-out.gsm
+libdata/asterisk/sounds/en/confbridge-muted.gsm
+libdata/asterisk/sounds/en/confbridge-only-one.gsm
+libdata/asterisk/sounds/en/confbridge-only-participant.gsm
+libdata/asterisk/sounds/en/confbridge-participants.gsm
+libdata/asterisk/sounds/en/confbridge-pin-bad.gsm
+libdata/asterisk/sounds/en/confbridge-pin.gsm
+libdata/asterisk/sounds/en/confbridge-remove-last-in.gsm
+libdata/asterisk/sounds/en/confbridge-remove-last-out.gsm
+libdata/asterisk/sounds/en/confbridge-removed.gsm
+libdata/asterisk/sounds/en/confbridge-rest-list-vol-in.gsm
+libdata/asterisk/sounds/en/confbridge-rest-list-vol-out.gsm
+libdata/asterisk/sounds/en/confbridge-rest-talk-vol-in.gsm
+libdata/asterisk/sounds/en/confbridge-rest-talk-vol-out.gsm
+libdata/asterisk/sounds/en/confbridge-there-are.gsm
+libdata/asterisk/sounds/en/confbridge-unlocked.gsm
+libdata/asterisk/sounds/en/confbridge-unmuted.gsm
+libdata/asterisk/sounds/en/conference-call.gsm
+libdata/asterisk/sounds/en/conference-reservations.gsm
+libdata/asterisk/sounds/en/conference.gsm
+libdata/asterisk/sounds/en/confirm-number-is.gsm
+libdata/asterisk/sounds/en/connected.gsm
+libdata/asterisk/sounds/en/connecticut.gsm
+libdata/asterisk/sounds/en/connecting.gsm
+libdata/asterisk/sounds/en/connection-failed.gsm
+libdata/asterisk/sounds/en/connection-timed-out.gsm
+libdata/asterisk/sounds/en/continue-english-press.gsm
+libdata/asterisk/sounds/en/continue-in-english.gsm
+libdata/asterisk/sounds/en/copy-center.gsm
+libdata/asterisk/sounds/en/core-sounds-en.txt
+libdata/asterisk/sounds/en/could-lose-a-few-pounds.gsm
+libdata/asterisk/sounds/en/counseling-services.gsm
+libdata/asterisk/sounds/en/count.gsm
+libdata/asterisk/sounds/en/crash.gsm
+libdata/asterisk/sounds/en/current-time-is.gsm
+libdata/asterisk/sounds/en/currently.gsm
+libdata/asterisk/sounds/en/customer-accounts.gsm
+libdata/asterisk/sounds/en/customer-relations.gsm
+libdata/asterisk/sounds/en/customer-service.gsm
+libdata/asterisk/sounds/en/cyclone.gsm
+libdata/asterisk/sounds/en/dallas.gsm
+libdata/asterisk/sounds/en/date.gsm
+libdata/asterisk/sounds/en/day.gsm
+libdata/asterisk/sounds/en/daylight.gsm
+libdata/asterisk/sounds/en/days.gsm
+libdata/asterisk/sounds/en/de-activated.gsm
+libdata/asterisk/sounds/en/deadbeat.gsm
+libdata/asterisk/sounds/en/decode.gsm
+libdata/asterisk/sounds/en/default-attendant.gsm
+libdata/asterisk/sounds/en/degrees.gsm
+libdata/asterisk/sounds/en/delaware.gsm
+libdata/asterisk/sounds/en/demo-abouttotry.gsm
+libdata/asterisk/sounds/en/demo-congrats.gsm
+libdata/asterisk/sounds/en/demo-echodone.gsm
+libdata/asterisk/sounds/en/demo-echotest.gsm
+libdata/asterisk/sounds/en/demo-enterkeywords.gsm
+libdata/asterisk/sounds/en/demo-instruct.gsm
+libdata/asterisk/sounds/en/demo-moreinfo.gsm
+libdata/asterisk/sounds/en/demo-nogo.gsm
+libdata/asterisk/sounds/en/demo-nomatch.gsm
+libdata/asterisk/sounds/en/demo-thanks.gsm
+libdata/asterisk/sounds/en/denial-of-service.gsm
+libdata/asterisk/sounds/en/denver.gsm
+libdata/asterisk/sounds/en/department-administrator.gsm
+libdata/asterisk/sounds/en/department.gsm
+libdata/asterisk/sounds/en/deposit.gsm
+libdata/asterisk/sounds/en/descending-2tone.gsm
+libdata/asterisk/sounds/en/design.gsm
+libdata/asterisk/sounds/en/detroit.gsm
+libdata/asterisk/sounds/en/development.gsm
+libdata/asterisk/sounds/en/dial-here-often.gsm
+libdata/asterisk/sounds/en/dictate/both_help.gsm
+libdata/asterisk/sounds/en/dictate/enter_filename.gsm
+libdata/asterisk/sounds/en/dictate/forhelp.gsm
+libdata/asterisk/sounds/en/dictate/pause.gsm
+libdata/asterisk/sounds/en/dictate/paused.gsm
+libdata/asterisk/sounds/en/dictate/play_help.gsm
+libdata/asterisk/sounds/en/dictate/playback.gsm
+libdata/asterisk/sounds/en/dictate/playback_mode.gsm
+libdata/asterisk/sounds/en/dictate/record.gsm
+libdata/asterisk/sounds/en/dictate/record_help.gsm
+libdata/asterisk/sounds/en/dictate/record_mode.gsm
+libdata/asterisk/sounds/en/dictate/truncating_audio.gsm
+libdata/asterisk/sounds/en/digit.gsm
+libdata/asterisk/sounds/en/digits.gsm
+libdata/asterisk/sounds/en/digits/0.gsm
+libdata/asterisk/sounds/en/digits/1.gsm
+libdata/asterisk/sounds/en/digits/10.gsm
+libdata/asterisk/sounds/en/digits/11.gsm
+libdata/asterisk/sounds/en/digits/12.gsm
+libdata/asterisk/sounds/en/digits/13.gsm
+libdata/asterisk/sounds/en/digits/14.gsm
+libdata/asterisk/sounds/en/digits/15.gsm
+libdata/asterisk/sounds/en/digits/16.gsm
+libdata/asterisk/sounds/en/digits/17.gsm
+libdata/asterisk/sounds/en/digits/18.gsm
+libdata/asterisk/sounds/en/digits/19.gsm
+libdata/asterisk/sounds/en/digits/2.gsm
+libdata/asterisk/sounds/en/digits/20.gsm
+libdata/asterisk/sounds/en/digits/3.gsm
+libdata/asterisk/sounds/en/digits/30.gsm
+libdata/asterisk/sounds/en/digits/4.gsm
+libdata/asterisk/sounds/en/digits/40.gsm
+libdata/asterisk/sounds/en/digits/5.gsm
+libdata/asterisk/sounds/en/digits/50.gsm
+libdata/asterisk/sounds/en/digits/6.gsm
+libdata/asterisk/sounds/en/digits/60.gsm
+libdata/asterisk/sounds/en/digits/7.gsm
+libdata/asterisk/sounds/en/digits/70.gsm
+libdata/asterisk/sounds/en/digits/8.gsm
+libdata/asterisk/sounds/en/digits/80.gsm
+libdata/asterisk/sounds/en/digits/9.gsm
+libdata/asterisk/sounds/en/digits/90.gsm
+libdata/asterisk/sounds/en/digits/a-m.gsm
+libdata/asterisk/sounds/en/digits/at.gsm
+libdata/asterisk/sounds/en/digits/billion.gsm
+libdata/asterisk/sounds/en/digits/day-0.gsm
+libdata/asterisk/sounds/en/digits/day-1.gsm
+libdata/asterisk/sounds/en/digits/day-2.gsm
+libdata/asterisk/sounds/en/digits/day-3.gsm
+libdata/asterisk/sounds/en/digits/day-4.gsm
+libdata/asterisk/sounds/en/digits/day-5.gsm
+libdata/asterisk/sounds/en/digits/day-6.gsm
+libdata/asterisk/sounds/en/digits/dollars.gsm
+libdata/asterisk/sounds/en/digits/h-1.gsm
+libdata/asterisk/sounds/en/digits/h-10.gsm
+libdata/asterisk/sounds/en/digits/h-11.gsm
+libdata/asterisk/sounds/en/digits/h-12.gsm
+libdata/asterisk/sounds/en/digits/h-13.gsm
+libdata/asterisk/sounds/en/digits/h-14.gsm
+libdata/asterisk/sounds/en/digits/h-15.gsm
+libdata/asterisk/sounds/en/digits/h-16.gsm
+libdata/asterisk/sounds/en/digits/h-17.gsm
+libdata/asterisk/sounds/en/digits/h-18.gsm
+libdata/asterisk/sounds/en/digits/h-19.gsm
+libdata/asterisk/sounds/en/digits/h-2.gsm
+libdata/asterisk/sounds/en/digits/h-20.gsm
+libdata/asterisk/sounds/en/digits/h-3.gsm
+libdata/asterisk/sounds/en/digits/h-30.gsm
+libdata/asterisk/sounds/en/digits/h-4.gsm
+libdata/asterisk/sounds/en/digits/h-40.gsm
+libdata/asterisk/sounds/en/digits/h-5.gsm
+libdata/asterisk/sounds/en/digits/h-50.gsm
+libdata/asterisk/sounds/en/digits/h-6.gsm
+libdata/asterisk/sounds/en/digits/h-60.gsm
+libdata/asterisk/sounds/en/digits/h-7.gsm
+libdata/asterisk/sounds/en/digits/h-70.gsm
+libdata/asterisk/sounds/en/digits/h-8.gsm
+libdata/asterisk/sounds/en/digits/h-80.gsm
+libdata/asterisk/sounds/en/digits/h-9.gsm
+libdata/asterisk/sounds/en/digits/h-90.gsm
+libdata/asterisk/sounds/en/digits/h-billion.gsm
+libdata/asterisk/sounds/en/digits/h-hundred.gsm
+libdata/asterisk/sounds/en/digits/h-million.gsm
+libdata/asterisk/sounds/en/digits/h-thousand.gsm
+libdata/asterisk/sounds/en/digits/hundred.gsm
+libdata/asterisk/sounds/en/digits/million.gsm
+libdata/asterisk/sounds/en/digits/minus.gsm
+libdata/asterisk/sounds/en/digits/mon-0.gsm
+libdata/asterisk/sounds/en/digits/mon-1.gsm
+libdata/asterisk/sounds/en/digits/mon-10.gsm
+libdata/asterisk/sounds/en/digits/mon-11.gsm
+libdata/asterisk/sounds/en/digits/mon-2.gsm
+libdata/asterisk/sounds/en/digits/mon-3.gsm
+libdata/asterisk/sounds/en/digits/mon-4.gsm
+libdata/asterisk/sounds/en/digits/mon-5.gsm
+libdata/asterisk/sounds/en/digits/mon-6.gsm
+libdata/asterisk/sounds/en/digits/mon-7.gsm
+libdata/asterisk/sounds/en/digits/mon-8.gsm
+libdata/asterisk/sounds/en/digits/mon-9.gsm
+libdata/asterisk/sounds/en/digits/oclock.gsm
+libdata/asterisk/sounds/en/digits/oh.gsm
+libdata/asterisk/sounds/en/digits/p-m.gsm
+libdata/asterisk/sounds/en/digits/pound.gsm
+libdata/asterisk/sounds/en/digits/star.gsm
+libdata/asterisk/sounds/en/digits/thousand.gsm
+libdata/asterisk/sounds/en/digits/today.gsm
+libdata/asterisk/sounds/en/digits/tomorrow.gsm
+libdata/asterisk/sounds/en/digits/yesterday.gsm
+libdata/asterisk/sounds/en/dir-first.gsm
+libdata/asterisk/sounds/en/dir-firstlast.gsm
+libdata/asterisk/sounds/en/dir-instr.gsm
+libdata/asterisk/sounds/en/dir-intro-fn.gsm
+libdata/asterisk/sounds/en/dir-intro.gsm
+libdata/asterisk/sounds/en/dir-last.gsm
+libdata/asterisk/sounds/en/dir-multi1.gsm
+libdata/asterisk/sounds/en/dir-multi2.gsm
+libdata/asterisk/sounds/en/dir-multi3.gsm
+libdata/asterisk/sounds/en/dir-multi9.gsm
+libdata/asterisk/sounds/en/dir-nomatch.gsm
+libdata/asterisk/sounds/en/dir-nomore.gsm
+libdata/asterisk/sounds/en/dir-pls-enter.gsm
+libdata/asterisk/sounds/en/dir-usingkeypad.gsm
+libdata/asterisk/sounds/en/dir-welcome.gsm
+libdata/asterisk/sounds/en/directory-assistance.gsm
+libdata/asterisk/sounds/en/directory.gsm
+libdata/asterisk/sounds/en/disabled.gsm
+libdata/asterisk/sounds/en/discon-or-out-of-service.gsm
+libdata/asterisk/sounds/en/disconnected.gsm
+libdata/asterisk/sounds/en/disk.gsm
+libdata/asterisk/sounds/en/distribution.gsm
+libdata/asterisk/sounds/en/divided-by.gsm
+libdata/asterisk/sounds/en/dns.gsm
+libdata/asterisk/sounds/en/do-not-disturb.gsm
+libdata/asterisk/sounds/en/doing-enum-lookup.gsm
+libdata/asterisk/sounds/en/dont-know-who-sent.gsm
+libdata/asterisk/sounds/en/doppler-radar.gsm
+libdata/asterisk/sounds/en/down.gsm
+libdata/asterisk/sounds/en/driving-directions.gsm
+libdata/asterisk/sounds/en/duplex.gsm
+libdata/asterisk/sounds/en/duplication.gsm
+libdata/asterisk/sounds/en/early.gsm
+libdata/asterisk/sounds/en/east.gsm
+libdata/asterisk/sounds/en/easterly.gsm
+libdata/asterisk/sounds/en/eastern.gsm
+libdata/asterisk/sounds/en/echo-test.gsm
+libdata/asterisk/sounds/en/ed.gsm
+libdata/asterisk/sounds/en/eighteenth.gsm
+libdata/asterisk/sounds/en/eighth.gsm
+libdata/asterisk/sounds/en/eightieth.gsm
+libdata/asterisk/sounds/en/el-paso.gsm
+libdata/asterisk/sounds/en/eleventh.gsm
+libdata/asterisk/sounds/en/email.gsm
+libdata/asterisk/sounds/en/emergency.gsm
+libdata/asterisk/sounds/en/enabled.gsm
+libdata/asterisk/sounds/en/encode.gsm
+libdata/asterisk/sounds/en/engineering.gsm
+libdata/asterisk/sounds/en/ent-target-attendant.gsm
+libdata/asterisk/sounds/en/enter-a-time.gsm
+libdata/asterisk/sounds/en/enter-conf-call-number.gsm
+libdata/asterisk/sounds/en/enter-conf-pin-number.gsm
+libdata/asterisk/sounds/en/enter-ext-of-person.gsm
+libdata/asterisk/sounds/en/enter-num-blacklist.gsm
+libdata/asterisk/sounds/en/enter-password.gsm
+libdata/asterisk/sounds/en/enter-phone-number10.gsm
+libdata/asterisk/sounds/en/entering-conf-number.gsm
+libdata/asterisk/sounds/en/entr-num-rmv-blklist.gsm
+libdata/asterisk/sounds/en/enum-lookup-failed.gsm
+libdata/asterisk/sounds/en/enum-lookup-successful.gsm
+libdata/asterisk/sounds/en/error-number.gsm
+libdata/asterisk/sounds/en/est-hold-time-is.gsm
+libdata/asterisk/sounds/en/euro.gsm
+libdata/asterisk/sounds/en/european.gsm
+libdata/asterisk/sounds/en/euros.gsm
+libdata/asterisk/sounds/en/evening.gsm
+libdata/asterisk/sounds/en/explanation.gsm
+libdata/asterisk/sounds/en/ext-or-zero.gsm
+libdata/asterisk/sounds/en/extension.gsm
+libdata/asterisk/sounds/en/extensions.gsm
+libdata/asterisk/sounds/en/extra-sounds-en.txt
+libdata/asterisk/sounds/en/facilities.gsm
+libdata/asterisk/sounds/en/fahrenheit.gsm
+libdata/asterisk/sounds/en/falling.gsm
+libdata/asterisk/sounds/en/fast.gsm
+libdata/asterisk/sounds/en/feature-not-avail-line.gsm
+libdata/asterisk/sounds/en/feet.gsm
+libdata/asterisk/sounds/en/female.gsm
+libdata/asterisk/sounds/en/fifteenth.gsm
+libdata/asterisk/sounds/en/fifth.gsm
+libdata/asterisk/sounds/en/fiftieth.gsm
+libdata/asterisk/sounds/en/finals.gsm
+libdata/asterisk/sounds/en/finance.gsm
+libdata/asterisk/sounds/en/first-in-line.gsm
+libdata/asterisk/sounds/en/first.gsm
+libdata/asterisk/sounds/en/flagged-for-lea.gsm
+libdata/asterisk/sounds/en/flooding.gsm
+libdata/asterisk/sounds/en/florida.gsm
+libdata/asterisk/sounds/en/fog.gsm
+libdata/asterisk/sounds/en/foggy.gsm
+libdata/asterisk/sounds/en/followed-by.gsm
+libdata/asterisk/sounds/en/followme/call-from.gsm
+libdata/asterisk/sounds/en/followme/no-recording.gsm
+libdata/asterisk/sounds/en/followme/options.gsm
+libdata/asterisk/sounds/en/followme/pls-hold-while-try.gsm
+libdata/asterisk/sounds/en/followme/sorry.gsm
+libdata/asterisk/sounds/en/followme/status.gsm
+libdata/asterisk/sounds/en/food-service.gsm
+libdata/asterisk/sounds/en/food-services.gsm
+libdata/asterisk/sounds/en/for-a-daily-wakeup-call.gsm
+libdata/asterisk/sounds/en/for-a-list-of.gsm
+libdata/asterisk/sounds/en/for-accounting.gsm
+libdata/asterisk/sounds/en/for-billing.gsm
+libdata/asterisk/sounds/en/for-english-press.gsm
+libdata/asterisk/sounds/en/for-investor-relations.gsm
+libdata/asterisk/sounds/en/for-louie-louie.gsm
+libdata/asterisk/sounds/en/for-no-press.gsm
+libdata/asterisk/sounds/en/for-qc-and-training-purposes.gsm
+libdata/asterisk/sounds/en/for-quality-purposes.gsm
+libdata/asterisk/sounds/en/for-sales.gsm
+libdata/asterisk/sounds/en/for-service.gsm
+libdata/asterisk/sounds/en/for-tech-support.gsm
+libdata/asterisk/sounds/en/for-the-first.gsm
+libdata/asterisk/sounds/en/for-the-weather.gsm
+libdata/asterisk/sounds/en/for-wakeup-call.gsm
+libdata/asterisk/sounds/en/for-yes-press.gsm
+libdata/asterisk/sounds/en/for.gsm
+libdata/asterisk/sounds/en/fort-worth.gsm
+libdata/asterisk/sounds/en/fortieth.gsm
+libdata/asterisk/sounds/en/fourteenth.gsm
+libdata/asterisk/sounds/en/fourth.gsm
+libdata/asterisk/sounds/en/freeze.gsm
+libdata/asterisk/sounds/en/freezing.gsm
+libdata/asterisk/sounds/en/frequency.gsm
+libdata/asterisk/sounds/en/fresno.gsm
+libdata/asterisk/sounds/en/from-unknown-caller.gsm
+libdata/asterisk/sounds/en/from.gsm
+libdata/asterisk/sounds/en/ftp.gsm
+libdata/asterisk/sounds/en/gale.gsm
+libdata/asterisk/sounds/en/gambling-drunk.gsm
+libdata/asterisk/sounds/en/georgia.gsm
+libdata/asterisk/sounds/en/gigabits.gsm
+libdata/asterisk/sounds/en/gigabytes.gsm
+libdata/asterisk/sounds/en/gigahertz.gsm
+libdata/asterisk/sounds/en/giggle1.gsm
+libdata/asterisk/sounds/en/gmt.gsm
+libdata/asterisk/sounds/en/go-away1.gsm
+libdata/asterisk/sounds/en/go-away2.gsm
+libdata/asterisk/sounds/en/good-afternoon.gsm
+libdata/asterisk/sounds/en/good-evening.gsm
+libdata/asterisk/sounds/en/good-morning.gsm
+libdata/asterisk/sounds/en/good.gsm
+libdata/asterisk/sounds/en/goodbye.gsm
+libdata/asterisk/sounds/en/greater-than.gsm
+libdata/asterisk/sounds/en/groovy.gsm
+libdata/asterisk/sounds/en/ha/ac.gsm
+libdata/asterisk/sounds/en/ha/air-conditioner.gsm
+libdata/asterisk/sounds/en/ha/alarm.gsm
+libdata/asterisk/sounds/en/ha/amp.gsm
+libdata/asterisk/sounds/en/ha/amps.gsm
+libdata/asterisk/sounds/en/ha/attic.gsm
+libdata/asterisk/sounds/en/ha/baby-sleeping-mode.gsm
+libdata/asterisk/sounds/en/ha/back.gsm
+libdata/asterisk/sounds/en/ha/basement.gsm
+libdata/asterisk/sounds/en/ha/bathroom.gsm
+libdata/asterisk/sounds/en/ha/bedroom.gsm
+libdata/asterisk/sounds/en/ha/bright.gsm
+libdata/asterisk/sounds/en/ha/callerid.gsm
+libdata/asterisk/sounds/en/ha/carport.gsm
+libdata/asterisk/sounds/en/ha/closet.gsm
+libdata/asterisk/sounds/en/ha/coffee-pot.gsm
+libdata/asterisk/sounds/en/ha/cool.gsm
+libdata/asterisk/sounds/en/ha/cooling.gsm
+libdata/asterisk/sounds/en/ha/dc.gsm
+libdata/asterisk/sounds/en/ha/decibel.gsm
+libdata/asterisk/sounds/en/ha/decibels.gsm
+libdata/asterisk/sounds/en/ha/deck.gsm
+libdata/asterisk/sounds/en/ha/degree.gsm
+libdata/asterisk/sounds/en/ha/degrees.gsm
+libdata/asterisk/sounds/en/ha/den.gsm
+libdata/asterisk/sounds/en/ha/dim.gsm
+libdata/asterisk/sounds/en/ha/dining-room.gsm
+libdata/asterisk/sounds/en/ha/door.gsm
+libdata/asterisk/sounds/en/ha/doors.gsm
+libdata/asterisk/sounds/en/ha/down.gsm
+libdata/asterisk/sounds/en/ha/driveway.gsm
+libdata/asterisk/sounds/en/ha/dryer.gsm
+libdata/asterisk/sounds/en/ha/fan.gsm
+libdata/asterisk/sounds/en/ha/farad.gsm
+libdata/asterisk/sounds/en/ha/farads.gsm
+libdata/asterisk/sounds/en/ha/first-floor.gsm
+libdata/asterisk/sounds/en/ha/floor.gsm
+libdata/asterisk/sounds/en/ha/floors.gsm
+libdata/asterisk/sounds/en/ha/for-extended-status-report.gsm
+libdata/asterisk/sounds/en/ha/for-quick-status-report.gsm
+libdata/asterisk/sounds/en/ha/for-wx-report.gsm
+libdata/asterisk/sounds/en/ha/fountain.gsm
+libdata/asterisk/sounds/en/ha/foyer.gsm
+libdata/asterisk/sounds/en/ha/front.gsm
+libdata/asterisk/sounds/en/ha/furnace.gsm
+libdata/asterisk/sounds/en/ha/game-room.gsm
+libdata/asterisk/sounds/en/ha/garage.gsm
+libdata/asterisk/sounds/en/ha/great-room.gsm
+libdata/asterisk/sounds/en/ha/guest-room.gsm
+libdata/asterisk/sounds/en/ha/hall.gsm
+libdata/asterisk/sounds/en/ha/has-been-left.gsm
+libdata/asterisk/sounds/en/ha/heat-pump.gsm
+libdata/asterisk/sounds/en/ha/heat.gsm
+libdata/asterisk/sounds/en/ha/heating.gsm
+libdata/asterisk/sounds/en/ha/hot-tub.gsm
+libdata/asterisk/sounds/en/ha/house.gsm
+libdata/asterisk/sounds/en/ha/intruder.gsm
+libdata/asterisk/sounds/en/ha/is.gsm
+libdata/asterisk/sounds/en/ha/kelvin.gsm
+libdata/asterisk/sounds/en/ha/kitchen.gsm
+libdata/asterisk/sounds/en/ha/lamp.gsm
+libdata/asterisk/sounds/en/ha/lamps.gsm
+libdata/asterisk/sounds/en/ha/landscape.gsm
+libdata/asterisk/sounds/en/ha/laundry.gsm
+libdata/asterisk/sounds/en/ha/library.gsm
+libdata/asterisk/sounds/en/ha/light.gsm
+libdata/asterisk/sounds/en/ha/lights.gsm
+libdata/asterisk/sounds/en/ha/living-room.gsm
+libdata/asterisk/sounds/en/ha/locked.gsm
+libdata/asterisk/sounds/en/ha/locking.gsm
+libdata/asterisk/sounds/en/ha/mailbox.gsm
+libdata/asterisk/sounds/en/ha/master.gsm
+libdata/asterisk/sounds/en/ha/off.gsm
+libdata/asterisk/sounds/en/ha/office.gsm
+libdata/asterisk/sounds/en/ha/ohm.gsm
+libdata/asterisk/sounds/en/ha/ohms.gsm
+libdata/asterisk/sounds/en/ha/on.gsm
+libdata/asterisk/sounds/en/ha/open.gsm
+libdata/asterisk/sounds/en/ha/patio.gsm
+libdata/asterisk/sounds/en/ha/phone.gsm
+libdata/asterisk/sounds/en/ha/play-room.gsm
+libdata/asterisk/sounds/en/ha/play.gsm
+libdata/asterisk/sounds/en/ha/pool.gsm
+libdata/asterisk/sounds/en/ha/porch.gsm
+libdata/asterisk/sounds/en/ha/power-failure.gsm
+libdata/asterisk/sounds/en/ha/pressure.gsm
+libdata/asterisk/sounds/en/ha/psi.gsm
+libdata/asterisk/sounds/en/ha/quiet-mode.gsm
+libdata/asterisk/sounds/en/ha/reset.gsm
+libdata/asterisk/sounds/en/ha/roof.gsm
+libdata/asterisk/sounds/en/ha/room.gsm
+libdata/asterisk/sounds/en/ha/rooms.gsm
+libdata/asterisk/sounds/en/ha/second-floor.gsm
+libdata/asterisk/sounds/en/ha/secure.gsm
+libdata/asterisk/sounds/en/ha/security-system.gsm
+libdata/asterisk/sounds/en/ha/set.gsm
+libdata/asterisk/sounds/en/ha/side.gsm
+libdata/asterisk/sounds/en/ha/solar.gsm
+libdata/asterisk/sounds/en/ha/sprinklers.gsm
+libdata/asterisk/sounds/en/ha/still.gsm
+libdata/asterisk/sounds/en/ha/stove.gsm
+libdata/asterisk/sounds/en/ha/sump-pump.gsm
+libdata/asterisk/sounds/en/ha/sun-room.gsm
+libdata/asterisk/sounds/en/ha/system.gsm
+libdata/asterisk/sounds/en/ha/systems.gsm
+libdata/asterisk/sounds/en/ha/thermostat.gsm
+libdata/asterisk/sounds/en/ha/to-control-environ-sys.gsm
+libdata/asterisk/sounds/en/ha/to-control-lights-appl.gsm
+libdata/asterisk/sounds/en/ha/tower.gsm
+libdata/asterisk/sounds/en/ha/unlocked.gsm
+libdata/asterisk/sounds/en/ha/unlocking.gsm
+libdata/asterisk/sounds/en/ha/up.gsm
+libdata/asterisk/sounds/en/ha/volt.gsm
+libdata/asterisk/sounds/en/ha/volts.gsm
+libdata/asterisk/sounds/en/ha/washing-machine.gsm
+libdata/asterisk/sounds/en/ha/water-heater.gsm
+libdata/asterisk/sounds/en/ha/watt.gsm
+libdata/asterisk/sounds/en/ha/watts.gsm
+libdata/asterisk/sounds/en/ha/well-pump.gsm
+libdata/asterisk/sounds/en/ha/window.gsm
+libdata/asterisk/sounds/en/ha/windows.gsm
+libdata/asterisk/sounds/en/ha/xmas-lights.gsm
+libdata/asterisk/sounds/en/ha/xmas-tree.gsm
+libdata/asterisk/sounds/en/ha/yard.gsm
+libdata/asterisk/sounds/en/hail.gsm
+libdata/asterisk/sounds/en/half.gsm
+libdata/asterisk/sounds/en/hang-on-a-second-angry.gsm
+libdata/asterisk/sounds/en/hang-on-a-second.gsm
+libdata/asterisk/sounds/en/hangup-try-again.gsm
+libdata/asterisk/sounds/en/has-arrived-at.gsm
+libdata/asterisk/sounds/en/has-been-changed-to.gsm
+libdata/asterisk/sounds/en/has-been-cleared.gsm
+libdata/asterisk/sounds/en/has-been-disconnected.gsm
+libdata/asterisk/sounds/en/has-been-set-to.gsm
+libdata/asterisk/sounds/en/has-been.gsm
+libdata/asterisk/sounds/en/has-expired.gsm
+libdata/asterisk/sounds/en/has-issued-a.gsm
+libdata/asterisk/sounds/en/has-not-been-seen-for.gsm
+libdata/asterisk/sounds/en/has.gsm
+libdata/asterisk/sounds/en/hash.gsm
+libdata/asterisk/sounds/en/hawaii.gsm
+libdata/asterisk/sounds/en/headed-towards.gsm
+libdata/asterisk/sounds/en/heading.gsm
+libdata/asterisk/sounds/en/health-center.gsm
+libdata/asterisk/sounds/en/hear-odd-noise.gsm
+libdata/asterisk/sounds/en/hear-toilet-flush.gsm
+libdata/asterisk/sounds/en/hectopascal.gsm
+libdata/asterisk/sounds/en/hello-world.gsm
+libdata/asterisk/sounds/en/hello.gsm
+libdata/asterisk/sounds/en/helpdesk.gsm
+libdata/asterisk/sounds/en/hertz.gsm
+libdata/asterisk/sounds/en/high.gsm
+libdata/asterisk/sounds/en/highway.gsm
+libdata/asterisk/sounds/en/hit.gsm
+libdata/asterisk/sounds/en/hold-or-dial-0.gsm
+libdata/asterisk/sounds/en/home.gsm
+libdata/asterisk/sounds/en/honolulu.gsm
+libdata/asterisk/sounds/en/hours.gsm
+libdata/asterisk/sounds/en/housekeeping.gsm
+libdata/asterisk/sounds/en/houston.gsm
+libdata/asterisk/sounds/en/http.gsm
+libdata/asterisk/sounds/en/human-resources.gsm
+libdata/asterisk/sounds/en/humidity.gsm
+libdata/asterisk/sounds/en/hundredth.gsm
+libdata/asterisk/sounds/en/hurricane.gsm
+libdata/asterisk/sounds/en/hz.gsm
+libdata/asterisk/sounds/en/i-dont-understand.gsm
+libdata/asterisk/sounds/en/i-dont-understand2.gsm
+libdata/asterisk/sounds/en/i-dont-understand3.gsm
+libdata/asterisk/sounds/en/i-dont-understand4.gsm
+libdata/asterisk/sounds/en/i-dont-understand5.gsm
+libdata/asterisk/sounds/en/i-grow-bored.gsm
+libdata/asterisk/sounds/en/ice.gsm
+libdata/asterisk/sounds/en/icmp.gsm
+libdata/asterisk/sounds/en/icy.gsm
+libdata/asterisk/sounds/en/idaho.gsm
+libdata/asterisk/sounds/en/if-correct-press.gsm
+libdata/asterisk/sounds/en/if-grtg-played-indefinately.gsm
+libdata/asterisk/sounds/en/if-grtg-should-expire-at.gsm
+libdata/asterisk/sounds/en/if-maint-contract-or-emergency.gsm
+libdata/asterisk/sounds/en/if-rotary-phone.gsm
+libdata/asterisk/sounds/en/if-this-is-correct-press.gsm
+libdata/asterisk/sounds/en/if-this-is-correct.gsm
+libdata/asterisk/sounds/en/if-this-is-not-correct.gsm
+libdata/asterisk/sounds/en/if-u-know-ext-dial.gsm
+libdata/asterisk/sounds/en/if-unsuccessful-speak-to.gsm
+libdata/asterisk/sounds/en/if-you-know-the.gsm
+libdata/asterisk/sounds/en/if-you-need-help.gsm
+libdata/asterisk/sounds/en/if-youd-like-to-make-a-call.gsm
+libdata/asterisk/sounds/en/illinois.gsm
+libdata/asterisk/sounds/en/im-sorry-unable-to-connect-to-eng.gsm
+libdata/asterisk/sounds/en/im-sorry.gsm
+libdata/asterisk/sounds/en/imap.gsm
+libdata/asterisk/sounds/en/in-service.gsm
+libdata/asterisk/sounds/en/in-the-line.gsm
+libdata/asterisk/sounds/en/in-the-queue.gsm
+libdata/asterisk/sounds/en/in-the.gsm
+libdata/asterisk/sounds/en/in-your-city.gsm
+libdata/asterisk/sounds/en/in-your-zip-code.gsm
+libdata/asterisk/sounds/en/inbound.gsm
+libdata/asterisk/sounds/en/indiana.gsm
+libdata/asterisk/sounds/en/indianapolis.gsm
+libdata/asterisk/sounds/en/indicated.gsm
+libdata/asterisk/sounds/en/info-about-last-call.gsm
+libdata/asterisk/sounds/en/information-technology.gsm
+libdata/asterisk/sounds/en/information.gsm
+libdata/asterisk/sounds/en/infuriate-tech-staff.gsm
+libdata/asterisk/sounds/en/initiated.gsm
+libdata/asterisk/sounds/en/initiating.gsm
+libdata/asterisk/sounds/en/inside-sales.gsm
+libdata/asterisk/sounds/en/internal-audit.gsm
+libdata/asterisk/sounds/en/international-call.gsm
+libdata/asterisk/sounds/en/interstate.gsm
+libdata/asterisk/sounds/en/invalid-date.gsm
+libdata/asterisk/sounds/en/invalid-featurecode.gsm
+libdata/asterisk/sounds/en/invalid.gsm
+libdata/asterisk/sounds/en/investor-relations.gsm
+libdata/asterisk/sounds/en/iowa.gsm
+libdata/asterisk/sounds/en/is-at.gsm
+libdata/asterisk/sounds/en/is-curntly-busy.gsm
+libdata/asterisk/sounds/en/is-curntly-unavail.gsm
+libdata/asterisk/sounds/en/is-currently.gsm
+libdata/asterisk/sounds/en/is-in-use.gsm
+libdata/asterisk/sounds/en/is-not-in-the.gsm
+libdata/asterisk/sounds/en/is-not-set.gsm
+libdata/asterisk/sounds/en/is-now-being-recorded.gsm
+libdata/asterisk/sounds/en/is-set-to.gsm
+libdata/asterisk/sounds/en/is.gsm
+libdata/asterisk/sounds/en/it-now.gsm
+libdata/asterisk/sounds/en/it-services.gsm
+libdata/asterisk/sounds/en/jacksonville.gsm
+libdata/asterisk/sounds/en/janitorial.gsm
+libdata/asterisk/sounds/en/jason.gsm
+libdata/asterisk/sounds/en/jedi-extension-trick.gsm
+libdata/asterisk/sounds/en/john.gsm
+libdata/asterisk/sounds/en/just-kidding-not-upset.gsm
+libdata/asterisk/sounds/en/just-kidding-not-upset2.gsm
+libdata/asterisk/sounds/en/kansas-city.gsm
+libdata/asterisk/sounds/en/kansas.gsm
+libdata/asterisk/sounds/en/kentucky.gsm
+libdata/asterisk/sounds/en/kilobits.gsm
+libdata/asterisk/sounds/en/kilobytes.gsm
+libdata/asterisk/sounds/en/kilohertz.gsm
+libdata/asterisk/sounds/en/kilometer.gsm
+libdata/asterisk/sounds/en/kilometers-per-hour.gsm
+libdata/asterisk/sounds/en/knock-knock.gsm
+libdata/asterisk/sounds/en/knots.gsm
+libdata/asterisk/sounds/en/language.gsm
+libdata/asterisk/sounds/en/las-vegas.gsm
+libdata/asterisk/sounds/en/last-error-was.gsm
+libdata/asterisk/sounds/en/last-num-to-call.gsm
+libdata/asterisk/sounds/en/late.gsm
+libdata/asterisk/sounds/en/later.gsm
+libdata/asterisk/sounds/en/lea-may-request-info.gsm
+libdata/asterisk/sounds/en/left-bracket.gsm
+libdata/asterisk/sounds/en/legal.gsm
+libdata/asterisk/sounds/en/len.gsm
+libdata/asterisk/sounds/en/less-than.gsm
+libdata/asterisk/sounds/en/letters/a.gsm
+libdata/asterisk/sounds/en/letters/ascii123.gsm
+libdata/asterisk/sounds/en/letters/ascii124.gsm
+libdata/asterisk/sounds/en/letters/ascii125.gsm
+libdata/asterisk/sounds/en/letters/ascii126.gsm
+libdata/asterisk/sounds/en/letters/ascii34.gsm
+libdata/asterisk/sounds/en/letters/ascii36.gsm
+libdata/asterisk/sounds/en/letters/ascii37.gsm
+libdata/asterisk/sounds/en/letters/ascii38.gsm
+libdata/asterisk/sounds/en/letters/ascii39.gsm
+libdata/asterisk/sounds/en/letters/ascii40.gsm
+libdata/asterisk/sounds/en/letters/ascii41.gsm
+libdata/asterisk/sounds/en/letters/ascii42.gsm
+libdata/asterisk/sounds/en/letters/ascii44.gsm
+libdata/asterisk/sounds/en/letters/ascii58.gsm
+libdata/asterisk/sounds/en/letters/ascii59.gsm
+libdata/asterisk/sounds/en/letters/ascii60.gsm
+libdata/asterisk/sounds/en/letters/ascii62.gsm
+libdata/asterisk/sounds/en/letters/ascii63.gsm
+libdata/asterisk/sounds/en/letters/ascii91.gsm
+libdata/asterisk/sounds/en/letters/ascii92.gsm
+libdata/asterisk/sounds/en/letters/ascii93.gsm
+libdata/asterisk/sounds/en/letters/ascii94.gsm
+libdata/asterisk/sounds/en/letters/ascii95.gsm
+libdata/asterisk/sounds/en/letters/ascii96.gsm
+libdata/asterisk/sounds/en/letters/asterisk.gsm
+libdata/asterisk/sounds/en/letters/at.gsm
+libdata/asterisk/sounds/en/letters/b.gsm
+libdata/asterisk/sounds/en/letters/c.gsm
+libdata/asterisk/sounds/en/letters/d.gsm
+libdata/asterisk/sounds/en/letters/dash.gsm
+libdata/asterisk/sounds/en/letters/dollar.gsm
+libdata/asterisk/sounds/en/letters/dot.gsm
+libdata/asterisk/sounds/en/letters/e.gsm
+libdata/asterisk/sounds/en/letters/equals.gsm
+libdata/asterisk/sounds/en/letters/exclaimation-point.gsm
+libdata/asterisk/sounds/en/letters/f.gsm
+libdata/asterisk/sounds/en/letters/g.gsm
+libdata/asterisk/sounds/en/letters/h.gsm
+libdata/asterisk/sounds/en/letters/i.gsm
+libdata/asterisk/sounds/en/letters/j.gsm
+libdata/asterisk/sounds/en/letters/k.gsm
+libdata/asterisk/sounds/en/letters/l.gsm
+libdata/asterisk/sounds/en/letters/m.gsm
+libdata/asterisk/sounds/en/letters/n.gsm
+libdata/asterisk/sounds/en/letters/o.gsm
+libdata/asterisk/sounds/en/letters/p.gsm
+libdata/asterisk/sounds/en/letters/plus.gsm
+libdata/asterisk/sounds/en/letters/q.gsm
+libdata/asterisk/sounds/en/letters/r.gsm
+libdata/asterisk/sounds/en/letters/s.gsm
+libdata/asterisk/sounds/en/letters/slash.gsm
+libdata/asterisk/sounds/en/letters/space.gsm
+libdata/asterisk/sounds/en/letters/t.gsm
+libdata/asterisk/sounds/en/letters/u.gsm
+libdata/asterisk/sounds/en/letters/v.gsm
+libdata/asterisk/sounds/en/letters/w.gsm
+libdata/asterisk/sounds/en/letters/x.gsm
+libdata/asterisk/sounds/en/letters/y.gsm
+libdata/asterisk/sounds/en/letters/z.gsm
+libdata/asterisk/sounds/en/letters/zed.gsm
+libdata/asterisk/sounds/en/library.gsm
+libdata/asterisk/sounds/en/lightning.gsm
+libdata/asterisk/sounds/en/limit-simul-calls.gsm
+libdata/asterisk/sounds/en/lines-complaining-customers.gsm
+libdata/asterisk/sounds/en/linux.gsm
+libdata/asterisk/sounds/en/list.gsm
+libdata/asterisk/sounds/en/load-average.gsm
+libdata/asterisk/sounds/en/local-authorities.gsm
+libdata/asterisk/sounds/en/location.gsm
+libdata/asterisk/sounds/en/login-fail.gsm
+libdata/asterisk/sounds/en/long-beach.gsm
+libdata/asterisk/sounds/en/los-angeles.gsm
+libdata/asterisk/sounds/en/loss-prevention.gsm
+libdata/asterisk/sounds/en/loss.gsm
+libdata/asterisk/sounds/en/lots-o-monkeys.gsm
+libdata/asterisk/sounds/en/louisiana.gsm
+libdata/asterisk/sounds/en/low.gsm
+libdata/asterisk/sounds/en/lunch.gsm
+libdata/asterisk/sounds/en/lyrics-louie-louie.gsm
+libdata/asterisk/sounds/en/machine.gsm
+libdata/asterisk/sounds/en/made-it-up.gsm
+libdata/asterisk/sounds/en/mail.gsm
+libdata/asterisk/sounds/en/mailroom.gsm
+libdata/asterisk/sounds/en/main-menu.gsm
+libdata/asterisk/sounds/en/maine.gsm
+libdata/asterisk/sounds/en/maintenance.gsm
+libdata/asterisk/sounds/en/male.gsm
+libdata/asterisk/sounds/en/management.gsm
+libdata/asterisk/sounds/en/manufacturing.gsm
+libdata/asterisk/sounds/en/marketing.gsm
+libdata/asterisk/sounds/en/marryme.gsm
+libdata/asterisk/sounds/en/maryland.gsm
+libdata/asterisk/sounds/en/massachusetts.gsm
+libdata/asterisk/sounds/en/mathematics.gsm
+libdata/asterisk/sounds/en/maximum.gsm
+libdata/asterisk/sounds/en/megabits.gsm
+libdata/asterisk/sounds/en/megabytes.gsm
+libdata/asterisk/sounds/en/megahertz.gsm
+libdata/asterisk/sounds/en/memory.gsm
+libdata/asterisk/sounds/en/memphis.gsm
+libdata/asterisk/sounds/en/menu.gsm
+libdata/asterisk/sounds/en/mesa.gsm
+libdata/asterisk/sounds/en/message-from.gsm
+libdata/asterisk/sounds/en/message-number.gsm
+libdata/asterisk/sounds/en/meter.gsm
+libdata/asterisk/sounds/en/meters.gsm
+libdata/asterisk/sounds/en/miami.gsm
+libdata/asterisk/sounds/en/michigan.gsm
+libdata/asterisk/sounds/en/midnight-tomorrow-night.gsm
+libdata/asterisk/sounds/en/midnight-tonight.gsm
+libdata/asterisk/sounds/en/midnight.gsm
+libdata/asterisk/sounds/en/mike.gsm
+libdata/asterisk/sounds/en/miles-per-hour.gsm
+libdata/asterisk/sounds/en/miles.gsm
+libdata/asterisk/sounds/en/millionth.gsm
+libdata/asterisk/sounds/en/milwaukee.gsm
+libdata/asterisk/sounds/en/minimum.gsm
+libdata/asterisk/sounds/en/minneapolis.gsm
+libdata/asterisk/sounds/en/minnesota.gsm
+libdata/asterisk/sounds/en/minute.gsm
+libdata/asterisk/sounds/en/minutes.gsm
+libdata/asterisk/sounds/en/missed.gsm
+libdata/asterisk/sounds/en/mississippi.gsm
+libdata/asterisk/sounds/en/missouri.gsm
+libdata/asterisk/sounds/en/misty.gsm
+libdata/asterisk/sounds/en/monitored.gsm
+libdata/asterisk/sounds/en/montana.gsm
+libdata/asterisk/sounds/en/month.gsm
+libdata/asterisk/sounds/en/months.gsm
+libdata/asterisk/sounds/en/moo1.gsm
+libdata/asterisk/sounds/en/moo2.gsm
+libdata/asterisk/sounds/en/morning.gsm
+libdata/asterisk/sounds/en/moron.gsm
+libdata/asterisk/sounds/en/mostly.gsm
+libdata/asterisk/sounds/en/motor-pool.gsm
+libdata/asterisk/sounds/en/mountain.gsm
+libdata/asterisk/sounds/en/moving.gsm
+libdata/asterisk/sounds/en/ms.gsm
+libdata/asterisk/sounds/en/nashville.gsm
+libdata/asterisk/sounds/en/national-weather-service.gsm
+libdata/asterisk/sounds/en/nautical-miles.gsm
+libdata/asterisk/sounds/en/nbdy-avail-to-take-call.gsm
+libdata/asterisk/sounds/en/near.gsm
+libdata/asterisk/sounds/en/nebraska.gsm
+libdata/asterisk/sounds/en/negative.gsm
+libdata/asterisk/sounds/en/network-operations-center.gsm
+libdata/asterisk/sounds/en/network-operations.gsm
+libdata/asterisk/sounds/en/nevada.gsm
+libdata/asterisk/sounds/en/new-accounts.gsm
+libdata/asterisk/sounds/en/new-hampshire.gsm
+libdata/asterisk/sounds/en/new-jersey.gsm
+libdata/asterisk/sounds/en/new-mexico.gsm
+libdata/asterisk/sounds/en/new-orleans.gsm
+libdata/asterisk/sounds/en/new-york.gsm
+libdata/asterisk/sounds/en/nineteenth.gsm
+libdata/asterisk/sounds/en/ninetieth.gsm
+libdata/asterisk/sounds/en/ninth.gsm
+libdata/asterisk/sounds/en/no-112-1.gsm
+libdata/asterisk/sounds/en/no-112-2.gsm
+libdata/asterisk/sounds/en/no-911-1.gsm
+libdata/asterisk/sounds/en/no-911-2.gsm
+libdata/asterisk/sounds/en/no-empty-conferences.gsm
+libdata/asterisk/sounds/en/no-info-about-number.gsm
+libdata/asterisk/sounds/en/no-longer-in-service.gsm
+libdata/asterisk/sounds/en/no-reply-no-mailbox.gsm
+libdata/asterisk/sounds/en/no-route-exists-to-dest.gsm
+libdata/asterisk/sounds/en/nobody-but-chickens.gsm
+libdata/asterisk/sounds/en/node.gsm
+libdata/asterisk/sounds/en/north-carolina.gsm
+libdata/asterisk/sounds/en/north-dakota.gsm
+libdata/asterisk/sounds/en/north.gsm
+libdata/asterisk/sounds/en/northerly.gsm
+libdata/asterisk/sounds/en/not-auth-pstn.gsm
+libdata/asterisk/sounds/en/not-enough-credit.gsm
+libdata/asterisk/sounds/en/not-necessary-1.gsm
+libdata/asterisk/sounds/en/not-necessary-ac.gsm
+libdata/asterisk/sounds/en/not-necessary-dial-1-or-ac.gsm
+libdata/asterisk/sounds/en/not-rqsted-wakeup.gsm
+libdata/asterisk/sounds/en/not-taking-your-call.gsm
+libdata/asterisk/sounds/en/not-yet-assigned.gsm
+libdata/asterisk/sounds/en/not-yet-connected.gsm
+libdata/asterisk/sounds/en/nothing-recorded.gsm
+libdata/asterisk/sounds/en/now.gsm
+libdata/asterisk/sounds/en/num-not-in-db.gsm
+libdata/asterisk/sounds/en/num-outside-area.gsm
+libdata/asterisk/sounds/en/num-was-successfully.gsm
+libdata/asterisk/sounds/en/number-not-answering.gsm
+libdata/asterisk/sounds/en/number.gsm
+libdata/asterisk/sounds/en/oakland.gsm
+libdata/asterisk/sounds/en/octothorpe.gsm
+libdata/asterisk/sounds/en/off-duty.gsm
+libdata/asterisk/sounds/en/office-code.gsm
+libdata/asterisk/sounds/en/office-iguanas.gsm
+libdata/asterisk/sounds/en/office.gsm
+libdata/asterisk/sounds/en/ohio.gsm
+libdata/asterisk/sounds/en/oklahoma-city.gsm
+libdata/asterisk/sounds/en/oklahoma.gsm
+libdata/asterisk/sounds/en/omaha.gsm
+libdata/asterisk/sounds/en/on-busy.gsm
+libdata/asterisk/sounds/en/on-monthly-tel-stment.gsm
+libdata/asterisk/sounds/en/on-no-answer.gsm
+libdata/asterisk/sounds/en/on.gsm
+libdata/asterisk/sounds/en/one-moment-please.gsm
+libdata/asterisk/sounds/en/one-small-step.gsm
+libdata/asterisk/sounds/en/one-small-step2.gsm
+libdata/asterisk/sounds/en/oops1.gsm
+libdata/asterisk/sounds/en/oops2.gsm
+libdata/asterisk/sounds/en/oops3.gsm
+libdata/asterisk/sounds/en/open-parenthesis.gsm
+libdata/asterisk/sounds/en/operations.gsm
+libdata/asterisk/sounds/en/option-is-invalid.gsm
+libdata/asterisk/sounds/en/option-not-implemented.gsm
+libdata/asterisk/sounds/en/or-press.gsm
+libdata/asterisk/sounds/en/or.gsm
+libdata/asterisk/sounds/en/order-desk.gsm
+libdata/asterisk/sounds/en/orders.gsm
+libdata/asterisk/sounds/en/oregon.gsm
+libdata/asterisk/sounds/en/other-options-exercise.gsm
+libdata/asterisk/sounds/en/otherwise-press.gsm
+libdata/asterisk/sounds/en/otherwise.gsm
+libdata/asterisk/sounds/en/our-business-hours-are.gsm
+libdata/asterisk/sounds/en/outbound.gsm
+libdata/asterisk/sounds/en/outside-sales.gsm
+libdata/asterisk/sounds/en/outside-transfer.gsm
+libdata/asterisk/sounds/en/pacific.gsm
+libdata/asterisk/sounds/en/packet.gsm
+libdata/asterisk/sounds/en/panic.gsm
+libdata/asterisk/sounds/en/partially.gsm
+libdata/asterisk/sounds/en/partly.gsm
+libdata/asterisk/sounds/en/pascal.gsm
+libdata/asterisk/sounds/en/pascal2.gsm
+libdata/asterisk/sounds/en/patchy.gsm
+libdata/asterisk/sounds/en/pbx-invalid.gsm
+libdata/asterisk/sounds/en/pbx-invalidpark.gsm
+libdata/asterisk/sounds/en/pbx-parkingfailed.gsm
+libdata/asterisk/sounds/en/pbx-transfer.gsm
+libdata/asterisk/sounds/en/pence.gsm
+libdata/asterisk/sounds/en/pennies.gsm
+libdata/asterisk/sounds/en/pennsylvania.gsm
+libdata/asterisk/sounds/en/penny.gsm
+libdata/asterisk/sounds/en/percent.gsm
+libdata/asterisk/sounds/en/perhaps-we-are.gsm
+libdata/asterisk/sounds/en/perhaps-we-are2.gsm
+libdata/asterisk/sounds/en/period.gsm
+libdata/asterisk/sounds/en/personnel.gsm
+libdata/asterisk/sounds/en/persons-in-path-of.gsm
+libdata/asterisk/sounds/en/philadelphia.gsm
+libdata/asterisk/sounds/en/phoenix.gsm
+libdata/asterisk/sounds/en/phonetic/9_p.gsm
+libdata/asterisk/sounds/en/phonetic/a_p.gsm
+libdata/asterisk/sounds/en/phonetic/b_p.gsm
+libdata/asterisk/sounds/en/phonetic/c_p.gsm
+libdata/asterisk/sounds/en/phonetic/d_p.gsm
+libdata/asterisk/sounds/en/phonetic/e_p.gsm
+libdata/asterisk/sounds/en/phonetic/f_p.gsm
+libdata/asterisk/sounds/en/phonetic/g_p.gsm
+libdata/asterisk/sounds/en/phonetic/h_p.gsm
+libdata/asterisk/sounds/en/phonetic/i_p.gsm
+libdata/asterisk/sounds/en/phonetic/j_p.gsm
+libdata/asterisk/sounds/en/phonetic/k_p.gsm
+libdata/asterisk/sounds/en/phonetic/l_p.gsm
+libdata/asterisk/sounds/en/phonetic/m_p.gsm
+libdata/asterisk/sounds/en/phonetic/n_p.gsm
+libdata/asterisk/sounds/en/phonetic/o_p.gsm
+libdata/asterisk/sounds/en/phonetic/p_p.gsm
+libdata/asterisk/sounds/en/phonetic/q_p.gsm
+libdata/asterisk/sounds/en/phonetic/r_p.gsm
+libdata/asterisk/sounds/en/phonetic/s_p.gsm
+libdata/asterisk/sounds/en/phonetic/t_p.gsm
+libdata/asterisk/sounds/en/phonetic/u_p.gsm
+libdata/asterisk/sounds/en/phonetic/v_p.gsm
+libdata/asterisk/sounds/en/phonetic/w_p.gsm
+libdata/asterisk/sounds/en/phonetic/x_p.gsm
+libdata/asterisk/sounds/en/phonetic/y_p.gsm
+libdata/asterisk/sounds/en/phonetic/z_p.gsm
+libdata/asterisk/sounds/en/physics.gsm
+libdata/asterisk/sounds/en/pin-invalid.gsm
+libdata/asterisk/sounds/en/pin-number-accepted.gsm
+libdata/asterisk/sounds/en/ping.gsm
+libdata/asterisk/sounds/en/pipe.gsm
+libdata/asterisk/sounds/en/planning.gsm
+libdata/asterisk/sounds/en/please-answer-the-following.gsm
+libdata/asterisk/sounds/en/please-contact-tech-supt.gsm
+libdata/asterisk/sounds/en/please-enter-first-three-letters.gsm
+libdata/asterisk/sounds/en/please-enter-the.gsm
+libdata/asterisk/sounds/en/please-enter-your.gsm
+libdata/asterisk/sounds/en/please-hang-up-and-dial-operator.gsm
+libdata/asterisk/sounds/en/please-hang-up-and-try-again.gsm
+libdata/asterisk/sounds/en/please-try-again-later.gsm
+libdata/asterisk/sounds/en/please-try-again.gsm
+libdata/asterisk/sounds/en/please-try.gsm
+libdata/asterisk/sounds/en/please-wait-connect-oncall-eng.gsm
+libdata/asterisk/sounds/en/pls-ent-num-transfer.gsm
+libdata/asterisk/sounds/en/pls-enter-conf-password.gsm
+libdata/asterisk/sounds/en/pls-enter-num-message-after-tone.gsm
+libdata/asterisk/sounds/en/pls-enter-vm-password.gsm
+libdata/asterisk/sounds/en/pls-entr-num-uwish2-call.gsm
+libdata/asterisk/sounds/en/pls-hold-process-tx.gsm
+libdata/asterisk/sounds/en/pls-hold-silent30.gsm
+libdata/asterisk/sounds/en/pls-hold-while-try.gsm
+libdata/asterisk/sounds/en/pls-lv-msg-will-contact.gsm
+libdata/asterisk/sounds/en/pls-rcrd-name-at-tone.gsm
+libdata/asterisk/sounds/en/pls-stay-on-line.gsm
+libdata/asterisk/sounds/en/pls-try-again.gsm
+libdata/asterisk/sounds/en/pls-try-area-code.gsm
+libdata/asterisk/sounds/en/pls-try-call-later.gsm
+libdata/asterisk/sounds/en/pls-try-manually.gsm
+libdata/asterisk/sounds/en/pls-wait-connect-call.gsm
+libdata/asterisk/sounds/en/plugh.gsm
+libdata/asterisk/sounds/en/pm-announcement-number.gsm
+libdata/asterisk/sounds/en/pm-invalid-option.gsm
+libdata/asterisk/sounds/en/pm-phrase-management.gsm
+libdata/asterisk/sounds/en/pm-prompt-number.gsm
+libdata/asterisk/sounds/en/pm-to-record-phrase.gsm
+libdata/asterisk/sounds/en/pm-to-review-phrase.gsm
+libdata/asterisk/sounds/en/point.gsm
+libdata/asterisk/sounds/en/pop.gsm
+libdata/asterisk/sounds/en/port.gsm
+libdata/asterisk/sounds/en/portland.gsm
+libdata/asterisk/sounds/en/portnumber.gsm
+libdata/asterisk/sounds/en/position.gsm
+libdata/asterisk/sounds/en/post-entry-pound.gsm
+libdata/asterisk/sounds/en/pounds.gsm
+libdata/asterisk/sounds/en/presales-support.gsm
+libdata/asterisk/sounds/en/presidents-office.gsm
+libdata/asterisk/sounds/en/press-0.gsm
+libdata/asterisk/sounds/en/press-1.gsm
+libdata/asterisk/sounds/en/press-2.gsm
+libdata/asterisk/sounds/en/press-3.gsm
+libdata/asterisk/sounds/en/press-4.gsm
+libdata/asterisk/sounds/en/press-5.gsm
+libdata/asterisk/sounds/en/press-6-to-eject.gsm
+libdata/asterisk/sounds/en/press-6.gsm
+libdata/asterisk/sounds/en/press-7.gsm
+libdata/asterisk/sounds/en/press-8.gsm
+libdata/asterisk/sounds/en/press-9.gsm
+libdata/asterisk/sounds/en/press-button-again.gsm
+libdata/asterisk/sounds/en/press-enter.gsm
+libdata/asterisk/sounds/en/press-escape.gsm
+libdata/asterisk/sounds/en/press-hash.gsm
+libdata/asterisk/sounds/en/press-pound-save-changes.gsm
+libdata/asterisk/sounds/en/press-pound-to-login-star-to-hangup.gsm
+libdata/asterisk/sounds/en/press-pound.gsm
+libdata/asterisk/sounds/en/press-return.gsm
+libdata/asterisk/sounds/en/press-star-cancel.gsm
+libdata/asterisk/sounds/en/press-star.gsm
+libdata/asterisk/sounds/en/press-the-space-bar.gsm
+libdata/asterisk/sounds/en/press-tilde.gsm
+libdata/asterisk/sounds/en/press.gsm
+libdata/asterisk/sounds/en/pressure.gsm
+libdata/asterisk/sounds/en/printing.gsm
+libdata/asterisk/sounds/en/priv-callee-options.gsm
+libdata/asterisk/sounds/en/priv-callpending.gsm
+libdata/asterisk/sounds/en/priv-introsaved.gsm
+libdata/asterisk/sounds/en/priv-recordintro.gsm
+libdata/asterisk/sounds/en/privacy-blacklisted.gsm
+libdata/asterisk/sounds/en/privacy-blocked.gsm
+libdata/asterisk/sounds/en/privacy-if-error-leave-message-or-hangup.gsm
+libdata/asterisk/sounds/en/privacy-if-error.gsm
+libdata/asterisk/sounds/en/privacy-if-sales-call-contact-in-writing.gsm
+libdata/asterisk/sounds/en/privacy-incorrect.gsm
+libdata/asterisk/sounds/en/privacy-last-caller-was.gsm
+libdata/asterisk/sounds/en/privacy-not.gsm
+libdata/asterisk/sounds/en/privacy-please-dial.gsm
+libdata/asterisk/sounds/en/privacy-please-stay-on-line-to-be-connected.gsm
+libdata/asterisk/sounds/en/privacy-prompt.gsm
+libdata/asterisk/sounds/en/privacy-restricted-by-req.gsm
+libdata/asterisk/sounds/en/privacy-screening-unidentified-calls.gsm
+libdata/asterisk/sounds/en/privacy-stop-calling-not-welcome.gsm
+libdata/asterisk/sounds/en/privacy-stop-calling-not-welcome2.gsm
+libdata/asterisk/sounds/en/privacy-thankyou.gsm
+libdata/asterisk/sounds/en/privacy-this-number-is.gsm
+libdata/asterisk/sounds/en/privacy-to-blacklist-last-caller.gsm
+libdata/asterisk/sounds/en/privacy-to-blacklist-this-number.gsm
+libdata/asterisk/sounds/en/privacy-to-hear-our-contact-details.gsm
+libdata/asterisk/sounds/en/privacy-to-whitelist-last-caller.gsm
+libdata/asterisk/sounds/en/privacy-to-whitelist-this-number.gsm
+libdata/asterisk/sounds/en/privacy-unident.gsm
+libdata/asterisk/sounds/en/privacy-whitelisted.gsm
+libdata/asterisk/sounds/en/privacy-you-are-blacklisted.gsm
+libdata/asterisk/sounds/en/privacy-you-are-calling-from.gsm
+libdata/asterisk/sounds/en/privacy-your-callerid-is.gsm
+libdata/asterisk/sounds/en/product.gsm
+libdata/asterisk/sounds/en/production.gsm
+libdata/asterisk/sounds/en/projects.gsm
+libdata/asterisk/sounds/en/protocol.gsm
+libdata/asterisk/sounds/en/public-relations.gsm
+libdata/asterisk/sounds/en/purchasing.gsm
+libdata/asterisk/sounds/en/purposes.gsm
+libdata/asterisk/sounds/en/q-dot-931.gsm
+libdata/asterisk/sounds/en/q-dot-9thirty1.gsm
+libdata/asterisk/sounds/en/quality-assurance.gsm
+libdata/asterisk/sounds/en/quality-control.gsm
+libdata/asterisk/sounds/en/quarter.gsm
+libdata/asterisk/sounds/en/queue-callswaiting.gsm
+libdata/asterisk/sounds/en/queue-holdtime.gsm
+libdata/asterisk/sounds/en/queue-less-than.gsm
+libdata/asterisk/sounds/en/queue-minute.gsm
+libdata/asterisk/sounds/en/queue-minutes.gsm
+libdata/asterisk/sounds/en/queue-periodic-announce.gsm
+libdata/asterisk/sounds/en/queue-quantity1.gsm
+libdata/asterisk/sounds/en/queue-quantity2.gsm
+libdata/asterisk/sounds/en/queue-reporthold.gsm
+libdata/asterisk/sounds/en/queue-seconds.gsm
+libdata/asterisk/sounds/en/queue-thankyou.gsm
+libdata/asterisk/sounds/en/queue-thereare.gsm
+libdata/asterisk/sounds/en/queue-youarenext.gsm
+libdata/asterisk/sounds/en/quickly.gsm
+libdata/asterisk/sounds/en/quote.gsm
+libdata/asterisk/sounds/en/race.gsm
+libdata/asterisk/sounds/en/rain.gsm
+libdata/asterisk/sounds/en/rainfall.gsm
+libdata/asterisk/sounds/en/rainy.gsm
+libdata/asterisk/sounds/en/range.gsm
+libdata/asterisk/sounds/en/reassigned-new-areacode.gsm
+libdata/asterisk/sounds/en/rebates.gsm
+libdata/asterisk/sounds/en/received.gsm
+libdata/asterisk/sounds/en/receiving.gsm
+libdata/asterisk/sounds/en/reception.gsm
+libdata/asterisk/sounds/en/recorded.gsm
+libdata/asterisk/sounds/en/registrar.gsm
+libdata/asterisk/sounds/en/remote-already-in-this-mode-2.gsm
+libdata/asterisk/sounds/en/remote-already-in-this-mode.gsm
+libdata/asterisk/sounds/en/remote-base.gsm
+libdata/asterisk/sounds/en/removed.gsm
+libdata/asterisk/sounds/en/repair.gsm
+libdata/asterisk/sounds/en/repeat-only.gsm
+libdata/asterisk/sounds/en/repeater.gsm
+libdata/asterisk/sounds/en/research-and-development.gsm
+libdata/asterisk/sounds/en/research.gsm
+libdata/asterisk/sounds/en/reservations.gsm
+libdata/asterisk/sounds/en/restarting.gsm
+libdata/asterisk/sounds/en/rhode-island.gsm
+libdata/asterisk/sounds/en/right-bracket.gsm
+libdata/asterisk/sounds/en/rising.gsm
+libdata/asterisk/sounds/en/risk-management.gsm
+libdata/asterisk/sounds/en/roaming.gsm
+libdata/asterisk/sounds/en/room-service.gsm
+libdata/asterisk/sounds/en/route-sip.gsm
+libdata/asterisk/sounds/en/rqsted-wakeup-for.gsm
+libdata/asterisk/sounds/en/sacramento.gsm
+libdata/asterisk/sounds/en/saint-louis.gsm
+libdata/asterisk/sounds/en/sales-floor.gsm
+libdata/asterisk/sounds/en/sales.gsm
+libdata/asterisk/sounds/en/san-antonio.gsm
+libdata/asterisk/sounds/en/san-diego.gsm
+libdata/asterisk/sounds/en/san-francisco.gsm
+libdata/asterisk/sounds/en/san-jose.gsm
+libdata/asterisk/sounds/en/save-announce-press.gsm
+libdata/asterisk/sounds/en/say-temp-msg-prs-pound.gsm
+libdata/asterisk/sounds/en/says-thats-stupid.gsm
+libdata/asterisk/sounds/en/scattered.gsm
+libdata/asterisk/sounds/en/sciences.gsm
+libdata/asterisk/sounds/en/screen-callee-options.gsm
+libdata/asterisk/sounds/en/seattle.gsm
+libdata/asterisk/sounds/en/second.gsm
+libdata/asterisk/sounds/en/seconds.gsm
+libdata/asterisk/sounds/en/secretary.gsm
+libdata/asterisk/sounds/en/security.gsm
+libdata/asterisk/sounds/en/self-destruct-in.gsm
+libdata/asterisk/sounds/en/self-destruct.gsm
+libdata/asterisk/sounds/en/server.gsm
+libdata/asterisk/sounds/en/service-not-implemented.gsm
+libdata/asterisk/sounds/en/service.gsm
+libdata/asterisk/sounds/en/seventeenth.gsm
+libdata/asterisk/sounds/en/seventh.gsm
+libdata/asterisk/sounds/en/seventieth.gsm
+libdata/asterisk/sounds/en/severe.gsm
+libdata/asterisk/sounds/en/shall-i-try-again.gsm
+libdata/asterisk/sounds/en/shiny-brass-lamp.gsm
+libdata/asterisk/sounds/en/shipping.gsm
+libdata/asterisk/sounds/en/shop.gsm
+libdata/asterisk/sounds/en/show-office.gsm
+libdata/asterisk/sounds/en/sighted.gsm
+libdata/asterisk/sounds/en/silence/1.gsm
+libdata/asterisk/sounds/en/silence/10.gsm
+libdata/asterisk/sounds/en/silence/2.gsm
+libdata/asterisk/sounds/en/silence/3.gsm
+libdata/asterisk/sounds/en/silence/4.gsm
+libdata/asterisk/sounds/en/silence/5.gsm
+libdata/asterisk/sounds/en/silence/6.gsm
+libdata/asterisk/sounds/en/silence/7.gsm
+libdata/asterisk/sounds/en/silence/8.gsm
+libdata/asterisk/sounds/en/silence/9.gsm
+libdata/asterisk/sounds/en/simplex.gsm
+libdata/asterisk/sounds/en/simul-call-limit-reached.gsm
+libdata/asterisk/sounds/en/sixteenth.gsm
+libdata/asterisk/sounds/en/sixth.gsm
+libdata/asterisk/sounds/en/sixtieth.gsm
+libdata/asterisk/sounds/en/sleet.gsm
+libdata/asterisk/sounds/en/sleeting.gsm
+libdata/asterisk/sounds/en/slow.gsm
+libdata/asterisk/sounds/en/slowly.gsm
+libdata/asterisk/sounds/en/snow.gsm
+libdata/asterisk/sounds/en/snowing.gsm
+libdata/asterisk/sounds/en/snowy.gsm
+libdata/asterisk/sounds/en/software.gsm
+libdata/asterisk/sounds/en/someone-you-trust1.gsm
+libdata/asterisk/sounds/en/someone-you-trust2.gsm
+libdata/asterisk/sounds/en/someone-you-trust3.gsm
+libdata/asterisk/sounds/en/something-terribly-wrong.gsm
+libdata/asterisk/sounds/en/sorry-cant-let-you-do-that.gsm
+libdata/asterisk/sounds/en/sorry-cant-let-you-do-that2.gsm
+libdata/asterisk/sounds/en/sorry-cant-let-you-do-that3.gsm
+libdata/asterisk/sounds/en/sorry-mailbox-full.gsm
+libdata/asterisk/sounds/en/sorry-youre-having-problems.gsm
+libdata/asterisk/sounds/en/sorry.gsm
+libdata/asterisk/sounds/en/sorry2.gsm
+libdata/asterisk/sounds/en/south-carolina.gsm
+libdata/asterisk/sounds/en/south-dakota.gsm
+libdata/asterisk/sounds/en/south.gsm
+libdata/asterisk/sounds/en/southerly.gsm
+libdata/asterisk/sounds/en/spam.gsm
+libdata/asterisk/sounds/en/spam2.gsm
+libdata/asterisk/sounds/en/speak-louder-into-phone.gsm
+libdata/asterisk/sounds/en/speak-louder.gsm
+libdata/asterisk/sounds/en/speak-to-the-operator.gsm
+libdata/asterisk/sounds/en/speed-dial-empty.gsm
+libdata/asterisk/sounds/en/speed-dial.gsm
+libdata/asterisk/sounds/en/speed.gsm
+libdata/asterisk/sounds/en/splat.gsm
+libdata/asterisk/sounds/en/spy-agent.gsm
+libdata/asterisk/sounds/en/spy-console.gsm
+libdata/asterisk/sounds/en/spy-dahdi.gsm
+libdata/asterisk/sounds/en/spy-h323.gsm
+libdata/asterisk/sounds/en/spy-iax.gsm
+libdata/asterisk/sounds/en/spy-iax2.gsm
+libdata/asterisk/sounds/en/spy-jingle.gsm
+libdata/asterisk/sounds/en/spy-local.gsm
+libdata/asterisk/sounds/en/spy-mgcp.gsm
+libdata/asterisk/sounds/en/spy-misdn.gsm
+libdata/asterisk/sounds/en/spy-mobile.gsm
+libdata/asterisk/sounds/en/spy-nbs.gsm
+libdata/asterisk/sounds/en/spy-sip.gsm
+libdata/asterisk/sounds/en/spy-skinny.gsm
+libdata/asterisk/sounds/en/spy-unistim.gsm
+libdata/asterisk/sounds/en/spy-usbradio.gsm
+libdata/asterisk/sounds/en/spy-zap.gsm
+libdata/asterisk/sounds/en/ss-noservice.gsm
+libdata/asterisk/sounds/en/ssh.gsm
+libdata/asterisk/sounds/en/staff.gsm
+libdata/asterisk/sounds/en/staffing.gsm
+libdata/asterisk/sounds/en/standard.gsm
+libdata/asterisk/sounds/en/star-for-menu-again.gsm
+libdata/asterisk/sounds/en/starting-with-either.gsm
+libdata/asterisk/sounds/en/station.gsm
+libdata/asterisk/sounds/en/status.gsm
+libdata/asterisk/sounds/en/step-in-stream.gsm
+libdata/asterisk/sounds/en/sterling.gsm
+libdata/asterisk/sounds/en/store-accounting.gsm
+libdata/asterisk/sounds/en/storm.gsm
+libdata/asterisk/sounds/en/sun.gsm
+libdata/asterisk/sounds/en/sunny.gsm
+libdata/asterisk/sounds/en/support.gsm
+libdata/asterisk/sounds/en/swap.gsm
+libdata/asterisk/sounds/en/system-crashed.gsm
+libdata/asterisk/sounds/en/system-status-msg.gsm
+libdata/asterisk/sounds/en/system.gsm
+libdata/asterisk/sounds/en/systems.gsm
+libdata/asterisk/sounds/en/talking-to-myself.gsm
+libdata/asterisk/sounds/en/target-attendant.gsm
+libdata/asterisk/sounds/en/tcp.gsm
+libdata/asterisk/sounds/en/technical-support.gsm
+libdata/asterisk/sounds/en/telephone-in-your-pocket.gsm
+libdata/asterisk/sounds/en/telephone-in-your-pocket2.gsm
+libdata/asterisk/sounds/en/telephone-number.gsm
+libdata/asterisk/sounds/en/telesales.gsm
+libdata/asterisk/sounds/en/teletubbie-murder.gsm
+libdata/asterisk/sounds/en/telnet.gsm
+libdata/asterisk/sounds/en/temp-disconnected.gsm
+libdata/asterisk/sounds/en/temperature.gsm
+libdata/asterisk/sounds/en/tennessee.gsm
+libdata/asterisk/sounds/en/tenth.gsm
+libdata/asterisk/sounds/en/terabits.gsm
+libdata/asterisk/sounds/en/terabytes.gsm
+libdata/asterisk/sounds/en/terminated.gsm
+libdata/asterisk/sounds/en/terminating.gsm
+libdata/asterisk/sounds/en/test-tones-follow.gsm
+libdata/asterisk/sounds/en/texas.gsm
+libdata/asterisk/sounds/en/thank-you-cooperation.gsm
+libdata/asterisk/sounds/en/thank-you-for-calling.gsm
+libdata/asterisk/sounds/en/thanks-for-calling-today.gsm
+libdata/asterisk/sounds/en/thanks-for-using.gsm
+libdata/asterisk/sounds/en/that-is-not-rec-phn-num.gsm
+libdata/asterisk/sounds/en/that-number.gsm
+libdata/asterisk/sounds/en/that-tickles.gsm
+libdata/asterisk/sounds/en/that-you-require.gsm
+libdata/asterisk/sounds/en/the-mailbox.gsm
+libdata/asterisk/sounds/en/the-monkeys-twice.gsm
+libdata/asterisk/sounds/en/the-new-number-is.gsm
+libdata/asterisk/sounds/en/the-next.gsm
+libdata/asterisk/sounds/en/the-num-i-have-is.gsm
+libdata/asterisk/sounds/en/the-number-u-dialed.gsm
+libdata/asterisk/sounds/en/the-party-you-are-calling.gsm
+libdata/asterisk/sounds/en/the-weather-at.gsm
+libdata/asterisk/sounds/en/then-press-pound.gsm
+libdata/asterisk/sounds/en/there-are.gsm
+libdata/asterisk/sounds/en/there-is-no-customer-support.gsm
+libdata/asterisk/sounds/en/these-are-currently.gsm
+libdata/asterisk/sounds/en/third.gsm
+libdata/asterisk/sounds/en/thirteenth.gsm
+libdata/asterisk/sounds/en/thirtieth.gsm
+libdata/asterisk/sounds/en/this-call-may-be-monitored-or-recorded.gsm
+libdata/asterisk/sounds/en/this-call-may-be.gsm
+libdata/asterisk/sounds/en/this-call-will-cost.gsm
+libdata/asterisk/sounds/en/this-call-will-end-in.gsm
+libdata/asterisk/sounds/en/this-is-the-voice-mail-system.gsm
+libdata/asterisk/sounds/en/this-is-yr-wakeup-call.gsm
+libdata/asterisk/sounds/en/this.gsm
+libdata/asterisk/sounds/en/thnk-u-for-patience.gsm
+libdata/asterisk/sounds/en/thousandth.gsm
+libdata/asterisk/sounds/en/through.gsm
+libdata/asterisk/sounds/en/thunderstorm.gsm
+libdata/asterisk/sounds/en/tide.gsm
+libdata/asterisk/sounds/en/time.gsm
+libdata/asterisk/sounds/en/times.gsm
+libdata/asterisk/sounds/en/to-accept-recording.gsm
+libdata/asterisk/sounds/en/to-be-called-back.gsm
+libdata/asterisk/sounds/en/to-blklist-last-caller.gsm
+libdata/asterisk/sounds/en/to-blklist-last-num.gsm
+libdata/asterisk/sounds/en/to-call-num-press.gsm
+libdata/asterisk/sounds/en/to-call-prson-w-sent-msg.gsm
+libdata/asterisk/sounds/en/to-call-this-number.gsm
+libdata/asterisk/sounds/en/to-cancel-this-msg.gsm
+libdata/asterisk/sounds/en/to-cancel-wakeup.gsm
+libdata/asterisk/sounds/en/to-change-exp-date.gsm
+libdata/asterisk/sounds/en/to-change-your-pin-number.gsm
+libdata/asterisk/sounds/en/to-collect-voicemail.gsm
+libdata/asterisk/sounds/en/to-compose-a-message.gsm
+libdata/asterisk/sounds/en/to-confirm-wakeup.gsm
+libdata/asterisk/sounds/en/to-dial-by-name-press.gsm
+libdata/asterisk/sounds/en/to-dial-by-name.gsm
+libdata/asterisk/sounds/en/to-enter-a-diff-number.gsm
+libdata/asterisk/sounds/en/to-enter-a-number.gsm
+libdata/asterisk/sounds/en/to-erase-yr-temp-grtg.gsm
+libdata/asterisk/sounds/en/to-extension.gsm
+libdata/asterisk/sounds/en/to-hang-up-2.gsm
+libdata/asterisk/sounds/en/to-hang-up.gsm
+libdata/asterisk/sounds/en/to-hear-callerid.gsm
+libdata/asterisk/sounds/en/to-hear-menu-again.gsm
+libdata/asterisk/sounds/en/to-hear-msg-again.gsm
+libdata/asterisk/sounds/en/to-hear-msg-envelope.gsm
+libdata/asterisk/sounds/en/to-hear-net-status.gsm
+libdata/asterisk/sounds/en/to-hear-weather-status.gsm
+libdata/asterisk/sounds/en/to-hear-your-account-balance.gsm
+libdata/asterisk/sounds/en/to-join-a-meeting.gsm
+libdata/asterisk/sounds/en/to-leave-message-for.gsm
+libdata/asterisk/sounds/en/to-listen-to-it.gsm
+libdata/asterisk/sounds/en/to-log-in-to-voice-mail.gsm
+libdata/asterisk/sounds/en/to-place-outgoing-call.gsm
+libdata/asterisk/sounds/en/to-reach-first-rep.gsm
+libdata/asterisk/sounds/en/to-reach-operator.gsm
+libdata/asterisk/sounds/en/to-rec-yr-temp-grtg.gsm
+libdata/asterisk/sounds/en/to-record-call.gsm
+libdata/asterisk/sounds/en/to-redial-the-last-number-you-called.gsm
+libdata/asterisk/sounds/en/to-report-emergency.gsm
+libdata/asterisk/sounds/en/to-report-system-network-down.gsm
+libdata/asterisk/sounds/en/to-rerecord-announce.gsm
+libdata/asterisk/sounds/en/to-rerecord-it.gsm
+libdata/asterisk/sounds/en/to-rerecord-yr-message.gsm
+libdata/asterisk/sounds/en/to-rmv-num-blklist.gsm
+libdata/asterisk/sounds/en/to-rqst-wakeup-call.gsm
+libdata/asterisk/sounds/en/to-send-a-reply.gsm
+libdata/asterisk/sounds/en/to-snooze-for.gsm
+libdata/asterisk/sounds/en/to-use-def-attendant.gsm
+libdata/asterisk/sounds/en/tomorrow-night.gsm
+libdata/asterisk/sounds/en/tones-that-follow-are-for-the-deaf.gsm
+libdata/asterisk/sounds/en/tonight.gsm
+libdata/asterisk/sounds/en/too-low.gsm
+libdata/asterisk/sounds/en/tornado.gsm
+libdata/asterisk/sounds/en/touchtone1.gsm
+libdata/asterisk/sounds/en/touchtone2.gsm
+libdata/asterisk/sounds/en/touchtone3.gsm
+libdata/asterisk/sounds/en/towards.gsm
+libdata/asterisk/sounds/en/trading-desk.gsm
+libdata/asterisk/sounds/en/traffic.gsm
+libdata/asterisk/sounds/en/training.gsm
+libdata/asterisk/sounds/en/transfer.gsm
+libdata/asterisk/sounds/en/transportation.gsm
+libdata/asterisk/sounds/en/travel.gsm
+libdata/asterisk/sounds/en/treasury.gsm
+libdata/asterisk/sounds/en/tt-allbusy.gsm
+libdata/asterisk/sounds/en/tt-codezone.gsm
+libdata/asterisk/sounds/en/tt-codezone_MIXDOWN.gsm
+libdata/asterisk/sounds/en/tt-hangup.gsm
+libdata/asterisk/sounds/en/tt-monkeys.gsm
+libdata/asterisk/sounds/en/tt-monkeysintro.gsm
+libdata/asterisk/sounds/en/tt-monty-knights.gsm
+libdata/asterisk/sounds/en/tt-somethingwrong.gsm
+libdata/asterisk/sounds/en/tt-weasels.gsm
+libdata/asterisk/sounds/en/tucson.gsm
+libdata/asterisk/sounds/en/tulsa.gsm
+libdata/asterisk/sounds/en/turn-off-recording.gsm
+libdata/asterisk/sounds/en/turning-to.gsm
+libdata/asterisk/sounds/en/twelveth.gsm
+libdata/asterisk/sounds/en/twentieth.gsm
+libdata/asterisk/sounds/en/twisty-maze.gsm
+libdata/asterisk/sounds/en/tx-has-been-approved.gsm
+libdata/asterisk/sounds/en/typhoon.gsm
+libdata/asterisk/sounds/en/udp.gsm
+libdata/asterisk/sounds/en/uh-oh1.gsm
+libdata/asterisk/sounds/en/uh-oh2.gsm
+libdata/asterisk/sounds/en/uk.gsm
+libdata/asterisk/sounds/en/unavailable.gsm
+libdata/asterisk/sounds/en/unconditional.gsm
+libdata/asterisk/sounds/en/unidentified-no-callback.gsm
+libdata/asterisk/sounds/en/units.gsm
+libdata/asterisk/sounds/en/unix.gsm
+libdata/asterisk/sounds/en/up.gsm
+libdata/asterisk/sounds/en/uptime.gsm
+libdata/asterisk/sounds/en/user.gsm
+libdata/asterisk/sounds/en/users.gsm
+libdata/asterisk/sounds/en/utah.gsm
+libdata/asterisk/sounds/en/variable.gsm
+libdata/asterisk/sounds/en/vermont.gsm
+libdata/asterisk/sounds/en/virginia-beach.gsm
+libdata/asterisk/sounds/en/virginia.gsm
+libdata/asterisk/sounds/en/visibility.gsm
+libdata/asterisk/sounds/en/visit-asterisk-website.gsm
+libdata/asterisk/sounds/en/vm-Cust1.gsm
+libdata/asterisk/sounds/en/vm-Cust2.gsm
+libdata/asterisk/sounds/en/vm-Cust3.gsm
+libdata/asterisk/sounds/en/vm-Cust4.gsm
+libdata/asterisk/sounds/en/vm-Cust5.gsm
+libdata/asterisk/sounds/en/vm-Family.gsm
+libdata/asterisk/sounds/en/vm-Friends.gsm
+libdata/asterisk/sounds/en/vm-INBOX.gsm
+libdata/asterisk/sounds/en/vm-Old.gsm
+libdata/asterisk/sounds/en/vm-Urgent.gsm
+libdata/asterisk/sounds/en/vm-Work.gsm
+libdata/asterisk/sounds/en/vm-advopts.gsm
+libdata/asterisk/sounds/en/vm-and.gsm
+libdata/asterisk/sounds/en/vm-calldiffnum.gsm
+libdata/asterisk/sounds/en/vm-changeto.gsm
+libdata/asterisk/sounds/en/vm-delete.gsm
+libdata/asterisk/sounds/en/vm-deleted.gsm
+libdata/asterisk/sounds/en/vm-dialout.gsm
+libdata/asterisk/sounds/en/vm-duration.gsm
+libdata/asterisk/sounds/en/vm-enter-num-to-call.gsm
+libdata/asterisk/sounds/en/vm-extension.gsm
+libdata/asterisk/sounds/en/vm-first.gsm
+libdata/asterisk/sounds/en/vm-for.gsm
+libdata/asterisk/sounds/en/vm-forward-multiple.gsm
+libdata/asterisk/sounds/en/vm-forward.gsm
+libdata/asterisk/sounds/en/vm-forwardoptions.gsm
+libdata/asterisk/sounds/en/vm-from-extension.gsm
+libdata/asterisk/sounds/en/vm-from-phonenumber.gsm
+libdata/asterisk/sounds/en/vm-from.gsm
+libdata/asterisk/sounds/en/vm-goodbye.gsm
+libdata/asterisk/sounds/en/vm-helpexit.gsm
+libdata/asterisk/sounds/en/vm-incorrect-mailbox.gsm
+libdata/asterisk/sounds/en/vm-incorrect.gsm
+libdata/asterisk/sounds/en/vm-instructions.gsm
+libdata/asterisk/sounds/en/vm-intro.gsm
+libdata/asterisk/sounds/en/vm-invalid-password.gsm
+libdata/asterisk/sounds/en/vm-invalidpassword.gsm
+libdata/asterisk/sounds/en/vm-isonphone.gsm
+libdata/asterisk/sounds/en/vm-isunavail.gsm
+libdata/asterisk/sounds/en/vm-last.gsm
+libdata/asterisk/sounds/en/vm-leavemsg.gsm
+libdata/asterisk/sounds/en/vm-login.gsm
+libdata/asterisk/sounds/en/vm-mailboxfull.gsm
+libdata/asterisk/sounds/en/vm-marked-nonurgent.gsm
+libdata/asterisk/sounds/en/vm-marked-urgent.gsm
+libdata/asterisk/sounds/en/vm-message.gsm
+libdata/asterisk/sounds/en/vm-messages.gsm
+libdata/asterisk/sounds/en/vm-minutes.gsm
+libdata/asterisk/sounds/en/vm-mismatch.gsm
+libdata/asterisk/sounds/en/vm-msginstruct.gsm
+libdata/asterisk/sounds/en/vm-msgsaved.gsm
+libdata/asterisk/sounds/en/vm-newpassword.gsm
+libdata/asterisk/sounds/en/vm-newuser.gsm
+libdata/asterisk/sounds/en/vm-next.gsm
+libdata/asterisk/sounds/en/vm-no.gsm
+libdata/asterisk/sounds/en/vm-nobodyavail.gsm
+libdata/asterisk/sounds/en/vm-nobox.gsm
+libdata/asterisk/sounds/en/vm-nomore.gsm
+libdata/asterisk/sounds/en/vm-nonumber.gsm
+libdata/asterisk/sounds/en/vm-num-i-have.gsm
+libdata/asterisk/sounds/en/vm-onefor-full.gsm
+libdata/asterisk/sounds/en/vm-onefor.gsm
+libdata/asterisk/sounds/en/vm-options.gsm
+libdata/asterisk/sounds/en/vm-opts-full.gsm
+libdata/asterisk/sounds/en/vm-opts.gsm
+libdata/asterisk/sounds/en/vm-passchanged.gsm
+libdata/asterisk/sounds/en/vm-password.gsm
+libdata/asterisk/sounds/en/vm-pls-try-again.gsm
+libdata/asterisk/sounds/en/vm-press.gsm
+libdata/asterisk/sounds/en/vm-prev.gsm
+libdata/asterisk/sounds/en/vm-reachoper.gsm
+libdata/asterisk/sounds/en/vm-rec-busy.gsm
+libdata/asterisk/sounds/en/vm-rec-name.gsm
+libdata/asterisk/sounds/en/vm-rec-temp.gsm
+libdata/asterisk/sounds/en/vm-rec-unv.gsm
+libdata/asterisk/sounds/en/vm-received.gsm
+libdata/asterisk/sounds/en/vm-record-prepend.gsm
+libdata/asterisk/sounds/en/vm-reenterpassword.gsm
+libdata/asterisk/sounds/en/vm-repeat.gsm
+libdata/asterisk/sounds/en/vm-review-nonurgent.gsm
+libdata/asterisk/sounds/en/vm-review-urgent.gsm
+libdata/asterisk/sounds/en/vm-review.gsm
+libdata/asterisk/sounds/en/vm-saved.gsm
+libdata/asterisk/sounds/en/vm-savedto.gsm
+libdata/asterisk/sounds/en/vm-savefolder.gsm
+libdata/asterisk/sounds/en/vm-savemessage.gsm
+libdata/asterisk/sounds/en/vm-saveoper.gsm
+libdata/asterisk/sounds/en/vm-sorry.gsm
+libdata/asterisk/sounds/en/vm-star-cancel.gsm
+libdata/asterisk/sounds/en/vm-starmain.gsm
+libdata/asterisk/sounds/en/vm-tempgreetactive.gsm
+libdata/asterisk/sounds/en/vm-tempgreeting.gsm
+libdata/asterisk/sounds/en/vm-tempgreeting2.gsm
+libdata/asterisk/sounds/en/vm-tempremoved.gsm
+libdata/asterisk/sounds/en/vm-then-pound.gsm
+libdata/asterisk/sounds/en/vm-theperson.gsm
+libdata/asterisk/sounds/en/vm-tmpexists.gsm
+libdata/asterisk/sounds/en/vm-tocallback.gsm
+libdata/asterisk/sounds/en/vm-tocallnum.gsm
+libdata/asterisk/sounds/en/vm-tocancel.gsm
+libdata/asterisk/sounds/en/vm-tocancelmsg.gsm
+libdata/asterisk/sounds/en/vm-toenternumber.gsm
+libdata/asterisk/sounds/en/vm-toforward.gsm
+libdata/asterisk/sounds/en/vm-tohearenv.gsm
+libdata/asterisk/sounds/en/vm-tomakecall.gsm
+libdata/asterisk/sounds/en/vm-tooshort.gsm
+libdata/asterisk/sounds/en/vm-toreply.gsm
+libdata/asterisk/sounds/en/vm-torerecord.gsm
+libdata/asterisk/sounds/en/vm-undelete.gsm
+libdata/asterisk/sounds/en/vm-undeleted.gsm
+libdata/asterisk/sounds/en/vm-unknown-caller.gsm
+libdata/asterisk/sounds/en/vm-whichbox.gsm
+libdata/asterisk/sounds/en/vm-youhave.gsm
+libdata/asterisk/sounds/en/voice-mail-system.gsm
+libdata/asterisk/sounds/en/wait-moment.gsm
+libdata/asterisk/sounds/en/wait-offensive-sounds.gsm
+libdata/asterisk/sounds/en/wakeup-call-cancelled.gsm
+libdata/asterisk/sounds/en/wakeup-call.gsm
+libdata/asterisk/sounds/en/wakeup-daily.gsm
+libdata/asterisk/sounds/en/wakeup-for-daily.gsm
+libdata/asterisk/sounds/en/wakeup-for-one-time.gsm
+libdata/asterisk/sounds/en/wakeup-onetime.gsm
+libdata/asterisk/sounds/en/walks-into-bar-mail.gsm
+libdata/asterisk/sounds/en/warning.gsm
+libdata/asterisk/sounds/en/was-last-seen.gsm
+libdata/asterisk/sounds/en/was.gsm
+libdata/asterisk/sounds/en/washington-dc.gsm
+libdata/asterisk/sounds/en/washington.gsm
+libdata/asterisk/sounds/en/watch.gsm
+libdata/asterisk/sounds/en/we-apologize.gsm
+libdata/asterisk/sounds/en/we-dont-have-tech-support.gsm
+libdata/asterisk/sounds/en/weasels-eaten-phonesys.gsm
+libdata/asterisk/sounds/en/weather-station.gsm
+libdata/asterisk/sounds/en/weather.gsm
+libdata/asterisk/sounds/en/web.gsm
+libdata/asterisk/sounds/en/weeks.gsm
+libdata/asterisk/sounds/en/welcome.gsm
+libdata/asterisk/sounds/en/were-sorry.gsm
+libdata/asterisk/sounds/en/west-virginia.gsm
+libdata/asterisk/sounds/en/west.gsm
+libdata/asterisk/sounds/en/westerly.gsm
+libdata/asterisk/sounds/en/what-are-you-wearing.gsm
+libdata/asterisk/sounds/en/what-time-it-is.gsm
+libdata/asterisk/sounds/en/what-time-it-is2.gsm
+libdata/asterisk/sounds/en/when-dialing-this-number.gsm
+libdata/asterisk/sounds/en/who-would-you-like-to-call.gsm
+libdata/asterisk/sounds/en/why-no-answer-mystery.gsm
+libdata/asterisk/sounds/en/wichita.gsm
+libdata/asterisk/sounds/en/will-apply.gsm
+libdata/asterisk/sounds/en/will-expire.gsm
+libdata/asterisk/sounds/en/will-not-expire.gsm
+libdata/asterisk/sounds/en/will-reflect-charge-of.gsm
+libdata/asterisk/sounds/en/wind.gsm
+libdata/asterisk/sounds/en/windows.gsm
+libdata/asterisk/sounds/en/windy.gsm
+libdata/asterisk/sounds/en/wisconsin.gsm
+libdata/asterisk/sounds/en/wish-to-continue.gsm
+libdata/asterisk/sounds/en/with.gsm
+libdata/asterisk/sounds/en/within.gsm
+libdata/asterisk/sounds/en/work.gsm
+libdata/asterisk/sounds/en/wrong-try-again-smarty.gsm
+libdata/asterisk/sounds/en/wtng-to-spk-w-rep.gsm
+libdata/asterisk/sounds/en/www-switchboard-com.gsm
+libdata/asterisk/sounds/en/wx/around.gsm
+libdata/asterisk/sounds/en/wx/barometer.gsm
+libdata/asterisk/sounds/en/wx/ceiling.gsm
+libdata/asterisk/sounds/en/wx/dew-point.gsm
+libdata/asterisk/sounds/en/wx/falling.gsm
+libdata/asterisk/sounds/en/wx/feet.gsm
+libdata/asterisk/sounds/en/wx/foot.gsm
+libdata/asterisk/sounds/en/wx/gust.gsm
+libdata/asterisk/sounds/en/wx/gusting-to.gsm
+libdata/asterisk/sounds/en/wx/gusts.gsm
+libdata/asterisk/sounds/en/wx/gusty.gsm
+libdata/asterisk/sounds/en/wx/heat-index.gsm
+libdata/asterisk/sounds/en/wx/humidity.gsm
+libdata/asterisk/sounds/en/wx/inch.gsm
+libdata/asterisk/sounds/en/wx/inches.gsm
+libdata/asterisk/sounds/en/wx/kilometer.gsm
+libdata/asterisk/sounds/en/wx/large.gsm
+libdata/asterisk/sounds/en/wx/meter.gsm
+libdata/asterisk/sounds/en/wx/mist.gsm
+libdata/asterisk/sounds/en/wx/northeast.gsm
+libdata/asterisk/sounds/en/wx/northwest.gsm
+libdata/asterisk/sounds/en/wx/percent.gsm
+libdata/asterisk/sounds/en/wx/point.gsm
+libdata/asterisk/sounds/en/wx/rising.gsm
+libdata/asterisk/sounds/en/wx/southeast.gsm
+libdata/asterisk/sounds/en/wx/southwest.gsm
+libdata/asterisk/sounds/en/wx/steady.gsm
+libdata/asterisk/sounds/en/wx/temperature.gsm
+libdata/asterisk/sounds/en/wx/wind-chill.gsm
+libdata/asterisk/sounds/en/wx/winds.gsm
+libdata/asterisk/sounds/en/wyoming.gsm
+libdata/asterisk/sounds/en/yeah.gsm
+libdata/asterisk/sounds/en/year.gsm
+libdata/asterisk/sounds/en/years.gsm
+libdata/asterisk/sounds/en/yes-dear.gsm
+libdata/asterisk/sounds/en/yes-dear2.gsm
+libdata/asterisk/sounds/en/you-are-caller-num.gsm
+libdata/asterisk/sounds/en/you-are-curr-call-num.gsm
+libdata/asterisk/sounds/en/you-can-press.gsm
+libdata/asterisk/sounds/en/you-dialed-wrong-number.gsm
+libdata/asterisk/sounds/en/you-entered.gsm
+libdata/asterisk/sounds/en/you-have-dialed.gsm
+libdata/asterisk/sounds/en/you-have-reached-a-test-number.gsm
+libdata/asterisk/sounds/en/you-have-these-options.gsm
+libdata/asterisk/sounds/en/you-must-first-dial.gsm
+libdata/asterisk/sounds/en/you-seem-impatient.gsm
+libdata/asterisk/sounds/en/you-sound-cute.gsm
+libdata/asterisk/sounds/en/you-wish-to-join.gsm
+libdata/asterisk/sounds/en/your-account.gsm
+libdata/asterisk/sounds/en/your-msg-has-been-saved.gsm
+libdata/asterisk/sounds/en/your-msg-is-too-short.gsm
+libdata/asterisk/sounds/en/your-notifications.gsm
+libdata/asterisk/sounds/en/your-req-notification.gsm
+libdata/asterisk/sounds/en/your-temp-greeting.gsm
+libdata/asterisk/sounds/en/your.gsm
+libdata/asterisk/sounds/en/zip-code.gsm
+libdata/asterisk/static-http/ajamdemo.html
+libdata/asterisk/static-http/astman.css
+libdata/asterisk/static-http/astman.js
+libdata/asterisk/static-http/core-en_US.xml
+libdata/asterisk/static-http/mantest.html
+libdata/asterisk/static-http/prototype.js
+libexec/agi-bin/agi-test.agi
+libexec/agi-bin/eagi-sphinx-test
+libexec/agi-bin/eagi-test
+libexec/agi-bin/jukebox.agi
+${PLIST.webvmail}libexec/cgi-bin/vmail
+man/man8/asterisk.8
+man/man8/astgenkey.8
+man/man8/autosupport.8
+man/man8/safe_asterisk.8
+sbin/astcanary
+sbin/astdb2bdb
+sbin/astdb2sqlite3
+sbin/asterisk
+sbin/astgenkey
+sbin/autosupport
+sbin/rasterisk
+sbin/safe_asterisk
+share/doc/asterisk/Asterisk-Admin-Guide.pdf
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGI Commands.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_answer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_asyncagi break.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_channel status.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_control stream file.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_database del.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_database deltree.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_database get.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_database put.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_exec.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_get data.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_get full variable.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_get option.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_get variable.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_gosub.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_hangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_noop.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_receive char.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_receive text.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_record file.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say alpha.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say date.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say datetime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say digits.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say number.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say phonetic.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_say time.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_send image.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_send text.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set autohangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set callerid.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set context.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set extension.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set music.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set priority.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_set variable.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech activate grammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech create.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech deactivate grammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech destroy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech load grammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech recognize.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech set.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_speech unload grammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_stream file.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_tdd mode.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_verbose.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AGICommand_wait for digit.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AMI Actions.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 AMI Events.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ADSIProg.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AELSub.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AMD.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AddQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AgentLogin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AgentMonitorOutgoing.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_AlarmReceiver.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Answer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Authenticate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_BackGround.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_BackgroundDetect.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Bridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Busy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_CELGenUserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_CallCompletionCancel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_CallCompletionRequest.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ChanIsAvail.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ChanSpy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ChangeMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ChannelRedirect.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ClearHash.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ConfBridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Congestion.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ContinueWhile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ControlPlayback.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DAHDIAcceptR2Call.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DAHDIBarge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DAHDIRAS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DAHDIScan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DAHDISendCallreroutingFacility.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DAHDISendKeypadFacility.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DBdel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DBdeltree.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DISA.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DateTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DeadAGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Dial.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Dictate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Directory.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_DumpChan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_EAGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Echo.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_EndWhile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Exec.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ExecIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ExecIfTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ExitWhile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ExtenSpy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ExternalIVR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Festival.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Flash.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_FollowMe.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ForkCDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_GetCPEID.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Gosub.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_GosubIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Goto.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_GotoIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_GotoIfTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Hangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_HangupCauseClear.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_IAX2Provision.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ICES.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_IVRDemo.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ImportVar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Incomplete.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_JACK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_JabberJoin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_JabberLeave.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_JabberSend.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_JabberSendGroup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_JabberStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Log.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MP3Player.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MSet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Macro.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MacroExclusive.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MacroExit.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MacroIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MailboxExists.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MeetMe.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MeetMeAdmin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MeetMeChannelAdmin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MeetMeCount.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MessageSend.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Milliwatt.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MinivmAccMess.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MinivmDelete.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MinivmGreet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MinivmMWI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MinivmNotify.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MinivmRecord.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MixMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Monitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Morsecode.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_MusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_NBScat.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_NoCDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_NoOp.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ODBCFinish.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ODBC_Commit.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ODBC_Rollback.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_OSPAuth.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_OSPFinish.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_OSPLookup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_OSPNext.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Originate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Page.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Park.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ParkAndAnnounce.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ParkedCall.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_PauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_PauseQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Pickup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_PickupChan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_PlayTones.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Playback.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_PrivacyManager.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Proceeding.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Progress.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Queue.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_QueueLog.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_RaiseException.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Read.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ReadExten.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ReadFile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ReceiveFAX (app_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ReceiveFAX (res_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Record.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_RemoveQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_ResetCDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_RetryDial.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Return.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Ringing.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SIPAddHeader.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SIPDtmfMode.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SIPRemoveHeader.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SIPSendCustomINFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SLAStation.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SLATrunk.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SMS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayAlpha.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayCountPL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayCountedAdj.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayCountedNoun.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayDigits.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayNumber.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayPhonetic.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SayUnixTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SendDTMF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SendFAX (app_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SendFAX (res_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SendImage.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SendText.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SendURL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Set.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SetAMAFlags.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SetCallerPres.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SetMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SkelGuessNumber.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SoftHangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechActivateGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechBackground.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechCreate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechDeactivateGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechDestroy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechLoadGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechProcessingSound.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechStart.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_SpeechUnloadGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_StackPop.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_StartMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_StopMixMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_StopMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_StopMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_StopPlayTones.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_System.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_TestClient.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_TestServer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Transfer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_TryExec.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_TrySystem.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_UnpauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_UnpauseQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_UserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_VMAuthenticate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_VMSayName.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Verbose.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_VoiceMail.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_VoiceMailMain.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_VoiceMailPlayMsg.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Wait.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_WaitExten.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_WaitForNoise.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_WaitForRing.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_WaitForSilence.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_WaitMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_WaitUntil.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_While.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Application_Zapateller.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Command Reference.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Dialplan Applications.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Dialplan Functions.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Documentation.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AES_DECRYPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AES_ENCRYPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AGC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AGENT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AMI_CLIENT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ARRAY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AST_CONFIG.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_AUDIOHOOK_INHERIT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_BASE64_DECODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_BASE64_ENCODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_BLACKLIST.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALENDAR_BUSY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALENDAR_EVENT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALENDAR_QUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALENDAR_QUERY_RESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALENDAR_WRITE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALLCOMPLETION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALLERID.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CALLERPRES.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CHANNEL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CHANNELS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CHECKSIPDOMAIN.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CONFBRIDGE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CONFBRIDGE_INFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CONNECTEDLINE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CSV_QUOTE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CURL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CURLOPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_CUT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DB.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DB_DELETE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DB_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DB_KEYS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DEC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DENOISE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DEVICE_STATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DIALGROUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DIALPLAN_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DUNDILOOKUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DUNDIQUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_DUNDIRESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ENUMLOOKUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ENUMQUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ENUMRESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ENV.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_EVAL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_EXCEPTION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_EXTENSION_STATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FAXOPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FEATURE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FEATUREMAP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FIELDNUM.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FIELDQTY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FILE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FILE_COUNT_LINE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FILE_FORMAT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FILTER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_FRAME_TRACE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_GLOBAL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_GROUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_GROUP_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_GROUP_LIST.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_GROUP_MATCH_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_HANGUPCAUSE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_HANGUPCAUSE_KEYS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_HASH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_HASHKEYS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_HINT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_IAXPEER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_IAXVAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ICONV.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_IF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_IFMODULE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_IFTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_IMPORT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_INC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ISNULL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_JABBER_RECEIVE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_JABBER_STATUS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_JITTERBUFFER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_KEYPADHASH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_LEN.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_LISTFILTER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_LOCAL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_LOCAL_PEEK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_LOCK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MAILBOX_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MASTER_CHANNEL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MATH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MD5.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MEETME_INFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MESSAGE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MESSAGE_DATA.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MINIVMACCOUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MINIVMCOUNTER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_MUTEAUDIO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ODBC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_ODBC_FETCH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_PASSTHRU.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_PITCH_SHIFT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_POP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_PP_EACH_EXTENSION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_PP_EACH_USER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_PRESENCE_STATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_PUSH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_MEMBER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_MEMBER_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_MEMBER_LIST.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_MEMBER_PENALTY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_VARIABLES.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUEUE_WAITING_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_QUOTE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_RAND.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REALTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REALTIME_DESTROY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REALTIME_FIELD.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REALTIME_HASH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REALTIME_STORE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REDIRECTING.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REGEX.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_REPLACE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SET.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SHA1.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SHARED.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SHELL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SHIFT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SIPCHANINFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SIPPEER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SIP_HEADER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SMDI_MSG.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SMDI_MSG_RETRIEVE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SORT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPEECH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPEECH_ENGINE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPEECH_GRAMMAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPEECH_RESULTS_TYPE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPEECH_SCORE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPEECH_TEXT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SPRINTF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SQL_ESC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SRVQUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SRVRESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_STACK_PEEK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_STAT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_STRFTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_STRPTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_STRREPLACE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_SYSINFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_TESTTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_TIMEOUT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_TOLOWER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_TOUPPER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_TRYLOCK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_TXTCIDNAME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_UNLOCK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_UNSHIFT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_URIDECODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_URIENCODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_VALID_EXTEN.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_VERSION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_VMCOUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_VM_INFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 Function_VOLUME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_AGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_AOCMessage.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_AbsoluteTimeout.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_AgentLogoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Agents.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Atxfer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Bridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Challenge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ChangeMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Command.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeKick.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeList.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeListRooms.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeLock.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeMute.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeSetSingleVideoSrc.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeStartRecord.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeStopRecord.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeUnlock.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ConfbridgeUnmute.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_CoreSettings.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_CoreShowChannels.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_CoreStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_CreateConfig.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDIDNDoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDIDNDon.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDIDialOffhook.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDIHangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDIRestart.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDIShowChannels.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DAHDITransfer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DBDel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DBDelTree.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DBGet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DBPut.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_DataGet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Events.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ExtensionState.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Filter.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_FilterList.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_GetConfig.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_GetConfigJSON.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Getvar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Hangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_IAXnetstats.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_IAXpeerlist.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_IAXpeers.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_IAXregistry.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_JabberSend.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ListCategories.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ListCommands.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_LocalOptimizeAway.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Login.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Logoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MailboxCount.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MailboxStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MeetmeList.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MeetmeListRooms.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MeetmeMute.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MeetmeUnmute.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MessageSend.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MixMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MixMonitorMute.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ModuleCheck.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ModuleLoad.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Monitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_MuteAudio.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Originate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_PRIShowSpans.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Park.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ParkedCalls.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Parkinglots.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_PauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Ping.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_PlayDTMF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_PresenceState.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueAdd.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueLog.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueMemberRingInUse.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueuePause.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueuePenalty.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueReload.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueRemove.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueReset.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueRule.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_QueueSummary.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Queues.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Redirect.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Reload.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SIPnotify.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SIPpeers.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SIPpeerstatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SIPqualifypeer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SIPshowpeer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SIPshowregistry.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SKINNYdevices.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SKINNYlines.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SKINNYshowdevice.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SKINNYshowline.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_SendText.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Setvar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_ShowDialPlan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_Status.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_StopMixMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_StopMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_UnpauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_UpdateConfig.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_UserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_VoicemailUsersList.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerAction_WaitEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_AgentCalled.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_AgentComplete.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_AgentConnect.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_AgentDump.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_AgentRingNoAnswer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Agentlogin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Agentlogoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Alarm.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_AlarmClear.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Bridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_BridgeAction.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_BridgeExec.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ChanSpyStart.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ChanSpyStop.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ConfbridgeEnd.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ConfbridgeJoin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ConfbridgeLeave.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ConfbridgeStart.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ConfbridgeTalking.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_DAHDIChannel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_DNDState.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_DTMF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Dial.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ExtensionStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_FullyBooted.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Hangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_HangupHandlerPop.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_HangupHandlerPush.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_HangupHandlerRun.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_HangupRequest.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Hold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Join.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Leave.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_LocalBridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_LogChannel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Masquerade.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MeetmeEnd.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MeetmeJoin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MeetmeLeave.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MeetmeMute.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MeetmeTalkRequest.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MeetmeTalking.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_MessageWaiting.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ModuleLoadReport.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_NewAccountCode.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_NewCallerid.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_NewPeerAccount.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Newchannel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Newexten.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Newstate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_OriginateResponse.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ParkedCall.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ParkedCallGiveUp.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_ParkedCallTimeOut.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Pickup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueCallerAbandon.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueMemberAdded.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueMemberPaused.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueMemberPenalty.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueMemberRemoved.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueMemberRinginuse.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_QueueMemberStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Rename.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_Shutdown.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_SoftHangupRequest.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_SpanAlarm.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_SpanAlarmClear.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_UnParkedCall.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_UserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 11 ManagerEvent_VarSet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk WebRTC Support.html
+share/doc/asterisk/Asterisk-Admin-Guide/Call Identifier Logging.html
+share/doc/asterisk/Asterisk-Admin-Guide/Call Pickup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Dynamic DTMF Features.html
+share/doc/asterisk/Asterisk-Admin-Guide/Hangup Cause Mappings.html
+share/doc/asterisk/Asterisk-Admin-Guide/Hangup Cause.html
+share/doc/asterisk/Asterisk-Admin-Guide/Hangup Handlers.html
+share/doc/asterisk/Asterisk-Admin-Guide/Interactive Connectivity Establishment (ICE) in Asterisk.html
+share/doc/asterisk/Asterisk-Admin-Guide/Named ACLs.html
+share/doc/asterisk/Asterisk-Admin-Guide/New in 11.html
+share/doc/asterisk/Asterisk-Admin-Guide/Pre-Dial Handlers.html
+share/doc/asterisk/Asterisk-Admin-Guide/Presence State.html
+share/doc/asterisk/Asterisk-Admin-Guide/Private Representation of Party Information.html
+share/doc/asterisk/Asterisk-Admin-Guide/SIP Direct Media Reinvite Glare Avoidance.html
+share/doc/asterisk/Asterisk-Admin-Guide/Upgrading to Asterisk 11.html
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/20840650/21069827.odt
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757955
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757956.png
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757957
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757958.png
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757959
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757960.png
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757961
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757962.png
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757963
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757964.png
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757965
+share/doc/asterisk/Asterisk-Admin-Guide/attachments/21463142/21757966.png
+share/doc/asterisk/Asterisk-Admin-Guide/images/border/spacer.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/bullet_blue.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/comment_16.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/error.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/forbidden.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/information.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/smile.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/warning.gif
+share/doc/asterisk/Asterisk-Admin-Guide/index.html
+share/doc/asterisk/Asterisk-Admin-Guide/styles/site.css
+share/doc/asterisk/BUGS
+share/doc/asterisk/CHANGES
+share/doc/asterisk/COPYING
+share/doc/asterisk/CREDITS
+share/doc/asterisk/ChangeLog
+share/doc/asterisk/IAX2-security.pdf
+share/doc/asterisk/IAX2-security.txt
+share/doc/asterisk/LICENSE
+share/doc/asterisk/README
+share/doc/asterisk/README-SERIOUSLY.bestpractices.txt
+share/doc/asterisk/README.txt
+share/doc/asterisk/UPGRADE-1.2.txt
+share/doc/asterisk/UPGRADE-1.4.txt
+share/doc/asterisk/UPGRADE-1.6.txt
+share/doc/asterisk/UPGRADE-1.8.txt
+share/doc/asterisk/UPGRADE-10.txt
+share/doc/asterisk/UPGRADE.txt
+share/doc/asterisk/Zaptel-to-DAHDI.txt
+share/doc/asterisk/api-1.6.2-changes.txt
+share/examples/asterisk/acl.conf
+share/examples/asterisk/adsi.conf
+share/examples/asterisk/agents.conf
+share/examples/asterisk/alarmreceiver.conf
+share/examples/asterisk/alsa.conf
+share/examples/asterisk/amd.conf
+share/examples/asterisk/app_mysql.conf
+share/examples/asterisk/app_skel.conf
+share/examples/asterisk/asterisk.adsi
+share/examples/asterisk/asterisk.conf
+share/examples/asterisk/calendar.conf
+share/examples/asterisk/ccss.conf
+share/examples/asterisk/cdr.conf
+share/examples/asterisk/cdr_adaptive_odbc.conf
+share/examples/asterisk/cdr_custom.conf
+share/examples/asterisk/cdr_manager.conf
+share/examples/asterisk/cdr_mysql.conf
+share/examples/asterisk/cdr_odbc.conf
+share/examples/asterisk/cdr_pgsql.conf
+share/examples/asterisk/cdr_sqlite3_custom.conf
+share/examples/asterisk/cdr_syslog.conf
+share/examples/asterisk/cdr_tds.conf
+share/examples/asterisk/cel.conf
+share/examples/asterisk/cel_custom.conf
+share/examples/asterisk/cel_odbc.conf
+share/examples/asterisk/cel_pgsql.conf
+share/examples/asterisk/cel_sqlite3_custom.conf
+share/examples/asterisk/cel_tds.conf
+share/examples/asterisk/chan_dahdi.conf
+share/examples/asterisk/chan_mobile.conf
+share/examples/asterisk/cli.conf
+share/examples/asterisk/cli_aliases.conf
+share/examples/asterisk/cli_permissions.conf
+share/examples/asterisk/codecs.conf
+share/examples/asterisk/confbridge.conf
+share/examples/asterisk/config_test.conf
+share/examples/asterisk/console.conf
+share/examples/asterisk/dbsep.conf
+share/examples/asterisk/dnsmgr.conf
+share/examples/asterisk/dsp.conf
+share/examples/asterisk/dundi.conf
+share/examples/asterisk/enum.conf
+share/examples/asterisk/extconfig.conf
+share/examples/asterisk/extensions.ael
+share/examples/asterisk/extensions.conf
+share/examples/asterisk/extensions.lua
+share/examples/asterisk/extensions_minivm.conf
+share/examples/asterisk/features.conf
+share/examples/asterisk/festival.conf
+share/examples/asterisk/followme.conf
+share/examples/asterisk/func_odbc.conf
+share/examples/asterisk/gtalk.conf
+share/examples/asterisk/h323.conf
+share/examples/asterisk/http.conf
+share/examples/asterisk/iax.conf
+share/examples/asterisk/iaxprov.conf
+share/examples/asterisk/indications.conf
+share/examples/asterisk/jabber.conf
+share/examples/asterisk/jingle.conf
+share/examples/asterisk/logger.conf
+share/examples/asterisk/manager.conf
+share/examples/asterisk/meetme.conf
+share/examples/asterisk/mgcp.conf
+share/examples/asterisk/minivm.conf
+share/examples/asterisk/misdn.conf
+share/examples/asterisk/modules.conf
+share/examples/asterisk/motif.conf
+share/examples/asterisk/musiconhold.conf
+share/examples/asterisk/muted.conf
+share/examples/asterisk/ooh323.conf
+share/examples/asterisk/osp.conf
+share/examples/asterisk/oss.conf
+share/examples/asterisk/phone.conf
+share/examples/asterisk/phoneprov.conf
+share/examples/asterisk/queuerules.conf
+share/examples/asterisk/queues.conf
+share/examples/asterisk/res_config_mysql.conf
+share/examples/asterisk/res_config_sqlite.conf
+share/examples/asterisk/res_config_sqlite3.conf
+share/examples/asterisk/res_corosync.conf
+share/examples/asterisk/res_curl.conf
+share/examples/asterisk/res_fax.conf
+share/examples/asterisk/res_ldap.conf
+share/examples/asterisk/res_odbc.conf
+share/examples/asterisk/res_pgsql.conf
+share/examples/asterisk/res_pktccops.conf
+share/examples/asterisk/res_snmp.conf
+share/examples/asterisk/res_stun_monitor.conf
+share/examples/asterisk/rtp.conf
+share/examples/asterisk/say.conf
+share/examples/asterisk/sip.conf
+share/examples/asterisk/sip_notify.conf
+share/examples/asterisk/skinny.conf
+share/examples/asterisk/sla.conf
+share/examples/asterisk/smdi.conf
+share/examples/asterisk/telcordia-1.adsi
+share/examples/asterisk/udptl.conf
+share/examples/asterisk/unistim.conf
+share/examples/asterisk/users.conf
+share/examples/asterisk/voicemail.conf
+share/examples/asterisk/vpb.conf
+share/examples/asterisk/xmpp.conf
+share/examples/rc.d/asterisk
+${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
+${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
+@pkgdir libdata/asterisk/keys
+@pkgdir libdata/asterisk/firmware/iax
+@pkgdir libdata/asterisk/documentation/thirdparty

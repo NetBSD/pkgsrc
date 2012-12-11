@@ -1,0 +1,54 @@
+$NetBSD: patch-main_Makefile,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+
+--- main/Makefile.orig	2012-09-13 20:04:51.000000000 +0000
++++ main/Makefile
+@@ -89,6 +89,10 @@ ifeq ($(OSARCH),OpenBSD)
+   AST_LIBS+=-lcrypto -lpthread -lm $(EDITLINE_LIB)
+ endif
+ 
++ifeq ($(OSARCH),dragonfly)
++  AST_LIBS+=-lpthread
++endif
++
+ ifeq ($(OSARCH),SunOS)
+   AST_LIBS+=-lpthread -ldl -lrt -lnsl -lsocket -lresolv
+   ASTSSL_LIBS+=-L/opt/ssl/lib -L/usr/local/ssl/lib
+@@ -215,9 +219,6 @@ ifeq ($(GNU_LD),1)
+ endif
+ 	$(ECHO_PREFIX) echo "   [LD] $^ -> $@"
+ 	$(CMD_PREFIX) $(CC) $(STATIC_BUILD) -o $@ $(CC_LDFLAGS_SO) $^ $(CC_LIBS)
+-ifneq ($(LDCONFIG),)
+-	$(LDCONFIG) $(LDCONFIG_FLAGS) .
+-endif
+ 
+ $(ASTSSL_LIB): $(ASTSSL_LIB).$(ASTSSL_SO_VERSION)
+ 	$(LN) -sf $< $@
+@@ -258,13 +259,10 @@ bininstall:
+ 	$(INSTALL) -m 755 $(MAIN_TGT) "$(DESTDIR)$(ASTSBINDIR)/"
+ ifeq ($(AST_ASTERISKSSL),yes)
+ ifeq ($(findstring darwin,$(OSARCH)),) # not Darwin
+-	$(INSTALL) -m 755 $(ASTSSL_LIB).$(ASTSSL_SO_VERSION) "$(DESTDIR)$(ASTLIBDIR)/"
+-	$(LN) -sf "$(DESTDIR)$(ASTLIBDIR)/$(ASTSSL_LIB).$(ASTSSL_SO_VERSION)" "$(DESTDIR)$(ASTLIBDIR)/$(ASTSSL_LIB)"
++	$(INSTALL) -m 755 $(ASTSSL_LIB).$(ASTSSL_SO_VERSION) "$(DESTDIR)$(PREFIX)/lib/"
++	$(LN) -sf "$(DESTDIR)$(PREFIX)/lib/$(ASTSSL_LIB).$(ASTSSL_SO_VERSION)" "$(DESTDIR)$(PREFIX)/lib/$(ASTSSL_LIB)"
+ else # Darwin
+-	$(INSTALL) -m 755 $(ASTSSL_LIB) "$(DESTDIR)$(ASTLIBDIR)/"
+-endif
+-ifneq ($(LDCONFIG),)
+-	$(LDCONFIG) $(LDCONFIG_FLAGS) "$(DESTDIR)$(ASTLIBDIR)/"
++	$(INSTALL) -m 755 $(ASTSSL_LIB) "$(DESTDIR)$(PREFIX)/lib/"
+ endif
+ endif
+ 	$(LN) -sf asterisk "$(DESTDIR)$(ASTSBINDIR)/rasterisk"
+@@ -272,10 +270,7 @@ endif
+ binuninstall:
+ 	rm -f "$(DESTDIR)$(ASTSBINDIR)/$(MAIN_TGT)"
+ 	rm -f "$(DESTDIR)$(ASTSBINDIR)/rasterisk"
+-	rm -f "$(DESTDIR)$(ASTLIBDIR)/$(ASTSSL_LIB).$(ASTSSL_SO_VERSION)"
+-ifneq ($(LDCONFIG),)
+-	$(LDCONFIG) $(LDCONFIG_FLAGS) "$(DESTDIR)$(ASTLIBDIR)/"
+-endif
++	rm -f "$(DESTDIR)$(PREFIX)/lib/$(ASTSSL_LIB).$(ASTSSL_SO_VERSION)"
+ 
+ clean::
+ 	rm -f asterisk libasteriskssl.o
