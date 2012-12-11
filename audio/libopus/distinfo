@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/09/16 14:17:20 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2012/12/11 10:26:56 ryoon Exp $
 
-SHA1 (opus-1.0.1.tar.gz) = 4d6358232606fbce80d9e63ed0d9b3b49fafb711
-RMD160 (opus-1.0.1.tar.gz) = fe8d2128fe136a28e094e77bd0332c88b0b66dd9
-Size (opus-1.0.1.tar.gz) = 767241 bytes
+SHA1 (opus-1.0.2.tar.gz) = 37dd3d69b10612cd513ccf26675ef6d61eda24b4
+RMD160 (opus-1.0.2.tar.gz) = d1aa4c534cd7dc629e3ac155866bba810bb6ce42
+Size (opus-1.0.2.tar.gz) = 777306 bytes
