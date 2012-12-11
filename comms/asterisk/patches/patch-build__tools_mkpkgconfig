@@ -1,0 +1,21 @@
+$NetBSD: patch-build__tools_mkpkgconfig,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
+
+--- build_tools/mkpkgconfig.orig	2011-08-25 15:29:56.000000000 +0000
++++ build_tools/mkpkgconfig
+@@ -21,12 +21,15 @@ else
+ fi
+ 
+ ## Clean out CFLAGS for the spec file.
++## pkgsrc -- the regex below isn't sed compatible, so always use perl
++EXTREGEX="perl -pe"
+ 
+ LOCAL_CFLAGS=`echo $CFLAGS | ${EXTREGEX} 's/\s*-pipe\s*//g' | ${EXTREGEX} 's/-[Wmp]\S*\s*//g' | \
+   ${EXTREGEX} 's/-I(include|\.\.\/include) //g' | \
+   ${EXTREGEX} 's/-DINSTALL_PREFIX=\S* //g' | \
+   ${EXTREGEX} 's/-DASTERISK_VERSION=\S* //g' | \
+-  ${EXTREGEX} 's/-DAST(ETCDIR|LIBDIR|VARLIBDIR|VARRUNDIR|SPOOLDIR|LOGDIR|CONFPATH|MODDIR|AGIDIR)=\S* //g'`
++  ${EXTREGEX} 's/-DAST(ETCDIR|LIBDIR|VARLIBDIR|VARRUNDIR|SPOOLDIR|LOGDIR|CONFPATH|MODDIR|AGIDIR)=\S* //g' | \
++  ${EXTREGEX} "s;${WRKSRC};${PREFIX};g"`
+ 
+ 
+ cat <<EOF > "$PPATH/asterisk.pc"
