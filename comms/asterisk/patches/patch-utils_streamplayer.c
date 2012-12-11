@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2006/01/13 20:32:38 riz Exp $
+$NetBSD: patch-utils_streamplayer.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
 
---- utils/streamplayer.c.orig	2006-01-13 01:14:29.000000000 +0000
+--- utils/streamplayer.c.orig	2011-07-14 20:28:54.000000000 +0000
 +++ utils/streamplayer.c
-@@ -31,7 +31,7 @@
+@@ -53,7 +53,7 @@
  #include <unistd.h>
  #include <sys/types.h>
  #include <sys/socket.h>

@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.2 2006/01/13 20:32:38 riz Exp $
+$NetBSD: patch-include_asterisk_endian.h,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
 
---- include/asterisk/endian.h.orig	2006-01-13 00:17:16.000000000 +0000
+--- include/asterisk/endian.h.orig	2008-10-09 17:48:53.000000000 +0000
 +++ include/asterisk/endian.h
-@@ -32,6 +32,11 @@
+@@ -31,6 +31,11 @@
  #ifndef __BYTE_ORDER
  #ifdef __linux__
  #include <endian.h>
@@ -13,4 +13,4 @@ $NetBSD: patch-ai,v 1.2 2006/01/13 20:32:38 riz Exp $
 +#define __BIG_ENDIAN BIG_ENDIAN
  #elif defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__)
  #if defined(__OpenBSD__)
- #include <machine/types.h>
+ #include "asterisk/compat.h"
