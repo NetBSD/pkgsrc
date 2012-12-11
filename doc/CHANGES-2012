@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3792 2012/12/11 00:17:07 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3793 2012/12/11 05:13:39 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5862,3 +5862,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Class-XSAccessor to 1.16 [wen 2012-12-10]
 	Updated devel/p5-Class-Accessor-Grouped to 0.10009 [wen 2012-12-10]
 	Updated lang/python33 to 3.3.0nb1 [wiz 2012-12-11]
+	Updated editors/emacs20 to 20.7nb16 [dholland 2012-12-11]
