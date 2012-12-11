@@ -1,0 +1,9 @@
+PolarSSL is an SSL library written in ANSI C. PolarSSL makes it easy for
+developers to include cryptographic and SSL/TLS capabilities in their
+(embedded) products with as little hassle as possible. It is designed to be
+readable, documented, tested, loosely coupled and portable.
+
+This package includes headers/libs only, not the demo programs.
+
+PolarSSL is GPLv2, but offers exceptions to be distributed with other works
+licensed as Apache, BSD, CC0, EUPL, LGPL, ISC, WTFPL, X11, zlib/libpng.
