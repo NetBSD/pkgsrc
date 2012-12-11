@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.228 2012/11/20 11:41:29 abs Exp $
+# $NetBSD: makevars.map,v 1.229 2012/12/11 14:58:00 ryoon Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -569,21 +569,21 @@ PKG_JVM			{						\
 				jdk jdk14				\
 				kaffe					\
 				sun-jdk13 sun-jdk14 sun-jdk15 sun-jdk6	\
-				openjdk7 openjdk7-bin			\
+				openjdk7 openjdk7-bin sun-jdk7		\
 			} [$system]
 PKG_JVMS_ACCEPTED	List of {					\
 				blackdown-jdk13				\
 				jdk jdk14				\
 				kaffe					\
 				sun-jdk13 sun-jdk14 sun-jdk15 sun-jdk6	\
-				openjdk7 openjdk7-bin			\
+				openjdk7 openjdk7-bin sun-jdk7		\
 			} [m:s,c:ds]
 PKG_JVM_DEFAULT		{						\
 				blackdown-jdk13				\
 				jdk jdk14				\
 				kaffe					\
 				sun-jdk13 sun-jdk14 sun-jdk15 sun-jdk6	\
-				openjdk7 openjdk7-bin			\
+				openjdk7 openjdk7-bin sun-jdk7		\
 			} [$user]
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname [m:s]
