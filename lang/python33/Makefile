@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/12/10 03:15:48 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/11 00:16:56 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python33-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -46,16 +47,6 @@ PY_PLATNAME=	linux2
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
-
-# builds additional modules if OpenSSL < 0.9.8
-PLIST_VARS+=		openssl097
-CHECK_BUILTIN.openssl:=	yes
-.include "../../security/openssl/builtin.mk"
-CHECK_BUILTIN.openssl:=	no
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS]) && \
-    !empty(BUILTIN_PKG.openssl:Mopenssl-0.9.[67]*)
-PLIST.openssl097=	yes
-.endif
 
 # ossaudiodev is only available on x86 for the following platforms
 PLIST_VARS+=	oss
@@ -106,7 +97,9 @@ INSTALL_TARGET=	altinstall
 REPLACE_INTERPRETER+=	py33
 REPLACE.py33.old=	.*python[^ ]*
 REPLACE.py33.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py33=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
+REPLACE_FILES.py33=	Lib/*.py Lib/*/*.py Lib/*/*/*.py Lib/*/*/*/*.py
+
+CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
 
 .if ${OPSYS} == "HPUX"
 post-install:
