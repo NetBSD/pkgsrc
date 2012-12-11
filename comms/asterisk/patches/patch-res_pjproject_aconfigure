@@ -1,0 +1,24 @@
+$NetBSD: patch-res_pjproject_aconfigure,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+
+--- res/pjproject/aconfigure.orig	2012-07-01 17:28:57.000000000 +0000
++++ res/pjproject/aconfigure
+@@ -3468,10 +3468,6 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+-if test -z "$CROSS_COMPILE"; then
+-    CROSS_COMPILE=`echo ${CC} | sed 's/gcc//'`
+-fi
+-
+ if test "$AR" = ""; then AR="${CROSS_COMPILE}ar rv"; fi
+ 
+ if test "$LD" = ""; then LD="$CC"; fi
+@@ -6152,7 +6148,7 @@ $as_echo_n "checking ffmpeg packages... 
+ 				av_pkg="$av_pkg libavcore"
+ 			fi
+ 
+-			if test "x$av_pkg" == "x"; then
++			if test "x$av_pkg" = "x"; then
+ 			   { $as_echo "$as_me:${as_lineno-$LINENO}: result: none detected (check the prefix)! **" >&5
+ $as_echo "none detected (check the prefix)! **" >&6; }
+ 			else
