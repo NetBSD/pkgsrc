@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3794 2012/12/11 08:23:05 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.3795 2012/12/11 10:27:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5864,3 +5864,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/python33 to 3.3.0nb1 [wiz 2012-12-11]
 	Updated editors/emacs20 to 20.7nb16 [dholland 2012-12-11]
 	Updated comms/asterisk to 11.1.0 [jnemeth 2012-12-11]
+	Updated audio/libopus to 1.0.2 [ryoon 2012-12-11]
