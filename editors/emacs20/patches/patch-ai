@@ -1,16 +1,7 @@
-$NetBSD: patch-ai,v 1.2 2006/01/04 17:00:32 joerg Exp $
+$NetBSD: patch-ai,v 1.3 2012/12/11 04:54:43 dholland Exp $
 
 --- src/sysdep.c.orig	2000-05-24 13:59:14.000000000 +0000
 +++ src/sysdep.c
-@@ -104,8 +104,6 @@ extern unsigned start __asm__ ("start");
- #endif
- #endif
- 
--extern int errno;
--
- #ifdef VMS
- #include <rms.h>
- #include <ttdef.h>
 @@ -2134,6 +2132,7 @@ unrequest_sigio ()
   *
   */
