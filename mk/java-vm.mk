@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.89 2012/11/07 16:26:51 jperkin Exp $
+# $NetBSD: java-vm.mk,v 1.90 2012/12/11 14:54:00 ryoon Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: kaffe openjdk7 openjdk7-bin
-#		sun-jdk6 jdk15 jdk16
+#		sun-jdk6 sun-jdk7 jdk15 jdk16
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -70,7 +70,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
-_PKG_JVMS.7=		openjdk7 openjdk7-bin
+_PKG_JVMS.7=		openjdk7 openjdk7-bin sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6 jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5}
@@ -142,6 +142,17 @@ _ONLY_FOR_PLATFORMS.openjdk7= \
 _ONLY_FOR_PLATFORMS.openjdk7-bin= \
 	NetBSD-[5-9]*-i386 \
 	NetBSD-[5-9]*-x86_64
+_ONLY_FOR_PLATFORMS.sun-jdk7= \
+	Darwin-9.*-i386 Darwin-9.*-x86_64 \
+	Darwin-10.*-i386 Darwin-10.*-x86_64 \
+	Darwin-11.*-i386 Darwin-11.*-x86_64 \
+	DragonFly-*-i386 \
+	FreeBSD-6.*-i386 \
+	Linux-*-i[3-6]86 \
+	Linux-*-x86_64 \
+	NetBSD-[6-9]*-i386 NetBSD-[6-9]*-x86_64 \
+	SunOS-5.11-i386 \
+	SunOS-5.11-x86_64
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
 .for _jvm_ in ${PKG_JVMS_ACCEPTED}
@@ -165,6 +176,7 @@ _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk7-bin=	openjdk7-bin
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
+_JAVA_PKGBASE.sun-jdk7=		sun-jre7
 
 # The following is copied from the respective JVM Makefiles.
 _JAVA_NAME.jdk=			jdk11
@@ -173,6 +185,7 @@ _JAVA_NAME.kaffe=		kaffe
 _JAVA_NAME.openjdk7=		openjdk7
 _JAVA_NAME.openjdk7-bin=	openjdk7-bin
 _JAVA_NAME.sun-jdk6=		sun6
+_JAVA_NAME.sun-jdk7=		sun7
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -227,6 +240,8 @@ BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk7-bin?=	openjdk7-bin-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
 
 _JRE.jdk15=		jdk15
 _JRE.jdk16=		jdk16
@@ -234,6 +249,7 @@ _JRE.kaffe=		kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk7-bin=	openjdk7-bin
 _JRE.sun-jdk6=		sun-jre6
+_JRE.sun-jdk7=		sun-jre7
 
 _JAVA_BASE_CLASSES=	classes.zip
 
@@ -261,6 +277,11 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7-bin
 _JDK_PKGSRCDIR=		../../lang/sun-jdk6
 _JRE_PKGSRCDIR=		../../lang/sun-jre6
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-6
+UNLIMIT_RESOURCES+=	datasize
+.elif ${_PKG_JVM} == "sun-jdk7"
+_JDK_PKGSRCDIR=		../../lang/sun-jdk7
+_JRE_PKGSRCDIR=		../../lang/sun-jre7
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-7
 UNLIMIT_RESOURCES+=	datasize
 .endif
 
