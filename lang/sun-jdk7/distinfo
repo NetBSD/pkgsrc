@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2012/12/11 14:51:33 ryoon Exp $
+
+SHA1 (jdk-7u9-linux-i586.tar.gz) = ec22bcf3632fa688318e39f195f362fe5ab21616
+RMD160 (jdk-7u9-linux-i586.tar.gz) = 29ae42f8b3016e07077769367239b981b2a1fc09
+Size (jdk-7u9-linux-i586.tar.gz) = 97361259 bytes
+SHA1 (jdk-7u9-linux-x64.tar.gz) = 1a641a847d174dbb6ff3f443cbde28cfec040942
+RMD160 (jdk-7u9-linux-x64.tar.gz) = 1a74cf5da70a554d6338cfddea49a129d6413e78
+Size (jdk-7u9-linux-x64.tar.gz) = 96043498 bytes
