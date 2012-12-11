@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.449 2012/11/30 15:50:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.450 2012/12/11 23:31:16 gdt Exp $
 #
 
 COMMENT=	Security tools
@@ -287,6 +287,7 @@ SUBDIR+=	pinentry-qt4
 SUBDIR+=	pinepgp
 SUBDIR+=	pkcs11-helper
 SUBDIR+=	pks
+SUBDIR+=	polarssl
 SUBDIR+=	policykit
 SUBDIR+=	policykit-gnome
 SUBDIR+=	polkit-qt
