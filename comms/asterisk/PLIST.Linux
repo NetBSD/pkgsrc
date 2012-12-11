@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2006/01/13 20:32:38 riz Exp $
-lib/asterisk/modules/chan_oss.so
