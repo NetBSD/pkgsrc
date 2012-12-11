@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL,v 1.1 2012/12/11 14:47:17 ryoon Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${PREFIX}/bin/sun7-java -Xshare:dump
+	;;
+esac

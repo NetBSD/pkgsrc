@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2012/12/11 14:47:17 ryoon Exp $
+
+In order to be able to run the JVM, you need to add the following line
+to your /etc/fstab:
+
+    procfs /emul/linux/proc procfs rw,linux
+
+Furthermore, the maximum data segment size assigned to your user must
+be at least 262144.
+
+You may want to read the following for details about running this JDK:
+
+	${JAVA_HOME}/README
+
+===========================================================================

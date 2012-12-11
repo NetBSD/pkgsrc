@@ -1,0 +1,79 @@
+# $NetBSD: Makefile.common,v 1.1 2012/12/11 14:47:17 ryoon Exp $
+# used by lang/sun-jre7/Makefile
+# used by lang/sun-jdk7/Makefile
+
+CATEGORIES=	lang java
+COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.oracle.com/technetwork/java/index.html
+DOWNLOAD=	http://www.oracle.com/technetwork/java/javase/downloads/index.html
+ARCHIVE=	http://www.oracle.com/technetwork/java/archive-139210.html
+
+RESTRICTED=	Redistribution of repackaged binaries not permitted
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
+
+USE_TOOLS+=	pax
+
+.include "../../mk/bsd.prefs.mk"
+
+EMUL_MODULES.linux=	compat locale x11
+
+DIST_ARCH.i386=		i586
+DIST_ARCH.x86_64=	x64
+
+.if defined(DIST_ARCH.${EMUL_ARCH})
+DIST_ARCH=		${DIST_ARCH.${EMUL_ARCH}}
+.else
+DIST_ARCH=		${EMUL_ARCH}
+.endif
+
+JAVA_ARCH.x86_64=	amd64
+
+.if defined(JAVA_ARCH.${EMUL_ARCH})
+JAVA_ARCH=		${JAVA_ARCH.${EMUL_ARCH}}
+.else
+JAVA_ARCH=		${EMUL_ARCH}
+.endif
+FILES_SUBST+=		JAVA_ARCH=${JAVA_ARCH:Q}
+
+INTERACTIVE_STAGE=	fetch
+BUILD_DIRS=		# empty
+
+.include "../../mk/bsd.prefs.mk"
+
+JAVA_HOME=		${PREFIX}/java/sun-7
+JAVA_NAME=		sun7
+JAVA_UNLIMIT=		datasize
+JAVA_LD_LIBRARY_PATH=	${JAVA_HOME}/lib/${JAVA_ARCH}/jli
+
+MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
+
+EXTRACT_ENV+=	HOME=${WRKDIR}/fake_home
+
+# the following forces compression of jarfiles, which is a huge disk
+# space win and trivial to no speed reduction in the face of the
+# new class sharing in Java 5+... -tvierling
+EXTRACT_ENV+=	UNPACK200_FLAGS=-Htrue
+
+FETCH_MESSAGE+=	" The file ${DISTNAME}${EXTRACT_SUFX} containing ${DOWNLOAD_NAME}"
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	" must be fetched into:"
+FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
+FETCH_MESSAGE+=	" from:"
+FETCH_MESSAGE+=	"	${DOWNLOAD}"
+FETCH_MESSAGE+=	"	or ${ARCHIVE}"
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
+FETCH_MESSAGE+=	" license, then choose 'Linux tar.gz file'."
+
+do-install:
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
+
+.include "../../mk/java-env.mk"
