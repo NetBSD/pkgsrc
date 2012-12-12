@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/12/12 13:21:42 wiz Exp $
+
+Install configuration files to EGDIR
+
+--- Makefile.in.orig	2009-03-08 14:46:47.000000000 +0000
++++ Makefile.in
+@@ -569,12 +569,12 @@ install-force: all install-translations
+ 	for i in $(PROGRAMS); do\
+ 		$(INSTALL) -m 755 $$i $(DESTDIR)$(bindir) ; \
+ 	done;
+-	$(INSTALL) -m 755 -d $(DESTDIR)$(sysconfdir)/fish
++	$(INSTALL) -m 755 -d $(DESTDIR)$(EGDIR)/fish
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/completions
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/functions
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/man
+-	$(INSTALL) -m 644 etc/config.fish                  $(DESTDIR)$(sysconfdir)/fish/
++	$(INSTALL) -m 644 etc/config.fish                  $(DESTDIR)$(EGDIR)/fish/
+ 	$(INSTALL) -m 644 share/config.fish                $(DESTDIR)$(datadir)/fish/
+ 	for i in $(COMPLETIONS_DIR_FILES); do \
+ 		$(INSTALL) -m 644 $$i $(DESTDIR)$(datadir)/fish/completions/; \
