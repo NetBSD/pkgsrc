@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/06 11:54:29 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/12/12 10:44:08 wiz Exp $
 #
 
 DISTNAME=		REminiscence-0.1.6
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://cyxdown.free.fr/reminiscence/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dillo@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cyxdown.free.fr/reminiscence/
 COMMENT=		Engine to play Flashback by Delphine Software
 

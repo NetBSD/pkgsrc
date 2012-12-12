@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/08 13:45:45 asau Exp $
+# $NetBSD: Makefile,v 1.41 2012/12/12 10:44:11 wiz Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://gd.tuwien.ac.at/publishing/tex/tex-utils/psutils/
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.go.dlr.de/wt/dv/ig/pdinfo_dv/psutils.html
 COMMENT=	Utilities for manipulating PostScript documents
 
