@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2012/12/12 13:16:02 wiz Exp $
+
+SHA1 (xa-2.3.5.tar.gz) = d8f4564953adfcee69faacfa300b954875fabe21
+RMD160 (xa-2.3.5.tar.gz) = 7b03a1b217dc855064f7b2b952bdb3762bfed014
+Size (xa-2.3.5.tar.gz) = 132551 bytes
+SHA1 (patch-Makefile) = d66b210b479135d876bfd5fe2ec8316f63238e10
+SHA1 (patch-src_xa.c) = 1c42a07c14cfb4771d29a7f2774368fa57edb5b8
