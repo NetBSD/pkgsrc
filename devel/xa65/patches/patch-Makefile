@@ -1,0 +1,57 @@
+$NetBSD: patch-Makefile,v 1.1 2012/12/12 13:16:02 wiz Exp $
+
+Install documentation, fix Makefile variables
+
+--- Makefile.orig	2009-02-08 06:49:30.000000000 +0000
++++ Makefile
+@@ -15,11 +15,11 @@ LDFLAGS = -lc
+ #CFLAGS =
+ #LD = ld
+ 
+-DESTDIR = /usr/local
++PREFIX?= /usr/local
+ 
+-BINDIR = $(DESTDIR)/bin
+-MANDIR = $(DESTDIR)/share/man/man1
+-DOCDIR = $(DESTDIR)/share/doc
++BINDIR = $(PREFIX)/bin
++MANDIR = $(PREFIX)/man/man1
++DOCDIR = $(PREFIX)/share/doc
+ 
+ MKDIR = mkdir -p
+ INSTALL = install
+@@ -51,11 +51,29 @@ clean:
+ 	rm -f xa *.exe *.o65
+ 
+ install: xa uncpk
+-	$(MKDIR) $(BINDIR)
+-	$(MKDIR) $(MANDIR)
+-	$(INSTALL) xa reloc65 ldo65 file65 printcbm uncpk $(BINDIR)
+-	$(INSTALL) man/file65.1 man/ldo65.1 man/printcbm.1 man/reloc65.1 man/uncpk.1 man/xa.1 $(MANDIR)
+-	#$(MKDIR) $(DOCDIR)/xa65
++	$(MKDIR) $(DESTDIR)$(BINDIR)
++	$(MKDIR) $(DESTDIR)$(MANDIR)
++	$(MKDIR) $(DESTDIR)$(DOCDIR)/xa65
++.for prg in xa reloc65 ldo65 file65 printcbm uncpk
++	$(BSD_INSTALL_PROGRAM) $(prg) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_DATA) man/$(prg).1 $(DESTDIR)$(MANDIR)
++.endfor	
++.for doc in	examples/c64def.def   \
++		examples/pack.doc     \
++		examples/pack_eng.a65 \
++		examples/pack_ger.a65 \
++		examples/peng.l       \
++		doc/fileformat.txt    \
++		doc/README            \
++	     	doc/xaannounce        \
++		doc/xa-de.log         \
++		doc/xa-de.txt         \
++		doc/xa.html           \
++		doc/xa.log            \
++		doc/xa.txt
++
++	$(BSD_INSTALL_DATA) $(doc) $(DESTDIR)$(DOCDIR)/xa65
++.endfor
+ 
+ dist: clean
+ 	#cd .. ; tar cvf xa-2.3.5A.tar xa-2.3.5 ; gzip xa-2.3.5A.tar

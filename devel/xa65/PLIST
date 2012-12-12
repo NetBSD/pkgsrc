@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/12 13:16:02 wiz Exp $
+bin/file65
+bin/ldo65
+bin/printcbm
+bin/reloc65
+bin/uncpk
+bin/xa
+man/man1/file65.1
+man/man1/ldo65.1
+man/man1/printcbm.1
+man/man1/reloc65.1
+man/man1/uncpk.1
+man/man1/xa.1
+share/doc/xa65/README
+share/doc/xa65/c64def.def
+share/doc/xa65/fileformat.txt
+share/doc/xa65/pack.doc
+share/doc/xa65/pack_eng.a65
+share/doc/xa65/pack_ger.a65
+share/doc/xa65/peng.l
+share/doc/xa65/xa-de.log
+share/doc/xa65/xa-de.txt
+share/doc/xa65/xa.html
+share/doc/xa65/xa.log
+share/doc/xa65/xa.txt
+share/doc/xa65/xaannounce
