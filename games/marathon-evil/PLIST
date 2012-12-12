@@ -1,0 +1,62 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/12 16:26:51 wiz Exp $
+share/AlephOne/Scenarios/Evil/Cursed Data.mpg
+share/AlephOne/Scenarios/Evil/Cursed Images.imgA
+share/AlephOne/Scenarios/Evil/Cursed Map.sceA
+share/AlephOne/Scenarios/Evil/Cursed Net Maps.sceA
+share/AlephOne/Scenarios/Evil/Cursed Net Physics.phyA
+share/AlephOne/Scenarios/Evil/Cursed Physics.phyA
+share/AlephOne/Scenarios/Evil/Cursed Shapes.shpA
+share/AlephOne/Scenarios/Evil/Cursed Sounds.sndA
+share/AlephOne/Scenarios/Evil/Fonts.fntA
+share/AlephOne/Scenarios/Evil/Music.ogg
+share/AlephOne/Scenarios/Evil/Scripts/Evil Scenario.mml
+share/AlephOne/Scenarios/Evil/Scripts/Evil Strings.mml
+share/AlephOne/Scenarios/Evil/Scripts/Transparent_Liquids.mml
+share/AlephOne/Scenarios/Evil/Scripts/Transparent_Sprites.mml
+share/AlephOne/Scenarios/Evil/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
+share/AlephOne/Scenarios/Evil/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
+share/AlephOne/Scenarios/Evil/Themes/Default/LICENSE-DejaVu
+share/AlephOne/Scenarios/Evil/Themes/Default/Makefile
+share/AlephOne/Scenarios/Evil/Themes/Default/Makefile.am
+share/AlephOne/Scenarios/Evil/Themes/Default/Makefile.in
+share/AlephOne/Scenarios/Evil/Themes/Default/README
+share/AlephOne/Scenarios/Evil/Themes/Default/bankgthd.ttf
+share/AlephOne/Scenarios/Evil/Themes/Default/bankgthd.ttf.txt
+share/AlephOne/Scenarios/Evil/Themes/Default/button_c.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/button_c_p.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/button_l.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/button_l_p.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/button_r.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/button_r_p.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_b.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_bl.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_br.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_l.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_r.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_t.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_tl.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/frame_tr.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_b.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_bl.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_br.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_l.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_r.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_t.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_tl.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/list_tr.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/resources
+share/AlephOne/Scenarios/Evil/Themes/Default/slider.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/slider_c.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/slider_l.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/slider_r.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/theme.mml
+share/AlephOne/Scenarios/Evil/Themes/Default/theme2.mml
+share/AlephOne/Scenarios/Evil/Themes/Default/thumb_b.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/thumb_bc.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/thumb_c.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/thumb_t.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/thumb_tc.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/tiny_button_c.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/tiny_button_l.bmp
+share/AlephOne/Scenarios/Evil/Themes/Default/tiny_button_r.bmp
+share/doc/marathon-evil/EVIL ReadMe.txt
