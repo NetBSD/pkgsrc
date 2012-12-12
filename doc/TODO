@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11732 2012/12/12 12:25:52 wiz Exp $
+$NetBSD: TODO,v 1.11733 2012/12/12 12:36:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -862,7 +862,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o milkytracker-0.90.85
 	o milter-manager-1.8.5
 	o mined-2012.22
-	o minicom-2.6.1 [pkg/47209]
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mirmon-1.37
