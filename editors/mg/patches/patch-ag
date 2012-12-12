@@ -1,22 +1,42 @@
-$NetBSD: patch-ag,v 1.1.1.1 2009/02/13 11:04:14 abs Exp $
+$NetBSD: patch-ag,v 1.2 2012/12/12 12:47:50 wiz Exp $
 
---- Makefile.in.orig	2008-12-11 09:11:05.000000000 +0000
+--- Makefile.in.orig	2011-09-05 18:59:14.000000000 +0000
 +++ Makefile.in
-@@ -7,7 +7,7 @@
+@@ -7,20 +7,21 @@
  
  name=		mg
  
 -prefix=		/usr/local
-+prefix?=	/usr/local
++prefix?=	/usr/pkg/
  bindir=		$(prefix)/bin
  libdir=		$(prefix)/lib
  includedir=	$(prefix)/include
-@@ -17,7 +17,7 @@ mandir=		$(prefix)/man
+ mandir=		$(prefix)/man
++docdir=		$(prefix)/share/doc
+ 
+ 
  CC=		gcc
  CFLAGS?=	-O2 -pipe
- CFLAGS+=	-g -Wall -Werror
--LDFLAGS= 	-lncurses
-+LDFLAGS+= 	-lncurses
+-CFLAGS+=	-g -Wall -Werror -Wno-error=unused-but-set-variable
+-LIBS= 		-lncurses
++CFLAGS+=	-g -Wall -Werror
++LIBS+= 		-lncurses
  
- INSTALL=	/usr/bin/install
- STRIP=		/usr/bin/strip
+-INSTALL=	/usr/bin/install
+-STRIP=		/usr/bin/strip
++INSTALL?=	/usr/bin/install
++STRIP?=		/usr/bin/strip
+ 
+ 
+ OBJS= 	autoexec.o \
+@@ -86,8 +87,10 @@ clean:
+ install: $(name) $(name).1
+ 	$(INSTALL) -d $(DESTDIR)$(bindir)
+ 	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
++	$(INSTALL) -d $(DESTDIR)$(docdir)/mg
+ 	$(INSTALL) -m 755 $(name)		$(DESTDIR)$(bindir)/$(name)
+ 	$(INSTALL) -m 444 $(name).1		$(DESTDIR)$(mandir)/man1/$(name).1
++	$(INSTALL) -m 444 tutorial		$(DESTDIR)$(docdir)/mg/tutorial
+ 
+ install-strip: install
+ 	$(STRIP) $(DESTDIR)$(bindir)/$(name)

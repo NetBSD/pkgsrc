@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2009/03/11 19:24:41 hasso Exp $
+$NetBSD: patch-ah,v 1.2 2012/12/12 12:47:50 wiz Exp $
 
---- fileio.c.orig	2009-03-11 19:57:37 +0200
-+++ fileio.c	2009-03-11 19:58:36 +0200
-@@ -15,6 +15,10 @@
+--- fileio.c.orig	2011-09-05 18:26:37.000000000 +0000
++++ fileio.c
+@@ -14,6 +14,10 @@
  #define	DEFFILEMODE	(S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.1 2009/03/11 19:24:41 hasso Exp $
  #include <sys/time.h>
  #include <sys/resource.h>
  #include <sys/wait.h>
-@@ -545,11 +549,7 @@ make_file_list(char *buf)
+@@ -544,11 +548,7 @@ make_file_list(char *buf)
  	 * SV files are fairly short.  For BSD, something more general would
  	 * be required.
  	 */
