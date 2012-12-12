@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2011/08/01 09:30:33 adam Exp $
+$NetBSD: patch-ac,v 1.7 2012/12/12 12:35:21 wiz Exp $
 
---- src/updown.c.orig	2010-05-30 20:34:00.000000000 +0000
+--- src/updown.c.orig	2011-09-07 21:04:32.000000000 +0000
 +++ src/updown.c
-@@ -294,7 +294,7 @@ void updown(int what, int nr)
+@@ -296,7 +296,7 @@ void updown(int what, int nr)
      do_log("%s", cmdline);   /* jl 22.06.97 */
  
    if (P_PFULL(g) == 'N') {
