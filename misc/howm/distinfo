@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/25 11:04:56 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/12/12 13:10:54 wiz Exp $
 
-SHA1 (howm-1.3.9.1.tar.gz) = 0b708d389e3c414e22abc18a030f0815b6b0220c
-RMD160 (howm-1.3.9.1.tar.gz) = c4c870b49458aa9944845763773e8dbdbadd4f3f
-Size (howm-1.3.9.1.tar.gz) = 455351 bytes
+SHA1 (howm-1.4.0.tar.gz) = 191bdbcfd277f02c62b99c98b840c88a8e572671
+RMD160 (howm-1.4.0.tar.gz) = b5c6321e7cc1e366cd24d97f7e15031f23fc0f04
+Size (howm-1.4.0.tar.gz) = 453907 bytes

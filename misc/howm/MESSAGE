@@ -1,10 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/02/25 11:04:56 obache Exp $
+$NetBSD: MESSAGE,v 1.2 2012/12/12 13:10:54 wiz Exp $
 
 Write below to your ~/.emacs or ~/.emacs.el:
 
   ;(setq howm-menu-lang 'ja)
   (global-set-key "\C-c,," 'howm-menu)
   (autoload 'howm-menu "howm" "Hitori Otegaru Wiki Modoki" t)
+
+If you are upgrading from a version of howm prior to 1.4.0, please read
+
+  ${PREFIX}/share/doc/howm/index.html
+
+on "Update from old version" section.
 
 ===========================================================================
