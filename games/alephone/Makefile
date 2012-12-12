@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/12/12 10:22:37 wiz Exp $
 
-DISTNAME=	AlephOne-20100424
+DISTNAME=	AlephOne-20120514
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +12,7 @@ COMMENT=	Classic 2.5D FPS game engine, updated to use SDL
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	share/doc/AlephOne
