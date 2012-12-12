@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2012/12/12 15:24:17 wiz Exp $
+
+SHA1 (slocate-3.1.tar.gz) = e427552664385b86931b7626c26bd95ae5f9f085
+RMD160 (slocate-3.1.tar.gz) = d3b1e818cc35ce8e87ec1b0764f6b2145a319e13
+Size (slocate-3.1.tar.gz) = 37748 bytes
+SHA1 (patch-ae) = a91bcc950628ee8bbe87e17066502a030b8b9c6d
+SHA1 (patch-af) = 9f12826f9263753d423fa01f0d7904dadbbca0d0
