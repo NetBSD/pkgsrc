@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/10 06:10:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/12 10:22:37 wiz Exp $
 bin/alephone
 man/man6/alephone.6
 share/AlephOne/Fonts
@@ -6,8 +6,11 @@ share/AlephOne/MML/Interface_Rects.mml
 share/AlephOne/MML/Transparent_Liquids.mml
 share/AlephOne/MML/Transparent_Sprites.mml
 share/AlephOne/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
+share/AlephOne/Themes/Default/DejaVuLGCSansCondensed-BoldBold.ttf
 share/AlephOne/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Themes/Default/bankgthd.ttf
+share/AlephOne/Themes/Default/LICENSE-DejaVu
+share/AlephOne/Themes/Default/SquarishSansCT.README
+share/AlephOne/Themes/Default/Squarish_Sans_CT_Medium.ttf
 share/AlephOne/Themes/Default/button_c.bmp
 share/AlephOne/Themes/Default/button_c_p.bmp
 share/AlephOne/Themes/Default/button_l.bmp
