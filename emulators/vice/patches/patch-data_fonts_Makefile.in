@@ -1,0 +1,34 @@
+$NetBSD: patch-data_fonts_Makefile.in,v 1.1 2012/12/12 09:58:03 wiz Exp $
+
+- Don't try to mess in ${HOME}.
+- Don't erase vice-cbm.bdf or try mkfontdir (that is done at pkg_add time).
+
+--- data/fonts/Makefile.in.orig	2012-11-02 21:06:50.000000000 +0000
++++ data/fonts/Makefile.in
+@@ -528,23 +528,9 @@ uninstall-am: uninstall-fontsDATA
+ 
+ 
+ install: install-data-am
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	@echo "Preparing fontdir, please wait..." ; \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	if [ ! `fc-cache --list > /dev/null 2>&1` ] ; then \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	  if test "x${HOME}" != "x" ; then \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	    mkdir ${HOME}/.fonts > /dev/null 2>&1 ; \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	    cp $(fontsdir)/CBM.ttf ${HOME}/.fonts ; \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	    fc-cache ; \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	  else \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	    echo '$$HOME not set... giving up.' ; \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	  fi \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	else \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	  echo 'fc-cache not available... giving up.' ; \
+-@HAVE_FC_CACHE_TRUE@@SDL_COMPILE_FALSE@	fi
+-@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
+-@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
+-@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf ; \
+-@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	rm vice-cbm.bdf ; \
+-@HAVE_FC_CACHE_FALSE@@SDL_COMPILE_FALSE@	mkfontdir .
++@SDL_COMPILE_FALSE@	@echo "Preparing fontdir..." ; \
++@SDL_COMPILE_FALSE@	cd $(DESTDIR)$(fontsdir) ; \
++@SDL_COMPILE_FALSE@	bdftopcf -o vice-cbm.pcf vice-cbm.bdf 
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
