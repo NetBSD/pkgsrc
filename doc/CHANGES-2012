@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3801 2012/12/12 02:08:25 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.3802 2012/12/12 08:36:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5871,3 +5871,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/polarssl version 1.2.0 [gdt 2012-12-11]
 	Added geography/libgeotiff version 1.4.0 [gdt 2012-12-11]
 	Updated www/ikiwiki to 3.20121212 [schmonz 2012-12-12]
+	Updated mail/thunderbird to 17.0nb1 [ryoon 2012-12-12]
