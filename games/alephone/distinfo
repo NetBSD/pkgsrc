@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/07/03 18:45:14 joerg Exp $
+$NetBSD: distinfo,v 1.7 2012/12/12 10:22:37 wiz Exp $
 
-SHA1 (AlephOne-20100424.tar.bz2) = 3d3989703ccb1b5e8a6b6ab0028956f433e4f846
-RMD160 (AlephOne-20100424.tar.bz2) = cc6e0491b0aa7febd854c560c5df56c0a660c757
-Size (AlephOne-20100424.tar.bz2) = 3180896 bytes
-SHA1 (patch-Source_Files-Network-Metaserver-network_metaserver.h) = 8562a2845f7c1cb969f5d8cbd5f4432cd6c852f0
-SHA1 (patch-Source_Files-RenderOther-IMG_savepng.c) = d031268154af7720d036c4ff54766bd755582cfe
-SHA1 (patch-Source__Files_Lua_lua__templates.h) = 2c1963953f4b81c68a2916e3cc7b6c6ea5145490
+SHA1 (AlephOne-20120514.tar.bz2) = 6663237654a6fb9876254ea0f29cf264528b1da6
+RMD160 (AlephOne-20120514.tar.bz2) = eebeb14bbd43574530d67d0a48b0dde7b7db3edc
+Size (AlephOne-20120514.tar.bz2) = 4716348 bytes
