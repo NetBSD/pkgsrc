@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2012/12/12 13:19:06 wiz Exp $
+
+Honour CPPFLAGS
+
+--- src/Makefile.orig	2010-03-06 20:47:50.000000000 +0100
++++ src/Makefile	2010-03-06 20:54:32.000000000 +0100
+@@ -28,7 +28,7 @@
+ 
+ .c.o: 
+ 	@echo CC $<
+-	@$(CC) $(CFLAGS) $< -o $@
++	@$(CC) $(CPPFLAGS) $(CFLAGS) $< -o $@
+ 
+ base64u.o client.o iodined.o: base64u.h
+ base64u.c: base64.c
