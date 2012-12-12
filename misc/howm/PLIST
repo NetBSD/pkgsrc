@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/25 11:04:56 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/12 13:10:54 wiz Exp $
 share/doc/howm/CL-HOWM.ja.rd
 share/doc/howm/OLD.rd
 share/doc/howm/README-j.html
@@ -61,8 +61,6 @@ ${EMACS_LISPPREFIX}/howm/illusion.elc
 ${EMACS_LISPPREFIX}/howm/riffle.el
 ${EMACS_LISPPREFIX}/howm/riffle.elc
 share/howm/ext/hcal.rb
-share/howm/ext/howm-rast-register.rb
-share/howm/ext/howm-rast-search.rb
 share/howm/ext/howm2
 share/howm/ext/howmkara
 share/howm/ext/hsplit.rb
