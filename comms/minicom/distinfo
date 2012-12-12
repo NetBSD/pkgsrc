@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.12 2011/12/05 08:10:18 adam Exp $
+$NetBSD: distinfo,v 1.13 2012/12/12 12:35:21 wiz Exp $
 
-SHA1 (minicom-2.5.tar.gz) = 442250314de63189b619f8744c0669445e2cdd1d
-RMD160 (minicom-2.5.tar.gz) = 4131b9ef37d25cf8f77a70fc4b4de32e7896cc23
-Size (minicom-2.5.tar.gz) = 822499 bytes
-SHA1 (patch-aa) = 1ce591eb1f9969a8dd72194d10f69a1df77c35a7
-SHA1 (patch-ab) = db913d60191fd1b0830746019c6cc9c125069cfb
-SHA1 (patch-ac) = 6af60d8edb50f4cd10bc4b63a792cec2075ed6d5
-SHA1 (patch-ad) = e57999876f690689d858aa07f5c122ea79bfd2f1
-SHA1 (patch-ae) = 1d3267fc666d857bbab05a542de6d3aa1ba53e14
-SHA1 (patch-ag) = cf6c551736feb77f7f714cb4ba8b9a787eac937d
-SHA1 (patch-ah) = 499f2372a27ffef2b51aa5d9ac21545d1fe5c277
+SHA1 (minicom-2.6.1.tar.gz) = ce6b5f3dab6b4179736152e38a806029f8ad222a
+RMD160 (minicom-2.6.1.tar.gz) = d9c7bf6d661427ff1a4007a917574e4ecd872c50
+Size (minicom-2.6.1.tar.gz) = 830485 bytes
+SHA1 (patch-ab) = e87dbe616958b2b1a01a9a7dfa8cb8f8c1a6978f
+SHA1 (patch-ac) = b2ffa106989ea562b8ea85bfd15e516713a37f3f
+SHA1 (patch-ad) = a3e50ae6dcacb6ae6a177e5b6e4d3d959d960eca
+SHA1 (patch-ae) = ea2fb58212de7caaaed4c0817290ca3612212b6c
+SHA1 (patch-ag) = 5f635b67e2e48d13c9df7f3ed4fdca83a1c7f7ef
+SHA1 (patch-ah) = ae6048f6a8e81134a459aaf21527e944c68ae07f

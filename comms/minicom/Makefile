@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2012/10/03 11:24:42 asau Exp $
+# $NetBSD: Makefile,v 1.62 2012/12/12 12:35:21 wiz Exp $
 
-DISTNAME=	minicom-2.5
-PKGREVISION=	1
+DISTNAME=	minicom-2.6.1
 CATEGORIES=	comms
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/3487/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/3700/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/minicom/
@@ -40,6 +39,8 @@ SUBST_MESSAGE.minicom=	Fixing hardcoded paths.
 SUBST_STAGE.minicom=	post-patch
 SUBST_FILES.minicom=	src/rwconf.c
 SUBST_VARS.minicom=	PREFIX GKERMIT_PREFIX LRZSZ_PREFIX
+
+.include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
