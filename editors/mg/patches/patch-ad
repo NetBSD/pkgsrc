@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2011/12/19 00:52:10 dholland Exp $
+$NetBSD: patch-ad,v 1.3 2012/12/12 12:47:50 wiz Exp $
 
 - use toupper() correctly
 - suppress initialization warning that sometimes (?) arises with gcc 4.5
 
---- extend.c.orig	2007-01-12 17:24:48.000000000 +0000
+--- extend.c.orig	2011-06-18 09:18:54.000000000 +0000
 +++ extend.c
 @@ -445,7 +445,7 @@ dobindkey(KEYMAP *map, const char *func,
  	for (i = 0; *str && i < MAXKEY; i++) {
@@ -14,12 +14,3 @@ $NetBSD: patch-ad,v 1.2 2011/12/19 00:52:10 dholland Exp $
  		} else if (*str == '\\' && *(str + 1) != '\0') {
  			switch (*++str) {
  			case '^':
-@@ -707,7 +707,7 @@ excline(char *line)
- 	long	 nl;
- #ifdef	FKEYS
- 	int	 bind;
--	KEYMAP	*curmap;
-+	KEYMAP	*curmap = NULL;;
- #define BINDARG		0  /* this arg is key to bind (local/global set key) */
- #define	BINDNO		1  /* not binding or non-quoted BINDARG */
- #define BINDNEXT	2  /* next arg " (define-key) */
