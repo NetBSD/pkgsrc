@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/21 17:18:21 tez Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/12/12 10:48:43 wiz Exp $
 share/cacti/LICENSE
 share/cacti/README
 share/cacti/about.php
@@ -24,6 +24,7 @@ share/cacti/cli/poller_graphs_reapply_names.php
 share/cacti/cli/poller_output_empty.php
 share/cacti/cli/poller_reindex_hosts.php
 share/cacti/cli/rebuild_poller_cache.php
+share/cacti/cli/reorder_data_query.php
 share/cacti/cli/repair_database.php
 share/cacti/cli/repair_templates.php
 share/cacti/cli/structure_rra_paths.php
@@ -35,7 +36,6 @@ share/cacti/data_queries.php
 share/cacti/data_sources.php
 share/cacti/data_templates.php
 share/cacti/docs/CHANGELOG
-share/cacti/docs/CHANGELOG.PIA
 share/cacti/docs/CONTRIB
 share/cacti/docs/README
 share/cacti/docs/html/LICENSE.html
@@ -314,6 +314,8 @@ share/cacti/install/0_8_7e_to_0_8_7f.php
 share/cacti/install/0_8_7f_to_0_8_7g.php
 share/cacti/install/0_8_7g_to_0_8_7h.php
 share/cacti/install/0_8_7h_to_0_8_7i.php
+share/cacti/install/0_8_7i_to_0_8_8.php
+share/cacti/install/0_8_8_to_0_8_8a.php
 share/cacti/install/0_8_to_0_8_1.php
 share/cacti/install/index.php
 share/cacti/install/install_finish.gif
@@ -459,8 +461,8 @@ share/cacti/resource/snmp_queries/kbridge.xml
 share/cacti/resource/snmp_queries/net-snmp_disk.xml
 share/cacti/resource/snmp_queries/netware_cpu.xml
 share/cacti/resource/snmp_queries/netware_disk.xml
-share/cacti/rra/.htaccess
 share/cacti/rra.php
+share/cacti/rra/.htaccess
 share/cacti/script_server.php
 share/cacti/script_server.pl
 share/cacti/scripts/3com_cable_modem.pl
