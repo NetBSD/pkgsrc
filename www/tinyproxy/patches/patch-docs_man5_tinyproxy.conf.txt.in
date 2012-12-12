@@ -1,0 +1,15 @@
+$NetBSD: patch-docs_man5_tinyproxy.conf.txt.in,v 1.1 2012/12/12 13:01:23 wiz Exp $
+
+Adapt path for pkgsrc.
+
+--- docs/man5/tinyproxy.conf.txt.in.orig	2011-08-16 12:14:34.000000000 +0000
++++ docs/man5/tinyproxy.conf.txt.in
+@@ -19,7 +19,7 @@ DESCRIPTION
+ -----------
+ 
+ `tinyproxy(8)` reads its configuration file, typically stored in
+-`/etc/tinyproxy/tinyproxy.conf` (or passed to Tinyproxy with -c on the
++`@PKG_SYSCONFDIR@/tinyproxy.conf` (or passed to Tinyproxy with -c on the
+ command line). This manpage describes the syntax and contents of the
+ configuration file.
+ 

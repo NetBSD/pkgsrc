@@ -1,0 +1,15 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2012/12/12 13:01:23 wiz Exp $
+
+Use pkgsrc framework for config files.
+
+--- etc/Makefile.in.orig	2012-10-04 23:12:45.697375000 +0000
++++ etc/Makefile.in
+@@ -355,7 +355,7 @@ install-dvi: install-dvi-am
+ 
+ install-dvi-am:
+ 
+-install-exec-am: install-sysconfDATA
++install-exec-am:
+ 
+ install-html: install-html-am
+ 
