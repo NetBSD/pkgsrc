@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST.x11,v 1.1 2011/04/04 13:42:08 wiz Exp $
-bin/vsid
+@comment $NetBSD: PLIST.x11,v 1.2 2012/12/12 09:58:03 wiz Exp $
 share/locale/da/LC_MESSAGES/vice.mo
 share/locale/de/LC_MESSAGES/vice.mo
+share/locale/es/LC_MESSAGES/vice.mo
 share/locale/fr/LC_MESSAGES/vice.mo
 share/locale/hu/LC_MESSAGES/vice.mo
 share/locale/it/LC_MESSAGES/vice.mo
+share/locale/ko/LC_MESSAGES/vice.mo
 share/locale/nl/LC_MESSAGES/vice.mo
 share/locale/pl/LC_MESSAGES/vice.mo
+share/locale/ru/LC_MESSAGES/vice.mo
 share/locale/sv/LC_MESSAGES/vice.mo
 share/locale/tr/LC_MESSAGES/vice.mo
 share/vice/C128/x11_pos.vkm
@@ -36,3 +38,4 @@ share/vice/PLUS4/x11_sym.vkm
 share/vice/PLUS4/x11_sym_de.vkm
 share/vice/VIC20/x11_pos.vkm
 share/vice/VIC20/x11_sym.vkm
+share/vice/fonts/vice-cbm.pcf
