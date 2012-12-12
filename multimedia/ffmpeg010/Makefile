@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/12/04 06:23:27 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/12/12 11:01:21 ryoon Exp $
 
 PKGNAME=	ffmpeg010-20120609.${DISTVERSION}
 
@@ -15,6 +15,8 @@ CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg010
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/ffmpeg010
 #CONFIGURE_ARGS+=	--build-suffix=010
 CONFIGURE_ARGS+=	--progs-suffix=010
+
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg010
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg010 share/doc/ffmpeg010
 
