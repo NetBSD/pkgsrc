@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/30 15:49:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/12 16:04:16 ryoon Exp $
 #
 
 DISTNAME=	libsecret-0.12
@@ -10,6 +10,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://live.gnome.org/Libsecret
 COMMENT=	GObject based library for accessing the Secret Service API
 LICENSE=	gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
