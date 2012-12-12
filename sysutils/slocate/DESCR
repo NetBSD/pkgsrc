@@ -1,0 +1,4 @@
+Secure locate provides a secure way to index and quickly search for files on
+your system. It uses incremental encoding just like GNU locate to compress
+its database to make searching faster, but it will also check file permissions
+and ownership so that users will not see files they do not have access to.
