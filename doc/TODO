@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11733 2012/12/12 12:36:03 wiz Exp $
+$NetBSD: TODO,v 1.11734 2012/12/12 12:45:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -961,7 +961,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o paprefs-0.9.8
 	o parallel-20121122
 	o pari-2.5.3
-	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.2
 	o pbzip2-1.1.6
