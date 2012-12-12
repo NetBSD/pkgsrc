@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3823 2012/12/12 15:26:54 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3824 2012/12/12 15:31:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5893,3 +5893,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added shells/fish version 1.23.1 [wiz 2012-12-12]
 	Added x11/razor-qt version 0.5.1 [wiz 2012-12-12]
 	Added sysutils/slocate version 3.1 [wiz 2012-12-12]
+	Updated x11/tk to 8.5.13nb1 [wiz 2012-12-12]
