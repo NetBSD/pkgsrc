@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/05 17:14:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/12/12 11:39:02 wiz Exp $
 include/eina-1/Eina.h
 include/eina-1/eina/eina_accessor.h
 include/eina-1/eina/eina_array.h
@@ -14,7 +14,9 @@ include/eina-1/eina/eina_file.h
 include/eina-1/eina/eina_fp.h
 include/eina-1/eina/eina_hamster.h
 include/eina-1/eina/eina_hash.h
+include/eina-1/eina/eina_inarray.h
 include/eina-1/eina/eina_inline_array.x
+include/eina-1/eina/eina_inline_clist.x
 include/eina-1/eina/eina_inline_f16p16.x
 include/eina-1/eina/eina_inline_f32p32.x
 include/eina-1/eina/eina_inline_f8p24.x
@@ -31,6 +33,7 @@ include/eina-1/eina/eina_inline_stringshare.x
 include/eina-1/eina/eina_inline_tiler.x
 include/eina-1/eina/eina_inline_trash.x
 include/eina-1/eina/eina_inline_ustringshare.x
+include/eina-1/eina/eina_inline_value.x
 include/eina-1/eina/eina_inlist.h
 include/eina-1/eina/eina_iterator.h
 include/eina-1/eina/eina_lalloc.h
@@ -60,6 +63,7 @@ include/eina-1/eina/eina_types.h
 include/eina-1/eina/eina_unicode.h
 include/eina-1/eina/eina_ustrbuf.h
 include/eina-1/eina/eina_ustringshare.h
+include/eina-1/eina/eina_value.h
 include/eina-1/eina/eina_xattr.h
 include/eina-1/eina_config.h
 lib/libeina.la
