@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/08/01 09:30:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/12/12 12:35:21 wiz Exp $
 bin/ascii-xfr
 bin/minicom
 bin/runscript
@@ -7,21 +7,21 @@ man/man1/ascii-xfr.1
 man/man1/minicom.1
 man/man1/runscript.1
 man/man1/xminicom.1
-share/locale/cs/LC_MESSAGES/minicom.mo
-share/locale/da/LC_MESSAGES/minicom.mo
-share/locale/de/LC_MESSAGES/minicom.mo
-share/locale/es/LC_MESSAGES/minicom.mo
-share/locale/fi/LC_MESSAGES/minicom.mo
-share/locale/fr/LC_MESSAGES/minicom.mo
-share/locale/hu/LC_MESSAGES/minicom.mo
-share/locale/id/LC_MESSAGES/minicom.mo
-share/locale/ja/LC_MESSAGES/minicom.mo
-share/locale/nb/LC_MESSAGES/minicom.mo
-share/locale/pl/LC_MESSAGES/minicom.mo
-share/locale/pt_BR/LC_MESSAGES/minicom.mo
-share/locale/ro/LC_MESSAGES/minicom.mo
-share/locale/ru/LC_MESSAGES/minicom.mo
-share/locale/rw/LC_MESSAGES/minicom.mo
-share/locale/sv/LC_MESSAGES/minicom.mo
-share/locale/vi/LC_MESSAGES/minicom.mo
-share/locale/zh_TW/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/da/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/fi/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/id/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/nb/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/ro/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/rw/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/vi/LC_MESSAGES/minicom.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/minicom.mo

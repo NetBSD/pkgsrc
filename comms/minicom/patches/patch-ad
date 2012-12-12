@@ -1,6 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2011/08/01 09:30:33 adam Exp $
+$NetBSD: patch-ad,v 1.9 2012/12/12 12:35:21 wiz Exp $
 
---- src/rwconf.c.orig	2011-01-16 10:01:18.000000000 +0000
+Removed hardcoded LRZSZ_PREFIX and PREFIX.
+
+--- src/rwconf.c.orig	2011-12-27 22:21:05.000000000 +0000
 +++ src/rwconf.c
 @@ -76,27 +76,15 @@ struct pars mpars[] = {
    { "",			0,   "pname10" },
