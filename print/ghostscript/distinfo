@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2012/10/10 02:18:25 mef Exp $
+$NetBSD: distinfo,v 1.41 2012/12/12 16:37:08 bsiegert Exp $
 
 SHA1 (ghostscript-9.05.tar.bz2) = 1a54a846e90ae95b5307f4f0459d044b9597d8cf
 RMD160 (ghostscript-9.05.tar.bz2) = 27935f60083b788b2793b19ee42f3663082ba084
@@ -13,4 +13,4 @@ SHA1 (patch-an) = 22ed9965aec5d540adb31334d8dd9e05eab8e0c2
 SHA1 (patch-base_gdevpng.c) = 24120e26bd2a846f6d4c8ab9753dfe91f151343f
 SHA1 (patch-base_gserrors_h) = fde64bd096a6e6f94005c8352a6295df06c19bae
 SHA1 (patch-configure.ac) = 450053cef6948c638bf8f72cfcba7391edb33600
-SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = 383db0c5909b9d7b33f8da341d82159dbf8594b5
+SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = 4be081d6c4c9bc632ef8d9685fe4167ea3c51484
