@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.79 2012/08/09 12:32:41 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.80 2012/12/12 20:49:01 marino Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -203,6 +203,10 @@ override-tools: ${_FAIL_WRAPPER.FC}
 .if empty(USE_LANGUAGES:Mada)
 PKG_ADA:=		${_FAIL_WRAPPER.ADA}
 override-tools: ${_FAIL_WRAPPER.ADA}
+.endif
+
+.if !empty(DRAGONFLY_CCVER) && ${OPSYS} == "DragonFly"
+ALL_ENV+=		CCVER=${DRAGONFLY_CCVER}
 .endif
 
 .endif	# BSD_COMPILER_MK
