@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11727 2012/12/12 10:22:49 wiz Exp $
+$NetBSD: TODO,v 1.11728 2012/12/12 10:48:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -384,8 +384,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-Embperl-1.3.6
 	o ap-auth-pam-1.1.1
 	o ap-dtcl-1.0.0
-	o ap-jk-1.2.27 [pkg/40542]
-	o ap-jk-1.2.28
 	o ap-layout-3.4
 	o ap-mp3-0.40
 	o ap-php-5.4.4
@@ -439,7 +437,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bugzilla-3.6
 	o byacc-20121003
 	o c4-1.10 [schmonz]
-	o cacti-0.8.8a [pkg/46399]
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calligra-2.4.3 [in wip; koffice successor]
