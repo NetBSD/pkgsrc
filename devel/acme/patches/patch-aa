@@ -1,25 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/10/29 18:30:30 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/12 10:12:16 wiz Exp $
 
---- Makefile.orig	Thu May 17 13:33:00 2001
-+++ Makefile
-@@ -1,7 +1,8 @@
--CFLAGS		= -O2
-+CFLAGS+=	-DDEFAULT_ACME_LIB=\"${ACME_LIB}\"
-+#CFLAGS		= -O2
- LIBS		= -lm
+--- src/Makefile.orig	2006-03-26 18:10:54.000000000 +0300
++++ src/Makefile	2011-03-17 10:54:04.000000000 +0200
+@@ -1,12 +1,12 @@
+-CFLAGS		= -O3 -Wall
++CFLAGS+=	-DDEFAULT_ACME_LIB=\"${ACME_LIB}/\"
+ #LIBS		= -lm
 -CC		= gcc
 -RM		= rm
 +#CC		= gcc
 +#RM		= rm
  
- SRC		= acme.c alu.c alu.h block.c block.h config.h context.c\
- 		context.h core.c core.h cpu.c cpu.h data.c data.h flowpo.c\
-@@ -15,7 +16,7 @@
- 		tree.c tree.h
+ #SRC		=
  
  PROGS		= acme
 -BINDIR		= /usr/local/bin
-+BINDIR		= ${PREFIX}/bin
++BINDIR		= $(PREFIX)/bin
+ USERBIN		= $(HOME)/bin
  
  all: $(PROGS)
- 
