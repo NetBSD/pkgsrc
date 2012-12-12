@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2012/10/17 01:56:14 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.38 2012/12/12 02:08:11 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -132,6 +132,7 @@ share/ikiwiki/examples/softwaresite/Makefile
 share/ikiwiki/examples/softwaresite/bugs.mdwn
 share/ikiwiki/examples/softwaresite/bugs/done.mdwn
 share/ikiwiki/examples/softwaresite/bugs/fails_to_frobnicate.mdwn
+share/ikiwiki/examples/softwaresite/bugs/hghg.mdwn
 share/ikiwiki/examples/softwaresite/bugs/needs_more_bugs.mdwn
 share/ikiwiki/examples/softwaresite/contact.mdwn
 share/ikiwiki/examples/softwaresite/doc.mdwn
