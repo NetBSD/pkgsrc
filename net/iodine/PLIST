@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/12 13:19:06 wiz Exp $
+man/man8/iodine.8
+man/man8/iodined.8
+sbin/iodine
+sbin/iodined
+share/doc/iodine/CHANGELOG
+share/doc/iodine/README
