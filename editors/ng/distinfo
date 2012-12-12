@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.6 2012/03/10 08:20:13 sbd Exp $
+$NetBSD: distinfo,v 1.7 2012/12/12 12:04:51 wiz Exp $
 
-SHA1 (ng-1.4.3.tar.gz) = b5200da6c41f0e4d1d232a1a0c9548f8a37a96e2
-RMD160 (ng-1.4.3.tar.gz) = 5c0bcf80502cdba1bc7ea51c484b31088e5864bd
-Size (ng-1.4.3.tar.gz) = 586587 bytes
-SHA1 (patch-aa) = 9fe18cac939f4ac659f662d548d32996159e1ca6
-SHA1 (patch-sys_sysv_Makefile) = 02178b598ffc7d7e05150324b4f19af73cb3a047
+SHA1 (ng-1.4.4-replace_bug.patch) = 4d1b8abc0aa22b52951eb696427790cc75842842
+RMD160 (ng-1.4.4-replace_bug.patch) = af945e81541b0b848350f46044176ba536d77f45
+Size (ng-1.4.4-replace_bug.patch) = 3956 bytes
+SHA1 (ng-1.4.4.tar.gz) = 35cfdd4ebe7ee4e48c4a6b9e64a52470f0ba2b63
+RMD160 (ng-1.4.4.tar.gz) = dd041789d3fba92fe1c9906564a246c1f62cc34e
+Size (ng-1.4.4.tar.gz) = 587018 bytes
+SHA1 (patch-aa) = c78f7c9d1654262f612c6db25d5def2f8d2bbcfa
+SHA1 (patch-sys_sysv_Makefile) = 75abfc306abe358a950a3854c660ee97052e2af4
