@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2012/12/12 13:21:42 wiz Exp $
+
+SHA1 (fish-1.23.1.tar.gz) = 7b839ffc5b260f1bd1782e4adf84300f5438f833
+RMD160 (fish-1.23.1.tar.gz) = b77fe7ffec4ae52b82c1c86b2dc7037306c5fede
+Size (fish-1.23.1.tar.gz) = 1152997 bytes
+SHA1 (patch-Makefile.in) = d92c531cb15e511f1a712d98a64e222b3316fcdd
+SHA1 (patch-configure) = 3d4cd5ed6cff65768f4f99ae196449e01d3f7ef1
+SHA1 (patch-proc.h) = 7ac0b704f6ee1b1e966f0bfdc87dfa1e23e9c338
+SHA1 (patch-screen.c) = eae536bb965bd2a236a5cd3ff44e5ddbeb24f519

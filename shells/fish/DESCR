@@ -1,0 +1,7 @@
+fish is a user friendly command line shell for UNIX-like operating
+systems, written mainly with interactive use in mind.  It differs
+from other shells in that it only provides as few commands as
+built-ins as possible and has a daemon which allows it to have
+shared variables and command-line history between shell instances.
+It also features feature-rich tab-completion and has command-line
+syntax highlighting.

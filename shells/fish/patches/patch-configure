@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/12/12 13:21:42 wiz Exp $
+
+Expand variable where it's defined
+
+--- configure.orig	2009-03-08 14:46:47.000000000 +0000
++++ configure
+@@ -740,7 +740,7 @@ sharedstatedir='${prefix}/com'
+ localstatedir='${prefix}/var'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+-docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
++docdir='${datarootdir}/doc/'"${PACKAGE_TARNAME}"
+ infodir='${datarootdir}/info'
+ htmldir='${docdir}'
+ dvidir='${docdir}'
