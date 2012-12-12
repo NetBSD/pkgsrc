@@ -1,65 +1,38 @@
-$NetBSD: patch-ab,v 1.12 2012/08/14 18:49:44 marino Exp $
+$NetBSD: patch-ab,v 1.13 2012/12/12 09:58:03 wiz Exp $
 
-1. dynamic lib support does not depend on the existence of libdl
-2. patch out error message about --without-iconv-base
-3. Use the NetBSD configuration for every OS since the PLIST is
+1. Portability problem with "text xx == yy"
+   (in a section for some other OS, so not too relevant).
+2. Use the NetBSD configuration for every OS since the PLIST is
    hardcoded for that.  Should fix every non-NetBSD platform.
 
---- configure.orig	2011-02-26 18:07:06.000000000 +0000
+--- configure.orig	2012-11-02 21:06:04.000000000 +0000
 +++ configure
-@@ -3381,7 +3381,7 @@ do
-       ;;
-   esac
-   if test x"$argvalid" = "xno"; then
--    as_fn_error $? "invalid option: $argcheck" "$LINENO" 5
-+    echo "WARNING: invalid option: $argcheck"
-   fi
- done
- 
-@@ -10381,13 +10381,13 @@ fi
+@@ -14123,7 +14123,7 @@ fi
  
  
-   if test x"$ac_cv_header_dlfcn_h" = "xyes" ; then
--    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dlopen in -ldl" >&5
--$as_echo_n "checking for dlopen in -ldl... " >&6; }
-+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dlopen" >&5
-+$as_echo_n "checking for dlopen... " >&6; }
- if test "${ac_cv_lib_dl_dlopen+set}" = set; then :
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-ldl  $LIBS"
-+#LIBS="-ldl  $LIBS"
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
  
-@@ -10418,7 +10418,7 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_dl_dlopen" >&5
- $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
- if test "x$ac_cv_lib_dl_dlopen" = x""yes; then :
--   DYNLIB_LIBS="-ldl";
-+   DYNLIB_LIBS="";
- 
- $as_echo "#define HAVE_DYNLIB_SUPPORT /**/" >>confdefs.h
- 
-@@ -19664,34 +19664,12 @@ _ACEOF
- 
+-        if test x"$dsound_header_no_lib" == "xyes" -o x"$dinput_header_no_lib" == "xyes"; then
++        if test x"$dsound_header_no_lib" = "xyes" -o x"$dinput_header_no_lib" = "xyes"; then
+               { $as_echo "$as_me:${as_lineno-$LINENO}: checking if CoInitialize can be linked" >&5
+ $as_echo_n "checking if CoInitialize can be linked... " >&6; }
+               LIBS="$LIBS -lole32"
+@@ -20158,7 +20158,7 @@ fi
+ esac
  
  case "$host_os" in
 -  netbsd*)
 +  *)
-     VICEDIR="$PREFIX/share/vice";
+     VICEDIR="$PREFIX/share/vice"
       if true; then
    ALTERNATE_DOCDIR_TRUE=
-   ALTERNATE_DOCDIR_FALSE='#'
- else
--  ALTERNATE_DOCDIR_TRUE='#'
--  ALTERNATE_DOCDIR_FALSE=
--fi
+@@ -20167,52 +20167,6 @@ else
+   ALTERNATE_DOCDIR_TRUE='#'
+   ALTERNATE_DOCDIR_FALSE=
+ fi
 -
 -    ;;
 -  freebsd*)
--    VICEDIR="$PREFIX/lib/vice";
+-    VICEDIR="$PREFIX/lib/vice"
 -     if true; then
 -  ALTERNATE_DOCDIR_TRUE=
 -  ALTERNATE_DOCDIR_FALSE='#'
@@ -69,12 +42,39 @@ $NetBSD: patch-ab,v 1.12 2012/08/14 18:49:44 marino Exp $
 -fi
 -
 -    ;;
+-  linux*)
+-    if test x"$host_cpu" = "xx86_64"; then
+-      VICEDIR="$PREFIX/lib64/vice"
+-       if false; then
+-  ALTERNATE_DOCDIR_TRUE=
+-  ALTERNATE_DOCDIR_FALSE='#'
+-else
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+-    else
+-      VICEDIR="$PREFIX/lib/vice"
+-       if false; then
+-  ALTERNATE_DOCDIR_TRUE=
+-  ALTERNATE_DOCDIR_FALSE='#'
+-else
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+-    fi
+-    ;;
 -  *)
--    VICEDIR="$PREFIX/lib/vice";
+-    VICEDIR="$PREFIX/lib/vice"
 -     if false; then
 -  ALTERNATE_DOCDIR_TRUE=
 -  ALTERNATE_DOCDIR_FALSE='#'
 -else
-   ALTERNATE_DOCDIR_TRUE='#'
-   ALTERNATE_DOCDIR_FALSE=
- fi
+-  ALTERNATE_DOCDIR_TRUE='#'
+-  ALTERNATE_DOCDIR_FALSE=
+-fi
+-
+     ;;
+ esac
+ 

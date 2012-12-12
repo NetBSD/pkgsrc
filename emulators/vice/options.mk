@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2011/04/04 13:42:08 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2012/12/12 09:58:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=	ffmpeg lame vice-fullscreen vice-hwscaling vice-ethernet
@@ -21,6 +21,7 @@ PLIST_SRC += PLIST.x11
 CONFIGURE_ARGS+=	--enable-gnomeui
 PLIST_SRC+=		PLIST.x11
 .  include "../../x11/gtk2/buildlink3.mk"
+.  include "../../x11/vte/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
@@ -64,7 +65,7 @@ CONFIGURE_ARGS+=	--enable-ethernet
 .if !empty(PKG_OPTIONS:Mffmpeg)
 #BUILDLINK_DEPMETHOD.ffmpeg?=	build
 CONFIGURE_ARGS+=	--enable-ffmpeg
-.  include "../../multimedia/ffmpeg/buildlink3.mk"
+.  include "../../multimedia/ffmpeg010/buildlink3.mk"
 .endif
 .if !empty(PKG_OPTIONS:Mlame)
 #BUILDLINK_DEPMETHOD.lame?=	build
