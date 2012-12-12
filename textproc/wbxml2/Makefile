@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:06 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/12 10:44:11 wiz Exp $
 #
 
 DISTNAME=	wbxml2-0.9.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wbxmllib/}
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wbxmllib.sourceforge.net/
 COMMENT=	Library to handle WAP binary XML files
 

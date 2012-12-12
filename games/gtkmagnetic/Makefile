@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/08 23:01:36 adam Exp $
+# $NetBSD: Makefile,v 1.34 2012/12/12 10:44:09 wiz Exp $
 #
 
 DISTNAME=		Magnetic22Src
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.ifarchive.org/if-archive/magnetic-scrolls/interpreters
 EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-MAINTAINER=		dillo@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.if-legends.org/~msmemorial/magnetic.htm
 COMMENT=		Interpreter for text adventures from Magnetic Scrolls
 

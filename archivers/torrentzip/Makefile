@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 19:47:01 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/12 10:44:06 wiz Exp $
 #
 
 DISTNAME=	trrntzip_v02_src
@@ -6,7 +6,7 @@ PKGNAME=	torrentzip-0.2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trrntzip/}
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sourceforge.net/trrntzip/
 COMMENT=	Create identical zip archives from identical files
 
