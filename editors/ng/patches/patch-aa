@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2012/03/10 08:20:13 sbd Exp $
+$NetBSD: patch-aa,v 1.7 2012/12/12 12:04:51 wiz Exp $
+
+Adapt canna flags for pkgsrc.
 
 --- sys/bsd/Makefile.orig	2000-09-30 15:59:42.000000000 +0000
 +++ sys/bsd/Makefile
