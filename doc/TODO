@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11738 2012/12/12 13:01:36 wiz Exp $
+$NetBSD: TODO,v 1.11739 2012/12/12 13:11:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -702,7 +702,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o honeyd-1.5c
 	o horde-5.0.2
 	o host-20070128
-	o howm-1.4.0 [pkg/47075]
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htop-1.0.2
