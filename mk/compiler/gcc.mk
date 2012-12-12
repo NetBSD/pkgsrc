@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.129 2012/09/17 04:43:56 obache Exp $
+# $NetBSD: gcc.mk,v 1.130 2012/12/12 20:49:01 marino Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -165,6 +165,8 @@ _GCC_VERSION_STRING!=	\
 	( env LC_ALL=C ${_CC} -v 2>&1 | ${GREP} 'gcc version') 2>/dev/null || ${ECHO} 0
 .  if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
+.  elif !empty(DRAGONFLY_CCVER) && ${OPSYS} == "DragonFly"
+_GCC_VERSION!= env CCVER=${DRAGONFLY_CCVER} ${_CC} -dumpversion
 .  elif !empty(_GCC_VERSION_STRING:Mgcc*)
 _GCC_VERSION!=	${_CC} -dumpversion
 .  else
