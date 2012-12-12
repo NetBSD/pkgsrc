@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11729 2012/12/12 11:39:16 wiz Exp $
+$NetBSD: TODO,v 1.11730 2012/12/12 11:50:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -951,7 +951,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p0f-3.00b
 	o p5-GTop-0.18
 	o p5-Gtk2-1.223
-	o p5-HTTP-Server-EV-0.5 [pkg/47288]
 	o p5-PerlMagick-6.7.9.7
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
