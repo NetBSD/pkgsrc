@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 11:24:42 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/12 10:44:07 wiz Exp $
 #
 
 DISTNAME=	msynctool-0.22
@@ -7,7 +7,7 @@ CATEGORIES=	comms
 MASTER_SITES=	http://www.opensync.org/download/releases/0.22/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/
 COMMENT=	Command line tool for opensync framework
 

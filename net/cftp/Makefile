@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 17:18:13 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/12/12 10:44:10 wiz Exp $
 #
 
 DISTNAME=	cftp-0.12
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://ftp.giga.or.at/pub/nih/cftp/ \
 		ftp://ftp.giga.or.at/pub/nih/cftp/
 
-OWNER=		dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ftp.giga.or.at/pub/nih/cftp/
 COMMENT=	Comfortable FTP, a full screen ftp client
 

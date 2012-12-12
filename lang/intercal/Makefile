@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 20:11:42 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/12 10:44:10 wiz Exp $
 #
 
 DISTNAME=	intercal-0.29
 CATEGORIES=	lang
 MASTER_SITES=	http://www.catb.org/~esr/intercal/
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/intercal/
 COMMENT=	The ultimate language for obfuscation and job security
 

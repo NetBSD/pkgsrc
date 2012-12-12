@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:49 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/12/12 10:44:08 wiz Exp $
 #
 
 DISTNAME=	tavrasm
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME}-1.22
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tavrasm.org/
 COMMENT=	Assembler for the Atmel AVR series of microcontrollers
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/12 10:44:10 wiz Exp $
 #
 
 DISTNAME=		antixls-0.2b
@@ -7,7 +7,7 @@ CATEGORIES=		math
 MASTER_SITES=		http://www.af0.net/~dan/
 EXTRACT_SUFX=		.perl
 
-MAINTAINER=		dillo@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.af0.net/~dan/?antixls
 COMMENT=		Print XLS file with minimal formatting, or as CSV
 
