@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2010/02/07 19:30:35 snj Exp $
+$NetBSD: patch-aa,v 1.8 2012/12/12 12:56:26 wiz Exp $
 
---- Makefile.orig	2010-01-10 13:39:08.000000000 -0800
-+++ Makefile	2010-02-07 11:02:21.000000000 -0800
+--- Makefile.orig	2011-05-13 13:11:24.000000000 +0000
++++ Makefile
 @@ -4,7 +4,7 @@
  #######################################################################
  
@@ -27,6 +27,15 @@ $NetBSD: patch-aa,v 1.7 2010/02/07 19:30:35 snj Exp $
  INCLUDES  := $(shell pkg-config --cflags gdk-2.0 imlib2)
  LIBS      := $(shell pkg-config --libs gdk-2.0 imlib2) -lX11
  
+@@ -83,7 +74,7 @@ OBJS_G   += lib/getopt.g lib/getopt1.g
+ endif
+ 
+ ifdef GTD_XINERAMA
+-LIBS     += -L/usr/X11R6/lib -lXinerama
++LIBS     += -L$(X11BASE)/lib -lXinerama
+ endif
+ 
+ ifdef MAGIC
 @@ -99,10 +90,10 @@ DEFINES_G = $(DEFINES) -DDEBUG
  all: $(PROGRAM)
  
@@ -40,19 +49,27 @@ $NetBSD: patch-aa,v 1.7 2010/02/07 19:30:35 snj Exp $
  
  main.o: main.h
  
-@@ -126,14 +117,9 @@ distclean : clean
+@@ -126,22 +117,9 @@ distclean : clean
  	rm -f $(PROGRAM) $(PROGRAM_G)
  
  install: $(PROGRAM)
 -	@echo "Installing QIV..."
+-	@if [ ! -e $(PREFIX)/bin ]; then \
+-	  install -d -m 0755 $(PREFIX)/bin; \
+-	  echo install -d -m 0755 $(PREFIX)/bin; \
+-        fi
 -	install -s -m 0755 $(PROGRAM) $(PREFIX)/bin
+-	@if [ ! -e $(PREFIX)/man/man1 ]; then \
+-	  echo install -d -m 0755 $(PREFIX)/man/man1; \
+-	  install -d -m 0755 $(PREFIX)/man/man1; \
+-	fi
 -	install -m 0644 $(PROGRAM).1 $(PREFIX)/man/man1
 -	$(COMPRESS_PROG) $(PREFIX)/man/man1/$(PROGRAM).1
 -	@if ./qiv -f ./intro.jpg ; \
 -	then echo "-- Test Passed --" ; \
 -	else echo "-- Test Failed --" ; \
 -	fi
--	@echo -ne "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n"
+-	@echo "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n"
 +	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(DESTDIR)$(PREFIX)/bin
 +	$(BSD_INSTALL_DATA) $(PROGRAM).1 $(DESTDIR)$(PREFIX)/man/man1
 +	$(BSD_INSTALL_SCRIPT) qiv-command.example \
