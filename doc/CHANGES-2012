@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3826 2012/12/12 16:27:25 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3827 2012/12/12 22:44:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5896,3 +5896,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/tk to 8.5.13nb1 [wiz 2012-12-12]
 	Updated print/poppler-cpp to 0.20.5nb1 [wiz 2012-12-12]
 	Added games/marathon-evil version 199704 [wiz 2012-12-12]
+	Removed security/ssh2 [gendalia 2012-12-12]
