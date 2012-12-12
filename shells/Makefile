@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2011/05/28 08:54:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.50 2012/12/12 13:22:04 wiz Exp $
 #
 
 COMMENT=	Shells
@@ -12,6 +12,7 @@ SUBDIR+=	dash
 SUBDIR+=	eltclsh
 SUBDIR+=	es
 SUBDIR+=	esh
+SUBDIR+=	fish
 SUBDIR+=	heirloom-sh
 SUBDIR+=	lshell
 SUBDIR+=	mksh
