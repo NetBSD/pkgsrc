@@ -1,3 +1,3 @@
-XBoard is a graphical chessboard that can serve as a user interface to the
-GNU Chess and Crafty chess engines, the Internet Chess Servers, electronic
-mail correspondence chess, or your own collection of saved games.
+XBoard is a graphical chessboard that can serve as a user interface to
+Winboard or UDI (via polyglot) protocol chess engines, Internet Chess Servers,
+electronic mail correspondence chess, or your own collection of saved games.

@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/12/12 12:25:14 wiz Exp $
+
+Let pkgsrc framework deal with config file.
+
+--- Makefile.in.orig	2012-04-18 02:37:44.000000000 +0000
++++ Makefile.in
+@@ -381,7 +381,7 @@ xboard_TEXINFOS = copyright.texi 
+ man6_MANS = xboard.man
+ 
+ ### config file
+-sysconf_DATA = xboard.conf
++sysconf_DATA = 
+ 
+ ### icon files
+ icondir = $(datadir)/icons/hicolor/48x48/apps
+@@ -481,7 +481,7 @@ dist_sounds_DATA = \
+ edit = sed -e 's|@pixmapsdir[@]|$(pixmapsdir)|g' \
+            -e 's|@soundsdir[@]|$(soundsdir)|g'
+ 
+-all: config.h
++all: config.h xboard.conf
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+ .SUFFIXES:
