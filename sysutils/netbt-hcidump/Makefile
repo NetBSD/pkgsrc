@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:15 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/12 11:32:08 plunky Exp $
 
-DISTNAME=		bluez-hcidump-2.4
+DISTNAME=		bluez-hcidump-2.5
 PKGNAME=		${DISTNAME:S/bluez/netbt/}
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.kernel.org/pub/linux/bluetooth/
