@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.7 2012/06/09 07:35:12 dholland Exp $
+$NetBSD: distinfo,v 1.8 2012/12/12 12:52:10 wiz Exp $
 
-SHA1 (freepops-0.2.8.tar.gz) = 5bbf5ed41916c2fee04938abb0c440d98b325710
-RMD160 (freepops-0.2.8.tar.gz) = e209a2b2f289e5b431c1d5ab3aaf5d5b09a87135
-Size (freepops-0.2.8.tar.gz) = 2062296 bytes
+SHA1 (freepops-0.2.9.tar.gz) = 30e31a3618d07ec0924e9c1ae06c7acd846a13de
+RMD160 (freepops-0.2.9.tar.gz) = c473bd9a523f7bc30dbcfa30c0f1e58418301d24
+Size (freepops-0.2.9.tar.gz) = 2065288 bytes
 SHA1 (patch-aa) = ebe6913847ac9c7a9746496705b6ac45ace6eeef
 SHA1 (patch-ab) = 59faa97775853f795f024585e194a060a3f3ee94
 SHA1 (patch-ac) = ca0c136b6cee3c164c9382227bcbd534e382927b
 SHA1 (patch-ad) = 90a2313b2e9a3a2321778df515c076e603955502
 SHA1 (patch-ae) = 389693569e978395f2d1e286003ad7d20ce59a14
-SHA1 (patch-af) = b0a084f1db0f39a4f29cd071765b7d4e6bf21198
+SHA1 (patch-af) = b0aabc349df11e73ccbab1943ee2075894c865d4
 SHA1 (patch-ag) = 9c7f944d0f2f5a5303e692844b729e933655f9f4
 SHA1 (patch-modules_src_luacurl_lua-curl-0_3_0_diff) = bbd7c92b25d262f414662b509acbbe8f3f468ffc
