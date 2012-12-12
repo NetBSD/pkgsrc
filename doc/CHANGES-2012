@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3805 2012/12/12 10:22:49 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3806 2012/12/12 10:48:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5875,3 +5875,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/vice to 2.4 [wiz 2012-12-12]
 	Updated devel/acme to 0.91 [wiz 2012-12-12]
 	Updated games/alephone to 20120514 [wiz 2012-12-12]
+	Updated net/cacti to 0.8.8a [wiz 2012-12-12]
