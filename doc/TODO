@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11735 2012/12/12 12:48:03 wiz Exp $
+$NetBSD: TODO,v 1.11736 2012/12/12 12:52:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -578,7 +578,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freefont-20120503
 	o freeglut-2.4.0
 	o freenet-0.7
-	o freepops-0.2.9 [pkg/45790]
 	o freesci-0.6.4
 	o freeswitch-1.2.3
 	o freetype-lib-1.5.20050518
@@ -717,7 +716,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icewm-1.3.7
 	o idutils-4.6
 	o ifile-1.3.8
-	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.5.3
 	o imapsync-1.452
