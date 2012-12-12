@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/15 06:42:33 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2012/12/12 11:49:53 wiz Exp $
 
-SHA1 (HTTP-Server-EV-0.2.tar.gz) = e3ad1960efb6b252ea609b23b9b0179aa0e2b183
-RMD160 (HTTP-Server-EV-0.2.tar.gz) = 7cfd0f0333ba2ad60fa727fd1c9e7dd80b2d9e14
-Size (HTTP-Server-EV-0.2.tar.gz) = 11283 bytes
+SHA1 (HTTP-Server-EV-0.5.tar.gz) = c10a56087c7f826d87f69bb8df19ea909f05244f
+RMD160 (HTTP-Server-EV-0.5.tar.gz) = e878c3ae7ddec125840f758567506ce500410aff
+Size (HTTP-Server-EV-0.5.tar.gz) = 27197 bytes
