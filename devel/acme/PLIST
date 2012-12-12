@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/12/12 10:12:16 wiz Exp $
 bin/acme
 share/acme/6502/Help.txt
 share/acme/6502/std.a
@@ -30,6 +30,7 @@ share/doc/acme/Changes.txt
 share/doc/acme/Errors.txt
 share/doc/acme/Example.txt
 share/doc/acme/Help.txt
+share/doc/acme/Illegals.txt
 share/doc/acme/Lib.txt
 share/doc/acme/QuickRef.txt
 share/doc/acme/Source.txt
