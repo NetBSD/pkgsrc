@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/12/10 12:31:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/12/12 08:40:27 ryoon Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -190,7 +190,7 @@ share/doc/sane-${SANE_VERSION}/README.djpeg
 share/doc/sane-${SANE_VERSION}/README.freebsd
 share/doc/sane-${SANE_VERSION}/README.hp-ux
 share/doc/sane-${SANE_VERSION}/README.linux
-share/doc/sane-${SANE_VERSION}/README.${LOWER_OPSYS}
+share/doc/sane-${SANE_VERSION}/README.netbsd
 share/doc/sane-${SANE_VERSION}/README.openbsd
 share/doc/sane-${SANE_VERSION}/README.os2
 share/doc/sane-${SANE_VERSION}/README.solaris
