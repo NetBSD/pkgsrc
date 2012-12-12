@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3811 2012/12/12 12:25:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3812 2012/12/12 12:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5881,3 +5881,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Server-EV to 0.5 [wiz 2012-12-12]
 	Updated editors/ng to 1.4.4 [wiz 2012-12-12]
 	Updated games/xboard to 4.6.2 [wiz 2012-12-12]
+	Updated comms/minicom to 2.6.1 [wiz 2012-12-12]
