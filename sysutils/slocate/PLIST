@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/12 15:24:17 wiz Exp $
+bin/locate
+bin/slocate
+bin/updatedb
+man/man1/locate.1
+man/man1/slocate.1
+man/man1/updatedb.1
+share/examples/slocate/updatedb.conf
