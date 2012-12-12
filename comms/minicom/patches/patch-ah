@@ -1,8 +1,12 @@
-$NetBSD: patch-ah,v 1.3 2011/12/05 08:10:18 adam Exp $
+$NetBSD: patch-ah,v 1.4 2012/12/12 12:35:21 wiz Exp $
+
+Needs limits.h and NAME_MAX defined, if it's not already.
 
 --- src/getsdir.h.orig	2009-12-12 15:47:47.000000000 +0000
 +++ src/getsdir.h
-@@ -25,7 +25,12 @@
+@@ -23,9 +23,14 @@
+  */
+ 
  #include <dirent.h>
 +#include <limits.h>
  
