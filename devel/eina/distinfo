@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/09/26 07:37:26 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2012/12/12 11:39:02 wiz Exp $
 
-SHA1 (eina-1.1.0.tar.bz2) = 49e21e455a6a9fb52b1956527ee68de474f43ae4
-RMD160 (eina-1.1.0.tar.bz2) = 14a565f6084a9cd1dcd1cff7327016a77d4aeeae
-Size (eina-1.1.0.tar.bz2) = 9983287 bytes
-SHA1 (patch-aa) = 3d93bfef1b09007a80875dfbf8cb37c13e2eb2c4
-SHA1 (patch-configure) = a4ae3348716b41bb5e92a3e211dae751e10f5a29
-SHA1 (patch-configure.ac) = adf38da81845df07f4a28d04a8acc7b8fb0ab7ef
-SHA1 (patch-src_lib_eina__magic.c) = 3a11a343c16e38ea0bfb9adc7cb91dfbbdc4ebb7
-SHA1 (patch-src_lib_eina__simple__xml__parser.c) = 69417e74773ccfb552f92d938fcba114de4ae155
-SHA1 (patch-src_lib_eina__strbuf.c) = 9d0d535a727fe75ac21a6b8d240c15c14be78976
+SHA1 (eina-1.7.1.tar.bz2) = 972b94a0abdbaa1e61ebbfd5ea530ebdceacee02
+RMD160 (eina-1.7.1.tar.bz2) = 9ceb645b20a67dedf2a23f58d664323d5f1ea35f
+Size (eina-1.7.1.tar.bz2) = 9749033 bytes
