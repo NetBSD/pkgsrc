@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11734 2012/12/12 12:45:35 wiz Exp $
+$NetBSD: TODO,v 1.11735 2012/12/12 12:48:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -857,7 +857,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mercurial-2.4.1
 	o mergeant-0.67
 	o mesure-0.7.2
-	o mg-20110905 [pkg/47079]
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
 	o milter-manager-1.8.5
