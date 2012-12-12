@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/12/12 15:24:17 wiz Exp $
+
+To upgrade the slocate db periodically, add this to your daily cron jobs:
+
+	0 6    * * *   root ${PREFIX}/bin/updatedb
+
+You can find an example updatedb.conf here:
+
+	${EGDIR}/updatedb.conf
+
+===========================================================================

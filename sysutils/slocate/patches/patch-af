@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.1 2012/12/12 15:24:17 wiz Exp $
+
+Don't hardcode CFLAGS or CC.
+
+--- src/Makefile.orig	2007-11-17 13:35:02.000000000 +0100
++++ src/Makefile
+@@ -1,13 +1,13 @@
+ OBJS=slocate.o cmds.o conf.o utils.o
+ HEADERS=slocate.h cmds.h conf.h utils.h
+ 	
+-CFLAGS=-Wall -Wshadow
+-CFLAGS+=-O2
++#CFLAGS=-Wall -Wshadow
++#CFLAGS+=-O2
+ #CFLAGS+=-g3
+ #LDFLAGS+=-lefence
+ 
+ PROG=slocate
+-CC=gcc
++#CC=gcc
+ 
+ all: $(OBJS) $(MOD_OBJS)
+ 	$(CC) $(LDFLAGS) -o $(PROG) $(OBJS) $(MOD_OBJS)
