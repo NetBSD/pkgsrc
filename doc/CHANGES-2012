@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3821 2012/12/12 13:22:15 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3822 2012/12/12 15:19:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/xa65 version 2.3.5 [wiz 2012-12-12]
 	Added net/iodine version 0.6.0rc1 [wiz 2012-12-12]
 	Added shells/fish version 1.23.1 [wiz 2012-12-12]
+	Added x11/razor-qt version 0.5.1 [wiz 2012-12-12]
