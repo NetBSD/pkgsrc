@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3803 2012/12/12 09:58:27 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3804 2012/12/12 10:12:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ikiwiki to 3.20121212 [schmonz 2012-12-12]
 	Updated mail/thunderbird to 17.0nb1 [ryoon 2012-12-12]
 	Updated emulators/vice to 2.4 [wiz 2012-12-12]
+	Updated devel/acme to 0.91 [wiz 2012-12-12]
