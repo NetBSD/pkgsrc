@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.52 2012/04/28 22:43:37 christos Exp $
+# $NetBSD: license.mk,v 1.53 2012/12/13 00:19:11 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -130,7 +130,8 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	cc-by-sa-v3.0 \
 	lppl-1.3c \
 	lucent \
-	epl-v1.0
+	epl-v1.0 \
+	sleepycat-public
 
 # not approved by OSI, derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
