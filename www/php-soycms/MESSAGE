@@ -1,0 +1,81 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/12/13 16:07:55 ryoon Exp $
+
+To use SOY CMS with Apache 2.4 and PHP 5.4, you will need to perform
+the following steps.
+
+1. Install www/apache24 and www/ap-php
+
+2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
+   If your machine are located in Tokyo, Japan, you should get the following.
+
+	# cat ${PREFIX}/etc/php.ini | grep date.timezone
+	date.timezone ="Asia/Tokyo"
+
+3. Install MySQL database server.
+
+	# cd databases/mysql51-server
+	# make install
+
+4. Start MySQL server, and setup MySQL server
+
+	# ${RCD_SCRIPTS_DIR}/mysqld start
+	And follow messages.
+
+5. Add MySQL user, soycmsUser
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create user soycmsUser identified by 'soycmsUserPass';
+	> quit
+
+6. Create database for SOY CMS
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create database soycms_db;
+	> grant SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER
+	on soycms_db.* to soycmsUser@localhost identified by 'soycmsPass';
+	> quit
+
+7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	extension=pdo.so
+	extension=pdo_mysql.so
+	extension=mbstring.so
+	extension=json.so
+	extension=zip.so
+	extension=gd.so
+
+8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	LoadModule rewrite_module lib/httpd/mod_rewrite.so
+	DocumentRoot "${PREFIX}/share/soycms"
+	LoadModule php5_module lib/httpd/mod_php5.so
+	AddType application/x-httpd-php .php
+	<Directory ${PREFIX}/share/soycms>
+                DirectoryIndex index.php
+                Options All
+                Allow from All
+                AllowOverride All
+                Require all granted
+	</Directory>
+
+9. Create database setting file,
+    ${PREFIX}/share/soycms/common/config/db/mysql.php .
+   And run 'chmod 640 ${PREFIX}/share/soycms/common/config/db/mysql.php'.
+
+	<?php
+	define("ADMIN_DB_DSN","mysql:host=localhost;dbname=soycms_db");
+	define("ADMIN_DB_USER","root");
+	define("ADMIN_DB_PASS","YOUR_MYSQL_ROOT_PASSWORD");
+	define("ADMIN_DB_EXISTS",file_exists(SOY2::RootDir()."db/cms.db"));
+	define("CMS_FILE_DB",ADMIN_DB_DSN);
+	define("CMS_FILE_DB_EXISTS",file_exists(SOY2::RootDir()."db/file.db"));
+	?>
+
+10. Start Apache httpd
+	# ${RCD_SCRIPTS_DIR}/apache start
+
+11. Access http://localhost/admin/
+===========================================================================
