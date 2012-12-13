@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2012/02/02 11:55:23 obache Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/12/13 16:13:09 ryoon Exp $
 #
 # used by devel/scons/Makefile
-# used by devel/scons-devel/Makefile
 
 DISTNAME=		scons-${SCONS_VERSION}
 CATEGORIES=		devel
