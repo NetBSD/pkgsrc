@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/02 21:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.39 2012/12/13 00:59:47 gdt Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -9,6 +9,7 @@ MASTER_SITES=	http://download.oracle.com/berkeley-db/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db.html
 COMMENT=	Sleepycat Software's Berkeley DB version 3
+LICENSE=	sleepycat-license # minus ASM stanza
 
 PATCH_SITES=	http://www.oracle.com/technology/products/berkeley-db/db/update/3.3.11/
 PATCHFILES=	patch.3.3.11.1 patch.3.3.11.2
