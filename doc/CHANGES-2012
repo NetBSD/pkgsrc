@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3827 2012/12/12 22:44:52 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3828 2012/12/13 08:04:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5897,3 +5897,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/poppler-cpp to 0.20.5nb1 [wiz 2012-12-12]
 	Added games/marathon-evil version 199704 [wiz 2012-12-12]
 	Removed security/ssh2 [gendalia 2012-12-12]
+	Updated www/py-django to 1.4.3 [adam 2012-12-13]
