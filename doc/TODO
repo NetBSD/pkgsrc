@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11740 2012/12/13 13:29:23 wen Exp $
+$NetBSD: TODO,v 1.11741 2012/12/13 16:24:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -988,7 +988,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
-	o postfix-2.9.2
+	o postfix-2.9.5
 	o powermanga-0.91
 	o powwow-1.2.16
 	o prboom-2.5.0.8
