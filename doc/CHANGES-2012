@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3832 2012/12/13 13:29:23 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3833 2012/12/13 16:09:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5902,3 +5902,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Server-EV to 0.5nb1 [wiz 2012-12-13]
 	Updated databases/ocaml-mysql to 1.1.1nb2 [jaap1 2012-12-13]
 	Updated biology/clustalw to 2.1 [wen 2012-12-13]
+	Added www/php-soycms version 1.4.0a [ryoon 2012-12-13]
