@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.29 2012/04/29 01:46:48 christos Exp $	*/
+/*	$NetBSD: license.c,v 1.30 2012/12/13 08:30:10 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -73,7 +73,8 @@ const char *default_acceptable_licenses =
     "cc-by-sa-v3.0 "
     "lppl-1.3c "
     "lucent "
-    "epl-v1.0";
+    "epl-v1.0 "
+    "sleepycat-public";
 
 #ifdef DEBUG
 static size_t hash_collisions;
