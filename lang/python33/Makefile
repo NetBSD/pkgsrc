@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/12/11 00:16:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/13 20:22:44 jperkin Exp $
 
 .include "dist.mk"
 
@@ -111,6 +111,7 @@ USE_GNU_READLINE=			yes
 BUILDLINK_DEPMETHOD.readline=		build
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
