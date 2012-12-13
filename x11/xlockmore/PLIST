@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/28 20:21:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/12/13 14:31:03 is Exp $
 ${LITE}bin/xglock
 bin/xlock
-lib/X11/app-defaults/XLock
 lib/X11/xlock/sounds/complete.au
 lib/X11/xlock/sounds/identify-please.au
 lib/X11/xlock/sounds/not-programmed.au
 lib/X11/xlock/sounds/thank-you.au
 man/man1/xlock.1
 share/examples/xlock/pam.d/xlock-NetBSD
+share/examples/xlock/app-defaults/XLock
 ${LITE}share/xlock/xglockrc
