@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/10/20 22:02:07 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/12/13 13:27:13 wen Exp $
 
-SHA1 (clustalw1.83.UNIX.tar.gz) = 801ce911749171471b7964a1cff93c53c876c282
-RMD160 (clustalw1.83.UNIX.tar.gz) = 20c0ec7739be6747ae08220e5abf2bae412f039e
-Size (clustalw1.83.UNIX.tar.gz) = 166863 bytes
-SHA1 (patch-aa) = 96f95acb4a312c96440275ca65f7f908c9b9032f
-SHA1 (patch-ab) = 75fb21b88132bdf18e7f6bc13d1d35051a1babea
-SHA1 (patch-interface.c) = 4c5f76efee503d55aafec87edcb5cbb40f71579d
+SHA1 (clustalw-2.1.tar.gz) = f29784f68585544baa77cbeca6392e533d4cf433
+RMD160 (clustalw-2.1.tar.gz) = e193769955a6270797fcb039ca398a4b59d9248d
+Size (clustalw-2.1.tar.gz) = 350761 bytes
