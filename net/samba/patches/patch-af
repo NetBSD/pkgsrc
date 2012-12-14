@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.10 2011/12/16 22:32:06 asau Exp $
+$NetBSD: patch-af,v 1.11 2012/12/14 07:39:35 adam Exp $
 
---- configure.orig	2011-08-09 15:35:40.000000000 +0400
-+++ configure	2011-08-23 16:12:22.000000000 +0400
-@@ -19397,6 +19397,7 @@
+--- configure.orig	2012-12-06 10:40:30.000000000 +0000
++++ configure
+@@ -19487,6 +19487,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.10 2011/12/16 22:32:06 asau Exp $
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -19446,7 +19447,7 @@
+@@ -19536,7 +19537,7 @@ fi
  
  if test "x$enable_as_needed" != xno; then
      saved_before_as_needed_ldflags="$LDFLAGS"
@@ -19,38 +19,20 @@ $NetBSD: patch-af,v 1.10 2011/12/16 22:32:06 asau Exp $
  	saved_ldflags="$LDFLAGS"
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -20152,7 +20153,7 @@
- 
- fi
- 
--	if test x"$USESHARED" == x"no" ; then
-+	if test x"$USESHARED" = x"no" ; then
- 		LINK_LIBTALLOC=STATIC
- 	fi
- 	LIBTALLOCVERSION=`grep ^VERSION ${tallocdir}/wscript | sed -e "s/'//g" -e 's/.* //'`
-@@ -20489,7 +20490,7 @@
- 
- fi
- 
--	if test x"$USESHARED" == x"no" ; then
-+	if test x"$USESHARED" = x"no" ; then
- 		LINK_LIBTDB=STATIC
- 	fi
- 	LIBTDBVERSION=`grep ^VERSION ${tdbdir}/wscript | sed -e "s/'//g" -e 's/.* //'`
-@@ -26219,9 +26220,9 @@
+@@ -26337,9 +26338,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
 -        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for des_set_key in -lcrypto" >&5
 -$as_echo_n "checking for des_set_key in -lcrypto... " >&6; }
--if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then :
+-if ${ac_cv_lib_ext_crypto_des_set_key+:} false; then :
 +        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVP_des_cbc in -lcrypto" >&5
 +$as_echo_n "checking for EVP_des_cbc in -lcrypto... " >&6; }
-+if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then :
++if ${ac_cv_lib_ext_crypto_EVP_des_cbc+:} false; then :
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -26233,31 +26234,31 @@
+@@ -26351,31 +26352,31 @@ else
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -90,7 +72,7 @@ $NetBSD: patch-af,v 1.10 2011/12/16 22:32:06 asau Exp $
  _ACEOF
  
  fi
-@@ -35632,31 +35633,39 @@
+@@ -35742,31 +35743,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
