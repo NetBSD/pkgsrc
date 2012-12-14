@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/19 09:10:55 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/12/14 14:42:53 wiz Exp $
 bin/fd2c
 bin/gplc
 bin/gprolog
@@ -9,6 +9,8 @@ bin/wam2ma
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ChangeLog
 lib/${PKGNAME}/NEWS
+lib/${PKGNAME}/README
+lib/${PKGNAME}/gprolog.ico
 lib/${PKGNAME}/VERSION
 lib/${PKGNAME}/bin/fd2c
 lib/${PKGNAME}/bin/gplc
@@ -116,6 +118,7 @@ share/doc/gprolog/html/gprolog070.html
 share/doc/gprolog/html/gprolog071.html
 share/doc/gprolog/html/gprolog072.html
 share/doc/gprolog/html/gprolog073.html
+share/doc/gprolog/html/gprolog074.html
 share/doc/gprolog/html/index.html
 share/doc/gprolog/html/next_motif.gif
 share/doc/gprolog/html/previous_motif.gif
@@ -145,6 +148,7 @@ share/examples/gprolog/ExamplesFD/eq10.pl
 share/examples/gprolog/ExamplesFD/eq20.pl
 share/examples/gprolog/ExamplesFD/five.pl
 share/examples/gprolog/ExamplesFD/gardner.pl
+share/examples/gprolog/ExamplesFD/interval.pl
 share/examples/gprolog/ExamplesFD/langford.pl
 share/examples/gprolog/ExamplesFD/magic.pl
 share/examples/gprolog/ExamplesFD/magsq.pl
