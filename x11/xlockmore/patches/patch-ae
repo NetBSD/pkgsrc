@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2008/10/06 22:40:12 hubertf Exp $
+$NetBSD: patch-ae,v 1.7 2012/12/14 15:54:30 is Exp $
 
 --- modes/Makefile.in.orig	2008-10-05 02:50:23.000000000 +0200
 +++ modes/Makefile.in
-@@ -588,19 +588,19 @@ install : install-program install-man in
+@@ -588,19 +588,20 @@ install : install-program install-man in
  	@ $(ECHO) ""
  
  install-program : xlock
@@ -27,7 +27,8 @@ $NetBSD: patch-ae,v 1.6 2008/10/06 22:40:12 hubertf Exp $
 -	$(top_srcdir)/mkinstalldirs $(xapploaddir)
 -	$(INSTALL_DATA) $(UTILDIR)XLock.ad $(xapploaddir)/XLock
 +	$(top_srcdir)/mkinstalldirs ${DESTDIR}$(xapploaddir)
-+	$(INSTALL_DATA) $(UTILDIR)XLock.ad ${DESTDIR}$(xapploaddir)/XLock
++	$(top_srcdir)/mkinstalldirs        ${DESTDIR}${datarootdir}/examples/xlock/app-defaults
++	$(INSTALL_DATA) $(UTILDIR)XLock.ad ${DESTDIR}${datarootdir}/examples/xlock/app-defaults/XLock
  
  uninstall : uninstall-program uninstall-man uninstall-ad
  

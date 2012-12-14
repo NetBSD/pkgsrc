@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2012/12/13 14:31:03 is Exp $
+# $NetBSD: Makefile.common,v 1.70 2012/12/14 15:54:30 is Exp $
 #
 # This Makefile.common is included by:
 #
@@ -59,11 +59,10 @@ CONFIGURE_ARGS+=	--without-rplay
 CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-esound
-CONFIGURE_ARGS+=	--enable-appdefaultdir=${EGDIR}/app-defaults
-CONFIGURE_ENV+=		ac_cv_x_app_defaults=${EGDIR}/app-defaults
+CONFIGURE_ARGS+=	--enable-appdefaultdir=${PREFIX}/lib/X11/app-defaults
+CONFIGURE_ENV+=		ac_cv_x_app_defaults=${PREFIX}/lib/X11/app-defaults/XLock
 
 CONF_FILES+=		${EGDIR}/app-defaults/XLock ${PREFIX}/lib/X11/app-defaults/XLock
-
 
 .if ${OPSYS} == "NetBSD"
 XLOCK_AUDIOPLAY?=	/usr/bin/audioplay
