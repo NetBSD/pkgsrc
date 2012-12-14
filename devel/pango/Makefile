@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.172 2012/11/23 17:41:23 drochner Exp $
+# $NetBSD: Makefile,v 1.173 2012/12/14 19:19:03 drochner Exp $
 
-DISTNAME=	pango-1.32.3
+DISTNAME=	pango-1.32.4
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -37,6 +37,7 @@ PKGCONFIG_OVERRIDE+=	pangoxft-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangoxft.pc.in
 
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
+CHECK_PORTABILITY_SKIP+= docs/check.docs
 
 PLIST_VARS+=		coretext
 
@@ -57,7 +58,7 @@ BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.5.0
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=0.9.7
+BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=0.9.9
 .include "../../fonts/harfbuzz/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
 .include "../../graphics/cairo/buildlink3.mk"
