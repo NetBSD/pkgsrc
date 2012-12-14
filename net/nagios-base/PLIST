@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/08/02 14:03:18 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/12/14 18:49:51 manu Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -95,12 +95,17 @@ share/nagios/contexthelp/N4.html
 share/nagios/contexthelp/N5.html
 share/nagios/contexthelp/N6.html
 share/nagios/contexthelp/N7.html
+share/nagios/images/Nagios-clearbg.png
 share/nagios/images/NagiosEnterprises-whitebg-112x46.png
 share/nagios/images/ack.gif
-share/nagios/images/action.gif
 share/nagios/images/action-graph.gif
 share/nagios/images/action-nagios.gif
 share/nagios/images/action-orig.gif
+share/nagios/images/action.gif
+share/nagios/images/b_first2.png
+share/nagios/images/b_last2.png
+share/nagios/images/b_next2.png
+share/nagios/images/b_prev2.png
 share/nagios/images/command.png
 share/nagios/images/comment.gif
 share/nagios/images/contexthelp1.gif
@@ -342,14 +347,10 @@ share/nagios/images/warning.png
 share/nagios/images/weblogo1.png
 share/nagios/images/zoom1.gif
 share/nagios/images/zoom2.gif
-share/nagios/includes/rss/AUTHORS
-share/nagios/includes/rss/CHANGES
-share/nagios/includes/rss/ChangeLog
-share/nagios/includes/rss/INSTALL
-share/nagios/includes/rss/NEWS
-share/nagios/includes/rss/README
-share/nagios/includes/rss/TROUBLESHOOTING
-share/nagios/includes/rss/cookbook
+share/nagios/includes/jquery-1.7.1.min.js
+share/nagios/js/jquery-1.7.1.min.js
+share/nagios/rss-corefeed.php
+share/nagios/rss-newsfeed.php
 share/nagios/includes/rss/extlib/Snoopy.class.inc
 share/nagios/includes/rss/rss_cache.inc
 share/nagios/includes/rss/rss_fetch.inc
