@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.25 2012/10/10 13:33:44 drochner Exp $
+# $NetBSD: options.mk,v 1.26 2012/12/14 21:50:46 cheusov Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	faac lame libvpx opencore-amr theora vorbis x264 xvid
-PKG_SUGGESTED_OPTIONS=	lame libvpx theora vorbis x264 xvid
+PKG_SUPPORTED_OPTIONS=	faac lame ass libvpx theora vorbis x264 xvid \
+			opencore-amr
+PKG_SUGGESTED_OPTIONS=	     lame ass libvpx theora vorbis x264 xvid
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faac
 
@@ -16,6 +17,17 @@ PKG_SUGGESTED_OPTIONS+=	vdpau
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+###
+### ass option
+###
+.if !empty(PKG_OPTIONS:Mass)
+USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=	--enable-libass
+.include "../../multimedia/libass/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libass
+.endif
 
 ###
 ### faac option
