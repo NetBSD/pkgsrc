@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11742 2012/12/14 07:40:22 adam Exp $
+$NetBSD: TODO,v 1.11743 2012/12/14 10:01:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,6 +427,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o binutils-2.23.1
 	o bioperl-1.5.0
 	o bitlbee-3.0.6
+	o blender-2.65
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -704,7 +705,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htop-1.0.2
-	o httping-1.5.4
+	o httping-1.5.6
 	o httptunnel-3.3
 	o hugin-2011.4.0
 	o hylafax-6.0.5
@@ -779,6 +780,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.8.0
 	o libchamplain08-0.12.3
+	o libevent-2.0.21
 	o libextractor-1.0.0
 	o libflash-0.4.13
 	o libfolks-0.8.0
@@ -866,7 +868,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mnemosyne-2.2
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
-	o modular-xorg-server-1.13.0
+	o modular-xorg-server-1.13.1
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-3.0.2
@@ -944,6 +946,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p0f-3.00b
 	o p5-GTop-0.18
 	o p5-Gtk2-1.223
+	o p5-Perl-Tidy-20121207
 	o p5-PerlMagick-6.7.9.7
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
@@ -1061,6 +1064,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o samba-3.5.19
+	o samba-4.0.0
 	o sarg-2.2.5
 	o sawfish-1.9.1
 	o saxon-9.2
@@ -1125,7 +1129,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o subtitleeditor-0.33.0
 	o subversion-1.7.7
 	o sudo-1.8.6p3
-	o supertuxkart-0.7.3
+	o supertuxkart-0.8
 	o swfdec-gnome-2.30.1
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
@@ -1142,7 +1146,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-33.3.0
+	o tea-33.4.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.6
@@ -1219,6 +1223,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
+	o wordpress-3.5
 	o worker-2.19.6
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
