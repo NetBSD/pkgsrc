@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2012/12/14 19:26:09 drochner Exp $
+
+--- tools/grilo-test-ui/Makefile.in.orig	2012-11-08 15:00:13.000000000 +0000
++++ tools/grilo-test-ui/Makefile.in
+@@ -82,7 +82,7 @@ grilo_test_ui_@GRL_MAJORMINOR@_OBJECTS =
+ 	$(am_grilo_test_ui_@GRL_MAJORMINOR@_OBJECTS)
+ am__DEPENDENCIES_1 =
+ grilo_test_ui_@GRL_MAJORMINOR@_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+-	$(am__DEPENDENCIES_1) $(top_builddir)/src/lib@GRL_NAME@.la
++	$(am__DEPENDENCIES_1)
+ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+@@ -297,7 +297,7 @@ grilo_test_ui_@GRL_MAJORMINOR@_LDADD = \
+ 	$(DEPS_LIBS)									\
+ 	$(GTU_LIBS)										\
+ 	$(GRL_FLICKR_LIBS)							\
+-	$(top_builddir)/src/lib@GRL_NAME@.la
++	$(prefix)/lib/lib@GRL_NAME@.la
+ 
+ MAINTAINERCLEANFILES = \
+ 	*.in						\
