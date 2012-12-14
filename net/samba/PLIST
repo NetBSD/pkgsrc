@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2012/10/30 13:24:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.52 2012/12/14 07:39:34 adam Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -64,6 +64,7 @@ lib/samba/vfs/cap.${LIBEXT}
 lib/samba/vfs/catia.${LIBEXT}
 lib/samba/vfs/crossrename.${LIBEXT}
 lib/samba/vfs/default_quota.${LIBEXT}
+${PLIST.macosx}lib/samba/vfs/dirsort.${LIBEXT}
 lib/samba/vfs/expand_msdfs.${LIBEXT}
 lib/samba/vfs/extd_audit.${LIBEXT}
 lib/samba/vfs/fake_perms.${LIBEXT}
@@ -81,6 +82,7 @@ lib/samba/vfs/shadow_copy2.${LIBEXT}
 lib/samba/vfs/smb_traffic_analyzer.${LIBEXT}
 lib/samba/vfs/streams_depot.${LIBEXT}
 lib/samba/vfs/streams_xattr.${LIBEXT}
+${PLIST.macosx}lib/samba/vfs/syncops.${LIBEXT}
 lib/samba/vfs/time_audit.${LIBEXT}
 lib/samba/vfs/xattr_tdb.${LIBEXT}
 ${PLIST.pam}lib/security/pam_smbpass.${LIBEXT}
