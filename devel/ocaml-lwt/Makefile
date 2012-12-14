@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:33 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/14 14:32:32 jaapb Exp $
 #
 
-DISTNAME=	lwt-2.4.0
+DISTNAME=	lwt-2.4.2
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ocsigen.org/download/
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://www.ocsigen.org/
 COMMENT=	Cooperative threading library for OCaml
 LICENSE=	gnu-lgpl-v2.1
@@ -22,7 +21,7 @@ USE_LANGUAGES+=	c
 
 BUILD_TARGET=	build
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	lib/ocaml/site-lib
 
 SUBST_CLASSES+=		libev destdir
 SUBST_STAGE.libev=	post-configure
@@ -47,7 +46,6 @@ do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ocaml setup.ml -build
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/lib/ocaml/site-lib
 	cd ${WRKSRC} && ocaml setup.ml -install
 
 .include "options.mk"
