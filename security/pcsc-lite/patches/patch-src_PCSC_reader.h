@@ -1,12 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2012/11/30 14:28:55 gdt Exp $
+$NetBSD: patch-src_PCSC_reader.h,v 1.1 2012/12/14 23:50:36 pettai Exp $
 
 Add NetBSD to apple/sun conditional.
-
 This should be sent upstream.
 
---- src/PCSC/reader.h.in.orig	2009-03-24 21:41:03 +0200
-+++ src/PCSC/reader.h.in	2009-04-30 09:03:08 +0300
-@@ -126,7 +126,7 @@
+--- src/PCSC/reader.h.orig	2011-06-22 06:38:16.000000000 +0000
++++ src/PCSC/reader.h
+@@ -128,7 +128,7 @@
  
  /* Set structure elements aligment on bytes
   * http://gcc.gnu.org/onlinedocs/gcc/Structure_002dPacking-Pragmas.html */

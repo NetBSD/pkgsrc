@@ -1,8 +1,0 @@
-#!/bin/sh
-# $NetBSD: INSTALL,v 1.1 2009/10/02 12:36:13 hasso Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	${PREFIX}/sbin/update-reader.conf
-	;;
-esac
