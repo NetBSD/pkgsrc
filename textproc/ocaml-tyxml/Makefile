@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/14 14:44:53 jaapb Exp $
 #
 
-DISTNAME=	tyxml-2.1
+DISTNAME=	tyxml-2.2.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://ocsigen.org/download/
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://ocsigen.org/download/
 COMMENT=	OCaml XML typing library
 LICENSE=	gnu-lgpl-v2.1 # with openssl exemption
@@ -19,6 +18,7 @@ DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 CONFLICTS+=	ocsigen<2.0
 
 MAKE_ENV+=	INSTALLDIR="${DESTDIR}${PREFIX}/lib/ocaml/site-lib"
+INSTALLATION_DIRS=	lib/ocaml/site-lib
 
 PLIST_VARS=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
@@ -26,10 +26,6 @@ PLIST_VARS=	opt
 PLIST.opt=	yes
 .endif
 
-pre-install:
-	${RM} -rf ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/tyxml
-	${MKDIR} ${DESTDIR}${PREFIX}/lib/ocaml/site-lib
-
-.include "../../net/ocamlnet/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../net/ocamlnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
