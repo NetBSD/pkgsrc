@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.22 2012/11/13 00:38:46 jnemeth Exp $
+$NetBSD: distinfo,v 1.23 2012/12/14 03:13:23 jnemeth Exp $
 
-SHA1 (asterisk-10.10.0/asterisk-10.10.0.tar.gz) = 5266cb1521b93fdabec8976254367e6ca59025d0
-RMD160 (asterisk-10.10.0/asterisk-10.10.0.tar.gz) = b7fbba3cf20ff72f198010873bb387f7bc6cc54b
-Size (asterisk-10.10.0/asterisk-10.10.0.tar.gz) = 25077705 bytes
-SHA1 (asterisk-10.10.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-10.10.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-10.10.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (asterisk-10.11.0/asterisk-10.11.0.tar.gz) = a678774bd6cb90fb4cefe115eb91a30228410288
+RMD160 (asterisk-10.11.0/asterisk-10.11.0.tar.gz) = 233366c026d4d8806f04e6a43cf8d66a752eb359
+Size (asterisk-10.11.0/asterisk-10.11.0.tar.gz) = 25095528 bytes
+SHA1 (asterisk-10.11.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-10.11.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-10.11.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
 SHA1 (patch-Makefile) = ab740f84f9883980cb5d8e8d5ca301f172c76231
 SHA1 (patch-apps_app__dial.c) = e6c9f559310acdb6574d0e034dcb55df7c2ba31f
 SHA1 (patch-apps_app__followme.c) = cd34774a11b96269003d9f1b6fbdfddf5d9b9d4b
@@ -15,7 +15,6 @@ SHA1 (patch-build__tools_mkpkgconfig) = 2bd3c0e24bc6d721cc234feb19b64a57106fcbe4
 SHA1 (patch-channels_chan__oss.c) = fccfa6fca010294ed2d3ab87fc31f436d67f49fa
 SHA1 (patch-configure) = e114b113b5b2733edfd138d48740d65dda6d639e
 SHA1 (patch-configure.ac) = fa39e67fe998d0fe7dfb5fb3988f2be712b3b29f
-SHA1 (patch-contrib_scripts_autosupport) = c6c1d917dd0544c4f54ae760f68cbcd1f35030f4
 SHA1 (patch-contrib_scripts_vmail.cgi) = 650b9bbf3e322d1ad351932cfe6f747baa8f35e4
 SHA1 (patch-include_asterisk_autoconfig.h.in) = 1d658b1997b3664cf34d01f1903fa38c8c986ee2
 SHA1 (patch-include_asterisk_endian.h) = 41c1a9a9e02fe394bc9261f5559e931b1378ea28
