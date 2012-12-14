@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3838 2012/12/14 09:06:44 imil Exp $
+$NetBSD: CHANGES-2012,v 1.3839 2012/12/14 11:17:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5908,3 +5908,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.19.0 [jnemeth 2012-12-14]
 	Updated net/samba to 3.6.10 [adam 2012-12-14]
 	Updated pkgtools/pkgin to 0.6.3 [imil 2012-12-14]
+	Updated emulators/suse121_gtk2 to 12.1nb4 [obache 2012-12-14]
