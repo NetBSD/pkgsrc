@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/07/09 10:24:18 abs Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/12/14 21:50:46 cheusov Exp $
 
 BUILDLINK_TREE+=	libass
 
@@ -7,6 +7,9 @@ LIBASS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libass+=	libass>=0.9.12
 BUILDLINK_PKGSRCDIR.libass?=	../../multimedia/libass
+
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../textproc/enca/buildlink3.mk"
 .endif # LIBASS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libass
