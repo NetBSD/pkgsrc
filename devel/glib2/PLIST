@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2012/11/13 21:23:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.73 2012/12/14 19:20:19 drochner Exp $
 bin/gdbus
 bin/gio-querymodules
 bin/glib-compile-resources
@@ -271,8 +271,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load/libglib-2.0.so.0.3400.2-gdb.py
-share/gdb/auto-load/libgobject-2.0.so.0.3400.2-gdb.py
+share/gdb/auto-load/libglib-2.0.so.0.3400.3-gdb.py
+share/gdb/auto-load/libgobject-2.0.so.0.3400.3-gdb.py
 share/glib-2.0/gdb/glib.py
 share/glib-2.0/gdb/gobject.py
 share/glib-2.0/gettext/mkinstalldirs
