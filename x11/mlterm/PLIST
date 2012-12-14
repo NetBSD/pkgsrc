@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/05/20 13:59:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.26 2012/12/14 17:23:28 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -42,6 +42,7 @@ man/man1/mlterm.1
 share/examples/mlterm/aafont
 share/examples/mlterm/color
 share/examples/mlterm/font
+share/examples/mlterm/font-fb
 share/examples/mlterm/key
 share/examples/mlterm/main
 share/examples/mlterm/menu
