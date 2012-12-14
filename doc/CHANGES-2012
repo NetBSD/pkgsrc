@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3845 2012/12/14 14:40:35 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3846 2012/12/14 14:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5915,3 +5915,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.1.1063 [obache 2012-12-14]
 	Updated devel/ocaml-lwt to 2.4.2 [jaap1 2012-12-14]
 	Updated devel/js_of_ocaml to 1.3.2 [jaap1 2012-12-14]
+	Updated lang/gprolog to 1.4.2 [wiz 2012-12-14]
