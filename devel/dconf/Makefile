@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/11/06 18:51:46 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2012/12/14 23:35:19 marino Exp $
 #
 # Attention: Update this only together with devel/dconf-editor
 #
@@ -16,7 +16,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --disable-editor
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool
+USE_TOOLS+=	pkg-config gmake intltool msgfmt
 
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 
