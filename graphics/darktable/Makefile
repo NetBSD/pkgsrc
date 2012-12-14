@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2012/12/08 00:15:26 jakllsch Exp $
+# $NetBSD: Makefile,v 1.24 2012/12/14 19:49:42 drochner Exp $
 
-DISTNAME=	darktable-1.1
+DISTNAME=	darktable-1.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 
@@ -49,17 +49,13 @@ CFLAGS+=	-D_NETBSD_SOURCE
 
 CHECK_PORTABILITY_SKIP+= packaging/macosx/start
 
-# for some reason msgfmt can't handle these po files
-post-extract:
-	${RM} ${WRKSRC}/po/pl.po
-
 pre-configure:
 	${MKDIR} ${WRKSRC}/pkgsrc_build
 
 # wants Clearlooks at runtime
 DEPENDS+=	gtk2-engines-[0-9]*:../../x11/gtk2-engines
 
-BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.12.1
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
