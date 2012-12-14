@@ -1,8 +1,7 @@
-$NetBSD: patch-ad,v 1.8 2011/08/02 14:03:18 bouyer Exp $
-
---- html/Makefile.in.orig	2011-07-24 19:53:52.000000000 +0200
-+++ html/Makefile.in	2011-08-01 18:50:04.000000000 +0200
-@@ -7,7 +7,7 @@
+--- html/Makefile.in.orig	2012-02-13 21:40:42.000000000 +0100
++++ html/Makefile.in	2012-10-05 15:13:58.000000000 +0200
+@@ -6,9 +6,9 @@
+ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
@@ -11,7 +10,9 @@ $NetBSD: patch-ad,v 1.8 2011/08/02 14:03:18 bouyer Exp $
  HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -33,52 +33,52 @@
+ COMMAND_OPTS=@COMMAND_OPTS@
+@@ -33,57 +33,57 @@
+ 
  devclean: distclean
  
  install:
@@ -21,6 +22,7 @@ $NetBSD: patch-ad,v 1.8 2011/08/02 14:03:18 bouyer Exp $
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/contexthelp
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/docs
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/docs/images
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/js
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images/logos
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes
@@ -29,64 +31,86 @@ $NetBSD: patch-ad,v 1.8 2011/08/02 14:03:18 bouyer Exp $
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/ssi
 -	$(INSTALL) -m 664 $(INSTALL_OPTS) robots.txt $(DESTDIR)$(HTMLDIR)
 -#	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/media
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/stylesheets
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/contexthelp
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs/images
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images/logos
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes/rss
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes/rss/extlib
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/ssi
-+	${BSD_INSTALL_DATA} robots.txt $(DESTDIR)$(HTMLDIR)
-+	#${BSD_INSTALL_DATA} docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/media
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/stylesheets
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/contexthelp
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/docs
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/docs/images
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/js
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/images
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/images/logos
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/includes
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/includes/rss
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/includes/rss/extlib
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/ssi
++	$(BSD_INSTALL_DATA) robots.txt $(DESTDIR)$(HTMLDIR)
++#	$(BSD_INSTALL_DATA) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
  # Remove old HTML files (PHP files are used now)
  	rm -f $(DESTDIR)$(HTMLDIR)/index.html
  	rm -f $(DESTDIR)$(HTMLDIR)/main.html
  	rm -f $(DESTDIR)$(HTMLDIR)/side.html
- 	for file in *.php; \
+-	for file in *.php; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR); done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR); done
- #	for file in media/*.wav; \
- #	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/media; done
- 	for file in stylesheets/*.css; \
+-#	for file in media/*.wav; \
+-#	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/media; done
+-	for file in stylesheets/*.css; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/stylesheets; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/stylesheets; done
- 	for file in contexthelp/*.html; \
+-	for file in contexthelp/*.html; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/contexthelp; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/contexthelp; done
- #	for file in docs/*.html; \
- #	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs; done
- #	for file in docs/images/*.*; \
- #	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
- 	for file in images/*.gif; \
+-	for file in js/*.js; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/js; done
+-#	for file in docs/*.html; \
+-#	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs; done
+-#	for file in docs/images/*.*; \
+-#	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
+-	for file in images/*.gif; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
- 	for file in images/*.jpg; \
+-	for file in images/*.jpg; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
- 	for file in images/*.png; \
+-	for file in images/*.png; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
- 	for file in images/*.ico; \
+-	for file in images/*.ico; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
- 	for file in images/logos/*.*; \
+-	for file in images/logos/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
- 	for file in includes/*.*; \
+-	for file in includes/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/includes; done
--	for file in includes/rss/*; \
-+	for file in AUTHORS NEWS rss_parse.inc CHANGES README rss_utils.inc ChangeLog TROUBLESHOOTING rss_cache.inc INSTALL cookbook rss_fetch.inc ; \
+-	for file in includes/rss/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
-+	do ${BSD_INSTALL_DATA} includes/rss/$$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
- 	for file in includes/rss/extlib/*; \
+-	for file in includes/rss/extlib/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
++	for file in *.php; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR); done
++#	for file in media/*.wav; do \
++#	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/media; done
++	for file in stylesheets/*.css; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/stylesheets; done
++	for file in contexthelp/*.html; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/contexthelp; done
++	for file in js/*.js; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/js; done
++#	for file in docs/*.html; do \
++#	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/docs; done
++#	for file in docs/images/*.*; do \
++#	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
++	for file in images/*.gif; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/images; done
++	for file in images/*.jpg; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/images; done
++	for file in images/*.png; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/images; done
++	for file in images/*.ico; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/images; done
++	for file in images/logos/*.*; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
++	for file in includes/*.*; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/includes; done
++	for file in includes/rss/*.*; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
++	for file in includes/rss/extlib/*.*; do \
++	$(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
  
  install-unstripped:
  	$(MAKE) install
+ 

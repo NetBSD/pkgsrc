@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
+$NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
 
---- Makefile.in.orig	2011-07-26 04:02:18.000000000 +0200
-+++ Makefile.in	2011-08-01 20:14:30.000000000 +0200
-@@ -24,17 +24,16 @@
+--- Makefile.in.orig	2012-04-25 14:30:47.000000000 +0200
++++ Makefile.in	2012-10-04 18:40:13.000000000 +0200
+@@ -23,19 +23,18 @@
+ prefix=@prefix@
  exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CHECKRESULTDIR=@CHECKRESULTDIR@
@@ -23,7 +24,9 @@ $NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -69,74 +68,6 @@
+ USE_EVENTBROKER=@USE_EVENTBROKER@
+@@ -71,76 +70,8 @@
+ all:
  	cd $(SRC_BASE) && $(MAKE)
  	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
@@ -98,7 +101,9 @@ $NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
  
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
-@@ -230,14 +161,10 @@
+ 
+@@ -233,16 +164,12 @@
+ 	$(MAKE) install-exfoliation	
  	$(MAKE) install-basic
  
  install-basic:
@@ -115,7 +120,9 @@ $NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
  	@echo ""
  	@echo "*** Main program, CGIs and HTML files installed ***"
  	@echo ""
-@@ -257,20 +184,20 @@
+ 	@echo "You can continue with installing Nagios as follows (type 'make'"
+@@ -260,22 +187,22 @@
+ 	@echo ""
  
  
  install-config:
@@ -150,7 +157,9 @@ $NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
  	@echo ""
  	@echo "*** Config files installed ***"
  	@echo ""
-@@ -287,8 +214,15 @@
+ 	@echo "Remember, these are *SAMPLE* config files.  You'll need to read"
+@@ -290,10 +217,17 @@
+ 	@echo "*** Nagios/Apache conf file installed ***"
  	@echo ""
  	
  install-exfoliation:
@@ -168,7 +177,9 @@ $NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
  
  	@echo ""
  	@echo "*** Exfoliation theme installed ***"
-@@ -316,7 +250,10 @@
+ 	@echo "NOTE: Use 'make install-classicui' to revert to classic Nagios theme";
+@@ -319,9 +253,12 @@
+ 	@echo ""
  
  
  install-commandmode:
@@ -180,3 +191,4 @@ $NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
  	chmod g+s $(DESTDIR)$(LOGDIR)/rw
  
  	@echo ""
+ 	@echo "*** External command directory configured ***"
