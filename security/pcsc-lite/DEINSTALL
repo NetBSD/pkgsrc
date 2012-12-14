@@ -1,8 +1,0 @@
-#!/bin/sh
-# $NetBSD: DEINSTALL,v 1.1 2009/10/02 12:36:13 hasso Exp $
-
-case ${STAGE} in
-POST-DEINSTALL)
-	${RM} -f @PKG_SYSCONFDIR@/reader.conf
-	;;
-esac

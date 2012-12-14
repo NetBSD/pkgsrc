@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/02 12:36:13 hasso Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/14 23:50:33 pettai Exp $
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
 include/PCSC/pcsclite.h
@@ -9,11 +9,5 @@ lib/libpcsclite.la
 lib/pkgconfig/libpcsclite.pc
 man/man5/reader.conf.5
 man/man8/pcscd.8
-man/man8/update-reader.conf.8
 sbin/pcscd
-sbin/update-reader.conf
 share/doc/pcsc-lite/README.DAEMON
-share/doc/pcsc-lite/ifdhandler-3.tex
-share/doc/pcsc-lite/pcsc-lite.bib
-share/doc/pcsc-lite/pcsc-lite.tex
-share/examples/pcsc-lite/reader.conf
