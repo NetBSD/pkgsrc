@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2012/08/01 11:25:40 imil Exp $
+$NetBSD: distinfo,v 1.25 2012/12/14 09:05:48 imil Exp $
 
-SHA1 (pkgin-0.6.2.2.tar.gz) = 2439db4ff6d6bb2ddf32fc94d633d9668f6af018
-RMD160 (pkgin-0.6.2.2.tar.gz) = 22b345370d2621b376fc882b0d5f1a69b195d329
-Size (pkgin-0.6.2.2.tar.gz) = 187169 bytes
+SHA1 (pkgin-0.6.3.tar.gz) = d3752b148feff2b1a5286016fffcb8a576487025
+RMD160 (pkgin-0.6.3.tar.gz) = 91cb719a29b74121288bd13c6d3a6ce33996aa57
+Size (pkgin-0.6.3.tar.gz) = 187697 bytes
