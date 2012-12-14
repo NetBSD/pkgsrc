@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/08/31 10:58:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/12/14 11:23:47 obache Exp $
 bin/opera
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
 lib/opera/gstreamer/plugins/libgstoperavp8.so
@@ -123,6 +123,7 @@ share/opera/locale/ka/ka.lng
 share/opera/locale/kk/kk.lng
 share/opera/locale/ko/ko.lng
 share/opera/locale/lt/lt.lng
+share/opera/locale/lv/lv.lng
 share/opera/locale/me/me.lng
 share/opera/locale/mk/mk.lng
 share/opera/locale/ms/ms.lng
@@ -185,6 +186,11 @@ share/opera/locale/zu/zu.lng
 share/opera/mathml.dtd
 share/opera/package-id.ini
 share/opera/pubsuffix.xml
+share/opera/region/ar/bookmarks.adr
+share/opera/region/ar/search.ini
+share/opera/region/ar/standard_speeddial.ini
+share/opera/region/au/bookmarks.adr
+share/opera/region/au/standard_speeddial.ini
 share/opera/region/cis/en/bookmarks.adr
 share/opera/region/cis/en/search.ini
 share/opera/region/cis/en/standard_speeddial.ini
@@ -196,6 +202,9 @@ share/opera/region/cn/en/bookmarks.adr
 share/opera/region/cn/en/search.ini
 share/opera/region/cn/en/standard_speeddial.ini
 share/opera/region/cn/turbosettings.xml
+share/opera/region/eg/bookmarks.adr
+share/opera/region/eg/search.ini
+share/opera/region/eg/standard_speeddial.ini
 share/opera/region/gb/bookmarks.adr
 share/opera/region/gb/search.ini
 share/opera/region/gb/standard_speeddial.ini
@@ -213,6 +222,11 @@ share/opera/region/latin_america/standard_speeddial.ini
 share/opera/region/middle_east/bookmarks.adr
 share/opera/region/middle_east/search.ini
 share/opera/region/middle_east/standard_speeddial.ini
+share/opera/region/mx/bookmarks.adr
+share/opera/region/mx/search.ini
+share/opera/region/mx/standard_speeddial.ini
+share/opera/region/my/bookmarks.adr
+share/opera/region/my/standard_speeddial.ini
 share/opera/region/ng/bookmarks.adr
 share/opera/region/ng/standard_speeddial.ini
 share/opera/region/ph/bookmarks.adr
@@ -220,6 +234,11 @@ share/opera/region/ph/standard_speeddial.ini
 share/opera/region/pk/bookmarks.adr
 share/opera/region/pk/standard_speeddial.ini
 share/opera/region/region.ini
+share/opera/region/ru/bookmarks.adr
+share/opera/region/ru/search.ini
+share/opera/region/ru/standard_speeddial.ini
+share/opera/region/se/bookmarks.adr
+share/opera/region/se/standard_speeddial.ini
 share/opera/region/tw/browser.js
 share/opera/region/tw/turbosettings.xml
 share/opera/region/ua/ru/bookmarks.adr
@@ -230,6 +249,8 @@ share/opera/region/us/search.ini
 share/opera/region/us/standard_speeddial.ini
 share/opera/region/vn/bookmarks.adr
 share/opera/region/vn/standard_speeddial.ini
+share/opera/region/za/bookmarks.adr
+share/opera/region/za/standard_speeddial.ini
 share/opera/skin/standard_skin.zip
 share/opera/skin/unix_skin.zip
 share/opera/styles/about.css
