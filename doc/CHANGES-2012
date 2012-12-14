@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3851 2012/12/14 19:50:48 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3852 2012/12/14 22:44:09 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5927,3 +5927,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/libpeas to 1.6.2 [drochner 2012-12-14]
 	Updated devel/libgee to 0.6.7 [drochner 2012-12-14]
 	Updated graphics/darktable to 1.1.1 [drochner 2012-12-14]
+	Updated pkgtools/pkgin to 0.6.3.1 [imil 2012-12-14]
