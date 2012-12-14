@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3843 2012/12/14 11:57:59 obache Exp $
+$NetBSD: CHANGES-2012,v 1.3844 2012/12/14 14:32:48 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5913,3 +5913,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.48 [obache 2012-12-14]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.258 [obache 2012-12-14]
 	Updated net/mikutter to 0.1.1.1063 [obache 2012-12-14]
+	Updated devel/ocaml-lwt to 2.4.2 [jaap1 2012-12-14]
