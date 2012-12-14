@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/07/20 20:08:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/12/14 14:40:24 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/js_of_ocaml
 bin/js_of_ocaml
 lib/ocaml/site-lib/js_of_ocaml/META
@@ -50,6 +50,8 @@ lib/ocaml/site-lib/js_of_ocaml/url.cmi
 lib/ocaml/site-lib/js_of_ocaml/url.mli
 lib/ocaml/site-lib/js_of_ocaml/webGL.cmi
 lib/ocaml/site-lib/js_of_ocaml/webGL.mli
+lib/ocaml/site-lib/js_of_ocaml/webSockets.cmi
+lib/ocaml/site-lib/js_of_ocaml/webSockets.mli
 lib/ocaml/site-lib/js_of_ocaml/xmlHttpRequest.cmi
 lib/ocaml/site-lib/js_of_ocaml/xmlHttpRequest.mli
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/js_of_ocaml
