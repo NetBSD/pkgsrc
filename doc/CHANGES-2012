@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3835 2012/12/14 03:13:39 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.3836 2012/12/14 03:14:07 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5905,3 +5905,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/php-soycms version 1.4.0a [ryoon 2012-12-13]
 	Updated mail/postfix to 2.8.13 [taca 2012-12-13]
 	Updated comms/asterisk10 to 10.11.0 [jnemeth 2012-12-14]
+	Updated comms/asterisk18 to 1.8.19.0 [jnemeth 2012-12-14]
