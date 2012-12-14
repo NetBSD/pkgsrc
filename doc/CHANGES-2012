@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3849 2012/12/14 17:24:07 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.3850 2012/12/14 18:54:19 manu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5919,3 +5919,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ocaml-tyxml to 2.2.0 [jaap1 2012-12-14]
 	Updated games/onscripter to 20121201 [tsutsui 2012-12-14]
 	Updated x11/mlterm to 3.1.6 [tsutsui 2012-12-14]
+	Updated net/nagios-base to 3.4.3 [manu 2012-12-14]
