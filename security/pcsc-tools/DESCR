@@ -2,8 +2,8 @@ Provides several tools that are useful when working
 with smart cards: csc_scan regularly scans every
 PC/SC reader connected to the host and reports when
 a card is inserted or removed. ATR_analysis is a Perl
-script used to parse the smart card ATR. The 
+script used to parse the smart card ATR. The
 smartcard_list.txt contains ATR of some cards. It is
 used by ATR_analysis to find a card model corresponding
-to the ATR. The perl script scriptortis used to send 
-commands to a smart card using a batch file or stdin. 
+to the ATR. The perl script scriptortis used to send
+commands to a smart card using a batch file or stdin.
