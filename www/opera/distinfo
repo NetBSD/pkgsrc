@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.41 2012/08/31 10:58:49 obache Exp $
+$NetBSD: distinfo,v 1.41.2.1 2012/12/15 17:13:51 tron Exp $
 
-SHA1 (opera-12.02-1578.amd64.freebsd.tar.xz) = 9cb060b4352b9fb6797d440e02452227adddbede
-RMD160 (opera-12.02-1578.amd64.freebsd.tar.xz) = 9573ec80bdf07aaf065b85a584a48c5ed5003cef
-Size (opera-12.02-1578.amd64.freebsd.tar.xz) = 12952100 bytes
-SHA1 (opera-12.02-1578.i386.freebsd.tar.xz) = b469bba93495fcc3f10bd41833bf612085de94a6
-RMD160 (opera-12.02-1578.i386.freebsd.tar.xz) = c80e8d78d09a335b526686dad0870c786d7c174f
-Size (opera-12.02-1578.i386.freebsd.tar.xz) = 12757132 bytes
-SHA1 (opera-12.02-1578.i386.linux.tar.xz) = da0829b6dd1aaab0c010a6c4dc0c7536650368cf
-RMD160 (opera-12.02-1578.i386.linux.tar.xz) = caba99992876e30d21d634157e8c3ea5de55b80d
-Size (opera-12.02-1578.i386.linux.tar.xz) = 12800028 bytes
-SHA1 (opera-12.02-1578.x86_64.linux.tar.xz) = edce56e135cd7a4c2ecafa26366417b6a102acd9
-RMD160 (opera-12.02-1578.x86_64.linux.tar.xz) = 117526e22317bf9ef5be0a3c7bcbe932970a99f8
-Size (opera-12.02-1578.x86_64.linux.tar.xz) = 13219992 bytes
+SHA1 (opera-12.11-1661.amd64.freebsd.tar.xz) = c8c439555d3d77efc67e378389309df5c289ce26
+RMD160 (opera-12.11-1661.amd64.freebsd.tar.xz) = 8eabcddd79164dfada3c84a9640764e696c0c86a
+Size (opera-12.11-1661.amd64.freebsd.tar.xz) = 13436532 bytes
+SHA1 (opera-12.11-1661.i386.freebsd.tar.xz) = a3bc995c2c36405c10ac030fee800d861bc63afa
+RMD160 (opera-12.11-1661.i386.freebsd.tar.xz) = 5fda5227b055d1babb127fc7563d01016b96c16c
+Size (opera-12.11-1661.i386.freebsd.tar.xz) = 13472248 bytes
+SHA1 (opera-12.11-1661.i386.linux.tar.xz) = f0dfaee6b3da4a8519c7e836535c0fd064af463a
+RMD160 (opera-12.11-1661.i386.linux.tar.xz) = 642f6a8e02c8100a4078b1dde344dbd675669606
+Size (opera-12.11-1661.i386.linux.tar.xz) = 13552952 bytes
+SHA1 (opera-12.11-1661.x86_64.linux.tar.xz) = 863173cc1957df0053d5a29cae71d48089a9a225
+RMD160 (opera-12.11-1661.x86_64.linux.tar.xz) = 8854084fb5a002dcef1c4b32b9d16e4204975d99
+Size (opera-12.11-1661.x86_64.linux.tar.xz) = 13634672 bytes
