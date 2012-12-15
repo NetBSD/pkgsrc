@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/08/15 03:21:52 obache Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2012/12/15 17:22:22 tron Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.${FLASH_ARCH}
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
@@ -16,8 +16,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 NOT_FOR_PLATFORM=	NetBSD-[0-4]*-* NetBSD-5.[0-9].*-*
 
 WRKSRC=			${WRKDIR}
@@ -32,7 +30,7 @@ EMUL_PLATFORMS=		linux-i386 #linux-x86_64
 EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl
 EMUL_REQD=		suse>=11.3
 
-FLASH_VERSION=		11.2.202.238
+FLASH_VERSION=		11.2.202.258
 
 .include "../../mk/bsd.prefs.mk"
 
