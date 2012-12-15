@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:14 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/15 16:18:42 jaapb Exp $
 #
 
-DISTNAME=	eliom-2.2.2
-PKGREVISION=	1
+DISTNAME=	eliom-3.0.3
 CATEGORIES=	www
 MASTER_SITES=	http://ocsigen.org/download/
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://ocsigen.org/download/
 COMMENT=	Dynamic webpage generation library
 LICENSE=	gnu-lgpl-v2.1
@@ -15,17 +14,18 @@ USE_LANGUAGES=	c
 USE_TOOLS=	gmake
 HAS_CONFIGURE=	yes
 
-DEPENDS+=	js_of_ocaml>=1.2:../../devel/js_of_ocaml
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-DEPENDS+=	ocsigen>=2.1:../../www/ocsigen
-DEPENDS+=	ocaml-tyxml>=2.1:../../textproc/ocaml-tyxml
+DEPENDS+=	js_of_ocaml>=1.3.2:../../devel/js_of_ocaml
+DEPENDS+=	ocsigen>=2.2:../../www/ocsigen
+DEPENDS+=	ocaml-tyxml>=2.2:../../textproc/ocaml-tyxml
 DEPENDS+=	ocaml-react>=0.9.2:../../devel/ocaml-react
-DEPENDS+=	ocaml-ssl>=0.4.4:../../security/ocaml-ssl
 DEPENDS+=	ocaml-calendar>=2.01.1:../../time/ocaml-calendar
 DEPENDS+=	ocaml-deriving-ocsigen>=0.3:../../devel/ocaml-deriving-ocsigen
 
 CONFIGURE_ARGS+=	--temproot ${DESTDIR} --prefix ${PREFIX} \
-			--libdir ${PREFIX}/lib/ocaml/site-lib --without-ocamlduce
+			--libdir ${PREFIX}/lib/ocaml/site-lib
+
+INSTALLATION_DIRS=	lib/ocaml/site-lib
 
 PLIST_VARS=	opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
@@ -36,9 +36,7 @@ CONFIGURE_ARGS+=	--enable-natdynlink
 CONFIGURE_ARGS==	--disable-natdynlink
 .endif
 
-pre-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/lib/ocaml/site-lib
-
-.include "../../net/ocamlnet/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../net/ocamlnet/buildlink3.mk"
+.include "../../security/ocaml-ssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
