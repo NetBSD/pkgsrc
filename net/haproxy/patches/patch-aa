@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/10/31 23:34:07 morr Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/15 19:04:56 shattered Exp $
 
 Add support for NetBSD.
 
---- Makefile.orig	2011-03-09 08:00:16.000000000 +0000
+--- Makefile.orig	2012-08-14 07:09:31.000000000 +0000
 +++ Makefile
 @@ -71,7 +71,7 @@ DOCDIR = $(PREFIX)/doc/haproxy
  # Use TARGET=<target_name> to optimize for a specifc target OS among the
  # following list (use the default "generic" if uncertain) :
  #    generic, linux22, linux24, linux24e, linux26, solaris,
--#    freebsd, openbsd, cygwin, custom
-+#    freebsd, netbsd, openbsd, cygwin, custom
+-#    freebsd, openbsd, cygwin, custom, aix52
++#    freebsd, netbsd, openbsd, cygwin, custom, aix52
  TARGET =
  
  #### TARGET CPU
@@ -21,7 +21,7 @@ Add support for NetBSD.
  LD = $(CC)
  
  #### Debug flags (typically "-g").
-@@ -228,6 +227,12 @@ ifeq ($(TARGET),freebsd)
+@@ -240,6 +239,12 @@ ifeq ($(TARGET),freebsd)
    USE_TPROXY     = implicit
    USE_LIBCRYPT   = implicit
  else
@@ -34,20 +34,20 @@ Add support for NetBSD.
  ifeq ($(TARGET),openbsd)
    # This is for OpenBSD >= 3.0
    USE_POLL       = implicit
-@@ -242,6 +247,7 @@ ifeq ($(TARGET),cygwin)
-   TARGET_CFLAGS  = $(if $(filter 1.5.%, $(shell uname -r)), -DUSE_IPV6 -DAF_INET6=23 -DINET6_ADDRSTRLEN=46, )
+@@ -262,6 +267,7 @@ ifeq ($(TARGET),cygwin)
  endif # cygwin
+ endif # aix52
  endif # openbsd
 +endif # netbsd
  endif # freebsd
  endif # solaris
- endif # linux26
-@@ -473,7 +479,7 @@ all:
+ endif # linux2628
+@@ -495,7 +501,7 @@ all:
  	@echo "Please choose the target among the following supported list :"
  	@echo
- 	@echo "   linux26, linux24, linux24e, linux22, solaris"
+ 	@echo "   linux2628, linux26, linux24, linux24e, linux22, solaris"
 -	@echo "   freebsd, openbsd, cygwin, custom, generic"
-+	@echo "   freebsd, netbsd, openbsd, cygwin, custom, generic"
++	@echo "   freebsd, netbsd, openbsd, cygwin, custom, generic, aix52"
  	@echo
  	@echo "Use \"generic\" if you don't want any optimization, \"custom\" if you"
  	@echo "want to precisely tweak every option, or choose the target which"
