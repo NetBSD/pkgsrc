@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.7 2006/08/23 10:43:50 minskim Exp $
+$NetBSD: distinfo,v 1.8 2012/12/15 22:17:31 markd Exp $
 
-SHA1 (ns-allinone-2.29.3.tar.gz) = 3a09828d08b3b43c4008b171d0b72dbc2baf8d7f
-RMD160 (ns-allinone-2.29.3.tar.gz) = 7feab9f6ab74a5207d8a7926f2fb965f263a887c
-Size (ns-allinone-2.29.3.tar.gz) = 68618537 bytes
-SHA1 (patch-aa) = 6178acca56809e546128c0b8d54db4aa6db83e4d
-SHA1 (patch-ab) = c7ecec5ce97b68a41ad9e93017e158ad8426ad45
-SHA1 (patch-ac) = dfdefa14ebe3a434ad2aa85e0b40065bc2e9a858
-SHA1 (patch-ad) = 37febda5857e59fd87ee6833db82528e1d5b4920
+SHA1 (nam-src-1.15.tar.gz) = 9059914cf537ba32f297bcd4b4a6ebf940a7ca4c
+RMD160 (nam-src-1.15.tar.gz) = 3f52ee941a24a5f26624ba75177835fee4d37920
+Size (nam-src-1.15.tar.gz) = 4365554 bytes
+SHA1 (patch-aa) = a24e3353c3e5a6ee8bcdc75d2d9cea1653847c35
+SHA1 (patch-ac) = 3daef7356606a00144117e4ea235ccab1572c0d8

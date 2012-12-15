@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2012/11/17 22:14:11 markd Exp $
+# $NetBSD: Makefile,v 1.30 2012/12/15 22:17:31 markd Exp $
 
-DISTNAME=	ns-allinone-2.29.3
-PKGNAME=	nam-1.11
-PKGREVISION=	5
+DISTNAME=	nam-src-1.15
+PKGNAME=	nam-1.15
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
@@ -12,9 +11,7 @@ COMMENT=	The UCB/LBNL Network Animator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
-
-WRKSRC=		${WRKDIR}/ns-allinone-2.29/nam-1.11
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 BUILD_TARGET=
