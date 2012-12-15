@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.60 2012/10/31 11:17:33 asau Exp $
+# $NetBSD: Makefile,v 1.61 2012/12/15 09:48:00 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
-PKGREVISION=		3
-NSS_RELEASE=		3.13.6
+NSS_RELEASE=		3.14
+# PKGVERSION_NOREV is used in nss.pc, and version number in nss.pc
+# should be 3.14.0.
+PKGNAME=		${DISTNAME}.0
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_13_6_RTM/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_14_RTM/src/}
 
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
