@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3857 2012/12/15 10:26:22 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3858 2012/12/15 10:28:40 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5697,7 +5697,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.8.0.1 [adam 2012-12-02]
 	Updated devel/scmgit-docs to 1.8.0.1 [adam 2012-12-02]
 	Updated www/gitweb to 1.8.0.1 [adam 2012-12-02]
-	Updated archivers/ocaml-zip to 1.04nb2 [jaap1 2012-12-03]
+	Updated archivers/ocaml-zip to 1.04nb2 [jaapb 2012-12-03]
 	Added graphics/openimageio version 1.1.1 [ryoon 2012-12-03]
 	Updated graphics/opencv to 2.4.3 [ryoon 2012-12-03]
 	Updated graphics/blender to 2.64a [ryoon 2012-12-03]
@@ -5900,7 +5900,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-django to 1.4.3 [adam 2012-12-13]
 	Updated www/tinyproxy to 1.8.3nb1 [wiz 2012-12-13]
 	Updated www/p5-HTTP-Server-EV to 0.5nb1 [wiz 2012-12-13]
-	Updated databases/ocaml-mysql to 1.1.1nb2 [jaap1 2012-12-13]
+	Updated databases/ocaml-mysql to 1.1.1nb2 [jaapb 2012-12-13]
 	Updated biology/clustalw to 2.1 [wen 2012-12-13]
 	Added www/php-soycms version 1.4.0a [ryoon 2012-12-13]
 	Updated mail/postfix to 2.8.13 [taca 2012-12-13]
@@ -5913,10 +5913,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.48 [obache 2012-12-14]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.258 [obache 2012-12-14]
 	Updated net/mikutter to 0.1.1.1063 [obache 2012-12-14]
-	Updated devel/ocaml-lwt to 2.4.2 [jaap1 2012-12-14]
-	Updated devel/js_of_ocaml to 1.3.2 [jaap1 2012-12-14]
+	Updated devel/ocaml-lwt to 2.4.2 [jaapb 2012-12-14]
+	Updated devel/js_of_ocaml to 1.3.2 [jaapb 2012-12-14]
 	Updated lang/gprolog to 1.4.2 [wiz 2012-12-14]
-	Updated textproc/ocaml-tyxml to 2.2.0 [jaap1 2012-12-14]
+	Updated textproc/ocaml-tyxml to 2.2.0 [jaapb 2012-12-14]
 	Updated games/onscripter to 20121201 [tsutsui 2012-12-14]
 	Updated x11/mlterm to 3.1.6 [tsutsui 2012-12-14]
 	Updated net/nagios-base to 3.4.3 [manu 2012-12-14]
@@ -5932,4 +5932,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ccid to 1.4.5 [pettai 2012-12-15]
 	Updated security/pcsc-tools to 1.4.21 [pettai 2012-12-15]
 	Updated devel/nss to 3.14.0 [ryoon 2012-12-15]
-	Added databases/ocaml-dbm version 1.0 [root 2012-12-15]
+	Added databases/ocaml-dbm version 1.0 [jaapb 2012-12-15]
