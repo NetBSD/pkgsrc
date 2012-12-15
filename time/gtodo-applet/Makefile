@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2012/10/08 23:02:29 adam Exp $
+# $NetBSD: Makefile,v 1.50 2012/12/15 10:36:33 ryoon Exp $
 #
 
 DISTNAME=	gtodo-applet-0.1
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	time gnome
 MASTER_SITES=	# http://download.qballcow.nl/programs/gtodo/
 
