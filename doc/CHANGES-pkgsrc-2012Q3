@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.37 2012/12/05 18:52:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.38 2012/12/15 17:55:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -109,3 +109,13 @@ Pullup ticket #3983 - requested by taca
 net/bind99 security update
 Pullup ticket #3984 - requested by is
 print/gv: bug fix update
+Pullup ticket #3985 - requested by obache
+emulators/suse121_gtk2: security update
+Pullup ticket #3986 - requested by obache
+www/opera: security update
+Pullup ticket #3987 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
+Pullup ticket #3988 - requested by obache
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #3989 - requested by obache
+net/mikutter: compatiblity fix update
