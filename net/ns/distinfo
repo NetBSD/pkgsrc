@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.17 2012/09/29 06:17:29 dholland Exp $
+$NetBSD: distinfo,v 1.18 2012/12/15 22:07:32 markd Exp $
 
-SHA1 (ns-2.33.tar.gz) = 0efd6aed45b504fcf3f125b0be00a60b87516a03
-RMD160 (ns-2.33.tar.gz) = 54326b8ff4e63c0a9712c517c7ad4d9327a41d39
-Size (ns-2.33.tar.gz) = 41649114 bytes
+SHA1 (ns-src-2.35.tar.gz) = 785d4045711d92c0042a6f8f5620d5eb74732980
+RMD160 (ns-src-2.35.tar.gz) = 197e6874b97c56819ce9a722ffab9fe80a5cfe21
+Size (ns-src-2.35.tar.gz) = 43897172 bytes
 SHA1 (patch-aa) = 3b25eab34d7bdad7d370cea8450eb3c09c18c640
 SHA1 (patch-ab) = 7c93e4540faa1b16a9e40bd063ffce510f5bc063
 SHA1 (patch-ad) = 5f35152de976c2195dcff20abbe8610321dd9969
 SHA1 (patch-ae) = c971d28448ae1b495119e3ec2c8de185468b9be2
-SHA1 (patch-af) = da5772371dd4d754fa8aeb904bdcf29c41552276
+SHA1 (patch-af) = bc29b20fd017d81a5459f6603b4b4013ec5139dd
 SHA1 (patch-ah) = 51c36d73309d135f89f7d2362835052b304b88bd
 SHA1 (patch-ai) = b75f36f986ca7c833769de09e6e79f6b87c5564a
 SHA1 (patch-aj) = 533fa4f1bd1f8bf83882ed5ed2717511283d5ddc
@@ -18,9 +18,8 @@ SHA1 (patch-an) = c6dd6b93332a6c6dd169975836df9ef802bfc206
 SHA1 (patch-ao) = 2a1fd71686ff206fe2212605f91b8167b998d6e2
 SHA1 (patch-ap) = f130c112d7dfe114e637e190750d9caad55e4703
 SHA1 (patch-aq) = c46339a81f3f0dea9754f733d567c3c93f7dc19e
-SHA1 (patch-ar) = 64dafe254cfd28723422047aecb8086028d9f69e
-SHA1 (patch-as) = 5fdd4418db3ee4b189913f1110fb260af710f746
 SHA1 (patch-common_packet.cc) = 74835d281febc195c5d1118bc5ceb40107597876
 SHA1 (patch-common_packet.h) = 2b8289ee47206f7201ea225d23318202c7b370c5
 SHA1 (patch-common_ptypes2tcl.cc) = 2354e030fef92d28c2c4049be30dcb365302068a
+SHA1 (patch-linkstate_ls.h) = 5f0fb99db398cf39e9853e7d8e8cd6536d29e44b
 SHA1 (patch-mac_mac-802_11Exr.cc) = 93e4112025b6e610e76694c6067723f77cd75b84
