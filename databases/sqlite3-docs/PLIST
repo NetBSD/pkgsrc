@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/09/06 20:29:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/12/15 18:42:33 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -35,12 +35,12 @@ share/doc/sqlite3/c3ref/c_alter_table.html
 share/doc/sqlite3/c3ref/c_any.html
 share/doc/sqlite3/c3ref/c_blob.html
 share/doc/sqlite3/c3ref/c_checkpoint_full.html
-share/doc/sqlite3/c3ref/c_config_getmalloc.html
+share/doc/sqlite3/c3ref/c_config_covering_index_scan.html
 share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
 share/doc/sqlite3/c3ref/c_dbstatus_options.html
 share/doc/sqlite3/c3ref/c_deny.html
 share/doc/sqlite3/c3ref/c_fail.html
-share/doc/sqlite3/c3ref/c_fcntl_chunk_size.html
+share/doc/sqlite3/c3ref/c_fcntl_busyhandler.html
 share/doc/sqlite3/c3ref/c_index_constraint_eq.html
 share/doc/sqlite3/c3ref/c_iocap_atomic.html
 share/doc/sqlite3/c3ref/c_limit_attached.html
@@ -233,6 +233,7 @@ share/doc/sqlite3/images/ac/rollback-2.gif
 share/doc/sqlite3/images/ac/rollback-3.gif
 share/doc/sqlite3/images/ac/rollback-4.gif
 share/doc/sqlite3/images/ac/rollback-5.gif
+share/doc/sqlite3/images/apple-touch-icon.png
 share/doc/sqlite3/images/arch.gif
 share/doc/sqlite3/images/arch.png
 share/doc/sqlite3/images/arch2.gif
@@ -565,6 +566,8 @@ share/doc/sqlite3/releaselog/3_7_12.html
 share/doc/sqlite3/releaselog/3_7_12_1.html
 share/doc/sqlite3/releaselog/3_7_13.html
 share/doc/sqlite3/releaselog/3_7_14.html
+share/doc/sqlite3/releaselog/3_7_14_1.html
+share/doc/sqlite3/releaselog/3_7_15.html
 share/doc/sqlite3/releaselog/3_7_2.html
 share/doc/sqlite3/releaselog/3_7_3.html
 share/doc/sqlite3/releaselog/3_7_4.html
@@ -591,6 +594,7 @@ share/doc/sqlite3/sharedcache.html
 share/doc/sqlite3/shortnames.html
 share/doc/sqlite3/sitemap.html
 share/doc/sqlite3/speed.html
+share/doc/sqlite3/spellfix1.html
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/support.html
 share/doc/sqlite3/syntaxdiagrams.html
