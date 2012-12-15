@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.sqlite,v 1.1 2012/07/11 10:40:46 wiz Exp $
-${OPT}lib/ocaml/site-lib/ocsigenserver/extensions/ocsipersist-sqlite.a
-lib/ocaml/site-lib/ocsigenserver/extensions/ocsipersist-sqlite.cma
-${OPT}lib/ocaml/site-lib/ocsigenserver/extensions/ocsipersist-sqlite.cmxa
-${OPT}lib/ocaml/site-lib/ocsigenserver/extensions/ocsipersist-sqlite.cmxs
