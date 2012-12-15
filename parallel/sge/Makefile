@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/10/03 21:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2012/12/15 22:27:01 markd Exp $
 #
 
 DISTNAME=		sge-8.0.0d
@@ -78,8 +78,13 @@ SGE_ARCH=		darwin
 SGE_BUILDARCH=		DARWIN
 .elif ${OPSYS} == "Linux"
 AIMK+=			-no-dump
+.  if ${MACHINE_ARCH} == "i386"
 SGE_ARCH=		lx-x86
 SGE_BUILDARCH=		LINUX86
+.  else
+SGE_ARCH=		lx-amd64
+SGE_BUILDARCH=		LINUXAMD64
+.  endif
 .else
 PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 .endif
