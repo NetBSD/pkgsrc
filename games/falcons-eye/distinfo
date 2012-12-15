@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2012/11/19 23:22:07 joerg Exp $
+$NetBSD: distinfo,v 1.19 2012/12/15 11:50:48 marino Exp $
 
 SHA1 (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = f25a3b77925d247762d18b6f022500aac7c42b29
 RMD160 (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = a94c3bbdec7a0c034acbe431071342b872c7acc5
@@ -23,5 +23,4 @@ SHA1 (patch-bh) = 65bf424d1e60b0ee9b9acc8b04359f2f4621e605
 SHA1 (patch-bi) = 6b3d0d1eca3a23c3086155c1da3c2965d7092d5f
 SHA1 (patch-bj) = 281f1d3b8d9eafe7fbe7ca729861d4bdccea5a41
 SHA1 (patch-bk) = f234c26a95d179c4723676c180db95f26c84bb49
-SHA1 (patch-win_jtp_winjtp.c) = c304d5ddbb585b5cbf5b8f8f63280ecf1329e99c
 SHA1 (patch-win_jtp_winjtp.c) = c304d5ddbb585b5cbf5b8f8f63280ecf1329e99c
