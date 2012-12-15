@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3866 2012/12/15 22:32:50 markd Exp $
+$NetBSD: CHANGES-2012,v 1.3867 2012/12/15 23:49:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5945,3 +5945,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/sqlite3-tcl to 3.7.15 [adam 2012-12-15]
 	Updated net/ns to 2.35 [markd 2012-12-15]
 	Updated net/nam to 1.15 [markd 2012-12-15]
+	Updated mail/getmail to 4.36.0 [schmonz 2012-12-15]
