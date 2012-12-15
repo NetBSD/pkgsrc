@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
+$NetBSD: patch-ad,v 1.2 2012/12/15 00:29:31 pettai Exp $
 
---- src/ccid_usb.c.orig	2008-02-08 02:16:38.000000000 -0700
+--- src/ccid_usb.c.orig	2012-12-11 19:45:39.000000000 +0000
 +++ src/ccid_usb.c
-@@ -880,7 +880,7 @@ int InterruptRead(int reader_index)
- 					usbDevice[reader_index].filename, strerror(errno));
- 	}
- 	else
--		DEBUG_XXD("NotifySlotChange: ", buffer, ret);
-+		DEBUG_XXD("NotifySlotChange: ", (const unsigned char *) buffer, ret);
+@@ -1106,7 +1106,7 @@ int InterruptRead(int reader_index, int 
+ 	switch (ret)
+ 	{
+ 		case LIBUSB_TRANSFER_COMPLETED:
+-			DEBUG_XXD("NotifySlotChange: ", buffer, actual_length);
++			DEBUG_XXD("NotifySlotChange: ", (const unsigned char *) buffer, actual_length);
+ 			break;
  
- 	return ret;
- } /* InterruptRead */
+ 		case LIBUSB_TRANSFER_TIMED_OUT:

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/15 00:29:31 pettai Exp $
 
---- src/commands.c.orig	2008-02-06 01:11:11.000000000 -0700
+--- src/commands.c.orig	2012-12-11 19:36:05.000000000 +0000
 +++ src/commands.c
-@@ -153,7 +153,7 @@ RESPONSECODE CmdPowerOn(unsigned int rea
+@@ -161,7 +161,7 @@ RESPONSECODE CmdPowerOn(unsigned int rea
  
  			/* Status Information? */
  			if (0x40 == tmp[0])
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  			return IFD_COMMUNICATION_ERROR;
  		}
  
-@@ -200,7 +200,7 @@ again:
+@@ -230,7 +230,7 @@ again:
  
  	if (buffer[STATUS_OFFSET] & CCID_COMMAND_FAILED)
  	{
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  
  		if (0xBB == buffer[ERROR_OFFSET] &&	/* Protocol error in EMV mode */
  			((GEMPC433 == ccid_descriptor->readerID)
-@@ -711,7 +711,7 @@ again:
+@@ -823,7 +823,7 @@ again:
  
  	if (cmd_out[STATUS_OFFSET] & CCID_COMMAND_FAILED)
  	{
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  		return_value = IFD_COMMUNICATION_ERROR;
  	}
  
-@@ -811,7 +811,7 @@ RESPONSECODE CmdPowerOff(unsigned int re
+@@ -925,7 +925,7 @@ RESPONSECODE CmdPowerOff(unsigned int re
  
  	if (cmd[STATUS_OFFSET] & CCID_COMMAND_FAILED)
  	{
@@ -38,34 +38,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  		return_value = IFD_COMMUNICATION_ERROR;
  	}
  
-@@ -942,7 +942,7 @@ again_status:
- 			|| (OZ776_7772 == ccid_descriptor->readerID))
- 			&& (buffer[ERROR_OFFSET] == 0xFE)))
- #endif
+@@ -1052,7 +1052,7 @@ again_status:
+ 		&& (buffer[ERROR_OFFSET] != 0xFE))
+ 	{
+ 		return_value = IFD_COMMUNICATION_ERROR;
 -		ccid_error(buffer[ERROR_OFFSET], __FILE__, __LINE__, __FUNCTION__);    /* bError */
 +		ccid_error(buffer[ERROR_OFFSET], __FILE__, __LINE__, (const char *) __FUNCTION__);    /* bError */
+ 	}
  
- 		/* card absent or mute is not an communication error */
- 		if (buffer[ERROR_OFFSET] != 0xFE)
-@@ -1028,7 +1028,7 @@ RESPONSECODE CCID_Transmit(unsigned int 
- 		int r;
- 
- 		/* Xfr Block */
--		r = ControlUSB(reader_index, 0x21, 0x65, 0, tx_buffer, tx_length);
-+		r = ControlUSB(reader_index, 0x21, 0x65, 0, (unsigned char *) tx_buffer, tx_length);
- 
- 		/* we got an error? */
- 		if (r < 0)
-@@ -1050,7 +1050,7 @@ RESPONSECODE CCID_Transmit(unsigned int 
- 
- 		/* Xfr Block */
- 		DEBUG_COMM2("chain parameter: %d", rx_length);
--		r = ControlUSB(reader_index, 0x21, 0x65, rx_length << 8, tx_buffer,
-+		r = ControlUSB(reader_index, 0x21, 0x65, rx_length << 8, (unsigned char *) tx_buffer,
- 			tx_length);
- 
- 		/* we got an error? */
-@@ -1175,7 +1175,7 @@ time_request_ICCD_B:
+ 	return return_value;
+@@ -1278,7 +1278,7 @@ time_request_ICCD_B:
  
  			case 0x40:
  				/* Status Information */
@@ -74,7 +56,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  				return IFD_COMMUNICATION_ERROR;
  
  			case 0x80:
-@@ -1233,7 +1233,7 @@ time_request:
+@@ -1336,7 +1336,7 @@ time_request:
  
  	if (cmd[STATUS_OFFSET] & CCID_COMMAND_FAILED)
  	{
@@ -83,7 +65,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  		switch (cmd[ERROR_OFFSET])
  		{
  			case 0xEF:	/* cancel */
-@@ -1966,7 +1966,7 @@ RESPONSECODE SetParameters(unsigned int 
+@@ -2083,7 +2083,7 @@ RESPONSECODE SetParameters(unsigned int 
  
  	if (cmd[STATUS_OFFSET] & CCID_COMMAND_FAILED)
  	{
