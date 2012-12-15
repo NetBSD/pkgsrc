@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2012/12/15 22:27:01 markd Exp $
+# $NetBSD: Makefile,v 1.52 2012/12/15 22:29:20 markd Exp $
 #
 
 DISTNAME=		sge-8.0.0d
@@ -90,6 +90,10 @@ PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 .endif
 SGE_BUILDARCH?=		${SGE_BUILDARCH_cmd:sh}
 
+JAVA_ARGS=		-no-java -no-jni
+#JAVA_ARGS=		-no-gui-inst -no-herd
+#.include "../../mk/java-vm.mk"
+
 # Some hacks to get it properly linked:
 MAKE_ENV+=	SGE_ARCH=${SGE_ARCH} SGE_ROOT=${SGE_ROOT}
 
@@ -132,11 +136,11 @@ do-configure:
 .endfor
 
 do-build:
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc -only-depend
+	cd ${WRKSRC}/source && ${AIMK} ${JAVA_ARGS} -no-hwloc -only-depend
 	cd ${WRKSRC}/source && ${SETENV} ${MAKE_ENV} ./scripts/zerodepend
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc -no-qmake -no-qtcsh depend
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc -man
+	cd ${WRKSRC}/source && ${AIMK} ${JAVA_ARGS} -no-hwloc -no-qmake -no-qtcsh depend
+	cd ${WRKSRC}/source && ${AIMK} ${JAVA_ARGS} -no-hwloc
+	cd ${WRKSRC}/source && ${AIMK} ${JAVA_ARGS} -no-hwloc -man
 
 CHECK_INTERPRETER_SKIP=	sge/bin/process-scheduler-log \
 			sge/bin/qsched \
