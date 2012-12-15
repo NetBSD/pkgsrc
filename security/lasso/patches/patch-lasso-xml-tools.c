@@ -1,4 +1,4 @@
-$NetBSD: patch-lasso-xml-tools.c,v 1.4 2012/11/07 15:31:23 joerg Exp $
+$NetBSD: patch-lasso-xml-tools.c,v 1.5 2012/12/15 15:29:28 manu Exp $
 
 Patch from upstream to support libxml >= 2.9.0. From commit message:
 
@@ -71,7 +71,7 @@ index c4b3c8a..cda8775 100644
 +	xmlNodeDumpOutput(output_buffer, NULL, xmlnode, 0, 0, NULL);
 +	xmlOutputBufferClose(output_buffer);
 +	xmlBufferAdd(buffer, BAD_CAST "", 1);
-+	lasso_release_xml_node(xmlnode);
++
 +	in_len = strlen((char*)xmlBufferContent(buffer));
  	ret = g_malloc(in_len * 2);
  		/* deflating should never increase the required size but we are
