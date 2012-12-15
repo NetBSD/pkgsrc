@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/12 17:47:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/15 16:18:42 jaapb Exp $
 bin/eliomc
 bin/eliomcp
 bin/eliomdep
+bin/eliom-destillery
 ${PLIST.opt}bin/eliomopt
 bin/js_of_eliom
 lib/ocaml/site-lib/eliom/META
@@ -16,7 +17,8 @@ lib/ocaml/site-lib/eliom/client/eliom_client_main.cmo
 lib/ocaml/site-lib/eliom/client/eliom_comet.cmi
 lib/ocaml/site-lib/eliom/client/eliom_comet.mli
 lib/ocaml/site-lib/eliom/client/eliom_comet_base.mli
-lib/ocaml/site-lib/eliom/client/eliom_compatibility_2_1.cmi
+lib/ocaml/site-lib/eliom/client/eliom_config.cmi
+lib/ocaml/site-lib/eliom/client/eliom_config.mli
 lib/ocaml/site-lib/eliom/client/eliom_content.cmi
 lib/ocaml/site-lib/eliom/client/eliom_content.mli
 lib/ocaml/site-lib/eliom/client/eliom_content_core.cmi
@@ -29,12 +31,16 @@ lib/ocaml/site-lib/eliom/client/eliom_mkforms.cmi
 lib/ocaml/site-lib/eliom/client/eliom_mkforms.mli
 lib/ocaml/site-lib/eliom/client/eliom_parameter.cmi
 lib/ocaml/site-lib/eliom/client/eliom_parameter.mli
+lib/ocaml/site-lib/eliom/client/eliom_pervasives.cmi
+lib/ocaml/site-lib/eliom/client/eliom_pervasives.mli
 lib/ocaml/site-lib/eliom/client/eliom_react.cmi
 lib/ocaml/site-lib/eliom/client/eliom_react.mli
 lib/ocaml/site-lib/eliom/client/eliom_registration.cmi
 lib/ocaml/site-lib/eliom/client/eliom_registration.mli
 lib/ocaml/site-lib/eliom/client/eliom_service.cmi
 lib/ocaml/site-lib/eliom/client/eliom_service.mli
+lib/ocaml/site-lib/eliom/client/eliom_tools.cmi
+lib/ocaml/site-lib/eliom/client/eliom_tools.mli
 lib/ocaml/site-lib/eliom/client/eliom_types_base.mli
 lib/ocaml/site-lib/eliom/client/eliom_unwrap.cmi
 lib/ocaml/site-lib/eliom/client/eliom_unwrap.mli
@@ -75,6 +81,8 @@ lib/ocaml/site-lib/eliom/server/eliom_openid.cmi
 lib/ocaml/site-lib/eliom/server/eliom_openid.mli
 lib/ocaml/site-lib/eliom/server/eliom_parameter.cmi
 lib/ocaml/site-lib/eliom/server/eliom_parameter.mli
+lib/ocaml/site-lib/eliom/server/eliom_pervasives.cmi
+lib/ocaml/site-lib/eliom/server/eliom_pervasives.mli
 lib/ocaml/site-lib/eliom/server/eliom_react.cmi
 lib/ocaml/site-lib/eliom/server/eliom_react.mli
 lib/ocaml/site-lib/eliom/server/eliom_reference.cmi
@@ -108,4 +116,11 @@ man/man1/eliomc.1
 man/man1/eliomcp.1
 man/man1/eliomdep.1
 man/man1/eliomopt.1
+man/man1/eliom-destillery.1
 man/man1/js_of_eliom.1
+share/eliom/destillery/basic/Makefile
+share/eliom/destillery/basic/Makefile.options
+share/eliom/destillery/basic/PROJECT_NAME.conf.in
+share/eliom/destillery/basic/PROJECT_NAME.eliom
+share/eliom/destillery/basic/README
+share/eliom/destillery/basic/static!css!PROJECT_NAME.css
