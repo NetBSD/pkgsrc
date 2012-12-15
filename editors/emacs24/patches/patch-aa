@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/11/26 16:56:16 martin Exp $
+$NetBSD: patch-aa,v 1.5 2012/12/15 12:27:45 marino Exp $
 
 Add DragonFly
 
@@ -24,7 +24,7 @@ Add DragonFly
    aix4-2) LIBS_SYSTEM="-lrts -lIM -liconv" ;;
  
 -  freebsd) LIBS_SYSTEM="-lutil" ;;
-+  freebsd|netbsd|openbsd) LIBS_SYSTEM="-lutil" ;;
++  freebsd|netbsd|openbsd|dragonfly) LIBS_SYSTEM="-lutil" ;;
  
    hpux*) LIBS_SYSTEM="-l:libdld.sl" ;;
  
