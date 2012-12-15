@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3.2.1 2012/10/06 13:22:43 tron Exp $
+$NetBSD: distinfo,v 1.3.2.2 2012/12/15 17:10:14 tron Exp $
 
-SHA1 (suse121/dbus-1-1.5.8-2.6.1.i586.rpm) = 11b5416931f4064ea33cc72cc179f54d5ebc562f
-RMD160 (suse121/dbus-1-1.5.8-2.6.1.i586.rpm) = 6856e374820349d1bbb1ca88785e70add2d9708d
-Size (suse121/dbus-1-1.5.8-2.6.1.i586.rpm) = 306043 bytes
-SHA1 (suse121/dbus-1-1.5.8-2.6.1.x86_64.rpm) = 83e27abd71035553742bb241e1741ba17b5a6c38
-RMD160 (suse121/dbus-1-1.5.8-2.6.1.x86_64.rpm) = 42f26b01997dd0f2f4454d83c59202d38728a731
-Size (suse121/dbus-1-1.5.8-2.6.1.x86_64.rpm) = 295755 bytes
+SHA1 (suse121/dbus-1-1.5.8-2.10.1.i586.rpm) = 37c7af7e095a99b0b8888fbd98ad4c1ee6e49025
+RMD160 (suse121/dbus-1-1.5.8-2.10.1.i586.rpm) = 2d52f2ae9c003d06f86e3f050c260865c34ed424
+Size (suse121/dbus-1-1.5.8-2.10.1.i586.rpm) = 306290 bytes
+SHA1 (suse121/dbus-1-1.5.8-2.10.1.x86_64.rpm) = 71690c0c210eb9886e2bc67fd68ff2da9bcb2265
+RMD160 (suse121/dbus-1-1.5.8-2.10.1.x86_64.rpm) = c05edc4864173636d0b94848bd04a05727cd9d90
+Size (suse121/dbus-1-1.5.8-2.10.1.x86_64.rpm) = 296829 bytes
 SHA1 (suse121/dbus-1-glib-0.98-2.1.2.i586.rpm) = 1d874dc4c1a1588e8ffdec07b393beda9aabba5d
 RMD160 (suse121/dbus-1-glib-0.98-2.1.2.i586.rpm) = cf0525aca8d9701aa24da0f79f149fb2779f24eb
 Size (suse121/dbus-1-glib-0.98-2.1.2.i586.rpm) = 71949 bytes
