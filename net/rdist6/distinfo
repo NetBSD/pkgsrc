@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2012/11/17 22:48:50 markd Exp $
+$NetBSD: distinfo,v 1.18 2012/12/15 21:40:33 markd Exp $
 
 SHA1 (freerdist-0.94.tar.gz) = 12141ceb7932727362c560b2589a06a8fa2dbb20
 RMD160 (freerdist-0.94.tar.gz) = d253d6e9fd930b9fc6ee49496bee2f55086da5cf
@@ -9,4 +9,5 @@ SHA1 (patch-ac) = 78df932333c8742139368abb5d12b910d34e222c
 SHA1 (patch-ad) = 89500d25dc2fb34c0295836f7ab18433218c85ea
 SHA1 (patch-ah) = 35bda080c8b816b1e76f643548679dacbc10d2af
 SHA1 (patch-am) = 26655eccc7b2051f42dc57004161263777c80f8d
+SHA1 (patch-src_client.c) = e6f35b4cee32d1abcb3c3cae8905f1dc49db673b
 SHA1 (patch-src_setargs.c) = 8074c9277e43b144beb73f7bb8235d3f462be4af
