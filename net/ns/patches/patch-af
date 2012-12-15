@@ -1,11 +1,19 @@
-$NetBSD: patch-af,v 1.10 2012/09/29 06:17:30 dholland Exp $
+$NetBSD: patch-af,v 1.11 2012/12/15 22:07:32 markd Exp $
 
 - provide pkgsrc's X11 dirs
 - check for more ethernet headers
 
---- configure.orig	2008-04-01 02:00:25.000000000 +0000
+--- configure.orig	2011-11-04 17:29:46.000000000 +0000
 +++ configure
-@@ -5836,7 +5836,7 @@ powerpc-apple-darwin*)
+@@ -5548,6 +5548,7 @@ TCL_H_PLACES_D="$d/generic \
+ 		$d/include/tcl$TCL_VERS \
+ 		$d/include/tcl$TCL_ALT_VERS \
+ 		$d/include \
++		$d/include/tcl/generic \
+ 		/usr/local/include \
+ 		"
+ TCL_H_PLACES=" \
+@@ -7003,7 +7004,7 @@ powerpc-apple-darwin*)
  esac
  
  
@@ -14,8 +22,8 @@ $NetBSD: patch-af,v 1.10 2012/09/29 06:17:30 dholland Exp $
  	/usr/openwin/lib \
  	/usr/X11R6/lib \
  	/usr/lib/X11R6 \
-@@ -5851,7 +5851,7 @@ xlibdirs="\
- 	/Developer/SDKs/MacOSX10.4u.sdk/usr/X11R6/lib \
+@@ -7020,7 +7021,7 @@ xlibdirs="\
+ 	/Developer/SDKs/MacOSX10.6.sdk/usr/X11R6/lib \
  	/import/X11R4/usr/lib"
  
 -xincdirs="\
@@ -23,16 +31,16 @@ $NetBSD: patch-af,v 1.10 2012/09/29 06:17:30 dholland Exp $
  	/usr/openwin/include \
  	/usr/X11R6/include \
  	/usr/include/X11R6 \
-@@ -6906,7 +6906,7 @@ fi
- 
+@@ -7899,7 +7900,7 @@ $as_echo "#define STDC_HEADERS 1" >>conf
+ fi
  
  
 -for ac_header in arpa/inet.h fenv.h netinet/in.h string.h strings.h time.h unistd.h net/ethernet.h
 +for ac_header in arpa/inet.h fenv.h netinet/in.h string.h strings.h time.h unistd.h net/if.h net/ethernet.h netinet/if_ether.h sys/socket.h
- do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
- if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -9667,7 +9667,24 @@ cat >>conftest.$ac_ext <<_ACEOF
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+@@ -8838,7 +8839,24 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* end confdefs.h.  */
  
  #include <stdio.h>
@@ -57,7 +65,7 @@ $NetBSD: patch-af,v 1.10 2012/09/29 06:17:30 dholland Exp $
  
  int
  main ()
-@@ -9736,7 +9753,24 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -8877,7 +8895,24 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* end confdefs.h.  */
  
  #include <stdio.h>
