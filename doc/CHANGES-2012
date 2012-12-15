@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3856 2012/12/15 09:49:23 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3857 2012/12/15 10:26:22 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5932,3 +5932,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ccid to 1.4.5 [pettai 2012-12-15]
 	Updated security/pcsc-tools to 1.4.21 [pettai 2012-12-15]
 	Updated devel/nss to 3.14.0 [ryoon 2012-12-15]
+	Added databases/ocaml-dbm version 1.0 [root 2012-12-15]
