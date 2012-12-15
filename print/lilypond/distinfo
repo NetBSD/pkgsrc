@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/07/31 09:12:46 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2012/12/15 10:01:20 marino Exp $
 
 SHA1 (lilypond-2.14.2.tar.gz) = 0ea657bb184d9d6a2e3f6bca91e6b0d62a3a013e
 RMD160 (lilypond-2.14.2.tar.gz) = 74123b2db40519feaf8144fd19becf3ad81738e7
@@ -6,3 +6,4 @@ Size (lilypond-2.14.2.tar.gz) = 15224418 bytes
 SHA1 (patch-aa) = 50b9029a067b3f324da497465c7b2e6a2384f3f0
 SHA1 (patch-ab) = 5f210ada53a5062da1173c257095ebddf407d67d
 SHA1 (patch-ac) = d9565da9b315f2867882052d57394132d7e824a4
+SHA1 (patch-lily_music-sequence.cc) = 8f8c8ce78ae5a420065f7d084a9bcecfc707f322
