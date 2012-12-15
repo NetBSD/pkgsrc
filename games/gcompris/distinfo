@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/08/29 16:51:40 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/12/15 16:07:15 wiz Exp $
 
-SHA1 (gcompris-12.01.tar.gz) = c1e3a98e1e2ac7397a8da6bc176c112008008dbe
-RMD160 (gcompris-12.01.tar.gz) = ce578e8ca494b85300fe0046d1fd111c79a1084d
-Size (gcompris-12.01.tar.gz) = 149465806 bytes
+SHA1 (gcompris-12.11.tar.bz2) = cca586b5de850b476821e50faad571a4883db36a
+RMD160 (gcompris-12.11.tar.bz2) = 8b0a7b5f95a67de479170e2a7a5db187b37370ee
+Size (gcompris-12.11.tar.bz2) = 167528452 bytes
 SHA1 (patch-configure) = d61565375bed732c38dd9eed0e6ab17d7278bbd0
 SHA1 (patch-src_chess__computer-activity_chess.c) = 9af1e7ee1a9e03373c5d738a8cc6d8c367dc6cbf
 SHA1 (patch-src_chess__computer-activity_chess__notation.c) = e621665adb4e8da25b82143699fbde48c5afee0c
