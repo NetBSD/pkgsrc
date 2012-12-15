@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/11/27 11:38:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/12/15 01:31:33 ryoon Exp $
 bin/compile-et.pl
 bin/nspr-config
 bin/prerr.properties
@@ -15,7 +15,7 @@ include/nspr/md/_hpux64.cfg
 include/nspr/md/_irix32.cfg
 include/nspr/md/_irix64.cfg
 include/nspr/md/_linux.cfg
-include/nspr/md/_${LOWER_OPSYS}.cfg
+include/nspr/md/_netbsd.cfg
 include/nspr/md/_nto.cfg
 include/nspr/md/_openbsd.cfg
 include/nspr/md/_os2.cfg
