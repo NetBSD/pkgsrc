@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/09/03 21:29:45 seb Exp $
+$NetBSD: patch-aa,v 1.3 2012/12/15 22:17:31 markd Exp $
 
---- Makefile.in.orig	2003-02-26 20:52:56.000000000 +0000
+--- Makefile.in.orig	2011-11-04 17:18:41.000000000 +0000
 +++ Makefile.in
-@@ -70,7 +70,7 @@ RANLIB = @V_RANLIB@
+@@ -72,7 +72,7 @@ RANLIB = @V_RANLIB@
  BLANK	= # make a blank space.  DO NOT add anything to this line
  AR	= ar rc $(BLANK)
  LINK	= $(CPP)
@@ -11,11 +11,11 @@ $NetBSD: patch-aa,v 1.2 2003/09/03 21:29:45 seb Exp $
  LDOUT	= -o $(BLANK)
  PERL	= perl
  RM	= rm -f
-@@ -161,7 +161,7 @@ $(GEN_DIR)version.c: VERSION
+@@ -163,7 +163,7 @@ $(GEN_DIR)version.c: VERSION
  	$(TCLSH) bin/string2c.tcl version < VERSION > $@
  
  install: force
--	$(INSTALL) -m 555 -o bin -g bin nam $(DESTDIR)$(BINDEST)
+-	$(INSTALL) -m 755 nam $(DESTDIR)$(BINDEST)
 +	${BSD_INSTALL_PROGRAM} nam $(DESTDIR)$(BINDEST)
  
  clean:
