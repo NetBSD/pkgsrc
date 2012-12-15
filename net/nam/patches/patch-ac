@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.4 2005/02/28 15:29:22 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2012/12/15 22:17:31 markd Exp $
 
---- configure.orig	2005-01-24 17:37:03.000000000 -0600
+--- configure.orig	2012-11-29 09:45:02.000000000 +0000
 +++ configure
-@@ -6442,7 +6442,7 @@ TCLCL_PROG_PLACES="\
-                 /usr/src/local/Tcl \
-                 /usr/src/local/Tcl-1.0 \
-                 "
--TCLCL_PROG_PLACES_D="$d"
-+TCLCL_PROG_PLACES_D="$d/bin"
- 
- 
- 
+@@ -5749,6 +5749,7 @@ TCL_H_PLACES_D="$d/generic \
+ 		$d/include/tcl$TCL_VERS \
+ 		$d/include/tcl$TCL_ALT_VERS \
+ 		$d/include \
++		$d/include/tcl/generic \
+ 		/usr/local/include \
+ 		"
+ TCL_H_PLACES=" \
