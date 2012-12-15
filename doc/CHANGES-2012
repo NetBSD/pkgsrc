@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3861 2012/12/15 16:19:34 jaapb Exp $
+$NetBSD: CHANGES-2012,v 1.3862 2012/12/15 16:55:51 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5936,3 +5936,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ocsigen to 2.2.0 [jaapb 2012-12-15]
 	Updated games/gcompris to 12.11 [wiz 2012-12-15]
 	Updated www/eliom to 3.0.3 [jaapb 2012-12-15]
+	Updated time/wyrd to 1.4.5 [jaapb 2012-12-15]
