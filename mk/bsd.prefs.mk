@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.328 2012/12/09 20:21:18 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.329 2012/12/15 21:21:27 markd Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -578,7 +578,11 @@ X11BASE=		${LOCALBASE}
 X11PREFIX=		${LOCALBASE}
 
 # Default directory for font encodings
+.if ${X11_TYPE} == "modular"
 X11_ENCODINGSDIR?=	${X11BASE}/share/fonts/X11/encodings
+.else
+X11_ENCODINGSDIR?=	${X11BASE}/lib/X11/fonts/encodings
+.endif
 
 IMAKE_MAN_SOURCE_PATH=	man/man
 IMAKE_MAN_SUFFIX=	1
