@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/12/15 10:25:52 jaapb Exp $
+
+SHA1 (camldbm-1.0.tgz) = e3f17c9cd9c72930fd39e3bc1025bea57241e3f9
+RMD160 (camldbm-1.0.tgz) = 0691f84ac43c97fddaf796c04729baa8bcb280ca
+Size (camldbm-1.0.tgz) = 14397 bytes
+SHA1 (patch-Makefile) = 49402bd4ea4178932fd363baaae236d2e5ee56e1
