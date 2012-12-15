@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/15 10:25:52 jaapb Exp $
+lib/ocaml/dbm.a
+lib/ocaml/dbm.cma
+lib/ocaml/dbm.cmi
+lib/ocaml/dbm.cmxa
+lib/ocaml/dbm.cmxs
+lib/ocaml/dbm.mli
+lib/ocaml/libcamldbm.a
+lib/ocaml/stublibs/dllcamldbm.so
