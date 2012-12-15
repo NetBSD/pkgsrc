@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/12/15 09:48:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2012/12/15 09:51:51 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
 NSS_RELEASE=		3.14
@@ -11,6 +11,7 @@ MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_14_RTM/src
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
 COMMENT=		Libraries to support development of security-enabled applications
+LICENSE=		mpl-2.0
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
