@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/12/15 16:50:05 jaapb Exp $
+
+Correct faulty ocaml version detection
+(patch from https://bugs.launchpad.net/wyrd/+bug/1208142)
+--- configure.orig	2010-10-23 18:50:24.000000000 +0000
++++ configure
+@@ -1790,7 +1790,7 @@ OCAMLMAJORVERSION=`echo $OCAMLVERSION | 
+ OCAMLMINORVERSION=`echo $OCAMLVERSION | cut -d '.' -f 2`
+ if test $OCAMLMAJORVERSION -lt 3 ; then
+    as_fn_error "Wyrd requires OCaml version 3.08 or greater." "$LINENO" 5
+-else
++elif test $OCAMLMAJORVERSION = 3 ; then
+    if test $OCAMLMINORVERSION -lt 8 ; then
+       as_fn_error "Wyrd requires OCaml version 3.08 or greater." "$LINENO" 5
+    fi
