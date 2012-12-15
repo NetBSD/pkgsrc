@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/05/25 08:19:47 morr Exp $
+$NetBSD: distinfo,v 1.4 2012/12/15 19:04:55 shattered Exp $
 
-SHA1 (haproxy-1.4.21.tar.gz) = 31df0e8bd18350457a5d3432f367c6218ecc9042
-RMD160 (haproxy-1.4.21.tar.gz) = 78d2d81f4ffa03e57fedaf090c42479ceb669438
-Size (haproxy-1.4.21.tar.gz) = 827392 bytes
-SHA1 (patch-aa) = 6012886156a54054cebf7f184d69a0cd0b1ad17b
+SHA1 (haproxy-1.4.22.tar.gz) = ed8918c950bdb5b4b96d62c23073b7972443fe94
+RMD160 (haproxy-1.4.22.tar.gz) = fc9ee4c964683ee9f45eaed2629ae1e9e70d28ce
+Size (haproxy-1.4.22.tar.gz) = 831791 bytes
+SHA1 (patch-aa) = 885eea1c2d4268718f52db80164d04b9fb8086de
+SHA1 (patch-ab) = deacba36df58770b641cf6d4c04a790f966eb6e3

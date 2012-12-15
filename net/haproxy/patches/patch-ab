@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2012/12/15 19:04:56 shattered Exp $
+
+--- src/haproxy.c.orig	2012-05-21 05:03:24.000000000 +0000
++++ src/haproxy.c
+@@ -100,10 +100,10 @@ int  relative_pid = 1;		/* process id st
+ 
+ /* global options */
+ struct global global = {
+-	logfac1 : -1,
+-	logfac2 : -1,
+-	loglev1 : 7, /* max syslog level : debug */
+-	loglev2 : 7,
++	.logfac1 = -1,
++	.logfac2 = -1,
++	.loglev1 = 7, /* max syslog level : debug */
++	.loglev2 = 7,
+ 	.stats_sock = {
+ 		.maxconn = 10, /* 10 concurrent stats connections */
+ 		.perm = {
