@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3855 2012/12/15 01:11:50 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.3856 2012/12/15 09:49:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5931,3 +5931,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/pcsc-lite to 1.7.4 [pettai 2012-12-14]
 	Updated security/ccid to 1.4.5 [pettai 2012-12-15]
 	Updated security/pcsc-tools to 1.4.21 [pettai 2012-12-15]
+	Updated devel/nss to 3.14.0 [ryoon 2012-12-15]
