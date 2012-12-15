@@ -1,54 +1,95 @@
-$NetBSD: patch-Makefile,v 1.1 2012/07/11 10:40:47 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2012/12/15 11:16:07 jaapb Exp $
 
-Change makefile to conform to pkgsrc pkginstall framework
---- Makefile.orig	2012-05-30 10:40:45.000000000 +0000
+Correct installation procedure for pkgsrc environment
+--- Makefile.orig	2012-12-07 15:17:09.000000000 +0000
 +++ Makefile
-@@ -66,34 +66,22 @@ install.byte: install.META.byte install.
- install.opt: install.META.opt install.files
+@@ -67,61 +67,53 @@ install.opt: install.META.opt install.fi
+ 
+ # BB If install is not run by root but OCSIGENUSER, OCSIGENGROUP is somebody
+ # BB different, make files universally accessible, we cannot chown.
+-INSTALL_CAN_PUT_PERMISSIONS=yes
++INSTALL_CAN_PUT_PERMISSIONS=no
+ INSTALL_USER_GROUP=-o $(OCSIGENUSER) -g $(OCSIGENGROUP)
+ INSTALL_MOD_660=660
+ INSTALL_MOD_644=644
+ INSTALL_MOD_755=755
+ INSTALL_MOD_770=770
+ INSTALL_MOD_750=750
+-ifneq ($(shell id -u), 0)
+-  ifneq ($(OCSIGENUSER), $(USERNAME))
+-    INSTALL_CAN_PUT_PERMISSIONS=no
+-  endif
+-  ifneq ($(shell groups ${USERNAME}|grep -q ${OCSIGENGROUP}; echo $$?), 0)
+-    INSTALL_CAN_PUT_PERMISSIONS=no
+-  endif
+-endif
+-ifeq ($(INSTALL_CAN_PUT_PERMISSIONS), no)
+-    INSTALL_USER_GROUP=
+-    INSTALL_MOD_660=666
+-    INSTALL_MOD_644=666
+-    INSTALL_MOD_755=777
+-    INSTALL_MOD_770=777
+-    INSTALL_MOD_750=777
+-endif
++#ifneq ($(shell id -u), 0)
++#  ifneq ($(OCSIGENUSER), $(USERNAME))
++#    INSTALL_CAN_PUT_PERMISSIONS=no
++#  endif
++#  ifneq ($(shell groups ${USERNAME}|grep -q ${OCSIGENGROUP}; echo $$?), 0)
++#    INSTALL_CAN_PUT_PERMISSIONS=no
++#  endif
++#endif
++#ifeq ($(INSTALL_CAN_PUT_PERMISSIONS), no)
++#   INSTALL_USER_GROUP=
++#   INSTALL_MOD_660=666
++#   INSTALL_MOD_644=666
++#   INSTALL_MOD_755=777
++#   INSTALL_MOD_770=777
++#   INSTALL_MOD_750=777
++#endif
  
  install.files:
+ 	@echo INSTALL_CAN_PUT_PERMISSIONS: ${INSTALL_CAN_PUT_PERMISSIONS}
 -	 ## Command pipe
--	$(INSTALL) -m 755 -d $(dir $(TEMPROOT)$(COMMANDPIPE))
+-	$(INSTALL) -m ${INSTALL_MOD_755} -d $(dir $(TEMPROOT)$(COMMANDPIPE))
 -	[ -p $(TEMPROOT)$(COMMANDPIPE) ] || \
--	 { mkfifo $(TEMPROOT)$(COMMANDPIPE); \
--	   $(CHMOD) 660 $(TEMPROOT)$(COMMANDPIPE); \
--	   $(CHOWN) -R $(OCSIGENUSER):$(OCSIGENGROUP) $(TEMPROOT)$(COMMANDPIPE); }
+-	 { mkfifo -m ${INSTALL_MOD_660} $(TEMPROOT)$(COMMANDPIPE); \
+-	   if [ "${INSTALL_CAN_PUT_PERMISSIONS}" = yes ]; \
+-	     then $(CHOWN) -R $(OCSIGENUSER):$(OCSIGENGROUP) $(TEMPROOT)$(COMMANDPIPE); \
+-	   fi; }
  	 ## Configuration files
- 	$(INSTALL) -m 755 -d $(TEMPROOT)$(CONFIGDIR)/conf.d
- 	${INSTALL} -m 644 ${PROJECTNAME}.conf.sample $(TEMPROOT)$(CONFIGDIR)/
+-	$(INSTALL) -m ${INSTALL_MOD_755} -d $(TEMPROOT)$(CONFIGDIR)/conf.d
+-	${INSTALL} -m ${INSTALL_MOD_644} ${PROJECTNAME}.conf.sample $(TEMPROOT)$(CONFIGDIR)/
++	$(BSD_INSTALL_DATA_DIR) -d $(TEMPROOT)$(CONFIGDIR)/conf.d
++	${BSD_INSTALL_DATA} ${PROJECTNAME}.conf.sample $(TEMPROOT)$(CONFIGDIR)/
  	[ -f $(TEMPROOT)$(CONFIGDIR)/$(PROJECTNAME).conf ] || \
- 	  { $(INSTALL) -m 644 $(PROJECTNAME).conf.sample \
+-	  { $(INSTALL) -m ${INSTALL_MOD_644} $(PROJECTNAME).conf.sample \
++	  { $(BSD_INSTALL_DATA) $(PROJECTNAME).conf.sample \
                  $(TEMPROOT)$(CONFIGDIR)/$(PROJECTNAME).conf;  }
--	-mv $(TEMPROOT)$(CONFIGDIR)/mime.types $(TEMPROOT)$(CONFIGDIR)/mime.types.old
+ 	-mv $(TEMPROOT)$(CONFIGDIR)/mime.types $(TEMPROOT)$(CONFIGDIR)/mime.types.old
  	 ## Log directory
- 	$(INSTALL) -m 644 src/files/mime.types $(TEMPROOT)$(CONFIGDIR)
--	$(INSTALL) -d -m 755 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
--	  $(TEMPROOT)$(LOGDIR)
-+	$(INSTALL) -d -m 755 $(TEMPROOT)$(LOGDIR)
+-	$(INSTALL) -m ${INSTALL_MOD_644} src/files/mime.types $(TEMPROOT)$(CONFIGDIR)
+-	$(INSTALL) -d -m ${INSTALL_MOD_755} ${INSTALL_USER_GROUP} $(TEMPROOT)$(LOGDIR)
++	$(BSD_INSTALL_DATA) src/files/mime.types $(TEMPROOT)$(CONFIGDIR)
  	 ## Static files
--	$(INSTALL) -d -m 755 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
--	  $(TEMPROOT)$(STATICPAGESDIR)
--	$(INSTALL) -d -m 750 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
--	  $(TEMPROOT)$(DATADIR)
--	$(INSTALL) -m 644 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
--	  local/var/www/*.html $(TEMPROOT)$(STATICPAGESDIR)
--	$(INSTALL) -d -m 755 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
--	  $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
--	$(INSTALL) -m 644 -o ${OCSIGENUSER} -g ${OCSIGENGROUP} \
--	  local/var/www/ocsigenstuff/*.png local/var/www/ocsigenstuff/*.css \
-+	$(INSTALL) -d -m 755 $(TEMPROOT)$(STATICPAGESDIR)
-+	$(INSTALL) -d -m 750 $(TEMPROOT)$(DATADIR)
-+	$(INSTALL) -m 644 local/var/www/*.html $(TEMPROOT)$(STATICPAGESDIR)
-+	$(INSTALL) -d -m 755 $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
-+	$(INSTALL) -m 644 local/var/www/ocsigenstuff/*.png \
-+		local/var/www/ocsigenstuff/*.css \
+-	$(INSTALL) -d -m ${INSTALL_MOD_755} ${INSTALL_USER_GROUP} $(TEMPROOT)$(STATICPAGESDIR)
+-	$(INSTALL) -d -m ${INSTALL_MOD_750} ${INSTALL_USER_GROUP} $(TEMPROOT)$(DATADIR)
+-	$(INSTALL) -m ${INSTALL_MOD_644} ${INSTALL_USER_GROUP} \
++	$(BSD_INSTALL_DATA_DIR) -d $(TEMPROOT)$(STATICPAGESDIR)
++	$(BSD_INSTALL_DATA_DIR) -d $(TEMPROOT)$(DATADIR)
++	$(BSD_INSTALL_DATA) \
+ 	  local/var/www/*.html $(TEMPROOT)$(STATICPAGESDIR)
+-	$(INSTALL) -d -m ${INSTALL_MOD_755} ${INSTALL_USER_GROUP} \
++	$(BSD_INSTALL_DATA_DIR) -d \
  	  $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
- 	$(INSTALL) -d -m 755 $(TEMPROOT)$(MANDIR)
- 	$(INSTALL) -m 644 src/files/${PROJECTNAME}.1 $(TEMPROOT)$(MANDIR)
-@@ -152,4 +140,4 @@ dist:
+-	$(INSTALL) -m ${INSTALL_MOD_644} ${INSTALL_USER_GROUP} \
++	$(BSD_INSTALL_DATA) \
+ 	  local/var/www/ocsigenstuff/*.png local/var/www/ocsigenstuff/*.css \
+ 	  $(TEMPROOT)$(STATICPAGESDIR)/ocsigenstuff
+-	$(INSTALL) -d -m ${INSTALL_MOD_755} $(TEMPROOT)$(MANDIR)
+-	$(INSTALL) -m ${INSTALL_MOD_644} src/files/${PROJECTNAME}.1 $(TEMPROOT)$(MANDIR)
++	$(BSD_INSTALL_MAN_DIR) -d $(TEMPROOT)$(MANDIR)
++	$(BSD_INSTALL_MAN) src/files/${PROJECTNAME}.1 $(TEMPROOT)$(MANDIR)
  
- .PHONY: depend
- depend:
--	${MAKE} -C src depend
-\ No newline at end of file
-+	${MAKE} -C src depend
+ uninstall:
+ 	-make -C doc uninstall
