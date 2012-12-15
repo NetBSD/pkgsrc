@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/12/15 00:29:31 pettai Exp $
 bin/RSA_SecurID_getpasswd
 man/man1/RSA_SecurID_getpasswd.1
 man/man8/Kobil_mIDentity_switch.8
 lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/Info.plist
-lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/${OPSYS}/libccid.so.${PKGVERSION}
 lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/${OPSYS}/libccid.so
 sbin/Kobil_mIDentity_switch
 share/doc/ccid/README_Kobil_mIDentity_switch.txt
