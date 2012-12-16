@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/16 23:55:22 khorben Exp $
+bin/AppBroker
+include/System.h
+include/System/appclient.h
+include/System/appserver.h
+include/System/array.h
+include/System/buffer.h
+include/System/config.h
+include/System/error.h
+include/System/event.h
+include/System/file.h
+include/System/hash.h
+include/System/object.h
+include/System/parser.h
+include/System/plugin.h
+include/System/string.h
+include/System/token.h
+lib/libSystem.a
+lib/libSystem.so
+lib/libSystem.so.0
+lib/libSystem.so.0.0
+lib/pkgconfig/libSystem.pc
