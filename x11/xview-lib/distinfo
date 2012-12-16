@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2012/11/16 00:29:39 joerg Exp $
+$NetBSD: distinfo,v 1.19 2012/12/16 19:03:50 dholland Exp $
 
 SHA1 (xview3.2p1-X11R6.tar.gz) = 1cd04231b893c3e6c70b56791d527b498e21a27a
 RMD160 (xview3.2p1-X11R6.tar.gz) = 2f21b14cb088aec887683bbc6d4ed9a3bc3fe2bb
@@ -151,7 +151,6 @@ SHA1 (patch-lib_libxview_rect_rect.h) = a5ad0b7fecfabb65bb2b7da792adbd2dd0858cff
 SHA1 (patch-lib_libxview_rect_rectlist.c) = b5d7d11daa9349b946c7b227dc0d6665168bfbff
 SHA1 (patch-lib_libxview_rect_rectlist.h) = ca5698bba3c96267393f169c7ac20acebcf121e1
 SHA1 (patch-lib_libxview_server_svr__parse.c) = d1ec2e51445dbfe377ed9337d6391c15a2d7f7b4
-SHA1 (patch-lib_libxview_textsw_txt__18impl.h) = 28af202dc3402a02a15f78db1b62e1de67cdd8ec
 SHA1 (patch-lib_libxview_textsw_txt__find.c) = 37e82f38b51c5c202bb71fadd2155eb752e90791
 SHA1 (patch-lib_libxview_textsw_txt__sel.c) = c2bd1479518a32a3b09fefb33ae08c571f47404d
 SHA1 (patch-lib_libxview_ttysw_tty__menu.c) = 4c42ff022329bc4e640b2b0cb193ec85afc0ae1c
