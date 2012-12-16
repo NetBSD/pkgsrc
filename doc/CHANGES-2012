@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3907 2012/12/16 16:52:59 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3908 2012/12/16 21:44:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-simplecov to 0.7.1 [taca 2012-12-16]
 	Updated devel/ruby-test-unit to 2.5.3 [taca 2012-12-16]
 	Updated devel/ruby-stomp to 1.2.7 [taca 2012-12-16]
+	Updated devel/py-gobject3 to 3.4.2nb1 [wiz 2012-12-16]
