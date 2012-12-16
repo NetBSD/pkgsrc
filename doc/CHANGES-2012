@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3869 2012/12/16 03:01:54 obache Exp $
+$NetBSD: CHANGES-2012,v 1.3870 2012/12/16 10:40:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5960,3 +5960,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/cy2-sql to 2.1.26 [obache 2012-12-16]
 	Updated security/cyrus-saslauthd to 2.1.26 [obache 2012-12-16]
 	Updated mail/cyrus-imapd24 to 2.4.17 [obache 2012-12-16]
+	Updated www/apache-tomcat7 to 7.0.34 [ryoon 2012-12-16]
