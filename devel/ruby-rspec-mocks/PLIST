@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/09/03 15:53:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:45:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/features/argument_matchers/type_matchers.feature
 ${GEM_LIBDIR}/features/message_expectations/README.md
 ${GEM_LIBDIR}/features/message_expectations/any_instance.feature
 ${GEM_LIBDIR}/features/message_expectations/block_local_expectations.feature.pending
+${GEM_LIBDIR}/features/message_expectations/call_original.feature
 ${GEM_LIBDIR}/features/message_expectations/expect_message.feature
 ${GEM_LIBDIR}/features/message_expectations/receive_counts.feature
 ${GEM_LIBDIR}/features/message_expectations/warn_when_expectation_is_set_on_nil.feature
@@ -25,12 +26,13 @@ ${GEM_LIBDIR}/features/method_stubs/simple_return_value.feature
 ${GEM_LIBDIR}/features/method_stubs/stub_chain.feature
 ${GEM_LIBDIR}/features/method_stubs/stub_implementation.feature
 ${GEM_LIBDIR}/features/method_stubs/to_ary.feature
+${GEM_LIBDIR}/features/mutating_constants/README.md
+${GEM_LIBDIR}/features/mutating_constants/hiding_defined_constant.feature
+${GEM_LIBDIR}/features/mutating_constants/stub_defined_constant.feature
+${GEM_LIBDIR}/features/mutating_constants/stub_undefined_constant.feature
 ${GEM_LIBDIR}/features/outside_rspec/configuration.feature
 ${GEM_LIBDIR}/features/outside_rspec/standalone.feature
 ${GEM_LIBDIR}/features/step_definitions/additional_cli_steps.rb
-${GEM_LIBDIR}/features/stubbing_constants/README.md
-${GEM_LIBDIR}/features/stubbing_constants/stub_defined_constant.feature
-${GEM_LIBDIR}/features/stubbing_constants/stub_undefined_constant.feature
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/lib/rspec/mocks.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance.rb
@@ -42,6 +44,7 @@ ${GEM_LIBDIR}/lib/rspec/mocks/any_instance/stub_chain.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance/stub_chain_chain.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/argument_list_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/argument_matchers.rb
+${GEM_LIBDIR}/lib/rspec/mocks/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/error_generator.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/errors.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/example_methods.rb
@@ -49,19 +52,21 @@ ${GEM_LIBDIR}/lib/rspec/mocks/extensions/instance_exec.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/extensions/marshal.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/extensions/psych.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/framework.rb
+${GEM_LIBDIR}/lib/rspec/mocks/instance_method_stasher.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/message_expectation.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/method_double.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/methods.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/mock.rb
+${GEM_LIBDIR}/lib/rspec/mocks/mutate_const.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/order_group.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/proxy.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/serialization.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/space.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/standalone.rb
-${GEM_LIBDIR}/lib/rspec/mocks/stub_const.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/test_double.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/version.rb
 ${GEM_LIBDIR}/lib/spec/mocks.rb
+${GEM_LIBDIR}/spec/rspec/mocks/and_call_original_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/and_yield_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/any_instance/message_chains_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/any_instance_spec.rb
@@ -79,14 +84,17 @@ ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_7611_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_8165_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_830_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_957_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/configuration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/double_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/failing_argument_matchers_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/hash_excluding_matcher_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/hash_including_matcher_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/instance_method_stasher_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/mock_ordering_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/mock_space_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/mock_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/multiple_return_value_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/mutate_const_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/nil_expectation_warning_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/null_object_mock_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/once_counts_spec.rb
@@ -99,7 +107,6 @@ ${GEM_LIBDIR}/spec/rspec/mocks/record_messages_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/serialization_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stash_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_chain_spec.rb
-${GEM_LIBDIR}/spec/rspec/mocks/stub_const_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_implementation_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stub_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/stubbed_message_expectations_spec.rb
