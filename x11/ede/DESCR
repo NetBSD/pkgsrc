@@ -1,6 +1,6 @@
-Equinox Desktop Environment (shortly EDE) is small desktop environment,
-built to be simple and fast. It is based on modified FLTK library
-(called extended FLTK or just eFLTK).
-
-Comparing to other desktop environments, EDE is much faster and smaller
-in memory space (EDE's window manager use less memory than xterm).
+EDE (Equinox Desktop Environment) is a simple and fast desktop
+environment with familiar look and feel.  EDE uses the FLTK toolkit
+for GUI presentation and the UNIX philosophy for it's design, where
+EDE splits each component in a separate executable entity to do
+one job, and do it good.  This makes EDE very easy to alter for
+user needs and requirements.
