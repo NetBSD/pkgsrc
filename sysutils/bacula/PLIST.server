@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.server,v 1.8 2012/10/25 21:45:27 christos Exp $
+@comment $NetBSD: PLIST.server,v 1.9 2012/12/16 20:51:36 dholland Exp $
 lib/libbaccats.la
 lib/libbaccats-sqlite3.la
 lib/libbacsql.la
@@ -16,6 +16,7 @@ libexec/bacula/make_${BACULA_DB}_tables
 libexec/bacula/make_bacula_tables
 libexec/bacula/make_catalog_backup
 libexec/bacula/make_catalog_backup.pl
+libexec/bacula/query.sql
 libexec/bacula/update_${BACULA_DB}_tables
 libexec/bacula/update_bacula_tables
 sbin/bacula-dir
