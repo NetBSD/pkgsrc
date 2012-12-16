@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11747 2012/12/15 16:55:52 jaapb Exp $
+$NetBSD: TODO,v 1.11748 2012/12/16 10:45:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,6 +426,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o biew-6.1.0
 	o binutils-2.23.1
 	o bioperl-1.5.0
+	o bison-2.7
 	o bitlbee-3.0.6
 	o blender-2.65
 	o blur6ex-0.3.462
@@ -621,6 +622,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.3 [GNOME 2.34]
 	o glade3-3.14.2
 	o gle-4.2.4
+	o global-6.2.6
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -791,6 +793,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.6.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libidn-1.26
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
@@ -1255,7 +1258,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-glint-1.2.8
 	o xf86-video-i128-1.3.6
 	o xf86-video-i740-1.3.4
-	o xf86-video-intel-2.20.15
+	o xf86-video-intel-2.20.16
 	o xf86-video-mach64-6.9.3
 	o xf86-video-mga-1.6.2
 	o xf86-video-neomagic-1.2.7
