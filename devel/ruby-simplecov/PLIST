@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2012/06/02 00:51:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/12/16 16:50:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Appraisals
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -14,12 +16,16 @@ ${GEM_LIBDIR}/features/config_autoload.feature
 ${GEM_LIBDIR}/features/config_command_name.feature
 ${GEM_LIBDIR}/features/config_coverage_dir.feature
 ${GEM_LIBDIR}/features/config_deactivate_merging.feature
+${GEM_LIBDIR}/features/config_formatters.feature
 ${GEM_LIBDIR}/features/config_merge_timeout.feature
 ${GEM_LIBDIR}/features/config_nocov_token.feature
 ${GEM_LIBDIR}/features/config_project_name.feature
 ${GEM_LIBDIR}/features/config_styles.feature
 ${GEM_LIBDIR}/features/cucumber_basic.feature
+${GEM_LIBDIR}/features/maximum_coverage_drop.feature
 ${GEM_LIBDIR}/features/merging_test_unit_and_rspec.feature
+${GEM_LIBDIR}/features/minimum_coverage.feature
+${GEM_LIBDIR}/features/refuse_coverage_drop.feature
 ${GEM_LIBDIR}/features/rspec_basic.feature
 ${GEM_LIBDIR}/features/rspec_fails_on_initialization.feature
 ${GEM_LIBDIR}/features/rspec_groups_and_filters_basic.feature
@@ -39,18 +45,20 @@ ${GEM_LIBDIR}/features/test_unit_groups_using_filter_class.feature
 ${GEM_LIBDIR}/features/test_unit_without_simplecov.feature
 ${GEM_LIBDIR}/features/unicode_compatiblity.feature
 ${GEM_LIBDIR}/gemfiles/multi_json-legacy.gemfile
-${GEM_LIBDIR}/gemfiles/multi_json-legacy.gemfile.lock
 ${GEM_LIBDIR}/gemfiles/multi_json-new.gemfile
-${GEM_LIBDIR}/gemfiles/multi_json-new.gemfile.lock
 ${GEM_LIBDIR}/lib/simplecov.rb
 ${GEM_LIBDIR}/lib/simplecov/adapters.rb
 ${GEM_LIBDIR}/lib/simplecov/command_guesser.rb
 ${GEM_LIBDIR}/lib/simplecov/configuration.rb
 ${GEM_LIBDIR}/lib/simplecov/defaults.rb
+${GEM_LIBDIR}/lib/simplecov/exit_codes.rb
 ${GEM_LIBDIR}/lib/simplecov/file_list.rb
 ${GEM_LIBDIR}/lib/simplecov/filter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter.rb
+${GEM_LIBDIR}/lib/simplecov/formatter/multi_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/simple_formatter.rb
+${GEM_LIBDIR}/lib/simplecov/json.rb
+${GEM_LIBDIR}/lib/simplecov/last_run.rb
 ${GEM_LIBDIR}/lib/simplecov/merge_helpers.rb
 ${GEM_LIBDIR}/lib/simplecov/railtie.rb
 ${GEM_LIBDIR}/lib/simplecov/railties/tasks.rake
