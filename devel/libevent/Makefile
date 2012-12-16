@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2012/10/31 11:17:13 asau Exp $
+# $NetBSD: Makefile,v 1.42 2012/12/16 11:26:07 wiz Exp $
 
-DISTNAME=	libevent-2.0.19-stable
+DISTNAME=	libevent-2.0.21-stable
 PKGNAME=	${DISTNAME:S/-stable//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=levent/}
