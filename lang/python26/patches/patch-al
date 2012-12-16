@@ -1,7 +1,14 @@
-$NetBSD: patch-al,v 1.9 2011/09/14 17:07:01 hans Exp $
+$NetBSD: patch-al,v 1.10 2012/12/16 23:32:46 dholland Exp $
 
---- configure.orig	2010-05-25 02:27:03.000000000 +0000
-+++ configure	2011-09-06 18:58:15.336443123 +0200
+- recognize OpenBSD, MirBSD, Interix, Solaris 11
+- remove special-case library version hack for FreeBSD
+- use -Werror=format when testing HAVE_ATTRIBUTE_FORMAT_PARSETUPLE,
+  so injecting -Wno-error does not break the test
+- honor pkgsrc LDFLAGS
+- other stuff not previously commented (XXX)
+
+--- configure.orig	2012-04-10 15:32:11.000000000 +0000
++++ configure
 @@ -2833,7 +2833,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
@@ -54,6 +61,15 @@ $NetBSD: patch-al,v 1.9 2011/09/14 17:07:01 hans Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
+@@ -5470,7 +5465,7 @@ then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether gcc supports ParseTuple __format__" >&5
+ $as_echo_n "checking whether gcc supports ParseTuple __format__... " >&6; }
+   save_CFLAGS=$CFLAGS
+-  CFLAGS="$CFLAGS -Werror"
++  CFLAGS="$CFLAGS -Werror=format"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
 @@ -7359,8 +7354,8 @@ then
  			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
