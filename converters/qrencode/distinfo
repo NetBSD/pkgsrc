@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/12/13 21:44:36 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2012/12/16 14:23:07 ryoon Exp $
 
-SHA1 (qrencode-3.2.0.tar.gz) = 1c9cf02cc8e79dddc7238cad64b0bf3c48e94210
-RMD160 (qrencode-3.2.0.tar.gz) = ebf131f37b963b4295f8b052eeb33556a5db6cda
-Size (qrencode-3.2.0.tar.gz) = 423280 bytes
+SHA1 (qrencode-3.4.1.tar.gz) = 3a651b077bc58d4108d350033de412d063de852d
+RMD160 (qrencode-3.4.1.tar.gz) = 170b77cfdb50db795ee71b6540cbc605daf370c9
+Size (qrencode-3.4.1.tar.gz) = 459434 bytes
