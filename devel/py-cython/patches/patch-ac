@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.3 2012/08/12 21:08:46 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2012/12/16 16:07:53 wiz Exp $
 
 Add missing rpath.
 
---- Demos/embed/Makefile.orig	2012-04-21 11:34:22.000000000 +0000
+--- Demos/embed/Makefile.orig	2012-12-14 08:53:21.000000000 +0000
 +++ Demos/embed/Makefile
-@@ -14,7 +14,7 @@ LIBS=$(shell $(PYTHON) -c "import distut
+@@ -15,7 +15,7 @@ LIBS=$(shell $(PYTHON) -c "import distut
  SYSLIBS= $(shell $(PYTHON) -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('SYSLIBS'))")
  
  embedded: embedded.o
@@ -12,4 +12,4 @@ Add missing rpath.
 +	$(LINKCC) -o $@ $^ -L$(LIBDIR1) -L$(LIBDIR2) -l$(PYLIB) $(LIBS) $(SYSLIBS) $(LINKFORSHARED) -Wl,-R$(LIBDIR1)
  
  embedded.o: embedded.c
- 	$(CC) -c $^ -I$(INCDIR)
+ 	$(CC) -c $^ -I$(INCDIR) -I$(PLATINCDIR)
