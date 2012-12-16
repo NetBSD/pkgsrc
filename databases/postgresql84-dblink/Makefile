@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 21:25:42 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/16 01:52:03 obache Exp $
 
 PKGNAME=	${DISTNAME:C/-/84-dblink-/}
+PKGREVISION=	1
 COMMENT=	dblink module for remote database connections
 
 DEPENDS+=	postgresql84-server>=${PKGVERSION_NOREV}:../../databases/postgresql84-server
