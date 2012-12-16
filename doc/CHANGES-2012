@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3884 2012/12/16 15:53:45 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3885 2012/12/16 16:02:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5981,3 +5981,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mercurial to 2.4.1 [wiz 2012-12-16]
 	Updated devel/py-distribute to 0.6.32 [wiz 2012-12-16]
 	Updated devel/global to 6.2.6 [wiz 2012-12-16]
+	Updated converters/help2man to 1.40.13 [wiz 2012-12-16]
