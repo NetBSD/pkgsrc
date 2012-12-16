@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/15 18:36:51 abs Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/16 13:58:25 ryoon Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -7,7 +7,7 @@ DISTNAME=	jre-7u10-linux-${DIST_ARCH}
 PKGNAME=	sun-jre7-7.0.10
 MASTER_SITES=	# empty
 
-LICENSE=	sun-jre6-license
+LICENSE=	oracle-binary-code-license
 
 DOWNLOAD_NAME=	Java Runtime Environment (JRE) 7u10
 

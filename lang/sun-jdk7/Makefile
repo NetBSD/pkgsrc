@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/12/15 18:18:28 abs Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/16 13:58:25 ryoon Exp $
 
 DISTNAME=	jdk-7u10-linux-${DIST_ARCH}
 PKGNAME=	sun-jdk7-7.0.10
 MASTER_SITES=	# empty
 
-LICENSE=	sun-jdk6-license
+LICENSE=	oracle-binary-code-license
 
 DOWNLOAD_NAME=	Java Development Kit (JDK) 7u10
 
