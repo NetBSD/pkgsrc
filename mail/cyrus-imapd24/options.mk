@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2012/01/05 11:52:34 obache Exp $
+# $NetBSD: options.mk,v 1.7 2012/12/16 02:55:46 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
@@ -49,6 +49,19 @@ CONFIGURE_ENV+=	COMPILE_ET=/usr/bin/compile_et
 CONFIGURE_ARGS+=	--with-com-err=yes
 .  endif
 .endif
+.if defined(CONFIGURE_ENV) && !empty(CONFIGURE_ENV:MCOMPILE_ET=*)
+post-configure:		generate-compile-et
+.endif
+
+generate-compile-et:
+	${RUN}cd ${WRKSRC}/com_err/et;				\
+	if ${TEST} ! -f Makefile -a  ! -f compile_et; then	\
+		${SED} 	-e 's,@SED@,${SED},g'			\
+			-e 's,@AWK@,${AWK},g'			\
+			-e 's,@DIR@,${WRKSRC}/com_err/et,g'	\
+			< compile_et.sh > compile_et;		\
+		${CHMOD} +x compile_et;				\
+	fi
 
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
