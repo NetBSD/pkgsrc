@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/12/16 16:10:56 ryoon Exp $
+
+SHA1 (mandelbulber1.13-1.tar.gz) = 9dfdcc71a4e610e016b10c8bfb6225b4254c09a7
+RMD160 (mandelbulber1.13-1.tar.gz) = d87e250b8bfb4249d43112d1d8395c5d9913f6c7
+Size (mandelbulber1.13-1.tar.gz) = 1200010 bytes
+SHA1 (patch-src_netrender.hpp) = 8d1bc2f6586d56434c8d2a4c33eac5b2ed911176
