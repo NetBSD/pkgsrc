@@ -1,10 +1,28 @@
-@comment $NetBSD: PLIST,v 1.5 2012/09/04 15:57:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/12/16 16:23:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Appraisals
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Readme.md
+${GEM_LIBDIR}/gemfiles/rails.2.3.gemfile
+${GEM_LIBDIR}/gemfiles/rails.2.3.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails.3.0.gemfile
+${GEM_LIBDIR}/gemfiles/rails.3.0.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails.3.1.gemfile
+${GEM_LIBDIR}/gemfiles/rails.3.1.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails.3.2.gemfile
+${GEM_LIBDIR}/gemfiles/rails.3.2.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails23.gemfile
+${GEM_LIBDIR}/gemfiles/rails23.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails30.gemfile
+${GEM_LIBDIR}/gemfiles/rails30.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails31.gemfile
+${GEM_LIBDIR}/gemfiles/rails31.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails32.gemfile
+${GEM_LIBDIR}/gemfiles/rails32.gemfile.lock
 ${GEM_LIBDIR}/gettext_i18n_rails.gemspec
 ${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails.rb
@@ -15,7 +33,6 @@ ${GEM_LIBDIR}/lib/gettext_i18n_rails/backend.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/base_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/gettext_hooks.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/haml_parser.rb
-${GEM_LIBDIR}/lib/gettext_i18n_rails/hamlet_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/html_safe_translations.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/i18n_hacks.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/model_attributes_finder.rb
@@ -31,7 +48,6 @@ ${GEM_LIBDIR}/spec/gettext_i18n_rails/active_model_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/active_record_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/backend_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/haml_parser_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/hamlet_parser_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/model_attributes_finder_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/slim_parser_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/string_interpolate_fix_spec.rb
