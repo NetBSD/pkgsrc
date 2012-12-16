@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2012/02/28 00:52:56 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.19 2012/12/16 01:36:44 obache Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -17,13 +17,13 @@
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.25
+DISTNAME=	cyrus-sasl-2.1.26
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/ \
 		ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://asg.web.cmu.edu/sasl/
+HOMEPAGE=	http://www.cyrussasl.org/
 LICENSE=	original-bsd # CMU version
 
 DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl/distinfo
@@ -75,6 +75,8 @@ CONFIGURE_ARGS+=	--with-dblib=none
 CONFIGURE_ARGS+=	--without-openssl
 CONFIGURE_ARGS+=	--without-pam
 CONFIGURE_ARGS+=	--without-saslauthd
+
+PKGCONFIG_OVERRIDE+=	libsasl2.pc.in
 
 # Left here as reference for patch makers...
 # clean up a bit to help package maintainer produce patch files

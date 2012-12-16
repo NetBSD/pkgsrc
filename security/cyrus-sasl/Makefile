@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/10/23 18:16:24 asau Exp $
+# $NetBSD: Makefile,v 1.65 2012/12/16 01:36:44 obache Exp $
 
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
@@ -15,7 +15,7 @@ SASL_DBTYPE?=		berkeley
 BUILD_DEFS+=		SASL_DBTYPE
 
 .if ${SASL_DBTYPE} == "berkeley"
-BDB_ACCEPTED=		db3 db4
+BDB_ACCEPTED=		db3 db4 db5
 .  include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ENV+=		with_bdb=${BDB_TYPE}
 .endif
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE:Q}
 BUILD_DEFS+=		SASL_ENTROPY_SOURCE
 
 # Let not to build sample codes.
-CONFIGURE_ARGS+=	--disable-sample
+CONFIGURE_ARGS+=	--enable-sample=no
 
 # CYRUS_USER		username of the Cyrus administrator
 # CYRUS_GROUP		group of the Cyrus administrator
