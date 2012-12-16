@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2012/12/08 22:46:21 adam Exp $
+# $NetBSD: Makefile,v 1.642 2012/12/16 16:12:29 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -293,6 +293,7 @@ SUBDIR+=	libxmi
 SUBDIR+=	ljpeg
 SUBDIR+=	lprof
 SUBDIR+=	magicpoint
+SUBDIR+=	mandelbulber
 SUBDIR+=	metacam
 SUBDIR+=	mgl
 SUBDIR+=	mng
