@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/28 06:30:06 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/12/16 01:52:36 obache Exp $
 
 DISTNAME=	mod_auth_ldap3.05
 PKGNAME=	ap2-auth-ldap-3.05
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.muquit.com/muquit/software/mod_auth_ldap/
 

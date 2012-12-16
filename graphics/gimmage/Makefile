@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 23:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.18 2012/12/16 01:52:16 obache Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/gimmage/
 

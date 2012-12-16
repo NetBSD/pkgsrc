@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 12:19:06 asau Exp $
+# $NetBSD: Makefile,v 1.24 2012/12/16 01:52:19 obache Exp $
 #
 
 PLUGIN_NAME=	trayicon
-PKGREVISION=	1
+PKGREVISION=	2
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

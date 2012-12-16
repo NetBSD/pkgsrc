@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 09:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/16 01:52:25 obache Exp $
 #
 
 DISTNAME=	libcarddav_0.6.2-2debian2
 PKGNAME=	${DISTNAME:S/_/-/:S/-2debian2/.2.2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	https://quickbuild.pearsoncomputing.net/~trinity/+archive/trinity-builddeps/+files/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2012/07/03 18:08:20 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2012/12/16 01:52:21 obache Exp $
 
 BUILDLINK_TREE+=	libetpan
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libetpan
 LIBETPAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libetpan+=	libetpan>=1.0
-BUILDLINK_ABI_DEPENDS.libetpan+=	libetpan>=1.1
+BUILDLINK_ABI_DEPENDS.libetpan+=	libetpan>=1.1nb1
 BUILDLINK_PKGSRCDIR.libetpan?=	../../mail/libetpan
 
 BDB_ACCEPTED?=	db4 db5

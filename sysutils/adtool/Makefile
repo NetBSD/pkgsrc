@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 19:50:50 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/16 01:52:34 obache Exp $
 #
 
 DISTNAME=	adtool-1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gp2x.org/adtool/
 

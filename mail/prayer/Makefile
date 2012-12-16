@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2012/10/08 12:19:28 asau Exp $
+# $NetBSD: Makefile,v 1.47 2012/12/16 01:52:22 obache Exp $
 
 DISTNAME=	prayer-1.3.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
