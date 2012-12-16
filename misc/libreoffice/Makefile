@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/12/15 10:36:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2012/12/16 01:52:25 obache Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.6/ \
 		http://dev-www.libreoffice.org/src/ \

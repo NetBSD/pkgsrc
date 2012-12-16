@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:21 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/16 01:52:38 obache Exp $
 #
 
 DISTNAME=	lua-curl-0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://luaforge.net/frs/download.php/2634/
 

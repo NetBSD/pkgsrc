@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 18:16:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/16 01:52:33 obache Exp $
 
 DISTNAME=	liboauth-0.9.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://liboauth.sourceforge.net/pool/
 

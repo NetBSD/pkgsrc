@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/12/08 17:09:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/16 01:52:30 obache Exp $
 #
 
 DISTNAME=	podcastdl-0.3.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://files.bebik.net/podcastdl/
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/04/19 21:07:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/12/16 01:52:37 obache Exp $
 
 BUILDLINK_TREE+=	apache
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	apache
 APACHE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.4.1<2.5
-BUILDLINK_ABI_DEPENDS.apache+=	apache>=2.4.1
+BUILDLINK_ABI_DEPENDS.apache+=	apache>=2.4.3nb2
 BUILDLINK_PKGSRCDIR.apache?=	../../www/apache24
 BUILDLINK_DEPMETHOD.apache?=	build
 .if defined(APACHE_MODULE)

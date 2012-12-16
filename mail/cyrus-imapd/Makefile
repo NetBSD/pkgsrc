@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2012/10/08 12:19:07 asau Exp $
+# $NetBSD: Makefile,v 1.97 2012/12/16 01:52:19 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
