@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3391 2012/04/15 15:29:48 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3392 2012/12/16 03:01:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3574,7 +3574,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql55-server to 5.5.16nb1 [tron 2011-09-17]
 	Updated security/cyrus-sasl to 2.1.25 [obache 2011-09-17]
 	Updated security/cy2-anonymous to 2.1.25 [obache 2011-09-17]
-	Updated security/cy2-crammd5 to 2.1.25 [obache 2009-09-17]
+	Updated security/cy2-crammd5 to 2.1.25 [obache 2011-09-17]
 	Updated security/cy2-digestmd5 to 2.1.25 [obache 2011-09-17]
 	Updated security/cy2-gssapi to 2.1.25 [obache 2011-09-17]
 	Updated security/cy2-ldapdb to 2.1.25 [obache 2011-09-17]
