@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3874 2012/12/16 11:16:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3875 2012/12/16 11:24:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5965,3 +5965,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/bison to 2.7 [wiz 2012-12-16]
 	Updated devel/libidn to 1.26 [wiz 2012-12-16]
 	Updated fonts/fontconfig to 2.10.2 [wiz 2012-12-16]
+	Updated devel/gtexinfo to 4.13a [wiz 2012-12-16]
