@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/09/16 06:18:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/12/16 16:19:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -29,6 +29,7 @@ ${GEM_LIBDIR}/doc/releases/flexmock-0.8.4.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.8.5.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.9.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-1.0.0.rdoc
+${GEM_LIBDIR}/doc/releases/flexmock-1.0.3.rdoc
 ${GEM_LIBDIR}/flexmock.blurb
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/flexmock.rb
@@ -55,6 +56,7 @@ ${GEM_LIBDIR}/lib/flexmock/rails.rb
 ${GEM_LIBDIR}/lib/flexmock/rails/view_mocking.rb
 ${GEM_LIBDIR}/lib/flexmock/recorder.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec.rb
+${GEM_LIBDIR}/lib/flexmock/rspec/configure.rb
 ${GEM_LIBDIR}/lib/flexmock/rspec_spy_matcher.rb
 ${GEM_LIBDIR}/lib/flexmock/spy_describers.rb
 ${GEM_LIBDIR}/lib/flexmock/symbol_extensions.rb
@@ -72,6 +74,7 @@ ${GEM_LIBDIR}/test/default_framework_adapter_test.rb
 ${GEM_LIBDIR}/test/demeter_mocking_test.rb
 ${GEM_LIBDIR}/test/deprecated_methods_test.rb
 ${GEM_LIBDIR}/test/examples_from_readme_test.rb
+${GEM_LIBDIR}/test/expectation_description_test.rb
 ${GEM_LIBDIR}/test/extended_should_receive_test.rb
 ${GEM_LIBDIR}/test/flexmodel_test.rb
 ${GEM_LIBDIR}/test/naming_test.rb
