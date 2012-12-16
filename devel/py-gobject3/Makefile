@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/12/04 15:04:44 prlw1 Exp $
+# $NetBSD: Makefile,v 1.12 2012/12/16 21:44:40 wiz Exp $
 #
 
 DISTNAME=		pygobject-3.4.2
 PKGNAME=		${PYPKGPREFIX}-gobject3-3.4.2
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/3.4/}
 EXTRACT_SUFX=		.tar.xz
@@ -18,13 +19,11 @@ USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-PKGCONFIG_OVERRIDE+=	pygobject-3.4.pc.in
+PKGCONFIG_OVERRIDE+=	pygobject-3.0.pc.in
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
 CONFLICTS+=		${PYPKGPREFIX}-gobject<2.28.6nb4
-
-REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
 
 # needed for tests only
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
