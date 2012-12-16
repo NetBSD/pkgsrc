@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/03/17 14:02:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/12/16 16:09:31 taca Exp $
 bin/sow
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
@@ -35,7 +35,7 @@ ${GEM_LIBDIR}/template/README.txt.erb
 ${GEM_LIBDIR}/template/Rakefile.erb
 ${GEM_LIBDIR}/template/bin/file_name.erb
 ${GEM_LIBDIR}/template/lib/file_name.rb.erb
-${GEM_LIBDIR}/template/test/test_file_name.rb.erb
+${GEM_LIBDIR}/template/test/file_name.rb.erb
 ${GEM_LIBDIR}/test/test_hoe.rb
 ${GEM_LIBDIR}/test/test_hoe_debug.rb
 ${GEM_LIBDIR}/test/test_hoe_gemcutter.rb
