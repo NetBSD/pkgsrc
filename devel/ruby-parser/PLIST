@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2011/06/18 01:49:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/16 16:30:07 taca Exp $
 bin/ruby_parse
+bin/ruby_parse_extract_error
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -8,10 +9,14 @@ ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ruby_parse
+${GEM_LIBDIR}/bin/ruby_parse_extract_error
 ${GEM_LIBDIR}/lib/gauntlet_rubyparser.rb
+${GEM_LIBDIR}/lib/ruby18_parser.rb
+${GEM_LIBDIR}/lib/ruby18_parser.y
+${GEM_LIBDIR}/lib/ruby19_parser.rb
+${GEM_LIBDIR}/lib/ruby19_parser.y
 ${GEM_LIBDIR}/lib/ruby_lexer.rb
 ${GEM_LIBDIR}/lib/ruby_parser.rb
-${GEM_LIBDIR}/lib/ruby_parser.y
 ${GEM_LIBDIR}/lib/ruby_parser_extras.rb
 ${GEM_LIBDIR}/test/test_ruby_lexer.rb
 ${GEM_LIBDIR}/test/test_ruby_parser.rb
