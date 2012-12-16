@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3894 2012/12/16 16:16:00 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3895 2012/12/16 16:16:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5992,3 +5992,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/Transmission to 2.74 [wiz 2012-12-16]
 	Updated devel/ruby-daemon_controller to 1.1.0 [taca 2012-12-16]
 	Updated textproc/py-lxml to 3.0.2 [wiz 2012-12-16]
+	Updated www/py-httplib2 to 0.7.7 [wiz 2012-12-16]
