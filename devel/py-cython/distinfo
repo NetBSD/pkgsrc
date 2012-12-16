@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/10/07 21:28:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/12/16 16:07:53 wiz Exp $
 
-SHA1 (Cython-0.17.1.tar.gz) = 171512192d815f9b67ba74177bb3afc7bc55a249
-RMD160 (Cython-0.17.1.tar.gz) = 6128b3ef97fba7e2c37fae657af9b2c5a53538c6
-Size (Cython-0.17.1.tar.gz) = 1283146 bytes
+SHA1 (Cython-0.17.3.tar.gz) = 5d7db24caba43157ec891b2b5468817e58469d4f
+RMD160 (Cython-0.17.3.tar.gz) = d1651e83ce0e2195f06b4c9de61d28234d26cbe3
+Size (Cython-0.17.3.tar.gz) = 1287899 bytes
 SHA1 (patch-aa) = b66269a12ff43be9b7ea980d5245b5fdbbe41e64
 SHA1 (patch-ab) = de923488eb3f08f7e048c35c57bd60cbfb2b4c53
-SHA1 (patch-ac) = 1caa956748f9fa221f9ef263d1d695e6565f36d8
+SHA1 (patch-ac) = 79b421be9b4b72c57df9907533c4732fec9458f9
