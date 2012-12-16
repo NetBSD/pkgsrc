@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3902 2012/12/16 16:31:29 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3903 2012/12/16 16:41:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6002,3 +6002,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-sexp-processor to 4.1.3 [taca 2012-12-16]
 	Updated devel/ruby-parser to 3.0.4 [taca 2012-12-16]
 	Updated devel/ruby2ruby to 2.0.1 [taca 2012-12-16]
+	Updated databases/ruby-data_objects to 0.10.10 [taca 2012-12-16]
+	Updated databases/ruby-do_mysql to 0.10.10 [taca 2012-12-16]
+	Updated databases/ruby-do_postgres to 0.10.10 [taca 2012-12-16]
+	Updated databases/ruby-do_sqlite3 to 0.10.10 [taca 2012-12-16]
