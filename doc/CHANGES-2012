@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3881 2012/12/16 15:07:03 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.3882 2012/12/16 15:39:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5978,3 +5978,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rails32 to 3.2.9 [taca 2012-12-16]
 	Updated converters/qrencode to 3.4.1 [ryoon 2012-12-16]
 	Updated devel/scons to 2.2.0 [ryoon 2012-12-16]
+	Updated devel/mercurial to 2.4.1 [wiz 2012-12-16]
