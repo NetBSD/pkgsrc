@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/10/23 19:51:13 asau Exp $
+# $NetBSD: Makefile,v 1.53 2012/12/16 18:09:46 wiz Exp $
 
 DISTNAME=	mtools-4.0.17
 PKGREVISION=	2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/mtools/
 COMMENT=	FAT (MS-DOS, Atari) disk access tools
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3 # or later
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake makeinfo
