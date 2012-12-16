@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3890 2012/12/16 16:12:08 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3891 2012/12/16 16:13:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5988,3 +5988,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-virtualenv to 1.8.4 [wiz 2012-12-16]
 	Updated devel/ZenTest to 4.8.3 [taca 2012-12-16]
 	Updated devel/hoe to 3.3.1 [taca 2012-12-16]
+	Added graphics/mandelbulber version 1.13.1 [ryoon 2012-12-16]
