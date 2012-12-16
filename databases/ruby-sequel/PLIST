@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2012/09/03 15:14:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/12/16 16:07:09 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/bin/sequel
 ${GEM_LIBDIR}/doc/active_record.rdoc
 ${GEM_LIBDIR}/doc/advanced_associations.rdoc
 ${GEM_LIBDIR}/doc/association_basics.rdoc
+${GEM_LIBDIR}/doc/bin_sequel.rdoc
 ${GEM_LIBDIR}/doc/cheat_sheet.rdoc
 ${GEM_LIBDIR}/doc/core_extensions.rdoc
 ${GEM_LIBDIR}/doc/dataset_basics.rdoc
@@ -74,6 +75,9 @@ ${GEM_LIBDIR}/doc/release_notes/3.37.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.38.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.39.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.40.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.41.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.42.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.7.0.txt
@@ -89,8 +93,10 @@ ${GEM_LIBDIR}/doc/validations.rdoc
 ${GEM_LIBDIR}/doc/virtual_rows.rdoc
 ${GEM_LIBDIR}/lib/sequel.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/ado.rb
+${GEM_LIBDIR}/lib/sequel/adapters/ado/access.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/ado/mssql.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/amalgalite.rb
+${GEM_LIBDIR}/lib/sequel/adapters/cubrid.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/db2.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/dbi.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/do.rb
@@ -102,6 +108,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/ibmdb.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/informix.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/jdbc.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/jdbc/as400.rb
+${GEM_LIBDIR}/lib/sequel/adapters/jdbc/cubrid.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/jdbc/db2.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/jdbc/derby.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/jdbc/firebird.rb
@@ -126,6 +133,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/openbase.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/oracle.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/postgres.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/access.rb
+${GEM_LIBDIR}/lib/sequel/adapters/shared/cubrid.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/db2.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/firebird.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/informix.rb
@@ -144,6 +152,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/swift/sqlite.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/tinytds.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/emulate_offset_with_row_number.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/pg_types.rb
+${GEM_LIBDIR}/lib/sequel/adapters/utils/split_alter_table.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/stored_procedures.rb
 ${GEM_LIBDIR}/lib/sequel/ast_transformer.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool.rb
@@ -175,6 +184,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
+${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/eval_inspect.rb
@@ -213,6 +223,7 @@ ${GEM_LIBDIR}/lib/sequel/metaprogramming.rb
 ${GEM_LIBDIR}/lib/sequel/model.rb
 ${GEM_LIBDIR}/lib/sequel/model/associations.rb
 ${GEM_LIBDIR}/lib/sequel/model/base.rb
+${GEM_LIBDIR}/lib/sequel/model/dataset_module.rb
 ${GEM_LIBDIR}/lib/sequel/model/default_inflections.rb
 ${GEM_LIBDIR}/lib/sequel/model/errors.rb
 ${GEM_LIBDIR}/lib/sequel/model/exceptions.rb
@@ -307,6 +318,7 @@ ${GEM_LIBDIR}/spec/extensions/caching_spec.rb
 ${GEM_LIBDIR}/spec/extensions/class_table_inheritance_spec.rb
 ${GEM_LIBDIR}/spec/extensions/columns_introspection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
+${GEM_LIBDIR}/spec/extensions/connection_validator_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_plugin_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
