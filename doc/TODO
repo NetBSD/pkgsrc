@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11751 2012/12/16 11:16:47 wiz Exp $
+$NetBSD: TODO,v 1.11752 2012/12/16 11:24:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdk-5.0.20120323
 	o cdlabelgen-4.2.0
 	o cdrkit-1.1.10
-	o cdrtools-3.01a09
 	o celestia-1.6.0
 	o cfengine-3.3.8 [pkg/47249]
 	o cfengine-3.4.0
@@ -668,7 +667,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.21
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
-	o gtexinfo-4.13a
 	o gthumb-3.0.2
 	o gtick-0.4.2
 	o gtk-gnutella-0.98.4
