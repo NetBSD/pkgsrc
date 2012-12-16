@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3898 2012/12/16 16:21:21 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3899 2012/12/16 16:23:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5996,3 +5996,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-fast_gettext to 0.6.11 [taca 2012-12-16]
 	Updated devel/ruby-flexmock to 1.2.0 [taca 2012-12-16]
 	Updated devel/ruby-gettext to 2.3.5 [taca 2012-12-16]
+	Updated devel/ruby-gettext_i18n_rails to 0.8.0 [taca 2012-12-16]
