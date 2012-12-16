@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2012/09/04 14:52:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:46:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/Capybara.md
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
@@ -19,6 +20,7 @@ ${GEM_LIBDIR}/features/controller_specs/bypass_rescue.feature
 ${GEM_LIBDIR}/features/controller_specs/controller_spec.feature
 ${GEM_LIBDIR}/features/controller_specs/isolation_from_views.feature
 ${GEM_LIBDIR}/features/controller_specs/render_views.feature
+${GEM_LIBDIR}/features/feature_specs/feature_spec.feature
 ${GEM_LIBDIR}/features/helper_specs/helper_spec.feature
 ${GEM_LIBDIR}/features/mailer_specs/url_helpers.feature
 ${GEM_LIBDIR}/features/matchers/README.md
@@ -76,6 +78,7 @@ ${GEM_LIBDIR}/lib/rspec/rails.rb
 ${GEM_LIBDIR}/lib/rspec/rails/adapters.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/controller_example_group.rb
+${GEM_LIBDIR}/lib/rspec/rails/example/feature_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/helper_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/mailer_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/model_example_group.rb
@@ -85,6 +88,7 @@ ${GEM_LIBDIR}/lib/rspec/rails/example/routing_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/view_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/extensions.rb
 ${GEM_LIBDIR}/lib/rspec/rails/extensions/active_record/base.rb
+${GEM_LIBDIR}/lib/rspec/rails/extensions/active_record/proxy.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_a_new.rb
@@ -116,6 +120,7 @@ ${GEM_LIBDIR}/spec/rspec/rails/assertion_adapter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/configuration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/deprecations_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/controller_example_group_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/example/feature_example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/helper_example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/mailer_example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/model_example_group_spec.rb
@@ -129,6 +134,7 @@ ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_a_new_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_new_record_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_routable_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/errors_on_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/matchers/has_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/have_rendered_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/redirect_to_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/relation_match_array_spec.rb
