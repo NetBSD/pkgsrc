@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3871 2012/12/16 10:41:21 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3872 2012/12/16 10:46:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5962,3 +5962,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/cyrus-imapd24 to 2.4.17 [obache 2012-12-16]
 	Updated www/apache-tomcat7 to 7.0.34 [ryoon 2012-12-16]
 	Updated devel/automake to 1.12.6 [wiz 2012-12-16]
+	Updated devel/bison to 2.7 [wiz 2012-12-16]
