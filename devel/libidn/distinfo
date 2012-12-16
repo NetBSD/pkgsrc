@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.54 2012/05/29 14:43:06 wiz Exp $
+$NetBSD: distinfo,v 1.55 2012/12/16 11:14:35 wiz Exp $
 
-SHA1 (libidn-1.25.tar.gz) = 92e64fd5a6428bda6ade2c3cde475b76455cd7dd
-RMD160 (libidn-1.25.tar.gz) = e14088d528d57686df723ce001ee5dc05aee8870
-Size (libidn-1.25.tar.gz) = 3390531 bytes
+SHA1 (libidn-1.26.tar.gz) = b1cb40646a96dadbfc41d060d23dfb382eec1128
+RMD160 (libidn-1.26.tar.gz) = a047e5ae640498df810dd32675758d582672ee87
+Size (libidn-1.26.tar.gz) = 3400972 bytes
 SHA1 (patch-aa) = c97ade5696f5f31ed49e789155799b8de238b35e
 SHA1 (patch-ad) = 2b8f25de31627d90829ebde6b92c24012fc1fff9
