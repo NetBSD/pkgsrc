@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11766 2012/12/16 16:16:01 wiz Exp $
+$NetBSD: TODO,v 1.11767 2012/12/16 16:16:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gobject-3.4.2
-	o py-httplib2-0.7.7
 	o py-moin-1.9.5
 	o py-qt4-4.9.6
 	o py-sip-4.14.2
