@@ -1,4 +1,4 @@
-These tools allow you to access MS-DOS or other FAT disks without mounting
-them. You can copy from or to BSD files, list directories, or run various
-other MS-DOS-style file / disk access tool imitates, (in general with an 'm'
-prepended to their name).
+Mtools is a collection of utilities to access MS-DOS and Atari FAT
+disks from GNU and Unix without mounting them.  It supports Win'95
+style long file names, OS/2 Xdf disks, and 2m disks (store up to
+1992k on a high density 3 1/2-inch disk).
