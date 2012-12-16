@@ -1,13 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/16 08:14:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/16 16:25:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.ruby
+${GEM_LIBDIR}/.meta
 ${GEM_LIBDIR}/.yardopts
-${GEM_LIBDIR}/Config.rb
 ${GEM_LIBDIR}/DEMO.rdoc
 ${GEM_LIBDIR}/HISTORY.rdoc
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/NOTICE.txt
 ${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/alt/hashery/basicobject.rb
+${GEM_LIBDIR}/alt/hashery/castinghash.rb
+${GEM_LIBDIR}/alt/hashery/fuzzyhash.rb
+${GEM_LIBDIR}/alt/hashery/keyhash.rb
+${GEM_LIBDIR}/alt/hashery/linkedlist.rb
+${GEM_LIBDIR}/alt/hashery/lruhash.rb
+${GEM_LIBDIR}/alt/hashery/opencascade.rb
+${GEM_LIBDIR}/alt/hashery/openhash.rb
+${GEM_LIBDIR}/alt/hashery/orderedhash.rb
+${GEM_LIBDIR}/alt/hashery/propertyhash.rb
+${GEM_LIBDIR}/alt/hashery/queryhash.rb
+${GEM_LIBDIR}/alt/hashery/statichash.rb
 ${GEM_LIBDIR}/lib/hashery.rb
 ${GEM_LIBDIR}/lib/hashery.yml
 ${GEM_LIBDIR}/lib/hashery/association.rb
