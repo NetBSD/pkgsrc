@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3903 2012/12/16 16:41:37 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3904 2012/12/16 16:48:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6006,3 +6006,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-do_mysql to 0.10.10 [taca 2012-12-16]
 	Updated databases/ruby-do_postgres to 0.10.10 [taca 2012-12-16]
 	Updated databases/ruby-do_sqlite3 to 0.10.10 [taca 2012-12-16]
+	Updated devel/ruby-rspec-core to 2.12.2 [taca 2012-12-16]
+	Updated devel/ruby-rspec-expectations to 2.12.0 [taca 2012-12-16]
+	Updated devel/ruby-rspec-mocks to 2.12.0 [taca 2012-12-16]
+	Updated devel/ruby-rspec-rails to 2.12.0 [taca 2012-12-16]
+	Updated devel/ruby-rspec to 2.12.0 [taca 2012-12-16]
