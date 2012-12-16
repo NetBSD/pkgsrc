@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/08/29 16:47:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:51:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPL
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/lib/test-unit.rb
 ${GEM_LIBDIR}/lib/test/unit.rb
 ${GEM_LIBDIR}/lib/test/unit/assertionfailederror.rb
 ${GEM_LIBDIR}/lib/test/unit/assertions.rb
+${GEM_LIBDIR}/lib/test/unit/attribute-matcher.rb
 ${GEM_LIBDIR}/lib/test/unit/attribute.rb
 ${GEM_LIBDIR}/lib/test/unit/autorunner.rb
 ${GEM_LIBDIR}/lib/test/unit/code-snippet-fetcher.rb
@@ -64,6 +65,7 @@ ${GEM_LIBDIR}/test/collector/test_objectspace.rb
 ${GEM_LIBDIR}/test/fixtures/plus.csv
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-assertions.rb
+${GEM_LIBDIR}/test/test-attribute-matcher.rb
 ${GEM_LIBDIR}/test/test-attribute.rb
 ${GEM_LIBDIR}/test/test-code-snippet.rb
 ${GEM_LIBDIR}/test/test-color-scheme.rb
