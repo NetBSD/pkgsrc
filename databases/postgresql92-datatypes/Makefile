@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/10/05 21:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/16 01:52:07 obache Exp $
 
 PKGNAME=	${DISTNAME:C/-/92-datatypes-/}
+PKGREVISION=	1
 COMMENT=	PostgreSQL data types support modules
 
 DEPENDS+=	postgresql92-server>=${PKGVERSION_NOREV}:../../databases/postgresql92-server
