@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/03/17 14:23:21 taca Exp $
+$NetBSD: distinfo,v 1.5 2012/12/16 16:38:35 taca Exp $
 
-SHA1 (data_objects-0.10.8.gem) = 53237d566a9a0beefd839566330ceac4245f5a4b
-RMD160 (data_objects-0.10.8.gem) = d368f3014e9a4be82ea703a8c28ea06322a1e6af
-Size (data_objects-0.10.8.gem) = 28672 bytes
+SHA1 (data_objects-0.10.10.gem) = 7bc685d5a0dee2d69cefdddfed26b88d916c42e6
+RMD160 (data_objects-0.10.10.gem) = 68dc3530e4b20a29d6a567f13c28645a14c4b4ba
+Size (data_objects-0.10.10.gem) = 29184 bytes
