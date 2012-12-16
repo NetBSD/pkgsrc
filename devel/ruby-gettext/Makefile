@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2012/09/14 16:02:44 taca Exp $
+# $NetBSD: Makefile,v 1.17 2012/12/16 16:20:59 taca Exp $
 
-DISTNAME=	gettext-2.3.1
+DISTNAME=	gettext-2.3.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,6 @@ OVERRIDE_GEMSPEC=	:files po/de/gettext.po.bak= po/gettext.pot~=
 
 pre-configure:
 	cd ${WRKSRC}; ${FIND} . -type f -print | ${XARGS} ${CHMOD} g-w
-	${RM} -f ${WRKSRC}/po/de/gettext.po.bak ${WRKSRC}/po/gettext.pot~
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
