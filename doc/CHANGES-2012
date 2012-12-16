@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3904 2012/12/16 16:48:00 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3905 2012/12/16 16:50:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6011,3 +6011,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-rspec-mocks to 2.12.0 [taca 2012-12-16]
 	Updated devel/ruby-rspec-rails to 2.12.0 [taca 2012-12-16]
 	Updated devel/ruby-rspec to 2.12.0 [taca 2012-12-16]
+	Updated devel/ruby-simplecov-html to 0.7.1 [taca 2012-12-16]
+	Updated devel/ruby-simplecov to 0.7.1 [taca 2012-12-16]
