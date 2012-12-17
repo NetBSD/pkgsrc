@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/28 06:30:08 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/12/17 15:01:14 dholland Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -14,6 +14,7 @@ COMMENT=	Apache module able to apply stylesheets to XML data on the fly
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake bash:run
+MAKE_JOBS_SAFE=	no
 
 APACHE_MODULE=	yes
 DIST_VER=	2004112100
