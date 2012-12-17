@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.14 2010/05/06 07:33:41 adam Exp $
-
---- src/main/Makefile.in.orig	2010-03-25 08:32:02.000000000 +0000
+$NetBSD: patch-ad,v 1.15 2012/12/17 09:08:47 wen Exp $
+Adjust EXTRA_LIBS and @WANT_R_SHLIB_TRUE@R_bin_LDADD
+--- src/main/Makefile.in.orig	2012-03-01 23:02:24.000000000 +0000
 +++ src/main/Makefile.in
-@@ -96,13 +96,13 @@ EXTRA_STATIC_LIBS = \
+@@ -98,14 +98,14 @@ EXTRA_STATIC_LIBS = \
    $(R_ZLIBS) $(R_BZLIBS) $(R_PCRE) $(R_TRE) $(R_XDR) $(R_XZ) $(R_LIBINTL)
  STATIC_LIBS = $(MAIN_LIBS) $(EXTRA_STATIC_LIBS)
  
@@ -10,11 +10,12 @@ $NetBSD: patch-ad,v 1.14 2010/05/06 07:33:41 adam Exp $
 +EXTRA_LIBS = $(BLAS_LIBS) $(FLIBS) $(R_XTRA_LIBS) @LIBINTL@ $(READLINE_LIBS) $(LIBS) @LIBMULTITHREAD@
  
  R_binary = R.bin
- R_bin_OBJECTS = Rmain.o
- @WANT_R_SHLIB_FALSE@R_bin_LDADD = libR.a $(EXTRA_LIBS)
+ R_bin_OBJECTS = Rmain.o @BUILD_LTO_TRUE@@WANT_R_SHLIB_FALSE@$(OBJECTS)
+ @BUILD_LTO_TRUE@@WANT_R_SHLIB_FALSE@R_bin_LDADD = $(MAIN_OBJS) $(EXTRA_STATIC_LIBS) $(EXTRA_LIBS)
+ @BUILD_LTO_FALSE@@WANT_R_SHLIB_FALSE@R_bin_LDADD = libR.a $(EXTRA_LIBS)
  ## Linked against -lRblas becasue -lR is and otherwise ld complains.
 -@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ -lR @BLAS_SHLIB_TRUE@-lRblas
 +@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ ${COMPILER_RPATH_FLAG}$(Rexeclibdir) -lR @BLAS_SHLIB_TRUE@-lRblas
- R_bin_DEPENDENCIES =@WANT_R_SHLIB_FALSE@ libR.a @USE_EXPORTFILES_TRUE@ $(top_builddir)/etc/R.exp
+ @BUILD_LTO_FALSE@R_bin_DEPENDENCIES =@WANT_R_SHLIB_FALSE@ libR.a @USE_EXPORTFILES_TRUE@ $(top_builddir)/etc/R.exp
  
  libR_la = libR$(DYLIB_EXT)
