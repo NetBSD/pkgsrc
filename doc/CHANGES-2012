@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3915 2012/12/17 00:40:41 khorben Exp $
+$NetBSD: CHANGES-2012,v 1.3916 2012/12/17 00:50:01 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/deforaos-keyboard version 0.2.1 [khorben 2012-12-17]
 	Added x11/deforaos-panel version 0.2.16 [khorben 2012-12-17]
 	Added audio/deforaos-mixer version 0.1.1 [khorben 2012-12-17]
+	Added x11/deforaos-locker version 0.2.1 [khorben 2012-12-17]

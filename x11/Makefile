@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2012/12/17 00:33:35 khorben Exp $
+# $NetBSD: Makefile,v 1.673 2012/12/17 00:49:11 khorben Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -33,6 +33,7 @@ SUBDIR+=	compositeproto
 SUBDIR+=	damageproto
 SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
+SUBDIR+=	deforaos-locker
 SUBDIR+=	deforaos-panel
 SUBDIR+=	desklaunch
 SUBDIR+=	deskmenu
