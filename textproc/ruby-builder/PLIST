@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2010/12/04 04:25:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/17 13:39:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TAGS
 ${GEM_LIBDIR}/doc/releases/builder-1.2.4.rdoc
 ${GEM_LIBDIR}/doc/releases/builder-2.0.0.rdoc
 ${GEM_LIBDIR}/doc/releases/builder-2.1.1.rdoc
 ${GEM_LIBDIR}/lib/blankslate.rb
 ${GEM_LIBDIR}/lib/builder.rb
 ${GEM_LIBDIR}/lib/builder/blankslate.rb
+${GEM_LIBDIR}/lib/builder/version.rb
 ${GEM_LIBDIR}/lib/builder/xchar.rb
 ${GEM_LIBDIR}/lib/builder/xmlbase.rb
 ${GEM_LIBDIR}/lib/builder/xmlevents.rb
@@ -18,9 +18,9 @@ ${GEM_LIBDIR}/lib/builder/xmlmarkup.rb
 ${GEM_LIBDIR}/test/performance.rb
 ${GEM_LIBDIR}/test/preload.rb
 ${GEM_LIBDIR}/test/test_blankslate.rb
-${GEM_LIBDIR}/test/test_cssbuilder.rb
 ${GEM_LIBDIR}/test/test_eventbuilder.rb
 ${GEM_LIBDIR}/test/test_markupbuilder.rb
+${GEM_LIBDIR}/test/test_method_caching.rb
 ${GEM_LIBDIR}/test/test_namecollision.rb
 ${GEM_LIBDIR}/test/test_xchar.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
