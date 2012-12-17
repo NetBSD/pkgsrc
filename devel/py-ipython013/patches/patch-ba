@@ -1,0 +1,42 @@
+$NetBSD: patch-ba,v 1.1 2012/12/17 11:57:44 drochner Exp $
+
+--- IPython/utils/tests/test_process.py.orig	2011-12-19 01:25:33.000000000 +0000
++++ IPython/utils/tests/test_process.py
+@@ -102,30 +102,30 @@ class SubProcessTestCase(TestCase, tt.Te
+         self.mktmp('\n'.join(lines))
+ 
+     def test_system(self):
+-        status = system('python "%s"' % self.fname)
++        status = system('"%s" "%s"' % (sys.executable, self.fname))
+         self.assertEquals(status, 0)
+ 
+     def test_system_quotes(self):
+-        status = system('python -c "import sys"')
++        status = system('"%s" -c "import sys"' % sys.executable)
+         self.assertEquals(status, 0)
+ 
+     def test_getoutput(self):
+-        out = getoutput('python "%s"' % self.fname)
++        out = getoutput('"%s" "%s"' % (sys.executable, self.fname))
+         self.assertEquals(out, 'on stdout')
+ 
+     def test_getoutput_quoted(self):
+-        out = getoutput('python -c "print (1)"')
++        out = getoutput('"%s" -c "print (1)"' % sys.executable)
+         self.assertEquals(out.strip(), '1')
+ 
+     #Invalid quoting on windows
+     @dec.skip_win32
+     def test_getoutput_quoted2(self):
+-        out = getoutput("python -c 'print (1)'")
++        out = getoutput("'%s' -c 'print (1)'" % sys.executable)
+         self.assertEquals(out.strip(), '1')
+-        out = getoutput("python -c 'print (\"1\")'")
++        out = getoutput("'%s' -c 'print (\"1\")'" % sys.executable)
+         self.assertEquals(out.strip(), '1')
+ 
+     def test_getoutput(self):
+-        out, err = getoutputerror('python "%s"' % self.fname)
++        out, err = getoutputerror('"%s" "%s"' % (sys.executable, self.fname))
+         self.assertEquals(out, 'on stdout')
+         self.assertEquals(err, 'on stderr')
