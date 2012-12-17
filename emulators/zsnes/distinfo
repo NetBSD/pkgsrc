@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2011/03/15 11:46:09 obache Exp $
+$NetBSD: distinfo,v 1.16 2012/12/17 03:37:20 dholland Exp $
 
 SHA1 (zsnes151src.tar.bz2) = 03df35490870c9950d7010747d0546c8525c0362
 RMD160 (zsnes151src.tar.bz2) = 337407bf7e5516bcd7bf310c7b17d6d12a948750
@@ -10,4 +10,5 @@ SHA1 (patch-ad) = 6244778c7f5c3c5d8c4f040760f8243161ae886d
 SHA1 (patch-ae) = 81236ed52fe7095f6317f655374234ce17cf30dd
 SHA1 (patch-af) = f223476d4ef39a9fe9d60b827fc7c7e2d77f26ee
 SHA1 (patch-makefilein) = d75b9b99888106bfbc7c5d12b311527103ceaccd
+SHA1 (patch-tools_strutil.h) = 18302bd76b325b2654a354282e3bf9ab8e9d8a0c
 SHA1 (patch-zip_zpng.c) = bee7b0635afa9f22a05910b86c4f742296e1f78f
