@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/17 12:29:24 wiz Exp $
+lib/X11/fonts/TTF/Everson Mono Bold Oblique.ttf
+lib/X11/fonts/TTF/Everson Mono Bold.ttf
+lib/X11/fonts/TTF/Everson Mono Oblique.ttf
+lib/X11/fonts/TTF/Everson Mono.ttf
+share/doc/evermono-ttf/emono-licence.txt
