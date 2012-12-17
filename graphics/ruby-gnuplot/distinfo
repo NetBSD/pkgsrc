@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/09/16 06:36:08 taca Exp $
+$NetBSD: distinfo,v 1.7 2012/12/17 12:21:14 taca Exp $
 
-SHA1 (gnuplot-2.5.0.gem) = bd874aa16adf2fbfb32ec693ccf037bbf87f19df
-RMD160 (gnuplot-2.5.0.gem) = 4a47819d9980d7f95170fd881c572f72fc8a7ef1
-Size (gnuplot-2.5.0.gem) = 13824 bytes
+SHA1 (gnuplot-2.6.0.gem) = cf3f0090dcdd15d515b35919ecc48882f9a08ed5
+RMD160 (gnuplot-2.6.0.gem) = 3c9fd7f2a6703fbb8716b323ecf3ab0100e48715
+Size (gnuplot-2.6.0.gem) = 13824 bytes
