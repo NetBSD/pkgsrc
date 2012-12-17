@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2012/11/03 22:56:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.228 2012/12/17 12:29:51 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -51,6 +51,7 @@ SUBDIR+=	dejavu-ttf
 SUBDIR+=	droid-ttf
 SUBDIR+=	efont-unicode
 SUBDIR+=	encodings
+SUBDIR+=	evermono-ttf
 SUBDIR+=	fntsample
 SUBDIR+=	font-adobe-100dpi
 SUBDIR+=	font-adobe-75dpi
