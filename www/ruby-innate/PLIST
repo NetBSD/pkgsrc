@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/20 13:52:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/12/17 15:10:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gems
 ${GEM_LIBDIR}/.gitignore
@@ -39,6 +39,7 @@ ${GEM_LIBDIR}/lib/innate/cache/marshal.rb
 ${GEM_LIBDIR}/lib/innate/cache/memory.rb
 ${GEM_LIBDIR}/lib/innate/cache/yaml.rb
 ${GEM_LIBDIR}/lib/innate/current.rb
+${GEM_LIBDIR}/lib/innate/default_middleware.rb
 ${GEM_LIBDIR}/lib/innate/dynamap.rb
 ${GEM_LIBDIR}/lib/innate/helper.rb
 ${GEM_LIBDIR}/lib/innate/helper/aspect.rb
@@ -50,13 +51,12 @@ ${GEM_LIBDIR}/lib/innate/helper/render.rb
 ${GEM_LIBDIR}/lib/innate/log.rb
 ${GEM_LIBDIR}/lib/innate/log/color_formatter.rb
 ${GEM_LIBDIR}/lib/innate/log/hub.rb
-${GEM_LIBDIR}/lib/innate/middleware_compiler.rb
+${GEM_LIBDIR}/lib/innate/lru_hash.rb
 ${GEM_LIBDIR}/lib/innate/mock.rb
 ${GEM_LIBDIR}/lib/innate/node.rb
 ${GEM_LIBDIR}/lib/innate/options.rb
 ${GEM_LIBDIR}/lib/innate/options/dsl.rb
 ${GEM_LIBDIR}/lib/innate/options/stub.rb
-${GEM_LIBDIR}/lib/innate/rack_file_wrapper.rb
 ${GEM_LIBDIR}/lib/innate/request.rb
 ${GEM_LIBDIR}/lib/innate/response.rb
 ${GEM_LIBDIR}/lib/innate/route.rb
