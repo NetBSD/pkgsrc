@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2012/11/29 09:40:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.476 2012/12/17 00:39:43 khorben Exp $
 #
 
 COMMENT=	Audio tools
@@ -69,6 +69,7 @@ SUBDIR+=	csound5-manual
 SUBDIR+=	daapd
 SUBDIR+=	dap
 SUBDIR+=	darkice
+SUBDIR+=	deforaos-mixer
 SUBDIR+=	disc-cover
 SUBDIR+=	distmp3
 SUBDIR+=	easyh10
