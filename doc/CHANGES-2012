@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3912 2012/12/17 00:22:05 khorben Exp $
+$NetBSD: CHANGES-2012,v 1.3913 2012/12/17 00:29:31 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6020,3 +6020,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/deforaos-libsystem version 0.1.5 [khorben 2012-12-17]
 	Added x11/deforaos-libdesktop version 0.0.8 [khorben 2012-12-17]
 	Added sysutils/deforaos-browser version 0.4.9 [khorben 2012-12-17]
+	Added x11/deforaos-keyboard version 0.2.1 [khorben 2012-12-17]
