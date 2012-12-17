@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3949 2012/12/17 13:57:46 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.3950 2012/12/17 14:30:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-coderay to 1.0.8 [taca 2012-12-17]
 	Updated graphics/djvulibre-lib to 3.5.25.3 [drochner 2012-12-17]
 	Updated textproc/ruby-ferret to 0.11.8.5 [taca 2012-12-17]
+	Updated textproc/ruby-kramdown to 0.14.1 [taca 2012-12-17]
