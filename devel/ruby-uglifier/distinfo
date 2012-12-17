@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/09/16 14:22:01 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/12/17 12:31:14 taca Exp $
 
-SHA1 (uglifier-1.2.7.gem) = aba09a6a243a6036869d31ee0f5b3a2938c99be8
-RMD160 (uglifier-1.2.7.gem) = 0cac91bdee312ea6739b934c2e5c14755141a26d
-Size (uglifier-1.2.7.gem) = 53760 bytes
+SHA1 (uglifier-1.3.0.gem) = 4a44e25eeaee93e4caa50384377f2eb3fa70806b
+RMD160 (uglifier-1.3.0.gem) = 7064583ef859a1e3dc6b5e133e20fe8ad094a2f2
+Size (uglifier-1.3.0.gem) = 54272 bytes
