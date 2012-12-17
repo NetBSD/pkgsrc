@@ -1,0 +1,12 @@
+$NetBSD: patch-AUTHORS,v 1.1.2.1 2012/12/17 16:08:22 tron Exp $
+
+--- AUTHORS.orig	2011-09-26 09:44:34.000000000 +0000
++++ AUTHORS
+@@ -149,6 +149,7 @@ Brent B. Powers			<powers@ml.com>
+ Brent Dax			<brentdax@cpan.org>
+ Brooks D Boyd
+ Brian Callaghan			<callagh@itginc.com>
++Brian Carlson			<brian.carlson@cpanel.net>
+ Brian Clarke			<clarke@appliedmeta.com>
+ brian d foy			<brian.d.foy@gmail.com>
+ Brian Grossman
