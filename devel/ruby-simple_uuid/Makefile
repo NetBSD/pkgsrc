@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2011/08/20 15:17:27 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/17 12:17:56 taca Exp $
 
-DISTNAME=	simple_uuid-0.2.0
+DISTNAME=	simple_uuid-0.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	tonnerre@NetBSD.org
