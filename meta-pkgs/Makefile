@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2012/08/18 16:33:35 chs Exp $
+# $NetBSD: Makefile,v 1.69 2012/12/17 02:16:03 khorben Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -7,6 +7,7 @@ SUBDIR+=	boost
 SUBDIR+=	c++-gnome-bindings
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
+SUBDIR+=	deforaos-desktop
 SUBDIR+=	desktop-gnome
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gimp-docs
