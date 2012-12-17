@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/19 17:48:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/12/17 12:07:01 drochner Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -275,6 +275,7 @@ lib/vlc/plugins/plugins.dat
 lib/vlc/plugins/services_discovery/libmediadirs_plugin.la
 lib/vlc/plugins/services_discovery/libpodcast_plugin.la
 lib/vlc/plugins/services_discovery/libsap_plugin.la
+lib/vlc/plugins/services_discovery/libupnp_plugin.la
 ${PLIST.x11}lib/vlc/plugins/services_discovery/libxcb_apps_plugin.la
 lib/vlc/plugins/sse2/libi420_rgb_sse2_plugin.la
 lib/vlc/plugins/sse2/libi420_yuy2_sse2_plugin.la
@@ -416,6 +417,7 @@ share/locale/cgg/LC_MESSAGES/vlc.mo
 share/locale/ckb/LC_MESSAGES/vlc.mo
 share/locale/co/LC_MESSAGES/vlc.mo
 share/locale/cs/LC_MESSAGES/vlc.mo
+share/locale/cy/LC_MESSAGES/vlc.mo
 share/locale/da/LC_MESSAGES/vlc.mo
 share/locale/de/LC_MESSAGES/vlc.mo
 share/locale/el/LC_MESSAGES/vlc.mo
@@ -437,6 +439,7 @@ share/locale/hi/LC_MESSAGES/vlc.mo
 share/locale/hr/LC_MESSAGES/vlc.mo
 share/locale/hu/LC_MESSAGES/vlc.mo
 share/locale/hy/LC_MESSAGES/vlc.mo
+share/locale/ia/LC_MESSAGES/vlc.mo
 share/locale/id/LC_MESSAGES/vlc.mo
 share/locale/is/LC_MESSAGES/vlc.mo
 share/locale/it/LC_MESSAGES/vlc.mo
