@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/17 01:27:42 khorben Exp $
+bin/editor
+share/applications/editor.desktop
+share/locale/de/LC_MESSAGES/Editor.mo
+share/locale/es/LC_MESSAGES/Editor.mo
+share/locale/fr/LC_MESSAGES/Editor.mo
+share/locale/it/LC_MESSAGES/Editor.mo
