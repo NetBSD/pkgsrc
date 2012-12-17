@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.905 2012/12/17 15:26:38 taca Exp $
+# $NetBSD: Makefile,v 1.906 2012/12/17 15:31:06 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -594,7 +594,6 @@ SUBDIR+=	ruby-innate
 SUBDIR+=	ruby-jekyll
 SUBDIR+=	ruby-journey
 SUBDIR+=	ruby-jquery-rails
-SUBDIR+=	ruby-jquery-rails10
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-liquid
 SUBDIR+=	ruby-mechanize
