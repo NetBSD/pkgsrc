@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2012/04/17 17:17:28 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2012/12/17 11:52:42 drochner Exp $
 
---- setup.py.orig	2011-10-06 14:50:23.000000000 +0000
+--- setup.py.orig	2012-11-08 02:24:12.000000000 +0000
 +++ setup.py
-@@ -119,13 +119,13 @@ if not check_for_numpy():
+@@ -141,12 +141,12 @@ if not check_for_numpy(__version__numpy_
  if not check_for_freetype():
      sys.exit(1)
  
@@ -10,20 +10,18 @@ $NetBSD: patch-ab,v 1.6 2012/04/17 17:17:28 drochner Exp $
 -build_ttconv(ext_modules, packages)
 -build_contour(ext_modules, packages)
 -build_delaunay(ext_modules, packages)
--build_nxutils(ext_modules, packages)
 -build_path(ext_modules, packages)
 -build_tri(ext_modules, packages)
 +#build_ft2font(ext_modules, packages)
 +#build_ttconv(ext_modules, packages)
 +#build_contour(ext_modules, packages)
 +#build_delaunay(ext_modules, packages)
-+#build_nxutils(ext_modules, packages)
 +#build_path(ext_modules, packages)
 +#build_tri(ext_modules, packages)
  
  print_raw("")
  print_raw("OPTIONAL BACKEND DEPENDENCIES")
-@@ -155,13 +155,13 @@ if options['build_tkagg']:
+@@ -176,13 +176,13 @@ if options['build_tkagg']:
          build_tkagg(ext_modules, packages)
          rc['backend'] = 'TkAgg'
  
@@ -39,7 +37,7 @@ $NetBSD: patch-ab,v 1.6 2012/04/17 17:17:28 drochner Exp $
          build_gtkagg(ext_modules, packages)
          rc['backend'] = 'GTKAgg'
  
-@@ -263,11 +263,11 @@ distrib = setup(name="matplotlib",
+@@ -322,12 +322,12 @@ distrib = setup(name="matplotlib",
        interfaces and hardcopy output formats.  There is a 'pylab' mode
        which emulates matlab graphics
        """,
@@ -49,8 +47,9 @@ $NetBSD: patch-ab,v 1.6 2012/04/17 17:17:28 drochner Exp $
 -      py_modules = py_modules,
 +#      py_modules = py_modules,
        ext_modules = ext_modules,
-       package_dir = {'': 'lib'},
+       package_dir = package_dir,
 -      package_data = package_data,
 +#      package_data = package_data,
+       classifiers = classifiers,
+       cmdclass = {'build_py': build_py},
        **additional_params
-       )
