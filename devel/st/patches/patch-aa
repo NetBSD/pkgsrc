@@ -1,7 +1,26 @@
-$NetBSD: patch-aa,v 1.4 2009/03/10 11:13:09 gson Exp $
+$NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
 
---- Makefile.orig	2007-03-14 04:34:20.000000000 +0200
+- honor pkgsrc CC, AR, LD, RANLIB (CC matters for libtool, the others less so)
+- use libtool
+- other previously uncommented stuff (XXX)
+
+--- Makefile.orig	2007-03-14 02:34:20.000000000 +0000
 +++ Makefile
+@@ -56,10 +56,10 @@ VERSION     = 1.8
+ # possible compilation options.
+ ##########################
+ 
+-CC          = cc
+-AR          = ar
+-LD          = ld
+-RANLIB      = ranlib
++#CC          = cc
++#AR          = ar
++#LD          = ld
++#RANLIB      = ranlib
+ LN          = ln
+ 
+ SHELL       = /bin/sh
 @@ -184,6 +184,13 @@ LDFLAGS     = -shared -soname=$(SONAME) 
  OTHER_FLAGS = -Wall
  endif
