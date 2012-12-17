@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/09/16 13:36:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/12/17 15:52:31 taca Exp $
 bin/sass
 bin/sass-convert
 bin/scss
@@ -147,6 +147,7 @@ ${GEM_LIBDIR}/test/sass/more_templates/more_import.sass
 ${GEM_LIBDIR}/test/sass/plugin_test.rb
 ${GEM_LIBDIR}/test/sass/results/alt.css
 ${GEM_LIBDIR}/test/sass/results/basic.css
+${GEM_LIBDIR}/test/sass/results/cached_import_option.css
 ${GEM_LIBDIR}/test/sass/results/compact.css
 ${GEM_LIBDIR}/test/sass/results/complex.css
 ${GEM_LIBDIR}/test/sass/results/compressed.css
@@ -178,18 +179,21 @@ ${GEM_LIBDIR}/test/sass/scss/css_test.rb
 ${GEM_LIBDIR}/test/sass/scss/rx_test.rb
 ${GEM_LIBDIR}/test/sass/scss/scss_test.rb
 ${GEM_LIBDIR}/test/sass/scss/test_helper.rb
+${GEM_LIBDIR}/test/sass/templates/_cached_import_option_partial.scss
 ${GEM_LIBDIR}/test/sass/templates/_double_import_loop2.sass
 ${GEM_LIBDIR}/test/sass/templates/_filename_fn_import.scss
 ${GEM_LIBDIR}/test/sass/templates/_imported_charset_ibm866.sass
 ${GEM_LIBDIR}/test/sass/templates/_imported_charset_utf8.sass
 ${GEM_LIBDIR}/test/sass/templates/_imported_content.sass
 ${GEM_LIBDIR}/test/sass/templates/_partial.sass
+${GEM_LIBDIR}/test/sass/templates/_same_name_different_partiality.scss
 ${GEM_LIBDIR}/test/sass/templates/alt.sass
 ${GEM_LIBDIR}/test/sass/templates/basic.sass
 ${GEM_LIBDIR}/test/sass/templates/bork1.sass
 ${GEM_LIBDIR}/test/sass/templates/bork2.sass
 ${GEM_LIBDIR}/test/sass/templates/bork3.sass
 ${GEM_LIBDIR}/test/sass/templates/bork4.sass
+${GEM_LIBDIR}/test/sass/templates/cached_import_option.scss
 ${GEM_LIBDIR}/test/sass/templates/compact.sass
 ${GEM_LIBDIR}/test/sass/templates/complex.sass
 ${GEM_LIBDIR}/test/sass/templates/compressed.sass
@@ -217,6 +221,9 @@ ${GEM_LIBDIR}/test/sass/templates/nested_import.sass
 ${GEM_LIBDIR}/test/sass/templates/nested_mixin_bork.sass
 ${GEM_LIBDIR}/test/sass/templates/options.sass
 ${GEM_LIBDIR}/test/sass/templates/parent_ref.sass
+${GEM_LIBDIR}/test/sass/templates/same_name_different_ext.sass
+${GEM_LIBDIR}/test/sass/templates/same_name_different_ext.scss
+${GEM_LIBDIR}/test/sass/templates/same_name_different_partiality.scss
 ${GEM_LIBDIR}/test/sass/templates/script.sass
 ${GEM_LIBDIR}/test/sass/templates/scss_import.scss
 ${GEM_LIBDIR}/test/sass/templates/scss_importee.scss
