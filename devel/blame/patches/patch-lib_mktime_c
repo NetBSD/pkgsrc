@@ -1,0 +1,28 @@
+$NetBSD: patch-lib_mktime_c,v 1.1 2012/12/17 01:28:29 dholland Exp $
+
+This code is broken and uncompilable on 32-bit NetBSD. The problem
+is the same as reported here:
+   http://sourceware.org/bugzilla/show_bug.cgi?id=12401
+
+The path of least resistance is just to skip the entire file on
+NetBSD, as there is a perfectly good mktime() in libc.
+
+--- lib/mktime.c~	2006-11-18 10:07:43.000000000 +0000
++++ lib/mktime.c
+@@ -21,6 +21,8 @@
+    mktime.  */
+ /* #define DEBUG 1 */
+ 
++#ifndef __NetBSD__
++
+ #ifdef HAVE_CONFIG_H
+ # include <config.h>
+ #endif
+@@ -657,6 +659,7 @@ main (int argc, char **argv)
+ }
+ 
+ #endif /* DEBUG */
++#endif /* __NetBSD__ */
+ 
+ /*
+ Local Variables:
