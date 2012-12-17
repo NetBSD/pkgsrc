@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/03 12:55:23 asau Exp $
+# $NetBSD: Makefile,v 1.43 2012/12/17 03:37:09 dholland Exp $
 
 DISTNAME=	zsnes151src
 PKGNAME=	zsnes-1.51
@@ -20,7 +20,7 @@ WRKSRC=			${WRKDIR}/zsnes_1_51/src
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 
