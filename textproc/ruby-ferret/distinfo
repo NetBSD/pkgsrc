@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/03/18 02:44:18 taca Exp $
+$NetBSD: distinfo,v 1.6 2012/12/17 13:55:27 taca Exp $
 
-SHA1 (ferret-0.11.8.4.gem) = 722ff60dacc57f2720a227e05c21ccc5c0513f6f
-RMD160 (ferret-0.11.8.4.gem) = 6d9858974b9cdefbe2043ef8fdf7e08d088991ab
-Size (ferret-0.11.8.4.gem) = 628224 bytes
-SHA1 (patch-ext_ferret.c) = 97e5ee20b63f9940a897cb7e98775e39798fd67b
-SHA1 (patch-ext_lang.h) = 1c1b04b8420a9d0e610e725ca9237d9924076c4e
-SHA1 (patch-ext_r__analysis.c) = e7f4df5ec5623fae5e954884fcf4e8c8777ea179
-SHA1 (patch-ext_r__index.c) = b40ab0b956f84ac29d1c67814bb2b95468575db8
-SHA1 (patch-ext_r__qparser.c) = 1dfd71b0e690af23d31f6e8d2d0d77622e85200a
-SHA1 (patch-ext_r__search.c) = 1a1bad97173a8e569a47b8d01b6cd14681d7cc70
+SHA1 (ferret-0.11.8.5.gem) = 6ee34ae8386283936d416dd8944a5cdd320272c0
+RMD160 (ferret-0.11.8.5.gem) = 2b49bc0d92cbcb91c2ec5d6ed79b65cb37549828
+Size (ferret-0.11.8.5.gem) = 627712 bytes
