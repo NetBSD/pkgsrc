@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2012/12/17 00:11:06 khorben Exp $
+# $NetBSD: Makefile,v 1.671 2012/12/17 00:28:52 khorben Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -31,6 +31,7 @@ SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
 SUBDIR+=	compositeproto
 SUBDIR+=	damageproto
+SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
 SUBDIR+=	desklaunch
 SUBDIR+=	deskmenu
