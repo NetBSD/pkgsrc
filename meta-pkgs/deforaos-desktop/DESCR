@@ -1,0 +1,8 @@
+DeforaOS is an experimental Operating System project.
+
+The DeforaOS Project intends to provide an innovative foundation to the
+base system, while maintaining a compatibility layer with modern UNIX
+systems. Most of its components are therefore meant to be portable and
+functional on these systems as well.
+
+This is a meta-package for the DeforaOS Desktop environment.
