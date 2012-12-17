@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/06/02 01:01:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/17 13:11:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/LICENSE.rdoc
@@ -82,6 +82,7 @@ ${GEM_LIBDIR}/lib/net/ssh/transport/session.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/state.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/lenient.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/null.rb
+${GEM_LIBDIR}/lib/net/ssh/verifiers/secure.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/strict.rb
 ${GEM_LIBDIR}/lib/net/ssh/version.rb
 ${GEM_LIBDIR}/net-ssh.gemspec
