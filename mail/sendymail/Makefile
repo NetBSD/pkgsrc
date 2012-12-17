@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/12/17 04:54:40 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/17 12:42:23 obache Exp $
 #
 
 DISTNAME=		sendymail-0.5.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sendymail/}
 
@@ -12,8 +12,7 @@ COMMENT=		Send emails through Yahoo using your favorite email client
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
-DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
-DEPENDS+=		p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
+DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
