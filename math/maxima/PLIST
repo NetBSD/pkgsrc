@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/08/13 15:10:25 asau Exp $
+@comment $NetBSD: PLIST,v 1.26 2012/12/17 21:35:12 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -430,7 +430,6 @@ share/maxima/${PKGVERSION}/share/contrib/Zeilberger/zb_prover.mac
 share/maxima/${PKGVERSION}/share/contrib/Zeilberger/zeilberger.mac
 share/maxima/${PKGVERSION}/share/contrib/Zeilberger/zeilberger_algorithm.mac
 share/maxima/${PKGVERSION}/share/contrib/Zeilberger/zeilberger_linear_algebra.mac
-share/maxima/${PKGVERSION}/share/contrib/aes.mac
 share/maxima/${PKGVERSION}/share/contrib/altsimp/altsimp.lisp
 share/maxima/${PKGVERSION}/share/contrib/augmented_lagrangian.mac
 share/maxima/${PKGVERSION}/share/contrib/bitwise/bitwise.lisp
@@ -587,8 +586,9 @@ share/maxima/${PKGVERSION}/share/contrib/gentran/test/type.mac
 share/maxima/${PKGVERSION}/share/contrib/gentran/test/type.output
 share/maxima/${PKGVERSION}/share/contrib/gentran/vaxinit.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/vaxlsp.lisp
+share/maxima/${PKGVERSION}/share/contrib/gf/aes.mac
+share/maxima/${PKGVERSION}/share/contrib/gf/aes2.mac
 share/maxima/${PKGVERSION}/share/contrib/gf/gf.mac
-share/maxima/${PKGVERSION}/share/contrib/gf/gf_hard_test.mac
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_manual.pdf
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_manual.tex
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_test.mac
@@ -1158,8 +1158,6 @@ share/maxima/${PKGVERSION}/share/misc/declin.dem
 share/maxima/${PKGVERSION}/share/misc/declin.mac
 share/maxima/${PKGVERSION}/share/misc/declin.usg
 share/maxima/${PKGVERSION}/share/misc/diffop.lisp
-share/maxima/${PKGVERSION}/share/misc/disran.lisp
-share/maxima/${PKGVERSION}/share/misc/disran.usg
 share/maxima/${PKGVERSION}/share/misc/dump.lisp
 share/maxima/${PKGVERSION}/share/misc/dump.usg
 share/maxima/${PKGVERSION}/share/misc/foptim.lisp
@@ -1462,7 +1460,6 @@ share/maxima/${PKGVERSION}/src/csimp2.lisp
 share/maxima/${PKGVERSION}/src/db.lisp
 share/maxima/${PKGVERSION}/src/defcal.lisp
 share/maxima/${PKGVERSION}/src/defint.lisp
-share/maxima/${PKGVERSION}/src/defopt.lisp
 share/maxima/${PKGVERSION}/src/desoln.lisp
 share/maxima/${PKGVERSION}/src/displa.lisp
 share/maxima/${PKGVERSION}/src/displm.lisp
@@ -1495,7 +1492,6 @@ share/maxima/${PKGVERSION}/src/intpol.lisp
 share/maxima/${PKGVERSION}/src/invert.lisp
 share/maxima/${PKGVERSION}/src/irinte.lisp
 share/maxima/${PKGVERSION}/src/laplac.lisp
-share/maxima/${PKGVERSION}/src/ldisp.lisp
 share/maxima/${PKGVERSION}/src/lesfac.lisp
 share/maxima/${PKGVERSION}/src/letmac.lisp
 share/maxima/${PKGVERSION}/src/limit.lisp
@@ -1779,6 +1775,7 @@ share/maxima/${PKGVERSION}/tests/rtest_hypgeo.mac
 share/maxima/${PKGVERSION}/tests/rtest_integrate.mac
 share/maxima/${PKGVERSION}/tests/rtest_integrate_special.mac
 share/maxima/${PKGVERSION}/tests/rtest_lambert_w.mac
+share/maxima/${PKGVERSION}/tests/rtest_laplace.mac
 share/maxima/${PKGVERSION}/tests/rtest_log.mac
 share/maxima/${PKGVERSION}/tests/rtest_map.mac
 share/maxima/${PKGVERSION}/tests/rtest_mset.mac
@@ -1786,6 +1783,7 @@ share/maxima/${PKGVERSION}/tests/rtest_numth.mac
 share/maxima/${PKGVERSION}/tests/rtest_plot.mac
 share/maxima/${PKGVERSION}/tests/rtest_power.mac
 share/maxima/${PKGVERSION}/tests/rtest_round.mac
+share/maxima/${PKGVERSION}/tests/rtest_rules.mac
 share/maxima/${PKGVERSION}/tests/rtest_scalarp.mac
 share/maxima/${PKGVERSION}/tests/rtest_sign.mac
 share/maxima/${PKGVERSION}/tests/rtest_signum.mac
@@ -1795,6 +1793,7 @@ share/maxima/${PKGVERSION}/tests/rtest_translator.mac
 share/maxima/${PKGVERSION}/tests/rtest_trig.mac
 share/maxima/${PKGVERSION}/tests/rtest_zeta.mac
 share/maxima/${PKGVERSION}/tests/rtestconjugate.mac
+share/maxima/${PKGVERSION}/tests/rtestdefstruct.mac
 share/maxima/${PKGVERSION}/tests/rtesthyp.mac
 share/maxima/${PKGVERSION}/tests/rtestifactor.mac
 share/maxima/${PKGVERSION}/tests/rtestint.mac
