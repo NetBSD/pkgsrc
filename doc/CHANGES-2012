@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3932 2012/12/17 12:18:22 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3933 2012/12/17 12:21:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6040,3 +6040,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added misc/ruby-sprockets22 version 2.2.2 [taca 2012-12-17]
 	Updated devel/ruby-rspec-expectations to 2.12.1 [taca 2012-12-17]
 	Updated devel/ruby-simple_uuid to 0.3.0 [taca 2012-12-17]
+	Updated graphics/ruby-gnuplot to 2.6.0 [taca 2012-12-17]
