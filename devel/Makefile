@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1671 2012/12/12 13:16:46 wiz Exp $
+# $NetBSD: Makefile,v 1.1672 2012/12/17 00:02:44 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -154,6 +154,7 @@ SUBDIR+=	darts
 SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
+SUBDIR+=	deforaos-libsystem
 SUBDIR+=	dejagnu
 SUBDIR+=	delta
 SUBDIR+=	dev86
