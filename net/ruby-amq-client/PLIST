@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 14:48:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/17 12:43:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -96,6 +96,7 @@ ${GEM_LIBDIR}/lib/amq/client/async/consumer.rb
 ${GEM_LIBDIR}/lib/amq/client/async/entity.rb
 ${GEM_LIBDIR}/lib/amq/client/async/exchange.rb
 ${GEM_LIBDIR}/lib/amq/client/async/extensions/rabbitmq/basic.rb
+${GEM_LIBDIR}/lib/amq/client/async/extensions/rabbitmq/cancel.rb
 ${GEM_LIBDIR}/lib/amq/client/async/extensions/rabbitmq/confirm.rb
 ${GEM_LIBDIR}/lib/amq/client/async/queue.rb
 ${GEM_LIBDIR}/lib/amq/client/callbacks.rb
@@ -106,6 +107,7 @@ ${GEM_LIBDIR}/lib/amq/client/exceptions.rb
 ${GEM_LIBDIR}/lib/amq/client/exchange.rb
 ${GEM_LIBDIR}/lib/amq/client/extensions/rabbitmq.rb
 ${GEM_LIBDIR}/lib/amq/client/extensions/rabbitmq/basic.rb
+${GEM_LIBDIR}/lib/amq/client/extensions/rabbitmq/cancel.rb
 ${GEM_LIBDIR}/lib/amq/client/extensions/rabbitmq/confirm.rb
 ${GEM_LIBDIR}/lib/amq/client/framing/io/frame.rb
 ${GEM_LIBDIR}/lib/amq/client/framing/string/frame.rb
