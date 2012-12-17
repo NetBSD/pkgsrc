@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 14:10:46 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/17 13:54:23 drochner Exp $
 
-DISTNAME=		djvulibre-3.5.24
+DISTNAME=		djvulibre-3.5.25.3
 PKGNAME=		${DISTNAME:S/-/-lib-/}
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
+WRKSRC=			${WRKDIR}/djvulibre-3.5.25
 PKGCONFIG_OVERRIDE+=	libdjvu/ddjvuapi.pc.in
 BUILD_DIRS=		libdjvu
 INSTALL_DIRS=		libdjvu
