@@ -1,4 +1,4 @@
-# $NetBSD: pkg-build-options.mk,v 1.8 2009/03/20 19:25:01 joerg Exp $
+# $NetBSD: pkg-build-options.mk,v 1.9 2012/12/17 14:27:44 wiz Exp $
 #
 # This procedure determines the PKG_OPTIONS that have been in effect
 # when the package ${pkgbase} has been built. When the package is not
@@ -43,7 +43,7 @@ PKG_FAIL_REASON+=	"[pkg-build-options.mk] This file may only be included from a 
 .    if !defined(PKG_BUILD_OPTIONS.${b})
 PKG_BUILD_OPTIONS.${b} != \
 	echo ""; \
-	${PKG_INFO} -Q PKG_OPTIONS ${pkgbase} 2>/dev/null \
+	${PKG_INFO} -Q PKG_OPTIONS ${b} 2>/dev/null \
 	|| { cd ${BUILDLINK_PKGSRCDIR.${b}} \
 	     && ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKG_OPTIONS; }
 
