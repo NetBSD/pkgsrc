@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2012/09/16 07:25:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/12/17 12:37:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/ChangeLog.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/PROFILING.md
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/__init__.py
 ${GEM_LIBDIR}/amq-protocol.gemspec
-${GEM_LIBDIR}/amqp_0.9.1_changes.json
-${GEM_LIBDIR}/codegen.py
-${GEM_LIBDIR}/codegen_helpers.py
+${GEM_LIBDIR}/codegen/__init__.py
+${GEM_LIBDIR}/codegen/amqp_0.9.1_changes.json
+${GEM_LIBDIR}/codegen/codegen.py
+${GEM_LIBDIR}/codegen/codegen_helpers.py
+${GEM_LIBDIR}/codegen/protocol.rb.pytemplate
 ${GEM_LIBDIR}/generate.rb
-${GEM_LIBDIR}/irb.rb
+${GEM_LIBDIR}/lib/amq/bit_set.rb
 ${GEM_LIBDIR}/lib/amq/hacks.rb
+${GEM_LIBDIR}/lib/amq/int_allocator.rb
 ${GEM_LIBDIR}/lib/amq/protocol.rb
 ${GEM_LIBDIR}/lib/amq/protocol/client.rb
 ${GEM_LIBDIR}/lib/amq/protocol/frame.rb
@@ -24,14 +27,16 @@ ${GEM_LIBDIR}/lib/amq/protocol/table_value_decoder.rb
 ${GEM_LIBDIR}/lib/amq/protocol/table_value_encoder.rb
 ${GEM_LIBDIR}/lib/amq/protocol/type_constants.rb
 ${GEM_LIBDIR}/lib/amq/protocol/version.rb
-${GEM_LIBDIR}/post-processing.rb
-${GEM_LIBDIR}/protocol.rb.pytemplate
+${GEM_LIBDIR}/lib/amq/settings.rb
+${GEM_LIBDIR}/spec/amq/bit_set_spec.rb
 ${GEM_LIBDIR}/spec/amq/hacks_spec.rb
+${GEM_LIBDIR}/spec/amq/int_allocator_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/basic_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/blank_body_encoding_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/channel_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/confirm_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/connection_spec.rb
+${GEM_LIBDIR}/spec/amq/protocol/constants_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/exchange_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/frame_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/method_spec.rb
@@ -41,5 +46,6 @@ ${GEM_LIBDIR}/spec/amq/protocol/tx_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/value_decoder_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol/value_encoder_spec.rb
 ${GEM_LIBDIR}/spec/amq/protocol_spec.rb
+${GEM_LIBDIR}/spec/amq/settings_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
