@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3965 2012/12/17 15:53:14 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3966 2012/12/17 15:55:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6080,3 +6080,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-jquery-rails to 2.1.4 [taca 2012-12-17]
 	Removed www/ruby-jquery-rails10 [taca 2012-12-17]
 	Updated www/ruby-sass to 3.2.3 [taca 2012-12-17]
+	Updated www/ruby-unicorn to 4.5.0 [taca 2012-12-17]
