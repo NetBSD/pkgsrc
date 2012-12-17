@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/17 00:47:37 khorben Exp $
+bin/locker
+bin/lockerctl
+include/Desktop/Locker.h
+include/Desktop/Locker/auth.h
+include/Desktop/Locker/demo.h
+include/Desktop/Locker/locker.h
+include/Desktop/Locker/plugin.h
+lib/Locker/auth/password.so
+lib/Locker/auth/slider.so
+lib/Locker/demos/gtk-demo.so
+lib/Locker/demos/logo.so
+lib/Locker/demos/xscreensaver.so
+lib/Locker/demos/xterm.so
+lib/Locker/plugins/openmoko.so
+lib/Locker/plugins/panel.so
+lib/Locker/plugins/suspend.so
+lib/Locker/plugins/systray.so
+man/man1/locker.1
+man/man1/lockerctl.1
+share/applications/locker-settings.desktop
+share/doc/html/Locker/locker.html
+share/doc/html/Locker/lockerctl.html
+share/locale/fr/LC_MESSAGES/Locker.mo
