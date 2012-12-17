@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/28 20:31:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/17 13:02:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/data/effective_tld_names.dat
 ${GEM_LIBDIR}/domain_name.gemspec
 ${GEM_LIBDIR}/lib/domain_name.rb
 ${GEM_LIBDIR}/lib/domain_name/etld_data.rb
 ${GEM_LIBDIR}/lib/domain_name/etld_data.rb.erb
 ${GEM_LIBDIR}/lib/domain_name/punycode.rb
+${GEM_LIBDIR}/lib/domain_name/version.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_domain_name-punycode.rb
 ${GEM_LIBDIR}/test/test_domain_name.rb
