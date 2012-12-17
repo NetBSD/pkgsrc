@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3934 2012/12/17 12:23:36 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3935 2012/12/17 12:29:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6042,3 +6042,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-simple_uuid to 0.3.0 [taca 2012-12-17]
 	Updated graphics/ruby-gnuplot to 2.6.0 [taca 2012-12-17]
 	Updated lang/ruby-coffee-script-source to 1.4.0 [taca 2012-12-17]
+	Updated databases/ruby-cassandra to 0.17.0 [taca 2012-12-17]
