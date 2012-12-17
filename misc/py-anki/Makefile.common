@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2012/10/08 09:57:35 asau Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/12/17 11:56:53 wiz Exp $
 # used by misc/py-libanki/Makefile
 
 DISTNAME=	anki-1.2.11
@@ -8,11 +8,13 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://ankisrs.net/
-COMMENT=	Flashcard learning program
+COMMENT=	Flashcard learning program (v1)
 LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 DISTINFO_FILE=		${.CURDIR}/../../misc/py-anki/distinfo
+
+CONFLICTS+=		${PYPKGPREFIX}-anki2-[0-9]*
 
 .include "../../lang/python/distutils.mk"
