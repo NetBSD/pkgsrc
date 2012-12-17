@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/17 16:55:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/17 12:44:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -60,7 +60,6 @@ ${GEM_LIBDIR}/examples/error_handling/connection_level_exception_with_objects.rb
 ${GEM_LIBDIR}/examples/error_handling/connection_loss_handler.rb
 ${GEM_LIBDIR}/examples/error_handling/global_channel_level_exception_handler.rb
 ${GEM_LIBDIR}/examples/error_handling/handling_authentication_failure_with_a_callback.rb
-${GEM_LIBDIR}/examples/error_handling/reopening_a_channel_after_channel_level_exception.rb
 ${GEM_LIBDIR}/examples/error_handling/handling_authentication_failure_with_a_rescue_block.rb
 ${GEM_LIBDIR}/examples/error_handling/handling_vhost_misconfiguration_with_a_rescue_block.rb
 ${GEM_LIBDIR}/examples/error_handling/hello_world_producer.rb
@@ -68,6 +67,7 @@ ${GEM_LIBDIR}/examples/error_handling/insufficient_permissions.rb
 ${GEM_LIBDIR}/examples/error_handling/manual_connection_and_channel_recovery.rb
 ${GEM_LIBDIR}/examples/error_handling/queue_exclusivity_violation.rb
 ${GEM_LIBDIR}/examples/error_handling/queue_name_violation.rb
+${GEM_LIBDIR}/examples/error_handling/reopening_a_channel_after_channel_level_exception.rb
 ${GEM_LIBDIR}/examples/error_handling/tcp_connection_failure_handling_with_a_rescue_block.rb
 ${GEM_LIBDIR}/examples/error_handling/tcp_connection_failure_with_a_callback.rb
 ${GEM_LIBDIR}/examples/exchanges/autodeletion_of_exchanges.rb
@@ -212,7 +212,6 @@ ${GEM_LIBDIR}/spec/integration/extensions/rabbitmq/publisher_confirmations_spec.
 ${GEM_LIBDIR}/spec/integration/fanout_exchange_routing_spec.rb
 ${GEM_LIBDIR}/spec/integration/headers_exchange_routing_spec.rb
 ${GEM_LIBDIR}/spec/integration/hello_world_spec.rb
-${GEM_LIBDIR}/spec/integration/immediate_messages_spec.rb
 ${GEM_LIBDIR}/spec/integration/mandatory_messages_spec.rb
 ${GEM_LIBDIR}/spec/integration/message_acknowledgement_spec.rb
 ${GEM_LIBDIR}/spec/integration/message_metadata_access_spec.rb
