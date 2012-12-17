@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/12/16 16:44:31 taca Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/17 12:15:40 taca Exp $
 
-DISTNAME=	rspec-expectations-2.12.0
+DISTNAME=	rspec-expectations-2.12.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
