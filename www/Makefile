@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.903 2012/12/13 16:08:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.904 2012/12/17 01:37:55 khorben Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -117,6 +117,7 @@ SUBDIR+=	curl
 SUBDIR+=	cvsweb
 SUBDIR+=	dansguardian
 SUBDIR+=	davical
+SUBDIR+=	deforaos-surfer
 SUBDIR+=	dillo
 SUBDIR+=	dojo
 SUBDIR+=	drivel
