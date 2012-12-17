@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3936 2012/12/17 12:30:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.3937 2012/12/17 12:31:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby-coffee-script-source to 1.4.0 [taca 2012-12-17]
 	Updated databases/ruby-cassandra to 0.17.0 [taca 2012-12-17]
 	Added fonts/evermono-ttf version 6.2.1 [wiz 2012-12-17]
+	Updated devel/ruby-uglifier to 1.3.0 [taca 2012-12-17]
