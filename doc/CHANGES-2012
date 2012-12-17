@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3925 2012/12/17 02:17:08 khorben Exp $
+$NetBSD: CHANGES-2012,v 1.3926 2012/12/17 09:10:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6033,3 +6033,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/deforaos-pdfviewer version 0.0.1 [khorben 2012-12-17]
 	Added todo/deforaos-todo version 0.1.2 [khorben 2012-12-17]
 	Added meta-pkgs/deforaos-desktop version 0.0.1 [khorben 2012-12-17]
+	Updated math/R to 2.15.1 [wen 2012-12-17]
