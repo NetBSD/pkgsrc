@@ -364,6 +364,7 @@ libgcrypt		Use GNU cryptographic library.
 libgme			Enable Game_Music_Emu video game music file library support.
 libgpod			Enable libgpod support.
 libiconv-cp932		Add supplemental support for CP932.
+libidn			Add support for libidn text conversion.
 libind			Add Indian script support using libind.
 liblqr			Enable liblqr (liquid rescale) support.
 libmms			Enable streaming from mms:// URLS using libmms.
