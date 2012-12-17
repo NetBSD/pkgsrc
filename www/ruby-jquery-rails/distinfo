@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/09/16 14:36:20 taca Exp $
+$NetBSD: distinfo,v 1.1 2012/12/17 15:26:12 taca Exp $
 
 SHA1 (jquery-rails-2.1.2.gem) = e0eff33fd9bb0ecc5f9484898a98bdd523f2da0e
 RMD160 (jquery-rails-2.1.2.gem) = bd89726c7d147ed337fc76c39d3b04704ce8c283
