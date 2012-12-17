@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:19:47 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/12/17 01:58:55 dholland Exp $
 #
 
 DISTNAME=	st-1.8
@@ -9,7 +9,8 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://state-threads.sourceforge.net/
 COMMENT=	Non-preemptive thread library for Internet applications
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-vax
+ONLY_FOR_PLATFORM=	NetBSD-*-x86_64 NetBSD-*-i386 \
+			NetBSD-*-sparc NetBSD-*-vax
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=	yes
