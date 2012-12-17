@@ -1,0 +1,29 @@
+$NetBSD: patch-configure,v 1.1 2012/12/17 01:28:29 dholland Exp $
+
+Avoid undefined behavior (causing infinite loop with gcc 4.5) in
+mktime configure test.
+
+--- configure~	2012-12-17 01:03:14.000000000 +0000
++++ configure
+@@ -9434,7 +9434,8 @@ int
+ main ()
+ {
+   time_t t, delta;
+-  int i, j;
++  int i;
++  unsigned j;
+ 
+   /* This test makes some buggy mktime implementations loop.
+      Give up after 60 seconds; a mktime slower than that
+@@ -9462,9 +9463,9 @@ main ()
+ 	return 1;
+ 
+       for (j = 1; 0 < j; j *= 2)
+-	if (! bigtime_test (j))
++	if (! bigtime_test ((int)j))
+ 	  return 1;
+-      if (! bigtime_test (j - 1))
++      if (! bigtime_test ((int)(j - 1)))
+ 	return 1;
+     }
+   return ! (irix_6_4_bug () && spring_forward_gap () && year_2050_test ());
