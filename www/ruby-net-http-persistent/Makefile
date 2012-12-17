@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/06/13 14:44:45 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/17 15:14:42 taca Exp $
 
-DISTNAME=	net-http-persistent-2.7
+DISTNAME=	net-http-persistent-2.8
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
