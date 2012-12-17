@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/17 00:27:52 khorben Exp $
+bin/keyboard
+bin/keyboardctl
+include/Desktop/Keyboard.h
+share/applications/keyboard.desktop
+share/locale/fr/LC_MESSAGES/Keyboard.mo
