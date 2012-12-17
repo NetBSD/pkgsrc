@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/09/16 06:44:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/12/17 12:34:38 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -120,9 +120,11 @@ ${GEM_LIBDIR}/man/bundle-update.ronn
 ${GEM_LIBDIR}/man/bundle.ronn
 ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/index.txt
+${GEM_LIBDIR}/spec/bundler/bundler_spec.rb
 ${GEM_LIBDIR}/spec/bundler/definition_spec.rb
 ${GEM_LIBDIR}/spec/bundler/dsl_spec.rb
 ${GEM_LIBDIR}/spec/bundler/gem_helper_spec.rb
+${GEM_LIBDIR}/spec/bundler/psyched_yaml_spec.rb
 ${GEM_LIBDIR}/spec/bundler/source_spec.rb
 ${GEM_LIBDIR}/spec/cache/gems_spec.rb
 ${GEM_LIBDIR}/spec/cache/git_spec.rb
@@ -183,6 +185,7 @@ ${GEM_LIBDIR}/spec/support/artifice/endpoint_extra_missing.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_fallback.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_marshal_fail.rb
 ${GEM_LIBDIR}/spec/support/artifice/endpoint_redirect.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_timeout.rb
 ${GEM_LIBDIR}/spec/support/builders.rb
 ${GEM_LIBDIR}/spec/support/fakeweb/rack-1.0.0.marshal
 ${GEM_LIBDIR}/spec/support/fakeweb/windows.rb
