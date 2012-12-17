@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3948 2012/12/17 13:55:55 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3949 2012/12/17 13:57:46 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6034,9 +6034,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Added todo/deforaos-todo version 0.1.2 [khorben 2012-12-17]
 	Added meta-pkgs/deforaos-desktop version 0.0.1 [khorben 2012-12-17]
 	Updated math/R to 2.15.1 [wen 2012-12-17]
+	Updated graphics/py-matplotlib to 1.2.0 [drochner 2012-12-17]
 	Updated audio/ruby-taglib to 0.5.2 [taca 2012-12-17]
 	Added misc/py-anki2 version 2.0.3 [wiz 2012-12-17]
 	Updated net/samba35 to 3.5.20 [taca 2012-12-17]
+	Updated multimedia/vlc2 to 2.0.5 [drochner 2012-12-17]
 	Added misc/ruby-sprockets22 version 2.2.2 [taca 2012-12-17]
 	Updated devel/ruby-rspec-expectations to 2.12.1 [taca 2012-12-17]
 	Updated devel/ruby-simple_uuid to 0.3.0 [taca 2012-12-17]
@@ -6050,6 +6052,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-amq-protocol to 1.0.1 [taca 2012-12-17]
 	Updated net/ruby-amq-client to 0.9.10 [taca 2012-12-17]
 	Updated net/ruby-amqp to 0.9.8 [taca 2012-12-17]
+	Updated editors/gummi to 0.6.5 [drochner 2012-12-17]
 	Updated net/ruby-domain_name to 0.5.6 [taca 2012-12-17]
 	Updated security/ruby-net-ssh to 2.6.2 [taca 2012-12-17]
 	Updated converters/txt2html to 2.51 [obache 2012-12-17]
@@ -6058,4 +6061,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/squid27 to 2.7.9nb5 [taca 2012-12-17]
 	Updated textproc/ruby-builder to 3.0.4 [taca 2012-12-17]
 	Updated textproc/ruby-coderay to 1.0.8 [taca 2012-12-17]
+	Updated graphics/djvulibre-lib to 3.5.25.3 [drochner 2012-12-17]
 	Updated textproc/ruby-ferret to 0.11.8.5 [taca 2012-12-17]
