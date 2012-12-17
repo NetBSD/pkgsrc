@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3961 2012/12/17 15:15:09 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3962 2012/12/17 15:27:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6076,3 +6076,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ramaze to 2012.12.08 [taca 2012-12-17]
 	Updated www/ruby-rack-test to 0.6.2 [taca 2012-12-17]
 	Updated www/ruby-net-http-persistent to 2.8 [taca 2012-12-17]
+	Moved www/ruby-jquery-rails20 to www/ruby-jquery-rails [taca 2012-12-17]
