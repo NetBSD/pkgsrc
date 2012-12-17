@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/09/16 11:28:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/12/17 14:29:27 taca Exp $
 bin/kramdown
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -288,6 +288,8 @@ ${GEM_LIBDIR}/test/testcases/block/12_extension/options3.html
 ${GEM_LIBDIR}/test/testcases/block/12_extension/options3.text
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/definition_at_beginning.html
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/definition_at_beginning.text
+${GEM_LIBDIR}/test/testcases/block/13_definition_list/deflist_ial.html
+${GEM_LIBDIR}/test/testcases/block/13_definition_list/deflist_ial.text
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/item_ial.html
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/item_ial.text
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/multiple_terms.html
