@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3942 2012/12/17 13:12:17 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3943 2012/12/17 13:16:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6052,3 +6052,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-amqp to 0.9.8 [taca 2012-12-17]
 	Updated net/ruby-domain_name to 0.5.6 [taca 2012-12-17]
 	Updated security/ruby-net-ssh to 2.6.2 [taca 2012-12-17]
+	Updated converters/txt2html to 2.51 [obache 2012-12-17]
