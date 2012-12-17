@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:42 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/17 16:52:48 taca Exp $
 
-DISTNAME=	rake-0.9.2.2
+DISTNAME=	rake-10.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
@@ -11,8 +11,7 @@ LICENSE=	mit
 CONFLICTS+=	 rake-[0-9]*
 
 USE_TOOLS+=	gzip
-FIX_PERM=	doc/release_notes/rake-0.7.3.rdoc \
-		lib/rake/ruby182_test_unit_fix.rb
+FIX_PERM=	doc/release_notes/rake-0.7.3.rdoc
 
 FILES_SUBST+=	GEM_NAME=${GEM_NAME} RAKE_HACK=${RAKE_HACK} RAKEBIN=${RAKEBIN}
 PLIST_SUBST+=	RAKE_HACK=${RAKE_HACK} RAKEBIN=${RAKEBIN}
