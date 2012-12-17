@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/17 15:26:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/17 15:29:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -13,6 +12,7 @@ ${GEM_LIBDIR}/lib/jquery-rails.rb
 ${GEM_LIBDIR}/lib/jquery/assert_select.rb
 ${GEM_LIBDIR}/lib/jquery/rails.rb
 ${GEM_LIBDIR}/lib/jquery/rails/engine.rb
+${GEM_LIBDIR}/lib/jquery/rails/railtie.rb
 ${GEM_LIBDIR}/lib/jquery/rails/version.rb
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.min.js
