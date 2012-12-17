@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 14:10:46 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/12/17 13:55:48 drochner Exp $
 
-DISTNAME=		djvulibre-3.5.24
+DISTNAME=		djvulibre-3.5.25.3
 PKGNAME=		${DISTNAME:S/-/-tools-/}
-PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -20,6 +19,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash:run pkg-config
 GNU_CONFIGURE=		yes
 
+WRKSRC=			${WRKDIR}/djvulibre-3.5.25
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 BUILD_DIRS=		tools xmltools
 INSTALL_DIRS=		tools xmltools
