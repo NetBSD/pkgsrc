@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/04/14 11:01:29 gls Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/12/17 13:20:39 taca Exp $
 bin/cap
 bin/capify
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -29,6 +29,7 @@ ${GEM_LIBDIR}/lib/capistrano/configuration/callbacks.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/connections.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/execution.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/loading.rb
+${GEM_LIBDIR}/lib/capistrano/configuration/log_formatters.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/namespaces.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/roles.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/servers.rb
@@ -65,9 +66,7 @@ ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/export.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/remote.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/remote_cache.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/unshared_remote_cache.rb
-${GEM_LIBDIR}/lib/capistrano/recipes/deploy/templates/maintenance.rhtml
 ${GEM_LIBDIR}/lib/capistrano/recipes/standard.rb
-${GEM_LIBDIR}/lib/capistrano/recipes/templates/maintenance.rhtml
 ${GEM_LIBDIR}/lib/capistrano/role.rb
 ${GEM_LIBDIR}/lib/capistrano/server_definition.rb
 ${GEM_LIBDIR}/lib/capistrano/shell.rb
@@ -110,6 +109,7 @@ ${GEM_LIBDIR}/test/extensions_test.rb
 ${GEM_LIBDIR}/test/fixtures/cli_integration.rb
 ${GEM_LIBDIR}/test/fixtures/config.rb
 ${GEM_LIBDIR}/test/fixtures/custom.rb
+${GEM_LIBDIR}/test/logger_formatting_test.rb
 ${GEM_LIBDIR}/test/logger_test.rb
 ${GEM_LIBDIR}/test/recipes_test.rb
 ${GEM_LIBDIR}/test/role_test.rb
