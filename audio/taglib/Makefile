@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/12/17 11:10:42 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/12/17 12:39:46 wiz Exp $
 #
 
 DISTNAME=	taglib-1.8
@@ -30,7 +30,7 @@ SUBST_MESSAGE.pc=	Fixing rpath in taglib-config.
 #
 # depends on builtin functions which enabled with i486 and later with GCC.
 #
-.if ${OPSYS} == "NetBSD" && && !empty(CC_VERSION:M[4-9]*) && !empty(MACHINE_ARCH:Mi386)
+.if ${OPSYS} == "NetBSD" && !empty(CC_VERSION:M[4-9]*) && !empty(MACHINE_ARCH:Mi386)
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
