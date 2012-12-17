@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3911 2012/12/17 00:12:21 khorben Exp $
+$NetBSD: CHANGES-2012,v 1.3912 2012/12/17 00:22:05 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/wordpress to 3.5 [morr 2012-12-16]
 	Added devel/deforaos-libsystem version 0.1.5 [khorben 2012-12-17]
 	Added x11/deforaos-libdesktop version 0.0.8 [khorben 2012-12-17]
+	Added sysutils/deforaos-browser version 0.4.9 [khorben 2012-12-17]
