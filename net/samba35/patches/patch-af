@@ -1,8 +1,11 @@
-$NetBSD: patch-af,v 1.4 2011/10/11 20:30:00 jmcneill Exp $
+$NetBSD: patch-af,v 1.5 2012/12/17 12:01:35 taca Exp $
 
---- configure.orig	2011-08-03 18:25:14.000000000 +0000
+Patch to join an Active Directory from
+http://www.ogris.de/samba/unix-active-directory.html.
+
+--- configure.orig	2012-09-21 08:32:29.000000000 +0000
 +++ configure
-@@ -18345,6 +18345,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
+@@ -18255,6 +18255,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -10,7 +13,7 @@ $NetBSD: patch-af,v 1.4 2011/10/11 20:30:00 jmcneill Exp $
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -18381,7 +18382,7 @@ fi
+@@ -18291,7 +18292,7 @@ fi
  $as_echo "$BLDSHARED" >&6; }
  
  saved_before_as_needed_ldflags="$LDFLAGS"
@@ -19,20 +22,20 @@ $NetBSD: patch-af,v 1.4 2011/10/11 20:30:00 jmcneill Exp $
  	saved_ldflags="$LDFLAGS"
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -25355,9 +25356,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -25255,9 +25256,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
 -        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for des_set_key in -lcrypto" >&5
 -$as_echo_n "checking for des_set_key in -lcrypto... " >&6; }
--if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then :
+-if ${ac_cv_lib_ext_crypto_des_set_key+:} false; then :
 +        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVP_des_cbc in -lcrypto" >&5
 +$as_echo_n "checking for EVP_des_cbc in -lcrypto... " >&6; }
 +if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then :
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -25369,31 +25370,31 @@ else
+@@ -25269,31 +25270,31 @@ else
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -72,7 +75,7 @@ $NetBSD: patch-af,v 1.4 2011/10/11 20:30:00 jmcneill Exp $
  _ACEOF
  
  fi
-@@ -34506,31 +34507,39 @@ case "$host_os" in
+@@ -34400,31 +34401,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
@@ -134,7 +137,7 @@ $NetBSD: patch-af,v 1.4 2011/10/11 20:30:00 jmcneill Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -34728,6 +34737,16 @@ $as_echo "#define HAVE_PASSWD_PW_AGE 1" 
+@@ -34622,6 +34631,16 @@ $as_echo "#define HAVE_PASSWD_PW_AGE 1" 
  
  fi
  
