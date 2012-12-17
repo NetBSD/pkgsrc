@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/16 14:36:20 taca Exp $
+# $NetBSD: Makefile,v 1.1 2012/12/17 15:26:12 taca Exp $
 
 DISTNAME=	jquery-rails-2.1.2
 CATEGORIES=	www
