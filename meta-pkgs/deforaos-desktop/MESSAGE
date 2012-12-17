@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/12/17 02:15:16 khorben Exp $
+
+In order to get the DeforaOS Desktop environment running properly, it is
+recommended to start the following executables automatically within the X
+session, and set to run in the background:
+
+- desktop (desktop manager)
+- locker (screensaver)
+- panel
+- phone (optional, for telephony support)
+
+===========================================================================
