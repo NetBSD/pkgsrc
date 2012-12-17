@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/02 01:17:21 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/12/17 15:08:28 taca Exp $
 
-SHA1 (csspool-3.0.1.gem) = 0226038639f994108f032b23a6f178de46f83bd6
-RMD160 (csspool-3.0.1.gem) = 118330c390e8d597dff8cf17f17d082edc48b5d9
-Size (csspool-3.0.1.gem) = 30208 bytes
+SHA1 (csspool-3.0.2.gem) = 0ab1e594df67225cf0e43c1167bc1a50819ff0d9
+RMD160 (csspool-3.0.2.gem) = ce0a027330957bb43053dc85f2409772fcca1b8a
+Size (csspool-3.0.2.gem) = 30720 bytes
