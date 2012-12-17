@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3930 2012/12/17 12:11:07 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3931 2012/12/17 12:16:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6038,3 +6038,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added misc/py-anki2 version 2.0.3 [wiz 2012-12-17]
 	Updated net/samba35 to 3.5.20 [taca 2012-12-17]
 	Added misc/ruby-sprockets22 version 2.2.2 [taca 2012-12-17]
+	Updated devel/ruby-rspec-expectations to 2.12.1 [taca 2012-12-17]
