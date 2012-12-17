@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/03/18 02:44:18 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/17 13:55:27 taca Exp $
 
-DISTNAME=	ferret-0.11.8.4
+DISTNAME=	ferret-0.11.8.5
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ferret.davebalmain.com/
+HOMEPAGE=	https://github.com/jkraemer/ferret/
 COMMENT=	Text search engine library written for Ruby
 LICENSE=	mit
 
