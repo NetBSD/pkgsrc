@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2012/11/16 14:38:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.551 2012/12/17 01:58:04 khorben Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -26,6 +26,7 @@ SUBDIR+=	cnprint
 SUBDIR+=	cups
 SUBDIR+=	cups-drivers-Magicolor5440DL
 SUBDIR+=	cups-pdf
+SUBDIR+=	deforaos-pdfviewer
 SUBDIR+=	diffpdf
 SUBDIR+=	dvidvi
 SUBDIR+=	dviljk
