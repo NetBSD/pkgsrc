@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2012/12/03 22:26:54 wiz Exp $
+# $NetBSD: Makefile,v 1.198 2012/12/17 00:55:31 khorben Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -14,6 +14,7 @@ SUBDIR+=	ccxstream
 SUBDIR+=	cfourcc
 SUBDIR+=	clutter-gst
 SUBDIR+=	clutter08-gst
+SUBDIR+=	deforaos-player
 SUBDIR+=	dirac
 SUBDIR+=	divxplayer
 SUBDIR+=	dumpmpeg
