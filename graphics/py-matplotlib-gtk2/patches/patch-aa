@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.8 2012/04/17 17:17:28 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2012/12/17 11:52:42 drochner Exp $
 
---- setupext.py.orig	2011-10-06 14:50:23.000000000 +0000
+--- setupext.py.orig	2012-11-06 22:31:09.000000000 +0000
 +++ setupext.py
-@@ -124,13 +124,13 @@ options = {'display_status': True,
-            'verbose': False,
+@@ -108,13 +108,13 @@ options = {'display_status': True,
             'provide_pytz': 'auto',
             'provide_dateutil': 'auto',
+            'provide_six': 'auto',
 -           'build_agg': True,
 +           'build_agg': False,
             'build_gtk': 'auto',
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.8 2012/04/17 17:17:28 drochner Exp $
             'backend': None,
             'basedirlist': None}
  
-@@ -221,12 +221,7 @@ sysconfig.customize_compiler = my_custom
+@@ -218,12 +218,7 @@ sysconfig.customize_compiler = my_custom
  
  
  def run_child_process(cmd):
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.8 2012/04/17 17:17:28 drochner Exp $
  
  class CleanUpFile:
      """CleanUpFile deletes the specified filename when self is destroyed."""
-@@ -364,11 +359,8 @@ def check_for_libpng():
+@@ -379,11 +374,8 @@ def check_for_libpng():
      return True
  
  def add_base_flags(module):
