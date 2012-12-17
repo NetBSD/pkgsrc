@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.44 2012/01/26 06:34:19 sbd Exp $
+# $NetBSD: Makefile.kde3,v 1.45 2012/12/17 18:37:06 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -10,7 +10,7 @@ MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=3.5.10/src/kde-i18n/}
 MASTER_SITES?=	${MASTER_SITE_KDE:=3.5.10/src/}
 EXTRACT_SUFX?=	.tar.bz2
 
-MAINTAINER?=	markd@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/
 
 USE_TOOLS+=		gmake imake perl
