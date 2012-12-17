@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.422 2012/11/05 15:07:15 reed Exp $
+# $NetBSD: Makefile,v 1.423 2012/12/17 01:00:40 khorben Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -59,6 +59,7 @@ SUBDIR+=	cyrus-imapd23
 SUBDIR+=	cyrus-imapd24
 SUBDIR+=	dbmail
 SUBDIR+=	dcc
+SUBDIR+=	deforaos-mailer
 SUBDIR+=	deliver
 SUBDIR+=	demime
 SUBDIR+=	distribute
