@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3920 2012/12/17 01:18:30 khorben Exp $
+$NetBSD: CHANGES-2012,v 1.3921 2012/12/17 01:30:16 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added mail/deforaos-mailer version 0.1.5 [khorben 2012-12-17]
 	Added devel/sofia-sip version 1.12.11 [khorben 2012-12-17]
 	Added comms/deforaos-phone version 0.3.11 [khorben 2012-12-17]
+	Added editors/deforaos-editor version 0.2.1 [khorben 2012-12-17]
