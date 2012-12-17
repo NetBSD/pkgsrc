@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile,v 1.1 2012/12/17 11:55:46 wiz Exp $
+
+Do not hardcode '/local'.
+
+--- Makefile.orig	2012-10-27 16:06:15.000000000 +0000
++++ Makefile
+@@ -11,22 +11,19 @@ install:
+ 	mkdir -p ${DESTDIR}${PREFIX}/share/anki
+ 	cp -av * ${DESTDIR}${PREFIX}/share/anki/
+ 	cd ${DESTDIR}${PREFIX}/share/anki && (\
+-	mv anki ${DESTDIR}${PREFIX}/local/bin/;\
++	mv anki ${DESTDIR}${PREFIX}/bin/;\
+ 	mv anki.xpm anki.png ${DESTDIR}${PREFIX}/share/pixmaps/;\
+ 	mv anki.desktop ${DESTDIR}${PREFIX}/share/applications;\
+ 	mv anki.1 ${DESTDIR}${PREFIX}/share/man/man1/)
+-	xdg-mime install anki.xml
+-	xdg-mime default anki.desktop application/x-anki
+-	xdg-mime default anki.desktop application/x-apkg
+ 	@echo
+ 	@echo "Install complete."
+ 
+ uninstall:
+ 	rm -rf ${DESTDIR}${PREFIX}/share/anki
+-	rm -rf ${DESTDIR}${PREFIX}/local/bin/anki
++	rm -rf ${DESTDIR}${PREFIX}/bin/anki
+ 	rm -rf ${DESTDIR}${PREFIX}/share/pixmaps/anki.{xpm,png}
+ 	rm -rf ${DESTDIR}${PREFIX}/share/applications/anki.desktop
+ 	rm -rf ${DESTDIR}${PREFIX}/share/man/man1/anki.1
+ 	-xdg-mime uninstall ${DESTDIR}${PREFIX}/share/mime/packages/anki.xml
+ 	@echo
+ 	@echo "Uninstall complete."
