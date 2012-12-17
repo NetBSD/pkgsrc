@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/12/04 04:25:37 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/17 13:39:59 taca Exp $
 
-DISTNAME=	builder-3.0.0
+DISTNAME=	builder-3.0.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
