@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/12/17 01:56:50 khorben Exp $
+
+SHA1 (PDFViewer-0.0.1.tar.gz) = 374cc25ede7cfd827a5e2397d7b0586488d09143
+RMD160 (PDFViewer-0.0.1.tar.gz) = ca08f735b32e114bf345d6d9db0de37c7147d48e
+Size (PDFViewer-0.0.1.tar.gz) = 20405 bytes
