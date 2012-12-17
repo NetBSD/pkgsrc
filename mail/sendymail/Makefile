@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:31 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/17 04:54:40 obache Exp $
 #
 
 DISTNAME=		sendymail-0.5.8
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sendymail/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sendymail.sourceforge.net/
 COMMENT=		Send emails through Yahoo using your favorite email client
+LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
