@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11772 2012/12/17 13:16:03 obache Exp $
+$NetBSD: TODO,v 1.11773 2012/12/18 13:39:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -563,6 +563,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fbreader-0.99.4
 	o fcitx-3.6.2
 	o felt-3.07
+	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -999,6 +1000,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.10.0
 	o py-carddav-0.4
+	o py-docutils-0.10
 	o py-feedparser-5.1.3
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
@@ -1113,6 +1115,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o supertuxkart-0.8
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
+	o sylpheed-3.3.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
@@ -1185,6 +1188,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
+	o vym-2.2.4 [pkg/47350]
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
