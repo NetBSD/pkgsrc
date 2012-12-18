@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.41.2.1 2012/12/15 17:13:51 tron Exp $
+$NetBSD: distinfo,v 1.41.2.2 2012/12/18 17:51:02 tron Exp $
 
-SHA1 (opera-12.11-1661.amd64.freebsd.tar.xz) = c8c439555d3d77efc67e378389309df5c289ce26
-RMD160 (opera-12.11-1661.amd64.freebsd.tar.xz) = 8eabcddd79164dfada3c84a9640764e696c0c86a
-Size (opera-12.11-1661.amd64.freebsd.tar.xz) = 13436532 bytes
-SHA1 (opera-12.11-1661.i386.freebsd.tar.xz) = a3bc995c2c36405c10ac030fee800d861bc63afa
-RMD160 (opera-12.11-1661.i386.freebsd.tar.xz) = 5fda5227b055d1babb127fc7563d01016b96c16c
-Size (opera-12.11-1661.i386.freebsd.tar.xz) = 13472248 bytes
-SHA1 (opera-12.11-1661.i386.linux.tar.xz) = f0dfaee6b3da4a8519c7e836535c0fd064af463a
-RMD160 (opera-12.11-1661.i386.linux.tar.xz) = 642f6a8e02c8100a4078b1dde344dbd675669606
-Size (opera-12.11-1661.i386.linux.tar.xz) = 13552952 bytes
-SHA1 (opera-12.11-1661.x86_64.linux.tar.xz) = 863173cc1957df0053d5a29cae71d48089a9a225
-RMD160 (opera-12.11-1661.x86_64.linux.tar.xz) = 8854084fb5a002dcef1c4b32b9d16e4204975d99
-Size (opera-12.11-1661.x86_64.linux.tar.xz) = 13634672 bytes
+SHA1 (opera-12.12-1707.amd64.freebsd.tar.xz) = 37f2e4f9276f9d458b10d3e0d76c4d179d6a62e9
+RMD160 (opera-12.12-1707.amd64.freebsd.tar.xz) = 54d2ccb0debe17eb73818e09a365aa4d4a544b8f
+Size (opera-12.12-1707.amd64.freebsd.tar.xz) = 13441188 bytes
+SHA1 (opera-12.12-1707.i386.freebsd.tar.xz) = ce1e7fcbfccbe49f8df1b887b5d70d16e36320e1
+RMD160 (opera-12.12-1707.i386.freebsd.tar.xz) = ab16814c2e87863e241567a28d775384adb90354
+Size (opera-12.12-1707.i386.freebsd.tar.xz) = 13517344 bytes
+SHA1 (opera-12.12-1707.i386.linux.tar.xz) = 13744435f0be1623bf46e61e8d8eae10e8eedb54
+RMD160 (opera-12.12-1707.i386.linux.tar.xz) = bf087c25c83f8a132ebcba94284532952cc7c07c
+Size (opera-12.12-1707.i386.linux.tar.xz) = 13522976 bytes
+SHA1 (opera-12.12-1707.x86_64.linux.tar.xz) = 5d51230f41bcc0865ca7f41d6368dd1e289140c2
+RMD160 (opera-12.12-1707.x86_64.linux.tar.xz) = 8d6fbfa9b66bf84f4f15f1509114a9dc62ed2d8d
+Size (opera-12.12-1707.x86_64.linux.tar.xz) = 13642760 bytes
