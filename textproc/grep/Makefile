@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/12/06 11:43:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2012/12/18 12:08:25 tron Exp $
 
 DISTNAME=	grep-2.14
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/grep/grep.html
 COMMENT=	GNU grep
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3 # or later
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo msgfmt
