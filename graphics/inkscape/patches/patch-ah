@@ -1,13 +1,31 @@
-$NetBSD: patch-ah,v 1.5 2011/02/05 07:57:15 adam Exp $
+$NetBSD: patch-ah,v 1.6 2012/12/18 14:01:06 drochner Exp $
 
---- packaging/macosx/Resources/bin/inkscape.orig	2009-11-16 18:29:06.000000000 +0100
+--- packaging/macosx/Resources/bin/inkscape.orig	2012-12-13 17:00:46.000000000 +0000
 +++ packaging/macosx/Resources/bin/inkscape
-@@ -113,7 +113,7 @@ fi
+@@ -114,7 +114,7 @@ fi
  # If the AppleCollationOrder preference doesn't exist, we fall back to using
  # the AppleLocale preference.
  LANGSTR=`defaults read .GlobalPreferences AppleCollationOrder 2>/dev/null`
--if [ "x$LANGSTR" == "x" ]
-+if [ "x$LANGSTR" = "x" ]
+-if [ "x$LANGSTR" == "x" -o "x$LANGSTR" == "xroot" ]
++if [ "x$LANGSTR" = "x" -o "x$LANGSTR" = "xroot" ]
  then
      echo "Warning: AppleCollationOrder setting not found, using AppleLocale." 1>&2
      LANGSTR=`defaults read .GlobalPreferences AppleLocale 2>/dev/null | \
+@@ -126,7 +126,7 @@ fi
+ 
+ # NOTE: Have to add ".UTF-8" to the LANG since omitting causes Inkscape
+ #       to crash on startup in locale_from_utf8().
+-if [ "x$LANGSTR" == "x" ]
++if [ "x$LANGSTR" = "x" ]
+ then 
+ 	# override broken script
+ 	echo "Overriding empty LANGSTR" 1>&2
+@@ -134,7 +134,7 @@ then 
+ else
+ 	tmpLANG="`grep \"\`echo $LANGSTR\`_\" /usr/share/locale/locale.alias | \
+ 		tail -n1 | sed 's/\./ /' | awk '{print $2}'`"
+-	if [ "x$tmpLANG" == "x" ]
++	if [ "x$tmpLANG" = "x" ]
+ 	then
+ 		# override broken script
+ 		echo "Overriding empty LANG from /usr/share/locale/locale.alias" 1>&2

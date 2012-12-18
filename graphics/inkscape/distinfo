@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.43 2012/11/18 15:40:55 adam Exp $
+$NetBSD: distinfo,v 1.44 2012/12/18 14:01:06 drochner Exp $
 
-SHA1 (inkscape-0.48.3.1.tar.bz2) = 23344555a1b5cc7909ad01d926cfaddb67bfbde9
-RMD160 (inkscape-0.48.3.1.tar.bz2) = 139720f01b987001b558226ec2de60b36fb1123c
-Size (inkscape-0.48.3.1.tar.bz2) = 19688778 bytes
+SHA1 (inkscape-0.48.4.tar.bz2) = 5f26f6ad191d1e7c2a9fb69a438722beb172224c
+RMD160 (inkscape-0.48.4.tar.bz2) = b089ced7694a9803fac8588d93e7e6239c71d3e8
+Size (inkscape-0.48.4.tar.bz2) = 19712522 bytes
 SHA1 (patch-aa) = d946236902fc6cf0d2ddcbb9dd667b4d9c6f99d4
 SHA1 (patch-ab) = b70ffa613c054c26185d4728da4133aed6d88e63
 SHA1 (patch-ac) = 01caeac029e0ce7e4c4e2b6a9a80b76d9f9b495e
@@ -10,15 +10,11 @@ SHA1 (patch-ad) = 3136850b7d34370feb951fc8fdde8cda78d54d60
 SHA1 (patch-ae) = 2b3f06a545d3cf27f59d41619528c59ac142c758
 SHA1 (patch-af) = 5f9317fcb7a798afc569aada9683fb1c7f6ba4c7
 SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
-SHA1 (patch-ah) = ac8c6b1783b4982c3c65cb2bc5c0445a3af6fb44
+SHA1 (patch-ah) = 6da5e0651b583f925debed97faaf6800f88463da
 SHA1 (patch-ai) = 1cd8e744848d6b52ffb4f07922e09689b5e43f61
 SHA1 (patch-aj) = 8564ee2d4e884dc31e4ad4232267f6fad09f71ee
-SHA1 (patch-ak) = ec222b8d964b9b297d5284eef771411dd100f04e
-SHA1 (patch-al) = 1ab7727a232001e9962dd34f125b220cb0ea889c
-SHA1 (patch-am) = 2307f1ab4bb628d9babaeadb5783073f62eedaca
 SHA1 (patch-ap) = cd29bd178dc2c6c9456bc09d6663d6a25acc7da1
 SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
-SHA1 (patch-ar) = 424a0b143564e693ccafc1d4c29071f1061a29e6
 SHA1 (patch-src_2geom_basic-intersection.cpp) = 743b13293191a74d4c0c22231e5ed7866219dfee
 SHA1 (patch-src_2geom_solve-bezier-parametric.cpp) = 71cca994451b1e7d5aba625600089d1e4a47888e
 SHA1 (patch-src_color-profile.cpp) = 14932b25ed333925518d5140b3691a29e155cd9a
