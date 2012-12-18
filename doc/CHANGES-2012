@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3978 2012/12/18 15:37:56 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3979 2012/12/18 23:33:23 morr Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6098,3 +6098,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_libxml2 to 12.1nb4 [obache 2012-12-18]
 	Updated www/opera to 12.12 [obache 2012-12-18]
 	Updated mail/sylpheed to 3.3.0 [taca 2012-12-18]
+	Updated editors/vim-xaw to 7.3.712nb1 [morr 2012-12-18]
