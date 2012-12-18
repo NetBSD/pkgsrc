@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3976 2012/12/18 11:26:11 obache Exp $
+$NetBSD: CHANGES-2012,v 1.3977 2012/12/18 11:56:40 obache Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6096,3 +6096,4 @@ Changes to the packages collection and infrastructure in 2012:
 	mk/bsd.pkg.mk: freeze started for pkgsrc-2012Q4 branch [agc 2012-12-17]
 	Updated sysutils/cdrtools to 3.01alpha10 [wiz 2012-12-18]
 	Updated emulators/suse121_libxml2 to 12.1nb4 [obache 2012-12-18]
+	Updated www/opera to 12.12 [obache 2012-12-18]
