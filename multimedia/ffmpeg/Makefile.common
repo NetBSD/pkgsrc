@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2012/12/16 13:43:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2012/12/18 10:48:09 jperkin Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
@@ -31,7 +31,6 @@ CONFIGURE_ARGS+=	--enable-gpl
 CONFIGURE_ARGS+=	--disable-amd3dnow
 CONFIGURE_ARGS+=	--disable-amd3dnowext
 CONFIGURE_ARGS+=	--disable-mmx
-CONFIGURE_ARGS+=	--disable-mmx2
 CONFIGURE_ARGS+=	--disable-sse
 CONFIGURE_ARGS+=	--disable-ssse3
 .else
