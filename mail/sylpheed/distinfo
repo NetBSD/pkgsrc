@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.76 2012/06/29 14:56:16 taca Exp $
+$NetBSD: distinfo,v 1.77 2012/12/18 15:37:19 taca Exp $
 
-SHA1 (sylpheed-3.2.0.tar.bz2) = 0aafa1a96a3b18a900866e5d13200cc626f4fbf2
-RMD160 (sylpheed-3.2.0.tar.bz2) = b69e3c8ac414e39d955043742bd926ef4e0fc640
-Size (sylpheed-3.2.0.tar.bz2) = 3288292 bytes
+SHA1 (sylpheed-3.3.0.tar.bz2) = 07b7dd7f0b58065b6f8db7a3b443240aade7da6a
+RMD160 (sylpheed-3.3.0.tar.bz2) = bbdedf7e98848b4a24321e64ad8a21c311828e33
+Size (sylpheed-3.3.0.tar.bz2) = 3294536 bytes
 SHA1 (patch-aa) = 70ba020c9d51711cc5efb3647ae82874e0c16da7
