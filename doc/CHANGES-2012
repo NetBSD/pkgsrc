@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3974 2012/12/18 00:04:34 agc Exp $
+$NetBSD: CHANGES-2012,v 1.3975 2012/12/18 07:58:16 wiz Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6094,3 +6094,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/maxima to 5.29.1 [asau 2012-12-17]
 	Updated lang/abcl to 1.1.0 [asau 2012-12-17]
 	mk/bsd.pkg.mk: freeze started for pkgsrc-2012Q4 branch [agc 2012-12-17]
+	Updated sysutils/cdrtools to 3.01alpha10 [wiz 2012-12-18]
