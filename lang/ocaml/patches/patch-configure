@@ -1,9 +1,10 @@
-$NetBSD: patch-configure,v 1.2 2012/10/26 08:18:15 jaapb Exp $
+$NetBSD: patch-configure,v 1.3 2012/12/18 12:02:10 jperkin Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
+
 --- configure.orig	2012-06-26 15:33:50.000000000 +0000
-+++ configure
-@@ -537,7 +537,7 @@ if test $withsharedlibs = "yes"; then
++++ configure	2012-12-18 11:46:04.156290592 +0000
+@@ -537,7 +537,7 @@
        mksharedlib="$flexlink"
        mkmaindll="$flexlink -maindll"
        shared_libraries_supported=true;;
@@ -12,7 +13,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -633,7 +633,7 @@ if test $withsharedlibs = "yes"; then
+@@ -633,7 +633,7 @@
      x86_64-*-linux*)              natdynlink=true;;
      i[3456]86-*-darwin[89].*)     natdynlink=true;;
      i[3456]86-*-darwin*)
@@ -21,7 +22,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
          natdynlink=true
        fi;;
      x86_64-*-darwin*)             natdynlink=true;;
-@@ -647,6 +647,8 @@ if test $withsharedlibs = "yes"; then
+@@ -647,6 +647,8 @@
      x86_64-*-openbsd*)            natdynlink=true;;
      i[345]86-*-netbsd*)           natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -30,7 +31,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      i386-*-gnu0.3)                natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
    esac
-@@ -672,6 +674,7 @@ case "$host" in
+@@ -672,6 +674,7 @@
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -38,7 +39,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -680,6 +683,7 @@ case "$host" in
+@@ -680,6 +683,7 @@
                                  fi;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -46,7 +47,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -691,6 +695,7 @@ case "$host" in
+@@ -691,6 +695,7 @@
    powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
    powerpc-*-darwin*)            arch=power; system=rhapsody
                                  if $arch64; then model=ppc64; else model=ppc; fi;;
@@ -54,15 +55,16 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    arm*-*-linux-gnueabihf)       arch=arm; system=linux_eabihf;;
    armv7*-*-linux-gnueabi)       arch=arm; model=armv7; system=linux_eabi;;
    armv6t2*-*-linux-gnueabi)     arch=arm; model=armv6t2; system=linux_eabi;;
-@@ -702,6 +707,7 @@ case "$host" in
+@@ -702,6 +707,8 @@
    x86_64-*-gnu*)                arch=amd64; system=gnu;;
    x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
    x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
 +  x86_64-*-dragonfly*)          arch=amd64; system=dragonfly;;
++  x86_64-*-solaris*)            arch=amd64; system=solaris;;
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
  esac
-@@ -736,7 +742,7 @@ case "$arch,$nativecc,$system,$host_type
+@@ -736,7 +743,7 @@
                         if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    *,gcc*,cygwin,*)     nativecccompopts="$gcc_warnings -U_WIN32";;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -71,7 +73,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    *,gcc*,*,*)          nativecccompopts="$gcc_warnings";;
  esac
  
-@@ -752,7 +758,7 @@ case "$arch,$model,$system" in
+@@ -752,7 +759,7 @@
    arm,*,*)          as='as';
                      aspp='gcc -c';;
    i386,*,solaris)   as='as'
@@ -80,7 +82,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    i386,*,*)         as='as'
                      aspp='gcc -c';;
    power,*,elf)      as='as -u -m ppc'
-@@ -786,6 +792,8 @@ case "$arch,$model,$system" in
+@@ -786,6 +793,8 @@
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
    arm,*,linux*) profiling='prof';;
@@ -89,7 +91,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
    *) profiling='noprof';;
  esac
  
-@@ -1244,6 +1252,8 @@ fi
+@@ -1244,6 +1253,8 @@
  x11_include="not found"
  x11_link="not found"
  
@@ -98,7 +100,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1290,6 +1300,7 @@ if test "$x11_include" = "not found"; th
+@@ -1290,6 +1301,7 @@
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -106,7 +108,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1347,6 +1358,7 @@ if test "$x11_include" = "not found"; th
+@@ -1347,6 +1359,7 @@
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -114,7 +116,7 @@ Several configure changes to work on and detect NetBSD (and some other OSes)
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1368,18 +1380,16 @@ if test "$x11_include" = "not found"; th
+@@ -1368,18 +1381,16 @@
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
