@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1 2012/11/10 17:10:10 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2012/12/18 11:25:34 jperkin Exp $
 
 SHA1 (motif-2.3.4-src.tgz) = 49ecfe2a0939232ca78ce318d938044e7f751b6d
 RMD160 (motif-2.3.4-src.tgz) = 96e1ed3c5b99d420e3e2e4eae1b5590961191a33
 Size (motif-2.3.4-src.tgz) = 9527040 bytes
 SHA1 (patch-Makefile.am) = 3185b240e3d6a60d3c04fa90fafe1af020de6a15
 SHA1 (patch-clients_uil_UilDB.c) = 781b52e915e667eeb02359a51cfeefdb9556c4dd
+SHA1 (patch-clients_uil_UilDefI.h) = 6447a306809e65b4993d79e14a989a01aed2e0bc
 SHA1 (patch-clients_uil_UilDiags.c) = 39ac8307219b435baf3d1bf829809fcb6536b1a9
 SHA1 (patch-doc_man_man3_Makefile.am) = b396f5e1235834f507a415c62b0efaa939943f1d
 SHA1 (patch-doc_man_man4_Makefile.am) = 154071494cf54a65e2e266861c81771a14156cae
