@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2012/07/04 09:27:37 adam Exp $
+$NetBSD: distinfo,v 1.23 2012/12/18 14:42:29 jperkin Exp $
 
 SHA1 (sox-14.4.0.tar.gz) = d809cab382c7a9d015491c69051a9d1c1a1a44f1
 RMD160 (sox-14.4.0.tar.gz) = af1b6c02d29c988f9b0dfec9ca9ebb30949b0663
 Size (sox-14.4.0.tar.gz) = 1105756 bytes
 SHA1 (patch-aa) = e6f3d06450862795648622a017b2c696328872f5
-SHA1 (patch-ak) = 806771b7f7f3e46c28036f9414f8e27b893813c2
+SHA1 (patch-ak) = 1691ec39f3c96327f919388cd87b02fb6a99900b
