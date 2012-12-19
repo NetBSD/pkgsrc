@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2012/12/16 01:36:44 obache Exp $
+$NetBSD: distinfo,v 1.23 2012/12/19 10:46:55 obache Exp $
 
 SHA1 (cyrus-sasl-2.1.26.tar.gz) = d6669fb91434192529bd13ee95737a8a5040241c
 RMD160 (cyrus-sasl-2.1.26.tar.gz) = 861a06d663cf3da37a198d0f971d99b249b5f4b8
 Size (cyrus-sasl-2.1.26.tar.gz) = 5220231 bytes
 SHA1 (patch-saslauthd_Makefile.in) = b7962486aef16ec1e5b27a05a3405d79540f8e20
-SHA1 (patch-saslauthd_auth__rimap.c) = fcc8a64e3c64bfceac17bb9dc6829da784f03a4f
+SHA1 (patch-saslauthd_auth__rimap.c) = 6bc9fc13b0dfe14eb524e5fffe910fab74073be9
 SHA1 (patch-saslauthd_md5global.h) = fc200c6aee12bf58877c7a755c121441ebaa1bde
 SHA1 (patch-saslauthd_saslcache.c) = 725db77c5d56f58331255957a65d385267ddcaed
