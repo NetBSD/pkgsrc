@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/09/12 11:09:32 drochner Exp $
+$NetBSD: distinfo,v 1.23 2012/12/19 12:29:44 is Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -8,6 +8,7 @@ RMD160 (xen-4.1.3.tar.gz) = a6296a16579fd628a1ff2aa64b6b800e4913eeae
 Size (xen-4.1.3.tar.gz) = 10382132 bytes
 SHA1 (patch-CVE-2012-3515) = ab861e94a23e87f6e2f1338c9b7b2c61818a6943
 SHA1 (patch-CVE-2012-4411) = 4ede574c9d97a0553631ac94b48f2d7a5cb68628
+SHA1 (patch-XSA25) = bdadcc2dfeef2a6afe000324fc08d5d3214c4f3b
 SHA1 (patch-aa) = 9b53ba4a809dad7a1de34c8fa0dbe493d7256ada
 SHA1 (patch-ab) = 0906a5ec3a7450fc987b01289e2560e60966d00d
 SHA1 (patch-ac) = c3cc5335a1d6b066307c5f03fe72f513a9eb2bdb
