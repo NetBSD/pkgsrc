@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/10/31 11:17:43 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/12/19 02:47:43 wen Exp $
 
-DISTNAME=	CPAN-Reporter-1.2006
+DISTNAME=	CPAN-Reporter-1.2009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 
@@ -34,7 +33,6 @@ DEPENDS+=	p5-IO-CaptureOutput>=1.03:../../devel/p5-IO-CaptureOutput
 DEPENDS+=	p5-Parse-CPAN-Meta-[0-9]*:../../devel/p5-Parse-CPAN-Meta
 DEPENDS+=	p5-Probe-Perl-[0-9]*:../../devel/p5-Probe-Perl
 DEPENDS+=	p5-IPC-Cmd>=0.76:../../devel/p5-IPC-Cmd
-DEPENDS+=	p5-Tee>=0.13:../../devel/p5-Tee
 DEPENDS+=	p5-Test-Reporter>=1.54:../../devel/p5-Test-Reporter
 
 .if !empty(PKG_OPTIONS:Mproc-processtable)
