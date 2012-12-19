@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/11/23 11:00:55 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2012/12/19 11:25:31 ryoon Exp $
 
 SHA1 (mypaint-1.0.0.tar.bz2) = 5f9221304bb8becd642b00d94af947edf1e18844
 RMD160 (mypaint-1.0.0.tar.bz2) = 6d3ff0f5c16e18b006f6449e9591067bd29ed3c5
 Size (mypaint-1.0.0.tar.bz2) = 36748957 bytes
-SHA1 (patch-SConstruct) = d524789a7053976d06d3d4389869b82c456522bf
+SHA1 (patch-SConstruct) = 374416991833fd3cb4f99f66cefee96e45e45161
+SHA1 (patch-lib_colorchanger__crossed__bowl.hpp) = b64b8695fe8b787df94ddc588a714b991954084b
