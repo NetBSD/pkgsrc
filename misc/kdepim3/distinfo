@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2012/05/04 16:27:59 joerg Exp $
+$NetBSD: distinfo,v 1.65 2012/12/19 17:21:48 jperkin Exp $
 
 SHA1 (kdepim-3.5.10.tar.bz2) = 537da60fe3564ecc0ed2802e744fbf96386909a9
 RMD160 (kdepim-3.5.10.tar.bz2) = 52a834dc8eb377d397404a16a09c8a59b568b305
@@ -20,6 +20,7 @@ SHA1 (patch-kmail_editorwatcher.cpp) = e66a40ea73810c59d23f52f6953c09b85d4e1deb
 SHA1 (patch-kmail_imapaccountbase.h) = 362d8445597c869b9ee8366a4b9a698773579512
 SHA1 (patch-kmail_kmsystemtray.cpp) = 1d658e1e1ee3d17d0f38955e5399505d61fdb402
 SHA1 (patch-kmail_networkaccount.h) = bac18ee4994dff91f86b3a29b57cd35c21f96cca
+SHA1 (patch-kmail_quotajobs.h) = aade34199b86cf17c7968a9dd33c0e1a3693f5b4
 SHA1 (patch-korganizer_korgac_alarmdialog.cpp) = 5b85966c115fad9bbc3068d4eb5e5b0723188cab
 SHA1 (patch-kpilot_lib_pluginfactory.h) = 3496e8b57e50a4781afd542f829b19ae911e5b93
 SHA1 (patch-libkcal_listbase.h) = c012336ca7de42c2f135b5d866ba05b543be4576
