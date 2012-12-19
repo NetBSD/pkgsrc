@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2012/12/16 13:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2012/12/19 11:59:35 jperkin Exp $
 
 PKGNAME=	ffmpeg-20121209.${DISTVERSION}
 
@@ -17,12 +17,10 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-i386)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
+ || !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 CONFIGURE_ARGS+=	--disable-asm
 .endif
-
-# "error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'"
-CFLAGS.SunOS+=	-DBROKEN_RELOCATIONS=1
 
 TEST_TARGET=	check
 
