@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2012/11/18 01:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.72 2012/12/19 14:26:37 jperkin Exp $
 
 DISTNAME=	gnuplot-4.6.1
 PKGREVISION=	1
@@ -42,6 +42,8 @@ CONFIGURE_ARGS+=	--with-readline=bsd
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .include "../../devel/readline/buildlink3.mk"
 .endif
+
+LDFLAGS.SunOS+=		-liconv
 
 # Make this available to patch-ah so the font path can include pkgsrc fonts.
 SUBST_CLASSES+=		fontpath
