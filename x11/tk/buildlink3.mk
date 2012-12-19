@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2012/08/21 21:32:34 marino Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2012/12/19 14:58:45 wiz Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -25,9 +25,15 @@ FIND_PREFIX:=		TOOLS_PREFIX.wish=tk
 .include "../../mk/find-prefix.mk"
 WISH=			${TOOLS_PREFIX.wish}/bin/wish
 
+pkgbase := tk
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.tk:Mxft2)
+. include "../../x11/libXft/buildlink3.mk"
+.endif
+
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif # TK_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-tk
