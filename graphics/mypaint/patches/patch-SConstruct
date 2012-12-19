@@ -1,8 +1,27 @@
-$NetBSD: patch-SConstruct,v 1.1 2011/05/04 11:16:23 ryoon Exp $
+$NetBSD: patch-SConstruct,v 1.2 2012/12/19 11:25:31 ryoon Exp $
 
---- SConstruct.orig	2011-03-04 14:44:59.000000000 +0000
+* Set python interpreter
+* From http://dev.gentoo.org/~vapier/scons-blows.txt, to respect LDFLAGS
+
+--- SConstruct.orig	2011-11-22 20:27:03.000000000 +0000
 +++ SConstruct
-@@ -84,7 +84,7 @@ if sys.platform == "win32":
+@@ -1,4 +1,5 @@
+ import os, sys
++import SCons.Util
+ from os.path import join, basename
+ from SCons.Script.SConscript import SConsEnvironment
+ 
+@@ -72,6 +73,9 @@ if env['debug']:
+     env.Append(CPPDEFINES='HEAVY_DEBUG')
+     env.Append(CCFLAGS='-O0', LINKFLAGS='-O0')
+ 
++if os.environ.has_key('LDFLAGS'):
++    env['LINKFLAGS'] += SCons.Util.CLVar(os.environ['LDFLAGS'])
++
+ #env.Append(CCFLAGS='-fno-inline', LINKFLAGS='-fno-inline')
+ 
+ Export('env', 'python')
+@@ -81,7 +85,7 @@ languages = SConscript('po/SConscript')
  
  def burn_python_version(target, source, env):
      # make sure we run the python version that we built the extension modules for
