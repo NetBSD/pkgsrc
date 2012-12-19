@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2012/07/30 02:53:57 dholland Exp $
+$NetBSD: distinfo,v 1.21 2012/12/19 14:25:56 jperkin Exp $
 
 SHA1 (xforms-1.0.tar.gz) = 865086d2885331ce30b05c7aa07cd8c3d02ce87b
 RMD160 (xforms-1.0.tar.gz) = 2972fb4534d3794b2027e81f4222f20a04cc81f8
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = c77dce8a896ac89915c64fcc9700d4079ed81117
 SHA1 (patch-af) = ff655f2daf11da78f85faad4aad0fcfcc250569c
 SHA1 (patch-ag) = 7364316d275b0da50c9f2749cf462c21aa34b029
 SHA1 (patch-ah) = 636f09a48385762d5bee82c4addbe180a2e95a6b
+SHA1 (patch-lib_local.h) = f5d519c72447235e69d48af65c0d2699153d8310
