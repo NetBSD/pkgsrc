@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2012/10/30 12:46:30 drochner Exp $
+# $NetBSD: Makefile.common,v 1.18 2012/12/19 08:14:42 obache Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -41,7 +41,9 @@ REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/make-hash-tools.pl \
 		Source/WebCore/platform/text/mac/*.pl
 
-BUILD_DEPENDS+=	ruby-[0-9]*:../../lang/ruby
+.include "../../lang/ruby/rubyversion.mk"
+BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
+CONFIGURE_ENV+=	RUBY=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
