@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/12/17 13:54:23 drochner Exp $
+$NetBSD: distinfo,v 1.12 2012/12/19 12:51:26 joerg Exp $
 
 SHA1 (djvulibre-3.5.25.3.tar.gz) = ad35056aabb1950f385360ff59520a82a6f779ec
 RMD160 (djvulibre-3.5.25.3.tar.gz) = f91befc4d118cd5426f84abaa4f20ede920a2a2e
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = c819c6b1218b3178983bb48e53c4d3c0f7dd0227
 SHA1 (patch-ab) = 5e8f6d3b925da3a2a09b87a05d2b9564f9c2e7b4
 SHA1 (patch-ac) = 0c713031903aade12eda1d898595798a1468fd0a
 SHA1 (patch-ad) = 7fe0f2d2b7c242c44720e9b4b76aa665d2551e6b
+SHA1 (patch-libdjvu_miniexp.cpp) = d63236ac02aa48d68536b0771c0fc8e17626fd33
