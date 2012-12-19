@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/18 21:53:30 marino Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/19 13:29:25 ryoon Exp $
 #
 
 DISTNAME=	libsecret-0.12
@@ -12,6 +12,7 @@ COMMENT=	GObject based library for accessing the Secret Service API
 LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
