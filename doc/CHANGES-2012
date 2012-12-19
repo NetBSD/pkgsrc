@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3982 2012/12/19 07:11:24 wen Exp $
+$NetBSD: CHANGES-2012,v 1.3983 2012/12/19 07:32:17 wen Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6103,3 +6103,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/pango to 1.32.4nb1 [obache 2012-12-19]
 	Updated security/p5-Crypt-CBC to 2.32 [wen 2012-12-19]
 	Updated devel/p5-Proc-Simple to 1.31 [wen 2012-12-19]
+	Updated net/p5-Geo-IPfree to 1.122880 [wen 2012-12-19]
