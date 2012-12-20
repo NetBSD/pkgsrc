@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/12/16 21:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/20 15:01:28 prlw1 Exp $
 #
 
 DISTNAME=		pygobject-3.4.2
@@ -35,8 +35,10 @@ TEST_TARGET=    check
 .include "../../lang/python/application.mk"
 
 # for the egg
+.if exists(${PYTHONBIN:Q})
 PLATFORM!=	${PYTHONBIN:Q} -c "import sys; from distutils import util; sys.stdout.write(util.get_platform())"
 PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
+.endif
 
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
