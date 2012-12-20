@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.3 2005/12/30 23:23:54 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/12/20 21:52:28 joerg Exp $
 
 SHA1 (jpeg_ls_v2.2.tar.gz) = d4fde989359eebdc98cf57feeac3076fdfd06c64
 RMD160 (jpeg_ls_v2.2.tar.gz) = e0879e170ee18fae46d148c711a8b5a398586cd9
 Size (jpeg_ls_v2.2.tar.gz) = 854276 bytes
+SHA1 (patch-Encoder_melcode.c) = 6da84593b3160bf86593de40e837e9712e9848e3
 SHA1 (patch-aa) = 9f5168b5b1a2e34de850cf35414c1b6aa4c63108
 SHA1 (patch-ab) = e87c51ca50be30ae6c07094fd935fedee8a1a2f5
 SHA1 (patch-ac) = cdb1d11427c50062df26d4d4c73eca041d08c972
-SHA1 (patch-ad) = 95418e8331cb3bfc370f63562ab8a4fa0f46c8ef
+SHA1 (patch-ad) = d17bf2ad6ad6d5f02c1a421a5941648bff93da7a
 SHA1 (patch-ae) = 5ca83b5d3ec9a14d017144c8e6cfb1b0bb5c7e9d
 SHA1 (patch-af) = a0558fef1b2b79343bd6af4cc205e42b65621944
 SHA1 (patch-ag) = 0fcd2ebda598b5d7db62437fda16242a28689295
