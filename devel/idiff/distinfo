@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2011/12/05 02:14:40 agc Exp $
+$NetBSD: distinfo,v 1.7 2012/12/20 22:00:06 joerg Exp $
 
 SHA1 (idiff-1.0.tar.gz) = 4d3f339184745a45747385bca6f559665c6136f8
 RMD160 (idiff-1.0.tar.gz) = 65012d4580d37c00274e8f1015cdf6b873cbc780
 Size (idiff-1.0.tar.gz) = 2307 bytes
-SHA1 (patch-aa) = c56d6e04f393ebd4b68cd021fd2d7035c8f8f134
+SHA1 (patch-aa) = 2ada09aa3412196083c5f2e99521aa2632f0ef30
 SHA1 (patch-ab) = 88d480c86527766cb602a57e9d1528da73675dbd
