@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2007/08/08 20:40:20 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2012/12/20 22:03:01 joerg Exp $
 
---- src_sound/funkload.c.orig	2007-08-08 20:17:33.000000000 +0000
+--- src_sound/funkload.c.orig	1998-06-22 10:29:14.000000000 +0000
 +++ src_sound/funkload.c
 @@ -15,7 +15,7 @@
  ***************************************************************************/
@@ -11,3 +11,68 @@ $NetBSD: patch-ah,v 1.1 2007/08/08 20:40:20 joerg Exp $
  #include "funktracker_defs.h"
  #include "dsp_mixxer.h"
  #include "funktracker.h"
+@@ -182,11 +182,7 @@ void find_pats_seqs(void)
+ /***************************************************************************
+ * L O A D   S O N G
+ ***************************************************************************/
+-void load_funk_module(char *filename)
+-{
+-  FILE *funk_fp;
+-
+-  int dsp_load_sample(int sample_no)
++  static int dsp_load_sample(int sample_no, FILE *funk_fp)
+   {
+     register unsigned long samsize =
+       funk_hr_ptr->funk_sb[sample_no].length * 
+@@ -205,7 +201,7 @@ void load_funk_module(char *filename)
+     return 1;
+   }
+ 
+-  void clean_old_fnk(void)
++  static void clean_old_fnk(void)
+   {
+     register int x,y;
+ 
+@@ -216,7 +212,7 @@ void load_funk_module(char *filename)
+           funk_hr_ptr->funk_sb[x].sname[y] = ' ';
+   }
+ 
+-  void load(void)
++  static void load(FILE *funk_fp)
+   {
+     register int x;
+     register long file_size,pattern_block_size;
+@@ -282,7 +278,7 @@ void load_funk_module(char *filename)
+         }
+         for(x = 0;x < 64;x++)
+           if(funk_hr_ptr->funk_sb[x].length)
+-            if(!dsp_load_sample(x))
++            if(!dsp_load_sample(x, funk_fp))
+               return;
+         if(funk_hr_ptr->funk_type[1] != '2')
+         {
+@@ -294,17 +290,22 @@ void load_funk_module(char *filename)
+     }
+   }
+ 
++void load_funk_module(char *filename)
++{
++  FILE *funk_fp;
++
+   ferr_val = FERR_OK;
+   if((funk_fp = fopen(filename,"rb")) != NULL)
+   {
+-    load();
++    load(funk_fp);
+     fclose(funk_fp);
+   }
+   else
+     ferr_val = FERR_FOPEN;
+ }
+ 
+-/***************************************************************************
++/********
++*******************************************************************
+ *
+ ***************************************************************************/
+ void dsp_init_for_play(void)
