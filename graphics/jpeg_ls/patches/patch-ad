@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2005/12/30 23:23:54 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2012/12/20 21:52:28 joerg Exp $
 
---- Encoder/global.h.orig	Tue Jun 22 20:14:15 1999
+--- Encoder/global.h.orig	1999-06-22 18:14:15.000000000 +0000
 +++ Encoder/global.h
 @@ -97,8 +97,6 @@ extern char	*plane_int_string,
  		*pixel_int_string;
@@ -29,6 +29,15 @@ $NetBSD: patch-ad,v 1.2 2005/12/30 23:23:54 joerg Exp $
      	   *qmul0, *qmul;        /* dequantization table */
  
  /* statistics tables */
+@@ -355,7 +353,7 @@ void buffinit(FILE *);
+ /*  melcode.c */
+ void init_process_run(int);
+ void close_process_run();
+-int  process_run(int,int,int);
++void process_run(int,int,int);
+ 
+ 
+ /* initialize.c */
 @@ -365,7 +363,7 @@ void init_stats(int);
  
  
