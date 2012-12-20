@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/09/08 07:42:49 wiz Exp $
+$NetBSD: distinfo,v 1.4 2012/12/20 21:59:21 joerg Exp $
 
 SHA1 (generator-0.35-cbiere-r4.tar.bz2) = 09d61950f128497af339d46ffc6c224eafe78206
 RMD160 (generator-0.35-cbiere-r4.tar.bz2) = 27d8fd2fb741bbbbd13956845c939ec4a0798b04
 Size (generator-0.35-cbiere-r4.tar.bz2) = 435289 bytes
+SHA1 (patch-main_event.c) = c9abbf1f80772844ba08701f6fe1adc07af139ae
+SHA1 (patch-main_vdp.c) = f905128b025d793f5a26c94ae80533211aef2105
+SHA1 (patch-ym2612_support.h) = 581fe7fc7cf7fddce2dbea20e1fb9e560e919fac

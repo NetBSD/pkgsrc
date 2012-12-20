@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2009/10/29 17:58:50 joerg Exp $
+$NetBSD: distinfo,v 1.10 2012/12/20 21:59:20 joerg Exp $
 
 SHA1 (generator-0.35.tar.gz) = a61138579efd97028d3a69c54c3c6fcd0a3d74ab
 RMD160 (generator-0.35.tar.gz) = 6b448018b8ed0fd9755ddb850f48892304d12e78
@@ -10,3 +10,6 @@ SHA1 (patch-ae) = 4e689421fe66aa7f635191e9f0100cd98daf8a76
 SHA1 (patch-af) = ef1c72b6da1ae93209a13b6836d5a85f66ffa51c
 SHA1 (patch-ag) = 2837e5f931326b1ac4fb7b045c05a81d809693e4
 SHA1 (patch-ah) = 4e76b9cd2fd377dee83273bafe930bec77b9bef1
+SHA1 (patch-main_event.c) = 6016e3c5de1b0c027f637962f740238f0a1e4573
+SHA1 (patch-main_vdp.c) = 0d5ef7815c8c4e03b2df8692af31739c9a1f773c
+SHA1 (patch-ym2612_support.h) = 1bf38d55f289881468cb2e7eb0fa02c7ec08dd1c
