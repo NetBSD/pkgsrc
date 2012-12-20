@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2012/10/06 11:54:48 asau Exp $
+# $NetBSD: Makefile,v 1.40 2012/12/20 22:03:01 joerg Exp $
 #
 
 DISTNAME=		nighthawk-2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 games
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=		.tgz
