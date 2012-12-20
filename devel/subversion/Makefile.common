@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2011/01/06 05:14:02 obache Exp $
+# $NetBSD: Makefile.common,v 1.37 2012/12/20 18:39:14 gdt Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -15,10 +15,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://subversion.apache.org/
 LICENSE=		apache-1.1
 
-# gdt isn't set up to test ruby/python/perl and java bindings, and
-# testing ap2-subversion is awkward.  If you object to updates without
-# these tests, please volunteer to test patches and I'll record your
-# email address here.
+# People who might update Makefile.version may not be set up to test
+# ruby/python/perl and java bindings, and testing ap2-subversion is
+# awkward.  If you object to updates without these tests, please
+# volunteer to test patches and your email address can be recorded
+# here.  (Absent volunteers, breakage of language bindings will not be
+# considered a terrible occurrence.)
 MAINTAINER_TEST_VOLUNTEERS=
 
 .include "../../devel/subversion/Makefile.version"
