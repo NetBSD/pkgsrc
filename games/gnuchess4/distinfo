@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2008/06/20 01:09:20 joerg Exp $
+$NetBSD: distinfo,v 1.8 2012/12/20 22:02:13 joerg Exp $
 
 SHA1 (gnuchess-4.0.pl80.tar.gz) = 0c581be2e7b6b17524e288e105a468a7ca328c8b
 RMD160 (gnuchess-4.0.pl80.tar.gz) = 889510f73c3e5143fc312c010e8324e68c11dcdc
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = 2d2ad394545b4eb4285389642c84872d4e0d9a25
 SHA1 (patch-ad) = 1fc8df5f7b34fd82fb43de71cdaf01ff5f72d51a
 SHA1 (patch-ae) = 5b112b5d9c3d26adef170e12e29734a9eecc6245
 SHA1 (patch-af) = 220b368a8d2274419c9d173433a956ab5c0c96b4
+SHA1 (patch-src_eval.c) = 127b4e3e7e0249aacfb0ee01186027e727eab19d
+SHA1 (patch-src_genmoves.c) = 5d538d49a8f495afc86d40f81ca72f424170c5be
