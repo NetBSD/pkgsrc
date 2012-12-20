@@ -1,17 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/20 21:33:07 joerg Exp $
 
---- kbanner.c.orig	Fri Oct 15 17:43:31 1993
-+++ kbanner.c	Thu May 18 00:28:39 2000
-@@ -3,7 +3,7 @@
- #include <stdio.h>
+--- kbanner.c.orig	1993-10-15 08:43:31.000000000 +0000
++++ kbanner.c
+@@ -1,9 +1,11 @@
+ /* Kanji Banner Version 2.1 by Koichi Yasuoka, October 15, 1993 */
  
- extern char *malloc();
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+-extern char *malloc();
 -extern unsigned short
++static void kputchar(unsigned int c);
++
 +extern const unsigned short
           font21[],font22[],font23[],font24[],font25[],font26[],font27[],
  font28[],
  font30[],font31[],font32[],font33[],font34[],font35[],font36[],font37[],
-@@ -16,7 +16,7 @@
+@@ -16,7 +18,7 @@ font60[],font61[],font62[],font63[],font
  font68[],font69[],font6a[],font6b[],font6c[],font6d[],font6e[],font6f[],
  font70[],font71[],font72[],font73[],font74[];
  
@@ -20,7 +25,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
         font21,font22,font23,font24,font25,font26,font27,
  font28,  NULL,  NULL,  NULL,  NULL,  NULL,  NULL,  NULL,
  font30,font31,font32,font33,font34,font35,font36,font37,
-@@ -31,7 +31,7 @@
+@@ -31,7 +33,7 @@ font70,font71,font72,font73,font74,  NUL
    NULL,  NULL,  NULL,  NULL,  NULL,  NULL,  NULL
  };
  
@@ -29,7 +34,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
  	 0x212a,0x2149,0x2174,0x2170,0x2173,0x2175,0x2147,
    0x214a,0x214b,0x2176,0x215c,0x2124,0x215d,0x2125,0x213f,
    0x2330,0x2331,0x2332,0x2333,0x2334,0x2335,0x2336,0x2337,
-@@ -55,10 +55,10 @@
+@@ -55,10 +57,10 @@ int table[]={
  };
  
  int landscape,small,column,col,mime,encoding,bufindex,buflength;
@@ -42,7 +47,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
    -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
    -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
    -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,62,-1,-1,-1,63,
-@@ -121,7 +121,7 @@
+@@ -121,7 +123,7 @@ char *argv[];
    }
    if(landscape)
      column=1;
@@ -51,3 +56,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:00:29 seb Exp $
      fprintf(stderr,"%s: Not enough memory\n",com);
      exit(1);
    }
+@@ -199,8 +201,7 @@ FILE *fp;
+   kputchar(-1);
+ }
+ 
+-kputchar(c)
+-unsigned int c;
++static void kputchar(unsigned int c)
+ {
+   int i,j,k;
+   if((c==-1)||(column==col)){
