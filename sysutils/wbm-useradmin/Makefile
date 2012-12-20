@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:34 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/20 23:07:03 dholland Exp $
 
 WBM_NAME=	useradmin
+PKGREVISION=	1
 
 COMMENT=	Webmin module to manage users and groups
 
