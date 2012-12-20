@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2005/03/20 17:27:31 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2012/12/20 21:33:57 joerg Exp $
 
---- src/Server/Accept.c.orig	2004-06-05 15:33:56.000000000 +0200
+--- src/Server/Accept.c.orig	2004-09-16 22:05:58.000000000 +0000
 +++ src/Server/Accept.c
 @@ -14,9 +14,8 @@
  int tcpwin;
@@ -21,3 +21,12 @@ $NetBSD: patch-ac,v 1.1 2005/03/20 17:27:31 jmmv Exp $
  
  /* Main Accept function, here we handle connections */
  int
+@@ -139,7 +137,7 @@ Accept(n)
+ 	  if ((int)b>ERROR_NULL && (int)b<ERROR_LASTONE)
+ 		{
+ 			//screws_logs_error(n,ERROR_REQUEST,""); // XXX log remote IP
+-			return;
++			return ERROR_NULL;
+ 		}
+ 
+ 	  /* keep-alive only for HTTP/1.1 */
