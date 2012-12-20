@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2007/10/16 09:34:18 jnemeth Exp $
+$NetBSD: MESSAGE,v 1.7 2012/12/20 20:38:46 jnemeth Exp $
 
 To use "${PKGNAME}" as the system's mail transport agent you have
 to install "${PREFIX}/share/examples/sendmail/mailer.conf" as global
@@ -23,5 +23,22 @@ for Sendmail before it will be operational.  "cd" to the directory
 
 and read the file README for instructions on creating and installing
 configuration files.
+
+
+NOTE: If your system doesn't have mailwrapper and/or it won't
+install on your system, then you will need to move aside system
+supplied binaries and replace them with symlinks to the binaries
+supplied with sendmail.  The most important of these is the sendmail
+binary itself.  This is typically located at /usr/sbin/sendmail or
+/usr/lib/sendmail.  These will need to be moved aside, and you will
+need to create a symlink from /usr/sbin/sendmail to
+${PREFIX}/libexec/sendmail/sendmail.  This is required because most
+third party apps (or, even system supplied apps) will look for
+sendmail at one of the above locations.  There are a variety of
+other apps such as:  editmap, hoststat, mailq, mailstats, makemap,
+newaliases, praliases, purgestat, and vacation.  You can deal with
+these either by having ${PREFIX}/bin and ${PREFIX}/sbin at the
+beginning of your PATH, or creating symlinks.  hoststat, mailq,
+mailstats, newaliases, and purgestat are just links to sendmail.
 
 ===========================================================================
