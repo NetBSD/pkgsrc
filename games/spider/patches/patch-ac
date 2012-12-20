@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/08/02 16:04:33 kristerw Exp $
+$NetBSD: patch-ac,v 1.2 2012/12/20 22:05:05 joerg Exp $
 
---- movelog.c.orig	2006-08-02 17:55:55.000000000 +0200
-+++ movelog.c	2006-08-02 17:57:51.000000000 +0200
-@@ -33,6 +33,9 @@
+--- movelog.c.orig	1991-09-28 17:46:17.000000000 +0000
++++ movelog.c
+@@ -33,6 +35,9 @@ int	deck_index = 0;
  
  extern int	cheat_count;
  
@@ -12,7 +12,16 @@ $NetBSD: patch-ac,v 1.1 2006/08/02 16:04:33 kristerw Exp $
  make_deck_cache()
  {
  CardPtr	tmp;
-@@ -299,8 +302,7 @@
+@@ -93,7 +98,7 @@ Bool	*exposed;
+ 	*exposed = (val >= 14);
+ }
+ 
+-undo()
++void undo(void)
+ {
+ int	val;
+ int	from, dest, num_cards;
+@@ -299,8 +304,7 @@ Rank	*rank;
  }
  
  static int
@@ -22,7 +31,28 @@ $NetBSD: patch-ac,v 1.1 2006/08/02 16:04:33 kristerw Exp $
  {
  int	val;
  
-@@ -787,8 +789,7 @@
+@@ -572,9 +576,7 @@ int	val;
+ 	}
+ }
+ 
+-write_file(fname, confirmer)
+-char	*fname;
+-Bool	(*confirmer)();
++void write_file(char *fname, Bool (*confirmer)())
+ {
+ FILE	*fp;
+ char	buf[512];
+@@ -739,8 +741,7 @@ char	*fname;
+ 	}
+ }
+ 
+-read_file(fname)
+-char	*fname;
++void read_file(char fname)
+ {
+ FILE	*fp;
+ char	buf[1024], buf2[1024];
+@@ -787,8 +788,7 @@ char	*dp;
  }
  
  static int
