@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2012/04/18 00:09:43 joerg Exp $
+$NetBSD: distinfo,v 1.18 2012/12/20 21:44:51 joerg Exp $
 
 SHA1 (mpeg4ip-1.5.0.1.tar.gz) = 1271de695ed65284d9c39aa91bf26c5494603fd3
 RMD160 (mpeg4ip-1.5.0.1.tar.gz) = fee5c21c17a470e6de349e07d233a1eb46b2064a
@@ -39,4 +39,15 @@ SHA1 (patch-common_video_iso-mpeg4_src_type__yuvac_cpp) = 5ff0d2a25b42832bd11a42
 SHA1 (patch-common_video_iso-mpeg4_src_type__yuvai_cpp) = ee62e50f089d9a198ac40045960b1e8c195641d9
 SHA1 (patch-common_video_iso-mpeg4_src_vtc__main__vtcenc_cpp) = 8e9b3ce134ebad001d942152d2e4b88a88bb4144
 SHA1 (patch-configure.in) = 8fefa29c71a90ea4fb93ef782065b12644157e1d
+SHA1 (patch-lib_mp4_ctts.c) = b07e3a2355a7b78bddd098cb92925d2267cf4c24
+SHA1 (patch-lib_mp4_hinthnti.c) = ce2a233dd4b99e15833dda952bcc071ba9069c77
+SHA1 (patch-lib_mp4_hintudta.c) = c1c18ad696c121051dce322f28b3e171b3e7157d
+SHA1 (patch-lib_mp4_hnti.c) = 93f42f9255638a495dce1a383e7ad0b04df1a7d1
+SHA1 (patch-lib_mp4_moov.c) = 9cb7192f99276605f76eeb07c88a5148852ea949
+SHA1 (patch-lib_mp4_rtp.c) = 0b25827b1d6fb22ad8d0b04958270573cd434b22
+SHA1 (patch-lib_mp4_sdp.c) = bed041c627bb41ddafbc6e585b64bd50da1ec4ef
+SHA1 (patch-lib_mp4_stbl.c) = 21570e63dcd2880ad58d2ee6703e20bf37fae346
+SHA1 (patch-lib_mp4_trak.c) = d968bc6b7897c8ac40098928916caca74dd4104a
+SHA1 (patch-lib_mp4_tref.c) = 7e5903849477c53d7eee441374c40c1fed0325da
+SHA1 (patch-lib_mp4_udta.c) = 52c628b368594a607c2ef201f42f3b968d6a5976
 SHA1 (patch-player_lib_audio_faad_all.h) = 8a5f4840b86c6ac90d65664476c94622ffa87b21
