@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2011/09/05 00:15:37 dholland Exp $
+$NetBSD: patch-bb,v 1.2 2012/12/20 22:07:57 joerg Exp $
 
 fix void main.
 
---- Config/autoconf~	1998-03-22 23:26:53.000000000 +0000
+--- Config/autoconf.orig	1998-03-22 23:26:53.000000000 +0000
 +++ Config/autoconf
 @@ -6,7 +6,7 @@ touch Config test.h config.h config.outp
  # Test for broken include files (SunOS)
@@ -13,3 +13,17 @@ fix void main.
  if gcc -Wall -c test.c 2>config.output; then
    if grep -q implicit config.output; then
      echo "Some function prototypes seem to be missing"
+@@ -173,11 +173,11 @@ if sh ./runtest x11.c; then
+   echo "Successfully linked sample X11 program"
+   echo "X11EXTRA = $X11EXTRA" >>Config
+ else
+-  libs="-idirafter $X11INCLUDE -R$X11LIB -L$X11LIB -lX11 $X11EXTRA"
++  libs="-idirafter $X11INCLUDE -Wl,-R$X11LIB -L$X11LIB -lX11 $X11EXTRA"
+   export libs
+   if sh ./runtest x11.c; then
+     echo "Successfully linked sample X11 program by using -R$X11LIB"
+-    echo "X11EXTRA = -R$X11LIB $X11EXTRA" >>Config
++    echo "X11EXTRA = -Wl,-R$X11LIB $X11EXTRA" >>Config
+   else
+     echo "Failed to link sample X11 program"
+     exit 1
