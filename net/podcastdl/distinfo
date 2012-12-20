@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/12/08 17:09:37 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2012/12/20 10:02:41 ryoon Exp $
 
 SHA1 (podcastdl-0.3.0.tgz) = 09cc6ac495943e5dc3e717d712ad8020b8a2e12b
 RMD160 (podcastdl-0.3.0.tgz) = 912862019ac47c1e20699a1a92b5a5862019f6e1
 Size (podcastdl-0.3.0.tgz) = 5482 bytes
+SHA1 (patch-src_CMakeLists.txt) = b0faf7b4311dac18165b3de1ee2f6836a8b6c0e3
