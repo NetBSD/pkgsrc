@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
+$NetBSD: patch-be,v 1.2 2012/12/20 21:50:47 joerg Exp $
 
---- readwrite.c.orig	Tue Jul  7 00:31:15 1998
-+++ readwrite.c	Sun Sep 27 10:24:06 1998
-@@ -4,6 +4,14 @@
+--- readwrite.c.orig	1998-07-06 15:31:15.000000000 +0000
++++ readwrite.c
+@@ -4,10 +4,21 @@
  #include "kanjicode.h"
  #include "ctrlcode.h"
  
@@ -17,7 +17,14 @@ $NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  #ifdef DEBUG
  extern FILE *wrlog;
  #endif
-@@ -29,12 +37,10 @@
+ 
++static void convCode(unsigned char c1, unsigned char c2, unsigned char *obuf,
++    kanjicode ic, kanjicode oc);
++
+ kanjicode OutCode = NATIVECODE, WriteCode = NATIVECODE;
+ 
+ typedef struct KanjiStatus {
+@@ -29,22 +40,16 @@ struct code_mode codeMode[8] = {
  	SIC_B,SOC_B,"JIS",3,3,
  };
  
@@ -31,7 +38,32 @@ $NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  		return c;
  	return EOF;
  }
-@@ -320,13 +326,13 @@
+ 
+-checkStatusAndConvCode(c,ic,oc,stat,ostat,optr,olen)
+-char c;
+-kanjicode ic,oc;
+-KanjiStatus stat,ostat;
+-char **optr;
+-int *olen;
++static void checkStatusAndConvCode(char c, kanjicode ic, kanjicode oc,
++    KanjiStatus stat, KanjiStatus ostat, char **optr, int *olen)
+ {
+ 	static char buf[6];
+ 
+@@ -201,10 +206,8 @@ int *olen;
+ 	}
+ }
+ 
+-syncStatus(ttyno,ic,oc,istatus,ostatus)
+-int ttyno;
+-kanjicode ic,oc;
+-KanjiStatus istatus,ostatus;
++static void syncStatus(int ttyno, kanjicode ic, kanjicode oc,
++    KanjiStatus istatus, KanjiStatus ostatus)
+ {
+ 	if (!isJIS(oc) || istatus->kanjiMode == ostatus->kanjiMode)
+ 			return;
+@@ -320,13 +323,13 @@ writes(s)
  char    *s;
  {       int    l = strlen(s);
  	
@@ -47,7 +79,7 @@ $NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  }
  
  writeShTty(s,l)
-@@ -334,14 +340,14 @@
+@@ -334,14 +337,14 @@ char	*s;
  int	l;
  {
  
@@ -64,3 +96,16 @@ $NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  }
  
  
+@@ -376,10 +379,8 @@ bell()
+ 	write1('\007');
+ }
+ 
+-convCode(c1,c2,obuf,ic,oc)
+-unsigned char c1,c2;
+-unsigned char *obuf;
+-kanjicode ic,oc;
++static void convCode(unsigned char c1, unsigned char c2, unsigned char *obuf,
++    kanjicode ic, kanjicode oc)
+ {
+ 	if (ic == oc || (isJIS(ic) && isJIS(oc)) ) {
+ 		obuf[0] = c1;

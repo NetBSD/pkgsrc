@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2006/02/18 22:08:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2012/12/20 21:50:47 joerg Exp $
 
 SHA1 (skkfep0.86c.tar.gz) = fe1473c2a9d28901a96fdc5cf51079de47c86c32
 RMD160 (skkfep0.86c.tar.gz) = 11bfc483ee31b74070d288ecb3e269cb66347760
@@ -10,7 +10,14 @@ SHA1 (patch-ad) = 2756635d4c92bdeb42bcd537b67cacfe8de9d053
 SHA1 (patch-ba) = c814f8315aa904bc1e395544060378df6608d8c3
 SHA1 (patch-bb) = 9eb7fb317c661ebc293fdf02d2128b31a465c4ab
 SHA1 (patch-bc) = d5f63071cfd9f5cc73abb683c610b04df419c932
-SHA1 (patch-bd) = 8e3321de9841382f932bb9edf1470d1cbe455bce
-SHA1 (patch-be) = 10aa4c7002b224f80e8af540012f76a661cec92d
-SHA1 (patch-bf) = c8e76e009fee4ad6f86bf70c71c0bc51dc596174
+SHA1 (patch-bd) = 5dc60197f1733d2f2375764da710346f01626475
+SHA1 (patch-be) = 9f5363c80f432ba0fb6021adf4e5a75a5180ed2c
+SHA1 (patch-bf) = 15211a5a1697985e636a8e9901df09ff523fb29a
 SHA1 (patch-bg) = b1159a569233280cc1ad9df2da0189fd3a2d08ad
+SHA1 (patch-jc.c) = f70054da415c1d387ba85433d7814bf019d80556
+SHA1 (patch-keybind.c) = 26b1d92e3f0a4d3597ea5c0b016ee17b10aa2642
+SHA1 (patch-kkconv.c) = fb441a766f225a6452d5bf778f05e19bdf0b3f07
+SHA1 (patch-romkan-org.c) = 3da9260274e7cd218bddb020134fdbf1a061dc87
+SHA1 (patch-simpledic.c) = 7760ffebed845a67fc8751c7b59b680676211a4f
+SHA1 (patch-skklib.c) = 8c47ad293b67478f2b27941f47e7ceff3dc7a0af
+SHA1 (patch-terms.c) = 2ce090605e1bf4f591dcc2226f4f6e65d9378e59
