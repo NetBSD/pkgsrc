@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/11/11 22:28:28 joerg Exp $
+$NetBSD: distinfo,v 1.23 2012/12/20 13:21:48 jaapb Exp $
 
 SHA1 (kdepimlibs-4.8.4.tar.xz) = 34f693ac71896d0d8653fc2a81323d1e91531bb2
 RMD160 (kdepimlibs-4.8.4.tar.xz) = f9804ea6e6d016d879a16f1077e49aeef429ba13
@@ -8,6 +8,7 @@ SHA1 (patch-kalarmcal_CMakeLists.txt) = 8237552f350f214c3380bf0fc54d19d36765c9b9
 SHA1 (patch-kblog_CMakeLists.txt) = 183d17f2de6f5f4f2f6bd29666b2a35d22c055aa
 SHA1 (patch-kcalutils_CMakeLists.txt) = 5c212ab23d0b1006a43c765bc1d860be85da284a
 SHA1 (patch-kimap_loginjob.cpp) = efcc4ee6915215013cbc8b349741d747cb061a94
+SHA1 (patch-kioslave_smtp_command.h) = 7b32a6d801ba03f6014eac5e5a7a496acb5aabaf
 SHA1 (patch-kldap_ber.cpp) = 3656e006278db8fd4014f6e4a902f60703955871
 SHA1 (patch-kldap_ber.h) = c4edcaedb7169e261892b973627b3265f1efd3df
 SHA1 (patch-kmbox_CMakeLists.txt) = 924bd70a84c8af1c7d37501d4f718343a0aa7121
