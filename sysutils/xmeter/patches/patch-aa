@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2001/10/23 11:38:31 agc Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/20 21:37:37 joerg Exp $
 
 Use the right signal handler type.
 
---- xmeter.c	1998/10/30 10:41:09	1.1
-+++ xmeter.c	1998/10/30 10:41:51
-@@ -135,6 +135,8 @@
+--- xmeter.c.orig	1994-05-25 01:01:15.000000000 +0000
++++ xmeter.c
+@@ -135,6 +135,8 @@ static char	*RCSid="$Header: /net/src/ra
  #define PORTMAP		/* Get right function declarations on Solaris 2	*/
  #include <rpc/rpc.h>
  #include <rpc/pmap_prot.h>
@@ -13,7 +13,7 @@ Use the right signal handler type.
  #include <rpcsvc/rstat.h>
  /*
   * We need the definitions of CP_USER, CP_NICE and CP_SYS.  Some systems
-@@ -231,7 +228,7 @@
+@@ -228,7 +230,7 @@ typedef struct {
      char	*name;		/* Name of stat for menu widget		*/
  } STATDATA;
  
@@ -22,3 +22,42 @@ Use the right signal handler type.
  #define SIGTYPE	void
  #else
  #define SIGTYPE	int
+@@ -249,6 +251,8 @@ void		popdownscale();
+ void		quit();
+ char		*mystrdup();
+ 
++void runprog(METER *h, int s);
++
+ static STATDATA		sd[] = {
+ #define S_COLL		0
+   {fcoll, "coll"},
+@@ -922,7 +926,7 @@ char	*data;
+   sh = h->sh;
+   if (h->oldstate == FATAL && sh->pid != -1) {	/* Ignore dead hosts	*/
+       *(double *) data = 0.0;
+-      return;
++      return -1;
+   }
+   if (h->oldjumpscroll) {		/* Restore old jumpscroll value	*/
+       n = 0;
+@@ -987,6 +991,7 @@ char	*data;
+ 	  sh->pid = waitforhost(h);
+   }
+   h->oldstate = s;
++  return 0;
+ }
+ 
+ /*
+@@ -1019,11 +1024,7 @@ METER	*h;
+ /*
+  * runprog - Run user specified alert program.
+  */
+-runprog(h, s)
+-
+-METER	*h;
+-int	s;
+-
++void runprog(METER *h, int s)
+ {
+   char	oldstate[4];
+   char	state[4];
