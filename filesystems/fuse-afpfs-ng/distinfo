@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/02/23 12:58:26 tron Exp $
+$NetBSD: distinfo,v 1.5 2012/12/20 21:55:29 joerg Exp $
 
 SHA1 (afpfs-ng-0.8.1.tar.bz2) = 3686d4d752052ea8e98841fcae748cb469991dbb
 RMD160 (afpfs-ng-0.8.1.tar.bz2) = 39d3e50ce38df188a7c90448b20f7e428027dc43
 Size (afpfs-ng-0.8.1.tar.bz2) = 344014 bytes
+SHA1 (patch-lib_loop.c) = ebd8120b1e27d353f4b4d0537cff32d6a21bb569
