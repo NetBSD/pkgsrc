@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2007/06/06 11:05:21 markd Exp $
+$NetBSD: distinfo,v 1.4 2012/12/20 14:14:14 is Exp $
 
 SHA1 (poster-20060221.tar.bz2) = cde5d3ba28d444e68cc30573eaa660ea8ef7f16b
 RMD160 (poster-20060221.tar.bz2) = f5ba5a4ebeacd04051a682b9285c33f54e311da0
 Size (poster-20060221.tar.bz2) = 33770 bytes
 SHA1 (patch-ab) = b8c371e850b4d3eb8bf50d4324a275546e1fcd7a
+SHA1 (patch-poster.c) = 327f73b1c6854c1b129d5afa787b3ecffe8279b1
