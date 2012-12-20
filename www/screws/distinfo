@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.14 2008/08/17 20:09:12 dholland Exp $
+$NetBSD: distinfo,v 1.15 2012/12/20 21:33:57 joerg Exp $
 
 SHA1 (screws-0.56.tar.gz) = 3335e7e7116561499ee7164831c31df4ecebe403
 RMD160 (screws-0.56.tar.gz) = 5d7f1af67a42cd5726f0d4708713bb13c4c8fe21
 Size (screws-0.56.tar.gz) = 256862 bytes
 SHA1 (patch-aa) = 0101b7083bb45358371a3853783f9c65cc5b2435
 SHA1 (patch-ab) = d5f8997c9e1ed2795591e4d29605e9208351bf81
-SHA1 (patch-ac) = 7d0542f65b24ba9d7ed035c140d7165a19b2f73d
+SHA1 (patch-ac) = 13a9b9c2dcd7f4121c0fd8ab693b9e769d475f38
 SHA1 (patch-ad) = 984fa51aff7d17ba69f3ea1c0b9cf4bbb70e3973
 SHA1 (patch-ae) = 75eb9410182c7c21d1090b02cc4bebc3739b1cb7
 SHA1 (patch-af) = 9ac19813079a67c8f01ea5d2b3a85c309db00f95
