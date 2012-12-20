@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/12/16 01:52:31 obache Exp $
+# $NetBSD: Makefile,v 1.38 2012/12/20 22:53:54 joerg Exp $
 #
 
 DISTNAME=	vinagre-3.6.2
@@ -20,6 +20,11 @@ USE_TOOLS+=	gmake intltool pkg-config msgfmt
 USE_LANGUAGES=	c c++
 
 USE_PKGLOCALEDIR=	yes
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=format-nonliteral
+.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vinagre
 PKG_SUPPORTED_OPTIONS=	avahi telepathy
