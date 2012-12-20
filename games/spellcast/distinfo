@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2010/02/14 21:03:19 joerg Exp $
+$NetBSD: distinfo,v 1.5 2012/12/20 22:04:14 joerg Exp $
 
 SHA1 (spellcast.tar.Z) = 3c51aa1746d4b8385a87ab5af5ed78b48cc4ac19
 RMD160 (spellcast.tar.Z) = ed4751d902a58abdc2a79333541fc866170a642d
 Size (spellcast.tar.Z) = 129173 bytes
 SHA1 (patch-aa) = 0b407bfe80ca4170d54da83deebf5ea57952cf90
+SHA1 (patch-xgest.c) = 61e4fc03709995813d8a2ced3d4c8e651aa6072d
+SHA1 (patch-xquery.c) = fdf45bfbc4c8b9e530a966439e4dd0575351b7df
+SHA1 (patch-xspell.h) = aa77dc029e80f6926024a46d90ae927bee111ce3
