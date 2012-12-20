@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2012/10/28 06:30:14 asau Exp $
+# $NetBSD: Makefile,v 1.40 2012/12/20 12:47:35 taca Exp $
 
-DISTNAME=	drupal-6.26
-PKGREVISION=	1
+DISTNAME=	drupal-6.27
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -64,6 +63,9 @@ OWN_DIRS+=	share/drupal/profiles/default
 
 post-extract:
 	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
+
+pre-install:
+	${FIND} ${WRKSRC} -type f -name "*.orig" -exec ${RM} -f {} \;
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
