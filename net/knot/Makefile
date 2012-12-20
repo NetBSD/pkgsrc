@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/18 17:03:56 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/20 07:50:19 pettai Exp $
 #
 
 DISTNAME=	knot-1.1.2
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/knot
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/knot
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison gmake
+USE_TOOLS+=	bison flex gmake
 RCD_SCRIPTS=	knot
 
 EGDIR=			${PREFIX}/share/examples/knot
