@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3985 2012/12/20 01:17:58 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.3986 2012/12/20 03:32:37 mspo Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6038,7 +6038,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Added editors/deforaos-editor version 0.2.1 [khorben 2012-12-17]
 	Added www/deforaos-surfer version 0.2.6 [khorben 2012-12-17]
 	Added print/deforaos-pdfviewer version 0.0.1 [khorben 2012-12-17]
-	Added todo/deforaos-todo version 0.1.2 [khorben 2012-12-17]
+	Added time/deforaos-todo version 0.1.2 [khorben 2012-12-17]
 	Added meta-pkgs/deforaos-desktop version 0.0.1 [khorben 2012-12-17]
 	Updated math/R to 2.15.1 [wen 2012-12-17]
 	Updated graphics/py-matplotlib to 1.2.0 [drochner 2012-12-17]
