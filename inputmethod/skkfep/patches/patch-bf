@@ -1,7 +1,7 @@
-$NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
+$NetBSD: patch-bf,v 1.2 2012/12/20 21:50:47 joerg Exp $
 
---- stty.c.orig	Wed Sep 23 01:22:53 1998
-+++ stty.c	Sun Sep 27 10:21:12 1998
+--- stty.c.orig	1998-09-22 16:22:53.000000000 +0000
++++ stty.c
 @@ -31,12 +31,15 @@
  
  #endif
@@ -19,7 +19,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  #ifdef TIOCSWINSZ
  struct winsize  d_winsize;
  #endif /* TIOCSWINSZ */
-@@ -142,7 +145,7 @@
+@@ -142,7 +145,7 @@ get_winsize()
  #ifdef TIOCSWINSZ
  	extern int lines, columns;
  
@@ -28,7 +28,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  	if (d_winsize.ws_col == 0) {
  		d_winsize.ws_col = columns;
  	} else {
-@@ -153,7 +156,7 @@
+@@ -153,7 +156,7 @@ get_winsize()
  	} else {
  		lines = d_winsize.ws_row;
  	}
@@ -37,7 +37,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  #endif /* TIOCSWINSZ */
  }
  
-@@ -161,7 +164,7 @@
+@@ -161,7 +164,7 @@ set_tty()
  {	int	er;
  	TERMPARAM ioval;
  
@@ -46,7 +46,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  	ioval = d_ioval;
  
  #if defined TERMIOS || defined TERMIO
-@@ -195,7 +198,7 @@
+@@ -195,7 +198,7 @@ set_tty()
  	ioval.m_ttyb.sg_flags = RAW;
  #endif
  
@@ -55,7 +55,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  
  	initFep();
  
-@@ -208,14 +211,8 @@
+@@ -208,14 +211,8 @@ set_tty()
  
  reset_tty()
  {
@@ -71,7 +71,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  }
  
  set_tty_sane(tty)
-@@ -258,12 +255,6 @@
+@@ -258,12 +255,6 @@ int tty;
  	}
  }
  
@@ -84,7 +84,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  SignalFunc
  reset_exit()
  {
-@@ -315,7 +306,7 @@
+@@ -315,7 +306,7 @@ chld_changed()
  	union wait statusp;
  #endif
  
@@ -93,7 +93,7 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  	while ((cpid = wait((int *)&statusp)) != -1 && cpid != ShellPID)
  		;
  #else
-@@ -385,7 +376,7 @@
+@@ -385,7 +376,7 @@ term_exit()
  SignalFunc
  suspend()
  {
@@ -102,3 +102,12 @@ $NetBSD: patch-bf,v 1.1.1.1 2002/05/31 13:00:04 seb Exp $
  	signal(SIGTSTP,SIG_DFL);
  	kill(0,SIGTSTP);
  
+@@ -467,6 +458,8 @@ set_int()
+ 	signal(SIGUSR2,sig_usr2);
+ }
+ 
++void closeSKK(Dictionary dic, char *dicname);
++
+ saveJisyo()
+ {
+ #ifdef USE_SERVER
