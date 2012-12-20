@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 09:57:21 asau Exp $
+# $NetBSD: Makefile,v 1.23 2012/12/20 21:46:16 joerg Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -17,6 +17,12 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 WRKSRC=		${WRKDIR}
 MANCOMPRESSED=	yes
 INSTALLATION_DIRS+= bin man/man1
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=return-type
+.endif
 
 pre-build:
 	cd ${WRKSRC} && \
