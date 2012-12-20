@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2011/05/08 17:07:25 christos Exp $
+$NetBSD: distinfo,v 1.12 2012/12/20 21:42:06 joerg Exp $
 
 SHA1 (pptpd-1.3.4.tar.gz) = 3d1faf99055e420bafa96c96e8871a888c50b4e8
 RMD160 (pptpd-1.3.4.tar.gz) = 1c6c748bf9e81d223087998ee0cca821814d19f9
 Size (pptpd-1.3.4.tar.gz) = 240942 bytes
 SHA1 (patch-aa) = 40e5873fc582040112e97477e3709e729245d4c9
 SHA1 (patch-ab) = f9c2ff75976a59da67de9b65d2261d29daec1865
-SHA1 (patch-ac) = d9ec5b2d23ac7d35c33a114d99575b25667f9bcb
+SHA1 (patch-ac) = bb63e2e5b4a678e18e3de69ca12f7d12cd099f09
 SHA1 (patch-ad) = 451e6811622114c4e99df3b9ff31238bfa6623ed
 SHA1 (patch-ae) = d964e2a8138781c1434bc87081c19798ada9fc06
 SHA1 (patch-af) = f087f8b16566701ab51dbb967a126c710f785213
