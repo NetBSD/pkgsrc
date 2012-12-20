@@ -1,9 +1,9 @@
-$NetBSD: patch-globals_h,v 1.1 2012/06/18 04:19:09 dholland Exp $
+$NetBSD: patch-globals_h,v 1.2 2012/12/20 22:05:06 joerg Exp $
 
 - use standard headers
 - don't provide own malloc declarations
 
---- globals.h~	1991-09-28 17:46:20.000000000 +0000
+--- globals.h.orig	1991-09-28 17:46:20.000000000 +0000
 +++ globals.h
 @@ -10,6 +10,8 @@
   *
@@ -14,7 +14,20 @@ $NetBSD: patch-globals_h,v 1.1 2012/06/18 04:19:09 dholland Exp $
  /*
   * spider global variables
   */
-@@ -95,7 +97,3 @@ void	do_expand();
+@@ -92,10 +94,16 @@ void	button_release();
+ void	do_expand();
+ #endif KITLESS
+ 
++void read_file(char fname);
++void write_file(char *fname, Bool (*confirmer)());
++void undo(void);
++
++void redraw_card_stacks(int x, int y, int w, int h);
++void redraw_deck(int x, int y, int w, int h);
++void redraw_card_piles(int x, int y, int w, int h);
++void deal_next_hand(Bool log);
++void expand(CardList list);
++
  #ifdef XAW
  Bool	can_get_help_files();
  #endif
