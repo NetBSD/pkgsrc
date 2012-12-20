@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/11 23:35:37 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/20 01:24:34 gdt Exp $
 
 DISTNAME=	libgeotiff-1.4.0
 CATEGORIES=	graphics
@@ -11,6 +11,8 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+# TODO: add options for zlib and jpeg support
 
 .include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
