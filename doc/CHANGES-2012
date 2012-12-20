@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3986 2012/12/20 03:32:37 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.3987 2012/12/20 12:37:31 gdt Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6105,4 +6105,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Proc-Simple to 1.31 [wen 2012-12-19]
 	Updated net/p5-Geo-IPfree to 1.122880 [wen 2012-12-19]
 	Updated sysutils/xentools41 to 4.1.3nb4 [is 2012-12-19]
-	Removed devel/guile16-gtk successor devel/guile16-gtk [gdt 2012-12-20]
+	Removed devel/guile16-gtk successor devel/guile-gtk [gdt 2012-12-20]
