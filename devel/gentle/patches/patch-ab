@@ -1,10 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/30 08:23:15 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/21 01:16:51 dholland Exp $
 
---- lib/build.orig	1998-08-21 01:56:12.000000000 +1200
+- use libtool
+- honor pkgsrc's CC
+
+--- lib/build.orig	1998-08-20 13:56:12.000000000 +0000
 +++ lib/build
-@@ -7,8 +7,10 @@ GENTLE=../gentle/gentle
+@@ -5,10 +5,12 @@ set -x
+ 
+ GENTLE=../gentle/gentle
  GRTS=../gentle/grts.o
- CC=cc
+-CC=cc
++#CC=cc
  
 -$CC -c main.c
 -$CC -c errmsg.c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/21 01:16:50 dholland Exp $
 #
 
 DISTNAME=		gentle-97
@@ -16,9 +16,9 @@ USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	bin lib
 
 do-build:
-	(cd ${WRKSRC}/gentle ; LIBTOOL=${LOCALBASE}/bin/libtool ./build)
-	(cd ${WRKSRC}/lib ; LIBTOOL=${LOCALBASE}/bin/libtool ./build)
-	(cd ${WRKSRC}/reflex ; LIBTOOL=${LOCALBASE}/bin/libtool ./build)
+	(cd ${WRKSRC}/gentle ; LIBTOOL=${LIBTOOL} CC=${CC} ./build)
+	(cd ${WRKSRC}/lib ; LIBTOOL=${LIBTOOL} CC=${CC} ./build)
+	(cd ${WRKSRC}/reflex ; LIBTOOL=${LIBTOOL} CC=${CC} ./build)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gentle/gentle ${DESTDIR}${PREFIX}/bin
