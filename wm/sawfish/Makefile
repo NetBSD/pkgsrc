@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2012/10/08 23:02:31 adam Exp $
+# $NetBSD: Makefile,v 1.70 2012/12/21 11:36:50 dholland Exp $
 #
 
 DISTNAME=		sawfish-1.7.1
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		x11 wm
 MASTER_SITES=		http://download.tuxfamily.org/sawfish/sawfish/
 EXTRACT_SUFX=		.tar.bz2
@@ -43,6 +43,8 @@ REP_ENV_PKGSRC=
 .endif
 
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pangox-compat/buildlink3.mk"
 .include "../../lang/librep/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
