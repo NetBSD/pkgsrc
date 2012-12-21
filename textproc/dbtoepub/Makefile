@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/06/24 07:36:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/21 06:29:31 dholland Exp $
 #
 
 .include "../../textproc/docbook-xsl/Makefile.common"
 
 PKGNAME=	dbtoepub-${DISTNAME:S/docbook-xsl-//}
-PKGREVISION=	2
 COMMENT=	DocBook to epub converter
 
 DEPENDS+= \
