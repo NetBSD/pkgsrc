@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2009/07/07 22:00:07 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2012/12/21 10:29:46 dholland Exp $
+
+Configure for pkgsrc.
+DESTDIR support.
 
 --- Makefile.orig	Mon Apr 29 11:36:52 2002
 +++ Makefile	Mon Apr 29 11:42:53 2002

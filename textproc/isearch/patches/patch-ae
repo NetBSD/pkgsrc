@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2007/12/01 16:42:27 rillig Exp $
+$NetBSD: patch-ae,v 1.2 2012/12/21 10:29:46 dholland Exp $
+
+Remove illegal qualification.
 
 --- src/opstack.hxx.orig	1996-12-21 00:41:10.000000000 +0000
 +++ src/opstack.hxx	2007-12-01 16:38:59.000000000 +0000
