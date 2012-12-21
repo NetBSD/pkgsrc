@@ -1,0 +1,13 @@
+$NetBSD: patch-src_config.h.in,v 1.1 2012/12/21 15:06:31 joerg Exp $
+
+--- src/config.h.in.orig	2012-12-21 10:42:05.000000000 +0000
++++ src/config.h.in
+@@ -1066,7 +1066,7 @@ extern "C" {
+    Use `inline static' to define inline functions in .c files.
+    See the Internals manual for examples and more information. */
+ 
+-#if defined (__cplusplus) || ! defined (__GNUC__)
++#if 1
+ # define INLINE_HEADER inline static
+ #elif defined (DONT_EXTERN_INLINE_HEADER_FUNCTIONS)
+ # define INLINE_HEADER inline
