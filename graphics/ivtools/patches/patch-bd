@@ -1,4 +1,7 @@
-$NetBSD: patch-bd,v 1.3 2012/12/18 18:23:40 markd Exp $
+$NetBSD: patch-bd,v 1.4 2012/12/21 02:59:04 dholland Exp $
+
+Fix LP64 build. It is not clear that these casts are correct; on the
+other hand, it isn't clear if these code paths are ever used.
 
 --- src/Attribute/attrvalue.c.orig	2009-08-26 17:51:51.000000000 +0000
 +++ src/Attribute/attrvalue.c
@@ -19,3 +22,21 @@ $NetBSD: patch-bd,v 1.3 2012/12/18 18:23:40 markd Exp $
      case AttributeValue::StreamType:
  	return stream_mode() != 0;
      default:
+@@ -552,7 +553,7 @@ unsigned int AttributeValue::uint_val() 
+     case AttributeValue::SymbolType:
+ 	return (unsigned int) int_val();
+     case AttributeValue::ObjectType:
+-        return (unsigned int)obj_val();
++        return (unsigned int)(uintptr_t)obj_val();
+     default:
+ 	return 0;
+     }
+@@ -585,7 +586,7 @@ int AttributeValue::int_val() { 
+     case AttributeValue::SymbolType:
+ 	return int_ref();
+     case AttributeValue::ObjectType:
+-        return (int)obj_val();
++        return (int)(intptr_t)obj_val();
+     default:
+ 	return 0;
+     }
