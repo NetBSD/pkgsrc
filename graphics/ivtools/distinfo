@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2012/12/18 18:23:40 markd Exp $
+$NetBSD: distinfo,v 1.21 2012/12/21 02:59:04 dholland Exp $
 
 SHA1 (ivtools-1.2.8.tgz) = b494c726cf8784e0a5ca3a4092e5831d2d5b2bba
 RMD160 (ivtools-1.2.8.tgz) = 7f63f2b491202ba81c6d24234760d17d7f95ebc6
@@ -32,7 +32,7 @@ SHA1 (patch-az) = ec58b1583cf750031c848d0455250226f3d54d99
 SHA1 (patch-ba) = bcc98482672d9c1642dd108fbecec16627d43345
 SHA1 (patch-bb) = 8221a722579cc8921cd71e9ff8aedbf73a938e0b
 SHA1 (patch-bc) = be65c4c37689880cb66de15efd27ab2fa77d76d0
-SHA1 (patch-bd) = 7803f3d4dca0eeed2dbf4df3f55c81caf6970f1d
+SHA1 (patch-bd) = faf9683d941c342eb1ce70fff541e9b8f2034ba1
 SHA1 (patch-be) = 71397158e66fb694ad3482ab2c231daa26fa3631
 SHA1 (patch-bf) = 60e8f16226e526e75da80652aaeb11b7f51c30a9
 SHA1 (patch-bg) = 36113051de323a5483337b4821ffa1a8163f59bf
@@ -41,3 +41,6 @@ SHA1 (patch-bi) = 477ce54baeb05a4c383c26af696ce18c07085e60
 SHA1 (patch-bj) = d262c3a217b8f7838a08d6a0952417aeb3e525dd
 SHA1 (patch-bk) = 96edb15971da782c78fc2dd177bce5869cb68201
 SHA1 (patch-bl) = 807a2b860184e990fbf5afcebf4a161c4c614741
+SHA1 (patch-src_Attribute_attrvalue.h) = 97be293d03aa7f9da5e0ca90580d91a33e43d418
+SHA1 (patch-src_ComUtil_comutil.arg) = 8e36309f9f0f357f8f55572788595417de549ccf
+SHA1 (patch-src_ComUtil_symbols.c) = 69e7c2bc4f9863bc0d3c9ae5e9b97550619cfe16
