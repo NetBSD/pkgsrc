@@ -1,0 +1,17 @@
+$NetBSD: patch-src_ComUtil_comutil.arg,v 1.1 2012/12/21 02:58:55 dholland Exp $
+
+Silence extensive const warnings.
+
+--- src/ComUtil/comutil.arg~	2004-02-11 00:28:08.000000000 +0000
++++ src/ComUtil/comutil.arg
+@@ -6,8 +6,8 @@ int mblock_resize(int id,unsigned nel);
+ void *mblock_pntr(int id);
+ int mblock_sizes(int id,unsigned *nel,unsigned *size,unsigned long *nbytes);
+ /* SYMBOLS.C */
+-int symbol_add(char *string);
+-int symbol_find(char *string);
++int symbol_add(const char *string);
++int symbol_find(const char *string);
+ int symbol_del (int id);
+ int symbol_len (int id);
+ char *symbol_pntr(int id);
