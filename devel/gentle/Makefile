@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/12/21 01:16:50 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/21 01:26:34 dholland Exp $
 #
 
 DISTNAME=		gentle-97
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://gentle.compilertools.net/
 
@@ -13,12 +13,12 @@ COMMENT=		Gentle Compiler Construction System
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 USE_LIBTOOL=		yes
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin lib share/doc/gentle/html share/examples/gentle
 
 do-build:
-	(cd ${WRKSRC}/gentle ; LIBTOOL=${LIBTOOL} CC=${CC} ./build)
-	(cd ${WRKSRC}/lib ; LIBTOOL=${LIBTOOL} CC=${CC} ./build)
-	(cd ${WRKSRC}/reflex ; LIBTOOL=${LIBTOOL} CC=${CC} ./build)
+	(cd ${WRKSRC}/gentle && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} ./build)
+	(cd ${WRKSRC}/lib && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} ./build)
+	(cd ${WRKSRC}/reflex && LIBTOOL=${LIBTOOL:Q} CC=${CC:Q} ./build)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gentle/gentle ${DESTDIR}${PREFIX}/bin
@@ -27,22 +27,20 @@ do-install:
 		${DESTDIR}${PREFIX}/lib
 	${LIBTOOL} --mode=finish ${DESTDIR}${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/reflex/reflex ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/gentle/html
-	(for i in ${WRKSRC}/html/* ; do \
-		${INSTALL_DATA} $$i \
-			${DESTDIR}${PREFIX}/share/doc/html/gentle/html ; \
-	done)
+	set -e; for i in ${WRKSRC}/html/* ; do \
+		${INSTALL_DATA} "$$i" \
+			${DESTDIR}${PREFIX}/share/doc/gentle/html ; \
+	done
 	${INSTALL_DATA} ${WRKSRC}/BOOK.html \
-		${DESTDIR}${PREFIX}/share/doc/html/gentle
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/gentle
+		${DESTDIR}${PREFIX}/share/doc/gentle
 	${INSTALL_DATA} ${WRKSRC}/BOOK.ps ${DESTDIR}${PREFIX}/share/doc/gentle
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gentle
-	(for i in calc flat micro nested polish virtual ; do \
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gentle/$$i ; \
-	for j in ${WRKSRC}/examples/$$i/* ; do \
-	${INSTALL_DATA} $$j ${DESTDIR}${PREFIX}/share/examples/gentle/$$i ; \
-	done ; \
-	done)
+.for i in calc flat micro nested polish virtual
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gentle/${i}
+	set -e; for j in ${WRKSRC}/examples/${i}/* ; do \
+		${INSTALL_DATA} "$$j" \
+			${DESTDIR}${PREFIX}/share/examples/gentle/${i} ; \
+	done
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/examples/README \
 		${DESTDIR}${PREFIX}/share/examples/gentle
 
