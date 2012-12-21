@@ -1,13 +1,97 @@
-$NetBSD: patch-ab,v 1.1 2004/05/23 22:33:17 kristerw Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/21 10:29:46 dholland Exp $
 
---- src/string.cxx.orig	2004-05-24 00:25:54.000000000 +0200
-+++ src/string.cxx	2004-05-24 00:26:37.000000000 +0200
-@@ -574,7 +574,7 @@
+Chase after the C++ standard:
+   - use the newfangled names for C++ headers
+   - use "std" qualification
+   - string constants are const char *
+
+Use 0, not (char)NULL.
+
+--- src/string.cxx.orig	2000-10-31 06:22:09.000000000 +0000
++++ src/string.cxx
+@@ -42,17 +42,17 @@ Description:	Class STRING
+ Author:		Nassib Nassar, nrn@cnidr.org
+ @@@*/
+ 
+-#include <stdio.h>
+-#include <stdlib.h>
+-#include <string.h>
+-#include <fstream.h>
+-#include <ctype.h>
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
++#include <fstream>
++#include <cctype>
+ #include <sys/stat.h>
+ 
+ #ifdef UNIX
+ #include <unistd.h>
+ #include <sys/types.h>
+-#include <time.h>
++#include <ctime>
+ #endif
+ 
+ #include "common.hxx"
+@@ -573,13 +573,13 @@ STRING::Print(PFILE FilePointer) const {
+ 
  
  // can this be const STRING& ?
- ostream& operator<<(ostream& os, const STRING& str) {
+-ostream& operator<<(ostream& os, const STRING& str) {
 -  os.write(str.Buffer, str.Length);
++std::ostream& operator<<(std::ostream& os, const STRING& str) {
 +  os.write((const char*)str.Buffer, str.Length);
    return os;
  }
  
+ 
+-istream& operator>>(istream& is, STRING& str) {
++std::istream& operator>>(std::istream& is, STRING& str) {
+   CHR buf[256];
+   //  is >> buf;
+   is.getline(buf,255);
+@@ -1145,7 +1145,7 @@ STRING::XmlCleanup() {
+ }
+ */
+ 
+-char *translate[] = {
++const char *translate[] = {
+   NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 
+   NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+   NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+@@ -1179,7 +1179,7 @@ STRING::XmlCleanup() {
+   Replace("&apos;","\'");
+ 
+   newstr=transcode((CHR*)Buffer, translate);
+-  Length = BufferSize = 0; 
++  Length=  BufferSize = 0; 
+   Copy((UCHR*)newstr, strlen(newstr));		
+ 
+   delete [] newstr;
+@@ -1195,7 +1195,7 @@ STRING::XmlCleanup() {
+  *                   the buffer is 6 times the original string length
+  *             By John HLB Tyler (Credit please?)
+  */
+-char *transcode (char *buffer, char **transarray)
++char *transcode (char *buffer, const char **transarray)
+ {
+   char *obuf=buffer;            /* Beginning of old buffer */
+   char *obufscan=obuf;          /* Scanning point of old buffer */
+@@ -1203,7 +1203,7 @@ char *transcode (char *buffer, char **tr
+   char *nbuf;                   /* Pointer to start of new string buffer */
+   char *ipnt;                   /* Insertion point into new buffer */
+   char *maxipnt;                /* End of new buffer */
+-  char *rscan;                  /* Pointer to a character in the replacement */
++  const char *rscan;            /* Pointer to a character in the replacement */
+ 
+   nbuf = new char [lennbuf];     /* Pointer to start of new string buffer */
+   ipnt=nbuf;
+@@ -1215,7 +1215,7 @@ char *transcode (char *buffer, char **tr
+     if (transarray[*obufscan]) {
+       //Yes
+       for (rscan=transarray[*obufscan];
+-	   *rscan!=(char)NULL && ipnt<maxipnt; 
++	   *rscan!=0 && ipnt<maxipnt; 
+ 	   rscan++,ipnt++) {
+ 	// copy the replacement to the insertion point
+ 	*ipnt=*rscan;

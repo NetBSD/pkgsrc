@@ -1,8 +1,31 @@
-$NetBSD: patch-ac,v 1.1 2004/05/23 22:33:17 kristerw Exp $
+$NetBSD: patch-ac,v 1.2 2012/12/21 10:29:46 dholland Exp $
 
---- src/registry.cxx.orig	2004-05-24 00:24:41.000000000 +0200
-+++ src/registry.cxx	2004-05-24 00:25:10.000000000 +0200
-@@ -333,7 +333,7 @@
+Chase after the C++ standard:
+   - use the newfangled names for C++ headers
+   - open the std namespace instead of using explicit "std" qualification
+
+(don't know what the deal with REGISTRY::fprint is, XXX)
+
+--- src/registry.cxx.orig	2000-08-21 12:55:02.000000000 +0000
++++ src/registry.cxx
+@@ -40,11 +40,14 @@ Description:	Class REGISTRY - Structured
+ Author:		Nassib Nassar, nrn@cnidr.org
+ @@@*/
+ 
+-#include <fstream.h>
+-#include <stdlib.h>
++#include <fstream>
++#include <ostream>
++#include <cstdlib>
+ 
+ #include "registry.hxx"
+ 
++using namespace std;
++
+ 
+ REGISTRY::REGISTRY(const STRING& Title) {
+   Data = Title;
+@@ -333,7 +336,7 @@ void 
  REGISTRY::fprint(FILE* fp, const INT level) const 
  #else
  void 
