@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2008/09/07 06:41:44 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2012/12/21 04:06:45 dholland Exp $
 
---- configure~	2008-03-01 23:16:07.000000000 -0500
-+++ configure	2008-09-07 02:34:29.000000000 -0400
+- improve recognition of various host platforms
+- honor PTHREAD_LDFLAGS and PTHREAD_LIBS
+
+--- configure.orig	2008-03-02 04:16:07.000000000 +0000
++++ configure
 @@ -2549,17 +2549,25 @@ i[3456]86-*-darwin*) host_cpu=i386 host_
  arm*-*-darwin*) host_cpu=arm host_os=darwin libdl_needed=no ;;
  i386-*-openbsd*) host_os=bsd libdl_needed=no ;;
  i386-*-freebsd*) host_os=bsd libdl_needed=no ;;
-+i386-*-netbsd*) host_os=bsd libdl_needed=no ;;
++i[34]86-*-netbsd*) host_os=bsd libdl_needed=no ;;
 +i386-*-dragonfly*) host_os=bsd libdl_needed=no ;;
  x86_64-*-linux*) host_os=linux ;;
  hppa*-*-linux*) host_cpu=parisc host_os=linux ;;
