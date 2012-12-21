@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/06/25 08:52:17 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2012/12/21 00:10:59 schnoebe Exp $
 
 SHA1 (spectrum-1.4.8.tar.gz) = 9323f8f89eb1f84e36e1d64845741cbebbf0d249
 RMD160 (spectrum-1.4.8.tar.gz) = 859c1d0f6f1c4d535bbada13c1c11f2b4550805a
@@ -9,4 +9,6 @@ SHA1 (patch-spectrumctl_spectrum_env.py) = 0c266de23d0af8d317fcd4efdfec64bb85714
 SHA1 (patch-spectrumctl_spectrumctl.py) = 56166fa6477a3dba56b30501f2112cd6d21db40f
 SHA1 (patch-src_geventloop.h) = b28685cb69b9759ea3496e163d48de641a49eccb
 SHA1 (patch-src_spectrum_util.cpp) = 19201297fe085f093010346c8600399332a60265
+SHA1 (patch-src_statshandler.cpp) = 0748f6561a2ec8801ba22828722587e8c29054a3
 SHA1 (patch-src_transport.h) = 11c7541c8b41556cbaa7a0d99046dd4edc4293e0
+SHA1 (patch-src_utf8_checked.h) = aef4e9214e89b97c6dae2c56ea2ce934702d5ac8
