@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2006/10/14 02:24:46 rillig Exp $
+$NetBSD: patch-ab,v 1.7 2012/12/21 15:06:31 joerg Exp $
 
---- configure.orig	2006-05-16 06:16:04.000000000 +0200
-+++ configure	2006-10-14 04:23:09.000000000 +0200
+--- configure.orig	2006-05-16 04:16:04.000000000 +0000
++++ configure
 @@ -4415,7 +4415,7 @@ case "$ac_cv_build" in
      case "${ac_cv_build}" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
@@ -20,6 +20,24 @@ $NetBSD: patch-ab,v 1.6 2006/10/14 02:24:46 rillig Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
  
  if test "$GCC" = "yes"; then
+@@ -18572,7 +18572,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ #include <X11/Intrinsic.h>
+-    int main(int c, char *v) { return c>1 ? XlibSpecificationRelease : 0; }
++    int main(int c, char **v) { return c>1 ? XlibSpecificationRelease : 0; }
+ _ACEOF
+ rm -f conftest$ac_exeext
+ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+@@ -38829,7 +38829,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-int main(int c,char *v){return 0;}
++int main(int c,char **v){return 0;}
+ _ACEOF
+ rm -f conftest$ac_exeext
+ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
 @@ -39670,7 +39670,7 @@ fi
  if test "$have_vdb_mach" = yes ; then
    echo "  Using mach exception mechanism as vdb fault handler."
