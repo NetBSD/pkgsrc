@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/12 15:46:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2012/12/21 10:57:46 tron Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -749,12 +749,14 @@ share/drupal/modules/simpletest/tests/upgrade/drupal-6.trigger.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.user-no-password-token.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.user-password-token.database.php
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.aggregator.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.bare.minimal.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.bare.standard_all.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.field.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.filled.minimal.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.filled.standard_all.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.trigger.database.php
+share/drupal/modules/simpletest/tests/upgrade/update.aggregator.test
 share/drupal/modules/simpletest/tests/upgrade/update.field.test
 share/drupal/modules/simpletest/tests/upgrade/update.trigger.test
 share/drupal/modules/simpletest/tests/upgrade/update.user.test
@@ -938,7 +940,6 @@ share/drupal/scripts/generate-d7-content.sh
 share/drupal/scripts/password-hash.sh
 share/drupal/scripts/run-tests.sh
 share/drupal/scripts/test.script
-share/drupal/sites/all/README.txt
 share/drupal/themes/README.txt
 share/drupal/themes/bartik/bartik.info
 share/drupal/themes/bartik/color/base.png
