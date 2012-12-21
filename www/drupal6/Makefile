@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2012/06/25 09:00:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.37.4.1 2012/12/21 11:01:33 tron Exp $
 
-DISTNAME=	drupal-6.26
+DISTNAME=	drupal-6.27
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.5:../../graphics/php-gd
 
@@ -65,6 +63,9 @@ OWN_DIRS+=	share/drupal/profiles/default
 
 post-extract:
 	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
+
+pre-install:
+	${FIND} ${WRKSRC} -type f -name "*.orig" -exec ${RM} -f {} \;
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
