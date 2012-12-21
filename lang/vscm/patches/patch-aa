@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2011/04/17 07:46:05 asau Exp $
+$NetBSD: patch-aa,v 1.3 2012/12/21 04:23:45 dholland Exp $
 
---- Numeric.c.orig	1999-02-09 08:05:13.000000000 +0300
-+++ Numeric.c	2011-03-30 20:17:55.000000000 +0400
-@@ -591,7 +591,7 @@
+--- Numeric.c.orig	1999-02-09 05:05:13.000000000 +0000
++++ Numeric.c
+@@ -591,7 +591,7 @@ static int mul (bigdig *a, bigdig *b, bi
    return len;
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2011/04/17 07:46:05 asau Exp $
  {
    int i;
    bigreg d;
-@@ -1212,11 +1212,11 @@
+@@ -1212,11 +1212,11 @@ static void *
      (void) normalize (d, &ld, 0);
    } else if (gcd [0] != 1) {
      PROVIDE_BIGNUM (tmp_n, ln);
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.2 2011/04/17 07:46:05 asau Exp $
        --ld;
      d = tmp_d_dig;
    } else {
-@@ -1939,7 +1939,7 @@
+@@ -1939,7 +1939,7 @@ static void *fract_to_int (ScmFraction *
      PROVIDE_BIGNUM (tmp1, a->nlength);
      PROVIDE_BIGNUM (tmp2, 1);
      l1 = a->nlength;
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.2 2011/04/17 07:46:05 asau Exp $
      tmp2_dig [0] = rr;
      (void) normalize (tmp1_dig, &l1, 0);
      r = tmp2_dig;
-@@ -2407,7 +2407,7 @@
+@@ -2407,7 +2407,7 @@ static void raw_bigdig_to_ascii_10 (bigd
    bigdig_copy (a, tmp1_dig, la);
    s = strg;
    while (la > 1 || tmp1_dig [0] > 0) {
@@ -43,7 +43,16 @@ $NetBSD: patch-aa,v 1.2 2011/04/17 07:46:05 asau Exp $
        --la;
      sprintf (buf, "%04u", (unsigned) r);
      for (i = 3; i >= 0; i--)
-@@ -3312,7 +3312,7 @@
+@@ -3116,7 +3116,7 @@ void *ScmParseNumberString (const char *
+   provide_parse_buf (l);
+   s = parse_buf;
+   for (p = 0; p < l; p++)
+-    s [p] = tolower (arg [p]);
++    s [p] = tolower ((unsigned char) arg [p]);
+ 
+   /* scanning the prefix */
+   if (l > 1 && s [0] == '#') {
+@@ -3312,7 +3312,7 @@ static void big_small_qr (ScmFixnum *a, 
        PROVIDE_BIGNUM (tmp1, lq);
        qq = tmp1_dig;
      }
