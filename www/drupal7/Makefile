@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10.2.1 2012/10/19 16:49:41 tron Exp $
+# $NetBSD: Makefile,v 1.10.2.2 2012/12/21 10:57:46 tron Exp $
 
-DISTNAME=	drupal-7.16
+DISTNAME=	drupal-7.18
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
@@ -44,6 +42,10 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	scripts/drupal.sh scripts/password-hash.sh
+REPLACE_FILES.php+=	scripts/dump-database-d6.sh
+REPLACE_FILES.php+=	scripts/dump-database-d7.sh
+REPLACE_FILES.php+=	scripts/generate-d6-content.sh
+REPLACE_FILES.php+=	scripts/generate-d6-content.sh
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
@@ -52,7 +54,7 @@ SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
-INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites/all \
+INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites \
 			share/doc/drupal share/examples/drupal
 .for i in ${PAX_DIRS}
 INSTALLATION_DIRS+=	${DRUPAL}/${i}
@@ -65,8 +67,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${DRUPAL}
-	${INSTALL_DATA} ${WRKSRC}/sites/all/README.txt \
-		${DESTDIR}${PREFIX}/${DRUPAL}/sites/all
 	${INSTALL_DATA} ${WRKSRC}/drupal.conf \
 		${DESTDIR}${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/sites/default/default.settings.php \
