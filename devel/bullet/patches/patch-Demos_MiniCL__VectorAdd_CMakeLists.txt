@@ -1,0 +1,16 @@
+$NetBSD: patch-Demos_MiniCL__VectorAdd_CMakeLists.txt,v 1.1 2012/12/21 02:33:08 dholland Exp $
+
+Add missing internal library. I have no idea why this only causes
+this to break on i386 and not amd64; I blame libtool.
+
+--- Demos/MiniCL_VectorAdd/CMakeLists.txt~	2010-02-08 22:42:58.000000000 +0000
++++ Demos/MiniCL_VectorAdd/CMakeLists.txt
+@@ -6,7 +6,7 @@ ${BULLET_PHYSICS_SOURCE_DIR}/src 
+ )
+ 
+ LINK_LIBRARIES(
+- BulletMultiThreaded LinearMath 
++ BulletMultiThreaded BulletDynamics LinearMath 
+ )
+ 
+ ADD_EXECUTABLE(AppMiniCLVectorAdd
