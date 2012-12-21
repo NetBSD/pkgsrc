@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.40 2012/12/18 17:52:33 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.41 2012/12/21 11:04:23 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -127,3 +127,9 @@ Pullup ticket #3994 - requested by obache
 emulators/suse121_libxml2: security update
 Pullup ticket #3995 - requested by obache
 www/opera: security update
+Pullup ticket #3996 - requested by taca
+www/squid27: security patch
+Pullup ticket #3997 - requested by taca
+www/drupal7: security update
+Pullup ticket #3998 - requested by taca
+www/drupal6: security update
