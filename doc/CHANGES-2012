@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3988 2012/12/20 12:49:06 taca Exp $
+$NetBSD: CHANGES-2012,v 1.3989 2012/12/21 11:55:10 dholland Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6108,3 +6108,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed devel/guile16-gtk successor devel/guile-gtk [gdt 2012-12-20]
 	Updated www/drupal7 to 7.18 [taca 2012-12-20]
 	Updated www/drupal6 to 6.27 [taca 2012-12-20]
+	Updated sysutils/wbm-net to 1.600nb1 [dholland 2012-12-20]
+	Updated sysutils/wbm-useradmin to 1.600nb1 [dholland 2012-12-20]
+	Updated devel/gentle to 97nb2 [dholland 2012-12-21]
+	Updated lang/vscm to 1.4nb1 [dholland 2012-12-21]
+	Updated misc/dpkg to 1.16.3nb3 [dholland 2012-12-21]
+	Updated textproc/dbtoepub to 1.77.1 [dholland 2012-12-21]
+	Updated textproc/isearch to 1.47.01nb1 [dholland 2012-12-21]
+	Updated wm/sawfish to 1.7.1nb10 [dholland 2012-12-21]
