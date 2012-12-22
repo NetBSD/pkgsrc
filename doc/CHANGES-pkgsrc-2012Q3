@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.41 2012/12/21 11:04:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q3,v 1.1.2.42 2012/12/22 17:33:20 spz Exp $
 
 Changes to the packages collection and infrastructure in 2012Q3:
 
@@ -133,3 +133,5 @@ Pullup ticket #3997 - requested by taca
 www/drupal7: security update
 Pullup ticket #3998 - requested by taca
 www/drupal6: security update
+Pullup ticket #3992 - requested by tron
+www/squid31: security update
