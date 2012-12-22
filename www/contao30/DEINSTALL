@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1 2012/11/08 04:56:01 taca Exp $
+# $NetBSD: DEINSTALL,v 1.2 2012/12/22 13:52:27 taca Exp $
 
 CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
 CT_DIRS="assets system"
@@ -6,9 +6,9 @@ CT_DIRS="assets system"
 case ${STAGE} in
 DEINSTALL)
 	# remove cache files.
-	(cd ${CT_WEBDIR}/assets/css && rm -f *.css)
-	(cd ${CT_WEBDIR}/assets/js && rm -f *.js)
-	(cd ${CT_WEBDIR}/system/cache && rm -f *)
+	rm -f ${CT_WEBDIR}/assets/css/*.css
+	rm -f ${CT_WEBDIR}/assets/js/*.js
+	(cd ${CT_WEBDIR}/system/cache && rm -fr *)
 	(cd ${CT_WEBDIR}/system/tmp && rm -f *)
 	;;
 POST-DEINSTALL)
