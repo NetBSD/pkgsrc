@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/12/17 01:09:17 khorben Exp $
+$NetBSD: distinfo,v 1.2 2012/12/22 02:10:42 wiz Exp $
 
 SHA1 (sofia-sip-1.12.11.tar.gz) = fe11c98fae19cbdbd7e55876c5553c1f9a0c561d
 RMD160 (sofia-sip-1.12.11.tar.gz) = 0d398a03b8ca227c84d0909bb6f3d4fa1011cb08
 Size (sofia-sip-1.12.11.tar.gz) = 2927808 bytes
+SHA1 (patch-scripts_lcov-report) = 0a2e5037e1431ea855e1f042fd57b0f07f51300b
+SHA1 (patch-scripts_uncovered) = 849617364284eca3dec21ef39a8dfc5df822f607
