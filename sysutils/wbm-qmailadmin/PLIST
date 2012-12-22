@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:15:49 dholland Exp $
 share/examples/webmin/qmailadmin/config
 share/webmin/qmailadmin/CHANGELOG
 share/webmin/qmailadmin/autoreply.pl
@@ -8,10 +8,16 @@ share/webmin/qmailadmin/config
 share/webmin/qmailadmin/config-sol-linux
 share/webmin/qmailadmin/config.info
 share/webmin/qmailadmin/config.info.ca
+share/webmin/qmailadmin/config.info.ca.UTF-8
 share/webmin/qmailadmin/config.info.cz
+share/webmin/qmailadmin/config.info.cz.UTF-8
 share/webmin/qmailadmin/config.info.de
+share/webmin/qmailadmin/config.info.de.UTF-8
 share/webmin/qmailadmin/config.info.es
+share/webmin/qmailadmin/config.info.es.UTF-8
 share/webmin/qmailadmin/config.info.nl
+share/webmin/qmailadmin/config.info.nl.UTF-8
+share/webmin/qmailadmin/config.info.ru.UTF-8
 share/webmin/qmailadmin/config.info.ru_RU
 share/webmin/qmailadmin/config.info.ru_SU
 share/webmin/qmailadmin/config.info.uk_UA
@@ -50,12 +56,20 @@ share/webmin/qmailadmin/images/virts.gif
 share/webmin/qmailadmin/index.cgi
 share/webmin/qmailadmin/install_check.pl
 share/webmin/qmailadmin/lang/ca
+share/webmin/qmailadmin/lang/ca.UTF-8
 share/webmin/qmailadmin/lang/cz
+share/webmin/qmailadmin/lang/cz.UTF-8
 share/webmin/qmailadmin/lang/de
+share/webmin/qmailadmin/lang/de.UTF-8
 share/webmin/qmailadmin/lang/en
+share/webmin/qmailadmin/lang/en.UTF-8
 share/webmin/qmailadmin/lang/es
+share/webmin/qmailadmin/lang/es.UTF-8
 share/webmin/qmailadmin/lang/it
+share/webmin/qmailadmin/lang/it.UTF-8
 share/webmin/qmailadmin/lang/nl
+share/webmin/qmailadmin/lang/nl.UTF-8
+share/webmin/qmailadmin/lang/ru.UTF-8
 share/webmin/qmailadmin/lang/ru_RU
 share/webmin/qmailadmin/lang/ru_SU
 share/webmin/qmailadmin/lang/uk_UA
