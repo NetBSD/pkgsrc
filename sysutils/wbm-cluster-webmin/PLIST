@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/22 02:08:58 dholland Exp $
 share/examples/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/CHANGELOG
 share/webmin/cluster-webmin/add.cgi
@@ -6,12 +6,19 @@ share/webmin/cluster-webmin/cluster-webmin-lib.pl
 share/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/config.info
 share/webmin/cluster-webmin/config.info.ca
+share/webmin/cluster-webmin/config.info.ca.UTF-8
 share/webmin/cluster-webmin/config.info.cz
+share/webmin/cluster-webmin/config.info.cz.UTF-8
 share/webmin/cluster-webmin/config.info.de
+share/webmin/cluster-webmin/config.info.de.UTF-8
 share/webmin/cluster-webmin/config.info.es
+share/webmin/cluster-webmin/config.info.es.UTF-8
 share/webmin/cluster-webmin/config.info.fr
+share/webmin/cluster-webmin/config.info.fr.UTF-8
 share/webmin/cluster-webmin/config.info.hr
 share/webmin/cluster-webmin/config.info.nl
+share/webmin/cluster-webmin/config.info.nl.UTF-8
+share/webmin/cluster-webmin/config.info.no
 share/webmin/cluster-webmin/create_group.cgi
 share/webmin/cluster-webmin/create_user.cgi
 share/webmin/cluster-webmin/delete_group.cgi
@@ -25,20 +32,31 @@ share/webmin/cluster-webmin/edit_host.cgi
 share/webmin/cluster-webmin/edit_mod.cgi
 share/webmin/cluster-webmin/edit_user.cgi
 share/webmin/cluster-webmin/group_form.cgi
+share/webmin/cluster-webmin/help/intro.ca.UTF-8.html
 share/webmin/cluster-webmin/help/intro.ca.html
 share/webmin/cluster-webmin/help/intro.html
+share/webmin/cluster-webmin/help/intro.nl.UTF-8.html
+share/webmin/cluster-webmin/help/intro.nl.html
 share/webmin/cluster-webmin/images/icon.gif
 share/webmin/cluster-webmin/images/smallicon.gif
 share/webmin/cluster-webmin/index.cgi
 share/webmin/cluster-webmin/install.cgi
 share/webmin/cluster-webmin/lang/ca
+share/webmin/cluster-webmin/lang/ca.UTF-8
 share/webmin/cluster-webmin/lang/cz
+share/webmin/cluster-webmin/lang/cz.UTF-8
 share/webmin/cluster-webmin/lang/de
+share/webmin/cluster-webmin/lang/de.UTF-8
 share/webmin/cluster-webmin/lang/en
+share/webmin/cluster-webmin/lang/en.UTF-8
 share/webmin/cluster-webmin/lang/es
+share/webmin/cluster-webmin/lang/es.UTF-8
 share/webmin/cluster-webmin/lang/fr
+share/webmin/cluster-webmin/lang/fr.UTF-8
 share/webmin/cluster-webmin/lang/hr
 share/webmin/cluster-webmin/lang/nl
+share/webmin/cluster-webmin/lang/nl.UTF-8
+share/webmin/cluster-webmin/lang/no
 share/webmin/cluster-webmin/module.info
 share/webmin/cluster-webmin/refresh.cgi
 share/webmin/cluster-webmin/save_acl.cgi
