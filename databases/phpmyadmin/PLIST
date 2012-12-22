@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2012/10/17 18:35:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.32 2012/12/22 10:31:31 tron Exp $
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
 share/doc/phpmyadmin/LICENSE
@@ -968,6 +968,7 @@ share/phpmyadmin/transformation_overview.php
 share/phpmyadmin/transformation_wrapper.php
 share/phpmyadmin/url.php
 share/phpmyadmin/user_password.php
+share/phpmyadmin/version_check.php
 share/phpmyadmin/view_create.php
 share/phpmyadmin/view_operations.php
 share/phpmyadmin/webapp.php
