@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/12/07 01:46:35 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/22 23:34:21 dholland Exp $
 #
 
 DISTNAME=	clipit-1.4.2
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 
 USE_TOOLS+=	gmake
 USE_TOOLS+=	intltool
+USE_TOOLS+=	pkg-config
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
