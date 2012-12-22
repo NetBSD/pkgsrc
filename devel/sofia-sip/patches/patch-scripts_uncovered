@@ -1,0 +1,15 @@
+$NetBSD: patch-scripts_uncovered,v 1.1 2012/12/22 02:10:42 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- scripts/uncovered.orig	2011-03-11 14:49:19.000000000 +0000
++++ scripts/uncovered
+@@ -11,7 +11,7 @@
+ 
+ usage()
+ {
+-  test X$1 == X0 || exec >&2
++  test X$1 = X0 || exec >&2
+   cat <<EOF
+ usage: uncovered OPTIONS
+ where OPTIONS are
