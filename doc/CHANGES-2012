@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3990 2012/12/22 03:53:54 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.3991 2012/12/22 08:29:50 obache Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6154,3 +6154,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/wbm-telnet to 1.600nb1 [dholland 2012-12-22]
 	Updated sysutils/wbm-tunnel to 1.600nb1 [dholland 2012-12-22]
 	Updated sysutils/wbm-cluster-passwd to 1.600nb1 [dholland 2012-12-22]
+	Updated mail/milter-manager to 1.8.5 [obache 2012-12-22]

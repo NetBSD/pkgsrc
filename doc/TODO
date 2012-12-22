@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11775 2012/12/20 14:50:16 tron Exp $
+$NetBSD: TODO,v 1.11776 2012/12/22 08:29:51 obache Exp $
 
 Suggested new packages
 ======================
@@ -849,7 +849,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
 	o milter-greylist-4.4.1
-	o milter-manager-1.8.5
 	o mined-2012.22
 	o minivmac-3.2.3
 	o miredo-1.2.4
