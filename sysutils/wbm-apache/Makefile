@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:30 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/22 00:52:34 dholland Exp $
 
 WBM_NAME=	apache
+PKGREVISION=	1
 
 COMMENT=	Webmin module for configuring Apache servers
 
