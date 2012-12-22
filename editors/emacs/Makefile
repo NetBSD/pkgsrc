@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2012/12/22 10:34:20 tron Exp $
+# $NetBSD: Makefile,v 1.153 2012/12/22 10:45:13 tron Exp $
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -14,7 +14,7 @@ SUBST_FILES.prefix=	src/s/netbsd.h
 
 # Replace manual page which only includes another one with a symbolic link
 # if manual compression is activated. The manual page won't work otherwise.
-.ifdef(MANZ)
+.if defined(MANZ)
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/man/man1/ctags.1
 	${LN} -s etags.1 ${DESTDIR}${PREFIX}/man/man1/ctags.1
