@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/11/18 02:25:37 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/22 13:34:49 imil Exp $
 #
 
 IRCVERS=	3.4.2
@@ -15,9 +15,20 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/egg.mk"
+
+PLIST_VARS+=	requires
+.if ${PYVERSSUFFIX} == "2.5" || ${PYVERSSUFFIX} == "2.6"
+PLIST.requires=	yes
+.endif
+
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} ${SHAREMODE} irc.egg-info/*
 
+# for some reason, this package does not install egg infos
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/irc.egg-info/*		\
+		${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}
+
 .include "../../devel/py-hgtools/buildlink3.mk"
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
