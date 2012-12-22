@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2012/10/23 17:18:40 asau Exp $
+# $NetBSD: Makefile,v 1.93 2012/12/22 11:23:59 tron Exp $
 
 DISTNAME=	net-snmp-5.6.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
@@ -22,6 +22,9 @@ MAKE_JOBS_SAFE=	no
 .include "../../mk/bsd.prefs.mk"
 
 .include "options.mk"
+
+# Don't compress manual pages as they include each other.
+.undef MANZ
 
 .if ${OPSYS} == "DragonFly"
 MAKE_ENV+=	MIB_SYSTEM_LIBS=-lkinfo
