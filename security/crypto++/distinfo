@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.5 2012/04/17 17:46:30 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/12/22 02:29:36 joerg Exp $
 
 SHA1 (cryptopp552.zip) = 18efe451b3c682f40db75dc2b09cb448a835e7d6
 RMD160 (cryptopp552.zip) = 8929795b654d7186b2b38714d22a57ea01862dbd
 Size (cryptopp552.zip) = 992073 bytes
 SHA1 (patch-aa) = 777f0cec232cf696ea1a9dd04fa626f3e76442c1
+SHA1 (patch-algebra.cpp) = c2f915338c8fff332611d060a0fa38e1410c9e68
+SHA1 (patch-cryptlib.cpp) = 870d877c49e2e166046ede37855451c7094b5bb4
+SHA1 (patch-cryptlib.h) = 805d0404695f8ccde13eeeaf6a638f3611ef6650
+SHA1 (patch-eccrypto.cpp) = 5a35804b58b99d0d811e92f01c2350a6723443e1
+SHA1 (patch-eccrypto.h) = 8d2fe42a1cc1b4731fcd821b0b3a8a6ee59b1a32
 SHA1 (patch-panama.cpp) = 483b7153d3b5433b34981d7eb4895e37c7d9a1b7
 SHA1 (patch-secblock.h) = 5e0e3c5b48424e4232a88efc2244a9bd5df0fc5a
 SHA1 (patch-simple.h) = 1a268509a6bc96dcaa61e83cc2fcb7ed1f7eb180
