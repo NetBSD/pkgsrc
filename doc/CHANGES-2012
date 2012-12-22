@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3992 2012/12/22 08:35:46 obache Exp $
+$NetBSD: CHANGES-2012,v 1.3993 2012/12/22 08:41:48 obache Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6156,3 +6156,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/wbm-cluster-passwd to 1.600nb1 [dholland 2012-12-22]
 	Updated mail/milter-manager to 1.8.5 [obache 2012-12-22]
 	Updated devel/ruby-ole to 1.2.11.5 [obache 2012-12-22]
+	Updated inputmethod/ibus-chewing to 1.4.3 [obache 2012-12-22]
