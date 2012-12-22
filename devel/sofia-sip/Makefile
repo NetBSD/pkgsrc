@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/12/22 02:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/22 02:23:02 wiz Exp $
 #
 
 DISTNAME=	sofia-sip-1.12.11
@@ -16,6 +16,8 @@ USE_TOOLS+=	awk:run pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
+
+MAKE_JOBS_SAFE=	no
 
 SUBST_CLASSES+=	awk
 SUBST_FILES.awk+=	libsofia-sip-ua/msg/msg_parser.awk
