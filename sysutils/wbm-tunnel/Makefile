@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:34 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/22 02:21:42 dholland Exp $
 
 WBM_NAME=	tunnel
+PKGREVISION=	1
 
 COMMENT=	Webmin module to tunnel to another HTTP server
 
