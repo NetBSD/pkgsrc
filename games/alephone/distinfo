@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/12/12 10:22:37 wiz Exp $
+$NetBSD: distinfo,v 1.8 2012/12/22 20:01:02 joerg Exp $
 
 SHA1 (AlephOne-20120514.tar.bz2) = 6663237654a6fb9876254ea0f29cf264528b1da6
 RMD160 (AlephOne-20120514.tar.bz2) = eebeb14bbd43574530d67d0a48b0dde7b7db3edc
 Size (AlephOne-20120514.tar.bz2) = 4716348 bytes
+SHA1 (patch-Source__Files_Lua_lua__templates.h) = ee38b9aed311958750845e52ce2cb14969f2ee4e
