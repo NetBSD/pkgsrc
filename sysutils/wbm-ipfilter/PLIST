@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/12/22 01:49:16 dholland Exp $
 share/examples/webmin/ipfilter/config
 share/webmin/ipfilter/CHANGELOG
 share/webmin/ipfilter/apply.cgi
@@ -12,6 +12,11 @@ share/webmin/ipfilter/config-netbsd
 share/webmin/ipfilter/config-solaris-10-*
 share/webmin/ipfilter/config.info
 share/webmin/ipfilter/config.info.ca
+share/webmin/ipfilter/config.info.ca.UTF-8
+share/webmin/ipfilter/config.info.de
+share/webmin/ipfilter/config.info.de.UTF-8
+share/webmin/ipfilter/config.info.nl
+share/webmin/ipfilter/config.info.nl.UTF-8
 share/webmin/ipfilter/convert.cgi
 share/webmin/ipfilter/edit_nat.cgi
 share/webmin/ipfilter/edit_rule.cgi
@@ -26,7 +31,13 @@ share/webmin/ipfilter/index.cgi
 share/webmin/ipfilter/install_check.pl
 share/webmin/ipfilter/ipfilter-lib.pl
 share/webmin/ipfilter/lang/ca
+share/webmin/ipfilter/lang/ca.UTF-8
+share/webmin/ipfilter/lang/de
+share/webmin/ipfilter/lang/de.UTF-8
 share/webmin/ipfilter/lang/en
+share/webmin/ipfilter/lang/en.UTF-8
+share/webmin/ipfilter/lang/nl
+share/webmin/ipfilter/lang/nl.UTF-8
 share/webmin/ipfilter/log_parser.pl
 share/webmin/ipfilter/module.info
 share/webmin/ipfilter/move.cgi
