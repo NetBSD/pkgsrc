@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:33 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/22 02:18:28 dholland Exp $
 
 WBM_NAME=	status
+PKGREVISION=	1
 
 WBM_DEPEND_MODULES+=	mailboxes
 
