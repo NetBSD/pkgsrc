@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/17 00:59:54 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/22 02:23:02 wiz Exp $
 #
 
 DISTNAME=	Mailer-0.1.5
@@ -9,14 +9,15 @@ MASTER_SITES=	http://www.defora.org/os/download/download/3704/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS desktop e-mail client
-
 LICENSE=	gnu-gpl-v3
+
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
