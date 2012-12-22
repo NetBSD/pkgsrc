@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/12/22 01:49:21 dholland Exp $
 share/examples/webmin/passwd/config
 share/webmin/passwd/CHANGELOG
 share/webmin/passwd/acl_security.pl
@@ -17,9 +17,8 @@ share/webmin/passwd/config.info.fi
 share/webmin/passwd/config.info.fr
 share/webmin/passwd/config.info.hr
 share/webmin/passwd/config.info.hu
-share/webmin/passwd/config.info.ja_JP.UTF-8
+share/webmin/passwd/config.info.it
 share/webmin/passwd/config.info.ja_JP.euc
-share/webmin/passwd/config.info.ko_KR.UTF-8
 share/webmin/passwd/config.info.ko_KR.euc
 share/webmin/passwd/config.info.ms
 share/webmin/passwd/config.info.nl
@@ -30,9 +29,9 @@ share/webmin/passwd/config.info.ru_SU
 share/webmin/passwd/config.info.tr
 share/webmin/passwd/config.info.uk_UA
 share/webmin/passwd/config.info.zh_TW.Big5
-share/webmin/passwd/config.info.zh_TW.UTF-8
 share/webmin/passwd/defaultacl
 share/webmin/passwd/edit_passwd.cgi
+share/webmin/passwd/images/.xvpics/icon.gif
 share/webmin/passwd/images/icon.gif
 share/webmin/passwd/images/smallicon.gif
 share/webmin/passwd/index.cgi
@@ -49,9 +48,7 @@ share/webmin/passwd/lang/fr
 share/webmin/passwd/lang/hr
 share/webmin/passwd/lang/hu
 share/webmin/passwd/lang/it
-share/webmin/passwd/lang/ja_JP.UTF-8
 share/webmin/passwd/lang/ja_JP.euc
-share/webmin/passwd/lang/ko_KR.UTF-8
 share/webmin/passwd/lang/ko_KR.euc
 share/webmin/passwd/lang/ms
 share/webmin/passwd/lang/nl
@@ -64,9 +61,7 @@ share/webmin/passwd/lang/sk
 share/webmin/passwd/lang/tr
 share/webmin/passwd/lang/uk_UA
 share/webmin/passwd/lang/zh_CN
-share/webmin/passwd/lang/zh_CN.UTF-8
 share/webmin/passwd/lang/zh_TW.Big5
-share/webmin/passwd/lang/zh_TW.UTF-8
 share/webmin/passwd/log_parser.pl
 share/webmin/passwd/module.info
 share/webmin/passwd/passwd-lib.pl
