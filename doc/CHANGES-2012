@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.3997 2012/12/22 10:56:36 tron Exp $
+$NetBSD: CHANGES-2012,v 1.3998 2012/12/22 11:16:43 tron Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6161,3 +6161,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/phpmyadmin to 3.5.5 [tron 2012-12-22]
 	Updated editors/emacs to 23.4nb10 [tron 2012-12-22]
 	Updated databases/mysql55-client to 5.5.28nb2 [tron 2012-12-22]
+	Updated x11/motif to 2.3.4nb1 [tron 2012-12-22]
