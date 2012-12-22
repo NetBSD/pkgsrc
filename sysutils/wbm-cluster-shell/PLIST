@@ -1,19 +1,30 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/22 02:06:58 dholland Exp $
 share/examples/webmin/cluster-shell/config
 share/webmin/cluster-shell/cluster-shell-lib.pl
+share/webmin/cluster-shell/help/intro.de.UTF-8.html
 share/webmin/cluster-shell/help/intro.de.html
 share/webmin/cluster-shell/help/intro.html
+share/webmin/cluster-shell/help/intro.nl.UTF-8.html
+share/webmin/cluster-shell/help/intro.nl.html
 share/webmin/cluster-shell/images/icon.gif
 share/webmin/cluster-shell/images/smallicon.gif
 share/webmin/cluster-shell/index.cgi
 share/webmin/cluster-shell/lang/ca
+share/webmin/cluster-shell/lang/ca.UTF-8
 share/webmin/cluster-shell/lang/cz
+share/webmin/cluster-shell/lang/cz.UTF-8
 share/webmin/cluster-shell/lang/de
+share/webmin/cluster-shell/lang/de.UTF-8
 share/webmin/cluster-shell/lang/en
+share/webmin/cluster-shell/lang/en.UTF-8
 share/webmin/cluster-shell/lang/es
+share/webmin/cluster-shell/lang/es.UTF-8
 share/webmin/cluster-shell/lang/fr
+share/webmin/cluster-shell/lang/fr.UTF-8
 share/webmin/cluster-shell/lang/hr
 share/webmin/cluster-shell/lang/nl
+share/webmin/cluster-shell/lang/nl.UTF-8
+share/webmin/cluster-shell/lang/no
 share/webmin/cluster-shell/log_parser.pl
 share/webmin/cluster-shell/module.info
 share/webmin/cluster-shell/run.cgi
