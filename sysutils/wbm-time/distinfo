@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2012/11/20 20:01:46 morr Exp $
+$NetBSD: distinfo,v 1.9 2012/12/22 01:34:25 dholland Exp $
 
 SHA1 (webmin-1.600.tar.gz) = b915b7127a9579cac8993c4ef54462dfa404bf64
 RMD160 (webmin-1.600.tar.gz) = 33f0c67b47bc7db625fc66b85ee1872e77f32ad5
 Size (webmin-1.600.tar.gz) = 21397348 bytes
-SHA1 (patch-aa) = 1a89fbe60b89e65dab23d903bd2b05a38c70fc7c
+SHA1 (patch-aa) = 274574a41c77b636efb99143a3a2b22c99f0ce90

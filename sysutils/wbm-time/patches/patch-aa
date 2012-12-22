@@ -1,11 +1,15 @@
---- time/module.info.orig	2009-03-18 07:30:39.000000000 +0200
-+++ time/module.info	2009-05-17 17:39:52.000000000 +0300
-@@ -27,7 +27,7 @@
+$NetBSD: patch-aa,v 1.5 2012/12/22 01:34:25 dholland Exp $
+
+Fix typo.
+
+--- time/module.info.orig	2012-09-21 18:09:15.000000000 +0000
++++ time/module.info
+@@ -33,7 +33,7 @@ desc_hu=Rendszeridı
  novserver=1
  desc_zh_TW.UTF-8=Á≥ªÁµ±ÊôÇÈñì
- version=1.470
+ version=1.600
 -longdesc=Set the sytem and hardware time either manually or from a time server.
 +longdesc=Set the system and hardware time either manually or from a time server.
  desc_ru_SU=Û…”‘≈ÕŒœ≈ ◊“≈Õ—
+ desc_ru.UTF-8=–°–∏—Å—Ç–µ–º–Ω–æ–µ –≤—Ä–µ–º—è
  desc_ko_KR.euc=Ω√Ω∫≈€ Ω√∞£
- depends=cron 1.470
