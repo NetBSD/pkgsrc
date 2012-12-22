@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:13:39 dholland Exp $
 share/examples/webmin/openslp/config
 share/webmin/openslp/README
 share/webmin/openslp/backup_config.pl
@@ -9,6 +9,7 @@ share/webmin/openslp/config-mandrake-linux
 share/webmin/openslp/config-msc-linux
 share/webmin/openslp/config-open-linux
 share/webmin/openslp/config-openmamba-linux
+share/webmin/openslp/config-pardus-linux
 share/webmin/openslp/config-redhat-linux
 share/webmin/openslp/config-suse-linux
 share/webmin/openslp/config-trustix-linux
@@ -16,9 +17,17 @@ share/webmin/openslp/config-turbo-linux
 share/webmin/openslp/config-united-linux
 share/webmin/openslp/config.info
 share/webmin/openslp/config.info.ca
+share/webmin/openslp/config.info.ca.UTF-8
 share/webmin/openslp/config.info.cz
+share/webmin/openslp/config.info.cz.UTF-8
+share/webmin/openslp/config.info.de
+share/webmin/openslp/config.info.de.UTF-8
 share/webmin/openslp/config.info.ms
+share/webmin/openslp/config.info.ms.UTF-8
 share/webmin/openslp/config.info.nl
+share/webmin/openslp/config.info.nl.UTF-8
+share/webmin/openslp/config.info.no
+share/webmin/openslp/config.info.ru.UTF-8
 share/webmin/openslp/config.info.ru_RU
 share/webmin/openslp/config.info.ru_SU
 share/webmin/openslp/config.info.uk_UA
@@ -26,8 +35,11 @@ share/webmin/openslp/edit_dacfg.cgi
 share/webmin/openslp/edit_log.cgi
 share/webmin/openslp/edit_netcfg.cgi
 share/webmin/openslp/edit_snda.cgi
+share/webmin/openslp/help/english.ca.UTF-8.html
 share/webmin/openslp/help/english.ca.html
 share/webmin/openslp/help/english.html
+share/webmin/openslp/help/english.nl.UTF-8.html
+share/webmin/openslp/help/english.nl.html
 share/webmin/openslp/images/dacfg.gif
 share/webmin/openslp/images/icon.gif
 share/webmin/openslp/images/log.gif
@@ -37,10 +49,19 @@ share/webmin/openslp/images/snda.gif
 share/webmin/openslp/index.cgi
 share/webmin/openslp/install_check.pl
 share/webmin/openslp/lang/ca
+share/webmin/openslp/lang/ca.UTF-8
 share/webmin/openslp/lang/cz
+share/webmin/openslp/lang/cz.UTF-8
+share/webmin/openslp/lang/de
+share/webmin/openslp/lang/de.UTF-8
 share/webmin/openslp/lang/en
+share/webmin/openslp/lang/en.UTF-8
 share/webmin/openslp/lang/ms
+share/webmin/openslp/lang/ms.UTF-8
 share/webmin/openslp/lang/nl
+share/webmin/openslp/lang/nl.UTF-8
+share/webmin/openslp/lang/no
+share/webmin/openslp/lang/ru.UTF-8
 share/webmin/openslp/lang/ru_RU
 share/webmin/openslp/lang/ru_SU
 share/webmin/openslp/lang/uk_UA
