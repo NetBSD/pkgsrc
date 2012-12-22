@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.8 2008/10/15 08:21:23 markd Exp $
+$NetBSD: distinfo,v 1.9 2012/12/22 02:31:33 joerg Exp $
 
 SHA1 (krusader-1.90.0.tar.gz) = 96b490d27a55e9502a427764284f56135c5ae617
 RMD160 (krusader-1.90.0.tar.gz) = 9e6b089f2baf02be1108f07bfa85c214c175419a
 Size (krusader-1.90.0.tar.gz) = 4784153 bytes
+SHA1 (patch-krusader_Dialogs_checksumdlg.cpp) = d4c5bbdbfb3b1a43f048ee965e5056a08645a632
+SHA1 (patch-krusader_Konfigurator_kgstartup.cpp) = f7fec960e9c21744c0eb34efba5aa49fb5aab6ca
+SHA1 (patch-krusader_Panel_krview.h) = 0425ea8c9b17e718f9a7885d84a59afe066a42ab
+SHA1 (patch-krusader_UserAction_tstring.h) = 17bd2a46ba04db42c119ac766422e35971d9f9de
+SHA1 (patch-krusader_VFS_temp__vfs.cpp) = 7bbec468aa064b609be324361b3e8cf1e88cb090
+SHA1 (patch-krusader_VFS_temp__vfs.h) = d9b2fbf8797cbbc8f9b42d7d0438030f5c86f6d8
