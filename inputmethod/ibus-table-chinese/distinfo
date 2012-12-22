@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2012/09/10 11:53:40 obache Exp $
+$NetBSD: distinfo,v 1.8 2012/12/22 08:58:14 obache Exp $
 
-SHA1 (ibus-table-chinese-1.4.0-Source.tar.gz) = 4c9ef365abfec34b93bfa033ae36d18de426b049
-RMD160 (ibus-table-chinese-1.4.0-Source.tar.gz) = fbbe6ce10d5f85570151a0cd7a3821c1248d586e
-Size (ibus-table-chinese-1.4.0-Source.tar.gz) = 10553832 bytes
+SHA1 (ibus-table-chinese-1.4.6-Source.tar.gz) = c0777087b81a29bc32c86838d214ce31ce3424f6
+RMD160 (ibus-table-chinese-1.4.6-Source.tar.gz) = 6915ca3680e96bdb900b159fef18ec1612f625a7
+Size (ibus-table-chinese-1.4.6-Source.tar.gz) = 7604868 bytes
 SHA1 (patch-Modules_DateTimeFormat.cmake) = 7d9cfde41f39efe7ab2f0cf7ffb6d21a4ff4ce2a
 SHA1 (patch-ab) = cd75ce5cbad9610607cfa5f68fec245a139f8b6b
 SHA1 (patch-ac) = 6691cde876c3cfa64c1790294a6660b18f986d03
-SHA1 (patch-tables_array_CMakeLists.txt) = 045cd78ca1a16c87d2e6a5ef495f10bfcaf8c494
+SHA1 (patch-tables_array_CMakeLists.txt) = d4c441e74314731305b66843cdadd16e2edd4281
