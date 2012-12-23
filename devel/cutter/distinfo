@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/08/19 07:44:01 obache Exp $
+$NetBSD: distinfo,v 1.8 2012/12/23 07:46:25 obache Exp $
 
-SHA1 (cutter-1.2.1.tar.gz) = 661cf983802a0e90eb04862f68d698b3017a538b
-RMD160 (cutter-1.2.1.tar.gz) = ffb92575d476cec47fc53502c12d599a8d606465
-Size (cutter-1.2.1.tar.gz) = 2594336 bytes
+SHA1 (cutter-1.2.2.tar.gz) = ce33471d343af21488ad0f36c8ed4f4ab3f6cd72
+RMD160 (cutter-1.2.2.tar.gz) = 9a585e71038567cd338f629bdb267041db7738d2
+Size (cutter-1.2.2.tar.gz) = 2625075 bytes
