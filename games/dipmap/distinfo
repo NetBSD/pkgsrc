@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2011/12/06 19:55:43 joerg Exp $
+$NetBSD: distinfo,v 1.5 2012/12/23 18:43:47 dholland Exp $
 
 SHA1 (mapit.v1-16.tar.Z) = 0715439353072e8ea08e8271c911f73939868842
 RMD160 (mapit.v1-16.tar.Z) = 928462c07dfe5fa6cf874bb8c50e36009c43f214
 Size (mapit.v1-16.tar.Z) = 579397 bytes
 SHA1 (patch-aa) = 7be14124ac761dd838815baedad662f62c74d3a8
 SHA1 (patch-ab) = 4e01fb1ab78040917b2c7716cc890ebba9c8d180
-SHA1 (patch-ac) = df860cf822227b33d02df1574243a9f6a1a3ed32
-SHA1 (patch-strrstr.c) = d44e717c41e012a958d36c29c568d54d49329c52
+SHA1 (patch-ac) = 3a2e855f11a7c20957457e55b0582b6f6546c657
+SHA1 (patch-strrstr.c) = 067c8ae08efa5815b950897480b02157e6164956
