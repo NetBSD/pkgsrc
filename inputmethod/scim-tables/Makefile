@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 23:01:56 adam Exp $
+# $NetBSD: Makefile,v 1.18 2012/12/23 06:37:30 obache Exp $
 #
 
-DISTNAME=		scim-tables-0.5.11
-PKGREVISION=		4
+DISTNAME=		scim-tables-0.5.12
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
@@ -14,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		intltool msgfmt pkg-config gmake
 GNU_CONFIGURE=		yes
 
 USE_SCIM_GTKUTILS=	yes
