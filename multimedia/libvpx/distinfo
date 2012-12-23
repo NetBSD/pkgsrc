@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2012/05/22 20:42:57 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2012/12/23 10:33:33 ryoon Exp $
 
 SHA1 (libvpx-v1.1.0.tar.bz2) = 356af5f770c50cd021c60863203d8f30164f6021
 RMD160 (libvpx-v1.1.0.tar.bz2) = 6f462c1421a51af77d3401ea4c1eaf0dbeaf4791
@@ -6,6 +6,6 @@ Size (libvpx-v1.1.0.tar.bz2) = 1653485 bytes
 SHA1 (patch-aa) = 088d405d598800d4587eb20647347db1490a29f2
 SHA1 (patch-ab) = 468131a66c39d9b42080e62f6afa7cfd3657609b
 SHA1 (patch-ac) = e177ad5416b50b75fe026377d8033032e0ca63c3
-SHA1 (patch-ad) = d75f2ec3ed5886bc7080843ab71c889582ea3c0a
+SHA1 (patch-ad) = b8f64861bd03599bcc1db52ea970d8eb20331a33
 SHA1 (patch-af) = 01ad55ae9a30c079267b7a7af6b644d56a3e57e3
 SHA1 (patch-configure) = 72587d9f326040dd50b55e8ea086a05713533cbe
