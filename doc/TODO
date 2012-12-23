@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11779 2012/12/23 07:46:41 obache Exp $
+$NetBSD: TODO,v 1.11780 2012/12/23 15:58:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o binutils-2.23.1
 	o bioperl-1.5.0
 	o bitlbee-3.0.6
-	o blender-2.65
+	o blender-2.65a
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -466,6 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clutter-1.12.2
 	o clutter-gst-1.6.0
 	o cmus-2.5.0
+	o coccigrep-1.12
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o connect-1.96
@@ -606,6 +607,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdsreader-0.3.2
 	o geany-1.22
 	o gedit-plugins-2.32.0 [GNOME 2.32]
+	o genius-1.0.16
 	o gentoo-0.19.13
 	o gfract-0.33
 	o ghc-7.6
@@ -619,7 +621,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.3 [GNOME 2.34]
 	o glade3-3.14.2
 	o gle-4.2.4
+	o global-6.2.7
 	o glom-1.14.2 [GNOME 2.26]
+	o gmp-5.1.0
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.6.1
@@ -650,7 +654,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.2
 	o gnuchess-6.0.1
+	o gnupg-1.4.13
 	o gnutls-3.1.4 [needs nettle-2.5]
+	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -665,6 +671,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grhino-0.16.1
 	o groff-1.21
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
+	o gsed-4.2.2
 	o gss-1.0.2
 	o gthumb-3.0.2
 	o gtick-0.4.2
@@ -791,7 +798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblbxutil-1.1.0
 	o libltdl-2.4.2
 	o libmcs-0.7.2
-	o libmemcached-1.0.14
+	o libmemcached-1.0.15
 	o libmms-0.6.2
 	o libmilter-8.14.5
 	o libnasl-2.3.1
@@ -929,6 +936,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openssl-1.0.0d [pkg/44717]
 	o openssl-1.0.1c
 	o openttd-1.2.3
+	o opera-12.12
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
@@ -962,6 +970,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-5.3.20
 	o php-5.4.10
 	o php-jpgraph-3.0.6
+	o phpmyadmin-3.5.5
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -993,6 +1002,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o psmisc-22.18
 	o pstoedit-3.61
 	o puf-1.0.0
+	o pulseaudio-3.0
 	o puppet-2.7.6
 	o puzzle-9173
 	o puzzles-9712
@@ -1018,6 +1028,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qemu-1.3.0
 	o qnetwalk-1.3
 	o qt4-qscintilla-2.7
+	o qt5-libs-5.0.0
 	o quilt-0.60
 	o qvplay-0.95
 	o racket-5.3.1
@@ -1125,6 +1136,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o taskjuggler-3.3.0
+	o tcl-8.6
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
@@ -1133,7 +1145,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-33.4.0
+	o tea-33.4.1
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.6
@@ -1147,6 +1159,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.19
+	o tk-8.6
 	o tkcvs-8.2.3
 	o tkdiff-4.2
 	o tkgate-1.8.7
@@ -1204,7 +1217,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wine-devel-1.5.19 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wine-devel-1.5.20 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1246,7 +1259,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-i128-1.3.6
 	o xf86-video-i740-1.3.4
 	o xf86-video-intel-2.20.16
-	o xf86-video-mach64-6.9.3
+	o xf86-video-mach64-6.9.4
 	o xf86-video-mga-1.6.2
 	o xf86-video-neomagic-1.2.7
 	o xf86-video-newport-0.2.4 [unpackaged]
