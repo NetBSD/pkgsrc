@@ -1,4 +1,6 @@
-$NetBSD: patch-src_dict.h,v 1.1 2012/12/22 20:03:47 joerg Exp $
+$NetBSD: patch-src_dict.h,v 1.2 2012/12/23 03:23:20 dholland Exp $
+
+Pick up make_pair from the correct namespace; fixes clang build.
 
 --- src/dict.h.orig	2012-12-22 19:19:36.000000000 +0000
 +++ src/dict.h
