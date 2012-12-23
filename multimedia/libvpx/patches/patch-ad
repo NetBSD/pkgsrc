@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2012/05/22 20:42:58 ryoon Exp $
+$NetBSD: patch-ad,v 1.8 2012/12/23 10:33:34 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -24,7 +24,20 @@ Add another SDK path on Mac OS X.
                  done
              fi
              ;;
-@@ -1082,10 +1085,29 @@ EOF
+@@ -890,12 +893,9 @@ process_common_toolchain() {
+         esac
+     ;;
+     mips*)
+-        CROSS=${CROSS:-mipsel-linux-uclibc-}
+         link_with_cc=gcc
+         setup_gnu_toolchain
+         tune_cflags="-mtune="
+-        check_add_cflags -march=${tgt_isa}
+-    check_add_asflags -march=${tgt_isa}
+     check_add_asflags -KPIC
+     ;;
+     ppc*)
+@@ -1082,10 +1082,29 @@ EOF
          case ${toolchain} in
              *-win*);;
              *-android-gcc);;
