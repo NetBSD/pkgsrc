@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/11/23 05:34:53 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/23 07:09:36 obache Exp $
 
-DISTNAME=	twitter_oauth-0.4.3
-PKGREVISION=	1
+DISTNAME=	twitter_oauth-0.4.4
 CATEGORIES=	security
 
 MAINTAINER=	obache@NetBSD.org
