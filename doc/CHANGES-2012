@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4005 2012/12/23 10:34:39 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.4006 2012/12/23 12:35:31 ryoon Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6169,3 +6169,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ruby-twitter_oauth to 0.4.4 [obache 2012-12-23]
 	Updated devel/cutter to 1.2.2 [obache 2012-12-23]
 	Updated multimedia/libvpx to 1.1.0nb2 [ryoon 2012-12-23]
+	Updated www/php-owncloud to 4.5.5 [ryoon 2012-12-23]
