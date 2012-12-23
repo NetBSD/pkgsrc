@@ -1,26 +1,114 @@
-$NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2012/12/23 18:43:47 dholland Exp $
+
+- use standard headers
+- declare functions before calling them
+- use c89 function declarations
+- give functions return types, including sometimes "void"
+- silence clang and gcc warnings about assignments inside conditionals
+- silence clang warnings about braces
+- silence gcc warnings about unused/uninitialized variables
+- fix insecure-temporary-files
+- use snprintf() instead of sprintf()
+- call free() correctly
+- call qsort() correctly
+- pass gcc -Wall -Werror (with gcc 4.5)
+
 
 --- mapit.c.orig	1998-03-13 19:38:03.000000000 +0000
 +++ mapit.c
-@@ -148,8 +148,8 @@
- 
+@@ -149,11 +149,18 @@
    fix parse_status to handle retreat with mutilple alternate destinations
  */
--#ifdef MACINTOSH
- #include <stdlib.h>
-+#ifdef MACINTOSH
+ #ifdef MACINTOSH
+-#include <stdlib.h>
  #include <console.h>
  #include <Files.h>
++#else
++#include <unistd.h>
  #endif
-@@ -229,6 +229,7 @@ main(argc,argv)
-   char *p0,*p1;                 /* and character pointers */
+ 
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <ctype.h>
++
++
+ #ifdef STRDUP_MISSING
+ #ifdef ANSI
+ char *strdup(char *s1);
+@@ -162,7 +169,7 @@ char *strdup();
+ #endif
+ #endif
+ 
+-#ifdef STRRSTR_MISSING
++#ifdef STRSTR_MISSING
+ #ifdef ANSI
+ char *strrstr(char *s1,char *s2);
+ #else
+@@ -170,11 +177,13 @@ char *strrstr();
+ #endif
+ #endif
+ 
+-#include <stdio.h>
+-#include <string.h>
+-#include <ctype.h>
+-
+-extern char *strstr();
++#ifdef STRRSTR_MISSING
++#ifdef ANSI
++char *strrstr(char *s1,char *s2);
++#else
++char *strrstr();
++#endif
++#endif
+ 
+ 
+ #define MIN(x,y) (x<y?x:y)
+@@ -211,10 +220,27 @@ int ownernum;
+ 
+ char *info_file,*ps_file;
+ 
++static void parse_movement(void);
++static void parse_adjustment(void);
++static void parse_retreat(void);
++static void parse_fall_report(void);
++static void parse_start(int report);
++static int moveto(char *s);
++static void drawmap(char *title, char *message);
++static void drawnew(void);
++static void copyline(char *s1, const char *s2);
++static int string_check(const char *s, int fatal);
++static int init(void);
++static int mapi(char *name);
++static void StartPage(void);
++static void EndPage(void);
++static void EndDocument(void);
++static int same_owner(char *c1, char *c2);
++static int countrynum(char *country);
++static int ownerlookup(char *country);
+ 
+-main(argc,argv)
+-     int argc;
+-     char **argv;
++int
++main(int argc, char **argv)
+ {
+   /* input line, current season, year, and game name */
+   char line[BUFSIZ],copy[BUFSIZ],season[BUFSIZ], name[BUFSIZ];
+@@ -225,10 +251,10 @@ main(argc,argv)
+   char defmsg[BUFSIZ];          /* default message from command line */
+   int usemsg,usetitle;          /* true if we should use the command line value */
+   int onlystatus;		/* true is we want only the status map */
+-  int i,j,k;                    /* misc counters */
+-  char *p0,*p1;                 /* and character pointers */
++  int i,j;                      /* misc counters */
    int started;                  /* is a map already started? */
    int report;                   /* type of report */
-+  int fd;			/* file descriptor for output file */
++  int fd=-1;			/* file descriptor for output file */
  
    extern char *optarg;          /* used by getopt() */
    extern int optind;
-@@ -318,8 +319,8 @@ main(argc,argv)
+@@ -318,8 +344,8 @@ main(argc,argv)
      }
  
    if (new_borders) {            /* We'll need a temporary file */
@@ -31,16 +119,74 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
        fprintf(stderr, "Unable to open file..\n");
    }   
     
-@@ -511,7 +512,7 @@ main(argc,argv)
+@@ -389,7 +415,7 @@ main(argc,argv)
+     j = sscanf(&line[i]," for %s of %d. (%[^.])",
+                season, &year, name);
+     if (j == 3)                 /* yup, create title from it */
+-      sprintf(title,"%s, %s %d", name, season, year);
++      snprintf(title, sizeof(title), "%s, %s %d", name, season, year);
+     else {
+       season[0] = '\0';
+       strcpy(title,deftitle);
+@@ -483,7 +509,7 @@ main(argc,argv)
+       ++year;
+     }
+     if (season[0])
+-      sprintf(title,"%s, %s %d", name, season, year);
++      snprintf(title, sizeof(title), "%s, %s %d", name, season, year);
+     else
+       strcpy(title,deftitle);
+     StartPage();
+@@ -504,14 +530,16 @@ main(argc,argv)
+ 	  ownerlist[countrynum(map[i].nick)] = ownerlist[countrynum(map[i].owner)]; 
+     
+     /* Handle multiple coasts */
+-    for(i = 0; i < mapcount; ++i)  
+-      if(countrynum(map[i].nick) == countrynum(map[i+1].nick))
++    for (i = 0; i < mapcount; ++i) {
++      if(countrynum(map[i].nick) == countrynum(map[i+1].nick)) {
+ 	if(ownerlist[i+1] > ownerlist[i])
+ 	  ownerlist[i] = ownerlist[i+1];
  	else
  	  ownerlist[i+1] = ownerlist[i];
++      }
++    }
      
 -    if(!(nstdout = fopen(tempfilename, "r")))
 +    if(!(nstdout = fdopen(fd, "r")))
        fprintf(stderr,"Unable to reopen file.\n");
      else {
        while(fgets(line, BUFSIZ, nstdout))
-@@ -592,8 +593,7 @@ parse_movement()
+@@ -532,6 +560,7 @@ main(argc,argv)
+       remove(tempfilename);
+     }
+   }
++  return 0;
+ }
+ 
+ 
+@@ -555,12 +584,13 @@ main(argc,argv)
+   
+   location      nick | full_name
+ */
+-parse_movement()
++static void
++parse_movement(void)
+ {
+   char line[BUFSIZ];            /* the current order being processed */
+   char copy[BUFSIZ];            /* a temp copy */
+   char *p0,*p1,*p2, *p3;        /* some char pointers */
+-  int i,j,k;                    /* misc counters */
++  int i;                        /* misc counters */
+ 
+   char country[BUFSIZ];
+   char country2[BUFSIZ];
+@@ -587,13 +617,11 @@ parse_movement()
+ 
+   char *msg;                    /* current bouce/cut message */
+   int fail;                     /* flag to indicate success of order */
+-  int x,y;                      /* map coordinate of support/convoy arrow */
+ 
    int error;                    /* true if a syntax (or malloc) error */
  
    for (i=0; i<unitcount; ++i) {
@@ -50,7 +196,98 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
    }
    unitcount = 0;
  
-@@ -824,8 +824,7 @@ parse_movement()
+@@ -682,29 +710,29 @@ parse_movement()
+ 
+     order = UNKNOWN;
+     /* test for support first since we can support hold/convoy/move */
+-    if ((p1=strstr(p0," SUPPORT")) || /* or SUPPORTS */
+-        (p1=strstr(p0," S ")))
++    if ((p1=strstr(p0," SUPPORT")) != NULL || /* or SUPPORTS */
++        (p1=strstr(p0," S ")) != NULL)
+       order = SUPPORT;
+     /* test convoy next since convoy implies a move order */
+-    else if ((p1=strstr(p0," CONVOY")) || /* or CONVOYS */
++    else if ((p1=strstr(p0," CONVOY"))!=NULL || /* or CONVOYS */
+ 	     /* KDI - I included a copy of strrstr.c, and killed the NEXT
+ 	        special case */
+-             ((p1=strrstr(p0," C ")) && (strncmp(p0,"OFF BOARD", 9) > 0)))
++             ((p1=strrstr(p0," C "))!=NULL && (strncmp(p0,"OFF BOARD", 9) > 0)))
+       order = CONVOY;
+-	else if (p1=strstr(p0," PROXY GIVEN TO "))
++    else if ((p1=strstr(p0," PROXY GIVEN TO ")) != NULL)
+ 		order = PROXY;
+-    else if ((p1=strstr(p0," -> ")) ||
+-             (p1=strstr(p0," - ")) ||
+-             (p1=strstr(p0," M ")) ||
+-             (p1=strstr(p0," TO ")) ||
+-             (p1=strstr(p0," MOVE"))) /* or MOVES */
++    else if ((p1=strstr(p0," -> "))!=NULL ||
++             (p1=strstr(p0," - "))!=NULL ||
++             (p1=strstr(p0," M "))!=NULL ||
++             (p1=strstr(p0," TO "))!=NULL ||
++             (p1=strstr(p0," MOVE"))!=NULL) /* or MOVES */
+       order = MOVE;
+-    else if ((p1=strstr(p0," HOLD")) || /* or HOLDS */
+-             (p1=strstr(p0," H.")))
++    else if ((p1=strstr(p0," HOLD"))!=NULL || /* or HOLDS */
++             (p1=strstr(p0," H."))!=NULL)
+       order = HOLD;
+-    else if ((p1=strstr(p0,", NO ORDER PROCESSED")) ||
+-             (p1=strstr(p0,", NO MOVE RECEIVED")) ||
+-             (p1=strstr(p0," NMR")))
++    else if ((p1=strstr(p0,", NO ORDER PROCESSED"))!=NULL ||
++             (p1=strstr(p0,", NO MOVE RECEIVED"))!=NULL ||
++             (p1=strstr(p0," NMR"))!=NULL)
+       order = NMR;
+ 
+     if (order == UNKNOWN) {
+@@ -774,33 +802,35 @@ parse_movement()
+         fprintf(stderr,"movement: unable to parse destination location in convoy command: %s\n",p1);
+         break;
+       }
+-      sprintf(new," %c %.3s C %.3s - %-6.6s %.9s",
++      snprintf(new, sizeof(new), " %c %.3s C %.3s - %-6.6s %.9s",
+               unit,map[si].nick,map[di].nick,map[di2].nick,msg);
+       if (fail)
+-        sprintf(newg,"FailedOrder %d %d %d %d %d %d ArrowConvoy OkOrder",
++        snprintf(newg, sizeof(newg),
++		"FailedOrder %d %d %d %d %d %d ArrowConvoy OkOrder",
+                 map[si].x,map[si].y,
+                 map[di].x,map[di].y,
+                 map[di2].x,map[di2].y);
+       else
+-        sprintf(newg,"%d %d %d %d %d %d ArrowConvoy",
++        snprintf(newg, sizeof(newg),
++		"%d %d %d %d %d %d ArrowConvoy",
+                 map[si].x,map[si].y,
+                 map[di].x,map[di].y,
+                 map[di2].x,map[di2].y);
+       break;
+       
+     case HOLD:
+-      sprintf(new," %c %.3s H              %.9s",
++      snprintf(new, sizeof(new), " %c %.3s H              %.9s",
+               unit,map[si].nick,msg);
+       break;
+       
+-	case PROXY:
+-		strcpy(country2, strstr(p1, "TO ") + 3);
+-		sprintf(new," %c %.3s PROXY TO %s    %.9s",
+-				unit,map[si].nick,country2,msg);
++    case PROXY:
++      strcpy(country2, strstr(p1, "TO ") + 3);
++      snprintf(new, sizeof(new), " %c %.3s PROXY TO %s    %.9s",
++	      unit,map[si].nick,country2,msg);
+ 
+-		break;
++      break;
+     case NMR:
+-      sprintf(new," %c %.3s NMR            %.9s",
++      snprintf(new, sizeof(new), " %c %.3s NMR            %.9s",
+               unit,map[si].nick,msg);
+       break;
+       
+@@ -824,8 +854,7 @@ parse_movement()
            p0 = NULL;            /* couldn't find unit type */
            p1 = p2;              /* assume no nationality either */
          } else {
@@ -60,7 +297,67 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
          }
        }
  
-@@ -948,16 +947,14 @@ parse_movement()
+@@ -856,14 +885,15 @@ parse_movement()
+           fprintf(stderr,"movement: unable to parse target of support command: %s\n",p0);
+           break;
+         }
+-        sprintf(new," %c %.3s S %.3s H        %.9s",
++        snprintf(new, sizeof(new), " %c %.3s S %.3s H        %.9s",
+                 unit,map[si].nick,map[di].nick,msg);
+         if (fail)
+-          sprintf(newg,"FailedOrder %d %d %d %d ArrowHold OkOrder",
++          snprintf(newg, sizeof(newg),
++		  "FailedOrder %d %d %d %d ArrowHold OkOrder",
+                   map[si].x,map[si].y,
+                   map[di].x,map[di].y);
+         else
+-          sprintf(newg,"%d %d %d %d ArrowHold",
++          snprintf(newg, sizeof(newg), "%d %d %d %d ArrowHold",
+                   map[si].x,map[si].y,
+                   map[di].x,map[di].y);
+       } else {  /* support a unit moving */
+@@ -878,15 +908,16 @@ parse_movement()
+           fprintf(stderr,"movement: unable to parse second target of support command: %s\n",p1);
+           break;
+         }
+-        sprintf(new," %c %.3s S %.3s - %-6.6s %.9s",
++        snprintf(new, sizeof(new), " %c %.3s S %.3s - %-6.6s %.9s",
+                 unit,map[si].nick,map[di].nick,map[di2].nick,msg);
+         if (fail)
+-          sprintf(newg,"FailedOrder %d %d %d %d %d %d ArrowSupport OkOrder",
++          snprintf(newg, sizeof(newg),
++		  "FailedOrder %d %d %d %d %d %d ArrowSupport OkOrder",
+                   map[si].x,map[si].y,
+                   map[di].x,map[di].y,
+                   map[di2].x,map[di2].y);
+         else
+-          sprintf(newg,"%d %d %d %d %d %d ArrowSupport",
++          snprintf(newg, sizeof(newg), "%d %d %d %d %d %d ArrowSupport",
+                   map[si].x,map[si].y,
+                   map[di].x,map[di].y,
+                   map[di2].x,map[di2].y);
+@@ -899,16 +930,17 @@ parse_movement()
+         fprintf(stderr,"movement: unable to parse destination of move command: %s\n",p1);
+         break;
+       }
+-      sprintf(new," %c %.3s - %-6.6s       %.9s",
++      snprintf(new, sizeof(new), " %c %.3s - %-6.6s       %.9s",
+               unit,map[si].nick,map[di].nick,msg);
+       
+       if (fail)
+-        sprintf(newg,"FailedOrder %d %d %d %d ArrowMove OkOrder",
++        snprintf(newg, sizeof(newg),
++		"FailedOrder %d %d %d %d ArrowMove OkOrder",
+                 map[si].x,map[si].y,
+                 map[di].x,map[di].y);
+       else {
+         units[unitcount].loc = di;
+-        sprintf(newg,"%d %d %d %d ArrowMove",
++        snprintf(newg, sizeof(newg), "%d %d %d %d ArrowMove",
+                 map[si].x,map[si].y,
+                 map[di].x,map[di].y);
+       }
+@@ -948,16 +980,14 @@ parse_movement()
      fprintf(nstdout,"OrderReport\n");
      for (i = 0; i<ordernum; i++) {
        fprintf(nstdout,"(%s) WriteOrder\n",orders[i]);
@@ -79,7 +376,130 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
      }
    }
  }
-@@ -1461,8 +1458,7 @@ parse_start(report)
+@@ -982,7 +1012,8 @@ parse_movement()
+   waived        BUILD WAIVED
+   defaults      DEFAULTS, REMOVING [THE unit IN [THE] | unit] location
+ */
+-parse_adjustment()
++static void
++parse_adjustment(void)
+ {
+   char line[BUFSIZ],copy[BUFSIZ];
+   char report[BUFSIZ];          /* line being built to output */
+@@ -993,7 +1024,7 @@ parse_adjustment()
+   int count;                    /* count of units for this country */
+   int ci;                       /* index of center */
+   int pending;                  /* true if line is a special message */
+-  int i,j,k;                    /* misc counters */
++  int i,j;                      /* misc counters */
+   int building;                 /* true if building units */
+   int error;                    /* true if an error occurs during parse */
+ 
+@@ -1037,7 +1068,7 @@ parse_adjustment()
+         strcpy(country,p0);
+         if (report[0]!='\0')
+           fprintf(nstdout,"(%s) WriteAdjust\n",report);
+-        sprintf(report,"%-10s",country);
++        snprintf(report, sizeof(report), "%-10s", country);
+         count = 0;
+       }
+       if (p1==NULL || *p1=='\0')
+@@ -1132,7 +1163,8 @@ parse_adjustment()
+   disband       unit location DISBAND
+   nop           unit location, NO ORDER PROCESSED (DISBAND)
+ */
+-parse_retreat()
++static void
++parse_retreat(void)
+ {
+   char line[BUFSIZ],copy[BUFSIZ];
+   char *p0,*p1, *p2, *msg;
+@@ -1140,7 +1172,6 @@ parse_retreat()
+   char country[BUFSIZ];         /* nation */
+   int si,di;                    /* source and destination */
+   char unit;                    /* unit type */
+-  int i,j,k;
+   int error;
+ 
+   country[0] = '\0';
+@@ -1190,12 +1221,12 @@ parse_retreat()
+       break;
+     }
+ 
+-    if (p1 = strstr(p0,"DISBAND")) {
++    if ((p1 = strstr(p0,"DISBAND")) != NULL) {
+       /* zap end of unit location */
+       *(p1-1) = '\0';
+ 
+       /* DCK */
+-      if (p1 = strstr(p0,", NO ORDER")) {
++      if ((p1 = strstr(p0,", NO ORDER")) != NULL) {
+ 	/* zap again */
+ 	*(p1) = '\0';
+       }
+@@ -1323,7 +1354,8 @@ parse_retreat()
+   written "FOO/xx". If a (destination) location contains a dash then a
+   single dash can not be used to indicate a move, use -> instead.
+ */
+-parse_fall_report()
++static void
++parse_fall_report(void)
+ {
+   char line[BUFSIZ],copy[BUFSIZ],temp[BUFSIZ];
+   char report[BUFSIZ];
+@@ -1331,7 +1363,7 @@ parse_fall_report()
+   char country[BUFSIZ],save[BUFSIZ];
+   int centers,units;
+   int ci;                       /* index of center in map database */
+-  int i,j,k;
++  int i;
+ 
+ 
+   /* first we have ownership report */
+@@ -1346,7 +1378,7 @@ parse_fall_report()
+         fprintf(stderr,"ownership: expecting continuation line\n\t%s\n",line);
+         break;
+       }
+-      sprintf(temp,"%s %s",save,line);
++      snprintf(temp, sizeof(temp), "%s %s",save,line);
+       copyline(copy,temp);
+     } else
+       copyline(copy,line);
+@@ -1363,7 +1395,7 @@ parse_fall_report()
+         strcpy(country,p0);
+         if (report[0]!='\0')
+           fprintf(nstdout,"(%s) WriteOwner\n",report);
+-        sprintf(report,"%-10s ",country);
++        snprintf(report, sizeof(report), "%-10s ", country);
+       }
+       if (p1==NULL || *p1=='\0')
+         continue;               /* just a country token, get next line */
+@@ -1439,17 +1471,16 @@ If it is a Status Report, it might inclu
+   [country:] unit location [can retreat to location [or location]]
+ 
+ */
+-parse_start(report)
+-     int report;
++static void
++parse_start(int report)
+ {
+   char line[BUFSIZ];            /* the current order being processed */
+   char copy[BUFSIZ];            /* a temp copy */
+   char *p0,*p1,*p2;             /* some char pointers */
+-  int i,j,k;                    /* misc counters */
++  int i;                        /* misc counters */
+ 
+   char country[BUFSIZ];
+   char unit;                    /* unit type, "A" or "F" */
+-  int order;                    /* one of the following: */
+   int si;                       /* index of source location) */
+ 
+ #define MAXORDERS MAXUNITS
+@@ -1457,12 +1488,10 @@ parse_start(report)
+   char new[BUFSIZ];             /* current order being formed */
+   int ordernum;                 /* count of orders */
+ 
+-  int x,y;                      /* map coordinate of support/convoy arrow */
    int error;                    /* true if a syntax (or malloc) error */
  
    for (i=0; i<unitcount; ++i) {
@@ -89,7 +509,32 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
    }
    unitcount = 0;
  
-@@ -1600,8 +1596,7 @@ parse_start(report)
+@@ -1529,7 +1558,7 @@ parse_start(report)
+       break;
+     }
+ 
+-    if (report = SR) {
++    if (report == SR) {
+       /* retreat report might list possible retreat options on the line */
+ #define CANRETREAT " CAN RETREAT TO "
+       p1 = strstr(p0,CANRETREAT);
+@@ -1566,11 +1595,12 @@ parse_start(report)
+     /* XXX todo: parse mulitiple retreat sites and print nicknames */
+     if (p2!=NULL)               /* p2 points to retreat comment */
+       if (strchr(p2,',') != NULL)	/* more than one choice */
+-	sprintf(new," %c %s (-> ???)",unit,map[si].nick);
++	snprintf(new, sizeof(new),
++		" %c %s (-> %s)", unit, map[si].nick, "??" "?");
+       else
+-	sprintf(new," %c %s (-> %s)",unit,map[si].nick,p2);
++	snprintf(new, sizeof(new), " %c %s (-> %s)", unit, map[si].nick, p2);
+     else {
+-      sprintf(new," %c %s",unit,map[si].nick);
++      snprintf(new, sizeof(new), " %c %s",unit,map[si].nick);
+ 
+       /* remember that we have a unit at this location */
+       units[unitcount].country = (char *) strdup(country);
+@@ -1600,15 +1630,14 @@ parse_start(report)
      fprintf(nstdout,"OrderReport\n");
      for (i = 0; i<ordernum; i++) {
        fprintf(nstdout,"(%s) WriteOrder\n",orders[i]);
@@ -99,7 +544,51 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
      }
    }
  }
-@@ -1703,8 +1698,7 @@ drawnew()
+ 
+ /* given a string with a move order, find the (final) destination */
+-moveto(s)
+-     char *s;
++static int
++moveto(char *s)
+ {
+   char copy[BUFSIZ];
+   char *p0,*p1;
+@@ -1644,14 +1673,17 @@ moveto(s)
+   return(mapi(p1));
+ }
+ 
+-country_compare(u1,u2)
+-     struct unitstruct *u1,*u2;
++static int
++country_compare(const void *v1, const void *v2)
+ {
++  const struct unitstruct *u1 = v1;
++  const struct unitstruct *u2 = v2;
++
+   return strcmp(u1->country,u2->country);
+ }
+ 
+-drawmap(title,message)
+-     char *title,*message;
++static void
++drawmap(char *title, char *message)
+ { 
+   int i;
+ 
+@@ -1666,9 +1698,10 @@ drawmap(title,message)
+ }
+ 
+ /* given the new unit positions, draw a new map */
+-drawnew()
++static void
++drawnew(void)
+ {
+-  int i,j,k;
++  int i;
+   char country[BUFSIZ];
+ 
+   if (unitcount==0)
+@@ -1703,15 +1736,14 @@ drawnew()
      if (units[i].loc>0)
        fprintf(nstdout,"( %c %s) WriteOrder\n",
               units[i].type,map[units[i].loc].nick);
@@ -109,3 +598,147 @@ $NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
    }
    unitcount= 0;
  }
+ 
+ /* copy s2 to s1, uppercase, squeeze whitespace */
+-copyline(s1,s2)
+-     char *s1,*s2;
++static void
++copyline(char *s1, const char *s2)
+ {
+   int white;                    /* white space seen */
+ 
+@@ -1724,8 +1756,8 @@ copyline(s1,s2)
+       }
+     } else {
+       white = 0;
+-      if (islower(*s2))
+-	  *(s1++) = toupper(*s2);
++      if (islower((unsigned char)*s2))
++	  *(s1++) = toupper((unsigned char)*s2);
+       else
+ 	  *(s1++) = *s2;	  
+     }
+@@ -1736,8 +1768,8 @@ copyline(s1,s2)
+     
+ }
+ 
+-string_check(s,fatal)
+-     char *s; int fatal;
++static int
++string_check(const char *s, int fatal)
+ {
+   if (s==NULL) {
+     fprintf(stderr,"?: unexpected error, null string pointer\n");
+@@ -1753,13 +1785,14 @@ string_check(s,fatal)
+ }
+ 
+ /* init reads the 2 files described above... */
+-init()
++static int
++init(void)
+ {
+   char *fn;
+   FILE *f;
+   char line[BUFSIZ],copy[BUFSIZ],nick[BUFSIZ],owner[BUFSIZ], name[BUFSIZ],nicks[BUFSIZ];
+   int x,y;
+-  int i,j,k;
++  int i,j;
+ 
+   unitcount = 0;
+   nationcount = 0;
+@@ -1771,7 +1804,7 @@ init()
+     fn = (char *)getenv("MAPPS");
+   if (fn == NULL)
+     fn = DEFAULT_PS;
+-  if (f = fopen(fn,"r")) {
++  if ((f = fopen(fn,"r")) != NULL) {
+     while (fgets(line,BUFSIZ,f))
+       fprintf(nstdout,"%s",line);
+     fclose(f);
+@@ -1795,7 +1828,7 @@ init()
+     fn = (char *)getenv("MAPINFO");
+   if (fn == NULL)
+     fn = DEFAULT_INFO;
+-  if (f = fopen(fn,"r")) {
++  if ((f = fopen(fn,"r")) != NULL) {
+     j = 0;
+     while (fgets(line,BUFSIZ,f)) { /* first section is just a list of nations */
+       if (line[0]=='#' || line[0]==' ')
+@@ -1848,13 +1881,13 @@ init()
+   return 0;
+ }
+ 
+-mapi(name)                      /* return index of map table entry */
+-     char *name;
++static int
++mapi(char *name)                      /* return index of map table entry */
+ {
+-  int i,j,k;
++  int i;
+   char t[BUFSIZ];
+ 
+-  sprintf(t,"|%s|",name);
++  snprintf(t, sizeof(t), "|%s|", name);
+   for ( i=1; i<MAXNAMES; ++i ) {
+     if (map[i].name == NULL)
+       break;
+@@ -1870,7 +1903,8 @@ int PagesSoFar=0;
+ /* StartPage
+    Outputs the appropriate postscript comments to start a page to start
+  */
+-StartPage()
++static void
++StartPage(void)
+ {
+   PagesSoFar++;
+   fprintf(nstdout, "%%%%Page: %d %d\n", PagesSoFar, PagesSoFar );
+@@ -1880,7 +1914,8 @@ StartPage()
+ /* EndPage
+    Outputs the appropriate postscript comments to end a page to start
+  */
+-EndPage()
++static void
++EndPage(void)
+ {
+   fprintf(nstdout, "%%%%PageTrailer\n" );
+ }
+@@ -1888,7 +1923,8 @@ EndPage()
+ /* EndDocument
+    Outputs the appropriate postscript comments to end the whole thing
+  */
+-EndDocument()
++static void
++EndDocument(void)
+ {
+   fprintf(nstdout, "%%%%Trailer\n" );
+   fprintf(nstdout, "%%%%Pages: %d 1\n", PagesSoFar );
+@@ -1898,14 +1934,14 @@ EndDocument()
+ 
+ /* Some procedures for the -b option */
+ 
+-int same_owner(c1,c2)
+-char *c1,*c2;
++static int
++same_owner(char *c1, char *c2)
+ {
+   return (ownerlist[countrynum(c1)] == ownerlist[countrynum(c2)]);
+ }
+ 
+-int countrynum(country)
+-char *country;
++static int
++countrynum(char *country)
+ {
+   int i;
+ 
+@@ -1916,8 +1952,8 @@ char *country;
+   return 0;
+ }
+ 
+-int ownerlookup(country)
+-char *country;
++static int
++ownerlookup(char *country)
+ {
+   int i;
+ 
