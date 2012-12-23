@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/11/08 00:07:02 adam Exp $
+# $NetBSD: Makefile,v 1.19 2012/12/23 10:33:33 ryoon Exp $
 
 DISTNAME=	libvpx-v1.1.0
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://webm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -63,6 +63,10 @@ CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86_64-darwin8-gcc
 .    endif
 .  endif
+.endif
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH}
+CONFIGURE_ARGS+=	--target=mips32-linux-gcc
 .endif
 
 BUILD_TARGET=	# none
