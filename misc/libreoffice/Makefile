@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/12/16 01:52:25 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/12/23 15:42:44 marino Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
@@ -86,6 +86,7 @@ PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
 CHECK_PORTABILITY_SKIP=	configure
+DRAGONFLY_CCVER=	gcc44
 
 CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
