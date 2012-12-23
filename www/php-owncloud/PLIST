@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/11/27 12:11:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/12/23 12:34:43 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -3868,6 +3868,7 @@ share/owncloud/lib/connector/sabre/file.php
 share/owncloud/lib/connector/sabre/locks.php
 share/owncloud/lib/connector/sabre/node.php
 share/owncloud/lib/connector/sabre/principal.php
+share/owncloud/lib/connector/sabre/quotaplugin.php
 share/owncloud/lib/db.php
 share/owncloud/lib/eventsource.php
 share/owncloud/lib/filecache.php
