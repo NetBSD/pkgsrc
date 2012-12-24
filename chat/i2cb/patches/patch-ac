@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2010/03/04 21:40:29 spz Exp $
+$NetBSD: patch-ac,v 1.5 2012/12/24 03:11:25 dholland Exp $
+
+- don't use "restrict" as an identifier, it's a keyword now
+- ...? (XXX)
 
 --- src/externs.h.orig	2000-03-15 22:28:13.000000000 +0000
 +++ src/externs.h
@@ -37,3 +40,12 @@ $NetBSD: patch-ac,v 1.4 2010/03/04 21:40:29 spz Exp $
  char	*getloginid (void);
  char	*getswitch (int argc, char **argv, char **switchv);
  void	getterm (void);
+@@ -115,7 +118,7 @@ void	quoteify (char *a, char *b);
+ void	readlineinit (void);
+ void	regnick (char *password);
+ void	restoreterm (void);
+-void	restrict (void);
++void	setrestricted (void);
+ int	s_admin (TARGLIST);
+ int	s_beep (TARGLIST);
+ int	s_bump (TARGLIST);
