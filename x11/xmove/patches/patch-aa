@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2005/07/20 16:03:24 kristerw Exp $
+$NetBSD: patch-aa,v 1.4 2012/12/24 21:16:40 joerg Exp $
 
---- xmove/Imakefile	1998/03/10 22:54:16	1.1
-+++ xmove/Imakefile	1998/03/10 23:01:21
+--- xmove/Imakefile.orig	1997-05-24 04:22:14.000000000 +0000
++++ xmove/Imakefile
 @@ -18,7 +18,7 @@
  # compile it and if you have compiler complaints about the function
  # dlopen() (among many other things) then change the line to NO.
@@ -16,11 +16,11 @@ $NetBSD: patch-aa,v 1.3 2005/07/20 16:03:24 kristerw Exp $
  # should be set to the directory where those libraries will be placed.
  
 -ATOM_MAPPING_LIBRARY_PATH=\"/home/ethan/release/xmove/lib\"
-+ATOM_MAPPING_LIBRARY_PATH=\"@x11base@/lib\"
++ATOM_MAPPING_LIBRARY_PATH=\"/usr/pkg/lib\"
  
  
  ## Standard parameters
-@@ -36,7 +36,7 @@
+@@ -36,7 +36,7 @@ ATOM_MAPPING_LIBRARY_PATH=\"/home/ethan/
  #if XMOVE_USE_DLLIBS
  DLLIBSRC =
  DLLIBOBJ =
@@ -29,14 +29,3 @@ $NetBSD: patch-aa,v 1.3 2005/07/20 16:03:24 kristerw Exp $
  DLDEFINE = -DDL_WOUT_PRAGMA
  #else
  DLLIBSRC = libatommap.c
---- /dev/null	Wed Mar 11 00:03:54 1998
-+++ Imakefile	Wed Mar 11 00:58:37 1998
-@@ -0,0 +1,8 @@
-+#define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS)'
-+
-+MakefileSubdirs(xmove xmovectrl)
-+MakeSubdirs(xmove xmovectrl)
-+DependSubdirs(xmove xmovectrl)
-+ForceSubdirs(xmove xmovectrl)
-+InstallSubdirs(xmove xmovectrl)
-+InstallManSubdirs(xmove xmovectrl)
