@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.4 2005/07/20 16:03:24 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2012/12/24 21:16:40 joerg Exp $
 
 SHA1 (xmove.2.0beta2.tar.gz) = a34292d88c72db2e1839fe27ddd18456ef069429
 RMD160 (xmove.2.0beta2.tar.gz) = 9ae8a107c50ff971f15aa2027da9e581ba7f06b8
 Size (xmove.2.0beta2.tar.gz) = 639187 bytes
-SHA1 (patch-aa) = 2fbfc09858f5e56fa2660bd265591672c5771d59
+SHA1 (patch-Imakefile) = f71d9f465e5613d41a8fbd4d693473c54f4a50ee
+SHA1 (patch-aa) = 19ab7f53c89486a716bfcdffde9f62f86f2fe10e
 SHA1 (patch-ab) = 5686c72036483df2681fa8ab34f37b0837c27702
 SHA1 (patch-ac) = 61b893d8a66d6fdda3f702ec40f5550008e2c1fc
 SHA1 (patch-ad) = 322eeadb73b7a83699525d8946e1ebc72d85f60e
@@ -12,3 +13,4 @@ SHA1 (patch-af) = 5a3f23106b0dc43df2b5c9e44f58e4c5c7752375
 SHA1 (patch-ag) = 21804f2e2ff83e2eb6a5f22572ac4eee68468374
 SHA1 (patch-ah) = eb696d37af7c5e63600dc143fed8f7343d3e6f81
 SHA1 (patch-ai) = 8be5a5942b8bfe5a1aa44ad5a11b720821b02921
+SHA1 (patch-xmovectrl_xmovectrl.c) = 2333017acc191cbd609c2a67560a7000cfc61f59
