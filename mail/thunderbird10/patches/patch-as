@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+$NetBSD: patch-as,v 1.2 2012/12/24 21:14:19 joerg Exp $
 
 Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2012-02-16 10:25:02.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2012-11-15 21:59:30.000000000 +0000
 +++ mozilla/js/src/configure.in
 @@ -799,7 +799,7 @@ EOF
                  AC_LANG_RESTORE
@@ -31,7 +31,17 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
  *-openbsd*)
-@@ -4344,7 +4344,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3077,6 +3077,9 @@ if test "$GNU_CC"; then
+   AC_CACHE_CHECK(for visibility(hidden) attribute,
+                  ac_cv_visibility_hidden,
+                  [cat > conftest.c <<EOF
++#ifdef __clang__
++#error Not supported by old Mozilla
++#endif
+                   int foo __attribute__ ((visibility ("hidden"))) = 1;
+ EOF
+                   ac_cv_visibility_hidden=no
+@@ -4344,7 +4347,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
