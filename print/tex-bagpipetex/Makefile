@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/08 13:45:47 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/24 05:17:51 dholland Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
@@ -53,13 +53,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/texmf/tex/latex/bagpipetex
 
 do-build:
-	cd ${WRKDIR} ; \
-	tex bagdoc ; \
-	dvips bagdoc.dvi -o bagdoc.ps ; \
-	musixtex quickref ; \
-	musixflx quickref ; \
-	musixtex quickref ; \
-	dvips quickref.dvi -o quickref.ps
+	cd ${WRKDIR} && tex bagdoc
+	cd ${WRKDIR} && dvips bagdoc.dvi -o bagdoc.ps
+	cd ${WRKDIR} && musixtex quickref
+	cd ${WRKDIR} && musixflx quickref
+	cd ${WRKDIR} && musixtex quickref
+	cd ${WRKDIR} && dvips quickref.dvi -o quickref.ps
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../mk/bsd.pkg.mk"
