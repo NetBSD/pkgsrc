@@ -1,8 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2005/11/06 01:47:47 gdt Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/24 21:11:17 joerg Exp $
 
---- src/ICCtoIT8/Makefile.orig	2005-08-19 21:11:52.000000000 -0400
+--- src/ICCtoIT8/Makefile.orig	2005-08-20 01:11:52.000000000 +0000
 +++ src/ICCtoIT8/Makefile
-@@ -30,7 +30,7 @@ PROGRAM=icc2it8
+@@ -24,13 +24,13 @@ ifndef EXESUFFIX
+ EXESUFFIX=
+ endif
+ 
+-CFLAGS = -g -O4 -fomit-frame-pointer -Wall -I../liblprof -L../liblprof
++CFLAGS += -fomit-frame-pointer -Wall -I../liblprof -L../liblprof
+ PROGRAM=icc2it8
+ 
  all:	icc2it8
  
  icc2it8: icc2it8.o getopt.o
