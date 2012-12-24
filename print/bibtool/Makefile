@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2012/12/24 00:54:05 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/24 00:56:19 dholland Exp $
+
 DISTNAME=	BibTool-2.48
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=biblio/bibtex/utils/bibtool/}
@@ -23,8 +24,8 @@ REPLACE.tcl.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tcl=	Tcl/bibtool.tcl
 REPLACE_PERL+=		Perl/bibtool.pl
 
-DOCDIR=		${LOCALBASE}/share/doc/BibTool
-EXAMPLEDIR=	${LOCALBASE}/share/examples/BibTool
+DOCDIR=			${PREFIX}/share/doc/BibTool
+EXAMPLEDIR=		${PREFIX}/share/examples/BibTool
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
@@ -32,17 +33,19 @@ INSTALL_TARGET=	install install.man
 INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLEDIR}
 
 #pre-configure:
-#	rm ${WRKSRC:Q}/BibTcl/Makefile
-#	mv ${WRKSRC:Q}/BibTcl/Makefile.in ${WRKSRC:Q}/BibTcl/makefile.in
+#	rm ${WRKSRC}/BibTcl/Makefile
+#	mv ${WRKSRC}/BibTcl/Makefile.in ${WRKSRC}/BibTcl/makefile.in
 
 post-build:
-	cd ${WRKSRC:Q}/Doc && make
-#	cd ${WRKSRC:Q}/BibTcl && make
+	cd ${WRKSRC}/Doc && ${MAKE}
+#	cd ${WRKSRC}/BibTcl && ${MAKE}
 
 post-install:
-	for i in ${WRKSRC:Q}/Doc/*.dvi; do ${INSTALL_DATA} $$i ${DESTDIR}${DOCDIR}; done
-	${INSTALL_DATA} ${WRKSRC:Q}/Perl/bibtool.pl ${DESTDIR}${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC:Q}/Tcl/bibtool.tcl ${DESTDIR}${EXAMPLEDIR}
-#	cd ${WRKSRC:Q}/BibTcl && make install
+	set -e; for i in ${WRKSRC}/Doc/*.dvi; do \
+		${INSTALL_DATA} "$$i" ${DESTDIR}${DOCDIR}; \
+	 done
+	${INSTALL_DATA} ${WRKSRC}/Perl/bibtool.pl ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/Tcl/bibtool.tcl ${DESTDIR}${EXAMPLEDIR}
+#	cd ${WRKSRC}/BibTcl && make install
 
 .include "../../mk/bsd.pkg.mk"
