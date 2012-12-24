@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2012/12/24 01:50:57 dholland Exp $
+
+Disable a highly obsolete configure test that exercises undefined
+behavior.
+
+--- configure~	2012-12-24 01:44:27.000000000 +0000
++++ configure
+@@ -2789,7 +2789,8 @@ fi
+ 
+ if test $ac_cv_header_stdc = yes; then
+   # /bin/cc in Irix-4.0.5 gets non-ANSI ctype macros unless using -ansi.
+-  if test "$cross_compiling" = yes; then
++  # disabled 20121222, IRIX 4 is long dead and this test exercises UB.
++  if true; then
+   :
+ else
+   cat >conftest.$ac_ext <<_ACEOF
