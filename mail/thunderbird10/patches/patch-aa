@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/24 21:14:19 joerg Exp $
 
---- mozilla/configure.in.orig	2012-02-16 10:24:47.000000000 +0000
+--- mozilla/configure.in.orig	2012-11-15 21:59:12.000000000 +0000
 +++ mozilla/configure.in
 @@ -2328,7 +2328,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
@@ -21,7 +21,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
      ;;
  
  ia64*-hpux*)
-@@ -3377,6 +3380,9 @@ dnl ====================================
+@@ -3178,6 +3181,9 @@ if test "$GNU_CC"; then
+   AC_CACHE_CHECK(for visibility(hidden) attribute,
+                  ac_cv_visibility_hidden,
+                  [cat > conftest.c <<EOF
++#ifdef __clang__
++#error Not supported by old Mozilla
++#endif
+                   int foo __attribute__ ((visibility ("hidden"))) = 1;
+ EOF
+                   ac_cv_visibility_hidden=no
+@@ -3377,6 +3383,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +41,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4330,6 +4336,14 @@ if test -n "$YASM"; then
+@@ -4330,6 +4339,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -46,7 +56,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5616,20 +5630,20 @@ if test -n "$MOZ_WEBM"; then
+@@ -5616,20 +5633,20 @@ if test -n "$MOZ_WEBM"; then
                       [MOZ_NATIVE_LIBVPX_DEC_TEST=1],
                       ([--with-system-libvpx requested but symbol vpx_codec_dec_init_ver not found]))
          if test -n "$MOZ_NATIVE_LIBVPX_DEC_TEST" ; then
@@ -73,7 +83,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
                      #error "test failed."
                  #endif
                  ],
-@@ -5639,7 +5653,7 @@ if test -n "$MOZ_WEBM"; then
+@@ -5639,7 +5656,7 @@ if test -n "$MOZ_WEBM"; then
                   MOZ_LIBVPX_INCLUDES="-I${LIBVPX_DIR}/include"
                   MOZ_LIBVPX_LIBS="-L${LIBVPX_DIR}/lib -lvpx"],
                  [AC_MSG_RESULT([no])
@@ -82,7 +92,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
          fi
          CFLAGS=$_SAVE_CFLAGS
          LDFLAGS=$_SAVE_LDFLAGS
-@@ -5673,11 +5687,11 @@ if test -n "$MOZ_WEBM" -a -z "$MOZ_NATIV
+@@ -5673,11 +5690,11 @@ if test -n "$MOZ_WEBM" -a -z "$MOZ_NATIV
  
      dnl See if we have assembly on this platform.
      case "$OS_ARCH:$CPU_ARCH" in
@@ -96,7 +106,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
-@@ -8915,6 +8929,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -8930,6 +8947,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
