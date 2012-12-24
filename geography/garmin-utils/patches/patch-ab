@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2009/08/01 05:26:24 hasso Exp $
+$NetBSD: patch-ab,v 1.6 2012/12/24 21:08:43 joerg Exp $
 
---- lib/gps1.c.orig	2009-07-30 23:13:40 +0300
-+++ lib/gps1.c	2009-07-30 23:14:17 +0300
+--- lib/gps1.c.orig	2006-07-14 02:35:53.000000000 +0000
++++ lib/gps1.c
 @@ -23,6 +23,7 @@
  /*
   * Define the various serial I/O types
@@ -10,3 +10,30 @@ $NetBSD: patch-ab,v 1.5 2009/08/01 05:26:24 hasso Exp $
  #define BSD	0
  #define Linux	1
  
+@@ -207,7 +208,7 @@ gps_read(gps_handle gps, u_char * val, i
+ 			switch (stat) {
+ 			case -1:
+ 				if (gps_state.debug)
+-					warn(gps_state.name);
++					warn("%s", gps_state.name);
+ 				return -1;
+ 			case 0:
+ 				return 0;
+@@ -218,7 +219,7 @@ gps_read(gps_handle gps, u_char * val, i
+ 						   GPS_BUF_LEN); 
+ 				if (gps_state.bufcnt <= 0) {
+ 					if (gps_state.debug)
+-						warn(gps_state.name);
++						warn("%s", gps_state.name);
+ 					return -1;
+ 				}
+ 				if (gps_state.debug > 4) {
+@@ -254,7 +255,7 @@ gps_write(gps_handle gps, const u_char *
+ 				buf += written;
+ 			} else {
+ 				if (gps_state.debug)
+-					warn(gps_state.name);
++					warn("%s", gps_state.name);
+ 				return -1;
+ 			}
+ 		}
