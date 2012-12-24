@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.24 2011/10/10 12:31:56 wiz Exp $
+$NetBSD: distinfo,v 1.25 2012/12/24 12:53:17 ryoon Exp $
 
 SHA1 (mdocml-1.12.0.tar.gz) = 7c2c1a23c0bba61d9fc4ee7dc5b47a0a07e0b981
 RMD160 (mdocml-1.12.0.tar.gz) = 3ea04c4b4639ae63ae924db3645f1712f149ec5b
 Size (mdocml-1.12.0.tar.gz) = 236717 bytes
+SHA1 (patch-apropos.c) = 8c219b5b1c61dc49d71f0a4207e8480f5aa79099
+SHA1 (patch-mandocdb.c) = 325d80259553fc223b8f8e4c1a3949f127c74cae
