@@ -1,0 +1,13 @@
+$NetBSD: patch-src_config.h.in,v 1.1 2012/12/24 21:08:06 joerg Exp $
+
+--- src/config.h.in.orig	2005-11-28 02:10:19.000000000 +0000
++++ src/config.h.in
+@@ -852,7 +852,7 @@ on various systems. */
+ /* Does the keyword `inline' exist?  */
+ #undef inline
+ 
+-#if defined (__cplusplus) || ! defined (__GNUC__)
++#if 1
+ # define INLINE_HEADER inline static
+ #elif defined (DONT_EXTERN_INLINE_HEADER_FUNCTIONS)
+ # define INLINE_HEADER inline
