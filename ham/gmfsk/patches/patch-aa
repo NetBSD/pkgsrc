@@ -1,8 +1,71 @@
-$NetBSD: patch-aa,v 1.1 2006/04/26 01:52:18 wulf Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/24 21:13:28 joerg Exp $
 
---- src/misc/misc.h.orig	2006-04-26 10:32:02.000000000 +0930
-+++ src/misc/misc.h	2006-04-26 10:31:20.000000000 +0930
-@@ -104,25 +104,6 @@
+--- src/misc/misc.h.orig	2004-04-13 12:45:19.000000000 +0000
++++ src/misc/misc.h
+@@ -32,7 +32,7 @@
+ /*
+  * Hamming weight (number of bits that are ones).
+  */
+-extern inline unsigned int hweight32(unsigned int w) 
++__attribute__((gnu_inline)) extern inline unsigned int hweight32(unsigned int w) 
+ {
+ 	w = (w & 0x55555555) + ((w >>  1) & 0x55555555);
+ 	w = (w & 0x33333333) + ((w >>  2) & 0x33333333);
+@@ -42,7 +42,7 @@ extern inline unsigned int hweight32(uns
+ 	return w;
+ }
+ 
+-extern inline unsigned int hweight16(unsigned short w)
++__attribute__((gnu_inline)) extern inline unsigned int hweight16(unsigned short w)
+ {
+ 	w = (w & 0x5555) + ((w >> 1) & 0x5555);
+ 	w = (w & 0x3333) + ((w >> 2) & 0x3333);
+@@ -51,7 +51,7 @@ extern inline unsigned int hweight16(uns
+ 	return w;
+ }
+ 
+-extern inline unsigned int hweight8(unsigned char w)
++__attribute__((gnu_inline)) extern inline unsigned int hweight8(unsigned char w)
+ {
+ 	w = (w & 0x55) + ((w >> 1) & 0x55);
+ 	w = (w & 0x33) + ((w >> 2) & 0x33);
+@@ -64,7 +64,7 @@ extern inline unsigned int hweight8(unsi
+ /*
+  * Parity function. Return one if `w' has odd number of ones, zero otherwise.
+  */
+-extern inline int parity(unsigned int w)
++__attribute__((gnu_inline)) extern inline int parity(unsigned int w)
+ {
+ 	return hweight32(w) & 1;
+ }
+@@ -74,7 +74,7 @@ extern inline int parity(unsigned int w)
+ /*
+  * Reverse order of bits.
+  */
+-extern inline unsigned int rbits32(unsigned int w)
++__attribute__((gnu_inline)) extern inline unsigned int rbits32(unsigned int w)
+ {
+ 	w = ((w >>  1) & 0x55555555) | ((w <<  1) & 0xAAAAAAAA);
+ 	w = ((w >>  2) & 0x33333333) | ((w <<  2) & 0xCCCCCCCC);
+@@ -84,7 +84,7 @@ extern inline unsigned int rbits32(unsig
+ 	return w;
+ }
+ 
+-extern inline unsigned short rbits16(unsigned short w)
++__attribute__((gnu_inline)) extern inline unsigned short rbits16(unsigned short w)
+ {
+ 	w = ((w >> 1) & 0x5555) | ((w << 1) & 0xAAAA);
+ 	w = ((w >> 2) & 0x3333) | ((w << 2) & 0xCCCC);
+@@ -93,7 +93,7 @@ extern inline unsigned short rbits16(uns
+ 	return w;
+ }
+ 
+-extern inline unsigned char rbits8(unsigned char w)
++__attribute__((gnu_inline)) extern inline unsigned char rbits8(unsigned char w)
+ {
+ 	w = ((w >> 1) & 0x55) | ((w << 1) & 0xFF);
+ 	w = ((w >> 2) & 0x33) | ((w << 2) & 0xCC);
+@@ -104,28 +104,9 @@ extern inline unsigned char rbits8(unsig
  /* ---------------------------------------------------------------------- */
  
  /*
@@ -27,4 +90,57 @@ $NetBSD: patch-aa,v 1.1 2006/04/26 01:52:18 wulf Exp $
 -/*
   * Gray encoding and decoding (8 bit)
   */
- extern inline unsigned char grayencode(unsigned char data)
+-extern inline unsigned char grayencode(unsigned char data)
++__attribute__((gnu_inline)) extern inline unsigned char grayencode(unsigned char data)
+ {
+ 	unsigned char bits = data;
+ 
+@@ -140,7 +121,7 @@ extern inline unsigned char grayencode(u
+ 	return bits;
+ }
+ 
+-extern inline unsigned char graydecode(unsigned char data)
++__attribute__((gnu_inline)) extern inline unsigned char graydecode(unsigned char data)
+ {
+ 	return data ^ (data >> 1);
+ }
+@@ -150,7 +131,7 @@ extern inline unsigned char graydecode(u
+ /*
+  * Hamming window function
+  */
+-extern inline double hamming(double x)
++__attribute__((gnu_inline)) extern inline double hamming(double x)
+ {
+         return 0.54 - 0.46 * cos(2 * M_PI * x);
+ }
+@@ -160,26 +141,26 @@ extern inline double hamming(double x)
+ /*
+  * Sinc etc...
+  */
+-extern inline double sinc(double x)
++__attribute__((gnu_inline)) extern inline double sinc(double x)
+ {
+ 	return (fabs(x) < 1e-10) ? 1.0 : (sin(M_PI * x) / (M_PI * x));
+ }
+ 
+-extern inline double cosc(double x)
++__attribute__((gnu_inline)) extern inline double cosc(double x)
+ {
+ 	return (fabs(x) < 1e-10) ? 0.0 : ((1.0 - cos(M_PI * x)) / (M_PI * x));
+ }
+ 
+ /* ---------------------------------------------------------------------- */
+ 
+-extern inline float clamp(float x, float min, float max)
++__attribute__((gnu_inline)) extern inline float clamp(float x, float min, float max)
+ {
+ 	return (x < min) ? min : ((x > max) ? max : x);
+ }
+ 
+ /* ---------------------------------------------------------------------- */
+ 
+-extern inline float decayavg(float average, float input, float weight)
++__attribute__((gnu_inline)) extern inline float decayavg(float average, float input, float weight)
+ {
+ 	return input * (1.0 / weight) + average * (1.0 - (1.0 / weight));
+ }
