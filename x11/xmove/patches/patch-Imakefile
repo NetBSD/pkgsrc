@@ -1,0 +1,13 @@
+$NetBSD: patch-Imakefile,v 1.1 2012/12/24 21:16:40 joerg Exp $
+
+--- /dev/null	2012-12-23 00:41:02.000000000 +0000
++++ Imakefile
+@@ -0,0 +1,8 @@
++#define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS)'
++
++MakefileSubdirs(xmove xmovectrl)
++MakeSubdirs(xmove xmovectrl)
++DependSubdirs(xmove xmovectrl)
++ForceSubdirs(xmove xmovectrl)
++InstallSubdirs(xmove xmovectrl)
++InstallManSubdirs(xmove xmovectrl)
