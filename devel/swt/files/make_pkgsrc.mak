@@ -1,4 +1,4 @@
-# $NetBSD: make_pkgsrc.mak,v 1.3 2012/12/24 03:58:56 dholland Exp $
+# $NetBSD: make_pkgsrc.mak,v 1.4 2012/12/24 04:04:38 dholland Exp $
 #*******************************************************************************
 # Copyright (c) 2000, 2009 IBM Corporation and others.
 # All rights reserved. This program and the accompanying materials
@@ -47,7 +47,7 @@ CAIROLIBS = `pkg-config --libs-only-L cairo` `pkg-config --libs-only-other cairo
 
 # Do not use pkg-config to get libs because it includes unnecessary dependencies (i.e. pangoxft-1.0)
 GTKCFLAGS = `pkg-config --cflags gtk+-2.0`
-GTKLIBS = `pkg-config --libs-only-L gtk+-2.0 gthread-2.0` `pkg-config --libs-only-other gtk+-2.0 gthread-2.0` -lgtk-x11-2.0 -lgthread-2.0 `pkgconfig --libs xtst`
+GTKLIBS = `pkg-config --libs-only-L gtk+-2.0 gthread-2.0` `pkg-config --libs-only-other gtk+-2.0 gthread-2.0` -lgtk-x11-2.0 -lgthread-2.0 `pkg-config --libs xtst`
 
 CDE_LIBS = -L$(CDE_HOME)/lib -R$(CDE_HOME)/lib -lXt -lX11 -lDtSvc
 
