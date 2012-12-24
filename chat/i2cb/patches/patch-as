@@ -1,4 +1,7 @@
-$NetBSD: patch-as,v 1.2 2005/12/13 21:30:11 joerg Exp $
+$NetBSD: patch-as,v 1.3 2012/12/24 03:11:25 dholland Exp $
+
+- don't use "restrict" as an identifier, it's a keyword now
+- ...? (XXX)
 
 --- src/main.c.orig	2000-03-15 22:13:28.000000000 +0000
 +++ src/main.c
@@ -66,6 +69,15 @@ $NetBSD: patch-as,v 1.2 2005/12/13 21:30:11 joerg Exp $
  			break;
  
  		case 'p':
+@@ -228,7 +242,7 @@ main (int argc, char **argv)
+ 		tclinit();
+ 		readlineinit();
+ 		if (restrictflg && !gv.restricted)
+-			restrict();
++			setrestricted();
+ 	}
+ 
+ 	/* try to connect to port - if it fails, start server if we are on */
 @@ -261,14 +275,14 @@ main (int argc, char **argv)
  		myport = serverdata->port;
  	}
