@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/29 05:07:20 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/12/24 21:17:12 joerg Exp $
 #
 
 DISTNAME=	xscript.tar
@@ -15,6 +15,12 @@ COMMENT=	X Window system script recording and playback
 
 WRKSRC=		${WRKDIR}/test-distrib/src
 USE_IMAKE=	YES
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+MAKE_FLAGS+=	CCOPTIONS=-Wno-error=return-type
+.endif
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
