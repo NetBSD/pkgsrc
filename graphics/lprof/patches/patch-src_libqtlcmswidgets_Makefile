@@ -1,0 +1,13 @@
+$NetBSD: patch-src_libqtlcmswidgets_Makefile,v 1.1 2012/12/24 21:11:17 joerg Exp $
+
+--- src/libqtlcmswidgets/Makefile.orig	2012-12-23 17:28:41.000000000 +0000
++++ src/libqtlcmswidgets/Makefile
+@@ -60,7 +60,7 @@ endif
+ # some settings
+ INCLUDES = -I../liblprof/ -I. -I$(QT_INCDIR) $(KDEINCLUDE)
+ LIBS     = -L$(QT_LIBDIR) -L../liblprof $(KDELIBDIR)
+-CFLAGS   = -O4 -Wall $(KDEFLAGS)
++CFLAGS   += -Wall $(KDEFLAGS)
+ POSTLIB  = $(KDEPOSTLIB) -lqt-mt -llprof -llcms -lm
+ 
+ all: libqtlcmswidgets.a

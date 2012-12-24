@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.4 2011/12/22 16:31:15 joerg Exp $
+$NetBSD: distinfo,v 1.5 2012/12/24 21:11:17 joerg Exp $
 
 SHA1 (lprof-1.10.1.tar.gz) = ad7cc5fff5d6dfff9d0993d201232d7bb71a46aa
 RMD160 (lprof-1.10.1.tar.gz) = d4a20cffe42a2ca12a1321a2e6013756e447300f
 Size (lprof-1.10.1.tar.gz) = 1244587 bytes
-SHA1 (patch-aa) = 8ce9546f07a51ed058764bffb1a6ece5d71c5273
-SHA1 (patch-ab) = 985c93fb70f1a947d0feb1785eb5a00d46ade8a2
-SHA1 (patch-ac) = 24fe5629f7f02b4c737b5cbbe81edff01c5a33e9
-SHA1 (patch-ad) = 48c7e62c4bed40607dfce8dfb557f172d2c9b85a
-SHA1 (patch-ae) = 95ea6012a05500ad6ef0c919ac8d818b23ddc6a7
-SHA1 (patch-af) = 4858e11e9905beb95bb89949c6a03067babf8c9a
+SHA1 (patch-aa) = 5ee77dffc9d5f30fe72dca7262903fc88988a8f9
+SHA1 (patch-ab) = 727da3358b8595c49b4e470a60808685a9b84ac9
+SHA1 (patch-ac) = cffb4deaf8073ea3b12531c6ab0b8de655cad07e
+SHA1 (patch-ad) = 711c753f811fdf598b1ec6cb103e7404099847c8
+SHA1 (patch-ae) = d7631e2f1ca3c206ca604fc71c6706a767f01a42
+SHA1 (patch-af) = 1e8c4dbe4650bfffb892d831ed94b2317e83ae1d
 SHA1 (patch-ag) = b6fcbffc42a5d2621c48b3f42c7b9da99294ce41
 SHA1 (patch-src_liblprof_lcmsprf.h) = c87f25db911674f5939844dc0f56fe70bd1cd12a
+SHA1 (patch-src_libqtlcmswidgets_Makefile) = 48631cf675443692845f23c60e614d87186905ca
