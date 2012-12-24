@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2009/06/22 18:29:33 drochner Exp $
+$NetBSD: patch-ad,v 1.6 2012/12/24 21:12:36 joerg Exp $
 
---- w_cmdpanel.c.orig	2008-07-17 17:50:06.000000000 +0200
+--- w_cmdpanel.c.orig	2008-07-17 15:50:06.000000000 +0000
 +++ w_cmdpanel.c
 @@ -375,7 +375,7 @@ rebuild_file_menu(Widget menu)
  	for (j = 0; j < MAX_RECENT_FILES; j++) {
