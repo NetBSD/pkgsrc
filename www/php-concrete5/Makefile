@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/12/24 01:35:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/24 04:39:57 ryoon Exp $
 #
 
 DISTNAME=	concrete5.6.0.2
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.concrete5.org/download_file/-/view/44326/8497/
