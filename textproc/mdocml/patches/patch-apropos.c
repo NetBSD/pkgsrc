@@ -1,4 +1,4 @@
-$NetBSD: patch-apropos.c,v 1.1 2012/12/24 12:53:17 ryoon Exp $
+$NetBSD: patch-apropos.c,v 1.2 2012/12/24 13:40:18 jperkin Exp $
 
 --- apropos.c.orig	2011-10-08 20:07:21.000000000 +0000
 +++ apropos.c
@@ -7,7 +7,7 @@ $NetBSD: patch-apropos.c,v 1.1 2012/12/24 12:53:17 ryoon Exp $
  #include <unistd.h>
  
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__SmartOS__)
++#if defined(__linux__) || defined(__sun)
  # include <db_185.h>
  #else
  # include <db.h>
