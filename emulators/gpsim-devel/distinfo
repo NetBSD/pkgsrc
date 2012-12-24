@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2012/10/20 22:09:09 joerg Exp $
+$NetBSD: distinfo,v 1.11 2012/12/24 06:11:25 dholland Exp $
 
 SHA1 (gpsim-20050905.tar.gz) = 46e7d0d69695961aca4324d8d3267181bd641081
 RMD160 (gpsim-20050905.tar.gz) = 1b717f0e51440c4e2db72a4bdfb90d2e8d5e4a3d
@@ -29,6 +29,7 @@ SHA1 (patch-src_operator.cc) = 4bdb1cee156930fb817ddff3e0eda6b49731872e
 SHA1 (patch-src_processor.cc) = 5139b24bf928c98250c9a87981b9ee0070f65949
 SHA1 (patch-src_processor.h) = 48ad5c1318e5b1e096643cd714cbb3ff3ce57db3
 SHA1 (patch-src_program__files.cc) = db0b4561d20f6b1feabeb33847f22326455608da
+SHA1 (patch-src_protocol.h) = ed2c7c903ed605b26a50c125436ac18f11d824eb
 SHA1 (patch-src_symbol.cc) = 195c15f4c258398d4a7c28cee1cf3d3ad7164429
 SHA1 (patch-src_symbol.h) = 778f2b9f8febfa498b87acfb59fdcb665975e592
 SHA1 (patch-src_value.cc) = 3fceae8b4d40ad1c26a06ac7dce6bb88965ae018
