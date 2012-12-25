@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 23:01:16 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/12/25 21:13:42 joerg Exp $
 #
 
 PKGNAME=	openscad-2011.12
@@ -36,6 +36,11 @@ CHECK_INTERPRETER_SKIP+=share/openscad/libraries/MCAD/get_submodules.py
 
 pre-build:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake)
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++11
+.endif
 
 # DragonFly requires FlexLexer.h from pkgsrc - base doesn't cut it.
 .include "../../devel/flex/buildlink3.mk"
