@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/04/23 10:45:21 gavan Exp $
+$NetBSD: distinfo,v 1.15 2012/12/25 21:49:05 ryoon Exp $
 
-SHA1 (mantisbt-1.1.7.tar.gz) = f22948ddeb76b85a3fb30072b937b1836ca16441
-RMD160 (mantisbt-1.1.7.tar.gz) = 6d13570e7e99195aa869419149b513be696b1d3a
-Size (mantisbt-1.1.7.tar.gz) = 2417784 bytes
+SHA1 (mantisbt-1.2.12.tar.gz) = ef7305da952cdd60157d03e589db5170bf1b6845
+RMD160 (mantisbt-1.2.12.tar.gz) = ce621d97b1a89213572905ac7eacfbbc3c41d0e0
+Size (mantisbt-1.2.12.tar.gz) = 3538177 bytes
