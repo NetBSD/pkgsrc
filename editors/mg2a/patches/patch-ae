@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2000/07/10 18:26:54 tron Exp $
+$NetBSD: patch-ae,v 1.3 2012/12/25 21:10:56 joerg Exp $
 
---- sys/default/tty.c.orig	Sun Jul  3 10:50:35 1988
-+++ sys/default/tty.c	Wed May 31 16:36:31 2000
-@@ -144,7 +144,8 @@
+--- sys/default/tty.c.orig	1988-07-03 17:50:35.000000000 +0000
++++ sys/default/tty.c
+@@ -144,7 +144,8 @@ ttinit() {
  #endif
  
  	if(CM == NULL || UP == NULL)
@@ -12,3 +12,21 @@ $NetBSD: patch-ae,v 1.2 2000/07/10 18:26:54 tron Exp $
  	ttresize();			/* set nrow & ncol	*/
  
  	/* watch out for empty capabilities (sure to be wrong)	*/
+@@ -259,7 +260,7 @@ ttbeep() {
+  * If no scrolling region, use a set
+  * of insert and delete line sequences
+  */
+-ttinsl(row, bot, nchunk) {
++void ttinsl(int row, int bot, int nchunk) {
+     register int	i, nl;
+ 
+     if (row == bot) {		/* Case of one line insert is	*/
+@@ -298,7 +299,7 @@ ttinsl(row, bot, nchunk) {
+  * lines.  The presence of the echo area makes a
+  * boundry condition go away.
+  */
+-ttdell(row, bot, nchunk)
++void ttdell(int row, int bot, int nchunk)
+ {
+     register int	i, nl;
+ 
