@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2004/09/20 02:08:58 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.4 2012/12/25 21:14:17 joerg Exp $
 
---- src/fasthenry/contact.c.orig	Tue Aug  3 22:17:10 2004
+--- src/fasthenry/contact.c.orig	2004-08-03 22:17:10.000000000 +0000
 +++ src/fasthenry/contact.c
 @@ -45,7 +45,7 @@ operation of Software or Licensed Progra
  #include <stdio.h>
@@ -11,3 +11,15 @@ $NetBSD: patch-ae,v 1.3 2004/09/20 02:08:58 dmcmahill Exp $
  #include <math.h>
  #include "induct.h"
  
+@@ -1130,10 +1130,7 @@ contact_equiv_rect(contactp, gp, relx, r
+ /* equiv all the nodes together on the exterior of the given rectangle */
+ /* picks the closest node outside the rect along the perimeter. */
+ /* We will assume the elements on the interior don't matter */
+-make_equiv_rect(x0, y0, z0, x_width, y_width, gp, name) 
+-    double x0, y0, z0, x_width, y_width;
+-    Nonuni_gp *gp;
+-    char *name;  /* node name */
++void make_equiv_rect(double x0, double y0, double z0, double x_width, double y_width, Nonuni_gp *gp, char *name) 
+ {
+   double xl, xr, yb, yt;
+   Gcell *cell;

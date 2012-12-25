@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.3 2012/12/25 21:14:17 joerg Exp $
 
---- src/fasthenry/induct.c.orig	Tue Aug  3 22:17:12 2004
+--- src/fasthenry/induct.c.orig	2004-08-03 22:17:12.000000000 +0000
 +++ src/fasthenry/induct.c
 @@ -35,6 +35,7 @@ operation of Software or Licensed Progra
  *//* This is the main part of the code */
@@ -10,3 +10,36 @@ $NetBSD: patch-ai,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
  
  /* these are missing in some math.h files */
  extern double asinh();
+@@ -45,6 +46,8 @@ extern double atanh();
+ #define TIMESIZE 10
+ 
+ static int notblankline();
++static void dumpMat_totextfile(FILE *fp, double **A, int rows, int cols);
++static void cx_dumpMat_totextfile(FILE *fp, CX **Z, int rows, int cols);
+ 
+ FILE *fp, *fp2, *fp3, *fptemp, *fb, *fROM;
+ int num_exact_mutual;
+@@ -1850,10 +1853,7 @@ MELEMENT *mesh1, *mesh2;
+   }
+ }
+ 
+-cx_dumpMat_totextfile(fp, Z, rows, cols)
+-FILE *fp;
+-CX **Z;
+-int rows, cols;
++static void cx_dumpMat_totextfile(FILE *fp, CX **Z, int rows, int cols)
+ {
+   int i, j;
+ 
+@@ -1865,10 +1865,7 @@ int rows, cols;
+   return;
+ }
+ 
+-dumpMat_totextfile(fp, A, rows, cols)
+-FILE *fp;
+-double **A;
+-int rows, cols;
++static void dumpMat_totextfile(FILE *fp, double **A, int rows, int cols)
+ {
+   int i, j;
+ 

@@ -1,19 +1,20 @@
-$NetBSD: patch-az,v 1.1 2006/06/21 14:56:51 minskim Exp $
+$NetBSD: patch-az,v 1.2 2012/12/25 21:14:17 joerg Exp $
 
 --- src/fasthenry/sparse/spBuild.c.orig	2004-08-03 22:17:18.000000000 +0000
 +++ src/fasthenry/sparse/spBuild.c
-@@ -105,8 +105,8 @@ static char RCSid[] =
+@@ -105,8 +105,9 @@ static char RCSid[] =
  #include "spMatrix.h"
  #include "spDefs.h"
  
 -
 -
 +static void Translate(MatrixPtr, int *, int *);
-+static ExpandTranslationArrays(MatrixPtr, register int);
++static void ExpandTranslationArrays(MatrixPtr, register int);
++static void EnlargeMatrix( MatrixPtr Matrix, int  NewSize);
  
  
  
-@@ -227,7 +227,6 @@ int  Row, Col;
+@@ -227,7 +228,6 @@ int  Row, Col;
  MatrixPtr  Matrix = (MatrixPtr)eMatrix;
  RealNumber  *pElement;
  ElementPtr spcFindElementInCol();
@@ -21,3 +22,37 @@ $NetBSD: patch-az,v 1.1 2006/06/21 14:56:51 minskim Exp $
  
  /* Begin `spGetElement'. */
      ASSERT( IS_SPARSE( Matrix ) AND Row >= 0 AND Col >= 0 );
+@@ -894,9 +894,7 @@ ElementPtr  pCreatedElement, spcGetEleme
+  *      Column currently being operated upon.
+  */
+ 
+-spcLinkRows( Matrix )
+-
+-MatrixPtr Matrix;
++void spcLinkRows(MatrixPtr Matrix)
+ {
+ register  ElementPtr  pElement, *FirstInRowEntry;
+ register  ArrayOfElementPtrs  FirstInRowArray;
+@@ -944,11 +942,8 @@ register  int  Col;
+  *     The allocated size of the matrix before it is expanded.
+  */
+ 
+-static
+-EnlargeMatrix( Matrix, NewSize )
+-
+-MatrixPtr Matrix;
+-register int  NewSize;
++static void
++EnlargeMatrix( MatrixPtr Matrix, int  NewSize)
+ {
+ register int I, OldAllocatedSize = Matrix->AllocatedSize;
+ 
+@@ -1033,7 +1028,7 @@ register int I, OldAllocatedSize = Matri
+  *     The allocated size of the translation arrays before being expanded.
+  */
+ 
+-static
++static void
+ ExpandTranslationArrays( Matrix, NewSize )
+ 
+ MatrixPtr Matrix;
