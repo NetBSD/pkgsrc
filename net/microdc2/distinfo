@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/06/18 01:11:20 dholland Exp $
+$NetBSD: distinfo,v 1.4 2012/12/25 21:04:32 joerg Exp $
 
 SHA1 (microdc2-0.15.6.tar.gz) = d39fedfb817203b70854aaff3a9e7fb2f2f317d2
 RMD160 (microdc2-0.15.6.tar.gz) = c7e05994c9012f4774c1de6eaea7ee3225c63336
 Size (microdc2-0.15.6.tar.gz) = 639392 bytes
 SHA1 (patch-aa) = 8801a9442911a6cdd3d154724db4ecc65965dd39
-SHA1 (patch-ab) = 4c3ba21543e92078d16b7535eec5fd27c8a93617
-SHA1 (patch-ac) = 88c73f1067bb96c66de716244b3866df1a51190f
+SHA1 (patch-ab) = 557541ae05484690002c7d9fa2f1533220ea190b
+SHA1 (patch-ac) = 47ccedc9305c75f2926f4ff910345eeba0dc8478
