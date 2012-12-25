@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/07/08 15:40:58 joerg Exp $
+$NetBSD: distinfo,v 1.12 2012/12/25 21:14:17 joerg Exp $
 
 SHA1 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 7117fdbaad95929a8d98944dced48cfb3a9e39d0
 RMD160 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 7059c9642c2246abf8101658027df1c89b7cab74
@@ -7,12 +7,12 @@ SHA1 (patch-aa) = 0461bee57442482c1d6467c0d9caa8382016e479
 SHA1 (patch-ab) = 3d593630b697f10b1ca1528e1818ccc33c6db464
 SHA1 (patch-ac) = 0a35ee0bfdc460e8a262d5cdc1d80c5f8905340e
 SHA1 (patch-ad) = 99cc8e4331756a425ebec914aa2bfaecadba38fb
-SHA1 (patch-ae) = 7db114b252d86ba41eefbd41d6e28b48189fc5e3
-SHA1 (patch-af) = 7bb6182e48c7517d62021d9126cf38f7fca833de
-SHA1 (patch-ag) = 67173de5037f122c559e3df3a51e2b4190e5668b
-SHA1 (patch-ah) = 8bfa6687c4a18cc3f0672930b31b4ea10a1cbce7
-SHA1 (patch-ai) = cc59e269314a22dce109d78bc705dda927f3739d
-SHA1 (patch-aj) = 153d716bacea6d4e3ca342a035ad43bec5c1d308
+SHA1 (patch-ae) = f92074acf09feabb7a283cb61fd44483c1d11e75
+SHA1 (patch-af) = 1156c3bdc7caa4529e62b28620dc4dbb63502685
+SHA1 (patch-ag) = 7d2171806982b5159c620f1413fde47f0e738cb3
+SHA1 (patch-ah) = f15255b45456010d5f4ad932c71b1fe25bf93909
+SHA1 (patch-ai) = ca4ee871f77ffe9d0099d047b4cd6f0dbde638b3
+SHA1 (patch-aj) = 498faad2ef8d6ba23b36dd50c5ea612e959af99c
 SHA1 (patch-ak) = ae0e90954eeaaed0e466e23bd5cc65f55f005f32
 SHA1 (patch-al) = 989ea3eb31036dd11074585da09fb13f8dc0e121
 SHA1 (patch-am) = 0114bbc5f54a672442ddccb6a9680d941d1c623a
@@ -27,8 +27,17 @@ SHA1 (patch-au) = 6bb6f94c221d12aeb8ea3a98f9cadfb8b813e0ce
 SHA1 (patch-av) = 1e52f584d81ba7394d8f876f74fb5d639a160060
 SHA1 (patch-aw) = f3c23565502045d21518a40981c4e3170364df54
 SHA1 (patch-ax) = 0d63ac982956c51a1f731e879e3a3330fdc3e27a
-SHA1 (patch-ay) = a1bec67321d965bc28bb7ac6aa665ce736ae7960
-SHA1 (patch-az) = 0c4a7175c3623063ef1e2b45336cc17b3b294525
-SHA1 (patch-ba) = 7d123f59922c3fc2ef5e9b9d54654bfd4fc6f75d
+SHA1 (patch-ay) = 48cd809f2f0caae7b14c6e3f98a1059c95b409e8
+SHA1 (patch-az) = 38897ec7cc07866aefb96834d695b8d95dff5458
+SHA1 (patch-ba) = 3d975a6d58c4122c076a3b65005b25a894aad83f
 SHA1 (patch-bb) = e9549c67f4a0c807deb73c1284fcae7d130de0ea
 SHA1 (patch-bc) = 6a1eb5a47344e097a84754e12c80867eebf53483
+SHA1 (patch-src_fasthenry_barnoldi.c) = c49f6803237cb55c70a99c87ba581db759cdcbc7
+SHA1 (patch-src_fasthenry_gp.h) = 3460cec75d61706c1c108ce03e4ed499fb1f381f
+SHA1 (patch-src_fasthenry_induct.h) = 858f376e14ecf064944318068b21a8a631afe163
+SHA1 (patch-src_fasthenry_joelself.c) = 6c53b6bed5527c66801260856e48ef43fc133881
+SHA1 (patch-src_fasthenry_mulDo.c) = 84c6dea7910dcc55f0cacc53c75eba3c963851dd
+SHA1 (patch-src_fasthenry_mulMats.c) = 81eb6ca630ac6bf2802cfc385113baf457c2cdb7
+SHA1 (patch-src_fasthenry_mulSetup.c) = 3ddde84e061b46282c190e58228f87530e48e08b
+SHA1 (patch-src_fasthenry_read__tree.c) = d9778d793d1761ec332e2703b2d3c4ce211e7ff5
+SHA1 (patch-src_fasthenry_sparse_spDefs.h) = 8976b2192591dea7a7a24867be0e2bb4c56f60b1
