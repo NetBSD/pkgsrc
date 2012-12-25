@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+$NetBSD: patch-ad,v 1.2 2012/12/25 21:07:47 joerg Exp $
 
 remove unwanted cast.
 
@@ -22,3 +22,12 @@ remove unwanted cast.
  								Attributes_FromTupleOrList (pAttrs)))
  	{
  		result = Py_True;
+@@ -596,7 +596,7 @@ PyLookupTable::py_init (PyLookupTableObj
+ void
+ PyLookupTable::py_dealloc (PyLookupTableObject *self)
+ {
+-	self->lookup_table.~LookupTable ();
++	self->lookup_table.~PyLookupTable ();
+ 	((PyObject *)self)->ob_type->tp_free (self);
+ }
+ 
