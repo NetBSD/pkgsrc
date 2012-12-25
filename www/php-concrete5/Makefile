@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/12/24 04:39:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2012/12/25 19:54:50 ryoon Exp $
 #
 
 DISTNAME=	concrete5.6.0.2
@@ -43,8 +43,8 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 REPLACE_PYTHON+=	concrete/libraries/3rdparty/htmldiff.py
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pmp * \
-		${DESTDIR}${PREFIX}/${C5DIR}
+	cd ${WRKSRC} && ${FIND} . -type f \! -name '*.orig' -print | \
+		pax -rw ${DESTDIR}${PREFIX}/${C5DIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
