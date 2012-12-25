@@ -1,12 +1,35 @@
-$NetBSD: patch-ab,v 1.1 2005/12/29 16:20:48 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/25 21:09:52 joerg Exp $
 
---- svs.c.orig	2005-12-29 16:17:25.000000000 +0000
+--- svs.c.orig	2012-12-25 13:53:19.000000000 +0000
 +++ svs.c
-@@ -49,7 +49,6 @@
+@@ -38,6 +38,7 @@
+  *
+  */
  
- extern char *getenv();
++#include	<stdlib.h>
+ #include	<stdio.h>
+ #include	<X11/Xos.h>
+ #include 	<sys/types.h>
+@@ -47,9 +48,8 @@
+ #include	<X11/Xutil.h>
+ #include	<math.h>
+ 
+-extern char *getenv();
++void add_score(int sc, int ledge);
  
 -extern int  errno;
  char       *progname;
  char        user_name[40];
  Bool        debug = False;
+@@ -423,9 +423,8 @@ init_display(ac, av, dname)
+     XMapWindow(dpy, game_win);
+ }
+ 
+-main(argc, argv)
+-    int         argc;
+-    char      **argv;
++int
++main(int argc, char **argv)
+ {
+     int         i;
+     char       *dname = NULL;
