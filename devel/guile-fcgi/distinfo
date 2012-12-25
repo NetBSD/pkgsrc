@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/06/05 05:44:37 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/12/25 21:11:12 joerg Exp $
 
 SHA1 (guile-fcgi-0.1.tar.gz) = 878d1f1e2a7a2ce618043cd19567f9fd1fa7ee4c
 RMD160 (guile-fcgi-0.1.tar.gz) = 96aaf411ed6db3276f8f7d3cebf52f9e5ef9ba16
 Size (guile-fcgi-0.1.tar.gz) = 110853 bytes
 SHA1 (patch-aa) = 44bb69029dd16d8be1696b69cf258bb968cde989
-SHA1 (patch-ab) = 13fa69f67e74efdffe569a1df1328fa7ecde0b3b
+SHA1 (patch-ab) = 0d1855df7c7e26a39e0c51d9f7d5aa7ae205635c
