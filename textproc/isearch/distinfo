@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/12/21 10:29:46 dholland Exp $
+$NetBSD: distinfo,v 1.9 2012/12/25 18:50:17 dholland Exp $
 
 SHA1 (Isearch-1.47.01.tar.gz) = 86761d6055fdd7b954b7ac9d9fd3d0084d758e3f
 RMD160 (Isearch-1.47.01.tar.gz) = 2e7f4c21d8a2d3cb194823a881ee7315f88de66c
@@ -24,6 +24,7 @@ SHA1 (patch-doctype_colondoc.hxx) = acae0a8f03cddc98c3d0cb97a0317d2cda7bdd2b
 SHA1 (patch-doctype_dif.cxx) = 9635baa6aa6c28ebf25db91d2f15fe8f55586adc
 SHA1 (patch-doctype_dif.hxx) = 3c43caeac80631b45255b6d67b7a3fe2e93146a5
 SHA1 (patch-doctype_doctype.cxx) = cfe9bc2ec1a18bb44780cd990f3fbebbb76c0671
+SHA1 (patch-doctype_dtconf.cxx) = 3da9071357c920022cb2a1d17bcb53159fa96a9c
 SHA1 (patch-doctype_emacsinfo.cxx) = af0f35a05402cf623dd9bb17775cd1335ad52db0
 SHA1 (patch-doctype_eos__guide.cxx) = 454ff6413234084d9b8a183b1be538b326ea47a5
 SHA1 (patch-doctype_eos__guide.hxx) = 3f48172159a6be8bd041907875610abe4cb7f139
@@ -79,7 +80,7 @@ SHA1 (patch-src_marclib.cxx) = e31a2badf8a6a312d545bccc51fda147ffe0095f
 SHA1 (patch-src_marclib.hxx) = 1892ae63295eef6f6218e53f168065b840cca282
 SHA1 (patch-src_merge.cxx) = 9179913f57ea3da89d80b27fe61c4a0c0285c0ad
 SHA1 (patch-src_multiterm.cxx) = 6498561a4c9e6ece4bc914c3798f47889ab65287
-SHA1 (patch-src_nlist.cxx) = af5ca93215f22ca5ad5fc42f3009020721dca421
+SHA1 (patch-src_nlist.cxx) = e0cb2ea91f294e18aa49b84289395fbfa698d2bc
 SHA1 (patch-src_registry.hxx) = 62777151312f11075ac4623250a4eefbf070b66c
 SHA1 (patch-src_string.hxx) = 4872ab8372289bce4ed198e1f16b87c67f5fb3c7
 SHA1 (patch-src_sw.hxx) = cc059fa62a6ad0b68ce027326641cfc0838b51f6
