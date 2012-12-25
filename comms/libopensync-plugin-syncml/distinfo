@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/12 14:27:22 dillo Exp $
+$NetBSD: distinfo,v 1.2 2012/12/25 21:13:18 joerg Exp $
 
 SHA1 (libopensync-plugin-syncml-0.22.tar.bz2) = 983fd2ad84c17f486fe182d94e3e055a081706be
 RMD160 (libopensync-plugin-syncml-0.22.tar.bz2) = a47a7670389910061d41727aebc161f625d77712
 Size (libopensync-plugin-syncml-0.22.tar.bz2) = 220011 bytes
+SHA1 (patch-src_syncml__plugin.c) = 23efa6c70d29cd5d020870fe1079864f4221cc76
