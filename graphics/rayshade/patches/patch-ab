@@ -1,26 +1,23 @@
-$NetBSD: patch-ab,v 1.1 1998/08/24 18:11:43 agc Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/25 21:08:40 joerg Exp $
 
-*** etc/rsconvert/lex.l.orig	Sun Mar  8 18:55:39 1998
---- etc/rsconvert/lex.l	Sun Mar  8 18:56:05 1998
-***************
-*** 22,27 ****
---- 22,28 ----
-  #include "libcommon/common.h"
-  #include "y.tab.h"
-  %}
-+ %option yylineno
-  alpha	[a-zA-Z]
-  special	[\.\_-]
-  digit	[0-9]
-*** libshade/lex.l.orig	Sun Mar  8 18:52:11 1998
---- libshade/lex.l	Sun Mar  8 18:53:18 1998
-***************
-*** 29,34 ****
---- 29,35 ----
-  #include "y.tab.h"
-  extern char *strsave();
-  %}
-+ %option yylineno
-  alpha	[a-zA-Z]
-  special	[\.\_-]
-  digit	[0-9]
+--- etc/rsconvert/lex.l.orig	1992-02-10 03:03:54.000000000 +0000
++++ etc/rsconvert/lex.l
+@@ -21,7 +21,9 @@
+ #endif
+ #include "libcommon/common.h"
+ #include "y.tab.h"
++static void skipcomments(void);
+ %}
++%option yylineno
+ alpha	[a-zA-Z]
+ special	[\.\_-]
+ digit	[0-9]
+@@ -101,7 +103,7 @@ yywrap() {return(1);}
+ /*
+  * Skip over comments.
+  */
+-skipcomments()
++static void skipcomments(void)
+ {
+ 	char c;
+ 

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2011/11/02 20:22:15 shattered Exp $
+$NetBSD: distinfo,v 1.8 2012/12/25 21:08:40 joerg Exp $
 
 SHA1 (rayshade.4.0.6.tar.Z) = 5fd1ce05e7ba3bc8e8b337c212eccb6b53b5b4ca
 RMD160 (rayshade.4.0.6.tar.Z) = a19bf35aa3f66de9ce406a1a98cf7edbde60f356
 Size (rayshade.4.0.6.tar.Z) = 369527 bytes
 SHA1 (patch-aa) = b510e1b3a98ef25ffe0d23f9b499fb5c16c333f4
-SHA1 (patch-ab) = 13b48848c4a40d86ee5ceef8dddf10988b59e088
+SHA1 (patch-ab) = 8a5fb56e6e12440550469a4a7635921fa76ec615
 SHA1 (patch-ac) = 496d4d89edaa7a8786cbd22c2fc31679fda96df5
 SHA1 (patch-ad) = 8e599cc859406341ec39c52b7711e7b64f015b57
 SHA1 (patch-ae) = 3663df57825be54a989dcfd2365662c524f8150f
@@ -20,3 +20,6 @@ SHA1 (patch-an) = 0f1fc819052fc05097d278108934582f8e35a236
 SHA1 (patch-ao) = a4357564a150836dc9080519f36c81ccc049d981
 SHA1 (patch-ap) = 28ab76ad7b65d53bf190a944969b95f0915f6098
 SHA1 (patch-ba) = d36261ceede5f89645ff23f5a108b231fd5ea18d
+SHA1 (patch-libray_libtext_mapping.h) = e28ff185a6fefaad2fb975aafd04f7246ed83e55
+SHA1 (patch-libray_libtext_texture.c) = 17635e4a7b286db4c86d7e0071852f688b3989d8
+SHA1 (patch-libshade_lex.l) = e06825ca0fe17674c854aa04bf303a3ee0e0b768
