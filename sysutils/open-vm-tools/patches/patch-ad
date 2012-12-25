@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2008/08/31 06:36:47 scottr Exp $
+$NetBSD: patch-ad,v 1.3 2012/12/25 21:02:15 joerg Exp $
 
---- guestd/foreignVMToolsDaemon.h.orig	2008-08-08 02:01:56.000000000 -0500
+--- guestd/foreignVMToolsDaemon.h.orig	2008-08-08 07:01:56.000000000 +0000
 +++ guestd/foreignVMToolsDaemon.h
 @@ -59,7 +59,7 @@ VixError VIX_INIT_LOCK(VixLockType *lock
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ad,v 1.2 2008/08/31 06:36:47 scottr Exp $
  #include <unistd.h>
  #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
  #else
+@@ -72,7 +72,7 @@ VixError VIX_INIT_LOCK(VixLockType *lock
+ 
+ typedef pthread_mutex_t VixLockType;
+ static INLINE VixError VIX_INIT_LOCK(VixLockType *lockPtr);
+-VixError VIX_INIT_LOCK(VixLockType *lockPtr) 
++static INLINE VixError VIX_INIT_LOCK(VixLockType *lockPtr) 
+ {
+    int result;
+    pthread_mutexattr_t attr;
