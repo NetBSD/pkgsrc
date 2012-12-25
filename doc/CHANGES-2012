@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4009 2012/12/24 04:40:58 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.4010 2012/12/25 02:00:46 spz Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6173,3 +6173,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/knot to 1.1.3 [pettai 2012-12-23]
 	Updated www/php-tiki6 to 6.8 [ryoon 2012-12-24]
 	Updated www/php-concrete5 to 5.6.0.2nb1 [ryoon 2012-12-24]
+	Updated www/apache22 to 2.2.23nb3 [spz 2012-12-25]
