@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/04/13 23:44:38 obache Exp $
+$NetBSD: distinfo,v 1.3 2012/12/25 21:05:49 joerg Exp $
 
 SHA1 (ushare-1.1a.tar.bz2) = 1539e83cde5d80f433d262d971f5fe78486c9375
 RMD160 (ushare-1.1a.tar.bz2) = 6194ffec031d20fd897f2c7cf71c3c810238713f
@@ -8,10 +8,13 @@ SHA1 (patch-ab) = 2136d6b0e92b797072ea13d30e0fcc7131ab50a6
 SHA1 (patch-ac) = 0c8cc122de8d1fbdaaace4867656819cad0b84e7
 SHA1 (patch-ad) = 6c8e838add604b54132fbe924c4a8697ee2e2c09
 SHA1 (patch-ae) = 180151696678bb2f3ccd2bbaaaf9ed55f1c441e9
-SHA1 (patch-af) = dc3d963a613629dc0340326b9bb58174cddb4971
+SHA1 (patch-af) = 5a24743aa8709d2a8187283dcfa61a5fad035a65
 SHA1 (patch-src_cds.c) = 04b56cf45b628d9a94baec4dde73709a3378e0b1
 SHA1 (patch-src_cms.c) = 8056f8d90b3b893cdcd242c5fce19e9a1825790a
 SHA1 (patch-src_http.c) = ea20349013d56a41c027738f950800c1ba101fc2
 SHA1 (patch-src_mime.c) = d21134337a4950faaf5e29e960b5815eafdfbe12
 SHA1 (patch-src_presentation.c) = d682cb85c9f5bdd5f304ea14abfa5889f28efdd3
 SHA1 (patch-src_services.c) = af0d0c5e3328d78d03663eb98194210145a63629
+SHA1 (patch-src_trace.c) = 13691242d61d02a7c58647b345f6e94367111129
+SHA1 (patch-src_trace.h) = 19bc801d0d96f2d73e7f103153572b8157eb7aeb
+SHA1 (patch-src_ushare.h) = cb63c71ee925b0e68127dd21042fe3cb748bc215
