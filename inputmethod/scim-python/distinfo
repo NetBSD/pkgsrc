@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/12/25 21:07:47 joerg Exp $
 
 SHA1 (pinyin-database-0.1.10.5.tar.bz2) = d0bb78416431a59cbcaf62809e56fab284f6d588
 RMD160 (pinyin-database-0.1.10.5.tar.bz2) = 3acfa16d11b2099d7719f3b7b5a77c523b982d2d
@@ -9,4 +9,4 @@ Size (scim-python-0.1.13rc1.tar.gz) = 715364 bytes
 SHA1 (patch-aa) = b576047a60704b19db91792fcdbe4e1e8515be26
 SHA1 (patch-ab) = 4505e5d93f2b44d46560f9d04fa769038bea8956
 SHA1 (patch-ac) = e3b795ee4b218d8c1bb0e57cfbc2ec879f9bc840
-SHA1 (patch-ad) = 9fbfb2bb233a0779d0b4cef7dff476956757a5f2
+SHA1 (patch-ad) = bc2ab7119ec979ab8888fb9a7b6f238993f5cf22
