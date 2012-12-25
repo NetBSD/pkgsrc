@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/12/17 11:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/25 15:33:34 wiz Exp $
 
 DISTNAME=	anki-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/}
+PKGREVISION=	1
 CATEGORIES=	misc x11
 MASTER_SITES=	http://ankisrs.net/download/mirror/
 EXTRACT_SUFX=	.tgz
@@ -18,6 +19,8 @@ DEPENDS+=	portaudio-devel-[0-9]*:../../audio/portaudio-devel
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.2:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 # XXX: python portaudio
+
+DIST_SUBDIR=	anki2-2.0.3v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
