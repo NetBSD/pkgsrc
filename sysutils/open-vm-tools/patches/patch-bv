@@ -1,6 +1,6 @@
-$NetBSD: patch-bv,v 1.1 2008/08/31 06:36:49 scottr Exp $
+$NetBSD: patch-bv,v 1.2 2012/12/25 21:02:15 joerg Exp $
 
---- vmware-user/foreignVMToolsDaemon.c.orig	2008-08-08 02:01:56.000000000 -0500
+--- vmware-user/foreignVMToolsDaemon.c.orig	2008-08-08 07:01:56.000000000 +0000
 +++ vmware-user/foreignVMToolsDaemon.c
 @@ -55,7 +55,7 @@
  #include <netinet/tcp.h>
@@ -11,3 +11,13 @@ $NetBSD: patch-bv,v 1.1 2008/08/31 06:36:49 scottr Exp $
  #include <unistd.h>
  #else
  #include <linux/unistd.h>
+@@ -833,8 +833,7 @@ ForeignToolsSetProperties(ForeignVMTools
+     * Do some validation
+     */
+    if ((NULL == asyncCommand)
+-         || (NULL == requestMsg)
+-         || (0 > requestMsg->bufferSize)) {
++         || (NULL == requestMsg)) {
+       err = VIX_E_INVALID_ARG;
+       goto abort;
+    }
