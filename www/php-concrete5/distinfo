@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/12/24 04:39:57 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2012/12/25 09:35:28 ryoon Exp $
 
 SHA1 (concrete5.6.0.2.zip) = 30f173bb1715e74c53fbb25d733d415d26d08409
 RMD160 (concrete5.6.0.2.zip) = 4909f0c471bccb4350971ce7e7adba44579d7aef
 Size (concrete5.6.0.2.zip) = 14443587 bytes
-SHA1 (patch-concrete_blocks_image_tools_crop__image.php) = f6413d48d67f9da05174067f563c187350c832e1
+SHA1 (patch-concrete_blocks_image_tools_crop__image.php) = 4c757ba21a81505ef940177e077c2b2c8933be9d
