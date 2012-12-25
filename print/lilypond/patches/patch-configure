@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2012/12/25 15:30:14 wiz Exp $
+
+Disable c/c++ version check; it fails e.g. with clang emulating gcc.
+
+--- configure.orig	2012-12-25 15:26:16.000000000 +0000
++++ configure
+@@ -4485,7 +4485,7 @@ $as_echo_n "checking $r version... " >&6
+ `
+     { $as_echo "$as_me:$LINENO: result: $ver" >&5
+ $as_echo "$ver" >&6; }
+-    if test "$num" -lt "$req"; then
++    if false; then
+ 
+     eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 3.4 (installed: $ver)"\"`\"
+ 
+@@ -4978,7 +4978,7 @@ $as_echo_n "checking $r version... " >&6
+ `
+     { $as_echo "$as_me:$LINENO: result: $ver" >&5
+ $as_echo "$ver" >&6; }
+-    if test "$num" -lt "$req"; then
++    if false; then
+ 
+     eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 3.4 (installed: $ver)"\"`\"
+ 
