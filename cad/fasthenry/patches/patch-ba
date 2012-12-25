@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1 2006/06/21 14:56:51 minskim Exp $
+$NetBSD: patch-ba,v 1.2 2012/12/25 21:14:17 joerg Exp $
 
 --- src/fasthenry/sparse/spFactor.c.orig	2004-08-03 22:17:18.000000000 +0000
 +++ src/fasthenry/sparse/spFactor.c
@@ -10,9 +10,9 @@ $NetBSD: patch-ba,v 1.1 2006/06/21 14:56:51 minskim Exp $
 -
 -
 +static int FactorComplexMatrix( MatrixPtr );
-+static CreateInternalVectors( MatrixPtr );
-+static CountMarkowitz( MatrixPtr, register RealVector, int );
-+static MarkowitzProducts( MatrixPtr, int );
++static void CreateInternalVectors( MatrixPtr );
++static void CountMarkowitz( MatrixPtr, register RealVector, int );
++static void MarkowitzProducts( MatrixPtr, int );
 +static ElementPtr SearchForPivot( MatrixPtr, int, int );
 +static ElementPtr SearchForSingleton( MatrixPtr, int );
 +static ElementPtr QuicklySearchDiagonal( MatrixPtr, int );
@@ -20,15 +20,120 @@ $NetBSD: patch-ba,v 1.1 2006/06/21 14:56:51 minskim Exp $
 +static ElementPtr SearchEntireMatrix( MatrixPtr, int );
 +static RealNumber FindLargestInCol( register ElementPtr );
 +static RealNumber FindBiggestInColExclude( MatrixPtr, ElementPtr, register int );
-+static ExchangeRowsAndCols( MatrixPtr, ElementPtr, register int );
-+static ExchangeColElements( MatrixPtr, int, ElementPtr, int, ElementPtr, int );
-+static ExchangeRowElements( MatrixPtr, int, ElementPtr, int, ElementPtr, int );
-+static RealRowColElimination( MatrixPtr, ElementPtr );
-+static ComplexRowColElimination( MatrixPtr, ElementPtr );
-+static UpdateMarkowitzNumbers( MatrixPtr, ElementPtr );
++static void ExchangeRowsAndCols( MatrixPtr, ElementPtr, register int );
++static void ExchangeColElements( MatrixPtr, int, ElementPtr, int, ElementPtr, int );
++static void ExchangeRowElements( MatrixPtr, int, ElementPtr, int, ElementPtr, int );
++static void RealRowColElimination( MatrixPtr, ElementPtr );
++static void ComplexRowColElimination( MatrixPtr, ElementPtr );
++static void UpdateMarkowitzNumbers( MatrixPtr, ElementPtr );
 +static ElementPtr CreateFillin( MatrixPtr, register int, int );
 +static int MatrixIsSingular( MatrixPtr, int );
 +static int ZeroPivot( MatrixPtr, int );
  
  
  /*
+@@ -753,7 +770,7 @@ BOOLEAN *DoRealDirect, *DoCmplxDirect;
+  *  spNO_MEMORY
+  */
+ 
+-static
++static void
+ CreateInternalVectors( Matrix )
+ 
+ MatrixPtr  Matrix;
+@@ -842,7 +859,7 @@ int  Size;
+  *     The size of the matrix.
+  */
+ 
+-static
++static void
+ CountMarkowitz( Matrix, RHS, Step )
+ 
+ MatrixPtr Matrix;
+@@ -952,7 +969,7 @@ int  ExtRow;
+  *      The size of the matrix.
+  */
+ 
+-static
++static void
+ MarkowitzProducts( Matrix, Step )
+ 
+ MatrixPtr Matrix;
+@@ -2109,7 +2126,7 @@ RealNumber  Largest, Magnitude;
+  *      of the reduced submatrix.
+  */
+ 
+-static
++static void
+ ExchangeRowsAndCols( Matrix, pPivot, Step )
+ 
+ MatrixPtr Matrix;
+@@ -2239,10 +2256,7 @@ ElementPtr spcFindElementInCol();
+  *      Pointer to the element in Row2 to be exchanged.
+  */
+ 
+-spcRowExchange( Matrix, Row1, Row2 )
+-
+-MatrixPtr Matrix;
+-int  Row1, Row2;
++void spcRowExchange( MatrixPtr Matrix, int Row1, int Row2 )
+ {
+ register  ElementPtr  Row1Ptr, Row2Ptr;
+ int  Column;
+@@ -2340,10 +2354,7 @@ ElementPtr  Element1, Element2;
+  *      Pointer to the element in Col2 to be exchanged.
+  */
+ 
+-spcColExchange( Matrix, Col1, Col2 )
+-
+-MatrixPtr Matrix;
+-int  Col1, Col2;
++void spcColExchange( MatrixPtr Matrix, int Col1, int Col2 )
+ {
+ register  ElementPtr  Col1Ptr, Col2Ptr;
+ int  Row;
+@@ -2446,7 +2457,7 @@ ElementPtr  Element1, Element2;
+  *      Pointer used to traverse the column.
+  */
+ 
+-static
++static void
+ ExchangeColElements( Matrix, Row1, Element1, Row2, Element2, Column )
+ 
+ MatrixPtr Matrix;
+@@ -2588,7 +2599,7 @@ register  ElementPtr  pElement;
+  *      Pointer used to traverse the row.
+  */
+ 
+-static
++static void
+ ExchangeRowElements( Matrix, Col1, Element1, Col2, Element2, Row )
+ 
+ MatrixPtr Matrix;
+@@ -2723,7 +2734,7 @@ register   ElementPtr  pElement;
+  *  spNO_MEMORY
+  */
+ 
+-static
++static void
+ RealRowColElimination( Matrix, pPivot )
+ 
+ MatrixPtr Matrix;
+@@ -2812,7 +2823,7 @@ extern ElementPtr  CreateFillin();
+  *  spNO_MEMORY
+  */
+ 
+-static
++static void
+ ComplexRowColElimination( Matrix, pPivot )
+ 
+ MatrixPtr Matrix;
+@@ -2896,7 +2907,7 @@ ElementPtr  CreateFillin();
+  *      Points to matrix element in lower triangular row.
+  */
+ 
+-static
++static void
+ UpdateMarkowitzNumbers( Matrix, pPivot )
+ 
+ MatrixPtr Matrix;
