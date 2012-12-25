@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/12/22 22:10:00 dholland Exp $
+$NetBSD: distinfo,v 1.23 2012/12/25 21:09:08 joerg Exp $
 
 SHA1 (ivtools-1.2.8.tgz) = b494c726cf8784e0a5ca3a4092e5831d2d5b2bba
 RMD160 (ivtools-1.2.8.tgz) = 7f63f2b491202ba81c6d24234760d17d7f95ebc6
@@ -45,3 +45,4 @@ SHA1 (patch-src_Attribute_attrvalue.h) = 97be293d03aa7f9da5e0ca90580d91a33e43d41
 SHA1 (patch-src_ComUtil_comutil.arg) = 8e36309f9f0f357f8f55572788595417de549ccf
 SHA1 (patch-src_ComUtil_symbols.c) = 69e7c2bc4f9863bc0d3c9ae5e9b97550619cfe16
 SHA1 (patch-src_glyphs_strchooser_main.c) = 7cd91aaaba73d412bb0d41d5030f0c956e3ef000
+SHA1 (patch-src_tests_y2k_y2ktest.cc) = ef1b1d3d20031b3d769152e2896b656aa716abfd
