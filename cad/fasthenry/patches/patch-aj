@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.3 2012/12/25 21:14:17 joerg Exp $
 
---- src/fasthenry/mulGlobal.h.orig	Tue Aug  3 22:20:13 2004
+--- src/fasthenry/mulGlobal.h.orig	2004-08-03 22:20:13.000000000 +0000
 +++ src/fasthenry/mulGlobal.h
 @@ -46,7 +46,7 @@ extern char *   calloc();
  extern char *   malloc();
@@ -11,3 +11,11 @@ $NetBSD: patch-aj,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
  #endif /* end if NEWS */
  #include <stdio.h>
  #include <math.h>
+@@ -428,3 +428,7 @@ misc. global macros
+ /* blkDirect.c related flags - used only when DIRSOL == ON || EXPGCR == ON */
+ #define MAXSIZ 0		/* any more tiles than this uses matrix on disk
+ 				   for DIRSOL == ON or EXPGCR == ON */
++
++void mulUp(ssystem *sys);
++void mulDown(ssystem *sys);
++

@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.3 2012/12/25 21:14:17 joerg Exp $
 
---- src/fasthenry/hole.c.orig	Tue Aug  3 22:17:12 2004
+--- src/fasthenry/hole.c.orig	2004-08-03 22:17:12.000000000 +0000
 +++ src/fasthenry/hole.c
-@@ -38,7 +38,7 @@ operation of Software or Licensed Progra
+@@ -38,10 +38,13 @@ operation of Software or Licensed Progra
  #include <stdio.h>
  #include <ctype.h>
  #include <string.h>
@@ -11,3 +11,21 @@ $NetBSD: patch-ah,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
  #include <math.h>
  #include "induct.h"
  
++
++static void hole_circle(HoleList *holep, GROUNDPLANE *gp, double relx, double rely, double relz, double units);
++
+ /* returns TRUE if the next word in line matches str. */
+ /* (strips leading spaces from line, but not str) */
+ is_next_word(str, line)
+@@ -313,10 +316,7 @@ double relx,rely,relz,units;
+    It takes 4 values in holep->vals.  The first three are (x,y,z) of 
+    the center and the last is the radius, R.
+ */
+-hole_circle(holep, gp, relx, rely, relz, units)
+-GROUNDPLANE *gp;
+-HoleList *holep;
+-double relx,rely,relz,units;
++static void hole_circle(HoleList *holep, GROUNDPLANE *gp, double relx, double rely, double relz, double units)
+ {
+   NODES *node1, *node2, *nodec;
+   int i1, j1, i2, j2;
