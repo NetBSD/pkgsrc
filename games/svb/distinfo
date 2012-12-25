@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/02/14 21:23:50 joerg Exp $
+$NetBSD: distinfo,v 1.6 2012/12/25 21:09:52 joerg Exp $
 
 SHA1 (svb.shar.Z) = 9792ca79f49bf21cbe01b01f3fd0645872e646a9
 RMD160 (svb.shar.Z) = db792b72e96a826099b9097ee5def2fce6830296
 Size (svb.shar.Z) = 17403 bytes
 SHA1 (patch-aa) = 901f65e1b8a4fc634b117064d2dd282dd1fd41a5
-SHA1 (patch-ab) = f0c9dc81d9e060e7de06295cc3a6b07779d7f463
+SHA1 (patch-ab) = edabaaedefcca89113961fcfcae7513ee4c87832
+SHA1 (patch-score.c) = 11a94218f7253cbe837d4d9f680aeab27eff60a3
