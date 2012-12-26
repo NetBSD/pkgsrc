@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2012/07/25 21:19:30 tez Exp $
+$NetBSD: distinfo,v 1.7 2012/12/26 21:41:52 dholland Exp $
 
 SHA1 (nfdump-1.6.6.tar.gz) = f7a30c69419222f1527684fb46f02ae757b3dac0
 RMD160 (nfdump-1.6.6.tar.gz) = 63d5aec9e7f6d2ee151a88451e52ac86263996e4
 Size (nfdump-1.6.6.tar.gz) = 651348 bytes
+SHA1 (patch-bin_nf__common.c) = 89a5d819a3076badf94d4151cda8a0e86d4dc55b
 SHA1 (patch-bin_nfcapd.c) = d704b76af63547f9365dc56a65931e0df9d788fb
 SHA1 (patch-bin_sfcapd.c) = 14d9cbef9c059629606d38df5a4cfa5aa082942a
 SHA1 (patch-configure) = 02ddab9c6ee4d862b0e8f006ab3432b07923bf0b
