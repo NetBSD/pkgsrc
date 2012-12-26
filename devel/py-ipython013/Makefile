@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/12/26 18:50:31 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/26 21:30:05 dholland Exp $
 #
 
 DISTNAME=	ipython-0.13.1
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 
 PYTHON_VERSIONS_INCOMPATIBLE=	25
-PYTHON_VERSIONS_INCLUDE_3X=	yes
+#PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gunzip
