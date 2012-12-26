@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:09 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/26 10:27:14 jaapb Exp $
 #
 
 DISTNAME=	ocaml-expat-0.9.1
@@ -11,6 +11,7 @@ COMMENT=	OCaml bindings for the expat library
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+USE_LANGUAGES=	c
 BUILD_TARGET=	all
 
 PLIST_VARS+=	opt
@@ -21,7 +22,7 @@ PLIST.opt=	yes
 BUILD_TARGET+=	allopt
 .endif
 
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
+.include "../../lang/ocaml/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
