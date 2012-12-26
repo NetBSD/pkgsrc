@@ -1,16 +1,21 @@
-$NetBSD: patch-ab,v 1.2 2006/02/26 21:26:32 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2012/12/26 21:55:37 dholland Exp $
+
+Looking inside FILE is gross, but if we're going to do it at least do
+it ~correctly.
 
 --- src/hd/rhdisp.c.orig	2004-04-10 02:54:06.000000000 +0000
 +++ src/hd/rhdisp.c
-@@ -22,8 +22,10 @@ static const char	RCSid[] = "$Id: rhdisp
+@@ -22,9 +22,11 @@ static const char	RCSid[] = "$Id: rhdisp
  #define FSIZDEF		0.125	/* default focus frame size */
  #endif
  
 -#if defined(freebsd)
 +#if defined(freebsd) || defined(netbsd)
  #define fbufcnt(f)	((f)->_r)
+-#elif defined(__GNUC__)
 +#elif defined(dragonfly)
 +#define fbufcnt(f)	(((struct __FILE_public *)(f))->_r)
- #elif defined(__GNUC__)
++#elif defined(__linux__) || defined(__GNU_LIBRARY__)
  #define fbufcnt(f)	((f)->_IO_read_end - (f)->_IO_read_ptr)
  #else
+ #define fbufcnt(f)	((f)->_cnt)
