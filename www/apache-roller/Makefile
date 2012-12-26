@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/12/20 14:31:46 spz Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/26 18:46:00 asau Exp $
 #
 
 DISTNAME=	roller-weblogger-${ROLLER_VER}-for-tomcat
@@ -17,7 +17,6 @@ USE_JAVA=	run
 USE_JAVA2=	1.5
 ROLLER_VER=	5.0.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PLIST_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV:Q}
 
 .include "options.mk"
