@@ -1,6 +1,20 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:33 agc Exp $
+$NetBSD: distinfo,v 1.3 2012/12/26 21:21:38 dholland Exp $
 
 SHA1 (ack139.tar.gz) = d9ae53238176d46c303a48e736c5bafa9743250c
 RMD160 (ack139.tar.gz) = 859af65bb4e4d3e1bc42840b23d571510f095d18
 Size (ack139.tar.gz) = 16292 bytes
 SHA1 (patch-aa) = 4840bef577a42cd4cd1a387f7261f42f9887055f
+SHA1 (patch-ackstring.h) = 6af0febe5c1b8c36240b68ec3eb5993403c73137
+SHA1 (patch-codetoeuc.c) = ba4da165520b60bd7a88758227fe7760faa72fcd
+SHA1 (patch-codetojis.c) = 2c9959113c77bc98340c3ad7596bc7d85bfe66b5
+SHA1 (patch-codetosjis.c) = 1cf4a11d584a1a4412002d112cd743500275bf99
+SHA1 (patch-codetozen.c) = 9612cf1811489bc251140d611000af551f88ee1a
+SHA1 (patch-euctocode.c) = 75486f92a700fa684602d933dcd337f19ab28763
+SHA1 (patch-fileio.c) = 29485831fff5686bb30c9dc62eefed42727999f3
+SHA1 (patch-kanjicheck.c) = c37f252c11df5960f9018d21eda9d12bc272c8ef
+SHA1 (patch-kanjicode.h) = f44671c45d2ed7f0a173db84e6c1f10ad1c13f82
+SHA1 (patch-kmain.c) = d0e0d31598febf75c633cf29989279e1aa492de8
+SHA1 (patch-lcode.c) = e044192fa29ca44168fa853f51987c5cef090ddf
+SHA1 (patch-misc.h) = 775c9910792a1cda98d8fe6fe327191369e2efa7
+SHA1 (patch-sjistocode.c) = 4a0b6103acc30455201b0c478dbbcb7bee76ad46
+SHA1 (patch-string.c) = 3075438f91c30b9c42260eb1870f4b491a55bad8
