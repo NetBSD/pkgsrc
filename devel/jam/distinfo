@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2008/03/10 00:09:23 tnn Exp $
+$NetBSD: distinfo,v 1.8 2012/12/26 18:51:47 ryoon Exp $
 
 SHA1 (ftjam-2.5.2.tar.bz2) = 08bad35e74ec85c4592d378014586174d22297b5
 RMD160 (ftjam-2.5.2.tar.bz2) = fd1d1161963ba85be09aecffe832cf1db8a7b70f
 Size (ftjam-2.5.2.tar.bz2) = 196631 bytes
-SHA1 (patch-aa) = 91a3bdf0b8382afd90ac21c4304bdc580d5068e8
-SHA1 (patch-ab) = 72816ee8c6dafdcb557560a8815f70e5ec593ff4
+SHA1 (patch-aa) = 64a149995f63cd3d3648f4597769e2ec57b0b0ba
+SHA1 (patch-ab) = 6f6fce24c46d799d7ef9885271960c3d2038f93d
+SHA1 (patch-jambase.c) = 906d3589718e4bf87a0f1740d876c2ddc7a7f90d
