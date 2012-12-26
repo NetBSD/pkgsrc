@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/18 12:09:25 agc Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/26 17:12:57 ryoon Exp $
 
---- Makefile.in.orig	Sun Feb 25 14:42:39 2001
-+++ Makefile.in	Tue Jun 18 12:58:26 2002
+--- Makefile.in.orig	2001-02-25 14:42:39.000000000 +0000
++++ Makefile.in
 @@ -1,7 +1,7 @@
 -CC = gcc -O2 -Wall
 -LIBS = #LIBS#

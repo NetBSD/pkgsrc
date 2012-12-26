@@ -1,8 +1,20 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/06/18 12:09:25 agc Exp $
+$NetBSD: patch-ac,v 1.2 2012/12/26 17:12:57 ryoon Exp $
 
---- lhs.c	2002/06/18 11:54:40	1.1
-+++ lhs.c	2002/06/18 11:54:05
-@@ -592,7 +592,7 @@
+* Include sys/filio.h for FIONBIO etc.
+
+--- lhs.c.orig	2001-02-27 17:37:10.000000000 +0000
++++ lhs.c
+@@ -25,6 +25,9 @@
+ #include <openssl/err.h>
+ #endif
+ #include "lhs.h"
++#if defined (__sun)
++#include <sys/filio.h>
++#endif
+ 
+ #define debug(x...) { if (verbose) printf(x); }
+ 
+@@ -592,7 +595,7 @@ void usage(char *a0)
  "  -s version   set SSL protocol version (default: SSLv2)\n"
  "  -c filename  load certificate file (default: lhs.pem)\n"
  #endif
