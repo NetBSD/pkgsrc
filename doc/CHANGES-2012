@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4013 2012/12/25 21:49:46 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.4014 2012/12/26 17:01:03 darcy Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6177,3 +6177,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/unbound to 1.4.19 [pettai 2012-12-25]
 	Updated misc/py-anki2 to 2.0.3nb1 [wiz 2012-12-25]
 	Updated devel/mantis to 1.2.12 [ryoon 2012-12-25]
+	Updated mail/bogofilter to 1.2.3 [darcy 2012-12-26]
