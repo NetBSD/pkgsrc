@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/28 06:31:02 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/12/27 20:12:26 ryoon Exp $
 #
 
 DISTNAME=	qDecoder-9.0.1
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.qDecoder.org/pub/qDecoder/
 MAINTAINER=	jypak@users.sourceforge.net
 HOMEPAGE=	http://www.qDecoder.org/
 COMMENT=	Web Application Interface for C/C++ (CGI Library)
+
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
