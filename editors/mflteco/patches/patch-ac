@@ -1,12 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+$NetBSD: patch-ac,v 1.2 2012/12/27 06:13:20 dholland Exp $
 
---- te_rdcmd.c.orig	1993-08-06 00:29:35.000000000 +0200
+- use some static
+- don't put function declarations inside function bodies
+- remove unused goto-label
+- call ctype.h functions correctly
+- don't index arrays with (signed) char
+- remove silly code that provokes a pointer width warning
+- declare void functions void
+- remove unused variable
+
+--- te_rdcmd.c.orig	1993-08-05 22:29:35.000000000 +0000
 +++ te_rdcmd.c
-@@ -9,13 +9,14 @@
+@@ -9,13 +9,15 @@
  
  #include "te_defs.h"
  
-+static unsigned short do_func_keys();
++static unsigned short do_func_keys(unsigned short c);
++static int find_lasteol(void);
 +
  int ccount;				/* count of chars read in */
  
@@ -18,3 +28,58 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
  
  	goto prompt;
  
+@@ -30,7 +32,7 @@ int read_cmdstr()
+ 	ccount = 0;
+ 	lastc = ' ';
+ 
+-reline:					/* continue reading */
++/*reline:*/				/* continue reading */
+ 	for (;;)			/* loop to read command string chars */
+ 	{
+ 		if (!eisw && !inp_noterm)		/* if terminal input */
+@@ -106,7 +108,7 @@ reline:					/* continue reading */
+ 								i = (c == '~') ? NEXTQREGS/2 : 0;
+ 								type_char(c = gettty());	/* read & echo one more */
+ 								if (isdigit(c)) i += EXTQREGS + c - '0';
+-								else if (isalpha(mapch_l[c])) i += EXTQREGS + 10 + c - 'a';
++								else if (isalpha((unsigned char)mapch_l[c])) i += EXTQREGS + 10 + c - 'a';
+ 								else ERROR(E_IQN);
+ 						}
+ 							else i = getqspec(0, c);
+@@ -119,7 +121,8 @@ reline:					/* continue reading */
+ 							qreg[i].f->usecount = 1;
+ 						}
+ 						qreg[i].z = cbuf.z;
+-						cbuf.f = (struct buffcell *) (cbuf.z = 0);		/* no old command string */
++						cbuf.z = 0;
++						cbuf.f = NULL;			/* no old command string */
+ 						err = 0;					/* no previous error */
+ 						goto restart;
+ 					}
+@@ -238,7 +241,7 @@ reline:					/* continue reading */
+ /* back up to find most recent CR or LF in entered command string */
+ /* return number of chars backed up */
+ 
+-int find_lasteol()
++static int find_lasteol(void)
+ {
+ 	int i;
+ 
+@@ -258,7 +261,7 @@ int find_lasteol()
+ 
+ /* retype command string: entirely (arg = '*') or most recent line (arg = ' ') */
+ 
+-retype_cmdstr(c)
++VOID retype_cmdstr(c)
+ 	char c;
+ {
+ 	int i;
+@@ -294,7 +297,7 @@ static struct qp saved_cmd_ptr;
+ static unsigned short do_func_keys(c)
+ 	unsigned short c;
+ {
+-	unsigned short i, n;			/* temporaries */
++	unsigned short n;			/* temporaries */
+ 	struct qh *header_p;			/* pointer to register's header */
+ 	struct qp pointer;				/* q-pointer to register being copied */
+ 	unsigned char last_c = ' ', this_c;		/* char's used in copying command string */

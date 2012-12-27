@@ -1,6 +1,12 @@
-$NetBSD: patch-ad,v 1.1 2006/01/05 19:27:50 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2012/12/27 06:13:20 dholland Exp $
 
---- te_defs.h.orig	2006-01-04 20:59:21.000000000 +0000
+- don't declare own errno
+- use some const
+- don't declare own fopen()
+- do declare own functions
+- use C89
+
+--- te_defs.h.orig	1993-08-05 22:29:33.000000000 +0000
 +++ te_defs.h
 @@ -387,7 +387,6 @@ extern struct outfiledata po_file, so_fi
  extern int char_count;					/* char count for tab typer			*/
@@ -10,3 +16,122 @@ $NetBSD: patch-ad,v 1.1 2006/01/05 19:27:50 joerg Exp $
  #ifdef POSIX_TECO
  extern struct termios ttybuf;			/* local copy of tty control data	*/
  #else
+@@ -429,20 +428,16 @@ extern struct buffcell *insert_p;		/* po
+ extern int buff_mod;					/* set to earliest buffer change	*/
+ extern int search_flag;					/* set nonzero by search			*/
+ 
+-extern char *errors[];					/* error text						*/
++extern const char *errors[];					/* error text						*/
+ extern char mapch[], mapch_l[];			/* char mapping tables				*/
+ extern char spec_chars[];				/* special character table			*/
+ 
+-extern char skipto(), find_endcond(), getcmdc(), getcmdc0();	/* routines that return chars */
+ 
+ extern FILE *eisw;						/* indirect command file pointer	*/
+-extern FILE *fopen();
+ 
+ extern struct buffcell *freebuff;		/* buffcell free-list pointer	*/
+ extern struct buffcell *dly_freebuff;	/* delayed free-list pointer	*/
+ extern struct is *freedcell;			/* cell free-list pointer		*/
+-extern struct buffcell *get_bcell();	/* get buffcell routine			*/
+-extern struct is *get_dcell();			/* get data cell routine		*/
+ 
+ /* the text buffer header */
+ extern struct qh buff;
+@@ -466,3 +461,96 @@ extern struct exp_entry *esp;		/* expres
+ 
+ /* the directory string buffer */
+ extern struct qh dir_name;
++
++/* te_utils.c */
++struct buffcell *get_bcell(void);	/* get buffcell routine	*/
++VOID free_blist(struct buffcell *p);
++VOID dly_free_blist(struct buffcell *p);
++VOID free_dlyd_blist(struct buffcell *p);
++VOID reset_q_usecounts(void);
++extern struct is *get_dcell(void);	/* get data cell routine */
++VOID make_buffer(struct qh *p);
++int fwdc(struct qp *arg);
++int fwdcx(struct qp *arg);
++int backc(struct qp *arg);
++VOID set_pointer(int pos, struct qp *ptr);
++char getcmdc0(int trace);
++char getcmdc(int trace);
++int peekcmdc(char arg);
++
++/* te_subs.c */
++VOID movenchars(struct qp *from, struct qp *to, register int n);
++VOID moveuntil(struct qp *form, struct qp *to, register char c,
++	       int *n, int max, int trace);
++int get_value(int d);
++int lines(register int arg);
++int line_args(int d, struct qp *p);
++int getqspec(int fors, char c);
++VOID insert1(void);
++VOID insert2(int count);
++VOID delete1(int nchars);
++char skipto(int arg);
++VOID do_ctlp(void);
++
++/* te_main.c */
++VOID cleanup(void);
++VOID update_header(void);
++VOID init_wd(void);
++VOID get_term_par(void);
++VOID do_o(void);
++
++/* te_rdcmd.c */
++int read_cmdstr(void);
++VOID retype_cmdstr(char c);
++
++/* te_exec0.c */
++VOID exec_cmdstr(void);
++
++/* te_exec1.c */
++VOID exec_cmds1(void);
++
++/* te_exec2.c */
++VOID do_e(void);
++int do_eq(void);
++int do_eq1(char *shell);
++int do_en(void);
++int do_glob(struct qh *gbuff, struct qh *sbuff);
++VOID do_en_next(void);
++int read_filename(int flag, char func);
++VOID set_var(int extend, int *arg);
++int read_file(struct qp *rbuff, int *nchars, int endsw);
++VOID write_file(struct qp *wbuff, int nchars, int ffsw);
++VOID kill_output(struct outfiledata *outptr);
++VOID panic(void);
++VOID do_f(void);
++VOID pop_iteration(int arg);
++VOID find_enditer(void);
++VOID find_endcond(char arg);
++
++/* te_srch.c */
++int build_string(struct qh *sbuff);
++int end_search(int result);
++int setup_search(void);
++int do_nsearch(char arg);
++int do_fb(void);
++int do_search(int count);
++
++/* te_chario.c */
++VOID setup_tty(int arg);
++int gettty_nowait(void);
++int gettty(void);
++void block_inter(int func);
++VOID crlf(void);
++VOID reset_ctlo(void);
++VOID type_char(char c);
++
++/* te_window.c */
++VOID vt(int func);
++VOID do_window(int ref_flag);
++VOID set_term_par(int lines, int cols);
++VOID window(int arg);
++VOID scroll_dly(void);
++VOID display_lines(void);
++
++/* te_fxstub.c */
++void te_fx(void);
