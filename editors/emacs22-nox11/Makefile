@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 11:43:33 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/27 17:50:26 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
-PKGREVISION=	2
+PKGREVISION=	3
 
 FILESDIR=	${.CURDIR}/../../editors/emacs22/files
 PATCHDIR=	${.CURDIR}/../../editors/emacs22/patches
