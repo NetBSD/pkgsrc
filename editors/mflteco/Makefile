@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/27 06:13:20 dholland Exp $
 #
 
-PKGNAME=		mflteco-19920331
 DISTNAME=		mflteco
+PKGNAME=		mflteco-19920331
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		http://www.catb.org/~esr/retro/
 

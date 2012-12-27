@@ -1,8 +1,66 @@
-$NetBSD: patch-ae,v 1.1 2006/01/05 19:27:50 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2012/12/27 06:13:20 dholland Exp $
 
---- te_chario.c.orig	2006-01-04 21:01:15.000000000 +0000
+- use standard headers
+- use some static
+- initialize struct sigaction correctly
+- declare own functions
+- don't declare own errno
+- restore missing close-comments
+- declare void functions void
+- use some c89
+- don't index arrays with (signed) char
+
+--- te_chario.c.orig	1993-08-05 22:29:33.000000000 +0000
 +++ te_chario.c
-@@ -101,7 +101,6 @@ char ldbuf[TTNAMEMAX];
+@@ -28,6 +28,8 @@
+ #endif
+ 
+ #include <unistd.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ #if defined(USE_SELECT) && defined(_AIX)
+ #include <sys/select.h>
+@@ -41,10 +43,10 @@
+ #include <fcntl.h>
+ #ifndef DEBUG
+ #include <signal.h>
+-extern SHRET int_handler();
+-extern SHRET stp_handler();
+-extern SHRET hup_handler();
+-extern SHRET winch_handler();
++static SHRET int_handler();
++static SHRET stp_handler();
++static SHRET hup_handler();
++static SHRET winch_handler();
+ #define SIGINTMASK 2
+ #endif
+ 
+@@ -72,11 +74,11 @@ int bsdld;
+ /* this is really for linux */
+ #define SA_INTERRUPT 0
+ #endif
+-struct sigaction intsigstruc = { int_handler, 0, SA_INTERRUPT } ;		/* info structure for ^C interrupt		*/
+-struct sigaction stpsigstruc = { stp_handler, 0, SA_INTERRUPT } ;		/* info structure for "stop" signal		*/
+-struct sigaction hupsigstruc = { hup_handler, 0, SA_INTERRUPT } ;		/* info structure for "hangup" signal	*/
+-struct sigaction nosigstr = { SIG_DFL, 0, 0 };				/* default structure for signal			*/
+-struct sigaction sigwinchstruc = { winch_handler, 0, SA_INTERRUPT} ;
++struct sigaction intsigstruc;		/* info structure for ^C interrupt		*/
++struct sigaction stpsigstruc;		/* info structure for "stop" signal		*/
++struct sigaction hupsigstruc;		/* info structure for "hangup" signal	*/
++struct sigaction nosigstr;		/* default structure for signal			*/
++struct sigaction sigwinchstruc;
+ #else
+ struct sigvec intsigstruc = { int_handler, 0, 0 } ;		/* info structure for ^C interrupt		*/
+ struct sigvec stpsigstruc = { stp_handler, 0, 0 } ;		/* info structure for "stop" signal		*/
+@@ -96,12 +98,13 @@ int out_noterm;				/* nonzero if standar
+ char ldbuf[TTNAMEMAX];
+ #endif
+ 
++static void qio_char(char c);
++
+ #ifndef POSIX_TECO
+ 
  setup_tty(arg)
  	int arg;
  {
@@ -10,11 +68,244 @@ $NetBSD: patch-ae,v 1.1 2006/01/05 19:27:50 joerg Exp $
  	int ioerr;
  	struct sgttyb tmpbuf;
  
-@@ -186,7 +185,6 @@ setup_tty(arg)
- setup_tty(arg)
+@@ -177,16 +180,15 @@ setup_tty(arg)
+ 		}
+ 	}
+ }
+-#else   /* POSIX_TECO
++#else   /* POSIX_TECO */
+ /*
+  * set tty (stdin) mode.  TECO mode is CBREAK, no ECHO, sep CR & LF
+  * operation; normal mode is none of the above.  TTY_OFF and TTY_ON do this
+  * absolutely; TTY_SUSP and TTY_RESUME use saved signal status.
+  */
+-setup_tty(arg)
++VOID setup_tty(arg)
  int arg;
  {
 -	extern int errno;
  	int ioerr;
  	struct termios tmpbuf;
  
+@@ -227,6 +229,22 @@ int arg;
+ 		tcdrain(fileno(stdin));
+ 		tcdrain(fileno(stdin)); tcsetattr(fileno(stdin), TCSANOW, &tty_new);
+ #ifndef DEBUG
++		intsigstruc.sa_sigaction = int_handler;
++		sigemptyset(&intsigstruc.sa_mask);
++		intsigstruc.sa_flags = SA_INTERRUPT;
++
++		stpsigstruc.sa_handler = stp_handler;
++		sigemptyset(&stpsigstruc.sa_mask);
++		stpsigstruc.sa_flags = SA_INTERRUPT;
++
++		hupsigstruc.sa_handler = hup_handler;
++		sigemptyset(&hupsigstruc.sa_mask);
++		hupsigstruc.sa_flags = SA_INTERRUPT;
++
++		sigwinchstruc.sa_handler = winch_handler;
++		sigemptyset(&sigwinchstruc.sa_mask);
++		sigwinchstruc.sa_flags = SA_INTERRUPT;
++
+ 		/* Handle signals */
+ 		if (sigaction(SIGTSTP, &stpsigstruc, NULL) < 0) {
+ 			fprintf(stderr, "could not install signal handler for SIGTSTP\n");
+@@ -249,6 +267,10 @@ int arg;
+ 		/* Restore to original state */
+ 		tcdrain(fileno(stdin)); tcsetattr(fileno(stdin), TCSANOW, &tty_orig);
+ #ifndef DEBUG
++		nosigstr.sa_handler = SIG_DFL;
++		sigemptyset(&nosigstr.sa_mask);
++		nosigstr.sa_flags = 0;
++
+ 		sigaction(SIGTSTP, &nosigstr, 0);
+ 		sigaction(SIGINT, &nosigstr, 0);
+ 		sigaction(SIGHUP, &nosigstr, 0);
+@@ -263,10 +285,10 @@ int arg;
+ /* if lf_sw is nonzero, return the LF; else use the FNDELAY fcntl to inquire of the input */
+ /* if input is not a terminal don't switch modes */
+ 
+-unsigned short get_kbd_enh();
++static unsigned short get_kbd_enh(void);
+ #ifndef POSIX_TECO
+ 
+-int gettty_nowait()
++int gettty_nowait(void)
+ {
+ 	int c;
+ 
+@@ -289,7 +311,7 @@ int gettty_nowait()
+  * set if lf_sw is nonzero, return the LF; else use the FNDELAY fcntl to
+  * inquire of the input
+  */
+-gettty_nowait()
++int gettty_nowait(void)
+ {
+ 	char c;
+ 	int err, cnt;
+@@ -424,7 +446,7 @@ static unsigned char ca[3] = {0,0,0};
+ #define c2 ca[1]
+ #define c3 ca[2]
+ 
+-int zread(fd,c)
++static int zread(fd,c)
+ int fd;
+ char *c;
+ {
+@@ -435,7 +457,7 @@ char *c;
+ }
+ 
+ #if defined(USE_SELECT)
+-int timed_read(fd,c)
++static int timed_read(fd,c)
+ int fd;
+ char *c;
+ {
+@@ -459,7 +481,7 @@ char *c;
+ #endif
+ 
+ #if defined(USE_POLL)
+-int timed_read(fd,c)
++static int timed_read(fd,c)
+ int fd;
+ char *c;
+ {
+@@ -479,7 +501,7 @@ char *c;
+ #endif
+ 
+ #if defined(USE_POSIX_C_CC) 
+-int timed_read(fd,c)
++static int timed_read(fd,c)
+ int fd;
+ char *c;
+ {
+@@ -503,7 +525,7 @@ char *c;
+ }
+ #endif
+ 
+-unsigned short get_kbd_enh()
++static unsigned short get_kbd_enh()
+ {
+ 	unsigned short retval;
+ 	struct trans_entry *pt;
+@@ -555,7 +577,7 @@ unsigned short get_kbd_enh()
+ 
+ #ifndef DEBUG
+ 
+-SHRET winch_handler()
++static SHRET winch_handler()
+ {
+ 	get_term_par();
+ 	window(WIN_INIT);
+@@ -566,7 +588,7 @@ SHRET winch_handler()
+ 	}
+ }
+ 
+-SHRET int_handler()
++static SHRET int_handler()
+ {
+ 
+ 	if (exitflag <= 0)						/* if executing commands */
+@@ -594,7 +616,7 @@ SHRET int_handler()
+ /* routine to disable (1), enable (0) ^C interrupt, used to block interrupts during display update */
+ 
+ #ifdef POSIX_TECO
+-block_inter(func)
++VOID block_inter(func)
+ int func;
+ {
+ 	sigset_t ss;
+@@ -608,7 +630,7 @@ int func;
+ #else
+ int old_mask;				/* storage for previous signal mask */
+ #define INT_MASK 2
+-block_inter(func)
++VOID block_inter(func)
+ 	int func;
+ {
+ #ifndef DEBUG
+@@ -624,7 +646,7 @@ block_inter(func)
+ /* routine to handle "stop" signal (^Y) */
+ #ifdef POSIX_TECO
+ 
+-SHRET stp_handler()
++static SHRET stp_handler()
+ {
+ 	sigset_t ss;
+ 	sigemptyset(&ss);
+@@ -652,7 +674,7 @@ SHRET stp_handler()
+ 
+ #else   /* BSD style signals */
+ 
+-SHRET stp_handler()
++static SHRET stp_handler()
+ {
+ 	crlf();
+ 	window(WIN_SUSP);				/* restore screen */
+@@ -682,7 +704,7 @@ SHRET stp_handler()
+ 
+ /* simulate a character's having been typed on the keyboard */
+ 
+-qio_char(c)
++static void qio_char(c)
+ 	char c;
+ {
+ #ifdef POSIX_TECO
+@@ -694,7 +716,7 @@ qio_char(c)
+ /* routine to handle "hangup" signal */
+ #ifndef DEBUG
+ 
+-SHRET hup_handler()
++static SHRET hup_handler()
+ {
+ 	if (!exitflag) exitflag = -3;					/* if executing, set flag to terminate */
+ 	else
+@@ -709,7 +731,7 @@ SHRET hup_handler()
+ 
+ /* type a crlf */
+ 
+-crlf()
++void crlf(void)
+ {
+ 	type_char(CR);
+ 	type_char(LF);
+@@ -721,7 +743,7 @@ crlf()
+ int lflusho = LFLUSHO;
+ int lfo;
+ 
+-reset_ctlo()
++void reset_ctlo(void)
+ {
+ 	ioctl(fileno(stdin), TIOCLGET, &lfo);		/* read flags */
+ 	if (lfo & LFLUSHO)							/* if ^O was set */
+@@ -731,18 +753,18 @@ reset_ctlo()
+ 	}
+ }
+ #else
+-reset_ctlo() 
++void reset_ctlo(void)
+ {
+ }
+ 
+ #endif
+ /* routine to type one character */
+ 
+-type_char(c)
++VOID type_char(c)
+ 	char c;
+ {
+ 
+-	if ((char_count >= WN_width) && (c != CR) && !(spec_chars[c] & A_L))	/* spacing char beyond end of line */
++	if ((char_count >= WN_width) && (c != CR) && !(spec_chars[(unsigned char)c] & A_L))	/* spacing char beyond end of line */
+ 	{
+ 		if (et_val & ET_TRUNC) return;		/* truncate output to line width */
+ 		else crlf();						/* otherwise do automatic new line (note recursive call to type_char) */
+@@ -759,7 +781,7 @@ type_char(c)
+ 
+ 			case LF:
+ 				putchar(c);
+-/*				scroll_dly();			/* filler chars in case VT-100 scrolls */
++/*				scroll_dly();		*/	/* filler chars in case VT-100 scrolls */
+ 				break;
+ 
+ 			case ESC:
