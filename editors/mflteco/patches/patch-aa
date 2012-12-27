@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/27 06:13:20 dholland Exp $
+
+- add defines to enable standard things
 
 --- Makefile.orig	2005-12-28 22:07:58.000000000 +0100
 +++ Makefile
