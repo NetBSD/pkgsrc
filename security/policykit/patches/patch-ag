@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2008/11/23 21:21:43 hasso Exp $
+$NetBSD: patch-ag,v 1.2 2012/12/27 21:04:11 bsiegert Exp $
 
 --- src/polkit/polkit-config.c.orig	2008-11-23 22:37:33 +0200
 +++ src/polkit/polkit-config.c	2008-11-23 22:44:41 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-ag,v 1.1 2008/11/23 21:21:43 hasso Exp $
                  
                  str1 = kit_strdup_printf ("%d", uid);
                  {
-+#ifndef __DragonFly__
++#if !defined(__DragonFly__) && !defined(__OpenBSD__)
                          struct passwd pd;
                          struct passwd* pwdptr=&pd;
                          struct passwd* tempPwdPtr;

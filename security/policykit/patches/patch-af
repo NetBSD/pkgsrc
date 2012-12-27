@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2008/11/23 21:21:43 hasso Exp $
+$NetBSD: patch-af,v 1.3 2012/12/27 21:04:11 bsiegert Exp $
 
 --- src/polkit/polkit-sysdeps.c.orig	2008-11-21 22:17:08.000000000 -0500
 +++ src/polkit/polkit-sysdeps.c
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.2 2008/11/23 21:21:43 hasso Exp $
          start_time = (unsigned long long) (info.pr_start.tv_sec);
  #else
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
  	filename = kit_strdup_printf ("/proc/%d/status", pid);
  #else
          filename = kit_strdup_printf ("/proc/%d/stat", pid);
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.2 2008/11/23 21:21:43 hasso Exp $
          }
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
          tokens = kit_strsplit (contents, ' ', &num_tokens);
          if (tokens == NULL)
                  goto out;
