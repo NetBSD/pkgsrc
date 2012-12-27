@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4016 2012/12/27 16:35:16 darcy Exp $
+$NetBSD: CHANGES-2012,v 1.4017 2012/12/27 17:53:30 ryoon Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6179,3 +6179,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mantis to 1.2.12 [ryoon 2012-12-25]
 	Updated mail/bogofilter to 1.2.3 [darcy 2012-12-26]
 	Updated www/viewvc to 1.1.17 [darcy 2012-12-27]
+	Updated editors/emacs22 to 22.3nb24 [ryoon 2012-12-27]
+	Updated editors/emacs22-nox11 to 22.3nb24 [ryoon 2012-12-27]
