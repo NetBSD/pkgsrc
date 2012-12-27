@@ -1,17 +1,94 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+$NetBSD: patch-ab,v 1.2 2012/12/27 06:13:20 dholland Exp $
 
---- te_exec2.c.orig	1993-08-06 00:29:34.000000000 +0200
+- use standard headers
+- handle EOF from getc() correctly
+- move function declarations to the header file
+- use some static
+- declare void functions void
+- use some c89
+- don't index arrays with (signed) char
+- call execl() properly
+
+--- te_exec2.c.orig	1993-08-05 22:29:34.000000000 +0000
 +++ te_exec2.c
-@@ -42,7 +42,7 @@ VOID update_header();
+@@ -19,6 +19,7 @@
+ /* add directory command, header file display  03/26/92  14.59 */
  
- do_e()
+ #include "te_defs.h"
++#include <stdlib.h>
+ #include <sys/wait.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -35,21 +36,26 @@ struct outfiledata po_file, so_file;		/*
+ struct outfiledata *outfile = &po_file;		/* pointer to currently active output file structure */
+ FILE *eisw;									/* indirect command file pointer */
+ int second_buff = 0;						/* variable for which buffer is selected */
+-VOID init_wd();
+-VOID update_header();
++
++static int do_e_slash(void);						/* routine to handle "change directory" command */
++static int read_stream(FILE *file, int *ff_found, struct qp *rbuff,
++		       int *nchars, int endsw, int crlf_sw, int ff_sw);
++static VOID write_stream(FILE *file, struct qp *wbuff, int nchars,
++			 int crlf_sw);
++
++
+ 
+ /* process E commands */
+ 
+-do_e()
++VOID do_e(void)
  {
 -	char c;							/* temps */
 +	int c;							/* temps */
  	int old_var;
  	FILE *t_eisw;
  	struct stat statbuff;					/* buffer to fetch file stat (mode) of open file for EB */
-@@ -609,7 +609,7 @@ int do_glob(gbuff, sbuff)
+ 	int t_access;							/* result from provisional "open" */
+-	int do_e_slash();						/* routine to handle "change directory" command */
+ 
+-	switch (mapch_l[getcmdc(trace_sw)])		/* read next character and dispatch */
++	switch (mapch_l[(unsigned char)getcmdc(trace_sw)])		/* read next character and dispatch */
+ 	{	
+ 
+ /* numeric values */
+@@ -386,7 +392,7 @@ int do_eq()
+ 		t = vfork();							/* fork a new process */
+ 		if (t == 0)								/* if this is the child */
+ 		{
+-			execl(pname, pname, SHELL_OPT, &sysbuf.f->ch[0], 0);		/* call the named Unix routine */
++			execl(pname, pname, SHELL_OPT, &sysbuf.f->ch[0], (void *)NULL);		/* call the named Unix routine */
+ 			printf("Error in 'execl'\n");		/* normally shouldn't get here */
+ 			exit(1);
+ 		}
+@@ -493,7 +499,7 @@ int do_eq1(shell)
+ 		if (ll == 0)					/* if there are no characters to send */
+ 		{
+ 			close(pipe_in[1]);					/* close exec'd process' new "stdin" so "read" will find eof */
+-			execl(shell, shell, SHELL_OPT, &sysbuf.f->ch[0], 0);		/* execute specified routine */
++			execl(shell, shell, SHELL_OPT, &sysbuf.f->ch[0], (void *)NULL);		/* execute specified routine */
+ 			fputs("execl failed\n", stderr);
+ 			exit(1);
+ 		}				/* end "orig m,nEQ command had zero range" */
+@@ -520,7 +526,7 @@ int do_eq1(shell)
+ 			else							/* this process is the grandchild */
+ 			{
+ 				close(pipe_in[1]);			/* close "input" for writing */
+-				execl(shell, shell, SHELL_OPT, &sysbuf.f->ch[0], 0);		/* execute specified routine */
++				execl(shell, shell, SHELL_OPT, &sysbuf.f->ch[0], (void *)NULL);		/* execute specified routine */
+ 				fputs("execl failed\n", stderr);
+ 				exit(1);
+ 			}				/* end "this is the grandchild" */
+@@ -559,7 +565,7 @@ int do_en()
+ }
+ /* routine to handle "change directory" command */
+ 
+-int do_e_slash()
++static int do_e_slash(void)
+ {
+ 	int rv = -1;						/* return value */
+ 	int err_code = E_DIR;
+@@ -609,7 +615,7 @@ int do_glob(gbuff, sbuff)
  {
  	char glob_cmd[CELLSIZE+5];			/* "glob filespec" command string */
  	int t;
@@ -20,7 +97,40 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
  	int glob_pipe[2];					/* pipe to forked shell for expanding filenames */
  	struct qp glob_ptr;					/* pointer for loading result buffer */
  	FILE *xx_out;						/* stream for reading chars from pipe */
-@@ -825,7 +825,7 @@ int read_stream(file, ff_found, rbuff, n
+@@ -668,7 +674,7 @@ int do_glob(gbuff, sbuff)
+ 		close(glob_pipe[0]);					/* child won't read */
+ 		dup2(glob_pipe[1], fileno(stdout));		/* substitute pipe for standard out */
+ 		close(glob_pipe[1]);					/* don't need that anymore */
+-		execl("/bin/csh", "csh", "-fc", glob_cmd, 0);		/* execute the "glob" */
++		execl("/bin/csh", "csh", "-fc", glob_cmd, (void *)NULL);		/* execute the "glob" */
+ 		fputs("execl failed\n", stderr);
+ 		exit(1);
+ 	}
+@@ -676,7 +682,7 @@ int do_glob(gbuff, sbuff)
+ 
+ /* routine to get next file spec from "EN" list into filespec buffer */
+ 
+-do_en_next()
++VOID do_en_next(void)
+ {
+ 	char c;
+ 
+@@ -778,7 +784,7 @@ int read_filename(flag, func)
+ 
+ /* fetch or set variable */
+ 
+-set_var(extend, arg)
++VOID set_var(extend, arg)
+ 	int extend;			/* nonzero if arg is 16 bits to be sign extended */
+ 	int *arg;			/* argument is pointer to variable */
+ {
+@@ -820,12 +826,12 @@ int read_file(rbuff, nchars, endsw)
+ /* address of a switch to set if read ended with a FF, crlf_sw is lf->crlf	*/
+ /* conversion, ff_sw indicates whether to stop on a form feed.				*/
+ 
+-int read_stream(file, ff_found, rbuff, nchars, endsw, crlf_sw, ff_sw)
++static int read_stream(file, ff_found, rbuff, nchars, endsw, crlf_sw, ff_sw)
+ 	FILE *file;
  	struct qp *rbuff;
  	int *ff_found, *nchars, endsw, crlf_sw, ff_sw;
  {
@@ -29,3 +139,82 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
  	int crflag;
  	register struct buffcell *p;
  	register int c;
+@@ -874,7 +880,7 @@ int read_stream(file, ff_found, rbuff, n
+ /* arguments are qp to start of text, number of characters,	*/
+ /* and an "append FF" switch								*/
+ 
+-write_file(wbuff, nchars, ffsw)
++VOID write_file(wbuff, nchars, ffsw)
+ 	struct qp *wbuff;
+ 	int nchars, ffsw;
+ {
+@@ -889,7 +895,7 @@ write_file(wbuff, nchars, ffsw)
+ /* Unix processes.  Arguments wbuff, nchars as above; file	*/
+ /* is stream pointer, crlf_sw zero converts CRLF to LF		*/
+ 
+-write_stream(file, wbuff, nchars, crlf_sw)
++static VOID write_stream(file, wbuff, nchars, crlf_sw)
+ 	FILE *file;
+ 	struct qp *wbuff;
+ 	int nchars, crlf_sw;
+@@ -919,7 +925,7 @@ write_stream(file, wbuff, nchars, crlf_s
+ 
+ /* routine to kill output file: argument is pointer to an output file structure */
+ 
+-kill_output(outptr)
++VOID kill_output(outptr)
+ 	struct outfiledata *outptr;
+ {
+ 	if (outptr->fd)
+@@ -934,7 +940,7 @@ kill_output(outptr)
+ 
+ static char panic_name[16] = "TECO_SAVED.tmp";			/* name of file created to save buffer */
+ 
+-panic()
++VOID panic(void)
+ {
+ 	int i;						/* counter of buffers to save */
+ 	int t_access;				/* file descriptor returned by open() */
+@@ -959,13 +965,13 @@ panic()
+ }
+ /* do "F" commands */
+ 
+-do_f()
++VOID do_f(void)
+ {
+ 	struct buffcell *delete_p;
+ 	int temp_dot;
+ 	VOID do_fm();
+ 
+-	switch (mapch_l[getcmdc(trace_sw)])		 /* read next character and dispatch */
++	switch (mapch_l[(unsigned char)getcmdc(trace_sw)])		 /* read next character and dispatch */
+ 	{
+ 		case '<':			/* back to beginning of current iteration */
+ 			if (cptr.flag & F_ITER)		/* if in iteration */
+@@ -1138,7 +1144,7 @@ do_f()
+ /* pop iteration: if arg nonzero, exit unconditionally */
+ /* else check exit conditions and exit or reiterate */
+ 
+-pop_iteration(arg)
++VOID pop_iteration(arg)
+ 	int arg;
+ {
+ 	if (!arg && (!cptr.il->dflag || (--(cptr.il->count) > 0)) )		/* if reiteration */
+@@ -1157,7 +1163,7 @@ pop_iteration(arg)
+ 
+ /* find end of iteration - read over arbitrary <> and one > */
+ 
+-find_enditer()
++VOID find_enditer(void)
+ {
+ 	register int icnt;
+ 
+@@ -1172,7 +1178,7 @@ find_enditer()
+ 
+ 
+ /* find end of conditional */
+-char find_endcond(arg)
++VOID find_endcond(arg)
+ 	char arg;
+ {
+ 	register int icnt;

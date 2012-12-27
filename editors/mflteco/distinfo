@@ -1,10 +1,19 @@
-$NetBSD: distinfo,v 1.2 2006/01/05 19:27:50 joerg Exp $
+$NetBSD: distinfo,v 1.3 2012/12/27 06:13:20 dholland Exp $
 
 SHA1 (mflteco.tar.gz) = d32206d961fa7068afa5a36cf9e688a018622c11
 RMD160 (mflteco.tar.gz) = 993ea515f87c17bafc763e3d7dcd55130cf7e83e
 Size (mflteco.tar.gz) = 80566 bytes
-SHA1 (patch-aa) = 3ee2c99f1a14c8f155faf866d29d070face206ab
-SHA1 (patch-ab) = bdeaa25511e11a8e39516eb2aa4c2dbea9f1cf9e
-SHA1 (patch-ac) = 052cf6f4ec6d03948543248f7bb9a872b00fb9f8
-SHA1 (patch-ad) = cc4a7ce57a28623427163a7607952149c015d8a7
-SHA1 (patch-ae) = 94cc73f43245b997d8504564f3efe0b74e5e9fc0
+SHA1 (patch-aa) = 5dc29c16e9359a13869eb77d5a22bad70d1758ce
+SHA1 (patch-ab) = 2cbe2704775cdadbffadd24d9473a8707fd004e9
+SHA1 (patch-ac) = 756afc8dc0cd82112f5b23731158fe64ae6b328c
+SHA1 (patch-ad) = 48abfc5681209efedac5a1bda9c03371a0f85760
+SHA1 (patch-ae) = b8c2d78b6c04a9c819635c7ee3bc1e0b26130e5c
+SHA1 (patch-te__data.c) = 86e1a8cb4a42c4d679df8931173b5651df30b35e
+SHA1 (patch-te__exec0.c) = 91598104b0088a4cd16b2296a3ac9e97ace500c2
+SHA1 (patch-te__exec1.c) = bda2147de4d814fc57d31bc24f7406542478d162
+SHA1 (patch-te__fxstub.c) = 5821a4b9d97b1385efe351e9588938b662329239
+SHA1 (patch-te__main.c) = 7539eb9840b6611b4d283d5f49d4f107bc0f1999
+SHA1 (patch-te__srch.c) = f16a8c589b53ab639466fd3cfd9909685dff9d1b
+SHA1 (patch-te__subs.c) = 311416b3984b796b49abd74f44311dcbd90af075
+SHA1 (patch-te__utils.c) = 99cddefd89fa40f0f60a1b197a57477d69799cff
+SHA1 (patch-te__window.c) = 01a159d93d812fa3d40c6bc09b5575b050dac918
