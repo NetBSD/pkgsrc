@@ -1,12 +1,24 @@
-$NetBSD: patch-xx,v 1.1.1.1 2009/08/05 10:30:29 minskim Exp $
+$NetBSD: patch-xx,v 1.2 2012/12/27 17:48:29 ryoon Exp $
 
 Following breaks gtk option as prefers /usr/X11R6 libs to those in /usr/pkg,
 and is not needed as these get set in enough other places - at least for
 pkgsrc.
 
---- src/s/netbsd.h.orig	2008-10-10 10:35:49.000000000 +0900
+* make NetBSD use openpty(), like on emacs24
+
+--- src/s/netbsd.h.orig	2008-01-08 04:10:59.000000000 +0000
 +++ src/s/netbsd.h
-@@ -102,12 +102,6 @@ Boston, MA 02110-1301, USA.  */
+@@ -52,8 +52,7 @@ Boston, MA 02110-1301, USA.  */
+ #define NO_TERMIO
+ 
+ #define LIBS_DEBUG
+-/* -lutil is not needed for NetBSD >0.9.  */
+-/* #define LIBS_SYSTEM -lutil */
++#define LIBS_SYSTEM -lutil
+ #define LIBS_TERMCAP -ltermcap
+ 
+ #define NEED_ERRNO
+@@ -102,12 +101,6 @@ Boston, MA 02110-1301, USA.  */
  #define AMPERSAND_FULL_NAME
  
  #ifdef __ELF__
@@ -19,3 +31,26 @@ pkgsrc.
  /* The following is needed to make `configure' find Xpm, Xaw3d and
     image include and library files if using /usr/bin/gcc.  That
     compiler seems to be modified to not find headers in
+@@ -164,5 +157,22 @@ Boston, MA 02110-1301, USA.  */
+ 
+ #define POSIX_SIGNALS	1
+ 
++#define HAVE_PTYS
++#define PTY_ITERATION           for (i = 0; i < 1; i++) /* ick */
++#define PTY_NAME_SPRINTF        /* none */
++#define PTY_TTY_NAME_SPRINTF    /* none */
++#define PTY_OPEN                                        \
++  do                                                    \
++    {                                                   \
++      int dummy;                                        \
++      SIGMASKTYPE mask;                                 \
++      mask = sigblock (sigmask (SIGCHLD));              \
++      if (-1 == openpty (&fd, &dummy, pty_name, 0, 0))  \
++        fd = -1;                                        \
++      sigsetmask (mask);                                \
++      emacs_close (dummy);                              \
++    }                                                   \
++  while (0)
++
+ /* arch-tag: e80f364a-04e9-4faf-93cb-f36a0fe95c81
+    (do not change this comment) */
