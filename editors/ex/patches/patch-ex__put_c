@@ -1,0 +1,530 @@
+$NetBSD: patch-ex__put_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- fix up function pointer casting mess
+- avoid implicit int
+- silence warnings about && and || precedence
+- use const for string constants
+- return values from non-void functions
+- silence warnings about braces
+- declare void functions void
+- remove unused function
+
+--- ex_put.c.orig	2012-12-27 21:58:42.000000000 +0000
++++ ex_put.c
+@@ -99,15 +99,13 @@ static char sccsid[] = "@(#)ex_put.c	1.1
+  * During open/visual, outchar and putchar will be set to
+  * routines in the file ex_vput.c (vputchar, vinschar, etc.).
+  */
+-int	(*Outchar)() = termchar;
+-int	(*Putchar)() = normchar;
+-int	(*Pline)() = normline;
+-
+-int (*
+-setlist(t))()
+-	bool t;
++int	(*Outchar)(int) = termchar;
++int	(*Putchar)(int) = normchar;
++int	(*Pline)(int) = normline;
++
++int (*setlist(bool t))(int)
+ {
+-	register int (*P)();
++	register int (*P)(int);
+ 
+ 	listf = t;
+ 	P = Putchar;
+@@ -115,15 +113,13 @@ setlist(t))()
+ 	return (P);
+ }
+ 
+-int (*
+-setnumb(t))()
+-	bool t;
++int (*setnumb(bool t))(int)
+ {
+-	register int (*P)();
++	register int (*P)(int);
+ 
+ 	numberf = t;
+ 	P = Pline;
+-	Pline = t ? (int(*)()) numbline : (int(*)()) normline;
++	Pline = t ? numbline : normline;
+ 	return (P);
+ }
+ 
+@@ -131,6 +127,7 @@ setnumb(t))()
+  * Format c for list mode; leave things in common
+  * with normal print mode to be done by normchar.
+  */
++int
+ listchar(c)
+ 	register short c;
+ {
+@@ -167,23 +164,24 @@ listchar(c)
+ 		if (c < ' ' && c != '\n')
+ 			outchar('^'), c = ctlof(c);
+ #else	/* !BIT8 */
+-		if (!is_print(c) && c != '\n' || c == DELETE)
++		if ((!is_print(c) && c != '\n') || c == DELETE)
+ 			c = printof(c);
+ #endif
+ 		break;
+ 	}
+-	normchar(c);
++	return normchar(c);
+ }
+ 
+ /*
+  * Format c for printing. Handle funnies of upper case terminals
+  * and crocky hazeltines which don't have ~.
+  */
++int
+ normchar(c)
+ 	register short c;
+ {
+ #ifdef	UCVISUAL
+-	register char *colp;
++	register const char *colp;
+ 
+ 	if (c == '~' && xHZ) {
+ 		normchar('\\');
+@@ -196,7 +194,7 @@ normchar(c)
+ 	if (c & QUOTE) {
+ #else
+ 	if (c == overbuf)
+-		return;
++		return c;
+ 	if (quot(c)) {
+ #endif
+ 		switch (c) {
+@@ -231,7 +229,7 @@ normchar(c)
+ 		putchar('^'), c = ctlof(c);
+ #endif	/* !BIT8 */
+ #ifdef	UCVISUAL
+-	else if (UPPERCASE)
++	else if (UPPERCASE) {
+ 		if (isupper(c)) {
+ 			outchar('\\');
+ 			c = tolower(c);
+@@ -244,11 +242,13 @@ normchar(c)
+ 					break;
+ 				}
+ 		}
++	}
+ #endif	/* UCVISUAL */
+ #ifdef	BIT8
+ 	}
+ #endif
+ 	outchar(c);
++	return c;
+ }
+ 
+ /*
+@@ -256,8 +256,8 @@ normchar(c)
+  * the printing of the line will erase or otherwise obliterate
+  * the prompt which was printed before.  If it won't, do it now.
+  */
+-slobber(c)
+-	int c;
++static void
++slobber(int c)
+ {
+ 
+ 	shudclob = 0;
+@@ -288,6 +288,7 @@ slobber(c)
+ /*
+  * Print a line with a number.
+  */
++int
+ numbline(i)
+ 	int i;
+ {
+@@ -295,13 +296,14 @@ numbline(i)
+ 	if (shudclob)
+ 		slobber(' ');
+ 	printf("%6d  ", i);
+-	normline();
++	return normline(i);
+ }
+ 
+ /*
+  * Normal line output, no numbering.
+  */
+-normline()
++int
++normline(int arg)
+ {
+ 	register char *cp;
+ 
+@@ -320,6 +322,7 @@ normline()
+ 		putchar('\n');
+ #endif
+ 	}
++	return arg;
+ }
+ 
+ /*
+@@ -340,11 +343,12 @@ static	bool phadnl;
+ /*
+  * Indirect to current definition of putchar.
+  */
++int
+ putchar(c)
+ 	int c;
+ {
+ 
+-	(*Putchar)(c);
++	return (*Putchar)(c);
+ }
+ 
+ /*
+@@ -353,6 +357,7 @@ putchar(c)
+  * Otherwise flush into next level of buffering when
+  * small buffer fills or at a newline.
+  */
++int
+ termchar(c)
+ 	int c;
+ {
+@@ -368,9 +373,11 @@ termchar(c)
+ 		fgoto();
+ 		flush1();
+ 	}
++	return c;
+ }
+ 
+-flush2()
++static void
++flush2(void)
+ {
+ 
+ 	fgoto();
+@@ -378,6 +385,7 @@ flush2()
+ 	pstop();
+ }
+ 
++void
+ flush()
+ {
+ 
+@@ -390,6 +398,7 @@ flush()
+  * Work here is destroying motion into positions, and then
+  * letting fgoto do the optimized motion.
+  */
++void
+ flush1()
+ {
+ 	register char *lp;
+@@ -472,16 +481,19 @@ static int plodcnt, plodflg;
+  * and backspace.
+  */
+ 
+-plodput(c)
++static int
++plodput(int c)
+ {
+ 
+ 	if (plodflg)
+ 		plodcnt--;
+ 	else
+ 		putch(c);
++	return c;
+ }
+ 
+-plod(cnt)
++static int
++plod(int cnt)
+ {
+ 	register int i, j, k = 0;
+ 	register int soutcol, soutline;
+@@ -585,7 +597,7 @@ plod(cnt)
+ 	 * If it will be cheaper, or if we can't back up, then send
+ 	 * a return preliminarily.
+ 	 */
+-	if (j > i + 1 || outcol > destcol && !BS && !BC) {
++	if (j > i + 1 || (outcol > destcol && !BS && !BC)) {
+ 		/*
+ 		 * BUG: this doesn't take the (possibly long) length
+ 		 * of xCR into account.
+@@ -764,6 +776,7 @@ out:
+  * column position implied by wraparound or the lack thereof and
+  * rolling up the screen to get destline on the screen.
+  */
++void
+ fgoto()
+ {
+ 	register int l, c;
+@@ -778,11 +791,12 @@ fgoto()
+ 		outcol %= TCOLUMNS;
+ 		if (AM == 0) {
+ 			while (l > 0) {
+-				if (pfast)
++				if (pfast) {
+ 					if (xCR)
+ 						tputs(xCR, 0, putch);
+ 					else
+ 						putch('\r');
++				}
+ 				if (xNL)
+ 					tputs(xNL, 0, putch);
+ 				else
+@@ -834,7 +848,7 @@ fgoto()
+ 				outcol = 0;
+ 		}
+ 	}
+-	if (destline < outline && !(CA && !holdcm || UP != NOSTR))
++	if (destline < outline && !((CA && !holdcm) || UP != NOSTR))
+ 		destline = outline;
+ 	if (CA && !holdcm)
+ 		if (plod(costCM) > 0)
+@@ -851,6 +865,7 @@ fgoto()
+  * Tab to column col by flushing and then setting destcol.
+  * Used by "set all".
+  */
++void
+ tab(col)
+ 	int col;
+ {
+@@ -865,6 +880,7 @@ tab(col)
+  * Approximate because kill character echoes newline with
+  * no feedback and also because of long input lines.
+  */
++void
+ noteinp()
+ {
+ 
+@@ -883,6 +899,7 @@ noteinp()
+  * On cursor addressible terminals setting to unknown
+  * will force a cursor address soon.
+  */
++void
+ termreset()
+ {
+ 
+@@ -906,12 +923,14 @@ termreset()
+  */
+ char	*obp = obuf;
+ 
++void
+ draino()
+ {
+ 
+ 	obp = obuf;
+ }
+ 
++void
+ flusho()
+ {
+ 
+@@ -921,12 +940,15 @@ flusho()
+ 	}
+ }
+ 
++void
+ putnl()
+ {
+ 
+ 	putchar('\n');
+ }
+ 
++#if 0 /* unused */
++void
+ putS(cp)
+ 	char *cp;
+ {
+@@ -936,8 +958,10 @@ putS(cp)
+ 	while (*cp)
+ 		putch(*cp++);
+ }
++#endif
+ 
+ 
++int
+ putch(c)
+ 	int c;
+ {
+@@ -953,6 +977,7 @@ putch(c)
+ #endif
+ 	if (obp >= &obuf[sizeof obuf])
+ 		flusho();
++	return c;
+ }
+ 
+ /*
+@@ -962,8 +987,9 @@ putch(c)
+ /*
+  * Put with padding
+  */
++void
+ putpad(cp)
+-	char *cp;
++	const char *cp;
+ {
+ 
+ 	flush();
+@@ -973,6 +999,7 @@ putpad(cp)
+ /*
+  * Set output through normal command mode routine.
+  */
++void
+ setoutt()
+ {
+ 
+@@ -983,27 +1010,29 @@ setoutt()
+  * Printf (temporarily) in list mode.
+  */
+ /*VARARGS2*/
++void
+ #ifndef	__STDC__
+ lprintf(cp, dp)
+-	char *cp, *dp;
++	const char *cp, *dp;
+ {
+-	register int (*P)();
++	register int (*P)(int);
+ 
+ 	P = setlist(1);
+ 	printf(cp, dp);
+ 	Putchar = P;
+ }
+ #else
+-vlprintf(char *cp, va_list ap)
++vlprintf(const char *cp, va_list ap)
+ {
+-	register int (*P)();
++	register int (*P)(int);
+ 
+ 	P = setlist(1);
+ 	vprintf(cp, ap);
+ 	Putchar = P;
+ }
+ 
+-lprintf(char *cp, ...)
++void
++lprintf(const char *cp, ...)
+ {
+ 	va_list ap;
+ 
+@@ -1016,6 +1045,7 @@ lprintf(char *cp, ...)
+ /*
+  * Newline + flush.
+  */
++void
+ putNFL()
+ {
+ 
+@@ -1027,8 +1057,8 @@ putNFL()
+  * sTTY: set the tty modes on file descriptor i to be what's
+  * currently in global "tty".  (Also use nttyc if needed.)
+  */
+-sTTY(i)
+-	int i;
++static void
++sTTY(int i)
+ {
+ 
+ #ifdef	POSIX_1
+@@ -1067,6 +1097,7 @@ sTTY(i)
+ /*
+  * Try to start -nl mode.
+  */
++void
+ pstart()
+ {
+ 
+@@ -1101,6 +1132,7 @@ pstart()
+ /*
+  * Stop -nl mode.
+  */
++void
+ pstop()
+ {
+ 
+@@ -1121,7 +1153,8 @@ pstop()
+  */
+ #ifndef	TERMIO_S
+ #ifdef TIOCGETC
+-ttcharoff()
++static void
++ttcharoff(void)
+ {
+ 	nttyc.t_quitc = '\377';
+ 	if (nttyc.t_startc != CTRL('q'))
+@@ -1138,7 +1171,8 @@ ttcharoff()
+ #endif
+ 
+ #else	/* TERMIO_S */
+-ttcharoff()
++static void
++ttcharoff(void)
+ {
+ #ifdef	_PC_VDISABLE
+ 	long vdis;
+@@ -1239,6 +1273,7 @@ ostart()
+ }
+ 
+ /* actions associated with putting the terminal in open mode */
++void
+ tostart()
+ {
+ 	putpad(VS);
+@@ -1275,6 +1310,7 @@ tostart()
+ /*
+  * Stop open, restoring tty modes.
+  */
++void
+ ostop(f)
+ 	ttymode f;
+ {
+@@ -1290,6 +1326,7 @@ ostop(f)
+ }
+ 
+ /* Actions associated with putting the terminal in the right mode. */
++void
+ tostop()
+ {
+ 	putpad(VE);
+@@ -1302,7 +1339,8 @@ tostop()
+ /*
+  * Into cooked mode for interruptibility.
+  */
+-vcook()
++void
++vcook(void)
+ {
+ 
+ 	tty.sg_flags &= ~RAW;
+@@ -1312,7 +1350,8 @@ vcook()
+ /*
+  * Back into raw mode.
+  */
+-vraw()
++void
++vraw(void)
+ {
+ 
+ 	tty.sg_flags |= RAW;
+@@ -1323,6 +1362,7 @@ vraw()
+ /*
+  * Restore flags to normal state f.
+  */
++void
+ normal(f)
+ 	ttymode f;
+ {
+@@ -1365,6 +1405,7 @@ setty(f)
+ 	return (ot);
+ }
+ 
++void
+ gTTY(i)
+ 	int i;
+ {
+@@ -1391,6 +1432,7 @@ gTTY(i)
+ /*
+  * Print newline, or blank if in open/visual
+  */
++void
+ noonl()
+ {
+ 

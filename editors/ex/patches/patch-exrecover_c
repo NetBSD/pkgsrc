@@ -1,23 +1,333 @@
-$NetBSD: patch-exrecover_c,v 1.1 2011/08/01 05:47:40 dholland Exp $
+$NetBSD: patch-exrecover_c,v 1.2 2012/12/28 03:03:09 dholland Exp $
 
-Fix illegal C caught by clang.
+- use standard headers
+- don't declare own perror
+- declare void functions void
+- avoid implicit int
+- silence signed/unsigned compiler warning
+- use const for string constants
+- silence warnings about assignments in conditionals
+- return values from non-void functions
+- silence warnings about unused arguments
 
---- exrecover.c~	2002-04-07 12:02:27.000000000 +0000
+--- exrecover.c.orig	2012-12-27 21:58:41.000000000 +0000
 +++ exrecover.c
-@@ -198,7 +198,7 @@ char *getblock __P((line, int));
- int blkio __P((bloc, char *, ssize_t (*) __P((int, void *, size_t))));
+@@ -98,6 +98,8 @@ static char sccsid[] UNUSED = "@(#)exrec
+ typedef	int	xFILE;
+ #endif
+ 
++#include <stdio.h>
++
+ #define	var
+ 
+ #include "ex.h"
+@@ -193,30 +195,30 @@ int	vercnt;			/* Count number of version
+ #endif
+ #endif
+ 
+-extern int perror __P((const char *));
+ char *getblock __P((line, int));
+-int blkio __P((bloc, char *, ssize_t (*) __P((int, void *, size_t))));
++void blkio __P((bloc, char *, ssize_t (*) __P((int, void *, size_t))));
  char *poolsbrk __P((intptr_t));
- int error __P((char *str, ...));
+-int error __P((char *str, ...));
 -int listfiles __P((char *));
-+void listfiles __P((char *));
- int enter __P((struct svfile *, char *, int));
+-int enter __P((struct svfile *, char *, int));
++void error __P((const char *str, ...));
++void listfiles __P((const char *));
++void enter __P((struct svfile *, char *, int));
  int qucmp __P((struct svfile *, struct svfile *));
- int findtmp __P((char *));
-@@ -384,6 +384,7 @@ error(char *str, ...)
+-int findtmp __P((char *));
+-int searchdir __P((char *));
+-int yeah __P((char *));
++void findtmp __P((const char *));
++void searchdir __P((const char *));
++int yeah __P((const char *));
+ int preserve __P((void));
+-int scrapbad __P((void));
+-int putfile __P((int));
+-int wrerror __P((void));
+-int clrstats __P((void));
+-int get_line __P((line));
+-int syserror __P((void));
+-int xvfprintf __P((xFILE *, char *, va_list));
+-int xfprintf __P((xFILE *, char *, ...));
++void scrapbad __P((void));
++void putfile __P((int));
++void wrerror __P((void));
++void clrstats __P((void));
++void get_line __P((line));
++void syserror __P((void));
++void xvfprintf __P((xFILE *, const char *, va_list));
++void xfprintf __P((xFILE *, const char *, ...));
+ #ifdef	__STDC__
+ int vsprintf(char *, const char *, va_list);
+ #endif
+ 
++int
+ main(argc, argv)
+ 	int argc;
+ 	char *argv[];
+@@ -295,7 +297,7 @@ main(argc, argv)
+ 	while (H.Flines > 0) {
+ 		ignorl(lseek(tfile, (off_t) ((blocks[b] & BLKMSK) * BUFSIZ),
+ 					SEEK_SET));
+-		i = H.Flines < BUFSIZ / sizeof (line) ?
++		i = H.Flines < (int)(BUFSIZ / sizeof (line)) ?
+ 			H.Flines * sizeof (line) : BUFSIZ;
+ 		if (read(tfile, (char *) dot, i) != i) {
+ 			perror(nb);
+@@ -350,13 +352,14 @@ main(argc, argv)
+  * a newline which would screw up the screen.
+  */
+ /*VARARGS2*/
++void
+ #ifndef	__STDC__
+ error(str, inf)
+-	char *str;
++	const char *str;
+ 	int inf;
+ {
+ #else
+-error(char *str, ...)
++error(const char *str, ...)
+ {
+ 	va_list ap;
+ #endif
+@@ -384,8 +387,9 @@ error(char *str, ...)
  	exit(1);
  }
  
 +void
  listfiles(dirname)
- 	char *dirname;
+-	char *dirname;
++	const char *dirname;
  {
+ 	register DIR *dir;
+ #ifndef	POSIX_1
+@@ -486,9 +490,11 @@ listfiles(dirname)
+ /*
+  * Enter a new file into the saved file information.
+  */
++void
+ enter(fp, fname, count)
+ 	struct svfile *fp;
+ 	char *fname;
++	int count;
+ {
+ 	register char *cp, *cp2;
+ 	register struct svfile *f, *fl;
+@@ -521,7 +527,7 @@ enter(fp, fname, count)
+ 	fp->sf_time = H.Time;
+ 	fp->sf_lines = H.Flines;
+ 	cp2 = fp->sf_name, cp = savedfile;
+-	while (*cp2++ = *cp++);
++	while ((*cp2++ = *cp++) != 0);
+ 	for (cp2 = fp->sf_entry, cp = fname; *cp && cp-fname < 14;)
+ 		*cp2++ = *cp++;
+ 	*cp2++ = 0;
+@@ -531,12 +537,13 @@ enter(fp, fname, count)
+  * Do the qsort compare to sort the entries first by file name,
+  * then by modify time.
+  */
++int
+ qucmp(p1, p2)
+ 	struct svfile *p1, *p2;
+ {
+ 	register int t;
+ 
+-	if (t = strcmp(p1->sf_name, p2->sf_name))
++	if ((t = strcmp(p1->sf_name, p2->sf_name)) != 0)
+ 		return(t);
+ 	if (p1->sf_time > p2->sf_time)
+ 		return(-1);
+@@ -555,8 +562,9 @@ int	bestfd;			/* Keep best file open so 
+  * (i.e. usually /tmp) and in /usr/preserve.
+  * Want to find the newest so we search on and on.
+  */
++void
+ findtmp(dir)
+-	char *dir;
++	const char *dir;
+ {
+ 
+ 	/*
+@@ -608,8 +616,9 @@ findtmp(dir)
+  * name of the file we want to unlink is relative, rather than absolute
+  * we won't be able to find it again.
+  */
++void
+ searchdir(dirname)
+-	char *dirname;
++	const char *dirname;
+ {
+ #ifndef	POSIX_1
+ 	struct direct *dirent;
+@@ -662,8 +671,9 @@ searchdir(dirname)
+  * if its really an editor temporary and of this
+  * user and the file specified.
+  */
++int
+ yeah(name)
+-	char *name;
++	const char *name;
+ {
+ 
+ 	tfile = open(name, O_RDWR);
+@@ -688,9 +698,10 @@ nope:
+ 	return (1);
+ }
+ 
++int
+ preserve()
+ {
+-
++	return 0;
+ }
+ 
+ /*
+@@ -707,6 +718,7 @@ preserve()
+  * This only seems to happen on very heavily loaded systems, and
+  * not very often.
+  */
++void
+ scrapbad()
+ {
+ 	register line *ip;
+@@ -791,6 +803,7 @@ null:
+  * Aw shucks, if we only had a (void) cast.
+  */
+ #ifdef lint
++void
+ Ignorl(a)
+ 	long a;
+ {
+@@ -798,6 +811,7 @@ Ignorl(a)
+ 	a = a;
+ }
+ 
++void
+ Ignore(a)
+ 	char *a;
+ {
+@@ -805,13 +819,15 @@ Ignore(a)
+ 	a = a;
+ }
+ 
++void
+ Ignorf(a)
+-	int (*a)();
++	void (*a)(int);
+ {
+ 
+ 	a = a;
+ }
+ 
++void
+ ignorl(a)
+ 	long a;
+ {
+@@ -824,12 +840,15 @@ int	cntch, cntln, cntodd, cntnull;
+ /*
+  * Following routines stolen mercilessly from ex.
+  */
+-putfile(unused)
++void
++putfile(int unused)
+ {
+ 	line *a1;
+ 	register char *fp, *lp;
+ 	register int nib;
+ 
++	(void)unused;
++
+ 	a1 = addr1;
+ 	clrstats();
+ 	cntln = addr2 - a1 + 1;
+@@ -861,12 +880,14 @@ putfile(unused)
+ 	cntch += nib;
+ }
+ 
++void
+ wrerror()
+ {
+ 
+ 	syserror();
+ }
+ 
++void
+ clrstats()
+ {
+ 
+@@ -880,6 +901,7 @@ clrstats()
+ #define	READ	0
+ #define	WRITE	1
+ 
++void
+ get_line(tl)
+ 	line tl;
+ {
+@@ -890,7 +912,7 @@ get_line(tl)
+ 	bp = getblock(tl, READ);
+ 	nl = nleft;
+ 	tl &= ~OFFMSK;
+-	while (*lp++ = *bp++)
++	while ((*lp++ = *bp++) != 0)
+ 		if (--nl == 0) {
+ 			bp = getblock(tl += INCRMT, READ);
+ 			nl = nleft;
+@@ -934,8 +956,8 @@ getblock(atl, iof)
+ 	return (obuff + off);
+ }
+ 
++void
+ #ifdef	__STDC__
+-int
+ blkio(bloc b, char *buf, ssize_t (*iofcn)(int, void *, size_t))
+ #else	/* !__STDC__ */
+ blkio(b, buf, iofcn)
+@@ -950,6 +972,7 @@ blkio(b, buf, iofcn)
+ 		syserror();
+ }
+ 
++void
+ syserror()
+ {
+ 
+@@ -964,10 +987,11 @@ syserror()
+  * allocation and stdio uses malloc.
+  */
+ #ifndef	__STDC__
++void
+ xfprintf(fp, fmt, a1, a2, a3, a4, a5)
+ 	xFILE *fp;
+-	char *fmt;
+-	char *a1, *a2, *a3, *a4, *a5;
++	const char *fmt;
++	const char *a1, *a2, *a3, *a4, *a5;
+ {
+ 	char buf[BUFSIZ];
+ 
+@@ -981,17 +1005,19 @@ xfprintf(fp, fmt, a1, a2, a3, a4, a5)
+  * I do not know whether vsprintf() uses malloc() or not.
+  * So this may be fail, too.
+  */
+-xvfprintf(xFILE *fp, char *fmt, va_list ap)
++void
++xvfprintf(xFILE *fp, const char *fmt, va_list ap)
+ {
+ 	char buf[BUFSIZ];
+ 
+ 	if (fp != xstderr)
+ 		return;
+-	vsprintf(buf, fmt, ap);
++	vsnprintf(buf, sizeof(buf), fmt, ap);
+ 	write(2, buf, strlen(buf));
+ }
+ 
+-xfprintf(xFILE *fp, char *fmt, ...)
++void
++xfprintf(xFILE *fp, const char *fmt, ...)
+ {
+ 	va_list ap;
+ 

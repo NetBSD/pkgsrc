@@ -1,0 +1,42 @@
+$NetBSD: patch-ex__cmds_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare void functions void
+- silence warnings about && and || precedence
+- silence warnings about braces
+
+--- ex_cmds.c~	2012-12-27 20:24:51.000000000 +0000
++++ ex_cmds.c
+@@ -96,6 +96,7 @@ int	poffset;
+  * is to strip command addresses, do a little address oriented
+  * processing and call command routines to do the real work.
+  */
++void
+ commands(noprompt, exitoneof)
+ 	bool noprompt, exitoneof;
+ {
+@@ -127,7 +128,7 @@ commands(noprompt, exitoneof)
+ 		 * before the next command.
+ 		 */
+ 		if (pflag ||
+-		    lchng != chng && value(AUTOPRINT) && !inglobal && !inopen && endline) {
++		    (lchng != chng && value(AUTOPRINT) && !inglobal && !inopen && endline)) {
+ 			pflag = 0;
+ 			nochng();
+ 			if (dol != zero) {
+@@ -165,7 +166,7 @@ error(catgets(catd, 1, 17,
+ 			addr1 = addr2;
+ 			addr = address(0);
+ 			c = getcd();
+-			if (addr == 0)
++			if (addr == 0) {
+ 				if (c == ',')
+ 					addr = dot;
+ 				else if (addr1 != 0) {
+@@ -173,6 +174,7 @@ error(catgets(catd, 1, 17,
+ 					break;
+ 				} else
+ 					break;
++			}
+ 			addr2 = addr;
+ 			given++;
+ 			if (c == ';') {

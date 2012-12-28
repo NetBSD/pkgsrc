@@ -1,0 +1,323 @@
+$NetBSD: patch-ex__vops3_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions (and data) static
+- fix up function pointer casting mess
+- avoid implicit int
+- silence warnings about && and || precedence
+- silence warnings about unused arguments
+- use const for string constants
+- declare void functions void
+
+
+--- ex_vops3.c~	2012-12-27 21:58:41.000000000 +0000
++++ ex_vops3.c
+@@ -99,23 +99,26 @@ static char sccsid[] = "@(#)ex_vops3.c	1
+  *
+  * The code here is very hard to understand.
+  */
+-line	*llimit;
+-int	(*lf)();
++static line	*llimit;
++static bool	wasend;
+ 
+-int lskipa1 __P((register char *));
+-int endsent __P((int));
+-int endPS __P((void));
+-int lskipbal __P((register char *));
+-int ltosolid __P((void));
+-int lskipatom __P((void));
+-int isa __P((register char *));
+-int ltosol1 __P((register char *));
+-
+-#ifdef LISPCODE
+-int	lindent();
+-#endif
++/*
++ * lf is never called, but is compared against other function pointers.
++ * lindent() is the wrong type, so instead of setting lf = lindent, set
++ * it to 0 and set lf_is_lindent to nonzero. Other assignments to lf
++ * whould be accompanied by lf_is_lindent = 0.
++ */
++static void	(*lf)(int);
++static int	lf_is_lindent;
+ 
+-bool	wasend;
++static int lskipa1 __P((register const char *));
++static int endsent __P((int));
++static int endPS __P((void));
++static int lskipbal __P((register const char *));
++static int ltosolid __P((void));
++static int lskipatom __P((void));
++static int isa __P((register const char *));
++static int ltosol1 __P((register const char *));
+ 
+ /*
+  * Find over structure, repeated count times.
+@@ -124,9 +127,11 @@ bool	wasend;
+  * rather than (), implying past atoms in a list (or a paragraph
+  * rather than a sentence.
+  */
++int
+ llfind(pastatom, cnt, f, limit)
+ 	bool pastatom;
+-	int cnt, (*f)();
++	int cnt;
++	void (*f)(int);
+ 	line *limit;
+ {
+ #ifdef	LISPCODE
+@@ -142,6 +147,7 @@ llfind(pastatom, cnt, f, limit)
+ 	 */
+ 	wasend = 0;
+ 	lf = f;
++	lf_is_lindent = 0;
+ 	strcpy(save, linebuf);
+ 	if (limit == 0)
+ 		limit = dir < 0 ? one : dol;
+@@ -210,7 +216,7 @@ begin:
+ 			while (!endsent(pastatom))
+ 				if (!lnext())
+ 					goto ret;
+-			if (!pastatom || wcursor == linebuf && endPS())
++			if (!pastatom || (wcursor == linebuf && endPS()))
+ 				if (--cnt <= 0)
+ 					break;
+ 			if (linebuf[0] == 0) {
+@@ -246,7 +252,7 @@ begin:
+ 		 * If we are not at a section/paragraph division,
+ 		 * advance to next.
+ 		 */
+-		if (wcursor == icurs && wdot == idot || wcursor != linebuf || !endPS())
++		if ((wcursor == icurs && wdot == idot) || wcursor != linebuf || !endPS())
+ 			ignore(lskipa1(""));
+ 	}
+ #ifdef LISPCODE
+@@ -256,7 +262,7 @@ begin:
+ 		 * Startup by skipping if at a ( going left or a ) going
+ 		 * right to keep from getting stuck immediately.
+ 		 */
+-		if (dir < 0 && c == '(' || dir > 0 && c == ')') {
++		if ((dir < 0 && c == '(') || (dir > 0 && c == ')')) {
+ 			if (!lnext()) {
+ 				rc = -1;
+ 				goto ret;
+@@ -272,7 +278,7 @@ begin:
+ 		 */
+ 		while (cnt > 0) {
+ 			c = *wcursor;
+-			if (dir < 0 && c == ')' || dir > 0 && c == '(') {
++			if ((dir < 0 && c == ')') || (dir > 0 && c == '(')) {
+ 				if (!lskipbal("()"))
+ 					goto ret;
+ 				/*
+@@ -285,7 +291,7 @@ begin:
+ 				if (!lnext() || !ltosolid())
+ 					goto ret;
+ 				--cnt;
+-			} else if (dir < 0 && c == '(' || dir > 0 && c == ')')
++			} else if ((dir < 0 && c == '(') || (dir > 0 && c == ')'))
+ 				/* Found a higher level paren */
+ 				goto ret;
+ 			else {
+@@ -305,12 +311,15 @@ ret:
+ /*
+  * Is this the end of a sentence?
+  */
++static int
+ endsent(pastatom)
+ 	bool pastatom;
+ {
+ 	register char *cp = wcursor;
+ 	register int c, d;
+ 
++	(void)pastatom;
++
+ 	/*
+ 	 * If this is the beginning of a line, then
+ 	 * check for the end of a paragraph or section.
+@@ -330,7 +339,7 @@ endsent(pastatom)
+ 		if ((d = *++cp) == 0)
+ 			return (1);
+ 	while (any(d, ")]'"));
+-	if (*cp == 0 || *cp++ == ' ' && *cp == ' ')
++	if (*cp == 0 || (*cp++ == ' ' && *cp == ' '))
+ 		return (1);
+ tryps:
+ 	if (cp[1] == 0)
+@@ -342,6 +351,7 @@ tryps:
+  * End of paragraphs/sections are respective
+  * macros as well as blank lines and form feeds.
+  */
++static int
+ endPS()
+ {
+ 
+@@ -351,6 +361,7 @@ endPS()
+ }
+ 
+ #ifdef LISPCODE
++int
+ lindent(addr)
+ 	line *addr;
+ {
+@@ -382,7 +393,8 @@ again:
+ 	wdot = addr;
+ 	dir = -1;
+ 	llimit = one;
+-	lf = lindent;
++	lf = 0;
++	lf_is_lindent = 1;
+ 	if (!lskipbal("()"))
+ 		i = 0;
+ 	else if (wcursor == linebuf)
+@@ -407,16 +419,19 @@ again:
+ }
+ #endif
+ 
++int
+ lmatchp(addr)
+ 	line *addr;
+ {
+ 	register int i;
+-	register char *parens, *cp;
++	register const char *parens;
++	register char *cp;
+ 
+ 	for (cp = cursor; !any(*cp, "({[)}]");)
+ 		if (*cp++ == 0)
+ 			return (0);
+ 	lf = 0;
++	lf_is_lindent = 0;
+ 	parens = any(*cp, "()") ? "()" : any(*cp, "[]") ? "[]" : "{}";
+ 	if (*cp == parens[1]) {
+ 		dir = -1;
+@@ -435,6 +450,7 @@ lmatchp(addr)
+ 	return (i);
+ }
+ 
++void
+ lsmatch(cp)
+ 	char *cp;
+ {
+@@ -473,14 +489,16 @@ lsmatch(cp)
+ 	cursor = scurs;
+ }
+ 
++static int
+ ltosolid()
+ {
+ 
+ 	return (ltosol1("()"));
+ }
+ 
++static int
+ ltosol1(parens)
+-	register char *parens;
++	register const char *parens;
+ {
+ 	register char *cp;
+ 
+@@ -498,8 +516,9 @@ ltosol1(parens)
+ 	return (1);
+ }
+ 
++static int
+ lskipbal(parens)
+-	register char *parens;
++	register const char *parens;
+ {
+ 	register int level = dir;
+ 	register int c;
+@@ -518,14 +537,16 @@ lskipbal(parens)
+ 	return (1);
+ }
+ 
++static int
+ lskipatom()
+ {
+ 
+ 	return (lskipa1("()"));
+ }
+ 
++static int
+ lskipa1(parens)
+-	register char *parens;
++	register const char *parens;
+ {
+ 	register int c;
+ 
+@@ -546,6 +567,7 @@ lskipa1(parens)
+ 	return (ltosol1(parens));
+ }
+ 
++int
+ lnext()
+ {
+ 
+@@ -555,7 +577,7 @@ lnext()
+ 		if (*wcursor)
+ 			return (1);
+ 		if (wdot >= llimit) {
+-			if (lf == vmove && wcursor > linebuf)
++			if (lf == vmove_i && wcursor > linebuf)
+ 				wcursor--;
+ 			return (0);
+ 		}
+@@ -568,7 +590,7 @@ lnext()
+ 		if (wcursor >= linebuf)
+ 			return (1);
+ #ifdef LISPCODE
+-		if (lf == lindent && linebuf[0] == '(')
++		if (lf_is_lindent && linebuf[0] == '(')
+ 			llimit = wdot;
+ #endif
+ 		if (wdot <= llimit) {
+@@ -582,9 +604,10 @@ lnext()
+ 	}
+ }
+ 
++int
+ lbrack(c, f)
+ 	register int c;
+-	int (*f)();
++	void (*f)(int);
+ {
+ 	register line *addr;
+ 
+@@ -598,21 +621,21 @@ lbrack(c, f)
+ 		get_line(*addr);
+ 		if (linebuf[0] == '{' ||
+ #ifdef LISPCODE
+-		    value(LISP) && linebuf[0] == '(' ||
++		    (value(LISP) && linebuf[0] == '(') ||
+ #endif
+ 		    isa(svalue(SECTIONS))) {
+-			if (c == ']' && f != vmove) {
++			if (c == ']' && f != vmove_i) {
+ 				addr--;
+ 				get_line(*addr);
+ 			}
+ 			break;
+ 		}
+-		if (c == ']' && f != vmove && linebuf[0] == '}')
++		if (c == ']' && f != vmove_i && linebuf[0] == '}')
+ 			break;
+ 	}
+ 	if (addr == dot)
+ 		return (0);
+-	if (f != vmove)
++	if (f != vmove_i)
+ 		wcursor = c == ']' ? strend(linebuf) : linebuf;
+ 	else
+ 		wcursor = 0;
+@@ -621,8 +644,9 @@ lbrack(c, f)
+ 	return (1);
+ }
+ 
++static int
+ isa(cp)
+-	register char *cp;
++	register const char *cp;
+ {
+ 
+ 	if (linebuf[0] != '.')

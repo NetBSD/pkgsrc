@@ -1,0 +1,65 @@
+$NetBSD: patch-ex__unix_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare void functions void
+- use const for string constants
+
+--- ex_unix.c~	2003-09-03 19:53:02.000000000 +0000
++++ ex_unix.c
+@@ -95,6 +95,7 @@ static char sccsid[] = "@(#)ex_unix.c	1.
+  * First part of a shell escape,
+  * parse the line, expanding # and % and ! and printing if implied.
+  */
++void
+ unix0(warn)
+ 	bool warn;
+ {
+@@ -217,7 +218,8 @@ uexp:
+  */
+ ttymode
+ unixex(opt, up, newstdin, mode)
+-	char *opt, *up;
++	const char *opt;
++	char *up;
+ 	int newstdin, mode;
+ {
+ 	int pvec[2];
+@@ -299,6 +301,7 @@ unixex(opt, up, newstdin, mode)
+  * F is for restoration of tty mode if from open/visual.
+  * C flags suppression of printing.
+  */
++void
+ unixwt(c, f)
+ 	bool c;
+ 	ttymode f;
+@@ -328,6 +331,7 @@ unixwt(c, f)
+  * the filter, then a child editor is created to write it.
+  * If output is catch it from io which is created by unixex.
+  */
++void
+ filter(mode)
+ 	register int mode;
+ {
+@@ -391,6 +395,7 @@ filter(mode)
+  * Set up to do a recover, getting io to be a pipe from
+  * the recover process.
+  */
++void
+ recover()
+ {
+ 	static int pvec[2];
+@@ -420,6 +425,7 @@ recover()
+ /*
+  * Wait for the process (pid an external) to complete.
+  */
++void
+ waitfor()
+ {
+ 	int stat = 0;
+@@ -449,6 +455,7 @@ waitfor()
+  * exits non-zero, force not edited; otherwise force
+  * a write.
+  */
++void
+ revocer()
+ {
+ 

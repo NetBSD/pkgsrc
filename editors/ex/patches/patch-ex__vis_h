@@ -1,0 +1,36 @@
+$NetBSD: patch-ex__vis_h,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- use const for string constants
+- declare void functions void
+- remove stray extra copies of function declarations from elsewhere
+
+--- ex_vis.h~	2012-12-27 21:58:42.000000000 +0000
++++ ex_vis.h
+@@ -300,8 +300,8 @@ var	bool	lasthad;	/* Last command had a 
+ var	short	lastvgk;	/* Previous input key, if not from keyboard */
+ var	short	lastreg;	/* Register with last command */
+ var	char	*ncols['z'-'a'+2];	/* Cursor positions of marks */
+-var	char	*notenam;	/* Name to be noted with change count */
+-var	char	*notesgn;	/* Change count from last command */
++var	const char *notenam;	/* Name to be noted with change count */
++var	const char *notesgn;	/* Change count from last command */
+ var	char	op;		/* Operation of current command */
+ var	short	Peekkey;	/* Peek ahead key */
+ var	bool	rubble;		/* Line is filthy (in hardcopy open), redraw! */
+@@ -333,13 +333,7 @@ var	cell	workcmd[5];	/* Temporary for la
+ /*
+  * Function types
+  */
+-int	beep();
+-int	qcount();
+-int	vchange();
+-int	vdelete();
++void	beep(void);
+ int	vgrabit();
+-int	vinschar();
+-int	vmove();
+-int	vputchar();
+-int	vshift();
+-int	vyankit();
++
++

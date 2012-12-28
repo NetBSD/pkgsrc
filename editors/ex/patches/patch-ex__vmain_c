@@ -1,0 +1,209 @@
+$NetBSD: patch-ex__vmain_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- use volatile for compiler warnings about setjmp/vfork clobbering
+- fix up function pointer casting mess
+- silence warnings about assignments in conditionals
+- use <ctype.h> functions correctly
+- silence warnings about && and || precedence
+
+--- ex_vmain.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_vmain.c
+@@ -83,8 +83,8 @@ static char sccsid[] = "@(#)ex_vmain.c	1
+ #include "ex_tty.h"
+ #include "ex_vis.h"
+ 
+-int vzop __P((int, int, register int));
+-int grabtag __P((void));
++static void vzop __P((int, int, register int));
++static void grabtag __P((void));
+ 
+ /*
+  * This is the main routine for visual.
+@@ -96,17 +96,26 @@ int grabtag __P((void));
+ 
+ #define	forbid(a)	{ if (a) goto fonfon; }
+ 
++static void
++doput(int ignore)
++{
++	(void)ignore;
++	put();
++}
++
++void
+ vmain()
+ {
+ 	int c, cnt, i;
+ 	cell esave[TUBECOLS];
+-	char *oglobp;
+-	short d;
+-	line *addr;
++	const char *volatile oglobp;
++	volatile short d;
++	line *volatile addr;
+ 	int ind, nlput;
+-	int shouldpo = 0;
+-	int onumber = 0, olist = 0,
+-		(*OPline)() = NULL, (*OPutchar)() = NULL;
++	volatile int shouldpo = 0;
++	volatile int onumber = 0, olist = 0;
++	int (*volatile OPline)(int) = NULL;
++	int (*volatile OPutchar)(int) = NULL;
+ 
+ 	CLOBBGRD(c);
+ 	CLOBBGRD(cnt);
+@@ -160,7 +169,7 @@ vmain()
+ 		Xhadcnt = hadcnt = 0;
+ 		Xcnt = cnt = 1;
+ 		splitw = 0;
+-		if (i = holdupd) {
++		if ((i = holdupd) != 0) {
+ 			if (state == VISUAL)
+ 				ignore(peekkey());
+ 			holdupd = 0;
+@@ -205,7 +214,7 @@ looptop:
+ 			 * an 'empty' named buffer spec in the routine
+ 			 * kshift (see ex_temp.c).
+ 			 */
+-			forbid (c == '0' || !isalpha(c) && !isdigit(c));
++			forbid (c == '0' || (!isalpha((unsigned char)c) && !isdigit((unsigned char)c)));
+ 			vreg = c;
+ 		}
+ reread:
+@@ -635,8 +644,8 @@ reread:
+ 				if (isalpha(cuc(mbuf[1])))
+ 				{
+ 					char x = cuc(mbuf[1]);
+-					mbuf[1] = isupper(x) ?
+-						tolower(x) : toupper(x);
++					mbuf[1] = isupper((unsigned char)x) ?
++						tolower((unsigned char)x) : toupper((unsigned char)x);
+ 				}
+ 				macpush(mbuf, 1);
+ 			}
+@@ -865,7 +874,7 @@ case_ATTN:
+ 			vmacchng(1);
+ 			setLAST();
+ 			i = 0;
+-			if (vreg && partreg(vreg) || !vreg && pkill[0]) {
++			if ((vreg && partreg(vreg)) || (!vreg && pkill[0])) {
+ 				/*
+ 				 * Restoring multiple lines which were partial
+ 				 * lines; will leave cursor in middle
+@@ -898,8 +907,7 @@ case_ATTN:
+ 			 */
+ 			addr = dol;	/* old dol */
+ 			CATCH
+-				vremote(1, vreg ? (int(*)())putreg
+-						: (int(*)())put, vreg);
++				vremote(1, vreg ? putreg : doput, vreg);
+ 			ONERR
+ 				if (vreg == -1) {
+ 					splitw = 0;
+@@ -1160,7 +1168,7 @@ fixup:
+ 			 * in open mode and . moved, then redraw.
+ 			 */
+ 			i = vcline + (dot - addr);
+-			if (i < 0 || i >= vcnt && i >= -vcnt || state != VISUAL && dot != addr) {
++			if (i < 0 || (i >= vcnt && i >= -vcnt) || (state != VISUAL && dot != addr)) {
+ 				if (state == CRTOPEN)
+ 					vup1();
+ 				if (vcnt > 0)
+@@ -1247,6 +1255,7 @@ fonfon:
+ /*
+  * Grab the word after the cursor so we can look for it as a tag.
+  */
++static void
+ grabtag()
+ {
+ 	register char *cp, *dp;
+@@ -1271,6 +1280,7 @@ grabtag()
+  * Before appending lines, set up addr1 and
+  * the command mode undo information.
+  */
++void
+ prepapp()
+ {
+ 
+@@ -1284,8 +1294,8 @@ prepapp()
+  * Execute function f with the address bounds addr1
+  * and addr2 surrounding cnt lines starting at dot.
+  */
+-vremote(cnt, f, arg)
+-	int cnt, (*f)(), arg;
++void
++vremote(int cnt, void (*f)(int), int arg)
+ {
+ 	register int oing = inglobal;
+ 
+@@ -1301,15 +1311,23 @@ vremote(cnt, f, arg)
+ 	vmcurs = 0;
+ }
+ 
++static void
++doyank(int ignore)
++{
++	(void)ignore;
++	yank();
++}
++
+ /*
+  * Save the current contents of linebuf, if it has changed.
+  */
++void
+ vsave()
+ {
+ 	char temp[LBSIZE];
+ 
+ 	CP(temp, linebuf);
+-	if (FIXUNDO && vundkind == VCHNG || vundkind == VCAPU) {
++	if ((FIXUNDO && vundkind == VCHNG) || vundkind == VCAPU) {
+ 		/*
+ 		 * If the undo state is saved in the temporary buffer
+ 		 * vutmp, then we sync this into the temp file so that
+@@ -1321,7 +1339,7 @@ vsave()
+ 		prepapp();
+ 		CP(linebuf, vutmp);
+ 		putmark(dot);
+-		vremote(1, yank, 0);
++		vremote(1, doyank, 0);
+ 		vundkind = VMCHNG;
+ 		notecnt = 0;
+ 		undkind = UNDCHANGE;
+@@ -1345,6 +1363,7 @@ vsave()
+  * Do a z operation.
+  * Code here is rather long, and very uninteresting.
+  */
++static void
+ vzop(hadcnt, cnt, c)
+ 	bool hadcnt;
+ 	int cnt;
+@@ -1434,7 +1453,7 @@ register char *src;
+ {
+ 	register cell *cp = dst;
+ 
+-	while (*cp++ = *src++ & 0377);
++	while ((*cp++ = *src++ & 0377) != 0);
+ 	return dst;
+ }
+ 
+@@ -1445,7 +1464,7 @@ register cell *src;
+ {
+ 	register char *cp = dst;
+ 
+-	while (*cp++ = *src++);
++	while ((*cp++ = *src++) != 0);
+ 	return dst;
+ }
+ 
+@@ -1456,7 +1475,7 @@ register cell *src;
+ {
+ 	register cell *cp = dst;
+ 
+-	while (*cp++ = *src++);
++	while ((*cp++ = *src++) != 0);
+ 	return dst;
+ }
+ 

@@ -1,0 +1,32 @@
+$NetBSD: patch-libterm_tputs_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare void functions void
+- use const for string constants
+- fix up function pointer casting mess
+- silence signed/unsigned compiler warning
+
+--- libterm/tputs.c.orig	2002-02-04 03:15:46.000000000 +0000
++++ libterm/tputs.c
+@@ -71,10 +71,11 @@ char	PC;
+  * The number of affected lines is affcnt, and the routine
+  * used to output one character is outc.
+  */
++void
+ tputs(cp, affcnt, outc)
+-	register char *cp;
++	register const char *cp;
+ 	int affcnt;
+-	int (*outc)();
++	int (*outc)(int);
+ {
+ 	register int i = 0;
+ 	register int mspc10;
+@@ -121,7 +122,7 @@ tputs(cp, affcnt, outc)
+ 	 */
+ 	if (i == 0)
+ 		return;
+-	if (ospeed <= 0 || ospeed >= (sizeof tmspc10 / sizeof tmspc10[0]))
++	if (ospeed <= 0 || ospeed >= (int)(sizeof tmspc10 / sizeof tmspc10[0]))
+ 		return;
+ 
+ 	/*

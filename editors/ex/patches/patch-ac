@@ -1,26 +1,166 @@
-$NetBSD: patch-ac,v 1.4 2006/07/22 04:23:29 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2012/12/28 03:03:08 dholland Exp $
 
---- mapmalloc.c.orig	2003-01-28 12:04:25.000000000 -0800
+- use standard headers
+  (these functions are supposed to substitute for the libc ones, so they
+  need to match stdlib.h exactly)
+- use own headers
+- declare void functions void
+- fix return and argument types
+
+--- mapmalloc.c.orig	2003-01-28 20:04:25.000000000 +0000
 +++ mapmalloc.c
-@@ -54,6 +54,9 @@
+@@ -54,18 +54,12 @@
  #include <fcntl.h>
  #include <errno.h>
  #include <limits.h>
-+#if defined(__INTERIX)
+-#ifdef	__GLIBC__
+-/*
+- * Broken GNU libc will include stdlib.h with conflicting
+- * malloc() types otherwise.
+- */
+-#ifndef	__NO_STRING_INLINES
+-#define	__NO_STRING_INLINES
+-#endif	/* !__NO_STRING_INLINES */
+-#endif	/* __GLIBC__ */
 +#include <stdlib.h>
-+#endif
- #ifdef	__GLIBC__
+ #include <string.h>
+ 
+ #include "config.h"
++#include "ex.h"
++#include "ex_proto.h"
+ 
+ #ifdef	LANGMSG
+ #include <nl_types.h>
+@@ -176,8 +170,6 @@ static MM	*mm_global = NULL;
+ static int	zerofd = -1;
+ #endif
+ 
+-extern int	error __P((char *, ...));
+-
  /*
-  * Broken GNU libc will include stdlib.h with conflicting
-@@ -551,7 +554,11 @@ size_t alignment, size;
+  * Determine memory page size of OS
+  */
+@@ -308,7 +300,7 @@ mm_create(MM *mmPrev, size_t usize)
+  * and/or next chunk when possible to form larger chunks out of
+  * smaller ones.
+  */
+-static
++static void
+ mm_insert_chunk(MM *mm, mem_chunk *mcInsert)
+ {
+ 	mem_chunk *mc;
+@@ -429,7 +421,7 @@ mm_retrieve_chunk(MM *mm, size_t size)
+ /*
+  * Allocate a chunk of memory
+  */
+-char *
++void *
+ malloc(size_t usize)
+ {
+ 	MM *mm;
+@@ -469,10 +461,12 @@ nextpool:
+ /*
+  * Free a chunk of memory
+  */
+-free(char *ptr)
++void
++free(void *ptrV)
+ {
+ 	MM *mm;
+ 	mem_chunk *mc;
++	char *ptr = ptrV;
+ 
+ 	if (mm_global == NULL || ptr == NULL)
+ 		return;
+@@ -494,12 +488,13 @@ free(char *ptr)
+ /*
+  * Reallocate a chunk of memory
+  */
+-char *
+-realloc(char *ptr, size_t usize)
++void *
++realloc(void *ptrV, size_t usize)
+ {
+ 	size_t size;
+ 	mem_chunk *mc;
+ 	char *vp;
++	char *ptr = ptrV;
+ 
+ 	if (ptr == NULL)
+ 		return malloc(usize);	/* POSIX.1 semantics */
+@@ -523,7 +518,7 @@ realloc(char *ptr, size_t usize)
+ /*
+  * Allocate and initialize a chunk of memory
+  */
+-char *
++void *
+ calloc(size_t number, size_t usize)
+ {
+ 	char *vp;
+@@ -534,38 +529,55 @@ calloc(size_t number, size_t usize)
+ 	return vp;
+ }
+ 
++#ifndef __NetBSD__ /* signature does not agree with netbsd's libcompat */
+ /*ARGSUSED*/
+-cfree(p, num, size)
++void cfree(p, num, size)
+ char *p;
+ size_t num, size;
+ {
+ 	free(p);
+ }
++#endif
++
++
++/*
++ * Not all systems have the following in libc, so avoid compiler warnings
++ * by inserting extra global declarations.
++ */
++char *memalign(size_t alignment, size_t size);
++void *valloc(size_t size);
++char *mallinfo(void);
++int mallopt(void);
++char *poolsbrk(intptr_t val);
++
+ 
+ /*ARGSUSED*/
+ char *
+ memalign(alignment, size)
+ size_t alignment, size;
+ {
++	(void)alignment;
++	(void)size;
+ 	return NULL;
  }
  
  /*ARGSUSED*/
-+#if defined(__DragonFly__) || defined(__APPLE__)
+-char *
 +void *
-+#else
- char *
-+#endif
  valloc(size)
  size_t size;
  {
++	(void)size;
+ 	return NULL;
+ }
+ 
+ char *
+-mallinfo()
++mallinfo(void)
+ {
+ 	return NULL;
+ }
+ 
+ int
+-mallopt()
++mallopt(void)
+ {
+ 	return -1;
+ }
+@@ -574,5 +586,6 @@ mallopt()
+ char *
+ poolsbrk(intptr_t val)
+ {
++	(void)val;
+ 	return NULL;
+ }

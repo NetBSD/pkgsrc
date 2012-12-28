@@ -1,0 +1,351 @@
+$NetBSD: patch-ex__voper_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- fix up function pointer casting mess
+- declare void functions void
+- use const for string constants
+- silence warnings about && and || precedence
+- use <ctype.h> functions correctly
+- avoid implicit int
+
+--- ex_voper.c~	2012-12-27 21:58:41.000000000 +0000
++++ ex_voper.c
+@@ -89,7 +89,35 @@ static char sccsid[] = "@(#)ex_voper.c	1
+ 
+ cell	vscandir[2] =	{ '/', 0 };
+ 
+-int edge __P((void));
++static int edge __P((void));
++
++static void
++dovfilter(int ignore)
++{
++	(void)ignore;
++	vfilter();
++}
++
++static void
++dovshftop(int ignore)
++{
++	(void)ignore;
++	vshftop();
++}
++
++static void
++dovyankit(int ignore)
++{
++	(void)ignore;
++	vyankit();
++}
++
++static void
++dobeep(int ignore)
++{
++	(void)ignore;
++	beep();
++}
+ 
+ /*
+  * Decode an operator/operand type command.
+@@ -101,14 +129,17 @@ int edge __P((void));
+  * and if wcursor is zero, then the first non-blank location of the
+  * other line is implied.
+  */
++void
+ operate(c, cnt)
+ 	register int c, cnt;
+ {
+ 	register int i = 0;
+-	int (*moveop)(), (*deleteop)();
+-	int (*opf)();
++	void (*volatile moveop)(int);
++	void (*deleteop)(int);
++	void (*opf)(int);
+ 	bool subop = 0;
+-	char *oglobp, *ocurs;
++	const char *oglobp;
++	char *ocurs;
+ 	register line *addr;
+ 	line *odot;
+ 	static char lastFKND, lastFCHR;
+@@ -120,7 +151,8 @@ operate(c, cnt)
+ 	qmarkcell[0] = '?';
+ 	slashcell[0] = '/';
+ 	nullcell[0] = qmarkcell[1] = slashcell[1] = 0;
+-	moveop = vmove, deleteop = vdelete;
++	moveop = vmove_i;
++	deleteop = vdelete;
+ 	wcursor = cursor;
+ 	wdot = NOLINE;
+ 	notecnt = 0;
+@@ -132,7 +164,7 @@ operate(c, cnt)
+ 	 */
+ 	case 'd':
+ 		moveop = vdelete;
+-		deleteop = beep;
++		deleteop = dobeep;
+ 		break;
+ 
+ 	/*
+@@ -147,18 +179,18 @@ operate(c, cnt)
+ 	 * c		Change operator.
+ 	 */
+ 	case 'c':
+-		if (c == 'c' && workcmd[0] == 'C' || workcmd[0] == 'S')
++		if ((c == 'c' && workcmd[0] == 'C') || workcmd[0] == 'S')
+ 			subop++;
+ 		moveop = vchange;
+-		deleteop = beep;
++		deleteop = dobeep;
+ 		break;
+ 
+ 	/*
+ 	 * !		Filter through a UNIX command.
+ 	 */
+ 	case '!':
+-		moveop = vfilter;
+-		deleteop = beep;
++		moveop = dovfilter;
++		deleteop = dobeep;
+ 		break;
+ 
+ 	/*
+@@ -166,8 +198,8 @@ operate(c, cnt)
+ 	 *		can be put back with p/P.  Also yanks to named buffers.
+ 	 */
+ 	case 'y':
+-		moveop = vyankit;
+-		deleteop = beep;
++		moveop = dovyankit;
++		deleteop = dobeep;
+ 		break;
+ 
+ 	/*
+@@ -185,8 +217,8 @@ operate(c, cnt)
+ 	 */
+ 	case '<':
+ 	case '>':
+-		moveop = vshftop;
+-		deleteop = beep;
++		moveop = dovshftop;
++		deleteop = dobeep;
+ 		break;
+ 
+ 	/*
+@@ -309,7 +341,7 @@ ein:
+ #endif
+ 		getDOT();
+ 		forbid(!i);
+-		if (opf != vmove)
++		if (opf != vmove_i)
+ 			if (dir > 0)
+ 				wcursor++;
+ 			else
+@@ -353,8 +385,8 @@ ein:
+ 	 */
+ 	case ',':
+ 		forbid (lastFKND == 0);
+-		c = isupper(cuc(lastFKND))
+-			? tolower(lastFKND) : toupper(lastFKND);
++		c = isupper(cuc((unsigned char)lastFKND))
++			? tolower((unsigned char)lastFKND) : toupper((unsigned char)lastFKND);
+ 		i = lastFCHR;
+ 		if (vglobp == 0)
+ 			vglobp = nullcell;
+@@ -415,7 +447,7 @@ ein:
+ 			wcursor--;
+ 		case 'f':
+ fixup:
+-			if (moveop != vmove)
++			if (moveop != vmove_i)
+ 				wcursor++;
+ 			break;
+ 		}
+@@ -444,13 +476,13 @@ fixup:
+ 	 * $		To end of line.
+ 	 */
+ 	case '$':
+-		if (opf == vmove) {
++		if (opf == vmove_i) {
+ 			vmoving = 1;
+ 			vmovcol = 20000;
+ 		} else
+ 			vmoving = 0;
+ 		if (cnt > 1) {
+-			if (opf == vmove) {
++			if (opf == vmove_i) {
+ 				wcursor = 0;
+ 				cnt--;
+ 			} else
+@@ -480,10 +512,10 @@ fixup:
+ 	 */
+ 	case 'l':
+ 	case ' ':
+-		forbid (margin() || opf == vmove && edge());
++		forbid (margin() || (opf == vmove_i && edge()));
+ 		while (cnt > 0 && !margin())
+ 			wcursor += dir, cnt--;
+-		if (margin() && opf == vmove || wcursor < linebuf)
++		if ((margin() && opf == vmove_i) || wcursor < linebuf)
+ 			wcursor -= dir;
+ 		vmoving = 0;
+ 		break;
+@@ -520,7 +552,7 @@ deleteit:
+ 		 * Stuttered operators are equivalent to the operator on
+ 		 * a line, thus turn dd into d_.
+ 		 */
+-		if (opf == vmove || c != workcmd[0]) {
++		if (opf == vmove_i || c != workcmd[0]) {
+ errlab:
+ 			beep();
+ 			vmacp = 0;
+@@ -545,7 +577,7 @@ errlab:
+ 	 */
+ 	case 'H':
+ 		wdot = (dot - vcline) + cnt - 1;
+-		if (opf == vmove)
++		if (opf == vmove_i)
+ 			markit(wdot);
+ 		vmoving = 0;
+ 		wcursor = 0;
+@@ -578,7 +610,7 @@ errlab:
+ 	 */
+ 	case 'L':
+ 		wdot = dot + vcnt - vcline - cnt;
+-		if (opf == vmove)
++		if (opf == vmove_i)
+ 			markit(wdot);
+ 		vmoving = 0;
+ 		wcursor = 0;
+@@ -589,7 +621,7 @@ errlab:
+ 	 */
+ 	case 'M':
+ 		wdot = dot + ((vcnt + 1) / 2) - vcline - 1;
+-		if (opf == vmove)
++		if (opf == vmove_i)
+ 			markit(wdot);
+ 		vmoving = 0;
+ 		wcursor = 0;
+@@ -656,7 +688,7 @@ errlab:
+ 		forbid (Xhadcnt);
+ 		vmoving = 0;
+ 		wcursor = d == '`' ? ncols[c - 'a'] : 0;
+-		if (opf == vmove && (wdot != dot || (d == '`' && wcursor != cursor)))
++		if (opf == vmove_i && (wdot != dot || (d == '`' && wcursor != cursor)))
+ 			markDOT();
+ 		if (wcursor) {
+ 			vsave();
+@@ -678,7 +710,7 @@ errlab:
+ 			cnt = lineDOL();
+ 		wdot = zero + cnt;
+ 		forbid (wdot < one || wdot > dol);
+-		if (opf == vmove)
++		if (opf == vmove_i)
+ 			markit(wdot);
+ 		vmoving = 0;
+ 		wcursor = 0;
+@@ -765,7 +797,7 @@ slerr:
+ 		wcursor = loc1;
+ 		if (i != 0)
+ 			vsetsiz(i);
+-		if (opf == vmove) {
++		if (opf == vmove_i) {
+ 			if (state == ONEOPEN || state == HARDOPEN)
+ 				outline = destline = WBOT;
+ 			if (addr != dot || loc1 != cursor)
+@@ -804,7 +836,8 @@ slerr:
+ /*
+  * Find single character c, in direction dir from cursor.
+  */
+-find(c)
++int
++find(int c)
+ {
+ 
+ 	for(;;) {
+@@ -820,8 +853,9 @@ find(c)
+  * Do a word motion with operator op, and cnt more words
+  * to go after this.
+  */
++int
+ word(op, cnt)
+-	register int (*op)();
++	register void (*op)(int);
+ 	int cnt;
+ {
+ 	register int which = 0;
+@@ -832,7 +866,7 @@ word(op, cnt)
+ 		iwc = wcursor;
+ 		which = wordch(wcursor);
+ 		while (wordof(which, wcursor)) {
+-			if (cnt == 1 && op != vmove && wcursor[1] == 0) {
++			if (cnt == 1 && op != vmove_i && wcursor[1] == 0) {
+ 				wcursor++;
+ 				break;
+ 			}
+@@ -848,7 +882,7 @@ word(op, cnt)
+ 		else
+ 			if (wcursor == iwc && iwdot == wdot && *iwc)
+ 				wcursor++;
+-		if (op == vmove && margin())
++		if (op == vmove_i && margin())
+ 			wcursor--;
+ 	} else {
+ 		if (!lnext())
+@@ -871,8 +905,9 @@ word(op, cnt)
+  * To end of word, with operator op and cnt more motions
+  * remaining after this.
+  */
++void
+ eend(op)
+-	register int (*op)();
++	register void (*op)(int);
+ {
+ 	register int which;
+ 
+@@ -898,8 +933,8 @@ eend(op)
+  * Wordof tells whether the character at *wc is in a word of
+  * kind which (blank/nonblank words are 0, conservative words 1).
+  */
+-wordof(which, wc)
+-	register char *wc;
++int
++wordof(int which, register char *wc)
+ {
+ 
+ 	if (isspace(cuc(*wc)))
+@@ -911,12 +946,13 @@ wordof(which, wc)
+  * Wordch tells whether character at *wc is a word character
+  * i.e. an alfa, digit, or underscore.
+  */
++int
+ wordch(wc)
+ 	char *wc;
+ {
+ 	register int c;
+ 
+-	c = wc[0];
++	c = (unsigned char)wc[0];
+ 	return (isalpha(c) || isdigit(c) || c == '_'
+ #ifdef	BIT8
+ #ifdef	ISO8859_1
+@@ -935,7 +971,8 @@ wordch(wc)
+ /*
+  * Edge tells when we hit the last character in the current line.
+  */
+-edge()
++static int
++edge(void)
+ {
+ 
+ 	if (linebuf[0] == 0)
+@@ -949,7 +986,8 @@ edge()
+ /*
+  * Margin tells us when we have fallen off the end of the line.
+  */
+-margin()
++int
++margin(void)
+ {
+ 
+ 	return (wcursor < linebuf || wcursor[0] == 0);

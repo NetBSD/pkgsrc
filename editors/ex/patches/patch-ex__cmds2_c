@@ -1,0 +1,239 @@
+$NetBSD: patch-ex__cmds2_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- avoid implicit int
+- declare void functions void
+- use const for string constants
+
+--- ex_cmds2.c~	2002-02-02 02:08:35.000000000 +0000
++++ ex_cmds2.c
+@@ -95,6 +95,7 @@ extern int	poffset;		/* mjm: extern; als
+ /*
+  * Is there a single letter indicating a named buffer next?
+  */
++int
+ cmdreg()
+ {
+ 	register int c = 0;
+@@ -108,6 +109,7 @@ cmdreg()
+ /*
+  * Tell whether the character ends a command
+  */
++int
+ endcmd(ch)
+ 	int ch;
+ {
+@@ -129,6 +131,7 @@ endcmd(ch)
+ /*
+  * Insist on the end of the command.
+  */
++void
+ eol()
+ {
+ 
+@@ -144,7 +147,8 @@ eol()
+  * just fixing up the echo area for the print.
+  * Otherwise we reset a number of externals, and discard unused input.
+  */
+-error0()
++static void
++error0(void)
+ {
+ 
+ 	if (vcatch) {
+@@ -191,8 +195,8 @@ error0()
+  * Otherwise, in the normal command mode error case,
+  * finish state reset, and throw to top.
+  */
+-error1(str)
+-	char *str;
++static void
++error1(const char *str)
+ {
+ 	bool die;
+ 
+@@ -230,17 +234,18 @@ error1(str)
+  * with i an integer argument to printf.
+  */
+ /*VARARGS2*/
++void
+ #ifndef	__STDC__
+ error(str, i)
+ #ifdef lint
+-	register char *str;
++	register const char *str;
+ #else
+ 	register int str;
+ #endif
+ 	int i;
+ {
+ #else
+-error(char *str, ...)
++error(const char *str, ...)
+ {
+ 	va_list ap;
+ #endif
+@@ -265,6 +270,7 @@ error(char *str, ...)
+ /*
+  * Rewind the argument list.
+  */
++void
+ erewind()
+ {
+ 
+@@ -280,6 +286,7 @@ erewind()
+ 	}
+ }
+ 
++void
+ fixol()
+ {
+ 	if (Outchar != vputchar) {
+@@ -298,6 +305,7 @@ fixol()
+ /*
+  * Does an ! character follow in the command stream?
+  */
++int
+ exclam()
+ {
+ 
+@@ -311,6 +319,7 @@ exclam()
+ /*
+  * Make an argument list for e.g. next.
+  */
++void
+ makargs()
+ {
+ 
+@@ -324,6 +333,7 @@ makargs()
+ /*
+  * Advance to next file in argument list.
+  */
++void
+ next()
+ {
+ 	extern short isalt;	/* defined in ex_io.c */
+@@ -343,6 +353,7 @@ next()
+  * Eat trailing flags and offsets after a command,
+  * saving for possible later post-command prints.
+  */
++void
+ newline()
+ {
+ 	register int c;
+@@ -399,6 +410,7 @@ serror(catgets(catd, 1, 32,
+  * Before quit or respec of arg list, check that there are
+  * no more files in the arg list.
+  */
++void
+ nomore()
+ {
+ 
+@@ -413,6 +425,7 @@ nomore()
+  * Before edit of new file check that either an ! follows
+  * or the file has not been changed.
+  */
++int
+ quickly()
+ {
+ 
+@@ -432,6 +445,7 @@ quickly()
+ /*
+  * Reset the flavor of the output to print mode with no numbering.
+  */
++void
+ resetflav()
+ {
+ 
+@@ -448,10 +462,11 @@ resetflav()
+  * Print an error message with a %s type argument to printf.
+  * Message text comes from error message file.
+  */
++void
+ #ifndef	__STDC__
+ serror(str, cp)
+ #ifdef lint
+-	register char *str;
++	register const char *str;
+ #else
+ 	register int str;
+ #endif
+@@ -463,7 +478,7 @@ serror(str, cp)
+ 	error1(str);
+ }
+ #else	/* __STDC__ */
+-serror(char *str, ...)
++serror(const char *str, ...)
+ {
+ 	va_list ap;
+ 
+@@ -482,6 +497,7 @@ serror(char *str, ...)
+  * and either use normally decoded (ARPAnet standard) characters or list mode,
+  * where end of lines are marked and tabs print as ^I.
+  */
++void
+ setflav()
+ {
+ 
+@@ -495,6 +511,7 @@ setflav()
+ /*
+  * Skip white space and tell whether command ends then.
+  */
++int
+ skipend()
+ {
+ 
+@@ -505,6 +522,7 @@ skipend()
+ /*
+  * Set the command name for non-word commands.
+  */
++void
+ tailspec(c)
+ 	int c;
+ {
+@@ -518,15 +536,17 @@ tailspec(c)
+  * Try to read off the rest of the command word.
+  * If alphabetics follow, then this is not the command we seek.
+  */
++void
+ tail(comm)
+-	char *comm;
++	const char *comm;
+ {
+ 
+ 	tailprim(comm, 1, 0);
+ }
+ 
++void
+ tail2of(comm)
+-	char *comm;
++	const char *comm;
+ {
+ 
+ 	tailprim(comm, 2, 0);
+@@ -534,8 +554,9 @@ tail2of(comm)
+ 
+ char	tcommand[20];
+ 
++void
+ tailprim(comm, i, notinvis)
+-	register char *comm;
++	register const char *comm;
+ 	int i;
+ 	bool notinvis;
+ {
+@@ -574,6 +595,7 @@ ret:
+ /*
+  * Continue after a : command from open/visual.
+  */
++void
+ vcontin(ask)
+ 	bool ask;
+ {
+@@ -643,6 +665,7 @@ vcontin(ask)
+  * Put out a newline (before a shell escape)
+  * if in open/visual.
+  */
++void
+ vnfl()
+ {
+ 

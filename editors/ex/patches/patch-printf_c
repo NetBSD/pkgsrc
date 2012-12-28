@@ -1,0 +1,205 @@
+$NetBSD: patch-printf_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- use standard headers
+  (this is supposed to substitute for libc's printf, so it *must*
+  match stdio.h)
+- use own headers
+- declare local functions static
+- avoid implicit int
+- return values from non-void functions
+- use const for string constants
+- remove/replace code that intentionally uses signed overflow
+
+--- printf.c.orig	2012-12-27 21:57:52.000000000 +0000
++++ printf.c
+@@ -82,6 +82,8 @@ static char sccsid[] = "@(#)printf.c	1.1
+ /* The pwb version this is based on */
+ /* from printf.c:2.2 6/5/79 */
+ 
++#include <stdio.h>
++
+ #ifndef	__STDC__
+ #include "varargs.h"
+ #else
+@@ -95,6 +97,8 @@ extern	nl_catd	catd;
+ #define	catgets(a, b, c, d)	(d)
+ #endif
+ 
++#include "ex.h"
++#include "ex_proto.h"
+ #include "config.h"
+ 
+ /*
+@@ -115,15 +119,13 @@ extern	nl_catd	catd;
+ 
+ static int width, sign, fill;
+ 
+-extern int putchar __P((int));
+-
+-char *p_dconv __P((long, char *));
+-int p_emit __P((char *, char *));
++static void p_emit __P((const char *, const char *));
+ 
+ #ifdef	__STDC__
+ int vprintf(const char *fmt, va_list ap);
+ #endif
+ 
++int
+ #ifndef	__STDC__
+ printf(va_alist)
+ 	va_dcl
+@@ -155,14 +157,17 @@ printf(const char *fmt, ...)
+ 	return ret;
+ }
+ 
++int
+ vprintf(const char *fmt, va_list ap)
+ {
+ 	char fcode;
+ 	int prec;
+ 	int length,mask1,nbits,n;
+ 	long int mask2, num;
+-	register char *bptr;
+-	char *ptr;
++	unsigned long unum;
++	register const char *bptr;
++	register char *vbptr;
++	const char *ptr;
+ 	char buf[134];
+ #endif	/* __STDC__ */
+ 
+@@ -171,7 +176,7 @@ vprintf(const char *fmt, va_list ap)
+ 		while ((fcode = *fmt++)!='%') {
+ 			/* ordinary (non-%) character */
+ 			if (fcode=='\0')
+-				return;
++				return 0;
+ 			putchar(fcode);
+ 		}
+ 		/* length modifier: -1 for h, 1 for l, 0 for none */
+@@ -288,18 +293,18 @@ vprintf(const char *fmt, va_list ap)
+ 					nbits = 4;
+ 				}
+ 				n = (num!=0);
+-				bptr = buf + MAXOCT + 3;
++				vbptr = buf + MAXOCT + 3;
+ 				/* shift and mask for speed */
+ 				do
+ 				    if (((int) num & mask1) < 10)
+-					*--bptr = ((int) num & mask1) + 060;
++					*--vbptr = ((int) num & mask1) + 060;
+ 				    else
+-					*--bptr = ((int) num & mask1) + 0127;
+-				while (num = (num >> nbits) & mask2);
++					*--vbptr = ((int) num & mask1) + 0127;
++				while ((num = (num >> nbits) & mask2) != 0);
+ 				
+ 				if (fcode=='o') {
+ 					if (n)
+-						*--bptr = '0';
++						*--vbptr = '0';
+ 				}
+ 				else
+ 					if (!sign && fill <= 0) {
+@@ -308,9 +313,10 @@ vprintf(const char *fmt, va_list ap)
+ 						width -= 2;
+ 					}
+ 					else {
+-						*--bptr = fcode;
+-						*--bptr = '0';
++						*--vbptr = fcode;
++						*--vbptr = '0';
+ 					}
++				bptr = vbptr;
+ 				ptr = buf + MAXOCT + 3;
+ 				break;
+ 			case 'D':
+@@ -331,14 +337,20 @@ vprintf(const char *fmt, va_list ap)
+ 					else
+ 						num = (long) n;
+ 				}
+-				if (n = (fcode != 'u' && num < 0))
+-					num = -num;
++				if ((n = (fcode != 'u' && num < 0)) != 0) {
++					/* avoid overflow on -LONG_MAX */
++					unum = ((unsigned long)-(num + 1)) + 1;
++				}
++				else {
++					unum = (unsigned long) num;
++				}
+ 				/* now convert to digits */
+-				bptr = p_dconv(num, buf);
++				vbptr = p_dconv(unum, buf);
+ 				if (n)
+-					*--bptr = '-';
++					*--vbptr = '-';
+ 				if (fill == 0)
+ 					fill = -1;
++				bptr = vbptr;
+ 				ptr = buf + MAXDIGS + 1;
+ 				break;
+ 			default:
+@@ -369,13 +381,15 @@ vprintf(const char *fmt, va_list ap)
+  */
+ char *
+ p_dconv(value, buffer)
+-	long value;
++	unsigned long value;
+ 	char *buffer;
+ {
+ 	register char *bp;
+-	register int svalue;
++	register unsigned int svalue;
++#if 0
+ 	int n;
+ 	long lval;
++#endif
+ 	
+ 	bp = buffer;
+ 	
+@@ -386,6 +400,7 @@ p_dconv(value, buffer)
+ 		return(bp);
+ 	}
+ 	
++#if 0 /* original code, undefined behavior */
+ 	/* develop the leading digit of the value in "n" */
+ 	n = 0;
+ 	while (value < 0) {
+@@ -399,6 +414,7 @@ p_dconv(value, buffer)
+ 	
+ 	/* stash it in buffer[1] to allow for a sign */
+ 	bp[1] = n + '0';
++#endif
+ 	/*
+ 	 * Now develop the rest of the digits. Since speed counts here,
+ 	 * we do it in two loops. The first gets "value" down until it
+@@ -417,13 +433,15 @@ p_dconv(value, buffer)
+ 		*--bp = (svalue % 10) + '0';
+ 		svalue /= 10;
+ 	}
+-	
++
++#if 0	
+ 	/* fill in intermediate zeroes if needed */
+ 	if (buffer[1] != '0') {
+ 		while (bp > buffer + 2)
+ 			*--bp = '0';
+ 		--bp;
+ 	}
++#endif
+ 	return(bp);
+ }
+ 
+@@ -439,9 +457,10 @@ p_dconv(value, buffer)
+  * any padding in right-justification (to avoid printing "-3" as
+  * "000-3" where "-0003" was intended).
+  */
++static void
+ p_emit(s, send)
+-	register char *s;
+-	char *send;
++	register const char *s;
++	const char *send;
+ {
+ 	char cfill;
+ 	register int alen;

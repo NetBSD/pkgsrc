@@ -1,0 +1,258 @@
+$NetBSD: patch-ex__vget_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- use const for string constants
+- silence warnings about assignments in conditionals
+- silence warnings about && and || precedence
+- silence warnings about unused arguments
+
+--- ex_vget.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_vget.c
+@@ -89,12 +89,13 @@ static char sccsid[] = "@(#)ex_vget.c	1.
+  * large changes which appears in the echo area.
+  */
+ 
+-int addto __P((cell *, char *));
+-int fastpeekkey __P((void));
++static void addto __P((cell *, char *));
++static int fastpeekkey __P((void));
+ 
+ /*
+  * Return the key.
+  */
++void
+ ungetkey(c)
+ 	int c;		/* mjm: char --> int */
+ {
+@@ -106,6 +107,7 @@ ungetkey(c)
+ /*
+  * Return a keystroke, but never a ^@.
+  */
++int
+ getkey()
+ {
+ 	register int c;		/* mjm: char --> int */
+@@ -121,6 +123,7 @@ getkey()
+ /*
+  * Tell whether next keystroke would be a ^@.
+  */
++int
+ peekbr()
+ {
+ 
+@@ -139,13 +142,14 @@ int	doingread = 0;
+  * from repeating commands with .), and finally new
+  * keystrokes.
+  */
++int
+ getbr()
+ {
+ 	char ch;
+ 	register int c;
+ #ifdef	UCVISUAL
+ 	register int d;
+-	register char *colp;
++	register const char *colp;
+ #endif
+ #ifdef BEEHIVE
+ 	int cnt;
+@@ -248,7 +252,7 @@ again:
+                                 d = toupper(c);
+                         else {
+                                 colp = "({)}!|^~'~";
+-                                while (d = *colp++)
++                                while ((d = *colp++) != 0)
+                                         if (d == c) {
+                                                 d = *colp++;
+                                                 break;
+@@ -292,6 +296,7 @@ again:
+  * Get a key, but if a delete, quit or attention
+  * is typed return 0 so we will abort a partial command.
+  */
++int
+ getesc()
+ {
+ 	register int c;
+@@ -320,6 +325,7 @@ case_ATTN:
+ /*
+  * Peek at the next keystroke.
+  */
++int
+ peekkey()
+ {
+ 
+@@ -331,7 +337,8 @@ peekkey()
+  * Read a line from the echo area, with single character prompt c.
+  * A return value of 1 means the user blewit or blewit away.
+  */
+-readecho(c)
++int
++readecho(int c)
+ {
+ 	register char *sc = cursor;
+ 	register int (*OP)();
+@@ -383,6 +390,7 @@ blewit:
+  * the purposes of repeat, so copy it from
+  * the working to the previous command buffer.
+  */
++void
+ setLAST()
+ {
+ 
+@@ -400,6 +408,7 @@ setLAST()
+  * If the insertion buffer oveflows, then destroy
+  * the repeatability of the insert.
+  */
++void
+ addtext(cp)
+ 	char *cp;
+ {
+@@ -415,6 +424,7 @@ addtext(cp)
+ 		lastcmd[0] = 0;
+ }
+ 
++void
+ setDEL()
+ {
+ 
+@@ -424,6 +434,7 @@ setDEL()
+ /*
+  * Put text from cursor upto wcursor in BUF.
+  */
++void
+ setBUF(BUF)
+ 	register cell *BUF;
+ {
+@@ -437,6 +448,7 @@ setBUF(BUF)
+ 	*wp = c;
+ }
+ 
++static void
+ addto(buf, str)
+ 	register cell *buf;
+ 	register char *str;
+@@ -467,12 +479,13 @@ addto(buf, str)
+  * to do this for open modes now; return and save for later
+  * notification in visual.
+  */
++int
+ noteit(must)
+ 	bool must;
+ {
+ 	register int sdl = destline, sdc = destcol;
+ 
+-	if (notecnt < 2 || !must && state == VISUAL)
++	if (notecnt < 2 || (!must && state == VISUAL))
+ 		return (0);
+ 	splitw++;
+ 	if (WBOT == WECHO)
+@@ -483,7 +496,7 @@ noteit(must)
+ 		putchar('s');
+ 	if (*notenam) {
+ 		printf(" %s", notenam);
+-		if (*(strend(notenam) - 1) != 'e')
++		if (*(strendk(notenam) - 1) != 'e')
+ 			putchar('e');
+ 		putchar('d');
+ 	}
+@@ -502,7 +515,8 @@ noteit(must)
+  * Rrrrringgggggg.
+  * If possible, use flash (VB).
+  */
+-beep()
++void
++beep(void)
+ {
+ 
+ 	if (VB && value(FLASH))
+@@ -517,13 +531,14 @@ beep()
+  * motions.  I.e. on an adm3a we might map ^K to ^P.
+  * DM1520 for example has a lot of mappable characters.
+  */
+-
++int
+ map(c,maps)
+ 	register int c;
+ 	register struct maps *maps;
+ {
+ 	register int d;
+-	register char *p, *q;
++	register const char *p;
++	register char *q;
+ 	char b[10];	/* Assumption: no keypad sends string longer than 10 */
+ 
+ 	/*
+@@ -559,7 +574,7 @@ map(c,maps)
+ 		if (trace)
+ 			fprintf(trace,"\ntry '%s', ",maps[d].cap);
+ #endif
+-		if (p = maps[d].cap) {
++		if ((p = maps[d].cap) != NULL) {
+ 			for (q=b; *p; p++, q++) {
+ #ifdef MDEBUG
+ 				if (trace)
+@@ -633,8 +648,9 @@ map(c,maps)
+  * is false for, for example, pushing back lookahead from fastpeekkey(),
+  * since otherwise two fast escapes can clobber our undo.
+  */
++void
+ macpush(st, canundo)
+-char *st;
++const char *st;
+ int canundo;
+ {
+ 	char tmpbuf[BUFSIZ];
+@@ -671,8 +687,8 @@ int canundo;
+ }
+ 
+ #ifdef TRACE
+-visdump(s)
+-char *s;
++static void
++visdump(const char *s)
+ {
+ 	register int i;
+ 
+@@ -688,8 +704,8 @@ char *s;
+ 	tvliny();
+ }
+ 
+-vudump(s)
+-char *s;
++void
++vudump(const char *s)
+ {
+ 	register line *p;
+ 	char savelb[1024];
+@@ -717,6 +733,7 @@ char *s;
+  * Get a count from the keyed input stream.
+  * A zero count is indistinguishable from no count.
+  */
++int
+ vgetcnt()
+ {
+ 	register int c, cnt;
+@@ -734,8 +751,11 @@ vgetcnt()
+ 	return(cnt);
+ }
+ 
+-woid
+-trapalarm(signum) {
++static woid
++trapalarm(int signum)
++{
++	(void)signum;
++
+ 	alarm(0);
+ 	if (vcatch)
+ 		LONGJMP(vreslab,1);
+@@ -747,6 +767,7 @@ trapalarm(signum) {
+  * a machine generated sequence (such as a function pad from an escape
+  * flavor terminal) but fail for a human hitting escape then waiting.
+  */
++static int
+ fastpeekkey()
+ {
+ 	shand Oint;
