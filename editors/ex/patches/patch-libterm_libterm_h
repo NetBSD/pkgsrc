@@ -1,0 +1,23 @@
+$NetBSD: patch-libterm_libterm_h,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- use const for string constants
+- declare type of function pointer properly
+
+--- libterm/libterm.h.orig	2002-02-04 01:30:04.000000000 +0000
++++ libterm/libterm.h
+@@ -56,9 +56,9 @@
+ #endif
+ #endif
+ 
+-int tgetent __P((char *, char *));
+-int tgetnum __P((char *));
+-int tgetflag __P((char *));
+-char *tgetstr __P((char *, char **));
+-char *tgoto __P((char *, int, int));
+-int tputs __P((register char *, int, int (*)()));
++int tgetent __P((char *, const char *));
++int tgetnum __P((const char *));
++int tgetflag __P((const char *));
++char *tgetstr __P((const char *, char **));
++const char *tgoto __P((char *, int, int));
++void tputs __P((register const char *, int, int (*)(int)));

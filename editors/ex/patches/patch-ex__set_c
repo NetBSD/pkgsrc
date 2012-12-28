@@ -1,0 +1,128 @@
+$NetBSD: patch-ex__set_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- use const for string constants
+- silence warnings about && and || precedence
+
+--- ex_set.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_set.c
+@@ -88,18 +88,19 @@ static char sccsid[] = "@(#)ex_set.c	1.8
+  */
+ char	optname[ONMSZ];
+ 
+-int setend __P((void));
+-int prall __P((void));
+-int propts __P((void));
+-int propt __P((register struct option *));
++static int setend __P((void));
++static void prall __P((void));
++static void propts __P((void));
++static void propt __P((register struct option *));
+ 
++void
+ set()
+ {
+-	register char *cp;
++	register const char *cp;
++	register char *cp2;
+ 	register struct option *op;
+ 	register int c;
+ 	bool no;
+-	extern short ospeed;
+ 
+ 	setnoaddr();
+ 	if (skipend()) {
+@@ -109,12 +110,12 @@ set()
+ 		return;
+ 	}
+ 	do {
+-		cp = optname;
++		cp2 = optname;
+ 		do {
+-			if (cp < &optname[ONMSZ - 2])
+-				*cp++ = getchar();
++			if (cp2 < &optname[ONMSZ - 2])
++				*cp2++ = getchar();
+ 		} while (isalnum(peekchar()));
+-		*cp = 0;
++		*cp2 = 0;
+ 		cp = optname;
+ 		if (eq("all", cp)) {
+ 			if (inopen)
+@@ -146,7 +147,7 @@ dontset:
+ 			cp = "window";
+ 		}
+ 		for (op = options; op < &options[NOPTS]; op++)
+-			if (eq(op->oname, cp) || op->oabbrev && eq(op->oabbrev, cp))
++			if (eq(op->oname, cp) || (op->oabbrev && eq(op->oabbrev, cp)))
+ 				break;
+ 		if (op->oname == 0)
+ 			serror(catgets(catd, 1, 159,
+@@ -193,18 +194,18 @@ printone:
+ 
+ 		case STRING:
+ 		case OTERM:
+-			cp = optname;
++			cp2 = optname;
+ 			while (!setend()) {
+-				if (cp >= &optname[ONMSZ])
++				if (cp2 >= &optname[ONMSZ])
+ 					error(catgets(catd, 1, 163,
+ 				"String too long@in option assignment"));
+ 				/* adb change:  allow whitepace in strings */
+-				if( (*cp = getchar()) == '\\')
++				if( (*cp2 = getchar()) == '\\')
+ 					if( peekchar() != EOF)
+-						*cp = getchar();
+-				cp++;
++						*cp2 = getchar();
++				cp2++;
+ 			}
+-			*cp = 0;
++			*cp2 = 0;
+ 			if (op->otype == OTERM) {
+ /*
+  * At first glance it seems like we shouldn't care if the terminal type
+@@ -237,13 +238,15 @@ setnext:
+ 	eol();
+ }
+ 
++static int
+ setend()
+ {
+ 
+ 	return (is_white(peekchar()) || endcmd(peekchar()));
+ }
+ 
+-prall()
++static void
++prall(void)
+ {
+ 	register int incr = (NOPTS + 2) / 3;
+ 	register int rows = incr;
+@@ -261,7 +264,8 @@ prall()
+ 	}
+ }
+ 
+-propts()
++static void
++propts(void)
+ {
+ 	register struct option *op;
+ 
+@@ -292,10 +296,10 @@ propts()
+ 	flush();
+ }
+ 
+-propt(op)
+-	register struct option *op;
++static void
++propt(register struct option *op)
+ {
+-	register char *name;
++	register const char *name;
+ 	
+ 	name = op->oname;
+ 

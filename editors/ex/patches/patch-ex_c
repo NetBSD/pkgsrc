@@ -1,0 +1,122 @@
+$NetBSD: patch-ex_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- use volatile for compiler warnings about setjmp/vfork clobbering
+- silence warnings about assignments in conditionals
+
+--- ex.c~	2003-03-18 20:47:50.000000000 +0000
++++ ex.c
+@@ -144,13 +144,15 @@ char	tttrace[]	= { '/','d','e','v','/','
+ 
+ static char *progname;
+ 
+-erropen()
++static void
++erropen(void)
+ {
+ 	close(1);
+ 	dup(2);
+ }
+ 
+-usage()
++static void
++usage(void)
+ {
+ 	printf(catgets(catd, 1, 1, "\
+ Usage: %s [- | -s] [-l] [-L] [-R] [-r [file]] [-t tag]\n\
+@@ -160,7 +162,8 @@ Usage: %s [- | -s] [-l] [-L] [-R] [-r [f
+ 	exitex(1);
+ }
+ 
+-needarg(c)
++static void
++needarg(int c)
+ {
+ 	erropen();
+ 	printf(catgets(catd, 1, 2,
+@@ -168,7 +171,8 @@ needarg(c)
+ 	usage();
+ }
+ 
+-invopt(c)
++static void
++invopt(int c)
+ {
+ 	erropen();
+ 	printf(catgets(catd, 1, 3, "%s: illegal option -- %c\n"), progname, c);
+@@ -178,9 +182,8 @@ invopt(c)
+ /*
+  * Return last component of unix path name p.
+  */
+-char *
+-tailpath(p)
+-register char *p;
++static char *
++tailpath(register char *p)
+ {
+ 	register char *r;
+ 
+@@ -194,8 +197,8 @@ register char *p;
+  * Check ownership of file.  Return nonzero if it exists and is owned by the
+  * user or the option sourceany is used
+  */
+-iownit(file)
+-char *file;
++static int
++iownit(const char *file)
+ {
+ 	struct stat sb;
+ 
+@@ -214,8 +217,7 @@ char *file;
+ 
+ #ifdef	POSIX_1
+ shand
+-setsig(signum, handler)
+-shand handler;
++setsig(int signum, shand handler)
+ {
+ 	struct sigaction nact, oact;
+ 
+@@ -244,7 +246,8 @@ shand handler;
+  * Main thing here is to get a new buffer (in fileinit),
+  * rest is peripheral state resetting.
+  */
+-init()
++void
++init(void)
+ {
+ 	register int i;
+ 
+@@ -268,6 +271,7 @@ init()
+  * there is a 'd' in our name.  For edit we just diddle options;
+  * for vi we actually force an early visual command.
+  */
++int
+ main(ac, av)
+ 	register int ac;
+ 	register char *av[];
+@@ -280,7 +284,13 @@ main(ac, av)
+ #endif
+ 		char *cp = NULL;
+ 	register int c;
++#ifdef __STDC__
++	volatile
++#endif
+ 	bool ivis;
++#ifdef __STDC__
++	volatile
++#endif
+ 	bool fast = 0;
+ #ifdef TRACE
+ 	register char *tracef;
+@@ -560,7 +570,7 @@ argend:
+ 		setrupt();
+ 		intty = isatty(0);
+ 		value(PROMPT) = intty;
+-		if (cp = getenv("SHELL"))
++		if ((cp = getenv("SHELL")) != NULL)
+ 			strcpy(shell, cp);
+ 		if (fast || !intty)
+ 			setterm("dumb");

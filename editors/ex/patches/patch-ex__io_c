@@ -1,0 +1,238 @@
+$NetBSD: patch-ex__io_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- silence miscellaneous gcc45 warning
+- silence warnings about braces
+- silence warnings about unused arguments
+- use const for string constants
+
+--- ex_io.c~	2012-12-27 20:24:51.000000000 +0000
++++ ex_io.c
+@@ -109,13 +109,14 @@ long	cntnull;		/* Count of nulls " */
+ long	cntodd;			/* Count of non-ascii characters " */
+ #endif
+ 
+-int	checkmodeline __P((char *));
++static void checkmodeline __P((char *));
+ 
+ /*
+  * Parse file name for command encoded by comm.
+  * If comm is E then command is doomed and we are
+  * parsing just so user won't have to retype the name.
+  */
++void
+ filename(comm)
+ 	int comm;
+ {
+@@ -168,7 +169,7 @@ filename(comm)
+ 			break;
+ 		}
+ 	}
+-	if (hush && comm != 'f' || comm == 'E')
++	if ((hush && comm != 'f') || comm == 'E')
+ 		return;
+ 	if (file[0] != 0) {
+ 		lprintf("\"%s\"", file);
+@@ -196,6 +197,7 @@ filename(comm)
+  * Get the argument words for a command into genbuf
+  * expanding # and %.
+  */
++int
+ getargs()
+ {
+ 	register int c;
+@@ -271,7 +273,8 @@ filexp:
+  * Scan genbuf for shell metacharacters.
+  * Set is union of v7 shell and csh metas.
+  */
+-gscan()
++static int
++gscan(void)
+ {
+ 	register char *cp;
+ 
+@@ -285,6 +288,7 @@ gscan()
+  * Glob the argument words in genbuf, or if no globbing
+  * is implied, just split them up directly.
+  */
++void
+ gglob(gp)
+ 	struct glob *gp;
+ {
+@@ -372,6 +376,8 @@ gglob(gp)
+  * Parse one filename into file.
+  */
+ struct glob G;
++
++void
+ getone()
+ {
+ 	register char *str;
+@@ -393,6 +399,7 @@ missing:
+ /*
+  * Are these two really the same inode?
+  */
++static int
+ samei(sp, cp)
+ 	struct stat *sp;
+ 	char *cp;
+@@ -408,6 +415,7 @@ samei(sp, cp)
+  * Read a file from the world.
+  * C is command, 'e' if this really an edit (or a recover).
+  */
++void
+ rop(c)
+ 	int c;
+ {
+@@ -603,6 +611,7 @@ end_ft:
+ 	rop3(c);
+ }
+ 
++void
+ rop2()
+ {
+ 	line *first, *last, *a;
+@@ -638,7 +647,8 @@ rop2()
+ /*
+  * Io is finished, close the unit and print statistics.
+  */
+-iostats()
++static int
++iostats(void)
+ {
+ 
+ 	fsync(io);
+@@ -683,6 +693,7 @@ iostats()
+ 			);
+ }
+ 
++void
+ rop3(c)
+ 	int c;
+ {
+@@ -732,10 +743,13 @@ other:
+  * if this is a partial buffer, and distinguish
+  * all cases.
+  */
+-edfile()
++static int
++edfile(void)
+ {
++	/* work around gcc45 warning in eq() because file is a char[] */
++	char *fyle = file;
+ 
+-	if (!edited || !eq(file, savedfile))
++	if (!edited || !eq(fyle, savedfile))
+ 		return (NOTEDF);
+ 	return (addr1 == one && addr2 == dol ? EDF : PARTBUF);
+ }
+@@ -743,6 +757,7 @@ edfile()
+ /*
+  * Write a file.
+  */
++void
+ wop(dofname)
+ bool dofname;	/* if 1 call filename, else use savedfile */
+ {
+@@ -831,12 +846,13 @@ cre:
+ 		if (io < 0)
+ 			syserror();
+ 		writing = 1;
+-		if (hush == 0)
++		if (hush == 0) {
+ 			if (nonexist)
+ 				printf(catgets(catd, 1, 115, " [New file]"));
+ 			else if (value(WRITEANY) && edfile() != EDF)
+ 				printf(catgets(catd, 1, 116,
+ 							" [Existing file]"));
++		}
+ 		break;
+ 
+ 	case 2:
+@@ -852,7 +868,10 @@ cre:
+ 	putfile(0);
+ 	ignore(iostats());
+ 	if (c != 2 && addr1 == one && addr2 == dol) {
+-		if (eq(file, savedfile))
++		/* work around gcc45 warning in eq() because file is a char[] */
++		char *fyle = file;
++
++		if (eq(fyle, savedfile))
+ 			edited = 1;
+ 		synced();
+ 	}
+@@ -868,6 +887,7 @@ cre:
+  */
+ char *nextip;
+ 
++int
+ getfile()
+ {
+ 	register short c;
+@@ -922,6 +942,7 @@ getfile()
+ /*
+  * Write a range onto the io stream.
+  */
++void
+ putfile(isfilter)
+ int isfilter;
+ {
+@@ -930,6 +951,8 @@ int isfilter;
+ 	register int nib;
+ 	struct stat statb;
+ 
++	(void)isfilter;
++
+ 	a1 = addr1;
+ 	clrstats();
+ 	cntln = fixedzero ? 0 : addr2 - a1 + 1;
+@@ -975,10 +998,13 @@ int isfilter;
+  * the edited file then we consider it to have changed since it is
+  * now likely scrambled.
+  */
++void
+ wrerror()
+ {
++	/* work around gcc45 warning in eq() because file is a char[] */
++	char *fyle = file;
+ 
+-	if (eq(file, savedfile) && edited)
++	if (eq(fyle, savedfile) && edited)
+ 		change();
+ 	syserror();
+ }
+@@ -990,13 +1016,14 @@ wrerror()
+ short slevel;
+ short ttyindes;
+ 
++void
+ source(fil, okfail)
+-	char *fil;
++	const char *fil;
+ 	bool okfail;
+ {
+ 	JMP_BUF osetexit;
+ 	register int saveinp, ointty, oerrno;
+-	char *saveglobp;
++	const char *saveglobp;
+ 	short savepeekc;
+ 
+ 	signal(SIGINT, SIG_IGN);
+@@ -1050,6 +1077,7 @@ source(fil, okfail)
+ /*
+  * Clear io statistics before a read or write.
+  */
++void
+ clrstats()
+ {
+ 
+@@ -1082,6 +1110,7 @@ char	*strrchr();
+ #endif	/* !USG3TTY */
+ #endif	/* !__STDC__ */
+ 
++static void
+ checkmodeline(lin)
+ char *lin;
+ {

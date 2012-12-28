@@ -1,0 +1,348 @@
+$NetBSD: patch-ex__re_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- use const for string constants
+- wrap unused function in the proper matching ifdef
+- avoid implicit int
+- fix signed/unsigned mismatch
+- silence warnings about assignments in conditionals
+- silence warnings about && and || precedence
+
+--- ex_re.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_re.c
+@@ -82,32 +82,35 @@ static char sccsid[] = "@(#)ex_re.c	1.37
+ #include "ex.h"
+ #include "ex_re.h"
+ 
+-int compsub __P((int));
+-int dosubcon __P((int, line *));
+-int snote __P((register int, register int));
+-int comprhs __P((int));
+-int confirmed __P((line *));
+-int dosub __P((void));
+-int ugo __P((int, int));
+-int fixcase __P((register int));
+-int cerror __P((char *));
+-int cclass __P((register char *, register int, int));
++static int compsub __P((int));
++static int dosubcon __P((int, line *));
++static void snote __P((register int, register int));
++static void comprhs __P((int));
++static int confirmed __P((line *));
++static void dosub __P((void));
++static void ugo __P((int, int));
++static int fixcase __P((register int));
++static char *place __P((char *, char *, char *));
++static void cerror __P((const char *));
++static int cclass __P((register const char *, register int, int));
+ 
+ /*
+  * Global, substitute and regular expressions.
+  * Very similar to ed, with some re extensions and
+  * confirmed substitute.
+  */
++void
+ global(k)
+ 	bool k;
+ {
+ 	register char *gp;
+ 	register int c;
+ 	register line *a1;
+-	char globuf[GBSIZE], *Cwas;
++	char globuf[GBSIZE];
++	const char *Cwas;
+ 	int lines = lineDOL();
+ 	int oinglobal = inglobal;
+-	char *oglobp = globp;
++	const char *oglobp = globp;
+ 
+ 	Cwas = Command;
+ 	/*
+@@ -220,6 +223,7 @@ brkwh:
+ 	}
+ }
+ 
++#ifdef notdef /* used above in a notdef block */
+ /*
+  * gdelete: delete inside a global command. Handles the
+  * special case g/r.e./d. All lines to be deleted have
+@@ -228,7 +232,8 @@ brkwh:
+  * and g/r.e./.,/r.e.2/d are not treated specially.  There is no
+  * good reason for this except the question: where to you draw the line?
+  */
+-gdelete()
++static void
++gdelete(void)
+ {
+ 	register line *a1, *a2, *a3;
+ 
+@@ -250,16 +255,19 @@ gdelete()
+ 		dot = dol;
+ 	change();
+ }
++#endif
+ 
+ bool	cflag;
+ int	scount, slines, stotal;
+ 
++int
+ substitute(c)
+ 	int c;
+ {
+ 	register line *addr;
+ 	register int n;
+-	int gsubf, hopcount;
++	int gsubf;
++	unsigned hopcount;
+ 
+ 	gsubf = compsub(c);
+ 	if(FIXUNDO)
+@@ -267,7 +275,8 @@ substitute(c)
+ 	stotal = 0;
+ 	slines = 0;
+ 	for (addr = addr1; addr <= addr2; addr++) {
+-		scount = hopcount = 0;
++		scount = 0;
++		hopcount = 0;
+ 		if (dosubcon(0, addr) == 0)
+ 			continue;
+ 		if (gsubf) {
+@@ -299,7 +308,8 @@ substitute(c)
+ 	return (stotal);
+ }
+ 
+-compsub(ch)
++static int
++compsub(int ch)
+ {
+ 	register int seof, c, uselastre;
+ 	static int gsubf;
+@@ -368,6 +378,7 @@ compsub(ch)
+ 	}
+ }
+ 
++static void
+ comprhs(seof)
+ 	int seof;
+ {
+@@ -469,6 +480,7 @@ endrhs:
+ 	*rp++ = 0;
+ }
+ 
++int
+ getsub()
+ {
+ 	register char *p;
+@@ -480,6 +492,7 @@ getsub()
+ 	return (0);
+ }
+ 
++static int
+ dosubcon(f, a)
+ 	bool f;
+ 	line *a;
+@@ -494,11 +507,12 @@ dosubcon(f, a)
+ 	return (1);
+ }
+ 
++static int
+ confirmed(a)
+ 	line *a;
+ {
+ 	register int c;
+-	char *yesstr = catgets(catd, 1, 249, "y");
++	const char *yesstr = catgets(catd, 1, 249, "y");
+ 	int okay = -1;
+ 
+ 	if (cflag == 0)
+@@ -539,6 +553,7 @@ again:
+ }
+ 
+ #ifdef	notdef
++int
+ ex_getch()
+ {
+ 	char c;
+@@ -553,6 +568,7 @@ ex_getch()
+ }
+ #endif	/* notdef */
+ 
++static void
+ ugo(cnt, with)
+ 	int with;
+ 	int cnt;
+@@ -567,7 +583,8 @@ ugo(cnt, with)
+ int	casecnt;
+ bool	destuc;
+ 
+-dosub()
++static void
++dosub(void)
+ {
+ 	register char *lp, *sp, *rp;
+ 	int c;
+@@ -585,7 +602,7 @@ dosub()
+ 	while (lp < loc1)
+ 		*sp++ = *lp++;
+ 	casecnt = 0;
+-	while (c = *rp++) {
++	while ((c = *rp++) != 0) {
+ #ifdef	BIT8
+ 		c = cuc(c);
+ 		q = *qp++;
+@@ -661,12 +678,13 @@ ovflo:
+ 	}
+ 	lp = loc2;
+ 	loc2 = sp + (linebuf - genbuf);
+-	while (*sp++ = *lp++)
++	while ((*sp++ = *lp++) != 0)
+ 		if (sp >= &genbuf[LBSIZE])
+ 			goto ovflo;
+ 	strcLIN(genbuf);
+ }
+ 
++static int
+ fixcase(c)
+ 	register int c;
+ {
+@@ -683,7 +701,7 @@ fixcase(c)
+ 	return (c);
+ }
+ 
+-char *
++static char *
+ place(sp, l1, l2)
+ 	register char *sp, *l1, *l2;
+ {
+@@ -696,6 +714,7 @@ place(sp, l1, l2)
+ 	return (sp);
+ }
+ 
++static void
+ snote(total, lines)
+ 	register int total, lines;
+ {
+@@ -709,16 +728,17 @@ snote(total, lines)
+ 	flush();
+ }
+ 
++static void
+ cerror(s)
+-	char *s;
++	const char *s;
+ {
+ 	expbuf[0] = '\0';
+ 	error(s);
+ }
+ 
+ #ifdef	UXRE
+-refree(rp)
+-struct regexp *rp;
++static void
++refree(struct regexp *rp)
+ {
+ 	struct regexp *r1 = NULL, *r2 = NULL;
+ 	
+@@ -986,8 +1006,7 @@ complex:		cerror(catgets(catd, 1, 139,
+ }
+ 
+ int
+-execute(gf, addr)
+-line *addr;
++execute(int gf, line *addr)
+ {
+ 	char *p;
+ 	int c;
+@@ -1041,6 +1060,7 @@ line *addr;
+ 					goto complex; \
+ 			}
+ 
++int
+ compile(eof, oknl)
+ 	int eof;
+ 	int oknl;
+@@ -1123,7 +1143,7 @@ complex:
+ 			return (eof);
+ 		}
+ 		if (value(MAGIC)) {
+-			if (c != '*' && (c != '\\' || peekchar() != '{') ||
++			if ((c != '*' && (c != '\\' || peekchar() != '{')) ||
+ 					ep == expbuf) {
+ 				lastep = ep;
+ 			}
+@@ -1349,7 +1369,7 @@ magic:
+ 	"Badly formed re|Missing closing delimiter for regular expression"));
+ 
+ 		case '$':
+-			if (peekchar() == eof || peekchar() == EOF || oknl && peekchar() == '\n') {
++			if (peekchar() == eof || peekchar() == EOF || (oknl && peekchar() == '\n')) {
+ 				*ep++ = CDOL;
+ 				continue;
+ 			}
+@@ -1370,17 +1390,19 @@ defchar:
+ 	}
+ }
+ 
++int
+ same(a, b)
+ 	register int a, b;
+ {
+ 
+-	return (a == b || value(IGNORECASE) &&
+-	   ((islower(a) && toupper(a) == b) || (islower(b) && toupper(b) == a)));
++	return (a == b ||
++		(value(IGNORECASE) &&
++		 ((islower(a) && toupper(a) == b) ||
++		  (islower(b) && toupper(b) == a))));
+ }
+ 
+-ecmp(a, b, count)
+-	register char *a, *b;
+-	register int count;
++static int
++ecmp(register char *a, register char *b, register int count)
+ {
+ 	while (count--)
+ 		if (!same(*a++, *b++))
+@@ -1390,8 +1412,8 @@ ecmp(a, b, count)
+ 
+ char	*locs;
+ 
+-execute(gf, addr)
+-	line *addr;
++int
++execute(int gf, line *addr)
+ {
+ 	register char *p1, *p2;
+ 	register int c;
+@@ -1437,8 +1459,8 @@ execute(gf, addr)
+ 	return (0);
+ }
+ 
+-getrnge(str)
+-	register char *str;
++static void
++getrnge(register char *str)
+ {
+ 	low = *str++ & 0377;
+ 	siz = (*str & 0377) == 255 ? 20000 : (*str & 0377) - low;
+@@ -1446,6 +1468,7 @@ getrnge(str)
+ 
+ #define	uletter(c)	(isalpha(c) || c == '_')
+ 
++int
+ advance(lp, ep)
+ 	register char *lp, *ep;
+ {
+@@ -1628,8 +1651,9 @@ star:
+ 	}
+ }
+ 
++static int
+ cclass(set, c, af)
+-	register char *set;
++	register const char *set;
+ 	register int c;
+ 	int af;
+ {

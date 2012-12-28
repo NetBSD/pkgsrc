@@ -1,0 +1,147 @@
+$NetBSD: patch-ex__tty_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- use standard headers
+- declare local functions (and data) static
+- declare void functions void
+- don't put function declarations inside other functions
+- return values from non-void functions
+
+--- ex_tty.c~	2003-03-18 20:29:07.000000000 +0000
++++ ex_tty.c
+@@ -79,14 +79,16 @@ static char sccsid[] = "@(#)ex_tty.c	1.1
+ 
+ /* from ex_tty.c	7.10.1 (2.11BSD GTE) 12/9/94 */
+ 
++#include <sys/ioctl.h>
++
+ #include "ex.h"
+ #include "ex_tty.h"
+ 
+ int ATTN = DELETE;
+ 
+-int gettmode __P((void));
+-char *gettlongname __P((char *, char *));
+-int zap __P((void));
++static const char *gettlongname __P((char *, const char *));
++static void zap __P((void));
++static int countnum(int ch);
+ 
+ /*
+  * Terminal type initialization routines,
+@@ -95,6 +97,7 @@ int zap __P((void));
+  */
+ /* short	ospeed = -1;	mjm: def also in tputs.c of termcap.a  */
+ 
++void
+ gettmode()
+ {
+ #ifdef	POSIX_1
+@@ -171,7 +174,7 @@ gettmode()
+ }
+ 
+ char *xPC;
+-char **sstrs[] = {
++static char **sstrs[] = {
+ 	&AL, &BC, &BT, &CD, &CE, &CL, &CM, &xCR, &xCS, &DC, &DL, &DM, &DO,
+ 	&ED, &EI, &F0, &F1, &F2, &F3, &F4, &F5, &F6, &F7, &F8, &F9,
+ 	&HO, &IC, &IM, &IP, &KD, &KE, &KH, &KL, &KR, &KS, &KU, &LL, &ND, &xNL,
+@@ -189,13 +192,17 @@ bool *sflags[] = {
+ char **fkeys[10] = {
+ 	&F0, &F1, &F2, &F3, &F4, &F5, &F6, &F7, &F8, &F9
+ };
++
++void
+ setterm(type)
+-	char *type;
++	const char *type;
+ {
+-	char *tgoto();
+ 	register int unknown;
+ 	char ltcbuf[TCBUFSIZE];
+ 
++	/* to avoid needing to make all the terminal strings const */
++	static char empty[] = "";
++
+ 	if (type[0] == 0)
+ 		type = "xx";
+ 	unknown = 0;
+@@ -221,13 +228,13 @@ setterm(type)
+ 	 * Handle funny termcap capabilities
+ 	 */
+ 	if (xCS && SC && RC) {
+-		if (AL==NULL) AL="";
+-		if (DL==NULL) DL="";
++		if (AL==NULL) AL=empty;
++		if (DL==NULL) DL=empty;
+ 	}
+-	if (AL_PARM && AL==NULL) AL="";
+-	if (DL_PARM && DL==NULL) DL="";
+-	if (IC && IM==NULL) IM="";
+-	if (IC && EI==NULL) EI="";
++	if (AL_PARM && AL==NULL) AL=empty;
++	if (DL_PARM && DL==NULL) DL=empty;
++	if (IC && IM==NULL) IM=empty;
++	if (IC && EI==NULL) EI=empty;
+ 	if (!GT) BT=NULL;	/* If we can't tab, we can't backtab either */
+ 
+ #ifndef	USG3TTY
+@@ -313,6 +320,7 @@ setterm(type)
+ 				"%s: Unknown terminal type"), type);
+ }
+ 
++void
+ setsize()
+ {
+ 	register int l, i;
+@@ -369,9 +377,10 @@ setsize()
+ 		TLINES = 2;
+ }
+ 
+-zap()
++static void
++zap(void)
+ {
+-	register char *namp;
++	register const char *namp;
+ 	register bool **fp;
+ 	register char ***sp;
+ 	int flag;
+@@ -397,10 +406,10 @@ zap()
+ 	} while (*namp);
+ }
+ 
+-char *
++static const char *
+ gettlongname(bp, def)
+ 	register char *bp;
+-	char *def;
++	const char *def;
+ {
+ 	register char *cp;
+ 
+@@ -438,11 +447,11 @@ fkey(i)
+  * than AL vs SR, won't be really affected.)
+  */
+ static int costnum;
++
++int
+ cost(str)
+-char *str;
++const char *str;
+ {
+-	int countnum();
+-
+ 	if (str == NULL || *str=='O')	/* OOPS */
+ 		return 10000;	/* infinity */
+ 	costnum = 0;
+@@ -451,8 +460,10 @@ char *str;
+ }
+ 
+ /* ARGSUSED */
++static int
+ countnum(ch)
+ char ch;
+ {
+ 	costnum++;
++	return ch;
+ }

@@ -1,0 +1,71 @@
+$NetBSD: patch-ex__addr_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare void functions void
+- avoid implicit int
+
+--- ex_addr.c~	2002-02-02 02:08:35.000000000 +0000
++++ ex_addr.c
+@@ -102,6 +102,7 @@ static	bool bigmove;
+ /*
+  * Set up addr1 and addr2 for commands whose default address is dot.
+  */
++void
+ setdot()
+ {
+ 
+@@ -114,6 +115,7 @@ setdot()
+  * Call setdot1 to set up default addresses without ever
+  * setting the previous context mark.
+  */
++void
+ setdot1()
+ {
+ 
+@@ -132,6 +134,7 @@ setdot1()
+  * to delete 5 lines, etc.
+  * Such nonsense is implemented by setcount.
+  */
++void
+ setcount()
+ {
+ 	register int cnt;
+@@ -155,6 +158,7 @@ setcount()
+ /*
+  * Parse a number out of the command input stream.
+  */
++int
+ getnum()
+ {
+ 	register int cnt;
+@@ -168,6 +172,7 @@ getnum()
+  * Set the default addresses for commands which use the whole
+  * buffer as default, notably write.
+  */
++void
+ setall()
+ {
+ 
+@@ -188,6 +193,7 @@ setall()
+ /*
+  * No address allowed on, e.g. the file command.
+  */
++void
+ setnoaddr()
+ {
+ 
+@@ -377,6 +383,7 @@ error(catgets(catd, 1, 11, "No match to 
+  * Left over from squashing ex version 1.1 into
+  * 11/34's and 11/40's.
+  */
++void
+ setCNL()
+ {
+ 
+@@ -384,6 +391,7 @@ setCNL()
+ 	newline();
+ }
+ 
++void
+ setNAEOL()
+ {
+ 
