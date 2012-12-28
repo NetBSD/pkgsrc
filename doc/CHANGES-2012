@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4018 2012/12/27 21:45:49 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.4019 2012/12/28 03:13:01 dholland Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6170,7 +6170,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/cutter to 1.2.2 [obache 2012-12-23]
 	Updated multimedia/libvpx to 1.1.0nb2 [ryoon 2012-12-23]
 	Updated www/php-owncloud to 4.5.5 [ryoon 2012-12-23]
+	Updated games/dipmap to 1.16nb2 [dholland 2012-12-23]
 	Updated net/knot to 1.1.3 [pettai 2012-12-23]
+	Updated print/bibtool to 2.48nb1 [dholland 2012-12-24]
 	Updated www/php-tiki6 to 6.8 [ryoon 2012-12-24]
 	Updated www/php-concrete5 to 5.6.0.2nb1 [ryoon 2012-12-24]
 	Updated www/apache22 to 2.2.23nb3 [spz 2012-12-25]
@@ -6178,7 +6180,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/py-anki2 to 2.0.3nb1 [wiz 2012-12-25]
 	Updated devel/mantis to 1.2.12 [ryoon 2012-12-25]
 	Updated mail/bogofilter to 1.2.3 [darcy 2012-12-26]
+	Updated converters/ack to 1.39nb1 [dholland 2012-12-26]
+	Updated graphics/radiance to 3.6.1nb11 [dholland 2012-12-27]
+	Updated editors/mflteco to 19920331nb1 [dholland 2012-12-27]
 	Updated www/viewvc to 1.1.17 [darcy 2012-12-27]
 	Updated editors/emacs22 to 22.3nb24 [ryoon 2012-12-27]
 	Updated editors/emacs22-nox11 to 22.3nb24 [ryoon 2012-12-27]
 	Updated devel/boost-jam to 1.52.0nb1 [wiz 2012-12-27]
+	Updated editors/ex to 20040103nb3 [dholland 2012-12-28]
