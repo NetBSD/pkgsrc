@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11789 2012/12/27 12:58:34 darcy Exp $
+$NetBSD: TODO,v 1.11790 2012/12/28 17:03:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-plugins-2.4.4
 	o audacity-2.0
 	o autoconvert-0.3.16
-	o autogen-5.16.2
+	o autogen-5.17
 	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
@@ -601,6 +601,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gaupol-0.21
+	o gawk-4.0.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
@@ -682,6 +683,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.21
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gsed-4.2.2
+	o gsharutils-4.13
 	o gss-1.0.2
 	o gthumb-3.0.2
 	o gtick-0.4.2
@@ -939,7 +941,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o opencv-2.4.3
-	o opendkim-2.7.3
+	o opendkim-2.7.3 [pkg/47370]
 	o opengrok-0.11.1
 	o openmortal-0.7.1
 	o openoffice-3.4
@@ -1200,6 +1202,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
+	o unrealircd-3.2.10
 	o ups-nut-2.6.2
 	o userppp-030706
 	o utilisp-1.14
