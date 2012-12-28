@@ -1,0 +1,21 @@
+$NetBSD: patch-ex__version_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare void functions void
+- use const for string constants
+
+--- ex_version.c~	2004-01-03 14:11:39.000000000 +0000
++++ ex_version.c
+@@ -74,10 +74,11 @@
+  */
+ 
+ #include "ex.h"
++#include "ex_proto.h"
+ 
+-static char *versionstring = "@(#)Version 3.7, 6/7/85 (gritter) 1/3/04";
++static const char *versionstring = "@(#)Version 3.7, 6/7/85 (gritter) 1/3/04";
+ 
+-int
++void
+ printver()
+ {
+ 	printf("%s%s%s", versionstring + 4,

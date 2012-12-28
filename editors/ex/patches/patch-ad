@@ -1,8 +1,76 @@
-$NetBSD: patch-ad,v 1.1 2006/06/08 16:15:47 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2012/12/28 03:03:08 dholland Exp $
 
---- ex.h.orig	2003-03-18 20:29:07.000000000 +0000
+- teach it about dead functions
+- use const for string constants
+- use speed_t for tty speed
+- don't declare versionstring, which is static in ex_version.c
+- fix up function pointer casting mess
+
+--- ex.h.orig	2012-12-27 21:58:42.000000000 +0000
 +++ ex.h
-@@ -549,7 +549,6 @@ extern	int	tfile;		/* Temporary file uni
+@@ -238,6 +238,15 @@ typedef	int	woid;
+ #endif	/* !__STDC__ */
+ 
+ /*
++ * nonreturning functions
++ */
++#if defined(__GNUC__) || defined(__CLANG__)
++#define dead __attribute__((__noreturn__))
++#else
++#define dead
++#endif
++
++/*
+  * Use reliable POSIX.1 signals if available.
+  */
+ #ifdef	POSIX_1
+@@ -401,8 +410,8 @@ typedef	jmp_buf		JMP_BUF;
+  * ex_data.c... see the shell script "makeoptions".
+  */
+ struct	option {
+-	char	*oname;
+-	char	*oabbrev;
++	const char	*oname;
++	const char	*oabbrev;
+ 	short	otype;		/* Types -- see below */
+ 	short	odefault;	/* Default value */
+ 	short	ovalue;		/* Current value */
+@@ -483,7 +492,7 @@ var	bool	aiflag;		/* Append/change/inser
+ var	bool	anymarks;	/* We have used '[a-z] */
+ var	int	bsize;		/* Block size for disk i/o */
+ var	int	chng;		/* Warn "No write" */
+-var	char	*Command;
++var	const char *Command;
+ var	short	defwind;	/* -w# change default window size */
+ var	int	dirtcnt;	/* When >= MAXDIRT, should sync temporary */
+ #ifdef	TIOCLGET
+@@ -504,11 +513,11 @@ var	char	file[FNSIZE];	/* Working file n
+ var	bool	fixedzero;	/* zero file size was fixed (for visual) */
+ var	char	genbuf[MAXBSIZE]; /* Working buffer when manipulating linebuf */
+ var	bool	hush;		/* Command line option - was given, hush up! */
+-var	char	*globp;		/* (Untyped) input string to command mode */
++var	const char *globp;	/* (Untyped) input string to command mode */
+ var	bool	holdcm;		/* Don't cursor address */
+ var	bool	inappend;	/* in ex command append mode */
+ var	bool	inglobal;	/* Inside g//... or v//... */
+-var	char	*initev;	/* Initial : escape for visual */
++var	const char *initev;	/* Initial : escape for visual */
+ var	bool	inopen;		/* Inside open or visual */
+ var	char	*input;		/* Current position in cmd line input buffer */
+ var	bool	intty;		/* Input is a tty */
+@@ -530,7 +539,11 @@ var	shand	oldquit;	/* Previous SIGQUIT h
+ var	shand	oldxfsz;	/* Previous SIGXFSZ handler */
+ #endif
+ var	short	oprompt;	/* Saved during source */
++#ifdef POSIX_1
++extern	speed_t	ospeed;		/* Output speed (from gtty) */
++#else
+ extern	short	ospeed;		/* Output speed (from gtty) */
++#endif
+ var	int	otchng;		/* Backup tchng to find changes in macros */
+ var	short	peekc;		/* Peek ahead character (cmd mode input) */
+ var	char	*pkill[2];	/* Trim for put with ragged (LISP) delete */
+@@ -549,7 +562,6 @@ extern	int	tfile;		/* Temporary file uni
  var	bool	tflag;		/* -t option given on command line */
  var	bool	vcatch;		/* Want to catch an error (open/visual) */
  var	bool	verbose;	/* -V option; print command input to stderr */
@@ -10,3 +78,24 @@ $NetBSD: patch-ad,v 1.1 2006/06/08 16:15:47 minskim Exp $
  var	JMP_BUF	vreslab;	/* For error throws to a visual catch */
  var	bool	writing;	/* 1 if in middle of a file write */
  var	int	xchng;		/* Suppresses multiple "No writes" in !cmd */
+@@ -639,9 +651,9 @@ var	line	*undadot;	/* If we saved all li
+ #define	UNDNONE		3
+ #define	UNDPUT		4
+ 
+-extern	int	(*Outchar)();
+-extern	int	(*Pline)();
+-extern	int	(*Putchar)();
++extern	int	(*Outchar)(int);
++extern	int	(*Pline)(int);
++extern	int	(*Putchar)(int);
+ 
+ #define	NOSTR	(char *) 0
+ #define	NOLINE	(line *) 0
+@@ -663,6 +675,6 @@ var	nl_catd	catd;
+ #else	/* !LANGMSG */
+ #define	catgets(a, b, c, d)	(d)
+ #endif	/* !LANGMSG */
+-var	char	*cntrlhm;
++var	const char	*cntrlhm;
+ 
+ #include "ex_proto.h"
