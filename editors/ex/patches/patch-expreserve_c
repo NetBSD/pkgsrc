@@ -1,0 +1,90 @@
+$NetBSD: patch-expreserve_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare void functions void
+- use static for local functions
+- use a bit of const
+- silence gcc warnings about unused arguments
+- avoid implicit int
+- don't pass a string constant to putenv()
+
+--- expreserve.c.orig	2002-08-27 04:14:56.000000000 +0000
++++ expreserve.c
+@@ -203,10 +203,10 @@ char xstr[1];			/* make loader happy */
+ #endif
+ #endif
+ 
+-int notify __P((uid_t uid, char *fname, int flag, time_t time));
+-int copyout __P((char *name));
+-int mkdigits __P((char *cp));
+-int mknext __P((char *cp));
++static void notify __P((uid_t uid, const char *fname, int flag, time_t time));
++static int copyout __P((char *name));
++static void mkdigits __P((char *cp));
++static void mknext __P((char *cp));
+ 
+ /*
+  * Expreserve - preserve a file in /usr/preserve
+@@ -275,6 +275,7 @@ char **argv;
+ 			exit(1);
+ 		exit(0);
+ 	}
++	(void)argv;
+ 
+ 	/*
+ 	 * If not super user, then can only preserve standard input.
+@@ -328,9 +329,11 @@ char	pattern[] =	"/var/preserve/Exa`XXXX
+ /*
+  * Notify user uid that his file fname has been saved.
+  */
++static void
+ notify(uid, fname, flag, time)
+ 	uid_t uid;
+-	char *fname;
++	const char *fname;
++	int flag;
+ 	time_t	time;
+ {
+ 	struct passwd *pp = getpwuid(uid);
+@@ -345,6 +348,9 @@ notify(uid, fname, flag, time)
+ 	char	croak[128];
+ 	char	*timestamp, *ctime();
+ 
++	/* cannot properly string constants to putenv */
++	static char mailrc_var[] = "MAILRC=/dev/null";
++
+ 	if (pp == NULL)
+ 		return;
+ #ifndef	POSIX_1
+@@ -355,7 +361,7 @@ notify(uid, fname, flag, time)
+ #endif
+ 	timestamp = ctime(&time);
+ 	timestamp[16] = 0;	/* blast from seconds on */
+-	putenv("MAILRC=/dev/null");
++	putenv(mailrc_var);
+ 	sprintf(cmd, "/bin/mail %s", pp->pw_name);
+ 	setuid(getuid());
+ 	mf = popen(cmd, "w");
+@@ -411,6 +417,7 @@ notify(uid, fname, flag, time)
+  * file (this is the slowest thing since we must stat
+  * to find a unique name), and finally copy the file.
+  */
++static int
+ copyout(name)
+ 	char *name;
+ {
+@@ -546,6 +553,7 @@ format:
+ /*
+  * Blast the last 5 characters of cp to be the process number.
+  */
++static void
+ mkdigits(cp)
+ 	char *cp;
+ {
+@@ -566,6 +574,7 @@ mkdigits(cp)
+  * three alphabetic characters into a sequence of the form 'aab', 'aac', etc.
+  * Mktemp gets weird names too quickly to be useful here.
+  */
++static void
+ mknext(cp)
+ 	char *cp;
+ {

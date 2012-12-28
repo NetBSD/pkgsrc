@@ -1,0 +1,155 @@
+$NetBSD: patch-ex__v_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- don't declare local functions in headers
+- silence warnings about assignments in conditionals
+- avoid implicit int
+- silence warnings about unused arguments
+
+--- ex_v.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_v.c
+@@ -127,9 +127,10 @@ static char sccsid[] = "@(#)ex_v.c	1.14 
+ 
+ JMP_BUF venv;
+ 
+-int ovbeg __P((void));
+-int setwind __P((void));
+-int vok __P((cell *));
++static void ovbeg __P((void));
++static void ovend __P((ttymode f));
++static void setwind __P((void));
++static void vok __P((cell *));
+ 
+ /*
+  * Enter open mode
+@@ -137,6 +138,7 @@ int vok __P((cell *));
+ #ifdef u370
+ cell	atube[TUBESIZE+LBSIZE];
+ #endif
++void
+ oop()
+ {
+ 	register char *ic;
+@@ -146,7 +148,7 @@ oop()
+ 	ttymode f;	/* mjm: was register */
+ 	int resize;
+ 
+-	if (resize = SETJMP(venv)) {
++	if ((resize = SETJMP(venv)) != 0) {
+ 		setsize();
+ 		initev = (char *)0;
+ 		inopen = 0;
+@@ -217,7 +219,8 @@ oop()
+ #endif
+ }
+ 
+-ovbeg()
++static void
++ovbeg(void)
+ {
+ 
+ 	if (!value(OPEN))
+@@ -233,8 +236,8 @@ ovbeg()
+ 	dot = addr2;
+ }
+ 
+-ovend(f)
+-	ttymode f;
++static void
++ovend(ttymode f)
+ {
+ 
+ 	splitw++;
+@@ -255,6 +258,7 @@ ovend(f)
+ /*
+  * Enter visual mode
+  */
++void
+ vop()
+ {
+ 	register int c;
+@@ -292,7 +296,7 @@ toopen:
+ 			goto toopen;
+ 		error(catgets(catd, 1, 214, "Visual requires scrolling"));
+ 	}
+-	if (resize = SETJMP(venv)) {
++	if ((resize = SETJMP(venv)) != 0) {
+ 		setsize();
+ 		initev = (char *)0;
+ 		inopen = 0;
+@@ -333,6 +337,7 @@ toopen:
+  * empty buffer since routines internally
+  * demand at least one line.
+  */
++void
+ fixzero()
+ {
+ 
+@@ -361,6 +366,7 @@ fixzero()
+  * at some point, and then quit from the visual and undo
+  * you get the old file back.  Somewhat weird.
+  */
++void
+ savevis()
+ {
+ 
+@@ -376,6 +382,7 @@ savevis()
+  * Restore a sensible state after a visual/open, moving the saved
+  * stuff back to [unddol,dol], and killing the partial line kill indicators.
+  */
++void
+ undvis()
+ {
+ 
+@@ -396,6 +403,7 @@ undvis()
+  * Set the window parameters based on the base state bastate
+  * and the available buffer space.
+  */
++static void
+ setwind()
+ {
+ 
+@@ -436,6 +444,7 @@ setwind()
+  * If so, then divide the screen buffer up into lines,
+  * and initialize a bunch of state variables before we start.
+  */
++static void
+ vok(atube)
+ 	register cell *atube;
+ {
+@@ -478,11 +487,13 @@ vok(atube)
+ 
+ #ifdef CBREAK
+ woid
+-vintr(signum)
++vintr(int signum)
+ {
+ 	extern JMP_BUF readbuf;
+ 	extern int doingread;
+ 
++	(void)signum;
++
+ 	signal(SIGINT, vintr);
+ 	if (vcatch)
+ 		onintr(SIGINT);
+@@ -499,6 +510,7 @@ vintr(signum)
+  * Set the size of the screen to size lines, to take effect the
+  * next time the screen is redrawn.
+  */
++void
+ vsetsiz(size)
+ 	int size;
+ {
+@@ -517,8 +529,10 @@ vsetsiz(size)
+ 
+ #ifdef	SIGWINCH
+ woid
+-onwinch(signum)
++onwinch(int signum)
+ {
++	(void)signum;
++
+ 	vsave();
+ 	setty(normf);
+ 	LONGJMP(venv, 1);

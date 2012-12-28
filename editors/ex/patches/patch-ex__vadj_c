@@ -1,0 +1,259 @@
+$NetBSD: patch-ex__vadj_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- silence warnings about braces
+- silence warnings about && and || precedence
+
+--- ex_vadj.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_vadj.c
+@@ -90,12 +90,12 @@ static char sccsid[] = "@(#)ex_vadj.c	1.
+  * screen cleanup after a change.
+  */
+ 
+-int vdellin __P((int, int, int));
+-int vscroll __P((register int));
+-int vadjAL __P((int, int));
+-int vcloseup __P((int, register int));
+-int vopenup __P((int, int, int));
+-int vadjDL __P((int, int));
++static void vdellin __P((int, int, int));
++static void vscroll __P((register int));
++static void vadjAL __P((int, int));
++static void vcloseup __P((int, register int));
++static void vopenup __P((int, int, int));
++static void vadjDL __P((int, int));
+ 
+ /*
+  * Display a new line at physical line p, returning
+@@ -106,6 +106,7 @@ int vadjDL __P((int, int));
+  * on the screen in which case the line may actually end up
+  * somewhere other than line p.
+  */
++void
+ vopen(tp, p)
+ 	line *tp;
+ 	int p;
+@@ -118,11 +119,12 @@ vopen(tp, p)
+ 		tfixnl(), fprintf(trace, "vopen(%d, %d)\n", lineno(tp), p);
+ #endif
+ 	if (state != VISUAL) {
+-		if (vcnt)
++		if (vcnt) {
+ 			if (hold & HOLDROL)
+ 				vup1();
+ 			else
+ 				vclean();
++		}
+ 
+ 		/*
+ 		 * Forget all that we once knew.
+@@ -169,6 +171,7 @@ vopen(tp, p)
+ /*
+  * Redisplay logical line l at physical line p with line number lineno.
+  */
++int
+ vreopen(p, lineno, l)
+ 	int p, lineno, l;
+ {
+@@ -256,6 +259,7 @@ vreopen(p, lineno, l)
+  * delete some (blank) lines from the top of the screen so that
+  * later inserts will not push stuff off the bottom.
+  */
++int
+ vglitchup(l, o)
+ 	int l, o;
+ {
+@@ -297,6 +301,7 @@ vglitchup(l, o)
+  * Insert cnt blank lines before line p,
+  * logically and (if supported) physically.
+  */
++void
+ vinslin(p, cnt, l)
+ 	register int p, cnt;
+ 	int l;
+@@ -378,9 +383,11 @@ vinslin(p, cnt, l)
+  * it ourselves (brute force) we will squish out @ lines in the process
+  * if this will save us work.
+  */
++static void
+ vopenup(cnt, could, l)
+ 	int cnt;
+ 	bool could;
++	int l;
+ {
+ 	register struct vlinfo *vc = &vlinfo[l + 1];
+ 	register struct vlinfo *ve = &vlinfo[vcnt];
+@@ -423,6 +430,7 @@ vopenup(cnt, could, l)
+  * Adjust data structure internally to account for insertion of
+  * blank lines on the screen.
+  */
++static void
+ vadjAL(p, cnt)
+ 	int p, cnt;
+ {
+@@ -451,6 +459,7 @@ vadjAL(p, cnt)
+  * Roll the screen up logically and physically
+  * so that line dl is the bottom line on the screen.
+  */
++void
+ vrollup(dl)
+ 	int dl;
+ {
+@@ -469,6 +478,7 @@ vrollup(dl)
+ 	destline = dl - cnt, destcol = dc;
+ }
+ 
++void
+ vup1()
+ {
+ 
+@@ -480,6 +490,7 @@ vup1()
+  * If doclr is true, do a clear eol if the terminal
+  * has standout (to prevent it from scrolling up)
+  */
++void
+ vmoveitup(cnt, doclr)
+ 	register int cnt;
+ 	bool doclr;
+@@ -513,6 +524,7 @@ vmoveitup(cnt, doclr)
+ /*
+  * Scroll the screen up cnt lines logically.
+  */
++static void
+ vscroll(cnt)
+ 	register int cnt;
+ {
+@@ -541,6 +553,7 @@ vscroll(cnt)
+ /*
+  * Discard logical lines due to physical wandering off the screen.
+  */
++void
+ vscrap()
+ {
+ 	register int i, j;
+@@ -591,6 +604,7 @@ vscrap()
+  * Repaint the screen, with cursor at curs, aftern an arbitrary change.
+  * Handle notification on large changes.
+  */
++void
+ vrepaint(curs)
+ 	char *curs;
+ {
+@@ -605,15 +619,16 @@ vrepaint(curs)
+ 	/*
+ 	 * Deal with a totally useless display.
+ 	 */
+-	if (vcnt == 0 || vcline < 0 || vcline > vcnt || holdupd && state != VISUAL) {
++	if (vcnt == 0 || vcline < 0 || vcline > vcnt || (holdupd && state != VISUAL)) {
+ 		register line *odol = dol;
+ 
+ 		vcnt = 0;
+-		if (holdupd)
++		if (holdupd) {
+ 			if (state == VISUAL)
+ 				ignore(peekkey());
+ 			else
+ 				vup1();
++		}
+ 		holdupd = 0;
+ 		if (odol == zero)
+ 			fixzero();
+@@ -682,6 +697,7 @@ vrepaint(curs)
+  * line after last won't completely fit.  The routine vsync is
+  * more conservative and much less work on dumb terminals.
+  */
++void
+ vredraw(p)
+ 	register int p;
+ {
+@@ -803,6 +819,7 @@ vredraw(p)
+  * Do the real work in deleting cnt lines starting at line p from
+  * the display.  First affected line is line l.
+  */
++static void
+ vdellin(p, cnt, l)
+ 	int p, cnt, l;
+ {
+@@ -849,6 +866,7 @@ vdellin(p, cnt, l)
+ /*
+  * Adjust internal physical screen image to account for deleted lines.
+  */
++static void
+ vadjDL(p, cnt)
+ 	int p, cnt;
+ {
+@@ -878,12 +896,14 @@ vadjDL(p, cnt)
+  * In any case, if the redraw option is set then all syncs map to redraws
+  * as if vsync didn't exist.
+  */
++void
+ vsyncCL()
+ {
+ 
+ 	vsync(LINE(vcline));
+ }
+ 
++void
+ vsync(p)
+ 	register int p;
+ {
+@@ -898,6 +918,7 @@ vsync(p)
+  * The guts of a sync.  Similar to redraw but
+  * just less ambitous.
+  */
++void
+ vsync1(p)
+ 	register int p;
+ {
+@@ -933,7 +954,7 @@ vsync1(p)
+ 		 * the current line, or if this line is piled under the
+ 		 * next line (vreplace does this and we undo it).
+ 		 */
+-		if (l == 0 && state != VISUAL ||
++		if ((l == 0 && state != VISUAL) ||
+ 		    (l < vcnt && (vp->vliny <= p || vp[0].vliny == vp[1].vliny))) {
+ 			if (l == 0 || vp->vliny < p || (vp->vflags & VDIRT)) {
+ 				if (l == vcline)
+@@ -972,6 +993,7 @@ vsync1(p)
+  * Subtract (logically) cnt physical lines from the 
+  * displayed position of lines starting with line l.
+  */
++static void
+ vcloseup(l, cnt)
+ 	int l;
+ 	register int cnt;
+@@ -996,6 +1018,7 @@ vcloseup(l, cnt)
+  *
+  * Many boundary conditions here.
+  */
++void
+ vreplace(l, cnt, newcnt)
+ 	int l, cnt, newcnt;
+ {
+@@ -1054,7 +1077,7 @@ vreplace(l, cnt, newcnt)
+ 	 * over them, since otherwise we will push them
+ 	 * slowly off the screen, a clear lose.
+ 	 */
+-	if (cnt == newcnt || vcnt - l == newcnt && AL && DL) {
++	if (cnt == newcnt || (vcnt - l == newcnt && AL && DL)) {
+ 		if (cnt > 1 && l + cnt > vcnt)
+ 			savenote++;
+ 		vdirty(l, newcnt);
+@@ -1135,6 +1158,7 @@ skip:
+  * If we are in a scroll ^D within hardcopy open then all this
+  * is suppressed.
+  */
++void
+ sethard()
+ {
+ 
+@@ -1155,6 +1179,7 @@ sethard()
+  * as dirty so that they will be checked for correct
+  * display at next sync/redraw.
+  */
++void
+ vdirty(base, i)
+ 	register int base, i;
+ {

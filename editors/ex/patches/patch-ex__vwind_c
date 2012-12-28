@@ -1,0 +1,173 @@
+$NetBSD: patch-ex__vwind_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- hide unused function in the proper matching ifdef
+
+--- ex_vwind.c~	2012-12-27 21:58:41.000000000 +0000
++++ ex_vwind.c
+@@ -89,10 +89,14 @@ static char sccsid[] = "@(#)ex_vwind.c	1
+  * directions.  Code here is very dependent on mode (open versus visual).
+  */
+ 
+-int vfit __P((register line *, int));
+-int vrollR __P((register int));
+-line *vback __P((register line *, register int));
+-int vreset __P((int));
++static int vfit __P((register line *, int));
++static void vrollR __P((register int));
++static line *vback __P((register line *, register int));
++static void vreset __P((int));
++
++#ifndef CBREAK
++static int vcookit(register int cnt);
++#endif
+ 
+ /*
+  * Move in a nonlocal way to line addr.
+@@ -100,9 +104,11 @@ int vreset __P((int));
+  * New position for cursor is curs.
+  * Like most routines here, we vsave().
+  */
++void
+ vmoveto(addr, curs, context)
+ 	register line *addr;
+ 	char *curs;
++	int context;
+ {
+ 
+ 	markit(addr);
+@@ -114,9 +120,11 @@ vmoveto(addr, curs, context)
+  * Vjumpto is like vmoveto, but doesn't mark previous
+  * context or save linebuf as current line.
+  */
++void
+ vjumpto(addr, curs, context)
+ 	register line *addr;
+ 	char *curs;
++	int context;
+ {
+ 
+ 	noteit(0);
+@@ -131,6 +139,7 @@ vjumpto(addr, curs, context)
+ /*
+  * Go up or down cnt (negative is up) to new position curs.
+  */
++void
+ vupdown(cnt, curs)
+ 	register int cnt;
+ 	char *curs;
+@@ -152,6 +161,7 @@ vupdown(cnt, curs)
+  * If scroll, then we MUST use a scroll.
+  * Otherwise clear and redraw if motion is far.
+  */
++void
+ vup(cnt, ind, scroll)
+ 	register int cnt, ind;
+ 	bool scroll;
+@@ -201,6 +211,7 @@ okr:
+ /*
+  * Like vup, but scrolling down.
+  */
++void
+ vdown(cnt, ind, scroll)
+ 	register int cnt, ind;
+ 	bool scroll;
+@@ -250,8 +261,10 @@ dcontxt:
+  * Work here is in determining new top line implied by
+  * this placement of line addr, since we always draw from the top.
+  */
++void
+ vcontext(addr, where)
+ 	register line *addr;
++	int where;
+ {
+ 	register line *top;
+ 
+@@ -293,6 +306,7 @@ vcontext(addr, where)
+  * we may be able to reuse the line we are on
+  * if it is blank.  This is a real win.
+  */
++void
+ vclean()
+ {
+ 
+@@ -310,6 +324,7 @@ vclean()
+  * (and call us recursively).  Eventually, we clear the screen
+  * (or its open mode equivalent) and redraw.
+  */
++void
+ vshow(addr, top)
+ 	line *addr, *top;
+ {
+@@ -363,6 +378,7 @@ vshow(addr, top)
+  * area;  we are called this way in the middle of a :e escape
+  * from visual, e.g.
+  */
++static void
+ vreset(inecho)
+ 	bool inecho;
+ {
+@@ -378,7 +394,7 @@ vreset(inecho)
+  * Starting from which line preceding tp uses almost (but not more
+  * than) cnt physical lines?
+  */
+-line *
++static line *
+ vback(tp, cnt)
+ 	register int cnt;
+ 	register line *tp;
+@@ -399,6 +415,7 @@ vback(tp, cnt)
+ /*
+  * How much scrolling will it take to roll cnt lines starting at tp?
+  */
++static int
+ vfit(tp, cnt)
+ 	register line *tp;
+ 	int cnt;
+@@ -419,6 +436,7 @@ vfit(tp, cnt)
+ /*
+  * Roll cnt lines onto the screen.
+  */
++void
+ vroll(cnt)
+ 	register int cnt;
+ {
+@@ -460,6 +478,7 @@ vroll(cnt)
+ /*
+  * Roll backwards (scroll up).
+  */
++static void
+ vrollR(cnt)
+ 	register int cnt;
+ {
+@@ -504,16 +523,20 @@ vrollR(cnt)
+  * BUG:		An interrupt during a scroll in this way
+  *		dumps to command mode.
+  */
++#ifndef CBREAK
++static int
+ vcookit(cnt)
+ 	register int cnt;
+ {
+ 
+ 	return (cnt > 1 && (ospeed < B1200 && !initev || cnt > TLINES * 2));
+ }
++#endif
+ 
+ /*
+  * Determine displayed depth of current line.
+  */
++int
+ vdepth()
+ {
+ 	register int d;
+@@ -529,6 +552,7 @@ vdepth()
+ /*
+  * Move onto a new line, with cursor at position curs.
+  */
++void
+ vnline(curs)
+ 	char *curs;
+ {

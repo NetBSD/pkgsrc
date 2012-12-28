@@ -1,0 +1,77 @@
+$NetBSD: patch-libterm_termcap_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- avoid implicit int
+- use const for string constants
+
+--- libterm/termcap.c.orig	2004-01-03 14:17:30.000000000 +0000
++++ libterm/termcap.c
+@@ -93,6 +93,7 @@ int	tgetent();
+  * against each such name.  The normal : terminator after the last
+  * name (before the first field) stops us.
+  */
++static int
+ tnamatch(np)
+ 	char *np;
+ {
+@@ -121,6 +122,7 @@ tnamatch(np)
+  * entries to say "like an HP2621 but doesn't turn on the labels".
+  * Note that this works because of the left to right scan.
+  */
++static int
+ tnchktc()
+ {
+ 	register char *p, *q;
+@@ -179,8 +181,10 @@ tnchktc()
+  * from the termcap file.  Parse is very rudimentary;
+  * we just notice escaped newlines.
+  */
++int
+ tgetent(bp, name)
+-	char *bp, *name;
++	char *bp;
++	const char *name;
+ {
+ 	register char *cp;
+ 	register int c;
+@@ -281,8 +285,9 @@ tskip(bp)
+  * a # character.  If the option is not found we return -1.
+  * Note that we handle octal numbers beginning with 0.
+  */
++int
+ tgetnum(id)
+-	char *id;
++	const char *id;
+ {
+ 	register int i, base;
+ 	register char *bp = tbuf;
+@@ -314,8 +319,9 @@ tgetnum(id)
+  * of the buffer.  Return 1 if we find the option, or 0 if it is
+  * not given.
+  */
++int
+ tgetflag(id)
+-	char *id;
++	const char *id;
+ {
+ 	register char *bp = tbuf;
+ 
+@@ -342,7 +348,8 @@ tgetflag(id)
+  */
+ char *
+ tgetstr(id, area)
+-	char *id, **area;
++	const char *id;
++	char **area;
+ {
+ 	register char *bp = tbuf;
+ 
+@@ -372,7 +379,7 @@ tdecode(str, area)
+ {
+ 	register char *cp;
+ 	register int c;
+-	register char *dp;
++	register const char *dp;
+ 	int i;
+ 
+ 	cp = *area;

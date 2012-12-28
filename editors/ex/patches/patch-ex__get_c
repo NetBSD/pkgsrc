@@ -1,0 +1,121 @@
+$NetBSD: patch-ex__get_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare void functions void
+- avoid implicit int
+- silence warnings about assignments in conditionals
+- silence warnings about braces
+- don't put external declarations inside functions
+
+--- ex_get.c.orig	2012-12-27 21:58:42.000000000 +0000
++++ ex_get.c
+@@ -90,12 +90,14 @@ static char sccsid[] = "@(#)ex_get.c	1.1
+ static	bool junkbs;
+ short	lastc = '\n';
+ 
++void
+ ignchar()
+ {
+ 	ignore(getchar());
+ }
+ 
+-getach()
++static int
++getach(void)
+ {
+ 	register int c;
+ 	static char in_line[BUFSIZ];
+@@ -114,7 +116,7 @@ getach()
+ 	}
+ top:
+ 	if (input) {
+-		if (c = *input++&0377) {
++		if ((c = *input++&0377) != 0) {
+ 			if (verbose && !intty)
+ 				write(2, &input[-1], 1);
+ #ifndef	BIT8
+@@ -156,6 +158,7 @@ top:
+ 	goto top;
+ }
+ 
++int
+ getchar()
+ {
+ 	register int c;
+@@ -166,7 +169,8 @@ getchar()
+ 	return (c);
+ }
+ 
+-checkjunk(c)
++static void
++checkjunk(int c)
+ {
+ 
+ 	if (junkbs == 0 && c == '\b') {
+@@ -175,6 +179,7 @@ checkjunk(c)
+ 	}
+ }
+ 
++int
+ getcd()
+ {
+ 	register int c;
+@@ -188,16 +193,18 @@ again:
+ #else
+ 	c &= TRIM;
+ #endif
+-	if (!inopen)
++	if (!inopen) {
+ 		if (!globp && c == CTRL('d'))
+ 			setlastchar('\n');
+ 		else if (junk(c)) {
+ 			checkjunk(c);
+ 			goto again;
+ 		}
++	}
+ 	return (c);
+ }
+ 
++int
+ peekchar()
+ {
+ 
+@@ -206,6 +213,7 @@ peekchar()
+ 	return (peekc);
+ }
+ 
++int
+ peekcd()
+ {
+ 	if (peekc == 0)
+@@ -220,6 +228,7 @@ peekcd()
+  * This should really be done differently so as to use the whitecnt routine
+  * and also to hack indenting for LISP.
+  */
++static int
+ smunch(col, ocp)
+ 	register int col;
+ 	char *ocp;
+@@ -251,13 +260,12 @@ smunch(col, ocp)
+  */
+ static	short	lastin;
+ 
++int
+ gettty()
+ {
+ 	register int c = 0;
+ 	register char *cp = genbuf;
+ 	char hadup = 0;
+-	int numbline();
+-	extern int (*Pline)();
+ 	int offset = Pline == numbline ? 8 : 0;
+ 	int ch;
+ 
+@@ -354,7 +362,7 @@ gettty()
+ 	return (0);
+ }
+ 
+-line *
++void
+ setin(addr)
+ 	line *addr;
+ {

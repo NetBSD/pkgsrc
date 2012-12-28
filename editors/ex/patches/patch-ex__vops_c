@@ -1,0 +1,240 @@
+$NetBSD: patch-ex__vops_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- silence warnings about braces
+- fix up function pointer casting mess
+- avoid implicit int
+- silence warnings about && and || precedence
+- use const for string constants
+- silence warnings about unused arguments
+- silence signed/unsigned compiler warning
+
+--- ex_vops.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_vops.c
+@@ -89,8 +89,9 @@ static char sccsid[] = "@(#)ex_vops.c	1.
+  * display representations.
+  */
+ 
+-int xdw __P((void));
+-int setpk __P((void));
++static int xdw __P((void));
++static void vshift(int ignore);
++static void setpk __P((void));
+ 
+ /*
+  * Undo.
+@@ -111,6 +112,7 @@ int setpk __P((void));
+ char	*vUA1, *vUA2;
+ char	*vUD1, *vUD2;
+ 
++void
+ vUndo()
+ {
+ 
+@@ -137,6 +139,7 @@ vUndo()
+ 	vfixcurs();
+ }
+ 
++void
+ vundo(show)
+ bool show;	/* if true update the screen */
+ {
+@@ -173,12 +176,13 @@ bool show;	/* if true update the screen 
+ 		 * with dol through unddol-1.  Hack screen image to
+ 		 * reflect this replacement.
+ 		 */
+-		if (show)
++		if (show) {
+ 			if (undkind == UNDMOVE)
+ 				vdirty(0, TLINES);
+ 			else
+ 				vreplace(undap1 - addr, undap2 - undap1,
+ 				    undkind == UNDPUT ? 0 : unddol - dol);
++		}
+ 		savenote = notecnt;
+ 		undo(1);
+ 		if (show && (vundkind != VMCHNG || addr != dot))
+@@ -250,6 +254,7 @@ bool show;	/* if true update the screen 
+  * opposed to an ex command).  This has nothing to do with being
+  * in open/visual mode as :s/foo/bar is not fromvis.
+  */
++void
+ vmacchng(fromvis)
+ bool fromvis;
+ {
+@@ -259,7 +264,6 @@ bool fromvis;
+ 	int nlines, more;
+ 	/* register line *a1, *a2; */
+ 	/* char ch; */	/* DEBUG */
+-	int copyw(), copywR();
+ 
+ 	if (!inopen)
+ 		return;
+@@ -338,6 +342,7 @@ bool fromvis;
+ /*
+  * Initialize undo information before an append.
+  */
++void
+ vnoapp()
+ {
+ 
+@@ -357,6 +362,7 @@ vnoapp()
+ /*
+  * Move is simple, except for moving onto new lines in hardcopy open mode.
+  */
++void
+ vmove()
+ {
+ 	register int cnt;
+@@ -423,6 +429,17 @@ vmove()
+ }
+ 
+ /*
++ * This is the same as vmove, but throws away its argument, so
++ * it can be used in combination with other function pointers.
++ */
++void
++vmove_i(int ignore)
++{
++	(void)ignore;
++	vmove();
++}
++
++/*
+  * Delete operator.
+  *
+  * Hard case of deleting a range where both wcursor and wdot
+@@ -430,7 +447,8 @@ vmove()
+  * by vchange (although vchange may pass it back if it degenerates
+  * to a full line range delete.)
+  */
+-vdelete(c)
++void
++vdelete(int c)
+ {
+ 	register char *cp;
+ 	register int i;
+@@ -489,7 +507,8 @@ vdelete(c)
+  * Across lines with both wcursor and wdot given, we delete
+  * and sync then append (but one operation for undo).
+  */
+-vchange(c)
++void
++vchange(int c)
+ {
+ 	register char *cp;
+ 	register int i, ind, cnt;
+@@ -705,6 +724,7 @@ smallchange:
+  * Actually counts are obsoleted, since if your terminal is slow
+  * you are better off with slowopen.
+  */
++void
+ voOpen(c, cnt)
+ 	int c;	/* mjm: char --> int */
+ 	register int cnt;
+@@ -719,7 +739,7 @@ voOpen(c, cnt)
+ #endif
+ #endif
+ 
+-	if (value(SLOWOPEN) || value(REDRAW) && AL && DL)
++	if (value(SLOWOPEN) || (value(REDRAW) && AL && DL))
+ 		cnt = 1;
+ #ifdef	SIGWINCH
+ #ifndef	POSIX_1
+@@ -794,6 +814,7 @@ voOpen(c, cnt)
+  */
+ char	vshnam[2] = { 'x', 0 };
+ 
++void
+ vshftop()
+ {
+ 	register line *addr;
+@@ -817,11 +838,12 @@ vshftop()
+  *
+  * Filter portions of the buffer through unix commands.
+  */
++void
+ vfilter()
+ {
+ 	register line *addr;
+ 	register int cnt;
+-	char *oglobp;
++	const char *oglobp;
+ 	short d;
+ #ifdef	BIT8
+ 	cell cuxb[UXBSIZE + 2];
+@@ -885,6 +907,7 @@ vfilter()
+  * that wdot is reasonable.  Its name comes from
+  *	xchange dotand wdot
+  */
++static int
+ xdw()
+ {
+ 	register char *cp;
+@@ -956,9 +979,10 @@ xdw()
+ /*
+  * Routine for vremote to call to implement shifts.
+  */
+-vshift()
++static void
++vshift(int ignore)
+ {
+-
++	(void)ignore;
+ 	shift(op, 1);
+ }
+ 
+@@ -966,12 +990,13 @@ vshift()
+  * Replace a single character with the next input character.
+  * A funny kind of insert.
+  */
++void
+ vrep(cnt)
+ 	register int cnt;
+ {
+ 	register int i, c;
+ 
+-	if (cnt > strlen(cursor)) {
++	if (cnt > (int)strlen(cursor)) {
+ 		beep();
+ 		return;
+ 	}
+@@ -1000,12 +1025,20 @@ vrep(cnt)
+ 	setLAST();
+ }
+ 
++static void
++doyank(int ignore)
++{
++	(void)ignore;
++	yank();
++}
++
+ /*
+  * Yank.
+  *
+  * Yanking to string registers occurs for free (essentially)
+  * in the routine xdw().
+  */
++void
+ vyankit()
+ {
+ 	register int cnt;
+@@ -1013,7 +1046,7 @@ vyankit()
+ 	if (wdot) {
+ 		if ((cnt = xdw()) < 0)
+ 			return;
+-		vremote(cnt, yank, 0);
++		vremote(cnt, doyank, 0);
+ 		setpk();
+ 		notenam = "yank";
+ 		if (FIXUNDO)
+@@ -1036,6 +1069,7 @@ vyankit()
+  * the first and last lines.  The compromise
+  * is for put to be more clever.
+  */
++static void
+ setpk()
+ {
+ 

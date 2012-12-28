@@ -1,0 +1,39 @@
+$NetBSD: patch-ex__tty_h,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- use const for string constants
+- declare void functions void
+- don't declare local functions in header files
+
+--- ex_tty.h.orig	2002-02-06 00:43:55.000000000 +0000
++++ ex_tty.h
+@@ -259,9 +259,9 @@ var	short	costRP;	/* likewise for RIGHT_
+ # define MAXCHARMACS	1536	/* max # of chars total in macros */
+ #endif
+ struct maps {
+-	char *cap;	/* pressing button that sends this.. */
+-	char *mapto;	/* .. maps to this string */
+-	char *descr;	/* legible description of key */
++	const char *cap;	/* pressing button that sends this.. */
++	const char *mapto;	/* .. maps to this string */
++	const char *descr;	/* legible description of key */
+ 	bool hadthis;	/* did this mapping already (avoid recursion) */
+ };
+ var	struct maps arrows[MAXNOMACS];	/* macro defs - 1st 5 built in */
+@@ -275,12 +275,11 @@ var	bool	anyabbrs;	/* true if abbr or un
+ var	char	ttynbuf[20];	/* result of ttyname() */
+ var	int	ttymesg;	/* original mode of users tty */
+ 
+-int addmac __P((register char *, register char *, register char *, register struct maps *));
++void addmac __P((register char *, register const char *, register const char *, register struct maps *));
+ ttymode ostart __P((void));
+-int normal __P((ttymode));
+-int ostop __P((ttymode));
++void normal __P((ttymode));
++void ostop __P((ttymode));
+ ttymode setty __P((ttymode));
+-ttymode unixex __P((char *, char *, int, int));
+-int unixwt __P((int, ttymode));
+-int ovend __P((ttymode));
++ttymode unixex __P((const char *, char *, int, int));
++void unixwt __P((int, ttymode));
+ int map __P((register int, register struct maps *));

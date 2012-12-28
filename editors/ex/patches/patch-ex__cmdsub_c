@@ -1,0 +1,296 @@
+$NetBSD: patch-ex__cmdsub_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare local functions static
+- avoid implicit int
+- declare void functions void
+- silence warnings about assignments in conditionals
+- use const for string constants
+
+--- ex_cmdsub.c.orig	2012-12-27 21:58:41.000000000 +0000
++++ ex_cmdsub.c
+@@ -93,15 +93,18 @@ static char sccsid[] = "@(#)ex_cmdsub.c	
+ 
+ bool	endline = 1;
+ line	*tad1;
+-static	jnoop();
++
++static	int jnoop(void);
++static int getcopy(void);
+ 
+ /*
+  * Append after line a lines returned by function f.
+  * Be careful about intermediate states to avoid scramble
+  * if an interrupt comes in.
+  */
++int
+ append(f, a)
+-	int (*f)();
++	int (*f)(void);
+ 	line *a;
+ {
+ 	register line *a1, *a2, *rdot;
+@@ -144,6 +147,7 @@ append(f, a)
+ 	return (nline);
+ }
+ 
++void
+ appendnone()
+ {
+ 
+@@ -156,6 +160,7 @@ appendnone()
+ /*
+  * Print out the argument list, with []'s around the current name.
+  */
++void
+ pargs()
+ {
+ 	register char **av = argv0, *as = args0;
+@@ -182,6 +187,7 @@ pargs()
+  * Delete lines; two cases are if we are really deleting,
+  * more commonly we are just moving lines to the undo save area.
+  */
++void
+ delete(hush)
+ 	bool hush;
+ {
+@@ -242,6 +248,7 @@ delete(hush)
+ 		killed();
+ }
+ 
++void
+ deletenone()
+ {
+ 
+@@ -256,6 +263,7 @@ deletenone()
+  * Crush out the undo save area, moving the open/visual
+  * save area down in its place.
+  */
++void
+ squish()
+ {
+ 	register line *a1 = dol + 1, *a2 = unddol + 1, *a3 = truedol + 1;
+@@ -276,8 +284,9 @@ squish()
+  * Join lines.  Special hacks put in spaces, two spaces if
+  * preceding line ends with '.', or no spaces if next line starts with ).
+  */
+-static	int jcount, jnoop();
++static	int jcount;
+ 
++void
+ join(c)
+ 	int c;
+ {
+@@ -300,7 +309,7 @@ join(c)
+ 				}
+ 			}
+ 		}
+-		while (*cp++ = *cp1++)
++		while ((*cp++ = *cp1++) != 0)
+ 			if (cp > &genbuf[LBSIZE-2])
+ 				error(catgets(catd, 1, 40,
+ 		"Line overflow|Result line of join would be too long"));
+@@ -316,8 +325,8 @@ join(c)
+ 		vundkind = VMANY;
+ }
+ 
+-static
+-jnoop()
++static int
++jnoop(void)
+ {
+ 
+ 	return(--jcount);
+@@ -327,11 +336,9 @@ jnoop()
+  * Move and copy lines.  Hard work is done by move1 which
+  * is also called by undo.
+  */
+-int	getcopy();
+ 
+-move1(cflag, addrt)
+-	int cflag;
+-	line *addrt;
++static void
++move1(int cflag, line *addrt)
+ {
+ 	register line *adt, *ad1, *ad2;
+ 	int lines;
+@@ -384,6 +391,7 @@ move1(cflag, addrt)
+ 		}
+ }
+ 
++void
+ move()
+ {
+ 	register line *adt;
+@@ -406,7 +414,8 @@ move()
+ 	killed();
+ }
+ 
+-getcopy()
++static int
++getcopy(void)
+ {
+ 
+ 	if (tad1 > addr2)
+@@ -418,7 +427,8 @@ getcopy()
+ /*
+  * Put lines in the buffer from the undo save area.
+  */
+-getput()
++static int
++getput(void)
+ {
+ 
+ 	if (tad1 > unddol)
+@@ -428,6 +438,7 @@ getput()
+ 	return (0);
+ }
+ 
++void
+ put()
+ {
+ 	register int cnt;
+@@ -452,6 +463,7 @@ put()
+  * Argument says pkills have meaning, e.g. called from
+  * put; it is 0 on calls from putreg.
+  */
++void
+ pragged(kill)
+ 	bool kill;
+ {
+@@ -489,6 +501,7 @@ pragged(kill)
+  * Shift lines, based on c.
+  * If c is neither < nor >, then this is a lisp aligning =.
+  */
++void
+ shift(c, cnt)
+ 	int c;
+ 	int cnt;
+@@ -546,6 +559,7 @@ shift(c, cnt)
+  * Find a tag in the tags file.
+  * Most work here is in parsing the tags file itself.
+  */
++void
+ tagfind(quick)
+ 	bool quick;
+ {
+@@ -634,7 +648,7 @@ badtag:
+ 			/* loop for each tags file entry */
+ 			register char *cp = linebuf;
+ 			register char *lp = lasttag;
+-			char *oglobp;
++			const char *oglobp;
+ 
+ #ifdef FASTTAG
+ 			mid = (top + bot) / 2;
+@@ -777,6 +791,7 @@ badtags:
+  * Save lines from addr1 thru addr2 as though
+  * they had been deleted.
+  */
++void
+ yank()
+ {
+ 
+@@ -801,6 +816,7 @@ bool	zhadpr;
+ bool	znoclear;
+ short	zweight;
+ 
++void
+ zop(hadpr)
+ 	int hadpr;
+ {
+@@ -862,8 +878,8 @@ zop(hadpr)
+ 	zop2(lines, op);
+ }
+ 
+-static
+-splitit()
++static void
++splitit(void)
+ {
+ 	register int l;
+ 
+@@ -872,6 +888,7 @@ splitit()
+ 	putnl();
+ }
+ 
++void
+ zop2(lines, op)
+ 	register int lines;
+ 	register int op;
+@@ -956,6 +973,7 @@ zop2(lines, op)
+ 	plines(addr1, addr2, 0);
+ }
+ 
++void
+ plines(adr1, adr2, movedot)
+ 	line *adr1;
+ 	register line *adr2;
+@@ -981,6 +999,7 @@ plines(adr1, adr2, movedot)
+ 	}
+ }
+ 
++void
+ pofix()
+ {
+ 
+@@ -994,6 +1013,7 @@ pofix()
+  * Be (almost completely) sure there really
+  * was a change, before claiming to undo.
+  */
++static void
+ somechange()
+ {
+ 	register line *ip, *jp;
+@@ -1045,6 +1065,7 @@ somechange()
+  *
+  * Undo is its own inverse.
+  */
++void
+ undo(c)
+ 	bool c;
+ {
+@@ -1191,6 +1212,7 @@ undo(c)
+  * Map command:
+  * map src dest
+  */
++void
+ mapcmd(un, ab)
+ 	int un;	/* true if this is unmap command */
+ 	int ab;	/* true if this is abbr command */
+@@ -1287,8 +1309,10 @@ mapcmd(un, ab)
+  * using NOSTR for dest.  Dname is what to show in listings.  mp is
+  * the structure to affect (arrows, etc).
+  */
++void
+ addmac(src,dest,dname,mp)
+-	register char *src, *dest, *dname;
++	register char *src;
++	register const char *dest, *dname;
+ 	register struct maps *mp;
+ {
+ 	register int slot, zer;
+@@ -1314,7 +1338,7 @@ addmac(src,dest,dname,mp)
+ 		 * linefeed, and escape, he can screw himself. This is
+ 		 * so weird I don't bother to check for it.
+ 		 */
+-		if (isalpha(cuc(src[0])) && src[1] || any(src[0],":"))
++		if ((isalpha(cuc(src[0])) && src[1]) || any(src[0],":"))
+ 			error(catgets(catd, 1, 64,
+ 						"Too dangerous to map that"));
+ 	}
+@@ -1385,12 +1409,13 @@ addmac(src,dest,dname,mp)
+  * Implements macros from command mode. c is the buffer to
+  * get the macro from.
+  */
++void
+ cmdmac(c)
+ char c;
+ {
+ 	char macbuf[BUFSIZ];
+ 	line *ad, *a1, *a2;
+-	char *oglobp;
++	const char *oglobp;
+ 	short pk;
+ 	bool oinglobal;
+ 

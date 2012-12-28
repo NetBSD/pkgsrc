@@ -1,0 +1,686 @@
+$NetBSD: patch-ex__subr_c,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- use standard headers
+- avoid sloppy code that subtracts 1 from the base address of a char[]
+  (which isn't valid) (although this could be tidied further)
+- avoid implicit int
+- silence warnings about && and || precedence
+- declare void functions void
+- use const for string constants
+- use <ctype.h> functions properly
+- fix up function pointer casting mess
+- silence warnings about unused arguments
+- teach it about dead functions
+
+--- ex_subr.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_subr.c
+@@ -79,27 +79,33 @@ static char sccsid[] = "@(#)ex_subr.c	1.
+ 
+ /* from ex_subr.c	7.10.1 (2.11BSD) 1996/3/22 */
+ 
++#include <sys/ioctl.h>
++
+ #include "ex.h"
+ #include "ex_re.h"
+ #include "ex_tty.h"
+ #include "ex_vis.h"
+ 
++static int qcolumn __P((char *, char *));
++
+ /*
+  * Random routines, in alphabetical order.
+  */
+ 
++int
+ any(c, s)
+ 	int c;
+-	register char *s;
++	register const char *s;
+ {
+ 	register int x;
+ 
+-	while (x = *s++)
++	while ((x = *s++) != 0)
+ 		if (x == c)
+ 			return (1);
+ 	return (0);
+ }
+ 
++int
+ backtab(i)
+ 	register int i;
+ {
+@@ -114,6 +120,7 @@ backtab(i)
+ 	return (i);
+ }
+ 
++void
+ change()
+ {
+ 
+@@ -128,6 +135,7 @@ change()
+  * characters through position cp of the
+  * current line.
+  */
++int
+ column(cp)
+ 	register char *cp;
+ {
+@@ -141,6 +149,7 @@ column(cp)
+  * Ignore a comment to the end of the line.
+  * This routine eats the trailing newline so don't call newline().
+  */
++void
+ comment()
+ {
+ 	register int c;
+@@ -152,6 +161,7 @@ comment()
+ 		ungetchar(c);
+ }
+ 
++void
+ Copy(to, from, size)
+ 	register char *from, *to;
+ 	register int size;
+@@ -163,6 +173,7 @@ Copy(to, from, size)
+ 		while (--size > 0);
+ }
+ 
++void
+ copyw(to, from, size)
+ 	register line *from, *to;
+ 	register int size;
+@@ -174,6 +185,7 @@ copyw(to, from, size)
+ 		while (--size > 0);
+ }
+ 
++void
+ copywR(to, from, size)
+ 	register line *from, *to;
+ 	register int size;
+@@ -183,6 +195,7 @@ copywR(to, from, size)
+ 		to[size] = from[size];
+ }
+ 
++int
+ ctlof(c)
+ 	int c;
+ {
+@@ -190,6 +203,7 @@ ctlof(c)
+ 	return (c == DELETE ? '?' : c | ('A' - 1));
+ }
+ 
++void
+ dingdong()
+ {
+ 
+@@ -199,6 +213,7 @@ dingdong()
+ 		putch('\207');
+ }
+ 
++int
+ fixindent(indent)
+ 	int indent;
+ {
+@@ -215,8 +230,9 @@ fixindent(indent)
+ 	return (i);
+ }
+ 
++void
+ filioerr(cp)
+-	char *cp;
++	const char *cp;
+ {
+ 	register int oerrno = errno;
+ 
+@@ -238,6 +254,7 @@ genindent(indent)
+ 	return (cp);
+ }
+ 
++void
+ getDOT()
+ {
+ 
+@@ -257,6 +274,7 @@ getmark(c)
+ 	return (0);
+ }
+ 
++int
+ getn(cp)
+ 	register char *cp;
+ {
+@@ -269,6 +287,7 @@ getn(cp)
+ 	return (i);
+ }
+ 
++void
+ ignnEOF()
+ {
+ 	register int c = getchar();
+@@ -279,6 +298,7 @@ ignnEOF()
+ 		comment();
+ }
+ 
++int
+ is_white(c)
+ 	int c;
+ {
+@@ -286,11 +306,12 @@ is_white(c)
+ #ifndef	BIT8
+ 	return (c == ' ' || c == '\t');
+ #else
+-	return (isspace(c) && c != '\n' && c != '\r'
++	return (isspace((unsigned char)c) && c != '\n' && c != '\r'
+ 			&& c != '\f' && c != '\v');
+ #endif
+ }
+ 
++int
+ junk(c)
+ 	register int c;
+ {
+@@ -315,12 +336,14 @@ junk(c)
+ 	}
+ }
+ 
++void
+ killed()
+ {
+ 
+ 	killcnt(addr2 - addr1 + 1);
+ }
+ 
++void
+ killcnt(cnt)
+ 	register int cnt;
+ {
+@@ -343,6 +366,7 @@ killcnt(cnt)
+ 	putNFL();
+ }
+ 
++int
+ lineno(a)
+ 	line *a;
+ {
+@@ -350,24 +374,28 @@ lineno(a)
+ 	return (a - zero);
+ }
+ 
++int
+ lineDOL()
+ {
+ 
+ 	return (lineno(dol));
+ }
+ 
++int
+ lineDOT()
+ {
+ 
+ 	return (lineno(dot));
+ }
+ 
++void
+ markDOT()
+ {
+ 
+ 	markpr(dot);
+ }
+ 
++void
+ markpr(which)
+ 	line *which;
+ {
+@@ -379,6 +407,7 @@ markpr(which)
+ 	}
+ }
+ 
++int
+ markreg(c)
+ 	register int c;
+ {
+@@ -397,12 +426,13 @@ markreg(c)
+  * All others map to themselves.
+  */
+ char *
+-mesg(str)
+-	register char *str;
++mesg(arg)
++	const char *arg;
+ {
++	register char *str;
+ 	register char *cp;
+ 
+-	str = strcpy(genbuf, str);
++	str = strcpy(genbuf, arg);
+ 	for (cp = str; *cp; cp++)
+ 		switch (*cp) {
+ 
+@@ -422,12 +452,13 @@ mesg(str)
+ 	return (str);
+ }
+ 
++static void
+ merror1(seekpt)
+ #ifdef VMUNIX
+-	char *seekpt;
++	const char *seekpt;
+ #else
+ # ifdef lint
+-	char *seekpt;
++	const char *seekpt;
+ # else
+ 	int seekpt;
+ # endif
+@@ -444,20 +475,21 @@ merror1(seekpt)
+ }
+ 
+ /*VARARGS2*/
++void
+ #ifndef	__STDC__
+ merror(seekpt, i)
+ #ifdef VMUNIX
+-	char *seekpt;
++	const char *seekpt;
+ #else
+ # ifdef lint
+-	char *seekpt;
++	const char *seekpt;
+ # else
+ 	int seekpt;
+ # endif
+ #endif
+ 	int i;
+ #else
+-vmerror(char *seekpt, va_list ap)
++vmerror(const char *seekpt, va_list ap)
+ #endif
+ {
+ 
+@@ -482,7 +514,8 @@ vmerror(char *seekpt, va_list ap)
+ }
+ 
+ #ifdef	__STDC__
+-merror(char *cp, ...)
++void
++merror(const char *cp, ...)
+ {
+ 	va_list ap;
+ 
+@@ -494,6 +527,7 @@ merror(char *cp, ...)
+ }
+ #endif
+ 
++int
+ morelines()
+ {
+ #ifdef	_SC_PAGESIZE
+@@ -517,6 +551,7 @@ morelines()
+ #endif	/* !_SC_PAGESIZE */
+ }
+ 
++void
+ nonzero()
+ {
+ 
+@@ -527,6 +562,7 @@ nonzero()
+ 	}
+ }
+ 
++int
+ notable(i)
+ 	int i;
+ {
+@@ -534,7 +570,7 @@ notable(i)
+ 	return (hush == 0 && !inglobal && i > value(REPORT));
+ }
+ 
+-
++void
+ notempty()
+ {
+ 
+@@ -542,7 +578,7 @@ notempty()
+ 		error(catgets(catd, 1, 173, "No lines@in the buffer"));
+ }
+ 
+-
++void
+ netchHAD(cnt)
+ 	int cnt;
+ {
+@@ -550,10 +586,11 @@ netchHAD(cnt)
+ 	netchange(lineDOL() - cnt);
+ }
+ 
++void
+ netchange(i)
+ 	register int i;
+ {
+-	register char *cp;
++	register const char *cp;
+ 
+ 	if (i > 0)
+ 		notesgn = cp = catgets(catd, 1, 174, "more ");
+@@ -575,10 +612,11 @@ netchange(i)
+  * Print an escape sequence corresponding to c.
+  */
+ #ifdef	BIT8
++int
+ printof(c)
+ 	int c;
+ {
+-	char *nums = "01234567";
++	const char *nums = "01234567";
+ 	int d;
+ 
+ 	if (c < 040 || c == DELETE) {
+@@ -597,6 +635,7 @@ printof(c)
+ }
+ #endif
+ 
++void
+ putmark(addr)
+ 	line *addr;
+ {
+@@ -604,6 +643,7 @@ putmark(addr)
+ 	putmk1(addr, putline());
+ }
+ 
++void
+ putmk1(addr, n)
+ 	register line *addr;
+ 	int n;
+@@ -620,7 +660,7 @@ putmk1(addr, n)
+ 	*addr = n | oldglobmk;
+ }
+ 
+-char *
++const char *
+ plural(i)
+ 	long i;
+ {
+@@ -629,14 +669,15 @@ plural(i)
+ 			: catgets(catd, 1, 179, "s"));
+ }
+ 
+-int	qcount();
++static int qcount(int c);
+ short	vcntcol;
+ 
++static int
+ qcolumn(lim, gp)
+ 	register char *lim, *gp;
+ {
+ 	register int x = 0;
+-	int (*OO)();
++	int (*OO)(int);
+ 
+ 	OO = Outchar;
+ 	Outchar = qcount;
+@@ -653,18 +694,33 @@ qcolumn(lim, gp)
+ 	return (vcntcol);
+ }
+ 
++/*
++ * Like qcolumn() but doesn't require subtracting 1 from the first
++ * argument before calling it.
++ */
+ int
++qcolumn2(char *lim, char *gp)
++{
++	if (lim != NULL) {
++		lim--;
++	}
++	return qcolumn(lim, gp);
++}
++
++static int
+ qcount(c)
+ 	int c;
+ {
+ 
+ 	if (c == '\t') {
+ 		vcntcol += value(TABSTOP) - vcntcol % value(TABSTOP);
+-		return;
++		return c;
+ 	}
+ 	vcntcol++;
++	return c;
+ }
+ 
++void
+ reverse(a1, a2)
+ 	register line *a1, *a2;
+ {
+@@ -679,6 +735,7 @@ reverse(a1, a2)
+ 	}
+ }
+ 
++void
+ save(a1, a2)
+ 	line *a1;
+ 	register line *a2;
+@@ -714,24 +771,28 @@ save(a1, a2)
+ #endif
+ }
+ 
++void
+ save12()
+ {
+ 
+ 	save(addr1, addr2);
+ }
+ 
++void
+ saveall()
+ {
+ 
+ 	save(one, dol);
+ }
+ 
++int
+ span()
+ {
+ 
+ 	return (addr2 - addr1 + 1);
+ }
+ 
++void
+ synced()
+ {
+ 
+@@ -740,7 +801,7 @@ synced()
+ 	xchng = 0;
+ }
+ 
+-
++int
+ skipwh()
+ {
+ 	register int wh;
+@@ -754,17 +815,18 @@ skipwh()
+ }
+ 
+ /*VARARGS2*/
++void
+ #ifndef	__STDC__
+ smerror(seekpt, cp)
+ #ifdef lint
+-	char *seekpt;
++	const char *seekpt;
+ #else
+ 	int seekpt;
+ #endif
+-	char *cp;
++	const char *cp;
+ {
+ #else
+-vsmerror(char *seekpt, va_list ap)
++vsmerror(const char *seekpt, va_list ap)
+ {
+ 
+ #endif
+@@ -786,7 +848,8 @@ vsmerror(char *seekpt, va_list ap)
+ }
+ 
+ #ifdef	__STDC__
+-smerror(char *seekpt, ...)
++void
++smerror(const char *seekpt, ...)
+ {
+ 	va_list ap;
+ 
+@@ -808,13 +871,25 @@ strend(cp)
+ 	return (cp);
+ }
+ 
++const char *
++strendk(cp)
++	register const char *cp;
++{
++
++	while (*cp)
++		cp++;
++	return (cp);
++}
++
++void
+ strcLIN(dp)
+-	char *dp;
++	const char *dp;
+ {
+ 
+ 	CP(linebuf, dp);
+ }
+ 
++void
+ syserror()
+ {
+ 
+@@ -828,6 +903,7 @@ syserror()
+  * hitting a tab, where tabs are set every ts columns.  Work right for
+  * the case where col > TCOLUMNS, even if ts does not divide TCOLUMNS.
+  */
++int
+ tabcol(col, ts)
+ int col, ts;
+ {
+@@ -847,10 +923,10 @@ vfindcol(i)
+ 	int i;
+ {
+ 	register char *cp;
+-	register int (*OO)() = Outchar;
++	register int (*OO)(int) = Outchar;
+ 
+ 	Outchar = qcount;
+-	ignore(qcolumn(linebuf - 1, NOSTR));
++	ignore(qcolumn2(linebuf, NOSTR));
+ 	for (cp = linebuf; *cp && vcntcol < i; cp++)
+ 		putchar(*cp);
+ 	if (cp != linebuf)
+@@ -880,6 +956,7 @@ vpastwh(cp)
+ 	return (cp);
+ }
+ 
++int
+ whitecnt(cp)
+ 	register char *cp;
+ {
+@@ -911,13 +988,14 @@ Ignore(a)
+ }
+ 
+ Ignorf(a)
+-	int (*a)();
++	int (*a)(int);
+ {
+ 
+ 	a = a;
+ }
+ #endif
+ 
++void
+ markit(addr)
+ 	line *addr;
+ {
+@@ -937,10 +1015,12 @@ markit(addr)
+  */
+ int _ovno;
+ woid
+-onemt(signum)
++onemt(int signum)
+ {
+ 	int oovno;
+ 
++	(void)signum;
++
+ #ifndef	POSIX_1
+ 	signal(SIGEMT, onemt);
+ #endif
+@@ -963,8 +1043,9 @@ onemt(signum)
+  * are not removed.
+  */
+ woid
+-onhup(signum)
++onhup(int signum)
+ {
++	(void)signum;
+ 
+ 	/*
+ 	 * USG tty driver can send multiple HUP's!!
+@@ -993,9 +1074,11 @@ onhup(signum)
+  * suppressed in visual mode).
+  */
+ woid
+-onintr(signum)
++onintr(int signum)
+ {
+ 
++	(void)signum;
++
+ #ifndef	POSIX_1
+ #ifndef CBREAK
+ 	signal(SIGINT, onintr);
+@@ -1022,6 +1105,7 @@ onintr(signum)
+  * In some critical sections we turn interrupts off,
+  * but not very often.
+  */
++void
+ setrupt()
+ {
+ 
+@@ -1040,6 +1124,7 @@ setrupt()
+ 	}
+ }
+ 
++int
+ preserve()
+ {
+ 
+@@ -1063,6 +1148,8 @@ preserve()
+ }
+ 
+ #ifndef V6
++dead
++void
+ exitex(i)
+ 	int i;
+ {
+@@ -1081,7 +1168,7 @@ exitex(i)
+  * We have just gotten a susp.  Suspend and prepare to resume.
+  */
+ woid
+-onsusp(signum)
++onsusp(int signum)
+ {
+ 	ttymode f;
+ 	/* int omask; */
+@@ -1092,6 +1179,8 @@ onsusp(signum)
+ 	sigset_t set;
+ #endif
+ 
++	(void)signum;
++
+ 	f = setty(normf);
+ 	vnfl();
+ 	putpad(TE);

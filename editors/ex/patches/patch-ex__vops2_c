@@ -1,0 +1,211 @@
+$NetBSD: patch-ex__vops2_c,v 1.1 2012/12/28 03:03:09 dholland Exp $
+
+- declare local functions static
+- declare void functions void
+- avoid implicit int
+- use const for string constants
+- fix up function pointer casting mess
+- avoid sloppy code that subtracts 1 from the base address of a char[]
+  (which isn't valid)
+- silence warnings about && and || precedence
+- silence warnings about braces
+
+
+--- ex_vops2.c~	2012-12-27 21:58:42.000000000 +0000
++++ ex_vops2.c
+@@ -91,12 +91,14 @@ static char sccsid[] = "@(#)ex_vops2.c	1
+ extern char	*vUA1, *vUA2;		/* mjm: extern; also in ex_vops.c */
+ extern char	*vUD1, *vUD2;		/* mjm: extern; also in ex_vops.c */
+ 
+-int vmaxrep __P((int, register int));
++static int vmaxrep __P((int, register int));
++static int vgetsplit(void);
+ 
+ /*
+  * Obleeperate characters in hardcopy
+  * open with \'s.
+  */
++void
+ bleep(i, cp)
+ 	register int i;
+ 	char *cp;
+@@ -117,6 +119,7 @@ bleep(i, cp)
+  * Common code for middle part of delete
+  * and change operating on parts of lines.
+  */
++int
+ vdcMID()
+ {
+ 	register char *cp;
+@@ -136,6 +139,7 @@ vdcMID()
+  * in the VBSIZE buffer BUF.  Used to save
+  * deleted text of part of line.
+  */
++void
+ takeout(BUF)
+ 	cell *BUF;
+ {
+@@ -165,6 +169,7 @@ takeout(BUF)
+  * Are we at the end of the printed representation of the
+  * line?  Used internally in hardcopy open.
+  */
++int
+ ateopr()
+ {
+ 	register int i, c;
+@@ -185,10 +190,12 @@ ateopr()
+ 	return (1);
+ }
+ 
+-showmode(mode)
++void
++showmode(int mode)
+ {
+ 	int sdc = destcol, sdl = destline;
+-	char *ocurs, *str;
++	char *ocurs;
++	const char *str;
+ 
+ 	if (value(SHOWMODE) == 0 || TCOLUMNS <= 20 || state == ONEOPEN
+ 			|| state == HARDOPEN || vmacp != NULL)
+@@ -246,8 +253,8 @@ char	*ogcursor;
+  * The addtext() and addto() routines combined, accepting a single
+  * cell character.
+  */
+-addc(c)
+-cell c;
++static void
++addc(cell c)
+ {
+ 	register cell *cp = INS;
+ 
+@@ -274,6 +281,14 @@ cell c;
+ 	}
+ }
+ 
++static void
++doyank(int ignore)
++{
++	(void)ignore;
++	yank();
++}
++
++void
+ vappend(ch, cnt, indent)
+ 	int ch;		/* mjm: char --> int */
+ 	int cnt, indent;
+@@ -330,7 +345,7 @@ vappend(ch, cnt, indent)
+ 	if (value(AUTOINDENT) && indent != 0) {
+ 		gcursor = genindent(indent);
+ 		*gcursor = 0;
+-		vgotoCL(qcolumn(cursor - 1, genbuf));
++		vgotoCL(qcolumn2(cursor, genbuf));
+ 	} else {
+ 		gcursor = genbuf;
+ 		*gcursor = 0;
+@@ -536,7 +551,7 @@ vappend(ch, cnt, indent)
+ 		 * correctly later.
+ 		 */
+ 		if (FIXUNDO && vundkind == VCHNG) {
+-			vremote(1, yank, 0);
++			vremote(1, doyank, 0);
+ 			undap1--;
+ 		}
+ 
+@@ -561,7 +576,7 @@ vappend(ch, cnt, indent)
+ 		strcLIN(gcursor);
+ 		*gcursor = 0;
+ 		cursor = linebuf;
+-		vgotoCL(qcolumn(cursor - 1, genbuf));
++		vgotoCL(qcolumn2(cursor, genbuf));
+ 		showmode(ch);
+ 	}
+ 
+@@ -594,6 +609,7 @@ vappend(ch, cnt, indent)
+  * backwards around end of lines (vgoto can't hack columns which are
+  * less than 0 in general).
+  */
++void
+ back1()
+ {
+ 
+@@ -620,6 +636,7 @@ vget_line(cnt, gcursor, aescaped, commch
+ 	int cnt;
+ 	register char *gcursor;
+ 	bool *aescaped;
++	int commch;
+ {
+ 	register int c, ch;
+ 	register char *cp;
+@@ -771,7 +788,7 @@ vbackup:
+ 				endim();
+ 				*cp = 0;
+ 				c = cindent();
+-				vgotoCL(qcolumn(cursor - 1, genbuf));
++				vgotoCL(qcolumn2(cursor, genbuf));
+ 				if (doomed >= 0)
+ 					doomed += c - cindent();
+ 				gcursor = cp;
+@@ -836,7 +853,7 @@ vbackup:
+ 			}
+ 			if (value(WRAPMARGIN) &&
+ 				(outcol >= OCOLUMNS - value(WRAPMARGIN) ||
+-				 backsl && outcol==0) &&
++				 (backsl && outcol==0)) &&
+ 				commch != 'r') {
+ 				/*
+ 				 * At end of word and hit wrapmargin.
+@@ -991,7 +1008,7 @@ btrp:
+ 			 * generated autoindent.  We count the ^D for repeat
+ 			 * purposes.
+ 			 */
+-			if (c == iwhite && c != 0)
++			if (c == iwhite && c != 0) {
+ 				if (cp == gcursor) {
+ 					iwhite = backtab(c);
+ 					CDCNT++;
+@@ -1015,6 +1032,7 @@ btrp:
+ 					vputchar(' ');
+ 					goto vbackup;
+ 				}
++			}
+ 			if (vglobp && vglobp - iglobp >= 2 &&
+ 			    (vglobp[-2] == '^' || vglobp[-2] == '0')
+ 			    && gcursor == ogcursor + 1)
+@@ -1057,15 +1075,15 @@ vadone:
+ 	return (gcursor);
+ }
+ 
+-int	vgetsplit();
+-char	*vsplitpt;
++static const char	*vsplitpt;
+ 
+ /*
+  * Append the line in buffer at lp
+  * to the buffer after dot.
+  */
++void
+ vdoappend(lp)
+-	char *lp;
++	const char *lp;
+ {
+ 	register int oing = inglobal;
+ 
+@@ -1078,6 +1096,7 @@ vdoappend(lp)
+ /*
+  * Subroutine for vdoappend to pass to append.
+  */
++static int
+ vgetsplit()
+ {
+ 
+@@ -1093,7 +1112,9 @@ vgetsplit()
+  * allowed that will yield total line length less than
+  * LBSIZE characters and also does hacks for the R command.
+  */
++static int
+ vmaxrep(ch, cnt)
++	int ch;
+ 	register int cnt;
+ {
+ 	register int len, replen;
