@@ -1,0 +1,12 @@
+$NetBSD: patch-ex__argv_h,v 1.1 2012/12/28 03:03:08 dholland Exp $
+
+- declare void functions void
+
+--- ex_argv.h~	2002-02-02 00:05:46.000000000 +0000
++++ ex_argv.h
+@@ -102,4 +102,4 @@ struct	glob {
+ };
+ var struct	glob frob;
+ 
+-int gglob __P((struct glob *));
++void gglob __P((struct glob *));
