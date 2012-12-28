@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2011/10/04 18:15:30 bsiegert Exp $
+$NetBSD: patch-ac,v 1.3 2012/12/28 14:38:59 bsiegert Exp $
 
---- configure.ac.orig	2011-06-15 11:41:30.000000000 +0000
+--- configure.ac.orig	Wed Jun 15 11:41:06 2011
 +++ configure.ac
 @@ -4,6 +4,7 @@ AC_CANONICAL_TARGET([])
  AC_CONFIG_SRCDIR(src/atomic_ops.c)
@@ -10,3 +10,12 @@ $NetBSD: patch-ac,v 1.2 2011/10/04 18:15:30 bsiegert Exp $
  
  AM_CONFIG_HEADER(src/config.h)
  
+@@ -26,7 +27,7 @@ if test "$GCC" = yes; then
+   AC_MSG_RESULT(-fPIC)
+   PICFLAG=-fPIC
+   case "$host" in
+-    *-*-solaris*)
++    *-*-solaris*|*-*-mirbsd*)
+       # Workaround: at least GCC 3.4.6 does not define this macro.
+       CFLAGS="$CFLAGS -D__PIC__=1"
+       ;;
