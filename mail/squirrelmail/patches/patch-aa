@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.16 2008/09/28 17:32:26 martti Exp $
+$NetBSD: patch-aa,v 1.17 2012/12/28 04:03:34 taca Exp $
 
 Make this pkgsrc friendly.
 
---- config/config_default.php.orig	2008-07-19 10:31:43.000000000 +0300
-+++ config/config_default.php	2008-09-28 20:26:03.000000000 +0300
-@@ -446,7 +446,7 @@
+--- config/config_default.php.orig	2012-12-24 15:11:12.000000000 +0000
++++ config/config_default.php
+@@ -446,7 +446,7 @@ $default_sub_of_inbox = true;
   * false. (Cyrus works fine whether it's true OR false).
   * @global bool $show_contain_subfolders_option
   */
@@ -13,7 +13,16 @@ Make this pkgsrc friendly.
  
  /**
   * These next two options set the defaults for the way that the
-@@ -496,7 +496,7 @@
+@@ -487,7 +487,7 @@ $noselect_fix_enable = false;
+  *   Here are two examples:
+  *
+  * Absolute:
+- *   $data_dir = '/var/local/squirrelmail/data/';
++ *   $data_dir = '@USER_PREFS_DIR@/';
+  *
+  * Relative (to main SM directory):
+  *   $data_dir = SM_PATH . 'data/';
+@@ -496,7 +496,7 @@ $noselect_fix_enable = false;
   *
   * @global string $data_dir
   */
@@ -22,7 +31,7 @@ Make this pkgsrc friendly.
  
  /**
   * Attachments directory
-@@ -514,7 +514,7 @@
+@@ -514,7 +514,7 @@ $data_dir = '/var/local/squirrelmail/dat
   *    + It should probably be another directory than data_dir.
   * @global string $attachment_dir
   */
