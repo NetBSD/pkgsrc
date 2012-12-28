@@ -1,4 +1,7 @@
-$NetBSD: patch-ca,v 1.1 2010/03/04 16:00:37 taca Exp $
+$NetBSD: patch-ca,v 1.2 2012/12/28 04:03:35 taca Exp $
+
+* A care for Japanese language environment.
+* Limit exploding.
 
 --- plugins/filters/filters.php.orig	2009-07-27 10:40:44.000000000 +0900
 +++ plugins/filters/filters.php
