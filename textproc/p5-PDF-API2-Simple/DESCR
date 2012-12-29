@@ -1,4 +1,0 @@
-PDF::API2::Simple is a wrapper around the excellent PDF::API2 series of
-modules. This module is simply a simplification of those modules, and
-has been known to greatly reduce production time. This module is in the
-public domain, with a plea of notification. Please see the POD for details.
