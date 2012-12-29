@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:26 joerg Exp $
-bin/sqlsharpgtk.sh
-lib/sqlsharpgtk/Mono.Data.SqlSharp.DatabaseBrowser.dll
-lib/sqlsharpgtk/sqlsharpgtk.exe
-lib/sqlsharpgtk/sqlsharpgtk.exe.config
