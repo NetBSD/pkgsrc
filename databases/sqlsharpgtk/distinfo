@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/11 13:12:34 kefren Exp $
-
-SHA1 (sqlsharpgtk-0.4.tar.gz) = 504ba8e8b3fd4806d5b26babe6d1276412ebe4c7
-RMD160 (sqlsharpgtk-0.4.tar.gz) = 8c5830a0ef157a7b4a0c219017f10b6a4eef3181
-Size (sqlsharpgtk-0.4.tar.gz) = 147910 bytes
-SHA1 (patch-aa) = 51834f2cf89861bce85d57c3177709f718ac388c
