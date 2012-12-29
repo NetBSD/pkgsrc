@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2012/01/27 08:59:48 sbd Exp $
-
-SHA1 (pnet-0.8.0.tar.gz) = 3d048cbef0476f21cbdd86f81c1706f52b7a7218
-RMD160 (pnet-0.8.0.tar.gz) = 232f96fb92be2cab4109ab03845bafa84c3d0259
-Size (pnet-0.8.0.tar.gz) = 4510420 bytes
-SHA1 (patch-aa) = 4bc78118a597754b029fa231e4c58dcd0f160f88
-SHA1 (patch-ab) = 2df077f95643791d32cff2e4a82b0bc5cd67a01b
