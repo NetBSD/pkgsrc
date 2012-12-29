@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4021 2012/12/29 01:41:59 obache Exp $
+$NetBSD: CHANGES-2012,v 1.4022 2012/12/29 20:42:45 dholland Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6190,3 +6190,14 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/ex to 20040103nb3 [dholland 2012-12-28]
 	Updated mail/squirrelmail to 1.4.23pre14345 [taca 2012-12-28]
 	Updated misc/p5-Locale-Maketext to 1.23 [obache 2012-12-29]
+	Removed devel/stlport [dholland 2012-12-29]
+	Removed lang/pnet [dholland 2012-12-29]
+	Removed lang/pnetlib-nox11 [dholland 2012-12-29]
+	Removed lang/pnetlib [dholland 2012-12-29]
+	Removed lang/pnetC [dholland 2012-12-29]
+	Removed lang/gcc3-ada [dholland 2012-12-29]
+	Removed lang/gcc34-ada [dholland 2012-12-29]
+	Removed databases/sqlsharpgtk [dholland 2012-12-29]
+	Removed textproc/p5-PDF-API2-Simple [dholland 2012-12-29]
+	Removed chat/aim [dholland 2012-12-29]
+	Removed chat/ymessenger [dholland 2012-12-29]
