@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4020 2012/12/28 04:04:10 taca Exp $
+$NetBSD: CHANGES-2012,v 1.4021 2012/12/29 01:41:59 obache Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6189,3 +6189,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boost-jam to 1.52.0nb1 [wiz 2012-12-27]
 	Updated editors/ex to 20040103nb3 [dholland 2012-12-28]
 	Updated mail/squirrelmail to 1.4.23pre14345 [taca 2012-12-28]
+	Updated misc/p5-Locale-Maketext to 1.23 [obache 2012-12-29]
