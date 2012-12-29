@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.167 2012/08/26 14:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.168 2012/12/29 20:15:54 dholland Exp $
 #
 
 COMMENT=	Communication programs
 
-SUBDIR+=	aim
 SUBDIR+=	amsn
 SUBDIR+=	anope
 SUBDIR+=	atheme
@@ -131,7 +130,6 @@ SUBDIR+=	xchat
 SUBDIR+=	xchat-perl
 SUBDIR+=	xchat-python
 SUBDIR+=	xchat-systray-integration
-SUBDIR+=	ymessenger
 SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
