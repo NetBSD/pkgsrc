@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.11 2012/01/11 01:15:17 riz Exp $
+$NetBSD: README.MacOSX,v 1.12 2012/12/29 19:17:57 wiz Exp $
 
 
 Mac OS X Snow Leopard 32/64 (i386/x86_64) ABI issue:
@@ -22,15 +22,9 @@ may have this on CD. If not, you can download it from Apple's
 Developer Connection. (You will need to register for a free ADC
 account.) See http://developer.apple.com/macosx/ for details.
 
-Note for MacOS X 1.4 (Tiger) you will need to download xcode 2.5
-if you intend to use gcc 4.  gcc 4.0.0 bundled with xcode 2.0 on
-the desktop installation dvds builds broken pkg_install tools.
-
 If you plan to build packages that use the X11 Window System, you will
-also need to make sure you have X11 installed. OS X 10.3 (Panther)
-includes X11 and X11 SDK packages on CD. If you are using an older
-version of OS X, you can install the XFree86 packages instead, from
-www.xfree86.org.
+also need to make sure you have X11 installed. Download XQuartz from
+http://xquartz.macosforge.org/landing/
 
 Experimental support for IBM's XL C/C++ compiler is present (tested
 with version 6.0). To use it, set:
@@ -81,22 +75,19 @@ in mind that there are no guarantees:
 Given the above definitions, the pkgsrc developers label versions of
 Mac OS X as follows:
 
-  10.6: current, PRs may be filed.  Structurally breaking pkgsrc on 10.6
+  10.8: current, PRs may be filed.  Structurally breaking pkgsrc on 10.8
 	is considered not ok.  [SUPPORTED]
 
-  10.5: old, but PRs may still be filed.  Structurally breaking pkgsrc on
-	10.5 is considered not ok. [SUPPORTED]
+  10.7: old, but PRs may still be filed.  Structurally breaking pkgsrc on
+	10.7 is considered not ok. [SUPPORTED]
 
-  10.4: very old, and individual pkg PRs may be bounced to authors to
+  10.6: very old, and individual pkg PRs may be bounced to authors to
 	retest with newer versions, and closed if that doesn't happen
 	in 14 days.  We will for now consider structurally breaking
-	pkgsrc on 10.4 to be undesirable.  If keeping support for 10.4
+	pkgsrc on 10.6 to be undesirable.  If keeping support for 10.6
 	causes excessive work for maintainers it may be moved to
 	IGNORED state any time, without warning. [DEPRECATED]
 
-  10.3 and below: ancient, and PRs will be summarily closed.  It is
+  10.5 and below: ancient, and PRs will be summarily closed.  It is
 	acceptable to give zero consideration to causing structural
-	problems on 10.3 and below. [IGNORED]
-
-(Note that with the impending release of 10.7, it is likely that 10.4
-will be moved to IGNORED.)
+	problems on 10.5 and below. [IGNORED]
