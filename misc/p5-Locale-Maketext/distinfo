@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/07/23 15:36:01 rhaen Exp $
+$NetBSD: distinfo,v 1.6 2012/12/29 01:41:27 obache Exp $
 
-SHA1 (Locale-Maketext-1.13.tar.gz) = 2b00771bdae6999fc6eb02c93931a98bb44aa847
-RMD160 (Locale-Maketext-1.13.tar.gz) = 40667fc61a5c0d9f8d73498863649835c8e5cbc7
-Size (Locale-Maketext-1.13.tar.gz) = 46713 bytes
+SHA1 (Locale-Maketext-1.23.tar.gz) = a6e109a016e8afd0770dfe68e7318ad86016ff95
+RMD160 (Locale-Maketext-1.23.tar.gz) = 9f90ca6034a531a50c191a876113d02dc83bbc63
+Size (Locale-Maketext-1.23.tar.gz) = 51692 bytes
