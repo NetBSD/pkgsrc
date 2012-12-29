@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11790 2012/12/28 17:03:22 wiz Exp $
+$NetBSD: TODO,v 1.11791 2012/12/29 13:51:03 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -414,6 +414,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.0
 	o autoconvert-0.3.16
 	o autogen-5.17
+	o automake-1.13
 	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
