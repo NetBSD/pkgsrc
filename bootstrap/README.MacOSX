@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.12 2012/12/29 19:17:57 wiz Exp $
+$NetBSD: README.MacOSX,v 1.13 2012/12/29 20:02:38 wiz Exp $
 
 
 Mac OS X Snow Leopard 32/64 (i386/x86_64) ABI issue:
@@ -22,9 +22,12 @@ may have this on CD. If not, you can download it from Apple's
 Developer Connection. (You will need to register for a free ADC
 account.) See http://developer.apple.com/macosx/ for details.
 
-If you plan to build packages that use the X11 Window System, you will
-also need to make sure you have X11 installed. Download XQuartz from
-http://xquartz.macosforge.org/landing/
+Then start Xcode, go to "Preferences" - "Downloads" and install
+the "Command Line Tools".
+
+If you plan to build packages that use the X11 Window System, you
+will also need to make sure you have an Xserver installed. Download
+XQuartz from http://xquartz.macosforge.org/landing/
 
 Experimental support for IBM's XL C/C++ compiler is present (tested
 with version 6.0). To use it, set:
