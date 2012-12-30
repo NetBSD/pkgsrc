@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2012/12/22 10:45:13 tron Exp $
+# $NetBSD: Makefile,v 1.154 2012/12/30 02:31:34 sbd Exp $
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -16,8 +16,8 @@ SUBST_FILES.prefix=	src/s/netbsd.h
 # if manual compression is activated. The manual page won't work otherwise.
 .if defined(MANZ)
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/man/man1/ctags.1
-	${LN} -s etags.1 ${DESTDIR}${PREFIX}/man/man1/ctags.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ctags.1
+	${LN} -s etags.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ctags.1
 .endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
