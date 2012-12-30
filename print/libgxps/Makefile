@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 23:02:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2012/12/30 08:09:20 obache Exp $
 #
 
 DISTNAME=	libgxps-0.2.2
@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	libgxps.pc.in
 
 pre-configure:
-	${CP} ${FILESDIR}/libarchive.pc ${BUILDLINK_DIR}/lib/pkgconfig
+	${TEST} -e ${BUILDLINK_DIR}/lib/pkgconfig/libarchive.pc || ${CP} ${FILESDIR}/libarchive.pc ${BUILDLINK_DIR}/lib/pkgconfig
 
 # for test
 #.include "../../x11/gtk3/buildlink3.mk"
