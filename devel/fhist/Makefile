@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:16:57 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/12/30 04:26:56 dholland Exp $
 #
 
 DISTNAME=		fhist-1.16
@@ -13,6 +13,7 @@ COMMENT=		File history and comparison tools
 USE_TOOLS+=		gsoelim msgfmt yacc
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
+MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
