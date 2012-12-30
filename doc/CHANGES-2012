@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4024 2012/12/30 04:46:57 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.4025 2012/12/30 12:59:05 kleink Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6203,3 +6203,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed chat/ymessenger [dholland 2012-12-29]
 	Updated lang/sun-jre6 to 6.0.37nb1 [sbd 2012-12-30]
 	Updated x11/xkbset to 0.5nb1 [dholland 2012-12-30]
+	Updated textproc/p5-Text-vCard to 2.13 [kleink 2012-12-30]
