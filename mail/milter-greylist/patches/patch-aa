@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2009/09/22 14:02:56 tron Exp $
+$NetBSD: patch-aa,v 1.4 2012/12/30 11:41:15 tron Exp $
+
+Don't install the configuration file or an empty database.
 
 --- Makefile.in.orig	2008-09-27 00:35:44.000000000 +0100
 +++ Makefile.in	2009-03-15 20:41:49.000000000 +0000
