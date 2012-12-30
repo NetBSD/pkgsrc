@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2012/10/26 20:27:15 joerg Exp $
+$NetBSD: distinfo,v 1.26 2012/12/30 05:38:55 dholland Exp $
 
 SHA1 (mm2.7.tar.Z) = 8f213baec9b17c05bcb066f616977a561757d7a6
 RMD160 (mm2.7.tar.Z) = ae322cad0653140cbe7f0148ce48757df98c26b0
@@ -7,8 +7,8 @@ SHA1 (patch-aa) = 6f1d8f9cd5773deb3a050cecdc8a57718c953e0b
 SHA1 (patch-ab) = 15dd81405551f4d7d3c0e59cf49038857603a9eb
 SHA1 (patch-ac) = f0b04f7d6b17fb5c71a09b4caaf4298acdcff64e
 SHA1 (patch-ad) = 1f152ab38d3c2da42afdb3b3c6a1b218ac8d3996
-SHA1 (patch-ae) = 7abed3b508779f354036a3634510d4c68c3670a8
-SHA1 (patch-af) = 93e566a5e174fd259eb855e24a6dd4b7d5ffeed4
+SHA1 (patch-ae) = c7d1997371ee5d61a0c7236da1f408502eeb0f1a
+SHA1 (patch-af) = 03d08e3bdff9009ef7f978364d99a9243f28eda5
 SHA1 (patch-ag) = 674ceb59955de76e9a673ee4969d359a30fba5f8
 SHA1 (patch-ah) = 69f286fbb45420921cfe57e16c6ec220e409b784
 SHA1 (patch-ai) = 97130d5769767788c5b20993805536a8ddd9b76e
@@ -24,4 +24,5 @@ SHA1 (patch-ar) = 7167065afb79f59febbf7821ad625972eaf921f2
 SHA1 (patch-as) = 8d8c31f1ff508e9d7fc73a03a5f7ba63faa118ef
 SHA1 (patch-at) = 9193001c138875a0a6cc562f9f8a0424f78328aa
 SHA1 (patch-metamail_codes.c) = df6df4ff4abeba96c0d68f3d025390121c2b589a
+SHA1 (patch-metamail_shared.c) = b014d77bb5d09cd2d3199bcaecaf51da490d70ca
 SHA1 (patch-richmail_iso2022.c) = 3a6ff631d50963d31701e7a0f5519967bbbf1e2e
