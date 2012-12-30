@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2012/11/26 16:25:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2012/12/30 03:05:13 sbd Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
 
 DISTNAME=	jre-6u37-linux-${DIST_ARCH}
 PKGNAME=	sun-jre6-6.0.37
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 LICENSE=	sun-jre6-license

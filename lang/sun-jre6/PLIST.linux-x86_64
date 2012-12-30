@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.9 2012/11/26 16:25:34 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.10 2012/12/30 03:05:13 sbd Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -243,6 +243,8 @@ java/sun-6/lib/psfont.properties.ja.default
 java/sun-6/lib/psfontj2d.properties.default
 java/sun-6/lib/resources.jar
 java/sun-6/lib/rt.jar
+${PLIST.jce}java/sun-6/lib/security/COPYRIGHT.html
+${PLIST.jce}java/sun-6/lib/security/README.txt
 java/sun-6/lib/security/US_export_policy.jar
 java/sun-6/lib/security/blacklist
 java/sun-6/lib/security/cacerts
@@ -253,6 +255,15 @@ java/sun-6/lib/security/local_policy.jar
 java/sun-6/lib/security/trusted.libraries
 java/sun-6/lib/servicetag/jdk_header.png
 java/sun-6/lib/sound.properties.default
+${PLIST.native}java/sun-6/lib/amd64/libX11.so.6
+${PLIST.native}java/sun-6/lib/amd64/jli/libX11.so.6
+${PLIST.native}java/sun-6/lib/amd64/libXext.so.6
+${PLIST.native}java/sun-6/lib/amd64/libXi.so.6
+${PLIST.native}java/sun-6/lib/amd64/libXt.so.6
+${PLIST.native}java/sun-6/lib/amd64/libXtst.so.6
+${PLIST.native}java/sun-6/lib/amd64/libasound.so.2
+${PLIST.native}java/sun-6/lib/amd64/libodbc.so
+${PLIST.native}java/sun-6/lib/amd64/libodbcinst.so
 java/sun-6/lib/zi/Africa/Abidjan
 java/sun-6/lib/zi/Africa/Accra
 java/sun-6/lib/zi/Africa/Addis_Ababa
