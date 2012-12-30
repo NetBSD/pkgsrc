@@ -1,10 +1,40 @@
-$NetBSD: patch-ae,v 1.5 2004/03/04 15:04:41 cjep Exp $
---- metamail/splitmail.c.orig	Mon Jan 31 23:23:14 1994
-+++ metamail/splitmail.c	Sat Feb 28 20:08:44 2004
-@@ -41,8 +41,8 @@
+$NetBSD: patch-ae,v 1.6 2012/12/30 05:38:55 dholland Exp $
+
+- use required standard headers
+- make sure index() is available 
+- don't provide own declarations of standard functions
+- fix path to sendmail (although, is this really adequately MI?)
+- buffer length fix
+
+--- metamail/splitmail.c.orig	1994-01-31 22:23:14.000000000 +0000
++++ metamail/splitmail.c
+@@ -21,14 +21,20 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+  ******************************************************* */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <config.h>
+ #include <ctype.h>
+ #include <time.h>
+ 
++#ifndef index
++#define index(a, b) strchr(a, b)
++#endif
++
+ #define MINCHUNKSIZE 20000 /* Better be enough to hold the headers, or we die! */
+-extern char *malloc(), *index(), *getmyname();
++extern char *getmyname();
+ 
+ #ifdef AMIGA
+ #define Prototype   extern
+@@ -40,9 +46,8 @@ extern char *malloc(), *index(), *getmyn
+ #define NORMALDELIVERYCMD NormalDeliveryCmd
  #define VERBOSEDELIVERYCMD VerboseDeliveryCmd
  #else
- extern char *getenv();
+-extern char *getenv();
 -#define NORMALDELIVERYCMD "/usr/lib/sendmail -t -oi"
 -#define VERBOSEDELIVERYCMD "/usr/lib/sendmail -t -v -oi"
 +#define NORMALDELIVERYCMD "/usr/sbin/sendmail -t -oi"
@@ -12,7 +42,7 @@ $NetBSD: patch-ae,v 1.5 2004/03/04 15:04:41 cjep Exp $
  #endif
  
  usageexit() {
-@@ -194,7 +194,7 @@
+@@ -194,7 +199,7 @@ char **argv;
  	s = endofheader(from);  /* would be index(from, '\n'),
  				 but need to check for continuation lines */
          *s = '\0';
@@ -21,7 +51,7 @@ $NetBSD: patch-ae,v 1.5 2004/03/04 15:04:41 cjep Exp $
  	    strcat(SharedHeaders, from);
  	    strcat(SharedHeaders, "\n");
  	}
-@@ -339,9 +339,10 @@
+@@ -339,9 +344,10 @@ static char *SharedHeads[] = {
      NULL
  };
  
@@ -33,7 +63,7 @@ $NetBSD: patch-ae,v 1.5 2004/03/04 15:04:41 cjep Exp $
  char **OrigID;
  {
      int i;
-@@ -361,7 +362,8 @@
+@@ -361,7 +367,8 @@ char **OrigID;
      }
      if (!ULstrcmp(s, "subject")) {
          *colon = ':';
