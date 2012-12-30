@@ -1,16 +1,25 @@
-$NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
+$NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
+
+- use required standard headers
+- don't provide own declarations of standard functions
+- declare own functions
+- use C89
+- don't use gets()
+- ...? (XXX)
 
 --- metamail/mailto.c.orig	1994-02-09 20:30:26.000000000 +0000
 +++ metamail/mailto.c
-@@ -36,6 +36,7 @@ STILL NEED TO DO/SUPPORT:
+@@ -36,7 +36,9 @@ STILL NEED TO DO/SUPPORT:
  -- Replace EditString with something that does the right thing in-line.
  */
  
 +#include <stdlib.h>
  #include <stdio.h>
++#include <string.h>
  #include <ctype.h>
  #include <config.h>
-@@ -50,8 +51,6 @@ STILL NEED TO DO/SUPPORT:
+ #include <pwd.h>
+@@ -50,8 +52,6 @@ STILL NEED TO DO/SUPPORT:
  #include <getfiles.h>
  #include <time.h>
  #include <lib_protos.h>
@@ -19,7 +28,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  #endif
  
  #ifdef SYSV
-@@ -60,9 +59,16 @@ extern char *getenv();
+@@ -60,9 +60,16 @@ extern char *getenv();
  #include <unistd.h>
  #endif
  
@@ -37,7 +46,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  /* The main data structure for the multiple parts of the mail */
  
  struct mailpart {
-@@ -570,6 +576,7 @@ char **argv;
+@@ -570,6 +577,7 @@ char **argv;
          if (isupper(*sdum)) *sdum = tolower(*sdum);
      }
      if (strcmp(CharacterSet, "us-ascii")
@@ -45,7 +54,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
           && strncmp(CharacterSet, "iso-8859-", 9)) {
          fprintf(stderr, "mailto:  Unsupported character set: %s\n", CharacterSet);
          exit(-1);
-@@ -1042,10 +1049,7 @@ char *newid() {
+@@ -1042,10 +1050,7 @@ char *newid() {
      return(idbuf);
  }
  
@@ -57,7 +66,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  {
      FILE *fpin;
      static int ctr = 0;
-@@ -1130,6 +1134,7 @@ struct mailpart *part;
+@@ -1130,6 +1135,7 @@ struct mailpart *part;
          if (part->isrich) {
              if (strcmp(CharacterSet, "us-ascii")
                   && (strncmp(CharacterSet, "iso-8859-", 9) 
@@ -65,7 +74,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
                        || part->encoding_type_needed != ENC_NONE)) {
                  fprintf(fp, "Content-type: text/richtext; charset=\"%s\"\n", CharacterSet);
              } else {
-@@ -1140,6 +1145,7 @@ struct mailpart *part;
+@@ -1140,6 +1146,7 @@ struct mailpart *part;
              WriteCtypeNicely(fp, part->content_type);
              if (strcmp(CharacterSet, "us-ascii")
                   && (strncmp(CharacterSet, "iso-8859-", 9) 
@@ -73,7 +82,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
                        || part->encoding_type_needed != ENC_NONE)) {
                  fprintf(fp, "; charset=\"%s\"\n", CharacterSet);
              } else fputs("\n", fp);
-@@ -1328,11 +1334,7 @@ struct mailpart *part;
+@@ -1328,11 +1335,7 @@ struct mailpart *part;
      }
  }
  
@@ -86,7 +95,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  {
      static int InNewLineSequence=1;
      int c=0;
-@@ -1745,6 +1747,7 @@ CreateNewPart() {
+@@ -1745,6 +1748,7 @@ CreateNewPart() {
      }
      printf("\n\nEnter your choice as a number from 0 to %d: ", i);
      fflush(stdout);
@@ -94,7 +103,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
      fgets(LineBuf, sizeof(LineBuf), stdin);
      ans = atoi(LineBuf);
      if (ans == 0 || ans == 1) {
-@@ -1791,7 +1794,7 @@ CreateNewPart() {
+@@ -1791,7 +1795,7 @@ CreateNewPart() {
                  int ct;
                  printf("\nEnter the MIME Content-type value for the data from file %s\n    (type '?' for a list of locally-valid content-types): ", sdum);
                  fflush(stdout);
@@ -103,7 +112,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
                  if (index(LineBuf, '/')) {
                      char lc[100], *s, AnsBuf[100];
                      strcpy(lc, LineBuf);
-@@ -1809,7 +1812,7 @@ CreateNewPart() {
+@@ -1809,7 +1813,7 @@ CreateNewPart() {
                      }
                      if (mc) break;
                      printf("The MIME content-type '%s' is not listed in your local mailcap files,\nand may not be a valid MIME type.  Do you want to use it anyway [no] ? ", LineBuf);
@@ -112,7 +121,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
                      while (s && *s && isspace((unsigned char) *s)) ++s;
                      if (s && (*s == 'y' || *s == 'Y')) break;
                      continue;
-@@ -2073,8 +2076,7 @@ char *ctype, *pat;
+@@ -2073,8 +2077,7 @@ char *ctype, *pat;
      return(0);
  }
  
@@ -122,7 +131,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  {
      char *editor = NULL;
      char *CmdBuf, *CmdBuf2, LineBuf[100];
-@@ -2212,9 +2214,7 @@ int IsAndrew;
+@@ -2212,9 +2215,7 @@ int IsAndrew;
      }
  }
  
@@ -133,7 +142,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  {
      FILE *fp;
      char *LineBuf = NULL, *sdum;
-@@ -2290,8 +2290,7 @@ struct alias {
+@@ -2290,8 +2291,7 @@ struct alias {
      struct alias *next;
  } *FirstAlias = NULL;
  
@@ -143,7 +152,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  {
      struct alias *tmpalias;
      char *s, *s2;
-@@ -2357,10 +2356,7 @@ char *s;
+@@ -2357,10 +2357,7 @@ char *s;
      return(NULL);
  }
  
@@ -155,7 +164,7 @@ $NetBSD: patch-af,v 1.4 2012/10/26 20:27:15 joerg Exp $
  {
      char *firstnonascii, *firstascii;
  
-@@ -2436,10 +2432,7 @@ char *hdr;
+@@ -2436,10 +2433,7 @@ char *hdr;
      }
  }
  
