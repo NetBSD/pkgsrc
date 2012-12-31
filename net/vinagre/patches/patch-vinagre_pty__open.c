@@ -1,4 +1,4 @@
-$NetBSD: patch-vinagre_pty__open.c,v 1.1 2012/11/30 16:02:32 ryoon Exp $
+$NetBSD: patch-vinagre_pty__open.c,v 1.2 2012/12/31 23:36:47 ryoon Exp $
 
 --- vinagre/pty_open.c.orig	2011-12-03 07:23:20.000000000 +0000
 +++ vinagre/pty_open.c
@@ -16,7 +16,7 @@ $NetBSD: patch-vinagre_pty__open.c,v 1.1 2012/11/30 16:02:32 ryoon Exp $
  #include <utmp.h>
  #endif
 -#ifdef HAVE_UTIL_H
-+#ifdef HAVE_LOGIN_TTY
++#if defined(HAVE_LOGIN_TTY) && !defined(__linux)
  #include <util.h>
  #endif
  #include <glib.h>
