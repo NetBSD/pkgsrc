@@ -3,13 +3,16 @@
 
 2) The Ada compiler front-end of gcc is itself written
    in Ada. Consequently, an Ada compiler must be used
-   to build this pkg. In pkgsrc, lang/gcc3-ada is version
-   3.3 of the gcc Ada compiler; it also requires an Ada
-   compiler to build. This pkg may also be built from
-   lang/gcc34-ada.
+   to build it.
 
-   For bootstrapping, you can download a pre-built version
-   of gcc 3.4.0 Ada from:
+   Note however that in pkgsrc the lang/gcc-aux and/or
+   lang/gnat-aux packages, which are substantially newer,
+   are recommended instead of building the gcc34 Ada
+   frontend.
+
+   If you do wish to build the Ada compiler as part of this
+   package you can download a pre-built version of gcc 3.4.0
+   Ada for bootstrapping from:
 
    http://www.johnrshannon.com/NetBSD/ix86/gccAda-3.4.0.tgz
    http://www.johnrshannon.com/NetBSD/pentium4/gccAda-3.4.0.tgz
