@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/12/06 11:42:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2012/12/31 00:27:36 sbd Exp $
 
 DISTNAME=	gawk-4.0.1
 PKGREVISION=	2
@@ -35,7 +35,7 @@ CPPFLAGS.OSF1+=		-D_OSF_SOURCE
 CFLAGS+=	-Dvm_region=vm_region_64
 .endif
 
-INSTALLATION_DIRS+=	gnu/bin gnu/man/man1
+INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 post-install:
 	${LN} -s ${PREFIX}/bin/gawk ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/awk

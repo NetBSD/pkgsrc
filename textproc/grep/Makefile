@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/12/18 12:08:25 tron Exp $
+# $NetBSD: Makefile,v 1.34 2012/12/31 00:27:37 sbd Exp $
 
 DISTNAME=	grep-2.14
 PKGREVISION=	1
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=		MKDIR_P=${INSTALL_DATA_DIR:Q}
 INFO_FILES=		yes
 TEXINFO_REQD=		4.0
 
-INSTALLATION_DIRS=	gnu/bin gnu/man/man1
+INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
