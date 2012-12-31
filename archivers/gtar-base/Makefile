@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2012/12/06 11:38:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.78 2012/12/31 00:25:56 sbd Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
@@ -22,7 +22,9 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 gnu/bin gnu/libexec gnu/man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}libexec
+INSTALLATION_DIRS+=	${PKGGNUDIR}${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,7 +50,7 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 .endif
 
 SYMLINKS		= bin/gtar ${PKGGNUDIR}bin/tar \
-			man/man1/gtar.1 ${PKGGNUDIR}${PKGMANDIR}/man1/tar.1 \
+			${PKGMANDIR}/man1/gtar.1 ${PKGGNUDIR}${PKGMANDIR}/man1/tar.1 \
 			libexec/grmt ${PKGGNUDIR}libexec/rmt
 
 post-install:
