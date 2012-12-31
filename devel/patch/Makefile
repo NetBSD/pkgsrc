@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/12/06 11:40:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2012/12/31 00:27:36 sbd Exp $
 
 DISTNAME=	patch-2.5.9
 PKGREVISION=	2
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--program-prefix=g
 INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin \
 			man1dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-INSTALLATION_DIRS=	gnu/bin gnu/man/man1
+INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
