@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/11/13 15:52:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/12/31 02:27:22 taca Exp $
 ${GL_DOC}/README
 ${GL_EG}/db-config.php
 ${GL_EG}/geeklog.conf
@@ -588,6 +588,7 @@ ${GEEKLOG_BASE}/system/pear/Auth/SASL/DigestMD5.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/External.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/Login.php
 ${GEEKLOG_BASE}/system/pear/Auth/SASL/Plain.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/SCRAM.php
 ${GEEKLOG_BASE}/system/pear/Console/Getopt.php
 ${GEEKLOG_BASE}/system/pear/Date.php
 ${GEEKLOG_BASE}/system/pear/Date/Calc.php
@@ -626,6 +627,8 @@ ${GEEKLOG_BASE}/system/pear/HTTP/Request2/Exception.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request2/MultipartBody.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request2/Observer/Log.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request2/Response.php
+${GEEKLOG_BASE}/system/pear/HTTP/Request2/SOCKS5.php
+${GEEKLOG_BASE}/system/pear/HTTP/Request2/SocketWrapper.php
 ${GEEKLOG_BASE}/system/pear/LICENSE
 ${GEEKLOG_BASE}/system/pear/Mail.php
 ${GEEKLOG_BASE}/system/pear/Mail/RFC822.php
