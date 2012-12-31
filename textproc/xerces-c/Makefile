@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/10/25 06:57:06 asau Exp $
+# $NetBSD: Makefile,v 1.43 2012/12/31 09:24:46 obache Exp $
 
 DISTNAME=	xerces-c-3.1.1
 CATEGORIES=	textproc
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--enable-transcoder-iconv
 PLIST.gnuiconv=		yes
 CONFIGURE_ARGS+=	--enable-transcoder-gnuiconv
 .include "../../converters/libiconv/buildlink3.mk"
+LDFLAGS+=		-liconv
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
