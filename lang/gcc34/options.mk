@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/04/26 13:27:43 hans Exp $
+# $NetBSD: options.mk,v 1.3 2012/12/31 03:20:12 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
@@ -44,8 +44,6 @@ CONFIGURE_ARGS+=	--disable-nls
 
 ###
 ### Optional languages
-### Ada could be added although there is a bootstrapping issue.  See
-### ../gcc34-ada for guidance
 ###
 
 LANGS=			c
@@ -80,10 +78,8 @@ PTHREAD_OPTS+=          require native
 LANGS+=		ada
 
 # Ada bootstrap compiler section
-# An Ada compiler is required to build the Ada compiler. You
-# may specify:
-#USE_GCC34ADA	=# Define to use gcc-3.4.x-ada
-# Or, you may specify the path of any gcc/gnat Ada compiler
+# An Ada compiler is required to build the Ada compiler.
+# You may specify the path of any gcc/gnat Ada compiler
 # by providing the full path of the compiler (example) below:
 ALT_GCC=	/usr/pkg/bin/gnatgcc
 .  if defined(ALT_GCC)
@@ -98,27 +94,11 @@ PKG_SKIP_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
 PKG_SKIP_REASON+=	"Missing bootstrap Ada compiler"
 .     endif
 .  endif
-.  if !defined(USE_GCC34ADA) && !defined(ALT_GCC)
+.  if !defined(ALT_GCC)
 PKG_SKIP_REASON+=	"An Ada bootstrap compiler must be specified to build Ada"
 .  endif
 
-.  if defined(USE_GCC34ADA)
-BUILDLINK_DEPMETHOD.gcc34-ada=build
-.include "../../lang/gcc34-ada/buildlink3.mk"
-
-post-patch:
-	(cd ${FILESDIR}; \
-		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
-		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
-		${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
-		for i in *.adb *.ads ; do \
-			${CP} $$i ${WRKSRC}/gcc/ada; \
-		done )
-
-# Overide compiler.mk setup to use gcc-3.4.x-ada
-pre-configure:
-.include "../../lang/gcc34-ada/preconfigure.mk"
-.  elif defined(ALT_GCC)
+.  if defined(ALT_GCC)
 pre-configure:
 	(${TEST} -d ${WRKDIR}/.gcc/bin/ || ${MKDIR} ${WRKDIR}/.gcc/bin/)
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
