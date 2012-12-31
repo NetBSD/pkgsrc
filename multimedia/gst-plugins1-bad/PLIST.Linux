@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2012/11/29 08:26:09 ryoon Exp $
-lib/gstreamer-1.0/libgstdecklink.la
-lib/gstreamer-1.0/libgstlinsys.la
