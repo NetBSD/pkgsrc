@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2012/12/19 08:14:42 obache Exp $
+# $NetBSD: Makefile.common,v 1.19 2012/12/31 00:34:37 sbd Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -70,5 +70,6 @@ BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.34.2
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
