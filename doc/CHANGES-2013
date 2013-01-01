@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1 2013/01/01 01:36:34 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.2 2013/01/01 01:42:20 jnemeth Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -6,3 +6,4 @@ $NetBSD: CHANGES-2013,v 1.1 2013/01/01 01:36:34 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
+	Updated textproc/mdoclint to 1.18 [jnemeth 2013-01-01]
