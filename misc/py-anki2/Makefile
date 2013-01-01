@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/12/25 15:33:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/01 19:14:45 joerg Exp $
 
 DISTNAME=	anki-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc x11
 MASTER_SITES=	http://ankisrs.net/download/mirror/
 EXTRACT_SUFX=	.tgz
@@ -29,6 +29,11 @@ CONFLICTS+=		${PYPKGPREFIX}-libanki-[0-9]* ${PYPKGPREFIXP}-anki-[0-9]*
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/pixmaps share/applications
 
 REPLACE_PYTHON=		anki
+
+USE_TOOLS+=	bash:run
+
+REPLACE_BASH=		libanki/tools/tests.sh libanki/tools/translate.sh \
+			tools/build_ui.sh tools/translate.sh
 
 SUBST_CLASSES+=		inst
 SUBST_SED.inst+=	-e 's,/usr/share/anki,${PREFIX}/share/anki,'
