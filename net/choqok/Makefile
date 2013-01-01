@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:14 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/01 19:12:08 joerg Exp $
 #
 
 DISTNAME=	choqok-1.3
@@ -13,7 +13,7 @@ COMMENT=	Twitter and StatusNet client for KDE
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl msgfmt
+USE_TOOLS+=	perl msgfmt pkg-config
 
 BUILD_DEPENDS+=         automoc4>=0.9.87:../../devel/automoc4
 DEPENDS=	qca2-ossl-[0-9]*:../../security/qca2-ossl
