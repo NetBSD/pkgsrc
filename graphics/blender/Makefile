@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2012/12/09 17:37:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.84 2013/01/02 02:22:07 ryoon Exp $
 
-DISTNAME=	blender-2.64a
-PKGREVISION=	1
+DISTNAME=	blender-2.65a
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-PYTHON_VERSIONS_ACCEPTED=	32
+PYTHON_VERSIONS_ACCEPTED=	33
 
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 
@@ -23,6 +22,12 @@ FIND_PREFIX:=		SCONSDIR=scons
 .include "options.mk"
 
 INSTALLATION_DIRS=	bin share/blender
+
+.if ${OPSYS} == "NetBSD"
+.if !empty(OS_VERSION:M6.*)
+LDFLAGS+=	-lexecinfo
+.endif
+.endif
 
 # To pass LDFLAGS to compiler/linker
 MYLDFLAGS=	`printf "'%s'," ${LDFLAGS} | sed -e 's:,$$::'`
@@ -64,7 +69,8 @@ do-install:
 	cd ${WRKSRC} && \
 		${SCONSDIR}/bin/scons ${SCONS_ARGS}
 
-CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py
+CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py \
+			share/blender/2.65/python/lib/python3.3/venv/scripts/posix/pydoc
 
 post-install:
 	${LN} -sf ${PREFIX}/share/blender/blender \
