@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.33 2012/12/03 13:15:50 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2013/01/02 02:22:07 ryoon Exp $
 
-SHA1 (blender-2.64a.tar.gz) = 23aca6dc15e2ff149f51b54f008d0a1620436cdd
-RMD160 (blender-2.64a.tar.gz) = b2c78814441be92f1197c5d7ebc2c9fccb7acd4d
-Size (blender-2.64a.tar.gz) = 31388178 bytes
+SHA1 (blender-2.65a.tar.gz) = e00ea38aaa815bf19bace6dabccc22c822cc5490
+RMD160 (blender-2.65a.tar.gz) = 0381dc1be89cf4c8e7932d0d122a7a8e092f4221
+Size (blender-2.65a.tar.gz) = 31841541 bytes
 SHA1 (patch-SConstruct) = 4e3e81d3f4d8bf53a26102cb489ad507d14dd086
-SHA1 (patch-ab) = 8d101a8b780f3c1a41214db9dd295f2565f2e61c
+SHA1 (patch-ab) = 5669f269c922f9bd521d15fdb1b21ba1e58ac7f6
 SHA1 (patch-am) = d023b35fe2355e2e53e11a3c91730ebe21da6de8
-SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 3a39966108612f2dc895ff8f9fe25f03517e2175
+SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 520fa968b4f1f9f10adb1055803e05dafc96f0fe
 SHA1 (patch-build__files_scons_tools_btools.py) = 09fe67666091daafcf586aa70dc19fa6964b2098
 SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = e50c9f7e36d219a789d027a5044846b105a662b0
 SHA1 (patch-extern_libmv_libmv_numeric_numeric.h) = fe674deb97e1ff8604b7fe505c715621b9fee5ee
 SHA1 (patch-extern_libmv_libmv_tracking_brute__region__tracker.cc) = 3d09eb0821a628c15e898b6fa432fe1d787f0eb8
 SHA1 (patch-extern_libmv_third__party_glog_src_config.h) = d889d56d47167222ab54fad1c8f87c7ddb02852a
-SHA1 (patch-extern_libmv_third__party_glog_src_config__netbsd.h) = 31fa525721adb920149186101f3662af2f4f8c08
+SHA1 (patch-extern_libmv_third__party_glog_src_config__netbsd.h) = 423dda12bb5871f810938666c0267ac73b3f856e
 SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef0529fe56b3e857685fbc5d1f
 SHA1 (patch-intern_ghost_SConscript) = 84dad76663e6dfc3bd6636fe8924921fe04caa2f
 SHA1 (patch-intern_guardedalloc_MEM__sys__types.h) = 7b3ee6dc5d1b66a785a838c07507b8d93f7f1d1d
