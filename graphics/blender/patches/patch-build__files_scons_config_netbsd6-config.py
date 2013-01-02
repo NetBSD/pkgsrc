@@ -1,10 +1,10 @@
-$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.1 2012/12/03 13:15:51 ryoon Exp $
+$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.2 2013/01/02 02:22:08 ryoon Exp $
 
 * config file for NetBSD 6
 
---- build_files/scons/config/netbsd6-config.py.orig	2012-12-03 06:03:04.000000000 +0000
+--- build_files/scons/config/netbsd6-config.py.orig	2012-12-22 20:01:05.000000000 +0000
 +++ build_files/scons/config/netbsd6-config.py
-@@ -0,0 +1,226 @@
+@@ -0,0 +1,227 @@
 +CC = 'gcc'
 +CXX = 'g++'
 +
@@ -14,7 +14,7 @@ $NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.1 2012/12/03 13:1
 +BF_PYTHON_ABI_FLAGS = ''
 +BF_PYTHON = '/usr/local'
 +BF_PYTHON_LIBPATH = '${BF_PYTHON}/lib'
-+BF_PYTHON_VERSION = '3.2'
++BF_PYTHON_VERSION = '3.3'
 +WITH_BF_STATICPYTHON = False
 +BF_PYTHON_INC = '${BF_PYTHON}/include/python${BF_PYTHON_VERSION}${BF_PYTHON_ABI_FLAGS}'
 +BF_PYTHON_BINARY = '${BF_PYTHON}/bin/python${BF_PYTHON_VERSION}'
@@ -182,6 +182,7 @@ $NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.1 2012/12/03 13:1
 +BF_BOOST = LIBDIR + '/boost'
 +BF_BOOST_INC = BF_BOOST + '/include'
 +BF_BOOST_LIB = 'boost_date_time boost_filesystem boost_regex boost_system boost_thread'
++BF_BOOST_LIB_INTERNATIONAL = 'boost_locale'
 +BF_BOOST_LIBPATH = BF_BOOST + '/lib'
 +
 +WITH_BF_OPENMP = True

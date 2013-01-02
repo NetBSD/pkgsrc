@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2012/12/03 13:15:50 ryoon Exp $
+$NetBSD: patch-ab,v 1.10 2013/01/02 02:22:08 ryoon Exp $
 
---- source/blender/blenlib/intern/storage.c.orig	2012-10-09 18:40:29.000000000 +0000
+--- source/blender/blenlib/intern/storage.c.orig	2012-12-10 19:25:44.000000000 +0000
 +++ source/blender/blenlib/intern/storage.c
 @@ -43,7 +43,7 @@
  #include <time.h>
@@ -26,6 +26,6 @@ $NetBSD: patch-ab,v 1.9 2012/12/03 13:15:50 ryoon Exp $
  
 -#if defined(__sun__) || defined(__sun) || defined(__NetBSD__)
 +#if defined(__sun__) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
- 	if (statvfs(name, &disk)) return(-1);	
+ 	if (statvfs(name, &disk)) return(-1);
  #elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
  	/* WARNING - This may not be supported by geeneric unix os's - Campbell */
