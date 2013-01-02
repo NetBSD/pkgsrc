@@ -1,4 +1,4 @@
-$NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.1 2012/12/03 13:15:51 ryoon Exp $
+$NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.2 2013/01/02 02:22:08 ryoon Exp $
 
 * config file for NetBSD
 
@@ -19,7 +19,7 @@ $NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.1 2012/12
 +
 +#include <sys/param.h>
 +/* Define to 1 if you have the <execinfo.h> header file. */
-+#if __NetBSD_Version__ < 699001500
++#if __NetBSD_Version__ > 699001500
 +#define HAVE_EXECINFO_H 1
 +#else
 +#undef HAVE_EXECINFO_H
