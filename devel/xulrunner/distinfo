@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2012/12/05 11:47:14 ryoon Exp $
+$NetBSD: distinfo,v 1.87 2013/01/02 02:31:04 ryoon Exp $
 
 SHA1 (firefox-17.0.1esr.source.tar.bz2) = 06373c132ca07a6e2dbb5fe1a2552519ba91ee37
 RMD160 (firefox-17.0.1esr.source.tar.bz2) = a85fc33defda9c514f46623672d61358397e58f1
@@ -36,6 +36,9 @@ SHA1 (patch-config_system-headers) = d7d4b5ba0677cbb92dc2ca70cd387b7d88b79f63
 SHA1 (patch-content_media_nsAudioStream.cpp) = 75c9fc45d464ee332271142c3e29b826b6254d49
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 66d023227b46582d30961cfac15506b9f29c23de
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = cba2ea71973b3717b29052e131eb278cec972ebd
+SHA1 (patch-gfx_skia_src_sfnt_SkOTTable__head.h) = a50b21dc02ee5ae2b053ba574b592679350396ad
+SHA1 (patch-gfx_skia_src_sfnt_SkOTTable__name.h) = a13668dbb5f1b6099b1701291f28b2b272b35353
+SHA1 (patch-gfx_skia_src_sfnt_SkSFNTHeader.h) = c3f6c6d11201c0fae4e3978a370f48eefbc09370
 SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = 775c13ca6a77b3f39f23e15fbbcf4b1cae4e9478
 SHA1 (patch-ipc_chromium_Makefile.in) = c2d339b32050e772dea05790d61f291d9a52e06f
 SHA1 (patch-ipc_chromium_chromium-config.mk) = 24b1fe7cc7f3f14dd8a79f8eedf6f3638c304020
