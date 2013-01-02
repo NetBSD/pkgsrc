@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/12/14 23:50:33 pettai Exp $
+# $NetBSD: Makefile,v 1.14 2013/01/02 07:02:53 sbd Exp $
 #
 
 DISTNAME=	pcsc-lite-1.7.4
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-confdir=${PKG_SYSCONFDIR:Q}/reader.conf.d
 CONFIGURE_ARGS+=	--enable-ipcdir=${VARBASE}/pcsc-lite
 CONFIGURE_ARGS+=	--enable-usbdropdir=${PREFIX}/lib/pcsc-lite/drivers
+CONFIGURE_ARGS+=	--disable-libudev
 MAKE_DIRS+=		${VARBASE}/pcsc-lite
 MAKE_DIRS+=		${PREFIX}/lib/pcsc-lite
 MAKE_DIRS+=		${PREFIX}/lib/pcsc-lite/drivers
