@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11795 2013/01/03 09:51:00 tron Exp $
+$NetBSD: TODO,v 1.11796 2013/01/03 15:45:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1217,7 +1217,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
-	o vym-2.2.4 [pkg/47350]
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
