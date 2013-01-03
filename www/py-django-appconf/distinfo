@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/03 15:31:49 ryoon Exp $
+
+SHA1 (django-appconf-0.5.tar.gz) = 08db416987a96ee45a60d03e9ba04e82c3253a31
+RMD160 (django-appconf-0.5.tar.gz) = 7d155bf1ed25e7d617bb264747e7c73fba1f7bb8
+Size (django-appconf-0.5.tar.gz) = 13326 bytes
