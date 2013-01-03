@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.11 2013/01/03 10:22:08 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.12 2013/01/03 13:37:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django-mptt to 0.5.5 [adam 2013-01-03]
 	Updated lang/perl5 to 5.16.2nb2 [dholland 2013-01-03]
 	Updated pkgtools/digest to 20121220 [dholland 2013-01-03]
+	Added print/electrix version 0.2.0 [ryoon 2013-01-03]
