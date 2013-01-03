@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2012/07/23 10:48:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2013/01/03 15:37:23 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -142,6 +142,7 @@ share/zsh/${PKGVERSION}/functions/_bogofilter
 share/zsh/${PKGVERSION}/functions/_brace_parameter
 share/zsh/${PKGVERSION}/functions/_brctl
 share/zsh/${PKGVERSION}/functions/_bsd_pkg
+share/zsh/${PKGVERSION}/functions/_btrfs
 share/zsh/${PKGVERSION}/functions/_bts
 share/zsh/${PKGVERSION}/functions/_bug
 share/zsh/${PKGVERSION}/functions/_builtin
@@ -165,6 +166,7 @@ share/zsh/${PKGVERSION}/functions/_chkconfig
 share/zsh/${PKGVERSION}/functions/_chmod
 share/zsh/${PKGVERSION}/functions/_chown
 share/zsh/${PKGVERSION}/functions/_chrt
+share/zsh/${PKGVERSION}/functions/_clay
 share/zsh/${PKGVERSION}/functions/_combination
 share/zsh/${PKGVERSION}/functions/_comm
 share/zsh/${PKGVERSION}/functions/_command
@@ -201,6 +203,7 @@ share/zsh/${PKGVERSION}/functions/_cygstart
 share/zsh/${PKGVERSION}/functions/_dak
 share/zsh/${PKGVERSION}/functions/_darcs
 share/zsh/${PKGVERSION}/functions/_date
+share/zsh/${PKGVERSION}/functions/_dbus
 share/zsh/${PKGVERSION}/functions/_dchroot
 share/zsh/${PKGVERSION}/functions/_dchroot-dsa
 share/zsh/${PKGVERSION}/functions/_dcop
@@ -376,6 +379,7 @@ share/zsh/${PKGVERSION}/functions/_last
 share/zsh/${PKGVERSION}/functions/_ld_debug
 share/zsh/${PKGVERSION}/functions/_ldd
 share/zsh/${PKGVERSION}/functions/_less
+share/zsh/${PKGVERSION}/functions/_lha
 share/zsh/${PKGVERSION}/functions/_lighttpd
 share/zsh/${PKGVERSION}/functions/_limit
 share/zsh/${PKGVERSION}/functions/_limits
@@ -459,6 +463,7 @@ share/zsh/${PKGVERSION}/functions/_newsgroups
 share/zsh/${PKGVERSION}/functions/_next_label
 share/zsh/${PKGVERSION}/functions/_next_tags
 share/zsh/${PKGVERSION}/functions/_nice
+share/zsh/${PKGVERSION}/functions/_nkf
 share/zsh/${PKGVERSION}/functions/_nm
 share/zsh/${PKGVERSION}/functions/_nmap
 share/zsh/${PKGVERSION}/functions/_nmcli
@@ -746,6 +751,7 @@ share/zsh/${PKGVERSION}/functions/_xt_session_id
 share/zsh/${PKGVERSION}/functions/_xterm
 share/zsh/${PKGVERSION}/functions/_xv
 share/zsh/${PKGVERSION}/functions/_xwit
+share/zsh/${PKGVERSION}/functions/_xz
 share/zsh/${PKGVERSION}/functions/_yafc
 share/zsh/${PKGVERSION}/functions/_yast
 share/zsh/${PKGVERSION}/functions/_yast2
