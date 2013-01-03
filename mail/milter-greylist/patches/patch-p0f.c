@@ -1,12 +1,12 @@
-$NetBSD: patch-p0f.c,v 1.1 2012/03/12 13:17:22 fhajny Exp $
+$NetBSD: patch-p0f.c,v 1.2 2013/01/03 09:50:44 tron Exp $
 
 . More portable int types.
-. More portable strstr in place of strcasestr.
+. Use strstr(3) in place of strcasestr(3) under SunOS.
 . Rename 'sun' to 's_un' to avoid a conflict on SunOS.
 
---- p0f.c.orig	2011-03-20 09:17:09.000000000 +0000
-+++ p0f.c
-@@ -74,25 +74,25 @@ __RCSID("$Id: p0f.c,v 1.7.2.6 2011/03/20
+--- p0f.c.orig	2012-02-21 05:53:44.000000000 +0000
++++ p0f.c	2012-12-30 13:40:25.000000000 +0000
+@@ -75,25 +75,25 @@
  #define RESP_NOMATCH		2
  
  struct p0f_query {
@@ -47,25 +47,28 @@ $NetBSD: patch-p0f.c,v 1.1 2012/03/12 13:17:22 fhajny Exp $
  	int32_t		uptime;
  };
  /* End of stuff borrowed from p0f/p0f-query.h */
-@@ -113,7 +113,7 @@ p0f_cmp(ad, stage, ap, priv)
+@@ -159,7 +159,11 @@
                 return 0;
  
  	data = (char *)ad->string;
--	if (strcasestr(priv->priv_p0f, data) != NULL)
++#ifdef __sun__
 +	if (strstr(priv->priv_p0f, data) != NULL)
++#else
+ 	if (strcasestr(priv->priv_p0f, data) != NULL)
++#endif
  		return 1;
  	return 0;
  }
-@@ -262,7 +262,7 @@ p0f_sock_set(sock)
+@@ -404,7 +408,7 @@
  static int
  p0f_connect(void)
  {
 -	struct sockaddr_un sun;
 +	struct sockaddr_un s_un;
- 	int p0fsock;
+ 	int p0fsock = -1;
  
  	if (!conf.c_p0fsock[0])
-@@ -280,11 +280,11 @@ p0f_connect(void)
+@@ -424,11 +428,11 @@
  
  	if (conf.c_debug)
  		mg_log(LOG_DEBUG, "using p0f socket \"%s\"", conf.c_p0fsock);		
