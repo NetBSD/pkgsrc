@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.8 2013/01/03 09:36:01 agc Exp $
+$NetBSD: CHANGES-2013,v 1.9 2013/01/03 09:51:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -10,3 +10,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk to 10.11.1 [jnemeth 2013-01-03]
 	Updated comms/asterisk to 1.8.19.1 [jnemeth 2013-01-03]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q4 branch [agc 2013-01-03]
+	Updated mail/milter-greylist to 4.4.1 [tron 2013-01-03]
