@@ -1,0 +1,3 @@
+grappelli_safe was created to provide a snapshot of the Grappelli
+admin skin for Django, to be referenced as a dependency for the
+Mezzanine CMS for Django.
