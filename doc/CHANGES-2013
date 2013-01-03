@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.31 2013/01/03 18:57:44 gls Exp $
+$NetBSD: CHANGES-2013,v 1.32 2013/01/03 21:24:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -34,3 +34,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/py-smb version 1.1.2 [ryoon 2013-01-03]
 	Added devel/open-vcdiff version 0.8.3 [agc 2013-01-03]
 	Updated www/py-moin to 1.9.6 [gls 2013-01-03]
+	Updated databases/sqlite3 to 3.7.15.1 [adam 2013-01-03]
+	Updated databases/sqlite3-docs to 3.7.15.1 [adam 2013-01-03]
+	Updated databases/sqlite3-tcl to 3.7.15.1 [adam 2013-01-03]
+	Updated databases/mysql55-client to 5.5.29 [adam 2013-01-03]
+	Updated databases/mysql55-server to 5.5.29 [adam 2013-01-03]
