@@ -1,0 +1,89 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/01/03 13:59:44 ryoon Exp $
+
+To use itt-rss with Apache 2.4 and php 5.4, you will need to perform
+the following steps.
+
+1. Install www/apache24 and www/ap-php
+
+2. Install PostgreSQL database server.
+
+	# cd databases/postgresql91-server
+	# make install
+
+3. Start PostgreSQL server.
+
+	# ${RCD_SCRIPTS_DIR}/pgsql start
+
+4. Add PostgreSQL user, ttrss
+
+	$ sudo -u pgsql createuser ttrss
+	Shall the new role be a superuser? (y/n) n
+	Shall the new role be allowed to create databases? (y/n) y
+	Shall the new role be allowed to create more new roles? (y/n) n
+
+5. Set password for ttrss user
+
+	$ sudo -u pgsql psql template1
+	psql (9.1.7)
+	Type "help" for help.
+
+	template1=# alter user ttrss with password 'ttrss_user_password';
+	ALTER ROLE
+	template1=# \q
+
+6. Create database for ttrss, ttrss_db
+
+	$ sudo -u pgsql createdb ttrss_db -O ttrss -U ttrss
+
+7. Check created database
+
+	$ sudo -u pgsql psql -l
+                          List of databases
+   Name    | Owner | Encoding  | Collate | Ctype | Access privileges
+-----------+-------+-----------+---------+-------+-------------------
+(snip)
+ ttrss_db  | ttrss | SQL_ASCII | C       | C     |
+
+8. Initialize database
+
+	$ sudo -u pgsql psql -U ttrss -d ttrss_db -p 5432 -f \
+		${PREFIX}/share/tt-rss/schema/ttrss_schema_pgsql.sql
+
+9. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	extension=dom.so
+	extension=json.so
+	extension=mbstring.so
+	extension=pgsql.so
+
+8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	DocumentRoot "${PREFIX}/share/tt-rss"
+	LoadModule php5_module lib/httpd/mod_php5.so
+	AddType application/x-httpd-php .php
+	<Directory "${PREFIX}/share/tt-rss">
+		DirectoryIndex index.php
+		Options All
+		Allow from All
+		AllowOverride All
+		Require all granted
+	</Directory>
+
+9. Edit ${PREFIX}/share/tt-rss/config.php, be sure to have the following
+   lines.
+
+	define('DB_TYPE', "pgsql");
+        define('DB_HOST', "localhost");
+        define('DB_USER', "ttrss");
+        define('DB_NAME', "ttrss_db");
+        define('DB_PASS', "ttrss_user_password");
+	define('SELF_URL_PATH', 'http://localhost/');
+
+10. Start Apache httpd 2.4
+
+	# ${RCD_SCRIPTS_DIR}/apache start
+
+11. Access http://localhost/ , and login with
+    login/password = "admin"/"password".
+===========================================================================
