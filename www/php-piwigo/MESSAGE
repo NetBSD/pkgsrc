@@ -1,0 +1,72 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/01/03 13:49:43 ryoon Exp $
+
+To use concrete5 with Apache 2.4, you will need to perform the following steps.
+
+1. Install www/apache24 and www/ap-php
+
+2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
+   If your machine are located in Tokyo, Japan, you should get the following.
+
+	# cat ${PREFIX}/etc/php.ini | grep date.timezone
+	date.timezone ="Asia/Tokyo"
+
+2. Install MySQL database server.
+
+	# cd databases/mysql51-server
+	# make install
+
+3. Start MySQL server, and setup MySQL server
+
+	# ${RCD_SCRIPTS_DIR}/mysqld start
+	And see messages.
+
+4. Add MySQL user, piwigo
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create user piwigo identified by 'piwigo_password';
+	> quit
+
+6. Create database for concrete5
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create database piwigo_db;
+	> grant SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER
+	on piwigo_db.* to piwigo@localhost identified by 'piwigo_password';
+	> quit
+
+7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	extension=gd.so
+	extension=exif.so
+	extension=mysql.so
+
+8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	DocumentRoot "${PREFIX}/share/piwigo"
+	LoadModule php5_module lib/httpd/mod_php5.so
+	AddType application/x-httpd-php .php
+	<Directory ${PREFIX}/share/piwigo>
+		DirectoryIndex index.php
+		Options All
+		Allow from All
+		AllowOverride All
+		Require all granted
+	</Directory>
+
+9. Start Apache httpd 2.2
+	# ${RCD_SCRIPTS_DIR}/apache start
+
+10. Access http://localhost/index.php
+   And setup with the following information.
+
+	database name:	piwigo_db
+	user name:	piwigo
+	password:	piwigo_password
+
+XXX Your authentication information is stored with permission allows to
+XXX read, write by others. Do not share it with another service,
+XXX for example, login of terminal and so on.
+===========================================================================
