@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2013/01/03 13:58:35 darcy Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/01/03 16:56:22 darcy Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_pg.so
 ${PYSITELIB}/pg.py
 ${PYSITELIB}/pg.pyc
@@ -6,10 +10,6 @@ ${PYSITELIB}/pg.pyo
 ${PYSITELIB}/pgdb.py
 ${PYSITELIB}/pgdb.pyc
 ${PYSITELIB}/pgdb.pyo
-${PYSITELIB}/PyGreSQL-4.1-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/PyGreSQL-4.1-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/PyGreSQL-4.1-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/PyGreSQL-4.1-py2.7.egg-info/top_level.txt
 share/doc/${PYPKGPREFIX}-postgresql/docs/announce.html
 share/doc/${PYPKGPREFIX}-postgresql/docs/announce.txt
 share/doc/${PYPKGPREFIX}-postgresql/docs/changelog.html
