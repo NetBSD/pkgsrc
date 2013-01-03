@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2010/09/15 10:32:52 obache Exp $
+$NetBSD: patch-aa,v 1.4 2013/01/03 20:48:47 dholland Exp $
+
+Use both the LDFLAGS from Perl and the directory passed from the
+pkgsrc makefile to find libidn.
 
 --- Makefile.PL.orig	2009-02-26 12:09:45.000000000 +0000
-+++ Makefile.PL	2009-02-28 00:05:41.000000000 +0000
-@@ -47,15 +47,10 @@
++++ Makefile.PL
+@@ -47,15 +47,12 @@ sub InitMakeParams
  		"disable-tld" => \$disable_tld
  	);
  
@@ -15,8 +18,10 @@ $NetBSD: patch-aa,v 1.3 2010/09/15 10:32:52 obache Exp $
 -		$Params{LIBS} = $Config{ldflags} . ' -lidn';
 -	}
 -
-+	$Params{LIBS} = $Config{ldflags};
-+	$Params{LIBS} .= " -L$libdir" if ($libdir);
++	$Params{LIBS} = "";
++	$Params{LIBS} .= "-L$libdir " if ($libdir);
++	$Params{LIBS} .= "-Wl,-R$libdir " if ($libdir);
++	$Params{LIBS} .= $Config{ldflags};
 +	$Params{LIBS} .= " -lidn";
 +	
  	if ($incdir)
