@@ -1,0 +1,15 @@
+qpdfview uses the Poppler library for rendering and CUPS for
+printing. It provides a clear and simple graphical user interface
+using the Qt framework.
+
+Current features include:
+* Outline, properties and thumbnail panes
+* Scale, rotate and fit
+* Fullscreen and presentation views
+* Continuous and multiple-page layouts
+* Search for text
+* Configurable tool bars
+* Persistent per-file settings
+* SyncTeX support
+* Rudimentary annotation support (with Poppler version 0.20.1 or higher)
+* Rudimentary form support
