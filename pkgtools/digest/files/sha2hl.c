@@ -1,4 +1,4 @@
-/* $NetBSD: sha2hl.c,v 1.7 2007/09/21 18:44:38 joerg Exp $	 */
+/* $NetBSD: sha2hl.c,v 1.8 2013/01/03 10:20:31 dholland Exp $	 */
 
 /*
  * sha2hl.c
@@ -45,7 +45,7 @@
 #endif
 
 #ifndef lint
-__RCSID("$NetBSD: sha2hl.c,v 1.7 2007/09/21 18:44:38 joerg Exp $");
+__RCSID("$NetBSD: sha2hl.c,v 1.8 2013/01/03 10:20:31 dholland Exp $");
 #endif				/* not lint */
 
 
@@ -105,10 +105,10 @@ SHA256_File(char *filename, char *buf)
 
 
 char *
-SHA256_End(SHA256_CTX *ctx, uint8_t *buffer)
+SHA256_End(SHA256_CTX *ctx, char *buffer)
 {
 	uint8_t         digest[SHA256_DIGEST_LENGTH], *d = digest;
-	uint8_t	       *ret;
+	char	       *ret;
 	int             i;
 
 	/* Sanity check: */
@@ -131,7 +131,7 @@ SHA256_End(SHA256_CTX *ctx, uint8_t *buffer)
 }
 
 char *
-SHA256_Data(const uint8_t * data, size_t len, uint8_t *digest)
+SHA256_Data(const uint8_t * data, size_t len, char *digest)
 {
 	SHA256_CTX      ctx;
 
@@ -169,7 +169,7 @@ char *
 SHA384_End(SHA384_CTX * ctx, char buffer[])
 {
 	uint8_t         digest[SHA384_DIGEST_LENGTH], *d = digest;
-	uint8_t	       *ret;
+	char	       *ret;
 	int             i;
 
 	/* Sanity check: */
@@ -230,7 +230,7 @@ char *
 SHA512_End(SHA512_CTX * ctx, char buffer[])
 {
 	uint8_t         digest[SHA512_DIGEST_LENGTH], *d = digest;
-	uint8_t	       *ret;
+	char	       *ret;
 	int             i;
 
 	/* Sanity check: */

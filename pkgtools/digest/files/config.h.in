@@ -3,18 +3,9 @@
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
 
-/* Define to 1 if you have the `bcopy' function. */
-#undef HAVE_BCOPY
-
-/* Define to 1 if you have the `bzero' function. */
-#undef HAVE_BZERO
-
 /* Define to 1 if you have the declaration of `strerror_r', and to 0 if you
    don't. */
 #undef HAVE_DECL_STRERROR_R
-
-/* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
-#undef HAVE_DOPRNT
 
 /* Define to 1 if you have the <errno.h> header file. */
 #undef HAVE_ERRNO_H
@@ -28,14 +19,8 @@
 /* Define to 1 if you have the <locale.h> header file. */
 #undef HAVE_LOCALE_H
 
-/* Define to 1 if you have the `memcpy' function. */
-#undef HAVE_MEMCPY
-
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H
-
-/* Define to 1 if you have the `memset' function. */
-#undef HAVE_MEMSET
 
 /* Define to 1 if you have the `setlocale' function. */
 #undef HAVE_SETLOCALE
@@ -72,9 +57,6 @@
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
-
-/* Define to 1 if you have the `vprintf' function. */
-#undef HAVE_VPRINTF
 
 /* Define to the address where bug reports for this package should be sent. */
 #undef PACKAGE_BUGREPORT
@@ -200,23 +182,6 @@
 #include <sys/param.h>
 #endif
 
-#if defined(HAVE_MEMSET)
 #define MEMSET_BZERO(p,l)	memset((p), 0, (l))
-#else
-# if defined(HAVE_BZERO)
-#define MEMSET_BZERO(p,l)	bzero((p), (l))
-# else
-#error You need either memset or bzero
-# endif
-#endif
-
-#if defined(HAVE_MEMCPY)
 #define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
-#else
-# if defined(HAVE_BCOPY)
-#define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
-# else
-#error You need either memcpy or bcopy
-# endif
-#endif
 
