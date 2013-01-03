@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.6 2013/01/03 02:11:36 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.7 2013/01/03 02:18:13 jnemeth Exp $
 
 # PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
 # CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
@@ -11,3 +11,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/fotoxx to 13.01 [ryoon 2013-01-02]
 	Updated net/aria2 to 1.16.1 [ryoon 2013-01-02]
 	Updated comms/asterisk to 11.1.1 [jnemeth 2013-01-03]
+	Updated comms/asterisk to 10.11.1 [jnemeth 2013-01-03]
+	Updated comms/asterisk to 1.8.19.1 [jnemeth 2013-01-03]
