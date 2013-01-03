@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2013/01/03 13:58:35 darcy Exp $
+# $NetBSD: Makefile,v 1.67 2013/01/03 16:56:22 darcy Exp $
 
 DISTNAME=		PyGreSQL-4.1
 PKGNAME=		${PYPKGPREFIX}-postgresql-4.1
@@ -40,6 +40,6 @@ post-install:
 	done
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
