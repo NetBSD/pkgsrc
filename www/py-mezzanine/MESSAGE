@@ -1,0 +1,32 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/01/03 14:29:29 ryoon Exp $
+
+To use Mezzanine, you will need to perform the following steps.
+
+1. If you want to use with PostgreSQL server, install
+   databases/postgresql91-server and enable it, then create database.
+
+	$ sudo ${PREFIX}/share/examples/rc.d/pgsql onestart
+	$ sudo -u pgsql createuser
+	Enter name of role to add: YOURUSERNAME
+	Shall the new role be a superuser? (y/n) n
+	Shall the new role be allowed to create databases? (y/n) y
+	Shall the new role be allowed to create more new roles? (y/n) n
+	$ createdb dev.db -U YOURUSERNAME
+
+2. Change current directory to somewhere you want to deploy website.
+
+	$ mezzanine-project project_name
+	# cd project_name
+
+3. Create database.
+
+	${PYTHONBIN} manage.py createdb --noinput
+
+4. Run web server
+
+	${PYTHONBIN} manage.py runserver
+
+6. Access http://localhost:8000/admin/ and setup. Username/password are
+   admin/default.
+===========================================================================
