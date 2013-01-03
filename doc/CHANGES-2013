@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.29 2013/01/03 15:51:10 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.30 2013/01/03 18:35:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/zsh to 5.0.2 [ryoon 2013-01-03]
 	Updated misc/vym to 2.2.4 [ryoon 2013-01-03]
 	Added net/py-smb version 1.1.2 [ryoon 2013-01-03]
+	Added devel/open-vcdiff version 0.8.3 [agc 2013-01-03]
