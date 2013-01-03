@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2012/12/17 01:58:04 khorben Exp $
+# $NetBSD: Makefile,v 1.552 2013/01/03 13:35:06 ryoon Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -32,6 +32,7 @@ SUBDIR+=	dvidvi
 SUBDIR+=	dviljk
 SUBDIR+=	dvipdfmx
 SUBDIR+=	dvipsk
+SUBDIR+=	electrix
 SUBDIR+=	enscript
 SUBDIR+=	epdfview
 SUBDIR+=	epstool
