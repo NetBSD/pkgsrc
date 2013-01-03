@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2012/11/22 22:45:15 marino Exp $
+$NetBSD: patch-ad,v 1.5 2013/01/03 15:19:53 adam Exp $
 
 --- Makefile.config.in.orig	2012-05-15 22:06:08.000000000 +0000
 +++ Makefile.config.in
-@@ -96,11 +96,11 @@ endif
+@@ -97,11 +97,11 @@ endif
  PROJ_bindir     := $(PROJ_prefix)/bin
  PROJ_libdir     := $(PROJ_prefix)/lib
  PROJ_datadir    := $(PROJ_prefix)/share
