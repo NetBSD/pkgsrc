@@ -1,7 +1,7 @@
-dnl $Id: configure.ac,v 1.17 2011/11/04 23:58:14 cheusov Exp $
+dnl $Id: configure.ac,v 1.18 2013/01/03 10:20:31 dholland Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([nbsd-digest],[20111104],[agc@netbsd.org])
+AC_INIT([nbsd-digest],[20121220],[agc@netbsd.org])
 AC_CONFIG_SRCDIR([digest.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
@@ -37,8 +37,7 @@ AC_C_BIGENDIAN
 
 # Checks for library functions.
 AC_FUNC_STRERROR_R
-AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
+AC_CHECK_FUNCS([setlocale])
 #
 AH_BOTTOM([
 #ifdef HAVE_SYS_CDEFS_H
@@ -93,25 +92,8 @@ AH_BOTTOM([
 #include <sys/param.h>
 #endif
 
-#if defined(HAVE_MEMSET)
 #define MEMSET_BZERO(p,l)	memset((p), 0, (l))
-#else
-# if defined(HAVE_BZERO)
-#define MEMSET_BZERO(p,l)	bzero((p), (l))
-# else
-#error You need either memset or bzero
-# endif
-#endif
-
-#if defined(HAVE_MEMCPY)
 #define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
-#else
-# if defined(HAVE_BCOPY)
-#define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
-# else
-#error You need either memcpy or bcopy
-# endif
-#endif
 ])
 
 AC_CONFIG_FILES([Makefile])
