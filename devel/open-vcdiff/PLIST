@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/01/03 18:33:20 agc Exp $
+bin/vcdiff
+include/google/format_extension_flags.h
+include/google/output_string.h
+include/google/vcdecoder.h
+include/google/vcencoder.h
+lib/libvcdcom.la
+lib/libvcddec.la
+lib/libvcdenc.la
+man/man1/vcdiff.1
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/THANKS
