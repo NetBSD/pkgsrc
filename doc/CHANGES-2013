@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.17 2013/01/03 13:59:54 darcy Exp $
+$NetBSD: CHANGES-2013,v 1.18 2013/01/03 14:01:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -20,3 +20,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/php-piwigo version 2.4.6 [ryoon 2013-01-03]
 	Updated www/jetty7 to 7.6.8.20121106 [ryoon 2013-01-03]
 	Updated databases/py-postgresql to 4.1 [darcy 2013-01-03]
+	Added www/php-tt-rss version 1.6.2 [ryoon 2013-01-03]
