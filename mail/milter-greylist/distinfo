@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2012/12/30 11:41:15 tron Exp $
+$NetBSD: distinfo,v 1.34 2013/01/03 09:50:44 tron Exp $
 
-SHA1 (milter-greylist-4.2.7.tgz) = 560d823b0d4fd25fba6f100ca3073b8e6c89edc2
-RMD160 (milter-greylist-4.2.7.tgz) = a0f9b01bb625b1ab125a681822ec516b8adc627a
-Size (milter-greylist-4.2.7.tgz) = 213919 bytes
+SHA1 (milter-greylist-4.4.1.tgz) = 4ed61d7f76e88266ce21096d08191c23b281bf74
+RMD160 (milter-greylist-4.4.1.tgz) = 17daad46bd5f5e1e5f62cec74d293b2599d8c147
+Size (milter-greylist-4.4.1.tgz) = 229401 bytes
 SHA1 (patch-aa) = c42757814933001ddbcdfb77dd03e17a9c4c8283
-SHA1 (patch-p0f.c) = 9bda4dff42473466548ca649580ba603bc96d389
-SHA1 (patch-spamd.c) = 4cc2804c1177d79bd36b58e34a469fa3d7c92233
+SHA1 (patch-p0f.c) = 01a16304527cad8eb0d0ad8686c2be1e90426c74
+SHA1 (patch-spamd.c) = 7347c4bc4115df743e489ba4221d3d0c50e9d1ef

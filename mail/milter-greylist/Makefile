@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.56 2012/12/30 11:43:23 tron Exp $
+# $NetBSD: Makefile,v 1.57 2013/01/03 09:50:44 tron Exp $
 
-DISTNAME=	milter-greylist-4.2.7
-PKGREVISION=	2
+DISTNAME=	milter-greylist-4.4.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
 
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
-COMMENT=	Easy-to-use greylist milter for sendmail
+COMMENT=	Easy-to-use greylist milter for Sendmail and Postfix
 LICENSE=	original-bsd
 
 # yacc rule moving to y.tab.c and renaming
@@ -23,6 +22,8 @@ RCD_SCRIPTS=		milter-greylist
 
 .include "options.mk"
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-user=${MILTER_USER}
 BUILD_DEFS+=		MILTER_USER MILTER_GROUP VARBASE
 FILES_SUBST+=		MILTER_USER=${MILTER_USER:Q}
