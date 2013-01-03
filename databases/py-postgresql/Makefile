@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2012/10/02 21:25:49 asau Exp $
+# $NetBSD: Makefile,v 1.66 2013/01/03 13:58:35 darcy Exp $
 
-DISTNAME=		PyGreSQL-4.0
-PKGNAME=		${PYPKGPREFIX}-postgresql-4.0
-PKGREVISION=		3
+DISTNAME=		PyGreSQL-4.1
+PKGNAME=		${PYPKGPREFIX}-postgresql-4.1
 CATEGORIES=		databases python
 MASTER_SITES=		http://pygresql.org/files/
 EXTRACT_SUFX=		.tgz
@@ -14,6 +13,7 @@ COMMENT=		Python interface to PostgreSQL
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		BINDIR=${PREFIX}/bin
 USE_TOOLS+=		gmake
+LICENSE=        postgresql-license
 
 MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		INSTALLED_LIBPQ=1
