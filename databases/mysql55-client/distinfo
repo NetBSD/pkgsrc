@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2012/10/01 15:54:40 adam Exp $
+$NetBSD: distinfo,v 1.20 2013/01/03 21:23:04 adam Exp $
 
-SHA1 (mysql-5.5.28.tar.gz) = 7b029e61db68866eeea0bec40d47fcdced30dd36
-RMD160 (mysql-5.5.28.tar.gz) = dbd2a75a2b55e54f5216d0ea1376b97fd7a107de
-Size (mysql-5.5.28.tar.gz) = 24739429 bytes
+SHA1 (mysql-5.5.29.tar.gz) = 40e26b193b6ece86ce97896c0c9c524d479e37be
+RMD160 (mysql-5.5.29.tar.gz) = 6e5535d94393b71b21e60816c3d3c65b5f68ba12
+Size (mysql-5.5.29.tar.gz) = 24870769 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = a1ac666efa953a98455a726e5db359c903d699b6
 SHA1 (patch-CMakeLists.txt) = fc3d3854090ac19dec28ed03b41d78069304f23d
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
@@ -20,7 +20,7 @@ SHA1 (patch-mysys_stacktrace.c) = 294b043984f740b99ba25abc8256ce8ad54d84c3
 SHA1 (patch-scripts_CMakeLists.txt) = 17ec1d8d5f0c9e453c64f2b59e757e645a3a1a59
 SHA1 (patch-scripts_mysqld_safe.sh) = cc34d8b4a8d4b34a6766a1123782ce3d0ad64478
 SHA1 (patch-sql_CMakeLists.txt) = 6cf54ba886f220c8fe7675a0a3acc83257b9f596
-SHA1 (patch-sql_log_event.cc) = 1c4088b367fc300c669d763a1124d8eed4202e18
+SHA1 (patch-sql_log_event.cc) = 3cd966ea4879a6ee9d88b63dfe33d1b00836994f
 SHA1 (patch-sql_log_event.h) = eb9e38bbf50914ee504501b0723b57f80849ef48
 SHA1 (patch-sql_mysqld.cc) = 7e2cfb58f6af8531920dd9128f7b3a35735d7d2c
 SHA1 (patch-sql_sql_string.cc) = 00368733072803d59473410badb82e92673de0a7
