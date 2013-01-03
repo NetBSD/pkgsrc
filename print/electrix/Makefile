@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1 2013/01/03 13:34:14 ryoon Exp $
+#
+
+DISTNAME=	electrix-0.2.0
+CATEGORIES=	print
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=electrix/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://electrix.sourceforge.net/
+COMMENT=	eLectrix is an application to view PDF files
+LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	intltool pkg-config
+
+do-configure:
+	cd ${WRKSRC} && \
+	${PYTHONBIN} ./waf configure --prefix=${DESTDIR}${PREFIX}
+
+do-build:
+	cd ${WRKSRC} && \
+	${PYTHONBIN} ./waf build
+
+do-install:
+	cd ${WRKSRC} && \
+	${PYTHONBIN} ./waf install
+
+.include "../../print/poppler-glib/buildlink3.mk"
+.include "../../print/libspectre/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bsd.pkg.mk"
