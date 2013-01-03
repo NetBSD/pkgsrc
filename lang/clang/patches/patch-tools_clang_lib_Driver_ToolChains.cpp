@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_clang_lib_Driver_ToolChains.cpp,v 1.2 2012/11/29 11:42:25 marino Exp $
+$NetBSD: patch-tools_clang_lib_Driver_ToolChains.cpp,v 1.3 2013/01/03 15:19:53 adam Exp $
 
 DragonFly no longer has gcc 4.1 in base, so clang stopped working.
 We prefer to use gcc 4.7 if available due to a better libstdc++.
@@ -6,7 +6,7 @@ The fallback is gcc 4.4 which has been available for several years.
 
 --- tools/clang/lib/Driver/ToolChains.cpp.orig	2012-05-12 00:16:02.000000000 +0000
 +++ tools/clang/lib/Driver/ToolChains.cpp
-@@ -2307,7 +2307,10 @@ DragonFly::DragonFly(const Driver &D, co
+@@ -2404,7 +2404,10 @@ DragonFly::DragonFly(const Driver &D, co
  
    getFilePaths().push_back(getDriver().Dir + "/../lib");
    getFilePaths().push_back("/usr/lib");
