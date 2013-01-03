@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1678 2013/01/03 14:23:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.1679 2013/01/03 18:34:44 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -497,6 +497,7 @@ SUBDIR+=	ode
 SUBDIR+=	ogre
 SUBDIR+=	omake
 SUBDIR+=	opal
+SUBDIR+=	open-vcdiff
 SUBDIR+=	opencm
 SUBDIR+=	opengrok
 SUBDIR+=	orc
