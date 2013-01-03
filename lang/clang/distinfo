@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.13 2012/11/29 11:42:24 marino Exp $
+$NetBSD: distinfo,v 1.14 2013/01/03 15:19:53 adam Exp $
 
-SHA1 (clang-3.1.src.tar.gz) = 19f33b187a50d22fda2a6f9ed989699a9a9efd62
-RMD160 (clang-3.1.src.tar.gz) = 5ae09d3d69d4f1e50e07f6bf3474da96e6a84feb
-Size (clang-3.1.src.tar.gz) = 8158418 bytes
-SHA1 (llvm-3.1.src.tar.gz) = 234c96e73ef81aec9a54da92fc2a9024d653b059
-RMD160 (llvm-3.1.src.tar.gz) = ceb0ef36ab6109da7a8568b04de759752dbee5a7
-Size (llvm-3.1.src.tar.gz) = 11077429 bytes
-SHA1 (patch-ab) = 140ac84d513cf20c9eb30a9e8e2f6b87bdd074fe
-SHA1 (patch-ac) = 676fbc85e25a8d338a7ac13f79af53666b27da4a
-SHA1 (patch-ad) = 2767a9931b157552f8d6796641e23cce7979dc3d
-SHA1 (patch-projects_sample_autoconf_config.sub) = 7e8449c46ed0c3e5530235d33a35f7f4e083d0b0
-SHA1 (patch-tools_clang_lib_Driver_ToolChains.cpp) = 8298ea94d4a69354be9a6e535e539887eb322ab8
-SHA1 (patch-tools_clang_lib_Driver_Tools.cpp) = f932d4e56bb0c35441a75afd7844358deb5d4361
-SHA1 (patch-tools_clang_lib_Frontend_InitHeaderSearch.cpp) = 18b558f48e73e73e2b90dfb40d512357c0d40da4
+SHA1 (clang-3.2.src.tar.gz) = b0515298c4088aa294edc08806bd671f8819f870
+RMD160 (clang-3.2.src.tar.gz) = 99468c17f3262d8af5dd5a6672fb958a72963ffc
+Size (clang-3.2.src.tar.gz) = 8805311 bytes
+SHA1 (llvm-3.2.src.tar.gz) = 42d139ab4c9f0c539c60f5ac07486e9d30fc1280
+RMD160 (llvm-3.2.src.tar.gz) = 924d85e6129a49b1b639be472b365bed7cd49072
+Size (llvm-3.2.src.tar.gz) = 12275252 bytes
+SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
+SHA1 (patch-ac) = 7fce5070338dcee073aa429b70b47855cd213ec4
+SHA1 (patch-ad) = f563a1016b17632afaa68639d59ee427b6c760f5
+SHA1 (patch-projects_sample_autoconf_config.sub) = 58beef723445df6fa5767ccdc16670c11dcda762
+SHA1 (patch-tools_clang_lib_Driver_ToolChains.cpp) = 1e184e83636b4089e694a079e168188cb60b7e9c
+SHA1 (patch-tools_clang_lib_Driver_Tools.cpp) = 5359329457a2acf7854beef19369679074b44f43
+SHA1 (patch-tools_clang_lib_Frontend_InitHeaderSearch.cpp) = 3c85154a49d0b762fc367584d0faee169516d2b9
 SHA1 (patch-tools_clang_test_Driver_dragonfly.c) = 7e2cf2e40bce1037eb229f8cb399d095385f293e

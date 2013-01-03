@@ -1,12 +1,12 @@
-$NetBSD: patch-projects_sample_autoconf_config.sub,v 1.1 2012/05/25 09:06:53 marino Exp $
+$NetBSD: patch-projects_sample_autoconf_config.sub,v 1.2 2013/01/03 15:19:53 adam Exp $
 
---- projects/sample/autoconf/config.sub.orig	2003-10-16 01:44:20.000000000 +0000
+--- projects/sample/autoconf/config.sub.orig	2012-04-27 10:27:32.000000000 +0000
 +++ projects/sample/autoconf/config.sub
-@@ -1114,6 +1114,7 @@ case $os in
- 	      | -hpux* | -unos* | -osf* | -luna* | -dgux* | -solaris* | -sym* \
+@@ -1333,6 +1333,7 @@ case $os in
+ 	      | -sym* | -kopensolaris* \
  	      | -amigaos* | -amigados* | -msdos* | -newsos* | -unicos* | -aof* \
- 	      | -aos* \
+ 	      | -aos* | -aros* \
 +	      | -dragonfly* \
  	      | -nindy* | -vxsim* | -vxworks* | -ebmon* | -hms* | -mvs* \
  	      | -clix* | -riscos* | -uniplus* | -iris* | -rtu* | -xenix* \
- 	      | -hiux* | -386bsd* | -netbsd* | -openbsd* | -freebsd* | -riscix* \
+ 	      | -hiux* | -386bsd* | -knetbsd* | -mirbsd* | -netbsd* \
