@@ -1,10 +1,6 @@
-$NetBSD: CHANGES-2013,v 1.7 2013/01/03 02:18:13 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.8 2013/01/03 09:36:01 agc Exp $
 
-# PLEASE NOTE THAT THE PKGSRC REPOSITORY IS FROZEN FOR INFRASTRUCTURE
-# CHANGES, CHANGES TO NON-LEAF PACKAGES, and FOR NEW PACKAGES.
-# Mon Dec 17 23:59:40 UTC 2012
-
-Changes to the packages collection and infrastructure in 2012:
+Changes to the packages collection and infrastructure in 2013:
 
 	Updated textproc/mdoclint to 1.18 [jnemeth 2013-01-01]
 	Updated graphics/blender to 2.65a [ryoon 2013-01-02]
@@ -13,3 +9,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk to 11.1.1 [jnemeth 2013-01-03]
 	Updated comms/asterisk to 10.11.1 [jnemeth 2013-01-03]
 	Updated comms/asterisk to 1.8.19.1 [jnemeth 2013-01-03]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q4 branch [agc 2013-01-03]
