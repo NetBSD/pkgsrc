@@ -1,10 +1,20 @@
-$NetBSD: patch-spamd.c,v 1.1 2012/03/12 13:17:22 fhajny Exp $
+$NetBSD: patch-spamd.c,v 1.2 2013/01/03 09:50:44 tron Exp $
 
 Rename 'sun' to 's_un' to avoid a conflict on SunOS
-
---- spamd.c.orig	2010-06-22 02:13:41.000000000 +0000
+and include <strings.h> if present
+--- spamd.c.orig	2012-02-24 02:25:46.000000000 +0000
 +++ spamd.c
-@@ -422,19 +422,19 @@ static int
+@@ -44,6 +44,9 @@ __RCSID("$Id: spamd.c,v 1.22 2012/02/24
+ #include <stdlib.h>
+ #include <errno.h>
+ #include <string.h>
++#ifdef HAVE_STRINGS_H
++#include <strings.h>            /* bzero, ... */
++#endif
+ #include <unistd.h>
+ #include <netdb.h>
+ #include <sys/types.h>
+@@ -436,12 +439,12 @@ static int
  spamd_unix_socket(path)
  	char *path;
  {
@@ -21,8 +31,9 @@ Rename 'sun' to 's_un' to avoid a conflict on SunOS
  
  	if ((sock = socket(AF_UNIX, SOCK_STREAM, 0)) == -1) {
  		mg_log(LOG_ERR, "spamd socket failed: %s", strerror(errno));
- 		return -1;
- 	}
+@@ -450,7 +453,7 @@ spamd_unix_socket(path)
+ 
+ 	SET_CLOEXEC(sock);
  
 -	if (connect(sock, (struct sockaddr*) &sun, sizeof(sun))) {
 +	if (connect(sock, (struct sockaddr*) &s_un, sizeof(s_un))) {
