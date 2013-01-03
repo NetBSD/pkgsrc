@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1677 2013/01/03 14:16:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.1678 2013/01/03 14:23:47 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1354,6 +1354,7 @@ SUBDIR+=	py-msgpack
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-nose
 SUBDIR+=	py-ordereddict
+SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip
 SUBDIR+=	py-pqueue
