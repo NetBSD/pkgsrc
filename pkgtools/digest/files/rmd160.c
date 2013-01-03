@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.7 2007/09/21 18:44:37 joerg Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.8 2013/01/03 10:20:31 dholland Exp $	*/
 
 /********************************************************************\
  *
@@ -23,7 +23,7 @@
 #endif
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.7 2007/09/21 18:44:37 joerg Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.8 2013/01/03 10:20:31 dholland Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -40,15 +40,7 @@ __RCSID("$NetBSD: rmd160.c,v 1.7 2007/09/21 18:44:37 joerg Exp $");
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-#if defined(HAVE_MEMSET)
 #define ZEROIZE(d, l)           memset((d), 0, (l)) 
-#else 
-# if defined(HAVE_BZERO)
-#define ZEROIZE(d, l)           bzero((d), (l))
-# else
-#error You need either memset or bzero 
-# endif 
-#endif
 
 #if 0
 #if !defined(_KERNEL) && defined(__weak_alias)

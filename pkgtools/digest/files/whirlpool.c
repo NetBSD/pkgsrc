@@ -1552,14 +1552,14 @@ whirlpool_update(whirlpool_context_t *structpointer, const unsigned char *source
  * This method uses the invariant: bufferBits < WHIRLPOOL_DIGEST_BITS
  */
 static void
-whirlpool_finalize(unsigned char *result, whirlpool_context_t *structpointer)
+whirlpool_finalize(char *result, whirlpool_context_t *structpointer)
 {
     int i;
     u8 *buffer      = structpointer->buffer;
     u8 *bitLength   = structpointer->bitLength;
     int bufferBits  = structpointer->bufferBits;
     int bufferPos   = structpointer->bufferPos;
-    u8 *digest      = result;
+    char *digest    = result;
 
     /*
      * append a '1'-bit:
