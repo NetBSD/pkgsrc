@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:56:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/01/03 00:45:55 ryoon Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
 PKGREVISION=		2
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.opendylan.org/pub/gd/src/tar/ \
-			ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/tar/ \
+MASTER_SITES=		ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/tar/ \
 			ftp://ftp.ntua.gr/pub/lang/gwydion/src/tar/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
