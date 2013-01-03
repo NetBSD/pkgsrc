@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: jetty.sh,v 1.2 2011/12/16 17:03:28 ryoon Exp $
+# $NetBSD: jetty.sh,v 1.3 2013/01/03 13:56:14 ryoon Exp $
 #
 # PROVIDE: jetty
 # REQUIRE: DAEMON
@@ -28,10 +28,14 @@ start_precmd="jetty_precmd"
 
 PREFIX=@PREFIX@
 
+JAVA_OPTIONS="-Xmx768M -Djava.nio.channels.spi.SelectorProvider=sun.nio.ch .PollSelectorProvider"
+
 if [ -z "${JAVA_HOME}" ]
 then
 	JAVA_HOME="@JAVA_HOME@"
 	export JAVA_HOME
+	JAVA="@JAVA_HOME@/bin/java"
+	export JAVA
 fi
 
 
