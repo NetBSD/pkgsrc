@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino Exp $
+$NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.3 2013/01/03 15:19:53 adam Exp $
 
 * DragonFly no longer has gcc 4.1 in base, so clang stopped working.
   We prefer to use gcc 4.7 if available due to a better libstdc++.
@@ -9,9 +9,9 @@ $NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino
 * DragonFly: Added -export-dynamic (matches gcc dumpspecs)
 * DragonFly: Added gnu-hash to shared objects
 
---- tools/clang/lib/Driver/Tools.cpp.orig	2012-04-18 21:32:25.000000000 +0000
+--- tools/clang/lib/Driver/Tools.cpp.orig	2012-11-21 07:56:23.000000000 +0000
 +++ tools/clang/lib/Driver/Tools.cpp
-@@ -5441,21 +5441,28 @@ void dragonfly::Link::ConstructJob(Compi
+@@ -6238,21 +6238,28 @@ void dragonfly::Link::ConstructJob(Compi
                                     const InputInfoList &Inputs,
                                     const ArgList &Args,
                                     const char *LinkingOutput) const {
@@ -40,7 +40,7 @@ $NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino
    }
  
    // When building 32-bit code on DragonFly/pc64, we have to explicitly
-@@ -5475,18 +5482,26 @@ void dragonfly::Link::ConstructJob(Compi
+@@ -6272,18 +6279,26 @@ void dragonfly::Link::ConstructJob(Compi
    if (!Args.hasArg(options::OPT_nostdlib) &&
        !Args.hasArg(options::OPT_nostartfiles)) {
      if (!Args.hasArg(options::OPT_shared)) {
@@ -78,7 +78,7 @@ $NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino
    }
  
    Args.AddAllArgs(CmdArgs, options::OPT_L);
-@@ -5499,20 +5514,19 @@ void dragonfly::Link::ConstructJob(Compi
+@@ -6296,20 +6311,19 @@ void dragonfly::Link::ConstructJob(Compi
        !Args.hasArg(options::OPT_nodefaultlibs)) {
      // FIXME: GCC passes on -lgcc, -lgcc_pic and a whole lot of
      //         rpaths
@@ -110,7 +110,7 @@ $NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino
      }
  
      if (D.CCCIsCXX) {
-@@ -5520,13 +5534,6 @@ void dragonfly::Link::ConstructJob(Compi
+@@ -6317,13 +6331,6 @@ void dragonfly::Link::ConstructJob(Compi
        CmdArgs.push_back("-lm");
      }
  
@@ -124,7 +124,7 @@ $NetBSD: patch-tools_clang_lib_Driver_Tools.cpp,v 1.2 2012/11/29 11:42:25 marino
      if (Args.hasArg(options::OPT_pthread))
        CmdArgs.push_back("-lpthread");
  
-@@ -5534,23 +5541,42 @@ void dragonfly::Link::ConstructJob(Compi
+@@ -6331,23 +6338,42 @@ void dragonfly::Link::ConstructJob(Compi
        CmdArgs.push_back("-lc");
      }
  
