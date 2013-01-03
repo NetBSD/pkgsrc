@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/15 22:19:11 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/01/03 13:56:13 ryoon Exp $
 
-SHA1 (jetty-distribution-7.5.4.v20111024.tar.gz) = a5007de6f0c81c1b1551fd58f369ce7a2a554216
-RMD160 (jetty-distribution-7.5.4.v20111024.tar.gz) = 0c26a161ea8caa4e0b47ee8614d469021eeccc88
-Size (jetty-distribution-7.5.4.v20111024.tar.gz) = 12304533 bytes
+SHA1 (jetty-distribution-7.6.8.v20121106.tar.gz) = af1baaab04dde6b82366833a0b9e729be5a56a06
+RMD160 (jetty-distribution-7.6.8.v20121106.tar.gz) = 3c83ed6ae84eac00a213cd8ed0fc87b1c9479f9f
+Size (jetty-distribution-7.6.8.v20121106.tar.gz) = 8714368 bytes
