@@ -1,20 +1,20 @@
-$NetBSD: patch-ac,v 1.5 2012/11/22 22:45:15 marino Exp $
+$NetBSD: patch-ac,v 1.6 2013/01/03 15:19:53 adam Exp $
 
---- Makefile.rules.orig	2012-05-15 22:06:08.000000000 +0000
+--- Makefile.rules.orig	2012-10-12 21:48:14.000000000 +0000
 +++ Makefile.rules
-@@ -625,11 +625,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS),
- ifneq ($(HOST_OS), Darwin)
- ifdef TOOLNAME
-   LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
--  ifdef EXAMPLE_TOOL
--    LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(DynamicFlag)
--  else
--    LD.Flags += $(RPATH) -Wl,$(ToolDir) $(DynamicFlag)
--  endif
- endif
+@@ -638,11 +638,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), 
+   ifneq ($(HOST_OS), Darwin)
+     ifdef TOOLNAME
+       LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
+-      ifdef EXAMPLE_TOOL
+-        LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(DynamicFlag)
+-      else
+-        LD.Flags += $(RPATH) -Wl,$(ToolDir) $(DynamicFlag)
+-    endif
+   endif
  else
- ifneq ($(DARWIN_MAJVERS),4)
-@@ -821,9 +816,6 @@ endif
+   ifneq ($(DARWIN_MAJVERS),4)
+@@ -838,9 +833,6 @@ endif
  # in the file so they get built before dependencies
  #---------------------------------------------------------
  
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.5 2012/11/22 22:45:15 marino Exp $
  # To create other directories, as needed, and timestamp their creation
  %/.dir:
  	$(Verb) $(MKDIR) $* > /dev/null
-@@ -958,7 +950,9 @@ install-local::
+@@ -975,7 +967,9 @@ install-local::
  uninstall-local::
  	$(Echo) UnInstall circumvented with NO_INSTALL
  else
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.5 2012/11/22 22:45:15 marino Exp $
  	$(Echo) Installing Configuration Files To $(DESTDIR)$(PROJ_etcdir)
  	$(Verb)for file in $(CONFIG_FILES); do \
            if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
-@@ -1380,7 +1374,7 @@ install-local:: $(DestArchiveLib)
+@@ -1397,7 +1391,7 @@ install-local:: $(DestArchiveLib)
  $(DestArchiveLib): $(LibName.A) $(DESTDIR)$(PROJ_libdir)
  	$(Echo) Installing $(BuildMode) Archive Library $(DestArchiveLib)
  	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_libdir)

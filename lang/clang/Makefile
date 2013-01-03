@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2012/11/29 11:42:24 marino Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/03 15:19:53 adam Exp $
 
-DISTNAME=	clang-3.1
-PKGREVISION=	3
+DISTNAME=	clang-3.2
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.gz \
@@ -15,7 +14,7 @@ LICENSE=	modified-bsd
 WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		chown gmake perl pod2man pod2html
+USE_TOOLS+=		chown gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
@@ -43,4 +42,5 @@ post-extract:
 	mv ${WRKDIR}/clang-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
 
 .include "../../lang/python/tool.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
