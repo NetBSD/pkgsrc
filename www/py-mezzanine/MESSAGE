@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/01/03 14:29:29 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2013/01/03 15:31:08 ryoon Exp $
 
 To use Mezzanine, you will need to perform the following steps.
 
@@ -7,8 +7,10 @@ To use Mezzanine, you will need to perform the following steps.
    databases/postgresql91-server and enable it, then create database.
 
 	$ sudo ${PREFIX}/share/examples/rc.d/pgsql onestart
-	$ sudo -u pgsql createuser
+	$ sudo -u pgsql createuser -P
 	Enter name of role to add: YOURUSERNAME
+	Enter password for new role: YOURPASSWORD
+	Enter it again: YOURPASSWORD
 	Shall the new role be a superuser? (y/n) n
 	Shall the new role be allowed to create databases? (y/n) y
 	Shall the new role be allowed to create more new roles? (y/n) n
@@ -19,11 +21,32 @@ To use Mezzanine, you will need to perform the following steps.
 	$ mezzanine-project project_name
 	# cd project_name
 
-3. Create database.
+3. Edit local_settings.py.
+
+DEBUG = True
+
+DATABASES = {
+    "default": {
+        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        # DB name or path to database file if using sqlite3.
+        "NAME": "dev.db",
+        # Not used with sqlite3.
+        "USER": "YOUUSERNAME",
+        # Not used with sqlite3.
+        "PASSWORD": "YOURPASSWORD",
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "",
+        # Set to empty string for default. Not used with sqlite3.
+        "PORT": "",
+    }
+}
+
+4. Create database.
 
 	${PYTHONBIN} manage.py createdb --noinput
 
-4. Run web server
+5. Run web server
 
 	${PYTHONBIN} manage.py runserver
 
