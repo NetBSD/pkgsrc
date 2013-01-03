@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.26 2012/08/17 10:53:10 wiz Exp $
+$NetBSD: patch-ac,v 1.27 2013/01/03 15:37:23 ryoon Exp $
 
 First chunk:
 Add support for thread limits.
@@ -15,9 +15,9 @@ All chunks:
 Accepted by Peter Stephenson <p.w.stephenson@ntlworld.com> on
 zsh-workers on 2012-08-16.
 
---- configure.orig	2012-06-21 18:36:43.000000000 +0000
+--- configure.orig	2012-09-15 20:13:14.000000000 +0000
 +++ configure
-@@ -9608,6 +9608,42 @@ if test $zsh_cv_have_RLIMIT_NPROC = yes;
+@@ -9645,6 +9645,42 @@ if test $zsh_cv_have_RLIMIT_NTHR = yes; 
  
  fi
  
@@ -60,7 +60,7 @@ zsh-workers on 2012-08-16.
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for limit RLIMIT_NOFILE" >&5
  $as_echo_n "checking for limit RLIMIT_NOFILE... " >&6; }
  if ${zsh_cv_have_RLIMIT_NOFILE+:} false; then :
-@@ -11589,6 +11625,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
+@@ -11630,6 +11666,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
          DLLD="${DLLD=$CC}"
          DLLDARG=""
        ;;
@@ -71,23 +71,3 @@ zsh-workers on 2012-08-16.
        * )
  	DLLD="${DLLD=ld}"
  	DLLDARG=""
-@@ -11599,6 +11639,7 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
-     case "$host_os" in
-       hpux*)   DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
-       darwin*) DLCFLAGS="${DLCFLAGS=-fno-common}" ;;
-+      interix*) DLCFLAGS="${DLCFLAGS=}" ;;
-       *)       DLCFLAGS="${DLCFLAGS=-fPIC}" ;;
-     esac
-   else
-@@ -11613,10 +11654,9 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
-   fi
-   case "$host_os" in
-     osf*) DLLDFLAGS="${DLLDFLAGS=-shared -expect_unresolved '*'}" ;;
--    *freebsd*|linux*|irix*|gnu*|dragonfly*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
-+    *freebsd*|*netbsd*|linux*|irix*|gnu*|interix*|dragonfly*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
-     sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
-     sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
--    netbsd*)      DLLDFLAGS="${DLLDFLAGS=${DLLDARG}-x -shared --whole-archive}" ;;
-     aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
-     solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G}" ;;
-     darwin*)      DLLDFLAGS="${DLLDFLAGS=-bundle -flat_namespace -undefined suppress}" ;;
