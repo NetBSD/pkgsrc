@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.911 2013/01/03 14:11:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.912 2013/01/03 14:30:12 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -559,6 +559,7 @@ SUBDIR+=	py-genshi
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-mechanize
+SUBDIR+=	py-mezzanine
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
