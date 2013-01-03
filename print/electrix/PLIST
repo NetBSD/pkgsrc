@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/03 13:34:14 ryoon Exp $
+bin/electrix
+share/applications/electrix.desktop
+share/locale/ru/LC_MESSAGES/electrix.mo
+share/locale/sv/LC_MESSAGES/electrix.mo
+share/locale/tr/LC_MESSAGES/electrix.mo
