@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/03 14:19:01 ryoon Exp $
+
+SHA1 (pep8-1.3.4.tar.gz) = c36daffa0f5a973c2dafbad31ba5bb00f12374b3
+RMD160 (pep8-1.3.4.tar.gz) = cd2288a6069dea37395e0db6c78f954af73ac150
+Size (pep8-1.3.4.tar.gz) = 44706 bytes
