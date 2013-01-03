@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.907 2013/01/03 13:50:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.908 2013/01/03 14:00:26 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -522,6 +522,7 @@ SUBDIR+=	php-piwigo
 SUBDIR+=	php-soycms
 SUBDIR+=	php-tidy
 SUBDIR+=	php-tiki6
+SUBDIR+=	php-tt-rss
 SUBDIR+=	php-uploadprogress
 SUBDIR+=	phraseanet
 SUBDIR+=	phraseanet-indexer
