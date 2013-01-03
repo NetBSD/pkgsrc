@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.30 2013/01/03 18:35:46 agc Exp $
+$NetBSD: CHANGES-2013,v 1.31 2013/01/03 18:57:44 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/vym to 2.2.4 [ryoon 2013-01-03]
 	Added net/py-smb version 1.1.2 [ryoon 2013-01-03]
 	Added devel/open-vcdiff version 0.8.3 [agc 2013-01-03]
+	Updated www/py-moin to 1.9.6 [gls 2013-01-03]
