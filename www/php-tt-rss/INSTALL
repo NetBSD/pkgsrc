@@ -1,0 +1,14 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2013/01/03 13:59:44 ryoon Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+TR_DIR="@PREFIX@/@TR_DIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	${CHOWN} -R ${WWWOWN} ${TR_DIR} &&
+	${CHGRP} -R ${WWWGRP} ${TR_DIR}
+	;;
+esac
