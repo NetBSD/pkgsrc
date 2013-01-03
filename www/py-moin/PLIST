@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/06/03 22:49:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/01/03 18:54:38 gls Exp $
 bin/moin
 ${PYSITELIB}/MoinMoin/Page.py
 ${PYSITELIB}/MoinMoin/Page.pyc
@@ -848,6 +848,9 @@ ${PYSITELIB}/MoinMoin/script/migration/1080700.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1080800.py
 ${PYSITELIB}/MoinMoin/script/migration/1080800.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1080800.pyo
+${PYSITELIB}/MoinMoin/script/migration/1080900.py
+${PYSITELIB}/MoinMoin/script/migration/1080900.pyc
+${PYSITELIB}/MoinMoin/script/migration/1080900.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1089999.py
 ${PYSITELIB}/MoinMoin/script/migration/1089999.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1089999.pyo
@@ -866,6 +869,12 @@ ${PYSITELIB}/MoinMoin/script/migration/1090300.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1090400.py
 ${PYSITELIB}/MoinMoin/script/migration/1090400.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1090400.pyo
+${PYSITELIB}/MoinMoin/script/migration/1090500.py
+${PYSITELIB}/MoinMoin/script/migration/1090500.pyc
+${PYSITELIB}/MoinMoin/script/migration/1090500.pyo
+${PYSITELIB}/MoinMoin/script/migration/1090600.py
+${PYSITELIB}/MoinMoin/script/migration/1090600.pyc
+${PYSITELIB}/MoinMoin/script/migration/1090600.pyo
 ${PYSITELIB}/MoinMoin/script/migration/__init__.py
 ${PYSITELIB}/MoinMoin/script/migration/__init__.pyc
 ${PYSITELIB}/MoinMoin/script/migration/__init__.pyo
