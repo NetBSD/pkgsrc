@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.14 2012/12/05 16:37:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/01/03 13:46:28 ryoon Exp $
 bin/fotoxx
 man/man1/fotoxx.1
 share/applications/kornelix-fotoxx.desktop
 share/doc/fotoxx/KB-shortcuts
 share/doc/fotoxx/README
+share/doc/fotoxx/README-ca
+share/doc/fotoxx/README-es
 share/doc/fotoxx/changelog
 share/doc/fotoxx/copyright
 share/doc/fotoxx/edit-menus
+share/doc/fotoxx/edit-menus-ca
+share/doc/fotoxx/edit-menus-es
 share/doc/fotoxx/fotoxx.man
 share/doc/fotoxx/freecode
 share/doc/fotoxx/images/CMYK.jpg
@@ -22,6 +26,7 @@ share/doc/fotoxx/images/batch-rename.jpg
 share/doc/fotoxx/images/bright-ramp.jpg
 share/doc/fotoxx/images/brightness-color.jpg
 share/doc/fotoxx/images/chromatic.jpg
+share/doc/fotoxx/images/collections.jpg
 share/doc/fotoxx/images/colorchart.png
 share/doc/fotoxx/images/denoise.jpg
 share/doc/fotoxx/images/edit-caption-comments.jpg
@@ -30,6 +35,7 @@ share/doc/fotoxx/images/edit-translation.jpg
 share/doc/fotoxx/images/expand-brightness.jpg
 share/doc/fotoxx/images/favorites.jpg
 share/doc/fotoxx/images/flatten.jpg
+share/doc/fotoxx/images/fotoxx.jpg
 share/doc/fotoxx/images/gallery-selection.jpg
 share/doc/fotoxx/images/gallery-toolbar.jpg
 share/doc/fotoxx/images/gamma-curve.jpg
@@ -39,9 +45,7 @@ share/doc/fotoxx/images/grid-lines.jpg
 share/doc/fotoxx/images/keystone.jpg
 share/doc/fotoxx/images/leverage-edits.jpg
 share/doc/fotoxx/images/main-toolbar.jpg
-share/doc/fotoxx/images/manage-collections.jpg
 share/doc/fotoxx/images/match-colors.jpg
-share/doc/fotoxx/images/navigation.jpg
 share/doc/fotoxx/images/paint-edits.jpg
 share/doc/fotoxx/images/paint-pixels.jpg
 share/doc/fotoxx/images/pano-color.jpg
@@ -85,10 +89,58 @@ share/fotoxx/icons/cancel.png
 share/fotoxx/icons/discard.png
 share/fotoxx/icons/down+.png
 share/fotoxx/icons/down.png
+share/fotoxx/icons/edit-funcs/CMYK.png
+share/fotoxx/icons/edit-funcs/HDF.png
+share/fotoxx/icons/edit-funcs/HDR.png
+share/fotoxx/icons/edit-funcs/RGB.png
+share/fotoxx/icons/edit-funcs/blur.png
+share/fotoxx/icons/edit-funcs/bright distrib.png
+share/fotoxx/icons/edit-funcs/brigth color sat.png
+share/fotoxx/icons/edit-funcs/brigth ramp.png
+share/fotoxx/icons/edit-funcs/color depth.png
+share/fotoxx/icons/edit-funcs/crop rotate.png
+share/fotoxx/icons/edit-funcs/dots.png
+share/fotoxx/icons/edit-funcs/drawing01.png
+share/fotoxx/icons/edit-funcs/embossing.png
+share/fotoxx/icons/edit-funcs/expand bright.png
+share/fotoxx/icons/edit-funcs/fix fringes.png
+share/fotoxx/icons/edit-funcs/fix stuck pixels.png
+share/fotoxx/icons/edit-funcs/flatten bright.png
+share/fotoxx/icons/edit-funcs/flip.png
+share/fotoxx/icons/edit-funcs/gamma.png
+share/fotoxx/icons/edit-funcs/invert.png
+share/fotoxx/icons/edit-funcs/keystone.png
+share/fotoxx/icons/edit-funcs/landscape.png
+share/fotoxx/icons/edit-funcs/leverage edit.png
+share/fotoxx/icons/edit-funcs/outlines.png
+share/fotoxx/icons/edit-funcs/paint edits.png
+share/fotoxx/icons/edit-funcs/paint pixels.png
+share/fotoxx/icons/edit-funcs/painting.png
+share/fotoxx/icons/edit-funcs/panorama.png
+share/fotoxx/icons/edit-funcs/pencil.png
+share/fotoxx/icons/edit-funcs/red eyes.png
+share/fotoxx/icons/edit-funcs/reduce noise.png
+share/fotoxx/icons/edit-funcs/remove dust.png
+share/fotoxx/icons/edit-funcs/resize.png
+share/fotoxx/icons/edit-funcs/sharpen.png
+share/fotoxx/icons/edit-funcs/shiftcolors.png
+share/fotoxx/icons/edit-funcs/smarterase.png
+share/fotoxx/icons/edit-funcs/stacknoise.png
+share/fotoxx/icons/edit-funcs/stackpaint.png
+share/fotoxx/icons/edit-funcs/text.png
+share/fotoxx/icons/edit-funcs/tiles.png
+share/fotoxx/icons/edit-funcs/tonemapping.png
+share/fotoxx/icons/edit-funcs/unbend.png
+share/fotoxx/icons/edit-funcs/vert panorama.png
+share/fotoxx/icons/edit-funcs/voodoo.png
+share/fotoxx/icons/edit-funcs/warp affine.png
+share/fotoxx/icons/edit-funcs/warp area.png
+share/fotoxx/icons/edit-funcs/warp curved.png
+share/fotoxx/icons/edit-funcs/warp linear.png
+share/fotoxx/icons/edit-funcs/whitebalance.png
 share/fotoxx/icons/favorites.png
 share/fotoxx/icons/fg-color.png
 share/fotoxx/icons/folder.png
-share/fotoxx/icons/fotoxx-banner.png
 share/fotoxx/icons/fotoxx.png
 share/fotoxx/icons/help.png
 share/fotoxx/icons/next.png
