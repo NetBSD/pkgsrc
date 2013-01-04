@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.8 2008/11/18 21:58:22 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.9 2013/01/04 10:51:57 jperkin Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -53,7 +53,7 @@ find * -type f -print 2>/dev/null \
 		"#!"*"/bin/sh")
 			check_shell "$fname"
 			case "$opsys" in
-			SunOS-*)
+			SunOS-5.[0-9]|SunOS-5.10)
 				echo "WARNING: [check-portability.sh] $fname has /bin/sh as interpreter, which is horribly broken on Solaris." 1>&2
 				;;
 			esac
