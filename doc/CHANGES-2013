@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.32 2013/01/03 21:24:59 adam Exp $
+$NetBSD: CHANGES-2013,v 1.33 2013/01/04 03:10:03 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -39,3 +39,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3-tcl to 3.7.15.1 [adam 2013-01-03]
 	Updated databases/mysql55-client to 5.5.29 [adam 2013-01-03]
 	Updated databases/mysql55-server to 5.5.29 [adam 2013-01-03]
+	Updated comms/asterisk to 11.1.2 [jnemeth 2013-01-04]
