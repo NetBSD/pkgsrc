@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2009/07/22 16:37:26 drochner Exp $
+$NetBSD: patch-aa,v 1.10 2013/01/04 13:33:43 jperkin Exp $
 
---- ../sqlite-2.8.17/src/sqliteInt.h.orig	2005-02-14 01:22:06.000000000 +0100
-+++ ../sqlite-2.8.17/src/sqliteInt.h
+--- src/sqliteInt.h.orig	2005-02-14 01:22:06.000000000 +0100
++++ src/sqliteInt.h
 @@ -15,4 +15,5 @@
  */
  #include "config.h"
