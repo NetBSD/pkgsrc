@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.34 2013/01/04 06:09:27 apb Exp $
+$NetBSD: CHANGES-2013,v 1.35 2013/01/04 09:30:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -41,3 +41,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql55-server to 5.5.29 [adam 2013-01-03]
 	Updated comms/asterisk to 11.1.2 [jnemeth 2013-01-04]
 	Updated pkgtools/libkver to 0.7.1 [apb 2013-01-04]
+	Updated textproc/icu to 50.1.1 [adam 2013-01-04]
