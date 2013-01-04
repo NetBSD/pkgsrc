@@ -1,4 +1,4 @@
-/*	$NetBSD: kver.c,v 1.11 2012/10/31 14:41:55 apb Exp $	*/
+/*	$NetBSD: kver.c,v 1.12 2013/01/04 06:00:48 apb Exp $	*/
 
 #define sysctl _sysctl
 #define uname _uname
@@ -251,7 +251,7 @@ kver_initialize(void)
 	/* machine_arch is not in struct utsname, so get default from sysctl */
 	if (kver.machine_arch[0] == '\0') {
 		int mib[] = { CTL_HW, HW_MACHINE_ARCH, 0 };
-		int len = sizeof(kver.machine_arch);
+		size_t len = sizeof(kver.machine_arch);
 		int err;
 
 		err = _sysctl(mib, 2, kver.machine_arch, &len, NULL, 0);
