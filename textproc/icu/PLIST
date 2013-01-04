@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2012/11/07 20:59:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2013/01/04 09:29:55 adam Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -54,6 +54,7 @@ include/unicode/dtitvfmt.h
 include/unicode/dtitvinf.h
 include/unicode/dtptngen.h
 include/unicode/dtrule.h
+include/unicode/enumset.h
 include/unicode/errorcode.h
 include/unicode/fieldpos.h
 include/unicode/fmtable.h
