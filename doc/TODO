@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11798 2013/01/03 22:09:23 wiz Exp $
+$NetBSD: TODO,v 1.11799 2013/01/04 04:25:44 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1240,8 +1240,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
-	o wine-1.4.1 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
-	o wine-devel-1.5.20 [wait until NetBSD gains OSS 4 or bring OSS 3 support back]
+	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.5.20 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
