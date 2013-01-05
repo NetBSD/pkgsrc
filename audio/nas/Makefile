@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2012/10/02 23:48:01 asau Exp $
+# $NetBSD: Makefile,v 1.90 2013/01/05 12:57:21 mef Exp $
 
-DISTNAME=	nas-1.9.1.src
+DISTNAME=	nas-1.9.3.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nas/}
 
