@@ -1,17 +1,20 @@
-@comment $NetBSD: PLIST,v 1.7 2012/11/12 19:23:35 pettai Exp $
-bin/opendkim-genkey
-bin/opendkim-genzone
-bin/opendkim-testadsp
-bin/opendkim-testkey
-bin/opendkim-testmsg
+@comment $NetBSD: PLIST,v 1.8 2013/01/05 17:05:07 pettai Exp $
 include/opendkim/dkim.h
 lib/libopendkim.la
 lib/pkgconfig/opendkim.pc
+man/man5/opendkim.conf.5
 man/man8/opendkim-genkey.8
 man/man8/opendkim-genzone.8
 man/man8/opendkim-testadsp.8
 man/man8/opendkim-testkey.8
 man/man8/opendkim-testmsg.8
+man/man8/opendkim.8
+sbin/opendkim
+sbin/opendkim-genkey
+sbin/opendkim-genzone
+sbin/opendkim-testadsp
+sbin/opendkim-testkey
+sbin/opendkim-testmsg
 share/doc/opendkim/FEATURES
 share/doc/opendkim/KNOWNBUGS
 share/doc/opendkim/LICENSE
@@ -26,6 +29,7 @@ share/doc/opendkim/authheaders-check-setup-hook.lua
 share/doc/opendkim/chroot
 share/doc/opendkim/convert_keylist.sh
 share/doc/opendkim/dkim.html
+share/doc/opendkim/dkim_add_querymethod.html
 share/doc/opendkim/dkim_add_xtag.html
 share/doc/opendkim/dkim_alg_t.html
 share/doc/opendkim/dkim_body.html
@@ -34,10 +38,20 @@ share/doc/opendkim/dkim_cbstat.html
 share/doc/opendkim/dkim_chunk.html
 share/doc/opendkim/dkim_close.html
 share/doc/opendkim/dkim_diffheaders.html
+share/doc/opendkim/dkim_dns_close.html
+share/doc/opendkim/dkim_dns_config.html
+share/doc/opendkim/dkim_dns_init.html
+share/doc/opendkim/dkim_dns_nslist.html
+share/doc/opendkim/dkim_dns_set_close.html
+share/doc/opendkim/dkim_dns_set_config.html
+share/doc/opendkim/dkim_dns_set_init.html
+share/doc/opendkim/dkim_dns_set_nslist.html
 share/doc/opendkim/dkim_dns_set_query_cancel.html
 share/doc/opendkim/dkim_dns_set_query_service.html
 share/doc/opendkim/dkim_dns_set_query_start.html
 share/doc/opendkim/dkim_dns_set_query_waitreply.html
+share/doc/opendkim/dkim_dns_set_trustanchor.html
+share/doc/opendkim/dkim_dns_trustanchor.html
 share/doc/opendkim/dkim_dnssec.html
 share/doc/opendkim/dkim_eoh.html
 share/doc/opendkim/dkim_eom.html
@@ -146,3 +160,4 @@ share/doc/opendkim/opendkim.spec.in
 share/doc/opendkim/opendkim.xml
 share/doc/opendkim/overview.html
 share/doc/opendkim/stats.lua
+share/examples/rc.d/opendkim
