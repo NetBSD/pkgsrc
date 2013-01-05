@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/12/16 01:52:26 obache Exp $
+# $NetBSD: Makefile,v 1.22 2013/01/05 12:17:56 obache Exp $
 #
 
-DISTNAME=	gnome-mplayer-1.0.6
-PKGREVISION=	9
+DISTNAME=	gnome-mplayer-1.0.7
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gnome-mplayer.googlecode.com/files/
 
@@ -29,7 +28,9 @@ GCONF_SCHEMAS+=	gnome-mplayer.schemas
 .include "../../devel/gmtk/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.dbus+=	dbus>=0.95
 .include "../../sysutils/dbus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.70
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
