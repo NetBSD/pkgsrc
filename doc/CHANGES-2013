@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.46 2013/01/05 12:18:40 obache Exp $
+$NetBSD: CHANGES-2013,v 1.47 2013/01/05 12:47:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/gmtk to 1.0.7 [obache 2013-01-05]
 	Updated multimedia/gnome-mplayer to 1.0.7 [obache 2013-01-05]
 	Updated multimedia/gecko-mediaplayer to 1.0.7 [obache 2013-01-05]
+	Updated textproc/p5-XML-Feed to 0.51 [wen 2013-01-05]
