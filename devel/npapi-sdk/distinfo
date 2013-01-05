@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 14:11:07 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/01/05 11:44:07 obache Exp $
 
-SHA1 (npapi-sdk-0.27.tar.bz2) = 3a3697e850edc0106d4c73535648fae789bf1225
-RMD160 (npapi-sdk-0.27.tar.bz2) = 7de93f5a79b7abf5a41cf1878cc8887ff1315bed
-Size (npapi-sdk-0.27.tar.bz2) = 64040 bytes
+SHA1 (npapi-sdk-0.27.2.tar.bz2) = 5aac3c76ea59aa2ac8113e2f742af51f4ae0c60c
+RMD160 (npapi-sdk-0.27.2.tar.bz2) = 9ff443f694a1d4c2a665449baefd4a1a57129add
+Size (npapi-sdk-0.27.2.tar.bz2) = 65811 bytes
