@@ -1,18 +1,10 @@
-# $NetBSD: Makefile,v 1.32.2.1 2013/01/05 00:15:27 gdt Exp $
+# $NetBSD: Makefile,v 1.32.2.2 2013/01/05 00:33:07 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		pdflib-${PDFLIB_BASE_VERS}
 PKGREVISION=		13
 COMMENT=		C library to produce PDF files
-
-# Available only as a pdf, so it is not present in licenses/
-LICENSE=		pdflib-license
-RESTRICTED=		No permission to redistribute
-NO_SOURCE_ON_FTP=	${RESTRICTED}
-NO_SOURCE_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
