@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2002/11/28 11:40:46 markd Exp $
+$NetBSD: patch-ae,v 1.4 2013/01/05 12:57:22 mef Exp $
+
+Honor ${PKG_SYSCONFDIR}, see SUBST in Makefile.
 
 --- config/NetAudio.def.orig	Sun Feb 24 17:39:08 2002
 +++ config/NetAudio.def

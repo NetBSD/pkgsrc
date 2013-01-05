@@ -1,8 +1,21 @@
-$NetBSD: patch-ab,v 1.14 2012/01/30 01:34:38 sbd Exp $
+$NetBSD: patch-ab,v 1.15 2013/01/05 12:57:22 mef Exp $
+
+(1.9) Convert -lossaudio to portable $(LIBOSSAUDIO)
+      Make this work with audio/oss again.
+
+(1.13) Add NetBSDArchitecture
+
+(1.14) In server/Imakefile add a target for $(VOXWARELIBS) that call make for
+the targets directory.
+
+This should fix the occasional problem were make complains with
+"don't know how to make dda/voxware/libvoxware.a"
+
+(1.5) Taking care nasd.conf (etc)
 
 --- server/Imakefile.orig	2007-06-16 19:03:22.000000000 +0000
 +++ server/Imakefile
-@@ -61,7 +61,7 @@ XCOMM $NCDId: @(#)Imakefile,v 1.17 1995/
+@@ -61,7 +61,7 @@
  #endif
  
  #ifdef NetBSDArchitecture
@@ -11,7 +24,7 @@ $NetBSD: patch-ab,v 1.14 2012/01/30 01:34:38 sbd Exp $
  #endif
  
             CBRT =
-@@ -96,7 +96,7 @@ ALL1 = nasd
+@@ -96,7 +96,7 @@
  #endif
  
  
@@ -19,8 +32,8 @@ $NetBSD: patch-ab,v 1.14 2012/01/30 01:34:38 sbd Exp $
 +#if defined(i386SVR4Architecture) || defined(__FreeBSD_kernel__) || defined(__FreeBSD__) || defined(NetBSDArchitecture) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture) || defined(__DragonFly__)
  # define CanBuildAuServer	YES
  
- # if defined(cygwinArchitecture)
-@@ -204,23 +204,34 @@ dirs: FRC								@@\
+ #if !defined(GNUMachArchitecture)
+@@ -206,23 +206,34 @@
  	$(MAKE) $(MFLAGS) PassCDebugFlags all				@@\
  									@@\
  FRC:
