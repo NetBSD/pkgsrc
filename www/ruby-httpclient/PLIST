@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2012/08/19 07:54:11 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/01/05 05:46:11 obache Exp $
+bin/httpclient${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/bin/httpclient
 ${GEM_LIBDIR}/lib/hexdump.rb
 ${GEM_LIBDIR}/lib/http-access2.rb
 ${GEM_LIBDIR}/lib/http-access2/cookie.rb
@@ -8,7 +10,6 @@ ${GEM_LIBDIR}/lib/http-access2/http.rb
 ${GEM_LIBDIR}/lib/httpclient.rb
 ${GEM_LIBDIR}/lib/httpclient/auth.rb
 ${GEM_LIBDIR}/lib/httpclient/cacert.p7s
-${GEM_LIBDIR}/lib/httpclient/cacert_sha1.p7s
 ${GEM_LIBDIR}/lib/httpclient/connection.rb
 ${GEM_LIBDIR}/lib/httpclient/cookie.rb
 ${GEM_LIBDIR}/lib/httpclient/http.rb
