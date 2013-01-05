@@ -1,0 +1,48 @@
+$NetBSD: patch-build_unix_build__functions,v 1.1 2013/01/05 22:19:19 wiz Exp $
+
+Add DESTDIR support.
+
+--- build/unix/build_functions.orig	2011-05-20 19:25:22.000000000 +0000
++++ build/unix/build_functions
+@@ -221,30 +221,30 @@ mkdirhier() {
+ # $3 - Mode of destination file/directory
+ # $4 - Owner of destination file/directory
+ installsome() {
+-	local SRC DEST MODE OWNDER DESTDIR SRCNAME
++	local SRC DEST MODE OWNDER DESTH SRCNAME
+ 	SRC="$1"
+ 	DEST="$2"
+ 	MODE="$3"
+ 	OWNDER="$4"
+ 
+-	DESTDIR="${DEST%/*}"
+-	if [ ! -d "$DESTDIR" ]; then
+-		mkdirhier "$DESTDIR" 0755
++	DESTH="${DEST%/*}"
++	if [ ! -d "${DESTDIR}${DESTH}" ]; then
++		mkdirhier "${DESTDIR}${DESTH}" 0755
+ 	fi
+ 	SRCNAME="${SRC##*/}"
+-	cp -pr -- "$SRC" "$DEST"
++	cp -pr -- "$SRC" "${DESTDIR}${DEST}"
+ 	if [ -n "$MODE" ]; then
+-		if [ -d "$DEST" ]; then
+-			chmod -R "$MODE" "${DEST}${SRCNAME}"
++		if [ -d "${DESTDIR}${DEST}" ]; then
++			chmod -R "$MODE" "${DESTDIR}${DEST}${SRCNAME}"
+ 		else
+-			chmod "$MODE" "$DEST"
++			chmod "$MODE" "${DESTDIR}${DEST}"
+ 		fi
+ 	fi
+ 	if [ -n "$OWNER" ]; then
+-		if [ -d "$DEST" ]; then
+-			chown -R "$OWNER" "${DEST}${SRCNAME}"
++		if [ -d "${DESTDIR}${DEST}" ]; then
++			chown -R "$OWNER" "${DESTDIR}${DEST}${SRCNAME}"
+ 		else
+-			chown "$OWNER" "$DEST"
++			chown "$OWNER" "${DESTDIR}${DEST}"
+ 		fi
+ 	fi
+ }
