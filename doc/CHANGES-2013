@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.36 2013/01/05 05:12:17 obache Exp $
+$NetBSD: CHANGES-2013,v 1.37 2013/01/05 05:16:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -43,3 +43,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/libkver to 0.7.1 [apb 2013-01-04]
 	Updated textproc/icu to 50.1.1 [adam 2013-01-04]
 	Updated devel/ruby-ole to 1.2.11.6 [obache 2013-01-05]
+	Updated math/ruby-spreadsheet to 0.7.5 [obache 2013-01-05]
