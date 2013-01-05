@@ -1,11 +1,11 @@
-$NetBSD: patch-config.mk.in,v 1.1 2012/07/25 15:49:34 jperkin Exp $
+$NetBSD: patch-config.mk.in,v 1.2 2013/01/05 10:37:56 ryoon Exp $
 
 Do not use -Bdynamic -G when using GCC on Solaris, it creates non-PIC
 libraries.
 
---- config.mk.in.orig	2012-07-25 15:14:31.150813087 +0000
-+++ config.mk.in	2012-07-25 15:16:38.062750186 +0000
-@@ -187,10 +187,15 @@
+--- config.mk.in.orig	2011-03-25 16:58:35.000000000 +0000
++++ config.mk.in
+@@ -187,10 +187,15 @@ ifeq ($(patsubst solaris%,solaris,$(HOST
    SHLIB_SUFFIX = so
    shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
    shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
@@ -25,3 +25,22 @@ libraries.
  endif
  
  ifeq ($(patsubst aix%,aix,$(HOST_OS)),aix)
+@@ -235,6 +240,18 @@ ifeq ($(patsubst netbsd%,netbsd,$(HOST_O
+   NEED_WL_RPATH=yes
+ endif
+ 
++ifeq ($(patsubst openbsd%,openbsd,$(HOST_OS)),openbsd)
++  SHARED_LIB_TYPE = unix
++  SHLIB_SUFFIX = so
++  MUST_BUILD_SHLIB = Y
++  MUST_BUILD_SHLIBLE = Y
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
++  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
++  CFLAGS_SHLIB = -fpic
++  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
++  NEED_WL_RPATH=yes
++endif
++
+ ifeq ($(patsubst freebsd%,freebsd,$(HOST_OS)),freebsd)
+   SHARED_LIB_TYPE = unix
+   SHLIB_SUFFIX = so
