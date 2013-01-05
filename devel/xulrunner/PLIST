@@ -1,5 +1,4 @@
-
-@comment $NetBSD: PLIST,v 1.48 2012/11/21 15:26:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.49 2013/01/05 08:07:00 sbd Exp $
 bin/xulrunner
 include/xulrunner/.mkdir.done
 include/xulrunner/AccEvent.h
@@ -48,6 +47,7 @@ include/xulrunner/Layers.h
 include/xulrunner/LayersTypes.h
 include/xulrunner/MediaEngine.h
 include/xulrunner/MediaEngineDefault.h
+${PLIST.webrtc}include/xulrunner/MediaEngineWebRTC.h
 include/xulrunner/MediaResource.h
 include/xulrunner/MediaSegment.h
 include/xulrunner/MediaStreamGraph.h
@@ -1763,6 +1763,7 @@ include/xulrunner/nsIProfile.h
 include/xulrunner/nsIProfileChangeStatus.h
 include/xulrunner/nsIProfileMigrator.h
 include/xulrunner/nsIProfileUnlocker.h
+${PLIST.sps}include/xulrunner/nsIProfiler.h
 include/xulrunner/nsIProgrammingLanguage.h
 include/xulrunner/nsIProgressEventSink.h
 include/xulrunner/nsIPrompt.h
@@ -2203,6 +2204,9 @@ include/xulrunner/nsQuickSort.h
 include/xulrunner/nsRDFCID.h
 include/xulrunner/nsRDFResource.h
 include/xulrunner/nsRange.h
+${PLIST.webrtc}include/xulrunner/nsRawDecoder.h
+${PLIST.webrtc}include/xulrunner/nsRawReader.h
+${PLIST.webrtc}include/xulrunner/nsRawStructs.h
 include/xulrunner/nsReadLine.h
 include/xulrunner/nsReadableUtils.h
 include/xulrunner/nsRect.h
@@ -2502,7 +2506,7 @@ include/xulrunner/theora/codec.h
 include/xulrunner/theora/theora.h
 include/xulrunner/theora/theoradec.h
 include/xulrunner/theora/theoraenc.h
-include/xulrunner/tremor/ivorbiscodec.h
+${PLIST.tremor}include/xulrunner/tremor/ivorbiscodec.h
 include/xulrunner/txIEXSLTRegExFunctions.h
 include/xulrunner/txIFunctionEvaluationContext.h
 include/xulrunner/txINodeSet.h
@@ -2510,6 +2514,7 @@ include/xulrunner/txIXPathObject.h
 include/xulrunner/uconvutil.h
 include/xulrunner/updatedefines.h
 include/xulrunner/updatelogging.h
+${PLIST.vorbis}include/xulrunner/vorbis/codec.h
 include/xulrunner/xpcIJSGetFactory.h
 include/xulrunner/xpcIJSModuleLoader.h
 include/xulrunner/xpcIJSWeakReference.h
@@ -2538,7 +2543,6 @@ lib/pkgconfig/mozilla-js.pc
 lib/pkgconfig/mozilla-plugin.pc
 lib/xulrunner-sdk/lib
 lib/xulrunner-sdk/sdk/bin/xpt.py
-${PLIST.jemalloc}lib/xulrunner-sdk/sdk/lib/libmemory.a
 lib/xulrunner-sdk/sdk/lib/libmozglue.a
 lib/xulrunner/LICENSE
 lib/xulrunner/README.xulrunner
@@ -3474,8 +3478,8 @@ lib/xulrunner/modules/PlacesUtils.jsm
 lib/xulrunner/modules/PluginProvider.jsm
 lib/xulrunner/modules/PluralForm.jsm
 lib/xulrunner/modules/PopupNotifications.jsm
-${PLIST.sps}lib/xulrunner/modules/Profiler.jsm
 lib/xulrunner/modules/PrivateBrowsingUtils.jsm
+${PLIST.sps}lib/xulrunner/modules/Profiler.jsm
 lib/xulrunner/modules/PropertyListUtils.jsm
 lib/xulrunner/modules/RelyingParty.jsm
 lib/xulrunner/modules/Sandbox.jsm
@@ -3590,6 +3594,7 @@ lib/xulrunner/sdk/bin/xpidl.py
 lib/xulrunner/sdk/bin/xpidllex.py
 lib/xulrunner/sdk/bin/xpidlyacc.py
 lib/xulrunner/sdk/bin/xpt.py
+${PLIST.jemalloc}lib/xulrunner/sdk/lib/libmemory.a
 lib/xulrunner/sdk/lib/libmozalloc.so
 lib/xulrunner/sdk/lib/libmozglue.a
 lib/xulrunner/sdk/lib/libunicharutil_external_s.a
@@ -4501,7 +4506,7 @@ share/idl/xulrunner/nsIProfile.idl
 share/idl/xulrunner/nsIProfileChangeStatus.idl
 share/idl/xulrunner/nsIProfileMigrator.idl
 share/idl/xulrunner/nsIProfileUnlocker.idl
-${PLIST.sps}include/xulrunner/nsIProfiler.h
+${PLIST.sps}share/idl/xulrunner/nsIProfiler.idl
 share/idl/xulrunner/nsIProgrammingLanguage.idl
 share/idl/xulrunner/nsIProgressEventSink.idl
 share/idl/xulrunner/nsIPrompt.idl
