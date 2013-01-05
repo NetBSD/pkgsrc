@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.50 2013/01/05 13:35:02 darcy Exp $
+$NetBSD: CHANGES-2013,v 1.51 2013/01/05 13:47:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -57,3 +57,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-RSS to 1.49 [wen 2013-01-05]
 	Updated audio/nas to 1.9.3 [mef 2013-01-05]
 	Added devel/perltidy version 20121207 [darcy 2013-01-05]
+	Updated devel/ruby-activesupport3 to 3.0.18 [taca 2013-01-05]
+	Updated devel/ruby-activemodel to 3.0.18 [taca 2013-01-05]
+	Updated www/ruby-activeresource3 to 3.0.18 [taca 2013-01-05]
+	Updated www/ruby-actionpack3 to 3.0.18 [taca 2013-01-05]
+	Updated databases/ruby-activerecord3 to 3.0.18 [taca 2013-01-05]
+	Updated mail/ruby-actionmailer3 to 3.0.18 [taca 2013-01-05]
+	Updated devel/ruby-railties to 3.0.18 [taca 2013-01-05]
+	Updated www/ruby-rails3 to 3.0.18 [taca 2013-01-05]
