@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.51 2013/01/05 13:47:39 taca Exp $
+$NetBSD: CHANGES-2013,v 1.52 2013/01/05 13:54:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-actionmailer3 to 3.0.18 [taca 2013-01-05]
 	Updated devel/ruby-railties to 3.0.18 [taca 2013-01-05]
 	Updated www/ruby-rails3 to 3.0.18 [taca 2013-01-05]
+	Updated textproc/p5-XML-Rabbit to 0.2.1 [wen 2013-01-05]
