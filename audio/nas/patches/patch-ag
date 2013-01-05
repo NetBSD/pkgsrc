@@ -1,17 +1,14 @@
-$NetBSD: patch-ag,v 1.7 2009/02/03 09:39:16 dbj Exp $
+$NetBSD: patch-ag,v 1.8 2013/01/05 12:57:22 mef Exp $
+
+(from cvs log for 1.4)
+date: 2006/01/11 11:32:38;  author: markd;  state: Exp;  lines: +12 -14
+Some makedepend's object if a referenced header file is a dangling
+symlink, so create the actual release.h file at the includes stage as
+the depends stage is too late (server/os is before lib/audio).
+Fixes PR pkg/32098 from Gilles Dauphin.
 
 --- config/NetAudio.tmpl.orig	2007-06-16 12:03:20.000000000 -0700
 +++ config/NetAudio.tmpl	2009-02-03 00:57:54.000000000 -0800
-@@ -55,6 +55,9 @@ EXTRA_LOAD_FLAGS=/link /nodefaultlib:lib
- 
- #define DebugLibX		NO
- #define ProfileLibX		NO
-+#ifndef SharedLibX
-+#define SharedLibX              YES
-+#endif
- 
- #if HasSharedLibraries
- #define NormalLibAudio          NormalLibX
 @@ -287,6 +290,8 @@ AuComplexProgramTarget(program)
  release.h: $(TOP)/RELEASE				    		    @@\
  	@echo "static const char *release = \"`cat $(TOP)/RELEASE`\";" > $@   @@\

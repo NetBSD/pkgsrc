@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.13 2008/10/14 12:47:11 markd Exp $
+$NetBSD: patch-ad,v 1.14 2013/01/05 12:57:22 mef Exp $
 
 --- server/dda/voxware/auvoxware.c.orig	2007-11-11 12:40:47.000000000 +1300
 +++ server/dda/voxware/auvoxware.c
@@ -44,8 +44,8 @@ $NetBSD: patch-ad,v 1.13 2008/10/14 12:47:11 markd Exp $
  }
  
  
--#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
-+#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+-#if defined(__GNUC__) && !defined(linux) && !defined(__GNU__) && !defined(__GLIBC__) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(__GNU__) && !defined(__GLIBC__) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
  inline
  #endif
          static void
@@ -53,8 +53,8 @@ $NetBSD: patch-ad,v 1.13 2008/10/14 12:47:11 markd Exp $
      }
  }
  
--#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
-+#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+-#if defined(__GNUC__) && !defined(linux) && !defined(__GNU__) && !defined(__GLIBC__) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(__GNU__) && !defined(__GLIBC__) && !defined(USL) && !defined(__CYGWIN__) &&  !defined(__powerpc__)
  inline
  #endif
          static void
@@ -62,17 +62,8 @@ $NetBSD: patch-ad,v 1.13 2008/10/14 12:47:11 markd Exp $
      AuUnBlockAudio(l);
  }
  
--#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
-+#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
- inline
- #endif
-         static void
-@@ -1465,7 +1478,7 @@ stereoToMonoLinearSigned16LSB(AuUint32 n
-     }
- }
- 
--#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
-+#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+-#if defined(__GNUC__) && !defined(linux) && !defined(__GNU__) && !defined(__GLIBC__) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(__GNU__) && !defined(__GLIBC__) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
  inline
  #endif
          static void
