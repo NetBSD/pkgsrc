@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.58 2013/01/05 20:39:54 is Exp $
+$NetBSD: CHANGES-2013,v 1.59 2013/01/05 22:13:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -85,3 +85,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/opendkim to 2.7.3 [pettai 2013-01-05]
 	Updated devel/nss to 3.14.1 [ryoon 2013-01-05]
 	Added converters/docx2txt version 1.2nb1 [is 2013-01-05]
+	Added graphics/xdot version 20121124 [wiz 2013-01-05]
