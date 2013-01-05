@@ -481,6 +481,7 @@ online-tests		Requiring Internet connectivity for "make test".
 onscripter-pda		Enable PDA_AUTOSIZE option to fit window size to screen
 openal			Enable OpenAL support.
 opencore-amr		Enable OpenCORE Adaptive Multi-Rate speech codecs.
+opendkim-filter		Build opendkim-filter support.
 openexr			Use OpenEXR as imaging library.
 opengl			Use OpenGL as display library.
 opengrok-build		Enable building of OpenGrok from source.
