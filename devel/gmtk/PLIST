@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/13 12:57:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/01/05 12:17:16 obache Exp $
 include/gmtk/gm_audio.h
 include/gmtk/gm_common.h
 include/gmtk/gm_file.h
+include/gmtk/gm_log.h
 include/gmtk/gm_parse.h
 include/gmtk/gm_pref_store.h
 include/gmtk/gm_strfuncs.h
