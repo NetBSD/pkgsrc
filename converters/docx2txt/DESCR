@@ -1,0 +1,8 @@
+docx2txt (http://docx2txt.sourceforge.net/) is a simple tool to
+generate equivalent text files from Microsoft .docx documents, with
+an attempt towards preserving sufficient formatting and document
+information, and appropriate character conversions for a good text
+experience.
+
+PKGSRC NOTE: contrary to the original package, pkgsrc only installs the
+perl script, and without the suffix .pl
