@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2013/01/05 13:32:17 darcy Exp $
+
+SHA1 (Perl-Tidy-20121207.tar.gz) = 82d82d7c47c3b50c3be7b24b282279684521cc4a
+RMD160 (Perl-Tidy-20121207.tar.gz) = a34e9d0c662ec62d07af47cfa94cc6ea22b88e1d
+Size (Perl-Tidy-20121207.tar.gz) = 420435 bytes
