@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/01/03 13:49:43 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2013/01/05 20:16:49 ryoon Exp $
 
 To use concrete5 with Apache 2.4, you will need to perform the following steps.
 
@@ -56,7 +56,7 @@ To use concrete5 with Apache 2.4, you will need to perform the following steps.
 		Require all granted
 	</Directory>
 
-9. Start Apache httpd 2.2
+9. Start Apache httpd 2.4
 	# ${RCD_SCRIPTS_DIR}/apache start
 
 10. Access http://localhost/index.php
