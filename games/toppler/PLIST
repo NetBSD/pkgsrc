@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/05 22:17:04 wiz Exp $
+bin/toppler
+man/man6/toppler.6
+share/applications/toppler.desktop
+share/doc/toppler/AUTHORS
+share/doc/toppler/COPYING
+share/doc/toppler/ChangeLog
+share/doc/toppler/NEWS
+share/doc/toppler/README
+share/pixmaps/toppler.xpm
+share/toppler/toppler.dat
+share/toppler/toppler.ogg
+var/toppler/toppler.hsc
