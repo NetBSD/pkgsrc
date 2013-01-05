@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/12/17 17:44:20 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/01/05 07:46:04 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -34,6 +34,7 @@ share/mikutter/core/lib/mikutwitter/query.rb
 share/mikutter/core/lib/mikutwitter/rate_limiting.rb
 share/mikutter/core/lib/mikutwitter/streaming_failed_actions.rb
 share/mikutter/core/lib/mikutwitter/test/154380989328662530.json
+share/mikutter/core/lib/mikutwitter/test/extension.rb
 share/mikutter/core/lib/mikutwitter/test/friendship.json
 share/mikutter/core/lib/mikutwitter/test/list_member.json
 share/mikutter/core/lib/mikutwitter/test/list_member_1380555359495881433.json
@@ -51,11 +52,9 @@ share/mikutter/core/lib/mikutwitter/test/test_api_shortcuts.rb
 share/mikutter/core/lib/mikutwitter/test/test_cache.rb
 share/mikutter/core/lib/mikutwitter/test/test_query.rb
 share/mikutter/core/lib/mikutwitter/test/test_streaming_failed_actions.rb
-share/mikutter/core/lib/mikutwitter/test/test_unauthorized.rb
 share/mikutter/core/lib/mikutwitter/test/test_utils.rb
 share/mikutter/core/lib/mikutwitter/test/user.json
 share/mikutter/core/lib/mikutwitter/test/user_timeline.json
-share/mikutter/core/lib/mikutwitter/unauthorized.rb
 share/mikutter/core/lib/mikutwitter/utils.rb
 share/mikutter/core/lib/piapro.rb
 share/mikutter/core/lib/reserver.rb
@@ -144,6 +143,7 @@ share/mikutter/core/plugin/direct_message/dmlistview.rb
 share/mikutter/core/plugin/direct_message/sender.rb
 share/mikutter/core/plugin/direct_message/spec
 share/mikutter/core/plugin/direct_message/userlist.rb
+share/mikutter/core/plugin/display_requirements/display_requirements.rb
 share/mikutter/core/plugin/extract/extract.rb
 share/mikutter/core/plugin/extract/spec
 share/mikutter/core/plugin/followingcontrol/followingcontrol.rb
@@ -151,8 +151,10 @@ share/mikutter/core/plugin/followingcontrol/spec
 share/mikutter/core/plugin/gtk/delayer.rb
 share/mikutter/core/plugin/gtk/gtk.rb
 share/mikutter/core/plugin/gtk/mikutter_window.rb
+share/mikutter/core/plugin/gtk/slug_dictionary.rb
 share/mikutter/core/plugin/gtk/spec
 share/mikutter/core/plugin/gtk/tab_container.rb
+share/mikutter/core/plugin/gtk/tab_toolbar.rb
 share/mikutter/core/plugin/gui/command.rb
 share/mikutter/core/plugin/gui/cuscadable.rb
 share/mikutter/core/plugin/gui/dsl.rb
@@ -166,6 +168,7 @@ share/mikutter/core/plugin/gui/profiletab.rb
 share/mikutter/core/plugin/gui/spec
 share/mikutter/core/plugin/gui/tab.rb
 share/mikutter/core/plugin/gui/tab_child_widget.rb
+share/mikutter/core/plugin/gui/tab_toolbar.rb
 share/mikutter/core/plugin/gui/tablike.rb
 share/mikutter/core/plugin/gui/test/test_cuscadable.rb
 share/mikutter/core/plugin/gui/test/test_dsl.rb
@@ -194,6 +197,7 @@ share/mikutter/core/plugin/profile/profile.rb
 share/mikutter/core/plugin/profile/spec
 share/mikutter/core/plugin/proxy/proxy.rb
 share/mikutter/core/plugin/proxy/spec
+share/mikutter/core/plugin/ratelimit/ratelimit.rb
 share/mikutter/core/plugin/rest/rest.rb
 share/mikutter/core/plugin/rest/spec
 share/mikutter/core/plugin/saved_search/saved_search.rb
@@ -233,6 +237,8 @@ share/mikutter/core/skin/data/arrow_notfollowed.png
 share/mikutter/core/skin/data/arrow_notfollowing.png
 share/mikutter/core/skin/data/close.png
 share/mikutter/core/skin/data/console.png
+share/mikutter/core/skin/data/copy.png
+share/mikutter/core/skin/data/copy_all.png
 share/mikutter/core/skin/data/directmessage.png
 share/mikutter/core/skin/data/etc.png
 share/mikutter/core/skin/data/fav.png
@@ -247,6 +253,7 @@ share/mikutter/core/skin/data/overbutton_mouseover.png
 share/mikutter/core/skin/data/post.png
 share/mikutter/core/skin/data/reply.png
 share/mikutter/core/skin/data/retweet.png
+share/mikutter/core/skin/data/retweet_cancel.png
 share/mikutter/core/skin/data/savedsearch.png
 share/mikutter/core/skin/data/search.png
 share/mikutter/core/skin/data/settings.png
@@ -272,6 +279,7 @@ share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e0000496.au
 share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e00008c6.au
 share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
+share/mikutter/core/skin/data/twitter-bird.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
 share/mikutter/core/test/icon_test.png
@@ -310,8 +318,6 @@ share/mikutter/devel/chiskel/core/plugin/uptime.rb
 share/mikutter/devel/makechi.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
-share/mikutter/vendor/typed-array.rb
-share/mikutter/vendor/typed-array/functions.rb
 @pkgdir share/mikutter/core/plugin/directmessage
 @pkgdir share/mikutter/core/addon/tco
 @pkgdir share/mikutter/core/addon/streaming
@@ -327,3 +333,4 @@ share/mikutter/vendor/typed-array/functions.rb
 @pkgdir share/mikutter/core/addon/aspectframe
 @pkgdir share/mikutter/core/addon/alsa
 @pkgdir share/mikutter/core/addon/activity
+@pkgdir share/mikutter/vendor
