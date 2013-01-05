@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.42 2013/01/05 08:07:08 sbd Exp $
+$NetBSD: CHANGES-2013,v 1.43 2013/01/05 11:44:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -49,3 +49,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added misc/ruby-typed-array version 0.1.2 [obache 2013-01-05]
 	Updated net/mikutter to 0.2.1.1112 [obache 2013-01-05]
 	Updated devel/xulrunner to 17.0.1nb2 [sbd 2013-01-05]
+	Updated devel/npapi-sdk to 0.27.2 [obache 2013-01-05]
