@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/05 22:12:33 wiz Exp $
+bin/xdot
