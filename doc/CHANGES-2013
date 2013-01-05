@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.44 2013/01/05 12:17:29 obache Exp $
+$NetBSD: CHANGES-2013,v 1.45 2013/01/05 12:18:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -51,3 +51,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/xulrunner to 17.0.1nb2 [sbd 2013-01-05]
 	Updated devel/npapi-sdk to 0.27.2 [obache 2013-01-05]
 	Updated devel/gmtk to 1.0.7 [obache 2013-01-05]
+	Updated multimedia/gnome-mplayer to 1.0.7 [obache 2013-01-05]
