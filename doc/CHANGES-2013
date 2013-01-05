@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.62 2013/01/05 22:20:20 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.63 2013/01/05 22:58:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/autoconf-archive version 2012.11.14 [wiz 2013-01-05]
 	Added games/toppler version 1.1.6 [wiz 2013-01-05]
 	Added games/uqm version 0.7.0nb1 [wiz 2013-01-05]
+	Removed lang/tcl-itcl-current [wiz 2013-01-05]
