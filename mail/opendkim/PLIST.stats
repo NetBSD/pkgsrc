@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST.stats,v 1.5 2012/06/16 20:20:15 pettai Exp $
-bin/opendkim-spam
-bin/opendkim-stats
-man/man1/opendkim-spam.1
+@comment $NetBSD: PLIST.stats,v 1.6 2013/01/05 17:05:07 pettai Exp $
+man/man8/opendkim-expire.8
+man/man8/opendkim-gengraphs.8
+man/man8/opendkim-genstats.8
 man/man8/opendkim-stats.8
+sbin/opendkim-expire
+sbin/opendkim-gengraphs
+sbin/opendkim-genstats
+sbin/opendkim-reportstats
+sbin/opendkim-stats
+share/doc/opendkim/mkdb.mysql

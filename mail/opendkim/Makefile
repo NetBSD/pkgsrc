@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/11/12 19:23:35 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/05 17:05:07 pettai Exp $
 
-DISTNAME=	opendkim-2.6.7
+DISTNAME=	opendkim-2.7.3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendkim/}
 
@@ -10,9 +10,11 @@ COMMENT=	Open source DKIM library, MTA filter implementation and tools
 LICENSE=	sendmail-open-source-license
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+REPLACE_PERL+=	opendkim/opendkim-genkey.in
 
 FILES_SUBST+=	DKIM_USER=${DKIM_USER} DKIM_GROUP=${DKIM_GROUP}
 BUILD_DEFS+=	VARBASE DKIM_USER DKIM_GROUP
@@ -26,9 +28,7 @@ PKG_USERS_VARS+=	DKIM_USER
 OWN_DIRS_PERMS+=	${VARBASE}/run/opendkim \
 			${DKIM_USER} ${DKIM_GROUP} 0750
 
-PKGCONFIG_OVERRIDE+=	libar/ar.pc.in
 PKGCONFIG_OVERRIDE+=	libopendkim/opendkim.pc.in
-PKGCONFIG_OVERRIDE+=	libvbr/vbr.pc.in
 
 .include "options.mk"
 

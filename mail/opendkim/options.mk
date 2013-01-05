@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2011/04/29 11:48:24 adam Exp $
+# $NetBSD: options.mk,v 1.4 2013/01/05 17:05:07 pettai Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opendkim
-PKG_SUPPORTED_OPTIONS=	filter debug dkim-stats vbr
-PKG_SUGGESTED_OPTIONS=	filter
+PKG_SUPPORTED_OPTIONS=	opendkim-filter debug dkim-stats vbr
+PKG_SUGGESTED_OPTIONS=	opendkim-filter
 
 .include "../../mk/bsd.options.mk"
 
@@ -18,30 +18,34 @@ CONFIGURE_ARGS+=	--disable-debug
 ###
 ### Install filter (milter) plugin
 ###
-.if !empty(PKG_OPTIONS:Mfilter)
+.if !empty(PKG_OPTIONS:Mopendkim-filter)
 EGDIR=		${PREFIX}/share/examples/opendkim
 RCD_SCRIPTS=	opendkim
 
 CONFIGURE_ARGS+=	--enable-filter
 CONFIGURE_ARGS+=	--with-milter=${PREFIX}
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	opendkim/Makefile.in
-SUBST_SED.conf+=	-e 's|@EGDIR@|${EGDIR}|g'
 
-#CONF_FILES=		${EGDIR}/opendkim.conf.sample \
-#			${PKG_SYSCONFDIR}/opendkim.conf
+CONF_FILES=		${EGDIR}/opendkim.conf.sample \
+			${PKG_SYSCONFDIR}/opendkim.conf
+
+INSTALLATION_DIRS=	${EGDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/opendkim/opendkim.conf.sample \
+				${DESTDIR}${EGDIR}/opendkim.conf.sample
 
 PLIST_SRC+=		${PKGDIR}/PLIST.filter
 .else
 CONFIGURE_ARGS+=	--disable-filter
 .endif
 
+
 ###
 ### Build with VBR support
 ###
 .if !empty(PKG_OPTIONS:Mvbr)
 CONFIGURE_ARGS+=	--enable-vbr
+PKGCONFIG_OVERRIDE+=	libvbr/vbr.pc.in
 PLIST_SRC+=		${PKGDIR}/PLIST.vbr
 .else
 CONFIGURE_ARGS+=	--disable-vbr
@@ -54,6 +58,9 @@ CONFIGURE_ARGS+=	--disable-vbr
 #.include "../../mk/db1.builtin.mk"
 CONFIGURE_ARGS+=	--enable-stats
 PLIST_SRC+=		${PKGDIR}/PLIST.stats
+REPLACE_PERL+=		stats/opendkim-expire.in
+REPLACE_PERL+=		stats/opendkim-gengraphs.in
+REPLACE_PERL+=		stats/opendkim-genstats.in
 .else
 CONFIGURE_ARGS+=	--disable-stats
 .endif

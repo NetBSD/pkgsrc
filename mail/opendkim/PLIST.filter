@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.filter,v 1.1.1.1 2010/10/19 23:11:42 pettai Exp $
+@comment $NetBSD: PLIST.filter,v 1.2 2013/01/05 17:05:07 pettai Exp $
 man/man5/opendkim.conf.5
 man/man8/opendkim.8
 sbin/opendkim
+share/examples/opendkim/opendkim.conf.sample
 share/examples/rc.d/opendkim
