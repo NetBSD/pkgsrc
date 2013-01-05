@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.59 2013/01/05 22:13:28 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.60 2013/01/05 22:18:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/nss to 3.14.1 [ryoon 2013-01-05]
 	Added converters/docx2txt version 1.2nb1 [is 2013-01-05]
 	Added graphics/xdot version 20121124 [wiz 2013-01-05]
+	Added devel/autoconf-archive version 2012.11.14 [wiz 2013-01-05]
