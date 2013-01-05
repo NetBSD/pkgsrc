@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/05 00:47:14 manu Exp $
+$NetBSD: distinfo,v 1.2 2013/01/05 14:03:25 wen Exp $
 
-SHA1 (XML-Entities-1.0000.tar.gz) = 25eef2dfe4d52237cfb35fd4edbb9744db42346c
-RMD160 (XML-Entities-1.0000.tar.gz) = f6e14a7906a175fff19aebd7c6f89215f752d477
-Size (XML-Entities-1.0000.tar.gz) = 20162 bytes
+SHA1 (XML-Entities-1.0001.tar.gz) = b7474db973a98e57353cf9b23b61c160db86699b
+RMD160 (XML-Entities-1.0001.tar.gz) = 5e0a1ae43b7a5239c2e8c9ad70bdb3ad87fcbba0
+Size (XML-Entities-1.0001.tar.gz) = 21770 bytes
