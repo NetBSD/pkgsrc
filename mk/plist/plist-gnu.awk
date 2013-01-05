@@ -1,4 +1,4 @@
-# $NetBSD: plist-gnu.awk,v 1.1 2012/12/06 11:36:31 jperkin Exp $
+# $NetBSD: plist-gnu.awk,v 1.2 2013/01/05 07:32:50 sbd Exp $
 #
 # Copyright (c) 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,12 +35,21 @@
 ### Certain environment variables must be set prior to running this script:
 ###
 ###   PKGGNUDIR is the ${PREFIX}-relative path to the installed GNU files.
+###   PKGMANDIR is the ${PKGGNUDIR}-relative path to the install GNU manpages.
 ###
 BEGIN {
 	# PKGGNUDIR is allowed to be empty so we do not provide a default.
 	PKGGNUDIR = ENVIRON["PKGGNUDIR"]
+	PKGMANDIR = ENVIRON["PKGMANDIR"] ? ENVIRON["PKGMANDIR"] : "man"
 }
 
+###
+### Convert gnu/man to ${PKGGNUDIR}${PKGMANDIR} for all GNU manpages.
+###
+/^[^@]/ && \
+/^gnu\/man\// {
+	sub("^gnu/man", PKGGNUDIR PKGMANDIR)
+}
 ###
 ### Convert gnu/ to ${PKGGNUDIR} for all GNU file entries.
 ###
