@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2013/01/04 17:18:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2013/01/05 08:07:00 sbd Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 
 MAINTAINER=	tnn@NetBSD.org
@@ -34,10 +34,20 @@ LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/xulrunner -Wl,-rpath,${PREFIX}/lib
 .include "mozilla-common.mk"
 .include "options.mk"
 
-PLIST_VARS+=	sps
+PLIST_VARS+=	sps webrtc vorbis tremor
 
 .if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*) || ${OPSYS} == "Darwin"
 PLIST.sps=	yes
+.endif
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Darwin"
+PLIST.webrtc=	yes
+.endif
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*) || ${OPSYS} == "DragonFly" \
+    || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+PLIST.tremor=	yes
+.else
+PLIST.vorbis=	yes
 .endif
 
 pre-configure:
