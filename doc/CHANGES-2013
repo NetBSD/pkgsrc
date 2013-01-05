@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.60 2013/01/05 22:18:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.61 2013/01/05 22:20:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -87,3 +87,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added converters/docx2txt version 1.2nb1 [is 2013-01-05]
 	Added graphics/xdot version 20121124 [wiz 2013-01-05]
 	Added devel/autoconf-archive version 2012.11.14 [wiz 2013-01-05]
+	Added games/toppler version 1.1.6 [wiz 2013-01-05]
