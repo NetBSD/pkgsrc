@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2012/12/17 17:44:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.56 2013/01/05 07:46:04 obache Exp $
 #
 
-DISTNAME=	mikutter.0.2.0.1089
+DISTNAME=	mikutter.0.2.1.1112
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -23,6 +23,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../devel/ruby-memoize
 DEPENDS+=	${RUBY_PKGPREFIX}-bsearch>=1.5:../../devel/ruby-bsearch
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.2.6nb1:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-typed-array-[0-9]*:../../misc/ruby-typed-array
 # notify-send
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 
@@ -43,7 +44,7 @@ do-build:
 	cd ${WRKSRC}/core/lib && \
 		${RM} -rf addressable json oauth ruby-bsearch-1.5 typed-array
 	cd ${WRKSRC}/vendor && \
-		${RM} -rf addressable bsearch* hmac*.rb json* memoize.rb oauth* ruby-bsearch-1.5
+		${RM} -rf addressable bsearch* hmac*.rb json* memoize.rb oauth* ruby-bsearch-1.5 typed-array*
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/desktop.in > ${WRKDIR}/desktop
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/mikutter.sh.in > ${WRKDIR}/mikutter.sh
 
@@ -55,5 +56,4 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
 .include "../../lang/ruby/json.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
