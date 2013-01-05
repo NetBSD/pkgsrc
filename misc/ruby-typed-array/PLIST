@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/05 06:48:53 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/typed-array.rb
+${GEM_LIBDIR}/lib/typed-array/.DS_Store
+${GEM_LIBDIR}/lib/typed-array/functions.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/typed-array_spec.rb
+${GEM_LIBDIR}/typed-array.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
