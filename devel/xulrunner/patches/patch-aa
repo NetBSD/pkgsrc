@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2012/11/21 15:26:49 ryoon Exp $
+$NetBSD: patch-aa,v 1.15 2013/01/05 08:02:16 sbd Exp $
 
---- configure.in.orig	2012-11-19 15:42:04.000000000 +0000
+--- configure.in.orig	2012-11-29 04:43:55.000000000 +0000
 +++ configure.in
 @@ -2080,6 +2080,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
@@ -72,3 +72,11 @@ $NetBSD: patch-aa,v 1.14 2012/11/21 15:26:49 ryoon Exp $
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
+@@ -8544,6 +8561,7 @@ AC_SUBST(MOZ_VP8_ERROR_CONCEALMENT)
+ AC_SUBST(MOZ_VP8_ENCODER)
+ AC_SUBST(MOZ_VP8)
+ AC_SUBST(MOZ_OGG)
++AC_SUBST(MOZ_ALSA)
+ AC_SUBST(MOZ_ALSA_LIBS)
+ AC_SUBST(MOZ_ALSA_CFLAGS)
+ AC_SUBST(VPX_AS)
