@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.56 2013/01/05 17:05:37 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.57 2013/01/05 19:04:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-actionmailer32 to 3.2.10 [taca 2013-01-05]
 	Updated devel/ruby-railties32 to 3.2.10 [taca 2013-01-05]
 	Updated mail/opendkim to 2.7.3 [pettai 2013-01-05]
+	Updated devel/nss to 3.14.1 [ryoon 2013-01-05]
