@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/05 20:36:58 is Exp $
+bin/docx2txt
+share/doc/docx2txt/README
+share/doc/docx2txt/docx2txt.config
