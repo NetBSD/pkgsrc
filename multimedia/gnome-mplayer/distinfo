@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/04/13 13:04:20 obache Exp $
+$NetBSD: distinfo,v 1.6 2013/01/05 12:17:56 obache Exp $
 
-SHA1 (gnome-mplayer-1.0.6.tar.gz) = 36eb536a3656afab4564f835aa86bab667724129
-RMD160 (gnome-mplayer-1.0.6.tar.gz) = bc4d4275bc525b8e016d1f2318e13aa1e2f98907
-Size (gnome-mplayer-1.0.6.tar.gz) = 1027857 bytes
+SHA1 (gnome-mplayer-1.0.7.tar.gz) = cedb3b3b2e67f2acef328c077f70e388e02839ce
+RMD160 (gnome-mplayer-1.0.7.tar.gz) = 93c188b2c58f3e35b22563984c39ce2b22476816
+Size (gnome-mplayer-1.0.7.tar.gz) = 1039861 bytes
 SHA1 (patch-Makefile.in) = d368d7c3702a52df66c4bdf325e64792b9f7a7c7
