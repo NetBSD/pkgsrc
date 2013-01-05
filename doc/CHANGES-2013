@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.38 2013/01/05 05:23:24 obache Exp $
+$NetBSD: CHANGES-2013,v 1.39 2013/01/05 05:46:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -45,3 +45,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-ole to 1.2.11.6 [obache 2013-01-05]
 	Updated math/ruby-spreadsheet to 0.7.5 [obache 2013-01-05]
 	Updated security/ruby-simple_oauth to 0.2.0 [obache 2013-01-05]
+	Updated www/ruby-httpclient to 2.3.2 [obache 2013-01-05]
