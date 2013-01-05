@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/01/05 22:19:19 wiz Exp $
+
+SHA1 (uqm/uqm-0.7.0-content.uqm) = 2dea07390708790779ae25886e9331b5eb0bdf68
+RMD160 (uqm/uqm-0.7.0-content.uqm) = 92d0e6bde471fd3c6b9147211f09263c1a9482f7
+Size (uqm/uqm-0.7.0-content.uqm) = 11538533 bytes
+SHA1 (uqm/uqm-0.7.0-source.tgz) = 55e5257690650e63f131024ab8fdfdddcf5627bc
+RMD160 (uqm/uqm-0.7.0-source.tgz) = b760ad256075e4e225e44e5a738a013a9a5e6483
+Size (uqm/uqm-0.7.0-source.tgz) = 1562003 bytes
+SHA1 (patch-build_unix_build__functions) = 373f53c2b1da5def252e212af077f7fdb4505f75
