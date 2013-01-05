@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11801 2013/01/04 14:34:26 taca Exp $
+$NetBSD: TODO,v 1.11802 2013/01/05 13:08:11 mef Exp $
 
 Suggested new packages
 ======================
@@ -912,7 +912,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mypaint-1.1.0
 	o mysql-5.1.67
 	o nap-1.5.3
-	o nas-1.9.3 [pkg/45449]
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nawk-20071023
 	o ncview-2.1.1
