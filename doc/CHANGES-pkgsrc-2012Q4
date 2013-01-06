@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.3 2013/01/05 11:05:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.4 2013/01/06 17:23:07 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -9,3 +9,5 @@ Pullup ticket #3999 - requested by jnemeth
 comms/asterisk: security update
 Pullup ticket #4000 - requested by dholland
 sysutils/bacula: build fix
+Pullup ticket #4003 - requested by wiz
+graphics/freetype2: security update
