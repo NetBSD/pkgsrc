@@ -1,0 +1,15 @@
+$NetBSD: patch-src_spy_Makefile.in,v 1.1 2013/01/06 16:02:21 pettai Exp $
+
+Build fix for dlopen() on NetBSD
+
+--- src/spy/Makefile.in.orig	2012-12-15 16:30:04.000000000 +0000
++++ src/spy/Makefile.in
+@@ -293,7 +293,7 @@ dist_bin_SCRIPTS = pcsc-spy
+ libpcscspy_la_SOURCES = \
+ 	libpcscspy.c
+ 
+-libpcscspy_la_LIBADD = -ldl
++libpcscspy_la_LIBADD = ${DL_LIBS}
+ man_MANS = pcsc-spy.1
+ EXTRA_DIST = install_spy.sh uninstall_spy.sh pcsc-spy.pod
+ CLEANFILES = pcsc-spy.1
