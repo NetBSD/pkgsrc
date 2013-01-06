@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.68 2013/01/06 00:35:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.69 2013/01/06 00:38:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -95,3 +95,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-distribute to 0.6.33 [wiz 2013-01-06]
 	Updated devel/gob2 to 2.0.19 [wiz 2013-01-06]
 	Updated textproc/gsed to 4.2.2nb4 [wiz 2013-01-06]
+	Updated graphics/freetype2 to 2.4.11 [wiz 2013-01-06]
