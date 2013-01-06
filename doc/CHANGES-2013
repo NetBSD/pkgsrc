@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.64 2013/01/06 00:28:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.65 2013/01/06 00:31:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -91,3 +91,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added games/uqm version 0.7.0nb1 [wiz 2013-01-05]
 	Removed lang/tcl-itcl-current [wiz 2013-01-05]
 	Updated converters/libvisio to 0.0.24 [wiz 2013-01-06]
+	Updated textproc/enca to 1.13 [wiz 2013-01-06]
