@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.181 2012/10/02 21:02:21 cheusov Exp $
+# $NetBSD: bootstrap,v 1.182 2013/01/06 17:33:24 cheusov Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -505,7 +505,7 @@ FreeBSD)
 	machine_arch=`uname -p`
 	;;
 Haiku)
-	root_user=user
+	root_user=`id -un`
 	root_group=root
 	need_bsd_install=no
 	need_awk=no
