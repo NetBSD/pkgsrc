@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.80 2013/01/06 15:17:12 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.81 2013/01/06 16:04:03 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/perltidy [darcy 2013-01-06]
 	Added devel/lua-lpeg version 0.10.2 [alnsn 2013-01-06]
 	Updated games/supertuxkart to 0.8 [ryoon 2013-01-06]
+	Updated security/pcsc-lite to 1.8.7 [pettai 2013-01-06]
