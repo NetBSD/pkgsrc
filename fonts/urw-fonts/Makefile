@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/06 23:19:11 wiz Exp $
 #
 
-DISTNAME=	urw-fonts
-PKGNAME=	urw-fonts-1
+DISTNAME=	urw-fonts-1.0.7pre44
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/fonts/
+MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/urw-fonts/urw-fonts-1.0.7pre44.tar.bz2/51c6c2690593cd9bd92f197a6f2ff8bd/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.gimp.org/pub/gimp/fonts/
-COMMENT=	Standard postscript fonts
-#LICENSE=	# TODO: (see mk/license.mk)
+#HOMEPAGE=	ftp://ftp.gimp.org/pub/gimp/fonts/
+COMMENT=	Standard postscript fonts (cyrillicized)
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/URW
+WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 FONTS_DIR=	${PREFIX}/share/fonts/urw

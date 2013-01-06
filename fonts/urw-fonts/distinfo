@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/02 19:00:36 drochner Exp $
+$NetBSD: distinfo,v 1.2 2013/01/06 23:19:11 wiz Exp $
 
-SHA1 (urw-fonts.tar.gz) = 7b04df7db758dd787dd5bc1deb7b6f86bb9f2760
-RMD160 (urw-fonts.tar.gz) = 9a778946404ddc61aa1b103f1b7323f8802c90c6
-Size (urw-fonts.tar.gz) = 1544494 bytes
+SHA1 (urw-fonts-1.0.7pre44.tar.bz2) = 465fd5faab9ba9e7590f1bf761015862eb09748d
+RMD160 (urw-fonts-1.0.7pre44.tar.bz2) = 52bddb1e267e6aa3cace9197293718e4919384bd
+Size (urw-fonts-1.0.7pre44.tar.bz2) = 3186750 bytes
