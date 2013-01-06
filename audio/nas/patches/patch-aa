@@ -1,15 +1,24 @@
-$NetBSD: patch-aa,v 1.13 2013/01/05 12:57:22 mef Exp $
+$NetBSD: patch-aa,v 1.14 2013/01/06 03:21:47 ryoon Exp $
 
 (1) Add NetBSDArchitecture and DragonFlyArchitecture
 
---- lib/audio/Imakefile.orig   2006-08-14 03:10:05.000000000 +0200
+--- lib/audio/Imakefile.orig	Wed Jan 26 16:10:17 2011
 +++ lib/audio/Imakefile
-@@ -150,14 +150,16 @@
+@@ -59,7 +59,7 @@
+ #endif
+ 
+ XCOMM JET - hmmm.
+-#if (defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) || defined(BSDArchitecture)) && defined(HasBSD44Sockets)
++#if (defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) || defined(BSDArchitecture) || defined(OpenBSDArchitecture)) && defined(HasBSD44Sockets)
+  EXTRA_DEFINES = -DBSD44SOCKETS
+ #endif
+ 
+@@ -150,14 +150,16 @@ XAULIB = 
  XAULIB = -lXau
  #endif
  
 -#if defined(LinuxArchitecture) || defined(GNUArchitecture) || defined(SunArchitecture) || defined(__FreeBSD_kernel__) || defined(DarwinArchitecture)
-+#if defined(LinuxArchitecture) || defined(GNUArchitecture) || defined(SunArchitecture) || defined(__FreeBSD_kernel__) || defined(DarwinArchitecture) || defined(NetBSDArchitecture) || defined(DragonFlyArchitecture)
++#if defined(LinuxArchitecture) || defined(GNUArchitecture) || defined(SunArchitecture) || defined(__FreeBSD_kernel__) || defined(DarwinArchitecture) || defined(NetBSDArchitecture) || defined(DragonFlyArchitecture) || defined(OpenBSDArchitecture)
  REQUIREDLIBS = -L$(USRLIBDIR) -lXt $(XAULIB) -lm 
 -#endif
  
