@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.66 2013/01/06 00:32:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.67 2013/01/06 00:33:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -93,3 +93,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/libvisio to 0.0.24 [wiz 2013-01-06]
 	Updated textproc/enca to 1.13 [wiz 2013-01-06]
 	Updated devel/py-distribute to 0.6.33 [wiz 2013-01-06]
+	Updated devel/gob2 to 2.0.19 [wiz 2013-01-06]
