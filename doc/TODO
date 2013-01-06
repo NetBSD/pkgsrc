@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11813 2013/01/06 00:42:20 wiz Exp $
+$NetBSD: TODO,v 1.11814 2013/01/06 00:44:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -870,7 +870,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mawk-1.3.4.20121129
 	o mc-4.8.1.4
 	o mdocml-1.12.1
-	o mercurial-2.4.2
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
@@ -1089,7 +1088,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scilab-5.5.3
 	o scm-5e7
 	o scmcvs-1.12.13
-	o scmgit-1.8.1
 	o scribus-1.4.1
 	o scripts-1.0.1
 	o scrollz-1.9.99
@@ -1333,7 +1331,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
-	o xscope-1.4
 	o xsd-3.3.0
 	o xsoldier-1.4
 	o xtraceroute-0.9.1
