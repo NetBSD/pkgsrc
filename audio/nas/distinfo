@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.29 2013/01/05 12:57:22 mef Exp $
+$NetBSD: distinfo,v 1.30 2013/01/06 03:21:46 ryoon Exp $
 
 SHA1 (nas-1.9.3.src.tar.gz) = dca770ddd10936ad1f19bf3c51f941c10d7bf84b
 RMD160 (nas-1.9.3.src.tar.gz) = 693c97658885a9bea02b27376c3a5a142b49e57a
 Size (nas-1.9.3.src.tar.gz) = 1485222 bytes
-SHA1 (patch-aa) = 9389ce078ed15019d82e79683dd184b61ca1be5c
-SHA1 (patch-ab) = 1c2ec778589a6818336b74e134268d0d269b143c
-SHA1 (patch-ac) = 48f6c6791bde679774fd534012e8da2cf6e1e781
+SHA1 (patch-aa) = 3d198d97c1133358a7544d923ac6c48b38fdae19
+SHA1 (patch-ab) = 848b151e4814c434dc628c649910d96e1cf8750e
+SHA1 (patch-ac) = 6ac629690d82afbb3ce2f73f604b64fd8697a71c
 SHA1 (patch-ad) = 0a0887b87a9690e9a2a156ed840e9dfccc1f8c6c
 SHA1 (patch-ae) = 2e88c42f849ec2e3eb942f79d05065ec8ddd1a9e
 SHA1 (patch-af) = 9e387f88504d6ef18ad4210af24702de61efbf1a
 SHA1 (patch-ag) = c43bab8c87efa5c770dd084d67ffa9897350810f
+SHA1 (patch-server_dia_auservertype.h) = 8ee2d064797837a1fcfd6c1389e09879f015cc9b

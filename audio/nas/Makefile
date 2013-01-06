@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2013/01/05 12:57:21 mef Exp $
+# $NetBSD: Makefile,v 1.91 2013/01/06 03:21:46 ryoon Exp $
 
 DISTNAME=	nas-1.9.3.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -85,6 +85,16 @@ CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
 
 pre-configure:
 	cd ${WRKSRC}/config && ${SETENV} ${CONFIGURE_ENV} ./configure
+
+# XXX OpenBSD 2.9 or later does not use lib/X11/config/bsdLib.rules,
+# XXX the rule in OpenBSDLib.rules does not do the following.
+# XXX PLIST should be splitted?
+.if ${OPSYS} == "OpenBSD"
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib && \
+		${LN} -s libaudio.so.2.4 libaudio.so.2 && \
+		${LN} -s libaudio.so.2 libaudio.so
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
