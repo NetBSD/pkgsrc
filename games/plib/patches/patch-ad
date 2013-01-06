@@ -1,8 +1,14 @@
-$NetBSD: patch-ad,v 1.6 2007/07/12 19:48:42 drochner Exp $
+$NetBSD: patch-ad,v 1.7 2013/01/06 00:59:47 ryoon Exp $
 
---- src/js/jsBSD.cxx.orig	2007-03-22 23:35:44.000000000 +0100
+--- src/js/jsBSD.cxx.orig	Tue Mar 11 02:06:21 2008
 +++ src/js/jsBSD.cxx
-@@ -52,11 +52,8 @@
+@@ -49,16 +49,13 @@
+ #include <sys/ioctl.h>
+ #if defined(__FreeBSD__)
+ # include <sys/joystick.h>
+-#else
++#elif (defined(__OpenBSD__) && defined(__i386__)) || defined(__NetBSD__) || defined(__DragonFly__)
+ # include <machine/joystick.h>		// For analog joysticks
  #endif
  #ifdef HAVE_USB_JS
  #if defined(__NetBSD__)
@@ -15,3 +21,30 @@ $NetBSD: patch-ad,v 1.6 2007/07/12 19:48:42 drochner Exp $
  #elif defined(__FreeBSD__)
  extern "C" {
  #  if __FreeBSD_version < 500000
+@@ -85,7 +82,9 @@ struct os_specific_s {
+   int              fd;
+   int              is_analog;
+   // The following structure members are specific to analog joysticks
++#if (defined(__OpenBSD__) && defined(__i386__)) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+   struct joystick  ajs;
++#endif
+ #ifdef HAVE_USB_JS
+   // The following structure members are specific to USB joysticks
+   struct hid_item *hids;
+@@ -437,7 +436,7 @@ void jsJoystick::rawRead ( int *buttons, float *axes )
+ 
+     return ;
+   }
+-
++#if (defined(__OpenBSD__) && defined(__i386__)) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+   if ( os->is_analog )
+   {
+     int status = ::read ( os->fd, &os->ajs, sizeof(os->ajs) );
+@@ -462,6 +461,7 @@ void jsJoystick::rawRead ( int *buttons, float *axes )
+ 
+     return;
+   }
++#endif
+ 
+ #ifdef HAVE_USB_JS
+   while ((len = ::read(os->fd, os->hid_data_buf, os->hid_dlen)) == os->hid_dlen)
