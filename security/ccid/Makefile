@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/12/15 00:29:31 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/06 16:10:39 pettai Exp $
 #
 
-DISTNAME=	ccid-1.4.5
+DISTNAME=	ccid-1.4.8
 CATEGORIES=	security
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/3672/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/3768/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shannonjr@NetBSD.org
