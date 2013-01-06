@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2012/08/30 07:57:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.33 2013/01/06 01:00:58 wiz Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
@@ -1427,6 +1427,7 @@ ${PLIST.latex}share/doc/doxygen/html/custcmd.html
 ${PLIST.latex}share/doc/doxygen/html/customize.html
 ${PLIST.latex}share/doc/doxygen/html/diagrams.html
 ${PLIST.latex}share/doc/doxygen/html/docblocks.html
+${PLIST.latex}share/doc/doxygen/html/dot_inline_dotgraph_1.png
 ${PLIST.latex}share/doc/doxygen/html/doxygen.png
 ${PLIST.latex}share/doc/doxygen/html/doxygen_logo.gif
 ${PLIST.latex}share/doc/doxygen/html/doxygen_logo_low.gif
@@ -1442,10 +1443,14 @@ ${PLIST.latex}share/doc/doxygen/html/doxywizard_page4.png
 ${PLIST.latex}share/doc/doxygen/html/doxywizard_usage.html
 ${PLIST.latex}share/doc/doxygen/html/dynsections.js
 ${PLIST.latex}share/doc/doxygen/html/external.html
+${PLIST.latex}share/doc/doxygen/html/extsearch.html
 ${PLIST.latex}share/doc/doxygen/html/faq.html
 ${PLIST.latex}share/doc/doxygen/html/features.html
 ${PLIST.latex}share/doc/doxygen/html/form_0.png
 ${PLIST.latex}share/doc/doxygen/html/form_1.png
+${PLIST.latex}share/doc/doxygen/html/form_10.png
+${PLIST.latex}share/doc/doxygen/html/form_11.png
+${PLIST.latex}share/doc/doxygen/html/form_12.png
 ${PLIST.latex}share/doc/doxygen/html/form_2.png
 ${PLIST.latex}share/doc/doxygen/html/form_3.png
 ${PLIST.latex}share/doc/doxygen/html/form_4.png
@@ -1453,6 +1458,7 @@ ${PLIST.latex}share/doc/doxygen/html/form_5.png
 ${PLIST.latex}share/doc/doxygen/html/form_6.png
 ${PLIST.latex}share/doc/doxygen/html/form_7.png
 ${PLIST.latex}share/doc/doxygen/html/form_8.png
+${PLIST.latex}share/doc/doxygen/html/form_9.png
 ${PLIST.latex}share/doc/doxygen/html/formula.repository
 ${PLIST.latex}share/doc/doxygen/html/formulas.html
 ${PLIST.latex}share/doc/doxygen/html/ftv2blank.png
