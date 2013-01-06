@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:55:49 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/06 00:31:44 wiz Exp $
 #
 
-DISTNAME=		enca-1.9
+DISTNAME=		enca-1.13
 CATEGORIES=		converters
-MASTER_SITES=		http://trific.ath.cx/Ftp/enca/
+MASTER_SITES=		http://dl.cihar.com/enca/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://trific.ath.cx/software/enca/
+HOMEPAGE=		http://gitorious.org/enca
 COMMENT=		Extremely Naive Charset Analyser
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

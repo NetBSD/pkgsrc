@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/24 22:49:11 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/01/06 00:31:44 wiz Exp $
 
-SHA1 (enca-1.9.tar.bz2) = 6cabd3d8eb475674274140f13e6ce0ad56fa06ce
-RMD160 (enca-1.9.tar.bz2) = a75a484701b70fac1181a6a5113da5683235b6d1
-Size (enca-1.9.tar.bz2) = 503547 bytes
+SHA1 (enca-1.13.tar.bz2) = 448e5a6d356980ca6d489e760eacbcca118b320f
+RMD160 (enca-1.13.tar.bz2) = 347d81c5211a74aad1e5aca9ba6a86883158a804
+Size (enca-1.13.tar.bz2) = 532000 bytes
