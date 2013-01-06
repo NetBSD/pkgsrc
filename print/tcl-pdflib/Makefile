@@ -1,10 +1,18 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 13:45:47 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/01/06 13:35:18 gdt Exp $
 
 .include "../../print/pdflib/Makefile.common"
 
 PKGNAME=		tcl-pdflib-${PDFLIB_BASE_VERS}
-PKGREVISION=		13
+PKGREVISION=		14
 COMMENT=		Tcl interface to PDFlib for generating PDF files
+
+# Available only as a pdf, so it is not present in licenses/
+LICENSE=		pdflib-license
+RESTRICTED=		No permission to redistribute
+NO_SOURCE_ON_FTP=	${RESTRICTED}
+NO_SOURCE_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 MAKE_JOBS_SAFE=		no
 
