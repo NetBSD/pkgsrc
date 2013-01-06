@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.77 2013/01/06 07:14:07 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.78 2013/01/06 10:15:09 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/Transmission-gui to 2.75 [wiz 2013-01-06]
 	Updated www/libmicrohttpd to 0.9.24 [wiz 2013-01-06]
 	Updated fonts/harfbuzz to 0.9.9nb1 [ryoon 2013-01-06]
+	Removed devel/perltidy [darcy 2013-01-06]
