@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11804 2013/01/05 22:13:28 wiz Exp $
+$NetBSD: TODO,v 1.11805 2013/01/06 00:28:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,6 +354,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SOGo-2.0.3
 	o SmartEiffel-2.3
 	o TiffIO-130e
+	o Transmission-2.75
 	o Transmission-gui-2.75
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -412,8 +413,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-plugins-2.4.4
 	o audacity-2.0
 	o autoconvert-0.3.16
-	o autogen-5.17
-	o automake-1.13
+	o autogen-5.17.1
+	o automake-1.13.1
 	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
@@ -621,6 +622,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o genius-1.0.16
 	o gentoo-0.19.13
 	o gettext-0.18.2
+	o gettext-lib-0.18.2
+	o gettext-m4-0.18.2
 	o gfract-0.33
 	o ghc-7.6
 	o ghostscript-9.06 [wip]
@@ -683,10 +686,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o granulate-0.2
 	o graphviz-2.28.0
 	o grhino-0.16.1
-	o groff-1.21
+	o groff-1.22.1
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gsed-4.2.2
-	o gsharutils-4.13
+	o gsharutils-4.13.2
 	o gss-1.0.2
 	o gthumb-3.0.2
 	o gtick-0.4.2
@@ -1010,6 +1013,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.22.0
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
@@ -1034,11 +1038,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.10.0
 	o py-carddav-0.4
+	o py-distribute-0.6.33
 	o py-docutils-0.10 [pkg/47372]
 	o py-feedparser-5.1.3
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
-	o py-moin-1.9.6
 	o py-qt4-4.9.6
 	o py-sip-4.14.2
 	o py-sybase-0.37
@@ -1061,6 +1065,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8.1
 	o rdp-1.6
+	o redland-1.0.16
 	o remind-3.1.12
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
@@ -1250,7 +1255,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
-	o x264-devel-20121222
+	o x264-devel-20121229
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
