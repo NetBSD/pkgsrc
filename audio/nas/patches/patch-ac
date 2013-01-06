@@ -1,28 +1,26 @@
-$NetBSD: patch-ac,v 1.7 2008/10/14 12:47:11 markd Exp $
+$NetBSD: patch-ac,v 1.8 2013/01/06 03:21:47 ryoon Exp $
 
---- server/nasd.conf.eg.orig	Tue Oct  8 16:08:02 2002
+--- server/nasd.conf.eg.orig	Thu Feb 26 01:16:01 2009
 +++ server/nasd.conf.eg
-@@ -29,8 +29,8 @@
+@@ -44,7 +44,7 @@ OutDevType	"EXT"
  
  inputsection
  
 -	device		"/dev/dsp1"		# The input device, usually
--	mixer		"/dev/mixer1"		# mixer device
-+	device		"@DEVOSSAUDIO@1"		# The input device, usually
-+	mixer		"/dev/mixer1"		# mixer device
++	device		"/dev/@DEVOSSAUDIO@1"		# The input device, usually
+ 	mixer		"/dev/mixer1"		# mixer device
          gain            50                      # default input gain (0-100)
  	maxrate		44100
- 	minrate		4000			# Kind of redundant
-@@ -47,7 +47,7 @@
+@@ -62,7 +62,7 @@ end
  
  # These are used by voxware only for now.
  outputsection
 -	device		"/dev/dsp"		# The output device, usually
-+	device		"@DEVOSSAUDIO@"		# The output device, usually
++	device		"@DEVOSSAUDIO@ 		# The output device, usually
  	mixer		"/dev/mixer"		# mixer device
          gain            50                      # default output gain (0-100)
  	maxrate		44100			# CD quality.
-@@ -73,7 +73,7 @@
+@@ -88,7 +88,7 @@ end
  #
  #
  #outputsection
