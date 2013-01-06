@@ -1,0 +1,14 @@
+$NetBSD: patch-src_mkbuiltins,v 1.1 2013/01/06 16:19:08 cheusov Exp $
+
+# This patch fixes build failure on SunOS if /usr/xpg4/bin is not in PATH
+--- src/mkbuiltins.orig	2011-03-15 07:18:06.000000000 +0000
++++ src/mkbuiltins
+@@ -97,7 +97,7 @@ cat <<\!
+  */
+ 
+ !
+-sed 's/	-[a-z]*//' $temp2 | nl -b a -v 0 | LC_COLLATE=C sort -u -k 3,3 |
++sed 's/	-[a-z]*//' $temp2 | nl -ba -v0 | LC_COLLATE=C sort -u -k 3,3 |
+ tr abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ |
+ 	awk '{	printf "#define %s (builtincmd + %d)\n", $3, $1}'
+ printf '\n#define NUMBUILTINS %d\n' $(wc -l < $temp2)
