@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11819 2013/01/06 15:17:12 ryoon Exp $
+$NetBSD: TODO,v 1.11820 2013/01/06 15:52:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -506,6 +506,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-0.9.6
 	o dgen-1.30
 	o dhid-5.3
+	o dialog-1.2.20121230
 	o dictem-1.0.4
 	o diffstat-1.55
 	o digikam-2.9.0
@@ -537,6 +538,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
+	o enca-1.14
 	o enlightenment-1.0.9
 	o enscript-1.6.6
 	o eog-3.6.2
@@ -588,11 +590,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o fribidi-0.19.5 [pkg/47410]
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.6.1
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2012.1.15
-	o fvwm-2.6.0
+	o fvwm-2.6.5 [pkg/47409]
 	o fvwm2-themes-0.7.0
 	o galculator-2.0.1
 	o gallery3-3.0.2
@@ -687,6 +690,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtick-0.4.2
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
+	o gtk3-3.6.3
 	o gtkmm-3.6.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.41
@@ -705,8 +709,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
+	o harfbuzz-0.9.10
 	o haskell-mode-1.45
 	o hdf-4.2.7
+	o help2man-1.41.1
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-8.6
@@ -791,6 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libXcomposite-0.4.4
 	o libXdamage-1.1.4
 	o libarchive-3.0.4
+	o libass-0.10.1
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.8.0
@@ -842,8 +849,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libvirt-0.9.9
 	o libxklavier-5.3
 	o licq-1.3.8
-	o liferea-1.8.11
-	o lilypond-2.16
+	o liferea-1.8.12
+	o lilypond-2.16.2
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -853,8 +860,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lua-5.2.1
 	o lwm-1.2.2
 	o lyx-2.0.3
-	o m17n-db-1.6.4
-	o m17n-lib-1.6.4
+	o m17n-db-1.6.4 [pkg/47411]
+	o m17n-lib-1.6.4 [pkg/47412]
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
@@ -930,7 +937,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ntp4-4.2.6p5
 	o nucleo-0.7.6
 	o nulib2-220
-	o nut-18.4
+	o nut-18.5
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o olvwm-4.5
@@ -1026,11 +1033,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.10.0
 	o py-carddav-0.4
+	o py-cython-0.17.4
+	o py-distribute-0.6.34
 	o py-docutils-0.10 [pkg/47372]
 	o py-feedparser-5.1.3
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-qt4-4.9.6
+	o py-simplejson-3.0.5
 	o py-sip-4.14.2
 	o py-sybase-0.37
 	o py-sympy-0.7.2
@@ -1079,6 +1089,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sarg-2.2.5
 	o sawfish-1.9.1
 	o saxon-9.2
+	o scala-2.10.0
 	o scapy-2.2.0
 	o scew-0.4.0
 	o scilab-5.5.3
@@ -1146,6 +1157,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-2.101
+	o t1utils-1.37
 	o tacacs-4.0.4.14
 	o tads-3.0.16
 	o taskjuggler-3.3.0
@@ -1229,7 +1241,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.5.20 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.5.21 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1240,7 +1252,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
-	o x264-devel-20121229
+	o x264-devel-20130105
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
