@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.5 2012/09/02 06:43:40 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.6 2013/01/07 21:12:15 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/debug_util_posix.cc.orig	2012-08-25 00:31:11.000000000 +0000
+--- mozilla/ipc/chromium/src/base/debug_util_posix.cc.orig	2012-11-19 22:42:22.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/debug_util_posix.cc
 @@ -5,7 +5,7 @@
  #include "build/build_config.h"
@@ -37,7 +37,30 @@ $NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.5 2012/09/02 06:4
  
  // Based on Apple's recommended method as described in
  // http://developer.apple.com/qa/qa2004/qa1361.html
-@@ -71,7 +78,15 @@ bool DebugUtil::BeingDebugged() {
+@@ -51,14 +58,22 @@ bool DebugUtil::BeingDebugged() {
+   // we're looking for information about a specific process ID.
+   int mib[] = {
+     CTL_KERN,
++#if defined(OS_NETBSD)
++    KERN_PROC2,
++#else
+     KERN_PROC,
++#endif
+     KERN_PROC_PID,
+     getpid()
+   };
+ 
+   // Caution: struct kinfo_proc is marked __APPLE_API_UNSTABLE.  The source and
+   // binary interfaces may change.
++#if defined(OS_NETBSD)
++  struct kinfo_proc2 info;
++#else
+   struct kinfo_proc info;
++#endif
+   size_t info_size = sizeof(info);
+ 
+   int sysctl_result = sysctl(mib, arraysize(mib), &info, &info_size, NULL, 0);
+@@ -71,7 +86,17 @@ bool DebugUtil::BeingDebugged() {
  
    // This process is being debugged if the P_TRACED flag is set.
    is_set = true;
@@ -46,6 +69,8 @@ $NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.5 2012/09/02 06:4
 +#elif defined(OS_FREEBSD)
 +  being_debugged = (info.ki_flag & P_TRACED) != 0;
 +#elif defined(OS_OPENBSD)
++  being_debugged = (info.p_flag & P_TRACED) != 0;
++#elif defined(OS_NETBSD)
 +  being_debugged = (info.p_flag & P_TRACED) != 0;
 +#else
    being_debugged = (info.kp_proc.p_flag & P_TRACED) != 0;
