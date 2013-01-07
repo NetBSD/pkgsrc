@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.5 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.6 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/glue/GeckoChildProcessHost.cpp

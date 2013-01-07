@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.12 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ax,v 1.13 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-11-18 10:19:54.000000000 +0000
 +++ mozilla/xpcom/base/nsStackWalk.cpp

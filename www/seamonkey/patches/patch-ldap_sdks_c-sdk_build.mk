@@ -1,4 +1,4 @@
-$NetBSD: patch-ldap_sdks_c-sdk_build.mk,v 1.3 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ldap_sdks_c-sdk_build.mk,v 1.4 2013/01/07 21:55:30 ryoon Exp $
 
 --- ldap/sdks/c-sdk/build.mk.orig	2012-11-18 10:20:06.000000000 +0000
 +++ ldap/sdks/c-sdk/build.mk

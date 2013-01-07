@@ -1,4 +1,4 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.5 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.6 2013/01/07 21:55:30 ryoon Exp $
 
 --- mail/app/Makefile.in.orig	2012-11-18 10:14:23.000000000 +0000
 +++ mail/app/Makefile.in
