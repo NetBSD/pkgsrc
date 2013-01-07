@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.109 2012/12/12 08:35:58 ryoon Exp $
+$NetBSD: distinfo,v 1.110 2013/01/07 21:12:15 ryoon Exp $
 
 SHA1 (enigmail-1.4.5.tar.gz) = 16d0450a9f5fb4de0e9cc5b9f8091dce4b070aaf
 RMD160 (enigmail-1.4.5.tar.gz) = 860a1ca813fd2ccae69ac0afe07affd39611e56a
@@ -39,7 +39,7 @@ SHA1 (patch-bg) = 2e55ec7ad6d823b518af9bc59c4425f981f8b94d
 SHA1 (patch-bi) = bc44d47f386901d261a7a5401520a3905cb29d5a
 SHA1 (patch-config_baseconfig.mk) = f5494ace3f5947715cf6918b7d3e19c25fa26bf8
 SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = a6d40c6b92aee607fb4f18d5a7c97b3d7833c74a
-SHA1 (patch-ipc_chromium_src_base_debug__util__posic.cc) = 94db51e427931edefd3df5b2c476702242a34926
+SHA1 (patch-ipc_chromium_src_base_debug__util__posic.cc) = 84e3588ede7c1c0a03b23e5aa054e0c1ab2cfe27
 SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 5f792d717f6373270dbee4aa9dbe278cc12d5f92
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 882b0987defaed4475317b8c500d3dffeb9d0866
 SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = 1207a1e779ea0d48cb41f6a98edbe22f187b309b
