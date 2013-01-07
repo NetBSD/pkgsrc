@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11820 2013/01/06 15:52:33 wiz Exp $
+$NetBSD: TODO,v 1.11821 2013/01/07 14:31:41 taca Exp $
 
 Suggested new packages
 ======================
@@ -387,7 +387,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-dtcl-1.0.0
 	o ap-layout-3.4
 	o ap-mp3-0.40
-	o ap-php-5.4.4
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
@@ -986,8 +985,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
 	o photopc-3.05
-	o php-5.3.20
-	o php-5.4.10
 	o php-jpgraph-3.0.6
 	o phpmyadmin-3.5.5
 	o picp-0.6.8
