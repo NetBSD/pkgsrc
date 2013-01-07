@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.94 2013/01/07 17:07:55 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.95 2013/01/07 17:40:37 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -123,3 +123,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao30-example to 3.0.2 [taca 2013-01-07]
 	Added devel/py-blinker version 1.2 [kleink 2013-01-07]
 	Added www/py-werkzeug version 0.8.3 [kleink 2013-01-07]
+	Added www/py-flask version 0.9 [kleink 2013-01-07]
