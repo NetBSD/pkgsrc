@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.98 2013/01/07 21:53:35 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.99 2013/01/07 21:54:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-flask-sqlalchemy version 0.16 [kleink 2013-01-07]
 	Added www/py-wtforms version 1.0.2 [kleink 2013-01-07]
 	Added www/py-flask-wtf version 0.8.2 [kleink 2013-01-07]
+	Updated security/gnupg to 1.4.13nb1 [wiz 2013-01-07]
