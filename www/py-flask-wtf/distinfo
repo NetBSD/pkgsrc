@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/07 21:51:10 kleink Exp $
+
+SHA1 (Flask-WTF-0.8.2.tar.gz) = 21aa811f42485972ad8bbd2bc574b6f286105acf
+RMD160 (Flask-WTF-0.8.2.tar.gz) = 04086e1c277b2b85f997ef9439d2183cfcee34af
+Size (Flask-WTF-0.8.2.tar.gz) = 237611 bytes
