@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.2 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.3 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/config/system-headers.orig	2012-11-18 10:19:31.000000000 +0000
 +++ mozilla/config/system-headers

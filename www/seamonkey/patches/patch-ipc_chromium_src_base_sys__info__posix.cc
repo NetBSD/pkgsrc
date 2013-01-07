@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.7 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.8 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/ipc/chromium/src/base/sys_info_posix.cc.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/sys_info_posix.cc
