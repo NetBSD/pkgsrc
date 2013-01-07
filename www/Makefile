@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.917 2013/01/07 20:27:09 kleink Exp $
+# $NetBSD: Makefile,v 1.918 2013/01/07 21:51:54 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -557,6 +557,7 @@ SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-login
 SUBDIR+=	py-flask-sqlalchemy
+SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
@@ -576,6 +577,7 @@ SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webcolors
 SUBDIR+=	py-webpy
 SUBDIR+=	py-werkzeug
+SUBDIR+=	py-wtforms
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
 SUBDIR+=	ramaze
