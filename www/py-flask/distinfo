@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/07 17:37:37 kleink Exp $
+
+SHA1 (Flask-0.9.tar.gz) = 181ad014e58954c1171be5a4ff3ec91f126da0be
+RMD160 (Flask-0.9.tar.gz) = 43e9f7703b44295f694961631d844ec075d462c6
+Size (Flask-0.9.tar.gz) = 481982 bytes
