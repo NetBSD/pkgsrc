@@ -1,0 +1,5 @@
+Blinker provides a fast dispatching system that allows any number
+of interested parties to subscribe to events, or "signals".
+
+Signal receivers can subscribe to specific senders or receive
+signals sent by any sender.
