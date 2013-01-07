@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.87 2013/01/07 13:27:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.88 2013/01/07 13:27:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -114,3 +114,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/reposurgeon version 2.12 [ryoon 2013-01-07]
 	Updated lang/tcl-itcl to 3.4.1nb1 [wiz 2013-01-07]
 	Updated sysutils/tkdesk to 2.0nb3 [wiz 2013-01-07]
+	Updated cad/tnt-mmtl to 1.2.2nb7 [wiz 2013-01-07]
