@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1683 2013/01/06 13:51:51 alnsn Exp $
+# $NetBSD: Makefile,v 1.1684 2013/01/07 12:30:36 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1399,6 +1399,7 @@ SUBDIR+=	rdp
 SUBDIR+=	re2c
 SUBDIR+=	readline
 SUBDIR+=	refinecvs
+SUBDIR+=	reposurgeon
 SUBDIR+=	roundup
 SUBDIR+=	rox-lib
 SUBDIR+=	rpc2
