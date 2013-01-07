@@ -1,4 +1,4 @@
-$NetBSD: patch-mn,v 1.7 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mn,v 1.8 2013/01/07 21:55:30 ryoon Exp $
 
 Make sure we link correctly with sqlite3 from pkgsrc.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.16 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ab,v 1.17 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/nsprpub/pr/include/md/_netbsd.h.orig	2012-11-18 10:19:49.000000000 +0000
 +++ mozilla/nsprpub/pr/include/md/_netbsd.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_js_src_jscpucfg.h,v 1.5 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jscpucfg.h,v 1.6 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/js/src/jscpucfg.h.orig	2012-11-18 10:19:39.000000000 +0000
 +++ mozilla/js/src/jscpucfg.h

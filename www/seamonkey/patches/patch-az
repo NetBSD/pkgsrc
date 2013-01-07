@@ -1,4 +1,4 @@
-$NetBSD: patch-az,v 1.6 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-az,v 1.7 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/nsprpub/pr/src/pthreads/ptthread.c.orig	2012-11-18 10:19:49.000000000 +0000
 +++ mozilla/nsprpub/pr/src/pthreads/ptthread.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-suite_installer_Makefile.in,v 1.3 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-suite_installer_Makefile.in,v 1.4 2013/01/07 21:55:30 ryoon Exp $
 
 --- suite/installer/Makefile.in.orig	2012-11-18 10:14:25.000000000 +0000
 +++ suite/installer/Makefile.in

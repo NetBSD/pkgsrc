@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_Makefile.in,v 1.1 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_Makefile.in,v 1.2 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/media/libcubeb/src/Makefile.in.orig	2012-11-18 10:19:46.000000000 +0000
 +++ mozilla/media/libcubeb/src/Makefile.in

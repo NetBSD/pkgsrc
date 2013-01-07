@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_thread__collision__warner.h,v 1.1 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_thread__collision__warner.h,v 1.2 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/ipc/chromium/src/base/thread_collision_warner.h.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/thread_collision_warner.h

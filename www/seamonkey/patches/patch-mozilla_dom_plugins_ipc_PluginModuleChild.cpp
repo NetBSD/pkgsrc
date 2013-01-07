@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.5 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.6 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-11-18 10:19:34.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.cpp

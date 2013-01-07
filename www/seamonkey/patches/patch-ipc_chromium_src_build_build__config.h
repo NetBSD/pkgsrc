@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.8 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.9 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/ipc/chromium/src/build/build_config.h.orig	2012-11-18 10:19:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/build/build_config.h
