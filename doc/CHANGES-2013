@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.86 2013/01/07 13:26:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.87 2013/01/07 13:27:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/umefont-ttf to 0.447 [ryoon 2013-01-07]
 	Added devel/reposurgeon version 2.12 [ryoon 2013-01-07]
 	Updated lang/tcl-itcl to 3.4.1nb1 [wiz 2013-01-07]
+	Updated sysutils/tkdesk to 2.0nb3 [wiz 2013-01-07]
