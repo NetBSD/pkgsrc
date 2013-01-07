@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.89 2013/01/07 14:27:25 taca Exp $
+$NetBSD: CHANGES-2013,v 1.90 2013/01/07 14:31:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -117,3 +117,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated cad/tnt-mmtl to 1.2.2nb7 [wiz 2013-01-07]
 	Updated lang/php53 to 5.3.20 [taca 2013-01-07]
 	Updated lang/php54 to 5.4.10 [taca 2013-01-07]
+	Updated www/contao211 to 2.11.8 [taca 2013-01-07]
