@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.6 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.7 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/toolkit/toolkit-tiers.mk.orig	2012-11-18 10:19:53.000000000 +0000
 +++ mozilla/toolkit/toolkit-tiers.mk
