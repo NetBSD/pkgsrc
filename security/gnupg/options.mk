@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.15 2012/06/08 12:50:33 fhajny Exp $
+# $NetBSD: options.mk,v 1.16 2013/01/07 12:26:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
-PKG_SUPPORTED_OPTIONS=	curl idea ldap readline
+PKG_SUPPORTED_OPTIONS=	curl ldap readline
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,17 +25,6 @@ MACHINE_GNU_ARCH=	i586
 .include "../../www/curl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-libcurl
-.endif
-
-.if !empty(PKG_OPTIONS:Midea)
-# use of IDEA as crypto function
-DISTFILES+=	idea.c.gz
-SITES.idea.c.gz=ftp://ftp.gnupg.dk/pub/contrib-dk/ \
-		http://www.gnupg.dk/contrib-dk/
-USE_TOOLS+=	gzcat
-
-pre-configure:
-	${GZCAT} ${DISTDIR}/idea.c.gz > ${WRKSRC}/cipher/idea.c
 .endif
 
 PLIST_VARS+=		ldap
