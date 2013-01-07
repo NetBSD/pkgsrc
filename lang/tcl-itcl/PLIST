@@ -1,25 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/01/07 13:26:41 wiz Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
 include/itclIntDecls.h
-include/itk.h
-include/itkDecls.h
-lib/libitcl32.la
-lib/libitclstub32.a
-lib/libitk32.la
-lib/libitkstub32.a
-lib/tcl/itcl3.2/itcl.tcl
-lib/tcl/itcl3.2/pkgIndex.tcl
-lib/tcl/itk3.2/Archetype.itk
-lib/tcl/itk3.2/Toplevel.itk
-lib/tcl/itk3.2/Widget.itk
-lib/tcl/itk3.2/itk.tcl
-lib/tcl/itk3.2/pkgIndex.tcl
-lib/tcl/itk3.2/tclIndex
-man/mann/Archetype.n
-man/mann/Toplevel.n
-man/mann/Widget.n
+lib/itcl3.4/itcl.tcl
+lib/itcl3.4/libitcl3.4.so
+lib/itcl3.4/libitclstub3.4.a
+lib/itcl3.4/pkgIndex.tcl
+lib/itclConfig.sh
 man/mann/body.n
 man/mann/class.n
 man/mann/code.n
@@ -27,12 +15,8 @@ man/mann/configbody.n
 man/mann/delete.n
 man/mann/ensemble.n
 man/mann/find.n
+man/mann/is.n
 man/mann/itcl.n
-man/mann/itcl_class.n
-man/mann/itcl_info.n
 man/mann/itclvars.n
-man/mann/itk.n
-man/mann/itkvars.n
 man/mann/local.n
 man/mann/scope.n
-man/mann/usual.n
