@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_content_media_nsAudioStream.cpp,v 1.1 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_content_media_nsAudioStream.cpp,v 1.2 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/content/media/nsAudioStream.cpp.orig	2012-11-18 10:19:32.000000000 +0000
 +++ mozilla/content/media/nsAudioStream.cpp
