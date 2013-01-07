@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.22 2011/01/12 08:15:45 obache Exp $
+# $NetBSD: pear.mk,v 1.23 2013/01/07 14:26:14 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -22,6 +22,7 @@ PKGNAME=	${PHP_PKG_PREFIX}-pear-${DISTNAME}
 CATEGORIES+=	www
 
 MASTER_SITE_PEAR_PACKAGE+= \
+	http://download.pear.php.net/package/ \
 	http://pear.php.net/get/
 MASTER_SITES+=	${MASTER_SITE_PEAR_PACKAGE}
 
