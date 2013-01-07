@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/07 16:41:07 kleink Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/blinker/__init__.py
+${PYSITELIB}/blinker/__init__.pyc
+${PYSITELIB}/blinker/__init__.pyo
+${PYSITELIB}/blinker/_saferef.py
+${PYSITELIB}/blinker/_saferef.pyc
+${PYSITELIB}/blinker/_saferef.pyo
+${PYSITELIB}/blinker/_utilities.py
+${PYSITELIB}/blinker/_utilities.pyc
+${PYSITELIB}/blinker/_utilities.pyo
+${PYSITELIB}/blinker/base.py
+${PYSITELIB}/blinker/base.pyc
+${PYSITELIB}/blinker/base.pyo
