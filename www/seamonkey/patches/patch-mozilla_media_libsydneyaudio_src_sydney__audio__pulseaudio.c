@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_media_libsydneyaudio_src_sydney__audio__pulseaudio.c,v 1.3 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-mozilla_media_libsydneyaudio_src_sydney__audio__pulseaudio.c,v 1.4 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/media/libsydneyaudio/src/sydney_audio_pulseaudio.c.orig	2012-11-18 10:19:46.000000000 +0000
 +++ mozilla/media/libsydneyaudio/src/sydney_audio_pulseaudio.c
