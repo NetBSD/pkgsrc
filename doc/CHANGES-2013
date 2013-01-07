@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.91 2013/01/07 14:33:15 taca Exp $
+$NetBSD: CHANGES-2013,v 1.92 2013/01/07 14:41:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -119,3 +119,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php54 to 5.4.10 [taca 2013-01-07]
 	Updated www/contao211 to 2.11.8 [taca 2013-01-07]
 	Updated www/contao211-example to 2.11.8 [taca 2013-01-07]
+	Updated www/contao30 to 3.0.2 [taca 2013-01-07]
+	Updated www/contao30-example to 3.0.2 [taca 2013-01-07]
