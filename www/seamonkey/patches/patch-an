@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.8 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-an,v 1.9 2013/01/07 21:55:30 ryoon Exp $
 
 SHA1_Update conflicts with openssl which may be dynamically loaded
 at runtime via libcups or libgssapi so causing a crash due to using

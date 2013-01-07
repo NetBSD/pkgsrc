@@ -1,4 +1,4 @@
-$NetBSD: patch-suite_installer_package-manifest.in,v 1.2 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-suite_installer_package-manifest.in,v 1.3 2013/01/07 21:55:30 ryoon Exp $
 
 --- suite/installer/package-manifest.in.orig	2012-11-18 10:14:25.000000000 +0000
 +++ suite/installer/package-manifest.in

@@ -1,4 +1,4 @@
-$NetBSD: patch-bg,v 1.6 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-bg,v 1.7 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/storage/src/SQLiteMutex.h.orig	2012-11-18 10:19:51.000000000 +0000
 +++ mozilla/storage/src/SQLiteMutex.h

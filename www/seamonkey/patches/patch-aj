@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.9 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-aj,v 1.10 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2012-11-18 10:19:50.000000000 +0000
 +++ mozilla/profile/dirserviceprovider/src/nsProfileLock.cpp

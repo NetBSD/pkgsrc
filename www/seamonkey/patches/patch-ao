@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.9 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ao,v 1.10 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/toolkit/mozapps/installer/packager.mk.orig	2012-11-18 10:19:53.000000000 +0000
 +++ mozilla/toolkit/mozapps/installer/packager.mk

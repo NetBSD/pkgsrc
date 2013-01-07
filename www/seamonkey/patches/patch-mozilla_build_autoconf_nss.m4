@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.5 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.6 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/build/autoconf/nss.m4.orig	2012-11-18 10:19:31.000000000 +0000
 +++ mozilla/build/autoconf/nss.m4

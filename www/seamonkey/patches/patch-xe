@@ -1,4 +1,4 @@
-$NetBSD: patch-xe,v 1.6 2012/11/23 17:28:50 ryoon Exp $
+$NetBSD: patch-xe,v 1.7 2013/01/07 21:55:30 ryoon Exp $
 
  NetBSD/m68k xptcall support code. From pkgsrc/www/firefox/patch-ad.
 

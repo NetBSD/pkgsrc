@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_config_baseconfig.mk,v 1.1 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-mozilla_config_baseconfig.mk,v 1.2 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/config/baseconfig.mk.orig	2012-11-18 10:19:31.000000000 +0000
 +++ mozilla/config/baseconfig.mk

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa-toplevel,v 1.9 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:55:30 ryoon Exp $
 
 --- configure.in.orig	2012-11-18 10:14:23.000000000 +0000
 +++ configure.in

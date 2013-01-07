@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.13 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-at,v 1.14 2013/01/07 21:55:30 ryoon Exp $
 
 --- mozilla/gfx/qcms/qcmstypes.h.orig	2012-11-18 10:19:36.000000000 +0000
 +++ mozilla/gfx/qcms/qcmstypes.h
