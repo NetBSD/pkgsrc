@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/07 12:12:20 ryoon Exp $
+bin/repodiffer
+bin/repopuller
+bin/reposurgeon
+man/man1/repodiffer.1
+man/man1/repopuller.1
+man/man1/reposurgeon.1
+share/doc/reposurgeon/COPYING
+share/doc/reposurgeon/NEWS
+share/doc/reposurgeon/README
+share/doc/reposurgeon/conversion.mk
