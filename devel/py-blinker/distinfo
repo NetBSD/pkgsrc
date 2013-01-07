@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/07 16:41:07 kleink Exp $
+
+SHA1 (blinker-1.2.tar.gz) = bf4eb4b4217405340df7b5395a809ab9292aade9
+RMD160 (blinker-1.2.tar.gz) = c8aeade9bf5012bd305a5cf740964af326f023af
+Size (blinker-1.2.tar.gz) = 66221 bytes
