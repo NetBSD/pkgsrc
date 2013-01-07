@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2013/01/07 13:46:21 christos Exp $
 
 SHA1 (openafs-1.7.11-src.tar.bz2) = 7baa664ea521520a3355c6d8ab7cafff004e7d97
 RMD160 (openafs-1.7.11-src.tar.bz2) = 4e6c61496989b69544d0039a9fd6ca8627fc4df0
@@ -8,8 +8,10 @@ SHA1 (patch-configure) = d36eb7024759f7ab3008def440a118ae9c303927
 SHA1 (patch-configure-libafs) = a46ceef332e9c12a9708228d16cb2d0c658a3370
 SHA1 (patch-src-afs-NBSD-osi_crypto.c) = 2cf24b1670b588a120168098aea49d6d56d77f9a
 SHA1 (patch-src-afs-NBSD-osi_kmod.c) = 299bb92ab74093c5cdc8b0ea08733bbc254eee74
+SHA1 (patch-src-afs-NBSD-osi_machdep.h) = f60c6072fe17d226dabb38ec39f22f9749abd6f4
 SHA1 (patch-src-afs-NBSD-osi_vm.c) = afcd53f5e0ae530f223bf69b9f0ecbb02586ae90
 SHA1 (patch-src-afs-NBSD-osi_vnodeops.c) = fb804b3519bb4da71ca5f17bdb2befbbd67024f2
+SHA1 (patch-src-auth-cellconfig.c) = 5695ae70676bf154272ee457ada8a9bba3007b22
 SHA1 (patch-src-bucoord-Makefile.n) = afc534dc174efc9e8a966c32a6b85c0feb776900
 SHA1 (patch-src-cf-osconf.m4) = e3b6488cc2e8891c03014c6774a55f04106cb25a
 SHA1 (patch-src-config-param.amd64_nbsd70.h) = 045a2cc33103c53e3141ad02074e12482069fcb2
