@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 13:04:19 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/01/08 15:26:09 wiz Exp $
 
 DISTNAME=	ical-2.3.1
 PKGREVISION=	4
 CATEGORIES=	time
-MASTER_SITES=	http://www.annexia.org/_file/
+MASTER_SITES=	# http://www.annexia.org/_file/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.annexia.org/freeware/ical
+#HOMEPAGE=	http://www.annexia.org/freeware/ical
 COMMENT=	Calendar application
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
