@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/08 19:28:12 kleink Exp $
+
+SHA1 (Flask-REST-1.1.tar.gz) = 2c4771e7ece28c3c31177e6296f705d20566bf6c
+RMD160 (Flask-REST-1.1.tar.gz) = 4108d393242fb02cffca6fa87f05f0b5bc652f10
+Size (Flask-REST-1.1.tar.gz) = 5178 bytes
