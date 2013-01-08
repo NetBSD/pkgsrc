@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/08 18:55:54 kleink Exp $
+
+SHA1 (Flask-FlatPages-0.3.tar.gz) = bb4f464af6e77f25789ba41dd3b700e8868a63f5
+RMD160 (Flask-FlatPages-0.3.tar.gz) = 11377232b70efb4bb2160d6c3050540ccbd35d2c
+Size (Flask-FlatPages-0.3.tar.gz) = 18431 bytes
