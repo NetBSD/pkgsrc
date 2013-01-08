@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/25 06:55:50 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/01/08 16:53:48 wiz Exp $
 #
 
 DISTNAME=		expatobjc-1.0
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=expatobjc/}
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://expatobjc.sourceforge.net/
 COMMENT=		Objective-C Wrapper for Expat
-LICENSE=		expatobjc-license
+LICENSE=		mit
 
 USE_LANGUAGES=		objc
 USE_PKGLOCALEDIR=	yes
