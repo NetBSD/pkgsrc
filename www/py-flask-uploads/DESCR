@@ -1,0 +1,3 @@
+Flask-Uploads provides flexible upload handling for Flask applications.
+It lets you divide your uploads into sets that the application user
+can publish separately.
