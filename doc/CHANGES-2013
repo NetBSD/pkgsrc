@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.105 2013/01/08 11:44:16 taca Exp $
+$NetBSD: CHANGES-2013,v 1.106 2013/01/08 15:55:23 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -136,3 +136,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkg_tarup to 1.9.1 [jperkin 2013-01-08]
 	Updated www/contao30 to 3.0.3 [taca 2013-01-08]
 	Updated www/contao30-example to 3.0.3 [taca 2013-01-08]
+	Updated mail/milter-greylist to 4.4.2 [tron 2013-01-08]
