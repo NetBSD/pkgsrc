@@ -1,0 +1,3 @@
+Flask-FlatPages provides a collections of pages to your Flask
+application. Pages are built from "flat" text files as opposed to
+a relational database.
