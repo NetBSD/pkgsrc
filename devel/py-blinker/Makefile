@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/07 16:41:07 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/08 14:20:15 kleink Exp $
 
 DISTNAME=	blinker-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://discorporate.us/projects/Blinker/
 COMMENT=	Fast, simple object-to-object and broadcast signaling
 LICENSE=	mit
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
