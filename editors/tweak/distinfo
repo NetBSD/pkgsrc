@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/01/08 10:16:43 wiz Exp $
+
+SHA1 (tweak-3.01.tar.gz) = 23e731d14837f9bd7c80c3a03c1c82a39928f0fc
+RMD160 (tweak-3.01.tar.gz) = 09e904523f6d38b46609e64df5d9ae7276691d23
+Size (tweak-3.01.tar.gz) = 71681 bytes
+SHA1 (patch-Makefile) = 2f937281eb7b72e477df906563634994450c66be
+SHA1 (patch-rcfile.c) = 82bf8d167537de068650d3feaf5552ff7bb2be1b
