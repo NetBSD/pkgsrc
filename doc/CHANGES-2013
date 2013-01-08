@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.111 2013/01/08 20:50:08 darcy Exp $
+$NetBSD: CHANGES-2013,v 1.112 2013/01/08 23:47:20 jym Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -142,3 +142,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-flask-frozen version 0.9 [kleink 2013-01-08]
 	Added www/py-flask-rest version 1.1 [kleink 2013-01-08]
 	Updated databases/py-postgresql to 4.1.1 [darcy 2013-01-08]
+	Updated security/stunnel to 4.54 [jym 2013-01-09]
