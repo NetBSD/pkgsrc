@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 20:36:18 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/08 16:36:53 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.17.0
@@ -23,7 +23,6 @@ TEST_TARGET=		test
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		AWK=${AWK:Q}
 MAKE_ENV+=		SUBPRJ_DFLT="paexec doc examples"
 MAKE_ENV+=		EGDIR=${EGDIR}
