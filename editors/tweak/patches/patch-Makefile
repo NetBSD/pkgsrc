@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2013/01/08 10:16:43 wiz Exp $
+
+DESTDIR support.
+
+--- Makefile.orig	2006-05-18 08:27:43.000000000 +0000
++++ Makefile
+@@ -22,9 +22,10 @@ LINK := gcc
+ LFLAGS :=
+ LIBS := 
+ 
++DESTDIR=
+ PREFIX=/usr/local
+-BINDIR=$(PREFIX)/bin
+-MANDIR=$(PREFIX)/man/man1
++BINDIR=$(DESTDIR)$(PREFIX)/bin
++MANDIR=$(DESTDIR)$(PREFIX)/man/man1
+ 
+ TWEAK := main.o keytab.o actions.o search.o rcfile.o buffer.o btree.o
+ 
