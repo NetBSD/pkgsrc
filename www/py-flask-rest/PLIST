@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/08 19:28:12 kleink Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flask_rest.py
+${PYSITELIB}/flask_rest.pyc
+${PYSITELIB}/flask_rest.pyo
