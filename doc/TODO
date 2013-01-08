@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11822 2013/01/07 21:54:02 wiz Exp $
+$NetBSD: TODO,v 1.11823 2013/01/08 12:39:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,6 +445,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
 	o cc65-2.13.3
+	o ccache-3.1.9
 	o cddbd-1.5.2
 	o cdialog-1.2.20121230
 	o cdk-5.0.20120323
@@ -491,7 +492,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dansguardian-2.10.0.3
 	o dante-1.3.2
 	o dap-3.7
-	o dar-2.4.8
+	o dar-2.4.9
 	o darcs-2.4
 	o dasher-4.11
 	o dasm-2.20.11
@@ -571,10 +572,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
+	o ffmpeg-20130108.1.1
 	o file-5.12
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
+	o firefox-18.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
@@ -682,13 +685,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grhino-0.16.1
 	o groff-1.22.1
 	o groonga-2.0.5 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
-	o gsharutils-4.13.2
+	o gsharutils-4.13.3
 	o gss-1.0.2
 	o gthumb-3.0.2
 	o gtick-0.4.2
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
-	o gtk3-3.6.3
+	o gtk3-3.6.4
 	o gtkmm-3.6.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.41
@@ -723,7 +726,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o htop-1.0.2
 	o httping-1.5.6
 	o httptunnel-3.3
-	o hugin-2011.4.0
+	o hugin-2012.0.0
 	o hylafax-6.0.5
 	o ical-2.3.2
 	o icc11-13.0
@@ -944,6 +947,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o opencv-2.4.3
+	o opendkim-2.7.4
 	o opengrok-0.11.1
 	o openmortal-0.7.1
 	o openoffice-3.4
