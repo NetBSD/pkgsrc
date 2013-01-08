@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/08 10:16:43 wiz Exp $
+bin/tweak
+man/man1/tweak.1
