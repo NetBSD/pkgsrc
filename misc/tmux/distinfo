@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.18 2012/10/21 14:49:01 wen Exp $
+$NetBSD: distinfo,v 1.19 2013/01/08 12:36:07 jperkin Exp $
 
 SHA1 (tmux-1.7.tar.gz) = ee6942a1bc3fc650036f26921d80bc4b73d56df6
 RMD160 (tmux-1.7.tar.gz) = ff4f5fec48627378654c902ff0bee49a4ceaa026
 Size (tmux-1.7.tar.gz) = 407164 bytes
+SHA1 (patch-client.c) = e37053d721bd26d31783af883a7d1f6870095325
