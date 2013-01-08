@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.103 2013/01/08 10:17:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.104 2013/01/08 11:02:37 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -133,3 +133,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/py-pandas to 0.10.0 [bad 2013-01-08]
 	Added audio/ibniz version 1.18 [wiz 2013-01-08]
 	Added editors/tweak version 3.01 [wiz 2013-01-08]
+	Updated pkgtools/pkg_tarup to 1.9.1 [jperkin 2013-01-08]
