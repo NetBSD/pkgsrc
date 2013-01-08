@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.109 2013/01/08 19:10:03 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.110 2013/01/08 19:28:59 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -140,3 +140,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-flask-uploads version 0.1.3 [kleink 2013-01-08]
 	Added www/py-flask-flatpages version 0.3 [kleink 2013-01-08]
 	Added www/py-flask-frozen version 0.9 [kleink 2013-01-08]
+	Added www/py-flask-rest version 1.1 [kleink 2013-01-08]
