@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.106 2013/01/08 15:55:23 tron Exp $
+$NetBSD: CHANGES-2013,v 1.107 2013/01/08 18:07:42 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao30 to 3.0.3 [taca 2013-01-08]
 	Updated www/contao30-example to 3.0.3 [taca 2013-01-08]
 	Updated mail/milter-greylist to 4.4.2 [tron 2013-01-08]
+	Added www/py-flask-uploads version 0.1.3 [kleink 2013-01-08]
