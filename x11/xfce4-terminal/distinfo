@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/11/29 22:16:34 snj Exp $
+$NetBSD: distinfo,v 1.7 2013/01/08 01:23:19 marino Exp $
 
 SHA1 (Terminal-0.4.2.tar.bz2) = bf4510e331284d7f68ba193fe1d6f2e57b7815bb
 RMD160 (Terminal-0.4.2.tar.bz2) = 8e6364673d6b0d8eddfd59f3f82d3944fca45684
 Size (Terminal-0.4.2.tar.bz2) = 1981158 bytes
+SHA1 (patch-terminal_terminal-screen.c) = dcfa62798ea47e26ed65df031c09991f24d4fa7c
