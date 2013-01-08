@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.27 2012/02/22 07:39:05 wiz Exp $
+# $Id: pkg_tarup,v 1.28 2013/01/08 11:02:20 jperkin Exp $
 #
 # Tar up installed package
 #
@@ -156,8 +156,6 @@ create_package()
 
 add_to_list()
 {
-	local added
-
 	added=0
 
 	oIFS="$IFS"
