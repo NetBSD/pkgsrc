@@ -1,0 +1,11 @@
+tweak is a hex editor. It allows you to edit a file at very low
+level, letting you see the full and exact binary contents of the
+file. It can be useful for modifying binary files such as executables,
+editing disk or CD images, debugging programs that generate binary
+file formats incorrectly, and many other things.
+
+Unlike simpler hex editors, tweak possesses a fully functional
+insert mode. This is not useful when editing many of the types of
+file described above, but can be useful in other situations. Also,
+an insert mode makes it easy to use tweak to construct new files
+from scratch.
