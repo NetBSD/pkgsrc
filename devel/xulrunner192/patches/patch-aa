@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2013/01/09 10:34:03 martin Exp $
 
---- configure.in.orig	2012-03-06 14:45:23.000000000 +0000
-+++ configure.in
-@@ -1858,7 +1858,7 @@ case "$target" in
+Do not allow access to _res on NetBSD.
+
+--- configure.in.orig	2012-03-06 15:45:23.000000000 +0100
++++ configure.in	2013-01-08 16:00:11.000000000 +0100
+@@ -1858,7 +1858,7 @@
      fi
      ;;
  
@@ -11,7 +13,7 @@ $NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1872,6 +1872,9 @@ case "$target" in
+@@ -1872,6 +1872,9 @@
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -21,7 +23,7 @@ $NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
      ;; 
  
  *-hpux*)
-@@ -2939,6 +2942,9 @@ if test "$GNU_CC"; then
+@@ -2939,6 +2942,9 @@
    AC_CACHE_CHECK(for visibility(hidden) attribute,
                   ac_cv_visibility_hidden,
                   [cat > conftest.c <<EOF
@@ -31,7 +33,7 @@ $NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
                    int foo __attribute__ ((visibility ("hidden"))) = 1;
  EOF
                    ac_cv_visibility_hidden=no
-@@ -3110,6 +3116,9 @@ dnl ====================================
+@@ -3110,6 +3116,9 @@
  case $target in
  *-hpux11.*)
  	;;
@@ -41,7 +43,20 @@ $NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4326,6 +4335,14 @@ else
+@@ -3556,7 +3565,11 @@
+         #endif
+         #include <resolv.h>
+         ],
+-        [int foo = res_ninit(&_res);],
++        [
++	#ifdef __NetBSD__
++	#error "_res is not usable in threaded programs"
++	#endif
++	int foo = res_ninit(&_res);],
+         [ac_cv_func_res_ninit=yes],
+         [ac_cv_func_res_ninit=no])
+     ])
+@@ -4326,6 +4339,14 @@
     fi
  fi
  
@@ -56,7 +71,7 @@ $NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -8630,7 +8647,8 @@ rm -f confdefs.h.save
+@@ -8630,7 +8651,8 @@
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -66,7 +81,7 @@ $NetBSD: patch-aa,v 1.3 2012/11/18 01:55:52 joerg Exp $
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -8721,6 +8739,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -8721,6 +8743,8 @@
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
