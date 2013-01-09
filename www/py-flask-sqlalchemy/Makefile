@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/07 20:26:49 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/09 19:02:44 kleink Exp $
 
 DISTNAME=	Flask-SQLAlchemy-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,6 +9,8 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://github.com/mitsuhiko/flask-sqlalchemy
 COMMENT=	Adds SQLAlchemy support to your Flask application
 LICENSE=	modified-bsd
+
+USE_LANGUAGES=	# empty
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
