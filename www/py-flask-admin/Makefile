@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/07 21:56:38 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/09 19:02:43 kleink Exp $
 
 DISTNAME=	Flask-Admin-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,6 +9,8 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	https://github.com/mrjoes/flask-admin/
 COMMENT=	Simple and extensible administrative interface framework for Flask
 LICENSE=	modified-bsd
+
+USE_LANGUAGES=	# empty
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
