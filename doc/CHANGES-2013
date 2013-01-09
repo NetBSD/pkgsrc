@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.112 2013/01/08 23:47:20 jym Exp $
+$NetBSD: CHANGES-2013,v 1.113 2013/01/09 03:22:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -82,6 +82,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-actionpack32 to 3.2.10 [taca 2013-01-05]
 	Updated mail/ruby-actionmailer32 to 3.2.10 [taca 2013-01-05]
 	Updated devel/ruby-railties32 to 3.2.10 [taca 2013-01-05]
+	Updated www/ruby-rails32 to 3.2.10 [taca 2013-01-05]
 	Updated mail/opendkim to 2.7.3 [pettai 2013-01-05]
 	Updated devel/nss to 3.14.1 [ryoon 2013-01-05]
 	Added converters/docx2txt version 1.2nb1 [is 2013-01-05]
