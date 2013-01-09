@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.118 2013/01/09 12:27:32 obache Exp $
+$NetBSD: CHANGES-2013,v 1.119 2013/01/09 12:32:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -149,3 +149,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rack to 1.4.3 [taca 2013-01-09]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.261 [obache 2013-01-09]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.50 [obache 2013-01-09]
+	Updated devel/ruby-activesupport3 to 3.0.19 [taca 2013-01-09]
+	Updated devel/ruby-activemodel to 3.0.19 [taca 2013-01-09]
+	Updated www/ruby-activeresource3 to 3.0.19 [taca 2013-01-09]
+	Updated www/ruby-actionpack3 to 3.0.19 [taca 2013-01-09]
+	Updated databases/ruby-activerecord3 to 3.0.19 [taca 2013-01-09]
+	Updated mail/ruby-actionmailer3 to 3.0.19 [taca 2013-01-09]
+	Updated devel/ruby-railties to 3.0.19 [taca 2013-01-09]
+	Updated www/ruby-rails3 to 3.0.19 [taca 2013-01-09]
