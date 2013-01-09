@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/07 21:51:10 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/09 19:02:44 kleink Exp $
 
 DISTNAME=	Flask-WTF-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,6 +9,8 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://github.com/ajford/flask-wtf
 COMMENT=	Simple integration of Flask and WTForms
 LICENSE=	modified-bsd
+
+USE_LANGUAGES=	# empty
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
