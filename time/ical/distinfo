@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2011/01/29 22:53:29 markd Exp $
+$NetBSD: distinfo,v 1.11 2013/01/09 17:22:14 is Exp $
 
-SHA1 (ical-2.3.1.tar.gz) = 98649b7e1fbad9c13356eb5dded693d81b2252f2
-RMD160 (ical-2.3.1.tar.gz) = 98642da1ef330ca3a5cf099508fb09dcdeb208be
-Size (ical-2.3.1.tar.gz) = 264576 bytes
-SHA1 (patch-aa) = 29d06f928f67165f5579aa87487b88f1aa2e0031
-SHA1 (patch-ab) = ccfdc593988195128c837bac36d706150b5a7df6
-SHA1 (patch-ac) = 31e9d5dbb205065b146276ebde7a1a4207418477
+SHA1 (ical-3.0.2.tar.gz) = 8a0c2f132979320cb2c24b187cb7238698161e5d
+RMD160 (ical-3.0.2.tar.gz) = e66326edf0cc562e601770959df3a415126ae8c5
+Size (ical-3.0.2.tar.gz) = 308788 bytes
+SHA1 (patch-calendar_Item.C) = 66fbf2c57829188ca9ae0456ef13c1bc8bba8702
+SHA1 (patch-time_Time.C) = 8e2452a91f81884d6fd99487f81c35108e7d9023
