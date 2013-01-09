@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.122 2013/01/09 17:25:12 is Exp $
+$NetBSD: CHANGES-2013,v 1.123 2013/01/09 21:38:59 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -174,3 +174,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-railties32 to 3.2.11 [taca 2013-01-09]
 	Updated www/ruby-rails32 to 3.2.11 [taca 2013-01-09]
 	Updated time/ical to 3.0.2 [is 2013-01-09]
+	Updated x11/gtk3 to 3.6.4 [prlw1 2013-01-09]
