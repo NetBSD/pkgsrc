@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.113 2013/01/09 03:22:57 taca Exp $
+$NetBSD: CHANGES-2013,v 1.114 2013/01/09 03:23:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-flask-rest version 1.1 [kleink 2013-01-08]
 	Updated databases/py-postgresql to 4.1.1 [darcy 2013-01-08]
 	Updated security/stunnel to 4.54 [jym 2013-01-09]
+	Updated www/contao30 to 3.0.3nb1 [taca 2013-01-09]
