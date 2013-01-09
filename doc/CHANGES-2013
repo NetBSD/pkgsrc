@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.116 2013/01/09 11:25:07 taca Exp $
+$NetBSD: CHANGES-2013,v 1.117 2013/01/09 12:26:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao30 to 3.0.3nb1 [taca 2013-01-09]
 	Updated devel/xulrunner192 to 1.9.2nb7 [martin 2013-01-09]
 	Updated www/ruby-rack to 1.4.3 [taca 2013-01-09]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.261 [obache 2013-01-09]
