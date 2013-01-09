@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.119 2013/01/09 12:32:09 taca Exp $
+$NetBSD: CHANGES-2013,v 1.120 2013/01/09 12:39:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -157,3 +157,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-actionmailer3 to 3.0.19 [taca 2013-01-09]
 	Updated devel/ruby-railties to 3.0.19 [taca 2013-01-09]
 	Updated www/ruby-rails3 to 3.0.19 [taca 2013-01-09]
+	Updated devel/ruby-activesupport31 to 3.1.10 [taca 2013-01-09]
+	Updated devel/ruby-activemodel31 to 3.1.10 [taca 2013-01-09]
+	Updated www/ruby-activeresource31 to 3.1.10 [taca 2013-01-09]
+	Updated databases/ruby-activerecord31 to 3.1.10 [taca 2013-01-09]
+	Updated www/ruby-actionpack31 to 3.1.10 [taca 2013-01-09]
+	Updated mail/ruby-actionmailer31 to 3.1.10 [taca 2013-01-09]
+	Updated devel/ruby-railties31 to 3.1.10 [taca 2013-01-09]
+	Updated www/ruby-rails31 to 3.1.10 [taca 2013-01-09]
