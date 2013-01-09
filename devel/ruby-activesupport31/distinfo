@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2013/01/05 13:57:50 taca Exp $
+$NetBSD: distinfo,v 1.9 2013/01/09 12:34:08 taca Exp $
 
-SHA1 (activesupport-3.1.9.gem) = b8c01d0f51ce56ab7f23903cc87517cd882143ad
-RMD160 (activesupport-3.1.9.gem) = fff4715b9389ca054e0256f8e3fca7209ef4dc01
-Size (activesupport-3.1.9.gem) = 281088 bytes
+SHA1 (activesupport-3.1.10.gem) = b55ef7f66de0bb79fcfa480e8df3696bffbff7f8
+RMD160 (activesupport-3.1.10.gem) = 58265ab979155964db7573a0b0e1c64ae9503529
+Size (activesupport-3.1.10.gem) = 281600 bytes
