@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/03/17 16:42:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/01/09 11:24:37 taca Exp $
 bin/rackup
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -7,7 +7,10 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SPEC
 ${GEM_LIBDIR}/bin/rackup
+${GEM_LIBDIR}/contrib/rack.png
+${GEM_LIBDIR}/contrib/rack.svg
 ${GEM_LIBDIR}/contrib/rack_logo.svg
+${GEM_LIBDIR}/contrib/rdoc.css
 ${GEM_LIBDIR}/example/lobster.ru
 ${GEM_LIBDIR}/example/protectedlobster.rb
 ${GEM_LIBDIR}/example/protectedlobster.ru
@@ -21,6 +24,7 @@ ${GEM_LIBDIR}/lib/rack/auth/digest/params.rb
 ${GEM_LIBDIR}/lib/rack/auth/digest/request.rb
 ${GEM_LIBDIR}/lib/rack/backports/uri/common_18.rb
 ${GEM_LIBDIR}/lib/rack/backports/uri/common_192.rb
+${GEM_LIBDIR}/lib/rack/backports/uri/common_193.rb
 ${GEM_LIBDIR}/lib/rack/body_proxy.rb
 ${GEM_LIBDIR}/lib/rack/builder.rb
 ${GEM_LIBDIR}/lib/rack/cascade.rb
@@ -78,7 +82,14 @@ ${GEM_LIBDIR}/rack.gemspec
 ${GEM_LIBDIR}/test/builder/anything.rb
 ${GEM_LIBDIR}/test/builder/comment.ru
 ${GEM_LIBDIR}/test/builder/end.ru
+${GEM_LIBDIR}/test/builder/line.ru
 ${GEM_LIBDIR}/test/builder/options.ru
+${GEM_LIBDIR}/test/cgi/assets/folder/test.js
+${GEM_LIBDIR}/test/cgi/assets/fonts/font.eot
+${GEM_LIBDIR}/test/cgi/assets/images/image.png
+${GEM_LIBDIR}/test/cgi/assets/index.html
+${GEM_LIBDIR}/test/cgi/assets/javascripts/app.js
+${GEM_LIBDIR}/test/cgi/assets/stylesheets/app.css
 ${GEM_LIBDIR}/test/cgi/lighttpd.conf
 ${GEM_LIBDIR}/test/cgi/rackup_stub.rb
 ${GEM_LIBDIR}/test/cgi/sample_rackup.ru
@@ -156,6 +167,7 @@ ${GEM_LIBDIR}/test/spec_thin.rb
 ${GEM_LIBDIR}/test/spec_urlmap.rb
 ${GEM_LIBDIR}/test/spec_utils.rb
 ${GEM_LIBDIR}/test/spec_webrick.rb
+${GEM_LIBDIR}/test/static/another/index.html
 ${GEM_LIBDIR}/test/static/index.html
 ${GEM_LIBDIR}/test/testrequest.rb
 ${GEM_LIBDIR}/test/unregistered_handler/rack/handler/unregistered.rb
