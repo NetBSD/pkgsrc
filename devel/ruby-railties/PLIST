@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/18 05:29:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/09 12:29:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README.rdoc
@@ -220,8 +220,6 @@ ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/README
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/Rakefile
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/app/controllers/application_controller.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/app/helpers/application_helper.rb
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/app/mailers/.empty_directory
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/app/models/.empty_directory
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/app/views/layouts/application.html.erb.tt
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/config.ru
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/config/application.rb
@@ -263,14 +261,9 @@ ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/public/javascripts/effect
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/public/javascripts/prototype.js
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/public/javascripts/rails.js
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/public/robots.txt
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/public/stylesheets/.empty_directory
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/script/rails
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/test/fixtures/.empty_directory
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/test/functional/.empty_directory
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/test/integration/.empty_directory
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/test/performance/browsing_test.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/test/test_helper.rb.tt
-${GEM_LIBDIR}/lib/rails/generators/rails/app/templates/test/unit/.empty_directory
 ${GEM_LIBDIR}/lib/rails/generators/rails/controller/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/controller/controller_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/controller/templates/controller.rb
@@ -278,7 +271,6 @@ ${GEM_LIBDIR}/lib/rails/generators/rails/generator/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/generator/generator_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/generator/templates/%file_name%_generator.rb.tt
 ${GEM_LIBDIR}/lib/rails/generators/rails/generator/templates/USAGE.tt
-${GEM_LIBDIR}/lib/rails/generators/rails/generator/templates/templates/.empty_directory
 ${GEM_LIBDIR}/lib/rails/generators/rails/helper/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/helper/helper_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/helper/templates/helper.rb
