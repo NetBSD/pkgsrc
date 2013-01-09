@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.5 2013/01/07 08:33:54 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.6 2013/01/09 10:14:36 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -15,3 +15,5 @@ Pullup ticket #4001 - requested by kleink
 textproc/p5-Text-vCard: build fix
 Pullup ticket #4002 - requested by spz
 security/gnupg: security update
+Pullup ticket #4005 - requested by marino
+x11/xfce4-terminal: bug fix patch
