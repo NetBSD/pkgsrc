@@ -1,10 +1,11 @@
-$NetBSD: patch-as,v 1.2 2012/11/18 01:55:52 joerg Exp $
+$NetBSD: patch-as,v 1.3 2013/01/09 10:34:03 martin Exp $
 
 Treat DragonFly like FreeBSD.
+Do not allow access to _res on NetBSD.
 
---- js/src/configure.in.orig	2012-03-06 14:45:30.000000000 +0000
-+++ js/src/configure.in
-@@ -1653,7 +1653,7 @@ case "$target" in
+--- js/src/configure.in.orig	2012-03-06 15:45:30.000000000 +0100
++++ js/src/configure.in	2013-01-08 16:00:11.000000000 +0100
+@@ -1653,7 +1653,7 @@
      fi
      ;;
  
@@ -13,7 +14,7 @@ Treat DragonFly like FreeBSD.
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2509,7 +2509,7 @@ darwin*)
+@@ -2509,7 +2509,7 @@
  solaris*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
@@ -22,7 +23,7 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
  *cygwin*|*mingw*|*mks*|*msvc*|*wince)
-@@ -2724,6 +2724,9 @@ if test "$GNU_CC"; then
+@@ -2724,6 +2724,9 @@
    AC_CACHE_CHECK(for visibility(hidden) attribute,
                   ac_cv_visibility_hidden,
                   [cat > conftest.c <<EOF
@@ -32,7 +33,20 @@ Treat DragonFly like FreeBSD.
                    int foo __attribute__ ((visibility ("hidden"))) = 1;
  EOF
                    ac_cv_visibility_hidden=no
-@@ -4150,7 +4153,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3182,7 +3185,11 @@
+         #endif
+         #include <resolv.h>
+         ],
+-        [int foo = res_ninit(&_res);],
++        [
++	#ifdef __NetBSD__
++	#error "_res is not usable in threaded programs"
++	#endif
++	int foo = res_ninit(&_res);],
+         [ac_cv_func_res_ninit=yes],
+         [ac_cv_func_res_ninit=no])
+     ])
+@@ -4150,7 +4157,7 @@
    darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
