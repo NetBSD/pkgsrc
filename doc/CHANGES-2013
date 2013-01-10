@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.127 2013/01/10 15:04:01 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.128 2013/01/10 15:05:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -179,3 +179,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mikutter to 0.2.1.1117 [obache 2013-01-10]
 	Updated devel/xulrunner to 18.0 [ryoon 2013-01-10]
 	Updated www/firefox to 18.0 [ryoon 2013-01-10]
+	Updated www/firefox10 to 10.0.12 [is 2013-01-10]
