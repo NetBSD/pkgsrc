@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_skia_src_sfnt_SkOTTable__name.h,v 1.1 2013/01/02 02:31:04 ryoon Exp $
+$NetBSD: patch-gfx_skia_src_sfnt_SkOTTable__name.h,v 1.2 2013/01/10 15:01:30 ryoon Exp $
 
 * Fix build with NetBSD 5's gcc
 
---- gfx/skia/src/sfnt/SkOTTable_name.h.orig	2012-11-29 04:44:13.000000000 +0000
+--- gfx/skia/src/sfnt/SkOTTable_name.h.orig	2013-01-04 23:44:33.000000000 +0000
 +++ gfx/skia/src/sfnt/SkOTTable_name.h
 @@ -12,7 +12,7 @@
  #include "SkOTTableTypes.h"
@@ -12,8 +12,8 @@ $NetBSD: patch-gfx_skia_src_sfnt_SkOTTable__name.h,v 1.1 2013/01/02 02:31:04 ryo
 +#pragma pack(1)
  
  struct SkOTTableName {
-     SK_OT_USHORT format;
-@@ -493,7 +493,7 @@ struct SkOTTableNameRecord {
+     static const SK_OT_CHAR TAG0 = 'n';
+@@ -499,7 +499,7 @@ struct SkOTTableNameRecord {
      SK_OT_USHORT offset; //From start of storage area.
  };
  
