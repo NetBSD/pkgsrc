@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2012/03/06 04:53:24 sbd Exp $
+$NetBSD: MESSAGE,v 1.2 2013/01/10 18:16:29 wiz Exp $
 To set up ${PKGNAME}:
 
 1/ modify ${PKG_SYSCONFDIR}/logrotate.conf to your needs,
@@ -9,5 +9,5 @@ ${PKG_SYSCONFDIR}/logrotate.d/
 2/ set up a daily cron job for logrotate in ${ROOT_USER}'s crontab;
 this can be done with one of the following line:
 0 0 * * * /bin/sh ${EGDIR}/logrotate.cron
-0 0 * * * ${PREFIX}/bin/logrotate ${PKG_SYSCONFDIR}/logrotate.conf
+0 0 * * * ${PREFIX}/sbin/logrotate ${PKG_SYSCONFDIR}/logrotate.conf
 ===========================================================================
