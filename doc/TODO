@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11825 2013/01/10 01:43:42 mef Exp $
+$NetBSD: TODO,v 1.11826 2013/01/10 07:08:08 mef Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
-	o fribidi-0.19.5 [pkg/47410]
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.6.1
 	o fuse-encfs-1.5.2
