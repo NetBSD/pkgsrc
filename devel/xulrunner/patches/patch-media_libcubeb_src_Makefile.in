@@ -1,12 +1,12 @@
-$NetBSD: patch-media_libcubeb_src_Makefile.in,v 1.1 2012/11/21 15:26:50 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_Makefile.in,v 1.2 2013/01/10 15:01:31 ryoon Exp $
 
 Add adds --enable-alsa and makes --enable-pulseaudio also work with media.use_cubeb=false (aka libsydneyaudio)
 
---- media/libcubeb/src/Makefile.in.orig	2012-10-23 19:42:48.000000000 +0000
+--- media/libcubeb/src/Makefile.in.orig	2013-01-04 23:44:40.000000000 +0000
 +++ media/libcubeb/src/Makefile.in
-@@ -24,10 +24,6 @@ endif
- 
- ifeq ($(OS_TARGET),Android)
+@@ -29,10 +29,6 @@ CSRCS         = \
+               $(NULL)
+ endif
  # No Android implementation of libcubeb yet.
 -else ifeq ($(OS_TARGET),Linux)
 -CSRCS         = \
@@ -15,7 +15,7 @@ Add adds --enable-alsa and makes --enable-pulseaudio also work with media.use_cu
  endif
  
  ifeq ($(OS_TARGET),Darwin)
-@@ -42,6 +38,12 @@ CSRCS           = \
+@@ -47,6 +43,12 @@ CSRCS           = \
                  $(NULL)
  endif
  

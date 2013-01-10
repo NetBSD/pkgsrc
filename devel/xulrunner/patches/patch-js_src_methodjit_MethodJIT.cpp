@@ -1,11 +1,11 @@
-$NetBSD: patch-js_src_methodjit_MethodJIT.cpp,v 1.3 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-js_src_methodjit_MethodJIT.cpp,v 1.4 2013/01/10 15:01:31 ryoon Exp $
 
 # This does not only apply to linux, but all ELF platforms (otherwise the
 # generated code will not be PIC)
 
---- js/src/methodjit/MethodJIT.cpp.orig	2012-08-24 22:55:40.000000000 +0000
+--- js/src/methodjit/MethodJIT.cpp.orig	2013-01-04 23:44:35.000000000 +0000
 +++ js/src/methodjit/MethodJIT.cpp
-@@ -135,7 +135,7 @@ PopActiveVMFrame(VMFrame &f)
+@@ -142,7 +142,7 @@ PopActiveVMFrame(VMFrame &f)
  
  JS_STATIC_ASSERT(offsetof(FrameRegs, sp) == 0);
  
