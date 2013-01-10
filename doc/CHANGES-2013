@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.129 2013/01/10 15:14:58 wen Exp $
+$NetBSD: CHANGES-2013,v 1.130 2013/01/10 15:26:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -181,3 +181,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 18.0 [ryoon 2013-01-10]
 	Updated www/firefox10 to 10.0.12 [is 2013-01-10]
 	Updated databases/p5-SQL-Statement to 1.402 [wen 2013-01-10]
+	Updated textproc/p5-Text-CSV_XS to 0.94 [wen 2013-01-10]
