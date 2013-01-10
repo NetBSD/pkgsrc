@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/01/05 07:46:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/01/10 11:20:46 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -279,7 +279,6 @@ share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e0000496.au
 share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e00008c6.au
 share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
-share/mikutter/core/skin/data/twitter-bird.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
 share/mikutter/core/test/icon_test.png
