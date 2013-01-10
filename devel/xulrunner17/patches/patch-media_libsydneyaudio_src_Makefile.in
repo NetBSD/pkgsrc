@@ -1,0 +1,36 @@
+$NetBSD: patch-media_libsydneyaudio_src_Makefile.in,v 1.1 2013/01/10 16:17:10 ryoon Exp $
+
+adds --enable-alsa and makes --enable-pulseaudio also work with media.use_cubeb=false (aka libsydneyaudio)
+
+--- media/libsydneyaudio/src/Makefile.in.orig	2012-11-19 18:26:45.000000000 +0000
++++ media/libsydneyaudio/src/Makefile.in
+@@ -30,10 +30,6 @@ else ifeq ($(MOZ_WIDGET_TOOLKIT),android
+ CSRCS		= \
+ 		sydney_audio_android.c \
+ 		$(NULL)
+-else ifeq ($(OS_ARCH),Linux)
+-CSRCS		= \
+-		sydney_audio_alsa.c \
+-		$(NULL)
+ endif
+ 
+ ifeq ($(OS_ARCH),WINNT)
+@@ -68,6 +64,18 @@ CSRCS		= \
+ 		$(NULL)
+ endif
+ 
++ifdef MOZ_ALSA
++CSRCS		= \
++		sydney_audio_alsa.c \
++		$(NULL)
++endif
++
++ifdef MOZ_PULSEAUDIO
++CSRCS		= \
++		sydney_audio_pulseaudio.c \
++		$(NULL)
++endif
++
+ ifeq ($(OS_ARCH),WINNT)
+ OS_LIBS += winmm.lib
+ endif
