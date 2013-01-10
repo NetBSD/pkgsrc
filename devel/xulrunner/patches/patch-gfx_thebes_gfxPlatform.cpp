@@ -1,36 +1,36 @@
-$NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.3 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-gfx_thebes_gfxPlatform.cpp,v 1.4 2013/01/10 15:01:30 ryoon Exp $
 
---- gfx/thebes/gfxPlatform.cpp.orig	2012-08-24 22:55:35.000000000 +0000
+--- gfx/thebes/gfxPlatform.cpp.orig	2013-01-04 23:44:33.000000000 +0000
 +++ gfx/thebes/gfxPlatform.cpp
-@@ -443,6 +443,7 @@ void SourceBufferDestroy(void *srcBuffer
-   static_cast<SourceSurface*>(srcBuffer)->Release();
+@@ -507,11 +507,9 @@ void SourceBufferDestroy(void *srcSurfUD
+   delete static_cast<SourceSurfaceUserData*>(srcSurfUD);
  }
  
-+#ifdef MOZ_TREE_CAIRO
- void SourceSnapshotDetached(cairo_surface_t *nullSurf)
+-void SourceSnapshotDetached(cairo_surface_t *nullSurf)
++void SourceSnapshotDetached(void *nullSurf)
  {
-   gfxImageSurface* origSurf =
-@@ -450,6 +451,7 @@ void SourceSnapshotDetached(cairo_surfac
- 
+-  gfxImageSurface* origSurf =
+-    static_cast<gfxImageSurface*>(cairo_surface_get_user_data(nullSurf, &kSourceSurface));
+-
++  gfxImageSurface *origSurf = static_cast<gfxImageSurface*>(nullSurf);
    origSurf->SetData(&kSourceSurface, NULL, NULL);
  }
-+#endif
  
- RefPtr<SourceSurface>
- gfxPlatform::GetSourceSurfaceForSurface(DrawTarget *aTarget, gfxASurface *aSurface)
-@@ -544,6 +546,7 @@ gfxPlatform::GetSourceSurfaceForSurface(
+@@ -626,14 +624,9 @@ gfxPlatform::GetSourceSurfaceForSurface(
  
      }
  
-+    #ifdef MOZ_TREE_CAIRO
-     cairo_surface_t *nullSurf =
- 	cairo_null_surface_create(CAIRO_CONTENT_COLOR_ALPHA);
-     cairo_surface_set_user_data(nullSurf,
-@@ -552,6 +555,7 @@ gfxPlatform::GetSourceSurfaceForSurface(
-                                 NULL);
-     cairo_surface_attach_snapshot(imgSurface->CairoSurface(), nullSurf, SourceSnapshotDetached);
-     cairo_surface_destroy(nullSurf);
-+    #endif
+-    cairo_surface_t *nullSurf =
+-	cairo_null_surface_create(CAIRO_CONTENT_COLOR_ALPHA);
+-    cairo_surface_set_user_data(nullSurf,
+-                                &kSourceSurface,
+-                                imgSurface,
+-                                NULL);
+-    cairo_surface_attach_snapshot(imgSurface->CairoSurface(), nullSurf, SourceSnapshotDetached);
+-    cairo_surface_destroy(nullSurf);
++    cairo_surface_set_mime_data(imgSurface->CairoSurface(), "mozilla/magic",
++                                (const unsigned char *) "data", 4,
++                                SourceSnapshotDetached, imgSurface.get());
    }
  
-   srcBuffer->AddRef();
+   SourceSurfaceUserData *srcSurfUD = new SourceSurfaceUserData;

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2013/01/05 08:02:16 sbd Exp $
+$NetBSD: patch-aa,v 1.16 2013/01/10 15:01:30 ryoon Exp $
 
---- configure.in.orig	2012-11-29 04:43:55.000000000 +0000
+--- configure.in.orig	2013-01-04 23:44:28.000000000 +0000
 +++ configure.in
-@@ -2080,6 +2080,9 @@ ia64*-hpux*)
+@@ -2137,6 +2137,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
          MC=mc.exe
      fi
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.15 2013/01/05 08:02:16 sbd Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -2979,6 +2982,9 @@ dnl ====================================
+@@ -3075,6 +3078,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.15 2013/01/05 08:02:16 sbd Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3279,6 +3285,9 @@ AC_CACHE_CHECK(
+@@ -3376,6 +3382,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.15 2013/01/05 08:02:16 sbd Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -3947,6 +3956,14 @@ if test -n "$YASM"; then
+@@ -4042,6 +4051,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -47,32 +47,18 @@ $NetBSD: patch-aa,v 1.15 2013/01/05 08:02:16 sbd Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5158,8 +5175,8 @@ fi
- 
- AC_SUBST(MOZ_WEBRTC)
+@@ -5283,8 +5300,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
+ AC_SUBST(MOZ_SCTP)
+ AC_SUBST(MOZ_SRTP)
  
 -case "$target_cpu" in
 -arm*)
 +case "$target" in
 +arm-*-linux*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
-     MOZ_SAMPLE_TYPE_S16LE=1
-     AC_DEFINE(MOZ_SAMPLE_TYPE_S16LE)
-     AC_SUBST(MOZ_SAMPLE_TYPE_S16LE)
-@@ -5356,11 +5373,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
- 
-     dnl See if we have assembly on this platform.
-     case "$OS_ARCH:$CPU_ARCH" in
--    Linux:x86)
-+    Linux:x86|DragonFly:x86|*BSD:i386)
-       VPX_ASFLAGS="-f elf32 -rnasm -pnasm"
-       VPX_X86_ASM=1
-     ;;
--    Linux:x86_64)
-+    Linux:x86_64|DragonFly:x86_64|*BSD:x86_64)
-       VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
-       VPX_X86_ASM=1
-     ;;
-@@ -8544,6 +8561,7 @@ AC_SUBST(MOZ_VP8_ERROR_CONCEALMENT)
+     MOZ_SAMPLE_TYPE_S16=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
+@@ -8690,6 +8707,7 @@ AC_SUBST(MOZ_VP8_ERROR_CONCEALMENT)
  AC_SUBST(MOZ_VP8_ENCODER)
  AC_SUBST(MOZ_VP8)
  AC_SUBST(MOZ_OGG)
