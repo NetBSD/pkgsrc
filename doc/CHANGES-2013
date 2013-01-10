@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.134 2013/01/10 17:13:41 adam Exp $
+$NetBSD: CHANGES-2013,v 1.135 2013/01/10 18:16:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3 to 3.7.15.2 [adam 2013-01-10]
 	Updated databases/sqlite3-docs to 3.7.15.2 [adam 2013-01-10]
 	Updated databases/sqlite3-tcl to 3.7.15.2 [adam 2013-01-10]
+	Updated sysutils/logrotate to 3.8.2 [wiz 2013-01-10]
