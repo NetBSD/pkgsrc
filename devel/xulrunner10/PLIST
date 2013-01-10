@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/11/21 13:02:17 is Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/10 12:01:02 is Exp $
 bin/xulrunner10
 include/xulrunner10/AtkSocketAccessible.h
 include/xulrunner10/BasicLayers.h
@@ -210,10 +210,12 @@ include/xulrunner10/mozStorageCID.h
 include/xulrunner10/mozStorageHelper.h
 include/xulrunner10/mozcontainer.h
 include/xulrunner10/mozilla-config.h
+include/xulrunner10/mozilla/Attributes.h
 include/xulrunner10/mozilla/AutoRestore.h
 include/xulrunner10/mozilla/Base64.h
 include/xulrunner10/mozilla/BlockingResourceBase.h
 include/xulrunner10/mozilla/CharTokenizer.h
+include/xulrunner10/mozilla/CheckedInt.h
 include/xulrunner10/mozilla/CondVar.h
 include/xulrunner10/mozilla/DeadlockDetector.h
 include/xulrunner10/mozilla/FileUtils.h
