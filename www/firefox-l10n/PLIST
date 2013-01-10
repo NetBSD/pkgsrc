@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/10/12 18:42:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/01/10 16:03:41 ryoon Exp $
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/alerts/notificationNames.properties
@@ -44,6 +44,7 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/globa
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/dateFormat.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/dialog.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/dom/dom.properties
@@ -95,6 +96,7 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/globa
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/videocontrols.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/viewSource.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/viewSource.properties
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/webapps.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/wizard.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/wizard.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/xbl.properties
@@ -294,6 +296,7 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/globa
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/dateFormat.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/dialog.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/dom/dom.properties
@@ -345,6 +348,7 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/globa
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/viewSource.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/viewSource.properties
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/webapps.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/wizard.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/wizard.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/xbl.properties
@@ -544,6 +548,7 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/globa
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/dateFormat.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/dialog.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/dom/dom.properties
@@ -595,6 +600,7 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/globa
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/viewSource.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/viewSource.properties
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/webapps.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/wizard.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/wizard.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/xbl.properties
@@ -794,6 +800,7 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/globa
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/dateFormat.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/dialog.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/dom/dom.properties
@@ -845,6 +852,7 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/globa
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/videocontrols.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/viewSource.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/viewSource.properties
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/webapps.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/wizard.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/wizard.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/xbl.properties
@@ -1044,6 +1052,7 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/gl
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/dateFormat.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/dialog.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/dom/dom.properties
@@ -1095,6 +1104,7 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/gl
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/viewSource.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/viewSource.properties
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/webapps.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/wizard.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/wizard.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/xbl.properties
@@ -1294,6 +1304,7 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/globa
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/dateFormat.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/dialog.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/dom/dom.properties
@@ -1345,6 +1356,7 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/globa
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/videocontrols.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/viewSource.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/viewSource.properties
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/webapps.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/wizard.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/wizard.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/xbl.properties
@@ -1544,6 +1556,7 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/globa
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/dateFormat.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/dialog.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/dom/dom.properties
@@ -1595,6 +1608,7 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/globa
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/videocontrols.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/viewSource.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/viewSource.properties
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/webapps.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/wizard.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/wizard.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/xbl.properties
@@ -1794,6 +1808,7 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/dateFormat.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/dialog.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/dom/dom.properties
@@ -1845,6 +1860,7 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/videocontrols.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/viewSource.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/viewSource.properties
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/webapps.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/wizard.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/wizard.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/xbl.properties
@@ -2044,6 +2060,7 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/dateFormat.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/dialog.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/dom/dom.properties
@@ -2095,6 +2112,7 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/videocontrols.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/viewSource.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/viewSource.properties
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/webapps.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/wizard.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/wizard.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/xbl.properties
@@ -2294,6 +2312,7 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/globa
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/dateFormat.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/dialog.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/dom/dom.properties
@@ -2345,6 +2364,7 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/globa
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/videocontrols.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/viewSource.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/viewSource.properties
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/webapps.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/wizard.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/wizard.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/xbl.properties
@@ -2641,6 +2661,7 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/globa
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/dateFormat.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/dialog.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/dom/dom.properties
@@ -2692,6 +2713,7 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/globa
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/videocontrols.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/viewSource.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/viewSource.properties
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/webapps.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/wizard.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/wizard.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/xbl.properties
@@ -2891,6 +2913,7 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/globa
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/dateFormat.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/dialog.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/dom/dom.properties
@@ -2942,6 +2965,7 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/globa
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/viewSource.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/viewSource.properties
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/webapps.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/wizard.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/wizard.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/xbl.properties
@@ -3141,6 +3165,7 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/globa
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/dateFormat.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/dialog.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/dom/dom.properties
@@ -3192,6 +3217,7 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/globa
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/videocontrols.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/viewSource.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/viewSource.properties
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/webapps.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/wizard.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/wizard.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/xbl.properties
@@ -3391,6 +3417,7 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/gl
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/dateFormat.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/dialog.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/dom/dom.properties
@@ -3442,6 +3469,7 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/gl
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/videocontrols.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/viewSource.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/viewSource.properties
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/webapps.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/wizard.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/wizard.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/xbl.properties
@@ -3641,6 +3669,7 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/globa
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/dateFormat.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/dialog.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/dom/dom.properties
@@ -3692,6 +3721,7 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/globa
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/videocontrols.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/viewSource.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/viewSource.properties
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/webapps.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/wizard.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/wizard.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/xbl.properties
@@ -3891,6 +3921,7 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/globa
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/dateFormat.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/dialog.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/dom/dom.properties
@@ -3942,6 +3973,7 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/globa
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/videocontrols.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/viewSource.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/viewSource.properties
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/webapps.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/wizard.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/wizard.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/xbl.properties
@@ -4141,6 +4173,7 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/globa
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/dateFormat.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/dialog.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/dom/dom.properties
@@ -4192,6 +4225,7 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/globa
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/videocontrols.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/viewSource.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/viewSource.properties
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/webapps.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/wizard.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/wizard.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/xbl.properties
@@ -4391,6 +4425,7 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/globa
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/dateFormat.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/dialog.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/dom/dom.properties
@@ -4442,6 +4477,7 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/globa
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/videocontrols.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/viewSource.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/viewSource.properties
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/webapps.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/wizard.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/wizard.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/xbl.properties
@@ -4641,6 +4677,7 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/dateFormat.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/dialog.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/dom/dom.properties
@@ -4692,6 +4729,7 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/videocontrols.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/viewSource.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/viewSource.properties
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/webapps.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/wizard.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/wizard.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/xbl.properties
@@ -4891,6 +4929,7 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/dateFormat.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/dialog.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/dom/dom.properties
@@ -4942,6 +4981,7 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/videocontrols.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/viewSource.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/viewSource.properties
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/webapps.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/wizard.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/wizard.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/xbl.properties
@@ -5141,6 +5181,7 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/dateFormat.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/dialog.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/dom/dom.properties
@@ -5192,6 +5233,7 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/videocontrols.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/viewSource.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/viewSource.properties
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/webapps.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/wizard.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/wizard.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/xbl.properties
@@ -5391,6 +5433,7 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/globa
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/dateFormat.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/dialog.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/dom/dom.properties
@@ -5442,6 +5485,7 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/globa
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/videocontrols.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/viewSource.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/viewSource.properties
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/webapps.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/wizard.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/wizard.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/xbl.properties
@@ -5641,6 +5685,7 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/dateFormat.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/dialog.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/dom/dom.properties
@@ -5692,6 +5737,7 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/videocontrols.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/viewSource.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/viewSource.properties
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/webapps.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/wizard.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/wizard.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/xbl.properties
@@ -5891,6 +5937,7 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/dateFormat.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/dialog.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/dom/dom.properties
@@ -5942,6 +5989,7 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/videocontrols.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/viewSource.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/viewSource.properties
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/webapps.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/wizard.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/wizard.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/xbl.properties
@@ -6141,6 +6189,7 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/dateFormat.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/dialog.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/dom/dom.properties
@@ -6192,6 +6241,7 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/videocontrols.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/viewSource.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/viewSource.properties
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/webapps.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/wizard.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/wizard.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/xbl.properties
@@ -6391,6 +6441,7 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/dateFormat.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/dialog.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/dom/dom.properties
@@ -6442,6 +6493,7 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/videocontrols.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/viewSource.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/viewSource.properties
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/webapps.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/wizard.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/wizard.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/xbl.properties
@@ -6641,6 +6693,7 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/globa
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/dateFormat.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/dialog.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/dom/dom.properties
@@ -6692,6 +6745,7 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/globa
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/videocontrols.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/viewSource.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/viewSource.properties
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/webapps.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/wizard.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/wizard.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/xbl.properties
@@ -6891,6 +6945,7 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/globa
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/dateFormat.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/dialog.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/dom/dom.properties
@@ -6942,6 +6997,7 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/globa
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/videocontrols.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/viewSource.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/viewSource.properties
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/webapps.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/wizard.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/wizard.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/xbl.properties
@@ -7141,6 +7197,7 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/globa
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/dateFormat.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/dialog.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/dom/dom.properties
@@ -7192,6 +7249,7 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/globa
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/videocontrols.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/viewSource.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/viewSource.properties
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/webapps.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/wizard.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/wizard.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/xbl.properties
@@ -7393,6 +7451,7 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/globa
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/dateFormat.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/dialog.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/dom/dom.properties
@@ -7444,6 +7503,7 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/globa
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/videocontrols.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/viewSource.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/viewSource.properties
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/webapps.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/wizard.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/wizard.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/xbl.properties
@@ -7643,6 +7703,7 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/globa
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/dateFormat.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/dialog.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/dom/dom.properties
@@ -7694,6 +7755,7 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/globa
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/videocontrols.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/viewSource.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/viewSource.properties
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/webapps.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/wizard.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/wizard.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/xbl.properties
@@ -7893,6 +7955,7 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/dateFormat.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/dialog.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/dom/dom.properties
@@ -7944,6 +8007,7 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/videocontrols.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/viewSource.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/viewSource.properties
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/webapps.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/wizard.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/wizard.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/xbl.properties
@@ -8143,6 +8207,7 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/dateFormat.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/dialog.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/dom/dom.properties
@@ -8194,6 +8259,7 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/viewSource.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/viewSource.properties
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/webapps.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/wizard.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/wizard.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/xbl.properties
@@ -8393,6 +8459,7 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/globa
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/dateFormat.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/dialog.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/dom/dom.properties
@@ -8444,6 +8511,7 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/globa
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/videocontrols.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/viewSource.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/viewSource.properties
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/webapps.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/wizard.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/wizard.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/xbl.properties
@@ -8643,6 +8711,7 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/globa
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/dateFormat.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/dialog.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/dom/dom.properties
@@ -8694,6 +8763,7 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/globa
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/videocontrols.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/viewSource.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/viewSource.properties
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/webapps.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/wizard.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/wizard.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/xbl.properties
@@ -8893,6 +8963,7 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/dateFormat.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/dialog.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/dom/dom.properties
@@ -8944,6 +9015,7 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/videocontrols.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/viewSource.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/viewSource.properties
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/webapps.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/wizard.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/wizard.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/xbl.properties
@@ -9143,6 +9215,7 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/globa
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/dateFormat.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/dialog.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/dom/dom.properties
@@ -9194,6 +9267,7 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/globa
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/videocontrols.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/viewSource.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/viewSource.properties
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/webapps.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/wizard.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/wizard.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/xbl.properties
@@ -9393,6 +9467,7 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/dateFormat.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/dialog.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/dom/dom.properties
@@ -9444,6 +9519,7 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/videocontrols.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/viewSource.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/viewSource.properties
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/webapps.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/wizard.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/wizard.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/xbl.properties
@@ -9643,6 +9719,7 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/globa
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/dateFormat.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/dialog.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/dom/dom.properties
@@ -9694,6 +9771,7 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/globa
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/videocontrols.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/viewSource.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/viewSource.properties
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/webapps.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/wizard.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/wizard.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/xbl.properties
@@ -9893,6 +9971,7 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/globa
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/dateFormat.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/dialog.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/dom/dom.properties
@@ -9944,6 +10023,7 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/globa
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/videocontrols.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/viewSource.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/viewSource.properties
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/webapps.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/wizard.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/wizard.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/xbl.properties
@@ -10143,6 +10223,7 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/dateFormat.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/dialog.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/dom/dom.properties
@@ -10194,6 +10275,7 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/videocontrols.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/viewSource.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/viewSource.properties
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/webapps.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/wizard.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/wizard.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/xbl.properties
@@ -10393,6 +10475,7 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/globa
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/dateFormat.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/dialog.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/dom/dom.properties
@@ -10444,6 +10527,7 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/globa
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/videocontrols.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/viewSource.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/viewSource.properties
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/webapps.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/wizard.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/wizard.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/xbl.properties
@@ -10643,6 +10727,7 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/globa
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/dateFormat.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/dialog.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/dom/dom.properties
@@ -10694,6 +10779,7 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/globa
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/videocontrols.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/viewSource.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/viewSource.properties
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/webapps.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/wizard.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/wizard.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/xbl.properties
@@ -10893,6 +10979,7 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/globa
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/dateFormat.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/dialog.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/dom/dom.properties
@@ -10944,6 +11031,7 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/globa
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/videocontrols.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/viewSource.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/viewSource.properties
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/webapps.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/wizard.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/wizard.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/xbl.properties
@@ -11143,6 +11231,7 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/globa
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/dateFormat.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/dialog.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/dom/dom.properties
@@ -11194,6 +11283,7 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/globa
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/viewSource.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/viewSource.properties
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/webapps.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/wizard.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/wizard.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/xbl.properties
@@ -11393,6 +11483,7 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/globa
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/dateFormat.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/dialog.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/dom/dom.properties
@@ -11444,6 +11535,7 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/globa
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/videocontrols.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/viewSource.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/viewSource.properties
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/webapps.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/wizard.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/wizard.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/xbl.properties
@@ -11643,6 +11735,7 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/globa
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/dateFormat.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/dialog.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/dom/dom.properties
@@ -11694,6 +11787,7 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/globa
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/videocontrols.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/viewSource.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/viewSource.properties
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/webapps.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/wizard.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/wizard.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/xbl.properties
@@ -11893,6 +11987,7 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/globa
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/dateFormat.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/dialog.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/dom/dom.properties
@@ -11944,6 +12039,7 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/globa
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/viewSource.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/viewSource.properties
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/webapps.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/wizard.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/wizard.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/xbl.properties
@@ -12143,6 +12239,7 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/globa
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/dateFormat.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/dialog.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/dom/dom.properties
@@ -12194,6 +12291,7 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/globa
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/viewSource.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/viewSource.properties
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/webapps.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/wizard.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/wizard.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/xbl.properties
@@ -12393,6 +12491,7 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/globa
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/dateFormat.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/dialog.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/dom/dom.properties
@@ -12444,6 +12543,7 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/globa
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/videocontrols.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/viewSource.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/viewSource.properties
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/webapps.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/wizard.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/wizard.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/xbl.properties
@@ -12643,6 +12743,7 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/globa
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/dateFormat.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/dialog.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/dom/dom.properties
@@ -12694,6 +12795,7 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/globa
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/videocontrols.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/viewSource.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/viewSource.properties
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/webapps.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/wizard.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/wizard.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/xbl.properties
@@ -12893,6 +12995,7 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/globa
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/dateFormat.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/dialog.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/dom/dom.properties
@@ -12944,6 +13047,7 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/globa
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/videocontrols.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/viewSource.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/viewSource.properties
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/webapps.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/wizard.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/wizard.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/xbl.properties
@@ -13143,6 +13247,7 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/gl
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/dateFormat.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/dialog.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/dom/dom.properties
@@ -13194,6 +13299,7 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/gl
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/videocontrols.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/viewSource.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/viewSource.properties
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/webapps.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/wizard.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/wizard.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/xbl.properties
@@ -13393,6 +13499,7 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/globa
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/dateFormat.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/dialog.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/dom/dom.properties
@@ -13444,6 +13551,7 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/globa
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/videocontrols.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/viewSource.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/viewSource.properties
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/webapps.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/wizard.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/wizard.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/xbl.properties
@@ -13643,6 +13751,7 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/globa
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/dateFormat.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/dialog.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/dom/dom.properties
@@ -13694,6 +13803,7 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/globa
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/viewSource.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/viewSource.properties
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/webapps.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/wizard.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/wizard.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/xbl.properties
@@ -13893,6 +14003,7 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/globa
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/dateFormat.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/dialog.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/dom/dom.properties
@@ -13944,6 +14055,7 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/globa
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/videocontrols.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/viewSource.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/viewSource.properties
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/webapps.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/wizard.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/wizard.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/xbl.properties
@@ -14143,6 +14255,7 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/dateFormat.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/dialog.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/dom/dom.properties
@@ -14194,6 +14307,7 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/videocontrols.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/viewSource.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/viewSource.properties
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/webapps.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/wizard.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/wizard.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/xbl.properties
@@ -14393,6 +14507,7 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/globa
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/dateFormat.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/dialog.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/dom/dom.properties
@@ -14444,6 +14559,7 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/globa
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/videocontrols.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/viewSource.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/viewSource.properties
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/webapps.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/wizard.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/wizard.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/xbl.properties
@@ -14643,6 +14759,7 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/dateFormat.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/dialog.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/dom/dom.properties
@@ -14694,6 +14811,7 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/videocontrols.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/viewSource.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/viewSource.properties
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/webapps.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/wizard.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/wizard.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/xbl.properties
@@ -14893,6 +15011,7 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/gl
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/dateFormat.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/dialog.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/dom/dom.properties
@@ -14944,6 +15063,7 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/gl
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/videocontrols.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/viewSource.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/viewSource.properties
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/webapps.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/wizard.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/wizard.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/xbl.properties
@@ -15143,6 +15263,7 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/globa
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/dateFormat.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/dialog.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/dom/dom.properties
@@ -15194,6 +15315,7 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/globa
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/videocontrols.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/viewSource.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/viewSource.properties
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/webapps.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/wizard.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/wizard.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/xbl.properties
@@ -15393,6 +15515,7 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/dateFormat.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/dialog.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/dom/dom.properties
@@ -15444,6 +15567,7 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/videocontrols.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/viewSource.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/viewSource.properties
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/webapps.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/wizard.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/wizard.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/xbl.properties
@@ -15645,6 +15769,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/globa
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/dateFormat.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/dialog.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/dom/dom.properties
@@ -15696,6 +15821,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/globa
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/videocontrols.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/viewSource.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/viewSource.properties
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/webapps.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/wizard.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/wizard.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/xbl.properties
@@ -15895,6 +16021,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/dateFormat.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/dialog.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/dom/dom.properties
@@ -15946,6 +16073,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/videocontrols.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/viewSource.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/viewSource.properties
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/webapps.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/wizard.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/wizard.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/xbl.properties
@@ -16145,6 +16273,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/dateFormat.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/dialog.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/dom/dom.properties
@@ -16196,6 +16325,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/videocontrols.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/viewSource.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/viewSource.properties
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/webapps.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/wizard.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/wizard.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/xbl.properties
@@ -16395,6 +16525,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/globa
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/dateFormat.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/dialog.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/dom/dom.properties
@@ -16446,6 +16577,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/globa
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/videocontrols.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/viewSource.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/viewSource.properties
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/webapps.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/wizard.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/wizard.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/xbl.properties
@@ -16645,6 +16777,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/globa
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/dateFormat.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/dialog.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/dom/dom.properties
@@ -16696,6 +16829,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/globa
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/viewSource.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/viewSource.properties
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/webapps.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/wizard.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/wizard.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/xbl.properties
@@ -16895,6 +17029,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/globa
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/dateFormat.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/dialog.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/dom/dom.properties
@@ -16946,6 +17081,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/globa
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/viewSource.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/viewSource.properties
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/webapps.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/wizard.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/wizard.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/xbl.properties
@@ -17145,6 +17281,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/globa
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/dateFormat.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/dialog.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/dom/dom.properties
@@ -17196,6 +17333,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/globa
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/videocontrols.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/viewSource.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/viewSource.properties
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/webapps.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/wizard.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/wizard.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/xbl.properties
@@ -17395,6 +17533,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/globa
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/dateFormat.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/dialog.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/dom/dom.properties
@@ -17446,6 +17585,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/globa
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/videocontrols.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/viewSource.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/viewSource.properties
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/webapps.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/wizard.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/wizard.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/xbl.properties
@@ -17645,6 +17785,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/globa
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/dateFormat.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/dialog.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/dom/dom.properties
@@ -17696,6 +17837,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/globa
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/videocontrols.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/viewSource.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/viewSource.properties
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/webapps.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/wizard.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/wizard.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/xbl.properties
@@ -17895,6 +18037,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/gl
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/dateFormat.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/dialog.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/dom/dom.properties
@@ -17946,6 +18089,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/gl
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/videocontrols.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/viewSource.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/viewSource.properties
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/webapps.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/wizard.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/wizard.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/xbl.properties
@@ -18145,6 +18289,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/globa
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/dateFormat.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/dialog.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/dom/dom.properties
@@ -18196,6 +18341,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/globa
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/videocontrols.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/viewSource.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/viewSource.properties
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/webapps.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/wizard.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/wizard.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/xbl.properties
@@ -18395,6 +18541,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/globa
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/dateFormat.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/dialog.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/dom/dom.properties
@@ -18446,6 +18593,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/globa
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/videocontrols.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/viewSource.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/viewSource.properties
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/webapps.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/wizard.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/wizard.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/xbl.properties
@@ -18645,6 +18793,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/dateFormat.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/dialog.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/dom/dom.properties
@@ -18696,6 +18845,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/videocontrols.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/viewSource.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/viewSource.properties
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/webapps.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/wizard.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/wizard.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/xbl.properties
@@ -18895,6 +19045,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/dateFormat.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/dialog.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/dom/dom.properties
@@ -18946,6 +19097,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/viewSource.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/viewSource.properties
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/webapps.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/wizard.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/wizard.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/xbl.properties
@@ -19145,6 +19297,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/globa
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/dateFormat.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/dialog.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/dom/dom.properties
@@ -19196,6 +19349,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/globa
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/videocontrols.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/viewSource.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/viewSource.properties
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/webapps.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/wizard.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/wizard.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/xbl.properties
@@ -19395,6 +19549,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/globa
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/dateFormat.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/dialog.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/dom/dom.properties
@@ -19446,6 +19601,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/globa
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/videocontrols.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/viewSource.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/viewSource.properties
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/webapps.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/wizard.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/wizard.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/xbl.properties
@@ -19645,6 +19801,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/globa
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/dateFormat.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/dialog.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/dom/dom.properties
@@ -19696,6 +19853,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/globa
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/videocontrols.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/viewSource.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/viewSource.properties
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/webapps.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/wizard.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/wizard.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/xbl.properties
@@ -19895,6 +20053,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/globa
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/dateFormat.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/dialog.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/dom/dom.properties
@@ -19946,6 +20105,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/globa
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/videocontrols.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/viewSource.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/viewSource.properties
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/webapps.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/wizard.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/wizard.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/xbl.properties
@@ -20145,6 +20305,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/globa
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/dateFormat.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/dialog.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/dom/dom.properties
@@ -20196,6 +20357,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/globa
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/videocontrols.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/viewSource.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/viewSource.properties
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/webapps.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/wizard.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/wizard.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/xbl.properties
@@ -20395,6 +20557,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/globa
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/dateFormat.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/dialog.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/dom/dom.properties
@@ -20446,6 +20609,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/globa
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/videocontrols.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/viewSource.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/viewSource.properties
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/webapps.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/wizard.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/wizard.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/xbl.properties
@@ -20645,6 +20809,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/dateFormat.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/dialog.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/dom/dom.properties
@@ -20696,6 +20861,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/videocontrols.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/viewSource.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/viewSource.properties
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/webapps.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/wizard.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/wizard.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/xbl.properties
@@ -20895,6 +21061,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/dateFormat.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/dialog.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/dom/dom.properties
@@ -20946,6 +21113,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/videocontrols.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/viewSource.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/viewSource.properties
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/webapps.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/wizard.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/wizard.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/xbl.properties
@@ -21145,6 +21313,7 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/globa
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/customizeToolbar.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/dateFormat.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/datetimepicker.dtd
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/devtools/debugger.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/dialog.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/dialogOverlay.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/dom/dom.properties
@@ -21196,6 +21365,7 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/globa
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/videocontrols.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/viewSource.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/viewSource.properties
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/webapps.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/wizard.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/wizard.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/xbl.properties
