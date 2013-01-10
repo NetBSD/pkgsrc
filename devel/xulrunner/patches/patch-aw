@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.5 2012/10/12 18:27:20 ryoon Exp $
+$NetBSD: patch-aw,v 1.6 2013/01/10 15:01:30 ryoon Exp $
 
---- xulrunner/stub/nsXULStub.cpp.orig	2012-10-04 15:51:30.000000000 +0000
+--- xulrunner/stub/nsXULStub.cpp.orig	2013-01-04 23:44:47.000000000 +0000
 +++ xulrunner/stub/nsXULStub.cpp
 @@ -11,6 +11,29 @@
  #include "nsIFile.h"

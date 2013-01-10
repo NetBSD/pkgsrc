@@ -1,6 +1,6 @@
-$NetBSD: patch-xe,v 1.4 2012/11/21 15:26:50 ryoon Exp $
+$NetBSD: patch-xe,v 1.5 2013/01/10 15:01:31 ryoon Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2012-11-19 17:32:09.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2013-01-04 23:44:47.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
 @@ -100,6 +100,15 @@ extern "C" {
      }
