@@ -1,0 +1,14 @@
+$NetBSD: patch-ml,v 1.1 2013/01/10 16:17:10 ryoon Exp $
+
+--- js/src/Makefile.in.orig	2012-08-24 22:55:38.000000000 +0000
++++ js/src/Makefile.in
+@@ -678,6 +678,9 @@ endif # _MSC_VER
+ ifeq ($(OS_ARCH),FreeBSD)
+ EXTRA_LIBS	+= -pthread
+ endif
++ifeq ($(OS_ARCH),DragonFly)
++EXTRA_LIBS	+= -pthread
++endif
+ ifeq ($(OS_ARCH),Linux)
+ EXTRA_LIBS	+= -ldl
+ endif

@@ -1,0 +1,15 @@
+$NetBSD: patch-xpcom_idl-parser_Makefile.in,v 1.1 2013/01/10 16:17:11 ryoon Exp $
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=736961
+
+--- xpcom/idl-parser/Makefile.in.orig	2012-08-24 22:56:10.000000000 +0000
++++ xpcom/idl-parser/Makefile.in
+@@ -29,7 +29,7 @@ include $(topsrcdir)/config/rules.mk
+ export:: $(PARSER_SRCS) $(PLY_PROGS)
+ 	$(PYTHON_PATH) \
+ 	  $(PLY_INCLUDE) \
+-	  $(srcdir)/header.py --cachedir=. --regen
++	  $(srcdir)/header.py --cachedir=$(DEPTH)/xpcom/idl-parser/cache --regen
+ 
+ check::
+ 	$(PYTHON_PATH) \
