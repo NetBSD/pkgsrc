@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 00:20:11 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/10 06:59:55 mef Exp $
 #
 
-DISTNAME=		fribidi-0.10.9
+DISTNAME=		fribidi-0.19.5
 CATEGORIES=		converters
 MASTER_SITES=		http://fribidi.org/download/
+LICENSE=		gnu-gpl-v2
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fribidi.org/
