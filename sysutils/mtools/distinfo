@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/08/08 08:46:27 is Exp $
+$NetBSD: distinfo,v 1.19 2013/01/10 15:37:08 is Exp $
 
-SHA1 (mtools-4.0.17.tar.bz2) = ab16d292c5098ae94d83a48094c137c2a5c3b101
-RMD160 (mtools-4.0.17.tar.bz2) = 2e55692fa31d02e86bcab0d1e55ed1755b2bab64
-Size (mtools-4.0.17.tar.bz2) = 412310 bytes
+SHA1 (mtools-4.0.18.tar.bz2) = cd45031441ac944eacebdc8d4b82b20cd9cc8461
+RMD160 (mtools-4.0.18.tar.bz2) = 31bd7af355f609e072daa173d44771eac85e9473
+Size (mtools-4.0.18.tar.bz2) = 420190 bytes
 SHA1 (patch-aa) = 493b06455ee3169e6db916a9d535dad5a124edbc
 SHA1 (patch-ae) = 5281829c8c79f95ff4672fabb53acd22685c17bb
 SHA1 (patch-af) = fcf66c887f9513d812c01ff314669959f94ed7b3
-SHA1 (patch-llong.h) = 350158693991dc3fca440f5fee4bcda8398c80e9
