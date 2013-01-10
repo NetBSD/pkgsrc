@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/06 04:53:24 sbd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/01/10 18:16:29 wiz Exp $
 man/man5/logrotate.conf.5
 man/man8/logrotate.8
 sbin/logrotate
