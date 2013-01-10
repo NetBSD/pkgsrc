@@ -1,0 +1,13 @@
+$NetBSD: patch-mi,v 1.1 2013/01/10 16:17:10 ryoon Exp $
+
+--- config/config.mk.orig	2012-10-23 19:42:27.000000000 +0000
++++ config/config.mk
+@@ -92,7 +92,7 @@ AUTOCONF_TOOLS	= $(topsrcdir)/build/auto
+ # but save the version to allow multiple versions of the same base
+ # platform to be built in the same tree.
+ #
+-ifneq (,$(filter FreeBSD HP-UX Linux NetBSD OpenBSD SunOS,$(OS_ARCH)))
++ifneq (,$(filter DragonFly FreeBSD HP-UX Linux NetBSD OpenBSD SunOS,$(OS_ARCH)))
+ OS_RELEASE	:= $(basename $(OS_RELEASE))
+ 
+ # Allow the user to ignore the OS_VERSION, which is usually irrelevant.
