@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.136 2013/01/10 20:33:38 is Exp $
+$NetBSD: CHANGES-2013,v 1.137 2013/01/10 21:33:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3-tcl to 3.7.15.2 [adam 2013-01-10]
 	Updated sysutils/logrotate to 3.8.2 [wiz 2013-01-10]
 	Updated sysutils/mtools to 4.0.18 [is 2013-01-10]
+	Added www/firefox17-l10n version 17.0.2 [ryoon 2013-01-10]
