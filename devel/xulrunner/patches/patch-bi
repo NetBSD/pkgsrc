@@ -1,6 +1,6 @@
-$NetBSD: patch-bi,v 1.6 2012/11/21 15:26:50 ryoon Exp $
+$NetBSD: patch-bi,v 1.7 2013/01/10 15:01:30 ryoon Exp $
 
---- gfx/angle/src/compiler/osinclude.h.orig	2012-11-19 17:03:13.000000000 +0000
+--- gfx/angle/src/compiler/osinclude.h.orig	2013-01-04 23:44:32.000000000 +0000
 +++ gfx/angle/src/compiler/osinclude.h
 @@ -16,6 +16,7 @@
  #define ANGLE_OS_WIN
