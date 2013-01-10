@@ -1,12 +1,12 @@
-$NetBSD: patch-an,v 1.3 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-an,v 1.4 2013/01/10 15:01:30 ryoon Exp $
 
 SHA1_Update conflicts with openssl which may be dynamically loaded
 at runtime via libcups or libgssapi so causing a crash due to using
 the wrong binding.  So rename here to avoid conflict.
 
---- security/nss/lib/freebl/sha-fast-amd64-sun.s.orig	2012-08-24 22:56:01.000000000 +0000
+--- security/nss/lib/freebl/sha-fast-amd64-sun.s.orig	2013-01-04 23:44:43.000000000 +0000
 +++ security/nss/lib/freebl/sha-fast-amd64-sun.s
-@@ -1712,9 +1712,9 @@ shaCompress:
+@@ -1680,9 +1680,9 @@ shaCompress:
  .LFE7:
  	.size	shaCompress, .-shaCompress
  	.align 16
@@ -19,7 +19,7 @@ the wrong binding.  So rename here to avoid conflict.
  .LFB5:
  	pushq	%rbp
  .LCFI5:
-@@ -1800,7 +1800,7 @@ SHA1_Update:
+@@ -1768,7 +1768,7 @@ SHA1_Update:
  	call	shaCompress
  	jmp	.L245
  .LFE5:
@@ -28,7 +28,7 @@ the wrong binding.  So rename here to avoid conflict.
  	.section	.rodata
  	.align 32
  	.type	bulk_pad.0, @object
-@@ -1902,7 +1902,7 @@ SHA1_End:
+@@ -1870,7 +1870,7 @@ SHA1_End:
  	subl	%r8d, %edx
  	andl	$63, %edx
  	incl	%edx
@@ -37,7 +37,7 @@ the wrong binding.  So rename here to avoid conflict.
  	movq	%rbx, %rdi
  	movq	%r12, %rsi
  	shrq	$32, %rdi
-@@ -2018,7 +2018,7 @@ SHA1_HashBuf:
+@@ -1986,7 +1986,7 @@ SHA1_HashBuf:
  	movl	%r12d, %edx
  	movq	%r13, %rsi
  	movq	%rbx, %rdi

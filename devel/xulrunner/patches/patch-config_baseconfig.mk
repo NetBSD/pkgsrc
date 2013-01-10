@@ -1,6 +1,6 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.1 2012/10/12 18:27:20 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.2 2013/01/10 15:01:30 ryoon Exp $
 
---- config/baseconfig.mk.orig	2012-10-02 14:37:17.000000000 +0000
+--- config/baseconfig.mk.orig	2013-01-04 23:44:28.000000000 +0000
 +++ config/baseconfig.mk
 @@ -1,9 +1,9 @@
  INCLUDED_AUTOCONF_MK = 1

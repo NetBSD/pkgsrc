@@ -1,8 +1,11 @@
-$NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.3 2012/09/02 05:45:29 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_dir__reader__bsd.h,v 1.4 2013/01/10 15:01:30 ryoon Exp $
 
---- ipc/chromium/src/base/dir_reader_bsd.h.orig	2012-08-28 18:53:58.000000000 +0000
+--- ipc/chromium/src/base/dir_reader_bsd.h.orig	2013-01-04 23:44:34.000000000 +0000
 +++ ipc/chromium/src/base/dir_reader_bsd.h
-@@ -0,0 +1,112 @@
+@@ -110,3 +110,115 @@ class DirReaderBSD {
+ }  // namespace base
+ 
+ #endif // BASE_DIR_READER_BSD_H_
 +// Copyright (c) 2010 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.

@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_components_osfile_osfileutils.cpp,v 1.1 2012/12/04 20:28:45 ryoon Exp $
+$NetBSD: patch-toolkit_components_osfile_osfileutils.cpp,v 1.2 2013/01/10 15:01:31 ryoon Exp $
 
 http://gnats.netbsd.org/47233
 
---- toolkit/components/osfile/osfileutils.cpp.orig	2012-11-19 15:43:22.000000000 +0000
+--- toolkit/components/osfile/osfileutils.cpp.orig	2013-01-04 23:44:44.000000000 +0000
 +++ toolkit/components/osfile/osfileutils.cpp
 @@ -7,6 +7,10 @@
  #include "nsCOMPtr.h"

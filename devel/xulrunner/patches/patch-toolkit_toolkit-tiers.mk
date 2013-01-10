@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.5 2012/08/28 23:27:10 ryoon Exp $
+$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.6 2013/01/10 15:01:31 ryoon Exp $
 
---- toolkit/toolkit-tiers.mk.orig	2012-08-24 22:56:08.000000000 +0000
+--- toolkit/toolkit-tiers.mk.orig	2013-01-04 23:44:46.000000000 +0000
 +++ toolkit/toolkit-tiers.mk
-@@ -47,7 +47,7 @@ ifdef MOZ_UPDATER
+@@ -43,7 +43,7 @@ ifdef MOZ_UPDATER
  ifndef MOZ_NATIVE_BZ2
  tier_platform_dirs += modules/libbz2
  endif
