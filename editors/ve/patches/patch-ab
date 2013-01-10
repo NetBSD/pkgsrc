@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/04/19 14:05:17 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/10 23:53:15 joerg Exp $
 
---- edit.c.orig	Sun Apr  7 16:13:24 2002
+--- edit.c.orig	1999-08-25 06:48:36.000000000 +0000
 +++ edit.c
-@@ -793,6 +793,7 @@
+@@ -793,6 +793,7 @@ write_file(fpath, saveheader)
       fclose(fp);
       stat(FPath, &st0);
       modified = -1;
@@ -10,3 +10,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/04/19 14:05:17 zuntum Exp $
    }
  
    return saveheader ? KEEP_EDITING : aborted;
+@@ -1100,7 +1101,7 @@ search_str(int mode)
+ }
+ 
+ 
+-match_paren()
++static void match_paren(void)
+ {
+    static char parens[] = "()[]{}<>";
+    int type, mode;
