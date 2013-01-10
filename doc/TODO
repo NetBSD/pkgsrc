@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11824 2013/01/08 23:19:13 mef Exp $
+$NetBSD: TODO,v 1.11825 2013/01/10 01:43:42 mef Exp $
 
 Suggested new packages
 ======================
@@ -548,7 +548,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o epstool-3.08
 	o eric5-5.2.7
 	o esh-0.8.5
-	o espeak-1.40
+	o espeak-1.46.02 [wip]
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
