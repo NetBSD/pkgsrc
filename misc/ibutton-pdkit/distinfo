@@ -1,10 +1,30 @@
-$NetBSD: distinfo,v 1.5 2007/12/20 13:12:13 obache Exp $
+$NetBSD: distinfo,v 1.6 2013/01/11 13:30:32 joerg Exp $
 
 SHA1 (ulinuxgnu.zip) = 3c60908177c665fc10f56b6b81c39c6117b7d9d2
 RMD160 (ulinuxgnu.zip) = bc0797ffd2e0042807d6d02ca96e5f1f36233624
 Size (ulinuxgnu.zip) = 837059 bytes
+SHA1 (patch-1wsensor.c) = a30f9dc80e9b93bf9c21403571afbc1da2200000
 SHA1 (patch-aa) = 59a7106d544315cdebaf236edb81b32fccd83971
 SHA1 (patch-ab) = 0381f2be279a842b2b007aeb51a37cfa30b95e2c
 SHA1 (patch-ac) = 4fb5ab4e92c0c0ea648084442ecdad1513092064
 SHA1 (patch-ad) = 69910ca489c46e1c9e8fda90753cf98054e00ebe
 SHA1 (patch-ae) = f146dbc9b0bd94725c86d4e2bc4cc32075c5a457
+SHA1 (patch-atodtst.c) = 66f5cc5c359f9960a5fbaeecb3ba936672bdb087
+SHA1 (patch-counter.c) = ed0009a20187ece83f76757ccc0bfb00f5a2dcb7
+SHA1 (patch-coupler.c) = 7221539d6023429ea5b3353259050d2edc0e1ae4
+SHA1 (patch-debit.c) = e1e73d3bf1af15bc1f6c6cee748fd721f7994844
+SHA1 (patch-dumptag.c) = 9d5d4e116462409a135ca098ae3464ea2b423ebf
+SHA1 (patch-initcopr.c) = 8afcb8484c14be6cbd5e295357f0bff21319ece0
+SHA1 (patch-initrov.c) = 1ce4ade6d60cd84ee50f0f56be43a98222f045d3
+SHA1 (patch-list2tag.c) = 4260486b856aaa0f4721a4a41fa9297fb6bb769c
+SHA1 (patch-mktag.c) = c6175f92da92469bbcfc3f04a3542d2e6730af41
+SHA1 (patch-mweather.c) = e8eed93eb16c7fcf341fa8bd09da78b9df30b360
+SHA1 (patch-swtloop.c) = 661aade08968697164cb776102c0a4af0c87a440
+SHA1 (patch-swtoper.c) = bd3315cc938bbf959358a92466d0f9766cc5cc07
+SHA1 (patch-swtsngl.c) = 557107e16c0f3448995df60502ec4f4573252b06
+SHA1 (patch-temp.c) = 3b00eca1dfdfe4d48c167b425966ec3d4d93123b
+SHA1 (patch-thermodl.c) = b5f6fb8f4d6036e68cdac97ed2e183d6b54a4819
+SHA1 (patch-thermoms.c) = 9679efe9ce019b136dd4dd99eb7d3cb962e5b245
+SHA1 (patch-tstfind.c) = 54c4bdd1d827b09795d81637176cf0b7ff8abb36
+SHA1 (patch-tstow.c) = a3160693f578e3080856462d460fe98af50a2e9b
+SHA1 (patch-tstowe.c) = 3e228e26727858cea0d47472dbcc44619df261e5
