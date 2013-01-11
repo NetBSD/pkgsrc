@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2006/06/08 15:39:25 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2013/01/11 23:32:39 joerg Exp $
 
---- xdu.c.orig	2006-06-08 15:35:16.000000000 +0000
+--- xdu.c.orig	2013-01-11 14:30:40.000000000 +0000
 +++ xdu.c
-@@ -19,13 +19,13 @@
+@@ -19,18 +19,19 @@
   * limitation a license to do the foregoing actions under any patents of
   * the party supplying this software to the X Consortium.
   */
@@ -20,7 +20,14 @@ $NetBSD: patch-aa,v 1.5 2006/06/08 15:39:25 joerg Exp $
  #define	MAXPATH		4096	/* max total pathname length */
  #define	NCOLS		5	/* default number of columns in display */
  
-@@ -96,6 +96,10 @@ int size;
+ /* What we IMPORT from xwin.c */
+-extern int xsetup(), xmainloop(), xdrawrect(), xrepaint();
++extern int xsetup(), xmainloop(), xrepaint();
++void xdrawrect(char *name, int size, int x, int y, int width, int height);
+ 
+ /* What we EXPORT to xwin.c */
+ extern int press(), reset(), repaint(), setorder(), reorder();
+@@ -96,6 +97,10 @@ int size;
  	struct	node	*np;
  
  	np = (struct node *)calloc(1,sizeof(struct node));
@@ -31,7 +38,7 @@ $NetBSD: patch-aa,v 1.5 2006/06/08 15:39:25 joerg Exp $
  	np->name = strdup(name);
  	np->size = size;
  	np->num = nnodes;
-@@ -610,20 +614,6 @@ pwd()
+@@ -610,20 +615,6 @@ pwd()
  		100.0*topp->size/rootp->size);
  }
  
