@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.5 2012/02/16 14:13:15 hans Exp $
+$NetBSD: patch-au,v 1.6 2013/01/11 13:24:32 joerg Exp $
 
---- icb/tcl.c.orig	1995-02-24 16:20:30.000000000 -0500
-+++ icb/tcl.c	2008-12-16 20:18:01.000000000 -0500
+--- icb/tcl.c.orig	1995-02-24 21:20:30.000000000 +0000
++++ icb/tcl.c
 @@ -3,13 +3,14 @@
  
  /* TCL interface */
@@ -19,8 +19,12 @@ $NetBSD: patch-au,v 1.5 2012/02/16 14:13:15 hans Exp $
  #include <sys/file.h>
  
  Tcl_Interp *interp;
-@@ -95,7 +96,11 @@ tclinit()
- tclreadicbrc()
+@@ -92,10 +93,14 @@ tclinit()
+ 
+ }
+ 
+-tclreadicbrc()
++void tclreadicbrc(void)
  {
  	char *p, *path;
 +#ifdef NAME_MAX
