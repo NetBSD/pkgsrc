@@ -1,17 +1,20 @@
-$NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2013/01/11 23:25:11 joerg Exp $
 
---- linpack.c.orig	2007-09-02 12:38:13.000000000 +0200
+--- linpack.c.orig	2013-01-11 15:21:29.000000000 +0000
 +++ linpack.c
-@@ -48,7 +48,7 @@ You must specify one of -DROLL or -DUNRO
+@@ -48,7 +48,10 @@ You must specify one of -DROLL or -DUNRO
  #include <stdio.h>
  #include <math.h>
  
 -static REAL time[9][9];
 +static REAL timex[9][9];
++
++static void daxpy(int n, REAL da, REAL *dx, int incx, REAL *dy, int incy);
++static void dscal(int n, REAL da, REAL *dx,int incx);
  
  main ()
  {
-@@ -71,11 +71,11 @@ main ()
+@@ -71,11 +74,11 @@ main ()
          matgen(a,lda,n,b,&norma);
          t1 = second();
          dgefa(a,lda,n,ipvt,&info);
@@ -26,7 +29,7 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  
  /*     compute a residual to verify results.  */ 
  
-@@ -108,10 +108,10 @@ main ()
+@@ -108,10 +111,10 @@ main ()
  	fprintf(stderr,"      dgefa      dgesl      total       kflops     unit");
  	fprintf(stderr,"      ratio\n");
  
@@ -41,7 +44,7 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  
     	fprintf(stderr," times for array with leading dimension of%5d\n",lda);
  	print_time(0);
-@@ -119,28 +119,28 @@ main ()
+@@ -119,28 +122,28 @@ main ()
          matgen(a,lda,n,b,&norma);
          t1 = second();
          dgefa(a,lda,n,ipvt,&info);
@@ -84,7 +87,7 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  
          ntimes = NTIMES;
          tm2 = 0.0;
-@@ -153,19 +153,19 @@ main ()
+@@ -153,19 +156,19 @@ main ()
  		dgefa(a,lda,n,ipvt,&info);
  	}
  
@@ -111,7 +114,7 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  
  	print_time(1);
  	print_time(2);
-@@ -174,41 +174,41 @@ main ()
+@@ -174,41 +177,41 @@ main ()
          matgen(aa,ldaa,n,b,&norma);
          t1 = second();
          dgefa(aa,ldaa,n,ipvt,&info);
@@ -174,7 +177,7 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  
  	ntimes = NTIMES;
  	tm2 = 0;
-@@ -219,22 +219,22 @@ main ()
+@@ -219,22 +222,22 @@ main ()
  		tm2 = tm2 + second() - tm;
  		dgefa(aa,ldaa,n,ipvt,&info);
  	}
@@ -206,7 +209,7 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  	kf = (kf > ZERO) ? (kf + .5) : (kf - .5);
  	if (fabs((double)kf) < ONE) 
  		kflops = 0;
-@@ -256,9 +256,9 @@ main ()
+@@ -256,9 +259,9 @@ main ()
  print_time (row)
  int row;
  {
@@ -219,7 +222,37 @@ $NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
  }
        
  /*----------------------*/ 
-@@ -885,16 +885,14 @@ function, references to m[i][j] are writ
+@@ -528,13 +531,11 @@ function, references to a[i][j] are writ
+ 
+ /*----------------------*/ 
+ 
+-daxpy(n,da,dx,incx,dy,incy)
++static void daxpy(int n, REAL da, REAL *dx, int incx, REAL *dy, int incy)
+ /*
+      constant times a vector plus a vector.
+      jack dongarra, linpack, 3/11/78.
+ */
+-REAL dx[],dy[],da;
+-int incx,incy,n;
+ {
+ 	int i,ix,iy,m,mp1;
+ 
+@@ -642,13 +643,11 @@ int incx,incy,n;
+ }
+ 
+ /*----------------------*/ 
+-dscal(n,da,dx,incx)
++static void dscal(int n, REAL da, REAL *dx,int incx)
+ 
+ /*     scales a vector by a constant.
+       jack dongarra, linpack, 3/11/78.
+ */
+-REAL da,dx[];
+-int n, incx;
+ {
+ 	int i,m,mp1,nincx;
+ 
+@@ -885,16 +884,14 @@ function, references to m[i][j] are writ
  } 
  
  /*----------------------*/ 
