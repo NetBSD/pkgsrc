@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2012/10/03 11:43:43 asau Exp $
+# $NetBSD: Makefile,v 1.54 2013/01/11 00:15:39 joerg Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gtar
+USE_TOOLS+=	bsdtar
 MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/Ted-2.21
@@ -53,7 +53,7 @@ INSTALL_TARGET=	install.shared
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${AFMDIR} ${INDDIR} ${INFODIR}
 
 post-extract:
-	@cd ${WRKSRC} ; ${GTAR} xf tedPackage/TedBindist.tar
+	@cd ${WRKSRC} ; ${TOOLS_PATH.bsdtar} xf tedPackage/TedBindist.tar
 
 post-patch:
 	@cd ${WRKSRC}/Ted ; \

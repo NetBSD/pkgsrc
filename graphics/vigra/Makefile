@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/12/09 00:05:09 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/01/11 00:15:39 joerg Exp $
 
 DISTNAME=	vigra-1.9.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://hci.iwr.uni-heidelberg.de/vigra/
 COMMENT=	Computer vision library
 LICENSE=	mit
 
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_CMAKE=		yes

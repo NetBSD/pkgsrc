@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2012/10/21 21:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2013/01/11 00:15:40 joerg Exp $
 
 DISTNAME=	mono-2.10.9
 CATEGORIES=	lang
@@ -19,10 +19,10 @@ CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q}
 
-USE_TOOLS+=		bison gmake gtar perl:run pkg-config bash:run msgfmt
+USE_TOOLS+=		bison gmake perl:run pkg-config bash:run msgfmt
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
-EXTRACT_USING=		gtar
+EXTRACT_USING=		bsdtar
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
