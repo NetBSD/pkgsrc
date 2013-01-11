@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.139 2013/01/11 01:34:32 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.140 2013/01/11 10:38:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/firefox17-l10n version 17.0.2 [ryoon 2013-01-10]
 	Updated devel/at-spi2-core to 2.6.3 [prlw1 2013-01-10]
 	Removed devel/guile-fcgi [gdt 2013-01-11]
+	Updated pkgtools/x11-links to 0.72 [ryoon 2013-01-11]
