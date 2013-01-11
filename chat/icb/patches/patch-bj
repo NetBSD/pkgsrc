@@ -1,7 +1,7 @@
-$NetBSD: patch-bj,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-bj,v 1.3 2013/01/11 13:24:32 joerg Exp $
 
---- readline/readline.h.orig	1995-02-24 16:20:03.000000000 -0500
-+++ readline/readline.h	2008-12-16 20:31:36.000000000 -0500
+--- readline/readline.h.orig	1995-02-24 21:20:03.000000000 +0000
++++ readline/readline.h
 @@ -5,11 +5,13 @@
  
  #include <readline/keymaps.h>
@@ -17,7 +17,19 @@ $NetBSD: patch-bj,v 1.2 2008/12/17 02:19:59 christos Exp $
  
  /* The functions for manipulating the text of the line within readline.
  Most of these functions are bound to keys by default. */
-@@ -141,7 +143,7 @@
+@@ -28,8 +30,9 @@ extern int
+   rl_undo_command (), rl_revert_line (), rl_beginning_of_history (),
+   rl_end_of_history (), rl_forward_search_history (), rl_insert (),
+   rl_upcase_word (), rl_downcase_word (), rl_capitalize_word (),
+-  rl_restart_output (), rl_re_read_init_file (), rl_dump_functions (),
+-  rl_redisplay ();
++  rl_restart_output (), rl_re_read_init_file (), rl_dump_functions ();
++
++extern void rl_redisplay (void);
+ 
+ /* These are *both* defined even when VI_MODE is not. */
+ extern int rl_vi_editing_mode (), rl_emacs_editing_mode ();
+@@ -141,7 +144,7 @@ extern Function *rl_ignore_some_completi
     If this function exists and returns NULL then call the value of
     rl_completion_entry_function to try to match, otherwise use the
     array of strings returned. */

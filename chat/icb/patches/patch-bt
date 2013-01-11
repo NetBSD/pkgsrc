@@ -1,8 +1,20 @@
-$NetBSD: patch-bt,v 1.1 2009/08/06 08:24:29 plunky Exp $
+$NetBSD: patch-bt,v 1.2 2013/01/11 13:24:32 joerg Exp $
 
---- icb/s_person.c.orig	2009-08-06 09:20:29.000000000 +0100
+--- icb/s_person.c.orig	1995-02-24 21:20:28.000000000 +0000
 +++ icb/s_person.c
-@@ -106,7 +106,7 @@ int echoflag;
+@@ -77,10 +77,7 @@ TARGDEFS
+ }
+ 
+ 
+-sendpersonal(nick, text, echoflag)
+-char *nick;
+-char *text;
+-int echoflag;
++void sendpersonal(char *nick, char *text, int echoflag)
+ {
+ 	char *buf;
+ 	int pl_flags;
+@@ -106,7 +103,7 @@ int echoflag;
  	{
  		do
  		{
@@ -11,3 +23,12 @@ $NetBSD: patch-bt,v 1.1 2009/08/06 08:24:29 plunky Exp $
  
  			if (!text || (!*text && !last_command_was_kill))
  			{
+@@ -124,7 +121,7 @@ int echoflag;
+ 	if (!buf)
+ 	{
+ 		putl("[=Error=] No memory to build packet",PL_SCR);
+-		return 0;
++		return;
+ 	}
+ 
+ 	sprintf(buf,"%cm %s %s", gv.cmdchar, nick, text);

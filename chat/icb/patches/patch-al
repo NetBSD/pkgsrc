@@ -1,8 +1,31 @@
-$NetBSD: patch-al,v 1.4 2012/02/16 14:13:15 hans Exp $
+$NetBSD: patch-al,v 1.5 2013/01/11 13:24:32 joerg Exp $
 
 --- icb/protos.h.orig	1995-02-24 21:20:25.000000000 +0000
 +++ icb/protos.h
-@@ -49,7 +49,7 @@ int filtertext(char *s);
+@@ -19,7 +19,7 @@ char *strscat(int va_alist,...);
+ char *tildexpand(char *s);
+ int addusage(char *name, int type, char *args, char *usage);
+ sighandler askquit();
+-int beep(char *pkt);
++void beep(char *pkt);
+ int bufferadd(char *text);
+ int bufferlist(int lines);
+ int c_help(char *clientData, Tcl_Interp *interp, int argc, char *argv[]);
+@@ -34,10 +34,10 @@ int c_usage(char *clientData, Tcl_Interp
+ char *catargs(char **argv);
+ int cimatch(char *s1, char *s2);
+ int clearargs(int argc, char *argv[]);
+-int closesessionlog(void);
++void closesessionlog(void);
+ int cmdoutmsg(char *pkt);
+-int copenmsg(char *pkt);
+-int cpersonalmsg(char *pkt);
++void copenmsg(char *pkt);
++void cpersonalmsg(char *pkt);
+ int csendopen(char *txt);
+ int deleteusage(char *name);
+ int dispatch(char *pkt);
+@@ -49,22 +49,23 @@ int filtertext(char *s);
  int fnexit(void);
  int fnterm(void);
  int oset(char *clientData, Tcl_Interp *interp, int argc, char *argv[]);
@@ -11,7 +34,18 @@ $NetBSD: patch-al,v 1.4 2012/02/16 14:13:15 hans Exp $
  int getterm(void);
  int getwinsize(void);
  int gunlink(USAGE *u, USAGE **first, USAGE **last);
-@@ -64,7 +64,7 @@ int importantmsg(char *pkt);
+ int helpme(char *subject);
+ int helptoc(void);
+ int histcount(void);
+-int histput(char *nick);
++void histput(char *nick);
+ int hushadd(Tcl_Interp *interp, char *nick);
+ int hushdelete(Tcl_Interp *interp, char *nick);
+-int hushlist(void);
+-int importantmsg(char *pkt);
++void hushlist(void);
++void importantmsg(char *pkt);
++void icbterm(void);
  int inserttab(void);
  int ishushed(char *nick);
  int lcaseit(char *s);
@@ -20,25 +54,49 @@ $NetBSD: patch-al,v 1.4 2012/02/16 14:13:15 hans Exp $
  int linebuffer(FILE *fp);
  #else
  int linebuffer(struct _iobuf *fp);
-@@ -78,7 +78,7 @@ int mbreakprint(int per, char *from, cha
+@@ -77,18 +78,18 @@ int main(int argc, char **argv);
+ int mbreakprint(int per, char *from, char *s);
  int mprint(int per, char *from, char *s);
  int numeric(char *txt);
- int parse(char *s);
+-int parse(char *s);
 -int pauseprompt(char *prompt, int erase, int c, int unget, int except);
++void parse(char *s);
 +int pauseprompt(char *prompt, int erase, int c, int unget, char *except);
  int printcutetime(void);
  int printmilitarytime(void);
  int printnormaltime(void);
-@@ -107,7 +107,7 @@ int specialchar(register int c, char *s,
+ int printvar(char *name, int type, char *address);
+-int protomsg(char *pkt);
++void protomsg(char *pkt);
+ int pushback(int c);
+ int putl(char *s, int flags);
+ int quoteify(char *a, char *b);
+-int restoreterm(void);
+-int restrict(void);
++void restoreterm(void);
++int restricted(void);
+ int s_admin(char *clientData, Tcl_Interp *interp, int argc, char *argv[]);
+ int s_beep(char *clientData, Tcl_Interp *interp, int argc, char *argv[]);
+ int s_group(char *clientData, Tcl_Interp *interp, int argc, char *argv[]);
+@@ -100,14 +101,14 @@ int s_who(char *clientData, Tcl_Interp *
+ int saysomething(void);
+ int sendcmd(char *cmd, char *args);
+ int sendlogin(char *id, char *nick, char *group, char *command, char *passwd);
+-int sendpersonal(char *nick, char *text, int echoflag);
++void sendpersonal(char *nick, char *text, int echoflag);
+ int sendpong(void);
+ int setvar(Tcl_Interp *interp, int type, char *address, char *s);
+ int specialchar(register int c, char *s, char *prompt, int expand);
  int split(char *s);
  int startsessionlog(Tcl_Interp *interp, char *path);
- int statusmsg(char *pkt);
+-int statusmsg(char *pkt);
 -int strcasecmp(char *s1, char *s2);
++void statusmsg(char *pkt);
 +int strcasecmp(const char *s1, const char *s2);
  int strcicmp(char *s1, char *s2);
  int strcincmp(char *s1, char *s2, int n);
  int strlinkafter(STRLIST *s, STRLIST *i, STRLIST **head, STRLIST **tail);
-@@ -115,7 +115,7 @@ int strlinkalpha(STRLIST *s, STRLIST **h
+@@ -115,11 +116,11 @@ int strlinkalpha(STRLIST *s, STRLIST **h
  int strlinkbefore(STRLIST *s, STRLIST *i, STRLIST **head, STRLIST **tail);
  int strlinkhead(STRLIST *s, STRLIST **head, STRLIST **tail);
  int strlinktail(STRLIST *s, STRLIST **head, STRLIST **tail);
@@ -47,7 +105,12 @@ $NetBSD: patch-al,v 1.4 2012/02/16 14:13:15 hans Exp $
  int strunlink(STRLIST *s, STRLIST **head, STRLIST **tail);
  sighandler suspend();
  int tclinit(void);
-@@ -140,3 +140,4 @@ struct server *getserver(void);
+-int tclreadicbrc(void);
++void tclreadicbrc(void);
+ int tclrestrict(void);
+ int trapsignals(void);
+ int uline(USAGE *u);
+@@ -140,3 +141,4 @@ struct server *getserver(void);
  struct server *getservbyname(char *name);
  void listservers(void);
  sighandler icbexit();

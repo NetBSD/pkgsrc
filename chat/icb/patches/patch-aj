@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-aj,v 1.4 2013/01/11 13:24:32 joerg Exp $
 
---- icb/oset.c.orig	1995-02-24 16:20:24.000000000 -0500
-+++ icb/oset.c	2008-12-16 20:18:00.000000000 -0500
-@@ -39,6 +39,7 @@
+--- icb/oset.c.orig	1995-02-24 21:20:24.000000000 +0000
++++ icb/oset.c
+@@ -39,6 +39,7 @@ VARIABLE vars[] = {
  	{ "pagesize",	V_INT,		(char *)&gv.pagesize },
  	{ "pauseonshell",	V_BOOLEAN,	(char *)&gv.pauseonshell },
  	{ "personalto", V_STRING,	(char *)&gv.personalto },
@@ -10,7 +10,16 @@ $NetBSD: patch-aj,v 1.3 2008/12/17 02:19:59 christos Exp $
  	{ "restricted",	V_BOOLEAN,	(char *)&gv.restricted },
  	{ "tabreply",	V_BOOLEAN,	(char *)&gv.tabreply },
  	{ "timedisplay",	V_STRING,	(char *)&gv.timedisplay },
-@@ -140,7 +141,7 @@
+@@ -70,7 +71,7 @@ TARGDEFS
+ 		if (gv.restricted)
+ 			TRETURNERR("oset: restricted mode can't be reset")
+ 		else {
+-			restrict();
++			restricted();
+ 			return(TCL_OK);
+ 		}
+ 	}
+@@ -140,7 +141,7 @@ char *s;
  {
  	int zero = 0, one = 1;
  	int tmp;
@@ -19,3 +28,12 @@ $NetBSD: patch-aj,v 1.3 2008/12/17 02:19:59 christos Exp $
  
  	switch(type) {
  	case V_CHAR:
+@@ -312,7 +313,7 @@ varsanity()
+ 		
+ }
+ 
+-restrict()
++restricted()
+ {
+ 	gv.restricted = 1;
+ 	tclrestrict();

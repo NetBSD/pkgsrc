@@ -1,10 +1,14 @@
-$NetBSD: patch-ah,v 1.3 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-ah,v 1.4 2013/01/11 13:24:32 joerg Exp $
 
---- icb/history.c.orig	1995-02-24 16:20:23.000000000 -0500
-+++ icb/history.c	2008-12-16 20:18:00.000000000 -0500
-@@ -19,7 +19,6 @@
- histput(nick)
- char *nick;
+--- icb/history.c.orig	1995-02-24 21:20:23.000000000 +0000
++++ icb/history.c
+@@ -16,10 +16,8 @@ static STRLIST *hp = (STRLIST *) 0;	/* u
+ /* add a username to the list */
+ /* called whenever a user sends a personal message to another */
+ 
+-histput(nick)
+-char *nick;
++void histput(char *nick)
  {
 -	char *malloc();
  	STRLIST *sp;

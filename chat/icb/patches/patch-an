@@ -1,10 +1,15 @@
-$NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-an,v 1.5 2013/01/11 13:24:32 joerg Exp $
 
-$NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
-
---- readline/readline.c.orig	1995-02-24 16:20:03.000000000 -0500
-+++ readline/readline.c	2006-05-15 10:41:51.000000000 -0400
-@@ -43,12 +43,18 @@
+--- readline/readline.c.orig	1995-02-24 21:20:03.000000000 +0000
++++ readline/readline.c
+@@ -38,17 +38,25 @@ static char *xmalloc (), *xrealloc ();
+ #  endif
+ #endif
+ 
++#include <unistd.h>
++#include <termcap.h>
+ #include <stdio.h>
+ #include <sys/types.h>
  #include <fcntl.h>
  #include <sys/file.h>
  #include <signal.h>
@@ -23,7 +28,7 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  #define HAVE_BSD_SIGNALS
  /* #define USE_XON_XOFF */
  
-@@ -80,6 +86,10 @@
+@@ -80,6 +88,10 @@ static char *xmalloc (), *xrealloc ();
  #  if !defined (O_NDELAY)
  #    define O_NDELAY O_NONBLOCK	/* Posix-style non-blocking i/o */
  #  endif /* O_NDELAY */
@@ -34,7 +39,7 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  #endif /* _POSIX_VERSION */
  
  /* Other (BSD) machines use sgtty. */
-@@ -104,7 +114,6 @@
+@@ -104,7 +116,6 @@ static char *xmalloc (), *xrealloc ();
  #endif /* !NEW_TTY_DRIVER && !_POSIX_VDISABLE */
  
  #include <errno.h>
@@ -42,7 +47,7 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  
  #include <setjmp.h>
  #if defined (SHELL)
-@@ -133,7 +142,7 @@
+@@ -133,7 +144,7 @@ struct passwd *getpwuid (), *getpwent ()
  #  endif /* USGr3 */
  #endif /* USG && hpux */
  
@@ -51,7 +56,23 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  #  include <dirent.h>
  #  define direct dirent
  #  if defined (_POSIX_VERSION)
-@@ -280,7 +289,7 @@
+@@ -204,10 +215,13 @@ extern char *index ();
+ extern char *getenv ();
+ extern char *tilde_expand ();
+ 
+-static update_line ();
++static void update_line (char *, char *, int);
+ static void output_character_function ();
+-static delete_chars ();
++static void delete_chars (int);
+ static insert_some_chars ();
++static void move_vert (int to);
++static void rl_digit_loop (void);
++static void free_history_entry(HIST_ENTRY *entry);
+ 
+ #if defined (VOID_SIGHANDLER)
+ #  define sighandler void
+@@ -280,7 +294,7 @@ static jmp_buf readline_top_level;
  static FILE *in_stream, *out_stream;
  
  /* The names of the streams that we do input and output to. */
@@ -60,7 +81,74 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  
  /* Non-zero means echo characters as they are read. */
  int readline_echoing_p = 1;
-@@ -1152,6 +1161,8 @@
+@@ -335,6 +349,8 @@ static int stricmp (), strnicmp ();
+ /* Non-zero means to save keys that we dispatch on in a kbd macro. */
+ static int defining_kbd_macro = 0;
+ 
++static void init_terminal_io (char *terminal_name);
++
+ 
+ /* **************************************************************** */
+ /*								    */
+@@ -744,7 +760,7 @@ rl_unget_char (key)
+ 
+ /* If a character is available to be read, then read it
+    and stuff it into IBUFFER.  Otherwise, just return. */
+-rl_gather_tyi ()
++static void rl_gather_tyi (void)
+ {
+   int tty = fileno (in_stream);
+   register int tem, result = -1;
+@@ -861,7 +877,7 @@ rl_dispatch (key, map)
+ 	}
+       else
+ 	ding ();
+-      return;
++      return 0;
+     }
+ 
+   switch (map[key].type)
+@@ -876,7 +892,7 @@ rl_dispatch (key, map)
+ 	    if (func == rl_do_lowercase_version)
+ 	      {
+ 		rl_dispatch (to_lower (key), map);
+-		return;
++		return 0;
+ 	      }
+ 
+ 	    (*map[key].function)(rl_numeric_arg * rl_arg_sign, key);
+@@ -890,7 +906,7 @@ rl_dispatch (key, map)
+ 	else
+ 	  {
+ 	    rl_abort ();
+-	    return;
++	    return 0;
+ 	  }
+       }
+       break;
+@@ -907,7 +923,7 @@ rl_dispatch (key, map)
+       else
+ 	{
+ 	  rl_abort ();
+-	  return;
++	  return 0;
+ 	}
+       break;
+ 
+@@ -918,10 +934,11 @@ rl_dispatch (key, map)
+ 
+ 	  macro = savestring ((char *)map[key].function);
+ 	  with_macro_input (macro);
+-	  return;
++	  return 0;
+ 	}
+       break;
+     }
++  return 0;
+ }
+ 
+ 
+@@ -1152,6 +1169,8 @@ readline_initialize_everything ()
  {
    /* Find out if we are running in Emacs. */
    running_in_emacs = getenv ("EMACS");
@@ -69,7 +157,70 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  
    /* Allocate data structures. */
    if (!rl_line_buffer)
-@@ -2505,7 +2516,11 @@
+@@ -1320,7 +1339,7 @@ rl_universal_argument ()
+   rl_digit_loop ();
+ }
+ 
+-rl_digit_loop ()
++static void rl_digit_loop (void)
+ {
+   int key, c;
+   while (1)
+@@ -1450,7 +1469,7 @@ static void output_character_function ()
+ static int compare_strings ();
+ 
+ /* Basic redisplay algorithm. */
+-rl_redisplay ()
++void rl_redisplay (void)
+ {
+   register int in, out, c, linenum;
+   register char *line = invisible_line;
+@@ -1677,10 +1696,8 @@ new:	eddie> Oh, my little buggy says to 
+    no differences, as well as for end of line additions must be handeled.
+ 
+    Could be made even smarter, but this works well enough */
+-static
+-update_line (old, new, current_line)
+-     register char *old, *new;
+-     int current_line;
++static void
++update_line (char *old, char *new, int current_line)
+ {
+   register char *ofd, *ols, *oe, *nfd, *nls, *ne;
+   int lendiff, wsatend;
+@@ -1872,8 +1889,7 @@ move_cursor_relative (new, data)
+ }
+ 
+ /* PWP: move the cursor up or down. */
+-move_vert (to)
+-     int to;
++static void move_vert (int to)
+ {
+   void output_character_function ();
+   register int delta, i;
+@@ -2018,8 +2034,7 @@ rl_reset_terminal (terminal_name)
+   init_terminal_io (terminal_name);
+ }
+ 
+-init_terminal_io (terminal_name)
+-     char *terminal_name;
++static void init_terminal_io (char *terminal_name)
+ {
+   extern char *tgetstr ();
+   char *term, *buffer;
+@@ -2158,9 +2173,8 @@ output_some_chars (string, count)
+ }
+ 
+ /* Delete COUNT characters from the display line. */
+-static
+-delete_chars (count)
+-     int count;
++static void
++delete_chars (int count)
+ {
+   if (count > screenwidth)
+     return;
+@@ -2505,7 +2519,11 @@ rl_prep_terminal ()
  
    tio.c_lflag &= ~(ICANON | ECHO);
  
@@ -82,7 +233,7 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
      eof_char = otio.c_cc[VEOF];
  
  #if defined (USE_XON_XOFF)
-@@ -2637,7 +2652,7 @@
+@@ -2637,7 +2655,7 @@ alphabetic (c)
      return (1);
  
    if (allow_pathname_alphabetic_chars)
@@ -91,7 +242,263 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
    else
      return (0);
  }
-@@ -3570,7 +3585,7 @@
+@@ -2845,12 +2863,13 @@ rl_forward (count)
+ #endif /* VI_MODE */
+ 	  {
+ 	    ding ();
+-	    return;
++	    return 0;
+ 	  }
+ 	else
+ 	  rl_point++;
+ 	--count;
+       }
++  return 0;
+ }
+ 
+ /* Move backward COUNT characters. */
+@@ -2865,12 +2884,13 @@ rl_backward (count)
+ 	if (!rl_point)
+ 	  {
+ 	    ding ();
+-	    return;
++	    return 0;
+ 	  }
+ 	else
+ 	  --rl_point;
+ 	--count;
+       }
++  return 0;
+ }
+ 
+ /* Move to the beginning of the line. */
+@@ -2894,13 +2914,13 @@ rl_forward_word (count)
+   if (count < 0)
+     {
+       rl_backward_word (-count);
+-      return;
++      return 0;
+     }
+ 
+   while (count)
+     {
+       if (rl_point == rl_end)
+-	return;
++	return 0;
+ 
+       /* If we are not in a word, move forward until we are in one.
+ 	 Then, move forward until we hit a non-alphabetic character. */
+@@ -2913,7 +2933,7 @@ rl_forward_word (count)
+ 	      if (alphabetic (c)) break;
+ 	    }
+ 	}
+-      if (rl_point == rl_end) return;
++      if (rl_point == rl_end) return 0;
+       while (++rl_point < rl_end)
+ 	{
+ 	  c = the_line[rl_point];
+@@ -2921,6 +2941,7 @@ rl_forward_word (count)
+ 	}
+       --count;
+     }
++    return 0;
+ }
+ 
+ /* Move backward a word.  We do what Emacs does. */
+@@ -2932,13 +2953,13 @@ rl_backward_word (count)
+   if (count < 0)
+     {
+       rl_forward_word (-count);
+-      return;
++      return 0;
+     }
+ 
+   while (count)
+     {
+       if (!rl_point)
+-	return;
++	return 0;
+ 
+       /* Like rl_forward_word (), except that we look at the characters
+ 	 just before point. */
+@@ -2962,6 +2983,7 @@ rl_backward_word (count)
+ 	}
+       --count;
+     }
++    return 0;
+ }
+ 
+ /* Clear the current line.  Numeric argument to C-l does this. */
+@@ -2990,7 +3012,7 @@ rl_clear_screen ()
+   if (rl_explicit_arg)
+     {
+       rl_refresh_line ();
+-      return;
++      return 0;
+     }
+ 
+   if (term_clrpag)
+@@ -3000,6 +3022,7 @@ rl_clear_screen ()
+ 
+   rl_forced_update_display ();
+   rl_display_fixed = 1;
++  return 0;
+ }
+ 
+ rl_arrow_keys (count, c)
+@@ -3047,7 +3070,7 @@ rl_insert (count, c)
+   char *string;
+ 
+   if (count <= 0)
+-    return;
++    return 0;
+ 
+   /* If we can optimize, then do it.  But don't let people crash
+      readline because of extra large arguments. */
+@@ -3060,7 +3083,7 @@ rl_insert (count, c)
+ 
+       string[i] = '\0';
+       rl_insert_text (string);
+-      return;
++      return 0;
+     }
+ 
+   if (count > 1024)
+@@ -3079,7 +3102,7 @@ rl_insert (count, c)
+ 	  rl_insert_text (string);
+ 	  count -= decreaser;
+ 	}
+-      return;
++      return 0;
+     }
+ 
+   /* We are inserting a single character.
+@@ -3104,7 +3127,6 @@ rl_insert (count, c)
+ 
+       string[i] = '\0';
+       rl_insert_text (string);
+-      return;
+     }
+   else
+     {
+@@ -3115,6 +3137,7 @@ rl_insert (count, c)
+       string[0] = c;
+       rl_insert_text (string);
+     }
++  return 0;
+ }
+ 
+ /* Insert the next typed character verbatim. */
+@@ -3127,9 +3150,10 @@ rl_quoted_insert (count)
+   if (c==0x01)
+   {
+ 	printf("\007");
+-	return;
++	return 0;
+   }
+   rl_insert (count, c);
++  return 0;
+ }
+ 
+ /* Insert a tab character. */
+@@ -3196,14 +3220,14 @@ rl_rubout (count)
+   if (count < 0)
+     {
+       rl_delete (-count);
+-      return;
++      return 0;
+     }
+ 
+   if (!rl_point)
+     {
+       ding ();
+       last_command_was_kill++;
+-      return;
++      return 0;
+     }
+ 
+   if (count > 1)
+@@ -3228,6 +3252,7 @@ rl_rubout (count)
+ 	  rl_display_fixed++;
+ 	}
+     }
++    return 0;
+ }
+ 
+ /* Delete the character under the cursor.  Given a numeric argument,
+@@ -3238,13 +3263,13 @@ rl_delete (count, invoking_key)
+   if (count < 0)
+     {
+       rl_rubout (-count);
+-      return;
++      return 0;
+     }
+ 
+   if (rl_point == rl_end)
+     {
+       ding ();
+-      return;
++      return 0;
+     }
+ 
+   if (count > 1)
+@@ -3256,6 +3281,7 @@ rl_delete (count, invoking_key)
+     }
+   else
+     rl_delete_text (rl_point, rl_point + 1);
++  return 0;
+ }
+ 
+ 
+@@ -3412,7 +3438,7 @@ rl_transpose_words (count)
+   int w1_beg, w1_end, w2_beg, w2_end;
+   int orig_point = rl_point;
+ 
+-  if (!count) return;
++  if (!count) return 0;
+ 
+   /* Find the two words. */
+   rl_forward_word (count);
+@@ -3429,7 +3455,7 @@ rl_transpose_words (count)
+     {
+       ding ();
+       rl_point = orig_point;
+-      return;
++      return 0;
+     }
+ 
+   /* Get the text of the words. */
+@@ -3457,6 +3483,7 @@ rl_transpose_words (count)
+   /* I think that does it. */
+   rl_end_undo_group ();
+   free (word1); free (word2);
++  return 0;
+ }
+ 
+ /* Transpose the characters at point.  If point is at the end of the line,
+@@ -3465,11 +3492,11 @@ rl_transpose_chars (count)
+      int count;
+ {
+   if (!count)
+-    return;
++    return 0;
+ 
+   if (!rl_point || rl_end < 2) {
+     ding ();
+-    return;
++    return 0;
+   }
+ 
+   while (count)
+@@ -3499,6 +3526,7 @@ rl_transpose_chars (count)
+       else
+ 	count--;
+     }
++  return 0;
+ }
+ 
+ 
+@@ -3570,7 +3598,7 @@ Function *rl_completion_entry_function =
     If this function exists and returns NULL then call the value of
     rl_completion_entry_function to try to match, otherwise use the
     array of strings returned. */
@@ -100,7 +507,7 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  
  /* Local variable states what happened during the last completion attempt. */
  static int completion_changed_buffer = 0;
-@@ -3706,8 +3721,7 @@
+@@ -3706,8 +3734,7 @@ rl_complete_internal (what_to_do)
       variable rl_attempted_completion_function. */
    if (rl_attempted_completion_function)
      {
@@ -110,7 +517,7 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  
        if (matches)
  	{
-@@ -3760,8 +3774,7 @@
+@@ -3760,8 +3787,7 @@ rl_complete_internal (what_to_do)
  	  /* We have marked all the dead slots with (char *)-1.
  	     Copy all the non-dead entries into a new array. */
  	  {
@@ -120,3 +527,257 @@ $NetBSD: patch-an,v 1.4 2008/12/17 02:19:59 christos Exp $
  
  	    for (i = 1, j = 1; matches[i]; i++)
  	      {
+@@ -4236,7 +4262,7 @@ rl_revert_line ()
+ /* Do some undoing of things that were done. */
+ rl_undo_command (count)
+ {
+-  if (count < 0) return;	/* Nothing to do. */
++  if (count < 0) return 0;	/* Nothing to do. */
+ 
+   while (count)
+     {
+@@ -4250,6 +4276,7 @@ rl_undo_command (count)
+ 	  break;
+ 	}
+     }
++  return 0;
+ }
+ 
+ /* **************************************************************** */
+@@ -4277,8 +4304,7 @@ start_using_history ()
+ }
+ 
+ /* Free the contents (and containing structure) of a HIST_ENTRY. */
+-free_history_entry (entry)
+-     HIST_ENTRY *entry;
++static void free_history_entry(HIST_ENTRY *entry)
+ {
+   if (!entry) return;
+   if (entry->line)
+@@ -4362,11 +4388,11 @@ rl_get_next_history (count)
+   if (count < 0)
+     {
+       rl_get_previous_history (-count);
+-      return;
++      return 0;
+     }
+ 
+   if (!count)
+-    return;
++    return 0;
+ 
+   maybe_replace_line ();
+ 
+@@ -4397,6 +4423,7 @@ rl_get_next_history (count)
+ 	rl_point = 0;
+ #endif /* VI_MODE */
+     }
++  return 0;
+ }
+ 
+ /* Get the previous item out of our interactive history, making it the current
+@@ -4410,11 +4437,11 @@ rl_get_previous_history (count)
+   if (count < 0)
+     {
+       rl_get_next_history (-count);
+-      return;
++      return 0;
+     }
+ 
+   if (!count)
+-    return;
++    return 0;
+ 
+   /* If we don't have a line saved, then save this one. */
+   maybe_save_line ();
+@@ -4457,6 +4484,7 @@ rl_get_previous_history (count)
+ 	rl_point = 0;
+ #endif /* VI_MODE */
+     }
++  return 0;
+ }
+ 
+ 
+@@ -4643,7 +4671,7 @@ rl_search_history (direction, invoking_k
+ 	  rl_point = orig_point;
+ 	  rl_end = strlen (the_line);
+ 	  rl_clear_message ();
+-	  return;
++	  return 0;
+ 
+ 	default:
+ 	  if (c < 32 || c > 126)
+@@ -4779,6 +4807,7 @@ rl_search_history (direction, invoking_k
+     rl_point = index;
+     rl_clear_message ();
+   }
++  return 0;
+ }
+ 
+ /* Make C be the next command to be executed. */
+@@ -4831,7 +4860,7 @@ rl_kill_text (from, to)
+     {
+       free (text);
+       last_command_was_kill++;
+-      return;
++      return 0;
+     }
+ 
+   /* Delete the copied text from the line. */
+@@ -4902,6 +4931,7 @@ rl_kill_text (from, to)
+     }
+   rl_kill_index = slot;
+   last_command_was_kill++;
++  return 0;
+ }
+ 
+ /* Now REMEMBER!  In order to do prepending or appending correctly, kill
+@@ -5039,14 +5069,14 @@ rl_yank_nth_arg (count, ignore)
+   else
+     {
+       ding ();
+-      return;
++      return 0;
+     }
+ 
+   arg = history_arg_extract (count, count, entry->line);
+   if (!arg || !*arg)
+     {
+       ding ();
+-      return;
++      return 0;
+     }
+ 
+   rl_begin_undo_group ();
+@@ -5065,6 +5095,7 @@ rl_yank_nth_arg (count, ignore)
+   free (arg);
+ 
+   rl_end_undo_group ();
++  return 0;
+ }
+ 
+ /* How to toggle back and forth between editing modes. */
+@@ -5417,9 +5448,10 @@ rl_macro_bind (keyseq, macro, map)
+   if (rl_translate_keyseq (macro, macro_keys, &macro_keys_len))
+     {
+       free (macro_keys);
+-      return;
++      return 0;
+     }
+   rl_generic_bind (ISMACR, keyseq, macro_keys, map);
++  return 0;
+ }
+ 
+ /* Bind the key sequence represented by the string KEYSEQ to
+@@ -5441,7 +5473,7 @@ rl_generic_bind (type, keyseq, data, map
+     {
+       if (type == ISMACR)
+ 	free (data);
+-      return;
++      return 0;
+     }
+ 
+   keys = (char *)alloca (1 + (2 * strlen (keyseq)));
+@@ -5450,7 +5482,7 @@ rl_generic_bind (type, keyseq, data, map
+      of characters.  Stuff the characters into ARRAY, and the
+      length of ARRAY into LENGTH. */
+   if (rl_translate_keyseq (keyseq, keys, &keys_len))
+-    return;
++    return 0;
+ 
+   /* Bind keys, making new keymaps as necessary. */
+   for (i = 0; i < keys_len; i++)
+@@ -5476,6 +5508,7 @@ rl_generic_bind (type, keyseq, data, map
+ 	  map[keys[i]].type = type;
+ 	}
+     }
++  return 0;
+ }
+ 
+ /* Translate the ASCII representation of SEQ, stuffing the
+@@ -5661,7 +5694,7 @@ parser_if (args)
+   /* If parsing is turned off, then nothing can turn it back on except
+      for finding the matching endif.  In that case, return right now. */
+   if (parsing_conditionalized_out)
+-    return;
++    return 0;
+ 
+   /* Isolate first argument. */
+   for (i = 0; args[i] && !whitespace (args[i]); i++);
+@@ -5713,6 +5746,7 @@ parser_if (args)
+     parsing_conditionalized_out = 0;
+   else
+     parsing_conditionalized_out = 1;
++  return 0;
+ }
+ 
+ /* Invert the current parser state if there is anything on the stack. */
+@@ -5724,17 +5758,18 @@ parser_else (args)
+   if (!if_stack_depth)
+     {
+       /* Error message? */
+-      return;
++      return 0;
+     }
+ 
+   /* Check the previous (n - 1) levels of the stack to make sure that
+      we haven't previously turned off parsing. */
+   for (i = 0; i < if_stack_depth - 1; i++)
+     if (if_stack[i] == 1)
+-      return;
++      return 0;
+ 
+   /* Invert the state of parsing if at top level. */
+   parsing_conditionalized_out = !parsing_conditionalized_out;
++  return 0;
+ }
+ 
+ /* Terminate a conditional, popping the value of
+@@ -5819,18 +5854,18 @@ rl_parse_and_bind (string)
+     string++;
+ 
+   if (!string || !*string || *string == '#')
+-    return;
++    return 0;
+ 
+   /* If this is a parser directive, act on it. */
+   if (*string == '$')
+     {
+       handle_parser_directive (&string[1]);
+-      return;
++      return 0;
+     }
+ 
+   /* If we are supposed to be skipping parsing right now, then do it. */
+   if (parsing_conditionalized_out)
+-    return;
++    return 0;
+ 
+   i = 0;
+   /* If this keyname is a complex key expression surrounded by quotes,
+@@ -5868,7 +5903,7 @@ rl_parse_and_bind (string)
+       while (*value && whitespace (*value)) value++;
+ 
+       rl_variable_bind (var, value);
+-      return;
++      return 0;
+     }
+ 
+   /* Skip any whitespace between keyname and funname. */
+@@ -5928,7 +5963,7 @@ rl_parse_and_bind (string)
+       else
+ 	rl_set_key (seq, rl_named_function (funname), keymap);
+ 
+-      return;
++      return 0;
+     }
+ 
+   /* Get the actual character we want to deal with. */
+@@ -5972,6 +6007,7 @@ rl_parse_and_bind (string)
+ #endif /* PREFIX_META_HACK */
+   else
+     rl_bind_key (key, rl_named_function (funname));
++  return 0;
+ }
+ 
+ rl_variable_bind (name, value)

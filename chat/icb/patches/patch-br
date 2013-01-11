@@ -1,6 +1,6 @@
-$NetBSD: patch-br,v 1.1 2009/08/06 08:24:29 plunky Exp $
+$NetBSD: patch-br,v 1.2 2013/01/11 13:24:32 joerg Exp $
 
---- icb/getline.c.orig	2009-08-06 09:17:50.000000000 +0100
+--- icb/getline.c.orig	1995-02-24 21:20:22.000000000 +0000
 +++ icb/getline.c
 @@ -11,7 +11,7 @@ static char *line_read = (char *)NULL;
  
@@ -11,3 +11,71 @@ $NetBSD: patch-br,v 1.1 2009/08/06 08:24:29 plunky Exp $
  char *prompt;
  int expand;
  {
+@@ -45,9 +45,7 @@ int expand;
+  *  keystroke handler for tab key
+  */
+ int
+-handletab(count, c)
+-int count;
+-char c;
++handletab(int count, int c)
+ {
+ 	char mpref[256];
+ 	int ppoint;
+@@ -62,7 +60,7 @@ char c;
+ 	/* make sure the history's not empty - punt if it is */
+ 	if (histcount()==0)
+ 	{
+-		return;
++		return 0;
+ 	}
+ 
+ 	/* remember cursor location */
+@@ -86,7 +84,7 @@ char c;
+ 		}
+ 		else
+ 			printf("\007");
+-		return;
++		return 0;
+ 	}
+ 	
+ 	/* starts with command character */
+@@ -128,7 +126,7 @@ char c;
+ 		}
+ 		else
+ 			printf("\007");
+-		return;
++		return 0;
+ 	}
+ 	
+ 	/* case 4 - nickname completion */
+@@ -137,7 +135,7 @@ char c;
+ 		if (word2len > MAX_NICKLEN)
+ 		{
+ 			printf("\007");
+-			return;
++			return 0;
+ 		}
+ 		
+ 		if (rl_line_buffer[word2]=='@')
+@@ -164,7 +162,7 @@ char c;
+ 		}
+ 		else
+ 			printf("\007");
+-		return;
++		return 0;
+ 	}
+ 	
+ 	/* case 5 - replace nickname */
+@@ -191,9 +189,10 @@ char c;
+ 		}
+ 		else
+ 			printf("\007");
+-		return;
++		return 0;
+ 	}
+ 		
+ 	/* anything else */
+ 	printf("\007");
++	return 0;
+ }

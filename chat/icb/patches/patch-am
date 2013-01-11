@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.3 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-am,v 1.4 2013/01/11 13:24:32 joerg Exp $
 
---- icb/readlineinit.c.orig	1995-02-24 16:20:25.000000000 -0500
-+++ icb/readlineinit.c	2008-12-16 20:18:01.000000000 -0500
+--- icb/readlineinit.c.orig	1995-02-24 21:20:25.000000000 +0000
++++ icb/readlineinit.c
 @@ -1,4 +1,6 @@
  #include <readline.h>
 +#include <stdlib.h>
@@ -9,7 +9,16 @@ $NetBSD: patch-am,v 1.3 2008/12/17 02:19:59 christos Exp $
  #include "icb.h"
  #include "externs.h"
  
-@@ -21,12 +23,12 @@
+@@ -9,7 +11,7 @@
+ readlineinit()
+ {
+ char *editor;
+-int handletab();
++int handletab(int, int);
+ 
+ /*
+  * bind the tab key
+@@ -21,12 +23,12 @@ rl_bind_key_in_map('\t', handletab, emac
  rl_vi_editing_mode(); /* default to vi, dammit. */
  gv.editmode = "vi";
  
