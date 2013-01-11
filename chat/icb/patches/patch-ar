@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-ar,v 1.3 2013/01/11 13:24:32 joerg Exp $
 
---- icb/serverlist.c.orig	1995-02-24 16:20:29.000000000 -0500
-+++ icb/serverlist.c	2008-12-16 20:18:00.000000000 -0500
+--- icb/serverlist.c.orig	1995-02-24 21:20:29.000000000 +0000
++++ icb/serverlist.c
 @@ -1,4 +1,6 @@
  #include <stdio.h>
 +#include <stdlib.h>
@@ -9,7 +9,7 @@ $NetBSD: patch-ar,v 1.2 2008/12/17 02:19:59 christos Exp $
  #include <sys/types.h>
  #include <sys/stat.h>
  #include "icb.h"
-@@ -14,15 +16,14 @@
+@@ -14,15 +16,14 @@ static FILE *serverfile = NULL;
  FILE *openserverfile()
  {
  	struct stat statbuf;
@@ -28,7 +28,7 @@ $NetBSD: patch-ar,v 1.2 2008/12/17 02:19:59 christos Exp $
  	getwd(pwd);
  #else /* SYSV */
  	getcwd(pwd, MAXPATHLEN+1);
-@@ -30,11 +31,20 @@
+@@ -30,11 +31,20 @@ FILE *openserverfile()
  #ifdef sgi
  #define SYSV
  #endif
