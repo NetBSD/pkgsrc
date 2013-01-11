@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2006/11/10 21:32:35 schwarz Exp $
+$NetBSD: distinfo,v 1.3 2013/01/11 00:01:33 joerg Exp $
 
 SHA1 (sipsak-0.9.6-1.tar.gz) = 6d2fd2c90ea04be749e48927b3e7fc08c52166b6
 RMD160 (sipsak-0.9.6-1.tar.gz) = d5949e4309bda732b5aee462a4488bb9d850fe5a
 Size (sipsak-0.9.6-1.tar.gz) = 158776 bytes
 SHA1 (patch-aa) = e4df10b6d074acd1f3d925f48849348516533814
+SHA1 (patch-header__f.c) = 5f1574ff7a595631b26cfdf6dcb3e7aae81338f7
+SHA1 (patch-header__f.h) = 728f670573b42d51744db9be6701f782653f0a93
