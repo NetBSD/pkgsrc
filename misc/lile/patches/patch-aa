@@ -1,16 +1,18 @@
-$NetBSD: patch-aa,v 1.6 2005/11/10 18:03:21 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2013/01/11 23:28:36 joerg Exp $
 
 --- ile.c.orig	1993-06-09 03:12:33.000000000 +0000
 +++ ile.c
-@@ -2,6 +2,7 @@
+@@ -2,6 +2,9 @@
  /* Copyright message is near the bottom of the file */
  
  #include "config.h"
 +#include <signal.h>
++#include <ctype.h>
++#include <unistd.h>
  
  /* #define DEBUG /**/
  
-@@ -43,7 +44,7 @@ void setup_action_table();
+@@ -43,7 +46,7 @@ void setup_action_table();
  #include <stdio.h>
  #include <fcntl.h>
  #include <sgtty.h>
@@ -19,7 +21,7 @@ $NetBSD: patch-aa,v 1.6 2005/11/10 18:03:21 joerg Exp $
  #include <string.h>
  #include <strings.h>
  #include <pwd.h>
-@@ -51,7 +52,7 @@ void setup_action_table();
+@@ -51,7 +54,7 @@ void setup_action_table();
  #include <errno.h>
  #include <sys/ioctl.h>
  #include <sys/types.h>
@@ -28,7 +30,7 @@ $NetBSD: patch-aa,v 1.6 2005/11/10 18:03:21 joerg Exp $
  #include <sys/file.h>
  #include <sys/time.h>
  #include <sys/wait.h>
-@@ -61,11 +62,6 @@ void setup_action_table();
+@@ -61,11 +64,6 @@ void setup_action_table();
  */
  
  /* Definitions of system stuff.  */
@@ -40,3 +42,12 @@ $NetBSD: patch-aa,v 1.6 2005/11/10 18:03:21 joerg Exp $
  time_t time();
  
  #ifndef TRUE
+@@ -312,7 +310,7 @@ void handle_child() {
+   getpty opens a pty, storing file descriptors in pty and tty.
+   It trys pairs in order until it finds a pair that is not in use.
+ */
+-getpty(pty, tty) int *pty; int *tty; {
++static void getpty(pty, tty) int *pty; int *tty; {
+     int devindex;
+     int letter;
+ 
