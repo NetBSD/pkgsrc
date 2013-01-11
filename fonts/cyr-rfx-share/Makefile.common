@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2012/10/03 18:28:18 asau Exp $
+# $NetBSD: Makefile.common,v 1.15 2013/01/11 23:25:48 joerg Exp $
 
 # used by fonts/cyr-rfx-bulgarian-mik/Makefile
 # used by fonts/cyr-rfx-ibm-cp866/Makefile
@@ -30,7 +30,7 @@ USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_TOOLS+=	gtar
+USE_TOOLS+=	tar gzcat
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/75dpi
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/misc
@@ -42,7 +42,7 @@ INSTALLATION_DIRS=	lib/X11/fonts/local
 
 do-install:
 	cd ${DESTDIR}${PREFIX}/lib/X11/fonts/local && \
-	${GTAR} xzf ${_DISTDIR}/${DISTFILES} \
-		${CYR_RFX_ENCODING}/misc ${CYR_RFX_ENCODING}/75dpi
+	${GZCAT} ${_DISTDIR}/${DISTFILES} | \
+	${TAR} xf - ${CYR_RFX_ENCODING}/misc ${CYR_RFX_ENCODING}/75dpi
 
 .include "../../mk/bsd.pkg.mk"
