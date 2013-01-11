@@ -1,8 +1,17 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2013/01/11 23:36:16 joerg Exp $
 
---- GetButton.c.orig	Mon Oct 24 19:08:17 1988
-+++ GetButton.c	Wed Dec 22 13:59:28 1999
-@@ -255,7 +255,8 @@
+--- GetButton.c.orig	1988-10-24 10:08:17.000000000 +0000
++++ GetButton.c
+@@ -59,6 +59,8 @@ static char *sccsid = "@(#)GetButton.c	3
+ 
+ #define ICONSTR	(icon_str ? icon_str : "")
+ 
++static void CheckMap(Window window);
++
+ Bool GetButton(button_event)
+     XEvent *button_event;	/* Button event packet. */
+ {
+@@ -255,7 +257,8 @@ Bool GetButton(button_event)
      /* 
       * We convert the key pressed event to ascii.
       */
@@ -12,3 +21,15 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  
      /*
       * If kbd_str is a "non-string", then don't do anything.
+@@ -361,8 +364,9 @@ Bool GetButton(button_event)
+     return(FALSE);
+ }
+ 
+-CheckMap(window)
+-Window window;
++void AskUser(Display *dpy, int scr, Window window, int *x, int *y, int *width, int *height, XSizeHints *hints);
++
++static void CheckMap(Window window)
+ {
+     XSizeHints sizehints;
+     XWMHints *wmhints;
