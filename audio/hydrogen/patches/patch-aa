@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2012/11/13 23:26:23 mrg Exp $
+$NetBSD: patch-aa,v 1.5 2013/01/11 13:23:33 joerg Exp $
 
---- Sconstruct.orig	2012-02-19 13:54:05.000000000 -0800
-+++ Sconstruct	2012-11-13 13:39:48.000000000 -0800
-@@ -47,7 +47,7 @@
+--- Sconstruct.orig	2012-02-19 21:54:05.000000000 +0000
++++ Sconstruct
+@@ -47,7 +47,7 @@ def get_platform_flags( opts ):
  
  	env = Environment( options = opts )
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2012/11/13 23:26:23 mrg Exp $
  		if str(env['debug']) == "1":
  			cppflags += ['-Wall',  '-g2', '-ggdb', '-O0'] 
  			for flag in env["optflags"].split(" "):
-@@ -75,6 +75,12 @@
+@@ -75,6 +75,12 @@ def get_platform_flags( opts ):
  		    if str(env['bundle']) == "1": cppflags.append('-DBUNDLE_SUPPORT')
  
  		cppflags.append('-DLADSPA_SUPPORT')
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.4 2012/11/13 23:26:23 mrg Exp $
  		
  
  	if str(env['gui']) == "0": cppflags.append('-DNO_GUI_SUPPORT')
-@@ -96,6 +102,10 @@
+@@ -96,6 +102,10 @@ def get_platform_flags( opts ):
  		ldflags.append('-lasound')
  	#	ldflags.append('-lrubberband')
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.4 2012/11/13 23:26:23 mrg Exp $
  	elif sys.platform == "win32":
  		includes.append( '3rdparty\libsndfile-1_0_17' )
  		includes.append( 'build\pthreads\include' )
-@@ -283,6 +293,9 @@
+@@ -283,6 +293,9 @@ def get_hydrogen_gui( lib_hydrogen , opt
  		env.Append( LIBS = ["z"] )
  		env.Append( LIBS = ["pthread"] )
  
@@ -45,7 +45,16 @@ $NetBSD: patch-aa,v 1.4 2012/11/13 23:26:23 mrg Exp $
  	if sys.platform == "darwin" and str(env['coreaudio']) == "1":
  		env.Append( LINKFLAGS = ['-framework','ApplicationServices'])
  		env.Append( LINKFLAGS = ['-framework','AudioUnit'])
-@@ -380,7 +393,7 @@
+@@ -302,7 +315,7 @@ def get_hydrogen_gui( lib_hydrogen , opt
+ 	env.Alias(target="install", source=env.Install(dir= env['DESTDIR'] + env['prefix'] + '/share/hydrogen/data', source="./data/img"))
+ 
+ 	#add every img in ./data/img to the install list. 
+-	os.path.walk("./data/img/",install_images,env) 
++	#os.path.walk("./data/img/",install_images,env) 
+ 
+ 
+ 	env.Alias(target="install", source=env.Install(dir= env['DESTDIR'] + env['prefix'] + '/share/hydrogen/data', source="./data/drumkits"))
+@@ -380,7 +393,7 @@ else:
  
  includes, a , b = get_platform_flags( opts )
  
