@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2013/01/11 23:36:16 joerg Exp $
 
---- uwm.c.orig	Sun Oct 23 22:21:55 1988
-+++ uwm.c	Wed Jan 19 08:20:54 2000
-@@ -41,9 +41,22 @@ char *ProgramName;
+--- uwm.c.orig	1988-10-23 13:21:55.000000000 +0000
++++ uwm.c
+@@ -41,9 +41,25 @@ char *ProgramName;
  
  #include "uwm.h"
  #include <ctype.h>
@@ -20,13 +20,16 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
 +#ifdef X_NOT_STDC_ENV
 +char *malloc();
 +#endif
++
++static void SetEnvironment (void);
++void LoadXDefaults (void);
  
  #ifdef PROFIL
 -#include <signal.h>
  /*
   * Dummy handler for profiling.
   */
-@@ -53,6 +66,27 @@ ptrap()
+@@ -53,6 +69,27 @@ ptrap()
  }
  #endif
  
@@ -54,7 +57,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
  #define gray_width 16
  #define gray_height 16
  static char gray_bits[] = {
-@@ -103,7 +137,6 @@ char **environ;
+@@ -103,7 +140,6 @@ char **environ;
      GC gc;			/* graphics context for gray background */
      XImage grayimage;		/* for gray background */
      XGCValues xgc;		/* to create font GCs */
@@ -62,7 +65,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
      Bool fallbackMFont = False,	/* using default GC font for menus, */
           fallbackPFont = False,	/* popups, */
           fallbackIFont = False;	/* icons */
-@@ -115,6 +148,10 @@ char **environ;
+@@ -115,6 +151,10 @@ char **environ;
  #ifdef PROFIL
      signal(SIGTERM, ptrap);
  #endif
@@ -73,7 +76,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
  
      /*
       * Set up internal defaults.
-@@ -369,7 +406,7 @@ char **environ;
+@@ -369,7 +409,7 @@ char **environ;
      if (IFontInfo == NULL) {
          fprintf(stderr, "uwm: Unable to open icon font '%s', using server default.\n",
                  IFontName);
@@ -82,7 +85,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
  	fallbackIFont = True;
      }
      PFontInfo = XLoadQueryFont(dpy, PFontName);
-@@ -379,7 +416,7 @@ char **environ;
+@@ -379,7 +419,7 @@ char **environ;
  	if (fallbackIFont)
  	    PFontInfo = IFontInfo;
  	else
@@ -91,7 +94,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
  	fallbackPFont = True;
      }
      MFontInfo = XLoadQueryFont(dpy, MFontName);
-@@ -389,7 +426,7 @@ char **environ;
+@@ -389,7 +429,7 @@ char **environ;
  	if (fallbackIFont || fallbackPFont)
  	    MFontInfo = fallbackPFont ? PFontInfo : IFontInfo;
  	else
@@ -100,7 +103,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
  	fallbackMFont = True;
      }
  
-@@ -685,7 +722,11 @@ char **environ;
+@@ -685,7 +725,11 @@ char **environ;
   */
  InitBindings()
  {
@@ -112,7 +115,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
      char *tempfile;		/* Temporary filename. */
      register FILE *fp;		/* Temporary file pointer. */
      register char **ptr;	/* Default bindings string array pointer. */
-@@ -699,15 +740,26 @@ InitBindings()
+@@ -699,15 +743,26 @@ InitBindings()
  	exit (1);
      }
      strcpy (tempfile, TEMPFILE);
@@ -139,7 +142,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
      fclose(fp);
  
      /*
-@@ -717,6 +769,7 @@ InitBindings()
+@@ -717,6 +772,7 @@ InitBindings()
          perror("uwm: cannot open temp file");
          exit(1);
      }
@@ -147,3 +150,21 @@ $NetBSD: patch-ab,v 1.2 2005/12/06 15:57:22 joerg Exp $
      Lineno = 1;
      yyparse();
      fclose(yyin);
+@@ -998,7 +1054,7 @@ static int parse_boolean (s)
+     return -1;
+ }
+ 
+-LoadXDefaults ()
++void LoadXDefaults (void)
+ {
+     Keyword *k;
+     char *option;
+@@ -1068,7 +1124,7 @@ char **newenviron;
+  * make a new copy of environment that has room for DISPLAY
+  */
+ 
+-SetEnvironment ()
++static void SetEnvironment (void)
+ {
+     int nenvvars;
+     char **newPtr, **oldPtr;
