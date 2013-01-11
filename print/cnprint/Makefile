@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 13:45:36 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/01/11 23:29:39 joerg Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -27,7 +27,7 @@ HOMEPAGE=		http://www.neurophys.wisc.edu/~cai/software/index.html
 COMMENT=		Print & convert CJK style text to PostScript
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
-USE_TOOLS+=		gtar gunzip
+USE_TOOLS+=		tar gunzip gzcat
 INSTALLATION_DIRS=	bin share/cnprint
 
 do-extract:
@@ -35,14 +35,14 @@ do-extract:
 .for i in ${DISTFILES}
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${i} ${WRKSRC}
 .endfor
-	cd ${WRKSRC} ; \
-	${GTAR} plzvxf hbf.tar.gz ; ${MV} hbf/* . ; \
-	${RM} -fr hbf ; \
-	${GUNZIP_CMD} *.gz || ${TRUE}
+	cd ${WRKSRC} && (${GZCAT} hbf.tar.gz || true) | ${TAR} xf -
+	${MV} ${WRKSRC}/hbf/* ${WRKSRC}/
+	${RM} -fr ${WRKSRC}/hbf
+	${GUNZIP_CMD} ${WRKSRC}/*.gz || true
 
 do-build:
-	cd ${WRKSRC} ; \
-	${CC} cnprint330b.c ttfb330b.c -o cnprint -DPREFIX=\"${PREFIX}\" ; \
+	cd ${WRKSRC} && \
+	${CC} ${CFLAGS} cnprint330b.c ttfb330b.c -o cnprint -DPREFIX=\"${PREFIX}\" && \
 	${SED} \
 		-e 's/\(DEFAULT_JIS_FONT\):.*$$/\1: kanji48.hbf/' \
 		>cnprint.cmd <cnprint33.cmd
