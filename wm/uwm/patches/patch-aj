@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2005/12/06 15:57:22 joerg Exp $
+$NetBSD: patch-aj,v 1.3 2013/01/11 23:36:16 joerg Exp $
 
---- Menu.c.orig	Sat Oct  1 18:41:13 1988
-+++ Menu.c	Mon Jan 17 22:09:10 2000
-@@ -72,6 +72,10 @@ Bool alternateGC = True;	/* true if only
+--- Menu.c.orig	1988-10-01 09:41:13.000000000 +0000
++++ Menu.c
+@@ -72,6 +72,12 @@ Bool alternateGC = True;	/* true if only
  #define vfork() fork()
  #endif
  
@@ -10,10 +10,12 @@ $NetBSD: patch-aj,v 1.2 2005/12/06 15:57:22 joerg Exp $
 +char *malloc();
 +#endif
 +
++static void AdjustMaxColors(int pixel);
++
  /* the following procedure is a copy of the implementation of system, 
   * modified to reset the handling of SIGINT, SIGQUIT, and SIGHUP before
   * exec-ing
-@@ -84,6 +88,14 @@ char *s;
+@@ -84,6 +90,14 @@ char *s;
  	char **oldenviron;
  	extern char **environ, **newenviron;
  
@@ -28,7 +30,7 @@ $NetBSD: patch-aj,v 1.2 2005/12/06 15:57:22 joerg Exp $
  	oldenviron = environ;
  	environ = newenviron;
  	if ((pid = vfork()) == 0) {
-@@ -107,6 +119,9 @@ char *s;
+@@ -107,6 +121,9 @@ char *s;
  		status = -1;
  	signal(SIGINT, istat);
  	signal(SIGQUIT, qstat);
@@ -38,7 +40,7 @@ $NetBSD: patch-aj,v 1.2 2005/12/06 15:57:22 joerg Exp $
  	return(status);
  }
  
-@@ -129,7 +144,6 @@ MenuInfo *menu;
+@@ -129,7 +146,6 @@ MenuInfo *menu;
      char *hlname;			/* Pointer to hi-liter name. */
      char *strbuf;			/* String buffer for IsTextNL. */
      Bool checkMotion = TRUE;		/* To Restore Cursor Position */
@@ -46,3 +48,13 @@ $NetBSD: patch-aj,v 1.2 2005/12/06 15:57:22 joerg Exp $
      int funcbutton;			/* function button for window select */
  
      /*
+@@ -697,8 +713,7 @@ MenuInfo *menu;
+  * Decrement "MaxColors" if this pixel value has never been used in a
+  * menu before.
+  */
+-AdjustMaxColors(pixel)
+-int pixel;
++static void AdjustMaxColors(int pixel)
+ {
+     register MenuLink *mptr;
+     register MenuLine *lptr;
