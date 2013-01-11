@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2012/08/21 21:58:14 marino Exp $
+$NetBSD: patch-aa,v 1.7 2013/01/11 23:35:12 joerg Exp $
 
 libtcl85 is hard-coded in the patch, just like it's predecessor.
 
@@ -50,7 +50,7 @@ libtcl85 is hard-coded in the patch, just like it's predecessor.
 -${OBJS}:
 -	cd expat ; make CC=${CC} SHLIB_CFLAGS=${TCL_SHLIB_CFLAGS}
 +$(LIB):		tclexpat.o
-+	$(TCL_SHLIB_LD) -o ${LIB:.so=.la} ${OBJS:.o=.lo} tclexpat.lo -L${LOCALBASE}/lib -rpath ${PREFIX}/lib -lexpat -ltcl85 -module -avoid-version
++	$(TCL_SHLIB_LD) -o ${LIB:.so=.la} ${OBJS:.o=.lo} tclexpat.lo -L${LOCALBASE}/lib -rpath "$$(echo $(TCL_PACKAGE_PATH) | cut -f 1 -d :)" -Wl,-rpath,${PREFIX}/lib -lexpat -ltcl85 -module -avoid-version
  
  tclexpat.o:	tclexpat.c
 -	$(TCL_CC) $(CFLAGS) -c $(TCL_DEFS) $(TCL_SHLIB_CFLAGS) -I$(TCL_PREFIX)/include -Iexpat/xmlparse tclexpat.c
