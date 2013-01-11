@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2005/12/18 19:23:04 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2013/01/11 00:03:30 joerg Exp $
 
 --- tac_plus.h.orig	2000-06-18 17:26:54.000000000 +0000
 +++ tac_plus.h
-@@ -79,6 +79,7 @@
+@@ -74,11 +74,13 @@
+ /*
+  * System definitions. 
+  */
++#include <stdlib.h>
+ 
+ #ifdef NETBSD
  #define STDLIB_MALLOC
  #define NO_PWAGE
  #define CONST_SYSERRLIST
@@ -10,7 +16,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/18 19:23:04 joerg Exp $
  #define VOIDSIG
  #endif
  
-@@ -689,12 +690,13 @@ extern void parser_init();
+@@ -689,12 +691,13 @@ extern void parser_init();
  extern void set_expiration_status();
  
  /* miscellaneous */
@@ -25,3 +31,13 @@ $NetBSD: patch-ab,v 1.2 2005/12/18 19:23:04 joerg Exp $
  extern int sendauth_fn();
  extern int sendpass_fn();
  extern int enable_fn();
+@@ -734,3 +737,9 @@ extern struct timeval started_at;
+ extern char *logfile;
+ extern char *wtmpfile;
+ extern int wtmpfd;
++
++void dump_nas_pak(u_char *);
++void dump_tacacs_pak(u_char *pak);
++void tac_exit(int status);
++void send_error_reply(int type, char *msg);
++void loguser(struct acct_rec *rec);
