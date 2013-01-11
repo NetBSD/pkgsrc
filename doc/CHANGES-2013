@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.142 2013/01/11 13:33:22 taca Exp $
+$NetBSD: CHANGES-2013,v 1.143 2013/01/11 13:37:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -197,3 +197,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/x11-links to 0.72 [ryoon 2013-01-11]
 	Updated mail/milter-greylist to 4.4.2nb1 [tron 2013-01-11]
 	Updated www/squid31 to 3.1.23 [taca 2013-01-11]
+	Updated net/isc-dhcp4 to 4.2.5 [taca 2013-01-11]
+	Updated net/isc-dhclient4 to 4.2.5 [taca 2013-01-11]
+	Updated net/isc-dhcpd4 to 4.2.5 [taca 2013-01-11]
+	Updated net/isc-dhcrelay4 to 4.2.5 [taca 2013-01-11]
