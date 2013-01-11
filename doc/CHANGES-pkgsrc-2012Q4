@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.6 2013/01/09 10:14:36 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.7 2013/01/11 11:58:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -17,3 +17,7 @@ Pullup ticket #4002 - requested by spz
 security/gnupg: security update
 Pullup ticket #4005 - requested by marino
 x11/xfce4-terminal: bug fix patch
+Pullup ticket #4006 - requested by obache
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4007 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
