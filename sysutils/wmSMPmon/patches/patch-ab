@@ -1,14 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/11 23:31:15 joerg Exp $
 
---- wmSMPmon.c.orig	2003-03-10 13:50:11.000000000 +0100
-+++ wmSMPmon.c	2004-08-25 20:52:07.000000000 +0200
-@@ -9,5 +9,4 @@
+--- wmSMPmon.c.orig	2003-03-10 12:50:11.000000000 +0000
++++ wmSMPmon.c
+@@ -8,7 +8,6 @@ CONTRIBUTOR: Alain Schröder <alain@parka
+    				       This program is covered by GPL.
  *******************************************************************************/
  
 -#include	<linux/sys.h>
  #include 	<sys/param.h>
  #include 	<sys/types.h>
-@@ -20,5 +19,8 @@
+ #include 	<string.h>
+@@ -19,7 +18,13 @@ CONTRIBUTOR: Alain Schröder <alain@parka
+ #include 	"../wmgeneral/wmgeneral.h"
  #include 	"wmSMPmon_master.xpm"
  #include 	"wmSMPmon_mask.xbm"
 -#include	<sys/utsname.h>
@@ -16,9 +19,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
 +#include	<sys/sched.h>
 +#include	<sys/swap.h>
 +#include	<sys/sysctl.h>
++#ifdef __NetBSD__
++#include <sys/vmmeter.h>
++#endif
  
  #define		VERSION		"2.2"
-@@ -35,12 +37,73 @@
+ #define		T_DATA		255
+@@ -34,14 +39,75 @@ CONTRIBUTOR: Alain Schröder <alain@parka
+ 
  void usage(void) ;
  
 +int getCpuUsage() {
@@ -96,7 +104,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
 -
     unsigned int		t0[TAILLE_T],
        			t1[TAILLE_T],
-@@ -57,7 +120,5 @@
+                         tm[TAILLE_T],
+@@ -56,9 +122,7 @@ int main(int argc, char **argv)
+                         no_swap = FAUX,
                          draw_graph = FAUX ;
                          
 -   unsigned long	mem, prec_mem = 0, prec_swap = 0,
@@ -105,7 +115,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
 +   unsigned long	mem, prec_mem = 0, prec_swap = 0;
  
     register unsigned long	charge, total, cpu, i = 0 ;
-@@ -107,97 +168,25 @@
+    
+@@ -106,99 +170,27 @@ int main(int argc, char **argv)
+    {
        if(lecture)
        {
 -         i = open("/proc/stat", O_RDONLY);
@@ -224,7 +236,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
 +	}
           if(c2 > DIV2)
              draw_graph = VRAI ;
-@@ -210,10 +199,13 @@
+          if(draw_graph)
+@@ -209,12 +201,15 @@ int main(int argc, char **argv)
+                t1[i - 1] = t1[i] ;
                 tm[i - 1] = tm[i] ;
              }
 -            if((t0[TAILLE_T - 1] = cpu0t / c2) > HAUTEUR)
@@ -240,3 +254,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/01/12 11:52:10 agc Exp $
 +	    tm[TAILLE_T - 1] = cpu * HAUTEUR / 100;
              cpu0t = 0 ;
              cpu1t = 0 ;
+             switch(etat)
