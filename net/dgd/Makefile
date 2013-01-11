@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/03/17 21:45:30 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/11 23:29:05 joerg Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gtar
 WRKSRC=			${WRKDIR}/dgd
 BUILD_DIRS=		src
 
@@ -32,9 +31,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/a.out ${DESTDIR}${PREFIX}/libexec/dgd
 	cd ${WRKDIR}/dgd && \
 	${INSTALL_DATA} Copyright Credits README ${DESTDIR}${PREFIX}/share/doc/dgd
-	${GTAR} cCf ${WRKDIR}/dgd/doc - . | ${GTAR} xCf \
-		${DESTDIR}${PREFIX}/share/doc/dgd -
-	${GTAR} cCf ${WRKDIR}/dgd - mud | ${GTAR} xCf ${DESTDIR}${PREFIX}/libdata/dgd -
+	${TAR} -cf - -C ${WRKDIR}/dgd/doc . | \
+	    ${TAR} -xf - -C ${DESTDIR}${PREFIX}/share/doc/dgd
+	${TAR} -cf - -C ${WRKDIR}/dgd mud | \
+	    ${TAR} -xf - -C ${DESTDIR}${PREFIX}/libdata/dgd
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libdata/dgd \
 		${DESTDIR}${PREFIX}/share/doc/dgd
 	${INSTALL_DATA} ${WRKSRC}/mud.dgd ${DESTDIR}${PREFIX}/share/examples/dgd
