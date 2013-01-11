@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/04/07 09:23:11 obache Exp $
+$NetBSD: distinfo,v 1.13 2013/01/11 00:02:13 joerg Exp $
 
 SHA1 (sniffit.0.3.5.tar.gz) = df9183fca2eec29a56bcfdc68a983c4e7d57bf9d
 RMD160 (sniffit.0.3.5.tar.gz) = 9508f357c6fe74a9147a735fd0eb419b9a1124eb
@@ -8,11 +8,11 @@ SHA1 (patch-ac) = 05ab42b3499edd550de6f1bb667adce34e26a503
 SHA1 (patch-ad) = 9eadda884f4575f5e5facd66e3d5a39b65e686f7
 SHA1 (patch-ae) = c430e434309135189de7b3e61e4d0a1e63e50426
 SHA1 (patch-ah) = 50959ea602f9c31bd71a966b1c4b1903db2711d5
-SHA1 (patch-ai) = d8e5641d1fd729feea93d3b0a8b4d24e12ce9954
+SHA1 (patch-ai) = 2c49efc6f94b490b6d4bb1b9703218cbc9805574
 SHA1 (patch-aj) = db87dccf1c952e188aebb7bbb699c6257287c87d
 SHA1 (patch-ak) = 6909bb66b1ce6f9a4a78b548d00c41b1b0845d56
 SHA1 (patch-sn__cfgfile_c) = ae761ad7ec853d86a5dc458e47271125e8b75555
 SHA1 (patch-sn__cfgfile_h) = 40dd73a556d0a48576baaa00b7ab8be5fbbf48eb
-SHA1 (patch-sn__interface.h) = eaf9368a981ce18b579c26db0c574c7ff91f9b53
+SHA1 (patch-sn__interface.h) = 32d9823b22fb788b449314b9f30fe7d8beac0d7d
 SHA1 (patch-sn__logfile_c) = 07248e3ebd524a4f4f10f1d9b6aee33c70c5457f
-SHA1 (patch-sniffit_h) = 7ccc919e4a2de6a23d5b04c6242a80d336baeb46
+SHA1 (patch-sniffit_h) = 7bd90aad29bc1be934e613fbaf04a84448a5a71d
