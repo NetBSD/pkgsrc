@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 19:51:20 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/11 23:30:39 joerg Exp $
 
 DISTNAME=		pscpug035
 PKGNAME=		pscpug-0.3.5
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 NOT_FOR_PLATFORM=	Interix-*-* # no rusage or procfs stats
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+CFLAGS.NetBSD=	-D_KMEMUSER
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
