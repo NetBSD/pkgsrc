@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2012/10/29 05:06:47 asau Exp $
+# $NetBSD: Makefile.common,v 1.35 2013/01/11 00:15:40 joerg Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -11,7 +11,7 @@
 DISTNAME=	qt-everywhere-opensource-src-${QTVERSION}
 CATEGORIES=	x11
 MASTER_SITES=	http://releases.qt-project.org/qt4/source/
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 .include "../../x11/qt4/Makefile.common"
 
