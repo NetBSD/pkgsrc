@@ -1,4 +1,4 @@
-# $NetBSD: xorg.pixman,v 1.8 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.pixman,v 1.9 2013/01/11 10:37:58 ryoon Exp $
 #
 include/pixman-1/pixman.h
 include/pixman-1/pixman-version.h
@@ -18,4 +18,5 @@ lib/libpixman-1.so.2.0
 lib/libpixman-1.so.2.1
 lib/libpixman-1.so.15.0
 lib/libpixman-1.so.22.2
+lib/libpixman-1.so.24.4
 lib/pkgconfig/pixman-1.pc

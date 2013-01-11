@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.5 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libxcb,v 1.6 2013/01/11 10:37:58 ryoon Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -61,6 +61,7 @@ lib/libxcb-dri2.la
 lib/libxcb-dri2.so
 lib/libxcb-dri2.so.0
 lib/libxcb-dri2.so.0.0
+lib/libxcb-dri2.so.0.1
 lib/libxcb-glx.0.0.0.dylib
 lib/libxcb-glx.0.dylib
 lib/libxcb-glx.a
@@ -69,6 +70,8 @@ lib/libxcb-glx.la
 lib/libxcb-glx.so
 lib/libxcb-glx.so.0
 lib/libxcb-glx.so.0.0
+lib/libxcb-glx.so.0.1
+lib/libxcb-glx.so.0.1
 lib/libxcb-randr.0.1.0.dylib
 lib/libxcb-randr.0.0.0.dylib
 lib/libxcb-randr.0.dylib
@@ -135,6 +138,7 @@ lib/libxcb-sync.la
 lib/libxcb-sync.so
 lib/libxcb-sync.so.0
 lib/libxcb-sync.so.0.0
+lib/libxcb-sync.so.0.1
 lib/libxcb-wm.0.0.0.dylib
 lib/libxcb-wm.0.dylib
 lib/libxcb-wm.dylib
@@ -155,6 +159,7 @@ lib/libxcb-xf86dri.so
 lib/libxcb-xf86dri.so.0
 lib/libxcb-xf86dri.so.0.0
 lib/libxcb-xf86dri.so.1.0
+lib/libxcb-xf86dri.so.1.1
 lib/libxcb-xfixes.0.0.0.dylib
 lib/libxcb-xfixes.0.dylib
 lib/libxcb-xfixes.a
@@ -209,6 +214,7 @@ lib/libxcb.so
 lib/libxcb.so.1
 lib/libxcb.so.1.1
 lib/libxcb.so.2.2
+lib/libxcb.so.2.3
 lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc
