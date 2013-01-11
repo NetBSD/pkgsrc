@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.141 2013/01/11 13:23:50 tron Exp $
+$NetBSD: CHANGES-2013,v 1.142 2013/01/11 13:33:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -196,3 +196,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/guile-fcgi [gdt 2013-01-11]
 	Updated pkgtools/x11-links to 0.72 [ryoon 2013-01-11]
 	Updated mail/milter-greylist to 4.4.2nb1 [tron 2013-01-11]
+	Updated www/squid31 to 3.1.23 [taca 2013-01-11]
