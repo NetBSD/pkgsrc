@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/07/25 03:38:01 tonnerre Exp $
+$NetBSD: distinfo,v 1.6 2013/01/11 00:00:49 joerg Exp $
 
 SHA1 (splitvt-1.6.6.tar.gz) = 8073f4998ae0d772deecc583b61ea7cb92f7186b
 RMD160 (splitvt-1.6.6.tar.gz) = 014a9990ef41414b8488e10c24354bfc9588c4f8
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = ee16f9bb4b04d65c41ff71a6bc961bf3838e3648
 SHA1 (patch-ab) = 047b5fceb89fa952780c0d62a20291399e6370f8
 SHA1 (patch-ac) = b98a3c94d27799a4b9d94ccfef0d2de343becdf1
 SHA1 (patch-ad) = ee36e355d76630d734a84ebca0b0531a8cef6b96
+SHA1 (patch-cut-paste.c) = f1dc6f569580789ae3bb90633b619047302abdbd
