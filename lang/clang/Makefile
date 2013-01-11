@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/01/06 22:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/01/11 19:16:47 jperkin Exp $
 
 DISTNAME=	clang-3.2
 CATEGORIES=	lang
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		chown gmake pod2html
+USE_TOOLS+=		chown gmake groff pod2html
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
@@ -38,8 +38,13 @@ PLIST_SUBST+=		SOEXT="dylib"
 PLIST_SUBST+=		SOEXT="so"
 .endif
 
+CFLAGS.SunOS+=		-mimpure-text
+
 post-extract:
 	mv ${WRKDIR}/clang-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
+.if ${OPSYS} == "SunOS"
+	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
+.endif
 
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
