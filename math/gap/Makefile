@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/09/11 23:04:20 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/01/11 00:00:04 joerg Exp $
 #
 
 DISTNAME=	gap4r3
@@ -19,7 +19,7 @@ LICENSE=	no-commercial-use
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
 
-USE_TOOLS+=	gtar
+USE_TOOLS+=	bsdtar
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PREFIX=${PREFIX:Q}
@@ -33,15 +33,12 @@ PLIST_SUBST+=	GAP_PLATFORM=${GAP_PLATFORM:Q}
 CHECK_INTERPRETER_SKIP+=	lib/gap4.3/pkg/example/make_zoo
 
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
 
 post-extract:
-	( cd ${WRKSRC} && ${GTAR} zxf ${DISTDIR}/fix4r3n5.tar.gz )
+	cd ${WRKSRC} && ${TOOLS_PATH.bsdtar} zxf ${DISTDIR}/fix4r3n5.tar.gz
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GAP_DIRECTORY}
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GAP_DIRECTORY}/bin
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${GAP_PLATFORM}/gap		\
 				${DESTDIR}${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${GAP_PLATFORM}/gac		\
