@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/11/13 23:26:23 mrg Exp $
+$NetBSD: distinfo,v 1.7 2013/01/11 13:23:33 joerg Exp $
 
 SHA1 (hydrogen-0.9.5.1.tar.gz) = f389fdb853c77718c45141f6a895c06acdcbd2be
 RMD160 (hydrogen-0.9.5.1.tar.gz) = 2bf6280a07e4e45643815376ad94b35146ace772
 Size (hydrogen-0.9.5.1.tar.gz) = 5515314 bytes
-SHA1 (patch-aa) = fe11208e3d9ce3538d2fc7c340ae41ede275a34b
+SHA1 (patch-aa) = 9151230f859889fcba3335d86e283c5ff2f8cd6c
 SHA1 (patch-ab) = b532ec96fbc9ff796f9b1facd7ba38a1d9c9361f
