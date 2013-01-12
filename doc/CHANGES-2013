@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.148 2013/01/12 06:40:19 taca Exp $
+$NetBSD: CHANGES-2013,v 1.149 2013/01/12 06:45:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -209,3 +209,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-sqlite3 to 1.3.7 [taca 2013-01-12]
 	Updated devel/hoe to 3.4.0 [taca 2013-01-12]
 	Updated devel/ruby-extlib to 0.9.16 [taca 2013-01-12]
+	Updated devel/ruby-gettext to 2.3.7 [taca 2013-01-12]
