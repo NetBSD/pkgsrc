@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.159 2013/01/12 12:38:24 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.160 2013/01/12 14:03:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -221,3 +221,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-bleach to 1.1.5nb1 [ryoon 2013-01-12]
 	Updated www/py-django-appconf to 0.5nb1 [ryoon 2013-01-12]
 	Updated www/py-django-mezzanine-grappelli to 0.2.11nb1 [ryoon 2013-01-12]
+	Updated devel/ruby-stomp to 1.2.8 [taca 2013-01-12]
