@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/03 14:04:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/01/12 12:11:40 ryoon Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
