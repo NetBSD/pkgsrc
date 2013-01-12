@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.149 2013/01/12 06:45:51 taca Exp $
+$NetBSD: CHANGES-2013,v 1.150 2013/01/12 06:59:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/hoe to 3.4.0 [taca 2013-01-12]
 	Updated devel/ruby-extlib to 0.9.16 [taca 2013-01-12]
 	Updated devel/ruby-gettext to 2.3.7 [taca 2013-01-12]
+	Updated misc/m17n-db to 1.6.4 [obache 2013-01-12]
