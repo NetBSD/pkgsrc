@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/10/16 13:03:27 obache Exp $
+$NetBSD: distinfo,v 1.9 2013/01/12 07:26:04 obache Exp $
 
-SHA1 (m17n-lib-1.6.2.tar.gz) = 9b9ada79357dd56c90c64cd36845c5537c363d79
-RMD160 (m17n-lib-1.6.2.tar.gz) = ea274641d61b506f517a6205f767ac9163a38a5d
-Size (m17n-lib-1.6.2.tar.gz) = 1031508 bytes
+SHA1 (m17n-lib-1.6.4.tar.gz) = 83f2fc4facfd70a580bb95d9381eac7472d85171
+RMD160 (m17n-lib-1.6.4.tar.gz) = a15057981fdf215e5ba9569283842c59cfdb595d
+Size (m17n-lib-1.6.4.tar.gz) = 1034422 bytes
 SHA1 (patch-aa) = b5968890245e1679734abe0f4ca77d39d8ae06e3
 SHA1 (patch-ab) = 1de680f683b895bf24aff90e0635d461cd7c8d83
 SHA1 (patch-ac) = 8ab1e6c62b6a57e1d0dfd9973efe81b3a89f7d4f
