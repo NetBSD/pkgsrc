@@ -1,4 +1,4 @@
-# $NetBSD: dist.mk,v 1.1 2013/01/10 16:17:09 ryoon Exp $
+# $NetBSD: dist.mk,v 1.2 2013/01/12 10:49:57 ryoon Exp $
 #
 # used by devel/xulrunner17/Makefile
 # used by www/firefox17/Makefile
@@ -13,5 +13,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/xulrunner17/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/xulrunner17/patches
+
+DIST_SUBDIR=	firefox17.0.2esr
 
 WRKSRC=		${WRKDIR}/mozilla-esr17
