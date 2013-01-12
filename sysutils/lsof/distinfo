@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2011/09/03 12:32:32 christos Exp $
+$NetBSD: distinfo,v 1.82 2013/01/12 03:27:21 dholland Exp $
 
 SHA1 (lsof_4.84.tar.bz2) = b4fd6011fc183c0602bbba2116b8335a0c57917b
 RMD160 (lsof_4.84.tar.bz2) = c7df81cb9c83d4e03db395397912138953529510
@@ -9,5 +9,5 @@ SHA1 (patch-ac) = dac0fcdfee97d42c8f23684a4321519b9f8698d9
 SHA1 (patch-ad) = 4bd73dea4770c7f5a43be0d096c26e7d6728dd2c
 SHA1 (patch-ae) = 1d8c1c3baf9575631c23d3ced7b12fab1df95cd6
 SHA1 (patch-af) = b52c15a507960ecf33a61a3cbd608a92ebac1188
-SHA1 (patch-ag) = 945d233d94a42510c47709554040534024f72926
+SHA1 (patch-ag) = 5a48b4036d65af7cb6da0a1c89e06f02ae921ac6
 SHA1 (patch-ah) = 2de22b9a3733f958298af5e33b66c0653c320f59
