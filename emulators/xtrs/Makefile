@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/01/12 16:40:49 is Exp $
+# $NetBSD: Makefile,v 1.16 2013/01/12 17:21:04 is Exp $
 #
 
 DISTNAME=	xtrs-4.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.tim-mann.org/trs80/
 
@@ -23,11 +23,13 @@ SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g' \
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
-INSTALLATION_DIRS=	bin lib/xtrs ${PKGMANDIR}/man1 share/doc/xtrs
+INSTALLATION_DIRS=	bin lib/xtrs ${PKGMANDIR}/man1 share/doc/xtrs share/xtrs
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.hex ${DESTDIR}${PREFIX}/lib/xtrs/romimage.m4p
 	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.README ${DESTDIR}${PREFIX}/share/doc/xtrs
+	${INSTALL_DATA} ${WRKSRC}/utility.dsk ${DESTDIR}${PREFIX}/share/xtrs
+	${INSTALL_DATA} ${WRKSRC}/cpmutil.dsk ${DESTDIR}${PREFIX}/share/xtrs
 
 # The sources assume <malloc.h> exists.  Create a fake one for platforms
 # that don't have it.
