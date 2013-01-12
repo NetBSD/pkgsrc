@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 18:16:21 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/01/12 20:52:27 riz Exp $
 
 DISTNAME=	Botan-1.8.14
 PKGNAME=	${DISTNAME:tl}
@@ -37,6 +37,8 @@ PLIST.x86=	yes
 CONFIGURE_ARGS+=	--cpu=ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_ARGS+=	--cpu=ppc64
+.elif ${MACHINE_ARCH} == "arm"
+CONFIGURE_ARGS+=	--cpu=arm
 .endif
 
 .include "../../lang/python/application.mk"
