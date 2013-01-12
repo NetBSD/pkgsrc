@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.143 2013/01/11 13:37:22 taca Exp $
+$NetBSD: CHANGES-2013,v 1.144 2013/01/12 04:46:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -201,3 +201,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/isc-dhclient4 to 4.2.5 [taca 2013-01-11]
 	Updated net/isc-dhcpd4 to 4.2.5 [taca 2013-01-11]
 	Updated net/isc-dhcrelay4 to 4.2.5 [taca 2013-01-11]
+	Updated databases/ruby-data_objects to 0.10.11 [taca 2013-01-12]
+	Updated databases/ruby-do_mysql to 0.10.11 [taca 2013-01-12]
+	Updated databases/ruby-do_postgres to 0.10.11 [taca 2013-01-12]
+	Updated databases/ruby-do_sqlite3 to 0.10.11 [taca 2013-01-12]
