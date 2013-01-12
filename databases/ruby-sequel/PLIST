@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/12/16 16:07:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/01/12 04:50:00 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -78,6 +78,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.40.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.41.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.42.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.43.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.7.0.txt
@@ -187,9 +188,12 @@ ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
+${GEM_LIBDIR}/lib/sequel/extensions/core_refinements.rb
+${GEM_LIBDIR}/lib/sequel/extensions/date_arithmetic.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/eval_inspect.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/looser_typecasting.rb
+${GEM_LIBDIR}/lib/sequel/extensions/meta_def.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/migration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/named_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/null_dataset.rb
@@ -219,7 +223,6 @@ ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
-${GEM_LIBDIR}/lib/sequel/metaprogramming.rb
 ${GEM_LIBDIR}/lib/sequel/model.rb
 ${GEM_LIBDIR}/lib/sequel/model/associations.rb
 ${GEM_LIBDIR}/lib/sequel/model/base.rb
@@ -321,7 +324,9 @@ ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
 ${GEM_LIBDIR}/spec/extensions/connection_validator_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_plugin_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_spec.rb
+${GEM_LIBDIR}/spec/extensions/core_refinements_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
+${GEM_LIBDIR}/spec/extensions/date_arithmetic_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eager_each_spec.rb
@@ -338,6 +343,7 @@ ${GEM_LIBDIR}/spec/extensions/list_spec.rb
 ${GEM_LIBDIR}/spec/extensions/looser_typecasting_spec.rb
 ${GEM_LIBDIR}/spec/extensions/many_through_many_spec.rb
 ${GEM_LIBDIR}/spec/extensions/many_to_one_pk_lookup_spec.rb
+${GEM_LIBDIR}/spec/extensions/meta_def_spec.rb
 ${GEM_LIBDIR}/spec/extensions/migration_spec.rb
 ${GEM_LIBDIR}/spec/extensions/named_timezones_spec.rb
 ${GEM_LIBDIR}/spec/extensions/nested_attributes_spec.rb
