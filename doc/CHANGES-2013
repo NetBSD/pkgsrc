@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.154 2013/01/12 09:16:00 taca Exp $
+$NetBSD: CHANGES-2013,v 1.155 2013/01/12 09:18:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -215,3 +215,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-fast_gettext to 0.7.0 [taca 2013-01-12]
 	Updated devel/m17n-lib to 1.6.4 [obache 2013-01-12]
 	Updated devel/ruby-logging to 1.8.1 [taca 2013-01-12]
+	Updated devel/ruby-rspec-mocks to 2.12.1 [taca 2013-01-12]
+	Updated devel/ruby-rspec-rails to 2.12.1 [taca 2013-01-12]
