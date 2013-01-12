@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.156 2013/01/12 11:17:13 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.157 2013/01/12 12:12:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-rspec-mocks to 2.12.1 [taca 2013-01-12]
 	Updated devel/ruby-rspec-rails to 2.12.1 [taca 2013-01-12]
 	Updated devel/jenkins to 1.480.2 [ryoon 2013-01-12]
+	Updated www/py-bleach to 1.1.5nb1 [ryoon 2013-01-12]
