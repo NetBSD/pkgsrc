@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/12 12:25:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/12 19:59:19 ryoon Exp $
 #
 
 DISTNAME=	django-appconf-0.5
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/jezdez/django-appconf/
 COMMENT=	Helper class for handling configuration defaults of Django
 LICENSE=	modified-bsd
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
