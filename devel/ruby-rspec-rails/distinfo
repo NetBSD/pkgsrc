@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/12/16 16:46:14 taca Exp $
+$NetBSD: distinfo,v 1.8 2013/01/12 09:17:48 taca Exp $
 
-SHA1 (rspec-rails-2.12.0.gem) = 5bde65c5c6ffcfbe0db1ba69589b8852032ca8ef
-RMD160 (rspec-rails-2.12.0.gem) = d50ba26b797f57ded5f5baab33cf8001f2629456
-Size (rspec-rails-2.12.0.gem) = 66048 bytes
+SHA1 (rspec-rails-2.12.1.gem) = 411259714d852dc2152dec721f899b7b22b93d7d
+RMD160 (rspec-rails-2.12.1.gem) = f7e04966eadadd879ca448da7343333aa31d8073
+Size (rspec-rails-2.12.1.gem) = 67584 bytes

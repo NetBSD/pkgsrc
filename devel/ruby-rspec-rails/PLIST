@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:46:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/01/12 09:17:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -117,6 +117,7 @@ ${GEM_LIBDIR}/spec/generators/rspec/observer/observer_generator_spec.rb
 ${GEM_LIBDIR}/spec/generators/rspec/scaffold/scaffold_generator_spec.rb
 ${GEM_LIBDIR}/spec/generators/rspec/view/view_generator_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/assertion_adapter_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/assertion_delegator_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/configuration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/deprecations_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/controller_example_group_spec.rb
@@ -128,6 +129,7 @@ ${GEM_LIBDIR}/spec/rspec/rails/example/request_example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/routing_example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/example/view_example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/extensions/active_model/errors_on_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/extensions/active_record/base_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/extensions/active_record/records_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/fixture_support_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_a_new_spec.rb
