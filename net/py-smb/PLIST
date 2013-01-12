@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/03 15:49:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/01/12 11:58:33 ryoon Exp $
 ${PYSITELIB}/nmb/NetBIOS.py
 ${PYSITELIB}/nmb/NetBIOS.pyc
 ${PYSITELIB}/nmb/NetBIOS.pyo
@@ -20,11 +20,11 @@ ${PYSITELIB}/nmb/nmb_structs.pyo
 ${PYSITELIB}/nmb/utils.py
 ${PYSITELIB}/nmb/utils.pyc
 ${PYSITELIB}/nmb/utils.pyo
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/smb/SMBConnection.py
 ${PYSITELIB}/smb/SMBConnection.pyc
 ${PYSITELIB}/smb/SMBConnection.pyo
