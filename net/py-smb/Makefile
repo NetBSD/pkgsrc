@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/03 15:49:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/12 11:58:33 ryoon Exp $
 #
 
 DISTNAME=	pysmb-1.1.2
@@ -14,5 +14,5 @@ LICENSE=	zlib
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
