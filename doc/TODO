@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11829 2013/01/12 04:47:30 taca Exp $
+$NetBSD: TODO,v 1.11830 2013/01/12 06:59:42 obache Exp $
 
 Suggested new packages
 ======================
@@ -863,7 +863,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lua-5.2.1
 	o lwm-1.2.2
 	o lyx-2.0.3
-	o m17n-db-1.6.4 [pkg/47411]
 	o m17n-lib-1.6.4 [pkg/47412]
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
