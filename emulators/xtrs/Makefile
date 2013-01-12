@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/01/12 17:21:04 is Exp $
+# $NetBSD: Makefile,v 1.17 2013/01/12 19:07:55 is Exp $
 #
 
-DISTNAME=	xtrs-4.9
-PKGREVISION=	5
+DISTNAME=	xtrs-4.9d
+#PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.tim-mann.org/trs80/
 
@@ -30,14 +30,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.README ${DESTDIR}${PREFIX}/share/doc/xtrs
 	${INSTALL_DATA} ${WRKSRC}/utility.dsk ${DESTDIR}${PREFIX}/share/xtrs
 	${INSTALL_DATA} ${WRKSRC}/cpmutil.dsk ${DESTDIR}${PREFIX}/share/xtrs
-
-# The sources assume <malloc.h> exists.  Create a fake one for platforms
-# that don't have it.
-post-wrapper:
-	if ${TEST} ! -f /usr/include/malloc.h; then		\
-		${ECHO} "#include <stdlib.h>"			\
-			> ${BUILDLINK_DIR}/include/malloc.h;	\
-	fi
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
