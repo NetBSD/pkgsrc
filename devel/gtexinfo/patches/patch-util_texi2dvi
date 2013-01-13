@@ -1,0 +1,28 @@
+$NetBSD: patch-util_texi2dvi,v 1.1 2013/01/13 20:44:55 apb Exp $
+
+--- util/texi2dvi.orig	2008-09-18 18:46:01.000000000 +0000
++++ util/texi2dvi
+@@ -24,10 +24,10 @@
+ # If possible, please send a copy of the output of the script called with
+ # the `--debug' option when making a bug report.
+ 
+-test -f /bin/ksh && test -z "$RUNNING_KSH" \
+-  && { UNAMES=`uname -s`; test "x$UNAMES" = xULTRIX; } 2>/dev/null \
+-  && { RUNNING_KSH=true; export RUNNING_KSH; exec /bin/ksh $0 ${1+"$@"}; }
+-unset RUNNING_KSH
++#test -f /bin/ksh && test -z "$RUNNING_KSH" \
++#  && { UNAMES=`uname -s`; test "x$UNAMES" = xULTRIX; } 2>/dev/null \
++#  && { RUNNING_KSH=true; export RUNNING_KSH; exec /bin/ksh $0 ${1+"$@"}; }
++#unset RUNNING_KSH
+ 
+ # No failure shall remain unpunished.
+ set -e
+@@ -127,7 +127,7 @@ test -n "$TEX" && test -d "$TEX" && unse
+   test_local () {
+     local foo=foo
+   }
+-  test_local
++  test_local 2>/dev/null || exit 1
+   test $foo = bar
+ ) || local () {
+   case $1 in
