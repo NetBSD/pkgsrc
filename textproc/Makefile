@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.652 2013/01/13 04:23:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.653 2013/01/13 15:21:32 jakllsch Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -512,6 +512,7 @@ SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-creole
+SUBDIR+=	py-cssselect
 SUBDIR+=	py-cssutils
 SUBDIR+=	py-docutils
 SUBDIR+=	py-elementtree
