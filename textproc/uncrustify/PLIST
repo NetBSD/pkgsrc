@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/13 04:22:34 ryoon Exp $
+bin/uncrustify
+man/man1/uncrustify.1
+share/uncrustify/ben.cfg
+share/uncrustify/d.cfg
+share/uncrustify/defaults.cfg
+share/uncrustify/gnu-indent.cfg
+share/uncrustify/kr-indent.cfg
+share/uncrustify/linux-indent.cfg
+share/uncrustify/linux.cfg
+share/uncrustify/mono.cfg
+share/uncrustify/xsupplicant.cfg
