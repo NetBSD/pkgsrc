@@ -1,0 +1,5 @@
+BWPing is a tool to measure bandwidth and response times between
+two hosts using Internet Control Message Protocol (ICMP) echo
+request/echo reply mechanism. It does not require any special
+software on the remote host. The only requirement is the ability
+to respond on ICMP echo request messages.
