@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/01/10 11:20:46 obache Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/01/13 07:26:40 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -144,6 +144,7 @@ share/mikutter/core/plugin/direct_message/sender.rb
 share/mikutter/core/plugin/direct_message/spec
 share/mikutter/core/plugin/direct_message/userlist.rb
 share/mikutter/core/plugin/display_requirements/display_requirements.rb
+share/mikutter/core/plugin/display_requirements/spec
 share/mikutter/core/plugin/extract/extract.rb
 share/mikutter/core/plugin/extract/spec
 share/mikutter/core/plugin/followingcontrol/followingcontrol.rb
@@ -198,6 +199,7 @@ share/mikutter/core/plugin/profile/spec
 share/mikutter/core/plugin/proxy/proxy.rb
 share/mikutter/core/plugin/proxy/spec
 share/mikutter/core/plugin/ratelimit/ratelimit.rb
+share/mikutter/core/plugin/ratelimit/spec
 share/mikutter/core/plugin/rest/rest.rb
 share/mikutter/core/plugin/rest/spec
 share/mikutter/core/plugin/saved_search/saved_search.rb
@@ -317,6 +319,7 @@ share/mikutter/devel/chiskel/core/plugin/uptime.rb
 share/mikutter/devel/makechi.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
+@pkgdir share/mikutter/vendor
 @pkgdir share/mikutter/core/plugin/directmessage
 @pkgdir share/mikutter/core/addon/tco
 @pkgdir share/mikutter/core/addon/streaming
@@ -332,4 +335,3 @@ share/mikutter/plugin/WHATSTHIS
 @pkgdir share/mikutter/core/addon/aspectframe
 @pkgdir share/mikutter/core/addon/alsa
 @pkgdir share/mikutter/core/addon/activity
-@pkgdir share/mikutter/vendor
