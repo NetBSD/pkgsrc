@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.15 2013/01/03 13:46:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/01/13 04:17:08 ryoon Exp $
 bin/fotoxx
 man/man1/fotoxx.1
 share/applications/kornelix-fotoxx.desktop
 share/doc/fotoxx/KB-shortcuts
+share/doc/fotoxx/KB-shortcuts-ca
+share/doc/fotoxx/KB-shortcuts-es
 share/doc/fotoxx/README
 share/doc/fotoxx/README-ca
 share/doc/fotoxx/README-es
@@ -12,7 +14,6 @@ share/doc/fotoxx/edit-menus
 share/doc/fotoxx/edit-menus-ca
 share/doc/fotoxx/edit-menus-es
 share/doc/fotoxx/fotoxx.man
-share/doc/fotoxx/freecode
 share/doc/fotoxx/images/CMYK.jpg
 share/doc/fotoxx/images/HDF-paint.jpg
 share/doc/fotoxx/images/HDR-adjust.jpg
