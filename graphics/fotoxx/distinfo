@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2013/01/03 13:46:28 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2013/01/13 04:17:08 ryoon Exp $
 
-SHA1 (fotoxx-13.01.tar.gz) = e1338b43d75a7cb24f09dad5de4c61d5fe1f90f9
-RMD160 (fotoxx-13.01.tar.gz) = 532a981961ca2bec38df2f37b1449df6f6b5255a
-Size (fotoxx-13.01.tar.gz) = 2131822 bytes
+SHA1 (fotoxx-13.01.2.tar.gz) = 844d3fb2107ace3323e3e25afeebd130fa2d9fe2
+RMD160 (fotoxx-13.01.2.tar.gz) = 69602673c8b5d6d5d4889a1be1dc00dc15b969de
+Size (fotoxx-13.01.2.tar.gz) = 2135646 bytes
 SHA1 (patch-aa) = 4cd36d5f3a8dcf7a96ea6f5bb13a8bf227ad867e
 SHA1 (patch-ab) = c5ae349a6deb88dc17a2e735569b72a9bcaad1de
 SHA1 (patch-ac) = 86dc405274a9f21d4271fa850937cea4bba2cf9d
