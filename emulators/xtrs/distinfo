@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/01/12 19:07:55 is Exp $
+$NetBSD: distinfo,v 1.7 2013/01/13 20:54:30 is Exp $
 
 SHA1 (xtrs-4.9d.tar.gz) = 72b99ede6e8024b8ade4f8aa22eb073078576e74
 RMD160 (xtrs-4.9d.tar.gz) = 009786b70fe1006d552b1d89ac2b74247b17e03f
 Size (xtrs-4.9d.tar.gz) = 455355 bytes
-SHA1 (patch-trs_cassette.c) = 44c1a8617a4b9d984aa1b740ca14b5a471acad79
+SHA1 (patch-trs_cassette.c) = 1f129feecf54b2165d993f0fa2dbfac63bdb146f
 SHA1 (patch-trs_disk.c) = b43c7592db9a183b69bc2b17a7ddc4a1e32713e4
 SHA1 (patch-trs_xinterface.c) = e2190ea74f38d2cfc8fb7e8d17c5e889490aaa48
