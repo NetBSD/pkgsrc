@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/13 04:29:50 ryoon Exp $
+man/man8/bwping.8
+man/man8/bwping6.8
+sbin/bwping
+sbin/bwping6
