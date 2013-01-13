@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/13 15:20:35 jakllsch Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cssselect/__init__.py
+${PYSITELIB}/cssselect/__init__.pyc
+${PYSITELIB}/cssselect/__init__.pyo
+${PYSITELIB}/cssselect/parser.py
+${PYSITELIB}/cssselect/parser.pyc
+${PYSITELIB}/cssselect/parser.pyo
+${PYSITELIB}/cssselect/tests.py
+${PYSITELIB}/cssselect/tests.pyc
+${PYSITELIB}/cssselect/tests.pyo
+${PYSITELIB}/cssselect/xpath.py
+${PYSITELIB}/cssselect/xpath.pyc
+${PYSITELIB}/cssselect/xpath.pyo
