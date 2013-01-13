@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.9 2013/01/12 21:26:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.10 2013/01/13 12:19:24 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -25,3 +25,5 @@ Pullup ticket #4008 - requested by marino
 wm/fvwm: buildfix
 Pullup ticket #4009 - requested by ryoon
 devel/jenkins: security update
+Pullup ticket #4004 - requested by tron
+security/gnupg: build fix
