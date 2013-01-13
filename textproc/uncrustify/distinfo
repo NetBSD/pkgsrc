@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/13 04:22:34 ryoon Exp $
+
+SHA1 (uncrustify-0.59.tar.gz) = 233e4f6cb34ef7020ce49e5b5d14f0d46f277e31
+RMD160 (uncrustify-0.59.tar.gz) = 433a04ddd3d477173fa31f16d05fd0a264436e64
+Size (uncrustify-0.59.tar.gz) = 983822 bytes
