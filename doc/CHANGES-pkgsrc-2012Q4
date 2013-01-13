@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.10 2013/01/13 12:19:24 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.11 2013/01/13 22:58:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -27,3 +27,12 @@ Pullup ticket #4009 - requested by ryoon
 devel/jenkins: security update
 Pullup ticket #4004 - requested by tron
 security/gnupg: build fix
+Pullup ticket #4010 - requested by ryoon
+devel/xulrunner: security update
+www/firefox: security update
+Pullup ticket #4011 - requested by dholland
+lang/perl5: packaging fix
+Pullup ticket #4012 - requested by dholland
+net/p5-Net-LibIDN: build fix
+Pullup ticket #4013 - requested by dholland
+x11/grandr_applet: build fix
