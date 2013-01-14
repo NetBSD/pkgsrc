@@ -1,0 +1,3 @@
+HTTP::Server::Simple::Authen is an HTTP::Server::Simple plugin to allow
+HTTP authentication. Authentication scheme is pluggable and you can use
+whatever Authentication protocol that Authen::Simple supports.
