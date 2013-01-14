@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.925 2013/01/10 21:32:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.926 2013/01/14 14:46:01 bouyer Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -381,6 +381,7 @@ SUBDIR+=	p5-HTTP-Request-Form
 SUBDIR+=	p5-HTTP-Response-Encoding
 SUBDIR+=	p5-HTTP-Server-EV
 SUBDIR+=	p5-HTTP-Server-Simple
+SUBDIR+=	p5-HTTP-Server-Simple-Authen
 SUBDIR+=	p5-HTTP-Server-Simple-Kwiki
 SUBDIR+=	p5-HTTP-Server-Simple-Mason
 SUBDIR+=	p5-HTTP-Server-Simple-PSGI
