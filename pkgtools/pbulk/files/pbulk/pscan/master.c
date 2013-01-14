@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.7 2009/01/31 23:25:38 joerg Exp $ */
+/* $NetBSD: master.c,v 1.8 2013/01/14 14:33:28 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -36,14 +36,12 @@
 #include <nbcompat/types.h>
 #include <nbcompat/queue.h>
 #include <sys/ioctl.h>
-#ifdef __sun
-#include <sys/filio.h>
-#endif
 #include <sys/socket.h>
 #include <nbcompat/time.h>
 #include <sys/wait.h>
 #include <nbcompat/err.h>
 #include <signal.h>
+#include <fcntl.h>
 #include <nbcompat/stdlib.h>
 #include <nbcompat/stdio.h>
 #include <nbcompat/string.h>
@@ -259,10 +257,8 @@ master_mode(const char *master_port, const char *start_script)
 	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (fd == -1)
 		err(1, "Could not create socket");	
-#ifdef FIOCLEX
-	if (ioctl(fd, FIOCLEX, NULL) == -1)
+	if (fcntl(fd, F_SETFD, FD_CLOEXEC) == -1)
 		err(1, "Could not set close-on-exec flag");
-#endif
 	if (bind(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
 		err(1, "Could not bind socket");
 	if (listen(fd, 5) == -1)
