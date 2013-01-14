@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2012/07/31 13:54:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/01/14 05:54:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/COPYING.LESSER
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/ffi_c/AbstractMemory.c
 ${GEM_LIBDIR}/ext/ffi_c/AbstractMemory.h
@@ -331,6 +333,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/texinfo.tex
 ${GEM_LIBDIR}/ext/ffi_c/rbffi.h
 ${GEM_LIBDIR}/ext/ffi_c/rbffi_endian.h
 ${GEM_LIBDIR}/ext/ffi_c/win32/stdint.h
+${GEM_LIBDIR}/ffi.gemspec
 ${GEM_LIBDIR}/gen/Rakefile
 ${GEM_LIBDIR}/lib/Lib.iml
 ${GEM_LIBDIR}/lib/ffi.rb
@@ -383,6 +386,22 @@ ${GEM_LIBDIR}/lib/ffi/types.rb
 ${GEM_LIBDIR}/lib/ffi/union.rb
 ${GEM_LIBDIR}/lib/ffi/variadic.rb
 ${GEM_LIBDIR}/lib/ffi_c.${RUBY_DLEXT}
+${GEM_LIBDIR}/libtest/Benchmark.c
+${GEM_LIBDIR}/libtest/BoolTest.c
+${GEM_LIBDIR}/libtest/BufferTest.c
+${GEM_LIBDIR}/libtest/ClosureTest.c
+${GEM_LIBDIR}/libtest/EnumTest.c
+${GEM_LIBDIR}/libtest/FunctionTest.c
+${GEM_LIBDIR}/libtest/GNUmakefile
+${GEM_LIBDIR}/libtest/GlobalVariable.c
+${GEM_LIBDIR}/libtest/LastErrorTest.c
+${GEM_LIBDIR}/libtest/NumberTest.c
+${GEM_LIBDIR}/libtest/PointerTest.c
+${GEM_LIBDIR}/libtest/ReferenceTest.c
+${GEM_LIBDIR}/libtest/StringTest.c
+${GEM_LIBDIR}/libtest/StructTest.c
+${GEM_LIBDIR}/libtest/UnionTest.c
+${GEM_LIBDIR}/libtest/VariadicTest.c
 ${GEM_LIBDIR}/spec/ffi/Ffi.iml
 ${GEM_LIBDIR}/spec/ffi/async_callback_spec.rb
 ${GEM_LIBDIR}/spec/ffi/bool_spec.rb
@@ -415,17 +434,4 @@ ${GEM_LIBDIR}/spec/ffi/typedef_spec.rb
 ${GEM_LIBDIR}/spec/ffi/union_spec.rb
 ${GEM_LIBDIR}/spec/ffi/variadic_spec.rb
 ${GEM_LIBDIR}/spec/spec.opts
-${GEM_LIBDIR}/tasks/ann.rake
-${GEM_LIBDIR}/tasks/extension.rake
-${GEM_LIBDIR}/tasks/gem.rake
-${GEM_LIBDIR}/tasks/git.rake
-${GEM_LIBDIR}/tasks/notes.rake
-${GEM_LIBDIR}/tasks/post_load.rake
-${GEM_LIBDIR}/tasks/rdoc.rake
-${GEM_LIBDIR}/tasks/rubyforge.rake
-${GEM_LIBDIR}/tasks/setup.rb
-${GEM_LIBDIR}/tasks/spec.rake
-${GEM_LIBDIR}/tasks/svn.rake
-${GEM_LIBDIR}/tasks/test.rake
-${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
