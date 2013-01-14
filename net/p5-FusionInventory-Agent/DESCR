@@ -1,0 +1,7 @@
+The FusionInventory agent is a generic management agent. It can perform a
+certain number of tasks, according to its own execution plan, or on behalf of a
+GLPI server with fusioninventory plugin, acting as a control point.
+
+Two of these tasks are included in agent source distribution, local inventory
+and wake on lan. Other tasks are distributed separatly, excepted for binary
+distributions where they are bundled together.
