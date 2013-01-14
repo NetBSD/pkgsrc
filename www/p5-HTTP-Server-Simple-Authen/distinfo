@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/01/14 14:45:23 bouyer Exp $
+
+SHA1 (HTTP-Server-Simple-Authen-0.04.tar.gz) = 406d640fa976996377c1fc32ad6f20123082688d
+RMD160 (HTTP-Server-Simple-Authen-0.04.tar.gz) = b5204e9ff907463b381d7efe4afc7454f4c54fcf
+Size (HTTP-Server-Simple-Authen-0.04.tar.gz) = 2562 bytes
