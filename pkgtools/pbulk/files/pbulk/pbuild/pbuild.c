@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.c,v 1.5 2007/08/05 14:15:55 joerg Exp $ */
+/* $NetBSD: pbuild.c,v 1.6 2013/01/14 14:33:28 jperkin Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -174,6 +174,7 @@ main(int argc, char **argv)
 int
 build_package(const char *build_info, size_t len)
 {
+	struct sigaction sa;
 	int input[2];
 	pid_t child;
 
@@ -209,6 +210,15 @@ build_package(const char *build_info, size_t len)
 		(void)waitpid(child, &ret, 0);
 		return ret;
 	}
+
+	/* Reset SIGPIPE handling for child */
+#if !defined(__INTERIX)
+	sa.sa_sigaction = NULL;
+#endif
+	sa.sa_handler = SIG_DFL;
+	sa.sa_flags = 0;
+	(void)sigemptyset(&sa.sa_mask);
+	(void)sigaction(SIGPIPE, (struct sigaction *)&sa, NULL);
 
 	(void)close(input[1]);
 	if (dup2(input[0], 0) == -1) {
