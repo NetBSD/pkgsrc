@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.175 2013/01/14 06:13:08 taca Exp $
+$NetBSD: CHANGES-2013,v 1.176 2013/01/14 06:14:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-inline to 3.12.0 [taca 2013-01-14]
 	Updated graphics/ruby-chunky_png to 1.2.7 [taca 2013-01-14]
 	Updated devel/ruby-rspec-rails to 2.12.2 [taca 2013-01-14]
+	Updated graphics/ruby-gnuplot to 2.6.2 [taca 2013-01-14]
