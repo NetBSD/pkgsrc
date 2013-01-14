@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2012/12/12 22:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.452 2013/01/14 14:44:29 bouyer Exp $
 #
 
 COMMENT=	Security tools
@@ -191,6 +191,7 @@ SUBDIR+=	p5-Authen-PAM
 SUBDIR+=	p5-Authen-PluggableCaptcha
 SUBDIR+=	p5-Authen-SASL
 SUBDIR+=	p5-Authen-SASL-Cyrus
+SUBDIR+=	p5-Authen-Simple
 SUBDIR+=	p5-Authen-TacacsPlus
 SUBDIR+=	p5-BSD-arc4random
 SUBDIR+=	p5-Crypt-Blowfish
