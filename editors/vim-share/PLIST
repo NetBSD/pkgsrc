@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/10/30 22:39:07 morr Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/01/14 23:30:34 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -536,6 +536,7 @@ share/vim/${VIM_SUBDIR}/indent/xml.vim
 share/vim/${VIM_SUBDIR}/indent/xsd.vim
 share/vim/${VIM_SUBDIR}/indent/xslt.vim
 share/vim/${VIM_SUBDIR}/indent/yacc.vim
+share/vim/${VIM_SUBDIR}/indent/yaml.vim
 share/vim/${VIM_SUBDIR}/indent/zimbu.vim
 share/vim/${VIM_SUBDIR}/indent/zsh.vim
 share/vim/${VIM_SUBDIR}/indoff.vim
@@ -1080,6 +1081,7 @@ share/vim/${VIM_SUBDIR}/syntax/spyce.vim
 share/vim/${VIM_SUBDIR}/syntax/sql.vim
 share/vim/${VIM_SUBDIR}/syntax/sqlanywhere.vim
 share/vim/${VIM_SUBDIR}/syntax/sqlforms.vim
+share/vim/${VIM_SUBDIR}/syntax/sqlhana.vim
 share/vim/${VIM_SUBDIR}/syntax/sqlinformix.vim
 share/vim/${VIM_SUBDIR}/syntax/sqlj.vim
 share/vim/${VIM_SUBDIR}/syntax/sqloracle.vim
