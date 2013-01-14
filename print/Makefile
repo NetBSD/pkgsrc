@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2013/01/03 13:39:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.554 2013/01/14 00:26:18 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -641,6 +641,8 @@ SUBDIR+=	tex-texmate
 SUBDIR+=	tex-texmate-doc
 SUBDIR+=	tex-texpower
 SUBDIR+=	tex-texpower-doc
+SUBDIR+=	tex-textcase
+SUBDIR+=	tex-textcase-doc
 SUBDIR+=	tex-thailatex
 SUBDIR+=	tex-threeparttable
 SUBDIR+=	tex-threeparttable-doc
