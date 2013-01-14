@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.171 2013/01/14 04:36:42 taca Exp $
+$NetBSD: CHANGES-2013,v 1.172 2013/01/14 05:54:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rack12 to 1.2.7 [taca 2013-01-14]
 	Updated www/ruby-rack13 to 1.3.9 [taca 2013-01-14]
 	Updated www/ruby-rack to 1.4.4 [taca 2013-01-14]
+	Updated devel/ruby-ffi to 1.3.1 [taca 2013-01-14]
