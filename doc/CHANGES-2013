@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.179 2013/01/14 14:33:46 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.180 2013/01/14 14:50:52 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -244,3 +244,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-domain_name to 0.5.7 [taca 2013-01-14]
 	Updated textproc/py-feedparser to 5.1.3 [schmonz 2013-01-14]
 	Updated pkgtools/pbulk-base to 0.47 [jperkin 2013-01-14]
+	Added security/p5-Authen-Simple version 0.5 [bouyer 2013-01-14]
+	Added www/p5-HTTP-Server-Simple-Authen version 0.04 [bouyer 2013-01-14]
+	Added net/p5-FusionInventory-Agent version 2.2.7 [bouyer 2013-01-14]
+	Added net/p5-FusionInventory-Agent-Task-Network version 1.0.2 [bouyer 2013-01-14]
