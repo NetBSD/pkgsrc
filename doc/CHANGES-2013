@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.180 2013/01/14 14:50:52 bouyer Exp $
+$NetBSD: CHANGES-2013,v 1.181 2013/01/14 23:35:59 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -248,3 +248,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-HTTP-Server-Simple-Authen version 0.04 [bouyer 2013-01-14]
 	Added net/p5-FusionInventory-Agent version 2.2.7 [bouyer 2013-01-14]
 	Added net/p5-FusionInventory-Agent-Task-Network version 1.0.2 [bouyer 2013-01-14]
+	Updated editors/vim-share to 7.3.762 [morr 2013-01-14]
+	Updated editors/vim-xaw to 7.3.762 [morr 2013-01-14]
+	Updated editors/vim-lang to 7.3.762 [morr 2013-01-14]
