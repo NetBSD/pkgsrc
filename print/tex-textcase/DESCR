@@ -1,0 +1,10 @@
+The textcase package offers commands \MakeTextUppercase and
+\MakeTextLowercase are similar to the standard \MakeUppercase
+and \MakeLowercase, but they do not change the case of any
+sections of mathematics, or the arguments of \cite, \label and
+\ref commands within the argument. A further command
+\NoCaseChange does nothing but suppress case change within its
+argument, so to force uppercase of a section including an
+environment, one might say:
+\MakeTextUppercase{...\NoCaseChange{\begin{foo}}
+...\NoCaseChange{\end{foo}}...}
