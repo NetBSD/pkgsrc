@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.168 2013/01/13 21:07:53 is Exp $
+$NetBSD: CHANGES-2013,v 1.169 2013/01/14 00:26:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -230,3 +230,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/py-cssselect version 0.7.1 [jakllsch 2013-01-13]
 	Updated misc/calibre to 0.9.7nb1 [jakllsch 2013-01-13]
 	Updated emulators/xtrs to 4.9dnb1 [is 2013-01-13]
+	Added print/tex-textcase version 0.07 [minskim 2013-01-14]
+	Added print/tex-textcase-doc version 0.07 [minskim 2013-01-14]
