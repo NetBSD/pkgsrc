@@ -1,0 +1,13 @@
+$NetBSD: patch-Imakefile,v 1.1 2013/01/15 16:21:36 morr Exp $
+
+--- Imakefile.orig	1994-12-13 20:31:19.000000000 +0000
++++ Imakefile
+@@ -71,7 +71,7 @@ depend:: appdef-c.h appdef.h
+ all:: Xcolorsel.help
+ install:: Xcolorsel.help
+ 
+-NormalProgramTarget(xcolorsel,$(OBJS),,XawClientLibs,)
++NormalProgramTarget(xcolorsel,$(OBJS),,-lXaw $(XMULIB) $(XTOOLLIB) $(XLIB),)
+ 
+ InstallProgram(xcolorsel,$(BINDIR))
+ InstallManPage(xcolorsel,$(MANDIR))
