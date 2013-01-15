@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2012/10/26 16:08:18 shattered Exp $
+# $NetBSD: Makefile,v 1.103 2013/01/15 15:17:22 gdt Exp $
 
 DISTNAME=		qemu-1.2.0
-PKGREVISION=		4
+PKGREVISION=		5v==
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,6 +13,9 @@ LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
+# qemu 1 does not work on NetBSD-5; see http://gnats.netbsd.org/46565.
+# As a workaround, use emulators/qemu0.
+NOT_FOR_PLATFORM=	NetBSD-5*-*
 
 USE_TOOLS+=		gmake makeinfo perl:build pkg-config
 UNLIMIT_RESOURCES=	datasize
