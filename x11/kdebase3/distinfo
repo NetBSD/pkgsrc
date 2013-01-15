@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.116 2012/09/26 11:10:16 jperkin Exp $
+$NetBSD: distinfo,v 1.117 2013/01/15 15:35:25 joerg Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -39,7 +39,7 @@ SHA1 (patch-cb) = d13c59029ef13c89d565431244128044735ddaef
 SHA1 (patch-cc) = ed95490558d4de4a04aa0f45634e44ed0b78fdd8
 SHA1 (patch-dd) = 4c98e62275ce9a632f79f99110e8fb4995e3f017
 SHA1 (patch-ep) = 745f03daf088afdef4d5eff486311a49291eb947
-SHA1 (patch-er) = 1596529d6aea207f18d9d42bd5944a8cbdc7e32b
+SHA1 (patch-er) = 04f3746034225a1861e5bcb9d1efd9a6f428f4bc
 SHA1 (patch-ev) = 551dc4d79b637e15a580eb1dcd2f0930ff1e3dbc
 SHA1 (patch-ew) = f8f95cf602a9d88f620d5546ad58b87d5e6be2a5
 SHA1 (patch-fa) = 1ea4390477d7f68283b68e695bcb2e4b7c18aecc
@@ -50,7 +50,7 @@ SHA1 (patch-fe) = 3da89e7228d5246e98a244d7f52d9052c3dbcfa2
 SHA1 (patch-ff) = f86edffa3c26caa4538f6cc2ff32ed30ddc7e248
 SHA1 (patch-fg) = bdd6fbbf1f82e174d5ceb70e67763813c13b14dd
 SHA1 (patch-fh) = 387857dcf275acdcebe2c9b900f95fcc1206b85f
-SHA1 (patch-fi) = ba72e46fa0f728cc060bbdba8ed033a71266680c
+SHA1 (patch-fi) = d2587d0e264284830338d34270fc70d33bc3e671
 SHA1 (patch-fj) = 25de89b959a365f57f68557a878cc7dff5f62df5
 SHA1 (patch-fk) = 05b3a6a6451185b3f0eee3a8b9d2001ead62211a
 SHA1 (patch-ga) = 40ab73f3e32e8d8e8c58662df7c5dc54bd4acd29
@@ -61,6 +61,7 @@ SHA1 (patch-ge) = 8470cf03d768d784714e926281757e9d68749360
 SHA1 (patch-gf) = 78de196a700fa9cd5e221ff57c295fdb3562f931
 SHA1 (patch-kcheckpass_checkpass_pam.c) = b5dd2e50c5f1047d3c195836c8b2d06e11edea3b
 SHA1 (patch-kcontrol_access_kcmaccess.cpp) = f7eaec78fa13f2cfb5b97ca84c10f3e403b64919
+SHA1 (patch-kcontrol_kfontinst_kfontinst_GetPid.c) = b56389ec10d4388ba10f01798b0119efbbb72c4c
 SHA1 (patch-kdesud) = acc40c2d1fb65e404a7aa0dbb6eae72fa7ac6a5e
 SHA1 (patch-kicker_applets_launcher_easyvector.h) = 7bcb64630a71cb3740ccf203b63dcdcbb7b30675
 SHA1 (patch-kxkb_kcmmisc.cpp) = 6e31f261c872dc942305a7c25e8c03c089bc272a
