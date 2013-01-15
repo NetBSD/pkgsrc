@@ -1,8 +1,8 @@
-$NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
+$NetBSD: patch-er,v 1.9 2013/01/15 15:35:25 joerg Exp $
 
---- ksysguard/ksysguardd/NetBSD/ProcessList.c.orig	2005-10-11 04:04:31.000000000 +1300
+--- ksysguard/ksysguardd/NetBSD/ProcessList.c.orig	2005-10-10 15:04:31.000000000 +0000
 +++ ksysguard/ksysguardd/NetBSD/ProcessList.c
-@@ -24,10 +24,12 @@
+@@ -24,15 +24,18 @@
  
  #include <ctype.h>
  #include <dirent.h>
@@ -15,7 +15,13 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  #include <sys/param.h>
  #include <sys/sysctl.h>
  #include <sys/time.h>
-@@ -46,6 +48,8 @@ CONTAINER ProcessList = 0;
+ #include <sys/types.h>
+ #include <sys/user.h>
++#include <sys/resource.h>
+ #include <unistd.h>
+ #include <signal.h>
+ 
+@@ -46,6 +49,8 @@ CONTAINER ProcessList = 0;
  
  #define BUFSIZE 1024
  
@@ -24,7 +30,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  typedef struct
  {
  	/* This flag is set for all found processes at the beginning of the
-@@ -157,15 +161,13 @@ findProcessInList(int pid)
+@@ -157,15 +162,13 @@ findProcessInList(int pid)
  }
  
  static int
@@ -43,7 +49,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  
  	if ((ps = findProcessInList(pid)) == 0)
  	{
-@@ -178,26 +180,18 @@ updateProcess(int pid)
+@@ -178,26 +181,18 @@ updateProcess(int pid)
  
  	ps->alive = 1;
  
@@ -81,7 +87,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  
          /* memory, process name, process uid */
  	/* find out user name with process uid */
-@@ -205,19 +199,26 @@ updateProcess(int pid)
+@@ -205,19 +200,26 @@ updateProcess(int pid)
  	strlcpy(ps->userName,pwent&&pwent->pw_name? pwent->pw_name:"????",sizeof(ps->userName));
  	ps->userName[sizeof(ps->userName)-1]='\0';
  
@@ -119,7 +125,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  
  	return (0);
  }
-@@ -266,6 +267,8 @@ initProcessList(struct SensorModul* sm)
+@@ -266,6 +268,8 @@ initProcessList(struct SensorModul* sm)
  		registerCommand("setpriority", setPriority);
  	}
  
@@ -128,7 +134,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  	updateProcessList();
  }
  
-@@ -277,27 +280,22 @@ exitProcessList(void)
+@@ -277,27 +281,22 @@ exitProcessList(void)
  
  	if (ProcessList)
  		free (ProcessList);
@@ -167,7 +173,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  	cleanupProcessList();
  
  	return (0);
-@@ -306,8 +304,8 @@ updateProcessList(void)
+@@ -306,8 +305,8 @@ updateProcessList(void)
  void
  printProcessListInfo(const char* cmd)
  {
@@ -178,7 +184,7 @@ $NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
  }
  
  void
-@@ -318,10 +316,10 @@ printProcessList(const char* cmd)
+@@ -318,10 +317,10 @@ printProcessList(const char* cmd)
  	ps = first_ctnr(ProcessList); /* skip 'kernel' entry */
  	for (ps = next_ctnr(ProcessList); ps; ps = next_ctnr(ProcessList))
  	{

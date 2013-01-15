@@ -1,8 +1,8 @@
-$NetBSD: patch-fi,v 1.4 2008/01/04 21:05:58 markd Exp $
+$NetBSD: patch-fi,v 1.5 2013/01/15 15:35:25 joerg Exp $
 
---- ksysguard/ksysguardd/NetBSD/Memory.c.orig	2005-10-11 04:04:31.000000000 +1300
+--- ksysguard/ksysguardd/NetBSD/Memory.c.orig	2005-10-10 15:04:31.000000000 +0000
 +++ ksysguard/ksysguardd/NetBSD/Memory.c
-@@ -21,7 +21,6 @@
+@@ -21,12 +21,12 @@
  */
  
  #include <fcntl.h>
@@ -10,7 +10,21 @@ $NetBSD: patch-fi,v 1.4 2008/01/04 21:05:58 markd Exp $
  #include <limits.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -45,29 +44,25 @@
+ #include <string.h>
+ #include <sys/param.h>
++#include <sys/resource.h>
+ #include <sys/sysctl.h>
+ #include <sys/types.h>
+ #include <sys/vmmeter.h>
+@@ -34,6 +34,7 @@
+ /* Everything post 1.5.x uses uvm/uvm_* includes */
+ #if __NetBSD_Version__ >= 105010000
+ #include <uvm/uvm_param.h>
++#include <uvm/uvm_extern.h>
+ #else
+ #include <vm/vm_param.h>
+ #endif
+@@ -45,29 +46,25 @@
  static size_t Total = 0;
  static size_t MFree = 0;
  static size_t Used = 0;
@@ -50,7 +64,7 @@ $NetBSD: patch-fi,v 1.4 2008/01/04 21:05:58 markd Exp $
  	registerMonitor("mem/swap/free", "integer", printSwapFree, printSwapFreeInfo, sm);
  	registerMonitor("mem/swap/used", "integer", printSwapUsed, printSwapUsedInfo, sm);
  }
-@@ -75,7 +70,6 @@ initMemory(struct SensorModul* sm)
+@@ -75,7 +72,6 @@ initMemory(struct SensorModul* sm)
  void
  exitMemory(void)
  {
@@ -58,7 +72,7 @@ $NetBSD: patch-fi,v 1.4 2008/01/04 21:05:58 markd Exp $
  }
  
  int
-@@ -83,7 +77,6 @@ updateMemory(void)
+@@ -83,7 +79,6 @@ updateMemory(void)
  {
  
  #define ARRLEN(X) (sizeof(X)/sizeof(X[0]))
@@ -66,7 +80,7 @@ $NetBSD: patch-fi,v 1.4 2008/01/04 21:05:58 markd Exp $
    size_t len;
    
    {
-@@ -95,37 +88,26 @@ updateMemory(void)
+@@ -95,37 +90,26 @@ updateMemory(void)
    }
   
    {
@@ -116,7 +130,7 @@ $NetBSD: patch-fi,v 1.4 2008/01/04 21:05:58 markd Exp $
    return 0;
  }
  
-@@ -154,27 +136,63 @@ printUsedInfo(const char* cmd)
+@@ -154,27 +138,63 @@ printUsedInfo(const char* cmd)
  }
  
  void
