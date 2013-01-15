@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2012/11/06 19:01:36 drochner Exp $
+# $NetBSD: Makefile,v 1.123 2013/01/15 11:29:21 drochner Exp $
 
 DISTNAME=	gnutls-3.0.25
 CATEGORIES=	security devel
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-p11-kit
 # this library duplicates (and conflicts with) openssl
