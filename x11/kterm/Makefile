@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/10/29 05:06:32 asau Exp $
+# $NetBSD: Makefile,v 1.59 2013/01/15 16:21:35 morr Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	23
@@ -23,11 +23,6 @@ SPECIAL_PERMS=	${PREFIX:Q}/bin/kterm ${SETUID_ROOT_PERMS}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm" || ${XAW_TYPE} == "neXtaw")
-post-patch:
-	@${ECHO_MSG}  "===>  Applying Xaw scrollbar patch"
-	@${PATCH} ${PATCH_ARGS} < ${FILESDIR:Q}/patch-xaw3d
-.endif
-
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

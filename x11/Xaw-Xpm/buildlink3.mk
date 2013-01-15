@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2012/06/15 23:06:02 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2013/01/15 16:21:35 morr Exp $
 
 BUILDLINK_TREE+=	Xaw-Xpm
 
@@ -8,6 +8,8 @@ XAW_XPM_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.Xaw-Xpm+=	Xaw-Xpm>=1.1
 BUILDLINK_ABI_DEPENDS.Xaw-Xpm+=	Xaw-Xpm>=1.1nb2
 BUILDLINK_PKGSRCDIR.Xaw-Xpm?=	../../x11/Xaw-Xpm
+
+BUILDLINK_TRANSFORM+=           l:Xaw:Xaw3d
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -19,12 +21,6 @@ buildlink-Xaw-Xpm-inc-hack: .PHONY buildlink-directories
 		${MKDIR} ${BUILDLINK_DIR}/include/X11 && \
 		${LN} -s Xaw3d ${BUILDLINK_DIR}/include/X11/Xaw
 .endif
-
-LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.Xaw-Xpm}/lib	\
-		-L${BUILDLINK_PREFIX.libXpm}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXpm}/lib	\
-		-lXaw3d -lXpm
 
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
