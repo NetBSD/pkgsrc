@@ -1,8 +1,16 @@
-$NetBSD: patch-uvm,v 1.1.1.1 2009/07/20 14:06:02 ahoka Exp $
+$NetBSD: patch-uvm,v 1.2 2013/01/15 15:30:56 joerg Exp $
 
---- sys_netbsd.c.orig	2003-10-11 21:06:09.000000000 +0200
+--- sys_netbsd.c.orig	2003-10-11 19:06:09.000000000 +0000
 +++ sys_netbsd.c
-@@ -78,9 +78,9 @@ int system_cpu(void)
+@@ -25,7 +25,6 @@
+ #include <sys/resource.h>
+ #include <sys/sched.h>
+ 
+-#include <uvm/uvm_object.h>
+ #include <uvm/uvm_extern.h>
+ #include <sys/swap.h>
+ 
+@@ -78,9 +77,9 @@ int system_cpu(void)
  int system_memory(void)
  {
  #define pagetob(size) ((size) << (uvmexp.pageshift))
@@ -14,7 +22,7 @@ $NetBSD: patch-uvm,v 1.1.1.1 2009/07/20 14:06:02 ahoka Exp $
  	size_t size = sizeof (uvmexp);
  
  	if (sysctl(mib, 2, &uvmexp, &size, NULL, 0) < 0)
-@@ -91,12 +91,13 @@ int system_memory(void)
+@@ -91,12 +90,13 @@ int system_memory(void)
  	bm.swap_used = 0;
  	bm.swap_max = 0;
  	if ((nswap = swapctl(SWAP_NSWAP, 0, 0)) != 0) {
