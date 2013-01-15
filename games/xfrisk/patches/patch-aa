@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2009/05/23 15:14:21 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2013/01/15 16:21:34 morr Exp $
 
 - take build configuration from inherited pkgsrc variables
 - install under $(DESTDIR)
 
---- Makefile.orig	2000-01-23 14:01:55.000000000 -0500
-+++ Makefile	2009-05-23 11:08:33.000000000 -0400
-@@ -55,9 +55,9 @@
+--- Makefile.orig	2000-01-23 19:01:55.000000000 +0000
++++ Makefile
+@@ -55,9 +55,9 @@ DROPALL=
  ####################
  # C compiler options
  # GNU gcc is recommended.
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2009/05/23 15:14:21 dholland Exp $
  
  # If you don't have gcc, don't use -Wall -W -fno-common
  #CFLAGS=-g
-@@ -77,25 +77,25 @@
+@@ -77,23 +77,23 @@ CFLAGS=-g -Wall -W -fno-common -pedantic
  #CFLAGS+=-DTEST_GAME
  
  ## Initial linker options
@@ -39,16 +39,14 @@ $NetBSD: patch-aa,v 1.5 2009/05/23 15:14:21 dholland Exp $
  #XDIR=/usr/openwin
  
  # try Xaw if you don't have Xaw3d
- #XAW=Xaw
+-#XAW=Xaw
 -XAW=Xaw3d
-+XAW=${LIBXAW}
++XAW=Xaw
++#XAW=Xaw3d
  
--XLIBS=-L$(XDIR)/lib -l$(XAW) -lXext -lXmu -lXt -lSM -lICE -lX11
-+XLIBS=-L$(XDIR)/lib $(XAW) -lXext -lXmu -lXt -lSM -lICE -lX11
+ XLIBS=-L$(XDIR)/lib -l$(XAW) -lXext -lXmu -lXt -lSM -lICE -lX11
  
- XINC=-I$(XDIR)/include
- CFLAGS+=$(XINC)
-@@ -106,7 +106,6 @@
+@@ -106,7 +106,6 @@ CFLAGS+=$(XINC)
  # System V (Solaris, Irix, etc.) will probably want -lsocket -lnsl.
  #LIBS=-lsocket -lnsl
  # on other systems leave LIBS blank for now
@@ -56,7 +54,7 @@ $NetBSD: patch-aa,v 1.5 2009/05/23 15:14:21 dholland Exp $
  
  # On some systems -DNARROWPROTO is needed for working Xaw scrollbars
  # This includes FreeBSD 3.x and recent Linux
-@@ -208,16 +207,16 @@
+@@ -208,16 +207,16 @@ libfriskAI.a: network.o aiDice.o game.o 
  	$(RANLIB) $@
  
  install: all
@@ -83,7 +81,7 @@ $NetBSD: patch-aa,v 1.5 2009/05/23 15:14:21 dholland Exp $
  
  
  # Other targets
-@@ -225,13 +224,13 @@
+@@ -225,13 +224,13 @@ Countries.risk World.risk: World.ppm bui
  	./buildmap World.ppm World.risk Countries.risk
  
  uninstall:
