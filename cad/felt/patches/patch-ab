@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2009/12/17 20:31:37 abs Exp $
+$NetBSD: patch-ab,v 1.5 2013/01/15 16:21:34 morr Exp $
 
 --- src/Velvet/Makefile.orig	2000-02-21 22:44:51.000000000 +0000
 +++ src/Velvet/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2009/12/17 20:31:37 abs Exp $
  LDFLAGS	= $(LDOPTS) -L$(X11LIB)
  LIBS	= $(LIBWIDGETS) $(LIBGEN) $(LIBFELT) $(LIBELT) $(LIBMTX)\
 -	  -lXaw3d -lXmu -lXt -lSM -lICE -lXext -lX11 -lm
-+	  ${LIBXAW} -lXmu -lXt -lSM -lICE -lXext -lX11 -lm
++	  -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 -lm
  #	  /usr/X11R6/lib/libXaw3d.a /usr/X11R6/lib/libXmu.so.6.0 \
  #	  /usr/X11R6/lib/libXt.so.6.0 /usr/X11R6/lib/libSM.so.6.0 \
  #	  /usr/X11R6/lib/libICE.so.6.0 /usr/X11R6/lib/libXext.so.6.0 \
