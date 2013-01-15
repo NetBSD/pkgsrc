@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.182 2013/01/15 10:47:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.183 2013/01/15 23:11:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -252,3 +252,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/vim-xaw to 7.3.762 [morr 2013-01-14]
 	Updated editors/vim-lang to 7.3.762 [morr 2013-01-14]
 	Updated security/p5-Digest-SHA to 5.81 [wiz 2013-01-15]
+	Updated www/ikiwiki to 3.20121212nb1 [schmonz 2013-01-15]
