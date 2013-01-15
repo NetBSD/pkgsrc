@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink3.mk,v 1.5 2007/03/09 02:04:04 rillig Exp $
+# $NetBSD: xaw.buildlink3.mk,v 1.6 2013/01/15 16:21:34 morr Exp $
 #
 # This file selects the X Athena Widgets (Xaw) implementation.
 #
@@ -38,7 +38,5 @@ BUILDLINK_PREFIX.Xaw?=	${X11BASE}
 .else
 PKG_FAIL_REASON+=	"[xaw.buildlink3.mk] Invalid value ${XAW_TYPE} for XAW_TYPE."
 .endif
-
-MAKE_ENV+=	LIBXAW=${LIBXAW:Q}
 
 .endif	# XAW_BUILDLINK3_MK

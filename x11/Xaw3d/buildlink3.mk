@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2012/05/07 01:54:06 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2013/01/15 16:21:35 morr Exp $
 
 BUILDLINK_TREE+=	Xaw3d
 
@@ -25,9 +25,6 @@ buildlink-Xaw3d-inc-hack: buildlink-directories
 
 .include "../../x11/libXmu/buildlink3.mk"
 
-LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw3d}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.Xaw3d}/lib	\
-		-lXaw3d
 .endif # XAW3D_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-Xaw3d

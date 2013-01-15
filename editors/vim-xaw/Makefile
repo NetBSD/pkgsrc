@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2013/01/14 23:30:34 morr Exp $
+# $NetBSD: Makefile,v 1.56 2013/01/15 16:21:34 morr Exp $
 
 PKGNAME=		vim-xaw-${VIM_VERSION}.${VIM_PATCHLEVEL}
 COMMENT=		Vim editor (vi clone) with X11 Athena GUI
@@ -19,12 +19,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
-MAKE_ENV+=		XAW_LIB="-lXaw3d"
-.else
-XAW_TYPE=		standard
 MAKE_ENV+=		XAW_LIB="-lXaw"
-.endif
 
 post-install:
 .for f in gvim.1 gview.1 rgvim.1 rgview.1
