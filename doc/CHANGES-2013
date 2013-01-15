@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.181 2013/01/14 23:35:59 morr Exp $
+$NetBSD: CHANGES-2013,v 1.182 2013/01/15 10:47:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/vim-share to 7.3.762 [morr 2013-01-14]
 	Updated editors/vim-xaw to 7.3.762 [morr 2013-01-14]
 	Updated editors/vim-lang to 7.3.762 [morr 2013-01-14]
+	Updated security/p5-Digest-SHA to 5.81 [wiz 2013-01-15]
