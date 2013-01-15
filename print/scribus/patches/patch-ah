@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2009/09/16 09:24:55 drochner Exp $
+$NetBSD: patch-ah,v 1.5 2013/01/15 15:28:37 joerg Exp $
 
 --- scribus/CMakeLists.txt.orig	2008-02-26 20:48:49.000000000 +0100
 +++ scribus/CMakeLists.txt
@@ -6,7 +6,7 @@ $NetBSD: patch-ah,v 1.4 2009/09/16 09:24:55 drochner Exp $
  ${SCRIBUS_PIXBUF_LIB}
  )
  
-+SET_TARGET_PROPERTIES(${EXE_NAME} PROPERTIES LINK_FLAGS "-export-dynamic")
++SET_TARGET_PROPERTIES(${EXE_NAME} PROPERTIES LINK_FLAGS "-Wl,-export-dynamic")
 +
  IF(RENDER_LIB STREQUAL "LIBART")
    TARGET_LINK_LIBRARIES(${EXE_NAME}
