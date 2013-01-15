@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/06 11:55:00 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/01/15 16:21:34 morr Exp $
 #
 
 DISTNAME=	xfrisk-1.2
@@ -29,11 +29,7 @@ LIBS.SunOS=	-lsocket -lnsl
 MAKE_ENV+=	LIBS=${LIBS:Q}
 
 # xfrisk doesn't work with standard Xaw.
-XAW_TYPE?=	3d
-
-.if ${XAW_TYPE} == standard
-XAW_TYPE=3d
-.endif
+XAW_TYPE=	3d
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
