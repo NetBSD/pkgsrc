@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11835 2013/01/16 11:50:30 obache Exp $
+$NetBSD: TODO,v 1.11836 2013/01/16 20:57:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
-	o ffmpeg-20130108.1.1
 	o file-5.12
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -1269,7 +1268,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
-	o x264-devel-20130112
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5

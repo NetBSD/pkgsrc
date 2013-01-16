@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.188 2013/01/16 12:20:30 obache Exp $
+$NetBSD: CHANGES-2013,v 1.189 2013/01/16 20:57:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -258,3 +258,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/acroread9 to 9.5.3 [obache 2013-01-16]
 	Updated converters/skf to 1.99.1 [obache 2013-01-16]
 	Updated math/ruby-spreadsheet to 0.7.6 [obache 2013-01-16]
+	Updated multimedia/x264-devel to 20130115 [adam 2013-01-16]
+	Updated multimedia/ffmpeg to 20130106.1.1 [adam 2013-01-16]
+	Updated multimedia/ffplay to 1.1 [adam 2013-01-16]
