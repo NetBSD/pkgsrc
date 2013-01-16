@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2012/11/28 16:29:53 adam Exp $
+$NetBSD: distinfo,v 1.29 2013/01/16 20:55:30 adam Exp $
 
-SHA1 (x264-snapshot-20121127-2245.tar.bz2) = 6642af8d8a2ccbf566b36b49922fc8bfd12120dd
-RMD160 (x264-snapshot-20121127-2245.tar.bz2) = df9b0a63c54362b2f8a51546736681011141af48
-Size (x264-snapshot-20121127-2245.tar.bz2) = 556104 bytes
+SHA1 (x264-snapshot-20130115-2245.tar.bz2) = 6e418f56200b12e4c4a99738a7db4ef4e35d3040
+RMD160 (x264-snapshot-20130115-2245.tar.bz2) = 048551b58268d837957fe323517b0dc05f6588b9
+Size (x264-snapshot-20130115-2245.tar.bz2) = 558202 bytes
 SHA1 (patch-aa) = bf070b45b4868abdb08c4b9849937c970e6b1311
 SHA1 (patch-ab) = 796b817a9ad056fea3ccb87c051701653c78f913
 SHA1 (patch-ac) = 42aaa1f91cd87923442d23ff222e1b37ed43948b
