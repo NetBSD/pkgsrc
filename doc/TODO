@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11834 2013/01/14 14:04:41 schmonz Exp $
+$NetBSD: TODO,v 1.11835 2013/01/16 11:50:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -1164,6 +1164,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o subtitleeditor-0.33.0
 	o subversion-1.7.7
 	o sudo-1.8.6p3
+	o sun-jdk7-7.0.11
+	o sun-jre7-7.0.11
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
 	o sysinfo-4.2.2
