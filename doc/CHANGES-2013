@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.187 2013/01/16 12:17:04 obache Exp $
+$NetBSD: CHANGES-2013,v 1.188 2013/01/16 12:20:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated ham/fldigi to 3.21.65 [mef 2013-01-16]
 	Updated print/acroread9 to 9.5.3 [obache 2013-01-16]
 	Updated converters/skf to 1.99.1 [obache 2013-01-16]
+	Updated math/ruby-spreadsheet to 0.7.6 [obache 2013-01-16]
