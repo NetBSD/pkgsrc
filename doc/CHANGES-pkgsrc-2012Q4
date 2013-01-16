@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.12 2013/01/14 23:16:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.13 2013/01/16 11:50:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -40,3 +40,5 @@ Pullup ticket #4015 - requested by dholland
 lang/tcl-itcl-current: mark as broken
 Pullup ticket #4016 - requested by wiz
 lang/tcl-itcl: build fix update
+Pullup ticket #4017 - requested by wiz
+security/p5-Digest-SHA: security update
