@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.189 2013/01/16 20:57:38 adam Exp $
+$NetBSD: CHANGES-2013,v 1.190 2013/01/16 23:13:32 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -261,3 +261,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/x264-devel to 20130115 [adam 2013-01-16]
 	Updated multimedia/ffmpeg to 20130106.1.1 [adam 2013-01-16]
 	Updated multimedia/ffplay to 1.1 [adam 2013-01-16]
+	Updated www/py-werkzeug to 0.8.3nb1 [kleink 2013-01-16]
