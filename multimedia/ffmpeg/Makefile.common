@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2012/12/18 10:48:09 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.27 2013/01/16 20:55:47 adam Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
-DISTVERSION=	1.0.1
+DISTVERSION=	1.1
 PREV_PKGPATH=	multimedia/ffmpeg-devel
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg/patches
 
@@ -44,7 +44,6 @@ CONFIGURE_ARGS+=	--enable-memalign-hack
 
 # Let's not put garbage into /tmp
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
-
 
 .include "../../mk/compiler.mk"
 

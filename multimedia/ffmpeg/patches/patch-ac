@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.13 2012/11/08 19:57:29 adam Exp $
+$NetBSD: patch-ac,v 1.14 2013/01/16 20:55:47 adam Exp $
 
 --- Makefile.orig	2012-09-28 01:37:35.000000000 +0000
 +++ Makefile
-@@ -138,8 +138,8 @@ install-progs: install-progs-yes $(PROGS
+@@ -139,8 +139,8 @@ install-progs: install-progs-yes $(PROGS
  
  install-data: $(DATA_FILES) $(EXAMPLES_FILES)
  	$(Q)mkdir -p "$(DATADIR)/examples"
