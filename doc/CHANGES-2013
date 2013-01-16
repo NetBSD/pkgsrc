@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.185 2013/01/16 08:01:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.186 2013/01/16 11:41:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -255,3 +255,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ikiwiki to 3.20121212nb1 [schmonz 2013-01-15]
 	Updated security/gnupg2 to 2.0.19nb2 [drochner 2013-01-15]
 	Updated ham/fldigi to 3.21.65 [mef 2013-01-16]
+	Updated print/acroread9 to 9.5.3 [obache 2013-01-16]
