@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.184 2013/01/16 02:58:06 mef Exp $
+$NetBSD: CHANGES-2013,v 1.185 2013/01/16 08:01:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -253,4 +253,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/vim-lang to 7.3.762 [morr 2013-01-14]
 	Updated security/p5-Digest-SHA to 5.81 [wiz 2013-01-15]
 	Updated www/ikiwiki to 3.20121212nb1 [schmonz 2013-01-15]
+	Updated security/gnupg2 to 2.0.19nb2 [drochner 2013-01-15]
 	Updated ham/fldigi to 3.21.65 [mef 2013-01-16]
