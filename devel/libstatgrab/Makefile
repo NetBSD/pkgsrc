@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/31 11:17:21 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/01/17 15:49:44 joerg Exp $
 
 DISTNAME=	libstatgrab-0.17
 PKGREVISION=	1
@@ -26,5 +26,7 @@ REPLACE_PERL+=		src/statgrab/statgrab-make-mrtg-config.in
 REPLACE_PERL+=		src/statgrab/statgrab-make-mrtg-index.in
 
 CONFIGURE_ARGS+=	--disable-examples
+
+CPPFLAGS.NetBSD+=	-D_KMEMUSER
 
 .include "../../mk/bsd.pkg.mk"
