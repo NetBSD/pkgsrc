@@ -1,7 +1,16 @@
-$NetBSD: patch-ksysguard_ksysguardd_NetBSD_Memory.c,v 1.1 2012/03/19 19:44:03 markd Exp $
+$NetBSD: patch-ksysguard_ksysguardd_NetBSD_Memory.c,v 1.2 2013/01/17 16:05:53 joerg Exp $
 
---- ksysguard/ksysguardd/NetBSD/Memory.c.orig	2008-01-05 12:55:45.000000000 +1300
+--- ksysguard/ksysguardd/NetBSD/Memory.c.orig	2012-06-01 13:20:44.000000000 +0000
 +++ ksysguard/ksysguardd/NetBSD/Memory.c
+@@ -32,7 +32,7 @@
+ #include <unistd.h>
+ /* Everything post 1.5.x uses uvm/uvm_* includes */
+ #if __NetBSD_Version__ >= 105010000
+-#include <uvm/uvm_param.h>
++#include <uvm/uvm_extern.h>
+ #else
+ #include <vm/vm_param.h>
+ #endif
 @@ -49,10 +49,13 @@ static size_t Inactive = 0;
  static size_t Wired = 0;
  static size_t Execpages = 0;
