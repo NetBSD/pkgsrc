@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/17 03:51:05 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/17 06:05:31 dholland Exp $
 
 DISTNAME=	bulk-medium-20130113
 CATEGORIES=	meta-pkgs
@@ -47,15 +47,15 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	mpg321-[0-9]*:../../audio/mpg321
 DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
-DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd
-DEPENDS+=	jabberd2-[0-9]*:../../chat/jabberd2
+DEPENDS+=	jabberd>=1<2:../../chat/jabberd
+DEPENDS+=	jabberd>=2:../../chat/jabberd2
 DEPENDS+=	sirc-[0-9]*:../../chat/sirc
 DEPENDS+=	xchat-[0-9]*:../../chat/xchat
 DEPENDS+=	xchat-perl-[0-9]*:../../chat/xchat-perl
 DEPENDS+=	xchat-python-[0-9]*:../../chat/xchat-python
 DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
-DEPENDS+=	mysql51-client-[0-9]*:../../databases/mysql51-client
-DEPENDS+=	mysql55-client-[0-9]*:../../databases/mysql55-client
+DEPENDS+=	mysql-client>=5.1<5.5:../../databases/mysql51-client
+DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
 DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
 DEPENDS+=	postgresql84-client-[0-9]*:../../databases/postgresql84-client
 DEPENDS+=	postgresql91-client-[0-9]*:../../databases/postgresql91-client
@@ -74,9 +74,9 @@ DEPENDS+=	wine-[0-9]*:../../emulators/wine
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-DEPENDS+=	py-matplotlib-[0-9]*:../../graphics/py-matplotlib
-DEPENDS+=	py-matplotlib-gtk2-[0-9]*:../../graphics/py-matplotlib-gtk2
-DEPENDS+=	py-matplotlib-tk-[0-9]*:../../graphics/py-matplotlib-tk
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk-[0-9]*:../../graphics/py-matplotlib-gtk2
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-tk-[0-9]*:../../graphics/py-matplotlib-tk
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	php>=5.3<5.4:../../lang/php53
 DEPENDS+=	php>=5.4<5.5:../../lang/php54
@@ -98,13 +98,14 @@ DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 DEPENDS+=	re-alpine-[0-9]*:../../mail/re-alpine
 DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
-DEPENDS+=	bind96-[0-9]*:../../net/bind96
-DEPENDS+=	bind97-[0-9]*:../../net/bind97
-DEPENDS+=	bind98-[0-9]*:../../net/bind98
-DEPENDS+=	bind99-[0-9]*:../../net/bind99
+DEPENDS+=	bind>=9.6<9.7:../../net/bind96
+DEPENDS+=	bind>=9.7<9.8:../../net/bind97
+DEPENDS+=	bind>=9.8<9.9:../../net/bind98
+DEPENDS+=	bind>=9.9<9.10:../../net/bind99
 DEPENDS+=	clive-[0-9]*:../../net/clive
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
-DEPENDS+=	samba35-[0-9]*:../../net/samba35
+DEPENDS+=	samba>=3.5<3.6:../../net/samba35
+DEPENDS+=	samba>=3.6:../../net/samba
 DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
 DEPENDS+=	xymon-[0-9]*:../../net/xymon
 DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
@@ -146,11 +147,11 @@ DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	py-bsddb3-[0-9]*:../../databases/py-bsddb3
-DEPENDS+=	py-gdbm-[0-9]*:../../databases/py-gdbm
-DEPENDS+=	py-postgresql-[0-9]*:../../databases/py-postgresql
-DEPENDS+=	py-psycopg2-[0-9]*:../../databases/py-psycopg2
-DEPENDS+=	py-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-bsddb3-[0-9]*:../../databases/py-bsddb3
+DEPENDS+=	${PYPKGPREFIX}-gdbm-[0-9]*:../../databases/py-gdbm
+DEPENDS+=	${PYPKGPREFIX}-postgresql-[0-9]*:../../databases/py-postgresql
+DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	SDL-[0-9]*:../../devel/SDL
 DEPENDS+=	atk-[0-9]*:../../devel/atk
 DEPENDS+=	boehm-gc-[0-9]*:../../devel/boehm-gc
@@ -199,7 +200,7 @@ DEPENDS+=	tk-[0-9]*:../../x11/tk
 #
 # 4. Linux compat packages
 #
-DEPENDS+=	suse121-[0-9]*:../../meta-pkgs/suse121
+DEPENDS+=	suse>=12.1:../../meta-pkgs/suse121
 
 #
 # 5. Desktop infrastructure and support services
@@ -226,4 +227,5 @@ DEPENDS+=	lua-stdlib-doc-[0-9]*:../../devel/lua-stdlib-doc
 # We are supposed to be a superset of bulk-small.
 DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
+.include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../mk/bsd.pkg.mk"
