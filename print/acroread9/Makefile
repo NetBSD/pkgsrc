@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 13:45:35 asau Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2013/01/17 23:33:20 tron Exp $
 
 DISTNAME=	acroread9	# overridden below
-PKGNAME=	acroread9-9.5.1
-PKGREVISION=	1
+PKGNAME=	acroread9-9.5.3
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PKGVERSION_NOREV}/enu/
 
