@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2012/12/16 01:52:16 obache Exp $
+# $NetBSD: Makefile,v 1.108 2013/01/17 15:54:36 joerg Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 PKGREVISION=	25
@@ -15,6 +15,12 @@ BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.12
 REPLACE_PERL+=	kghostview/update-to-xt-names.pl
 
 CONFIGURE_ARGS+=	--with-imlib-config=${X11PREFIX}/bin
+
+FRIBIDI_LIBS=	${TOOLS_PATH.pkg-config} --libs fribidi
+FRIBIDI_CFLAGS=	${TOOLS_PATH.pkg-config} --cflags fribidi
+
+CONFIGURE_ARGS+=	FRIBIDI_LIBS=${FRIBIDI_LIBS:sh:Q}
+CONFIGURE_ARGS+=	FRIBIDI_CFLAGS=${FRIBIDI_CFLAGS:sh:Q}
 
 SUBST_CLASSES+=		kpdf
 SUBST_STAGE.kpdf=	post-patch
