@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/15 12:29:19 kei Exp $
+$NetBSD: patch-aa,v 1.2 2013/01/17 15:53:11 joerg Exp $
 
 --- Makefile.orig	Fri Mar 17 05:08:49 2000
 +++ Makefile	Wed Mar 20 00:37:53 2002
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/15 12:29:19 kei Exp $
 -#FTYPE_INCS = -I/usr/local/include
 -#FTYPE_LIBS = -L/user/local/lib -lttf
 -#FTYPE_DEFS = -DHAVE_FREETYPE
-+FTYPE_INCS = -I${LOCALBASE}/include/freetype
-+FTYPE_LIBS = -L${LOCALBASE}/lib -lttf
++FTYPE_INCS = -I${X11PREFIX}/include/freetype
++FTYPE_LIBS = -L${X11PREFIX}/lib -Wl,-rpath,${X11PREFIX}/lib -lttf
 +FTYPE_DEFS = -DHAVE_FREETYPE
  
 @@ -66,3 +66,3 @@
