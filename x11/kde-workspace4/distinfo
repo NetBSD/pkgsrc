@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/06/16 04:45:39 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/01/17 16:05:53 joerg Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -23,11 +23,13 @@ SHA1 (patch-ksysguard_ksysguard_FreeBSD_cpuinfo.c) = e827d09a853b479294a7771b475
 SHA1 (patch-ksysguard_ksysguard_FreeBSD_uptime.c) = 96169c0c846c7337b65986dc1ce0b1c1b386ff30
 SHA1 (patch-ksysguard_ksysguardd_NetBSD_CPU.c) = 05312793f0c66cacf1bb61c081a8b15e6e7a2619
 SHA1 (patch-ksysguard_ksysguardd_NetBSD_CPU.h) = e682d488c61ca2540ed4b2112c9bffc45bbe5e8d
-SHA1 (patch-ksysguard_ksysguardd_NetBSD_Memory.c) = 9d02eaa299847ac32a128696bb6d35f73bae0551
+SHA1 (patch-ksysguard_ksysguardd_NetBSD_Memory.c) = 38f18a03c1b99fddbbc51fe52fd6e3b66e5d9f13
 SHA1 (patch-ksysguard_ksysguardd_NetBSD_Memory.h) = e58dc4a0a7be7350251f26de34a8949e7508c983
+SHA1 (patch-ksysguard_ksysguardd_NetBSD_ProcessList.c) = 0921fe9569bd54f5e381ebead738b95e431bb1d5
 SHA1 (patch-libs_ksysguard_ksgrd_SensorManager.cpp) = 5fa92fa4876514198813f900f71f3364794b8248
 SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eacb7db79de0ae5eaf80
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
+SHA1 (patch-libs_ksysguard_processcore_processes__netbsd__p.cpp) = 9fa5c51c28537c4b242847d3d54c893d28ddcaf4
 SHA1 (patch-mkpamserv) = 736fc439a34298f51c9fb09200b9dc8628eabc43
 SHA1 (patch-plasma_generic_applets_digital-clock_clock.cpp) = 75f8a7baf99151232e4f29c71da51be61efc6c4a
 SHA1 (patch-plasma_generic_dataengines_rss_CMakeLists.txt) = 6a12cb3cb54a8b1899f29e7f50a1171862dce66e
