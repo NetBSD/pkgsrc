@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/22 06:12:10 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/01/17 16:03:01 joerg Exp $
 
 SHA1 (k3b-1.0.5.tar.bz2) = c45d6f2a36b1bc7ea14101d444149c40fd4b700e
 RMD160 (k3b-1.0.5.tar.bz2) = b562746015cc2e4226652402725b4e69eb846822
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 4f382751e9a7ade09aad6f8d594e76f9e5bfa5d5
 SHA1 (patch-ac) = 38902921193ff0219c1769ffa3b793de6f3f4c0c
 SHA1 (patch-ad) = 895ec31a9a05f0168daba78bcb3ff8969f98637b
 SHA1 (patch-ae) = d5fb26c88710b9cdf14e19aa530f60e429b47941
+SHA1 (patch-src_projects_k3baudioeditorwidget.cpp) = 4f4ca910596b75b656bd844290cd899659feb3cb
