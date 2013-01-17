@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.69 2012/12/17 02:16:03 khorben Exp $
+# $NetBSD: Makefile,v 1.70 2013/01/17 03:51:05 dholland Exp $
 #
 
 COMMENT=	Collections of other packages
 
 SUBDIR+=	boost
+SUBDIR+=	bulk-small
+SUBDIR+=	bulk-medium
+SUBDIR+=	bulk-large
 SUBDIR+=	c++-gnome-bindings
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
