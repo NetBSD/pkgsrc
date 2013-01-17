@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2012/07/05 10:30:58 drochner Exp $
+$NetBSD: patch-ac,v 1.8 2013/01/17 15:55:31 joerg Exp $
 
 --- wmbiff/tlsComm.c.orig	2004-10-11 00:29:47.000000000 +0000
 +++ wmbiff/tlsComm.c
-@@ -385,7 +385,7 @@ int
+@@ -385,16 +385,16 @@ int
  tls_check_certificate(struct connection_state *scs,
  					  const char *remote_hostname)
  {
@@ -11,9 +11,11 @@ $NetBSD: patch-ac,v 1.7 2012/07/05 10:30:58 drochner Exp $
  	const gnutls_datum *cert_list;
  	int cert_list_size = 0;
  	gnutls_x509_crt cert;
-@@ -394,7 +394,7 @@ tls_check_certificate(struct connection_
+ 
+ 	if (gnutls_auth_get_type(scs->tls_state) != GNUTLS_CRD_CERTIFICATE) {
  		bad_certificate(scs, "Unable to get certificate from peer.\n");
- 		return;					/* bad_cert will exit if -skip-certificate-check was not given */
+-		return;					/* bad_cert will exit if -skip-certificate-check was not given */
++		return 0;					/* bad_cert will exit if -skip-certificate-check was not given */
  	}
 -	certstat = gnutls_certificate_verify_peers(scs->tls_state);
 +	verify_ret = gnutls_certificate_verify_peers2(scs->tls_state, &certstat);
