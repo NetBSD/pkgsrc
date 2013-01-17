@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/16 04:45:35 markd Exp $
+$NetBSD: distinfo,v 1.4 2013/01/17 15:56:54 joerg Exp $
 
 SHA1 (superkaramba-4.8.4.tar.xz) = b013e4bd063790e5970cf798f247edb87d576900
 RMD160 (superkaramba-4.8.4.tar.xz) = 635b59dfde50e3f9b18f4428769563dd43c278f8
 Size (superkaramba-4.8.4.tar.xz) = 394084 bytes
+SHA1 (patch-src_sensors_mem.cpp) = b95cf1c87821e0f01828646d4a23d46fa0368a02
