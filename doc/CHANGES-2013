@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.190 2013/01/16 23:13:32 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.191 2013/01/17 03:40:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -262,3 +262,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffmpeg to 20130106.1.1 [adam 2013-01-16]
 	Updated multimedia/ffplay to 1.1 [adam 2013-01-16]
 	Updated www/py-werkzeug to 0.8.3nb1 [kleink 2013-01-16]
+	Updated www/drupal6 to 6.28 [taca 2013-01-17]
+	Updated www/drupal7 to 7.19 [taca 2013-01-17]
