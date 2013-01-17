@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.5 2013/01/15 15:19:05 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/01/17 15:53:38 joerg Exp $
 
 SHA1 (jetpack.tar.Z) = 7898a971eed7a03e9e390c83d0365584f74dabc7
 RMD160 (jetpack.tar.Z) = 2454cef72849f8f644ac6600ad84b3bebd39f8cf
 Size (jetpack.tar.Z) = 70621 bytes
-SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-gameover.c) = SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-main.c) = SHA1 (patch-gameover.c) = SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-message.c) = SHA1 (patch-main.c) = SHA1 (patch-gameover.c) = SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-scores.c) = SHA1 (patch-message.c) = SHA1 (patch-main.c) = SHA1 (patch-gameover.c) = SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-setup.c) = SHA1 (patch-scores.c) = SHA1 (patch-message.c) = SHA1 (patch-main.c) = SHA1 (patch-gameover.c) = SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
-SHA1 (patch-update.c) = SHA1 (patch-setup.c) = SHA1 (patch-scores.c) = SHA1 (patch-message.c) = SHA1 (patch-main.c) = SHA1 (patch-gameover.c) = SHA1 (patch-events.c) = SHA1 (patch-erase.c) = SHA1 (patch-draw.c) = SHA1 (patch-demo.c) = SHA1 (patch-defs.h) = SHA1 (patch-ad) = SHA1 (patch-ac) = SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
+SHA1 (patch-ac) = a9a42e0e6f817a5654deec79731786460ed9b944
+SHA1 (patch-ad) = f64494ec70fade9d203ab8dbc2795b94f9ecb7e7
+SHA1 (patch-defs.h) = bae3d9e3551639dc7f62d115bed4c004047ebe7e
+SHA1 (patch-demo.c) = d7a83753210513a3d711c80299f5dbc4ef510889
+SHA1 (patch-draw.c) = c67b3e6cf3dd74dc484e4b9b40ca1116d0bd7679
+SHA1 (patch-erase.c) = 758b6db7b594d41e44fdf9f6b73a98bc84eae3ad
+SHA1 (patch-events.c) = 99536d8901b26fa5c21513266d95edd0b96838c8
+SHA1 (patch-gameover.c) = 6a04f25c087f2f0efc794d5341408408d5264d01
+SHA1 (patch-main.c) = cd4e545ccdb624118ead3d3f1e27821cd584989c
+SHA1 (patch-message.c) = 0dcdea677e485a5cb4a4f3d9528057e7e1b52b50
+SHA1 (patch-scores.c) = e7f0fd9f6a6c6a28fd21d8e84105250a3dec10e3
+SHA1 (patch-setup.c) = 3572bd0704dab6538a77d8830df2622960345fd3
+SHA1 (patch-update.c) = b82cfbc0955ce40d51904f2885afa809493645fb
