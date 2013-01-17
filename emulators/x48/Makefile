@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 10:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/01/17 15:51:26 joerg Exp $
 #
 
 DISTNAME=	x48_041
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_IMAKE=	YES
 
 INSTALLATION_DIRS+=	share/doc/x48/romdump
+
+CPPFLAGS+=	-DHAVE_STDLIB
 
 post-install:
 	cd ${WRKSRC}/doc && \
