@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/17 03:51:05 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/17 06:05:31 dholland Exp $
 
 DISTNAME=	bulk-large-20130113
 CATEGORIES=	meta-pkgs
@@ -45,7 +45,7 @@ DEPENDS+=	gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
 DEPENDS+=	kdebase3-[0-9]*:../../x11/kdebase3
 DEPENDS+=	kdelibs3-[0-9]*:../../x11/kdelibs3
 DEPENDS+=	kdelibs4-[0-9]*:../../x11/kdelibs4
-DEPENDS+=	py-gtk2-[0-9]*:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	qt3-libs-[0-9]*:../../x11/qt3-libs
 DEPENDS+=	qt3-tools-[0-9]*:../../x11/qt3-tools
 DEPENDS+=	qt4-libs-[0-9]*:../../x11/qt4-libs
@@ -170,4 +170,5 @@ DEPENDS+=	modular-xorg-[0-9]*:../../meta-pkgs/modular-xorg
 DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
 DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
+.include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../mk/bsd.pkg.mk"
