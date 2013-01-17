@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2009/11/10 10:23:15 dogcow Exp $
+$NetBSD: distinfo,v 1.8 2013/01/17 16:00:02 joerg Exp $
 
 SHA1 (xjdic-24.locale.patch) = fdd9a6d12a9c2098c315364ad79fe77527f8b43e
 RMD160 (xjdic-24.locale.patch) = 3a7bd300f44e17f668213dd66dcb2fe3b377ff21
@@ -10,4 +10,7 @@ SHA1 (patch-aa) = 7e3dad15962b0ac69bf25c6f98cbbff8925aed8d
 SHA1 (patch-ab) = 26bfeffcb8d56d99922164410b9ffe98ec5e8412
 SHA1 (patch-ac) = 06e8b8ebace1c12e7dbf944d9d6b34d8f5c9acc8
 SHA1 (patch-ad) = 57cf0f53d498c7c4af9dfa3dbf6fd76c4f3dfa26
-SHA1 (patch-ae) = 62f4b5034607764a4603ae4c285f7f97ce5d0c5a
+SHA1 (patch-ae) = 7a672438936f7b0827bc0e3b55ac9dc0c3a6c9f8
+SHA1 (patch-exjdxgen.c) = 5e6680216435f170716134ec945b22363a15b60a
+SHA1 (patch-xjdfrontend.c) = 87535787a34168b53467214ecbd419b9ff5b9454
+SHA1 (patch-xjdxgen.c) = f83ce54475dc88d363cf7820d235a2e1454c699d

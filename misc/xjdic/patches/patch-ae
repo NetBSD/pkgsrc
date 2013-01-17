@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2006/01/03 16:00:57 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2013/01/17 16:00:02 joerg Exp $
 
---- xjdserver.c.orig	2006-01-03 15:59:16.000000000 +0000
+--- xjdserver.c.orig	2003-05-28 05:58:02.000000000 +0000
 +++ xjdserver.c
 @@ -20,6 +20,7 @@
  
@@ -19,3 +19,15 @@ $NetBSD: patch-ae,v 1.1 2006/01/03 16:00:57 joerg Exp $
  extern unsigned char Dnamet[10][100],XJDXnamet[10][100];
  extern unsigned char *dicbufft[10];
  extern unsigned long diclent[10], indlent[10],indptrt[10];
+@@ -142,10 +141,7 @@ void sendresponse()
+ 
+ /*                  M A I N                                      */
+ 
+-main(argc,argv)
+-int argc;
+-unsigned char **argv;
+-
++main(int argc, char **argv)
+ {
+ 	int iterlimit,i;
+   	unsigned char *dicenv,strtmp[50];
