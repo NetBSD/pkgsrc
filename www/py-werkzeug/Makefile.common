@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/01/17 19:08:08 kleink Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/01/17 19:55:43 kleink Exp $
 
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
@@ -12,8 +12,6 @@ DISTINFO_FILE=	${.CURDIR}/../../www/py-werkzeug/distinfo
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://werkzeug.pocoo.org/
 LICENSE=	modified-bsd
-
-USE_LANGUAGES=	# empty
 
 DOCDIR=		share/doc/${PYPKGPREFIX}-${DISTNAME:tl:C/-[^-]*$//}
 
