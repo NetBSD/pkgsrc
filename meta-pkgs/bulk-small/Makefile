@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/17 03:51:05 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/17 06:05:31 dholland Exp $
 
 DISTNAME=	bulk-small-20130113
 CATEGORIES=	meta-pkgs
@@ -50,11 +50,11 @@ DEPENDS+=	irssi-icb-[0-9]*:../../chat/irssi-icb
 DEPENDS+=	weechat-[0-9]*:../../chat/weechat
 DEPENDS+=	base64-[0-9]*:../../converters/base64
 DEPENDS+=	mpack-[0-9]*:../../converters/mpack
-DEPENDS+=	emacs22-[0-9]*:../../editors/emacs22
+DEPENDS+=	emacs>=22<23:../../editors/emacs22
 DEPENDS+=	nano-[0-9]*:../../editors/nano
 DEPENDS+=	vim-[0-9]*:../../editors/vim
 DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
-DEPENDS+=	mutt-devel-[0-9]*:../../mail/mutt-devel
+DEPENDS+=	mutt>=1.5:../../mail/mutt-devel
 DEPENDS+=	procmail-[0-9]*:../../mail/procmail
 DEPENDS+=	screen-[0-9]*:../../misc/screen
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
@@ -73,7 +73,7 @@ DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	fvwm-[0-9]*:../../wm/fvwm
-DEPENDS+=	apache22-[0-9]*:../../www/apache22
+DEPENDS+=	apache>=2.2:../../www/apache22
 DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
@@ -82,7 +82,7 @@ DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
 # 2. Base packages for the very popular languages that enormous
 # numbers of other packages depend on.
 #
-DEPENDS+=	perl5-[0-9]*:../../lang/perl5
+DEPENDS+=	perl>=5:../../lang/perl5
 DEPENDS+=	python27-[0-9]*:../../lang/python27
 
 #
@@ -102,7 +102,7 @@ DEPENDS+=	gmake-[0-9]*:../../devel/gmake
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 DEPENDS+=	m4-[0-9]*:../../devel/m4
 DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
-DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
+#DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 DEPENDS+=	x11-links-[0-9]*:../../pkgtools/x11-links
 
