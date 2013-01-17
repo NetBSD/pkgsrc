@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/16 15:28:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/01/17 12:43:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/License
 ${GEM_LIBDIR}/README.md
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/lib/rack/protection/base.rb
 ${GEM_LIBDIR}/lib/rack/protection/escaped_params.rb
 ${GEM_LIBDIR}/lib/rack/protection/form_token.rb
 ${GEM_LIBDIR}/lib/rack/protection/frame_options.rb
+${GEM_LIBDIR}/lib/rack/protection/http_origin.rb
 ${GEM_LIBDIR}/lib/rack/protection/ip_spoofing.rb
 ${GEM_LIBDIR}/lib/rack/protection/json_csrf.rb
 ${GEM_LIBDIR}/lib/rack/protection/path_traversal.rb
@@ -23,6 +24,7 @@ ${GEM_LIBDIR}/spec/authenticity_token_spec.rb
 ${GEM_LIBDIR}/spec/escaped_params_spec.rb
 ${GEM_LIBDIR}/spec/form_token_spec.rb
 ${GEM_LIBDIR}/spec/frame_options_spec.rb
+${GEM_LIBDIR}/spec/http_origin_spec.rb
 ${GEM_LIBDIR}/spec/ip_spoofing_spec.rb
 ${GEM_LIBDIR}/spec/json_csrf_spec.rb
 ${GEM_LIBDIR}/spec/path_traversal_spec.rb
