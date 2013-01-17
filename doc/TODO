@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11836 2013/01/16 20:57:38 adam Exp $
+$NetBSD: TODO,v 1.11837 2013/01/17 03:42:13 taca Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
+	o bdftopcf-1.0.4
 	o benchfft-3.1
+	o beforelight-1.0.5
 	o bftpd-3.7
 	o biew-6.1.0
 	o binutils-2.23.1
@@ -737,6 +739,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icc11-13.0
 	o icdprog-0.5
 	o icewm-1.3.7
+	o ico-1.0.4
 	o idutils-4.6
 	o ifile-1.3.8
 	o ike-2.0.1 [pkg/37032]
@@ -809,6 +812,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.8.0
 	o libchamplain08-0.12.3
+	o libdrm-2.4.41
 	o libdvbpsi-1.0.0
 	o libextractor-1.0.0
 	o libflash-0.4.13
@@ -1097,7 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.40
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.0.0
+	o samba-4.0.1
 	o sarg-2.2.5
 	o sawfish-1.9.1
 	o saxon-9.2
@@ -1124,7 +1128,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0.2
-	o showfont-1.0.3 [wip]
+	o showfont-1.0.4 [wip]
 	o sign-1.0.7
 	o simage-1.7.0
 	o simulavr-0.1.2.2
@@ -1162,7 +1166,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.7.7
-	o sudo-1.8.6p3
+	o sudo-1.8.6p4
 	o sun-jdk7-7.0.11
 	o sun-jre7-7.0.11
 	o swatch-3.2.3
@@ -1272,6 +1276,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
+	o xcalc-1.0.5
 	o xchm-1.21
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.4 [unpackaged]
@@ -1362,6 +1367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
+	o xvidtune-1.0.3
 	o xview-3.2.1.4.25.5
 	o xwpe-1.5.30a
 	o xye-0.12.1
