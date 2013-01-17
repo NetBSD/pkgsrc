@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.926 2013/01/14 14:46:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.927 2013/01/17 20:08:16 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -585,6 +585,7 @@ SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webcolors
 SUBDIR+=	py-webpy
 SUBDIR+=	py-werkzeug
+SUBDIR+=	py-werkzeug-docs
 SUBDIR+=	py-wtforms
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
