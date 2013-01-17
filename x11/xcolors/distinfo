@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2008/01/17 07:04:09 tnn Exp $
+$NetBSD: distinfo,v 1.7 2013/01/17 16:06:49 joerg Exp $
 
 SHA1 (xcolors.tar.gz) = 5be585937c0a5076175635bd68366a0d2438c798
 RMD160 (xcolors.tar.gz) = 9b57be44fda3af028120dad1905d4d0723d7ff71
 Size (xcolors.tar.gz) = 6309 bytes
 SHA1 (patch-aa) = 41f1edd7bf36ca6d883eb3091910b2f317a14f2e
+SHA1 (patch-xcolors.c) = 35c745d2ad5ae80294a39075ecf2a2eec9612fd3
