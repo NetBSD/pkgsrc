@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.199 2013/01/18 11:35:17 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.200 2013/01/18 11:39:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -273,3 +273,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask to 0.9nb1 [kleink 2013-01-18]
 	Updated sysutils/xentools41 to 4.1.4 [drochner 2013-01-18]
 	Added devel/gyp version 0.1pre1559 [ryoon 2013-01-18]
+	Added inputmethod/ibus-mozc version 1.6.1187.102 [ryoon 2013-01-18]
+	Added inputmethod/mozc-tool version 1.6.1187.102 [ryoon 2013-01-18]
+	Added inputmethod/mozc-server version 1.6.1187.102 [ryoon 2013-01-18]
