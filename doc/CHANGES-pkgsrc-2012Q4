@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.14 2013/01/17 23:33:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.15 2013/01/18 16:45:01 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -44,3 +44,69 @@ Pullup ticket #4017 - requested by wiz
 security/p5-Digest-SHA: security update
 Pullup ticket #4018 - requested by obache
 print/acroread9: security update
+Pullup ticket #4019 - requested by taca
+databases/ruby-activerecord3: security update
+devel/ruby-activemodel: security update
+devel/ruby-activesupport3: security update
+devel/ruby-railties: security update
+mail/ruby-actionmailer3: security update
+www/ruby-actionpack3: security update
+www/ruby-activeresource3: security update
+www/ruby-rails3: security update
+Pullup ticket #4020 - requested by taca
+databases/ruby-activerecord31: security update
+devel/ruby-activemodel31: security update
+devel/ruby-activesupport31: security update
+devel/ruby-railties31: security update
+mail/ruby-actionmailer31: security update
+www/ruby-actionpack31: security update
+www/ruby-activeresource31: security update
+www/ruby-rails31: security update
+Pullup ticket #4021 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
+Pullup ticket #4022 - requested by taca
+www/ruby-rack: security update
+www/ruby-rack12: security update
+www/ruby-rack13: security update
+Pullup ticket #4023 - requested by taca
+databases/ruby-activerecord3: security update
+devel/ruby-activemodel: security update
+devel/ruby-activesupport3: security update
+devel/ruby-railties: security update
+mail/ruby-actionmailer3: security update
+www/ruby-actionpack3: security update
+www/ruby-activeresource3: security update
+www/ruby-rails3: security update
+Pullup ticket #4024 - requested by taca
+databases/ruby-activerecord31: security update
+devel/ruby-activemodel31: security update
+devel/ruby-activesupport31: security update
+devel/ruby-railties31: security update
+mail/ruby-actionmailer31: security update
+www/ruby-actionpack31: security update
+www/ruby-activeresource31: security update
+www/ruby-rails31: security update
+Pullup ticket #4025 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
+Pullup ticket #4026 - requested by taca
+www/squid31: security update
+Pullup ticket #4027 - requested by taca
+www/drupal6: security update
+Pullup ticket #4028 - requested by taca
+www/drupal7: security update
+Pullup ticket #4029 - requested by drochner
+security/gnupg2: security patch
