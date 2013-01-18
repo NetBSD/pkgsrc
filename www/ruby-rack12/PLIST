@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 14:22:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.10.1 2013/01/18 14:21:08 tron Exp $
 bin/rackup
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -91,6 +91,7 @@ ${GEM_LIBDIR}/test/multipart/none
 ${GEM_LIBDIR}/test/multipart/semicolon
 ${GEM_LIBDIR}/test/multipart/text
 ${GEM_LIBDIR}/test/rackup/config.ru
+${GEM_LIBDIR}/test/spec_auth.rb
 ${GEM_LIBDIR}/test/spec_auth_basic.rb
 ${GEM_LIBDIR}/test/spec_auth_digest.rb
 ${GEM_LIBDIR}/test/spec_builder.rb
