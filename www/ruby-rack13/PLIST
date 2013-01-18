@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/17 16:38:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.8.1 2013/01/18 14:21:09 tron Exp $
 bin/rackup
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -7,6 +7,8 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SPEC
 ${GEM_LIBDIR}/bin/rackup
+${GEM_LIBDIR}/contrib/rack.png
+${GEM_LIBDIR}/contrib/rack.svg
 ${GEM_LIBDIR}/contrib/rack_logo.svg
 ${GEM_LIBDIR}/example/lobster.ru
 ${GEM_LIBDIR}/example/protectedlobster.rb
@@ -21,6 +23,7 @@ ${GEM_LIBDIR}/lib/rack/auth/digest/params.rb
 ${GEM_LIBDIR}/lib/rack/auth/digest/request.rb
 ${GEM_LIBDIR}/lib/rack/backports/uri/common_18.rb
 ${GEM_LIBDIR}/lib/rack/backports/uri/common_192.rb
+${GEM_LIBDIR}/lib/rack/backports/uri/common_193.rb
 ${GEM_LIBDIR}/lib/rack/body_proxy.rb
 ${GEM_LIBDIR}/lib/rack/builder.rb
 ${GEM_LIBDIR}/lib/rack/cascade.rb
@@ -78,6 +81,7 @@ ${GEM_LIBDIR}/rack.gemspec
 ${GEM_LIBDIR}/test/builder/anything.rb
 ${GEM_LIBDIR}/test/builder/comment.ru
 ${GEM_LIBDIR}/test/builder/end.ru
+${GEM_LIBDIR}/test/builder/line.ru
 ${GEM_LIBDIR}/test/builder/options.ru
 ${GEM_LIBDIR}/test/cgi/lighttpd.conf
 ${GEM_LIBDIR}/test/cgi/rackup_stub.rb
@@ -106,6 +110,7 @@ ${GEM_LIBDIR}/test/multipart/text
 ${GEM_LIBDIR}/test/multipart/webkit
 ${GEM_LIBDIR}/test/rackup/config.ru
 ${GEM_LIBDIR}/test/registering_handler/rack/handler/registering_myself.rb
+${GEM_LIBDIR}/test/spec_auth.rb
 ${GEM_LIBDIR}/test/spec_auth_basic.rb
 ${GEM_LIBDIR}/test/spec_auth_digest.rb
 ${GEM_LIBDIR}/test/spec_body_proxy.rb
