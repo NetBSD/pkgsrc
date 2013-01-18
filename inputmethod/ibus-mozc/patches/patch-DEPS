@@ -1,0 +1,14 @@
+$NetBSD: patch-DEPS,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+
+--- DEPS.orig	2012-08-31 05:36:42.000000000 +0000
++++ DEPS
+@@ -91,3 +91,9 @@ deps_os = {
+       Var("clang_helper_in_chromium_revision"),
+   },
+ }
++  "netbsd": {
++    "src/third_party/clang/scripts":
++      "https://src.chromium.org/chrome/trunk/src/tools/clang/scripts@" +
++      Var("clang_helper_in_chromium_revision"),
++  },
++}
