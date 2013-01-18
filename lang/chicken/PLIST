@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2012/10/03 12:12:45 asau Exp $
+@comment $NetBSD: PLIST,v 1.31 2013/01/18 20:56:14 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -60,8 +60,8 @@ share/doc/${PKGNAME}/manual/Deployment.html
 share/doc/${PKGNAME}/manual/Deviations from the standard.html
 share/doc/${PKGNAME}/manual/Embedding.html
 share/doc/${PKGNAME}/manual/Exceptions.html
-share/doc/${PKGNAME}/manual/Extensions.html
 share/doc/${PKGNAME}/manual/Extensions to the standard.html
+share/doc/${PKGNAME}/manual/Extensions.html
 share/doc/${PKGNAME}/manual/Foreign type specifiers.html
 share/doc/${PKGNAME}/manual/Getting started.html
 share/doc/${PKGNAME}/manual/Interface to external functions and variables.html
@@ -75,6 +75,7 @@ share/doc/${PKGNAME}/manual/Parameters.html
 share/doc/${PKGNAME}/manual/Supported language.html
 share/doc/${PKGNAME}/manual/The R5RS standard.html
 share/doc/${PKGNAME}/manual/The User's Manual.html
+share/doc/${PKGNAME}/manual/Types.html
 share/doc/${PKGNAME}/manual/Unit data-structures.html
 share/doc/${PKGNAME}/manual/Unit eval.html
 share/doc/${PKGNAME}/manual/Unit expand.html
