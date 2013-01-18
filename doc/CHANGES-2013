@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.198 2013/01/18 11:29:56 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.199 2013/01/18 11:35:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -272,3 +272,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-werkzeug-docs version 0.8.3 [kleink 2013-01-17]
 	Updated www/py-flask to 0.9nb1 [kleink 2013-01-18]
 	Updated sysutils/xentools41 to 4.1.4 [drochner 2013-01-18]
+	Added devel/gyp version 0.1pre1559 [ryoon 2013-01-18]
