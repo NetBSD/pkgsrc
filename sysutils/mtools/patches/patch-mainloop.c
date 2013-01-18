@@ -1,4 +1,6 @@
-$NetBSD: patch-mainloop.c,v 1.1 2013/01/17 16:03:46 joerg Exp $
+$NetBSD: patch-mainloop.c,v 1.2 2013/01/18 00:34:30 mef Exp $
+
+Fix unused attribute usage.
 
 --- mainloop.c.orig	2013-01-15 16:21:14.000000000 +0000
 +++ mainloop.c
