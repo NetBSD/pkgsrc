@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/01/08 11:04:54 obache Exp $
+$NetBSD: distinfo,v 1.2.8.1 2013/01/18 14:21:08 tron Exp $
 
-SHA1 (rack-1.2.5.gem) = 1a3e54703c9a06ca7d03e69cbb4b4e5c0f8b1fbd
-RMD160 (rack-1.2.5.gem) = b872fb9060693d590dcfa0cf5d6ced2a9e32e21e
-Size (rack-1.2.5.gem) = 140800 bytes
+SHA1 (rack-1.2.7.gem) = 91cb0ea2e5f3ada9a8de14dd4ac87fb9ebebfa37
+RMD160 (rack-1.2.7.gem) = b51be1c0a4a1d7c84106ab4171531c35ee39179f
+Size (rack-1.2.7.gem) = 143872 bytes
