@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/09/16 12:37:51 obache Exp $
+$NetBSD: distinfo,v 1.5 2013/01/19 11:03:17 obache Exp $
 
-SHA1 (testtools-0.9.15.tar.gz) = 985dddc38e0317d6c6f351665e74d57fcb86a1c8
-RMD160 (testtools-0.9.15.tar.gz) = c70c5a3b5fcff1219b8c0a43776a67db79b5633f
-Size (testtools-0.9.15.tar.gz) = 152830 bytes
+SHA1 (testtools-0.9.24.tar.gz) = c7a5d320e04a055ebd34db591cd3742a71caa20f
+RMD160 (testtools-0.9.24.tar.gz) = aac6937dbb80c471de409b971f24eaf59f23fb2c
+Size (testtools-0.9.24.tar.gz) = 162842 bytes
