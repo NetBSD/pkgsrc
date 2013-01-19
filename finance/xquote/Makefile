@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 16:10:14 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/01/19 20:23:34 riastradh Exp $
 
 DISTNAME=		xquote-2.6.10
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		finance x11
 MASTER_SITES=		http://xinvest.sunsite.dk/
 
@@ -15,7 +15,11 @@ NO_INSTALL_MANPAGES=	YES
 # needs a symbol that appeared after 4.9.1
 BUILDLINK_API_DEPENDS.Xbae+=        Xbae>=4.50
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/Xbae/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 
