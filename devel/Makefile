@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1688 2013/01/18 11:33:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.1689 2013/01/19 12:33:57 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1095,6 +1095,7 @@ SUBDIR+=	p5-Sort-Versions
 SUBDIR+=	p5-Spiffy
 SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
+SUBDIR+=	p5-Stream-Buffered
 SUBDIR+=	p5-String-Escape
 SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-String-PerlIdentifier
