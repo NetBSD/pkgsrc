@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2012/11/23 07:17:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.46 2013/01/19 03:43:52 ryoon Exp $
 bin/thunderbird
 include/thunderbird/.mkdir.done
 include/thunderbird/AccEvent.h
@@ -187,6 +187,12 @@ include/thunderbird/inISearchProcess.h
 include/thunderbird/jArray.h
 ${PLIST.jemalloc}include/thunderbird/jemalloc.h
 ${PLIST.jemalloc}include/thunderbird/jemalloc_types.h
+include/thunderbird/jconfig.h
+include/thunderbird/jerror.h
+include/thunderbird/jinclude.h
+include/thunderbird/jmorecfg.h
+include/thunderbird/jpegint.h
+include/thunderbird/jpeglib.h
 include/thunderbird/js-config.h
 include/thunderbird/js.msg
 include/thunderbird/js/HashTable.h
