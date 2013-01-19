@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/07/25 12:01:54 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/01/19 09:59:12 manu Exp $
 libexec/nagios/check_by_ssh
 libexec/nagios/check_clamd
 libexec/nagios/check_dhcp
@@ -11,6 +11,7 @@ libexec/nagios/check_ftp
 libexec/nagios/check_http
 libexec/nagios/check_icmp
 ${PLIST.linux}libexec/nagios/check_ide_smart
+${PLIST.NetBSD}libexec/nagios/check_ide_smart
 libexec/nagios/check_imap
 libexec/nagios/check_ircd
 libexec/nagios/check_jabber
