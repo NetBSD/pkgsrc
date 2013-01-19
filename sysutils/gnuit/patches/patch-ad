@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2013/01/19 21:52:43 reed Exp $
+
+--- term/gnuitrc.cons25.in.orig	2010-01-08 23:43:40.000000000 -0500
++++ term/gnuitrc.cons25.in	2010-01-09 17:27:03.000000000 -0500
+@@ -38,7 +38,7 @@
+ 
+ [Setup]
+ AnsiColors		= ON	# empty means OFF
+-UseLastScreenChar	= OFF	# use the last character on the screen
++UseLastScreenChar	= ON	# use the last character on the screen
+ StartupScrollStep	=	# empty means half the number of lines
+ 
+ 
