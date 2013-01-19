@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2013/01/18 18:29:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2013/01/19 09:25:25 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
@@ -32,14 +32,6 @@ LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/xulrunner -Wl,-rpath,${PREFIX}/lib
 
 .include "mozilla-common.mk"
 .include "options.mk"
-
-# When MACHINAE_ARCH == "arm", linjpeg-turbo should be enabled.
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
-CONFIGURE_ARGS+=	--enable-libjpeg-turbo
-.else
-CONFIGURE_ARGS+=	--diable-libjpeg-turbo
-.endif
 
 PLIST_VARS+=	sps webrtc vorbis tremor
 

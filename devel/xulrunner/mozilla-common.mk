@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.38 2013/01/10 15:01:30 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.39 2013/01/19 09:25:25 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -58,6 +58,14 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+# When MACHINAE_ARCH == "arm", linjpeg-turbo should be enabled.
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
+CONFIGURE_ARGS+=	--enable-libjpeg-turbo
+.else
+CONFIGURE_ARGS+=	--diable-libjpeg-turbo
+.endif
 
 #
 # pysqlite2 is used by xulrunner's Python virtualenv.  If pysqlite2 isn't
