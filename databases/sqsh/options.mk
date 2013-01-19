@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/12/07 23:53:09 tez Exp $
+# $NetBSD: options.mk,v 1.3 2013/01/19 20:27:30 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sqsh
 PKG_SUPPORTED_OPTIONS+=		sybase-openclient
@@ -22,6 +22,16 @@ CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE:Q}
 .if !empty(PKG_OPTIONS:Msqsh-xaw)
 .  include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x
+.endif
+
+###
+### Common dependencies for X GUI support.
+###
+.if !empty(PKG_OPTIONS:Msqsh-motif) || !empty(PKG_OPTIONS:Msqsh-xaw)
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXext/buildlink3.mk"
+.  include "../../x11/libXmu/buildlink3.mk"
+.  include "../../x11/libXt/buildlink3.mk"
 .endif
 
 ###
