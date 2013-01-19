@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2012/12/11 14:57:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.424 2013/01/19 22:51:11 schmonz Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
@@ -16,6 +16,8 @@ DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-enum>=1.016:../../devel/p5-enum
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
 
+BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
@@ -28,7 +30,7 @@ AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
-SUBST_FILES.pkglint+=	pkglint.pl
+SUBST_FILES.pkglint+=	pkglint.pl pkglint.t
 SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
@@ -50,7 +52,10 @@ quick-install:
 	${MAKE} do-extract subst-pkglint do-install selftest clean
 
 do-extract:
-	cd ${FILESDIR} && ${CP} pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC}
+	cd ${FILESDIR} && ${CP} pkglint.0 pkglint.1 pkglint.pl pkglint.t plist-clash.pl ${WRKSRC}
+
+do-test:
+	cd ${WRKSRC} && prove pkglint.t
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${DESTDIR}${PREFIX}/bin/pkglint
