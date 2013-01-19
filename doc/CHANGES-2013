@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.205 2013/01/19 05:26:24 manu Exp $
+$NetBSD: CHANGES-2013,v 1.206 2013/01/19 09:22:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -281,3 +281,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/chicken to 4.8.0.1 [asau 2013-01-18]
 	Updated multimedia/ffmpegthumbnailer to 2.0.8 [wiz 2013-01-19]
 	Updated mail/dovecot to 2.1.13 [manu 2013-01-18]
+	Updated textproc/py-xlrd to 0.8.0 [obache 2013-01-19]
