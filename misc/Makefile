@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.387 2013/01/05 06:51:04 obache Exp $
+# $NetBSD: Makefile,v 1.388 2013/01/19 21:55:25 reed Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -66,7 +66,6 @@ SUBDIR+=	firelib
 SUBDIR+=	gaupol
 SUBDIR+=	gelemental
 SUBDIR+=	getopt
-SUBDIR+=	git
 SUBDIR+=	gkrellm-flynn
 SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-leds
