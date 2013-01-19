@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2012/02/11 13:31:53 shattered Exp $
+@comment $NetBSD: PLIST,v 1.52 2013/01/19 20:34:37 riastradh Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -340,6 +340,7 @@ lib/vlc/plugins/video_filter/libvideo_filter_wrapper_plugin.la
 lib/vlc/plugins/video_filter/libwall_plugin.la
 lib/vlc/plugins/video_filter/libwave_plugin.la
 lib/vlc/plugins/video_filter/libyuvp_plugin.la
+${PLIST.sdl}lib/vlc/plugins/video_output/libvout_sdl_plugin.la
 ${PLIST.x11}lib/vlc/plugins/video_output/libsnapshot_plugin.la
 lib/vlc/plugins/video_output/libvmem_plugin.la
 ${PLIST.sdl}lib/vlc/plugins/video_output/libvout_sdl_plugin.la
