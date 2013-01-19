@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.207 2013/01/19 10:20:39 manu Exp $
+$NetBSD: CHANGES-2013,v 1.208 2013/01/19 10:22:11 manu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffmpegthumbnailer to 2.0.8 [wiz 2013-01-19]
 	Updated mail/dovecot to 2.1.13 [manu 2013-01-19]
 	Updated textproc/py-xlrd to 0.8.0 [obache 2013-01-19]
+	Added net/nagios-plugin-raidctl 0.1 [manu 2013-01-19]
