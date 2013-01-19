@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.209 2013/01/19 10:23:21 manu Exp $
+$NetBSD: CHANGES-2013,v 1.210 2013/01/19 10:24:41 manu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot to 2.1.13 [manu 2013-01-19]
 	Updated textproc/py-xlrd to 0.8.0 [obache 2013-01-19]
 	Added net/nagios-plugin-raidctl version 0.1 [manu 2013-01-19]
+	Added net/nagios-plugin-dumpdates version 0.1 [manu 2013-01-19]
