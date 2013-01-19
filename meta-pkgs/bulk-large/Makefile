@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/17 06:05:31 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/19 09:12:52 dholland Exp $
 
 DISTNAME=	bulk-large-20130113
 CATEGORIES=	meta-pkgs
@@ -42,8 +42,8 @@ DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 DEPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib
 DEPENDS+=	aspell-[0-9]*:../../textproc/aspell
 DEPENDS+=	gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
-DEPENDS+=	kdebase3-[0-9]*:../../x11/kdebase3
-DEPENDS+=	kdelibs3-[0-9]*:../../x11/kdelibs3
+DEPENDS+=	kdebase>=3<4:../../x11/kdebase3
+DEPENDS+=	kdelibs>=3<4:../../x11/kdelibs3
 DEPENDS+=	kdelibs4-[0-9]*:../../x11/kdelibs4
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	qt3-libs-[0-9]*:../../x11/qt3-libs
@@ -54,16 +54,16 @@ DEPENDS+=	qt4-tools-[0-9]*:../../x11/qt4-tools
 #
 # 2. Applications
 #
-DEPENDS+=	konversation-[0-9]*:../../chat/konversation
-DEPENDS+=	konversation-kde3-[0-9]*:../../chat/konversation-kde3
+DEPENDS+=	konversation>=1.4:../../chat/konversation
+DEPENDS+=	konversation>=1.1<1.4:../../chat/konversation-kde3
 DEPENDS+=	asterisk>=11:../../comms/asterisk
 DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
-DEPENDS+=	mysql51-client-[0-9]*:../../databases/mysql51-client
-DEPENDS+=	mysql51-server-[0-9]*:../../databases/mysql51-server
-DEPENDS+=	mysql55-client-[0-9]*:../../databases/mysql55-client
-DEPENDS+=	mysql55-server-[0-9]*:../../databases/mysql55-server
+DEPENDS+=	mysql-client>=5.1<5.5:../../databases/mysql51-client
+DEPENDS+=	mysql-server>=5.1<5.5:../../databases/mysql51-server
+DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
+DEPENDS+=	mysql-server>=5.5:../../databases/mysql55-server
 DEPENDS+=	postgresql84-[0-9]*:../../databases/postgresql84
 DEPENDS+=	postgresql91-[0-9]*:../../databases/postgresql91
 DEPENDS+=	postgresql92-[0-9]*:../../databases/postgresql92
@@ -99,9 +99,9 @@ DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
 DEPENDS+=	clearsilver-[0-9]*:../../www/clearsilver
 DEPENDS+=	mediawiki-[0-9]*:../../www/mediawiki
-DEPENDS+=	ruby-rails3-[0-9]*:../../www/ruby-rails3
-DEPENDS+=	ruby-rails31-[0-9]*:../../www/ruby-rails31
-DEPENDS+=	ruby-rails32-[0-9]*:../../www/ruby-rails32
+DEPENDS+=	${RUBY_PKGPREFIX}-rails3-[0-9]*:../../www/ruby-rails3
+DEPENDS+=	${RUBY_PKGPREFIX}-rails31-[0-9]*:../../www/ruby-rails31
+DEPENDS+=	${RUBY_PKGPREFIX}-rails32-[0-9]*:../../www/ruby-rails32
 
 #
 # 3. Libraries
@@ -117,8 +117,8 @@ DEPENDS+=	mit-krb5-[0-9]*:../../security/mit-krb5
 DEPENDS+=	tex-collection-fontsrecommended-[0-9]*:../../fonts/tex-collection-fontsrecommended
 DEPENDS+=	tex-collection-fontsrecommended-doc-[0-9]*:../../fonts/tex-collection-fontsrecommended-doc
 DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
-DEPENDS+=	teTeX3-bin-[0-9]*:../../print/teTeX3-bin
-DEPENDS+=	teTeX3-texmf-[0-9]*:../../print/teTeX3-texmf
+DEPENDS+=	teTeX-bin>=3:../../print/teTeX3-bin
+DEPENDS+=	teTeX-texmf>=3:../../print/teTeX3-texmf
 DEPENDS+=	tex-collection-basic-[0-9]*:../../print/tex-collection-basic
 DEPENDS+=	tex-collection-basic-doc-[0-9]*:../../print/tex-collection-basic-doc
 DEPENDS+=	tex-collection-documentation-base-doc-[0-9]*:../../print/tex-collection-documentation-base-doc
@@ -136,7 +136,7 @@ DEPENDS+=	gnome-[0-9]*:../../meta-pkgs/gnome
 DEPENDS+=	gnome-admin-[0-9]*:../../meta-pkgs/gnome-admin
 DEPENDS+=	gnome-platform-[0-9]*:../../meta-pkgs/gnome-platform
 DEPENDS+=	gnustep-[0-9]*:../../meta-pkgs/gnustep
-DEPENDS+=	kde3-[0-9]*:../../meta-pkgs/kde3
+DEPENDS+=	kde>=3<4:../../meta-pkgs/kde3
 DEPENDS+=	kde4-[0-9]*:../../meta-pkgs/kde4
 DEPENDS+=	matchbox-[0-9]*:../../meta-pkgs/matchbox
 DEPENDS+=	windowmaker-desktop-[0-9]*:../../meta-pkgs/windowmaker-desktop
@@ -171,4 +171,5 @@ DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
 DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
+.include "../../lang/ruby/rubyversion.mk" # for RUBY_PKGPREFIX
 .include "../../mk/bsd.pkg.mk"
