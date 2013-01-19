@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.215 2013/01/19 12:47:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.216 2013/01/19 17:15:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -289,3 +289,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-Redis to 1.958 [wen 2013-01-19]
 	Added devel/p5-Stream-Buffered version 0.02 [wen 2013-01-19]
 	Updated www/p5-Plack to 1.0015 [wen 2013-01-19]
+	Updated x11/p5-Wx to 0.9916 [schmonz 2013-01-19]
