@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.847 2012/09/15 10:55:15 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.848 2013/01/19 22:51:11 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -8495,4 +8495,4 @@ sub main() {
 	PkgLint::Logging::print_summary_and_exit($opt_quiet);
 }
 
-main();
+main() unless caller();
