@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/19 10:22:11 manu Exp $
+libexec/nagios/check_raidctl
