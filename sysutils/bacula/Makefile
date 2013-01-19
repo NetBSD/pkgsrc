@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2012/12/20 21:42:46 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2013/01/19 20:51:13 riastradh Exp $
 
-#PKGREVISION=		3
+PKGREVISION=		1
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
 
@@ -14,6 +14,9 @@ PLIST_SRC+=		PLIST.server
 PLIST_SUBST+=		BACULA_DB=${BACULA_DB}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
+
+# For make_catalog_backup.pl.in.
+USE_TOOLS+=		perl:run
 
 CONFIGURE_ARGS+=	--with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER}
@@ -35,8 +38,6 @@ CONF_FILES+=		${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
 RCD_SCRIPTS=		bacula bacula-dir bacula-sd bacula-fd
 
 REPLACE_PERL+=		src/cats/make_catalog_backup.pl.in
-
-CHECK_INTERPRETER_SKIP=	libexec/bacula/make_catalog_backup.pl
 
 .include "Makefile.common"
 
