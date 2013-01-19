@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 18:28:33 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/01/19 20:23:34 riastradh Exp $
 
 DISTNAME=	xmbdfed-4.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts graphics x11
 MASTER_SITES=	# ftp://crl.nmsu.edu/CLR/multiling/General/
 
@@ -19,5 +19,6 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xmbdfed.1
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
