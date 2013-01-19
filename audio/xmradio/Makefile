@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/10/02 23:48:16 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/01/19 20:23:34 riastradh Exp $
 
 DISTNAME=	xmradio-1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://core.de/~coto/radio/
 
@@ -23,7 +23,10 @@ INSTALLATION_DIRS=	share/doc/xmradio
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xmradio
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
