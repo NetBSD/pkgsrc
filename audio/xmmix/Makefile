@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/10/02 23:48:14 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/01/19 20:23:34 riastradh Exp $
 
 DISTNAME=	xmmix-1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmmix/1.2.2/src/
 
@@ -18,6 +18,7 @@ pre-configure:
 		${MV} -f $$file.fixed $$file;				\
 	done
 
+.include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 

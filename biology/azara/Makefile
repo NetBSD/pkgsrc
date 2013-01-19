@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/21 17:56:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2013/01/19 20:23:34 riastradh Exp $
 #
 
 DISTNAME=		azara-2.7-src
 PKGNAME=		azara-2.7
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		biology
 MASTER_SITES=		http://www.ccpn.ac.uk/download/azara/
 
@@ -31,5 +31,7 @@ do-install:
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
