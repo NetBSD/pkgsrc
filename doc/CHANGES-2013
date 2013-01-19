@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.212 2013/01/19 11:03:27 obache Exp $
+$NetBSD: CHANGES-2013,v 1.213 2013/01/19 11:55:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -286,3 +286,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/nagios-plugin-dumpdates version 0.1 [manu 2013-01-19]
 	Updated textproc/py-markdown2 to 2.1.0 [obache 2013-01-19]
 	Updated devel/py-testtools to 0.9.24 [obache 2013-01-19]
+	Updated databases/p5-Redis to 1.958 [wen 2013-01-19]
