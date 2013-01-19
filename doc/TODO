@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11839 2013/01/19 10:35:16 obache Exp $
+$NetBSD: TODO,v 1.11840 2013/01/19 11:03:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -1056,7 +1056,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sip-4.14.2
 	o py-sybase-0.37
 	o py-sympy-0.7.2
-	o py-testtools-0.9.24
 	o py-trueskill-0.2.1
 	o py-urwid-1.1.0
 	o qbrew-0.3.9
