@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2013/01/02 02:22:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2013/01/19 20:40:55 riastradh Exp $
 
 DISTNAME=	blender-2.65a
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -24,7 +25,8 @@ FIND_PREFIX:=		SCONSDIR=scons
 INSTALLATION_DIRS=	bin share/blender
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(OS_VERSION:M6.*)
+# This doesn't seem right...
+.if !empty(OS_VERSION:M6.99.*) || !empty(OS_VERSION:M7.*)
 LDFLAGS+=	-lexecinfo
 .endif
 .endif
