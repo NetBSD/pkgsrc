@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/16 20:40:16 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/01/19 22:57:06 schmonz Exp $
 
-SHA1 (Test-Trap-v0.2.1.tar.gz) = 70923189ccdf8cb1e4e1fe9565f7342016e1130f
-RMD160 (Test-Trap-v0.2.1.tar.gz) = 059e9ac642eb1fee31aaa1829b60392fcf64d40f
-Size (Test-Trap-v0.2.1.tar.gz) = 45622 bytes
+SHA1 (Test-Trap-v0.2.2.tar.gz) = 2342990b5a96e751cdcea839efcc79a2f2223f3e
+RMD160 (Test-Trap-v0.2.2.tar.gz) = 01863953e120cb1e3ade08b5d3c88e5ccc1e07fc
+Size (Test-Trap-v0.2.2.tar.gz) = 46055 bytes
