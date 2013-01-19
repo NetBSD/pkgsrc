@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/01/19 09:59:12 manu Exp $
 #
 
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,15 +27,19 @@ CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_dhcp ${SETUID_ROOT_PERMS}
 
-PLIST_VARS+=	linux sunos
+PLIST_VARS+=	linux sunos NetBSD
 .if ${OPSYS} == "Linux"
 PLIST.linux=	yes
 .elif ${OPSYS} == "SunOS"
 PLIST.sunos=	yes
+.elif ${OPSYS} == "NetBSD"
+PLIST.NetBSD=	yes
 .endif
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
+SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_ide_smart \
+		${REAL_ROOT_USER} ${NAGIOS_GROUP} 4551
 .endif
 
 # required to enable large file support on Solaris
