@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2013/01/19 21:52:43 reed Exp $
+
+--- configure.orig	2010-01-09 17:34:34.000000000 -0500
++++ configure	2010-01-09 17:37:54.000000000 -0500
+@@ -31259,6 +31259,7 @@
+     "term/gnuitrc.vt100") CONFIG_FILES="$CONFIG_FILES term/gnuitrc.vt100" ;;
+     "term/gnuitrc.vt102") CONFIG_FILES="$CONFIG_FILES term/gnuitrc.vt102" ;;
+     "term/gnuitrc.xterm") CONFIG_FILES="$CONFIG_FILES term/gnuitrc.xterm" ;;
++    "term/gnuitrc.cons25") CONFIG_FILES="$CONFIG_FILES term/gnuitrc.cons25" ;;
+     "term/gnuitrc.xterm-color") CONFIG_FILES="$CONFIG_FILES term/gnuitrc.xterm-color" ;;
+     "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
+     "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
