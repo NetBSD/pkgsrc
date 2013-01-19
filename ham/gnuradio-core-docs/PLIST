@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/09/02 12:10:20 marino Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/01/19 21:10:24 riastradh Exp $
 share/doc/gnuradio-${PKGVERSION}/README
 share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/doc/gnuradio-${PKGVERSION}/html/ad9862_8h.html
@@ -3797,6 +3797,7 @@ share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2.html
 share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2_1_1impl-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2_1_1impl.html
+share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2_1_1impl.js
 share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2_1_1impl__inherit__graph.map
 share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2_1_1impl__inherit__graph.md5
 share/doc/gnuradio-${PKGVERSION}/html/classusrp2_1_1usrp2_1_1impl__inherit__graph.png
