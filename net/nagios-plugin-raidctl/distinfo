@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/19 10:22:11 manu Exp $
+
+SHA1 (check_raidctl-0.1.tgz) = 24e744b58ab50903b58bd57ee4bd30b6dfa89f48
+RMD160 (check_raidctl-0.1.tgz) = 54d3f9e894e63046a028c923c7e62a23fdc9c2ae
+Size (check_raidctl-0.1.tgz) = 2068 bytes
