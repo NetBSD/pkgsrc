@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/01/19 21:52:43 reed Exp $
+
+SHA1 (gnuit-4.9.5.tar.gz) = 9ee138ca9dd08d3b97d066b2e4c9d2281e49bd0e
+RMD160 (gnuit-4.9.5.tar.gz) = e6d5201ab82c0a7ede7f379b61e65c85ef4b5b81
+Size (gnuit-4.9.5.tar.gz) = 894362 bytes
+SHA1 (patch-ab) = c100730e50684d62f8d5a56d51713b0ae92db5d3
+SHA1 (patch-ac) = 27d6a846f1f82394a52cfe7a62b3cf9e9c1a871f
+SHA1 (patch-ad) = 46b72534415988da0c9524f09f8cd669e3e1477f
