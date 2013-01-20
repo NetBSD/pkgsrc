@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.84 2012/12/05 12:51:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2013/01/20 08:33:13 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.14.1
+SM_VER=		2.15
 LIGHTNINGVER=	1.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
-DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2 \
-		lightning-${LIGHTNINGVER}.source.tar.bz2
-SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
+DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
+#		lightning-${LIGHTNINGVER}.source.tar.bz2
+#SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
 EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2=	${WRKSRC}/lightning
 
 MAINTAINER=	tnn@NetBSD.org
@@ -38,10 +38,10 @@ ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
 BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 .endif
 
-post-extract:
-	cd ${WRKSRC} && ${RM} -r calendar
-	${CP} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
-	${RM} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}
+#post-extract:
+#	cd ${WRKSRC} && ${RM} -r calendar
+#	${CP} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
+#	${RM} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
@@ -49,6 +49,7 @@ pre-configure:
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/ldap/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+	mkdir ${WRKSRC}/mozilla/js/src/.deps
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
