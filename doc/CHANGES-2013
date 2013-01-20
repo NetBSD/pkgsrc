@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.219 2013/01/20 07:11:38 mef Exp $
+$NetBSD: CHANGES-2013,v 1.220 2013/01/20 08:34:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Renamed misc/git to sysutils/gnuit [reed 2013-01-19]
 	Updated devel/p5-Test-Trap to 0.2.2 [schmonz 2013-01-19]
 	Updated wm/fvwm to 2.6.5 [mef 2013-01-20]
+	Updated www/seamonkey to 2.15 [ryoon 2013-01-20]
