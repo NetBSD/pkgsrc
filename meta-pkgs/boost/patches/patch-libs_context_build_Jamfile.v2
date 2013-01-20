@@ -1,9 +1,9 @@
-$NetBSD: patch-libs_context_build_Jamfile.v2,v 1.1 2012/09/20 12:22:27 jperkin Exp $
+$NetBSD: patch-libs_context_build_Jamfile.v2,v 1.2 2013/01/20 09:06:59 martin Exp $
 
-_XOPEN_SOURCE_EXTENDED conflicts with existing _XOPEN_SOURCE definition.
+# add support for SPARC architecture
 
---- libs/context/build/Jamfile.v2.orig	2012-09-20 10:37:02.244099518 +0000
-+++ libs/context/build/Jamfile.v2	2012-09-20 10:38:31.345922902 +0000
+--- ./libs/context/build/Jamfile.v2.orig	2012-11-24 22:52:40.000000000 +0100
++++ ./libs/context/build/Jamfile.v2	2012-11-25 21:20:20.000000000 +0100
 @@ -17,8 +17,7 @@
  project boost/context
      : source-location ../src
@@ -14,3 +14,20 @@ _XOPEN_SOURCE_EXTENDED conflicts with existing _XOPEN_SOURCE definition.
      : usage-requirements
        <link>shared:<define>BOOST_CONTEXT_DYN_LINK=1
      ;
+@@ -427,6 +426,16 @@
+      <target-os>windows
+    ;
+ 
++# SPARC
++alias asm_context_sources
++   : asm/make_sparc_sysv_elf_gas.S
++     asm/jump_sparc_sysv_elf_gas.S
++   : <abi>sysv
++     <architecture>sparc
++     <binary-format>elf
++     <toolset>gcc
++   ;
++
+ explicit asm_context_sources ;
+ 
+ 
