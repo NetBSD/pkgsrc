@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2012/02/29 18:49:40 morr Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/01/20 13:34:54 morr Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
+${PLIST.perl}lib/urxvt/perl/background
 ${PLIST.perl}lib/urxvt/perl/bell-command
 ${PLIST.perl}lib/urxvt/perl/block-graphics-to-ascii
 ${PLIST.perl}lib/urxvt/perl/clipboard-osc
@@ -26,6 +27,30 @@ ${PLIST.perl}lib/urxvt/perl/tabbed
 ${PLIST.perl}lib/urxvt/perl/urxvt-popup
 ${PLIST.perl}lib/urxvt/perl/xim-onthespot
 ${PLIST.perl}lib/urxvt/urxvt.pm
+${PLIST.perl}man/man1/urxvt-background.1
+${PLIST.perl}man/man1/urxvt-bell-command.1
+${PLIST.perl}man/man1/urxvt-block-graphics-to-ascii.1
+${PLIST.perl}man/man1/urxvt-clipboard-osc.1
+${PLIST.perl}man/man1/urxvt-confirm-paste.1
+${PLIST.perl}man/man1/urxvt-digital-clock.1
+${PLIST.perl}man/man1/urxvt-example-refresh-hooks.1
+${PLIST.perl}man/man1/urxvt-extensions.1
+${PLIST.perl}man/man1/urxvt-keysym-list.1
+${PLIST.perl}man/man1/urxvt-kuake.1
+${PLIST.perl}man/man1/urxvt-macosx-clipboard-native.1
+${PLIST.perl}man/man1/urxvt-macosx-clipboard.1
+${PLIST.perl}man/man1/urxvt-matcher.1
+${PLIST.perl}man/man1/urxvt-option-popup.1
+${PLIST.perl}man/man1/urxvt-overlay-osc.1
+${PLIST.perl}man/man1/urxvt-readline.1
+${PLIST.perl}man/man1/urxvt-remote-clipboard.1
+${PLIST.perl}man/man1/urxvt-searchable-scrollback.1
+${PLIST.perl}man/man1/urxvt-selection-autotransform.1
+${PLIST.perl}man/man1/urxvt-selection-pastebin.1
+${PLIST.perl}man/man1/urxvt-selection-popup.1
+${PLIST.perl}man/man1/urxvt-selection.1
+${PLIST.perl}man/man1/urxvt-tabbed.1
+${PLIST.perl}man/man1/urxvt-xim-onthespot.1
 man/man1/urxvt.1
 man/man1/urxvtc.1
 man/man1/urxvtd.1

@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.17 2012/06/28 18:24:08 riastradh Exp $
+$NetBSD: distinfo,v 1.18 2013/01/20 13:34:54 morr Exp $
 
-SHA1 (rxvt-unicode-9.15.tar.bz2) = e6fdf091860ecb458730dc68b0176f67f207a2f7
-RMD160 (rxvt-unicode-9.15.tar.bz2) = 80b33c123edee498f267147b5c2361a81c42f160
-Size (rxvt-unicode-9.15.tar.bz2) = 894764 bytes
-SHA1 (patch-Makefile.in) = 85ee285374d1d0f263c3506363cb5801caeb56f8
-SHA1 (patch-ac) = b421f949628dabe81fdbc8b8e9441526e309b4f4
-SHA1 (patch-configure) = 81480aec100fff239ca075f9e7dc45b1a34d0436
-SHA1 (patch-libecb_ecb.h) = d3ee43509def82b78e5414ff600278e2a927a756
-SHA1 (patch-libev_ev.c) = cc6b575d31ad671e6ce4af02e150697a7b2803d6
+SHA1 (rxvt-unicode-9.16.tar.bz2) = 1b721969d6a6ed0f84529a29cfff0a05aee015ab
+RMD160 (rxvt-unicode-9.16.tar.bz2) = d316e1ba06e9609417e472f74a0541ca8674424c
+Size (rxvt-unicode-9.16.tar.bz2) = 898089 bytes
+SHA1 (patch-Makefile.in) = 1c2890e2057d062f823f944fc2ecd2258f14b61e
+SHA1 (patch-configure) = 20908d8de9bf945144123cf9a65636a8a565931b
+SHA1 (patch-doc_Makefile.in) = 8465193e21878a18ae467dc50a336a65f1bd4de7

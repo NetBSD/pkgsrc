@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2012/10/29 05:06:51 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/01/20 13:34:54 morr Exp $
 
-DISTNAME=		rxvt-unicode-9.15
-PKGREVISION=		4
+DISTNAME=		rxvt-unicode-9.16
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/ \
 			http://dist.schmorp.de/rxvt-unicode/Attic/
@@ -16,6 +15,8 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_FEATURES+=		snprintf
+
+FTPUSERAGENT=		"NetBSD/ftp"
 
 CONFIGURE_ENV+=		ac_cv_path_TIC=no
 
