@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2013/01/12 11:24:43 marino Exp $
+# $NetBSD: Makefile,v 1.23 2013/01/20 06:53:53 mef Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
-PKGREVISION=	5
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/
@@ -12,11 +11,11 @@ HOMEPAGE=	http://www.fvwm.org/
 COMMENT=	Newer version of X11 Virtual window manager
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
+#DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
-CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]*
+CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]* xpmroot-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.4.20
+FVWM_VER=	2.6.5
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
@@ -38,8 +37,8 @@ CONFIGURE_ARGS+=	--with-imagepath=${PREFIX:Q}/lib/X11/fvwm2/pixmaps:${X11BASE:Q}
 
 # We don't want to have CPP from the buildlink directory
 CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}
-
-LDFLAGS.DragonFly+=	-lX11
+# To avoid ${WRKDIR} is included in perl script
+CONFIGURE_ENV+=         ac_cv_path_PERL=${PERL5:Q}
 
 post-extract:
 	mkdir ${WRKDIR:Q}/icons
@@ -56,9 +55,6 @@ post-install:
 	${INSTALL_DATA} \
 		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc \
 		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example
-	${INSTALL_SCRIPT} \
-		${WRKSRC:Q}/utils/fvwmrc_convert \
-		${DESTDIR}${PREFIX:Q}/bin/fvwmrc_convert
 	if [ ! -f ${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ]; then \
 		${INSTALL_DATA} \
 			${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example \
@@ -70,6 +66,10 @@ post-install:
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/readline/buildlink3.mk"
+# DragonFly does not have built-in gettext
+.if ${OPSYS} == "DragonFly"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.endif
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
