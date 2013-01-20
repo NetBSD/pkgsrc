@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2013/01/20 06:53:53 mef Exp $
+Avoid following problem on NetBSD/amd64 6.99.16 with clang
++-----------------
+| conftest.c:38:3: error: non-void function 'main' should return a value [-Wreturn-type]
+|   return;
+|   ^
++-----------------
+
+--- configure.orig	2013-01-15 09:54:13.000000000 +0900
++++ configure	2013-01-15 10:04:58.000000000 +0900
+@@ -6492,7 +6492,7 @@ int i; static j; int *p; char *c;
+   switch (*p = p = *c) { case 0: printf("%Q", c, p); }
+   *c = &i; c = p;
+   while (1 || (unsigned int)3 >= 0 || ((int)-1) == ((unsigned int)1));
+-  return;
++  return -1;
+   ;
+   return 0;
+ }
