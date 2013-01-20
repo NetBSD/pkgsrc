@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2012/11/07 21:04:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/01/20 09:19:38 martin Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -967,6 +967,7 @@ include/boost/context/detail/fcontext_mips.hpp
 include/boost/context/detail/fcontext_ppc.hpp
 include/boost/context/detail/fcontext_x86_64.hpp
 include/boost/context/detail/fcontext_x86_64_win.hpp
+include/boost/context/detail/fcontext_sparc.hpp
 include/boost/context/fcontext.hpp
 include/boost/context/guarded_stack_allocator.hpp
 include/boost/context/simple_stack_allocator.hpp
