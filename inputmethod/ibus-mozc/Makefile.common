@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/01/18 11:36:39 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/01/20 08:28:36 ryoon Exp $
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
 #
@@ -45,6 +45,9 @@ SUBST_FILES.gyp+=	base/const.h
 SUBST_FILES.gyp+=	build_mozc.py
 SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
 SUBST_VARS.gyp+=	PREFIX QTDIR
+
+# To disable flock(1) in link stage.
+ALL_ENVS+=	LINK=${CXX}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD"
