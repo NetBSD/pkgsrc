@@ -1,9 +1,18 @@
-$NetBSD: patch-ab,v 1.3 2013/01/20 06:53:53 mef Exp $
+$NetBSD: patch-ab,v 1.4 2013/01/20 07:09:29 mef Exp $
 
+(1) 
 Convert install path from fvwm to fvwm2
 This can not be done with 
 CONFIGURE_ARGS+=        --datarootdir=${PREFIX:Q}/share/fvwm2
 this will install fvwm2/fvwm.
+
+(2)
+Avoid following problem on NetBSD/amd64 6.99.16 with clang
++-----------------
+| conftest.c:38:3: error: non-void function 'main' should return a value [-Wreturn-type]
+|   return;
+|   ^
++-----------------
 
 --- configure.orig	2013-01-06 10:03:11.000000000 +0900
 +++ configure	2013-01-06 10:08:01.000000000 +0900
@@ -16,3 +25,12 @@ this will install fvwm2/fvwm.
   VERSION=${version}
  
  
+@@ -6492,7 +6492,7 @@ int i; static j; int *p; char *c;
+   switch (*p = p = *c) { case 0: printf("%Q", c, p); }
+   *c = &i; c = p;
+   while (1 || (unsigned int)3 >= 0 || ((int)-1) == ((unsigned int)1));
+-  return;
++  return -1;
+   ;
+   return 0;
+ }
