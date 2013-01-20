@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/20 03:35:46 mspo Exp $
 #
 
 VERS=		0.8.1-4.04
@@ -8,10 +8,10 @@ CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyev/
 USE_LANGUAGES+=	c
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/packages/source/p/pyev/
-COMMENT=	python interface to libev
-LICENSE=	BSD
+COMMENT=	Python interface to libev
+LICENSE=	modified-bsd
 PYDISTUTILSPKG=	yes
 
 .include "../../devel/libev/buildlink3.mk"
