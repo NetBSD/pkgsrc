@@ -1,12 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2012/02/29 19:24:12 morr Exp $
+$NetBSD: patch-configure,v 1.2 2013/01/20 13:38:20 morr Exp $
 
---- configure.orig	2012-01-21 12:36:50.000000000 +0000
+Don't use predefined CXXFLAGS.
+
+--- configure.orig	2012-12-27 10:57:25.000000000 +0000
 +++ configure
-@@ -4452,33 +4452,6 @@ rm -f core conftest.err conftest.$ac_obj
- fi
+@@ -4474,32 +4474,6 @@ fi
  LINKER=$LINKER
  
--
+ 
 -if test -z "$orig_CXXFLAGS"; then
 -  if test x$GCC = xyes && test "x$GXX" = xyes; then
 -    CXXFLAGS="-g -O3 -fno-rtti -fvisibility-inlines-hidden -fno-threadsafe-statics -fno-enforce-eh-specs"
@@ -35,4 +36,4 @@ $NetBSD: patch-configure,v 1.1 2012/02/29 19:24:12 morr Exp $
 -
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing setlocale" >&5
  $as_echo_n "checking for library containing setlocale... " >&6; }
- if test "${ac_cv_search_setlocale+set}" = set; then :
+ if ${ac_cv_search_setlocale+:} false; then :

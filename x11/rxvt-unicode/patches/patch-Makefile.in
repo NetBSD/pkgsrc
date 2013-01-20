@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.2 2012/06/28 18:24:08 riastradh Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2013/01/20 13:38:20 morr Exp $
 
 Mark the `install' target as phony so that the file named `INSTALL'
 will not confuse make on case-insensitive file systems such as HFS+ on
@@ -6,7 +6,7 @@ Mac OS X.  Upstream rejected:
 
 http://lists.schmorp.de/pipermail/rxvt-unicode/2010q2/001185.html
 
---- Makefile.in.orig	2011-12-28 02:31:26.000000000 +0000
+--- Makefile.in.orig	2012-11-06 20:54:10.000000000 +0000
 +++ Makefile.in
 @@ -33,6 +33,8 @@ RECURSIVE_TARGETS = all allbin alldoc ta
  
