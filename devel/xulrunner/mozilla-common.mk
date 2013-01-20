@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.39 2013/01/19 09:25:25 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.40 2013/01/20 11:25:24 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -100,7 +100,7 @@ PREFER.bzip2?=	pkgsrc
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.12.1
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
