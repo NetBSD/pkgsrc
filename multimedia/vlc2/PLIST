@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/17 12:07:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/20 15:31:42 drochner Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -116,6 +116,7 @@ lib/vlc/plugins/access/libdvdnav_plugin.la
 lib/vlc/plugins/access/libdvdread_plugin.la
 lib/vlc/plugins/access/libfilesystem_plugin.la
 lib/vlc/plugins/access/libidummy_plugin.la
+${PLIST.pulseaudio}lib/vlc/plugins/access/libpulsesrc_plugin.la
 lib/vlc/plugins/access/librtp_plugin.la
 lib/vlc/plugins/access/libsdp_plugin.la
 lib/vlc/plugins/access/libstream_filter_rar_plugin.la
@@ -274,6 +275,7 @@ lib/vlc/plugins/packetizer/libpacketizer_vc1_plugin.la
 lib/vlc/plugins/plugins.dat
 lib/vlc/plugins/services_discovery/libmediadirs_plugin.la
 lib/vlc/plugins/services_discovery/libpodcast_plugin.la
+${PLIST.pulseaudio}lib/vlc/plugins/services_discovery/libpulselist_plugin.la
 lib/vlc/plugins/services_discovery/libsap_plugin.la
 lib/vlc/plugins/services_discovery/libupnp_plugin.la
 ${PLIST.x11}lib/vlc/plugins/services_discovery/libxcb_apps_plugin.la
