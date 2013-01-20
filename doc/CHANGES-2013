@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.223 2013/01/20 09:49:51 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.224 2013/01/20 10:58:44 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ja-trac to 1.0pl1 [obache 2013-01-20]
 	Updated fonts/sourcecodepro-fonts to 1.017 [ryoon 2013-01-20]
 	Updated fonts/vlgothic-ttf to 20121230 [ryoon 2013-01-20]
+	Updated chat/bitlbee to 3.2 [tonio 2013-01-20]

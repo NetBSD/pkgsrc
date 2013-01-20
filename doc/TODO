@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11841 2013/01/20 07:11:38 mef Exp $
+$NetBSD: TODO,v 1.11842 2013/01/20 10:58:44 tonio Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o biew-6.1.0
 	o binutils-2.23.1
 	o bioperl-1.5.0
-	o bitlbee-3.2
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
