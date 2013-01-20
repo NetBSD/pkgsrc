@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11840 2013/01/19 11:03:27 obache Exp $
+$NetBSD: TODO,v 1.11841 2013/01/20 07:11:38 mef Exp $
 
 Suggested new packages
 ======================
@@ -603,7 +603,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fuse-archivemount-0.6.1
 	o fuse-encfs-1.5.2
 	o fuse-ntfs-3g-2012.1.15
-	o fvwm-2.6.5 [pkg/47409]
 	o fvwm2-themes-0.7.0
 	o galculator-2.0.1
 	o gallery3-3.0.2
