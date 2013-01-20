@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/01/17 06:05:31 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/20 21:47:28 dholland Exp $
 
-DISTNAME=	bulk-small-20130113
+DISTNAME=	bulk-small-20130120
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -71,6 +71,7 @@ DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
+DEPENDS+=	icewm-[0-9]*:../../wm/icewm
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	fvwm-[0-9]*:../../wm/fvwm
 DEPENDS+=	apache>=2.2:../../www/apache22
