@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.848 2013/01/19 22:51:11 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.849 2013/01/20 02:57:36 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1326,6 +1326,8 @@ my (@options) = (
 	  } ],
 );
 
+our $program		= $0;
+
 #
 # Commonly used regular expressions.
 #
@@ -1454,7 +1456,7 @@ my @todo_items;			# The list of directory entries that still need
 
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
-	my ($prog) = (basename($0));
+	my ($prog) = (basename($program, '.pl'));
 	print $out ("usage: $prog [options] [package_directory]\n\n");
 
 	my (@option_table) = ();
@@ -1684,9 +1686,9 @@ sub get_vartypes_basictypes() {
 		return $get_vartypes_basictypes_result;
 	}
 
-	my $lines = load_file($0);
+	my $lines = load_file($program);
 	my $types = {};
-	assert($lines, "Couldn't load pkglint.pl from $0");
+	assert($lines, "Couldn't load pkglint.pl from $program");
 	foreach my $line (@$lines) {
 		if ($line->text =~ m"^\s+\} elsif \(\$type eq \"(\w+)\"\) \{$") {
 			$types->{$1} = 1;
