@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/14 19:49:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/01/20 18:34:18 jakllsch Exp $
 bin/darktable
 bin/darktable-cli
 bin/darktable-cltest
@@ -123,18 +123,6 @@ share/darktable/js/lightbox-web.js
 share/darktable/js/lightbox.js
 share/darktable/js/prototype.js
 share/darktable/js/scriptaculous.js
-share/darktable/kernels/atrous.cl
-share/darktable/kernels/basic.cl
-share/darktable/kernels/bilateral.cl
-share/darktable/kernels/blendop.cl
-share/darktable/kernels/demosaic_ppg.cl
-share/darktable/kernels/extended.cl
-share/darktable/kernels/gaussian.cl
-share/darktable/kernels/highpass.cl
-share/darktable/kernels/nlmeans.cl
-share/darktable/kernels/programs.conf
-share/darktable/kernels/sharpen.cl
-share/darktable/kernels/soften.cl
 share/darktable/latex/photobook.cls
 share/darktable/pixmaps/dt_logo_128x128.png
 share/darktable/pixmaps/idbutton.png
