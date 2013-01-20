@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.224 2013/01/20 10:58:44 tonio Exp $
+$NetBSD: CHANGES-2013,v 1.225 2013/01/20 11:19:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -298,3 +298,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/sourcecodepro-fonts to 1.017 [ryoon 2013-01-20]
 	Updated fonts/vlgothic-ttf to 20121230 [ryoon 2013-01-20]
 	Updated chat/bitlbee to 3.2 [tonio 2013-01-20]
+	Updated devel/xulrunner to 18.0.1 [ryoon 2013-01-20]
+	Updated www/firefox to 18.0.1 [ryoon 2013-01-20]
