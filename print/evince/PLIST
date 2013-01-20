@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2011/01/18 10:08:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.32 2013/01/20 00:52:18 riastradh Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -56,9 +56,11 @@ lib/evince/3/backends/libcomicsdocument.la
 ${PLIST.djvu}lib/evince/3/backends/libdjvudocument.la
 ${PLIST.dvi}lib/evince/3/backends/libdvidocument.la
 lib/evince/3/backends/libpdfdocument.la
+${PLIST.gdk-pixbuf}lib/evince/3/backends/libpixbufdocument.la
 lib/evince/3/backends/libpsdocument.la
 lib/evince/3/backends/libtiffdocument.la
 lib/evince/3/backends/pdfdocument.evince-backend
+${PLIST.gdk-pixbuf}lib/evince/3/backends/pixbufdocument.evince-backend
 lib/evince/3/backends/psdocument.evince-backend
 lib/evince/3/backends/tiffdocument.evince-backend
 lib/libevdocument.la
@@ -66,11 +68,11 @@ lib/libevview.la
 lib/pkgconfig/evince-document-2.32.pc
 lib/pkgconfig/evince-view-2.32.pc
 libexec/evince-convert-metadata
-libexec/evinced
+${PLIST.dbus}libexec/evinced
 man/man1/evince.1
 share/GConf/gsettings/evince.convert
 share/applications/evince.desktop
-share/dbus-1/services/org.gnome.evince.Daemon.service
+${PLIST.dbus}share/dbus-1/services/org.gnome.evince.Daemon.service
 share/evince/evince-previewer-ui.xml
 share/evince/evince-toolbar.xml
 share/evince/evince-ui.xml
@@ -114,11 +116,11 @@ share/evince/icons/hicolor/48x48/actions/view-page-facing.png
 share/evince/icons/hicolor/scalable/actions/object-rotate-left.svg
 share/evince/icons/hicolor/scalable/actions/object-rotate-right.svg
 share/evince/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
-share/gconf/schemas/evince-thumbnailer-comics.schemas
-${PLIST.djvu}share/gconf/schemas/evince-thumbnailer-djvu.schemas
-${PLIST.dvi}share/gconf/schemas/evince-thumbnailer-dvi.schemas
-share/gconf/schemas/evince-thumbnailer-ps.schemas
-share/gconf/schemas/evince-thumbnailer.schemas
+${PLIST.gconf}share/gconf/schemas/evince-thumbnailer-comics.schemas
+${PLIST.gconf}${PLIST.djvu}share/gconf/schemas/evince-thumbnailer-djvu.schemas
+${PLIST.gconf}${PLIST.dvi}share/gconf/schemas/evince-thumbnailer-dvi.schemas
+${PLIST.gconf}share/gconf/schemas/evince-thumbnailer-ps.schemas
+${PLIST.gconf}share/gconf/schemas/evince-thumbnailer.schemas
 share/glib-2.0/schemas/org.gnome.Evince.gschema.xml
 share/gnome/help/evince/C/evince.xml
 share/gnome/help/evince/C/figures/evince_start_window.png
