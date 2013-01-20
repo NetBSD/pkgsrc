@@ -1,10 +1,10 @@
-$NetBSD: patch-mm,v 1.12 2013/01/07 21:55:30 ryoon Exp $
+$NetBSD: patch-mm,v 1.13 2013/01/20 08:33:13 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2012-11-18 10:19:52.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2013-01-06 06:26:32.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -371,14 +371,11 @@ endif
+@@ -409,14 +409,11 @@ endif
+ endif
  
- EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib) 
  
 -ifdef MOZ_SYDNEYAUDIO
 -ifeq ($(OS_ARCH),Linux)
