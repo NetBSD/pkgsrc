@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.218 2013/01/19 22:57:28 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.219 2013/01/20 07:11:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -292,3 +292,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/p5-Wx to 0.9916 [schmonz 2013-01-19]
 	Renamed misc/git to sysutils/gnuit [reed 2013-01-19]
 	Updated devel/p5-Test-Trap to 0.2.2 [schmonz 2013-01-19]
+	Updated wm/fvwm to 2.6.5 [mef 2013-01-20]
