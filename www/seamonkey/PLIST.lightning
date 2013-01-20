@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.7 2012/11/23 17:28:48 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.8 2013/01/20 08:33:13 ryoon Exp $
 include/seamonkey/calBaseCID.h
 include/seamonkey/calIAlarm.h
 include/seamonkey/calIAlarmService.h
@@ -34,7 +34,6 @@ include/seamonkey/calIOperation.h
 include/seamonkey/calIPeriod.h
 include/seamonkey/calIPrintFormatter.h
 include/seamonkey/calIRecurrenceDate.h
-include/seamonkey/calIRecurrenceDateSet.h
 include/seamonkey/calIRecurrenceInfo.h
 include/seamonkey/calIRecurrenceItem.h
 include/seamonkey/calIRecurrenceRule.h
@@ -58,6 +57,7 @@ lib/seamonkey/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezone
 lib/seamonkey/extensions/calendar-timezones@mozilla.org/defaults/preferences/preferences.js
 lib/seamonkey/extensions/calendar-timezones@mozilla.org/install.rdf
 lib/seamonkey/extensions/calendar-timezones@mozilla.org/timezones.sqlite
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceDate.js
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome.manifest
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.dtd
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.properties
@@ -418,7 +418,6 @@ share/idl/seamonkey/calIOperation.idl
 share/idl/seamonkey/calIPeriod.idl
 share/idl/seamonkey/calIPrintFormatter.idl
 share/idl/seamonkey/calIRecurrenceDate.idl
-share/idl/seamonkey/calIRecurrenceDateSet.idl
 share/idl/seamonkey/calIRecurrenceInfo.idl
 share/idl/seamonkey/calIRecurrenceItem.idl
 share/idl/seamonkey/calIRecurrenceRule.idl
