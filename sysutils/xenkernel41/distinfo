@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.13 2013/01/17 19:37:54 drochner Exp $
+$NetBSD: distinfo,v 1.14 2013/01/20 15:21:54 drochner Exp $
 
 SHA1 (xen-4.1.4.tar.gz) = d5f1e9c9eeb96202dd827c196750530ffc64baab
 RMD160 (xen-4.1.4.tar.gz) = e3cb379954c985354dfd7dfbed15eae43e73254d
 Size (xen-4.1.4.tar.gz) = 10387283 bytes
 SHA1 (patch-CVE-2012-5511_2) = a345d28d4a6dcc4bf203243f49d66b5479fdbf14
 SHA1 (patch-CVE-2012-5634) = 2992ee4972ec733a80fa3841d12a70a9076625c0
-SHA1 (patch-CVE-2012-6075) = e368374468526a6ceee03fe15a5ee35aca28cc6e
 SHA1 (patch-xen_drivers_char_console_c) = 0fe186369602ccffaeec6f4bfbee8bb4298d3ff0
 SHA1 (patch-xen_include_xen_stdarg.h) = e9df974a9b783ed442ab17497198432cb9844b70
