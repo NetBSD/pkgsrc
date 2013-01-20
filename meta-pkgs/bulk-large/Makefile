@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/01/19 09:12:52 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/20 21:59:01 dholland Exp $
 
 DISTNAME=	bulk-large-20130113
 CATEGORIES=	meta-pkgs
@@ -99,9 +99,9 @@ DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
 DEPENDS+=	clearsilver-[0-9]*:../../www/clearsilver
 DEPENDS+=	mediawiki-[0-9]*:../../www/mediawiki
-DEPENDS+=	${RUBY_PKGPREFIX}-rails3-[0-9]*:../../www/ruby-rails3
-DEPENDS+=	${RUBY_PKGPREFIX}-rails31-[0-9]*:../../www/ruby-rails31
-DEPENDS+=	${RUBY_PKGPREFIX}-rails32-[0-9]*:../../www/ruby-rails32
+DEPENDS+=	${RUBY_PKGPREFIX}-rails>=3.0<3.1:../../www/ruby-rails3
+DEPENDS+=	${RUBY_PKGPREFIX}-rails>=3.1<3.2:../../www/ruby-rails31
+DEPENDS+=	${RUBY_PKGPREFIX}-rails>=3.2:../../www/ruby-rails32
 
 #
 # 3. Libraries
