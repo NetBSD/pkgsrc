@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/19 12:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/01/21 11:49:18 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-0
 PKGREVISION=	3
@@ -24,8 +24,6 @@ do-patch:
 	for f in ${PATCHDIR}/patch-*; do				\
 		${PATCH} --batch < "$$f" || ${TRUE};			\
 	done
-
-BUILDLINK_API_DEPENDS.python25+=	python25>=2.5.2nb2
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/extension.mk"
