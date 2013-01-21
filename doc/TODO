@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11848 2013/01/21 13:13:17 wiz Exp $
+$NetBSD: TODO,v 1.11849 2013/01/21 13:15:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1066,7 +1066,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8.1
 	o rdp-1.6
-	o redland-1.0.16
 	o remind-3.1.12
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
