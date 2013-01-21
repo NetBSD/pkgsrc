@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:50 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/21 14:01:45 wiz Exp $
 #
 
-DISTNAME=		rgb-1.0.4
+DISTNAME=		rgb-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
