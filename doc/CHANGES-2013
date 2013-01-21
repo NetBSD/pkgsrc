@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.244 2013/01/21 13:18:40 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.245 2013/01/21 13:19:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -328,3 +328,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ico to 1.0.4 [wiz 2013-01-21]
 	Updated x11/viewres to 1.0.4 [wiz 2013-01-21]
 	Updated x11/xcalc to 1.0.5 [wiz 2013-01-21]
+	Updated x11/xconsole to 1.0.5 [wiz 2013-01-21]
