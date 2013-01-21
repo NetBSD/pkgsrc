@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.231 2013/01/20 21:48:27 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.232 2013/01/21 05:20:23 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -313,3 +313,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/darktable to 1.1.2 [jakllsch 2013-01-20]
 	Updated audio/opus-tools to 0.1.6 [ryoon 2013-01-20]
 	Updated meta-pkgs/bulk-small to 20130120 [dholland 2013-01-20]
+	Updated games/craft to 3.5nb3 [dholland 2013-01-21]
