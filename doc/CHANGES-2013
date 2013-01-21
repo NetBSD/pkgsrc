@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.240 2013/01/21 13:15:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.241 2013/01/21 13:16:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -324,3 +324,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/cdrtools to 3.01alpha11 [wiz 2013-01-21]
 	Updated misc/dialog to 1.2.20121230 [wiz 2013-01-21]
 	Updated textproc/redland to 1.0.16 [wiz 2013-01-21]
+	Updated textproc/enca to 1.14 [wiz 2013-01-21]
