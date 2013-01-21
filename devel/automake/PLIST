@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/04/26 20:41:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/01/21 13:51:23 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -13,16 +13,16 @@ share/aclocal-${PKG_DIR_VERSION}/amversion.m4
 share/aclocal-${PKG_DIR_VERSION}/ar-lib.m4
 share/aclocal-${PKG_DIR_VERSION}/as.m4
 share/aclocal-${PKG_DIR_VERSION}/auxdir.m4
-share/aclocal-${PKG_DIR_VERSION}/ccstdc.m4
 share/aclocal-${PKG_DIR_VERSION}/cond-if.m4
 share/aclocal-${PKG_DIR_VERSION}/cond.m4
 share/aclocal-${PKG_DIR_VERSION}/depend.m4
 share/aclocal-${PKG_DIR_VERSION}/depout.m4
 share/aclocal-${PKG_DIR_VERSION}/dmalloc.m4
+share/aclocal-${PKG_DIR_VERSION}/extra-recurs.m4
 share/aclocal-${PKG_DIR_VERSION}/gcj.m4
-share/aclocal-${PKG_DIR_VERSION}/header.m4
 share/aclocal-${PKG_DIR_VERSION}/init.m4
 share/aclocal-${PKG_DIR_VERSION}/install-sh.m4
+share/aclocal-${PKG_DIR_VERSION}/internal/ac-config-macro-dirs.m4
 share/aclocal-${PKG_DIR_VERSION}/lead-dot.m4
 share/aclocal-${PKG_DIR_VERSION}/lex.m4
 share/aclocal-${PKG_DIR_VERSION}/lispdir.m4
@@ -31,11 +31,8 @@ share/aclocal-${PKG_DIR_VERSION}/make.m4
 share/aclocal-${PKG_DIR_VERSION}/minuso.m4
 share/aclocal-${PKG_DIR_VERSION}/missing.m4
 share/aclocal-${PKG_DIR_VERSION}/mkdirp.m4
-share/aclocal-${PKG_DIR_VERSION}/obsol-gt.m4
-share/aclocal-${PKG_DIR_VERSION}/obsol-lt.m4
-share/aclocal-${PKG_DIR_VERSION}/obsolete.m4
+share/aclocal-${PKG_DIR_VERSION}/obsolete-err.m4
 share/aclocal-${PKG_DIR_VERSION}/options.m4
-share/aclocal-${PKG_DIR_VERSION}/protos.m4
 share/aclocal-${PKG_DIR_VERSION}/python.m4
 share/aclocal-${PKG_DIR_VERSION}/runlog.m4
 share/aclocal-${PKG_DIR_VERSION}/sanity.m4
@@ -112,7 +109,6 @@ share/automake-${PKG_DIR_VERSION}/compile
 share/automake-${PKG_DIR_VERSION}/config.guess
 share/automake-${PKG_DIR_VERSION}/config.sub
 share/automake-${PKG_DIR_VERSION}/depcomp
-share/automake-${PKG_DIR_VERSION}/elisp-comp
 share/automake-${PKG_DIR_VERSION}/install-sh
 share/automake-${PKG_DIR_VERSION}/mdate-sh
 share/automake-${PKG_DIR_VERSION}/missing
