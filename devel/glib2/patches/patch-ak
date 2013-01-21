@@ -1,7 +1,18 @@
-$NetBSD: patch-ak,v 1.13 2012/10/06 20:44:05 prlw1 Exp $
+$NetBSD: patch-ak,v 1.14 2013/01/21 15:54:24 wiz Exp $
 
---- configure.ac.orig	2012-09-25 07:35:55.000000000 +0000
+First chunk: automake-1.13 compat.
+
+--- configure.ac.orig	2013-01-21 15:53:29.000000000 +0000
 +++ configure.ac
+@@ -291,7 +291,7 @@ AC_TRY_COMPILE(,[class a { int b; } c;],
+ AM_CONDITIONAL(HAVE_CXX, [test "$CXX" != ""])
+ AC_LANG_RESTORE
+ 
+-AM_PROG_CC_STDC
++AC_PROG_CC
+ AM_PROG_CC_C_O
+ AC_PROG_INSTALL
+ 
 @@ -864,7 +864,7 @@ int main (int argc, char **argv)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])
@@ -125,7 +136,7 @@ $NetBSD: patch-ak,v 1.13 2012/10/06 20:44:05 prlw1 Exp $
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -2010,22 +2056,8 @@ AS_IF([ test x"$have_threads" = xposix],
+@@ -2021,22 +2067,8 @@ AS_IF([ test x"$have_threads" = xposix],
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
@@ -150,7 +161,7 @@ $NetBSD: patch-ak,v 1.13 2012/10/06 20:44:05 prlw1 Exp $
         ;;
    esac
  ])
-@@ -2311,6 +2343,7 @@ case $host in
+@@ -2322,6 +2354,7 @@ case $host in
      ;;
    *-*-openbsd*)
      LDFLAGS="$LDFLAGS -pthread"
