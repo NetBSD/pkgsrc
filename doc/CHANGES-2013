@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.246 2013/01/21 13:20:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.247 2013/01/21 13:20:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xcalc to 1.0.5 [wiz 2013-01-21]
 	Updated x11/xconsole to 1.0.5 [wiz 2013-01-21]
 	Updated x11/xmag to 1.0.5 [wiz 2013-01-21]
+	Updated x11/xmessage to 1.0.4 [wiz 2013-01-21]
