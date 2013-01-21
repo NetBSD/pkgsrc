@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/06/03 17:38:31 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/01/21 13:26:47 wiz Exp $
 
-SHA1 (libXcomposite-0.4.3.tar.bz2) = 081b26b556d55e20d7956c80a2ea2854962aecec
-RMD160 (libXcomposite-0.4.3.tar.bz2) = dfeb17e6fc7d48e82655c22d9c98ce79be192d76
-Size (libXcomposite-0.4.3.tar.bz2) = 246715 bytes
+SHA1 (libXcomposite-0.4.4.tar.bz2) = 75fd0b996e56e12db1d84e9b63549c5c3f2631ca
+RMD160 (libXcomposite-0.4.4.tar.bz2) = eb648bea6e2850ced618e95f1e49bd32b139efe8
+Size (libXcomposite-0.4.4.tar.bz2) = 283746 bytes

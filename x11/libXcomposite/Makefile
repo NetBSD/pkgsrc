@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:34 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/21 13:26:46 wiz Exp $
 #
 
-DISTNAME=		libXcomposite-0.4.3
+DISTNAME=		libXcomposite-0.4.4
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
