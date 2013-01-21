@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.15 2013/01/18 16:45:01 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.16 2013/01/21 16:11:15 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -110,3 +110,7 @@ Pullup ticket #4028 - requested by taca
 www/drupal7: security update
 Pullup ticket #4029 - requested by drochner
 security/gnupg2: security patch
+Pullup ticket #4030 - requested by dholland
+multimedia/ffmpegthumbnailer: build fix update
+Pullup ticket #4031 - requested by dholland
+devel/opal: build fix patch
