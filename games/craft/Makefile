@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.28 2012/10/06 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/01/21 00:07:31 dholland Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
 PKGREVISION=	2
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://set.gmd.de/pub/as/janus/craft/
+MASTER_SITES=	http://ibiblio.org/pub/linux/games/strategy/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://set.gmd.de/~hua/
+# Gone as of 20130120, no obvious replacement
+#HOMEPAGE=	http://set.gmd.de/~hua/
 COMMENT=	Warcraft-like game for X11
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
 USE_X11BASE=	yes
+
+# Note for reference that there's a craftdoc.tar.Z that can also be
+# downloaded; the only thing it contains that isn't in the main
+# distfile is a few unreferenced images.
 
 SUBST_CLASSES+=		craft
 SUBST_STAGE.craft=	pre-configure
