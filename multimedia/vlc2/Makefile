@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/12/17 12:07:01 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2013/01/21 16:25:21 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -19,6 +19,8 @@ CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config \
 			autoconf automake autoreconf
+# for autopoint
+BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
@@ -73,7 +75,7 @@ INSTALLATION_DIRS+=	share/vlc/http/dialogs share/vlc/http/images \
 			share/vlc/skins2/fonts \
 			${PKGMANDIR}/man1
 pre-configure:
-	cd ${WRKSRC} && autoreconf -f
+	cd ${WRKSRC} && autoreconf -if
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
