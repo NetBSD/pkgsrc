@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.234 2013/01/21 12:44:02 taca Exp $
+$NetBSD: CHANGES-2013,v 1.235 2013/01/21 12:53:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -317,3 +317,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql51-client to 5.1.67 [adam 2013-01-21]
 	Updated databases/mysql51-server to 5.1.67 [adam 2013-01-21]
 	Updated databases/phpldapadmin to 1.2.2nb1 [taca 2013-01-21]
+	Updated emulators/mame to 0.148 [wiz 2013-01-21]
+	Updated emulators/mess to 0.148 [wiz 2013-01-21]
