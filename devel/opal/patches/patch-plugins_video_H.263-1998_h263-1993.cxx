@@ -1,8 +1,27 @@
-$NetBSD: patch-plugins_video_H.263-1998_h263-1993.cxx,v 1.1 2011/12/04 22:06:04 marino Exp $
+$NetBSD: patch-plugins_video_H.263-1998_h263-1993.cxx,v 1.1.12.1 2013/01/21 16:10:22 tron Exp $
 
---- plugins/video/H.263-1998/h263-1998.cxx.orig	2011-12-04 20:11:24.617287000 +0000
+--- plugins/video/H.263-1998/h263-1998.cxx.orig	2009-09-22 00:57:52.000000000 +0000
 +++ plugins/video/H.263-1998/h263-1998.cxx
-@@ -688,7 +688,7 @@ int H263_RFC2190_EncoderContext::EncodeF
+@@ -364,9 +364,6 @@ void H263_Base_EncoderContext::SetTSTO (
+   _context->qmax = round ( (31.0 - H263P_MIN_QUANT) / 31.0 * tsto + H263P_MIN_QUANT);
+   _context->qmax = std::min( _context->qmax, 31);
+ 
+-  _context->mb_qmin = _context->qmin;
+-  _context->mb_qmax = _context->qmax;
+-
+   // Lagrange multipliers - this is how the context defaults do it:
+   _context->lmin = _context->qmin * FF_QP2LAMBDA;
+   _context->lmax = _context->qmax * FF_QP2LAMBDA; 
+@@ -478,8 +475,6 @@ bool H263_Base_EncoderContext::OpenCodec
+   CODEC_TRACER(tracer, "GOP is " << _context->gop_size);
+   CODEC_TRACER(tracer, "qmin set to " << _context->qmin);
+   CODEC_TRACER(tracer, "qmax set to " << _context->qmax);
+-  CODEC_TRACER(tracer, "mb_qmin set to " << _context->mb_qmin);
+-  CODEC_TRACER(tracer, "mb_qmax set to " << _context->mb_qmax);
+   CODEC_TRACER(tracer, "bit_rate set to " << _context->bit_rate);
+   CODEC_TRACER(tracer, "bit_rate_tolerance set to " <<_context->bit_rate_tolerance);
+   CODEC_TRACER(tracer, "rc_min_rate set to " << _context->rc_min_rate);
+@@ -688,7 +683,7 @@ int H263_RFC2190_EncoderContext::EncodeF
  
    _inputFrame->data[1] = _inputFrame->data[0] + size;
    _inputFrame->data[2] = _inputFrame->data[1] + (size / 4);
@@ -11,7 +30,7 @@ $NetBSD: patch-plugins_video_H.263-1998_h263-1993.cxx,v 1.1 2011/12/04 22:06:04 
  
    currentMb = 0;
    currentBytes = 0;
-@@ -885,7 +885,7 @@ int H263_RFC2429_EncoderContext::EncodeF
+@@ -885,7 +880,7 @@ int H263_RFC2429_EncoderContext::EncodeF
    _inputFrame->data[0] = _inputFrameBuffer + FF_INPUT_BUFFER_PADDING_SIZE;
    _inputFrame->data[1] = _inputFrame->data[0] + size;
    _inputFrame->data[2] = _inputFrame->data[1] + (size / 4);
