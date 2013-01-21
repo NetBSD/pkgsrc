@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.256 2013/01/21 13:54:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.257 2013/01/21 13:59:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -340,3 +340,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/automake to 1.13.1 [wiz 2013-01-21]
 	Updated devel/ccache to 3.1.9 [wiz 2013-01-21]
 	Updated fonts/harfbuzz to 0.9.12 [wiz 2013-01-21]
+	Updated x11/libXi to 1.6.2 [wiz 2013-01-21]
