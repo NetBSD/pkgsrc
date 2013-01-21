@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/01/21 05:19:45 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2013/01/21 06:56:38 dholland Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ibiblio.org/pub/linux/games/strategy/
 EXTRACT_SUFX=	.tar.Z
 
 PATCHFILES=	craft-jumbo-patch-20130120.gz
-PATCHSITES=	http://www.NetBSD.org/~dholland/patchkits/craft/
+PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/craft/
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
