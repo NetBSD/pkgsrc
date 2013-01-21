@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.232 2013/01/21 05:20:23 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.233 2013/01/21 09:00:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -314,3 +314,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/opus-tools to 0.1.6 [ryoon 2013-01-20]
 	Updated meta-pkgs/bulk-small to 20130120 [dholland 2013-01-20]
 	Updated games/craft to 3.5nb3 [dholland 2013-01-21]
+	Updated databases/mysql51-client to 5.1.67 [adam 2013-01-21]
+	Updated databases/mysql51-server to 5.1.67 [adam 2013-01-21]
