@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2012/10/03 12:55:15 asau Exp $
+# $NetBSD: Makefile.common,v 1.8 2013/01/21 12:53:16 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -36,10 +36,14 @@ MAKE_FLAGS+=	BIGENDIAN=true
 
 SUBST_CLASSES+=		exe
 SUBST_SED.exe=		-e 's,$$(PREFIX)$$(PREFIXSDL)$$(NAME)$$(SUFFIX)$$(SUFFIX64)$$(SUFFIXDEBUG)$$(SUFFIXPROFILE),$$(PREFIXSDL)$$(NAME)$$(SUFFIX)$$(SUFFIXDEBUG)$$(SUFFIXPROFILE),'
+SUBST_SED.exe+=		-e 's,PYTHON = .python,PYTHON = ${PYTHONBIN},'
 SUBST_FILES.exe=	makefile
 SUBST_STAGE.exe=	post-patch
 SUBST_MESSAGE.exe=	Fixing executable name.
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
+.include "../../lang/python/application.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
