@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2012/12/16 01:52:35 obache Exp $
+# $NetBSD: Makefile,v 1.22 2013/01/21 13:15:26 wiz Exp $
 
-DISTNAME=	redland-1.0.15
-PKGREVISION=	3
+DISTNAME=	redland-1.0.16
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
@@ -36,11 +35,9 @@ CONFIGURE_ENV+=		ac_cv_path_IODBC_CONFIG=no
 
 PKGCONFIG_OVERRIDE+=	redland.pc.in
 
-post-install:
-	${RMDIR} ${DESTDIR}${PREFIX}/lib/redland
-
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.raptor2+=	raptor2>=2.0.7
 .include "../../textproc/raptor2/buildlink3.mk"
 .include "../../textproc/rasqal/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
