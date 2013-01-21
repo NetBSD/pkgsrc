@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/12/16 01:52:11 obache Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2013/01/21 16:10:22 tron Exp $
 #
 
 DISTNAME=		opal-3.6.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel net comms
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/opal/3.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -60,6 +60,6 @@ BUILDLINK_API_DEPENDS.gsm+=	gsm>=1.0.12
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/ptlib/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
