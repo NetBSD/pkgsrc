@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.238 2013/01/21 13:11:16 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.239 2013/01/21 13:13:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -322,3 +322,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/editres to 1.0.6 [wiz 2013-01-21]
 	Updated x11/xterm to 288 [wiz 2013-01-21]
 	Updated sysutils/cdrtools to 3.01alpha11 [wiz 2013-01-21]
+	Updated misc/dialog to 1.2.20121230 [wiz 2013-01-21]
