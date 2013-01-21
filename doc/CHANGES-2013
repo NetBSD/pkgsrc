@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.258 2013/01/21 14:01:53 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.259 2013/01/21 14:15:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -342,3 +342,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/harfbuzz to 0.9.12 [wiz 2013-01-21]
 	Updated x11/libXi to 1.6.2 [wiz 2013-01-21]
 	Updated x11/rgb to 1.0.5 [wiz 2013-01-21]
+	Updated graphics/cairo to 1.12.10 [wiz 2013-01-21]
