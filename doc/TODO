@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11862 2013/01/21 13:40:20 wiz Exp $
+$NetBSD: TODO,v 1.11863 2013/01/21 13:44:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -376,6 +376,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alsa-lib-1.0.26
 	o alsa-plugins-1.0.26
 	o alsa-utils-1.0.26
+	o amarok-2.7
 	o amavis-perl-0.3.12 [called just amavis]
 	o amsn-0.98.4
 	o angband-3.2
@@ -441,6 +442,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bugzilla-3.6
 	o byacc-20121003
 	o c4-1.10 [schmonz]
+	o cairo-1.12.10
+	o cairo-gobject-1.12.10
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calligra-2.4.3 [in wip; koffice successor]
@@ -457,6 +460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cfengine-3.3.8 [pkg/47249]
 	o cfengine-3.4.0
 	o cfitsio-3.310
+	o cgicc-3.2.10
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.6.2
 	o chkrootkit-0.49
@@ -489,7 +493,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ctwm-3.8.1
 	o cups-1.6.1
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsps-3.7
+	o cvsps-3.9
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
@@ -516,6 +520,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o doclifter-2.9
+	o doxygen-1.8.3.1
 	o dpkg-1.16.9 [pkg/47234]
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
@@ -575,6 +580,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
+	o ffmpeg-20130120.1.1.1
 	o file-5.12
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -680,7 +686,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsim-0.26.1
 	o gramofile-1.6P
 	o granulate-0.2
-	o graphviz-2.28.0
+	o graphviz-2.30.0
 	o grhino-0.16.1
 	o groff-1.22.1
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
@@ -709,6 +715,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
+	o harfbuzz-0.9.12
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o help2man-1.41.1
@@ -794,12 +801,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lftp-4.4.0
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
+	o libXi-1.6.2
 	o libarchive-3.0.4
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.8.0
 	o libchamplain08-0.12.3
-	o libdrm-2.4.41
+	o libdrm-2.4.41 [tarball missing man/*, wait for fix]
 	o libdvbpsi-1.0.0
 	o libextractor-1.0.0
 	o libflash-0.4.13
@@ -820,6 +828,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmemcached-1.0.15
 	o libmms-0.6.2
 	o libmilter-8.14.5
+	o libmp3splt-0.8
 	o libmtp-1.1.5
 	o libnasl-2.3.1
 	o libnice-0.1.3
@@ -880,7 +889,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
 	o mksh-40f
-	o mkvtoolnix-5.9.0
+	o mkvtoolnix-6.0.0
 	o mnemosyne-2.2
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
@@ -892,7 +901,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.6.0
 	o mp3diags-1.0.11
-	o mp3splt-2.4.3
+	o mp3splt-2.5
 	o mp3splt-gtk-0.7.3
 	o mpeg4ip-1.6.1
 	o mpg123-1.14.4
@@ -917,7 +926,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netatalk-3.0.1
 	o netcdf-4.2.1.1
 	o netramet-50
-	o nettle-2.5
+	o nettle-2.6
 	o newmail-1.0.2
 	o newt-0.52.12
 	o nginx-1.2.4
@@ -1021,13 +1030,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-3.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9737
+	o puzzles-9751
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
-	o py-anki2-2.0.4
+	o py-anki2-2.0.5
 	o py-cairo-1.10.0
 	o py-carddav-0.4
 	o py-cython-0.17.4
@@ -1036,7 +1045,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-qt4-4.9.6
-	o py-simplejson-3.0.5
+	o py-simplejson-3.0.7
 	o py-sip-4.14.2
 	o py-sybase-0.37
 	o py-sympy-0.7.2
@@ -1061,6 +1070,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o remind-3.1.12
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
+	o rgb-1.0.5
 	o rhythmbox-0.13.3
 	o riece-7.0.1 [pkg/43970]
 	o rio500-0.8.1
@@ -1091,7 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scilab-5.5.3
 	o scm-5e7
 	o scmcvs-1.12.13
-	o scribus-1.4.1
+	o scribus-1.4.2
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scrotwm-0.11.0
@@ -1237,10 +1247,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webkit-gtk3-1.10.1
 	o webmin-1.610
 	o websvn-2.3.2
+	o weechat-0.4.0
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.5.21 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.5.22 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1251,6 +1262,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
+	o x264-devel-20130119
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
@@ -1267,7 +1279,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xerces-j-2.9.0
 	o xf86-input-keyboard-1.6.2
 	o xf86-input-mouse-1.8.1 [needs modular-xorg-server-1.7+]
-	o xf86-input-vmmouse-12.9.0
+	o xf86-input-vmmouse-13.0.0
 	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.5
 	o xf86-video-ark-0.7.5
@@ -1281,7 +1293,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-glint-1.2.8
 	o xf86-video-i128-1.3.6
 	o xf86-video-i740-1.3.4
-	o xf86-video-intel-2.20.17
+	o xf86-video-intel-2.20.19
 	o xf86-video-mach64-6.9.4
 	o xf86-video-mga-1.6.2
 	o xf86-video-neomagic-1.2.7
@@ -1302,7 +1314,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-trident-1.3.6
 	o xf86-video-tseng-1.2.5
 	o xf86-video-vesa-2.3.2
-	o xf86-video-vmware-12.0.2
+	o xf86-video-vmware-13.0.0
 	o xf86-video-voodoo-1.2.4
 	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
