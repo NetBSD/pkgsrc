@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 20:58:20 joerg Exp $
+$NetBSD: distinfo,v 1.2 2013/01/21 13:25:59 wiz Exp $
 
-SHA1 (libXTrap-1.0.0.tar.bz2) = 3ed2d68e7bfcb065cd6e9d6b1e38044f2fb355c9
-RMD160 (libXTrap-1.0.0.tar.bz2) = 64be36fe42857079a6059895a24148edf0b4bfb2
-Size (libXTrap-1.0.0.tar.bz2) = 220148 bytes
+SHA1 (libXTrap-1.0.1.tar.bz2) = 40850a53d916730720b8b32e9ebd5969f66115bf
+RMD160 (libXTrap-1.0.1.tar.bz2) = efd57663d5d032f7ae3230be963b1c1931e4b8ea
+Size (libXTrap-1.0.1.tar.bz2) = 269484 bytes
