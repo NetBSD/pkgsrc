@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.263 2013/01/21 14:41:35 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.264 2013/01/21 14:50:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -348,3 +348,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/Transmission-gui to 2.76 [wiz 2013-01-21]
 	Updated misc/py-anki2 to 2.0.5 [wiz 2013-01-21]
 	Updated multimedia/libdvbpsi to 1.0.0 [wiz 2013-01-21]
+	Updated multimedia/ffmpeg to 20130120.1.1.1 [wiz 2013-01-21]
