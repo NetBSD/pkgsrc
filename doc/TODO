@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11849 2013/01/21 13:15:34 wiz Exp $
+$NetBSD: TODO,v 1.11850 2013/01/21 13:16:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
-	o enca-1.14
 	o enlightenment-1.0.9
 	o enscript-1.6.6
 	o eog-3.6.2
