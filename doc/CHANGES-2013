@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.260 2013/01/21 14:16:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.261 2013/01/21 14:21:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -344,3 +344,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/rgb to 1.0.5 [wiz 2013-01-21]
 	Updated graphics/cairo to 1.12.10 [wiz 2013-01-21]
 	Updated graphics/cairo-gobject to 1.12.10 [wiz 2013-01-21]
+	Updated net/Transmission to 2.76 [wiz 2013-01-21]
+	Updated net/Transmission-gui to 2.76 [wiz 2013-01-21]
