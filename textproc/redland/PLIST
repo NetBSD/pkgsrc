@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/19 09:40:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/01/21 13:15:26 wiz Exp $
 bin/rdfproc
 bin/redland-config
 bin/redland-db-upgrade
@@ -39,6 +39,8 @@ share/gtk-doc/html/redland/objects.html
 share/gtk-doc/html/redland/redland-changes-1-0-12-to-1-0-13.html
 share/gtk-doc/html/redland/redland-changes-1-0-13-to-1-0-14.html
 share/gtk-doc/html/redland/redland-changes-1-0-14-to-1-0-15.html
+share/gtk-doc/html/redland/redland-changes-1-0-15-to-1-0-16.html
+share/gtk-doc/html/redland/redland-changes-1-0-16-to-1-0-16.html
 share/gtk-doc/html/redland/redland-changes.html
 share/gtk-doc/html/redland/redland-concepts.html
 share/gtk-doc/html/redland/redland-digest.html
