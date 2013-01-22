@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.270 2013/01/22 11:41:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.271 2013/01/22 11:46:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -355,3 +355,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed multimedia/vlc08 [wiz 2013-01-22]
 	Updated audio/cd-discid to 1.3.1 [jperkin 2013-01-22]
 	Removed multimedia/vls [wiz 2013-01-22]
+	Added multimedia/libdvbpsi0 version 0.2.2 [wiz 2013-01-22]
