@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/01/22 11:46:38 wiz Exp $
+
+automake-1.13 compat.
+
+--- configure.ac.orig	2011-12-20 15:24:09.000000000 +0000
++++ configure.ac
+@@ -24,7 +24,7 @@ AC_CANONICAL_HOST
+ AC_PRESERVE_HELP_ORDER
+ 
+ AM_INIT_AUTOMAKE(tar-ustar)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADER(config.h)
+ 
+ # Disable with "./configure --disable-silent-rules" or "make V=1"
+ m4_ifdef([AM_SILENT_RULES], [
