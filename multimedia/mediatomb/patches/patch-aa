@@ -1,11 +1,23 @@
-$NetBSD: patch-aa,v 1.4 2012/09/25 11:45:11 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2013/01/22 09:36:08 wiz Exp $
 
+First chunk: automake-1.13 compat.
+
+Rest:
 Avoid dependence on "liblwres". Based on this patch for "pupnp":
 
 http://pupnp.git.sourceforge.net/git/gitweb.cgi?p=pupnp/pupnp;a=commitdiff;h=5151d4520308f59c71764423c3853a35cf23e279#patch9
 
 --- configure.ac.orig	2010-04-07 22:38:51.000000000 +0000
 +++ configure.ac
+@@ -30,7 +30,7 @@
+ 
+ AC_PREREQ(2.61)
+ AC_INIT([MediaTomb], [0.12.1], [jin@mediatomb.cc])
+-AM_CONFIG_HEADER([autoconfig.h tombupnp/upnp/inc/upnpconfig.h])
++AC_CONFIG_HEADER([autoconfig.h tombupnp/upnp/inc/upnpconfig.h])
+ AC_CONFIG_AUX_DIR(configure_aux)
+ AC_CONFIG_SRCDIR([src/common.h])
+ AM_INIT_AUTOMAKE([1.9 -Wall])
 @@ -696,20 +696,23 @@ fi
  
  AC_CHECK_FUNCS([gethostbyname_r],[],
