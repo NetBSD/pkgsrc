@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/18 11:36:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/22 11:28:11 ryoon Exp $
 #
 
 PKGNAME=	ibus-${DISTNAME}
@@ -10,7 +10,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c Release -j ${MAKE_JOBS} \
+		${PYTHONBIN} build_mozc.py build -c Release ${_MAKE_JOBS} \
 			unix/ibus/ibus.gyp:ibus_mozc
 
 do-install:
