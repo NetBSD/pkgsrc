@@ -1,11 +1,21 @@
-$NetBSD: patch-configure,v 1.1.1.1 2011/01/24 18:45:54 drochner Exp $
+$NetBSD: patch-configure,v 1.2 2013/01/22 11:46:24 wiz Exp $
 
-First chunk: http://trac.videolan.org/vlc/ticket/3762
-Second chunk: http://trac.videolan.org/vlc/ticket/3761
+First chunk: automake-1.13 compat.
+Second chunk: http://trac.videolan.org/vlc/ticket/3762
+Third chunk: http://trac.videolan.org/vlc/ticket/3761
 
---- configure.ac.orig	2009-09-19 21:30:21.000000000 +0200
+--- configure.ac.orig	2010-04-18 13:03:54.000000000 +0000
 +++ configure.ac
-@@ -572,7 +572,7 @@ AC_CHECK_FUNCS(fdatasync,,
+@@ -23,7 +23,7 @@ AC_CANONICAL_BUILD
+ AC_CANONICAL_HOST
+ 
+ AM_INIT_AUTOMAKE(tar-ustar)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADER(config.h)
+ 
+ dnl Too many people are not aware of maintainer mode:
+ dnl If you want to use it, you definitely know what you are doing, so
+@@ -575,7 +575,7 @@ AC_CHECK_FUNCS(fdatasync,,
  ])
  
  dnl Check for non-standard system calls
@@ -14,7 +24,7 @@ Second chunk: http://trac.videolan.org/vlc/ticket/3761
  
  AH_BOTTOM([#include <vlc_fixups.h>])
  
-@@ -2498,7 +2498,7 @@ then
+@@ -2525,7 +2525,7 @@ then
    fi
  
    CPPFLAGS="${CPPFLAGS_save} ${CPPFLAGS_v4l2}"
