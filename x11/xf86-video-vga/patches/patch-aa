@@ -1,10 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2009/06/09 08:18:39 hasso Exp $
+$NetBSD: patch-aa,v 1.2 2013/01/22 09:34:19 wiz Exp $
 
+First chunk: automake-1.13 compat
+Rest:
 http://cgit.freedesktop.org/xorg/driver/xf86-video-vga/commit/?id=97e2d125
 http://cgit.freedesktop.org/xorg/driver/xf86-video-vga/commit/?id=a0d4a475
 
---- configure.ac.orig	2006-04-08 00:48:23 +0300
-+++ configure.ac	2009-06-09 10:27:54 +0300
+--- configure.ac.orig	2006-04-07 21:48:23.000000000 +0000
++++ configure.ac
+@@ -27,7 +27,7 @@ AC_INIT([xf86-video-vga],
+         xf86-video-vga)
+ 
+ AC_CONFIG_SRCDIR([Makefile.am])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADER([config.h])
+ AC_CONFIG_AUX_DIR(.)
+ 
+ AM_INIT_AUTOMAKE([dist-bzip2])
 @@ -57,6 +57,30 @@ PKG_CHECK_MODULES(XORG, [xorg-server >= 
  sdkdir=$(pkg-config --variable=sdkdir xorg-server)
  
