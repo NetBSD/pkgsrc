@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/01/22 11:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/01/22 12:21:38 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -82,7 +82,7 @@ INSTALLATION_DIRS+=	share/vlc/http/dialogs share/vlc/http/images \
 			share/vlc/skins2 share/vlc/skins2/fonts \
 			${PKGMANDIR}/man1
 pre-configure:
-	cd ${WRKSRC} && autoreconf -f
+	cd ${WRKSRC} && autoreconf -fi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
