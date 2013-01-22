@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/01/22 12:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/01/22 12:22:41 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -19,6 +19,8 @@ CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config \
 			autoconf automake autoreconf
+# for autopoint
+BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
