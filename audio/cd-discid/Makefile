@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/01/21 22:24:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/22 10:42:06 jperkin Exp $
 
-DISTNAME=	cd-discid_0.9.orig
-PKGNAME=	cd-discid-0.9
-PKGREVISION=	1
+DISTNAME=	cd-discid-1.3.1
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
+MASTER_SITES=	http://linukz.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Read CD to obtain CDDB discid information
