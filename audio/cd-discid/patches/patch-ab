@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2013/01/22 10:42:06 jperkin Exp $
+
+- Use raw device on OSX.
+
+--- cd-discid.1.orig	2013-01-22 10:38:34.000000000 +0000
++++ cd-discid.1	2013-01-22 10:38:40.000000000 +0000
+@@ -33,7 +33,7 @@
+ OpenBSD and NetBSD
+ .IP \fI/dev/vol/aliases/cdrom0\fP
+ Solaris
+-.IP \fI/dev/disk1\fP
++.IP \fI/dev/rdisk1\fP
+ MacOS X
+ .IP \fI/dev/cd0\fP
+ Hurd
