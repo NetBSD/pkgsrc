@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/01/06 15:16:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/22 11:27:22 ryoon Exp $
 #
 
 DISTNAME=	supertuxkart-0.8-src
@@ -38,11 +38,11 @@ SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
 # for irrlicht debugging
 #pre-build:
 #	cd ${WRKSRC}/lib/irrlicht/source/Irrlicht && \
-#		${MAKE_ENV} DEBUG=1 make -j ${MAKE_JOBS}
+#		${MAKE_ENV} DEBUG=1 make ${_MAKE_JOBS}
 
 pre-build:
 	cd ${WRKSRC}/lib/irrlicht/source/Irrlicht && \
-		${MAKE_ENV} NDEBUG=1 make -j ${MAKE_JOBS}
+		${MAKE_ENV} NDEBUG=1 make ${_MAKE_JOBS}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
