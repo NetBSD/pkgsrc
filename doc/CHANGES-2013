@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.275 2013/01/22 15:33:08 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.276 2013/01/22 22:12:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -357,3 +357,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added multimedia/libdvbpsi0 version 0.2.2 [wiz 2013-01-22]
 	Removed multimedia/vlc10 [wiz 2013-01-22]
 	Updated lang/coq to 8.4pl1 [jaapb 2013-01-22]
+	Updated devel/gnome-common to 3.6.0nb1 [wiz 2013-01-22]
