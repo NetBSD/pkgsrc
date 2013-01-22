@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.40 2013/01/20 11:25:24 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.41 2013/01/22 10:38:46 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -107,6 +107,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
+BUILDLINK_API_DEPENDS.nss+=nss>=	3.14.1
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 ## xulrunner-18.0 or later really requires libjpeg-turbo
