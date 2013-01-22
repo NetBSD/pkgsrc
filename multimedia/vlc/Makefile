@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2013/01/19 20:34:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.147 2013/01/22 11:46:23 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -20,6 +20,8 @@ CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config \
 			autoconf automake autoreconf
+# for autopoint
+BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
@@ -75,7 +77,7 @@ INSTALLATION_DIRS+=	share/vlc/http/dialogs share/vlc/http/images \
 			share/vlc/skins2/fonts \
 			${PKGMANDIR}/man1
 pre-configure:
-	cd ${WRKSRC} && autoreconf -f
+	cd ${WRKSRC} && autoreconf -fi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -132,7 +134,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 
 .include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
-.include "../../multimedia/libdvbpsi/buildlink3.mk"
+.include "../../multimedia/libdvbpsi0/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
