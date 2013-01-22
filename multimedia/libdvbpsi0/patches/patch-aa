@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2013/01/22 11:45:57 wiz Exp $
+
+--- examples/connect.c.orig	2011-05-19 13:04:02.000000000 +0000
++++ examples/connect.c
+@@ -38,7 +38,7 @@
+ #   include <netinet/if_ether.h>
+ #endif
+ #include <netdb.h>
+-#ifndef BSD
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+ #    include <netinet/ip.h>
+ #endif
+ #include <netinet/udp.h>
