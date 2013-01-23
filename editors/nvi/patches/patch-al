@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-al,v 1.2 2013/01/23 17:26:07 wiz Exp $
 
---- ../common/options_f.c.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../common/options_f.c
+--- common/options_f.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ common/options_f.c
 @@ -60,7 +60,7 @@ f_columns(SCR *sp, OPTION *op, char *str
  	 * number of lines/columns for the screen, but at least we don't drop
  	 * core.
