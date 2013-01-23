@@ -1,8 +1,22 @@
-# $NetBSD: Makefile.common,v 1.17 2011/02/28 14:52:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2013/01/23 18:52:24 wiz Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
+#
+# used by ham/gnuradio-audio-jack/Makefile
+# used by ham/gnuradio-audio-oss/Makefile
+# used by ham/gnuradio-audio-portaudio/Makefile
+# used by ham/gnuradio-core/Makefile
+# used by ham/gnuradio-core-docs/Makefile
+# used by ham/gnuradio-examples/Makefile
+# used by ham/gnuradio-gsm/Makefile
+# used by ham/gnuradio-howto/Makefile
+# used by ham/gnuradio-radio-astronomy/Makefile
+# used by ham/gnuradio-trellis/Makefile
+# used by ham/gnuradio-usrp/Makefile
+# used by ham/gnuradio-video-sdl/Makefile
+# used by ham/gnuradio-wxgui/Makefile
 
 .include        "../../meta-pkgs/gnuradio/Makefile.version"
 
