@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.281 2013/01/23 01:30:57 wen Exp $
+$NetBSD: CHANGES-2013,v 1.282 2013/01/23 07:57:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -363,3 +363,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Compile to 0.23 [wen 2013-01-23]
 	Updated textproc/p5-String-Approx to 3.27 [wen 2013-01-23]
 	Updated textproc/p5-PDF-API2 to 2.020 [wen 2013-01-23]
+	Updated x11/xsetroot to 1.1.1 [wiz 2013-01-23]
