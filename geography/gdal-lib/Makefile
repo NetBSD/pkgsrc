@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2012/12/16 01:52:15 obache Exp $
+# $NetBSD: Makefile,v 1.51 2013/01/23 00:37:58 gdt Exp $
 
 VERSION=	1.9.1
 DISTNAME=	gdal-${VERSION}
 PKGNAME=	gdal-lib-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/
 
@@ -11,6 +11,10 @@ MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.gdal.org/
 COMMENT=	Translator library for raster geospatial data formats
 LICENSE=	mit
+
+# This package links against the geos C++ library.  geos regards this
+# as a bug and changes the C++ shlib version every release.  Therefore
+# this package needs revbumping on every geos update.
 
 # There is mysterious failure to find gdal_version.h, even though it
 # is not a generated file, apparently caused by an odd make path that
