@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.16 2013/01/21 16:11:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.17 2013/01/23 20:26:04 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -114,3 +114,7 @@ Pullup ticket #4030 - requested by dholland
 multimedia/ffmpegthumbnailer: build fix update
 Pullup ticket #4031 - requested by dholland
 devel/opal: build fix patch
+Pullup ticket #4033 - requested by taca
+pkgsrc/databases/phpldapadmin: security patch
+Pullup ticket #4034 - requested by taca
+www/contao211-translations: build fix
