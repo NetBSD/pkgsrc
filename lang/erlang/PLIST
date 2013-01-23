@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/09/12 19:13:27 asau Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/01/23 21:46:06 asau Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -206,6 +206,7 @@ lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_event.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_framework.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_ftp.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_gen_conn.beam
+lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_groups.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_hooks.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_hooks_lock.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_logs.beam
@@ -247,6 +248,7 @@ lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_event.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_framework.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_ftp.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_gen_conn.erl
+lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_groups.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_hooks.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_hooks_lock.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_logs.erl
@@ -1475,6 +1477,7 @@ lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flip_closed.gif
 lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flip_open.gif
 lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flip_static.gif
 lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flipmenu.js
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_eix.xsl
 lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_html.xsl
 lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_html_params.xsl
 lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_man.xsl
@@ -3396,12 +3399,15 @@ lib/erlang/lib/pman-${VERSION.pman}/src/pman_shell.erl
 lib/erlang/lib/pman-${VERSION.pman}/src/pman_tool.erl
 lib/erlang/lib/pman-${VERSION.pman}/src/pman_win.erl
 lib/erlang/lib/pman-${VERSION.pman}/src/pman_win.hrl
+lib/erlang/lib/public_key-${VERSION.public_key}/asn1/InformationFramework.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/OTP-PKIX.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/OTP-PUB-KEY.asn1config
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/OTP-PUB-KEY.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/OTP-PUB-KEY.hrl
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-1.asn1
+lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-10.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-3.asn1
+lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-7.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-8.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-FRAME.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/PKCS-FRAME.hrl

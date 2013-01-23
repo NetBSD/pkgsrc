@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2012/10/03 21:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/01/23 21:46:06 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
-PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -12,6 +11,7 @@ COMMENT=		Concurrent functional programming language
 LICENSE=		erlang-public-license
 
 DIST_SUBDIR=		erlang
+WRKSRC=			$(WRKDIR)/otp_src_${DIST_VERSION_MAJOR}
 
 MAKE_JOBS_SAFE=		no
 

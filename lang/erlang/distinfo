@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.29 2013/01/11 13:28:36 joerg Exp $
+$NetBSD: distinfo,v 1.30 2013/01/23 21:46:06 asau Exp $
 
-SHA1 (erlang/otp_src_R15B02.tar.gz) = 86a73cdabf8cd3f4fff5b9bf4c551dad25ac34ce
-RMD160 (erlang/otp_src_R15B02.tar.gz) = 0ccfaa5abd3556f679ef1a6f4d2fcb9bfd3c14e8
-Size (erlang/otp_src_R15B02.tar.gz) = 75959087 bytes
-SHA1 (patch-ab) = 26592a499a404de3a4d5846f07c2b5bce2ea7aca
+SHA1 (erlang/otp_src_R15B03-1.tar.gz) = 06a6788e77339f228b2dc6753af9755c6bbede7f
+RMD160 (erlang/otp_src_R15B03-1.tar.gz) = 681561db2d2cbf252da0f9d3772b0b1a977ee80e
+Size (erlang/otp_src_R15B03-1.tar.gz) = 76123810 bytes
+SHA1 (patch-ab) = 83672fd20d5996b7c2378b7c869c7b42446567a7
 SHA1 (patch-ai) = 203d1208b3a8a6aa248cfe0e16c9c19ae25fe0ad
 SHA1 (patch-am) = 11ff769b6954f950d6447e69b033cdc0bfa767e9
 SHA1 (patch-ao) = a4ee17b0a81415d541cb55d76b3c1ecc3148c2c2
