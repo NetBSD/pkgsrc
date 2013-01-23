@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2013/01/08 10:16:57 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2013/01/23 22:00:58 wiz Exp $
 #
 
 COMMENT=	Editors
@@ -20,6 +20,7 @@ SUBDIR+=	conglomerate
 SUBDIR+=	cooledit
 SUBDIR+=	dasher
 SUBDIR+=	deforaos-editor
+SUBDIR+=	dhex
 SUBDIR+=	easyedit
 SUBDIR+=	ed
 SUBDIR+=	edt
