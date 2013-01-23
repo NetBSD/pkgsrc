@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.302 2013/01/23 21:51:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.303 2013/01/23 21:54:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/erlang-man to 15.1.3.1 [asau 2013-01-23]
 	Updated lang/erlang-doc to 15.1.3.1 [asau 2013-01-23]
 	Updated multimedia/kaffeine to 1.2.2 [wiz 2013-01-23]
+	Added graphics/gimp-high-pass-filter version 1.2 [wiz 2013-01-23]
