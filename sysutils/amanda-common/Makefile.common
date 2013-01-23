@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2012/07/30 07:21:11 sbd Exp $
+# $NetBSD: Makefile.common,v 1.38 2013/01/23 17:58:19 wiz Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -47,6 +47,8 @@ AM_PROG_PERMS=		${REAL_ROOT_USER} ${AMANDA_GROUP} 4510
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gzip:run gtar:run perl:run
 USE_TOOLS+=		gmake pkg-config autoconf automake
+# for autopoint
+BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 PERL5_CONFIGURE=	no
 AUTO_MKDIRS=		yes
 
@@ -83,7 +85,7 @@ pre-configure: autogen
 autogen:
 	${RUN}${_ULIMIT_CMD} cd ${WRKSRC} &&				\
 		${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}		\
-			${CONFIG_SHELL} ./autogen
+			autoreconf -fi
 
 .PHONY: build-perl
 post-build: build-perl

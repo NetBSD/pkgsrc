@@ -1,0 +1,15 @@
+$NetBSD: patch-usrp2_firmware_configure.ac,v 1.1 2013/01/23 18:44:12 wiz Exp $
+
+automake-1.13 compat.
+
+--- usrp2/firmware/configure.ac.orig	2010-01-23 20:52:29.000000000 +0000
++++ usrp2/firmware/configure.ac
+@@ -17,7 +17,7 @@ dnl
+ 
+ AC_INIT
+ AC_PREREQ(2.57)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AC_CONFIG_AUX_DIR([.])
+ AC_CONFIG_SRCDIR([lib/u2_init.c])
+ 
