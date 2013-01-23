@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/09/12 19:13:27 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/01/23 21:46:06 asau Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -467,9 +467,11 @@ lib/erlang/lib/dialyzer-${VERSION.dialyzer}/info
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter.eix
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_app.html
+lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_codec.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_dict.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_examples.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_intro.html
+lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_make.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_sctp.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_soc.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_tcp.html
