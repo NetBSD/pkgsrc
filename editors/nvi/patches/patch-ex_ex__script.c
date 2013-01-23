@@ -1,4 +1,4 @@
-$NetBSD: patch-.._ex_ex__script.c,v 1.2 2013/01/23 17:26:07 wiz Exp $
+$NetBSD: patch-ex_ex__script.c,v 1.1 2013/01/23 17:33:28 wiz Exp $
 
 --- ex/ex_script.c.orig	2007-11-18 16:41:42.000000000 +0000
 +++ ex/ex_script.c

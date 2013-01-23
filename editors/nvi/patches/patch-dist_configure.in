@@ -1,4 +1,4 @@
-$NetBSD: patch-.._dist_configure.in,v 1.2 2013/01/23 17:26:07 wiz Exp $
+$NetBSD: patch-dist_configure.in,v 1.1 2013/01/23 17:33:28 wiz Exp $
 
 First chunk: automake-1.13 compat.
 Rest: ?
