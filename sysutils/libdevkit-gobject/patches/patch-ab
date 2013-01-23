@@ -1,8 +1,28 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/23 17:28:13 wiz Exp $
+
+First and second chunk: automake-1.13 compat.
+Rest: ?
 
 --- configure.ac.orig	2008-12-19 01:12:03.000000000 +0000
 +++ configure.ac
-@@ -30,6 +30,7 @@ AM_PROG_CC_C_O
+@@ -3,7 +3,7 @@ dnl Process this file with autoconf to p
+ AC_PREREQ(2.59c)
+ AC_INIT(DeviceKit, 003, http://lists.freedesktop.org/mailman/listinfo/devkit-devel)
+ AM_INIT_AUTOMAKE(DeviceKit, 003)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AM_MAINTAINER_MODE
+ 
+ # libtool versioning - this applies to all libraries in this package
+@@ -19,7 +19,6 @@ AC_SUBST(LT_AGE)
+ 
+ AC_ISC_POSIX
+ AC_PROG_CC
+-AM_PROG_CC_STDC
+ AC_HEADER_STDC
+ AM_PROG_LIBTOOL
+ AC_PROG_MAKE_SET
+@@ -30,6 +29,7 @@ AM_PROG_CC_C_O
  # Taken from dbus
  AC_ARG_ENABLE(ansi,             [  --enable-ansi           enable -ansi -pedantic gcc flags],enable_ansi=$enableval,enable_ansi=no)
  AC_ARG_ENABLE(man-pages,        [  --enable-man-pages      build manual pages],enable_man_pages=$enableval,enable_man_pages=yes)
@@ -10,7 +30,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
  
  if test "${enable_man_page}" != no; then
  dnl
-@@ -116,9 +117,15 @@ PKG_CHECK_MODULES(DBUS_GLIB, [dbus-glib-
+@@ -116,9 +116,15 @@ PKG_CHECK_MODULES(DBUS_GLIB, [dbus-glib-
  AC_SUBST(DBUS_GLIB_CFLAGS)
  AC_SUBST(DBUS_GLIB_LIBS)
  
@@ -27,7 +47,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/09/16 19:03:10 wiz Exp $
  
  if test "x$GCC" = "xyes"; then
    LDFLAGS="-Wl,--as-needed $LDFLAGS"
-@@ -161,4 +168,5 @@ echo "
+@@ -161,4 +167,5 @@ echo "
          Maintainer mode:            ${USE_MAINTAINER_MODE}
          Building api docs:          ${enable_gtk_doc}
          Building man pages:         ${enable_man_pages}
