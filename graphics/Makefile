@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.644 2013/01/23 21:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.645 2013/01/23 21:55:39 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -396,6 +396,7 @@ SUBDIR+=	py-pyfits
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-uniconvertor
+SUBDIR+=	qcomicbook
 SUBDIR+=	qimageblitz
 SUBDIR+=	qiv
 SUBDIR+=	qiviewer
