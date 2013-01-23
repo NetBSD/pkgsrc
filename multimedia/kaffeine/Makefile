@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/01/23 21:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/01/23 22:25:34 wiz Exp $
 #
 
 DISTNAME=	kaffeine-1.2.2
@@ -13,11 +13,11 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	msgfmt
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../mk/bsd.pkg.mk"
