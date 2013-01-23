@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.32 2013/01/04 09:29:55 adam Exp $
+$NetBSD: distinfo,v 1.33 2013/01/23 11:36:29 adam Exp $
 
-SHA1 (icu4c-50_1_1-src.tgz) = 63a678ad9bc78db42231108b8829127306f4ff3c
-RMD160 (icu4c-50_1_1-src.tgz) = ad963838827a4fa4671ff8301d68384e08f65298
-Size (icu4c-50_1_1-src.tgz) = 21189084 bytes
+SHA1 (icu4c-50_1_2-src.tgz) = ee121e3ba2c3599b36b3d3b4abf68f28e23c9b4a
+RMD160 (icu4c-50_1_2-src.tgz) = d674a9ba00931ce95fb388442f139d6b64193f24
+Size (icu4c-50_1_2-src.tgz) = 21189361 bytes
 SHA1 (patch-aa) = fcbebb03f4a48294faeebd600fee989cab351230
 SHA1 (patch-ab) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
