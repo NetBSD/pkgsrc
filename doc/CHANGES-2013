@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.286 2013/01/23 09:54:07 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.287 2013/01/23 09:57:12 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -368,3 +368,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Cache-Memcached to 1.30 [rhaen 2013-01-23]
 	Updated devel/p5-Log-Log4perl to 1.40 [rhaen 2013-01-23]
 	Updated devel/p5-Perl6-Junction to 1.50000 [rhaen 2013-01-23]
+	Updated mail/p5-Email-Address to 1.897 [rhaen 2013-01-23]
