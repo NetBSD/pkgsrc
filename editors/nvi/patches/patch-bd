@@ -1,7 +1,7 @@
-$NetBSD: patch-bd,v 1.2 2012/03/26 14:00:40 joerg Exp $
+$NetBSD: patch-bd,v 1.3 2013/01/23 17:26:08 wiz Exp $
 
---- ../dist/Makefile.in.orig	2010-06-01 08:47:30.000000000 +0000
-+++ ../dist/Makefile.in
+--- dist/Makefile.in.orig	2010-06-01 08:47:30.000000000 +0000
++++ dist/Makefile.in
 @@ -165,7 +165,7 @@ AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
  CC = @CC@

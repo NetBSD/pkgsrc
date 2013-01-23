@@ -1,7 +1,7 @@
-$NetBSD: patch-bc,v 1.1 2009/08/16 08:34:34 lukem Exp $
+$NetBSD: patch-bc,v 1.2 2013/01/23 17:26:08 wiz Exp $
 
---- ../vi/v_increment.c.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../vi/v_increment.c
+--- vi/v_increment.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ vi/v_increment.c
 @@ -1,5 +1,5 @@
  /*-
 - * Copyright (c) 1992, 1993, 1994

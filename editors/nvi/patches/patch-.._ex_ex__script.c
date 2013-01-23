@@ -1,7 +1,7 @@
-$NetBSD: patch-.._ex_ex__script.c,v 1.1 2011/12/26 01:54:39 sbd Exp $
+$NetBSD: patch-.._ex_ex__script.c,v 1.2 2013/01/23 17:26:07 wiz Exp $
 
---- ../ex/ex_script.c.orig	2007-11-18 16:41:42.000000000 +0000
-+++ ../ex/ex_script.c
+--- ex/ex_script.c.orig	2007-11-18 16:41:42.000000000 +0000
++++ ex/ex_script.c
 @@ -23,8 +23,10 @@ static const char sccsid[] = "$Id: ex_sc
  #include <sys/select.h>
  #endif

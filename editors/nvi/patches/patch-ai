@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.3 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-ai,v 1.4 2013/01/23 17:26:07 wiz Exp $
 
---- ../common/options.c.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../common/options.c
+--- common/options.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ common/options.c
 @@ -48,6 +48,8 @@ static int	 	 opts_print __P((SCR *, OPT
   *
   * HPUX noted options and abbreviations are from "The Ultimate Guide to the
