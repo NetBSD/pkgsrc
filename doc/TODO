@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11876 2013/01/23 12:32:03 wiz Exp $
+$NetBSD: TODO,v 1.11877 2013/01/23 12:33:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -815,8 +815,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libltdl-2.4.2
 	o libmcs-0.7.2
 	o libmemcached-1.0.15
-	o libmms-0.6.2
 	o libmilter-8.14.5
+	o libmms-0.6.2
 	o libmp3splt-0.8
 	o libmtp-1.1.5
 	o libnasl-2.3.1
@@ -957,6 +957,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o otpCalc-0.97
 	o p0f-3.00b
 	o p5-GTop-0.18
+	o p5-GraphViz-2.14
+	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
 	o p5-Perl-Tidy-20121207
 	o p5-PerlMagick-6.7.9.7
