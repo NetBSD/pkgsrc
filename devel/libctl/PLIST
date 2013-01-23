@@ -1,14 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/01/23 21:46:33 wiz Exp $
 bin/gen-ctl-io
 include/ctl.h
+include/ctlgeom-types.h
 include/ctlgeom.h
-lib/libctl.a
+lib/libctl.la
+lib/libctlgeom.la
 man/man1/gen-ctl-io.1
+share/doc/libctl/AUTHORS
 share/doc/libctl/COPYING
 share/doc/libctl/COPYRIGHT
 share/doc/libctl/ChangeLog
+share/doc/libctl/INSTALL
 share/doc/libctl/NEWS
 share/doc/libctl/README
+share/doc/libctl/TODO
 share/doc/libctl/advanced-user.html
 share/doc/libctl/basic-user.html
 share/doc/libctl/developer.html
@@ -33,3 +38,5 @@ share/libctl/base/vector3.scm
 share/libctl/utils/ctl-io.scm
 share/libctl/utils/geom.c
 share/libctl/utils/geom.scm
+share/libctl/utils/nlopt-constants.scm
+share/libctl/utils/nlopt.c
