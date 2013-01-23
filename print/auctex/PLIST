@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/12/25 13:16:22 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/01/23 08:58:29 mef Exp $
 ${EMACS_INFOPREFIX}/auctex.info
 share/doc/auctex/tex-ref.pdf
 ${EMACS_LISPPREFIX}/auctex.el
@@ -43,6 +43,8 @@ ${EMACS_LISPPREFIX}/auctex/latex.el
 ${EMACS_LISPPREFIX}/auctex/latex.elc
 ${EMACS_LISPPREFIX}/auctex/multi-prompt.el
 ${EMACS_LISPPREFIX}/auctex/multi-prompt.elc
+${EMACS_LISPPREFIX}/auctex/plain-tex.el
+${EMACS_LISPPREFIX}/auctex/plain-tex.elc
 ${EMACS_LISPPREFIX}/auctex/style/.nosearch
 ${EMACS_LISPPREFIX}/auctex/style/CJK.el
 ${EMACS_LISPPREFIX}/auctex/style/CJK.elc
@@ -78,6 +80,8 @@ ${EMACS_LISPPREFIX}/auctex/style/babel.el
 ${EMACS_LISPPREFIX}/auctex/style/babel.elc
 ${EMACS_LISPPREFIX}/auctex/style/beamer.el
 ${EMACS_LISPPREFIX}/auctex/style/beamer.elc
+${EMACS_LISPPREFIX}/auctex/style/biblatex.el
+${EMACS_LISPPREFIX}/auctex/style/biblatex.elc
 ${EMACS_LISPPREFIX}/auctex/style/book.el
 ${EMACS_LISPPREFIX}/auctex/style/book.elc
 ${EMACS_LISPPREFIX}/auctex/style/booktabs.el
@@ -116,6 +120,8 @@ ${EMACS_LISPPREFIX}/auctex/style/foils.el
 ${EMACS_LISPPREFIX}/auctex/style/foils.elc
 ${EMACS_LISPPREFIX}/auctex/style/francais.el
 ${EMACS_LISPPREFIX}/auctex/style/francais.elc
+${EMACS_LISPPREFIX}/auctex/style/french.el
+${EMACS_LISPPREFIX}/auctex/style/french.elc
 ${EMACS_LISPPREFIX}/auctex/style/frenchb.el
 ${EMACS_LISPPREFIX}/auctex/style/frenchb.elc
 ${EMACS_LISPPREFIX}/auctex/style/german.el
@@ -160,6 +166,8 @@ ${EMACS_LISPPREFIX}/auctex/style/latexinfo.el
 ${EMACS_LISPPREFIX}/auctex/style/latexinfo.elc
 ${EMACS_LISPPREFIX}/auctex/style/letter.el
 ${EMACS_LISPPREFIX}/auctex/style/letter.elc
+${EMACS_LISPPREFIX}/auctex/style/lettrine.el
+${EMACS_LISPPREFIX}/auctex/style/lettrine.elc
 ${EMACS_LISPPREFIX}/auctex/style/listings.el
 ${EMACS_LISPPREFIX}/auctex/style/listings.elc
 ${EMACS_LISPPREFIX}/auctex/style/ltx-base.el
@@ -170,6 +178,8 @@ ${EMACS_LISPPREFIX}/auctex/style/makeidx.el
 ${EMACS_LISPPREFIX}/auctex/style/makeidx.elc
 ${EMACS_LISPPREFIX}/auctex/style/mdwlist.el
 ${EMACS_LISPPREFIX}/auctex/style/mdwlist.elc
+${EMACS_LISPPREFIX}/auctex/style/multicol.el
+${EMACS_LISPPREFIX}/auctex/style/multicol.elc
 ${EMACS_LISPPREFIX}/auctex/style/multido.el
 ${EMACS_LISPPREFIX}/auctex/style/multido.elc
 ${EMACS_LISPPREFIX}/auctex/style/multind.el
@@ -226,6 +236,8 @@ ${EMACS_LISPPREFIX}/auctex/style/scrpage2.el
 ${EMACS_LISPPREFIX}/auctex/style/scrpage2.elc
 ${EMACS_LISPPREFIX}/auctex/style/scrreprt.el
 ${EMACS_LISPPREFIX}/auctex/style/scrreprt.elc
+${EMACS_LISPPREFIX}/auctex/style/setspace.el
+${EMACS_LISPPREFIX}/auctex/style/setspace.elc
 ${EMACS_LISPPREFIX}/auctex/style/shortvrb.el
 ${EMACS_LISPPREFIX}/auctex/style/shortvrb.elc
 ${EMACS_LISPPREFIX}/auctex/style/slides.el
@@ -248,6 +260,8 @@ ${EMACS_LISPPREFIX}/auctex/style/verbatim.el
 ${EMACS_LISPPREFIX}/auctex/style/verbatim.elc
 ${EMACS_LISPPREFIX}/auctex/style/virtex.el
 ${EMACS_LISPPREFIX}/auctex/style/virtex.elc
+${EMACS_LISPPREFIX}/auctex/style/xspace.el
+${EMACS_LISPPREFIX}/auctex/style/xspace.elc
 ${EMACS_LISPPREFIX}/auctex/tex-bar.el
 ${EMACS_LISPPREFIX}/auctex/tex-bar.elc
 ${EMACS_LISPPREFIX}/auctex/tex-buf.el
@@ -256,8 +270,6 @@ ${EMACS_LISPPREFIX}/auctex/tex-fold.el
 ${EMACS_LISPPREFIX}/auctex/tex-fold.elc
 ${EMACS_LISPPREFIX}/auctex/tex-font.el
 ${EMACS_LISPPREFIX}/auctex/tex-font.elc
-${EMACS_LISPPREFIX}/auctex/tex-fptex.el
-${EMACS_LISPPREFIX}/auctex/tex-fptex.elc
 ${EMACS_LISPPREFIX}/auctex/tex-info.el
 ${EMACS_LISPPREFIX}/auctex/tex-info.elc
 ${EMACS_LISPPREFIX}/auctex/tex-jp.el
