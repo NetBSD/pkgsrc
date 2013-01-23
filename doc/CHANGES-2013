@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.305 2013/01/23 21:57:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.306 2013/01/23 21:59:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added graphics/gimp-high-pass-filter version 1.2 [wiz 2013-01-23]
 	Added graphics/qcomicbook version 0.9.0 [wiz 2013-01-23]
 	Added x11/gxmessage version 2.20.0 [wiz 2013-01-23]
+	Added x11/tktable version 2.10nb1 [wiz 2013-01-23]
