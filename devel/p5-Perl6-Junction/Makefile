@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:18:49 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/23 09:52:53 rhaen Exp $
 #
 
-DISTNAME=	Perl6-Junction-1.40000
+DISTNAME=	Perl6-Junction-1.50000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl6/}
 
