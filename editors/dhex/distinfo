@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/01/23 22:00:06 wiz Exp $
+
+SHA1 (dhex_0.68.tar.gz) = d23d65a7b330b47f8254f6c1ff25a30c4778440e
+RMD160 (dhex_0.68.tar.gz) = 0b5e4232a8f9e0a3ae345a9c1486c335ae7038c2
+Size (dhex_0.68.tar.gz) = 58602 bytes
+SHA1 (patch-aa) = 23b61ff3abf12831a0f7bfb2f12d9f5be962098a
+SHA1 (patch-ac) = 6cff750da487a36a1f9c52f8eaddd789fe005cb3
