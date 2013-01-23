@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/23 21:40:40 wiz Exp $
+bin/csv_to_ln
+bin/labelnation
+share/doc/labelnation/COPYING
+share/doc/labelnation/README
+share/examples/labelnation/bcard-ps-1.txt
+share/examples/labelnation/lines-1.txt
+share/examples/labelnation/lines-2.txt
+share/examples/labelnation/multipage.txt
+share/examples/labelnation/postscript-1.txt
+share/examples/labelnation/postscript-3.txt
