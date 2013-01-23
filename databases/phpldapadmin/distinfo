@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.11 2011/11/17 12:44:02 obache Exp $
+$NetBSD: distinfo,v 1.11.10.1 2013/01/23 20:18:31 tron Exp $
 
 SHA1 (phpldapadmin-1.2.2.tgz) = 2904923eb25173d108b556c70fb3d42cd6e0e289
 RMD160 (phpldapadmin-1.2.2.tgz) = dd93d9558c9780b014f066d070b496e2804b9565
 Size (phpldapadmin-1.2.2.tgz) = 1415565 bytes
+SHA1 (patch-htdocs_add__value__form.php) = 74e7128a36391c7ccce1a4a25bb115290fd8af3e
+SHA1 (patch-htdocs_export.php) = 822cb73c754d83a8e080bc709db36d3d7d90deb4
+SHA1 (patch-htdocs_logout.php) = f09fdceb60faad2d2c49c37fa9ca01ac3c2e332e
+SHA1 (patch-lib_QueryRender.php) = 976eb66a7c50ed992886a3c4f79d2ae7d3c2f52e
+SHA1 (patch-lib_export__functions.php) = ace9e5b372ea34e54a24a1679cc43c5c5393d038
+SHA1 (patch-lib_functions.php) = a596507eba2a32bf674cac093b307bfe765510bb

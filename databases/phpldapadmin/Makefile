@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 21:25:40 asau Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2013/01/23 20:18:31 tron Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 EXTRACT_SUFX=	.tgz
@@ -48,8 +49,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/index.php \
 		${DESTDIR}${PREFIX}/share/phpldapadmin
 .for i in ${PAX_DIRS}
-	cd ${WRKSRC}/${i:Q} && pax \
-		-rwppm . ${DESTDIR}${PREFIX}/share/phpldapadmin/${i:Q}
+	cd ${WRKSRC}/${i:Q} && ${FIND} . -type f \! -name '*.orig' -print | \
+		 pax -rwppm  ${DESTDIR}${PREFIX}/share/phpldapadmin/${i:Q}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/INSTALL \
 		${DESTDIR}${PREFIX}/share/doc/phpldapadmin
