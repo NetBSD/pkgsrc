@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.292 2013/01/23 10:34:17 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.293 2013/01/23 11:37:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -374,3 +374,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Crypt-Twofish to 2.15 [rhaen 2013-01-23]
 	Updated textproc/p5-Text-WikiFormat to 0.80 [rhaen 2013-01-23]
 	Updated textproc/p5-XML-Twig to 3.42 [rhaen 2013-01-23]
+	Updated textproc/icu to 50.1.2 [adam 2013-01-23]
