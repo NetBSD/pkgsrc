@@ -1,7 +1,18 @@
-$NetBSD: patch-aa,v 1.1 2009/05/10 18:25:34 hasso Exp $
+$NetBSD: patch-aa,v 1.2 2013/01/23 17:27:48 wiz Exp $
 
---- configure.ac.orig	2009-05-10 19:25:36 +0300
-+++ configure.ac	2009-05-10 19:36:05 +0300
+First chunk: automake-1.13 compat.
+
+--- configure.ac.orig	2008-03-20 13:55:45.000000000 +0000
++++ configure.ac
+@@ -1,7 +1,7 @@
+ AC_INIT([libfprint], [0.0.6])
+ AM_INIT_AUTOMAKE
+ AC_CONFIG_SRCDIR([libfprint/core.c])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ 
+ AC_PREREQ([2.50])
+ AC_PROG_CC
 @@ -89,9 +89,15 @@ if test "x$debug_log_enabled" != "xno"; 
  	AC_DEFINE([ENABLE_DEBUG_LOGGING], 1, [Debug message logging])
  fi

@@ -1,10 +1,26 @@
-$NetBSD: patch-aa,v 1.5 2009/05/21 16:11:25 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2013/01/23 17:27:13 wiz Exp $
 
+First and second chunk: automake-1.13 compat.
 http://bugzilla.gnome.org/show_bug.cgi?id=583469
 
---- configure.ac.orig	2008-11-24 18:03:24.000000000 -0500
-+++ configure.ac	2008-12-23 22:47:58.000000000 -0500
-@@ -17,8 +17,9 @@
+--- configure.ac.orig	2009-06-29 20:32:01.000000000 +0000
++++ configure.ac
+@@ -3,7 +3,7 @@
+ AC_INIT(cheese, 2.26.3)
+ 
+ AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
+-AM_CONFIG_HEADER(cheese-config.h)
++AC_CONFIG_HEADERS(cheese-config.h)
+ AM_MAINTAINER_MODE
+ 
+ dnl make sure we keep ACLOCAL_FLAGS around for maintainer builds to work
+@@ -11,14 +11,14 @@ AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FL
+ 
+ AC_ISC_POSIX
+ AC_PROG_CC
+-AM_PROG_CC_STDC
+ AC_HEADER_STDC
+ AM_PROG_LIBTOOL
  
  CFLAGS="${CFLAGS} -Wall"
  
@@ -16,7 +32,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583469
  
  #*******************************************************************************
  # Expanded dirs
-@@ -88,7 +89,6 @@
+@@ -86,7 +86,6 @@ PKG_CHECK_MODULES(CHEESE, \ 
    cairo >= $CAIRO_REQUIRED \
    dbus-1 >= $DBUS_REQUIRED \
    dbus-glib-1 >= $DBUS_GLIB_REQUIRED \
@@ -24,7 +40,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583469
    pangocairo >= $PANGOCAIRO_REQUIRED \
    librsvg-2.0 >= $LIBRSVG_REQUIRED)
  AC_SUBST(CHEESE_CFLAGS)
-@@ -107,6 +107,25 @@
+@@ -105,6 +104,25 @@ fi
  
  AM_CONDITIONAL(WITH_HILDON, test "x$enable_hildon" = "xyes")
  
