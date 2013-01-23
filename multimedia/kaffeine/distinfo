@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/08 02:23:46 dholland Exp $
+$NetBSD: distinfo,v 1.3 2013/01/23 21:51:36 wiz Exp $
 
-SHA1 (kaffeine-0.8.3.tar.bz2) = 6198ffe59422124855007a42443e2a69f6451e66
-RMD160 (kaffeine-0.8.3.tar.bz2) = f22a971481e8fd1a96063fef66d156d119c1e596
-Size (kaffeine-0.8.3.tar.bz2) = 2940941 bytes
-SHA1 (patch-aa) = ae70b289c384e3ec33874ba79a5f3c6642d18c8f
-SHA1 (patch-ab) = 3089b793f485b161543981267de146dd57b11092
-SHA1 (patch-ac) = 0a52e900c9e79683aca8f27d0c65045574e81d31
-SHA1 (patch-ad) = 85183e84ec7593cee6f18321242bad5a4611e888
-SHA1 (patch-kaffeine_src_player-parts_xine-part_kxinewidget_cpp) = 36638519eaac6679f69a88e861759037a95627d9
+SHA1 (kaffeine-1.2.2.tar.gz) = 5ba44be69995d24159a185ede3b9a00959ae2ed6
+RMD160 (kaffeine-1.2.2.tar.gz) = a432de95b0808e85f0467d1745d216559f10e9a3
+Size (kaffeine-1.2.2.tar.gz) = 489727 bytes
