@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/11/30 07:19:44 wen Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/01/23 00:54:37 wen Exp $
 share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
@@ -881,6 +881,7 @@ share/moodle/blocks/glossary_random/block_glossary_random.php
 share/moodle/blocks/glossary_random/edit_form.php
 share/moodle/blocks/glossary_random/lang/en/block_glossary_random.php
 share/moodle/blocks/glossary_random/version.php
+share/moodle/blocks/html/backup/moodle1/lib.php
 share/moodle/blocks/html/backup/moodle2/backup_html_block_task.class.php
 share/moodle/blocks/html/backup/moodle2/restore_html_block_task.class.php
 share/moodle/blocks/html/block_html.php
@@ -950,6 +951,7 @@ share/moodle/blocks/recent_activity/block_recent_activity.php
 share/moodle/blocks/recent_activity/lang/en/block_recent_activity.php
 share/moodle/blocks/recent_activity/styles.css
 share/moodle/blocks/recent_activity/version.php
+share/moodle/blocks/rss_client/backup/moodle1/lib.php
 share/moodle/blocks/rss_client/backup/moodle2/backup_rss_client_block_task.class.php
 share/moodle/blocks/rss_client/backup/moodle2/backup_rss_client_stepslib.php
 share/moodle/blocks/rss_client/backup/moodle2/restore_rss_client_block_task.class.php
@@ -1045,6 +1047,7 @@ share/moodle/comment/comment_post.php
 share/moodle/comment/index.php
 share/moodle/comment/lib.php
 share/moodle/comment/locallib.php
+share/moodle/composer.json
 share/moodle/config-dist.php
 share/moodle/course/category.php
 share/moodle/course/changenumsections.php
@@ -1567,6 +1570,7 @@ share/moodle/grade/report/user/styles.css
 share/moodle/grade/report/user/version.php
 share/moodle/grade/tests/edittree_test.php
 share/moodle/grade/tests/querylib_test.php
+share/moodle/grade/tests/reportlib_test.php
 share/moodle/group/assign.php
 share/moodle/group/autogroup.php
 share/moodle/group/autogroup_form.php
@@ -1676,7 +1680,6 @@ share/moodle/install/lang/en/install.php
 share/moodle/install/lang/en/langconfig.php
 share/moodle/install/lang/en/moodle.php
 share/moodle/install/lang/en_ar/langconfig.php
-share/moodle/install/lang/en_fix/langconfig.php
 share/moodle/install/lang/en_kids/langconfig.php
 share/moodle/install/lang/en_us/install.php
 share/moodle/install/lang/en_us/langconfig.php
@@ -1726,6 +1729,7 @@ share/moodle/install/lang/fr_ca/langconfig.php
 share/moodle/install/lang/fr_ca/moodle.php
 share/moodle/install/lang/ga/error.php
 share/moodle/install/lang/ga/langconfig.php
+share/moodle/install/lang/ga/moodle.php
 share/moodle/install/lang/gd/langconfig.php
 share/moodle/install/lang/gl/admin.php
 share/moodle/install/lang/gl/error.php
@@ -1802,6 +1806,7 @@ share/moodle/install/lang/lo/install.php
 share/moodle/install/lang/lo/langconfig.php
 share/moodle/install/lang/lo/moodle.php
 share/moodle/install/lang/lt/admin.php
+share/moodle/install/lang/lt/install.php
 share/moodle/install/lang/lt/langconfig.php
 share/moodle/install/lang/lt/moodle.php
 share/moodle/install/lang/lt_uni/langconfig.php
@@ -3454,6 +3459,7 @@ share/moodle/lib/simpletestlib/web_tester.php
 share/moodle/lib/simpletestlib/xml.php
 share/moodle/lib/soaplib.php
 share/moodle/lib/spikephpcoverage/BUILD
+share/moodle/lib/spikephpcoverage/CHANGES
 share/moodle/lib/spikephpcoverage/LICENSE.lgpl
 share/moodle/lib/spikephpcoverage/LICENSE.osl
 share/moodle/lib/spikephpcoverage/LICENSE.pear.3_01
@@ -3585,6 +3591,7 @@ share/moodle/lib/tests/filelib_test.php
 share/moodle/lib/tests/filter_test.php
 share/moodle/lib/tests/fixtures/events.php
 share/moodle/lib/tests/formslib_test.php
+share/moodle/lib/tests/gradelib_test.php
 share/moodle/lib/tests/grouplib_test.php
 share/moodle/lib/tests/html2text_test.php
 share/moodle/lib/tests/htmlpurifier_test.php
@@ -3592,6 +3599,7 @@ share/moodle/lib/tests/htmlwriter_test.php
 share/moodle/lib/tests/markdown_test.php
 share/moodle/lib/tests/mathslib_test.php
 share/moodle/lib/tests/medialib_test.php
+share/moodle/lib/tests/messagelib_test.php
 share/moodle/lib/tests/moodlelib_test.php
 share/moodle/lib/tests/navigationlib_test.php
 share/moodle/lib/tests/other/completion.manualtest.txt
@@ -5487,6 +5495,7 @@ share/moodle/lib/yui/3.5.1/build/yui/yui.js
 share/moodle/lib/yui/blocks/blocks.js
 share/moodle/lib/yui/chooserdialogue/chooserdialogue.js
 share/moodle/lib/yui/dragdrop/dragdrop.js
+share/moodle/lib/yui/formautosubmit/formautosubmit.js
 share/moodle/lib/yui/formchangechecker/formchangechecker.js
 share/moodle/lib/yui/license.txt
 share/moodle/lib/yui/phploader/lib/meta/config_2.7.0.php
@@ -7296,7 +7305,10 @@ share/moodle/mod/quiz/settingslib.php
 share/moodle/mod/quiz/startattempt.php
 share/moodle/mod/quiz/styles.css
 share/moodle/mod/quiz/summary.php
+share/moodle/mod/quiz/tests/attempts_test.php
 share/moodle/mod/quiz/tests/editlib_test.php
+share/moodle/mod/quiz/tests/generator/lib.php
+share/moodle/mod/quiz/tests/generator_test.php
 share/moodle/mod/quiz/tests/lib_test.php
 share/moodle/mod/quiz/tests/locallib_test.php
 share/moodle/mod/quiz/tests/quizdisplayoptions_test.php
@@ -9035,7 +9047,6 @@ share/moodle/tag/search.php
 share/moodle/tag/tag.js
 share/moodle/tag/tag_autocomplete.php
 share/moodle/tag/user.php
-share/moodle/tags
 share/moodle/tags.txt
 share/moodle/theme/afterburner/config.php
 share/moodle/theme/afterburner/lang/en/theme_afterburner.php
