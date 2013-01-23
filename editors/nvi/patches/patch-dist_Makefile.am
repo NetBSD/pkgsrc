@@ -1,4 +1,4 @@
-$NetBSD: patch-.._dist_Makefile.am,v 1.2 2013/01/23 17:26:07 wiz Exp $
+$NetBSD: patch-dist_Makefile.am,v 1.1 2013/01/23 17:33:28 wiz Exp $
 
 --- dist/Makefile.am.orig	2012-05-21 13:09:39.000000000 +0000
 +++ dist/Makefile.am
