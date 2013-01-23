@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/01/23 17:28:54 wiz Exp $
+
+automake-1.13 compat.
+
+--- configure.ac.orig	2010-10-27 23:26:04.000000000 +0000
++++ configure.ac
+@@ -41,7 +41,7 @@ AC_INIT([libva], [libva_version], [waldo
+ AC_CONFIG_SRCDIR([Makefile.am])
+ AM_INIT_AUTOMAKE([dist-bzip2])
+ 
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ 
+ LIBVA_MAJOR_VERSION=libva_major_version
+ LIBVA_MINOR_VERSION=libva_minor_version
