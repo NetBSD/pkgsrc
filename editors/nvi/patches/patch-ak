@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.3 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-ak,v 1.4 2013/01/23 17:26:07 wiz Exp $
 
---- ../common/options_def.h.orig	2007-11-19 03:43:54.000000000 +1100
-+++ ../common/options_def.h
+--- common/options_def.h.orig	2007-11-19 03:43:54.000000000 +1100
++++ common/options_def.h
 @@ -1,4 +1,3 @@
 -/* Do not edit: automatically built by build/distrib. */
  #define O_ALTWERASE 0
