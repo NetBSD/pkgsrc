@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/23 21:53:39 wiz Exp $
+
+SHA1 (gimp-high-pass-filter-1.2/high-pass.scm) = a853ea960714a4ee81ba5c51b5ff9eeb612ba75a
+RMD160 (gimp-high-pass-filter-1.2/high-pass.scm) = 8b179ec36d7992b277b49f6bd31637d5eb7bd0c6
+Size (gimp-high-pass-filter-1.2/high-pass.scm) = 6297 bytes
