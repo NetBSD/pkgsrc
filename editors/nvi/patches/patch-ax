@@ -1,7 +1,7 @@
-$NetBSD: patch-ax,v 1.1 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-ax,v 1.2 2013/01/23 17:26:08 wiz Exp $
 
---- ../ex/ex_shift.c.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../ex/ex_shift.c
+--- ex/ex_shift.c.orig	2007-11-19 03:41:42.000000000 +1100
++++ ex/ex_shift.c
 @@ -131,10 +131,13 @@ shift(SCR *sp, EXCMD *cmdp, enum which r
  		 * Build a new indent string and count the number of
  		 * characters it uses.

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2009/08/07 16:39:20 lukem Exp $
+$NetBSD: patch-aa,v 1.5 2013/01/23 17:26:07 wiz Exp $
 
 BDB 4.4 and up requires DB_CREATE or it will spew "DB_CREATE must be
 specified to create databases." when nvi edits a file.
 
---- ../common/db.h.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../common/db.h
+--- common/db.h.orig	2007-11-19 03:41:42.000000000 +1100
++++ common/db.h
 @@ -16,7 +16,10 @@
      (env)->remove(env, path, NULL, flags)
  #endif

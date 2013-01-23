@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-an,v 1.2 2013/01/23 17:26:07 wiz Exp $
 
---- ../docs/vi.ref/set.opt.texi.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../docs/vi.ref/set.opt.texi
+--- docs/vi.ref/set.opt.texi.orig	2007-11-19 03:41:42.000000000 +1100
++++ docs/vi.ref/set.opt.texi
 @@ -97,7 +97,10 @@ the first nonblank character of the line
  Lines are indented using tab characters to the extent possible (based on
  the value of the

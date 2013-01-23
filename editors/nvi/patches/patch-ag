@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2009/08/07 16:39:21 lukem Exp $
+$NetBSD: patch-ag,v 1.4 2013/01/23 17:26:07 wiz Exp $
 
---- ../catalog/swedish.base.orig	2007-11-19 03:41:42.000000000 +1100
-+++ ../catalog/swedish.base
+--- catalog/swedish.base.orig	2007-11-19 03:41:42.000000000 +1100
++++ catalog/swedish.base
 @@ -43,8 +43,7 @@
  044 "Lisp flaggan är inte implementerad"
  045 "meddelanden är inte avslagna: %s"
