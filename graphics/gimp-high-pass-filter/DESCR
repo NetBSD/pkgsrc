@@ -1,0 +1,13 @@
+A general purpose high-pass filter plugin. It shows up as
+Filters->Generic->High Pass Filter. You can select a blur radius that sets the
+size of detail to be passed by the filter, a contrast adjustment, as well as an
+option to keep the source layer or replace it.
+
+It actually implements 5 different high pass modes:
+
+	1. Colour - I think this is the same as photoshop's high pass filter effect.
+	2. Preserve DC - like colour, but adds the average image colour back in.
+	3. Greyscale - this desaturates the layer before high pass filtering.
+	4. Greyscale, Apply Chroma - as above, but blends it in with the source
+		layer colours
+	5. Redrobes - (named after the technique described by Redrobes)
