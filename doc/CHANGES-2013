@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.279 2013/01/23 01:06:47 wen Exp $
+$NetBSD: CHANGES-2013,v 1.280 2013/01/23 01:15:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -361,3 +361,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated geography/geos to 3.3.7 [gdt 2013-01-23]
 	Updated www/moodle to 2.3.4 [wen 2013-01-23]
 	Updated devel/p5-Test-Compile to 0.23 [wen 2013-01-23]
+	Updated textproc/p5-String-Approx to 3.27 [wen 2013-01-23]
