@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.295 2013/01/23 18:59:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.296 2013/01/23 19:00:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/icu to 50.1.2 [adam 2013-01-23]
 	Updated www/contao211-translations to 201301180 [taca 2013-01-23]
 	Updated x11/xfd to 1.1.1 [wiz 2013-01-23]
+	Updated meta-pkgs/modular-xorg-apps to 1.10 [wiz 2013-01-23]
