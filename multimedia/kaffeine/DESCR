@@ -7,3 +7,5 @@ kaffeine is a xine-based multimedia player for KDE.
 * Edit Xine-Options via GUI
 * Support for saving screenshots as PNG, BMP or XBM
 * The ability to prevent the screensaver from activating OSD Titles
+
+This is the KDE4 version of kaffeine.
