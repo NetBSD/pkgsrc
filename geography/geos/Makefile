@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2012/11/15 22:07:27 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2013/01/23 00:35:12 gdt Exp $
 
-DISTNAME=	geos-3.3.6
+DISTNAME=	geos-3.3.7
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,11 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 #   geos_c (C), which follows normal versioning rules
 #   geos (C++), which uses -release, and changes on every release
 
-# According to the geos project, the C++ interface should not be
-# directly used and other packages should not link against it.  This
-# is currently underdocumented:
-#   http://trac.osgeo.org/geos/ticket/553
-#   http://lists.osgeo.org/pipermail/geos-devel/2012-June/005860.html
+# According to the geos project (as documented in README), the C++
+# interface should not be directly used and other packages should not
+# link against it.
 
 # Therefore, pkgsrc will perform a recursive revbump when the geos_c
 # shlib version changes, and will generally ignore geos shlib name
