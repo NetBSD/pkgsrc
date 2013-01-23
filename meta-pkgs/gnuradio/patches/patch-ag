@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2010/09/15 09:38:42 markd Exp $
+$NetBSD: patch-ag,v 1.2 2013/01/23 18:56:32 wiz Exp $
+
+Avoid unportable test(1) construct.
 
 --- config/gr_version.m4.orig	2010-06-03 06:22:52.000000000 +0000
 +++ config/gr_version.m4
