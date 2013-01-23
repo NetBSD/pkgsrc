@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.643 2013/01/05 22:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.644 2013/01/23 21:53:55 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -154,6 +154,7 @@ SUBDIR+=	gimp-docs-sv
 SUBDIR+=	gimp-docs-zh_CN
 SUBDIR+=	gimp-exif-browser
 SUBDIR+=	gimp-fix-ca
+SUBDIR+=	gimp-high-pass-filter
 SUBDIR+=	gimp-liquid-rescale
 SUBDIR+=	gimp-rawphoto
 SUBDIR+=	gimp-refocus-it
