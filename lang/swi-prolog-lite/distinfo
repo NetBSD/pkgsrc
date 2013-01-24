@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2012/11/07 15:30:04 joerg Exp $
+$NetBSD: distinfo,v 1.16 2013/01/24 12:03:08 is Exp $
 
 SHA1 (swi-prolog/pl-5.11.18.tar.gz) = b929d47f2e92230e2afcaaaf25e9a34c40adc54e
 RMD160 (swi-prolog/pl-5.11.18.tar.gz) = 1cbf0dab3a9cd63b3178d6a43c983b31402d7b7f
@@ -7,4 +7,5 @@ SHA1 (patch-ad) = 7b3899fe4162582efe955c67d5dc3ed42e7d1702
 SHA1 (patch-ae) = 4135212b4c5faf70e01e78e45df5e1a0ccc927a6
 SHA1 (patch-ar) = 2bf3648f29c6263ea2efe13b95309a1fe72b14b8
 SHA1 (patch-packages_clib_sha1_brg_endian.h) = db9f50eb0d0f92e44a79048d0bb84b690945964b
+SHA1 (patch-packages_xpce_src_img_gifread.c) = 5ef16b048f8343cde92a17d9fd3c78b0c3e7c374
 SHA1 (patch-src_pl-funcs.h) = 792257fcc533c835a607e6d660ed42058b7a8a95
