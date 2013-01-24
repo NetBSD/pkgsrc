@@ -1,46 +1,47 @@
-$NetBSD: patch-ag,v 1.2 2010/01/04 19:43:39 joerg Exp $
+$NetBSD: patch-ag,v 1.3 2013/01/24 21:49:18 adam Exp $
 
---- Makefile.in.orig	2009-06-14 16:25:39.000000000 +0000
+--- Makefile.in.orig	2013-01-03 18:58:55.000000000 +0000
 +++ Makefile.in
-@@ -46,7 +46,7 @@ target_triplet = @target@
- ANSI2KNR = @ANSI2KNR@
+@@ -61,7 +61,7 @@ host_triplet = @host@
+ target_triplet = @target@
  @HAVE_LD_VERSION_SCRIPT_TRUE@am__append_1 = -Wl,--version-script=$(srcdir)/libjpeg.map
  bin_PROGRAMS = cjpeg$(EXEEXT) djpeg$(EXEEXT) jpegtran$(EXEEXT) \
 -	rdjpgcom$(EXEEXT) wrjpgcom$(EXEEXT)
 +	rdjpgcom$(EXEEXT) wrjpgcom$(EXEEXT) jpegexiforient$(EXEEXT)
  subdir = .
- DIST_COMMON = README $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
  	$(top_srcdir)/configure $(am__configure_deps) \
-@@ -128,6 +128,9 @@ rdjpgcom_LDADD = $(LDADD)
- am_wrjpgcom_OBJECTS = wrjpgcom$U.$(OBJEXT)
+@@ -148,6 +148,9 @@ rdjpgcom_LDADD = $(LDADD)
+ am_wrjpgcom_OBJECTS = wrjpgcom.$(OBJEXT)
  wrjpgcom_OBJECTS = $(am_wrjpgcom_OBJECTS)
  wrjpgcom_LDADD = $(LDADD)
-+am_jpegexiforient_OBJECTS = jpegexiforient$U.$(OBJEXT)
++am_jpegexiforient_OBJECTS = jpegexiforient.$(OBJEXT)
 +jpegexiforient_OBJECTS = $(am_jpegexiforient_OBJECTS)
 +jpegexiforient_DEPENDENCIES = libjpeg.la
- DEFAULT_INCLUDES = -I.@am__isrc@
- depcomp = $(SHELL) $(top_srcdir)/depcomp
- am__depfiles_maybe = depfiles
-@@ -155,7 +158,8 @@ AM_V_GEN = $(am__v_GEN_$(V))
- am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
- am__v_GEN_0 = @echo "  GEN   " $@;
+ AM_V_P = $(am__v_P_@AM_V@)
+ am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
+ am__v_P_0 = false
+@@ -183,7 +186,8 @@ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
+ am__v_CCLD_1 = 
  SOURCES = $(libjpeg_la_SOURCES) $(cjpeg_SOURCES) $(djpeg_SOURCES) \
 -	$(jpegtran_SOURCES) $(rdjpgcom_SOURCES) $(wrjpgcom_SOURCES)
 +	$(jpegtran_SOURCES) $(rdjpgcom_SOURCES) $(wrjpgcom_SOURCES) \
 +	$(jpegexiforient_SOURCES)
- man1dir = $(mandir)/man1
- NROFF = nroff
- MANS = $(man_MANS)
-@@ -369,6 +373,7 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
+ am__can_run_installinfo = \
+   case $$AM_UPDATE_INFO_DIR in \
+     n|no|NO) false;; \
+@@ -424,6 +428,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
  jpegtran_LDADD = libjpeg.la
  rdjpgcom_SOURCES = rdjpgcom.c
  wrjpgcom_SOURCES = wrjpgcom.c
 +jpegexiforient_SOURCES = jpegexiforient.c
++jpegexiforient_LDADD = libjpeg.la
  
  # Manual pages to install
  man_MANS = $(DISTMANS)
-@@ -535,6 +540,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
- wrjpgcom$(EXEEXT): $(wrjpgcom_OBJECTS) $(wrjpgcom_DEPENDENCIES) 
+@@ -598,6 +603,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
+ wrjpgcom$(EXEEXT): $(wrjpgcom_OBJECTS) $(wrjpgcom_DEPENDENCIES) $(EXTRA_wrjpgcom_DEPENDENCIES) 
  	@rm -f wrjpgcom$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(wrjpgcom_OBJECTS) $(wrjpgcom_LDADD) $(LIBS)
 +jpegexiforient$(EXEEXT): $(jpegexiforient_OBJECTS) $(jpegexiforient_DEPENDENCIES) 
@@ -49,28 +50,11 @@ $NetBSD: patch-ag,v 1.2 2010/01/04 19:43:39 joerg Exp $
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -597,6 +605,7 @@ mostlyclean-kr:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctfst$U.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctint$U.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jmemmgr$U.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegexiforient$U.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegtran$U.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant1$U.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant2$U.Plo@am__quote@
-@@ -732,6 +741,8 @@ jidctint_.c: jidctint.c $(ANSI2KNR)
- 	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jidctint.c; then echo $(srcdir)/jidctint.c; else echo jidctint.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
- jmemmgr_.c: jmemmgr.c $(ANSI2KNR)
- 	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jmemmgr.c; then echo $(srcdir)/jmemmgr.c; else echo jmemmgr.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
-+jpegexiforient_.c: jpegexiforient.c $(ANSI2KNR)
-+	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jpegexiforient.c; then echo $(srcdir)/jpegexiforient.c; else echo jpegexiforient.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
- jpegtran_.c: jpegtran.c $(ANSI2KNR)
- 	$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/jpegtran.c; then echo $(srcdir)/jpegtran.c; else echo jpegtran.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > $@ || rm -f $@
- jquant1_.c: jquant1.c $(ANSI2KNR)
-@@ -793,6 +804,7 @@ jerror_.$(OBJEXT) jerror_.lo jfdctflt_.$
- jfdctfst_.$(OBJEXT) jfdctfst_.lo jfdctint_.$(OBJEXT) jfdctint_.lo \
- jidctflt_.$(OBJEXT) jidctflt_.lo jidctfst_.$(OBJEXT) jidctfst_.lo \
- jidctint_.$(OBJEXT) jidctint_.lo jmemmgr_.$(OBJEXT) jmemmgr_.lo \
-+jpegexiforient_.$(OBJEXT) jpegexiforient_.lo \
- jpegtran_.$(OBJEXT) jpegtran_.lo jquant1_.$(OBJEXT) jquant1_.lo \
- jquant2_.$(OBJEXT) jquant2_.lo jutils_.$(OBJEXT) jutils_.lo \
- rdbmp_.$(OBJEXT) rdbmp_.lo rdcolmap_.$(OBJEXT) rdcolmap_.lo \
+@@ -651,6 +659,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctfst.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctint.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jmemmgr.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegexiforient.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegtran.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant1.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant2.Plo@am__quote@
