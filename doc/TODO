@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11880 2013/01/24 11:06:10 wiz Exp $
+$NetBSD: TODO,v 1.11881 2013/01/24 17:53:21 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1042,7 +1042,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-trueskill-0.2.1
 	o py-urwid-1.1.0
 	o qbrew-0.3.9
-	o qemu-1.3.0
 	o qnetwalk-1.3
 	o qt4-qscintilla-2.7
 	o qt5-libs-5.0.0
