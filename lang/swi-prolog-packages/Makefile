@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 20:11:55 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/01/24 12:03:09 is Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
 PKGNAME=		swi-prolog-packages-${SWIPLVERS}
-PKGREVISION=		2
+PKGREVISION=		3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
