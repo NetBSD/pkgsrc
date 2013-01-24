@@ -1,17 +1,17 @@
-$NetBSD: patch-memory.c,v 1.2 2012/09/11 17:13:45 asau Exp $
+$NetBSD: patch-memory.c,v 1.3 2013/01/24 17:52:01 ryoon Exp $
 
---- memory.c.orig	2012-09-05 14:03:06.000000000 +0000
+--- memory.c.orig	2012-12-03 19:37:05.000000000 +0000
 +++ memory.c
-@@ -311,7 +311,7 @@ static void memory_region_read_accessor(
-     MemoryRegion *mr = opaque;
-     uint64_t tmp;
- 
+@@ -313,7 +313,7 @@ static void memory_region_read_accessor(
+     if (mr->flush_coalesced_mmio) {
+         qemu_flush_coalesced_mmio_buffer();
+     }
 -    tmp = mr->ops->read(mr->opaque, addr, size);
 +    tmp = (*mr->ops->read)(mr->opaque, addr, size);
      *value |= (tmp & mask) << shift;
  }
  
-@@ -393,12 +393,12 @@ static void memory_region_iorange_read(I
+@@ -396,12 +396,12 @@ static void memory_region_iorange_read(I
  
          *data = ((uint64_t)1 << (width * 8)) - 1;
          if (mrp) {

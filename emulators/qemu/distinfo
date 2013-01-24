@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.79 2012/09/13 14:38:19 adam Exp $
+$NetBSD: distinfo,v 1.80 2013/01/24 17:52:01 ryoon Exp $
 
-SHA1 (qemu-1.2.0.tar.bz2) = 4bbfb35ca2e386e9b731c09a8eb1187c0c0795a8
-RMD160 (qemu-1.2.0.tar.bz2) = f6ebeeca42e2e694f17ab83cca3652baf7e74d1c
-Size (qemu-1.2.0.tar.bz2) = 9865186 bytes
+SHA1 (qemu-1.3.0.tar.bz2) = ed56e8717308a56f51a6ed4c18a4335e5aacae83
+RMD160 (qemu-1.3.0.tar.bz2) = 70bbc3856604fe434d246bec8cd45beb4ee52d5b
+Size (qemu-1.3.0.tar.bz2) = 10286423 bytes
 SHA1 (patch-configure) = 34ae5e65bc5beb45637303a02c42e9ede33564b6
-SHA1 (patch-dyngen-exec.h) = c175c9db5521da5f61239bea3f9b150188ddc448
 SHA1 (patch-ef) = fd9f0ca22b1f3c3950a0ea69ba32252265d2285a
 SHA1 (patch-eg) = 4be8e74d134e0736fa65977d885a9dd3b12e653b
 SHA1 (patch-eh) = 02ada323ac9ba0acf8e4d0746bc7d58abb24b288
 SHA1 (patch-en) = a2fdf12d46cb25004f5f0f6b3e187c59863e3b20
-SHA1 (patch-et) = 5b117320922385d9238c045178a75360545ea051
-SHA1 (patch-hw_ppc__newworld.c) = 043d48be9c4ec2ce2d5d303e379695d86931d242
-SHA1 (patch-hw_ppc__oldworld.c) = 92db10cb063d30226022cc0a810c7e1c7f20bfec
+SHA1 (patch-et) = 019de3390becbf629f4158f6ea0326ccdb9bc28f
+SHA1 (patch-hw_ppc__newworld.c) = 9f8f337e7619444ceaf80a2bccf5a9545f6bc991
+SHA1 (patch-hw_ppc__oldworld.c) = a77c01a03afb9e5d4aef4d85a7585bb77d8fdd6a
 SHA1 (patch-hw_xilinx__axienet.c) = 9a4c73c8dcf745d31661e0c88d683530d153feaf
 SHA1 (patch-ioport.c) = 3a9fc61cbf72a8cea29d1d168113b48c2f4968a9
-SHA1 (patch-memory.c) = 539f953cb115a35be109a442a190a82785518ef3
+SHA1 (patch-memory.c) = cb67615b7632ec0006507a0270d841955bcb7e8b
 SHA1 (patch-net_tap-bsd.c) = eb5e994a57c6f4291e34af9198ea007dbc21b191
 SHA1 (patch-slirp_tcp__subr.c) = 51ae78f3f04eae9a22568afdbf6e3b2bc3d34187
