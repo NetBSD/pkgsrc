@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.315 2013/01/24 10:29:05 obache Exp $
+$NetBSD: CHANGES-2013,v 1.316 2013/01/24 10:50:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -399,3 +399,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/png to 1.5.14 [wiz 2013-01-24]
 	Updated emulators/suse121_freetype2 to 12.1nb2 [obache 2013-01-24]
 	Updated emulators/suse121_qt4 to 12.1nb1 [obache 2013-01-24]
+	Updated math/ruby-spreadsheet to 0.7.7 [obache 2013-01-24]
