@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.311 2013/01/24 02:00:50 wen Exp $
+$NetBSD: CHANGES-2013,v 1.312 2013/01/24 02:26:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R-spacetime to 1.0.3 [wen 2013-01-24]
 	Updated math/R-gstat to 1.0.15 [wen 2013-01-24]
 	Updated math/R-xts to 0.9.3 [wen 2013-01-24]
+	Updated math/R-genetics to 1.3.8 [wen 2013-01-24]
