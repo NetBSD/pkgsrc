@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2013/01/16 05:44:49 taca Exp $
+# $NetBSD: Makefile,v 1.105 2013/01/24 17:52:01 ryoon Exp $
 
-DISTNAME=		qemu-1.2.0
-PKGREVISION=		5
+DISTNAME=		qemu-1.3.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -37,8 +36,6 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
 			${PKG_SYSCONFDIR}/target-x86_64.conf
-CONF_FILES+=		${EGDIR}//cpus-x86_64.conf \
-			${PKG_SYSCONFDIR}/cpus-x86_64.conf
 EGDIR=			${PREFIX}/share/examples/qemu
 INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
 PKG_SYSCONFSUBDIR=	qemu

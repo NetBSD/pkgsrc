@@ -1,18 +1,16 @@
-$NetBSD: patch-et,v 1.5 2012/09/11 17:13:45 asau Exp $
+$NetBSD: patch-et,v 1.6 2013/01/24 17:52:01 ryoon Exp $
 
---- Makefile.orig	2012-09-05 14:03:06.000000000 +0000
+--- Makefile.orig	2012-12-03 19:37:05.000000000 +0000
 +++ Makefile
-@@ -295,9 +295,10 @@ install-datadir:
+@@ -330,8 +330,9 @@ install-datadir:
  install-confdir:
  	$(INSTALL_DIR) "$(DESTDIR)$(qemu_confdir)"
  
 -install-sysconfig: install-datadir install-confdir
 -	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(qemu_confdir)"
--	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/cpus-x86_64.conf "$(DESTDIR)$(qemu_datadir)"
 +install-sysconfig:
 +	$(INSTALL_DIR) "$(DESTDIR)$(egdir)"
 +	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(egdir)"
-+	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/cpus-x86_64.conf "$(DESTDIR)$(egdir)"
  
  install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig install-datadir
  	$(INSTALL_DIR) "$(DESTDIR)$(bindir)"
