@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.317 2013/01/24 11:28:17 obache Exp $
+$NetBSD: CHANGES-2013,v 1.318 2013/01/24 12:16:25 is Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/suse121_qt4 to 12.1nb1 [obache 2013-01-24]
 	Updated math/ruby-spreadsheet to 0.7.7 [obache 2013-01-24]
 	Updated net/zeromq to 2.2.0 [obache 2013-01-24]
+	Updated lang/swi-prolog-packages to 5.11.18nb3 [is 2013-01-24]
