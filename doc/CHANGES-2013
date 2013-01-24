@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.318 2013/01/24 12:16:25 is Exp $
+$NetBSD: CHANGES-2013,v 1.319 2013/01/24 12:38:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/ruby-spreadsheet to 0.7.7 [obache 2013-01-24]
 	Updated net/zeromq to 2.2.0 [obache 2013-01-24]
 	Updated lang/swi-prolog-packages to 5.11.18nb3 [is 2013-01-24]
+	Updated net/py-zmq to 2.2.0.1 [obache 2013-01-24]
