@@ -1,4 +1,4 @@
-# $NetBSD: xorg-version.mk,v 1.2 2011/09/09 09:08:07 abs Exp $
+# $NetBSD: xorg-version.mk,v 1.2.12.1 2013/01/24 10:40:07 spz Exp $
 #
 # This Makefile fragment is included by Makefiles that need to access
 # the X11_TYPE and version number of an X.org distribution.
@@ -18,7 +18,6 @@ BUILTIN_FIND_FILES_VAR:=		CF_XORG CF_XORG_VERSION CF_VERSION_OLD XQUARTZ
 BUILTIN_FIND_FILES.CF_XORG=		${X11BASE}/lib/X11/config/xorg.cf
 BUILTIN_FIND_FILES.CF_XORG_VERSION=	${X11BASE}/lib/X11/config/xorgversion.def
 BUILTIN_FIND_FILES.CF_VERSION_OLD=	${X11BASE}/lib/X11/config/version.def
-BUILTIN_FIND_FILES.XQUARTZ=		${X11BASE}/bin/Xquartz
 .include "../../mk/buildlink3/find-files.mk"
 
 .if !defined(BUILTIN_XORG_VERSION_FILE)
@@ -32,11 +31,7 @@ BUILTIN_XORG_VERSION_FILE=	${CF_VERSION_OLD}
 MAKEVARS+=	BUILTIN_XORG_VERSION_FILE
 
 .if !defined(BUILTIN_X11_VERSION.xorg)
-.  if exists(${XQUARTZ})
-BUILTIN_X11_VERSION.xorg!=				\
-	${XQUARTZ} -version 2>&1 |			\
-	${AWK} '/X.org Release / { print $$3 }'
-.  elif exists(${BUILTIN_XORG_VERSION_FILE})
+.  if exists(${BUILTIN_XORG_VERSION_FILE})
 BUILTIN_X11_VERSION.xorg!=						\
 	${AWK} '/\#define[ 	]*XORG_VERSION_MAJOR/ { M = $$3 }	\
 		/\#define[ 	]*XORG_VERSION_MINOR/ { m = "."$$3 }	\
