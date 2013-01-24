@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:21:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/01/24 12:37:58 obache Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -6,6 +6,8 @@ ${PYSITELIB}/zmq/__init__.pyo
 ${PYSITELIB}/zmq/core/__init__.py
 ${PYSITELIB}/zmq/core/__init__.pyc
 ${PYSITELIB}/zmq/core/__init__.pyo
+${PYSITELIB}/zmq/core/_poll.so
+${PYSITELIB}/zmq/core/_version.so
 ${PYSITELIB}/zmq/core/constants.so
 ${PYSITELIB}/zmq/core/context.pxd
 ${PYSITELIB}/zmq/core/context.so
@@ -14,12 +16,19 @@ ${PYSITELIB}/zmq/core/error.so
 ${PYSITELIB}/zmq/core/libzmq.pxd
 ${PYSITELIB}/zmq/core/message.pxd
 ${PYSITELIB}/zmq/core/message.so
-${PYSITELIB}/zmq/core/poll.so
+${PYSITELIB}/zmq/core/poll.py
+${PYSITELIB}/zmq/core/poll.pyc
+${PYSITELIB}/zmq/core/poll.pyo
+${PYSITELIB}/zmq/core/pysocket.py
+${PYSITELIB}/zmq/core/pysocket.pyc
+${PYSITELIB}/zmq/core/pysocket.pyo
 ${PYSITELIB}/zmq/core/socket.pxd
 ${PYSITELIB}/zmq/core/socket.so
 ${PYSITELIB}/zmq/core/stopwatch.pxd
 ${PYSITELIB}/zmq/core/stopwatch.so
-${PYSITELIB}/zmq/core/version.so
+${PYSITELIB}/zmq/core/version.py
+${PYSITELIB}/zmq/core/version.pyc
+${PYSITELIB}/zmq/core/version.pyo
 ${PYSITELIB}/zmq/devices/__init__.py
 ${PYSITELIB}/zmq/devices/__init__.pyc
 ${PYSITELIB}/zmq/devices/__init__.pyo
@@ -55,6 +64,15 @@ ${PYSITELIB}/zmq/eventloop/stack_context.pyo
 ${PYSITELIB}/zmq/eventloop/zmqstream.py
 ${PYSITELIB}/zmq/eventloop/zmqstream.pyc
 ${PYSITELIB}/zmq/eventloop/zmqstream.pyo
+${PYSITELIB}/zmq/green/__init__.py
+${PYSITELIB}/zmq/green/__init__.pyc
+${PYSITELIB}/zmq/green/__init__.pyo
+${PYSITELIB}/zmq/green/core.py
+${PYSITELIB}/zmq/green/core.pyc
+${PYSITELIB}/zmq/green/core.pyo
+${PYSITELIB}/zmq/green/poll.py
+${PYSITELIB}/zmq/green/poll.pyc
+${PYSITELIB}/zmq/green/poll.pyo
 ${PYSITELIB}/zmq/log/__init__.py
 ${PYSITELIB}/zmq/log/__init__.pyc
 ${PYSITELIB}/zmq/log/__init__.pyo
@@ -121,6 +139,9 @@ ${PYSITELIB}/zmq/tests/test_stopwatch.pyo
 ${PYSITELIB}/zmq/tests/test_version.py
 ${PYSITELIB}/zmq/tests/test_version.pyc
 ${PYSITELIB}/zmq/tests/test_version.pyo
+${PYSITELIB}/zmq/tests/test_web.py
+${PYSITELIB}/zmq/tests/test_web.pyc
+${PYSITELIB}/zmq/tests/test_web.pyo
 ${PYSITELIB}/zmq/tests/test_zmqstream.py
 ${PYSITELIB}/zmq/tests/test_zmqstream.pyc
 ${PYSITELIB}/zmq/tests/test_zmqstream.pyo
@@ -130,6 +151,7 @@ ${PYSITELIB}/zmq/utils/__init__.pyo
 ${PYSITELIB}/zmq/utils/allocate.h
 ${PYSITELIB}/zmq/utils/buffers.pxd
 ${PYSITELIB}/zmq/utils/initthreads.so
+${PYSITELIB}/zmq/utils/ipcmaxlen.h
 ${PYSITELIB}/zmq/utils/jsonapi.py
 ${PYSITELIB}/zmq/utils/jsonapi.pyc
 ${PYSITELIB}/zmq/utils/jsonapi.pyo
@@ -139,3 +161,12 @@ ${PYSITELIB}/zmq/utils/strtypes.py
 ${PYSITELIB}/zmq/utils/strtypes.pyc
 ${PYSITELIB}/zmq/utils/strtypes.pyo
 ${PYSITELIB}/zmq/utils/zmq_compat.h
+${PYSITELIB}/zmq/web/__init__.py
+${PYSITELIB}/zmq/web/__init__.pyc
+${PYSITELIB}/zmq/web/__init__.pyo
+${PYSITELIB}/zmq/web/proxy.py
+${PYSITELIB}/zmq/web/proxy.pyc
+${PYSITELIB}/zmq/web/proxy.pyo
+${PYSITELIB}/zmq/web/zmqweb.py
+${PYSITELIB}/zmq/web/zmqweb.pyc
+${PYSITELIB}/zmq/web/zmqweb.pyo

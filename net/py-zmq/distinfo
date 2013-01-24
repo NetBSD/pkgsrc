@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/04/17 17:33:09 drochner Exp $
+$NetBSD: distinfo,v 1.4 2013/01/24 12:37:58 obache Exp $
 
-SHA1 (pyzmq-2.1.11.tar.gz) = 5f94cf8431fc8197b3e42a944cafa19c88bec309
-RMD160 (pyzmq-2.1.11.tar.gz) = ac5ca7c600a65b6abc728e972ddafb5e97bd077d
-Size (pyzmq-2.1.11.tar.gz) = 611281 bytes
-SHA1 (patch-setup.py) = d3c9527a27bce998cd4eb65f5bd00a09b82ec97e
+SHA1 (pyzmq-2.2.0.1.tar.gz) = 54e261cc42e85920f9453a90a2c336c38c73fe40
+RMD160 (pyzmq-2.2.0.1.tar.gz) = bc22c053d532124b569b59fb9a35914865b9ecc8
+Size (pyzmq-2.2.0.1.tar.gz) = 789996 bytes
