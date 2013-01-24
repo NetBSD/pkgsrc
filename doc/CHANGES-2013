@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.309 2013/01/24 01:41:56 wen Exp $
+$NetBSD: CHANGES-2013,v 1.310 2013/01/24 01:52:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -393,3 +393,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added editors/dhex version 0.68 [wiz 2013-01-23]
 	Added math/R-intervals version 0.13.3 [wen 2013-01-24]
 	Updated math/R-spacetime to 1.0.3 [wen 2013-01-24]
+	Updated math/R-gstat to 1.0.15 [wen 2013-01-24]
