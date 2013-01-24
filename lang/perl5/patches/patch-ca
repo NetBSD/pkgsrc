@@ -1,7 +1,26 @@
-$NetBSD: patch-ca,v 1.12 2012/10/03 19:59:47 adam Exp $
+$NetBSD: patch-ca,v 1.13 2013/01/24 18:23:51 apb Exp $
 
---- Configure.orig	2012-08-03 17:35:26.000000000 +0000
+* Don't be confused by '=' in output from "uname -a".
+  PR pkg/45814, also reported upstream at
+  <https://rt.perl.org/rt3/Public/Bug/Display.html?id=116523>.
+
+* Use "uname -r" to get OS version for *BSD.
+
+* Move $loclibpth to the end of $dlist, instead of the beginning.
+
+* Several other changes.
+
+--- Configure.orig	2012-10-26 02:44:14.000000000 +0000
 +++ Configure
+@@ -3099,7 +3099,7 @@ myuname=`$uname -a 2>/dev/null`
+ $test -z "$myuname" && myuname=`hostname 2>/dev/null`
+ # tr '[A-Z]' '[a-z]' would not work in EBCDIC
+ # because the A-Z/a-z are not consecutive.
+-myuname=`echo $myuname | $sed -e 's/^[^=]*=//' -e "s,['/],,g" | \
++myuname=`echo $myuname | $sed -e 's/^[^= ]*=//' -e "s,['/],,g" | \
+ 	./tr '[A-Z]' '[a-z]' | $tr $trnl ' '`
+ newmyuname="$myuname"
+ dflt=n
 @@ -3265,13 +3265,14 @@ EOM
  			osvers="$3"
  			;;
