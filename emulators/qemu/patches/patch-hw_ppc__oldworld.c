@@ -1,19 +1,19 @@
-$NetBSD: patch-hw_ppc__oldworld.c,v 1.3 2012/09/11 17:13:45 asau Exp $
+$NetBSD: patch-hw_ppc__oldworld.c,v 1.4 2013/01/24 17:52:01 ryoon Exp $
 
 Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
 
---- hw/ppc_oldworld.c.orig	2012-09-05 14:03:06.000000000 +0000
+--- hw/ppc_oldworld.c.orig	2012-12-03 19:37:05.000000000 +0000
 +++ hw/ppc_oldworld.c
-@@ -60,7 +60,7 @@ static uint64_t translate_kernel_address
+@@ -59,7 +59,7 @@ static uint64_t translate_kernel_address
      return (addr & 0x0fffffff) + KERNEL_LOAD_ADDR;
  }
  
--static target_phys_addr_t round_page(target_phys_addr_t addr)
-+static target_phys_addr_t round_pageq(target_phys_addr_t addr)
+-static hwaddr round_page(hwaddr addr)
++static hwaddr round_pageq(hwaddr addr)
  {
      return (addr + TARGET_PAGE_SIZE - 1) & TARGET_PAGE_MASK;
  }
-@@ -178,7 +178,7 @@ static void ppc_heathrow_init (ram_addr_
+@@ -178,7 +178,7 @@ static void ppc_heathrow_init(QEMUMachin
          }
          /* load initrd */
          if (initrd_filename) {
@@ -22,7 +22,7 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
              initrd_size = load_image_targphys(initrd_filename, initrd_base,
                                                ram_size - initrd_base);
              if (initrd_size < 0) {
-@@ -186,11 +186,11 @@ static void ppc_heathrow_init (ram_addr_
+@@ -186,11 +186,11 @@ static void ppc_heathrow_init(QEMUMachin
                           initrd_filename);
                  exit(1);
              }
