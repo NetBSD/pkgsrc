@@ -1,18 +1,19 @@
-$NetBSD: patch-aa,v 1.32 2011/11/06 23:53:46 wiz Exp $
+$NetBSD: patch-aa,v 1.33 2013/01/24 08:15:51 wiz Exp $
 
 Don't install compat links to libpng. Programs should use
 the pkg-config or libpng-config scripts to get the correct png library
 name.
 
---- Makefile.in.orig	2011-11-03 03:43:00.000000000 +0000
+--- Makefile.in.orig	2013-01-24 02:59:12.000000000 +0000
 +++ Makefile.in
-@@ -1356,14 +1356,6 @@ install-data-hook:
- install-exec-hook:
- 	cd $(DESTDIR)$(bindir); rm -f libpng-config
- 	cd $(DESTDIR)$(bindir); $(LN_S) $(PNGLIB_BASENAME)-config libpng-config
+@@ -1526,15 +1526,6 @@ install-exec-hook:
+ 	cd '$(DESTDIR)$(bindir)'; rm -f libpng-config
+ 	cd '$(DESTDIR)$(bindir)';\
+ 	   $(LN_S) $(PNGLIB_BASENAME)-config libpng-config
 -	@set -x;\
--	cd $(DESTDIR)$(libdir);\
--	for ext in a la so so.@PNGLIB_MAJOR@@PNGLIB_MINOR@.@PNGLIB_RELEASE@ sl dylib dll.a; do\
+-	cd '$(DESTDIR)$(libdir)';\
+-	for ext in a la so so.@PNGLIB_MAJOR@@PNGLIB_MINOR@.@PNGLIB_RELEASE@\
+-	   sl dylib dll.a; do\
 -		rm -f libpng.$$ext;\
 -                if test -f $(PNGLIB_BASENAME).$$ext; then\
 -                       $(LN_S) $(PNGLIB_BASENAME).$$ext libpng.$$ext;\
@@ -20,4 +21,4 @@ name.
 -	done
  
  uninstall-hook:
- 	cd $(DESTDIR)$(includedir); rm -f png.h pngconf.h pnglibconf.h
+ 	cd '$(DESTDIR)$(includedir)'; rm -f png.h pngconf.h pnglibconf.h
