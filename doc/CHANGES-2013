@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.328 2013/01/25 12:50:25 obache Exp $
+$NetBSD: CHANGES-2013,v 1.329 2013/01/25 20:03:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/lilypond to 2.16.2 [wiz 2013-01-25]
 	Updated inputmethod/libskk to 1.0.0 [obache 2013-01-25]
 	Updated inputmethod/tegaki-wagomu to 0.3.1nb6 [obache 2013-01-25]
+	Updated www/php-owncloud to 4.5.6 [ryoon 2013-01-25]
