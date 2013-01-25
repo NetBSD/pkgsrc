@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2009/06/03 19:52:33 hasso Exp $
+$NetBSD: patch-aa,v 1.9 2013/01/25 11:32:08 wiz Exp $
+
+Fix unportable test(1) construct.
 
 --- scripts/auxiliar/build-profile.sh.orig
 +++ scripts/auxiliar/build-profile.sh
