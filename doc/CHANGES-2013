@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.330 2013/01/25 21:10:31 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.331 2013/01/25 21:10:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/tegaki-wagomu to 0.3.1nb6 [obache 2013-01-25]
 	Updated www/php-owncloud to 4.5.6 [ryoon 2013-01-25]
 	Updated devel/gitolite to 3.04 [ryoon 2013-01-25]
+	Updated www/apache-tomcat7 to 7.0.35 [ryoon 2013-01-25]
