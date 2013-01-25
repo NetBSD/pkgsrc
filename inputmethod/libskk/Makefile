@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/06 14:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/25 12:07:13 obache Exp $
 #
 
-DISTNAME=	libskk-0.0.13
-PKGREVISION=	1
+DISTNAME=	libskk-1.0.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/libskk/
 
