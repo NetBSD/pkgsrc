@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:56:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/25 12:56:41 obache Exp $
 #
 
 .include "../../textproc/cabocha/Makefile.common"
@@ -8,7 +8,7 @@ CATEGORIES+=	ruby
 
 COMMENT=	CaboCha ruby module
 
-BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
+BUILD_DEPENDS+=	swig-1.[0-9]*:../../devel/swig
 
 USE_LANGUAGES=	c c++
 
