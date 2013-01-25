@@ -1,0 +1,69 @@
+$NetBSD: patch-BSDmakefile,v 1.1 2013/01/25 22:02:18 ryoon Exp $
+
+--- BSDmakefile.orig	2012-12-31 07:40:50.000000000 +0000
++++ BSDmakefile
+@@ -0,0 +1,64 @@
++# Written for lrexlib-* 2.7.1, based on 2.4.0's Makefile and luarspec file.
++# I (ryoon) cannot handle luarocks properly...
++
++POSIX=	src/posix
++PCRE=	src/pcre
++ONIG=	src/oniguruma
++GNU=	src/gnu
++TRE=	src/tre
++
++CFLAGS+=	-O2 -fPIC -DVERSION=\"${VERSION}\"
++INC_LUA+=
++LIB_LUA+=
++
++CC?=		cc
++LIBTOOL?=	libtool
++
++LIBS=		
++
++LOBJS=		${OBJS:R:S/$/.lo/g}
++
++.SUFFIXES: .c .lo
++
++.c.lo:
++	${LIBTOOL} --tag=CC --mode=compile ${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
++
++all: build
++
++build: build_posix build_pcre build_onig build_gnu build_tre
++
++install: install_posix install_pcre install_onig install_gnu install_tre
++
++# POSIX
++build_posix: rex_posix.la 
++
++rex_posix.la: ${POSIX}/lposix.lo src/common.lo
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
++		src/common.lo ${POSIX}/lposix.lo -module -version-info 0:0 -rpath ${PREFIX}/lib
++
++install_posix:
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} rex_posix.la \
++		${DESTDIR}${PREFIX}/${LUA_CDIR}
++
++# PCRE
++build_pcre: rex_pcre.la 
++
++rex_pcre.la: ${PCRE}/lpcre.lo ${PCRE}/lpcre_f.lo src/common.lo
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
++		src/common.lo ${PCRE}/lpcre.lo ${PCRE}/lpcre_f.lo -module -version-info 0:0 -rpath ${PREFIX}/lib
++
++install_pcre:
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} rex_pcre.la \
++		${DESTDIR}${PREFIX}/${LUA_CDIR}
++
++# ONIG
++build_onig: rex_onig.la 
++
++rex_onig.la: ${ONIG}/lonig.lo ${ONIG}/lonig_f.lo src/common.lo
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
++		src/common.lo ${ONIG}/lonig.lo ${ONIG}/lonig_f.lo -module -version-info 0:0 -rpath ${PREFIX}/lib
++
++install_onig:
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} rex_onig.la \
++		${DESTDIR}${PREFIX}/${LUA_CDIR}
++
