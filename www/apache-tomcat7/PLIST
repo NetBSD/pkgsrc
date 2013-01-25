@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/16 10:37:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/01/25 21:09:26 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -100,6 +100,7 @@ share/tomcat/webapps/docs/cgi-howto.html
 share/tomcat/webapps/docs/changelog.html
 share/tomcat/webapps/docs/class-loader-howto.html
 share/tomcat/webapps/docs/cluster-howto.html
+share/tomcat/webapps/docs/comments.html
 share/tomcat/webapps/docs/config/ajp.html
 share/tomcat/webapps/docs/config/cluster-channel.html
 share/tomcat/webapps/docs/config/cluster-deployer.html
