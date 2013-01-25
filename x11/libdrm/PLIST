@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/12/08 22:15:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/01/25 10:32:56 wiz Exp $
 include/libdrm/drm.h
 include/libdrm/drm_fourcc.h
 include/libdrm/drm_mode.h
@@ -35,6 +35,3 @@ lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
-man/man3/drmAvailable.3
-man/man3/drmHandleEvent.3
-man/man3/drmModeGetResources.3
