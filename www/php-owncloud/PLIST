@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/12/23 12:34:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/01/25 20:02:24 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -1980,21 +1980,6 @@ share/owncloud/apps/media/settings.php
 share/owncloud/apps/media/templates/music.php
 share/owncloud/apps/media/templates/player.php
 share/owncloud/apps/media/templates/settings.php
-share/owncloud/apps/remoteStorage/BearerAuth.php
-share/owncloud/apps/remoteStorage/ajax/revokeToken.php
-share/owncloud/apps/remoteStorage/appinfo/app.php
-share/owncloud/apps/remoteStorage/appinfo/database.xml
-share/owncloud/apps/remoteStorage/appinfo/info.xml
-share/owncloud/apps/remoteStorage/appinfo/version
-share/owncloud/apps/remoteStorage/appinfo/webfinger.php
-share/owncloud/apps/remoteStorage/auth.php
-share/owncloud/apps/remoteStorage/img/remoteStorage.png
-share/owncloud/apps/remoteStorage/lib_remoteStorage.php
-share/owncloud/apps/remoteStorage/oauth_ro_auth.php
-share/owncloud/apps/remoteStorage/settings.php
-share/owncloud/apps/remoteStorage/templates/auth.php
-share/owncloud/apps/remoteStorage/templates/settings.php
-share/owncloud/apps/remoteStorage/webdav.php
 share/owncloud/apps/tasks/ajax/addtask.php
 share/owncloud/apps/tasks/ajax/delete.php
 share/owncloud/apps/tasks/ajax/gettasks.php
