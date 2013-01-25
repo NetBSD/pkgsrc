@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/25 22:33:47 imil Exp $
+
+SHA1 (tornado-2.4.1.tar.gz) = 9e985efa61137ed96bad08fa222b1216358b2f9c
+RMD160 (tornado-2.4.1.tar.gz) = f43dcea81beb9735581c281eaf4752f77b148fd0
+Size (tornado-2.4.1.tar.gz) = 348198 bytes
