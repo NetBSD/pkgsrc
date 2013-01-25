@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/21 14:35:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/01/25 10:34:44 wiz Exp $
 bin/anki
 man/man1/anki.1
 share/anki/LICENSE
@@ -399,6 +399,7 @@ share/anki/tests/support/invalid-ords.anki
 share/anki/tests/support/media.apkg
 share/anki/tests/support/mnemo.db
 share/anki/tests/support/supermemo1.xml
+share/anki/tests/support/suspended12.anki
 share/anki/tests/support/text-2fields.txt
 share/anki/tests/support/text-tags.txt
 share/anki/tests/support/text-update.txt
