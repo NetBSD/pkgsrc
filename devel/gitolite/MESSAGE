@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/11/20 19:11:49 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2013/01/25 21:04:02 ryoon Exp $
 
 To use gitolite, you will need to perform the following steps.
 
@@ -9,17 +9,24 @@ To use gitolite, you will need to perform the following steps.
 	# groupadd git
 	# useradd -m -g git git
 
-2. login to new user git, create ssh public key, and copy public key
+2. login with new user git, create ssh public key, and copy public key
    file to user git's home directory on server.
 
-	$ ssh-keygen -t rsa -f git-admin
-	$ cp git-admin.pub ~/.ssh/
-	$ scp ~/git-admin.pub gitserver:~/.ssh/
+	On server
+	$ mkdir ~/.ssh
+	$ chmof 700 ~/.ssh
+
+	On client
+	$ ssh-keygen -t rsa -f git
+	$ scp ~/git.pub gitserver:~/
+
+	On server
+	$ chmod 600 ~/git.pub
 
 3. Setup gitolite.
 
    On server,
-	$ gl-setup ~/git-admin.pub
+	$ gitolite setup -pk git.pub
 
    And edit config file.
 
@@ -30,10 +37,10 @@ To use gitolite, you will need to perform the following steps.
 	    user git
 	    hostname RealGitServerName
 	    port 22
-	    identityfile ~/.ssh/git-admin
+	    identityfile ~/.ssh/git
 
-5. For testing, please clone testing repository.
+5. For administrative setting, please clone gitolite-admin repository.
 
 	On client,
-	$ git clone ssh://gitserver/testing
+	$ git clone gitserver:gitolite-admin
 ===========================================================================
