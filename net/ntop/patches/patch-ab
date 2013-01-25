@@ -1,7 +1,27 @@
-$NetBSD: patch-ab,v 1.21 2011/10/18 10:33:06 adam Exp $
+$NetBSD: patch-ab,v 1.22 2013/01/25 11:59:13 jperkin Exp $
 
---- configure.in.orig	2011-08-15 08:34:28.000000000 +0000
-+++ configure.in
+* First two chunks: automake-1.13 compatability.
+
+--- /home/pbulk/build/upstream-trunk32/net/ntop/work/ntop-4.1.0/configure.in.orig	2011-08-15 08:34:28.000000000 +0000
++++ /home/pbulk/build/upstream-trunk32/net/ntop/work/ntop-4.1.0/configure.in
+@@ -56,7 +56,7 @@ dnl>
+ dnl> generate the config header
+ dnl>
+ umask 002
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ HAS_ERROR=
+ HAS_WARNING=
+@@ -324,7 +324,7 @@ dnl>
+ echo
+ echo "Checking C compiler program and features..."
+ echo
+-AM_PROG_CC_STDC
++AC_PROG_CC
+ if test ".${ac_cv_prog_cc_stdc}" = ".no"; then
+     echo
+     echo "*******************************************************************"
 @@ -395,6 +395,19 @@ case "${target}:${CC}" in
          echo "* This appears to be ${DEFINEOS} (release not checked)"
        ;;
