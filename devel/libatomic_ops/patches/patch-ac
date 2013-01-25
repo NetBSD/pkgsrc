@@ -1,16 +1,21 @@
-$NetBSD: patch-ac,v 1.3 2012/12/28 14:38:59 bsiegert Exp $
+$NetBSD: patch-ac,v 1.4 2013/01/25 11:25:51 jperkin Exp $
 
---- configure.ac.orig	Wed Jun 15 11:41:06 2011
-+++ configure.ac
-@@ -4,6 +4,7 @@ AC_CANONICAL_TARGET([])
+* automake-1.13 compatability
+
+--- configure.ac.orig	2011-06-15 11:41:30.000000000 +0000
++++ configure.ac	2013-01-25 10:53:00.425915779 +0000
+@@ -4,8 +4,9 @@
  AC_CONFIG_SRCDIR(src/atomic_ops.c)
  AM_INIT_AUTOMAKE
  AC_PROG_RANLIB
 +AC_PROG_LIBTOOL
  
- AM_CONFIG_HEADER(src/config.h)
+-AM_CONFIG_HEADER(src/config.h)
++AC_CONFIG_HEADERS(src/config.h)
  
-@@ -26,7 +27,7 @@ if test "$GCC" = yes; then
+ # Checks for programs.
+ AM_PROG_CC_C_O
+@@ -26,7 +27,7 @@
    AC_MSG_RESULT(-fPIC)
    PICFLAG=-fPIC
    case "$host" in
