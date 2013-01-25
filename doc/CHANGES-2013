@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.326 2013/01/25 11:32:17 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.327 2013/01/25 12:07:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -410,3 +410,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libdrm to 2.4.41 [wiz 2013-01-25]
 	Updated misc/py-anki2 to 2.0.6 [wiz 2013-01-25]
 	Updated print/lilypond to 2.16.2 [wiz 2013-01-25]
+	Updated inputmethod/libskk to 1.0.0 [obache 2013-01-25]
