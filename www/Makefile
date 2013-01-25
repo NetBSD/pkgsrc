@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.927 2013/01/17 20:08:16 kleink Exp $
+# $NetBSD: Makefile,v 1.928 2013/01/25 22:35:04 imil Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -580,6 +580,7 @@ SUBDIR+=	py-pendrell
 SUBDIR+=	py-rss2gen
 SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
+SUBDIR+=	py-tornado
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webcolors
