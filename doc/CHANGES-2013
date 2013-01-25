@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.333 2013/01/25 22:36:51 imil Exp $
+$NetBSD: CHANGES-2013,v 1.334 2013/01/25 23:47:25 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -420,3 +420,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/lua-lrexlib-pcre to 2.7.2nb1 [ryoon 2013-01-25]
 	Updated devel/lua-lrexlib-posix to 2.7.2 [ryoon 2013-01-25]
 	Added www/py-tornado version 2.4.1 [imil 2013-01-25]
+	Updated databases/p5-DBD-mysql to 4.022 [rhaen 2013-01-26]
