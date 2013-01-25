@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2013/01/11 00:15:40 joerg Exp $
+# $NetBSD: Makefile,v 1.130 2013/01/25 16:59:42 jperkin Exp $
 
 DISTNAME=	mono-2.10.9
 CATEGORIES=	lang
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-icu=yes
 CONFIGURE_ARGS+=	--with-preview=yes
 CONFIGURE_ARGS+=	--with-libgdiplus=installed
+CONFIGURE_ARGS+=	--disable-dtrace
 
 .include "options.mk"
 
