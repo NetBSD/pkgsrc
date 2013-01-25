@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.323 2013/01/25 09:19:24 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.324 2013/01/25 10:33:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -407,3 +407,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.44 [adam 2013-01-24]
 	Updated graphics/jpeg to 9 [adam 2013-01-24]
 	Updated misc/p5-Locale-libintl to 1.23 [wiz 2013-01-25]
+	Updated x11/libdrm to 2.4.41 [wiz 2013-01-25]
