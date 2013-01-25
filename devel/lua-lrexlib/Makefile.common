@@ -1,27 +1,32 @@
-# $NetBSD: Makefile.common,v 1.2 2012/10/31 11:17:26 asau Exp $
+# $NetBSD: Makefile.common,v 1.3 2013/01/25 22:02:18 ryoon Exp $
 # used by devel/lua-lrexlib-posix/Makefile
 # used by devel/lua-lrexlib-pcre/Makefile
 # used by devel/lua-lrexlib-onig/Makefile
 #
 .include "../../devel/lua-lrexlib/Makefile.version"
 
-DISTNAME=	lrexlib-${VERSION}
+DISTNAME=	lrexlib-rel-${VERSION:S/./-/g}
 PKGNAME=	${LUA_PKGPREFIX}-lrexlib-${ENGINE}-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://luaforge.net/frs/download.php/3599/
+MASTER_SITES=	-https://github.com/rrthomas/lrexlib/archive/rel-${VERSION:S/./-/g}.zip
 EXTRACT_SUFX=	.zip
 
 HOMEPAGE=	http://luaforge.net/projects/lrexlib
 
 LICENSE=		mit
 
-USE_TOOLS+=		gmake
+# Force using "curl" for fetching the distribution file. It is only available
+# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
+FETCH_USING=	curl
+
+#USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 BUILD_TARGET=		build_${ENGINE}
-TEST_TARGET=		test_${ENGINE}
+#TEST_TARGET=		test_${ENGINE}
+INSTALL_TARGET=		install_${ENGINE}
 
-#MAKE_FILE=		makefile
+MAKE_FILE=		BSDmakefile
 
 #
 PATCHDIR=		${.CURDIR}/../../devel/lua-lrexlib/patches
@@ -31,9 +36,11 @@ DESCR_SRC=		${.CURDIR}/../../devel/lua-lrexlib/DESCR.common
 MAKE_FLAGS+=		LIBS=${LIBS:Q}
 MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 MAKE_FLAGS+=		MODULES_DIR=${PREFIX}/${LUA_CDIR}
+MAKE_FLAGS+=		VERSION=\"${V}\"
+MAKE_FLAGS+=		LUA_CDIR=${LUA_CDIR}
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
 
-do-install:
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-	    ${WRKSRC}/src/${ENGINE_DIR}/rex_${ENGINE}.la ${DESTDIR}${PREFIX}/${LUA_CDIR}
+#do-install:
+#	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+#	    ${WRKSRC}/src/${ENGINE_DIR}/rex_${ENGINE}.la ${DESTDIR}${PREFIX}/${LUA_CDIR}
