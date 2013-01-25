@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.18 2013/01/24 14:03:03 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.19 2013/01/25 10:17:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -128,3 +128,5 @@ Pullup ticket #4038 - requested by obache
 emulators/suse121_qt4: security update
 Pullup ticket #4039 - requested by tron
 mk/checksum/checksum.mk: build fix for MacOS
+Pullup ticket #4040 - requested by wiz
+security/gnupg: bug fix patch
