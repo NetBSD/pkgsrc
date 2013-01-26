@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2013/01/26 22:14:04 wiz Exp $
+
+automake-1.13 compat.
+
+--- configure.in.orig	2003-04-26 13:57:44.000000000 +0000
++++ configure.in
+@@ -26,7 +26,7 @@ dnl Inititalize automake stuff
+ AM_INIT_AUTOMAKE(socket++,$SOCKET_VERSION)
+ 
+ dnl Specify a configuration file
+-AM_CONFIG_HEADER(socket++/config.h)
++AC_CONFIG_HEADERS(socket++/config.h)
+ 
+ dnl check for programs
+ AC_PROG_MAKE_SET

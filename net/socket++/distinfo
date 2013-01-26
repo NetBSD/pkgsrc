@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2009/04/07 18:05:08 hasso Exp $
+$NetBSD: distinfo,v 1.5 2013/01/26 22:14:04 wiz Exp $
 
 SHA1 (socket++-1.12.10.tar.gz) = a59a6d30803a686b65f17f3dae1a67ec601fa5e9
 RMD160 (socket++-1.12.10.tar.gz) = d8c2d4d58d36f7f1e46542a670b494982cf1849d
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 7f0ffbf79592b340a45f2c7868b7a6904a63c9f3
 SHA1 (patch-ae) = df00fd55c4af18ec1aaed4a1a16432146e026aff
 SHA1 (patch-af) = 5e298f495802fb7fb64785b083b1c8b51015749d
 SHA1 (patch-ag) = 403b04500cb267d70f4bb6254a1b479f181eda32
+SHA1 (patch-configure.in) = f1e1f1466553f619254f477bf9343bdeb2aaeec1
