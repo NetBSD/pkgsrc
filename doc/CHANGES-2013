@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.353 2013/01/26 15:23:26 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.354 2013/01/26 16:39:29 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -440,3 +440,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Web-Scraper to 0.37 [rhaen 2013-01-26]
 	Updated devel/p5-AnyEvent to 7.04 [rhaen 2013-01-26]
 	Updated devel/p5-EV to 4.11 [rhaen 2013-01-26]
+	Added devel/p5-Safe-Isa version 1.000002 [rhaen 2013-01-26]
