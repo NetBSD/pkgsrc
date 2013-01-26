@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2010/02/08 01:47:14 jakllsch Exp $
+$NetBSD: patch-ae,v 1.7 2013/01/26 22:10:14 wiz Exp $
+
+- automake-1.13 compat.
 
 - add missing AM_PROG_CC_C_O that automake wants for the yacc
   sources.
@@ -8,9 +10,18 @@ $NetBSD: patch-ae,v 1.6 2010/02/08 01:47:14 jakllsch Exp $
   platforms available and they're not the same for different
   MACHINE_ARCH's in NetBSD).
 
---- configure.ac.orig	2010-01-19 10:39:11.000000000 +0000
+--- configure.ac.orig	2011-08-27 19:49:40.000000000 +0000
 +++ configure.ac
-@@ -74,6 +74,7 @@ AC_CHECK_HEADERS([ddk/hidsdi.h],,,[#incl
+@@ -32,7 +32,7 @@ AC_CANONICAL_TARGET
+ 
+ AC_CONFIG_SRCDIR([main.c])
+ AM_INIT_AUTOMAKE
+-AM_CONFIG_HEADER(ac_cfg.h)
++AC_CONFIG_HEADERS(ac_cfg.h)
+ 
+ # Checks for programs.
+ AC_PROG_CC
+@@ -120,6 +120,7 @@ AC_CHECK_HEADERS([ddk/hidsdi.h],,,[#incl
  
  # Checks for typedefs, structures, and compiler characteristics.
  AC_C_CONST
@@ -18,7 +29,7 @@ $NetBSD: patch-ae,v 1.6 2010/02/08 01:47:14 jakllsch Exp $
  AC_HEADER_TIME
  
  # Checks for library functions.
-@@ -187,34 +188,44 @@ AC_SUBST(DIST_SUBDIRS_AC, $DIST_SUBDIRS_
+@@ -233,34 +234,44 @@ AC_SUBST(DIST_SUBDIRS_AC, $DIST_SUBDIRS_
  
  # Find the parallel serial device files based on target system
  # If a system doesn't have a PC style parallel, mark it as unknown.
