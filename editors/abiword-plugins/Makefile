@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2012/10/08 23:01:26 adam Exp $
+# $NetBSD: Makefile,v 1.51 2013/01/26 21:37:25 adam Exp $
 
 .include "../../editors/abiword/Makefile.common"
 
 PKGNAME=	abiword-plugins-${ABIVERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 COMMENT=	Plugins enhancing Abiword's capabilities
 
 CONFIGURE_ARGS+= --without-gnomevfs

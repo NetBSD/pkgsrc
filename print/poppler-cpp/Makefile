@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/12/12 15:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/26 21:36:44 adam Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-cpp-${POPPLER_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		PDF rendering library (cpp wrapper)
 MAINTAINER=		reed@reedmedia.net
