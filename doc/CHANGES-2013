@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.365 2013/01/26 20:27:13 bouyer Exp $
+$NetBSD: CHANGES-2013,v 1.366 2013/01/26 20:35:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -453,3 +453,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Any-Moose to 0.20 [rhaen 2013-01-26]
 	Updated devel/p5-Devel-StackTrace to 1.30 [rhaen 2013-01-26]
 	Updated devel/p5-Event to 1.21 [rhaen 2013-01-26]
+	Updated inputmethod/ibus-mozc to 1.6.1187.102nb1 [ryoon 2013-01-26]
+	Updated inputmethod/mozc-tool to 1.6.1187.102nb1 [ryoon 2013-01-26]
+	Updated inputmethod/mozc-server to 1.6.1187.102nb1 [ryoon 2013-01-26]
