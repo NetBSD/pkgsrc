@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/26 08:46:29 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/composite_io.rb
+${GEM_LIBDIR}/lib/multipart_post.rb
+${GEM_LIBDIR}/lib/multipartable.rb
+${GEM_LIBDIR}/lib/net/http/post/multipart.rb
+${GEM_LIBDIR}/lib/parts.rb
+${GEM_LIBDIR}/multipart-post.gemspec
+${GEM_LIBDIR}/test/multibyte.txt
+${GEM_LIBDIR}/test/net/http/post/test_multipart.rb
+${GEM_LIBDIR}/test/test_composite_io.rb
+${GEM_LIBDIR}/test/test_parts.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
