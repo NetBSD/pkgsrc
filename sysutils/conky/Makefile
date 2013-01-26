@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/01/26 21:38:50 adam Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/26 22:07:31 wiz Exp $
 #
 
 DISTNAME=	conky-1.9.0
@@ -27,6 +27,10 @@ CONF_FILES=	${EGDIR}/conky.conf ${PKG_SYSCONFDIR}/conky/conky.conf
 CONF_FILES+=	${EGDIR}/conky_no_x11.conf ${PKG_SYSCONFDIR}/conky/conky_no_x11.conf
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CPPFLAGS+=	-D_KMEMUSER
+.endif
 
 # conky segfaults on system's curses
 PREFER_PKGSRC+=	ncurses
