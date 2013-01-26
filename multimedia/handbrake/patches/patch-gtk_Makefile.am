@@ -1,0 +1,15 @@
+$NetBSD: patch-gtk_Makefile.am,v 1.1 2013/01/26 23:26:19 wiz Exp $
+
+Disable empty po directory.
+
+--- gtk/Makefile.am.orig	2008-06-17 22:32:05.000000000 +0000
++++ gtk/Makefile.am
+@@ -1,7 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ ## Created by Anjuta
+ 
+-SUBDIRS = src po
++SUBDIRS = src
+ 
+ ghbdocdir = ${prefix}/share/doc/ghb
+ ghbdoc_DATA = \

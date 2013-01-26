@@ -1,0 +1,46 @@
+$NetBSD: patch-gtk_configure.ac,v 1.1 2013/01/26 23:26:19 wiz Exp $
+
+automake-1.13 compat.
+
+--- gtk/configure.ac.orig	2008-11-09 19:12:00.000000000 +0000
++++ gtk/configure.ac
+@@ -3,14 +3,13 @@ dnl Created by Anjuta application wizard
+ 
+ AC_INIT(ghb, 0.1)
+ 
+-AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
+-AM_CONFIG_HEADER(config.h)
++AM_INIT_AUTOMAKE
++AC_CONFIG_HEADERS(config.h)
+ AM_MAINTAINER_MODE
+ 
+ AC_ISC_POSIX
+ AC_PROG_CC
+ AC_PROG_CXX
+-AM_PROG_CC_STDC
+ AC_HEADER_STDC
+ 
+ # introduce the optional configure parameter for the path of libXXX.a
+@@ -51,16 +50,6 @@ AC_SUBST(GLOBALLDFLAGS, $LDFLAGS )
+ 
+ 
+ 
+-dnl ***************************************************************************
+-dnl Internatinalization
+-dnl ***************************************************************************
+-GETTEXT_PACKAGE=ghb
+-AC_SUBST(GETTEXT_PACKAGE)
+-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [GETTEXT package name])
+-AM_GLIB_GNU_GETTEXT
+-IT_PROG_INTLTOOL([0.35.0])
+-
+-
+ 
+ AM_PROG_LIBTOOL
+ 
+@@ -80,5 +69,4 @@ AC_SUBST(GHB_LIBS)
+ AC_OUTPUT([
+ Makefile
+ src/Makefile
+-po/Makefile.in
+ ])
