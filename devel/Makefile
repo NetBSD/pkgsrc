@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1689 2013/01/19 12:33:57 wen Exp $
+# $NetBSD: Makefile,v 1.1690 2013/01/26 16:37:07 rhaen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1075,6 +1075,7 @@ SUBDIR+=	p5-SVN-Mirror
 SUBDIR+=	p5-SVN-Notify
 SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
+SUBDIR+=	p5-Safe-Isa
 SUBDIR+=	p5-Scalar-Defer
 SUBDIR+=	p5-Scalar-List-Utils
 SUBDIR+=	p5-Scalar-Util-Refcount
