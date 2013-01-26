@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.10 2008/01/19 09:16:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2013/01/26 22:01:07 wiz Exp $
 #
+# used by graphics/cal3d/Makefile
+# used by graphics/cal3d-examples/Makefile
 
 DISTNAME=		cal3d-${CAL3D_VERSION}
 CATEGORIES=		graphics
