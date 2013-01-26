@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.in,v 1.1 2013/01/26 22:25:00 wiz Exp $
+
+automake-1.13 compat.
+
+--- configure.in.orig	2012-05-23 20:43:04.000000000 +0000
++++ configure.in
+@@ -62,7 +62,6 @@ AC_SUBST([VTE_LIBRARY_SUFFIX_U],[AS_TR_S
+ # Check for programs
+ AC_PROG_CC
+ AC_HEADER_STDC
+-AM_PROG_CC_C_O
+ AC_PROG_SED
+ 
+ # Initialize libtool
