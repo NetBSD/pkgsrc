@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2012/09/10 13:38:27 sno Exp $
+$NetBSD: distinfo,v 1.21 2013/01/26 13:20:11 rhaen Exp $
 
-SHA1 (DBIx-Class-0.08200.tar.gz) = c6c1b0a77ee9cff2db81b7e390919cdaf3a7f90a
-RMD160 (DBIx-Class-0.08200.tar.gz) = 38d92a6e7957001dfbea4c7460d9f506de4ab110
-Size (DBIx-Class-0.08200.tar.gz) = 701379 bytes
+SHA1 (DBIx-Class-0.08205.tar.gz) = a3434222b686028c099ac84c751fc7a7ed77d221
+RMD160 (DBIx-Class-0.08205.tar.gz) = 1defac4ec792f0788b983aa93bc4e80522b8d117
+Size (DBIx-Class-0.08205.tar.gz) = 735395 bytes
