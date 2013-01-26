@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/11/26 17:12:24 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/01/26 22:01:24 wiz Exp $
 
 SHA1 (TheCallyDemo-0.9.1b.zip) = e4d1d4b14504e0971f5cb56e7daa1133f62ad2b8
 RMD160 (TheCallyDemo-0.9.1b.zip) = bbcb4dec803b754a55d0318aa3c6eb8656dc309b
@@ -10,8 +10,11 @@ SHA1 (patch-ab) = 74ca6b1b75016253bd45e38ba09fce1f2f7573f1
 SHA1 (patch-ac) = 7c71ee949fecf2755d0461962075dda496a6bc51
 SHA1 (patch-ad) = 3128f69512bf3c88d1b04b2f10c9b0ee6660a8df
 SHA1 (patch-ae) = b5e6552950208c996e74bef982b9d2b3a7b06aee
+SHA1 (patch-examples_cally_configure.in) = 5b165efc254179bde309a12afa66159c1a5ce8bd
 SHA1 (patch-examples_cally_src_demo.h) = e3bde0785970183dba1d3f360b50c73da49f1812
 SHA1 (patch-examples_cally_src_model.cpp) = 4bba658d7ec766033af69b4b9ce10fad13984560
+SHA1 (patch-examples_miniviewer__gl_configure.in) = a17ec7755f8fe2f91717673fcad8abf0da4ef22f
 SHA1 (patch-examples_miniviewer__gl_src_viewer.cpp) = f44a9f26f52efcfb03a9907c6d24c7f33ff72f55
 SHA1 (patch-examples_miniviewer__gl_src_viewer.h) = 19dae4f8bdab3d4de0bc4c08844b00aa9f728779
+SHA1 (patch-tools_converter_configure.in) = 4c16aaff687658c30011650fd87cf65119595a35
 SHA1 (patch-tools_converter_src_main.cpp) = da8a3915ae45d2dcaf7549708c71fe40733f1e9e
