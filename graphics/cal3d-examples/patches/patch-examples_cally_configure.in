@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_cally_configure.in,v 1.1 2013/01/26 22:01:24 wiz Exp $
+
+automake-1.13 compat.
+
+--- examples/cally/configure.in.orig	2003-11-29 18:41:06.000000000 +0000
++++ examples/cally/configure.in
+@@ -12,7 +12,7 @@ dnl ************************************
+ 
+ AC_INIT(src/main.cpp)
+ 
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ AC_CANONICAL_SYSTEM
+ 
