@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.336 2013/01/26 08:47:03 obache Exp $
+$NetBSD: CHANGES-2013,v 1.337 2013/01/26 08:51:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBD-mysql to 4.022 [rhaen 2013-01-26]
 	Updated mail/mew to 6.5nb1 [ryoon 2013-01-26]
 	Added www/ruby-multipart-post version 1.1.5 [obache 2013-01-26]
+	Added www/ruby-faraday version 0.8.4 [obache 2013-01-26]
