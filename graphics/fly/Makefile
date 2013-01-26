@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2012/10/06 14:10:49 asau Exp $
+# $NetBSD: Makefile,v 1.44 2013/01/26 21:37:46 adam Exp $
 
 DISTNAME=	fly-1.6.5
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics www
 MASTER_SITES=	# ftp://www.unimelb.edu.au/pub/www/tools/unix/fly/
 

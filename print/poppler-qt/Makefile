@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2012/07/04 20:17:31 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2013/01/26 21:36:44 adam Exp $
 #
 
 .include "../../print/poppler016/Makefile.common"
 
 PKGNAME=		poppler-qt-${POPPLER_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		PDF rendering library (QT wrapper)
 MAINTAINER=		reed@reedmedia.net

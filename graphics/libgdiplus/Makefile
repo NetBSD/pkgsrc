@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2012/10/06 14:11:03 asau Exp $
+# $NetBSD: Makefile,v 1.62 2013/01/26 21:36:29 adam Exp $
 
 DISTNAME=	libgdiplus-2.10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/libgdiplus/
 EXTRACT_SUFX=	.tar.bz2

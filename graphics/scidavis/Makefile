@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 23:01:49 adam Exp $
+# $NetBSD: Makefile,v 1.22 2013/01/26 21:37:59 adam Exp $
 #
 
 DISTNAME=	scidavis-0.2.4
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scidavis/}
 EXTRACT_SUFX=	.tar.bz2

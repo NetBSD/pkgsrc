@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2012/10/29 05:06:31 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/01/26 21:39:17 adam Exp $
 #
 
 DISTNAME=		kkbswitch-1.4.3
-PKGREVISION=		20
+PKGREVISION=		21
 CATEGORIES=		kde x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kkbswitch/}
 

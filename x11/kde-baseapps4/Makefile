@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 23:02:37 adam Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/26 21:39:07 adam Exp $
 
 DISTNAME=	kde-baseapps-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 4 integrated X11 desktop
 

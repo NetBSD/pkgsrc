@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2012/10/08 23:01:51 adam Exp $
+# $NetBSD: Makefile,v 1.28 2013/01/26 21:38:03 adam Exp $
 
 PKGNAME=	gnuradio-radio-astronomy-${VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 COMMENT=	GNU Radio module for radio astronomy
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"

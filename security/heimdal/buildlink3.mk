@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2012/12/16 01:52:32 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2013/01/26 21:36:45 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	heimdal
 HEIMDAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.4e
-BUILDLINK_ABI_DEPENDS.heimdal+=	heimdal>=1.5.2nb5
+BUILDLINK_ABI_DEPENDS.heimdal+=	heimdal>=1.5.2nb6
 BUILDLINK_PKGSRCDIR.heimdal?=	../../security/heimdal
 BUILDLINK_INCDIRS.heimdal?=	include/krb5
 

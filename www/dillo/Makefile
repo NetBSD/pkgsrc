@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2012/10/28 06:30:13 asau Exp $
+# $NetBSD: Makefile,v 1.58 2013/01/26 21:39:01 adam Exp $
 
 DISTNAME=	dillo-3.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2

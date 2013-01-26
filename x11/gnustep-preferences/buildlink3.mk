@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2012/06/15 23:06:03 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2013/01/26 21:36:53 adam Exp $
 
 BUILDLINK_TREE+=	gnustep-preferences
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	gnustep-preferences
 GNUSTEP_PREFERENCES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnustep-preferences+=	gnustep-preferences>=1.2.0nb19
+BUILDLINK_ABI_DEPENDS.gnustep-preferences?=	gnustep-preferences>=1.2.0nb21
 BUILDLINK_PKGSRCDIR.gnustep-preferences?=	../../x11/gnustep-preferences
 
 BUILDLINK_INCDIRS.gnustep-preferences+=	lib/GNUstep/Frameworks/PrefsModule.framework/Headers

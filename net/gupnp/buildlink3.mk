@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2012/10/13 08:20:05 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2013/01/26 21:36:40 adam Exp $
 
 BUILDLINK_TREE+=	gupnp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gupnp
 GUPNP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gupnp+=	gupnp>=0.18.4
-BUILDLINK_ABI_DEPENDS.gupnp+=	gupnp>=0.18.4
+BUILDLINK_ABI_DEPENDS.gupnp+=	gupnp>=0.18.4nb1
 BUILDLINK_PKGSRCDIR.gupnp?=	../../net/gupnp
 
 .include "../../mk/bsd.fast.prefs.mk"

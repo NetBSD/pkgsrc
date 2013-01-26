@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/10/06 14:11:03 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/01/26 21:37:55 adam Exp $
 #
 
 DISTNAME=	libcaca-0.9
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://caca.zoy.org/files/libcaca/
 EXTRACT_SUFX=	.tar.bz2
