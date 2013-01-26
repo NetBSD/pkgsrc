@@ -1,6 +1,9 @@
-$NetBSD: patch-ae,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+$NetBSD: patch-ae,v 1.2 2013/01/26 23:11:14 wiz Exp $
 
---- configure.ac.orig	2008-02-05 09:41:37.000000000 +0530
+Second chunk: automake-1.13 compat
+Rest: ?
+
+--- configure.ac.orig	2008-02-05 04:11:37.000000000 +0000
 +++ configure.ac
 @@ -33,12 +33,14 @@ case $host_os in
      linux*)	HOST_OS=linux;;
@@ -17,7 +20,21 @@ $NetBSD: patch-ae,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
  
  # Version number definitions
  #
-@@ -259,6 +261,10 @@ if test "$HOST_OS" = freebsd; then
+@@ -80,12 +82,11 @@ AC_PREFIX_DEFAULT(/usr/local)
+ AM_INIT_AUTOMAKE($PACKAGE,$VERSION)
+ 
+ # Specify a configuration file
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AM_ACLOCAL_INCLUDE(macros)
+ 
+ # Checks for programs.
+ AC_PROG_CC( icc ecc gcc3 cc gcc )
+-AM_PROG_CC_STDC
+ AM_PROG_AS
+ AC_PROG_INSTALL
+ AC_PROG_LN_S
+@@ -259,6 +260,10 @@ if test "$HOST_OS" = freebsd; then
  	LDFLAGS="$LDFLAGS -lutil"
  fi
  
@@ -28,7 +45,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
  dnl Check for optional libs
  AC_CHECK_LIB(unwind-ia64, _Uia64_get_proc_name, )
  
-@@ -331,6 +337,13 @@ if test "$HOST_OS" = hpux; then
+@@ -331,6 +336,13 @@ if test "$HOST_OS" = hpux; then
          check_curses=no], [])
  fi    
  
@@ -42,7 +59,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
  if test "x$check_curses" != xno; then
  AC_CHECK_LIB(curses, tgetent, [],
      [AC_CHECK_LIB(ncurses, tgetent, ,
-@@ -347,6 +360,7 @@ case $host_os in
+@@ -347,6 +359,7 @@ case $host_os in
      hpux10*)	CFLAGS="$CFLAGS -DHPUX1020";;
      hpux11*)	CFLAGS="$CFLAGS -DHPUX1100";;
      freebsd*)	CFLAGS="$CFLAGS -DFREEBSD -D__linux__";;
