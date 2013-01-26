@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/01/22 19:14:26 abs Exp $
+$NetBSD: distinfo,v 1.4 2013/01/26 15:08:08 rhaen Exp $
 
-SHA1 (Web-Scraper-0.36.tar.gz) = 6e841e0c6c83116722c4bedf76f4818a6c87cbeb
-RMD160 (Web-Scraper-0.36.tar.gz) = 8dac1a761c23b419c4abea4f1ec020c1462d70a0
-Size (Web-Scraper-0.36.tar.gz) = 33303 bytes
+SHA1 (Web-Scraper-0.37.tar.gz) = 24b58e12cae0be7bf32f4632869ad3ff619e215d
+RMD160 (Web-Scraper-0.37.tar.gz) = 57e07ae151175e7d838a4ae9223c6d41d7a1daa6
+Size (Web-Scraper-0.37.tar.gz) = 34026 bytes
