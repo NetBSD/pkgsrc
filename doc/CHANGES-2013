@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.348 2013/01/26 13:40:19 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.349 2013/01/26 13:42:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -435,3 +435,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-strictures to 1.004004 [rhaen 2013-01-26]
 	Updated devel/p5-Moo to 1.000007 [rhaen 2013-01-26]
 	Updated editors/zim to 0.59 [ryoon 2013-01-26]
+	Updated devel/p5-App-cpanminus to 1.5019 [wen 2013-01-26]
