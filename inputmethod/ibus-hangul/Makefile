@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/10/06 14:25:11 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/01/26 11:48:26 obache Exp $
 #
 
-DISTNAME=	ibus-hangul-1.4.1
-PKGREVISION=	1
+DISTNAME=	ibus-hangul-1.4.2
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -21,12 +20,10 @@ SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	setup/ibus-setup-hangul.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
-.include "../../inputmethod/ibus/bad-env-usage.mk"
-
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.1.0
 .include "../../inputmethod/libhangul/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
