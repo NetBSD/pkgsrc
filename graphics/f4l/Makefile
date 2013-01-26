@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 14:10:48 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/26 21:37:46 adam Exp $
 
 DISTNAME=	f4l-0.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=f4l/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2012/12/16 01:52:28 obache Exp $
+# $NetBSD: Makefile,v 1.42 2013/01/26 21:38:31 adam Exp $
 #
 
 DISTNAME=		ekiga-3.2.6
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		net comms
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/3.2/}
 EXTRACT_SUFX=		.tar.bz2

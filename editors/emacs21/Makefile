@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/01/26 21:37:26 adam Exp $
 
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor)
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2012/02/06 12:40:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2013/01/26 21:36:27 adam Exp $
 
 BUILDLINK_TREE+=	gdk-pixbuf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdk-pixbuf
 GDK_PIXBUF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdk-pixbuf+=		gdk-pixbuf>=0.22.0nb2
-BUILDLINK_ABI_DEPENDS.gdk-pixbuf+=	gdk-pixbuf>=0.22.0nb16
+BUILDLINK_ABI_DEPENDS.gdk-pixbuf+=	gdk-pixbuf>=0.22.0nb18
 BUILDLINK_PKGSRCDIR.gdk-pixbuf?=	../../graphics/gdk-pixbuf
 BUILDLINK_CPPFLAGS.gdk-pixbuf+= \
 	-I${BUILDLINK_PREFIX.gdk-pixbuf}/include/gdk-pixbuf-1.0

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2010/12/23 11:44:51 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2013/01/26 21:36:38 adam Exp $
 
 BUILDLINK_TREE+=	libflash
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libflash
 LIBFLASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libflash+=	libflash>=0.4.10nb4
-BUILDLINK_ABI_DEPENDS.libflash+=	libflash>=0.4.10nb8
+BUILDLINK_ABI_DEPENDS.libflash+=	libflash>=0.4.10nb9
 BUILDLINK_PKGSRCDIR.libflash?=	../../multimedia/libflash
 
 .include "../../devel/zlib/buildlink3.mk"

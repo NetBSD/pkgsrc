@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/10/24 15:48:32 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2013/01/26 21:36:59 adam Exp $
 
 BUILDLINK_TREE+=	wxGTK
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wxGTK
 WXGTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxGTK+=	wxGTK>=2.6.0nb2
-BUILDLINK_ABI_DEPENDS.wxGTK+=	wxGTK>=2.6.3nb18
+BUILDLINK_ABI_DEPENDS.wxGTK+=	wxGTK>=2.6.3nb20
 BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK26
 
 .include "../../devel/pangox-compat/buildlink3.mk"

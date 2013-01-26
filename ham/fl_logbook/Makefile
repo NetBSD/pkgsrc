@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/11/16 00:33:36 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/26 21:38:02 adam Exp $
 #
 
 DISTNAME=		fl_logbook-2.5
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		http://www.w1hkj.com/LinuxApps/
 

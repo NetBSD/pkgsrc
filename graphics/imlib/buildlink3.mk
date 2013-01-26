@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2012/02/06 12:40:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2013/01/26 21:36:28 adam Exp $
 
 BUILDLINK_TREE+=	imlib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	imlib
 IMLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.imlib+=	imlib>=1.9.14nb5
-BUILDLINK_ABI_DEPENDS.imlib+=	imlib>=1.9.15nb12
+BUILDLINK_ABI_DEPENDS.imlib+=	imlib>=1.9.15nb13
 BUILDLINK_PKGSRCDIR.imlib?=	../../graphics/imlib
 
 .include "../../devel/gettext-lib/buildlink3.mk"

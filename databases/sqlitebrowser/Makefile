@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 21:25:53 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/26 21:37:17 adam Exp $
 
 DISTNAME=	sqlitebrowser-1.3-src
 PKGNAME=	sqlitebrowser-1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sqlitebrowser/}
 

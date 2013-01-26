@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/10/31 11:17:03 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/01/26 21:37:20 adam Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 		http://dragonlace.mirrors.ada.cx/src/
