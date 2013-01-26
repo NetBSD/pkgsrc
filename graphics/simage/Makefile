@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:22 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/01/26 21:36:32 adam Exp $
 
 DISTNAME=		simage-1.6.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.coin3d.org/pub/coin/src/
 

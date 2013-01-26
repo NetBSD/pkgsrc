@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2012/10/31 11:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/01/26 21:37:19 adam Exp $
 #
 
 VERS=			4.5.6
 DISTNAME=		eric4-${VERS}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
 
