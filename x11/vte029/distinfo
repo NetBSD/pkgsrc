@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2012/08/10 13:46:01 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/01/26 22:25:00 wiz Exp $
 
 SHA1 (vte-0.32.2.tar.xz) = a58569a99ac06a240bdda3ec7353f2626145852d
 RMD160 (vte-0.32.2.tar.xz) = 4892fca462a0baf3c97564a9d8cead7b35f75d4c
@@ -9,4 +9,6 @@ SHA1 (patch-ac) = 3b357bf9d1bca93c24f5b09dae1adec82323be0d
 SHA1 (patch-af) = 69ea7e022f6c495c3c9af681d05644b9d70e7bdc
 SHA1 (patch-ah) = 28cee2661439d7d6f1959ebf3c7d1b7b3fe0a764
 SHA1 (patch-ai) = 986dd7c2a5778c9c35100901cfaa25acd0cbdc32
+SHA1 (patch-configure.in) = 569e21e10900d4e1737836ea2e5c5f22cb8b3025
 SHA1 (patch-gnome-pty-helper_Makefile.am) = d1964c774d192290eade04d7dee88b90ec05d59e
+SHA1 (patch-gnome-pty-helper_configure.in) = 05fa680d29587405d9ea7b3be75b85a467200d89
