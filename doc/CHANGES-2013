@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.338 2013/01/26 10:49:16 obache Exp $
+$NetBSD: CHANGES-2013,v 1.339 2013/01/26 10:55:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -425,3 +425,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-multipart-post version 1.1.5 [obache 2013-01-26]
 	Added www/ruby-faraday version 0.8.4 [obache 2013-01-26]
 	Added textproc/ruby-levenshtein version 0.2.2 [obache 2013-01-26]
+	Updated devel/ruby-gettext to 2.3.7nb1 [obache 2013-01-26]
