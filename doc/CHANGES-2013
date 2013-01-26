@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.342 2013/01/26 11:48:51 obache Exp $
+$NetBSD: CHANGES-2013,v 1.343 2013/01/26 12:03:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -429,3 +429,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/rabbit to 2.0.6 [obache 2013-01-26]
 	Added fonts/consolamono-ttf version 20121116 [ryoon 2013-01-26]
 	Updated inputmethod/ibus-hangul to 1.4.2 [obache 2013-01-26]
+	Updated net/mikutter to 0.2.1.1125 [obache 2013-01-26]
