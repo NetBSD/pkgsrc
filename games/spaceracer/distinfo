@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/06/18 04:14:30 dholland Exp $
+$NetBSD: distinfo,v 1.6 2013/01/26 22:20:25 wiz Exp $
 
 SHA1 (spaceracer-0.2.4.tgz) = 57fea82636c2d1c9b77b81db5b8828c385b31c98
 RMD160 (spaceracer-0.2.4.tgz) = 610ed143324d815fc5066eb33c8625d7f4f80b2e
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = 777c257d6a13d46bb40a715e7f2033f45427ed28
 SHA1 (patch-ab) = c60ffc762899e811b65d5c52e2ddb6a265ff5297
 SHA1 (patch-ac) = ef701f2cbba891e8ebb37175bce22111b443450a
 SHA1 (patch-acinclude) = b3126a339641f984a35f544653c8528a630902b0
-SHA1 (patch-configurein) = 6bc5f82b42fd7edad062271d1689196ece4126df
+SHA1 (patch-configurein) = 76a4a56fd69344a54c8de781fc1d7a53fa8c6a31
 SHA1 (patch-loopercpp) = a81f8570cb9ebb2de80b03f4093fc028179b82af
 SHA1 (patch-soundcpp) = 679d9442bc533ae3923f47fba6e8c1f712190df7
 SHA1 (patch-src_stk_input_stk__joy_h) = 9c6bc498729f4263471f623990df34e63c7c0c1e
