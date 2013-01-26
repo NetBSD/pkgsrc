@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2007/07/01 11:59:01 chris Exp $
+$NetBSD: patch-aa,v 1.3 2013/01/26 23:19:11 wiz Exp $
 
---- configure.in.orig	2007-07-01 12:45:08.000000000 +0100
+Remove hardcoded libdl (not needed on all systems).
+automake-1.13 compat.
+
+--- configure.in.orig	2003-02-12 06:41:12.000000000 +0000
 +++ configure.in
 @@ -50,7 +50,7 @@ AC_CHECK_LIB(musicbrainz, mb_GetVersion,
               echo "*  http://www.musicbrainz.org/download " 
@@ -11,3 +14,11 @@ $NetBSD: patch-aa,v 1.2 2007/07/01 11:59:01 chris Exp $
  
  AC_TRY_RUN([
  #include <musicbrainz/mb_c.h>
+@@ -107,6 +107,6 @@ fi
+ 
+ AC_SUBST(CFLAGS)  
+ AC_DEFINE_UNQUOTED(PREFIX, "${prefix}", "PREFIX") 
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AC_OUTPUT(Makefile)
+ touch .config.check
