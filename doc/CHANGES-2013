@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.363 2013/01/26 20:13:22 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.364 2013/01/26 20:15:49 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBI to 1.623 [rhaen 2013-01-26]
 	Updated devel/p5-Any-Moose to 0.20 [rhaen 2013-01-26]
 	Updated devel/p5-Devel-StackTrace to 1.30 [rhaen 2013-01-26]
+	Updated devel/p5-Event to 1.21 [rhaen 2013-01-26]
