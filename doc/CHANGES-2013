@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.358 2013/01/26 19:38:09 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.359 2013/01/26 19:50:19 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 3.82 [rhaen 2013-01-26]
 	Updated x11/mlterm to 3.1.7 [tsutsui 2013-01-26]
 	Updated databases/p5-ORLite to 1.98 [rhaen 2013-01-26]
+	Updated devel/p5-Devel-Cover to 0.99 [rhaen 2013-01-26]
