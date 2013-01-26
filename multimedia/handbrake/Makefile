@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/12/21 05:33:47 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2013/01/26 23:26:19 wiz Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -52,6 +52,7 @@ USE_LANGUAGES=	c c++
 BUILD_DEPENDS+=	jam>=2.5.2:../../devel/jam
 BUILD_DEPENDS+=	nasm>=2.05.01:../../devel/nasm
 BUILD_DEPENDS+=	yasm>=0.6.1:../../devel/yasm
+BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 CLI_CONFIGURE_ARGS=	--release
 
@@ -74,7 +75,7 @@ post-extract:
 .endfor
 
 pre-configure:
-	cd ${WRKSRC}/gtk && ./autogen.sh
+	cd ${WRKSRC}/gtk && autoreconf -fi
 
 do-configure:
 	cd ${WRKSRC} && ./configure ${CLI_CONFIGURE_ARGS}
