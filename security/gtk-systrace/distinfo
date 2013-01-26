@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/01/26 22:02:06 wiz Exp $
 
 SHA1 (gtk-systrace-2002-12-01.tar.gz) = f59c9224ce6d1068feec7e5c1c03d65c2f65c1d1
 RMD160 (gtk-systrace-2002-12-01.tar.gz) = f0e70327ebeac920ab2d01cf2dedf385de8d4eac
 Size (gtk-systrace-2002-12-01.tar.gz) = 73110 bytes
+SHA1 (patch-configure.in) = 7e942fff755fa4e63eb43db758ad32e4588fd317
