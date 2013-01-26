@@ -1,7 +1,19 @@
-$NetBSD: patch-ag,v 1.1 2007/03/17 16:06:23 rillig Exp $
+$NetBSD: patch-ag,v 1.2 2013/01/26 23:05:16 wiz Exp $
 
---- configure.in.orig	2004-01-12 10:33:19.000000000 +0100
-+++ configure.in	2007-03-17 16:52:15.000000000 +0100
+First chunk: automake-1.13 compat.
+Second chunk: look for sys/types.h.
+
+--- configure.in.orig	2004-01-12 09:33:19.000000000 +0000
++++ configure.in
+@@ -7,7 +7,7 @@ dnl Set up Automake handling
+ AM_INIT_AUTOMAKE(quirc,0.9.84)
+ 
+ dnl Do the config.h stuff
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ dnl Set the version information
+ RPMREL=1
 @@ -417,6 +417,8 @@ if test "$HAVETK" != "1"; then AC_MSG_ER
  dnl Make sure size_t is defined
  AC_TYPE_SIZE_T
