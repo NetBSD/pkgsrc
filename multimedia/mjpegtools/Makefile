@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2012/12/31 08:03:47 sbd Exp $
+# $NetBSD: Makefile,v 1.55 2013/01/26 21:36:38 adam Exp $
 
 DISTNAME=	mjpegtools-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
