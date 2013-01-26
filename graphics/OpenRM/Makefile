@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/10/06 14:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/01/26 21:36:26 adam Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
 PKGNAME=		OpenRM-1.5.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 
