@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2012/12/16 01:52:29 obache Exp $
+# $NetBSD: Makefile,v 1.42 2013/01/26 21:38:33 adam Exp $
 
 DISTNAME=	kftpgrabber-0.8.1
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	net kde
 MASTER_SITES=	http://www.kftp.org/uploads/files/
 EXTRACT_SUFX=	.tar.bz2

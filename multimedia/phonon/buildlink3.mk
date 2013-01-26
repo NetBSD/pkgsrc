@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/10/08 23:01:04 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2013/01/26 21:36:38 adam Exp $
 
 BUILDLINK_TREE+=	phonon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	phonon
 PHONON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.phonon+=	phonon>=4.5.0
-BUILDLINK_ABI_DEPENDS.phonon+=	phonon>=4.5.1nb5
+BUILDLINK_ABI_DEPENDS.phonon+=	phonon>=4.5.1nb6
 BUILDLINK_PKGSRCDIR.phonon?=	../../multimedia/phonon
 
 .include "../../x11/qt4-libs/buildlink3.mk"

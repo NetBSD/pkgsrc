@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2012/12/16 01:52:31 obache Exp $
+# $NetBSD: Makefile,v 1.25 2013/01/26 21:38:37 adam Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 PATCH_SITES=		http://www.samba.org/samba/ftp/patches/security/
