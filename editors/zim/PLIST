@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/01 10:36:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/26 13:39:37 ryoon Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -147,6 +147,9 @@ ${PYSITELIB}/zim/plugins/calendar.pyo
 ${PYSITELIB}/zim/plugins/diagrameditor.py
 ${PYSITELIB}/zim/plugins/diagrameditor.pyc
 ${PYSITELIB}/zim/plugins/diagrameditor.pyo
+${PYSITELIB}/zim/plugins/distractionfree.py
+${PYSITELIB}/zim/plugins/distractionfree.pyc
+${PYSITELIB}/zim/plugins/distractionfree.pyo
 ${PYSITELIB}/zim/plugins/ditaaeditor.py
 ${PYSITELIB}/zim/plugins/ditaaeditor.pyc
 ${PYSITELIB}/zim/plugins/ditaaeditor.pyo
@@ -279,7 +282,6 @@ share/locale/he/LC_MESSAGES/zim.mo
 share/locale/hu/LC_MESSAGES/zim.mo
 share/locale/it/LC_MESSAGES/zim.mo
 share/locale/ja/LC_MESSAGES/zim.mo
-share/locale/ko/LC_MESSAGES/zim.mo
 share/locale/nl/LC_MESSAGES/zim.mo
 share/locale/pl/LC_MESSAGES/zim.mo
 share/locale/pt_BR/LC_MESSAGES/zim.mo
@@ -343,9 +345,10 @@ share/zim/manual/Plugins.txt
 share/zim/manual/Plugins/Arithmetic.txt
 share/zim/manual/Plugins/Attachment_Browser.txt
 share/zim/manual/Plugins/Automount.txt
-share/zim/manual/Plugins/Calendar.txt
+share/zim/manual/Plugins/BackLinks_Pane.txt
 share/zim/manual/Plugins/Diagram_Editor.txt
 share/zim/manual/Plugins/Diagram_Editor/diagram.png
+share/zim/manual/Plugins/Distraction_Free_Editing.txt
 share/zim/manual/Plugins/Ditaa_Editor.txt
 share/zim/manual/Plugins/Ditaa_Editor/ditaa.dia
 share/zim/manual/Plugins/Ditaa_Editor/ditaa.png
@@ -362,8 +365,11 @@ share/zim/manual/Plugins/Gnuplot_Editor/gnuplot.png
 share/zim/manual/Plugins/Inline_Calculator.txt
 share/zim/manual/Plugins/Insert_Screenshot.txt
 share/zim/manual/Plugins/Insert_Symbol.txt
+share/zim/manual/Plugins/Journal.txt
+share/zim/manual/Plugins/Line_Sorter.txt
 share/zim/manual/Plugins/Link_Map.txt
 share/zim/manual/Plugins/Log_events_with_Zeitgeist.txt
+share/zim/manual/Plugins/Print_to_Browser.txt
 share/zim/manual/Plugins/Quick_Note.txt
 share/zim/manual/Plugins/Score_Editor.txt
 share/zim/manual/Plugins/Score_Editor/score.ly
@@ -383,6 +389,7 @@ share/zim/manual/Plugins/Version_Control.txt
 share/zim/manual/Start.txt
 share/zim/manual/Usage.txt
 share/zim/manual/Usage/Collaboration.txt
+share/zim/manual/Usage/Creative_Writing.txt
 share/zim/manual/Usage/Daily_Journal.txt
 share/zim/manual/Usage/GTD_flowchart.png
 share/zim/manual/Usage/GTD_flowchart.svg
@@ -420,7 +427,7 @@ share/zim/templates/plugins/gnuploteditor.gnu
 share/zim/templates/plugins/quicknote.txt
 share/zim/templates/plugins/scoreeditor.ly
 share/zim/templates/rst/Default.rst
-share/zim/templates/wiki/Calendar.txt
 share/zim/templates/wiki/Default.txt
+share/zim/templates/wiki/Journal.txt
 share/zim/urls.list
 share/zim/zim.png
