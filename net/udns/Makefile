@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:19:15 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/26 21:25:12 schnoebe Exp $
 
 DISTNAME=	udns-0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.corpit.ru/mjt/udns/
 
@@ -33,3 +33,11 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/rblcheck.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
+
+# gcc on NetBSD botch's if (!<ptr>) tests at -O2. (or higher)
+.if ${OPSYS} == "NetBSD"
+. if ${MACHINE_ARCH} == "alpha"
+BUILDLINK_TRANSFORM+=	opt:-O[2-9]:-O1
+# BUILDLINK_TRANSFORM+=	rm:-O[2-9]
+. endif
+.endif
