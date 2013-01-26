@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/01/22 11:15:27 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/01/26 09:47:46 ryoon Exp $
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
 #
@@ -59,7 +59,7 @@ OSDEST=		linux
 do-configure:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
 		GYP_DEFINES="use_libprotobuf=1" \
-		${PYTHONBIN} build_mozc.py gyp --os=netbsd && \
+		${PYTHONBIN} build_mozc.py gyp --os=${LOWER_OPSYS} && \
 		${PYTHONBIN} build_mozc.py build_tools -c Release ${_MAKE_JOBS}
 
 .include "../../devel/glib2/buildlink3.mk"
