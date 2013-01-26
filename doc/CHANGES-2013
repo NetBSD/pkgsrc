@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.367 2013/01/26 20:47:29 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.368 2013/01/26 22:28:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/mozc-server to 1.6.1187.102nb1 [ryoon 2013-01-26]
 	Updated devel/p5-Log-Dispatch to 2.35 [rhaen 2013-01-26]
 	Updated www/p5-Catalyst-Manual to 5.9006 [rhaen 2013-01-26]
+	Updated converters/dos2unix to 6.0.3 [ryoon 2013-01-26]
