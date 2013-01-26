@@ -1,7 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/09/03 13:50:49 shannonjr Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/26 23:17:35 wiz Exp $
 
---- configure.in.orig	2007-09-03 04:45:30.000000000 -0600
+First chunk: automake-1.13 compat.
+Second chunk: adapt paths for pkgsrc.
+
+--- configure.in.orig	2005-09-18 14:30:46.000000000 +0000
 +++ configure.in
+@@ -3,7 +3,7 @@ dnl Process this file with autoconf to p
+ AC_INIT(src/pflogger.c)
+ AC_CANONICAL_SYSTEM
+ AM_INIT_AUTOMAKE(prelude-pflogger, 0.9.0-rc2)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AM_DISABLE_STATIC
+ 
+ AM_MAINTAINER_MODE
 @@ -57,7 +57,7 @@ AC_TYPE_SIGNAL
  AC_FUNC_VPRINTF
  AC_CHECK_FUNCS(gettimeofday select socket strdup strerror strstr)
