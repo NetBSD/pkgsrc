@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.344 2013/01/26 13:04:35 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.345 2013/01/26 13:22:53 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -431,3 +431,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-hangul to 1.4.2 [obache 2013-01-26]
 	Updated net/mikutter to 0.2.1.1125 [obache 2013-01-26]
 	Updated games/onscripter to 20130120 [tsutsui 2013-01-26]
+	Updated databases/p5-DBIx-Class to 0.08205 [rhaen 2013-01-26]
