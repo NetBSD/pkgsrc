@@ -1,9 +1,19 @@
-$NetBSD: patch-configurein,v 1.1.1.1 2006/03/09 14:08:44 rillig Exp $
+$NetBSD: patch-configurein,v 1.2 2013/01/26 22:20:25 wiz Exp $
 
-Added the necessary quoting for m4 macros.
+First chunk: automake-1.13 compat.
+Rest: Added the necessary quoting for m4 macros.
 
---- configure.in.orig	2001-07-15 23:25:20.000000000 +0200
-+++ configure.in	2006-03-09 14:54:16.000000000 +0100
+--- configure.in.orig	2001-07-15 21:25:20.000000000 +0000
++++ configure.in
+@@ -24,7 +24,7 @@ dnl ====================================
+ SPACERACER_VERSION=0.2.3
+ SDL_VERSION=1.1.0
+ AM_INIT_AUTOMAKE(spaceracer,$SPACERACER_VERSION)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ 
+ dnl ==========================================
 @@ -103,15 +103,6 @@ CXXFLAGS="$CFLAGS"
  
  
