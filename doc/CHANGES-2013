@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.340 2013/01/26 11:07:40 obache Exp $
+$NetBSD: CHANGES-2013,v 1.341 2013/01/26 11:16:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/ruby-levenshtein version 0.2.2 [obache 2013-01-26]
 	Updated devel/ruby-gettext to 2.3.7nb1 [obache 2013-01-26]
 	Updated graphics/rabbit to 2.0.6 [obache 2013-01-26]
+	Added fonts/consolamono-ttf version 20121116 [ryoon 2013-01-26]
