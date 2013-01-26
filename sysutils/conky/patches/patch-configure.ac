@@ -1,9 +1,19 @@
-$NetBSD: patch-configure.ac,v 1.1.1.1 2012/05/13 08:42:20 imil Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/01/26 22:07:42 wiz Exp $
 
+automake-1.13 compat.
 Enable NetBSD as a suitable platform.
 
 --- configure.ac.orig	2012-05-03 21:47:32.000000000 +0000
 +++ configure.ac
+@@ -15,7 +15,7 @@ m4_define([conky_version],
+ AC_INIT([Conky], [conky_version()], [brenden1@users.sourceforge.net])
+ 
+ AM_INIT_AUTOMAKE(conky, conky_version())
+-AM_CONFIG_HEADER(src/config.h)
++AC_CONFIG_HEADERS(src/config.h)
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+ dnl prevent libtool setting LTCFLAGS to default of -g -O2 when CFLAGS unset.
 @@ -62,10 +62,11 @@ case $uname in
      WANT_DEVSTAT=yes
      WANT_OPTRESET=yes
