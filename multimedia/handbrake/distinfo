@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2009/05/03 14:25:43 abs Exp $
+$NetBSD: distinfo,v 1.4 2013/01/26 23:26:19 wiz Exp $
 
 SHA1 (handbrake/HandBrake-0.9.3.tar.gz) = f52389b1226bf81ba58bca67f3a1aa468cfee624
 RMD160 (handbrake/HandBrake-0.9.3.tar.gz) = 50085816875439ee82bc213252f683352bbdbbb0
@@ -73,3 +73,5 @@ SHA1 (patch-ag) = b5a6882280b9f907334618be5ab617d5596fe360
 SHA1 (patch-ah) = c6c050245b990429751c6fe243fb488028253af4
 SHA1 (patch-ai) = d1a77b07ca338f522f7eaec3c2a4a71dacd61268
 SHA1 (patch-aj) = 3855b048017581adac91c8a4d146d41a27840486
+SHA1 (patch-gtk_Makefile.am) = 2cdf94f006fe1fc57b1ebcb4371454ac55cf7da9
+SHA1 (patch-gtk_configure.ac) = d707c95b24dc670ad6788b441caaedc8132b6d92
