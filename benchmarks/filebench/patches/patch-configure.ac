@@ -1,7 +1,20 @@
-$NetBSD: patch-configure.ac,v 1.1.1.1 2012/07/02 17:43:16 asau Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/01/26 21:59:40 wiz Exp $
+
+First chunk: automake-1.13 compat.
+Second chunk: Fix unportable test(1) construct.
+Rest: ?
 
 --- configure.ac.orig	2011-09-06 17:17:45.000000000 +0000
 +++ configure.ac
+@@ -2,7 +2,7 @@
+ #### Initialization stubs
+ ####
+ AC_INIT([filebench], [1.4.9.1])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ AM_INIT_AUTOMAKE
+ 
+ ####
 @@ -31,7 +31,7 @@ AC_CHECK_HEADERS([netdb.h])
  AC_CHECK_HEADERS([netinet/in.h])
  AC_CHECK_HEADERS([stddef.h])
