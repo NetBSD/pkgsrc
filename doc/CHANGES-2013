@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.360 2013/01/26 19:54:09 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.361 2013/01/26 20:03:46 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -447,3 +447,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-ORLite to 1.98 [rhaen 2013-01-26]
 	Updated devel/p5-Devel-Cover to 0.99 [rhaen 2013-01-26]
 	Updated devel/p5-Error to 1.7019 [rhaen 2013-01-26]
+	Updated devel/p5-Class-Method-Modifiers to 2.00 [rhaen 2013-01-26]
+	Updated databases/p5-DBI to 1.623 [rhaen 2013-01-26]
