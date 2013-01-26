@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 17:19:09 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/01/26 22:14:10 wiz Exp $
 #
 
 DISTNAME=		socket++-1.12.10
@@ -10,13 +10,12 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://www.linuxhacker.at/socketxx/
 COMMENT=		C++ class library for UNIX Sockets with exception handling
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
-USE_TOOLS+=		automake
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake makeinfo
-TEST_DIRS=		${WRKSRC}/test
+USE_TOOLS+=		automake gmake makeinfo
+TEST_DIRS=		test
 TEST_TARGET=		check
 
 pre-configure:
