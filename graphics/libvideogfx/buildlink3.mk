@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2011/01/13 13:36:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2013/01/26 21:36:31 adam Exp $
 
 BUILDLINK_TREE+=	libvideogfx
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libvideogfx
 LIBVIDEOGFX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvideogfx+=	libvideogfx>=1.0.3
-BUILDLINK_ABI_DEPENDS.libvideogfx+=	libvideogfx>=1.0.3nb7
+BUILDLINK_ABI_DEPENDS.libvideogfx+=	libvideogfx>=1.0.3nb8
 BUILDLINK_PKGSRCDIR.libvideogfx?=	../../graphics/libvideogfx
 
 .include "../../mk/jpeg.buildlink3.mk"

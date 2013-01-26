@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2012/10/08 23:00:38 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2013/01/26 21:36:19 adam Exp $
 
 BUILDLINK_TREE+=	gnome-build
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-build
 GNOME_BUILD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-build+=	gnome-build>=0.1.3
-BUILDLINK_ABI_DEPENDS.gnome-build+=	gnome-build>=2.24.1nb20
+BUILDLINK_ABI_DEPENDS.gnome-build+=	gnome-build>=2.24.1nb21
 BUILDLINK_PKGSRCDIR.gnome-build?=	../../devel/gnome-build
 
 .include "../../devel/gdl/buildlink3.mk"

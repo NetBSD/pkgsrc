@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 23:01:41 adam Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/26 21:37:45 adam Exp $
 #
 
 DISTNAME=	extrema-4.4.4
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=extrema/}
 

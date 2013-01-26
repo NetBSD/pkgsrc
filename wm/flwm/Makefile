@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 12:42:20 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/01/26 21:38:59 adam Exp $
 #
 
 DISTNAME=	flwm-1.02
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://flwm.sourceforge.net/
 EXTRACT_SUFX=	.tgz

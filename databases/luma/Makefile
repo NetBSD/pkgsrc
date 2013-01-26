@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 21:25:21 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/01/26 21:37:15 adam Exp $
 
 DISTNAME=	luma-2.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=luma/}
 EXTRACT_SUFX=	.tar.bz2
