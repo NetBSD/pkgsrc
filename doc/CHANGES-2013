@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.364 2013/01/26 20:15:49 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.365 2013/01/26 20:27:13 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -283,7 +283,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Method-Signatures-Simple to 1.05 [wen 2013-01-18]
 	Updated lang/chicken to 4.8.0.1 [asau 2013-01-18]
 	Updated multimedia/ffmpegthumbnailer to 2.0.8 [wiz 2013-01-19]
-	Updated mail/dovecot to 2.1.13 [manu 2013-01-19]
+	Updated mail/dovecot2 to 2.1.13 [manu 2013-01-19]
 	Updated textproc/py-xlrd to 0.8.0 [obache 2013-01-19]
 	Added net/nagios-plugin-raidctl version 0.1 [manu 2013-01-19]
 	Added net/nagios-plugin-dumpdates version 0.1 [manu 2013-01-19]
@@ -444,6 +444,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Catalyst to 5.90019 [rhaen 2013-01-26]
 	Updated www/p5-Mojolicious to 3.82 [rhaen 2013-01-26]
 	Updated x11/mlterm to 3.1.7 [tsutsui 2013-01-26]
+	Updated mail/dovecot2 to 2.1.13nb1 [bouyer 2013-01-26]
 	Updated databases/p5-ORLite to 1.98 [rhaen 2013-01-26]
 	Updated devel/p5-Devel-Cover to 0.99 [rhaen 2013-01-26]
 	Updated devel/p5-Error to 1.7019 [rhaen 2013-01-26]
