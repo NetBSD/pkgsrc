@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2012/10/28 06:30:37 asau Exp $
+# $NetBSD: Makefile,v 1.42 2013/01/27 10:48:54 rhaen Exp $
 
-DISTNAME=	HTML-Mason-1.47
+DISTNAME=	HTML-Mason-1.50
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5hma
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
@@ -23,7 +22,6 @@ BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTML/Mason/.packlist
 
 .include "options.mk"
