@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.3 2012/11/18 00:50:42 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.4 2013/01/27 05:25:03 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-check-plugin
@@ -134,6 +134,8 @@ share/hplip/base/pkit.py
 share/hplip/base/pkit.pyc
 share/hplip/base/pml.py
 share/hplip/base/pml.pyc
+share/hplip/base/queues.py
+share/hplip/base/queues.pyc
 share/hplip/base/slp.py
 share/hplip/base/slp.pyc
 share/hplip/base/status.py
@@ -494,6 +496,7 @@ share/hplip/ppd/HP/hp-designjet_t770_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t770ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_44in-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_t800_t2000_premium-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6200_42in_photo-ps.ppd.gz
@@ -1217,6 +1220,8 @@ share/hplip/ppd/HP/hp-laserjet_m9050_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_m521-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_m725-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1005-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1005.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1006-hpijs.ppd.gz
