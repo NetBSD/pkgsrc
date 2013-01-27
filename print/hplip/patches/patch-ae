@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.3 2012/11/18 00:50:42 schnoebe Exp $
+$NetBSD: patch-ae,v 1.4 2013/01/27 05:25:03 schnoebe Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
 
 # reported upstream as https://bugs.launchpad.net/hplip/+bug/726218
 
---- Makefile.am.orig	2012-10-10 06:14:21.000000000 +0000
+--- Makefile.am.orig	2012-11-20 09:55:15.000000000 +0000
 +++ Makefile.am
 @@ -107,11 +107,11 @@ hp_mkuri_LDADD = -ldl libhpmud.la
  hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
@@ -69,24 +69,24 @@ $NetBSD: patch-ae,v 1.3 2012/11/18 00:50:42 schnoebe Exp $
  if FULL_BUILD
  	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
 -	chgrp "lp" -R $(DESTDIR)$(hplip_Logdir)
--	chmod 774 $(DESTDIR)$(hplip_Logdir)
+-	chmod 777 $(DESTDIR)$(hplip_Logdir)
  endif	#FULL_BUILD
  if HPLIP_BUILD
  	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
 -	chgrp "lp" -R $(DESTDIR)$(hplip_Logdir)
--	chmod 774 $(DESTDIR)$(hplip_Logdir)
+-	chmod 777 $(DESTDIR)$(hplip_Logdir)
  endif	#FULL_BUILD
  
  install-dist_hplip_tmpDATA:
  if FULL_BUILD
  	test -z "$(DESTDIR)$(hplip_tmpdir)" || mkdir -p $(DESTDIR)$(hplip_tmpdir)
 -	chgrp "lp" -R $(DESTDIR)$(hplip_tmpdir)
--	chmod 1774 $(DESTDIR)$(hplip_tmpdir)
+-	chmod 1777 $(DESTDIR)$(hplip_tmpdir)
  endif	#FULL_BUILD
  if HPLIP_BUILD
  	test -z "$(DESTDIR)$(hplip_tmpdir)" || mkdir -p $(DESTDIR)$(hplip_tmpdir)
 -	chgrp "lp" -R $(DESTDIR)$(hplip_tmpdir)
--	chmod 1774 $(DESTDIR)$(hplip_tmpdir)
+-	chmod 1777 $(DESTDIR)$(hplip_tmpdir)
  endif	#FULL_BUILD
  
  install-dist_cronDATA:$(dist_cron_DATA)
