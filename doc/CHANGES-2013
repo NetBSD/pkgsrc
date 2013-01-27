@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.376 2013/01/27 10:04:58 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.377 2013/01/27 10:08:05 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -468,3 +468,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Apache-ASP to 2.62 [rhaen 2013-01-27]
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.10022 [rhaen 2013-01-27]
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.12 [rhaen 2013-01-27]
+	Updated devel/p5-Syntax-Keyword-Junction to 0.003002 [rhaen 2013-01-27]
