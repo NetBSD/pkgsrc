@@ -1,0 +1,15 @@
+$NetBSD: patch-META.yml,v 1.1 2013/01/27 20:42:16 schmonz Exp $
+
+Doesn't actually require a yak-shavingly new Module::Build.
+
+--- META.yml.orig	2012-12-23 05:51:38.000000000 +0000
++++ META.yml
+@@ -4,7 +4,7 @@ author:
+   - 'Steven Lembark <lembark@wrkhors.com'
+ build_requires: {}
+ configure_requires:
+-  Module::Build: 0.4003
++  Module::Build: 0.3901
+ dynamic_config: 1
+ generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+ license: perl
