@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.369 2013/01/27 00:13:28 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.370 2013/01/27 00:15:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -460,3 +460,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Catalyst-Manual to 5.9006 [rhaen 2013-01-26]
 	Updated converters/dos2unix to 6.0.3 [ryoon 2013-01-26]
 	Removed audio/akode-plugins-ffmpeg [wiz 2013-01-27]
+	Updated mbone/vic-devel to 2.8.1.4.0beta.4337nb6 [wiz 2013-01-27]
