@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.382 2013/01/27 10:49:51 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.383 2013/01/27 11:23:22 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -474,3 +474,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-CAM-PDF to 1.58 [rhaen 2013-01-27]
 	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.5 [rhaen 2013-01-27]
 	Updated www/p5-HTML-Mason to 1.50 [rhaen 2013-01-27]
+	Updated www/p5-Starman to 0.3006 [rhaen 2013-01-27]
