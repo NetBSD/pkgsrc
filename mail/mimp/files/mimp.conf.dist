@@ -1,0 +1,43 @@
+# $NetBSD: mimp.conf.dist,v 1.1.1.1 2013/01/27 16:35:06 bouyer Exp $
+#
+# MIMP configuration file fragment for Apache
+
+<IfModule mod_alias.c>
+    Alias /mimp/ "@MIMPDIR@/"
+</IfModule>
+
+<Directory "@MIMPDIR@">
+    DirectoryIndex index.php
+    <IfModule mod_php4.c>
+        php_flag file_uploads On
+        php_flag upload_max_filesize 5M  
+    </IfModule>
+</Directory>
+
+# For security, don't serve pages from the MIMP configuration and library
+# directories.
+#
+<Directory "@MIMPDIR@/config">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@MIMPDIR@/lib">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@MIMPDIR@/locale">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@MIMPDIR@/po">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@MIMPDIR@/scripts">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@MIMPDIR@/templates">
+    Order deny,allow
+    Deny from all
+</Directory>
