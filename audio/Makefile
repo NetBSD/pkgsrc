@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2013/01/08 09:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.478 2013/01/27 00:13:29 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -10,7 +10,6 @@ SUBDIR+=	abcmidi
 SUBDIR+=	adplug
 SUBDIR+=	akode
 SUBDIR+=	akode-plugins-alsa
-SUBDIR+=	akode-plugins-ffmpeg
 SUBDIR+=	akode-plugins-jack
 SUBDIR+=	akode-plugins-mpc
 SUBDIR+=	akode-plugins-mpeg
