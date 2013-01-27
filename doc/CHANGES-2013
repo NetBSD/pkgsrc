@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.374 2013/01/27 07:55:47 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.375 2013/01/27 07:58:54 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -466,3 +466,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/hplip to 3.12.11 [schnoebe 2013-01-27]
 	Updated www/wordpress to 3.5.1 [morr 2013-01-27]
 	Updated www/p5-Apache-ASP to 2.62 [rhaen 2013-01-27]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.10022 [rhaen 2013-01-27]
