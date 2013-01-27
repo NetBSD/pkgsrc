@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1690 2013/01/26 16:37:07 rhaen Exp $
+# $NetBSD: Makefile,v 1.1691 2013/01/27 20:50:43 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -792,6 +792,7 @@ SUBDIR+=	p5-FileHandle-Fmode
 SUBDIR+=	p5-FileHandle-Unget
 SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-Filesys-Notify-Simple
+SUBDIR+=	p5-FindBin-libs
 SUBDIR+=	p5-Format-Human-Bytes
 SUBDIR+=	p5-FreezeThaw
 SUBDIR+=	p5-Getopt-ArgvFile
@@ -987,6 +988,7 @@ SUBDIR+=	p5-Object-InsideOut
 SUBDIR+=	p5-Object-Pluggable
 SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-Object-Signature
+SUBDIR+=	p5-Ouch
 SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PAR-Dist
 SUBDIR+=	p5-PHP-Serialization
@@ -1138,6 +1140,7 @@ SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Aggregate
 SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
+SUBDIR+=	p5-Test-BDD-Cucumber
 SUBDIR+=	p5-Test-Base
 SUBDIR+=	p5-Test-CPAN-Meta-YAML
 SUBDIR+=	p5-Test-CheckDeps
