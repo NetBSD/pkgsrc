@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 18:04:42 hasso Exp $
-lib/libakode_ffmpeg_decoder.la
