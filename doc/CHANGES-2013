@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.371 2013/01/27 00:18:29 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.372 2013/01/27 05:28:54 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mbone/vic-devel to 2.8.1.4.0beta.4337nb6 [wiz 2013-01-27]
 	Removed wm/metisse [wiz 2013-01-27]
 	Removed x11/nucleo [wiz 2013-01-27]
+	Updated print/hplip to 3.12.11 [schnoebe 2013-01-27]
