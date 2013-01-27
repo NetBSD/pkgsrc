@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gui,v 1.2 2012/11/18 00:50:42 schnoebe Exp $
+@comment $NetBSD: PLIST.gui,v 1.3 2013/01/27 05:25:03 schnoebe Exp $
 bin/hp-toolbox
 share/PolicyKit/policy/com.hp.hplip.policy
 share/applications/hplip.desktop
@@ -58,6 +58,7 @@ share/hplip/data/images/16x16/settings.png
 share/hplip/data/images/16x16/status_refresh.png
 share/hplip/data/images/16x16/thumbnail.png
 share/hplip/data/images/16x16/toner.png
+share/hplip/data/images/16x16/troubleshoot.png
 share/hplip/data/images/16x16/up.png
 share/hplip/data/images/16x16/up_user.png
 share/hplip/data/images/16x16/warning.png
@@ -111,6 +112,7 @@ share/hplip/data/images/32x32/settings.png
 share/hplip/data/images/32x32/testpage.png
 share/hplip/data/images/32x32/toner.png
 share/hplip/data/images/32x32/toner_cartridge.png
+share/hplip/data/images/32x32/troubleshoot.png
 share/hplip/data/images/32x32/warning.png
 share/hplip/data/images/32x32/wireless.png
 share/hplip/data/images/64x64/hp_logo.png
