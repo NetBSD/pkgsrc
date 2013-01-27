@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:33 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/01/27 10:03:42 rhaen Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-Store-DBIC-0.11
+DISTNAME=	Catalyst-Plugin-Session-Store-DBIC-0.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
