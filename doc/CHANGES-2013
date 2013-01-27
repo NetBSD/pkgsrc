@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.372 2013/01/27 05:28:54 schnoebe Exp $
+$NetBSD: CHANGES-2013,v 1.373 2013/01/27 07:53:48 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -464,3 +464,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed wm/metisse [wiz 2013-01-27]
 	Removed x11/nucleo [wiz 2013-01-27]
 	Updated print/hplip to 3.12.11 [schnoebe 2013-01-27]
+	Updated www/wordpress to 3.5.1 [morr 2013-01-27]
