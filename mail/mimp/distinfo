@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/01/27 16:35:06 bouyer Exp $
+
+SHA1 (mimp-h3-1.1.4.tar.gz) = a1cd9242e4b692e948a777cbb20636de5cb9ff76
+RMD160 (mimp-h3-1.1.4.tar.gz) = 226499d7b407254036c30d3b00d9783dbc68cce9
+Size (mimp-h3-1.1.4.tar.gz) = 1249671 bytes
