@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.387 2013/01/27 17:42:36 adam Exp $
+$NetBSD: CHANGES-2013,v 1.388 2013/01/27 20:58:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -478,3 +478,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Added mail/mimp version 1.1.4 [bouyer 2013-01-27]
 	Updated www/py-wtforms to 1.0.3 [kleink 2013-01-27]
 	Updated www/py-django-photologue to 2.5 [adam 2013-01-27]
+	Updated mail/getmail to 4.37.0 [schmonz 2013-01-27]
+	Added devel/p5-FindBin-libs version 1.65.1 [schmonz 2013-01-27]
+	Added devel/p5-Ouch version 0.0401 [schmonz 2013-01-27]
+	Added devel/p5-Test-BDD-Cucumber version 0.12 [schmonz 2013-01-27]
