@@ -1,0 +1,9 @@
+Cucumber lets software development teams describe how software
+should behave in plain text. The text is written in a business-readable
+domain-specific language and serves as documentation, automated
+tests and development-aid - all rolled into one format.
+
+This is a sane, feature-complete Cucumber implementation in Perl.
+In almost all cases, where the behaviour of this module is different
+from the real Cucumber, the plan is to move it to be more similar
+to that.
