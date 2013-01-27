@@ -1,0 +1,16 @@
+An all-too-common occurrance managing perly projects is being unable
+to install new modules becuse "it might break things", and being
+unable to test them because you can't install them. The usual outcome
+of this is a collection of hard-coded
+
+    use lib qw( /usr/local/projectX ... )
+
+code at the top of each #! file that has to be updated by hand for
+each new project.
+
+To get away from this you'll often see relative paths for the lib's,
+which require running the code from one specific place. All this
+does is push the hard-coding into cron, shell wrappers, and begin
+blocks.
+
+With FindBin::libs you need suffer no more.
