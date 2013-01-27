@@ -1,6 +1,0 @@
-$NetBSD: TODO,v 1.1 2008/05/07 02:53:41 bjs Exp $
-
- - Fix build of qt4 plugin.
- - Add handler for share/nucleo/plugins-list to allow for splitting 
-   plugins out into seperate packages.
- - Add opencv option (or seperate package) for OpenCV demos.

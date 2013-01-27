@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2013/01/23 21:58:47 wiz Exp $
+# $NetBSD: Makefile,v 1.676 2013/01/27 00:18:28 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -275,7 +275,6 @@ SUBDIR+=	mrxvt
 SUBDIR+=	multi-aterm
 SUBDIR+=	mxterm
 SUBDIR+=	neXtaw
-SUBDIR+=	nucleo
 SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
 SUBDIR+=	oneko

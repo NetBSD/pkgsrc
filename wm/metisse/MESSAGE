@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/06/02 19:29:27 agc Exp $
-
-For instructions on how to run metisse, please look at:
-
-	${PREFIX}/share/metisse/doc/docs/running.html
-
-===========================================================================
