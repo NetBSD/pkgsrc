@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/01/27 20:42:16 schmonz Exp $
+
+SHA1 (FindBin-libs-1.65.1.tar.gz) = 4781c1248951f37e7dc05a44ac33f2a592089ca6
+RMD160 (FindBin-libs-1.65.1.tar.gz) = 9a3e4712c3a6ad089181a7dd0f499fa3cfa18690
+Size (FindBin-libs-1.65.1.tar.gz) = 20723 bytes
+SHA1 (patch-META.yml) = db4bb41056f8a3254e6cb98672dd7f08cd2c85c7
