@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.19 2013/01/25 10:17:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.20 2013/01/27 14:11:18 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -130,3 +130,7 @@ Pullup ticket #4039 - requested by tron
 mk/checksum/checksum.mk: build fix for MacOS
 Pullup ticket #4040 - requested by wiz
 security/gnupg: bug fix patch
+Pullup ticket #4041 - requested by tron
+multimedia/libvpx: MacOS fix
+Pullup ticket #4042 - requested by morr
+www/wordpress: security update
