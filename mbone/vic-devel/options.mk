@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2012/06/12 15:45:59 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2013/01/27 00:15:03 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vic
-PKG_SUPPORTED_OPTIONS=		inet6 vic-gpl
-PKG_SUGGESTED_OPTIONS=		inet6 vic-gpl
+PKG_SUPPORTED_OPTIONS=		inet6 # vic-gpl
+PKG_SUGGESTED_OPTIONS=		inet6 # vic-gpl
 
 .include "../../mk/bsd.options.mk"
 
