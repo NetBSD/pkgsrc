@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.378 2013/01/27 10:26:14 rhaen Exp $
+$NetBSD: CHANGES-2013,v 1.379 2013/01/27 10:28:47 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.12 [rhaen 2013-01-27]
 	Updated devel/p5-Syntax-Keyword-Junction to 0.003002 [rhaen 2013-01-27]
 	Updated devel/p5-TAP-Formatter-HTML to 0.11 [rhaen 2013-01-27]
+	Updated mail/p5-MailTools to 2.12 [rhaen 2013-01-27]
