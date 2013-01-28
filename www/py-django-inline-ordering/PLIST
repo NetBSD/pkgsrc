@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/28 21:07:16 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/inline_ordering/__init__.py
+${PYSITELIB}/inline_ordering/__init__.pyc
+${PYSITELIB}/inline_ordering/__init__.pyo
+${PYSITELIB}/inline_ordering/admin.py
+${PYSITELIB}/inline_ordering/admin.pyc
+${PYSITELIB}/inline_ordering/admin.pyo
+${PYSITELIB}/inline_ordering/models.py
+${PYSITELIB}/inline_ordering/models.pyc
+${PYSITELIB}/inline_ordering/models.pyo
+${PYSITELIB}/inline_ordering/settings.py
+${PYSITELIB}/inline_ordering/settings.pyc
+${PYSITELIB}/inline_ordering/settings.pyo
+${PYSITELIB}/inline_ordering/static/inline_ordering.js
