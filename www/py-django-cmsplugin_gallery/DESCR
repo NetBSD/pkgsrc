@@ -1,0 +1,5 @@
+cmsplugin_gallery adds simple gallery plugin to your djangoCMS installation
+Features:
+* Drag&Drop reordering of photos in the plugin admin
+* Unlimited, auto-discovered custom templates - you can change template of
+  given gallery at anytime, use javascript galleries etc.
