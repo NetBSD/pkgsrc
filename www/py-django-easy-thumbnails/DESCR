@@ -1,0 +1,4 @@
+The primary function of easy-thumbnails is to dynamically create thumbnails
+based on a source image. So whenever a thumbnail does not exist or if the
+source was modified more recently than the existing thumbnail, a new thumbnail
+is generated (and saved).
