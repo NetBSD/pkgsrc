@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.390 2013/01/28 15:23:49 adam Exp $
+$NetBSD: CHANGES-2013,v 1.391 2013/01/28 21:21:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -487,3 +487,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-base to 1.8.1.1 [adam 2013-01-28]
 	Updated devel/scmgit-docs to 1.8.1.1 [adam 2013-01-28]
 	Updated www/gitweb to 1.8.1.1 [adam 2013-01-28]
+	Updated www/py-paste to 1.7.5.1 [adam 2013-01-28]
+	Added www/py-django-easy-thumbnails version 1.2 [adam 2013-01-28]
+	Added www/py-django-inline-ordering version 1.0.2 [adam 2013-01-28]
+	Added www/py-django-cmsplugin_gallery version 0.5.3 [adam 2013-01-28]
