@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/27 20:47:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/28 18:35:48 schmonz Exp $
 #
 
 DISTNAME=		Test-BDD-Cucumber-0.12
@@ -10,8 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-BDD-Cucumber/
 COMMENT=		Feature-complete Cucumber-style testing in Perl
 LICENSE=		${PERL5_LICENSE}
-
-# XXX import Ouch and FindBin-libs first
 
 DEPENDS+=		p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=		p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
