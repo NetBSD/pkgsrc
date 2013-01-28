@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/28 21:07:16 adam Exp $
+
+SHA1 (django-inline-ordering-1.0.2.tar.gz) = 50da0c16a14f5df7e243310833f8396f0293dfb9
+RMD160 (django-inline-ordering-1.0.2.tar.gz) = 841e9def9616625958e9dcd2cbcb3b63de4c1d19
+Size (django-inline-ordering-1.0.2.tar.gz) = 7391 bytes
