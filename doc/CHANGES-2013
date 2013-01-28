@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.388 2013/01/27 20:58:22 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.389 2013/01/28 04:30:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -482,3 +482,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-FindBin-libs version 1.65.1 [schmonz 2013-01-27]
 	Added devel/p5-Ouch version 0.0401 [schmonz 2013-01-27]
 	Added devel/p5-Test-BDD-Cucumber version 0.12 [schmonz 2013-01-27]
+	Updated www/ikiwiki to 3.20121212nb2 [schmonz 2013-01-28]
