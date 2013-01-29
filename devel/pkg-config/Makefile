@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/01/29 05:56:05 wiz Exp $
 
-DISTNAME=	pkg-config-0.27.1
+DISTNAME=	pkg-config-0.28
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-internal-glib
+CONFIGURE_ARGS+=	--disable-host-tool
 
 # old name of the package
 CONFLICTS=		pkgconfig-[0-9]*
