@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/23 16:57:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/01/29 15:51:06 taca Exp $
 bin/fml
 bin/fmladdr
 bin/fmlalias
@@ -47,7 +47,9 @@ lib/fml/${FML_STAMP}/Crypt/PPDES.pm
 lib/fml/${FML_STAMP}/Crypt/RandPasswd.pm
 lib/fml/${FML_STAMP}/Crypt/TripleDES.pm
 lib/fml/${FML_STAMP}/Crypt/UnixCrypt.pm
-lib/fml/${FML_STAMP}/ErrorStatus.pm
+lib/fml/${FML_STAMP}/Email/Find.pm
+lib/fml/${FML_STAMP}/Email/Find/addrspec.pm
+lib/fml/${FML_STAMP}/Exporter/Lite.pm
 lib/fml/${FML_STAMP}/FML/.listup
 lib/fml/${FML_STAMP}/FML/Article.pm
 lib/fml/${FML_STAMP}/FML/Article/Outline.pm
@@ -306,8 +308,8 @@ lib/fml/${FML_STAMP}/File/Spec/Unix.pm
 lib/fml/${FML_STAMP}/File/Spec/VMS.pm
 lib/fml/${FML_STAMP}/File/Spec/Win32.pm
 lib/fml/${FML_STAMP}/HTML/CalendarMonthSimple.pm
+lib/fml/${FML_STAMP}/HTML/EntitiesLite.pm
 lib/fml/${FML_STAMP}/HTML/FromText.pm
-lib/fml/${FML_STAMP}/HTML/Template.pm
 lib/fml/${FML_STAMP}/IM/Address.pm
 lib/fml/${FML_STAMP}/IM/Alias.pm
 lib/fml/${FML_STAMP}/IM/Config.pm.in
@@ -371,8 +373,8 @@ lib/fml/${FML_STAMP}/Jcode/Tr.pm
 lib/fml/${FML_STAMP}/Jcode/Unicode.pm
 lib/fml/${FML_STAMP}/Jcode/Unicode/Constants.pm
 lib/fml/${FML_STAMP}/Jcode/Unicode/NoXS.pm
+lib/fml/${FML_STAMP}/Jcode/_Classic.pm
 lib/fml/${FML_STAMP}/Jcode/_test.pl
-lib/fml/${FML_STAMP}/Log/ErrLogger.pm
 lib/fml/${FML_STAMP}/MIME/Base64/Perl.pm
 lib/fml/${FML_STAMP}/MIME/Lite.pm
 lib/fml/${FML_STAMP}/MIME/Lite/HTML.pm
@@ -444,8 +446,6 @@ lib/fml/${FML_STAMP}/Mail/Message/ToHTML.pm
 lib/fml/${FML_STAMP}/Mail/Message/Utils.pm
 lib/fml/${FML_STAMP}/Mail/Send.pm
 lib/fml/${FML_STAMP}/Mail/Util.pm
-lib/fml/${FML_STAMP}/Rcs.pm
-lib/fml/${FML_STAMP}/Text/CSV.pm
 lib/fml/${FML_STAMP}/Tie/JournaledDir.pm
 lib/fml/${FML_STAMP}/Tie/JournaledFile.pm
 lib/fml/${FML_STAMP}/Time/CTime.pm
