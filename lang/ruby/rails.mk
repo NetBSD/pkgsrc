@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.37 2013/01/09 12:40:52 taca Exp $
+# $NetBSD: rails.mk,v 1.38 2013/01/29 15:36:12 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -38,7 +38,7 @@ _RUBY_RAILS_MK=	# defined
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS3_VERSION?=	3.0.19
+RUBY_RAILS3_VERSION?=	3.0.20
 RUBY_RAILS31_VERSION?=	3.1.10
 RUBY_RAILS32_VERSION?=	3.2.11
 
