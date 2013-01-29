@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.403 2013/01/29 15:49:22 taca Exp $
+$NetBSD: CHANGES-2013,v 1.404 2013/01/29 15:51:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-railties to 3.0.20 [taca 2013-01-29]
 	Updated www/ruby-rails3 to 3.0.20 [taca 2013-01-29]
 	Updated mail/fml4 to 4.0.3.20040215nb4 [taca 2013-01-29]
+	Updated mail/fml to 20121230 [taca 2013-01-29]
