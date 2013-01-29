@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.396 2013/01/29 06:07:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.397 2013/01/29 06:09:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -496,3 +496,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-apps to 1.11 [wiz 2013-01-29]
 	Updated devel/pkg-config to 0.28 [wiz 2013-01-29]
 	Updated devel/py-cython to 0.17.4 [wiz 2013-01-29]
+	Updated devel/py-distribute to 0.6.34 [wiz 2013-01-29]
