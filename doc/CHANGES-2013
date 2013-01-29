@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.393 2013/01/29 05:50:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.394 2013/01/29 05:51:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -493,3 +493,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-django-inline-ordering version 1.0.2 [adam 2013-01-28]
 	Added www/py-django-cmsplugin_gallery version 0.5.3 [adam 2013-01-28]
 	Updated fonts/bdftopcf to 1.0.4 [wiz 2013-01-29]
+	Updated meta-pkgs/modular-xorg-apps to 1.11 [wiz 2013-01-29]
