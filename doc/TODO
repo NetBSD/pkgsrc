@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11893 2013/01/29 06:13:41 wiz Exp $
+$NetBSD: TODO,v 1.11894 2013/01/29 06:16:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1046,7 +1046,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o radiance-3.7.2
 	o raine-0.51.15
 	o rapidsvn-0.12
-	o rasqal-0.9.30
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8.1
