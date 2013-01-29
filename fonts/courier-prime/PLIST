@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/29 07:57:18 wiz Exp $
+lib/X11/fonts/TTF/Courier Prime Bold Italic.ttf
+lib/X11/fonts/TTF/Courier Prime Bold.ttf
+lib/X11/fonts/TTF/Courier Prime Italic.ttf
+lib/X11/fonts/TTF/Courier Prime.ttf
+share/doc/courier-prime/Read me.txt
