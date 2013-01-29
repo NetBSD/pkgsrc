@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.391 2013/01/28 21:21:47 adam Exp $
+$NetBSD: CHANGES-2013,v 1.392 2013/01/29 00:00:44 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -106,6 +106,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/libmicrohttpd to 0.9.24 [wiz 2013-01-06]
 	Updated fonts/harfbuzz to 0.9.9nb1 [ryoon 2013-01-06]
 	Removed devel/perltidy [darcy 2013-01-06]
+	Updated security/gnupg to 1.4.13 [spz 2013-01-06]
 	Added devel/lua-lpeg version 0.10.2 [alnsn 2013-01-06]
 	Updated games/supertuxkart to 0.8 [ryoon 2013-01-06]
 	Updated security/pcsc-lite to 1.8.7 [pettai 2013-01-06]
