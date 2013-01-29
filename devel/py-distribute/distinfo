@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/01/06 00:32:39 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/01/29 06:09:41 wiz Exp $
 
-SHA1 (distribute-0.6.33.tar.gz) = adb97ceead3bb7f67e52238e60cdbf961da7ba12
-RMD160 (distribute-0.6.33.tar.gz) = bdf7c96a865745d7387e1ddd776182bc1d1205b9
-Size (distribute-0.6.33.tar.gz) = 644203 bytes
+SHA1 (distribute-0.6.34.tar.gz) = b6f9cfbaf3e63833b71009812a613be13e68f5de
+RMD160 (distribute-0.6.34.tar.gz) = 2cf3b942419a38f8ed4a10b56159c67c4d72ac4a
+Size (distribute-0.6.34.tar.gz) = 644358 bytes
 SHA1 (patch-aa) = f71c01fc59d71e731c4e239790acb7968e29e7d9
