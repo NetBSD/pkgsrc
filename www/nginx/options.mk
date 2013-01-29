@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2012/09/23 12:46:15 shattered Exp $
+# $NetBSD: options.mk,v 1.18 2013/01/29 12:36:40 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache naxsi pcre \
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
-NAXSI=			naxsi-core-0.48
+NAXSI=			naxsi-core-0.49
 NAXSI_DISTFILE=		${NAXSI}.tgz
 SITES.${NAXSI_DISTFILE}=	http://naxsi.googlecode.com/files/
 DISTFILES+=		${NAXSI_DISTFILE}
