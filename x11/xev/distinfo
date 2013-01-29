@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/03 18:12:53 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/01/29 22:05:23 wiz Exp $
 
-SHA1 (xev-1.2.0.tar.bz2) = 6b05706ed39382b5d08c5351c00ba7e127709eec
-RMD160 (xev-1.2.0.tar.bz2) = c1fe193a888b0b52ec3ea144e75b1b28d2a45db3
-Size (xev-1.2.0.tar.bz2) = 122329 bytes
+SHA1 (xev-1.2.1.tar.bz2) = 7ae6233ccfd8f500d547093291cc2de4f2b8fbaa
+RMD160 (xev-1.2.1.tar.bz2) = 518a7039eaed196d6ec8a7209f340bb510ae6825
+Size (xev-1.2.1.tar.bz2) = 125884 bytes
