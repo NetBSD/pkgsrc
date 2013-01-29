@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.401 2013/01/29 08:09:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.402 2013/01/29 15:45:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -501,3 +501,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/diffpdf to 2.1.2 [wiz 2013-01-29]
 	Updated textproc/rasqal to 0.9.30 [wiz 2013-01-29]
 	Added fonts/courier-prime version 1.203 [wiz 2013-01-29]
+	Updated devel/ruby-activesupport3 to 3.0.20 [taca 2013-01-29]
+	Updated devel/ruby-activemodel to 3.0.20 [taca 2013-01-29]
+	Updated www/ruby-activeresource3 to 3.0.20 [taca 2013-01-29]
+	Updated databases/ruby-activerecord3 to 3.0.20 [taca 2013-01-29]
+	Updated www/ruby-actionpack3 to 3.0.20 [taca 2013-01-29]
+	Updated mail/ruby-actionmailer3 to 3.0.20 [taca 2013-01-29]
+	Updated devel/ruby-railties to 3.0.20 [taca 2013-01-29]
+	Updated www/ruby-rails3 to 3.0.20 [taca 2013-01-29]
