@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2013/01/26 21:37:13 adam Exp $
+# $NetBSD: Makefile,v 1.85 2013/01/29 16:56:39 is Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	comms
 MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 
@@ -23,6 +23,7 @@ MAKE_ENV+=		MGETTY_CONFDIR=${PKG_SYSCONFDIR:Q} PERL5=${PERL5:Q}
 MAKE_ENV+=		ROOT_USER=${REAL_ROOT_USER:Q}
 MAKE_ENV+=		ROOT_GROUP=${REAL_ROOT_GROUP:Q}
 MAKE_ENV+=		SHELL=${SH:Q}
+MAKE_ENV+=		VARBASE=${VARBASE:Q}
 MAKE_FLAGS+=		prefix=${DESTDIR:Q}${PREFIX:Q}                  \
 			spool=${VARBASE}/spool				\
 			INFODIR=${DESTDIR:Q}${PREFIX:Q}/${PKGINFODIR:Q} \

@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.9 2012/04/08 00:47:27 dholland Exp $
+$NetBSD: patch-ai,v 1.10 2013/01/29 16:56:39 is Exp $
 
 - improve default configuration behavior for the modern world
 - configure for pkgsrc
@@ -41,16 +41,18 @@ $NetBSD: patch-ai,v 1.9 2012/04/08 00:47:27 dholland Exp $
  
  /* access mode for the line while getty has it - it should be accessible
   * by uucp / uucp, but not by others (imagine someone dialing into your
-@@ -147,7 +154,7 @@
+@@ -147,7 +154,9 @@
   *
   * if the directory does not exist, the log file goes to CONSOLE (!)
   */
 -#define LOG_PATH "/var/log/mgetty.%s"
-+#define LOG_PATH VARBASE "/log/mgetty.%s"
++#define STR1(x) #x
++#define STR(x) STR1(x)
++#define LOG_PATH STR(VARBASE) "/log/mgetty.%s"
  
  /* Default log error level threshold. Possible error levels are
   * L_FATAL, L_ERROR, L_AUDIT, L_WARN, L_MESG, L_NOISE, L_JUNK (see mgetty.h)
-@@ -233,6 +240,7 @@
+@@ -233,6 +242,7 @@
   */
  
  /* for a few systems, you can just take those defaults and be happy */
@@ -58,17 +60,17 @@ $NetBSD: patch-ai,v 1.9 2012/04/08 00:47:27 dholland Exp $
  #if defined (SVR4) || defined(sunos4)
  # define LOCK_PATH "/var/spool/locks"
  # define LOCK      "/var/spool/locks/LCK..%s"
-@@ -459,7 +467,8 @@
+@@ -459,7 +469,8 @@
   * watch out: if you run 'sendfax' as non-privileged user (user 'fax' etc.)
   * you might need to create this file manually and chown it to 'fax'
   */
 -#define FAX_LOG		"/var/log/sendfax.log"
 +/*#define FAX_LOG		"/var/log/sendfax.log" */ /* original */
-+#define FAX_LOG         VARBASE "/spool/fax/Faxlog"
++#define FAX_LOG         STR(VARBASE) "/spool/fax/Faxlog"
  
  /* local station ID (your fax number)
   * 20 character string, most faxmodem allow all ascii characters 32..127,
-@@ -552,20 +561,15 @@
+@@ -552,20 +563,15 @@
   */
  #ifdef SVR4
  # define MAILER		"/usr/bin/mailx -s 'Incoming facsimile message'"
@@ -96,7 +98,7 @@ $NetBSD: patch-ai,v 1.9 2012/04/08 00:47:27 dholland Exp $
  #endif
  
  /* where to send notify mail about incoming faxes to
-@@ -586,13 +590,18 @@
+@@ -586,13 +592,18 @@
   * If you don't want this type of service, do not define it at all
   * Absolute path name has to be used here!
   */
@@ -116,7 +118,7 @@ $NetBSD: patch-ai,v 1.9 2012/04/08 00:47:27 dholland Exp $
  /* fax machines exchange so-called "non-standard-frames" that can be 
   * used to identify what vendor and model is on the other end.
   * mgetty parses and prints this by default, because it can help 
-@@ -601,3 +610,4 @@
+@@ -601,3 +612,4 @@
   */
  #define FAX_NSF_PARSER
  
