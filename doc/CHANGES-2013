@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.400 2013/01/29 06:16:00 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.401 2013/01/29 08:09:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/t1utils to 1.37 [wiz 2013-01-29]
 	Updated print/diffpdf to 2.1.2 [wiz 2013-01-29]
 	Updated textproc/rasqal to 0.9.30 [wiz 2013-01-29]
+	Added fonts/courier-prime version 1.203 [wiz 2013-01-29]
