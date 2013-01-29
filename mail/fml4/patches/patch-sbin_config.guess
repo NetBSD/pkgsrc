@@ -1,4 +1,6 @@
-$NetBSD: patch-sbin_config.guess,v 1.1 2012/05/21 07:20:42 marino Exp $
+$NetBSD: patch-sbin_config.guess,v 1.2 2013/01/29 15:48:55 taca Exp $
+
+Add DragonFly support.
 
 --- sbin/config.guess.orig	2012-05-21 07:04:19.000000000 +0000
 +++ sbin/config.guess
