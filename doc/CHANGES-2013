@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.399 2013/01/29 06:13:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.400 2013/01/29 06:16:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-distribute to 0.6.34 [wiz 2013-01-29]
 	Updated fonts/t1utils to 1.37 [wiz 2013-01-29]
 	Updated print/diffpdf to 2.1.2 [wiz 2013-01-29]
+	Updated textproc/rasqal to 0.9.30 [wiz 2013-01-29]
