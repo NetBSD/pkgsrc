@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.15 2012/04/08 01:28:35 dholland Exp $
+$NetBSD: patch-ab,v 1.16 2013/01/29 16:56:39 is Exp $
 
 - configure for pkgsrc
 - honor VARBASE
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.15 2012/04/08 01:28:35 dholland Exp $
  #
  #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
 -CFLAGS=-O2 -Wall -pipe
-+CFLAGS+=-O2 -Wall -pipe -DPREFIX=\"${PREFIX}\" -DVARBASE=\"${VARBASE}\"
++CFLAGS+=-O2 -Wall -pipe -DPREFIX=\"${PREFIX}\" -DVARBASE=${VARBASE}
  #CFLAGS=-O -DSVR4
  #CFLAGS=-O -DSVR4 -DSVR42
  #CFLAGS=-O -DUSE_POLL
@@ -104,6 +104,15 @@ $NetBSD: patch-ab,v 1.15 2012/04/08 01:28:35 dholland Exp $
  
  # a few C files need extra compiler arguments
  
+@@ -375,7 +374,7 @@ subdirs:
+ 
+ call-back:
+ 	@$(MAKE) mgetty
+-	cd callback && $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS) -I.." "LDFLAGS=$(LDFLAGS)" "CONFDIR=$(CONFDIR)" "VARRUNDIR=$(VARRUNDIR)" "LIBS=$(LIBS)" all
++	cd callback && $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS) -I.." "LDFLAGS=$(LDFLAGS)" "CONFDIR=$(CONFDIR)" "VARRUNDIR=$(VARRUNDIR)" "LIBS=$(LIBS)" all
+ 
+ contrib-all: 
+ 	cd contrib ; $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS) -I.." "LDFLAGS=$(LDFLAGS)" "LIBS=$(LIBS)" all
 @@ -572,8 +571,8 @@ newslock: compat/newslock.c
  # internal: use this to create a "clean" mgetty+sendfax tree
  bindist: all doc-all sedscript
