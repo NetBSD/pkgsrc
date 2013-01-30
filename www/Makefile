@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.930 2013/01/28 21:19:14 adam Exp $
+# $NetBSD: Makefile,v 1.931 2013/01/30 18:52:13 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -261,6 +261,7 @@ SUBDIR+=	p5-CGI-PSGI
 SUBDIR+=	p5-CGI-ProgressBar
 SUBDIR+=	p5-CGI-Session
 SUBDIR+=	p5-CGI-Session-Driver-memcached
+SUBDIR+=	p5-CGI-Session-Plugin-Redirect
 SUBDIR+=	p5-CGI-Session-Serialize-yaml
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CSS
@@ -583,8 +584,8 @@ SUBDIR+=	py-pendrell
 SUBDIR+=	py-rss2gen
 SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
-SUBDIR+=	py-tornado
 SUBDIR+=	py-swish-e
+SUBDIR+=	py-tornado
 SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webcolors
 SUBDIR+=	py-webpy
