@@ -1,8 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2008/08/01 17:23:21 wiz Exp $
+$NetBSD: MESSAGE,v 1.7 2013/01/30 22:09:22 riastradh Exp $
 
-You probably want to install www/privoxy to torify your browsers.  Please
-see https://wiki.torproject.org/wiki/TheOnionRouter/TorifyHOWTO for details.
+Please note that the only way the Tor Project recommends browsing the
+web through Tor is the Tor Browser, which is currently not packaged in
+pkgsrc.  See <https://www.torproject.org/projects/torbrowser.html.en>.
 
 Other applications can be torified with the help of libtsocks (net/tsocks).
 A tsocks configuration file for this is installed as
