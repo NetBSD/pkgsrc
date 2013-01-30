@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.409 2013/01/30 10:41:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.410 2013/01/30 11:43:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -516,3 +516,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xkeyboard-config to 2.8 [wiz 2013-01-30]
 	Updated x11/pixman to 0.28.2 [wiz 2013-01-30]
 	Updated devel/doxygen to 1.8.3.1 [wiz 2013-01-30]
+	Updated net/samba35 to 3.5.21 [taca 2013-01-30]
+	Updated net/samba to 3.6.12 [taca 2013-01-30]
