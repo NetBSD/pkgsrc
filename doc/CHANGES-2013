@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.415 2013/01/30 18:51:51 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.416 2013/01/30 21:00:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -526,3 +526,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-docs to 1.8.1.2 [adam 2013-01-30]
 	Updated www/gitweb to 1.8.1.2 [adam 2013-01-30]
 	Added www/p5-CGI-Session-Plugin-Redirect version 1.01 [wiz 2013-01-30]
+	Updated www/tidy to 20091027nb4 [wiz 2013-01-30]
