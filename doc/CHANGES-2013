@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.408 2013/01/30 10:21:30 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.409 2013/01/30 10:41:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -515,3 +515,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xev to 1.2.1 [wiz 2013-01-29]
 	Updated x11/xkeyboard-config to 2.8 [wiz 2013-01-30]
 	Updated x11/pixman to 0.28.2 [wiz 2013-01-30]
+	Updated devel/doxygen to 1.8.3.1 [wiz 2013-01-30]
