@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1691 2013/01/27 20:50:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.1692 2013/01/30 13:38:53 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -143,6 +143,7 @@ SUBDIR+=	cvsdiff2patch
 SUBDIR+=	cvsgraph
 SUBDIR+=	cvslock
 SUBDIR+=	cvsps
+SUBDIR+=	cvsps3
 SUBDIR+=	cvsup
 SUBDIR+=	cvsup-bin
 SUBDIR+=	cvsup-gui
