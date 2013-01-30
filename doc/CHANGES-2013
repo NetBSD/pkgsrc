@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.412 2013/01/30 13:39:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.413 2013/01/30 14:45:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba35 to 3.5.21 [taca 2013-01-30]
 	Updated net/samba to 3.6.12 [taca 2013-01-30]
 	Added sysutils/di version 4.34 [obache 2013-01-30]
+	Updated devel/scmgit to 1.8.1.1nb1 [wiz 2013-01-30]
