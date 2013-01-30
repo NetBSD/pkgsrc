@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.227 2013/01/26 21:38:37 adam Exp $
-
-.include "../../net/samba/Makefile.mirrors"
+# $NetBSD: Makefile,v 1.228 2013/01/30 11:42:54 taca Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -12,7 +9,7 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	3.6.10
+VERSION=	3.6.12
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* winbind-[0-9]*
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
@@ -154,6 +151,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/updatesmbpasswd.sh \
 		${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
+
+.include "../../net/samba/Makefile.mirrors"
 
 .if ${OPSYS} == "Linux"
 .include "../../devel/libuuid/buildlink3.mk"
