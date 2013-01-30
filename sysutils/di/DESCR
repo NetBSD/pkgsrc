@@ -1,0 +1,5 @@
+di is a disk information utility, displaying everything (and more)
+that your df command does. It features the ability to display your
+disk usage in whatever format you prefer. It also checks the user
+and group quotas, so that the user sees the space available for
+their use, not the system wide disk space.
