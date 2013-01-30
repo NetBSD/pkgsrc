@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/01/30 11:34:58 ryoon Exp $
+
+SHA1 (cvsps-3.2.tar.gz) = fd4a3d3a0dc630381456d4fcc06fe72c6ca60689
+RMD160 (cvsps-3.2.tar.gz) = af75060a260e74919802b651c76ccb33fa07e240
+Size (cvsps-3.2.tar.gz) = 60627 bytes
+SHA1 (patch-aa) = 976b74f3183c0ef41799a62909cf66ff41ee6048
