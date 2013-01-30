@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/30 12:29:06 obache Exp $
+bin/di
+bin/mi
+man/man1/di.1
+share/locale/de/LC_MESSAGES/di.mo
+share/locale/en/LC_MESSAGES/di.mo
+share/locale/es/LC_MESSAGES/di.mo
