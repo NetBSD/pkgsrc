@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.2 2012/05/12 17:38:32 wiz Exp $
+$NetBSD: patch-bc,v 1.3 2013/01/30 10:21:22 wiz Exp $
 
---- pixman/pixman.c.orig	2012-01-27 15:45:27.000000000 +0000
+--- pixman/pixman.c.orig	2012-12-10 11:34:13.000000000 +0000
 +++ pixman/pixman.c
-@@ -162,6 +162,57 @@ optimize_operator (pixman_op_t     op,
+@@ -152,6 +152,57 @@ optimize_operator (pixman_op_t     op,
      return operator_table[op].opaque_info[is_dest_opaque | is_source_opaque];
  }
  
@@ -60,7 +60,7 @@ $NetBSD: patch-bc,v 1.2 2012/05/12 17:38:32 wiz Exp $
  /*
   * Computing composite region
   */
-@@ -586,6 +637,13 @@ pixman_image_composite32 (pixman_op_t
+@@ -576,6 +627,13 @@ pixman_image_composite32 (pixman_op_t   
      uint32_t src_flags, mask_flags, dest_flags;
      pixman_region32_t region;
      pixman_box32_t extents;
@@ -74,7 +74,7 @@ $NetBSD: patch-bc,v 1.2 2012/05/12 17:38:32 wiz Exp $
      pixman_implementation_t *imp;
      pixman_composite_func_t func;
  
-@@ -623,6 +681,16 @@ pixman_image_composite32 (pixman_op_t
+@@ -614,6 +672,16 @@ pixman_image_composite32 (pixman_op_t   
  	    src_format = mask_format = PIXMAN_rpixbuf;
      }
  
@@ -90,8 +90,8 @@ $NetBSD: patch-bc,v 1.2 2012/05/12 17:38:32 wiz Exp $
 +
      pixman_region32_init (&region);
  
-     if (!pixman_compute_composite_region32 (
-@@ -716,6 +784,13 @@ pixman_image_composite32 (pixman_op_t
+     if (!_pixman_compute_composite_region32 (
+@@ -707,6 +775,13 @@ pixman_image_composite32 (pixman_op_t   
      }
  
  out:

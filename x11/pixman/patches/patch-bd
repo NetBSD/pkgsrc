@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.1 2011/10/27 16:52:51 drochner Exp $
+$NetBSD: patch-bd,v 1.2 2013/01/30 10:21:22 wiz Exp $
 
---- pixman/pixman.h.orig	2011-07-04 20:22:40.000000000 +0000
+--- pixman/pixman.h.orig	2012-12-10 11:34:13.000000000 +0000
 +++ pixman/pixman.h
-@@ -845,25 +845,19 @@ void          pixman_image_composite32  
+@@ -856,25 +856,19 @@ void          pixman_image_composite32  
  					       int32_t            width,
  					       int32_t            height);
  
@@ -35,4 +35,4 @@ $NetBSD: patch-bd,v 1.1 2011/10/27 16:52:51 drochner Exp $
 +void          pixman_disable_out_of_bounds_workaround (void);
  
  /*
-  * Trapezoids
+  * Glyphs
