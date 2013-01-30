@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.407 2013/01/30 09:18:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.408 2013/01/30 10:21:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -514,3 +514,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libupnp to 1.6.18 [drochner 2013-01-29]
 	Updated x11/xev to 1.2.1 [wiz 2013-01-29]
 	Updated x11/xkeyboard-config to 2.8 [wiz 2013-01-30]
+	Updated x11/pixman to 0.28.2 [wiz 2013-01-30]
