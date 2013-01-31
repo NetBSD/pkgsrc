@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/01/14 04:35:02 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/31 16:03:34 taca Exp $
 
 DISTNAME=	rack-1.3.9
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rack.rubyforge.org/
+HOMEPAGE=	http://rack.github.com/
 COMMENT=	Ruby webserver interface
 LICENSE=	mit
 
