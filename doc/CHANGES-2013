@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.419 2013/01/31 09:39:08 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.420 2013/01/31 10:26:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/menu-cache version 0.4.1nb1 [reed 2013-01-31]
 	Removed shells/zsh-current [wiz 2013-01-31]
 	Updated security/mozilla-rootcerts to 1.0.20121229 [wiz 2013-01-31]
+	Updated pkgtools/pkg_install to 20130131 [wiz 2013-01-31]
