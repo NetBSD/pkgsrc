@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11902 2013/01/31 21:48:01 adam Exp $
+$NetBSD: TODO,v 1.11903 2013/01/31 22:02:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -603,7 +603,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gaupol-0.21.1
-	o gawk-4.0.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
@@ -931,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
-	o opencv-2.4.3
 	o opendkim-2.7.4
 	o opengrok-0.11.1
 	o openmortal-0.7.1
