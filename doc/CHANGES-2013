@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.425 2013/01/31 20:33:17 adam Exp $
+$NetBSD: CHANGES-2013,v 1.426 2013/01/31 21:45:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-mode to 1.9.3p374 [taca 2013-01-31]
 	Updated devel/gmp to 5.1.0 [adam 2013-01-31]
 	Updated math/glpk to 4.48 [adam 2013-01-31]
+	Added print/qpdf version 4.0.1 [wiz 2013-01-31]
