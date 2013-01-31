@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2011/12/27 21:18:05 christos Exp $
+# $NetBSD: Makefile,v 1.20 2013/01/31 21:45:04 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-m4-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	gttm4
 COMMENT=	Autoconf/automake m4 files for GNU NLS library
 LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/gettext/patches
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes

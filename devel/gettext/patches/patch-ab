@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-ab,v 1.9 2013/01/31 21:45:04 adam Exp $
 
 --- gettext-tools/misc/Makefile.in.orig	2010-06-06 20:12:31.000000000 +0000
 +++ gettext-tools/misc/Makefile.in
-@@ -1451,7 +1451,7 @@ info: info-am
+@@ -1719,7 +1719,7 @@ info: info-am
  
  info-am:
  

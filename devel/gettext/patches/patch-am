@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.3 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-am,v 1.4 2013/01/31 21:45:04 adam Exp $
 
---- gettext-tools/man/Makefile.in.orig	2010-06-06 20:12:31.000000000 +0000
+--- gettext-tools/man/Makefile.in.orig	2012-12-25 05:33:33.000000000 +0000
 +++ gettext-tools/man/Makefile.in
-@@ -1185,8 +1185,7 @@ gettextize.x autopoint.x
+@@ -1433,8 +1433,7 @@ gettextize.x autopoint.x
  man_MAN1OTHER = \
  msgcmp.1 msgfmt.1 msgmerge.1 msgunfmt.1 xgettext.1 \
  msgattrib.1 msgcat.1 msgcomm.1 msgconv.1 msgen.1 msgexec.1 msgfilter.1 msggrep.1 msginit.1 msguniq.1 \

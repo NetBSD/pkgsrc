@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2011/04/12 17:41:28 adam Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/31 21:45:04 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-asprintf-/}
 COMMENT=	Provides a printf-like interface for C++
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/gettext/patches
 
 CONFIGURE_DIRS=		gettext-runtime
 BUILD_DIRS=		gettext-runtime/libasprintf

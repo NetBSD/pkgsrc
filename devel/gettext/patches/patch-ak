@@ -1,11 +1,11 @@
-$NetBSD: patch-ak,v 1.6 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-ak,v 1.7 2013/01/31 21:45:04 adam Exp $
 
---- gettext-runtime/intl/Makefile.in.orig	2010-06-06 12:49:57.000000000 +0000
+--- gettext-runtime/intl/Makefile.in.orig	2012-12-25 05:16:50.000000000 +0000
 +++ gettext-runtime/intl/Makefile.in
-@@ -379,7 +379,7 @@ check: all
+@@ -378,7 +378,7 @@ check: all
  # separate library.
  # If you want to use the one which comes with this version of the
- # package, you have to use `configure --with-included-gettext'.
+ # package, you have to use "configure --with-included-gettext".
 -install: install-exec install-data
 +install:
  install-exec: all
