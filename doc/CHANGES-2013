@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.422 2013/01/31 15:43:54 taca Exp $
+$NetBSD: CHANGES-2013,v 1.423 2013/01/31 15:47:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -533,3 +533,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkg_install to 20130131 [wiz 2013-01-31]
 	Updated net/wireshark to 1.8.5 [tron 2013-01-31]
 	Updated databases/ruby-dm-active_model to 1.2.1nb2 [taca 2013-01-31]
+	Updated databases/ruby-dm-rails to 1.2.1nb2 [taca 2013-01-31]
