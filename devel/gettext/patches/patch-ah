@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.8 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-ah,v 1.9 2013/01/31 21:45:04 adam Exp $
 
---- gettext-tools/src/Makefile.in.orig	2010-06-06 20:12:32.000000000 +0000
+--- gettext-tools/src/Makefile.in.orig	2012-12-25 05:33:34.000000000 +0000
 +++ gettext-tools/src/Makefile.in
-@@ -2763,7 +2763,7 @@ install-dvi: install-dvi-am
+@@ -2901,7 +2901,7 @@ install-dvi: install-dvi-am
  
  install-dvi-am:
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.8 2011/04/12 17:41:28 adam Exp $
  	install-libLTLIBRARIES
  
  install-html: install-html-am
-@@ -2827,14 +2827,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -2965,14 +2965,6 @@ uninstall-am: uninstall-binPROGRAMS unin
  	uninstall-local
  
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ah,v 1.8 2011/04/12 17:41:28 adam Exp $
  po-lex.o po-lex.lo: po-gram-gen2.h
  po-gram-gen2.h: po-gram-gen.h
  	$(SED) -e 's/yy/po_gram_/g' -e 's/extern /extern DLL_VARIABLE /' $(srcdir)/po-gram-gen.h > $@-tmp
-@@ -2938,12 +2930,12 @@ uninstall-csharp-yes: all-csharp-yes
+@@ -3076,12 +3068,12 @@ uninstall-csharp-yes: all-csharp-yes
  	$(RM) $(DESTDIR)$(pkglibdir)/msgunfmt.net.exe
  uninstall-csharp-no:
  
