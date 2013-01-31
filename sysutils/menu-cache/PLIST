@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/31 03:25:53 reed Exp $
+include/menu-cache/menu-cache.h
+lib/libmenu-cache.la
+lib/pkgconfig/libmenu-cache.pc
+libexec/menu-cache-gen
+libexec/menu-cached
+share/doc/menu-cache/README
