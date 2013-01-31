@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2011/10/20 10:22:51 adam Exp $
+# $NetBSD: Makefile,v 1.81 2013/01/31 21:45:03 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
-
-PKGREVISION=	1
 
 COMMENT=	Tools for providing messages in different languages
 LICENSE=	gnu-gpl-v2
