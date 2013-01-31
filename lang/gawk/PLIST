@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/05/31 10:44:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/01/31 22:01:43 adam Exp $
 bin/dgawk
 bin/gawk
 bin/${PKGNAME}
@@ -11,6 +11,7 @@ info/gawk.info
 info/gawkinet.info
 libexec/awk/grcat
 libexec/awk/pwcat
+man/man1/dgawk.1
 man/man1/gawk.1
 man/man1/igawk.1
 man/man1/pgawk.1
@@ -44,3 +45,4 @@ share/locale/ja/LC_MESSAGES/gawk.mo
 share/locale/nl/LC_MESSAGES/gawk.mo
 share/locale/pl/LC_MESSAGES/gawk.mo
 share/locale/sv/LC_MESSAGES/gawk.mo
+share/locale/vi/LC_MESSAGES/gawk.mo
