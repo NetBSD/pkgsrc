@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.25 2012/08/16 16:26:46 ryoon Exp $
-
-SHA1 (zsh-4.3.17.tar.bz2) = d9c9b3589046b9a1d445b25eb1dda20c62bad6a3
-RMD160 (zsh-4.3.17.tar.bz2) = a7e01f36856bcdcc13c526109f8752709bd9423b
-Size (zsh-4.3.17.tar.bz2) = 2978903 bytes
-SHA1 (patch-ab) = 577a98385f258cbc47ff49d0b4bc6cc9134e864a
-SHA1 (patch-ac) = 23c086e61120f9c533e4a3a53e44c5b6b48b1352
