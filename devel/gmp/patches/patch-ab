@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2007/11/25 08:35:32 rillig Exp $
+$NetBSD: patch-ab,v 1.8 2013/01/31 20:30:26 adam Exp $
 
 Fixed detection of __attribute__((__mode__(XX))) for sunpro.
 
 --- acinclude.m4.orig	2007-09-01 12:09:03.000000000 +0200
 +++ acinclude.m4	2007-11-25 09:26:07.000000000 +0100
-@@ -3016,7 +3016,15 @@ dnl  Introduced in gcc 2.2, but perhaps 
+@@ -3068,7 +3068,15 @@ dnl  Introduced in gcc 2.2, but perhaps 
  AC_DEFUN([GMP_C_ATTRIBUTE_MODE],
  [AC_CACHE_CHECK([whether gcc __attribute__ ((mode (XX))) works],
                  gmp_cv_c_attribute_mode,
