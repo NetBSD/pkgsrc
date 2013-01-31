@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2012/11/01 16:48:12 sjg Exp $
+# $NetBSD: Makefile,v 1.61 2013/01/31 22:55:22 hans Exp $
 #
 
 DISTNAME=	bmake-20110606
@@ -33,10 +33,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OS_VARIANT} == "SmartOS"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.11-*) && exists(/usr/bin/bash)
 CONFIGURE_ARGS+=	--with-defshell=/usr/bin/bash
-.elif ${OPSYS} == "SunOS" && ${OS_VERSION} == "5.11"
-CONFIGURE_ARGS+=	--with-defshell=/bin/ksh
 .elif ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "IRIX"
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
