@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.8 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-ag,v 1.9 2013/01/31 21:45:04 adam Exp $
 
---- gettext-tools/gnulib-lib/Makefile.in.orig	2010-06-06 20:12:29.000000000 +0000
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2012-12-25 05:33:32.000000000 +0000
 +++ gettext-tools/gnulib-lib/Makefile.in
-@@ -3034,7 +3034,7 @@ check: $(BUILT_SOURCES)
+@@ -2935,7 +2935,7 @@ check: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) check-am
  all-am: Makefile $(LTLIBRARIES) $(DATA) all-local
  installdirs:
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.8 2011/04/12 17:41:28 adam Exp $
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: $(BUILT_SOURCES)
-@@ -3100,7 +3100,7 @@ info: info-am
+@@ -3007,7 +3007,7 @@ info: info-am
  
  info-am:
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.8 2011/04/12 17:41:28 adam Exp $
  
  install-dvi: install-dvi-am
  
-@@ -3366,13 +3366,6 @@ getopt.h: getopt.in.h $(ARG_NONNULL_H)
+@@ -3300,13 +3300,6 @@ getopt.h: getopt.in.h $(top_builddir)/co
  	} > $@-t && \
  	mv -f $@-t $@
  

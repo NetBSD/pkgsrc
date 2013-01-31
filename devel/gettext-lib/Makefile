@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2012/08/29 09:01:01 sbd Exp $
+# $NetBSD: Makefile,v 1.54 2013/01/31 21:45:04 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-lib-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	gttli
 COMMENT=	Internationalized Message Handling Library (libintl)
 

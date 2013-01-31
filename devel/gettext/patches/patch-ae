@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2011/08/05 00:36:10 adam Exp $
+$NetBSD: patch-ae,v 1.6 2013/01/31 21:45:04 adam Exp $
 
---- gettext-tools/configure.orig	2010-06-06 20:12:20.000000000 +0000
+--- gettext-tools/configure.orig	2012-12-25 05:33:28.000000000 +0000
 +++ gettext-tools/configure
-@@ -20035,10 +20035,6 @@ $as_echo "$ac_res" >&6; }
+@@ -21811,10 +21811,6 @@ $as_echo "$ac_res" >&6; }
  
        if test "$nls_cv_use_gnu_gettext" = "yes"; then
                  BUILD_INCLUDED_LIBINTL=yes
@@ -13,13 +13,3 @@ $NetBSD: patch-ae,v 1.5 2011/08/05 00:36:10 adam Exp $
        fi
  
        CATOBJEXT=
-@@ -40606,7 +40602,9 @@ else
- #include <stdlib.h>
- #include <string.h> /* for strcpy */
- /* The stpncpy prototype is missing in <string.h> on AIX 4.  */
-+#ifndef __APPLE__
- extern char *stpncpy (char *dest, const char *src, size_t n);
-+#endif
- int main () {
-   const char *src = "Hello";
-   char dest[10];

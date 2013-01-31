@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2011/10/20 10:22:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/01/31 21:45:03 adam Exp $
 lib/gettext/hostname
 lib/gettext/project-id
 lib/gettext/urlget
 lib/gettext/user-email
 share/gettext/ABOUT-NLS
 share/gettext/config.rpath
-share/gettext/intl/COPYING.LIB-2.0
-share/gettext/intl/COPYING.LIB-2.1
 share/gettext/intl/ChangeLog
 share/gettext/intl/Makefile.in
 share/gettext/intl/VERSION
@@ -30,7 +28,7 @@ share/gettext/intl/intl-compat.c
 share/gettext/intl/intl-exports.c
 share/gettext/intl/l10nflist.c
 share/gettext/intl/langprefs.c
-share/gettext/intl/libgnuintl.h.in
+share/gettext/intl/libgnuintl.in.h
 share/gettext/intl/libintl.rc
 share/gettext/intl/loadinfo.h
 share/gettext/intl/loadmsgcat.c
@@ -67,6 +65,7 @@ share/gettext/intl/tsearch.h
 share/gettext/intl/vasnprintf.c
 share/gettext/intl/vasnprintf.h
 share/gettext/intl/vasnwprintf.h
+share/gettext/intl/verify.h
 share/gettext/intl/version.c
 share/gettext/intl/wprintf-parse.h
 share/gettext/intl/xsize.h

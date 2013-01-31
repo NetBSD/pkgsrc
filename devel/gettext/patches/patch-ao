@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.4 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-ao,v 1.5 2013/01/31 21:45:04 adam Exp $
 
---- gettext-tools/config.h.in.orig	2010-06-06 20:12:24.000000000 +0000
+--- gettext-tools/config.h.in.orig	2012-12-25 05:33:29.000000000 +0000
 +++ gettext-tools/config.h.in
 @@ -1,5 +1,9 @@
  /* config.h.in.  Generated from configure.ac by autoheader.  */
@@ -12,8 +12,8 @@ $NetBSD: patch-ao,v 1.4 2011/04/12 17:41:28 adam Exp $
  
  /* Default value for alignment of strings in .mo file.  */
  #define DEFAULT_OUTPUT_ALIGNMENT 1
-@@ -1717,8 +1721,12 @@
- /* Define to 1 if you have the `wctob' function. */
+@@ -2009,8 +2013,12 @@
+ /* Define to 1 if you have the 'wctob' function. */
  #undef HAVE_WCTOB
  
 +#if !defined(__NetBSD__) || __NetBSD_Version__ >= 200000000
@@ -23,5 +23,5 @@ $NetBSD: patch-ao,v 1.4 2011/04/12 17:41:28 adam Exp $
  #undef HAVE_WCTYPE_H
 +#endif
  
- /* Define to 1 if you have the `wcwidth' function. */
+ /* Define to 1 if you have the 'wcwidth' function. */
  #undef HAVE_WCWIDTH
