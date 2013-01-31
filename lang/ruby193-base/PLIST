@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/12 14:51:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/01/31 15:56:14 taca Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -787,9 +787,12 @@ ${RUBY_DOC}/COPYING
 ${RUBY_DOC}/COPYING.ja
 ${RUBY_DOC}/ChangeLog
 ${RUBY_DOC}/ChangeLog-1.8.0
+${RUBY_DOC}/ChangeLog-1.9.3
 ${RUBY_DOC}/ChangeLog-YARV
 ${RUBY_DOC}/NEWS
 ${RUBY_DOC}/NEWS-1.8.7
+${RUBY_DOC}/NEWS-1.9.1
+${RUBY_DOC}/NEWS-1.9.2
 ${RUBY_DOC}/README
 ${RUBY_DOC}/README.EXT
 ${RUBY_DOC}/README.EXT.ja
@@ -797,6 +800,8 @@ ${RUBY_DOC}/README.ja
 ${RUBY_DOC}/ToDo
 ${RUBY_DOC}/bigdecimal_en.html
 ${RUBY_DOC}/bigdecimal_ja.html
+${RUBY_DOC}/etc.rd
+${RUBY_DOC}/etc.rd.ja
 ${RUBY_DOC}/forwardable.rd
 ${RUBY_DOC}/forwardable.rd.ja
 ${RUBY_DOC}/irb/irb-tools.rd.ja
