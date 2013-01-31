@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/01/25 21:04:02 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2013/01/31 11:12:51 ryoon Exp $
 
 To use gitolite, you will need to perform the following steps.
 
@@ -14,7 +14,7 @@ To use gitolite, you will need to perform the following steps.
 
 	On server
 	$ mkdir ~/.ssh
-	$ chmof 700 ~/.ssh
+	$ chmod 700 ~/.ssh
 
 	On client
 	$ ssh-keygen -t rsa -f git
