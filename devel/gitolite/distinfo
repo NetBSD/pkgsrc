@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/01/25 21:04:03 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2013/01/31 11:12:52 ryoon Exp $
 
 SHA1 (gitolite-3.04.tar.gz) = 6248e3afc0603104d9110148a49fff99538ee93c
 RMD160 (gitolite-3.04.tar.gz) = f7ee414c334ae6feed76c8da347280c5a5407943
 Size (gitolite-3.04.tar.gz) = 113916 bytes
-SHA1 (patch-src_gitolite) = e0b2103f5e62ed4c46f99e9d6dc1c498d9e78773
-SHA1 (patch-src_lib_Gitolite_Rc.pm) = a95c318597f90fb31c6fc792d403885458d2b78b
