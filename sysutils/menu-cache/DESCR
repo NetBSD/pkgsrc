@@ -1,0 +1,4 @@
+The libmenu-cache library and its corresponding menu-cached daemon
+are for creating and utilizing caches to speed up the manipulation
+for freedesktop.org defined application menus.  It can be used as
+a replacement of libgnome-menu of gnome-menus.
