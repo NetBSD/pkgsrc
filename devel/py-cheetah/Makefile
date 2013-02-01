@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/10/31 11:19:29 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/02/01 22:21:06 wiz Exp $
 
 DISTNAME=	Cheetah-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/C/Cheetah/
 
-MAINTAINER=	shannonjr@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cheetahtemplate.org/
 COMMENT=	Python-powered template engine and code-generator
 

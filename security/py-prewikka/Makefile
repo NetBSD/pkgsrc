@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/23 18:16:54 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/02/01 22:21:13 wiz Exp $
 #
 
 DISTNAME=		prewikka-${VERSION}
@@ -11,7 +11,7 @@ VERSION=		0.9.17.1
 
 CONFLICTS=		prewikka-[0-9]*
 
-MAINTAINER=		shannonjr@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://prelude-ids.org/download/releases/
 COMMENT=		Prelude-IDS console
 

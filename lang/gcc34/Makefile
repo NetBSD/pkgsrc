@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/10/02 20:11:40 asau Exp $
+# $NetBSD: Makefile,v 1.56 2013/02/01 22:21:07 wiz Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	shannonjr@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
