@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.436 2013/02/01 11:12:45 obache Exp $
+$NetBSD: CHANGES-2013,v 1.437 2013/02/01 11:50:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Mouse to 1.04 [wen 2013-02-01]
 	Updated geography/p5-Geo-Distance to 0.20 [wen 2013-02-01]
 	Updated emulators/suse121_qt4 to 12.1nb2 [obache 2013-02-01]
+	Updated www/opera to 12.13 [obache 2013-02-01]
