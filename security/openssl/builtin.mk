@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.31 2011/11/17 13:03:19 obache Exp $
+# $NetBSD: builtin.mk,v 1.32 2013/02/01 12:34:15 hans Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -272,7 +272,7 @@ HAS_OPENSSL_FAKE_PC=
 
 openssl-fake-pc:
 	${RUN} \
-	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/libcrypto.pc; \
+	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/libcrypto.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/libcrypto.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
 	if ${TEST} -f $${src}; then \
@@ -281,12 +281,12 @@ openssl-fake-pc:
 		{ ${ECHO} "Name: OpenSSL-libcrypto"; \
 		${ECHO} "Description: OpenSSL cryptography library"; \
 		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
-		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib -lcrypto"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX} -lcrypto"; \
 		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
 		} >$${dst}; \
 	fi
 	${RUN} \
-	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/libssl.pc; \
+	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/libssl.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/libssl.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
 	if ${TEST} -f $${src}; then \
@@ -295,12 +295,12 @@ openssl-fake-pc:
 		{ ${ECHO} "Name: OpenSSL"; \
 		${ECHO} "Description: Secure Sockets Layer and cryptography libraries"; \
 		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
-		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX} -lssl -lcrypto"; \
 		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
 		} >$${dst}; \
 	fi
 	${RUN} \
-	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/openssl.pc; \
+	src=${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX}/pkgconfig/openssl.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/openssl.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
 	if ${TEST} -f $${src}; then \
@@ -309,7 +309,7 @@ openssl-fake-pc:
 		{ ${ECHO} "Name: OpenSSL"; \
 		${ECHO} "Description: Secure Sockets Layer and cryptography libraries and tools"; \
 		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
-		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX} -lssl -lcrypto"; \
 		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
 		} >$${dst}; \
 	fi
