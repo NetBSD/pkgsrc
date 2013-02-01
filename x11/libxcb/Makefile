@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/29 05:06:38 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/01 14:40:29 jperkin Exp $
 #
 
 DISTNAME=	libxcb-1.9
@@ -11,7 +11,7 @@ HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
-BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
 BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.7:../../x11/py-xcbgen
 
 GNU_CONFIGURE=	yes
@@ -49,17 +49,10 @@ PKGCONFIG_OVERRIDE+=	xcb.pc.in
 
 .include "../../mk/pthread.buildlink3.mk"
 
-###
-### XXX Adding this here for redundancy--it very well may not be necessary.
-###	However, I don't think it could hurt much.  We don't include
-###	PTHREAD_CFLAGS because it could be -pthread.  My intention here
-###	is mainly to pass down the appropriate flags should something
-###	go awry.
-###
-XTHREADLIB=${${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}:L:M*}
+XTHREADLIB=	${${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}:L:M*}
 
 .if empty(PTHREAD_CPPFLAGS)
-XTHREAD_CFLAGS=	-D_REENTRANT 		# XXX Is this OK?
+XTHREAD_CPPFLAGS=	-D_REENTRANT
 .else
 XTHREAD_CPPFLAGS=	${PTHREAD_CPPFLAGS}
 .endif
