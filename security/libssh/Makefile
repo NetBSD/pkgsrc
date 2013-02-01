@@ -1,30 +1,32 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 18:16:35 asau Exp $
-#
-# This package currently exists as a dependency for the hydra package but
-# the later versions of it are not supported by hydra.
-# This package should not be updated to the latest version available.
+# $NetBSD: Makefile,v 1.12 2013/02/01 13:33:49 is Exp $
 #
 
-DISTNAME=	libssh-0.11
-PKGREVISION=	3
-CATEGORIES=	security
-MASTER_SITES=	http://www.0xbadc0de.be/libssh/
-EXTRACT_SUFX=	.tgz
+# history: upstream renamed 0.11 to 0.1;
+# we have to use the old-style convention so that version compares work.
+# 
+DISTNAME=		libssh-0.5.4
+PKGNAME=		libssh-0.54
+CATEGORIES=		security
+MASTER_SITES=		https://red.libssh.org/attachments/download/41/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://0xbadc0de.be/
-COMMENT=	Library providing working SSH implementation
+MAINTAINER=		is@NetBSD.org
+HOMEPAGE=		http://www.libssh.org/
+COMMENT=		SSHv2 and SSHv1 protocol
+LICENSE=		2-clause-bsd
 
-GNU_CONFIGURE=	YES
+DIST_SUBDIR=		security
 
-INSTALLATION_DIRS=	share/doc/libssh
-INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 \
-			prefix=${DESTDIR}${PREFIX}
+.include "../../mk/bsd.prefs.mk"
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/API.html ${DESTDIR}${PREFIX}/share/doc/libssh
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/libssh
+# ftp: Unsupported URL scheme `https'
+FETCH_USING=		curl
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+
+PKGCONFIG_OVERRIDE+=	libssh.pc.in
+TEST_TARGET=		check
+
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
