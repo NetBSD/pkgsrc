@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.431 2013/02/01 05:07:08 wen Exp $
+$NetBSD: CHANGES-2013,v 1.432 2013/02/01 05:13:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/lxsession version 0.4.6.1nb1 [reed 2013-02-01]
 	Updated time/p5-Time-Interval to 1.232 [wen 2013-02-01]
 	Updated devel/p5-Tree-DAG_Node to 1.10 [wen 2013-02-01]
+	Updated www/p5-Plack to 1.0016 [wen 2013-02-01]
