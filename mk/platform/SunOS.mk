@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.46 2012/11/26 10:40:32 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.47 2013/02/01 12:25:16 hans Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -74,6 +74,10 @@ _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+
+.if (${MACHINE_ARCH} == "x86_64")
+LIBABISUFFIX=		/amd64
+.endif
 
 _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
