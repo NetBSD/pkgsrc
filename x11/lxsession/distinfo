@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/02/01 01:31:37 reed Exp $
+
+SHA1 (lxsession-0.4.6.1.tar.gz) = ef7f74617f7555f3e292b670099ef44389a9a849
+RMD160 (lxsession-0.4.6.1.tar.gz) = 97c0c88abdb81c22ec356371c4b7572cd715608f
+Size (lxsession-0.4.6.1.tar.gz) = 407100 bytes

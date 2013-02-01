@@ -1,0 +1,5 @@
+LXSession is the default session manager of LXDE. It is used to
+start and setup the desktop environment.  It can optionally restart
+crashed programs.  It includes a built-in lightweight Xsettings
+daemon which can configure gtk+ themes, keyboard, and mouse.  It
+also provides a logout program.
