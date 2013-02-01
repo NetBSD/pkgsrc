@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/01/26 21:38:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/01 13:55:17 is Exp $
 
 DISTNAME=	remmina-plugins-0.9.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=remmina/}
 
@@ -24,7 +24,7 @@ BUILDLINK_API_DEPENDS.libvncserver=		libvncserver>=0.9.1
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.libgcrypt=		libgcrypt>=1.4.4
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libssh=		libssh>=0.11
+BUILDLINK_API_DEPENDS.libssh=		libssh>=0.54
 .include "../../security/libssh/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk" # ???
 .include "../../x11/vte/buildlink3.mk"
