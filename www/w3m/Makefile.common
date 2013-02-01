@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2012/10/28 06:31:08 asau Exp $
+# $NetBSD: Makefile.common,v 1.60 2013/02/01 08:02:38 wiz Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -79,6 +79,7 @@ post-install:
 	set -e; cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
 	    ( cd ${DESTDIR}${PREFIX}/${DOCDIR}; pax -r )
 
+BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.2
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
