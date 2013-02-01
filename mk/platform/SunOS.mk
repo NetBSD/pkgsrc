@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.47 2013/02/01 12:25:16 hans Exp $
+# $NetBSD: SunOS.mk,v 1.48 2013/02/01 12:36:06 hans Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -39,6 +39,7 @@ MOTIF_TYPE_DEFAULT?=	motif
 
 # Builtin defaults which make sense for this platform.
 PREFER.solaris-pam?=	native
+PREFER.openssl?=	pkgsrc
 
 _OPSYS_EMULDIR.solaris=		# empty
 _OPSYS_EMULDIR.solaris32=	# empty
