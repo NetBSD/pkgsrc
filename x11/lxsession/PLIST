@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/01 01:31:37 reed Exp $
+bin/lxlock
+bin/lxsession
+bin/lxsession-logout
+man/man1/lxsession-logout.1
+man/man1/lxsession.1
+share/doc/lxsession/README
+share/lxsession/images/gnome-session-hibernate.png
+share/lxsession/images/gnome-session-reboot.png
+share/lxsession/images/gnome-session-suspend.png
+share/lxsession/images/gnome-session-switch.png
+share/lxsession/images/system-log-out.png
+share/lxsession/images/system-shutdown.png
