@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.11 2013/02/01 13:33:49 is Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2013/02/01 16:47:51 is Exp $
 
 BUILDLINK_TREE+=	libssh
 
 .if !defined(LIBSSH_BUILDLINK3_MK)
 LIBSSH_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libssh+=	libssh>=0.5.4
-BUILDLINK_ABI_DEPENDS.libssh+=	libssh>=0.5.4
+BUILDLINK_API_DEPENDS.libssh+=	libssh>=0.54
+BUILDLINK_ABI_DEPENDS.libssh+=	libssh>=0.54
 BUILDLINK_PKGSRCDIR.libssh?=	../../security/libssh
 
 pkgbase := libssh
