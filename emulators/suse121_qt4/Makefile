@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/01/24 10:28:53 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/01 11:12:29 obache Exp $
 
 DISTNAME=	suse_qt4-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
-RPMUPDPKGS+=	libqt4-4.7.4-19.13.1.${SUSE_ARCH}
-RPMUPDPKGS+=	libqt4-qt3support-4.7.4-19.13.1.${SUSE_ARCH}
-RPMUPDPKGS+=	libqt4-x11-4.7.4-19.13.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libqt4-4.7.4-19.17.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libqt4-qt3support-4.7.4-19.17.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libqt4-x11-4.7.4-19.17.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for QT4
