@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/01/08 22:51:39 pettai Exp $
+# $NetBSD: Makefile,v 1.18 2013/02/01 22:21:11 wiz Exp $
 #
 
 DISTNAME=	pcsc-lite-1.8.7
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://alioth.debian.org/frs/download.php/3842/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	shannonjr@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcsclite.alioth.debian.org/
 COMMENT=	Middleware to access a smart card using SCard API (PC/SC)
 LICENSE=	modified-bsd
