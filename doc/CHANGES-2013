@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.432 2013/02/01 05:13:16 wen Exp $
+$NetBSD: CHANGES-2013,v 1.433 2013/02/01 05:20:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-Time-Interval to 1.232 [wen 2013-02-01]
 	Updated devel/p5-Tree-DAG_Node to 1.10 [wen 2013-02-01]
 	Updated www/p5-Plack to 1.0016 [wen 2013-02-01]
+	Updated devel/p5-App-cpanminus to 1.5021 [wen 2013-02-01]
