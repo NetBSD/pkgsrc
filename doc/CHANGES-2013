@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.428 2013/01/31 22:02:35 adam Exp $
+$NetBSD: CHANGES-2013,v 1.429 2013/02/01 01:34:13 reed Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -550,3 +550,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/gettext-lib to 0.18.2 [adam 2013-01-31]
 	Updated devel/gettext-m4 to 0.18.2 [adam 2013-01-31]
 	Updated lang/gawk to 4.0.2 [adam 2013-01-31]
+	Added x11/lxsession version 0.4.6.1nb1 [reed 2013-02-01]
