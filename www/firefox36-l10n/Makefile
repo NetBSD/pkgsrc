@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/28 06:30:15 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/01 22:21:14 wiz Exp $
 #
 
 FIREFOX_VER=	3.6.28
@@ -7,7 +7,7 @@ DISTNAME=	# empty
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox36
 

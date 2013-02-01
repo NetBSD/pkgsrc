@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2013/01/26 21:38:08 adam Exp $
+# $NetBSD: Makefile,v 1.108 2013/02/01 22:21:08 wiz Exp $
 #
 
 DISTNAME=	# empty
@@ -14,7 +14,7 @@ DISTFILES=	thunderbird-${TB_VER}esr.source.tar.bz2 \
 SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
 EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2=	${WRKSRC}/lightning
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 
