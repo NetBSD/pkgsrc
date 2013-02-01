@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/15 17:27:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/01 13:55:17 is Exp $
+lib/remmina/plugins/remmina-plugin-nx.a
+lib/remmina/plugins/remmina-plugin-nx.la
+lib/remmina/plugins/remmina-plugin-nx.so
 lib/remmina/plugins/remmina-plugin-vnc.la
 lib/remmina/plugins/remmina-plugin-xdmcp.la
 share/locale/bg/LC_MESSAGES/remmina-plugins.mo
@@ -25,10 +28,12 @@ share/locale/th/LC_MESSAGES/remmina-plugins.mo
 share/locale/tr/LC_MESSAGES/remmina-plugins.mo
 share/locale/uk/LC_MESSAGES/remmina-plugins.mo
 share/locale/zh_CN/LC_MESSAGES/remmina-plugins.mo
+share/remmina/icons/hicolor/16x16/emblems/remmina-nx.png
 share/remmina/icons/hicolor/16x16/emblems/remmina-vnc-ssh.png
 share/remmina/icons/hicolor/16x16/emblems/remmina-vnc.png
 share/remmina/icons/hicolor/16x16/emblems/remmina-xdmcp-ssh.png
 share/remmina/icons/hicolor/16x16/emblems/remmina-xdmcp.png
+share/remmina/icons/hicolor/22x22/emblems/remmina-nx.png
 share/remmina/icons/hicolor/22x22/emblems/remmina-vnc-ssh.png
 share/remmina/icons/hicolor/22x22/emblems/remmina-vnc.png
 share/remmina/icons/hicolor/22x22/emblems/remmina-xdmcp-ssh.png
