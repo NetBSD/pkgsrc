@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/11/20 23:13:03 tez Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/01 22:21:05 wiz Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		shannonjr@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gdb/gdb.html
 COMMENT=		The GNU Project Debugger
 

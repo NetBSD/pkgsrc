@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:52 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/01 22:21:06 wiz Exp $
 #
 
 DISTNAME=		uno_v213
@@ -6,7 +6,7 @@ PKGNAME=		uno-2.13
 CATEGORIES=		devel
 MASTER_SITES=		http://spinroot.com/uno/
 
-MAINTAINER=		shannonjr@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spinroot.com/uno/
 COMMENT=		Tool for source code analysis
 

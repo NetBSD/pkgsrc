@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/12/14 23:54:43 pettai Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/01 22:21:11 wiz Exp $
 
 DISTNAME=	pcsc-perl-1.4.12
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://ludovic.rousseau.free.fr/softwares/pcsc-perl/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	shannonjr@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ludovic.rousseau.free.fr/softwares/pcsc-perl/
 COMMENT=	Allows communication with a smart card from a Perl script
 

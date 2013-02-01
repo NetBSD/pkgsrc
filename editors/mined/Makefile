@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/01 22:21:07 wiz Exp $
 #
 
 DISTNAME=	mined-2000.15
 CATEGORIES=	editors
 MASTER_SITES=	http://towo.net/mined/
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://towo.net/mined/
 COMMENT=	Html-aware editor
 

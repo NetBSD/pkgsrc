@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2013/01/26 21:36:22 adam Exp $
+# $NetBSD: Makefile,v 1.13 2013/02/01 22:21:07 wiz Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner10-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 PKGREVISION=	1
 CATEGORIES=	devel www
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.mozilla.org/en/docs/XULRunner
 COMMENT=	XML User Interface Language runtime environment
 LICENSE=	mpl-1.1

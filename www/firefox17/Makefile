@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2013/01/26 21:39:02 adam Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/01 22:21:14 wiz Exp $
 
 .include "../../devel/xulrunner17/dist.mk"
 PKGNAME=	firefox17-${MOZ_BRANCH}
 PKGREVISION=	1
 CATEGORIES=	www
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions
 LICENSE=	mpl-1.1

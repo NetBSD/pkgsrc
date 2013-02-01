@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2012/12/15 00:53:26 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/01 22:21:11 wiz Exp $
 #
 
 DISTNAME=	pcsc-tools-1.4.21
 CATEGORIES=	security
 MASTER_SITES=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 
-MAINTAINER=	shannonjr@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 COMMENT=	Tools useful for a PC/SC user
 LICENSE=	gnu-gpl-v2 # or later
