@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:20 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/01 22:21:05 wiz Exp $
 #
 
 DISTNAME=		librfuncs-1.0.7
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://www.johnrshannon.com/NetBSD/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		shannonjr@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.johnrshannon.com/NetBSD/
 COMMENT=		Provides missing POSIX *_r functions
 
