@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/12 10:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/01 13:31:57 wiz Exp $
 #
 
 DISTNAME=	trrntzip_v02_src
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trrntzip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sourceforge.net/trrntzip/
+HOMEPAGE=	http://sourceforge.net/projects/trrntzip/
 COMMENT=	Create identical zip archives from identical files
 
 USE_TOOLS+=	aclocal autoconf automake autoheader
