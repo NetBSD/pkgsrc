@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2008/05/17 14:18:46 obache Exp $
-
---- Makefile.in.orig	2008-05-17 13:58:31.000000000 +0000
-+++ Makefile.in
-@@ -22,13 +22,13 @@ exec_prefix = @exec_prefix@
+--- Makefile.in.orig	2013-01-20 16:00:19.000000000 +0900
++++ Makefile.in	2013-01-20 16:07:50.000000000 +0900
+@@ -22,13 +22,13 @@
  
  # Where the installed binary goes.
  bindir = @bindir@
@@ -18,8 +16,8 @@ $NetBSD: patch-aa,v 1.3 2008/05/17 14:18:46 obache Exp $
  
  #### End of system configuration section. ####
  
-@@ -60,17 +60,17 @@ lessecho: lessecho.${O} version.${O}
- ${OBJ}: ${srcdir}/less.h ${srcdir}/funcs.h ${srcdir}/multi.h defines.h 
+@@ -61,17 +61,17 @@
+ ${OBJ}: ${srcdir}/less.h ${srcdir}/funcs.h ${srcdir}/multi.h defines.h ${srcdir}/kanji_map.h ${srcdir}/unicode_map.h ${srcdir}/unicode_type.h
  
  install: all ${srcdir}/less.nro ${srcdir}/lesskey.nro installdirs
 -	${INSTALL_PROGRAM} less ${bindir}/${binprefix}less
