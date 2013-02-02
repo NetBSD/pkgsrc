@@ -1,4 +1,4 @@
-$NetBSD: patch-IkiWiki_Plugin_cvs.pm,v 1.1 2013/01/28 04:30:15 schmonz Exp $
+$NetBSD: patch-IkiWiki_Plugin_cvs.pm,v 1.2 2013/02/02 19:30:43 schmonz Exp $
 
 Bugfixes in `schmonz/cvs` I'd like to see merged:
 
@@ -9,6 +9,7 @@ Bugfixes in `schmonz/cvs` I'd like to see merged:
   used for a binary file.
 * `b30cacdf`: If the previous working directory no longer exists after
   a CVS operation, don't try to `chdir()` back to it afterward.
+* `91b477c0`: Fix diffurl links (cvsweb expects unescaped '/').
 
 --- IkiWiki/Plugin/cvs.pm.orig	2012-08-25 15:12:13.000000000 +0000
 +++ IkiWiki/Plugin/cvs.pm
@@ -29,7 +30,18 @@ Bugfixes in `schmonz/cvs` I'd like to see merged:
  		}
  	}
  }
-@@ -396,11 +394,15 @@ sub rcs_diff ($;$) {
+@@ -316,7 +314,9 @@ sub rcs_recentchanges ($) {
+ 			$oldrev =~ s/INITIAL/0/;
+ 			$newrev =~ s/\(DEAD\)//;
+ 			my $diffurl = defined $config{diffurl} ? $config{diffurl} : "";
+-			my $epage = uri_escape_utf8($page);
++			my $epage = join('/',
++				map { uri_escape_utf8($_) } split('/', $page)
++			);
+ 			$diffurl=~s/\[\[file\]\]/$epage/g;
+ 			$diffurl=~s/\[\[r1\]\]/$oldrev/g;
+ 			$diffurl=~s/\[\[r2\]\]/$newrev/g;
+@@ -396,11 +396,15 @@ sub rcs_diff ($;$) {
  	my @cvsps = `env TZ=UTC cvsps -q --cvs-direct -z 30 -g -s $rev`;
  	my $blank_lines_seen = 0;
  
@@ -45,7 +57,7 @@ Bugfixes in `schmonz/cvs` I'd like to see merged:
  	if (wantarray) {
  		return @cvsps;
  	}
-@@ -491,24 +493,53 @@ sub cvs_keyword_subst_args ($) {
+@@ -491,24 +495,53 @@ sub cvs_keyword_subst_args ($) {
  	my $filemime = File::MimeInfo::default($file);
  	# if (-T $file) {
  
