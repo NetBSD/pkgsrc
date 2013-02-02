@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2012/11/22 18:20:48 marino Exp $
+$NetBSD: distinfo,v 1.59 2013/02/02 16:59:34 jmcneill Exp $
 
 SHA1 (webkitgtk-1.10.1.tar.xz) = 3a2df2eb42ffdd7f3b39873d5461c347a6330493
 RMD160 (webkitgtk-1.10.1.tar.xz) = ea246d29a1def4993d592d8464b527b2c9ed1bdc
@@ -6,6 +6,7 @@ Size (webkitgtk-1.10.1.tar.xz) = 8548452 bytes
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = c5e1efdac5f6e2a4c035b6a3ce808d0e7a076703
 SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f166335d829aba9051c1aaf1b950ec655deef372
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 462e62d9078ef90df8cdeccbb64b0d2ccde5f11e
+SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = b331ad70a9c6a133c854b65452bad4ae3558e2e6
 SHA1 (patch-Source_WebCore_editing_Editor.h) = 43562577dd6432a86fd8ee0a1e7bb0db31f07d2d
 SHA1 (patch-Source_WebCore_platform_sql_SQLiteDatabase.cpp) = 0f33b188b242166584d5725060c5c430a819be61
 SHA1 (patch-ai) = 8df303ffde5c4398e56601c524e9ab4aff52096c
