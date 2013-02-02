@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.23 2013/02/02 08:11:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.24 2013/02/02 08:52:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -144,3 +144,5 @@ Pullup ticket #4050 - requested by obache
 emulators/suse121_qt4: security update
 Pullup ticket #4051 - requested by obache
 www/opera: security update
+Pullup ticket #4053 - requested by taca
+net/samba35: security update
