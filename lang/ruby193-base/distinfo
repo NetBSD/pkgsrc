@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2013/01/31 15:56:14 taca Exp $
+$NetBSD: distinfo,v 1.15 2013/02/02 08:11:53 taca Exp $
 
 SHA1 (ruby-1.9.3-p374.tar.bz2) = fde7f6d286fcb27135d29963f04f5d0e066195f7
 RMD160 (ruby-1.9.3-p374.tar.bz2) = bb3beabef451d958a27a743aa138ce6704d5cab1
@@ -18,8 +18,9 @@ SHA1 (patch-lib_rubygems_dependency__installer.rb) = 572775dd430619f93168732ad31
 SHA1 (patch-lib_rubygems_doc__manager.rb) = 4b2d70e5dfaeff1f1b70ff27f1084065dcc742d3
 SHA1 (patch-lib_rubygems_install__update__options.rb) = 74f81900c92bc3c7a663a112cccf6ff88b6ae180
 SHA1 (patch-lib_rubygems_installer.rb) = cec82bd0c5255a2a23799273c7a2835e2bef7e33
-SHA1 (patch-lib_rubygems_specification.rb) = 1c39cabe198607661052511162c32b0293ffc30a
+SHA1 (patch-lib_rubygems_specification.rb) = bc1f844153d00623349ea2d703a979001c9986ec
 SHA1 (patch-lib_rubygems_uninstaller.rb) = bde19710968f80e56760288d09870a08f3a4ec52
+SHA1 (patch-lib_rubygems_version.rb) = 3ec26651ba8f2e6bbd4527e8c0a2f5944833264f
 SHA1 (patch-man_erb.1) = 210aa77328689868162566bf01e3ba261dec0c2b
 SHA1 (patch-man_irb.1) = 899fdd973bb2491cf7f606ee68ffa6cdbe42f725
 SHA1 (patch-man_ri.1) = 3283b897b8ed36933ccecce158bcb3463d667aff
