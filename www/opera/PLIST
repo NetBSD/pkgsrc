@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/12/14 11:23:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.9.2.1 2013/02/02 08:07:00 tron Exp $
 bin/opera
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
 lib/opera/gstreamer/plugins/libgstoperavp8.so
@@ -6,6 +6,7 @@ lib/opera/liboperagtk2.so
 ${PLIST.linux}lib/opera/liboperagtk3.so
 lib/opera/liboperakde4.so
 lib/opera/opera
+${PLIST.linux}lib/opera/opera_autoupdatechecker
 lib/opera/plugins/README
 lib/opera/pluginwrapper/operapluginwrapper
 ${PLIST.ia32w}lib/opera/pluginwrapper/operapluginwrapper-ia32-linux
@@ -31,6 +32,7 @@ share/icons/hicolor/48x48/apps/opera-browser.png
 share/icons/hicolor/48x48/mimetypes/opera-extension.png
 share/icons/hicolor/scalable/mimetypes/opera-extension.svg
 share/mime/packages/opera-extension.xml
+share/opera/cert.pem
 share/opera/defaults/bookmarks.adr
 share/opera/defaults/dictionaries.xml
 share/opera/defaults/feedreaders.ini
@@ -216,6 +218,8 @@ share/opera/region/id/standard_speeddial.ini
 share/opera/region/in/bookmarks.adr
 share/opera/region/in/search.ini
 share/opera/region/in/standard_speeddial.ini
+share/opera/region/ke/bookmarks.adr
+share/opera/region/ke/standard_speeddial.ini
 share/opera/region/latin_america/bookmarks.adr
 share/opera/region/latin_america/search.ini
 share/opera/region/latin_america/standard_speeddial.ini
