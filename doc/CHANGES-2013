@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.439 2013/02/02 14:01:32 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.440 2013/02/02 19:31:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/opera to 12.13 [obache 2013-02-01]
 	Updated lang/ruby193-base to 1.9.3p374nb1 [taca 2013-02-02]
 	Updated misc/ja-less to 382.262.03 [ryoon 2013-02-02]
+	Updated www/ikiwiki to 3.20121212nb3 [schmonz 2013-02-02]
