@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.22 2013/02/02 07:56:58 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.23 2013/02/02 08:11:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -138,3 +138,9 @@ Pullup ticket #4046 - requested by drochner
 net/libupnp: security patch
 Pullup ticket #4048 - requested by drochner
 multimedia/vlc2: security patch
+Pullup ticket #4049 - requested by ryoon
+pkgsrc/x11/py-gtk2: build fix
+Pullup ticket #4050 - requested by obache
+emulators/suse121_qt4: security update
+Pullup ticket #4051 - requested by obache
+www/opera: security update
