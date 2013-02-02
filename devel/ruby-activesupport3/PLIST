@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 04:13:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.20.1 2013/02/02 10:40:00 tron Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README.rdoc
@@ -158,6 +158,7 @@ ${GEM_LIBDIR}/lib/active_support/inflector/methods.rb
 ${GEM_LIBDIR}/lib/active_support/inflector/transliterate.rb
 ${GEM_LIBDIR}/lib/active_support/json.rb
 ${GEM_LIBDIR}/lib/active_support/json/backends/jsongem.rb
+${GEM_LIBDIR}/lib/active_support/json/backends/okjson.rb
 ${GEM_LIBDIR}/lib/active_support/json/backends/yajl.rb
 ${GEM_LIBDIR}/lib/active_support/json/backends/yaml.rb
 ${GEM_LIBDIR}/lib/active_support/json/decoding.rb
