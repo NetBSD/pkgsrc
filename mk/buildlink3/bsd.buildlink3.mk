@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.217 2013/02/01 12:43:44 hans Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.218 2013/02/02 01:04:59 hans Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -857,7 +857,6 @@ _BLNK_MANGLE_DIRS+=	${WRKDIR}
 _BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 _BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_RPATHDIRS}
 _BLNK_MANGLE_DIRS+=	/usr/include
-_BLNK_MANGLE_DIRS+=	/usr/lib
 _BLNK_MANGLE_DIRS+=	/usr/lib${LIBABISUFFIX}
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _BLNK_MANGLE_DIRS+=	${PREFIX}
@@ -887,7 +886,6 @@ _BLNK_PROTECT_DIRS+=	${WRKDIR}
 _BLNK_PROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 
 _BLNK_UNPROTECT_DIRS+=	/usr/include
-_BLNK_UNPROTECT_DIRS+=	/usr/lib
 _BLNK_UNPROTECT_DIRS+=	/usr/lib${LIBABISUFFIX}
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _BLNK_UNPROTECT_DIRS+=	${PREFIX}
