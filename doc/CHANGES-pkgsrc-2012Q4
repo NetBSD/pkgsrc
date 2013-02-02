@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.21 2013/01/30 13:20:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.22 2013/02/02 07:56:58 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -136,3 +136,5 @@ Pullup ticket #4042 - requested by morr
 www/wordpress: security update
 Pullup ticket #4046 - requested by drochner
 net/libupnp: security patch
+Pullup ticket #4048 - requested by drochner
+multimedia/vlc2: security patch
