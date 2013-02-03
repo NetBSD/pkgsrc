@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11910 2013/02/03 16:59:21 wiz Exp $
+$NetBSD: TODO,v 1.11911 2013/02/03 19:48:01 imil Exp $
 
 Suggested new packages
 ======================
@@ -912,7 +912,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nettle-2.6
 	o newmail-1.0.2
 	o newt-0.52.12
-	o nginx-1.2.4
 	o nhc98-1.22 [pkg/45318]
 	o nickle-2.77
 	o nikto-2.0.1
