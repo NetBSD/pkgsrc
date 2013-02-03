@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2012/11/02 01:46:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2013/02/03 14:39:05 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -201,6 +201,9 @@ ${PYSITELIB}/mercurial/bdiff.so
 ${PYSITELIB}/mercurial/bookmarks.py
 ${PYSITELIB}/mercurial/bookmarks.pyc
 ${PYSITELIB}/mercurial/bookmarks.pyo
+${PYSITELIB}/mercurial/branchmap.py
+${PYSITELIB}/mercurial/branchmap.pyc
+${PYSITELIB}/mercurial/branchmap.pyo
 ${PYSITELIB}/mercurial/bundlerepo.py
 ${PYSITELIB}/mercurial/bundlerepo.pyc
 ${PYSITELIB}/mercurial/bundlerepo.pyo
@@ -439,6 +442,9 @@ ${PYSITELIB}/mercurial/py3kcompat.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
+${PYSITELIB}/mercurial/repoview.py
+${PYSITELIB}/mercurial/repoview.pyc
+${PYSITELIB}/mercurial/repoview.pyo
 ${PYSITELIB}/mercurial/revlog.py
 ${PYSITELIB}/mercurial/revlog.pyc
 ${PYSITELIB}/mercurial/revlog.pyo
@@ -492,6 +498,8 @@ ${PYSITELIB}/mercurial/templater.pyc
 ${PYSITELIB}/mercurial/templater.pyo
 ${PYSITELIB}/mercurial/templates/atom/bookmarkentry.tmpl
 ${PYSITELIB}/mercurial/templates/atom/bookmarks.tmpl
+${PYSITELIB}/mercurial/templates/atom/branchentry.tmpl
+${PYSITELIB}/mercurial/templates/atom/branches.tmpl
 ${PYSITELIB}/mercurial/templates/atom/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/atom/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/atom/error.tmpl
@@ -592,6 +600,8 @@ ${PYSITELIB}/mercurial/templates/raw/map
 ${PYSITELIB}/mercurial/templates/raw/notfound.tmpl
 ${PYSITELIB}/mercurial/templates/rss/bookmarkentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/bookmarks.tmpl
+${PYSITELIB}/mercurial/templates/rss/branchentry.tmpl
+${PYSITELIB}/mercurial/templates/rss/branches.tmpl
 ${PYSITELIB}/mercurial/templates/rss/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/rss/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/error.tmpl
@@ -626,6 +636,7 @@ ${PYSITELIB}/mercurial/templates/static/background.png
 ${PYSITELIB}/mercurial/templates/static/coal-file.png
 ${PYSITELIB}/mercurial/templates/static/coal-folder.png
 ${PYSITELIB}/mercurial/templates/static/excanvas.js
+${PYSITELIB}/mercurial/templates/static/feed-icon-14x14.png
 ${PYSITELIB}/mercurial/templates/static/hgicon.png
 ${PYSITELIB}/mercurial/templates/static/hglogo.png
 ${PYSITELIB}/mercurial/templates/static/mercurial.js
