@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.441 2013/02/03 11:24:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.442 2013/02/03 14:39:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/ja-less to 382.262.03 [ryoon 2013-02-02]
 	Updated www/ikiwiki to 3.20121212nb3 [schmonz 2013-02-02]
 	Updated devel/autoconf-archive to 2013.02.02 [wiz 2013-02-03]
+	Updated devel/mercurial to 2.5 [wiz 2013-02-03]
