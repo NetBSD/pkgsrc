@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11905 2013/02/02 08:12:50 taca Exp $
+$NetBSD: TODO,v 1.11906 2013/02/03 16:17:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,6 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
+	o aria2-1.16.2
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -437,6 +438,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bugzilla-3.6
 	o byacc-20121003
 	o c4-1.10 [schmonz]
+	o cairo-1.12.12
+	o cairo-gobject-1.12.12
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.9.15
@@ -459,7 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o chkrootkit-0.49
 	o chktex-1.7.1
 	o chromium-0.9.15
-	o chrony-1.26
+	o chrony-1.27
 	o cinepaint-1.3
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -583,6 +586,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.3
+	o fotoxx-13.02
 	o fox-1.6.41
 	o freefont-20120503
 	o freeglut-2.4.0
@@ -748,6 +752,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jed-0.99-18
+	o jhead-2.97
 	o john-1.7.9jumbo7
 	o jools-1.0
 	o jpilot-1.8.0
@@ -807,7 +812,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblbxutil-1.1.0
 	o libltdl-2.4.2
 	o libmcs-0.7.2
-	o libmemcached-1.0.15
+	o libmemcached-1.0.16
 	o libmilter-8.14.5
 	o libmms-0.6.2
 	o libmp3splt-0.8.1
@@ -1015,11 +1020,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-anki2-2.0.7
 	o py-cairo-1.10.0
 	o py-carddav-0.4
+	o py-cython-0.18
 	o py-docutils-0.10 [pkg/47372]
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
+	o py-pygments-1.6
 	o py-qt4-4.9.6
 	o py-simplejson-3.0.7
 	o py-sip-4.14.3
@@ -1031,10 +1039,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qemu-1.3.1
 	o qnetwalk-1.3
 	o qt4-qscintilla-2.7
-	o qt5-libs-5.0.0
+	o qt5-libs-5.0.1
 	o quilt-0.60
 	o qvplay-0.95
-	o racket-5.3.1
+	o racket-5.3.2
 	o radiance-3.7.2
 	o raine-0.51.15
 	o rapidsvn-0.12
@@ -1178,6 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o top-3.8beta1
 	o totem-3.4.1
 	o tpb-0.6.4
+	o trac-1.0.1
 	o tree-1.6.0
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1225,7 +1234,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.5.22 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.5.23 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1236,7 +1245,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
-	o x264-devel-20130126
+	o x264-devel-20130202
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
@@ -1267,7 +1276,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-glint-1.2.8
 	o xf86-video-i128-1.3.6
 	o xf86-video-i740-1.3.4
-	o xf86-video-intel-2.20.19
+	o xf86-video-intel-2.21.0
 	o xf86-video-mach64-6.9.4
 	o xf86-video-mga-1.6.2
 	o xf86-video-neomagic-1.2.7
