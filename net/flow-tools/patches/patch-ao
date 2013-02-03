@@ -1,0 +1,16 @@
+$NetBSD: patch-ao,v 1.1 2013/02/03 17:48:45 kefren Exp $
+
+--- lib/ftlib.h.orig	2013-02-03 18:49:10.000000000 +0200
++++ lib/ftlib.h	2013-02-03 18:32:09.000000000 +0200
+@@ -2710,9 +2710,9 @@ int ftfile_expire (struct ftfile_entries
+ int ftfile_dump(struct ftfile_entries *fte);
+ struct ftfile_entry *ftfile_entry_new(int len);
+ void ftfile_entry_free(struct ftfile_entry *entry);
+-int ftfile_mkpath(u_int32 ftime, int nest);
++int ftfile_mkpath(time_t ftime, int nest);
+ void ftfile_pathname(char *buf, int bsize, int nest, struct ftver ftv,
+- int done, u_int32 ftime);
++ int done, time_t ftime);
+ 
+ 
+ 
