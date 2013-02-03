@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/05 22:13:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/03 11:24:49 wiz Exp $
 info/autoconf-archive.info
 share/aclocal/ax_absolute_header.m4
 share/aclocal/ax_ac_append_to_file.m4
@@ -310,6 +310,7 @@ share/aclocal/ax_lib_beecrypt.m4
 share/aclocal/ax_lib_cgal_core.m4
 share/aclocal/ax_lib_crypto.m4
 share/aclocal/ax_lib_curl.m4
+share/aclocal/ax_lib_ev.m4
 share/aclocal/ax_lib_expat.m4
 share/aclocal/ax_lib_firebird.m4
 share/aclocal/ax_lib_gcrypt.m4
@@ -371,6 +372,7 @@ share/aclocal/ax_prog_cc_for_build.m4
 share/aclocal/ax_prog_cc_mpi.m4
 share/aclocal/ax_prog_cp_s.m4
 share/aclocal/ax_prog_crontab.m4
+share/aclocal/ax_prog_cxx_for_build.m4
 share/aclocal/ax_prog_cxx_mpi.m4
 share/aclocal/ax_prog_doxygen.m4
 share/aclocal/ax_prog_f77_mpi.m4
