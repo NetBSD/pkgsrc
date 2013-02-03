@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2005/07/21 12:54:03 seb Exp $
+$NetBSD: patch-ah,v 1.5 2013/02/03 17:48:45 kefren Exp $
 
---- src/flow-capture.c.orig	2004-01-05 18:56:50.000000000 +0100
-+++ src/flow-capture.c
+--- src/flow-capture.c.orig	2004-01-05 19:56:50.000000000 +0200
++++ src/flow-capture.c	2013-02-03 18:33:26.000000000 +0200
 @@ -350,7 +350,7 @@ char **argv;
        ftv.set = 1;
        break;
@@ -21,3 +21,12 @@ $NetBSD: patch-ah,v 1.4 2005/07/21 12:54:03 seb Exp $
  
      for (n = 0; n < 16; ++n)
        close (n);
+@@ -998,7 +999,7 @@ skip_pdu_decode:
+         fterr_errx(1, "calc_rotate(): failed");
+ 
+       /* remember when file was created */
+-      cap_file.time = (u_int32)tt_now;
++      cap_file.time = tt_now;
+ 
+       /* remember the version encoded in the filename */
+       bcopy(&ftv, &cap_file.ftv, sizeof cap_file.ftv);

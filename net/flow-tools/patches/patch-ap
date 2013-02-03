@@ -1,0 +1,40 @@
+$NetBSD: patch-ap,v 1.1 2013/02/03 17:48:45 kefren Exp $
+
+--- lib/ftfile.c.orig	2013-02-03 18:48:54.000000000 +0200
++++ lib/ftfile.c	2013-02-03 18:32:58.000000000 +0200
+@@ -410,7 +410,7 @@ int ftfile_dump(struct ftfile_entries *f
+  * 
+  */
+ void ftfile_pathname(char *buf, int bsize, int nest, struct ftver ftv,
+- int done, u_int32 ftime)
++ int done, time_t ftime)
+ {
+   struct tm *tm;
+   char *prefix, dbuf[64];
+@@ -418,7 +418,7 @@ void ftfile_pathname(char *buf, int bsiz
+   char gmt_sign;
+   int tm_gmtoff;
+   
+-  if (!(tm = localtime ((time_t*)&ftime))) {
++  if (!(tm = localtime (&ftime))) {
+     snprintf(buf, bsize, ".");
+   }
+ 
+@@ -499,7 +499,7 @@ void ftfile_pathname(char *buf, int bsiz
+  * returns -1 on error
+  * 
+  */
+-int ftfile_mkpath(u_int32 ftime, int nest)
++int ftfile_mkpath(time_t ftime, int nest)
+ {
+   struct tm *tm;
+   char buf[32];
+@@ -512,7 +512,7 @@ int ftfile_mkpath(u_int32 ftime, int nes
+   if ((nest > 3) || (nest < -3))
+     return -1;
+ 
+-  if (!(tm = localtime ((time_t*)&ftime)))
++  if (!(tm = localtime (&ftime)))
+     return -1;
+ 
+   if (nest == -1)
