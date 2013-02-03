@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.445 2013/02/03 16:40:28 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.446 2013/02/03 16:58:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -567,3 +567,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/rubygems to 1.8.25 [taca 2013-02-03]
 	Updated devel/py-cython to 0.18 [wiz 2013-02-03]
 	Updated misc/py-anki2 to 2.0.7 [wiz 2013-02-03]
+	Updated graphics/cairo to 1.12.12 [wiz 2013-02-03]
