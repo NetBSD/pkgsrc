@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.443 2013/02/03 16:09:26 taca Exp $
+$NetBSD: CHANGES-2013,v 1.444 2013/02/03 16:36:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -565,3 +565,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/autoconf-archive to 2013.02.02 [wiz 2013-02-03]
 	Updated devel/mercurial to 2.5 [wiz 2013-02-03]
 	Updated misc/rubygems to 1.8.25 [taca 2013-02-03]
+	Updated devel/py-cython to 0.18 [wiz 2013-02-03]
