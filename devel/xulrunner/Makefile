@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2013/02/01 22:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2013/02/03 12:59:29 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-libxul
 ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner
 
 MAKE_ENV+=		FREEBL_NO_DEPEND=0
+
+GCC_REQD+=		4.5
 
 # workround for link of xulrunner-bin etc.
 LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/xulrunner -Wl,-rpath,${PREFIX}/lib
