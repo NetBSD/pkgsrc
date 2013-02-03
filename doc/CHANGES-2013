@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.448 2013/02/03 19:48:01 imil Exp $
+$NetBSD: CHANGES-2013,v 1.449 2013/02/03 20:05:25 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -570,3 +570,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/cairo to 1.12.12 [wiz 2013-02-03]
 	Updated graphics/cairo-gobject to 1.12.12 [wiz 2013-02-03]
 	Updated www/nginx to 1.2.6 [imil 2013-02-03]
+	Updated print/epdfview to 0.1.8nb11 [jakllsch 2013-02-03]
