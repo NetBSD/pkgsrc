@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/10/16 07:07:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/02/03 16:35:51 wiz Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
@@ -413,6 +413,7 @@ ${PYSITELIB}/Cython/Utility/MemoryView_C.c
 ${PYSITELIB}/Cython/Utility/ModuleSetupCode.c
 ${PYSITELIB}/Cython/Utility/ObjectHandling.c
 ${PYSITELIB}/Cython/Utility/Optimize.c
+${PYSITELIB}/Cython/Utility/Overflow.c
 ${PYSITELIB}/Cython/Utility/Printing.c
 ${PYSITELIB}/Cython/Utility/StringTools.c
 ${PYSITELIB}/Cython/Utility/TestCyUtilityLoader.pyx
