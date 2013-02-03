@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11907 2013/02/03 16:36:00 wiz Exp $
+$NetBSD: TODO,v 1.11908 2013/02/03 16:40:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1020,7 +1020,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
-	o py-anki2-2.0.7
 	o py-cairo-1.10.0
 	o py-carddav-0.4
 	o py-docutils-0.10 [pkg/47372]
