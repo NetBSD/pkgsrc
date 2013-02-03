@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/05/07 01:53:40 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2013/02/03 07:45:18 ryoon Exp $
 
 BUILDLINK_TREE+=	gcc45
 
@@ -66,7 +66,7 @@ BUILDLINK_DEPMETHOD.gcc45?=	build
 .include "../../mk/pthread.buildlink3.mk"
 pkgbase := gcc45
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.gcc46:Mnls)
+.if !empty(PKG_BUILD_OPTIONS.gcc45:Mnls)
 .include "../../devel/gettext-lib/buildlink3.mk"
 .endif
 .endif # GCC45_BUILDLINK3_MK
