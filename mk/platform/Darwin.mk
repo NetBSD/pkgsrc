@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.49 2012/11/19 11:34:15 ryoon Exp $
+# $NetBSD: Darwin.mk,v 1.50 2013/02/04 15:53:16 wiz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -43,9 +43,8 @@ IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
 .endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
-# Use the GNU cpp, not the OS X cpp, don't look in "/usr/local/include"
-# before "/usr/include".
-CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	-isystem /usr/include
+# don't look in "/usr/local/include" before "/usr/include".
+CPP_PRECOMP_FLAGS?=	-isystem /usr/include
 # don't symlink to /usr/bin/gcc since the latter is a wrapper that tries
 # evoke the real (architecture-dependent) gcc binary in the same place
 # which fails when called via a symlink from a different directory
