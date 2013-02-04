@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:19:08 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/04 09:42:48 wiz Exp $
 
 DISTNAME=		skype_static-1.4.0.118-oss
 PKGNAME=		skype-1.4.0.118
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
-COMMENT=		P2P VoIP software
+COMMENT=		P2P VoIP software (old 1.x branch)
 LICENSE=		skype-license
 
 RESTRICTED=		Complex terms for redistribution.
