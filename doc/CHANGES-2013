@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.449 2013/02/03 20:05:25 jakllsch Exp $
+$NetBSD: CHANGES-2013,v 1.450 2013/02/04 20:37:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -571,3 +571,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/cairo-gobject to 1.12.12 [wiz 2013-02-03]
 	Updated www/nginx to 1.2.6 [imil 2013-02-03]
 	Updated print/epdfview to 0.1.8nb11 [jakllsch 2013-02-03]
+	Updated mail/akonadi to 1.7.2 [markd 2013-02-04]
+	Updated textproc/soprano to 2.8.0 [markd 2013-02-04]
+	Updated sysutils/strigi to 0.7.7 [markd 2013-02-04]
+	Updated lang/g95 to 0.93 [markd 2013-02-04]
