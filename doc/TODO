@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11911 2013/02/03 19:48:01 imil Exp $
+$NetBSD: TODO,v 1.11912 2013/02/04 09:35:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,7 +351,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SDL_gfx-2.0.24
-	o SOGo-2.0.3
+	o SOGo-2.0.4
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-81
@@ -395,7 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
-	o aria2-1.16.2
+	o aria2-1.16.3
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -499,7 +499,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasm-2.20.11
 	o dbench-4.0
 	o dcc-1.3.141
-	o dd_rescue-1.30
+	o dd_rescue-1.31
 	o ddclient-3.7.3
 	o ddrescue-1.16
 	o defendguin-0.0.11
@@ -548,7 +548,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
-	o eric5-5.2.7
+	o eric5-5.3.0
 	o erlang-16a
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -1240,6 +1240,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK28-2.8.12
 	o wxRemind-101
+	o wyrd-1.4.6
 	o x264-devel-20130202
 	o xanalyser-1.30
 	o xaric-0.13.2
