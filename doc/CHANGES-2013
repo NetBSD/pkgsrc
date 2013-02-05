@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.450 2013/02/04 20:37:24 markd Exp $
+$NetBSD: CHANGES-2013,v 1.451 2013/02/05 07:46:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -575,3 +575,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/soprano to 2.8.0 [markd 2013-02-04]
 	Updated sysutils/strigi to 0.7.7 [markd 2013-02-04]
 	Updated lang/g95 to 0.93 [markd 2013-02-04]
+	Removed net/samba30 [wiz 2013-02-05]
+	Removed net/samba33 [wiz 2013-02-05]
