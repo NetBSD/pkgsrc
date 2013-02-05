@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.454 2013/02/05 11:57:20 obache Exp $
+$NetBSD: CHANGES-2013,v 1.455 2013/02/05 14:12:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -581,3 +581,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/xulrunner to 18.0.1nb2 [ryoon 2013-02-05]
 	Updated www/firefox to 18.0.1nb1 [ryoon 2013-02-05]
 	Updated net/mikutter to 0.2.1.1127 [obache 2013-02-05]
+	Updated x11/libdrm to 2.4.42 [wiz 2013-02-05]
