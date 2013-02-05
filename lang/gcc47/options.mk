@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2012/08/20 07:22:09 sbd Exp $
+# $NetBSD: options.mk,v 1.9 2013/02/05 07:12:23 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -28,8 +28,8 @@ MULTILIB_SUPPORTED=Yes
 .  endif
 .endif
 .if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
-PKG_SUPPORTED_OPTIONS+=  gcc-multilib
-PKG_SUGGESTED_OPTIONS+=  gcc-multilib
+PKG_SUPPORTED_OPTIONS+=	gcc-multilib
+PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 .endif
 
 .include "../../mk/bsd.options.mk"
