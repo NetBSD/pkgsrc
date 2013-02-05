@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.452 2013/02/05 08:00:21 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.453 2013/02/05 11:09:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -578,3 +578,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed net/samba30 [wiz 2013-02-05]
 	Removed net/samba33 [wiz 2013-02-05]
 	Updated print/kpathsea to 6.1.0nb1 [wiz 2013-02-05]
+	Updated devel/xulrunner to 18.0.1nb2 [ryoon 2013-02-05]
+	Updated www/firefox to 18.0.1nb1 [ryoon 2013-02-05]
