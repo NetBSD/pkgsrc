@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.13 2013/01/31 20:07:17 marino Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/05 07:12:23 adam Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
 
-DISTNAME=		gcc-${GCC_DIST_VERSION}
-PKGNAME=		${GCC_PKGNAME}-${GCC_DIST_VERSION}
+DISTNAME=	gcc-${GCC_DIST_VERSION}
+PKGNAME=	${GCC_PKGNAME}-${GCC_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc47-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=		1
-CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
-EXTRACT_SUFX=		.tar.bz2
+PKGREVISION=	1
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sbd@NetBSD.org
-HOMEPAGE=		http://gcc.gnu.org/
-COMMENT=		The GNU Compiler Collection (GCC) - 4.7 Release Series
-LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+MAINTAINER=	sbd@NetBSD.org
+HOMEPAGE=	http://gcc.gnu.org/
+COMMENT=	The GNU Compiler Collection (GCC) - 4.7 Release Series
+LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
@@ -45,10 +45,12 @@ LANGS=			c
 ## The Library rpath to use in end programs.
 LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
 
-## The "-static-libstdc++ -static-libgcc" flags are normally added to the
-## boot-ldflags by configure but because we are supply the boot-ldflags
-## we mash supply them.
+# The "-static-libstdc++ -static-libgcc" flags are normally added to the
+# boot-ldflags by configure but because we are supply the boot-ldflags
+# we mash supply them.
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
+# Needed on Darwin when LDFLAGS point to a SDK
+BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
