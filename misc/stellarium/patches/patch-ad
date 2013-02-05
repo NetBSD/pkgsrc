@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2012/08/27 09:07:37 adam Exp $
+$NetBSD: patch-ad,v 1.6 2013/02/05 17:45:05 drochner Exp $
 
---- data/ssystem.ini.orig	2010-12-06 20:51:50.000000000 +0000
+--- data/ssystem.ini.orig	2013-01-31 11:44:06.000000000 +0000
 +++ data/ssystem.ini
-@@ -1270,6 +1270,26 @@ lighting = false
- albedo = 1
- orbit_visualization_period = 365.25
+@@ -1310,6 +1310,26 @@ orbit_MeanLongitude = 90
+ rot_obliquity = 90
+ hidden = true
  
 +[mcnaught_2009R1]
 +name = C/2009 R1 (McNaught)
