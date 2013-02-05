@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/01/13 07:26:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/02/05 11:57:03 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -99,6 +99,7 @@ share/mikutter/core/mui/cairo_textselector.rb
 share/mikutter/core/mui/cairo_timeline.rb
 share/mikutter/core/mui/gtk_contextmenu.rb
 share/mikutter/core/mui/gtk_crud.rb
+share/mikutter/core/mui/gtk_dark_matter_prification.rb
 share/mikutter/core/mui/gtk_extension.rb
 share/mikutter/core/mui/gtk_intelligent_textview.rb
 share/mikutter/core/mui/gtk_keyconfig.rb
