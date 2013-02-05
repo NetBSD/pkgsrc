@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.453 2013/02/05 11:09:01 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.454 2013/02/05 11:57:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/kpathsea to 6.1.0nb1 [wiz 2013-02-05]
 	Updated devel/xulrunner to 18.0.1nb2 [ryoon 2013-02-05]
 	Updated www/firefox to 18.0.1nb1 [ryoon 2013-02-05]
+	Updated net/mikutter to 0.2.1.1127 [obache 2013-02-05]
