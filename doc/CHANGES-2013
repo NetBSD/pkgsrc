@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.456 2013/02/05 15:55:10 taca Exp $
+$NetBSD: CHANGES-2013,v 1.457 2013/02/05 15:59:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -583,3 +583,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mikutter to 0.2.1.1127 [obache 2013-02-05]
 	Updated x11/libdrm to 2.4.42 [wiz 2013-02-05]
 	Updated security/openssl to 0.9.8y [taca 2013-02-05]
+	Updated mail/postfix to 2.8.14 [taca 2013-02-05]
