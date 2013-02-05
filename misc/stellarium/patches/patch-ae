@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2012/08/27 09:07:37 adam Exp $
+$NetBSD: patch-ae,v 1.4 2013/02/05 17:45:05 drochner Exp $
 
---- CMakeLists.txt.orig	2012-08-26 10:23:19.000000000 +0000
+--- CMakeLists.txt.orig	2013-01-31 11:44:06.000000000 +0000
 +++ CMakeLists.txt
 @@ -46,7 +46,6 @@ ENDIF()
  ADD_DEFINITIONS(-DSTELLARIUM_SPLASH="${STELLARIUM_SPLASH}")
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.3 2012/08/27 09:07:37 adam Exp $
  ENDIF()
  
  IF("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-@@ -294,14 +293,10 @@ ENDIF()
+@@ -308,14 +307,10 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -25,12 +25,19 @@ $NetBSD: patch-ae,v 1.3 2012/08/27 09:07:37 adam Exp $
  ELSE(UNIX AND NOT WIN32)
    ADD_DEFINITIONS(-DINSTALL_DATADIR=".")
    ADD_DEFINITIONS(-DINSTALL_LOCALEDIR="./locale")
-@@ -401,9 +396,6 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -448,16 +443,6 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### Macosx Bundling ###############
 -IF(APPLE)
--ADD_CUSTOM_TARGET(macosx_bundle bash util/macosx_bundle.sh ${CMAKE_INSTALL_PREFIX} ${PROJECT_SOURCE_DIR} DEPENDS install WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMENT "making the macosx bundle." VERBATIM)
+-ADD_CUSTOM_TARGET(
+-  macosx_bundle
+-  bash util/macosx_bundle.sh ${CMAKE_INSTALL_PREFIX} ${PROJECT_SOURCE_DIR}
+-  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Stellarium.app
+-  WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+-  COMMENT "making the macosx bundle."
+-  VERBATIM
+-)
 -ENDIF()
  
  
