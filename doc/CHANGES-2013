@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.457 2013/02/05 15:59:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.458 2013/02/05 17:45:40 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -584,3 +584,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libdrm to 2.4.42 [wiz 2013-02-05]
 	Updated security/openssl to 0.9.8y [taca 2013-02-05]
 	Updated mail/postfix to 2.8.14 [taca 2013-02-05]
+	Updated misc/stellarium to 0.12.0 [drochner 2013-02-05]
