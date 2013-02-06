@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11915 2013/02/05 16:04:33 taca Exp $
+$NetBSD: TODO,v 1.11916 2013/02/06 07:43:04 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -1092,7 +1092,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o seahorse-nautilus-3.6.1
 	o secpanel-0.6.1
 	o sendfile-20010424
-	o sendmail-8.14.6
 	o ser-0.9.6
 	o sharity-3.7
 	o sharity-light-1.3
