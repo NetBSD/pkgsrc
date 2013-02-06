@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/01/31 15:56:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/02/06 15:48:31 taca Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -770,14 +770,14 @@ ${RUBY_ARCHLIB}/syck.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/syslog.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/zlib.${RUBY_DLEXT}
 ${GEM_HOME}/gems/rake-0.9.2.2/bin/rake${RUBY_VER}
-${GEM_HOME}/gems/rdoc-3.9.4/bin/rdoc${RUBY_VER}
-${GEM_HOME}/gems/rdoc-3.9.4/bin/ri${RUBY_VER}
+${GEM_HOME}/gems/rdoc-3.9.5/bin/rdoc${RUBY_VER}
+${GEM_HOME}/gems/rdoc-3.9.5/bin/ri${RUBY_VER}
 ${GEM_HOME}/specifications/bigdecimal-1.1.0.gemspec
 ${GEM_HOME}/specifications/io-console-0.3.gemspec
 ${GEM_HOME}/specifications/json-1.5.4.gemspec
 ${GEM_HOME}/specifications/minitest-2.5.1.gemspec
 ${GEM_HOME}/specifications/rake-0.9.2.2.gemspec
-${GEM_HOME}/specifications/rdoc-3.9.4.gemspec
+${GEM_HOME}/specifications/rdoc-3.9.5.gemspec
 man/man1/erb${RUBY_VER}.1
 man/man1/irb${RUBY_VER}.1
 man/man1/rake${RUBY_VER}.1
