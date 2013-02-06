@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/12/16 01:52:02 obache Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/06 23:21:53 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-cloak-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Remove null-ops for OpenLDAP
 
 CONFLICTS+=	openldap<2.3.23nb1
