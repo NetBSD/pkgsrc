@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.24 2010/02/26 03:15:14 taca Exp $
+$NetBSD: patch-af,v 1.25 2013/02/06 21:40:34 jperkin Exp $
 
---- Makefile.org.orig	2010-01-27 16:06:36.000000000 +0000
+--- Makefile.org.orig	2012-04-22 13:25:19.000000000 +0000
 +++ Makefile.org
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
@@ -10,18 +10,7 @@ $NetBSD: patch-af,v 1.24 2010/02/26 03:15:14 taca Exp $
  
  # NO_IDEA - Define to build without the IDEA algorithm
  # NO_RC4  - Define to build without the RC4 algorithm
-@@ -132,8 +133,8 @@ FIPSCANLIB=
- 
- BASEADDR=
- 
--DIRS=   crypto fips ssl engines apps test tools
--SHLIBDIRS= crypto ssl fips
-+DIRS=   crypto ssl engines apps test tools # fips
-+SHLIBDIRS= crypto ssl # fips
- 
- # dirs in crypto to build
- SDIRS=  \
-@@ -153,7 +154,7 @@ TESTS = alltests
+@@ -157,7 +158,7 @@ TESTS = alltests
  
  MAKEFILE= Makefile
  
@@ -30,15 +19,15 @@ $NetBSD: patch-af,v 1.24 2010/02/26 03:15:14 taca Exp $
  MAN1=1
  MAN3=3
  MANSUFFIX=
-@@ -169,6 +170,7 @@ SHARED_SSL=libssl$(SHLIB_EXT)
- SHARED_FIPS=
+@@ -174,6 +175,7 @@ SHARED_CRYPTO=libcrypto$(SHLIB_EXT)
+ SHARED_SSL=libssl$(SHLIB_EXT)
  SHARED_LIBS=
  SHARED_LIBS_LINK_EXTS=
 +LIBRPATH=$(INSTALLTOP)/lib
  SHARED_LDFLAGS=
  
  GENERAL=        Makefile
-@@ -615,7 +617,7 @@ dist:   
+@@ -537,7 +539,7 @@ dist:
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) -e $(BUILDENV) pem.h; $(MAKE) clean)
  
@@ -47,7 +36,7 @@ $NetBSD: patch-af,v 1.24 2010/02/26 03:15:14 taca Exp $
  
  install_sw:
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
-@@ -695,35 +697,53 @@ install_docs:
+@@ -648,35 +650,53 @@ install_docs:
  	set -e; for i in doc/apps/*.pod; do \
  		fn=`basename $$i .pod`; \
  		sec=`$(PERL) util/extract-section.pl 1 < $$i`; \
@@ -68,12 +57,12 @@ $NetBSD: patch-af,v 1.24 2010/02/26 03:15:14 taca Exp $
  			(grep -v "[	]"; true) | \
  			(cd $(INSTALL_PREFIX)$(MANDIR)/man$$sec/; \
  			 while read n; do \
--				$$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
+-				PLATFORM=$(PLATFORM) $$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
 +				case "$$n" in \
 +				CA.pl|openssl) on="$$n" ;; \
 +				*) on="openssl_$$n" ;; \
 +				esac; \
-+				$$here/util/point.sh $$ofn.$${sec}$(MANSUFFIX) "$$on".$${sec}$(MANSUFFIX); \
++				PLATFORM=$(PLATFORM) $$here/util/point.sh $$ofn.$${sec}$(MANSUFFIX) "$$on".$${sec}$(MANSUFFIX); \
  			 done); \
  	done; \
  	set -e; for i in doc/crypto/*.pod doc/ssl/*.pod; do \
@@ -97,13 +86,13 @@ $NetBSD: patch-af,v 1.24 2010/02/26 03:15:14 taca Exp $
  			(grep -v "[	]"; true) | \
  			(cd $(INSTALL_PREFIX)$(MANDIR)/man$$sec/; \
  			 while read n; do \
--				$$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
+-				PLATFORM=$(PLATFORM) $$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
 +				case "$$n" in \
 +				ui*) on="openssl_$$n" ;; \
 +				[A-Z]*|*_*) on="$$n" ;; \
 +				*) on="openssl_$$n" ;; \
 +				esac; \
-+				$$here/util/point.sh $$ofn.$${sec}$(MANSUFFIX) "$$on".$${sec}$(MANSUFFIX); \
++				PLATFORM=$(PLATFORM) $$here/util/point.sh $$ofn.$${sec}$(MANSUFFIX) "$$on".$${sec}$(MANSUFFIX); \
  			 done); \
  	done
  

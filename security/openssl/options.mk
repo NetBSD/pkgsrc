@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2012/01/20 17:07:38 drochner Exp $
+# $NetBSD: options.mk,v 1.9 2013/02/06 21:40:33 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
-PKG_SUPPORTED_OPTIONS=	idea mdc2 rc5 zlib threads
-PKG_SUGGESTED_OPTIONS=	threads
+PKG_SUPPORTED_OPTIONS=	idea md2 mdc2 rc5 zlib threads
+PKG_SUGGESTED_OPTIONS=	md2 threads
 
 .include "../../mk/bsd.options.mk"
 
@@ -10,36 +10,22 @@ OPENSSL_LICENSE=	# empty
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
-###
-### Support for the IDEA algorithm
-###
-.if !empty(PKG_OPTIONS:Midea)
-PLIST.idea=		yes
-.else
-CONFIGURE_ARGS+=	no-idea
-.endif
+#
+# Support optional algorithms
+#
+.for alg in idea md2 mdc2 rc5
+.  if !empty(PKG_OPTIONS:M${alg})
+CONFIGURE_ARGS+=	enable-${alg}
+PLIST.${alg}=		yes
+.  else
+CONFIGURE_ARGS+=	no-${alg}
+.  endif
+.endfor
 
-###
-### Support for the MDC2 algorithm
-###
-.if !empty(PKG_OPTIONS:Mmdc2)
-CONFIGURE_ARGS+=	enable-mdc2
-PLIST.mdc2=		yes
-.else
-CONFIGURE_ARGS+=	no-mdc2
-.endif
-
-###
-### Support for the RC5 algorithm
-###	US Patent: 5724428, 5835600, 6269163
-###
-.if !empty(PKG_OPTIONS:Mrc5)
 # A license file is needed.
+# US Patent: 5724428, 5835600, 6269163
+.if !empty(PKG_OPTIONS:Mrc5)
 OPENSSL_LICENSE+=	rc5-nonlicense
-CONFIGURE_ARGS+=	enable-rc5
-PLIST.rc5=		yes
-.else
-CONFIGURE_ARGS+=	no-rc5
 .endif
 
 .if !empty(PKG_OPTIONS:Mzlib)

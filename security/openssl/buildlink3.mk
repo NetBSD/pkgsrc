@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2010/01/17 12:02:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2013/02/06 21:40:33 jperkin Exp $
 
 BUILDLINK_TREE+=	openssl
 
@@ -7,8 +7,8 @@ OPENSSL_BUILDLINK3_MK:=
 
 .  include "../../mk/bsd.fast.prefs.mk"
 
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6m
-BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=0.9.8knb1
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.1d
+BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=1.0.1d
 BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 
 # Ensure that -lcrypt comes before -lcrypto when linking so that the
