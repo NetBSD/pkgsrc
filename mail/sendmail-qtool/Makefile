@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 12:19:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/06 07:52:06 jnemeth Exp $
 
 PKGNAME=	sendmail-qtool-${DIST_VERS}
-PKGREVISION=	1
-COMMENT=	perl script to manage sendmail queue entries
+COMMENT=	Perl script to manage sendmail queue entries
 
-PKG_OPTIONS=  #hack to please Makefile.common
+PKG_OPTIONS=	#hack to please Makefile.common
 
 .include "../../mail/sendmail/Makefile.common"
 
