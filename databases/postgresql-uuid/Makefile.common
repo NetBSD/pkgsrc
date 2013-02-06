@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2012/10/02 21:25:41 asau Exp $
+# $NetBSD: Makefile.common,v 1.6 2013/02/06 23:21:55 jperkin Exp $
 #
 # used by databases/postgresql83-uuid
 # used by databases/postgresql84-uuid
@@ -6,6 +6,7 @@
 
 DISTNAME=	uuid-freebsd-1.0.2
 PKGNAME=	postgresql${PGSQL_VERSION}-uuid-1.0.2
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/2605/
 EXTRACT_SUFX=	.tgz
