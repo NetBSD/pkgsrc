@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/07/21 18:27:12 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/02/06 23:20:58 jperkin Exp $
 
 BUILDLINK_TREE+=	rtmpdump
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	rtmpdump
 RTMPDUMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rtmpdump+=	rtmpdump>=2.3
+BUILDLINK_ABI_DEPENDS.rtmpdump?=	rtmpdump>=2.4nb1
 BUILDLINK_PKGSRCDIR.rtmpdump?=	../../net/rtmpdump
 
 .include "../../security/openssl/buildlink3.mk"

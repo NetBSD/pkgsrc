@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 18:16:52 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/02/06 23:23:43 jperkin Exp $
 
 DISTNAME=	pyOpenSSL-0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyOpenSSL/
 

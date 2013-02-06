@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2013/01/26 21:36:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2013/02/06 23:21:19 jperkin Exp $
 
 BUILDLINK_TREE+=	libgnomecups
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomecups
 LIBGNOMECUPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomecups+=	libgnomecups>=0.2.0
-BUILDLINK_ABI_DEPENDS.libgnomecups+=	libgnomecups>=0.2.3nb11
+BUILDLINK_ABI_DEPENDS.libgnomecups+=	libgnomecups>=0.2.3nb12
 BUILDLINK_PKGSRCDIR.libgnomecups?=	../../print/libgnomecups
 
 .include "../../devel/gettext-lib/buildlink3.mk"

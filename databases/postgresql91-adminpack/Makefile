@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/12/16 01:52:06 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/06 23:21:58 jperkin Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-adminpack-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Admin pack module for pgAdmin management
 
 DEPENDS+=	postgresql91-server>=${PKGVERSION_NOREV}:../../databases/postgresql91-server

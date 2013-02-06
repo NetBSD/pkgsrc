@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/10/08 12:19:14 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/02/06 23:20:53 jperkin Exp $
 
 DISTNAME=	libesmtp-1.0.6
+PKGREVISION=	1
 CATEGORIES=	mail devel
 MASTER_SITES=	http://www.stafford.uklinux.net/libesmtp/
 EXTRACT_SUFX=	.tar.bz2
