@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.459 2013/02/06 07:42:16 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.460 2013/02/06 07:43:04 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/postfix to 2.8.14 [taca 2013-02-05]
 	Updated misc/stellarium to 0.12.0 [drochner 2013-02-05]
 	Updated www/libmicrohttpd to 0.9.25 [wiz 2013-02-06]
+	Updated mail/sendmail to 8.14.6 [jnemeth 2013-02-06]
