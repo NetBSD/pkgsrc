@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 17:19:12 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/06 19:31:01 jperkin Exp $
 #
 
 DISTNAME=	tcpflow-0.21
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net security
 MASTER_SITES=	http://www.circlemud.org/pub/jelson/tcpflow/
 

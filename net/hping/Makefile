@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:27 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/02/06 19:30:57 jperkin Exp $
 #
 
 DISTNAME=		hping2.0.0-rc3
 PKGNAME=		hping-2.0.0.3
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.hping.org/
 

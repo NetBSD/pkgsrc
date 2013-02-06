@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:58 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/06 19:31:05 jperkin Exp $
 #
 
 DISTNAME=	sniff-2.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

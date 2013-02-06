@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:28 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/06 19:30:57 jperkin Exp $
 
 DISTNAME=	ipgrab-0.9.9
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ipgrab/}
 

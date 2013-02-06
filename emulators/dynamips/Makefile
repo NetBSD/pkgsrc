@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 12:55:11 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/06 19:30:55 jperkin Exp $
 
 DISTNAME=	dynamips-0.2.8-RC2
 PKGNAME=	${DISTNAME:S/-RC/rc/}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.ipflow.utc.fr/dynamips/
 
