@@ -1,73 +1,74 @@
-$NetBSD: patch-configure,v 1.5 2013/01/31 15:56:14 taca Exp $
+$NetBSD: patch-configure,v 1.6 2013/02/06 15:48:31 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.orig	2013-01-17 04:57:31.000000000 +0000
+--- configure.orig	2013-02-06 13:17:31.000000000 +0000
 +++ configure
-@@ -20419,6 +20419,9 @@ _ACEOF
- 		 ;;
-   superux*) 	ac_cv_func_setitimer=no
- 		 ;;
-+  interix*)	LIBS="-lm $LIBS"
+@@ -10722,6 +10722,10 @@ esac
+   superux*) :
+     	ac_cv_func_setitimer=no
+ 		 ;; #(
++  interix*) :
++	LIBS="-lm $LIBS"
 +	ac_cv_func_getpgrp_void=yes
 +		 ;;
-   *) 	LIBS="-lm $LIBS" ;;
+   *) :
+     	LIBS="-lm $LIBS" ;;
  esac
- 
-@@ -37835,7 +37838,7 @@ done
-   root) : ;;
-   c_r) MAINLIBS="-pthread $MAINLIBS" ;;
-   *) case "$target_os" in
--  openbsd*) LIBS="-pthread $LIBS" ;;
-+  openbsd*|mirbsd*) LIBS="-pthread $LIBS" ;;
-   *) LIBS="-l$pthread_lib $LIBS" ;;
- esac
-  ;;
-@@ -38856,8 +38859,12 @@ esac
- 			fi
- 			rb_cv_dlopen=yes ;;
-   interix*) 	: ${LDSHARED='$(CC) -shared'}
+@@ -15784,7 +15788,7 @@ done
+     MAINLIBS="-pthread $MAINLIBS" ;; #(
+   *) :
+     case "$target_os" in #(
+-  openbsd*) :
++  openbsd*|mirbsd*) :
+     LIBS="-pthread $LIBS" ;; #(
+   *) :
+     LIBS="-l$pthread_lib $LIBS" ;;
+@@ -16233,8 +16237,12 @@ esac ;; #(
+ 			rb_cv_dlopen=yes ;; #(
+   interix*) :
+     	: ${LDSHARED='$(CC) -shared'}
 +			LDFLAGS="$LDFLAGS -Wl,-E"
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
 +			# use special random-slot linkage in 0x[56]XXXXXXX
  			LIBPATHFLAG=" -L%1\$-s"
 +			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
 +			RPATHFLAG=' -Wl,-R%1$-s'
- 			rb_cv_dlopen=yes ;;
-   freebsd*|dragonfly*)
- 			: ${LDSHARED='$(CC) -shared'}
-@@ -38868,7 +38875,7 @@ esac
+ 			rb_cv_dlopen=yes ;; #(
+   freebsd*|dragonfly*) :
+ 
+@@ -16246,7 +16254,7 @@ esac ;; #(
  			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
  			fi
- 			rb_cv_dlopen=yes ;;
--  openbsd*) 	: ${LDSHARED='$(CC) -shared ${CCDLFLAGS}'}
-+  openbsd*|mirbsd*) 	: ${LDSHARED='$(CC) -shared ${CCDLFLAGS}'}
+ 			rb_cv_dlopen=yes ;; #(
+-  openbsd*) :
++  openbsd*|mirbsd*) :
+     	: ${LDSHARED='$(CC) -shared ${CCDLFLAGS}'}
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-E"
- 			fi
-@@ -39463,7 +39470,7 @@ _ACEOF
- 	 ;;
-   freebsd*|dragonfly*)
+@@ -16775,7 +16783,7 @@ _ACEOF
+   freebsd*|dragonfly*) :
+ 
  	SOLIBS='$(LIBS)'
 -	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)'
 +	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)$(TEENY)'
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -39479,7 +39486,7 @@ _ACEOF
+@@ -16792,7 +16800,7 @@ _ACEOF
  	   LIBRUBY_ALIASES=""
  	fi
- 	 ;;
--  openbsd*)
-+  openbsd*|mirbsd*)
+ 	 ;; #(
+-  openbsd*) :
++  openbsd*|mirbsd*) :
+ 
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
- 	 ;;
-@@ -39531,7 +39538,12 @@ esac
- 	LIBRUBY_ALIASES='lib$(RUBY_BASE_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
- 	 ;;
-   interix*)
+@@ -16853,7 +16861,12 @@ esac
+ 	 ;; #(
+   interix*) :
+ 
 -	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
 +	SOLIBS='$(LIBS)'
 +	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
@@ -75,10 +76,10 @@ $NetBSD: patch-configure,v 1.5 2013/01/31 15:56:14 taca Exp $
 +	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
 +	LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
 +	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
- 	 ;;
- esac
- 
-@@ -39593,11 +39605,7 @@ if test "$install_doc" != no; then
+ 	 ;; #(
+   *) :
+      ;;
+@@ -16916,11 +16929,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
