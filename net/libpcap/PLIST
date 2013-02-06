@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/02/11 12:11:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/02/06 18:07:04 jperkin Exp $
 bin/pcap-config
 include/pcap-bpf.h
 include/pcap-int.h
@@ -38,6 +38,7 @@ man/man3/pcap_fileno.3
 man/man3/pcap_findalldevs.3
 man/man3/pcap_fopen_offline.3
 man/man3/pcap_free_datalinks.3
+man/man3/pcap_free_tstamp_types.3
 man/man3/pcap_freealldevs.3
 man/man3/pcap_freecode.3
 man/man3/pcap_get_selectable_fd.3
@@ -47,6 +48,7 @@ man/man3/pcap_inject.3
 man/man3/pcap_is_swapped.3
 man/man3/pcap_lib_version.3
 man/man3/pcap_list_datalinks.3
+man/man3/pcap_list_tstamp_types.3
 man/man3/pcap_lookupdev.3
 man/man3/pcap_lookupnet.3
 man/man3/pcap_loop.3
@@ -66,6 +68,7 @@ man/man3/pcap_set_promisc.3
 man/man3/pcap_set_rfmon.3
 man/man3/pcap_set_snaplen.3
 man/man3/pcap_set_timeout.3
+man/man3/pcap_set_tstamp_type.3
 man/man3/pcap_setdirection.3
 man/man3/pcap_setfilter.3
 man/man3/pcap_setnonblock.3
@@ -73,9 +76,9 @@ man/man3/pcap_snapshot.3
 man/man3/pcap_stats.3
 man/man3/pcap_statustostr.3
 man/man3/pcap_strerror.3
-${PLIST.std}man/man5/pcap-savefile.5
-${PLIST.std}man/man7/pcap-filter.7
-${PLIST.std}man/man7/pcap-linktype.7
-${PLIST.SunOS}man/man4/pcap-savefile.4
-${PLIST.SunOS}man/man5/pcap-filter.5
-${PLIST.SunOS}man/man5/pcap-linktype.5
+man/man3/pcap_tstamp_type_name_to_val.3
+man/man3/pcap_tstamp_type_val_to_name.3
+man/man5/pcap-savefile.5
+man/man7/pcap-tstamp.7
+man/man7/pcap-filter.7
+man/man7/pcap-linktype.7
