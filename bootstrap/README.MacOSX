@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.13 2012/12/29 20:02:38 wiz Exp $
+$NetBSD: README.MacOSX,v 1.14 2013/02/06 15:25:24 schmonz Exp $
 
 
 Mac OS X Snow Leopard 32/64 (i386/x86_64) ABI issue:
@@ -21,6 +21,8 @@ Tools package. Depending on the version of OS X you are running, you
 may have this on CD. If not, you can download it from Apple's
 Developer Connection. (You will need to register for a free ADC
 account.) See http://developer.apple.com/macosx/ for details.
+(If you don't want or need the full Xcode GUI, download and install
+Command Line Tools for Xcode.)
 
 Then start Xcode, go to "Preferences" - "Downloads" and install
 the "Command Line Tools".
