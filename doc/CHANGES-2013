@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.467 2013/02/06 16:06:01 taca Exp $
+$NetBSD: CHANGES-2013,v 1.468 2013/02/06 17:02:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -579,7 +579,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed net/samba33 [wiz 2013-02-05]
 	Updated print/kpathsea to 6.1.0nb1 [wiz 2013-02-05]
 	Updated devel/xulrunner to 18.0.1nb2 [ryoon 2013-02-05]
-	Updated www/firefox to 18.0.1nb1 [ryoon 2013-02-05]
 	Updated net/mikutter to 0.2.1.1127 [obache 2013-02-05]
 	Updated x11/libdrm to 2.4.42 [wiz 2013-02-05]
 	Updated security/openssl to 0.9.8y [taca 2013-02-05]
