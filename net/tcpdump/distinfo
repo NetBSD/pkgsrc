@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2011/02/11 12:13:13 adam Exp $
+$NetBSD: distinfo,v 1.19 2013/02/06 19:45:26 jperkin Exp $
 
-SHA1 (tcpdump-4.1.1.tar.gz) = 8f356cbc781192ecb527623d68db90e06aa9d4b9
-RMD160 (tcpdump-4.1.1.tar.gz) = 97ac07582f26c4126b09de1dcca6851ad02352d1
-Size (tcpdump-4.1.1.tar.gz) = 1587392 bytes
-SHA1 (patch-ah) = c3adfebd0c763583ae9609e07fc816972eb223c0
+SHA1 (tcpdump-4.3.0.tar.gz) = 5d0432e4831ca81633a6c9da732caad77d64a9ac
+RMD160 (tcpdump-4.3.0.tar.gz) = f79169528e4843b9c5e2eb2c37a77048618edb9b
+Size (tcpdump-4.3.0.tar.gz) = 887619 bytes
+SHA1 (patch-ah) = 2e8b6f1ed6946dcc04a9417abafec10ca920c220
