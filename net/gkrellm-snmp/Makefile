@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2012/10/23 17:18:23 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/02/06 23:23:14 jperkin Exp $
 #
 
 DISTNAME=	gkrellm_snmp-0.21
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	net
 MASTER_SITES=	http://triq.net/gkrellm/
 

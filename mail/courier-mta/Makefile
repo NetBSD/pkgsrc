@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2012/12/16 01:52:19 obache Exp $
+# $NetBSD: Makefile,v 1.40 2013/02/06 23:22:41 jperkin Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2013/01/26 21:39:00 adam Exp $
+# $NetBSD: Makefile,v 1.80 2013/02/06 23:23:56 jperkin Exp $
 
 DISTNAME=	amaya-fullsrc-11.3.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \

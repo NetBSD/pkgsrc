@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/12/17 01:09:17 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/02/06 23:21:01 jperkin Exp $
 
 BUILDLINK_TREE+=	sofia-sip
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	sofia-sip
 SOFIA_SIP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sofia-sip+=	sofia-sip>=1.12.10
+BUILDLINK_ABI_DEPENDS.sofia-sip?=		sofia-sip>=1.12.11nb1
 BUILDLINK_PKGSRCDIR.sofia-sip?=		../../devel/sofia-sip
 
 .include "../../devel/glib2/buildlink3.mk"
