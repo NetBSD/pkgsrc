@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.471 2013/02/06 20:32:30 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.472 2013/02/06 21:41:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -605,3 +605,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libpcap to 1.3.0 [jperkin 2013-02-06]
 	Updated net/tcpdump to 4.3.0 [jperkin 2013-02-06]
 	Updated net/trafshow to 5.2.3nb2 [jperkin 2013-02-06]
+	Updated security/openssl to 1.0.1d [jperkin 2013-02-06]
