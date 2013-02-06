@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.462 2013/02/06 07:52:31 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.463 2013/02/06 08:00:52 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/sendmail to 8.14.6 [jnemeth 2013-02-06]
 	Updated mail/libmilter to 8.14.6 [jnemeth 2013-02-06]
 	Updated mail/sendmail-qtool to 8.14.6 [jnemeth 2013-02-06]
+	Updated mail/sendmail-cidrexpand to 8.14.6 [jnemeth 2013-02-06]
