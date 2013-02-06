@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2011/02/11 12:11:26 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2013/02/06 19:30:54 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -9,6 +9,7 @@ LIBPCAP_BUILDLINK3_MK:=
 
 # XXX?
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.5.0
+BUILDLINK_ABI_DEPENDS.libpcap?=	libpcap>=1.3.0nb1
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 
 # on Solaris, we always need libnsl and libsocket because libpcap.a

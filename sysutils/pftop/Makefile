@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:19 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/06 19:31:05 jperkin Exp $
 
 DISTNAME=	pftop-0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.eee.metu.edu.tr/~canacar/
 
