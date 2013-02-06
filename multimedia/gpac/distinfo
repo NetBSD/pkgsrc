@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2012/12/09 17:15:06 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/02/06 11:09:34 fhajny Exp $
 
 SHA1 (gpac-0.5.0.tar.gz) = 48ba16272bfa153abb281ff8ed31b5dddf60cf20
 RMD160 (gpac-0.5.0.tar.gz) = fc9cd2665a699dbe6d228e4e638baeae12b9e6af
 Size (gpac-0.5.0.tar.gz) = 7861057 bytes
+SHA1 (patch-configure) = aafff388e57f2fc90c965f3c8b89a1819c4e5538
 SHA1 (patch-modules_oss__audio_Makefile) = dd47cf086edfb8ea63b6c58b6d1548177be44786

@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/02/06 11:09:35 fhajny Exp $
+
+Fix bug for LDFLAGS parsing on SunOS.
+
+--- configure.orig      2012-05-25 12:05:57.000000000 +0000
++++ configure
+@@ -468,7 +468,7 @@ case $targetos in
+     SunOS)
+         make="gmake"
+         readelf="greadelf"
+-        LDFLAGS="${opt#--extra-ldflags=}"
++        LDFLAGS="$LDFLAGS"
+         instflags=""
+         #check for 64-bit
+         cat > $TMPC << EOF
