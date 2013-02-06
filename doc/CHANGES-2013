@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.464 2013/02/06 15:51:41 taca Exp $
+$NetBSD: CHANGES-2013,v 1.465 2013/02/06 15:53:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-tk to 1.9.3p385nb1 [taca 2013-02-06]
 	Updated lang/ruby193 to 1.9.3p385 [taca 2013-02-06]
 	Updated devel/ruby-mode to 1.9.3p385 [taca 2013-02-06]
+	Updated devel/ruby-rdoc to 3.12.1 [taca 2013-02-06]
