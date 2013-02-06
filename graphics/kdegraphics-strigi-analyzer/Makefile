@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/01/26 21:37:52 adam Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/06 23:22:30 jperkin Exp $
 
 DISTNAME=	kdegraphics-strigi-analyzer-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 COMMENT=	graphics file format plugins for Strigi Desktop Search
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2013/02/01 22:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/06 23:23:43 jperkin Exp $
 #
 
 DISTNAME=		pinentry-0.8.2
 PKGNAME=		pinentry-qt4-0.8.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2013/01/26 21:36:43 adam Exp $
+# $NetBSD: Makefile,v 1.33 2013/02/06 23:21:19 jperkin Exp $
 #
 
 DISTNAME=	libgnomecups-0.2.3
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomecups/0.2/}
 

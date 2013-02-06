@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2013/01/26 21:37:17 adam Exp $
+# $NetBSD: Makefile,v 1.27 2013/02/06 23:22:02 jperkin Exp $
 
 DISTNAME=		sqlrelay-0.43
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 

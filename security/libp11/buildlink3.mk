@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/01/17 12:02:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2013/02/06 23:21:01 jperkin Exp $
 
 BUILDLINK_TREE+=	libp11
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libp11
 LIBP11_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libp11+=	libp11>=0.2.4
-BUILDLINK_ABI_DEPENDS.libp11+=	libp11>=0.2.6nb2
+BUILDLINK_ABI_DEPENDS.libp11+=	libp11>=0.2.6nb3
 BUILDLINK_PKGSRCDIR.libp11?=	../../security/libp11
 
 .include "../../devel/libltdl/buildlink3.mk"

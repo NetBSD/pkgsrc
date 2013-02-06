@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/01/26 21:37:53 adam Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/06 23:22:32 jperkin Exp $
 #
 
 DISTNAME=	kphotobook-0.0.6
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kphotobook/}
 

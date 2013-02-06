@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2013/01/26 21:37:46 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/02/06 23:22:28 jperkin Exp $
 #
 
 DISTNAME=		flphoto-1.2-source
 PKGNAME=		flphoto-1.2
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fltk/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/05/07 01:53:44 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2013/02/06 23:20:59 jperkin Exp $
 
 BUILDLINK_TREE+=	dkim-milter
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dkim-milter
 DKIM_MILTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dkim-milter+=	dkim-milter>=2.8.2
-BUILDLINK_ABI_DEPENDS.dkim-milter+=	dkim-milter>=2.8.2nb1
+BUILDLINK_ABI_DEPENDS.dkim-milter+=	dkim-milter>=2.8.3nb2
 BUILDLINK_PKGSRCDIR.dkim-milter?=	../../mail/dkim-milter
 BUILDLINK_DEPMETHOD.dkim-milter?=	build
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/12/16 01:52:07 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/06 23:22:00 jperkin Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-pltcl-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	PL/Tcl procedural language for the PostgreSQL backend
 
 DEPENDS+=	postgresql91-server>=${PKGVERSION_NOREV}:../../databases/postgresql91-server

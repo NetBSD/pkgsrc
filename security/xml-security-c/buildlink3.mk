@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2011/02/23 09:02:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2013/02/06 23:21:03 jperkin Exp $
 
 BUILDLINK_TREE+=	xml-security-c
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xml-security-c
 XML_SECURITY_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xml-security-c+=	xml-security-c>=1.4.0
-BUILDLINK_ABI_DEPENDS.xml-security-c+=	xml-security-c>=1.5.1nb3
+BUILDLINK_ABI_DEPENDS.xml-security-c+=	xml-security-c>=1.6.1nb1
 BUILDLINK_PKGSRCDIR.xml-security-c?=	../../security/xml-security-c
 
 .include "../../security/openssl/buildlink3.mk"

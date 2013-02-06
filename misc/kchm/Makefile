@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/01/26 21:38:15 adam Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/06 23:22:56 jperkin Exp $
 #
 
 DISTNAME=	kchm-0.6.5
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	kde misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kchmnew/}
 EXTRACT_SUFX=	.tar.bz2

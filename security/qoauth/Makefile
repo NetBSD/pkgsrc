@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/01/26 21:36:46 adam Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/06 23:21:17 jperkin Exp $
 #
 
 PKGNAME=	qoauth-1.0.1
 DISTNAME=	${PKGNAME_NOREV}-src
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://files.ayoy.net/qoauth/release/1.0.1/src/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/12/16 01:52:01 obache Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/06 23:21:51 jperkin Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Command line utility and library to work with mobile phones
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 18:16:26 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/06 23:23:36 jperkin Exp $
 #
 
 DISTNAME=		engine_pkcs11-0.1.5
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/engine_pkcs11/
 

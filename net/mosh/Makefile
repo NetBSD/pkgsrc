@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/11/29 07:19:35 wen Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/06 23:23:18 jperkin Exp $
 
 DISTNAME=	mosh-1.2.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/downloads/keithw/mosh/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/12/16 01:51:59 obache Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/06 23:21:35 jperkin Exp $
 
 DISTNAME=		libtunepimp-0.5.3
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
 			http://ftp.musicbrainz.org/pub/musicbrainz/
