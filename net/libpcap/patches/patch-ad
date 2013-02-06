@@ -1,13 +1,32 @@
-$NetBSD: patch-ad,v 1.5 2011/09/14 17:30:04 hans Exp $
+$NetBSD: patch-ad,v 1.6 2013/02/06 18:07:04 jperkin Exp $
 
---- fad-getad.c.orig	2010-04-05 19:54:05.000000000 +0200
-+++ fad-getad.c	2011-07-28 20:28:17.246289360 +0200
-@@ -60,7 +60,7 @@ static const char rcsid[] _U_ =
- #include "os-proto.h"
- #endif
+* Re-order includes to avoid bpf_program re-definition.
+
+--- fad-getad.c.orig	2012-03-29 12:57:32.000000000 +0000
++++ fad-getad.c
+@@ -54,12 +54,6 @@ static const char rcsid[] _U_ =
+ #include <string.h>
+ #include <ifaddrs.h>
  
--#ifdef AF_PACKET
-+#if defined(AF_PACKET) && !defined(__sun)
- # ifdef __Lynx__
- /* LynxOS */
- #  include <netpacket/if_packet.h>
+-#include "pcap-int.h"
+-
+-#ifdef HAVE_OS_PROTO_H
+-#include "os-proto.h"
+-#endif
+-
+ #ifdef AF_PACKET
+ # ifdef HAVE_NETPACKET_PACKET_H
+ /* Solaris 11 and later, Linux distributions with newer glibc */
+@@ -77,6 +71,12 @@ static const char rcsid[] _U_ =
+ # endif /* HAVE_NETPACKET_PACKET_H */
+ #endif /* AF_PACKET */
+ 
++#include "pcap-int.h"
++
++#ifdef HAVE_OS_PROTO_H
++#include "os-proto.h"
++#endif
++
+ /*
+  * This is fun.
+  *
