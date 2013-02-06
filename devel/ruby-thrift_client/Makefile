@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:43 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/06 23:22:11 jperkin Exp $
 
 DISTNAME=	thrift_client-0.7.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	tonnerre@NetBSD.org

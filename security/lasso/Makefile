@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/12/16 01:52:33 obache Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/06 23:21:33 jperkin Exp $
 #
 
-PKGREVISION=		10
+PKGREVISION=		11
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-php5

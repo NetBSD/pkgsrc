@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/01/26 21:37:03 adam Exp $
+# $NetBSD: Makefile,v 1.36 2013/02/06 23:21:40 jperkin Exp $
 #
 
 DISTNAME=		kid3-1.6
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		kde audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
 

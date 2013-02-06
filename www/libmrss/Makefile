@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/12/16 01:52:38 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/06 23:21:36 jperkin Exp $
 #
 
 DISTNAME=	libmrss-0.19.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.autistici.org/bakunin/libmrss/
 

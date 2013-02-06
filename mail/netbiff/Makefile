@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 23:02:00 adam Exp $
+# $NetBSD: Makefile,v 1.21 2013/02/06 23:22:46 jperkin Exp $
 #
 
 DISTNAME=		netbiff-0.9.18
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		mail
 MASTER_SITES=		http://www.cs.virginia.edu/~jrk3g/netbiff/
 

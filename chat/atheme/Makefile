@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 00:02:33 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/06 23:21:43 jperkin Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
 PKGNAME=	${DISTNAME:S/-services//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://distfiles.atheme.org/
 EXTRACT_SUFX=	.tbz2

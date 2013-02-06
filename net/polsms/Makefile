@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2012/12/16 01:52:30 obache Exp $
+# $NetBSD: Makefile,v 1.37 2013/02/06 23:23:22 jperkin Exp $
 #
 
 DISTNAME=	sms-2.0.3
 PKGNAME=	pol${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
 

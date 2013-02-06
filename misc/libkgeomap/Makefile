@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/01/26 21:36:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/06 23:21:33 jperkin Exp $
 #
 
 PKGNAME=	libkgeomap-2.5.0
 DISTNAME=	digikam-2.5.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

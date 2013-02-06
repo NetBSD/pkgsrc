@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2012/12/16 01:51:59 obache Exp $
+# $NetBSD: Makefile,v 1.36 2013/02/06 23:21:41 jperkin Exp $
 #
 
 DISTNAME=	mad123-0.8.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mctavish.co.uk/mad123/
 

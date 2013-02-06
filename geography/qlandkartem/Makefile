@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2013/01/26 21:37:39 adam Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/06 23:22:23 jperkin Exp $
 #
 
 DISTNAME=	QLandkarteM.0.2.0
 PKGNAME=	qlandkartem-0.2.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qlandkartegt/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2012/12/16 01:52:16 obache Exp $
+# $NetBSD: Makefile,v 1.45 2013/02/06 23:22:23 jperkin Exp $
 #
 
 DISTNAME=		viking-1.3.2.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}
 

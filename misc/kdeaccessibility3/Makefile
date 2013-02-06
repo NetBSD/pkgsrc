@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2013/01/26 21:38:15 adam Exp $
+# $NetBSD: Makefile,v 1.59 2013/02/06 23:22:57 jperkin Exp $
 
 DISTNAME=	kdeaccessibility-${_KDE_VERSION}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	misc
 COMMENT=	Accessibility support for the KDE integrated X11 desktop
 

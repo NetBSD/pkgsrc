@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/01/26 21:37:43 adam Exp $
+# $NetBSD: Makefile,v 1.28 2013/02/06 23:22:25 jperkin Exp $
 
 DISTNAME=	darktable-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/12/16 01:52:11 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/06 23:21:35 jperkin Exp $
 #
 
 DISTNAME=	libxenserver-5.6.100-1-src
 PKGNAME=	${DISTNAME:S/-1-src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://community.citrix.com/download/attachments/38633496/
 

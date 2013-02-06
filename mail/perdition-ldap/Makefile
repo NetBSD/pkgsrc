@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2012/12/16 01:52:22 obache Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/06 23:22:47 jperkin Exp $
 
-PKGREVISION=		2
+PKGREVISION=		3
 PERDITION_COMMENT=	LDAP user database module
 PERDITION_PKGNAME=	ldap
 

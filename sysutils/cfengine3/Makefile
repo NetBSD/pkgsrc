@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:55 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/06 23:23:48 jperkin Exp $
 #
 
 DISTNAME=	cfengine-3.1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 

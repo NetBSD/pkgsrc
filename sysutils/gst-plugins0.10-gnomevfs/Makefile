@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2012/10/23 19:51:06 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/02/06 23:23:50 jperkin Exp $
 #
 
 GST_PLUGINS0.10_NAME=	gnomevfs
 GST_PLUGINS0.10_DIRS=	ext/gnomevfs
 GST_PLUGINS0.10_FLAGS=	gnome_vfs
-PKGREVISION=		4
+PKGREVISION=		5
 
 .include "../../multimedia/gst-plugins0.10-base/Makefile.common"
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/12/16 01:52:38 obache Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/06 23:23:59 jperkin Exp $
 # FreeBSD Id: ports/www/dojo/Makefile,v 1.14 2011/08/20 17:27:37 ohauer Exp
 
 DISTNAME=		dojo-release-1.7.2
 PKGNAME=		dojo-1.7.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=	http://download.dojotoolkit.org/release-1.7.2/
 
