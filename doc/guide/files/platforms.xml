@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.73 2012/07/25 21:24:44 tez Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.74 2013/02/06 15:25:24 schmonz Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -52,9 +52,11 @@
       will need to download and install the Mac OS X Developer Tools
       from Apple's Developer Connection. See
       <ulink url="http://developer.apple.com/macosx/">http://developer.apple.com/macosx/</ulink>
-      for details.  Also, make sure you install X11 (an optional
-      package included with the Developer Tools) if you intend to
-      build packages that use the X11 Window System.</para>
+      for details. (If you don't want or need the full Xcode GUI,
+      download and install Command Line Tools for Xcode.) Also,
+      make sure you install X11 (an optional package included with
+      the Developer Tools) if you intend to build packages that use
+      the X11 Window System.</para>
     </sect2>
 
     <sect2 id="freebsd">
