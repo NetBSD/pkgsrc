@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.466 2013/02/06 15:57:31 taca Exp $
+$NetBSD: CHANGES-2013,v 1.467 2013/02/06 16:06:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -600,3 +600,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-mode to 1.9.3p385 [taca 2013-02-06]
 	Updated devel/ruby-rdoc to 3.12.1 [taca 2013-02-06]
 	Updated www/contao211 to 2.11.9 [taca 2013-02-06]
+	Updated devel/ruby-railties to 3.0.20nb1 [taca 2013-02-06]
+	Updated devel/ruby-railties31 to 3.1.10nb1 [taca 2013-02-06]
+	Updated devel/ruby-railties32 to 3.2.11nb1 [taca 2013-02-06]
