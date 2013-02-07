@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1692 2013/01/30 13:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1693 2013/02/07 13:47:54 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1454,6 +1454,7 @@ SUBDIR+=	ruby-gettext_i18n_rails
 SUBDIR+=	ruby-gnome2-atk
 SUBDIR+=	ruby-gnome2-gio
 SUBDIR+=	ruby-gnome2-glib
+SUBDIR+=	ruby-gnome2-gobject-introspection
 SUBDIR+=	ruby-gnome2-pango
 SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
