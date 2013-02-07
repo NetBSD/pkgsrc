@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.39 2013/02/07 13:41:57 obache Exp $
+# $NetBSD: Makefile,v 1.1 2013/02/07 13:41:57 obache Exp $
 #
 
-PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk-${VERSION}
-COMMENT=		Ruby binding of GTK+-2.x
+PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk3-${VERSION}
+COMMENT=		Ruby binding of GTK+-3.x
 CATEGORIES=		x11
 
-CONFLICTS+=		ruby-gnome2-gtk-[0-9]*
-CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtk-[0-9]*
+CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtk3-[0-9]*
 
-RUBY_EXTCONF_SUBDIRS=	gtk2
+RUBY_EXTCONF_SUBDIRS=	gtk3
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
+DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gdk3>=${VERSION}:../../graphics/ruby-gnome2-gdk3
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
 
 do-test:
@@ -18,9 +18,11 @@ do-test:
 
 BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ruby-gnome2-gio+=	${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}
+.include "../../devel/ruby-gnome2-gio/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ruby-gnome2-pango+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}
 .include "../../devel/ruby-gnome2-pango/buildlink3.mk"
 .include "../../graphics/ruby-rcairo/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"

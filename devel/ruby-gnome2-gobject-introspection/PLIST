@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/07 13:41:55 obache Exp $
+${RUBY_VENDORLIB}/gobject-introspection.rb
+${RUBY_VENDORLIB}/gobject-introspection/callable-info.rb
+${RUBY_VENDORLIB}/gobject-introspection/collection-reader.rb
+${RUBY_VENDORLIB}/gobject-introspection/interface-info.rb
+${RUBY_VENDORLIB}/gobject-introspection/loader.rb
+${RUBY_VENDORLIB}/gobject-introspection/object-info.rb
+${RUBY_VENDORLIB}/gobject-introspection/repository.rb
+${RUBY_VENDORLIB}/gobject-introspection/struct-info.rb
+${RUBY_VENDORLIB}/gobject-introspection/union-info.rb
+${RUBY_VENDORARCHLIB}/gobject_introspection.${RUBY_DLEXT}

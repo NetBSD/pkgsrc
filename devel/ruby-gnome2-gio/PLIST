@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/11 13:47:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/02/07 13:41:55 obache Exp $
 lib/pkgconfig/ruby-gio2.pc
 ${RUBY_VENDORLIB}/gio2.rb
 ${RUBY_VENDORLIB}/gio2/deprecated.rb
 ${RUBY_VENDORARCHLIB}/gio2.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/rbgio2.h
+${RUBY_VENDORARCHLIB}/rbgio2conversions.h

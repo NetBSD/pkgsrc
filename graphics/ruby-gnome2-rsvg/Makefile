@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2012/10/08 23:01:49 adam Exp $
+# $NetBSD: Makefile,v 1.39 2013/02/07 13:41:56 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-rsvg-${VERSION}
 COMMENT=		Ruby binding of librsvg
-PKGREVISION=		4
 CATEGORIES=		graphics
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-rsvg-[0-9]*
