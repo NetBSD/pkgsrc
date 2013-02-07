@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.472 2013/02/06 21:41:54 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.473 2013/02/07 02:24:40 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/tcpdump to 4.3.0 [jperkin 2013-02-06]
 	Updated net/trafshow to 5.2.3nb2 [jperkin 2013-02-06]
 	Updated security/openssl to 1.0.1d [jperkin 2013-02-06]
+	Updated comms/asterisk18 to 1.8.20.1 [jnemeth 2013-02-07]
