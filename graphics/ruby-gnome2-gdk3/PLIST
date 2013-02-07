@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/07 13:41:55 obache Exp $
+lib/pkgconfig/ruby-gdk3.pc
+${RUBY_VENDORLIB}/gdk3.rb
+${RUBY_VENDORLIB}/gdk3/base.rb
+${RUBY_VENDORLIB}/gdk3/deprecated.rb
+${RUBY_VENDORARCHLIB}/gdk3.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/rbgdk3.h
+${RUBY_VENDORARCHLIB}/rbgdk3conversions.h
