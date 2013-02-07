@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.474 2013/02/07 10:26:04 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.475 2013/02/07 10:28:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -608,3 +608,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/openssl to 1.0.1d [jperkin 2013-02-06]
 	Updated comms/asterisk18 to 1.8.20.1 [jnemeth 2013-02-07]
 	Updated audio/libaudiofile to 0.3.5 [wiz 2013-02-07]
+	Updated graphics/jhead to 2.97 [wiz 2013-02-07]
