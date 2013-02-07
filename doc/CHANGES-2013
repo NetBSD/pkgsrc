@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.476 2013/02/07 13:46:32 obache Exp $
+$NetBSD: CHANGES-2013,v 1.477 2013/02/07 20:34:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -626,3 +626,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.1 [obache 2013-02-07]
 	Added x11/ruby-gnome2-gtksourceview3 to 1.2.1 [obache 2013-02-07]
 	Updated x11/ruby-gnome2-vte to 1.2.1 [obache 2013-02-07]
+	Updated devel/xulrunner to 18.0.2 [ryoon 2013-02-07]
+	Updated www/firefox to 18.0.2 [ryoon 2013-02-07]
