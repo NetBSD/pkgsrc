@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.475 2013/02/07 10:28:48 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.476 2013/02/07 13:46:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -609,3 +609,20 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk18 to 1.8.20.1 [jnemeth 2013-02-07]
 	Updated audio/libaudiofile to 0.3.5 [wiz 2013-02-07]
 	Updated graphics/jhead to 2.97 [wiz 2013-02-07]
+	Updated meta-pkgs/ruby-gnome2 to 1.2.1 [obache 2013-02-07]
+	Updated devel/ruby-gnome2-atk to 1.2.1 [obache 2013-02-07]
+	Updated devel/ruby-gnome2-gio to 1.2.1 [obache 2013-02-07]
+	Added devel/ruby-gnome2-gobject-introspection version 1.2.1 [obache 2013-02-07]
+	Updated devel/ruby-gnome2-glib to 1.2.1 [obache 2013-02-07]
+	Updated devel/ruby-gnome2-pango to 1.2.1 [obache 2013-02-07]
+	Added graphics/ruby-gnome2-gdk3 version 1.2.1 [obache 2013-02-07]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 1.2.1 [obache 2013-02-07]
+	Updated graphics/ruby-gnome2-goocanvas to 1.2.1 [obache 2013-02-07]
+	Updated graphics/ruby-gnome2-rsvg to 1.2.1 [obache 2013-02-07]
+	Updated multimedia/ruby-gnome2-gstreamer to 1.2.1 [obache 2013-02-07]
+	Updated print/ruby-gnome2-poppler to 1.2.1 [obache 2013-02-07]
+	Updated x11/ruby-gnome2-gtk to 1.2.1 [obache 2013-02-07]
+	Added x11/ruby-gnome2-gtk3 version 1.2.1 [obache 2013-02-07]
+	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.1 [obache 2013-02-07]
+	Added x11/ruby-gnome2-gtksourceview3 to 1.2.1 [obache 2013-02-07]
+	Updated x11/ruby-gnome2-vte to 1.2.1 [obache 2013-02-07]
