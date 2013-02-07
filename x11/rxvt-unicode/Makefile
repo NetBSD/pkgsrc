@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/01/20 13:34:54 morr Exp $
+# $NetBSD: Makefile,v 1.42 2013/02/07 20:21:26 morr Exp $
 
 DISTNAME=		rxvt-unicode-9.16
 CATEGORIES=		x11
@@ -15,8 +15,6 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_FEATURES+=		snprintf
-
-FTPUSERAGENT=		"NetBSD/ftp"
 
 CONFIGURE_ENV+=		ac_cv_path_TIC=no
 
