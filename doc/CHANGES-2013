@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.478 2013/02/07 20:51:34 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.479 2013/02/08 13:20:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -629,3 +629,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/xulrunner to 18.0.2 [ryoon 2013-02-07]
 	Updated www/firefox to 18.0.2 [ryoon 2013-02-07]
 	Updated mail/msmtp to 1.4.30 [ryoon 2013-02-07]
+	Updated www/ruby-rack12 to 1.2.8 [taca 2013-02-08]
+	Updated www/ruby-rack13 to 1.3.10 [taca 2013-02-08]
