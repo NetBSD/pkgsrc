@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.483 2013/02/08 17:19:35 adam Exp $
+$NetBSD: CHANGES-2013,v 1.484 2013/02/08 18:14:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -635,3 +635,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/roundcube to 0.8.5 [taca 2013-02-08]
 	Updated security/openssl to 1.0.1dnb2 [jperkin 2013-02-08]
 	Updated graphics/pngcrush to 1.7.47 [adam 2013-02-08]
+	Updated www/seamonkey to 2.15.2 [ryoon 2013-02-08]
