@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2013/02/06 23:23:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.61 2013/02/08 23:51:08 pettai Exp $
 
-DISTNAME=	nsd-3.2.14
+DISTNAME=	nsd-3.2.15
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
@@ -8,11 +8,14 @@ MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.nlnetlabs.nl/nsd/index.html
 COMMENT=	Authoritative-only DNS server
+LICENSE=	modified-bsd
+
+BUILD_DEFS+=	VARBASE
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nsd
-PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUPPORTED_OPTIONS=	inet6 rrl
 PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
@@ -27,6 +30,11 @@ CONFIGURE_ARGS+=--enable-bind8-stats
 CONFIGURE_ARGS+=--enable-ipv6
 .else
 CONFIGURE_ARGS+=--disable-ipv6
+.endif
+.if !empty(PKG_OPTIONS:Mrrl)
+CONFIGURE_ARGS+=--enable-ratelimit
+.else
+CONFIGURE_ARGS+=--disable-ratelimit
 .endif
 
 CONFIGURE_ARGS+=--with-pidfile=${VARBASE}/run/nsd.pid
