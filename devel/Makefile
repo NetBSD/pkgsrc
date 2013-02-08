@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1693 2013/02/07 13:47:54 obache Exp $
+# $NetBSD: Makefile,v 1.1694 2013/02/08 23:40:55 tonnerre Exp $
 #
 
 COMMENT=	Development utilities
@@ -252,6 +252,7 @@ SUBDIR+=	gnustep-objc
 SUBDIR+=	gnustep-objc-lf2
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
+SUBDIR+=	google-glog
 SUBDIR+=	googletest
 SUBDIR+=	gperf
 SUBDIR+=	gprbuild-aux
