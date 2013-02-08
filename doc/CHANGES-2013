@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.485 2013/02/08 23:43:36 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.486 2013/02/08 23:53:11 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.47 [adam 2013-02-08]
 	Updated www/seamonkey to 2.15.2 [ryoon 2013-02-08]
 	Added devel/google-glog version 0.3.3 [tonnerre 2013-02-08]
+	Updated net/nsd to 3.2.15 [pettai 2013-02-08]
