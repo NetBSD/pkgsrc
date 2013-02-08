@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/06 23:22:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/08 12:23:24 wiz Exp $
 
 .include "dist.mk"
 
@@ -54,7 +54,9 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.${OPSYS}
 PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
+.if !defined(USE_DESTDIR) || empty(USE_DESTDIR:M[Yy][Ee][Ss])
 PRIVILEGED_STAGES+=	clean
+.endif
 # XXX work around a botched autoconf check which ignores libintl
 CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
