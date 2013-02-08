@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2007/08/11 23:48:40 joerg Exp $
+$NetBSD: patch-aa,v 1.12 2013/02/08 23:51:08 pettai Exp $
+
+Install nsd.conf.sample in examples directory
 
 --- Makefile.in.orig	2007-08-12 00:06:16.000000000 +0200
 +++ Makefile.in
