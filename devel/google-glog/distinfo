@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/02/08 22:06:37 tonnerre Exp $
+
+SHA1 (glog-0.3.3.tar.gz) = ed40c26ecffc5ad47c618684415799ebaaa30d65
+RMD160 (glog-0.3.3.tar.gz) = 27fb1bd4156f6715b84d59293d96d1cadc79ea7a
+Size (glog-0.3.3.tar.gz) = 509676 bytes
