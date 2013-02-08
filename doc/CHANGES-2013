@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.482 2013/02/08 14:11:21 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.483 2013/02/08 17:19:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -624,7 +624,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-gtk to 1.2.1 [obache 2013-02-07]
 	Added x11/ruby-gnome2-gtk3 version 1.2.1 [obache 2013-02-07]
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.1 [obache 2013-02-07]
-	Added x11/ruby-gnome2-gtksourceview3 to 1.2.1 [obache 2013-02-07]
+	Added x11/ruby-gnome2-gtksourceview3 version 1.2.1 [obache 2013-02-07]
 	Updated x11/ruby-gnome2-vte to 1.2.1 [obache 2013-02-07]
 	Updated devel/xulrunner to 18.0.2 [ryoon 2013-02-07]
 	Updated www/firefox to 18.0.2 [ryoon 2013-02-07]
@@ -634,3 +634,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rack to 1.4.5 [taca 2013-02-08]
 	Updated mail/roundcube to 0.8.5 [taca 2013-02-08]
 	Updated security/openssl to 1.0.1dnb2 [jperkin 2013-02-08]
+	Updated graphics/pngcrush to 1.7.47 [adam 2013-02-08]
