@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.25 2013/02/02 10:41:01 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.26 2013/02/08 16:19:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -157,3 +157,5 @@ www/ruby-activeresource3: security update
 www/ruby-rails3: security update
 Pullup ticket #4054 - requested by taca
 net/samba: security update
+Pullup ticket #4055 - requested by taca
+security/openssl: security update
