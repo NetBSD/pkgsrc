@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2013/02/06 23:24:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.113 2013/02/08 00:10:47 tron Exp $
 
 DISTNAME=	lynx2.8.7
 PKGNAME=	lynx-2.8.7
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--without-included-gettext
 
 # With SSL, lynx can get https:// and snews:// URL's.
 CONFIGURE_ARGS+=	--with-ssl
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.openssl}/include/openssl
 
 # Note: --enable-{default-colors,scrollbar} are simply ignored
 # for certain settings of --with-screen.
