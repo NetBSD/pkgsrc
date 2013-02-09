@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2000/03/18 19:51:33 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2013/02/09 18:30:14 christos Exp $
 
---- Pnews.SH.orig	Sun Jan 17 20:01:22 1999
-+++ Pnews.SH	Sat Mar 18 13:47:13 2000
-@@ -911,7 +911,12 @@
+--- Pnews.SH.orig	2000-10-31 22:43:16.000000000 +0000
++++ Pnews.SH
+@@ -911,7 +911,12 @@ usg)
  esac
  
  case $orgname in
