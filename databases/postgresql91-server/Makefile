@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:22:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/09 11:19:16 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-server-/}
-PKGREVISION=	2
 COMMENT=	PostgreSQL database server programs
 
 # mips has no TAS implementation
@@ -76,9 +75,3 @@ post-wrapper:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-# Because RCD_SCRIPTS_EXAMPLEDIR isn't configurable (yet?),
-# we override it here:
-.if !empty(PG_SUBPREFIX)
-RCD_SCRIPTS_EXAMPLEDIR:=	$(PG_SUBPREFIX:/=)/$(RCD_SCRIPTS_EXAMPLEDIR)
-.endif
