@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2013/02/06 23:22:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.64 2013/02/09 22:11:36 ryoon Exp $
 
 DISTNAME=	kdetoys-${_KDE_VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	games
 COMMENT=	Toys for the KDE integrated X11 desktop
 
