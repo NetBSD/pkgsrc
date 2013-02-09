@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/07 13:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/09 02:57:54 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gdk3-${VERSION}
@@ -11,8 +11,6 @@ RUBY_EXTCONF_SUBDIRS=	gdk3
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
-
-RUBY_VERSION_SUPPORTED=	193
 
 do-test:
 	${RUN} cd ${WRKSRC}/gtk2/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
