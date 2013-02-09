@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.497 2013/02/09 21:00:28 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.498 2013/02/09 21:36:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -715,3 +715,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/py-icalendar to 3.3 [kleink 2013-02-09]
 	Updated audio/jack to 0.121.3 [ryoon 2013-02-09]
 	Updated pkgtools/pkgsrc-todo to 1.2 [wiz 2013-02-09]
+	Updated math/cloog to 0.18.0 [wiz 2013-02-09]
