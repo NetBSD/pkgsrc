@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2012/09/15 10:03:31 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2013/02/09 22:11:28 ryoon Exp $
 
 BUILDLINK_TREE+=	arts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	arts
 ARTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.arts+=	arts>=1.1.4nb1
-BUILDLINK_ABI_DEPENDS.arts+=	arts>=1.5.10nb8
+BUILDLINK_ABI_DEPENDS.arts+=	arts>=1.5.10nb10
 BUILDLINK_PKGSRCDIR.arts?=	../../audio/arts
 
 .include "../../audio/libaudiofile/buildlink3.mk"
