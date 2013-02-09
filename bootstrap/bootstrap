@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.184 2013/02/09 12:41:43 obache Exp $
+# $NetBSD: bootstrap,v 1.185 2013/02/09 12:45:24 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -961,8 +961,8 @@ $shprog ./bootstrap.sh)"
 bootstrap_bmake() {
 	echo_msg "Bootstrapping bmake"
 	copy_src $pkgsrcdir/devel/bmake/files bmake
-	run_cmd "(cd $wrkdir/bmake && env $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o $opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $wrkdir/bin/bmake"
+	run_cmd "(cd $wrkdir/bmake && env $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o bootstrap.$opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/bootstrap.$opsys/bmake $wrkdir/bin/bmake"
 }
 bootstrap_bmake
 
