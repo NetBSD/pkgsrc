@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/12/15 18:17:53 abs Exp $
+$NetBSD: distinfo,v 1.3 2013/02/09 10:35:19 ryoon Exp $
 
 SHA1 (UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
