@@ -1,22 +1,18 @@
-$NetBSD: distinfo,v 1.9 2012/01/11 17:51:21 hans Exp $
+$NetBSD: distinfo,v 1.10 2013/02/09 19:59:44 ryoon Exp $
 
-SHA1 (jack-audio-connection-kit-0.115.1.tar.bz2) = 13c07dd4c9bc53475084f8e7a9c5bd9791f76838
-RMD160 (jack-audio-connection-kit-0.115.1.tar.bz2) = fa4e0eace1a21cdfb29b2fe32b38a0c12b98434a
-Size (jack-audio-connection-kit-0.115.1.tar.bz2) = 606162 bytes
+SHA1 (jack-audio-connection-kit-0.121.3.tar.gz) = 7d6e2219660222d1512ee704dd88a534b3e3089e
+RMD160 (jack-audio-connection-kit-0.121.3.tar.gz) = 0b41b17b0606a6cffdab765ba6a47d0bc6ac9705
+Size (jack-audio-connection-kit-0.121.3.tar.gz) = 1083545 bytes
 SHA1 (patch-aa) = f2346262d7590491f005af1c450f4436ec60c58e
 SHA1 (patch-ab) = 8531e1af0c3781a238d3793bdd58577ed598b67a
-SHA1 (patch-ac) = b7d6a3bdb890afa99a1849a4db694df509c9e19a
 SHA1 (patch-ad) = 4e37eaee3bd8674e20d116be80174b99dd9d6e20
 SHA1 (patch-af) = 2a40f3a51a088e62352d7cdcc27eb41f3064ae7e
-SHA1 (patch-ag) = 2d64e9b454ed813308b58f888045f955d8df9d58
-SHA1 (patch-ah) = cbc69bad1548f4dc67a4fa4d81e2b6448964321a
-SHA1 (patch-ai) = 6ba07c9c4a3997bc7b121f60d79a997d0b9fe646
-SHA1 (patch-aj) = 9fc6492b6aa28d9b61b7abeced22af9ad90850dc
+SHA1 (patch-ah) = e70d2783d79c7177b774e8256cd2eb5c803a6488
+SHA1 (patch-aj) = 90b38c6b2c883d21ea0d058f7e4426f3d16c8b07
 SHA1 (patch-ak) = 8e6d8f92d496991f3de02eeb2fffc89c865a3f63
-SHA1 (patch-am) = 1453ff3a3e49359e281fcad9a4dbd4096a0b2356
 SHA1 (patch-ao) = 60930e5ecd408ebccbca8342083189b7d2d06a1b
-SHA1 (patch-ap) = 60738eae086bdab7aa1986889da95621353f7aa6
-SHA1 (patch-aq) = 212441bb56a4cf33a213bb299f42e7dbcbc33274
+SHA1 (patch-ap) = 64b06cb300940f3e119bfcce033bf47195ab665f
+SHA1 (patch-aq) = cf735dd28af1373b4b2511978fca6af032591859
 SHA1 (patch-ar) = 892dcd268eef033a9dcb2251560fc48662b54916
 SHA1 (patch-as) = 46c609026d53fdebf1d46263d8f196cd8ecbac77
-SHA1 (patch-drivers_netjack_netjack__packet.c) = 6ac2d470a10a823d66f3836989fa7125eae3e1b9
+SHA1 (patch-drivers_netjack_netjack__packet.c) = eb70ec5644e960e0cf0258a15d763be31c11bb02
