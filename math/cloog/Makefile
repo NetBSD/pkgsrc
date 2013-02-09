@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 23:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/09 21:36:02 wiz Exp $
 #
 
-DISTNAME=	cloog-0.16.2
-PKGREVISION=	1
+DISTNAME=	cloog-0.18.0
 CATEGORIES=	math
 MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/infrastructure/
 
