@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.version,v 1.1 2013/02/09 13:27:27 ryoon Exp $
+
+# When updating subversion, all packages are updated at the same time
+# to have a consistent set of packages.  A particularly tricky aspect
+# is our interaction with the svn build system.  See the make target
+# "svn-build-outputs-hack" in devel/subversion-base/Makefile when
+# changing the version.
+
+.if !defined(SVNVER)
+SVNVER=		1.6.20
+.endif

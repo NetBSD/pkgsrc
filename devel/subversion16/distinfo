@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/02/09 13:27:27 ryoon Exp $
+
+SHA1 (subversion-1.6.20.tar.gz) = 215083e6fc367b46fa76be82841115a32f0a5766
+RMD160 (subversion-1.6.20.tar.gz) = 3857eab430a2f7ffec6cd839fdbd6f149746ec3e
+Size (subversion-1.6.20.tar.gz) = 7538241 bytes
+SHA1 (patch-ad) = 16fd291b20c96879c065cdb53009bf50aa2b24e7
+SHA1 (patch-ae) = 24282273e2a2e6f768b303fa787cdfb90ef67899
+SHA1 (patch-build_generator_gen__make.py) = 5da97616ce95c8dc9e4abc0740e3c6768dd166a2
+SHA1 (patch-configure) = 1896256fbd44a4969b98d27a52d3f700e2ea49f2

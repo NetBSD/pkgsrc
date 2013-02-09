@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1 2013/02/09 13:27:27 ryoon Exp $
+
+--- Makefile.in.orig	2010-11-25 17:55:59.000000000 +0000
++++ Makefile.in
+@@ -364,12 +364,12 @@ local-install: @INSTALL_RULES@
+ 
+ ### HACK!! Find a better way to do this
+ revision-install:
+-	test -d $(DESTDIR)$(includedir)/subversion-1 || \
+-	  $(MKDIR) $(DESTDIR)$(includedir)/subversion-1
++	test -d $(DESTDIR)$(includedir)/subversion-116 || \
++	  $(MKDIR) $(DESTDIR)$(includedir)/subversion-116
+ 	(subversion/svnversion/svnversion $(top_srcdir) ||  \
+ 	 svnversion $(top_srcdir) ||                        \
+ 	 echo "unknown";                                    \
+-	) > $(DESTDIR)$(includedir)/subversion-1/svn-revision.txt
++	) > $(DESTDIR)$(includedir)/subversion-116/svn-revision.txt
+ 
+ install-static: @INSTALL_STATIC_RULES@
+ 
+@@ -656,7 +656,7 @@ install-man:
+           $(MKDIR) $(DESTDIR)$(manroot)$$ext;                              \
+           inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`;                   \
+           inst=`echo $$inst | sed -e 's/^.*\///'`;                         \
+-          inst=`echo $$inst`.$$ext;                                        \
++          inst=`echo $$inst`16.$$ext;                                        \
+           echo "$(INSTALL_DATA) $$file $(DESTDIR)$(manroot)$$ext/$$inst";  \
+           $(INSTALL_DATA) $$file $(DESTDIR)$(manroot)$$ext/$$inst;         \
+         done
+@@ -682,7 +682,7 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
+ 	./config.status subversion/bindings/swig/perl/native/Makefile.PL
+ 
+ $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
+-	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL
++	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL INSTALLDIRS=vendor
+ 
+ # There is a "readlink -f" command on some systems for the same purpose,
+ # but it's not as portable (e.g. Mac OS X doesn't have it).  These should
