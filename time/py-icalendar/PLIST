@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/08 23:36:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/02/09 16:55:33 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -50,6 +50,9 @@ ${PYSITELIB}/icalendar/tests/test_encoding.pyo
 ${PYSITELIB}/icalendar/tests/test_icalendar.py
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyc
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyo
+${PYSITELIB}/icalendar/tests/test_prop.py
+${PYSITELIB}/icalendar/tests/test_prop.pyc
+${PYSITELIB}/icalendar/tests/test_prop.pyo
 ${PYSITELIB}/icalendar/tests/test_property_params.py
 ${PYSITELIB}/icalendar/tests/test_property_params.pyc
 ${PYSITELIB}/icalendar/tests/test_property_params.pyo
