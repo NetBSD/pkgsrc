@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 2013/02/09 13:27:27 ryoon Exp $
+
+Second hunk is subversion Revision 1145203.  Ensure the
+Perl extension is built using the Perl compiler flags.
+
+--- subversion/bindings/swig/perl/native/Makefile.PL.in.orig	2010-11-24 20:42:16.000000000 +0000
++++ subversion/bindings/swig/perl/native/Makefile.PL.in
+@@ -14,9 +14,10 @@ my $svnlib_srcdir = "${top_srcdir}/subve
+ my $svnlib_builddir = "${top_builddir}/subversion";
+ my $swig_srcdir = "${svnlib_srcdir}/bindings/swig";
+ my $swig_builddir = "${svnlib_builddir}/bindings/swig";
++my $subversion_base_lib = $ENV{SUBVERSION_BASE_PREFIX} . "/lib";
+ 
+ my @modules = qw/client delta fs ra repos wc/;
+-my @ldpaths = ("$swig_builddir/perl/libsvn_swig_perl/.libs",
++my @ldpaths = ("$swig_builddir/perl/libsvn_swig_perl/.libs", $subversion_base_lib,
+                map {"$svnlib_builddir/libsvn_$_/.libs"} (@modules, qw/diff subr
+                                                                       ra_local
+                                                                       ra_svn
+@@ -43,7 +44,7 @@ chomp $apr_shlib_path_var;
+ my %config = (
+     ABSTRACT => 'Perl bindings for Subversion',
+     DEFINE => $cppflags,
+-    CCFLAGS => $cflags,
++    CCFLAGS => join(' ', $cflags, $Config{ccflags}),
+     INC  => join(' ',$apr_cflags, $apu_cflags, 
+                  " -I$swig_srcdir/perl/libsvn_swig_perl",
+                  " -I$svnlib_srcdir/include",
