@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/30 10:40:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/09 20:59:57 wiz Exp $
 bin/add_todo
+bin/list_todo
 bin/obsolete_todo
 man/man1/add_todo.1
+man/man1/list_todo.1
 man/man1/obsolete_todo.1
