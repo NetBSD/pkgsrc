@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:56:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/09 09:39:28 obache Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-534.113.1.${SUSE_ARCH}
 RPMUPDPKGS+=	bash-4.2-1.14.1.${SUSE_ARCH}
-RPMPKGS+=	coreutils-8.14-3.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	coreutils-8.14-3.19.1.${SUSE_ARCH}
 RPMPKGS+=	cyrus-sasl-2.1.23-20.1.2.${SUSE_ARCH}
 RPMPKGS+=	findutils-4.4.2-17.1.2.${SUSE_ARCH}
 RPMPKGS+=	gdbm-1.8.3-388.1.3.${SUSE_ARCH}
