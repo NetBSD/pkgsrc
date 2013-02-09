@@ -1,13 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/02/09 13:22:11 ryoon Exp $
 lib/libsvn_swig_ruby-1.la
-${RUBY_VENDORARCHLIB}/svn/ext/client.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/core.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/delta.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/diff.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/fs.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/ra.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/repos.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/svn/ext/wc.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/svn/client.rb
 ${RUBY_VENDORLIB}/svn/commit-mailer.rb
 ${RUBY_VENDORLIB}/svn/core.rb
@@ -20,7 +12,16 @@ ${RUBY_VENDORLIB}/svn/repos.rb
 ${RUBY_VENDORLIB}/svn/synchronizer.rb
 ${RUBY_VENDORLIB}/svn/util.rb
 ${RUBY_VENDORLIB}/svn/wc.rb
+${RUBY_VENDORARCHLIB}/svn/ext/client.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/core.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/delta.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/diff.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/fs.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/ra.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/repos.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/wc.${RUBY_DLEXT}
 share/examples/subversion/ruby/commit-email.rb
+share/examples/subversion/ruby/info.rb
 share/examples/subversion/ruby/svnlog2html.rb
 share/examples/subversion/ruby/svnlook.rb
 share/examples/subversion/ruby/svnshell.rb

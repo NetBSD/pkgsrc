@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.20 2012/04/13 21:17:38 shattered Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/02/09 13:22:10 ryoon Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
 bin/svnlook
+bin/svnrdump
 bin/svnserve
 bin/svnsync
 bin/svnversion
@@ -11,6 +12,7 @@ include/subversion-1/mod_dav_svn.h
 include/subversion-1/svn-revision.txt
 include/subversion-1/svn_auth.h
 include/subversion-1/svn_base64.h
+include/subversion-1/svn_cache_config.h
 include/subversion-1/svn_checksum.h
 include/subversion-1/svn_client.h
 include/subversion-1/svn_cmdline.h
@@ -68,6 +70,7 @@ man/man1/svn.1
 man/man1/svnadmin.1
 man/man1/svndumpfilter.1
 man/man1/svnlook.1
+man/man1/svnrdump.1
 man/man1/svnsync.1
 man/man1/svnversion.1
 man/man5/svnserve.conf.5
@@ -79,7 +82,6 @@ share/doc/subversion/lj_article.txt
 share/doc/subversion/svn-best-practices.html
 share/examples/rc.d/svnserve
 share/examples/subversion/backup/hot-backup.py
-share/examples/subversion/cgi/tweak-log.cgi
 share/examples/subversion/hook-scripts/commit-access-control.cfg.example
 share/examples/subversion/hook-scripts/commit-access-control.pl
 share/examples/subversion/hook-scripts/commit-access-control.pl.in
