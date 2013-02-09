@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/04/11 21:22:00 wiz Exp $
+$NetBSD: distinfo,v 1.3 2013/02/09 21:36:02 wiz Exp $
 
-SHA1 (cloog-0.16.2.tar.gz) = 3bdccfe24e5bd5850cbd28eec70c6aeaa94747ab
-RMD160 (cloog-0.16.2.tar.gz) = 2b915298832aa7cbd584a4f6f4991b2d931b773e
-Size (cloog-0.16.2.tar.gz) = 1850841 bytes
-SHA1 (patch-isl_Makefile.in) = af18659c4f7d0b7765f905e79ad08cb9858d0d1f
+SHA1 (cloog-0.18.0.tar.gz) = 85f620a26aabf6a934c44ca40a9799af0952f863
+RMD160 (cloog-0.18.0.tar.gz) = abe274a5ff95c8a08e73c58e5d891a804d057ece
+Size (cloog-0.18.0.tar.gz) = 3776262 bytes
