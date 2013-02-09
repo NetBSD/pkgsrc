@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.495 2013/02/09 16:59:01 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.496 2013/02/09 20:00:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -713,3 +713,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/ruby-hiera version 1.0.0 [taca 2013-02-09]
 	Updated databases/ruby-sequel to 3.44.0 [taca 2013-02-09]
 	Updated time/py-icalendar to 3.3 [kleink 2013-02-09]
+	Updated audio/jack to 0.121.3 [ryoon 2013-02-09]
