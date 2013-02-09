@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:23:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2013/02/09 19:59:44 ryoon Exp $
 
 BUILDLINK_TREE+=	jack
 
 .if !defined(JACK_BUILDLINK3_MK)
 JACK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.jack+=	jack>=0.110.0
+BUILDLINK_API_DEPENDS.jack+=	jack>=0.121.3
 BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack
 
 .include "../../audio/libsamplerate/buildlink3.mk"
