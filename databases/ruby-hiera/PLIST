@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/09 15:39:09 taca Exp $
+bin/hiera
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/hiera
+${GEM_LIBDIR}/lib/hiera.rb
+${GEM_LIBDIR}/lib/hiera/backend.rb
+${GEM_LIBDIR}/lib/hiera/backend/yaml_backend.rb
+${GEM_LIBDIR}/lib/hiera/config.rb
+${GEM_LIBDIR}/lib/hiera/console_logger.rb
+${GEM_LIBDIR}/lib/hiera/noop_logger.rb
+${GEM_LIBDIR}/lib/hiera/puppet_logger.rb
+${GEM_LIBDIR}/lib/hiera/util.rb
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/unit/backend/yaml_backend_spec.rb
+${GEM_LIBDIR}/spec/unit/backend_spec.rb
+${GEM_LIBDIR}/spec/unit/config_spec.rb
+${GEM_LIBDIR}/spec/unit/console_logger_spec.rb
+${GEM_LIBDIR}/spec/unit/hiera_spec.rb
+${GEM_LIBDIR}/spec/unit/util_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
