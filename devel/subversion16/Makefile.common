@@ -1,0 +1,53 @@
+# $NetBSD: Makefile.common,v 1.1 2013/02/09 13:27:27 ryoon Exp $
+# used by devel/java-subversion16/Makefile
+# used by devel/p5-subversion16/Makefile
+# used by devel/py-subversion16/Makefile
+# used by devel/ruby-subversion16/Makefile
+# used by devel/subversion-base16/Makefile
+# used by devel/subversion16/Makefile
+# used by www/ap2-subversion16/Makefile
+
+DISTNAME=		subversion-${SVNVER}
+CATEGORIES=		devel scm
+MASTER_SITES=		http://subversion.tigris.org/downloads/
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://subversion.apache.org/
+LICENSE=		apache-1.1
+
+# People who might update Makefile.version may not be set up to test
+# ruby/python/perl and java bindings, and testing ap2-subversion16 is
+# awkward.  If you object to updates without these tests, please
+# volunteer to test patches and your email address can be recorded
+# here.  (Absent volunteers, breakage of language bindings will not be
+# considered a terrible occurrence.)
+MAINTAINER_TEST_VOLUNTEERS=
+
+.include "../../devel/subversion16/Makefile.version"
+
+SVNEXAMPLES=		${PREFIX}/share/examples/subversion16
+SVNDOC=			${PREFIX}/share/doc/subversion16
+
+DISTINFO_FILE=		${.CURDIR}/../../devel/subversion16/distinfo
+FILESDIR=		${.CURDIR}/../../devel/subversion16/files
+PATCHDIR=		${.CURDIR}/../../devel/subversion16/patches
+
+USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../devel/subversion16-base/options.mk"
+
+.if !empty(PKG_OPTIONS:Mserf)
+CONFIGURE_ARGS+=	--with-serf=${BUILDLINK_PREFIX.serf} --without-neon
+.else
+CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
+.endif
+
+# workaround: does not install info file, but does create directory
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
+
+BUILDLINK_API_DEPENDS.subversion16-base+=	subversion16-base>=${SVNVER}
+
+.include "../../devel/gettext-lib/buildlink3.mk"
