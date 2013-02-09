@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2013/02/06 23:23:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2013/02/09 22:32:45 markd Exp $
 
-DISTNAME=	strigi-0.7.7
-PKGREVISION=	1
+DISTNAME=	strigi-0.7.8
 CATEGORIES=	sysutils
-MASTER_SITES=	http://rdieter.fedorapeople.org/strigi/
+MASTER_SITES=	http://www.vandenoever.info/software/strigi/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
