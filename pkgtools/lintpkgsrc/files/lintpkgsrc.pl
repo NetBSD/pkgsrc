@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.2 2012/09/09 15:47:35 mspo Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.3 2013/02/09 18:51:56 mspo Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1508,20 +1508,6 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
         sum  => 'IGNORE'
     };
 
-# bad for memory
-#    foreach my $file ( listdir( "$pkgdistdir", undef ) ) {
-#        my ($dist);
-#
-#        if ( !defined( $dist = $distfiles{$file} ) ) {
-#            $bad_distfiles{$file} = 1;
-#
-#        }
-#        else {
-#            if ( $dist->{sum} ne 'IGNORE' ) {
-#                push( @{ $sumfiles{ $dist->{sumtype} } }, $file );
-#            }
-#        }
-#    }
 # check each file in $pkgdistdir
     find ( { wanted => sub {
             my ($dist);
@@ -1529,6 +1515,9 @@ sub scan_pkgsrc_distfiles_vs_distinfo($$$$) {
             {
                 my $distn = $File::Find::name;
                 $distn =~ s/$pkgdistdir\/?//g;
+		#pkg/47516 ignore cvs dirs
+		return if $distn =~ m/^\.cvsignore/;
+		return if $distn =~ m/^CVS\//;
                 if ( !defined ($dist = $distfiles{$distn} ) ) {
                     $bad_distfiles{$distn} = 1;
                 }
