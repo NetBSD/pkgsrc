@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.490 2013/02/09 11:23:30 adam Exp $
+$NetBSD: CHANGES-2013,v 1.491 2013/02/09 13:24:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -702,3 +702,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/postgresql83-plperl to 8.3.23 [adam 2013-02-09]
 	Updated databases/postgresql83-pltcl to 8.3.23 [adam 2013-02-09]
 	Updated databases/postgresql83-server to 8.3.23 [adam 2013-02-09]
+	Updated devel/subversion to 1.7.8 [ryoon 2013-02-09]
+	Updated devel/subversion-base to 1.7.8 [ryoon 2013-02-09]
+	Updated devel/p5-subversion to 1.7.8 [ryoon 2013-02-09]
+	Updated devel/py-subversion to 1.7.8 [ryoon 2013-02-09]
+	Updated devel/ruby-subversion to 1.7.8 [ryoon 2013-02-09]
+	Updated devel/java-subversion to 1.7.8 [ryoon 2013-02-09]
+	Updated www/ap2-subversion to 1.7.8 [ryoon 2013-02-09]
