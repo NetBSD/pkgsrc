@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.493 2013/02/09 15:40:34 taca Exp $
+$NetBSD: CHANGES-2013,v 1.494 2013/02/09 15:42:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -711,3 +711,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ap2-subversion to 1.7.8 [ryoon 2013-02-09]
 	Added devel/subversion16 version 1.6.20 [ryoon 2013-02-09]
 	Added databases/ruby-hiera version 1.0.0 [taca 2013-02-09]
+	Updated databases/ruby-sequel to 3.44.0 [taca 2013-02-09]
