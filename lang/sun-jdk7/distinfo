@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/12/15 18:18:28 abs Exp $
+$NetBSD: distinfo,v 1.3 2013/02/09 10:35:20 ryoon Exp $
 
 SHA1 (jdk-7u10-linux-i586.tar.gz) = cef0f812aaa5b1245fdd007ca553da4eef8a8429
 RMD160 (jdk-7u10-linux-i586.tar.gz) = eb8c672e59e66dff46f7d0badd112ef6f5e393fb
