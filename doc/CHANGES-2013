@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.488 2013/02/09 09:39:45 obache Exp $
+$NetBSD: CHANGES-2013,v 1.489 2013/02/09 10:36:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -640,3 +640,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/nsd to 3.2.15 [pettai 2013-02-08]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.262 [obache 2013-02-09]
 	Updated emulators/suse121_base to 12.1nb5 [obache 2013-02-09]
+	Updated lang/sun-jre7 to 7.0.13 [ryoon 2013-02-09]
+	Updated lang/sun-jdk7 to 7.0.13 [ryoon 2013-02-09]
