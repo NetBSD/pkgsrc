@@ -1,4 +1,4 @@
-# $NetBSD: tools.Minix.mk,v 1.1 2011/11/05 17:10:04 tcort Exp $
+# $NetBSD: tools.Minix.mk,v 1.2 2013/02/09 03:41:27 tcort Exp $
 #
 # System-supplied tools for the Minix operating system.
 
@@ -26,7 +26,7 @@ TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/flex
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.id?=		/usr/bin/id
-TOOLS_PLATFORM.install?=	/bin/install
+TOOLS_PLATFORM.install?=	/usr/bin/install
 TOOLS_PLATFORM.lex?=		/usr/bin/lex
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
@@ -38,7 +38,7 @@ TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/usr/bin/rmdir
-TOOLS_PLATFORM.sed?=		/bin/sed
+TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/usr/bin/sleep
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
