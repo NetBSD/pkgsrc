@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:21:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/09 11:19:16 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-pgcrypto-/}
-PKGREVISION=	2
 COMMENT=	Module providing cryptographic functions for PostgreSQL
 
 DEPENDS+=	postgresql91-server>=${PKGVERSION_NOREV}:../../databases/postgresql91-server
