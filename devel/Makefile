@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1694 2013/02/08 23:40:55 tonnerre Exp $
+# $NetBSD: Makefile,v 1.1695 2013/02/09 13:34:47 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1572,7 +1572,9 @@ SUBDIR+=	st
 SUBDIR+=	stgit
 SUBDIR+=	stooop
 SUBDIR+=	subversion
+SUBDIR+=	subversion16
 SUBDIR+=	subversion-base
+SUBDIR+=	subversion16-base
 SUBDIR+=	sunifdef
 SUBDIR+=	svk
 SUBDIR+=	swig
