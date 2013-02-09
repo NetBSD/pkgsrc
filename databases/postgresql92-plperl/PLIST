@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/05 21:03:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/09 11:19:18 adam Exp $
 lib/postgresql/plperl.so
 share/locale/cs/LC_MESSAGES/plperl-9.2.mo
 share/locale/de/LC_MESSAGES/plperl-9.2.mo
 share/locale/es/LC_MESSAGES/plperl-9.2.mo
 share/locale/fr/LC_MESSAGES/plperl-9.2.mo
+share/locale/it/LC_MESSAGES/plperl-9.2.mo
 share/locale/ja/LC_MESSAGES/plperl-9.2.mo
 share/locale/pl/LC_MESSAGES/plperl-9.2.mo
 share/locale/pt_BR/LC_MESSAGES/plperl-9.2.mo
