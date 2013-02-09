@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2012/12/20 18:39:14 gdt Exp $
+# $NetBSD: Makefile.common,v 1.38 2013/02/09 13:22:09 ryoon Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -9,11 +9,11 @@
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel scm
-MASTER_SITES=		http://subversion.tigris.org/downloads/
-
+MASTER_SITES=		${MASTER_SITE_APACHE:=subversion/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://subversion.apache.org/
 LICENSE=		apache-1.1
+EXTRACT_SUFX=		.tar.bz2
 
 # People who might update Makefile.version may not be set up to test
 # ruby/python/perl and java bindings, and testing ap2-subversion is
