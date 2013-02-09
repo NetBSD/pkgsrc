@@ -1,0 +1,27 @@
+$NetBSD: patch-libstreams_CMakeLists.txt,v 1.1 2013/02/09 22:32:45 markd Exp $
+
+config.h must be generated after package tests.  Specifically
+find_package(Iconv) sets ICONV_SECOND_ARGUMENT_IS_CONST
+
+--- libstreams/CMakeLists.txt.orig	2013-02-05 21:34:57.000000000 +0000
++++ libstreams/CMakeLists.txt
+@@ -46,9 +46,6 @@ endif()
+ # check for visibility support
+ macro_check_gcc_visibility(__STRIGI_HAVE_GCC_VISIBILITY)
+ 
+-# Generate include/strigi/strigiconfig.h and lib/config.h
+-include(ConfigureChecks.cmake)
+-
+ # check for required packages
+ find_package(ZLIB)
+ set_package_properties(ZLIB PROPERTIES
+@@ -75,6 +72,9 @@ set_package_properties(Threads PROPERTIE
+                        TYPE REQUIRED
+                       )
+ 
++# Generate include/strigi/strigiconfig.h and lib/config.h
++include(ConfigureChecks.cmake)
++
+ feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+ 
+ ##### building and testing #####
