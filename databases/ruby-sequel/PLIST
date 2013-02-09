@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/01/12 04:50:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/02/09 15:41:43 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -79,6 +79,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.40.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.41.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.42.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.43.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.44.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.7.0.txt
