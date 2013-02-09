@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 13:01:43 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/09 22:11:38 ryoon Exp $
 
 PKGNAME=	gnuradio-audio-jack-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 COMMENT=	GNU Radio module for jack low latency audio server
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
