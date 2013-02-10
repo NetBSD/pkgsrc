@@ -1,4 +1,4 @@
-/*	$NetBSD: pwd.h,v 1.3 2008/09/08 20:20:23 joerg Exp $	*/
+/*	$NetBSD: pwd.h,v 1.4 2013/02/10 12:38:52 obache Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -40,7 +40,7 @@
  * Declare functions that may be missing in <pwd.h>.
  */
 
-#if !HAVE_SETPASSENT
+#if !HAVE_SETPASSENT || !HAVE_DECL_SETPASSENT
 int setpassent(int);
 #endif
 

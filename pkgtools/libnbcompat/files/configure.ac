@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.79 2012/07/02 16:02:53 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.80 2013/02/10 12:38:52 obache Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -347,7 +347,7 @@ if test $need_setmode = yes; then
 	AC_LIBOBJ(setmode)
 fi
 
-AC_CHECK_DECLS([endgrent, endpwent])
+AC_CHECK_DECLS([endgrent, endpwent, setpassent])
 
 need_pwcache=no
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb \
