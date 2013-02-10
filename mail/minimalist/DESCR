@@ -1,0 +1,6 @@
+Minimalist stands for Minimalistic Mailing Lists Manager. Although it is
+declared as minimalistic, it has many features as his eldest brosers, such
+as Majordomo and so on, but in contrast to them it is very small, fast,
+simple for setup and maintenance. Also it has very clean internal structure
+and if you are familiar with Perl, you can add as many additional features,
+as you need.
