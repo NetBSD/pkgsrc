@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.squid,v 1.21 2012/11/08 04:18:45 taca Exp $
+# $NetBSD: Makefile.squid,v 1.22 2013/02/10 18:18:10 adam Exp $
 #
 # used by www/squid27/Makefile
-# used by www/squid31/Makefile
+# used by www/squid3/Makefile
 
 .include "Makefile.common"
 
@@ -11,23 +11,20 @@ SQUID_MASTER_SITES=	ftp://ftp.squid-cache.org/pub/squid/ \
 DOCDIR=		share/doc/squid
 EGDIR=		share/examples/squid
 BUILD_DEFS+=	LOGDIR VARBASE
-
-#
 MAKE_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 MAKE_ENV+=	PKG_PREFIX=${PREFIX:Q} VARBASE=${VARBASE:Q}
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
-		--localstatedir=${SQUID_DATADIR:Q} \
-		--datarootdir=${PREFIX}/share/squid \
-		--enable-cachemgr-hostname=localhost \
-		--enable-delay-pools \
-		--enable-icmp \
-		--enable-removal-policies=lru,heap \
-		--enable-poll \
-		--enable-storeio=${SQUID_BACKENDS:Q} \
-		--with-aio
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${SQUID_DATADIR:Q}
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/squid
+CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
+CONFIGURE_ARGS+=	--enable-delay-pools
+CONFIGURE_ARGS+=	--enable-icmp
+CONFIGURE_ARGS+=	--enable-removal-policies=lru,heap
+CONFIGURE_ARGS+=	--enable-poll
+CONFIGURE_ARGS+=	--enable-storeio=${SQUID_BACKENDS:Q}
+CONFIGURE_ARGS+=	--with-aio
 
-#
 PLIST_SRC=	${WRKDIR}/PLIST
 
 MESSAGE_SRC?=		../squid/MESSAGE
@@ -39,8 +36,7 @@ CONFS=		cachemgr.conf mime.conf squid.conf msntauth.conf
 CONF_FILES+=	${PREFIX}/${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 OWN_DIRS=	${SQUID_DATADIR}
-OWN_DIRS_PERMS+= \
-		${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
+OWN_DIRS_PERMS+=${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
 		${SQUID_DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
