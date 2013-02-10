@@ -50,6 +50,10 @@
    don't. */
 #undef HAVE_DECL_OPTRESET
 
+/* Define to 1 if you have the declaration of `setpassent', and to 0 if you
+   don't. */
+#undef HAVE_DECL_SETPASSENT
+
 /* Define to 1 if you have the declaration of `snprintf', and to 0 if you
    don't. */
 #undef HAVE_DECL_SNPRINTF
