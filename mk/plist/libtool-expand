@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: libtool-expand,v 1.4 2006/04/24 01:31:04 rillig Exp $
+# $NetBSD: libtool-expand,v 1.5 2013/02/10 12:03:00 obache Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,6 +41,10 @@
 : ${GREP=grep}
 : ${SORT=sort}
 : ${TEST=test}
+: ${PWD_CMD="pwd -P"}
+: ${BASENAME=basename}
+: ${DIRNAME=dirname}
+: ${SHLIB_TYPE=none}
 
 self="${0##*/}"
 
@@ -81,6 +85,17 @@ do
 		if ${TEST} "$installed" = "no"; then
 			${ECHO} 1>&2 "$self: \`$lapath' was not properly installed"
 			exit 1
+		fi
+		if ${TEST} ${SHLIB_TYPE} = "PEwin"; then
+			cwd=`${PWD_CMD}`
+			libpath="$dir$dlname"
+			libpath=`${DIRNAME} "$libpath"`
+			libpath=`cd "$libpath" && ${PWD_CMD}`
+			libpath="${libpath#${cwd}/}"/`${BASENAME} "${dlname}"`
+			if ${TEST} ! -f "$libpath"; then
+				${ECHO} 1>&2 "$self: \`$libpath' was not found"
+			fi
+			${ECHO} "$libpath"
 		fi
 		for lib in $library_names $old_library; do
 			libpath="$dir$lib"
