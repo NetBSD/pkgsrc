@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_Makefile.in,v 1.1 2013/02/10 18:16:53 adam Exp $
+
+Don't install cachemgr.conf.
+
+--- tools/Makefile.in.orig	2013-02-01 10:56:31.000000000 +0000
++++ tools/Makefile.in
+@@ -1146,7 +1146,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-man
++install-data-am: install-man
+ 
+ install-dvi: install-dvi-recursive
+ 

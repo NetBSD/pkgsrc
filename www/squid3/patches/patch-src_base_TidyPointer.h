@@ -1,10 +1,10 @@
-$NetBSD: patch-src_base_TidyPointer.h,v 1.1 2011/07/20 11:44:27 adam Exp $
+$NetBSD: patch-src_base_TidyPointer.h,v 1.1 2013/02/10 18:16:53 adam Exp $
 
 Define NULL if not defined.
 
 --- src/base/TidyPointer.h.orig	2011-07-08 09:42:57.000000000 +0000
 +++ src/base/TidyPointer.h
-@@ -5,6 +5,10 @@
+@@ -1,6 +1,10 @@
  #ifndef SQUID_BASE_TIDYPOINTER_H
  #define SQUID_BASE_TIDYPOINTER_H
  
