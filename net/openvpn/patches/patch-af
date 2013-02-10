@@ -1,23 +1,26 @@
-$NetBSD: patch-af,v 1.6 2011/04/28 07:27:25 adam Exp $
+$NetBSD: patch-af,v 1.7 2013/02/10 05:55:07 manu Exp $
 
---- configure.orig	2011-04-21 19:29:34.000000000 +0000
-+++ configure
-@@ -5777,7 +5777,7 @@ $as_echo "#define HAVE_SYS_WAIT_H 1" >>c
+--- configure.orig	2013-01-28 10:29:31.000000000 +0100
++++ configure	2013-01-28 10:29:38.000000000 +0100
+@@ -13427,8 +13427,9 @@
+ 	sys/time.h sys/ioctl.h sys/stat.h \
+ 	sys/mman.h sys/file.h sys/wait.h \
+ 	unistd.h signal.h libgen.h stropts.h \
+ 	syslog.h pwd.h grp.h \
++	net/if_tap.h \
+ 	sys/sockio.h sys/uio.h linux/sockios.h \
+ 	linux/types.h sys/poll.h sys/epoll.h err.h \
  
- fi
- 
--   for ac_header in sys/time.h sys/socket.h sys/un.h sys/ioctl.h sys/stat.h 		 sys/mman.h fcntl.h sys/file.h stdlib.h stdint.h 		 stdarg.h unistd.h signal.h stdio.h string.h 		 strings.h ctype.h errno.h syslog.h pwd.h grp.h 		 net/if_tun.h net/tun/if_tun.h stropts.h sys/sockio.h 		 netinet/in.h netinet/in_systm.h 		 netinet/tcp.h arpa/inet.h 		 netdb.h sys/uio.h linux/if_tun.h linux/sockios.h 		 linux/types.h sys/poll.h sys/epoll.h err.h
-+   for ac_header in sys/time.h sys/socket.h sys/un.h sys/ioctl.h sys/stat.h 		 sys/mman.h fcntl.h sys/file.h stdlib.h stdint.h 		 stdarg.h unistd.h signal.h stdio.h string.h 		 strings.h ctype.h errno.h syslog.h pwd.h grp.h 		 net/if_tap.h net/if_tun.h net/tun/if_tun.h stropts.h sys/sockio.h 		 netinet/in.h netinet/in_systm.h 		 netinet/tcp.h arpa/inet.h 		 netdb.h sys/uio.h linux/if_tun.h linux/sockios.h 		 linux/types.h sys/poll.h sys/epoll.h err.h
  do :
-   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
- ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
-@@ -5839,6 +5839,9 @@ do :
- 		  #ifdef HAVE_SYS_SOCKET_H
- 		  # include <sys/socket.h>
- 		  #endif
-+		  #ifdef HAVE_NET_IF_H
-+		  # include <net/if.h>
-+		  #endif
- 		  #ifdef HAVE_NETINET_IN_H
- 		  # include <netinet/in.h>
- 		  #endif
+@@ -13453,8 +13454,11 @@
+ #endif
+ #ifdef HAVE_SYS_SOCKET_H
+ #include <sys/socket.h>
+ #endif
++#ifdef HAVE_NET_IF_H
++#include <net/if.h>
++#endif
+ #ifdef HAVE_NETINET_IN_H
+ #include <netinet/in.h>
+ #endif
+ #ifdef HAVE_WINDOWS_H
