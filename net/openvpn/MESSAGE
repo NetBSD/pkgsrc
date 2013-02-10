@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/08/17 19:55:57 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2013/02/10 05:55:07 manu Exp $
 
 The openvpn rc.d script looks for configuration files in:
 
@@ -15,12 +15,8 @@ The sample configuration files have been installed into:
 Please refer to the openvpn(8) manpage for full documentation on the
 available options.
 
-There is also a package for ``easy'' RSA key management installed into:
-
-	${PREFIX}/share/openvpn/easy-rsa
-
-that may optionally be used to set up a certificate authority for
-generating SSL certificates for use with OpenVPN.  Please refer to the
-README file in that directory for specific instructions.
+If you are upgrading from version 2.2.x, note that the plugin directory
+has changed to ${OPENVPN_PLUGINSDIR}. You may need to adjust your 
+configuration files.
 
 ===========================================================================
