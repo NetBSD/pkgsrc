@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.500 2013/02/10 01:56:37 asau Exp $
+$NetBSD: CHANGES-2013,v 1.501 2013/02/10 06:00:19 manu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -719,3 +719,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/strigi to 0.7.8 [markd 2013-02-09]
 	Updated lang/racket-textual to 5.3.2 [asau 2013-02-10]
 	Updated lang/racket to 5.3.2 [asau 2013-02-10]
+	Updated net/openvpn to 2.3.0 [manu 2013-02-10]
+	Updated net/openvpn-acct-wtpmx to 20130210 [manu 2013-02-10]
+	Added net/openvpn-nagios version 20130210 [manu 2013-02-10]
