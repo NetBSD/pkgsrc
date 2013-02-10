@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.3 2012/05/13 08:20:11 obache Exp $
+# $NetBSD: metadata.mk,v 1.4 2013/02/10 12:07:50 obache Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -82,6 +82,20 @@ ${_BUILD_INFO_FILE}: plist
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '/compatibility version/ { print $$1 }' | ${SORT} -u`; \
 		fi;							\
+		;;							\
+	PE)								\
+		libs=`${AWK} '/\/.+\.dll$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
+		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
+			requires=`(${PKGSRC_SETENV} ${LDD_ENV:U} $$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SED} -e 's,^${DESTDIR},,' | ${SORT} -u`; \
+		fi;							\
+		linklibs=`${AWK} '/.+\.dll$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
+		for i in $$linklibs; do					\
+			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
+				${TEST} ${PKG_DEVELOPER:Uno:Q}"" = "no" || \
+					${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
+				${CHMOD} +x $$i;			\
+			fi;						\
+		done;							\
 		;;							\
 	esac;								\
 	requires=`{ for i in $$requires $$requires; do echo $$i; done; \
