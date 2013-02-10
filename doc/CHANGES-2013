@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.507 2013/02/10 18:19:20 adam Exp $
+$NetBSD: CHANGES-2013,v 1.508 2013/02/10 20:18:57 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/fabric to 1.5.3 [gls 2013-02-10]
 	Added www/squid3 version 3.3.1 [adam 2013-02-10]
 	Removed www/squid31 successor www/squid3 [adam 2013-02-10]
+	Updated comms/asterisk to 11.2.1 [jnemeth 2013-02-10]
