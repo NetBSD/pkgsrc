@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.505 2013/02/10 12:23:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.506 2013/02/10 16:15:55 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/moc-devel to 2.5.0b1 [ryoon 2013-02-10]
 	Updated audio/jack to 0.121.3nb1 [ryoon 2013-02-10]
 	Added mail/minimalist version 2.5.4.1 [wiz 2013-02-10]
+	Updated sysutils/fabric to 1.5.3 [gls 2013-02-10]
