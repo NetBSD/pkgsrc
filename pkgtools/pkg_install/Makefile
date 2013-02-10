@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2013/02/06 23:23:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.191 2013/02/10 12:43:19 obache Exp $
 
 # Notes to package maintainers:
 #
@@ -134,6 +134,10 @@ LIBS+=		${LIBARCHIVE_LIBS:sh}
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub
+
+.  if ${OPSYS} == "CYGWIN"
+CPPFLAGS+=	-DLIBARCHIVE_STATIC
+.  endif
 
 .  if ${OPSYS} == "Darwin"
 # Make sure that the linker used our static library instead of the
