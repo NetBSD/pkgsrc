@@ -1,8 +1,10 @@
-$NetBSD: patch-al,v 1.5 2011/01/15 10:32:08 adam Exp $
+$NetBSD: patch-helpers_basic_auth_MSNT_Makefile.in,v 1.1 2013/02/10 18:16:53 adam Exp $
 
---- helpers/basic_auth/MSNT/Makefile.in.orig	2010-12-22 05:47:43.000000000 +0000
+Don't install msntauth.conf.
+
+--- helpers/basic_auth/MSNT/Makefile.in.orig	2013-02-01 10:56:13.000000000 +0000
 +++ helpers/basic_auth/MSNT/Makefile.in
-@@ -718,13 +718,13 @@ info: info-am
+@@ -756,13 +756,13 @@ info: info-am
  
  info-am:
  

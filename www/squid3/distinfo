@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2013/02/10 18:16:53 adam Exp $
+
+SHA1 (squid-3.3.1.tar.xz) = d996c5b49bb244aad69e45c85499c8cb1f2c4716
+RMD160 (squid-3.3.1.tar.xz) = 1419cc29351a5a784456fb0f447fced59f42f0fd
+Size (squid-3.3.1.tar.xz) = 2173060 bytes
+SHA1 (patch-configure) = 8e5eb49a8d04c77f3cf9de9390a8992268421cb6
+SHA1 (patch-errors_Makefile.in) = afbac822ac84d5e1734d55fc625e949ae0b85289
+SHA1 (patch-helpers_basic_auth_MSNT_Makefile.in) = 74a0379d3ec0c2601dbb62b16df889bf4edcaedf
+SHA1 (patch-src_Makefile.in) = 919797e74c378daad88b5ac1ee7efe6f5f580a33
+SHA1 (patch-src_acl_DomainData.cc) = 19b223e4c976179f40343074d531434c1ed78b9b
+SHA1 (patch-src_acl_Url.cc) = 418a4d8bf9600601363c5353e063a5eeced81088
+SHA1 (patch-src_base_TidyPointer.h) = 93428d26bb2479fc845764a324658eaacd26588e
+SHA1 (patch-src_ip_Intercept.cc) = 972ad12063bcf3d24704976960f1a71452d0aa87
+SHA1 (patch-src_store.cc) = 055d98a59103b02a51876a5c8ffed9514954beb4
+SHA1 (patch-tools_Makefile.in) = 3a7678c63a11a35fabef091a3b18e63859f0796f

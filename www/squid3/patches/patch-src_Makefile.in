@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.6 2012/01/08 10:06:59 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/02/10 18:16:53 adam Exp $
 
---- src/Makefile.in.orig	2011-12-03 06:20:35.000000000 +0000
+--- src/Makefile.in.orig	2013-02-09 07:30:35.000000000 +0000
 +++ src/Makefile.in
-@@ -4712,14 +4712,14 @@ info: info-recursive
+@@ -7163,14 +7163,14 @@ info: info-recursive
  
  info-am:
  
--install-data-am: install-data-local install-dataDATA
-+install-data-am: install-dataDATA
+-install-data-am: install-data-local install-dataDATA install-man
++install-data-am: install-dataDATA install-man
  
  install-dvi: install-dvi-recursive
  
@@ -19,7 +19,7 @@ $NetBSD: patch-aj,v 1.6 2012/01/08 10:06:59 adam Exp $
  
  install-html: install-html-recursive
  
-@@ -4814,7 +4814,7 @@ cache_cf.o: cf_parser.cci
+@@ -7283,7 +7283,7 @@ cache_cf.o: cf_parser.cci
  
  # cf_gen builds the configuration files.
  cf_gen$(EXEEXT): $(cf_gen_SOURCES) $(cf_gen_DEPENDENCIES)
