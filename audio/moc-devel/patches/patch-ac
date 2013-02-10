@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/04/07 16:10:37 bjs Exp $
+$NetBSD: patch-ac,v 1.2 2013/02/10 08:39:00 ryoon Exp $
 
---- Makefile.am.orig	2007-12-15 02:38:57.000000000 -0500
+--- Makefile.am.orig	2012-07-08 01:16:08.000000000 +0000
 +++ Makefile.am
-@@ -1,4 +1,5 @@
+@@ -1,5 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4
  SUBDIRS = themes decoder_plugins
 +ACLOCAL_AMFLAGS = -I m4
  AM_CPPFLAGS = -DSYSTEM_THEMES_DIR=\"$(pkgdatadir)/themes\" \
