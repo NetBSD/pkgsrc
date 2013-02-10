@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2011/11/23 23:31:22 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2013/02/10 05:55:08 manu Exp $
 
---- Makefile.orig	2009-11-07 04:12:24.000000000 +0000
-+++ Makefile
-@@ -1,13 +1,13 @@
+--- Makefile.orig	2009-11-07 05:12:24.000000000 +0100
++++ Makefile	2013-02-09 18:22:49.000000000 +0100
+@@ -1,14 +1,14 @@
 -prefix=/usr/pkg
 -PLUGINDIR=$(prefix)/lib/openvpn
 -bindir=/usr/local/bin
 +#prefix=/usr/pkg
-+PLUGINDIR=${DESTDIR}${PREFIX}/lib/openvpn
++PLUGINDIR=${DESTDIR}${OPENVPN_PLUGINSDIR}
 +bindir=${DESTDIR}${PREFIX}/bin
  
- OPENVPN_SRC=../openvpn-2.1_rc20
- CFLAGS= -Wall -Werror -ansi -g -I$(OPENVPN_SRC) -DBINDIR=\"$(bindir)\"
+-OPENVPN_SRC=../openvpn-2.1_rc20
+-CFLAGS= -Wall -Werror -ansi -g -I$(OPENVPN_SRC) -DBINDIR=\"$(bindir)\"
++OPENVPN_SRC=../${OPENVPN_DISTNAME}
++CFLAGS= -Wall -Werror -ansi -g -I$(OPENVPN_SRC)/include -DBINDIR=\"$(bindir)\"
  OPENVPN_GROUP=nobody
  
 -LIBTOOL=libtool
@@ -21,7 +23,9 @@ $NetBSD: patch-aa,v 1.2 2011/11/23 23:31:22 joerg Exp $
  
  
  all: openvpn-acct-wtmpx.la logwtmpx
-@@ -23,9 +23,11 @@ logwtmpx:	logwtmpx.o
+ 
+@@ -22,10 +22,12 @@
+ logwtmpx:	logwtmpx.o
  	$(CC) -o $@ -lutil $?
  
  install:	openvpn-acct-wtmpx.la logwtmpx
