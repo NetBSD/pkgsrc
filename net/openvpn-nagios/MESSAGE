@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/02/10 05:57:41 manu Exp $
+
+In order to enable the use of this module, add this directive to a,
+OpenVPN client configuration file
+
+  plugin ${OPENVPN_PLUGINSDIR}/openvpn-nagios.so
+
+It can also be configured this way:
+
+  plugin ${OPENVPN_PLUGINSDIR}/openvpn-nagios.so -t 20 -d 2 -w 5 -c 3
+
+    -t timeut (default 20 s)
+    -d how many certificates expected in the chain (default 2)
+    -w days to expiration that trigger a warning (default 3 days)
+    -c days to expiration that trigger a critical (default 5 days)
+
+===========================================================================
