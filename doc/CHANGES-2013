@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.501 2013/02/10 06:00:19 manu Exp $
+$NetBSD: CHANGES-2013,v 1.502 2013/02/10 07:55:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -722,3 +722,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/openvpn to 2.3.0 [manu 2013-02-10]
 	Updated net/openvpn-acct-wtpmx to 20130210 [manu 2013-02-10]
 	Added net/openvpn-nagios version 20130210 [manu 2013-02-10]
+	Updated comms/asterisk10 to 10.12.1 [jnemeth 2013-02-10]
