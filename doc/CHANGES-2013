@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.508 2013/02/10 20:18:57 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.509 2013/02/10 23:23:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -730,3 +730,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/squid3 version 3.3.1 [adam 2013-02-10]
 	Removed www/squid31 successor www/squid3 [adam 2013-02-10]
 	Updated comms/asterisk to 11.2.1 [jnemeth 2013-02-10]
+	Updated graphics/openimageio to 1.1.5 [ryoon 2013-02-10]
