@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/02/06 23:21:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/10 23:22:36 ryoon Exp $
 
-DISTNAME=	Release-1.1.2
+DISTNAME=	oiio-Release-1.1.5
 PKGNAME=	${DISTNAME:S/Release/openimageio/}
-PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	https://github.com/OpenImageIO/oiio/archive/
+MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-1.1.5.tar.gz
 FETCH_USING=	curl
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -12,7 +11,7 @@ HOMEPAGE=	https://sites.google.com/site/openimageio/
 COMMENT=	OpenImageIO is a library for reading and writing images
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/oiio-${DISTNAME}/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
