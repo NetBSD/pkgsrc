@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.36 2011/04/20 09:57:25 morr Exp $
+dnl $NetBSD: configure.ac,v 1.37 2013/02/10 12:46:56 obache Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -142,7 +142,7 @@ case $host in
 esac
 
 case $host in
-*-*-dragonfly* |*-*-freebsd*|*-*-linux*)
+*-*-cygwin*|*-*-dragonfly* |*-*-freebsd*|*-*-linux*)
 	AC_DEFINE([NUMERIC_VERSION_ONLY], [1], [Defined when to retain only the numeric OS version])
 	;;
 esac
