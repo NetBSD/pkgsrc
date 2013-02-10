@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.506 2013/02/10 16:15:55 gls Exp $
+$NetBSD: CHANGES-2013,v 1.507 2013/02/10 18:19:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -727,3 +727,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/jack to 0.121.3nb1 [ryoon 2013-02-10]
 	Added mail/minimalist version 2.5.4.1 [wiz 2013-02-10]
 	Updated sysutils/fabric to 1.5.3 [gls 2013-02-10]
+	Added www/squid3 version 3.3.1 [adam 2013-02-10]
+	Removed www/squid31 successor www/squid3 [adam 2013-02-10]
