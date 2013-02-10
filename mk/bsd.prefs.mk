@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.330 2013/01/23 17:02:23 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.331 2013/02/10 12:25:17 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -70,7 +70,7 @@ UNAME=echo Unknown
 .endif
 
 .if !defined(OPSYS)
-OPSYS:=			${:!${UNAME} -s!:S/-//g:S/\///g}
+OPSYS:=			${:!${UNAME} -s!:S/-//g:S/\///g:C/^CYGWIN_.*$/Cygwin/}
 MAKEFLAGS+=		OPSYS=${OPSYS:Q}
 .endif
 
@@ -127,6 +127,13 @@ LOWER_VENDOR?=		ibm
 
 .elif ${OPSYS} == "BSDOS"
 LOWER_OPSYS?=		bsdi
+
+.elif ${OPSYS} == "Cygwin"
+LOWER_OPSYS?=		cygwin
+LOWER_VENDOR?=		pc
+LOWER_ARCH!=		${UNAME} -m
+_OS_VERSION!=		${UNAME} -r
+OS_VERSION=		${_OS_VERSION:C/\(.*\)//}
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
@@ -371,6 +378,8 @@ OBJECT_FMT=	ELF
 .  else
 OBJECT_FMT=	SOM
 .  endif
+.elif ${OPSYS} == "Cygwin"
+OBJECT_FMT=	PE
 .endif
 
 # Calculate depth
