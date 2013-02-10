@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/23 23:31:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/02/10 05:55:08 manu Exp $
 bin/logwtmpx
-lib/openvpn/openvpn-acct-wtmpx.la
+${OPENVPN_PLUGINSDIR}/openvpn-acct-wtmpx.la

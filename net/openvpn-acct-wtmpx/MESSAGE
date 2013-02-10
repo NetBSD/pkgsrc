@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/07/14 04:46:18 manu Exp $
+$NetBSD: MESSAGE,v 1.2 2013/02/10 05:55:07 manu Exp $
 
 In order to enable the use of this module, add this directive to your
 OpenVPN server configuration file
 
-  plugin /usr/pkg/lib/openvpn/openvpn-acct-wtmpx.so openvpn
+  plugin ${OPENVPN_PLUGINSDIR}/openvpn-acct-wtmpx.so openvpn
 
 In order to write to wtmpx(5) databases, OpenVPN needs root privileges.
 It acquires them for that purpose by using the logwtmpx program, which

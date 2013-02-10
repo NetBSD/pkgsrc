@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.48 2013/02/06 23:23:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2013/02/10 05:55:07 manu Exp $
 
-DISTNAME=	openvpn-2.2.2
-PKGREVISION=	3
+DISTNAME=	${OPENVPN_DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://swupdate.openvpn.net/community/releases/
+MASTER_SITES=	${OPENVPN_MASTER_SITES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openvpn.net/
 COMMENT=	Easy-to-use SSL VPN daemon
 LICENSE=	gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LIBTOOL=		yes
 USE_TOOLS+=		grep:run
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-dependency-tracking
@@ -24,50 +26,33 @@ TEST_TARGET=		check
 PKG_SYSCONFSUBDIR=	openvpn
 DATADIR=		${PREFIX}/share/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-EASYRSADIR=		${DATADIR}/easy-rsa
 RCD_SCRIPTS=		openvpn
 
-INSTALLATION_DIRS=	${DATADIR}/easy-rsa
 INSTALLATION_DIRS+=	${EGDIR}/config
 INSTALLATION_DIRS+=	${EGDIR}/keys
 INSTALLATION_DIRS+=	${EGDIR}/scripts
 
-REPLACE_SH=		easy-rsa/2.0/*
-SUBST_CLASSES+=		pkitool
-SUBST_STAGE.pkitool=	post-build
-SUBST_MESSAGE.pkitool=	Fixing up default paths to grep & openssl in pkitool.
-SUBST_FILES.pkitool=	easy-rsa/2.0/pkitool
-SUBST_SED.pkitool=	-e "s|\\(GREP\\)=.*|\\1=\""${GREP:Q}"\"|"
-SUBST_SED.pkitool+=	-e "s|\\(OPENSSL\\)=.*|\\1=\""${SSLBASE:Q}/bin/openssl"\"|"
-
 .include "../../mk/bsd.prefs.mk"
 
-OPENVPN_USER?=		openvpn
-OPENVPN_GROUP?=		openvpn
 PKG_GROUPS=		${OPENVPN_GROUP}
 PKG_USERS=		${OPENVPN_USER}:${OPENVPN_GROUP}
 PKG_GECOS.${OPENVPN_USER}=	OpenVPN\ server\ user
 
-post-install: post-install-pam
-	set -e; cd ${WRKSRC}/easy-rsa/2.0; for file in [a-zR]*; do	\
-		case $$file in						\
-		*.orig|tmp) ;;						\
-		[A-Z]*|*.cnf|vars)					\
-			${INSTALL_DATA} $$file ${DESTDIR}${EASYRSADIR} ;; \
-		*)	${INSTALL_SCRIPT} $$file ${DESTDIR}${EASYRSADIR} ;; \
-		esac;							\
+MESSAGE_SUBST+= OPENVPN_PLUGINSDIR=${PREFIX:Q}/${OPENVPN_PLUGINSDIR:Q}
+
+post-install:
+	set -e; cd ${WRKSRC}/sample/sample-config-files; for file in *; do \
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR}/config;	   \
 	done
-	set -e; cd ${WRKSRC}/sample-config-files; for file in *; do	\
-		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR}/config;	\
+	set -e; cd ${WRKSRC}/sample/sample-scripts; for file in *; do	   \
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR}/scripts;	   \
 	done
-	set -e; cd ${WRKSRC}/sample-scripts; for file in *; do		\
-		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR}/scripts;	\
-	done
-	set -e; cd ${WRKSRC}/sample-keys; for file in *; do		\
-		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR}/keys;		\
+	set -e; cd ${WRKSRC}/sample/sample-keys; for file in *; do	   \
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR}/keys;		   \
 	done
 
 .include "options.mk"
+.include "../../net/openvpn/Makefile.common"
 
 # OpenVPN 2.x has a shared module "plugin" architecture that allows
 # inserting callbacks into the server for various tasks.

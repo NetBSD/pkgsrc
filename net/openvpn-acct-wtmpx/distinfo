@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.3 2013/01/11 13:32:58 joerg Exp $
+$NetBSD: distinfo,v 1.4 2013/02/10 05:55:08 manu Exp $
 
-SHA1 (openvpn-2.1_rc20.tar.gz) = ab0e928bd7d4896ddb0061bf3aba9f3cd6cefe6e
-RMD160 (openvpn-2.1_rc20.tar.gz) = 4dd7924cb41a268e76a93af66fd05f948f22e5f3
-Size (openvpn-2.1_rc20.tar.gz) = 844253 bytes
-SHA1 (openvpn-acct-wtmpx-20091110.tgz) = 3bbe32fdc4bf17f4decef2b3dfb2fb92885934c9
-RMD160 (openvpn-acct-wtmpx-20091110.tgz) = 1146c27fe190a8b8d6ef863f1861acfeb1f61b39
-Size (openvpn-acct-wtmpx-20091110.tgz) = 1983 bytes
-SHA1 (patch-aa) = 399514cb7eabe9c589d56638e01034fbdb7208a6
-SHA1 (patch-logwtmpx.c) = bca4b658c3f9f44966c9bb8e9965d55177cc5a63
-SHA1 (patch-openvpn-acct-wtmpx.c) = cbf931f474702ca41c7db4ac68c1d7560a088766
+SHA1 (openvpn-2.3.0.tar.gz) = 18b51f7ba0b9e18939451d7787c00e04165efe90
+RMD160 (openvpn-2.3.0.tar.gz) = f24ac128fcd874bf40e8ffd5161065e84170d69f
+Size (openvpn-2.3.0.tar.gz) = 1130659 bytes
+SHA1 (openvpn-acct-wtmpx-20130210.tgz) = cf7bc26b12a65493cdf5db93b03bbb938a2f0f33
+RMD160 (openvpn-acct-wtmpx-20130210.tgz) = d9000789f04606bfa17db1597a45a4235b1119ea
+Size (openvpn-acct-wtmpx-20130210.tgz) = 2778 bytes
+SHA1 (patch-aa) = 8b216edb0e48dd54fd19b436433fafeb686948b8
