@@ -1,15 +1,2 @@
-$NetBSD: patch-af,v 1.1 2009/07/07 21:18:52 joerg Exp $
+$NetBSD: patch-af,v 1.2 2013/02/10 08:39:00 ryoon Exp $
 
---- m4/mp_with_curses.m4.orig	2009-07-07 12:30:19.000000000 +0200
-+++ m4/mp_with_curses.m4
-@@ -45,8 +45,8 @@ AC_DEFUN([MP_WITH_CURSES],
-    if test ! "$CURSES_LIB" -a "$with_ncurses" != yes
-    then
-      AC_CACHE_CHECK([for working curses], mp_cv_curses,
--       [LIBS="$LIBS -lcurses"
--        AC_TRY_LINK(
-+       [LIBS="$mp_save_LIBS -lcurses"
-+        AC_TRYLINK(
-           [#include <curses.h>],
-           [chtype a; int b=A_STANDOUT, c=KEY_LEFT; initscr(); ],
-           mp_cv_curses=yes, mp_cv_curses=no)])
