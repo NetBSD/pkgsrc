@@ -1,13 +1,2 @@
-$NetBSD: patch-ag,v 1.1 2009/07/07 21:18:52 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2013/02/10 08:39:00 ryoon Exp $
 
---- interface_elements.c.orig	2009-07-07 13:23:11.000000000 +0200
-+++ interface_elements.c
-@@ -2526,7 +2526,7 @@ static void info_win_draw_title (const s
- 		}
- 		else {
- 		wattrset (w->win, get_color(CLR_TITLE));
--		xmvwaddnstr (w->win, 1, 4, w->title, COLS - 5);
-+		xmvwaddnstr (w->win, 1, 4, w->title ? w->title : "", COLS - 5);
- 		}
- 	}
- 
