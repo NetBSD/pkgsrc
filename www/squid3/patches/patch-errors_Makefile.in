@@ -1,8 +1,10 @@
-$NetBSD: patch-ae,v 1.6 2011/01/15 10:32:08 adam Exp $
+$NetBSD: patch-errors_Makefile.in,v 1.1 2013/02/10 18:16:53 adam Exp $
 
---- errors/Makefile.in.orig	2010-12-22 05:47:42.000000000 +0000
+Don't install errorpage.css.
+
+--- errors/Makefile.in.orig	2013-02-01 10:56:12.000000000 +0000
 +++ errors/Makefile.in
-@@ -473,7 +473,7 @@ install-dvi: install-dvi-am
+@@ -501,7 +501,7 @@ install-dvi: install-dvi-am
  
  install-dvi-am:
  
@@ -11,12 +13,11 @@ $NetBSD: patch-ae,v 1.6 2011/01/15 10:32:08 adam Exp $
  
  install-html: install-html-am
  
-@@ -589,7 +589,7 @@ install-data-local: translate
+@@ -618,7 +618,6 @@ install-data-local: translate
  	done; \
  	$(INSTALL_DATA) $(srcdir)/TRANSLATORS $(DESTDIR)$(DEFAULT_ERROR_DIR)/TRANSLATORS; \
  	$(INSTALL_DATA) $(srcdir)/COPYRIGHT $(DESTDIR)$(DEFAULT_ERROR_DIR)/COPYRIGHT; \
 -	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
-+#	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
  	$(SHELL) $(srcdir)/alias-link.sh "$(LN)" "$(RM)" "$(DESTDIR)$(DEFAULT_ERROR_DIR)" "$(srcdir)/aliases" || exit 1 ;
  
  uninstall-local:
