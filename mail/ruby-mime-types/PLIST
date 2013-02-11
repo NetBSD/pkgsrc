@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.6 2012/09/09 15:02:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/02/11 03:18:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.hoerc
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Contributing.rdoc
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Licence.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/docs/COPYING.txt
+${GEM_LIBDIR}/docs/artistic.txt
+${GEM_LIBDIR}/lib/mime-types.rb
 ${GEM_LIBDIR}/lib/mime/types.rb
 ${GEM_LIBDIR}/lib/mime/types/application
 ${GEM_LIBDIR}/lib/mime/types/application.mac
