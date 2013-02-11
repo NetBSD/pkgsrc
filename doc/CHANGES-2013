@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.513 2013/02/11 02:32:32 taca Exp $
+$NetBSD: CHANGES-2013,v 1.514 2013/02/11 02:45:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -741,3 +741,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-daemon_controller to 1.1.1 [taca 2013-02-11]
 	Updated devel/ruby-rspec-expectations to 2.12.1nb1 [taca 2013-02-11]
 	Updated devel/ruby-rspec-mocks to 2.12.2 [taca 2013-02-11]
+	Updated textproc/ruby-diff-lcs to 1.2.1 [taca 2013-02-11]
+	Updated textproc/ruby-json-pure to 1.7.6 [taca 2013-02-11]
+	Updated textproc/ruby-json to 1.7.6 [taca 2013-02-11]
+	Updated textproc/ruby-nokogiri to 1.5.6 [taca 2013-02-11]
