@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.936 2013/02/11 14:06:57 taca Exp $
+# $NetBSD: Makefile,v 1.937 2013/02/11 14:36:06 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -631,6 +631,12 @@ SUBDIR+=	ruby-net-flickr
 SUBDIR+=	ruby-net-http-digest_auth
 SUBDIR+=	ruby-net-http-persistent
 SUBDIR+=	ruby-ntlm-http
+SUBDIR+=	ruby-padrino
+SUBDIR+=	ruby-padrino-admin
+SUBDIR+=	ruby-padrino-cache
+SUBDIR+=	ruby-padrino-core
+SUBDIR+=	ruby-padrino-gen
+SUBDIR+=	ruby-padrino-mailer
 SUBDIR+=	ruby-patron
 SUBDIR+=	ruby-rack
 SUBDIR+=	ruby-rack-cache
