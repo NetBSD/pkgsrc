@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 13:31:27 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.markdown
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/rack-rewrite.rb
+${GEM_LIBDIR}/lib/rack/rewrite.rb
+${GEM_LIBDIR}/lib/rack/rewrite/rule.rb
+${GEM_LIBDIR}/lib/rack/rewrite/version.rb
+${GEM_LIBDIR}/rack-rewrite.gemspec
+${GEM_LIBDIR}/test/geminstaller.yml
+${GEM_LIBDIR}/test/rack-rewrite_test.rb
+${GEM_LIBDIR}/test/rule_test.rb
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
