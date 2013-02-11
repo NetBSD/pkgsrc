@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/03 18:29:52 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/02/11 09:11:17 wiz Exp $
 
-SHA1 (xvinfo-1.1.1.tar.bz2) = dc326464748fa608da50386112a89024804c1910
-RMD160 (xvinfo-1.1.1.tar.bz2) = 347419fb77a42e660d16a2c85cedc36d195004c0
-Size (xvinfo-1.1.1.tar.bz2) = 105663 bytes
+SHA1 (xvinfo-1.1.2.tar.bz2) = cc2a8d8585450ae0a8c259c90cf6bfdb85eb7d86
+RMD160 (xvinfo-1.1.2.tar.bz2) = b2e4d4b4269d018ca7c4e66f58d4cce12eeb0c19
+Size (xvinfo-1.1.2.tar.bz2) = 116906 bytes
