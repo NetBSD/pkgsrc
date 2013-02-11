@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2010/12/04 04:03:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/02/11 03:08:05 taca Exp $
 bin/rake2thor
 bin/thor
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.rdoc
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Thorfile
 ${GEM_LIBDIR}/bin/rake2thor
@@ -38,6 +43,7 @@ ${GEM_LIBDIR}/lib/thor/task.rb
 ${GEM_LIBDIR}/lib/thor/util.rb
 ${GEM_LIBDIR}/lib/thor/version.rb
 ${GEM_LIBDIR}/spec/actions/create_file_spec.rb
+${GEM_LIBDIR}/spec/actions/create_link_spec.rb
 ${GEM_LIBDIR}/spec/actions/directory_spec.rb
 ${GEM_LIBDIR}/spec/actions/empty_directory_spec.rb
 ${GEM_LIBDIR}/spec/actions/file_manipulation_spec.rb
@@ -46,17 +52,23 @@ ${GEM_LIBDIR}/spec/actions_spec.rb
 ${GEM_LIBDIR}/spec/base_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/hash_with_indifferent_access_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/ordered_hash_spec.rb
+${GEM_LIBDIR}/spec/exit_condition_spec.rb
 ${GEM_LIBDIR}/spec/fixtures/application.rb
+${GEM_LIBDIR}/spec/fixtures/app{1}/README
 ${GEM_LIBDIR}/spec/fixtures/bundle/execute.rb
 ${GEM_LIBDIR}/spec/fixtures/bundle/main.thor
 ${GEM_LIBDIR}/spec/fixtures/doc/%file_name%.rb.tt
+${GEM_LIBDIR}/spec/fixtures/doc/COMMENTER
 ${GEM_LIBDIR}/spec/fixtures/doc/README
 ${GEM_LIBDIR}/spec/fixtures/doc/block_helper.rb
 ${GEM_LIBDIR}/spec/fixtures/doc/components/.empty_directory
 ${GEM_LIBDIR}/spec/fixtures/doc/config.rb
+${GEM_LIBDIR}/spec/fixtures/doc/config.yaml.tt
+${GEM_LIBDIR}/spec/fixtures/enum.thor
 ${GEM_LIBDIR}/spec/fixtures/group.thor
 ${GEM_LIBDIR}/spec/fixtures/invoke.thor
 ${GEM_LIBDIR}/spec/fixtures/path with spaces
+${GEM_LIBDIR}/spec/fixtures/preserve/script.sh
 ${GEM_LIBDIR}/spec/fixtures/script.thor
 ${GEM_LIBDIR}/spec/fixtures/task.thor
 ${GEM_LIBDIR}/spec/group_spec.rb
@@ -76,4 +88,5 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/task_spec.rb
 ${GEM_LIBDIR}/spec/thor_spec.rb
 ${GEM_LIBDIR}/spec/util_spec.rb
+${GEM_LIBDIR}/thor.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
