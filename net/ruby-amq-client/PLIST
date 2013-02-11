@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/17 12:43:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/02/11 03:58:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
@@ -90,6 +90,9 @@ ${GEM_LIBDIR}/lib/amq/client/async/adapter.rb
 ${GEM_LIBDIR}/lib/amq/client/async/adapters/coolio.rb
 ${GEM_LIBDIR}/lib/amq/client/async/adapters/event_machine.rb
 ${GEM_LIBDIR}/lib/amq/client/async/adapters/eventmachine.rb
+${GEM_LIBDIR}/lib/amq/client/async/auth_mechanism_adapter.rb
+${GEM_LIBDIR}/lib/amq/client/async/auth_mechanism_adapter/external.rb
+${GEM_LIBDIR}/lib/amq/client/async/auth_mechanism_adapter/plain.rb
 ${GEM_LIBDIR}/lib/amq/client/async/callbacks.rb
 ${GEM_LIBDIR}/lib/amq/client/async/channel.rb
 ${GEM_LIBDIR}/lib/amq/client/async/consumer.rb
