@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.529 2013/02/11 08:54:30 taca Exp $
+$NetBSD: CHANGES-2013,v 1.530 2013/02/11 08:56:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -772,3 +772,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/ruby-parslet version 1.4.0 [taca 2013-02-11]
 	Added devel/ruby-path version 1.3.1 [taca 2013-02-11]
 	Added devel/ruby-term-ansicolor version 1.0.7 [taca 2013-02-11]
+	Added fonts/ruby-afm version 0.2.0 [taca 2013-02-11]
