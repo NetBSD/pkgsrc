@@ -1,0 +1,11 @@
+= Simple Mailer Support (padrino-mailer)
+
+=== Overview
+
+This component creates an easy and intuitive interface for delivering email
+within a Sinatra application. The mail library is utilized to do the bulk of
+the work. There is full support for rendering email templates, using an html
+content type and for file attachments.
+
+The Padrino Mailer uses a familiar Sinatra syntax similar to that of defining
+routes for a controller.
