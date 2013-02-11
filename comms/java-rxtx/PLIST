@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 01:13:19 dsainty Exp $
+${JAVA_HOME}/jre/lib/ext/RXTXcomm.jar
+${JAVA_HOME}/jre/lib/${MACHINE_ARCH}/librxtxSerial.la

@@ -1,0 +1,52 @@
+$NetBSD: patch-configure_in,v 1.1 2013/02/11 01:13:20 dsainty Exp $
+
+AM_CONFIG_HEADER is obsolete.
+
+UTS_RELEASE isn't even reliably available on Linux, let alone portable.
+
+Recognise Java 1.6, and openjdk7 as 1.7.
+
+--- configure.in.orig	2006-01-30 17:37:47.000000000 +1300
++++ configure.in	2013-01-30 15:15:04.159793907 +1300
+@@ -17,7 +17,7 @@
+ #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ #-------------------------------------------------------------------------
+ AC_INIT(src/SerialImp.c)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AC_CANONICAL_SYSTEM
+ AC_MSG_WARN(Trying libtool.  If the following fails install libtool)
+ AC_PROG_CC
+@@ -458,12 +458,12 @@
+ [ case $OS_NAME in 
+ Linux)
+ 	LDFLAGS=$LDFLAGS" -lpthread"
+-	check_kernel_headers
++	#check_kernel_headers
+ 	check_java_headers
+ 	CFLAGS=$CFLAGS" -D__need_timespec"
+ 	case $JAVA_VERSION in
+ 
+-	1.2*|1.3*|1.4*|1.5*) 
++	1.2*|1.3*|1.4*|1.5*|1.6*|1.7*) 
+ 		#fix_parameters $JPATH/jre/lib/javax.comm.properties
+ 		CLASSPATH=".:\$(TOP):\$(TOP)/src:"`find $JPATH/ -name RXTXcomm.jar |head -n1`
+ 		JHOME=$JPATH"/jre/lib/ext"
+@@ -533,7 +533,7 @@
+ 	TARGETLIB="\$(target_triplet)/librxtxSerial.la \
+ 			\$(target_triplet)/librxtxParallel.la"
+ 	case $JAVA_VERSION in
+-	1.2*|1.3*|1.4*|1.5*) 
++	1.2*|1.3*|1.4*|1.5*|1.6*|1.7*) 
+ 		#fix_parameters $JPATH/jre/lib/javax.comm.properties
+ 		CLASSPATH=".:\$(TOP):\$(TOP)/src:"`find $JPATH/ -name RXTXcomm.jar |head -n1`
+ 		RXTX_PATH="\$(JPATH)/jre/lib/\$(OS_ARCH)"
+@@ -721,7 +721,7 @@
+ 	CLASSPATH=".:\$(TOP):\$(TOP)/src:\$(JPATH)/lib/classes.zip:\$(JPATH)/lib/RXTXcomm.jar:$CLASSPATH"
+ 
+ 	case $JAVA_VERSION in
+-	1.2*|1.3*|1.4*|1.5*)
++	1.2*|1.3*|1.4*|1.5*|1.6*|1.7*)
+ 		RXTX_PATH="\$(JPATH)/jre/lib/\$(OS_ARCH)"
+ 	;;
+ 	1.1*)

@@ -1,0 +1,15 @@
+$NetBSD: patch-src_SerialImp_cpp,v 1.1 2013/02/11 01:13:22 dsainty Exp $
+
+UTS_RELEASE isn't even reliably available on Linux, let alone portable.
+
+--- src/SerialImp.cpp.orig	2011-11-29 00:31:50.230521000 +1300
++++ src/SerialImp.cpp	2011-11-29 00:32:05.906521000 +1300
+@@ -101,7 +101,7 @@
+ 	sigaction( SIGIO, NULL, &handler );
+ 	if( !handler.sa_handler ) signal( SIGIO, SIG_IGN );
+ #endif /* !__FreeBSD__ */
+-#ifdef DEBUG
++#if 0
+ 	/* Lets let people who upgraded kernels know they may have problems */
+ 	if (uname (&name) == -1)
+ 	{
