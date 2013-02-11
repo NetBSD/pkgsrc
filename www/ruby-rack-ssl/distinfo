@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/15 15:29:27 taca Exp $
+$NetBSD: distinfo,v 1.2 2013/02/11 04:03:45 taca Exp $
 
-SHA1 (rack-ssl-1.3.2.gem) = b0d4da8edd9e56b02166cac944c05a2a0bb5c0b9
-RMD160 (rack-ssl-1.3.2.gem) = 8442938aa32b0e05c508d6f83cd226438e243c6c
-Size (rack-ssl-1.3.2.gem) = 5120 bytes
+SHA1 (rack-ssl-1.3.3.gem) = 5f9c879b43d909e3425f82d461bc5353e4bd6496
+RMD160 (rack-ssl-1.3.3.gem) = f784aead5548ba73f57048c0647dcea503b5b01b
+Size (rack-ssl-1.3.3.gem) = 5120 bytes

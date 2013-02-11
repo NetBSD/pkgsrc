@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/15 15:29:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/11 04:03:45 taca Exp $
 
-DISTNAME=	rack-ssl-1.3.2
+DISTNAME=	rack-ssl-1.3.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
