@@ -1,0 +1,15 @@
+$NetBSD: patch-src_SerialImp_c,v 1.1 2013/02/11 01:13:21 dsainty Exp $
+
+UTS_RELEASE isn't even reliably available on Linux, let alone portable.
+
+--- src/SerialImp.c.orig	2011-11-29 00:22:44.514521000 +1300
++++ src/SerialImp.c	2011-11-29 00:23:01.778521001 +1300
+@@ -279,7 +279,7 @@
+ #if DEBUG_TIMING
+ 	gettimeofday(&seloop, NULL);
+ #endif /* DEBUG_TIMING */
+-#if defined(DEBUG) && defined(__linux__)
++#if 0
+ 	/* Lets let people who upgraded kernels know they may have problems */
+ 	if (uname (&name) == -1)
+ 	{
