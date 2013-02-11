@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 08:53:38 taca Exp $
+bin/cdiff
+bin/decolor
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/bin/cdiff
+${GEM_LIBDIR}/bin/decolor
+${GEM_LIBDIR}/doc-main.txt
+${GEM_LIBDIR}/examples/example.rb
+${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/lib/term/ansicolor.rb
+${GEM_LIBDIR}/lib/term/ansicolor/.keep
+${GEM_LIBDIR}/lib/term/ansicolor/version.rb
+${GEM_LIBDIR}/term-ansicolor.gemspec
+${GEM_LIBDIR}/tests/ansicolor_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
