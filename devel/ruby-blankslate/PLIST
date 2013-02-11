@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 08:37:56 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/blankslate.gemspec
+${GEM_LIBDIR}/lib/blankslate.rb
+${GEM_LIBDIR}/spec/blankslate_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
