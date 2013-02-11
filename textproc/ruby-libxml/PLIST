@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/12/17 14:34:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/02/11 09:10:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/LICENSE
@@ -68,6 +68,8 @@ ${GEM_LIBDIR}/ext/libxml/ruby_xml_schema_facet.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_schema_type.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_schema_type.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_version.h
+${GEM_LIBDIR}/ext/libxml/ruby_xml_writer.c
+${GEM_LIBDIR}/ext/libxml/ruby_xml_writer.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xinclude.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xinclude.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath.c
@@ -204,6 +206,7 @@ ${GEM_LIBDIR}/test/tc_relaxng.rb
 ${GEM_LIBDIR}/test/tc_sax_parser.rb
 ${GEM_LIBDIR}/test/tc_schema.rb
 ${GEM_LIBDIR}/test/tc_traversal.rb
+${GEM_LIBDIR}/test/tc_writer.rb
 ${GEM_LIBDIR}/test/tc_xinclude.rb
 ${GEM_LIBDIR}/test/tc_xml.rb
 ${GEM_LIBDIR}/test/tc_xpath.rb
