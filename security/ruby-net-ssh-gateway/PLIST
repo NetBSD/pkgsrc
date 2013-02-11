@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/02 14:35:12 fhajny Exp $
-${GEM_HOME}/cache/net-ssh-gateway-${PKGVERSION}.gem
-${GEM_LIBDIR}/CHANGELOG.rdoc
+@comment $NetBSD: PLIST,v 1.2 2013/02/11 02:08:16 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGES.txt
+${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/gem-public_cert.pem
 ${GEM_LIBDIR}/lib/net/ssh/gateway.rb
 ${GEM_LIBDIR}/net-ssh-gateway.gemspec
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/gateway_test.rb
-${GEM_HOME}/specifications/net-ssh-gateway-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
