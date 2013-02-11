@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 08:51:00 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/path.rb
+${GEM_LIBDIR}/lib/path/compatibility.rb
+${GEM_LIBDIR}/lib/path/dir.rb
+${GEM_LIBDIR}/lib/path/file.rb
+${GEM_LIBDIR}/lib/path/file_predicates.rb
+${GEM_LIBDIR}/lib/path/fileutils.rb
+${GEM_LIBDIR}/lib/path/find.rb
+${GEM_LIBDIR}/lib/path/identity.rb
+${GEM_LIBDIR}/lib/path/implementation.rb
+${GEM_LIBDIR}/lib/path/io.rb
+${GEM_LIBDIR}/lib/path/load.rb
+${GEM_LIBDIR}/lib/path/parts.rb
+${GEM_LIBDIR}/lib/path/predicates.rb
+${GEM_LIBDIR}/lib/path/require_tree.rb
+${GEM_LIBDIR}/lib/path/version.rb
+${GEM_LIBDIR}/path.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
