@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2012/12/17 01:17:28 khorben Exp $
+# $NetBSD: Makefile,v 1.94 2013/02/11 01:14:41 dsainty Exp $
 #
 
 COMMENT=	Communication utilities
@@ -24,6 +24,7 @@ SUBDIR+=	gkermit
 SUBDIR+=	gnome-pilot
 SUBDIR+=	gsmlib
 SUBDIR+=	hylafax
+SUBDIR+=	java-rxtx
 SUBDIR+=	jpilot
 SUBDIR+=	jpilot-syncmal
 SUBDIR+=	kermit
