@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.515 2013/02/11 03:00:25 taca Exp $
+$NetBSD: CHANGES-2013,v 1.516 2013/02/11 03:09:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -752,3 +752,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-rbx-require-relative to 0.0.9 [taca 2013-02-11]
 	Updated devel/ruby-sexp-processor to 4.1.4 [taca 2013-02-11]
 	Updated devel/ruby-test-unit to 2.5.4 [taca 2013-02-11]
+	Updated devel/ruby-parser to 3.1.1 [taca 2013-02-11]
+	Updated devel/ruby2ruby to 2.0.3 [taca 2013-02-11]
+	Updated devel/ruby-thor to 0.17.0 [taca 2013-02-11]
