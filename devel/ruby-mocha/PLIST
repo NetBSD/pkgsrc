@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/12/16 16:28:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/02/11 02:54:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.yardopts
@@ -236,4 +236,6 @@ ${GEM_LIBDIR}/test/unit/state_machine_test.rb
 ${GEM_LIBDIR}/test/unit/string_inspect_test.rb
 ${GEM_LIBDIR}/test/unit/thrower_test.rb
 ${GEM_LIBDIR}/test/unit/yield_parameters_test.rb
+${GEM_LIBDIR}/yard-templates/default/layout/html/google_analytics.erb
+${GEM_LIBDIR}/yard-templates/default/layout/html/setup.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
