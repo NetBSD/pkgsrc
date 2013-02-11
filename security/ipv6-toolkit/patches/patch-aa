@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2013/02/11 06:55:05 agc Exp $
+
+quieten warnings on ctype macros
+
+--- tools/scan6.c	2013/02/10 06:36:34	1.1
++++ tools/scan6.c	2013/02/10 06:37:02
+@@ -2173,7 +2173,7 @@
+ 		j=0;
+ 
+ 		while(j < buscars){
+-			if(toupper(buscar[j]) != toupper(buffer[i+j]))
++			if(toupper((unsigned char)buscar[j]) != toupper((unsigned char)buffer[i+j]))
+ 				break;
+ 
+ 			j++;
