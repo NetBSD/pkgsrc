@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.554 2013/02/11 14:37:29 taca Exp $
+$NetBSD: CHANGES-2013,v 1.555 2013/02/11 14:40:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -804,3 +804,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-padrino-admin version 0.10.7 [taca 2013-02-11]
 	Added www/ruby-padrino-mailer version 0.10.7 [taca 2013-02-11]
 	Added www/ruby-padrino version 0.10.7 [taca 2013-02-11]
+	Added www/ruby-padrino-helpers version 0.10.7 [taca 2013-02-11]
