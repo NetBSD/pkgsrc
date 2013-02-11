@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.509 2013/02/10 23:23:25 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.510 2013/02/11 01:35:29 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed www/squid31 successor www/squid3 [adam 2013-02-10]
 	Updated comms/asterisk to 11.2.1 [jnemeth 2013-02-10]
 	Updated graphics/openimageio to 1.1.5 [ryoon 2013-02-10]
+	Added comms/java-rxtx version 2.1.7r2 [dsainty 2013-02-11]
