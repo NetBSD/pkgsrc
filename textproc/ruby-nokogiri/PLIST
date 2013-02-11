@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/06/02 01:13:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/02/11 02:44:26 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
@@ -175,6 +175,9 @@ ${GEM_LIBDIR}/test/files/snuggles.xml
 ${GEM_LIBDIR}/test/files/staff.dtd
 ${GEM_LIBDIR}/test/files/staff.xml
 ${GEM_LIBDIR}/test/files/staff.xslt
+${GEM_LIBDIR}/test/files/test_document_url/bar.xml
+${GEM_LIBDIR}/test/files/test_document_url/document.dtd
+${GEM_LIBDIR}/test/files/test_document_url/document.xml
 ${GEM_LIBDIR}/test/files/tlm.html
 ${GEM_LIBDIR}/test/files/to_be_xincluded.xml
 ${GEM_LIBDIR}/test/files/valid_bar.xml
