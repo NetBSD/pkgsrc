@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.539 2013/02/11 09:16:11 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.540 2013/02/11 09:18:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -783,3 +783,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xvinfo to 1.1.2 [wiz 2013-02-11]
 	Removed x11/liblbxutil [wiz 2013-02-11]
 	Removed x11/lbxproxy [wiz 2013-02-11]
+	Updated textproc/ruby-rison to 2.0.0 [taca 2013-02-11]
