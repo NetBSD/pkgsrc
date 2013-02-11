@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 08:36:45 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/11 09:17:42 taca Exp $
 
-DISTNAME=	rison-1.2.1
+DISTNAME=	rison-2.0.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rison.rubyforge.org/
-COMMENT=	Pure Ruby parser for Rison
+HOMEPAGE=	https://github.com/tim/ruby-rison/
+COMMENT=	Ruby implementation of Rison - Compact Data in URIs
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-dhaka>=2.2.1:../../devel/ruby-dhaka
+DEPENDS+=	${RUBY_PKGPREFIX}-parslet>=1.4.0<1.5:../../devel/ruby-parslet
 
 pre-configure:
 	${CHMOD} 0644 ${WRKSRC}/lib/rison/dump.rb
