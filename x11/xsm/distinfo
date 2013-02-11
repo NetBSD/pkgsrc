@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/06/03 18:26:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2013/02/11 09:09:53 wiz Exp $
 
-SHA1 (xsm-1.0.2.tar.bz2) = 3ed9a9bb4bb26a9a867fecc352eeb0656476fa19
-RMD160 (xsm-1.0.2.tar.bz2) = d718eae11d3633ae199c4c4142b251304daae6fc
-Size (xsm-1.0.2.tar.bz2) = 145772 bytes
+SHA1 (xsm-1.0.3.tar.bz2) = 3bb51cdea219729cbdaa491afe90f1d33fe64c40
+RMD160 (xsm-1.0.3.tar.bz2) = 3fe3405e2154307aa9233041ec21b46c36e4f79f
+Size (xsm-1.0.3.tar.bz2) = 161012 bytes
