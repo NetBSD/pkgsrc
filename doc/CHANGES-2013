@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.541 2013/02/11 09:18:55 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.542 2013/02/11 09:24:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed x11/lbxproxy [wiz 2013-02-11]
 	Updated textproc/ruby-rison to 2.0.0 [taca 2013-02-11]
 	Updated x11/sessreg to 1.0.8 [wiz 2013-02-11]
+	Updated textproc/ruby-will-paginate to 3.0.4 [taca 2013-02-11]
