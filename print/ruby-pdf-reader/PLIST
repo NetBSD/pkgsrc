@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/09/16 08:18:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/02/11 08:58:51 taca Exp $
 bin/pdf_callbacks
 bin/pdf_list_callbacks
 bin/pdf_object
@@ -27,7 +27,22 @@ ${GEM_LIBDIR}/lib/pdf-reader.rb
 ${GEM_LIBDIR}/lib/pdf/hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader.rb
 ${GEM_LIBDIR}/lib/pdf/reader/abstract_strategy.rb
+${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Bold.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-BoldOblique.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Oblique.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Courier.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica-Bold.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica-BoldOblique.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica-Oblique.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Helvetica.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Symbol.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Times-Bold.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Times-BoldItalic.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Times-Italic.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/Times-Roman.afm
+${GEM_LIBDIR}/lib/pdf/reader/afm/ZapfDingbats.afm
 ${GEM_LIBDIR}/lib/pdf/reader/buffer.rb
+${GEM_LIBDIR}/lib/pdf/reader/cid_widths.rb
 ${GEM_LIBDIR}/lib/pdf/reader/cmap.rb
 ${GEM_LIBDIR}/lib/pdf/reader/encoding.rb
 ${GEM_LIBDIR}/lib/pdf/reader/encodings/mac_expert.txt
@@ -47,6 +62,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/filter/lzw.rb
 ${GEM_LIBDIR}/lib/pdf/reader/filter/null.rb
 ${GEM_LIBDIR}/lib/pdf/reader/filter/run_length.rb
 ${GEM_LIBDIR}/lib/pdf/reader/font.rb
+${GEM_LIBDIR}/lib/pdf/reader/font_descriptor.rb
 ${GEM_LIBDIR}/lib/pdf/reader/form_xobject.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyph_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist.txt
@@ -56,6 +72,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/object_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_stream.rb
 ${GEM_LIBDIR}/lib/pdf/reader/page.rb
+${GEM_LIBDIR}/lib/pdf/reader/page_layout.rb
 ${GEM_LIBDIR}/lib/pdf/reader/page_state.rb
 ${GEM_LIBDIR}/lib/pdf/reader/page_text_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/pages_strategy.rb
@@ -66,7 +83,16 @@ ${GEM_LIBDIR}/lib/pdf/reader/register_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/resource_methods.rb
 ${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/stream.rb
+${GEM_LIBDIR}/lib/pdf/reader/synchronized_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/text_receiver.rb
+${GEM_LIBDIR}/lib/pdf/reader/text_run.rb
 ${GEM_LIBDIR}/lib/pdf/reader/token.rb
+${GEM_LIBDIR}/lib/pdf/reader/transformation_matrix.rb
+${GEM_LIBDIR}/lib/pdf/reader/width_calculator.rb
+${GEM_LIBDIR}/lib/pdf/reader/width_calculator/built_in.rb
+${GEM_LIBDIR}/lib/pdf/reader/width_calculator/composite.rb
+${GEM_LIBDIR}/lib/pdf/reader/width_calculator/true_type.rb
+${GEM_LIBDIR}/lib/pdf/reader/width_calculator/type_one_or_three.rb
+${GEM_LIBDIR}/lib/pdf/reader/width_calculator/type_zero.rb
 ${GEM_LIBDIR}/lib/pdf/reader/xref.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
