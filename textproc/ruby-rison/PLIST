@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 08:36:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/02/11 09:17:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/COPYING.txt
-${GEM_LIBDIR}/README.html
+${GEM_LIBDIR}/License.txt
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile.rb
 ${GEM_LIBDIR}/lib/rison.rb
 ${GEM_LIBDIR}/lib/rison/dump.rb
-${GEM_LIBDIR}/lib/rison/evaluator.rb
-${GEM_LIBDIR}/lib/rison/grammar.rb
-${GEM_LIBDIR}/lib/rison/lexer.rb
-${GEM_LIBDIR}/lib/rison/parser.rb
-${GEM_LIBDIR}/test/test_dump.rb
-${GEM_LIBDIR}/test/test_parser.rb
+${GEM_LIBDIR}/lib/rison/parslet_parser.rb
+${GEM_LIBDIR}/lib/rison/parslet_transform.rb
+${GEM_LIBDIR}/rison.gemspec
+${GEM_LIBDIR}/spec/rison_dump_spec.rb
+${GEM_LIBDIR}/spec/rison_load_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
