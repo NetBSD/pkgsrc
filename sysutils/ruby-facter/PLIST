@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/12/17 13:22:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/02/11 04:16:46 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -147,6 +147,7 @@ ${GEM_LIBDIR}/spec/fixtures/ifconfig/fedora_8
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/fedora_8_eth0
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/freebsd_6_0
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/linux_ifconfig_all_with_multiple_interfaces
+${GEM_LIBDIR}/spec/fixtures/ifconfig/linux_ifconfig_no_addr
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/linux_ifconfig_no_mac
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/linux_ifconfig_venet
 ${GEM_LIBDIR}/spec/fixtures/ifconfig/open_solaris_10
@@ -166,6 +167,8 @@ ${GEM_LIBDIR}/spec/fixtures/netstat/open_solaris_b132
 ${GEM_LIBDIR}/spec/fixtures/netstat/ubuntu_7_04
 ${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-sparc-kstat-cpu-info
 ${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-x86_64-kstat-cpu-info
+${GEM_LIBDIR}/spec/fixtures/unit/ipaddress/ifconfig_net_tools_1.60.txt
+${GEM_LIBDIR}/spec/fixtures/unit/ipaddress/ifconfig_ubuntu_1204.txt
 ${GEM_LIBDIR}/spec/fixtures/unit/selinux/selinux_sestatus
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/centos-arp-ec2.out
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/linux-arp-ec2.out
@@ -178,8 +181,28 @@ ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/Mac_OS_X_10.5.5_ifconfig
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/darwin_ifconfig_all_with_multiple_interfaces
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/darwin_ifconfig_single_interface
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/debian_kfreebsd_ifconfig
-${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_ifconfig_single_interface
-${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_netstat_all_interfaces
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1111_ifconfig_lan0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1111_ifconfig_lan1
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1111_ifconfig_lo0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1111_lanscan
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1111_netstat_in
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_asterisk_ifconfig_lan0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_asterisk_ifconfig_lan1
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_asterisk_ifconfig_lo0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_asterisk_lanscan
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_asterisk_netstat_in
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_ifconfig_lan0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_ifconfig_lan1
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_ifconfig_lo0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_lanscan
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_netstat_in
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_nic_bonding_ifconfig_lan1
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_nic_bonding_ifconfig_lan4
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_nic_bonding_ifconfig_lan4_1
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_nic_bonding_ifconfig_lo0
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_nic_bonding_lanscan
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/hpux_1131_nic_bonding_netstat_in
+${GEM_LIBDIR}/spec/fixtures/unit/util/ip/linux_2_6_35_proc_net_bonding_bond0
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/linux_get_single_interface_eth0
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/linux_get_single_interface_ib0
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ip/linux_get_single_interface_lo
@@ -198,6 +221,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/solaris_sunfire_v120_prtdiag
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/solaris_t5220_prtdiag
 ${GEM_LIBDIR}/spec/fixtures/unit/util/processor/solaris-i86pc
 ${GEM_LIBDIR}/spec/fixtures/unit/util/processor/solaris-sun4u
+${GEM_LIBDIR}/spec/fixtures/unit/util/processor/x86-pentium2
 ${GEM_LIBDIR}/spec/fixtures/unit/util/uptime/kstat_boot_time
 ${GEM_LIBDIR}/spec/fixtures/unit/util/uptime/sysctl_kern_boottime_darwin
 ${GEM_LIBDIR}/spec/fixtures/unit/util/uptime/sysctl_kern_boottime_openbsd
@@ -226,6 +250,7 @@ ${GEM_LIBDIR}/spec/unit/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/id_spec.rb
 ${GEM_LIBDIR}/spec/unit/interfaces_spec.rb
 ${GEM_LIBDIR}/spec/unit/ipaddress6_spec.rb
+${GEM_LIBDIR}/spec/unit/ipaddress_spec.rb
 ${GEM_LIBDIR}/spec/unit/lsbdistcodename_spec.rb
 ${GEM_LIBDIR}/spec/unit/lsbdistdescription_spec.rb
 ${GEM_LIBDIR}/spec/unit/lsbdistid_spec.rb
