@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.511 2013/02/11 02:09:09 taca Exp $
+$NetBSD: CHANGES-2013,v 1.512 2013/02/11 02:22:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -736,3 +736,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ruby-net-scp to 1.1.0 [taca 2013-02-11]
 	Updated security/ruby-net-sftp to 2.1.1 [taca 2013-02-11]
 	Updated security/ruby-net-ssh-gateway to 1.2.0 [taca 2013-02-11]
+	Updated devel/ZenTest to 4.9.0 [taca 2013-02-11]
+	Updated devel/hoe to 3.5.0 [taca 2013-02-11]
+	Updated devel/ruby-daemon_controller to 1.1.1 [taca 2013-02-11]
