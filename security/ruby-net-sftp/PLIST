@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/02 14:30:43 fhajny Exp $
-${GEM_HOME}/cache/net-sftp-${PKGVERSION}.gem
-${GEM_LIBDIR}/CHANGELOG.rdoc
+@comment $NetBSD: PLIST,v 1.4 2013/02/11 02:07:37 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGES.txt
+${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/gem-public_cert.pem
 ${GEM_LIBDIR}/lib/net/sftp.rb
 ${GEM_LIBDIR}/lib/net/sftp/constants.rb
 ${GEM_LIBDIR}/lib/net/sftp/errors.rb
@@ -56,4 +58,4 @@ ${GEM_LIBDIR}/test/test_request.rb
 ${GEM_LIBDIR}/test/test_response.rb
 ${GEM_LIBDIR}/test/test_session.rb
 ${GEM_LIBDIR}/test/test_upload.rb
-${GEM_HOME}/specifications/net-sftp-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
