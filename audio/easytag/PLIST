@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.17 2012/03/08 09:49:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/02/11 08:56:39 wiz Exp $
 bin/easytag
 man/man1/easytag.1
 share/applications/easytag.desktop
-share/easytag/ChangeLog
-share/easytag/EasyTAG_logo.xpm
+share/doc/easytag/HACKING
+share/doc/easytag/THANKS
+share/doc/easytag/TODO
+share/icons/hicolor/128x128/apps/easytag.png
+share/icons/hicolor/16x16/apps/easytag.png
+share/icons/hicolor/256x256/apps/easytag.png
+share/icons/hicolor/32x32/apps/easytag.png
+share/icons/hicolor/48x48/apps/easytag.png
+share/icons/hicolor/64x64/apps/easytag.png
+share/icons/hicolor/scalable/apps/easytag.svg
 share/locale/bg/LC_MESSAGES/easytag.mo
 share/locale/cs/LC_MESSAGES/easytag.mo
 share/locale/da/LC_MESSAGES/easytag.mo
@@ -15,15 +23,17 @@ share/locale/he/LC_MESSAGES/easytag.mo
 share/locale/hu/LC_MESSAGES/easytag.mo
 share/locale/it/LC_MESSAGES/easytag.mo
 share/locale/ja/LC_MESSAGES/easytag.mo
+share/locale/lt/LC_MESSAGES/easytag.mo
 share/locale/nl/LC_MESSAGES/easytag.mo
 share/locale/pl/LC_MESSAGES/easytag.mo
 share/locale/pt_BR/LC_MESSAGES/easytag.mo
 share/locale/ro/LC_MESSAGES/easytag.mo
 share/locale/ru/LC_MESSAGES/easytag.mo
+share/locale/sl/LC_MESSAGES/easytag.mo
 share/locale/sr/LC_MESSAGES/easytag.mo
 share/locale/sr@Latn/LC_MESSAGES/easytag.mo
+share/locale/sr@latin/LC_MESSAGES/easytag.mo
 share/locale/sv/LC_MESSAGES/easytag.mo
 share/locale/uk/LC_MESSAGES/easytag.mo
 share/locale/zh_CN/LC_MESSAGES/easytag.mo
 share/locale/zh_TW/LC_MESSAGES/easytag.mo
-share/pixmaps/EasyTAG_icon.xpm
