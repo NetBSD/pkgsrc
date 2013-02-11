@@ -1,0 +1,8 @@
+RXTX is a Java library, using a native implementation (via JNI), providing
+serial and parallel communication for the Java Development Toolkit (JDK).
+
+It is based on the specification for Sun's Java Communications API, though
+while many of the class descriptions are the same the package used it not,
+since gnu.io is used instead. A certain amount of compatibility is intended
+with API, though this project should be considered as a fork and therefore
+compatible in spirit, but not in implementation.

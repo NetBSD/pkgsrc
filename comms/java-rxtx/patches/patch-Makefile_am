@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile_am,v 1.1 2013/02/11 01:13:20 dsainty Exp $
+
+A Jar can't be stripped nor executed - it's data.
+
+Add DESTDIR support.
+
+--- Makefile.am.orig	2005-07-08 15:47:33.000000000 +1200
++++ Makefile.am	2011-11-29 02:56:50.674521001 +1300
+@@ -86,8 +86,8 @@
+ 		if [ -f $$i ];then \
+ 			echo $$i; \
+ 		fi; \
+-	done` $(RXTX_PATH)
+-	$(INSTALL_PROGRAM) $(JARTARGET) $(JHOME)/
++	done` $(DESTDIR)$(RXTX_PATH)
++	$(INSTALL_DATA) $(JARTARGET) $(DESTDIR)$(JHOME)/
+ 
+ clean-generic:
+ 	rm -rf $(DEST) $(TOP)/$(CLASSTOP)

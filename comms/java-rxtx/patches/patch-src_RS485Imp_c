@@ -1,0 +1,15 @@
+$NetBSD: patch-src_RS485Imp_c,v 1.1 2013/02/11 01:13:21 dsainty Exp $
+
+UTS_RELEASE isn't even reliably available on Linux, let alone portable.
+
+--- src/RS485Imp.c.orig	2011-11-29 00:38:07.798521000 +1300
++++ src/RS485Imp.c	2011-11-29 00:38:52.626521000 +1300
+@@ -86,7 +86,7 @@
+ 	sigaction( SIGIO, NULL, &handler );
+ 	if( !handler.sa_handler ) signal( SIGIO, SIG_IGN );
+ #endif /* !__FreeBSD__ */
+-#if defined(__linux__) 
++#if 0
+ 	/* Lets let people who upgraded kernels know they may have problems */
+ 	if (uname (&name) == -1)
+ 	{
