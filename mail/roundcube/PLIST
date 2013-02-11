@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/12/05 15:38:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.25.2.1 2013/02/11 14:25:59 tron Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README.md
@@ -920,15 +920,11 @@ share/roundcube/program/include/rcube_template.php
 share/roundcube/program/include/rcube_user.php
 share/roundcube/program/include/rcube_vcard.php
 share/roundcube/program/js/app.js
-share/roundcube/program/js/app.js.src
 share/roundcube/program/js/common.js
-share/roundcube/program/js/common.js.src
 share/roundcube/program/js/editor.js
 share/roundcube/program/js/googiespell.js
-share/roundcube/program/js/googiespell.js.src
 share/roundcube/program/js/jquery.min.js
 share/roundcube/program/js/list.js
-share/roundcube/program/js/list.js.src
 share/roundcube/program/js/tiny_mce/langs/ar.js
 share/roundcube/program/js/tiny_mce/langs/az.js
 share/roundcube/program/js/tiny_mce/langs/bg.js
