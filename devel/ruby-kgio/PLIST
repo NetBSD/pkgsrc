@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/06 11:38:03 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/11 02:53:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -55,12 +55,14 @@ ${GEM_LIBDIR}/test/test_pipe_popen.rb
 ${GEM_LIBDIR}/test/test_pipe_read_write.rb
 ${GEM_LIBDIR}/test/test_poll.rb
 ${GEM_LIBDIR}/test/test_singleton_read_write.rb
+${GEM_LIBDIR}/test/test_socket.rb
 ${GEM_LIBDIR}/test/test_socketpair_read_write.rb
 ${GEM_LIBDIR}/test/test_tcp6_client_read_server_write.rb
 ${GEM_LIBDIR}/test/test_tcp_client_read_server_write.rb
 ${GEM_LIBDIR}/test/test_tcp_connect.rb
 ${GEM_LIBDIR}/test/test_tcp_server.rb
 ${GEM_LIBDIR}/test/test_tcp_server_read_client_write.rb
+${GEM_LIBDIR}/test/test_tfo.rb
 ${GEM_LIBDIR}/test/test_tryopen.rb
 ${GEM_LIBDIR}/test/test_unix_client_read_server_write.rb
 ${GEM_LIBDIR}/test/test_unix_connect.rb
