@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/12/18 07:51:56 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/11 04:58:17 taca Exp $
 
 DISTNAME=	thoth-0.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ COMMENT=	Minimalistic blog engine
 LICENSE=	modified-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ramaze>=2008.06:../../www/ramaze
-DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.6.2<2.7:../../www/ruby-erubis26
+DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0<3:../../www/ruby-erubis
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=2.1.2:../../textproc/ruby-builder
 DEPENDS+=	${RUBY_PKGPREFIX}-configuration>=0.0.5:../../misc/ruby-configuration
 DEPENDS+=	${RUBY_PKGPREFIX}-cssmin>=1.0.2<1.1:../../www/ruby-cssmin
@@ -24,7 +24,7 @@ CONFLICTS+=	ruby[1-9][0-9]-thoth-[0-9]* thoth-[0-9]*
 
 OVERRIDE_GEMSPEC+= \
 	builder>=2.1.2 configuration>=0.0.5 json-pure>=1.1.3 redcloth>=4.0.3 \
-	ramaze>=2008.06 sequel>=2.5.0 thin>=0.8.2
+	ramaze>=2008.06 sequel>=2.5.0 thin>=0.8.2 erubis>=2.7.0
 RUBY_JSON_REQD=	1.1.3
 RUBY_JSON_TYPE=	pure
 
