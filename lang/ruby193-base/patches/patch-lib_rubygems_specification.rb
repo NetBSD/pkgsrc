@@ -1,9 +1,12 @@
-$NetBSD: patch-lib_rubygems_specification.rb,v 1.2 2012/04/22 08:17:16 taca Exp $
+$NetBSD: patch-lib_rubygems_specification.rb,v 1.2.6.1 2013/02/11 17:39:08 tron Exp $
 
 Changes for pkgsrc environment:
 
 * Allow some attributes to nil.
 * Relax date/time format.
+
+And allow multiple conditions for requirement from Ruby 2.0.0 and
+Rubygem 1.8.25.
 
 --- lib/rubygems/specification.rb.orig	2012-04-19 22:43:16.000000000 +0000
 +++ lib/rubygems/specification.rb
@@ -29,7 +32,26 @@ Changes for pkgsrc environment:
                  Time.utc($1.to_i, $2.to_i, $3.to_i)
  
                # Workaround for where the date format output from psych isn't
-@@ -1987,7 +1993,24 @@ class Gem::Specification
+@@ -1720,7 +1726,9 @@ class Gem::Specification
+     when Numeric           then obj.inspect
+     when true, false, nil  then obj.inspect
+     when Gem::Platform     then "Gem::Platform.new(#{obj.to_a.inspect})"
+-    when Gem::Requirement  then "Gem::Requirement.new(#{obj.to_s.inspect})"
++    when Gem::Requirement  then
++      list = obj.as_list
++      "Gem::Requirement.new(#{ruby_code(list.size == 1 ? obj.to_s : list)})"
+     else raise Gem::Exception, "ruby_code case not handled: #{obj.class}"
+     end
+   end
+@@ -1946,6 +1954,7 @@ class Gem::Specification
+       ast = builder.tree
+ 
+       io = StringIO.new
++      io.set_encoding Encoding::UTF_8 if Object.const_defined? :Encoding
+ 
+       Psych::Visitors::Emitter.new(io).accept(ast)
+ 
+@@ -1987,7 +1996,24 @@ class Gem::Specification
      normalize
  
      nil_attributes = self.class.non_nil_attributes.find_all do |name|
@@ -55,7 +77,7 @@ Changes for pkgsrc environment:
      end
  
      unless nil_attributes.empty? then
-@@ -2090,10 +2113,15 @@ class Gem::Specification
+@@ -2090,10 +2116,15 @@ class Gem::Specification
        raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
      end
  
