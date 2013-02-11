@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.20 2012/08/01 12:27:12 drochner Exp $
+$NetBSD: patch-aa,v 1.21 2013/02/11 12:20:44 wiz Exp $
 
---- configure.orig	2012-07-27 18:25:28.000000000 +0000
+--- configure.orig	2013-02-06 09:47:26.000000000 +0000
 +++ configure
-@@ -15707,7 +15707,7 @@ squeeze() {
+@@ -3635,6 +3635,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+         ;;
+     esac
+   done
++  xc_bad_var_cflags=no
+   if test $xc_bad_var_cflags = yes; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
+ $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
+@@ -16373,7 +16374,7 @@ squeeze() {
  
  
        #
@@ -11,26 +19,26 @@ $NetBSD: patch-aa,v 1.20 2012/08/01 12:27:12 drochner Exp $
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -20390,15 +20390,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
-            LIBS="$LIBS $gss_libs"
+@@ -21261,15 +21262,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+            LIBS="$gss_libs $LIBS"
          elif test "$GSSAPI_ROOT" != "yes"; then
             LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
--           LIBS="$LIBS -lgssapi"
-+           LIBS="$LIBS -lgssapi -lkrb5"
+-           LIBS="-lgssapi $LIBS"
++           LIBS="-lgssapi -lkrb5 $LIBS"
          else
--           LIBS="$LIBS -lgssapi"
-+           LIBS="$LIBS -lgssapi -lkrb5"
+-           LIBS="-lgssapi $LIBS"
++           LIBS="-lgssapi -lkrb5 $LIBS"
          fi
          ;;
       esac
    else
       LDFLAGS="$LDFLAGS $GSSAPI_LIB_DIR"
--     LIBS="$LIBS -lgssapi"
-+     LIBS="$LIBS -lgssapi -lkrb5"
+-     LIBS="-lgssapi $LIBS"
++     LIBS="-lgssapi -lkrb5 $LIBS"
    fi
  else
    CPPFLAGS="$save_CPPFLAGS"
-@@ -24033,19 +24033,19 @@ $as_echo "$as_me: WARNING: You need an l
+@@ -24833,19 +24834,19 @@ $as_echo "$as_me: WARNING: You need an l
  $as_echo "yes" >&6; }
          if test "x$OPENSSL_ENABLED" = "x1"; then
            versioned_symbols_flavour="OPENSSL_"
