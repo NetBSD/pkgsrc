@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/12/17 13:20:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/02/11 04:17:38 taca Exp $
 bin/cap
 bin/capify
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/README.mdown
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/cap
 ${GEM_LIBDIR}/bin/capify
