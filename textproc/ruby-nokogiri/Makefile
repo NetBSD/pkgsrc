@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/25 06:56:58 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/11 02:44:26 taca Exp $
 
-DISTNAME=	nokogiri-1.5.5
+DISTNAME=	nokogiri-1.5.6
 CATEGORIES=	textproc
 
 MAINTAINER=	filip@joyent.com
