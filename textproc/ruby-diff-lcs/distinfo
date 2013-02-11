@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/09/12 13:38:16 taca Exp $
+$NetBSD: distinfo,v 1.3 2013/02/11 02:41:42 taca Exp $
 
-SHA1 (diff-lcs-1.1.3.gem) = f9e5dac8411c1b51905d71c38da72aa4948514b7
-RMD160 (diff-lcs-1.1.3.gem) = 9a0e172a7b50b4a20b4a4591d47ea20b01dd9bd5
-Size (diff-lcs-1.1.3.gem) = 41472 bytes
+SHA1 (diff-lcs-1.2.1.gem) = 9be5a63dddb78ef153b747789cb640bdcf059d14
+RMD160 (diff-lcs-1.2.1.gem) = c9bab2b63fb9ee870a6bba6984bb6ee41d91e9fe
+Size (diff-lcs-1.2.1.gem) = 46080 bytes

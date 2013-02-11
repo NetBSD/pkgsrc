@@ -1,18 +1,25 @@
-@comment $NetBSD: PLIST,v 1.3 2011/09/12 13:38:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/02/11 02:41:42 taca Exp $
 bin/htmldiff
 bin/ldiff
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.hoerc
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Contributing.rdoc
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/License.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/autotest/discover.rb
 ${GEM_LIBDIR}/bin/htmldiff
 ${GEM_LIBDIR}/bin/ldiff
 ${GEM_LIBDIR}/diff-lcs.gemspec
 ${GEM_LIBDIR}/docs/COPYING.txt
-${GEM_LIBDIR}/docs/artistic.html
+${GEM_LIBDIR}/docs/artistic.txt
 ${GEM_LIBDIR}/lib/diff-lcs.rb
 ${GEM_LIBDIR}/lib/diff/lcs.rb
 ${GEM_LIBDIR}/lib/diff/lcs/array.rb
@@ -21,9 +28,12 @@ ${GEM_LIBDIR}/lib/diff/lcs/callbacks.rb
 ${GEM_LIBDIR}/lib/diff/lcs/change.rb
 ${GEM_LIBDIR}/lib/diff/lcs/htmldiff.rb
 ${GEM_LIBDIR}/lib/diff/lcs/hunk.rb
+${GEM_LIBDIR}/lib/diff/lcs/internals.rb
 ${GEM_LIBDIR}/lib/diff/lcs/ldiff.rb
 ${GEM_LIBDIR}/lib/diff/lcs/string.rb
+${GEM_LIBDIR}/spec/change_spec.rb
 ${GEM_LIBDIR}/spec/diff_spec.rb
+${GEM_LIBDIR}/spec/issues_spec.rb
 ${GEM_LIBDIR}/spec/lcs_spec.rb
 ${GEM_LIBDIR}/spec/patch_spec.rb
 ${GEM_LIBDIR}/spec/sdiff_spec.rb
