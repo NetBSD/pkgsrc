@@ -1,0 +1,20 @@
+# HTTP Router
+
+## What is it?
+
+This is an HTTP router for use in either a web framework, or on it's own using
+Rack. It takes a set of routes and attempts to find the best match for
+it. Take a look at the examples directory for how you'd use it in the Rack
+context.
+
+## Features
+
+* Ordered route resolution.
+* Supports variables, and globbing, both named and unnamed.
+* Regex support for variables.
+* Request condition support.
+* Partial matches.
+* Supports interstitial variables (e.g.
+  /my-:variable-brings.all.the.boys/yard) and unnamed variable /one/:/two
+* Very fast and small code base (~1,000 loc).
+* Sinatra via https://github.com/joshbuddy/http_router_sinatra
