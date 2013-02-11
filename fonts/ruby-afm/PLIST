@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 08:55:57 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/afm.gemspec
+${GEM_LIBDIR}/lib/afm.rb
+${GEM_LIBDIR}/test/fixtures/Vera.afm
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_afm.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
