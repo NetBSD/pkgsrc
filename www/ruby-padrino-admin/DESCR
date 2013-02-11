@@ -1,0 +1,18 @@
+= Admin Dashboard and Authentication (padrino-admin)
+
+=== Overview
+
+Padrino has a beautiful Admin management dashboard with these features:
+
+Orm Agnostic::Data Adapters for Datamapper, Activerecord, Sequel, Mongomapper,
+Mongoid, Couchrest.
+
+Template Agnostic:: Erb, Erubis and Haml Renderer.
+
+Authentication:: Support for Account authentication, Account Permission
+managment.
+
+Scaffold:: You can simply create a new "admin interface" by providing a Model.
+
+Access Control:: Supports authentication and role permissions for your
+application.
