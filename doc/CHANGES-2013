@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.548 2013/02/11 12:45:01 taca Exp $
+$NetBSD: CHANGES-2013,v 1.549 2013/02/11 12:45:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffmpeg to 20130602.1.1.2 [wiz 2013-02-11]
 	Updated multimedia/ffplay to 1.1.2 [wiz 2013-02-11]
 	Added www/ruby-http_router version 0.10.2 [taca 2013-02-11]
+	Updated devel/mercurial to 2.5.1 [wiz 2013-02-11]
