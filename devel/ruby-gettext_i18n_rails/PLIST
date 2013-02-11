@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/16 16:23:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/02/11 02:53:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -28,6 +28,8 @@ ${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/action_controller.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/active_model.rb
+${GEM_LIBDIR}/lib/gettext_i18n_rails/active_model/name.rb
+${GEM_LIBDIR}/lib/gettext_i18n_rails/active_model/translation.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/active_record.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/backend.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/base_parser.rb
@@ -44,7 +46,7 @@ ${GEM_LIBDIR}/lib/gettext_i18n_rails/tasks.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/version.rb
 ${GEM_LIBDIR}/lib/tasks/gettext_rails_i18n.rake
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/action_controller_spec.rb
-${GEM_LIBDIR}/spec/gettext_i18n_rails/active_model_spec.rb
+${GEM_LIBDIR}/spec/gettext_i18n_rails/active_model/name_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/active_record_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/backend_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/haml_parser_spec.rb
