@@ -1,0 +1,5 @@
+= Term::ANSIColor - ANSI escape sequences in Ruby
+
+== Description
+
+This library can be used to color/decolor strings using ANSI escape sequences.
