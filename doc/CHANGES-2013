@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.545 2013/02/11 12:20:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.546 2013/02/11 12:33:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -789,3 +789,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-anki2 to 2.0.8 [wiz 2013-02-11]
 	Updated x11/xterm to 289 [wiz 2013-02-11]
 	Updated www/curl to 7.29.0 [wiz 2013-02-11]
+	Updated multimedia/ffmpeg to 20130602.1.1.2 [wiz 2013-02-11]
