@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/07/24 09:59:48 obache Exp $
+$NetBSD: distinfo,v 1.4.4.1 2013/02/11 13:06:50 tron Exp $
 
 SHA1 (suse121/aaa_base-12.1-534.113.1.i586.rpm) = 6a7ac9d0ca40fdc1bb84d9fa7560349396444e99
 RMD160 (suse121/aaa_base-12.1-534.113.1.i586.rpm) = 8542a4a3c13123be26646d9efc1dcaa09aad361e
@@ -12,12 +12,12 @@ Size (suse121/bash-4.2-1.14.1.i586.rpm) = 315443 bytes
 SHA1 (suse121/bash-4.2-1.14.1.x86_64.rpm) = 0ce91126740ea3b5ec36fcee050d19328abadb46
 RMD160 (suse121/bash-4.2-1.14.1.x86_64.rpm) = 391a5710cb73b32e9530fae0aba97f866060ef10
 Size (suse121/bash-4.2-1.14.1.x86_64.rpm) = 331483 bytes
-SHA1 (suse121/coreutils-8.14-3.1.2.i586.rpm) = 4d29f02e812b4e4ebc0125a58c0a5360465011cd
-RMD160 (suse121/coreutils-8.14-3.1.2.i586.rpm) = 95f3aa49f1cb7c956c683d71933e05d394f0079a
-Size (suse121/coreutils-8.14-3.1.2.i586.rpm) = 1098850 bytes
-SHA1 (suse121/coreutils-8.14-3.1.2.x86_64.rpm) = 6f8a3803d3ce9a0ceeb517ac527ede1b237746aa
-RMD160 (suse121/coreutils-8.14-3.1.2.x86_64.rpm) = f286a983a58dea9b2468d7880d25dec43ae7e618
-Size (suse121/coreutils-8.14-3.1.2.x86_64.rpm) = 1084596 bytes
+SHA1 (suse121/coreutils-8.14-3.19.1.i586.rpm) = 7462a6505bc65fa2b6bc2d8e1a9c881385fdc7d0
+RMD160 (suse121/coreutils-8.14-3.19.1.i586.rpm) = 84b6decc05f12b5cf8b88e7e8846e4d15ba03343
+Size (suse121/coreutils-8.14-3.19.1.i586.rpm) = 1101137 bytes
+SHA1 (suse121/coreutils-8.14-3.19.1.x86_64.rpm) = 201b29637c1641be36ef9d9e85bd99027c2e86c5
+RMD160 (suse121/coreutils-8.14-3.19.1.x86_64.rpm) = 32dc8f0c746bc2468e48e72722554e60466f7f1e
+Size (suse121/coreutils-8.14-3.19.1.x86_64.rpm) = 1085947 bytes
 SHA1 (suse121/cyrus-sasl-2.1.23-20.1.2.i586.rpm) = 1c831cf75c3fbf7d7f6386c27b2a84ed57704537
 RMD160 (suse121/cyrus-sasl-2.1.23-20.1.2.i586.rpm) = f493ee3aae4016b6e33da56bdc932ec2b85462e3
 Size (suse121/cyrus-sasl-2.1.23-20.1.2.i586.rpm) = 293069 bytes
