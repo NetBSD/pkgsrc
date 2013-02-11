@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:51:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/02/11 02:58:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPL
@@ -62,6 +62,12 @@ ${GEM_LIBDIR}/test/collector/test-descendant.rb
 ${GEM_LIBDIR}/test/collector/test-load.rb
 ${GEM_LIBDIR}/test/collector/test_dir.rb
 ${GEM_LIBDIR}/test/collector/test_objectspace.rb
+${GEM_LIBDIR}/test/fixtures/header-label.csv
+${GEM_LIBDIR}/test/fixtures/header-label.tsv
+${GEM_LIBDIR}/test/fixtures/header.csv
+${GEM_LIBDIR}/test/fixtures/header.tsv
+${GEM_LIBDIR}/test/fixtures/no-header.csv
+${GEM_LIBDIR}/test/fixtures/no-header.tsv
 ${GEM_LIBDIR}/test/fixtures/plus.csv
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-assertions.rb
