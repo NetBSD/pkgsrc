@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/11 14:06:00 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/url_mount.rb
+${GEM_LIBDIR}/pkg/url_mount-0.1.0.gem
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_url_mount.rb
+${GEM_LIBDIR}/url_mount.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
