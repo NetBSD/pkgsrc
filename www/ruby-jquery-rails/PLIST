@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/17 15:29:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/02/11 14:43:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -18,5 +18,6 @@ ${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.min.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.min.js
+${GEM_LIBDIR}/vendor/assets/javascripts/jquery.min.map
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery_ujs.js
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
