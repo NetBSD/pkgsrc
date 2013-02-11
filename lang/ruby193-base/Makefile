@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/12 14:51:31 taca Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2013/02/11 17:39:08 tron Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -102,7 +102,9 @@ CONFIGURE_ENV+=	MKDIR_P=${MKDIR:Q}
 
 DOCS=		COPYING COPYING.ja ChangeLog NEWS README \
 		README.EXT README.EXT.ja README.ja ToDo \
-		doc/ChangeLog-1.8.0 doc/ChangeLog-YARV doc/NEWS-1.8.7 \
+		doc/ChangeLog-1.8.0 doc/ChangeLog-1.9.3 doc/ChangeLog-YARV \
+		doc/NEWS-1.8.7 doc/NEWS-1.9.1 doc/NEWS-1.9.2 \
+		doc/etc.rd doc/etc.rd.ja \
 		doc/forwardable.rd doc/forwardable.rd.ja \
 		doc/irb/irb-tools.rd.ja doc/irb/irb.rd doc/irb/irb.rd.ja \
 		doc/shell.rd doc/shell.rd.ja
