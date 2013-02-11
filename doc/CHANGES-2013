@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.516 2013/02/11 03:09:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.517 2013/02/11 03:15:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -755,3 +755,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-parser to 3.1.1 [taca 2013-02-11]
 	Updated devel/ruby2ruby to 2.0.3 [taca 2013-02-11]
 	Updated devel/ruby-thor to 0.17.0 [taca 2013-02-11]
+	Updated graphics/ruby-RMagick to 2.13.2 [taca 2013-02-11]
+	Updated graphics/ruby-oily_png to 1.0.3 [taca 2013-02-11]
