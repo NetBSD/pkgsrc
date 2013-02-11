@@ -1,0 +1,7 @@
+Collection of common Sinatra extensions, semi-officially supported.
+
+# Goals
+
+* For every future Sinatra release, have at least one fully compatible release
+* High code quality, high test coverage
+* Include plugins people usually ask for a lot
