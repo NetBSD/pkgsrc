@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2013/01/21 14:50:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2013/02/11 12:33:31 wiz Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
-DISTVERSION=	1.1.1
+DISTVERSION=	1.1.2
 PREV_PKGPATH=	multimedia/ffmpeg-devel
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg/patches
 
