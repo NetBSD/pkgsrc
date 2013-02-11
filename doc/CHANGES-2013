@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.522 2013/02/11 04:58:48 taca Exp $
+$NetBSD: CHANGES-2013,v 1.523 2013/02/11 05:01:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -765,3 +765,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/ruby-facter to 1.6.17 [taca 2013-02-11]
 	Updated sysutils/capistrano to 2.14.2 [taca 2013-02-11]
 	Updated www/thoth to 0.2.1nb3 [taca 2013-02-11]
+	Updated security/opendnssec to 1.3.12nb2 [taca 2013-02-11]
