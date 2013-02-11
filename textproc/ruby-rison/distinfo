@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:22:14 jlam Exp $
+$NetBSD: distinfo,v 1.2 2013/02/11 09:17:42 taca Exp $
 
-SHA1 (rison-1.2.1.gem) = c9e383303e82724caf8fc8ea0899647657a4168d
-RMD160 (rison-1.2.1.gem) = 33bfdcbe0ef9e379371438fbe35de40aed4f24ac
-Size (rison-1.2.1.gem) = 9728 bytes
+SHA1 (rison-2.0.0.gem) = 2d7b54b39e58e1450c2c5401d38004531bdbc68a
+RMD160 (rison-2.0.0.gem) = 46515f3a471833e6d824bc48bbaa832ad63de61c
+Size (rison-2.0.0.gem) = 7168 bytes
