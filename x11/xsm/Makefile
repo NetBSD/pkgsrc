@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/29 05:07:21 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/11 09:09:53 wiz Exp $
 #
 
-DISTNAME=		xsm-1.0.2
+DISTNAME=		xsm-1.0.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,6 +24,10 @@ CONFIGURE_ENV+=		ac_cv_path_RSH=/usr/bin/rsh
 .endif
 
 MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
+INSTALL_MAKE_FLAGS+=	SYSTEM_INIT_DIR=${PREFIX}/share/examples/xsm
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/X11/xsm
+CONF_FILES+=		share/examples/xsm/system.xsm ${PKG_SYSCONFDIR}/X11/xsm/system.xsm
 
 .include "../../x11/libXaw/buildlink3.mk"
 
