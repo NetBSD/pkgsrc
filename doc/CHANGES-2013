@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.556 2013/02/11 14:43:59 taca Exp $
+$NetBSD: CHANGES-2013,v 1.557 2013/02/11 14:47:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-padrino version 0.10.7 [taca 2013-02-11]
 	Added www/ruby-padrino-helpers version 0.10.7 [taca 2013-02-11]
 	Updated www/ruby-jquery-rails to 2.2.1 [taca 2013-02-11]
+	Updated www/ruby-sass to 3.2.5 [taca 2013-02-11]
