@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.526 2013/02/11 08:39:19 taca Exp $
+$NetBSD: CHANGES-2013,v 1.527 2013/02/11 08:48:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/ipv6-toolkit version 1.3b [agc 2013-02-11]
 	Added devel/ruby-backports version 2.7.1 [taca 2013-02-11]
 	Added devel/ruby-blankslate version 2.1.2.4 [taca 2013-02-11]
+	Added devel/ruby-parslet version 1.4.0 [taca 2013-02-11]
