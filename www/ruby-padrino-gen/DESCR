@@ -1,0 +1,12 @@
+= Agnostic Application Generators (padrino-gen)
+
+=== Overview
+
+Padrino comes preloaded with flexible code generators powered in part by the
+excellent Thor gem (incidentally also used in the Rails 3 generators).
+
+These generators are intended to allow for easy code generation both in
+creating new applications and building on existing ones.
+
+The generators have been built to be as library agnostic as possible,
+supporting a myriad of test frameworks, js libraries, mocking libraries, etc.
