@@ -1,6 +1,0 @@
-This package provides lbxproxy, the proxy for the Low Bandwidth
-extension to X (LBX). Clients connect to lbxproxy, which multiplexes
-them over a single connection to the X server, performing various
-optimisation to reduce bandwidth usage and/or latency.
-
-This is from the modular X.org X11 project.
