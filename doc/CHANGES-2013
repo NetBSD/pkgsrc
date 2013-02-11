@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.535 2013/02/11 09:08:45 taca Exp $
+$NetBSD: CHANGES-2013,v 1.536 2013/02/11 09:10:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -778,3 +778,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xkbutils to 1.0.4 [wiz 2013-02-11]
 	Updated textproc/ruby-fast-stemmer to 1.0.2 [taca 2013-02-11]
 	Updated textproc/ruby-kramdown to 0.14.2 [taca 2013-02-11]
+	Updated x11/xsm to 1.0.3 [wiz 2013-02-11]
