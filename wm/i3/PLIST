@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/02/12 23:25:35 tonnerre Exp $
+bin/i3
+bin/i3-config-wizard
+bin/i3-input
+bin/i3-msg
+bin/i3-nagbar
+bin/i3-sensible-editor
+bin/i3-sensible-pager
+bin/i3-sensible-terminal
+bin/i3bar
+include/i3/ipc.h
+man/man1/i3-config-wizard.1
+man/man1/i3-input.1
+man/man1/i3-msg.1
+man/man1/i3-nagbar.1
+man/man1/i3.1
+man/man1/i3bar.1
+share/examples/i3/config
+share/examples/i3/config.keycodes
+share/xsessions/i3.xsession.desktop
