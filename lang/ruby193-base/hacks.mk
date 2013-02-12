@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.4 2012/07/14 03:35:48 tsutsui Exp $
+# $NetBSD: hacks.mk,v 1.5 2013/02/12 12:47:18 taca Exp $
 
 .if !defined(RUBY193_BASE_HACKS_MK)
-RUBY19_BASE_HACKS_MK=	defined
+RUBY193_BASE_HACKS_MK=	defined
 
 .include "../../mk/compiler.mk"
 
