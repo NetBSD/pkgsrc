@@ -1,8 +1,8 @@
-$NetBSD: patch-i386-ab,v 1.5 2007/11/13 09:16:59 sborrill Exp $
+$NetBSD: patch-i386-ab,v 1.6 2013/02/12 13:55:49 sborrill Exp $
 
---- setupwfc.orig	2007-11-13 09:03:07.000000000 +0000
-+++ setupwfc	2007-11-13 09:03:07.000000000 +0000
-@@ -438,7 +438,7 @@
+--- setupwfc.orig	2007-06-12 12:19:38.000000000 +0100
++++ setupwfc	2013-02-12 13:43:20.000000000 +0000
+@@ -438,10 +438,10 @@
                     exit 1
                 fi
                 ;;
@@ -10,4 +10,8 @@ $NetBSD: patch-i386-ab,v 1.5 2007/11/13 09:16:59 sborrill Exp $
 +	*BSD|DragonFly)
                 # Assume Free/Net/Open BSD on an X86 with Linux emulation.
  
-                if uname -m | grep 86 2>&1 >/dev/null ; then
+-               if uname -m | grep 86 2>&1 >/dev/null ; then
++               if uname -m | grep -E '64|86' 2>&1 >/dev/null ; then
+                    PLATFORM=linuxx86
+                    DISP_PLATFORM="Linux (x86)"
+ 		   echo
