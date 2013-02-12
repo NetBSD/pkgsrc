@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/07/02 07:02:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/02/12 21:07:21 adam Exp $
 share/boost-build/Jamroot.jam
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
@@ -380,6 +380,32 @@ share/boost-build/test/qt4/qttest.cpp
 share/boost-build/test/qt4/qtwebkit.cpp
 share/boost-build/test/qt4/qtxml.cpp
 share/boost-build/test/qt4/qtxmlpatterns.cpp
+share/boost-build/test/qt4/rcc.cpp
+share/boost-build/test/qt4/rcc.qrc
+share/boost-build/test/qt5.py
+share/boost-build/test/qt5/jamroot.jam
+share/boost-build/test/qt5/mock.cpp
+share/boost-build/test/qt5/mock.h
+share/boost-build/test/qt5/qtassistant.cpp
+share/boost-build/test/qt5/qtcore.cpp
+share/boost-build/test/qt5/qtcorefail.cpp
+share/boost-build/test/qt5/qtdeclarative.cpp
+share/boost-build/test/qt5/qthelp.cpp
+share/boost-build/test/qt5/qtmultimedia.cpp
+share/boost-build/test/qt5/qtnetwork.cpp
+share/boost-build/test/qt5/qtquick.cpp
+share/boost-build/test/qt5/qtquick.qml
+share/boost-build/test/qt5/qtscript.cpp
+share/boost-build/test/qt5/qtscripttools.cpp
+share/boost-build/test/qt5/qtsql.cpp
+share/boost-build/test/qt5/qtsvg.cpp
+share/boost-build/test/qt5/qttest.cpp
+share/boost-build/test/qt5/qtwebkitwidgets.cpp
+share/boost-build/test/qt5/qtwidgets.cpp
+share/boost-build/test/qt5/qtxml.cpp
+share/boost-build/test/qt5/qtxmlpatterns.cpp
+share/boost-build/test/qt5/rcc.cpp
+share/boost-build/test/qt5/rcc.qrc
 share/boost-build/test/railsys.py
 share/boost-build/test/railsys/libx/include/test_libx.h
 share/boost-build/test/railsys/libx/jamroot.jam
@@ -519,6 +545,7 @@ share/boost-build/tools/qcc.jam
 share/boost-build/tools/qt.jam
 share/boost-build/tools/qt3.jam
 share/boost-build/tools/qt4.jam
+share/boost-build/tools/qt5.jam
 share/boost-build/tools/quickbook-config.jam
 share/boost-build/tools/quickbook.jam
 share/boost-build/tools/rc.jam
