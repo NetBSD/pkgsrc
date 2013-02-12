@@ -1,6 +1,6 @@
-$NetBSD: patch-libs_context_config_Jamfile.jam,v 1.1 2013/01/20 09:06:59 martin Exp $
+$NetBSD: patch-libs_context_config_Jamfile.jam,v 1.2 2013/02/12 21:07:22 adam Exp $
 
-# new build test for SPARC architecture
+New build test for SPARC.
 
 --- libs/context/config/Jamfile.jam.orig	2012-11-04 18:56:00.000000000 +0100
 +++ libs/context/config/Jamfile.jam	2012-11-04 18:56:19.000000000 +0100

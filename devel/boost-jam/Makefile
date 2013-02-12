@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/12/27 21:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/12 21:07:21 adam Exp $
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)
@@ -7,8 +7,6 @@ BOOST_CONFIG=		no
 CONFLICTS+=		boost-build<=1.33.1
 
 .include "../../meta-pkgs/boost/Makefile.common"
-
-PKGREVISION=		1
 
 SUBST_CLASSES+=		bb
 SUBST_MESSAGE.bb=	Fixing path to Boost.Build files.
