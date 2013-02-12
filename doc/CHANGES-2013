@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.563 2013/02/12 09:51:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.564 2013/02/12 09:58:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -814,3 +814,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs-snapshot to 24.3.50.20130207 [minskim 2013-02-12]
 	Updated devel/gmp to 5.1.1 [adam 2013-02-12]
 	Updated emulators/yabause to 0.9.12 [wiz 2013-02-12]
+	Updated sysutils/cdrtools to 3.01alpha12 [wiz 2013-02-12]
