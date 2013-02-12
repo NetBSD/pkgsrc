@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/02/06 16:04:58 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/12 14:33:08 taca Exp $
 
 DISTNAME=	railties-${RUBY_RAILS_VERSION}
-PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
