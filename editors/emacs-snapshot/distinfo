@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.55 2012/03/21 23:05:02 minskim Exp $
+$NetBSD: distinfo,v 1.56 2013/02/12 04:47:31 minskim Exp $
 
-SHA1 (emacs-snapshot_20120319.orig.tar.xz) = dfa31663ccbac53553c82798b19c148c94229d8c
-RMD160 (emacs-snapshot_20120319.orig.tar.xz) = 8a7fe6443639c1a453f564f543d2d26a0ea7c57e
-Size (emacs-snapshot_20120319.orig.tar.xz) = 23475004 bytes
-SHA1 (patch-aa) = e77be157f2ad3c8002afe6c5483e61ff4769b85d
-SHA1 (patch-ac) = 7792cd247bcc40eafb4ec28f98bd0d2d9bd4b0c3
-SHA1 (patch-ad) = b8faf958f7ab3effd6c8dbcbf51fe70ddb2ecdae
+SHA1 (emacs-snapshot_20130207.orig.tar.xz) = dcf272866f5cb0d66d96e3774728497a4e976561
+RMD160 (emacs-snapshot_20130207.orig.tar.xz) = 93e61813ddf5383d9f28bf72037424f97458bc37
+Size (emacs-snapshot_20130207.orig.tar.xz) = 24269140 bytes
+SHA1 (patch-aa) = 9050d1ab70667c75fa422b07b7c07f7bd5034ce3
+SHA1 (patch-ad) = 5c2e132d64fddd900db762afee8086ff4f2d71da
 SHA1 (patch-ae) = 2dfe31015550feeaa47955136d3bbe2aa6790095
-SHA1 (patch-ag) = 2fc1d3fd953e595eb0ed1f3f5289a70a754e1aed
+SHA1 (patch-ag) = d7e0875965317b862fd65c42aba3b98c0548ca3e
