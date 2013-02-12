@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2012/09/11 23:25:07 asau Exp $
+# $NetBSD: Makefile,v 1.83 2013/02/12 23:27:24 tcort Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -55,6 +55,11 @@ BUILDLINK_DEPMETHOD.readline=	build
 ##
 .if empty(PKG_OPTIONS:Mmultibyte)
 CONFIGURE_ENV+=	ac_cv_type_wctype_t=no
+.endif
+
+# Minix lacks setpgid() which is needed for job control.
+.if ${OPSYS} == "Minix"
+CONFIGURE_ARGS+=        --disable-job-control
 .endif
 
 BUILDLINK_API_DEPENDS.readline+=	readline>=4.3
