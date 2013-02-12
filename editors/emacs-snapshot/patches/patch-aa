@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2011/12/09 01:35:08 marino Exp $
+$NetBSD: patch-aa,v 1.5 2013/02/12 04:47:31 minskim Exp $
 
---- configure.in.orig	2011-12-06 08:31:42.000000000 +0000
-+++ configure.in
-@@ -441,6 +441,14 @@ case "${canonical}" in
-       sparc64-*)        machine=sparc ;;
-     esac
+Add DragonFly configuration.
+
+--- configure.ac.orig	2013-02-07 14:39:42.000000000 +0000
++++ configure.ac
+@@ -428,6 +428,15 @@ case "${canonical}" in
+     opsys=gnu-linux
    ;;
+ 
 +  ## DragonFly ports
 +  *-*-dragonfly*)
 +    opsys=dragonfly
@@ -14,10 +16,11 @@ $NetBSD: patch-aa,v 1.4 2011/12/09 01:35:08 marino Exp $
 +      amd64-*-dragonfly*|x86_64-*-dragonfly*) machine=amdx86-64 ;;
 +    esac
 +  ;;
- 
-   ## FreeBSD kernel + glibc based userland
-   *-*-kfreebsd*gnu* )
-@@ -956,6 +964,8 @@ case "$opsys" in
++
+   ## FreeBSD ports
+   *-*-freebsd* )
+     opsys=freebsd
+@@ -1014,6 +1023,8 @@ case "$opsys" in
  
    freebsd) LIBS_SYSTEM="-lutil" ;;
  
@@ -26,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2011/12/09 01:35:08 marino Exp $
    hpux*) LIBS_SYSTEM="-l:libdld.sl" ;;
  
    sol2*) LIBS_SYSTEM="-lsocket -lnsl" ;;
-@@ -1010,6 +1020,10 @@ case $opsys in
+@@ -1071,6 +1082,10 @@ case $opsys in
      LIB_STANDARD=-lc
      START_FILES='pre-crt0.o $(CRT_DIR)/crt0.o'
      ;;
