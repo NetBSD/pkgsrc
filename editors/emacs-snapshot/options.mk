@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.7 2011/10/09 14:02:06 obache Exp $
+# $NetBSD: options.mk,v 1.8 2013/02/12 04:47:31 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=	dbus xft2 svg
+PKG_SUPPORTED_OPTIONS=	dbus gconf gnutls imagemagick svg xft2
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls imagemagick svg x11 xaw xft2
 
 .include "../../mk/bsd.options.mk"
 
@@ -18,6 +18,33 @@ PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
 .include "../../sysutils/dbus/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--without-dbus
+.  endif
+
+###
+### Support gconf
+###
+.  if !empty(PKG_OPTIONS:Mgconf) && empty(PKG_OPTIONS:Mnextstep)
+.include "../../devel/gconfmm/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-gconf
+.  endif
+
+###
+### Support gnutls
+###
+.  if !empty(PKG_OPTIONS:Mgnutls)
+.include "../../security/gnutls/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-gnutls
+.  endif
+
+###
+### Support ImageMagick
+###
+.  if !empty(PKG_OPTIONS:Mimagemagick)
+.include "../../graphics/ImageMagick/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-imagemagic
 .  endif
 
 ###
