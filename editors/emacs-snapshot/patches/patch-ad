@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2010/06/07 22:44:01 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2013/02/12 04:47:32 minskim Exp $
+
+Magic line to avoid segmentation fault during build (not always happen).
 
 --- lisp/cus-dep.el.orig	2010-06-02 09:53:41.000000000 -0700
 +++ lisp/cus-dep.el

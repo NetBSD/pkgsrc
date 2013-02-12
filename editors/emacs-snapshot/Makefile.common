@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.53 2012/10/03 11:43:32 asau Exp $
+# $NetBSD: Makefile.common,v 1.54 2013/02/12 04:47:31 minskim Exp $
 
-DISTNAME=	emacs-snapshot_20120319.orig
+DISTNAME=	emacs-snapshot_20130207.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.naquadah.org/unstable/
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 SETGIDGAME=		yes
 MAKE_JOBS_SAFE=		no
-
-BROKEN=	emacs24 has been released; emacs25 snapshots are not yet available.
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
