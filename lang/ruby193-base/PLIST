@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/02/06 15:48:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/02/12 13:03:08 taca Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -774,7 +774,7 @@ ${GEM_HOME}/gems/rdoc-3.9.5/bin/rdoc${RUBY_VER}
 ${GEM_HOME}/gems/rdoc-3.9.5/bin/ri${RUBY_VER}
 ${GEM_HOME}/specifications/bigdecimal-1.1.0.gemspec
 ${GEM_HOME}/specifications/io-console-0.3.gemspec
-${GEM_HOME}/specifications/json-1.5.4.gemspec
+${GEM_HOME}/specifications/json-1.5.5.gemspec
 ${GEM_HOME}/specifications/minitest-2.5.1.gemspec
 ${GEM_HOME}/specifications/rake-0.9.2.2.gemspec
 ${GEM_HOME}/specifications/rdoc-3.9.5.gemspec
