@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.567 2013/02/12 13:14:38 taca Exp $
+$NetBSD: CHANGES-2013,v 1.568 2013/02/12 13:17:28 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ruby193-base to 1.9.3p385nb2 [taca 2013-02-12]
 	Updated textproc/ruby-json-pure to 1.7.7 [taca 2013-02-12]
 	Updated textproc/ruby-json to 1.7.7 [taca 2013-02-12]
+	Updated security/gnutls to 3.0.28 [drochner 2013-02-12]
