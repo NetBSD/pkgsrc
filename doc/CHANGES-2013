@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.559 2013/02/11 21:30:55 adam Exp $
+$NetBSD: CHANGES-2013,v 1.560 2013/02/12 04:36:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -809,3 +809,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-sass to 3.2.5 [taca 2013-02-11]
 	Updated www/ruby-sass-rails32 to 3.2.6 [taca 2013-02-11]
 	Updated mail/dovecot2 to 2.1.15 [adam 2013-02-11]
+	Updated databases/libpqxx to 4.0.1 [hiramatsu 2013-02-12]
+	Updated databases/libpqxx-doc to 4.0.1 [hiramatsu 2013-02-12]
