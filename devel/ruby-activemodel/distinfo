@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.18 2013/01/29 15:38:40 taca Exp $
+$NetBSD: distinfo,v 1.19 2013/02/12 15:30:42 taca Exp $
 
 SHA1 (activemodel-3.0.20.gem) = 80c7d881ed64ed7a66f4d82b12c2b98b43f6fbde
 RMD160 (activemodel-3.0.20.gem) = 20c74da6d7a173a5d5a252a138afa5b132f9a7b9
 Size (activemodel-3.0.20.gem) = 38912 bytes
+SHA1 (patch-lib_active__model_attribute__methods.rb) = a7b24bc83c4142a2b3955e24c4aa4bdeb4ce77eb
