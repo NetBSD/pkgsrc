@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.41 2012/07/27 10:48:36 jperkin Exp $
+# $NetBSD: tools.SunOS.mk,v 1.42 2013/02/12 15:08:48 jperkin Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -109,11 +109,9 @@ TOOLS_PLATFORM.gsed?=		/usr/bin/gsed
 TOOLS_PLATFORM.gsoelim?=	/usr/bin/gsoelim
 .endif
 .if exists(/usr/bin/gtar)
-TOOLS_PLATFORM.bsdtar?=		/usr/bin/gtar
 TOOLS_PLATFORM.gtar?=		/usr/bin/gtar
 TOOLS_PLATFORM.tar?=		/usr/bin/gtar
 .elif exists(/usr/sfw/bin/gtar)
-TOOLS_PLATFORM.bsdtar?=		/usr/sfw/bin/gtar
 TOOLS_PLATFORM.gtar?=		/usr/sfw/bin/gtar
 TOOLS_PLATFORM.tar?=		/usr/sfw/bin/gtar
 .endif
