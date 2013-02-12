@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/31 21:45:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/02/12 12:35:35 drochner Exp $
 
 SHA1 (qpdf-4.0.1.tar.gz) = 029ad13e1089396df34aeee3c5e386789715112a
 RMD160 (qpdf-4.0.1.tar.gz) = e687b293ef45ee3e60600c2ae8c660f013a10c91
 Size (qpdf-4.0.1.tar.gz) = 5031080 bytes
-SHA1 (patch-make_libtool.mk) = ea3eea0c454f61f002bc7d55681fc99ea1c4c7d3
+SHA1 (patch-make_libtool.mk) = 24953c7f2db264eff7e543fae990732a9338d5d8
