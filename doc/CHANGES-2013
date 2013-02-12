@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.560 2013/02/12 04:36:48 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.561 2013/02/12 04:48:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -811,3 +811,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.1.15 [adam 2013-02-11]
 	Updated databases/libpqxx to 4.0.1 [hiramatsu 2013-02-12]
 	Updated databases/libpqxx-doc to 4.0.1 [hiramatsu 2013-02-12]
+	Updated editors/emacs-snapshot to 24.3.50.20130207 [minskim 2013-02-12]
