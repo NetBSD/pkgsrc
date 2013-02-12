@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.565 2013/02/12 10:13:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.566 2013/02/12 13:03:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/yabause to 0.9.12 [wiz 2013-02-12]
 	Updated sysutils/cdrtools to 3.01alpha12 [wiz 2013-02-12]
 	Updated textproc/diffstat to 1.56 [wiz 2013-02-12]
+	Updated lang/ruby193-base to 1.9.3p385nb2 [taca 2013-02-12]
