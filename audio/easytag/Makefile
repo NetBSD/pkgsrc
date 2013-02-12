@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2013/02/11 08:56:39 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2013/02/12 12:37:14 drochner Exp $
 #
 
 DISTNAME=	easytag-2.1.8
@@ -22,6 +22,7 @@ USE_TOOLS+=		gmake intltool pkg-config xgettext
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
