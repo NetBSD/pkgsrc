@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 21:25:21 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/02/12 04:35:24 hiramatsu Exp $
 #
 
 .include "../../databases/libpqxx/Makefile.common"
 
 COMMENT=		C++ interface to postgresql-lib
-PKGREVISION=		4
 
 NOT_FOR_PLATFORM=	NetBSD-*-pc532
 
@@ -20,5 +19,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-thread-safety
 .endif
 
+PYTHON_FOR_BUILD_ONLY=  yes
+REPLACE_PYTHON+=	tools/splitconfig
+
+.include "../../lang/python/application.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
