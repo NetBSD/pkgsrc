@@ -1,0 +1,8 @@
+Key features of i3 are correct implementation of Xinerama (workspaces are
+assigned to virtual screens, i3 does the right thing when attaching new
+monitors), XrandR support (not done yet), horizontal and vertical columns
+(think of a table) in tiling. Also, special focus is on writing clean,
+readable and well documented code. i3 uses xcb for asynchronous
+communication with X11, and has several measures to be very fast.
+
+Please be aware i3 is primarily targeted at advanced users and developers.
