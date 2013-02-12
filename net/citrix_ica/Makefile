@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/08/14 17:07:58 asau Exp $
+# $NetBSD: Makefile,v 1.43 2013/02/12 13:55:48 sborrill Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	2
@@ -28,9 +28,11 @@ PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 
+PATCH_ARCH=	${MACHINE_ARCH}
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=	en.linuxx86
 PKGNAME=	citrix_ica-10.6.115659
+PATCH_ARCH=	i386
 MASTER_SITES=	ftp://download2.citrix.com/FILES/en/products/Linux10/
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=	en.solaris
@@ -63,7 +65,7 @@ FETCH_MESSAGE+= "${DISTDIR}/${PKGNAME_NOREV}"
 
 do-patch:
 	(cd ${WRKSRC}; \
-	for f in ${PATCHDIR}/patch-${MACHINE_ARCH}-*;do \
+	for f in ${PATCHDIR}/patch-${PATCH_ARCH}-*;do \
 	${PATCH} ${PATCH_ARGS} <$$f >/dev/null 2>&1 || ${TRUE}; \
 	done)
 
