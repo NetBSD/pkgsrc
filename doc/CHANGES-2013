@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.576 2013/02/12 22:45:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.577 2013/02/12 23:26:28 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -851,3 +851,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/boost-python to 1.53.0 [adam 2013-02-12]
 	Updated meta-pkgs/boost to 1.53.0 [adam 2013-02-12]
 	Updated x11/xrandr to 1.4.0 [wiz 2013-02-12]
+	Added wm/i3 version 4.4 [tonnerre 2013-02-12]
