@@ -1,10 +1,10 @@
-$NetBSD: patch-libs_context_build_Jamfile.v2,v 1.2 2013/01/20 09:06:59 martin Exp $
+$NetBSD: patch-libs_context_build_Jamfile.v2,v 1.3 2013/02/12 21:07:22 adam Exp $
 
-# add support for SPARC architecture
+Add support for SPARC.
 
---- ./libs/context/build/Jamfile.v2.orig	2012-11-24 22:52:40.000000000 +0100
-+++ ./libs/context/build/Jamfile.v2	2012-11-25 21:20:20.000000000 +0100
-@@ -17,8 +17,7 @@
+--- libs/context/build/Jamfile.v2.orig	2013-01-27 00:25:34.000000000 +0000
++++ libs/context/build/Jamfile.v2
+@@ -17,8 +17,7 @@ import architecture ;
  project boost/context
      : source-location ../src
      : requirements
@@ -14,8 +14,8 @@ $NetBSD: patch-libs_context_build_Jamfile.v2,v 1.2 2013/01/20 09:06:59 martin Ex
      : usage-requirements
        <link>shared:<define>BOOST_CONTEXT_DYN_LINK=1
      ;
-@@ -427,6 +426,16 @@
-      <target-os>windows
+@@ -414,6 +413,16 @@ alias asm_context_sources
+    : unsupported.cpp
     ;
  
 +# SPARC
@@ -30,4 +30,4 @@ $NetBSD: patch-libs_context_build_Jamfile.v2,v 1.2 2013/01/20 09:06:59 martin Ex
 +
  explicit asm_context_sources ;
  
- 
+ alias select_asm_context_sources

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2013/01/24 22:54:49 riz Exp $
+# $NetBSD: Makefile.common,v 1.40 2013/02/12 21:07:22 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -9,7 +9,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.52.0
+BOOST_VERSION=		1.53.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -19,7 +19,6 @@ CATEGORIES=		devel
 PKGNAME=	boost-${BOOST_VERSION}
 .else # ${BOOST_PACKAGE} != "meta-pkg"
 PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
-PKGREVISION=	2
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
 EXTRACT_SUFX=	.tar.bz2

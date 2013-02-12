@@ -1,7 +1,7 @@
-$NetBSD: patch-tools_build_v2_engine_hash.c,v 1.2 2013/01/17 11:58:00 martin Exp $
+$NetBSD: patch-tools_build_v2_engine_hash.c,v 1.3 2013/02/12 21:07:22 adam Exp $
 
-# Fix alignement for 32bit platforms with alignment restrictions.
-# A time_t requires greater alignement than a void*.
+Fix alignement for 32bit platforms with alignment restrictions.
+A time_t requires greater alignement than a void*.
 
 --- tools/build/v2/engine/hash.c.orig	2013-01-16 16:21:53.000000000 +0100
 +++ tools/build/v2/engine/hash.c	2013-01-17 12:36:56.000000000 +0100
@@ -69,4 +69,3 @@ $NetBSD: patch-tools_build_v2_engine_hash.c,v 1.2 2013/01/17 11:58:00 martin Exp
                  ++here;
  
              count += here;
-
