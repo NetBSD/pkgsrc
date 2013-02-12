@@ -1,6 +1,6 @@
-$NetBSD: patch-client_mysqlbinlog.cc,v 1.2 2012/10/01 15:54:40 adam Exp $
+$NetBSD: patch-client_mysqlbinlog.cc,v 1.3 2013/02/12 20:36:28 adam Exp $
 
-* Portability: include <bstring.h> if exists.
+Portability: include <bstring.h> if exists.
 
 --- client/mysqlbinlog.cc.orig	2012-08-29 08:50:46.000000000 +0000
 +++ client/mysqlbinlog.cc
