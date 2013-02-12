@@ -1,6 +1,6 @@
-$NetBSD: patch-libs_context_src_asm_make__sparc__sysv__elf__gas.S,v 1.1 2013/01/20 09:06:59 martin Exp $
+$NetBSD: patch-libs_context_src_asm_make__sparc__sysv__elf__gas.S,v 1.2 2013/02/12 21:07:22 adam Exp $
 
-# Implementation of make_fcontext for sparc
+Implementation of make_fcontext for SPARC.
 
 --- /dev/null	2013-01-19 12:02:03.000000000 +0100
 +++ libs/context/src/asm/make_sparc_sysv_elf_gas.S	2013-01-19 19:29:27.000000000 +0100
