@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/16 11:48:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.6.10.1 2013/02/12 17:40:14 tron Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/CVE-2013-0256.rdoc
 ${GEM_LIBDIR}/DEVELOPERS.rdoc
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/LEGAL.rdoc
@@ -133,8 +134,10 @@ ${GEM_LIBDIR}/lib/rdoc/parser/ruby_tools.rb
 ${GEM_LIBDIR}/lib/rdoc/parser/simple.rb
 ${GEM_LIBDIR}/lib/rdoc/parser/text.rb
 ${GEM_LIBDIR}/lib/rdoc/rd.rb
+${GEM_LIBDIR}/lib/rdoc/rd/block_parser.rb
 ${GEM_LIBDIR}/lib/rdoc/rd/block_parser.ry
 ${GEM_LIBDIR}/lib/rdoc/rd/inline.rb
+${GEM_LIBDIR}/lib/rdoc/rd/inline_parser.rb
 ${GEM_LIBDIR}/lib/rdoc/rd/inline_parser.ry
 ${GEM_LIBDIR}/lib/rdoc/rdoc.rb
 ${GEM_LIBDIR}/lib/rdoc/require.rb
