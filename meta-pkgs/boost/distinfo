@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.50 2012/11/07 21:04:11 adam Exp $
+$NetBSD: distinfo,v 1.50.2.1 2013/02/13 18:52:57 tron Exp $
 
 SHA1 (boost_1_52_0.tar.bz2) = cddd6b4526a09152ddc5db856463eaa1dc29c5d9
 RMD160 (boost_1_52_0.tar.bz2) = 94f72f4553a88495f2052029fb2e90cf8366e75d
 Size (boost_1_52_0.tar.bz2) = 54421709 bytes
+SHA1 (patch-CVE-2013-0252_1) = a6e50a3c3c5478d14c44f7c4fcf5838f50a8049a
+SHA1 (patch-CVE-2013-0252_2) = cd1ffc46d9d5351d62aca749888e0a9229d4f2d0
 SHA1 (patch-aa) = 408a63a807aaa491130db018cd89bca6a427090d
 SHA1 (patch-ab) = f1c95ae229465a4d2da76ce6ff88d76ace52fdd8
 SHA1 (patch-ac) = 5ecd12564259e4ad9d439990e198b889762ec733
