@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2012/06/11 13:41:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.51.6.1 2013/02/13 18:23:59 tron Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -57,11 +57,12 @@ CONFIGURE_ARGS+=	--enable-big-endian
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm)
 # Avoid crash with system include file:
 pre-patch:
-	mv ${WRKSRC}/libavutil/arm/bswap.h ${WRKSRC}/libavutil/arm/avbswap.h
+	mv ${WRKSRC}/ffmpeg/libavutil/arm/bswap.h \
+	   ${WRKSRC}/ffmpeg/libavutil/arm/avbswap.h
 
 SUBST_CLASSES+=			arm_bswap
 SUBST_STAGE.arm_bswap=		pre-configure
-SUBST_FILES.arm_bswap=		libavutil/bswap.h
+SUBST_FILES.arm_bswap=		ffmpeg/libavutil/bswap.h
 SUBST_SED.arm_bswap=		-e s,\"arm/bswap.h\",\"arm/avbswap.h\",g
 SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
 

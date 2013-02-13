@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.79 2012/11/29 17:27:17 drochner Exp $
+$NetBSD: distinfo,v 1.79.2.1 2013/02/13 18:23:59 tron Exp $
 
 SHA1 (mplayer/MPlayer-1.1.tar.gz) = e46e3294bc96daabe604e4e195721e4f2d1e5b48
 RMD160 (mplayer/MPlayer-1.1.tar.gz) = 0369e57677c0c30f3b05f80ee1c4d8d7d1217e63
 Size (mplayer/MPlayer-1.1.tar.gz) = 17018391 bytes
-SHA1 (patch-aa) = 9a917441fdd2edfd7808f4c97fd5ca9ee2538392
+SHA1 (patch-aa) = da461823d0731624de964323ab630f6e295be7b7
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = a1d16ce7a4ff5a2071a7bac1b6836dc197b849e4
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
