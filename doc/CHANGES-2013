@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.583 2013/02/13 14:36:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.584 2013/02/13 15:15:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -858,3 +858,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/opera to 12.14 [obache 2013-02-13]
 	Updated mail/postfix to 2.9.6 [taca 2013-02-13]
 	Updated security/openssl to 1.0.1e [taca 2013-02-13]
+	Updated databases/ruby-data_objects to 0.10.12 [taca 2013-02-13]
+	Updated databases/ruby-do_mysql to 0.10.12 [taca 2013-02-13]
+	Updated databases/ruby-do_postgres to 0.10.12 [taca 2013-02-13]
+	Updated databases/ruby-do_sqlite3 to 0.10.12 [taca 2013-02-13]
