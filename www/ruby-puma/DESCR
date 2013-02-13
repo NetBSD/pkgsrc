@@ -1,0 +1,7 @@
+Puma: A Ruby Web Server Built For Concurrency
+
+Puma is a simple, fast, and highly concurrent HTTP 1.1 server for Ruby web
+applications.  It can be used with any application that supports Rack, and is
+considered the replacement for Webrick and Mongrel.  It was designed to be the
+go-to server for Rubinius, but also works well with JRuby and MRI.  Puma is
+intended for use in both development and production environments.
