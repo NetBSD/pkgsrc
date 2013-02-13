@@ -6,4 +6,4 @@ Trac provides:
     * An integrated system for managing software projects
     * An enhanced wiki
     * A flexible web-based issue tracker
-    * An interface to the Subversion revision control system
+    * Interfaces to the Subversion and git revision control systems
