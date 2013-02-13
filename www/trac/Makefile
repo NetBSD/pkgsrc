@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.58 2012/10/28 06:31:07 asau Exp $
+# $NetBSD: Makefile,v 1.59 2013/02/13 17:10:45 gdt Exp $
 #
 
-DISTNAME=	Trac-0.12.3
+DISTNAME=	Trac-1.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/ \
 		ftp://ftp.edgewall.org/pub/trac/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/
-COMMENT=	Subversion repository browser, wiki, and issue tracking system
+COMMENT=	Repository browser, wiki, and issue tracking system
 LICENSE=	modified-bsd
 
 # Maintainer notes:
@@ -22,21 +21,16 @@ LICENSE=	modified-bsd
 # existing trac installations that blindly upgrade, to the extent that
 # this is reasonable.
 #
-# subversion dependency: ja-trac does not depend on subversion,
-# because 1) trac is useful without a repo, and because one can use
-# other than svn.  Perhaps options to specify repo support (not a
-# group, because trac can support multiple), defaulting to subversion
-# is a good strategy for now.
-#
 # www/trac options are not in options.mk (to be fixed).
 #
-# sqlite2 vs sqlite3: This package has logic to choose sqlite2 vs
-# sqlite3, and ja-trac uses only sqlite2.  This is hard, because
-# database format changes are disruptive, and gdt should consult
-# upstream's idea of best practice.
+# sqlite2 vs sqlite3: This package supports sqlite3 or postgresql.
+# ja-trace supports sqlite2, postgresql, and mysql.
 
-DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
-DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
+DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
+# Arguably there should be a trac-svn package that depends on
+# subversion and trac.  This line is residual from when trac always
+# included subversion support.
+#DEPENDS+=	${PYPKGPREFIX}-subversion>=1.6:../../devel/py-subversion
 
 USE_TOOLS+=	pax
 
@@ -49,7 +43,7 @@ PKG_SUGGESTED_OPTIONS=	sqlite
 
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
-PYTHON_PATCH_SCRIPTS=	cgi-bin/trac.* contrib/*.py contrib/*-hook
+PYTHON_PATCH_SCRIPTS=	contrib/cgi-bin/trac.* contrib/*.py contrib/*-hook
 PYTHON_PATCH_SCRIPTS+=	trac/tests/functional/*.py
 
 .include "../../lang/python/application.mk"
@@ -71,7 +65,7 @@ CGIBINDIR=	${PREFIX}/libexec/trac
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${CGIBINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/trac.* ${DESTDIR}${CGIBINDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/cgi-bin/trac.* ${DESTDIR}${CGIBINDIR}
 	cd ${WRKSRC}/contrib && pax -rwppm -s ',./rpm/.*$$,,' -s ',./rpm$$,,' \
 		. ${DESTDIR}${EGDIR}
 
