@@ -1,0 +1,20 @@
+= Contributed Plugins and Utilities
+
+This package includes a variety of add-on components for Padrino Framework:
+
+* exception_notifier		- Send errors through mail or/and to redmine
+* auto_locale			- Switch for you automatically the I18n.locale
+* flash_session			- Middleware that help you in passing your
+				  session in the URI, when it should be in the
+				  cookie.
+* orm_ar_permalink		- Generate permalink for a specified column on
+				  ActiveRecord
+* orm_ar_permalink_i18n		- Generate permalink for a specified multi
+				  language column(s) on ActiveRecord
+* orm_ar_translate		- Translate for you your ActiveRecord columns
+* orm_mm_permalink		- Generate permalink for a specified column on
+				  MongoMapper
+* orm_mm_search			- Full text search in MongoMapper in specified
+				  columns
+* helpers_assets_compressor	- Joins and compress your js/css with
+				  yui-compressor
