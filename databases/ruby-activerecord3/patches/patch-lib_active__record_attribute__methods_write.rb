@@ -1,6 +1,6 @@
 $NetBSD$
 
-Fix for CVE-2013-0277.
+Workaround for CVE-2013-0277.
 
 --- lib/active_record/attribute_methods/write.rb.orig	2013-02-12 00:08:22.000000000 +0000
 +++ lib/active_record/attribute_methods/write.rb
