@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.260 2013/02/06 23:22:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.261 2013/02/13 14:31:31 taca Exp $
 
-DISTNAME=	postfix-2.8.14
-PKGREVISION=	1
+DISTNAME=	postfix-2.9.6
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
