@@ -1,0 +1,15 @@
+$NetBSD: patch-storage_perfschema_unittest_CMakeLists.txt,v 1.1 2013/02/13 21:00:08 adam Exp $
+
+There is no libzlib, but libz.
+
+--- storage/perfschema/unittest/CMakeLists.txt.orig	2013-02-12 19:03:35.000000000 +0000
++++ storage/perfschema/unittest/CMakeLists.txt
+@@ -63,7 +63,7 @@ TARGET_LINK_LIBRARIES(pfs_connect_attr-t
+ TARGET_LINK_LIBRARIES(pfs_connect_attr-t sql binlog rpl master slave sql)
+ TARGET_LINK_LIBRARIES(pfs_connect_attr-t mysys mysys_ssl)
+ TARGET_LINK_LIBRARIES(pfs_connect_attr-t vio ${SSL_LIBRARIES})
+-TARGET_LINK_LIBRARIES(pfs_connect_attr-t strings dbug regex mysys zlib)
++TARGET_LINK_LIBRARIES(pfs_connect_attr-t strings dbug regex mysys)
+ ADD_TEST(pfs_connect_attr pfs_connect_attr-t)
+ 
+ # On windows, pfs_connect_attr-t may depend on openssl dlls.
