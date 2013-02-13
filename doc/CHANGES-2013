@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.578 2013/02/13 10:16:21 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.579 2013/02/13 11:23:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xrandr to 1.4.0 [wiz 2013-02-12]
 	Added wm/i3 version 4.4 [tonnerre 2013-02-12]
 	Updated www/ikiwiki to 3.20130212 [schmonz 2013-02-13]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.61 [obache 2013-02-13]
