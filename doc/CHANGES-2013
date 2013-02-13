@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.580 2013/02/13 11:24:33 obache Exp $
+$NetBSD: CHANGES-2013,v 1.581 2013/02/13 12:01:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -855,3 +855,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ikiwiki to 3.20130212 [schmonz 2013-02-13]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.61 [obache 2013-02-13]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.270 [obache 2013-02-13]
+	Updated www/opera to 12.14 [obache 2013-02-13]
