@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.29 2013/02/12 17:50:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.30 2013/02/13 19:19:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -169,3 +169,21 @@ Pullup ticket #4056 - requested by taca
 lang/ruby193-base: security update
 Pullup ticket #4057 - requested by taca
 devel/ruby-rdoc: security update
+Pullup ticket #4060 - requested by taca
+www/ruby-rack: security update
+www/ruby-rack12: security update
+www/ruby-rack13: security update
+Pullup ticket #4062 - requested by he
+textproc/icu: build fix
+Pullup ticket #4063 - requested by he
+pkgsrc/multimedia/gmplayer: build fix
+pkgsrc/multimedia/mencoder: build fix
+pkgsrc/multimedia/mplayer: build fix
+Pullup ticket #4064 - requested by he
+audio/pulseaudio: build fix
+Pullup ticket #4065 - requested by drochner
+devel/boost-headers: security patch
+Pullup ticket #4066 - requested by drochner
+www/curl: security patch
+Pullup ticket #4067 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
