@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.30 2012/11/29 17:27:17 drochner Exp $
+$NetBSD: patch-aa,v 1.30.2.1 2013/02/13 18:23:59 tron Exp $
 
-o Handle properly sh3 ports on NetBSD.
+o Handle properly sh3 and evbarm ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
   (please see also kern/25076).
 o Fix a bug which broke the detection of a lot of X11 libraries.
@@ -8,13 +8,15 @@ o Add necessary libs for aalib support even if the aa option is turned on with
   --enable-aa.
 o Add support for dvb capture on NetBSD.
 
---- configure.orig	2012-05-22 18:01:51.000000000 +0000
-+++ configure
-@@ -1520,7 +1520,8 @@ if test -z "$_target" ; then
+--- configure.orig	2012-05-22 14:01:51.000000000 -0400
++++ configure	2013-01-11 22:15:07.000000000 -0500
+@@ -1519,8 +1519,9 @@ if test -z "$_target" ; then
+       alpha) host_arch=alpha ;;
        sun4*|sparc*) host_arch=sparc ;;
        parisc*|hppa*|9000*) host_arch=hppa ;;
-       arm*|zaurus|cats) host_arch=arm ;;
+-      arm*|zaurus|cats) host_arch=arm ;;
 -      sh3|sh4|sh4a) host_arch=sh ;;
++      arm*|zaurus|cats|evbarm) host_arch=arm ;;
 +      sh3*) host_arch=sh ;;
 +	  sh4|sh4a) host_arch=sh4 ;;
        s390) host_arch=s390 ;;
