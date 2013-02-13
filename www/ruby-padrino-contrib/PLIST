@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/13 15:22:12 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/padrino-contrib.rb
+${GEM_LIBDIR}/lib/padrino-contrib/auto_locale.rb
+${GEM_LIBDIR}/lib/padrino-contrib/exception_notifier.rb
+${GEM_LIBDIR}/lib/padrino-contrib/flash_session.rb
+${GEM_LIBDIR}/lib/padrino-contrib/helpers/assets_compressor.rb
+${GEM_LIBDIR}/lib/padrino-contrib/helpers/flash.rb
+${GEM_LIBDIR}/lib/padrino-contrib/helpers/jquery.rb
+${GEM_LIBDIR}/lib/padrino-contrib/orm/active_record/permalink.rb
+${GEM_LIBDIR}/lib/padrino-contrib/orm/active_record/permalink_i18n.rb
+${GEM_LIBDIR}/lib/padrino-contrib/orm/active_record/textile.rb
+${GEM_LIBDIR}/lib/padrino-contrib/orm/active_record/translate.rb
+${GEM_LIBDIR}/lib/padrino-contrib/orm/mongo_mapper/permalink.rb
+${GEM_LIBDIR}/lib/padrino-contrib/orm/mongo_mapper/search.rb
+${GEM_LIBDIR}/lib/padrino-contrib/version.rb
+${GEM_LIBDIR}/padrino-contrib.gemspec
+${GEM_LIBDIR}/spec/autoload_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
