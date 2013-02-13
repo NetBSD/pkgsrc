@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.582 2013/02/13 14:32:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.583 2013/02/13 14:36:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.270 [obache 2013-02-13]
 	Updated www/opera to 12.14 [obache 2013-02-13]
 	Updated mail/postfix to 2.9.6 [taca 2013-02-13]
+	Updated security/openssl to 1.0.1e [taca 2013-02-13]
