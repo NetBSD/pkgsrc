@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/08/12 17:36:31 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/02/13 15:42:54 taca Exp $
 
-SHA1 (heel-2.0.0.gem) = aa9b0cc0878d203a14143cad333dc5728ea3420f
-RMD160 (heel-2.0.0.gem) = c0d49f469af106ba7e2147baa87fd80c181a5741
-Size (heel-2.0.0.gem) = 47616 bytes
-SHA1 (patch-.._heel-2.0.0.gemspec) = 67d7fa7a36a458457b42655ac073a408746360f8
+SHA1 (heel-3.0.1.gem) = 8adbe58e4efc1a185d3dc937bca95ca75d8a776e
+RMD160 (heel-3.0.1.gem) = 42792232d9e310eb8843877726d9bd1634e1bbe5
+Size (heel-3.0.1.gem) = 50176 bytes
