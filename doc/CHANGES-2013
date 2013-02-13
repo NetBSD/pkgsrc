@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.589 2013/02/13 15:42:03 taca Exp $
+$NetBSD: CHANGES-2013,v 1.590 2013/02/13 15:43:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -867,3 +867,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/ruby-pdf-reader to 1.3.1 [taca 2013-02-13]
 	Updated misc/ruby-launchy to 2.2.0 [taca 2013-02-13]
 	Added www/ruby-puma version 1.6.3 [taca 2013-02-13]
+	Updated www/heel to 3.0.1 [taca 2013-02-13]
