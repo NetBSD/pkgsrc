@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2013/02/13 21:00:02 adam Exp $
+
+SHA1 (mysql-5.6.10.tar.gz) = f37979eafc241a0ebeac9548cb3f4113074271b7
+RMD160 (mysql-5.6.10.tar.gz) = b90ec96435ec9cdb61c8c7f8d0c1c8b1f45b0919
+Size (mysql-5.6.10.tar.gz) = 35174149 bytes
+SHA1 (patch-CMakeLists.txt) = 1889afcd79a271d3f9ac0e234c449ef6aa8ca818
+SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
+SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
+SHA1 (patch-client_sql_string.h) = f26aff4ce4cf6dfef44c85ef95120331ca8fef52
+SHA1 (patch-cmake_libutils.cmake) = 5d75a1762e3db6724bec2d75b45d40b17a5e9d09
+SHA1 (patch-cmake_ssl.cmake) = 305dafd7762f53f01a4addec48e56fa66cd15f77
+SHA1 (patch-include_CMakeLists.txt) = 49d351a958e63c69ad8bfe5c50961fe3751e86c4
+SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
+SHA1 (patch-include_my_net.h) = b08aa36921efd023f9ecaac4cd3fb8a16d200abd
+SHA1 (patch-include_my_pthread.h) = ff3bf1fddd04edd7804d810f79de64387464b5ca
+SHA1 (patch-include_myisam.h) = 475070d41b06c04c6ae692743fc1b0244afe0a88
+SHA1 (patch-mysql-test_CMakeLists.txt) = b7dd562d55678b13ac487aa0ee59bf2551af1f9d
+SHA1 (patch-mysys_stacktrace.c) = 27ddd012c9ca299cfe2b9935b9f99fe603415e7e
+SHA1 (patch-scripts_CMakeLists.txt) = 3f4621b3256034c5a3114e98c108658794f06008
+SHA1 (patch-scripts_mysqld_safe.sh) = 0784314227657aa0bc3f4a0b4e21c173a86fa94b
+SHA1 (patch-sql_CMakeLists.txt) = 40fa474da4cfd95be7247536a4efa7c7d85214a2
+SHA1 (patch-sql_log_event.h) = a584496c5f841a06d7161da0ae7ba620f135beed
+SHA1 (patch-sql_mysqld.cc) = e2a3f6a4053bf60230614e9d8c279949199d75e3
+SHA1 (patch-sql_sql_string.h) = bbb52320709f06ab8fb9f680f6bbba45ea8a00f5
+SHA1 (patch-storage_ndb_include_util_Parser.hpp) = 037fc153619bf79ee95cb03a5ac4a71c14952c3a
+SHA1 (patch-storage_perfschema_unittest_CMakeLists.txt) = 88611574e6bdc0f365c9d8dccf19488eec298f97
+SHA1 (patch-strings_decimal.c) = 4d2a3d8acb3b0af56180f3a1faa8735d692be5b9
