@@ -1,0 +1,15 @@
+$NetBSD: patch-sql_CMakeLists.txt,v 1.1 2013/02/13 21:00:07 adam Exp $
+
+Do not install files in MYSQL_DATADIR.
+
+--- sql/CMakeLists.txt.orig	2011-04-25 19:03:50.000000000 +0000
++++ sql/CMakeLists.txt
+@@ -421,7 +421,7 @@ ADD_CUSTOM_TARGET(distclean
+   VERBATIM
+   )
+ 
+-IF(INSTALL_LAYOUT STREQUAL "STANDALONE")
++IF(FALSE)
+ 
+ # We need to create empty directories (data/test) the installation.  
+ # This does not work with current CPack due to http://www.cmake.org/Bug/view.php?id=8767
