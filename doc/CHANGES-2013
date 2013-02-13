@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.587 2013/02/13 15:26:47 taca Exp $
+$NetBSD: CHANGES-2013,v 1.588 2013/02/13 15:37:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-backports to 2.8.2 [taca 2013-02-13]
 	Added www/ruby-padrino-contrib version 0.1.13 [taca 2013-02-13]
 	Updated print/ruby-pdf-reader to 1.3.1 [taca 2013-02-13]
+	Updated misc/ruby-launchy to 2.2.0 [taca 2013-02-13]
