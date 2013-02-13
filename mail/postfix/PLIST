@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.25 2011/02/26 08:58:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.26 2013/02/13 14:31:31 taca Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
 libexec/postfix/bounce
 libexec/postfix/cleanup
-libexec/postfix/dnsblog
 libexec/postfix/discard
+libexec/postfix/dnsblog
 libexec/postfix/error
 libexec/postfix/flush
 libexec/postfix/lmtp
@@ -62,6 +62,7 @@ man/man5/generic.5
 man/man5/header_checks.5
 man/man5/ldap_table.5
 man/man5/master.5
+man/man5/memcache_table.5
 man/man5/mysql_table.5
 man/man5/nisplus_table.5
 man/man5/pcre_table.5
@@ -86,9 +87,9 @@ man/man8/lmtp.8
 man/man8/local.8
 man/man8/master.8
 man/man8/oqmgr.8
-man/man8/postscreen.8
 man/man8/pickup.8
 man/man8/pipe.8
+man/man8/postscreen.8
 man/man8/proxymap.8
 man/man8/qmgr.8
 man/man8/qmqpd.8
@@ -139,6 +140,7 @@ share/doc/postfix/LDAP_README
 share/doc/postfix/LINUX_README
 share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MAILDROP_README
+share/doc/postfix/MEMCACHE_README
 share/doc/postfix/MILTER_README
 share/doc/postfix/MULTI_INSTANCE_README
 share/doc/postfix/MYSQL_README
