@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.585 2013/02/13 15:23:05 taca Exp $
+$NetBSD: CHANGES-2013,v 1.586 2013/02/13 15:24:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-do_postgres to 0.10.12 [taca 2013-02-13]
 	Updated databases/ruby-do_sqlite3 to 0.10.12 [taca 2013-02-13]
 	Updated devel/ruby-backports to 2.8.2 [taca 2013-02-13]
+	Added www/ruby-padrino-contrib version 0.1.13 [taca 2013-02-13]
