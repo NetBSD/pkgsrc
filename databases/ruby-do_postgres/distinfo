@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/01/12 04:44:11 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/02/13 15:14:04 taca Exp $
 
-SHA1 (do_postgres-0.10.11.gem) = 5bf61eda7019b3ba55a8a660e547bd5ece21c094
-RMD160 (do_postgres-0.10.11.gem) = 51bb306d963847c6d314467470574c627bd7f0ae
-Size (do_postgres-0.10.11.gem) = 30720 bytes
+SHA1 (do_postgres-0.10.12.gem) = 089f6bec2bb603cf11d83bb5ebb63e5a6c0de276
+RMD160 (do_postgres-0.10.12.gem) = 1010f8e43ca539297b982a8be242cc652ee605b7
+Size (do_postgres-0.10.12.gem) = 30720 bytes

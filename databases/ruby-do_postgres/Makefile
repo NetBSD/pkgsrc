@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/01/12 04:44:11 taca Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/13 15:14:04 taca Exp $
 
-DISTNAME=	do_postgres-0.10.11
+DISTNAME=	do_postgres-0.10.12
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
