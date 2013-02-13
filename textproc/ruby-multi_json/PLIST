@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/29 05:41:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/02/13 16:17:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/multi_json.rb
+${GEM_LIBDIR}/lib/multi_json/adapters/gson.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_common.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_gem.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_pure.rb
@@ -20,5 +24,6 @@ ${GEM_LIBDIR}/lib/multi_json/version.rb
 ${GEM_LIBDIR}/multi_json.gemspec
 ${GEM_LIBDIR}/spec/adapter_shared_example.rb
 ${GEM_LIBDIR}/spec/helper.rb
+${GEM_LIBDIR}/spec/json_common_shared_example.rb
 ${GEM_LIBDIR}/spec/multi_json_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
