@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 07:54:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/13 15:19:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -83,8 +83,10 @@ ${GEM_LIBDIR}/lib/backports/1.9.3/io.rb
 ${GEM_LIBDIR}/lib/backports/1.9.3/string.rb
 ${GEM_LIBDIR}/lib/backports/1.9.rb
 ${GEM_LIBDIR}/lib/backports/2.0.0.rb
+${GEM_LIBDIR}/lib/backports/2.0.0/array.rb
 ${GEM_LIBDIR}/lib/backports/2.0.0/enumerable.rb
 ${GEM_LIBDIR}/lib/backports/2.0.0/enumerator/lazy.rb
+${GEM_LIBDIR}/lib/backports/2.0.0/range.rb
 ${GEM_LIBDIR}/lib/backports/2.0.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
