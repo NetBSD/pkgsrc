@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.147 2013/02/05 15:58:38 taca Exp $
+$NetBSD: distinfo,v 1.148 2013/02/13 14:31:31 taca Exp $
 
-SHA1 (postfix-2.8.14.tar.gz) = e7961c0f430fe99a0f4250f187150aca157449e3
-RMD160 (postfix-2.8.14.tar.gz) = 96da39315a740112b8fddeb4a30bbbbb5d11809c
-Size (postfix-2.8.14.tar.gz) = 3641913 bytes
-SHA1 (patch-aa) = 5b4923402c80957e47b8a4e16c897287b88544bb
+SHA1 (postfix-2.9.6.tar.gz) = 9d7af8670fd13fd5e5290ff2e3f00d724178f0fb
+RMD160 (postfix-2.9.6.tar.gz) = e3148a42f246c4f54c82cf387b7467805edcd2cd
+Size (postfix-2.9.6.tar.gz) = 3767309 bytes
+SHA1 (patch-aa) = 2115fd7af5776a14fdbfc88a5ad3bc668a6762db
 SHA1 (patch-ag) = 60d752b6c8db971d92ca0017c63329ad446209c5
 SHA1 (patch-ai) = 1bd3682b74de11e5d420e453f3df088d965452d6
