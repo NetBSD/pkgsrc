@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.592 2013/02/13 17:11:02 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.593 2013/02/13 18:43:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/heel to 3.0.1 [taca 2013-02-13]
 	Updated textproc/ruby-multi_json to 1.6.0 [taca 2013-02-13]
 	Updated www/trac to 1.0 [gdt 2013-02-13]
+	Updated x11/gtk2 to 2.24.15 [adam 2013-02-13]
