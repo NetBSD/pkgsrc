@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.30 2013/02/13 19:19:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.31 2013/02/14 09:18:38 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -187,3 +187,8 @@ Pullup ticket #4066 - requested by drochner
 www/curl: security patch
 Pullup ticket #4067 - requested by obache
 multimedia/adobe-flash-plugin10.1: security update
+Pullup ticket #4044 - requested by tron
+mk/checksum/checksum: build fix for MacOS
+Pullup ticket #4047 - requested by tron
+net/wireshark: security update
+
