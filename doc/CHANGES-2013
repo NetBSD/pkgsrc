@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.598 2013/02/14 18:36:47 jmmv Exp $
+$NetBSD: CHANGES-2013,v 1.599 2013/02/14 19:48:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -878,3 +878,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xterm to 290 [wiz 2013-02-14]
 	Updated devel/atf-libs to 0.17 [jmmv 2013-02-14]
 	Updated devel/atf to 0.17 [jmmv 2013-02-14]
+	Updated security/knc to 1.7.1 [schmonz 2013-02-14]
