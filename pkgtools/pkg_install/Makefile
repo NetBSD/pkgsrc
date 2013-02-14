@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2013/02/10 12:43:19 obache Exp $
+# $NetBSD: Makefile,v 1.192 2013/02/14 09:13:41 obache Exp $
 
 # Notes to package maintainers:
 #
@@ -135,7 +135,7 @@ LIBS+=		${LIBARCHIVE_LIBS:sh}
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub
 
-.  if ${OPSYS} == "CYGWIN"
+.  if ${OPSYS} == "Cygwin"
 CPPFLAGS+=	-DLIBARCHIVE_STATIC
 .  endif
 
