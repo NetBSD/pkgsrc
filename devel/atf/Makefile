@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/07/10 22:02:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/14 18:36:12 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -29,6 +29,7 @@ post-install:
 	rm -rf ${DESTDIR}${PREFIX}/${file}
 .endfor
 
+BUILDLINK_API_DEPENDS.atf-libs+=	atf-libs>=${PKGVERSION_NOREV}
 .include "../../devel/atf-libs/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"

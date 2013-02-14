@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2012/10/31 11:16:38 asau Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/02/14 18:36:12 jmmv Exp $
 #
 # used by devel/atf/Makefile
 # used by devel/atf-libs/Makefile
 
-DISTNAME=	atf-0.16
+DISTNAME=	atf-0.17
 CATEGORIES=	devel
 MASTER_SITES=	http://kyua.googlecode.com/files/
 
