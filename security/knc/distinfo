@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/10/23 06:04:29 elric Exp $
+$NetBSD: distinfo,v 1.6 2013/02/14 19:48:04 schmonz Exp $
 
-SHA1 (knc-1.7.tar.gz) = 46ec1be43695337b62a629067f9b6101c706983f
-RMD160 (knc-1.7.tar.gz) = 580ac925943b5e2a380a3db179cfbf27a354a4a6
-Size (knc-1.7.tar.gz) = 646756 bytes
+SHA1 (knc-1.7.1.tar.gz) = dd06a40e3bfe416949eb924c25e5274aeb5338f4
+RMD160 (knc-1.7.1.tar.gz) = 8b8102baff47f0ce7fcdb5ddcd4fdcfce023f05e
+Size (knc-1.7.1.tar.gz) = 651416 bytes
