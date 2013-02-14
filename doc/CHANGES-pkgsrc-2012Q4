@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.31 2013/02/14 09:18:38 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.32 2013/02/14 15:53:05 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -191,4 +191,8 @@ Pullup ticket #4044 - requested by tron
 mk/checksum/checksum: build fix for MacOS
 Pullup ticket #4047 - requested by tron
 net/wireshark: security update
-
+Pullup ticket #4069 - requested by taca
+lang/ruby193-base: security patch
+Pullup ticket #4070 - requested by taca
+textproc/ruby-json: security update
+textproc/ruby-json-pure: security update
