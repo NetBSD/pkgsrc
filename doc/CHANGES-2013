@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.597 2013/02/14 10:23:31 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.598 2013/02/14 18:36:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -876,3 +876,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/mysql56-server version 5.6.10 [adam 2013-02-13]
 	Updated devel/mr to 1.14 [schmonz 2013-02-14]
 	Updated x11/xterm to 290 [wiz 2013-02-14]
+	Updated devel/atf-libs to 0.17 [jmmv 2013-02-14]
+	Updated devel/atf to 0.17 [jmmv 2013-02-14]
