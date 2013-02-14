@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2013/02/06 23:23:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2013/02/14 16:51:32 drochner Exp $
 
 DISTNAME=	openslp-1.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openslp/}
 
