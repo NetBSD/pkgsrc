@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.1 2013/02/10 12:25:18 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.2 2013/02/15 09:22:50 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -87,3 +87,9 @@ _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
 _OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
+
+# check for requirement of uac-manifest.
+.if !empty(OS_VARIANT:MCYGWIN_NT-[6-9].*)
+_OPSYS_REQUIRE_UAC_MANIFEST=	yes
+.endif
+
