@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.32 2013/02/14 15:53:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.33 2013/02/15 14:47:38 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -196,3 +196,26 @@ lang/ruby193-base: security patch
 Pullup ticket #4070 - requested by taca
 textproc/ruby-json: security update
 textproc/ruby-json-pure: security update
+Pullup ticket #4071 - requested by taca
+databases/ruby-activerecord31: security update
+devel/ruby-activemodel31: security update
+devel/ruby-activesupport31: security update
+devel/ruby-railties31: security update
+mail/ruby-actionmailer31: security update
+www/ruby-actionpack31: security update
+www/ruby-activeresource31: security update
+www/ruby-rails31: security update
+Pullup ticket #4072 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
+Pullup ticket #4073 - requested by taca
+databases/ruby-activerecord3: security patch
+devel/ruby-activemodel: security patch
+Pullup ticket #4074 - requested by drochner
+security/gnutls: security update
