@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.331 2013/02/10 12:25:17 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.332 2013/02/15 09:19:17 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -134,6 +134,7 @@ LOWER_VENDOR?=		pc
 LOWER_ARCH!=		${UNAME} -m
 _OS_VERSION!=		${UNAME} -r
 OS_VERSION=		${_OS_VERSION:C/\(.*\)//}
+OS_VARIANT!=		${UNAME} -s
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
