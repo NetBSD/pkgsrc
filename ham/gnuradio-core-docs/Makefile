@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 13:01:44 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/15 11:54:05 obache Exp $
 
 PKGNAME=	gnuradio-core-docs-${VERSION}
 COMMENT=	GNU Radio core module documentation
-PKGREVISION=	13
+PKGREVISION=	14
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
