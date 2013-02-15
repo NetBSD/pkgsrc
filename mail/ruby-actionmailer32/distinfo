@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7.2.2 2013/01/18 15:41:59 tron Exp $
+$NetBSD: distinfo,v 1.7.2.3 2013/02/15 13:32:28 tron Exp $
 
-SHA1 (actionmailer-3.2.11.gem) = 933cd2821b30cdff4a2e0b5cc63f4d2c6b29affe
-RMD160 (actionmailer-3.2.11.gem) = d395e459827271e3be2cdca5c37914d7c5fdc0f2
-Size (actionmailer-3.2.11.gem) = 22016 bytes
+SHA1 (actionmailer-3.2.12.gem) = 5627c6d044cc52876128459d960f8805006b5f97
+RMD160 (actionmailer-3.2.12.gem) = bfd2028708576dce3827a151a3a052ba48daa9a8
+Size (actionmailer-3.2.12.gem) = 22016 bytes
