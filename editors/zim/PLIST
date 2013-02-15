@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/01/26 13:39:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/02/15 23:55:07 bad Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -295,22 +295,7 @@ share/locale/tr/LC_MESSAGES/zim.mo
 share/locale/uk/LC_MESSAGES/zim.mo
 share/locale/zh_CN/LC_MESSAGES/zim.mo
 share/locale/zh_TW/LC_MESSAGES/zim.mo
-share/mime/XMLnamespaces
-share/mime/aliases
-share/mime/application/x-gjots.xml
-share/mime/application/x-zim-notebook.xml
-share/mime/generic-icons
-share/mime/globs
-share/mime/globs2
-share/mime/icons
-share/mime/magic
-share/mime/mime.cache
 share/mime/packages/zim.xml
-share/mime/subclasses
-share/mime/text/x-zim-wiki.xml
-share/mime/treemagic
-share/mime/types
-share/mime/version
 share/pixmaps/zim.png
 share/zim/dates.list
 share/zim/globe.svg
