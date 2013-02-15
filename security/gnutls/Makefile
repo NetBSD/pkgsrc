@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2012/11/06 19:01:36 drochner Exp $
+# $NetBSD: Makefile,v 1.122.2.1 2013/02/15 14:46:47 tron Exp $
 
-DISTNAME=	gnutls-3.0.25
+DISTNAME=	gnutls-3.0.28
 CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnu/gnutls/ \
-		ftp://ftp.gnupg.org/gcrypt/gnutls/ \
-		${MASTER_SITE_GNU:=gnutls/}
+MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.0/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-p11-kit
 # this library duplicates (and conflicts with) openssl
