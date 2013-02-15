@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2013/02/15 23:55:07 bad Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/02/15 23:56:39 bad Exp $
 bin/zim
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
 ${PYSITELIB}/zim/__init__.pyo
