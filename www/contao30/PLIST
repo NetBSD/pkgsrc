@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/07 14:41:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/02/15 15:42:16 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/codemirror/2.32/codemirror.css
@@ -336,7 +336,6 @@ ${CT_WEBDIR}/assets/tinymce/plugins/advimage/langs/vi_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/advimage/langs/zh_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/autosave/editor_plugin.js
 ${CT_WEBDIR}/assets/tinymce/plugins/autosave/editor_plugin_src.js
-${CT_WEBDIR}/assets/tinymce/plugins/autosave/langs/en.js
 ${CT_WEBDIR}/assets/tinymce/plugins/directionality/editor_plugin.js
 ${CT_WEBDIR}/assets/tinymce/plugins/directionality/editor_plugin_src.js
 ${CT_WEBDIR}/assets/tinymce/plugins/emotions/editor_plugin.js
@@ -966,6 +965,7 @@ ${CT_WEBDIR}/system/cron/cron.php
 ${CT_WEBDIR}/system/docs/CHANGELOG.md
 ${CT_WEBDIR}/system/docs/GPL.txt
 ${CT_WEBDIR}/system/docs/LGPL.txt
+${CT_WEBDIR}/system/helper/exception.php
 ${CT_WEBDIR}/system/helper/functions.php
 ${CT_WEBDIR}/system/helper/ide_compat.php
 ${CT_WEBDIR}/system/helper/interface.php
@@ -1965,6 +1965,7 @@ ${CT_WEBDIR}/system/modules/core/models/SessionModel.php
 ${CT_WEBDIR}/system/modules/core/models/StyleModel.php
 ${CT_WEBDIR}/system/modules/core/models/StyleSheetModel.php
 ${CT_WEBDIR}/system/modules/core/models/ThemeModel.php
+${CT_WEBDIR}/system/modules/core/models/UserGroupModel.php
 ${CT_WEBDIR}/system/modules/core/models/UserModel.php
 ${CT_WEBDIR}/system/modules/core/modules/Module.php
 ${CT_WEBDIR}/system/modules/core/modules/ModuleArticle.php
@@ -3228,6 +3229,7 @@ ${CT_WEBDIR}/system/themes/default/images/rss.gif
 ${CT_WEBDIR}/system/themes/default/images/select.gif
 ${CT_WEBDIR}/system/themes/default/images/settings.gif
 ${CT_WEBDIR}/system/themes/default/images/show.gif
+${CT_WEBDIR}/system/themes/default/images/store.gif
 ${CT_WEBDIR}/system/themes/default/images/su.gif
 ${CT_WEBDIR}/system/themes/default/images/sync.gif
 ${CT_WEBDIR}/system/themes/default/images/tablewizard.gif
@@ -3293,6 +3295,7 @@ ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/Core.php
 ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/Credit.php
 ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/Decode/HTML/Entities.php
 ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/Enclosure.php
+${CT_WEBDIR}/system/vendor/simplepie/SimplePie/Exception.php
 ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/File.php
 ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/HTTP/Parser.php
 ${CT_WEBDIR}/system/vendor/simplepie/SimplePie/IRI.php
@@ -3317,6 +3320,7 @@ ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Attachment.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/ByteStream/AbstractFilterableInputStream.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/ByteStream/ArrayByteStream.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/ByteStream/FileByteStream.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/ByteStream/TemporaryFileByteStream.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/CharacterReader.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/CharacterReader/GenericFixedWidthReader.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/CharacterReader/UsAsciiReader.php
@@ -3360,7 +3364,6 @@ ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/IoException.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache/ArrayKeyCache.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache/DiskKeyCache.php
-${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache/DummyKeyCache.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache/KeyCacheInputStream.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache/NullKeyCache.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php
@@ -3378,6 +3381,7 @@ ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/ContentEncoder/Base64C
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/EmbeddedFile.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/EncodingObserver.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Mime/Grammar.php
@@ -3430,6 +3434,14 @@ ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Preferences.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/ReplacementFilterFactory.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/RfcComplianceException.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/SendmailTransport.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/SignedMessage.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signer.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signers/BodySigner.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signers/DKIMSigner.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signers/DomainKeySigner.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signers/HeaderSigner.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signers/PeclDKIMSigner.php
+${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Signers/SMimeSigner.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/SmtpTransport.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/Spool.php
 ${CT_WEBDIR}/system/vendor/swiftmailer/classes/Swift/SpoolTransport.php
