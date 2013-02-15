@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2013/01/26 13:39:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/15 23:55:07 bad Exp $
 #
 
 DISTNAME=	zim-0.59
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
+PKGREVISION=	1
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://zim-wiki.org/
@@ -16,8 +17,6 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON=	${WRKSRC}/zim.py
 PYDISTUTILSPKG=	YES
 
-DEPENDS+=	${PYPKGPREFIX}-gobject-[0-9]*:../../devel/py-gobject
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
@@ -42,6 +41,9 @@ SUBST_FILES.man-path+=		setup.py
 SUBST_SED.man-path=		-e s,share/man/man1,${PKGMANDIR}/man1,
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
