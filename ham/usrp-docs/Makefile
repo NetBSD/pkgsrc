@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 13:01:46 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/15 11:54:07 obache Exp $
 
 PKGNAME=	usrp-docs-${VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 COMMENT=	Documentation for the usrp module
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"

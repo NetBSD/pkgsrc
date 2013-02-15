@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 13:01:43 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/15 11:54:05 obache Exp $
 
 PKGNAME=	gnuradio-audio-portaudio-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 COMMENT=	GNU Radio module adding support for portaudio
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
