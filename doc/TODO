@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11941 2013/02/13 21:02:45 adam Exp $
+$NetBSD: TODO,v 1.11942 2013/02/15 19:17:20 shattered Exp $
 
 Suggested new packages
 ======================
@@ -563,7 +563,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
-	o ezxml-0.8.6
 	o f-spot-0.8.2
 	o faces-1.7.7
 	o fakeroot-1.6.5
