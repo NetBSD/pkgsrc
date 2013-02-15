@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/06/14 14:48:35 taca Exp $
+# $NetBSD: Makefile,v 1.11.6.1 2013/02/15 13:51:53 tron Exp $
 
 DISTNAME=	activemodel-${RUBY_RAILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
