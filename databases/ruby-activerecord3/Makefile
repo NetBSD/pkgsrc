@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/06/14 14:50:06 taca Exp $
+# $NetBSD: Makefile,v 1.8.6.1 2013/02/15 13:51:53 tron Exp $
 
 DISTNAME=	activerecord-${RUBY_RAILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
