@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.600 2013/02/15 15:43:19 taca Exp $
+$NetBSD: CHANGES-2013,v 1.601 2013/02/15 19:17:20 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -881,3 +881,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/knc to 1.7.1 [schmonz 2013-02-14]
 	Updated www/contao30 to 3.0.4 [taca 2013-02-15]
 	Updated www/contao30-example to 3.0.4 [taca 2013-02-15]
+	Updated textproc/ezxml to 0.8.6 [shattered 2013-02-15]
