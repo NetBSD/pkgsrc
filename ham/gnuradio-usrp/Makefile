@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 13:01:44 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/15 11:54:06 obache Exp $
 
 PKGNAME=	gnuradio-usrp-${VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	USRP bindings for GNU Radio
 
 PYTHON_PATCH_SCRIPTS+=	gr-usrp/src/flexrf_debug_gui.py
