@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2013/02/06 23:23:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/16 11:24:32 wiz Exp $
 
 DISTNAME=	kdf-${_KDE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 COMMENT=	show mount points and disk usage under KDE desktop
 
