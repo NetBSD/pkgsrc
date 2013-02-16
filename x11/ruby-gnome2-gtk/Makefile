@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2013/02/07 13:41:57 obache Exp $
+# $NetBSD: Makefile,v 1.40 2013/02/16 11:18:57 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk-${VERSION}
 COMMENT=		Ruby binding of GTK+-2.x
+PKGREVISION=		1
 CATEGORIES=		x11
 
 CONFLICTS+=		ruby-gnome2-gtk-[0-9]*
