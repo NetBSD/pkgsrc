@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 23:00:50 adam Exp $
+# $NetBSD: Makefile,v 1.18 2013/02/16 11:18:34 wiz Exp $
 #
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -6,7 +6,7 @@
 XFCE4_VERSION=	0.5.1
 
 DISTNAME=	xfce4-timer-plugin-${XFCE4_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	time
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-timer-plugin/
 COMMENT=	Xfce4 timer plugin
