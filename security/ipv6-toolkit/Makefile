@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/02/11 07:22:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/16 22:39:46 agc Exp $
 
-DISTNAME=	ipv6-toolkit-v1.3b
-PKGNAME=	ipv6-toolkit-1.3beta
+DISTNAME=	ipv6-toolkit-v1.3
+PKGNAME=	ipv6-toolkit-1.3
 CATEGORIES=	security net
 MASTER_SITES=	http://www.si6networks.com/tools/ipv6toolkit/
 
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.si6networks.com/tools/ipv6toolkit
 COMMENT=	IPv6 security assessment and troubleshooting tool
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake
 AUTO_MKDIRS=	yes
 
 BINS=		flow6 frag6 icmp6 jumbo6 na6 ni6 ns6 ra6 rd6 rs6 scan6 tcp6
