@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/01/26 21:36:14 adam Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/16 11:19:23 wiz Exp $
 #
 
 DISTNAME=	telepathy-farsight-0.0.16
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	chat multimedia
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-farsight/
 

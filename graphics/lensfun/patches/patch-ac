@@ -1,10 +1,18 @@
-$NetBSD: patch-ac,v 1.3 2011/01/20 16:48:11 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2013/02/16 11:22:16 wiz Exp $
 
-Fix build with png-1.5.
+Fix build with png-1.6.
 
 --- libs/auxfun/image.cpp.orig	2008-05-02 06:56:04.000000000 +0000
 +++ libs/auxfun/image.cpp
-@@ -94,7 +94,7 @@ bool Image::LoadPNG ()
+@@ -7,6 +7,7 @@
+ #include <zlib.h>
+ #include <png.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <math.h>
+ 
+@@ -94,7 +95,7 @@ bool Image::LoadPNG ()
  
      png_init_io (png, file);
  
@@ -13,7 +21,7 @@ Fix build with png-1.5.
          // If we get here, we had a problem reading the file
          goto nomem;
  
-@@ -157,7 +157,7 @@ bool Image::LoadPNG ()
+@@ -157,7 +158,7 @@ bool Image::LoadPNG ()
      row_pointers = new png_bytep [Height];
  
      if (!row_pointers
@@ -22,7 +30,7 @@ Fix build with png-1.5.
      {
          delete [] row_pointers;
      nomem:
-@@ -214,7 +214,7 @@ bool Image::SavePNG (const char *fName)
+@@ -214,7 +215,7 @@ bool Image::SavePNG (const char *fName)
      }
  
      /* Catch processing errors */
@@ -31,7 +39,7 @@ Fix build with png-1.5.
          /* If we get here, we had a problem writing the file */
          goto error2;
  
-@@ -273,10 +273,6 @@ bool Image::SavePNG (const char *fName)
+@@ -273,10 +274,6 @@ bool Image::SavePNG (const char *fName)
      /* It is REQUIRED to call this to finish writing the rest of the file */
      png_write_end (png, info);
  

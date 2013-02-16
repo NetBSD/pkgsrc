@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2013/01/26 21:37:56 adam Exp $
+# $NetBSD: Makefile,v 1.39 2013/02/16 11:22:20 wiz Exp $
 #
 
 DISTNAME=	Image-Imlib2-2.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	p5im2
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}

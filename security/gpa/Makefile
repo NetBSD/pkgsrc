@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2012/10/23 18:16:29 asau Exp $
+# $NetBSD: Makefile,v 1.39 2013/02/16 11:24:17 wiz Exp $
 #
 
 DISTNAME=	gpa-0.7.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11 security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/alpha/gpa/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2012/10/31 22:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/02/16 11:19:39 wiz Exp $
 
 DISTNAME=	pangomm-2.28.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangomm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2

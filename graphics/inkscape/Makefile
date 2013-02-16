@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2013/02/06 23:22:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.84 2013/02/16 11:22:11 wiz Exp $
 
 DISTNAME=	inkscape-0.48.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2

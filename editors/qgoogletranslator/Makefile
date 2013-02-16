@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/02/06 23:22:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2013/02/16 11:21:00 wiz Exp $
 #
 
 DISTNAME=	qgoogletranslator-1.2.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	editors
 MASTER_SITES=	http://qgt.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/12/12 10:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/16 11:21:18 wiz Exp $
 #
 
 DISTNAME=		freedroid-1.0.2
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=freedroid/}
 

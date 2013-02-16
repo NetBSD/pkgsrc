@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/02/02 15:54:11 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/16 11:22:17 wiz Exp $
 #
 
 DISTNAME=	libwebp-0.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://webp.googlecode.com/files/
 EXTRACT_SUFX=	.zip

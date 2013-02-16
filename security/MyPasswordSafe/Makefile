@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2013/02/06 23:23:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2013/02/16 11:24:16 wiz Exp $
 #
 
 DISTNAME=		MyPasswordSafe-20061216
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		security
 MASTER_SITES=		http://www.semanticgap.com/myps/release/
 DISTFILES=		${DISTNAME}.src.tgz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2013/02/01 22:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2013/02/16 11:24:48 wiz Exp $
 #
 
 DISTNAME=		sawfish-1.7.1
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		x11 wm
 MASTER_SITES=		http://download.tuxfamily.org/sawfish/sawfish/
 EXTRACT_SUFX=		.tar.bz2

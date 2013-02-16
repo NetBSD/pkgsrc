@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/12/16 01:52:18 obache Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/16 11:22:55 wiz Exp $
 #
 
 PLUGIN_NAME=	dillo_viewer
-PKGREVISION=	4
+PKGREVISION=	5
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

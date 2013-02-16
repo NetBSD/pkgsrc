@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2012/10/03 12:55:14 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/02/16 11:21:05 wiz Exp $
 
 DISTNAME=	hatari-${HATARI_VER}
 HATARI_VER=	1.6.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.tuxfamily.org/hatari/${HATARI_VER}/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/02/07 13:41:57 obache Exp $
+# $NetBSD: Makefile,v 1.29 2013/02/16 11:25:27 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtksourceview2-${VERSION}
 COMMENT=		Ruby binding of gtksourceview2
+PKGREVISION=		1
 CATEGORIES=		x11
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtksourceview2-[0-9]*

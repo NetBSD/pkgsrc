@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/08/14 17:07:57 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/02/16 11:23:08 wiz Exp $
 
 DISTNAME=	octave-forge-2006.03.17
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=octave/}
 
