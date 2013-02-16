@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.610 2013/02/16 18:08:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.611 2013/02/16 18:29:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/gmediaserver to 0.13.0nb5 [tron 2013-02-16]
 	Updated sysutils/ups-nut to 2.6.5 [jdf 2013-02-16]
 	Updated time/py-icalendar to 3.3nb1 [wiz 2013-02-16]
+	Updated graphics/pngcrush to 1.7.50 [adam 2013-02-16]
