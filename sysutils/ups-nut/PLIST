@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/07/29 15:11:40 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/02/16 17:34:58 jdf Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -6,6 +6,7 @@ bin/upsrw
 bin/upssched-cmd
 lib/libupsclient.la
 libexec/nut/apcsmart
+libexec/nut/apcsmart-old
 libexec/nut/bcmxcp
 libexec/nut/belkin
 libexec/nut/belkinunv
@@ -30,7 +31,7 @@ libexec/nut/metasys
 libexec/nut/mge-shut
 libexec/nut/mge-utalk
 libexec/nut/microdowell
-libexec/nut/newmge-shut
+libexec/nut/oldmge-shut
 libexec/nut/oneac
 libexec/nut/optiups
 libexec/nut/powercom
@@ -50,6 +51,7 @@ man/man5/upsd.conf.5
 man/man5/upsd.users.5
 man/man5/upsmon.conf.5
 man/man5/upssched.conf.5
+man/man8/apcsmart-old.8
 man/man8/apcsmart.8
 man/man8/bcmxcp.8
 man/man8/belkin.8
@@ -67,13 +69,15 @@ man/man8/gamatronic.8
 man/man8/genericups.8
 man/man8/isbmex.8
 man/man8/ivtscd.8
-man/man8/liebert.8
 man/man8/liebert-esp2.8
+man/man8/liebert.8
 man/man8/masterguard.8
 man/man8/metasys.8
 man/man8/mge-shut.8
 man/man8/mge-utalk.8
 man/man8/microdowell.8
+man/man8/nut-recorder.8
+man/man8/nut-scanner.8
 man/man8/nutupsdrv.8
 man/man8/oneac.8
 man/man8/optiups.8
@@ -105,6 +109,7 @@ share/doc/nut/NEWS
 share/doc/nut/README
 share/doc/nut/UPGRADING
 share/doc/nut/acknowledgements.txt
+share/doc/nut/cables.txt
 share/doc/nut/cables/apc-rs500-serial.txt
 share/doc/nut/cables/apc.txt
 share/doc/nut/cables/ge-imv-victron.txt
@@ -113,13 +118,12 @@ share/doc/nut/cables/mgeups.txt
 share/doc/nut/cables/powerware.txt
 share/doc/nut/cables/repotec.txt
 share/doc/nut/cables/sms.txt
-share/doc/nut/cables.txt
 share/doc/nut/config-notes.txt
 share/doc/nut/configure.txt
 share/doc/nut/contact-closure.txt
 share/doc/nut/design.txt
-share/doc/nut/developers.txt
 share/doc/nut/developer-guide.txt
+share/doc/nut/developers.txt
 share/doc/nut/documentation.txt
 share/doc/nut/download.txt
 share/doc/nut/features.txt
@@ -154,4 +158,7 @@ share/examples/rc.d/upslog
 share/examples/rc.d/upsmon
 share/nut/cmdvartab
 share/nut/driver.list
+@pkgdir share/nut/html
 @pkgdir share/doc/nut/drivers
+@pkgdir etc/nut
+@pkgdir cgi-bin
