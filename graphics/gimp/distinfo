@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.71 2012/11/27 11:13:48 drochner Exp $
+$NetBSD: distinfo,v 1.72 2013/02/16 19:43:02 adam Exp $
 
-SHA1 (gimp-2.8.2.tar.bz2) = 64ad90cedc5e8e348310b6eb6b7821ec110c0886
-RMD160 (gimp-2.8.2.tar.bz2) = 353cf862302417c35df902618a3ba05ac0b3af41
-Size (gimp-2.8.2.tar.bz2) = 20161424 bytes
+SHA1 (gimp-2.8.4.tar.bz2) = dc472fc3ecfadd70002c2bb3aa959172e812796e
+RMD160 (gimp-2.8.4.tar.bz2) = 75cd2eded1949edefc1f6717d4785090c29a50f9
+Size (gimp-2.8.4.tar.bz2) = 20214383 bytes
 SHA1 (patch-aa) = 8107200cc3007e6ae4b9064ee05e5c9a00cca2ef
-SHA1 (patch-ab) = 609c6488768f9d628e6f09ede216fef7db99721c
+SHA1 (patch-ab) = d2450afa1efb60d6094827e6336b8266eea0bb12
 SHA1 (patch-ad) = 7863678d59ccf54e2ce61a4ac4b883fb9eb5fb82
-SHA1 (patch-app_Makefile.in) = efbd9e592cdbc154e5a6402279c7d54f3946c65c
+SHA1 (patch-app_Makefile.in) = 14fe1a47ddfd7b7b22d3eb920759928bfd81aa70
 SHA1 (patch-app_base_base-utils.c) = 18dfa09c1d63530ff79cd4c3515d9f1077182d64
 SHA1 (patch-app_config_Makefile.in) = a2fcebd994831fbe0f911efb84c1fecdf2e59198
-SHA1 (patch-bug687392) = 5cc488323c8761521cb3880f2a0d7376d6acd136
 SHA1 (patch-devel-docs_app_Makefile.in) = 1eb97f779d5151b9e89b4ae47afb44d1bb3b6a48
-SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = 4932d82711c8010cf7b1ff5bfb12031946273c2b
+SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = c424b1a8e345ec3d0763ac2cf1f8535da9e10797
