@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gmediaserver.sh,v 1.2 2013/02/16 15:10:46 tron Exp $
+# $NetBSD: gmediaserver.sh,v 1.3 2013/02/16 15:21:24 tron Exp $
 #
 # PROVIDE: gmediaserver
 # REQUIRE: DAEMON
@@ -25,7 +25,7 @@ gmediaserver_start()
 		. "@CFGFILE@"
 	fi
 	@ECHO@ "Starting ${name}."
-	@SU@ @GMEDIA_USER@ -c "$command" $command_flags $options $directories
+	@SU@ @GMEDIA_USER@ -c "$command $command_flags $options $directories"
 }
 
 gmediaserver_rescan()
