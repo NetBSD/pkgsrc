@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.11 2011/07/29 15:11:40 bouyer Exp $
+$NetBSD: patch-ab,v 1.12 2013/02/16 17:34:58 jdf Exp $
 
 Keep trying initialisation if we get a timeout or network error while
 probing the device.
 Submitted upstream as tracker #313195
 
---- drivers/snmp-ups.c.orig	2011-05-31 12:36:49.000000000 +0200
-+++ drivers/snmp-ups.c	2011-06-29 13:16:16.000000000 +0200
-@@ -76,6 +76,9 @@
+--- drivers/snmp-ups.c.orig	2013-02-08 15:39:09.000000000 +0100
++++ drivers/snmp-ups.c	2013-02-08 15:39:13.000000000 +0100
+@@ -90,6 +90,9 @@
  const char *mibname;
  const char *mibvers;
  
@@ -16,7 +16,7 @@ Submitted upstream as tracker #313195
  static void disable_transfer_oids(void);
  
  #define DRIVER_NAME	"Generic SNMP UPS driver"
-@@ -225,15 +228,15 @@
+@@ -266,15 +269,15 @@
  
  	/* FIXME: first test if the device is reachable to avoid timeouts! */
  
@@ -35,7 +35,7 @@ Submitted upstream as tracker #313195
  	/* Get UPS Model node to see if there's a MIB */
  	su_info_p = su_find_info("ups.model");
  	status = nut_snmp_get_str(su_info_p->OID, model, sizeof(model), NULL);
-@@ -393,6 +396,9 @@
+@@ -477,6 +480,9 @@
  	size_t name_len = MAX_OID_LEN;
  	static unsigned int numerr = 0;
  
@@ -45,7 +45,7 @@ Submitted upstream as tracker #313195
  	upsdebugx(3, "nut_snmp_get(%s)", OID);
  
  	/* create and send request. */
-@@ -411,8 +417,10 @@
+@@ -495,8 +501,10 @@
  
  	status = snmp_synch_response(g_snmp_sess_p, pdu, &response);
  
@@ -57,41 +57,33 @@ Submitted upstream as tracker #313195
  
  	if (!((status == STAT_SUCCESS) && (response->errstat == SNMP_ERR_NOERROR)))
  	{
-@@ -431,7 +439,7 @@
- 
- 		if ((numerr < SU_ERR_LIMIT) || ((numerr % SU_ERR_RATE) == 0))
- 			nut_snmp_perror(g_snmp_sess_p, status, response,
--				"nut_snmp_get: %s", OID);
-+			    "nut_snmp_get: %s", OID);
- 
- 		snmp_free_pdu(response);
- 		response = NULL;
-@@ -718,6 +726,7 @@
+@@ -876,6 +884,7 @@
+ bool_t load_mib2nut(const char *mib)
  {
  	int	i;
- 	char	buf[LARGEBUF];
 +	int snmp_timeout = 0;
+ 	char	buf[LARGEBUF];
+ 	mib2nut_info_t *m2n = NULL;
  
- 	upsdebugx(2, "SNMP UPS driver : entering load_mib2nut(%s)", mib);
- 
-@@ -728,12 +737,16 @@
- 	 * APHEL-GENESIS-II-MIB => .iso.org.dod.internet.private.enterprises.17373
- 	 * APHEL Revelation MIB => .iso.org.dod.internet.private.enterprises.534.6.6.6
- 	 */
+@@ -893,6 +902,7 @@
+ 	/* Otherwise, revert to the classic method */
+ 	if (m2n == NULL)
+ 	{
 +again:
- 	for (i = 0; mib2nut[i] != NULL; i++) {
- 		if (strcmp(mib, "auto") && strcmp(mib, mib2nut[i]->mib_name)) {
- 			continue;
- 		}
- 		upsdebugx(1, "load_mib2nut: trying %s mib", mib2nut[i]->mib_name);
- 		if (!nut_snmp_get_str(mib2nut[i]->oid_auto_check, buf, sizeof(buf), NULL)) {
-+			if (nut_snmp_err == SNMPERR_BAD_SENDTO ||
-+			    nut_snmp_err == SNMPERR_TIMEOUT)
-+				snmp_timeout++;
- 			continue;
- 		}
- 		snmp_info = mib2nut[i]->snmp_info;
-@@ -743,6 +756,20 @@
+ 		for (i = 0; mib2nut[i] != NULL; i++) {
+ 			/* Is there already a MIB name provided? */
+ 			if (strcmp(mib, "auto") && strcmp(mib, mib2nut[i]->mib_name)) {
+@@ -902,6 +912,9 @@
+ 
+ 			/* Classic method: test an OID specific to this MIB */
+ 			if (!nut_snmp_get_str(mib2nut[i]->oid_auto_check, buf, sizeof(buf), NULL)) {
++				if (nut_snmp_err == SNMPERR_BAD_SENDTO ||
++					nut_snmp_err == SNMPERR_TIMEOUT)
++					snmp_timeout++;
+ 				continue;
+ 			}
+ 			/* MIB found */
+@@ -920,6 +933,19 @@
  		upsdebugx(1, "load_mib2nut: using %s mib", mibname);
  		return TRUE;
  	}
@@ -108,7 +100,6 @@ Submitted upstream as tracker #313195
 +			goto again;
 +		}
 +	}
-+		    
+ 
  	/* Did we find something or is it really an unknown mib */
  	if (strcmp(mib, "auto") != 0) {
- 		fatalx(EXIT_FAILURE, "Unknown mibs value: %s", mib);
