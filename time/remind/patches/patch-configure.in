@@ -1,0 +1,24 @@
+$NetBSD: patch-configure.in,v 1.1 2013/02/16 13:34:59 schmonz Exp $
+
+Don't heap punishment on Apple and Microsoft users.
+
+--- configure.in.orig	2012-01-23 18:11:13.000000000 +0000
++++ configure.in
+@@ -14,7 +14,7 @@ EOF
+ 
+ AC_CONFIG_HEADER(src/config.h)
+ 
+-if test "`uname -s`" = "Darwin" ; then
++if false && test "`uname -s`" = "Darwin" ; then
+    trap 'echo Be patient...' INT TERM
+    cat <<'EOF'
+ 
+@@ -29,7 +29,7 @@ EOF
+     trap - TERM
+ fi
+ 
+-if uname -s | grep -i -q 'cygwin' ; then
++if false && uname -s | grep -i -q 'cygwin' ; then
+    trap 'echo Be patient...' INT TERM
+    cat <<'EOF'
+ 
