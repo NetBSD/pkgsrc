@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.604 2013/02/16 09:29:20 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.605 2013/02/16 11:16:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -885,3 +885,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/py-pandas to 0.10.1 [bad 2013-02-16]
 	Updated graphics/cdlabelgen to 4.2.0 [shattered 2013-02-16]
 	Updated misc/dvtm to 0.8 [shattered 2013-02-16]
+	Updated graphics/png to 1.6.0nb1 [wiz 2013-02-16]
