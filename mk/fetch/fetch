@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.14 2009/08/02 02:38:52 joerg Exp $
+# $NetBSD: fetch,v 1.15 2013/02/16 07:32:28 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -246,6 +246,7 @@ if ${TEST} -n "$resume"; then
 		if ${TEST} -f $path; then
 			${CP} -f $path $outputpath
 		else
+			${RM} -f $outputpath
 			${TOUCH} $outputpath
 		fi
 	fi
