@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 23:01:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/16 11:21:30 wiz Exp $
 #
 
 DISTNAME=	xcowsay-1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nickg.me.uk/files/
 

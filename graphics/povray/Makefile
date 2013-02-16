@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2013/01/26 21:37:57 adam Exp $
+# $NetBSD: Makefile,v 1.54 2013/02/16 11:22:23 wiz Exp $
 
 DISTNAME=	povray-3.6.1
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.povray.org/ftp/pub/povray/Official/Unix/ \
 		ftp://ftp.povray.org/pub/povray/Official/Unix/

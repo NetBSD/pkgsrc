@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/02/06 23:23:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/16 11:24:19 wiz Exp $
 
 DISTNAME=	ksecrets-${_KDE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 COMMENT=	KDE secrets service
 
