@@ -1,8 +1,8 @@
-$NetBSD: patch-app_Makefile.in,v 1.2 2012/05/07 08:40:08 adam Exp $
+$NetBSD: patch-app_Makefile.in,v 1.3 2013/02/16 19:43:03 adam Exp $
 
 --- app/Makefile.in.orig	2012-05-02 08:56:34.000000000 +0000
 +++ app/Makefile.in
-@@ -638,33 +638,33 @@ INCLUDES = \
+@@ -639,33 +639,33 @@ INCLUDES = \
  
  # FIXME: core should not depend on xcf
  workaround_that_core_depends_on_xcf = \
