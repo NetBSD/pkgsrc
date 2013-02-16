@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/02/16 09:32:29 obache Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/16 09:34:38 obache Exp $
 
 DISTNAME=		tnftp-20070806
 SVR4_PKGNAME=		tnftp
@@ -13,6 +13,7 @@ CONFLICTS+=		lukemftp-[0-9]*
 
 MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
+LICENSE=		original-bsd
 
 BOOTSTRAP_PKG=	yes
 
