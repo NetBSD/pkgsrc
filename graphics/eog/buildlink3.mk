@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/12/28 22:21:14 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2013/02/16 11:18:38 wiz Exp $
 
 BUILDLINK_TREE+=	eog
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	eog
 EOG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.eog+=	eog>=2.30.2<3
-BUILDLINK_ABI_DEPENDS.eog+=	eog>=2.32.1nb13<3
+BUILDLINK_ABI_DEPENDS.eog+=	eog>=2.32.1nb14
 BUILDLINK_PKGSRCDIR.eog?=	../../graphics/eog
 
 .include "../../devel/GConf/buildlink3.mk"

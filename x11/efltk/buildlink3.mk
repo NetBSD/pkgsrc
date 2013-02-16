@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2013/01/26 21:36:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2013/02/16 11:18:06 wiz Exp $
 
 BUILDLINK_TREE+=	efltk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	efltk
 EFLTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.efltk+=	efltk>=2.0.5nb1
-BUILDLINK_ABI_DEPENDS.efltk+=	efltk>=2.0.5nb14
+BUILDLINK_ABI_DEPENDS.efltk+=	efltk>=2.0.5nb15
 BUILDLINK_PKGSRCDIR.efltk?=	../../x11/efltk
 
 .include "../../devel/gettext-lib/buildlink3.mk"
