@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.11 2010/09/09 11:39:58 obache Exp $
+$NetBSD: distinfo,v 1.12 2013/02/16 13:34:59 schmonz Exp $
 
-SHA1 (remind-03.01.09.tar.gz) = 275f5375ac74269fa23df0c7de7aa9226e222e8a
-RMD160 (remind-03.01.09.tar.gz) = 0e779483fe9ef10d030526da8ef6b2137aac9417
-Size (remind-03.01.09.tar.gz) = 353421 bytes
+SHA1 (remind-03.01.12.tar.gz) = 0978357014916e0c5259e18b845d291eeb367b6c
+RMD160 (remind-03.01.12.tar.gz) = d98fb10ae9d6cbf5277ded13debe1ccd05bc9fb1
+Size (remind-03.01.12.tar.gz) = 361662 bytes
 SHA1 (patch-ab) = 5f77b26fd8cf1f34b42e337a63137a2c3e84c48b
 SHA1 (patch-ac) = a1a16349917f3fc5d5951b8c8fb92030859a3a2e
 SHA1 (patch-ad) = b91a7a59a6bd4f5c6ab45bc552c42eac2ca6bfc5
-SHA1 (patch-ae) = aabd4cc46d61f50e90341867122095370c31c50b
+SHA1 (patch-ae) = 9c357e40775d6c5ef98868eb6daa460d3dd2decc
+SHA1 (patch-configure) = bfc8a09c8640f6674e7f1b7263a68d38f75764bd
+SHA1 (patch-configure.in) = edde127c2b9744ffe1d624890dda6d68f039715b
+SHA1 (patch-src_init.c) = 5dc380d1520438eedd645bb441abe5c8e73c8e9d
