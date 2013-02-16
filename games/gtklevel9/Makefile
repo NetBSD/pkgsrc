@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/12/12 10:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/16 11:21:20 wiz Exp $
 
 DISTNAME=		Level9_4.0_Source
 PKGNAME=		gtklevel9-4.0
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		games
 MASTER_SITES=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
 EXTRACT_SUFX=		.zip

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2013/02/15 11:54:04 obache Exp $
+# $NetBSD: Makefile,v 1.92 2013/02/16 11:21:45 wiz Exp $
 #
 
 DISTNAME=	digikam-2.5.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

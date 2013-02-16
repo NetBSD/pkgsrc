@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/12/16 14:23:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/16 11:20:37 wiz Exp $
 #
 
 DISTNAME=	qrencode-3.4.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://fukuchi.org/works/qrencode/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2013/02/06 23:21:20 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2013/02/16 11:19:14 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-print
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-print
 XFCE4_PRINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-print+=	xfce4-print>=4.6.0
-BUILDLINK_ABI_DEPENDS.xfce4-print+=	xfce4-print>=4.6.1nb16
+BUILDLINK_ABI_DEPENDS.xfce4-print+=	xfce4-print>=4.6.1nb17
 BUILDLINK_PKGSRCDIR.xfce4-print?=	../../print/xfce4-print
 
 .include "../../devel/glib2/buildlink3.mk"

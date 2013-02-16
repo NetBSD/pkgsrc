@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2012/10/23 17:18:10 asau Exp $
+# $NetBSD: Makefile,v 1.39 2013/02/16 11:19:00 wiz Exp $
 
 DISTNAME=		avahi-0.6.31
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 

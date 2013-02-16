@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2013/01/26 21:36:19 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2013/02/16 11:19:57 wiz Exp $
 
 BUILDLINK_TREE+=	giblib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	giblib
 GIBLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.giblib+=	giblib>=1.2.3nb3
-BUILDLINK_ABI_DEPENDS.giblib+=	giblib>=1.2.4nb12
+BUILDLINK_ABI_DEPENDS.giblib+=	giblib>=1.2.4nb13
 BUILDLINK_PKGSRCDIR.giblib?=	../../devel/giblib
 
 .include "../../graphics/imlib2/buildlink3.mk"

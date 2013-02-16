@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2012/12/03 21:46:48 gls Exp $
+# $NetBSD: Makefile,v 1.47 2013/02/16 11:24:48 wiz Exp $
 #
 
 DISTNAME=	pekwm-0.1.16
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://www.pekwm.org/projects/pekwm/files/
 EXTRACT_SUFX=	.tar.bz2

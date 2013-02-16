@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/01/26 21:37:50 adam Exp $
+# $NetBSD: Makefile,v 1.28 2013/02/16 11:22:06 wiz Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://download.berlios.de/gtksee/
 

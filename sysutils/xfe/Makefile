@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2013/01/26 21:38:55 adam Exp $
+# $NetBSD: Makefile,v 1.42 2013/02/16 11:24:37 wiz Exp $
 
 DISTNAME=	xfe-1.04
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 

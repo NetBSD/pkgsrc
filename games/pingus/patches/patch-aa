@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2012/11/23 12:35:01 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2013/02/16 11:21:25 wiz Exp $
 
 NetBSD config & path fixes
 
@@ -37,17 +37,6 @@ NetBSD config & path fixes
     context.Message('Check how to call iconv...')
  
     for i in ['', 'const']:
-@@ -478,8 +484,8 @@
-     if not config.CheckLibWithHeader('boost_signals', 'boost/signals.hpp', 'c++'):
-         fatal_error += "  * library 'boost_signals' not found\n"
- 
--    if not config.CheckLibWithHeader('png', 'png.h', 'c++'):
--       fatal_error += "  * library 'png' not found\n"
-+    if not config.CheckLibWithHeader('png15', 'png.h', 'c++'):
-+       fatal_error += "  * library 'png15' not found\n"
- 
-     if config.CheckMyProgram('sdl-config'):
-        env.ParseConfig('sdl-config  --cflags --libs')
 @@ -539,7 +545,9 @@
      Help(opts.GenerateHelpText(env))
  

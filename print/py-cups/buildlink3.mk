@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/02/06 23:21:19 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2013/02/16 11:19:59 wiz Exp $
 
 BUILDLINK_TREE+=	py-cups
 
@@ -8,7 +8,7 @@ PY_CUPS_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-cups+=	${PYPKGPREFIX}-cups>=1.9.44
-BUILDLINK_ABI_DEPENDS.py-cups+=	py27-cups>=1.9.61nb2
+BUILDLINK_ABI_DEPENDS.py-cups+=	${PYPKGPREFIX}-cups>=1.9.61nb3
 BUILDLINK_PKGSRCDIR.py-cups?=	../../print/py-cups
 
 #.include "../../print/cups/buildlink3.mk"

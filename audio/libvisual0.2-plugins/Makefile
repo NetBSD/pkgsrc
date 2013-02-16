@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 23:01:12 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/16 11:20:14 wiz Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
 PKGNAME=		libvisual0.2-plugins-0.2.0
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		audio graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/01/26 21:36:47 adam Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/16 11:19:32 wiz Exp $
 #
 
 DISTNAME=	dbus-qt3-0.70
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 EXTRACT_SUFX=	.tar.bz2

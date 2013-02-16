@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2012/10/08 23:01:57 adam Exp $
+# $NetBSD: Makefile,v 1.31 2013/02/16 11:22:52 wiz Exp $
 #
 
 .include "../../lang/sablevm-classpath/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/classpath/classpath-gui/}
-PKGREVISION=	15
+PKGREVISION=	16
 COMMENT+=	(GUI libraries)
 
 DEPENDS+=	sablevm-classpath>=1.13nb1:../../lang/sablevm-classpath

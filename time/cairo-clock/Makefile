@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 23:02:28 adam Exp $
+# $NetBSD: Makefile,v 1.30 2013/02/16 11:24:40 wiz Exp $
 #
 
 DISTNAME=	cairo-clock_0.3.3-1
 PKGNAME=	cairo-clock-0.3.3
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	time
 MASTER_SITES=	http://macslow.thepimp.net/projects/cairo-clock/
 

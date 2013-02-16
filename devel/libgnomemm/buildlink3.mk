@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2013/02/06 23:21:27 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2013/02/16 11:19:12 wiz Exp $
 
 BUILDLINK_TREE+=	libgnomemm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomemm
 LIBGNOMEMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomemm+=	libgnomemm>=2.10.0
-BUILDLINK_ABI_DEPENDS.libgnomemm+=	libgnomemm>=2.30.0nb13
+BUILDLINK_ABI_DEPENDS.libgnomemm+=	libgnomemm>=2.30.0nb14
 BUILDLINK_PKGSRCDIR.libgnomemm?=	../../devel/libgnomemm
 
 .include "../../devel/libgnome/buildlink3.mk"

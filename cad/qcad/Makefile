@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2013/01/26 21:37:06 adam Exp $
+# $NetBSD: Makefile,v 1.56 2013/02/16 11:20:29 wiz Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -6,7 +6,7 @@ DISTNAME=		qcad-2.0.5.0-1-community.src
 # (there's a 2.0.4.7 for some platforms), though I don't know about the
 # thing after the hyphen, which always seems to be 1. Can I use four digits?
 PKGNAME=		qcad-2.0.5.0
-PKGREVISION=		6
+PKGREVISION=		7
 
 .include "./Makefile.common"
 
