@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.602 2013/02/16 00:03:44 bad Exp $
+$NetBSD: CHANGES-2013,v 1.603 2013/02/16 08:57:09 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -883,3 +883,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao30-example to 3.0.4 [taca 2013-02-15]
 	Updated textproc/ezxml to 0.8.6 [shattered 2013-02-15]
 	Updated math/py-pandas to 0.10.1 [bad 2013-02-16]
+	Updated graphics/cdlabelgen to 4.2.0 [shattered 2013-02-16]
