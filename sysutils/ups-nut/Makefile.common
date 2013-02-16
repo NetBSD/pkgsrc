@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2012/07/10 09:37:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/02/16 17:34:58 jdf Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
 # used by sysutils/ups-nut-usb/Makefile
 # used by sysutils/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.6.1
+DISTNAME=		nut-2.6.5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.networkupstools.org/source/2.6/
 
