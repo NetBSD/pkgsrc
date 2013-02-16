@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2012/10/08 23:00:36 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2013/02/16 11:18:27 wiz Exp $
 
 BUILDLINK_TREE+=	nautilus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nautilus
 NAUTILUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nautilus+=	nautilus>=2.12.1nb1
-BUILDLINK_ABI_DEPENDS.nautilus+=	nautilus>=2.32.2.1nb13
+BUILDLINK_ABI_DEPENDS.nautilus+=	nautilus>=2.32.2.1nb14
 BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 
 .include "../../devel/GConf/buildlink3.mk"
