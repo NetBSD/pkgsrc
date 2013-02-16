@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/20 04:27:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/16 15:10:46 tron Exp $
 bin/gmediaserver
 info/gmediaserver.info
 man/man1/gmediaserver.1
+share/examples/gmediaserver/gmediaserver.conf
 share/examples/rc.d/gmediaserver
 share/locale/sv/LC_MESSAGES/gmediaserver.mo
