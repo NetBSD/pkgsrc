@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2011/01/24 08:08:37 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2013/02/16 11:16:06 wiz Exp $
 
 BUILDLINK_TREE+=	png
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	png
 PNG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.png+=	png>=1.2.4
-BUILDLINK_ABI_DEPENDS.png+=	png>=1.5.0
+BUILDLINK_ABI_DEPENDS.png+=	png>=1.6.0nb1
 BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
 
 # keep this in sync with the same code in Makefile
@@ -19,7 +19,7 @@ CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 # instead of installing symlinks. Work around this with buildlink
 # magic: packages outside pkgsrc will need to be converted to
 # one of the proper methods or fail.
-BUILDLINK_TRANSFORM+=	l:png:png15
+BUILDLINK_TRANSFORM+=	l:png:png16
 
 .include "../../devel/zlib/buildlink3.mk"
 .endif # PNG_BUILDLINK3_MK
