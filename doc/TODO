@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11942 2013/02/15 19:17:20 shattered Exp $
+$NetBSD: TODO,v 1.11943 2013/02/16 08:57:09 shattered Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdialog-1.2.20121230
 	o cdk-5.0.20120323
-	o cdlabelgen-4.2.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
 	o cfengine-3.3.8 [pkg/47249]
