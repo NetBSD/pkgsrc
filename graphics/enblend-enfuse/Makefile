@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2013/02/16 11:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/16 21:18:29 adam Exp $
 
-DISTNAME=	enblend-enfuse-4.1
-PKGREVISION=	3
+DISTNAME=	enblend-enfuse-4.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 
@@ -14,7 +13,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-image-cache
+CONFIGURE_ARGS+=	--with-boost-filesystem
 
 .include "../../mk/bsd.prefs.mk"
 
