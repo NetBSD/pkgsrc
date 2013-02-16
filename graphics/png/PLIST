@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.13 2011/01/13 13:27:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/02/16 11:16:06 wiz Exp $
 bin/libpng-config
-bin/libpng15-config
-include/libpng15/png.h
-include/libpng15/pngconf.h
-include/libpng15/pnglibconf.h
+bin/libpng16-config
+include/libpng16/png.h
+include/libpng16/pngconf.h
+include/libpng16/pnglibconf.h
 include/png.h
 include/pngconf.h
 include/pnglibconf.h
-lib/libpng15.la
+lib/libpng16.la
 lib/pkgconfig/libpng.pc
-lib/pkgconfig/libpng15.pc
+lib/pkgconfig/libpng16.pc
 man/man3/libpng.3
 man/man3/libpngpf.3
 man/man5/png.5
