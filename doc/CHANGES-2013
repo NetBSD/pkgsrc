@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.616 2013/02/16 22:40:52 agc Exp $
+$NetBSD: CHANGES-2013,v 1.617 2013/02/16 23:43:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -898,3 +898,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/racket to 5.3.3 [asau 2013-02-16]
 	Updated devel/p5-File-BaseDir to 0.03nb5 [schmonz 2013-02-16]
 	Updated security/ipv6-toolkit to 1.3 [agc 2013-02-16]
+	Updated mail/getmail to 4.38.0 [schmonz 2013-02-16]
