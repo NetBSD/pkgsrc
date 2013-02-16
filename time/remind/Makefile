@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 13:04:29 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/16 13:34:59 schmonz Exp $
 #
 
-DISTNAME=	remind-03.01.09
+DISTNAME=	remind-03.01.12
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
-PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://www.roaringpenguin.com/files/download/
 
