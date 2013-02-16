@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.613 2013/02/16 21:19:22 adam Exp $
+$NetBSD: CHANGES-2013,v 1.614 2013/02/16 21:22:06 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -894,3 +894,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.50 [adam 2013-02-16]
 	Updated graphics/gimp to 2.8.4 [adam 2013-02-16]
 	Updated graphics/enblend-enfuse to 4.1.1 [adam 2013-02-16]
+	Updated lang/racket-textual to 5.3.3 [asau 2013-02-16]
+	Updated lang/racket to 5.3.3 [asau 2013-02-16]
