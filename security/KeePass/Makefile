@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/01/26 21:38:45 adam Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/16 11:24:16 wiz Exp $
 #
 
 DISTNAME=	KeePass-2.20.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepass/}
 EXTRACT_SUFX=	.zip
