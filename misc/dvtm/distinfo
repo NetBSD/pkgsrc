@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/08/14 11:58:01 obache Exp $
+$NetBSD: distinfo,v 1.8 2013/02/16 09:28:59 shattered Exp $
 
-SHA1 (dvtm-0.7.tar.gz) = f37c57d5395de3fc47b8c05479c7c3c47c637948
-RMD160 (dvtm-0.7.tar.gz) = 64a3a0213731b5694ddd5dfe0fac02c19160e5a0
-Size (dvtm-0.7.tar.gz) = 26501 bytes
+SHA1 (dvtm-0.8.tar.gz) = 367fe528010a69c705cd046f63201c61086c14ec
+RMD160 (dvtm-0.8.tar.gz) = 1ce8abb46dcac72b490d9c86a59d3e1c904c8df0
+Size (dvtm-0.8.tar.gz) = 27543 bytes
 SHA1 (patch-aa) = 2de5ef5ff718918b61c9c73a1137efaefeaf81c1
