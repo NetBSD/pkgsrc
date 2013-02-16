@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2012/12/25 21:19:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/16 11:18:31 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	0.3.2
 
 DISTNAME=	xfce4-mpc-plugin-${XFCE4_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	multimedia
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-mpc-plugin/
 EXTRACT_SUFX=	.tar.gz
