@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:11:16 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/16 11:22:23 wiz Exp $
 #
 
 DISTNAME=	python-biggles-1.6.3
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biggles/}
 
