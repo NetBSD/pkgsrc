@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2012/10/08 23:00:51 adam Exp $
+# $NetBSD: Makefile,v 1.69 2013/02/16 11:18:37 wiz Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.30.3
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.30/}
 EXTRACT_SUFX=		.tar.bz2

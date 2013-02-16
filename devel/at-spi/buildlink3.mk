@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2012/10/08 23:00:49 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2013/02/16 11:18:47 wiz Exp $
 
 BUILDLINK_TREE+=	at-spi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	at-spi
 AT_SPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.at-spi+=	at-spi>=1.6.0
-BUILDLINK_ABI_DEPENDS.at-spi+=	at-spi>=1.32.0nb10
+BUILDLINK_ABI_DEPENDS.at-spi+=	at-spi>=1.32.0nb11
 BUILDLINK_PKGSRCDIR.at-spi?=	../../devel/at-spi
 
 .include "../../devel/atk/buildlink3.mk"
