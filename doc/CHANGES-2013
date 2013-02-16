@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.608 2013/02/16 15:11:05 tron Exp $
+$NetBSD: CHANGES-2013,v 1.609 2013/02/16 17:34:59 jdf Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -889,3 +889,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/revbump to 2.4 [wiz 2013-02-16]
 	Updated time/remind to 3.1.12 [schmonz 2013-02-16]
 	Updated multimedia/gmediaserver to 0.13.0nb5 [tron 2013-02-16]
+	Updated sysutils/ups-nut to 2.6.5 [jdf 2013-02-16]
