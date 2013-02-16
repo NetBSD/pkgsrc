@@ -1,24 +1,23 @@
-$NetBSD: patch-ab,v 1.10 2011/11/29 17:47:41 hans Exp $
+$NetBSD: patch-ab,v 1.11 2013/02/16 08:56:45 shattered Exp $
 
---- Makefile.orig	2005-08-23 17:22:44.000000000 +0200
+--- Makefile.orig	2012-04-15 22:22:19.000000000 +0000
 +++ Makefile
-@@ -8,12 +8,12 @@ ZIPVERSION = 360
+@@ -10,12 +10,12 @@ ZIPVERSION = 420
  # Change these to locations you need, also
  # remember to edit cdlabelgen and its @where_is_the_template as needed.
  
--BASE_DIR   = /usr/local
+-BASE_DIR   = /usr
 +BASE_DIR   = ${PREFIX}
  # BASE_DIR   = /usr/local
  # BASE_DIR   = /opt
  BIN_DIR   = $(BASE_DIR)/bin
--LIB_DIR   = $(BASE_DIR)/lib/cdlabelgen
--MAN_DIR   = $(BASE_DIR)/man
-+LIB_DIR   = $(BASE_DIR)/share/cdlabelgen
+ LIB_DIR   = $(BASE_DIR)/share/cdlabelgen
+-MAN_DIR   = $(BASE_DIR)/share/man
 +MAN_DIR   = $(BASE_DIR)/$(PKGMANDIR)
  SOURCES    = cdlabelgen ChangeLog INSTALL README Makefile ../cdinsert.pl INSTALL.WEB cdlabelgen.pod cdlabelgen.1 cdlabelgen.html spec.template
  POSTSCRIPT = template.ps *.eps
  DISTFILES = $(SOURCES) $(POSTSCRIPT)
-@@ -31,6 +31,14 @@ INSTALL_FILE	:= install -m 0644
+@@ -37,6 +37,14 @@ RPM_TOPDIR	:= $(HOME)/rpmbuild
  # ---------------
  
  all: cdlabelgen.html cdlabelgen.1
@@ -33,7 +32,7 @@ $NetBSD: patch-ab,v 1.10 2011/11/29 17:47:41 hans Exp $
  
  cdlabelgen.html: cdlabelgen.pod
  	pod2html --outfile=$@ --infile=$?
-@@ -43,13 +51,13 @@ cdlabelgen.1: cdlabelgen.pod
+@@ -49,13 +57,13 @@ cdlabelgen.1: cdlabelgen.pod
  install: all
  	@echo "Installing cdlabelgen in $(BIN_DIR) and $(LIB_DIR)"
  	@echo ""
