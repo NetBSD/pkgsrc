@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 14:10:57 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/17 19:18:03 dholland Exp $
 
 DISTNAME=	graphviz-dot-mode
 PKGNAME=	${DISTNAME}-0.3.7
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://users.skynet.be/ppareit/projects/graphviz-dot-mode/
 EXTRACT_SUFX=	.el
