@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2013/02/17 10:29:01 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2013/02/17 17:28:42 spz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -36,6 +36,11 @@ SUBDIR+=	compat30
 SUBDIR+=	compat30-extras
 SUBDIR+=	compat40
 SUBDIR+=	compat40-extras
+SUBDIR+=	compat50
+SUBDIR+=	compat50-x11
+SUBDIR+=	compat51
+SUBDIR+=	compat51-x11
+SUBDIR+=	compat60
 #SUBDIR+=	compat_netbsd		# only contains Makefile fragments
 SUBDIR+=	cygwin_esound
 SUBDIR+=	cygwin_lib
