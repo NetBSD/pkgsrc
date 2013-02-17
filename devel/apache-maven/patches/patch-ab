@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/12/16 07:39:41 yyamano Exp $
+$NetBSD: patch-ab,v 1.2 2013/02/17 17:37:41 fhajny Exp $
 
---- bin/mvn.orig	2008-04-07 09:04:44.000000000 -0700
+--- bin/mvn.orig	2012-01-17 08:47:39.000000000 +0000
 +++ bin/mvn
-@@ -74,6 +74,15 @@ if [ -z "$JAVA_HOME" ] ; then
+@@ -69,6 +69,15 @@ if [ -z "$JAVA_HOME" ] ; then
    fi
  fi
  
@@ -18,16 +18,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/12/16 07:39:41 yyamano Exp $
  if [ -z "$M2_HOME" ] ; then
    ## resolve links - $0 may be a link to maven's home
    PRG="$0"
-@@ -156,8 +165,10 @@ fi
+@@ -166,7 +175,9 @@ fi
  
  exec "$JAVACMD" \
    $MAVEN_OPTS \
--  -classpath "${M2_HOME}"/boot/classworlds-*.jar \
+-  -classpath "${M2_HOME}"/boot/plexus-classworlds-*.jar \
 -  "-Dclassworlds.conf=${M2_HOME}/bin/m2.conf" \
-+  -classpath "${M2_HOME}"/lib/java/maven/boot/classworlds-*.jar \
++  -classpath "${M2_HOME}"/lib/java/maven/boot/plexus-classworlds-*.jar \
 +  "-Dclassworlds.conf=${M2_HOME}/etc/maven/m2.conf" \
    "-Dmaven.home=${M2_HOME}"  \
 +  "-Dorg.apache.maven.global-settings=${M2_HOME}/etc/maven/settings.xml" \
 +  "-Dorg.apache.maven.global-plugin-registry=${M2_HOME}/etc/maven/plugin-registry.xml" \
-   ${CLASSWORLDS_LAUNCHER} $QUOTED_ARGS
- 
+   ${CLASSWORLDS_LAUNCHER} "$@"
