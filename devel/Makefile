@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1704 2013/02/17 09:08:21 taca Exp $
+# $NetBSD: Makefile,v 1.1705 2013/02/17 10:29:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1262,7 +1262,6 @@ SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-pip
 SUBDIR+=	p5-prefork
-SUBDIR+=	p5-sapnwrfc
 SUBDIR+=	p5-signatures
 SUBDIR+=	p5-strictures
 SUBDIR+=	p5-subversion
@@ -1542,7 +1541,6 @@ SUBDIR+=	rudiments
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sablecc
-SUBDIR+=	sapnwrfcsdk
 SUBDIR+=	scintilla
 SUBDIR+=	scmcvs
 SUBDIR+=	scmgit
