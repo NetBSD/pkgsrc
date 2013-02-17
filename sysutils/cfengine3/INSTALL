@@ -1,9 +1,8 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2010/11/05 13:57:21 pettai Exp $
+# $NetBSD: INSTALL,v 1.2 2013/02/17 16:15:42 fhajny Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	#${MKDIR} -p @VARBASE@/cfengine
-	${LN} -sf @PKG_SYSCONFDIR@/cfengine @VARBASE@/cfengine/inputs
-	${LN} -sf @PREFIX@/sbin @VARBASE@/cfengine/bin
+	${LN} -sf @PKG_SYSCONFDIR@ @CFENGINE_DIR@/inputs
+	${LN} -sf @PREFIX@/sbin @CFENGINE_DIR@/bin
 	@PREFIX@/sbin/cf-key
 esac
