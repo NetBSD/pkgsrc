@@ -2,4 +2,4 @@ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
 such as Chromium OS, Windows, Mac and Linux. This open-source
 project originates from Google Japanese Input.
 
-This package is dictionary server for mozc client, such as ibuz-mozc.
+This package is dictionary server for mozc client, such as ibus-mozc.
