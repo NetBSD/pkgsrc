@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.40 2013/02/12 14:28:09 taca Exp $
+# $NetBSD: rails.mk,v 1.41 2013/02/17 09:16:53 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 3 31 32
+#	Possible values: 31 32
 #	Default: 32
 #
 #
@@ -18,7 +18,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_SUPPORTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 3 31 32
+#	Possible values: 31 32
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -32,13 +32,12 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 3 31 32
+#	Possible values: 31 32
 #
 
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS3_VERSION?=	3.0.20
 RUBY_RAILS31_VERSION?=	3.1.11
 RUBY_RAILS32_VERSION?=	3.2.12
 
@@ -59,9 +58,6 @@ _RUBY_INSTALLED_RAILS!= \
 	elif ${PKG_INFO} -qe "${RUBY_PKGPREFIX}-rack>=1.3" || \
 		${PKG_INFO} -qe "${RUBY_PKGPREFIX}-activesupport>=3.1"; then \
 		${ECHO} 31; \
-	elif ${PKG_INFO} -qe "${RUBY_PKGPREFIX}-rack>=1.2" || \
-		${PKG_INFO} -qe "${RUBY_PKGPREFIX}-activesupport>=3.0<3.1"; then \
-		${ECHO} 3; \
 	else \
 		${ECHO} "none"; \
 	fi
@@ -72,9 +68,7 @@ RUBY_RAILS:=	${RUBY_RAILS_DEFAULT}
 . endif
 .endif
 
-.if ${RUBY_RAILS} == "3"
-RUBY_RAILS_VERSION:=	${RUBY_RAILS3_VERSION}
-.elif ${RUBY_RAILS} == "31"
+.if ${RUBY_RAILS} == "31"
 RUBY_RAILS_VERSION:=	${RUBY_RAILS31_VERSION}
 .else
 RUBY_RAILS_VERSION:=	${RUBY_RAILS32_VERSION}
@@ -115,15 +109,6 @@ RUBY_ACTIVERESOURCE?=	${RUBY_RAILS_VERSION}
 RUBY_ACTIONMAILER?=	${RUBY_RAILS_VERSION}
 RUBY_RAILTIES?=		${RUBY_RAILS_VERSION}
 
-RUBY_RAILS3_ACTIVESUPPORT=	../../devel/ruby-activesupport3
-RUBY_RAILS3_ACTIVEMODEL=	../../devel/ruby-activemodel
-RUBY_RAILS3_ACTIONPACK=		../../www/ruby-actionpack3
-RUBY_RAILS3_ACTIVERECORD=	../../databases/ruby-activerecord3
-RUBY_RAILS3_ACTIVERESOURCE=	../../www/ruby-activeresource3
-RUBY_RAILS3_ACTIONMAILER=	../../mail/ruby-actionmailer3
-RUBY_RAILS3_RAILTIES=		../../devel/ruby-railties
-RUBY_RAILS3_RAILS=		../../www/ruby-rails3
-
 RUBY_RAILS31_ACTIVESUPPORT=	../../devel/ruby-activesupport31
 RUBY_RAILS31_ACTIVEMODEL=	../../devel/ruby-activemodel31
 RUBY_RAILS31_ACTIONPACK=	../../www/ruby-actionpack31
@@ -142,24 +127,7 @@ RUBY_RAILS32_ACTIONMAILER=	../../mail/ruby-actionmailer32
 RUBY_RAILS32_RAILTIES=		../../devel/ruby-railties32
 RUBY_RAILS32_RAILS=		../../www/ruby-rails32
 
-.if ${RUBY_RAILS} == "3"
-RUBY_ACTIVESUPPORT_DEPENDS= \
-	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:${RUBY_RAILS3_ACTIVESUPPORT}
-RUBY_ACTIVEMODEL_DEPENDS= \
-	${RUBY_PKGPREFIX}-activemodel${_RAILS_DEP}:${RUBY_RAILS3_ACTIVEMODEL}
-RUBY_ACTIONPACK_DEPENDS= \
-	${RUBY_PKGPREFIX}-actionpack${_RAILS_DEP}:${RUBY_RAILS3_ACTIONPACK}
-RUBY_ACTIVERECORD_DEPENDS= \
-	${RUBY_PKGPREFIX}-activerecord${_RAILS_DEP}:${RUBY_RAILS3_ACTIVERECORD}
-RUBY_ACTIVERESOURCE_DEPENDS= \
-	${RUBY_PKGPREFIX}-activeresource${_RAILS_DEP}:${RUBY_RAILS3_ACTIVERESOURCE}
-RUBY_ACTIONMAILER_DEPENDS= \
-	${RUBY_PKGPREFIX}-actionmailer${_RAILS_DEP}:${RUBY_RAILS3_ACTIONMAILER}
-RUBY_RAILTIES_DEPENDS= \
-	${RUBY_PKGPREFIX}-railties${_RAILS_DEP}:${RUBY_RAILS3_RAILTIES}
-RUBY_RAILS_DEPENDS= \
-	${RUBY_PKGPREFIX}-rails${_RAILS_DEP}:${RUBY_RAILS3_RAILS}
-.elif ${RUBY_RAILS} == "31"
+.if ${RUBY_RAILS} == "31"
 RUBY_ACTIVESUPPORT_DEPENDS= \
 	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:${RUBY_RAILS31_ACTIVESUPPORT}
 RUBY_ACTIVEMODEL_DEPENDS= \
