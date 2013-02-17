@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/03 21:56:19 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/02/17 16:05:27 asau Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -27,6 +27,8 @@ USE_LIBTOOL=		yes
 
 EVAL_PREFIX+=		LIBTOOL_PREFIX=libtool-base
 LIBTOOL_PREFIX_DEFAULT=	${LOCALBASE}
+
+TEST_TARGET=		test
 
 INSTALLATION_DIRS=	share/doc/html share/emacs/site-lisp
 
