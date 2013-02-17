@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:12 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/17 12:19:11 shattered Exp $
 #
 
 DISTNAME=		memconf
@@ -13,6 +13,8 @@ DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} memconf.man
 MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://www.4schmidts.com/memconf.html
 COMMENT=		Physical memory information utility
+
+LICENSE=		gnu-gpl-v2
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
