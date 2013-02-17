@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.cocoa,v 1.1 2009/08/05 22:04:50 minskim Exp $
-Applications/Emacs.app/Contents/Info.plist
-Applications/Emacs.app/Contents/MacOS/Emacs
-Applications/Emacs.app/Contents/PkgInfo
-Applications/Emacs.app/Contents/Resources/Credits.html
-Applications/Emacs.app/Contents/Resources/Emacs.icns
-Applications/Emacs.app/Contents/Resources/English.lproj/InfoPlist.strings
-Applications/Emacs.app/Contents/Resources/document.icns
