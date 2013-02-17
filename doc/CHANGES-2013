@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.631 2013/02/17 10:29:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.632 2013/02/17 12:58:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed archivers/sapcar [wiz 2013-02-17]
 	Removed devel/sapnwrfcsdk [wiz 2013-02-17]
 	Removed devel/p5-sapnwrfc [wiz 2013-02-17]
+	Updated textproc/p5-Pod-Simple to 3.25 [wen 2013-02-17]
