@@ -1,0 +1,138 @@
+# $NetBSD: Makefile.common,v 1.38 2013/02/17 07:36:09 dholland Exp $
+#
+# used by editors/emacs/Makefile
+# used by editors/emacs-nox11/Makefile
+
+CATEGORIES=	editors
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+
+MAINTAINER=	dholland@NetBSD.org
+COMMENT=	Meta-package for installing the preferred Emacs version
+
+META_PACKAGE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+#
+# 1. Depend on the right emacs using ${EMACS_TYPE}. We don't have to
+# (and in fact shouldn't) depend on the exact version, just *a*
+# version. Do *not* include modules.mk as that will get us a tighter
+# pattern than we want, as well as other problematic effects.
+#
+# XXX: it would be better to split modules.mk and share the logic
+# that can be shared.
+#
+
+MY_EMACS_TYPE?=${EMACS_TYPE}
+EMACS_BASE_TYPE=${MY_EMACS_TYPE:S/nox//}
+EMACS_MAJOR=${EMACS_BASE_TYPE:S/emacs//}
+
+# Sigh.
+.if ${MY_EMACS_TYPE} == "emacs20nox"
+MY_EMACS_TYPE:=		emacs20
+.endif
+
+.if !empty(MY_EMACS_TYPE:Mxemacs*)
+PKG_FAIL_REASON+=	"EMACS_TYPE is xemacs."
+# (Set this to avoid crashing out below.)
+EMACS_PKGDIR=		../../editors/xemacs
+.elif ${MY_EMACS_TYPE} == "emacs25"
+EMACS_PKGDIR=		../../editors/emacs-snapshot
+.elif !empty(MY_EMACS_TYPE:M*nox)
+EMACS_PKGDIR=		../../editors/${EMACS_BASE_TYPE}-nox11
+.else
+EMACS_PKGDIR=		../../editors/${EMACS_BASE_TYPE}
+.endif
+
+DEPENDS+=	${EMACS_BASE_TYPE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
+
+#
+# 2. Now it gets gross. Before this meta-package was introduced, the
+# emacs packages all had PKGNAME set to "emacs". Now the meta-package
+# is called "emacs" and the emacs packages themselves have the emacs
+# major version in them. But in order to make updates work properly,
+# the version of the package called "emacs" cannot go down. We need to
+# set MY_EMACS_VERSION accordingly. The following were the versions at
+# the time the renaming was done:
+#   emacs20		20.7nb16
+#   emacs21		21.4anb26
+#   emacs21-nox11	21.4anb13
+#   emacs22		22.3nb26
+#   emacs22-nox11	22.3nb3
+#   emacs23		23.4nb12
+#   emacs23-nox11	23.4nb1
+#   emacs24		24.2nb6
+#   emacs24-nox11	24.2
+#   emacs25+		n/a
+#
+# Set VER to the version from the above table, and REV to the
+# PKGREVISION value.
+#
+
+.if ${MY_EMACS_TYPE} == "emacs20"
+VER=	20.7
+REV=	16
+.elif ${MY_EMACS_TYPE} == "emacs21"
+VER=	21.4
+REV=	26
+.elif ${MY_EMACS_TYPE} == "emacs21nox"
+VER=	21.4
+REV=	13
+.elif ${MY_EMACS_TYPE} == "emacs22"
+VER=	22.3
+REV=	26
+.elif ${MY_EMACS_TYPE} == "emacs22nox"
+VER=	22.3
+REV=	3
+.elif ${MY_EMACS_TYPE} == "emacs23"
+VER=	23.4
+REV=	12
+.elif ${MY_EMACS_TYPE} == "emacs23nox"
+VER=	23.4
+REV=	1
+.elif ${MY_EMACS_TYPE} == "emacs24"
+VER=	24.2
+REV=	6
+.elif ${MY_EMACS_TYPE} == "emacs24nox"
+VER=	24.2
+REV=	0
+.else
+VER=	${_EMACS_VERSION_MAJOR}
+REV=	0
+.endif
+
+#
+# Get the actual version from version.mk.
+#
+
+.include "${EMACS_PKGDIR}/version.mk"
+
+MY_EMACS_VERSION=	${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
+.if defined(_EMACS_VERSION_MICRO)
+MY_EMACS_VERSION:=	${MY_EMACS_VERSION}.${_EMACS_VERSION_MICRO}
+.endif
+
+#
+# Compute PKGREVISION.
+#
+# If we are on the same version as VER, we need PKGREVISION to be at
+# least REV + 1. Otherwise, it can start at 0.
+#
+# Use MYPKGREVISION (defined at the top of this file) to bump the
+# version if that should become necessary.
+#
+
+.if ${MY_EMACS_VERSION} != ${VER}
+PKGREVISION=	${MYPKGREVISION}
+.else
+PKGREVISION!=expr 1 + ${REV} + ${MYPKGREVISION}
+.endif
+
+# This doesn't work; fortunately it appears to be unnecessary.
+#
+#.if ${PKGREVISION} == "0"
+#.unset PKGREVISION
+#.endif
+
+.include "../../mk/bsd.pkg.mk"
