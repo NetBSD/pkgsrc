@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/01/17 06:05:31 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/17 18:41:12 dholland Exp $
 
-DISTNAME=	bulk-medium-20130113
+DISTNAME=	bulk-medium-20130217
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -63,7 +63,8 @@ DEPENDS+=	scmgit-[0-9]*:../../devel/scmgit
 DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 DEPENDS+=	scmgit-docs-[0-9]*:../../devel/scmgit-docs
 DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
-DEPENDS+=	emacs>=23<24:../../editors/emacs
+DEPENDS+=	emacs23>=23<24:../../editors/emacs23
+DEPENDS+=	emacs-[0-9]:../../editors/emacs
 DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 DEPENDS+=	vim-gtk2-[0-9]*:../../editors/vim-gtk2
 DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
