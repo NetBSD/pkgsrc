@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2013/02/17 04:59:42 dholland Exp $
+
+--- lisp/cus-dep.el.orig	2010-04-03 22:26:07.000000000 +0000
++++ lisp/cus-dep.el
+@@ -59,6 +59,7 @@ Usage: emacs -batch -l ./cus-dep.el -f c
+             (unless (or (string-match custom-dependencies-no-scan-regexp file)
+                         (string-match preloaded file)
+                         (not (file-exists-p file)))
++	      (message file)
+               (erase-buffer)
+               (insert-file-contents file)
+               (goto-char (point-min))

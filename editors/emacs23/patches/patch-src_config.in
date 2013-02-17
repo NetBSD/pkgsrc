@@ -1,0 +1,20 @@
+$NetBSD: patch-src_config.in,v 1.1 2013/02/17 04:59:43 dholland Exp $
+
+--- src/config.in.orig	2011-11-26 03:20:20.000000000 +0000
++++ src/config.in
+@@ -1181,6 +1181,7 @@ extern char *getenv ();
+ #ifdef HAVE_STDLIB_H
+ #include <stdlib.h>
+ #endif
++#if !defined(__DragonFly__)
+ #ifdef HAVE_ALLOCA_H
+ # include <alloca.h>
+ #elif defined __GNUC__
+@@ -1194,6 +1195,7 @@ extern "C"
+ # endif
+ void *alloca (size_t);
+ #endif
++#endif /* __DragonFly__ */
+ #ifndef HAVE_SIZE_T
+ typedef unsigned size_t;
+ #endif
