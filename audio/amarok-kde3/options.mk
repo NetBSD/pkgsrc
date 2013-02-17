@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2011/11/21 19:49:19 shattered Exp $
+# $NetBSD: options.mk,v 1.3 2013/02/17 12:21:34 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amarok
-PKG_SUPPORTED_OPTIONS=	libgpod libmtp mysql pgsql
+PKG_SUPPORTED_OPTIONS=	libgpod libmtp mysql pgsql debug
 
 .include "../../mk/bsd.options.mk"
 
@@ -29,4 +29,12 @@ CONFIGURE_ARGS+=	--enable-mysql
 .if !empty(PKG_OPTIONS:Mpgsql)
 CONFIGURE_ARGS+=	--enable-postgresql
 .  include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CC+=			-ggdb
+CXX+=			-ggdb
+CONFIGURE_ARGS+=	--enable-debug=full
+CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
+INSTALL_UNSTRIPPED=	yes
 .endif
