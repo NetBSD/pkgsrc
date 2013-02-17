@@ -1,4 +1,4 @@
-# $NetBSD: netbsd-compat.mk,v 1.3 2007/12/31 20:06:41 jlam Exp $
+# $NetBSD: netbsd-compat.mk,v 1.4 2013/02/17 17:28:42 spz Exp $
 #
 # COMPAT_* for NetBSD -- see options(4).
 #
@@ -39,6 +39,9 @@ _EMUL_PKG.compat-1.6=	compat16
 _EMUL_PKG.compat-2.0=	compat20
 _EMUL_PKG.compat-3.0=	compat30
 _EMUL_PKG.compat-4.0=	compat40
+_EMUL_PKG.compat-5.0=	compat50
+_EMUL_PKG.compat-5.1=	compat51
+_EMUL_PKG.compat-6.0=	compat60
 _EMUL_PKG.compat=	# defined, but empty
 
 # EMUL_TYPE.netbsd can be "compat" or "compat-[0-9]*".  If a particular
@@ -72,6 +75,15 @@ _EMUL_PKG.compat=	# defined, but empty
 
 .  elif !empty(NETBSD_VERSION_REQD:M4.*)
 .    include "${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-4.0}/emulator.mk"
+
+.  elif !empty(NETBSD_VERSION_REQD:M5.0)
+.    include "${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-5.0}/emulator.mk"
+
+.  elif !empty(NETBSD_VERSION_REQD:M5.[1-9]*)
+.    include "${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-5.1}/emulator.mk"
+
+.  elif !empty(NETBSD_VERSION_REQD:M6.*)
+.    include "${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-6.0}/emulator.mk"
 
 .  endif
 
