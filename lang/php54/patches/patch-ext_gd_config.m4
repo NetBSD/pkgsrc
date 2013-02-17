@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_gd_config.m4,v 1.1 2012/06/16 05:21:55 taca Exp $
+$NetBSD: patch-ext_gd_config.m4,v 1.2 2013/02/17 13:10:14 taca Exp $
 
 --- ext/gd/config.m4.orig	2012-05-03 17:10:43.000000000 +0000
 +++ ext/gd/config.m4
@@ -35,15 +35,15 @@ $NetBSD: patch-ext_gd_config.m4,v 1.1 2012/06/16 05:21:55 taca Exp $
      fi
  
 -    PHP_CHECK_LIBRARY(png,png_write_image,
-+    PHP_CHECK_LIBRARY(png15,png_write_image,
++    PHP_CHECK_LIBRARY(png16,png_write_image,
      [
        PHP_ADD_INCLUDE($GD_PNG_DIR/include)
        PHP_ADD_LIBRARY_WITH_PATH(z, $PHP_ZLIB_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
 -      PHP_ADD_LIBRARY_WITH_PATH(png, $GD_PNG_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
-+      PHP_ADD_LIBRARY_WITH_PATH(png15, $GD_PNG_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
++      PHP_ADD_LIBRARY_WITH_PATH(png16, $GD_PNG_DIR/$PHP_LIBDIR, GD_SHARED_LIBADD)
      ],[
 -      AC_MSG_ERROR([Problem with libpng.(a|so) or libz.(a|so). Please check config.log for more information.])
-+      AC_MSG_ERROR([Problem with libpng15.(a|so) or libz.(a|so). Please check config.log for more information.])
++      AC_MSG_ERROR([Problem with libpng16.(a|so) or libz.(a|so). Please check config.log for more information.])
      ],[
        -L$PHP_ZLIB_DIR/$PHP_LIBDIR -lz -L$GD_PNG_DIR/$PHP_LIBDIR
      ])
