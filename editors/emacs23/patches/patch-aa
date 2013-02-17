@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1 2013/02/17 04:59:42 dholland Exp $
+
+--- work/emacs-23.2/configure.in~	2010-05-08 12:09:12.000000000 +0900
++++ ./configure.in	2010-05-12 20:23:07.000000000 +0900
+@@ -39,7 +39,7 @@
+ docdir='${datadir}/emacs/${version}/etc'
+ gamedir='${localstatedir}/games/emacs'
+ 
+-gameuser=games
++gameuser=${GAMEOWN}
+ 
+ dnl OPTION_DEFAULT_OFF(NAME, HELP-STRING)
+ dnl Create a new --with option that defaults to being disabled.
+@@ -387,6 +387,14 @@
+       amd64-*-freebsd*|x86_64-*-freebsd*) machine=amdx86-64 ;;
+     esac
+   ;;
++  ## DragonFly ports
++  *-*-dragonfly*)
++    opsys=dragonfly
++    case "${canonical}" in
++      i[3456]86-*-dragonfly*)     machine=intel386 ;;
++      amd64-*-dragonfly*|x86_64-*-dragonfly*) machine=amdx86-64 ;;
++    esac
++  ;;
+ 
+   ## FreeBSD kernel + glibc based userland
+   *-*-kfreebsd*gnu* )
+@@ -1391,9 +1399,9 @@
+   window_system=nextstep
+   with_xft=no
+   # set up packaging dirs
++  if test "${EN_NS_SELF_CONTAINED}" = yes; then
+   exec_prefix=${ns_appbindir}
+   libexecdir=${ns_appbindir}/libexec
+-  if test "${EN_NS_SELF_CONTAINED}" = yes; then
+      prefix=${ns_appresdir}
+   fi
+ fi
