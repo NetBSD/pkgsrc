@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.641 2013/02/17 17:33:10 spz Exp $
+$NetBSD: CHANGES-2013,v 1.642 2013/02/17 22:12:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -932,3 +932,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added emulators/compat51 version 5.1 [spz 2013-02-17]
 	Added emulators/compat51-x11 version 5.1 [spz 2013-02-17]
 	Added emulators/compat60 version 6.0 [spz 2013-02-17]
+	Added math/isl version 0.11.1 [wiz 2013-02-17]
