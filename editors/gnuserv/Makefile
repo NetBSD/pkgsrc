@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 11:43:34 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/17 19:18:02 dholland Exp $
 
 DISTNAME=	gnuserv-3.12.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE}/src/
 

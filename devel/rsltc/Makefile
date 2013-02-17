@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/10/31 11:19:40 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/02/17 19:18:00 dholland Exp $
 #
 
 DISTNAME=		rsltcsrc
 PKGNAME=		rsltc-2.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.iist.unu.edu/newrh/III/3/1/docs/rsltc/source/
 EXTRACT_SUFX=		.tgz
