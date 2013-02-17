@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.629 2013/02/17 09:10:59 taca Exp $
+$NetBSD: CHANGES-2013,v 1.630 2013/02/17 10:21:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -915,3 +915,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed www/ruby-rack12 [taca 2013-02-17]
 	Removed devel/ruby-i18n_05 [taca 2013-02-17]
 	Removed www/ruby-erubis26 [taca 2013-02-17]
+	Updated net/p5-Net-GitHub to 0.50 [wiz 2013-02-17]
