@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.623 2013/02/17 08:52:44 taca Exp $
+$NetBSD: CHANGES-2013,v 1.624 2013/02/17 08:55:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -906,3 +906,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed databases/ruby-activerecord3 [taca 2013-02-17]
 	Removed www/ruby-actionpack3 [taca 2013-02-17]
 	Removed www/ruby-activeresource3 [taca 2013-02-17]
+	Removed devel/ruby-activemodel [taca 2013-02-17]
+	Removed devel/ruby-activesupport3 [taca 2013-02-17]
