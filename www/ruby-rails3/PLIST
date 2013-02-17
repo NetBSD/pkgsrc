@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 04:23:56 taca Exp $
-bin/rails
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/bin/rails
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/1.8/gems/rails-${PKGVERSION}/lib
-@pkgdir lib/ruby/gems/1.8/doc/rails-${PKGVERSION}/ri
-@pkgdir lib/ruby/gems/1.8/doc/rails-${PKGVERSION}/rdoc
