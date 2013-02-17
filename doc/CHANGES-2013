@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.640 2013/02/17 16:10:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.641 2013/02/17 17:33:10 spz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -927,3 +927,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Dancer to 1.3110 [wen 2013-02-17]
 	Updated net/p5-Geo-IPfree to 1.130450 [wen 2013-02-17]
 	Updated time/py-icalendar to 3.3nb2 [wiz 2013-02-17]
+	Added emulators/compat50 version 5.0 [spz 2013-02-17]
+	Added emulators/compat50-x11 version 5.0 [spz 2013-02-17]
+	Added emulators/compat51 version 5.1 [spz 2013-02-17]
+	Added emulators/compat51-x11 version 5.1 [spz 2013-02-17]
+	Added emulators/compat60 version 6.0 [spz 2013-02-17]
