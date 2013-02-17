@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/11/04 19:40:02 adam Exp $
+# $NetBSD: Makefile,v 1.18 2013/02/17 14:53:13 gdt Exp $
 
 PKGNAME=	${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
 COMMENT=	Framework for writing networked applications
@@ -13,11 +13,17 @@ CONFLICTS+=		cftp-[0-9]*
 REPLACE_PYTHON+=	twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	twisted/trial/test/scripttest.py
 REPLACE_PYTHON+=	twisted/topfiles/setup.py
+REPLACE_PYTHON+=	twisted/python/test/pullpipe.py
 
-post-patch:
+# twisted will install files present in the source directory even
+# though they were not in the tarball.  Therefore, we must clean the
+# .orig files from patches.  This is done pre-install rather than
+# post-patch so that mkpatches(1) will still work.
+pre-install:
 	rm ${WRKSRC}/twisted/runner/portmap.c.orig
-	rm ${WRKSRC}/twisted/test/generator_failure_tests.py.orig
 
+# Do not "make package" after running "make test"; this will result in files
+# being installed that should not be.
 do-test:
 	cd ${WRKSRC} && ./build/scripts-${PYVERSSUFFIX}/trial twisted
 
