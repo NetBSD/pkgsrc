@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2011/04/14 18:20:56 hans Exp $
+# $NetBSD: Makefile,v 1.27 2013/02/17 19:18:02 dholland Exp $
 
 DISTNAME=	emacs-packages-0.9
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty

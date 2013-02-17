@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/25 06:55:49 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/17 19:18:08 dholland Exp $
 #
 
 DISTNAME=	muse-3.11
 PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc editors
 MASTER_SITES=	http://download.gna.org/muse-el/
 

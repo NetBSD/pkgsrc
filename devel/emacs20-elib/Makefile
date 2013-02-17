@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/09/10 13:17:22 obache Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/17 19:17:58 dholland Exp $
 
 PKGNAME=	emacs20-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 
 EMACS_VERSIONS_ACCEPTED=	emacs20
 

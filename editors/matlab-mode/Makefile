@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/17 19:18:02 dholland Exp $
 #
 
 DISTNAME=		matlab.el
@@ -6,7 +6,7 @@ DISTNAME=		matlab.el
 # emacs vs xemacs
 BASEPKGNAME=		matlab-mode-2.3.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${BASEPKGNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors math
 MASTER_SITES=		http://www.mathworks.com/matlabcentral/files/104/
 EXTRACT_SUFX=

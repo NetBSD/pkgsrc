@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:07 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/17 19:17:59 dholland Exp $
 #
 
 DISTNAME=	js2-20080406
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://js2-mode.googlecode.com/files/
 EXTRACT_SUFX=	.el

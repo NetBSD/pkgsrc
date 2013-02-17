@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:40 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/17 19:18:01 dholland Exp $
 
 DISTNAME=	ruby-debug-extra-0.10.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://rubyforge.org/frs/download.php/73086/
 
