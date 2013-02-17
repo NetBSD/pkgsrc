@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/01/20 21:47:28 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/17 18:41:12 dholland Exp $
 
-DISTNAME=	bulk-small-20130120
+DISTNAME=	bulk-small-20130217
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -50,7 +50,7 @@ DEPENDS+=	irssi-icb-[0-9]*:../../chat/irssi-icb
 DEPENDS+=	weechat-[0-9]*:../../chat/weechat
 DEPENDS+=	base64-[0-9]*:../../converters/base64
 DEPENDS+=	mpack-[0-9]*:../../converters/mpack
-DEPENDS+=	emacs>=22<23:../../editors/emacs22
+DEPENDS+=	emacs22>=22<23:../../editors/emacs22
 DEPENDS+=	nano-[0-9]*:../../editors/nano
 DEPENDS+=	vim-[0-9]*:../../editors/vim
 DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
