@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 12:19:15 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/02/17 19:18:05 dholland Exp $
 
 DISTNAME=	mailcrypt-3.5.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailcrypt/}
 

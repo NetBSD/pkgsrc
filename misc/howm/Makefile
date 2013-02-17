@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/12/12 13:10:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/17 19:18:07 dholland Exp $
 
 DISTNAME=	howm-1.4.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://howm.sourceforge.jp/a/
 
