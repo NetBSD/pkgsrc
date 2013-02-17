@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.1 2013/02/17 17:24:07 spz Exp $
+
+SHA1 (compat50-alpha-5.0.tar.bz2) = 3db451dcd407e83ce189e4cc147b8b643a7e59bc
+RMD160 (compat50-alpha-5.0.tar.bz2) = 7811c8a709ee5c212d11ce61b7b43bd52a50008f
+Size (compat50-alpha-5.0.tar.bz2) = 143409 bytes
+SHA1 (compat50-arm-5.0.tar.bz2) = d0109fba30c0f297d699785bf6fa7b31cce0cada
+RMD160 (compat50-arm-5.0.tar.bz2) = b360b6943e88bd06de503d0b4aa1a66f4279786d
+Size (compat50-arm-5.0.tar.bz2) = 135481 bytes
+SHA1 (compat50-i386-5.0.tar.bz2) = b9a257035e01fe5b6b7c97222ececd559f258a83
+RMD160 (compat50-i386-5.0.tar.bz2) = 1cc6d215ce32246053f1ce36038d7d372372b3c4
+Size (compat50-i386-5.0.tar.bz2) = 109414 bytes
+SHA1 (compat50-m68k-5.0.tar.bz2) = 4a719ef4dc90e50cbd4bc346f476ffe7e0bd699b
+RMD160 (compat50-m68k-5.0.tar.bz2) = f5209ce49fb321995da8cbfea54e1fe6ab2caf99
+Size (compat50-m68k-5.0.tar.bz2) = 114477 bytes
+SHA1 (compat50-mipseb-5.0.tar.bz2) = 42567a998eda9947b0c11ae268ef48fbb6b8bd45
+RMD160 (compat50-mipseb-5.0.tar.bz2) = a58559869747575f65d48548698e92487781622b
+Size (compat50-mipseb-5.0.tar.bz2) = 130592 bytes
+SHA1 (compat50-mipsel-5.0.tar.bz2) = 4ed9ee0cc346f8a05c20c4d5a2dcdb9d90c6e232
+RMD160 (compat50-mipsel-5.0.tar.bz2) = c76279cadca7a4359615b1f3c80c6ac577fb1ab4
+Size (compat50-mipsel-5.0.tar.bz2) = 132289 bytes
+SHA1 (compat50-powerpc-5.0.tar.bz2) = 1e3f52819c602fca96e48dbefdb7be230015a8d9
+RMD160 (compat50-powerpc-5.0.tar.bz2) = b85fd2553a06e400ce990e3729f0925f3ba4d73f
+Size (compat50-powerpc-5.0.tar.bz2) = 133244 bytes
+SHA1 (compat50-sparc-5.0.tar.bz2) = 368de9ce748437b3abc0e5db12064924a08c9513
+RMD160 (compat50-sparc-5.0.tar.bz2) = 02df218fecb60c891d400fe21b859d9c7fc94e5a
+Size (compat50-sparc-5.0.tar.bz2) = 134475 bytes
+SHA1 (compat50-sparc64-5.0.tar.bz2) = 0b0a379996ebec1aea42c73b6ee67cc61df6266e
+RMD160 (compat50-sparc64-5.0.tar.bz2) = 959deca0aba41ba8f097c88dde8ea795ab1d312d
+Size (compat50-sparc64-5.0.tar.bz2) = 254522 bytes
+SHA1 (compat50-x86_64-5.0.tar.bz2) = 713e45f371b92a71b81033e360fe3ce576e97b21
+RMD160 (compat50-x86_64-5.0.tar.bz2) = 0d22c4be6916e9aa66f01bf0c45b8413ce70cb78
+Size (compat50-x86_64-5.0.tar.bz2) = 225598 bytes

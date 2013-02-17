@@ -1,0 +1,3 @@
+This package supplies the shared library files needed to run dynamically
+linked executables compiled under NetBSD 5.0 on a later NetBSD.
+The shared libraries for 'native' X11 are in a separate package.
