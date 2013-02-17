@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/12/24 06:42:56 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/17 19:17:59 dholland Exp $
 #
 
 DISTNAME=	magit-1.2.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/downloads/magit/magit/
 

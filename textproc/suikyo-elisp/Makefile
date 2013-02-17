@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:02 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/17 19:18:10 dholland Exp $
 #
 
 .include "../../textproc/suikyo/Makefile.common"
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-elisp-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://taiyaki.org/suikyo/elisp/index.html

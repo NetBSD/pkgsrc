@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:02 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/17 19:18:10 dholland Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 MAINTAINER=	obache@NetBSD.org
 COMMENT=	Romaji-Kana conversion library
