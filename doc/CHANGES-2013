@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.620 2013/02/17 08:46:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.621 2013/02/17 08:47:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -902,3 +902,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed databases/ruby-acts-as-versioned [taca 2013-02-17]
 	Removed www/ruby-rails3 [taca 2013-02-17]
 	Removed mail/ruby-actionmailer3 [taca 2013-02-17]
+	Removed devel/ruby-railties [taca 2013-02-17]
