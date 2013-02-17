@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/02/16 18:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/17 15:58:56 kleink Exp $
 #
 
 DISTNAME=	icalendar-3.3
@@ -13,6 +13,7 @@ COMMENT=	Python parser/generator for iCalendar files, as per RFC2445
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# empty
 
