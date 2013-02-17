@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2013/02/17 00:21:58 dholland Exp $
+# $NetBSD: Makefile.common,v 1.12 2013/02/17 07:43:49 dholland Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -9,6 +9,7 @@ PKGNAME?=	emacs21-${EMACSVERSION}a
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
