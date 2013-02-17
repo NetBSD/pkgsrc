@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2013/02/16 11:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/02/17 00:18:58 dholland Exp $
 
 PKGREVISION=	26
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor)
 
-CONFLICTS+=	emacs-nox11-[0-9]*
+CONFLICTS+=	emacs21-nox11-[0-9]*
 
 USE_TOOLS+=	imake
 
