@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2012/08/18 16:33:36 chs Exp $
+# $NetBSD: Makefile,v 1.201 2013/02/17 10:29:01 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -102,7 +102,6 @@ SUBDIR+=	pearpc
 SUBDIR+=	qemu
 SUBDIR+=	qemu0
 SUBDIR+=	raine
-#SUBDIR+=	sap	# only contains a Makefile.common
 SUBDIR+=	simh
 SUBDIR+=	simulavr
 SUBDIR+=	ski
