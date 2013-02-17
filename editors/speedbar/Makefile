@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 11:43:43 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/02/17 19:18:03 dholland Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}speedbar-0.14rc4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
