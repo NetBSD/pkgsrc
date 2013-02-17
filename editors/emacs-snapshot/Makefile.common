@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.54 2013/02/12 04:47:31 minskim Exp $
+# $NetBSD: Makefile.common,v 1.55 2013/02/17 06:18:01 dholland Exp $
 
 DISTNAME=	emacs-snapshot_20130207.orig
-PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
+SNAPDATE=	${DISTNAME:S/emacs-snapshot_//:S/.orig//}
+PKGNAME=	emacs${_EMACS_VERSION_MAJOR}-${EMACS_VERSION}.${SNAPDATE}
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.naquadah.org/unstable/
 EXTRACT_SUFX=	.tar.xz
