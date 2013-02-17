@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.1 2013/02/17 17:24:09 spz Exp $
+
+SHA1 (compat51-x11-alpha-5.1.tar.bz2) = 9cc278fc67a617645a75637f9adb51275dc260a1
+RMD160 (compat51-x11-alpha-5.1.tar.bz2) = d7dd77f1201ef79f143da04a3ec013890393b6bf
+Size (compat51-x11-alpha-5.1.tar.bz2) = 59431 bytes
+SHA1 (compat51-x11-arm-5.1.tar.bz2) = fa78b0fe6c6692458697dc5ad7b0362099b6440a
+RMD160 (compat51-x11-arm-5.1.tar.bz2) = e6df04208bf7c936a6e435674f82292da10c5925
+Size (compat51-x11-arm-5.1.tar.bz2) = 3065809 bytes
+SHA1 (compat51-x11-i386-5.1.tar.bz2) = cf41db6880e9860517ec7bd2542a6472979588b9
+RMD160 (compat51-x11-i386-5.1.tar.bz2) = c27c3737fd21e8b67657392e6b0ef74750cd108a
+Size (compat51-x11-i386-5.1.tar.bz2) = 3499287 bytes
+SHA1 (compat51-x11-m68k-5.1.tar.bz2) = 2747e364c266be0796413c7864759154bffc7be1
+RMD160 (compat51-x11-m68k-5.1.tar.bz2) = 23628e11b7f8ef29e48dc69675173ebf43961d23
+Size (compat51-x11-m68k-5.1.tar.bz2) = 44456 bytes
+SHA1 (compat51-x11-mipseb-5.1.tar.bz2) = e805a3c5b2e6341c98ce81cd940b6a273632b62c
+RMD160 (compat51-x11-mipseb-5.1.tar.bz2) = a39bbb28885359e98e323b39722f9a15e6ba3c85
+Size (compat51-x11-mipseb-5.1.tar.bz2) = 2956641 bytes
+SHA1 (compat51-x11-mipsel-5.1.tar.bz2) = ff24ba0bbb5e25bd530d24ca5e1e6c7fc8969832
+RMD160 (compat51-x11-mipsel-5.1.tar.bz2) = c3a30e5c5c098d072bc94ab4000bf3af2bca4ac6
+Size (compat51-x11-mipsel-5.1.tar.bz2) = 2992965 bytes
+SHA1 (compat51-x11-powerpc-5.1.tar.bz2) = 788aebc551b4a9aff21b36019071ffe925063d9e
+RMD160 (compat51-x11-powerpc-5.1.tar.bz2) = 1aabb14d902da869a3874a2061f3f38a7456d71e
+Size (compat51-x11-powerpc-5.1.tar.bz2) = 3065872 bytes
+SHA1 (compat51-x11-sparc-5.1.tar.bz2) = abd30d2a2777fc267f444e215dc37e9e78ec761e
+RMD160 (compat51-x11-sparc-5.1.tar.bz2) = 2ff952ab608c26f3d410f5c200148eaaccebe065
+Size (compat51-x11-sparc-5.1.tar.bz2) = 3268263 bytes
+SHA1 (compat51-x11-sparc64-5.1.tar.bz2) = b927a27a7a7d4f9226217a27e99c5e201915ae1c
+RMD160 (compat51-x11-sparc64-5.1.tar.bz2) = c62b4de23a7753f190c9ea57f3e852d7ffae56bf
+Size (compat51-x11-sparc64-5.1.tar.bz2) = 3647537 bytes
+SHA1 (compat51-x11-x86_64-5.1.tar.bz2) = 2e95092a88db84a04ffe019eb461fa69b6a11189
+RMD160 (compat51-x11-x86_64-5.1.tar.bz2) = 7150a6c4c2913e877b9321f5027a198481821680
+Size (compat51-x11-x86_64-5.1.tar.bz2) = 3840702 bytes

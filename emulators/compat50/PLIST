@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/17 17:24:07 spz Exp $
+${EMULSUBDIRSLASH}lib/libevent.so.2.0
+${EMULSUBDIRSLASH}lib/libm.so.0.6
+${EMULSUBDIRSLASH}usr/lib/i386/libevent.so.2.0
+${EMULSUBDIRSLASH}usr/lib/i386/libm.so.0.6
+${EMULSUBDIRSLASH}usr/lib/i386/libpuffs.so.0.0
+${EMULSUBDIRSLASH}usr/lib/libevent.so.2.0
+${EMULSUBDIRSLASH}usr/lib/libm.so.0.6
+${EMULSUBDIRSLASH}usr/lib/libpuffs.so.0.0
