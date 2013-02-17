@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2013/02/17 17:24:08 spz Exp $
+
+SHA1 (compat50-x11-i386-5.0.tar.bz2) = db50b2fb96f3b5ccbf4cc8cb2709ebe75c245220
+RMD160 (compat50-x11-i386-5.0.tar.bz2) = fe42d8d063becf62e4902be4707ee17c4de63046
+Size (compat50-x11-i386-5.0.tar.bz2) =  1942481 bytes
+SHA1 (compat50-x11-sparc64-5.0.tar.bz2) = 0f7cc668b3ec21966dd5b7d7735b2fc836198a05
+RMD160 (compat50-x11-sparc64-5.0.tar.bz2) = 2696321173cf40eace53d1ab965ceb5abda1346a
+Size (compat50-x11-sparc64-5.0.tar.bz2) =  1984347 bytes
+SHA1 (compat50-x11-x86_64-5.0.tar.bz2) = 00ae3a6b0e9698f2d8453e93b39a06f49c81fa84
+RMD160 (compat50-x11-x86_64-5.0.tar.bz2) = b89ae6c23e8c17bbb3c665d65f10ff9c1d40b181
+Size (compat50-x11-x86_64-5.0.tar.bz2) =  2213331 bytes
