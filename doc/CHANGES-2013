@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.636 2013/02/17 14:53:46 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.637 2013/02/17 15:12:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -924,3 +924,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Path-Class to 0.31 [wen 2013-02-17]
 	Updated net/py-twisted to 12.3.0 [gdt 2013-02-17]
 	Updated net/py-twisted to 12.3.0 [gdt 2013-02-17]
+	Updated www/p5-Dancer to 1.3110 [wen 2013-02-17]
