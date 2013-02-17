@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 11:43:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/17 19:18:02 dholland Exp $
 
 DISTNAME=	javascript-2.2.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-mode-/}
+PKGREVISION=	1
 CATEGORIES=	devel editors
 MASTER_SITES=	#
 DISTFILES=	#

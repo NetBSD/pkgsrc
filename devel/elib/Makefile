@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2009/08/06 01:44:48 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/17 19:17:58 dholland Exp $
 #
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 
 CONFLICTS+=	emacs20-elib-[0-9]*
 
