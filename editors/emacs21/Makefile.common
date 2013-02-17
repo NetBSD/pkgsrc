@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.9 2011/12/31 11:40:27 dholland Exp $
+# $NetBSD: Makefile.common,v 1.10 2013/02/17 00:18:58 dholland Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
 
 DISTNAME=	emacs-${EMACSVERSION}a
+PKGNAME=	emacs21-${EMACSVERSION}a
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
