@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST.x86_64,v 1.1 2013/02/17 17:24:09 spz Exp $
+${EMULSUBDIRSLASH}usr/lib/i386/libbind9.so.5.7
+${EMULSUBDIRSLASH}usr/lib/i386/libc.so.12.181
+${EMULSUBDIRSLASH}usr/lib/i386/libcrypto.so.8.0
+${EMULSUBDIRSLASH}usr/lib/i386/libdns.so.5.7
+${EMULSUBDIRSLASH}usr/lib/i386/libdwarf.so.0.0
+${EMULSUBDIRSLASH}usr/lib/i386/libedit.so.3.0
+${EMULSUBDIRSLASH}usr/lib/i386/libexpat.so.2.0
+${EMULSUBDIRSLASH}usr/lib/i386/libisc.so.5.7
+${EMULSUBDIRSLASH}usr/lib/i386/libisccc.so.5.7
+${EMULSUBDIRSLASH}usr/lib/i386/libisccfg.so.5.7
+${EMULSUBDIRSLASH}usr/lib/i386/liblwres.so.5.7
+${EMULSUBDIRSLASH}usr/lib/i386/liblzf.so.0
+${EMULSUBDIRSLASH}usr/lib/i386/liblzf.so.0.0
+${EMULSUBDIRSLASH}usr/lib/i386/libmagic.so.3
+${EMULSUBDIRSLASH}usr/lib/i386/libmagic.so.3.1
+${EMULSUBDIRSLASH}usr/lib/i386/libpthread.so.1.0
+${EMULSUBDIRSLASH}usr/lib/i386/libresolv.so.2
+${EMULSUBDIRSLASH}usr/lib/i386/libresolv.so.2.0
+${EMULSUBDIRSLASH}usr/lib/i386/librt.so.1.0
+${EMULSUBDIRSLASH}usr/lib/i386/libssh.so.18
+${EMULSUBDIRSLASH}usr/lib/i386/libssh.so.18.0
+${EMULSUBDIRSLASH}usr/lib/i386/libssl.so.10.0
+${EMULSUBDIRSLASH}usr/lib/i386/libutil.so.7.19

@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST.sparc64,v 1.1 2013/02/17 17:24:09 spz Exp $
+${EMULSUBDIRSLASH}usr/lib/sparc/libbind9.so.5.7
+${EMULSUBDIRSLASH}usr/lib/sparc/libc.so.12.181
+${EMULSUBDIRSLASH}usr/lib/sparc/libcrypto.so.8.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libdns.so.5.7
+${EMULSUBDIRSLASH}usr/lib/sparc/libdwarf.so.0.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libedit.so.3.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libexpat.so.2.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libisc.so.5.7
+${EMULSUBDIRSLASH}usr/lib/sparc/libisccc.so.5.7
+${EMULSUBDIRSLASH}usr/lib/sparc/libisccfg.so.5.7
+${EMULSUBDIRSLASH}usr/lib/sparc/liblwres.so.5.7
+${EMULSUBDIRSLASH}usr/lib/sparc/liblzf.so.0
+${EMULSUBDIRSLASH}usr/lib/sparc/liblzf.so.0.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libmagic.so.3
+${EMULSUBDIRSLASH}usr/lib/sparc/libmagic.so.3.1
+${EMULSUBDIRSLASH}usr/lib/sparc/libpthread.so.1.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libresolv.so.2
+${EMULSUBDIRSLASH}usr/lib/sparc/libresolv.so.2.0
+${EMULSUBDIRSLASH}usr/lib/sparc/librt.so.1.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libssh.so.18
+${EMULSUBDIRSLASH}usr/lib/sparc/libssh.so.18.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libssl.so.10.0
+${EMULSUBDIRSLASH}usr/lib/sparc/libutil.so.7.19

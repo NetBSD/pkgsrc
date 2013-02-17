@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.1 2013/02/17 17:24:09 spz Exp $
+
+SHA1 (20130213/compat60-alpha-6.0.tar.bz2) = 10b795a652dc932bccdc635a01786deb9b86b303
+RMD160 (20130213/compat60-alpha-6.0.tar.bz2) = 77d844ae2b2df0947958fd13480b7436e13f22f3
+Size (20130213/compat60-alpha-6.0.tar.bz2) = 3167056 bytes
+SHA1 (20130213/compat60-arm-6.0.tar.bz2) = e0398c99ecc91e03e03941d58be105474c69a851
+RMD160 (20130213/compat60-arm-6.0.tar.bz2) = 8e57180d703b610dfad81ca4078c7b83c9b92307
+Size (20130213/compat60-arm-6.0.tar.bz2) = 2822963 bytes
+SHA1 (20130213/compat60-i386-6.0.tar.bz2) = 53e38fb8ceebdac4d03b9d8d9a881559cb362e24
+RMD160 (20130213/compat60-i386-6.0.tar.bz2) = ec70aefdb67ca870ee2007b7f2692bdd093961fc
+Size (20130213/compat60-i386-6.0.tar.bz2) = 2633419 bytes
+SHA1 (20130213/compat60-m68k-6.0.tar.bz2) = 9fdcd34fe273e1843c97c9ace29a8069c7792ac5
+RMD160 (20130213/compat60-m68k-6.0.tar.bz2) = f0b64024e997ec5b660a816306838da95bbe7d72
+Size (20130213/compat60-m68k-6.0.tar.bz2) = 2444610 bytes
+SHA1 (20130213/compat60-mipseb-6.0.tar.bz2) = 43e758bb2c799b19cdabd6927c7a8243a70b441d
+RMD160 (20130213/compat60-mipseb-6.0.tar.bz2) = ec5e696f14441eec2e7d5ea6d3298bacc73f150f
+Size (20130213/compat60-mipseb-6.0.tar.bz2) = 2725265 bytes
+SHA1 (20130213/compat60-mipsel-6.0.tar.bz2) = e056c52f50d9ab1fd3696a654c30f7d4f1d9f202
+RMD160 (20130213/compat60-mipsel-6.0.tar.bz2) = 648b793f4cf21570701c21796147eb6c1f7232b6
+Size (20130213/compat60-mipsel-6.0.tar.bz2) = 2758080 bytes
+SHA1 (20130213/compat60-powerpc-6.0.tar.bz2) = 12145b3d91364cb656e96abb726fa248177ae6dd
+RMD160 (20130213/compat60-powerpc-6.0.tar.bz2) = 2f60f6109e23c0517f9924c104ddcc66f445df5c
+Size (20130213/compat60-powerpc-6.0.tar.bz2) = 3049271 bytes
+SHA1 (20130213/compat60-sparc-6.0.tar.bz2) = cb6f9c2db2819a4c7e05b46f6903d59b62dd4dd5
+RMD160 (20130213/compat60-sparc-6.0.tar.bz2) = 08fc687959088462a42e83d7370854b746b00fc4
+Size (20130213/compat60-sparc-6.0.tar.bz2) = 2771978 bytes
+SHA1 (20130213/compat60-sparc64-6.0.tar.bz2) = d0bf66a809248b7fd2e3800fd968c2fae87b29f4
+RMD160 (20130213/compat60-sparc64-6.0.tar.bz2) = fc8f5f1f90599c368e1f45a64de538bbb4965d3b
+Size (20130213/compat60-sparc64-6.0.tar.bz2) = 5707702 bytes
+SHA1 (20130213/compat60-x86_64-6.0.tar.bz2) = fad79f96dfda3f31f625795ac4c3f1be9f9695ce
+RMD160 (20130213/compat60-x86_64-6.0.tar.bz2) = b4744668e6ddbd5222005a5dbfb385425c463ba0
+Size (20130213/compat60-x86_64-6.0.tar.bz2) = 5583459 bytes
