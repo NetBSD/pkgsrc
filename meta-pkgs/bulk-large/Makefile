@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/02/17 09:09:28 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/17 18:41:11 dholland Exp $
 
-DISTNAME=	bulk-large-20130216
+DISTNAME=	bulk-large-20130217
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -69,7 +69,7 @@ DEPENDS+=	postgresql91-[0-9]*:../../databases/postgresql91
 DEPENDS+=	postgresql92-[0-9]*:../../databases/postgresql92
 DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 DEPENDS+=	abiword-[0-9]*:../../editors/abiword
-DEPENDS+=	emacs>=24<25:../../editors/emacs24
+DEPENDS+=	emacs24>=24<25:../../editors/emacs24
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre
