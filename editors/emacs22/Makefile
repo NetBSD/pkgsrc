@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.34 2013/02/17 00:39:53 dholland Exp $
+# $NetBSD: Makefile,v 1.35 2013/02/17 07:54:18 dholland Exp $
 
-PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
 
 DISTNAME=	emacs-22.3
