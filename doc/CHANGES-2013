@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.627 2013/02/17 09:06:22 taca Exp $
+$NetBSD: CHANGES-2013,v 1.628 2013/02/17 09:09:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed www/ruby-rack-test05 [taca 2013-02-17]
 	Removed www/ruby-rack-mount06 [taca 2013-02-17]
 	Removed www/ruby-rack12 [taca 2013-02-17]
+	Removed devel/ruby-i18n_05 [taca 2013-02-17]
