@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.ELF,v 1.1 2007/08/21 22:49:24 jlam Exp $
+# $NetBSD: INSTALL.ELF,v 1.2 2013/02/17 10:34:31 spz Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -55,6 +55,7 @@ ADD,0)
 	while read src dst; do
 		case $src in
 		"")	continue ;;
+		[!/]*)	src="${PKG_PREFIX}/$src" ;;
 		esac
 		case $dst in
 		"")	continue ;;
