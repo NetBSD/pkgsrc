@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.643 2013/02/17 22:17:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.644 2013/02/18 04:26:41 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added emulators/compat60 version 6.0 [spz 2013-02-17]
 	Added math/isl version 0.11.1 [wiz 2013-02-17]
 	Updated math/cloog to 0.18.0nb1 [wiz 2013-02-17]
+	Updated net/host to 20040812nb2 [dholland 2013-02-18]
