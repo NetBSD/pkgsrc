@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.22 2013/01/25 11:59:13 jperkin Exp $
+$NetBSD: patch-ab,v 1.23 2013/02/18 08:41:34 markd Exp $
 
 * First two chunks: automake-1.13 compatability.
 
---- /home/pbulk/build/upstream-trunk32/net/ntop/work/ntop-4.1.0/configure.in.orig	2011-08-15 08:34:28.000000000 +0000
-+++ /home/pbulk/build/upstream-trunk32/net/ntop/work/ntop-4.1.0/configure.in
+--- configure.in.orig	2011-08-15 08:34:28.000000000 +0000
++++ configure.in
 @@ -56,7 +56,7 @@ dnl>
  dnl> generate the config header
  dnl>
