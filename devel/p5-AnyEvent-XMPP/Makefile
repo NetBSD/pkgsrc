@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/18 08:58:40 markd Exp $
 #
 
 DISTNAME=	AnyEvent-XMPP-0.52
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Digest-SHA1>=0:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-MIME-Base64>=0:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-LibIDN>=0:../../net/p5-Net-LibIDN
 DEPENDS+=	p5-Object-Event>=0.7:../../devel/p5-Object-Event
-DEPENDS+=	p5-Time-Local>=0:../../time/p5-Time-Local
+DEPENDS+=	{perl>=5.14.0,p5-Time-Local>=0}:../../time/p5-Time-Local
 DEPENDS+=	p5-XML-Writer>=0:../../textproc/p5-XML-Writer
 
 PERL5_PACKLIST=	auto/AnyEvent/XMPP/.packlist
