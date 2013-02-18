@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2012/09/11 23:25:10 asau Exp $
+# $NetBSD: Makefile.common,v 1.68 2013/02/18 20:02:38 jperkin Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -94,7 +94,7 @@ PLIST.terminfo=	yes
 .if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*)
 CHECK_BUILTIN.curses=	yes
 .include "../../mk/curses.builtin.mk"
-.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss])
+.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS"
 PLIST.curses=	yes
 .endif
 .endif
