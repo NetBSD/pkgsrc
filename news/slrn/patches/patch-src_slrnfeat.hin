@@ -1,0 +1,13 @@
+$NetBSD: patch-src_slrnfeat.hin,v 1.1 2013/02/18 23:29:23 dholland Exp $
+
+--- src/slrnfeat.hin~	2008-02-09 18:32:17.000000000 +0000
++++ src/slrnfeat.hin
+@@ -179,7 +179,7 @@
+ #   define SLRN_SIGNATURE_FILE		".signature"
+   /* Changing these here has no effect when using ./configure */
+ #   ifndef SLRN_SENDMAIL_COMMAND
+-#    define SLRN_SENDMAIL_COMMAND	"/usr/lib/sendmail -oi -t -oem -odb"
++#    define SLRN_SENDMAIL_COMMAND	"/usr/sbin/sendmail -oi -t -oem -odb"
+ #   endif
+ #  endif			       /* unix */
+ # endif				       /* os2 */
