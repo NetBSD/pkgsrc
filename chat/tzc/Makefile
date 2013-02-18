@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 00:02:46 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/18 20:13:56 dholland Exp $
 #
 
 DISTNAME=	tzc-2.6.15
@@ -10,7 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.cmu.edu/People/dkindred/zephyr/zephyr.html
 COMMENT=	Back-end program for zephyr-mode
 
-CPPFLAGS+=	-I/usr/include/kerberosIV -I/usr/include/krb5
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
+CPPFLAGS+=	-I/usr/include/krb5
 LDFLAGS+=	-lroken -lcrypto -lcom_err
 
 .include "../../mk/bsd.prefs.mk"
