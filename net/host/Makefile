@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/23 17:18:27 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/02/18 04:25:06 dholland Exp $
 
 DISTNAME=	host-20040812
 PKGREVISION=	1
@@ -29,6 +29,10 @@ BUILDLINK_TRANSFORM+=	rm:-static
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=	-lresolv -lsocket -lnsl
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
+BUILDLINK_TRANSFORM+=	rm:-static
+.endif
+.if ${OPSYS} == "Linux"
+LDFLAGS+=		-lresolv
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
