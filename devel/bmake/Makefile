@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2013/01/31 22:55:22 hans Exp $
-#
+# $NetBSD: Makefile,v 1.62 2013/02/18 22:38:19 adam Exp $
 
 DISTNAME=	bmake-20110606
 CATEGORIES=	devel
@@ -29,7 +28,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-default-sys-path=${makesyspath}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -56,5 +55,8 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmake ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+do-test:
+	cd ${WRKSRC}/unit-tests && ${WRKSRC}/bmake test
 
 .include "../../mk/bsd.pkg.mk"
