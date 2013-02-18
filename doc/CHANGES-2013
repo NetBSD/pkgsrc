@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.644 2013/02/18 04:26:41 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.645 2013/02/18 11:52:01 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -935,3 +935,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/isl version 0.11.1 [wiz 2013-02-17]
 	Updated math/cloog to 0.18.0nb1 [wiz 2013-02-17]
 	Updated net/host to 20040812nb2 [dholland 2013-02-18]
+	Updated sysutils/dbus-glib to 0.100.1 [drochner 2013-02-18]
