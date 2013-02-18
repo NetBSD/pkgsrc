@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.650 2013/02/18 19:02:04 tron Exp $
+$NetBSD: CHANGES-2013,v 1.651 2013/02/18 20:32:27 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -941,3 +941,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ocaml to 4.00.1nb1 [jaapb 2013-02-18]
 	Updated lang/abcl to 1.1.1 [asau 2013-02-18]
 	Updated databases/phpmyadmin to 3.5.7 [tron 2013-02-18]
+	Updated www/nginx to 1.2.7 [imil 2013-02-18]
