@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:51 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/18 09:02:52 markd Exp $
 #
 
 DISTNAME=	Net-OpenID-Consumer-1.03
@@ -16,7 +16,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Crypt-DH>=0.05:../../security/p5-Crypt-DH
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-Time-Local-[0-9]*:../../time/p5-Time-Local
+DEPENDS+=	{perl>=5.14.0,p5-Time-Local-[0-9]*}:../../time/p5-Time-Local
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
