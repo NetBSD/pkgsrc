@@ -1,4 +1,4 @@
-$NetBSD: patch-otherlibs_Makefile.shared,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+$NetBSD: patch-otherlibs_Makefile.shared,v 1.2 2013/02/18 16:29:28 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 --- otherlibs/Makefile.shared.orig	2011-07-27 14:17:02.000000000 +0000
@@ -9,7 +9,7 @@ Use BSD_INSTALL_* instead of mkdir and cp
  	if test -f dll$(CLIBNAME)$(EXT_DLL); then \
 -	  cp dll$(CLIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
 -	cp lib$(CLIBNAME).$(A) $(LIBDIR)/
-+	  $(BSD_INSTALL_DATA) dll$(CLIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
++	  $(BSD_INSTALL_LIB) dll$(CLIBNAME)$(EXT_DLL) $(STUBLIBDIR)/; fi
 +	$(BSD_INSTALL_DATA) lib$(CLIBNAME).$(A) $(LIBDIR)/
  	cd $(LIBDIR); $(RANLIB) lib$(CLIBNAME).$(A)
 -	cp $(LIBNAME).cma $(CMIFILES) $(CMIFILES:.cmi=.mli) $(LIBDIR)/
