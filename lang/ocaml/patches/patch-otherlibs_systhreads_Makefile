@@ -1,4 +1,4 @@
-$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.2 2013/02/18 16:29:28 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 --- otherlibs/systhreads/Makefile.orig	2012-06-08 11:35:37.000000000 +0000
@@ -9,7 +9,7 @@ Use BSD_INSTALL_* instead of mkdir and cp
  install:
 -	if test -f dllthreads.so; then cp dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
 -	cp libthreads.a $(LIBDIR)/libthreads.a
-+	if test -f dllthreads.so; then $(BSD_INSTALL_DATA) dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
++	if test -f dllthreads.so; then $(BSD_INSTALL_LIB) dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
 +	$(BSD_INSTALL_DATA) libthreads.a $(LIBDIR)/libthreads.a
  	cd $(LIBDIR); $(RANLIB) libthreads.a
 -	if test -d $(LIBDIR)/threads; then :; else mkdir $(LIBDIR)/threads; fi
