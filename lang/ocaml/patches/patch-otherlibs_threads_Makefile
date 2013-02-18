@@ -1,16 +1,16 @@
-$NetBSD: patch-otherlibs_threads_Makefile,v 1.1 2012/10/08 15:05:33 jaapb Exp $
+$NetBSD: patch-otherlibs_threads_Makefile,v 1.2 2013/02/18 16:29:28 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
---- otherlibs/threads/Makefile.orig	2012-04-19 13:12:23.000000000 +0000
+--- otherlibs/threads/Makefile.orig	2012-08-21 04:39:34.000000000 +0000
 +++ otherlibs/threads/Makefile
-@@ -97,12 +97,12 @@ clean: partialclean
+@@ -98,12 +98,12 @@ clean: partialclean
  	rm -f pervasives.mli marshal.mli unix.mli
  
  install:
 -	if test -f dllvmthreads.so; then cp dllvmthreads.so $(STUBLIBDIR)/.; fi
 -	mkdir -p $(LIBDIR)/vmthreads
 -	cp libvmthreads.a $(LIBDIR)/vmthreads/libvmthreads.a
-+	if test -f dllvmthreads.so; then $(BSD_INSTALL_DATA) dllvmthreads.so $(STUBLIBDIR)/.; fi
++	if test -f dllvmthreads.so; then $(BSD_INSTALL_LIB) dllvmthreads.so $(STUBLIBDIR)/.; fi
 +	$(BSD_INSTALL_DATA_DIR) -p $(LIBDIR)/vmthreads
 +	$(BSD_INSTALL_DATA) libvmthreads.a $(LIBDIR)/vmthreads/libvmthreads.a
  	cd $(LIBDIR)/vmthreads; $(RANLIB) libvmthreads.a
