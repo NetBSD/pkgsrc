@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.648 2013/02/18 16:33:15 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.649 2013/02/18 18:20:52 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -939,3 +939,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211-translations to 201302180 [taca 2013-02-18]
 	Updated lang/pear to 1.9.4nb4 [taca 2013-02-18]
 	Updated lang/ocaml to 4.00.1nb1 [jaapb 2013-02-18]
+	Updated lang/abcl to 1.1.1 [asau 2013-02-18]
