@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:19 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/18 09:00:49 markd Exp $
 
 DISTNAME=	Email-Date-1.103
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Find and Format Date Headers
 DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Email-Simple>=1.9:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
-DEPENDS+=	p5-Time-Local>=1.07:../../time/p5-Time-Local
+DEPENDS+=	{perl>=5.14.0,p5-Time-Local>=1.07}:../../time/p5-Time-Local
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-Email-Abstract>=2.10:../../mail/p5-Email-Abstract
 DEPENDS+=	p5-Email-Date-Format>=1.000:../../mail/p5-Email-Date-Format
