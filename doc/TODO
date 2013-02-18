@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11950 2013/02/17 17:38:11 fhajny Exp $
+$NetBSD: TODO,v 1.11951 2013/02/18 19:02:04 tron Exp $
 
 Suggested new packages
 ======================
@@ -972,7 +972,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pgadmin3-1.16.1 [pkg/47261]
 	o photopc-3.05
 	o php-jpgraph-3.0.6
-	o phpmyadmin-3.5.7
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
