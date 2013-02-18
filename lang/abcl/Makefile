@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/12/17 21:47:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/18 18:16:14 asau Exp $
 
-DISTNAME=	abcl-src-1.1.0
+DISTNAME=	abcl-src-1.1.1
 PKGNAME=	$(DISTNAME:C/-src//)
 CATEGORIES=	lang
 MASTER_SITES=	http://common-lisp.net/project/armedbear/releases/$(PKGVERSION_NOREV)/
