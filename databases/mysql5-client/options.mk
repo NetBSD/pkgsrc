@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/02/11 00:16:41 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2013/02/18 10:21:06 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5-client
 
@@ -20,6 +20,8 @@ CHECK_BUILTIN.openssl:=no
 CONFIGURE_ARGS+=	--with-openssl=yes
 CONFIGURE_ARGS+=	--with-openssl-libs=/lib
 CONFIGURE_ARGS+=	--with-openssl-includes=/usr/include
+.  else
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 .  endif
 . else
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
