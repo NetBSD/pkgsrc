@@ -1,13 +1,11 @@
-The goal of the Subversion project is to build a version control system that
-is a compelling replacement for CVS in the open source community. The software
-is released under an Apache/BSD-style open source license.
+Subversion 1.6 and 1.7 have different client side style, that is,
+Subversion 1.7 has only one .svn directory in top of working copy,
+and contents of .svn is sqlite3 based.
+Subversion 1.6 has .svn directory in each directories in working copy.
+Convertion to 1.7 style from 1.6 is done by svn upgrade, and this
+upgrade is irreversible.
 
-This package contains all the Subversion programs and libraries except
-the Apache module mod_dav_svn (for which see the ap2-subversion
-package) and the Python bindings and some programs which use them (for
-which see the py-subversion package).  Installing this package
-alone will satisfy most people's needs, providing all three repository
-access layers (local, svn, and dav) and the server for the svn access
-layer.
+If you will continue to use old style working copy, please keep to
+use subversion16 package.
 
 This package tracks 1.6.x release branch.
