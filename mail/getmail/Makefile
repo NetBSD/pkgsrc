@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.126 2013/02/16 23:43:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.127 2013/02/19 02:20:46 schmonz Exp $
 
 DISTNAME=		getmail-4.38.0
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}old-versions/
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://pyropus.ca/software/getmail/
