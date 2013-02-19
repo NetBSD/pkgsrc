@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.651 2013/02/18 20:32:27 imil Exp $
+$NetBSD: CHANGES-2013,v 1.652 2013/02/19 00:23:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -942,3 +942,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/abcl to 1.1.1 [asau 2013-02-18]
 	Updated databases/phpmyadmin to 3.5.7 [tron 2013-02-18]
 	Updated www/nginx to 1.2.7 [imil 2013-02-18]
+	Updated graphics/GraphicsMagick to 1.3.17nb4 [wiz 2013-02-19]
