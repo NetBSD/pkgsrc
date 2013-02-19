@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/07 17:10:35 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/19 22:30:33 joerg Exp $
 #
 
 DISTNAME=	freefonts-0.10
@@ -17,15 +17,15 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_X11BASE=	yes
-USE_TOOLS+=	gtar gzip
+USE_TOOLS+=	gzcat
 FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/freefont
 REQD_DIRS=	${PREFIX}/lib/X11/fonts/freefont
 
 INSTALLATION_DIRS=	lib/X11/fonts
 
 do-install:
-	${GTAR} Cxzf ${DESTDIR}${PREFIX}/lib/X11/fonts \
-		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	${GZCAT} ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | \
+	    ${TAR} -xzf - -C ${DESTDIR}${PREFIX}/lib/X11/fonts
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/lib/X11/fonts/freefont/*
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} \
 		${DESTDIR}${PREFIX}/lib/X11/fonts/freefont/*
