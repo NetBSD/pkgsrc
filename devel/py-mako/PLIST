@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/11 08:24:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/19 18:49:03 ryoon Exp $
 bin/mako-render
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -34,6 +34,9 @@ ${PYSITELIB}/mako/ext/autohandler.pyo
 ${PYSITELIB}/mako/ext/babelplugin.py
 ${PYSITELIB}/mako/ext/babelplugin.pyc
 ${PYSITELIB}/mako/ext/babelplugin.pyo
+${PYSITELIB}/mako/ext/beaker_cache.py
+${PYSITELIB}/mako/ext/beaker_cache.pyc
+${PYSITELIB}/mako/ext/beaker_cache.pyo
 ${PYSITELIB}/mako/ext/preprocessors.py
 ${PYSITELIB}/mako/ext/preprocessors.pyc
 ${PYSITELIB}/mako/ext/preprocessors.pyo
