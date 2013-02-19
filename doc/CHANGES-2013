@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.653 2013/02/19 05:02:18 darcy Exp $
+$NetBSD: CHANGES-2013,v 1.654 2013/02/19 05:30:31 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -943,3 +943,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/phpmyadmin to 3.5.7 [tron 2013-02-18]
 	Updated www/nginx to 1.2.7 [imil 2013-02-18]
 	Updated graphics/GraphicsMagick to 1.3.17nb4 [wiz 2013-02-19]
+	Added devel/kyua-testers version 0.1 [jmmv 2013-02-19]
