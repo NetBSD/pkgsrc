@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.652 2013/02/19 00:23:44 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.653 2013/02/19 05:02:18 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -720,7 +720,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/racket-textual to 5.3.2 [asau 2013-02-10]
 	Updated lang/racket to 5.3.2 [asau 2013-02-10]
 	Updated net/openvpn to 2.3.0 [manu 2013-02-10]
-	Updated net/openvpn-acct-wtpmx to 20130210 [manu 2013-02-10]
+	Updated net/openvpn-acct-wtmpx to 20130210 [manu 2013-02-10]
 	Added net/openvpn-nagios version 20130210 [manu 2013-02-10]
 	Updated comms/asterisk10 to 10.12.1 [jnemeth 2013-02-10]
 	Updated audio/moc-devel to 2.5.0b1 [ryoon 2013-02-10]
