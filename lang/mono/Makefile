@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2013/01/26 21:36:33 adam Exp $
+# $NetBSD: Makefile,v 1.132 2013/02/19 22:34:09 joerg Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	1
@@ -143,6 +143,8 @@ SUBST_STAGE.fix-libx11=		pre-configure
 SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
 SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
+
+CPPFLAGS.NetBSD+=	-D_KMEMUSER
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
