@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:32 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/19 18:49:02 ryoon Exp $
 
-DISTNAME=	Mako-0.5.0
+DISTNAME=	Mako-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/M/Mako/ \
