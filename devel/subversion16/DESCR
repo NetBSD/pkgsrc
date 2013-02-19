@@ -1,12 +1,11 @@
-The goal of the Subversion project is to build a version control
-system that is a compelling replacement for CVS in the open source
-community.  The software is released under an Apache/BSD-style open
-source license.
+Subversion 1.6 and 1.7 have different client side style, that is,
+Subversion 1.7 has only one .svn directory in top of working copy,
+and contents of .svn is sqlite3 based.
+Subversion 1.6 has .svn directory in each directories in working copy.
+Convertion to 1.7 style from 1.6 is done by svn upgrade, and this
+upgrade is irreversible.
 
-This is a meta-package.  It installs no files, but it depends on all
-the Subversion components, including the base package with the
-subversion client and server, the apache module, and four language
-bindings.  (If you just want the basic svn and svnadmin programs see
-devel/subversion-base.)
+If you will continue to use old style working copy, please keep to
+use subversion16 package.
 
 This package tracks 1.6.x release branch.
