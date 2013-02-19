@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/11 01:13:19 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/19 23:35:48 dsainty Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
@@ -28,10 +28,13 @@ MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 # platforms.  Disable it for consistency.
 CONFIGURE_ARGS+=	--disable-PRINTER
 
-INSTALLATION_DIRS+=	${PKG_JAVA_HOME}/jre/lib/ext
-INSTALLATION_DIRS+=	${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
+JAVA_MACHINE_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/}
 
-PLIST_SUBST+=		JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
+INSTALLATION_DIRS+=	${PKG_JAVA_HOME}/jre/lib/ext
+INSTALLATION_DIRS+=	${PKG_JAVA_HOME}/jre/lib/${JAVA_MACHINE_ARCH}
+
+PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
+PLIST_SUBST+=	JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
