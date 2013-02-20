@@ -1,4 +1,4 @@
-$NetBSD: patch-logrotate.8,v 1.1.1.1 2012/03/06 04:53:24 sbd Exp $
+$NetBSD: patch-logrotate.8,v 1.2 2013/02/20 09:20:29 dillo Exp $
 
 Add pkgsrc paths compatibility
 
@@ -18,7 +18,7 @@ Add pkgsrc paths compatibility
  .PD 0
  .TP 27
 -\fI/var/lib/logrotate.status\fR
-+\fI@VARBASE@/log/logrotate.status\fR
++\fI@VARBASE@/db/logrotate.status\fR
  Default state file.
  .TP 27
 -\fI/etc/logrotate.conf\fR
