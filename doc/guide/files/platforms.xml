@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.76 2013/02/08 05:08:17 asau Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.77 2013/02/20 17:45:11 asau Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -13,6 +13,13 @@
   <sect1 id="bootstrapping-pkgsrc">
     <title>Bootstrapping pkgsrc</title>
 
+    <para>pkgsrc can be bootstrapped for use in two different modes:
+    privileged and unprivileged one. In unprivileged mode in contrast
+    to privileged one all programs are install under one particular user
+    and cannot utilise privileged operations (packages don't create
+    special users and all special file permissions like setuid are ignored).
+    </para>
+
     <para>Installing the bootstrap kit from source should be as simple as:</para>
 
     <screen>
@@ -21,21 +28,38 @@
 &rprompt; <userinput>./bootstrap</userinput>
     </screen>
 
-    <para>See <xref linkend="getting"/> for other ways to get
-    pkgsrc before bootstrapping. The given
-    <command>bootstrap</command> command will use the defaults of
-    <filename>/usr/pkg</filename> for the
-    <emphasis>prefix</emphasis> where programs will be installed in,
+    <para>To bootstrap in unprivileged mode pass <quote>--unprivileged</quote> flag to <command>bootstrap</command></para>
+
+    <para>By default, in privileged mode pkgsrc uses
+    <filename>/usr/pkg</filename> for <emphasis>prefix</emphasis>
+    where programs will be installed in,
     and <filename>/var/db/pkg</filename> for the package database
-    directory where pkgsrc will do its internal bookkeeping.
-    However, these can also be set using command-line
-    arguments.</para>
+    directory where pkgsrc will do its internal bookkeeping,
+    <filename>/var</filename> is used as <emphasis>varbase</emphasis>,
+    where packages install their persistent data.
+    In unprivileged mode pkgsrc uses
+    <filename>~/pkg</filename> for <emphasis>prefix</emphasis>,
+    <filename>~/pkg/var/db/pkg</filename> for the package database,
+    and <filename>~/pkg/var</filename> for <emphasis>varbase</emphasis>.
+    </para>
+
+    <para>You can change default layout using command-line arguments.
+    Run <quote>./bootstrap --help</quote> to get details.
+    </para>
 
     <note>
       <para>The bootstrap installs a <command>bmake</command> tool.
       Use this <command>bmake</command> when building via pkgsrc.
       For examples in this guide, use <command>bmake</command>
       instead of <quote>make</quote>.</para>
+    </note>
+
+    <note>
+      <para>It is possible to bootstrap multiple instances of pkgsrc
+      using non-intersecting directories. Use <command>bmake</command>
+      corresponding to the installation you're working with to build
+      and install packages.
+      </para>
     </note>
 
   </sect1>
