@@ -1101,27 +1101,48 @@ release -d
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="bootstrapping-pkgsrc"></a>3.2. Bootstrapping pkgsrc</h2></div></div></div>
+<p>pkgsrc can be bootstrapped for use in two different modes:
+    privileged and unprivileged one. In unprivileged mode in contrast
+    to privileged one all programs are install under one particular user
+    and cannot utilise privileged operations (packages don't create
+    special users and all special file permissions like setuid are ignored).
+    </p>
 <p>Installing the bootstrap kit from source should be as simple as:</p>
 <pre class="screen">
 <code class="prompt">#</code> <strong class="userinput"><code>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>cd pkgsrc/bootstrap</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>./bootstrap</code></strong>
     </pre>
-<p>See <a class="xref" href="#getting" title="Chapter 2. Where to get pkgsrc and how to keep it up-to-date">Chapter 2, <i>Where to get pkgsrc and how to keep it up-to-date</i></a> for other ways to get
-    pkgsrc before bootstrapping. The given
-    <span class="command"><strong>bootstrap</strong></span> command will use the defaults of
-    <code class="filename">/usr/pkg</code> for the
-    <span class="emphasis"><em>prefix</em></span> where programs will be installed in,
+<p>To bootstrap in unprivileged mode pass <span class="quote">&#8220;<span class="quote">--unprivileged</span>&#8221;</span> flag to <span class="command"><strong>bootstrap</strong></span></p>
+<p>By default, in privileged mode pkgsrc uses
+    <code class="filename">/usr/pkg</code> for <span class="emphasis"><em>prefix</em></span>
+    where programs will be installed in,
     and <code class="filename">/var/db/pkg</code> for the package database
-    directory where pkgsrc will do its internal bookkeeping.
-    However, these can also be set using command-line
-    arguments.</p>
+    directory where pkgsrc will do its internal bookkeeping,
+    <code class="filename">/var</code> is used as <span class="emphasis"><em>varbase</em></span>,
+    where packages install their persistent data.
+    In unprivileged mode pkgsrc uses
+    <code class="filename">~/pkg</code> for <span class="emphasis"><em>prefix</em></span>,
+    <code class="filename">~/pkg/var/db/pkg</code> for the package database,
+    and <code class="filename">~/pkg/var</code> for <span class="emphasis"><em>varbase</em></span>.
+    </p>
+<p>You can change default layout using command-line arguments.
+    Run <span class="quote">&#8220;<span class="quote">./bootstrap --help</span>&#8221;</span> to get details.
+    </p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>The bootstrap installs a <span class="command"><strong>bmake</strong></span> tool.
       Use this <span class="command"><strong>bmake</strong></span> when building via pkgsrc.
       For examples in this guide, use <span class="command"><strong>bmake</strong></span>
       instead of <span class="quote">&#8220;<span class="quote">make</span>&#8221;</span>.</p>
+</div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>It is possible to bootstrap multiple instances of pkgsrc
+      using non-intersecting directories. Use <span class="command"><strong>bmake</strong></span>
+      corresponding to the installation you're working with to build
+      and install packages.
+      </p>
 </div>
 </div>
 <div class="sect1">
@@ -7559,7 +7580,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm11867712"></a><dl>
+<a name="idm10021824"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7578,7 +7599,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm11867520"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm10021632"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7588,7 +7609,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm11867008"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm10021120"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7599,7 +7620,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm11866496"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm10020608"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9616,7 +9637,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm11525568"></a><dl>
+<a name="idm11801472"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9661,7 +9682,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm11525376"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm11801280"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9677,7 +9698,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm11523264"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm11799104"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9695,7 +9716,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm11520960"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm11796864"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9713,7 +9734,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm11518848"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm11794688"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9726,7 +9747,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm11517696"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm11793600"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9742,7 +9763,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm11516160"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm11792000"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9766,7 +9787,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm11512192"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm11783936"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9791,7 +9812,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm11510144"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm11781888"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9839,7 +9860,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm11498688"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm11778624"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
