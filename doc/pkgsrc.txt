@@ -1011,11 +1011,14 @@ Here are some platform-specific notes you should be aware of.
 
 3.3.1. Darwin (Mac OS X)
 
-Darwin 5.x and up are supported. Before you start, you will need to download
-and install the Mac OS X Developer Tools from Apple's Developer Connection. See
-http://developer.apple.com/macosx/ for details. Also, make sure you install X11
-(an optional package included with the Developer Tools) if you intend to build
-packages that use the X11 Window System.
+Darwin 5.x and up are supported.
+
+Before you start, you need to download and install the Mac OS X Developer Tools
+from Apple's Developer Connection. This requires (free) membership. See http://
+developer.apple.com/macosx/ for details. Also, make sure you install X11 (an
+optional package included with the Developer Tools) if you intend to build
+packages that use the X11 Window System. (If you don't want or need the full
+Xcode GUI, download and install Command Line Tools for Xcode.)
 
 3.3.2. FreeBSD
 
@@ -1928,17 +1931,17 @@ PKGSRC_COMPILER:
     This is a list of values specifying the chain of compilers to invoke when
     building packages. Valid values are:
 
-      * distcc: distributed C/C++ (chainable)
+      + distcc: distributed C/C++ (chainable)
 
-      * ccache: compiler cache (chainable)
+      + ccache: compiler cache (chainable)
 
-      * gcc: GNU C/C++ Compiler
+      + gcc: GNU C/C++ Compiler
 
-      * mipspro: Silicon Graphics, Inc. MIPSpro (n32/n64)
+      + mipspro: Silicon Graphics, Inc. MIPSpro (n32/n64)
 
-      * mipspro: Silicon Graphics, Inc. MIPSpro (o32)
+      + mipspro: Silicon Graphics, Inc. MIPSpro (o32)
 
-      * sunpro: Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
+      + sunpro: Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
 
     The default is "gcc". You can use ccache and/or distcc with an appropriate
     PKGSRC_COMPILER setting, e.g. "ccache gcc". This variable should always be
@@ -1980,9 +1983,9 @@ XXX
 
   * PKG_DEVELOPER: Run some sanity checks that package developers want:
 
-      o make sure patches apply with zero fuzz
+      + make sure patches apply with zero fuzz
 
-      o run check-shlibs to see that all binaries will find their shared libs.
+      + run check-shlibs to see that all binaries will find their shared libs.
 
   * PKG_DEBUG_LEVEL: The level of debugging output which is displayed whilst
     making and installing the package. The default value for this is 0, which
@@ -2131,15 +2134,15 @@ following points:
   * If you want to upload the binary packages to ftp.NetBSD.org, make sure the
     setup complies to the requirements for binary packages:
 
-      o To end up on ftp.NetBSD.org, the packages must be built by a NetBSD
+      + To end up on ftp.NetBSD.org, the packages must be built by a NetBSD
         developer on a trusted machine (that is, where you and only you have
         root access).
 
-      o Packages on ftp.NetBSD.org should only be created from the stable
+      + Packages on ftp.NetBSD.org should only be created from the stable
         branches (like 2009Q1), so that users browsing the available
         collections can see at a glance how old the packages are.
 
-      o The packages must be built as root, since some packages require set-uid
+      + The packages must be built as root, since some packages require set-uid
         binaries at runtime, and creating those packages as unprivileged user
         doesn't work well at the moment.
 
@@ -4488,11 +4491,11 @@ ${OPSYS}, ${LOWER_OPSYS}, ${OS_VERSION}
     Some packages want to embed the OS name and version into some paths. To do
     this, use these variables in the PLIST:
 
-      * ${OPSYS} - output of "uname -s"
+      + ${OPSYS} - output of "uname -s"
 
-      * ${LOWER_OPSYS} - lowercase common name (eg. "solaris")
+      + ${LOWER_OPSYS} - lowercase common name (eg. "solaris")
 
-      * ${OS_VERSION} - "uname -r"
+      + ${OS_VERSION} - "uname -r"
 
 For a complete list of values which are replaced by default, please look in
 bsd.pkg.mk (and search for PLIST_SUBST).
@@ -6295,10 +6298,10 @@ bulk-install
     A binary package is considered "up-to-date" to be installed via pkg_add(1)
     if:
 
-      * None of the package's files (Makefile, ...) were modified since it was
+      + None of the package's files (Makefile, ...) were modified since it was
         built.
 
-      * None of the package's required (binary) packages were modified since it
+      + None of the package's required (binary) packages were modified since it
         was built.
 
     Beware that this target may deinstall all packages installed on a system!
@@ -7591,9 +7594,9 @@ steps to get them registered in the GTK2 database properly:
  4. Patch the package to not touch any of the GTK2 databases directly. These
     are:
 
-      * libdata/gtk-2.0/gdk-pixbuf.loaders
+      + libdata/gtk-2.0/gdk-pixbuf.loaders
 
-      * libdata/gtk-2.0/gtk.immodules
+      + libdata/gtk-2.0/gtk.immodules
 
  5. Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
     as they will be handled automatically.
