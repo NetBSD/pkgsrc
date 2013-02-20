@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.185 2013/02/09 12:45:24 obache Exp $
+# $NetBSD: bootstrap,v 1.186 2013/02/20 10:30:41 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -884,6 +884,14 @@ sunpro)
 	echo "CC=			cc"        >> ${TARGET_MKCONF}
 	echo "CXX=			CC"        >> ${TARGET_MKCONF}
 	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
+	;;
+clang)
+	echo "CC=			clang"     >> ${TARGET_MKCONF}
+	echo "CXX=			clang++"   >> ${TARGET_MKCONF}
+	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
+	if [ -n "$CLANGBASE" -o -f "/bin/clang" ]; then
+		echo "CLANGBASE=		$CLANGBASE" >> ${TARGET_MKCONF}
+	fi
 	;;
 esac
 if [ -n "$GCCBASE" ]; then
