@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.22 2013/02/20 08:45:05 wiz Exp $
+# $NetBSD: print-plist.mk,v 1.23 2013/02/20 09:19:08 wiz Exp $
 
 ###
 ### Automatic PLIST generation
@@ -20,7 +20,7 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${MACHINE_ARCH}/, "$${MACHINE_ARCH}");			\
 	gsub(/${MACHINE_GNU_ARCH}/, "$${MACHINE_GNU_ARCH}");
 _PRINT_PLIST_AWK_SUBST+=						\
-	gsub(/${LOWER_OS_VERSION:S/./\./g}/, "$${LOWER_OS_VERSION}");	\
+	gsub(/${LOWER_OS_VERSION:S/./\./g}/, "$${LOWER_OS_VERSION}");
 .endif
 _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
