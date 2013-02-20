@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.21 2012/12/06 11:36:31 jperkin Exp $
+# $NetBSD: print-plist.mk,v 1.22 2013/02/20 08:45:05 wiz Exp $
 
 ###
 ### Automatic PLIST generation
@@ -15,14 +15,12 @@
 _PRINT_PLIST_AWK_SUBST={
 .if !defined(EMUL_PLATFORMS)
 _PRINT_PLIST_AWK_SUBST+=						\
-	gsub(/${OPSYS}/, "$${OPSYS}");					\
 	gsub(/${OS_VERSION:S/./\./g}/, "$${OS_VERSION}");		\
 	gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");	\
 	gsub(/${MACHINE_ARCH}/, "$${MACHINE_ARCH}");			\
 	gsub(/${MACHINE_GNU_ARCH}/, "$${MACHINE_GNU_ARCH}");
 _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${LOWER_OS_VERSION:S/./\./g}/, "$${LOWER_OS_VERSION}");	\
-	gsub(/${LOWER_OPSYS}/, "$${LOWER_OPSYS}");
 .endif
 _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
