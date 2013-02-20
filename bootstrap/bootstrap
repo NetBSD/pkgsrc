@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.187 2013/02/20 10:59:36 obache Exp $
+# $NetBSD: bootstrap,v 1.188 2013/02/20 11:04:26 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -470,9 +470,9 @@ AIX)
 CYGWIN_*)
 	is_root () {
 		if id -nG | grep -q 'Administrators'; then
-			return 1
+			return 0
 		fi
-		return 0
+		return 1
 	}
 	root_user=`id -u`
 	root_group=`id -g Administrator`
