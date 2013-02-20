@@ -987,6 +987,12 @@ See Section 4.1, "Using binary packages".
 
 3.2. Bootstrapping pkgsrc
 
+pkgsrc can be bootstrapped for use in two different modes: privileged and
+unprivileged one. In unprivileged mode in contrast to privileged one all
+programs are install under one particular user and cannot utilise privileged
+operations (packages don't create special users and all special file
+permissions like setuid are ignored).
+
 Installing the bootstrap kit from source should be as simple as:
 
 # env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc
@@ -994,16 +1000,28 @@ Installing the bootstrap kit from source should be as simple as:
 # ./bootstrap
 
 
-See Chapter 2, Where to get pkgsrc and how to keep it up-to-date for other ways
-to get pkgsrc before bootstrapping. The given bootstrap command will use the
-defaults of /usr/pkg for the prefix where programs will be installed in, and /
-var/db/pkg for the package database directory where pkgsrc will do its internal
-bookkeeping. However, these can also be set using command-line arguments.
+To bootstrap in unprivileged mode pass "--unprivileged" flag to bootstrap
+
+By default, in privileged mode pkgsrc uses /usr/pkg for prefix where programs
+will be installed in, and /var/db/pkg for the package database directory where
+pkgsrc will do its internal bookkeeping, /var is used as varbase, where
+packages install their persistent data. In unprivileged mode pkgsrc uses ~/pkg
+for prefix, ~/pkg/var/db/pkg for the package database, and ~/pkg/var for 
+varbase.
+
+You can change default layout using command-line arguments. Run "./bootstrap
+--help" to get details.
 
 Note
 
 The bootstrap installs a bmake tool. Use this bmake when building via pkgsrc.
 For examples in this guide, use bmake instead of "make".
+
+Note
+
+It is possible to bootstrap multiple instances of pkgsrc using non-intersecting
+directories. Use bmake corresponding to the installation you're working with to
+build and install packages.
 
 3.3. Platform-specific notes
 
