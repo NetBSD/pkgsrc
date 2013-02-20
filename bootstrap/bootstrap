@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.186 2013/02/20 10:30:41 obache Exp $
+# $NetBSD: bootstrap,v 1.187 2013/02/20 10:59:36 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -475,7 +475,7 @@ CYGWIN_*)
 		return 0
 	}
 	root_user=`id -u`
-	root_grou=`id -g Administrator`
+	root_group=`id -g Administrator`
 	need_bsd_install=no
 	opsys=`uname -o`
 	need_awk=no
