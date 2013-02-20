@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2012/11/27 11:38:57 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2013/02/20 19:35:36 ryoon Exp $
 
-SHA1 (nspr-4.9.4.tar.gz) = dfa0f03dd4be891011e6dfc816a8b41494b0a57d
-RMD160 (nspr-4.9.4.tar.gz) = 72d99140f8e35cb1dc8adb7973407e2ebbb6b9e4
-Size (nspr-4.9.4.tar.gz) = 1160641 bytes
+SHA1 (nspr-4.9.5.tar.gz) = 03885e992607e2be975f6525c6764c2167fe2eff
+RMD160 (nspr-4.9.5.tar.gz) = 38a2f5dd8e1fe2e3ba415364a71a90fb42cd4643
+Size (nspr-4.9.5.tar.gz) = 1156396 bytes
 SHA1 (patch-ab) = be61b86f8a66dbf92737b02c0e5b1fe514b40f41
 SHA1 (patch-ac) = 97aa60a256db4af9768a7b6645942c9daa63a265
 SHA1 (patch-ae) = 4f04f2a55c88fe2047a50361f85f2393571574dd
