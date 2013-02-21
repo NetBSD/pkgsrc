@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:31 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/21 10:59:38 jperkin Exp $
 #
 
 DISTNAME=	numpy-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -22,7 +23,7 @@ REPLACE_PYTHON+=	numpy/distutils/system_info.py
 REPLACE_PYTHON+=	numpy/ma/bench.py
 REPLACE_PYTHON+=	numpy/distutils/conv_template.py
 
-SUBST_CLASSES+=	numpy
+SUBST_CLASSES+=		numpy
 SUBST_STAGE.numpy=	post-patch
 SUBST_FILES.numpy=	numpy/f2py/setup.py numpy/f2py/setupscons.py
 SUBST_SED.numpy=	-e 's:/usr/bin/env %s:${PYTHONBIN}:'
@@ -46,6 +47,13 @@ LDFLAGS+=		-shared
 # This package bypasses the wrappers and calls the compilers directly when
 # linking, so ensure that we pass through requisite options.
 LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
+
+# This package also does its own linking of dependent packages, so we need
+# to ensure that linker is called with the correct arguments.
+SUBST_CLASSES+=		linkabi
+SUBST_STAGE.linkabi=	post-patch
+SUBST_FILES.linkabi=	numpy/distutils/fcompiler/gnu.py
+SUBST_SED.linkabi=	-e 's,@COMPILER_ABI_FLAG@,${_COMPILER_ABI_FLAG.${ABI}},'
 
 # needs devel/py-nose
 #do-test:
