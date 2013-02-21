@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.661 2013/02/20 19:49:52 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.662 2013/02/21 10:59:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/py-markdown to 2.2.1 [ryoon 2013-02-19]
 	Updated devel/nspr to 4.9.5 [ryoon 2013-02-20]
 	Updated devel/nss to 3.14.3 [ryoon 2013-02-20]
+	Updated math/py-numpy to 1.6.2nb1 [jperkin 2013-02-21]
