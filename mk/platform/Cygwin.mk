@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.4 2013/02/20 13:08:26 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.5 2013/02/21 11:19:27 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -54,9 +54,7 @@ PKGDIRMODE?=		775
 # ROOT_USER might be numeric in the special case of Administrator; canonify it:
 ROOT_CMD?=		${SU} - "$$(${ID} -un ${ROOT_USER})" -c
 ROOT_USER?=		${BINOWN}
-.if !defined(ROOT_GROUP)
-ROOT_GROUP!=		${ID} -g Administrators
-.endif
+ROOT_GROUP?=		${:!${ID} -g Administrators!}
 TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
