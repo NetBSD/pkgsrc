@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/23 19:50:55 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/02/21 07:58:21 wiz Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -13,6 +13,12 @@ LICENSE=	modified-bsd
 AUTO_MKDIRS=		yes
 
 USE_BSD_MAKEFILE=	yes
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mclang*)
+MAKE_FLAGS+=		ACTIVE_CC=clang
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
