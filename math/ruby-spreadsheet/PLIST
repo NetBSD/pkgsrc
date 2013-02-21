@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2013/01/24 10:50:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/02/21 13:23:12 obache Exp $
 bin/xlsopcodes${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/GUIDE.txt
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
@@ -30,6 +31,7 @@ ${GEM_LIBDIR}/lib/spreadsheet/excel/password_hash.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/reader.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/reader/biff5.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/reader/biff8.rb
+${GEM_LIBDIR}/lib/spreadsheet/excel/rgb.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/row.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/sst_entry.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/workbook.rb
@@ -66,6 +68,7 @@ ${GEM_LIBDIR}/test/data/test_version_excel97.xls
 ${GEM_LIBDIR}/test/data/test_version_excel97_2010.xls
 ${GEM_LIBDIR}/test/excel/reader.rb
 ${GEM_LIBDIR}/test/excel/row.rb
+${GEM_LIBDIR}/test/excel/writer/n_worksheet.rb
 ${GEM_LIBDIR}/test/excel/writer/workbook.rb
 ${GEM_LIBDIR}/test/excel/writer/worksheet.rb
 ${GEM_LIBDIR}/test/font.rb
