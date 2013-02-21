@@ -8,3 +8,5 @@ library.
 SQLite is not a client library used to connect to a big database server.
 SQLite is the server. The SQLite library reads and writes directly to and
 from the database files on disk.
+
+This is version 2 of sqlite, which is essentially obsolete.

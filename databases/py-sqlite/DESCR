@@ -1,2 +1,4 @@
 PySQLite is a Python interface to the SQLite library,
 allowing Python programs to access SQLite databases.
+
+This wraps the obsolete sqlite2.
