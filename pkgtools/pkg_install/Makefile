@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2013/02/14 09:13:41 obache Exp $
+# $NetBSD: Makefile,v 1.193 2013/02/21 22:41:37 wiz Exp $
 
 # Notes to package maintainers:
 #
@@ -78,6 +78,12 @@ FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}			\
 			MKDIR=${MKDIR:Q}
 MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
 			EGDIR=${EGDIR:Q}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mclang*)
+MAKE_FLAGS+=		ACTIVE_CC=clang
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
