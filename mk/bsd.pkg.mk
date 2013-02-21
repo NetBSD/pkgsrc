@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1985 2013/02/15 09:22:50 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1986 2013/02/21 13:33:10 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -616,7 +616,7 @@ su-target: .USE
 	"")	;;							\
 	*)	${PRE_CMD.su-${.TARGET}} ;;				\
 	esac;								\
-	if ${TEST} `${ID} -u` = `${ID} -u ${_SU_ROOT_USER}`; then	\
+	if ${TEST} `${ID} -u` = `${ID} -u ${_SU_ROOT_USER} 2>/dev/null || ${ECHO} ${_SU_ROOT_USER}`; then	\
 		${_ROOT_CMD};						\
 	else								\
 		case ${PRE_ROOT_CMD:Q}"" in				\
