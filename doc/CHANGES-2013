@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.663 2013/02/21 12:59:53 taca Exp $
+$NetBSD: CHANGES-2013,v 1.664 2013/02/21 13:01:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -953,3 +953,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/nss to 3.14.3 [ryoon 2013-02-20]
 	Updated math/py-numpy to 1.6.2nb1 [jperkin 2013-02-21]
 	Updated www/drupal7 to 7.20 [taca 2013-02-21]
+	Updated www/geeklog to 1.8.2.1 [taca 2013-02-21]
