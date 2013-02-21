@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.33 2013/02/15 14:47:38 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.34 2013/02/21 19:54:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -219,3 +219,5 @@ databases/ruby-activerecord3: security patch
 devel/ruby-activemodel: security patch
 Pullup ticket #4074 - requested by drochner
 security/gnutls: security update
+Pullup ticket #4075 - requested by ryoon
+devel/jenkins: security update
