@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 21:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/22 19:59:05 shattered Exp $
 #
 
 DISTNAME=	obexftp-0.20
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openobex.triq.net/
+HOMEPAGE=	http://dev.zuckschwerdt.org/openobex/
 COMMENT=	File copying over the Object Exchange (OBEX) protocol
 
 GNU_CONFIGURE=	yes
