@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.27 2013/01/03 15:37:23 ryoon Exp $
+$NetBSD: patch-ac,v 1.28 2013/02/22 13:40:30 jperkin Exp $
 
 First chunk:
 Add support for thread limits.
@@ -71,3 +71,12 @@ zsh-workers on 2012-08-16.
        * )
  	DLLD="${DLLD=ld}"
  	DLLDARG=""
+@@ -11659,7 +11699,7 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
+     sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
+     sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
+     aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
+-    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G}" ;;
++    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
+     darwin*)      DLLDFLAGS="${DLLDFLAGS=-bundle -flat_namespace -undefined suppress}" ;;
+     beos*|haiku*) DLLDFLAGS="${DLLDFLAGS=-nostart}" ;;
+     openbsd*)
