@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1986 2013/02/21 13:33:10 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1987 2013/02/22 13:35:27 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -99,6 +99,7 @@ SVR4_PKGNAME?=		${PKGNAME}
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 # Override for SU_CMD user check
+_IS_ROOT_CMD?=		${TEST}	`${ID} -u` = `${ID} -u ${_SU_ROOT_USER}`
 _SU_ROOT_USER?=		${ROOT_USER}
 REAL_ROOT_USER?=	${ROOT_USER}
 REAL_ROOT_GROUP?=	${ROOT_GROUP}
@@ -616,7 +617,7 @@ su-target: .USE
 	"")	;;							\
 	*)	${PRE_CMD.su-${.TARGET}} ;;				\
 	esac;								\
-	if ${TEST} `${ID} -u` = `${ID} -u ${_SU_ROOT_USER} 2>/dev/null || ${ECHO} ${_SU_ROOT_USER}`; then	\
+	if ${_IS_ROOT_CMD}; then					\
 		${_ROOT_CMD};						\
 	else								\
 		case ${PRE_ROOT_CMD:Q}"" in				\
