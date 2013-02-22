@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.667 2013/02/21 22:04:51 adam Exp $
+$NetBSD: CHANGES-2013,v 1.668 2013/02/22 03:09:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -957,3 +957,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/ruby-spreadsheet to 0.8.1 [obache 2013-02-21]
 	Updated security/opendnssec to 1.3.13 [pettai 2013-02-21]
 	Updated x11/gtk2 to 2.24.16 [adam 2013-02-21]
+	Updated lang/php53 to 5.3.22 [taca 2013-02-22]
+	Updated lang/php54 to 5.4.12 [taca 2013-02-22]
