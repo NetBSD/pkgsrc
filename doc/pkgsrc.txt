@@ -989,7 +989,7 @@ See Section 4.1, "Using binary packages".
 
 pkgsrc can be bootstrapped for use in two different modes: privileged and
 unprivileged one. In unprivileged mode in contrast to privileged one all
-programs are install under one particular user and cannot utilise privileged
+programs are installed under one particular user and cannot utilise privileged
 operations (packages don't create special users and all special file
 permissions like setuid are ignored).
 
