@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.8 2011/01/12 07:21:30 adam Exp $
+# $NetBSD: cmake.mk,v 1.9 2013/02/22 22:45:12 markd Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -20,6 +20,7 @@ _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR:PATH=lib
 .if ${OPSYS} != "Darwin"
 CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=TRUE
 .else
