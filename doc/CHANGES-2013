@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.673 2013/02/22 15:51:16 taca Exp $
+$NetBSD: CHANGES-2013,v 1.674 2013/02/22 15:53:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/nginx to 1.2.7nb1 [imil 2013-02-22]
 	Updated www/serf to 1.1.1 [taca 2013-02-22]
 	Updated www/serf0 to 0.7.2 [taca 2013-02-22]
+	Updated devel/subversion16-base to 1.6.20nb1 [taca 2013-02-22]
