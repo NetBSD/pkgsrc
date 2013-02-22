@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/02/22 17:06:54 imil Exp $
+
+Consider adding something like following lines to /etc/newsyslog.conf:
+
+${NGINX_LOGDIR}/access.log ${NGINX_USER}:${NGINX_GROUP} 640 7 * 24 Z  ${NGINX_PIDDIR}/nginx.pid SIGUSR1
+${NGINX_LOGDIR}/error.log  ${NGINX_USER}:${NGINX_GROUP} 640 7 * 24 Z  ${NGINX_PIDDIR}/nginx.pid SIGUSR1
+
+===========================================================================
