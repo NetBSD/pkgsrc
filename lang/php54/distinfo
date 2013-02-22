@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2013/02/17 13:10:13 taca Exp $
+$NetBSD: distinfo,v 1.13 2013/02/22 03:06:50 taca Exp $
 
-SHA1 (php-5.4.11.tar.bz2) = 85666f32bf1f2850c769fe58fed788ae8fdfa1cb
-RMD160 (php-5.4.11.tar.bz2) = 33513161846240bc128eb7e917a293711c9214c3
-Size (php-5.4.11.tar.bz2) = 11147685 bytes
+SHA1 (php-5.4.12.tar.bz2) = 9e1af30b763ba3de19b68b9b8abde1aae1e5e630
+RMD160 (php-5.4.12.tar.bz2) = 51fb60f669ff5410fefcb5a00369fbc4707a5044
+Size (php-5.4.12.tar.bz2) = 11501953 bytes
 SHA1 (patch-acinclude.m4) = afead7122844e8290d9ef4fdb8deec3c40cf0746
 SHA1 (patch-configure) = 5930b32de104cda553c9701086ffdf35a93f8d97
 SHA1 (patch-ext_gd_config.m4) = 2353efe6f25e1081b41d61033c3185cc643c7891
@@ -19,4 +19,3 @@ SHA1 (patch-php.ini-development) = 79512bd276adaed6bcf5f7f28e965f8a6b589add
 SHA1 (patch-php.ini-production) = f5d275abe7668a139999b3607e99f271450f56ae
 SHA1 (patch-run-tests.php) = ff80b8ad52d7c0a43fa318ed9bffca9d7b3e688d
 SHA1 (patch-sapi_cgi_Makefile.frag) = ba16463cc2a350df1db80c78ac9aec44b20d4bfe
-SHA1 (patch-sapi_fpm_fpm__fpm_sockets.h) = 012cfc14cb912cee3045ca1741876161ee44e8d5
