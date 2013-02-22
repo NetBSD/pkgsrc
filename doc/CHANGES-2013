@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.671 2013/02/22 15:38:23 imil Exp $
+$NetBSD: CHANGES-2013,v 1.672 2013/02/22 15:39:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -963,3 +963,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/xulrunner to 19.0 [ryoon 2013-02-22]
 	Updated www/firefox to 19.0 [ryoon 2013-02-22]
 	Updated www/nginx to 1.2.7nb1 [imil 2013-02-22]
+	Updated www/serf to 1.1.1 [taca 2013-02-22]
