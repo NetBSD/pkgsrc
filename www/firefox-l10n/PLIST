@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2013/01/10 16:03:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/02/22 20:28:55 ryoon Exp $
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af.manifest
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/cookie/cookieAcceptDialog.dtd
@@ -22,6 +23,8 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/globa
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutRights.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutSupport.properties
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/actions.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/appPicker.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/appstrings.properties
@@ -253,6 +256,7 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/pdfviewe
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak.manifest
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/cookie/cookieAcceptDialog.dtd
@@ -274,6 +278,8 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/globa
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutRights.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/actions.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/appPicker.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/appstrings.properties
@@ -505,6 +511,7 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/pdfviewe
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar.manifest
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/cookie/cookieAcceptDialog.dtd
@@ -526,6 +533,8 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/globa
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutRights.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/actions.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/appPicker.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/appstrings.properties
@@ -757,6 +766,7 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/pdfviewe
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as.manifest
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/cookie/cookieAcceptDialog.dtd
@@ -778,6 +788,8 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/globa
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutRights.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutSupport.properties
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/actions.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/appPicker.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/appstrings.properties
@@ -1009,6 +1021,7 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/pdfviewe
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast.manifest
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/cookie/cookieAcceptDialog.dtd
@@ -1030,6 +1043,8 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/gl
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutRights.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/actions.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/appPicker.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/appstrings.properties
@@ -1261,6 +1276,7 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/pdfvie
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be.manifest
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/cookie/cookieAcceptDialog.dtd
@@ -1282,6 +1298,8 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/globa
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutRights.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutSupport.properties
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/actions.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/appPicker.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/appstrings.properties
@@ -1513,6 +1531,7 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/pdfviewe
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg.manifest
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/cookie/cookieAcceptDialog.dtd
@@ -1534,6 +1553,8 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/globa
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutRights.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutSupport.properties
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/actions.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/appPicker.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/appstrings.properties
@@ -1765,6 +1786,7 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/pdfviewe
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD.manifest
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/cookie/cookieAcceptDialog.dtd
@@ -1786,6 +1808,8 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutRights.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutSupport.properties
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/actions.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/appPicker.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/appstrings.properties
@@ -2017,6 +2041,7 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/pd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN.manifest
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/cookie/cookieAcceptDialog.dtd
@@ -2038,6 +2063,8 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutRights.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutSupport.properties
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/actions.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/appPicker.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/appstrings.properties
@@ -2269,6 +2296,7 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/pd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br.manifest
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/autoconfig/autoconfig.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/cookie/cookieAcceptDialog.dtd
@@ -2290,6 +2318,8 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/globa
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutRights.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutSupport.properties
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/actions.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/appPicker.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/appstrings.properties
@@ -2521,6 +2551,7 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/pdfviewe
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs.manifest
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/branding/brand.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/branding/browserconfig.properties
@@ -2639,6 +2670,8 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/globa
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutRights.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutSupport.properties
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/actions.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/appPicker.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/appstrings.properties
@@ -2773,6 +2806,7 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/pdfviewe
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca.manifest
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/branding/browserconfig.properties
@@ -2891,6 +2925,8 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/globa
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutRights.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/actions.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/appPicker.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/appstrings.properties
@@ -3025,6 +3061,7 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/pdfviewe
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs.manifest
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/branding/brand.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/branding/browserconfig.properties
@@ -3143,6 +3180,8 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/globa
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutRights.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.properties
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/actions.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/appPicker.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/appstrings.properties
@@ -3277,6 +3316,7 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/pdfviewe
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb.manifest
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/branding/brand.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/branding/browserconfig.properties
@@ -3395,6 +3435,8 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/gl
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutRights.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutSupport.properties
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/actions.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/appPicker.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/appstrings.properties
@@ -3529,6 +3571,7 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/pdfvie
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy.manifest
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/branding/brand.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/branding/browserconfig.properties
@@ -3647,6 +3690,8 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/globa
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutRights.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutSupport.properties
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/actions.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/appPicker.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/appstrings.properties
@@ -3781,6 +3826,7 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/pdfviewe
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da.manifest
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/branding/brand.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/branding/browserconfig.properties
@@ -3899,6 +3945,8 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/globa
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutRights.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutSupport.properties
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/actions.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/appPicker.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/appstrings.properties
@@ -4033,6 +4081,7 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/pdfviewe
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de.manifest
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/branding/brand.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/branding/browserconfig.properties
@@ -4151,6 +4200,8 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/globa
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutRights.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutSupport.properties
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/actions.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/appPicker.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/appstrings.properties
@@ -4285,6 +4336,7 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/pdfviewe
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el.manifest
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/branding/brand.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/branding/browserconfig.properties
@@ -4403,6 +4455,8 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/globa
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutRights.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutSupport.properties
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/actions.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/appPicker.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/appstrings.properties
@@ -4537,6 +4591,7 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/pdfviewe
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB.manifest
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/branding/brand.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/branding/browserconfig.properties
@@ -4655,6 +4710,8 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutRights.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.properties
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/actions.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/appPicker.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/appstrings.properties
@@ -4789,6 +4846,7 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/pd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US.manifest
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/branding/brand.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/branding/browserconfig.properties
@@ -4907,6 +4965,8 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutRights.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.properties
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/actions.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/appPicker.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/appstrings.properties
@@ -5041,6 +5101,7 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/pd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA.manifest
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/branding/brand.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/branding/browserconfig.properties
@@ -5159,6 +5220,8 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutRights.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutSupport.properties
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/actions.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/appPicker.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/appstrings.properties
@@ -5293,6 +5356,7 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/pd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo.manifest
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/branding/brand.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/branding/browserconfig.properties
@@ -5411,6 +5475,8 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/globa
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutRights.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutSupport.properties
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/actions.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/appPicker.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/appstrings.properties
@@ -5545,6 +5611,7 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/pdfviewe
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR.manifest
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/branding/browserconfig.properties
@@ -5663,6 +5730,8 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutRights.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.properties
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/actions.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/appPicker.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/appstrings.properties
@@ -5797,6 +5866,7 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/pd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL.manifest
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/branding/browserconfig.properties
@@ -5915,6 +5985,8 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutRights.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutSupport.properties
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/actions.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/appPicker.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/appstrings.properties
@@ -6049,6 +6121,7 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/pd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES.manifest
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/branding/browserconfig.properties
@@ -6167,6 +6240,8 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutRights.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.properties
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/actions.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/appPicker.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/appstrings.properties
@@ -6301,6 +6376,7 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/pd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX.manifest
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/branding/brand.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/branding/browserconfig.properties
@@ -6419,6 +6495,8 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutRights.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutSupport.properties
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/actions.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/appPicker.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/appstrings.properties
@@ -6553,6 +6631,7 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/pd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et.manifest
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/branding/brand.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/branding/browserconfig.properties
@@ -6671,6 +6750,8 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/globa
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutRights.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutSupport.properties
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/actions.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/appPicker.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/appstrings.properties
@@ -6805,6 +6886,7 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/pdfviewe
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu.manifest
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/branding/brand.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/branding/browserconfig.properties
@@ -6923,6 +7005,8 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/globa
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutRights.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutSupport.properties
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/actions.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/appPicker.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/appstrings.properties
@@ -7057,6 +7141,7 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/pdfviewe
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa.manifest
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/branding/browserconfig.properties
@@ -7175,6 +7260,8 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/globa
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutRights.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutSupport.properties
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/actions.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/appPicker.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/appstrings.properties
@@ -7309,6 +7396,7 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/pdfviewe
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi.manifest
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/branding/browserconfig.properties
@@ -7429,6 +7517,8 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/globa
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutRights.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.properties
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/actions.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/appPicker.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/appstrings.properties
@@ -7561,6 +7651,7 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/pdfviewe
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr.manifest
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/branding/browserconfig.properties
@@ -7681,6 +7772,8 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/globa
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutRights.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.properties
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/actions.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/appPicker.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/appstrings.properties
@@ -7813,6 +7906,7 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/pdfviewe
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL.manifest
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/branding/brand.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/branding/browserconfig.properties
@@ -7933,6 +8027,8 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutRights.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutSupport.properties
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/actions.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/appPicker.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/appstrings.properties
@@ -8065,6 +8161,7 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/pd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE.manifest
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/branding/browserconfig.properties
@@ -8185,6 +8282,8 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutRights.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/actions.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/appPicker.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/appstrings.properties
@@ -8317,6 +8416,7 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/pd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd.manifest
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/branding/brand.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/branding/browserconfig.properties
@@ -8437,6 +8537,8 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/globa
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutRights.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutSupport.properties
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/actions.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/appPicker.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/appstrings.properties
@@ -8569,6 +8671,7 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/pdfviewe
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl.manifest
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/branding/browserconfig.properties
@@ -8689,6 +8792,8 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/globa
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutRights.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutSupport.properties
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/actions.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/appPicker.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/appstrings.properties
@@ -8821,6 +8926,7 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/pdfviewe
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN.manifest
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/branding/browserconfig.properties
@@ -8941,6 +9047,8 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutRights.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutSupport.properties
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/actions.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/appPicker.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/appstrings.properties
@@ -9073,6 +9181,7 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/pd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he.manifest
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/branding/brand.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/branding/browserconfig.properties
@@ -9193,6 +9302,8 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/globa
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutRights.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutSupport.properties
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/actions.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/appPicker.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/appstrings.properties
@@ -9325,6 +9436,7 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/pdfviewe
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN.manifest
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/branding/browserconfig.properties
@@ -9445,6 +9557,8 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutRights.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutSupport.properties
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/actions.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/appPicker.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/appstrings.properties
@@ -9577,6 +9691,7 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/pd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr.manifest
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/branding/browserconfig.properties
@@ -9697,6 +9812,8 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/globa
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutRights.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutSupport.properties
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/actions.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/appPicker.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/appstrings.properties
@@ -9829,6 +9946,7 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/pdfviewe
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu.manifest
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/branding/browserconfig.properties
@@ -9949,6 +10067,8 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/globa
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutRights.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.properties
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/actions.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/appPicker.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/appstrings.properties
@@ -10081,6 +10201,7 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/pdfviewe
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM.manifest
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/branding/brand.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/branding/browserconfig.properties
@@ -10201,6 +10322,8 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutRights.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutSupport.properties
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/actions.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/appPicker.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/appstrings.properties
@@ -10333,6 +10456,7 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/pd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id.manifest
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/branding/brand.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/branding/browserconfig.properties
@@ -10453,6 +10577,8 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/globa
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutRights.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutSupport.properties
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/actions.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/appPicker.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/appstrings.properties
@@ -10585,6 +10711,7 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/pdfviewe
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is.manifest
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/branding/brand.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/branding/browserconfig.properties
@@ -10705,6 +10832,8 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/globa
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutRights.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutSupport.properties
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/actions.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/appPicker.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/appstrings.properties
@@ -10837,6 +10966,7 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/pdfviewe
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it.manifest
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/branding/brand.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/branding/browserconfig.properties
@@ -10957,6 +11087,8 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/globa
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutRights.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutSupport.properties
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/actions.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/appPicker.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/appstrings.properties
@@ -11089,6 +11221,7 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/pdfviewe
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja.manifest
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/branding/browserconfig.properties
@@ -11209,6 +11342,8 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/globa
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutRights.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/actions.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/appPicker.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/appstrings.properties
@@ -11341,6 +11476,7 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/pdfviewe
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk.manifest
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/branding/browserconfig.properties
@@ -11461,6 +11597,8 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/globa
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutRights.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutSupport.properties
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/actions.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/appPicker.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/appstrings.properties
@@ -11593,6 +11731,7 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/pdfviewe
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn.manifest
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/branding/brand.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/branding/browserconfig.properties
@@ -11713,6 +11852,8 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/globa
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutRights.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutSupport.properties
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/actions.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/appPicker.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/appstrings.properties
@@ -11845,6 +11986,7 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/pdfviewe
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko.manifest
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/branding/browserconfig.properties
@@ -11965,6 +12107,8 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/globa
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutRights.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/actions.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/appPicker.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/appstrings.properties
@@ -12097,6 +12241,7 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/pdfviewe
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku.manifest
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/branding/browserconfig.properties
@@ -12217,6 +12362,8 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/globa
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutRights.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/actions.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/appPicker.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/appstrings.properties
@@ -12349,6 +12496,7 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/pdfviewe
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg.manifest
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/branding/brand.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/branding/browserconfig.properties
@@ -12469,6 +12617,8 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/globa
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutRights.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutSupport.properties
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/actions.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/appPicker.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/appstrings.properties
@@ -12601,6 +12751,7 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/pdfviewe
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt.manifest
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/branding/brand.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/branding/browserconfig.properties
@@ -12721,6 +12872,8 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/globa
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutRights.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.properties
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/actions.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/appPicker.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/appstrings.properties
@@ -12853,6 +13006,7 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/pdfviewe
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv.manifest
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/branding/brand.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/branding/browserconfig.properties
@@ -12973,6 +13127,8 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/globa
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutRights.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutSupport.properties
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/actions.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/appPicker.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/appstrings.properties
@@ -13105,6 +13261,7 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/pdfviewe
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai.manifest
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/branding/brand.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/branding/browserconfig.properties
@@ -13225,6 +13382,8 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/gl
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutRights.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutSupport.properties
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/actions.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/appPicker.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/appstrings.properties
@@ -13357,6 +13516,7 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/pdfvie
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk.manifest
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/branding/browserconfig.properties
@@ -13477,6 +13637,8 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/globa
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutRights.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutSupport.properties
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/actions.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/appPicker.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/appstrings.properties
@@ -13609,6 +13771,7 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/pdfviewe
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml.manifest
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/branding/browserconfig.properties
@@ -13729,6 +13892,8 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/globa
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutRights.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/actions.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/appPicker.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/appstrings.properties
@@ -13861,6 +14026,7 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/pdfviewe
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr.manifest
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/branding/browserconfig.properties
@@ -13981,6 +14147,8 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/globa
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutRights.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutSupport.properties
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/actions.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/appPicker.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/appstrings.properties
@@ -14113,6 +14281,7 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/pdfviewe
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO.manifest
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/branding/browserconfig.properties
@@ -14233,6 +14402,8 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutRights.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.properties
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/actions.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/appPicker.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/appstrings.properties
@@ -14365,6 +14536,7 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/pd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl.manifest
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/branding/browserconfig.properties
@@ -14485,6 +14657,8 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/globa
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutRights.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.properties
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/actions.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/appPicker.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/appstrings.properties
@@ -14617,6 +14791,7 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/pdfviewe
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO.manifest
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/branding/browserconfig.properties
@@ -14737,6 +14912,8 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutRights.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutSupport.properties
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/actions.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/appPicker.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/appstrings.properties
@@ -14869,6 +15046,7 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/pd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso.manifest
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/branding/brand.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/branding/browserconfig.properties
@@ -14989,6 +15167,8 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/gl
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutRights.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutSupport.properties
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/actions.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/appPicker.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/appstrings.properties
@@ -15121,6 +15301,7 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/pdfvie
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or.manifest
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/branding/brand.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/branding/browserconfig.properties
@@ -15241,6 +15422,8 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/globa
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutRights.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutSupport.properties
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/actions.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/appPicker.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/appstrings.properties
@@ -15373,6 +15556,7 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/pdfviewe
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN.manifest
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/branding/browserconfig.properties
@@ -15493,6 +15677,8 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutRights.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutSupport.properties
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/actions.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/appPicker.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/appstrings.properties
@@ -15625,6 +15811,7 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl.manifest
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/branding/browserconfig.properties
@@ -15747,6 +15934,8 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/globa
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutRights.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.properties
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/actions.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/appPicker.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/appstrings.properties
@@ -15877,6 +16066,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/servi
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR.manifest
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/branding/browserconfig.properties
@@ -15999,6 +16189,8 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutRights.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutSupport.properties
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/actions.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/appPicker.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/appstrings.properties
@@ -16129,6 +16321,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT.manifest
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/branding/brand.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/branding/browserconfig.properties
@@ -16251,6 +16444,8 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutRights.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.properties
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/actions.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/appPicker.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/appstrings.properties
@@ -16381,6 +16576,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm.manifest
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/branding/brand.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/branding/browserconfig.properties
@@ -16503,6 +16699,8 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/globa
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutRights.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutSupport.properties
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/actions.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/appPicker.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/appstrings.properties
@@ -16633,6 +16831,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/servi
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro.manifest
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/branding/browserconfig.properties
@@ -16755,6 +16954,8 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/globa
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutRights.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/actions.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/appPicker.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/appstrings.properties
@@ -16885,6 +17086,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/servi
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru.manifest
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/branding/browserconfig.properties
@@ -17007,6 +17209,8 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/globa
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutRights.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/actions.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/appPicker.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/appstrings.properties
@@ -17137,6 +17341,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/servi
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si.manifest
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/branding/brand.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/branding/browserconfig.properties
@@ -17259,6 +17464,8 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/globa
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutRights.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutSupport.properties
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/actions.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/appPicker.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/appstrings.properties
@@ -17389,6 +17596,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/servi
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk.manifest
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/branding/browserconfig.properties
@@ -17511,6 +17719,8 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/globa
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutRights.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.properties
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/actions.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/appPicker.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/appstrings.properties
@@ -17641,6 +17851,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/servi
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl.manifest
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/branding/browserconfig.properties
@@ -17763,6 +17974,8 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/globa
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutRights.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutSupport.properties
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/actions.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/appPicker.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/appstrings.properties
@@ -17893,6 +18106,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/servi
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son.manifest
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/branding/brand.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/branding/browserconfig.properties
@@ -18015,6 +18229,8 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/gl
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutRights.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutSupport.properties
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/actions.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/appPicker.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/appstrings.properties
@@ -18145,6 +18361,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/se
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq.manifest
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/branding/browserconfig.properties
@@ -18267,6 +18484,8 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/globa
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutRights.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutSupport.properties
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/actions.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/appPicker.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/appstrings.properties
@@ -18397,6 +18616,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/servi
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr.manifest
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/branding/browserconfig.properties
@@ -18519,6 +18739,8 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/globa
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutRights.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutSupport.properties
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/actions.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/appPicker.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/appstrings.properties
@@ -18649,6 +18871,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/servi
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE.manifest
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/branding/brand.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/branding/browserconfig.properties
@@ -18771,6 +18994,8 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutRights.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.properties
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/actions.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/appPicker.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/appstrings.properties
@@ -18901,6 +19126,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK.manifest
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/branding/browserconfig.properties
@@ -19023,6 +19249,8 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutRights.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/actions.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/appPicker.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/appstrings.properties
@@ -19153,6 +19381,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta.manifest
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/branding/brand.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/branding/browserconfig.properties
@@ -19275,6 +19504,8 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/globa
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutRights.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutSupport.properties
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/actions.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/appPicker.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/appstrings.properties
@@ -19405,6 +19636,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/servi
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te.manifest
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/branding/brand.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/branding/browserconfig.properties
@@ -19527,6 +19759,8 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/globa
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutRights.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutSupport.properties
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/actions.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/appPicker.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/appstrings.properties
@@ -19657,6 +19891,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/servi
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th.manifest
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/branding/brand.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/branding/browserconfig.properties
@@ -19779,6 +20014,8 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/globa
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutRights.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutSupport.properties
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/actions.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/appPicker.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/appstrings.properties
@@ -19909,6 +20146,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/servi
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr.manifest
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/branding/brand.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/branding/browserconfig.properties
@@ -20031,6 +20269,8 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/globa
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutRights.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.properties
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/actions.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/appPicker.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/appstrings.properties
@@ -20161,6 +20401,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/servi
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk.manifest
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/branding/brand.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/branding/browserconfig.properties
@@ -20283,6 +20524,8 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/globa
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutRights.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutSupport.properties
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/actions.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/appPicker.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/appstrings.properties
@@ -20413,6 +20656,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/servi
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi.manifest
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/branding/brand.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/branding/browserconfig.properties
@@ -20535,6 +20779,8 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/globa
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutRights.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutSupport.properties
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/actions.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/appPicker.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/appstrings.properties
@@ -20665,6 +20911,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/servi
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN.manifest
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/branding/brand.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/branding/browserconfig.properties
@@ -20787,6 +21034,8 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutRights.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutSupport.properties
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/actions.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/appPicker.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/appstrings.properties
@@ -20917,6 +21166,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW.manifest
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/branding/brand.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/branding/browserconfig.properties
@@ -21039,6 +21289,8 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutRights.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutSupport.properties
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/actions.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/appPicker.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/appstrings.properties
@@ -21169,6 +21421,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/install.rdf
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/.mkdir.done
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu.manifest
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/branding/brand.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/branding/brand.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/branding/browserconfig.properties
@@ -21291,6 +21544,8 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/globa
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutRights.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutSupport.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutSupport.properties
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutTelemetry.dtd
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutTelemetry.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/actions.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/appPicker.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/appstrings.properties
