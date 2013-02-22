@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.93 2013/02/07 20:32:42 ryoon Exp $
+$NetBSD: distinfo,v 1.94 2013/02/22 14:48:06 ryoon Exp $
 
-SHA1 (firefox-18.0.2.source.tar.bz2) = fe5810d61edf6f4dc8bc477a08f9483b955f747b
-RMD160 (firefox-18.0.2.source.tar.bz2) = e6ea30a986a99b5d2de427358638cf233375e927
-Size (firefox-18.0.2.source.tar.bz2) = 96487282 bytes
+SHA1 (firefox-19.0.source.tar.bz2) = 816d64e8c9432349cd208fd181d210c54f985351
+RMD160 (firefox-19.0.source.tar.bz2) = 54156ae25cb260d42319d1aad5bc9d8b69ea473c
+Size (firefox-19.0.source.tar.bz2) = 98837382 bytes
 SHA1 (patch-aa) = 115ed7c263cbf213d608761ae1f5b14a3b10df90
 SHA1 (patch-ab) = b60129618bb0945b65636f99980bdc026ec16fd9
 SHA1 (patch-ac) = 609a094d01878da0bdfb008a0cb30b96bdb4c6ce
@@ -38,7 +38,7 @@ SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = faed34d94646453cd01acbdec1da2d
 SHA1 (patch-ipc_ipdl_ipdl_lower.py) = 4025c0a4e149d9b2087331e10b342734fa77a905
 SHA1 (patch-js_src_jsgc.cpp) = c514b7fb84002a1909638cd7f3386931cb0f2551
 SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = f9b13d9e7910613c82f6b1ee4131a6c4eb1d4580
-SHA1 (patch-mb) = 9d13c8eae6ea4a2993aa991d27f1fb5c671339ef
+SHA1 (patch-mb) = 812a7ef501d95acf2135e1033a5e4a8e64897980
 SHA1 (patch-md) = 7fd607a3edd2ea5f7a5671fc6d06fba69c46c36f
 SHA1 (patch-me) = 2ff755782bd35caded8934000d039976dad44103
 SHA1 (patch-media_libcubeb_src_Makefile.in) = a24f1a79a14b1933286cd85618fbe91db109176d
@@ -49,10 +49,9 @@ SHA1 (patch-pc) = 099a4f6ac32fd2f45c91eb525750bde96684693a
 SHA1 (patch-pd) = 9750259906ee270f6898e3c77288aa5260d6e9a7
 SHA1 (patch-pg) = d6d6071cbe8a771873e1537034c0bb9186f8e245
 SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
-SHA1 (patch-toolkit_components_osfile_osfileutils.cpp) = baeaad49f79f8478a47e84879a2eaa4b57514f73
 SHA1 (patch-toolkit_library_Makefile.in) = 9206b614833cdd27f9d29c478ab0490eea709983
 SHA1 (patch-toolkit_toolkit-tiers.mk) = 59e5174edd04f3c4e5d6ebb450a42e4e1dee0801
-SHA1 (patch-toolkit_xre_nsAppRunner.cpp) = 77ceac37b1b96451228e53e40066853fd7cca58c
+SHA1 (patch-toolkit_xre_nsAppRunner.cpp) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-xa) = 9182485283599a96663358bdc680c5cdb1d94a78
 SHA1 (patch-xb) = 30eea880b40cee45d1235d3292fead4b5a54bbaa
 SHA1 (patch-xc) = 8575fdac2b47966ccfb5e1cc7ca8505163e358c9
