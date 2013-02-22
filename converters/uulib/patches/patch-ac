@@ -1,16 +1,20 @@
-$NetBSD: patch-ac,v 1.1 2008/06/01 21:46:37 dholland Exp $
+$NetBSD: patch-ac,v 1.2 2013/02/22 21:20:28 jperkin Exp $
 
---- uulib/uunconc.c.orig	2004-03-01 17:52:27.000000000 -0500
-+++ uulib/uunconc.c	2008-06-01 17:05:57.000000000 -0400
-@@ -49,6 +49,7 @@
+--- uulib/uunconc.c.orig	2004-03-01 22:52:27.000000000 +0000
++++ uulib/uunconc.c
+@@ -49,6 +49,11 @@
  #include <errno.h>
  #endif
  
++#ifdef __sun
++#define _PATH_TMP	"/tmp/"
++#else
 +#include <paths.h>
++#endif
  #include <crc32.h>
  #include <uudeview.h>
  #include <uuint.h>
-@@ -1306,6 +1307,7 @@
+@@ -1306,6 +1311,7 @@ UUDecode (uulist *data)
  {
    int state=BEGIN, part=-1, res=0, hb;
    long rsize, dsize, numbytes;
@@ -18,7 +22,7 @@ $NetBSD: patch-ac,v 1.1 2008/06/01 21:46:37 dholland Exp $
    FILE *datain, *dataout;
    unsigned char r[8];
    char *mode, *ntmp;
-@@ -1329,13 +1331,13 @@
+@@ -1329,13 +1335,13 @@ UUDecode (uulist *data)
    else
      mode = "wb";	/* otherwise in binary          */
  
@@ -34,7 +38,7 @@ $NetBSD: patch-ac,v 1.1 2008/06/01 21:46:37 dholland Exp $
      /*
       * we couldn't create a temporary file. Usually this means that TMP
       * and TEMP aren't set
-@@ -1348,6 +1350,19 @@
+@@ -1348,6 +1354,19 @@ UUDecode (uulist *data)
      uu_errno = errno;
      return UURET_IOERR;
    }
@@ -54,7 +58,7 @@ $NetBSD: patch-ac,v 1.1 2008/06/01 21:46:37 dholland Exp $
    /*
     * we don't have begin lines in Base64 or plain text files.
     */
-@@ -1496,7 +1511,7 @@
+@@ -1496,7 +1515,7 @@ UUDecode (uulist *data)
     */
  
    if (data->uudet == BH_ENCODED && data->binfile) {
@@ -63,7 +67,7 @@ $NetBSD: patch-ac,v 1.1 2008/06/01 21:46:37 dholland Exp $
        UUMessage (uunconc_id, __LINE__, UUMSG_ERROR,
  		 uustring (S_NO_TEMP_NAME));
        progress.action = 0;
-@@ -1510,6 +1525,17 @@
+@@ -1510,6 +1529,17 @@ UUDecode (uulist *data)
        free (ntmp);
        return UURET_IOERR;
      }
