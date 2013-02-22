@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/02/17 14:53:13 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/22 19:35:30 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
 COMMENT=	Framework for writing networked applications
@@ -14,6 +14,8 @@ REPLACE_PYTHON+=	twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	twisted/trial/test/scripttest.py
 REPLACE_PYTHON+=	twisted/topfiles/setup.py
 REPLACE_PYTHON+=	twisted/python/test/pullpipe.py
+
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=1 -D_XOPEN_SOURCE_EXTENDED=1 -Du_int=uint32_t
 
 # twisted will install files present in the source directory even
 # though they were not in the tarball.  Therefore, we must clean the
