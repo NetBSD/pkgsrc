@@ -1,0 +1,20 @@
+$NetBSD: README.Cygwin,v 1.1 2013/02/22 13:59:47 obache Exp $
+
+Please read the general README file as well.
+
+==========================================================================
+
+pkgsrc supports both gcc (GNU Compiler Collection) and clang (C Language Family
+Frontend for LLVM). gcc is the default.
+
+To bootstrap using clang:
+
+	env CC=clang ./bootstrap --compiler=clang
+
+==========================================================================
+
+The su(1) command has been in Cygwin distribution, but it has never worked.
+Unless you bootstrap pkgsrc with the --unprivileged option, workaround is:
+
+  * Right click "Cygwin Terminal" in your Start Menu, then pick
+    "Run as administrator".
