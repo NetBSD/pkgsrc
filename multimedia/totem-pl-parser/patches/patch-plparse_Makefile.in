@@ -1,0 +1,24 @@
+$NetBSD: patch-plparse_Makefile.in,v 1.1 2013/02/22 20:42:40 jperkin Exp $
+
+Fix build with non-GNU linkers.
+
+--- plparse/Makefile.in.orig	2012-09-18 09:45:40.000000000 +0000
++++ plparse/Makefile.in
+@@ -515,8 +515,6 @@ libtotem_plparser_la_LIBADD = \
+ 
+ libtotem_plparser_la_LDFLAGS = \
+ 	-version-info $(PLPARSER_LT_VERSION)	\
+-	-export-symbols $(srcdir)/plparser.symbols \
+-	-no-undefined				\
+ 	$(CODE_COVERAGE_LDFLAGS)		\
+ 	$(AM_LDFLAGS)
+ 
+@@ -567,8 +565,6 @@ libtotem_plparser_mini_la_LIBADD = \
+ 
+ libtotem_plparser_mini_la_LDFLAGS = \
+ 	-version-info $(PLPARSER_LT_VERSION)		\
+-	-export-symbols $(srcdir)/plparser-mini.symbols	\
+-	-no-undefined					\
+ 	$(CODE_COVERAGE_LDFLAGS)			\
+ 	$(AM_LDFLAGS)
+ 
