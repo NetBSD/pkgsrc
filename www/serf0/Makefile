@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/02/22 15:47:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/22 15:49:25 taca Exp $
 #
 
 DISTNAME=	serf-0.7.2
+PKGNAME=	${DISTNAME:S/serf/serf0/}
 CATEGORIES=	www
 MASTER_SITES=	http://serf.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
