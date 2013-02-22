@@ -1,0 +1,25 @@
+$NetBSD: patch-src_libspf2_Makefile.in,v 1.1 2013/02/22 11:48:16 jperkin Exp $
+
+Don't link against libreplace, it is an empty library.
+
+--- src/libspf2/Makefile.in.orig	2008-11-04 15:33:02.000000000 +0000
++++ src/libspf2/Makefile.in
+@@ -51,8 +51,7 @@ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(libdir)"
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libspf2_la_DEPENDENCIES =  \
+-	$(top_builddir)/src/libreplace/libreplace.la
++libspf2_la_DEPENDENCIES = 
+ am_libspf2_la_OBJECTS = spf_compile.lo spf_dns.lo spf_dns_cache.lo \
+ 	spf_dns_null.lo spf_dns_resolv.lo spf_dns_rr.lo \
+ 	spf_dns_test.lo spf_dns_windns.lo spf_dns_zone.lo \
+@@ -251,7 +250,7 @@ libspf2_la_SOURCES = \
+ 	spf_utils.c \
+ 	spf_win32.c
+ 
+-libspf2_la_LIBADD = $(top_builddir)/src/libreplace/libreplace.la
++libspf2_la_LIBADD = 
+ libspf2_la_LDFLAGS = -version-info 3:0:1
+ all: all-recursive
+ 

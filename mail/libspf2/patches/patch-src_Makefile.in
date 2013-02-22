@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/02/22 11:48:16 jperkin Exp $
+
+Don't decend into libreplace, it is an empty library.
+
+--- src/Makefile.in.orig	2008-11-04 15:33:01.000000000 +0000
++++ src/Makefile.in
+@@ -117,7 +117,7 @@ SED = @SED@
+ SET_MAKE = @SET_MAKE@
+ SHELL = @SHELL@
+ STRIP = @STRIP@
+-SUBDIRS = include libreplace libspf2 spfquery spftest spfd spf_example
++SUBDIRS = include libspf2 spfquery spftest spfd spf_example
+ VERSION = @VERSION@
+ ac_ct_CC = @ac_ct_CC@
+ ac_ct_CXX = @ac_ct_CXX@
