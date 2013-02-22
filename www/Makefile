@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.945 2013/02/22 15:32:27 taca Exp $
+# $NetBSD: Makefile,v 1.946 2013/02/22 17:07:52 imil Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -212,6 +212,7 @@ SUBDIR+=	neon
 SUBDIR+=	netscape
 SUBDIR+=	netsurf
 SUBDIR+=	nginx
+SUBDIR+=	nginx-devel
 SUBDIR+=	ns-plugger-common
 SUBDIR+=	ns-remote
 SUBDIR+=	nspluginwrapper
