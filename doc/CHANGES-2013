@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.669 2013/02/22 13:18:09 obache Exp $
+$NetBSD: CHANGES-2013,v 1.670 2013/02/22 14:52:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -960,3 +960,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php53 to 5.3.22 [taca 2013-02-22]
 	Updated lang/php54 to 5.4.12 [taca 2013-02-22]
 	Updated net/mikutter to 0.2.1.1130 [obache 2013-02-22]
+	Updated devel/xulrunner to 19.0 [ryoon 2013-02-22]
+	Updated www/firefox to 19.0 [ryoon 2013-02-22]
