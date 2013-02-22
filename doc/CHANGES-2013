@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.674 2013/02/22 15:53:45 taca Exp $
+$NetBSD: CHANGES-2013,v 1.675 2013/02/22 16:24:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -966,3 +966,12 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/serf to 1.1.1 [taca 2013-02-22]
 	Updated www/serf0 to 0.7.2 [taca 2013-02-22]
 	Updated devel/subversion16-base to 1.6.20nb1 [taca 2013-02-22]
+	Updated lang/ruby193-base to 1.9.3p392 [taca 2013-02-22]
+	Updated databases/ruby-gdbm to 1.9.3p392nb2 [taca 2013-02-22]
+	Updated devel/ruby-curses to 1.9.3p392 [taca 2013-02-22]
+	Updated devel/ruby-fiddle to 1.9.3p392 [taca 2013-02-22]
+	Updated devel/ruby-readline to 1.9.3p392nb2 [taca 2013-02-22]
+	Updated x11/ruby-tk to 1.9.3p392nb1 [taca 2013-02-22]
+	Updated lang/ruby193 to 1.9.3p392 [taca 2013-02-22]
+	Updated lang/ruby to 1.9.3p392nb1 [taca 2013-02-22]
+	Updated devel/ruby-mode to 1.9.3p392 [taca 2013-02-22]
