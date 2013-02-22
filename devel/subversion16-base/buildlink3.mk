@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/02/09 13:28:34 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/02/22 15:33:48 taca Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
@@ -31,7 +31,7 @@ pkgbase := subversion16-base
 # If serf and -apr1 are selected, the build will probably fail.
 # Do that rather than force neon for apr0
 .if !empty(PKG_BUILD_OPTIONS.subversion16-base:Mserf)
-.  include "../../www/serf/buildlink3.mk"
+.  include "../../www/serf0/buildlink3.mk"
 .else
 .  include "../../www/neon/buildlink3.mk"
 .endif
