@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.77 2013/02/20 17:45:11 asau Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.78 2013/02/22 21:22:58 asau Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -15,7 +15,7 @@
 
     <para>pkgsrc can be bootstrapped for use in two different modes:
     privileged and unprivileged one. In unprivileged mode in contrast
-    to privileged one all programs are install under one particular user
+    to privileged one all programs are installed under one particular user
     and cannot utilise privileged operations (packages don't create
     special users and all special file permissions like setuid are ignored).
     </para>
