@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/23 18:16:20 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/02/22 19:59:07 shattered Exp $
 #
 
 DISTNAME=	aide-0.15.1
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html
+HOMEPAGE=	http://aide.sourceforge.net/
 COMMENT=	Free intrusion detection system for checking file integrity
 LICENSE=	artistic
 
