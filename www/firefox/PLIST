@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2013/01/10 15:03:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.61 2013/02/22 14:54:01 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
@@ -39,6 +39,7 @@ lib/firefox/chrome/browser/content/browser/abouthome/snippet1.png
 lib/firefox/chrome/browser/content/browser/abouthome/snippet2.png
 lib/firefox/chrome/browser/content/browser/abouthome/sync.png
 lib/firefox/chrome/browser/content/browser/baseMenuOverlay.xul
+lib/firefox/chrome/browser/content/browser/blockedSite.xhtml
 lib/firefox/chrome/browser/content/browser/bookmarks/bookmarksPanel.js
 lib/firefox/chrome/browser/content/browser/bookmarks/bookmarksPanel.xul
 lib/firefox/chrome/browser/content/browser/bookmarks/sidebarUtils.js
@@ -50,6 +51,8 @@ lib/firefox/chrome/browser/content/browser/certerror/aboutCertError.css
 lib/firefox/chrome/browser/content/browser/certerror/aboutCertError.xhtml
 lib/firefox/chrome/browser/content/browser/content.js
 lib/firefox/chrome/browser/content/browser/debugger-controller.js
+lib/firefox/chrome/browser/content/browser/debugger-panes.js
+lib/firefox/chrome/browser/content/browser/debugger-toolbar.js
 lib/firefox/chrome/browser/content/browser/debugger-view.js
 lib/firefox/chrome/browser/content/browser/debugger.css
 lib/firefox/chrome/browser/content/browser/debugger.xul
@@ -173,11 +176,10 @@ lib/firefox/chrome/browser/content/browser/preferences/sync.js
 lib/firefox/chrome/browser/content/browser/preferences/sync.xul
 lib/firefox/chrome/browser/content/browser/preferences/tabs.js
 lib/firefox/chrome/browser/content/browser/preferences/tabs.xul
+lib/firefox/chrome/browser/content/browser/report-phishing-overlay.xul
 lib/firefox/chrome/browser/content/browser/safeMode.css
 lib/firefox/chrome/browser/content/browser/safeMode.js
 lib/firefox/chrome/browser/content/browser/safeMode.xul
-lib/firefox/chrome/browser/content/browser/safebrowsing/blockedSite.xhtml
-lib/firefox/chrome/browser/content/browser/safebrowsing/report-phishing-overlay.xul
 lib/firefox/chrome/browser/content/browser/sanitize.js
 lib/firefox/chrome/browser/content/browser/sanitize.xul
 lib/firefox/chrome/browser/content/browser/sanitizeDialog.css
@@ -246,6 +248,7 @@ lib/firefox/chrome/browser/skin/classic/browser/aboutSocialError.css
 lib/firefox/chrome/browser/skin/classic/browser/aboutSyncTabs.css
 lib/firefox/chrome/browser/skin/classic/browser/actionicon-tab.png
 lib/firefox/chrome/browser/skin/classic/browser/browser.css
+lib/firefox/chrome/browser/skin/classic/browser/click-to-play-warning-stripes.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/alerticon-warning.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/arrows.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/breadcrumbs-scrollbutton.png
@@ -298,6 +301,7 @@ lib/firefox/chrome/browser/skin/classic/browser/devtools/layout-buttons.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/layoutview.css
 lib/firefox/chrome/browser/skin/classic/browser/devtools/magnifying-glass.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/markup-view.css
+lib/firefox/chrome/browser/skin/classic/browser/devtools/option-icon.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/orion-breakpoint.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/orion-container.css
 lib/firefox/chrome/browser/skin/classic/browser/devtools/orion-debug-location.png
@@ -314,6 +318,7 @@ lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole.css
 lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole.png
 lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole_networkpanel.css
 lib/firefox/chrome/browser/skin/classic/browser/downloads/buttons.png
+lib/firefox/chrome/browser/skin/classic/browser/downloads/download-glow-small.png
 lib/firefox/chrome/browser/skin/classic/browser/downloads/download-glow.png
 lib/firefox/chrome/browser/skin/classic/browser/downloads/download-notification.png
 lib/firefox/chrome/browser/skin/classic/browser/downloads/downloads.css
@@ -511,11 +516,22 @@ lib/firefox/chrome/pdfjs/README.mozilla
 lib/firefox/chrome/pdfjs/chrome.manifest
 lib/firefox/chrome/pdfjs/components/PdfStreamConverter.js
 lib/firefox/chrome/pdfjs/content/PdfJs.jsm
+lib/firefox/chrome/pdfjs/content/build/pdf.js
 lib/firefox/chrome/pdfjs/content/web/debugger.js
 lib/firefox/chrome/pdfjs/content/web/images/annotation-check.svg
 lib/firefox/chrome/pdfjs/content/web/images/annotation-comment.svg
-lib/firefox/chrome/pdfjs/content/web/images/annotation-text.svg
+lib/firefox/chrome/pdfjs/content/web/images/annotation-help.svg
+lib/firefox/chrome/pdfjs/content/web/images/annotation-insert.svg
+lib/firefox/chrome/pdfjs/content/web/images/annotation-key.svg
+lib/firefox/chrome/pdfjs/content/web/images/annotation-newparagraph.svg
+lib/firefox/chrome/pdfjs/content/web/images/annotation-note.svg
+lib/firefox/chrome/pdfjs/content/web/images/annotation-paragraph.svg
+lib/firefox/chrome/pdfjs/content/web/images/findbarButton-next-rtl.png
+lib/firefox/chrome/pdfjs/content/web/images/findbarButton-next.png
+lib/firefox/chrome/pdfjs/content/web/images/findbarButton-previous-rtl.png
+lib/firefox/chrome/pdfjs/content/web/images/findbarButton-previous.png
 lib/firefox/chrome/pdfjs/content/web/images/loading-icon.gif
+lib/firefox/chrome/pdfjs/content/web/images/loading-small.png
 lib/firefox/chrome/pdfjs/content/web/images/texture.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-bookmark.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-download.png
@@ -527,6 +543,7 @@ lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-pageDown.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-pageUp-rtl.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-pageUp.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-print.png
+lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-search.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-sidebarToggle.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-viewOutline.png
 lib/firefox/chrome/pdfjs/content/web/images/toolbarButton-viewThumbnail.png
@@ -583,6 +600,7 @@ lib/firefox/modules/AutocompletePopup.jsm
 lib/firefox/modules/BrowserNewTabPreloader.jsm
 lib/firefox/modules/DownloadsCommon.jsm
 lib/firefox/modules/HUDService.jsm
+lib/firefox/modules/KeywordURLResetPrompter.jsm
 lib/firefox/modules/MigrationUtils.jsm
 lib/firefox/modules/NetworkPanel.jsm
 lib/firefox/modules/NetworkPrioritizer.jsm
@@ -591,7 +609,6 @@ lib/firefox/modules/PageThumbs.jsm
 lib/firefox/modules/PageThumbsWorker.js
 lib/firefox/modules/PlacesUIUtils.jsm
 lib/firefox/modules/PropertyPanel.jsm
-lib/firefox/modules/SafeBrowsing.jsm
 lib/firefox/modules/SharedFrame.jsm
 lib/firefox/modules/SignInToWebsite.jsm
 lib/firefox/modules/Social.jsm
@@ -643,6 +660,7 @@ lib/firefox/modules/devtools/TiltVisualizerStyle.jsm
 lib/firefox/modules/devtools/TiltWorkerCrafter.js
 lib/firefox/modules/devtools/TiltWorkerPicker.js
 lib/firefox/modules/devtools/Undo.jsm
+lib/firefox/modules/devtools/VariablesView.jsm
 lib/firefox/modules/devtools/gcli.jsm
 lib/firefox/modules/devtools/responsivedesign.jsm
 lib/firefox/modules/devtools/scratchpad-manager.jsm
@@ -692,7 +710,10 @@ lib/firefox/modules/services-sync/record.js
 lib/firefox/modules/services-sync/resource.js
 lib/firefox/modules/services-sync/rest.js
 lib/firefox/modules/services-sync/service.js
+lib/firefox/modules/services-sync/stages/cluster.js
+lib/firefox/modules/services-sync/stages/enginesync.js
 lib/firefox/modules/services-sync/status.js
+lib/firefox/modules/services-sync/userapi.js
 lib/firefox/modules/services-sync/util.js
 lib/firefox/modules/services/metrics/collector.jsm
 lib/firefox/modules/services/metrics/dataprovider.jsm
