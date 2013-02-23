@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2013/02/17 08:01:50 dholland Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/02/23 23:53:18 dholland Exp $
 #
 # used by editors/emacs22/Makefile
 # used by editors/emacs22-nox11/Makefile
 
-PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
 
 DISTNAME=	emacs-22.3
