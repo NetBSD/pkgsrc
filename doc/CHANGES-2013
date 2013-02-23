@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.679 2013/02/23 02:34:07 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.680 2013/02/23 03:38:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -979,3 +979,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox-l10n to 19.0 [ryoon 2013-02-22]
 	Updated mail/getmail to 4.39.0 [schmonz 2013-02-23]
 	Updated multimedia/mediainfo to 0.7.62 [schmonz 2013-02-23]
+	Updated devel/kyua-cli to 0.6 [jmmv 2013-02-23]
