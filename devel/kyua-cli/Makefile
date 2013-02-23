@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/01/26 21:37:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/23 03:37:40 jmmv Exp $
 #
 
-DISTNAME=	kyua-cli-0.5
-PKGREVISION=	1
+DISTNAME=	kyua-cli-0.6
 CATEGORIES=	devel
 MASTER_SITES=	http://kyua.googlecode.com/files/
 
@@ -12,10 +11,9 @@ COMMENT=	Kyua (automated testing framework) - Command line interface
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=		yes
-INFO_FILES=		yes
 MAKE_JOBS_SAFE=		yes
 USE_LANGUAGES=		c++
-USE_TOOLS=		makeinfo pkg-config
+USE_TOOLS=		pkg-config
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kyua-cli
 PKG_SUPPORTED_OPTIONS=	tests
@@ -44,6 +42,7 @@ post-install:
 	    ${DESTDIR}${PREFIX}/tests/Kyuafile
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/kyua-testers/buildlink3.mk"
 BUILDLINK_API_DEPENDS.lutok+=	lutok>=0.2
 .include "../../devel/lutok/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
