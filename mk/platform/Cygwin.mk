@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.6 2013/02/22 13:39:31 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.7 2013/02/23 05:41:04 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -60,6 +60,8 @@ TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
+
+X11_TYPE?=		native
 
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
