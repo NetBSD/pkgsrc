@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/02/23 21:04:26 agc Exp $
+include/netpgp/verify.h
+lib/libnetpgpverify.la
+man/man3/libnetpgpverify.3
