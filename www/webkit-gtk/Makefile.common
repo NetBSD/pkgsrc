@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2012/12/31 00:34:37 sbd Exp $
+# $NetBSD: Makefile.common,v 1.20 2013/02/23 09:27:09 jperkin Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -48,6 +48,8 @@ CONFIGURE_ENV+=	RUBY=${RUBY}
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+
+CXXFLAGS.SunOS+=	-fpermissive
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
