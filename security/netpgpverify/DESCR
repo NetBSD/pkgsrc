@@ -1,0 +1,5 @@
+netpgpverify is a standalone program to verify a PGP signature
+on a file or document. Both RSA and DSA signatures are supported,
+as are binary and document signatures.
+
+netpgpverify is compliant with RFC 4880.
