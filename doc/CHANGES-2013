@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.685 2013/02/23 21:06:28 agc Exp $
+$NetBSD: CHANGES-2013,v 1.686 2013/02/23 21:13:32 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/x11-links to 0.73 [obache 2013-02-23]
 	Updated www/py-django to 1.4.5 [adam 2013-02-23]
 	Added security/libnetpgpverify version 20120928 [agc 2013-02-23]
+	Added security/netpgpverify version 20120928 [agc 2013-02-23]
