@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.681 2013/02/23 12:56:59 obache Exp $
+$NetBSD: CHANGES-2013,v 1.682 2013/02/23 13:12:41 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -981,3 +981,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/mediainfo to 0.7.62 [schmonz 2013-02-23]
 	Updated devel/kyua-cli to 0.6 [jmmv 2013-02-23]
 	Updated print/acroread9 to 9.5.4 [obache 2013-02-23]
+	Updated math/octave to 3.6.4 [asau 2013-02-23]
