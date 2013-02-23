@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2013/02/17 07:36:09 dholland Exp $
+# $NetBSD: Makefile.common,v 1.39 2013/02/23 23:32:19 dholland Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -45,7 +45,7 @@ EMACS_PKGDIR=		../../editors/${EMACS_BASE_TYPE}-nox11
 EMACS_PKGDIR=		../../editors/${EMACS_BASE_TYPE}
 .endif
 
-DEPENDS+=	${EMACS_BASE_TYPE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
+DEPENDS+=	${MY_EMACS_TYPE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
 
 #
 # 2. Now it gets gross. Before this meta-package was introduced, the
