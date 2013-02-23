@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.683 2013/02/23 13:30:49 obache Exp $
+$NetBSD: CHANGES-2013,v 1.684 2013/02/23 17:01:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -983,3 +983,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/acroread9 to 9.5.4 [obache 2013-02-23]
 	Updated math/octave to 3.6.4 [asau 2013-02-23]
 	Updated pkgtools/x11-links to 0.73 [obache 2013-02-23]
+	Updated www/py-django to 1.4.5 [adam 2013-02-23]
