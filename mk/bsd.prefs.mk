@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.332 2013/02/15 09:19:17 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.333 2013/02/23 02:59:56 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -560,7 +560,7 @@ X11_TYPE?=		modular
 .  if ${OPSYS} == "SunOS"
 # On Solaris, we default to using OpenWindows for X11.
 X11BASE?=	/usr/openwin
-.  elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX"
+.  elif ${OPSYS} == "Cygwin" || ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX"
 X11BASE?=	/usr
 .  elif !empty(MACHINE_PLATFORM:MDarwin-9.*-*) || \
         !empty(MACHINE_PLATFORM:MDarwin-10.*-*) || \
