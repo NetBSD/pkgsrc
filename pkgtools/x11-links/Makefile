@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.138 2013/01/12 10:18:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.139 2013/02/23 13:30:18 obache Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-DISTNAME=	x11-links-0.72
+DISTNAME=	x11-links-0.73
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -28,7 +28,7 @@ USE_LANGUAGES=		# empty
 USE_TOOLS+=		pax
 
 PLIST_SRC.files=	${WRKDIR}/.PLIST_SRC.files
-PLIST_SRC=		${.CURDIR}/PLIST ${PLIST_SRC.files}
+PLIST_SRC=		${PLIST_SRC_DFLT} ${PLIST_SRC.files}
 
 OSVERSION_SPECIFIC=	yes
 
@@ -89,18 +89,29 @@ do-build:
 	${RM} -f ${PLIST_SRC.files}
 	${FILES_LIST_CMD} | ${SORT} -u |				\
 	while read file; do						\
+		srcdir="";						\
 		if ${TEST} -r ${X11BASE}/$$file; then			\
-			src="${X11BASE}/$$file";			\
-			dest="${X11_LINKS_BUILD_DIR}/$$file";		\
-			${CREATE_X11LINK};				\
-			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\
-				>> ${PLIST_SRC.files};			\
+			srcdir="${X11BASE}";				\
 		elif ${TEST} -r /usr/$$file; then			\
-			src="/usr/$$file";				\
+			srcdir="/usr";					\
+		fi;							\
+		if ${TEST} ! -z "$$srcdir"; then			\
+			src="$$srcdir/$$file";				\
 			dest="${X11_LINKS_BUILD_DIR}/$$file";		\
 			${CREATE_X11LINK};				\
 			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\
 				>> ${PLIST_SRC.files};			\
+			if (${ECHO} $$file | ${GREP} -q '\.la$'); then 	\
+				cd $${srcdir} && 			\
+					${_LIBTOOL_EXPAND} $${file} | 	\
+				while read lib; do			\
+					src="$$srcdir/$$lib";		\
+					dest="${X11_LINKS_BUILD_DIR}/$$lib"; \
+					${CREATE_X11LINK};		\
+					${ECHO} "${X11_LINKS_SUBDIR}/$$lib" \
+						>> ${PLIST_SRC.files};	\
+				done;					\
+			fi;						\
 		fi;							\
 	done
 
