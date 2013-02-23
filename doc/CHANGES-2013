@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.687 2013/02/23 22:17:16 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.688 2013/02/23 23:54:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -987,3 +987,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/libnetpgpverify version 20120928 [agc 2013-02-23]
 	Added security/netpgpverify version 20120928 [agc 2013-02-23]
 	Updated textproc/rarian to 0.8.1nb3 [jperkin 2013-02-23]
+	Updated www/seamonkey to 2.16 [ryoon 2013-02-23]
