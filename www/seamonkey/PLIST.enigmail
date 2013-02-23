@@ -1,5 +1,4 @@
-lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/mimeDecrypt.jsm
-@comment $NetBSD: PLIST.enigmail,v 1.4 2012/09/06 12:08:50 ryoon Exp $
+@comment $NetBSD: PLIST.enigmail,v 1.5 2013/02/23 23:54:02 ryoon Exp $
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigMsgCompFields.js
@@ -15,6 +14,7 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/commonFu
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailCommon.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/keyManagement.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/mimeDecrypt.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/mimeDecrypt.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeConsole.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeTransport.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
@@ -22,3 +22,12 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subproce
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_win.js
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/${OPSYS}_${TARGET_XPCOM_ABI}/components/libenigmime-${TARGET_XPCOM_ABI}.so
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/${OPSYS}_${TARGET_XPCOM_ABI}/components/libipc-${TARGET_XPCOM_ABI}.so
+lib/seamonkey/modules/subprocess.jsm
+lib/seamonkey/modules/subprocess_worker_unix.js
+lib/seamonkey/modules/subprocess_worker_win.js
+share/idl/seamonkey/nsIEnigMimeHeaderSink.idl
+share/idl/seamonkey/nsIEnigMimeReadCallback.idl
+share/idl/seamonkey/nsIEnigMimeService.idl
+share/idl/seamonkey/nsIEnigMsgCompFields.idl
+share/idl/seamonkey/nsIEnigScriptableMsgCompose.idl
+share/idl/seamonkey/nsIEnigmail.idl
