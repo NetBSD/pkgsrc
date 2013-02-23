@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2013/02/23 23:32:19 dholland Exp $
+# $NetBSD: Makefile.common,v 1.40 2013/02/23 23:36:49 dholland Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -35,17 +35,21 @@ MY_EMACS_TYPE:=		emacs20
 
 .if !empty(MY_EMACS_TYPE:Mxemacs*)
 PKG_FAIL_REASON+=	"EMACS_TYPE is xemacs."
-# (Set this to avoid crashing out below.)
+# (Set these to avoid crashing out below.)
 EMACS_PKGDIR=		../../editors/xemacs
+EMACS_PACKAGE=		xemacs
 .elif ${MY_EMACS_TYPE} == "emacs25"
 EMACS_PKGDIR=		../../editors/emacs-snapshot
+EMACS_PACKAGE=		${EMACS_BASE_TYPE}
 .elif !empty(MY_EMACS_TYPE:M*nox)
 EMACS_PKGDIR=		../../editors/${EMACS_BASE_TYPE}-nox11
+EMACS_PACKAGE=		${EMACS_BASE_TYPE}-nox11
 .else
 EMACS_PKGDIR=		../../editors/${EMACS_BASE_TYPE}
+EMACS_PACKAGE=		${EMACS_BASE_TYPE}
 .endif
 
-DEPENDS+=	${MY_EMACS_TYPE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
+DEPENDS+=	${EMACS_PACKAGE}>=${EMACS_MAJOR}:${EMACS_PKGDIR}
 
 #
 # 2. Now it gets gross. Before this meta-package was introduced, the
