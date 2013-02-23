@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.2 2011/02/05 13:21:13 obache Exp $
+# $NetBSD: INSTALL,v 1.3 2013/02/23 05:47:59 obache Exp $
 
 UNAME="@UNAME@"
 case ${STAGE} in
@@ -24,6 +24,9 @@ PRE-INSTALL)
 		;;
 	HPUX)
 		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/^B.//'`
+		;;
+	CYGWIN_*)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/(.*)//'`
 		;;
 	esac
 
