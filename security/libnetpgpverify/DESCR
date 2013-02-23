@@ -1,0 +1,7 @@
+This is libnetpgpverify, a standalone library to verify PGP
+signatures.
+
+It uses its own internal MPI/BIGNUM functions, which are a vastly
+cut-down version of libtommath.  For this reason, utilities and other
+libraries can embed PGP signature verification, using a BSD-licensed
+library.
