@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2013/02/09 13:48:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/02/23 23:59:24 ryoon Exp $
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca.manifest
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/branding/aboutRights.dtd
@@ -260,6 +261,8 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/g
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/actions.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/appstrings.properties
@@ -543,6 +546,7 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/s
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs.manifest
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/branding/aboutRights.dtd
@@ -802,6 +806,8 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/g
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/actions.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/appstrings.properties
@@ -1085,6 +1091,7 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/s
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de.manifest
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/branding/aboutRights.dtd
@@ -1344,6 +1351,8 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/g
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/actions.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/appstrings.properties
@@ -1627,6 +1636,7 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/s
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB.manifest
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/branding/aboutRights.dtd
@@ -1886,6 +1896,8 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/actions.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/appstrings.properties
@@ -2169,6 +2181,7 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US.manifest
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/branding/aboutRights.dtd
@@ -2428,6 +2441,8 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/actions.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/appstrings.properties
@@ -2711,6 +2726,7 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR.manifest
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/branding/aboutRights.dtd
@@ -2970,6 +2986,8 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/actions.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/appstrings.properties
@@ -3253,6 +3271,7 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES.manifest
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/branding/aboutRights.dtd
@@ -3512,6 +3531,8 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/actions.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/appstrings.properties
@@ -3795,6 +3816,7 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi.manifest
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/branding/aboutRights.dtd
@@ -4054,6 +4076,8 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/g
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/actions.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/appstrings.properties
@@ -4337,6 +4361,7 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/s
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr.manifest
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/branding/aboutRights.dtd
@@ -4596,6 +4621,8 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/g
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/actions.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/appstrings.properties
@@ -4879,6 +4906,7 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/s
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu.manifest
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/branding/aboutRights.dtd
@@ -5138,6 +5166,8 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/g
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/actions.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/appstrings.properties
@@ -5421,6 +5451,7 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/s
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it.manifest
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/branding/aboutRights.dtd
@@ -5680,6 +5711,8 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/g
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/actions.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/appstrings.properties
@@ -5963,6 +5996,7 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/s
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac.manifest
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/branding/aboutRights.dtd
@@ -6222,6 +6256,8 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/actions.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/appstrings.properties
@@ -6505,6 +6541,7 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja.manifest
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/branding/aboutRights.dtd
@@ -6764,6 +6801,8 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/g
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/actions.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/appstrings.properties
@@ -7047,6 +7086,7 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/s
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt.manifest
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/branding/aboutRights.dtd
@@ -7306,6 +7346,8 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/g
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/actions.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/appstrings.properties
@@ -7589,6 +7631,7 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/s
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO.manifest
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/branding/aboutRights.dtd
@@ -7848,6 +7891,8 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/actions.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/appstrings.properties
@@ -8131,6 +8176,7 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl.manifest
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/branding/aboutRights.dtd
@@ -8390,6 +8436,8 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/g
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/actions.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/appstrings.properties
@@ -8673,6 +8721,7 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/s
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl.manifest
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/branding/aboutRights.dtd
@@ -8932,6 +8981,8 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/g
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/actions.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/appstrings.properties
@@ -9215,6 +9266,7 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/s
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT.manifest
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/branding/aboutRights.dtd
@@ -9474,6 +9526,8 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/actions.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/appstrings.properties
@@ -9757,6 +9811,7 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru.manifest
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/branding/aboutRights.dtd
@@ -10016,6 +10071,8 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/g
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/actions.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/appstrings.properties
@@ -10299,6 +10356,7 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/s
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk.manifest
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/branding/aboutRights.dtd
@@ -10558,6 +10616,8 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/g
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/actions.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/appstrings.properties
@@ -10841,6 +10901,7 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/s
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE.manifest
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/branding/aboutRights.dtd
@@ -11100,6 +11161,8 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/actions.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/appstrings.properties
@@ -11383,6 +11446,7 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/install.rdf
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/.mkdir.done
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr.manifest
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/autoconfig/autoconfig.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/branding/aboutRights.dtd
@@ -11642,6 +11706,8 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/g
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/aboutRights.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.properties
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/aboutTelemetry.dtd
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/aboutTelemetry.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/actions.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/appPicker.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/appstrings.properties
