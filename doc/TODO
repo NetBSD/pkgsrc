@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11954 2013/02/22 16:25:43 taca Exp $
+$NetBSD: TODO,v 1.11955 2013/02/24 15:03:53 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
-	o aria2-1.16.3
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
