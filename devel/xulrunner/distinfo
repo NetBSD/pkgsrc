@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2013/02/22 14:48:06 ryoon Exp $
+$NetBSD: distinfo,v 1.95 2013/02/24 22:48:59 dholland Exp $
 
 SHA1 (firefox-19.0.source.tar.bz2) = 816d64e8c9432349cd208fd181d210c54f985351
 RMD160 (firefox-19.0.source.tar.bz2) = 54156ae25cb260d42319d1aad5bc9d8b69ea473c
@@ -38,7 +38,7 @@ SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = faed34d94646453cd01acbdec1da2d
 SHA1 (patch-ipc_ipdl_ipdl_lower.py) = 4025c0a4e149d9b2087331e10b342734fa77a905
 SHA1 (patch-js_src_jsgc.cpp) = c514b7fb84002a1909638cd7f3386931cb0f2551
 SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = f9b13d9e7910613c82f6b1ee4131a6c4eb1d4580
-SHA1 (patch-mb) = 812a7ef501d95acf2135e1033a5e4a8e64897980
+SHA1 (patch-mb) = d6f624296ac83bebfdb4ad5e06e64d6d0c2541a3
 SHA1 (patch-md) = 7fd607a3edd2ea5f7a5671fc6d06fba69c46c36f
 SHA1 (patch-me) = 2ff755782bd35caded8934000d039976dad44103
 SHA1 (patch-media_libcubeb_src_Makefile.in) = a24f1a79a14b1933286cd85618fbe91db109176d
