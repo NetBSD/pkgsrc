@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.78 2013/02/22 21:22:58 asau Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.79 2013/02/24 09:02:06 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -68,6 +68,15 @@
     <title>Platform-specific notes</title>
 
     <para>Here are some platform-specific notes you should be aware of.</para>
+
+    <sect2 id="cygwin">
+      <title>Cygwin</title>
+
+      <para>Cygwin 1.7.x and later are supported.</para>
+
+      <para>You need to install minimal base packages in `Base' category
+      plus any of compiler, gcc, gcc4, and/or clang.</para>
+    </sect2>
 
     <sect2 id="darwin">
       <title>Darwin (Mac OS X)</title>
