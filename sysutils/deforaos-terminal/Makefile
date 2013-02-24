@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/24 15:48:28 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/24 15:59:12 khorben Exp $
 #
 
 DISTNAME=	Terminal-0.0.0
@@ -18,6 +18,8 @@ USE_TOOLS+=	xgettext
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
+
+CONFLICTS=	xfce4-terminal-[0-9]*
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/terminal.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/terminal.1
