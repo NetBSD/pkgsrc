@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/02/22 16:20:48 taca Exp $
+# $NetBSD: Makefile,v 1.27 2013/02/24 06:58:32 obache Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -48,6 +48,11 @@ CONFIGURE_ENV+=	ac_cv_prog_PKG_CONFIG=""
 .if ${OPSYS} == "MirBSD"
 # if present, an unsupported sysconf call is used
 CONFIGURE_ENV+=	ac_cv_func_getgrnam_r=no
+.endif
+
+.if ${OPSYS} == "Cygwin"
+USE_TOOLS+=	gmake
+MAKE_FILE=	GNUmakefile
 .endif
 
 # Ruby build process depends on config.status's content
