@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.699 2013/02/24 14:53:54 taca Exp $
+$NetBSD: CHANGES-2013,v 1.700 2013/02/24 14:55:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1014,3 +1014,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox17-l10n to 17.0.3 [ryoon 2013-02-24]
 	Removed databases/ruby-arel22 [taca 2013-02-24]
 	Removed www/ruby-rack13 [taca 2013-02-24]
+	Removed www/ruby-sass-rails31 [taca 2013-02-24]
