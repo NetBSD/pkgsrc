@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.692 2013/02/24 13:40:09 obache Exp $
+$NetBSD: CHANGES-2013,v 1.693 2013/02/24 14:14:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -996,3 +996,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs22-nox11 to 22.3nb4 [dholland 2013-02-24]
 	Updated parallel/openmpi to 1.6.4 [asau 2013-02-24]
 	Updated www/ruby-httpclient to 2.3.3 [obache 2013-02-24]
+	Removed www/ruby-coffee-rails31 [taca 2013-02-24]
+	Removed devel/ruby-uglifier10 [taca 2013-02-24]
+	Removed devel/ruby-turn08 [taca 2013-02-24]
