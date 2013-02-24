@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/02/09 10:35:19 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2013/02/24 17:31:14 christos Exp $
 
-SHA1 (UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
-RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
-Size (UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
-SHA1 (jre-7u10-linux-i586.tar.gz) = d54661dddb27c0d5bb454503de1c30077fde2fa0
-RMD160 (jre-7u10-linux-i586.tar.gz) = fb595394a50736f7d924bb3dedff722275a0ccc9
-Size (jre-7u10-linux-i586.tar.gz) = 48107401 bytes
-SHA1 (jre-7u10-linux-x64.tar.gz) = 12241119d0f00fc20f45b4ef7f28ab9adb3b8345
-RMD160 (jre-7u10-linux-x64.tar.gz) = ec3b1150d5c1a27517bb3b9a27f7444916350827
-Size (jre-7u10-linux-x64.tar.gz) = 46789584 bytes
+SHA1 (jre-7u15-linux-x64.gz) = cfd274e6a18c135f3f16955388127fb48ebecb37
+RMD160 (jre-7u15-linux-x64.gz) = b453d346173c7583d948856e54c61a02fa6893fe
+Size (jre-7u15-linux-x64.gz) = 46794487 bytes
