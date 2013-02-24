@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/02/24 15:59:12 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/24 16:01:18 khorben Exp $
 #
 
 DISTNAME=	Terminal-0.0.0
@@ -18,6 +18,8 @@ USE_TOOLS+=	xgettext
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
+
+DEPENDS+=	xterm-[0-9]*:../../x11/xterm
 
 CONFLICTS=	xfce4-terminal-[0-9]*
 
