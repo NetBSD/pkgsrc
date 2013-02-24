@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.948 2013/02/24 14:16:05 taca Exp $
+# $NetBSD: Makefile,v 1.949 2013/02/24 14:23:33 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -596,7 +596,6 @@ SUBDIR+=	py-wtforms
 SUBDIR+=	qDecoder
 SUBDIR+=	raggle
 SUBDIR+=	ramaze
-SUBDIR+=	ruby-actionpack31
 SUBDIR+=	ruby-actionpack32
 SUBDIR+=	ruby-activeresource31
 SUBDIR+=	ruby-activeresource32
