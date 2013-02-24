@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2013/02/24 15:58:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.178 2013/02/24 18:41:25 wiz Exp $
 
 DISTNAME=	pango-1.32.5
 PKGREVISION=	1
@@ -21,7 +21,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
-CONFIGURE_ARGS+=	--without-xft
 # Carbon has been obsoleted; force turning it off
 #CONFIGURE_ENV+=		ac_cv_header_Carbon_Carbon_h=no
 
@@ -49,8 +48,6 @@ PLIST_VARS+=		coretext
 
 .if ${OPSYS} == "Darwin"
 PLIST.coretext=		yes
-.else
-BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32.1
