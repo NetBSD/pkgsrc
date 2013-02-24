@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2013/02/23 13:30:18 obache Exp $
+# $NetBSD: Makefile,v 1.140 2013/02/24 01:27:16 obache Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
@@ -101,7 +101,7 @@ do-build:
 			${CREATE_X11LINK};				\
 			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\
 				>> ${PLIST_SRC.files};			\
-			if (${ECHO} $$file | ${GREP} -q '\.la$'); then 	\
+			if (${ECHO} $$file | ${GREP} -q '\.la$$'); then \
 				cd $${srcdir} && 			\
 					${_LIBTOOL_EXPAND} $${file} | 	\
 				while read lib; do			\
