@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.702 2013/02/24 16:04:24 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.703 2013/02/24 16:37:30 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -985,6 +985,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/octave to 3.6.4 [asau 2013-02-23]
 	Updated pkgtools/x11-links to 0.73 [obache 2013-02-23]
 	Updated www/py-django to 1.4.5 [adam 2013-02-23]
+	Updated multimedia/deforaos-player to 0.1.5 [khorben 2013-02-23]
 	Added security/libnetpgpverify version 20120928 [agc 2013-02-23]
 	Added security/netpgpverify version 20120928 [agc 2013-02-23]
 	Updated textproc/rarian to 0.8.1nb3 [jperkin 2013-02-23]
