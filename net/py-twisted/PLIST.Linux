@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2008/09/16 01:59:07 epg Exp $
-${PYSITELIB}/twisted/python/_epoll.so
