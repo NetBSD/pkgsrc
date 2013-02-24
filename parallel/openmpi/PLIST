@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/10/17 23:27:34 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/02/24 01:22:36 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -99,6 +99,7 @@ lib/openmpi/mca_ess_tool.la
 lib/openmpi/mca_filem_rsh.la
 lib/openmpi/mca_grpcomm_bad.la
 lib/openmpi/mca_grpcomm_basic.la
+lib/openmpi/mca_grpcomm_hier.la
 lib/openmpi/mca_io_romio.la
 lib/openmpi/mca_iof_hnp.la
 lib/openmpi/mca_iof_orted.la
