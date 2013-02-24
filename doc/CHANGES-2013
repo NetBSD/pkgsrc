@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.690 2013/02/24 01:24:08 asau Exp $
+$NetBSD: CHANGES-2013,v 1.691 2013/02/24 01:26:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -942,6 +942,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/abcl to 1.1.1 [asau 2013-02-18]
 	Updated databases/phpmyadmin to 3.5.7 [tron 2013-02-18]
 	Updated www/nginx to 1.2.7 [imil 2013-02-18]
+	Updated news/slrn to 0.9.9p1nb9 [dholland 2013-02-18]
 	Updated graphics/GraphicsMagick to 1.3.17nb4 [wiz 2013-02-19]
 	Added devel/kyua-testers version 0.1 [jmmv 2013-02-19]
 	Updated www/contao30 to 3.0.5 [taca 2013-02-19]
@@ -987,6 +988,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/libnetpgpverify version 20120928 [agc 2013-02-23]
 	Added security/netpgpverify version 20120928 [agc 2013-02-23]
 	Updated textproc/rarian to 0.8.1nb3 [jperkin 2013-02-23]
+	Updated editors/emacs23 to 23.4nb13 [dholland 2013-02-23]
+	Updated editors/emacs23-nox11 to 23.4nb2 [dholland 2013-02-23]
 	Updated www/seamonkey to 2.16 [ryoon 2013-02-23]
+	Updated editors/emacs22 to 22.3nb27 [dholland 2013-02-24]
 	Updated www/seamonkey-l10n to 2.16 [ryoon 2013-02-23]
+	Updated editors/emacs22-nox11 to 22.3nb4 [dholland 2013-02-24]
 	Updated parallel/openmpi to 1.6.4 [asau 2013-02-24]
