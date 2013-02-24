@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.946 2013/02/22 17:07:52 imil Exp $
+# $NetBSD: Makefile,v 1.947 2013/02/24 14:10:24 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -602,7 +602,6 @@ SUBDIR+=	ruby-activeresource31
 SUBDIR+=	ruby-activeresource32
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
-SUBDIR+=	ruby-coffee-rails31
 SUBDIR+=	ruby-coffee-rails32
 SUBDIR+=	ruby-compass
 SUBDIR+=	ruby-compass-susy-plugin
