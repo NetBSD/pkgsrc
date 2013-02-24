@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.689 2013/02/24 00:00:16 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.690 2013/02/24 01:24:08 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/rarian to 0.8.1nb3 [jperkin 2013-02-23]
 	Updated www/seamonkey to 2.16 [ryoon 2013-02-23]
 	Updated www/seamonkey-l10n to 2.16 [ryoon 2013-02-23]
+	Updated parallel/openmpi to 1.6.4 [asau 2013-02-24]
