@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2013/02/16 11:19:38 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2013/02/24 15:58:16 schmonz Exp $
 
 DISTNAME=	pango-1.32.5
 PKGREVISION=	1
@@ -21,6 +21,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
+CONFIGURE_ARGS+=	--without-xft
 # Carbon has been obsoleted; force turning it off
 #CONFIGURE_ENV+=		ac_cv_header_Carbon_Carbon_h=no
 
