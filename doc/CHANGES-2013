@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.691 2013/02/24 01:26:24 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.692 2013/02/24 13:40:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -995,3 +995,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey-l10n to 2.16 [ryoon 2013-02-23]
 	Updated editors/emacs22-nox11 to 22.3nb4 [dholland 2013-02-24]
 	Updated parallel/openmpi to 1.6.4 [asau 2013-02-24]
+	Updated www/ruby-httpclient to 2.3.3 [obache 2013-02-24]
