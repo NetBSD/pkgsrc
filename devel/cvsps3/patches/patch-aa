@@ -1,37 +1,28 @@
-$NetBSD: patch-aa,v 1.1 2013/01/30 11:34:58 ryoon Exp $
+$NetBSD: patch-aa,v 1.2 2013/02/25 21:26:55 ryoon Exp $
 
 * Pass pkgsrc environment variables
 
---- Makefile.orig	2012-12-24 20:12:10.000000000 +0000
+--- Makefile.orig	2013-01-21 13:20:15.000000000 +0000
 +++ Makefile
-@@ -3,7 +3,7 @@ VERSION=3.2
- CC?=gcc
- CFLAGS?=-g -O2 -Wall 
+@@ -5,7 +5,7 @@ CFLAGS?=-g -O2 -Wall 
  CPPFLAGS+=-I. -DVERSION=\"$(VERSION)\"
+ LDLIBS+=-lz # += to allow solaris and friends add their libs like -lsocket
+ INSTALL = install
 -prefix?=/usr/local
 +prefix?=${PREFIX}
- OBJS=\
- 	cbtcommon/debug.o\
- 	cbtcommon/hash.o\
-@@ -22,7 +22,7 @@ deps:
- 	makedepend -Y -I. *.c cbtcommon/*.c
+ target=$(DESTDIR)$(prefix)
  
- cvsps: $(OBJS)
--	$(CC) -o cvsps $(OBJS) -lz
-+	$(CC) ${LDFLAGS} -o cvsps3 $(OBJS) -lz ${LIBS}
+ OBJS= debug.o \
+@@ -51,9 +51,9 @@ pylint:
  
- check:
- 	@(cd test >/dev/null; make --quiet)
-@@ -38,9 +38,9 @@ cvsps.html: cvsps.asc
+ install: cvsps.1 all
+ 	$(INSTALL) -d "$(target)/bin"
+-	$(INSTALL) -d "$(target)/share/man/man1"
+-	$(INSTALL) cvsps "$(target)/bin"
+-	$(INSTALL) -m 644 cvsps.1 "$(target)/share/man/man1"
++	$(INSTALL) -d "$(target)/${PKGMANDIR}/man1"
++	$(INSTALL) cvsps "$(target)/bin/cvsps3"
++	$(INSTALL) -m 644 cvsps.1 "$(target)/${PKGMANDIR}/man1/cvsps3.1"
  
- install: cvsps.1
- 	[ -d $(prefix)/bin ] || mkdir -p $(prefix)/bin
--	[ -d $(prefix)/share/man/man1 ] || mkdir -p $(prefix)/share/man/man1
--	install cvsps $(prefix)/bin
--	install -m 644 cvsps.1 $(prefix)/share/man/man1
-+	[ -d $(prefix)/${PKGMANDIR}/man1 ] || mkdir -p $(prefix)/${PKGMANDIR}/man1
-+	install cvsps3 $(prefix)/bin
-+	install -m 644 cvsps.1 $(prefix)/${PKGMANDIR}/man1/cvsps3.1
- 
- tags: *.c *.h cbtcommon/*.c cbtcommon/*.h
- 	ctags *.c *.h cbtcommon/*.c cbtcommon/*.h
+ tags: *.c *.h
+ 	ctags *.c *.h
