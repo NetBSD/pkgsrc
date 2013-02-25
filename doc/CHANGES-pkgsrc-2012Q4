@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.35 2013/02/24 23:26:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.36 2013/02/25 16:57:10 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -225,3 +225,9 @@ Pullup ticket #4076 - requested by obache
 print/acroread9: security update
 Pullup ticket #4077 - requested by markd
 net/netatalk: build fix
+Pullup ticket #4078 - requested by taca
+www/drupal7: security update
+Pullup ticket #4079 - requested by taca
+www/geeklog: security update
+Pullup ticket #4080 - requested by taca
+lang/ruby193-base: security update
