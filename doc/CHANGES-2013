@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.704 2013/02/25 02:24:34 wen Exp $
+$NetBSD: CHANGES-2013,v 1.705 2013/02/25 03:14:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1019,3 +1019,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/aria2 to 1.16.3 [ryoon 2013-02-24]
 	Added sysutils/deforaos-terminal version 0.0.0 [khorben 2013-02-24]
 	Updated www/p5-Dancer to 1.3111 [wen 2013-02-25]
+	Added devel/p5-MooX-Types-MooseLike version 0.21 [wen 2013-02-25]
