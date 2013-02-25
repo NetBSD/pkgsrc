@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/03 13:38:55 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/02/25 21:36:51 ryoon Exp $
 
-SHA1 (qpdfview-0.3.7.tar.gz) = 1b5012b1602837e9709d562e168d3c9fff4a3076
-RMD160 (qpdfview-0.3.7.tar.gz) = b8b200baed6fbca53d9ed7fcbf3d33e9c16f37f4
-Size (qpdfview-0.3.7.tar.gz) = 385833 bytes
-SHA1 (patch-qpdfview.pri) = 5275448accbd24f190f09e6cf29f16924fee13b6
+SHA1 (qpdfview-0.4.tar.gz) = 6598a9f863a247b544c3a8a068aa14ab4ef85c8f
+RMD160 (qpdfview-0.4.tar.gz) = 72f211cbba8a6c2abfb326dbd810786a567a2475
+Size (qpdfview-0.4.tar.gz) = 396479 bytes
+SHA1 (patch-qpdfview.pri) = ba8d5058c73120d8b297915e67a64de3ba8024d3
