@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/03 13:38:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/25 21:36:51 ryoon Exp $
 bin/qpdfview
+lib/qpdfview/libqpdfview_djvu.la
+lib/qpdfview/libqpdfview_pdf.la
+lib/qpdfview/libqpdfview_ps.la
 man/man1/qpdfview.1
 share/applications/qpdfview.desktop
 share/qpdfview/help.html
@@ -21,6 +24,7 @@ share/qpdfview/qpdfview_hr.qm
 share/qpdfview/qpdfview_id.qm
 share/qpdfview/qpdfview_it.qm
 share/qpdfview/qpdfview_ky.qm
+share/qpdfview/qpdfview_ms.qm
 share/qpdfview/qpdfview_my.qm
 share/qpdfview/qpdfview_pl.qm
 share/qpdfview/qpdfview_pt_BR.qm
