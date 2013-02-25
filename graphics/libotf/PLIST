@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/26 11:47:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/25 16:13:28 jperkin Exp $
 bin/libotf-config
 bin/otfdump
 bin/otflist
 bin/otftobdf
-bin/otfview
+${PLIST.x11}bin/otfview
 include/otf.h
 lib/libotf.la
 lib/pkgconfig/libotf.pc
