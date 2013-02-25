@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.708 2013/02/25 21:27:34 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.709 2013/02/25 21:30:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/icc11 to 11.1.080nb1 [wiz 2013-02-25]
 	Updated www/apache24 to 2.4.4 [ryoon 2013-02-25]
 	Updated devel/cvsps3 to 3.10 [ryoon 2013-02-25]
+	Updated www/php-owncloud to 4.5.7 [ryoon 2013-02-25]
