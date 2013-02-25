@@ -1,11 +1,21 @@
-$NetBSD: patch-aa,v 1.8 2011/02/11 19:10:54 tnn Exp $
+$NetBSD: patch-aa,v 1.9 2013/02/25 18:41:46 gdt Exp $
 
 Make an effort to pick up spamd_flags from the rc configuration when
 not running on NetBSD/DragonFlyBSD.
+Adjust comment for renamed file.
 
---- spamd/netbsd-rc-script.sh.orig	2010-03-16 14:49:25.000000000 +0000
-+++ spamd/netbsd-rc-script.sh
-@@ -118,6 +118,12 @@ if [ "${OPSYS}" = "NetBSD" -o "${OPSYS}"
+--- spamd/netbsd-rc-script.sh.orig	2011-06-07 01:59:19.000000000 +0200
++++ spamd/netbsd-rc-script.sh	2013-02-25 17:56:03.000000000 +0100
+@@ -10,7 +10,7 @@
+ # of spam
+ #
+ # PLEASE read the file
+-#   @PREFIX@/share/doc/spamassassin/spamd/README.spamd
++#   @PREFIX@/share/doc/spamassassin/spamd/README
+ # especially the section about security.
+ 
+ ## only for DragonFlyBSD/NetBSD
+@@ -118,6 +118,12 @@
  
  else # not NetBSD or DragonFlyBSD
  
