@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/12/31 02:27:22 taca Exp $
+# $NetBSD: Makefile,v 1.36.2.1 2013/02/25 16:12:48 tron Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
 USE_TOOLS+=	pax
 
-VER=		1.8.2
+VER=		1.8.2sr1
 NO_BUILD=	YES
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
