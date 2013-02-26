@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/19 04:15:21 manu Exp $
+# $NetBSD: Makefile,v 1.34 2013/02/26 10:27:09 joerg Exp $
 #
 
 DISTNAME=	glusterfs-3.3.1
@@ -72,6 +72,7 @@ PLIST_SUBST+=		VARBASE=${VARBASE}
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
+CPPFLAGS.NetBSD+=	-D_KMEMUSER
 
 post-build:
 	 cp ${WRKSRC}/doc/glusterd.vol ${WRKSRC}/doc/glusterd.vol.sample
