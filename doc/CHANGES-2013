@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.711 2013/02/26 00:15:31 hubertf Exp $
+$NetBSD: CHANGES-2013,v 1.712 2013/02/26 00:22:18 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1026,3 +1026,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-owncloud to 4.5.7 [ryoon 2013-02-25]
 	Updated print/qpdfview to 0.4 [ryoon 2013-02-25]
 	Added sysutils/ansible version 1.0 [hubertf 2013-02-26]
+	Added sysutils/euca2ools version 2.1.2 [hubertf 2013-02-26]
