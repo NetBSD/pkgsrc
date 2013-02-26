@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/02/16 11:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2013/02/26 11:15:18 joerg Exp $
 #
 
 DISTNAME=	merkaartor-0.17.2
@@ -31,6 +31,11 @@ do-configure:
 	cd ${WRKSRC} && \
 		${QMAKE} ${CONFIGURE_ARGS} Merkaartor.pro && \
 		${MAKE} qmake
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++11
+.endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
