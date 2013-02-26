@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2010/06/07 13:34:00 tsutsui Exp $
+$NetBSD: patch-aa,v 1.6 2013/02/26 23:39:18 joerg Exp $
 
---- libtme/module.c.orig	2010-05-09 14:41:18.000000000 +0900
-+++ libtme/module.c	2010-05-09 15:03:22.000000000 +0900
-@@ -62,11 +62,13 @@
+--- libtme/module.c.orig	2010-06-05 19:04:42.000000000 +0000
++++ libtme/module.c
+@@ -62,11 +62,13 @@ _TME_RCSID("$Id: module.c,v 1.10 2010/06
  #endif /* !lt_ptr_t */
  #endif /* !lt_ptr */
  
@@ -16,3 +16,39 @@ $NetBSD: patch-aa,v 1.5 2010/06/07 13:34:00 tsutsui Exp $
  
  /* types: */
  struct tme_module {
+@@ -248,7 +250,7 @@ tme_module_open(const char *module_fake_
+   /* if there were no slashes in the fake module pathname, there is no
+      top name, which is incorrect: */
+   if (first_slash == NULL) {
+-    tme_output_append_error(_output, module_fake_pathname);
++    tme_output_append_error(_output, "%s", module_fake_pathname);
+     tme_free(module_raw_name);
+     return (EINVAL);
+   }
+@@ -258,7 +260,7 @@ tme_module_open(const char *module_fake_
+ 				    (first_slash - module_raw_name),
+ 				    &modules_dir);
+   if (modules_index == NULL) {
+-    tme_output_append_error(_output, module_fake_pathname);
++    tme_output_append_error(_output, "%s", module_fake_pathname);
+     tme_free(module_raw_name);
+     return (ENOENT);
+   }
+@@ -300,7 +302,7 @@ tme_module_open(const char *module_fake_
+ 
+   /* if we didn't find the module in the index: */
+   if (tokens_count == 0) {
+-    tme_output_append_error(_output, module_fake_pathname);
++    tme_output_append_error(_output, "%s", module_fake_pathname);
+     tme_free(modules_dir);
+     return (ENOENT);
+   }
+@@ -325,7 +327,7 @@ tme_module_open(const char *module_fake_
+   tme_mutex_unlock(&_tme_module_mutex);
+   tme_free(module_pathname);
+   if (handle == NULL) {
+-    tme_output_append_error(_output, module_fake_pathname);
++    tme_output_append_error(_output, "%s", module_fake_pathname);
+     tme_free_string_array(tokens, -1);
+     return (ENOENT);
+   }
