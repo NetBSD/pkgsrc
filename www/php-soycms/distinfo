@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/13 16:07:55 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/02/26 11:15:57 ryoon Exp $
 
-SHA1 (soycms_1.4.0a_mysql.zip) = 3528c3d0e88f68e6266ae571ffbe5ffe81602a35
-RMD160 (soycms_1.4.0a_mysql.zip) = 80ccc02d72b4c75f330db1a433832589cc257f20
-Size (soycms_1.4.0a_mysql.zip) = 6186085 bytes
+SHA1 (soycms_1.4.0c_mysql.zip) = af555ec66bf576821962565d98c03a3ba80e4f07
+RMD160 (soycms_1.4.0c_mysql.zip) = f53a2d6da1e9e341cd9a9969914c4375eefc0f89
+Size (soycms_1.4.0c_mysql.zip) = 6106414 bytes
