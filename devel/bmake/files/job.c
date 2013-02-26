@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.12 2011/06/18 22:39:46 bsiegert Exp $	*/
+/*	$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.12 2011/06/18 22:39:46 bsiegert Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.12 2011/06/18 22:39:46 bsiegert Exp $");
+__RCSID("$NetBSD: job.c,v 1.13 2013/02/26 00:50:14 christos Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -1396,11 +1396,13 @@ JobExec(Job *job, char **argv)
 	 * we can kill it and all its descendants in one fell swoop,
 	 * by killing its process family, but not commit suicide.
 	 */
+#if defined(MAKE_NATIVE) || defined(HAVE_SETPGID)
 #if defined(SYSV)
 	/* XXX: dsl - I'm sure this should be setpgrp()... */
 	(void)setsid();
 #else
 	(void)setpgid(0, getpid());
+#endif
 #endif
 
 	Var_ExportVars();
