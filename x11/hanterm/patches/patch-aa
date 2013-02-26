@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/12/04 01:10:33 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2013/02/26 10:20:17 joerg Exp $
 
 --- misc.c.orig	2002-01-09 00:41:11.000000000 +0000
 +++ misc.c
@@ -11,7 +11,17 @@ $NetBSD: patch-aa,v 1.5 2005/12/04 01:10:33 joerg Exp $
  #include <sys/param.h>
  #endif
  
-@@ -913,7 +913,6 @@ char *SysErrorMsg (n)
+@@ -584,8 +584,7 @@ register TScreen *screen;
+ 	update_logging();
+ }
+ 
+-CloseLog(screen)
+-register TScreen *screen;
++void CloseLog(TScreen *screen)
+ {
+ 	if(!screen->logging || (screen->inhibit & I_LOG))
+ 		return;
+@@ -913,7 +912,6 @@ char *SysErrorMsg (n)
      extern char *sys_errlist[];
  #endif
  #endif

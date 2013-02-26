@@ -1,8 +1,26 @@
-$NetBSD: patch-ae,v 1.2 2005/12/04 01:10:33 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2013/02/26 10:20:17 joerg Exp $
 
 --- main.c.orig	2002-01-09 00:41:11.000000000 +0000
 +++ main.c
-@@ -1527,7 +1527,8 @@ char **argv;
+@@ -583,6 +583,8 @@ static int tslot;
+ #endif	/* USE_SYSV_UTMP */
+ static jmp_buf env;
+ 
++static void spawn (void);
++
+ char *ProgramName;
+ Boolean sunFunctionKeys;
+ 
+@@ -806,7 +808,7 @@ static char *message[] = {
+ NULL};
+ 
+ #ifndef USE_TERMIOS
+-static remove_termcap_entry ();
++static void remove_termcap_entry (char *, const char *);
+ #endif
+ 
+ static int abbrev (tst, cmp)
+@@ -1527,7 +1529,8 @@ char **argv;
  	if (ioctl (pty, FIONBIO, (char *)&mode) == -1) SysError (ERROR_FIONBIO);
  #endif	/* USE_SYSV_TERMIO */
  	
@@ -12,7 +30,16 @@ $NetBSD: patch-ae,v 1.2 2005/12/04 01:10:33 joerg Exp $
  	pty_mask = pty;
  	X_mask = Xsocket;
  	FD_ZERO(&Select_mask);
-@@ -3332,7 +3333,6 @@ static SIGNAL_T reapchild (n)
+@@ -1854,7 +1857,7 @@ void first_map_occurred ()
+ #endif /* USE_HANDSHAKE else !USE_HANDSHAKE */
+ 
+ 
+-spawn ()
++static void spawn (void)
+ /* 
+  *  Inits pty and tty and forks a login process.
+  *  Does not close fd Xsocket.
+@@ -3332,7 +3335,6 @@ static SIGNAL_T reapchild (n)
  consolepr(fmt,x0,x1,x2,x3,x4,x5,x6,x7,x8,x9)
  char *fmt;
  {
@@ -20,3 +47,14 @@ $NetBSD: patch-ae,v 1.2 2005/12/04 01:10:33 joerg Exp $
  	extern char *SysErrorMsg();
  	int oerrno;
  	int f;
+@@ -3357,9 +3359,7 @@ char *fmt;
+ 
+ 
+ #ifndef USE_TERMIOS
+-static remove_termcap_entry (buf, str)
+-    char *buf;
+-    char *str;
++static void remove_termcap_entry (char *buf, const char *str)
+ {
+     register char *strinbuf;
+ 
