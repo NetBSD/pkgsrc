@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2013/02/15 11:53:59 obache Exp $
+# $NetBSD: Makefile,v 1.35 2013/02/26 19:28:08 jperkin Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 PKGREVISION=	8
 COMMENT=	Runtime system and DSP blocks for GNU Radio
 
 LDFLAGS.DragonFly+=	-lboost_system
+LDFLAGS.SunOS+=		-lboost_system
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
@@ -25,8 +26,20 @@ PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/filter/generate_gr_fir_sysconfig.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/filter/generate_gr_fir_sysconfig_generic.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/filter/generate_gr_fir_util.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/lib/filter/generate_gr_freq_xlating_fir_filter_XXX.py
-PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_add_and_friends.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/channel_model.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/ofdm.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/ofdm_receiver.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/ofdm_sync_fixed.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/ofdm_sync_ml.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/ofdm_sync_pn.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/ofdm_sync_pnac.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/pfb_arb_resampler.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/pfb_channelizer.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/pfb_decimator.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/blks2impl/pfb_interpolator.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/benchmark_filters.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/pubsub.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_add_and_friends.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_correlate_access_code.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_add_v_and_friends.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-core/src/python/gnuradio/gr/qa_agc.py
