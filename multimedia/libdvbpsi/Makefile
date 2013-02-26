@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/01/21 14:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/26 11:27:28 joerg Exp $
 
 DISTNAME=	libdvbpsi-1.0.0
 CATEGORIES=	multimedia
@@ -16,5 +16,10 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	libdvbpsi.pc.in
 
 LIBS.SunOS+=	-lsocket -lnsl
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-constant-out-of-range-compare
+.endif
 
 .include "../../mk/bsd.pkg.mk"
