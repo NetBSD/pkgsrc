@@ -1,0 +1,13 @@
+$NetBSD: patch-library_pkgin,v 1.1 2013/02/26 00:13:00 hubertf Exp $
+
+--- library/pkgin.orig	2013-02-01 21:29:56.000000000 +0000
++++ library/pkgin
+@@ -55,7 +55,7 @@ import shlex
+ import os
+ import sys
+ 
+-PKGIN_PATH = "/opt/local/bin/pkgin"
++PKGIN_PATH = "@LOCALBASE@/bin/pkgin"
+ 
+ def query_package(module, name, state="present"):
+ 
