@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2010/11/18 13:50:09 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2013/02/26 11:01:32 joerg Exp $
 
 First chunk: update sysctl name for changes in NetBSD.
 
@@ -14,7 +14,23 @@ change, I got around 30 running processes on an idle machine.
 
 --- libmetrics/netbsd/metrics.c.orig	2009-01-28 23:23:20.000000000 +0000
 +++ libmetrics/netbsd/metrics.c
-@@ -134,7 +134,10 @@ cpu_speed_func ( void )
+@@ -9,10 +9,15 @@
+  *  Tested on NetBSD 2.0.2 (i386)
+  */
+ 
++#define _KMEMUSER
++
+ #include <kvm.h>
+ 
+ #include <sys/param.h> 
++#include <sys/proc.h>
+ #include <sys/mount.h>
++#include <sys/vmmeter.h>
++#include <uvm/uvm_extern.h>
+ #if __NetBSD_Version__ > 299000000
+ #include <sys/statvfs.h>
+ #define statfs statvfs
+@@ -134,7 +139,10 @@ cpu_speed_func ( void )
  
     cpu_speed = 0;
  
@@ -26,7 +42,7 @@ change, I got around 30 running processes on an idle machine.
     if (sysctlbyname("machdep.est.frequency.target", &cpu_speed, &len, NULL, 0) == -1)
        val.uint32 = 0;
  #endif
-@@ -559,44 +562,40 @@ proc_total_func ( void )
+@@ -559,44 +567,40 @@ proc_total_func ( void )
  g_val_t
  proc_run_func( void )
  {
@@ -95,7 +111,7 @@ change, I got around 30 running processes on an idle machine.
  
  output:
     return val;
-@@ -1135,36 +1134,41 @@ get_netbw(double *in_bytes, double *out_
+@@ -1135,36 +1139,41 @@ get_netbw(double *in_bytes, double *out_
  
  	next = buf;
  	while (next < lim) {
@@ -145,7 +161,7 @@ change, I got around 30 running processes on an idle machine.
  
  		/* If we don't have a previous value yet, make a slot. */
  		if (index >= indexes) {
-@@ -1187,25 +1191,25 @@ get_netbw(double *in_bytes, double *out_
+@@ -1187,25 +1196,25 @@ get_netbw(double *in_bytes, double *out_
  		 */
  		if (!seen[index]) {
  			seen[index] = 1;
