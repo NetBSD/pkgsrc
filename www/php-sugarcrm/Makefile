@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/02/26 12:37:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/26 12:45:28 ryoon Exp $
 #
 
 SCVER=		6.5.10
 DISTNAME=	SugarCE-${SCVER}
-PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/SugarCE/sugercrm/}
+PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/SugarCE/sugarcrm/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sugarcrm/}
 EXTRACT_SUFX=	.zip
