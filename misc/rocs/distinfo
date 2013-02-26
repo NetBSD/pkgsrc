@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.3 2012/06/16 04:45:34 markd Exp $
+$NetBSD: distinfo,v 1.4 2013/02/26 23:37:32 joerg Exp $
 
 SHA1 (rocs-4.8.4.tar.xz) = 991e5aa15e59cc432a9c9f140fe90bd47f8f8e15
 RMD160 (rocs-4.8.4.tar.xz) = 1960ba3fbaabf2a9658f260d7a96de2b699b0829
 Size (rocs-4.8.4.tar.xz) = 665416 bytes
+SHA1 (patch-src_Plugins_AssignValues_assignvalueswidget.h) = 4bb8cc6a7bd276a3f2b1dbf2797f519def0263e8
+SHA1 (patch-src_Plugins_DataStructure_Graph_GraphStructure.cpp) = dca421dd83d7f293c84a776626315ebca3beedda
+SHA1 (patch-src_Plugins_GenerateGraph_generategraphwidget.h) = e24a9018a75bc2d769c51a314bd4b667c8b097ee
+SHA1 (patch-src_Plugins_TransformEdges_transformedgeswidget.h) = 5232f933597dd6f31957f6d6f804993fd60cacc5
