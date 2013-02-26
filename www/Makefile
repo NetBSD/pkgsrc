@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.953 2013/02/26 12:39:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.954 2013/02/26 12:46:17 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -525,7 +525,7 @@ SUBDIR+=	php-owncloud
 SUBDIR+=	php-phrasea2
 SUBDIR+=	php-piwigo
 SUBDIR+=	php-soycms
-SUBDIR+=	php-sugercrm
+SUBDIR+=	php-sugarcrm
 SUBDIR+=	php-tidy
 SUBDIR+=	php-tiki6
 SUBDIR+=	php-tt-rss
