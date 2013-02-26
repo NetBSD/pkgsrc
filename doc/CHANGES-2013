@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.710 2013/02/25 21:37:19 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.711 2013/02/26 00:15:31 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1025,3 +1025,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/cvsps3 to 3.10 [ryoon 2013-02-25]
 	Updated www/php-owncloud to 4.5.7 [ryoon 2013-02-25]
 	Updated print/qpdfview to 0.4 [ryoon 2013-02-25]
+	Added sysutils/ansible version 1.0 [hubertf 2013-02-26]
