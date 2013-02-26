@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/08/17 15:15:27 marino Exp $
+$NetBSD: distinfo,v 1.4 2013/02/26 10:27:37 joerg Exp $
 
 SHA1 (encfs-1.2.0-2.tgz) = 15e0037ef123ef3967d5c101d10f3643c33bcb68
 RMD160 (encfs-1.2.0-2.tgz) = 979fd6a11137c1acdabd3349302d8cd7e3b6625b
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 48e06c61293a3280825df151df4670db1a3fbcc0
 SHA1 (patch-encfs_Config.cpp) = a868994c763821c40f9169965c5b2a80262a3c7d
 SHA1 (patch-encfs_ConfigVar.cpp) = 9806bc49f63bedd12c598515db854e061ac43895
 SHA1 (patch-encfs_NameIO.cpp) = 1d912b0575fea6d55c19d1d3930fd47c8f538722
+SHA1 (patch-encfs_OpaqueValue.h) = 3274bf118d14a544d775830fef2af51594e9635e
