@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.564 2013/02/26 00:14:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.565 2013/02/26 00:19:36 hubertf Exp $
 #
 
 COMMENT=	System utilities
@@ -104,6 +104,7 @@ SUBDIR+=	eggdbus
 SUBDIR+=	estd
 SUBDIR+=	etcmanage
 SUBDIR+=	etcutils
+SUBDIR+=	euca2ools
 SUBDIR+=	eventlog
 SUBDIR+=	extipl
 SUBDIR+=	fabric
