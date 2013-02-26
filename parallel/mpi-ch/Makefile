@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/10/03 21:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2013/02/26 23:36:17 joerg Exp $
 
 DISTNAME=	mpich2-1.4.1p1
 PKGREVISION=	1
@@ -61,6 +61,12 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 .include "../../mk/bsd.prefs.mk"
 .if $(OPSYS) == "FreeBSD" || $(OPSYS) == "DragonFly"
 BUILDLINK_TRANSFORM+=	rm:-lrt
+.endif
+
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+MAKE_ENV+=	LIBEXECINFO=-lexecinfo
+.else
+MAKE_ENV+=	LIBEXECINFO=
 .endif
 
 .include "options.mk"
