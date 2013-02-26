@@ -1,0 +1,20 @@
+$NetBSD: patch-library_mysql_db,v 1.1 2013/02/26 00:13:00 hubertf Exp $
+
+--- library/mysql_db.orig	2013-01-20 14:03:36.000000000 +0000
++++ library/mysql_db
+@@ -104,13 +104,13 @@ def db_delete(cursor, db):
+     return True
+ 
+ def db_dump(user, password, db_name, target):
+-    res = os.system("/usr/bin/mysqldump -q -u "+user+ " -p"+password+" "
++    res = os.system("@LOCALBASE@/bin/mysqldump -q -u "+user+ " -p"+password+" "
+             +db_name+" > "
+             +target)
+     return (res == 0)
+ 
+ def db_import(user, password, db_name, target):
+-    res = os.system("/usr/bin/mysql -u "+user+ " -p"+password+" "
++    res = os.system("@LOCALBASE@/bin/mysql -u "+user+ " -p"+password+" "
+             +db_name+" < "
+             +target)
+     return (res == 0)
