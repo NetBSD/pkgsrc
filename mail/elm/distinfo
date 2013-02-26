@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2010/04/15 06:50:46 dholland Exp $
+$NetBSD: distinfo,v 1.15 2013/02/26 11:08:17 joerg Exp $
 
 SHA1 (elm2.5.8.tar.gz) = bf09df75d0dc9097a1e69591bfb4872f860e00c7
 RMD160 (elm2.5.8.tar.gz) = c12dbefd0bf9d47ee4438673507a4693c4a6808c
@@ -20,3 +20,12 @@ SHA1 (patch-an) = 4f03314d53f8f4a8e120d73ced9eafd22f1fa00b
 SHA1 (patch-ao) = 001eee84bc6e6239cfed31d4d9bf571a00220af0
 SHA1 (patch-ap) = 6240a5d8a0d376bc896c3f18e6ed6bed597d758e
 SHA1 (patch-aq) = 6821ffff099f9b9281c8dbceebd7b7fad6ac01b7
+SHA1 (patch-src_a__sort.c) = 66ffb91e32caf22d438d10ac459a8c2803e95071
+SHA1 (patch-src_alias.c) = 51cc2f50a4455dbe32a7e7901cdc3289c8d69f42
+SHA1 (patch-src_calendar.c) = 76a76add2caf85545deb4d6b7e8b95e7fe819c79
+SHA1 (patch-src_elm.c) = 399696f61d2b364e5b39278f28536d2540ab19b0
+SHA1 (patch-src_fileio.c) = 601c387f56062bd75a5cbbcd02ed01a6671e2247
+SHA1 (patch-src_read__rc.c) = 84288f4f4bba35ba0d9aa622a25caaa5a315a1ba
+SHA1 (patch-src_screen.c) = 93e5f62113cf2ace837aed4822fbeb26f060bf19
+SHA1 (patch-src_strings.c) = 157a198b18fa7db7e4c1fe86fe084c7b0c256a46
+SHA1 (patch-utils_answer.c) = afd41f0f435fa00f730b761f9f46d09123e06975
