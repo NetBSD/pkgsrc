@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2011/11/24 14:18:30 joerg Exp $
+$NetBSD: distinfo,v 1.4 2013/02/26 10:23:50 joerg Exp $
 
 SHA1 (freehdl-0.0.7.tar.gz) = eca7ad3ac58e56b72842e83a0a702c05b8f86aa4
 RMD160 (freehdl-0.0.7.tar.gz) = d00e14d6b1cd97154b221717124c6e20b0d4f776
 Size (freehdl-0.0.7.tar.gz) = 1394351 bytes
 SHA1 (patch-aa) = 4c7b147c47079931506366ce50fc0eeac187fd65
+SHA1 (patch-freehdl_kernel-sig-info.hh) = 86279768c0501434951e4d9cd6b2870c09278e9b
+SHA1 (patch-freehdl_std-vhdl-types.hh) = eb5d237c9df90adf057ab9d5c650e76fe0ae5b28
+SHA1 (patch-kernel_driver__info.cc) = 7db334da74f9e5856e1dd8b3c7b627d2f3d27646
