@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2013/02/16 11:20:06 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2013/02/26 10:22:06 joerg Exp $
 
 DISTNAME=	bmpx-0.40.14
 PKGREVISION=	29
@@ -21,6 +21,11 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
 CHECK_WRKREF_SKIP=	bin/beep-media-player-2
 CHECK_WRKREF_SKIP+=	bin/bmp2
 CHECK_WRKREF_SKIP+=	libexec/beep-media-player-2-bin
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
