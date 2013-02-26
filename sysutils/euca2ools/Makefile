@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/26 00:19:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/26 10:17:55 joerg Exp $
 #
 
 DISTNAME=	euca2ools-2.1.2
@@ -12,8 +12,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-boto>=2.2:../../net/py-boto
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.20.2:../../security/py-m2crypto
-DEPENDS+=	${PYPKGPREFIX}-xml:../../textproc/py-xml
-DEPENDS+=	help2man:../../converters/help2man
+DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
+DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 #USE_LANGUAGES=	# none
 
