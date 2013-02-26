@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/08/13 04:43:51 cheusov Exp $
+$NetBSD: distinfo,v 1.6 2013/02/26 11:02:27 joerg Exp $
 
 SHA1 (xawtv-3.95.tar.gz) = 0b0743fc06aae4f1a03c8572bcf2baa9b869ff52
 RMD160 (xawtv-3.95.tar.gz) = 1dc7b564bec0515cc409c723904ec9c6f8dae998
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = f906ff30449dd7c12883f6ad53d2aa4951a99898
 SHA1 (patch-af) = a1bf023726ce4d6654631e2f05a4c5cf2600f52f
 SHA1 (patch-console_fbtools.c) = 29efd0d525e455059979a23b58546d90c8bb6256
 SHA1 (patch-console_matrox.c) = f30eddcd78e1ba8c099b10404d544e41a05c5579
+SHA1 (patch-x11_blit.c) = 4559c28f862799934afc580286e14a2dbe724443
