@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/02/26 17:42:59 riz Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/26 20:11:02 riz Exp $
 #
 
 DISTNAME=	ansible-1.0
@@ -10,10 +10,10 @@ HOMEPAGE=	http://ansible.cc/
 COMMENT=	SSH-based configuration management, deployment, and task execution system
 LICENSE=	gnu-gpl-v3
 
+EGDIR=		${PREFIX}/share/examples/ansible
+
 #USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
-
-REPLACE_PYTHON+=library/*
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -49,6 +49,9 @@ DEPENDS+=		${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=		${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man3
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/ansible ${EGDIR}/playbooks
+
+CHECK_INTERPRETER_SKIP=	share/ansible/*
 
 pre-install:
 	find ${WRKSRC} -name \*.orig -exec rm {} \;
@@ -60,6 +63,20 @@ post-install:
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/docs/man/man3/* \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/
+.for f in ansible.cfg hosts
+	${INSTALL_DATA} ${WRKSRC}/examples/$f \
+	    ${DESTDIR}/${EGDIR}
+.endfor
+	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}/playbooks
+	for f in ${WRKSRC}/examples/playbooks/*.yml; do \
+		${INSTALL_DATA} $$f ${DESTDIR}/${EGDIR}/playbooks; \
+	done
+.for f in filter_plugins handlers tasks templates vars
+	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}/playbooks/$f
+	for g in ${WRKSRC}/examples/playbooks/$f/*; do \
+	    ${INSTALL_DATA} $$g ${DESTDIR}/${EGDIR}/playbooks/$f; \
+	done
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
