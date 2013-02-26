@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/26 17:42:59 riz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/02/26 20:11:02 riz Exp $
 bin/ansible
 bin/ansible-doc
 bin/ansible-playbook
@@ -295,3 +295,40 @@ share/ansible/user
 share/ansible/virt
 share/ansible/wait_for
 share/ansible/yum
+share/examples/ansible/ansible.cfg
+share/examples/ansible/hosts
+share/examples/ansible/playbooks/ansible_pull.yml
+share/examples/ansible/playbooks/batch_size_control.yml
+share/examples/ansible/playbooks/conditionals_part1.yml
+share/examples/ansible/playbooks/conditionals_part2.yml
+share/examples/ansible/playbooks/conditionals_part3.yml
+share/examples/ansible/playbooks/custom_filters.yml
+share/examples/ansible/playbooks/delegation.yml
+share/examples/ansible/playbooks/file_secontext.yml
+share/examples/ansible/playbooks/filter_plugins/custom_plugins.py
+share/examples/ansible/playbooks/get_url.yml
+share/examples/ansible/playbooks/group_by.yml
+share/examples/ansible/playbooks/group_commands.yml
+share/examples/ansible/playbooks/handlers/handlers.yml
+share/examples/ansible/playbooks/intermediate_example.yml
+share/examples/ansible/playbooks/intro_example.yml
+share/examples/ansible/playbooks/loop_plugins.yml
+share/examples/ansible/playbooks/loop_with_items.yml
+share/examples/ansible/playbooks/mysql.yml
+share/examples/ansible/playbooks/nested_playbooks.yml
+share/examples/ansible/playbooks/postgresql.yml
+share/examples/ansible/playbooks/prompts.yml
+share/examples/ansible/playbooks/register_logic.yml
+share/examples/ansible/playbooks/selective_file_sources.yml
+share/examples/ansible/playbooks/tags.yml
+share/examples/ansible/playbooks/tasks/base.yml
+share/examples/ansible/playbooks/templates/custom-filters.j2
+share/examples/ansible/playbooks/templates/etc_cron.d_ansible-pull.j2
+share/examples/ansible/playbooks/templates/etc_logrotate.d_ansible-pull.j2
+share/examples/ansible/playbooks/templates/foo.j2
+share/examples/ansible/playbooks/templates/hostvars.j2
+share/examples/ansible/playbooks/user_commands.yml
+share/examples/ansible/playbooks/vars/CentOS.yml
+share/examples/ansible/playbooks/vars/defaults.yml
+share/examples/ansible/playbooks/vars/external_vars.yml
+@pkgdir etc/ansible
