@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2011/11/18 22:47:11 pettai Exp $
+$NetBSD: distinfo,v 1.60 2013/02/26 14:47:16 jperkin Exp $
 
 SHA1 (lftp-4.3.3.tar.bz2) = dc4c47366b28cccf94a599d11acb18f9b3f833be
 RMD160 (lftp-4.3.3.tar.bz2) = 3a8e212323bf58c14f5f0dca05d8b9fddb461747
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = cbf428fb51c64431eb32d25160303333ce695b5a
 SHA1 (patch-ac) = 32e1fba23d4d6bd0b06bacbe503cb9b39d2bf825
 SHA1 (patch-ad) = 365c205cf83f65b7253b71e67e530ac2fcf58154
 SHA1 (patch-ae) = 3ee418b94cc1afb7b2db5bc550fd966d346368a4
+SHA1 (patch-lib_stdio.in.h) = 9e892220d466cb40b58c01159af816a7364bfac6
