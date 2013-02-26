@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 2012/09/21 15:44:54 ryoon Exp $
+$NetBSD: patch-aa,v 1.16 2013/02/26 11:04:25 joerg Exp $
 
 --- configure.orig	2012-01-19 19:19:29.000000000 +0000
 +++ configure
@@ -33,6 +33,15 @@ $NetBSD: patch-aa,v 1.15 2012/09/21 15:44:54 ryoon Exp $
      fi
  
    if test x"${ac_cv_path_kde4_incl}" != x ; then
+@@ -30994,7 +30994,7 @@ $as_echo_n "checking whether NPString ha
+ 
+                   #include "npapi.h"
+                   #include "npruntime.h"
+-                  int main(int argc, char* argv){
++                  int main(int argc, char** argv){
+ 	            NPString str;
+                     uint32_t len = str.UTF8Length;
+ 	            return 0;
 @@ -31356,6 +31356,9 @@ else
      if test x"${with_x11_incl}" != x ; then
        if test -f ${with_x11_incl}/X11/X.h ; then
