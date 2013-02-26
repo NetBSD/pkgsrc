@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/02/16 11:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2013/02/26 23:39:18 joerg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -21,6 +21,13 @@ USE_TOOLS+=		gmake perl:run pkg-config
 CONFIGURE_ARGS+=	--disable-debug
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-compare \
+			-Wno-error=sometimes-uninitialized
+.endif
+
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
