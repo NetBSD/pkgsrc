@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.713 2013/02/26 10:46:49 obache Exp $
+$NetBSD: CHANGES-2013,v 1.714 2013/02/26 11:16:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/ansible version 1.0 [hubertf 2013-02-26]
 	Added sysutils/euca2ools version 2.1.2 [hubertf 2013-02-26]
 	Updated www/ruby-faraday to 0.8.6 [obache 2013-02-26]
+	Updated www/php-soycms to 1.4.0c [ryoon 2013-02-26]
