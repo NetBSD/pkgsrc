@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.41 2012/03/21 19:22:30 hans Exp $
+$NetBSD: distinfo,v 1.42 2013/02/26 16:16:08 jperkin Exp $
 
 SHA1 (gkrellm-2.2.10.tar.bz2) = 329d0ba5600998f21b75491937c3c2924ab6ed40
 RMD160 (gkrellm-2.2.10.tar.bz2) = 6694838015716c09291887ae598daceb4f4b440f
 Size (gkrellm-2.2.10.tar.bz2) = 718894 bytes
-SHA1 (patch-Makefile.inc) = cb9f3f5e92bed61a6f62f785502f2b9767f58dd4
+SHA1 (patch-Makefile.inc) = b3c86f4f299386c5a59f2e22191c29b80254833d
 SHA1 (patch-aa) = 1cf9b98520b37aa75c6c5b9d0398e8d92204a12e
 SHA1 (patch-ab) = e900c811ddea106efee5cbfc04d0cf14cc6e6451
 SHA1 (patch-ac) = 8890d5a5e8eaf21508a1bf91de788183fd6f7a75
