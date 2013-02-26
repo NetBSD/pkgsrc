@@ -1,10 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2011/01/29 11:24:43 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2013/02/26 10:19:28 joerg Exp $
 
 Fix build with png-1.5.
 
 --- src/FbTk/ImagePNG.cc.orig	2004-09-20 14:04:11.000000000 +0000
 +++ src/FbTk/ImagePNG.cc
-@@ -76,6 +76,8 @@ ImagePNG::~ImagePNG() {
+@@ -28,6 +28,7 @@
+ #include "PixmapWithMask.hh"
+ 
+ #include <png.h>
++#include <cstring>
+ #include <cstdio>
+ #include <iostream>
+ using namespace std;
+@@ -76,6 +77,8 @@ ImagePNG::~ImagePNG() {
  }
  
  PixmapWithMask *ImagePNG::load(const std::string &filename, int screen_num) const {
@@ -13,7 +21,7 @@ Fix build with png-1.5.
      if (filename.empty())
          return 0;
  #ifdef DEBUG
-@@ -102,7 +104,7 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -102,7 +105,7 @@ PixmapWithMask *ImagePNG::load(const std
          return 0;
      }
  
@@ -22,7 +30,7 @@ Fix build with png-1.5.
          fclose(fp);
          return 0;
      }
-@@ -115,12 +117,14 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -115,12 +118,14 @@ PixmapWithMask *ImagePNG::load(const std
      png_get_IHDR(png.png(), png.info(), &w, &h,
                   &bit_depth, &color_type,
                   &interlace_type, 0, 0);
@@ -42,7 +50,7 @@ Fix build with png-1.5.
      cerr<<"Color type = ";
      switch (color_type) {
      case PNG_COLOR_TYPE_GRAY:
-@@ -146,7 +150,7 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -146,7 +151,7 @@ PixmapWithMask *ImagePNG::load(const std
      // convert to rgb
      if (color_type == PNG_COLOR_TYPE_PALETTE && bit_depth <= 8) {
          png_set_expand(png.png());
@@ -51,7 +59,7 @@ Fix build with png-1.5.
      }
      // convert to rgb
      if (color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8) {
-@@ -158,7 +162,7 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -158,7 +163,7 @@ PixmapWithMask *ImagePNG::load(const std
      if (color_type == PNG_COLOR_TYPE_GRAY ||
          color_type == PNG_COLOR_TYPE_GRAY_ALPHA) {
          png_set_gray_to_rgb(png.png());
@@ -60,7 +68,7 @@ Fix build with png-1.5.
          color_type = PNG_COLOR_TYPE_RGB;
      }
  
-@@ -170,23 +174,23 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -170,23 +175,23 @@ PixmapWithMask *ImagePNG::load(const std
      // expand to 4 bytes
      if (bit_depth == 8 && color_type == PNG_COLOR_TYPE_RGB) {
          png_set_filler(png.png(), 0, PNG_FILLER_AFTER);
@@ -91,7 +99,7 @@ Fix build with png-1.5.
      }
  
      // get transparent pixel
-@@ -214,31 +218,31 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -214,31 +219,31 @@ PixmapWithMask *ImagePNG::load(const std
      fclose(fp);
  
      // clear linear memory
@@ -131,7 +139,7 @@ Fix build with png-1.5.
          break;
      }
      
-@@ -264,9 +268,9 @@ PixmapWithMask *ImagePNG::load(const std
+@@ -264,9 +269,9 @@ PixmapWithMask *ImagePNG::load(const std
          long i = 0x44332211;
          unsigned char* a = (unsigned char*) &i;
          bool big_endian = (*a != 0x11);
