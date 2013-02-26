@@ -1,8 +1,17 @@
-$NetBSD: patch-am,v 1.1 2008/03/03 05:06:40 jlam Exp $
+$NetBSD: patch-am,v 1.2 2013/02/26 10:29:34 joerg Exp $
 
---- cui.c.orig	1996-08-06 13:24:30.000000000 -0400
+--- cui.c.orig	1996-08-06 17:24:30.000000000 +0000
 +++ cui.c
-@@ -207,6 +207,10 @@ int help_index;
+@@ -178,7 +178,7 @@ char talk_messages[9][60] = {
+ };
+ #endif
+ 
+-extern FILE *log;
++extern FILE *logp;
+ extern int play_speed;
+ extern int auto_stop;
+ extern int auto_play;
+@@ -207,6 +207,16 @@ int help_index;
  int key_mac[100];
  int key_mac_cnt=0;
  
@@ -10,6 +19,102 @@ $NetBSD: patch-am,v 1.1 2008/03/03 05:06:40 jlam Exp $
 +#define u_char unsigned char
 +#endif
 +
++static void execute_help(global_t *gp);
++static void draw_player(global_t *gp, int who);
++static void draw_river(global_t *gp, int who);
++static void draw_status(global_t *gp);
++static void draw_hand(global_t *gp, int who);
++
  ungetstrx(str) unsigned char *str; {
  	int len;
  	int i;
+@@ -361,7 +371,7 @@ retry:
+ 	return ret;
+ }
+ 
+-ui_event_wait(gp,time_out) global_t *gp; {
++void ui_event_wait(global_t *gp, int time_out) {
+ 	fd_set fds;
+ 	struct timeval to,*top;
+ 	int fd,fd2;
+@@ -380,7 +390,7 @@ ui_event_wait(gp,time_out) global_t *gp;
+ 		return;	
+ 	}
+ 	if (fd == -1) {
+-		return 1;
++		return;
+ 	}
+ 
+ 	FD_ZERO( &fds );
+@@ -462,7 +472,7 @@ ui_message_gend(gp) global_t *gp; {
+ 			fclose(fp);
+ 		}
+ 	}
+-	if (log) log_game(gp,log);
++	if (logp) log_game(gp,logp);
+ }
+ 
+ ui_message_player(gp) global_t *gp; {
+@@ -721,7 +731,7 @@ ui_draw(gp,redraw) global_t *gp; {
+ 	ch_play = 0;
+ }
+ 
+-draw_status(gp) global_t *gp; {
++static void draw_status(global_t *gp) {
+ 
+ 	if (!ch_dora && !ch_play) return;
+ 	ch_dora = 0;
+@@ -768,7 +778,7 @@ draw_status(gp) global_t *gp; {
+ }
+ 
+ 
+-draw_player(gp,who) global_t *gp; {
++static void draw_player(global_t *gp, int who) {
+ 	int i;
+ 	int pp;
+ 
+@@ -791,7 +801,7 @@ draw_player(gp,who) global_t *gp; {
+ 	printw("  %7d ",player[pp].ppoint);
+ }
+ 
+-draw_river(gp,who) global_t *gp; {
++static void draw_river(global_t *gp, int who) {
+ 	int i,pai;
+ 	int pp;
+ 	int max;
+@@ -832,7 +842,7 @@ draw_river(gp,who) global_t *gp; {
+ 	clrtoeol();
+ }
+ 
+-draw_hand(gp,who) global_t *gp; {
++static void draw_hand(global_t *gp, int who) {
+ 	int i,j,k,n;
+ 	int pp,pai,naki;
+ 
+@@ -978,7 +988,7 @@ retry:
+ 	return R_TIE;
+ }
+ 
+-ui_choice(gp) global_t *gp; {
++void ui_choice(global_t *gp) {
+ 	int i,j,n,ret,pai,oldpai,kan;
+ 	char *args[25];
+ 	int pais[25];
+@@ -1087,7 +1097,7 @@ ui_result(gp) global_t *gp; {
+ 			fclose(fp);
+ 		}
+ 	}
+-	if (log) log_play(gp,log);
++	if (logp) log_play(gp,logp);
+ }
+ 
+ 
+@@ -1447,7 +1457,7 @@ cleanup_wstack() {
+ 	wstack_cnt = 0;
+ }
+ 
+-execute_help(gp) global_t *gp; {
++static void execute_help(global_t *gp) {
+ 	extern char *program;
+ 	static char *pages[500];
+ 	static int page_num;
