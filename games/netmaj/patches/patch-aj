@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2004/01/23 19:05:45 agc Exp $
+$NetBSD: patch-aj,v 1.2 2013/02/26 10:29:34 joerg Exp $
 
---- log.c	2004/01/23 18:57:54	1.1
-+++ log.c	2004/01/23 18:58:33
-@@ -31,7 +31,7 @@
+--- log.c.orig	1996-07-31 08:06:02.000000000 +0000
++++ log.c
+@@ -31,7 +31,7 @@ char *pai2str(n) pai_t n; {
  	return pai_strings[n];
  }
  
